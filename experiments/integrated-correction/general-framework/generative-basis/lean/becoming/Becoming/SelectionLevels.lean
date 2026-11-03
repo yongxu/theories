@@ -114,6 +114,22 @@ of equal sizes.
   `K < s + m q ρ`. Returns to groupmates are its case with nothing kept (`s = 0`, `K = b + c`,
   `q = b`), and `within_returns`, `among_returns` and `rises_iff_returns` are derived from it. What
   comes back alone enters at every assortment; what is shared within the group only through it.
+* **Returns in groups of any sizes.** With `n` a common multiple of the groups' sizes, let what each
+  unit kept shares reach every member of its group as `q` per unit of a reading `R` of the group.
+  Within each group, by its factor, selection goes by `s` against `K` as before (`within_shared_by`);
+  among the groups' means, read member by member, by `s` against `K` with `n q` times the reading's
+  covariation with the means (`means_shared`, from `kept_balance`, the balance of returns kept on
+  any list); and the whole selects for keeping exactly where `K` times `n` times its spread, with
+  `q` times the reading's discordance with the group means, falls short of the same with `s` and
+  the concordance (`rises_iff_shared_sized`). Two readings are two modelling choices. Each member
+  gaining `q` for every unit its group holds (the reading the group's total, as in the equal-size
+  laws): the verdict goes through the covariance, member by member, of a member's group total with
+  its group's mean (`rises_iff_kept_sized`), which with equal sizes is the size times the spread
+  among groups and with unequal sizes is not a function of that spread. What each unit kept gives
+  its group divided among the members (the reading `n` times the group's mean): the verdict goes
+  through the size-weighted spread of the group means (`rises_iff_divided_sized`), over the
+  rationals `K < s + Q ρ` with `Q` what a unit gives its group and `ρ` the share of the variance
+  among the means: Hamilton's rule with what comes back alone added, for groups of any sizes.
 * **Witnesses.** Two groups of two, the amount one at a member that holds back and none at the
   others. In both, the one holding back leaves fewer offspring than its groupmate, so selection
   within goes against holding back. Where the group without it leaves no offspring, selection
@@ -127,7 +143,13 @@ of equal sizes.
   taking one from the keeper, the keepers together select for keeping and the keepers apart,
   with the same returns, against it (`Founding.either_verdict`). With six members in three pairs,
   two thirds of the spread among the pairs, returns of three and a take of two meet the rule at
-  assortment one and yet the whole selects against keeping (`Partly.below_one`).
+  assortment one and yet the whole selects against keeping (`Partly.below_one`). With the same two
+  keepers and two others in groups of three and one, the keepers together or one in each group,
+  the whole's spread and the size-weighted spread of the group means are the same; with each
+  member gaining two for every unit its group keeps at a cost of one to the keeper, the whole
+  selects for keeping with the keepers together and against it with one in each, every member's
+  group total then the same (`Sized.either_verdict`); with what is shared divided, the two
+  listings give one verdict whatever the returns (`Sized.divided_one_verdict`).
 
 The weights are any natural numbers; with offspring numbers they are the selection term proper
 of `Becoming.SelectionTerm` divided by level. Nothing is supposed about what the groups are or
@@ -136,7 +158,9 @@ explained; where the offspring numbers come from returns to groupmates, it is re
 and how much of the amount's spread lies among the groups. Modelling choices: natural-number
 weights and amounts, finite families as lists, a common multiple of the groups' sizes in place of
 rational means, for lineages exact transmission at every step, and for returns offspring numbers
-depending on own and groupmates' amounts additively (no synergy) with groups of equal size. No ethical predicate, ranking or axiom
+depending on own and groupmates' amounts additively (no synergy), with groups of equal size for
+the spread among groups and of any sizes for a reading of the group, a common multiple of the
+sizes in place of rational means. No ethical predicate, ranking or axiom
 occurs; every declaration has an empty axiom report.
 -/
 
@@ -1023,6 +1047,204 @@ theorem rises_exact_iff_returns (G : Generations α) {t m B b c : Nat} (gs : Lis
     rw [← listed]
     exact rises_iff_returns gs _ _ equal returns)
 
+/-! ## Returns in groups of any sizes -/
+
+/-- Two balances sharing their first terms leave a balance of the rest. -/
+theorem cancel_two {X Y p q r t : Nat} (one : X + p = Y + q) (two : X + r = Y + t) :
+    p + t = q + r :=
+  Naturals.add_left_cancel (k := X + Y) ((Nat.add_add_add_comm X Y p t).trans
+    ((congrArg (· + (Y + t)) one).trans ((congrArg ((Y + q) + ·) two.symm).trans
+      ((Nat.add_add_add_comm Y q X r).trans (congrArg (· + (q + r)) (Nat.add_comm Y X))))))
+
+/-- A combination's balance: where `v` is `s` per unit of the amount with `b` per unit of a
+reading `o`, its discordance with the amount, with `s` times the amount's spread and `b` times the
+reading's concordance, is its concordance with `b` times the reading's discordance. -/
+theorem combination_balance (ps : List α) (a o : α → Nat) (s b : Nat) :
+    discord ps (fun p => s * a p + b * o p) a + (s * concord ps a a + b * concord ps o a) =
+      concord ps (fun p => s * a p + b * o p) a + b * discord ps o a := by
+  have ev := covariation ps (fun p => s * a p + b * o p) a
+  have ea := Reproduction.variation ps a
+  have eo := covariation ps o a
+  have tt : total ps (fun p => s * a p + b * o p) = s * total ps a + b * total ps o :=
+    (total_add (fun p => s * a p) (fun p => b * o p) ps).trans
+      (Naturals.add_congr (total_mul s a ps) (total_mul b o ps))
+  have wt : weighted ps (fun p => s * a p + b * o p) a =
+      s * weighted ps a a + b * weighted ps o a :=
+    (total_congr (fun p => (add_mul_split (s * a p) (b * o p) (a p)).trans
+        (Naturals.add_congr (mul_assoc_nat s (a p) (a p)) (mul_assoc_nat b (o p) (a p)))) ps).trans
+      ((total_add (fun p => s * (a p * a p)) (fun p => b * (o p * a p)) ps).trans
+        (Naturals.add_congr (total_mul s _ ps) (total_mul b _ ps)))
+  rw [tt, wt, Nat.left_distrib, add_mul_split] at ev
+  rw [mul_turn ps.length s, mul_turn ps.length b, mul_assoc_nat s, mul_assoc_nat b] at ev
+  have sa : s * (ps.length * weighted ps a a) = s * (total ps a * total ps a) + s * concord ps a a :=
+    (congrArg (s * ·) ea).trans (Nat.left_distrib _ _ _)
+  have bo : b * (ps.length * weighted ps o a) + b * discord ps o a =
+      b * (total ps o * total ps a) + b * concord ps o a :=
+    (Nat.left_distrib _ _ _).symm.trans ((congrArg (b * ·) eo).trans (Nat.left_distrib _ _ _))
+  have two : s * (ps.length * weighted ps a a) + b * (ps.length * weighted ps o a) +
+      b * discord ps o a =
+        s * (total ps a * total ps a) + b * (total ps o * total ps a) +
+          (s * concord ps a a + b * concord ps o a) :=
+    (Nat.add_assoc _ _ _).trans ((Naturals.add_congr sa bo).trans
+      (Nat.add_add_add_comm _ _ _ _))
+  exact cancel_two ev two
+
+/-- **Returns kept, on any list**: where each member's weight with `k` per unit of its own amount is
+a base with `s` per unit of the amount and `b` per unit of a reading `o`, the weight's concordance
+with the amount, with `k` times its spread and `b` times the reading's discordance with it, is the
+weight's discordance with `s` times the spread and `b` times the reading's concordance. -/
+theorem kept_balance (ps : List α) (w a o : α → Nat) {B s b k : Nat}
+    (returns : ∀ p, p ∈ ps → w p + k * a p = B + s * a p + b * o p) :
+    concord ps w a + k * concord ps a a + b * discord ps o a =
+      discord ps w a + (s * concord ps a a + b * concord ps o a) := by
+  have r := returns_balance ps w a (fun p => s * a p + b * o p) (B := B) (b := 1) (k := k)
+    fun p mp => by rw [Nat.one_mul]; exact (returns p mp).trans (Nat.add_assoc _ _ _)
+  rw [Nat.one_mul, Nat.one_mul] at r
+  exact cancel_two ((Nat.add_comm _ _).trans (r.trans (Nat.add_comm _ _)))
+    (combination_balance ps a o s b)
+
+
+/-- Returns kept and shared within groups of any sizes, within each group by its factor. -/
+theorem within_shared_by {gs : List (List α)} {w a : α → Nat} (c R : List α → Nat) {B s q K : Nat}
+    (returns : ∀ g, g ∈ gs → ∀ p, p ∈ g → w p + K * a p = B + s * a p + q * R g) :
+    concordWithinBy gs c w a + K * concordWithinBy gs c a a =
+      discordWithinBy gs c w a + s * concordWithinBy gs c a a := by
+  have per : ∀ g, g ∈ gs → c g * concord g w a + K * (c g * concord g a a) =
+      c g * discord g w a + s * (c g * concord g a a) := fun g mg => by
+    have h := returns_balance g w a a (B := B + q * R g) (b := s) (k := K)
+      fun p mp => (returns g mg p mp).trans (Nat.add_right_comm _ _ _)
+    rw [Reproduction.discord_self, Nat.mul_zero, Nat.add_zero] at h
+    rw [mul_turn K (c g), mul_turn s (c g), ← Nat.left_distrib, ← Nat.left_distrib, h]
+  exact (Naturals.add_congr rfl (total_mul K (fun g => c g * concord g a a) gs).symm).trans
+    ((total_add (fun g => c g * concord g w a) (fun g => K * (c g * concord g a a)) gs).symm.trans
+      ((total_eq_of_mem per).trans
+        ((total_add (fun g => c g * discord g w a) (fun g => s * (c g * concord g a a)) gs).trans
+          (Naturals.add_congr rfl (total_mul s (fun g => c g * concord g a a) gs)))))
+
+/-- And among the groups' means, read member by member: a group's total by its factor, with `K`
+per unit of the same for the amount, is `n` times the base with `s` per unit of it and `n q` per
+unit of what the group's reading `R` gives each member. -/
+theorem means_shared {gs : List (List α)} {w a : α → Nat} (c R : List α → Nat) {B s q K n : Nat}
+    (common : ∀ g, g ∈ gs → g.length * c g = n)
+    (returns : ∀ g, g ∈ gs → ∀ p, p ∈ g → w p + K * a p = B + s * a p + q * R g) :
+    concordMeans gs c w a + K * concordMeans gs c a a +
+        n * q * discord (context gs) R (fun g => c g * total g a) =
+      discordMeans gs c w a + (s * concordMeans gs c a a +
+        n * q * concord (context gs) R (fun g => c g * total g a)) :=
+  kept_balance (context gs) (fun g => c g * total g w) (fun g => c g * total g a) R
+    (B := n * B) fun g mg => by
+      have mg' := mem_of_mem_context mg
+      have t := returns_total (ps := g) (w := w) (o := a) (B := B + q * R g) (b := s)
+        (k := K) fun p mp => (returns g mg' p mp).trans (Nat.add_right_comm _ _ _)
+      have cl : c g * g.length = n := (Nat.mul_comm _ _).trans (common g mg')
+      have e : c g * (total g w + K * total g a) =
+          c g * (g.length * (B + q * R g) + s * total g a) := congrArg (c g * ·) t
+      rw [Nat.left_distrib (c g) (total g w) (K * total g a),
+        Nat.left_distrib (c g) (g.length * (B + q * R g)) (s * total g a),
+        mul_turn (c g) K, mul_turn (c g) s, ← mul_assoc_nat (c g) g.length, cl,
+        Nat.left_distrib n B (q * R g), ← mul_assoc_nat n q] at e
+      exact e.trans (Nat.add_right_comm _ _ _)
+
+/-- **Returns kept and shared within groups of any sizes.** Let `n` be a common multiple of the
+groups' sizes, each group's factor `n` over its size, and let what each unit a member keeps shares
+reach every member of its group as `q` per unit of a reading `R` of the group. Where each unit a
+member keeps costs it `K` and brings `s` back to it alone, the whole selects for keeping exactly
+where `K` times `n` times the whole's spread, with `q` times the discordance, member by member, of
+the reading with the groups' means (by their factors), falls short of `s` times `n` times the
+spread with `q` times their concordance. Read over the rationals, exactly where `K` times the
+amount's variance falls short of `s` times it with `q` times the covariance, member by member, of
+the reading with the group means. -/
+theorem rises_iff_shared_sized (gs : List (List α)) (w a : α → Nat) (c R : List α → Nat)
+    {B s q K n : Nat} (common : ∀ g, g ∈ gs → g.length * c g = n) (pos : 0 < n)
+    (returns : ∀ g, g ∈ gs → ∀ p, p ∈ g → w p + K * a p = B + s * a p + q * R g) :
+    discord (whole gs) w a < concord (whole gs) w a ↔
+      K * (n * concord (whole gs) a a) + q * discord (context gs) R (fun g => c g * total g a) <
+        s * (n * concord (whole gs) a a) +
+          q * concord (context gs) R (fun g => c g * total g a) := by
+  have e1 := levels_sized gs w a c common
+  have e2 := levels_sized gs a a c common
+  have wb := within_shared_by c R returns
+  have mk := means_shared c R common returns
+  have z1 : discordWithinBy gs c a a = 0 :=
+    total_zero_of fun g _ => by rw [Reproduction.discord_self, Nat.mul_zero]
+  have z2 : discordMeans gs c a a = 0 := Reproduction.discord_self _ _
+  have z3 : discord (whole gs) a a = 0 := Reproduction.discord_self _ _
+  rw [z1, z2, z3, Nat.mul_zero, Nat.mul_zero] at e2
+  have e2' : n * n * concord (whole gs) a a =
+      n * (whole gs).length * concordWithinBy gs c a a + concordMeans gs c a a :=
+    (Nat.add_zero _).symm.trans (e2.trans (Nat.zero_add _))
+  have wb' : n * (whole gs).length * concordWithinBy gs c w a +
+      K * (n * (whole gs).length * concordWithinBy gs c a a) =
+        n * (whole gs).length * discordWithinBy gs c w a +
+          s * (n * (whole gs).length * concordWithinBy gs c a a) := by
+    have h : n * (whole gs).length * (concordWithinBy gs c w a + K * concordWithinBy gs c a a) =
+        n * (whole gs).length * (discordWithinBy gs c w a + s * concordWithinBy gs c a a) :=
+      congrArg (n * (whole gs).length * ·) wb
+    rw [Nat.left_distrib, Nat.left_distrib, mul_turn (n * (whole gs).length) K,
+      mul_turn (n * (whole gs).length) s] at h
+    exact h
+  have hK : K * (n * n * concord (whole gs) a a) =
+      K * (n * (whole gs).length * concordWithinBy gs c a a) + K * concordMeans gs c a a := by
+    rw [e2', Nat.left_distrib]
+  have hS : s * (n * n * concord (whole gs) a a) =
+      s * (n * (whole gs).length * concordWithinBy gs c a a) + s * concordMeans gs c a a := by
+    rw [e2', Nat.left_distrib]
+  -- the within-group terms cancel, then the means'
+  have e3 := cancel_two ((Nat.add_left_comm _ _ _).symm.trans (e1.trans (Nat.add_left_comm _ _ _)))
+    wb'.symm
+  have eB := cancel_two
+    (((Nat.add_assoc _ _ _).trans (Nat.add_left_comm _ _ _)).symm.trans
+      (e3.trans ((Nat.add_assoc _ _ _).trans (Nat.add_left_comm _ _ _))))
+    (mk.symm.trans (Nat.add_assoc _ _ _))
+  have bal : n * n * concord (whole gs) w a +
+      (K * (n * n * concord (whole gs) a a) + n * q * discord (context gs) R (fun g => c g * total g a)) =
+        n * n * discord (whole gs) w a +
+          (s * (n * n * concord (whole gs) a a) + n * q * concord (context gs) R (fun g => c g * total g a)) := by
+    rw [hK, hS]
+    exact ((Nat.add_assoc _ _ _).trans (congrArg (_ + ·) (Nat.add_assoc _ _ _).symm)).symm.trans
+      (eB.trans ((Nat.add_assoc _ _ _).trans (congrArg (_ + ·) (Nat.add_assoc _ _ _).symm)))
+  have k1 : K * (n * n * concord (whole gs) a a) = n * (K * (n * concord (whole gs) a a)) := by
+    rw [mul_assoc_nat n n, mul_turn K n]
+  have s1 : s * (n * n * concord (whole gs) a a) = n * (s * (n * concord (whole gs) a a)) := by
+    rw [mul_assoc_nat n n, mul_turn s n]
+  rw [k1, s1, mul_assoc_nat n q, mul_assoc_nat n q, ← Nat.left_distrib, ← Nat.left_distrib] at bal
+  exact (square_lt_iff pos).symm.trans ((lt_iff_of_balance bal).trans
+    ⟨lt_of_mul_lt_mul, fun lt => Nat.mul_lt_mul_of_pos_left lt pos⟩)
+
+/-- **Each member gaining `q` for every unit its group holds**, groups of any sizes: the reading
+is the group's total, so the verdict goes through the covariance, member by member, of each
+member's group total with its group's mean. With equal sizes the total is the size times the
+mean and the verdict is `rises_iff_kept`'s, in the spread among groups; with unequal sizes it is
+not a function of that spread (`Sized.either_verdict`). -/
+theorem rises_iff_kept_sized (gs : List (List α)) (w a : α → Nat) (c : List α → Nat)
+    {B s q K n : Nat} (common : ∀ g, g ∈ gs → g.length * c g = n) (pos : 0 < n)
+    (returns : ∀ g, g ∈ gs → ∀ p, p ∈ g → w p + K * a p = B + s * a p + q * total g a) :
+    discord (whole gs) w a < concord (whole gs) w a ↔
+      K * (n * concord (whole gs) a a) +
+          q * discord (context gs) (fun g => total g a) (fun g => c g * total g a) <
+        s * (n * concord (whole gs) a a) +
+          q * concord (context gs) (fun g => total g a) (fun g => c g * total g a) :=
+  rises_iff_shared_sized gs w a c (fun g => total g a) common pos returns
+
+/-- **What each unit kept gives its group divided among the members**, groups of any sizes: each
+member gaining `q` per unit of `n` times its group's mean (the group's total by its factor), the
+whole selects for keeping exactly where `K` times `n` times the whole's spread falls short of `s`
+times it with `q` times the spread of the groups' means, member by member. Read over the rationals,
+with the assortment `ρ` the share of the amount's variance lying among the group means, weighted
+by size, and `Q = n q` what each unit kept gives its group, exactly where `K < s + Q ρ`: Hamilton's
+rule with what comes back alone added, for groups of any sizes, where what is shared is divided. -/
+theorem rises_iff_divided_sized (gs : List (List α)) (w a : α → Nat) (c : List α → Nat)
+    {B s q K n : Nat} (common : ∀ g, g ∈ gs → g.length * c g = n) (pos : 0 < n)
+    (returns : ∀ g, g ∈ gs → ∀ p, p ∈ g → w p + K * a p = B + s * a p + q * (c g * total g a)) :
+    discord (whole gs) w a < concord (whole gs) w a ↔
+      K * (n * concord (whole gs) a a) <
+        s * (n * concord (whole gs) a a) + q * concordMeans gs c a a := by
+  have h := rises_iff_shared_sized gs w a c (fun g => c g * total g a) common pos returns
+  have z : discord (context gs) (fun g => c g * total g a) (fun g => c g * total g a) = 0 :=
+    Reproduction.discord_self _ _
+  rw [z, Nat.mul_zero, Nat.add_zero] at h
+  exact h
+
 /-! ## Witnesses -/
 
 /-- Four members: one holding back, its groupmate, and the two members of the other group. -/
@@ -1266,6 +1488,105 @@ theorem below_one :
 
 end Partly
 
+
+namespace Sized
+
+/-- The two keepers together with one other, beside the last member alone. -/
+def big : List (List Member) := [[held, mate, first], [second]]
+
+/-- Each keeper with one other of the shared part, the keeper alone beside the three:
+`ByMeans.unequal`. -/
+def small : List (List Member) := ByMeans.unequal
+
+theorem big_common : ∀ g, g ∈ big → g.length * ByMeans.factor g = 3
+  | _, .head _ => rfl
+  | _, .tail _ (.head _) => rfl
+  | _, .tail _ (.tail _ mem) => nomatch mem
+
+/-- Each unit kept costs its keeper one, brings nothing back to it alone and gives two to every
+member of its group: with the keepers together, each leaves three, their groupmate four, and the
+member alone none. -/
+def bigOffspring : Member → Nat
+  | held => 3
+  | mate => 3
+  | first => 4
+  | second => 0
+
+/-- With the same returns and each group holding one keeper, the keepers leave one each and the
+others two. -/
+def smallOffspring : Member → Nat
+  | held => 1
+  | mate => 1
+  | first => 2
+  | second => 2
+
+theorem big_returns : ∀ g, g ∈ big → ∀ p, p ∈ g →
+    bigOffspring p + 1 * Founding.keeps p = 0 + 0 * Founding.keeps p + 2 * total g Founding.keeps
+  | _, .head _, _, .head _ => rfl
+  | _, .head _, _, .tail _ (.head _) => rfl
+  | _, .head _, _, .tail _ (.tail _ (.head _)) => rfl
+  | _, .head _, _, .tail _ (.tail _ (.tail _ mem)) => nomatch mem
+  | _, .tail _ (.head _), _, .head _ => rfl
+  | _, .tail _ (.head _), _, .tail _ mem => nomatch mem
+  | _, .tail _ (.tail _ mem), _, _ => nomatch mem
+
+theorem small_returns : ∀ g, g ∈ small → ∀ p, p ∈ g →
+    smallOffspring p + 1 * Founding.keeps p = 0 + 0 * Founding.keeps p + 2 * total g Founding.keeps
+  | _, .head _, _, .head _ => rfl
+  | _, .head _, _, .tail _ mem => nomatch mem
+  | _, .tail _ (.head _), _, .head _ => rfl
+  | _, .tail _ (.head _), _, .tail _ (.head _) => rfl
+  | _, .tail _ (.head _), _, .tail _ (.tail _ (.head _)) => rfl
+  | _, .tail _ (.head _), _, .tail _ (.tail _ (.tail _ mem)) => nomatch mem
+  | _, .tail _ (.tail _ mem), _, _ => nomatch mem
+
+/-- The same members, the same returns, the same spread of the amount over the whole and the same
+size-weighted spread of the groups' means, and either verdict: with the keepers together the
+group totals go with the means and the whole selects for keeping; with one keeper in each group
+every member's group total is the same, nothing shared is a return to a keeper, and the whole
+selects against keeping. So for groups of unequal size the verdict is not a function of the
+spread over the whole and the spread among the groups' means. -/
+theorem either_verdict :
+    discord (whole big) bigOffspring Founding.keeps <
+        concord (whole big) bigOffspring Founding.keeps ∧
+      concord (whole small) smallOffspring Founding.keeps <
+        discord (whole small) smallOffspring Founding.keeps ∧
+      whole big = whole small ∧
+      concordMeans big ByMeans.factor Founding.keeps Founding.keeps = 12 ∧
+      concordMeans small ByMeans.factor Founding.keeps Founding.keeps = 12 ∧
+      concord (context big) (fun g => total g Founding.keeps)
+        (fun g => ByMeans.factor g * total g Founding.keeps) = 12 ∧
+      concord (context small) (fun g => total g Founding.keeps)
+        (fun g => ByMeans.factor g * total g Founding.keeps) = 0 ∧
+      discord (context big) (fun g => total g Founding.keeps)
+        (fun g => ByMeans.factor g * total g Founding.keeps) = 0 :=
+  ⟨(rises_iff_kept_sized big bigOffspring Founding.keeps ByMeans.factor big_common
+      (by decide) big_returns).mpr (by decide),
+    by decide, rfl, rfl, rfl, rfl, rfl, rfl⟩
+
+/-- Where what each unit kept gives its group is divided among the members instead, the two
+listings give one verdict, whatever the offspring numbers meeting the same returns: the verdict
+goes through the spread of the groups' means, and that spread is the same. -/
+theorem divided_one_verdict {w w' : Member → Nat} {B s q K : Nat}
+    (on_big : ∀ g, g ∈ big → ∀ p, p ∈ g → w p + K * Founding.keeps p =
+      B + s * Founding.keeps p + q * (ByMeans.factor g * total g Founding.keeps))
+    (on_small : ∀ g, g ∈ small → ∀ p, p ∈ g → w' p + K * Founding.keeps p =
+      B + s * Founding.keeps p + q * (ByMeans.factor g * total g Founding.keeps)) :
+    discord (whole big) w Founding.keeps < concord (whole big) w Founding.keeps ↔
+      discord (whole small) w' Founding.keeps < concord (whole small) w' Founding.keeps := by
+  have one := rises_iff_divided_sized big w Founding.keeps ByMeans.factor big_common
+    (by decide) on_big
+  have two := rises_iff_divided_sized small w' Founding.keeps ByMeans.factor ByMeans.common
+    (by decide) on_small
+  have sb : concord (whole big) Founding.keeps Founding.keeps = 4 := rfl
+  have ss : concord (whole small) Founding.keeps Founding.keeps = 4 := rfl
+  have mb : concordMeans big ByMeans.factor Founding.keeps Founding.keeps = 12 := rfl
+  have ms : concordMeans small ByMeans.factor Founding.keeps Founding.keeps = 12 := rfl
+  rw [sb, mb] at one
+  rw [ss, ms] at two
+  exact one.trans two.symm
+
+end Sized
 
 end SelectionLevels
 
