@@ -484,7 +484,7 @@
         "Becoming.Web.lost_over",
         "Becoming.Web.mutual_course_lost"
       ],
-      "sha256": "4ce0de1103a56b5a416ed68949b22f2c000b1cda46518b6dfd21261c1c24c67d"
+      "sha256": "d46f2f9d46af492872aef8473e931ca5b3cff967f561ffaca641045490ddc6e5"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
@@ -760,13 +760,20 @@
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zh-proxy-problem/NOTE.md",
-      "role": "integration"
+      "role": "integration",
+      "sha256": "a71c6dec4341bf0339e8863cfeba3403512b0f59df4df9b73638f6a82ba9c539"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261103T044249.876816Z/verification.json",
+      "role": "receipt",
+      "sha256": "755d13b0acad5bce07b47560c4f923619aa0ed862e52ddd979d29d679c757c7b",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261103T044249.876816Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Optimum",
       "success_pointer": "/status",
       "success_value": "passed"

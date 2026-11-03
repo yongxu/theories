@@ -1,11 +1,11 @@
 {
- "commit": "09219f35a94972a6117b0e5b7f8c9516cbd12be2",
+ "commit": "0d7380fa12eaca78248e68a9c3449daf9a85ab81",
  "sources_match_commit": true,
- "core_receipt_at_commit": "20261102T185431.953044Z",
+ "core_receipt_at_commit": "20261103T023714.027477Z",
  "lean": "Lean (version 4.29.1, arm64-apple-darwin24.6.0, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)",
  "tracked_modules": 383,
- "constants": 55927,
- "spine_theorems": 19105,
+ "constants": 55941,
+ "spine_theorems": 19112,
  "base": {
   "Process family": [
    "Generative.Process",
@@ -33,11 +33,11 @@
   "proof through a base family": 221,
   "used by a theorem on the base": 6127,
   "instance on the base recorded": 161,
-  "apart: own vocabulary": 2760,
-  "apart: prelude-only statement": 215
+  "apart: own vocabulary": 2764,
+  "apart: prelude-only statement": 218
  },
- "apart": 2975,
- "apart_general_structure_by_design": 1091,
+ "apart": 2982,
+ "apart_general_structure_by_design": 1098,
  "apart_otherwise": 1884,
  "pure_forwarders": {
   "spine theorems that are pure forwarders": 129,
@@ -77,12 +77,12 @@
   "Becoming.LeastLoss": 2,
   "Becoming.WeightedCommuting": 1
  },
- "apart_used_by_nothing": 1468,
- "apart_roots": 1468,
+ "apart_used_by_nothing": 1474,
+ "apart_roots": 1474,
  "apart_roots_by_category": {
   "model-witness": 713,
   "support": 153,
-  "general-structure": 551,
+  "general-structure": 557,
   "calibration": 25,
   "restates": 14,
   "logical-strength": 12
@@ -412,6 +412,10 @@
    12,
    70
   ],
+  "Becoming.Optimum": [
+   12,
+   513
+  ],
   "Becoming.PropositionIdentity": [
    12,
    12
@@ -579,10 +583,6 @@
   "Becoming.Continuity": [
    5,
    43
-  ],
-  "Becoming.Optimum": [
-   5,
-   506
   ],
   "Becoming.SelectionPool": [
    5,
@@ -920,8 +920,8 @@
  "rings": {
   "core": {
    "modules": 362,
-   "theorems": 18034,
-   "apart": 2610,
+   "theorems": 18041,
+   "apart": 2617,
    "classes": {
     "statement on both families": 1111,
     "statement on Process/Frame/Run/Trace": 3427,
@@ -930,8 +930,8 @@
     "proof through a base family": 210,
     "used by a theorem on the base": 5757,
     "instance on the base recorded": 161,
-    "apart: own vocabulary": 2425,
-    "apart: prelude-only statement": 185
+    "apart: own vocabulary": 2429,
+    "apart: prelude-only statement": 188
    }
   },
   "instances": {
@@ -968,7 +968,7 @@
   }
  },
  "components": {
-  "count": 99,
+  "count": 100,
   "theorems_outside_the_main_component": [
    "Becoming.Dispatch.add_three_assoc",
    "Becoming.FaultEnvelopes.or_self",
@@ -983,6 +983,7 @@
    "Becoming.Learning.coupling_apart_of_state_apart",
    "Becoming.Learning.state_apart_of_acts_apart",
    "Becoming.ListTests.filter_of_all",
+   "Becoming.Optimum.gated_stays_below",
    "Becoming.PartialReadout.safe_of_holds",
    "Becoming.PropositionIdentity.Formula.eval_congr",
    "Becoming.PropositionIdentity.Formula.read_congr",
@@ -10787,6 +10788,10 @@
   "Becoming.Optimum.transfer_exceeds": "used by a theorem on the base",
   "Becoming.Optimum.Shared.room": "used by a theorem on the base",
   "Becoming.Optimum.least_of_shared": "used by a theorem on the base",
+  "Becoming.Optimum.rising_optimum_iff": "apart: own vocabulary",
+  "Becoming.Optimum.optima_lack_iff": "apart: own vocabulary",
+  "Becoming.Optimum.optima_lack_of_bound": "apart: own vocabulary",
+  "Becoming.Optimum.optima_lack_iff_bounded": "apart: own vocabulary",
   "Becoming.Web.optimum_broken_iff": "statement on World/Flow/Web",
   "Becoming.Web.optimum_ends_beyond": "statement on World/Flow/Web",
   "Becoming.Flow.Balances.family_le_iff": "statement on World/Flow/Web",
@@ -10871,6 +10876,9 @@
   "Becoming.Optimum.kept_at_need": "used by a theorem on the base",
   "Becoming.Optimum.renews_of": "used by a theorem on the base",
   "Becoming.Optimum.kept_iff_within": "used by a theorem on the base",
+  "Becoming.Optimum.gated_stays_below": "apart: prelude-only statement",
+  "Becoming.Optimum.reread_kept_iff": "apart: prelude-only statement",
+  "Becoming.Optimum.reread_deadline_iff": "apart: prelude-only statement",
   "Becoming.Optimum.level_add_drawn_of_within": "used by a theorem on the base",
   "Becoming.Optimum.level_add_drawn": "used by a theorem on the base",
   "Becoming.Optimum.sum_le_mul": "used by a theorem on the base",

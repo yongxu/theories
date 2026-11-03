@@ -1,7 +1,7 @@
 {
  "about": "MV: the shared laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/shared_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261103T023714.027477Z",
- "core_sources_sha256": "dcef95855575283d42cc2ee72c41626cd9ad28e596d7963282d9152f66c70423",
+ "core_receipt": "20261103T044249.876816Z",
+ "core_sources_sha256": "59412efdfab6137cfff7887cddbe208a36bb1d94e569f0b21f4de3a9dfd9c9b8",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "438b65fe8bc281ab9796cfbff00af7db8441123a5aba8f3779f7c08586b443c7",
@@ -58,13 +58,13 @@
   ]
  },
  "counts": {
-  "laws": 4111,
+  "laws": 4113,
   "no_declarations": 9,
   "outside": 391,
   "grammar": 896,
   "balance, represented": 628,
   "anchor, not reached": 131,
-  "no shared law": 2056,
+  "no shared law": 2058,
   "vocabulary_only": 79,
   "closure": 528,
   "balance": 836,
@@ -306,7 +306,7 @@
     {
      "of": "Becoming.Web.optimum_broken_iff",
      "record": "what-an-optimum-does-beyond-what-couples-in",
-     "law": 8,
+     "law": 9,
      "declaration": "Becoming.ModelStatements.optimum_broken_reading",
      "models": [
       "own",
@@ -37157,6 +37157,17 @@
    {
     "law": 3,
     "declarations": [
+     "Becoming.Optimum.gated_stays_below",
+     "Becoming.Optimum.reread_kept_iff",
+     "Becoming.Optimum.reread_deadline_iff"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 4,
+    "declarations": [
      "Becoming.Optimum.drawnAt",
      "Becoming.Optimum.level_add_drawn",
      "Becoming.Optimum.given_le_drawn",
@@ -37173,7 +37184,7 @@
     "dependence": "balance, represented"
    },
    {
-    "law": 4,
+    "law": 5,
     "declarations": [
      "Becoming.Optimum.renews_of",
      "Becoming.Optimum.sum_le_mul_until",
@@ -37188,7 +37199,7 @@
     "dependence": "balance, represented"
    },
    {
-    "law": 5,
+    "law": 6,
     "declarations": [
      "Becoming.Optimum.drawn_at_least",
      "Becoming.Optimum.drawn_unbounded"
@@ -37200,7 +37211,7 @@
     "dependence": "balance, represented"
    },
    {
-    "law": 6,
+    "law": 7,
     "declarations": [
      "Becoming.Optimum.Reoptimizes",
      "Becoming.Optimum.course_beyond",
@@ -37213,7 +37224,7 @@
     "dependence": "balance, represented"
    },
    {
-    "law": 7,
+    "law": 8,
     "declarations": [
      "Becoming.Optimum.last_before",
      "Becoming.Web.lost_over",
@@ -37239,7 +37250,7 @@
     ]
    },
    {
-    "law": 8,
+    "law": 9,
     "declarations": [
      "Becoming.Flow.restGiven_unsupported",
      "Becoming.Web.course_drawn_within",
@@ -37253,7 +37264,7 @@
     "dependence": "balance, represented"
    },
    {
-    "law": 9,
+    "law": 10,
     "declarations": [
      "Becoming.Optimum.Renewing.renewal",
      "Becoming.Optimum.Renewing.source",
@@ -37291,7 +37302,7 @@
     "dependence": "balance, represented"
    },
    {
-    "law": 10,
+    "law": 11,
     "declarations": [
      "Becoming.Optimum.Renewing.takeOne",
      "Becoming.Optimum.Renewing.takeOne_le_one",
@@ -56425,7 +56436,7 @@
      {
       "of": "Becoming.Web.optimum_broken_iff",
       "record": "what-an-optimum-does-beyond-what-couples-in",
-      "law": 8,
+      "law": 9,
       "declaration": "Becoming.ModelStatements.optimum_broken_reading",
       "models": [
        "own",
@@ -56461,6 +56472,18 @@
    {
     "law": 7,
     "declarations": [
+     "Becoming.Optimum.rising_optimum_iff",
+     "Becoming.Optimum.optima_lack_iff",
+     "Becoming.Optimum.optima_lack_of_bound",
+     "Becoming.Optimum.optima_lack_iff_bounded"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 8,
+    "declarations": [
      "Becoming.Optimum.Drain.Split",
      "Becoming.Optimum.Drain.storeOrder",
      "Becoming.Optimum.Drain.drainedLevel",
@@ -56489,7 +56512,7 @@
     "dependence": "balance, represented"
    },
    {
-    "law": 8,
+    "law": 9,
     "declarations": [
      "Becoming.ModelStatements.optimum_broken_reading",
      "Becoming.ModelStatements.rising_iff",
@@ -63460,7 +63483,7 @@
   ],
   "lean_check": {
    "toolchain": "leanprover/lean4:v4.29.1",
-   "modules_sha256": "57171acd30da9ce2dc7fdf60a85fe20ce359c5abfa0f5f93e278f5eb99371077",
+   "modules_sha256": "b5f27668b0f889e26ff98429cdc2c57196061e291fb73461870dd49e055ecd7e",
    "check_sha256": "e5ef1c274e3e3f81aa13dbe78732d1f6883a207a5685f736102ee4a2d5b1fc34",
    "ran": true
   },
@@ -65590,7 +65613,7 @@
     "at_model": [
      {
       "record": "what-an-optimum-does-beyond-what-couples-in",
-      "law": 8,
+      "law": 9,
       "declaration": "Becoming.ModelStatements.optimum_broken_reading",
       "models": [
        "own",
