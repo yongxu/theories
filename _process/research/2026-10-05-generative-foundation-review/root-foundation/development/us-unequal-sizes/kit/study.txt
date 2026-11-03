@@ -1,0 +1,27 @@
+## N. Returns in groups of unequal size (US)
+
+Board item US, the coordinator's of 4 November 2026: 04 §7's Open item "the returns' among-group part for unequal sizes" and the Does not show of the record selection-with-returns-to-groupmates ([study note](development/us-unequal-sizes/NOTE.md)). The whole's verdict through a reading's covariation held on any list; what was missing, the returns' parts by level and the verdict through them, needed new Lean, since among the groups' means the slope is what comes back alone with the shared part times the group's size.
+
+```text
+Result(s): selection-with-returns-to-groupmates (groups of any sizes added, home 04 §5), shaping-selected-among-groups
+       (the equal-size limit narrowed to the spread form, home 02 §9); SelectionLevels and RuleShaping extended,
+       every axiom report empty (receipt RECEIPT).
+Delta:
+  - Returns kept on any list with two readings (kept_balance). In groups of any sizes, with n a common multiple
+    of the sizes and what each unit kept shares reaching every member as q per unit of a reading of its group:
+    within by s against K, among the means by s against K with n q times the reading's covariation with them,
+    and the whole exactly where K times n times its spread, with q times the reading's discordance with the
+    means, falls short of the same with s and the concordance (rises_iff_shared_sized).
+  - Two readings, two modelling choices. Each member gaining q for every unit its group holds: the verdict goes
+    through the covariance of a member's group total with its group's mean (rises_iff_kept_sized), not the
+    spread among groups. What a unit gives its group divided among the members: through the size-weighted
+    spread of the means, K < s + Q rho (rises_iff_divided_sized).
+  - Witness (Sized.either_verdict): two keepers and two others in groups of three and one, the same spread over
+    the whole and among the size-weighted means, either verdict by whether the keepers are together; divided,
+    one verdict (Sized.divided_one_verdict). Shaping in groups of any sizes (RuleShaping.grouped_rises_iff_sized).
+Not reached: which sharing actual groups have (a premise); other readings of the group except through the general
+       law; synergy, mixing beyond the listing, assortment over generations.
+Text: 04 §5 and §7, 02 §9, ALIGNMENT A-10, the two records, the package README's two rows, the modules'
+       docstrings, 08's receipt sentence.
+Review: one independent AI reading of the restatements against the Lean (NOTE §7).
+```
