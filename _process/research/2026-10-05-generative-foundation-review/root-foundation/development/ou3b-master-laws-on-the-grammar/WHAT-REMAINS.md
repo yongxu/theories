@@ -204,7 +204,7 @@ Before the account goes to readers outside the work (the review packet, a note f
 
 5. **A fresh core receipt**, run with `BECOMING_FRESH=1`, with its logs kept in the repository. At the twenty-first review, 1,349 of 1,360 Lean steps were reused from a cache outside the repository ([review](../../BECOMING-TWENTY-FIRST-REVIEW.md) §3.1). FallibleInquiry's periphery receipt is rechecked too: it was stale at that review, with 19 of its 38 dependencies changed.
 6. **The front pages current.** The one page's counts are brought up to date (on `160a0f780` it says 481 registered results, and RESULTS registers 498). The twenty-first review's remaining §6 fixes go in the same pass.
-7. **Then the freeze** (the board's way now, item 5; [the steps](../review-packet/FREEZE-STEPS.md)): one frozen commit, every dossier re-synced to it, the reader edition built with `--release`, and the sending decisions.
+7. **Then the freeze** (the board's way now, item 5; [the steps](../review-packet/FREEZE-STEPS.md)): one frozen commit, every dossier re-synced to it, the reader edition built with `--release`, and the sending decisions. **Met** but for the sending, Ren's own act, and the push (see "The freeze landed" below).
 
 **What does not hold a release.** These are named here so that none is read as a gap:
 
@@ -484,6 +484,13 @@ A change to Grammar, GrammarMap or GrammarLaws recompiles nearly every module, s
 - **The review's six optional statement or name changes in leaves**: PremiseWitnesses, UnitMatchings, RevisionPlans, ReadStages, CountedCodes and Wholes. They ride the same rebuild so that one core run carries them.
 
 The review's docstring-only findings outside the grammar ride UE29.
+
+## The freeze landed: the release gate's item 7, but for the sending (3 November 2026)
+
+- **The frozen commit** is `0f1d9aa13`, tagged `review-packet-1` on this machine only. Every dossier in the edition was read against `a74fac28d`, which differs from it in no chapter, Lean file or source but for the links to the sciences dossier its move re-pointed and chapter 8 §12's sentence listing the packet's dossiers, which no dossier quotes or links ([what the freeze did](../review-packet/FREEZE-STEPS.md#the-freeze-of-3-november-2026)), and its reader edition was built with `--release` from a clean worktree of it: thirteen parts, the sheet in two forms and a manifest of their sums, committed at [`output/pdf/review-packet/`](../../../../../../output/pdf/review-packet/MANIFEST.txt).
+- **The sending decisions** were taken on 3 November 2026. Ren decided that the work has no licence, by choice ([`COMMONS.md`](../../../../../../COMMONS.md)), and left the rest to the work, which took [the board's recommendations](../../../../../BECOMING-WORKBOARD.md#decisions-pending-ren): the sciences dossier joined this edition, and [the covering letter's draft](../review-packet/COVERING-LETTER-DRAFT.md) follows the terms and names the frozen commit.
+- **What remains of item 7** is the sending, Ren's own act: the letter under his name from an address he reads, to people he can ask, and any payment. The push of main and the tag follows the board's line on it.
+- **What it does not change.** No Lean, and no record's or result's statement; seven records bound to the overview and the free-energy page were re-pointed to their new bytes after reading, in sections that changed by links alone. Items 1 to 6 stay met.
 
 ## What this note does not do
 
