@@ -22,9 +22,16 @@ lists:
   row keeps the description it had, and the modules R31 added take theirs from NOTES below (the
   Chinese table keeps the modules it had and adds R31's);
 * the sentence after each table that says how the layers import one another.
-`--notes` also retags the module notes in `Becoming.lean`, with a note for each module R31 added
-(after the note of the module named by `after`) and none for a module that is gone; it changes the
-root's bytes, so it waits for a change that renews the core's receipt.
+`--notes` also retags the module notes in `Becoming.lean`, the ring's as `instance` or `application`
+(a tag's reason, as in `(L2, through …)`, kept where the label stays and dropped where it changes);
+it adds a note for each module R31 added (after the note of the module named by `after`) and, for any
+other core or ring module without one, a note from its doc's subtitle after the nearest module before
+it in the README's order that has one; it drops the note of a module that is gone. It changes the
+root's bytes, so it waits for a change that renews the core's receipt. Every line starting like a
+note must carry a tag `NOTE` reads, or the run stops. The plain run reports, without changing its exit
+status, the root's notes whose label is not the computed one, the modules noted more than once (those
+whose notes stand next to each other marked), notes of modules in no layer or ring, and reasons
+`through Y` that are not an L2 module the noted module imports.
 """
 import json
 import re
@@ -189,7 +196,61 @@ def labels(path, core, layer, rim, lang):
     return len(rows), wrong, [m for m in core + list(rim) if m not in have]
 
 
-NOTE = re.compile(r"^\* `(Becoming\.[\w]+)` \((base|L\d|instance|application)\):")
+# A note's tag is its label, with a reason after a comma where one is given (`(L2, through …)`,
+# `(L1, instance ring)`): group 2 is the label, group 3 the reason.
+NOTE = re.compile(r"^\* `(Becoming\.[\w]+)` \((base|L\d|instance|application)(, [^)]*)?\):")
+
+
+def retag(line, m, label):
+    """The note's first line with its label computed: the reason kept where the label stays, dropped
+    where it changes (the reason was given for the old label)."""
+    reason = (m.group(3) or "") if m.group(2) == label else ""
+    return line[:m.start(2) - 1] + f"({label}{reason})" + line[m.end() - 1:]
+
+
+NOTE_START = re.compile(r"^\* `Becoming\.")
+
+
+def note_lines(text):
+    """The notes' first lines, every line that starts like one read by `NOTE`, so that a tag of a
+    new form fails here rather than leaving its module without a note found."""
+    found = []
+    for l in text.split("\n"):
+        if NOTE_START.match(l):
+            m = NOTE.match(l)
+            assert m, ("a note's tag of a form NOTE does not read", l[:80])
+            found.append(m)
+    return found
+
+
+THROUGH = re.compile(r"^, through `(Becoming\.[\w]+)`$")
+
+
+def note_report(text, layer, rim, mods):
+    """The root's notes whose label is not the computed one; the modules noted more than once, those
+    whose notes stand next to each other marked; notes of modules in neither a layer nor the ring;
+    and reasons `through Y` where `Y` is not an L2 module the noted module imports, or where the
+    module names the condition or a valuation itself."""
+    found = note_lines(text)
+    names = [m.group(1) for m in found]
+    wrong = [(m.group(1), m.group(2)) for m in found
+             if (m.group(1) in layer or m.group(1) in rim) and m.group(2) != note_label(m.group(1), layer, rim)]
+    twice = []
+    for k, n in enumerate(names):
+        if names.count(n) > 1 and n not in [t for t, _ in twice]:
+            near = any(names[j] == names[j + 1] == n for j in range(len(names) - 1))
+            twice.append((n, near))
+    outside = [n for n in names if n not in layer and n not in rim and n != "Becoming"]
+    reasons = []
+    for m in found:
+        t = THROUGH.match(m.group(3) or "")
+        if t and m.group(1) in mods:
+            y, src = t.group(1), graph.strip_comments(mods[m.group(1)]["src"])
+            if y not in mods[m.group(1)]["imports"] or layer.get(y) != 2:
+                reasons.append((m.group(1), "through " + y, "not an L2 module it imports"))
+            elif graph.CONDITIONAL.search(src):
+                reasons.append((m.group(1), "through " + y, "true, though the module names one itself"))
+    return len(found), wrong, twice, outside, reasons
 
 
 def notes(text, core, layer, rim, mods, order_en):
@@ -197,7 +258,7 @@ def notes(text, core, layer, rim, mods, order_en):
     module without one: R31's from NOTES after its `after`, any other after the nearest module
     before it in the README's order that has a note."""
     lines = text.split("\n")
-    have = {m.group(1) for m in map(NOTE.match, lines) if m}
+    have = {m.group(1) for m in note_lines(text)}
     anchor = {}
     for new, note in NOTES.items():
         if new not in have:
@@ -206,6 +267,7 @@ def notes(text, core, layer, rim, mods, order_en):
         if m in have or m in NOTES:
             continue
         before = [x for x in order_en[:i] if x in have]
+        assert before, ("no noted module before", m)
         anchor.setdefault(before[-1], []).append(m)
 
     def emit(name, out, seen):
@@ -230,7 +292,7 @@ def notes(text, core, layer, rim, mods, order_en):
             block = lines[k:j]
             if not (name in GONE and name not in layer):
                 assert name in layer or name in rim, name
-                block[0] = l.replace(f"({m.group(2)}):", f"({note_label(name, layer, rim)}):", 1)
+                block[0] = retag(l, m, note_label(name, layer, rim))
                 out += block
                 seen.add(name)
             emit(name, out, seen)
@@ -266,6 +328,18 @@ def main():
         for w in wrong:
             print("  ", *w)
         bad = bad or bool(wrong) or (lang == "en" and bool(missing))
+    n, wrong, twice, outside, reasons = note_report((PKG / "Becoming.lean").read_text(), layer, rim, mods)
+    plain = "--notes" not in sys.argv
+    print(f"Becoming.lean: {n} notes, {len(wrong)} labels other than computed, "
+          f"{len(twice)} modules noted more than once, {len(outside)} notes of modules in no layer or ring"
+          + (" (reported, not changed: the root's bytes wait for a core run)" if plain else ""))
+    for w in wrong:
+        print("   label", *w)
+    print("   noted more than once:", ", ".join(t + (" (next to each other)" if near else "") for t, near in twice))
+    for o in outside:
+        print("   in no layer or ring", o)
+    for r in reasons:
+        print("   reason", *r)
     if "--write" not in sys.argv and "--notes" not in sys.argv:
         sys.exit(1 if bad else 0)
     order_en, out = None, {}
