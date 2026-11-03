@@ -1,0 +1,3 @@
+expected 55 read 55 missing [] extra [] wrong []
+report {'DS10 constant cultures equal to DS7': {'1-13': True, '1-18': True}, 'cultures': {'primary': 40, 'control': 15}}
+READER CHECK PASSED
