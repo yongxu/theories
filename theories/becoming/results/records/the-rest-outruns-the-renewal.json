@@ -47,8 +47,8 @@
   ],
   "does_not_show": [
     {
-      "en": "That depletion is the only equilibrium: where the rest outruns, restraint by all may also be one; which is reached is a claim about learning, tested in CG2, not a theorem.",
-      "zh": "耗尽是唯一的均衡：其余者超出之处，全体克制也可能是均衡；到达哪一个是关于学习的断言，由 CG2 检验，不是定理。",
+      "en": "That depletion is the only equilibrium: where the rest outruns, restraint by all may also be one; what learners reach is a claim about learning, tested in CG2 and EM1, not a theorem.",
+      "zh": "耗尽是唯一的均衡：其余者超出之处，全体克制也可能是均衡；学习者到达什么是关于学习的断言，由 CG2 与 EM1 检验，不是定理。",
       "kind": "non-implication"
     },
     {
@@ -71,12 +71,12 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261020T113206.066061Z): the declarations of Becoming.Exclusion, these among them, have empty axiom reports; the checker verifies core purity. Tested on learners in CG2 (experiments/commons-outrun, predictions frozen at 8a049b4fb before any learning run; verdicts in its README and study section 250). Literature check in the significance review. One session; not independently reviewed.",
-    "zh": "Lean 4.29.1 合并检查器实查（回执 20261020T113206.066061Z）：Becoming.Exclusion 的声明（含此处各项）公理报告为空；检查器并核对核心纯净。在 CG2 中以学习者检验（experiments/commons-outrun，预测在任何学习运行之前冻结于 8a049b4fb；判定见其 README 与研究第 250 节）。文献核查见显著性审查。一个会话；未经独立审查。"
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261020T113206.066061Z): the declarations of Becoming.Exclusion, these among them, have empty axiom reports; the checker verifies core purity. Tested on learners in CG2 (experiments/commons-outrun, predictions frozen at 8a049b4fb before any learning run; verdicts in its README and study section 250), and in EM1 on learners that generalize across states (frozen at 42cf03228; study section 359). Literature check in the significance review. One session; not independently reviewed.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261020T113206.066061Z）：Becoming.Exclusion 的声明（含此处各项）公理报告为空；检查器并核对核心纯净。在 CG2 中以学习者检验（experiments/commons-outrun，预测在任何学习运行之前冻结于 8a049b4fb；判定见其 README 与研究第 250 节），并在 EM1 中以跨状态推广之学习者检验（冻结于 42cf03228；研究第 359 节）。文献核查见显著性审查。一个会话；未经独立审查。"
   },
   "next_delta": {
-    "en": "A stochastic form (the probability that the rest outruns before a reading, from the margin and the maximum expected renewal); which equilibrium learners reach where both exist, now known to depend on the learner (EM1: learners that generalize reached restraint where tabular learners did not); a frozen test with every training episode starting at step 0; an independent review.",
-    "zh": "随机形式（其余者在读取之前超出的概率，由余量与最大期望更新给出）；两者都是均衡时学习者到达哪一个，今知其依学习者而定（EM1：跨状态推广之学习者于表格学习者不能处达到节制）；每一训练回合皆自第 0 步起之冻结检验；独立审查。"
+    "en": "A stochastic form (the probability that the rest outruns before a reading, from the margin and the maximum expected renewal); whether a profile with restraint is an equilibrium in the locked settings, where learners that generalize kept the stock in three of six and tabular learners in none (EM1, CG2); a frozen test with every training episode starting at step 0; an independent review.",
+    "zh": "随机形式（其余者在读取之前超出的概率，由余量与最大期望更新给出）；锁定设置中带克制的策略组合是否为均衡，跨状态推广之学习者在六个中保住三个，表格学习者一个也没有（EM1、CG2）；每一训练回合皆自第 0 步起之冻结检验；独立审查。"
   },
   "correspondence": {
     "en": "Pivotality at a threshold (Palfrey and Rosenthal 1984) read on the rest: a member is pivotal exactly where the rest alone does not cross the margin before the reading. Coordination at a known threshold (Barrett 2013; Diekert 2017); the folk theorem for stochastic games (Dutta 1995); extinction in equilibrium past a player-number threshold (Mitra and Sorger 2014); risk-dominant selection under learning (Kandori, Mailath and Rob 1993). CG2, on tabular learners in a Harvest-style commons (Perolat et al. 2017): X1_boundary_is_the_rest held; X2_end_weight_does_not_open held; X3_reading_before_the_end_opens_above_vstar held; X4_sharing_opens_only_with_renewal failed; X5_joint_reading failed. EM1, on policy-gradient learners that generalize across states (experiments/commons-outrun-generalizing, frozen at 42cf03228; study section 359): the law held on every course (no violation in 9,026 outrun windows); E1 failed (three of six locked settings kept, the end reading weighted 32 among them), E2 and E3 passed, so X2 is a finding about tabular learners.",
@@ -181,7 +181,7 @@
     {
       "path": "experiments/commons-outrun/README.md",
       "role": "integration",
-      "sha256": "d63891de68fead48066f75c035b623d9346eb6510e342a28eea25ab147de6689"
+      "sha256": "988ee904531e02461c2707b75ab35304f71470f758612d78bec96584ddac9f69"
     },
     {
       "path": "experiments/commons-outrun/PREDICTIONS-2026-10-20.md",
@@ -250,6 +250,10 @@
     {
       "en": "29 October 2026, board item UE16 (study section 449): related to risk-minimization-on-a-shared-renewal; no statement, next step or declaration changed.",
       "zh": "2026年10月29日，工作板条目 UE16（研究第 449 节）：与 risk-minimization-on-a-shared-renewal 相关联；无一陈述、下一步或声明改变。"
+    },
+    {
+      "en": "3 November 2026, after the freeze (board item AF1, the coordinator's word; left by the kept settings' fix, `71fdd5c24`, for after the freeze): Next no longer presumes that an equilibrium with restraint exists in the locked settings, which no computation checked (the record's does-not-show says restraint by all may be one); it now asks whether a profile with restraint is an equilibrium there, naming what each kind of learner reached. The does-not-show item and the validation scope name EM1 beside CG2, and the home sentence links EM1. No law, hypothesis, declaration or proof changed.",
+      "zh": "2026年11月3日，冻结之后（工作板条目 AF1，协调者之言；保住设置之修正 `71fdd5c24` 将此留待冻结之后）：下一步不再预设锁定设置中存在带克制的均衡，此事无计算检验（本记录所不表明者说全体克制可能是均衡）；现问带克制的策略组合在那里是否为均衡，并列出各类学习者到达什么。“不表明”一项与验证范围在 CG2 之旁列出 EM1，本家之句链接 EM1。无一律、假设、声明或证明改变。"
     }
   ]
 }
