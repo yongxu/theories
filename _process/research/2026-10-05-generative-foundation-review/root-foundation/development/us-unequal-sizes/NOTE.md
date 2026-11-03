@@ -24,11 +24,11 @@ All in the pure core (`Init` only), every axiom report empty (scratch builds of 
 
 ## 4. Modelling choice
 
-Which reading holds of actual groups is a premise. In the kept reading a larger group's members each gain `q` per keeper, so what a keeper gives grows with its group's size; in the divided reading what a unit gives its group is fixed and shared out. Hamilton's rule with `ρ` the share of the spread among group means is the divided reading's; read with the kept reading's returns on unequal groups, the share of the spread among means misleads, as the witness shows. Other readings of the group are stated only through `rises_iff_shared_sized`. Synergy, mixing beyond the listing and assortment over generations stay open.
+Which reading holds of actual groups is a premise. In the kept reading a larger group's members each gain `q` per keeper, so what a keeper gives grows with its group's size; in the divided reading what a unit gives its group is fixed and shared out. Hamilton's rule with `ρ` the share of the spread among group means is the divided reading's; read with the kept reading's returns on unequal groups, the share of the spread among means misleads, as the witness shows. Other readings of the group are stated only through `rises_iff_shared_sized`. The witness also depends on one step with the groups listed as given and their sizes fixed over it, and on the spread among groups read by the means weighted by size. Synergy, mixing beyond the listing and assortment over generations stay open.
 
 ## 5. Texts
 
-04 §5 (the home) and §7, the record selection-with-returns-to-groupmates (laws 7 and 8, hypotheses, Does not show, Next, a counterexample), 02 §9 and the record shaping-selected-among-groups (the equal-size limit narrowed to the spread form), ALIGNMENT A-10's groups bullet, the package README's SelectionLevels and RuleShaping rows, the two modules' docstrings, 08's receipt sentence.
+04 §5 (the home) and §7, the record selection-with-returns-to-groupmates (law 7, hypotheses, Does not show, Next, a counterexample), a new record unequal-groups-not-decided-by-the-spread-among-groups for the witness, at its own anchor in 04 §5 beside the positive law, so that 04 §7's open item is closed both ways (what the verdict goes through, and the form it does not go through), 02 §9 and the record shaping-selected-among-groups (the equal-size limit narrowed to the spread form), ALIGNMENT A-10's groups bullet, the package README's SelectionLevels and RuleShaping rows, the two modules' docstrings, 08's receipt sentence.
 
 ## 6. Review
 

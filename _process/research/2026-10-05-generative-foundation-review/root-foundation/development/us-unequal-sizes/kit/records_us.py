@@ -76,8 +76,8 @@ witness = {**lt("Witness in groups of three and one: two keepers and two others,
                                                        "big_returns", "small_returns", "either_verdict",
                                                        "divided_one_verdict"]]}
 if not any(SL + "rises_iff_shared_sized" in law["declarations"] for law in d["laws"]):
-    d["laws"] += [sized, witness]
-put_ref_decls(d, "SelectionLevels", sized["declarations"] + witness["declarations"])
+    d["laws"].append(sized)
+put_ref_decls(d, "SelectionLevels", sized["declarations"])
 rebind(d, "SelectionLevels")
 add_plain(d, receipt, "receipt"); add_plain(d, NOTE, "integration")
 st = d["statement"]
@@ -92,8 +92,12 @@ swap(d["does_not_show"], "Returns with synergy (depending on the product",
      {**lt("Returns with synergy (depending on the product of own and groupmates' amounts) are not stated, nor which sharing actual groups have: a member gaining for every unit its group holds, or a share of what is given divided, is a premise, and other readings of the group are stated only through the general law.",
            "有协同的回报（依赖自身与组员之量的乘积）未陈述；实有之组如何共享亦未陈述：成员为其组所持之每单位而得，或所予者之均分，皆为前提，组之其他读数仅经一般之律陈述。"), "kind": "scope"})
 d["counterexamples"].append({"path": LEAN + "SelectionLevels.lean", "detail": lt(
-    "With unequal sizes the spread among groups does not decide the verdict where each member gains for every unit its group holds: the same spread over the whole and among the size-weighted means, and either verdict (Sized.either_verdict).",
-    "大小不等而每成员为其组所持之每单位而得时，组间离散不决定判定：整体与按大小加权之均值之离散皆同，而判定两可（Sized.either_verdict）。")})
+    "With unequal sizes the spread among groups does not decide the verdict where each member gains for every unit its group holds: the same spread over the whole and among the size-weighted means, and either verdict (unequal-groups-not-decided-by-the-spread-among-groups).",
+    "大小不等而每成员为其组所持之每单位而得时，组间离散不决定判定：整体与按大小加权之均值之离散皆同，而判定两可（unequal-groups-not-decided-by-the-spread-among-groups）。")})
+if not any(x["id"] == "unequal-groups-not-decided-by-the-spread-among-groups" for x in d["related"]):
+    d["related"].append({"id": "unequal-groups-not-decided-by-the-spread-among-groups", "detail": lt(
+        "The form the verdict at unequal sizes does not go through, beside the form it goes through.",
+        "大小不等时判定所不经之形，与其所经之形并列。")})
 nd = d["next_delta"]
 assert "the returns' among-group part for groups of unequal size; " in nd["en"] and "大小不等之组中回报的组间部分；" in nd["zh"]
 nd["en"] = nd["en"].replace("the returns' among-group part for groups of unequal size; ", "")
@@ -104,6 +108,80 @@ d["history"].append(history("the returns stated in groups of any sizes through a
                             "所返于各组大小任意时经组之读数陈述（rises_iff_shared_sized），附有所自留与均分二读数及两可之见证；大小不等时组间部分之未决项已答。"))
 d["reviewed_at_utc"] = when
 out["selection-with-returns-to-groupmates"] = d
+
+# ---------------------------------------------------------------- unequal-groups-not-decided-by-the-spread-among-groups
+UID = "unequal-groups-not-decided-by-the-spread-among-groups"
+LIFE = "theories/becoming/chapters/04-LIFE.md"
+witness_laws = [
+    {**lt("Two keepers and two others in groups of three and one, the keepers together with one other beside the last member alone, or one keeper alone beside the other keeper with the two others: the same spread of keeping over the whole and the same spread of the group means, each member read as its group's mean weighted by size.",
+          "二保留者与二他者，分为三与一之组：保留者与一他者同组、末一人独处，或一保留者独处、另一保留者与二他者同组：整体之保留离散相同，组均值之离散（每成员读作其组之均值，按大小加权）亦同。"),
+     "declarations": [SL + "Sized." + x for x in ["big", "small", "big_common"]] + [SL + "ByMeans.factor", SL + "ByMeans.common"]},
+    {**lt("Each member gaining two for every unit its group keeps, at a cost of one to the keeper and nothing kept: with the keepers together the whole selects for keeping, and with one in each group, every member's group total the same, it selects against keeping.",
+          "每成员为其组所留之每单位得二，保留者付一而无所自留：保留者同组则整体选留，各组一人、每成员之组总量皆同，则整体不选。"),
+     "declarations": [SL + "Sized." + x for x in ["bigOffspring", "smallOffspring", "big_returns", "small_returns", "either_verdict"]]},
+    {**lt("Where what each unit kept gives its group is divided among the members instead, the two listings give one verdict for any offspring numbers meeting the same returns.",
+          "若一单位所予其组者均分于成员，则二种列法于满足同一回报之任何后代数皆得同一判定。"),
+     "declarations": [SL + "Sized.divided_one_verdict"]},
+]
+uneq = {
+    "schema_version": 2, "id": UID,
+    "title": lt("Groups of unequal size not decided by the spread among groups", "不等大之群，不由群间离散决定"),
+    "kind": "theorem", "status": "recorded-checked", "family": "F01", "reviewed_at_utc": when,
+    "statement": lt("Where each member gains for every unit its group keeps, groups of unequal size with the same spread over the whole and the same spread of their means can select for keeping or against it, so no form in those two spreads gives the verdict; where what is given is divided among the members, they give one verdict.",
+                    "每成员为其组所留之每单位而得时，整体离散与组均值离散皆同之不等大之群，可选留亦可不选，故无经此二离散之形可给判定；所予者均分于成员时，则得同一判定。"),
+    "laws": witness_laws,
+    "hypotheses": [lt("No axiom. Offspring numbers additive in own and groupmates' amounts, each unit kept costing its keeper one and giving two to every member of its group, or, for the divided case, any returns kept and shared with what a unit gives its group divided among the members; one step, the groups listed as given with their sizes fixed over it; the spread among groups read by the groups' means weighted by size, with a common multiple of the sizes.",
+                      "不加公理。后代数可加地依赖自身与组员之量：每留一单位，保留者付一，其组每成员得二；或于均分之情形，任何自留与共享之回报，一单位所予其组者均分于成员。一步之内，组如所列而给，其大小于此步不变；组间离散以按大小加权之组均值读之，取诸大小之公倍数。")],
+    "does_not_show": [
+        {**lt("Which sharing actual groups have: a member gaining for every unit its group holds, or a share of what is given divided, is a premise.",
+              "实有之组如何共享：成员为其组所持之每单位而得，或所予者之均分，皆为前提。"), "kind": "correspondence"},
+        {**lt("That the verdict at unequal sizes is beyond any law: it goes through the covariance of a member's group total with its group's mean (selection-with-returns-to-groupmates).",
+              "大小不等时之判定无律可循：其经由成员之组总量与其组均值之协方差（selection-with-returns-to-groupmates）。"), "kind": "non-implication"},
+        {**lt("That keeping is better where it is selected for: the counts are read, and ranking courses needs C.",
+              "被选处保留更好：所读者为计数，排序进程须 C。"), "kind": "non-implication"},
+    ],
+    "counterexamples": [{"path": LEAN + "SelectionLevels.lean", "detail": lt(
+        "The spread among groups as the lever at unequal sizes, for a member gaining for every unit its group holds: the same spreads, either verdict (Sized.either_verdict).",
+        "大小不等、成员为其组所持之每单位而得时，以组间离散为杠杆：离散皆同而判定两可（Sized.either_verdict）。")}],
+    "standard_boundaries": ["no-ethical-premise", "no-evaluation", "discrete-steps", "formal-not-empirical", "names-provisional",
+                            "omission-not-refutation"],
+    "validation_scope": lt(f"Machine-checked by the core checker with Lean 4.29.1 (receipt {rid}): every declaration of Becoming.SelectionLevels with an empty axiom report. Built in one session, the restatements read against the Lean by one AI reader other than the author; not reviewed by a person.",
+                           f"由核心检查器以 Lean 4.29.1 实查（回执 {rid}）：Becoming.SelectionLevels 每一声明之公理报告皆空。于一会话中构建，复述之文经作者以外之一 AI 读者对照 Lean 审读；未经人审。"),
+    "next_delta": lt("Readings of the group between the total and the mean; group sizes changing over generations; an independent review by a person.",
+                     "介于总量与均值之间之组读数；组之大小随世代而变；人之独立审查。"),
+    "correspondence": lt("Price's partition weighted by group size (Price 1972) and the reading of group selection by group means in multilevel selection (Okasha 2006): at unequal sizes, whether what a member receives scales with its group's total or its mean decides whether the spread among the means carries the verdict.",
+                         "按组之大小加权之 Price 分解（Price 1972）与多层选择中以组均值读群选择（Okasha 2006）：大小不等时，成员所得随其组之总量抑或均值而变，决定组均值之离散是否承载判定。"),
+    "canonical_source": LEAN + "SelectionLevels.lean",
+    "aliases": ["Groups of unequal size not decided by the spread among groups", "不等大之群，不由群间离散决定",
+                SL + "Sized.either_verdict"],
+    "dependencies": [
+        {"id": "selection-with-returns-to-groupmates", "relation": "formal-reuse",
+         "detail": lt("rises_iff_kept_sized for the verdict with the keepers together; rises_iff_divided_sized for the one verdict when divided.",
+                      "保留者同组之判定用 rises_iff_kept_sized；均分时之同一判定用 rises_iff_divided_sized。"),
+         "interface": {"output": lt("The whole's verdict in groups of any sizes through a reading of the group.", "各组大小任意时经组之读数之整体判定。"),
+                       "input": lt("Two listings of four members in groups of three and one, with their returns.", "四成员分三与一之二种列法及其回报。"),
+                       "conditions": lt("A common multiple of the sizes; returns kept and shared, additive.", "诸大小之公倍数；自留与共享之回报，可加。"),
+                       "evidence": LEAN + "SelectionLevels.lean"}},
+        {"id": "selection-within-and-among-groups-of-any-sizes", "relation": "formal-reuse",
+         "detail": lt("ByMeans's listing and factors; the size-weighted means' spread.", "ByMeans 之列法与因子；按大小加权之均值离散。"),
+         "interface": {"output": lt("The split of the selection term for groups of any sizes.", "各组大小任意之选择项之分解。"),
+                       "input": lt("The witness's listings and their factors.", "见证之列法及其因子。"),
+                       "conditions": lt("A common multiple of the sizes.", "诸大小之公倍数。"),
+                       "evidence": LEAN + "SelectionLevels.lean"}}],
+    "related": [{"id": "shaping-selected-among-groups", "detail": lt(
+        "The capacity to shape a rule in groups of unequal size, its shared part a member's gain for each shaper in its group, is the kept case.",
+        "不等大之群中之塑规之能，其同得为成员为其群每一塑规者所得，乃自留之情形。")}],
+    "references": [{"path": LEAN + "SelectionLevels.lean", "role": "proof", "sha256": sha(LEAN + "SelectionLevels.lean"),
+                    "declarations": sorted({x for law in witness_laws for x in law["declarations"]} |
+                                           {SL + "rises_iff_kept_sized", SL + "rises_iff_divided_sized"})},
+                   {"path": receipt, "role": "receipt", "sha256": sha(receipt)},
+                   {"path": NOTE, "role": "integration", "sha256": sha(NOTE)},
+                   {"path": LIFE, "role": "statement", "sha256": sha(LIFE)}],
+    "proof_bindings": [binding("SelectionLevels")],
+    "history": [history("added: groups of unequal size with the same spreads and either verdict, where each member gains for every unit its group keeps, and one verdict where what is given is divided; 04 §7's open item closed both ways.",
+                        "新增：整体与组均值离散皆同之不等大之群，成员为其组所留之每单位而得时判定两可，所予均分时判定唯一；04 §7 之未决项两面皆结。")],
+}
+out[UID] = uneq
 
 # ---------------------------------------------------------------- shaping-selected-among-groups
 d = load("shaping-selected-among-groups")

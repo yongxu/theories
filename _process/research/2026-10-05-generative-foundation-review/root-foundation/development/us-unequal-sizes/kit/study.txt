@@ -3,7 +3,8 @@
 Board item US, the coordinator's of 4 November 2026: 04 §7's Open item "the returns' among-group part for unequal sizes" and the Does not show of the record selection-with-returns-to-groupmates ([study note](development/us-unequal-sizes/NOTE.md)). The whole's verdict through a reading's covariation held on any list; what was missing, the returns' parts by level and the verdict through them, needed new Lean, since among the groups' means the slope is what comes back alone with the shared part times the group's size.
 
 ```text
-Result(s): selection-with-returns-to-groupmates (groups of any sizes added, home 04 §5), shaping-selected-among-groups
+Result(s): selection-with-returns-to-groupmates (groups of any sizes added, home 04 §5),
+       unequal-groups-not-decided-by-the-spread-among-groups (new, home 04 §5), shaping-selected-among-groups
        (the equal-size limit narrowed to the spread form, home 02 §9); SelectionLevels and RuleShaping extended,
        every axiom report empty (receipt RECEIPT).
 Delta:
