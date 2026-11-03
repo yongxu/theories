@@ -19,7 +19,7 @@
    - *Standing of `Becoming.RegimeMargin.Adjusted.falls_iff_below`, by the rule:* connected (it reaches `Becoming.«所闭之传递»`, `Becoming.«所闭之自反»`, `Becoming.«缘在所闭»`, `Becoming.«迭之周»` and `Becoming.«迭之定»` among its reasons; not declared a case of one).
 4. Every run from a state up to hi is still from some step at most 3 hi + 3: below the threshold at a rest below the draw with level and recent giving equal, at a recent giving the adjustment returns from nothing; from it on at the draw with a level the regime's step leaves as it is. (`Becoming.RegimeMargin.Adjusted.fates`)
    - *Shared laws, by Lean dependency:* closure and balance; its declarations reach the grammar.
-5. Where giving rises with what is left, falls short of the draw below y, meets it from y up to the band's top, gives nothing from nothing and the step keeps a band up to hi reaching the point, the threshold is the point of no return H + y at every recent giving up to hi. (`Becoming.RegimeMargin.threshold_regime`)
+5. Where giving rises with what is left, falls short of the draw below y, meets it at every z from y with z + H at most the band's top, gives nothing from nothing and the step keeps a band up to hi reaching the point, the threshold is the point of no return H + y at every recent giving up to hi. (`Becoming.RegimeMargin.threshold_regime`)
    - *Shared laws, by Lean dependency:* closure and balance; its declarations reach the grammar.
 6. Witness: giving that is two from one and nothing from any other level keeps every state up to four within four under a draw of two, yet the run from four rests at nothing and the run from three at three, so no least level separates the runs resting below the draw from the rest. (`Becoming.RegimeMargin.Notch.giving`, `Becoming.RegimeMargin.Notch.keeps`, `Becoming.RegimeMargin.Notch.stays_three`, `Becoming.RegimeMargin.Notch.ends_four`, `Becoming.RegimeMargin.Notch.no_threshold`)
    - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar.
@@ -29,7 +29,7 @@
 <a id="conditions--条件"></a>
 ## Conditions
 
-- No axiom. Whole-number amounts and discrete steps; one condition; the draw taken first, as much as there is; the state the level and one recent giving; each law's own premises as hypotheses: the adjustment rising with what is left and with the recent giving, a band the step keeps, and for the regime's case giving short of the draw below y, meeting it from y, nothing from nothing, and the band reaching the point.
+- No axiom. Whole-number amounts and discrete steps; one condition; the draw taken first, as much as there is; the state the level and one recent giving; each law's own premises as hypotheses: the adjustment rising with what is left and with the recent giving, a band the step keeps, and for the regime's case giving short of the draw below y, meeting it at every z from y with z + H at most the band's top, nothing from nothing, and the band reaching the point.
 
 <a id="does-not-show--未表明"></a>
 ## Does not show
@@ -125,7 +125,8 @@ Aliases: `the threshold in the plane of level and recent giving`, `the point of 
 - 21 October 2026, RM7: more than two coupled conditions are stated as a web under the regime's step (record coupled-webs, study section 311); its next delta no longer lists them. Its laws are unchanged.
 - 21 October 2026, MQ7: the field frequency of fates on either side of the curve was put to a frozen test on the 21 primary stocks in NOAA Stock SMART and ICES Stock Assessment Graphs that no analysis had read (study section 316): below the regime's point, on the low side, episodes short of the catch fell 0.39 more often than those meeting it, in the same stock at the same deficit, from 5 stocks, with a lower bound of 0.00 (C1 failed; C2 not testable). What this record does not show and its next delta now say so. Its laws are unchanged.
 - 22 October 2026, UM: one law of exact thresholds added, from which this record's exactness and falling are now derived; Adjusted.threshold_le removed, no law reading it (study section 335).
+- 3 November 2026, T1P (a correction from TS2's reader, recorded in the review packet's T1-STANDING.md, "After TS2's reader"): law 5's premise, and the hypotheses with it, say exactly what Meets requires, giving meeting the draw at every z from y with z + H at most the band's top, where it had read as every level from y up to the top, more than the Lean asks; the law now states what the Lean proves, under the weaker premise, and the Lean is unchanged.
 
 </details>
 
-Documentary review UTC: `2026-10-21T16:22:45+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-03T15:58:27+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
