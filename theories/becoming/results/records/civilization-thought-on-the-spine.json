@@ -55,8 +55,8 @@
     "nondual-method-not-proof"
   ],
   "validation_scope": {
-    "en": "verify_zh.py passes (4 November 2026, board item RAE; in research-test since): the import (438 files by SHA-256), a verdict for each of 5,673 judgments, each of the 3,499 flagged placed once in its flagged cluster, 2,023 fragments verbatim, 1,603 declarations in receipt 20261103T211917.845905Z, 234 records, the name table (449 names), and 06's 116 citations of Lean names, its record links and nine numbers of its §七; the chapters' quotations, declarations, links, 对照 kinds and tables were checked till they moved to history/ on 23 October 2026. All readers AI; no collation with a printed edition.",
-    "zh": "verify_zh.py 通过（2026 年 11 月 4 日，看板项 RAE；此后随 research-test）：导入 438 个文件，5,673 条判断各一裁定，所标 3,499 条各在所标之簇恰落一处，2,023 片段逐字，1,603 个声明在回执 20261103T211917.845905Z 中，234 份记录，名表 449 名，06 之 116 处 Lean 名、记录链接与第七节九数；诸章之引文、声明、链接、对照与表核至 10 月 23 日移入 history/。读者皆 AI；未与刻本对校。"
+    "en": "verify_zh.py passes (RAE, RAE2: 4 and 5 November 2026; in research-test since): the import (438 files, SHA-256), a verdict for each of 5,673 judgments, each of the 3,499 flagged placed once in its flagged cluster, 2,023 fragments verbatim, 1,603 declarations in receipt 20261103T211917.845905Z, 234 records, 449 names, and 06's 114 Lean-name citations, each exact (one more off the spine), record links and nine numbers of §七; the chapters' quotations, declarations, links, 对照 kinds and tables were checked until they went to history/ (23 October 2026). All readers AI; no printed edition collated.",
+    "zh": "verify_zh.py 通过（RAE、RAE2，11 月 4、5 日；此后随 research-test）：导入 438 文件，5,673 条判断各一裁定，所标 3,499 条各在所标之簇落一处，2,023 片段逐字，1,603 声明在回执 20261103T211917.845905Z 中，234 份记录，449 名，06 之 114 处 Lean 名（各确指一名，另一在脊柱外）、记录链接与第七节九数；诸章之引文、声明、链接、对照与表核至 10 月 23 日入 history/。读者皆 AI；未与刻本对校。"
   },
   "next_delta": {
     "en": "The gaps the texts raise, each to be claimed before it is written: witnesses that are functions of one another; measures of a juncture; a pool weighted by share. Then the three RO and 易传 kinds decided in the chapter written into those maps.",
@@ -405,7 +405,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/verify_zh.py",
       "role": "integration",
-      "sha256": "ba7e897e186caaa583313059b1fd3ae3629ab9e801f8cc265046cc91804b1de3"
+      "sha256": "4d2060cdb08aba710b846c0aaa49b74b2d2410e3d884ecfae8da4e066ebf2f3b"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/build_tables.py",
@@ -477,6 +477,10 @@
     {
       "en": "4 November 2026 (AA, erratum E4): 'each placed once' is scoped to the cluster each judgment was flagged for, which is what verify_zh.py checks; a recount of coverage.json and passages.json finds 96 of the 3,499 placed in other clusters too (3,600 placements), 6 of them kept in one cluster and rejected in another, now a does-not-show item. No count, kind or entry changed.",
       "zh": "2026年11月4日（AA，勘误 E4）：“各落一处”限于各判断所标之簇，即 verify_zh.py 所查；据 coverage.json 与 passages.json 重数，3,499 条中 96 条另落他簇（共 3,600 处），其中 6 条在一簇取而在他簇不取，今列入不能说明之项。计数、类别与条目均未改。"
+    },
+    {
+      "en": "5 November 2026, board item RAE2: verify_zh.py had read 06-CLASSICAL-TEXTS's unprefixed Lean names as the end of any audited declaration, so a name ending some declaration passed and an ambiguous one was not refused; each now resolves to exactly one, whole, with Becoming. before it, or in the namespace 06 states for its section or table; §五 states Becoming.Hexagram for the configurations' names and writes the other laws' namespaces, and three names that resolved to no declaration as written are written in full in 06. The scope's count (114 citations, and one module named off the spine, checked as a file) is the passing run's. Claims unchanged.",
+      "zh": "2026年11月5日，看板项 RAE2：verify_zh.py 原把 06-CLASSICAL-TEXTS 未带前缀之 Lean 名读作任一已审声明之末段，故凡为某声明末段之名皆通过，有歧义者亦不拒；今每名须恰确指一名：如所写、前加 Becoming.、或加 06 于其节或其表所述之命名空间；第五节说明卦之名在 Becoming.Hexagram 中，其余之律写出命名空间；06 中三名照所写不指任何声明，改写全名。验证范围之数（114 处，另一模块为脊柱外者，只核其文件）为通过之运行所给。断言未变。"
     }
   ]
 }

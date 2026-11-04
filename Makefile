@@ -1,4 +1,4 @@
-.PHONY: research-check research-check-strict research-render research-find research-test research-imports research-links research-secrets gate gate-plan
+.PHONY: research-check research-check-strict research-render research-find research-test research-imports research-links research-secrets gate gate-plan gate-push
 export QUERY
 
 research-check:
@@ -36,3 +36,7 @@ gate:
 
 gate-plan:
 	python3 -B tools/research/gate.py plan --base $(or $(BASE),main)
+
+# Before a push (Ren's): the full set, then the push screen from the remote's main (GATE_PUSH_ACK names binaries looked at).
+gate-push:
+	python3 -B tools/research/gate.py push --tip $(or $(TIP),HEAD)
