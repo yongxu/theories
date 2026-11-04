@@ -1,0 +1,30 @@
+{
+  "modules": 0,
+  "load": [
+    10.625,
+    11.00927734375,
+    11.72314453125
+  ],
+  "runs": [
+    {
+      "driver": "current",
+      "exit": 0,
+      "wall_s": 6.2,
+      "cpu_s": 1.5,
+      "output_bytes": 0,
+      "identical_to_current": true,
+      "constants_lines": 0,
+      "axioms_lines": 0
+    },
+    {
+      "driver": "onepass",
+      "exit": 0,
+      "wall_s": 1.3,
+      "cpu_s": 1.0,
+      "output_bytes": 0,
+      "identical_to_current": true,
+      "constants_lines": 0,
+      "axioms_lines": 0
+    }
+  ]
+}

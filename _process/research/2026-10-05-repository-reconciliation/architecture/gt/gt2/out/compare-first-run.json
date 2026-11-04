@@ -1,0 +1,41 @@
+{
+  "fields_compared": 29,
+  "steps": 1544,
+  "before": {
+    "ran": 1,
+    "reused": 1543
+  },
+  "after": {
+    "ran": 356,
+    "reused": 1188,
+    "wall_seconds": 57.749,
+    "seconds_ran": 306.8
+  },
+  "keys_changed": 387,
+  "prelude_keys_now_their_modules": 32,
+  "prelude_keys_new": 354,
+  "environment_audit_seconds": 39.548,
+  "slowest": [
+    [
+      "EnvironmentAudit.log",
+      39.548
+    ],
+    [
+      "Becoming.Identification.PreludeOnly.log",
+      9.528
+    ],
+    [
+      "Becoming.HexagramSites.PreludeOnly.log",
+      7.782
+    ],
+    [
+      "Becoming.HexagramLaws.PreludeOnly.log",
+      7.599
+    ],
+    [
+      "Becoming.Optimum.PreludeOnly.log",
+      5.564
+    ]
+  ],
+  "problems": []
+}
