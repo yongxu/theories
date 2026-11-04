@@ -15,11 +15,15 @@ addenda/FROZEN-k.sha256; the files of freeze 1 it imports among them) equals its
 `run` also unless the pin's latest smoke run here passed on those hashes, and unless TR8's premise
 holds for every context asked: TR8's abstract unit of the same presentation, for the same pin, read
 by freeze 1's reading from freeze 1's folder (told/results/tr8/<pin>) and supported; and unless the
-readability rule (tr9_rule.readability, from the smoke run and every scored call already made) lets
-every context asked start. `readability` gives the rule for TR9 or, as FREEZE-1.md's dated note asks,
-for freeze 1's TR8 and TR-RR, making no call. `run` writes only into results/<pin>/, one folder per
-pin whatever contexts a run makes, the full plan's calls of the contexts asked in its one order;
-`smoke` only into smoke/. Freeze 1's run.resume and
+readability rule (tr9_rule.readability) lets every context asked start, on TR9's own calls of the pin
+under these frozen files: every smoke run here made on them and every scored call logged under the
+chain's newest link (readable). `smoke` is refused where another smoke run of the pin could release
+nothing (smoke_needed). `readability` gives the rule for TR9 or, as FREEZE-1.md's dated note asks,
+for freeze 1's TR8 and TR-RR on their own calls, making no call. `smoke`, `run` and `mend` each hold
+the pin's lock while they work, on the command line until their process ends, and refuse while
+another command of the pin holds it, so a pin's commands run one at a time (pin_lock, TR7's). `run`
+writes only into results/<pin>/, one folder per pin whatever contexts a run makes, the full plan's
+calls of the contexts asked in its one order; `smoke` only into smoke/; the lock is results/<pin>.lock. Freeze 1's run.resume and
 run.execute make every call, with their stops (a call no retry answers, another model, a moved
 catalog, FILTERED_RUN filtered answers in a row, a request whose messages are not the frozen prompt,
 a failed attempt returned as an answer, the spend guard), their catalog reads and their log, each
@@ -40,6 +44,8 @@ log cut short" says what is done then, and `mend` does it for a last line cut sh
 """
 
 import argparse
+import contextlib
+import fcntl
 import hashlib
 import json
 import os
@@ -64,6 +70,8 @@ TOLD = HERE.relative_to(R.REPO)
 # freeze 1's client, where an addendum to freeze 1 changed it. Every other file is fixed.
 MAY_CHANGE = frozenset({str(TOLD / "tr9_dry_run.py"), str(TOLD / "results/dry-run.json"), str(R.TOLD / "client.py")})
 TR8_RESULTS = R.HERE / "results" / "tr8"       # freeze 1's folders of TR8, one per pin
+LOCKS = HERE / "results"      # where each pin's lock is, beside its results folder
+HELD = []      # on the command line, a duplicate of each pin's lock's descriptor, open until the process ends
 
 
 LONE = re.compile("[\ud800-\udbff](?![\udc00-\udfff])|(?<![\ud800-\udbff])[\udc00-\udfff]")
@@ -250,8 +258,35 @@ def frozen(repo=R.REPO, told=TOLD):
     has them; then this freeze's chain."""
     first = R.frozen_check(repo, R.TOLD)
     fc = R.frozen_check(repo, told, MAY_CHANGE)
-    fc["freeze_1_link"] = first["link"]
+    fc["freeze_1_link"], fc["freeze_1_hashes"] = first["link"], first["hashes"]
     return fc
+
+
+@contextlib.contextmanager
+def pin_lock(family, root=None, hold=False):
+    """One command of a pin at a time (FREEZE-8.md, section 7; TR7's, FREEZE-4.md, section 8): `smoke`,
+    `run` and `mend` each hold the pin's lock while they work, an exclusive lock on results/<pin>.lock
+    beside the pin's results folder, and each refuses, before anything, while another holds it or where
+    it cannot be taken, on a file system that does not lock. The lock belongs to the open file. With
+    hold, as on the command line (main), a duplicate of its descriptor stays open (HELD), so the lock
+    outlasts the with and the system drops it only when the process ends, killed or not, after any call
+    still in flight and the logs' last flush. The file left behind holds nothing, and is not removed
+    while a command of the pin may run, since another command would then lock a new file at the same
+    path."""
+    p = Path(root or LOCKS) / (family.replace("/", "__") + ".lock")
+    p.parent.mkdir(parents=True, exist_ok=True)
+    with p.open("a") as fh:
+        try:
+            fcntl.flock(fh.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
+        except BlockingIOError:
+            raise SystemExit(f"another command of {family} is running, holding {p.name}: one command of a pin at a "
+                             "time (FREEZE-8.md, section 7); nothing was done") from None
+        except OSError as e:
+            raise SystemExit(f"{p.name} could not be locked ({e}): a pin's commands need a folder that locks "
+                             "(FREEZE-8.md, section 7); nothing was done") from None
+        if hold:
+            HELD.append(os.dup(fh.fileno()))       # the lock outlasts the with, until the process ends
+        yield p
 
 
 def parse_contexts(arg):
@@ -370,19 +405,12 @@ def served_tier(response):
     return response.get("service_tier") if isinstance(response, dict) else None
 
 
-def probe_read(cond, probe):
-    """A probe call read whole: every option's number, and an answer for every option that waits and
-    every situation (right or not)."""
-    got = (probe or {}).get("answers") or {}
-    return TR.worths(probe) is not None and all((got.get(lab) or {}).get(s) is not None
-                                                for lab, sits in D.stops_named(cond).items() for s in sits)
-
-
 def smoke_report(folder, stopped=None):
     """The smoke run's report and its stop rule: every call answered by the pin's model while the
     catalog names the frozen snapshot, and no provider rejecting the request. A choice neither an option
-    nor a decline, and a probe not read whole (probe_read), are listed and do not stop it alone: the
-    readability rule reads their rates (tr9_rule.readability), here and at every start of `run`.
+    nor a decline, and a probe whose numbers or reader's answers cannot be read, are listed and do not stop it
+    alone: the readability rule reads them, with every other call of the test made on the pin under
+    these frozen files, at every start of `run` (readable).
     Reported: the served models, providers and tiers, the system fingerprints, the catalog's slugs, the
     declines, whether each probe states the reader rightly, the readability of every context, tokens and
     cost per call by kind, and the projection for the full plan and its first round, abstract/compute.
@@ -393,7 +421,7 @@ def smoke_report(folder, stopped=None):
     fam, slug = meta["family"], R.pin(meta["family"])["canonical_slug"]
     bad = [r["id"] for r in recs if not R.served_ok(fam, r["response"]) or r.get("catalog") != slug]
     unread = [r["id"] for r in recs if (r["kind"] == "choice" and r["answer"] in (rule.INVALID, rule.FILTERED))
-              or (r["kind"] == "probe" and not probe_read(D.SMOKE, r["probe"]))]
+              or (r["kind"] == "probe" and (TR.unreadable(D.TEST, r) or not TR.answers_read(r)))]
     tok = defaultdict(list)
     for r in recs:
         u = (r["response"] or {}).get("usage") or {}
@@ -409,7 +437,7 @@ def smoke_report(folder, stopped=None):
                       if all(k in per_call for k in n) else {"calls": len(calls), "usd": "not measured"})
     report = {"family": fam, "calls": len(recs), "planned": meta["calls"], "stopped": stopped,
               "not_the_pin": bad, "unread": unread,
-              "readability": TR.readability(D.TEST, [D.ctx_id(c) for c in D.contexts()], recs),
+              "readability": TR.readability(D.TEST, [D.ctx_id(c) for c in D.contexts()], recs),   # this smoke run alone
               "served_by": dict(Counter(str(R.served_model(r["response"])) for r in recs)),
               "served_by_provider": dict(Counter(str(served_provider(r["response"])) for r in recs)),
               "served_at_tier": dict(Counter(str(served_tier(r["response"])) for r in recs)),
@@ -426,28 +454,73 @@ def smoke_report(folder, stopped=None):
     return 0 if report["go_on"] else 2
 
 
-def latest_smoke(root, family):
-    found = sorted((Path(root) / "smoke").glob(family.replace("/", "__") + "-*"))
-    return found[-1] if found else None
+def smoke_runs(root, family):
+    """Every smoke run of the pin under root/smoke, oldest first."""
+    return sorted((Path(root) / "smoke").glob(family.replace("/", "__") + "-*"))
 
 
-def readable(test, family, contexts, smokes=None, scored=None):
+def scored(test, family):
+    """The pin's scored folder of a test: this freeze's for TR9, freeze 1's for TR8 and TR-RR."""
+    return (HERE / "results" if test == D.TEST else R.HERE / "results" / test) / family.replace("/", "__")
+
+
+def read_meta(folder):
+    p = Path(folder) / "meta.json"
+    return json.loads(p.read_text(encoding="utf-8")) if p.exists() else {}
+
+
+def readable(test, family, contexts, fc, smokes=None, scored_folder=None):
     """The readability rule for one pin and test (FREEZE-8.md, section 8; for freeze 1's TR8 and TR-RR,
-    FREEZE-1.md's dated note): the pin's rates over every call of its latest smoke runs on freeze 1's
-    harness, freeze 1's and this freeze's, and every call of the test already made in its folder. Every
-    log must read whole."""
-    if smokes is None:
-        smokes = [f for f in (latest_smoke(R.HERE, family), latest_smoke(HERE, family)) if f is not None]
-    if scored is None:
-        scored = (HERE / "results" if test == D.TEST else R.HERE / "results" / test) / family.replace("/", "__")
-    recs = []
-    for f in list(smokes) + [scored]:
-        if Path(f).exists():
-            log_whole(f)
-            recs += [r for r in R.logged(f) if f != scored or r.get("test") == test]
-    out = TR.readability(test, contexts, recs)
-    out.update({"test": test, "family": family, "smokes": [str(f) for f in smokes], "scored": str(scored)})
+    FREEZE-1.md's dated note), on the test's own calls under the frozen files in force: every call of
+    the test in every smoke run of the pin on the test's harness made on its chain's hashes (this
+    freeze's for TR9, freeze 1's for TR8 and TR-RR), and every call in its scored folder logged under its
+    chain's newest link; each answered by the pin while the catalog named its snapshot, since a call
+    another model answered reads nothing of the pin. An addendum's calls are so counted afresh. Every log
+    read must read whole. smokes and scored_folder default to the pin's own; the dry run gives others."""
+    own = test == D.TEST
+    hashes, link = (fc["hashes"], fc["link"]) if own else (fc["freeze_1_hashes"], fc["freeze_1_link"])
+    slug = R.pin(family)["canonical_slug"]
+
+    def pins(recs):
+        return [r for r in recs if r.get("test") == test and R.served_ok(family, r["response"])
+                and r.get("catalog") == slug]
+    recs, used = [], []
+    for f in (smoke_runs(HERE if own else R.HERE, family) if smokes is None else smokes):
+        if read_meta(f).get("hashes") != hashes:
+            continue
+        log_whole(f)
+        got = pins(R.logged(f))
+        recs += got
+        used.append({"folder": Path(f).name, "calls": len(got)})
+    folder = scored(test, family) if scored_folder is None else Path(scored_folder)
+    made = []
+    if folder.exists():
+        log_whole(folder)
+        made = [r for r in pins(R.logged(folder)) if r.get("link") == link]
+    out = TR.readability(test, contexts, recs + made)
+    out.update({"test": test, "family": family, "smoke_runs": used, "scored": {"folder": str(folder),
+                                                                               "calls": len(made)}})
     return out
+
+
+def smoke_needed(family, fc, root=HERE, scored_folder=None):
+    """Why another TR9 smoke run of the pin could release something, or None (FREEZE-8.md, section 8):
+    the pin has none on these frozen files; its latest on them did not go on, so no scored call can be
+    made; or the readability rule stops a context of the pin, a stop that only further evidence lifts.
+    Otherwise another smoke run could release nothing, so `smoke` is refused. root and scored_folder
+    default to this freeze's own; the dry run gives others."""
+    every = smoke_runs(root, family)
+    runs = [f for f in every if read_meta(f).get("hashes") == fc["hashes"]]
+    if not runs:
+        return "the pin has no smoke run on these frozen files"
+    rep = runs[-1] / "smoke-report.json"
+    if not rep.exists() or not json.loads(rep.read_text(encoding="utf-8")).get("go_on"):
+        return f"its latest smoke run on these frozen files ({runs[-1].name}) did not go on"
+    held = [c for c, v in readable(D.TEST, family, [D.ctx_id(c) for c in D.contexts()], fc, smokes=every,
+                                   scored_folder=scored_folder)["contexts"].items() if not v["start"]]
+    if held:
+        return f"the readability rule stops {held}, a stop that only further evidence lifts"
+    return None
 
 
 def estimate(family):
@@ -465,7 +538,7 @@ def estimate(family):
     return out
 
 
-def main(argv=None):
+def main(argv=None, hold=False):
     ap = argparse.ArgumentParser()
     sub = ap.add_subparsers(dest="cmd", required=True)
     sub.add_parser("plan")
@@ -501,82 +574,97 @@ def main(argv=None):
         verdicts(a.folder)
         return
     if a.cmd == "mend":
-        mend(a.folder, a.cause)
+        family = read_meta(a.folder).get("family")
+        if not family:
+            raise SystemExit(f"{a.folder} has no meta naming its pin; nothing was done")
+        with pin_lock(family, hold=hold):      # one command of a pin at a time (section 7)
+            mend(a.folder, a.cause)
         return
     if a.cmd == "readability":
         cs = [D.ctx_id(c) for c in (D.contexts() if a.test == D.TEST else C1.contexts(a.test))]
         want = cs if a.contexts == "all" else a.contexts.split(",")
         if set(want) - set(cs):
             raise SystemExit(f"no such context of {a.test}: {sorted(set(want) - set(cs))}")
-        out = readable(a.test, a.family, want)
+        out = readable(a.test, a.family, want, frozen())
         print(json.dumps(out, indent=1))
         sys.exit(0 if all(v["start"] for v in out["contexts"].values()) else 2)
-    fc = frozen()
     if a.cmd == "smoke":
         R.pin(a.family)
-        calls = D.smoke_calls(a.family)
-        out = HERE / "smoke" / (a.family.replace("/", "__") + "-" + time.strftime("%Y%m%dT%H%M%S"))
-        out.mkdir(parents=True)
-        (out / "meta.json").write_text(json.dumps({"kind": "smoke", "test": D.TEST, "family": a.family,
-                                                   "seed": D.SEED, "calls": len(calls), "link": fc["link"],
-                                                   "hashes": fc["hashes"], "freeze_commit": fc["freeze_commit"]},
-                                                  indent=1) + "\n")
-        sink, done = open_sink(out)
-        stopped = None
-        try:
-            R.execute(calls, cl.OpenRouterClient(), sink, R.SpendGuard(a.max_usd, len(calls)), done, smoke=True,
-                      catalog=R.catalog_slug, link=fc["link"], prepare=D.prepared, classify=D.classify)
-        except RuntimeError as e:
-            stopped = str(e)
-            print(f"the smoke run stopped: {e}")
-        sys.exit(smoke_report(out, stopped))
+        with pin_lock(a.family, hold=hold):    # one command of a pin at a time (section 7)
+            fc = frozen()
+            if smoke_needed(a.family, fc) is None:
+                raise SystemExit(f"no smoke run of {a.family} is needed: its latest on these frozen files went on and "
+                                 "the readability rule lets every context start, so another could release nothing "
+                                 "(FREEZE-8.md, section 8); no call was made")
+            calls = D.smoke_calls(a.family)
+            out = HERE / "smoke" / (a.family.replace("/", "__") + "-" + time.strftime("%Y%m%dT%H%M%S"))
+            try:
+                out.mkdir(parents=True)
+            except FileExistsError:
+                raise SystemExit(f"a smoke run of {a.family} began this second ({out.name}); no call was made: start "
+                                 "it again") from None
+            (out / "meta.json").write_text(json.dumps({"kind": "smoke", "test": D.TEST, "family": a.family,
+                                                       "seed": D.SEED, "calls": len(calls), "link": fc["link"],
+                                                       "hashes": fc["hashes"], "freeze_commit": fc["freeze_commit"]},
+                                                      indent=1) + "\n")
+            sink, done = open_sink(out)
+            stopped = None
+            try:
+                R.execute(calls, cl.OpenRouterClient(), sink, R.SpendGuard(a.max_usd, len(calls)), done, smoke=True,
+                          catalog=R.catalog_slug, link=fc["link"], prepare=D.prepared, classify=D.classify)
+            except RuntimeError as e:
+                stopped = str(e)
+                print(f"the smoke run stopped: {e}")
+            sys.exit(smoke_report(out, stopped))
     if a.cmd == "run":
-        smoke = R.smoke_passed(a.family, fc["hashes"], root=HERE)
-        want = parse_contexts(a.contexts)
-        premise = tr8_premise(a.family)
-        refused = premise_refused(premise, want)
-        if refused:
-            raise SystemExit(f"TR8's premise does not hold for {refused} (TR8's abstract unit of the same "
-                             f"presentation, for {a.family}: {premise['bridge']}); no call made")
-        legible = readable(D.TEST, a.family, want, smokes=[f for f in (latest_smoke(R.HERE, a.family),
-                                                                        HERE / "smoke" / smoke) if f is not None])
-        low = sorted(c for c, v in legible["contexts"].items() if not v["start"])
-        if low:
-            raise SystemExit(f"the readability rule stops {low} for {a.family}: projected "
-                             f"{ {c: legible['contexts'][c]['projected'] for c in low} } below {TR.READABLE_AT}, "
-                             f"choices unreadable at {legible['choice_unreadable']}, probes at "
-                             f"{legible['probe_unreadable']} (FREEZE-8.md, section 8); no call made")
-        meta = {"kind": "scored", "test": D.TEST, "family": a.family, "seed": D.SEED,
-                "freeze_commit": fc["freeze_commit"], "head": fc["head"], "pin": R.pin(a.family), "smoke": smoke,
-                "links": {fc["link"]: fc["hashes"]}, "link_commits": {fc["link"]: fc["commits"][fc["link"]]}}
-        # the full plan's order, kept for any part of it
-        calls = [x for x in D.plan(a.family) if x["context"] in want]
-        out = HERE / "results" / a.family.replace("/", "__")
-        out.mkdir(parents=True, exist_ok=True)
-        mp = out / "meta.json"
-        keys = ("kind", "test", "family", "seed")
-        if mp.exists():
-            old = json.loads(mp.read_text())
-            if {k: old.get(k) for k in keys} != {k: meta.get(k) for k in keys} \
-                    or not R.links_ok(old.get("links"), fc["chain"]):
-                raise SystemExit("this folder holds another run's calls; refusing to mix them")
-            if fc["link"] not in old["links"]:
-                old["links"][fc["link"]] = fc["hashes"]
-                old.setdefault("link_commits", {})[fc["link"]] = fc["commits"][fc["link"]]
-                old.setdefault("resumed", []).append({"link": fc["link"], "head": fc["head"], "smoke": smoke,
-                                                      "t": round(time.time(), 3)})
-                mp.write_text(json.dumps(old, indent=1) + "\n")
-        else:
-            mp.write_text(json.dumps(meta, indent=1) + "\n")
-        record_start(out, fc["link"], {"contexts": want, "tr8_premise": premise, "readability": legible})
-        sink, logged_ids = open_sink(out)
-        done = R.resume(out, a.family, sink, R.catalog_slug)      # calls outside good reads made again
-        guard = R.SpendGuard(a.max_usd, len(calls) + len(logged_ids))
-        guard.usd, guard.calls = sink.spent, len(R.logged(out))
-        R.execute(calls, cl.OpenRouterClient(), sink, guard, done, a.parallel, catalog=R.catalog_slug,
-                  link=fc["link"], prepare=D.prepared, classify=D.classify)
-        print(f"done: the {a.contexts} calls of TR9 for {a.family} in {out}")
+        R.pin(a.family)
+        with pin_lock(a.family, hold=hold):    # one command of a pin at a time (section 7)
+            fc = frozen()
+            smoke = R.smoke_passed(a.family, fc["hashes"], root=HERE)
+            want = parse_contexts(a.contexts)
+            premise = tr8_premise(a.family)
+            refused = premise_refused(premise, want)
+            if refused:
+                raise SystemExit(f"TR8's premise does not hold for {refused} (TR8's abstract unit of the same "
+                                 f"presentation, for {a.family}: {premise['bridge']}); no call made")
+            legible = readable(D.TEST, a.family, want, fc)
+            low = sorted(c for c, v in legible["contexts"].items() if not v["start"])
+            if low:
+                raise SystemExit(f"the readability rule stops {low} for {a.family}: at the rates' lower bounds "
+                                 f"{legible['at_least']}, the share of units free of a void by reading is "
+                                 f"{ {c: legible['contexts'][c]['void_free_at_the_bounds'] for c in low} }, below "
+                                 f"{TR.READABLE_AT} (FREEZE-8.md, section 8); no call made")
+            meta = {"kind": "scored", "test": D.TEST, "family": a.family, "seed": D.SEED,
+                    "freeze_commit": fc["freeze_commit"], "head": fc["head"], "pin": R.pin(a.family), "smoke": smoke,
+                    "links": {fc["link"]: fc["hashes"]}, "link_commits": {fc["link"]: fc["commits"][fc["link"]]}}
+            # the full plan's order, kept for any part of it
+            calls = [x for x in D.plan(a.family) if x["context"] in want]
+            out = HERE / "results" / a.family.replace("/", "__")
+            out.mkdir(parents=True, exist_ok=True)
+            mp = out / "meta.json"
+            keys = ("kind", "test", "family", "seed")
+            if mp.exists():
+                old = json.loads(mp.read_text())
+                if {k: old.get(k) for k in keys} != {k: meta.get(k) for k in keys} \
+                        or not R.links_ok(old.get("links"), fc["chain"]):
+                    raise SystemExit("this folder holds another run's calls; refusing to mix them")
+                if fc["link"] not in old["links"]:
+                    old["links"][fc["link"]] = fc["hashes"]
+                    old.setdefault("link_commits", {})[fc["link"]] = fc["commits"][fc["link"]]
+                    old.setdefault("resumed", []).append({"link": fc["link"], "head": fc["head"], "smoke": smoke,
+                                                          "t": round(time.time(), 3)})
+                    mp.write_text(json.dumps(old, indent=1) + "\n")
+            else:
+                mp.write_text(json.dumps(meta, indent=1) + "\n")
+            record_start(out, fc["link"], {"contexts": want, "tr8_premise": premise, "readability": legible})
+            sink, logged_ids = open_sink(out)
+            done = R.resume(out, a.family, sink, R.catalog_slug)      # calls outside good reads made again
+            guard = R.SpendGuard(a.max_usd, len(calls) + len(logged_ids))
+            guard.usd, guard.calls = sink.spent, len(R.logged(out))
+            R.execute(calls, cl.OpenRouterClient(), sink, guard, done, a.parallel, catalog=R.catalog_slug,
+                      link=fc["link"], prepare=D.prepared, classify=D.classify)
+            print(f"done: the {a.contexts} calls of TR9 for {a.family} in {out}")
 
 
 if __name__ == "__main__":
-    main()
+    main(hold=True)        # the pin's lock held until this process ends (pin_lock)

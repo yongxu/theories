@@ -20,7 +20,7 @@ VALID_AT valid answers, as in freeze 1, which is checked first. The bridge's rea
 premises is kept beside a void it would otherwise give, reported only.
 """
 
-from math import comb
+from math import exp, lgamma, log, log1p
 
 import tr9_design as D          # puts freeze 1's told/ on the path
 import rule                     # noqa: E402  freeze 1's
@@ -118,19 +118,57 @@ def unit_verdict(conds, answers, probes, compute, framing, tr8_premise):
 
 
 # ----------------------------------------------------------------------------------------------
-# The readability rule (FREEZE-8.md, section 8): a scored run starts only where reading alone is
-# projected to leave at most a fifth of its units void or unresolved. It reads nothing of what a
-# system chooses or computes, only whether its answers can be read: freeze 1's validity (at least
-# VALID_AT valid choices of N_CALLS in every condition) and its guard (at least VALID_AT readable
-# probes of PROBE_CALLS in every condition the guard reads, the strict ones where the system computes).
+# The readability rule (FREEZE-8.md, section 8). A scored run of a test starts on a pin unless the
+# test's own calls already made there, under the frozen files in force, show its answers unreadable at
+# a rate which alone would leave fewer than READABLE_AT of its units free of a void that reading makes.
+# It reads nothing of what a system chooses or computes, only whether its answers can be read, and it
+# stops only on that evidence: each rate is taken at its one-sided lower confidence bound (Clopper and
+# Pearson, at 1 - CONFIDENT), the least rate the calls leave plausible, so calls that fit a rate at or
+# below the bound's never stop a test. A void that reading makes: freeze 1's validity (VALID_AT valid
+# choices of N_CALLS in every condition, its premise conditions included) and, where TR9's system
+# computes, the reader premise, which needs READER_PROBE_AT probes of PROBE_CALLS in every condition
+# whose reader's answers can be read (answers_read), since only such a call can state them rightly. A support needs the guard measured too (VALID_AT readable probes of PROBE_CALLS in every
+# supported condition): that chance is reported, never a stop, since a contradiction by a condition is
+# read without it (freeze 1's unit_verdict reads the guard only where every strict condition is
+# supported).
 # ----------------------------------------------------------------------------------------------
 
 READABLE_AT = 0.8
+CONFIDENT = 0.05
+
+
+def _pmf(n, k, p):
+    if p <= 0.0:
+        return 1.0 if k == 0 else 0.0
+    if p >= 1.0:
+        return 1.0 if k == n else 0.0
+    return exp(lgamma(n + 1) - lgamma(k + 1) - lgamma(n - k + 1) + k * log(p) + (n - k) * log1p(-p))
 
 
 def within(rate, n, at=VALID_AT):
     """The chance that n calls, each unreadable with probability rate, leave at least `at` readable."""
-    return sum(comb(n, k) * rate ** k * (1 - rate) ** (n - k) for k in range(n - at + 1))
+    return sum(_pmf(n, k, rate) for k in range(n - at + 1))
+
+
+def at_least(k, n, p):
+    """The chance that k or more of n calls are unreadable, each with probability p."""
+    return 1.0 - sum(_pmf(n, j, p) for j in range(k))
+
+
+def lower(k, n):
+    """The one-sided lower confidence bound at 1 - CONFIDENT on a rate seen k times in n (Clopper and
+    Pearson): below it, k or more of n would come with a chance under CONFIDENT. 0 where k is 0; taken
+    from below, so a bound never exceeds the exact one."""
+    if k == 0:
+        return 0.0
+    lo, hi = 0.0, k / n
+    for _ in range(60):
+        mid = (lo + hi) / 2
+        if at_least(k, n, mid) < CONFIDENT:
+            lo = mid
+        else:
+            hi = mid
+    return lo
 
 
 def shape(test, framing):
@@ -141,30 +179,51 @@ def shape(test, framing):
 
 
 def unreadable(test, rec):
-    """A logged call no reading can use: a choice invalid or filtered; a probe whose numbers rank no
-    option first (freeze 1's probe_first, on TR9's numbers for TR9)."""
+    """A logged call the rule's minimums cannot count: a choice invalid or filtered; a probe whose
+    numbers rank no option first, for the guard (freeze 1's probe_first, on TR9's numbers for TR9)."""
     if rec["kind"] == "choice":
         return rec["answer"] in (rule.INVALID, rule.FILTERED)
     nums = worths(rec.get("probe")) if test == D.TEST else rec.get("probe")
     return not rule.probe_first("tr8" if test == D.TEST else test, nums)
 
 
+def answers_read(rec):
+    """A TR9 probe call whose reader's answers are all read, right or not: an answer for every option
+    that waits and every situation. Only such a call can state them rightly (reader_right)."""
+    got = (rec.get("probe") or {}).get("answers") or {}
+    return all((got.get(lab) or {}).get(s) is not None for lab, sits in STOPS[rec["condition"]].items() for s in sits)
+
+
 def readability(test, contexts, recs):
-    """The pin's rates of unreadable choices and probes over the logged calls given (each read as its
-    own test's), and per context of the test asked the projected share of its unit not lost to
-    reading, calls unreadable independently at those rates."""
-    n = {k: [r for r in recs if r["kind"] == k] for k in ("choice", "probe")}
-    rate = {k: (sum(1 for r in v if unreadable(r["test"], r)) / len(v)) if v else None for k, v in n.items()}
-    out = {"choices": len(n["choice"]), "probes": len(n["probe"]), "choice_unreadable": rate["choice"],
-           "probe_unreadable": rate["probe"], "bound": READABLE_AT, "contexts": {}}
+    """The readability rule on the test's own logged calls on one pin (recs), per context of the test:
+    the counts and rates of unreadable choices, of probes the guard cannot read and, for TR9, of probes
+    whose reader's answers cannot be read; each rate's lower bound; and per context the share of units free of a void by
+    reading at the bounds (its start, at least READABLE_AT), with, at the rates seen, the share read
+    whole and the chance a support's guard is measured, reported only."""
+    ch = [r for r in recs if r["kind"] == "choice"]
+    pr = [r for r in recs if r["kind"] == "probe"]
+    k = {"choice": sum(1 for r in ch if unreadable(test, r)), "guard": sum(1 for r in pr if unreadable(test, r)),
+         "reader": sum(1 for r in pr if not answers_read(r)) if test == D.TEST else 0}
+    n = {"choice": len(ch), "guard": len(pr), "reader": len(pr)}
+    rate = {x: k[x] / n[x] if n[x] else None for x in k}
+    lo = {x: lower(k[x], n[x]) if n[x] else 0.0 for x in k}
+    out = {"choices": n["choice"], "probes": n["guard"], "unreadable": k, "rate": rate,
+           "at_least": {x: round(v, 4) for x, v in lo.items()}, "confidence": 1 - CONFIDENT, "bound": READABLE_AT,
+           "contexts": {}}
     for ctx in contexts:
         framing, presentation = ctx.split("/")
         compute = presentation == "compute"
+        reader = compute and test == D.TEST
         nc, ng = shape(test, framing)
-        if rate["choice"] is None or (compute and rate["probe"] is None):
-            out["contexts"][ctx] = {"projected": None, "start": False, "why": "not measured"}
-            continue
-        p = within(rate["choice"], N_CALLS) ** nc * (within(rate["probe"], PROBE_CALLS) ** ng if compute else 1.0)
-        out["contexts"][ctx] = {"conditions": nc, "guarded": ng if compute else 0, "projected": round(p, 4),
-                                "start": p >= READABLE_AT}
+        free = within(lo["choice"], N_CALLS) ** nc * (within(lo["reader"], PROBE_CALLS, READER_PROBE_AT) ** nc
+                                                      if reader else 1.0)
+        v = {"conditions": nc, "guarded": ng if compute else 0, "void_free_at_the_bounds": round(free, 4),
+             "start": free >= READABLE_AT}
+        if rate["choice"] is not None and (not compute or rate["guard"] is not None):
+            guard = within(rate["guard"], PROBE_CALLS) ** ng if compute else 1.0
+            v["guard_measured"] = round(guard, 4)
+            v["read_whole"] = round(within(rate["choice"], N_CALLS) ** nc * guard, 4)
+        else:
+            v["why"] = "no call of this kind made yet under the frozen files in force: nothing to stop on"
+        out["contexts"][ctx] = v
     return out
