@@ -43,7 +43,7 @@ Canonical source: [Becoming.Optimum.lean](../../../../experiments/integrated-cor
 <a id="next--下一步"></a>
 ## Next
 
-Profiles perfect within capacities away from the last step; more drawers; an independent review.
+Superseded by [drawers-in-turn](drawers-in-turn.md), whose record carries the next step. When this record was current, its next step read: Profiles perfect within capacities away from the last step; more drawers; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 

@@ -45,7 +45,7 @@ Canonical source: [LawThroughChangingCoupling.lean](../../../../experiments/inte
 <a id="next--下一步"></a>
 ## Next
 
-Observation that changes along the run; how many steps settle whether a law at the coupling holds; an independent review.
+Superseded by [a-law-through-a-projection-along-one-run](a-law-through-a-projection-along-one-run.md), whose record carries the next step. When this record was current, its next step read: Observation that changes along the run; how many steps settle whether a law at the coupling holds; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
