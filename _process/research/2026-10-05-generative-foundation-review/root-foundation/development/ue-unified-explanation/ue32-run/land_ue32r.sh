@@ -58,9 +58,9 @@ EOF
   REASON="UE32's run, 4 November 2026: T2's row in the overview's theses table (section 9) adds UE32's verdict to T2's standing, with both states behind persistence beside it (T2's home, 02 section 5). The three records bound to the overview read section 9 for the selection thesis's row, untouched; nothing they say changes."
   python3 -B tools/research/repoint.py --reason "$REASON" --drift-json "$ASIDE/drift.json" --apply > "$ASIDE/repoint.log" 2>&1; step repoint $?
   python3 -B $MEASURE > "$ASIDE/measure.txt" 2>&1; step measure $?
-  grep -q '^| front: sciences | 1,376 |' "$ASIDE/measure.txt" && grep -q '^| sciences: its hour | 6,535 |' "$ASIDE/measure.txt" \
-    && grep -q '^| overview | 7,288 | 19 |' "$ASIDE/measure.txt" && grep -q '^| overview, Chinese | 216 | 12,654 |' "$ASIDE/measure.txt" \
-    && grep -q '^| whole: SCIENCES.md, and 60 lines of code | 19,047 | 27 | 146.6–190.6 |' "$ASIDE/measure.txt"; step budgets-as-written $?
+  grep -q '^| front: sciences | 1,365 |' "$ASIDE/measure.txt" && grep -q '^| sciences: its hour | 6,500 |' "$ASIDE/measure.txt" \
+    && grep -q '^| overview | 7,270 | 19 |' "$ASIDE/measure.txt" && grep -q '^| overview, Chinese | 216 | 12,622 |' "$ASIDE/measure.txt" \
+    && grep -q '^| whole: SCIENCES.md, and 60 lines of code | 19,012 | 27 | 146.3–190.3 |' "$ASIDE/measure.txt"; step budgets-as-written $?
   python3 -B $KIT/board_ue32r.py land > "$ASIDE/board.log" 2>&1; step board $?
   make research-render > "$ASIDE/render.log" 2>&1; step render $?
   for t in research-check-strict research-links research-test; do make $t > "$ASIDE/$t.log" 2>&1; step $t $?; done

@@ -11,10 +11,12 @@ Delta: a fourth frozen fish-stock test of T2, its first against a state read fro
        Median r = ln(MSE_F / MSE_N) = +0.163 (frozen margin +0.105), N better in 42 stocks and F in 23, sign test p =
        0.025: "T2 better than the field's fitted embedding". The same verdict with simplex's choice of D (p = 0.046),
        with N in the draw's form and with N's form chosen per stock (p = 0.013 each). Read after the run, not frozen:
-       over the 48 stocks where F chose D <= 2, within the field's bound of about sqrt(N) coordinates (DESIGN §4), the
-       test would say "not separated" (median r +0.035, N better in 29 and F in 19, p = 0.19); the verdict rests on
-       the 17 where F chose 3 or 4 and held 6 or 8 coordinates (13 to 4, p = 0.049); at D = 2 alone, 16 of 22, p =
-       0.052. The answer expected was "not separated" (DESIGN §1), kept as written.
+       a tie where F held less than N (D = 1, 13 to 13), N better in 29 of the 39 where it held more; no cut by D puts
+       the verdict in one group of stocks: at D = 2, within the field's bound of about sqrt(N) coordinates at the
+       median 20 training rows (DESIGN §4), 16 of 22 (median r +0.158, p = 0.052); over D <= 2, 29 to 19 (p = 0.19),
+       the tie at D = 1 diluting D = 2; at D 3 or 4, 13 to 4 (p = 0.049), and without the D = 2 stocks 26 to 17 (p =
+       0.22); cut by each stock's own training rows, 30 to 17 within the bound (p = 0.079) and 12 to 6 past it (p =
+       0.24). The answer expected was "not separated" (DESIGN §1), kept as written.
 Evidence: the frozen run (experiments/state-against-embedding/results/run-embed.json and run-embed.out):
        Python 3.11.2, 80 s of CPU; RAM Legacy v4.66's assessment workbook, the archive's size and md5 as the design
        gives them, the workbook's sha-256 written with the output; before any rule ran, MQ5's stocks and fits
@@ -38,12 +40,13 @@ Boundary: each state forecast worse than persistence in 53 of the 65 stocks, bot
        are too few.
 Against 08's verdict on what is new (08 §8), read after the run, not frozen: 08 names a prediction that could fail and
        does not among what would change its verdict that what survives is no discovery. This one does not change it.
-       Not failing was foreseen: the design expected "not separated" (§1). What went past the expectation rests on the
-       17 stocks where F went past the field's own bound (Delta), and a loss there is in large part what that bound
-       foresees. Its sharpest part, F at D = 2 with four coordinates, within the bound, losing in 16 of 22 stocks,
-       falls short of 0.05 on its own and is one test on assessment outputs. In the dry runs "T2 better" came also
-       where the giving reads less than T2's state (24.5% of the regime's step's archives, against 33% under T2's
-       law), and both states trailed persistence. It moves T2's evidence, not 08's verdict.
+       Not failing was foreseen: the design expected "not separated" (§1). Part of what went past the expectation is
+       what the field's own bound of about sqrt(N) coordinates foresees (DESIGN §4): F lost most at D = 3 and 4, past
+       it at the median length; the verdict needs the D = 2 stocks as well (Delta). Its sharpest part, F at D = 2 with
+       four coordinates, within the bound, losing in 16 of 22 stocks, falls short of 0.05 on its own (p = 0.052) and
+       is one test on assessment outputs. In the dry runs "T2 better" came also where the giving reads less than T2's
+       state (24.5% of the regime's step's archives, against 33% under T2's law), and both states trailed persistence.
+       It moves T2's evidence, not 08's verdict.
 Why the expectation missed: the expectation rested on the mixed world, a third of the stocks age-structured, as a
        reading of MQ5's in-sample S3, where "T2 better" came in 6% of archives; in the design's terms (§1) the verdict
        places the stocks "nearer a world whose state N holds than MQ5's readings do". The output does not show why.
@@ -63,10 +66,8 @@ Kept: every completed verdict; T2's statement; the answer expected, as written. 
 Integration: 02 §5 (T2's Evidence, and its Standing, now on the four frozen fish-stock tests), 08's thesis row
        (Standing, Evidence), the sciences dossier's front row for T2 and S-15 (the standing it quotes, UE32's verdict
        beside the frozen counts), the dossier's whole time restated on it and on both review covers (140 to 195
-       minutes) and its hour's on it (45 to 66 minutes: the recount beside the verdict took the hour past 65, and a
-       qualifier that keeps a reader from a false belief comes before the budget), the overview's T2 row (EN, ZH),
-       MQ's README on the spine, READING-BUDGETS, the sources table, UE32's README and the experiments index. The
-       records bound to sections that changed were re-pointed after reading, nothing they say changed; no other record
-       drifts.
+       minutes), the overview's T2 row (EN, ZH), MQ's README on the spine, READING-BUDGETS, the sources table,
+       UE32's README and the experiments index. The records bound to sections that changed were re-pointed after
+       reading, nothing they say changed; no other record drifts.
 REVIEW_LINE
 ```
