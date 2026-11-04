@@ -1,0 +1,1371 @@
+{
+ "test": "tr1",
+ "seed": "TR1-freeze-5-2026-11-04",
+ "python": "3.11.2",
+ "design": {
+  "presentations": 70,
+  "r": 9,
+  "q": 8,
+  "calls per condition": 630,
+  "conditions": [
+   "T",
+   "F",
+   "K",
+   "H"
+  ],
+  "calls per pin": 2520,
+  "pins": 3,
+  "calls in all": 7560,
+  "smoke calls per pin": 16,
+  "met presentations": 6,
+  "course order": [
+   1,
+   8,
+   15,
+   14,
+   9,
+   0,
+   32,
+   31,
+   47,
+   39,
+   18,
+   17,
+   38,
+   56,
+   10,
+   6,
+   55,
+   3,
+   60,
+   61,
+   4,
+   43,
+   45,
+   37,
+   20,
+   63,
+   5,
+   50,
+   51,
+   64,
+   13,
+   22,
+   57,
+   69,
+   24,
+   54,
+   40,
+   42,
+   29,
+   19,
+   68,
+   49,
+   25,
+   48,
+   27,
+   67,
+   65,
+   33,
+   26,
+   66,
+   41,
+   44,
+   21,
+   11,
+   46,
+   52,
+   53,
+   28,
+   30,
+   58,
+   34,
+   36,
+   2,
+   7,
+   23,
+   62,
+   16,
+   12,
+   35,
+   59
+  ]
+ },
+ "formations": [
+  {
+   "formation": "L0-Kamount",
+   "stage0": "L0",
+   "K by": "amount",
+   "outcomes": {
+    "T": "passed",
+    "F": "passed",
+    "K": "passed",
+    "H": "passed"
+   },
+   "asserted": {
+    "T": "passed",
+    "F": "passed",
+    "K": "passed",
+    "H": "passed"
+   },
+   "bridge": "passed",
+   "bridge asserted": "passed",
+   "strict_share": {
+    "T": 1.0,
+    "F": 1.0,
+    "K": 0.9857,
+    "H": 1.0
+   },
+   "P1": {
+    "T": "passed",
+    "F": "passed",
+    "K": "passed",
+    "H": "passed"
+   },
+   "first_listed_share_T": 0.3571,
+   "content_with_position_T": "no cycle",
+   "shortest_cycle_T": null,
+   "answers_T": {
+    "a content": 630
+   }
+  },
+  {
+   "formation": "L.05-Kamount",
+   "stage0": "L.05",
+   "K by": "amount",
+   "outcomes": {
+    "T": "passed",
+    "F": "passed",
+    "K": "passed",
+    "H": "passed"
+   },
+   "asserted": {
+    "T": "passed",
+    "F": "passed",
+    "K": "passed",
+    "H": "passed"
+   },
+   "bridge": "passed",
+   "bridge asserted": "passed",
+   "strict_share": {
+    "T": 0.9,
+    "F": 0.9286,
+    "K": 1.0,
+    "H": 0.9571
+   },
+   "P1": {
+    "T": "passed",
+    "F": "passed",
+    "K": "passed",
+    "H": "passed"
+   },
+   "first_listed_share_T": 0.3492,
+   "content_with_position_T": "no cycle",
+   "shortest_cycle_T": null,
+   "answers_T": {
+    "a content": 630
+   }
+  },
+  {
+   "formation": "L.10-Kamount",
+   "stage0": "L.10",
+   "K by": "amount",
+   "outcomes": {
+    "T": "passed",
+    "F": "passed",
+    "K": "passed",
+    "H": "passed"
+   },
+   "asserted": {
+    "T": "passed",
+    "F": "passed",
+    "K": "passed",
+    "H": "passed"
+   },
+   "bridge": "passed",
+   "bridge asserted": "passed",
+   "strict_share": {
+    "T": 0.7286,
+    "F": 0.7,
+    "K": 0.9714,
+    "H": 0.7857
+   },
+   "P1": {
+    "T": "passed",
+    "F": "passed",
+    "K": "passed",
+    "H": "passed"
+   },
+   "first_listed_share_T": 0.4118,
+   "content_with_position_T": "no cycle",
+   "shortest_cycle_T": null,
+   "answers_T": {
+    "a content": 630
+   }
+  },
+  {
+   "formation": "Linv-Kamount",
+   "stage0": "Linv",
+   "K by": "amount",
+   "outcomes": {
+    "T": "passed",
+    "F": "passed",
+    "K": "passed",
+    "H": "passed"
+   },
+   "asserted": {
+    "T": "passed",
+    "F": "passed",
+    "K": "passed",
+    "H": "passed"
+   },
+   "bridge": "passed",
+   "bridge asserted": "passed",
+   "strict_share": {
+    "T": 0.8714,
+    "F": 0.8286,
+    "K": 0.9571,
+    "H": 0.7143
+   },
+   "P1": {
+    "T": "passed",
+    "F": "passed",
+    "K": "passed",
+    "H": "passed"
+   },
+   "first_listed_share_T": 0.3115,
+   "content_with_position_T": "no cycle",
+   "shortest_cycle_T": null,
+   "answers_T": {
+    "a content": 605,
+    "invalid": 25
+   }
+  },
+  {
+   "formation": "RU.90-Kamount",
+   "stage0": "RU.90",
+   "K by": "amount",
+   "outcomes": {
+    "T": "passed",
+    "F": "passed",
+    "K": "passed",
+    "H": "passed"
+   },
+   "asserted": {
+    "T": "passed",
+    "F": "passed",
+    "K": "passed",
+    "H": "passed"
+   },
+   "bridge": "passed",
+   "bridge asserted": "passed",
+   "strict_share": {
+    "T": 0.8286,
+    "F": 0.8286,
+    "K": 0.9857,
+    "H": 0.8714
+   },
+   "P1": {
+    "T": "passed",
+    "F": "passed",
+    "K": "passed",
+    "H": "passed"
+   },
+   "first_listed_share_T": 0.2931,
+   "content_with_position_T": "no cycle",
+   "shortest_cycle_T": null,
+   "answers_T": {
+    "a content": 630
+   }
+  },
+  {
+   "formation": "TieN-Kamount",
+   "stage0": "TieN",
+   "K by": "amount",
+   "outcomes": {
+    "T": "passed",
+    "F": "contradicted",
+    "K": "passed",
+    "H": "passed"
+   },
+   "asserted": {
+    "K": "passed"
+   },
+   "bridge": "passed",
+   "bridge asserted": "reported",
+   "strict_share": {
+    "T": 0.8286,
+    "F": 1.0,
+    "K": 1.0,
+    "H": 0.8286
+   },
+   "P1": {
+    "T": "passed",
+    "F": "passed",
+    "K": "passed",
+    "H": "passed"
+   },
+   "first_listed_share_T": 0.3621,
+   "content_with_position_T": "no cycle",
+   "shortest_cycle_T": null,
+   "answers_T": {
+    "a content": 522,
+    "none": 108
+   }
+  },
+  {
+   "formation": "Alpha-Kamount",
+   "stage0": "Alpha",
+   "K by": "amount",
+   "outcomes": {
+    "T": "passed",
+    "F": "passed",
+    "K": "passed",
+    "H": "passed"
+   },
+   "asserted": {
+    "T": "passed",
+    "F": "passed",
+    "K": "passed",
+    "H": "passed"
+   },
+   "bridge": "passed",
+   "bridge asserted": "passed",
+   "strict_share": {
+    "T": 1.0,
+    "F": 1.0,
+    "K": 0.9857,
+    "H": 1.0
+   },
+   "P1": {
+    "T": "passed",
+    "F": "passed",
+    "K": "passed",
+    "H": "passed"
+   },
+   "first_listed_share_T": 0.3571,
+   "content_with_position_T": "no cycle",
+   "shortest_cycle_T": null,
+   "answers_T": {
+    "a content": 630
+   }
+  },
+  {
+   "formation": "LabF-Kamount",
+   "stage0": "LabF",
+   "K by": "amount",
+   "outcomes": {
+    "T": "passed",
+    "F": "passed",
+    "K": "passed",
+    "H": "passed"
+   },
+   "asserted": {
+    "T": "passed",
+    "F": "passed",
+    "K": "passed",
+    "H": "passed"
+   },
+   "bridge": "passed",
+   "bridge asserted": "passed",
+   "strict_share": {
+    "T": 1.0,
+    "F": 1.0,
+    "K": 0.9571,
+    "H": 1.0
+   },
+   "P1": {
+    "T": "passed",
+    "F": "passed",
+    "K": "passed",
+    "H": "passed"
+   },
+   "first_listed_share_T": 0.3571,
+   "content_with_position_T": "no cycle",
+   "shortest_cycle_T": null,
+   "answers_T": {
+    "a content": 630
+   }
+  },
+  {
+   "formation": "Pos1-Kamount",
+   "stage0": "Pos1",
+   "K by": "amount",
+   "outcomes": {
+    "T": "contradicted",
+    "F": "contradicted",
+    "K": "passed",
+    "H": "contradicted"
+   },
+   "asserted": {
+    "T": "contradicted",
+    "F": "contradicted",
+    "K": "passed",
+    "H": "contradicted"
+   },
+   "bridge": "contradicted",
+   "bridge asserted": "contradicted",
+   "strict_share": {
+    "T": 1.0,
+    "F": 1.0,
+    "K": 0.9857,
+    "H": 1.0
+   },
+   "P1": {
+    "T": "not read",
+    "F": "not read",
+    "K": "passed",
+    "H": "not read"
+   },
+   "first_listed_share_T": 1.0,
+   "content_with_position_T": "no cycle",
+   "shortest_cycle_T": [
+    [
+     0,
+     1,
+     0
+    ],
+    [
+     1,
+     0,
+     1
+    ]
+   ],
+   "answers_T": {
+    "a content": 630
+   }
+  },
+  {
+   "formation": "PosL-Kamount",
+   "stage0": "PosL",
+   "K by": "amount",
+   "outcomes": {
+    "T": "contradicted",
+    "F": "contradicted",
+    "K": "passed",
+    "H": "contradicted"
+   },
+   "asserted": {
+    "T": "contradicted",
+    "F": "contradicted",
+    "K": "passed",
+    "H": "contradicted"
+   },
+   "bridge": "contradicted",
+   "bridge asserted": "contradicted",
+   "strict_share": {
+    "T": 1.0,
+    "F": 1.0,
+    "K": 1.0,
+    "H": 1.0
+   },
+   "P1": {
+    "T": "not read",
+    "F": "not read",
+    "K": "passed",
+    "H": "not read"
+   },
+   "first_listed_share_T": 0.0,
+   "content_with_position_T": "no cycle",
+   "shortest_cycle_T": [
+    [
+     0,
+     1,
+     1
+    ],
+    [
+     1,
+     0,
+     0
+    ]
+   ],
+   "answers_T": {
+    "a content": 630
+   }
+  },
+  {
+   "formation": "Cue-Kamount",
+   "stage0": "Cue",
+   "K by": "amount",
+   "outcomes": {
+    "T": "contradicted",
+    "F": "contradicted",
+    "K": "passed",
+    "H": "contradicted"
+   },
+   "asserted": {
+    "T": "contradicted",
+    "F": "contradicted",
+    "K": "passed",
+    "H": "contradicted"
+   },
+   "bridge": "contradicted",
+   "bridge asserted": "contradicted",
+   "strict_share": {
+    "T": 1.0,
+    "F": 1.0,
+    "K": 0.9857,
+    "H": 1.0
+   },
+   "P1": {
+    "T": "not read",
+    "F": "not read",
+    "K": "passed",
+    "H": "not read"
+   },
+   "first_listed_share_T": 0.3143,
+   "content_with_position_T": "a cycle",
+   "shortest_cycle_T": [
+    [
+     0,
+     1,
+     1
+    ],
+    [
+     1,
+     0,
+     0
+    ]
+   ],
+   "answers_T": {
+    "a content": 630
+   }
+  },
+  {
+   "formation": "Comp-Kamount",
+   "stage0": "Comp",
+   "K by": "amount",
+   "outcomes": {
+    "T": "contradicted",
+    "F": "contradicted",
+    "K": "passed",
+    "H": "contradicted"
+   },
+   "asserted": {
+    "T": "contradicted",
+    "F": "contradicted",
+    "K": "passed",
+    "H": "contradicted"
+   },
+   "bridge": "contradicted",
+   "bridge asserted": "contradicted",
+   "strict_share": {
+    "T": 1.0,
+    "F": 1.0,
+    "K": 0.9714,
+    "H": 0.9714
+   },
+   "P1": {
+    "T": "contradicted",
+    "F": "contradicted",
+    "K": "passed",
+    "H": "contradicted"
+   },
+   "first_listed_share_T": 0.3571,
+   "content_with_position_T": "a cycle",
+   "shortest_cycle_T": [
+    [
+     0,
+     1,
+     20
+    ],
+    [
+     1,
+     0,
+     0
+    ]
+   ],
+   "answers_T": {
+    "a content": 630
+   }
+  },
+  {
+   "formation": "Att2-Kamount",
+   "stage0": "Att2",
+   "K by": "amount",
+   "outcomes": {
+    "T": "contradicted",
+    "F": "contradicted",
+    "K": "passed",
+    "H": "contradicted"
+   },
+   "asserted": {
+    "T": "contradicted",
+    "F": "contradicted",
+    "K": "passed",
+    "H": "contradicted"
+   },
+   "bridge": "contradicted",
+   "bridge asserted": "contradicted",
+   "strict_share": {
+    "T": 1.0,
+    "F": 0.9857,
+    "K": 0.9714,
+    "H": 0.9714
+   },
+   "P1": {
+    "T": "contradicted",
+    "F": "contradicted",
+    "K": "passed",
+    "H": "contradicted"
+   },
+   "first_listed_share_T": 0.5286,
+   "content_with_position_T": "no cycle",
+   "shortest_cycle_T": [
+    [
+     0,
+     1,
+     0
+    ],
+    [
+     1,
+     0,
+     21
+    ]
+   ],
+   "answers_T": {
+    "a content": 630
+   }
+  },
+  {
+   "formation": "Att3-Kamount",
+   "stage0": "Att3",
+   "K by": "amount",
+   "outcomes": {
+    "T": "contradicted",
+    "F": "contradicted",
+    "K": "passed",
+    "H": "contradicted"
+   },
+   "asserted": {
+    "T": "contradicted",
+    "F": "contradicted",
+    "K": "passed",
+    "H": "contradicted"
+   },
+   "bridge": "contradicted",
+   "bridge asserted": "contradicted",
+   "strict_share": {
+    "T": 0.9857,
+    "F": 0.9857,
+    "K": 1.0,
+    "H": 0.9857
+   },
+   "P1": {
+    "T": "passed",
+    "F": "passed",
+    "K": "passed",
+    "H": "passed"
+   },
+   "first_listed_share_T": 0.3913,
+   "content_with_position_T": "no cycle",
+   "shortest_cycle_T": [
+    [
+     0,
+     3,
+     50
+    ],
+    [
+     3,
+     0,
+     4
+    ]
+   ],
+   "answers_T": {
+    "a content": 630
+   }
+  },
+  {
+   "formation": "HCopy-Kamount",
+   "stage0": "HCopy",
+   "K by": "amount",
+   "outcomes": {
+    "T": "contradicted",
+    "F": "contradicted",
+    "K": "passed",
+    "H": "contradicted"
+   },
+   "asserted": {
+    "T": "contradicted",
+    "F": "contradicted",
+    "K": "passed",
+    "H": "contradicted"
+   },
+   "bridge": "contradicted",
+   "bridge asserted": "contradicted",
+   "strict_share": {
+    "T": 1.0,
+    "F": 1.0,
+    "K": 0.9857,
+    "H": 1.0
+   },
+   "P1": {
+    "T": "not read",
+    "F": "not read",
+    "K": "passed",
+    "H": "contradicted"
+   },
+   "first_listed_share_T": 1.0,
+   "content_with_position_T": "no cycle",
+   "shortest_cycle_T": [
+    [
+     0,
+     1,
+     0
+    ],
+    [
+     1,
+     0,
+     1
+    ]
+   ],
+   "answers_T": {
+    "a content": 630
+   }
+  },
+  {
+   "formation": "MixC-Kamount",
+   "stage0": "MixC",
+   "K by": "amount",
+   "outcomes": {
+    "T": "void",
+    "F": "void",
+    "K": "passed",
+    "H": "void"
+   },
+   "asserted": {
+    "T": "void",
+    "F": "void",
+    "K": "passed",
+    "H": "void"
+   },
+   "bridge": "void",
+   "bridge asserted": "void",
+   "strict_share": {
+    "T": 0.2143,
+    "F": 0.2,
+    "K": 0.9714,
+    "H": 0.2429
+   },
+   "P1": {
+    "T": "not read",
+    "F": "not read",
+    "K": "passed",
+    "H": "not read"
+   },
+   "first_listed_share_T": 0.3333,
+   "content_with_position_T": "no cycle",
+   "shortest_cycle_T": null,
+   "answers_T": {
+    "a content": 630
+   }
+  },
+  {
+   "formation": "Unif-Kamount",
+   "stage0": "Unif",
+   "K by": "amount",
+   "outcomes": {
+    "T": "void",
+    "F": "void",
+    "K": "passed",
+    "H": "void"
+   },
+   "asserted": {
+    "T": "void",
+    "F": "void",
+    "K": "passed",
+    "H": "void"
+   },
+   "bridge": "void",
+   "bridge asserted": "void",
+   "strict_share": {
+    "T": 0.0429,
+    "F": 0.0,
+    "K": 1.0,
+    "H": 0.0
+   },
+   "P1": {
+    "T": "not read",
+    "F": "not read",
+    "K": "passed",
+    "H": "not read"
+   },
+   "first_listed_share_T": 0.3333,
+   "content_with_position_T": "no cycle",
+   "shortest_cycle_T": null,
+   "answers_T": {
+    "a content": 630
+   }
+  },
+  {
+   "formation": "Lab-Kamount",
+   "stage0": "Lab",
+   "K by": "amount",
+   "outcomes": {
+    "T": "void",
+    "F": "void",
+    "K": "passed",
+    "H": "void"
+   },
+   "asserted": {
+    "T": "void",
+    "F": "void",
+    "K": "passed",
+    "H": "void"
+   },
+   "bridge": "void",
+   "bridge asserted": "void",
+   "strict_share": {
+    "T": 0.0143,
+    "F": 0.0,
+    "K": 1.0,
+    "H": 0.0
+   },
+   "P1": {
+    "T": "not read",
+    "F": "not read",
+    "K": "passed",
+    "H": "not read"
+   },
+   "first_listed_share_T": 0.0,
+   "content_with_position_T": "no cycle",
+   "shortest_cycle_T": null,
+   "answers_T": {
+    "a content": 630
+   }
+  },
+  {
+   "formation": "HOrd-Kamount",
+   "stage0": "HOrd",
+   "K by": "amount",
+   "outcomes": {
+    "T": "contradicted",
+    "F": "contradicted",
+    "K": "passed",
+    "H": "passed"
+   },
+   "asserted": {
+    "T": "contradicted",
+    "F": "contradicted",
+    "K": "passed",
+    "H": "passed"
+   },
+   "bridge": "contradicted",
+   "bridge asserted": "contradicted",
+   "strict_share": {
+    "T": 1.0,
+    "F": 1.0,
+    "K": 1.0,
+    "H": 1.0
+   },
+   "P1": {
+    "T": "not read",
+    "F": "not read",
+    "K": "passed",
+    "H": "passed"
+   },
+   "first_listed_share_T": 1.0,
+   "content_with_position_T": "no cycle",
+   "shortest_cycle_T": [
+    [
+     0,
+     1,
+     0
+    ],
+    [
+     1,
+     0,
+     1
+    ]
+   ],
+   "answers_T": {
+    "a content": 630
+   }
+  },
+  {
+   "formation": "L.05-KPos1",
+   "stage0": "L.05",
+   "K by": "Pos1",
+   "outcomes": {
+    "T": "passed",
+    "F": "passed",
+    "K": "contradicted",
+    "H": "passed"
+   },
+   "asserted": {
+    "T": "passed",
+    "F": "passed",
+    "K": "contradicted",
+    "H": "passed"
+   },
+   "bridge": "not ruled on",
+   "bridge asserted": "not ruled on",
+   "strict_share": {
+    "T": 0.9143,
+    "F": 0.9429,
+    "K": 1.0,
+    "H": 0.9429
+   },
+   "P1": {
+    "T": "passed",
+    "F": "passed",
+    "K": "not read",
+    "H": "passed"
+   },
+   "first_listed_share_T": 0.3906,
+   "content_with_position_T": "no cycle",
+   "shortest_cycle_T": null,
+   "answers_T": {
+    "a content": 630
+   }
+  },
+  {
+   "formation": "L.05-KUnif",
+   "stage0": "L.05",
+   "K by": "Unif",
+   "outcomes": {
+    "T": "passed",
+    "F": "passed",
+    "K": "void",
+    "H": "passed"
+   },
+   "asserted": {
+    "T": "passed",
+    "F": "passed",
+    "K": "void",
+    "H": "passed"
+   },
+   "bridge": "not ruled on",
+   "bridge asserted": "not ruled on",
+   "strict_share": {
+    "T": 0.9286,
+    "F": 0.9714,
+    "K": 0.0,
+    "H": 0.9286
+   },
+   "P1": {
+    "T": "passed",
+    "F": "passed",
+    "K": "not read",
+    "H": "passed"
+   },
+   "first_listed_share_T": 0.3538,
+   "content_with_position_T": "no cycle",
+   "shortest_cycle_T": null,
+   "answers_T": {
+    "a content": 630
+   }
+  },
+  {
+   "formation": "Decliner-Kamount",
+   "stage0": "Decliner",
+   "K by": "amount",
+   "outcomes": {
+    "T": "void",
+    "F": "void",
+    "K": "void",
+    "H": "void"
+   },
+   "asserted": {
+    "T": "void",
+    "F": "void",
+    "K": "void",
+    "H": "void"
+   },
+   "bridge": "not ruled on",
+   "bridge asserted": "not ruled on",
+   "strict_share": {
+    "T": 0.0,
+    "F": 0.0,
+    "K": 0.0,
+    "H": 0.0
+   },
+   "P1": {
+    "T": "not read",
+    "F": "not read",
+    "K": "not read",
+    "H": "not read"
+   },
+   "first_listed_share_T": null,
+   "content_with_position_T": "no cycle",
+   "shortest_cycle_T": null,
+   "answers_T": {
+    "decline": 630
+   }
+  },
+  {
+   "formation": "NoneSayer-Kamount",
+   "stage0": "NoneSayer",
+   "K by": "amount",
+   "outcomes": {
+    "T": "void",
+    "F": "contradicted",
+    "K": "void",
+    "H": "void"
+   },
+   "asserted": {
+    "T": "void",
+    "F": "contradicted",
+    "K": "void",
+    "H": "void"
+   },
+   "bridge": "not ruled on",
+   "bridge asserted": "not ruled on",
+   "strict_share": {
+    "T": 0.0,
+    "F": 1.0,
+    "K": 0.0,
+    "H": 0.0
+   },
+   "P1": {
+    "T": "not read",
+    "F": "not read",
+    "K": "not read",
+    "H": "not read"
+   },
+   "first_listed_share_T": null,
+   "content_with_position_T": "no cycle",
+   "shortest_cycle_T": null,
+   "answers_T": {
+    "none": 630
+   }
+  }
+ ],
+ "rule against Stage 0 (conditions and answer sets compared)": 492,
+ "prompts": {
+  "calls per condition and pin": {
+   "google/gemini-4-argon": {
+    "F": 630,
+    "K": 630,
+    "T": 630,
+    "H": 630
+   },
+   "qwen/qwen3.8-max-0902": {
+    "K": 630,
+    "T": 630,
+    "F": 630,
+    "H": 630
+   },
+   "anthropic/claude-sonnet-5.5": {
+    "T": 630,
+    "F": 630,
+    "K": 630,
+    "H": 630
+   }
+  },
+  "presentations whose nine T calls all show one code order": 0,
+  "contents per pin (index 0 to 4)": {
+   "google/gemini-4-argon": {
+    "T": [
+     "a new public library opens in a small town",
+     "a city plants ten thousand street trees",
+     "a drained wetland is restored and a rare bird returns to breed there",
+     "a hospital cuts the wait for routine surgery by a month",
+     "a free online mathematics course reaches a million learners"
+    ],
+    "K": [
+     "20 dollars",
+     "50 dollars",
+     "40 dollars",
+     "30 dollars",
+     "10 dollars"
+    ]
+   },
+   "qwen/qwen3.8-max-0902": {
+    "T": [
+     "a drained wetland is restored and a rare bird returns to breed there",
+     "a city plants ten thousand street trees",
+     "a new public library opens in a small town",
+     "a hospital cuts the wait for routine surgery by a month",
+     "a free online mathematics course reaches a million learners"
+    ],
+    "K": [
+     "30 dollars",
+     "10 dollars",
+     "40 dollars",
+     "20 dollars",
+     "50 dollars"
+    ]
+   },
+   "anthropic/claude-sonnet-5.5": {
+    "T": [
+     "a hospital cuts the wait for routine surgery by a month",
+     "a city plants ten thousand street trees",
+     "a free online mathematics course reaches a million learners",
+     "a new public library opens in a small town",
+     "a drained wetland is restored and a rare bird returns to breed there"
+    ],
+    "K": [
+     "30 dollars",
+     "50 dollars",
+     "40 dollars",
+     "20 dollars",
+     "10 dollars"
+    ]
+   }
+  }
+ },
+ "refusals": [
+  {
+   "check": "a second command of a pin while one holds its lock",
+   "refused with": "another command of google/gemini-4-argon is running, holding google__gemini-4-argon.lock: one command of a pin at a time (FREEZE-5.md, section 8); nothing was done"
+  },
+  {
+   "check": "a last line cut short",
+   "refused with": "cut-last: {'calls.jsonl': {'last line': ['no final newline', 'does not read'], 'lines before the last that do not read': []}}: a write cut short. `mend --family PIN` moves each such log's last line to the .cut file beside it and, for the ca"
+  },
+  {
+   "check": "the reading of a folder cut short",
+   "refused with": "cut-last: {'calls.jsonl': {'last line': ['no final newline', 'does not read'], 'lines before the last that do not read': []}}: a write cut short. `mend --family PIN` moves each such log's last line to the .cut file beside it and, for the ca"
+  },
+  {
+   "check": "mend where every log reads whole",
+   "refused with": "cut-last: every log reads whole: `mend` changes nothing (FREEZE-5.md, section 8)"
+  },
+  {
+   "check": "a last line without its newline",
+   "refused with": "cut-newline: {'calls.jsonl': {'last line': ['no final newline'], 'lines before the last that do not read': []}}: a write cut short. `mend --family PIN` moves each such log's last line to the .cut file beside it and, for the catalog, puts a "
+  },
+  {
+   "check": "a line before the last that does not read",
+   "refused with": "cut-before-last: {'calls.jsonl': {'last line': [], 'lines before the last that do not read': [4]}}: a line before the last does not read, which no write cut short leaves, so the folder stays refused and is reported for Ren (FREEZE-5.md, sec"
+  },
+  {
+   "check": "mend on a line before the last",
+   "refused with": "cut-before-last: {'calls.jsonl': {'last line': [], 'lines before the last that do not read': [4]}}: a line before the last does not read, which no write cut short leaves, so the folder stays refused and is reported for Ren, and `mend` chang"
+  },
+  {
+   "check": "a log and no meta",
+   "refused with": "meta-missing: a log and no meta.json, which no command leaves, so the folder stays refused and is reported for Ren (FREEZE-5.md, section 8); no call was made"
+  },
+  {
+   "check": "mend with no meta",
+   "refused with": "meta-missing: a log and no meta.json: the folder stays refused, and `mend` changes nothing (FREEZE-5.md, section 8)"
+  },
+  {
+   "check": "a meta that does not read",
+   "refused with": "meta-cut: its meta.json does not read, which no command leaves, so the folder stays refused and is reported for Ren (FREEZE-5.md, section 8); no call was made"
+  },
+  {
+   "check": "mend where the clock is not later",
+   "refused with": "mend-clock: the clock is not later than every read and every call the logs keep: `mend` changes nothing (FREEZE-5.md, section 8)"
+  },
+  {
+   "check": "a record holding a surrogate pair as two code points",
+   "refused with": "UnicodeEncodeError: 'utf-8' codec can't encode characters in position 21-22: surrogates not allowed"
+  },
+  {
+   "check": "a write after a failed one",
+   "refused with": "RuntimeError: a write to calls.jsonl failed (UnicodeEncodeError: 'utf-8' codec can't encode characters in position 21-22: surrogates not allowed), so nothing more is written to it (FREEZE-5.md, section 8)"
+  },
+  {
+   "check": "a logged answer the parser does not read from its response",
+   "refused with": "tr1|google/gemini-4-argon|F|p20|07: the logged answer is not the one the parser reads from its response"
+  },
+  {
+   "check": "a logged prompt whose text is not its rebuild's, its hash kept",
+   "refused with": "records whose logged prompt is not the one their call rebuilds: ['tr1|google/gemini-4-argon|T|p32|01']"
+  },
+  {
+   "check": "a record not in the plan",
+   "refused with": "refusing an enlarged log: 1 calls not in the plan"
+  },
+  {
+   "check": "a record another model answered",
+   "refused with": "tr1|google/gemini-4-argon|K|p47|05: answered by 'other/model', not the pin"
+  },
+  {
+   "check": "a smoke run's folder read for a verdict",
+   "refused with": "a smoke run carries no verdict"
+  },
+  {
+   "check": "an H call whose history is not the records logged before it",
+   "refused with": "tr1|google/gemini-4-argon|H|p15|00: the record's letters, prompt or request are not those its id rebuilds"
+  },
+  {
+   "check": "any module of this folder under python3 -O",
+   "refused with": "TR1's code does not run under python3 -O, which would drop its checks; run it as python3 -B (FREEZE-5.md, section 6)"
+  }
+ ],
+ "parser shapes read as section 3 says": 9,
+ "random answer sets compared": 400,
+ "formations' conditions compared": 92,
+ "a stop that stands at a smoke run, at one unreadable answer in twenty a call": {
+  "a condition (two or more of its four)": 0.014,
+  "on at least one of two deciding pins": 0.0278,
+  "were one to stand (one or more of four)": 0.1855
+ },
+ "H killed and made again": {
+  "calls before the kill": 250,
+  "made again": 151,
+  "H": "passed"
+ },
+ "commands": [
+  {
+   "check": "run before any smoke run",
+   "result": "no smoke run for google/gemini-4-argon: run `smoke` first; no call was made"
+  },
+  {
+   "check": "a smoke run whose K calls the provider filtered",
+   "result": "exit 0; go on {'T': True, 'F': True, 'K': False, 'H': True}"
+  },
+  {
+   "check": "run asking for K after that smoke run",
+   "result": "google/gemini-4-argon's latest smoke run (google__gemini-4-argon-20261104T130513Z) stopped K, a stop of the run, which a later smoke run that passes lifts (FREEZE-5.md, section 8); no call was made"
+  },
+  {
+   "check": "smoke where the latest smoke run passed every condition",
+   "result": "no smoke run of google/gemini-4-argon is needed: each condition is read whole, stopped by the pin's own answers, a stop that stands, or released by its latest smoke run on these frozen files, so another could release nothing and could only "
+  },
+  {
+   "check": "H asked at a parallel above 1",
+   "result": "H's calls carry their course's earlier answers, so H runs at --parallel 1 (FREEZE-5.md, section 6); no call was made"
+  },
+  {
+   "check": "an unknown condition",
+   "result": "unknown condition in T,X; known: T, F, K, H; no call was made"
+  },
+  {
+   "check": "run on a log cut short",
+   "result": "google__gemini-4-argon: {'calls.jsonl': {'last line': ['no final newline', 'does not read'], 'lines before the last that do not read': []}}: a write cut short. `mend --family PIN` moves each such log's last line to the .cut file beside it a"
+  },
+  {
+   "check": "verdicts on a log cut short",
+   "result": "google__gemini-4-argon: {'calls.jsonl': {'last line': ['no final newline', 'does not read'], 'lines before the last that do not read': []}}: a write cut short. `mend --family PIN` moves each such log's last line to the .cut file beside it a"
+  },
+  {
+   "check": "mend with nothing cut",
+   "result": "google__gemini-4-argon: every log reads whole: `mend` changes nothing (FREEZE-5.md, section 8)"
+  },
+  {
+   "check": "the fresh conditions resumed at parallel 4 after a kill and a mend",
+   "result": "899 records before, 1890 after"
+  },
+  {
+   "check": "run asking only for conditions read whole",
+   "result": "google/gemini-4-argon's K, T read whole: no call is left to make (FREEZE-5.md, section 8); no call was made"
+  },
+  {
+   "check": "a smoke run of prose answers after T, F and K began",
+   "result": "exit 2; stands {'T': None, 'F': None, 'K': None, 'H': 'google__gemini-4-argon-20261104T130518Z'}"
+  },
+  {
+   "check": "run asking for H after a stop that stands",
+   "result": "google/gemini-4-argon's condition H was stopped by the pin's own answers at its smoke run (google__gemini-4-argon-20261104T130518Z), a stop that stands (FREEZE-5.md, section 8); no call was made"
+  },
+  {
+   "check": "smoke where no condition can be released",
+   "result": "no smoke run of google/gemini-4-argon is needed: each condition is read whole, stopped by the pin's own answers, a stop that stands, or released by its latest smoke run on these frozen files, so another could release nothing and could only "
+  },
+  {
+   "check": "verdicts after the kill, the mend and the resume",
+   "result": "bridge passed; H no call read; made again 0"
+  },
+  {
+   "check": "H alone on a second pin, through the commands",
+   "result": "H passed; bridge no verdict (T is not read whole)"
+  },
+  {
+   "check": "verdicts while another command holds the lock",
+   "result": "another command of qwen/qwen3.8-max-0902 is running, holding qwen__qwen3.8-max-0902.lock: one command of a pin at a time (FREEZE-5.md, section 8); nothing was done"
+  },
+  {
+   "check": "a start of all four killed before any H call",
+   "result": "begun ['F', 'K', 'T']"
+  },
+  {
+   "check": "one unreadable H answer at a smoke run, H not begun",
+   "result": "go on {'T': True, 'F': True, 'K': True, 'H': False}; nothing stands"
+  },
+  {
+   "check": "run after it",
+   "result": "anthropic/claude-sonnet-5.5's latest smoke run (anthropic__claude-sonnet-5.5-20261104T130522Z) stopped H, a stop of the run, which a later smoke run that passes lifts (FREEZE-5.md, section 8); no call was made"
+  },
+  {
+   "check": "every T answer unreadable at a smoke run, T begun",
+   "result": "go on {'T': False, 'F': True, 'K': True, 'H': True}; nothing stands"
+  },
+  {
+   "check": "run asking for T after it",
+   "result": "anthropic/claude-sonnet-5.5's latest smoke run (anthropic__claude-sonnet-5.5-20261104T130524Z) stopped T, a stop of the run, which a later smoke run that passes lifts (FREEZE-5.md, section 8); no call was made"
+  },
+  {
+   "check": "the whole plan after the kill, the mend, the addendum and three smoke runs",
+   "result": "bridge passed; 2620 records, 100 calls made again; H's 630 made in full"
+  }
+ ],
+ "estimate": {
+  "google/gemini-4-argon": {
+   "calls": {
+    "F": 630,
+    "K": 630,
+    "T": 630,
+    "H": 630
+   },
+   "tokens_in": 1536309,
+   "usd_low": 4.33,
+   "usd_high": 28.27,
+   "tokens_in_by_condition": {
+    "F": 60921,
+    "K": 46778,
+    "T": 65331,
+    "H": 1363280
+   }
+  },
+  "qwen/qwen3.8-max-0902": {
+   "calls": {
+    "K": 630,
+    "T": 630,
+    "F": 630,
+    "H": 630
+   },
+   "tokens_in": 1516302,
+   "usd_low": 3.79,
+   "usd_high": 18.15,
+   "tokens_in_by_condition": {
+    "K": 46778,
+    "T": 65331,
+    "F": 60921,
+    "H": 1343272
+   }
+  },
+  "anthropic/claude-sonnet-5.5": {
+   "calls": {
+    "T": 630,
+    "F": 630,
+    "K": 630,
+    "H": 630
+   },
+   "tokens_in": 1523583,
+   "usd_low": 4.31,
+   "usd_high": 28.25,
+   "tokens_in_by_condition": {
+    "T": 65331,
+    "F": 60921,
+    "K": 46778,
+    "H": 1350554
+   }
+  }
+ },
+ "seconds": 63.3,
+ "code_hashes": {
+  "experiments/formations-that-read/tr1.py": "dd75707c1a44a300e419b4bd0dc7cbff9c83e1a71f874cf8e68d3a42e28ee17f",
+  "experiments/formations-that-read/tr1.json": "d74cd24f43d08626fe3ba3d159823884ddc4ec20a873e2bcef0365bbd39d51fe",
+  "experiments/formations-that-read/tr8.py": "50650cc538da6494c3122d78b8f8d2244ef40b5c4356b0ace23eb92c2aefed72",
+  "experiments/formations-that-read/tr_rr.py": "8ee9bef671ee5198f3eeea0421c6dbdd87de473fce974b672dd2c5e44a047ef8",
+  "experiments/formations-that-read/told/client.py": "675b466dd5ca4f9b368a966a00c69df731052d6a28ea72970e48d51a49cf18c3",
+  "experiments/formations-that-read/told/conditions.py": "d534dd84eafb00d8fdaf594fe87b6be90b14dcde9b156f88cf86688cea04509a",
+  "experiments/formations-that-read/told/prompts.py": "5bd6351e1764017cc9f3797e20cf0ab290a9a995e6af26f78b340d0a4009f2ea",
+  "experiments/formations-that-read/told/rule.py": "d211e36c99fd4eb020b2c32f17cccf8bf48b8b638882fc4de8073f1c0ca859c7",
+  "experiments/formations-that-read/told/run.py": "4e9956caab24c053ba217b2a0a6eaa7e8c6dbbebbf4295bace7446fd632ae3f7",
+  "experiments/formations-that-read/told/verdicts.py": "44a89fb5dbe2c2d9fb63736c9dd687c749d79272dbd862d106a6fa8c5a80cdec",
+  "experiments/formations-that-read/told/PINS.json": "7feb28b92d1fa286daa6ccec5e874564d7083fe0b1c3fd26bb3d7ff1f3714b86",
+  "experiments/formations-that-read/told-tr1/tr1_design.py": "60219e117fa1d33ef19c73f44067edc71c7008ad1c2ee920c665a4875c5b66fc",
+  "experiments/formations-that-read/told-tr1/tr1_rule.py": "8bd7534212bfe9b19ec4853f0a285bfb593a3e5910e76695cf0ebbf1453c8560",
+  "experiments/formations-that-read/told-tr1/tr1_run.py": "bb959cf9c2180358a0e6decf8e219ef892cace1e83baf4fbdb90ff4c17ad39df",
+  "experiments/formations-that-read/told-tr1/tr1_dry_run.py": "a41bb5184c208d63f22973a7730a95587a738a4bd8471081e787b1cde7d93b84",
+  "experiments/formations-that-read/told-tr1/write_frozen.py": "d35ec0077f75e88214f3edb92ecc6fd726e58b98fa1068a6e894e4517ce29ac6"
+ },
+ "code_unchanged_during_the_run": true,
+ "ok": true
+}
