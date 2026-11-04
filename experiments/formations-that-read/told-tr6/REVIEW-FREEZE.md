@@ -1,0 +1,3 @@
+# Review of TR6's freeze (FREEZE-6): independent readers, round by round
+
+4 November 2026. AI-written (a Claude Code session). Independent readers read the frozen files before the freeze landed, a fresh Claude Opus subagent each round, of the theory's own family. Each was given the files and the coordinator's requirements and, from the second round on, this record, which it was asked to check, not to trust; none was given the session's conclusions otherwise. Each worked read-only, with small checks of the code in memory or in scratch of its own outside the worktree. Each round's findings are listed as it gave them, with how each was taken. The rounds go on until a round finds nothing of high or medium severity.
