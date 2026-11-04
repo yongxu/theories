@@ -46,7 +46,10 @@ passed; the receipt lists them in the order of a one-at-a-time run. A step not i
 runs under its key's lock, so a second run wanting the same step at the same time waits and then
 reuses it, and every Lean process of this checker, `check_fallible_inquiry.py` and `scratch_build.py`
 takes one of the machine's `BECOMING_LEAN_SLOTS` (by default the number of cores) for as long as it
-runs; a wait for a lock or a slot longer than `LEAN_TIMEOUT` goes on without it. The receipt keeps each step's seconds (`lean_steps.seconds`, the wait for a slot not counted)
+runs. The holder of a step's lock touches its file at least every ten seconds, and a run waiting for
+the lock goes on without it only when the file has gone untouched for two minutes (its holder stopped
+or gone); a wait for a slot ends only when one is free or the run stops, noted on stderr every five
+minutes. The receipt keeps each step's seconds (`lean_steps.seconds`, the wait for a slot not counted)
 and the Lean part's wall time.
 
 The run folder keeps the receipt, the drivers and logs of the steps that ran, and a copy
@@ -3921,7 +3924,7 @@ def store(key, outputs, log, run, seconds=None):
     """Keep a passed step for later runs, with the seconds it took. The cache only saves work, so a
     failed write is ignored."""
     def write(path, data):
-        temporary = path.with_name(f".{path.name}.{os.getpid()}.tmp")
+        temporary = path.with_name(f".{path.name}.{os.getpid()}.{threading.get_ident()}.tmp")
         temporary.write_bytes(data)
         os.replace(temporary, path)
 
@@ -3958,30 +3961,47 @@ def try_flock(handle):
         return None
 
 
-def wait_for(take, what, deadline):
-    """Call `take` until it returns True (held). Raises once the run has stopped; after `deadline`
-    seconds returns False, so the step goes on without what it waited for (a lock or a slot only saves
-    work and spares the machine), with a line on stderr."""
-    started, pause = time.monotonic(), 0.02
+def wait_for(take, what, stale=None, beat=None, note_every=300):
+    """Call `take` until it returns True (held), calling `beat` between tries and noting on stderr every
+    `note_every` seconds that the wait goes on. Raises once the run has stopped. Returns False when
+    `stale()` says that what holds it has shown no sign of life for longer than a step may take, so the
+    step goes on without it (a lock only saves work)."""
+    started, pause, noted = time.monotonic(), 0.02, 0
     while not take():
         if STOP.is_set():
             raise RuntimeError("the run stopped while a step waited for " + what)
-        if time.monotonic() - started > deadline:
-            print(f"waited {deadline} s for {what}; going on without it", file=sys.stderr)
+        if stale and stale():
+            print(f"{what}: its holder has shown no sign of life for longer than a step may take; "
+                  "going on without it", file=sys.stderr)
             return False
+        waited = time.monotonic() - started
+        if waited >= noted + note_every:
+            noted += note_every
+            print(f"still waiting for {what} after {int(waited)} s", file=sys.stderr)
+        if beat:
+            beat()
         time.sleep(pause)
-        pause = min(2 * pause, 0.5)
+        pause = min(2 * pause, 0.25)
     return True
 
 
 @contextmanager
-def step_lock(key, deadline=TIMEOUT):
+def step_lock(key, quiet=120):
     """The lock of a step's key, held while the step runs and is stored, so a run wanting the same
-    step meanwhile waits and then finds it in the cache. The lock's file is removed before the lock is
-    released, and a run that then holds the removed file takes the lock again. Without a writable cache,
-    on a file system that cannot lock, or after `deadline` seconds of waiting, the step runs without the
-    lock: the lock only saves work."""
+    step meanwhile waits and then finds it in the cache. It yields `beat`, which touches the lock's
+    file: the holder beats while it waits for a slot and while Lean runs, at least every ten seconds,
+    and a run waiting for the lock goes on without it only when the file has not been touched for
+    `quiet` seconds (a holder stopped or gone, not a slow one). The lock's file is removed before the lock is released, and a run that then
+    holds the removed file takes the lock again. Without a writable cache, or on a file system that
+    cannot lock, the step runs without the lock: the lock only saves work."""
     path, handle = LOCKS / (key + ".lock"), None
+
+    def stale():
+        try:
+            return time.time() - os.stat(path).st_mtime > quiet
+        except OSError:
+            return False
+
     while True:
         try:
             LOCKS.mkdir(parents=True, exist_ok=True)
@@ -3992,7 +4012,7 @@ def step_lock(key, deadline=TIMEOUT):
         state = []
         try:
             waited = wait_for(lambda: state.append(try_flock(handle)) or state[-1] is not False,
-                              "the lock of step " + key, deadline)
+                              "the lock of step " + key, stale=stale)
         except BaseException:
             handle.close()
             raise
@@ -4006,8 +4026,17 @@ def step_lock(key, deadline=TIMEOUT):
         except OSError:
             pass
         handle.close()
+
+    def beat():
+        if handle:
+            try:
+                os.utime(path)
+            except OSError:
+                pass
+
+    beat()
     try:
-        yield
+        yield beat
     finally:
         if handle:
             try:
@@ -4024,10 +4053,11 @@ LEAN_SLOTS = max(1, int(os.environ.get("BECOMING_LEAN_SLOTS") or os.cpu_count() 
 
 
 @contextmanager
-def lean_slot(deadline=TIMEOUT):
+def lean_slot(beat=None):
     """One of the machine's Lean slots, held while a Lean process runs, so runs going at once share
-    the cores rather than each starting `JOBS` processes. Without a writable cache, on a file system
-    that cannot lock, or after `deadline` seconds of waiting, Lean runs without a slot."""
+    the cores rather than each starting `JOBS` processes. The wait ends only when a slot is free or the
+    run stops, noted on stderr every five minutes; `beat` is called while it waits. Without a writable
+    cache, or on a file system that cannot lock, Lean runs without a slot."""
     try:
         SLOTS.mkdir(parents=True, exist_ok=True)
     except OSError:
@@ -4050,7 +4080,7 @@ def lean_slot(deadline=TIMEOUT):
                 return True
         return False
 
-    wait_for(take, "a Lean slot", deadline)
+    wait_for(take, "a Lean slot", beat=beat)
     try:
         yield
     finally:
@@ -4066,29 +4096,51 @@ Outcome = namedtuple("Outcome", "output reused_from returncode passed seconds")
 def lean_step(command, args, where, key=None, outputs=(), origin=None, timeout=TIMEOUT, before=None):
     """One Lean step in `where`: restored from the cache when a step with its key passed, else run in
     one of the machine's Lean slots (its timeout starting once it has one) and, when it passes, stored
-    with `origin` as its run. A keyed step not in the cache runs under its key's lock and is looked up
-    again once the lock is held. `before` is called just before Lean starts."""
+    with `origin` as its run. A keyed step not in the cache runs under its key's lock, beating while it
+    waits for a slot and as Lean starts, and is looked up again once the lock is held. `before` is called
+    just before Lean starts."""
     paths = [where / output for output in outputs]
     found = reuse(key, paths) if key else None
     if found:
         return Outcome(found[0], found[1], 0, True, None)
-    with step_lock(key, timeout) if key else nullcontext():
+    with step_lock(key) if key else nullcontext(lambda: None) as beat:
         found = reuse(key, paths) if key else None
         if found:
             return Outcome(found[0], found[1], 0, True, None)
-        with lean_slot(timeout):
+        with lean_slot(beat):
             if STOP.is_set():
                 raise RuntimeError("the run stopped before this step started")
             if before:
                 before()
             started = time.perf_counter()
-            p = subprocess.run(command + args, cwd=where, env={**os.environ, "LEAN_PATH": str(where)}, text=True,
-                               stdout=subprocess.PIPE, stderr=subprocess.STDOUT, timeout=timeout)
+            returncode, output = run_lean(command + args, where, timeout, beat)
             seconds = round(time.perf_counter() - started, 3)
-        passed = p.returncode == 0 and not re.search(r"\b(?:error|warning):", p.stdout)
+        passed = returncode == 0 and not re.search(r"\b(?:error|warning):", output)
         if key and passed:
-            store(key, paths, p.stdout, origin, seconds)
-        return Outcome(p.stdout, None, p.returncode, passed, seconds)
+            store(key, paths, output, origin, seconds)
+        return Outcome(output, None, returncode, passed, seconds)
+
+
+def run_lean(command, where, timeout, beat, every=10):
+    """Lean in `where` as `subprocess.run` with `timeout` runs it (killed and `TimeoutExpired` raised at
+    the timeout, killed on any other exception), calling `beat` every `every` seconds while it runs.
+    Returns the exit code and the output, standard error merged."""
+    with subprocess.Popen(command, cwd=where, env={**os.environ, "LEAN_PATH": str(where)}, text=True,
+                          stdout=subprocess.PIPE, stderr=subprocess.STDOUT) as process:
+        started = time.monotonic()
+        try:
+            while True:
+                left = timeout - (time.monotonic() - started)
+                try:
+                    output, _ = process.communicate(timeout=max(0.01, min(every, left)))
+                    return process.returncode, output
+                except subprocess.TimeoutExpired:
+                    if time.monotonic() - started >= timeout:
+                        raise subprocess.TimeoutExpired(command, timeout)
+                    beat()
+        except BaseException:
+            process.kill()
+            raise
 
 
 # Lean steps run at once (`BECOMING_JOBS`); 1 runs them one at a time.

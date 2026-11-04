@@ -1,9 +1,11 @@
 """The Becoming checker's concurrent steps: each waits for what it reads; the receipt keeps serial order.
 A step not in the cache runs once under its key's lock, Lean processes take the machine's slots, and the
 plan the checker and scratch_build share keys every step by its inputs."""
+import fcntl
 import os
 from pathlib import Path
 import re
+import subprocess
 import tempfile
 import threading
 import time
@@ -219,19 +221,102 @@ class SharedSteps(unittest.TestCase):
         self.assertEqual(started, [])
         self.assertFalse((self.checker.CACHE / 'k7.json').exists())
 
-    def test_waits_end_at_their_deadline_and_a_file_system_without_locks_is_no_lock(self):
-        with self.checker.step_lock('k8'):
-            began = time.monotonic()
-            with self.checker.step_lock('k8', deadline=0.3):
-                waited = time.monotonic() - began
-        self.assertGreaterEqual(waited, 0.3)
-        self.assertLess(waited, 3)
+    def hold(self, key, seconds, beat_every=None):
+        """A thread holding `key`'s lock for `seconds`, beating every `beat_every` seconds if given."""
+        held, left = threading.Event(), {}
+
+        def holder():
+            with self.checker.step_lock(key) as beat:
+                held.set()
+                end = time.monotonic() + seconds
+                while time.monotonic() < end:
+                    time.sleep(beat_every or 0.02)
+                    if beat_every:
+                        beat()
+                left['at'] = time.monotonic()
+        thread = threading.Thread(target=holder)
+        thread.start()
+        self.assertTrue(held.wait(5))
+        return thread, left
+
+    def test_a_silent_holder_is_passed_and_a_live_one_is_waited_for(self):
+        thread, left = self.hold('k8', 1.0)
+        with self.checker.step_lock('k8', quiet=0.3):
+            entered = time.monotonic()
+        thread.join(5)
+        self.assertLess(entered, left['at'], 'a holder silent for longer than quiet is passed')
+        thread, left = self.hold('k8b', 1.0, beat_every=0.05)
+        with self.checker.step_lock('k8b', quiet=0.3):
+            entered = time.monotonic()
+        thread.join(5)
+        self.assertGreaterEqual(entered, left['at'], 'a holder that beats is waited for')
+
+    def test_a_file_system_that_cannot_lock_takes_no_lock_at_once(self):
+        thread, _ = self.hold('k9', 2.0)
         self.checker.try_flock = lambda handle: None
-        with self.checker.step_lock('k9'):
-            with self.checker.step_lock('k9', deadline=30):
-                pass
-        with self.checker.lean_slot(deadline=30):
-            pass
+        done = threading.Event()
+
+        def waiter():
+            with self.checker.step_lock('k9'):
+                with self.checker.lean_slot():
+                    done.set()
+        self.checker.LEAN_SLOTS = 1
+        self.checker.SLOTS.mkdir(parents=True, exist_ok=True)
+        with open(self.checker.SLOTS / 'lean-0.lock', 'a') as slot:
+            fcntl.flock(slot, fcntl.LOCK_EX)
+            threading.Thread(target=waiter).start()
+            self.assertTrue(done.wait(1.0), 'neither the held lock nor the held slot was waited for')
+        thread.join(5)
+
+    def test_a_failed_step_stops_the_steps_still_waiting(self):
+        self.checker.LEAN_SLOTS = 1
+        self.checker.SLOTS.mkdir(parents=True, exist_ok=True)
+        ran = []
+
+        def fails():
+            time.sleep(0.2)
+            raise ValueError('a')
+
+        def waits():
+            with self.checker.lean_slot():
+                ran.append('b')
+        outcome = {}
+
+        def graph():
+            try:
+                self.checker.run_graph({'a': ([], fails), 'b': ([], waits)}, jobs=2)
+            except Exception as error:
+                outcome['error'] = error
+        with open(self.checker.SLOTS / 'lean-0.lock', 'a') as slot:
+            fcntl.flock(slot, fcntl.LOCK_EX)
+            thread = threading.Thread(target=graph)
+            thread.start()
+            thread.join(5)
+            stopped = not thread.is_alive()
+        thread.join(5)
+        self.assertTrue(stopped, 'the waiting step stopped once the other failed')
+        self.assertIsInstance(outcome.get('error'), ValueError)
+        self.assertEqual(ran, [])
+
+    def test_a_stopped_run_with_a_free_slot_starts_no_lean(self):
+        self.checker.STOP.set()
+        called = []
+        with self.assertRaises(RuntimeError):
+            self.checker.lean_step(self.lean(0), ['x'], self.directory('a'), None, ['out.olean'], {'run': 'a'},
+                                   before=lambda: called.append('before'))
+        self.assertEqual(called, [])
+        self.assertFalse((self.root / 'a' / 'out.olean').exists())
+
+    def test_lean_is_run_with_beats_and_killed_at_its_timeout(self):
+        beats = []
+        code, output = self.checker.run_lean(self.lean(0.3), self.directory('a'), 5, lambda: beats.append(1), every=0.05)
+        self.assertEqual(code, 0)
+        self.assertGreaterEqual(len(beats), 3)
+        began = time.monotonic()
+        with self.assertRaises(subprocess.TimeoutExpired):
+            self.checker.run_lean(self.lean(5), self.directory('b'), 0.3, lambda: None, every=0.05)
+        self.assertLess(time.monotonic() - began, 3)
+        self.assertFalse((self.root / 'b' / 'out.olean').exists(), 'the stand-in was killed before it wrote')
 
 
 class Plan(unittest.TestCase):
