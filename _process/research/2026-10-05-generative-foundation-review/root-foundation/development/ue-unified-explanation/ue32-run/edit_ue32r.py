@@ -53,13 +53,17 @@ EVID_02 = ("on MQ5's stocks one year ahead, against the field's fitted delay emb
            "numbers forecast the next giving better by UE32's frozen criterion "
            f"(§{N}: median log ratio of the embedding's error to theirs 0.16, the three numbers better in 42 of 65 "
            "stocks, p = 0.025, where UE32 expected \"not separated\"), though each forecast worse than persistence in 53 "
-           "of the 65 (both in 46), and the embedding lost more the longer the history it chose: that bears on the "
+           "of the 65 (both in 46), and the embedding lost more the longer the history it chose, the verdict resting, post "
+           "hoc, on the 17 stocks where it went past the field's bound on an embedding's size (within it, on 48 "
+           "stocks, not separated: 29 to 19, p = 0.19): that bears on the "
            "three numbers' sufficiency against the series' longer history at these lengths, not on the lag's place or "
            "T2's law")
 EVID_08 = ("UE32 found T2's numbers better than the field's fitted embedding by its frozen criterion, both behind "
            "persistence in most stocks, the embedding losing more with longer history: sufficiency against it at these "
-           "lengths, not the lag's place or T2's law (better in 42 of 65 stocks, p = 0.025; expected: not separated)")
-QUOTE_08 = EVID_08[len('UE32 '):EVID_08.index(' (better in 42')]
+           "lengths, not the lag's place or T2's law; post hoc, the verdict rests on the 17 stocks where the embedding "
+           "went past the field's bound on its size; within it, not separated (overall better in 42 of 65 stocks, "
+           "p = 0.025, where UE32 expected not separated; within the bound 29 of 48, p = 0.19)")
+QUOTE_08 = EVID_08[len('UE32 '):EVID_08.index(' (overall better in 42')]
 assert EVID_08.startswith('UE32 found ')
 
 L316 = '#316-fates-on-either-side-of-the-curve-in-the-plane-in-the-field-mq7)'
@@ -67,6 +71,7 @@ L316 = '#316-fates-on-either-side-of-the-curve-in-the-plane-in-the-field-mq7)'
 # The figures measured on the landing tree with these edits (rehearsal); the landing script asserts the measure.
 RB_FIGURES = {
     'whole_stated': '140 to 195',
+    'hour_stated': '45 to 66',
     'slowest': '190.3',
     'overview': '7,270 words and 19 characters (56.0 to 72.8 minutes)',
     'overview_zh': 'Chinese 216 words and 12,622 characters (50.2 to 65.3 minutes)',
@@ -105,12 +110,14 @@ EDITS = {
          f'"{QUOTE_08}". In yeast both chapters'),
         ("| of three on fish stocks, one passed its state verdict; a frozen test (UE31)",
          "| of four on fish stocks, one passed its state verdict; UE32: T2's numbers beat the field's fitted embedding, "
-         "both behind persistence in most stocks; a frozen test (UE31)"),
+         "post hoc only where it went past the field's size bound, both behind persistence in most stocks; a frozen "
+         "test (UE31)"),
     ],
     MQREADME: [
         ("This is thesis T2, conjectured (of three frozen fish-stock tests, MQ5's passed) and untested outside fisheries.",
          "This is thesis T2, conjectured (of four frozen fish-stock tests, MQ5's passed, and in UE32 the three numbers "
-         "forecast better than the field's fitted embedding, both behind persistence in most stocks) and untested "
+         "forecast better than the field's fitted embedding, post hoc only where it went past the field's bound on its "
+         "size, both behind persistence in most stocks) and untested "
          "outside fisheries."),
     ],
     EN: [
@@ -118,21 +125,23 @@ EDITS = {
          "| conjectured; of four frozen fish-stock tests one passed, one failed its state verdict and one missed its "
          "bound; in the fourth the three numbers forecast better than the field's fitted embedding by its frozen "
          "criterion, a sign of their sufficiency against longer history, not of the lag's place, though both trailed "
-         "persistence in most stocks; untested outside fisheries |"),
+         "persistence in most stocks and, post hoc, the advantage held only where the embedding went past the field's "
+         "bound on its size; untested outside fisheries |"),
     ],
     ZH: [
         ("| 猜想；三项冻结的鱼类种群检验中一项通过；在渔业之外未经检验 |",
          "| 猜想；四项冻结的鱼类种群检验中，一项通过，一项未通过其状态裁决，一项未达其冻结界限；第四项中，按其冻结的判据，"
          "水平、近来的给予与滞后这三个量对下一次给予的预报胜过该领域拟合的延迟嵌入，这是它们相对于更长历史之充分性的一个迹象，"
-         "而非滞后位置的迹象，但在多数种群中二者都不如直接沿用上一次的给予；在渔业之外未经检验 |"),
+         "而非滞后位置的迹象，但在多数种群中二者都不如直接沿用上一次的给予，且事后的分析显示，这一优势只见于嵌入超出该领域"
+         "对其规模之界限的种群；在渔业之外未经检验 |"),
     ],
     EXPIDX: [
         (", and a test designed and frozen 3 Nov 2026 before any series was read by it, its download and run Ren's |",
          ", and a test designed and frozen 3 Nov 2026 before any series was read by it, run 4 Nov 2026 on Ren's yes: "
          "T2 better than the field's fitted embedding by its frozen criterion (median log ratio of the embedding's error "
          "to the three numbers' 0.16, the three numbers better in 42 of 65 stocks, p = 0.025; expected: not separated), "
-         "both behind persistence in most stocks "
-         "([result](state-against-embedding/README.md#the-result)) |"),
+         "both behind persistence in most stocks, and post hoc resting on the 17 stocks where the embedding went past "
+         "the field's bound on its size ([result](state-against-embedding/README.md#the-result)) |"),
     ],
 }
 
@@ -141,7 +150,8 @@ def budget_edits():
     f = RB_FIGURES
     assert not any(v.isupper() for v in f.values()), 'RB_FIGURES not set'
     return {
-        SCI: [("The whole takes 140 to 190 minutes", f"The whole takes {f['whole_stated']} minutes")],
+        SCI: [("The whole takes 140 to 190 minutes", f"The whole takes {f['whole_stated']} minutes"),
+              ("which with this section take 45 to 65 minutes.", f"which with this section take {f['hour_stated']} minutes.")],
         REV_EN: [("| reading 140 to 190 minutes;", f"| reading {f['whole_stated']} minutes;")],
         REV_ZH: [("| 读约一百四十到一百九十分钟；", "| 读约一百四十到一百九十五分钟；")],
         RB: [
@@ -152,21 +162,25 @@ def budget_edits():
             ("what the two simulations' passes test ([T1's standing](../review-packet/T1-STANDING.md)). Recorded in",
              "what the two simulations' passes test ([T1's standing](../review-packet/T1-STANDING.md)). UE32's run added "
              f"{f['ov_words']} words to T2's row in §9 (Chinese {f['ov_zh']} characters): its fourth frozen fish-stock "
-             "test, the three numbers better than the field's fitted embedding, with both behind persistence beside it. "
+             "test, the three numbers better than the field's fitted embedding, with both behind persistence and the post hoc "
+             "recount by the embedding's size beside it. "
              "Recorded in"),
             ("sciences (1,351 words, 10.4 to 13.5, since T2S of 4 November, 251 over,",
              f"sciences ({f['front']}, since UE32's run of 4 November, {f['front_over']} over,"),
             ("since TS4 the bound on the point's exactness and since T2S T2's second forbidden item with its condition, kept",
              "since TS4 the bound on the point's exactness, since T2S T2's second forbidden item with its condition and "
-             "since UE32's run T2's fourth frozen fish-stock test with persistence beside it, kept"),
+             "since UE32's run T2's fourth frozen fish-stock test with persistence and the post hoc recount beside it, kept"),
             ("6,446 words, 49.6 to 64.5 minutes, since T2S of 4 November, which restated T2's second forbidden item "
              "and its lag's place in the front's row and S-15,",
              f"{f['hour']}, since UE32's run of 4 November, which added its verdict to the front's T2 row and to S-15 "
-             "beside the frozen counts, after T2S restated T2's second forbidden item and its lag's place in the front's "
+             "beside the frozen counts, with persistence and the post hoc recount by the embedding's size beside it, "
+             f"so that the hour's stated 45 to 65 minutes became {f['hour_stated']}: a qualifier that keeps a reader from "
+             "taking the verdict as the three numbers beating the field's embedding within the field's own bound comes "
+             "before the budget; after T2S restated T2's second forbidden item and its lag's place in the front's "
              "row and S-15,"),
             ("Sciences' hour runs 446 words past it", f"Sciences' hour runs {f['hour_over']} words past it"),
             ("T2's restatement in the front's row and S-15,", "T2's restatement in the front's row and S-15, UE32's "
-             "verdict in both,"),
+             "verdict with its qualifiers in both,"),
             ("140 to 190 for sciences since TS2 of 3 November, its readings 143.0",
              f"{f['whole_stated']} for sciences since UE32's run of 4 November, whose slowest reading, {f['slowest']} "
              "minutes, the earlier 140 to 190 no longer covered once the front and S-15 took UE32's verdict; 140 to 190 "

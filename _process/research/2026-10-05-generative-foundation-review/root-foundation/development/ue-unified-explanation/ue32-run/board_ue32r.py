@@ -32,8 +32,8 @@ WAY_OLD = ("UE32, T2's three numbers against the field's fitted delay embedding 
 WAY_NEW = ("UE32, T2's three numbers against the field's fitted delay embedding on MQ5's assessed fish stocks, by the "
            "field's own criterion, out-of-sample skill, frozen before any series was read by it "
            "([design](../experiments/state-against-embedding/DESIGN.md)) and run on 4 November 2026 on Ren's yes: T2 "
-           "better than the field's fitted embedding by its frozen criterion, both behind persistence in most stocks "
-           "([result](../experiments/state-against-embedding/README.md#the-result));")
+           "better than the field's fitted embedding by its frozen criterion, post hoc only where the embedding went past "
+           "the field's bound on its size, both behind persistence in most stocks ([result](../experiments/state-against-embedding/README.md#the-result));")
 RUNS = re.compile(r" UE32's run is frozen \(\[design\]\(\.\./experiments/state-against-embedding/DESIGN\.md\)\); his yes "
                   r"would release .*?the answer expected stated in the design's §1\.")
 
