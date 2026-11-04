@@ -389,7 +389,6 @@ A commons with gated renewal as the first falsifiable test, with groups whose co
 
 *Applications elsewhere* (design programmes, not results; correspondence not established): the [Wamo protocol](../../wamotopia-and-the-wamo-protocol/README.md), [evolving community swarms](../../evolving-community-swarms/README.md), the [human solutions museum](../../human-solutions-museum/README.md), [cooperative infrastructure](../../the-fork-and-cooperative-infrastructure/README.md), [architecture for a living Earth](../../architecture-for-a-living-earth/README.md).
 
-<a id="not-shown"></a>
 ## 12. One kind of institution
 
 An institution is one of plan §六's test systems. This section gives a minimal model of one kind, an entry rule on a shared stock, passed through members who also keep it, with no compliance and no records. It is not a definition of an institution. What ends a shared stock is [§1](#r-own-count-misses-joint-excess)'s; the model has the form of that gated ending as its own clause and uses no law of it.
@@ -412,6 +411,7 @@ An institution is one of plan §六's test systems. This section gives a minimal
 
 **Reading** [AI reading, new]. The member taught by members is the family's model of one kind of institution. Top right of the four cases can be read as the rule saving the level and bottom left as the rule ending it, though the states compared are started separately and neither word is in the Lean. Then neither the rule's being present nor its being held decides: a rule can be kept and be the wrong rule, and it ends the level in the form of [04 §8](04-LIFE.md#r-the-stock-buys-time-where-the-rebuild-draws-on-it)'s member rebuilt from the level, a stock spent and an end closed under the net. The overdraw threshold is the open-access stock's (Gordon 1954; Hardin 1968), and Ostrom 1990 treats boundary rules as held by those they govern; this reads the entry rule only, and limited searches found no door whose strength is the keepers' own count, which is an absence in those searches and no claim of priority. That any actual institution meets the hypotheses is a correspondence duty, not shown here, and an institution's identity through changed purposes stays open ([01](01-ROOT.md#open)).
 
+<a id="not-shown"></a>
 ## What this chapter does not show
 
 - That any actual collective, market, pool, entry rule or optimizer meets the hypotheses of a law, that an actual difference grows at the pace its carried amount bounds, or that a pool's decision responds to all its members tell apart: orders, capacities, horizons, pools and waiting are supplied, and the correspondence is empirical.
