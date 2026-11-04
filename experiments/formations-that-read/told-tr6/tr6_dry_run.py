@@ -12,8 +12,12 @@
    shown in an arm A prompt, which the rebuild of every logged prompt, the input diff, finds), a
    record's course edited, a logged answer the parser reads otherwise, a record another model
    answered, a call not in the plan, a record another provider or another tier served, the offline
-   table's records dropped while the loops derived from them stay, and a smoke folder; a response
-   another provider or another tier served stops the run, logging nothing. A round's closing read
+   table's records dropped while the loops derived from them stay, a smoke folder, a log whose last
+   line is cut short or lacks its newline (refused until moved by FREEZE-1's note, then read as
+   before), and a line holding a line separator; a response another provider or another tier served
+   stops the run, logging nothing. Every stub response carries U+2028, U+2029 and U+0085 in a field no
+   reader reads, so every log passes through this freeze's line writer with them. A run stopped before
+   its loops, and one with a probe record dropped, are read as partial. A round's closing read
    lost, then made by a rerun, must be read with the plan its answers give; a pin that moved and came
    back likewise, the calls made again answering otherwise. The smoke run's stop rule is run through
    the stub; a table of response shapes checks classify(); the chain of this freeze, with freeze 3's
@@ -26,11 +30,17 @@
    0's spread one (1 to 10). And what the freeze's readings move: the second start, for a public
    reading the forecast as the count, whose orbit from 0 rests at once; a public moved by the
    presentation, voided by the flag rule; declines read as not taking part; an unreadable answer
-   ending its seed; probes that do not restate, which leave the reading unread.
+   ending its seed; probes that do not restate, which leave the reading unread. And a public whose
+   answers are fixed by the request, as at temperature 0: near its threshold a member dissents from
+   its decision with a chance drawn once per request, so that arm A, whose requests are the table's,
+   repeats the table's own dissent while each arm B request, its course new, draws afresh.
 
 The simulated members are Stage 0's own (tr6.py's thresholds, memory rules and flips): each call
 independent, a member's decision a function of the forecast and, in arm B, of its course as the
-prompt shows it (its own answers and the counts), with chance eta flipped.
+prompt shows it (its own answers and the counts), with chance eta flipped. V2 reads each round against
+its own presentation's table, so an independent flip counts both where the table was drawn and where
+the round is: the shares' mismatching rounds are about twice Stage 0's, which read against the
+public's flip-free table.
 """
 
 import hashlib
@@ -101,7 +111,7 @@ class Public:
     that miscompute, and a filter at one arm B round."""
 
     def __init__(self, name, kind, eta=0.001, memory=None, w=0.0, noise=None, lean=None, declines_from=None,
-                 bad_probes=False, filter_at=None, untold=None):
+                 bad_probes=False, filter_at=None, untold=None, fixed=None):
         self.name, self.kind, self.eta, self.memory, self.w = name, kind, eta, memory, w
         self.base = {f: base_of(kind, f) for f in TR.FRAMINGS}
         pick = {"momentum": {"join": "momentum", "lake": "regret after a crowded round"}}.get(memory)
@@ -109,6 +119,7 @@ class Public:
                         else MEMORY[pick[f] if pick else memory](f)) for f in TR.FRAMINGS} if memory else {}
         self.noise, self.lean, self.declines_from, self.bad_probes = noise or {}, lean, declines_from, bad_probes
         self.filter_at, self.untold = filter_at, untold or (lambda p: int(p >= 5))
+        self.fixed = fixed      # (q, near): dissent with chance q per request where the points are within near
 
     def answer(self, x, rep, again=0):
         rng = random.Random(f"{SEED}|{rep}|{self.name}|{again}|{x['id']}")
@@ -141,6 +152,12 @@ class Public:
                 course = D.parse_course(x["course"])
                 past = {"own": [1 if c == "T" else 0 for _, c, _ in course], "counts": [n for _, _, n in course]}
                 d = self.mem[f](i, p0, d, past, rng, self.w)
+            if self.fixed and abs(TR.points(f, TR.COSTS[i], True, p0 + 1)) <= self.fixed[1]:
+                # drawn from the request alone (what the prompt shows), not the call: an arm A request is
+                # the offline table's, byte for byte, and gets its answer again
+                req = random.Random(f"{SEED}|{rep}|{self.name}|{f}|{i}|{p}|{x['variant']}|{x['course']}")
+                if req.random() < self.fixed[0]:
+                    d = 1 - d
         if self.eta and rng.random() < self.eta:
             d = 1 - d
         return TR.TAKE if d else TR.STAY
@@ -183,6 +200,7 @@ class Stub:
             msg = {"content": None, "refusal": "I would rather not choose."}
         else:
             msg["content"] = json.dumps({"choice": inv[a]})
+        msg["reasoning"] = "line\u2028para\u2029next\x85line"     # read by no reader: through the line writer
         return {"response": {"model": self.served or request["model"],
                              "provider": self.provider or TC.PROVIDER[meta["family"]],
                              "service_tier": self.tier,
@@ -217,7 +235,7 @@ def same(a, b):
 
 
 def run_through(folder, answer, catalog=CATALOG, prepare=None):
-    sink, _ = R.open_sink(folder)
+    sink, _ = T.open_sink(folder)
     return T.rounds(folder, FAMILY, Stub(answer), sink, R.SpendGuard(1.0, 10 ** 6), catalog=catalog, prepare=prepare)
 
 
@@ -290,7 +308,7 @@ def faults(tmp, folder, m):
     for what, stub in (("provider", dict(provider="Another Host")), ("tier", dict(tier="priority"))):
         other = dry_folder(tmp, f"other-{what}-" + folder.name)
         try:
-            T.rounds(other, FAMILY, Stub(lambda x: m.answer(x, 0), **stub), R.open_sink(other)[0],
+            T.rounds(other, FAMILY, Stub(lambda x: m.answer(x, 0), **stub), T.open_sink(other)[0],
                      R.SpendGuard(1.0, 10 ** 6), catalog=CATALOG)
             stopped = False
         except RuntimeError:
@@ -306,9 +324,50 @@ def faults(tmp, folder, m):
                    lambda: refused(load))
     # a run stopped in its last round (the log's last calls not made): those seeds partial, the rest read
     m2, r2 = with_lines(lines[:-3], load)
-    out["a run stopped in its last round: its seeds' contexts partial, no harness fault"] = bool(m2["partial_contexts"]) \
-        and all(v["outcome"] in ("read",) or v["outcome"].startswith("partial")
-                for v in T.units(m2, r2)["framings"].values())
+    out["a run stopped in its last round: its seeds' contexts partial, no self-check failure"] = \
+        bool(m2["partial_contexts"]) and all(v["outcome"] in ("read",) or v["outcome"].startswith("partial")
+                                             for v in T.units(m2, r2)["framings"].values())
+    # a run stopped before its first loop call: no loop context has a record, and none is listed as partly
+    # logged; each framing with loops planned is partial, V2 too, not read as whole
+    fixed = {x["id"] for x in D.fixed_calls(FAMILY)}
+    m3, r3 = with_lines([l for l in lines if json.loads(l)["id"] in fixed], load)
+    u3 = T.units(m3, r3)["framings"]
+    out["a run stopped before its loops: each framing partial, V2 partial"] = all(
+        v["outcome"].startswith("partial") and v["v2"]["outcome"] == "partial" for v in u3.values() if "v2" in v) \
+        and any("v2" in v for v in u3.values())
+    # one probe record dropped: its context is partly logged and dropped; the reading partial, not "not read"
+    p_i = next(i for i, r in enumerate(recs) if r["kind"] == "probe")
+    m4, r4 = with_lines(lines[:p_i] + lines[p_i + 1:], load)
+    f4 = recs[p_i]["framing"]
+    out["one probe record dropped: that framing's reading partial"] = \
+        T.units(m4, r4)["framings"][f4].get("reading", "").startswith("partial")
+    # a log cut short: the last line half written, or whole with no newline; run and reading refuse;
+    # moved by FREEZE-1's note, the folder reads as it did
+    whole = T.units(*load())
+    text = "\n".join(lines) + "\n"
+    for name, cut in (("its last line half written", "\n".join(lines[:-1] + [lines[-1][:len(lines[-1]) // 2]])),
+                      ("its last line whole with no newline", "\n".join(lines))):
+        (folder / "calls.jsonl").write_text(cut)
+        try:
+            refuses = refused(load) and refused(lambda: T.log_whole(folder))
+            # the note: the last line moved, byte for byte, to calls.jsonl.cut with the time and cause
+            body, last = cut.rsplit("\n", 1)
+            (folder / "calls.jsonl").write_text(body + "\n")
+            (folder / "calls.jsonl.cut").write_text(last + "\ncut by the dry run: " + name + "\n")
+            again = T.units(*load())
+            out[f"a log cut short, {name}: refused, then moved by FREEZE-1's note and read, the last call unread"] = \
+                refuses and again["framings"] != {} and \
+                all(again["framings"][f].get("table") == whole["framings"][f].get("table") for f in TR.FRAMINGS)
+        finally:
+            (folder / "calls.jsonl").write_text(text)
+            (folder / "calls.jsonl.cut").unlink(missing_ok=True)
+    raw = json.loads(lines[c_i])
+    raw["note"] = "a\u2028b"
+    out["a line holding U+2028 raw, refused"] = with_lines(
+        lines[:c_i] + [json.dumps(raw, ensure_ascii=False)] + lines[c_i + 1:], lambda: refused(load))
+    out["the line writer: no log holds U+2028, U+2029 or U+0085 raw, and every record reads"] = \
+        not any(c in text for c in "\u2028\u2029\x85") and \
+        all("\u2028" in r["response"]["choices"][0]["message"].get("reasoning", "\u2028") for r in recs)
     # a planted line in the harness: an arm A prompt also shows a count; with its hash recomputed (as
     # a faulty build would), and with the frozen prompt's hash kept (which only the text's rebuild finds)
     for name, rehash in (("its hash recomputed", True), ("the frozen prompt's hash kept", False)):
@@ -424,7 +483,7 @@ def smoke(tmp):
         folder = Path(tmp) / ("smoke-" + name.replace(" ", "-"))
         folder.mkdir()
         (folder / "meta.json").write_text(json.dumps({"kind": "smoke", "test": D.TEST, "family": FAMILY, "calls": len(calls)}))
-        sink, done = R.open_sink(folder)
+        sink, done = T.open_sink(folder)
         stopped = None
         try:
             R.execute(calls, Stub(answer, **serving), sink, R.SpendGuard(1.0, len(calls)), done, smoke=True,
@@ -571,7 +630,7 @@ def shares(nrep=REPS, moves_only=False):
     out = {}
     for kind, m in share_rows():
         tally = Counter()
-        mism = {"A": 0, "B": 0}
+        mism, match, read = {"A": 0, "B": 0}, {"A": 0.0, "B": 0.0}, 0
         for rep in range(nrep):
             _, u = fast(lambda x, m=m, rep=rep: m.answer(x, rep))
             v = u["framings"][kind]
@@ -580,12 +639,16 @@ def shares(nrep=REPS, moves_only=False):
                 tally["V2 contradicted"] += v["v2"]["outcome"] == "contradicted"
                 tally["diagnostic resolved"] += v["individual_diagnostic"]["p"] < TR.ALPHA
                 tally[f"V1: {v['shape']}"] += 1
+                read += 1
                 for a in TR.ARMS:
                     mism[a] += v["v2"]["mismatching_rounds"][a]
-                tally["harness fault"] += bool(v["harness_fault"])
+                    match[a] += v["v2"]["share_of_rounds_whose_count_is_the_tables"][a] or 0.0
+                tally["self-check failed"] += bool(v["self_check_failed"])
                 tally["some seed in A shows a fall"] += any("a fall (rises)" in fs for fs in v["forbidden_from_0"]["A"])
         row = {k: round(n / nrep, 4) for k, n in sorted(tally.items())}
         row["mean mismatching rounds A / B"] = [round(mism[a] / nrep, 2) for a in TR.ARMS]
+        row["mean share of rounds matching the table A / B, of the tables read"] = \
+            [round(match[a] / read, 3) if read else None for a in TR.ARMS]
         s0 = stage0_row(m.name)
         if s0:
             row["Stage 0 (its own public): V2 contradicted"] = s0["V2 contradicted (rounds whose count mismatches; Fisher one-sided 0.05)"]
@@ -631,6 +694,25 @@ def moves(nrep=REPS):
     out["a filtered answer at arm B's round 3 ends its seed; probes miscomputed leave the reading unread"] = {
         "seed_ends": v["seed_ends"], "rounds_read": v["v2"]["rounds_read"], "reading": v["reading"],
         "probes_restated": v["probes_restated"]}
+    for q in (0.05, 0.1):
+        fx = Public(f"fixed by the request {q}", "reads", eta=0.0, fixed=(q, 5))
+        for fr in TR.FRAMINGS:
+            c, mism, n = Counter(), {"A": 0, "B": 0}, 0
+            for rep in range(nrep):
+                v = fast(lambda x, rep=rep: fx.answer(x, rep))[1]["framings"][fr]
+                if "v2" not in v:
+                    c["void"] += 1
+                    continue
+                n += 1
+                c["V2 contradicted"] += v["v2"]["outcome"] == "contradicted"
+                for a in TR.ARMS:
+                    mism[a] += v["v2"]["mismatching_rounds"][a]
+            out[f"answers fixed by the request, as at temperature 0: near the threshold (within 5 points) a member "
+                f"dissents with chance {q} a request, {fr}"] = {
+                "void": round(c["void"] / nrep, 4), "tables read": n,
+                "V2 contradicted, of the tables read": round(c["V2 contradicted"] / n, 4) if n else None,
+                "mean mismatching rounds A / B, of the tables read": [round(mism[a] / n, 2) if n else None
+                                                                      for a in TR.ARMS]}
     fewest = {}
     for b in (0, 1, 2, 5):
         a = 0
@@ -664,7 +746,7 @@ def main():
     out["code_unchanged_during_the_run"] = code_hashes() == out["code_hashes"]
     out["ok"] = out["code_path_all_equal"] and out["code_unchanged_during_the_run"] and all(
         out[k]["ok"] for k in ("faults", "remade", "chain", "smoke", "classification")) and \
-        not any(r.get("harness fault") for r in out["shares"].values())
+        not any(r.get("self-check failed") for r in out["shares"].values())
     (HERE / "results").mkdir(exist_ok=True)
     (HERE / "results" / "dry-run.json").write_text(json.dumps(out, indent=1, ensure_ascii=False) + "\n")
     print(f"ok {out['ok']}; {time.time() - t0:.0f} s")

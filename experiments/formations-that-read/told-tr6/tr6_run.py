@@ -25,6 +25,11 @@ has nothing to make. A loop's round needs the round before it, so a run takes at
 folder's own good records), prepare, parser and frozen chain, so every refusal of freeze 1's reading
 holds here, and a logged record another provider or another tier served is refused too; then
 tr6_rule's verdicts.
+The log is freeze 1's, written by this freeze's line writer (open_sink), which writes U+2028, U+2029
+and U+0085 as their JSON escapes, so that freeze 1's readers, which split lines at them too, read every
+record whole; each record loads as the same values. `run` and `verdicts` refuse, before any call or
+reading, a folder whose calls.jsonl or catalog.jsonl does not end in a newline or holds a line that
+does not read whole (log_whole): FREEZE-1's note "A log cut short" says what is done then.
 """
 
 import argparse
@@ -54,6 +59,48 @@ MAY_CHANGE = frozenset({str(TOLD / "tr6_dry_run.py"), str(TOLD / "results/dry-ru
                         str(T3.TOLD / "tr3_client.py"), str(T3.TOLD / "ENDPOINTS.json"), str(R.TOLD / "client.py")})
 TOKENS = 300                    # a call's input and output tokens, rounded up, before reasoning (FREEZE-6.md, section 9)
 COURSE_TOKENS = 30              # each Saturday of a course arm B shows
+
+
+def line(rec):
+    """A record's line: freeze 1's json.dumps(rec, ensure_ascii=False), with the three characters that
+    str.splitlines breaks at and JSON leaves raw written as their escapes. json.dumps writes them only
+    inside strings, and every backslash it writes is part of a whole escape, so the line loads as rec."""
+    return json.dumps(rec, ensure_ascii=False).replace("\u2028", "\\u2028").replace("\u2029", "\\u2029") \
+        .replace("\x85", "\\u0085")
+
+
+def open_sink(out):
+    """Freeze 1's run.open_sink (the ids logged, what they cost, the catalog's note), with this line
+    writer in place of its own."""
+    first, done = R.open_sink(out)
+    fh = (Path(out) / "calls.jsonl").open("a", encoding="utf-8")
+
+    def sink(rec):
+        fh.write(line(rec) + "\n")
+        fh.flush()
+    sink.spent, sink.note = first.spent, first.note
+    return sink, done
+
+
+def log_whole(folder):
+    """Refuse a folder whose log does not read whole: a file not ending in a newline, a line that does
+    not load (split on newlines alone), or a line holding a character str.splitlines breaks at."""
+    for name in ("calls.jsonl", "catalog.jsonl"):
+        p = Path(folder) / name
+        if not p.exists():
+            continue
+        text = p.read_text(encoding="utf-8")
+        bad = [] if not text or text.endswith("\n") else ["no final newline"]
+        for k, ln in enumerate(text.split("\n")[:-1] if text.endswith("\n") else text.split("\n")):
+            try:
+                json.loads(ln)
+            except ValueError:
+                bad.append(f"line {k + 1} does not read")
+            if any(c in ln for c in "\u2028\u2029\x85"):
+                bad.append(f"line {k + 1} holds a line separator")
+        if bad:
+            raise SystemExit(f"{p}: {', '.join(bad[:3])}; see FREEZE-1.md's note \"A log cut short\" before any "
+                             "run or reading")
 
 
 def frozen(repo=R.REPO, told=TOLD):
@@ -96,6 +143,7 @@ def rounds(folder, family, client, sink, guard, parallel=1, catalog=None, link=N
 def load(folder, allow_dry=False, check=None):
     """freeze 1's verdicts.load with this freeze's plan, prepare, parser and chain."""
     folder = Path(folder)
+    log_whole(folder)
     meta, recs = VD.load(folder, allow_dry, plan=lambda test, fam: D.derive(fam, good_answers(folder, fam)),
                          prepare=lambda x: D.prepared(x), classify=D.classify, frozen=check or frozen)
     other = [r["id"] for r in R.logged(folder) if not TC.serving_ok(meta["family"], r.get("response"))]
@@ -113,13 +161,11 @@ def units(meta, recs):
     family = meta["family"]
     ans = {r["id"]: (r["answer"] if r["kind"] == "choice" else r["probe"]) for r in recs}
     _, per = D.readings(family, lambda x: ans.get(x["id"]))
-    out = {"framings": {f: TR.framing_verdict(f, *per[f]) for f in TR.FRAMINGS}}
-    partial = meta.get("partial_contexts") or {}
-    for f, u in out["framings"].items():
-        cut = sorted(c for c in partial if c.split("/")[1:2] == [f] and c.split("/")[0] in ("A", "B", "right-A", "right-B"))
-        if cut and "v2" in u:       # a loop not whole: V2 and the loops' reports carry no verdict
-            u["v2"]["outcome"] = "partial"
-            u["outcome"] = f"partial: {len(cut)} loops not whole"
+    # a probe not logged (its context partly logged, which verdicts.load drops, or never reached) is not an
+    # unreadable one: the reading is then partial; a loop call not logged leaves its seed open, and the rule
+    # reads V2 as partial
+    out = {"framings": {f: TR.framing_verdict(f, *per[f], probes_not_logged=sum(
+        x["id"] not in ans for x in D.probe_calls(family, f).values())) for f in TR.FRAMINGS}}
     pilot = defaultdict(list)
     for r in recs:
         if r["arm"] == "pilot":
@@ -158,6 +204,8 @@ def verdicts(folder):
            "served_at_tier": dict(Counter(str(TC.served_tier(r["response"])) for r in recs)),
            "system_fingerprints": dict(Counter(str((r["response"] or {}).get("system_fingerprint")) for r in recs)),
            "no_verdict_partly_logged": meta["partial_contexts"], "calls_made_again": meta["made_again"],
+           "lines_moved_by_freeze_1s_note": {p.name: len(p.read_text(encoding="utf-8").splitlines())
+                                             for p in sorted(Path(folder).glob("*.jsonl.cut"))},
            "read_under": meta["read_under"]}
     (Path(folder) / "verdicts.json").write_text(json.dumps(res, indent=1) + "\n", encoding="utf-8")
     for f, u in v["framings"].items():
@@ -248,7 +296,7 @@ def main(argv=None):
                                                    "seed": D.SEED, "calls": len(calls), "link": fc["link"],
                                                    "hashes": fc["hashes"], "freeze_commit": fc["freeze_commit"]},
                                                   indent=1) + "\n")
-        sink, done = R.open_sink(out)
+        sink, done = open_sink(out)
         stopped = None
         try:
             R.execute(calls, cl.OpenRouterClient(), sink, R.SpendGuard(a.max_usd, len(calls)), done, smoke=True, catalog=R.catalog_slug, link=fc["link"], prepare=D.prepared, classify=D.classify)
@@ -278,7 +326,8 @@ def main(argv=None):
                 mp.write_text(json.dumps(old, indent=1) + "\n")
         else:
             mp.write_text(json.dumps(meta, indent=1) + "\n")
-        sink, _ = R.open_sink(out)
+        log_whole(out)
+        sink, _ = open_sink(out)
         guard = R.SpendGuard(a.max_usd, len(R.logged(out)) + 2 * (len(D.fixed_calls(a.family)) + D.reached_most()))
         guard.usd, guard.calls = sink.spent, len(R.logged(out))
         k = rounds(out, a.family, cl.OpenRouterClient(), sink, guard, a.parallel, catalog=R.catalog_slug,

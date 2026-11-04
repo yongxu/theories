@@ -203,7 +203,7 @@ def seed(family, framing, arm, start, variant, answer, rounds=TR.ROUNDS, right=F
             break
     if end == "open" and len(counts) == rounds:
         end = "done"
-    return calls, {"pubs": pubs, "counts": counts, "answers": answers, "end": end}
+    return calls, {"pubs": pubs, "counts": counts, "answers": answers, "end": end, "variant": variant}
 
 
 def readings(family, answer):

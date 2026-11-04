@@ -20,12 +20,20 @@ A loop republishes the last count: round t publishes f_t (f_0 the start), and it
 of TAKE answers where all ten are readable; that count is f_{t+1}. A round with an unreadable answer
 has no count and ends its seed. Arm A is memoryless; in arm B each member is shown its own course.
 V2 (the Lean's r is the count, not the members): a round mismatches where its count differs from the
-table's at the forecast it published; V2 is contradicted where arm B's mismatching rounds exceed arm
-A's by a one-sided Fisher exact test at ALPHA, and not contradicted otherwise (no support is
-claimed). Members' departures from their own table decisions are a diagnostic with no verdict. The
-Lean's forbidden cases are reported for the loops from 0; one in a seed whose every count is the
-table's is a harness fault. From a second start they are reported against the candidate lemma, not
-judged.
+count its own presentation's offline answers give at the forecast it published (the presentation's
+table: an arm A request is that table's own request, byte for byte, so this is the round's
+memoryless counterfactual, and the table's dissent among presentations falls on neither arm); each
+arm A seed is paired with the arm B seed of the same start and presentation, and both are read up to
+the rounds both reached; V2 is contradicted where arm B's
+mismatching rounds exceed arm A's by a one-sided Fisher exact test at ALPHA, and not contradicted
+otherwise (no support is claimed: memory then adds no mismatch the test resolves beyond the
+memoryless arm's, whose own mismatches nothing bounds; the share of rounds whose count is the table's,
+along which a loop is the table's orbit, is reported). A verdict is partial where a call it reads was not logged: V1's reading where a probe was
+not, V2 and the loops' reports where a loop is not whole. Members' departures from their own table
+decisions are a diagnostic with no verdict. The Lean's forbidden cases are reported for the loops from
+0; one in a seed whose every count is the table's would be the table's own orbit breaking a theorem,
+which only a fault in this code can give: a self-check of the rule against the Lean. From a second
+start they are reported against the candidate lemma, not judged.
 """
 
 import math
@@ -74,12 +82,29 @@ def decision(answers):
     return None
 
 
+def flag_cause(answers):
+    """Why a decision is flagged: "unreadable answers" where fewer than AGREE of its answers are
+    readable, so that no side could reach AGREE; else "dissent" among the presentations."""
+    return "unreadable answers" if sum(a in READABLE for a in answers) < AGREE else "dissent"
+
+
 def table(offline):
     """offline: {(member, forecast): [answers]} with every answer read. The decisions, the flagged
-    (member, forecast) pairs and the count of TAKE decisions at each forecast."""
+    (member, forecast) pairs, how many by each cause, and the count of TAKE decisions at each forecast."""
     dec = {k: decision(v) for k, v in offline.items()}
-    return {"decisions": dec, "flagged": sorted(k for k, d in dec.items() if d is None),
-            "count": [sum(dec[(i, p)] == TAKE for i in range(N)) for p in range(N + 1)]}
+    flagged = sorted(k for k, d in dec.items() if d is None)
+    causes = {c: sum(flag_cause(offline[k]) == c for k in flagged) for c in ("dissent", "unreadable answers")}
+    return {"decisions": dec, "flagged": flagged, "flagged_by_cause": causes,
+            "count": [sum(dec[(i, p)] == TAKE for i in range(N)) for p in range(N + 1)],
+            "by_presentation": [[sum(own(offline, dec, i, p, v) == TAKE for i in range(N)) for p in range(N + 1)]
+                                for v in range(VARIANTS)]}
+
+
+def own(offline, dec, i, p, v):
+    """Member i's offline answer at forecast p in presentation v, read as TAKE or not; where that answer
+    is unreadable, its decision."""
+    a = offline[(i, p)][v]
+    return (TAKE if a == TAKE else STAY) if a in READABLE else dec[(i, p)]
 
 
 def keeps(t):
@@ -154,24 +179,34 @@ def fisher_one_sided(a, n1, b, n2):
     return sum(math.comb(n1, x) * math.comb(n2, k - x) for x in range(a, min(k, n1) + 1)) / tot
 
 
-def mismatches(seed, t):
-    """The rounds of a seed whose count differs from the table's at the forecast published."""
-    pubs, counts = seed["pubs"], seed["counts"]
+def mismatches(seed, t, upto=None):
+    """The rounds of a seed (its first `upto`, or all) whose count differs from the table's at the
+    forecast published."""
+    pubs, counts = seed["pubs"], seed["counts"][:upto]
     return sum(1 for k, c in enumerate(counts) if c != t[pubs[k]])
 
 
-def v2(seeds, t):
-    """seeds: {arm: [seed]}; each seed {"pubs", "counts", ...}. Mismatching rounds of rounds read, per arm,
-    and Fisher's one-sided p for arm B over arm A."""
-    m = {a: sum(mismatches(s, t) for s in seeds[a]) for a in ARMS}
-    n = {a: sum(len(s["counts"]) for s in seeds[a]) for a in ARMS}
+def v2(seeds, tb):
+    """seeds: {arm: [seed]}, the two arms' lists in the same order (start, then presentation); each seed
+    {"pubs", "counts", "variant", ...}; tb: table()'s output. A round mismatches against its own
+    presentation's table. Each pair of seeds is read up to the rounds both reached, so that an arm whose
+    seeds end sooner, at an unreadable answer, is not read from fewer resting rounds. Mismatching rounds
+    of the rounds read, per arm, Fisher's one-sided p for arm B over arm A, and, reported, the share of
+    rounds whose count is the table's."""
+    by = tb["by_presentation"]
+    both = [min(len(sa["counts"]), len(sb["counts"])) for sa, sb in zip(seeds["A"], seeds["B"])]
+    m = {a: sum(mismatches(s, by[s["variant"]], k) for s, k in zip(seeds[a], both)) for a in ARMS}
+    n = {a: sum(both) for a in ARMS}
     p = fisher_one_sided(m["B"], n["B"], m["A"], n["A"])
-    return {"mismatching_rounds": m, "rounds_read": n, "p": round(p, 6),
-            "outcome": "contradicted" if p < ALPHA else "not contradicted"}
+    on = {a: sum(len(s["counts"][:k]) - mismatches(s, tb["count"], k) for s, k in zip(seeds[a], both)) for a in ARMS}
+    return {"mismatching_rounds": m, "rounds_read": n,
+            "share_of_rounds_whose_count_is_the_tables": {a: round(on[a] / n[a], 4) if n[a] else None for a in ARMS},
+            "p": round(p, 6), "outcome": "contradicted" if p < ALPHA else "not contradicted"}
 
 
-def individual(seeds, dec):
-    """The diagnostic: live answers departing from the member's own table decision (TAKE or not)."""
+def individual(seeds, offline, dec):
+    """The diagnostic: live answers departing from the member's own offline answer in the same
+    presentation at the forecast published (TAKE or not; its decision where that answer is unreadable)."""
     m, n = {}, {}
     for a in ARMS:
         m[a] = n[a] = 0
@@ -179,7 +214,7 @@ def individual(seeds, dec):
             for k, ans in enumerate(s["answers"][:len(s["counts"])]):
                 for i, x in enumerate(ans):
                     n[a] += 1
-                    m[a] += (x == TAKE) != (dec[(i, s["pubs"][k])] == TAKE)
+                    m[a] += (x == TAKE) != (own(offline, dec, i, s["pubs"][k], s["variant"]) == TAKE)
     return {"departures": m, "decisions": n, "p": round(fisher_one_sided(m["B"], n["B"], m["A"], n["A"]), 6),
             "verdict": "none (a diagnostic of a stronger premise than the Lean's)"}
 
@@ -228,28 +263,33 @@ def restated(probe, framing, member, forecast):
     return probe == {"forecast": forecast, "points": points(framing, COSTS[member], True, k)}
 
 
-def framing_verdict(framing, offline, probes, seeds, second, right_seeds):
+def framing_verdict(framing, offline, probes, seeds, second, right_seeds, probes_not_logged=0):
     """One framing's verdicts. offline: {(member, forecast): [answers]} or None where not whole; probes:
-    {(member, forecast): probe or None}; seeds: {arm: [seed]} from 0; second: {arm: [seed]} from the
+    {(member, forecast): probe or None}, None for an unreadable probe or one not logged, of which
+    probes_not_logged were not logged; seeds: {arm: [seed]} from 0; second: {arm: [seed]} from the
     second start, or None; right_seeds: {arm: [seed]} from the least right value, or None. A seed is
     {"pubs", "counts", "answers", "end"}."""
     if offline is None:
         return {"outcome": "partial: the offline table is not whole"}
     tb = table(offline)
     t = tb["count"]
-    out = {"table": t, "flagged": [list(k) for k in tb["flagged"]],
+    out = {"table": t, "flagged": [list(k) for k in tb["flagged"]], "flagged_by_cause": tb["flagged_by_cause"],
            "best_reply_tables_reported_only": {r: best_reply(framing, r) for r in
                                                ("the forecast as the others", "the forecast as the count")}}
     restate = sum(1 for (i, p), v in probes.items() if v is not None and restated(v, framing, i, p))
     out["probes_restated"] = {"restated": restate, "planned": len(probes)}
     if tb["flagged"]:
-        out["outcome"] = f"void: {len(tb['flagged'])} decisions flagged (the public is not one response of the forecast)"
+        c = tb["flagged_by_cause"]
+        out["outcome"] = (f"void: {len(tb['flagged'])} decisions flagged, {c['dissent']} by dissent among the "
+                          f"presentations, {c['unreadable answers']} by unreadable answers (no table, so no V2)")
         return out
     sh = shape(t)
     out.update({"shape": sh, "right_values": rights(t), "orbit_from_0": orbit(t, 0, ROUNDS),
                 "moving_rounds_from_0": moving(orbit(t, 0, ROUNDS)), "second_start": second_start(t)})
     if sh in ("constant", "the identity"):
         out["reading"] = f"not read: the table is {sh}"
+    elif probes_not_logged:
+        out["reading"] = f"partial: {probes_not_logged} of {len(probes)} probes not logged"
     elif restate < len(probes):
         out["reading"] = f"not read: {restate} of {len(probes)} probes restated"
     elif sh == PREDICTED[framing]:
@@ -257,14 +297,16 @@ def framing_verdict(framing, offline, probes, seeds, second, right_seeds):
     else:
         out["reading"] = f"contradicted: the table {'is ' if sh == 'neither' else ''}{sh}, not as the reading predicts"
     every = {a: seeds[a] + (second[a] if second else []) for a in ARMS}
-    out["v2"] = v2(every, t)
-    out["v2_from_0_alone_reported"] = v2(seeds, t)
-    out["individual_diagnostic"] = individual(every, tb["decisions"])
+    out["tables_by_presentation"] = tb["by_presentation"]
+    out["v2"] = v2(every, tb)
+    out["v2_from_0_alone_reported"] = v2(seeds, tb)
+    out["individual_diagnostic"] = individual(every, offline, tb["decisions"])
     out["seed_ends"] = {a: [s["end"] for s in every[a]] for a in ARMS}
     out["moving_rounds"] = {a: [moving(s["pubs"]) for s in every[a]] for a in ARMS}
     fb = {a: [forbidden(s, t) for s in seeds[a]] for a in ARMS}
     out["forbidden_from_0"] = fb
     fault = [f"{a} seed {k}" for a in ARMS for k, s in enumerate(seeds[a]) if fb[a][k] and mismatches(s, t) == 0]
+    # mismatches(s, t) == 0: every count read is the table's, so the publications are its orbit
     if second:
         out["second_start_against_the_lemma_reported_only"] = {a: [against_lemma(s, t) for s in second[a]] for a in ARMS}
     if right_seeds:
@@ -272,6 +314,15 @@ def framing_verdict(framing, offline, probes, seeds, second, right_seeds):
         r = min(rights(t))
         fault += [f"right-{a} seed {k}" for a in ARMS for k, s in enumerate(right_seeds[a])
                   if a == "A" and mismatches(s, t) == 0 and any(c != r for c in s["counts"])]
-    out["harness_fault"] = fault
-    out["outcome"] = "harness fault: a forbidden case in a seed whose every count is the table's" if fault else "read"
+    out["self_check_failed"] = fault
+    loops = [s for d in (seeds, second or {}, right_seeds or {}) for a in ARMS for s in d.get(a, [])]
+    open_ = sum(s["end"] == "open" for s in loops)
+    if open_:           # a loop not whole: V2 and the loops' reports carry no verdict
+        out["v2"]["outcome"] = "partial"
+        out["outcome"] = f"partial: {open_} of {len(loops)} loops not whole"
+    elif fault:
+        out["outcome"] = ("self-check failed: a forbidden case in a seed whose every count is the table's "
+                          "(a fault in this code, not a reading of the members)")
+    else:
+        out["outcome"] = "read"
     return out
