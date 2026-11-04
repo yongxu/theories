@@ -1,19 +1,24 @@
 """Stage 0 of TR7's Stage A (FREEZE-9.md, sections 3 and 5): exact values computed before any training.
 
-    python3 -B tr7a_stage0.py         # writes results/stage0.json in a few seconds; trains nothing
+    python3 -B tr7a_stage0.py         # writes results/stage0.json in under a second; trains nothing
 
 1. The reference curves at Stage A's step size and steps: tr7.py's flow_told and flow_tied, which ascend
-   the expected value exactly, and flow_mixture here for the mixture learner, from each run's start. A
-   learner's mean path is its reference curve, since each step's estimate is unbiased (tr7a_stage.py).
-2. At each run's start, the exact expected movement of the statistic the reading signs (the maximal plans'
+   the expected value exactly, and flow_mixture here for the mixture learner, from each run's start: the
+   deterministic curve a learner follows to first order in a step's noise, since each step's estimate is
+   unbiased at the current logits (tr7a_stage.py). The run shows how far sampled paths depart from it, at
+   the ties especially, where the curve's even split is no seed's expectation.
+2. At each run's start, the first-order movement of the statistic the reading signs (the maximal plans'
    share for a told learner, the distance to the best chance for a chance learner, the weight for the
    mixture learner) under one step of the expected gradient, and the exact variance of one episode's
    estimate of it, enumerated over every act and draw of the game, so the one-step signal-to-noise at
    Stage A's batch. An indicator of the noise against the drift, not the chance a seed moves the law's way,
    which only the run measures.
 3. The exact power of the sign test: for n seeds and a chance q that a seed moves the law's way, the
-   chance the run is supported (at least the critical count of n), and for q below one half the chance it
-   is contradicted.
+   chance the run is supported (at least the critical count of n); and for a chance r that a seed moves
+   against it, the chance the run is contradicted.
+4. For a chance learner whose best chance lies inside (0, 1), the spread its chance keeps about it once
+   there, linearized: at an interior best chance the expected gradient vanishes but one episode's estimate
+   does not, so the chance fluctuates about it, and more steps do not shrink the spread.
 Standard library only; nothing here samples, and nothing trains a learner.
 """
 
@@ -94,9 +99,10 @@ def episode_outcomes(run, policy):
 
 
 def one_step(run):
-    """The statistic's expected movement under one step of the expected gradient at the start, and one
-    episode's estimate's standard deviation, with the baseline at the expected points (the leave-one-out
-    baseline's limit), so the signal-to-noise of a step's estimate at Stage A's batch."""
+    """The statistic's first-order movement under one step of the expected gradient at the start (its
+    gradient in the logits, dotted with the step), and one episode's estimate's standard deviation, with the
+    baseline at the expected points (the leave-one-out baseline's limit), so the signal-to-noise of a step's
+    estimate at Stage A's batch."""
     name, cid, learner, start, role = run
     pol = RD.start_policy(run)
     outs = episode_outcomes(run, pol)
@@ -118,10 +124,34 @@ def one_step(run):
     var = sum(pr * (x - mean) ** 2 for pr, x in u)
     sd = math.sqrt(var)
     snr = (round(math.sqrt(S.BATCH) * mean / sd, 3) if sd > 1e-12 else
-           "no noise: every episode's estimate moves it the law's way" if mean > 0 else "no movement")
-    return {"expected movement per step (lr x mean)": round(S.LR * mean, 6),
+           "no noise at the expected-points baseline" if mean > 0 else "no movement")
+    return {"first-order movement per step (lr x mean)": round(S.LR * mean, 6),
             "one episode's standard deviation": round(sd, 6),
             "signal-to-noise of one step at the batch": snr}
+
+
+def settled_spread(run):
+    """For a chance learner whose best chance p* lies inside (0, 1), the spread its chance keeps about p*
+    once there, linearized: near p* a step moves the logit by -kappa (theta - theta*) on average, with
+    kappa = -lr ev''(p*) (p*(1 - p*))^2, and by a noise of spread sigma = lr sd / sqrt(batch), sd one
+    episode's estimate's at p* with the baseline at the expected points; the logit's stationary spread is
+    sigma / sqrt(1 - (1 - kappa)^2), and the chance's p*(1 - p*) times that. An approximation, not a bound.
+    None for any other learner."""
+    name, cid, learner, start, role = run
+    s = S.prospects(cid)
+    ps = float(tr7.best_chance(s))
+    if learner != "chance" or not 0 < ps < 1:
+        return None
+    outs = episode_outcomes(run, ps)
+    vbar = sum(pr * pts for pr, _, pts in outs)
+    xs = [(pr, (pts - vbar) * score) for pr, score, pts in outs]
+    m = sum(pr * x for pr, x in xs)
+    sd = math.sqrt(sum(pr * (x - m) ** 2 for pr, x in xs))
+    evpp = 2 * (s.keptOwn - s.keptComplying) * s.value / s.total     # ev_fresh's second derivative
+    w = ps * (1 - ps)
+    kappa = -S.LR * evpp * w * w
+    sigma = S.LR * sd / math.sqrt(S.BATCH)
+    return round(w * sigma / math.sqrt(1 - (1 - kappa) ** 2), 4)
 
 
 def power(n, q, k):
@@ -136,24 +166,28 @@ def main():
         runs[run[0]] = {"condition": run[1], "learner": run[2], "role": run[4], "target": str(RD.target(run)),
                         "start": list(run[3]) if run[2] == "told" else str(run[3]),
                         "reference end": reference_end(run), **one_step(run)}
+        if settled_spread(run) is not None:
+            runs[run[0]]["settled spread about the best chance, linearized"] = settled_spread(run)
     qs = ["1/2", "3/5", "7/10", "4/5", "9/10", "19/20", "99/100", "1"]
     table = {}
     for n in (5, 10, 20, 30):
         ks, kc = RD.critical(n, RD.ALPHA_SUPPORT), RD.critical(n, RD.ALPHA_CONTRA / len(RD.VERDICT_RUNS))
         table[str(n)] = {"support at": ks, "contradiction at": kc,
                          "chance supported, by q": {q: round(float(power(n, q, ks)), 4) for q in qs},
-                         "chance contradicted, by 1 - q": {q: (round(float(power(n, q, kc)), 4) if kc else None)
-                                                           for q in qs}}
+                         "chance contradicted, by r": {r: (round(float(power(n, r, kc)), 4) if kc else None)
+                                                       for r in qs}}
     out = {"step size": S.LR, "steps": S.STEPS, "batch": S.BATCH, "seeds": S.SEEDS,
            "reference ends": {k: v["reference end"] for k, v in runs.items()}, "runs": runs,
            "sign test's power": table,
-           "note": "q is the chance a seed moves the law's way; the run measures it. The signal-to-noise is of "
-                   "one step at the start, an indicator, not a chance."}
+           "note": "q is the chance a seed moves the law's way, r the chance it moves against it; the run "
+                   "measures both. The signal-to-noise is of one step at the start, an indicator, not a chance."}
     path = HERE / "results" / "stage0.json"
     path.parent.mkdir(exist_ok=True)
     path.write_text(json.dumps(out, indent=1) + "\n")
     for k, v in runs.items():
-        print(f"{k:30s} end {v['reference end']}  snr {v['signal-to-noise of one step at the batch']}")
+        print(f"{k:30s} end {v['reference end']}  snr {v['signal-to-noise of one step at the batch']}",
+              f" settled spread {v['settled spread about the best chance, linearized']}"
+              if "settled spread about the best chance, linearized" in v else "")
     print("power at 20 seeds:", table["20"]["chance supported, by q"])
 
 

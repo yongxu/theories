@@ -99,7 +99,7 @@
     0.0,
     0.0
    ],
-   "expected movement per step (lr x mean)": 0.125,
+   "first-order movement per step (lr x mean)": 0.125,
    "one episode's standard deviation": 0.4375,
    "signal-to-noise of one step at the batch": 5.714
   },
@@ -120,7 +120,7 @@
     0.0,
     0.9999
    ],
-   "expected movement per step (lr x mean)": 0.125,
+   "first-order movement per step (lr x mean)": 0.125,
    "one episode's standard deviation": 0.569402,
    "signal-to-noise of one step at the batch": 4.391
   },
@@ -141,9 +141,9 @@
     0.4999,
     0.4999
    ],
-   "expected movement per step (lr x mean)": 0.15625,
+   "first-order movement per step (lr x mean)": 0.15625,
    "one episode's standard deviation": 0.0,
-   "signal-to-noise of one step at the batch": "no noise: every episode's estimate moves it the law's way"
+   "signal-to-noise of one step at the batch": "no noise at the expected-points baseline"
   },
   "A4": {
    "condition": "A4",
@@ -162,7 +162,7 @@
     0.0,
     0.9999
    ],
-   "expected movement per step (lr x mean)": 0.15625,
+   "first-order movement per step (lr x mean)": 0.15625,
    "one episode's standard deviation": 0.625,
    "signal-to-noise of one step at the batch": 5.0
   },
@@ -183,7 +183,7 @@
     0.0003,
     0.4999
    ],
-   "expected movement per step (lr x mean)": 0.15625,
+   "first-order movement per step (lr x mean)": 0.15625,
    "one episode's standard deviation": 0.441942,
    "signal-to-noise of one step at the batch": 7.071
   },
@@ -204,7 +204,7 @@
     0.0,
     0.0001
    ],
-   "expected movement per step (lr x mean)": 0.125,
+   "first-order movement per step (lr x mean)": 0.125,
    "one episode's standard deviation": 0.455007,
    "signal-to-noise of one step at the batch": 5.494
   },
@@ -225,7 +225,7 @@
     0.0001,
     0.0001
    ],
-   "expected movement per step (lr x mean)": 0.09375,
+   "first-order movement per step (lr x mean)": 0.09375,
    "one episode's standard deviation": 0.414578,
    "signal-to-noise of one step at the batch": 4.523
   },
@@ -236,7 +236,7 @@
    "target": "0",
    "start": "1/2",
    "reference end": 0.0001,
-   "expected movement per step (lr x mean)": 0.21875,
+   "first-order movement per step (lr x mean)": 0.21875,
    "one episode's standard deviation": 0.768013,
    "signal-to-noise of one step at the batch": 5.697
   },
@@ -247,9 +247,10 @@
    "target": "7/20",
    "start": "1/2",
    "reference end": 0.35,
-   "expected movement per step (lr x mean)": 0.09375,
+   "first-order movement per step (lr x mean)": 0.09375,
    "one episode's standard deviation": 0.480072,
-   "signal-to-noise of one step at the batch": 3.906
+   "signal-to-noise of one step at the batch": 3.906,
+   "settled spread about the best chance, linearized": 0.0282
   },
   "B3": {
    "condition": "B3",
@@ -258,9 +259,10 @@
    "target": "7/20",
    "start": "9/10",
    "reference end": 0.35,
-   "expected movement per step (lr x mean)": 0.04455,
+   "first-order movement per step (lr x mean)": 0.04455,
    "one episode's standard deviation": 0.175873,
-   "signal-to-noise of one step at the batch": 5.066
+   "signal-to-noise of one step at the batch": 5.066,
+   "settled spread about the best chance, linearized": 0.0282
   },
   "B4": {
    "condition": "B4",
@@ -269,9 +271,9 @@
    "target": "0",
    "start": "1/2",
    "reference end": 0.0002,
-   "expected movement per step (lr x mean)": 0.09375,
+   "first-order movement per step (lr x mean)": 0.09375,
    "one episode's standard deviation": 0.0,
-   "signal-to-noise of one step at the batch": "no noise: every episode's estimate moves it the law's way"
+   "signal-to-noise of one step at the batch": "no noise at the expected-points baseline"
   },
   "A3 leaning to ownThenComply": {
    "condition": "A3",
@@ -290,7 +292,7 @@
     0.9985,
     0.0015
    ],
-   "expected movement per step (lr x mean)": 0.143114,
+   "first-order movement per step (lr x mean)": 0.143114,
    "one episode's standard deviation": 0.191951,
    "signal-to-noise of one step at the batch": 14.911
   },
@@ -311,7 +313,7 @@
     0.0015,
     0.9985
    ],
-   "expected movement per step (lr x mean)": 0.143114,
+   "first-order movement per step (lr x mean)": 0.143114,
    "one episode's standard deviation": 0.191951,
    "signal-to-noise of one step at the batch": 14.911
   },
@@ -332,7 +334,7 @@
     0.0002,
     0.002
    ],
-   "expected movement per step (lr x mean)": 0.143114,
+   "first-order movement per step (lr x mean)": 0.143114,
    "one episode's standard deviation": 0.494798,
    "signal-to-noise of one step at the batch": 5.785
   },
@@ -353,7 +355,7 @@
     0.0002,
     0.9978
    ],
-   "expected movement per step (lr x mean)": 0.143114,
+   "first-order movement per step (lr x mean)": 0.143114,
    "one episode's standard deviation": 0.494798,
    "signal-to-noise of one step at the batch": 5.785
   },
@@ -364,9 +366,10 @@
    "target": "7/20",
    "start": "1/20",
    "reference end": 0.35,
-   "expected movement per step (lr x mean)": 0.006769,
+   "first-order movement per step (lr x mean)": 0.006769,
    "one episode's standard deviation": 0.062618,
-   "signal-to-noise of one step at the batch": 2.162
+   "signal-to-noise of one step at the batch": 2.162,
+   "settled spread about the best chance, linearized": 0.0282
   },
   "the witness from 1/2": {
    "condition": "witness",
@@ -375,9 +378,10 @@
    "target": "1/8",
    "start": "1/2",
    "reference end": 0.125,
-   "expected movement per step (lr x mean)": 0.1875,
+   "first-order movement per step (lr x mean)": 0.1875,
    "one episode's standard deviation": 0.637377,
-   "signal-to-noise of one step at the batch": 5.883
+   "signal-to-noise of one step at the batch": 5.883,
+   "settled spread about the best chance, linearized": 0.0235
   }
  },
  "sign test's power": {
@@ -394,7 +398,7 @@
     "99/100": 0.951,
     "1": 1.0
    },
-   "chance contradicted, by 1 - q": {
+   "chance contradicted, by r": {
     "1/2": null,
     "3/5": null,
     "7/10": null,
@@ -418,7 +422,7 @@
     "99/100": 0.9957,
     "1": 1.0
    },
-   "chance contradicted, by 1 - q": {
+   "chance contradicted, by r": {
     "1/2": 0.001,
     "3/5": 0.006,
     "7/10": 0.0282,
@@ -442,7 +446,7 @@
     "99/100": 1.0,
     "1": 1.0
    },
-   "chance contradicted, by 1 - q": {
+   "chance contradicted, by r": {
     "1/2": 0.0013,
     "3/5": 0.016,
     "7/10": 0.1071,
@@ -466,7 +470,7 @@
     "99/100": 1.0,
     "1": 1.0
    },
-   "chance contradicted, by 1 - q": {
+   "chance contradicted, by r": {
     "1/2": 0.0026,
     "3/5": 0.0435,
     "7/10": 0.2814,
@@ -478,5 +482,5 @@
    }
   }
  },
- "note": "q is the chance a seed moves the law's way; the run measures it. The signal-to-noise is of one step at the start, an indicator, not a chance."
+ "note": "q is the chance a seed moves the law's way, r the chance it moves against it; the run measures both. The signal-to-noise is of one step at the start, an indicator, not a chance."
 }

@@ -1,7 +1,11 @@
 """The frozen reading of TR7's Stage A (FREEZE-9.md, section 4): an exact sign test over the seeds of each
 verdict run, and the reports no verdict reads.
 
-    python3 -B tr7a_reading.py [results/stage-a.jsonl]
+    python3 -B tr7a_reading.py        # reads results/stage-a.jsonl, writes results/reading.json
+
+It refuses unless the frozen check passes, and refuses records it was not frozen for: a run or seed not in
+the frozen runs, a learner twice, fields that differ from the run's, a final policy of the wrong shape, or a
+record not stamped with a link of this freeze's chain.
 
 The law's direction at each run: a told learner gains on the condition's maximal plans (tr7.maximal_set),
 a chance learner comes nearer the derived best chance (tr7.best_chance: 0 on B1's prospects, 7/20 on B2's
@@ -10,10 +14,12 @@ stands above ownAtBoth, tr7.py's D6). Per seed, d is that gain, the distance's f
 from the start to the final policy; d > 0 is the law's direction, d < 0 against it, d = 0 neither. A
 verdict run is supported where at least SUPPORT_AT seeds give d > 0 (an exact one-sided sign test at
 0.05), contradicted where at least CONTRA_AT give d < 0 (0.05 split over the eleven verdict runs), and
-unresolved otherwise; it cannot be both. The reading is supported where every verdict run is supported
-and none contradicted, contradicted where any is, unresolved otherwise. Reported beside it, ruling on
-nothing: the final policies, their distance from the reference curve's end at the same step size and
-steps (results/stage0.json), and how each tie settles by its start. Standard library only.
+unresolved otherwise; it cannot be both. The reading is incomplete while any verdict run lacks a seed, and
+otherwise contradicted where any verdict run is, supported where every one is, unresolved otherwise.
+Reported beside it, ruling on nothing: the final policies, their distance from the reference curve's end at
+the same step size and steps (results/stage0.json), how each tie settles by its start, and at a best chance
+inside (0, 1) the seeds ending within the improving chances (0 < p below tr7.improving_bound), since d alone
+counts a chance learner falling to 0 as nearer 7/20 than 9/10. Standard library only.
 """
 
 import json
@@ -90,7 +96,48 @@ def summary(xs):
     return {"mean": round(sum(xs) / n, 6), "median": round(med, 6), "min": xs[0], "max": xs[-1]}
 
 
-def read(records, stage0=None):
+def fields(run):
+    name, cid, learner, start, role = run
+    return {"condition": cid, "learner": learner, "start": list(start) if learner == "told" else str(start),
+            "role": role}
+
+
+def shaped(learner, fin):
+    """A final policy of the learner's shape: four shares summing to one, or one chance or weight in [0, 1]."""
+    def num(x):
+        return isinstance(x, (int, float)) and not isinstance(x, bool) and 0 <= x <= 1
+    if learner == "told":
+        return isinstance(fin, list) and len(fin) == 4 and all(map(num, fin)) and abs(sum(fin) - 1) < 1e-5
+    return num(fin)
+
+
+def check_records(records, links=None):
+    """Refuse records the reading was not frozen for: a run or seed not in the frozen runs, a learner twice,
+    fields that differ from its run's, a final policy of the wrong shape (four shares summing to one for a
+    told learner, one chance or weight in [0, 1] otherwise), or, where links are given, a record not stamped
+    with one of them."""
+    runs = {r[0]: r for r in S.RUNS}
+    seen = set()
+    for rec in records:
+        run = runs.get(rec.get("run"))
+        if run is None or rec.get("seed") not in range(S.SEEDS):
+            raise SystemExit(f"a record for no frozen run or seed: {rec.get('run')!r} seed {rec.get('seed')!r}")
+        key = (rec["run"], rec["seed"])
+        if key in seen:
+            raise SystemExit(f"a learner recorded twice: {key}")
+        seen.add(key)
+        want = fields(run)
+        got = {k: rec.get(k) for k in want}
+        if got != want:
+            raise SystemExit(f"a record's fields differ from its run's: {key}: {got} against {want}")
+        if not shaped(run[2], rec.get("final")):
+            raise SystemExit(f"a record's final policy is not of its learner's shape: {key}: {rec.get('final')!r}")
+        if links is not None and (rec.get("frozen") or {}).get("link commit") not in links:
+            raise SystemExit(f"a record not made under this freeze's chain: {key}: {rec.get('frozen')}")
+
+
+def read(records, stage0=None, links=None):
+    check_records(records, links)
     by = {}
     for rec in records:
         by.setdefault(rec["run"], []).append(rec)
@@ -120,6 +167,10 @@ def read(records, stage0=None):
                     sum(0.5 * sum(abs(r["final"][k] - ref[k]) for k in range(4)) for r in recs) / len(recs), 6)
             else:
                 row["mean distance from the reference end"] = round(sum(abs(r["final"] - ref) for r in recs) / len(recs), 6)
+        if learner == "chance" and 0 < target(run) < 1:  # within the improving chances: reported, no verdict
+            ib = float(tr7.improving_bound(S.prospects(cid)))
+            row["seeds ending within the improving chances (0, %s)" % tr7.improving_bound(S.prospects(cid))] = \
+                sum(0 < r["final"] < ib for r in recs)
         if cid in ("A3", "A5"):                      # how the tie settles by the start: reported, no verdict
             tied = target(run)
             row["how the tie settles"] = {n: sum(r["final"][S.NAMES.index(n)] > r["final"][S.NAMES.index(m)]
@@ -140,11 +191,16 @@ def read(records, stage0=None):
 
 
 def main():
-    path = Path(sys.argv[1]) if len(sys.argv) > 1 else S.OUT
-    records = [json.loads(l) for l in path.read_text().splitlines() if l.strip()]
+    f = S.frozen()
+    links = set(f["commits"].values())
+    records = S.records(S.OUT)
     s0 = HERE / "results" / "stage0.json"
-    res = read(records, json.loads(s0.read_text()) if s0.exists() else None)
-    print(json.dumps(res, indent=1))
+    res = read(records, json.loads(s0.read_text()) if s0.exists() else None, links)
+    res["frozen"] = {"link": f["link"], "link commit": f["link_commit"], "head": f["head"]}
+    path = HERE / "results" / "reading.json"
+    path.write_text(json.dumps(res, indent=1) + "\n")
+    print(json.dumps({k: v for k, v in res.items() if k != "runs"}, indent=1))
+    print({k: v.get("verdict", "reported") for k, v in res["runs"].items()})
 
 
 if __name__ == "__main__":

@@ -1,5 +1,17 @@
 {
- "checks": 215,
+ "checks": 294,
+ "checks by kind": {
+  "the game: outcome is played, draw for draw": 36,
+  "the game: expected points enumerated": 78,
+  "the estimator: unbiased": 17,
+  "the estimator: no step against the law at A3 and B4": 4,
+  "the plumbing: run_all": 35,
+  "the plumbing: resume": 4,
+  "Stage 0: the reference ends are tr7.json's": 10,
+  "the reading: verdicts": 48,
+  "the reading: reports": 52,
+  "the reading: refusals": 10
+ },
  "failed": [],
  "estimator at each start": {
   "A1": [
@@ -287,16 +299,16 @@
    }
   ]
  },
- "CPU seconds an episode": {
-  "told": 10.38,
-  "chance": 0.64,
-  "mixture": 0.58
+ "CPU an episode, microseconds": {
+  "told": 11.3,
+  "chance": 0.71,
+  "mixture": 0.61
  },
- "CPU seconds an episode (unit)": "microseconds",
  "episodes in all": 296000000,
- "CPU bound": {
-  "measured, minutes": 17.4,
-  "bound at 1.5 times, minutes": 26.1
+ "CPU estimate": {
+  "measured, minutes": 19.0,
+  "with a margin of 1.5 times, minutes": 28.5
  },
+ "the dry run's own CPU seconds": 3.2,
  "frozen check": "does not pass yet: experiments/formations-that-read/told-tr7a/FROZEN.sha256 must be committed exactly once and never changed; found 0 contents in 0 commits"
 }

@@ -1,7 +1,7 @@
 """TR7's Stage A: tabular learners trained on sampled outcomes of TR7's game, frozen before any training
 run (FREEZE-9.md).
 
-    python3 -B tr7a_stage.py plan     # the runs, their episodes and the CPU bound; no training
+    python3 -B tr7a_stage.py plan     # the runs, their episodes and the CPU estimate; no training
     python3 -B tools/research/gate.py hold -- python3 -B experiments/formations-that-read/told-tr7a/tr7a_stage.py run
                                       # the training Ren's yes releases: local CPU, no download, no model call
 
@@ -12,14 +12,18 @@ by the rule of FREEZE-4's generator (told-tr7/tr7_run.py's `played`, imported at
 - a mixture learner, one draw before the read stage, complying at both stages or acting by its own law at
   both (B4).
 `played` plays a plan or a declared offer; a learned chance is neither, so the chance and mixture learners
-draw their acts themselves and their outcomes by `outcome`, the last lines of `played` unchanged, from one
-generator a run (the dry run checks `outcome` against `played`, draw for draw, on every plan of every told
-condition). Each step averages a batch of episodes with a leave-one-out baseline, an unbiased estimate of
-the expected gradient that tr7.py's reference flows ascend exactly (flow_told, flow_tied, and this freeze's
-flow_mixture in tr7a_stage0.py), at their step size and number of steps, so a learner's mean path is its
-reference curve. `run` refuses unless FREEZE-4's frozen check (with freeze 1's) and this freeze's pass; it
-writes results/stage-a.jsonl, one line a run and seed, and goes on from the lines already written; the
-lines are read by tr7a_reading.py. Standard library only.
+draw their acts themselves and their outcomes by `outcome`, the last lines of `played` unchanged, from two
+generators for each learner (run and seed), one for its acts and one for the game's draws (the dry run
+checks `outcome` against `played`, draw for draw, on every plan of every told condition and on both answers
+of every tied one). Each step averages a batch of episodes with a leave-one-out baseline, an unbiased
+estimate of the expected gradient at the current logits, the gradient tr7.py's reference flows ascend
+exactly (flow_told, flow_tied, and this freeze's flow_mixture in tr7a_stage0.py), at their step size and
+number of steps; so a learner follows its reference curve to first order in a step's noise, and the run
+shows how far sampled paths depart. `run` refuses unless FREEZE-4's frozen check (with freeze 1's within
+it, which covers every file imported here) and this folder's pass; it writes results/stage-a.jsonl, one line
+a learner, each naming the frozen link it ran under, and goes on from the lines already written, setting
+aside a last line cut by a kill or a full disk (records). tr7a_reading.py reads the lines. Standard
+library only.
 """
 
 import argparse
@@ -50,9 +54,13 @@ STEPS = {"told": 4000, "chance": 20000, "mixture": 4000}   # flow_told's and flo
 BATCH = 100                 # episodes a step averages
 SEEDS = 20                  # seeds a run
 CHECKPOINTS = 10            # the policy recorded at each tenth of a run's steps
-CLIP = 50.0                 # a logit kept within plus or minus 50, as tr7.flow_tied keeps it
+CLIP = 50.0                 # a logit kept within plus or minus 50, as tr7.flow_tied keeps it (flow_told has
+                            # no clip; a told learner's logits never come near 50 in 4,000 steps)
 NAMES = [tr7.NAME[p] for p in tr7.PLANS]   # complyAtBoth, complyThenOwn, ownThenComply, ownAtBoth
-# What an addendum may change: the dry run and its record, as in FREEZE-4; every other file is fixed.
+# What an addendum may change: the dry run and its record; every other file of this folder is fixed. This
+# folder's link lists only its own files: the files it imports are checked by FREEZE-4's frozen check, run
+# first, at FREEZE-4's and freeze 1's hashes, which follows freeze 1's own addenda (its client), so they need
+# nothing here.
 MAY_CHANGE = frozenset({str(FOLDER / "tr7a_dry_run.py"), str(FOLDER / "results" / "dry-run.json")})
 OUT = HERE / "results" / "stage-a.jsonl"
 
@@ -219,20 +227,66 @@ def one(run, seed, **kw):
 
 
 def frozen(repo=None):
-    """FREEZE-4's frozen check (freeze 1's first, then FREEZE-4's chain), then this freeze's chain."""
+    """FREEZE-4's frozen check (freeze 1's first, then FREEZE-4's chain), then this folder's chain. Returns
+    this folder's: its newest link, its commit and every link's commit."""
     repo = repo or R.REPO
     TR.frozen(repo)
     return R.frozen_check(repo, FOLDER, MAY_CHANGE)
 
 
-def done():
-    if not OUT.exists():
-        return set()
-    return {(r["run"], r["seed"]) for r in (json.loads(l) for l in OUT.read_text().splitlines() if l.strip())}
+def records(path=OUT, mend=False):
+    """The records of a run's file, in order. A kill or a full disk can cut the last line. Where mend is
+    true, a last line that does not read as JSON is moved, byte for byte, to the file with .cut added, with
+    a line naming the time, and the file rewritten without it, so its learner is trained again; and a last
+    line that reads but lacks its newline is given one, so the next record starts a line of its own. Any
+    other line that does not read refuses."""
+    path = Path(path)
+    if not path.exists():
+        return []
+    lines = path.read_text().split("\n")
+    whole = lines[-1] == ""
+    if whole:
+        lines = lines[:-1]
+    out = []
+    for k, line in enumerate(lines):
+        try:
+            out.append(json.loads(line))
+        except ValueError:
+            if k == len(lines) - 1 and mend:
+                with open(str(path) + ".cut", "a") as cut:
+                    cut.write(line + "\n# cut " + time.strftime("%Y-%m-%dT%H:%M:%S") + "\n")
+                path.write_text("".join(l + "\n" for l in lines[:-1]))
+                return out
+            raise SystemExit(f"{path}: line {k + 1} does not read as JSON; a cut last line is set aside by run")
+    if mend and lines and not whole:
+        with path.open("a") as f:
+            f.write("\n")
+    return out
 
 
 def total_episodes():
     return sum(episodes(r[2]) for r in RUNS) * SEEDS
+
+
+def run_all(out=OUT, stamp=None, runs=RUNS, seeds=range(SEEDS), **kw):
+    """Train every learner of runs and seeds not yet in out, in order, each line written and flushed as its
+    learner ends, stamped with the frozen link it ran under. kw (a step size or steps) is the dry run's."""
+    out = Path(out)
+    out.parent.mkdir(exist_ok=True)
+    have = {(r["run"], r["seed"]) for r in records(out, mend=True)}
+    made = 0
+    with out.open("a") as f:
+        for r in runs:
+            for seed in seeds:
+                if (r[0], seed) in have:
+                    continue
+                rec = one(r, seed, **kw)
+                rec["frozen"] = stamp
+                f.write(json.dumps(rec) + "\n")
+                f.flush()
+                made += 1
+                print(rec["run"], seed, rec["final"], rec["cpu seconds"], flush=True)
+    return made
 
 
 def main():
@@ -245,20 +299,10 @@ def main():
         print(f"episodes in all: {total_episodes():,}")
         dry = HERE / "results" / "dry-run.json"
         if dry.exists():
-            print("CPU bound:", json.loads(dry.read_text()).get("CPU bound"))
+            print("CPU estimate:", json.loads(dry.read_text()).get("CPU estimate"))
         return
-    frozen()
-    OUT.parent.mkdir(exist_ok=True)
-    have = done()
-    with OUT.open("a") as f:
-        for r in RUNS:
-            for seed in range(SEEDS):
-                if (r[0], seed) in have:
-                    continue
-                rec = one(r, seed)
-                f.write(json.dumps(rec) + "\n")
-                f.flush()
-                print(rec["run"], seed, rec["final"], rec["cpu seconds"], flush=True)
+    f = frozen()
+    run_all(stamp={"link": f["link"], "link commit": f["link_commit"], "head": f["head"]})
 
 
 if __name__ == "__main__":
