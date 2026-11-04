@@ -138,13 +138,15 @@ def mend(folder, cause):
     """FREEZE-1's note "A log cut short": in calls.jsonl and catalog.jsonl, the first line that does not
     read whole, or the last where the file does not end in a newline, and every line after it, are
     moved, byte for byte, to NAME.cut beside it, followed by one line beginning "# " that names the time,
-    the log's length and sha-256 before the move, and the cause (on one line). With this freeze's line
-    writer that is the last line alone. Where catalog lines move, a whole read naming no snapshot is put
-    in their place, timed at the move, later than every read and every call: the calls that ended after
-    the last whole read then lack a good closing read, and resume makes them again rather than the
-    rerun's first read closing them. A moved call's record is no longer logged, so its call is made
-    again. Where a line holds a raw line separator, nothing is changed and the folder stays refused."""
+    the log's length and sha-256 before the move, how many starts of `run` the meta lists, and the cause
+    (on one line). With this freeze's line writer that is the last line alone. Where catalog lines move,
+    a whole read naming no snapshot is put in their place, timed at the move, later than every read and
+    every call: the calls that ended after the last whole read then lack a good closing read, and resume
+    makes them again rather than the rerun's first read closing them. A moved call's record is no longer
+    logged, so its call is made again. Where a line holds a raw line separator, nothing is changed and
+    the folder stays refused."""
     folder = Path(folder)
+    starts = len(json.loads((folder / "meta.json").read_text(encoding="utf-8")).get("starts", []))
     kept, cut, recs, raws = {}, {}, {}, {}
     for name in ("calls.jsonl", "catalog.jsonl"):
         p = folder / name
@@ -186,10 +188,12 @@ def mend(folder, cause):
     stamp = time.strftime("%Y-%m-%dT%H:%M:%S%z")
     for name, c in cut.items():
         # the .cut first, then the log, each whole by a rename: a stop between leaves the lines in both,
-        # and a second mend, finding the .cut's last note naming the log as it still stands, does not add
-        # them again; a later cut of the same bytes, the log grown since, is added with its own note
+        # and a second mend, finding the .cut's last note naming the log and the starts as they still
+        # stand, does not add them again; a later cut, which only a later start of run can make, is added
+        # with its own note, its bytes and the log's the same as before or not
         moved, p, q = b"".join(ln + b"\n" for ln in c), folder / name, folder / (name + ".cut")
-        left = f"from {len(raws[name])} bytes, sha-256 {hashlib.sha256(raws[name]).hexdigest()}"
+        left = (f"from {len(raws[name])} bytes, sha-256 {hashlib.sha256(raws[name]).hexdigest()}, "
+                f"after {starts} start{'' if starts == 1 else 's'} of run")
         old = q.read_bytes() if q.exists() else b""
         body, _, last = old.rstrip(b"\n").rpartition(b"\n")
         if not (last.startswith(b"# cut ") and last[6:].partition(b" ")[2].startswith(left.encode() + b": ")
@@ -200,6 +204,17 @@ def mend(folder, cause):
     for d in done:
         print(f"{folder}: {d}")
     return done
+
+
+def record_start(folder, link):
+    """A start of `run`, recorded in the meta once both logs read whole and before any call. mend's note
+    names how many there were: a log cut again can only follow a later start, since `run` refuses a log
+    not whole and mend's own writes are whole, so a later cut is told from a mend stopped and made again."""
+    log_whole(folder)
+    mp = Path(folder) / "meta.json"
+    meta = json.loads(mp.read_text(encoding="utf-8"))
+    meta.setdefault("starts", []).append({"link": link, "t": round(time.time(), 3)})
+    _whole(mp, (json.dumps(meta, indent=1) + "\n").encode("utf-8"))
 
 
 def _whole(p, data):
@@ -459,7 +474,7 @@ def main(argv=None):
                 mp.write_text(json.dumps(old, indent=1) + "\n")
         else:
             mp.write_text(json.dumps(meta, indent=1) + "\n")
-        log_whole(out)
+        record_start(out, fc["link"])
         sink, _ = open_sink(out)
         guard = R.SpendGuard(a.max_usd, len(R.logged(out)) + 2 * (len(D.fixed_calls(a.family)) + D.reached_most()))
         guard.usd, guard.calls = sink.spent, len(R.logged(out))
