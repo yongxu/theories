@@ -550,6 +550,8 @@ Other items ride in the same rebuild as stages of the kit ([kit/stages/README.md
 
 Each item below is an AI reading. Each stays open, with this label, here and in the home section's open lines.
 
+**Read in the corpus, 5 November 2026 (board item RAE3, AA's E26).** A note, not an edit of the items below: G22, G15 and G01 were read in the corpus and the home section states the result (06-CLASSICAL-TEXTS §四 and its 未决). G22: by Xunzi's own sentence 衡不正 reverses the pair weighed (杨倞's gloss, outside the corpus, reads it otherwise); the unit stays definitional. G15: the 起信论's accord sense of 相應 is read as one class of the forward core, by fit; whether 無明 is among its 煩惱染法 the text does not settle, and the carry-over to JS-324 fails either way, so JS-324's row below no longer rests on it. G01: which 變 the text means it does not settle. Each is `[AI reading, new]` there.
+
 - **G22** [AI reading]: does 衡不正 reverse the balance, or only fail to keep the order? If it reverses, the unit is definitional (`«保之像»`, with `«像不保之例»` as its net). If it only fails to keep the order, 重縣於仰 does not follow. The corpus gives no commentary.
 - **G15, JS-326** [AI reading]: is 相應 lying in one class of the core? A survey of the 起信论's uses of 相應, JS-318 among them, would settle it.
 - **G15, JS-318** [AI reading]: is 無明 among its 煩惱染法? If it is, JS-318 denies the premise that JS-326's reading uses. The 起信论's 熏習 sections would settle it.

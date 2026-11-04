@@ -73,25 +73,43 @@ def cluster_titles():
     return {c['key']: c['title'] for c in json.loads((HERE / 'clusters.json').read_text(encoding='utf-8'))}
 
 
-def placements(P, verdicts):
-    """Every flagged judgment's place in its cluster: an entry's kind, a parallel's entry's kind, or 'rejected'."""
+def places(P):
+    """Every place a judgment has in the map, by cluster in order: (cluster, 'entry' | 'parallel' | 'rejected', kind),
+    a parallel taking the kind of the entry it names (in its cluster, in the cluster it names, or by its id)."""
     kind_of = {(c, e['id']): e['kind'] for c, d in P.items() for e in d['entries']}
     by_id = {}
     for (c, i), k in kind_of.items():
         by_id.setdefault(i, k)
     out = {}
-    for c, d in P.items():
+    for c in sorted(P):
+        d = P[c]
         for e in d['entries']:
             for r in e['record_ids']:
-                if verdicts.get(r, {}).get('c') == c:
-                    out[r] = e['kind']
+                out.setdefault(r, []).append((c, 'entry', e['kind']))
         for p in d['parallels']:
             t = p.get('same_as_entry', '')
             m = re.match(r'(C\d\d)\s*[:/：]\s*(.+)$', t)
-            out[p['record_id']] = kind_of.get((c, t)) or (m and kind_of.get((m.group(1), m.group(2).strip()))) \
+            k = kind_of.get((c, t)) or (m and kind_of.get((m.group(1), m.group(2).strip()))) \
                 or by_id.get(m.group(2).strip() if m else t)
+            out.setdefault(p['record_id'], []).append((c, 'parallel', k))
         for r in d['rejected']:
-            out[r['record_id']] = 'rejected'
+            out.setdefault(r['record_id'], []).append((c, 'rejected', None))
+    return out
+
+
+def placements(P, verdicts):
+    """Every flagged judgment's place in the map: the kind of a place that takes it (an entry or a parallel), in its own
+    flagged cluster where that cluster takes it, else in the first cluster that does; 'rejected' only where no cluster
+    takes it. (Until 5 November 2026, board item RAE3, AA's E4, the last place read in cluster order won, so a rejection
+    in a later cluster hid a judgment taken in its own, and an entry counted only in the flagged cluster.)"""
+    pl = places(P)
+    out = {}
+    for r, v in verdicts.items():
+        if v['c'] == '-' or r not in pl:
+            continue
+        kept = [x for x in pl[r] if x[1] != 'rejected']
+        own = [x for x in kept if x[0] == v['c']]
+        out[r] = (own or kept)[0][2] if kept else 'rejected'
     return out
 
 

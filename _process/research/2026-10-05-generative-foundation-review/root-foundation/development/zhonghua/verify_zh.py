@@ -5,8 +5,11 @@
 Everything is checked against repository copies only:
   1. the import: every file of sources/civilization-thought-v1.0 hashes to its PROVENANCE.json entry;
   2. coverage: coverage.json has one verdict for every judgment (relation) of the imported model;
-  3. passages: every judgment the sweep flagged for a cluster lies in exactly one place there (an entry, a
-     parallel or a rejection); every id an entry cites exists in the model (a judgment, a reading unit, a sense
+  3. passages: every judgment flagged for a cluster (by the sweep, or, for 15 the map places, by flag_2026-11-05.py)
+     lies in exactly one place there (an entry, a
+     parallel or a rejection), no judgment the sweep left unflagged lies anywhere in the map, and across clusters a
+     judgment one cluster takes (in an entry or a parallel) is rejected in another only where that rejection names the
+     cluster that takes it or an entry that lists it; every id an entry cites exists in the model (a judgment, a reading unit, a sense
      or a chapter of the Laozi); every fragment is in its source's frozen
      text, character for character (whitespace may differ); every declaration is in the audited list of the
      newest core receipt (or is a module of it), or of a periphery receipt (Mathlib, axioms reported; listed
@@ -21,7 +24,7 @@ Everything is checked against repository copies only:
      these fails, but for OUTSIDE, which the chapter names as off the spine;
      every record link exists; every 「…」〔ID〕 quotation is in source ID's frozen text, every 对照 line names
      entries of the map with the kind the map gives them, and the generated tables equal what the data gives (06
-     has none of these three today); and nine numbers its section 七 states of the map and the name table are the
+     has none of these three today); and twelve numbers its section 七 states of the map and the name table are the
      data's (STATED). A chapter in which no Lean name is found fails. Its other quotations and numbers are not
      checked. The three chapters this checked until RA moved them to history/ (23 October 2026) are frozen there
      and not checked.
@@ -42,6 +45,37 @@ OUTSIDE = {'SituatedPractice': ROOT / 'experiments/integrated-correction/general
 IDENT = re.compile(r"[A-Za-z_][A-Za-z0-9_'.₀-₉]*")
 
 
+# The parts 06 §七 names in its sentence of shares, in its order, each with the domains of the model it covers.
+SHARE_PARTS = [('名辩', ['名辩']), ('庄子', ['庄子']), ('兵', ['兵']), ('儒', ['儒']), ('易与佛', ['易', '佛']), ('老子', ['老子']),
+               ('三教互动', ['三教互动']), ('墨', ['墨']), ('法', ['法'])]
+
+
+def across(P, verdicts):
+    """The counts of the map read across clusters (build_tables.placements: a judgment's kind where a cluster takes it, its
+    own cluster first; not taken only where none does), with the shares of divergence by domain."""
+    from build_tables import places, placements, DOMAIN, model
+    pl, place = places(P), placements(P, verdicts)
+    flagged = [r for r, v in verdicts.items() if v['c'] != '-']
+    kinds = [place.get(r) for r in flagged]
+    mapped = sum(k in ('agreement', 'scope', 'divergence') for k in kinds)
+    dom = {r['id']: DOMAIN[r['domain']] for r in model()['relations']}
+
+    def share(labels):
+        ks = [place.get(r) for r in flagged if dom.get(r) in labels and place.get(r) in ('agreement', 'scope', 'divergence')]
+        return round(100 * ks.count('divergence') / len(ks)) if ks else None
+    shares = []
+    for label, labels in SHARE_PARTS:
+        each = {share([x]) for x in labels}
+        shares.append((label, each.pop() if len(each) == 1 else '/'.join(str(share([x])) for x in labels)))
+    return {'not_taken': kinds.count('rejected'),
+            'multi': sum(1 for r in flagged if len({c for c, _, _ in pl.get(r, [])}) > 1),
+            'kept_and_rejected': sum(1 for r in flagged if any(x[1] == 'rejected' for x in pl.get(r, []))
+                                     and any(x[1] != 'rejected' for x in pl.get(r, []))),
+            'kind_differs': sum(1 for r in flagged if len({k for _, h, k in pl.get(r, []) if h != 'rejected'}) > 1),
+            'domain_shares': shares, 'share': round(100 * kinds.count('divergence') / mapped),
+            'kept_not_divergent': round(100 * (kinds.count('agreement') + kinds.count('scope')) / mapped)}
+
+
 def stated(n):
     """The numbers the chapter's section 七 states, each as the words it is stated in, from the data's counts n."""
     return [f"v1.0 的 {n['judgments']:,} 条判断",
@@ -50,7 +84,10 @@ def stated(n):
             f"（相合 {n['agreement']}，定域 {n['scope']}，相分 {n['divergence']}）",
             f"另有 {n['judgments'] - n['flagged']:,} 条没有脊柱可读的结构",
             f"以 {n['names']} 个古典之名",
-            f"已对应的 {n['flagged'] - n['rejected']:,} 条计（{n['flagged']:,} 条除去读后不取之 {n['rejected']} 条",
+            f"已对应的 {n['flagged'] - n['not_taken']:,} 条计（{n['flagged']:,} 条除去读后各簇皆不取之 {n['not_taken']} 条",
+            f"其中 {n['multi']} 条另落于他簇（{n['kept_and_rejected']} 条在一簇取，在他簇不取而注明归彼；{n['kind_differs']} 条他簇之类与所标之簇不同，未经检查）",
+            '按脉络之域，相分在已对应者中所占：' + '，'.join(f'{k} {v}%' for k, v in n['domain_shares']) + f"；合计 {n['share']}%（以判断计）",
+            f"已对应者中相合与定域合占 {n['kept_not_divergent']}%",
             f"{n['names']} 名中 {n['anchored']} 个录有锚，其余 {n['names'] - n['anchored']} 个",
             f"{n['names']} 个名中 {n['quoted']} 个录有引文"]
 sys.path.insert(0, str(HERE / 'work'))
@@ -165,6 +202,23 @@ def main():
             if v['c'] == c and len(placed.get(r, [])) != 1:
                 fail.append('passages %s: flagged judgment %s placed %d times' % (c, r, len(placed.get(r, []))))
 
+    # 3b. across clusters: a rejection of a judgment another cluster takes names the cluster or entry that takes it
+    from build_tables import places
+    pl = places(P)
+    for r in pl:
+        if verdicts.get(r, {}).get('c') == '-':
+            fail.append('passages: %s, which the sweep left unflagged, is placed in %s' % (r, ', '.join(sorted({c for c, _, _ in pl[r]}))))
+    for r, ps in pl.items():
+        takers = {c for c, k, _ in ps if k != 'rejected'}
+        if not takers:
+            continue
+        entries = {e['id'] for c, d in P.items() for e in d['entries'] if r in e['record_ids']}
+        for c, d in P.items():
+            for x in d['rejected']:
+                if x['record_id'] == r and not any(k in x.get('why', '') for k in takers | entries):
+                    fail.append('passages %s: %s is rejected here but taken in %s, and the rejection does not say so'
+                                % (c, r, ', '.join(sorted(takers))))
+
     # 4. names
     rows = list(csv.DictReader(open(HERE / 'work/names-decisions.tsv', encoding='utf-8'), delimiter='\t'))
     simp_seen = {}
@@ -194,7 +248,7 @@ def main():
             tot[k] = tot.get(k, 0) + n
     n = {'judgments': len(rel_ids), 'flagged': sum(1 for v in verdicts.values() if v['c'] != '-'),
          'entries': n_entries, 'names': len(rows),
-         'rejected': sum(1 for c, d in P.items() for r in d['rejected'] if verdicts.get(r['record_id'], {}).get('c') == c),
+         **across(P, verdicts),
          'anchored': sum(1 for r in rows if r['锚'].strip() not in ('', '—')),
          'quoted': sum(1 for r in rows if r['引'].strip() not in ('', '—')), **tot}
     for ch in [args.chapter]:

@@ -123,8 +123,8 @@
       "kind": "non-implication"
     },
     {
-      "en": "An order 穷 → 变 → 通: with 變 read as one alteration the three are a conjunction, constancy and not alteration giving passing through; which 變 the text means stays open.",
-      "zh": "穷 → 变 → 通之序：读變为一次之异，三者是合取，给通者是有常而非异；文本所言何變仍未决。",
+      "en": "An order 穷 → 变 → 通 in the grammar: the text states one with 則, but with 變 read as one alteration the three are a conjunction, constancy and not alteration giving passing through; whether the text's 變 is one alteration or an alternation (under which passing through follows by definition) the text does not settle: the commentators who borrow it to gloss other lines read one change at the extreme, while where 韩注 quotes it outright (上十二) 孔疏 glosses 變 as 化裁, near alternation.",
+      "zh": "文法中穷 → 变 → 通之序：文本以「則」陈序，然读變为一次之异，三者是合取，给通者是有常而非异；文本之變是一次之异还是往来交替（读之则通依定义），文本不能定：注家借此句释他文者读作窮極之一变；韩注于上十二直引此句，孔疏彼处以化裁释變，近于交替。",
       "kind": "non-implication"
     },
     {
@@ -204,8 +204,8 @@
     "zh": "纯核，公理报告皆空：GrammarConditionals 引 GrammarCandidates 与 GrammarLaws，无模块引之。二族所依之两条一般之律，陈于其所推广之律之记录：相对于类的续与古文之定义。由 AI 据语料之归类写成；经一次独立之 AI 审查，所见皆取；读法无人审。此叶 41 声明中定理 40，与全包同编译于记录所系收据之核心运行。"
   },
   "next_delta": {
-    "en": "Review of the readings by a person (classicists, Buddhist scholars, logicians); the three open readings (G22's 衡不正, JS-326's 相應, JS-318's 無明); which 變 G01's text means; the 181 candidates of the three added texts.",
-    "zh": "人审读法（古文、佛学、逻辑学者）；三条未决之读（G22 衡不正、JS-326 相應、JS-318 無明）；G01 文本所言何變；后加三部文本之 181 条候选。"
+    "en": "Review of the readings by a person (classicists, Buddhist scholars, logicians); whether the 起信论 counts 無明 among its 煩惱染法 (JS-318), which its text does not settle and no reading needs; whether G01's 變 is one alteration or an alternation, which the text does not settle (glosses lean both ways); the 181 candidates of the three added texts.",
+    "zh": "人审读法（古文、佛学、逻辑学者）；《起信论》是否以無明为其煩惱染法（JS-318；文本不能定，亦无读须之）；G01 之變是一次之异还是往来交替（文本不能定；注家两可）；后加三部文本之 181 条候选。"
   },
   "correspondence": {
     "en": "Units, families, dispositions and labelled readings in _process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou7-conditional-laws/data/groups.tsv: law 103, false as read 6, premise 19, 丁 33, not expressible 53, 甲 5. Each family's Z, Y, laws, net where Z fails and standing are tabled in 06 §四, and argued in the study's DESIGN.md.",
@@ -333,7 +333,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou7-conditional-laws/data/groups.tsv",
       "role": "statement",
-      "sha256": "cf48bd9771e905032f09f5523cfc9d7f38ded3b69a4fdf6cadb432f466b728c5",
+      "sha256": "8439277c73243b0f7aa2b7b0681ab1b8b37a008abcaa9f1c3ca68bcec421b07d",
       "declarations": []
     },
     {
@@ -378,6 +378,10 @@
     {
       "en": "3 November 2026, the dossiers' re-sync: a correction. The first of the false-as-read witnesses for ZL-17-051 said more than the Lean states: its result has no condition at all, and a result with another condition can abide. The chapter's sentence and groups.tsv's row with it; the chapter's opening and home section now say, as this statement does, that 128 of the 219 are written as laws; its open list says what JS-318 denies, which is not JS-326's own premise. The statement and every count stand.",
       "zh": "2026年11月3日，诸材料之再核：更正。ZL-17-051 之见证原说得比 Lean 所陈为多：其果全无缘，有他缘之果可住。章中之句与 groups.tsv 之行随之改；章之开头与本节今如本记录所陈，说 219 条中 128 条写成律；其未决之条说 JS-318 所否者，不是 JS-326 自己之前提。所陈与诸计数不变。"
+    },
+    {
+      "en": "5 November 2026, board item RAE3 (AA Phase 0's E26): the open readings read in the corpus. G22: 「衡不正」 is, by Xunzi's own sentence (杨倞's gloss, outside the corpus, reads it otherwise), a reversal of the pair weighed, so 「重縣於仰」 is the text's stated consequence, not derived from non-preservation; whether every pair reverses the text does not say. G15: the 起信论's accord sense of 相應 (contrary, in the 勝鬘, 離, 脫, 異) is read as one class of the forward core, by fit, the text not choosing between the core and sameness of substance; whether 無明 is among its 煩惱染法 the text does not settle, and the carry-over to JS-324 fails either way. G01: the 繫辭 defines 變 twice with 謂之 and states the order with 則; whether its 變 is one alteration or an alternation the text does not settle: the commentators who borrow it to gloss other lines (韩注 and 孔疏 at 上五, 朱熹 on 困上六; 程颐 on 既济 near them) read one change at the extreme, while where 韩注 quotes it outright (上十二) 孔疏 glosses 變 as 化裁, near alternation, as 程颐 on 否 is. Each [AI reading, new] in 06; no law, standing or count changed.",
+      "zh": "2026年11月5日，看板项 RAE3（AA 第零阶段之 E26）：未决之读依语料而读。G22：依荀子本句（杨倞注在语料之外，读之不同），「衡不正」是所衡之对反转，故「重縣於仰」是文本所陈之所致，非由“不保”推出；是否每对皆反，文本不言。G15：《起信论》相合义之相應（其反在《勝鬘》为離、脫、異）依合读作同在前向之核之一类，文不分核与同体；無明是否在其煩惱染法中，文本不能定，移用于 JS-324 皆不成。G01：系辞以「謂之」界说變者二，以「則」陈序；其變是一次之异还是往来交替，文本不能定：注家借此句释他文者（韩注、孔疏于上五，朱熹于困上六；程颐既济注近之）读作窮極之一变；韩注于上十二直引此句，孔疏彼处以化裁释變，与程颐否注同近于交替。06 中各标 [AI reading, new]；律、地位与计数均未改。"
     }
   ]
 }
