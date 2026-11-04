@@ -1,0 +1,302 @@
+{
+ "checks": 215,
+ "failed": [],
+ "estimator at each start": {
+  "A1": [
+   {
+    "mean": -1.242323,
+    "exact": -1.25,
+    "standard error": 0.01091
+   },
+   {
+    "mean": 1.019174,
+    "exact": 1.0,
+    "standard error": 0.01172
+   },
+   {
+    "mean": -0.011359,
+    "exact": 0.0,
+    "standard error": 0.006892
+   },
+   {
+    "mean": 0.234508,
+    "exact": 0.25,
+    "standard error": 0.010891
+   }
+  ],
+  "A2": [
+   {
+    "mean": -1.744645,
+    "exact": -1.75,
+    "standard error": 0.01588
+   },
+   {
+    "mean": 0.49122,
+    "exact": 0.5,
+    "standard error": 0.01234
+   },
+   {
+    "mean": 0.239631,
+    "exact": 0.25,
+    "standard error": 0.008651
+   },
+   {
+    "mean": 1.013794,
+    "exact": 1.0,
+    "standard error": 0.015001
+   }
+  ],
+  "A3": [
+   {
+    "mean": -0.618578,
+    "exact": -0.625,
+    "standard error": 0.006486
+   },
+   {
+    "mean": -0.631179,
+    "exact": -0.625,
+    "standard error": 0.006233
+   },
+   {
+    "mean": 0.63028,
+    "exact": 0.625,
+    "standard error": 0.006413
+   },
+   {
+    "mean": 0.619477,
+    "exact": 0.625,
+    "standard error": 0.006385
+   }
+  ],
+  "A4": [
+   {
+    "mean": -1.241874,
+    "exact": -1.25,
+    "standard error": 0.012265
+   },
+   {
+    "mean": -0.003601,
+    "exact": 0.0,
+    "standard error": 0.014866
+   },
+   {
+    "mean": -0.008841,
+    "exact": 0.0,
+    "standard error": 0.00955
+   },
+   {
+    "mean": 1.254316,
+    "exact": 1.25,
+    "standard error": 0.019449
+   }
+  ],
+  "A5": [
+   {
+    "mean": -1.61399,
+    "exact": -1.625,
+    "standard error": 0.013004
+   },
+   {
+    "mean": 0.623449,
+    "exact": 0.625,
+    "standard error": 0.011808
+   },
+   {
+    "mean": 0.377902,
+    "exact": 0.375,
+    "standard error": 0.007981
+   },
+   {
+    "mean": 0.612638,
+    "exact": 0.625,
+    "standard error": 0.011882
+   }
+  ],
+  "A6": [
+   {
+    "mean": -1.251245,
+    "exact": -1.25,
+    "standard error": 0.011976
+   },
+   {
+    "mean": 0.986996,
+    "exact": 1.0,
+    "standard error": 0.012769
+   },
+   {
+    "mean": -0.252753,
+    "exact": -0.25,
+    "standard error": 0.0079
+   },
+   {
+    "mean": 0.517002,
+    "exact": 0.5,
+    "standard error": 0.014382
+   }
+  ],
+  "A7": [
+   {
+    "mean": -1.498311,
+    "exact": -1.5,
+    "standard error": 0.012694
+   },
+   {
+    "mean": 0.739056,
+    "exact": 0.75,
+    "standard error": 0.011401
+   },
+   {
+    "mean": 0.256263,
+    "exact": 0.25,
+    "standard error": 0.006946
+   },
+   {
+    "mean": 0.502992,
+    "exact": 0.5,
+    "standard error": 0.010634
+   }
+  ],
+  "B1": [
+   {
+    "mean": -1.752533,
+    "exact": -1.75,
+    "standard error": 0.018997
+   }
+  ],
+  "B2": [
+   {
+    "mean": -0.753031,
+    "exact": -0.75,
+    "standard error": 0.013589
+   }
+  ],
+  "B3": [
+   {
+    "mean": -0.990299,
+    "exact": -0.99,
+    "standard error": 0.01326
+   }
+  ],
+  "B4": [
+   {
+    "mean": -0.750267,
+    "exact": -0.75,
+    "standard error": 0.000715
+   }
+  ],
+  "A3 leaning to ownThenComply": [
+   {
+    "mean": -0.560452,
+    "exact": -0.568566,
+    "standard error": 0.007602
+   },
+   {
+    "mean": -0.575997,
+    "exact": -0.568566,
+    "standard error": 0.007645
+   },
+   {
+    "mean": 0.831482,
+    "exact": 0.831311,
+    "standard error": 0.005144
+   },
+   {
+    "mean": 0.304967,
+    "exact": 0.305822,
+    "standard error": 0.004371
+   }
+  ],
+  "A3 leaning to ownAtBoth": [
+   {
+    "mean": -0.561929,
+    "exact": -0.568566,
+    "standard error": 0.007235
+   },
+   {
+    "mean": -0.574566,
+    "exact": -0.568566,
+    "standard error": 0.007342
+   },
+   {
+    "mean": 0.308028,
+    "exact": 0.305822,
+    "standard error": 0.004686
+   },
+   {
+    "mean": 0.828467,
+    "exact": 0.831311,
+    "standard error": 0.005793
+   }
+  ],
+  "A5 leaning to complyThenOwn": [
+   {
+    "mean": -1.262304,
+    "exact": -1.268077,
+    "standard error": 0.015556
+   },
+   {
+    "mean": 0.841929,
+    "exact": 0.831311,
+    "standard error": 0.013483
+   },
+   {
+    "mean": 0.127205,
+    "exact": 0.130944,
+    "standard error": 0.005311
+   },
+   {
+    "mean": 0.29317,
+    "exact": 0.305822,
+    "standard error": 0.009491
+   }
+  ],
+  "A5 leaning to ownAtBoth": [
+   {
+    "mean": -1.267653,
+    "exact": -1.268077,
+    "standard error": 0.016211
+   },
+   {
+    "mean": 0.307543,
+    "exact": 0.305822,
+    "standard error": 0.008799
+   },
+   {
+    "mean": 0.13287,
+    "exact": 0.130944,
+    "standard error": 0.005391
+   },
+   {
+    "mean": 0.827239,
+    "exact": 0.831311,
+    "standard error": 0.01367
+   }
+  ],
+  "B2's prospects from 1/20": [
+   {
+    "mean": 0.290109,
+    "exact": 0.285,
+    "standard error": 0.009187
+   }
+  ],
+  "the witness from 1/2": [
+   {
+    "mean": -1.521742,
+    "exact": -1.5,
+    "standard error": 0.018407
+   }
+  ]
+ },
+ "CPU seconds an episode": {
+  "told": 10.38,
+  "chance": 0.64,
+  "mixture": 0.58
+ },
+ "CPU seconds an episode (unit)": "microseconds",
+ "episodes in all": 296000000,
+ "CPU bound": {
+  "measured, minutes": 17.4,
+  "bound at 1.5 times, minutes": 26.1
+ },
+ "frozen check": "does not pass yet: experiments/formations-that-read/told-tr7a/FROZEN.sha256 must be committed exactly once and never changed; found 0 contents in 0 commits"
+}
