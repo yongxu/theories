@@ -60,7 +60,8 @@ def forward(torch, model, tok, prompt, family, device, letter_ids, keep_state):
     x = torch.tensor([x_ids], dtype=torch.long, device=device)
     with torch.no_grad():
         out = model(input_ids=x, output_hidden_states=True, use_cache=False)
-    made_on = str(out.logits.device)
+    made_on = sorted({str(h.device) for h in out.hidden_states} | {str(out.logits.device)})
+    made_as = sorted({str(h.dtype) for h in out.hidden_states})
     hs = [h[0, -1].detach().to("cpu").contiguous() for h in out.hidden_states]
     logits = out.logits[0, -1].detach().to("cpu").contiguous()
     dist = torch.softmax(logits.to(torch.float32), dim=-1)
@@ -72,7 +73,7 @@ def forward(torch, model, tok, prompt, family, device, letter_ids, keep_state):
     return {"input_sha256": sha_ids(x_ids), "n_tokens": len(x_ids),
             "layer_sha256": [sha_tensor(torch, h) for h in hs], "logits_sha256": sha_tensor(torch, logits),
             "p": p, "greedy": greedy, "state": state, "dist": dist,
-            "dtype": str(hs[0].dtype), "logits_dtype": str(logits.dtype), "device": made_on}
+            "dtype": made_as, "logits_dtype": str(logits.dtype), "device": made_on}
 
 
 def rendered(tok, prompt, family):

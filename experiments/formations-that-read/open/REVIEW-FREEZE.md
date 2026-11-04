@@ -75,13 +75,13 @@ Three readers, each with a lens of its own:
 
 Each high or medium finding went to a verifier of its own, asked to refute it: fourteen verifiers, seventeen agents in all. F, C and R number the three readers' findings. As in round 1, none ran the dry run or the power check, and none downloaded or ran a model. The code reader could not run torch or transformers, which are not installed here, and read their behaviour from what it knew of them.
 
-They found 47 points, three of them "none found". The verifiers held two high, one found by two readers in two forms; seven medium; and one not real. The rest are low. Every finding was taken, the one not real included, as follows.
+They found 47 points, three of them "none found". The verifiers held two high, one of them found by all three readers in two forms; six medium; and one not real. The rest are low. Every finding was taken, the one not real included, as follows.
 
 **High**
 
 | # | Finding | How it was taken |
 |---|---|---|
-| C1 | A letter's probability is a float32 sum over the tokens that decode to it. With nearly all the mass on one letter split over two tokens, it can round to 1 + 2⁻²³. The run's check refused it, and since the pass is deterministic, a resumed run is refused again: the run could not go on, and both files are fixed. | The pass sums a letter's entries in float64 and takes the sum at most 1 (section 1). The dry run's stand-in torch rounds as a float32 softmax does. It finds such a case, at bfloat16 logits 0.01 apart, and the group made from it goes on with each letter at 1. |
+| C1 | A letter's probability is a float32 sum over the tokens that decode to it. With nearly all the mass on one letter split over two tokens, it can round to 1 + 2⁻²³. The run's check refused it, and since the pass is deterministic, a resumed run is refused again: the run could not go on, and both files are fixed. | The pass sums a letter's entries in float64 and takes the sum at most 1 (section 1). The dry run's stand-in torch rounds as a float32 softmax does. It finds such a case, at bfloat16 logits 0.01 apart, and the group made from it goes on, with A at 1 in each pass. |
 | F3, C2, R4 | `read` loaded every folder before asking which was whole, and refused a torn line anywhere. So an old partial folder with a torn last line, left by a stop and superseded by an engine addendum, refused the reading of all four checkpoints, for good, against section 7's "not read while it is partial" and section 6's "each checkpoint's reading is its own". Two whole folders likewise refused every checkpoint, with no rule that settled them. | `read` reads each checkpoint alone: a refused folder is listed with its reason and not read, and a checkpoint's refusal is its own status. A torn last line in a folder not being resumed is read as absent and left in place, so the folder is partial. A whole folder ends its checkpoint's run, so the tools never make a second; two whole folders refuse only their checkpoint. Dry-run cases: a torn old folder beside a whole one (the whole one read, the old one listed, its file untouched, and alone listed as partial); two whole folders beside another checkpoint's refused folder (each its own status, the readout written); a new folder beside a whole one, refused. |
 
 **Medium**
@@ -108,7 +108,7 @@ They found 47 points, three of them "none found". The verifiers held two high, o
 | F10, R8 | The prompt checks left out the pilot's arms. | Added: the base and tuned texts the same, the two arms apart in their fifth line alone, the factor lines at base's. |
 | F11 | DESIGN's summary dropped "at a 10% base". | Restored. |
 | F12, R6 | The reading time was low. | Recounted with the repository's counter after round 2. |
-| F13, R11 | "Not fixed" cited `lumped_determines`, which proves only the other side. | `Becoming.Learning.twin_selected`, with its hypotheses, which hold here. |
+| F13, R11 | "Not fixed" cited `lumped_determines`, which proves only the other side. | `Becoming.Learning.twin_selected`, with its hypotheses (restated in round 3, R9). |
 | F14 | The loaded files' list left out the generation configuration. | Added. |
 | F15 | A record missing its own fields failed with a traceback, not a refusal. | Every group's and pass's field set is checked. A dry-run refusal. |
 | F4 | The torn-line case tore a copied fragment, not the record itself. (Verifier: not real; the check reached what it claimed.) | Taken all the same: the case now tears the 600th record and checks that that group is made again, once. |
@@ -122,8 +122,48 @@ They found 47 points, three of them "none found". The verifiers held two high, o
 | R9 | "Stage 0's types and one more" was wrong both ways. | "Five of Stage 0's types and four more", with the four left out named. |
 | R10 | Four departures were not listed: the floor test, logits in the premise, the misled share under S1 only, the last state after the norm. | Each listed in section 12, with its reason. |
 | R15 | Round 1's row E5 placed "a day or more" in the power check's docstring, where it was not. | Added to the docstring. |
-| R16 | Olmo 3 alternates sliding-window and full attention. | Said in section 2: at these lengths it is full attention throughout. |
+| R16 | Olmo 3 alternates sliding-window and full attention. | Said in section 2: at these lengths it is full attention throughout (its pattern corrected in round 3, F9). |
 
 The three "none found": the fixes reader on the rest of round 1's fixes, every number it rechecked and the thirteen kit files' hashes; the code reader on every branch of the rule and the real engine's states, hashing and templates; the reader of the freeze on every number, the Lean names and statements, and this file's count of round 1.
+
+After the fixes, the power check and the dry run were run again on the changed code. Every check holds, and the power check's figures are unchanged.
+
+## Round 3: three readers, a verifier for each lens
+
+The same three lenses as round 2, each reader given round 2's fixes to check besides its own lens. The high and medium findings of each reader went to one verifier for that reader, asked to refute them: three verifiers, six agents in all. None ran the dry run or the power check, and none downloaded or ran a model.
+
+They found 33 points, three of them "none found". There is no high finding. The verifiers held seven medium, which are five defects, three of them found by two or three readers; two that were sent as medium they held low. The rest are low. Every finding was taken, as follows.
+
+**Medium**
+
+| # | Finding | How it was taken |
+|---|---|---|
+| F1, C1, R2 | The reading's isolation of each checkpoint held only for the refusals the code raised itself. A `meta.json` not whole (which a stop while it was rewritten could leave), a record without its group, or a line that is JSON but no record, raised another error: the reading of all four checkpoints stopped with no readout, and every later run of that checkpoint stopped too. | `load` checks `meta.json` and each record's fields before using them, and `written` refuses a line that is no record. `read` and the listing of folders take any other error as that folder's or checkpoint's refusal, its type and message the reason. `meta.json` is written to a temporary name, synced and moved into place. Dry-run cases: a torn `meta.json`, one without its links, a record without its group, a line that is no record, passes that are no list, each refused at loading and listed at the reading. |
+| C2 (and F4) | The run's gate asked only whether another folder was whole. A refused folder counted as not whole, so a whole folder that the reading refuses let a second one begin; and the run never asked whether its own folder loaded, so it could add passes for days to a folder the reading would refuse. | The run refuses while any other folder of the checkpoint is whole or refused, and, after setting aside a torn last record, refuses unless its own folder loads as the reading loads it. Dry-run cases for both, the own folder left unchanged. |
+| C3 (and R4) | "No run can be chosen by its outcome" claimed more than the code does. Partial folders can go on side by side, under other threads or devices, and their records can be read before one is finished; the readout listed an abandoned folder with its phases' whole or not, so a folder at 1,599 of 1,600 showed as "main: false". | Section 7, 12 and 13 now say what holds: no second whole run can be chosen between, and every folder not read is listed with its groups per phase against the plan's and the times of its first and last pass. A checkpoint whose folders are all refused has the status "refused: every folder refused". |
+| C4 (and R3) | The kept states were written with no sync before their group's line, which was synced. After a machine stop the line could survive and a state file not: the reading would refuse the folder for good, and no new folder could begin under the same name. | Each state file is written to a temporary name, synced (with a full flush where the system has one) and moved into place before its group's line; the log's line is flushed the same way. On resuming, a last group whose state files differ from their hashes is moved aside like a torn line, the differing files kept beside it, and made again. A dry-run case stops a run after a group keeping states, damages one of its files, and resumes to a run equal to one made whole. |
+| R1 (and F2) | Section 4 said the smoke run's decode check catches a template that adds to the text. It cannot: the text the ids must decode to is built by that same template. | Said as it is: the check catches a tokenizer adding a token of its own, not what a template adds. A check was added that can: `MODELS.json` lists the sha256 of each tuned checkpoint's chat template, read at the pinned revision, and smoke and run refuse a tokenizer holding another text. Dry-run cases with a stand-in hash: the pinned text read, another or none refused, a base checkpoint not checked. |
+
+**Low**
+
+| # | Finding | How it was taken |
+|---|---|---|
+| F3 | The addendum reader's check was narrower than what an engine supplies: torch, the model and the tokenizer, any of which could be wrapped or hooked; eager attention was stated and not checked. (Verifier: low.) | The reader's check in sections 4 and 12 and the engine's docstring now names the model and tokenizer as loaded, with no wrapper, hook or replaced module. The engine reports its attention and its model's class, and the run refuses other than eager and `MODELS.json`'s class. Dry-run cases for each. |
+| F5, C7 | Only the first state's dtype and the logits' device were checked. | The pass reports the dtypes and devices of every state and of the logits; the run requires bfloat16 throughout and the one device. Dry-run cases: one state in float16, one state on another device. |
+| C6 | The stand-in made one position and named its device "cpu", unlike torch. | It makes two positions, the pass reading the last, and names its device "cpu:0". |
+| C5 | The dry run's docstring said it ran every refusal. | It names the refusals as those listed in its output, which now include the cases above. |
+| C8 | A checkpoint whose folders are all refused was "partial". | "refused: every folder refused"; the dry run checks it. |
+| C9 | A damaged last line ending in its newline was read as torn. | Torn means a last line with no newline at its end; any other line not whole is refused. A dry-run case. |
+| R10 | Only the reading checked that the chain lists the engine. A link that left out a frozen file would let smoke and run go ahead. | Smoke and run refuse unless the newest link lists every file the freeze holds. Dry-run cases. |
+| R5 | The list of what importing `told/run.py` runs left out TR8's and TR-RR's scripts and `PINS.json`. | Added in section 7. |
+| R9 | `twin_selected`'s hypotheses were not stated as the Lean has them. | Section 6: for any selection through agreement on the readings that selects a law reading through the lumping, a selected twin takes every value there; the selection is a hypothesis the run does not measure. |
+| F9 | Olmo 3 does not alternate its attention. | Three sliding-window layers in every four, full in the fourth. |
+| F6, R6 | In the stand-in, only A and B decode from two tokens. | "A and B each decode from two tokens, and Yes and No from one". |
+| F11 | The pilot check did not check that the line apart is the fifth. | It does. |
+| F7, R7 | Round 2's counts were off. | Corrected: one high found by all three readers, six medium. |
+| F8 | Round 2's row C1 said each letter is at 1. | "With A at 1 in each pass". |
+| F10, R8 | The placeholders were still in the texts. | Filled at the landing, with every round's counts. |
+
+The three "none found": the fixes reader on the rest of round 2's fixes; the code reader on the pass and engine against torch 2.9 and transformers 4.57.1 as it knew them; the freeze reader on every number in sections 2, 3, 5, 9, 10 and 11, the kit files' hashes, the Lean names and the departures.
 
 After the fixes, the power check and the dry run were run again on the changed code. Every check holds, and the power check's figures are unchanged.

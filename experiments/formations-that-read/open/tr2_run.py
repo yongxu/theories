@@ -13,20 +13,26 @@ holding its files, downloaded at its revision. Before any pass, smoke and run re
 - every file MODELS.json lists for the checkpoint is in DIR with its size and hash, and no other file a
   loader could read is there;
 - Python is 3.11 and every package MODELS.json pins is at its version;
-- the engine reports the checkpoint's layers and width (MODELS.json's), bfloat16, the device and
-  threads asked for, and deterministic algorithms;
+- the engine reports the checkpoint's model class, layers and width (MODELS.json's), bfloat16, eager
+  attention, the device and threads asked for, and deterministic algorithms, and a tuned checkpoint's
+  tokenizer holds the chat template's text whose hash MODELS.json lists;
+- the newest link lists every file this freeze holds (HELD);
 - for run, the checkpoint's newest smoke run said go on, under the same link, device and threads (a
-  newest smoke run with no report, stopped before its end, says no), and no folder of the checkpoint is
-  whole: a whole folder ends that checkpoint's run.
+  newest smoke run with no report, stopped before its end, says no), and no other folder of the
+  checkpoint is whole or refused: a whole folder ends that checkpoint's run, and a refused one stops
+  it until its reason is seen. The run's own folder must load as the reading loads it.
 The run calls the pass (tr2_pass.py) itself; the engine supplies torch, the model, the tokenizer and
-the device. Each pass's states and logits must be bfloat16, made on that device.
+the device. Every state and the logits of a pass must be bfloat16, made on that device.
 A run writes only into results/<checkpoint>-<engine>-<device>-t<threads>/, <engine> the first 12 hex
 digits of the engine file's hash, so passes made under two engines, devices or thread counts never
 share a folder: meta.json (fixed at its first pass: the checkpoint, the device, the threads, what the
 engine reports and its code's hash; the links listed as they come), groups.jsonl (one line per group,
-written whole once its passes are made), and states/ (the kept states, each named in its pass's record
-with its hash). A run stopped part way goes on at the first group not written; a last line torn by the
-stop is moved, unchanged, to groups.jsonl.torn-<k> beside it and the group made again. The phases go
+written whole and synced once its passes are made), and states/ (the kept states, each named in its
+pass's record with its hash). meta.json and each state file are written to a temporary name, synced and
+moved into place, the states before their group's line. A run stopped part way goes on at the first
+group not written; a last line torn by the stop (no newline at its end) is moved, unchanged, to
+groups.jsonl.torn-<k> beside it and the group made again, and so is a last group whose state files
+differ from their hashes, the differing files kept beside them. The phases go
 pilot, main, recognition, and nothing in one moves another's plan.
 read reads each checkpoint alone, and writes results/readout.json whatever any one checkpoint gives. A
 checkpoint is read from the one folder whose phases are all whole. A folder is refused, listed with
@@ -34,9 +40,11 @@ why and not read, where its meta is not a run of that checkpoint under an engine
 freeze's chain, or a record is one the plan does not hold, differs from the plan in its phase,
 content, kind, arms or keeping of states, has a field missing or a prompt hash other than the one its
 group rebuilds, names a state file that differs from its hash, or is not one whole line (a torn last
-line aside: it leaves the folder partial, read as absent and left in place). A checkpoint with two
-whole folders is refused (the run never makes a second); one with no whole folder is listed as
-partial, with what is whole. The folders not read are named.
+line aside: it leaves the folder partial, read as absent and left in place), or where its meta.json is
+not whole or anything else stops its loading (the error is its reason). A checkpoint with two whole
+folders is refused (the run never makes a second); one with no whole folder is listed as partial, or
+refused where every folder is, with each folder's groups per phase and its first and last pass. The
+folders not read are named.
 """
 
 import argparse
@@ -82,6 +90,11 @@ CHECKPOINTS = {c["id"]: c for c in MODELS["checkpoints"]}
 # the pass) and the dry run with its output. Every other file a link lists is fixed: the models and
 # their hashes, the conditions, the plan, the pass, the rule, the power check, this run and its checks.
 MAY_CHANGE = frozenset(str(OPEN / f) for f in ("tr2_engine.py", "tr2_dry_run.py", "results/dry-run.json"))
+# Every file this freeze holds: the newest link must list each of them, or smoke and run refuse.
+HELD = MAY_CHANGE | frozenset(str(OPEN / f) for f in (
+    "MODELS.json", "tr2_conditions.py", "tr2_plan.py", "tr2_pass.py", "tr2_rule.py", "tr2_run.py",
+    "tr2_power.py", "results/power.json")) | frozenset(
+    (str(OPEN.parent / "tr2.py"), str(OPEN.parent / "tr2.json"), str(R.TOLD / "run.py")))
 RESULTS = HERE / "results"
 SMOKE_DIR = RESULTS / "smoke"
 
@@ -158,8 +171,14 @@ def check_packages(version=importlib.metadata.version, python=sys.version_info):
     return bad
 
 
+def held(link):
+    """The newest link lists every file this freeze holds, the engine among them."""
+    refuse(HELD <= set(link["hashes"]), f"the link {link['link']} does not list {sorted(HELD - set(link['hashes']))}")
+    return link
+
+
 def preflight(ckpt, folder, packages=True):
-    link = frozen()
+    link = held(frozen())
     if ckpt not in CHECKPOINTS:
         raise SystemExit(f"no checkpoint {ckpt}")
     bad = check_files(CHECKPOINTS[ckpt], folder) + (check_packages() if packages else [])
@@ -175,6 +194,7 @@ FIELDS = {"input_sha256", "n_tokens", "layer_sha256", "logits_sha256", "p", "gre
 KEPT = FIELDS - {"state", "dist"}
 RECORD = KEPT | {"arm", "prompt_sha256", "t0", "t1", "tv_vs_base"}
 GROUP = {"group", "phase", "content", "kind", "keep_state", "passes"}
+META = {"kind", "checkpoint", "spec", "device", "threads", "engine", "links", "seed"}
 BF16 = "torch.bfloat16"
 
 
@@ -194,8 +214,21 @@ def check_engine(desc, ckpt, device, threads, real=True):
            f"the engine reports {desc['device']}, {desc['threads']} threads, deterministic "
            f"{desc['deterministic']}, not {device}, {threads}, True")
     if real:
-        refuse((desc["layers"], desc["hidden"]) == (spec["layers"], spec["hidden"]),
-               f"the engine reports {desc['layers']} layers of {desc['hidden']}, not MODELS.json's")
+        refuse((desc["layers"], desc["hidden"], desc["class"]) == (spec["layers"], spec["hidden"], spec["architecture"]),
+               f"the engine reports {desc['class']}, {desc['layers']} layers of {desc['hidden']}, not MODELS.json's")
+        refuse(desc["attention"] == "eager", f"the engine's attention is {desc['attention']}, not eager")
+
+
+def check_template(tok, ckpt):
+    """A tuned checkpoint's tokenizer holds the chat template read at the pinned revision (the hash of its
+    text, UTF-8, from the file MODELS.json names). What the template adds is in the text the ids must
+    decode to, so the smoke run's decode check cannot see it; this check can, for the template's text."""
+    want = CHECKPOINTS[ckpt].get("chat_template_sha256")
+    if want is None:
+        return
+    have = getattr(tok, "chat_template", None)
+    refuse(isinstance(have, str) and hashlib.sha256(have.encode("utf-8")).hexdigest() == want,
+           f"{ckpt}'s tokenizer holds another chat template than the pinned one")
 
 
 def prompt_sha(prompt):
@@ -214,8 +247,8 @@ def make_group(engine, g, role, desc, states_dir, lmap):
                          lmap[tuple(names)], g["keep_state"])
         t1 = time.time()
         refuse(set(r) == FIELDS, f"the pass returned {sorted(r)}")
-        refuse(r["dtype"] == BF16 and r["logits_dtype"] == BF16, f"the pass made {r['dtype']}, {r['logits_dtype']}")
-        refuse(r["device"].split(":")[0] == desc["device"], f"the pass was made on {r['device']}")
+        refuse(r["dtype"] == [BF16] and r["logits_dtype"] == BF16, f"the pass made {r['dtype']}, {r['logits_dtype']}")
+        refuse({d.split(":")[0] for d in r["device"]} == {desc["device"]}, f"the pass was made on {r['device']}")
         refuse(len(r["layer_sha256"]) == desc["layers"] + 1, "the pass returned another number of states")
         refuse(set(r["p"]) == set(names) | {"other"} and all(0.0 <= v <= 1.0 for v in r["p"].values()),
                "the pass returned other probabilities")
@@ -224,7 +257,7 @@ def make_group(engine, g, role, desc, states_dir, lmap):
         if g["keep_state"]:
             refuse(len(r["state"]) == (desc["layers"] + 1) * desc["hidden"] * 4, "the state's length differs")
             name = f"{g['id'].replace('/', '_')}_{arm}.f32"
-            (Path(states_dir) / name).write_bytes(r["state"])
+            durable(Path(states_dir) / name, r["state"])
             rec["state_file"], rec["state_sha256"] = name, hashlib.sha256(r["state"]).hexdigest()
         dists[arm] = r["dist"]
         out.append(rec)
@@ -236,17 +269,39 @@ def make_group(engine, g, role, desc, states_dir, lmap):
 
 
 def torn_last(raw):
-    """Where a last line torn by a stop begins (no newline at its end, or not whole JSON), or None."""
-    if not raw:
+    """Where a last line torn by a stop begins: a last line with no newline at its end, since a record
+    and its newline are written in one call. None where the log ends in a newline."""
+    if not raw or raw.endswith(b"\n"):
         return None
-    body = raw[:-1] if raw.endswith(b"\n") else raw
-    start = body.rfind(b"\n") + 1
-    last = raw[start:]
+    return raw.rfind(b"\n") + 1
+
+
+def durable(p, data):
+    """Bytes written to a temporary name, flushed to the disk (F_FULLFSYNC where the system has it), and
+    moved into place, the folder flushed after: a stop leaves the old file or the new, never a part."""
+    p = Path(p)
+    tmp = p.with_name(p.name + ".tmp")
+    with open(tmp, "wb") as f:
+        f.write(data)
+        f.flush()
+        sync(f.fileno())
+    os.replace(tmp, p)
+    fd = os.open(p.parent, os.O_RDONLY)
     try:
-        whole = raw.endswith(b"\n") and (not last.strip() or json.loads(last) is not None)
-    except json.JSONDecodeError:
-        whole = False
-    return None if whole else start
+        os.fsync(fd)
+    finally:
+        os.close(fd)
+
+
+def sync(fd):
+    import fcntl
+    if hasattr(fcntl, "F_FULLFSYNC"):
+        try:
+            fcntl.fcntl(fd, fcntl.F_FULLFSYNC)
+            return
+        except OSError:
+            pass
+    os.fsync(fd)
 
 
 def written(folder, torn_ok=False):
@@ -258,13 +313,17 @@ def written(folder, torn_ok=False):
     raw = p.read_bytes()
     cut = torn_last(raw) if torn_ok else None
     out = []
-    for k, x in enumerate((raw if cut is None else raw[:cut]).decode("utf-8").splitlines()):
+    # Records are split at the newline alone: json.dumps escapes every other line break and control
+    # character (and, ASCII by default, U+0085, U+2028 and U+2029), so no record holds one raw.
+    for k, x in enumerate((raw if cut is None else raw[:cut]).decode("utf-8").split("\n")):
         if not x.strip():
             continue
         try:
-            out.append(json.loads(x))
+            rec = json.loads(x)
         except json.JSONDecodeError:
             raise SystemExit(f"refused: {p} line {k + 1} is not a whole record")
+        refuse(isinstance(rec, dict), f"{p} line {k + 1} is not a record")
+        out.append(rec)
     return out
 
 
@@ -283,14 +342,48 @@ def repair_torn(folder):
     while (Path(folder) / f"groups.jsonl.torn-{k}").exists():
         k += 1
     side = Path(folder) / f"groups.jsonl.torn-{k}"
-    with open(side, "wb") as f:
-        f.write(raw[start:])
-        f.flush()
-        os.fsync(f.fileno())
+    durable(side, raw[start:])
     with open(p, "r+b") as f:
         f.truncate(start)
         f.flush()
-        os.fsync(f.fileno())
+        sync(f.fileno())
+    return side
+
+
+def repair_states(folder):
+    """A last group whose kept state files differ from their hashes (a machine stop before the files
+    reached the disk) is treated as torn: its line is moved, unchanged, to groups.jsonl.torn-<k>, each
+    differing file is kept beside it as <name>.torn-<k>, and the group is made again. Returns the side
+    file, or None."""
+    p = Path(folder) / "groups.jsonl"
+    if not p.exists():
+        return None
+    raw = p.read_bytes()
+    if not raw:
+        return None
+    body = raw[:-1] if raw.endswith(b"\n") else raw
+    start = body.rfind(b"\n") + 1
+    g = json.loads(raw[start:])
+    if not g.get("keep_state"):
+        return None
+    bad = [r["state_file"] for r in g["passes"]
+           if not (Path(folder) / "states" / r["state_file"]).exists()
+           or hashlib.sha256((Path(folder) / "states" / r["state_file"]).read_bytes()).hexdigest() != r["state_sha256"]]
+    if not bad:
+        return None
+    k = 0
+    while (Path(folder) / f"groups.jsonl.torn-{k}").exists():
+        k += 1
+    side = Path(folder) / f"groups.jsonl.torn-{k}"
+    for name in bad:
+        sp = Path(folder) / "states" / name
+        if sp.exists():
+            os.replace(sp, sp.with_name(f"{name}.torn-{k}"))
+    durable(side, raw[start:])
+    with open(p, "r+b") as f:
+        f.truncate(start)
+        f.flush()
+        sync(f.fileno())
     return side
 
 
@@ -298,7 +391,7 @@ def append(folder, rec):
     with open(Path(folder) / "groups.jsonl", "a", encoding="utf-8") as f:
         f.write(json.dumps(rec, sort_keys=True) + "\n")
         f.flush()
-        os.fsync(f.fileno())
+        sync(f.fileno())
 
 
 def open_folder(folder, meta):
@@ -313,11 +406,11 @@ def open_folder(folder, meta):
             raise SystemExit(f"refused: {folder} was begun under {[(k, old[k]) for k in fixed]}")
         if meta["link"] not in old["links"]:
             old["links"].append(meta["link"])
-            mp.write_text(json.dumps(old, indent=1) + "\n", encoding="utf-8")
+            durable(mp, (json.dumps(old, indent=1) + "\n").encode())
         return old
     m = {k: v for k, v in meta.items() if k != "link"}
     m["links"] = [meta["link"]]
-    mp.write_text(json.dumps(m, indent=1) + "\n", encoding="utf-8")
+    durable(mp, (json.dumps(m, indent=1) + "\n").encode())
     return m
 
 
@@ -369,9 +462,11 @@ def link_name(link):
 
 def smoke(ckpt, folder, device, threads, engine_cls=None, root=None):
     stand_in_root(engine_cls, root)
-    link = preflight(ckpt, folder) if engine_cls is None else frozen()
+    link = preflight(ckpt, folder) if engine_cls is None else held(frozen())
     engine = (engine_cls or _engine_cls())(folder, CHECKPOINTS[ckpt], device, threads)
     check_engine(engine.describe(), ckpt, device, threads, real=engine_cls is None)
+    if engine_cls is None:
+        check_template(engine.tok, ckpt)
     root = Path(root or SMOKE_DIR)
     stamp = f"{ckpt}-{time.strftime('%Y%m%dT%H%M%SZ', time.gmtime())}"
     k = 0
@@ -442,17 +537,25 @@ def latest_smoke(ckpt, link, device, threads, root=None):
 def run(ckpt, folder, device, threads, engine_cls=None, root=None, stop_after=None):
     """The checkpoint's run, phase by phase; with stop_after, it stops after that many groups made."""
     stand_in_root(engine_cls, root)
-    link = preflight(ckpt, folder) if engine_cls is None else frozen()
+    link = preflight(ckpt, folder) if engine_cls is None else held(frozen())
     if not latest_smoke(ckpt, link, device, threads, root=(Path(root) / "smoke") if root else None):
         raise SystemExit("refused: no smoke run said go on under this link, device and threads")
     engine = (engine_cls or _engine_cls())(folder, CHECKPOINTS[ckpt], device, threads)
     check_engine(engine.describe(), ckpt, device, threads, real=engine_cls is None)
+    if engine_cls is None:
+        check_template(engine.tok, ckpt)
     out = run_folder(root or RESULTS, ckpt, code_sha(engine), device, threads)
-    for d, (_, _, whole, _) in folders_of(Path(root or RESULTS), ckpt, link).items():
-        refuse(d == out.name or not (whole and all(whole.values())),
-               f"{ckpt} has a whole folder, {d}: a whole folder ends a checkpoint's run")
+    for d, (m, why, whole, _) in folders_of(Path(root or RESULTS), ckpt, link).items():
+        if d != out.name:
+            refuse(m is not None, f"{ckpt}'s folder {d} is refused ({why}): no run goes on while one is")
+            refuse(not all(whole.values()), f"{ckpt} has a whole folder, {d}: a whole folder ends a checkpoint's run")
     meta = open_folder(out, meta_of(ckpt, engine, link, "run"))
     repair_torn(out)
+    repair_states(out)
+    try:
+        load(out, ckpt, link)
+    except SystemExit as e:
+        raise SystemExit(f"refused: the run's own folder {out.name} is refused ({e}): no pass is added to it")
     desc, role = meta["engine"], CHECKPOINTS[ckpt]["role"]
     lmap = letter_maps(engine)
     made = 0
@@ -475,7 +578,13 @@ def load(folder, ckpt, link):
     """A checkpoint's groups from one of its folders, the folder and every record checked; whether each
     phase is whole; whether a torn last line was read as absent."""
     folder = Path(folder)
-    meta = json.loads((folder / "meta.json").read_text(encoding="utf-8"))
+    try:
+        meta = json.loads((folder / "meta.json").read_text(encoding="utf-8"))
+    except (OSError, UnicodeDecodeError, json.JSONDecodeError) as e:
+        raise SystemExit(f"refused: {folder.name}'s meta.json is not whole ({type(e).__name__})")
+    refuse(isinstance(meta, dict) and META <= set(meta) and isinstance(meta["engine"], dict)
+           and isinstance(meta["links"], list) and all(isinstance(m, dict) and "link" in m for m in meta["links"]),
+           f"{folder.name}'s meta.json lacks a field")
     refuse(meta.get("kind") == "run", f"{folder.name} is not a run's folder")
     code = meta["engine"].get("code_sha256", "")
     refuse(meta.get("checkpoint") == ckpt and folder.name == folder_name(ckpt, code, meta["device"], meta["threads"]),
@@ -485,12 +594,14 @@ def load(folder, ckpt, link):
     role = CHECKPOINTS[ckpt]["role"]
     torn = torn_last((folder / "groups.jsonl").read_bytes()) is not None if (folder / "groups.jsonl").exists() else False
     gs = written(folder, torn_ok=True)
-    ids = [g.get("group") for g in gs]
+    for g in gs:
+        refuse(set(g) == GROUP and isinstance(g["passes"], list) and all(isinstance(r, dict) for r in g["passes"]),
+               f"{folder.name}: a group's fields are {sorted(g)}, or its passes are not a list of records")
+    ids = [g["group"] for g in gs]
     refuse(len(ids) == len(set(ids)), f"{folder.name} holds a group twice")
     have = {g["group"]: g for g in gs}
     plan = {g["id"]: g for ph in ("pilot", "main", "recognition") for g in P.phase_groups(ph)}
     for g in gs:
-        refuse(set(g) == GROUP, f"{folder.name}: a group's fields are {sorted(g)}")
         pg = plan.get(g["group"])
         refuse(pg is not None, f"{g['group']} is not in the plan")
         refuse([r.get("arm") for r in g["passes"]] == pg["arms"] and g["keep_state"] == pg["keep_state"],
@@ -499,7 +610,7 @@ def load(folder, ckpt, link):
                f"{g['group']}'s phase, content or kind differs from the plan's")
         for r in g["passes"]:
             need = RECORD | ({"state_file", "state_sha256"} if pg["keep_state"] else set())
-            refuse(set(r) == need, f"{g['group']} {r['arm']}: its fields are not the record's")
+            refuse(set(r) == need, f"{g['group']} {r.get('arm')}: its fields are not the record's")
             refuse(r["prompt_sha256"] == prompt_sha(P.prompt_of(pg, r["arm"], role)),
                    f"{g['group']} {r['arm']}: the prompt hash differs")
             if pg["keep_state"]:
@@ -513,6 +624,15 @@ def load(folder, ckpt, link):
     return meta, [have[k] for k in plan if k in have], whole, torn
 
 
+def progress(gs):
+    """How far a folder got: its groups per phase against the plan's, and its first and last pass."""
+    out = {ph: f"{sum(g['phase'] == ph for g in gs)} of {len(P.phase_groups(ph))}" for ph in ("pilot", "main", "recognition")}
+    times = [(r["t0"], r["t1"]) for g in gs for r in g["passes"]]
+    out["first_pass_t0"] = min(t[0] for t in times) if times else None
+    out["last_pass_t1"] = max(t[1] for t in times) if times else None
+    return out
+
+
 def folders_of(root, ckpt, link):
     """Each folder of a checkpoint, loaded, or (None, why, None, None) where it is refused."""
     out = {}
@@ -521,6 +641,8 @@ def folders_of(root, ckpt, link):
             out[d.name] = load(d, ckpt, link)
         except SystemExit as e:
             out[d.name] = (None, str(e), None, None)
+        except Exception as e:                       # noqa: BLE001  a damaged folder is listed, never fatal
+            out[d.name] = (None, f"refused: {type(e).__name__}: {e}", None, None)
     return out
 
 
@@ -528,13 +650,17 @@ def read_one(root, ck, link):
     loaded = folders_of(root, ck, link)
     if not loaded:
         return {"status": "not run"}
-    listing = {k: ({"refused": v[1]} if v[0] is None else {"whole": v[2], "torn_last_line": v[3]})
+    listing = {k: ({"refused": v[1]} if v[0] is None else
+                   {"whole": v[2], "torn_last_line": v[3], "progress": progress(v[1])})
                for k, v in loaded.items()}
     whole = [k for k, v in loaded.items() if v[0] is not None and all(v[2].values())]
     if len(whole) > 1:
         return {"status": "refused: two whole folders", "folders": listing}
     if not whole:
-        return {"status": "partial", "folders": listing}
+        refused_n = sum(v[0] is None for v in loaded.values())
+        status = ("refused: every folder refused" if refused_n == len(loaded) else
+                  "partial" if not refused_n else f"partial; {refused_n} folder(s) refused")
+        return {"status": status, "folders": listing}
     meta, gs, _, _ = loaded[whole[0]]
     r = RU.read_checkpoint(root / whole[0], gs, meta["engine"])
     r.update({"status": "read", "folder": whole[0], "not_read": {k: v for k, v in listing.items() if k != whole[0]},
@@ -552,6 +678,8 @@ def read(root=None):
             out["checkpoints"][ck] = read_one(root, ck, link)
         except SystemExit as e:
             out["checkpoints"][ck] = {"status": "refused", "why": str(e)}
+        except Exception as e:                       # noqa: BLE001  one checkpoint's fault is its own
+            out["checkpoints"][ck] = {"status": "refused", "why": f"{type(e).__name__}: {e}"}
     (root / "readout.json").write_text(json.dumps(out, indent=1) + "\n", encoding="utf-8")
     return out
 

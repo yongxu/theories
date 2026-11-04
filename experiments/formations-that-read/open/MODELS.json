@@ -14,6 +14,7 @@
    "layers": 36,
    "hidden": 4096,
    "dtype": "bfloat16",
+   "architecture": "Qwen3ForCausalLM",
    "files": [
     {
      "path": "config.json",
@@ -89,6 +90,9 @@
    "layers": 36,
    "hidden": 4096,
    "dtype": "bfloat16",
+   "architecture": "Qwen3ForCausalLM",
+   "chat_template_sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8",
+   "chat_template_from": "tokenizer_config.json",
    "files": [
     {
      "path": "config.json",
@@ -164,6 +168,7 @@
    "layers": 32,
    "hidden": 4096,
    "dtype": "bfloat16",
+   "architecture": "Olmo3ForCausalLM",
    "files": [
     {
      "path": "config.json",
@@ -234,6 +239,9 @@
    "layers": 32,
    "hidden": 4096,
    "dtype": "bfloat16",
+   "architecture": "Olmo3ForCausalLM",
+   "chat_template_sha256": "f5186d42d99c8a0445d37fd8a6c7ccf07fe3e24a29ce622d8bd245da9507b12b",
+   "chat_template_from": "chat_template.jinja",
    "files": [
     {
      "path": "chat_template.jinja",

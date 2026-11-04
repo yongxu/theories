@@ -18,7 +18,7 @@
   "tuned: one user message, the reply begun, the base text": true,
   "toggling a factor changes one line": true,
   "the identical arm is base": true,
-  "the pilot's two arms differ in one line, their factor lines at base's": true
+  "the pilot's two arms differ in one line, the fifth, their factor lines at base's": true
  },
  "the pass's token ids": {
   "base: the text, no special tokens added": true,
@@ -1639,6 +1639,15 @@
   "the records equal a run made whole": true,
   "ok": true
  },
+ "a run stopped with a state file not on the disk goes on": {
+  "the 406th group keeps states": true,
+  "its line kept beside the log": true,
+  "the differing file kept beside it": true,
+  "the group made again, once": true,
+  "the records equal a run made whole": true,
+  "the folder loads": true,
+  "ok": true
+ },
  "a torn old folder beside a whole one": {
   "the whole folder read": true,
   "the old folder listed, its torn line read as absent": true,
@@ -1648,7 +1657,7 @@
  },
  "each checkpoint read alone": {
   "two whole folders: that checkpoint refused": true,
-  "a folder of another checkpoint's run: listed as refused": true,
+  "a folder of another checkpoint's run, its only one: every folder refused": true,
   "the other checkpoints not run": true,
   "the readout written": true,
   "ok": true
@@ -1706,6 +1715,26 @@
   "a pass made in float16, refused": true,
   "an engine without deterministic algorithms, refused": true,
   "an engine reporting other layers than MODELS.json's, refused": true,
+  "an engine reporting MODELS.json's class, layers and width, eager, read": true,
+  "an engine reporting another attention than eager, refused": true,
+  "an engine reporting another model class, refused": true,
+  "a pass with a state made on another device, refused": true,
+  "a pass with one state in float16, refused": true,
+  "a link not listing every file the freeze holds, refused": true,
+  "smoke under such a link, refused": true,
+  "run under such a link, refused": true,
+  "a tokenizer holding the pinned template, read": true,
+  "a tokenizer holding another template, refused": true,
+  "a tokenizer holding none, refused": true,
+  "a checkpoint listing no template, not checked": true,
+  "a torn meta.json: refused when loaded, listed when read": true,
+  "a meta.json without its links: refused, listed": true,
+  "a record without its group: refused, listed": true,
+  "a line that is not a record: refused, listed": true,
+  "a record whose passes are no list: refused, listed": true,
+  "a last line ending in its newline but not whole: refused, not taken as torn": true,
+  "a run beside a refused folder, refused": true,
+  "a run whose own folder is refused, refused, the folder unchanged": true,
   "ok": true
  },
  "files_and_packages": {

@@ -29,16 +29,19 @@ not run here: they differ from these in sizes the stand-ins do not test. Each fo
 run, the pilot, the main run (1,600 pairs) and recognition through tr2_run's own code, and is read by
 tr2_run.read; each reading is checked against what the type implies. Then: a run stopped part way and
 resumed equals one run whole, also when its last line is torn; a letter's probability a rounding above
-1; the probe's control voiding the probe where the identical arm's states are shifted; every refusal of
-load, open_folder, the engine's report, the pass and run; the reading of each checkpoint alone; the file
-and package checks; the frozen chain in stand-in repositories; the smoke run's report, its ids and its
-prompts against the scored ones.
+1; the probe's control voiding the probe where the identical arm's states are shifted; the refusals listed
+in results/dry-run.json (of load, open_folder, the engine's report, the pass, smoke and run, damaged
+folders among them, which are refused and listed, never a crash); the reading of each checkpoint alone;
+the file and package checks; the frozen chain in stand-in repositories; the smoke run's report, its ids
+and its prompts against the scored ones. The stand-in model makes two positions, the pass reading the
+last, and names its device as torch does ("cpu:0").
 """
 
 import contextlib
 import hashlib
 import json
 import math
+import os
 import random
 import shutil
 import struct
@@ -67,7 +70,8 @@ CODE = {f: 6 + i for i, f in enumerate(C.FACTOR_IDS)}
 BY_SCENARIO = {c["scenario"]: c for c in C.CONTENTS}
 CKPT = "qwen-tuned"
 # The stand-ins' code is this file, so the dry run's one link lists this file's hash as the engine's.
-DRY_LINK = {"link": "FROZEN.sha256", "link_commit": "dry", "freeze_commit": "dry", "hashes": {},
+DRY_LINK = {"link": "FROZEN.sha256", "link_commit": "dry", "freeze_commit": "dry",
+            "hashes": {f: "dry" for f in TR.HELD},
             "chain": {"FROZEN.sha256": {TR.ENGINE: TR.sha_file(__file__)}}}
 
 
@@ -317,8 +321,10 @@ class Model:
         cast = bf16 if self.dtype is FT.bfloat16 else f16
         hs = [cast(h) for h in self.state(content, up, pilot, recog)]
         lg = cast(self.logits(hs[-1]))
-        return Out(tuple(Tensor(h, (1, 1, H), self.dtype, self.device) for h in hs),
-                   Tensor(lg, (1, 1, VOCAB), self.dtype, self.device))
+        on = self.device + ":0"                     # as torch names a device: its type and its index
+        first = cast([9.0] * H)                     # a first position, which the pass must not read
+        return Out(tuple(Tensor(first + h, (1, 2, H), self.dtype, on) for h in hs),
+                   Tensor(cast([9.0] * VOCAB) + lg, (1, 2, VOCAB), self.dtype, on))
 
 
 def make_engine(kind, weight=1.0, tok=Tok, dtype=None, deterministic=True, model=None):
@@ -332,7 +338,7 @@ def make_engine(kind, weight=1.0, tok=Tok, dtype=None, deterministic=True, model
         def describe(self):
             return {"layers": LAYERS, "hidden": H, "dtype": str(self.model.dtype), "device": self.device,
                     "threads": self.threads, "deterministic": deterministic, "vocab": VOCAB,
-                    "torch": FT.__version__, "formation": kind}
+                    "torch": FT.__version__, "formation": kind, "attention": "eager", "class": "StandIn"}
     return Stand
 
 
@@ -585,7 +591,125 @@ def refusals(tmp, clean):
     desc = make_engine("detected")(e, TR.CHECKPOINTS[CKPT], "cpu", 8).describe()
     out["an engine reporting other layers than MODELS.json's, refused"] = refused(
         lambda: TR.check_engine(desc, CKPT, "cpu", 8, real=True))
+    spec = TR.CHECKPOINTS[CKPT]
+    real = {**desc, "layers": spec["layers"], "hidden": spec["hidden"], "class": spec["architecture"]}
+    out["an engine reporting MODELS.json's class, layers and width, eager, read"] = not refused(
+        lambda: TR.check_engine(real, CKPT, "cpu", 8, real=True))
+    out["an engine reporting another attention than eager, refused"] = refused(
+        lambda: TR.check_engine({**real, "attention": "sdpa"}, CKPT, "cpu", 8, real=True))
+    out["an engine reporting another model class, refused"] = refused(
+        lambda: TR.check_engine({**real, "class": "PeftModelForCausalLM"}, CKPT, "cpu", 8, real=True))
+
+    class Elsewhere(Model):
+        """A model whose first state is made on another device than the rest."""
+        def __call__(self, input_ids, output_hidden_states, use_cache):
+            o = super().__call__(input_ids, output_hidden_states, use_cache)
+            return Out((o.hidden_states[0].to("mps:0"),) + o.hidden_states[1:], o.logits)
+    out["a pass with a state made on another device, refused"] = refused(
+        lambda: TR.smoke(CKPT, e / "files", "cpu", 8, engine_cls=make_engine("detected", model=Elsewhere),
+                         root=e / "smoke-elsewhere"))
+
+    class OneHalf(Model):
+        """A model whose first state alone is float16."""
+        def __call__(self, input_ids, output_hidden_states, use_cache):
+            o = super().__call__(input_ids, output_hidden_states, use_cache)
+            return Out((o.hidden_states[0].to(FT.float16),) + o.hidden_states[1:], o.logits)
+    out["a pass with one state in float16, refused"] = refused(
+        lambda: TR.smoke(CKPT, e / "files", "cpu", 8, engine_cls=make_engine("detected", model=OneHalf),
+                         root=e / "smoke-one-f16"))
+    out["a link not listing every file the freeze holds, refused"] = refused(
+        lambda: TR.held({**DRY_LINK, "hashes": {k: v for k, v in DRY_LINK["hashes"].items() if k != TR.ENGINE}}))
+    out["smoke under such a link, refused"] = refused(
+        lambda: with_link({**DRY_LINK, "hashes": {}}, lambda: TR.smoke(
+            CKPT, e / "files", "cpu", 8, engine_cls=make_engine("detected"), root=e / "smoke-unheld")))
+    out["run under such a link, refused"] = refused(
+        lambda: with_link({**DRY_LINK, "hashes": {}}, lambda: TR.run(
+            CKPT, clean / "files", "cpu", 8, engine_cls=make_engine("detected"), root=clean)))
+    out.update(templates())
+    out.update(damaged(tmp, clean, copy, edit))
     out["ok"] = all(out.values())
+    return out
+
+
+def templates():
+    """check_template against a hash put in place of MODELS.json's for the run: the pinned text read, another
+    text or none refused; a checkpoint with no template listed (a base one) not checked."""
+    spec = TR.CHECKPOINTS[CKPT]
+    keep = spec.get("chat_template_sha256")
+
+    class Holds:
+        def __init__(self, text):
+            if text is not None:
+                self.chat_template = text
+    spec["chat_template_sha256"] = hashlib.sha256("{{ pinned }}".encode()).hexdigest()
+    try:
+        out = {"a tokenizer holding the pinned template, read": not refused(lambda: TR.check_template(Holds("{{ pinned }}"), CKPT)),
+               "a tokenizer holding another template, refused": refused(lambda: TR.check_template(Holds("{{ other }}"), CKPT)),
+               "a tokenizer holding none, refused": refused(lambda: TR.check_template(Holds(None), CKPT)),
+               "a checkpoint listing no template, not checked": not refused(lambda: TR.check_template(Holds(None), "qwen-base"))}
+    finally:
+        if keep is None:
+            spec.pop("chat_template_sha256")
+        else:
+            spec["chat_template_sha256"] = keep
+    return out
+
+
+def damaged(tmp, clean, copy, edit):
+    """A damaged folder is refused when loaded and listed when read, never a crash; a run does not go on
+    while one is, nor add to its own when it is."""
+    out = {}
+
+    def listed_refused(d):
+        rd = TR.read(root=d)["checkpoints"][CKPT]
+        return rd["status"] == "refused: every folder refused" and "refused" in rd["folders"][run_dir(d).name]
+    d = copy("meta-torn")
+    mp = run_dir(d) / "meta.json"
+    mp.write_bytes(mp.read_bytes()[:-30])
+    out["a torn meta.json: refused when loaded, listed when read"] = \
+        refused(lambda: TR.load(run_dir(d), CKPT, DRY_LINK)) and listed_refused(d)
+    d = copy("meta-field")
+    mp = run_dir(d) / "meta.json"
+    mp.write_text(json.dumps({k: v for k, v in json.loads(mp.read_text()).items() if k != "links"}))
+    out["a meta.json without its links: refused, listed"] = \
+        refused(lambda: TR.load(run_dir(d), CKPT, DRY_LINK)) and listed_refused(d)
+    d = copy("no-group")
+    edit(d, lambda rows: rows[2].pop("group"))
+    out["a record without its group: refused, listed"] = \
+        refused(lambda: TR.load(run_dir(d), CKPT, DRY_LINK)) and listed_refused(d)
+    d = copy("not-a-record")
+    edit(d, lambda rows: rows.insert(2, [1, 2]))
+    out["a line that is not a record: refused, listed"] = \
+        refused(lambda: TR.load(run_dir(d), CKPT, DRY_LINK)) and listed_refused(d)
+    d = copy("passes-not-list")
+    edit(d, lambda rows: rows[4].update(passes={"a": 1}))
+    out["a record whose passes are no list: refused, listed"] = \
+        refused(lambda: TR.load(run_dir(d), CKPT, DRY_LINK)) and listed_refused(d)
+    d = copy("last-whole-bad")
+    gp = run_dir(d) / "groups.jsonl"
+    raw = gp.read_bytes()
+    body = raw[:-1]
+    gp.write_bytes(body[:body.rfind(b"\n") + 1] + b'{"group": \n')
+    out["a last line ending in its newline but not whole: refused, not taken as torn"] = \
+        refused(lambda: TR.load(run_dir(d), CKPT, DRY_LINK)) and listed_refused(d)
+    # a refused folder stops a run, whether it is another folder or the run's own
+    d = copy("own-refused")
+    TR.smoke(CKPT, d / "files", "cpu", 4, engine_cls=make_engine("detected"), root=d / "smoke")
+    old = run_dir(d)
+    m = json.loads((old / "meta.json").read_text())
+    m["engine"]["code_sha256"] = "1" * 64
+    new = old.parent / TR.folder_name(CKPT, "1" * 64, m["device"], m["threads"])
+    os.rename(old, new)
+    (new / "meta.json").write_text(json.dumps(m))   # an engine no link lists: refused
+    out["a run beside a refused folder, refused"] = refused(
+        lambda: TR.run(CKPT, d / "files", "cpu", 4, engine_cls=make_engine("detected"), root=d))
+    d = copy("own-folder")
+    edit(d, lambda rows: rows[3]["passes"][0].update(prompt_sha256="0" * 64))
+    own = run_dir(d)
+    before = (own / "groups.jsonl").read_bytes()
+    out["a run whose own folder is refused, refused, the folder unchanged"] = refused(
+        lambda: TR.run(CKPT, d / "files", "cpu", 8, engine_cls=make_engine("detected"), root=d)) \
+        and (own / "groups.jsonl").read_bytes() == before
     return out
 
 
@@ -600,12 +724,13 @@ def reading_alone(tmp, clean):
     rd = with_link(ADDENDUM_LINK, lambda: TR.read(root=d))["checkpoints"]
     written = (d / "readout.json").exists()
     return {"two whole folders: that checkpoint refused": rd[CKPT]["status"] == "refused: two whole folders",
-            "a folder of another checkpoint's run: listed as refused": rd["olmo-tuned"]["status"] == "partial"
+            "a folder of another checkpoint's run, its only one: every folder refused":
+            rd["olmo-tuned"]["status"] == "refused: every folder refused"
             and "refused" in next(iter(rd["olmo-tuned"]["folders"].values())),
             "the other checkpoints not run": all(rd[k]["status"] == "not run" for k in ("qwen-base", "olmo-base")),
             "the readout written": written,
             "ok": written and rd[CKPT]["status"] == "refused: two whole folders"
-            and rd["olmo-tuned"]["status"] == "partial"
+            and rd["olmo-tuned"]["status"] == "refused: every folder refused"
             and all(rd[k]["status"] == "not run" for k in ("qwen-base", "olmo-base"))}
 
 
@@ -653,6 +778,32 @@ def torn_resume(tmp, whole):
            "the torn bytes kept beside the log": len(side) == 1 and side[0].read_bytes() == cut[start:],
            "the torn group made again, once": [g["group"] for g in rows].count(torn_id) == 1,
            "the records equal a run made whole": strip_times(rows) == strip_times(whole)}
+    out["ok"] = all(out.values())
+    return out
+
+
+def states_resume(tmp, whole):
+    """A run stopped after a group keeping states (the 406th), one of its state files differing from its
+    hash, as a machine stop before the file reached the disk leaves it: the run goes on, the group's line
+    and the differing file kept beside the log, the group made again, once, the records a run made whole."""
+    root = Path(tmp) / "states-resume"
+    drive(root, "detected", stop_after=406)
+    folder = run_dir(root)
+    raw = (folder / "groups.jsonl").read_bytes()
+    last = json.loads(raw[:-1][raw[:-1].rfind(b"\n") + 1:])
+    sp = folder / "states" / last["passes"][0]["state_file"]
+    raw_state = sp.read_bytes()
+    bad = raw_state[:-4] + bytes(x ^ 0xFF for x in raw_state[-4:])     # the last number's bytes inverted
+    sp.write_bytes(bad)
+    drive(root, "detected")
+    rows = TR.written(folder)
+    side = list(folder.glob("groups.jsonl.torn-*"))
+    out = {"the 406th group keeps states": last["keep_state"] is True,
+           "its line kept beside the log": len(side) == 1 and json.loads(side[0].read_bytes()) == last,
+           "the differing file kept beside it": (sp.parent / f"{sp.name}.torn-0").read_bytes() == bad,
+           "the group made again, once": [g["group"] for g in rows].count(last["group"]) == 1,
+           "the records equal a run made whole": strip_times(rows) == strip_times(whole),
+           "the folder loads": TR.load(folder, CKPT, DRY_LINK)[2] == {"pilot": True, "main": True, "recognition": True}}
     out["ok"] = all(out.values())
     return out
 
@@ -839,11 +990,11 @@ def roles_differ():
                                                          C.body(c, f, kind).splitlines())) == 1
             ident_ok &= C.body(c, "base", kind) == C.body(c, "identical", kind)
         down, up = (C.body(c, a, "choice").splitlines() for a in C.PILOT_ARMS)
-        pilot_ok &= len(down) == len(up) and sum(x != y for x, y in zip(down, up)) == 1 \
+        pilot_ok &= len(down) == len(up) and [k for k, (x, y) in enumerate(zip(down, up)) if x != y] == [4] \
             and down[:4] == C.body(c, "base", "choice").splitlines()[:4]
     return {"base ends in Answer:": base_ok, "tuned: one user message, the reply begun, the base text": tuned_ok,
             "toggling a factor changes one line": toggle_ok, "the identical arm is base": ident_ok,
-            "the pilot's two arms differ in one line, their factor lines at base's": pilot_ok}
+            "the pilot's two arms differ in one line, the fifth, their factor lines at base's": pilot_ok}
 
 
 def pass_ids():
@@ -917,6 +1068,7 @@ def main():
             strip_times(TR.written(run_dir(part))) == strip_times(whole) \
             and TR.read(root=part)["checkpoints"][CKPT]["factors"] == TR.read(root=roots["detected"])["checkpoints"][CKPT]["factors"]
         checks = {"a run stopped inside main with its last record torn goes on": lambda: torn_resume(tmp, whole),
+                  "a run stopped with a state file not on the disk goes on": lambda: states_resume(tmp, whole),
                   "a torn old folder beside a whole one": lambda: torn_old_folder(tmp, roots["detected"]),
                   "each checkpoint read alone": lambda: reading_alone(tmp, roots["detected"]),
                   "a new folder under other threads": lambda: new_threads(tmp),
