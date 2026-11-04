@@ -1,0 +1,47 @@
+## {N}. {TITLE}
+
+Board item UE32, run on 4 November 2026 on Ren's yes ([his words](../../../../sources/15-codex-theory-conversations/2026-11-04-ue32-download-and-run.md)) by its design and script, frozen on 3 November before any series was read by them ([DESIGN](../../../../experiments/state-against-embedding/DESIGN.md)). The result in full, with its tables, is in UE32's README ([the result](../../../../experiments/state-against-embedding/README.md#the-result)); one reader's findings are in [REVIEW](development/ue-unified-explanation/ue32-run/REVIEW.md). T2 is unmigrated, as every thesis is (§505).
+
+```text
+Result(s): none reused and none new in the register; thesis T2 (home 02 §5, 08's thesis table), unmigrated.
+Delta: a fourth frozen fish-stock test of T2, its first against a state read from the series without naming it in
+       advance. On MQ5's 65 testable primary stocks, one year ahead on MQ5's held-out years, read by the S-map and
+       scored by the field's criterion: T2's three numbers N = (E_t, E_(t-1), gamma_(t-1)) against the field's
+       delay embedding F of the same two series, its dimension D in 1..4 chosen by the S-map's own leave-one-out
+       error. Median r = ln(MSE_F / MSE_N) = +0.163 (frozen margin +0.105), N better in 42 stocks and F in 23,
+       sign test p = 0.025: "T2 better than the field's fitted embedding". The same verdict with simplex's choice of
+       D (p = 0.046), with N in the draw's form and with N's form chosen per stock (p = 0.013 each). The answer
+       expected was "not separated" (DESIGN §1), kept as written.
+Evidence: the frozen run (experiments/state-against-embedding/results/run-embed.json and run-embed.out):
+       Python 3.11.2, 80 s of CPU; RAM Legacy v4.66's assessment workbook, the archive's size and md5 as the design
+       gives them, the workbook's sha-256 written with the output; before any rule ran, MQ5's stocks and fits
+       reproduced (exactly, and within a relative 1e-9 for the level law), and MQ5's S3 medians within 1e-9.
+Boundary: both states forecast worse than persistence in 53 of the 65 stocks (median skill against it: N -0.85,
+       F -1.21; N against the training mean +0.23). So the verdict says which state's information carries further
+       through the field's machinery at these lengths, not that T2's state forecasts well. F lost more the longer the
+       history it chose: median r +0.004 at D = 1 (MQ4's state, one number fewer than N: a tie), +0.158 at D = 2,
+       +0.340 at 3, +1.186 at 4; +0.200 over the stocks where it chose D >= 2, holding N's information and more.
+       It bears on the three numbers' sufficiency against the series' longer history at these lengths. It does not
+       bear on the lag's place: in the dry runs "T2 better" also came where the giving reads only the level (24.5%
+       of archives) or only itself (12%). Nor on T2's law, which is not fitted. It is a prediction that could fail
+       and did not only in the sense DESIGN §8 gives: the dry runs failed T2 in 44.5% to 78% of the archives where
+       every stock carried an age structure or a second lag, and never where a third of the stocks did. The series
+       are assessment outputs, not the survey series T2's Refuted by names; the median stock has about 20 training
+       rows; one step ahead only. The other group is not separated (median r +0.003, F better in 10 and N in 11,
+       p = 1); the control group's 5 stocks are too few.
+Why the expectation missed: it rested on the mixed world, a third of the stocks age-structured, as a reading of
+       MQ5's in-sample S3 (39% of the stocks above the tenth). In that world the stocks at or above S3's bound
+       favoured F (median r -0.175, against +0.082 below the bound). In the run they favoured N: +0.173 over the 26
+       at or above, against +0.134 over the 39 below. What S3 found in sample did not show as F's advantage out of
+       sample. Post hoc, not frozen: the persistence figures lie nearest the dry runs' drifting and MQ4 worlds (each
+       state worse than persistence in about 79% of the stocks, N's skill -0.90 and -1.21), where the giving reads
+       less than T2's state, and not near T2's own world (50%, -0.01). The verdict cannot tell these worlds apart.
+Kept: every completed verdict; T2's statement; the answer expected, as written. T2-PROPOSALS' proposal 3 waits on a
+       frozen run that fails "as far as anything measured does"; this one did not.
+Integration: 02 §5 (T2's Evidence, and its Standing, now on the four frozen fish-stock tests), 08's thesis row
+       (Standing, Evidence), the sciences dossier's S-15 (the standing it quotes, UE32's verdict beside the frozen
+       counts) and the whole's stated time, the overview's T2 row (EN, ZH), READING-BUDGETS, the sources table,
+       UE32's README and the experiments index. The records bound to sections that changed were re-pointed after
+       reading, nothing they say changed; no other record drifts.
+REVIEW_LINE
+```

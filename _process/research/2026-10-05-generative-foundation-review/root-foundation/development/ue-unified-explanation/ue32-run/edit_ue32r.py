@@ -1,0 +1,184 @@
+#!/usr/bin/env python3
+"""UE32's run, its result in the shared texts, by script on the landing tree after the branch is merged: T2's home and
+08's row, the sciences dossier's S-15 and its whole's time, the overview's T2 row (EN, ZH), the experiments index, the
+sources table, READING-BUDGETS and a study section.
+
+Every statement of the verdict carries the persistence caveat beside it; the homes and S-15 also carry the embedding's
+loss growing with the history it chose, and the reach (the three numbers' sufficiency against the series' longer
+history at these lengths, not the lag's place or T2's law). The study section's number is the next free one on the
+tree it runs on, and 02's links to it follow it. Each old text must occur exactly once; nothing already applied is
+applied again. RB_FIGURES are the measured figures with these edits, set before the landing.
+usage (from the checkout root): python3 -B edit_ue32r.py [--no-budgets]"""
+import re
+import subprocess
+import sys
+from pathlib import Path
+
+STUDY = Path('_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md')
+M02 = Path('theories/becoming/chapters/02-MAP.md')
+M08 = Path('theories/becoming/chapters/08-METHOD.md')
+SCI = Path('theories/becoming/review/SCIENCES.md')
+EN = Path('theories/becoming/THE-THEORY-OF-BECOMING.md')
+ZH = Path('theories/becoming/THE-THEORY-OF-BECOMING.zh.md')
+EXPIDX = Path('experiments/README.md')
+SRC = Path('sources/README.md')
+SRCDIR = 'sources/15-codex-theory-conversations'
+RB = Path('_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj4-alignment-readers/'
+          'READING-BUDGETS.md')
+HERE = Path(__file__).resolve().parent
+
+TITLE = "T2's three numbers against the field's fitted delay embedding, out of sample (UE32's run)"
+
+
+def slug(heading):
+    s = heading.strip().lower()
+    s = re.sub(r"[^\w\- ]", '', s)
+    return s.replace(' ', '-')
+
+
+def next_section():
+    nums = [int(m) for m in re.findall(r'^## (\d+)\. ', STUDY.read_text(encoding='utf-8'), flags=re.M)]
+    return max(nums) + 1
+
+
+N = next_section()
+ANCHOR = slug(f'{N}. {TITLE}')
+STUDY_LINK = f'../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#{ANCHOR}'
+RESULT_SCI = '../../../experiments/state-against-embedding/README.md#the-result'
+
+EVID_02 = ("on MQ5's stocks one year ahead, against the field's fitted delay embedding of the same two series, the three "
+           "numbers forecast the next giving better by UE32's frozen criterion "
+           f"(§{N}: median log ratio of the errors 0.16, better in 42 of 65 stocks, p = 0.025, where UE32 expected no "
+           "separation), though both forecast worse than persistence in 53 of the 65, and the embedding lost more the "
+           "longer the history it chose: that bears on the three numbers' sufficiency against the series' longer "
+           "history at these lengths, not on the lag's place or T2's law")
+EVID_08 = ("UE32 found the three numbers better than the field's fitted delay embedding by its frozen criterion (42 of "
+           "65 stocks, p = 0.025; expected: not separated), both behind persistence in most stocks, the embedding "
+           "losing more the longer its history: sufficiency against the longer history at these lengths, not the "
+           "lag's place")
+QUOTE_08 = EVID_08[len('UE32 '):]
+assert EVID_08.startswith('UE32 found ')
+
+L316 = '#316-fates-on-either-side-of-the-curve-in-the-plane-in-the-field-mq7)'
+
+# The figures measured on the landing tree with these edits (rehearsal); the landing script asserts the measure.
+RB_FIGURES = {
+    'whole_stated': 'WHOLE_STATED',
+    'overview': 'OVERVIEW',
+    'overview_zh': 'OVERVIEW_ZH',
+    'overview_over': 'OVERVIEW_OVER',
+    'hour': 'HOUR',
+    'hour_over': 'HOUR_OVER',
+    'whole': 'WHOLE',
+}
+
+EDITS = {
+    M02: [
+        ("(§316: 0.39 from 5 stocks, of the predicted sign, lower bound 0.00). The proved laws reach",
+         f"(§316: 0.39 from 5 stocks, of the predicted sign, lower bound 0.00); {EVID_02}. The proved laws reach"),
+        ("*Standing*: conjectured, on the three frozen fish-stock tests above;",
+         "*Standing*: conjectured, on the four frozen fish-stock tests above;"),
+        (f"{L316}). In one domain", f"{L316}, [§{N}]({STUDY_LINK})). In one domain"),
+    ],
+    M08: [
+        ("| conjectured, on three frozen fish-stock tests; untested outside fisheries; in the flour beetle",
+         "| conjectured, on four frozen fish-stock tests; untested outside fisheries; in the flour beetle"),
+        ("MQ7 missed its frozen bound (0.39, lower bound 0.00); in MQ6's yeast",
+         f"MQ7 missed its frozen bound (0.39, lower bound 0.00); {EVID_08}; in MQ6's yeast"),
+    ],
+    SCI: [
+        ('Quote [theories/becoming/chapters/08-METHOD.md]: "conjectured, on three frozen fish-stock tests; untested '
+         'outside fisheries"',
+         'Quote [theories/becoming/chapters/08-METHOD.md]: "conjectured, on four frozen fish-stock tests; untested '
+         'outside fisheries"'),
+        ("and C2 was not testable. In yeast both chapters",
+         f'and C2 was not testable. UE32 ([result]({RESULT_SCI})) Quote [theories/becoming/chapters/08-METHOD.md]: '
+         f'"{QUOTE_08}". In yeast both chapters'),
+    ],
+    EN: [
+        ("| conjectured; of three frozen fish-stock tests one passed; untested outside fisheries |",
+         "| conjectured; of four frozen fish-stock tests one passed, and in another the three numbers forecast better "
+         "than the field's fitted embedding by its frozen criterion, both behind persistence in most stocks, which "
+         "bears on their sufficiency against longer history, not on the lag; untested outside fisheries |"),
+    ],
+    ZH: [
+        ("| 猜想；三项冻结的鱼类种群检验中一项通过；在渔业之外未经检验 |",
+         "| 猜想；四项冻结的鱼类种群检验中一项通过；另一项中，按其冻结的判据，水平、近来的给予与滞后这三个量对下一次给予"
+         "的预报胜过该领域拟合的延迟嵌入，但在多数种群中二者都不如直接沿用上一次的给予，这关乎这三个量相对于更长历史的"
+         "充分性，而不关乎滞后；在渔业之外未经检验 |"),
+    ],
+    EXPIDX: [
+        (", and a test designed and frozen 3 Nov 2026 before any series was read by it, its download and run Ren's |",
+         ", and a test designed and frozen 3 Nov 2026 before any series was read by it, run 4 Nov 2026 on Ren's yes: "
+         "T2 better than the field's fitted embedding by its frozen criterion (median log error ratio 0.16, 42 of 65 "
+         "stocks, p = 0.025; expected: not separated), both behind persistence in most stocks "
+         "([result](state-against-embedding/README.md#the-result)) |"),
+    ],
+}
+
+
+def budget_edits():
+    f = RB_FIGURES
+    assert not any(v.isupper() for v in f.values()), 'RB_FIGURES not set'
+    return {
+        SCI: [("The whole takes 140 to 190 minutes", f"The whole takes {f['whole_stated']} minutes")],
+        RB: [
+            ("7,223 words and 19 characters (55.6 to 72.3 minutes)", f['overview']),
+            ("Chinese 216 words and 12,506 characters (49.8 to 64.7 minutes)", f['overview_zh']),
+            ("Done: 1232 budget-words over;", f"Done: {f['overview_over']} budget-words over;"),
+            ("6,446 words, 49.6 to 64.5 minutes, since T2S of 4 November, which restated T2's second forbidden item "
+             "and its lag's place in the front's row and S-15,",
+             f"{f['hour']}, since UE32's run of 4 November, which added its verdict to S-15 beside the frozen counts, "
+             "after T2S restated T2's second forbidden item and its lag's place in the front's row and S-15,"),
+            ("Sciences' hour runs 446 words past it", f"Sciences' hour runs {f['hour_over']} words past it"),
+            ("T2's restatement in the front's row and S-15,", "T2's restatement in the front's row and S-15, UE32's "
+             "verdict in S-15,"),
+            ("sciences 146 to 190 since FV of 4 November.", f"sciences {f['whole']} since UE32's run of 4 November, "
+             f"its time stated as {f['whole_stated']} minutes since then."),
+        ],
+    }
+
+
+def sources_table():
+    files = subprocess.run(['git', 'ls-files', SRCDIR], capture_output=True, text=True, check=True).stdout.split()
+    s = SRC.read_text(encoding='utf-8')
+    pat = re.compile(r'\| 15a \| `15-codex-theory-conversations/` \| — \| (\d+) \| 2026-09-05 to (2026-\d\d-\d\d) \|')
+    m = pat.findall(s)
+    assert len(m) == 1, m
+    assert f'{SRCDIR}/2026-11-04-ue32-download-and-run.md' in files, 'the source file is not tracked'
+    new = f'| 15a | `15-codex-theory-conversations/` | — | {len(files)} | 2026-09-05 to 2026-11-04 |'
+    SRC.write_text(pat.sub(new, s, count=1), encoding='utf-8')
+    print('edit:', SRC, m[0], '->', len(files))
+
+
+def apply(edits):
+    for path, pairs in edits.items():
+        s = path.read_text(encoding='utf-8')
+        for old, new in pairs:
+            assert s.count(old) == 1, (str(path), s.count(old), old[:100])
+            assert new not in s, (str(path), 'already applied', new[:100])
+            s = s.replace(old, new, 1)
+        path.write_text(s, encoding='utf-8')
+        print('edit:', path)
+
+
+def main(budgets):
+    apply(EDITS)
+    if budgets:
+        apply(budget_edits())
+    sources_table()
+    section = (HERE / 'study.txt').read_text(encoding='utf-8')
+    line = (HERE / 'review_line.txt').read_text(encoding='utf-8').rstrip('\n')
+    assert line.strip() and 'REVIEW_LINE' not in line
+    section = section.replace('{N}', str(N)).replace('{TITLE}', TITLE).replace('REVIEW_LINE', line)
+    assert '{' not in section.replace('{"', ''), 'placeholder left in the study section'
+    s = STUDY.read_text(encoding='utf-8')
+    assert TITLE not in s, 'already applied'
+    STUDY.write_text(s.rstrip('\n') + '\n\n' + section.strip('\n') + '\n', encoding='utf-8')
+    print('edit:', STUDY, f'§{N}', ANCHOR)
+
+
+if __name__ == '__main__':
+    if sys.argv[1:] not in ([], ['--no-budgets']):
+        sys.exit(__doc__)
+    main(sys.argv[1:] == [])
