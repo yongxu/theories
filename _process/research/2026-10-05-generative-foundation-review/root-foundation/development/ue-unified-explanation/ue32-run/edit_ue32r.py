@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 """UE32's run, its result in the shared texts, by script on the landing tree after the branch is merged: T2's home and
 08's row, the sciences dossier's S-15 and its whole's time with the review covers' (EN, ZH), the overview's T2 row (EN, ZH),
-the experiments index, the
-sources table, READING-BUDGETS and a study section.
+the experiments index, the sources table, READING-BUDGETS and a study section.
 
 Every statement of the verdict carries the persistence caveat beside it; the homes and S-15 also carry the embedding's
 loss growing with the history it chose, and the reach (the three numbers' sufficiency against the series' longer
@@ -24,6 +23,7 @@ ZH = Path('theories/becoming/THE-THEORY-OF-BECOMING.zh.md')
 EXPIDX = Path('experiments/README.md')
 SRC = Path('sources/README.md')
 SRCDIR = 'sources/15-codex-theory-conversations'
+MQREADME = Path('experiments/margin-measured/README.md')
 REV_EN = Path('theories/becoming/review/README.md')
 REV_ZH = Path('theories/becoming/review/README.zh.md')
 RB = Path('_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj4-alignment-readers/'
@@ -51,14 +51,15 @@ RESULT_SCI = '../../../experiments/state-against-embedding/README.md#the-result'
 
 EVID_02 = ("on MQ5's stocks one year ahead, against the field's fitted delay embedding of the same two series, the three "
            "numbers forecast the next giving better by UE32's frozen criterion "
-           f"(§{N}: median log ratio of the errors 0.16, better in 42 of 65 stocks, p = 0.025, where UE32 expected no "
-           "separation), though both forecast worse than persistence in 53 of the 65, and the embedding lost more the "
-           "longer the history it chose: that bears on the three numbers' sufficiency against the series' longer "
-           "history at these lengths, not on the lag's place or T2's law")
+           f"(§{N}: median log ratio of the embedding's error to theirs 0.16, the three numbers better in 42 of 65 "
+           "stocks, p = 0.025, where UE32 expected \"not separated\"), though each forecast worse than persistence in 53 "
+           "of the 65 (both in 46), and the embedding lost more the longer the history it chose: that bears on the "
+           "three numbers' sufficiency against the series' longer history at these lengths, not on the lag's place or "
+           "T2's law")
 EVID_08 = ("UE32 found the three numbers better than the field's fitted delay embedding by its frozen criterion (42 of "
            "65 stocks, p = 0.025; expected: not separated), both behind persistence in most stocks, the embedding "
            "losing more the longer its history: sufficiency against the longer history at these lengths, not the "
-           "lag's place")
+           "lag's place or T2's law")
 QUOTE_08 = EVID_08[len('UE32 '):]
 assert EVID_08.startswith('UE32 found ')
 
@@ -67,12 +68,18 @@ L316 = '#316-fates-on-either-side-of-the-curve-in-the-plane-in-the-field-mq7)'
 # The figures measured on the landing tree with these edits (rehearsal); the landing script asserts the measure.
 RB_FIGURES = {
     'whole_stated': '140 to 195',
-    'overview': '7,258 words and 19 characters (55.9 to 72.7 minutes)',
-    'overview_zh': 'Chinese 216 words and 12,598 characters (50.1 to 65.2 minutes)',
-    'overview_over': '1267',
-    'hour': '6,498 words, 50.0 to 65.0 minutes',
-    'hour_over': '498',
-    'whole': '146 to 190',
+    'slowest': 'SLOWEST',
+    'overview': 'OVERVIEW',
+    'overview_zh': 'OVERVIEW_ZH',
+    'overview_over': 'OVERVIEW_OVER',
+    'over_hour': 'OVER_HOUR',
+    'ov_words': 'OV_WORDS',
+    'ov_zh': 'OV_ZH',
+    'front': 'FRONT',
+    'front_over': 'FRONT_OVER',
+    'hour': 'HOUR',
+    'hour_over': 'HOUR_OVER',
+    'whole': 'WHOLE',
 }
 
 EDITS = {
@@ -97,24 +104,35 @@ EDITS = {
         ("and C2 was not testable. In yeast both chapters",
          f'and C2 was not testable. UE32 ([result]({RESULT_SCI})) Quote [theories/becoming/chapters/08-METHOD.md]: '
          f'"{QUOTE_08}". In yeast both chapters'),
+        ("| of three on fish stocks, one passed its state verdict; a frozen test (UE31)",
+         "| of four on fish stocks, one passed its state verdict, and in UE32 the three numbers forecast better than the "
+         "field's fitted embedding, both behind persistence in most stocks; a frozen test (UE31)"),
+    ],
+    MQREADME: [
+        ("This is thesis T2, conjectured (of three frozen fish-stock tests, MQ5's passed) and untested outside fisheries.",
+         "This is thesis T2, conjectured (of four frozen fish-stock tests, MQ5's passed, and in UE32 the three numbers "
+         "forecast better than the field's fitted embedding, both behind persistence in most stocks) and untested "
+         "outside fisheries."),
     ],
     EN: [
         ("| conjectured; of three frozen fish-stock tests one passed; untested outside fisheries |",
-         "| conjectured; of four frozen fish-stock tests one passed, and in another the three numbers forecast better "
-         "than the field's fitted embedding by its frozen criterion, both behind persistence in most stocks, which "
-         "bears on their sufficiency against longer history, not on the lag; untested outside fisheries |"),
+         "| conjectured; of four frozen fish-stock tests one passed, one failed its state verdict and one missed its "
+         "bound; in the fourth the three numbers forecast better than the field's fitted embedding by its frozen "
+         "criterion, a sign of their sufficiency against longer history, not of the lag's place, though both trailed "
+         "persistence in most stocks; untested outside fisheries |"),
     ],
     ZH: [
         ("| 猜想；三项冻结的鱼类种群检验中一项通过；在渔业之外未经检验 |",
-         "| 猜想；四项冻结的鱼类种群检验中一项通过；另一项中，按其冻结的判据，水平、近来的给予与滞后这三个量对下一次给予"
-         "的预报胜过该领域拟合的延迟嵌入，但在多数种群中二者都不如直接沿用上一次的给予，这关乎这三个量相对于更长历史的"
-         "充分性，而不关乎滞后；在渔业之外未经检验 |"),
+         "| 猜想；四项冻结的鱼类种群检验中，一项通过，一项未通过其状态裁决，一项未达其冻结界限；第四项中，按其冻结的判据，"
+         "水平、近来的给予与滞后这三个量对下一次给予的预报胜过该领域拟合的延迟嵌入，这显示它们相对于更长历史的充分性，"
+         "而非滞后的位置，但在多数种群中二者都不如直接沿用上一次的给予；在渔业之外未经检验 |"),
     ],
     EXPIDX: [
         (", and a test designed and frozen 3 Nov 2026 before any series was read by it, its download and run Ren's |",
          ", and a test designed and frozen 3 Nov 2026 before any series was read by it, run 4 Nov 2026 on Ren's yes: "
-         "T2 better than the field's fitted embedding by its frozen criterion (median log error ratio 0.16, 42 of 65 "
-         "stocks, p = 0.025; expected: not separated), both behind persistence in most stocks "
+         "T2 better than the field's fitted embedding by its frozen criterion (median log ratio of the embedding's error "
+         "to the three numbers' 0.16, the three numbers better in 42 of 65 stocks, p = 0.025; expected: not separated), "
+         "both behind persistence in most stocks "
          "([result](state-against-embedding/README.md#the-result)) |"),
     ],
 }
@@ -131,14 +149,29 @@ def budget_edits():
             ("7,223 words and 19 characters (55.6 to 72.3 minutes)", f['overview']),
             ("Chinese 216 words and 12,506 characters (49.8 to 64.7 minutes)", f['overview_zh']),
             ("Done: 1232 budget-words over; the upper bound is over the hour by about twelve minutes,",
-             f"Done: {f['overview_over']} budget-words over; the upper bound is over the hour by about thirteen minutes,"),
+             f"Done: {f['overview_over']} budget-words over; the upper bound is over the hour by about {f['over_hour']} minutes,"),
+            ("what the two simulations' passes test ([T1's standing](../review-packet/T1-STANDING.md)). Recorded in",
+             "what the two simulations' passes test ([T1's standing](../review-packet/T1-STANDING.md)). UE32's run added "
+             f"{f['ov_words']} words to T2's row in §9 (Chinese {f['ov_zh']} characters): its fourth frozen fish-stock "
+             "test, the three numbers better than the field's fitted embedding, with both behind persistence beside it. "
+             "Recorded in"),
+            ("sciences (1,351 words, 10.4 to 13.5, since T2S of 4 November, 251 over,",
+             f"sciences ({f['front']}, since UE32's run of 4 November, {f['front_over']} over,"),
+            ("since TS4 the bound on the point's exactness and since T2S T2's second forbidden item with its condition, kept",
+             "since TS4 the bound on the point's exactness, since T2S T2's second forbidden item with its condition and "
+             "since UE32's run T2's fourth frozen fish-stock test with persistence beside it, kept"),
             ("6,446 words, 49.6 to 64.5 minutes, since T2S of 4 November, which restated T2's second forbidden item "
              "and its lag's place in the front's row and S-15,",
-             f"{f['hour']}, since UE32's run of 4 November, which added its verdict to S-15 beside the frozen counts, "
-             "after T2S restated T2's second forbidden item and its lag's place in the front's row and S-15,"),
+             f"{f['hour']}, since UE32's run of 4 November, which added its verdict to the front's T2 row and to S-15 "
+             "beside the frozen counts, after T2S restated T2's second forbidden item and its lag's place in the front's "
+             "row and S-15,"),
             ("Sciences' hour runs 446 words past it", f"Sciences' hour runs {f['hour_over']} words past it"),
             ("T2's restatement in the front's row and S-15,", "T2's restatement in the front's row and S-15, UE32's "
-             "verdict in S-15,"),
+             "verdict in both,"),
+            ("140 to 190 for sciences since TS2 of 3 November, its readings 143.0",
+             f"{f['whole_stated']} for sciences since UE32's run of 4 November, whose slowest reading, {f['slowest']} "
+             "minutes, the earlier 140 to 190 no longer covered once the front and S-15 took UE32's verdict; 140 to 190 "
+             "since TS2 of 3 November, its readings 143.0"),
             ("sciences 146 to 190 since FV of 4 November.", f"sciences {f['whole']} since UE32's run of 4 November, "
              f"its time stated as {f['whole_stated']} minutes since then."),
         ],

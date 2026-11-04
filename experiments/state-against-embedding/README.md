@@ -1,6 +1,6 @@
 # UE32: T2 against empirical dynamic modelling
 
-Board item UE32, 3 November 2026; run 4 November 2026. AI-written (a Claude Code session; no person has checked it). About eleven minutes to read with [the result](#the-result), which takes six; its parts are listed with their own times.
+Board item UE32, 3 November 2026; run 4 November 2026. AI-written (a Claude Code session; no person has checked it). About eighteen to twenty-three minutes to read, [the result](#the-result) twelve to sixteen of them; its parts are listed with their own times.
 
 **Why.** Thesis T2 names in advance the state of a renewable condition under a draw: its level, its recent giving and one lag ([02 §5](../../theories/becoming/chapters/02-MAP.md#t2)).
 - Where a stage before recruitment is counted, the field's state is that stage. UE31 and UE31b test T2 against it in the flour beetle ([UE31](../state-named-in-advance/README.md), [UE31b](../state-named-in-advance/cells/DESIGN.md)).
@@ -29,7 +29,7 @@ A state named in advance that forecasts as well as the field's fitted embedding,
 
 ## The result
 
-*About six minutes to read.* Run on 4 November 2026 ([what it printed](results/run-embed.out), [every figure](results/run-embed.json)). r = ln(MSE_F / MSE_N) is the log ratio of the two states' held-out squared errors on the next giving, the field's embedding F's over T2's three numbers N's (DESIGN §6); r > 0 means the three numbers forecast better.
+*About twelve to sixteen minutes to read.* Run on 4 November 2026 ([what it printed](results/run-embed.out), [every figure](results/run-embed.json)). r = ln(MSE_F / MSE_N) is the log ratio of the two states' held-out squared errors on the next giving, the field's embedding F's over T2's three numbers N's (DESIGN §6); r > 0 means the three numbers forecast better.
 
 **On the primary group, the frozen verdict is "T2 better than the field's fitted embedding".** Of MQ5's 69 primary stocks, 65 have enough rows to test.
 - The median r is +0.163, past the frozen margin of +0.105.
@@ -38,35 +38,36 @@ A state named in advance that forecasts as well as the field's fitted embedding,
 
 The verdict is the same in each reading reported beside it: with the embedding's dimension chosen by simplex projection (median r +0.133, 41 to 24, p = 0.046), with the three numbers in the draw's form (+0.183, 43 to 22, p = 0.013), and with their form chosen per stock (+0.177, 43 to 22, p = 0.013). By absolute error the embedding was also worse, by less (median log ratio +0.069).
 
-**Both states forecast worse than persistence.** Persistence forecasts the next giving as the last one. Each state's held-out error is larger than persistence's in 53 of the 65 stocks. In the median stock the three numbers' skill against persistence is −0.85, their error 1.85 times persistence's, and the embedding's is −1.21. Against the training mean the three numbers' skill is +0.23. So the verdict says which state's information carries further through the field's machinery at these lengths, not that T2's state forecasts well (DESIGN §8).
+**Both states forecast worse than persistence.** Persistence forecasts the next giving as the last one. Each state's held-out error is larger than persistence's in 53 of the 65 stocks, and both are larger in 46. In the median stock the three numbers' skill against persistence is −0.85, their error 1.85 times persistence's, and the embedding's is −1.21. Against the training mean the three numbers' skill is +0.23. Persistence reads only γ_{t−1}, one of the three numbers, and fits nothing, so their loss to it is the cost of a map fitted on about 20 training rows, not information they lack. So the verdict says which state's information carries further through the field's machinery at these lengths, not that T2's state forecasts well (DESIGN §8).
 
 **The embedding lost more the longer the history it chose.** By the dimension D it chose on the training years:
 
 | D chosen | What F holds | Stocks | Median r | F better in |
 |---|---|---|---|---|
-| 1 | MQ4's state, one number fewer than N | 26 | +0.004 | 13 |
-| 2 | N with one more giving | 22 | +0.158 | 6 |
-| 3 | two more delays | 9 | +0.340 | 1 |
-| 4 | three more delays | 8 | +1.186 | 3 |
+| 1 | MQ4's state (E_t, γ_{t−1}): N less one number | 26 | +0.004 | 13 |
+| 2 | N plus one number (γ_{t−2}) | 22 | +0.158 | 6 |
+| 3 | N plus three numbers | 9 | +0.340 | 1 |
+| 4 | N plus five numbers | 8 | +1.186 | 3 |
 
-Where F chose D ≥ 2, holding all of N's information and more, the median r is +0.200. Where it chose MQ4's smaller state, the two tie.
+Where F chose D ≥ 2, holding all of N's information and more, the median r is +0.200 (in the dry runs +0.11 under T2's law, +0.03 in the mixed world and −0.34 to −0.40 in the age worlds). Where it chose MQ4's smaller state, the two tie. The dry runs show the same growth wherever no age structure or second lag held (under T2's law, +0.45 and +0.75 at D = 3 and 4), so it shows what the longer history costs at these lengths, not that it carries nothing.
 
 **What it means, as the design froze it (DESIGN §8).**
 - The three numbers named in advance forecast the next giving better than the field's fitted embedding of the same two series, on the field's own criterion. That is a prediction that could fail and did not, in the design's sense: in its dry runs the test failed T2 in 44.5% to 78% of the archives where every stock carried an age structure or a second lag.
 - It supports the three numbers' sufficiency against the series' longer history at these lengths. It does not support the lag's place in the state: in the dry runs "T2 better" also came where the giving reads only the level (24.5% of archives) or only itself (12%). Nor does it show T2's law, which is not fitted here.
+- It does not change [08's verdict](../../theories/becoming/chapters/08-METHOD.md#known-results) that what survives of the account is no discovery, though 08 names a prediction that could fail and does not among what would. What it bears out, three numbers holding their own against a longer embedding on about 20 training rows, is in large part what the field's own bound of about √N coordinates foresees (DESIGN §4; F at D ≥ 3 held 6 or 8 coordinates and lost most). In the dry runs it came also where the giving reads less than T2's state (24.5% of the regime's step's archives, against 33% under T2's law), and both states trailed persistence. Its sharpest part is F at D = 2, four coordinates, within that bound, losing in 16 of 22 stocks: one test, on assessment outputs.
 
-**The answer expected was "not separated", and it was not borne out.** The design expected it from one model of MQ5's readings, the mixed world: a third of the stocks carrying an age structure's memory and the rest following T2's law. There the test said "not separated" in 94% of archives and "T2 better" in 6% (§1, §7). The pairing with MQ5's in-sample S3, reported as frozen, shows where that model failed:
-- **In the mixed world** the stocks at or above MQ5's bound of a tenth were those where the embedding did better: median r −0.175, against +0.082 below the bound.
-- **In the run** they were the stocks where the three numbers did best: median r +0.173 over the 26 stocks at or above the bound, against +0.134 over the 39 below.
+**The answer expected was "not separated", and it was not borne out.** The design expected it from one model of MQ5's readings, the mixed world: a third of the stocks carrying an age structure's memory and the rest following T2's law. There the test said "not separated" in 94% of archives and "T2 better" in 6% (§1, §7). In the design's own terms, "T2 better" places the stocks "nearer a world whose state N holds than MQ5's readings do" (§1); under T2's law the test said it in 33% of archives.
 
-So what MQ5's S3 found in sample in about two-fifths of the stocks did not show as the embedding's advantage out of sample. Reading that share as a third of the stocks carrying an age structure's memory is what failed; the design had said MQ5's readings do not identify the mixture (§1). Over the stocks whose F chose D ≥ 2 the median r was +0.20, against +0.03 in the mixed world and −0.34 to −0.40 in the age worlds.
+The output does not show why the expectation missed. Read after the run, not frozen:
+- **The pairing with MQ5's S3**, reported as frozen, gives a gap, the median r below MQ5's bound less that at or above it, of −0.039: +0.134 over the 39 stocks below, +0.173 over the 26 at or above. That lies within the range of archives in both T2's world (−0.95 to 0.29) and the mixed world (−0.135 to 0.705), below the 0.3 beyond which §7 says the pairing would suggest a minority carrying memory. So it suggests no such minority, and cannot show one absent (§8).
+- **S3 flagged 26 of the 65 stocks** in sample, within the mixed world's 22 to 39 of 66 and above every archive of T2's world (6 to 14). So the in-sample excess stays unexplained by T2's world alone.
 
-**Beside the dry runs** (a reading after the run, not frozen). The reported figures lie nearest two worlds where the giving reads less than T2's state: a giving drifting on its own, and MQ4's state without the lag.
-- There each state did worse than persistence in about 79% of the stocks (the run: 81.5%). The three numbers' skill against persistence was −0.90 and −1.21 (the run: −0.85). The giving's own embedding with the draw nearly tied them (median log ratios −0.05 and −0.07; the run: −0.03).
-- In T2's own world the three numbers tied persistence (skill −0.01, worse in half the stocks), and the giving's own embedding beat them (−0.14).
-- "T2 better" came in 12% and 3.5% of those two worlds' archives, against 33% in T2's own. The run's median r of +0.163 lies within the range of the archives' medians in all three: up to +0.35, +0.44 and +0.30.
+The run is consistent with a minority of stocks whose memory does not pay its way out of sample at these lengths, an outcome the mixed world gave in 6% of its archives, and with an in-sample excess that does not carry out of sample. It does not tell them apart.
 
-The verdict cannot tell these worlds apart: the three numbers hold each of their states with coordinates to spare (§7).
+**Beside the dry runs** (read after the run, not frozen). No one world of §7 reproduces the run's reported figures.
+- **On persistence** the run lies with the worlds where the giving reads less than T2's state, or carries an age structure. There the three numbers did worse than persistence in 81.5% of the stocks, their skill against it −0.85. In the MQ4, drifting and age worlds the figures were 78.8% to 89.4% and −0.90 to −1.86, against 50% and −0.01 in T2's own world and 62% and −0.40 in the mixed one.
+- **On the escapement alone** (median log ratio to the three numbers' error +0.71) and **the three numbers' skill against the training mean** (+0.23), it lies inside the ten worlds' spread (0.06 to 1.47, and 0.12 to 0.78) without pointing to any one of them.
+- **The run's median r of +0.163** lies within the range of the archives' medians in T2's world, the mixed one, MQ4's and the drifting one: up to +0.30, +0.31, +0.44 and +0.35.
 
 **Also reported.** The escapement alone, the regime's step's state, had a held-out error about twice the three numbers' in the median stock (median log ratio +0.71). That is one year ahead, not the five steps T2's second forbidden item reads. The three numbers were read linearly (θ = 0) in 26 of the 65 stocks.
 
