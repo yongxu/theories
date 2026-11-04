@@ -1,6 +1,6 @@
 # TR2 and TR7: the full design
 
-*Part of [the designs of RF's tests](DESIGN.md): the exact tables, the power check, rivals, usage and references for TR2 and TR7. AI-written, not yet reviewed by a person; nothing is frozen or run.*
+*Part of [the designs of RF's tests](DESIGN.md): the exact tables, the power check, rivals, usage and references for TR2 and TR7. AI-written, not yet reviewed by a person. TR2's Stage B is frozen in [FREEZE-7](FREEZE-7.md) (4 November 2026), with the changes its section 12 lists; TR7 is not frozen here; nothing has run.*
 
 ## What the law states, checked against the Lean
 

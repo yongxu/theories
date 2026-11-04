@@ -1,0 +1,1784 @@
+{
+ "test": "TR3 (RF4, readers reading readers), freeze 3's dry run",
+ "seed": "RFZ-freeze-2-tr3-dry-run",
+ "no_model_called": true,
+ "code_hashes": {
+  "experiments/formations-that-read/told/PINS.json": "7feb28b92d1fa286daa6ccec5e874564d7083fe0b1c3fd26bb3d7ff1f3714b86",
+  "experiments/formations-that-read/told/client.py": "675b466dd5ca4f9b368a966a00c69df731052d6a28ea72970e48d51a49cf18c3",
+  "experiments/formations-that-read/told/conditions.py": "d534dd84eafb00d8fdaf594fe87b6be90b14dcde9b156f88cf86688cea04509a",
+  "experiments/formations-that-read/told/prompts.py": "5bd6351e1764017cc9f3797e20cf0ab290a9a995e6af26f78b340d0a4009f2ea",
+  "experiments/formations-that-read/told/rule.py": "d211e36c99fd4eb020b2c32f17cccf8bf48b8b638882fc4de8073f1c0ca859c7",
+  "experiments/formations-that-read/told/run.py": "4e9956caab24c053ba217b2a0a6eaa7e8c6dbbebbf4295bace7446fd632ae3f7",
+  "experiments/formations-that-read/told/verdicts.py": "44a89fb5dbe2c2d9fb63736c9dd687c749d79272dbd862d106a6fa8c5a80cdec",
+  "experiments/formations-that-read/told-tr3/ENDPOINTS.json": "171d36213debb37b30494425192f40600fc1ac376df140bd9f2e14a26eaf659c",
+  "experiments/formations-that-read/told-tr3/tr3_client.py": "91cf1311a2edac8227a33606b287682ee091fd1dc71fcd4a1cc75f79ac8ae2d9",
+  "experiments/formations-that-read/told-tr3/tr3_design.py": "708f394c52944ac48df4cd0ad2828df09659fe10249e67b74c1682d191395a18",
+  "experiments/formations-that-read/told-tr3/tr3_dry_run.py": "9846436f60a5b6b0615fb5caba7ccc2358914b45e296163aa9603260ded9e8cd",
+  "experiments/formations-that-read/told-tr3/tr3_rule.py": "f1e9c4c7468267d36a9b11bf53d583f838f218f71f3929469e8aad2a5b0b2c8c",
+  "experiments/formations-that-read/told-tr3/tr3_run.py": "9ceabbd59652dbc1d63a04f64ee14863e8801aa35e8b06f746085166e42e8c7f",
+  "experiments/formations-that-read/told-tr3/write_frozen.py": "5f6ace0fe9e7d005559f2ac8f3a74eaed2c294a8030bc4f49280a001737b11d9",
+  "experiments/formations-that-read/tr3.json": "140bb2221f46a401faa99085a77372921d7b16ffc9d6468abd4b5b9fbd3562ce",
+  "experiments/formations-that-read/tr3.py": "d4cca4db91bc9b5a5c65dd80289a4369f0be3dfe3d6d309525c405bbfce44c2a",
+  "experiments/formations-that-read/tr8.py": "50650cc538da6494c3122d78b8f8d2244ef40b5c4356b0ace23eb92c2aefed72",
+  "experiments/formations-that-read/tr_rr.py": "8ee9bef671ee5198f3eeea0421c6dbdd87de473fce974b672dd2c5e44a047ef8"
+ },
+ "code_path": [
+  {
+   "member": "BHW, ties to the own draw",
+   "calls": 1805,
+   "rounds": 11,
+   "planned": 1805,
+   "the_logged_calls_are_the_plan": true,
+   "verdicts_equal_the_rule": true,
+   "timing": "unresolved",
+   "prefixes": {
+    "1:1/AA": "void: a flagged cell",
+    "1:1/BB": "unresolved difference",
+    "1:1/AAA": "void: a flagged cell",
+    "1:1/BBB": "unresolved difference",
+    "3:2/A": "unresolved difference",
+    "3:2/BBB": "void: a flagged cell"
+   },
+   "leak_control": "passed",
+   "answers": {
+    "A": 902,
+    "B": 815,
+    "invalid": 7,
+    "filtered": 4,
+    "decline": 1
+   }
+  },
+  {
+   "member": "BHW, flips 1/100",
+   "calls": 1741,
+   "rounds": 7,
+   "planned": 1741,
+   "the_logged_calls_are_the_plan": true,
+   "verdicts_equal_the_rule": true,
+   "timing": "unresolved",
+   "prefixes": {
+    "1:1/AA": "passed",
+    "1:1/BB": "void: a flagged cell",
+    "1:1/AAA": "unresolved difference",
+    "1:1/BBB": "void: a flagged cell",
+    "3:2/A": "void: a flagged cell",
+    "3:2/BBB": "unresolved difference"
+   },
+   "leak_control": "void: a flagged cell",
+   "answers": {
+    "A": 881,
+    "B": 769,
+    "invalid": 7,
+    "filtered": 5,
+    "decline": 3
+   }
+  },
+  {
+   "member": "hybrid: own draw w.p. 1/10",
+   "calls": 1680,
+   "rounds": 11,
+   "planned": 1680,
+   "the_logged_calls_are_the_plan": true,
+   "verdicts_equal_the_rule": true,
+   "timing": "unresolved",
+   "prefixes": {
+    "1:1/AA": "void: a flagged cell",
+    "1:1/BB": "void: a flagged cell",
+    "1:1/AAA": "void: a flagged cell",
+    "1:1/BBB": "void: a flagged cell",
+    "3:2/A": "void: a flagged cell",
+    "3:2/BBB": "void: a flagged cell"
+   },
+   "leak_control": "unresolved difference",
+   "answers": {
+    "A": 869,
+    "B": 724,
+    "filtered": 4,
+    "invalid": 4,
+    "decline": 3
+   }
+  },
+  {
+   "member": "constant A",
+   "calls": 1795,
+   "rounds": 10,
+   "planned": 1795,
+   "the_logged_calls_are_the_plan": true,
+   "verdicts_equal_the_rule": true,
+   "timing": "contradicted",
+   "prefixes": {
+    "1:1/AA": "void: a flagged cell",
+    "1:1/BB": "void: a flagged cell",
+    "1:1/AAA": "void: a flagged cell",
+    "1:1/BBB": "passed",
+    "3:2/A": "void: a flagged cell",
+    "3:2/BBB": "unresolved difference"
+   },
+   "leak_control": "void: a flagged cell",
+   "answers": {
+    "A": 1708,
+    "invalid": 5,
+    "decline": 6
+   }
+  },
+  {
+   "member": "constant B",
+   "calls": 1888,
+   "rounds": 13,
+   "planned": 1888,
+   "the_logged_calls_are_the_plan": true,
+   "verdicts_equal_the_rule": true,
+   "timing": "contradicted",
+   "prefixes": {
+    "1:1/AA": "void: a flagged cell",
+    "1:1/BB": "passed",
+    "1:1/AAA": "void: a flagged cell",
+    "1:1/BBB": "passed",
+    "3:2/A": "passed",
+    "3:2/BBB": "passed"
+   },
+   "leak_control": "passed",
+   "answers": {
+    "B": 1796,
+    "invalid": 7,
+    "filtered": 4,
+    "decline": 5
+   }
+  },
+  {
+   "member": "own draw always",
+   "calls": 1556,
+   "rounds": 1,
+   "planned": 1556,
+   "the_logged_calls_are_the_plan": true,
+   "verdicts_equal_the_rule": true,
+   "timing": "contradicted",
+   "prefixes": {
+    "1:1/AA": "premise not met",
+    "1:1/BB": "premise not met",
+    "1:1/AAA": "premise not met",
+    "1:1/BBB": "premise not met",
+    "3:2/A": "premise not met",
+    "3:2/BBB": "premise not met"
+   },
+   "leak_control": "void: a flagged cell",
+   "answers": {
+    "B": 740,
+    "A": 726,
+    "decline": 5,
+    "filtered": 5,
+    "invalid": 4
+   }
+  },
+  {
+   "member": "reads a leak shown to it",
+   "calls": 1878,
+   "rounds": 8,
+   "planned": 1878,
+   "the_logged_calls_are_the_plan": true,
+   "verdicts_equal_the_rule": true,
+   "timing": "unresolved",
+   "prefixes": {
+    "1:1/AA": "unresolved difference",
+    "1:1/BB": "unresolved difference",
+    "1:1/AAA": "passed",
+    "1:1/BBB": "passed",
+    "3:2/A": "unresolved difference",
+    "3:2/BBB": "passed"
+   },
+   "leak_control": "void: a flagged cell",
+   "answers": {
+    "A": 937,
+    "B": 851,
+    "invalid": 7,
+    "decline": 3,
+    "filtered": 4
+   }
+  },
+  {
+   "member": "reads the next light, never shown it (the rule's arithmetic: no endpoint can)",
+   "calls": 2131,
+   "rounds": 11,
+   "planned": 2131,
+   "the_logged_calls_are_the_plan": true,
+   "verdicts_equal_the_rule": true,
+   "timing": "contradicted",
+   "prefixes": {
+    "1:1/AA": "breach reproduced",
+    "1:1/BB": "breach reproduced",
+    "1:1/AAA": "breach reproduced",
+    "1:1/BBB": "breach reproduced",
+    "3:2/A": "void: a flagged cell",
+    "3:2/BBB": "breach reproduced"
+   },
+   "leak_control": "void: a flagged cell",
+   "answers": {
+    "A": 1846,
+    "invalid": 10,
+    "decline": 5,
+    "filtered": 3,
+    "B": 191
+   }
+  }
+ ],
+ "code_path_all_equal": true,
+ "faults": {
+  "a record's history edited, refused": true,
+  "a logged answer the parser reads otherwise, refused": true,
+  "a record another model answered, refused": true,
+  "a record another provider served, refused": true,
+  "a record another tier served, refused": true,
+  "an unread record another provider served, refused (the same record the endpoint's provider served, read)": true,
+  "a response another provider served stops the run, logging nothing": true,
+  "a response another tier served stops the run, logging nothing": true,
+  "a call not in the plan, refused": true,
+  "a smoke folder, refused": true,
+  "a path cell's records dropped while the calls derived from them stay, refused": true,
+  "a run stopped in its last round: what reaches its calls partial, the rest as before": true,
+  "a planted leak in a fresh sequence's prompt, found by the input diff (refused)": true,
+  "ok": true
+ },
+ "remade": {
+  "a lost closing read": {
+   "stopped": true,
+   "unread_after_the_stop": 57,
+   "good_before_the_rerun": 1499,
+   "unread_not_among_the_good": true,
+   "remade": 0,
+   "read_with_the_answers_it_should": true
+  },
+  "a pin that moved and came back": {
+   "stopped": true,
+   "unread_after_the_stop": 100,
+   "good_before_the_rerun": 899,
+   "unread_not_among_the_good": true,
+   "remade": 100,
+   "read_with_the_answers_it_should": true
+  },
+  "ok": true
+ },
+ "chain": {
+  "the base link read": true,
+  "a freeze 1 file it lists changed, with no addendum, refused": true,
+  "a TR3 addendum changing TR3's client, read": true,
+  "a TR3 addendum changing TR3's rule, refused": true,
+  "a TR3 addendum changing freeze 1's client, which freeze 1's chain has not taken, refused": true,
+  "a TR3 addendum changing freeze 1's run, refused": true,
+  "an addendum to freeze 1 changing its client, which TR3 has not taken, refused": true,
+  "the same, taken by a TR3 addendum, read": true,
+  "ok": true
+ },
+ "smoke": {
+  "as planned": {
+   "go_on": true,
+   "declines": 0,
+   "repeated_request": {
+    "answers": [
+     "A",
+     "A",
+     "A",
+     "A",
+     "A",
+     "A",
+     "A",
+     "A",
+     "A",
+     "A",
+     "A"
+    ],
+    "alike": true
+   },
+   "as_it_should": true
+  },
+  "a decline": {
+   "go_on": true,
+   "declines": 1,
+   "repeated_request": {
+    "answers": [
+     "A",
+     "A",
+     "A",
+     "A",
+     "A",
+     "A",
+     "A",
+     "A",
+     "A",
+     "A",
+     "A"
+    ],
+    "alike": true
+   },
+   "as_it_should": true
+  },
+  "an unreadable guess": {
+   "go_on": false,
+   "declines": 0,
+   "repeated_request": {
+    "answers": [
+     "A",
+     "A",
+     "A",
+     "A",
+     "A",
+     "A",
+     "A",
+     "A",
+     "A",
+     "A",
+     "A"
+    ],
+    "alike": true
+   },
+   "as_it_should": true
+  },
+  "another provider": {
+   "go_on": false,
+   "declines": 0,
+   "repeated_request": {
+    "answers": [
+     "A",
+     "A",
+     "A",
+     "A",
+     "A",
+     "A",
+     "A",
+     "A",
+     "A",
+     "A",
+     "A"
+    ],
+    "alike": true
+   },
+   "as_it_should": true
+  },
+  "another tier": {
+   "go_on": false,
+   "declines": 0,
+   "repeated_request": {
+    "answers": [
+     "A",
+     "A",
+     "A",
+     "A",
+     "A",
+     "A",
+     "A",
+     "A",
+     "A",
+     "A",
+     "A"
+    ],
+    "alike": true
+   },
+   "as_it_should": true
+  },
+  "ok": true
+ },
+ "classification": {
+  "rows": [
+   {
+    "shape": "guess X",
+    "read": [
+     "A",
+     null
+    ],
+    "ok": true
+   },
+   {
+    "shape": "guess Y",
+    "read": [
+     "B",
+     null
+    ],
+    "ok": true
+   },
+   {
+    "shape": "guess, a letter not offered",
+    "read": [
+     "invalid",
+     null
+    ],
+    "ok": true
+   },
+   {
+    "shape": "guess, not JSON",
+    "read": [
+     "invalid",
+     null
+    ],
+    "ok": true
+   },
+   {
+    "shape": "guess, the refusal field",
+    "read": [
+     "decline",
+     null
+    ],
+    "ok": true
+   },
+   {
+    "shape": "guess, a filter's stop with no answer",
+    "read": [
+     "filtered",
+     null
+    ],
+    "ok": true
+   },
+   {
+    "shape": "guess, a filter's stop after a whole answer",
+    "read": [
+     "A",
+     null
+    ],
+    "ok": true
+   },
+   {
+    "shape": "guess, a moderation rejection",
+    "read": [
+     "filtered",
+     null
+    ],
+    "ok": true
+   },
+   {
+    "shape": "guess, no choices",
+    "read": [
+     "invalid",
+     null
+    ],
+    "ok": true
+   },
+   {
+    "shape": "probe, whole",
+    "read": [
+     null,
+     {
+      "light": "red",
+      "earlier_X": 2,
+      "earlier_Y": 0
+     }
+    ],
+    "ok": true
+   },
+   {
+    "shape": "probe, a count as text",
+    "read": [
+     null,
+     null
+    ],
+    "ok": true
+   },
+   {
+    "shape": "probe, a count true",
+    "read": [
+     null,
+     null
+    ],
+    "ok": true
+   },
+   {
+    "shape": "probe, a count 2.0",
+    "read": [
+     null,
+     null
+    ],
+    "ok": true
+   },
+   {
+    "shape": "probe, another colour",
+    "read": [
+     null,
+     null
+    ],
+    "ok": true
+   },
+   {
+    "shape": "probe, a field missing",
+    "read": [
+     null,
+     null
+    ],
+    "ok": true
+   },
+   {
+    "shape": "probe, not JSON",
+    "read": [
+     null,
+     null
+    ],
+    "ok": true
+   },
+   {
+    "shape": "probe, a message that is a string",
+    "read": [
+     null,
+     null
+    ],
+    "ok": true
+   },
+   {
+    "shape": "probe, a moderation rejection",
+    "read": [
+     null,
+     null
+    ],
+    "ok": true
+   }
+  ],
+  "ok": true
+ },
+ "bhw_table": {
+  "differences": [],
+  "ok": true
+ },
+ "sequences": {
+  "1:1/AA": [
+   "aaaaaa",
+   "bbbbbb",
+   "abbaaa",
+   "aaaaab",
+   "abbbaa",
+   "bbbabb",
+   "ababbb",
+   "baabba"
+  ],
+  "1:1/BB": [
+   "aaaaaa",
+   "bbbbbb",
+   "abbbba",
+   "bababb",
+   "abbaba",
+   "bbaaba",
+   "aaabba",
+   "ababaa"
+  ],
+  "1:1/AAA": [
+   "aaaaa",
+   "bbbbb",
+   "babaa",
+   "baaaa",
+   "aaabb",
+   "aaaab",
+   "baaba",
+   "babbb"
+  ],
+  "1:1/BBB": [
+   "aaaaa",
+   "bbbbb",
+   "baaab",
+   "baaba",
+   "baaaa",
+   "abbbb",
+   "aabab",
+   "bbabb"
+  ],
+  "3:2/A": [
+   "aaaaaaa",
+   "bbbbbbb",
+   "abbbaba",
+   "babaaba",
+   "baaabab",
+   "aaaaaba",
+   "bbaaaaa",
+   "bbaaaba"
+  ],
+  "3:2/BBB": [
+   "aaaaa",
+   "bbbbb",
+   "ababb",
+   "abaaa",
+   "aaaba",
+   "bbbab",
+   "bbbba",
+   "bbaab"
+  ],
+  "leak 1:1/AA": [
+   "aaaaaa",
+   "bbbbbb",
+   "bbbbba",
+   "babaab",
+   "ababaa",
+   "abbbbb",
+   "bbaaab",
+   "bbabbb"
+  ]
+ },
+ "endpoints": {
+  "differences": [],
+  "ok": true
+ },
+ "E3_shares": {
+  "BHW, ties to the own draw": {
+   "frozen": {
+    "no verdict: premise not met": 0.0,
+    "no verdict: flagged cell": 0.0,
+    "passed": 1.0,
+    "breach reproduced": 0.0,
+    "unresolved: unreproduced difference": 0.0
+   },
+   "stage0": {
+    "no verdict: premise not met": 0.0,
+    "no verdict: flagged cell": 0.0,
+    "passed": 1.0,
+    "breach reproduced": 0.0,
+    "unresolved: unreproduced difference": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  "BHW, flips 1/1000": {
+   "frozen": {
+    "no verdict: premise not met": 0.0,
+    "no verdict: flagged cell": 0.0475,
+    "passed": 0.909,
+    "breach reproduced": 0.0,
+    "unresolved: unreproduced difference": 0.0435
+   },
+   "stage0": {
+    "no verdict: premise not met": 0.0,
+    "no verdict: flagged cell": 0.0573,
+    "passed": 0.8972,
+    "breach reproduced": 0.0,
+    "unresolved: unreproduced difference": 0.0455
+   },
+   "largest_difference": 0.0118,
+   "exact": {
+    "no verdict: flagged cell": 0.0583,
+    "passed": 0.8976,
+    "unresolved: unreproduced difference": 0.0442
+   },
+   "z": {
+    "no verdict: flagged cell": -2.92,
+    "passed": 2.38,
+    "unresolved: unreproduced difference": -0.22
+   }
+  },
+  "BHW, flips 1/200": {
+   "frozen": {
+    "no verdict: premise not met": 0.0,
+    "no verdict: flagged cell": 0.2667,
+    "passed": 0.5893,
+    "breach reproduced": 0.0,
+    "unresolved: unreproduced difference": 0.144
+   },
+   "stage0": {
+    "no verdict: premise not met": 0.0,
+    "no verdict: flagged cell": 0.254,
+    "passed": 0.5777,
+    "breach reproduced": 0.0,
+    "unresolved: unreproduced difference": 0.1683
+   },
+   "largest_difference": 0.0243,
+   "exact": {
+    "no verdict: flagged cell": 0.2597,
+    "passed": 0.582,
+    "unresolved: unreproduced difference": 0.1583
+   },
+   "z": {
+    "no verdict: flagged cell": 1.01,
+    "passed": 0.94,
+    "unresolved: unreproduced difference": -2.48
+   }
+  },
+  "BHW, flips 1/100": {
+   "frozen": {
+    "no verdict: premise not met": 0.0,
+    "no verdict: flagged cell": 0.4505,
+    "passed": 0.3337,
+    "breach reproduced": 0.0,
+    "unresolved: unreproduced difference": 0.2157
+   },
+   "stage0": {
+    "no verdict: premise not met": 0.0,
+    "no verdict: flagged cell": 0.467,
+    "passed": 0.337,
+    "breach reproduced": 0.0,
+    "unresolved: unreproduced difference": 0.196
+   },
+   "largest_difference": 0.0197,
+   "exact": {
+    "no verdict: flagged cell": 0.4528,
+    "passed": 0.3378,
+    "unresolved: unreproduced difference": 0.2094
+   },
+   "z": {
+    "no verdict: flagged cell": -0.29,
+    "passed": -0.55,
+    "unresolved: unreproduced difference": 0.98
+   }
+  },
+  "BHW, flips 1/20": {
+   "frozen": {
+    "no verdict: premise not met": 0.0,
+    "no verdict: flagged cell": 0.956,
+    "passed": 0.0047,
+    "breach reproduced": 0.0,
+    "unresolved: unreproduced difference": 0.0393
+   },
+   "stage0": {
+    "no verdict: premise not met": 0.0,
+    "no verdict: flagged cell": 0.951,
+    "passed": 0.0047,
+    "breach reproduced": 0.0,
+    "unresolved: unreproduced difference": 0.0442
+   },
+   "largest_difference": 0.005,
+   "exact": {
+    "no verdict: flagged cell": 0.9539,
+    "passed": 0.0039,
+    "unresolved: unreproduced difference": 0.0421
+   },
+   "z": {
+    "no verdict: flagged cell": 0.63,
+    "passed": 0.81,
+    "unresolved: unreproduced difference": -0.88
+   }
+  },
+  "hybrid: own draw w.p. 1/20": {
+   "frozen": {
+    "no verdict: premise not met": 0.0,
+    "no verdict: flagged cell": 0.7953,
+    "passed": 0.0607,
+    "breach reproduced": 0.0,
+    "unresolved: unreproduced difference": 0.144
+   },
+   "stage0": {
+    "no verdict: premise not met": 0.0,
+    "no verdict: flagged cell": 0.798,
+    "passed": 0.0587,
+    "breach reproduced": 0.0,
+    "unresolved: unreproduced difference": 0.1432
+   },
+   "largest_difference": 0.0027
+  },
+  "hybrid: own draw w.p. 1/10": {
+   "frozen": {
+    "no verdict: premise not met": 0.0,
+    "no verdict: flagged cell": 0.9595,
+    "passed": 0.0022,
+    "breach reproduced": 0.0,
+    "unresolved: unreproduced difference": 0.0382
+   },
+   "stage0": {
+    "no verdict: premise not met": 0.0,
+    "no verdict: flagged cell": 0.9583,
+    "passed": 0.0025,
+    "breach reproduced": 0.0,
+    "unresolved: unreproduced difference": 0.0393
+   },
+   "largest_difference": 0.0012
+  },
+  "hybrid: own draw w.p. 1/4": {
+   "frozen": {
+    "no verdict: premise not met": 0.0018,
+    "no verdict: flagged cell": 0.998,
+    "passed": 0.0,
+    "breach reproduced": 0.0,
+    "unresolved: unreproduced difference": 0.0003
+   },
+   "stage0": {
+    "no verdict: premise not met": 0.0008,
+    "no verdict: flagged cell": 0.999,
+    "passed": 0.0,
+    "breach reproduced": 0.0,
+    "unresolved: unreproduced difference": 0.0003
+   },
+   "largest_difference": 0.001
+  },
+  "majority copier": {
+   "frozen": {
+    "no verdict: premise not met": 0.0,
+    "no verdict: flagged cell": 0.0,
+    "passed": 1.0,
+    "breach reproduced": 0.0,
+    "unresolved: unreproduced difference": 0.0
+   },
+   "stage0": {
+    "no verdict: premise not met": 0.0,
+    "no verdict: flagged cell": 0.0,
+    "passed": 1.0,
+    "breach reproduced": 0.0,
+    "unresolved: unreproduced difference": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  "constant A": {
+   "frozen": {
+    "no verdict: premise not met": 0.0,
+    "no verdict: flagged cell": 0.0,
+    "passed": 1.0,
+    "breach reproduced": 0.0,
+    "unresolved: unreproduced difference": 0.0
+   },
+   "stage0": {
+    "no verdict: premise not met": 0.0,
+    "no verdict: flagged cell": 0.0,
+    "passed": 1.0,
+    "breach reproduced": 0.0,
+    "unresolved: unreproduced difference": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  "leaky 1 (guesses the next member's draw)": {
+   "frozen": {
+    "no verdict: premise not met": 0.0,
+    "no verdict: flagged cell": 0.0,
+    "passed": 0.0,
+    "breach reproduced": 1.0,
+    "unresolved: unreproduced difference": 0.0
+   },
+   "stage0": {
+    "no verdict: premise not met": 0.0,
+    "no verdict: flagged cell": 0.0,
+    "passed": 0.0,
+    "breach reproduced": 1.0,
+    "unresolved: unreproduced difference": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  "leaky 1/2": {
+   "frozen": {
+    "no verdict: premise not met": 0.0,
+    "no verdict: flagged cell": 0.0,
+    "passed": 0.0,
+    "breach reproduced": 0.1593,
+    "unresolved: unreproduced difference": 0.8407
+   },
+   "stage0": {
+    "no verdict: premise not met": 0.0,
+    "no verdict: flagged cell": 0.0,
+    "passed": 0.0,
+    "breach reproduced": 0.1547,
+    "unresolved: unreproduced difference": 0.8452
+   },
+   "largest_difference": 0.0046
+  },
+  "own draw always": {
+   "frozen": {
+    "no verdict: premise not met": 1.0,
+    "no verdict: flagged cell": 0.0,
+    "passed": 0.0,
+    "breach reproduced": 0.0,
+    "unresolved: unreproduced difference": 0.0
+   },
+   "stage0": {
+    "no verdict: premise not met": 1.0,
+    "no verdict: flagged cell": 0.0,
+    "passed": 0.0,
+    "breach reproduced": 0.0,
+    "unresolved: unreproduced difference": 0.0
+   },
+   "largest_difference": 0.0
+  }
+ },
+ "E7_shares": {
+  "BHW, ties to the own draw": {
+   "frozen": {
+    "placed": 1.0,
+    "contradicted": 0.0,
+    "unresolved": 0.0
+   },
+   "stage0": {
+    "placed": 1.0,
+    "contradicted": 0.0
+   },
+   "read_at_the_ties": {
+    "placed": 1.0
+   }
+  },
+  "BHW, ties to the own draw, flips 1/1000": {
+   "frozen": {
+    "placed": 0.9995,
+    "contradicted": 0.0,
+    "unresolved": 0.0005
+   },
+   "stage0": {
+    "placed": 0.9994,
+    "contradicted": 0.0
+   },
+   "read_at_the_ties": {
+    "placed": 0.9995,
+    "unresolved": 0.0005
+   }
+  },
+  "BHW, ties to the own draw, flips 3/1000": {
+   "frozen": {
+    "placed": 0.994,
+    "contradicted": 0.0,
+    "unresolved": 0.006
+   },
+   "stage0": {
+    "placed": 0.9941,
+    "contradicted": 0.0
+   },
+   "read_at_the_ties": {
+    "placed": 0.994,
+    "unresolved": 0.006
+   }
+  },
+  "BHW, ties to the own draw, flips 1/100": {
+   "frozen": {
+    "placed": 0.9355,
+    "contradicted": 0.0,
+    "unresolved": 0.0645
+   },
+   "stage0": {
+    "placed": 0.9373,
+    "contradicted": 0.0
+   },
+   "read_at_the_ties": {
+    "placed": 0.9355,
+    "unresolved": 0.0645
+   }
+  },
+  "BHW, ties to the own draw, flips 3/100": {
+   "frozen": {
+    "placed": 0.5715,
+    "contradicted": 0.0,
+    "unresolved": 0.4285
+   },
+   "stage0": {
+    "placed": 0.5704,
+    "contradicted": 0.0002
+   },
+   "read_at_the_ties": {
+    "placed": 0.5715,
+    "unresolved": 0.4285
+   }
+  },
+  "BHW, ties toward the public belief": {
+   "frozen": {
+    "placed": 0.0,
+    "contradicted": 1.0,
+    "unresolved": 0.0
+   },
+   "stage0": null,
+   "read_at_the_ties": {
+    "contradicted at all five ties, toward the public belief; beyond the ties placed": 1.0
+   }
+  },
+  "BHW, ties toward the public belief, flips 1/1000": {
+   "frozen": {
+    "placed": 0.0,
+    "contradicted": 1.0,
+    "unresolved": 0.0
+   },
+   "stage0": null,
+   "read_at_the_ties": {
+    "contradicted at all five ties, toward the public belief; beyond the ties placed": 0.999,
+    "contradicted at all five ties, toward the public belief; beyond the ties unresolved": 0.001
+   }
+  },
+  "BHW, ties toward the public belief, flips 3/1000": {
+   "frozen": {
+    "placed": 0.0,
+    "contradicted": 1.0,
+    "unresolved": 0.0
+   },
+   "stage0": null,
+   "read_at_the_ties": {
+    "contradicted at 4 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 2 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties placed": 0.0005,
+    "contradicted at all five ties, toward the public belief; beyond the ties placed": 0.996,
+    "contradicted at all five ties, toward the public belief; beyond the ties unresolved": 0.0035
+   }
+  },
+  "BHW, ties toward the public belief, flips 1/100": {
+   "frozen": {
+    "placed": 0.0,
+    "contradicted": 1.0,
+    "unresolved": 0.0
+   },
+   "stage0": null,
+   "read_at_the_ties": {
+    "contradicted at 3 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties placed": 0.0005,
+    "contradicted at 4 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 2 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties placed": 0.008,
+    "contradicted at 4 of the five ties, toward the public belief (toward the public belief, X side 3 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties placed": 0.005,
+    "contradicted at 4 of the five ties, toward the public belief (toward the public belief, X side 3 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties unresolved": 0.0005,
+    "contradicted at all five ties, toward the public belief; beyond the ties placed": 0.935,
+    "contradicted at all five ties, toward the public belief; beyond the ties unresolved": 0.051
+   }
+  },
+  "BHW, ties toward the public belief, flips 3/100": {
+   "frozen": {
+    "placed": 0.0,
+    "contradicted": 1.0,
+    "unresolved": 0.0
+   },
+   "stage0": null,
+   "read_at_the_ties": {
+    "contradicted at 3 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 2 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties unresolved": 0.0005,
+    "contradicted at 3 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties placed": 0.001,
+    "contradicted at 3 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties unresolved": 0.0005,
+    "contradicted at 3 of the five ties, toward the public belief (toward the public belief, X side 3 of 3 and Y side 0 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties unresolved": 0.001,
+    "contradicted at 4 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 2 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties placed": 0.0305,
+    "contradicted at 4 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 2 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties unresolved": 0.016,
+    "contradicted at 4 of the five ties, toward the public belief (toward the public belief, X side 3 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties placed": 0.02,
+    "contradicted at 4 of the five ties, toward the public belief (toward the public belief, X side 3 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties unresolved": 0.0125,
+    "contradicted at all five ties, toward the public belief; beyond the ties placed": 0.5735,
+    "contradicted at all five ties, toward the public belief; beyond the ties unresolved": 0.344,
+    "contradicted beyond the ties": 0.0005
+   }
+  },
+  "BHW, coin ties": {
+   "frozen": {
+    "placed": 0.0005,
+    "contradicted": 0.6385,
+    "unresolved": 0.361
+   },
+   "stage0": null,
+   "read_at_the_ties": {
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 0 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties placed": 0.0535,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 0 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 1; otherwise 0); beyond the ties placed": 0.016,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 0 of 3 and Y side 1 of 2; with the own light, X side 1 and Y side 0; otherwise 0); beyond the ties placed": 0.05,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 0 of 3 and Y side 1 of 2; with the own light, X side 1 and Y side 1; otherwise 0); beyond the ties placed": 0.0205,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 0 of 3 and Y side 1 of 2; with the own light, X side 2 and Y side 0; otherwise 0); beyond the ties placed": 0.016,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 0 of 3 and Y side 1 of 2; with the own light, X side 2 and Y side 1; otherwise 0); beyond the ties placed": 0.004,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 0 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties placed": 0.0905,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 0 of 2; with the own light, X side 0 and Y side 1; otherwise 0); beyond the ties placed": 0.0585,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 0 of 2; with the own light, X side 0 and Y side 2; otherwise 0); beyond the ties placed": 0.007,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 0 of 2; with the own light, X side 1 and Y side 0; otherwise 0); beyond the ties placed": 0.0555,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 0 of 2; with the own light, X side 1 and Y side 1; otherwise 0); beyond the ties placed": 0.028,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 0 of 2; with the own light, X side 1 and Y side 2; otherwise 0); beyond the ties placed": 0.006,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 0 of 2; with the own light, X side 2 and Y side 0; otherwise 0); beyond the ties placed": 0.007,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 0 of 2; with the own light, X side 2 and Y side 1; otherwise 0); beyond the ties placed": 0.003,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 0 of 2; with the own light, X side 2 and Y side 2; otherwise 0); beyond the ties placed": 0.001,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 0 of 3 and Y side 2 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties placed": 0.0075,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 0 of 3 and Y side 2 of 2; with the own light, X side 1 and Y side 0; otherwise 0); beyond the ties placed": 0.009,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 0 of 3 and Y side 2 of 2; with the own light, X side 2 and Y side 0; otherwise 0); beyond the ties placed": 0.0005,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties placed": 0.0495,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 1; otherwise 0); beyond the ties placed": 0.0105,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 1 of 2; with the own light, X side 1 and Y side 0; otherwise 0); beyond the ties placed": 0.0315,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 1 of 2; with the own light, X side 1 and Y side 1; otherwise 0); beyond the ties placed": 0.006,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 1 of 2; with the own light, X side 2 and Y side 0; otherwise 0); beyond the ties placed": 0.0025,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 0 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties placed": 0.03,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 0 of 2; with the own light, X side 0 and Y side 1; otherwise 0); beyond the ties placed": 0.019,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 0 of 2; with the own light, X side 0 and Y side 2; otherwise 0); beyond the ties placed": 0.0025,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 0 of 2; with the own light, X side 1 and Y side 0; otherwise 0); beyond the ties placed": 0.006,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 0 of 2; with the own light, X side 1 and Y side 1; otherwise 0); beyond the ties placed": 0.0065,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 0 of 2; with the own light, X side 1 and Y side 2; otherwise 0); beyond the ties placed": 0.001,
+    "contradicted at 3 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 2 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties placed": 0.007,
+    "contradicted at 3 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 2 of 2; with the own light, X side 1 and Y side 0; otherwise 0); beyond the ties placed": 0.004,
+    "contradicted at 3 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 2 of 2; with the own light, X side 2 and Y side 0; otherwise 0); beyond the ties placed": 0.001,
+    "contradicted at 3 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties placed": 0.013,
+    "contradicted at 3 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 1; otherwise 0); beyond the ties placed": 0.002,
+    "contradicted at 3 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 1 of 2; with the own light, X side 1 and Y side 0; otherwise 0); beyond the ties placed": 0.004,
+    "contradicted at 3 of the five ties, toward the public belief (toward the public belief, X side 3 of 3 and Y side 0 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties placed": 0.003,
+    "contradicted at 3 of the five ties, toward the public belief (toward the public belief, X side 3 of 3 and Y side 0 of 2; with the own light, X side 0 and Y side 1; otherwise 0); beyond the ties placed": 0.001,
+    "contradicted at 4 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 2 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties placed": 0.0025,
+    "contradicted at 4 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 2 of 2; with the own light, X side 1 and Y side 0; otherwise 0); beyond the ties placed": 0.0005,
+    "contradicted at 4 of the five ties, toward the public belief (toward the public belief, X side 3 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties placed": 0.0005,
+    "contradicted at 4 of the five ties, toward the public belief (toward the public belief, X side 3 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 1; otherwise 0); beyond the ties placed": 0.001,
+    "contradicted at all five ties, toward the public belief; beyond the ties placed": 0.0005,
+    "placed": 0.0005,
+    "unresolved": 0.361
+   }
+  },
+  "BHW, coin ties, flips 1/1000": {
+   "frozen": {
+    "placed": 0.0,
+    "contradicted": 0.6445,
+    "unresolved": 0.3555
+   },
+   "stage0": null,
+   "read_at_the_ties": {
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 0 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties placed": 0.0465,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 0 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 1; otherwise 0); beyond the ties placed": 0.0155,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 0 of 3 and Y side 1 of 2; with the own light, X side 1 and Y side 0; otherwise 0); beyond the ties placed": 0.057,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 0 of 3 and Y side 1 of 2; with the own light, X side 1 and Y side 1; otherwise 0); beyond the ties placed": 0.018,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 0 of 3 and Y side 1 of 2; with the own light, X side 2 and Y side 0; otherwise 0); beyond the ties placed": 0.013,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 0 of 3 and Y side 1 of 2; with the own light, X side 2 and Y side 1; otherwise 0); beyond the ties placed": 0.0025,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 0 of 3 and Y side 1 of 2; with the own light, X side 3 and Y side 0; otherwise 0); beyond the ties placed": 0.0025,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 0 of 3 and Y side 1 of 2; with the own light, X side 3 and Y side 1; otherwise 0); beyond the ties placed": 0.0005,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 0 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties placed": 0.0845,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 0 of 2; with the own light, X side 0 and Y side 1; otherwise 0); beyond the ties placed": 0.0525,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 0 of 2; with the own light, X side 0 and Y side 2; otherwise 0); beyond the ties placed": 0.0075,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 0 of 2; with the own light, X side 1 and Y side 0; otherwise 0); beyond the ties placed": 0.051,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 0 of 2; with the own light, X side 1 and Y side 1; otherwise 0); beyond the ties placed": 0.0305,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 0 of 2; with the own light, X side 1 and Y side 2; otherwise 0); beyond the ties placed": 0.008,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 0 of 2; with the own light, X side 2 and Y side 0; otherwise 0); beyond the ties placed": 0.01,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 0 of 2; with the own light, X side 2 and Y side 1; otherwise 0); beyond the ties placed": 0.006,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 0 of 2; with the own light, X side 2 and Y side 2; otherwise 0); beyond the ties placed": 0.0005,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 0 of 3 and Y side 2 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties placed": 0.004,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 0 of 3 and Y side 2 of 2; with the own light, X side 1 and Y side 0; otherwise 0); beyond the ties placed": 0.0085,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 0 of 3 and Y side 2 of 2; with the own light, X side 2 and Y side 0; otherwise 0); beyond the ties placed": 0.003,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties placed": 0.05,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 1; otherwise 0); beyond the ties placed": 0.017,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 1 of 2; with the own light, X side 1 and Y side 0; otherwise 0); beyond the ties placed": 0.0315,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 1 of 2; with the own light, X side 1 and Y side 1; otherwise 0); beyond the ties placed": 0.0115,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 1 of 2; with the own light, X side 2 and Y side 0; otherwise 0); beyond the ties placed": 0.0055,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 1 of 2; with the own light, X side 2 and Y side 1; otherwise 0); beyond the ties placed": 0.001,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 0 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties placed": 0.0315,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 0 of 2; with the own light, X side 0 and Y side 1; otherwise 0); beyond the ties placed": 0.012,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 0 of 2; with the own light, X side 0 and Y side 2; otherwise 0); beyond the ties placed": 0.001,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 0 of 2; with the own light, X side 1 and Y side 0; otherwise 0); beyond the ties placed": 0.0075,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 0 of 2; with the own light, X side 1 and Y side 1; otherwise 0); beyond the ties placed": 0.0025,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 0 of 2; with the own light, X side 1 and Y side 2; otherwise 0); beyond the ties placed": 0.0005,
+    "contradicted at 3 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 2 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties placed": 0.006,
+    "contradicted at 3 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 2 of 2; with the own light, X side 1 and Y side 0; otherwise 0); beyond the ties placed": 0.0065,
+    "contradicted at 3 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 2 of 2; with the own light, X side 2 and Y side 0; otherwise 0); beyond the ties placed": 0.0005,
+    "contradicted at 3 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties placed": 0.0165,
+    "contradicted at 3 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 1; otherwise 0); beyond the ties placed": 0.006,
+    "contradicted at 3 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 1 of 2; with the own light, X side 1 and Y side 0; otherwise 0); beyond the ties placed": 0.0035,
+    "contradicted at 3 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 1 of 2; with the own light, X side 1 and Y side 1; otherwise 0); beyond the ties placed": 0.0015,
+    "contradicted at 3 of the five ties, toward the public belief (toward the public belief, X side 3 of 3 and Y side 0 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties placed": 0.003,
+    "contradicted at 3 of the five ties, toward the public belief (toward the public belief, X side 3 of 3 and Y side 0 of 2; with the own light, X side 0 and Y side 1; otherwise 0); beyond the ties placed": 0.0015,
+    "contradicted at 4 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 2 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties placed": 0.002,
+    "contradicted at 4 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 2 of 2; with the own light, X side 1 and Y side 0; otherwise 0); beyond the ties placed": 0.001,
+    "contradicted at 4 of the five ties, toward the public belief (toward the public belief, X side 3 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties placed": 0.002,
+    "contradicted at 4 of the five ties, toward the public belief (toward the public belief, X side 3 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 1; otherwise 0); beyond the ties placed": 0.001,
+    "contradicted at the ties, Y at every tie, not toward the public belief; beyond the ties placed": 0.0005,
+    "unresolved": 0.3555
+   }
+  },
+  "BHW, coin ties, flips 3/1000": {
+   "frozen": {
+    "placed": 0.0,
+    "contradicted": 0.6325,
+    "unresolved": 0.3675
+   },
+   "stage0": null,
+   "read_at_the_ties": {
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 0 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties placed": 0.05,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 0 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 1; otherwise 0); beyond the ties placed": 0.014,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 0 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 1; otherwise 0); beyond the ties unresolved": 0.0005,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 0 of 3 and Y side 1 of 2; with the own light, X side 1 and Y side 0; otherwise 0); beyond the ties placed": 0.046,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 0 of 3 and Y side 1 of 2; with the own light, X side 1 and Y side 1; otherwise 0); beyond the ties placed": 0.016,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 0 of 3 and Y side 1 of 2; with the own light, X side 2 and Y side 0; otherwise 0); beyond the ties placed": 0.014,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 0 of 3 and Y side 1 of 2; with the own light, X side 2 and Y side 1; otherwise 0); beyond the ties placed": 0.003,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 0 of 3 and Y side 1 of 2; with the own light, X side 3 and Y side 0; otherwise 0); beyond the ties placed": 0.002,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 0 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties placed": 0.0905,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 0 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties unresolved": 0.0005,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 0 of 2; with the own light, X side 0 and Y side 1; otherwise 0); beyond the ties placed": 0.0475,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 0 of 2; with the own light, X side 0 and Y side 2; otherwise 0); beyond the ties placed": 0.0065,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 0 of 2; with the own light, X side 1 and Y side 0; otherwise 0); beyond the ties placed": 0.0625,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 0 of 2; with the own light, X side 1 and Y side 1; otherwise 0); beyond the ties placed": 0.0355,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 0 of 2; with the own light, X side 1 and Y side 2; otherwise 0); beyond the ties placed": 0.0045,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 0 of 2; with the own light, X side 2 and Y side 0; otherwise 0); beyond the ties placed": 0.0085,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 0 of 2; with the own light, X side 2 and Y side 1; otherwise 0); beyond the ties placed": 0.0055,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 0 of 2; with the own light, X side 2 and Y side 2; otherwise 0); beyond the ties placed": 0.001,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 0 of 3 and Y side 2 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties placed": 0.01,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 0 of 3 and Y side 2 of 2; with the own light, X side 1 and Y side 0; otherwise 0); beyond the ties placed": 0.007,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 0 of 3 and Y side 2 of 2; with the own light, X side 2 and Y side 0; otherwise 0); beyond the ties placed": 0.0025,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties placed": 0.053,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties unresolved": 0.0005,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 1; otherwise 0); beyond the ties placed": 0.0145,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 1 of 2; with the own light, X side 1 and Y side 0; otherwise 0); beyond the ties placed": 0.0335,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 1 of 2; with the own light, X side 1 and Y side 0; otherwise 0); beyond the ties unresolved": 0.0015,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 1 of 2; with the own light, X side 1 and Y side 1; otherwise 0); beyond the ties placed": 0.006,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 1 of 2; with the own light, X side 2 and Y side 0; otherwise 0); beyond the ties placed": 0.0045,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 1 of 2; with the own light, X side 2 and Y side 1; otherwise 0); beyond the ties placed": 0.0015,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 0 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties placed": 0.0205,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 0 of 2; with the own light, X side 0 and Y side 1; otherwise 0); beyond the ties placed": 0.015,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 0 of 2; with the own light, X side 0 and Y side 2; otherwise 0); beyond the ties placed": 0.0015,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 0 of 2; with the own light, X side 1 and Y side 0; otherwise 0); beyond the ties placed": 0.0055,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 0 of 2; with the own light, X side 1 and Y side 1; otherwise 0); beyond the ties placed": 0.0055,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 0 of 2; with the own light, X side 1 and Y side 2; otherwise 0); beyond the ties placed": 0.0015,
+    "contradicted at 3 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 2 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties placed": 0.0045,
+    "contradicted at 3 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 2 of 2; with the own light, X side 1 and Y side 0; otherwise 0); beyond the ties placed": 0.002,
+    "contradicted at 3 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 2 of 2; with the own light, X side 2 and Y side 0; otherwise 0); beyond the ties placed": 0.001,
+    "contradicted at 3 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties placed": 0.0115,
+    "contradicted at 3 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 1; otherwise 0); beyond the ties placed": 0.007,
+    "contradicted at 3 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 1; otherwise 0); beyond the ties unresolved": 0.0005,
+    "contradicted at 3 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 1 of 2; with the own light, X side 1 and Y side 0; otherwise 0); beyond the ties placed": 0.0045,
+    "contradicted at 3 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 1 of 2; with the own light, X side 1 and Y side 1; otherwise 0); beyond the ties placed": 0.001,
+    "contradicted at 3 of the five ties, toward the public belief (toward the public belief, X side 3 of 3 and Y side 0 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties placed": 0.0025,
+    "contradicted at 3 of the five ties, toward the public belief (toward the public belief, X side 3 of 3 and Y side 0 of 2; with the own light, X side 0 and Y side 1; otherwise 0); beyond the ties placed": 0.001,
+    "contradicted at 4 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 2 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties placed": 0.003,
+    "contradicted at 4 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 2 of 2; with the own light, X side 1 and Y side 0; otherwise 0); beyond the ties placed": 0.0005,
+    "contradicted at 4 of the five ties, toward the public belief (toward the public belief, X side 3 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties placed": 0.0005,
+    "contradicted at 4 of the five ties, toward the public belief (toward the public belief, X side 3 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 1; otherwise 0); beyond the ties placed": 0.0005,
+    "contradicted at the ties, X at every tie, not toward the public belief; beyond the ties placed": 0.0005,
+    "unresolved": 0.3675
+   }
+  },
+  "BHW, coin ties, flips 1/100": {
+   "frozen": {
+    "placed": 0.0,
+    "contradicted": 0.629,
+    "unresolved": 0.371
+   },
+   "stage0": null,
+   "read_at_the_ties": {
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 0 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties placed": 0.0515,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 0 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties unresolved": 0.003,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 0 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 1; otherwise 0); beyond the ties placed": 0.0155,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 0 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 1; otherwise 0); beyond the ties unresolved": 0.0005,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 0 of 3 and Y side 1 of 2; with the own light, X side 1 and Y side 0; otherwise 0); beyond the ties placed": 0.0485,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 0 of 3 and Y side 1 of 2; with the own light, X side 1 and Y side 0; otherwise 0); beyond the ties unresolved": 0.002,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 0 of 3 and Y side 1 of 2; with the own light, X side 1 and Y side 1; otherwise 0); beyond the ties placed": 0.0125,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 0 of 3 and Y side 1 of 2; with the own light, X side 1 and Y side 1; otherwise 0); beyond the ties unresolved": 0.001,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 0 of 3 and Y side 1 of 2; with the own light, X side 2 and Y side 0; otherwise 0); beyond the ties placed": 0.0135,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 0 of 3 and Y side 1 of 2; with the own light, X side 2 and Y side 0; otherwise 0); beyond the ties unresolved": 0.0005,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 0 of 3 and Y side 1 of 2; with the own light, X side 2 and Y side 1; otherwise 0); beyond the ties placed": 0.004,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 0 of 3 and Y side 1 of 2; with the own light, X side 2 and Y side 1; otherwise 0); beyond the ties unresolved": 0.0005,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 0 of 3 and Y side 1 of 2; with the own light, X side 3 and Y side 0; otherwise 0); beyond the ties placed": 0.002,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 0 of 3 and Y side 1 of 2; with the own light, X side 3 and Y side 0; otherwise 0); beyond the ties unresolved": 0.0005,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 0 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties placed": 0.068,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 0 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties unresolved": 0.0055,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 0 of 2; with the own light, X side 0 and Y side 1; otherwise 0); beyond the ties placed": 0.046,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 0 of 2; with the own light, X side 0 and Y side 1; otherwise 0); beyond the ties unresolved": 0.001,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 0 of 2; with the own light, X side 0 and Y side 2; otherwise 0); beyond the ties placed": 0.0095,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 0 of 2; with the own light, X side 1 and Y side 0; otherwise 0); beyond the ties placed": 0.046,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 0 of 2; with the own light, X side 1 and Y side 0; otherwise 0); beyond the ties unresolved": 0.002,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 0 of 2; with the own light, X side 1 and Y side 1; otherwise 0); beyond the ties placed": 0.0255,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 0 of 2; with the own light, X side 1 and Y side 1; otherwise 0); beyond the ties unresolved": 0.0025,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 0 of 2; with the own light, X side 1 and Y side 2; otherwise 0); beyond the ties placed": 0.004,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 0 of 2; with the own light, X side 2 and Y side 0; otherwise 0); beyond the ties placed": 0.0095,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 0 of 2; with the own light, X side 2 and Y side 1; otherwise 0); beyond the ties placed": 0.004,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 0 of 2; with the own light, X side 2 and Y side 2; otherwise 0); beyond the ties placed": 0.0005,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 0 of 3 and Y side 2 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties placed": 0.0045,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 0 of 3 and Y side 2 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties unresolved": 0.002,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 0 of 3 and Y side 2 of 2; with the own light, X side 1 and Y side 0; otherwise 0); beyond the ties placed": 0.0075,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 0 of 3 and Y side 2 of 2; with the own light, X side 2 and Y side 0; otherwise 0); beyond the ties placed": 0.001,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 0 of 3 and Y side 2 of 2; with the own light, X side 2 and Y side 0; otherwise 0); beyond the ties unresolved": 0.001,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties placed": 0.0505,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties unresolved": 0.006,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 1; otherwise 0); beyond the ties placed": 0.012,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 1; otherwise 0); beyond the ties unresolved": 0.0005,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 1 of 2; with the own light, X side 1 and Y side 0; otherwise 0); beyond the ties placed": 0.028,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 1 of 2; with the own light, X side 1 and Y side 0; otherwise 0); beyond the ties unresolved": 0.0025,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 1 of 2; with the own light, X side 1 and Y side 1; otherwise 0); beyond the ties placed": 0.0055,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 1 of 2; with the own light, X side 2 and Y side 0; otherwise 0); beyond the ties placed": 0.005,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 1 of 2; with the own light, X side 2 and Y side 0; otherwise 0); beyond the ties unresolved": 0.0005,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 1 of 2; with the own light, X side 2 and Y side 1; otherwise 0); beyond the ties placed": 0.002,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 0 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties placed": 0.019,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 0 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties unresolved": 0.0015,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 0 of 2; with the own light, X side 0 and Y side 1; otherwise 0); beyond the ties placed": 0.022,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 0 of 2; with the own light, X side 0 and Y side 2; otherwise 0); beyond the ties placed": 0.0015,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 0 of 2; with the own light, X side 1 and Y side 0; otherwise 0); beyond the ties placed": 0.0105,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 0 of 2; with the own light, X side 1 and Y side 0; otherwise 0); beyond the ties unresolved": 0.0005,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 0 of 2; with the own light, X side 1 and Y side 1; otherwise 0); beyond the ties placed": 0.0055,
+    "contradicted at 3 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 2 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties placed": 0.012,
+    "contradicted at 3 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 2 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties unresolved": 0.0015,
+    "contradicted at 3 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 2 of 2; with the own light, X side 1 and Y side 0; otherwise 0); beyond the ties placed": 0.0025,
+    "contradicted at 3 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 2 of 2; with the own light, X side 2 and Y side 0; otherwise 0); beyond the ties placed": 0.001,
+    "contradicted at 3 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties placed": 0.0185,
+    "contradicted at 3 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties unresolved": 0.002,
+    "contradicted at 3 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 1; otherwise 0); beyond the ties placed": 0.004,
+    "contradicted at 3 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 1; otherwise 0); beyond the ties unresolved": 0.001,
+    "contradicted at 3 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 1 of 2; with the own light, X side 1 and Y side 0; otherwise 0); beyond the ties placed": 0.0045,
+    "contradicted at 3 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 1 of 2; with the own light, X side 1 and Y side 0; otherwise 0); beyond the ties unresolved": 0.0005,
+    "contradicted at 3 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 1 of 2; with the own light, X side 1 and Y side 1; otherwise 0); beyond the ties placed": 0.001,
+    "contradicted at 3 of the five ties, toward the public belief (toward the public belief, X side 3 of 3 and Y side 0 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties placed": 0.003,
+    "contradicted at 3 of the five ties, toward the public belief (toward the public belief, X side 3 of 3 and Y side 0 of 2; with the own light, X side 0 and Y side 1; otherwise 0); beyond the ties placed": 0.002,
+    "contradicted at 4 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 2 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties placed": 0.002,
+    "contradicted at 4 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 2 of 2; with the own light, X side 1 and Y side 0; otherwise 0); beyond the ties placed": 0.002,
+    "contradicted at 4 of the five ties, toward the public belief (toward the public belief, X side 3 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties placed": 0.002,
+    "contradicted at 4 of the five ties, toward the public belief (toward the public belief, X side 3 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties unresolved": 0.0005,
+    "contradicted at all five ties, toward the public belief; beyond the ties placed": 0.0005,
+    "unresolved": 0.371
+   }
+  },
+  "BHW, coin ties, flips 3/100": {
+   "frozen": {
+    "placed": 0.0,
+    "contradicted": 0.648,
+    "unresolved": 0.352
+   },
+   "stage0": null,
+   "read_at_the_ties": {
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 0 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties placed": 0.0385,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 0 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties unresolved": 0.022,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 0 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 1; otherwise 0); beyond the ties placed": 0.0095,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 0 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 1; otherwise 0); beyond the ties unresolved": 0.006,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 0 of 3 and Y side 1 of 2; with the own light, X side 1 and Y side 0; otherwise 0); beyond the ties placed": 0.0305,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 0 of 3 and Y side 1 of 2; with the own light, X side 1 and Y side 0; otherwise 0); beyond the ties unresolved": 0.018,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 0 of 3 and Y side 1 of 2; with the own light, X side 1 and Y side 1; otherwise 0); beyond the ties placed": 0.01,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 0 of 3 and Y side 1 of 2; with the own light, X side 1 and Y side 1; otherwise 0); beyond the ties unresolved": 0.0095,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 0 of 3 and Y side 1 of 2; with the own light, X side 2 and Y side 0; otherwise 0); beyond the ties placed": 0.0085,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 0 of 3 and Y side 1 of 2; with the own light, X side 2 and Y side 0; otherwise 0); beyond the ties unresolved": 0.0035,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 0 of 3 and Y side 1 of 2; with the own light, X side 2 and Y side 1; otherwise 0); beyond the ties placed": 0.0025,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 0 of 3 and Y side 1 of 2; with the own light, X side 2 and Y side 1; otherwise 0); beyond the ties unresolved": 0.0015,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 0 of 3 and Y side 1 of 2; with the own light, X side 3 and Y side 0; otherwise 0); beyond the ties unresolved": 0.0005,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 0 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties placed": 0.0535,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 0 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties unresolved": 0.0335,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 0 of 2; with the own light, X side 0 and Y side 1; otherwise 0); beyond the ties placed": 0.039,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 0 of 2; with the own light, X side 0 and Y side 1; otherwise 0); beyond the ties unresolved": 0.0225,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 0 of 2; with the own light, X side 0 and Y side 2; otherwise 0); beyond the ties placed": 0.0065,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 0 of 2; with the own light, X side 0 and Y side 2; otherwise 0); beyond the ties unresolved": 0.001,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 0 of 2; with the own light, X side 1 and Y side 0; otherwise 0); beyond the ties placed": 0.0295,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 0 of 2; with the own light, X side 1 and Y side 0; otherwise 0); beyond the ties unresolved": 0.022,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 0 of 2; with the own light, X side 1 and Y side 1; otherwise 0); beyond the ties placed": 0.0185,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 0 of 2; with the own light, X side 1 and Y side 1; otherwise 0); beyond the ties unresolved": 0.018,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 0 of 2; with the own light, X side 1 and Y side 2; otherwise 0); beyond the ties placed": 0.0035,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 0 of 2; with the own light, X side 1 and Y side 2; otherwise 0); beyond the ties unresolved": 0.002,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 0 of 2; with the own light, X side 2 and Y side 0; otherwise 0); beyond the ties placed": 0.005,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 0 of 2; with the own light, X side 2 and Y side 0; otherwise 0); beyond the ties unresolved": 0.0035,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 0 of 2; with the own light, X side 2 and Y side 1; otherwise 0); beyond the ties placed": 0.0025,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 0 of 2; with the own light, X side 2 and Y side 1; otherwise 0); beyond the ties unresolved": 0.001,
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 0 of 2; with the own light, X side 2 and Y side 2; otherwise 0); beyond the ties placed": 0.0005,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 0 of 3 and Y side 2 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties placed": 0.0065,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 0 of 3 and Y side 2 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties unresolved": 0.004,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 0 of 3 and Y side 2 of 2; with the own light, X side 1 and Y side 0; otherwise 0); beyond the ties placed": 0.0055,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 0 of 3 and Y side 2 of 2; with the own light, X side 1 and Y side 0; otherwise 0); beyond the ties unresolved": 0.001,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 0 of 3 and Y side 2 of 2; with the own light, X side 2 and Y side 0; otherwise 0); beyond the ties placed": 0.0015,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties placed": 0.0265,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties unresolved": 0.016,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 1; otherwise 0); beyond the ties placed": 0.01,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 1; otherwise 0); beyond the ties unresolved": 0.0045,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 1 of 2; with the own light, X side 1 and Y side 0; otherwise 0); beyond the ties placed": 0.021,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 1 of 2; with the own light, X side 1 and Y side 0; otherwise 0); beyond the ties unresolved": 0.014,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 1 of 2; with the own light, X side 1 and Y side 1; otherwise 0); beyond the ties placed": 0.005,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 1 of 2; with the own light, X side 1 and Y side 1; otherwise 0); beyond the ties unresolved": 0.004,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 1 of 2; with the own light, X side 2 and Y side 0; otherwise 0); beyond the ties placed": 0.003,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 1 of 2; with the own light, X side 2 and Y side 0; otherwise 0); beyond the ties unresolved": 0.001,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 1 of 2; with the own light, X side 2 and Y side 1; otherwise 0); beyond the ties placed": 0.001,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 1 of 2; with the own light, X side 2 and Y side 1; otherwise 0); beyond the ties unresolved": 0.0005,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 0 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties placed": 0.0125,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 0 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties unresolved": 0.0085,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 0 of 2; with the own light, X side 0 and Y side 1; otherwise 0); beyond the ties placed": 0.007,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 0 of 2; with the own light, X side 0 and Y side 1; otherwise 0); beyond the ties unresolved": 0.007,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 0 of 2; with the own light, X side 0 and Y side 2; otherwise 0); beyond the ties placed": 0.0015,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 0 of 2; with the own light, X side 0 and Y side 2; otherwise 0); beyond the ties unresolved": 0.0015,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 0 of 2; with the own light, X side 1 and Y side 0; otherwise 0); beyond the ties placed": 0.003,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 0 of 2; with the own light, X side 1 and Y side 0; otherwise 0); beyond the ties unresolved": 0.005,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 0 of 2; with the own light, X side 1 and Y side 1; otherwise 0); beyond the ties placed": 0.0035,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 0 of 2; with the own light, X side 1 and Y side 1; otherwise 0); beyond the ties unresolved": 0.0015,
+    "contradicted at 3 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 2 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties placed": 0.005,
+    "contradicted at 3 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 2 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties unresolved": 0.0055,
+    "contradicted at 3 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 2 of 2; with the own light, X side 1 and Y side 0; otherwise 0); beyond the ties placed": 0.0015,
+    "contradicted at 3 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 2 of 2; with the own light, X side 1 and Y side 0; otherwise 0); beyond the ties unresolved": 0.0015,
+    "contradicted at 3 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties placed": 0.009,
+    "contradicted at 3 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties unresolved": 0.007,
+    "contradicted at 3 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 1; otherwise 0); beyond the ties placed": 0.0025,
+    "contradicted at 3 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 1; otherwise 0); beyond the ties unresolved": 0.0025,
+    "contradicted at 3 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 1 of 2; with the own light, X side 1 and Y side 0; otherwise 0); beyond the ties placed": 0.001,
+    "contradicted at 3 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 1 of 2; with the own light, X side 1 and Y side 0; otherwise 0); beyond the ties unresolved": 0.001,
+    "contradicted at 3 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 1 of 2; with the own light, X side 1 and Y side 1; otherwise 0); beyond the ties placed": 0.0005,
+    "contradicted at 3 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 1 of 2; with the own light, X side 1 and Y side 1; otherwise 0); beyond the ties unresolved": 0.001,
+    "contradicted at 3 of the five ties, toward the public belief (toward the public belief, X side 3 of 3 and Y side 0 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties placed": 0.0035,
+    "contradicted at 3 of the five ties, toward the public belief (toward the public belief, X side 3 of 3 and Y side 0 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties unresolved": 0.0005,
+    "contradicted at 3 of the five ties, toward the public belief (toward the public belief, X side 3 of 3 and Y side 0 of 2; with the own light, X side 0 and Y side 1; otherwise 0); beyond the ties placed": 0.0005,
+    "contradicted at 4 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 2 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties placed": 0.0025,
+    "contradicted at 4 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 2 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties unresolved": 0.001,
+    "contradicted at 4 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 2 of 2; with the own light, X side 1 and Y side 0; otherwise 0); beyond the ties placed": 0.0005,
+    "contradicted at 4 of the five ties, toward the public belief (toward the public belief, X side 3 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties placed": 0.001,
+    "contradicted at 4 of the five ties, toward the public belief (toward the public belief, X side 3 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties unresolved": 0.001,
+    "contradicted at all five ties, toward the public belief; beyond the ties placed": 0.0005,
+    "contradicted beyond the ties": 0.0005,
+    "unresolved": 0.352
+   }
+  },
+  "leaves its light unless the odds for it reach 3:2": {
+   "frozen": {
+    "placed": 0.0,
+    "contradicted": 1.0,
+    "unresolved": 0.0
+   },
+   "stage0": null,
+   "read_at_the_ties": {
+    "contradicted at all five ties, toward the public belief; beyond the ties placed": 1.0
+   }
+  },
+  "leaves its light unless the odds for it reach 3:2, flips 1/1000": {
+   "frozen": {
+    "placed": 0.0,
+    "contradicted": 1.0,
+    "unresolved": 0.0
+   },
+   "stage0": null,
+   "read_at_the_ties": {
+    "contradicted at 4 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 2 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties placed": 0.0005,
+    "contradicted at 4 of the five ties, toward the public belief (toward the public belief, X side 3 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties placed": 0.0005,
+    "contradicted at all five ties, toward the public belief; beyond the ties placed": 0.9985,
+    "contradicted at all five ties, toward the public belief; beyond the ties unresolved": 0.0005
+   }
+  },
+  "leaves its light unless the odds for it reach 3:2, flips 3/1000": {
+   "frozen": {
+    "placed": 0.0,
+    "contradicted": 1.0,
+    "unresolved": 0.0
+   },
+   "stage0": null,
+   "read_at_the_ties": {
+    "contradicted at 4 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 2 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties placed": 0.001,
+    "contradicted at 4 of the five ties, toward the public belief (toward the public belief, X side 3 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties placed": 0.0005,
+    "contradicted at all five ties, toward the public belief; beyond the ties placed": 0.9945,
+    "contradicted at all five ties, toward the public belief; beyond the ties unresolved": 0.004
+   }
+  },
+  "leaves its light unless the odds for it reach 3:2, flips 1/100": {
+   "frozen": {
+    "placed": 0.0,
+    "contradicted": 1.0,
+    "unresolved": 0.0
+   },
+   "stage0": null,
+   "read_at_the_ties": {
+    "contradicted at 4 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 2 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties placed": 0.007,
+    "contradicted at 4 of the five ties, toward the public belief (toward the public belief, X side 3 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties placed": 0.003,
+    "contradicted at all five ties, toward the public belief; beyond the ties placed": 0.935,
+    "contradicted at all five ties, toward the public belief; beyond the ties unresolved": 0.055
+   }
+  },
+  "leaves its light unless the odds for it reach 3:2, flips 3/100": {
+   "frozen": {
+    "placed": 0.0,
+    "contradicted": 1.0,
+    "unresolved": 0.0
+   },
+   "stage0": null,
+   "read_at_the_ties": {
+    "contradicted at 3 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 2 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties placed": 0.0005,
+    "contradicted at 3 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 2 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties unresolved": 0.0005,
+    "contradicted at 3 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties placed": 0.001,
+    "contradicted at 3 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties unresolved": 0.0005,
+    "contradicted at 4 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 2 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties placed": 0.0315,
+    "contradicted at 4 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 2 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties unresolved": 0.023,
+    "contradicted at 4 of the five ties, toward the public belief (toward the public belief, X side 3 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties placed": 0.0165,
+    "contradicted at 4 of the five ties, toward the public belief (toward the public belief, X side 3 of 3 and Y side 1 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties unresolved": 0.0125,
+    "contradicted at all five ties, toward the public belief; beyond the ties placed": 0.5605,
+    "contradicted at all five ties, toward the public belief; beyond the ties unresolved": 0.3535
+   }
+  },
+  "BHW, ties to X, the name listed first": {
+   "frozen": {
+    "placed": 0.0,
+    "contradicted": 1.0,
+    "unresolved": 0.0
+   },
+   "stage0": null,
+   "read_at_the_ties": {
+    "contradicted at the ties, X at every tie, not toward the public belief; beyond the ties placed": 1.0
+   }
+  },
+  "BHW, ties to X, the name listed first, flips 1/1000": {
+   "frozen": {
+    "placed": 0.0,
+    "contradicted": 1.0,
+    "unresolved": 0.0
+   },
+   "stage0": null,
+   "read_at_the_ties": {
+    "contradicted at the ties, X at every tie, not toward the public belief; beyond the ties placed": 0.9995,
+    "contradicted at the ties, X at every tie, not toward the public belief; beyond the ties unresolved": 0.0005
+   }
+  },
+  "BHW, ties to X, the name listed first, flips 3/1000": {
+   "frozen": {
+    "placed": 0.0,
+    "contradicted": 1.0,
+    "unresolved": 0.0
+   },
+   "stage0": null,
+   "read_at_the_ties": {
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 0 of 2; with the own light, X side 0 and Y side 2; otherwise 0); beyond the ties placed": 0.001,
+    "contradicted at the ties, X at every tie, not toward the public belief; beyond the ties placed": 0.994,
+    "contradicted at the ties, X at every tie, not toward the public belief; beyond the ties unresolved": 0.005
+   }
+  },
+  "BHW, ties to X, the name listed first, flips 1/100": {
+   "frozen": {
+    "placed": 0.0,
+    "contradicted": 1.0,
+    "unresolved": 0.0
+   },
+   "stage0": null,
+   "read_at_the_ties": {
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 0 of 2; with the own light, X side 0 and Y side 2; otherwise 0); beyond the ties placed": 0.0075,
+    "contradicted at 3 of the five ties, toward the public belief (toward the public belief, X side 3 of 3 and Y side 0 of 2; with the own light, X side 0 and Y side 1; otherwise 0); beyond the ties placed": 0.006,
+    "contradicted at the ties, X at every tie, not toward the public belief; beyond the ties placed": 0.935,
+    "contradicted at the ties, X at every tie, not toward the public belief; beyond the ties unresolved": 0.0515
+   }
+  },
+  "BHW, ties to X, the name listed first, flips 3/100": {
+   "frozen": {
+    "placed": 0.0,
+    "contradicted": 1.0,
+    "unresolved": 0.0
+   },
+   "stage0": null,
+   "read_at_the_ties": {
+    "contradicted at 1 of the five ties, toward the public belief (toward the public belief, X side 1 of 3 and Y side 0 of 2; with the own light, X side 0 and Y side 2; otherwise 0); beyond the ties placed": 0.0005,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 0 of 2; with the own light, X side 0 and Y side 1; otherwise 0); beyond the ties placed": 0.0005,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 0 of 2; with the own light, X side 0 and Y side 2; otherwise 0); beyond the ties placed": 0.0225,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 0 of 2; with the own light, X side 0 and Y side 2; otherwise 0); beyond the ties unresolved": 0.0195,
+    "contradicted at 2 of the five ties, toward the public belief (toward the public belief, X side 2 of 3 and Y side 0 of 2; with the own light, X side 1 and Y side 2; otherwise 0); beyond the ties placed": 0.0005,
+    "contradicted at 3 of the five ties, toward the public belief (toward the public belief, X side 3 of 3 and Y side 0 of 2; with the own light, X side 0 and Y side 0; otherwise 0); beyond the ties placed": 0.0005,
+    "contradicted at 3 of the five ties, toward the public belief (toward the public belief, X side 3 of 3 and Y side 0 of 2; with the own light, X side 0 and Y side 1; otherwise 0); beyond the ties placed": 0.0195,
+    "contradicted at 3 of the five ties, toward the public belief (toward the public belief, X side 3 of 3 and Y side 0 of 2; with the own light, X side 0 and Y side 1; otherwise 0); beyond the ties unresolved": 0.0105,
+    "contradicted at the ties, X at every tie, not toward the public belief; beyond the ties placed": 0.5795,
+    "contradicted at the ties, X at every tie, not toward the public belief; beyond the ties unresolved": 0.346,
+    "contradicted beyond the ties": 0.0005
+   }
+  },
+  "overweighting 2:1": {
+   "frozen": {
+    "placed": 0.0,
+    "contradicted": 1.0,
+    "unresolved": 0.0
+   },
+   "stage0": {
+    "placed": 0.0,
+    "contradicted": 1.0
+   },
+   "read_at_the_ties": {
+    "contradicted beyond the ties": 1.0
+   }
+  },
+  "overweighting 2:1, flips 1/1000": {
+   "frozen": {
+    "placed": 0.0,
+    "contradicted": 1.0,
+    "unresolved": 0.0
+   },
+   "stage0": {
+    "placed": 0.0,
+    "contradicted": 1.0
+   },
+   "read_at_the_ties": {
+    "contradicted beyond the ties": 1.0
+   }
+  },
+  "overweighting 2:1, flips 3/1000": {
+   "frozen": {
+    "placed": 0.0,
+    "contradicted": 1.0,
+    "unresolved": 0.0
+   },
+   "stage0": {
+    "placed": 0.0,
+    "contradicted": 1.0
+   },
+   "read_at_the_ties": {
+    "contradicted beyond the ties": 1.0
+   }
+  },
+  "overweighting 2:1, flips 1/100": {
+   "frozen": {
+    "placed": 0.0,
+    "contradicted": 1.0,
+    "unresolved": 0.0
+   },
+   "stage0": {
+    "placed": 0.0,
+    "contradicted": 1.0
+   },
+   "read_at_the_ties": {
+    "contradicted beyond the ties": 1.0
+   }
+  },
+  "overweighting 2:1, flips 3/100": {
+   "frozen": {
+    "placed": 0.0,
+    "contradicted": 1.0,
+    "unresolved": 0.0
+   },
+   "stage0": {
+    "placed": 0.0,
+    "contradicted": 1.0
+   },
+   "read_at_the_ties": {
+    "contradicted beyond the ties": 1.0
+   }
+  },
+  "hybrid 1/5": {
+   "frozen": {
+    "placed": 0.001,
+    "contradicted": 0.1565,
+    "unresolved": 0.8425
+   },
+   "stage0": {
+    "placed": 0.0007,
+    "contradicted": 0.0828
+   },
+   "read_at_the_ties": {
+    "contradicted beyond the ties": 0.1565,
+    "placed": 0.001,
+    "unresolved": 0.8425
+   }
+  },
+  "hybrid 1/5, flips 1/1000": {
+   "frozen": {
+    "placed": 0.0025,
+    "contradicted": 0.149,
+    "unresolved": 0.8485
+   },
+   "stage0": {
+    "placed": 0.0006,
+    "contradicted": 0.0835
+   },
+   "read_at_the_ties": {
+    "contradicted beyond the ties": 0.149,
+    "placed": 0.0025,
+    "unresolved": 0.8485
+   }
+  },
+  "hybrid 1/5, flips 3/1000": {
+   "frozen": {
+    "placed": 0.0015,
+    "contradicted": 0.1575,
+    "unresolved": 0.841
+   },
+   "stage0": {
+    "placed": 0.0006,
+    "contradicted": 0.0849
+   },
+   "read_at_the_ties": {
+    "contradicted beyond the ties": 0.1575,
+    "placed": 0.0015,
+    "unresolved": 0.841
+   }
+  },
+  "hybrid 1/5, flips 1/100": {
+   "frozen": {
+    "placed": 0.0,
+    "contradicted": 0.1575,
+    "unresolved": 0.8425
+   },
+   "stage0": {
+    "placed": 0.0004,
+    "contradicted": 0.0897
+   },
+   "read_at_the_ties": {
+    "contradicted beyond the ties": 0.1575,
+    "unresolved": 0.8425
+   }
+  },
+  "hybrid 1/5, flips 3/100": {
+   "frozen": {
+    "placed": 0.0,
+    "contradicted": 0.196,
+    "unresolved": 0.804
+   },
+   "stage0": {
+    "placed": 0.0001,
+    "contradicted": 0.1028
+   },
+   "read_at_the_ties": {
+    "contradicted beyond the ties": 0.196,
+    "unresolved": 0.804
+   }
+  },
+  "hybrid 1/10": {
+   "frozen": {
+    "placed": 0.1385,
+    "contradicted": 0.012,
+    "unresolved": 0.8495
+   },
+   "stage0": {
+    "placed": 0.1301,
+    "contradicted": 0.009
+   },
+   "read_at_the_ties": {
+    "contradicted beyond the ties": 0.012,
+    "placed": 0.1385,
+    "unresolved": 0.8495
+   }
+  },
+  "hybrid 1/10, flips 1/1000": {
+   "frozen": {
+    "placed": 0.122,
+    "contradicted": 0.0105,
+    "unresolved": 0.8675
+   },
+   "stage0": {
+    "placed": 0.1262,
+    "contradicted": 0.0092
+   },
+   "read_at_the_ties": {
+    "contradicted beyond the ties": 0.0105,
+    "placed": 0.122,
+    "unresolved": 0.8675
+   }
+  },
+  "hybrid 1/10, flips 3/1000": {
+   "frozen": {
+    "placed": 0.121,
+    "contradicted": 0.011,
+    "unresolved": 0.868
+   },
+   "stage0": {
+    "placed": 0.1182,
+    "contradicted": 0.0098
+   },
+   "read_at_the_ties": {
+    "contradicted beyond the ties": 0.011,
+    "placed": 0.121,
+    "unresolved": 0.868
+   }
+  },
+  "hybrid 1/10, flips 1/100": {
+   "frozen": {
+    "placed": 0.0915,
+    "contradicted": 0.012,
+    "unresolved": 0.8965
+   },
+   "stage0": {
+    "placed": 0.0911,
+    "contradicted": 0.0118
+   },
+   "read_at_the_ties": {
+    "contradicted beyond the ties": 0.012,
+    "placed": 0.0915,
+    "unresolved": 0.8965
+   }
+  },
+  "hybrid 1/10, flips 3/100": {
+   "frozen": {
+    "placed": 0.032,
+    "contradicted": 0.0255,
+    "unresolved": 0.9425
+   },
+   "stage0": {
+    "placed": 0.0334,
+    "contradicted": 0.0184
+   },
+   "read_at_the_ties": {
+    "contradicted beyond the ties": 0.0255,
+    "placed": 0.032,
+    "unresolved": 0.9425
+   }
+  }
+ },
+ "moves": {
+  "constant B, prefix (A,A)": {
+   "replications": 200,
+   "shares": {
+    "passed": 1.0
+   }
+  },
+  "BHW, probes failing in 5% of calls": {
+   "replications": 2000,
+   "shares": {
+    "placed": 0.036,
+    "unresolved": 0.964
+   }
+  },
+  "BHW, the leak control": {
+   "replications": 200,
+   "shares": {
+    "passed": 1.0
+   }
+  },
+  "reads a leak shown to it, the leak control": {
+   "replications": 200,
+   "shares": {
+    "breach reproduced": 1.0
+   }
+  },
+  "weighs a shown light as one more, ties to its own light, the leak control": {
+   "replications": 200,
+   "shares": {
+    "breach reproduced": 1.0
+   }
+  },
+  "weighs a shown light as one more, ties toward the public belief, the leak control": {
+   "replications": 200,
+   "shares": {
+    "passed": 1.0
+   }
+  },
+  "declines where it is shown a red light, the leak control": {
+   "replications": 200,
+   "shares": {
+    "unresolved difference": 1.0
+   }
+  }
+ },
+ "code_unchanged_during_the_run": true,
+ "ok": true,
+ "largest_E3_difference_from_stage0": 0.0243
+}

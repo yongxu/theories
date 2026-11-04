@@ -47,7 +47,7 @@ Canonical source: [ReachedCascade.lean](../../../../experiments/integrated-corre
 <a id="next--下一步"></a>
 ## Next
 
-A position that depends on the world, with persistence; the total-variation form, in the periphery; TR3, which rests on this premise and fixes k by a scripted prefix; review by a person.
+A position that depends on the world, with persistence; the total-variation form, in the periphery; a run of TR3, frozen on this premise with k fixed by a scripted prefix; review by a person.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -82,6 +82,7 @@ Aliases: `a cascade at the histories reached`, `所至之历上之级联`, `casc
 ### History
 
 - 4 November 2026, board item TRL (RFZ's split: TR3's lemma 1 in REST-TR3-TR6, handed to this item; TR3's freeze stays with RFZ): added. The premise of readers reading readers asked only at the histories a world reaches, a weaker premise by a witness, Cascade's bytes unchanged; study section 507.
+- 4 November 2026, board item RFZ: TR3 frozen on this premise before any call to a model (experiments/formations-that-read/FREEZE-3.md); not run. REST-TR3-TR6.md re-pointed after reading against this record: it now says TR3 is frozen and this lemma proved, and nothing this record says changed. The statement and declarations are unchanged; next_delta's step is now TR3's run, which waits on Ren's yes.
 
 </details>
 

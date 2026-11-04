@@ -20,7 +20,7 @@ lean/becoming/Becoming/Cascade.lean, sha256 e6add4291cb2af7c...):
 
 Parts (each writes one key of tr3.json):
   A  the mirror, checked on the Lean's witness (Copying) and on every law of small pools;
-     the reached-history form, an inference from the proof term, checked beside it
+     the reached-history form, proved since as Turns.acts_alike_along, checked beside it
   B  the urn game: the deterministic BHW member and its rivals, exact own-draw dependence D per cell
   C  BHW's timing values, and where its law meets the Lean's premise (it meets it at no position)
   D  the stochastic analogue a sampled arm would need (a total-variation bound), checked exactly
@@ -349,7 +349,8 @@ def part_a():
             "Inference from the proof term of law_alike_of_cascade, which uses the premise only at "
             "T.acts w n with the two worlds' couplings: if, for every n >= k, law n gives one act "
             "for coupling n w and coupling n w' at the list acts w n, then worlds alike before k "
-            "give the same acts. Not stated in the Lean; a candidate core lemma."),
+            "give the same acts. Proved since: Turns.acts_alike_along under Turns.LawAlikeAlong "
+            "(Becoming.ReachedCascade)."),
     }
 
 
@@ -760,7 +761,7 @@ def part_c():
             "pairs_alike_before_tau_with_different_acts": len(ce_pairs),
             "example": [list(ce_pairs[0][0]), list(ce_pairs[0][1])] if ce_pairs else None},
         "note": ("tau(w) is the first position whose member gives one guess for both draws at the "
-                 "history w reaches; the candidate core lemma needs persistence as a premise (every "
+                 "history w reaches; the stopping-time form, a candidate core lemma, needs persistence as a premise (every "
                  "member from tau(w) on ignores its draw at the history w reaches), which BHW meets "
                  "since its cascades are absorbing; checked here on BHW only (the Lean fixes k)")}
     out["fixed_k_reached_premise_p_2/3"] = fixed
@@ -1012,8 +1013,11 @@ def conditional_verdict(t, prefix, N, R, M, rng, reps):
     unanimous for the differing act, and the same member re-asked R times at the premise check's own
     context unanimous for the path's act -> a breach of the representation, reproduced (a channel
     beyond the member's own draw and the earlier acts); otherwise unresolved (nondeterminism). With
-    logged inputs a channel through the prompt is caught at once by diffing inputs; this rule is the
-    backstop for one the log does not show."""
+    logged inputs a channel through the prompt is caught at once by diffing inputs. The leaky member
+    here reads the next draw by a channel no request can carry; in TR3's frozen run the two contexts
+    are one request, so a breach outside its leak control is read as a fault of the harness or chance,
+    and the leak control, a channel the prompt carries, is this rule's positive control for a member
+    whose guess the shown light changes (FREEZE-3.md, section 5)."""
     k = len(prefix)
     tally = {"no verdict: premise not met": 0, "no verdict: flagged cell": 0,
              "passed": 0, "breach reproduced": 0, "unresolved: unreproduced difference": 0}

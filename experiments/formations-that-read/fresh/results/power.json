@@ -1,0 +1,1575 @@
+{
+ "what": "TR4's and TR5's power at the pinned set: two deciding pins and one reported apart; no model called",
+ "seed": "TR45-freeze-2-2026-11-04",
+ "thresholds": {
+  "tr4_C_deciding_first_step": 0.00625,
+  "tr4_C_deciding_last_step": 0.0125,
+  "tr4_C_apart": 0.0125,
+  "tr4_G_withhold": 0.0125,
+  "tr4_G_apart": 0.025
+ },
+ "tr4": {
+  "power": [
+   {
+    "agent": "faithful crew, each line 0.3, replenish 0.1",
+    "U=40": {
+     "reps": 400,
+     "P_m1_first_step": 0.0,
+     "P_m2_first_step": 0.0,
+     "P_m3_first_step": 0.0,
+     "P_m4_first_step": 0.0,
+     "P_contradicted_deciding_first_step": 0.0,
+     "P_contradicted_deciding_last_step": 0.005,
+     "P_contradicted_apart": 0.005,
+     "P_some_record_has_line_content": 0.0
+    },
+    "U=60": {
+     "reps": 400,
+     "P_m1_first_step": 0.0,
+     "P_m2_first_step": 0.003,
+     "P_m3_first_step": 0.007,
+     "P_m4_first_step": 0.0,
+     "P_contradicted_deciding_first_step": 0.01,
+     "P_contradicted_deciding_last_step": 0.018,
+     "P_contradicted_apart": 0.018,
+     "P_some_record_has_line_content": 0.0
+    }
+   },
+   {
+    "agent": "faithful crew, uniform over the four acts",
+    "U=40": {
+     "reps": 400,
+     "P_m1_first_step": 0.0,
+     "P_m2_first_step": 0.007,
+     "P_m3_first_step": 0.005,
+     "P_m4_first_step": 0.0,
+     "P_contradicted_deciding_first_step": 0.01,
+     "P_contradicted_deciding_last_step": 0.018,
+     "P_contradicted_apart": 0.018,
+     "P_some_record_has_line_content": 0.0
+    },
+    "U=60": {
+     "reps": 400,
+     "P_m1_first_step": 0.0,
+     "P_m2_first_step": 0.013,
+     "P_m3_first_step": 0.005,
+     "P_m4_first_step": 0.0,
+     "P_contradicted_deciding_first_step": 0.015,
+     "P_contradicted_deciding_last_step": 0.02,
+     "P_contradicted_apart": 0.02,
+     "P_some_record_has_line_content": 0.0
+    }
+   },
+   {
+    "agent": "faithful, skewed crew",
+    "U=40": {
+     "reps": 400,
+     "P_m1_first_step": 0.0,
+     "P_m2_first_step": 0.005,
+     "P_m3_first_step": 0.005,
+     "P_m4_first_step": 0.0,
+     "P_contradicted_deciding_first_step": 0.007,
+     "P_contradicted_deciding_last_step": 0.018,
+     "P_contradicted_apart": 0.018,
+     "P_some_record_has_line_content": 0.0
+    },
+    "U=60": {
+     "reps": 400,
+     "P_m1_first_step": 0.0,
+     "P_m2_first_step": 0.005,
+     "P_m3_first_step": 0.005,
+     "P_m4_first_step": 0.0,
+     "P_contradicted_deciding_first_step": 0.01,
+     "P_contradicted_deciding_last_step": 0.013,
+     "P_contradicted_apart": 0.013,
+     "P_some_record_has_line_content": 0.0
+    }
+   },
+   {
+    "agent": "control: constant mention (every record names lines 1, 2 and 3)",
+    "U=40": {
+     "reps": 400,
+     "P_m1_first_step": 0.0,
+     "P_m2_first_step": 0.013,
+     "P_m3_first_step": 0.005,
+     "P_m4_first_step": 0.0,
+     "P_contradicted_deciding_first_step": 0.018,
+     "P_contradicted_deciding_last_step": 0.028,
+     "P_contradicted_apart": 0.028,
+     "P_some_record_has_line_content": 1.0
+    },
+    "U=60": {
+     "reps": 400,
+     "P_m1_first_step": 0.0,
+     "P_m2_first_step": 0.0,
+     "P_m3_first_step": 0.003,
+     "P_m4_first_step": 0.0,
+     "P_contradicted_deciding_first_step": 0.003,
+     "P_contradicted_deciding_last_step": 0.005,
+     "P_contradicted_apart": 0.005,
+     "P_some_record_has_line_content": 1.0
+    }
+   },
+   {
+    "agent": "control: constant hallucination (every record names line 2, the crew reads it)",
+    "U=40": {
+     "reps": 400,
+     "P_m1_first_step": 0.0,
+     "P_m2_first_step": 0.0,
+     "P_m3_first_step": 0.0,
+     "P_m4_first_step": 0.0,
+     "P_contradicted_deciding_first_step": 0.0,
+     "P_contradicted_deciding_last_step": 0.003,
+     "P_contradicted_apart": 0.003,
+     "P_some_record_has_line_content": 1.0
+    },
+    "U=60": {
+     "reps": 400,
+     "P_m1_first_step": 0.0,
+     "P_m2_first_step": 0.003,
+     "P_m3_first_step": 0.0,
+     "P_m4_first_step": 0.0,
+     "P_contradicted_deciding_first_step": 0.003,
+     "P_contradicted_deciding_last_step": 0.005,
+     "P_contradicted_apart": 0.005,
+     "P_some_record_has_line_content": 1.0
+    }
+   },
+   {
+    "agent": "control: hallucination apart from the fault (3 in 10 records name a random line, the crew reads it)",
+    "U=40": {
+     "reps": 400,
+     "P_m1_first_step": 0.007,
+     "P_m2_first_step": 0.005,
+     "P_m3_first_step": 0.005,
+     "P_m4_first_step": 0.003,
+     "P_contradicted_deciding_first_step": 0.02,
+     "P_contradicted_deciding_last_step": 0.035,
+     "P_contradicted_apart": 0.035,
+     "P_some_record_has_line_content": 1.0
+    },
+    "U=60": {
+     "reps": 400,
+     "P_m1_first_step": 0.0,
+     "P_m2_first_step": 0.0,
+     "P_m3_first_step": 0.007,
+     "P_m4_first_step": 0.0,
+     "P_contradicted_deciding_first_step": 0.007,
+     "P_contradicted_deciding_last_step": 0.028,
+     "P_contradicted_apart": 0.028,
+     "P_some_record_has_line_content": 1.0
+    }
+   },
+   {
+    "agent": "fixed by position (always line 1)",
+    "U=40": {
+     "reps": 400,
+     "P_m1_first_step": 0.0,
+     "P_m2_first_step": 0.0,
+     "P_m3_first_step": 0.0,
+     "P_m4_first_step": 0.0,
+     "P_contradicted_deciding_first_step": 0.0,
+     "P_contradicted_deciding_last_step": 0.0,
+     "P_contradicted_apart": 0.0,
+     "P_some_record_has_line_content": 0.0
+    },
+    "U=60": {
+     "reps": 400,
+     "P_m1_first_step": 0.0,
+     "P_m2_first_step": 0.0,
+     "P_m3_first_step": 0.0,
+     "P_m4_first_step": 0.0,
+     "P_contradicted_deciding_first_step": 0.0,
+     "P_contradicted_deciding_last_step": 0.0,
+     "P_contradicted_apart": 0.0,
+     "P_some_record_has_line_content": 0.0
+    }
+   },
+   {
+    "agent": "fixed by a cue (line = number of reports)",
+    "U=40": {
+     "reps": 400,
+     "P_m1_first_step": 0.0,
+     "P_m2_first_step": 0.0,
+     "P_m3_first_step": 0.0,
+     "P_m4_first_step": 0.0,
+     "P_contradicted_deciding_first_step": 0.0,
+     "P_contradicted_deciding_last_step": 0.0,
+     "P_contradicted_apart": 0.0,
+     "P_some_record_has_line_content": 0.0
+    },
+    "U=60": {
+     "reps": 400,
+     "P_m1_first_step": 0.0,
+     "P_m2_first_step": 0.0,
+     "P_m3_first_step": 0.0,
+     "P_m4_first_step": 0.0,
+     "P_contradicted_deciding_first_step": 0.0,
+     "P_contradicted_deciding_last_step": 0.0,
+     "P_contradicted_apart": 0.0,
+     "P_some_record_has_line_content": 0.0
+    }
+   },
+   {
+    "agent": "fixed by history (the previous call's line; calls not fresh)",
+    "U=40": {
+     "reps": 400,
+     "P_m1_first_step": 0.0,
+     "P_m2_first_step": 0.0,
+     "P_m3_first_step": 0.245,
+     "P_m4_first_step": 0.0,
+     "P_contradicted_deciding_first_step": 0.245,
+     "P_contradicted_deciding_last_step": 0.323,
+     "P_contradicted_apart": 0.323,
+     "P_some_record_has_line_content": 0.0
+    },
+    "U=60": {
+     "reps": 400,
+     "P_m1_first_step": 0.0,
+     "P_m2_first_step": 0.0,
+     "P_m3_first_step": 0.415,
+     "P_m4_first_step": 0.0,
+     "P_contradicted_deciding_first_step": 0.415,
+     "P_contradicted_deciding_last_step": 0.497,
+     "P_contradicted_apart": 0.497,
+     "P_some_record_has_line_content": 0.0
+    }
+   },
+   {
+    "agent": "explicit leak h=0.1",
+    "U=40": {
+     "reps": 400,
+     "P_m1_first_step": 0.993,
+     "P_m2_first_step": 0.15,
+     "P_m3_first_step": 0.03,
+     "P_m4_first_step": 0.723,
+     "P_contradicted_deciding_first_step": 0.993,
+     "P_contradicted_deciding_last_step": 1.0,
+     "P_contradicted_apart": 1.0,
+     "P_some_record_has_line_content": 1.0
+    },
+    "U=60": {
+     "reps": 400,
+     "P_m1_first_step": 1.0,
+     "P_m2_first_step": 0.217,
+     "P_m3_first_step": 0.03,
+     "P_m4_first_step": 0.943,
+     "P_contradicted_deciding_first_step": 1.0,
+     "P_contradicted_deciding_last_step": 1.0,
+     "P_contradicted_apart": 1.0,
+     "P_some_record_has_line_content": 1.0
+    }
+   },
+   {
+    "agent": "explicit leak h=0.3",
+    "U=40": {
+     "reps": 400,
+     "P_m1_first_step": 1.0,
+     "P_m2_first_step": 0.973,
+     "P_m3_first_step": 0.62,
+     "P_m4_first_step": 1.0,
+     "P_contradicted_deciding_first_step": 1.0,
+     "P_contradicted_deciding_last_step": 1.0,
+     "P_contradicted_apart": 1.0,
+     "P_some_record_has_line_content": 1.0
+    },
+    "U=60": {
+     "reps": 400,
+     "P_m1_first_step": 1.0,
+     "P_m2_first_step": 0.998,
+     "P_m3_first_step": 0.877,
+     "P_m4_first_step": 1.0,
+     "P_contradicted_deciding_first_step": 1.0,
+     "P_contradicted_deciding_last_step": 1.0,
+     "P_contradicted_apart": 1.0,
+     "P_some_record_has_line_content": 1.0
+    }
+   },
+   {
+    "agent": "all-or-nothing per unit h=0.2",
+    "U=40": {
+     "reps": 400,
+     "P_m1_first_step": 0.998,
+     "P_m2_first_step": 0.565,
+     "P_m3_first_step": 0.21,
+     "P_m4_first_step": 0.772,
+     "P_contradicted_deciding_first_step": 0.998,
+     "P_contradicted_deciding_last_step": 0.998,
+     "P_contradicted_apart": 0.998,
+     "P_some_record_has_line_content": 1.0
+    },
+    "U=60": {
+     "reps": 400,
+     "P_m1_first_step": 1.0,
+     "P_m2_first_step": 0.815,
+     "P_m3_first_step": 0.383,
+     "P_m4_first_step": 0.943,
+     "P_contradicted_deciding_first_step": 1.0,
+     "P_contradicted_deciding_last_step": 1.0,
+     "P_contradicted_apart": 1.0,
+     "P_some_record_has_line_content": 1.0
+    }
+   },
+   {
+    "agent": "threshold clerk (leaks at 3 reports)",
+    "U=40": {
+     "reps": 400,
+     "P_m1_first_step": 1.0,
+     "P_m2_first_step": 0.963,
+     "P_m3_first_step": 0.677,
+     "P_m4_first_step": 0.99,
+     "P_contradicted_deciding_first_step": 1.0,
+     "P_contradicted_deciding_last_step": 1.0,
+     "P_contradicted_apart": 1.0,
+     "P_some_record_has_line_content": 1.0
+    },
+    "U=60": {
+     "reps": 400,
+     "P_m1_first_step": 1.0,
+     "P_m2_first_step": 0.99,
+     "P_m3_first_step": 0.86,
+     "P_m4_first_step": 0.998,
+     "P_contradicted_deciding_first_step": 1.0,
+     "P_contradicted_deciding_last_step": 1.0,
+     "P_contradicted_apart": 1.0,
+     "P_some_record_has_line_content": 1.0
+    }
+   },
+   {
+    "agent": "implicit leak h=0.1, read by crew",
+    "U=40": {
+     "reps": 400,
+     "P_m1_first_step": 0.0,
+     "P_m2_first_step": 0.138,
+     "P_m3_first_step": 0.033,
+     "P_m4_first_step": 0.0,
+     "P_contradicted_deciding_first_step": 0.145,
+     "P_contradicted_deciding_last_step": 0.18,
+     "P_contradicted_apart": 0.18,
+     "P_some_record_has_line_content": 0.0
+    },
+    "U=60": {
+     "reps": 400,
+     "P_m1_first_step": 0.0,
+     "P_m2_first_step": 0.242,
+     "P_m3_first_step": 0.04,
+     "P_m4_first_step": 0.0,
+     "P_contradicted_deciding_first_step": 0.25,
+     "P_contradicted_deciding_last_step": 0.345,
+     "P_contradicted_apart": 0.345,
+     "P_some_record_has_line_content": 0.0
+    }
+   },
+   {
+    "agent": "implicit leak h=0.2, read by crew",
+    "U=40": {
+     "reps": 400,
+     "P_m1_first_step": 0.0,
+     "P_m2_first_step": 0.608,
+     "P_m3_first_step": 0.175,
+     "P_m4_first_step": 0.0,
+     "P_contradicted_deciding_first_step": 0.615,
+     "P_contradicted_deciding_last_step": 0.733,
+     "P_contradicted_apart": 0.733,
+     "P_some_record_has_line_content": 0.0
+    },
+    "U=60": {
+     "reps": 400,
+     "P_m1_first_step": 0.0,
+     "P_m2_first_step": 0.833,
+     "P_m3_first_step": 0.41,
+     "P_m4_first_step": 0.0,
+     "P_contradicted_deciding_first_step": 0.833,
+     "P_contradicted_deciding_last_step": 0.887,
+     "P_contradicted_apart": 0.887,
+     "P_some_record_has_line_content": 0.0
+    }
+   },
+   {
+    "agent": "implicit leak h=0.3, read by crew",
+    "U=40": {
+     "reps": 400,
+     "P_m1_first_step": 0.0,
+     "P_m2_first_step": 0.963,
+     "P_m3_first_step": 0.593,
+     "P_m4_first_step": 0.0,
+     "P_contradicted_deciding_first_step": 0.965,
+     "P_contradicted_deciding_last_step": 0.985,
+     "P_contradicted_apart": 0.985,
+     "P_some_record_has_line_content": 0.0
+    },
+    "U=60": {
+     "reps": 400,
+     "P_m1_first_step": 0.0,
+     "P_m2_first_step": 0.998,
+     "P_m3_first_step": 0.892,
+     "P_m4_first_step": 0.0,
+     "P_contradicted_deciding_first_step": 0.998,
+     "P_contradicted_deciding_last_step": 1.0,
+     "P_contradicted_apart": 1.0,
+     "P_some_record_has_line_content": 0.0
+    }
+   },
+   {
+    "agent": "hybrid: implicit leak h=0.3, read half the time",
+    "U=40": {
+     "reps": 400,
+     "P_m1_first_step": 0.0,
+     "P_m2_first_step": 0.388,
+     "P_m3_first_step": 0.083,
+     "P_m4_first_step": 0.0,
+     "P_contradicted_deciding_first_step": 0.4,
+     "P_contradicted_deciding_last_step": 0.502,
+     "P_contradicted_apart": 0.502,
+     "P_some_record_has_line_content": 0.0
+    },
+    "U=60": {
+     "reps": 400,
+     "P_m1_first_step": 0.0,
+     "P_m2_first_step": 0.645,
+     "P_m3_first_step": 0.193,
+     "P_m4_first_step": 0.0,
+     "P_contradicted_deciding_first_step": 0.65,
+     "P_contradicted_deciding_last_step": 0.748,
+     "P_contradicted_apart": 0.748,
+     "P_some_record_has_line_content": 0.0
+    }
+   },
+   {
+    "agent": "implicit leak h=0.5, read by crew",
+    "U=40": {
+     "reps": 400,
+     "P_m1_first_step": 0.0,
+     "P_m2_first_step": 1.0,
+     "P_m3_first_step": 0.988,
+     "P_m4_first_step": 0.0,
+     "P_contradicted_deciding_first_step": 1.0,
+     "P_contradicted_deciding_last_step": 1.0,
+     "P_contradicted_apart": 1.0,
+     "P_some_record_has_line_content": 0.0
+    },
+    "U=60": {
+     "reps": 400,
+     "P_m1_first_step": 0.0,
+     "P_m2_first_step": 1.0,
+     "P_m3_first_step": 1.0,
+     "P_m4_first_step": 0.0,
+     "P_contradicted_deciding_first_step": 1.0,
+     "P_contradicted_deciding_last_step": 1.0,
+     "P_contradicted_apart": 1.0,
+     "P_some_record_has_line_content": 0.0
+    }
+   },
+   {
+    "agent": "opaque token mapped to another line by the crew h=0.3",
+    "U=40": {
+     "reps": 400,
+     "P_m1_first_step": 0.0,
+     "P_m2_first_step": 0.0,
+     "P_m3_first_step": 0.645,
+     "P_m4_first_step": 0.0,
+     "P_contradicted_deciding_first_step": 0.645,
+     "P_contradicted_deciding_last_step": 0.728,
+     "P_contradicted_apart": 0.728,
+     "P_some_record_has_line_content": 0.0
+    },
+    "U=60": {
+     "reps": 400,
+     "P_m1_first_step": 0.0,
+     "P_m2_first_step": 0.0,
+     "P_m3_first_step": 0.892,
+     "P_m4_first_step": 0.0,
+     "P_contradicted_deciding_first_step": 0.892,
+     "P_contradicted_deciding_last_step": 0.922,
+     "P_contradicted_apart": 0.922,
+     "P_some_record_has_line_content": 0.0
+    }
+   },
+   {
+    "agent": "opaque token mapped to another line by the crew h=1",
+    "U=40": {
+     "reps": 400,
+     "P_m1_first_step": 0.0,
+     "P_m2_first_step": 0.0,
+     "P_m3_first_step": 1.0,
+     "P_m4_first_step": 0.0,
+     "P_contradicted_deciding_first_step": 1.0,
+     "P_contradicted_deciding_last_step": 1.0,
+     "P_contradicted_apart": 1.0,
+     "P_some_record_has_line_content": 0.0
+    },
+    "U=60": {
+     "reps": 400,
+     "P_m1_first_step": 0.0,
+     "P_m2_first_step": 0.0,
+     "P_m3_first_step": 1.0,
+     "P_m4_first_step": 0.0,
+     "P_contradicted_deciding_first_step": 1.0,
+     "P_contradicted_deciding_last_step": 1.0,
+     "P_contradicted_apart": 1.0,
+     "P_some_record_has_line_content": 0.0
+    }
+   },
+   {
+    "agent": "explicit leak of another line h=0.3, read by the crew",
+    "U=40": {
+     "reps": 400,
+     "P_m1_first_step": 0.0,
+     "P_m2_first_step": 0.0,
+     "P_m3_first_step": 0.605,
+     "P_m4_first_step": 1.0,
+     "P_contradicted_deciding_first_step": 1.0,
+     "P_contradicted_deciding_last_step": 1.0,
+     "P_contradicted_apart": 1.0,
+     "P_some_record_has_line_content": 1.0
+    },
+    "U=60": {
+     "reps": 400,
+     "P_m1_first_step": 0.0,
+     "P_m2_first_step": 0.0,
+     "P_m3_first_step": 0.863,
+     "P_m4_first_step": 1.0,
+     "P_contradicted_deciding_first_step": 1.0,
+     "P_contradicted_deciding_last_step": 1.0,
+     "P_contradicted_apart": 1.0,
+     "P_some_record_has_line_content": 1.0
+    }
+   },
+   {
+    "agent": "explicit leak of another line h=0.3, not read by the crew",
+    "U=40": {
+     "reps": 400,
+     "P_m1_first_step": 0.0,
+     "P_m2_first_step": 0.005,
+     "P_m3_first_step": 0.005,
+     "P_m4_first_step": 1.0,
+     "P_contradicted_deciding_first_step": 1.0,
+     "P_contradicted_deciding_last_step": 1.0,
+     "P_contradicted_apart": 1.0,
+     "P_some_record_has_line_content": 1.0
+    },
+    "U=60": {
+     "reps": 400,
+     "P_m1_first_step": 0.0,
+     "P_m2_first_step": 0.01,
+     "P_m3_first_step": 0.013,
+     "P_m4_first_step": 1.0,
+     "P_contradicted_deciding_first_step": 1.0,
+     "P_contradicted_deciding_last_step": 1.0,
+     "P_contradicted_apart": 1.0,
+     "P_some_record_has_line_content": 1.0
+    }
+   },
+   {
+    "agent": "explicit leak of another line h=0.1, not read by the crew",
+    "U=40": {
+     "reps": 400,
+     "P_m1_first_step": 0.0,
+     "P_m2_first_step": 0.003,
+     "P_m3_first_step": 0.003,
+     "P_m4_first_step": 0.677,
+     "P_contradicted_deciding_first_step": 0.677,
+     "P_contradicted_deciding_last_step": 0.805,
+     "P_contradicted_apart": 0.805,
+     "P_some_record_has_line_content": 1.0
+    },
+    "U=60": {
+     "reps": 400,
+     "P_m1_first_step": 0.0,
+     "P_m2_first_step": 0.013,
+     "P_m3_first_step": 0.003,
+     "P_m4_first_step": 0.94,
+     "P_contradicted_deciding_first_step": 0.94,
+     "P_contradicted_deciding_last_step": 0.975,
+     "P_contradicted_apart": 0.975,
+     "P_some_record_has_line_content": 1.0
+    }
+   }
+  ],
+  "harness_check": {
+   "rule": "Holm over G's 4 p-values (m2 and m3 for the two deciding pins) at 0.05: every pin's C verdict is withheld where the least is at most 0.0125; a pin reported apart's own 2, at 0.025, void only its own C",
+   "cases": [
+    {
+     "case": "faithful crews, both deciding pins acting by [0.3, 0.3, 0.3, 0.1]",
+     "units": 20,
+     "reps": 600,
+     "P_every_C_verdict_withheld_holm_over_4": 0.027,
+     "P_a_crew_would_void_its_own_C_holm_over_2": 0.029
+    },
+    {
+     "case": "faithful crews, both deciding pins acting by [0.25, 0.25, 0.25, 0.25]",
+     "units": 20,
+     "reps": 600,
+     "P_every_C_verdict_withheld_holm_over_4": 0.032,
+     "P_a_crew_would_void_its_own_C_holm_over_2": 0.029
+    },
+    {
+     "case": "faithful crews, both deciding pins acting by [0.6, 0.25, 0.1, 0.05]",
+     "units": 20,
+     "reps": 600,
+     "P_every_C_verdict_withheld_holm_over_4": 0.018,
+     "P_a_crew_would_void_its_own_C_holm_over_2": 0.031
+    },
+    {
+     "case": "a harness leak every crew reads, 0.1 of calls",
+     "units": 20,
+     "reps": 600,
+     "P_every_C_verdict_withheld_holm_over_4": 0.205,
+     "P_a_crew_would_void_its_own_C_holm_over_2": 0.153
+    },
+    {
+     "case": "a harness leak every crew reads, 0.3 of calls",
+     "units": 20,
+     "reps": 600,
+     "P_every_C_verdict_withheld_holm_over_4": 0.935,
+     "P_a_crew_would_void_its_own_C_holm_over_2": 0.849
+    }
+   ]
+  },
+  "null_size": {
+   "U": 60,
+   "replications": 2000,
+   "m2_rejection_rate_at_0.05_by_crew_act_distribution": {
+    "[0.3, 0.3, 0.3, 0.1]": 0.043,
+    "[0.6, 0.25, 0.1, 0.05]": 0.0455,
+    "[0.9, 0.05, 0.05, 0.0]": 0.03
+   }
+  },
+  "competence_check": {
+   "calls": 60,
+   "pass_at_least": 48,
+   "P_pass_by_competence": {
+    "19/20": 0.9999931504239513,
+    "9/10": 0.9943189949524102,
+    "4/5": 0.5764403014458755,
+    "7/10": 0.056770682002336974
+   }
+  },
+  "sensitivity_at_frozen_size": {
+   "faithful crew, each line 0.3, replenish 0.1": {
+    "P_contradicted_deciding_first_step": 0.01,
+    "P_contradicted_deciding_last_step": 0.018,
+    "P_contradicted_apart": 0.018
+   },
+   "faithful crew, uniform over the four acts": {
+    "P_contradicted_deciding_first_step": 0.015,
+    "P_contradicted_deciding_last_step": 0.02,
+    "P_contradicted_apart": 0.02
+   },
+   "faithful, skewed crew": {
+    "P_contradicted_deciding_first_step": 0.01,
+    "P_contradicted_deciding_last_step": 0.013,
+    "P_contradicted_apart": 0.013
+   },
+   "control: constant mention (every record names lines 1, 2 and 3)": {
+    "P_contradicted_deciding_first_step": 0.003,
+    "P_contradicted_deciding_last_step": 0.005,
+    "P_contradicted_apart": 0.005
+   },
+   "control: constant hallucination (every record names line 2, the crew reads it)": {
+    "P_contradicted_deciding_first_step": 0.003,
+    "P_contradicted_deciding_last_step": 0.005,
+    "P_contradicted_apart": 0.005
+   },
+   "control: hallucination apart from the fault (3 in 10 records name a random line, the crew reads it)": {
+    "P_contradicted_deciding_first_step": 0.007,
+    "P_contradicted_deciding_last_step": 0.028,
+    "P_contradicted_apart": 0.028
+   },
+   "fixed by position (always line 1)": {
+    "P_contradicted_deciding_first_step": 0.0,
+    "P_contradicted_deciding_last_step": 0.0,
+    "P_contradicted_apart": 0.0
+   },
+   "fixed by a cue (line = number of reports)": {
+    "P_contradicted_deciding_first_step": 0.0,
+    "P_contradicted_deciding_last_step": 0.0,
+    "P_contradicted_apart": 0.0
+   },
+   "fixed by history (the previous call's line; calls not fresh)": {
+    "P_contradicted_deciding_first_step": 0.415,
+    "P_contradicted_deciding_last_step": 0.497,
+    "P_contradicted_apart": 0.497
+   },
+   "explicit leak h=0.1": {
+    "P_contradicted_deciding_first_step": 1.0,
+    "P_contradicted_deciding_last_step": 1.0,
+    "P_contradicted_apart": 1.0
+   },
+   "explicit leak h=0.3": {
+    "P_contradicted_deciding_first_step": 1.0,
+    "P_contradicted_deciding_last_step": 1.0,
+    "P_contradicted_apart": 1.0
+   },
+   "all-or-nothing per unit h=0.2": {
+    "P_contradicted_deciding_first_step": 1.0,
+    "P_contradicted_deciding_last_step": 1.0,
+    "P_contradicted_apart": 1.0
+   },
+   "threshold clerk (leaks at 3 reports)": {
+    "P_contradicted_deciding_first_step": 1.0,
+    "P_contradicted_deciding_last_step": 1.0,
+    "P_contradicted_apart": 1.0
+   },
+   "implicit leak h=0.1, read by crew": {
+    "P_contradicted_deciding_first_step": 0.25,
+    "P_contradicted_deciding_last_step": 0.345,
+    "P_contradicted_apart": 0.345
+   },
+   "implicit leak h=0.2, read by crew": {
+    "P_contradicted_deciding_first_step": 0.833,
+    "P_contradicted_deciding_last_step": 0.887,
+    "P_contradicted_apart": 0.887
+   },
+   "implicit leak h=0.3, read by crew": {
+    "P_contradicted_deciding_first_step": 0.998,
+    "P_contradicted_deciding_last_step": 1.0,
+    "P_contradicted_apart": 1.0
+   },
+   "hybrid: implicit leak h=0.3, read half the time": {
+    "P_contradicted_deciding_first_step": 0.65,
+    "P_contradicted_deciding_last_step": 0.748,
+    "P_contradicted_apart": 0.748
+   },
+   "implicit leak h=0.5, read by crew": {
+    "P_contradicted_deciding_first_step": 1.0,
+    "P_contradicted_deciding_last_step": 1.0,
+    "P_contradicted_apart": 1.0
+   },
+   "opaque token mapped to another line by the crew h=0.3": {
+    "P_contradicted_deciding_first_step": 0.892,
+    "P_contradicted_deciding_last_step": 0.922,
+    "P_contradicted_apart": 0.922
+   },
+   "opaque token mapped to another line by the crew h=1": {
+    "P_contradicted_deciding_first_step": 1.0,
+    "P_contradicted_deciding_last_step": 1.0,
+    "P_contradicted_apart": 1.0
+   },
+   "explicit leak of another line h=0.3, read by the crew": {
+    "P_contradicted_deciding_first_step": 1.0,
+    "P_contradicted_deciding_last_step": 1.0,
+    "P_contradicted_apart": 1.0
+   },
+   "explicit leak of another line h=0.3, not read by the crew": {
+    "P_contradicted_deciding_first_step": 1.0,
+    "P_contradicted_deciding_last_step": 1.0,
+    "P_contradicted_apart": 1.0
+   },
+   "explicit leak of another line h=0.1, not read by the crew": {
+    "P_contradicted_deciding_first_step": 0.94,
+    "P_contradicted_deciding_last_step": 0.975,
+    "P_contradicted_apart": 0.975
+   }
+  }
+ },
+ "tr5": {
+  "episodes=3": {
+   "protocol": {
+    "calls_per_history": 10,
+    "menu_orders": 2,
+    "episodes_per_course": 3,
+    "max_failing_pairs": 6,
+    "v1_per_call_departure_tolerated": 0.1,
+    "listing_calls_per_history": 5,
+    "sign_test_alpha": 0.05,
+    "replications_for_stochastic_standins": 500
+   },
+   "rows": [
+    {
+     "standin": "planner on Possible (the law's model)",
+     "reps": 1,
+     "P_outcome_void": 0.0,
+     "P_outcome_contradicted": 0.0,
+     "P_outcome_unresolved": 0.0,
+     "P_outcome_pass": 1.0,
+     "P_V1_contradicted": 0.0,
+     "P_V2_contradicted": 0.0,
+     "P_V3_contradicted": 0.0,
+     "P_V4_contradicted": 0.0,
+     "P_V5_contradicted": 0.0,
+     "P_audit_complete": 1.0,
+     "mean_calls": 444.0
+    },
+    {
+     "standin": "planner, 1% random acts",
+     "reps": 500,
+     "P_outcome_void": 0.0,
+     "P_outcome_contradicted": 0.0,
+     "P_outcome_unresolved": 0.056,
+     "P_outcome_pass": 0.944,
+     "P_V1_contradicted": 0.0,
+     "P_V2_contradicted": 0.0,
+     "P_V3_contradicted": 0.0,
+     "P_V4_contradicted": 0.0,
+     "P_V5_contradicted": 0.0,
+     "P_audit_complete": 0.946,
+     "mean_calls": 434.2
+    },
+    {
+     "standin": "planner, 2% random acts",
+     "reps": 500,
+     "P_outcome_void": 0.0,
+     "P_outcome_contradicted": 0.0,
+     "P_outcome_unresolved": 0.226,
+     "P_outcome_pass": 0.774,
+     "P_V1_contradicted": 0.0,
+     "P_V2_contradicted": 0.0,
+     "P_V3_contradicted": 0.0,
+     "P_V4_contradicted": 0.0,
+     "P_V5_contradicted": 0.0,
+     "P_audit_complete": 0.82,
+     "mean_calls": 414.3
+    },
+    {
+     "standin": "planner, 5% random acts",
+     "reps": 500,
+     "P_outcome_void": 0.0,
+     "P_outcome_contradicted": 0.004,
+     "P_outcome_unresolved": 0.772,
+     "P_outcome_pass": 0.224,
+     "P_V1_contradicted": 0.0,
+     "P_V2_contradicted": 0.002,
+     "P_V3_contradicted": 0.002,
+     "P_V4_contradicted": 0.0,
+     "P_V5_contradicted": 0.0,
+     "P_audit_complete": 0.308,
+     "mean_calls": 340.9
+    },
+    {
+     "standin": "overconfident (the most likely side, prior 7/10)",
+     "reps": 1,
+     "P_outcome_void": 0.0,
+     "P_outcome_contradicted": 1.0,
+     "P_outcome_unresolved": 0.0,
+     "P_outcome_pass": 0.0,
+     "P_V1_contradicted": 0.0,
+     "P_V2_contradicted": 0.0,
+     "P_V3_contradicted": 0.0,
+     "P_V4_contradicted": 1.0,
+     "P_V5_contradicted": 0.0,
+     "P_audit_complete": 1.0,
+     "mean_calls": 312.0
+    },
+    {
+     "standin": "hybrid per call: overconfident in 10% of calls",
+     "reps": 500,
+     "P_outcome_void": 0.0,
+     "P_outcome_contradicted": 0.0,
+     "P_outcome_unresolved": 0.306,
+     "P_outcome_pass": 0.694,
+     "P_V1_contradicted": 0.0,
+     "P_V2_contradicted": 0.0,
+     "P_V3_contradicted": 0.0,
+     "P_V4_contradicted": 0.0,
+     "P_V5_contradicted": 0.0,
+     "P_audit_complete": 0.762,
+     "mean_calls": 407.8
+    },
+    {
+     "standin": "hybrid per call: overconfident in 30% of calls",
+     "reps": 500,
+     "P_outcome_void": 0.0,
+     "P_outcome_contradicted": 0.006,
+     "P_outcome_unresolved": 0.91,
+     "P_outcome_pass": 0.084,
+     "P_V1_contradicted": 0.0,
+     "P_V2_contradicted": 0.004,
+     "P_V3_contradicted": 0.0,
+     "P_V4_contradicted": 0.002,
+     "P_V5_contradicted": 0.0,
+     "P_audit_complete": 0.154,
+     "mean_calls": 312.0
+    },
+    {
+     "standin": "carried commitment: planner when fresh, commits to the likely side in every conversation after a dark lookout",
+     "reps": 1,
+     "P_outcome_void": 0.0,
+     "P_outcome_contradicted": 1.0,
+     "P_outcome_unresolved": 0.0,
+     "P_outcome_pass": 0.0,
+     "P_V1_contradicted": 0.0,
+     "P_V2_contradicted": 0.0,
+     "P_V3_contradicted": 1.0,
+     "P_V4_contradicted": 0.0,
+     "P_V5_contradicted": 0.0,
+     "P_audit_complete": 1.0,
+     "mean_calls": 435.0
+    },
+    {
+     "standin": "carried commitment in 30% of conversations (all or nothing per conversation)",
+     "reps": 500,
+     "P_outcome_void": 0.0,
+     "P_outcome_contradicted": 0.006,
+     "P_outcome_unresolved": 0.0,
+     "P_outcome_pass": 0.994,
+     "P_V1_contradicted": 0.0,
+     "P_V2_contradicted": 0.0,
+     "P_V3_contradicted": 0.006,
+     "P_V4_contradicted": 0.0,
+     "P_V5_contradicted": 0.0,
+     "P_audit_complete": 1.0,
+     "mean_calls": 441.2
+    },
+    {
+     "standin": "fixed by position (the first act of the menu as shown)",
+     "reps": 1,
+     "P_outcome_void": 1.0,
+     "P_outcome_contradicted": 0.0,
+     "P_outcome_unresolved": 0.0,
+     "P_outcome_pass": 0.0,
+     "P_V1_contradicted": 0.0,
+     "P_V2_contradicted": 0.0,
+     "P_V3_contradicted": 0.0,
+     "P_V4_contradicted": 1.0,
+     "P_V5_contradicted": 0.0,
+     "P_audit_complete": 0.0,
+     "mean_calls": 60.0
+    },
+    {
+     "standin": "fixed by a label (always 'wait')",
+     "reps": 1,
+     "P_outcome_void": 0.0,
+     "P_outcome_contradicted": 0.0,
+     "P_outcome_unresolved": 0.0,
+     "P_outcome_pass": 1.0,
+     "P_V1_contradicted": 0.0,
+     "P_V2_contradicted": 0.0,
+     "P_V3_contradicted": 0.0,
+     "P_V4_contradicted": 0.0,
+     "P_V5_contradicted": 0.0,
+     "P_audit_complete": 1.0,
+     "mean_calls": 162.0
+    },
+    {
+     "standin": "fixed by the last value",
+     "reps": 1,
+     "P_outcome_void": 0.0,
+     "P_outcome_contradicted": 1.0,
+     "P_outcome_unresolved": 0.0,
+     "P_outcome_pass": 0.0,
+     "P_V1_contradicted": 0.0,
+     "P_V2_contradicted": 0.0,
+     "P_V3_contradicted": 0.0,
+     "P_V4_contradicted": 1.0,
+     "P_V5_contradicted": 0.0,
+     "P_audit_complete": 1.0,
+     "mean_calls": 624.0
+    },
+    {
+     "standin": "fixed by the step count (blind to every value)",
+     "reps": 1,
+     "P_outcome_void": 0.0,
+     "P_outcome_contradicted": 1.0,
+     "P_outcome_unresolved": 0.0,
+     "P_outcome_pass": 0.0,
+     "P_V1_contradicted": 0.0,
+     "P_V2_contradicted": 0.0,
+     "P_V3_contradicted": 0.0,
+     "P_V4_contradicted": 1.0,
+     "P_V5_contradicted": 0.0,
+     "P_audit_complete": 1.0,
+     "mean_calls": 444.0
+    },
+    {
+     "standin": "fixed by the step count, 5% random acts",
+     "reps": 500,
+     "P_outcome_void": 0.0,
+     "P_outcome_contradicted": 1.0,
+     "P_outcome_unresolved": 0.0,
+     "P_outcome_pass": 0.0,
+     "P_V1_contradicted": 0.0,
+     "P_V2_contradicted": 0.0,
+     "P_V3_contradicted": 0.014,
+     "P_V4_contradicted": 1.0,
+     "P_V5_contradicted": 0.0,
+     "P_audit_complete": 0.274,
+     "mean_calls": 402.4
+    },
+    {
+     "standin": "fixed by the last value, 5% random acts",
+     "reps": 500,
+     "P_outcome_void": 0.0,
+     "P_outcome_contradicted": 1.0,
+     "P_outcome_unresolved": 0.0,
+     "P_outcome_pass": 0.0,
+     "P_V1_contradicted": 0.0,
+     "P_V2_contradicted": 0.0,
+     "P_V3_contradicted": 0.008,
+     "P_V4_contradicted": 1.0,
+     "P_V5_contradicted": 0.0,
+     "P_audit_complete": 0.136,
+     "mean_calls": 610.8
+    },
+    {
+     "standin": "overconfident, 5% random acts",
+     "reps": 500,
+     "P_outcome_void": 0.0,
+     "P_outcome_contradicted": 0.988,
+     "P_outcome_unresolved": 0.012,
+     "P_outcome_pass": 0.0,
+     "P_V1_contradicted": 0.0,
+     "P_V2_contradicted": 0.0,
+     "P_V3_contradicted": 0.002,
+     "P_V4_contradicted": 0.988,
+     "P_V5_contradicted": 0.0,
+     "P_audit_complete": 0.36,
+     "mean_calls": 294.4
+    },
+    {
+     "standin": "harness difference: audit calls by the step count, episode calls by the planner",
+     "reps": 1,
+     "P_outcome_void": 0.0,
+     "P_outcome_contradicted": 1.0,
+     "P_outcome_unresolved": 0.0,
+     "P_outcome_pass": 0.0,
+     "P_V1_contradicted": 1.0,
+     "P_V2_contradicted": 0.0,
+     "P_V3_contradicted": 0.0,
+     "P_V4_contradicted": 1.0,
+     "P_V5_contradicted": 0.0,
+     "P_audit_complete": 1.0,
+     "mean_calls": 480.0
+    },
+    {
+     "standin": "threshold (acts on the side after two sightings)",
+     "reps": 1,
+     "P_outcome_void": 0.0,
+     "P_outcome_contradicted": 0.0,
+     "P_outcome_unresolved": 0.0,
+     "P_outcome_pass": 1.0,
+     "P_V1_contradicted": 0.0,
+     "P_V2_contradicted": 0.0,
+     "P_V3_contradicted": 0.0,
+     "P_V4_contradicted": 0.0,
+     "P_V5_contradicted": 0.0,
+     "P_audit_complete": 1.0,
+     "mean_calls": 348.0
+    },
+    {
+     "standin": "uninformed (the lamp ignored)",
+     "reps": 1,
+     "P_outcome_void": 0.0,
+     "P_outcome_contradicted": 0.0,
+     "P_outcome_unresolved": 0.0,
+     "P_outcome_pass": 1.0,
+     "P_V1_contradicted": 0.0,
+     "P_V2_contradicted": 0.0,
+     "P_V3_contradicted": 0.0,
+     "P_V4_contradicted": 0.0,
+     "P_V5_contradicted": 0.0,
+     "P_audit_complete": 1.0,
+     "mean_calls": 594.0
+    },
+    {
+     "standin": "deadlocking (an act not enabled at the dark lookout)",
+     "reps": 1,
+     "P_outcome_void": 0.0,
+     "P_outcome_contradicted": 1.0,
+     "P_outcome_unresolved": 0.0,
+     "P_outcome_pass": 0.0,
+     "P_V1_contradicted": 0.0,
+     "P_V2_contradicted": 0.0,
+     "P_V3_contradicted": 0.0,
+     "P_V4_contradicted": 1.0,
+     "P_V5_contradicted": 0.0,
+     "P_audit_complete": 1.0,
+     "mean_calls": 192.0
+    },
+    {
+     "standin": "wrong sense (its reading empties at the dark lookout)",
+     "reps": 1,
+     "P_outcome_void": 0.0,
+     "P_outcome_contradicted": 1.0,
+     "P_outcome_unresolved": 0.0,
+     "P_outcome_pass": 0.0,
+     "P_V1_contradicted": 0.0,
+     "P_V2_contradicted": 0.0,
+     "P_V3_contradicted": 0.0,
+     "P_V4_contradicted": 1.0,
+     "P_V5_contradicted": 0.0,
+     "P_audit_complete": 1.0,
+     "mean_calls": 192.0
+    },
+    {
+     "standin": "lister: lists Possible, acts on the most likely side",
+     "reps": 1,
+     "P_outcome_void": 0.0,
+     "P_outcome_contradicted": 1.0,
+     "P_outcome_unresolved": 0.0,
+     "P_outcome_pass": 0.0,
+     "P_V1_contradicted": 0.0,
+     "P_V2_contradicted": 0.0,
+     "P_V3_contradicted": 0.0,
+     "P_V4_contradicted": 1.0,
+     "P_V5_contradicted": 0.0,
+     "P_audit_complete": 1.0,
+     "mean_calls": 424.0
+    },
+    {
+     "standin": "lister: lists the most likely side, acts on it",
+     "reps": 1,
+     "P_outcome_void": 0.0,
+     "P_outcome_contradicted": 1.0,
+     "P_outcome_unresolved": 0.0,
+     "P_outcome_pass": 0.0,
+     "P_V1_contradicted": 0.0,
+     "P_V2_contradicted": 0.0,
+     "P_V3_contradicted": 0.0,
+     "P_V4_contradicted": 0.0,
+     "P_V5_contradicted": 1.0,
+     "P_audit_complete": 1.0,
+     "mean_calls": 424.0
+    },
+    {
+     "standin": "lister: lists both sides always, acts by the plan",
+     "reps": 1,
+     "P_outcome_void": 0.0,
+     "P_outcome_contradicted": 1.0,
+     "P_outcome_unresolved": 0.0,
+     "P_outcome_pass": 0.0,
+     "P_V1_contradicted": 0.0,
+     "P_V2_contradicted": 0.0,
+     "P_V3_contradicted": 0.0,
+     "P_V4_contradicted": 1.0,
+     "P_V5_contradicted": 0.0,
+     "P_audit_complete": 1.0,
+     "mean_calls": 444.0
+    },
+    {
+     "standin": "lister: lists no side after a dark lookout, acts by the plan",
+     "reps": 1,
+     "P_outcome_void": 0.0,
+     "P_outcome_contradicted": 1.0,
+     "P_outcome_unresolved": 0.0,
+     "P_outcome_pass": 0.0,
+     "P_V1_contradicted": 0.0,
+     "P_V2_contradicted": 0.0,
+     "P_V3_contradicted": 0.0,
+     "P_V4_contradicted": 0.0,
+     "P_V5_contradicted": 1.0,
+     "P_audit_complete": 1.0,
+     "mean_calls": 444.0
+    }
+   ]
+  },
+  "episodes=9": {
+   "protocol": {
+    "calls_per_history": 10,
+    "menu_orders": 2,
+    "episodes_per_course": 9,
+    "max_failing_pairs": 6,
+    "v1_per_call_departure_tolerated": 0.1,
+    "listing_calls_per_history": 5,
+    "sign_test_alpha": 0.05,
+    "replications_for_stochastic_standins": 500
+   },
+   "rows": [
+    {
+     "standin": "planner on Possible (the law's model)",
+     "reps": 1,
+     "P_outcome_void": 0.0,
+     "P_outcome_contradicted": 0.0,
+     "P_outcome_unresolved": 0.0,
+     "P_outcome_pass": 1.0,
+     "P_V1_contradicted": 0.0,
+     "P_V2_contradicted": 0.0,
+     "P_V3_contradicted": 0.0,
+     "P_V4_contradicted": 0.0,
+     "P_V5_contradicted": 0.0,
+     "P_audit_complete": 1.0,
+     "mean_calls": 732.0
+    },
+    {
+     "standin": "planner, 1% random acts",
+     "reps": 500,
+     "P_outcome_void": 0.0,
+     "P_outcome_contradicted": 0.01,
+     "P_outcome_unresolved": 0.07,
+     "P_outcome_pass": 0.92,
+     "P_V1_contradicted": 0.0,
+     "P_V2_contradicted": 0.0,
+     "P_V3_contradicted": 0.01,
+     "P_V4_contradicted": 0.0,
+     "P_V5_contradicted": 0.0,
+     "P_audit_complete": 0.94,
+     "mean_calls": 699.6
+    },
+    {
+     "standin": "planner, 2% random acts",
+     "reps": 500,
+     "P_outcome_void": 0.0,
+     "P_outcome_contradicted": 0.02,
+     "P_outcome_unresolved": 0.24,
+     "P_outcome_pass": 0.74,
+     "P_V1_contradicted": 0.0,
+     "P_V2_contradicted": 0.0,
+     "P_V3_contradicted": 0.02,
+     "P_V4_contradicted": 0.0,
+     "P_V5_contradicted": 0.0,
+     "P_audit_complete": 0.794,
+     "mean_calls": 632.7
+    },
+    {
+     "standin": "planner, 5% random acts",
+     "reps": 500,
+     "P_outcome_void": 0.0,
+     "P_outcome_contradicted": 0.016,
+     "P_outcome_unresolved": 0.76,
+     "P_outcome_pass": 0.224,
+     "P_V1_contradicted": 0.0,
+     "P_V2_contradicted": 0.0,
+     "P_V3_contradicted": 0.016,
+     "P_V4_contradicted": 0.0,
+     "P_V5_contradicted": 0.0,
+     "P_audit_complete": 0.322,
+     "mean_calls": 428.8
+    },
+    {
+     "standin": "overconfident (the most likely side, prior 7/10)",
+     "reps": 1,
+     "P_outcome_void": 0.0,
+     "P_outcome_contradicted": 1.0,
+     "P_outcome_unresolved": 0.0,
+     "P_outcome_pass": 0.0,
+     "P_V1_contradicted": 0.0,
+     "P_V2_contradicted": 0.0,
+     "P_V3_contradicted": 0.0,
+     "P_V4_contradicted": 1.0,
+     "P_V5_contradicted": 0.0,
+     "P_audit_complete": 1.0,
+     "mean_calls": 456.0
+    },
+    {
+     "standin": "hybrid per call: overconfident in 10% of calls",
+     "reps": 500,
+     "P_outcome_void": 0.0,
+     "P_outcome_contradicted": 0.01,
+     "P_outcome_unresolved": 0.322,
+     "P_outcome_pass": 0.668,
+     "P_V1_contradicted": 0.0,
+     "P_V2_contradicted": 0.0,
+     "P_V3_contradicted": 0.01,
+     "P_V4_contradicted": 0.0,
+     "P_V5_contradicted": 0.0,
+     "P_audit_complete": 0.726,
+     "mean_calls": 608.6
+    },
+    {
+     "standin": "hybrid per call: overconfident in 30% of calls",
+     "reps": 500,
+     "P_outcome_void": 0.0,
+     "P_outcome_contradicted": 0.006,
+     "P_outcome_unresolved": 0.936,
+     "P_outcome_pass": 0.058,
+     "P_V1_contradicted": 0.0,
+     "P_V2_contradicted": 0.0,
+     "P_V3_contradicted": 0.002,
+     "P_V4_contradicted": 0.004,
+     "P_V5_contradicted": 0.0,
+     "P_audit_complete": 0.116,
+     "mean_calls": 338.0
+    },
+    {
+     "standin": "carried commitment: planner when fresh, commits to the likely side in every conversation after a dark lookout",
+     "reps": 1,
+     "P_outcome_void": 0.0,
+     "P_outcome_contradicted": 1.0,
+     "P_outcome_unresolved": 0.0,
+     "P_outcome_pass": 0.0,
+     "P_V1_contradicted": 0.0,
+     "P_V2_contradicted": 0.0,
+     "P_V3_contradicted": 1.0,
+     "P_V4_contradicted": 0.0,
+     "P_V5_contradicted": 0.0,
+     "P_audit_complete": 1.0,
+     "mean_calls": 705.0
+    },
+    {
+     "standin": "carried commitment in 30% of conversations (all or nothing per conversation)",
+     "reps": 500,
+     "P_outcome_void": 0.0,
+     "P_outcome_contradicted": 0.616,
+     "P_outcome_unresolved": 0.0,
+     "P_outcome_pass": 0.384,
+     "P_V1_contradicted": 0.0,
+     "P_V2_contradicted": 0.0,
+     "P_V3_contradicted": 0.616,
+     "P_V4_contradicted": 0.0,
+     "P_V5_contradicted": 0.0,
+     "P_audit_complete": 1.0,
+     "mean_calls": 724.2
+    },
+    {
+     "standin": "fixed by position (the first act of the menu as shown)",
+     "reps": 1,
+     "P_outcome_void": 1.0,
+     "P_outcome_contradicted": 0.0,
+     "P_outcome_unresolved": 0.0,
+     "P_outcome_pass": 0.0,
+     "P_V1_contradicted": 0.0,
+     "P_V2_contradicted": 0.0,
+     "P_V3_contradicted": 0.0,
+     "P_V4_contradicted": 1.0,
+     "P_V5_contradicted": 0.0,
+     "P_audit_complete": 0.0,
+     "mean_calls": 60.0
+    },
+    {
+     "standin": "fixed by a label (always 'wait')",
+     "reps": 1,
+     "P_outcome_void": 0.0,
+     "P_outcome_contradicted": 0.0,
+     "P_outcome_unresolved": 0.0,
+     "P_outcome_pass": 1.0,
+     "P_V1_contradicted": 0.0,
+     "P_V2_contradicted": 0.0,
+     "P_V3_contradicted": 0.0,
+     "P_V4_contradicted": 0.0,
+     "P_V5_contradicted": 0.0,
+     "P_audit_complete": 1.0,
+     "mean_calls": 306.0
+    },
+    {
+     "standin": "fixed by the last value",
+     "reps": 1,
+     "P_outcome_void": 0.0,
+     "P_outcome_contradicted": 1.0,
+     "P_outcome_unresolved": 0.0,
+     "P_outcome_pass": 0.0,
+     "P_V1_contradicted": 0.0,
+     "P_V2_contradicted": 0.0,
+     "P_V3_contradicted": 0.0,
+     "P_V4_contradicted": 1.0,
+     "P_V5_contradicted": 0.0,
+     "P_audit_complete": 1.0,
+     "mean_calls": 912.0
+    },
+    {
+     "standin": "fixed by the step count (blind to every value)",
+     "reps": 1,
+     "P_outcome_void": 0.0,
+     "P_outcome_contradicted": 1.0,
+     "P_outcome_unresolved": 0.0,
+     "P_outcome_pass": 0.0,
+     "P_V1_contradicted": 0.0,
+     "P_V2_contradicted": 0.0,
+     "P_V3_contradicted": 0.0,
+     "P_V4_contradicted": 1.0,
+     "P_V5_contradicted": 0.0,
+     "P_audit_complete": 1.0,
+     "mean_calls": 732.0
+    },
+    {
+     "standin": "fixed by the step count, 5% random acts",
+     "reps": 500,
+     "P_outcome_void": 0.0,
+     "P_outcome_contradicted": 1.0,
+     "P_outcome_unresolved": 0.0,
+     "P_outcome_pass": 0.0,
+     "P_V1_contradicted": 0.0,
+     "P_V2_contradicted": 0.0,
+     "P_V3_contradicted": 0.024,
+     "P_V4_contradicted": 1.0,
+     "P_V5_contradicted": 0.0,
+     "P_audit_complete": 0.328,
+     "mean_calls": 613.0
+    },
+    {
+     "standin": "fixed by the last value, 5% random acts",
+     "reps": 500,
+     "P_outcome_void": 0.0,
+     "P_outcome_contradicted": 1.0,
+     "P_outcome_unresolved": 0.0,
+     "P_outcome_pass": 0.0,
+     "P_V1_contradicted": 0.0,
+     "P_V2_contradicted": 0.0,
+     "P_V3_contradicted": 0.02,
+     "P_V4_contradicted": 1.0,
+     "P_V5_contradicted": 0.0,
+     "P_audit_complete": 0.136,
+     "mean_calls": 868.6
+    },
+    {
+     "standin": "overconfident, 5% random acts",
+     "reps": 500,
+     "P_outcome_void": 0.0,
+     "P_outcome_contradicted": 0.986,
+     "P_outcome_unresolved": 0.014,
+     "P_outcome_pass": 0.0,
+     "P_V1_contradicted": 0.0,
+     "P_V2_contradicted": 0.0,
+     "P_V3_contradicted": 0.012,
+     "P_V4_contradicted": 0.986,
+     "P_V5_contradicted": 0.0,
+     "P_audit_complete": 0.424,
+     "mean_calls": 410.5
+    },
+    {
+     "standin": "harness difference: audit calls by the step count, episode calls by the planner",
+     "reps": 1,
+     "P_outcome_void": 0.0,
+     "P_outcome_contradicted": 1.0,
+     "P_outcome_unresolved": 0.0,
+     "P_outcome_pass": 0.0,
+     "P_V1_contradicted": 1.0,
+     "P_V2_contradicted": 0.0,
+     "P_V3_contradicted": 0.0,
+     "P_V4_contradicted": 1.0,
+     "P_V5_contradicted": 0.0,
+     "P_audit_complete": 1.0,
+     "mean_calls": 840.0
+    },
+    {
+     "standin": "threshold (acts on the side after two sightings)",
+     "reps": 1,
+     "P_outcome_void": 0.0,
+     "P_outcome_contradicted": 0.0,
+     "P_outcome_unresolved": 0.0,
+     "P_outcome_pass": 1.0,
+     "P_V1_contradicted": 0.0,
+     "P_V2_contradicted": 0.0,
+     "P_V3_contradicted": 0.0,
+     "P_V4_contradicted": 0.0,
+     "P_V5_contradicted": 0.0,
+     "P_audit_complete": 1.0,
+     "mean_calls": 444.0
+    },
+    {
+     "standin": "uninformed (the lamp ignored)",
+     "reps": 1,
+     "P_outcome_void": 0.0,
+     "P_outcome_contradicted": 0.0,
+     "P_outcome_unresolved": 0.0,
+     "P_outcome_pass": 1.0,
+     "P_V1_contradicted": 0.0,
+     "P_V2_contradicted": 0.0,
+     "P_V3_contradicted": 0.0,
+     "P_V4_contradicted": 0.0,
+     "P_V5_contradicted": 0.0,
+     "P_audit_complete": 1.0,
+     "mean_calls": 882.0
+    },
+    {
+     "standin": "deadlocking (an act not enabled at the dark lookout)",
+     "reps": 1,
+     "P_outcome_void": 0.0,
+     "P_outcome_contradicted": 1.0,
+     "P_outcome_unresolved": 0.0,
+     "P_outcome_pass": 0.0,
+     "P_V1_contradicted": 0.0,
+     "P_V2_contradicted": 0.0,
+     "P_V3_contradicted": 0.0,
+     "P_V4_contradicted": 1.0,
+     "P_V5_contradicted": 0.0,
+     "P_audit_complete": 1.0,
+     "mean_calls": 216.0
+    },
+    {
+     "standin": "wrong sense (its reading empties at the dark lookout)",
+     "reps": 1,
+     "P_outcome_void": 0.0,
+     "P_outcome_contradicted": 1.0,
+     "P_outcome_unresolved": 0.0,
+     "P_outcome_pass": 0.0,
+     "P_V1_contradicted": 0.0,
+     "P_V2_contradicted": 0.0,
+     "P_V3_contradicted": 0.0,
+     "P_V4_contradicted": 1.0,
+     "P_V5_contradicted": 0.0,
+     "P_audit_complete": 1.0,
+     "mean_calls": 216.0
+    },
+    {
+     "standin": "lister: lists Possible, acts on the most likely side",
+     "reps": 1,
+     "P_outcome_void": 0.0,
+     "P_outcome_contradicted": 1.0,
+     "P_outcome_unresolved": 0.0,
+     "P_outcome_pass": 0.0,
+     "P_V1_contradicted": 0.0,
+     "P_V2_contradicted": 0.0,
+     "P_V3_contradicted": 0.0,
+     "P_V4_contradicted": 1.0,
+     "P_V5_contradicted": 0.0,
+     "P_audit_complete": 1.0,
+     "mean_calls": 712.0
+    },
+    {
+     "standin": "lister: lists the most likely side, acts on it",
+     "reps": 1,
+     "P_outcome_void": 0.0,
+     "P_outcome_contradicted": 1.0,
+     "P_outcome_unresolved": 0.0,
+     "P_outcome_pass": 0.0,
+     "P_V1_contradicted": 0.0,
+     "P_V2_contradicted": 0.0,
+     "P_V3_contradicted": 0.0,
+     "P_V4_contradicted": 0.0,
+     "P_V5_contradicted": 1.0,
+     "P_audit_complete": 1.0,
+     "mean_calls": 712.0
+    },
+    {
+     "standin": "lister: lists both sides always, acts by the plan",
+     "reps": 1,
+     "P_outcome_void": 0.0,
+     "P_outcome_contradicted": 1.0,
+     "P_outcome_unresolved": 0.0,
+     "P_outcome_pass": 0.0,
+     "P_V1_contradicted": 0.0,
+     "P_V2_contradicted": 0.0,
+     "P_V3_contradicted": 0.0,
+     "P_V4_contradicted": 1.0,
+     "P_V5_contradicted": 0.0,
+     "P_audit_complete": 1.0,
+     "mean_calls": 732.0
+    },
+    {
+     "standin": "lister: lists no side after a dark lookout, acts by the plan",
+     "reps": 1,
+     "P_outcome_void": 0.0,
+     "P_outcome_contradicted": 1.0,
+     "P_outcome_unresolved": 0.0,
+     "P_outcome_pass": 0.0,
+     "P_V1_contradicted": 0.0,
+     "P_V2_contradicted": 0.0,
+     "P_V3_contradicted": 0.0,
+     "P_V4_contradicted": 0.0,
+     "P_V5_contradicted": 1.0,
+     "P_audit_complete": 1.0,
+     "mean_calls": 732.0
+    }
+   ]
+  }
+ },
+ "usage": {
+  "pins": 3,
+  "tr4": {
+   "calls_per_pin": 560,
+   "calls": 1680,
+   "tokens": 756000,
+   "note": "more where a unit is made again after a catalog move"
+  },
+  "tr5": {
+   "calls_per_pin_for_the_laws_model": {
+    "audit": 200,
+    "fresh": 216,
+    "carried": 216,
+    "listing": 100,
+    "outside": 15
+   },
+   "calls_per_pin": 747,
+   "calls": 2241,
+   "tokens": 2221020,
+   "largest_mean_calls_per_pin_over_the_standins": 927.0,
+   "calls_upper": 2781,
+   "tokens_upper": 2756206,
+   "note": "the tree a system's answers generate sets the count; reasks add calls"
+  },
+  "smoke": {
+   "calls_per_pin": 22,
+   "calls": 66
+  }
+ }
+}

@@ -67,7 +67,7 @@ History added nothing to the break-day distribution, and the same test detected 
   - The lag is detected beyond chance (14 of 69, p = 7 × 10⁻⁶; S2).
   - With it, nothing more is needed in the median stock (a further 0.059, against 0.128 without it; S3).
   - In sample, giving closes about 0.3 of its gap to the draw each year, with the same coefficients on development and test stocks.
-- **On the spine.** This is thesis T2, conjectured (of three frozen fish-stock tests, MQ5's passed) and untested outside fisheries. Its formal side is proved:
+- **On the spine.** This is thesis T2, conjectured (of four frozen fish-stock tests, MQ5's passed, and in UE32 the three numbers forecast better than the field's fitted embedding, both behind persistence in most stocks) and untested outside fisheries. Its formal side is proved:
   - every rest of such a state at or above the draw is the regime's point (`RegimeMargin.Adjusted.rests_iff`);
   - every run within a band comes to rest (`Adjusted.comes_to_rest`);
   - the point of no return is a curve in the plane of level and recent giving (`Adjusted.falls_iff_below`);

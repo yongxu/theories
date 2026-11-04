@@ -1,0 +1,3 @@
+results/*/states/
+results/set-aside/*/*/states/
+results/*.lock

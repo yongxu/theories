@@ -1,0 +1,901 @@
+{
+ "what": "The dry run of freeze 2: TR4 and TR5 through the frozen code and freeze 1's harness; no model called, no key used",
+ "seed": "TR45-freeze-2-2026-11-04",
+ "tr5_against_stage0": [
+  {
+   "standin": "planner on Possible (the law's model)",
+   "outcome": "pass",
+   "stage_b_outcome": "pass",
+   "equal": true,
+   "differences": {},
+   "calls": {
+    "listing": 100,
+    "audit": 200,
+    "oor": 15,
+    "carried": 216,
+    "fresh": 216
+   },
+   "partial_contexts": 0,
+   "unmade": 0,
+   "folder": "tr5-0"
+  },
+  {
+   "standin": "overconfident (the most likely side, prior 7/10)",
+   "outcome": "contradicted",
+   "stage_b_outcome": "contradicted",
+   "equal": true,
+   "differences": {},
+   "calls": {
+    "listing": 80,
+    "audit": 160,
+    "oor": 15,
+    "carried": 108,
+    "fresh": 108
+   },
+   "partial_contexts": 0,
+   "unmade": 0,
+   "folder": "tr5-1"
+  },
+  {
+   "standin": "carried commitment: planner when fresh, commits to the likely side in every conversation after a dark lookout",
+   "outcome": "contradicted",
+   "stage_b_outcome": "contradicted",
+   "equal": true,
+   "differences": {},
+   "calls": {
+    "listing": 100,
+    "audit": 200,
+    "oor": 15,
+    "carried": 189,
+    "fresh": 216
+   },
+   "partial_contexts": 0,
+   "unmade": 0,
+   "folder": "tr5-2"
+  },
+  {
+   "standin": "fixed by position (the first act of the menu as shown)",
+   "outcome": "void",
+   "stage_b_outcome": "void",
+   "equal": true,
+   "differences": {},
+   "calls": {
+    "listing": 20,
+    "audit": 40,
+    "oor": 15,
+    "fresh": 0,
+    "carried": 0
+   },
+   "partial_contexts": 0,
+   "unmade": 0,
+   "folder": "tr5-3"
+  },
+  {
+   "standin": "fixed by a label (always 'wait')",
+   "outcome": "pass",
+   "stage_b_outcome": "pass",
+   "equal": true,
+   "differences": {},
+   "calls": {
+    "listing": 30,
+    "audit": 60,
+    "oor": 15,
+    "carried": 108,
+    "fresh": 108
+   },
+   "partial_contexts": 0,
+   "unmade": 0,
+   "folder": "tr5-4"
+  },
+  {
+   "standin": "fixed by the last value",
+   "outcome": "contradicted",
+   "stage_b_outcome": "contradicted",
+   "equal": true,
+   "differences": {},
+   "calls": {
+    "listing": 160,
+    "audit": 320,
+    "oor": 15,
+    "carried": 216,
+    "fresh": 216
+   },
+   "partial_contexts": 0,
+   "unmade": 0,
+   "folder": "tr5-5"
+  },
+  {
+   "standin": "fixed by the step count (blind to every value)",
+   "outcome": "contradicted",
+   "stage_b_outcome": "contradicted",
+   "equal": true,
+   "differences": {},
+   "calls": {
+    "listing": 100,
+    "audit": 200,
+    "oor": 15,
+    "carried": 216,
+    "fresh": 216
+   },
+   "partial_contexts": 0,
+   "unmade": 0,
+   "folder": "tr5-6"
+  },
+  {
+   "standin": "harness difference: audit calls by the step count, episode calls by the planner",
+   "outcome": "contradicted",
+   "stage_b_outcome": "contradicted",
+   "equal": true,
+   "differences": {},
+   "calls": {
+    "listing": 100,
+    "audit": 200,
+    "oor": 15,
+    "carried": 270,
+    "fresh": 270
+   },
+   "partial_contexts": 0,
+   "unmade": 0,
+   "folder": "tr5-7"
+  },
+  {
+   "standin": "threshold (acts on the side after two sightings)",
+   "outcome": "pass",
+   "stage_b_outcome": "pass",
+   "equal": true,
+   "differences": {},
+   "calls": {
+    "listing": 100,
+    "audit": 200,
+    "oor": 15,
+    "carried": 72,
+    "fresh": 72
+   },
+   "partial_contexts": 0,
+   "unmade": 0,
+   "folder": "tr5-8"
+  },
+  {
+   "standin": "uninformed (the lamp ignored)",
+   "outcome": "pass",
+   "stage_b_outcome": "pass",
+   "equal": true,
+   "differences": {},
+   "calls": {
+    "listing": 150,
+    "audit": 300,
+    "oor": 15,
+    "carried": 216,
+    "fresh": 216
+   },
+   "partial_contexts": 0,
+   "unmade": 0,
+   "folder": "tr5-9"
+  },
+  {
+   "standin": "deadlocking (an act not enabled at the dark lookout)",
+   "outcome": "contradicted",
+   "stage_b_outcome": "contradicted",
+   "equal": true,
+   "differences": {},
+   "calls": {
+    "listing": 60,
+    "audit": 120,
+    "oor": 15,
+    "carried": 18,
+    "fresh": 18
+   },
+   "partial_contexts": 0,
+   "unmade": 0,
+   "folder": "tr5-10"
+  },
+  {
+   "standin": "wrong sense (its reading empties at the dark lookout)",
+   "outcome": "contradicted",
+   "stage_b_outcome": "contradicted",
+   "equal": true,
+   "differences": {},
+   "calls": {
+    "listing": 60,
+    "audit": 120,
+    "oor": 15,
+    "carried": 18,
+    "fresh": 18
+   },
+   "partial_contexts": 0,
+   "unmade": 0,
+   "folder": "tr5-11"
+  },
+  {
+   "standin": "lister: lists Possible, acts on the most likely side",
+   "outcome": "contradicted",
+   "stage_b_outcome": "contradicted",
+   "equal": true,
+   "differences": {},
+   "calls": {
+    "listing": 80,
+    "audit": 200,
+    "oor": 15,
+    "carried": 216,
+    "fresh": 216
+   },
+   "partial_contexts": 0,
+   "unmade": 0,
+   "folder": "tr5-12"
+  },
+  {
+   "standin": "lister: lists the most likely side, acts on it",
+   "outcome": "contradicted",
+   "stage_b_outcome": "contradicted",
+   "equal": true,
+   "differences": {},
+   "calls": {
+    "listing": 80,
+    "audit": 200,
+    "oor": 15,
+    "carried": 216,
+    "fresh": 216
+   },
+   "partial_contexts": 0,
+   "unmade": 0,
+   "folder": "tr5-13"
+  },
+  {
+   "standin": "lister: lists both sides always, acts by the plan",
+   "outcome": "contradicted",
+   "stage_b_outcome": "contradicted",
+   "equal": true,
+   "differences": {},
+   "calls": {
+    "listing": 100,
+    "audit": 200,
+    "oor": 15,
+    "carried": 216,
+    "fresh": 216
+   },
+   "partial_contexts": 0,
+   "unmade": 0,
+   "folder": "tr5-14"
+  },
+  {
+   "standin": "lister: lists no side after a dark lookout, acts by the plan",
+   "outcome": "contradicted",
+   "stage_b_outcome": "contradicted",
+   "equal": true,
+   "differences": {},
+   "calls": {
+    "listing": 100,
+    "audit": 200,
+    "oor": 15,
+    "carried": 216,
+    "fresh": 216
+   },
+   "partial_contexts": 0,
+   "unmade": 0,
+   "folder": "tr5-15"
+  }
+ ],
+ "tr5_fresh_prompts": {
+  "groups": 85,
+  "one_prompt_each": true
+ },
+ "tr5_additions": {
+  "an unreadable first answer asked once more, then read: the planner's outcome": true,
+  "reasks made": 495,
+  "a decline at the dark lookout: a failing pair, not enabled, the episodes stuck": true,
+  "a listing's decline states no reading: V4 and V5 not met by it, the planner unresolved, not a pass": true,
+  "a history the provider filters: unresolved, its subtree not audited, the filtered counted apart": true
+ },
+ "tr5_moved": {
+  "stopped at the move": true,
+  "units made again": 5,
+  "contexts listed unread": 5,
+  "the verdict equals the run with no move": true,
+  "calls of a bad attempt made after the move": 0,
+  "ok": true
+ },
+ "tr5_moved_mid_batch": {
+  "stopped at the move": true,
+  "units made again": 99,
+  "contexts listed unread": 99,
+  "the verdict equals the run with no move": true,
+  "calls of a bad attempt made after the move": 0,
+  "ok": true,
+  "calls logged at the move": 414
+ },
+ "tr4": [
+  {
+   "clerk": "count",
+   "crew": "reads the record",
+   "expected": "not contradicted",
+   "harness_check": "passed",
+   "verdicts": {
+    "google/gemini-4-argon": "not contradicted",
+    "qwen/qwen3.8-max-0902": "not contradicted",
+    "anthropic/claude-sonnet-5.5": "not contradicted (reported apart; moves nothing alone)"
+   },
+   "as_expected": true,
+   "the log's answers are the stand-in's, computed without the harness": true,
+   "p-values equal those computed without the harness": true,
+   "m3 and m4 equal tr4.m3_p and tr4.m4_p": true,
+   "L premise": [
+    60,
+    60
+   ],
+   "C p-values": {
+    "m1": 1.0,
+    "m2": 1.0,
+    "m3": 1.0,
+    "m4": 1.0
+   },
+   "ok": true
+  },
+  {
+   "clerk": "names the line",
+   "crew": "reads the record",
+   "expected": "contradicted: RF6.1's forbidden case (the crew corrects the faulty line beyond chance)",
+   "harness_check": "passed",
+   "verdicts": {
+    "google/gemini-4-argon": "contradicted: RF6.1's forbidden case (the crew corrects the faulty line beyond chance)",
+    "qwen/qwen3.8-max-0902": "contradicted: RF6.1's forbidden case (the crew corrects the faulty line beyond chance)",
+    "anthropic/claude-sonnet-5.5": "contradicted: RF6.1's forbidden case (the crew corrects the faulty line beyond chance) (reported apart; moves nothing alone)"
+   },
+   "as_expected": true,
+   "the log's answers are the stand-in's, computed without the harness": true,
+   "p-values equal those computed without the harness": true,
+   "m3 and m4 equal tr4.m3_p and tr4.m4_p": true,
+   "L premise": [
+    60,
+    60
+   ],
+   "C p-values": {
+    "m1": 2.0460911503224955e-47,
+    "m2": 2.0460911503224955e-47,
+    "m3": 4.5233739070769905e-24,
+    "m4": 4.5233739070769905e-24
+   },
+   "ok": true
+  },
+  {
+   "clerk": "names the members",
+   "crew": "reads the record",
+   "expected": "contradicted: RF6.1's forbidden case (the crew corrects the faulty line beyond chance)",
+   "harness_check": "passed",
+   "verdicts": {
+    "google/gemini-4-argon": "contradicted: RF6.1's forbidden case (the crew corrects the faulty line beyond chance)",
+    "qwen/qwen3.8-max-0902": "contradicted: RF6.1's forbidden case (the crew corrects the faulty line beyond chance)",
+    "anthropic/claude-sonnet-5.5": "contradicted: RF6.1's forbidden case (the crew corrects the faulty line beyond chance) (reported apart; moves nothing alone)"
+   },
+   "as_expected": true,
+   "the log's answers are the stand-in's, computed without the harness": true,
+   "p-values equal those computed without the harness": true,
+   "m3 and m4 equal tr4.m3_p and tr4.m4_p": true,
+   "L premise": [
+    60,
+    60
+   ],
+   "C p-values": {
+    "m1": 2.0460911503224955e-47,
+    "m2": 2.0460911503224955e-47,
+    "m3": 4.5233739070769905e-24,
+    "m4": 4.5233739070769905e-24
+   },
+   "ok": true
+  },
+  {
+   "clerk": "declines at line 2",
+   "crew": "declines where there is no entry",
+   "expected": "contradicted: the reading in force is not the register's rule (no correction beyond chance is shown)",
+   "harness_check": "passed",
+   "verdicts": {
+    "google/gemini-4-argon": "contradicted: the reading in force is not the register's rule (no correction beyond chance is shown)",
+    "qwen/qwen3.8-max-0902": "contradicted: the reading in force is not the register's rule (no correction beyond chance is shown)",
+    "anthropic/claude-sonnet-5.5": "contradicted: the reading in force is not the register's rule (no correction beyond chance is shown) (reported apart; moves nothing alone)"
+   },
+   "as_expected": true,
+   "the log's answers are the stand-in's, computed without the harness": true,
+   "p-values equal those computed without the harness": true,
+   "L premise": [
+    60,
+    60
+   ],
+   "C p-values": {
+    "m1": 1.0,
+    "m2": 1.0,
+    "m3": 4.856935749618854e-15,
+    "m4": 4.856935749618854e-15
+   },
+   "ok": true
+  },
+  {
+   "clerk": "count",
+   "crew": "the first act shown",
+   "expected": "void: arm L's premise fails",
+   "harness_check": "passed",
+   "verdicts": {
+    "google/gemini-4-argon": "void: arm L's premise fails",
+    "qwen/qwen3.8-max-0902": "void: arm L's premise fails",
+    "anthropic/claude-sonnet-5.5": "void: arm L's premise fails"
+   },
+   "as_expected": true,
+   "m3 and m4 equal tr4.m3_p and tr4.m4_p": true,
+   "L premise": [
+    10,
+    60
+   ],
+   "C p-values": {
+    "m1": 1.0,
+    "m2": 0.7383437537637803,
+    "m3": 0.5238637916079051,
+    "m4": 1.0
+   },
+   "ok": true
+  }
+ ],
+ "refusals": {
+  "a changed answer, refused": true,
+  "a changed prompt hash, refused": true,
+  "a record another model answered, refused": true,
+  "a record not in the plan, refused": true,
+  "a smoke run's folder, refused": true,
+  "ok": true
+ },
+ "tr4_moved": {
+  "stopped at the move": true,
+  "units made again": 74,
+  "contexts listed unread": 74,
+  "the summary equals the run with no move": true,
+  "calls of a bad attempt made after the move": 0,
+  "ok": true
+ },
+ "tr4_faults": {
+  "verdicts": {
+   "google/gemini-4-argon": {
+    "role": "decides",
+    "holm_family": 8,
+    "verdict": "void: fewer than 54 valid C units"
+   },
+   "qwen/qwen3.8-max-0902": {
+    "role": "decides",
+    "verdict": "void: its harness check is unmeasured"
+   },
+   "anthropic/claude-sonnet-5.5": {
+    "role": "reported apart",
+    "holm_family": 4,
+    "p_values": {
+     "m1": 1.0,
+     "m2": 1.0,
+     "m3": 1.0,
+     "m4": 1.0
+    },
+    "rejected": [],
+    "verdict": "not contradicted (reported apart; moves nothing alone)",
+    "sensitivity": {
+     "faithful crew, each line 0.3, replenish 0.1": {
+      "P_contradicted_deciding_first_step": 0.01,
+      "P_contradicted_deciding_last_step": 0.018,
+      "P_contradicted_apart": 0.018
+     },
+     "faithful crew, uniform over the four acts": {
+      "P_contradicted_deciding_first_step": 0.015,
+      "P_contradicted_deciding_last_step": 0.02,
+      "P_contradicted_apart": 0.02
+     },
+     "faithful, skewed crew": {
+      "P_contradicted_deciding_first_step": 0.01,
+      "P_contradicted_deciding_last_step": 0.013,
+      "P_contradicted_apart": 0.013
+     },
+     "control: constant mention (every record names lines 1, 2 and 3)": {
+      "P_contradicted_deciding_first_step": 0.003,
+      "P_contradicted_deciding_last_step": 0.005,
+      "P_contradicted_apart": 0.005
+     },
+     "control: constant hallucination (every record names line 2, the crew reads it)": {
+      "P_contradicted_deciding_first_step": 0.003,
+      "P_contradicted_deciding_last_step": 0.005,
+      "P_contradicted_apart": 0.005
+     },
+     "control: hallucination apart from the fault (3 in 10 records name a random line, the crew reads it)": {
+      "P_contradicted_deciding_first_step": 0.007,
+      "P_contradicted_deciding_last_step": 0.028,
+      "P_contradicted_apart": 0.028
+     },
+     "fixed by position (always line 1)": {
+      "P_contradicted_deciding_first_step": 0.0,
+      "P_contradicted_deciding_last_step": 0.0,
+      "P_contradicted_apart": 0.0
+     },
+     "fixed by a cue (line = number of reports)": {
+      "P_contradicted_deciding_first_step": 0.0,
+      "P_contradicted_deciding_last_step": 0.0,
+      "P_contradicted_apart": 0.0
+     },
+     "fixed by history (the previous call's line; calls not fresh)": {
+      "P_contradicted_deciding_first_step": 0.415,
+      "P_contradicted_deciding_last_step": 0.497,
+      "P_contradicted_apart": 0.497
+     },
+     "explicit leak h=0.1": {
+      "P_contradicted_deciding_first_step": 1.0,
+      "P_contradicted_deciding_last_step": 1.0,
+      "P_contradicted_apart": 1.0
+     },
+     "explicit leak h=0.3": {
+      "P_contradicted_deciding_first_step": 1.0,
+      "P_contradicted_deciding_last_step": 1.0,
+      "P_contradicted_apart": 1.0
+     },
+     "all-or-nothing per unit h=0.2": {
+      "P_contradicted_deciding_first_step": 1.0,
+      "P_contradicted_deciding_last_step": 1.0,
+      "P_contradicted_apart": 1.0
+     },
+     "threshold clerk (leaks at 3 reports)": {
+      "P_contradicted_deciding_first_step": 1.0,
+      "P_contradicted_deciding_last_step": 1.0,
+      "P_contradicted_apart": 1.0
+     },
+     "implicit leak h=0.1, read by crew": {
+      "P_contradicted_deciding_first_step": 0.25,
+      "P_contradicted_deciding_last_step": 0.345,
+      "P_contradicted_apart": 0.345
+     },
+     "implicit leak h=0.2, read by crew": {
+      "P_contradicted_deciding_first_step": 0.833,
+      "P_contradicted_deciding_last_step": 0.887,
+      "P_contradicted_apart": 0.887
+     },
+     "implicit leak h=0.3, read by crew": {
+      "P_contradicted_deciding_first_step": 0.998,
+      "P_contradicted_deciding_last_step": 1.0,
+      "P_contradicted_apart": 1.0
+     },
+     "hybrid: implicit leak h=0.3, read half the time": {
+      "P_contradicted_deciding_first_step": 0.65,
+      "P_contradicted_deciding_last_step": 0.748,
+      "P_contradicted_apart": 0.748
+     },
+     "implicit leak h=0.5, read by crew": {
+      "P_contradicted_deciding_first_step": 1.0,
+      "P_contradicted_deciding_last_step": 1.0,
+      "P_contradicted_apart": 1.0
+     },
+     "opaque token mapped to another line by the crew h=0.3": {
+      "P_contradicted_deciding_first_step": 0.892,
+      "P_contradicted_deciding_last_step": 0.922,
+      "P_contradicted_apart": 0.922
+     },
+     "opaque token mapped to another line by the crew h=1": {
+      "P_contradicted_deciding_first_step": 1.0,
+      "P_contradicted_deciding_last_step": 1.0,
+      "P_contradicted_apart": 1.0
+     },
+     "explicit leak of another line h=0.3, read by the crew": {
+      "P_contradicted_deciding_first_step": 1.0,
+      "P_contradicted_deciding_last_step": 1.0,
+      "P_contradicted_apart": 1.0
+     },
+     "explicit leak of another line h=0.3, not read by the crew": {
+      "P_contradicted_deciding_first_step": 1.0,
+      "P_contradicted_deciding_last_step": 1.0,
+      "P_contradicted_apart": 1.0
+     },
+     "explicit leak of another line h=0.1, not read by the crew": {
+      "P_contradicted_deciding_first_step": 0.94,
+      "P_contradicted_deciding_last_step": 0.975,
+      "P_contradicted_apart": 0.975
+     }
+    }
+   }
+  },
+  "harness_check": "passed",
+  "no crew called after a filtered or unreadable clerk entry": true,
+  "53 valid C units: void for C": true,
+  "17 valid G units: unmeasured, read at p-values of 1": true,
+  "54 valid C units: read": true,
+  "filtered and unreadable counted apart": true,
+  "ok": true
+ },
+ "tr4_families": {
+  "a deciding pin's run missing: pending": true,
+  "with --final: the other read, at the full families": true,
+  "a harness leak: every C verdict withheld, the pin reported apart's included": true,
+  "ok": true
+ },
+ "filtered_run": {
+  "twenty filtered in a row read across batches": true,
+  "a read answer starts the count again": true,
+  "ok": true
+ },
+ "smoke": {
+  "go on": true,
+  "calls": {
+   "tr4": 12,
+   "tr5": 10,
+   "tr5, first step back": 9,
+   "tr5, first step decline": 9
+  },
+  "no smoke prompt is a scored one": true,
+  "a first step back or declined ends the smoke conversation": true,
+  "ok": true
+ },
+ "parsers": [
+  {
+   "case": "an entry",
+   "expected": [
+    "3 reports.",
+    null
+   ],
+   "got": [
+    "3 reports.",
+    null
+   ],
+   "ok": true
+  },
+  {
+   "case": "an entry that is exactly decline",
+   "expected": [
+    "decline",
+    null
+   ],
+   "got": [
+    "decline",
+    null
+   ],
+   "ok": true
+  },
+  {
+   "case": "an entry naming decline among words",
+   "expected": [
+    "I decline to say",
+    null
+   ],
+   "got": [
+    "I decline to say",
+    null
+   ],
+   "ok": true
+  },
+  {
+   "case": "an entry complete under a filter's stop",
+   "expected": [
+    "2.",
+    null
+   ],
+   "got": [
+    "2.",
+    null
+   ],
+   "ok": true
+  },
+  {
+   "case": "an entry cut by a filter",
+   "expected": [
+    "filtered",
+    null
+   ],
+   "got": [
+    "filtered",
+    null
+   ],
+   "ok": true
+  },
+  {
+   "case": "an entry refused, no content",
+   "expected": [
+    "decline",
+    null
+   ],
+   "got": [
+    "decline",
+    null
+   ],
+   "ok": true
+  },
+  {
+   "case": "a moderation rejection of an entry",
+   "expected": [
+    "filtered",
+    null
+   ],
+   "got": [
+    "filtered",
+    null
+   ],
+   "ok": true
+  },
+  {
+   "case": "an entry that is a number",
+   "expected": [
+    "invalid",
+    null
+   ],
+   "got": [
+    "invalid",
+    null
+   ],
+   "ok": true
+  },
+  {
+   "case": "malformed JSON for an entry",
+   "expected": [
+    "invalid",
+    null
+   ],
+   "got": [
+    "invalid",
+    null
+   ],
+   "ok": true
+  },
+  {
+   "case": "a listing",
+   "expected": [
+    "look",
+    {
+     "sides": [
+      "left",
+      "right"
+     ]
+    }
+   ],
+   "got": [
+    "look",
+    {
+     "sides": [
+      "left",
+      "right"
+     ]
+    }
+   ],
+   "ok": true
+  },
+  {
+   "case": "a listing of no side",
+   "expected": [
+    "wait",
+    {
+     "sides": []
+    }
+   ],
+   "got": [
+    "wait",
+    {
+     "sides": []
+    }
+   ],
+   "ok": true
+  },
+  {
+   "case": "a listing's decline, no sides",
+   "expected": [
+    "decline",
+    null
+   ],
+   "got": [
+    "decline",
+    null
+   ],
+   "ok": true
+  },
+  {
+   "case": "a listing's decline with sides",
+   "expected": [
+    "decline",
+    null
+   ],
+   "got": [
+    "decline",
+    null
+   ],
+   "ok": true
+  },
+  {
+   "case": "a listing's decline with an empty list",
+   "expected": [
+    "decline",
+    null
+   ],
+   "got": [
+    "decline",
+    null
+   ],
+   "ok": true
+  },
+  {
+   "case": "an entry that is the word invalid (read as unreadable: a known limit)",
+   "expected": [
+    "invalid",
+    null
+   ],
+   "got": [
+    "invalid",
+    null
+   ],
+   "ok": true
+  },
+  {
+   "case": "a listing with a side not offered",
+   "expected": [
+    "invalid",
+    null
+   ],
+   "got": [
+    "invalid",
+    null
+   ],
+   "ok": true
+  },
+  {
+   "case": "a listing with a letter not offered",
+   "expected": [
+    "invalid",
+    null
+   ],
+   "got": [
+    "invalid",
+    null
+   ],
+   "ok": true
+  },
+  {
+   "case": "a listing with no sides",
+   "expected": [
+    "invalid",
+    null
+   ],
+   "got": [
+    "invalid",
+    null
+   ],
+   "ok": true
+  },
+  {
+   "case": "a listing cut by a filter",
+   "expected": [
+    "filtered",
+    null
+   ],
+   "got": [
+    "filtered",
+    null
+   ],
+   "ok": true
+  },
+  {
+   "case": "a choice, by freeze 1's parser",
+   "expected": [
+    "wait",
+    null
+   ],
+   "got": [
+    "wait",
+    null
+   ],
+   "ok": true
+  },
+  {
+   "case": "a choice's decline",
+   "expected": [
+    "decline",
+    null
+   ],
+   "got": [
+    "decline",
+    null
+   ],
+   "ok": true
+  }
+ ],
+ "chain": {
+  "the base link read, told/'s files listed": true,
+  "a told/ file it lists changed, refused": true,
+  "its own rule changed with no addendum, refused": true,
+  "an addendum changing its dry run, read": true,
+  "an addendum changing its rule, refused": true,
+  "an addendum changing freeze 1's client, read (as freeze 1's own addenda may)": true,
+  "ok": true
+ },
+ "ok": true
+}

@@ -1,0 +1,1431 @@
+{
+ "test": "TR6 (RF6.3, a prediction read by what it predicts), freeze 6's dry run",
+ "seed": "RFZ-freeze-6-tr6-dry-run",
+ "no_model_called": true,
+ "code_hashes": {
+  "experiments/formations-that-read/told/PINS.json": "7feb28b92d1fa286daa6ccec5e874564d7083fe0b1c3fd26bb3d7ff1f3714b86",
+  "experiments/formations-that-read/told/client.py": "675b466dd5ca4f9b368a966a00c69df731052d6a28ea72970e48d51a49cf18c3",
+  "experiments/formations-that-read/told/conditions.py": "d534dd84eafb00d8fdaf594fe87b6be90b14dcde9b156f88cf86688cea04509a",
+  "experiments/formations-that-read/told/prompts.py": "5bd6351e1764017cc9f3797e20cf0ab290a9a995e6af26f78b340d0a4009f2ea",
+  "experiments/formations-that-read/told/rule.py": "d211e36c99fd4eb020b2c32f17cccf8bf48b8b638882fc4de8073f1c0ca859c7",
+  "experiments/formations-that-read/told/run.py": "4e9956caab24c053ba217b2a0a6eaa7e8c6dbbebbf4295bace7446fd632ae3f7",
+  "experiments/formations-that-read/told/verdicts.py": "44a89fb5dbe2c2d9fb63736c9dd687c749d79272dbd862d106a6fa8c5a80cdec",
+  "experiments/formations-that-read/told-tr3/ENDPOINTS.json": "171d36213debb37b30494425192f40600fc1ac376df140bd9f2e14a26eaf659c",
+  "experiments/formations-that-read/told-tr3/tr3_client.py": "91cf1311a2edac8227a33606b287682ee091fd1dc71fcd4a1cc75f79ac8ae2d9",
+  "experiments/formations-that-read/told-tr3/tr3_design.py": "708f394c52944ac48df4cd0ad2828df09659fe10249e67b74c1682d191395a18",
+  "experiments/formations-that-read/told-tr3/tr3_rule.py": "f1e9c4c7468267d36a9b11bf53d583f838f218f71f3929469e8aad2a5b0b2c8c",
+  "experiments/formations-that-read/told-tr3/tr3_run.py": "9ceabbd59652dbc1d63a04f64ee14863e8801aa35e8b06f746085166e42e8c7f",
+  "experiments/formations-that-read/told-tr6/tr6_design.py": "c43bef55c1d452105b46d89aa9cd94844ac842512f9b952089abeb3156e86345",
+  "experiments/formations-that-read/told-tr6/tr6_dry_run.py": "e740ae01b2d11ce25aaeea9056e509a20c698c9a2875803eab9c3ff0348f7f60",
+  "experiments/formations-that-read/told-tr6/tr6_rule.py": "95faa6dc72b01df7d6c2b4e787de2b373b79f940cecc21bfe89529c55bcf924d",
+  "experiments/formations-that-read/told-tr6/tr6_run.py": "e23a2b456e499522bdf044c974578e73b1a03be58f01b4031c37f7456b5ebb2d",
+  "experiments/formations-that-read/told-tr6/write_frozen.py": "5aeaf00b5a176192ae99e4433bcfc95a6ec616d69de9367ce3fad7272c3b7676",
+  "experiments/formations-that-read/tr6.json": "12bca81d50d35a8a0fc483550086b02ccccb73dd233b1d8448f39c4eb4e378e2",
+  "experiments/formations-that-read/tr6.py": "13b91665f222ddad9e3d5860f1b748a6bd3bba9995729afd49c7f913e9d0cd3e",
+  "experiments/formations-that-read/tr8.py": "50650cc538da6494c3122d78b8f8d2244ef40b5c4356b0ace23eb92c2aefed72",
+  "experiments/formations-that-read/tr_rr.py": "8ee9bef671ee5198f3eeea0421c6dbdd87de473fce974b672dd2c5e44a047ef8"
+ },
+ "replications": 300,
+ "thresholds_join": [
+  0,
+  1,
+  2,
+  3,
+  3,
+  5,
+  6,
+  6,
+  8,
+  9
+ ],
+ "capacities_lake": [
+  10,
+  9,
+  8,
+  7,
+  7,
+  5,
+  4,
+  4,
+  2,
+  1
+ ],
+ "thresholds_join_forecast_as_the_count": [
+  1,
+  2,
+  3,
+  4,
+  4,
+  6,
+  7,
+  7,
+  9,
+  10
+ ],
+ "code_path": [
+  {
+   "public": "reads, memoryless",
+   "calls": 3914,
+   "rounds": 12,
+   "planned": 3914,
+   "the_logged_calls_are_the_plan": true,
+   "verdicts_equal_the_rule": true,
+   "verdicts": {
+    "join": {
+     "outcome": "read",
+     "shape": "keeps the order",
+     "reading": "holds here: the table keeps the order, as the reading predicts",
+     "second_start": null,
+     "v2": "not contradicted",
+     "mismatching_rounds": {
+      "A": 2,
+      "B": 0
+     },
+     "seed_ends": {
+      "done": 10
+     }
+    },
+    "lake": {
+     "outcome": "read",
+     "shape": "reverses the order",
+     "reading": "holds here: the table reverses the order, as the reading predicts",
+     "second_start": null,
+     "v2": "not contradicted",
+     "mismatching_rounds": {
+      "A": 2,
+      "B": 0
+     },
+     "seed_ends": {
+      "done": 8,
+      "unreadable": 2
+     }
+    }
+   },
+   "answers": {
+    "stay": 1532,
+    "take": 2326,
+    "filtered": 3,
+    "decline": 8,
+    "invalid": 1
+   }
+  },
+  {
+   "public": "reads, momentum (join) and regret (lake) 1",
+   "calls": 3904,
+   "rounds": 12,
+   "planned": 3904,
+   "the_logged_calls_are_the_plan": true,
+   "verdicts_equal_the_rule": true,
+   "verdicts": {
+    "join": {
+     "outcome": "read",
+     "shape": "keeps the order",
+     "reading": "holds here: the table keeps the order, as the reading predicts",
+     "second_start": null,
+     "v2": "contradicted",
+     "mismatching_rounds": {
+      "A": 2,
+      "B": 16
+     },
+     "seed_ends": {
+      "unreadable": 1,
+      "done": 9
+     }
+    },
+    "lake": {
+     "outcome": "read",
+     "shape": "reverses the order",
+     "reading": "holds here: the table reverses the order, as the reading predicts",
+     "second_start": null,
+     "v2": "not contradicted",
+     "mismatching_rounds": {
+      "A": 1,
+      "B": 0
+     },
+     "seed_ends": {
+      "done": 10
+     }
+    }
+   },
+   "answers": {
+    "stay": 1491,
+    "take": 2362,
+    "filtered": 2,
+    "decline": 5
+   }
+  },
+  {
+   "public": "reads, trend reader 0.5",
+   "calls": 3904,
+   "rounds": 12,
+   "planned": 3904,
+   "the_logged_calls_are_the_plan": true,
+   "verdicts_equal_the_rule": true,
+   "verdicts": {
+    "join": {
+     "outcome": "read",
+     "shape": "keeps the order",
+     "reading": "holds here: the table keeps the order, as the reading predicts",
+     "second_start": null,
+     "v2": "contradicted",
+     "mismatching_rounds": {
+      "A": 1,
+      "B": 9
+     },
+     "seed_ends": {
+      "done": 9,
+      "unreadable": 1
+     }
+    },
+    "lake": {
+     "outcome": "read",
+     "shape": "reverses the order",
+     "reading": "holds here: the table reverses the order, as the reading predicts",
+     "second_start": null,
+     "v2": "contradicted",
+     "mismatching_rounds": {
+      "A": 2,
+      "B": 43
+     },
+     "seed_ends": {
+      "done": 10
+     }
+    }
+   },
+   "answers": {
+    "stay": 1472,
+    "take": 2376,
+    "invalid": 2,
+    "decline": 10
+   }
+  },
+  {
+   "public": "reads, agents exchange rules",
+   "calls": 3824,
+   "rounds": 12,
+   "planned": 3824,
+   "the_logged_calls_are_the_plan": true,
+   "verdicts_equal_the_rule": true,
+   "verdicts": {
+    "join": {
+     "outcome": "read",
+     "shape": "keeps the order",
+     "reading": "holds here: the table keeps the order, as the reading predicts",
+     "second_start": null,
+     "v2": "not contradicted",
+     "mismatching_rounds": {
+      "A": 1,
+      "B": 0
+     },
+     "seed_ends": {
+      "done": 9,
+      "unreadable": 1
+     }
+    },
+    "lake": {
+     "outcome": "read",
+     "shape": "reverses the order",
+     "reading": "holds here: the table reverses the order, as the reading predicts",
+     "second_start": null,
+     "v2": "not contradicted",
+     "mismatching_rounds": {
+      "A": 0,
+      "B": 1
+     },
+     "seed_ends": {
+      "unreadable": 2,
+      "done": 8
+     }
+    }
+   },
+   "answers": {
+    "stay": 1501,
+    "take": 2263,
+    "invalid": 2,
+    "decline": 11,
+    "filtered": 3
+   }
+  },
+  {
+   "public": "reads the forecast as the count, inertia 0.3",
+   "calls": 5014,
+   "rounds": 12,
+   "planned": 5014,
+   "the_logged_calls_are_the_plan": true,
+   "verdicts_equal_the_rule": true,
+   "verdicts": {
+    "join": {
+     "outcome": "read",
+     "shape": "keeps the order",
+     "reading": "holds here: the table keeps the order, as the reading predicts",
+     "second_start": 4,
+     "v2": "contradicted",
+     "mismatching_rounds": {
+      "A": 0,
+      "B": 5
+     },
+     "seed_ends": {
+      "done": 20
+     }
+    },
+    "lake": {
+     "outcome": "read",
+     "shape": "reverses the order",
+     "reading": "holds here: the table reverses the order, as the reading predicts",
+     "second_start": null,
+     "v2": "contradicted",
+     "mismatching_rounds": {
+      "A": 1,
+      "B": 27
+     },
+     "seed_ends": {
+      "done": 10
+     }
+    }
+   },
+   "answers": {
+    "stay": 2852,
+    "take": 2102,
+    "decline": 13,
+    "filtered": 2,
+    "invalid": 1
+   }
+  },
+  {
+   "public": "deaf",
+   "calls": 3824,
+   "rounds": 12,
+   "planned": 3824,
+   "the_logged_calls_are_the_plan": true,
+   "verdicts_equal_the_rule": true,
+   "verdicts": {
+    "join": {
+     "outcome": "read",
+     "shape": "constant",
+     "reading": "not read: the table is constant",
+     "second_start": null,
+     "v2": "not contradicted",
+     "mismatching_rounds": {
+      "A": 0,
+      "B": 2
+     },
+     "seed_ends": {
+      "unreadable": 3,
+      "done": 7
+     }
+    },
+    "lake": {
+     "outcome": "read",
+     "shape": "constant",
+     "reading": "not read: the table is constant",
+     "second_start": null,
+     "v2": "not contradicted",
+     "mismatching_rounds": {
+      "A": 1,
+      "B": 0
+     },
+     "seed_ends": {
+      "done": 9,
+      "unreadable": 1
+     }
+    }
+   },
+   "answers": {
+    "stay": 2243,
+    "take": 1522,
+    "invalid": 4,
+    "decline": 9,
+    "filtered": 2
+   }
+  },
+  {
+   "public": "reads, a presentation lean within 5 points",
+   "calls": 1654,
+   "rounds": 1,
+   "planned": 1654,
+   "the_logged_calls_are_the_plan": true,
+   "verdicts_equal_the_rule": true,
+   "verdicts": {
+    "join": {
+     "outcome": "void: 19 decisions flagged, 19 by dissent among the presentations, 0 by unreadable answers (no table, so no V2)"
+    },
+    "lake": {
+     "outcome": "void: 20 decisions flagged, 20 by dissent among the presentations, 0 by unreadable answers (no table, so no V2)"
+    }
+   },
+   "answers": {
+    "stay": 557,
+    "take": 1049,
+    "invalid": 1,
+    "filtered": 1,
+    "decline": 2
+   }
+  },
+  {
+   "public": "reads, declines from forecast 8",
+   "calls": 3914,
+   "rounds": 12,
+   "planned": 3914,
+   "the_logged_calls_are_the_plan": true,
+   "verdicts_equal_the_rule": true,
+   "verdicts": {
+    "join": {
+     "outcome": "read",
+     "shape": "neither",
+     "reading": "contradicted: the table is neither, not as the reading predicts",
+     "second_start": null,
+     "v2": "not contradicted",
+     "mismatching_rounds": {
+      "A": 1,
+      "B": 1
+     },
+     "seed_ends": {
+      "done": 9,
+      "unreadable": 1
+     }
+    },
+    "lake": {
+     "outcome": "read",
+     "shape": "reverses the order",
+     "reading": "holds here: the table reverses the order, as the reading predicts",
+     "second_start": null,
+     "v2": "not contradicted",
+     "mismatching_rounds": {
+      "A": 1,
+      "B": 1
+     },
+     "seed_ends": {
+      "done": 10
+     }
+    }
+   },
+   "answers": {
+    "stay": 1191,
+    "take": 1716,
+    "decline": 961,
+    "filtered": 2
+   }
+  },
+  {
+   "public": "reads, a filter at arm B's round 3, probes miscomputed",
+   "calls": 3754,
+   "rounds": 12,
+   "planned": 3754,
+   "the_logged_calls_are_the_plan": true,
+   "verdicts_equal_the_rule": true,
+   "verdicts": {
+    "join": {
+     "outcome": "read",
+     "shape": "keeps the order",
+     "reading": "not read: 20 of 22 probes restated",
+     "second_start": null,
+     "v2": "not contradicted",
+     "mismatching_rounds": {
+      "A": 1,
+      "B": 1
+     },
+     "seed_ends": {
+      "done": 9,
+      "unreadable": 1
+     }
+    },
+    "lake": {
+     "outcome": "read",
+     "shape": "reverses the order",
+     "reading": "not read: 20 of 22 probes restated",
+     "second_start": null,
+     "v2": "not contradicted",
+     "mismatching_rounds": {
+      "A": 0,
+      "B": 0
+     },
+     "seed_ends": {
+      "done": 8,
+      "unreadable": 2
+     }
+    }
+   },
+   "answers": {
+    "stay": 1473,
+    "take": 2224,
+    "decline": 8,
+    "filtered": 4,
+    "invalid": 1
+   }
+  }
+ ],
+ "code_path_all_equal": true,
+ "faults": {
+  "a record's course edited, refused": true,
+  "a logged answer the parser reads otherwise, refused": true,
+  "a record another model answered, refused": true,
+  "a record another provider served, refused": true,
+  "a record another tier served, refused": true,
+  "a response another provider served stops the run, logging nothing": true,
+  "a response another tier served stops the run, logging nothing": true,
+  "a call not in the plan, refused": true,
+  "a smoke folder, refused": true,
+  "the offline table's records of one forecast dropped while the loops derived from them stay, refused": true,
+  "a run stopped in its last round: its seeds' contexts partial, no self-check failure": true,
+  "a run stopped before its loops: each framing partial, V2 partial": true,
+  "one probe record dropped: that framing's reading partial": true,
+  "a log cut short, its last line half written: refused, then mended as FREEZE-1's note says and read, the last call unread, the moved line and its note reported": true,
+  "a log cut short, its last line cut inside a character: refused, then mended as FREEZE-1's note says and read, the last call unread, the moved line and its note reported": true,
+  "a log cut short, its last line whole with no newline: refused, then mended as FREEZE-1's note says and read, the last call unread, the moved line and its note reported": true,
+  "a cut line with lines written after it: refused, then mended from the first line that does not read, every line after it moved and its call unread": true,
+  "both files cut, the cause on two lines: refused, then mended at once, each note on one line, exactly the cut call and the calls that ended after the last whole read no longer read": true,
+  "a mend stopped between its two writes, made again: the moved line not added twice": true,
+  "a later start's call cut at the same byte, the log as it was before the first move: its line and note added": true,
+  "a later cut of the same bytes, the log grown since: its line and note added": true,
+  "a catalog read cut short: refused, then mended with a read naming no snapshot in its place, at the move's time; exactly the calls that ended after the last whole read no longer read": true,
+  "a catalog read cut short after a whole read, no call between: refused, then mended, every call read as before": true,
+  "a write cut by a full disk under --parallel 4: the run stops, at most 4 calls made from the cut one on, the cut line last, then mended": true,
+  "a response holding a surrogate pair as two code points: the run stops at that call, its record not written, the log whole": true,
+  "a folder whose log files are empty, as a run stopped before its first read leaves it, is whole": true,
+  "a line holding U+2028 raw, refused": true,
+  "the line writer: no log holds U+2028, U+2029 or U+0085 raw, a surrogate standing alone is escaped, and every record reads with them": true,
+  "a planted line in an arm A prompt, its hash recomputed, found by the input diff (refused)": true,
+  "a planted line in an arm A prompt, the frozen prompt's hash kept, found by the input diff (refused)": true,
+  "ok": true
+ },
+ "remade": {
+  "a lost closing read": {
+   "stopped": true,
+   "unread_after_the_stop": 55,
+   "good_before_the_rerun": 1599,
+   "unread_not_among_the_good": true,
+   "remade": 0,
+   "read_with_the_answers_it_should": true
+  },
+  "a pin that moved and came back": {
+   "stopped": true,
+   "unread_after_the_stop": 100,
+   "good_before_the_rerun": 899,
+   "unread_not_among_the_good": true,
+   "remade": 100,
+   "read_with_the_answers_it_should": true
+  },
+  "ok": true
+ },
+ "chain": {
+  "the base link read": true,
+  "freeze 1's run changed, with no addendum, refused": true,
+  "freeze 3's rule changed, with no addendum, refused": true,
+  "a TR6 addendum changing TR6's dry run, read": true,
+  "a TR6 addendum changing TR6's rule, refused": true,
+  "a TR6 addendum changing freeze 3's client, which freeze 3's chain has not taken, refused": true,
+  "a TR6 addendum changing freeze 1's run, refused": true,
+  "an addendum to freeze 3 changing its client, which TR6 has not taken, refused": true,
+  "the same, taken by a TR6 addendum, read": true,
+  "ok": true
+ },
+ "smoke": {
+  "as planned": {
+   "go_on": true,
+   "declines": 0,
+   "repeated_request": {
+    "answers": [
+     "take",
+     "take",
+     "take",
+     "take",
+     "take",
+     "take",
+     "take",
+     "take",
+     "take",
+     "take",
+     "take"
+    ],
+    "alike": true
+   },
+   "as_it_should": true
+  },
+  "a decline": {
+   "go_on": true,
+   "declines": 1,
+   "repeated_request": {
+    "answers": [
+     "take",
+     "take",
+     "take",
+     "take",
+     "take",
+     "take",
+     "take",
+     "take",
+     "take",
+     "take",
+     "take"
+    ],
+    "alike": true
+   },
+   "as_it_should": true
+  },
+  "an unreadable choice": {
+   "go_on": false,
+   "declines": 0,
+   "repeated_request": {
+    "answers": [
+     "take",
+     "take",
+     "take",
+     "take",
+     "take",
+     "take",
+     "take",
+     "take",
+     "take",
+     "take",
+     "take"
+    ],
+    "alike": true
+   },
+   "as_it_should": true
+  },
+  "another provider": {
+   "go_on": false,
+   "declines": 0,
+   "repeated_request": {
+    "answers": [
+     "take",
+     "take",
+     "take",
+     "take",
+     "take",
+     "take",
+     "take",
+     "take",
+     "take",
+     "take",
+     "take"
+    ],
+    "alike": true
+   },
+   "as_it_should": true
+  },
+  "another tier": {
+   "go_on": false,
+   "declines": 0,
+   "repeated_request": {
+    "answers": [
+     "take",
+     "take",
+     "take",
+     "take",
+     "take",
+     "take",
+     "take",
+     "take",
+     "take",
+     "take",
+     "take"
+    ],
+    "alike": true
+   },
+   "as_it_should": true
+  },
+  "ok": true
+ },
+ "classification": {
+  "rows": [
+   {
+    "shape": "choice A, take part listed first",
+    "read": [
+     "take",
+     null
+    ],
+    "ok": true
+   },
+   {
+    "shape": "choice A, stay out listed first",
+    "read": [
+     "stay",
+     null
+    ],
+    "ok": true
+   },
+   {
+    "shape": "choice B, stay out listed first",
+    "read": [
+     "take",
+     null
+    ],
+    "ok": true
+   },
+   {
+    "shape": "choice, a letter not offered",
+    "read": [
+     "invalid",
+     null
+    ],
+    "ok": true
+   },
+   {
+    "shape": "choice, not JSON",
+    "read": [
+     "invalid",
+     null
+    ],
+    "ok": true
+   },
+   {
+    "shape": "choice, the refusal field",
+    "read": [
+     "decline",
+     null
+    ],
+    "ok": true
+   },
+   {
+    "shape": "choice, a filter's stop with no answer",
+    "read": [
+     "filtered",
+     null
+    ],
+    "ok": true
+   },
+   {
+    "shape": "choice, a filter's stop after a whole answer",
+    "read": [
+     "stay",
+     null
+    ],
+    "ok": true
+   },
+   {
+    "shape": "choice, a moderation rejection",
+    "read": [
+     "filtered",
+     null
+    ],
+    "ok": true
+   },
+   {
+    "shape": "choice, no choices",
+    "read": [
+     "invalid",
+     null
+    ],
+    "ok": true
+   },
+   {
+    "shape": "probe, whole",
+    "read": [
+     null,
+     {
+      "forecast": 3,
+      "points": -5
+     }
+    ],
+    "ok": true
+   },
+   {
+    "shape": "probe, a number as text",
+    "read": [
+     null,
+     null
+    ],
+    "ok": true
+   },
+   {
+    "shape": "probe, a number true",
+    "read": [
+     null,
+     null
+    ],
+    "ok": true
+   },
+   {
+    "shape": "probe, a number 3.0",
+    "read": [
+     null,
+     null
+    ],
+    "ok": true
+   },
+   {
+    "shape": "probe, a field missing",
+    "read": [
+     null,
+     null
+    ],
+    "ok": true
+   },
+   {
+    "shape": "probe, not JSON",
+    "read": [
+     null,
+     null
+    ],
+    "ok": true
+   },
+   {
+    "shape": "probe, a message that is a string",
+    "read": [
+     null,
+     null
+    ],
+    "ok": true
+   },
+   {
+    "shape": "probe, a moderation rejection",
+    "read": [
+     null,
+     null
+    ],
+    "ok": true
+   }
+  ],
+  "ok": true
+ },
+ "shares": {
+  "join: memoryless, eta 0.0": {
+   "V1: keeps the order": 1.0,
+   "V2 contradicted": 0.0,
+   "diagnostic resolved": 0.0,
+   "self-check failed": 0.0,
+   "some seed in A shows a fall": 0.0,
+   "void": 0.0,
+   "mean mismatching rounds A / B": [
+    0.0,
+    0.0
+   ],
+   "mean share of rounds matching the table A / B, of the tables read": [
+    1.0,
+    1.0
+   ],
+   "Stage 0 (its own public): V2 contradicted": 0.0,
+   "Stage 0: mean mismatching rounds A / B": [
+    0.0,
+    0.0
+   ]
+  },
+  "join: memoryless, eta 0.001": {
+   "V1: keeps the order": 0.9967,
+   "V2 contradicted": 0.0,
+   "diagnostic resolved": 0.0,
+   "self-check failed": 0.0,
+   "some seed in A shows a fall": 0.1367,
+   "void": 0.0033,
+   "mean mismatching rounds A / B": [
+    0.5,
+    0.5
+   ],
+   "mean share of rounds matching the table A / B, of the tables read": [
+    0.991,
+    0.991
+   ],
+   "Stage 0 (its own public): V2 contradicted": 0.0,
+   "Stage 0: mean mismatching rounds A / B": [
+    0.52,
+    0.48
+   ]
+  },
+  "join: memoryless, eta 0.01": {
+   "V1: keeps the order": 0.9067,
+   "V2 contradicted": 0.0233,
+   "diagnostic resolved": 0.02,
+   "self-check failed": 0.0,
+   "some seed in A shows a fall": 0.72,
+   "void": 0.0933,
+   "mean mismatching rounds A / B": [
+    4.63,
+    4.74
+   ],
+   "mean share of rounds matching the table A / B, of the tables read": [
+    0.907,
+    0.905
+   ],
+   "Stage 0 (its own public): V2 contradicted": 0.02,
+   "Stage 0: mean mismatching rounds A / B": [
+    5.41,
+    5.13
+   ]
+  },
+  "join: inertia w 0.1": {
+   "V1: keeps the order": 0.9967,
+   "V2 contradicted": 0.48,
+   "diagnostic resolved": 0.4867,
+   "self-check failed": 0.0,
+   "some seed in A shows a fall": 0.1467,
+   "void": 0.0033,
+   "mean mismatching rounds A / B": [
+    0.55,
+    5.35
+   ],
+   "mean share of rounds matching the table A / B, of the tables read": [
+    0.99,
+    0.902
+   ],
+   "Stage 0 (its own public): V2 contradicted": 0.4767,
+   "Stage 0: mean mismatching rounds A / B": [
+    0.51,
+    5.29
+   ]
+  },
+  "join: inertia w 0.3": {
+   "V1: keeps the order": 1.0,
+   "V2 contradicted": 1.0,
+   "diagnostic resolved": 1.0,
+   "self-check failed": 0.0,
+   "some seed in A shows a fall": 0.11,
+   "void": 0.0,
+   "mean mismatching rounds A / B": [
+    0.61,
+    16.8
+   ],
+   "mean share of rounds matching the table A / B, of the tables read": [
+    0.989,
+    0.695
+   ],
+   "Stage 0 (its own public): V2 contradicted": 0.9933,
+   "Stage 0: mean mismatching rounds A / B": [
+    0.57,
+    16.67
+   ]
+  },
+  "join: momentum w 0.3": {
+   "V1: keeps the order": 0.9967,
+   "V2 contradicted": 0.8,
+   "diagnostic resolved": 0.85,
+   "self-check failed": 0.0,
+   "some seed in A shows a fall": 0.1033,
+   "void": 0.0033,
+   "mean mismatching rounds A / B": [
+    0.55,
+    7.54
+   ],
+   "mean share of rounds matching the table A / B, of the tables read": [
+    0.99,
+    0.863
+   ],
+   "Stage 0 (its own public): V2 contradicted": 0.8367,
+   "Stage 0: mean mismatching rounds A / B": [
+    0.54,
+    7.84
+   ]
+  },
+  "join: momentum w 1.0": {
+   "V1: keeps the order": 1.0,
+   "V2 contradicted": 1.0,
+   "diagnostic resolved": 1.0,
+   "self-check failed": 0.0,
+   "some seed in A shows a fall": 0.1667,
+   "void": 0.0,
+   "mean mismatching rounds A / B": [
+    0.64,
+    15.16
+   ],
+   "mean share of rounds matching the table A / B, of the tables read": [
+    0.988,
+    0.724
+   ],
+   "Stage 0 (its own public): V2 contradicted": 1.0,
+   "Stage 0: mean mismatching rounds A / B": [
+    0.63,
+    15.25
+   ]
+  },
+  "join: trend reader w 0.5": {
+   "V1: keeps the order": 1.0,
+   "V2 contradicted": 0.99,
+   "diagnostic resolved": 1.0,
+   "self-check failed": 0.0,
+   "some seed in A shows a fall": 0.12,
+   "void": 0.0,
+   "mean mismatching rounds A / B": [
+    0.6,
+    10.45
+   ],
+   "mean share of rounds matching the table A / B, of the tables read": [
+    0.989,
+    0.81
+   ],
+   "Stage 0 (its own public): V2 contradicted": 0.9767,
+   "Stage 0: mean mismatching rounds A / B": [
+    0.53,
+    10.62
+   ]
+  },
+  "join: agents exchange rules": {
+   "V1: keeps the order": 1.0,
+   "V2 contradicted": 0.0033,
+   "diagnostic resolved": 1.0,
+   "self-check failed": 0.0,
+   "some seed in A shows a fall": 0.12,
+   "void": 0.0,
+   "mean mismatching rounds A / B": [
+    0.59,
+    0.59
+   ],
+   "mean share of rounds matching the table A / B, of the tables read": [
+    0.989,
+    0.989
+   ],
+   "Stage 0 (its own public): V2 contradicted": 0.0,
+   "Stage 0: mean mismatching rounds A / B": [
+    0.58,
+    0.51
+   ]
+  },
+  "lake: memoryless, eta 0.0": {
+   "V1: reverses the order": 1.0,
+   "V2 contradicted": 0.0,
+   "diagnostic resolved": 0.0,
+   "self-check failed": 0.0,
+   "some seed in A shows a fall": 0.0,
+   "void": 0.0,
+   "mean mismatching rounds A / B": [
+    0.0,
+    0.0
+   ],
+   "mean share of rounds matching the table A / B, of the tables read": [
+    1.0,
+    1.0
+   ],
+   "Stage 0 (its own public): V2 contradicted": 0.0,
+   "Stage 0: mean mismatching rounds A / B": [
+    0.0,
+    0.0
+   ]
+  },
+  "lake: memoryless, eta 0.001": {
+   "V1: reverses the order": 1.0,
+   "V2 contradicted": 0.0,
+   "diagnostic resolved": 0.0,
+   "self-check failed": 0.0,
+   "some seed in A shows a fall": 0.0,
+   "void": 0.0,
+   "mean mismatching rounds A / B": [
+    0.53,
+    0.56
+   ],
+   "mean share of rounds matching the table A / B, of the tables read": [
+    0.99,
+    0.99
+   ],
+   "Stage 0 (its own public): V2 contradicted": 0.0,
+   "Stage 0: mean mismatching rounds A / B": [
+    0.55,
+    0.54
+   ]
+  },
+  "lake: memoryless, eta 0.01": {
+   "V1: reverses the order": 0.88,
+   "V2 contradicted": 0.0267,
+   "diagnostic resolved": 0.03,
+   "self-check failed": 0.0,
+   "some seed in A shows a fall": 0.0,
+   "void": 0.12,
+   "mean mismatching rounds A / B": [
+    4.62,
+    4.55
+   ],
+   "mean share of rounds matching the table A / B, of the tables read": [
+    0.904,
+    0.906
+   ],
+   "Stage 0 (its own public): V2 contradicted": 0.03,
+   "Stage 0: mean mismatching rounds A / B": [
+    5.27,
+    5.24
+   ]
+  },
+  "lake: inertia w 0.1": {
+   "V1: reverses the order": 1.0,
+   "V2 contradicted": 1.0,
+   "diagnostic resolved": 1.0,
+   "self-check failed": 0.0,
+   "some seed in A shows a fall": 0.0,
+   "void": 0.0,
+   "mean mismatching rounds A / B": [
+    0.52,
+    18.88
+   ],
+   "mean share of rounds matching the table A / B, of the tables read": [
+    0.991,
+    0.657
+   ],
+   "Stage 0 (its own public): V2 contradicted": 1.0,
+   "Stage 0: mean mismatching rounds A / B": [
+    0.62,
+    18.18
+   ]
+  },
+  "lake: inertia w 0.3": {
+   "V1: reverses the order": 1.0,
+   "V2 contradicted": 1.0,
+   "diagnostic resolved": 1.0,
+   "self-check failed": 0.0,
+   "some seed in A shows a fall": 0.0,
+   "void": 0.0,
+   "mean mismatching rounds A / B": [
+    0.57,
+    17.36
+   ],
+   "mean share of rounds matching the table A / B, of the tables read": [
+    0.99,
+    0.684
+   ],
+   "Stage 0 (its own public): V2 contradicted": 0.9967,
+   "Stage 0: mean mismatching rounds A / B": [
+    0.49,
+    20.04
+   ]
+  },
+  "lake: regret after a crowded round w 0.3": {
+   "V1: reverses the order": 1.0,
+   "V2 contradicted": 0.0,
+   "diagnostic resolved": 0.0,
+   "self-check failed": 0.0,
+   "some seed in A shows a fall": 0.0,
+   "void": 0.0,
+   "mean mismatching rounds A / B": [
+    0.51,
+    0.53
+   ],
+   "mean share of rounds matching the table A / B, of the tables read": [
+    0.991,
+    0.99
+   ],
+   "Stage 0 (its own public): V2 contradicted": 0.0033,
+   "Stage 0: mean mismatching rounds A / B": [
+    0.57,
+    0.51
+   ]
+  },
+  "lake: regret after a crowded round w 1.0": {
+   "V1: reverses the order": 0.9967,
+   "V2 contradicted": 0.0,
+   "diagnostic resolved": 0.0,
+   "self-check failed": 0.0,
+   "some seed in A shows a fall": 0.0,
+   "void": 0.0033,
+   "mean mismatching rounds A / B": [
+    0.59,
+    0.49
+   ],
+   "mean share of rounds matching the table A / B, of the tables read": [
+    0.989,
+    0.991
+   ],
+   "Stage 0 (its own public): V2 contradicted": 0.0,
+   "Stage 0: mean mismatching rounds A / B": [
+    0.51,
+    0.58
+   ]
+  },
+  "lake: trend reader w 0.5": {
+   "V1: reverses the order": 1.0,
+   "V2 contradicted": 1.0,
+   "diagnostic resolved": 1.0,
+   "self-check failed": 0.0,
+   "some seed in A shows a fall": 0.0,
+   "void": 0.0,
+   "mean mismatching rounds A / B": [
+    0.58,
+    43.53
+   ],
+   "mean share of rounds matching the table A / B, of the tables read": [
+    0.99,
+    0.209
+   ],
+   "Stage 0 (its own public): V2 contradicted": 1.0,
+   "Stage 0: mean mismatching rounds A / B": [
+    0.55,
+    43.74
+   ]
+  },
+  "lake: agents exchange rules": {
+   "V1: reverses the order": 0.9933,
+   "V2 contradicted": 0.0,
+   "diagnostic resolved": 0.2667,
+   "self-check failed": 0.0,
+   "some seed in A shows a fall": 0.0,
+   "void": 0.0067,
+   "mean mismatching rounds A / B": [
+    0.61,
+    0.48
+   ],
+   "mean share of rounds matching the table A / B, of the tables read": [
+    0.989,
+    0.991
+   ],
+   "Stage 0 (its own public): V2 contradicted": 0.0,
+   "Stage 0: mean mismatching rounds A / B": [
+    0.52,
+    0.59
+   ]
+  },
+  "deaf: memoryless": {
+   "V1: constant": 1.0,
+   "V2 contradicted": 0.0,
+   "diagnostic resolved": 0.0,
+   "self-check failed": 0.0,
+   "some seed in A shows a fall": 0.4,
+   "void": 0.0,
+   "mean mismatching rounds A / B": [
+    0.56,
+    0.54
+   ],
+   "mean share of rounds matching the table A / B, of the tables read": [
+    0.99,
+    0.99
+   ],
+   "Stage 0 (its own public): V2 contradicted": 0.0,
+   "Stage 0: mean mismatching rounds A / B": [
+    0.58,
+    0.44
+   ]
+  },
+  "identity: memoryless": {
+   "V1: the identity": 1.0,
+   "V2 contradicted": 0.0033,
+   "diagnostic resolved": 0.0033,
+   "self-check failed": 0.0,
+   "some seed in A shows a fall": 0.0033,
+   "void": 0.0,
+   "mean mismatching rounds A / B": [
+    0.58,
+    0.63
+   ],
+   "mean share of rounds matching the table A / B, of the tables read": [
+    0.989,
+    0.989
+   ],
+   "Stage 0 (its own public): V2 contradicted": 0.0,
+   "Stage 0: mean mismatching rounds A / B": [
+    0.52,
+    0.6
+   ]
+  },
+  "hybrid: memoryless": {
+   "V1: keeps the order": 1.0,
+   "V2 contradicted": 0.0,
+   "diagnostic resolved": 0.0,
+   "self-check failed": 0.0,
+   "some seed in A shows a fall": 0.1967,
+   "void": 0.0,
+   "mean mismatching rounds A / B": [
+    0.55,
+    0.63
+   ],
+   "mean share of rounds matching the table A / B, of the tables read": [
+    0.99,
+    0.988
+   ],
+   "Stage 0 (its own public): V2 contradicted": 0.0,
+   "Stage 0: mean mismatching rounds A / B": [
+    0.59,
+    0.57
+   ]
+  }
+ },
+ "moves": {
+  "the second start: a public reading the forecast as the count, inertia 0.3": {
+   "table (no flips)": [
+    0,
+    1,
+    2,
+    3,
+    5,
+    5,
+    6,
+    8,
+    8,
+    9,
+    10
+   ],
+   "second start (runs read)": {
+    "4": 299
+   },
+   "void": 0.0033,
+   "V2 contradicted with the second start": 0.0167,
+   "V2 contradicted from 0 alone": 0.0067
+  },
+  "the second start: a public reading the forecast as the count, momentum 1": {
+   "table (no flips)": [
+    0,
+    1,
+    2,
+    3,
+    5,
+    5,
+    6,
+    8,
+    8,
+    9,
+    10
+   ],
+   "second start (runs read)": {
+    "4": 299
+   },
+   "void": 0.0033,
+   "V2 contradicted with the second start": 0.3,
+   "V2 contradicted from 0 alone": 0.2633
+  },
+  "a presentation lean (the option listed first, within 5 points): the flag rule voids it": {
+   "outcome": "void: 19 decisions flagged, 19 by dissent among the presentations, 0 by unreadable answers (no table, so no V2)",
+   "flagged": 19,
+   "note": "with the five offline calls one identical request, a lean would not be flagged; with them the five presentations, it is"
+  },
+  "declines from forecast 8, read as not taking part": {
+   "table": [
+    1,
+    2,
+    3,
+    5,
+    5,
+    6,
+    8,
+    8,
+    0,
+    0,
+    0
+   ],
+   "outcome": "read",
+   "shape": "neither",
+   "v2": "not contradicted"
+  },
+  "a filtered answer at arm B's round 3 ends its seed; probes miscomputed leave the reading unread": {
+   "seed_ends": {
+    "A": [
+     "done",
+     "done",
+     "done",
+     "done",
+     "done"
+    ],
+    "B": [
+     "unreadable",
+     "done",
+     "done",
+     "done",
+     "done"
+    ]
+   },
+   "rounds_read": {
+    "A": 47,
+    "B": 47
+   },
+   "reading": "not read: 20 of 22 probes restated",
+   "probes_restated": {
+    "restated": 20,
+    "planned": 22
+   }
+  },
+  "answers fixed by the prompt, as at temperature 0, reading no course: near the threshold (within 5 points) a member dissents with chance 0.05 a prompt, join": {
+   "void": 0.2733,
+   "tables read": 218,
+   "V2 contradicted, of the tables read": 0.0092,
+   "mean mismatching rounds A / B, of the tables read": [
+    2.95,
+    3.12
+   ],
+   "mean share of answers replaying the same presentation's, where the presentations differ, A / B": [
+    0.746,
+    0.756
+   ]
+  },
+  "answers fixed by the prompt, as at temperature 0, reading no course: near the threshold (within 5 points) a member dissents with chance 0.05 a prompt, lake": {
+   "void": 0.28,
+   "tables read": 216,
+   "V2 contradicted, of the tables read": 0.0185,
+   "mean mismatching rounds A / B, of the tables read": [
+    3.15,
+    3.11
+   ],
+   "mean share of answers replaying the same presentation's, where the presentations differ, A / B": [
+    0.801,
+    0.821
+   ]
+  },
+  "answers fixed by the prompt, as at temperature 0, reading no course: near the threshold (within 5 points) a member dissents with chance 0.1 a prompt, join": {
+   "void": 0.7433,
+   "tables read": 77,
+   "V2 contradicted, of the tables read": 0.0,
+   "mean mismatching rounds A / B, of the tables read": [
+    6.18,
+    6.49
+   ],
+   "mean share of answers replaying the same presentation's, where the presentations differ, A / B": [
+    0.734,
+    0.724
+   ]
+  },
+  "answers fixed by the prompt, as at temperature 0, reading no course: near the threshold (within 5 points) a member dissents with chance 0.1 a prompt, lake": {
+   "void": 0.7533,
+   "tables read": 74,
+   "V2 contradicted, of the tables read": 0.027,
+   "mean mismatching rounds A / B, of the tables read": [
+    6.76,
+    6.28
+   ],
+   "mean share of answers replaying the same presentation's, where the presentations differ, A / B": [
+    0.759,
+    0.799
+   ]
+  },
+  "the same at chance 0.05, frame-deaf: arm A's frame moves no answer, join": {
+   "void": 0.2533,
+   "tables read": 224,
+   "V2 contradicted, of the tables read": 0.0045,
+   "mean mismatching rounds A / B, of the tables read": [
+    11.55,
+    3.25
+   ],
+   "mean share of answers replaying the same presentation's, where the presentations differ, A / B": [
+    1.0,
+    0.732
+   ]
+  },
+  "the same at chance 0.05, frame-deaf: arm A's frame moves no answer, lake": {
+   "void": 0.2567,
+   "tables read": 223,
+   "V2 contradicted, of the tables read": 0.1211,
+   "mean mismatching rounds A / B, of the tables read": [
+    0.85,
+    3.13
+   ],
+   "mean share of answers replaying the same presentation's, where the presentations differ, A / B": [
+    1.0,
+    0.791
+   ]
+  },
+  "inertia 0.1 with the same dissent at chance 0.05, the frame read, join": {
+   "void": 0.3167,
+   "tables read": 205,
+   "V2 contradicted, of the tables read": 0.2927,
+   "mean mismatching rounds A / B, of the tables read": [
+    3.78,
+    8.17
+   ],
+   "mean share of answers replaying the same presentation's, where the presentations differ, A / B": [
+    0.76,
+    0.737
+   ]
+  },
+  "inertia 0.1 with the same dissent at chance 0.05, the frame read, lake": {
+   "void": 0.2867,
+   "tables read": 214,
+   "V2 contradicted, of the tables read": 0.9953,
+   "mean mismatching rounds A / B, of the tables read": [
+    3.81,
+    20.96
+   ],
+   "mean share of answers replaying the same presentation's, where the presentations differ, A / B": [
+    0.788,
+    0.737
+   ]
+  },
+  "fewest arm B mismatching rounds of 55 contradicting V2": {
+   "arm A 0": 5,
+   "arm A 1": 7,
+   "arm A 2": 8,
+   "arm A 5": 13
+  }
+ },
+ "code_unchanged_during_the_run": true,
+ "ok": true
+}

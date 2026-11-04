@@ -1,0 +1,413 @@
+{
+ "what": "TR2's four checkpoints, each named by its Hugging Face repository, revision and every file it loads, with its size and hash (sha256 for a file stored in LFS, the git blob id otherwise), read from the hub's public metadata on 4 November 2026, with each checkpoint's layers, width and dtype from its config.json read at its revision; no weight or vocabulary file was downloaded. The run checks every file before loading, and the engine's report against the layers and width.",
+ "read_on": "2026-11-04",
+ "checkpoints": [
+  {
+   "id": "qwen-base",
+   "repo": "Qwen/Qwen3-8B-Base",
+   "family": "qwen",
+   "role": "base",
+   "revision": "49e3418fbbbca6ecbdf9608b4d22e5a407081db4",
+   "license": "apache-2.0",
+   "gated": false,
+   "weights_bytes": 16381516776,
+   "layers": 36,
+   "hidden": 4096,
+   "dtype": "bfloat16",
+   "architecture": "Qwen3ForCausalLM",
+   "files": [
+    {
+     "path": "config.json",
+     "size": 729,
+     "git_blob": "c5c5b1c67be484bcdb225c060f942736988c3c66"
+    },
+    {
+     "path": "generation_config.json",
+     "size": 138,
+     "git_blob": "cbbb3133034e192527e5321b4c679154e4819ab8"
+    },
+    {
+     "path": "merges.txt",
+     "size": 1671853,
+     "git_blob": "31349551d90c7606f325fe0f11bbb8bd5fa0d7c7"
+    },
+    {
+     "path": "model-00001-of-00005.safetensors",
+     "size": 3996250744,
+     "sha256": "9983f1b9ef2f60e7c3730d9bc11ada914e6ec630639b5b020a89bd158cd0446b"
+    },
+    {
+     "path": "model-00002-of-00005.safetensors",
+     "size": 3993160032,
+     "sha256": "9aa12339835bf7a093d3d0b0a0d2d77f8538301cfc7f8e7ec7a585858ebf7a1f"
+    },
+    {
+     "path": "model-00003-of-00005.safetensors",
+     "size": 3959604768,
+     "sha256": "c7dd5a191c8da555def0714550375b3c0117751add408fcdda0c2a79ac0186bc"
+    },
+    {
+     "path": "model-00004-of-00005.safetensors",
+     "size": 3187841392,
+     "sha256": "ad8b708792105133e03fe19e2d56c89c709f677f01285f8b3ede8947d59fd9fe"
+    },
+    {
+     "path": "model-00005-of-00005.safetensors",
+     "size": 1244659840,
+     "sha256": "fbf24915d47ea030bb68ab0b9488f4515a907185baa6dc26837c9c3f2326a550"
+    },
+    {
+     "path": "model.safetensors.index.json",
+     "size": 32878,
+     "git_blob": "041fe9a0d3ab9c8895f264e7a3a60aa563398d7c"
+    },
+    {
+     "path": "tokenizer.json",
+     "size": 7031645,
+     "git_blob": "443909a61d429dff23010e5bddd28ff530edda00"
+    },
+    {
+     "path": "tokenizer_config.json",
+     "size": 9678,
+     "git_blob": "6a3829ee9491f36113e64df37573be81df0366f5"
+    },
+    {
+     "path": "vocab.json",
+     "size": 2776833,
+     "git_blob": "4783fe10ac3adce15ac8f358ef5462739852c569"
+    }
+   ]
+  },
+  {
+   "id": "qwen-tuned",
+   "repo": "Qwen/Qwen3-8B",
+   "family": "qwen",
+   "role": "tuned",
+   "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+   "license": "apache-2.0",
+   "gated": false,
+   "weights_bytes": 16381516776,
+   "layers": 36,
+   "hidden": 4096,
+   "dtype": "bfloat16",
+   "architecture": "Qwen3ForCausalLM",
+   "chat_template_sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8",
+   "chat_template_from": "tokenizer_config.json",
+   "files": [
+    {
+     "path": "config.json",
+     "size": 728,
+     "git_blob": "d46195ac87f837ad233d02b2f80f148bf7c005e0"
+    },
+    {
+     "path": "generation_config.json",
+     "size": 239,
+     "git_blob": "20a8a9156fc8c3f25295ca067f61fdf120d517c5"
+    },
+    {
+     "path": "merges.txt",
+     "size": 1671853,
+     "git_blob": "31349551d90c7606f325fe0f11bbb8bd5fa0d7c7"
+    },
+    {
+     "path": "model-00001-of-00005.safetensors",
+     "size": 3996250744,
+     "sha256": "31d6a825ae35f11fb85b195b4c42c146c051e446433125a215336abdf95cbf5f"
+    },
+    {
+     "path": "model-00002-of-00005.safetensors",
+     "size": 3993160032,
+     "sha256": "5991236cea6fe21f3d43cab0f0e84448734fbbe0789816202989f2ddc9d18282"
+    },
+    {
+     "path": "model-00003-of-00005.safetensors",
+     "size": 3959604768,
+     "sha256": "c5185c4794be2d8a9784d5753c9922db38df478ce11f9ed0b415b7304d896836"
+    },
+    {
+     "path": "model-00004-of-00005.safetensors",
+     "size": 3187841392,
+     "sha256": "b5ee7de71fbf17db3d5704e0c8f2bc7d005ca9e1d7ca2aeb19827b0cfcaa917a"
+    },
+    {
+     "path": "model-00005-of-00005.safetensors",
+     "size": 1244659840,
+     "sha256": "20c2d6366ab85c90786ccdd829cd2b9e7d30ef3b2ebbb998280e7e4014b542ff"
+    },
+    {
+     "path": "model.safetensors.index.json",
+     "size": 32878,
+     "git_blob": "2b85c00f1b118961cd7a477e2bba0fe197a4ce1a"
+    },
+    {
+     "path": "tokenizer.json",
+     "size": 11422654,
+     "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+    },
+    {
+     "path": "tokenizer_config.json",
+     "size": 9732,
+     "git_blob": "417d038a63fa3de29cfde265caedae14d1a58d92"
+    },
+    {
+     "path": "vocab.json",
+     "size": 2776833,
+     "git_blob": "4783fe10ac3adce15ac8f358ef5462739852c569"
+    }
+   ]
+  },
+  {
+   "id": "olmo-base",
+   "repo": "allenai/Olmo-3-1025-7B",
+   "family": "olmo",
+   "role": "base",
+   "revision": "a81bae42db3975be1671e27b9c9a56da1a9f980f",
+   "license": "apache-2.0",
+   "gated": false,
+   "weights_bytes": 14596063712,
+   "layers": 32,
+   "hidden": 4096,
+   "dtype": "bfloat16",
+   "architecture": "Olmo3ForCausalLM",
+   "files": [
+    {
+     "path": "config.json",
+     "size": 1620,
+     "git_blob": "5e1778fbc278e8f47217ba485e9a075689207f0f"
+    },
+    {
+     "path": "generation_config.json",
+     "size": 69,
+     "git_blob": "33b71a9c3ddf78cfa1c6721826775ae02d06d64d"
+    },
+    {
+     "path": "merges.txt",
+     "size": 916646,
+     "git_blob": "354558edcdbd64ca7abd407b8be3d5d09d39d781"
+    },
+    {
+     "path": "model-00001-of-00003.safetensors",
+     "size": 4969984976,
+     "sha256": "0490d6668e613a29b23367e3a7aa9cc6aced3d162694445bb969ed7622b3c4e2"
+    },
+    {
+     "path": "model-00002-of-00003.safetensors",
+     "size": 4981161496,
+     "sha256": "e127ea479fb6e208fe9d48d23b11212b5722f4873f6eef9c009b7a855866c641"
+    },
+    {
+     "path": "model-00003-of-00003.safetensors",
+     "size": 4644917240,
+     "sha256": "f3ddff10052ffe5de5c6b4cad45c422c0d898acc6beb21b1b8531244adfb3c70"
+    },
+    {
+     "path": "model.safetensors.index.json",
+     "size": 29630,
+     "git_blob": "421a80b181a130ccbc579a328fb349d8792a32ce"
+    },
+    {
+     "path": "special_tokens_map.json",
+     "size": 207,
+     "git_blob": "48f174b441a37b588e40d794c437adad1624a311"
+    },
+    {
+     "path": "tokenizer.json",
+     "size": 7137177,
+     "git_blob": "5fe172127988c3709a49d8d2ce20e11bb266cd57"
+    },
+    {
+     "path": "tokenizer_config.json",
+     "size": 4308,
+     "git_blob": "5599723dac37d9f0b7e496de66d15e0a762babe9"
+    },
+    {
+     "path": "vocab.json",
+     "size": 1611056,
+     "git_blob": "51135344eec01a62fc4deaca39c72ac08f5b9709"
+    }
+   ]
+  },
+  {
+   "id": "olmo-tuned",
+   "repo": "allenai/Olmo-3-7B-Instruct",
+   "family": "olmo",
+   "role": "tuned",
+   "revision": "6e5971d9eba42665f5bd5a0fcf047f299ce1dccc",
+   "license": "apache-2.0",
+   "gated": false,
+   "weights_bytes": 14596063712,
+   "layers": 32,
+   "hidden": 4096,
+   "dtype": "bfloat16",
+   "architecture": "Olmo3ForCausalLM",
+   "chat_template_sha256": "f5186d42d99c8a0445d37fd8a6c7ccf07fe3e24a29ce622d8bd245da9507b12b",
+   "chat_template_from": "chat_template.jinja",
+   "files": [
+    {
+     "path": "chat_template.jinja",
+     "size": 2613,
+     "git_blob": "a21396285102846aa0787dd598623e7b8dbb2b67"
+    },
+    {
+     "path": "config.json",
+     "size": 1625,
+     "git_blob": "9c118c14e7871ec96335dc859995b4ef554bb097"
+    },
+    {
+     "path": "generation_config.json",
+     "size": 204,
+     "git_blob": "0739fd213b7634f1c4b2273bec0d4eb87a552de2"
+    },
+    {
+     "path": "merges.txt",
+     "size": 916646,
+     "git_blob": "354558edcdbd64ca7abd407b8be3d5d09d39d781"
+    },
+    {
+     "path": "model-00001-of-00003.safetensors",
+     "size": 4969984976,
+     "sha256": "e7bd4c8ba52177a815aee5929cb458a116a65799688d3e51402500a1cb77023c"
+    },
+    {
+     "path": "model-00002-of-00003.safetensors",
+     "size": 4981161496,
+     "sha256": "ea92aa0499a2ca02400e5d87324009e172bdbfb9809f2ac501485d8224382328"
+    },
+    {
+     "path": "model-00003-of-00003.safetensors",
+     "size": 4644917240,
+     "sha256": "d50f95e4f2ec5fc4fbce6217cbf54fd1d700928b05e5550c8ee08bf4ba948925"
+    },
+    {
+     "path": "model.safetensors.index.json",
+     "size": 29630,
+     "git_blob": "421a80b181a130ccbc579a328fb349d8792a32ce"
+    },
+    {
+     "path": "special_tokens_map.json",
+     "size": 581,
+     "git_blob": "9d133a8f4995ff315a8a3e68dbba03409d214a8e"
+    },
+    {
+     "path": "tokenizer.json",
+     "size": 7137175,
+     "git_blob": "54b3f7c465454c7878d6e955e44064d23c5a4052"
+    },
+    {
+     "path": "tokenizer_config.json",
+     "size": 4318,
+     "git_blob": "277b816675b12d22c3ca0e2b4af1b9dc88e30043"
+    },
+    {
+     "path": "vocab.json",
+     "size": 1611055,
+     "git_blob": "9c2954b1c94c5267dc84a5d0214efbc79ff8c3bd"
+    }
+   ]
+  }
+ ],
+ "not_loaded": [
+  ".gitattributes",
+  "README.md",
+  "LICENSE",
+  "olmo-base.png",
+  "olmo-instruct.png",
+  "olmo3-logo"
+ ],
+ "packages": {
+  "torch": {
+   "version": "2.9.0",
+   "uploaded": "2025-10-15T15:45:59",
+   "wheels_macos_arm64_cp311": [
+    {
+     "file": "torch-2.9.0-cp311-none-macosx_11_0_arm64.whl",
+     "sha256": "614a185e4986326d526a91210c8fc1397e76e8cfafa78baf6296a790e53a9eec",
+     "size": 74463678
+    }
+   ]
+  },
+  "transformers": {
+   "version": "4.57.1",
+   "uploaded": "2025-10-14T15:39:23",
+   "wheels_macos_arm64_cp311": [
+    {
+     "file": "transformers-4.57.1-py3-none-any.whl",
+     "sha256": "b10d05da8fa67dc41644dbbf9bc45a44cb86ae33da6f9295f5fbf5b7890bd267",
+     "size": 11990925
+    }
+   ]
+  },
+  "tokenizers": {
+   "version": "0.22.1",
+   "uploaded": "2025-09-19T09:49:11",
+   "wheels_macos_arm64_cp311": [
+    {
+     "file": "tokenizers-0.22.1-cp39-abi3-macosx_11_0_arm64.whl",
+     "sha256": "8d4e484f7b0827021ac5f9f71d4794aaef62b979ab7608593da22b1d2e3c4edc",
+     "size": 2926478
+    }
+   ]
+  },
+  "safetensors": {
+   "version": "0.6.2",
+   "uploaded": "2025-08-08T13:13:52",
+   "wheels_macos_arm64_cp311": [
+    {
+     "file": "safetensors-0.6.2-cp38-abi3-macosx_11_0_arm64.whl",
+     "sha256": "d6675cf4b39c98dbd7d940598028f3742e0375a6b4d4277e76beb0c35f4b843b",
+     "size": 432206
+    }
+   ]
+  },
+  "numpy": {
+   "version": "2.3.4",
+   "uploaded": "2025-10-15T16:15:19",
+   "wheels_macos_arm64_cp311": [
+    {
+     "file": "numpy-2.3.4-cp311-cp311-macosx_11_0_arm64.whl",
+     "sha256": "7fd09cc5d65bda1e79432859c40978010622112e9194e581e3415a3eccc7f43f",
+     "size": 14452796
+    },
+    {
+     "file": "numpy-2.3.4-cp311-cp311-macosx_14_0_arm64.whl",
+     "sha256": "1b219560ae2c1de48ead517d085bc2d05b9433f8e49d0955c82e8cd37bd7bf36",
+     "size": 5381639
+    }
+   ]
+  },
+  "huggingface-hub": {
+   "version": "0.36.0",
+   "uploaded": "2025-10-23T12:11:59",
+   "wheels_macos_arm64_cp311": [
+    {
+     "file": "huggingface_hub-0.36.0-py3-none-any.whl",
+     "sha256": "7bcc9ad17d5b3f07b57c78e79d527102d08313caa278a641993acddcb894548d",
+     "size": 566094
+    }
+   ]
+  },
+  "jinja2": {
+   "version": "3.1.6",
+   "uploaded": "2025-03-05T20:05:00",
+   "wheels": [
+    {
+     "file": "jinja2-3.1.6-py3-none-any.whl",
+     "sha256": "85ece4451f492d0c13c5dd7c13a64681a86afae63a5f347908daf103ce6d2f67",
+     "size": 134899
+    }
+   ]
+  },
+  "markupsafe": {
+   "version": "3.0.3",
+   "uploaded": "2025-09-27T18:36:19",
+   "wheels_macos_arm64_cp311": [
+    {
+     "file": "markupsafe-3.0.3-cp311-cp311-macosx_11_0_arm64.whl",
+     "sha256": "4bd4cd07944443f5a265608cc6aab442e4f74dff8088b0dfc8238647b8f6ae9a",
+     "size": 12058
+    }
+   ]
+  }
+ },
+ "python": "3.11"
+}

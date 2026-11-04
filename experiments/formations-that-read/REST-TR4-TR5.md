@@ -1,6 +1,6 @@
 # TR4 and TR5: the full design
 
-*Part of [the designs of RF's tests](DESIGN.md): the exact tables, the power check, rivals, usage and references for TR4 and TR5. AI-written, not yet reviewed by a person; nothing is frozen or run.*
+*Part of [the designs of RF's tests](DESIGN.md): the exact tables, the power check, rivals, usage and references for TR4 and TR5. AI-written, not yet reviewed by a person. Frozen in [FREEZE-2](FREEZE-2.md) (4 November 2026), with the changes its section 12 lists; nothing has run.*
 
 ## What the Lean states, and what is inferred here
 

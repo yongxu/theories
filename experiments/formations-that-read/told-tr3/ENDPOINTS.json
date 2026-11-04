@@ -1,0 +1,1149 @@
+{
+ "read": "4 November 2026, from OpenRouter's public endpoint list for each pin (https://openrouter.ai/api/v1/models/<pin>/endpoints), with no key and no model call",
+ "chosen": {
+  "google/gemini-4-argon": "google-vertex/global",
+  "qwen/qwen3.8-max-0902": "alibaba",
+  "anthropic/claude-sonnet-5.5": "anthropic"
+ },
+ "routes": {
+  "google/gemini-4-argon": {
+   "order": [
+    "google-vertex/global"
+   ],
+   "ignore": [
+    "google-vertex/global/priority"
+   ]
+  },
+  "qwen/qwen3.8-max-0902": {
+   "order": [
+    "alibaba"
+   ],
+   "ignore": [
+    "alibaba/us-east-1"
+   ]
+  },
+  "anthropic/claude-sonnet-5.5": {
+   "order": [
+    "anthropic"
+   ]
+  }
+ },
+ "routing_rule": {
+  "read": "4 November 2026, OpenRouter's public provider-routing and service-tier pages, no key, no call",
+  "pages": [
+   "https://openrouter.ai/docs/features/provider-routing",
+   "https://openrouter.ai/docs/guides/features/service-tiers.md",
+   "https://openrouter.ai/docs/api/api-reference/chat/create-a-chat-completion.md",
+   "https://openrouter.ai/docs/api-reference/get-a-generation"
+  ],
+  "as_read": [
+   "A slug has the form provider[/variant][/region][/tier]. In order, only and ignore, a slug names every eligible endpoint that shares it as a prefix, so a base slug names all of a provider's regions and variants; dropping the tier never names a tier endpoint, and a base slug does not by itself opt into a service tier.",
+   "The pages also say that priority endpoints of open-weight models already in the routing pool match their base slug; none of the three pins is open-weight, and each route ignores by name every tier endpoint below its slug, so the route names one endpoint under either reading.",
+   "allow_fallbacks false with an order serves a request only by the providers listed; require_parameters true routes only to an endpoint that takes every parameter sent.",
+   "A response reports its tier in service_tier (default, flex, priority, ultrafast, or null). The documented chat-completion schema lists no provider field; the run reads the response's top-level provider, and a response that names none stops the smoke run before any scored call.",
+   "Where a response names no provider, OpenRouter documents a generation record for it, GET /api/v1/generation?id= with the response's id, whose data.provider_name is the name of the provider that served the request and data.service_tier the tier the provider reported, or null; read on 4 November 2026 with no key. An addendum may read the provider and the tier there, one more request per call and no model call."
+  ]
+ },
+ "why": "one endpoint per pin, so that every call of a pin goes to one serving endpoint: the model's own provider's standard endpoint, not a flex or priority tier, not another host, and not one that lists implicit caching, since a cache hit or miss is a serving difference among identical requests. For Gemini, google-vertex/global, named by its full slug, its priority tier ignored by name. For Qwen, the base alibaba endpoint: its other Alibaba endpoint, alibaba/us-east-1, lists implicit caching, and the base slug alone would name both, so the route orders alibaba and ignores alibaba/us-east-1. For Sonnet, reported apart, anthropic, its one Anthropic endpoint, a base slug that would also name an Anthropic endpoint added later. A response names its provider and its tier, which the run checks on every call; its region and caching cannot be seen from a response.",
+ "lists": {
+  "google/gemini-4-argon": {
+   "id": "google/gemini-4-argon",
+   "name": "Google: Gemini 4 Argon",
+   "created": 1791907477,
+   "description": "Gemini 4 Argon is Google's flagship reasoning model, built for complex software engineering, deep mathematical and scientific problem solving, and autonomous multi-step agents. Google trained it to keep context across...",
+   "architecture": {
+    "tokenizer": "Gemini",
+    "instruct_type": null,
+    "modality": "text+image+file+audio+video->text",
+    "input_modalities": [
+     "audio",
+     "file",
+     "image",
+     "text",
+     "video"
+    ],
+    "output_modalities": [
+     "text"
+    ]
+   },
+   "endpoints": [
+    {
+     "name": "Google AI Studio | google/gemini-4-argon-20261013",
+     "model_id": "google/gemini-4-argon",
+     "model_name": "Google: Gemini 4 Argon",
+     "context_length": 1048576,
+     "pricing": {
+      "prompt": "0.000001",
+      "completion": "0.000005",
+      "image": "0.000001",
+      "audio": "0.000001",
+      "input_audio_cache": "0.00000005",
+      "web_search": "0.014",
+      "internal_reasoning": "0.000005",
+      "input_cache_read": "0.00000005",
+      "input_cache_write": "0.00000009375",
+      "discount": 0.5
+     },
+     "provider_name": "Google AI Studio",
+     "tag": "google-ai-studio/flex",
+     "service_tier": "flex",
+     "quantization": "unknown",
+     "max_completion_tokens": 943718,
+     "max_prompt_tokens": null,
+     "supported_parameters": [
+      "reasoning",
+      "include_reasoning",
+      "max_tokens",
+      "temperature",
+      "top_p",
+      "seed",
+      "response_format",
+      "tools",
+      "tool_choice",
+      "structured_outputs",
+      "reasoning_effort"
+     ],
+     "supports_tool_choice": {
+      "none": true,
+      "auto": true,
+      "required": true,
+      "function": true
+     },
+     "status": 0,
+     "uptime_last_30m": 100,
+     "uptime_last_5m": 100,
+     "uptime_last_1d": 100,
+     "supports_implicit_caching": false,
+     "native_tools": {
+      "openrouter:web_search": {
+       "type": "google_search"
+      }
+     },
+     "supports_voice_cloning": false,
+     "supports_multiple_audio_references": false,
+     "supports_image_reference": false,
+     "supports_diarization": false,
+     "latency_last_30m": null,
+     "throughput_last_30m": null
+    },
+    {
+     "name": "Google | google/gemini-4-argon-20261013",
+     "model_id": "google/gemini-4-argon",
+     "model_name": "Google: Gemini 4 Argon",
+     "context_length": 1048576,
+     "pricing": {
+      "prompt": "0.000002",
+      "completion": "0.00001",
+      "image": "0.000002",
+      "audio": "0.000002",
+      "input_audio_cache": "0.0000001",
+      "web_search": "0.014",
+      "internal_reasoning": "0.00001",
+      "input_cache_read": "0.0000001",
+      "input_cache_write": "0.0000001875",
+      "discount": 0.5
+     },
+     "provider_name": "Google",
+     "tag": "google-vertex/global",
+     "service_tier": null,
+     "quantization": "unknown",
+     "max_completion_tokens": 943718,
+     "max_prompt_tokens": null,
+     "supported_parameters": [
+      "reasoning",
+      "include_reasoning",
+      "max_tokens",
+      "temperature",
+      "top_p",
+      "seed",
+      "response_format",
+      "tools",
+      "tool_choice",
+      "stop",
+      "structured_outputs",
+      "reasoning_effort"
+     ],
+     "supports_tool_choice": {
+      "none": true,
+      "auto": true,
+      "required": true,
+      "function": true
+     },
+     "status": 0,
+     "uptime_last_30m": 100,
+     "uptime_last_5m": 100,
+     "uptime_last_1d": 98.54166666666667,
+     "supports_implicit_caching": false,
+     "native_tools": {
+      "openrouter:web_search": {
+       "type": "google_search"
+      }
+     },
+     "supports_voice_cloning": false,
+     "supports_multiple_audio_references": false,
+     "supports_image_reference": false,
+     "supports_diarization": false,
+     "latency_last_30m": null,
+     "throughput_last_30m": null
+    },
+    {
+     "name": "Google AI Studio | google/gemini-4-argon-20261013",
+     "model_id": "google/gemini-4-argon",
+     "model_name": "Google: Gemini 4 Argon",
+     "context_length": 1048576,
+     "pricing": {
+      "prompt": "0.000002",
+      "completion": "0.00001",
+      "image": "0.000002",
+      "audio": "0.000002",
+      "input_audio_cache": "0.0000001",
+      "web_search": "0.014",
+      "internal_reasoning": "0.00001",
+      "input_cache_read": "0.0000001",
+      "input_cache_write": "0.0000001875",
+      "discount": 0.5
+     },
+     "provider_name": "Google AI Studio",
+     "tag": "google-ai-studio",
+     "service_tier": null,
+     "quantization": "unknown",
+     "max_completion_tokens": 943718,
+     "max_prompt_tokens": null,
+     "supported_parameters": [
+      "reasoning",
+      "include_reasoning",
+      "max_tokens",
+      "temperature",
+      "top_p",
+      "seed",
+      "response_format",
+      "tools",
+      "tool_choice",
+      "structured_outputs",
+      "reasoning_effort"
+     ],
+     "supports_tool_choice": {
+      "none": true,
+      "auto": true,
+      "required": true,
+      "function": true
+     },
+     "status": -5,
+     "uptime_last_30m": 26.666666666666668,
+     "uptime_last_5m": 60,
+     "uptime_last_1d": 80.55555555555556,
+     "supports_implicit_caching": false,
+     "native_tools": {
+      "openrouter:web_search": {
+       "type": "google_search"
+      }
+     },
+     "supports_voice_cloning": false,
+     "supports_multiple_audio_references": false,
+     "supports_image_reference": false,
+     "supports_diarization": false,
+     "latency_last_30m": null,
+     "throughput_last_30m": null
+    },
+    {
+     "name": "Google | google/gemini-4-argon-20261013",
+     "model_id": "google/gemini-4-argon",
+     "model_name": "Google: Gemini 4 Argon",
+     "context_length": 1048576,
+     "pricing": {
+      "prompt": "0.0000022",
+      "completion": "0.000011",
+      "image": "0.0000022",
+      "audio": "0.0000022",
+      "input_audio_cache": "0.00000011",
+      "web_search": "0.014",
+      "internal_reasoning": "0.000011",
+      "input_cache_read": "0.00000011",
+      "input_cache_write": "0.0000001875",
+      "discount": 0.5
+     },
+     "provider_name": "Google",
+     "tag": "google-vertex/us",
+     "service_tier": null,
+     "quantization": "unknown",
+     "max_completion_tokens": 65536,
+     "max_prompt_tokens": null,
+     "supported_parameters": [
+      "reasoning",
+      "include_reasoning",
+      "max_tokens",
+      "temperature",
+      "top_p",
+      "seed",
+      "response_format",
+      "tools",
+      "tool_choice",
+      "stop",
+      "structured_outputs",
+      "reasoning_effort"
+     ],
+     "supports_tool_choice": {
+      "none": true,
+      "auto": true,
+      "required": true,
+      "function": true
+     },
+     "status": 0,
+     "uptime_last_30m": 100,
+     "uptime_last_5m": 100,
+     "uptime_last_1d": 95.17884914463453,
+     "supports_implicit_caching": false,
+     "native_tools": {
+      "openrouter:web_search": {
+       "type": "google_search"
+      }
+     },
+     "supports_voice_cloning": false,
+     "supports_multiple_audio_references": false,
+     "supports_image_reference": false,
+     "supports_diarization": false,
+     "latency_last_30m": null,
+     "throughput_last_30m": null
+    },
+    {
+     "name": "Google | google/gemini-4-argon-20261013",
+     "model_id": "google/gemini-4-argon",
+     "model_name": "Google: Gemini 4 Argon",
+     "context_length": 1048576,
+     "pricing": {
+      "prompt": "0.0000036",
+      "completion": "0.000018",
+      "image": "0.0000036",
+      "audio": "0.0000036",
+      "input_audio_cache": "0.00000018",
+      "web_search": "0.014",
+      "internal_reasoning": "0.000018",
+      "input_cache_read": "0.00000018",
+      "input_cache_write": "0.0000003375",
+      "discount": 0.5
+     },
+     "provider_name": "Google",
+     "tag": "google-vertex/global/priority",
+     "service_tier": "priority",
+     "quantization": "unknown",
+     "max_completion_tokens": 943718,
+     "max_prompt_tokens": null,
+     "supported_parameters": [
+      "reasoning",
+      "include_reasoning",
+      "max_tokens",
+      "temperature",
+      "top_p",
+      "seed",
+      "response_format",
+      "tools",
+      "tool_choice",
+      "stop",
+      "structured_outputs",
+      "reasoning_effort"
+     ],
+     "supports_tool_choice": {
+      "none": true,
+      "auto": true,
+      "required": true,
+      "function": true
+     },
+     "status": 0,
+     "uptime_last_30m": 100,
+     "uptime_last_5m": null,
+     "uptime_last_1d": 100,
+     "supports_implicit_caching": false,
+     "native_tools": {
+      "openrouter:web_search": {
+       "type": "google_search"
+      }
+     },
+     "supports_voice_cloning": false,
+     "supports_multiple_audio_references": false,
+     "supports_image_reference": false,
+     "supports_diarization": false,
+     "latency_last_30m": null,
+     "throughput_last_30m": null
+    },
+    {
+     "name": "Google AI Studio | google/gemini-4-argon-20261013",
+     "model_id": "google/gemini-4-argon",
+     "model_name": "Google: Gemini 4 Argon",
+     "context_length": 1048576,
+     "pricing": {
+      "prompt": "0.0000036",
+      "completion": "0.000018",
+      "image": "0.0000036",
+      "audio": "0.0000036",
+      "input_audio_cache": "0.00000018",
+      "web_search": "0.014",
+      "internal_reasoning": "0.000018",
+      "input_cache_read": "0.00000018",
+      "input_cache_write": "0.0000003375",
+      "discount": 0.5
+     },
+     "provider_name": "Google AI Studio",
+     "tag": "google-ai-studio/priority",
+     "service_tier": "priority",
+     "quantization": "unknown",
+     "max_completion_tokens": 943718,
+     "max_prompt_tokens": null,
+     "supported_parameters": [
+      "reasoning",
+      "include_reasoning",
+      "max_tokens",
+      "temperature",
+      "top_p",
+      "seed",
+      "response_format",
+      "tools",
+      "tool_choice",
+      "structured_outputs",
+      "reasoning_effort"
+     ],
+     "supports_tool_choice": {
+      "none": true,
+      "auto": true,
+      "required": true,
+      "function": true
+     },
+     "status": 0,
+     "uptime_last_30m": 100,
+     "uptime_last_5m": null,
+     "uptime_last_1d": 100,
+     "supports_implicit_caching": false,
+     "native_tools": {
+      "openrouter:web_search": {
+       "type": "google_search"
+      }
+     },
+     "supports_voice_cloning": false,
+     "supports_multiple_audio_references": false,
+     "supports_image_reference": false,
+     "supports_diarization": false,
+     "latency_last_30m": null,
+     "throughput_last_30m": null
+    }
+   ]
+  },
+  "qwen/qwen3.8-max-0902": {
+   "id": "qwen/qwen3.8-max-0902",
+   "name": "Qwen: Qwen3.8 Max (0902)",
+   "created": 1788469704,
+   "description": "Qwen3.8 Max 0902 is an updated snapshot of Qwen3.8 Max from Alibaba's Qwen team. It is a 2.4-trillion-parameter mixture-of-experts model that accepts text, image, and video input and returns text,...",
+   "architecture": {
+    "tokenizer": "Qwen",
+    "instruct_type": null,
+    "modality": "text+image+video->text",
+    "input_modalities": [
+     "text",
+     "image",
+     "video"
+    ],
+    "output_modalities": [
+     "text"
+    ]
+   },
+   "endpoints": [
+    {
+     "name": "Alibaba | qwen/qwen3.8-max-20260902",
+     "model_id": "qwen/qwen3.8-max-0902",
+     "model_name": "Qwen: Qwen3.8 Max (0902)",
+     "context_length": 1000000,
+     "pricing": {
+      "prompt": "0.000002",
+      "completion": "0.000006",
+      "input_cache_read": "0.00000025",
+      "discount": 0
+     },
+     "provider_name": "Alibaba",
+     "tag": "alibaba/us-east-1",
+     "service_tier": null,
+     "quantization": "unknown",
+     "max_completion_tokens": 131072,
+     "max_prompt_tokens": 983616,
+     "supported_parameters": [
+      "reasoning",
+      "include_reasoning",
+      "max_tokens",
+      "temperature",
+      "top_p",
+      "seed",
+      "presence_penalty",
+      "response_format",
+      "tools",
+      "tool_choice",
+      "structured_outputs",
+      "logprobs",
+      "top_logprobs",
+      "top_k",
+      "frequency_penalty",
+      "stop",
+      "reasoning_effort"
+     ],
+     "supports_tool_choice": {
+      "none": true,
+      "auto": true,
+      "required": false,
+      "function": false
+     },
+     "status": 0,
+     "uptime_last_30m": 100,
+     "uptime_last_5m": 100,
+     "uptime_last_1d": 99.79166666666667,
+     "supports_implicit_caching": true,
+     "native_tools": {},
+     "supports_voice_cloning": false,
+     "supports_multiple_audio_references": false,
+     "supports_image_reference": false,
+     "supports_diarization": false,
+     "latency_last_30m": null,
+     "throughput_last_30m": null
+    },
+    {
+     "name": "Alibaba | qwen/qwen3.8-max-20260902",
+     "model_id": "qwen/qwen3.8-max-0902",
+     "model_name": "Qwen: Qwen3.8 Max (0902)",
+     "context_length": 1000000,
+     "pricing": {
+      "prompt": "0.000002",
+      "completion": "0.000006",
+      "input_cache_read": "0.00000025",
+      "input_cache_write": "0.0000025",
+      "discount": 0
+     },
+     "provider_name": "Alibaba",
+     "tag": "alibaba",
+     "service_tier": null,
+     "quantization": "unknown",
+     "max_completion_tokens": 131072,
+     "max_prompt_tokens": 983616,
+     "supported_parameters": [
+      "reasoning",
+      "include_reasoning",
+      "max_tokens",
+      "temperature",
+      "top_p",
+      "seed",
+      "presence_penalty",
+      "response_format",
+      "tools",
+      "tool_choice",
+      "structured_outputs",
+      "logprobs",
+      "top_logprobs",
+      "top_k",
+      "frequency_penalty",
+      "stop",
+      "reasoning_effort"
+     ],
+     "supports_tool_choice": {
+      "none": true,
+      "auto": true,
+      "required": false,
+      "function": false
+     },
+     "status": 0,
+     "uptime_last_30m": 100,
+     "uptime_last_5m": 100,
+     "uptime_last_1d": 99.93050729673384,
+     "supports_implicit_caching": false,
+     "native_tools": {},
+     "supports_voice_cloning": false,
+     "supports_multiple_audio_references": false,
+     "supports_image_reference": false,
+     "supports_diarization": false,
+     "latency_last_30m": null,
+     "throughput_last_30m": null
+    }
+   ]
+  },
+  "anthropic/claude-sonnet-5.5": {
+   "id": "anthropic/claude-sonnet-5.5",
+   "name": "Anthropic: Claude Sonnet 5.5",
+   "created": 1790618686,
+   "description": "Claude Sonnet 5.5 is Anthropic's Sonnet-class model for well-scoped everyday work, succeeding Claude Sonnet 5 as a direct upgrade. It is especially strong at building features, fixing bugs, and producing...",
+   "architecture": {
+    "tokenizer": "Claude",
+    "instruct_type": null,
+    "modality": "text+image+file->text",
+    "input_modalities": [
+     "text",
+     "image",
+     "file"
+    ],
+    "output_modalities": [
+     "text"
+    ]
+   },
+   "endpoints": [
+    {
+     "name": "Google | anthropic/claude-sonnet-5.5-20260928",
+     "model_id": "anthropic/claude-sonnet-5.5",
+     "model_name": "Anthropic: Claude Sonnet 5.5",
+     "context_length": 1000000,
+     "pricing": {
+      "prompt": "0.000002",
+      "completion": "0.00001",
+      "web_search": "0.01",
+      "input_cache_read": "0.0000001",
+      "input_cache_write": "0.0000025",
+      "input_cache_write_1h": "0.000004",
+      "discount": 0
+     },
+     "provider_name": "Google",
+     "tag": "google-vertex/global",
+     "service_tier": null,
+     "quantization": "unknown",
+     "max_completion_tokens": 128000,
+     "max_prompt_tokens": null,
+     "supported_parameters": [
+      "reasoning",
+      "include_reasoning",
+      "max_tokens",
+      "response_format",
+      "tool_choice",
+      "tools",
+      "verbosity",
+      "structured_outputs",
+      "stop",
+      "reasoning_effort"
+     ],
+     "supports_tool_choice": {
+      "none": true,
+      "auto": true,
+      "required": false,
+      "function": false
+     },
+     "status": 0,
+     "uptime_last_30m": 100,
+     "uptime_last_5m": 100,
+     "uptime_last_1d": 100,
+     "supports_implicit_caching": false,
+     "native_tools": {
+      "openrouter:bash": {
+       "type": "bash_20250124"
+      }
+     },
+     "supports_voice_cloning": false,
+     "supports_multiple_audio_references": false,
+     "supports_image_reference": false,
+     "supports_diarization": false,
+     "latency_last_30m": null,
+     "throughput_last_30m": null
+    },
+    {
+     "name": "Amazon Bedrock | anthropic/claude-sonnet-5.5-20260928",
+     "model_id": "anthropic/claude-sonnet-5.5",
+     "model_name": "Anthropic: Claude Sonnet 5.5",
+     "context_length": 1000000,
+     "pricing": {
+      "prompt": "0.000002",
+      "completion": "0.00001",
+      "web_search": "0.01",
+      "input_cache_read": "0.0000001",
+      "input_cache_write": "0.0000025",
+      "input_cache_write_1h": "0.000004",
+      "discount": 0
+     },
+     "provider_name": "Amazon Bedrock",
+     "tag": "amazon-bedrock",
+     "service_tier": null,
+     "quantization": "unknown",
+     "max_completion_tokens": 128000,
+     "max_prompt_tokens": null,
+     "supported_parameters": [
+      "reasoning",
+      "include_reasoning",
+      "max_tokens",
+      "stop",
+      "tool_choice",
+      "tools",
+      "response_format",
+      "verbosity",
+      "reasoning_effort"
+     ],
+     "supports_tool_choice": {
+      "none": true,
+      "auto": true,
+      "required": false,
+      "function": false
+     },
+     "status": 0,
+     "uptime_last_30m": 100,
+     "uptime_last_5m": 100,
+     "uptime_last_1d": 100,
+     "supports_implicit_caching": false,
+     "native_tools": {
+      "openrouter:bash": {
+       "type": "bash_20250124"
+      }
+     },
+     "supports_voice_cloning": false,
+     "supports_multiple_audio_references": false,
+     "supports_image_reference": false,
+     "supports_diarization": false,
+     "latency_last_30m": null,
+     "throughput_last_30m": null
+    },
+    {
+     "name": "Azure | anthropic/claude-sonnet-5.5-20260928",
+     "model_id": "anthropic/claude-sonnet-5.5",
+     "model_name": "Anthropic: Claude Sonnet 5.5",
+     "context_length": 1000000,
+     "pricing": {
+      "prompt": "0.000002",
+      "completion": "0.00001",
+      "web_search": "0.01",
+      "input_cache_read": "0.0000001",
+      "input_cache_write": "0.0000025",
+      "input_cache_write_1h": "0.000004",
+      "discount": 0
+     },
+     "provider_name": "Azure",
+     "tag": "azure/global",
+     "service_tier": null,
+     "quantization": "unknown",
+     "max_completion_tokens": 128000,
+     "max_prompt_tokens": null,
+     "supported_parameters": [
+      "reasoning",
+      "include_reasoning",
+      "structured_outputs",
+      "max_tokens",
+      "max_completion_tokens",
+      "tools",
+      "tool_choice",
+      "response_format",
+      "verbosity",
+      "stop",
+      "reasoning_effort"
+     ],
+     "supports_tool_choice": {
+      "none": true,
+      "auto": true,
+      "required": false,
+      "function": false
+     },
+     "status": 0,
+     "uptime_last_30m": 100,
+     "uptime_last_5m": 100,
+     "uptime_last_1d": 100,
+     "supports_implicit_caching": false,
+     "native_tools": {
+      "openrouter:bash": {
+       "type": "bash_20250124"
+      }
+     },
+     "supports_voice_cloning": false,
+     "supports_multiple_audio_references": false,
+     "supports_image_reference": false,
+     "supports_diarization": false,
+     "latency_last_30m": null,
+     "throughput_last_30m": null
+    },
+    {
+     "name": "Claude Platform on AWS | anthropic/claude-sonnet-5.5-20260928",
+     "model_id": "anthropic/claude-sonnet-5.5",
+     "model_name": "Anthropic: Claude Sonnet 5.5",
+     "context_length": 1000000,
+     "pricing": {
+      "prompt": "0.000002",
+      "completion": "0.00001",
+      "web_search": "0.01",
+      "input_cache_read": "0.0000001",
+      "input_cache_write": "0.0000025",
+      "input_cache_write_1h": "0.000004",
+      "discount": 0
+     },
+     "provider_name": "Claude Platform on AWS",
+     "tag": "claude-on-aws",
+     "service_tier": null,
+     "quantization": "unknown",
+     "max_completion_tokens": 128000,
+     "max_prompt_tokens": null,
+     "supported_parameters": [
+      "reasoning",
+      "include_reasoning",
+      "max_tokens",
+      "stop",
+      "tool_choice",
+      "tools",
+      "response_format",
+      "verbosity",
+      "reasoning_effort"
+     ],
+     "supports_tool_choice": {
+      "none": true,
+      "auto": true,
+      "required": false,
+      "function": false
+     },
+     "status": 0,
+     "uptime_last_30m": 100,
+     "uptime_last_5m": 100,
+     "uptime_last_1d": 100,
+     "supports_implicit_caching": false,
+     "native_tools": {
+      "openrouter:web_search": {
+       "type": "web_search_20260209"
+      },
+      "openrouter:web_fetch": {
+       "type": "web_fetch_20260209"
+      },
+      "openrouter:bash": {
+       "type": "bash_20250124"
+      },
+      "openrouter:advisor": {
+       "type": "advisor_20260301"
+      }
+     },
+     "supports_voice_cloning": false,
+     "supports_multiple_audio_references": false,
+     "supports_image_reference": false,
+     "supports_diarization": false,
+     "latency_last_30m": null,
+     "throughput_last_30m": null
+    },
+    {
+     "name": "Anthropic | anthropic/claude-sonnet-5.5-20260928",
+     "model_id": "anthropic/claude-sonnet-5.5",
+     "model_name": "Anthropic: Claude Sonnet 5.5",
+     "context_length": 1000000,
+     "pricing": {
+      "prompt": "0.000002",
+      "completion": "0.00001",
+      "web_search": "0.01",
+      "input_cache_read": "0.0000001",
+      "input_cache_write": "0.0000025",
+      "input_cache_write_1h": "0.000004",
+      "discount": 0
+     },
+     "provider_name": "Anthropic",
+     "tag": "anthropic",
+     "service_tier": null,
+     "quantization": "unknown",
+     "max_completion_tokens": 128000,
+     "max_prompt_tokens": null,
+     "supported_parameters": [
+      "reasoning",
+      "include_reasoning",
+      "max_tokens",
+      "stop",
+      "tools",
+      "tool_choice",
+      "structured_outputs",
+      "response_format",
+      "verbosity",
+      "reasoning_effort"
+     ],
+     "supports_tool_choice": {
+      "none": true,
+      "auto": true,
+      "required": false,
+      "function": false
+     },
+     "status": 0,
+     "uptime_last_30m": 100,
+     "uptime_last_5m": 100,
+     "uptime_last_1d": 100,
+     "supports_implicit_caching": false,
+     "native_tools": {
+      "openrouter:web_search": {
+       "type": "web_search_20260209"
+      },
+      "openrouter:web_fetch": {
+       "type": "web_fetch_20260209"
+      },
+      "openrouter:bash": {
+       "type": "bash_20250124"
+      },
+      "openrouter:advisor": {
+       "type": "advisor_20260301"
+      }
+     },
+     "supports_voice_cloning": false,
+     "supports_multiple_audio_references": false,
+     "supports_image_reference": false,
+     "supports_diarization": false,
+     "latency_last_30m": null,
+     "throughput_last_30m": null
+    },
+    {
+     "name": "Amazon Bedrock | anthropic/claude-sonnet-5.5-20260928",
+     "model_id": "anthropic/claude-sonnet-5.5",
+     "model_name": "Anthropic: Claude Sonnet 5.5",
+     "context_length": 1000000,
+     "pricing": {
+      "prompt": "0.0000022",
+      "completion": "0.000011",
+      "web_search": "0.01",
+      "input_cache_read": "0.00000011",
+      "input_cache_write": "0.00000275",
+      "input_cache_write_1h": "0.0000044",
+      "discount": 0
+     },
+     "provider_name": "Amazon Bedrock",
+     "tag": "amazon-bedrock/eu-west-1",
+     "service_tier": null,
+     "quantization": "unknown",
+     "max_completion_tokens": 128000,
+     "max_prompt_tokens": null,
+     "supported_parameters": [
+      "reasoning",
+      "include_reasoning",
+      "max_tokens",
+      "stop",
+      "tool_choice",
+      "tools",
+      "response_format",
+      "verbosity",
+      "reasoning_effort"
+     ],
+     "supports_tool_choice": {
+      "none": true,
+      "auto": true,
+      "required": false,
+      "function": false
+     },
+     "status": 0,
+     "uptime_last_30m": null,
+     "uptime_last_5m": null,
+     "uptime_last_1d": 100,
+     "supports_implicit_caching": false,
+     "native_tools": {
+      "openrouter:bash": {
+       "type": "bash_20250124"
+      }
+     },
+     "supports_voice_cloning": false,
+     "supports_multiple_audio_references": false,
+     "supports_image_reference": false,
+     "supports_diarization": false,
+     "latency_last_30m": null,
+     "throughput_last_30m": null
+    },
+    {
+     "name": "Amazon Bedrock | anthropic/claude-sonnet-5.5-20260928",
+     "model_id": "anthropic/claude-sonnet-5.5",
+     "model_name": "Anthropic: Claude Sonnet 5.5",
+     "context_length": 1000000,
+     "pricing": {
+      "prompt": "0.0000022",
+      "completion": "0.000011",
+      "web_search": "0.01",
+      "input_cache_read": "0.00000011",
+      "input_cache_write": "0.00000275",
+      "input_cache_write_1h": "0.0000044",
+      "discount": 0
+     },
+     "provider_name": "Amazon Bedrock",
+     "tag": "amazon-bedrock/us-east-1",
+     "service_tier": null,
+     "quantization": "unknown",
+     "max_completion_tokens": 128000,
+     "max_prompt_tokens": null,
+     "supported_parameters": [
+      "reasoning",
+      "include_reasoning",
+      "max_tokens",
+      "stop",
+      "tool_choice",
+      "tools",
+      "response_format",
+      "verbosity",
+      "reasoning_effort"
+     ],
+     "supports_tool_choice": {
+      "none": true,
+      "auto": true,
+      "required": false,
+      "function": false
+     },
+     "status": 0,
+     "uptime_last_30m": 100,
+     "uptime_last_5m": 100,
+     "uptime_last_1d": 100,
+     "supports_implicit_caching": false,
+     "native_tools": {
+      "openrouter:bash": {
+       "type": "bash_20250124"
+      }
+     },
+     "supports_voice_cloning": false,
+     "supports_multiple_audio_references": false,
+     "supports_image_reference": false,
+     "supports_diarization": false,
+     "latency_last_30m": null,
+     "throughput_last_30m": null
+    },
+    {
+     "name": "Google | anthropic/claude-sonnet-5.5-20260928",
+     "model_id": "anthropic/claude-sonnet-5.5",
+     "model_name": "Anthropic: Claude Sonnet 5.5",
+     "context_length": 1000000,
+     "pricing": {
+      "prompt": "0.0000022",
+      "completion": "0.000011",
+      "web_search": "0.01",
+      "input_cache_read": "0.00000011",
+      "input_cache_write": "0.00000275",
+      "input_cache_write_1h": "0.0000044",
+      "discount": 0
+     },
+     "provider_name": "Google",
+     "tag": "google-vertex/us",
+     "service_tier": null,
+     "quantization": "unknown",
+     "max_completion_tokens": 128000,
+     "max_prompt_tokens": null,
+     "supported_parameters": [
+      "reasoning",
+      "include_reasoning",
+      "max_tokens",
+      "response_format",
+      "tool_choice",
+      "tools",
+      "verbosity",
+      "structured_outputs",
+      "stop",
+      "reasoning_effort"
+     ],
+     "supports_tool_choice": {
+      "none": true,
+      "auto": true,
+      "required": false,
+      "function": false
+     },
+     "status": 0,
+     "uptime_last_30m": 100,
+     "uptime_last_5m": 100,
+     "uptime_last_1d": 100,
+     "supports_implicit_caching": false,
+     "native_tools": {
+      "openrouter:bash": {
+       "type": "bash_20250124"
+      }
+     },
+     "supports_voice_cloning": false,
+     "supports_multiple_audio_references": false,
+     "supports_image_reference": false,
+     "supports_diarization": false,
+     "latency_last_30m": null,
+     "throughput_last_30m": null
+    },
+    {
+     "name": "Azure | anthropic/claude-sonnet-5.5-20260928",
+     "model_id": "anthropic/claude-sonnet-5.5",
+     "model_name": "Anthropic: Claude Sonnet 5.5",
+     "context_length": 1000000,
+     "pricing": {
+      "prompt": "0.0000022",
+      "completion": "0.000011",
+      "web_search": "0.01",
+      "input_cache_read": "0.00000011",
+      "input_cache_write": "0.00000275",
+      "input_cache_write_1h": "0.0000044",
+      "discount": 0
+     },
+     "provider_name": "Azure",
+     "tag": "azure/us",
+     "service_tier": null,
+     "quantization": "unknown",
+     "max_completion_tokens": 128000,
+     "max_prompt_tokens": null,
+     "supported_parameters": [
+      "reasoning",
+      "include_reasoning",
+      "structured_outputs",
+      "max_tokens",
+      "max_completion_tokens",
+      "tools",
+      "tool_choice",
+      "response_format",
+      "verbosity",
+      "stop",
+      "reasoning_effort"
+     ],
+     "supports_tool_choice": {
+      "none": true,
+      "auto": true,
+      "required": false,
+      "function": false
+     },
+     "status": 0,
+     "uptime_last_30m": null,
+     "uptime_last_5m": null,
+     "uptime_last_1d": 100,
+     "supports_implicit_caching": false,
+     "native_tools": {
+      "openrouter:bash": {
+       "type": "bash_20250124"
+      }
+     },
+     "supports_voice_cloning": false,
+     "supports_multiple_audio_references": false,
+     "supports_image_reference": false,
+     "supports_diarization": false,
+     "latency_last_30m": null,
+     "throughput_last_30m": null
+    },
+    {
+     "name": "Google | anthropic/claude-sonnet-5.5-20260928",
+     "model_id": "anthropic/claude-sonnet-5.5",
+     "model_name": "Anthropic: Claude Sonnet 5.5",
+     "context_length": 1000000,
+     "pricing": {
+      "prompt": "0.0000022",
+      "completion": "0.000011",
+      "web_search": "0.01",
+      "input_cache_read": "0.00000011",
+      "input_cache_write": "0.00000275",
+      "input_cache_write_1h": "0.0000044",
+      "discount": 0
+     },
+     "provider_name": "Google",
+     "tag": "google-vertex/europe",
+     "service_tier": null,
+     "quantization": "unknown",
+     "max_completion_tokens": 128000,
+     "max_prompt_tokens": null,
+     "supported_parameters": [
+      "reasoning",
+      "include_reasoning",
+      "max_tokens",
+      "response_format",
+      "tool_choice",
+      "tools",
+      "verbosity",
+      "structured_outputs",
+      "stop",
+      "reasoning_effort"
+     ],
+     "supports_tool_choice": {
+      "none": true,
+      "auto": true,
+      "required": false,
+      "function": false
+     },
+     "status": 0,
+     "uptime_last_30m": 100,
+     "uptime_last_5m": 100,
+     "uptime_last_1d": 100,
+     "supports_implicit_caching": false,
+     "native_tools": {
+      "openrouter:bash": {
+       "type": "bash_20250124"
+      }
+     },
+     "supports_voice_cloning": false,
+     "supports_multiple_audio_references": false,
+     "supports_image_reference": false,
+     "supports_diarization": false,
+     "latency_last_30m": null,
+     "throughput_last_30m": null
+    }
+   ]
+  }
+ }
+}
