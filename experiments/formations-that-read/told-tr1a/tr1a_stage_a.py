@@ -221,7 +221,7 @@ def strict_chance(p):
 def read(model):
     """A trained chooser read as a pin is, on its exact choice probabilities rather than on draws: a
     presentation's pick is strict where at least Q of R_CALLS draws from the chooser would name it with
-    chance at least one half (so only an option drawn with chance above 0.85 can be strict, and an
+    chance at least one half (so only an option drawn with chance above about 0.82 can be strict, and an
     exact tie never is), its answers then R_CALLS times that option, else R_CALLS answers naming none;
     then FREEZE-5's condition_verdict on them. Returns the verdict and each presentation's probabilities.
     Draws would make a near tie strict either way by chance (FREEZE-10, section 12), which no rule here

@@ -470,11 +470,11 @@
   },
   {
    "check": "a smoke run whose every check answer is prose",
-   "result": "stands {'C': None, 'T': None, 'X': 'qwen__qwen3.8-max-0902-20261104T202609Z', 'U': None, 'I': None}"
+   "result": "stands {'C': None, 'T': None, 'X': 'qwen__qwen3.8-max-0902-20261104T202957Z', 'U': None, 'I': None}"
   },
   {
    "check": "run asking for X after a stop that stands",
-   "result": "qwen/qwen3.8-max-0902's condition X was stopped by the pin's own answers at its smoke run (qwen__qwen3.8-max-0902-20261104T202609Z), a stop that stands (FREEZE-10.md, section 8); no call was made"
+   "result": "qwen/qwen3.8-max-0902's condition X was stopped by the pin's own answers at its smoke run (qwen__qwen3.8-max-0902-20261104T202957Z), a stop that stands (FREEZE-10.md, section 8); no call was made"
   },
   {
    "check": "the second pin read with X stopped",
@@ -507,8 +507,8 @@
    "P1 read": 20,
    "mean share, on unjoined pairs, of the content ranked higher": 0.696
   },
-  "seconds per set-input epoch, measured on a dry seed (200 epochs, no reading)": 0.000197,
-  "Stage A's run, estimated seconds of one core": 71.0,
+  "seconds per set-input epoch, measured on a dry seed (200 epochs, no reading)": 0.000201,
+  "Stage A's run, estimated seconds of one core": 72.2,
   "the rule on a hand-set cyclic comparator, a hand-set item-score, and an item-score with a near tie": [
    "contradicted",
    "passed",
@@ -574,7 +574,7 @@
    }
   }
  },
- "seconds": 18.5,
+ "seconds": 13.9,
  "code_hashes": {
   "experiments/formations-that-read/tr1.py": "dd75707c1a44a300e419b4bd0dc7cbff9c83e1a71f874cf8e68d3a42e28ee17f",
   "experiments/formations-that-read/tr1.json": "d74cd24f43d08626fe3ba3d159823884ddc4ec20a873e2bcef0365bbd39d51fe",
@@ -592,8 +592,8 @@
   "experiments/formations-that-read/told-tr1/tr1_run.py": "bb959cf9c2180358a0e6decf8e219ef892cace1e83baf4fbdb90ff4c17ad39df",
   "experiments/formations-that-read/told-tr1a/tr1a_design.py": "af1dcdb1c76549aee84d8019f2034211c8dd0d5a3791e4c6dd2f653c38a2e9e4",
   "experiments/formations-that-read/told-tr1a/tr1a_rule.py": "1dfaeabe31af3191b5859c701c81082c117798905f7ce4aee7c29c66d3a6936d",
-  "experiments/formations-that-read/told-tr1a/tr1a_run.py": "29594e710453e7ad05b6bd06f392cd3151ed7b41c2dbc3a08d4f96ac6675daf5",
-  "experiments/formations-that-read/told-tr1a/tr1a_stage_a.py": "7d2e5d2c1e9346b84b07700a139121463e07db69a13ec9ef68b785e1a3255c12",
+  "experiments/formations-that-read/told-tr1a/tr1a_run.py": "37268591baafab28751c6d908b9d6cf1d3924ef79416247a565e5732019ca9f4",
+  "experiments/formations-that-read/told-tr1a/tr1a_stage_a.py": "a028afe84f365ad8fbc2807463182a7447e52cfa0f2ff1ef810e0f5dd8a0ae3b",
   "experiments/formations-that-read/told-tr1a/tr1a_dry_run.py": "eaacbb7809e251fc5cf9d982931f0ba217fa2061d474b2767d9c2eccdf287e0d",
   "experiments/formations-that-read/told-tr1a/write_frozen.py": "4bf9a48d047748ed6dbd25c8ff14084c42e637393f22771c33c901da56ef9220"
  },

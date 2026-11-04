@@ -1,6 +1,6 @@
 # TR1A's freeze, read in rounds
 
-*Board item TR1A, 5 November 2026. AI-written (a Claude Code session): the record of the readers' rounds on [FREEZE-10](../FREEZE-10.md) and its code, as the coordinator set them. Round 1 is a full read by a reader other than the author; then the same reader reads each diff. There are at most five rounds, stopping at the first with no finding of high or medium severity. About nine to twelve minutes to read.*
+*Board item TR1A, 5 November 2026. AI-written (a Claude Code session): the record of the readers' rounds on [FREEZE-10](../FREEZE-10.md) and its code, as the coordinator set them. Round 1 is a full read by a reader other than the author; then the same reader reads each diff. There are at most five rounds, stopping at the first with no finding of high or medium severity. About eleven to fourteen minutes to read.*
 
 Each reader called no model, used no key and edited nothing in the repository. Anything a reader ran was run in a scratch copy.
 
@@ -46,3 +46,29 @@ The reader also confirmed:
 - every figure the text cited.
 
 Its runs of the item-score class on labels carrying no order, read from draws, previewed that cell's tendency under the old reading. FREEZE-10 §9 says so.
+
+## Round 2: the same reader, on the diff
+
+**What the reader read.** The diff from round 1's commit, the rename included, and this file in full.
+
+**What the reader ran, in scratch.** The dry run, which reproduced the committed result, apart from its timings and its smoke folders' timestamps.
+
+It found every fix doing what round 1's table says, and no new fault in any of these:
+- the void rule and the power;
+- `cycle_places`;
+- the class rule;
+- X's prompt and its reading;
+- Stage A's exact reading, with P1 and the void floor reading only strict picks;
+- the rounds check;
+- FREEZE-5's dated note;
+- FREEZE-10's text, against the code and the dry run.
+
+It found no finding of high or medium severity, so the rounds stopped here, at two of the five allowed.
+
+| Id | Severity | Finding | How it was taken |
+|---|---|---|---|
+| B1 | low | The strictness threshold was stated as "above 0.85". Solving P(at least 8 of 9) = ½ gives about 0.820. | "Above about 0.82", in FREEZE-10 §9 and `tr1a_stage_a.read`. |
+| B2 | very low | `verdicts` printed a class of None where U and I are read but V1 or the premise is not. | It prints the class only when there is one. |
+| B3 | very low | FREEZE-5's note said the suffix argument was "checked". The reader argued it by reading the code, not by an exhaustive test. | The note says so. |
+
+**What kept the rounds going:** round 1's two high findings (A1, A2) and its five medium ones (A3 to A7). Each was a rule that could read a sampling fluke, a broken check or a premise as the chooser's own. Round 2 found none.

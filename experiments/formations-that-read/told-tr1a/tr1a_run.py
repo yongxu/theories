@@ -384,7 +384,7 @@ def verdicts(folder, check=None, allow_dry=False):
     write_whole(Path(folder) / "verdicts.json", json.dumps(res, indent=1) + "\n")
     print(f"TR1A {family} [{role}]: {reading['bridge']}" + (f" ({reading['why']})" if reading["why"] else "")
           + (f"; {reading['said']}" if reading["said"] else ""))
-    if desc:
+    if desc and desc["class (descriptive)"]:
         print(f"  class (descriptive): {desc['class (descriptive)']}")
     return res
 
