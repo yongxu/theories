@@ -1,6 +1,6 @@
 # TR4 and TR5, frozen
 
-*RFZ's second freeze. Board item TR45, 4 November 2026. AI-written (a Claude Code session), not yet reviewed by a person. Frozen before any call to a model: no model has seen any of these prompts. The run is Ren's. About 30 minutes to read; the first part takes five.*
+*The folder's second freeze, board item TR45's first, 4 November 2026. AI-written (a Claude Code session), not yet reviewed by a person. Frozen before any call to a model: no model has been called with any of these prompts. The run is Ren's. About 50 to 65 minutes to read, at 100 to 130 words a minute; the first part takes four to six.*
 
 ## What is frozen, and what it can refute
 
@@ -282,3 +282,5 @@ Whatever the run shows is kept, and this paragraph is not revised after it.
 Written by the Claude Code session that holds board item TR45, on RF's designs ([DESIGN](DESIGN.md), [REST-TR4-TR5](REST-TR4-TR5.md)) and the split of RFZ's owner, who assigned TR4 and TR5 here and TR2's design freeze after them. Readers other than its author read the frozen files in three rounds before the freeze landed, until nothing of high or medium severity remained: one reader in the first, three in the second with three verifiers, one in the third. Their findings, and how each was taken, are in [`fresh/REVIEW-FREEZE.md`](fresh/REVIEW-FREEZE.md).
 
 **How this file is frozen:** by the commit that adds `fresh/FROZEN.sha256`, its text there being the frozen one. It is not hashed, so that a link can be repaired without touching the code's hashes. A later edit may only repair a link or a typo, is listed in a dated note at the end of this file, and changes no rule, threshold or reading. `fresh/FROZEN.sha256` is committed last, after the render and every check pass on the merged tree.
+
+**Corrected after the freeze, 4 November 2026.** The header line said "RFZ's second freeze", "no model has seen any of these prompts" and "About 30 minutes to read; the first part takes five". This freeze is board item TR45's, the folder's second; models wrote and read the prompts, though none has been called with them; and the time is the repository's measure (6,385 words, 49 to 64 minutes at 100 to 130 words a minute; the first part 545, four to six). Section 15 allows a later edit only for a link or a typo; these were false statements to a reader, so they are corrected here too. Nothing else changed: no rule, threshold, reading or frozen file.
