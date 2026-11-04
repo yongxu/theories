@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F04",
-  "reviewed_at_utc": "2026-10-29T19:32:28+00:00",
+  "reviewed_at_utc": "2026-11-04T20:04:50+00:00",
   "statement": {
     "en": "From related starts, formations whose steps keep a relation under which the values sensed and the acts are one sense and act alike; in a witness an unresolved model and a reversed ranking so act alike, and starting the first with the true candidate alone changes its course.",
     "zh": "自相联之起点，诸步守一关系、其下所感之值与行皆同之形成，所感所行皆同；于一例，未决之模型与相反之排序如此同行，而以真候选独起前者则变其历程。"
@@ -92,8 +92,8 @@
     "zh": "纯核，公理报告皆空：model_or_order 为 observed_alike 之一例，其关系持起点与止处；诸止为 Loop.rests_of_unrefuted 之例。"
   },
   "next_delta": {
-    "en": "The reading formation's learning beyond filtering by what it is shown, and a holding formation planning over several steps (after RF-M.3's carrier); an optional informing variant within the plan's TR1, frozen,, whose one verdict is an order across frames; which of a model and an order holds is described, not tested; review by a person.",
-    "zh": "读之形成依所示而滤以外之学，与持之形成多步之谋（RF-M.3 之载体之后）；计划之 TR1 内可选之告之变体，冻结之，其唯一判定为跨框之一序；模型与序孰成，述而不验；人之审查。"
+    "en": "The reading formation's learning beyond filtering by what it is shown, and a holding formation planning over several steps (after RF-M.3's carrier); a run of TR1's frozen informing variant (TR1A), whose one verdict is an order across frames; which of a model and an order holds is described, not tested; review by a person.",
+    "zh": "读之形成依所示而滤以外之学，与持之形成多步之谋（RF-M.3 之载体之后）；TR1 之告之变体既冻结而运行之（TR1A），其唯一判定为跨框之一序；模型与序孰成，述而不验；人之审查。"
   },
   "correspondence": {
     "en": "One observed course can leave an unresolved model and a reversed ranking indistinguishable: an illustration of the ambiguity between beliefs and preferences in inferring what a formation values from what it does (Armstrong and Mindermann 2018, for planner and reward; Reddy, Dragan and Levine 2018, for beliefs about dynamics). AI reading: a training, an overseer or a helper reading the acts cannot tell a formation held by what its model does not separate from one held by how it ranks; starting the first with the true candidate changes its course and leaves the second's, so whether informing helps depends on which holds, a reason for assistance to read more than acts. With what-choices-show-of-an-order: both rankings accord with the occasion, and the comparison beyond the shown reach is free. These are readings, not containments.",
@@ -221,6 +221,10 @@
     {
       "en": "31 October 2026, board item RF, the tests' designs (study section 476): the next step names its test as designed, TR1 in experiments/formations-that-read, which can refute at most the correspondence that the strict picks accord with one order across frames, which of a model and an order holds being described only, never the law; no statement or declaration changed. PLAN.md re-pointed: since this record's reviewed hash the plan changed only where the tests' readers found it misstating the Lean (§3, §4, §8, §11, §12) and in §10, the tests; read against this record before re-pointing, nothing it says changed.",
       "zh": "2026年10月31日，工作板条目 RF，诸检验之设计（研究第 476 节）：下一步所名之检验即 experiments/formations-that-read 之 TR1，至多能驳严择合跨框之一序之对应，模型与序孰成唯述之，不驳此律；无一陈述或声明改变。计划 PLAN.md 重新指向：自本记录所审哈希以来，计划只于检验之读者见其误述 Lean 之处（§3、§4、§8、§11、§12）及 §10 诸检验而变；重新指向前已对本记录读之，其所言无一改变。"
+    },
+    {
+      "en": "5 November 2026, board item TR1A: TR1's informing variant frozen before any call to a model (experiments/formations-that-read/FREEZE-10.md), on freeze 1's pins: a two-option game built to this record's witness, uninformed and informed courses of ten rounds, stated choices between the amounts, and a manipulation check; its one verdict RF1's across the frames, read only where the check passes; which of a model and an order holds described, never tested; not run. The law is unchanged; next_delta's step is now the frozen variant's run, which waits on Ren's yes.",
+      "zh": "2026年11月5日，看板项 TR1A：TR1 之告之变体于任一模型调用之前冻结（experiments/formations-that-read/FREEZE-10.md），用冻结一所钉之模型：依此记录之见证所造之二选之戏，未告与既告之十轮历程，数额间之陈述之择，与操纵之验；其唯一判定为 RF1 跨诸框者，唯于验通过处读之；模型与序孰成，述而不验；未运行。律不变；next_delta 之步今为冻结变体之运行，待 Ren 之可。"
     }
   ]
 }

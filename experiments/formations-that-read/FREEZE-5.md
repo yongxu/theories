@@ -281,3 +281,11 @@ A later edit of this file is allowed only for a link or a typo, or as a dated no
 ## 15. The hash file
 
 `told-tr1/write_frozen.py REPO` writes `told-tr1/FROZEN.sha256`, the base link of TR1's chain: the sha-256 of every file the first part lists, paths repository-relative, sorted. It refuses unless the dry run passed and recorded the files' hashes now, and unless each freeze 1 file has freeze 1's own hash. The hash file is committed once, last, on the merged tree, after the checks pass.
+
+## 16. Dated notes
+
+**A history report that cannot report, 5 November 2026** (at TR1A's freeze, raised by its first reader). A note, not an edit: no sentence above changes, and no code.
+- **What is wrong.** Sections 6 and 7 say the reading reports any H record read whose history shows an answer other than the one read (`histories_not_the_answers_read`). Section 6 adds that in the dry run a course killed and made again shows none. In fact the report skips every record. `tr1_run.histories_apart` keeps a record only where it is the very object `verdicts.load` read, and the two come from separate readings of the log, so none is. It reads empty whatever the log holds, and the dry run's "none" is no evidence.
+- **What still stands.** The argument of section 6: calls made again are a suffix of the log, in the plan's order at parallel 1, so a later step never reads a record other than the one read for its earlier step. TR1A's first reader argued it by reading freeze 1's `resume`, `mend` and `bracketed`, not by an exhaustive test.
+- **Why there is no mend here.** An addendum may change only freeze 1's client and this freeze's dry run.
+- **What a reader of a TR1 folder can do.** Make the comparison by hand. A record read is its id's latest in the log; for each such H record, compare the history its rebuild shows with the answers read for its earlier steps. TR1A's reading makes this comparison by position ([FREEZE-10 §6](FREEZE-10.md#6-the-run)).

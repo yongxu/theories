@@ -61,7 +61,7 @@ Canonical source: [ShownOrder.lean](../../../../experiments/integrated-correctio
 <a id="next--下一步"></a>
 ## Next
 
-A realizable class: a training installing either order of a search; a finite mechanism of prediction, selection, revision and intervention on which inner alignment and assistance are stated (RF round 2); a run of the frozen test of the correspondence, that a chooser picks by strict dominance under one strict order (TR1); review by a person.
+A realizable class: a training installing either order of a search; a finite mechanism of prediction, selection, revision and intervention on which inner alignment and assistance are stated (RF round 2); a run of the frozen test of the correspondence, that a chooser picks by strict dominance under one strict order (TR1), and of trained choosers read by its rule (TR1A); review by a person.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -105,7 +105,8 @@ Aliases: `what choices show`, `所择所示`, `the shown reach`, `所示之及`,
 - 30 October 2026, board item RF, RF-M.2 (study section 466): related to what-holding-for-a-reading-is-worth; no statement, next step or declaration changed.
 - 31 October 2026, board item RF, the tests' designs (study section 476): the next step names its test as designed, TR1 in experiments/formations-that-read, which can refute at most the correspondence that a chooser picks by strict dominance under one strict order, never the law; no statement or declaration changed. PLAN.md re-pointed: since this record's reviewed hash the plan changed only where the tests' readers found it misstating the Lean (§3, §4, §8, §11, §12) and in §10, the tests; read against this record before re-pointing, nothing it says changed.
 - 4 November 2026, board item TR1: the test TR1 frozen before any call to a model (experiments/formations-that-read/FREEZE-5.md), on freeze 1's pins: five things that could happen in 70 presentations, nine calls each, its verdict a cycle among the stable picks, read only where a control on amounts passes, with a forced condition and one showing each course's history beside it; not run. The law is unchanged; next_delta's step is now the frozen test's run, which waits on Ren's yes.
+- 5 November 2026, board item TR1A: TR1's Stage A frozen before any training (experiments/formations-that-read/FREEZE-10.md): an item-score chooser, a conjunctive pairwise comparator and a set-input network, trained on the met menus under a hidden order whose met pairs are a chain, with labels carrying no order as the negative control, each read on all 70 presentations by TR1's frozen rule; with TR1's informing variant, whose one verdict is this law's across frames; not run. The law is unchanged; next_delta adds Stage A's run, which waits on Ren's yes.
 
 </details>
 
-Documentary review UTC: `2026-11-04T12:34:42+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-04T20:05:01+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
