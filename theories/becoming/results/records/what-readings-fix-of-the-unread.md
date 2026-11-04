@@ -51,7 +51,7 @@ Canonical source: [Unread.lean](../../../../experiments/integrated-correction/ge
 <a id="next--下一步"></a>
 ## Next
 
-A frozen measurement of the chain's correspondence on trained models (the plan's TR2): cues varied apart from content and the schedule apart from the cue, with identical-input arms; it can refute a stated lumping or an implementation, never the law; review by a person.
+A run of the frozen measurement of the chain's correspondence on four trained checkpoints (TR2): cues varied apart from content and the schedule apart from the cue, with identical-input arms; it can refute a stated lumping or an implementation, never the law; review by a person.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -93,6 +93,7 @@ Aliases: `what readings fix of the unread`, `读处所定于未读处者`, `a tw
 - 29 October 2026: added (RF round 1), what readings fix of the unread: the twin where the formation can tell, a one-occasion example fixed exactly where ¬¬P, the chain of acts, states and couplings with its converses failing, and the cue witnesses; after a review of the plan, a review of the Lean and a cold read of the texts; study section 446.
 - 30 October 2026, board item RF, RF7 (study section 463): related to when-complying-when-read-is-best; the next step drops disclosure or concealment in two stages, whose two-stage comparison with the continuation value is now stated there, disclosure and concealment readings of it; the second item of what it does not show points to it; the correspondence says two laws reading through one lumping can agree on every reading and differ unread only where the lumping tells the occasion from every read one, reads with deceptive alignment that such a law acting alike on every reading acts otherwise unread only there, says differing rates, as in alignment faking, are not so bounded, no longer calls telling the occasion apart a necessary condition of what deceptive alignment and alignment faking describe, and adds that a law drawing afresh can act otherwise unread without telling read from unread (Hubinger and others' §4.5); no statement or declaration changed.
 - 31 October 2026, board item RF, the tests' designs (study section 476): the next step names its test as designed, TR2 in experiments/formations-that-read, which can refute at most a stated lumping or an implementation, never the law; no statement or declaration changed. PLAN.md re-pointed: since this record's reviewed hash the plan changed only where the tests' readers found it misstating the Lean (§3, §4, §8, §11, §12) and in §10, the tests; read against this record before re-pointing, nothing it says changed.
+- 4 November 2026, board item TR45: TR2's Stage B frozen before any model was downloaded or run (experiments/formations-that-read/FREEZE-7.md), on Qwen3-8B and Olmo-3 7B, base and tuned, each named by revision and file hash; the stated lumping is the token ids, with batch size one and no cache, and, for a sampled act, the content's shared draw; not run. The law is unchanged; next_delta's step is now the frozen measurement's run, which waits on Ren's yes.
 
 </details>
 
