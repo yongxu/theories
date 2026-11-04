@@ -41,7 +41,9 @@ class ScopedDriftTests(unittest.TestCase):
         git('add', '.')
         git('commit', '-qm', 'reviewed')
         self.reviewed = registry.digest(self.root / self.path)
-        self.patches = [patch.object(registry, 'ROOT', self.root), patch.object(registry, 'VERSION_CACHE', self.cache)]
+        self.comparisons = self.root / 'comparisons'
+        self.patches = [patch.object(registry, 'ROOT', self.root), patch.object(registry, 'VERSION_CACHE', self.cache),
+                        patch.object(registry, 'DRIFT_CACHE', self.comparisons)]
         for p in self.patches:
             p.start()
         registry._versions.clear()
@@ -98,6 +100,33 @@ class ScopedDriftTests(unittest.TestCase):
         self.assertEqual(registry.scoped_drift({'id': 'one'}, 'Proof.lean', self.reviewed, self.root / self.path),
                          ['(not Markdown: exact bytes required)'])
 
+    def test_cached_comparison_gives_the_same_result(self):
+        changed = STUDY.replace('Line about [two]', 'Rewritten line about [two]').replace('Intro.', 'Intro, changed.')
+        cold = registry.changed_lines(self.path, self.reviewed, changed)
+        self.assertEqual(len(list(self.comparisons.rglob('*.json'))), 1)
+        registry._comparisons.clear()
+        with patch('difflib.SequenceMatcher.get_opcodes', side_effect=AssertionError('compared again')):
+            self.assertEqual(registry.changed_lines(self.path, self.reviewed, changed), cold)
+            self.assertEqual(self.drift('two', changed), ['## 2. Second', '(before the first heading)'])
+
+    def test_unreadable_or_unfitting_cache_entry_is_compared_again(self):
+        changed = STUDY.replace('Other line.', 'Other line, changed.')
+        expected = self.drift('elsewhere', changed)
+        entry, = self.comparisons.rglob('*.json')
+        for broken in ('[["delete", 2, 3', '{}', '[["delete", 0, 99, 0, 0]]', '[["delete", 1.0, 2, 1, 1]]', '[["insert", 1, 2, 1, 1]]'):
+            with self.subTest(broken=broken):
+                entry.write_text(broken)
+                registry._comparisons.clear()
+                self.assertEqual(self.drift('elsewhere', changed), expected)
+                self.assertNotEqual(entry.read_text(), broken)
+
+    def test_unwritable_cache_is_ignored(self):
+        changed = STUDY.replace('Line about [two]', 'Rewritten line about [two]')
+        expected = self.drift('two', changed)
+        registry._comparisons.clear()
+        with patch.object(registry, 'DRIFT_CACHE', self.root / self.path / 'under-a-file'):
+            self.assertEqual(self.drift('two', changed), expected)
+
 
 class SourcesTests(unittest.TestCase):
     def test_scan_agrees_with_declaration_in_source(self):
@@ -126,6 +155,16 @@ class ScrubTests(unittest.TestCase):
         for source, expected in [('"a\\"b" x', '       x'), ('/- /- -/ -/ y', '            y'), ('-- c\nz', '    \nz'), ('"\\\n"', '  \n '), ('/- unclosed', '           '), ('"unclosed', '         '), ('a"\\', 'a  '), ('x--', 'x  '), ('/-', '  '), ('"\\', '  '), ('theorem t : "s" = "s" := rfl -- done\n/-! doc /- nested -/ -/\ndef x := 1', 'theorem t :     =     := rfl        \n                       \ndef x := 1')]:
             with self.subTest(source=source):
                 self.assertEqual(scrub(source), expected)
+
+    def test_completion_strips_comments_as_before(self):
+        """Expected outputs fixed from the character-by-character scan `_strip_comments` replaced."""
+        from tools.research.completion import _strip_comments
+        for source, expected in [('theorem t : "--" = x -- done\nz', 'theorem t : "--" = x        \nz'), ('"a\\"b -- c" d', '"a\\"b -- c" d'),
+                                 ('a\'"b -- c\nd', 'a\'"b     \nd'), ('/- /- -/ -/ y', '            y'), ('/--/x', '    x'),
+                                 ('/- "-/" -/ z', '      " -/ z'), ('/-! doc\n  more -/\ndef x', '       \n         \ndef x'),
+                                 ('/- unclosed\nz', '           \n '), ('"unclosed -- x', '"unclosed -- x'), ('x-', 'x-'), ('', '')]:
+            with self.subTest(source=source):
+                self.assertEqual(_strip_comments(source), expected)
 
 
 if __name__ == '__main__':

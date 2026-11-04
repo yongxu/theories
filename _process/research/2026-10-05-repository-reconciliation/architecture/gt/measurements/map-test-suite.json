@@ -1,0 +1,681 @@
+{
+ "tests": [
+  {
+   "file": "tools/research/tests/test_architecture.py",
+   "count": 16,
+   "kind": "mixed",
+   "modules": [
+    "registry",
+    "navigation",
+    "research (imports every tool module, research.py:19)",
+    "lean_catalogue",
+    "paths",
+    "reading_catalogue"
+   ],
+   "live_paths": [
+    "theories/becoming/results/records/*.json",
+    "_process/research-config.json",
+    "theories/becoming/results/data/law-families.json",
+    "theories/becoming/results/data/shared-laws.json",
+    "every file the records reference, and their receipts (through validate)"
+   ],
+   "notes": "13 tool tests, 3 live. @90 (test_architecture.py:90-95) runs validate on all live records with records[0] mutated. Live content can fail it only by crashing validate, and check runs the same validate (research.py:259-260), so check already covers it. @97 (:97-102) and @104 (:104-111) need a live record with dependencies (:99, :106), which check does not require. @49 (:49-54) depends on path_roles in the live research-config.json through paths.default (paths.py:113-121).",
+   "slow_by_construction": "Two full validates (:94, :101). Each one hashes 1,634 referenced files (1.2 GB) and parses 220 receipts (533 MB), because Sources is built anew on every validate call (registry.py:911, 255-297). It also calls load_records 3 times."
+  },
+  {
+   "file": "tools/research/tests/test_boundary.py",
+   "count": 61,
+   "kind": "mixed",
+   "modules": [
+    "boundary",
+    "shared_laws",
+    "registry",
+    "tools/research/boundary_check.lean",
+    "test_schema2 (imported at :689, which pulls in moves, research and style)"
+   ],
+   "live_paths": [
+    "theories/becoming/results/records/*.json (via load_records at :794, :806, :860)",
+    "theories/becoming/results/data/shared-laws.json (:1476)",
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/THEOREM-CONNECTIVITY-DUMP.lean (compiled at :1330)",
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/THEOREM-CONNECTIVITY.py and development/ou3b-master-laws-on-the-grammar/measure_grammar.py (hashed through shared_laws.hashed_inputs, :681-682, shared_laws.py:269-274)",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/lean-toolchain (:1314)",
+    "~/.elan toolchain (outside the tree)"
+   ],
+   "notes": "56 tool tests: FieldRules 13, TheTerms 7, TheDerivedChecks 6, TheRule 2, TheReport 8, ThroughTheCheck 1, ThePages 8, TheStatus 4, TheLeanCheck 7. 4 depend on live fixtures: @657 needs measure_grammar.py, THEOREM-CONNECTIVITY.py and the DUMP file to exist; @792, @802 and @859 need live schema-2 records with laws (or laws plus hypotheses). 1 asserts live content: @1475 checks that the boundary report in shared-laws.json adds up (:1483-1486). TheLeanCheck runs the real Lean binary on stub modules and is skipped when the toolchain is missing (:1317-1318).",
+   "slow_by_construction": "TheLeanCheck.setUpClass compiles 6 stub modules, then Dump.lean and BoundaryCheck.lean, each with import Lean (:1321-1335, :1349-1376), under a 600 s timeout. ThePages renders up to 40 live records twice (:860-866). load_records runs 3 times."
+  },
+  {
+   "file": "tools/research/tests/test_checker_steps.py",
+   "count": 3,
+   "kind": "tool",
+   "modules": [
+    "none in tools/research directly; it imports test_style (:6), which imports registry, research and style",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py (run_graph, in_serial_order)",
+    "experiments/.../lean/universal-ethics/generative-capacity/check.py (imported at check_becoming.py:66-67)"
+   ],
+   "live_paths": [],
+   "notes": "Tests code outside tools/: check_becoming.py. The triggers must name that file.",
+   "slow_by_construction": "Each test's setUp execs the 4,478-line check_becoming.py (test_style.py:174-180). The tests also run threads with 10 ms sleeps."
+  },
+  {
+   "file": "tools/research/tests/test_completion.py",
+   "count": 14,
+   "kind": "mixed",
+   "modules": [
+    "completion"
+   ],
+   "live_paths": [
+    "theories/becoming/results/completion/COVERAGE.json (:94, :110)",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json and the pure-layer Lean sources it lists (completion.py:209-225)",
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/THEOREM-CONNECTIVITY.json",
+    "theories/becoming/chapters/08-METHOD.md",
+    "theories/becoming/results/records/*.json (names only, completion.py:554)"
+   ],
+   "notes": "11 tool tests. @93 depends on the live COVERAGE.json's shape: it builds decls from the coverage's own fields and expects exactly 2 errors (:95-107). @109 is covered by check: expecting only the injected error implies the live coverage validates, which check enforces (research.py:270-272). @119 asserts that all of K1-K7 are met (:122). Check does not require that: research.py:268-269 says an unmet criterion is not an error.",
+   "slow_by_construction": "completion.sources parses every pure-layer Lean module once per process (lru_cache at completion.py:209), and evaluate runs once."
+  },
+  {
+   "file": "tools/research/tests/test_credentials.py",
+   "count": 2,
+   "kind": "tool",
+   "modules": [
+    "research (imports every tool module)"
+   ],
+   "live_paths": [],
+   "notes": "Uses a scratch git repository: git init/add, then research.secrets runs git grep.",
+   "slow_by_construction": "Minor: three git subprocesses."
+  },
+  {
+   "file": "tools/research/tests/test_evidence_store.py",
+   "count": 16,
+   "kind": "tool",
+   "modules": [
+    "evidence_store"
+   ],
+   "live_paths": [],
+   "notes": "Leaf: it imports no other tool module.",
+   "slow_by_construction": "16 scratch git repositories. Each setUp makes 5 git calls (:39-41, :64-65). Packing runs git mv once per file (evidence_store.py:152), and one test copies a tree with cp -Rp (:211)."
+  },
+  {
+   "file": "tools/research/tests/test_featured_results.py",
+   "count": 25,
+   "kind": "mixed",
+   "modules": [
+    "navigation",
+    "registry",
+    "moves and reading_catalogue (through navigation)"
+   ],
+   "live_paths": [
+    "_process/navigation/REPOSITORY.md (@93: :109 and the no-CJK check at :112-115)",
+    "_process/navigation/README-FIRST-SCREEN.md and README-LEAD.md (@242: :253-257; @322)",
+    "theories/becoming/ONE-PAGE.md (the first screen's {{time:...}} field)",
+    "theories/becoming/OPENING.md (@322, @340)",
+    "README.md (:333)",
+    "_process/research-config.json (readme_* keys)",
+    "theories/becoming/results/records/*.json (:118, :325)",
+    "MAP.md, root-foundation/FOUNDATION-COMPOSITION.md and _process/architecture/moves/*.json (link targets, navigation.py:623, 625)"
+   ],
+   "notes": "20 tool tests. @93 and @242 pin sentences of live navigation files, although what they test is ordering. @117 is covered by check: it renders and validates records[0], and only a crash could fail it. @322 asserts live content: no AI, Ren or Claude in the first screen or in README above the opening, the premises named with their roles, and a lead that does not repeat the screen (:326-338). @340 asserts that OPENING.md's last paragraph before the notes holds the 'written apart' sentence once (:343-348).",
+   "slow_by_construction": "load_records twice, render_views four times, and validate of one record three times."
+  },
+  {
+   "file": "tools/research/tests/test_history_notes.py",
+   "count": 8,
+   "kind": "tool",
+   "modules": [
+    "history_notes"
+   ],
+   "live_paths": [],
+   "notes": "Leaf.",
+   "slow_by_construction": "None."
+  },
+  {
+   "file": "tools/research/tests/test_indexes.py",
+   "count": 14,
+   "kind": "mixed",
+   "modules": [
+    "indexes",
+    "lean_catalogue",
+    "reading_catalogue",
+    "session_map",
+    "moves, paths and registry (transitively)"
+   ],
+   "live_paths": [
+    "the whole tree through indexes.render() (@144; indexes.py:471-487)",
+    "theories/becoming/results/data/session-results.json, lean-index.json (17.7 MB) and source-index.json",
+    "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/SESSION-OUTCOME-SNAPSHOT.json and SESSION-PROOF-OVERLAP.json",
+    "theories/becoming/results/records/*.json (session_map.py:220-270)"
+   ],
+   "notes": "12 tool tests. @144 is covered by check: the page set is code, and a crash also crashes check's index_outputs (research.py:245). @152 asserts only that check(write=False) writes nothing, but it crashes if those JSON files change shape (for example the KeyError at session_map.py:222-226). research.py imports session_map (:19) but never calls session_map.check.",
+   "slow_by_construction": "A git ls-files of the whole repository plus reads of every indexed source. Parsing the 17.7 MB lean-index.json and rendering the Lean catalogue."
+  },
+  {
+   "file": "tools/research/tests/test_law_families.py",
+   "count": 3,
+   "kind": "mixed",
+   "modules": [
+    "registry"
+   ],
+   "live_paths": [
+    "theories/becoming/results/data/law-families.json",
+    "theories/becoming/results/records/*.json"
+   ],
+   "notes": "@12 duplicates check: validate calls law_family_errors (registry.py:915). The other 2 are tool tests.",
+   "slow_by_construction": "One load_records."
+  },
+  {
+   "file": "tools/research/tests/test_links.py",
+   "count": 5,
+   "kind": "tool",
+   "modules": [
+    "moves",
+    "paths"
+   ],
+   "live_paths": [],
+   "notes": "Leaf: moves imports only paths.",
+   "slow_by_construction": "Two scratch git repositories."
+  },
+  {
+   "file": "tools/research/tests/test_moves.py",
+   "count": 12,
+   "kind": "tool",
+   "modules": [
+    "moves",
+    "paths",
+    "research (all modules)",
+    "registry (@255)",
+    "lean_catalogue (@274)",
+    "evidence_store (through the research.py subprocess, research.py:414)"
+   ],
+   "live_paths": [
+    "_process/research-config.json path_roles (research.working at :188-190)"
+   ],
+   "notes": "Depends on git and rg (moves.py:602) in the environment.",
+   "slow_by_construction": "12 scratch git repositories, each made with init, add and commit (:70-72). One `python3 research.py evidence --help` subprocess (:280)."
+  },
+  {
+   "file": "tools/research/tests/test_navigation_pages.py",
+   "count": 12,
+   "kind": "mixed",
+   "modules": [
+    "navigation",
+    "registry",
+    "reading_catalogue"
+   ],
+   "live_paths": [
+    "theories/becoming/results/records/*.json and the load_records inputs (@75)",
+    "README.md and GOALS.md must exist (@109, navigation.py:318-320)"
+   ],
+   "notes": "11 tool tests. @75 needs a live record that another record depends on (:77). A crash in it would also crash check.",
+   "slow_by_construction": "One load_records."
+  },
+  {
+   "file": "tools/research/tests/test_registry.py",
+   "count": 20,
+   "kind": "mixed",
+   "modules": [
+    "registry",
+    "moves, reading_catalogue, boundary and style (imported lazily by registry)"
+   ],
+   "live_paths": [
+    "theories/becoming/results/records/*.json (read raw at :63)",
+    "every referenced source and receipt (validate)",
+    "receipts read directly (:98)",
+    "git history of HEAD (reviewed_version, registry.py:46-91)"
+   ],
+   "notes": "8 tool tests. @69 duplicates check's validate (research.py:260-266). 10 mutation tests depend on live fixtures: a recorded-checked record (:64), records[0] with aliases and references (:73, :130), a target record (:117), and receipts that list elaborated declarations (:94-105, skipped otherwise). @120 needs the canonical source of the first recorded-checked record to drift once its digest is faked. That holds today only because it is a .lean file (a-cascade-at-the-histories-reached, ReachedCascade.lean). A Markdown source that matches its review would give None (registry.py:158) and end in GROWN (:998), so the test fails while check passes. @153 renders the first 40 live records.",
+   "slow_by_construction": "The largest cost in research-test: 11 full validates, one per RegistryTests test (:66-67). Each hashes 1.2 GB and parses 533 MB of receipts, and setUp re-reads all 533 records 11 times."
+  },
+  {
+   "file": "tools/research/tests/test_rename_ids.py",
+   "count": 6,
+   "kind": "mixed",
+   "modules": [
+    "registry",
+    "rename_ids",
+    "moves",
+    "paths"
+   ],
+   "live_paths": [
+    "theories/becoming/results/records/*.json",
+    "theories/becoming/results/data/generativity-chain.json (rename_ids.py:92)",
+    "_process/research-config.json"
+   ],
+   "notes": "2 tool tests. @33 needs 'laws-of-one-step' to be a live record or former id and the chain to name 'market-partial-correction-boundary' (:38-40). @42 needs a former id. In @52, the orphan_pages==[] assertion is already in check (research.py:261); the test also needs a renamed record. @63 validates two live records.",
+   "slow_by_construction": "load_records 3 times."
+  },
+  {
+   "file": "tools/research/tests/test_repoint.py",
+   "count": 1,
+   "kind": "tool",
+   "modules": [
+    "repoint",
+    "registry (imported by repoint)"
+   ],
+   "live_paths": [],
+   "notes": "Returns early, before any live read (repoint.py:96-103).",
+   "slow_by_construction": "None."
+  },
+  {
+   "file": "tools/research/tests/test_review_packet.py",
+   "count": 3,
+   "kind": "mixed",
+   "modules": [
+    "none in tools/research",
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/review-packet/check_dossiers.py",
+    "the same folder's resync_report.py"
+   ],
+   "live_paths": [
+    "theories/becoming/review/*.md and recoding/CODEBOOK.md",
+    "one-unfolding-root/corpus/*.tsv",
+    "lean/becoming/Becoming/**, lean/physics/**, lean/warning/**, lean/deeper/** and one-unfolding-root/review-checks/** (check_dossiers.py:26-34)",
+    "the 100 repository files the dossiers quote, including GLOSSARY.md (PHILOSOPHY.md:122)"
+   ],
+   "notes": "@38 asserts live content over the whole packet; check does not run this. @62's positive cases need the exact live Lean text of ReadsOnlyDynamics and its not_entails theorem (Becoming/Significance.lean:296). @107 is a tool test: a scratch git repository and a subprocess.",
+   "slow_by_construction": "Every main() rescans about 1,005 Lean files (about 20.8 MB) with no cache. @62 calls it 10 times (:68-80) and @38 once."
+  },
+  {
+   "file": "tools/research/tests/test_schema2.py",
+   "count": 16,
+   "kind": "mixed",
+   "modules": [
+    "registry",
+    "research",
+    "moves",
+    "style"
+   ],
+   "live_paths": [
+    "theories/becoming/results/data/standard-boundaries.json (@174)",
+    "theories/becoming/results/records/*.json and the snapshots under _process/architecture/history/ (@186, :187-195)",
+    "the migration drafts folder (:17-18), every live record, their sources and receipts, and the move receipts (@255)"
+   ],
+   "notes": "13 tool tests on TemporaryRoot (:25-71). In @174, validate_standard_boundaries()==[] is already in check (registry.py:914), but the exact 'no-ethical-premise' text (:177) is not. @186 needs a live record whose first text version is schema 1 without a statement. @255 validates frozen drafts against the live registry; its non-draft assertion is covered by check, but the draft errors and the link checks are not.",
+   "slow_by_construction": "@255 runs one full validate over 533 records plus the drafts, then render and check_links."
+  },
+  {
+   "file": "tools/research/tests/test_scoped_drift.py",
+   "count": 10,
+   "kind": "tool",
+   "modules": [
+    "registry",
+    "moves and reading_catalogue (lazily)"
+   ],
+   "live_paths": [],
+   "notes": "Committed version has 10 tests. An uncommitted edit in this worktree adds DRIFT_CACHE tests; they are not counted here.",
+   "slow_by_construction": "8 scratch git repositories, 5 git calls per setUp."
+  },
+  {
+   "file": "tools/research/tests/test_shared_laws.py",
+   "count": 25,
+   "kind": "mixed",
+   "modules": [
+    "shared_laws",
+    "registry",
+    "boundary"
+   ],
+   "live_paths": [
+    "theories/becoming/results/records/*.json through load_records (@89, page() at :303)",
+    "theories/becoming/results/data/shared-laws.json (@354)",
+    "theories/becoming/results/data/standard-boundaries.json (render)"
+   ],
+   "notes": "20 tool tests. 4 depend on live fixtures: @89 needs a record with 10 or more laws and data; @317, @330 and @336 need a record with 2 or more laws and data (:304). @354 asserts the data file's shape (:358-375). Check only reports on that file and never fails on it (registry.py:861-864).",
+   "slow_by_construction": "load_records 4 times."
+  },
+  {
+   "file": "tools/research/tests/test_split_languages.py",
+   "count": 6,
+   "kind": "tool",
+   "modules": [
+    "split_languages",
+    "reading_catalogue (slug, numbered, anchors_from_text)"
+   ],
+   "live_paths": [],
+   "notes": "Leaf.",
+   "slow_by_construction": "None."
+  },
+  {
+   "file": "tools/research/tests/test_strict_fresh.py",
+   "count": 4,
+   "kind": "mixed",
+   "modules": [
+    "research",
+    "registry",
+    "navigation",
+    "completion and theory_graph (left unpatched)"
+   ],
+   "live_paths": [
+    "the live completion inputs, plus COMPLETION.md compared fresh (completion.render is not patched, :20-31, :64-77)",
+    "theories/becoming/results/RESULT-REGISTER.md (:27, :73)",
+    "the theory graph inputs in @51"
+   ],
+   "notes": "@35, @42 and @51 are covered by check: live content fails them exactly when it fails check (completion errors at research.py:272, a stale COMPLETION.md at :304-310). @84 is a tool test.",
+   "slow_by_construction": "One completion.evaluate, which parses the Lean modules."
+  },
+  {
+   "file": "tools/research/tests/test_style.py",
+   "count": 22,
+   "kind": "mixed",
+   "modules": [
+    "style",
+    "registry",
+    "research",
+    "check_becoming.py and check.py (@157, @164)"
+   ],
+   "live_paths": [
+    "theories/becoming/results/data/standard-boundaries.json (@51)",
+    "theories/becoming/results/records/*.json plus git show HEAD (@121)",
+    "git HEAD (@134)"
+   ],
+   "notes": "20 tool tests. @51 is a live contract: style.STOCK's keys must be among the live standard boundaries (:52). @121 is dead: it always skips while no record is on schema 1 (0 of 533; skip at :126-127).",
+   "slow_by_construction": "Execs check_becoming.py twice, plus one load_records and one git show."
+  },
+  {
+   "file": "tools/research/tests/test_theory_graph.py",
+   "count": 4,
+   "kind": "live",
+   "modules": [
+    "registry",
+    "theory_graph"
+   ],
+   "live_paths": [
+    "the load_records inputs",
+    "theories/becoming/results/data/regions.json",
+    "lean/becoming/Becoming.lean and every module it imports",
+    "one-unfolding-root/classify/*.tsv",
+    "ou2-candidates/outcomes.tsv",
+    "theories/becoming/chapters/*.md (theory_graph.py:29-37, 62-169)"
+   ],
+   "notes": "@13 and @19 hold by construction: edges are guarded (theory_graph.py:192-216) and every record gets a node (:183-190). @29 checks a constant. Only a crash can fail these three, and check renders the same graph (research.py:274). @24 is a real data check: regions.json may use only known regions (:27). The page silently drops unknown regions (theory_graph.py:241, 264), so check passes where this test fails.",
+   "slow_by_construction": "setUp runs load_records and a full render for each of the 4 tests."
+  }
+ ],
+ "split": "Rule: a landing may skip a test only if no failure the change could cause would go unblocked. Check --strict-fresh is selected on every landing (gate.py reads '**'). So any live failure mode that also fails check can be left to check, and the test can be tied to its code alone. The steps follow.\n\n(1) Move these live assertions into research.py check, or into their own gate checks. Regions known: test_theory_graph.py:24-27, in the theory-graph render at research.py:274. Front-page rules: test_featured_results.py:322-348, into navigation.validate_goals (navigation.py:325-366, called at research.py:261). style.STOCK against standard-boundaries.json: test_style.py:51-52 and test_schema2.py:176-177, into validate_standard_boundaries (registry.py:320-341). The shape of shared-laws.json: test_shared_laws.py:354-375 and test_boundary.py:1475-1486; check currently treats this file as report-only (registry.py:864). The dossiers: test_review_packet.py:38-51, as the gate's 'dossiers' check with its reads fixed. 'All of K1-K7 met' (test_completion.py:122) goes into check only if the gate should require it, since research.py:268-269 says an unmet criterion is not an error.\n\n(2) Drop the assertions check already makes, or keep them only under the tool triggers: test_registry.py:69-70, test_law_families.py:12-14, test_completion.py:109-121 (the errors part), test_rename_ids.py:61, test_schema2.py:175, test_indexes.py:144-150, test_theory_graph.py:13-22 and 29-30, and test_strict_fresh's live part.\n\n(3) Rewrite the 30 tests whose only live dependence is a fixture onto TemporaryRoot (test_schema2.py:25-71) or patches. The largest are the 11 RegistryTests, which are 11 of the 14 full validates research-test runs. Retire test_style.py:121-132 (always skipped) and decide on MigrationDraftTests (test_schema2.py:246-287).\n\nAfter (1) to (3), each test file runs only when its code closure changes: tools/research/*.py (most files, because research.py imports every module), or the leaf sets for completion, evidence_store, history_notes, links, split_languages and repoint. Add the code outside tools/ that the tests run: check_becoming.py and check.py for test_style and test_checker_steps; check_dossiers.py and resync_report.py for test_review_packet; THEOREM-CONNECTIVITY-DUMP.lean and lean-toolchain for TheLeanCheck.\n\nUntil those changes land, use trigger_map: it adds each test's live paths, and it is sound now. The 'tests' rule in the in-progress gate.py reads only RESEARCH_TOOLS. That is unsound for the live tests listed above.",
+ "trigger_map": [
+  {
+   "test_file": "tools/research/tests/test_architecture.py",
+   "trigger_paths": [
+    "tools/research/*.py",
+    "tools/research/boundary_check.lean",
+    "tools/research/tests/test_architecture.py",
+    "_process/research-config.json",
+    "theories/becoming/results/records/*.json",
+    "theories/becoming/results/data/law-families.json",
+    "theories/becoming/results/data/shared-laws.json"
+   ]
+  },
+  {
+   "test_file": "tools/research/tests/test_boundary.py",
+   "trigger_paths": [
+    "tools/research/*.py",
+    "tools/research/boundary_check.lean",
+    "tools/research/tests/test_boundary.py",
+    "tools/research/tests/test_schema2.py",
+    "_process/research-config.json",
+    "theories/becoming/results/records/*.json",
+    "theories/becoming/results/data/law-families.json",
+    "theories/becoming/results/data/shared-laws.json",
+    "theories/becoming/results/data/standard-boundaries.json",
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/THEOREM-CONNECTIVITY-DUMP.lean",
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/THEOREM-CONNECTIVITY.py",
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/lean-toolchain",
+    "ENV: the installed toolchain's lean --version, and whether it is installed"
+   ]
+  },
+  {
+   "test_file": "tools/research/tests/test_checker_steps.py",
+   "trigger_paths": [
+    "tools/research/*.py",
+    "tools/research/tests/test_checker_steps.py",
+    "tools/research/tests/test_style.py",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/check.py"
+   ]
+  },
+  {
+   "test_file": "tools/research/tests/test_completion.py",
+   "trigger_paths": [
+    "tools/research/completion.py",
+    "tools/research/tests/test_completion.py",
+    "theories/becoming/results/completion/COVERAGE.json",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/**/*.lean",
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/THEOREM-CONNECTIVITY.json",
+    "theories/becoming/chapters/08-METHOD.md",
+    "theories/becoming/results/records/*.json (additions and deletions only)"
+   ]
+  },
+  {
+   "test_file": "tools/research/tests/test_credentials.py",
+   "trigger_paths": [
+    "tools/research/*.py",
+    "tools/research/tests/test_credentials.py",
+    "ENV: git"
+   ]
+  },
+  {
+   "test_file": "tools/research/tests/test_evidence_store.py",
+   "trigger_paths": [
+    "tools/research/evidence_store.py",
+    "tools/research/tests/test_evidence_store.py",
+    "ENV: git"
+   ]
+  },
+  {
+   "test_file": "tools/research/tests/test_featured_results.py",
+   "trigger_paths": [
+    "tools/research/*.py",
+    "tools/research/tests/test_featured_results.py",
+    "_process/research-config.json",
+    "theories/becoming/results/records/*.json",
+    "theories/becoming/results/data/law-families.json",
+    "theories/becoming/results/data/shared-laws.json",
+    "theories/becoming/results/data/standard-boundaries.json",
+    "_process/navigation/REPOSITORY.md",
+    "_process/navigation/README-FIRST-SCREEN.md",
+    "_process/navigation/README-LEAD.md",
+    "theories/becoming/OPENING.md",
+    "DERIVED: every {{time:PATH}} named by the first screen (today theories/becoming/ONE-PAGE.md)",
+    "README.md",
+    "MAP.md",
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/FOUNDATION-COMPOSITION.md",
+    "_process/architecture/moves/*.json"
+   ]
+  },
+  {
+   "test_file": "tools/research/tests/test_history_notes.py",
+   "trigger_paths": [
+    "tools/research/history_notes.py",
+    "tools/research/tests/test_history_notes.py"
+   ]
+  },
+  {
+   "test_file": "tools/research/tests/test_indexes.py",
+   "trigger_paths": [
+    "tools/research/*.py",
+    "tools/research/tests/test_indexes.py",
+    "_process/research-config.json",
+    "theories/becoming/results/records/*.json",
+    "theories/becoming/results/data/session-results.json",
+    "theories/becoming/results/data/lean-index.json",
+    "theories/becoming/results/data/source-index.json",
+    "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/SESSION-OUTCOME-SNAPSHOT.json",
+    "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/SESSION-PROOF-OVERLAP.json"
+   ]
+  },
+  {
+   "test_file": "tools/research/tests/test_law_families.py",
+   "trigger_paths": [
+    "tools/research/*.py",
+    "tools/research/tests/test_law_families.py",
+    "_process/research-config.json"
+   ]
+  },
+  {
+   "test_file": "tools/research/tests/test_links.py",
+   "trigger_paths": [
+    "tools/research/moves.py",
+    "tools/research/paths.py",
+    "tools/research/tests/test_links.py",
+    "ENV: git"
+   ]
+  },
+  {
+   "test_file": "tools/research/tests/test_moves.py",
+   "trigger_paths": [
+    "tools/research/*.py",
+    "tools/research/tests/test_moves.py",
+    "_process/research-config.json",
+    "ENV: git, rg"
+   ]
+  },
+  {
+   "test_file": "tools/research/tests/test_navigation_pages.py",
+   "trigger_paths": [
+    "tools/research/*.py",
+    "tools/research/tests/test_navigation_pages.py",
+    "_process/research-config.json",
+    "theories/becoming/results/records/*.json",
+    "theories/becoming/results/data/law-families.json",
+    "theories/becoming/results/data/shared-laws.json"
+   ]
+  },
+  {
+   "test_file": "tools/research/tests/test_registry.py",
+   "trigger_paths": [
+    "tools/research/*.py",
+    "tools/research/tests/test_registry.py",
+    "_process/research-config.json",
+    "theories/becoming/results/records/*.json",
+    "DERIVED: every receipt named in any record's proof_bindings",
+    "DERIVED: the canonical_source of the first recorded-checked record (sorted by file name)",
+    "ENV: git (reviewed_version reads HEAD's history)"
+   ]
+  },
+  {
+   "test_file": "tools/research/tests/test_rename_ids.py",
+   "trigger_paths": [
+    "tools/research/*.py",
+    "tools/research/tests/test_rename_ids.py",
+    "_process/research-config.json",
+    "theories/becoming/results/records/*.json",
+    "theories/becoming/results/data/generativity-chain.json",
+    "theories/becoming/results/data/law-families.json",
+    "theories/becoming/results/data/shared-laws.json"
+   ]
+  },
+  {
+   "test_file": "tools/research/tests/test_repoint.py",
+   "trigger_paths": [
+    "tools/research/repoint.py",
+    "tools/research/registry.py",
+    "tools/research/tests/test_repoint.py"
+   ]
+  },
+  {
+   "test_file": "tools/research/tests/test_review_packet.py",
+   "trigger_paths": [
+    "tools/research/tests/test_review_packet.py",
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/review-packet/check_dossiers.py",
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/review-packet/resync_report.py",
+    "theories/becoming/review/**",
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/one-unfolding-root/corpus/**",
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/one-unfolding-root/review-checks/**",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/**",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/physics/**",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/warning/**",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/**",
+    "DERIVED: every path in a dossier's 引〔PATH〕 or Quote [PATH], in either bracket and with any whitespace (check_dossiers.py:31), root-level files included (GLOSSARY.md), #anchor stripped",
+    "ENV: git"
+   ]
+  },
+  {
+   "test_file": "tools/research/tests/test_schema2.py",
+   "trigger_paths": [
+    "tools/research/*.py",
+    "tools/research/tests/test_schema2.py",
+    "_process/research-config.json",
+    "theories/becoming/results/records/*.json",
+    "theories/becoming/results/data/law-families.json",
+    "theories/becoming/results/data/shared-laws.json",
+    "theories/becoming/results/data/standard-boundaries.json",
+    "_process/architecture/history/**",
+    "_process/architecture/moves/*.json",
+    "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/development/becoming-general-laws-plan/readability/drafts/**",
+    "DERIVED: every path the three drafts reference (references, canonical_source, progress, counterexamples), the receipts they bind, and the link targets of their rendered pages"
+   ]
+  },
+  {
+   "test_file": "tools/research/tests/test_scoped_drift.py",
+   "trigger_paths": [
+    "tools/research/registry.py",
+    "tools/research/moves.py",
+    "tools/research/reading_catalogue.py",
+    "tools/research/paths.py",
+    "tools/research/tests/test_scoped_drift.py",
+    "ENV: git"
+   ]
+  },
+  {
+   "test_file": "tools/research/tests/test_shared_laws.py",
+   "trigger_paths": [
+    "tools/research/*.py",
+    "tools/research/boundary_check.lean",
+    "tools/research/tests/test_shared_laws.py",
+    "_process/research-config.json",
+    "theories/becoming/results/records/*.json",
+    "theories/becoming/results/data/law-families.json",
+    "theories/becoming/results/data/shared-laws.json",
+    "theories/becoming/results/data/standard-boundaries.json"
+   ]
+  },
+  {
+   "test_file": "tools/research/tests/test_split_languages.py",
+   "trigger_paths": [
+    "tools/research/split_languages.py",
+    "tools/research/reading_catalogue.py",
+    "tools/research/tests/test_split_languages.py"
+   ]
+  },
+  {
+   "test_file": "tools/research/tests/test_strict_fresh.py",
+   "trigger_paths": [
+    "tools/research/*.py",
+    "tools/research/tests/test_strict_fresh.py",
+    "_process/research-config.json",
+    "(its live inputs are covered by check --strict-fresh on the same tree; without that rule add the completion inputs listed for test_completion.py and theories/becoming/results/completion/COMPLETION.md)"
+   ]
+  },
+  {
+   "test_file": "tools/research/tests/test_style.py",
+   "trigger_paths": [
+    "tools/research/*.py",
+    "tools/research/tests/test_style.py",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/check.py",
+    "_process/research-config.json",
+    "theories/becoming/results/data/standard-boundaries.json",
+    "theories/becoming/results/records/*.json",
+    "ENV: git"
+   ]
+  },
+  {
+   "test_file": "tools/research/tests/test_theory_graph.py",
+   "trigger_paths": [
+    "tools/research/*.py",
+    "tools/research/tests/test_theory_graph.py",
+    "_process/research-config.json",
+    "theories/becoming/results/records/*.json",
+    "theories/becoming/results/data/regions.json",
+    "(the other graph inputs, Lean modules, classify TSVs, outcomes and chapters, matter only through a crash, which check --strict-fresh also hits)"
+   ]
+  },
+  {
+   "test_file": "(any test file not listed, or added)",
+   "trigger_paths": [
+    "always run it until it has an entry"
+   ]
+  }
+ ],
+ "report_md": "# research-test: which tests can be tiered, and the triggers that keep it sound\n\nThe `tests` rule in the in-progress gate is not sound. It selects research-test only for `tools/research/**`, `_process/research-config.json` and `Makefile` (`tools/research/gate.py:55`, `:109-110`, in the uncommitted working copy as read). But 55 of the 308 tests read live content. At least 14 different kinds of non-tool change can turn research-test red while `check --strict-fresh` stays green.\n\nThe `dossiers` check being added to gate.py also misses inputs: `lean/deeper/**`, `one-unfolding-root/review-checks/**` and root-level quoted files such as `GLOSSARY.md`.\n\nBelow: how each test is classified, what to move into check, what to rewrite, sound trigger sets for the current code, and the cost drivers.\n\n**Baseline.** Commit `1e9bc6b85` in `/Users/ren/theories/.claude/worktrees/gc-reading-correction`. While I read, HEAD moved to `3bf962941` (a board commit only), and uncommitted edits appeared in `tools/research/{completion,registry}.py`, `tests/test_scoped_drift.py`, `AGENTS.md`, `Makefile`, `RESULT-WORKFLOW.md` and an untracked `tools/research/gate.py`. Every count and line number below is from `1e9bc6b85`, except gate.py, which is the working copy as I read it and is still changing.\n\n**What I did not do.** I ran no tests, no check and no make target, so there are no timings. The costs given are sizes by construction: file counts, bytes and subprocesses.\n\n## The soundness rule\nA landing may skip test T on change Δ only if no failure that Δ could cause in T is left unblocked by a check that runs anyway. `check --strict-fresh` reads `**` and is selected on every landing (`gate.py:111-112`). So a live failure mode that also fails check can be ignored when choosing T's triggers. Any other live dependence must either:\n- become part of check,\n- be added to T's triggers, or\n- be replaced by a fixture.\n\n## How the tests split: 308 in all (counts per file are in `tests`)\n- **253 tool tests.** They exercise code on fixtures, temporary trees or patches.\n  - Code outside `tools/` that they run: `check_becoming.py` and `check.py` (test_style @157 and @164, test_checker_steps), `check_dossiers.py` and `resync_report.py` (test_review_packet @107), and `THEOREM-CONNECTIVITY-DUMP.lean` plus the Lean toolchain (TheLeanCheck).\n  - Some tool tests read `research-config.json` `path_roles` through `research.working` (`test_architecture.py:49-54`, `test_moves.py:188-190`, `paths.py:113-121`). That config is in the tool trigger set.\n- **16 tests covered by check.** Their live dependence can only fail them where check also fails:\n  - `test_registry.py:69`\n  - `test_law_families.py:12`\n  - `test_completion.py:109` (and the errors half of `:119`)\n  - `test_rename_ids.py:52` (the `orphan_pages` part, already in check at `research.py:261`)\n  - `test_architecture.py:90`\n  - `test_featured_results.py:117`\n  - `test_indexes.py:144`\n  - `test_strict_fresh.py:35`, `:42` and `:51`, which leave `completion.render` unpatched (`:20-31`, `:64-77`) and so fail exactly when check errors (`research.py:272`, `:304-310`)\n  - `test_theory_graph.py:13`, `:19` and `:29`, which hold by construction (`theory_graph.py:183-216`)\n  - in `test_schema2.py:174`, only the `validate_standard_boundaries` half (`registry.py:914`)\n- **29 tests depend on a live fixture.** Check does not guard these. Examples:\n  - The 10 mutation tests in `test_registry.py`: each needs a recorded-checked record, a target record, or `records[0]` with aliases.\n  - `test_registry.py:120` passes only because the first recorded-checked record's canonical source is a `.lean` file (`a-cascade-at-the-histories-reached`). A Markdown source that matches its review gives `None` (`registry.py:158`) and lands in GROWN rather than drift (`:998`).\n  - `test_rename_ids.py:33-40` needs specific live ids and chain entries.\n  - `test_review_packet.py:62` needs the exact Lean text at `Becoming/Significance.lean:296`.\n  - `test_boundary.py:657` needs `measure_grammar.py`, `THEOREM-CONNECTIVITY.py` and the DUMP file to exist (`shared_laws.py:269-274`).\n  - Also in this group: `test_indexes.py:152` (session-map JSON shapes, and `research.py` never calls `session_map.check`), `test_schema2.py:186`, the shared-laws page tests (`:89`, `:317`, `:330`, `:336`), and the boundary page tests (`:792`, `:802`, `:859`).\n- **10 tests assert live content that check does not:**\n  - `test_theory_graph.py:24-27`: a known region in `regions.json`. The page silently drops unknown regions (`theory_graph.py:241`, `:264`).\n  - `test_featured_results.py:322-348`: front-page rules (no AI/Ren/Claude above the opening, both premises with their roles, the opening's notes line).\n  - `test_featured_results.py:93` and `:242`: they pin sentences of `REPOSITORY.md`, `README-FIRST-SCREEN.md` and `README-LEAD.md`, though what they test is ordering.\n  - `test_shared_laws.py:354-375` and `test_boundary.py:1475-1486`: the shape of `shared-laws.json`, which check only reports on (`registry.py:864`).\n  - `test_completion.py:122`: all of K1-K7 met. `research.py:268-269` says an unmet criterion is not an error.\n  - `test_review_packet.py:38-51`: the whole packet's quotations and Lean names.\n  - `test_style.py:51-52`: `style.STOCK` keys must be in the live boundaries.\n  - `test_schema2.py:177`: the exact `no-ethical-premise` text.\n  - `test_schema2.py:246-287`: the frozen drafts against the live registry.\n\n  Two of these already mean research-test gates content: `test_review_packet.py:38` and `test_completion.py:122`.\n\n## Proposed split\n1. **Into check, as errors.** These are cheap, because check already reads the same inputs.\n   - Unknown region → `research.py:274`.\n   - Front-page rules → `navigation.validate_goals` (`navigation.py:325-366`).\n   - STOCK keys and the stock text matching its pattern → `validate_standard_boundaries` (`registry.py:320-341`). Note this generalizes the exact pin at `test_schema2.py:177`.\n   - Shape of `shared-laws.json` → `shared_laws_status`. Shape is not staleness, so it can be an error without the checker cache.\n   - The dossiers → the gate's own `dossiers` check, after which `test_review_packet.py:38` goes.\n   - \"K1-K7 all met\" → needs a decision, because it contradicts the current rule that check reports it without failing.\n2. **Drop or keep tool-only:** the 16 tests check already covers.\n3. **Rewrite on `TemporaryRoot`** (`test_schema2.py:25-71`) or patches. That covers all the fixture-dependent tests and the incidental pins at `test_featured_results.py:93` and `:242`.\n   - Patch the reads in `test_indexes.py:152`.\n   - Give `test_review_packet.py:62` a fixture Lean directory.\n   - Retire `test_style.py:121-132`, which always skips (0 of the 533 records are on schema 1).\n   - Decide on MigrationDraftTests: retire it, or make it an opt-in check.\n4. **After 1-3, every file is triggered by its code closure only.**\n   - `tools/research/*.py` and `boundary_check.lean` for most files, because `research.py:19` imports every module and `registry` lazily imports `moves`, `reading_catalogue`, `boundary` and `style`.\n   - Leaf sets: completion; evidence_store; history_notes; moves and paths (test_links); split_languages and reading_catalogue; repoint and registry.\n   - Plus the outside code listed under the tool tests above, plus the imported test files: `test_checker_steps.py:6` imports test_style, and `test_boundary.py:689` imports test_schema2.\n   - \"The record schema\" is code (`registry.py:27`, `style.py`), so these sets already cover it.\n5. **Until then, use `trigger_map`.** It is sound for the current code: it adds each test's live paths and the derived sets (dossier quotes, first-screen time fields, receipts bound by records, draft references).\n\n## Gaps in the in-progress gate.py\n- `tests` reads only `RESEARCH_TOOLS` (`:55`, `:109-110`). Changes that fail research-test without selecting it include:\n  - a dossier or a quoted chapter\n  - `README-LEAD.md`, `README-FIRST-SCREEN.md` or `OPENING.md`\n  - `regions.json`, `shared-laws.json` or `COVERAGE.json`\n  - `generativity-chain.json`\n  - `check_becoming.py`\n  - the DUMP file\n  - the Lean text of `ReadsOnlyDynamics`\n  - a new record that sorts first and has a Markdown canonical source\n- `dossiers` (`:115-118`) omits `lean/deeper/**` and `one-unfolding-root/review-checks/**`, which are in `BLOCK_DIRS` (`check_dossiers.py:33-34`).\n- `quoted_paths` (`:92-98`) has two problems:\n  - It drops paths without a `/`. `GLOSSARY.md`, quoted at `review/PHILOSOPHY.md:122`, is not selected.\n  - It matches only `引〔` and `Quote \\[`, while the checker accepts whitespace and either bracket (`check_dossiers.py:31`).\n- A tree-keyed pass is reused when only paths outside a check's `reads` change. With `reads` incomplete, the pass cache inherits the same gaps.\n\n## Heavy runs, cache keys and trains\n- **Cost drivers:**\n  - 14 full validates: 11 in RegistryTests, 2 in test_architecture, 1 in MigrationDraftTests. Each hashes 1,634 files (1.2 GB) and parses 220 receipts (533 MB), because `Sources` is built anew on every validate call (`registry.py:911`, `:255-297`). Check itself runs 1.\n  - TheLeanCheck: real Lean compiles (`test_boundary.py:1321-1376`), 600 s timeout. Under load it can produce load reds.\n  - 11 dossier scans of about 20.8 MB of Lean each.\n  - About 60 scratch git repositories across evidence_store, moves, scoped_drift, links, credentials and review_packet.\n  - Put TheLeanCheck and the live-validate tests under the machine lock, or split them into a heavy lane keyed by their own inputs.\n- **The tree is not the whole key.**\n  - Whether the toolchain is installed decides skip or run (`test_boundary.py:1317-1318`), so key on `lean --version`, or do not reuse a pass that had skips.\n  - git and `rg` versions (`moves.py:602`) and the Python version.\n  - HEAD's history (`registry.py:58`; `research.py:86`). gate.py's \"history only grows\" argument covers this.\n  - `~/.cache/research-source-versions.json` (`registry.py:42`) is content-addressed.\n- **Trains:** select test files by the union of the branches' changed paths, and always include imported test modules. Process-wide caches can leak between files: `lean_catalogue.receipt_layers` is filled under a patched ROOT by `test_architecture.py:63-65` (`lean_catalogue.py:222`); others are `completion.sources` and `paths.default`. I found no outcome that changes today, but subsets should run in a fresh process.\n\n## Decisions this leaves open\n- Should check require K1-K7 all met?\n- Should the shape of `shared-laws.json` be a check error?\n- Retire MigrationDraftTests, or make it opt-in?\n- Generalize the exact boundary-text pin?\n"
+}

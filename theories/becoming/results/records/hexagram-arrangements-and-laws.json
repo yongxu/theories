@@ -942,19 +942,19 @@
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/y1-changes/verify_mapping.py",
       "role": "integration",
       "declarations": [],
-      "sha256": "df8d99e2a281a0717879e836f029559ff6ad0e7ad2be506ad18a577149cb8fad"
+      "sha256": "85db20adb525dc9003890a8e32a8d614794661f180d7955e16726d3ca51944b1"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ro-relational-sources/passages.json",
       "role": "integration",
       "declarations": [],
-      "sha256": "7e307adaebc2d236b921edf79d940568410c20cea9ab4ea7cf7d77495f50d177"
+      "sha256": "84effd535676769d4d970aa06377ac6cad74c764af23eb54cb20bb77988f4061"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ro-relational-sources/verify_ro.py",
       "role": "integration",
       "declarations": [],
-      "sha256": "bd963dfde041adcdcc5a894dc3f39159b0c8d62191ad0b999918f8f36d61467f"
+      "sha256": "80287c2dc9e6f8e51d38a1e1e7ef331ee6e8588ae933ec9b38c616193cd5ac81"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
