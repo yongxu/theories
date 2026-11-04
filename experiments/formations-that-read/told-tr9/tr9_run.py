@@ -16,7 +16,7 @@ addenda/FROZEN-k.sha256; the files of freeze 1 it imports among them) equals its
 holds for every context asked: TR8's abstract unit of the same presentation, for the same pin, read
 by freeze 1's reading from freeze 1's folder (told/results/tr8/<pin>) and supported; and unless the
 readability rule (tr9_rule.readability) lets every context asked start, on TR9's own calls of the pin
-under freeze 1's client in force: every smoke run here and every scored call logged under a link of
+under freeze 1's client in force: every smoke run here and every scored call made under a link of
 the chain whose client is the one in force (readable), so that only a link changing the client counts
 calls afresh. `smoke` is refused where another smoke run of the pin could release nothing
 (smoke_needed). `readability` gives the rule for TR9 or, as FREEZE-1.md's dated note asks, for freeze
@@ -258,8 +258,9 @@ def moved_lines(folder):
 def frozen(repo=R.REPO, told=TOLD):
     """Freeze 1's chain first, so that freeze 1's files taken here are taken only as its newest link
     has them; then this freeze's chain."""
+    first = freeze_1(repo)
     fc = R.frozen_check(repo, told, MAY_CHANGE)
-    fc.update(freeze_1(repo))
+    fc.update(first)
     return fc
 
 
@@ -479,9 +480,9 @@ def read_meta(folder):
 def readable(test, family, contexts, fc, smokes=None, scored_folder=None):
     """The readability rule for one pin and test (FREEZE-8.md, section 8; for freeze 1's TR8 and TR-RR,
     FREEZE-1.md's dated note), on the test's own calls under freeze 1's client in force: every call of
-    the test in every smoke run of the pin on the test's harness made on hashes with that client (this
-    freeze's chain for TR9, freeze 1's for TR8 and TR-RR), and every call in its scored folder logged
-    under a link of its chain with that client; each answered by the pin while the catalog named its
+    the test in every smoke run of the pin on the test's harness made under a link of its chain (this
+    freeze's for TR9, freeze 1's for TR8 and TR-RR) with that client, its meta naming the link and that
+    link's hashes, and every call in its scored folder logged under such a link; each answered by the pin while the catalog named its
     snapshot, since a call another model answered reads nothing of the pin. Of the files an addendum
     may change, only the client bears on whether an answer can be read (its request, its limits, its
     parser), so only a link changing it counts calls afresh: one changing the dry run or a pin's
@@ -497,7 +498,9 @@ def readable(test, family, contexts, fc, smokes=None, scored_folder=None):
                 and r.get("catalog") == slug]
     recs, used = [], []
     for f in (smoke_runs(HERE if own else R.HERE, family) if smokes is None else smokes):
-        if (read_meta(f).get("hashes") or {}).get(CLIENT) != client:
+        m = read_meta(f)
+        h = chain.get(m.get("link"))
+        if not h or m.get("hashes") != h or h.get(CLIENT) != client:
             continue
         log_whole(f)
         got = pins(R.logged(f))

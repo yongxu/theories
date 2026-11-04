@@ -87,3 +87,31 @@ The same reader, continued, read round 2's fixes, the README's row and FREEZE-1'
 - Providers' handling of the probe schema.
 - §1 to §6 beyond the first screen, and the generated pages.
 - The board script on the merged tree.
+
+## Round 4: the diff of round 3's fixes (19beb1c7f..055832509)
+
+The same reader, continued, read round 3's fixes and the sections they touch. Three low, none high or medium, so the reading ends with this round, the fourth.
+
+| Id | Severity | Finding | How it was taken |
+|---|---|---|---|
+| T36 | low | FREEZE-1's note said the rule never stops a first scored start, and decides for TR-RR only on a restart; since every smoke run made with the client counts, the stopped ones that the note's own route leaves behind included, after rounds of new smoke runs it can (the reader simulated about 0.004 for TR8 at 2%, about 0.08 at 5%). | Taken: the note says the stopped smoke runs count and that the rule can then stop a first start, rarely at 2%, where a pin needs about 1.6 smoke runs on average; that it decides mostly before TR8's later contexts, from 8 choices for each smoke run; and that for TR-RR it decides at its start and on a restart. |
+| T37 | low | A smoke run was matched on the client alone, so one under a link not in the chain, with the same client, was counted, where scored calls under such a link were not. | Taken in code: a smoke run counts only where its meta names a link of the chain, its hashes are that link's, and that link has the client in force. The dry run adds a smoke run under a link not in the chain, not counted. FREEZE-8 §8 and §10 and FREEZE-1's note say so. |
+| T38 | low | `frozen()` checked freeze 1's chain second, after the T31 change, where its docstring and §10 say first. | Taken: freeze 1's chain is checked first again. |
+
+**Checked and found right**, by the reader's account:
+- No path lifts a stop but further calls of the pin or a new client. A dry-run-only addendum, a change of `served_as` and an addendum to freeze 1 that changes no file keep the evidence, and repeated smoke runs are pooled.
+- The designed lift by a new client resets other pins' evidence too. §8 states it with its reason; the reader leaves it as a design choice.
+- The counting's filters, run in scratch on records with no link, an off-chain link, a link before a client change, another test and another model. Smoke runs with no hashes are skipped, and `CLIENT` is the key in both hash lists.
+- `smoke_needed` and `run` against §7 and §8, and T31's command.
+- The dry run's result against §10.
+- FREEZE-1's note but for T36, FREEZE-8's header and first part, the record's next step, REVIEW-FREEZE's T21 row and round-3 table, the before-copies, and the board script's texts.
+
+**Not checked** in this round:
+- The dry run, Stage 0 and a Lean build were not run. The commands were not run on the real folders.
+- Providers' handling of the probe schema.
+- §1 to §6 and the generated pages.
+- The board script on the merged tree.
+
+**A slip, reported by the reader:** an import of `write_frozen.py` stopped on its first line, for want of an argument, before any write; the worktree was clean after.
+
+**Across the four rounds:** 38 findings (T1 to T38): three high (T1, T2, T18), eight medium (T3 to T5, T19 to T22, T30) and 27 low. The rounds stopped at the first with nothing of high or medium severity, the fourth, under the coordinator's limit of five.

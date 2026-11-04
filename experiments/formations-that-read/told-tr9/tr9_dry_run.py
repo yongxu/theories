@@ -948,8 +948,8 @@ def made(tmp, name, calls, answer, smoke=False, link="dry", hashes=H9, served=No
     folder = Path(tmp) / name
     folder.mkdir(parents=True)
     (folder / "meta.json").write_text(json.dumps({"kind": "smoke" if smoke else "scored", "test": test,
-                                                  "family": FAMILY, "calls": len(calls), "hashes": hashes,
-                                                  "links": {link: {}}}))
+                                                  "family": FAMILY, "calls": len(calls), "link": link,
+                                                  "hashes": hashes, "links": {link: {}}}))
     try:
         R.execute(calls, Stub(answer, served), T.open_sink(folder)[0], R.SpendGuard(1.0, 10 ** 6), (),
                   smoke=smoke, catalog=CATALOG, link=link, prepare=D.prepared, classify=D.classify)
@@ -966,8 +966,8 @@ def gate(tmp):
     whose choices were unreadable in 10%, no context may, and that stop stands where those calls were
     logged under an earlier link with the same client (a TR9 addendum changing only the dry run, say) and
     where a smoke run on other frozen files with the same client showed it; calls logged under a link
-    before a client change, a smoke run on another client and a smoke run another model answered are not
-    counted. TR8, from
+    before a client change, a smoke run on another client, one under a link not in the chain and one
+    another model answered are not counted. TR8, from
     stand-in folders made by freeze 1's own plan, prompts, parser and execute, with TR8's shapes (19
     conditions; the guard reads 15 under the abstract framing and 17 under the off-switch one): its
     probes unreadable in 10% stop nothing; its choices unreadable in 10% stop every context, and still do
@@ -986,9 +986,12 @@ def gate(tmp):
     sc_client = made(tmp, "gate-client-older-link", first, lambda x: INVALID if x["id"] in bc else a0(x),
                      link="client-older")
     bad_smoke = lambda x: INVALID if x["kind"] == "choice" and x["rep"] < 3 else a0(x)
-    sm_old = made(tmp, "gate-smoke-older", D.smoke_calls(FAMILY), bad_smoke, smoke=True, hashes=OLDER9)
+    sm_old = made(tmp, "gate-smoke-older", D.smoke_calls(FAMILY), bad_smoke, smoke=True, link="older",
+                  hashes=OLDER9)
     sm_client = made(tmp, "gate-smoke-client-older", D.smoke_calls(FAMILY), bad_smoke, smoke=True,
-                     hashes=CLIENT_OLDER9)
+                     link="client-older", hashes=CLIENT_OLDER9)
+    sm_off = made(tmp, "gate-smoke-off-chain", D.smoke_calls(FAMILY), bad_smoke, smoke=True,
+                  link="elsewhere", hashes=OLDER9)
     sm_other = made(tmp, "gate-smoke-another-model", D.smoke_calls(FAMILY), lambda x: INVALID, smoke=True,
                     served="another/model")
     none = Path(tmp) / "none"
@@ -1000,6 +1003,7 @@ def gate(tmp):
            "the same calls under a link before a client change": r9([sm], sc_client),
            "a smoke run on other frozen files, the same client": r9([sm, sm_old], none),
            "a smoke run on another client": r9([sm, sm_client], none),
+           "a smoke run under a link not in the chain, the same client": r9([sm, sm_off], none),
            "a smoke run another model answered": r9([sm, sm_other], none)}
     t8c = [D.ctx_id(c) for c in C1.contexts("tr8")]
     good = tr8_answer()
@@ -1042,6 +1046,8 @@ def gate(tmp):
         len(out["a smoke run on other frozen files, the same client"]["smoke_runs"]) == 2 and \
         starts("a smoke run on another client") == all9 and \
         len(out["a smoke run on another client"]["smoke_runs"]) == 1 and \
+        starts("a smoke run under a link not in the chain, the same client") == all9 and \
+        len(out["a smoke run under a link not in the chain, the same client"]["smoke_runs"]) == 1 and \
         starts("a smoke run another model answered") == all9 and \
         out["a smoke run another model answered"]["choices"] == 40 and \
         starts("TR8, probes unreadable in 10%") == all8 and \
@@ -1072,9 +1078,9 @@ def needed(tmp):
     five = set(sorted(five)[:5])
     pin = FAMILY.replace("/", "__")
 
-    def smoke_in(root, stamp, answer, hashes=H9, served=None):
+    def smoke_in(root, stamp, answer, hashes=H9, served=None, link="dry"):
         folder = made(Path(root) / "smoke", f"{pin}-2026010{stamp}T000000", calls, answer, smoke=True,
-                      hashes=hashes, served=served)
+                      hashes=hashes, served=served, link=link)
         with contextlib.redirect_stdout(io.StringIO()):
             T.smoke_report(folder, "stopped: another model" if served else None)
         return folder
@@ -1093,7 +1099,7 @@ def needed(tmp):
     w2 = ask("a second, clean, pooled with it", r)
     r2 = Path(tmp) / "needed-other-files"
     r2.mkdir()
-    smoke_in(r2, 1, a0, hashes=OLDER9)
+    smoke_in(r2, 1, a0, hashes=OLDER9, link="older")
     w3 = ask("one on other frozen files only", r2)
     first = [x for x in D.plan(FAMILY) if x["context"] == "abstract/compute"]
     bc = {x["id"] for i, x in enumerate([x for x in first if x["kind"] == "choice"]) if i % 10 == 0}
