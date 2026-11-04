@@ -59,7 +59,7 @@ Canonical source: [ReadingLoop.lean](../../../../experiments/integrated-correcti
 <a id="next--下一步"></a>
 ## Next
 
-The existence of a history policy as a choice along the histories it generates; probabilistic belief in the periphery; a frozen test of whether a language-model agent acts as a policy from its visible history, audited on the worlds possible after each history, and of two bridges for a reading it states (the plan's TR5); review by a person.
+The existence of a history policy as a choice along the histories it generates; probabilistic belief in the periphery; a run of the frozen test of whether a language-model agent acts as a policy from its visible history, audited on the worlds possible after each history, and of two bridges for a reading it states (TR5); review by a person.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -97,6 +97,7 @@ Aliases: `a kept reading`, `所守之读`, `the worlds possible after a history`
 - 30 October 2026: added (RF round 2), a reading kept by its update, with going on, and the reading its own history carries; after a cross-model review of the Lean with a re-check, every finding taken; study section 456.
 - 31 October 2026, board item RF, the tests' designs (study section 476): the next step names its test as designed, TR5 in experiments/formations-that-read, which can refute at most the correspondence that an agent acts as a policy from its visible history, and two bridges for a reading it states, never the law; no statement or declaration changed. PLAN.md re-pointed: since this record's reviewed hash the plan changed only where the tests' readers found it misstating the Lean (§3, §4, §8, §11, §12) and in §10, the tests; read against this record before re-pointing, nothing it says changed.
 - 1 November 2026, board item ND (study section 492): declarations renamed so that each name states what it means, not a command, a value or an ownership: GoodEnabled → LeadsIntoEnabled, PairwiseShared.good → PairwiseShared.leads, ReadingLoop.Good → ReadingLoop.LeadsInto, everything_good_iff → everything_leadsInto_iff, good_of_keeps → leadsInto_of_keeps, keeps_iff_good → keeps_iff_leadsInto, keeps_of_good → keeps_of_leadsInto, nothing_good → nothing_leadsInto. The statements are kept but for the names, and laws 2 to 6 and the counterexample follow them: an act leads into the task from a reading, or at a world, where they said it is good for it, a value the definition does not state; the claim is unchanged.
+- 4 November 2026, board item TR45: the test TR5 frozen with TR4 before any call to a model (experiments/formations-that-read/FREEZE-2.md), on RF's three pins with 9 episodes a course, a decline read as an act with no successor; not run. The law is unchanged; next_delta's step is now the frozen test's run, which waits on Ren's yes.
 
 </details>
 
