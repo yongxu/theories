@@ -50,7 +50,8 @@ import tr9_rule as TR
 import tr9_run as T
 import run as R                 # noqa: E402
 import conditions as C1         # noqa: E402  freeze 1's: TR8's conditions, for the stand-in TR8 folders
-from conditions import DECLINE, N_CALLS, PROBE_CALLS  # noqa: E402
+from conditions import DECLINE, N_CALLS, PROBE_CALLS, VALID_AT  # noqa: E402
+import rule                     # noqa: E402
 from rule import FILTERED, INVALID  # noqa: E402
 
 sys.path.insert(0, str(D.HERE.parent))
@@ -854,26 +855,33 @@ def classification():
 
 
 def smoke(tmp):
-    """The smoke run through the stub: as planned it goes on; a decline is read and does not stop it; an
-    unreadable choice, a probe lacking a reader answer, or another model's response stops it."""
+    """The smoke run through the stub, and the readability rule on its calls: as planned it goes on and
+    every context may start; a decline is read and does not stop it; an unreadable choice of 40 and a
+    probe lacking a reader answer do not stop it, and every context may still start; two unreadable
+    probes of 40 leave it going on but stop the contexts that compute (a projected 0.50 against 0.8);
+    another model's response stops it."""
     clean = System("counts-first", lambda c, ctx: uniform(c["counts_first"]))
     a0 = answerer(clean)
     calls = D.smoke_calls(FAMILY)
     first_choice = next(x["id"] for x in calls if x["kind"] == "choice")
+    two_probes = [x["id"] for x in calls if x["kind"] == "probe"][:2]
+    every = {D.ctx_id(c): True for c in D.contexts()}
+    given_only = {D.ctx_id(c): c["presentation"] == "given" for c in D.contexts()}
 
     def lacking(x):
         a = a0(x)
-        if x["kind"] != "probe":
+        if x["id"] != two_probes[0]:
             return a
         lab = next(iter(a["answers"]))
         return {**a, "answers": {**a["answers"], lab: dict(list(a["answers"][lab].items())[1:])}}
-    cases = (("as planned", a0, None, True),
-             ("a decline", lambda x: DECLINE if x["id"] == first_choice else a0(x), None, True),
-             ("an unreadable choice", lambda x: INVALID if x["id"] == first_choice else a0(x), None, False),
-             ("a probe lacking a reader answer", lacking, None, False),
-             ("another model", a0, "another/model", False))
+    cases = (("as planned", a0, None, True, every),
+             ("a decline", lambda x: DECLINE if x["id"] == first_choice else a0(x), None, True, every),
+             ("an unreadable choice", lambda x: INVALID if x["id"] == first_choice else a0(x), None, True, every),
+             ("two unreadable probes", lambda x: None if x["id"] in two_probes else a0(x), None, True, given_only),
+             ("a probe lacking a reader answer", lacking, None, True, every),
+             ("another model", a0, "another/model", False, None))
     res = {}
-    for name, answer, served, want in cases:
+    for name, answer, served, want, starts in cases:
         folder = Path(tmp) / ("smoke-" + name.replace(" ", "-"))
         folder.mkdir()
         (folder / "meta.json").write_text(json.dumps({"kind": "smoke", "test": D.TEST, "family": FAMILY,
@@ -888,11 +896,62 @@ def smoke(tmp):
         with contextlib.redirect_stdout(io.StringIO()):
             code = T.smoke_report(folder, stopped)
         rep = json.loads((folder / "smoke-report.json").read_text())
+        got = {c: v["start"] for c, v in rep["readability"]["contexts"].items()}
         res[name] = {"calls": len(calls), "go_on": code == 0, "declines": rep["declines"],
-                     "reader_right": rep["reader_right"], "as_it_should": (code == 0) == want}
+                     "reader_right": rep["reader_right"], "readability": rep["readability"],
+                     "as_it_should": (code == 0) == want and (starts is None or got == starts)}
     res["ok"] = all(v["as_it_should"] for v in res.values()) and \
-        res["as planned"]["reader_right"]["right"] == res["as planned"]["reader_right"]["of"] > 0
+        res["as planned"]["reader_right"]["right"] == res["as planned"]["reader_right"]["of"] == 40 and \
+        res["a probe lacking a reader answer"]["reader_right"]["right"] == 39 and len(calls) == 80
     return res
+
+
+def gate(tmp):
+    """The readability rule as `run` reads it, at a start: from a smoke folder with nothing unreadable
+    every context may start; with a scored folder whose probes were unreadable in 10% of calls, at a
+    later start the contexts that compute are stopped and those given may start. On freeze 1's TR8, the
+    rule reads a stand-in TR8 folder with TR8's shapes (19 conditions; the guard reads 15 under the
+    abstract framing, 17 under the off-switch one): with its probes unreadable in 10% of calls the
+    computed contexts are stopped; and before any TR8 call, TR9's smoke run on the pin with 4 of its 40
+    probes unreadable stops TR8's computed contexts too."""
+    a0 = answerer(System("counts-first", lambda c, ctx: uniform(c["counts_first"])))
+
+    def make(name, calls, answer, smoke=False):
+        folder = dry_folder(tmp, name, "smoke" if smoke else "scored")
+        R.execute(calls, Stub(answer), T.open_sink(folder)[0], R.SpendGuard(1.0, 10 ** 6), (), smoke=smoke,
+                  catalog=CATALOG, link="dry", prepare=D.prepared, classify=D.classify)
+        return folder
+    sm = make("gate-smoke", D.smoke_calls(FAMILY), a0, smoke=True)
+    first = [x for x in D.plan(FAMILY) if x["context"] == "abstract/compute"]
+    bad = {x["id"] for i, x in enumerate([x for x in first if x["kind"] == "probe"]) if i % 10 == 0}
+    sc = make("gate-scored", first, lambda x: None if x["id"] in bad else a0(x))
+    ctxs = [D.ctx_id(c) for c in D.contexts()]
+    before = T.readable(D.TEST, FAMILY, ctxs, smokes=[sm], scored=Path(tmp) / "none")
+    later = T.readable(D.TEST, FAMILY, ctxs, smokes=[sm], scored=sc)
+    good = tr8_answer()
+    seen = Counter()
+
+    def tr8_unread(meta):
+        a = good(meta)
+        if meta["kind"] == "probe":
+            seen[meta["context"]] += 1
+            if seen[meta["context"]] % 10 == 1:
+                return {lab: "not a number" for lab in a}
+        return a
+    t8_dir = tr8_folder(tmp, "gate-tr8", [D.ctx_id(c) for c in C1.contexts("tr8")], tr8_unread)
+    t8 = T.readable("tr8", FAMILY, [D.ctx_id(c) for c in C1.contexts("tr8")], smokes=[], scored=t8_dir)
+    bad8 = make("gate-smoke-unread", D.smoke_calls(FAMILY),
+                lambda x: None if x["kind"] == "probe" and x["rep"] < 2 else a0(x), smoke=True)
+    t8s = T.readable("tr8", FAMILY, [D.ctx_id(c) for c in C1.contexts("tr8")], smokes=[bad8],
+                     scored=Path(tmp) / "none")
+    out = {"from the smoke run": before, "after the first round, probes unreadable in 10%": later,
+           "TR8, probes unreadable in 10%": t8, "TR8 before any call, TR9's smoke run with 4 probes of 40 unreadable": t8s}
+    out["ok"] = all(v["start"] for v in before["contexts"].values()) and \
+        {c: v["start"] for c, v in later["contexts"].items()} == {c: c.endswith("given") for c in ctxs} and \
+        {c: v["start"] for c, v in t8["contexts"].items()} == {c: c.endswith("given") for c in t8["contexts"]} and \
+        [t8["contexts"][c]["guarded"] for c in ("abstract/compute", "off_switch/compute")] == [15, 17] and \
+        {c: v["start"] for c, v in t8s["contexts"].items()} == {c: c.endswith("given") for c in t8s["contexts"]}
+    return out
 
 
 FILES_STAGE0 = ("tr9.py", "tr9.json", "tr8.py", "tr_rr.py")
@@ -992,6 +1051,7 @@ def share_row(system, ctx, reps, iota=0.0, seed=""):
     rng = random.Random(f"{SEED}|shares|{system.name}|{D.ctx_id(ctx)}|{iota}|{seed}")
     compute = ctx["presentation"] == "compute"
     tally, labels, reading, hits_reported, modal = Counter(), Counter(), 0, 0, []
+    whole, unread = 0, Counter()
     for _ in range(reps):
         answers, probes = {}, {}
         for c in D.CONDS:
@@ -1003,6 +1063,12 @@ def share_row(system, ctx, reps, iota=0.0, seed=""):
                 probes[c["id"]] = [system.probe_call(c, ctx, rng) for _ in range(PROBE_CALLS)]
         u = TR.unit_verdict(D.CONDS, answers, probes if compute else None, compute, ctx["framing"], TR.SUPPORTED)
         tally[u["bridge"]] += 1
+        bad_c = {cid: sum(1 for a in v if a in (INVALID, FILTERED)) for cid, v in answers.items()}
+        bad_p = {cid: sum(1 for p in v if not rule.probe_first("tr8", TR.worths(p))) for cid, v in probes.items()}
+        unread["choice"] += sum(bad_c.values())
+        unread["probe"] += sum(bad_p.values())
+        whole += all(N_CALLS - n >= VALID_AT for n in bad_c.values()) and \
+            all(PROBE_CALLS - n >= VALID_AT for n in bad_p.values())
         for v in u["conditions"]:
             if v.get("status") == "contradicted":
                 labels[v["label"]] += 1
@@ -1010,7 +1076,11 @@ def share_row(system, ctx, reps, iota=0.0, seed=""):
                 modal.append(max(n for k, n in v["shares"].items() if k not in (INVALID, FILTERED)) / v["valid"])
         reading += u.get("reading") == "giving values avoided where the counts favour it"
         hits_reported += bool(u.get("guard_hits_reported"))
+    n_c = reps * len(D.CONDS) * N_CALLS
+    rc, rp = unread["choice"] / n_c, (unread["probe"] / (reps * len(D.CONDS) * PROBE_CALLS) if compute else 0.0)
+    projected = TR.within(rc, N_CALLS) ** len(D.CONDS) * TR.within(rp, PROBE_CALLS) ** len(D.CONDS)
     return {"frozen_rule": {k: round(tally[k] / reps, 4) for k in OUTCOMES},
+            "read_whole": round(whole / reps, 4), "readability_projected": round(projected, 4),
             "labels_of_contradicted_conditions": dict(labels),
             "giving_values_avoided": round(reading / reps, 4),
             "unresolved_with_a_guard_hit_reported": round(hits_reported / reps, 4),
@@ -1060,6 +1130,22 @@ def shares():
     return out, round(mean_s, 2)
 
 
+def projection_check(rows):
+    """The readability rule's projection, from each row's own rates of unreadable calls, against the
+    share of its simulated units read whole (every condition valid, every strict probe measured where
+    computed), within three standard errors and a hundredth, on every row with an unreadable call."""
+    out = {"rows": []}
+    for r in rows:
+        if r["read_whole"] < 1.0:
+            p, n = r["read_whole"], r["reps"]
+            tol = 3 * (p * (1 - p) / n) ** 0.5 + 0.01
+            out["rows"].append({"system": r["system"], "context": r["context"], "invalid_rate": r["invalid_rate"],
+                                "read_whole": p, "projected": r["readability_projected"],
+                                "within": abs(p - r["readability_projected"]) <= tol})
+    out["ok"] = bool(out["rows"]) and all(x["within"] for x in out["rows"])
+    return out
+
+
 def before_premise(rows):
     """TR8's share supported (freeze 1's dry run, the law at sigma 0.10 with 5% lapses, abstract/compute)
     times TR9's (the same law, this dry run), at each invalid rate: the power before TR8's premise."""
@@ -1093,15 +1179,18 @@ def main():
         out["stops"] = stops(tmp, a0)
         out["chain"] = chain(tmp)
         out["smoke"] = smoke(tmp)
+        out["readability_gate"] = gate(tmp)
     out["classification"] = classification()
     print(f"checks: {time.time() - t0:.0f} s", flush=True)
     out["shares"], out["mean_scale_S"] = shares()
     out["largest_difference_from_stage0"] = max(r["largest_difference"] for r in out["shares"] if "largest_difference" in r)
     out["before_tr8s_premise"] = before_premise(out["shares"])
+    out["readability_projection"] = projection_check(out["shares"])
     print(f"shares: {time.time() - t0:.0f} s", flush=True)
     out["code_unchanged_during_the_run"] = code_hashes() == out["code_hashes"]
     out["ok"] = out["code_path_all_equal"] and out["code_unchanged_during_the_run"] and all(
-        out[k]["ok"] for k in ("premise", "faults", "remade", "stops", "chain", "smoke", "classification"))
+        out[k]["ok"] for k in ("premise", "faults", "remade", "stops", "chain", "smoke", "readability_gate",
+                               "classification", "readability_projection"))
     (HERE / "results").mkdir(exist_ok=True)
     (HERE / "results" / "dry-run.json").write_text(json.dumps(out, indent=1, ensure_ascii=False) + "\n")
     print(f"ok {out['ok']}; {time.time() - t0:.0f} s")

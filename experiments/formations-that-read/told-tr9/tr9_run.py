@@ -1,7 +1,8 @@
 """The run of TR9 and its reading, frozen with the rule, on freeze 1's harness (FREEZE-8.md).
 
     python3 -B tr9_run.py plan                                   # the calls and the estimate, no call
-    python3 -B tr9_run.py smoke --family PIN --max-usd 1         # the release's first step for a pin
+    python3 -B tr9_run.py smoke --family PIN --max-usd 2         # the release's first step for a pin
+    python3 -B tr9_run.py readability --test tr8 --family PIN --contexts all   # the rule, no call
     python3 -B tr9_run.py run --family PIN --contexts abstract/compute --max-usd 8 [--parallel 8]
     python3 -B tr9_run.py run --family PIN --contexts all --max-usd 20 [--parallel 8]
     python3 -B tr9_run.py verdicts results/<pin folder>          # writes verdicts.json beside calls.jsonl
@@ -13,9 +14,12 @@ of every file the newest link of this freeze's chain lists (FROZEN.sha256 here, 
 addenda/FROZEN-k.sha256; the files of freeze 1 it imports among them) equals its hash and its commit;
 `run` also unless the pin's latest smoke run here passed on those hashes, and unless TR8's premise
 holds for every context asked: TR8's abstract unit of the same presentation, for the same pin, read
-by freeze 1's reading from freeze 1's folder (told/results/tr8/<pin>) and supported. `run` writes
-only into results/<pin>/, one folder per pin whatever contexts a run makes, in the plan's one order
-(so a first round is the start of the full run); `smoke` only into smoke/. Freeze 1's run.resume and
+by freeze 1's reading from freeze 1's folder (told/results/tr8/<pin>) and supported; and unless the
+readability rule (tr9_rule.readability, from the smoke run and every scored call already made) lets
+every context asked start. `readability` gives the rule for TR9 or, as FREEZE-1.md's dated note asks,
+for freeze 1's TR8 and TR-RR, making no call. `run` writes only into results/<pin>/, one folder per
+pin whatever contexts a run makes, the full plan's calls of the contexts asked in its one order;
+`smoke` only into smoke/. Freeze 1's run.resume and
 run.execute make every call, with their stops (a call no retry answers, another model, a moved
 catalog, FILTERED_RUN filtered answers in a row, a request whose messages are not the frozen prompt,
 a failed attempt returned as an answer, the spend guard), their catalog reads and their log, each
@@ -51,6 +55,7 @@ import client as cl             # noqa: E402  freeze 1's
 import rule                     # noqa: E402
 import run as R                 # noqa: E402
 import verdicts as VD           # noqa: E402
+import conditions as C1         # noqa: E402
 from conditions import DECLINE  # noqa: E402
 
 HERE = Path(__file__).resolve().parent
@@ -375,18 +380,20 @@ def probe_read(cond, probe):
 
 def smoke_report(folder, stopped=None):
     """The smoke run's report and its stop rule: every call answered by the pin's model while the
-    catalog names the frozen snapshot, and read (a choice an option or a decline, a probe whole: see
-    probe_read), nothing filtered and no provider rejecting the request. Reported: the served models,
-    providers and tiers, the system fingerprints, the catalog's slugs, the declines, whether each probe
-    states the reader rightly, tokens and cost per call by kind, and the projection for the full plan
-    and its first round, abstract/compute. Exit 0 to go on, 2 to stop before any scored call."""
+    catalog names the frozen snapshot, and no provider rejecting the request. A choice neither an option
+    nor a decline, and a probe not read whole (probe_read), are listed and do not stop it alone: the
+    readability rule reads their rates (tr9_rule.readability), here and at every start of `run`.
+    Reported: the served models, providers and tiers, the system fingerprints, the catalog's slugs, the
+    declines, whether each probe states the reader rightly, the readability of every context, tokens and
+    cost per call by kind, and the projection for the full plan and its first round, abstract/compute.
+    Exit 0 to go on, 2 to stop before any scored call."""
     folder = Path(folder)
     meta = json.loads((folder / "meta.json").read_text())
     recs = R.logged(folder)
     fam, slug = meta["family"], R.pin(meta["family"])["canonical_slug"]
-    bad = [r["id"] for r in recs if (r["kind"] == "choice" and r["answer"] in (rule.INVALID, rule.FILTERED))
-           or (r["kind"] == "probe" and not probe_read(D.SMOKE, r["probe"])) or not R.served_ok(fam, r["response"])
-           or r.get("catalog") != slug]
+    bad = [r["id"] for r in recs if not R.served_ok(fam, r["response"]) or r.get("catalog") != slug]
+    unread = [r["id"] for r in recs if (r["kind"] == "choice" and r["answer"] in (rule.INVALID, rule.FILTERED))
+              or (r["kind"] == "probe" and not probe_read(D.SMOKE, r["probe"]))]
     tok = defaultdict(list)
     for r in recs:
         u = (r["response"] or {}).get("usage") or {}
@@ -400,7 +407,9 @@ def smoke_report(folder, stopped=None):
         proj[name] = ({"calls": len(calls), "usd": round(sum(n[k] * per_call[k]["usd"] for k in n), 2),
                        "tokens": round(sum(n[k] * (per_call[k]["in"] + per_call[k]["out"]) for k in n))}
                       if all(k in per_call for k in n) else {"calls": len(calls), "usd": "not measured"})
-    report = {"family": fam, "calls": len(recs), "planned": meta["calls"], "stopped": stopped, "unread": bad,
+    report = {"family": fam, "calls": len(recs), "planned": meta["calls"], "stopped": stopped,
+              "not_the_pin": bad, "unread": unread,
+              "readability": TR.readability(D.TEST, [D.ctx_id(c) for c in D.contexts()], recs),
               "served_by": dict(Counter(str(R.served_model(r["response"])) for r in recs)),
               "served_by_provider": dict(Counter(str(served_provider(r["response"])) for r in recs)),
               "served_at_tier": dict(Counter(str(served_tier(r["response"])) for r in recs)),
@@ -415,6 +424,30 @@ def smoke_report(folder, stopped=None):
     (folder / "smoke-report.json").write_text(json.dumps(report, indent=1) + "\n")
     print(json.dumps(report, indent=1))
     return 0 if report["go_on"] else 2
+
+
+def latest_smoke(root, family):
+    found = sorted((Path(root) / "smoke").glob(family.replace("/", "__") + "-*"))
+    return found[-1] if found else None
+
+
+def readable(test, family, contexts, smokes=None, scored=None):
+    """The readability rule for one pin and test (FREEZE-8.md, section 8; for freeze 1's TR8 and TR-RR,
+    FREEZE-1.md's dated note): the pin's rates over every call of its latest smoke runs on freeze 1's
+    harness, freeze 1's and this freeze's, and every call of the test already made in its folder. Every
+    log must read whole."""
+    if smokes is None:
+        smokes = [f for f in (latest_smoke(R.HERE, family), latest_smoke(HERE, family)) if f is not None]
+    if scored is None:
+        scored = (HERE / "results" if test == D.TEST else R.HERE / "results" / test) / family.replace("/", "__")
+    recs = []
+    for f in list(smokes) + [scored]:
+        if Path(f).exists():
+            log_whole(f)
+            recs += [r for r in R.logged(f) if f != scored or r.get("test") == test]
+    out = TR.readability(test, contexts, recs)
+    out.update({"test": test, "family": family, "smokes": [str(f) for f in smokes], "scored": str(scored)})
+    return out
 
 
 def estimate(family):
@@ -446,6 +479,10 @@ def main(argv=None):
     rn.add_argument("--parallel", type=int, default=1)
     vd = sub.add_parser("verdicts")
     vd.add_argument("folder")
+    rb = sub.add_parser("readability")
+    rb.add_argument("--test", choices=(D.TEST, "tr8", "tr_rr"), required=True)
+    rb.add_argument("--family", required=True)
+    rb.add_argument("--contexts", required=True)
     md = sub.add_parser("mend")
     md.add_argument("folder")
     md.add_argument("--cause", required=True)
@@ -466,6 +503,14 @@ def main(argv=None):
     if a.cmd == "mend":
         mend(a.folder, a.cause)
         return
+    if a.cmd == "readability":
+        cs = [D.ctx_id(c) for c in (D.contexts() if a.test == D.TEST else C1.contexts(a.test))]
+        want = cs if a.contexts == "all" else a.contexts.split(",")
+        if set(want) - set(cs):
+            raise SystemExit(f"no such context of {a.test}: {sorted(set(want) - set(cs))}")
+        out = readable(a.test, a.family, want)
+        print(json.dumps(out, indent=1))
+        sys.exit(0 if all(v["start"] for v in out["contexts"].values()) else 2)
     fc = frozen()
     if a.cmd == "smoke":
         R.pin(a.family)
@@ -493,6 +538,14 @@ def main(argv=None):
         if refused:
             raise SystemExit(f"TR8's premise does not hold for {refused} (TR8's abstract unit of the same "
                              f"presentation, for {a.family}: {premise['bridge']}); no call made")
+        legible = readable(D.TEST, a.family, want, smokes=[f for f in (latest_smoke(R.HERE, a.family),
+                                                                        HERE / "smoke" / smoke) if f is not None])
+        low = sorted(c for c, v in legible["contexts"].items() if not v["start"])
+        if low:
+            raise SystemExit(f"the readability rule stops {low} for {a.family}: projected "
+                             f"{ {c: legible['contexts'][c]['projected'] for c in low} } below {TR.READABLE_AT}, "
+                             f"choices unreadable at {legible['choice_unreadable']}, probes at "
+                             f"{legible['probe_unreadable']} (FREEZE-8.md, section 8); no call made")
         meta = {"kind": "scored", "test": D.TEST, "family": a.family, "seed": D.SEED,
                 "freeze_commit": fc["freeze_commit"], "head": fc["head"], "pin": R.pin(a.family), "smoke": smoke,
                 "links": {fc["link"]: fc["hashes"]}, "link_commits": {fc["link"]: fc["commits"][fc["link"]]}}
@@ -515,7 +568,7 @@ def main(argv=None):
                 mp.write_text(json.dumps(old, indent=1) + "\n")
         else:
             mp.write_text(json.dumps(meta, indent=1) + "\n")
-        record_start(out, fc["link"], {"contexts": want, "tr8_premise": premise})
+        record_start(out, fc["link"], {"contexts": want, "tr8_premise": premise, "readability": legible})
         sink, logged_ids = open_sink(out)
         done = R.resume(out, a.family, sink, R.catalog_slug)      # calls outside good reads made again
         guard = R.SpendGuard(a.max_usd, len(calls) + len(logged_ids))

@@ -44,7 +44,8 @@ FRAMINGS = ("abstract", "social")
 PRESENTATIONS = ("compute", "given")
 READER_PROBE_AT = tr8.READER_PROBE_AT       # right reader answers of PROBE_CALLS, in each strict condition
 GO_ON, STOP = "go on", "stop"              # a probe's reader answers, read in either framing's words
-SMOKE_CALLS = 2                            # per context and kind, on the smoke table
+SMOKE_CHOICE, SMOKE_PROBE = 10, 20        # per context, on the smoke table: 40 choices and 40 probes a pin,
+                                           # the rates the readability rule reads (FREEZE-8.md, section 8)
 
 CONDS, EXTRA = tr9.design_tables()
 
@@ -413,7 +414,7 @@ def plan(family, ctxs=None, smoke=False):
     calls where the system computes; in one seeded interleaved order (freeze 1's plan, on TR9's
     conditions and contexts)."""
     conds = [SMOKE] if smoke else CONDS
-    n_choice, n_probe = (SMOKE_CALLS, SMOKE_CALLS) if smoke else (N_CALLS, PROBE_CALLS)
+    n_choice, n_probe = (SMOKE_CHOICE, SMOKE_PROBE) if smoke else (N_CALLS, PROBE_CALLS)
     calls = []
     for ctx in (ctxs or contexts()):
         for c in conds:

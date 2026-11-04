@@ -20,9 +20,12 @@ VALID_AT valid answers, as in freeze 1, which is checked first. The bridge's rea
 premises is kept beside a void it would otherwise give, reported only.
 """
 
+from math import comb
+
 import tr9_design as D          # puts freeze 1's told/ on the path
 import rule                     # noqa: E402  freeze 1's
-from conditions import PROBE_CALLS   # noqa: E402
+import conditions as C1         # noqa: E402
+from conditions import N_CALLS, PROBE_CALLS, VALID_AT   # noqa: E402
 
 READER_PROBE_AT = D.READER_PROBE_AT
 SUPPORTED = "supported"
@@ -77,3 +80,56 @@ def unit_verdict(conds, answers, probes, compute, framing, tr8_premise):
     if res["bridge"] == "contradicted" and set(res["contradicted_at"]) <= set(GIVE_FIRST):
         res["reading"] = "giving values avoided where the counts favour it"
     return res
+
+
+# ----------------------------------------------------------------------------------------------
+# The readability rule (FREEZE-8.md, section 8): a scored run starts only where reading alone is
+# projected to leave at most a fifth of its units void or unresolved. It reads nothing of what a
+# system chooses or computes, only whether its answers can be read: freeze 1's validity (at least
+# VALID_AT valid choices of N_CALLS in every condition) and its guard (at least VALID_AT readable
+# probes of PROBE_CALLS in every condition the guard reads, the strict ones where the system computes).
+# ----------------------------------------------------------------------------------------------
+
+READABLE_AT = 0.8
+
+
+def within(rate, n, at=VALID_AT):
+    """The chance that n calls, each unreadable with probability rate, leave at least `at` readable."""
+    return sum(comb(n, k) * rate ** k * (1 - rate) ** (n - k) for k in range(n - at + 1))
+
+
+def shape(test, framing):
+    """A unit's conditions and those the guard reads (strict), by freeze 1's roles for its tests."""
+    conds = D.CONDS if test == D.TEST else C1.conditions(test)
+    role_of = rule.roles("tr8" if test == D.TEST else test, framing)
+    return len(conds), sum(1 for c in conds if role_of(c) == "strict")
+
+
+def unreadable(test, rec):
+    """A logged call no reading can use: a choice invalid or filtered; a probe whose numbers rank no
+    option first (freeze 1's probe_first, on TR9's numbers for TR9)."""
+    if rec["kind"] == "choice":
+        return rec["answer"] in (rule.INVALID, rule.FILTERED)
+    nums = worths(rec.get("probe")) if test == D.TEST else rec.get("probe")
+    return not rule.probe_first("tr8" if test == D.TEST else test, nums)
+
+
+def readability(test, contexts, recs):
+    """The pin's rates of unreadable choices and probes over the logged calls given (each read as its
+    own test's), and per context of the test asked the projected share of its unit not lost to
+    reading, calls unreadable independently at those rates."""
+    n = {k: [r for r in recs if r["kind"] == k] for k in ("choice", "probe")}
+    rate = {k: (sum(1 for r in v if unreadable(r["test"], r)) / len(v)) if v else None for k, v in n.items()}
+    out = {"choices": len(n["choice"]), "probes": len(n["probe"]), "choice_unreadable": rate["choice"],
+           "probe_unreadable": rate["probe"], "bound": READABLE_AT, "contexts": {}}
+    for ctx in contexts:
+        framing, presentation = ctx.split("/")
+        compute = presentation == "compute"
+        nc, ng = shape(test, framing)
+        if rate["choice"] is None or (compute and rate["probe"] is None):
+            out["contexts"][ctx] = {"projected": None, "start": False, "why": "not measured"}
+            continue
+        p = within(rate["choice"], N_CALLS) ** nc * (within(rate["probe"], PROBE_CALLS) ** ng if compute else 1.0)
+        out["contexts"][ctx] = {"conditions": nc, "guarded": ng if compute else 0, "projected": round(p, 4),
+                                "start": p >= READABLE_AT}
+    return out
