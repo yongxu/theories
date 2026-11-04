@@ -540,8 +540,8 @@
     "zh": "纯核，公理报告皆空：引 HeldForReading，用其模型、移后之值、规则、所缺、格、offPart 与最少所缺，经之引 Blanket（Blanketed、其历程与 agent_through_sensory）、Learning（Lumped）、Narrowing 之滤之引理与 Law.orbit；诸总用 Flow、Population、Dissipation 之引理与前导之消去、减法引理，一减法引理之库形带 propext，用其核心之形；不用 omega 与 simp；诸例以 rfl 或 decide 定。"
   },
   "next_delta": {
-    "en": "A holding formation planning over several steps among informing, revaluing and holding, and its learning about the reading formation; the reading formation's learning beyond filtering by what it is shown; a misleading demonstration and a recipient's belief, toward deception; noisy answers and continuous beliefs in the periphery; an institution's rule of reading; review by a person.",
-    "zh": "持之形成于告、改值与持之间多步之谋，及其于读之形成之学；读之形成依所示而滤以外之学；误导之示与受者之信，以向欺；外围之有噪之答与连续之信；制度之读之规则；人之审查。"
+    "en": "A holding formation planning over several steps among informing, revaluing and holding, and its learning about the reading formation; the reading formation's learning beyond filtering by what it is shown; a misleading demonstration and a recipient's belief, toward deception; noisy answers and continuous beliefs in the periphery; an institution's rule of reading; a run of the frozen test of whether a system told a reader's values and weights, what a demonstration shows it and what an input does chooses among waiting, showing and giving values as the counts rank under its objective (TR9, only where TR8's bridge holds for the same pin); review by a person.",
+    "zh": "持之形成于告、改值与持之间多步之谋，及其于读之形成之学；读之形成依所示而滤以外之学；误导之示与受者之信，以向欺；外围之有噪之答与连续之信；制度之读之规则；冻结检验之运行：系统受告读者之值与权、示之所显与入之所为，于其目标下择待、示与予值是否如计数所排（TR9，唯于同一钉之 TR8 之桥成立处）；人之审查。"
   },
   "correspondence": {
     "en": "In counts: informed_le is, for this decision, the deterministic-refinement, fixed-decision direction of Blackwell's (1953) comparison; with a shared model, SplitsKeep is the counterpart, along the cells of the listing's partitions, of Bayesian persuasion's convexity condition for full disclosure (Kamenica and Gentzkow 2011), no optimal signal or equilibrium represented. AI reading: under a reference unlike the valuation, possible incentives to withhold and to revise (if the update reaches a gaining valuation), before costs; coarse equilibrium communication (Crawford and Sobel 1982) differs. own_least with revalued_lowers_iff is a one-decision counterpart of current-reward-function evaluation's preservation incentive for an agent anticipating time inconsistency (Everitt et al. 2021, Claim 2): on a shared model, a reason to keep the valuation from a revision deciding a listed cell against its strict weighted preference; no path-specific objective (Farquhar et al. 2022); answer_constant is the off-switch game's Equation 1 for a deterministic constant policy (Hadfield-Menell et al. 2017); the routes relate to induced preference shifts (Carroll et al. 2022). Readings, not containments.",
@@ -913,6 +913,10 @@
     {
       "en": "31 October 2026, board item RF, the tests' designs (study section 476): PLAN.md re-pointed: since this record's reviewed hash the plan changed only where the tests' readers found it misstating the Lean (§3, §4, §8, §11, §12) and in §10, the tests; read against this record before re-pointing, nothing it says changed.",
       "zh": "2026年10月31日，工作板条目 RF，诸检验之设计（研究第 476 节）：计划 PLAN.md 重新指向：自本记录所审哈希以来，计划只于检验之读者见其误述 Lean 之处（§3、§4、§8、§11、§12）及 §10 诸检验而变；重新指向前已对本记录读之，其所言无一改变。"
+    },
+    {
+      "en": "4 November 2026, board item RFZ: the test TR9 frozen before any call to a model (experiments/formations-that-read/FREEZE-8.md), on Stage 0's eleven strict conditions in two framings and two presentations, each unit read only where TR8's abstract unit for the same pin and presentation was supported and, where worths are computed, the system states the reader's answers; not run. The law is unchanged; next_delta now names the frozen test's run, which waits on Ren's yes.",
+      "zh": "2026年11月4日，工作板条目 RFZ：检验 TR9 于任一模型调用之前冻结（experiments/formations-that-read/FREEZE-8.md），于 Stage 0 之十一严格条件、二框架与二呈现，每单元唯于同一钉与同一呈现之 TR8 抽象单元得支持处，且于须自算其值处系统述读者之答，乃读；未运行。律不变；next_delta 今列冻结检验之运行，待 Ren 之可。"
     }
   ]
 }

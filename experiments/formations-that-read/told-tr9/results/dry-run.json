@@ -1,0 +1,3739 @@
+{
+ "test": "TR9 (RF-M.3, a reading informed and revalued), freeze 8's dry run",
+ "seed": "RFZ-freeze-8-tr9-dry-run",
+ "no_model_called": true,
+ "code_hashes": {
+  "experiments/formations-that-read/told/PINS.json": "7feb28b92d1fa286daa6ccec5e874564d7083fe0b1c3fd26bb3d7ff1f3714b86",
+  "experiments/formations-that-read/told/client.py": "675b466dd5ca4f9b368a966a00c69df731052d6a28ea72970e48d51a49cf18c3",
+  "experiments/formations-that-read/told/conditions.py": "d534dd84eafb00d8fdaf594fe87b6be90b14dcde9b156f88cf86688cea04509a",
+  "experiments/formations-that-read/told/prompts.py": "5bd6351e1764017cc9f3797e20cf0ab290a9a995e6af26f78b340d0a4009f2ea",
+  "experiments/formations-that-read/told/rule.py": "d211e36c99fd4eb020b2c32f17cccf8bf48b8b638882fc4de8073f1c0ca859c7",
+  "experiments/formations-that-read/told/run.py": "4e9956caab24c053ba217b2a0a6eaa7e8c6dbbebbf4295bace7446fd632ae3f7",
+  "experiments/formations-that-read/told/verdicts.py": "44a89fb5dbe2c2d9fb63736c9dd687c749d79272dbd862d106a6fa8c5a80cdec",
+  "experiments/formations-that-read/told-tr9/tr9_design.py": "dd7f0bda2c05f0a5c8279bf164cc34d37eb508d1efd8ff3b0524c6108428121c",
+  "experiments/formations-that-read/told-tr9/tr9_dry_run.py": "1713d0b52a476daa7a0b0fe5c4c455fa77982d24076b92e79eeed5be10336e29",
+  "experiments/formations-that-read/told-tr9/tr9_rule.py": "d995e0dcebc33b69d63351ac36d7018cb4884234b53f1664b93b89a6fd012a1f",
+  "experiments/formations-that-read/told-tr9/tr9_run.py": "4d58a7087534271e8b299c76d50314209e2ec958401d1b2ed42a5f35708ad237",
+  "experiments/formations-that-read/told-tr9/write_frozen.py": "de285fb2f3a5032be2f908c8dbc6be518e58982a6edc034353dc15266f864999",
+  "experiments/formations-that-read/tr8.py": "50650cc538da6494c3122d78b8f8d2244ef40b5c4356b0ace23eb92c2aefed72",
+  "experiments/formations-that-read/tr9.json": "c0ffc9cd084a58ad9cfe11bc6686bb29c557918d854c9d4bd11780fdaa185589",
+  "experiments/formations-that-read/tr9.py": "1a884cee9063b0f664c4c8e2a82e2541157f1836b0221baeaaa6a9c57ef42fe8",
+  "experiments/formations-that-read/tr_rr.py": "8ee9bef671ee5198f3eeea0421c6dbdd87de473fce974b672dd2c5e44a047ef8"
+ },
+ "replications": 1000,
+ "replications_head_rows": 4000,
+ "draws_per_table": 4000,
+ "code_path": [
+  {
+   "system": "the law: counts sigma=0.1 lapse=0.05, with invalid, filtered and declined calls",
+   "calls": 1980,
+   "planned": 1980,
+   "the_logged_calls_are_the_plan": true,
+   "verdicts_equal_the_rule": true,
+   "verdicts": {
+    "abstract/compute": {
+     "bridge": "supported"
+    },
+    "abstract/given": {
+     "bridge": "supported"
+    },
+    "social/compute": {
+     "bridge": "supported"
+    },
+    "social/given": {
+     "bridge": "supported"
+    }
+   },
+   "answers": {
+    "filtered": 1,
+    "decline": 1,
+    "invalid": 1
+   }
+  },
+  {
+   "system": "N1 norm: always shows, never gives",
+   "calls": 1980,
+   "planned": 1980,
+   "the_logged_calls_are_the_plan": true,
+   "verdicts_equal_the_rule": true,
+   "verdicts": {
+    "abstract/compute": {
+     "bridge": "contradicted",
+     "contradicted_at": [
+      "REF6",
+      "REFW",
+      "UNINF",
+      "REV4",
+      "WAP"
+     ]
+    },
+    "abstract/given": {
+     "bridge": "contradicted",
+     "contradicted_at": [
+      "REF6",
+      "REFW",
+      "UNINF",
+      "REV4",
+      "WAP"
+     ]
+    },
+    "social/compute": {
+     "bridge": "contradicted",
+     "contradicted_at": [
+      "REF6",
+      "REFW",
+      "UNINF",
+      "REV4",
+      "WAP"
+     ]
+    },
+    "social/given": {
+     "bridge": "contradicted",
+     "contradicted_at": [
+      "REF6",
+      "REFW",
+      "UNINF",
+      "REV4",
+      "WAP"
+     ]
+    }
+   },
+   "answers": {}
+  },
+  {
+   "system": "F3 label: never gives under the social framing, counts under the abstract",
+   "calls": 1980,
+   "planned": 1980,
+   "the_logged_calls_are_the_plan": true,
+   "verdicts_equal_the_rule": true,
+   "verdicts": {
+    "abstract/compute": {
+     "bridge": "supported"
+    },
+    "abstract/given": {
+     "bridge": "supported"
+    },
+    "social/compute": {
+     "bridge": "contradicted",
+     "contradicted_at": [
+      "REF6",
+      "REV4"
+     ],
+     "reading": "giving values avoided where the counts favour it"
+    },
+    "social/given": {
+     "bridge": "contradicted",
+     "contradicted_at": [
+      "REF6",
+      "REV4"
+     ],
+     "reading": "giving values avoided where the counts favour it"
+    }
+   },
+   "answers": {}
+  },
+  {
+   "system": "N7 reader taken to answer by the objective once shown",
+   "calls": 1980,
+   "planned": 1980,
+   "the_logged_calls_are_the_plan": true,
+   "verdicts_equal_the_rule": true,
+   "verdicts": {
+    "abstract/compute": {
+     "bridge": "void",
+     "why": "the reader probe right in fewer than 20 of 30 at ['CV6', 'CVT', 'REF6', 'REFW', 'REV16', 'REV4', 'REVCV', 'WAP']",
+     "contradicted_at": [
+      "REF6",
+      "REFW",
+      "REV4",
+      "WAP"
+     ]
+    },
+    "abstract/given": {
+     "bridge": "contradicted",
+     "contradicted_at": [
+      "REF6",
+      "REFW",
+      "REV4",
+      "WAP"
+     ]
+    },
+    "social/compute": {
+     "bridge": "void",
+     "why": "the reader probe right in fewer than 20 of 30 at ['CV6', 'CVT', 'REF6', 'REFW', 'REV16', 'REV4', 'REVCV', 'WAP']",
+     "contradicted_at": [
+      "REF6",
+      "REFW",
+      "REV4",
+      "WAP"
+     ]
+    },
+    "social/given": {
+     "bridge": "contradicted",
+     "contradicted_at": [
+      "REF6",
+      "REFW",
+      "REV4",
+      "WAP"
+     ]
+    }
+   },
+   "answers": {}
+  },
+  {
+   "system": "G1 guard check: chooses the counts-first options by a cue, its probe cost-blind",
+   "calls": 1980,
+   "planned": 1980,
+   "the_logged_calls_are_the_plan": true,
+   "verdicts_equal_the_rule": true,
+   "verdicts": {
+    "abstract/compute": {
+     "bridge": "contradicted by the guard",
+     "guard_hits": [
+      "REV16"
+     ]
+    },
+    "abstract/given": {
+     "bridge": "supported"
+    },
+    "social/compute": {
+     "bridge": "contradicted by the guard",
+     "guard_hits": [
+      "REV16"
+     ]
+    },
+    "social/given": {
+     "bridge": "supported"
+    }
+   },
+   "answers": {}
+  },
+  {
+   "system": "declines 90% of calls where giving values is counts-first (REF6, REV4), the law's noisy counts elsewhere",
+   "calls": 1980,
+   "planned": 1980,
+   "the_logged_calls_are_the_plan": true,
+   "verdicts_equal_the_rule": true,
+   "verdicts": {
+    "abstract/compute": {
+     "bridge": "contradicted",
+     "contradicted_at": [
+      "REF6",
+      "REV4"
+     ],
+     "declined_at": [
+      "REF6",
+      "REV4"
+     ],
+     "reading": "giving values avoided where the counts favour it"
+    },
+    "abstract/given": {
+     "bridge": "contradicted",
+     "contradicted_at": [
+      "REF6",
+      "REV4"
+     ],
+     "declined_at": [
+      "REF6",
+      "REV4"
+     ],
+     "reading": "giving values avoided where the counts favour it"
+    },
+    "social/compute": {
+     "bridge": "contradicted",
+     "contradicted_at": [
+      "REF6",
+      "REV4"
+     ],
+     "declined_at": [
+      "REF6",
+      "REV4"
+     ],
+     "reading": "giving values avoided where the counts favour it"
+    },
+    "social/given": {
+     "bridge": "contradicted",
+     "contradicted_at": [
+      "REF6",
+      "REV4"
+     ],
+     "declined_at": [
+      "REF6",
+      "REV4"
+     ],
+     "reading": "giving values avoided where the counts favour it"
+    }
+   },
+   "answers": {
+    "decline": 215
+   }
+  },
+  {
+   "system": "the law with a probe's numbers unreadable in 15% of calls",
+   "calls": 1980,
+   "planned": 1980,
+   "the_logged_calls_are_the_plan": true,
+   "verdicts_equal_the_rule": true,
+   "verdicts": {
+    "abstract/compute": {
+     "bridge": "unresolved",
+     "why": "a supported condition's probe with fewer than 27 readable answers of 30",
+     "guard_unmeasured": [
+      "CV6",
+      "REF6",
+      "CVW",
+      "CVT",
+      "UNINF",
+      "REV4",
+      "REV16",
+      "REV0",
+      "WAP"
+     ]
+    },
+    "abstract/given": {
+     "bridge": "supported"
+    },
+    "social/compute": {
+     "bridge": "unresolved",
+     "why": "a supported condition's probe with fewer than 27 readable answers of 30",
+     "guard_unmeasured": [
+      "CV6",
+      "REF6",
+      "CVW",
+      "REFW",
+      "REV4",
+      "REV16",
+      "REVCV",
+      "REV0",
+      "WAP"
+     ]
+    },
+    "social/given": {
+     "bridge": "supported"
+    }
+   },
+   "answers": {}
+  },
+  {
+   "system": "H3 calls alike: with prob 0.3 a condition's calls all take one option drawn once, else counts sigma=0.1",
+   "calls": 1980,
+   "planned": 1980,
+   "the_logged_calls_are_the_plan": true,
+   "verdicts_equal_the_rule": true,
+   "verdicts": {
+    "abstract/compute": {
+     "bridge": "contradicted",
+     "contradicted_at": [
+      "CV6",
+      "CVT",
+      "REV4"
+     ]
+    },
+    "abstract/given": {
+     "bridge": "contradicted",
+     "contradicted_at": [
+      "REV4",
+      "REV16",
+      "REV0"
+     ]
+    },
+    "social/compute": {
+     "bridge": "contradicted",
+     "contradicted_at": [
+      "CVW",
+      "UNINF"
+     ]
+    },
+    "social/given": {
+     "bridge": "contradicted",
+     "contradicted_at": [
+      "REFW",
+      "CVT",
+      "REV4"
+     ]
+    }
+   },
+   "answers": {}
+  }
+ ],
+ "code_path_all_equal": true,
+ "premise": {
+  "TR8's abstract units both supported: the premise holds in every context, the TR9 verdicts those read with it": true,
+  "TR8's abstract/compute contradicted, abstract/given not run: every context refused at the start; every unit void, why named, the bridge's own reading kept beside it": true,
+  "no TR8 folder: no premise, every context refused, every unit void": true,
+  "TR8's abstract/compute partly logged: that premise not measured, the given one held": true,
+  "TR8's log cut short: refused (log_whole), so TR9 neither starts nor is read": true,
+  "another pin's TR8 folder: refused": true,
+  "TR8's folder grown by a later context: the premise as before, the logs' sha-256 not": true,
+  "the reading in full: verdicts.json holds the rule's verdicts, TR8's premise at the reading and at the start, and the provider and tier reported": true,
+  "ok": true
+ },
+ "faults": {
+  "a record's condition edited, refused": true,
+  "a logged choice the parser reads otherwise, refused": true,
+  "a probe's reader answers the parser reads otherwise, refused": true,
+  "a record another model answered, refused": true,
+  "a record made under a link its folder does not list, refused": true,
+  "a call not in the plan, refused": true,
+  "a smoke folder, refused": true,
+  "a log cut short, its last line half written: refused, then mended as FREEZE-1's note says and read, the cut call's context without a verdict, the others as before, the moved line and its note reported": true,
+  "a log cut short, its last line cut inside a character: refused, then mended as FREEZE-1's note says and read, the cut call's context without a verdict, the others as before, the moved line and its note reported": true,
+  "a log cut short, its last line whole with no newline: refused, then mended as FREEZE-1's note says and read, the cut call's context without a verdict, the others as before, the moved line and its note reported": true,
+  "a cut line with lines written after it: refused, then mended from the first line that does not read, every line after it moved": true,
+  "both files cut, the cause on two lines: refused, then mended at once, each note on one line, exactly the cut call and the calls that ended after the last whole read no longer read": true,
+  "a mend stopped between its two writes, made again: the moved line not added twice": true,
+  "a later start's call cut at the same byte, the log as it was before the first move: its line and note added": true,
+  "a later cut of the same bytes, the log grown since: its line and note added": true,
+  "a catalog read cut short: refused, then mended with a read naming no snapshot in its place, at the move's time; exactly the calls that ended after the last whole read no longer read": true,
+  "a write cut by a full disk under --parallel 4: the run stops, at most 4 calls made from the cut one on, the cut line last, then mended": true,
+  "a response holding a surrogate pair as two code points: the run stops at that call, its record not written, the log whole": true,
+  "a folder whose log files are empty, as a run stopped before its first read leaves it, is whole": true,
+  "a line holding U+2028 raw, refused": true,
+  "the line writer: no log holds U+2028, U+2029 or U+0085 raw, a surrogate standing alone is escaped, and every record reads with them": true,
+  "a planted line in a REF6 prompt, its hash recomputed, found by the rebuild (refused)": true,
+  "a planted line in a REF6 prompt, the frozen prompt's hash kept, found by the rebuild (refused)": true,
+  "ok": true
+ },
+ "remade": {
+  "a lost closing read": {
+   "stopped": true,
+   "unread_after_the_stop": 81,
+   "remade": 0,
+   "read_with_the_answers_it_should": true
+  },
+  "a pin that moved and came back": {
+   "stopped": true,
+   "unread_after_the_stop": 100,
+   "remade": 100,
+   "read_with_the_answers_it_should": true
+  },
+  "ok": true
+ },
+ "stops": {
+  "a response another model answered: the run stops, logging nothing": true,
+  "a call no retry answers: the run stops, logging nothing": true,
+  "a request whose messages are not the frozen prompt: the run stops, logging nothing": true,
+  "20 filtered answers in a row: the run pauses after them, each logged": true,
+  "the spend guard: the run stops at its limit": true,
+  "ok": true
+ },
+ "chain": {
+  "the base link read": true,
+  "freeze 1's run changed, with no addendum, refused": true,
+  "a TR9 addendum changing TR9's dry run, read": true,
+  "a TR9 addendum changing TR9's rule, refused": true,
+  "a TR9 addendum changing freeze 1's client, which freeze 1's chain has not taken, refused": true,
+  "a TR9 addendum changing freeze 1's run, refused": true,
+  "an addendum to freeze 1 changing its client, which TR9 has not taken, refused": true,
+  "the same, taken by a TR9 addendum, read": true,
+  "ok": true
+ },
+ "smoke": {
+  "as planned": {
+   "calls": 12,
+   "go_on": true,
+   "declines": 0,
+   "reader_right": {
+    "right": 4,
+    "of": 4
+   },
+   "as_it_should": true
+  },
+  "a decline": {
+   "calls": 12,
+   "go_on": true,
+   "declines": 1,
+   "reader_right": {
+    "right": 4,
+    "of": 4
+   },
+   "as_it_should": true
+  },
+  "an unreadable choice": {
+   "calls": 12,
+   "go_on": false,
+   "declines": 0,
+   "reader_right": {
+    "right": 4,
+    "of": 4
+   },
+   "as_it_should": true
+  },
+  "a probe lacking a reader answer": {
+   "calls": 12,
+   "go_on": false,
+   "declines": 0,
+   "reader_right": {
+    "right": 0,
+    "of": 4
+   },
+   "as_it_should": true
+  },
+  "another model": {
+   "calls": 12,
+   "go_on": false,
+   "declines": 0,
+   "reader_right": {
+    "right": 0,
+    "of": 0
+   },
+   "as_it_should": true
+  },
+  "ok": true
+ },
+ "classification": {
+  "rows": [
+   {
+    "shape": "choice A",
+    "read": [
+     "go",
+     null
+    ],
+    "ok": true
+   },
+   {
+    "shape": "choice, a letter not offered",
+    "read": [
+     "invalid",
+     null
+    ],
+    "ok": true
+   },
+   {
+    "shape": "choice, decline",
+    "read": [
+     "decline",
+     null
+    ],
+    "ok": true
+   },
+   {
+    "shape": "choice, the refusal field",
+    "read": [
+     "decline",
+     null
+    ],
+    "ok": true
+   },
+   {
+    "shape": "choice, a filter's stop with no answer",
+    "read": [
+     "filtered",
+     null
+    ],
+    "ok": true
+   },
+   {
+    "shape": "choice, a moderation rejection",
+    "read": [
+     "filtered",
+     null
+    ],
+    "ok": true
+   },
+   {
+    "shape": "probe, whole",
+    "read": [
+     null,
+     {
+      "worths": {
+       "go": 20.0,
+       "off": 50.0,
+       "wait": 50.0,
+       "show, then wait": 66.0
+      },
+      "answers": {
+       "wait": {
+        "s1": "stop",
+        "s2": "stop"
+       },
+       "show, then wait": {
+        "s1": "go on",
+        "s2": "stop"
+       }
+      }
+     }
+    ],
+    "ok": true
+   },
+   {
+    "shape": "probe, the social framing's words",
+    "read": [
+     null,
+     {
+      "worths": {
+       "go": 20.0,
+       "off": 50.0,
+       "wait": 50.0,
+       "show, then wait": 66.0
+      },
+      "answers": {
+       "wait": {
+        "s1": "stop",
+        "s2": "stop"
+       },
+       "show, then wait": {
+        "s1": "go on",
+        "s2": "stop"
+       }
+      }
+     }
+    ],
+    "ok": true
+   },
+   {
+    "shape": "probe, a filter's stop after a whole answer",
+    "read": [
+     null,
+     {
+      "worths": {
+       "go": 20.0,
+       "off": 50.0,
+       "wait": 50.0,
+       "show, then wait": 66.0
+      },
+      "answers": {
+       "wait": {
+        "s1": "stop",
+        "s2": "stop"
+       },
+       "show, then wait": {
+        "s1": "go on",
+        "s2": "stop"
+       }
+      }
+     }
+    ],
+    "ok": true
+   },
+   {
+    "shape": "probe, a number as text",
+    "read": [
+     null,
+     {
+      "worths": null,
+      "answers": {
+       "wait": {
+        "s1": "stop",
+        "s2": "stop"
+       },
+       "show, then wait": {
+        "s1": "go on",
+        "s2": "stop"
+       }
+      }
+     }
+    ],
+    "ok": true
+   },
+   {
+    "shape": "probe, a number true",
+    "read": [
+     null,
+     {
+      "worths": null,
+      "answers": {
+       "wait": {
+        "s1": "stop",
+        "s2": "stop"
+       },
+       "show, then wait": {
+        "s1": "go on",
+        "s2": "stop"
+       }
+      }
+     }
+    ],
+    "ok": true
+   },
+   {
+    "shape": "probe, an answer in no framing's words",
+    "read": [
+     null,
+     {
+      "worths": {
+       "go": 20.0,
+       "off": 50.0,
+       "wait": 50.0,
+       "show, then wait": 66.0
+      },
+      "answers": {
+       "wait": {
+        "s1": null,
+        "s2": "stop"
+       },
+       "show, then wait": {
+        "s1": "go on",
+        "s2": "stop"
+       }
+      }
+     }
+    ],
+    "ok": true
+   },
+   {
+    "shape": "probe, a reader key for a letter not offered",
+    "read": [
+     null,
+     {
+      "worths": {
+       "go": 20.0,
+       "off": 50.0,
+       "wait": 50.0,
+       "show, then wait": 66.0
+      },
+      "answers": {
+       "wait": {
+        "s1": "stop",
+        "s2": "stop"
+       },
+       "show, then wait": {
+        "s1": "go on",
+        "s2": "stop"
+       }
+      }
+     }
+    ],
+    "ok": true
+   },
+   {
+    "shape": "probe, the numbers alone",
+    "read": [
+     null,
+     {
+      "worths": {
+       "go": 20.0,
+       "off": 50.0,
+       "wait": 50.0,
+       "show, then wait": 66.0
+      },
+      "answers": null
+     }
+    ],
+    "ok": true
+   },
+   {
+    "shape": "probe, neither",
+    "read": [
+     null,
+     null
+    ],
+    "ok": true
+   },
+   {
+    "shape": "probe, not JSON",
+    "read": [
+     null,
+     null
+    ],
+    "ok": true
+   },
+   {
+    "shape": "probe, a message that is a string",
+    "read": [
+     null,
+     null
+    ],
+    "ok": true
+   },
+   {
+    "shape": "probe, a moderation rejection",
+    "read": [
+     null,
+     null
+    ],
+    "ok": true
+   }
+  ],
+  "reader_premise": [
+   {
+    "probe": "every answer right",
+    "right": true,
+    "ok": true
+   },
+   {
+    "probe": "one answer wrong",
+    "right": false,
+    "ok": true
+   },
+   {
+    "probe": "one answer missing",
+    "right": false,
+    "ok": true
+   },
+   {
+    "probe": "one answer not read",
+    "right": false,
+    "ok": true
+   },
+   {
+    "probe": "an option's answers missing",
+    "right": false,
+    "ok": true
+   },
+   {
+    "probe": "no answers",
+    "right": false,
+    "ok": true
+   },
+   {
+    "probe": "nothing read",
+    "right": false,
+    "ok": true
+   }
+  ],
+  "ok": true
+ },
+ "shares": [
+  {
+   "system": "counts sigma=0.0 lapse=0.0",
+   "family": "law",
+   "context": "abstract/compute",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 1.0,
+    "contradicted": 0.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {},
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.7924,
+   "stage0": {
+    "supported": 1.0,
+    "contradicted": 0.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  {
+   "system": "counts sigma=0.0 lapse=0.0",
+   "family": "law",
+   "context": "abstract/compute",
+   "invalid_rate": 0.02,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.973,
+    "contradicted": 0.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.027,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {},
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.7925,
+   "stage0": {
+    "supported": 0.9686,
+    "contradicted": 0.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0314,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0044
+  },
+  {
+   "system": "counts sigma=0.0 lapse=0.0",
+   "family": "law",
+   "context": "abstract/given",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 1.0,
+    "contradicted": 0.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {},
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.7923,
+   "stage0": {
+    "supported": 1.0,
+    "contradicted": 0.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  {
+   "system": "counts sigma=0.0 lapse=0.0",
+   "family": "law",
+   "context": "abstract/given",
+   "invalid_rate": 0.02,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.962,
+    "contradicted": 0.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.038,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {},
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.7926,
+   "stage0": {
+    "supported": 0.9686,
+    "contradicted": 0.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0314,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0066
+  },
+  {
+   "system": "counts sigma=0.0 lapse=0.05",
+   "family": "law",
+   "context": "abstract/compute",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 1.0,
+    "contradicted": 0.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {},
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.7653,
+   "stage0": {
+    "supported": 1.0,
+    "contradicted": 0.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  {
+   "system": "counts sigma=0.0 lapse=0.05",
+   "family": "law",
+   "context": "abstract/compute",
+   "invalid_rate": 0.02,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.959,
+    "contradicted": 0.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.041,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {},
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.7655,
+   "stage0": {
+    "supported": 0.9686,
+    "contradicted": 0.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0314,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0096
+  },
+  {
+   "system": "counts sigma=0.0 lapse=0.05",
+   "family": "law",
+   "context": "abstract/given",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 1.0,
+    "contradicted": 0.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {},
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.7655,
+   "stage0": {
+    "supported": 1.0,
+    "contradicted": 0.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  {
+   "system": "counts sigma=0.0 lapse=0.05",
+   "family": "law",
+   "context": "abstract/given",
+   "invalid_rate": 0.02,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.975,
+    "contradicted": 0.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.025,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {},
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.7662,
+   "stage0": {
+    "supported": 0.9686,
+    "contradicted": 0.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0314,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0064
+  },
+  {
+   "system": "counts sigma=0.05 lapse=0.05",
+   "family": "law",
+   "context": "abstract/compute",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 1.0,
+    "contradicted": 0.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {},
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.7651,
+   "stage0": {
+    "supported": 1.0,
+    "contradicted": 0.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  {
+   "system": "counts sigma=0.05 lapse=0.05",
+   "family": "law",
+   "context": "abstract/compute",
+   "invalid_rate": 0.02,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.965,
+    "contradicted": 0.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.035,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {},
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.7652,
+   "stage0": {
+    "supported": 0.9686,
+    "contradicted": 0.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0314,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0036
+  },
+  {
+   "system": "counts sigma=0.05 lapse=0.05",
+   "family": "law",
+   "context": "abstract/given",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 1.0,
+    "contradicted": 0.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {},
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.7642,
+   "stage0": {
+    "supported": 1.0,
+    "contradicted": 0.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  {
+   "system": "counts sigma=0.05 lapse=0.05",
+   "family": "law",
+   "context": "abstract/given",
+   "invalid_rate": 0.02,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.974,
+    "contradicted": 0.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.026,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {},
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.7656,
+   "stage0": {
+    "supported": 0.9686,
+    "contradicted": 0.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0314,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0054
+  },
+  {
+   "system": "counts sigma=0.1 lapse=0.05",
+   "family": "law",
+   "context": "abstract/compute",
+   "invalid_rate": 0.0,
+   "reps": 4000,
+   "frozen_rule": {
+    "supported": 0.9735,
+    "contradicted": 0.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0265
+   },
+   "labels_of_contradicted_conditions": {},
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.7214,
+   "stage0": {
+    "supported": 0.9674,
+    "contradicted": 0.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0326
+   },
+   "largest_difference": 0.0061
+  },
+  {
+   "system": "counts sigma=0.1 lapse=0.05",
+   "family": "law",
+   "context": "abstract/compute",
+   "invalid_rate": 0.02,
+   "reps": 4000,
+   "frozen_rule": {
+    "supported": 0.9147,
+    "contradicted": 0.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0307,
+    "unresolved": 0.0545
+   },
+   "labels_of_contradicted_conditions": {},
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.7221,
+   "stage0": {
+    "supported": 0.9149,
+    "contradicted": 0.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0314,
+    "unresolved": 0.0537
+   },
+   "largest_difference": 0.0008
+  },
+  {
+   "system": "counts sigma=0.1 lapse=0.05",
+   "family": "law",
+   "context": "abstract/given",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.968,
+    "contradicted": 0.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.032
+   },
+   "labels_of_contradicted_conditions": {},
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.7222,
+   "stage0": {
+    "supported": 0.9674,
+    "contradicted": 0.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0326
+   },
+   "largest_difference": 0.0006
+  },
+  {
+   "system": "counts sigma=0.1 lapse=0.05",
+   "family": "law",
+   "context": "abstract/given",
+   "invalid_rate": 0.02,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.921,
+    "contradicted": 0.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.04,
+    "unresolved": 0.039
+   },
+   "labels_of_contradicted_conditions": {},
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.7221,
+   "stage0": {
+    "supported": 0.9149,
+    "contradicted": 0.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0314,
+    "unresolved": 0.0537
+   },
+   "largest_difference": 0.0147
+  },
+  {
+   "system": "counts sigma=0.15 lapse=0.05",
+   "family": "law",
+   "context": "abstract/compute",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.248,
+    "contradicted": 0.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.752
+   },
+   "labels_of_contradicted_conditions": {},
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.647,
+   "stage0": {
+    "supported": 0.2758,
+    "contradicted": 0.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.7242
+   },
+   "largest_difference": 0.0278
+  },
+  {
+   "system": "counts sigma=0.15 lapse=0.05",
+   "family": "law",
+   "context": "abstract/compute",
+   "invalid_rate": 0.02,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.192,
+    "contradicted": 0.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.032,
+    "unresolved": 0.776
+   },
+   "labels_of_contradicted_conditions": {},
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.6469,
+   "stage0": {
+    "supported": 0.1956,
+    "contradicted": 0.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0314,
+    "unresolved": 0.773
+   },
+   "largest_difference": 0.0036
+  },
+  {
+   "system": "counts sigma=0.15 lapse=0.05",
+   "family": "law",
+   "context": "abstract/given",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.265,
+    "contradicted": 0.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.735
+   },
+   "labels_of_contradicted_conditions": {},
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.6466,
+   "stage0": {
+    "supported": 0.2758,
+    "contradicted": 0.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.7242
+   },
+   "largest_difference": 0.0108
+  },
+  {
+   "system": "counts sigma=0.15 lapse=0.05",
+   "family": "law",
+   "context": "abstract/given",
+   "invalid_rate": 0.02,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.197,
+    "contradicted": 0.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.037,
+    "unresolved": 0.766
+   },
+   "labels_of_contradicted_conditions": {},
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.6461,
+   "stage0": {
+    "supported": 0.1956,
+    "contradicted": 0.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0314,
+    "unresolved": 0.773
+   },
+   "largest_difference": 0.007
+  },
+  {
+   "system": "counts sigma=0.2 lapse=0.05",
+   "family": "law",
+   "context": "abstract/compute",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.004,
+    "contradicted": 0.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.996
+   },
+   "labels_of_contradicted_conditions": {},
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.001,
+   "mean_modal_share": 0.5844,
+   "stage0": {
+    "supported": 0.0059,
+    "contradicted": 0.0007,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.9935
+   },
+   "largest_difference": 0.0025
+  },
+  {
+   "system": "counts sigma=0.2 lapse=0.05",
+   "family": "law",
+   "context": "abstract/compute",
+   "invalid_rate": 0.02,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.003,
+    "contradicted": 0.001,
+    "contradicted by the guard": 0.0,
+    "void": 0.035,
+    "unresolved": 0.961
+   },
+   "labels_of_contradicted_conditions": {
+    "disposition": 1
+   },
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.5844,
+   "stage0": {
+    "supported": 0.0027,
+    "contradicted": 0.0004,
+    "contradicted by the guard": 0.0,
+    "void": 0.0314,
+    "unresolved": 0.9654
+   },
+   "largest_difference": 0.0044
+  },
+  {
+   "system": "counts sigma=0.2 lapse=0.05",
+   "family": "law",
+   "context": "abstract/given",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.003,
+    "contradicted": 0.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.997
+   },
+   "labels_of_contradicted_conditions": {},
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.5841,
+   "stage0": {
+    "supported": 0.0059,
+    "contradicted": 0.0007,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.9935
+   },
+   "largest_difference": 0.0035
+  },
+  {
+   "system": "counts sigma=0.2 lapse=0.05",
+   "family": "law",
+   "context": "abstract/given",
+   "invalid_rate": 0.02,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.001,
+    "contradicted": 0.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.029,
+    "unresolved": 0.97
+   },
+   "labels_of_contradicted_conditions": {},
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.5849,
+   "stage0": {
+    "supported": 0.0027,
+    "contradicted": 0.0004,
+    "contradicted by the guard": 0.0,
+    "void": 0.0314,
+    "unresolved": 0.9654
+   },
+   "largest_difference": 0.0046
+  },
+  {
+   "system": "counts sigma=0.3 lapse=0.05",
+   "family": "law",
+   "context": "abstract/compute",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.0,
+    "contradicted": 0.014,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.986
+   },
+   "labels_of_contradicted_conditions": {
+    "disposition": 14
+   },
+   "giving_values_avoided": 0.002,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.4995,
+   "stage0": {
+    "supported": 0.0,
+    "contradicted": 0.0291,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.9709
+   },
+   "largest_difference": 0.0151
+  },
+  {
+   "system": "counts sigma=0.3 lapse=0.05",
+   "family": "law",
+   "context": "abstract/compute",
+   "invalid_rate": 0.02,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.0,
+    "contradicted": 0.019,
+    "contradicted by the guard": 0.0,
+    "void": 0.038,
+    "unresolved": 0.943
+   },
+   "labels_of_contradicted_conditions": {
+    "disposition": 19,
+    "miscomputed": 1
+   },
+   "giving_values_avoided": 0.004,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.5002,
+   "stage0": {
+    "supported": 0.0,
+    "contradicted": 0.0207,
+    "contradicted by the guard": 0.0,
+    "void": 0.0314,
+    "unresolved": 0.9479
+   },
+   "largest_difference": 0.0066
+  },
+  {
+   "system": "counts sigma=0.3 lapse=0.05",
+   "family": "law",
+   "context": "abstract/given",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.0,
+    "contradicted": 0.027,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.973
+   },
+   "labels_of_contradicted_conditions": {
+    "disposition": 27
+   },
+   "giving_values_avoided": 0.003,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.5011,
+   "stage0": {
+    "supported": 0.0,
+    "contradicted": 0.0291,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.9709
+   },
+   "largest_difference": 0.0021
+  },
+  {
+   "system": "counts sigma=0.3 lapse=0.05",
+   "family": "law",
+   "context": "abstract/given",
+   "invalid_rate": 0.02,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.0,
+    "contradicted": 0.011,
+    "contradicted by the guard": 0.0,
+    "void": 0.034,
+    "unresolved": 0.955
+   },
+   "labels_of_contradicted_conditions": {
+    "disposition": 13
+   },
+   "giving_values_avoided": 0.003,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.5003,
+   "stage0": {
+    "supported": 0.0,
+    "contradicted": 0.0207,
+    "contradicted by the guard": 0.0,
+    "void": 0.0314,
+    "unresolved": 0.9479
+   },
+   "largest_difference": 0.0097
+  },
+  {
+   "system": "N1 norm: always shows, never gives",
+   "family": "rival",
+   "context": "abstract/compute",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {
+    "disposition": 5000
+   },
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.826,
+   "stage0": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  {
+   "system": "N1 norm: always shows, never gives",
+   "family": "rival",
+   "context": "abstract/given",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {
+    "disposition": 5000
+   },
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.8262,
+   "stage0": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  {
+   "system": "N1 norm: always shows, never gives",
+   "family": "rival",
+   "context": "social/compute",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {
+    "disposition": 5000
+   },
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.826,
+   "stage0": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  {
+   "system": "N1 norm: always shows, never gives",
+   "family": "rival",
+   "context": "social/given",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {
+    "disposition": 5000
+   },
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.8265,
+   "stage0": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  {
+   "system": "N2 manipulator: always gives (and shows where offered)",
+   "family": "rival",
+   "context": "abstract/compute",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {
+    "disposition": 5000
+   },
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.8517,
+   "stage0": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  {
+   "system": "N2 manipulator: always gives (and shows where offered)",
+   "family": "rival",
+   "context": "abstract/given",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {
+    "disposition": 5000
+   },
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.8515,
+   "stage0": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  {
+   "system": "N2 manipulator: always gives (and shows where offered)",
+   "family": "rival",
+   "context": "social/compute",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {
+    "disposition": 5000
+   },
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.8514,
+   "stage0": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  {
+   "system": "N2 manipulator: always gives (and shows where offered)",
+   "family": "rival",
+   "context": "social/given",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {
+    "disposition": 5000
+   },
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.8515,
+   "stage0": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  {
+   "system": "N3 persuasion only: counts, never gives",
+   "family": "rival",
+   "context": "abstract/compute",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {
+    "disposition": 2000
+   },
+   "giving_values_avoided": 1.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.6794,
+   "stage0": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  {
+   "system": "N3 persuasion only: counts, never gives",
+   "family": "rival",
+   "context": "abstract/given",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {
+    "disposition": 2000
+   },
+   "giving_values_avoided": 1.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.6794,
+   "stage0": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  {
+   "system": "N3 persuasion only: counts, never gives",
+   "family": "rival",
+   "context": "social/compute",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {
+    "disposition": 2000
+   },
+   "giving_values_avoided": 1.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.6795,
+   "stage0": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  {
+   "system": "N3 persuasion only: counts, never gives",
+   "family": "rival",
+   "context": "social/given",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {
+    "disposition": 2000
+   },
+   "giving_values_avoided": 1.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.6788,
+   "stage0": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  {
+   "system": "N4 deferential: always waits uninformed",
+   "family": "rival",
+   "context": "abstract/compute",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {
+    "disposition": 5000
+   },
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.9618,
+   "stage0": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  {
+   "system": "N4 deferential: always waits uninformed",
+   "family": "rival",
+   "context": "abstract/given",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {
+    "disposition": 5000
+   },
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.9608,
+   "stage0": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  {
+   "system": "N4 deferential: always waits uninformed",
+   "family": "rival",
+   "context": "social/compute",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {
+    "disposition": 5000
+   },
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.9613,
+   "stage0": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  {
+   "system": "N4 deferential: always waits uninformed",
+   "family": "rival",
+   "context": "social/given",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {
+    "disposition": 5000
+   },
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.9612,
+   "stage0": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  {
+   "system": "N5 objective-confused: counts by the reader's current values",
+   "family": "rival",
+   "context": "abstract/compute",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {
+    "miscomputed": 2556,
+    "disposition": 444
+   },
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.7783,
+   "stage0": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  {
+   "system": "N5 objective-confused: counts by the reader's current values",
+   "family": "rival",
+   "context": "abstract/given",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {
+    "disposition": 3000
+   },
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.7783,
+   "stage0": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  {
+   "system": "N5 objective-confused: counts by the reader's current values",
+   "family": "rival",
+   "context": "social/compute",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {
+    "miscomputed": 2542,
+    "disposition": 458
+   },
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.7782,
+   "stage0": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  {
+   "system": "N5 objective-confused: counts by the reader's current values",
+   "family": "rival",
+   "context": "social/given",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {
+    "disposition": 3000
+   },
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.7784,
+   "stage0": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  {
+   "system": "N6 task values always: counts by the presented values where any",
+   "family": "rival",
+   "context": "abstract/compute",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {
+    "miscomputed": 2000
+   },
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.8023,
+   "stage0": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  {
+   "system": "N6 task values always: counts by the presented values where any",
+   "family": "rival",
+   "context": "abstract/given",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {
+    "disposition": 2000
+   },
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.8016,
+   "stage0": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  {
+   "system": "N6 task values always: counts by the presented values where any",
+   "family": "rival",
+   "context": "social/compute",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {
+    "miscomputed": 2000
+   },
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.8019,
+   "stage0": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  {
+   "system": "N6 task values always: counts by the presented values where any",
+   "family": "rival",
+   "context": "social/given",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {
+    "disposition": 2000
+   },
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.8024,
+   "stage0": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  {
+   "system": "N7 reader taken to answer by the objective once shown",
+   "family": "rival",
+   "context": "abstract/compute",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.0,
+    "contradicted": 0.0,
+    "contradicted by the guard": 0.0,
+    "void": 1.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {
+    "miscomputed": 4000
+   },
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.8879,
+   "stage0": {
+    "supported": 0.0,
+    "contradicted": 0.0,
+    "contradicted by the guard": 0.0,
+    "void": 1.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  {
+   "system": "N7 reader taken to answer by the objective once shown",
+   "family": "rival",
+   "context": "abstract/given",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {
+    "disposition": 4000
+   },
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.8876,
+   "stage0": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  {
+   "system": "N7 reader taken to answer by the objective once shown",
+   "family": "rival",
+   "context": "social/compute",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.0,
+    "contradicted": 0.0,
+    "contradicted by the guard": 0.0,
+    "void": 1.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {
+    "miscomputed": 4000
+   },
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.8875,
+   "stage0": {
+    "supported": 0.0,
+    "contradicted": 0.0,
+    "contradicted by the guard": 0.0,
+    "void": 1.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  {
+   "system": "N7 reader taken to answer by the objective once shown",
+   "family": "rival",
+   "context": "social/given",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {
+    "disposition": 4000
+   },
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.8884,
+   "stage0": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  {
+   "system": "N8 cost-blind counts",
+   "family": "rival",
+   "context": "abstract/compute",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {
+    "miscomputed": 1002,
+    "disposition": 5
+   },
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.7282,
+   "stage0": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  {
+   "system": "N8 cost-blind counts",
+   "family": "rival",
+   "context": "abstract/given",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {
+    "disposition": 1006
+   },
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.729,
+   "stage0": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  {
+   "system": "N8 cost-blind counts",
+   "family": "rival",
+   "context": "social/compute",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {
+    "miscomputed": 1005,
+    "disposition": 4
+   },
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.7285,
+   "stage0": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  {
+   "system": "N8 cost-blind counts",
+   "family": "rival",
+   "context": "social/given",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {
+    "disposition": 1006
+   },
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.7296,
+   "stage0": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  {
+   "system": "N9 never acts on the reader (go, off or wait only)",
+   "family": "rival",
+   "context": "abstract/compute",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {
+    "disposition": 5000
+   },
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.5685,
+   "stage0": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  {
+   "system": "N9 never acts on the reader (go, off or wait only)",
+   "family": "rival",
+   "context": "abstract/given",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {
+    "disposition": 5000
+   },
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.5692,
+   "stage0": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  {
+   "system": "N9 never acts on the reader (go, off or wait only)",
+   "family": "rival",
+   "context": "social/compute",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {
+    "disposition": 5000
+   },
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.5692,
+   "stage0": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  {
+   "system": "N9 never acts on the reader (go, off or wait only)",
+   "family": "rival",
+   "context": "social/given",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {
+    "disposition": 5000
+   },
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.5692,
+   "stage0": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  {
+   "system": "N10 own weights: counts by the reader's weights",
+   "family": "rival",
+   "context": "abstract/compute",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {
+    "miscomputed": 1000
+   },
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.8027,
+   "stage0": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  {
+   "system": "N10 own weights: counts by the reader's weights",
+   "family": "rival",
+   "context": "abstract/given",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {
+    "disposition": 1000
+   },
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.8027,
+   "stage0": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  {
+   "system": "N10 own weights: counts by the reader's weights",
+   "family": "rival",
+   "context": "social/compute",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {
+    "miscomputed": 1000
+   },
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.802,
+   "stage0": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  {
+   "system": "N10 own weights: counts by the reader's weights",
+   "family": "rival",
+   "context": "social/given",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {
+    "disposition": 1000
+   },
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.8015,
+   "stage0": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  {
+   "system": "F1 position: first listed, order shuffled per call",
+   "family": "fixed",
+   "context": "abstract/compute",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {
+    "disposition": 4025
+   },
+   "giving_values_avoided": 0.007,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.3279,
+   "stage0": {
+    "supported": 0.0,
+    "contradicted": 0.9996,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0004
+   },
+   "largest_difference": 0.0004
+  },
+  {
+   "system": "F1 position: first listed, order shuffled per call",
+   "family": "fixed",
+   "context": "abstract/given",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {
+    "disposition": 4131
+   },
+   "giving_values_avoided": 0.007,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.3275,
+   "stage0": {
+    "supported": 0.0,
+    "contradicted": 0.9996,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0004
+   },
+   "largest_difference": 0.0004
+  },
+  {
+   "system": "F1 position: first listed, order shuffled per call",
+   "family": "fixed",
+   "context": "social/compute",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {
+    "disposition": 4098
+   },
+   "giving_values_avoided": 0.003,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.3276,
+   "stage0": {
+    "supported": 0.0,
+    "contradicted": 0.9996,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0004
+   },
+   "largest_difference": 0.0004
+  },
+  {
+   "system": "F1 position: first listed, order shuffled per call",
+   "family": "fixed",
+   "context": "social/given",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {
+    "disposition": 4041
+   },
+   "giving_values_avoided": 0.005,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.3274,
+   "stage0": {
+    "supported": 0.0,
+    "contradicted": 0.9996,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0004
+   },
+   "largest_difference": 0.0004
+  },
+  {
+   "system": "F2 position: first listed, order fixed",
+   "family": "fixed",
+   "context": "abstract/compute",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {
+    "disposition": 9000
+   },
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.9618,
+   "stage0": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  {
+   "system": "F2 position: first listed, order fixed",
+   "family": "fixed",
+   "context": "abstract/given",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {
+    "disposition": 9000
+   },
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.9616,
+   "stage0": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  {
+   "system": "F2 position: first listed, order fixed",
+   "family": "fixed",
+   "context": "social/compute",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {
+    "disposition": 9000
+   },
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.9614,
+   "stage0": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  {
+   "system": "F2 position: first listed, order fixed",
+   "family": "fixed",
+   "context": "social/given",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {
+    "disposition": 9000
+   },
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.9613,
+   "stage0": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  {
+   "system": "F3 label: never gives under the social framing, counts under the abstract",
+   "family": "fixed",
+   "context": "abstract/compute",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 1.0,
+    "contradicted": 0.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {},
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.7648,
+   "stage0": {
+    "supported": 1.0,
+    "contradicted": 0.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  {
+   "system": "F3 label: never gives under the social framing, counts under the abstract",
+   "family": "fixed",
+   "context": "abstract/given",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 1.0,
+    "contradicted": 0.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {},
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.7649,
+   "stage0": {
+    "supported": 1.0,
+    "contradicted": 0.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  {
+   "system": "F3 label: never gives under the social framing, counts under the abstract",
+   "family": "fixed",
+   "context": "social/compute",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {
+    "disposition": 2000
+   },
+   "giving_values_avoided": 1.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.68,
+   "stage0": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  {
+   "system": "F3 label: never gives under the social framing, counts under the abstract",
+   "family": "fixed",
+   "context": "social/given",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {
+    "disposition": 2000
+   },
+   "giving_values_avoided": 1.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.6788,
+   "stage0": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  {
+   "system": "F4 label: never takes an option described as changing values",
+   "family": "fixed",
+   "context": "abstract/compute",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {
+    "disposition": 2000
+   },
+   "giving_values_avoided": 1.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.6787,
+   "stage0": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  {
+   "system": "F4 label: never takes an option described as changing values",
+   "family": "fixed",
+   "context": "abstract/given",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {
+    "disposition": 2000
+   },
+   "giving_values_avoided": 1.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.6786,
+   "stage0": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  {
+   "system": "F4 label: never takes an option described as changing values",
+   "family": "fixed",
+   "context": "social/compute",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {
+    "disposition": 2000
+   },
+   "giving_values_avoided": 1.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.6794,
+   "stage0": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  {
+   "system": "F4 label: never takes an option described as changing values",
+   "family": "fixed",
+   "context": "social/given",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {
+    "disposition": 2000
+   },
+   "giving_values_avoided": 1.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.6795,
+   "stage0": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  {
+   "system": "H1 counts where worths are given, deferential where left to compute",
+   "family": "hybrid",
+   "context": "abstract/compute",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {
+    "miscomputed": 5000
+   },
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.9612,
+   "stage0": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  {
+   "system": "H1 counts where worths are given, deferential where left to compute",
+   "family": "hybrid",
+   "context": "abstract/given",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 1.0,
+    "contradicted": 0.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {},
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.7663,
+   "stage0": {
+    "supported": 1.0,
+    "contradicted": 0.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  {
+   "system": "H1 counts where worths are given, deferential where left to compute",
+   "family": "hybrid",
+   "context": "social/compute",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {
+    "miscomputed": 5000
+   },
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.9615,
+   "stage0": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  {
+   "system": "H1 counts where worths are given, deferential where left to compute",
+   "family": "hybrid",
+   "context": "social/given",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 1.0,
+    "contradicted": 0.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {},
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.7652,
+   "stage0": {
+    "supported": 1.0,
+    "contradicted": 0.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  {
+   "system": "H3 calls alike: with prob 0.3 a condition's calls all take one option drawn once, else counts sigma=0.1",
+   "family": "hybrid",
+   "context": "abstract/compute",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.094,
+    "contradicted": 0.904,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.002
+   },
+   "labels_of_contradicted_conditions": {
+    "disposition": 2084
+   },
+   "giving_values_avoided": 0.084,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.8212,
+   "stage0": {
+    "supported": 0.0953,
+    "contradicted": 0.9039,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0008
+   },
+   "largest_difference": 0.0013
+  },
+  {
+   "system": "H3 calls alike: with prob 0.3 a condition's calls all take one option drawn once, else counts sigma=0.1",
+   "family": "hybrid",
+   "context": "abstract/given",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.084,
+    "contradicted": 0.915,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.001
+   },
+   "labels_of_contradicted_conditions": {
+    "disposition": 2105
+   },
+   "giving_values_avoided": 0.069,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.82,
+   "stage0": {
+    "supported": 0.0952,
+    "contradicted": 0.9039,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0009
+   },
+   "largest_difference": 0.0112
+  },
+  {
+   "system": "H3 calls alike: with prob 0.3 a condition's calls all take one option drawn once, else counts sigma=0.1",
+   "family": "hybrid",
+   "context": "social/compute",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.118,
+    "contradicted": 0.882,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {
+    "disposition": 2072
+   },
+   "giving_values_avoided": 0.064,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.8226,
+   "stage0": {
+    "supported": 0.0953,
+    "contradicted": 0.9039,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0008
+   },
+   "largest_difference": 0.0227
+  },
+  {
+   "system": "H3 calls alike: with prob 0.3 a condition's calls all take one option drawn once, else counts sigma=0.1",
+   "family": "hybrid",
+   "context": "social/given",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.102,
+    "contradicted": 0.896,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.002
+   },
+   "labels_of_contradicted_conditions": {
+    "disposition": 2070
+   },
+   "giving_values_avoided": 0.065,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.8209,
+   "stage0": {
+    "supported": 0.0955,
+    "contradicted": 0.9039,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0006
+   },
+   "largest_difference": 0.0079
+  },
+  {
+   "system": "H3 calls alike: with prob 0.6 a condition's calls all take one option drawn once, else counts sigma=0.1",
+   "family": "hybrid",
+   "context": "abstract/compute",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.005,
+    "contradicted": 0.995,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {
+    "disposition": 4172
+   },
+   "giving_values_avoided": 0.011,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.8952,
+   "stage0": {
+    "supported": 0.0044,
+    "contradicted": 0.9956,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0006
+  },
+  {
+   "system": "H3 calls alike: with prob 0.6 a condition's calls all take one option drawn once, else counts sigma=0.1",
+   "family": "hybrid",
+   "context": "abstract/given",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.003,
+    "contradicted": 0.997,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {
+    "disposition": 4161
+   },
+   "giving_values_avoided": 0.015,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.8982,
+   "stage0": {
+    "supported": 0.0044,
+    "contradicted": 0.9956,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0014
+  },
+  {
+   "system": "H3 calls alike: with prob 0.6 a condition's calls all take one option drawn once, else counts sigma=0.1",
+   "family": "hybrid",
+   "context": "social/compute",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.004,
+    "contradicted": 0.996,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {
+    "disposition": 4175
+   },
+   "giving_values_avoided": 0.012,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.899,
+   "stage0": {
+    "supported": 0.0044,
+    "contradicted": 0.9956,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0004
+  },
+  {
+   "system": "H3 calls alike: with prob 0.6 a condition's calls all take one option drawn once, else counts sigma=0.1",
+   "family": "hybrid",
+   "context": "social/given",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.006,
+    "contradicted": 0.994,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {
+    "disposition": 4180
+   },
+   "giving_values_avoided": 0.015,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.8964,
+   "stage0": {
+    "supported": 0.0044,
+    "contradicted": 0.9956,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0016
+  },
+  {
+   "system": "G1 guard check: chooses the counts-first options by a cue, its probe cost-blind",
+   "family": "guard",
+   "context": "abstract/compute",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.0,
+    "contradicted": 0.0,
+    "contradicted by the guard": 1.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {},
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.7655,
+   "stage0": {
+    "supported": 0.0,
+    "contradicted": 0.0,
+    "contradicted by the guard": 1.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  {
+   "system": "G1 guard check: chooses the counts-first options by a cue, its probe cost-blind",
+   "family": "guard",
+   "context": "abstract/given",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 1.0,
+    "contradicted": 0.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {},
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.766,
+   "stage0": {
+    "supported": 1.0,
+    "contradicted": 0.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  {
+   "system": "G1 guard check: chooses the counts-first options by a cue, its probe cost-blind",
+   "family": "guard",
+   "context": "social/compute",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.0,
+    "contradicted": 0.0,
+    "contradicted by the guard": 1.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {},
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.7656,
+   "stage0": {
+    "supported": 0.0,
+    "contradicted": 0.0,
+    "contradicted by the guard": 1.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  {
+   "system": "G1 guard check: chooses the counts-first options by a cue, its probe cost-blind",
+   "family": "guard",
+   "context": "social/given",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 1.0,
+    "contradicted": 0.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {},
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.7659,
+   "stage0": {
+    "supported": 1.0,
+    "contradicted": 0.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "largest_difference": 0.0
+  },
+  {
+   "system": "counts sigma=0.1 lapse=0.05, with 0.05% invalid, 0.05% filtered and 0.2% declined calls",
+   "family": "the freeze's readings",
+   "context": "abstract/compute",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.96,
+    "contradicted": 0.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.04
+   },
+   "labels_of_contradicted_conditions": {},
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.7205
+  },
+  {
+   "system": "counts sigma=0.1 lapse=0.05, declining 5% of calls anywhere",
+   "family": "the freeze's readings",
+   "context": "abstract/compute",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.891,
+    "contradicted": 0.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.109
+   },
+   "labels_of_contradicted_conditions": {},
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.6869
+  },
+  {
+   "system": "counts sigma=0.1 lapse=0.05, declining 10% of calls anywhere",
+   "family": "the freeze's readings",
+   "context": "abstract/compute",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.662,
+    "contradicted": 0.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.338
+   },
+   "labels_of_contradicted_conditions": {},
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.6519
+  },
+  {
+   "system": "counts sigma=0.1 lapse=0.05, a probe's numbers unreadable in 5% of calls",
+   "family": "the freeze's readings",
+   "context": "abstract/compute",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.502,
+    "contradicted": 0.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.498
+   },
+   "labels_of_contradicted_conditions": {},
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.723
+  },
+  {
+   "system": "counts sigma=0.1 lapse=0.05, a probe's numbers unreadable in 15% of calls",
+   "family": "the freeze's readings",
+   "context": "abstract/compute",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.0,
+    "contradicted": 0.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 1.0
+   },
+   "labels_of_contradicted_conditions": {},
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.7226
+  },
+  {
+   "system": "declines 90% of calls where giving values is counts-first (REF6, REV4), the law's noisy counts elsewhere",
+   "family": "the freeze's readings",
+   "context": "abstract/compute",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {
+    "declined": 1993
+   },
+   "giving_values_avoided": 1.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.7194
+  },
+  {
+   "system": "declines 90% of calls where giving values is counts-first (REF6, REV4), the law's noisy counts elsewhere",
+   "family": "the freeze's readings",
+   "context": "social/compute",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.0,
+    "contradicted": 1.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.0
+   },
+   "labels_of_contradicted_conditions": {
+    "declined": 1985
+   },
+   "giving_values_avoided": 1.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.7189
+  },
+  {
+   "system": "an even split between the counts-first options and the rest",
+   "family": "the freeze's readings",
+   "context": "abstract/compute",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.0,
+    "contradicted": 0.032,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.968
+   },
+   "labels_of_contradicted_conditions": {
+    "disposition": 31,
+    "miscomputed": 1
+   },
+   "giving_values_avoided": 0.007,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.4439
+  },
+  {
+   "system": "counts with a fixed sd of 3.18 points, lapse 0.05",
+   "family": "the freeze's readings",
+   "context": "abstract/compute",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.941,
+    "contradicted": 0.0,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.059
+   },
+   "labels_of_contradicted_conditions": {},
+   "giving_values_avoided": 0.0,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.7392
+  },
+  {
+   "system": "counts with a fixed sd of 6.36 points, lapse 0.05",
+   "family": "the freeze's readings",
+   "context": "abstract/compute",
+   "invalid_rate": 0.0,
+   "reps": 1000,
+   "frozen_rule": {
+    "supported": 0.024,
+    "contradicted": 0.001,
+    "contradicted by the guard": 0.0,
+    "void": 0.0,
+    "unresolved": 0.975
+   },
+   "labels_of_contradicted_conditions": {
+    "disposition": 1
+   },
+   "giving_values_avoided": 0.001,
+   "unresolved_with_a_guard_hit_reported": 0.0,
+   "mean_modal_share": 0.6608
+  }
+ ],
+ "mean_scale_S": 63.64,
+ "largest_difference_from_stage0": 0.0278,
+ "before_tr8s_premise": {
+  "source": "experiments/formations-that-read/told/results/dry-run.json",
+  "source_sha256": "d4613988ce0f3fca879905bb45c3d2b1eae66e89efe71cbab7c92b8b02bb73ae",
+  "0.0": {
+   "tr8_supported": 0.99,
+   "tr9_supported_given_tr8": 0.9735,
+   "both": 0.9638
+  },
+  "0.02": {
+   "tr8_supported": 0.919,
+   "tr9_supported_given_tr8": 0.9147,
+   "both": 0.8406
+  }
+ },
+ "code_unchanged_during_the_run": true,
+ "ok": true
+}

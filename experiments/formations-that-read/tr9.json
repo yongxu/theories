@@ -63,9 +63,9 @@
    "residual_signed_breaks_split": 19278
   },
   "seconds": {
-   "two": 38.5,
-   "three": 16.2,
-   "carrier": 0.6
+   "two": 31.7,
+   "three": 14.0,
+   "carrier": 0.5
   },
   "note": "Mutations: an answer stopping at ties never changes the worth by the reader's own valuation (ties add to neither excess), so the tie rule matters for which option is taken, not for any count; a residual without truncation breaks the split wherever a cell's preference is not the rule's, so the truncation is load-bearing.",
   "the_menu_in_the_lean": [
@@ -75,7 +75,7 @@
    "answer_least_of_scaled composed with informed_le (inference, the reviewing session's report): a positive common scale suffices for informing never to lower the worth; not stated as one theorem. No verdict rests on it."
   ]
  },
- "B_seconds": 55.36,
+ "B_seconds": 46.32,
  "C_conditions": [
   {
    "id": "CV6",
@@ -188,7 +188,7 @@
    "governing": {
     "show over wait/off/go": "forgone_least_iff (net trivial: reference = current), threshold_go_iff/threshold_off_iff on the shown answer",
     "show over give+show": "own_least, revalued_forgone_lt_iff with outcome_least",
-    "wait over give": "presented_forgone_lt_iff (residual of the current answer 0)"
+    "wait over give": "forgone_lt_iff (the same rule, shortfall 20, against 20 and the amount 3; presented_forgone_lt_iff, as oriented, gives only that giving is not above waiting)"
    }
   },
   {
@@ -10478,7 +10478,7 @@
    "reader_probe_model": "Each probe call states the reader's answer under every option, right except in a lapse; N7, which takes the reader to answer by the objective once shown, states it wrongly at CV6, CVT, REF6, REFW, REV16, REV4, REVCV, WAP, where the reader's own answer differs."
   }
  },
- "D_seconds": 8.48,
+ "D_seconds": 7.59,
  "E": {
   "settled": [
    "Every option's rule, built by running the carrier's joint law and reading the answer once every scheduled input is taken in, equals Part 1's answer through what is shown by the revalued valuation (answer_shown, updates_commute, timing); the one-decision menu is the carrier collapsed to one choice. The answer must be read after the last input: in TwoWorlds.orders_apart the answer two steps after the first act differs by order.",
@@ -10496,8 +10496,8 @@
    "Whether TR9 runs at all, and under which framings: its counts-first option under a reference apart gives the reader stated values, and a social framing reads as persuading a person.",
    "That TR9 runs only for a family and presentation where TR8's bridge was supported.",
    "The prompt for WA-P, which must tell two weightings (the holding formation's and the reader's) apart.",
-   "Totals or per-decision presentation (T = 2 or 3 here, so per-decision amounts are halves or thirds; totals proposed)."
+   "Totals or per-decision presentation (T = 2, 3 or 4 here, WA-P's 4, so per-decision amounts are halves, thirds or quarters; totals proposed)."
   ]
  },
- "seconds": 63.9
+ "seconds": 53.96
 }

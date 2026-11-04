@@ -859,7 +859,8 @@ def design_tables():
                       {"show over wait/off/go": "forgone_least_iff (net trivial: reference = current), "
                        "threshold_go_iff/threshold_off_iff on the shown answer",
                        "show over give+show": "own_least, revalued_forgone_lt_iff with outcome_least",
-                       "wait over give": "presented_forgone_lt_iff (residual of the current answer 0)"},
+                       "wait over give": "forgone_lt_iff (the same rule, shortfall 20, against 20 and the amount 3; "
+                       "presented_forgone_lt_iff, as oriented, gives only that giving is not above waiting)"},
                       "CV"),
         tr9_condition("REF6", "strict", "objective: the task values; the same six options and numbers", m, task, rd,
                       (A, B), "own", six,
@@ -1244,8 +1245,8 @@ def part_E(conds, D):
             "That TR9 runs only for a family and presentation where TR8's bridge was supported.",
             "The prompt for WA-P, which must tell two weightings (the holding formation's and the "
             "reader's) apart.",
-            "Totals or per-decision presentation (T = 2 or 3 here, so per-decision amounts are halves "
-            "or thirds; totals proposed).",
+            "Totals or per-decision presentation (T = 2, 3 or 4 here, WA-P's 4, so per-decision amounts are "
+            "halves, thirds or quarters; totals proposed).",
         ],
     }
 
