@@ -1,6 +1,6 @@
 # Freeze 11: TR2's Stage A, small networks trained on the read occasions
 
-*The folder's eleventh freeze, board item TR2A, 5 November 2026. AI-written (a Claude Code session), not yet reviewed by a person. Frozen before any training of the plan was run: the code was timed and tried on seeds the plan does not use (§7). The machine time is Ren's. READING-TIME*
+*The folder's eleventh freeze, board item TR2A, 5 November 2026. AI-written (a Claude Code session), not yet reviewed by a person. Frozen before any training of the plan was run: the code was timed and tried on seeds the plan does not use (§7). The machine time is Ren's. About 20 to 25 minutes to read, at 100 to 130 words a minute; the part before §1 takes 5 to 7.*
 
 TR2 measures RF2, what readings fix of the unread ([DESIGN](DESIGN.md), [REST-TR2-TR7](REST-TR2-TR7.md)). Its Stage B, on four open-weight checkpoints, is frozen in [FREEZE-7](FREEZE-7.md). Stage A, which FREEZE-7 left out, is the design's "small networks trained, by a standard-library script, only on the read occasions of each schedule, every state readable: the chain measured link by link, and whether training installs a twin, which RF2 does not predict (realizability). Reported, no verdict." This file freezes it: [`train-tr2a/tr2a.py`](train-tr2a/tr2a.py) trains and measures, [`train-tr2a/tr2a_dry_run.py`](train-tr2a/tr2a_dry_run.py) checks the code without training any network of the plan, and `train-tr2a/FROZEN.sha256`, committed last, holds the hashes of both, of the dry run's result (`results/dry-run.json`, the same on every run of the dry run; its timing goes to `results/dry-run-time.json`, which is neither hashed nor committed) and of Stage 0's [`tr2.py`](tr2.py), which the code imports.
 
@@ -108,6 +108,6 @@ Whatever the run shows is kept, and this paragraph is not revised after it.
 
 ## 10. Provenance and the reading of the freeze
 
-Written by the Claude Code session that holds board item TR2A, at the merge coordinator's offer, after the same session froze TR2's Stage B (FREEZE-7). READERS
+Written by the Claude Code session that holds board item TR2A, at the merge coordinator's offer, after the same session froze TR2's Stage B (FREEZE-7). One reader other than its author read the frozen files in two rounds before the freeze landed: the first found six medium findings, all taken, the second nothing high or medium. Its findings, and how each was taken, are in [`train-tr2a/REVIEW-FREEZE.md`](train-tr2a/REVIEW-FREEZE.md).
 
 **How this file is frozen:** by the commit that adds `train-tr2a/FROZEN.sha256`, its text there being the frozen one. It is not hashed, so that a link can be repaired without touching the code's hashes. A later edit may only repair a link or a typo, or correct a false statement to a reader; each is listed in a dated note at the end of this file and changes no rule, size or reading. `FROZEN.sha256` is committed last, after the render and every check pass on the merged tree.
