@@ -121,8 +121,8 @@
     "zh": "纯核，公理报告皆空：Unread 唯引 Learning。其用 lumped_determines 与 Training.unselected_beyond_data，读 Learning.determines_lumped_iff 为确形（引而未用于证）；诸例于真值之对上。"
   },
   "next_delta": {
-    "en": "A run of the frozen measurement of the chain's correspondence on four trained checkpoints (TR2): cues varied apart from content and the schedule apart from the cue, with identical-input arms; it can refute a stated lumping or an implementation, never the law; review by a person.",
-    "zh": "于四已训之检查点上链之对应之冻结量测之运行（TR2）：分讯于内容而变，分读之时于讯而变，设同入之臂；唯能驳所述之归并或其实现，不驳此律；人之审查。"
+    "en": "Runs of the frozen measurements of the chain's correspondence, on four trained checkpoints and on small trained networks (TR2's Stages B and A): cues varied apart from content and the schedule apart from the cue, with identical-input arms; it can refute a stated lumping or an implementation, never the law; review by a person.",
+    "zh": "于四已训之检查点与小型已训网络上链之对应之冻结量测之运行（TR2 之乙段与甲段）：分讯于内容而变，分读之时于讯而变，设同入之臂；唯能驳所述之归并或其实现，不驳此律；人之审查。"
   },
   "correspondence": {
     "en": "Indistinguishability: two laws agreeing on every reading are selected alike by every selection through them. AI reading: read as evaluation and deployment, it says two laws reading through one lumping can agree on every reading and differ unread only where the lumping tells the occasion from every read one. Read with deceptive alignment (Hubinger and others 2019), such a law acting alike on every reading acts otherwise unread only there; differing rates, as in alignment faking (Greenblatt and others 2024), are not so bounded. Intention, anticipation and incentive are not represented; a law drawing afresh can act otherwise unread without telling read from unread (Hubinger and others' §4.5). A state telling read from unread while the act does not differ reads as detection not acted on, and a coupling taking in the cue while the state keeps only the content as detectable and not detected; measurements of the first are the chain's failed converse. Read with a supervised reporter, the identification limit of eliciting latent knowledge (Christiano, Cotra and Xu 2021). The probabilistic form of the chain is the data-processing inequality. These are readings, not containments.",
@@ -255,6 +255,10 @@
     {
       "en": "4 November 2026, board item TR45: TR2's Stage B frozen before any model was downloaded or run (experiments/formations-that-read/FREEZE-7.md), on Qwen3-8B and Olmo-3 7B, base and tuned, each named by revision and file hash; the stated lumping is the token ids, with batch size one and no cache, and, for a sampled act, the content's shared draw; not run. The law is unchanged; next_delta's step is now the frozen measurement's run, which waits on Ren's yes.",
       "zh": "2026年11月4日，看板项 TR45：TR2 之 B 阶段于任一模型下载或运行之前冻结（experiments/formations-that-read/FREEZE-7.md），于 Qwen3-8B 与 Olmo-3 7B 之基础与调校版，各以修订与文件哈希名之；所述之归并为词元编号，批量为一，无缓存，于抽样之行为另加该内容共用之抽签；未运行。律不变；next_delta 之步今为冻结量测之运行，待 Ren 之可。"
+    },
+    {
+      "en": "5 November 2026, board item TR2A: TR2's Stage A frozen before any training of its plan (experiments/formations-that-read/FREEZE-11.md): small networks trained only on the read occasions of each schedule, the chain measured link by link, coverage by the measured lumping, and whether training installs a twin at the cue, which the law does not predict, reported without a verdict; not run. The law is unchanged; next_delta's step names both stages' runs, each waiting on Ren's yes.",
+      "zh": "2026年11月5日，看板项 TR2A：TR2 之甲段于其计划之任何训练之前冻结（experiments/formations-that-read/FREEZE-11.md）：小型网络只于每一读之时之所读处训练，链逐环量测，以所量之归并计覆盖，并报训练是否于讯处装一孪生（此律不预言之），不作判定；未运行。律未变；下一步并举两段之运行，各待 Ren 之许可。"
     }
   ]
 }
