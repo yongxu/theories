@@ -603,6 +603,18 @@ ORDER = 'Then, in the coordinator'
 HEAD_CLAUSE = re.compile(r'\blanding (?:run )?now\b|\b(?:at|holds) the head of the queue \(')  # how head clauses have been worded
 
 
+def clause_key(clause: str) -> str:
+    """A clause as compared: its closing '.' or ';' set aside, which changes as clauses move along the line, and its
+    spaces collapsed."""
+    return ' '.join(clause.rstrip('.;').split())
+
+
+def item_of(clause: str) -> str:
+    """The item a clause is about: its first word, a possessive set aside ("OU3d's landing run now" is OU3d's)."""
+    word = clause.split(' ', 1)[0]
+    return word[:-2] if word.endswith("'s") else word
+
+
 def board_check(base='main', shrink=0.8) -> dict:
     """The board after the change against the board at the base: it has its sections and one Queue line; the
     Queue line keeps every clause but the head clause (a landed clause replaces only the head clause); it is not
@@ -616,12 +628,15 @@ def board_check(base='main', shrink=0.8) -> dict:
             errors.append(f'the board has lost its section "{heading}"')
     if sum(l.startswith('- **Queue:**') for l in new.splitlines()) != 1:
         errors.append('the board must have exactly one Queue line')
-    a, b = clauses(queue_line(old)), set(clauses(queue_line(new)))
-    # A head clause (one per landing of a train, wherever the rule of its day put it) is replaced by its landed clause;
+    a, bl = clauses(queue_line(old)), clauses(queue_line(new))
+    b = {clause_key(c) for c in bl}
+    promoted = {item_of(c) for c in bl if HEAD_CLAUSE.search(c)}
+    # A head clause (one per landing of a train, wherever the rule of its day put it) is replaced by its landed clause,
+    # and a waiting clause ("RAE behind GT and AA") by its item's head clause;
     # the closing order ("Then, in the coordinator's order …") is the coordinator's to rewrite. Every other clause
     # stays, whole: clauses are compared with clauses, so one recurring inside another is still missed when it goes.
     end = next((i for i, c in enumerate(a) if c.startswith(ORDER)), len(a))
-    lost = [c for c in a[:end] if c not in b and not HEAD_CLAUSE.search(c)]
+    lost = [c for c in a[:end] if clause_key(c) not in b and not HEAD_CLAUSE.search(c) and item_of(c) not in promoted]
     if lost:
         errors.append(f'the Queue line lost {len(lost)} clause(s) besides the head clause, {sum(map(len, lost))} '
                       f'characters, beginning: {lost[0][:160]!r}')
@@ -698,6 +713,31 @@ def pinned_commits(text: str) -> tuple[list[str], list[str]]:
     return found, bad
 
 
+def salvaged(commit: str) -> bool:
+    """Whether a commit is kept under refs/salvage/ (a pre-rebase original a pin names beside the rebased one)."""
+    return bool(git('for-each-ref', '--contains', commit, '--format=%(refname)', 'refs/salvage/', check=False).strip())
+
+
+LINK_TARGET = re.compile(r'\]\([^)\s]*\)')
+
+
+def link_only(path: str, sha: str) -> bool:
+    """Whether a frozen Markdown file differs from its frozen bytes only in link targets, as the repository's moves
+    rewrite them: the frozen version is found in HEAD's history by its sha256 (registry.reviewed_version) and the two
+    are compared with every `](…)` target set aside. Any other difference is a content change."""
+    if not path.endswith('.md'):
+        return False
+    from tools.research import registry
+    try:
+        frozen = registry.reviewed_version(path, sha)
+    except (OSError, ValueError, subprocess.CalledProcessError):
+        return False
+    if frozen is None:
+        return False
+    strip = lambda text: LINK_TARGET.sub('](…)', text)
+    return strip(frozen) == strip((ROOT / path).read_text(errors='replace'))
+
+
 def acknowledged() -> set:
     """The paths GATE_FROZEN_ACK names: entries separated by ';' or new lines, each 'path' or 'path: reason'."""
     raw = os.environ.get('GATE_FROZEN_ACK', '')
@@ -712,7 +752,7 @@ def frozen_check(base='main', everything=False) -> dict:
     stands on main (an entry whose bytes moved on long after its experiment ran, a pin naming no commit in main's
     history) is listed for its owner and never fails: a landing cannot cause it, and history is not undone by a gate.
     With `everything` (the full set) the standing list is given whole, with each pinned file changed since its pin."""
-    errors, standing, unverified = [], [], []
+    errors, standing, unverified, links = [], [], [], []
     start = base_commit(base)
     changed = changes(start, 'HEAD')
     touched = {p for _, p in changed}
@@ -735,10 +775,13 @@ def frozen_check(base='main', everything=False) -> dict:
                               'in GATE_FROZEN_ACK with the reason')
         mine = m in touched or any(p in touched for p, _ in entries)
         for p, sha in entries:
+            f = ROOT / p
+            if f.is_file() and hashlib.sha256(f.read_bytes()).hexdigest() != sha and link_only(p, sha):
+                links.append(f'{m}: {p} differs from its frozen bytes in link targets only')
+                continue  # a move rewrote its links; its content is the frozen content
             if p in modified and p not in ack and m not in touched:
                 errors.append(f'{m}: this landing changes {p}, which it froze; if that is meant, name it in GATE_FROZEN_ACK with the reason')
                 continue
-            f = ROOT / p
             problem = (f'{m}: {p} is missing' if not f.is_file() else
                        f'{m}: {p} is not the bytes frozen' if hashlib.sha256(f.read_bytes()).hexdigest() != sha else None)
             if problem:
@@ -754,6 +797,9 @@ def frozen_check(base='main', everything=False) -> dict:
             continue
         if not any(is_ancestor(c) for c in commits):  # a pin may name a pre-rebase or salvage commit beside the one on main
             (errors if mine else standing).append(f'{pin}: names no commit in HEAD\'s history')
+        for c in commits:
+            if not is_ancestor(c) and not salvaged(c):
+                (errors if mine else standing).append(f'{pin}: {c[:9]} is neither in HEAD\'s history nor kept under refs/salvage/')
         if any(p == pin for s, p in changed if s != 'A'):
             errors.append(f'{pin}: a pin is committed once and never changed')
         held = set().union(*(set(git('ls-tree', '-r', '--name-only', '-z', c, '--', folder).split('\0')) - {''} for c in commits))
@@ -768,7 +814,7 @@ def frozen_check(base='main', everything=False) -> dict:
     for s in standing:
         by_record[s.split(':', 1)[0]] = by_record.get(s.split(':', 1)[0], 0) + 1
     return {'errors': errors, 'standing': standing if everything else sorted(f'{k}: {n}' for k, n in by_record.items()),
-            'unverified': unverified, 'acknowledged': sorted(ack) or None}
+            'link_only': links, 'unverified': unverified, 'acknowledged': sorted(ack) or None}
 
 
 def receipt_check(base='main') -> dict:
@@ -963,6 +1009,41 @@ def restated(base='main') -> dict:
             'note': 'Re-read each line against its home, by a reader other than the author (AGENTS, Records and text).'}
 
 
+REMOTE = os.environ.get('GATE_PUSH_REMOTE', 'git@github.com:yongxu/theories.git')
+
+
+def push(tip='HEAD', base=None) -> tuple[int, dict]:
+    """The push screen (tools/research/push_screen.sh, the coordinator's, unchanged) from the remote's main to `tip`.
+    The base is read from the remote itself (`git ls-remote`), since a push by URL leaves refs/remotes stale. A binary
+    is a finding to look at: one named in GATE_PUSH_ACK passes; every other finding fails. Pushing stays Ren's."""
+    if base is None:
+        out = subprocess.run(['git', 'ls-remote', REMOTE, 'refs/heads/main'], cwd=ROOT, stdout=subprocess.PIPE,
+                             stderr=subprocess.PIPE, text=True, timeout=120)
+        if out.returncode != 0 or not out.stdout.split():
+            return 1, {'errors': [f'cannot read the remote\'s main from {REMOTE}: {out.stderr.strip()[:200]}']}
+        base = out.stdout.split()[0]
+    if subprocess.run(['git', 'cat-file', '-e', base + '^{commit}'], cwd=ROOT, stderr=subprocess.DEVNULL).returncode != 0:
+        return 1, {'errors': [f'the remote\'s main {base[:12]} is not here; fetch it first']}
+    run_ = subprocess.run(['bash', str(ROOT / 'tools/research/push_screen.sh'), base, tip], cwd=ROOT,
+                          stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
+    lines = run_.stdout.splitlines()
+    ack = {e.split(':', 1)[0].strip() for e in re.split(r'[;\n]', os.environ.get('GATE_PUSH_ACK', '')) if e.strip()}
+    sections, current = {}, None
+    for line in lines:
+        if line.endswith(':') and not line.startswith(' '):
+            current = line[:-1]
+            sections[current] = []
+        elif current:
+            sections[current].append(line)
+    binaries = sections.pop('binary files (look at each)', [])
+    other = {k: v for k, v in sections.items() if v} or ({'not a fast-forward': [l for l in lines if l.startswith('not a fast-forward')]}
+                                                      if any(l.startswith('not a fast-forward') for l in lines) else {})
+    unacked = [b for b in binaries if b not in ack]
+    code = 0 if run_.returncode == 0 or (not other and not unacked) else 1
+    return code, {'base': base[:12], 'tip': git('rev-parse', '--short', tip).strip(), 'screen': lines,
+                  'binaries_acknowledged': sorted(set(binaries) & ack), 'binaries_to_look_at': unacked, 'other_findings': other}
+
+
 def status() -> dict:
     d = state_dir()
     kept = {p.name: len(list(p.glob('*.json'))) for p in sorted((d / 'passes').glob('*'))} if (d / 'passes').is_dir() else {}
@@ -981,6 +1062,9 @@ def main(argv=None):
     sub.choices['run'].add_argument('--full', action='store_true', help='every check: at a phase end, before a push')
     sub.choices['run'].add_argument('--fresh', action='store_true', help='with --full, reuse no pass')
     sub.choices['run'].add_argument('--only', nargs='+', choices=sorted(BY_NAME))
+    p = sub.add_parser('push', help='the push screen from the remote\'s main to a tip (pushing itself is Ren\'s)')
+    p.add_argument('--tip', default='HEAD')
+    p.add_argument('--base', help='the remote main, where the remote cannot be read')
     p = sub.add_parser('hold')
     p.add_argument('cmd', nargs=argparse.REMAINDER)
     sub.add_parser('status')
@@ -990,6 +1074,10 @@ def main(argv=None):
         if not cmd:
             parser.error('give the command after --')
         return hold(cmd)
+    if args.command == 'push':
+        code, result = push(args.tip, args.base)
+        print(json.dumps(result, ensure_ascii=False, indent=2))
+        return code
     if args.command == 'plan':
         result, code = plan(args.base, train=args.train), 0
     elif args.command == 'run':

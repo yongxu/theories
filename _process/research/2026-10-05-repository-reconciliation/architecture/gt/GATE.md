@@ -1,6 +1,6 @@
 # GT: the landing gate by what a change reaches, and trains
 
-**Status:** draft 3, 4 November 2026, AI-written. The tool is [tools/research/gate.py](../../../../../tools/research/gate.py), with its tests in [test_gate.py](../../../../../tools/research/tests/test_gate.py). Ren asked whether the checks are "just the right amount" and said the work waits on them; he agreed to this direction the same day ([source](../../../../../sources/15-codex-theory-conversations/2026-11-04-checks-and-order.md)). The coordinator's ten requirements, sent before any slot was asked ([kept here](COORDINATOR-REQUIREMENTS.md)), are all met (§9). The draft rests on four read-only maps of what each check reads and costs ([measurements/](measurements/)). It was reviewed by an independent author of its tests, who found twelve bugs, and by two readers, one for soundness and one for the text, whose findings are all taken (§10). About twenty-five minutes to read; §0 takes three.
+**Status:** landed 4 November 2026 (main `34a3b6c97`); GT1, the follow-up of 5 November, adds the push tier, link-only freeze differences, salvaged pins and the board guard's corrected replay (§3.5 to §3.7). AI-written. The tool is [tools/research/gate.py](../../../../../tools/research/gate.py), with its tests in [test_gate.py](../../../../../tools/research/tests/test_gate.py). Ren asked whether the checks are "just the right amount" and said the work waits on them; he agreed to this direction the same day ([source](../../../../../sources/15-codex-theory-conversations/2026-11-04-checks-and-order.md)). The coordinator's ten requirements, sent before any slot was asked ([kept here](COORDINATOR-REQUIREMENTS.md)), are all met (§9). The draft rests on four read-only maps of what each check reads and costs ([measurements/](measurements/)). It was reviewed by an independent author of its tests, who found twelve bugs, and by two readers, one for soundness and one for the text, whose findings are all taken (§10). About twenty-five minutes to read; §0 takes three.
 
 ## 0. In three minutes
 
@@ -146,15 +146,16 @@ The board check compares the board after the change with the board at the base:
 
 - it keeps its five sections and has exactly one Queue line;
 - it is not a fifth shorter: landed rows that move to history are a few kilobytes each;
-- the Queue line loses no clause besides head clauses and the coordinator's closing order. A head clause is one worded "landing now", "landing run now", or "at (or holds) the head of the queue (" followed by its parenthesis, wherever the rule of its day put it. A clause that only mentions the head, such as "waits until L1 no longer holds the head of the queue", is not one. The order is the clause beginning "Then, in the coordinator's order" and what follows it. Clauses are cut at a full stop or a semicolon outside brackets and compared whole.
+- the Queue line loses no clause besides head clauses, waiting clauses whose item now has a head clause ("RAE behind GT and AA" becoming "RAE at the head of the queue (landing now …"), and the coordinator's closing order. A head clause is one worded "landing now", "landing run now", or "at (or holds) the head of the queue (" followed by its parenthesis, wherever the rule of its day put it. A clause that only mentions the head, such as "waits until L1 no longer holds the head of the queue", is not one. The order is the clause beginning "Then, in the coordinator's order" and what follows it. Clauses are cut at a full stop or a semicolon outside brackets and compared whole, their closing mark set aside, since a clause's ";" becomes "." as it moves along the line.
 
 A board-only change is refused while the base's first clause is a head clause, since board-only commits go in gaps; nothing waives this. `GATE_BOARD_REWRITE='reason'` accepts a deliberate rewrite and prints the reason with the pass.
 
-Replayed over the 346 commits to the board on main since 25 October, the guard flags eight:
+Replayed over main's own moves since 25 October (its reflog: each fast-forward from the board main had to the board it got, which is what the guard compares at a landing), 753 of which changed the board, the guard flags nine:
 
-- US's wipe of 347 clauses (`0a9b61629`), and 83 lost in a merge into oc4-landing (`7d89d11ed`);
-- one merge that halved the board and dropped UE28's landed clause (`cb6ee1181`);
-- five merges or landings that each dropped a landed clause: SJ1's (`787e074ff`), UE24's (`141aa0d80`), U3's (`5c6837c20`), UE7's in UE9's landing (`8548c5896`) and one in MA4's (`74ddbd063`).
+- US's wipe of 380 clauses (`90c8bfbaa` to `d1f855417`), the one loss; the Queue line points to `90c8bfbaa` for it;
+- eight deliberate rewrites, each of which would now carry a reason: two moves of landed clauses to history (`15765701b`, 83 clauses; `88777db50`, the board halved), two landed clauses dropped as the next head claimed (U4's C line at `0249ba3fe`, SJ1's at `e98999fbf`), and four clauses amended in place (UE7's, given UE8's qualifier at UE9's landing; LA4's Stage A check line; the freeze line after its push; the pointer to the earlier landed clauses).
+
+A first replay compared each commit on main's first-parent chain with its first parent. For a branch fast-forwarded in, that parent is the branch's side, not main's, so it flagged correct merges that took main's trimmed board; and it compared clauses with their closing mark, so it flagged clauses that had only moved. Both are corrected.
 
 Every ordinary claim and landing passes.
 
@@ -165,12 +166,12 @@ Every ordinary claim and landing passes.
 - deleting or editing a freeze record fails;
 - changing a file a record lists fails, and so does changing a file a pin's experiment held at a pinned commit, unless `GATE_FROZEN_ACK` names that file with the reason;
 - a record the landing touches must have every entry at the bytes it names;
-- a pin the landing adds must name a commit in main's history;
+- a pin the landing adds must name a commit in main's history, and every commit a pin names must be in main's history or kept under `refs/salvage/` (a pre-rebase original beside the rebased one);
 - a landing that changes the folder of a freeze record the check cannot read (its hashes name no path) fails until that record is read and acknowledged.
 
-What already stands on main is listed for its owner and never fails, even under `--full`. A landing cannot cause it, and a gate cannot undo history. Under `--full` the list is given whole, with each pinned file changed since its pin. A pin may name a pre-rebase or salvage commit beside the one on main, so one commit in main's history is enough.
+A frozen Markdown file whose difference from its frozen bytes lies only in link targets, as the repository's moves rewrite them, is listed apart as link-only (the frozen version is found in history by its sha256 and the two compared with every `](…)` target set aside) and never fails; any other difference is a content change. What already stands on main is listed for its owner and never fails, even under `--full`. A landing cannot cause it, and a gate cannot undo history. Under `--full` the list is given whole, with each pinned file changed since its pin. A pin may name a pre-rebase or salvage commit beside the one on main, so one commit in main's history is enough.
 
-On main today, of 47 live freeze records, the check reads 25, alongside 20 pins. Seven records have entries whose bytes have moved on since their experiments ran: agentdojo's `FREEZE.json` and its `independent-code-freeze.json`, the stochastic-prediction `check-source-freeze.json`, the selective-handoff `FREEZE.json`, and three protocol and oracle freezes under shared-renewal-capability. Twenty-two records give hashes that name no path. These go to their owners through the coordinator. A change to freeze 1's `told/` files reaches every record that lists them, so all eight freezes of formations-that-read are checked together.
+On main on 5 November, of 47 live freeze records, the check reads 25, alongside 20 pins. Twelve frozen files differ in link targets only. Five differ in content, for their owners: agentdojo's `check_analysis.py` and `AGENTDOJO-EVIDENCE-REVIEW.md` (its `independent-code-freeze.json`), stochastic-prediction's `Exposure.lean`, the plasticity freeze's `EVALUATIVE-PLASTICITY-MATH.md` and succession's `FormedSelection.lean`. Twenty-two records give hashes that name no path. A change to freeze 1's `told/` files reaches every record that lists them, so all eight freezes of formations-that-read are checked together.
 
 **Receipts.** The receipt check reads the Lean package's receipts. The core receipt (`becoming-verification.json`) must have passed, and must bind the current bytes of every module it lists, so the core run ran on this Lean. A module under `Becoming/` that no receipt lists fails too. Another checker's receipt beside it, such as fallible-inquiry's, fails where the landing changes a source of its own that the core receipt does not list. Where only the core modules it imports moved on, it is listed as an area check to run again. That checker's receipt has been stale against the core since 31 October.
 
@@ -180,6 +181,7 @@ On main today, of 47 live freeze records, the check reads 25, alongside 20 pins.
 make gate-plan                 # what the change reaches, and the steps before the gate
 make gate                      # the gate on the merged tree (BASE=main by default)
 make gate FULL=1               # every check: at a phase's end and before a push; FRESH=1 with it reuses nothing
+make gate-push                 # the push screen from the remote's main (git ls-remote) to HEAD; GATE_PUSH_ACK names binaries looked at
 python3 -B tools/research/gate.py run --train BRANCH ...   # names, under each check, the landings that reach it
 python3 -B tools/research/gate.py hold -- make research-render
 python3 -B tools/research/gate.py status
@@ -272,7 +274,7 @@ The coordinator sent ten requirements on 4 November before any slot was asked ([
 4. **Board-only commits in gaps only,** needing only links and the board's parse. §3.5, §3.2.
 5. **Freeze integrity derived from the hash files, and the review packet's check.** §3.6, §3.1.
 6. **A missing path fails, and an unplaced one selects everything.** §0, §3.1.
-7. **The push screen outside the research checks.** It stays the coordinator's script, called unchanged in the push tier.
+7. **The push screen outside the research checks.** The coordinator's script, copied unchanged into `tools/research/push_screen.sh`, run by `gate.py push` (`make gate-push`) from the remote's main read by `git ls-remote`; a binary is a finding to look at, passed when `GATE_PUSH_ACK` names it; every other finding fails. Pushing stays Ren's.
 8. **Load:** slots shared by this repository's worktrees, the core run included, a dead holder's lock freed, no second copy of a run, and a red rerun alone. §3.3, §3.7.
 9. **Trains:** each landing keeps its own commits and clause, and the Queue line decides who boards. §4.
 10. **Before-copies** in `_process/history/…-instructions/`, linked from AGENTS.md's header. §6.
