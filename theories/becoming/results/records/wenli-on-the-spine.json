@@ -178,7 +178,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/verify_zh.py",
       "role": "integration",
-      "sha256": "ba7e897e186caaa583313059b1fd3ae3629ab9e801f8cc265046cc91804b1de3"
+      "sha256": "42eb60678112cb3551bb644b4034e14038b5b61ab5e800faf50f7cf873877862"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/import_wenli.py",

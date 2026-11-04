@@ -212,7 +212,7 @@
 
 **机制。** 周易所描述的，首先是一组构形：一卦是自下而上的六爻，每爻阳（刚）或阴（柔）；一爻可变；消息之律使每爻升一位，上爻以其反入初位；所传卦序把六十四卦排成一列。这些都是关系之物：一卦之所是，就是它的六个位上各是什么，以及它怎样经一律走到下一卦。写成脊柱上的一个世界，只是写出经文自己描述的结构；脊柱对一切世界证明的律（复返与合并、吸收、归并承载律、语境之读的粘合）便在这些构形上被检查，不只被断言。
 
-六个模块都在纯核之外的实例环中，合乎纯核之条件（只引前奏，每个声明的公理报告为空）：[Hexagrams](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Hexagrams.lean)（构形与两律）、[HexagramPlaces](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HexagramPlaces.lean)（爻位之关系与普查）、[HexagramLaws](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HexagramLaws.lean)（互、之卦、錯綜、加一、消息之轨）、[HexagramSites](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HexagramSites.lean)（王弼之读）、[HexagramCommuting](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HexagramCommuting.lean)（錯之对称及其打破之处）、[HexagramSequences](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HexagramSequences.lean)（传中诸排列）。经文取自中文维基文库，记有版本号与 SHA-256，未与刻本对校；逐句对应由检查脚本核对，随 research-test 运行；所核之逐段表在[易传之对应](../history/YI-ZHUAN-AND-BECOMING.md#4-逐句对应)中。模块中没有吉凶、贵贱、德或意义之谓词，也没有判断。
+六个模块都在纯核之外的实例环中，合乎纯核之条件（只引前奏，每个声明的公理报告为空）：[Hexagrams](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Hexagrams.lean)（构形与两律）、[HexagramPlaces](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HexagramPlaces.lean)（爻位之关系与普查）、[HexagramLaws](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HexagramLaws.lean)（互、之卦、錯綜、加一、消息之轨）、[HexagramSites](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HexagramSites.lean)（王弼之读）、[HexagramCommuting](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HexagramCommuting.lean)（錯之对称及其打破之处）、[HexagramSequences](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HexagramSequences.lean)（传中诸排列）。经文取自中文维基文库，记有版本号与 SHA-256，未与刻本对校；逐句对应由检查脚本核对，随 research-test 运行；所核之逐段表在[易传之对应](../history/YI-ZHUAN-AND-BECOMING.md#4-逐句对应)中。模块中没有吉凶、贵贱、德或意义之谓词，也没有判断。本节所引之 Lean 名皆在命名空间 `Becoming.Hexagram.` 中，省去此前缀。
 
 <a id="hexagram-world"></a>
 ### 5.1 六十四卦之世界
@@ -312,7 +312,7 @@
 | 阳爻之数的奇偶 | 消息之律与一爻之变都同行于此归并，阳爻之数本身不是，互之律也不同行于奇偶；三爻之卦奇偶恰分阳卦阴卦（「陽卦奇，陰卦偶」） | `yangOdd_goAlike`、`nuclear_yangOdd_not_goAlike`、`odd3_iff` |
 | 杂卦 | 保留同样的三十二对，前五十六卦置每卦于其配之旁，末八卦交错四对，也不是任何与錯、綜或二者交换之律的运行 | `zagua_partners`、`zagua_last_eight`、`zagua_not_commutes` |
 | 静止 | 消息之律没有静止之处，既濟亦然 | `never_comes_to_rest` |
-| 说卦第五章之八站 | 运行八站之律无一与錯、綜或轮转交换；相对四对中只有離、坎互为錯，第三章之四对则皆是 | `stations_not_commutes`、`Trigram.opposite_stations` |
+| 说卦第五章之八站 | 运行八站之律无一与錯、綜或轮转交换；相对四对中只有離、坎互为錯，第三章之四对则皆是 | `Trigram.stations_not_commutes`、`Trigram.opposite_stations` |
 | 泰与否 | 否既是泰之錯，也是泰之綜；凡錯所保持之读法，沿消息之律自二者起之运行，每步皆读之为同；“交”（下阳上阴）在泰之每一高度成立、在否之任一高度不成立，所以“交”不为錯所保持 | `pi_of_tai`、`kept_alike`、`meets_tai_pi` |
 
 所以卦序是一条律之轨（`orderNext_one_orbit`），只是此律由卦序这张表定义。序卦在对与对之间给出的理由（「物不可以終否，故受之以同人」）是加在清单上的言说，不是构形承载之律 [AI reading, D55]。脚本另算的最好部分相合（三格局部规则最多 63 步中 9 步，置换加掩码之律 28 步；八站 8 步中 5 步与 4 步）未写成 Lean。
@@ -406,7 +406,7 @@
 | 先在的根据 | 有物混成，先天地生；以无为本；元气混而为一；未有天地之先毕竟是先有此理；自性能生万法 | 王夫之“乾坤并建，时无先后”；程颐“体用一源”；戴震“理者情之不爽失”；郭店“生于有，生于亡” | 表示中每个世界就是它自己的运行（`World.run_world`，依定义）；世界平衡，恰当交换之律有一运行具其网与交换（`World.balanced_iff_exists_run`，[第一章](01-ROOT.md#r-worlds-are-runs)）：表示不需要先于运行之始；这不裁决先在根据是否存在 |
 | 先定的性或价值 | 性善、性恶、性即理；天命之谓性；五声有善恶 | 孟子牛山；荀子化性起伪；嵇康声无哀乐 | 同一依存网与无物有意义、一切皆有意义都相容（`Web.significance_undetermined`，[第七章](07-SIGNIFICANCE.md#r-what-the-dynamics-leave-open)） |
 | 意志或单一统摄者 | 天志；董仲舒之天意；王一贯三；利出一孔；将欲歙之、愚民 | 荀子“天行有常”；孟子“天不言”；老子“以百姓心为心”；黄宗羲“天下为主，君为客” | 沿依存导出之范围中，中心不由动力学推出（`Clearing.center_not_derived`，World 上构造的反模型，[第七章](07-SIGNIFICANCE.md#r-derived-extent-limits)）；只对沿依存导出之范围成立；沿已形成之关系，受影响者与之相关，传递不限于自身之区域 |
-| 争胜与等级 | 不战而屈人之兵；二柄；民弱国强；贵贱有等；亲亲之杀 | 老子“人之道，损不足以奉有余”；楚庄王“犹有晋在”；墨子“先从事”；和而不同 | 一方位置之升须有他方之降（`RelativePosition.rise_needs_fall`，[第五章](05-COLLECTIVES.md#r-relative-position-is-zero-sum)）；所施之码使诸形成一致，不偏任何形成（`SharedCodes.impose_agrees`、`impose_keeps_exchange`），各形成所失恰是其码所分而所施之码所并者（`SharedCodes.impose_loses_iff`） |
+| 争胜与等级 | 不战而屈人之兵；二柄；民弱国强；贵贱有等；亲亲之杀 | 老子“人之道，损不足以奉有余”；楚庄王“犹有晋在”；墨子“先从事”；和而不同 | 一方位置之升须有他方之降（`RelativePosition.rise_needs_fall`，[第五章](05-COLLECTIVES.md#r-relative-position-is-zero-sum)）；所施之码使诸形成一致，不偏任何形成（`SharedCodes.impose_agrees`、`SharedCodes.impose_keeps_exchange`），各形成所失恰是其码所分而所施之码所并者（`SharedCodes.impose_loses_iff`） |
 
 <a id="laozi-51"></a>
 **读法** [AI reading, D54]。**老子第五十一章。**最强之一例是「生而不有，为而不恃，长而不宰」。两处结构相合：动作是部分的，恰当它是部分自身的策略，其余以之为输入时即受其驱动，这是“宰”的结构；一个见证中，同一部分同样之汲取，有一个其他汲取者时造成差别，有两个时不造成（`Pool.difference_only_together`）：差别可以只由共同者造成，这是“不恃”。“不有”在脊柱上没有可读之结构：脊柱不立占有之关系，这只是未表示，不是相合。从“不宰”到“应当不宰”，还需要两个前提：延续之条件（含不变性一步，即条件在自身之预设以外的内容）定范围（谁的损失算数），以广为愈（C）定次序（[第七章](07-SIGNIFICANCE.md)）。经文与脊柱都没有自行给出它们，理论也不断言它们。
@@ -595,7 +595,7 @@
 **读法** [AI reading, D49]。这一映射得出一个与早期文本相反的结果：早期说“开之四相不可缺一”，视四标为独立的；在脊柱上它们不独立。转作复返即给出可，不需前提；有限构形中，一个运行开始恰当一条历程到达一个复返（`Onward.run_iff_returning`，[第一章](01-ROOT.md#r-where-a-run-goes-on)），所到之复返者不必是起点。所以在那里，可就是到达一个复返；未则要一个不为任何清单所含的世界。早期的“九句”分归与不归，于是在脊柱上成为三种情形：无损之复返（语料所谓“不息”而无“生生”）；被吸入（不归之“收”：只入阴爻之律下，坤以外的每一构形永不回到自身，有限构形中即有，[§5.1](#hexagram-world)）；永不重访任何已经过之构形（不为任何清单所含，`unlisted_of_new`，有限构形中不可能，任一运行的前 N + 1 个状态必有重访）。唯第三种可当九句之“生”（不归而继续）；它不就是第二章之生成，生成是经传而延续的样式（[第二章](02-MAP.md)）。律不动的构形每步复返，是静，不是熄。稳与元闭在脊柱上是同一结构（扰动被吸回规则所持之处），从规则所持一侧读为稳，从将要到达它的改变一侧读为法源冻结：判断不同而结构相同，这正是评价只经比较进入、从不经定义进入的理由。
 
 <a id="glossary-senses"></a>
-**读法** [AI reading, D1, D5]。语料词表中有几个词与本理论之词同字而不同义，不可合并。语料之“生生不息”分为生、生生（进入亦保持、恢复或创造下一轮之条件与生成者）与不息（经代谢、死亡与传递而样式再实现）；形式之 `Unceasing`（某一形成在任意晚之步生起）远弱于它，复返而成既有形式之抄本不及之；文法之 `«息»` 以归纳正面定义（一事所复生至者皆息，则此事息，[§三](#tong-and-xi)），说的是复生之串有尽，与语料之“息”也不同。语料之“开”是四标并立，本理论之“开放”只是其中之“未”。“理”在语料之化／理对偶中是轨迹之不变量，与本理论“建模结构与变化之律”二义不并。“道”在语料中有指南、形式谓词与代数三种用法，本理论不立形式之道。善、恶、智没有形式谓词；“足”最近于寻求之静（`Law.rests_iff`，[第三章](03-KNOWING.md#r-seeking-boundary)）。
+**读法** [AI reading, D1, D5]。语料词表中有几个词与本理论之词同字而不同义，不可合并。语料之“生生不息”分为生、生生（进入亦保持、恢复或创造下一轮之条件与生成者）与不息（经代谢、死亡与传递而样式再实现）；形式之 `Web.Unceasing`（某一形成在任意晚之步生起）远弱于它，复返而成既有形式之抄本不及之；文法之 `«息»` 以归纳正面定义（一事所复生至者皆息，则此事息，[§三](#tong-and-xi)），说的是复生之串有尽，与语料之“息”也不同。语料之“开”是四标并立，本理论之“开放”只是其中之“未”。“理”在语料之化／理对偶中是轨迹之不变量，与本理论“建模结构与变化之律”二义不并。“道”在语料中有指南、形式谓词与代数三种用法，本理论不立形式之道。善、恶、智没有形式谓词；“足”最近于寻求之静（`Law.rests_iff`，[第三章](03-KNOWING.md#r-seeking-boundary)）。
 
 ---
 

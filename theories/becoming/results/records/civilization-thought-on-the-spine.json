@@ -50,8 +50,8 @@
     "nondual-method-not-proof"
   ],
   "validation_scope": {
-    "en": "verify_zh.py passes (4 November 2026, board item RAE; with research-test since): the import (438 files by SHA-256), one verdict for each of 5,673 judgments, each of the 3,499 flagged placed once, 2,023 fragments verbatim, 1,603 declarations in receipt 20261103T211917.845905Z, 234 records, the name table (449 names), and 06-CLASSICAL-TEXTS's 116 citations of Lean names, its record links and nine numbers of its §七; the chapters' quotations, declarations, links, 对照 kinds and tables were checked until they moved to history/ on 23 October 2026. All readers AI; no collation with a printed edition.",
-    "zh": "verify_zh.py 通过（2026 年 11 月 4 日，看板项 RAE；此后随 research-test）：导入 438 个文件，5,673 条判断各一裁定，所标 3,499 条各落一处，2,023 片段逐字，1,603 个声明在回执 20261103T211917.845905Z 中，234 份记录，名表 449 名，06 之 116 处 Lean 名、记录链接与第七节九数；诸章之引文、声明、链接、对照与表核至 10 月 23 日移入 history/。读者皆 AI；未与刻本对校。"
+    "en": "verify_zh.py passes (4 November 2026, board item RAE; with research-test since): the import (438 files by SHA-256), one verdict for each of 5,673 judgments, each of the 3,499 flagged placed once, 2,023 fragments verbatim, 1,603 declarations in receipt 20261103T211917.845905Z, 234 records, the name table (449 names), and 06's 115 citations of Lean names, each exact, its record links and nine numbers of its §七; the chapters' quotations, declarations, links, 对照 kinds and tables were checked until they moved to history/ on 23 October 2026. All readers AI; no collation with a printed edition.",
+    "zh": "verify_zh.py 通过（2026 年 11 月 4 日，看板项 RAE；此后随 research-test）：导入 438 个文件，5,673 条判断各一裁定，所标 3,499 条各落一处，2,023 片段逐字，1,603 个声明在回执 20261103T211917.845905Z 中，234 份记录，名表 449 名，06 之 115 处 Lean 名（各确指一名）、记录链接与第七节九数；诸章之引文、声明、链接、对照与表核至 10 月 23 日移入 history/。读者皆 AI；未与刻本对校。"
   },
   "next_delta": {
     "en": "The gaps the texts raise, each to be claimed before it is written: witnesses that are functions of one another; measures of a juncture; a pool weighted by share. Then the three RO and 易传 kinds decided in the chapter written into those maps.",
@@ -400,7 +400,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/verify_zh.py",
       "role": "integration",
-      "sha256": "ba7e897e186caaa583313059b1fd3ae3629ab9e801f8cc265046cc91804b1de3"
+      "sha256": "42eb60678112cb3551bb644b4034e14038b5b61ab5e800faf50f7cf873877862"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/build_tables.py",
@@ -468,6 +468,10 @@
     {
       "en": "4 November 2026, board item RAE (AA Phase 0's E3, E1, E2): verify_zh.py had pointed at the three chapters RA moved to history/ (23 October) and skipped them without a word, ran in no test, and rewrote a tracked file on every run; the map named a record CD renamed (whole-first-and-bounded-centers, now whole-and-regions-and-bounded-centers, 27 citations) and a declaration ND renamed in OU7 (Pool.difference_belongs_to_the_joint, now Pool.difference_only_together, 7 declaration lists and 11 mentions in readings, notes and a proposal). passages.json renamed by a dated script (zhonghua/rename_2026-11-04.py), each entry changed noted; the verifier now checks 06-CLASSICAL-TEXTS's Lean names, record links and nine numbers its §七 states of the map and the name table, fails on a missing chapter or one where it finds no Lean name, writes no file, and runs with research-test; the validation scope is restated from the passing run's own summary, and, to keep within the length rule, no longer says that \"each entry had three readings (mapper, reviser, independent checker); the 中华本 was reviewed as one book three times\", true of that work as before. Claims, kinds, readings' words and the law unchanged.",
       "zh": "2026年11月4日，看板项 RAE（AA 第零阶段之 E3、E1、E2）：verify_zh.py 原指向 RA 于 10 月 23 日移入 history/ 之三章，缺之则默然跳过，不在任何测试中，且每次运行改写一个受版本管理之文件；对应表引一份 CD 已更名之记录（whole-first-and-bounded-centers，今为 whole-and-regions-and-bounded-centers，27 处）与一个 ND 于 OU7 更名之声明（Pool.difference_belongs_to_the_joint，今为 Pool.difference_only_together，7 个声明表及读法、注与一提议中 11 处）。passages.json 以一份注明日期之脚本更名（zhonghua/rename_2026-11-04.py），每个改动之条目皆有注；检查脚本今核 06-CLASSICAL-TEXTS 之 Lean 名、记录链接及其第七节所述对应表与名表之九数，缺章或章中不见 Lean 名即不通过，不写文件，并随 research-test 运行；验证范围依通过之运行自身之摘要重写，并为合长度之规，不再写“每个条目经三读（映射者、以现行主干重读的修订者、独立检查者）；中华本各篇起草后经对抗审读改为精确修改”，其于该工作仍真。断言、类别、读法之文与律未变。"
+    },
+    {
+      "en": "5 November 2026, board item RAE2: verify_zh.py had read 06-CLASSICAL-TEXTS's unprefixed Lean names as the end of any audited declaration, so a name ending some declaration passed and an ambiguous one was not refused; each now resolves to exactly one, whole, with Becoming. before it, or in the namespace 06 states for its section or table (§五 states Becoming.Hexagram once), and three names outside a stated namespace are written in full in 06. The scope's count (115) is the passing run's. Claims unchanged.",
+      "zh": "2026年11月5日，看板项 RAE2：verify_zh.py 原把 06-CLASSICAL-TEXTS 未带前缀之 Lean 名读作任一已审声明之末段，故凡为某声明末段之名皆通过，有歧义者亦不拒；今每名须恰确指一名：如所写、前加 Becoming.、或加 06 于其节或其表所述之命名空间（第五节一次说明 Becoming.Hexagram），且 06 中不在所述命名空间内之三名改写全名。验证范围之数（115）为通过之运行所给。断言未变。"
     }
   ]
 }
