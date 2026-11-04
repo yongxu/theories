@@ -110,8 +110,8 @@
     "zh": "纯核，公理报告皆空：Cascade 引 Learning 唯为 Training.Through；诸行以成员之数递归而建。"
   },
   "next_delta": {
-    "en": "The probabilistic form, a cascade once public evidence outweighs every private signal; a test of where sequential choosers meet the premise at the histories reached (the plan's TR3, resting on a-cascade-at-the-histories-reached), a named probabilistic model's timing judged apart; review by a person.",
-    "zh": "概率之形，公示之据重于每一私讯时之级联；依次之择者于所至之历何处合此前提之检验（计划之 TR3，依 a-cascade-at-the-histories-reached），具名之概率模型之时机另判；人之审查。"
+    "en": "The probabilistic form, a cascade once public evidence outweighs every private signal; a run of the frozen test of where sequential choosers meet the premise at the histories reached (TR3, resting on a-cascade-at-the-histories-reached), a named probabilistic model's timing judged apart; review by a person.",
+    "zh": "概率之形，公示之据重于每一私讯时之级联；依次之择者于所至之历何处合此前提之冻结检验之运行（TR3，依 a-cascade-at-the-histories-reached），具名之概率模型之时机另判；人之审查。"
   },
   "correspondence": {
     "en": "The deterministic form of an information cascade (Bikhchandani, Hirshleifer and Welch 1992; Banerjee 1992), where the act has stopped reading the member's own signal; WitnessRefinementRuns.copied_witnesses_same is a neighbour, where copied witnesses add nothing under its further hypotheses. AI reading: copying as the dependence failure of Condorcet's jury theorem; echo chambers, or evaluators trained on one another's verdicts, under the cascade premise. These are readings, not containments.",
@@ -235,6 +235,10 @@
     {
       "en": "4 November 2026, board item TRL: the lemma the next step named is stated, a-cascade-at-the-histories-reached, with the premise asked only at the histories a world reaches and weaker by a witness; this record's statement and declarations unchanged, its next step and related list updated.",
       "zh": "2026年11月4日，工作板条目 TRL：下一步所名之引理已述，即 a-cascade-at-the-histories-reached，前提唯问于一世界所至之历，以一见证为较弱；本记录之陈述与声明未变，其下一步与相关之列更新。"
+    },
+    {
+      "en": "4 November 2026, board item RFZ: the test TR3 frozen before any call to a model (experiments/formations-that-read/FREEZE-3.md), its walk following the act a member ignores its draw with and resting on a-cascade-at-the-histories-reached; not run. The law is unchanged; next_delta's step is now the frozen test's run, which waits on Ren's yes.",
+      "zh": "2026年11月4日，看板项 RFZ：检验 TR3 于任一模型调用之前冻结（experiments/formations-that-read/FREEZE-3.md），其路随一员不读其私讯时所取之行，依 a-cascade-at-the-histories-reached；未运行。律不变；next_delta 之步今为冻结检验之运行，待 Ren 之可。"
     }
   ]
 }

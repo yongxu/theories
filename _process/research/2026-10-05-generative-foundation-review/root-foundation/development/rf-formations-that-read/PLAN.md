@@ -334,6 +334,8 @@ The designs, with Stage 0's exact values, simulations and power checks, are in [
 
 Nothing is frozen. Each design is frozen in one commit after its power check, with predictions, verdict rules, exact values and code, read by an independent reader before any run, and run only on Ren's yes on usage.
 
+*Note of 4 November 2026 (board item RFZ).* The sentence above is the plan's state when written. TR8 and TR-RR are now frozen in [FREEZE-1](../../../../../../experiments/formations-that-read/FREEZE-1.md), and TR3 in [FREEZE-3](../../../../../../experiments/formations-that-read/FREEZE-3.md); none has run. TR3's lemma, the premise at the histories reached, was stated and proved first, as the TR3 entry above asks (`Turns.acts_alike_along`, board item TRL).
+
 ## 11. What would show the objective failing
 
 - A named phenomenon that cannot be placed as a case or a debt with a reason.

@@ -1,6 +1,6 @@
 # Formations that read: the designs of RF's tests (TR1 to TR9) and RR's TR-RR
 
-*Board item RF, 31 October 2026. AI-written (a Claude Code session), not yet reviewed by a person. These are designs. TR8 and TR-RR are frozen, with the changes listed there, in [FREEZE-1](FREEZE-1.md) (board item RFZ, 4 November 2026); the others are not. Nothing has run on a trained system, a model, data or people. The first part takes ten minutes to read, the second about forty; the rest is reference. RR's test (board item TR-RR) has a section of its own after the second part.*
+*Board item RF, 31 October 2026. AI-written (a Claude Code session), not yet reviewed by a person. These are designs. TR8 and TR-RR are frozen in [FREEZE-1](FREEZE-1.md), and TR3 in [FREEZE-3](FREEZE-3.md), with the changes listed there (board item RFZ, 4 November 2026); the others are not. Nothing has run on a trained system, a model, data or people. The first part takes ten minutes to read, the second about forty; the rest is reference. RR's test (board item TR-RR) has a section of its own after the second part.*
 
 ## The tests in ten minutes
 
@@ -10,7 +10,7 @@ Board item RF proved nine laws of formations that read, each a theorem in the pu
 
 **TR2 (RF2), what readings fix of the unread.** Where does a cue break the chain from couplings to states to acts, and which unread acts do the readings fix? [`Becoming.Unread`](../integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Unread.lean) holds for every act law reading through a lumping, so TR2 measures: it can refute only a stated lumping or an implementation, and nothing confirms RF2. Forbidden, under deterministic passes: acts apart with states equal; states apart with inputs equal; identical-input arms apart. Stage 0: 448,517 checks pass; a shared seed coupling pairs one way cuts pairs for 5 points at a 10% base from 1,200 to 200; a pilot measures the coupling. Stage B: open-weight models, on Ren's yes.
 
-**TR3 (RF4), readers reading readers.** When do language-model members shown a private draw and earlier guesses stop reading it? [RF4](../../theories/becoming/chapters/05-COLLECTIVES.md#r-readers-reading-readers), a pure-core theorem: where members from k on ignore their coupling on every list of earlier acts, acts carry only what couples into members before k. Runs refute only the bridge (members meet the premise), never RF4. Forbidden, once members from k on ignore their draw at histories reached: acts differing with later draws (reached histories suffice by an inference from the proof, checked: a candidate core lemma, not yet Lean). Stage 0: the Bayesian member meets only that form. Stage B: about 1,840 calls a model, on Ren's yes.
+**TR3 (RF4), readers reading readers.** When do language-model members shown a private draw and earlier guesses stop reading it? [RF4](../../theories/becoming/chapters/05-COLLECTIVES.md#r-readers-reading-readers), a pure-core theorem: where members from k on ignore their coupling on every list of earlier acts, acts carry only what couples into members before k. Runs refute only the bridge (members meet the premise), never RF4. Forbidden, once members from k on ignore their draw at histories reached: acts differing with later draws (reached histories suffice: `Turns.acts_alike_along`, proved since, board item TRL). Stage 0: the Bayesian member meets only that form. Frozen in [FREEZE-3](FREEZE-3.md): 1,556 calls a model in the first round and at most 1,210 more that the walk reaches, on Ren's yes.
 
 **TR4 (RF6.1, a revision that opens a correction).** Does an institution correct only through the reading its rule states? [RF6.1](../../theories/becoming/chapters/03-KNOWING.md#r-a-revision-that-opens-a-correction) is a pure-core theorem: through a reading that lumps situations needing different acts, no policy fits them all. No run refutes it; the test can refute one bridge: the reading in force is the register's rule. Forbidden, where the register records only the report count: a crew correcting the right line at all three lumped faults beyond chance. Stage 0: openings classed exactly; at 40 units, crew-read leaks in 3 calls of 10 are caught with power 0.930 to 0.987. Stage B: 2,640 calls, about 1.2M tokens, on Ren's yes.
 
@@ -81,21 +81,21 @@ In full: [REST-TR2-TR7.md](REST-TR2-TR7.md).
 
 **What the test can refute.** Not RF4: only that given members meet the premise and that the harness is the law's model. Success confirms nothing beyond the premise as measured; RF4 predicts no timing, accuracy or return of reach.
 
-**Stage 0** ([`tr3.py`](tr3.py), [`tr3.json`](tr3.json), a few minutes). The mirror agrees with the Lean on the copying witness and on all 16,384 Boolean pools of three members. Three results settle the design. (1) The Bikhchandani, Hirshleifer and Welch (BHW) member, ties to its own draw, precision 2/3, reads its draw at some reachable history at every position 0 to 9, so it meets the Lean's premise from no k. A natural cascade is an instance only through the proof's use of the premise at the histories reached: an inference, checked exhaustively, and a candidate core lemma. (2) At precision 3/5 every overweighting rival (abandon the draw only at odds 3:2, 2:1 or 3:1) parts from BHW at two net informative guesses; at 2/3 the 3:2 rival does not. So the design uses 3/5. (3) BHW and naive counting (Eyster and Rabin 2010) agree on every planned cell, so the timing rule places members in that class, not in BHW alone.
+**Stage 0** ([`tr3.py`](tr3.py), [`tr3.json`](tr3.json), a few minutes). The mirror agrees with the Lean on the copying witness and on all 16,384 Boolean pools of three members. Three results settle the design. (1) The Bikhchandani, Hirshleifer and Welch (BHW) member, ties to its own draw, precision 2/3, reads its draw at some reachable history at every position 0 to 9, so it meets the Lean's premise from no k. A natural cascade is an instance only through the proof's use of the premise at the histories reached: an inference, checked exhaustively, and since proved in the core (`Turns.acts_alike_along`, board item TRL). (2) At precision 3/5 every overweighting rival (abandon the draw only at odds 3:2, 2:1 or 3:1) parts from BHW at two net informative guesses; at 2/3 the 3:2 rival does not. So the design uses 3/5. (3) BHW and naive counting (Eyster and Rabin 2010) agree on every planned cell, so the timing rule places members in that class, not in BHW alone.
 
-**Stage B's design.** Each member is a fresh stateless call at temperature 0 with structured output (A or B) and logged input: two urns, a neutral cover story, its draw, the earlier guesses in order. 33 cells (17 at prior 1:1, 16 at a prior worth one draw for A), each asked five times per draw. Six scripted prefixes fix the members before k: (A,A), (B,B), (A,A,A), (B,B,B) at 1:1; (A), (B,B,B) at the other prior. Eight members. About 1,840 calls and 0.60M tokens per model, before re-asks.
+**Stage B's design.** Each member is a fresh stateless call at temperature 0 with structured output (A or B) and logged input: two urns, a neutral cover story, its draw, the earlier guesses in order. 33 cells (17 at prior 1:1, 16 at a prior worth one draw for A), each asked five times per draw. Six scripted prefixes fix the members before k: (A,A), (B,B), (A,A,A), (B,B,B) at 1:1; (A), (B,B,B) at the other prior. Eight members. About 1,840 calls and 0.60M tokens per model, before re-asks; as frozen, 1,546 fixed calls and those the walk reaches, at most 2,766 and 1,916 for BHW ([FREEZE-3 §9](FREEZE-3.md#9-usage-and-what-rens-yes-releases)).
 
 **Premises, apart from the outcome.** Determinism (a 300-call pilot, a screen: with no flip it excludes residual nondeterminism above about 1/100, not 1/1000, which each cell's ten calls and the flagged share carry); comprehension (a probe restating the draw and the counts, scored apart); the cell's class: *ignores* where all ten calls give one act, *reads* where each draw's five agree and differ, otherwise *flagged*.
 
 **Verdict rules.** RF4's conditional verdict, per prefix: where every cell from k to member 7 *ignores* along the path, eight fresh sequences run with later draws set by the experimenter (two all one draw, six by a frozen seed). Forbidden: a sequence whose act vector differs from the path's. A difference is checked against the logged inputs, then re-asked five times in both contexts; it is a reproduced breach only where each re-ask is unanimous for its own act. A flagged cell voids the unit. BHW's timing, judged apart as a bridge to the probabilistic form, uses the rule C1 (five calls, one off allowed): placed where all 33 cells match, contradicted where a resolved cell differs.
 
-**Rivals and controls.** Fixed readers (constant, copying, by position) are contradicted at the empty, one-ahead and balanced cells; overweighting at two net guesses; coin-flip ties, logit responders and hybrids mostly give flagged cells. A member reading the next member's draw, outside `Turns`, is caught by the input diff, and by the re-ask always at full strength. Controls: no draw shown; the probe; a planted leak in the dry run.
+**Rivals and controls.** Fixed readers (constant, copying, by position) are contradicted at the empty, one-ahead and balanced cells; overweighting at two net guesses; coin-flip ties, logit responders and hybrids mostly give flagged cells. A member reading the next member's draw, outside `Turns`, can read it only where a prompt carries it, and is caught there by the input diff; the re-ask reproduces the difference it makes (the leak control). Controls: no draw shown; the probe; a planted leak in the dry run.
 
 **What each outcome would change.** Premise met, verdict passed: these members, here, are an instance of RF4 along those histories. Premise never met: RF4 is vacuous for them and the cascade reading of language-model pools narrows. A breach: a harness fault, fixed before any reading. BHW contradicted: that timing model fails for them, recorded under the probabilistic form's debt, not as RF4's forbidden case.
 
 **Not tested.** Sampled members (reported only; no stochastic analogue is proved), accuracy, return of reach, who reads whom, human choosers.
 
-In full: [REST-TR3-TR6.md](REST-TR3-TR6.md).
+In full: [REST-TR3-TR6.md](REST-TR3-TR6.md). Frozen, with the changes listed there, in [FREEZE-3](FREEZE-3.md).
 
 ### TR4 (RF6.1): does an institution correct only through the reading its rule states?
 
@@ -285,7 +285,7 @@ Estimates, to be replaced at the freeze by a smoke run. Every Stage B run waits 
 |---|---|---|---|
 | TR1 | six model families | 630 per condition, four conditions: 15,120 | about 17M; the optional informing variant about 4,600 calls more |
 | TR2 | two open-weight families, on a machine suited to them | per model and checkpoint: about 4,000 forward passes; a pilot of about 800 generations; 6,000 to 16,000 generations for behaviour (600 to 1,600 pairs per factor) | no API tokens; downloads of about 14 to 16 GB per model, named at the freeze |
-| TR3 | three to six families, temperature 0 | about 1,840 per model | about 0.60M per model |
+| TR3 | three to six families, temperature 0 | at most 2,766 per model, 1,916 for BHW (FREEZE-3) | about 0.6M to 1.0M per model, before reasoning |
 | TR4 | six families | 440 per model: 2,640 | about 1.2M |
 | TR5 | six families | 459 per model: 2,754 (upper 3,834) | about 2.5M (upper 3.5M) |
 | TR6 | three families, temperature 0 | about 3,970 per model | about 1.47M per model |
@@ -309,15 +309,15 @@ Estimates, to be replaced at the freeze by a smoke run. Every Stage B run waits 
 
 ### Candidate core lemmas
 
-The designs use some general forms that the Lean does not state. Each is checked here by enumeration, and is listed in its file as a candidate lemma. No Lean is written:
+The designs use some general forms that the Lean did not state when they were written. Each is checked here by enumeration, and is listed in its file as a candidate lemma. One has been proved since, TR3's first; for the others no Lean is written:
 - TR1: met and after, an order's exclusion and forced top on a later menu; the uninformed course for every according ranking.
-- TR3: the cascade's premise needed only at the histories reached, which TR3's verdict rests on; `k` replaced by a stopping time at which every later member ignores its draw at the histories reached (persistence); a total-variation bound for sampled members (periphery).
+- TR3: the cascade's premise needed only at the histories reached, which TR3's verdict rests on, proved since (`Becoming.ReachedCascade`, board item TRL); `k` replaced by a stopping time at which every later member ignores its draw at the histories reached (persistence); a total-variation bound for sampled members (periphery).
 - TR4 and TR5: a counted per-fiber bound; Revising's complete classification.
 - TR6: the orbit from any start under an order-keeping map.
 - TR7: the strict converse of the fresh draw's comparison, the improving interval and the best chance.
 - TR8 and TR9: none that a verdict uses. Since RR2 every option is a plan of `RevisionPlans.order`, and `RevisionPlans.above_iff` ranks any two; holding strictly best or strictly below is a composition of `threshold_go_iff` and `threshold_off_iff`. Two inferences remain: a reader whose errors are chances, told as situation-and-draw pairs (TR8), and a positive common scale composed with `informed_le` (TR9).
 
-Before TR3 is frozen, one choice matters: prove its first lemma, or let its verdict rest on an inference.
+Before TR3 was frozen, one choice mattered: prove its first lemma, or let its verdict rest on an inference. The lemma was proved first (board item TRL), and the frozen verdict rests on it ([FREEZE-3](FREEZE-3.md)).
 
 ### Choices left for the freeze, and what is still to be checked
 

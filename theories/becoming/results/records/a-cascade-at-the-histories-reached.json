@@ -108,8 +108,8 @@
     "zh": "纯核，公理报告皆空（回执 20261103T211917.845905Z）：ReachedCascade 唯引 Cascade，其字节未变；诸行即 Cascade 之行，以成员之数递归而建，归纳循 Cascade 之归纳而重述，前提唯问于此世界之行与所比之二耦合。"
   },
   "next_delta": {
-    "en": "A position that depends on the world, with persistence; the total-variation form, in the periphery; TR3, which rests on this premise and fixes k by a scripted prefix; review by a person.",
-    "zh": "随世界而变之位，附持续；全变差之形，于外围；TR3，依此前提，以所定之前缀固定 k；人之审查。"
+    "en": "A position that depends on the world, with persistence; the total-variation form, in the periphery; a run of TR3, frozen on this premise with k fixed by a scripted prefix; review by a person.",
+    "zh": "随世界而变之位，附持续；全变差之形，于外围；TR3 之运行，已依此前提冻结，以所定之前缀固定 k；人之审查。"
   },
   "correspondence": {
     "en": "The deterministic form of an information cascade (Bikhchandani, Hirshleifer and Welch 1992; Banerjee 1992) as a chooser meets it: one who stops reading a private signal only once the public acts it is shown outweigh it need not ignore that signal on lists of acts it is never shown. Such a chooser meets the premise at a world whose acts before k already outweigh the signal, so the laws for two worlds apply there; at every world, as the selection law needs, it meets it for no fixed k unless the acts before k are fixed (TR3's scripted prefix). AI reading, not a containment.",
@@ -212,6 +212,10 @@
     {
       "en": "4 November 2026, board item TRL (RFZ's split: TR3's lemma 1 in REST-TR3-TR6, handed to this item; TR3's freeze stays with RFZ): added. The premise of readers reading readers asked only at the histories a world reaches, a weaker premise by a witness, Cascade's bytes unchanged; study section 507.",
       "zh": "2026年11月4日，工作板条目 TRL（RFZ 之分：REST-TR3-TR6 之引理一，交本条目；TR3 之冻结仍属 RFZ）：新增。读者读读者之前提唯问于一世界所至之历，以一见证为较弱之前提，Cascade 之字节未变；研究第 507 节。"
+    },
+    {
+      "en": "4 November 2026, board item RFZ: TR3 frozen on this premise before any call to a model (experiments/formations-that-read/FREEZE-3.md); not run. REST-TR3-TR6.md re-pointed after reading against this record: it now says TR3 is frozen and this lemma proved, and nothing this record says changed. The statement and declarations are unchanged; next_delta's step is now TR3's run, which waits on Ren's yes.",
+      "zh": "2026年11月4日，看板项 RFZ：TR3 于任一模型调用之前依此前提冻结（experiments/formations-that-read/FREEZE-3.md）；未运行。REST-TR3-TR6.md 对本记录读后重新指向：其今言 TR3 已冻结、此引理已证，本记录所言无一改变。陈述与声明未变；next_delta 之步今为 TR3 之运行，待 Ren 之可。"
     }
   ]
 }

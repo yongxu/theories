@@ -73,7 +73,7 @@
    "reached_history_form_violations": 0,
    "reached_premise_met_where_the_Lean_premise_fails": 1398536
   },
-  "reached_history_form": "Inference from the proof term of law_alike_of_cascade, which uses the premise only at T.acts w n with the two worlds' couplings: if, for every n >= k, law n gives one act for coupling n w and coupling n w' at the list acts w n, then worlds alike before k give the same acts. Not stated in the Lean; a candidate core lemma."
+  "reached_history_form": "Inference from the proof term of law_alike_of_cascade, which uses the premise only at T.acts w n with the two worlds' couplings: if, for every n >= k, law n gives one act for coupling n w and coupling n w' at the list acts w n, then worlds alike before k give the same acts. Proved since: Turns.acts_alike_along under Turns.LawAlikeAlong (Becoming.ReachedCascade)."
  },
  "B_cells": {
   "precision": {
@@ -1750,7 +1750,7 @@
      ]
     ]
    },
-   "note": "tau(w) is the first position whose member gives one guess for both draws at the history w reaches; the candidate core lemma needs persistence as a premise (every member from tau(w) on ignores its draw at the history w reaches), which BHW meets since its cascades are absorbing; checked here on BHW only (the Lean fixes k)"
+   "note": "tau(w) is the first position whose member gives one guess for both draws at the history w reaches; the stopping-time form, a candidate core lemma, needs persistence as a premise (every member from tau(w) on ignores its draw at the history w reaches), which BHW meets since its cascades are absorbing; checked here on BHW only (the Lean fixes k)"
   },
   "fixed_k_reached_premise_p_2/3": {
    "0": {
