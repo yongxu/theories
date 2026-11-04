@@ -531,7 +531,15 @@ def locked_and_set_aside(tmp, copy, edit):
     w = copy("whole-refused")
     wbad = renamed_refused(w)
     out["a whole folder refused, not set aside (a whole folder ends the checkpoint's run)"] = refused(
-        lambda: TR.set_aside(CKPT, wbad.name, root=w), "names every planned group")
+        lambda: TR.set_aside(CKPT, wbad.name, root=w), "is whole by its lines")
+    gp = wbad / "groups.jsonl"
+    lines = gp.read_bytes().split(b"\n")
+    lines[700] = lines[700][:-9] + b"#damaged"                    # one line made unparseable
+    gp.write_bytes(b"\n".join(lines))
+    out["a whole folder with one line damaged, still not set aside"] = refused(
+        lambda: TR.set_aside(CKPT, wbad.name, root=w), "is whole by its lines")
+    out["a run beside a refused folder whole by its lines, refused"] = refused(
+        lambda: TR.run(CKPT, w / "files", "cpu", 8, engine_cls=make_engine("detected"), root=w), "a whole folder ends")
     d = copy("set-aside")
     TR.smoke(CKPT, d / "files", "cpu", 4, engine_cls=make_engine("detected"), root=d / "smoke")
     bad = renamed_refused(d, keep=900)
@@ -551,7 +559,7 @@ def locked_and_set_aside(tmp, copy, edit):
         and "engine no link" in listed.get("now", "")
     out["a refused folder listed with how far it got"] = listed.get("progress", {}).get("main") == \
         f"{900 - len(P.phase_groups('pilot'))} lines, of {len(P.phase_groups('main'))} groups planned" \
-        and listed["progress"]["names_every_planned_group"] is False
+        and listed["progress"]["whole_by_its_lines"] is False
     shutil.copytree(moved, d / bad.name)                         # the same name refused a second time
     res2 = TR.set_aside(CKPT, bad.name, root=d)
     out["the same name set aside a second time, in its own slot"] = res2["set_aside"] == f"{TR.SET_ASIDE}/1/{bad.name}" \
@@ -563,18 +571,28 @@ def locked_and_set_aside(tmp, copy, edit):
             and "unreadable" in rd["set_aside"][f"0/{bad.name}"]["progress"]
     finally:
         (moved / "groups.jsonl").chmod(0o644)
+    d = copy("hand-moved")
+    (d / TR.SET_ASIDE / "0").mkdir(parents=True)
+    shutil.copytree(run_dir(d), d / TR.SET_ASIDE / "0" / run_dir(d).name)
+    rd = TR.read(root=d)["checkpoints"][CKPT]
+    out["a whole folder moved into set-aside by hand beside a whole one: the reading refused"] = \
+        rd["status"].startswith("refused: a whole folder beside another whole by its lines") \
+        and rd["doubt"] == [f"{TR.SET_ASIDE}/0/{run_dir(d).name}"]
     d = copy("no-meta")
     TR.smoke(CKPT, d / "files", "cpu", 4, engine_cls=make_engine("detected"), root=d / "smoke")
     other = renamed_refused(d, keep=10)
     (other / "meta.json").unlink()
     drive_t4 = lambda: TR.run(CKPT, d / "files", "cpu", 4, engine_cls=make_engine("detected"), root=d, stop_after=3)  # noqa: E731
     blocked = refused(drive_t4, "meta.json is not whole")
+    before = TR.read(root=d)["checkpoints"][CKPT]
+    listed_no_meta = "meta.json is not whole" in before["folders"][other.name]["refused"] \
+        and before["status"] == "refused: every folder refused"
     TR.set_aside(CKPT, other.name, root=d)
     drive_t4()
     shutil.copytree(run_dir(d), d / (run_dir(d).name[:-3] + "-t9"))   # a folder of a name no run makes: refused
     rd = TR.read(root=d)["checkpoints"][CKPT]
     out["a folder with no meta.json: listed as refused, set aside; a status naming the refused"] = blocked \
-        and rd["status"] == "partial; 1 folder(s) refused"
+        and listed_no_meta and rd["status"] == "partial; 1 folder(s) refused"
     d = copy("own-no-meta")
     (run_dir(d) / "meta.json").rename(run_dir(d) / "meta.json.gone")
     own = d / TR.folder_name(CKPT, TR.sha_file(__file__), "cpu", 8)
@@ -840,12 +858,7 @@ def damaged(tmp, clean, copy, edit):
     # a refused folder stops a run, whether it is another folder or the run's own
     d = copy("own-refused")
     TR.smoke(CKPT, d / "files", "cpu", 4, engine_cls=make_engine("detected"), root=d / "smoke")
-    old = run_dir(d)
-    m = json.loads((old / "meta.json").read_text())
-    m["engine"]["code_sha256"] = "1" * 64
-    new = old.parent / TR.folder_name(CKPT, "1" * 64, m["device"], m["threads"])
-    os.rename(old, new)
-    (new / "meta.json").write_text(json.dumps(m))   # an engine no link lists: refused
+    renamed_refused(d, keep=300)                     # a partial folder under an engine no link lists: refused
     out["a run beside a refused folder, refused"] = refused(
         lambda: TR.run(CKPT, d / "files", "cpu", 4, engine_cls=make_engine("detected"), root=d), 'no run goes on while one is')
     d = copy("own-folder")
@@ -958,7 +971,8 @@ def states_resume(tmp, whole):
 def states_missing(tmp, whole):
     """As states_resume, the state file missing (the move into place not on the disk): before the resume
     the folder reads as partial, its last group absent, and a run under other threads beside it is not
-    refused; then the line is kept beside the log, no file to keep, the group made again, once."""
+    refused; then the line and the group's other state files are kept beside the log, the group made again,
+    once."""
     root = Path(tmp) / "states-missing"
     drive(root, "detected", stop_after=406)
     folder = run_dir(root)

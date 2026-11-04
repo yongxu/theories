@@ -212,7 +212,7 @@ After the fixes, the power check and the dry run were run again on the changed c
 
 A code reader on what round 4 added (the lock, the own folder's checks, the last group read as absent, `set-aside` and the listings), read adversarially, with small scratch checks; and a reader of the text against the code. Each sent its high and medium findings to a verifier of its own: four agents. None ran the dry run or the power check, and none downloaded or ran a model.
 
-They found 26 points, six of them "none found". There is no high finding. The verifiers held four medium, which are three defects, all in round 4's `set-aside`, and one sent as medium they held low. The rest are low. Every finding was taken, as follows.
+They found 26 points, six of them "none found". There is no high finding. The verifiers held four medium, which are three defects, in round 4's `set-aside` and the listings it brought (one, C2, in the listing of refused folders in `results/` as well), and one sent as medium they held low. The rest are low. Every finding was taken, as follows.
 
 **Medium**
 
@@ -246,3 +246,32 @@ The six "none found": the last-group rule against the plan (the last planned gro
 
 After the fixes, the power check and the dry run were run again on the changed code. Every check holds, and the power check's figures are unchanged.
 
+
+## Round 6: two readers on round 5's diff, a verifier for each
+
+The same two lenses as round 5, on what round 5 added (the numbered slots, the whole-folder guard, the guarded listings, the own folder's checks, the last group read as absent, no state file overwritten) and on the text against the code. Each sent its medium findings to a verifier of its own: four agents. None ran the dry run or the power check, and none downloaded or ran a model.
+
+They found 24 points, eight of them "none found". There is no high finding. The verifiers held four medium, which are two defects, each found by both readers. The rest are low. Every finding was taken, as follows.
+
+**Medium**
+
+| # | Finding | How it was taken |
+|---|---|---|
+| C1, R1 | Round 5's numbered slots put a folder set aside at `results/set-aside/<k>/<name>/`, one level deeper than the ignore rule, so its states (up to about 1.45 GB a checkpoint) were no longer kept out of the history section 7 says they are kept out of. Round 5's "none found" on the ignore rules was checked against round 4's layout. | The rule is `results/set-aside/*/*/states/`, checked with `git check-ignore` on a slot path, a state file and its `.torn-<k>` copy. `open/.gitignore` is not a held file. |
+| C2, R2 | "A whole folder is never set aside" was tested by whether the log's lines name every planned group, so one line of a whole log made unparseable, or one group id changed, let it be set aside, and a second whole run could be made and read beside it. This is round 5's C1 by a damaged line instead of a damaged state. | A folder is whole by its lines where its log holds at least as many lines as the plan has groups, or names every planned group, or names the plan's last group (the log is written in plan order), or cannot be read. Such a folder is never set aside; no run goes on beside one, in `results/` or in `set-aside/`; and the reading reads no whole folder beside one. Dry-run cases: a whole folder with one line made unparseable is not set aside; a run beside a refused folder whole by its lines is refused; a whole folder moved into `set-aside/` by hand beside a whole one makes the reading refused, naming it. |
+
+**Low**
+
+| # | Finding | How it was taken |
+|---|---|---|
+| C3 | The run judged the other folders whole by `load`, not by their lines, and never looked in `set-aside/`, so a folder naming every group but with its last newline lost, or one moved there by hand, did not stop a run. | The run refuses beside any folder whole by its lines, in `results/` or `set-aside/<k>/` (C2's test). |
+| C4, R5 | When a folder set aside was whole, the reading returned no listing of the folders in `results/`. | The listing is built first and returned with the refusal, with the folders in doubt named. |
+| C5, R6 | `set-aside` raised a traceback, not a refusal, on an unreadable log, a group id that is not a string, a name differing only in case (APFS), or two checkpoints set aside at once taking the same slot. Nothing was moved in any of these. | An unreadable log counts as whole and is refused; only string ids are read; the name must be one of the listed folders; the slot is made in a loop that takes the next number if one is taken. |
+| C6, R3 | Section 7, section 11, the module's and `repair_states`'s docstrings and the dry run's said only the differing state file is kept beside the log, with the line's number, though since round 5 every state file of the group made again is kept, each with its own first free number; and the count of groups made again counts lines and files. | Each now says the group's state files are kept, each as `<name>.torn-<k>`, k its own, and that the readout counts the lines and state files set aside. |
+| C7, R4 | The module docstring did not say that a refused folder whole by its lines is never set aside, and so ends its checkpoint's run under this freeze. | Said, with the numbered slot. The run's message for a refused folder stands: a folder whole by its lines is refused one line before it, by its own message. |
+| C8, R7 | The no-meta case did not check that the folder with no `meta.json` is listed as refused: the refused count in the status came from another folder. Section 11 said the status names the refused folders. | The case reads before the set-aside and checks the folder's listing and the status "refused: every folder refused"; the status counts the refused folders. |
+| R8 | Round 5's summary put all three defects in round 4's `set-aside`, but C2 covered the listing of refused folders in `results/` too. | Corrected. |
+
+The eight "none found": the lock (taken first, held across every phase, let go on any exit, only a held lock read as held); the last group read as absent only after its own checks, a whole folder unable to read as partial, the own folder checked before any write, no state file overwritten, a blank line refused; round 5's counts (twice); the count of 53 refusals then; the reading time; a set-aside folder never read, the names and slots, `why.json` written first, each new dry-run case against its key but the no-meta one (C8); and round 5's other claims, the record's entry and the probe's wording among them.
+
+After the fixes, the power check and the dry run were run again on the changed code. Every check holds, the power check's figures are unchanged, and the dry run now meets 56 refusals.
