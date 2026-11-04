@@ -2368,6 +2368,7 @@
         "experiments/formations-that-read/FREEZE-1.md",
         "experiments/formations-that-read/REST-TR3-TR6.md",
         "experiments/formations-that-read/told-tr3/ENDPOINTS.json",
+        "experiments/formations-that-read/told-tr3/FROZEN.sha256",
         "experiments/formations-that-read/told-tr3/REVIEW-FREEZE.md",
         "experiments/formations-that-read/told-tr3/results/dry-run.json",
         "experiments/formations-that-read/told-tr3/tr3_client.py",
