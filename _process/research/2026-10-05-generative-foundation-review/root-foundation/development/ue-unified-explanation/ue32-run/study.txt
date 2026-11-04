@@ -63,8 +63,10 @@ Kept: every completed verdict; T2's statement; the answer expected, as written. 
 Integration: 02 §5 (T2's Evidence, and its Standing, now on the four frozen fish-stock tests), 08's thesis row
        (Standing, Evidence), the sciences dossier's front row for T2 and S-15 (the standing it quotes, UE32's verdict
        beside the frozen counts), the dossier's whole time restated on it and on both review covers (140 to 195
-       minutes), the overview's T2 row (EN, ZH), MQ's README on the spine, READING-BUDGETS, the sources table,
-       UE32's README and the experiments index. The records bound to sections that changed were re-pointed after
-       reading, nothing they say changed; no other record drifts.
+       minutes) and its hour's on it (45 to 66 minutes: the recount beside the verdict took the hour past 65, and a
+       qualifier that keeps a reader from a false belief comes before the budget), the overview's T2 row (EN, ZH),
+       MQ's README on the spine, READING-BUDGETS, the sources table, UE32's README and the experiments index. The
+       records bound to sections that changed were re-pointed after reading, nothing they say changed; no other record
+       drifts.
 REVIEW_LINE
 ```

@@ -72,18 +72,19 @@ L316 = '#316-fates-on-either-side-of-the-curve-in-the-plane-in-the-field-mq7)'
 RB_FIGURES = {
     'whole_stated': '140 to 195',
     'hour_stated': '45 to 66',
-    'slowest': '190.3',
-    'overview': '7,270 words and 19 characters (56.0 to 72.8 minutes)',
-    'overview_zh': 'Chinese 216 words and 12,622 characters (50.2 to 65.3 minutes)',
-    'overview_over': '1279',
+    'slowest': '190.6',
+    'overview': '7,288 words and 19 characters (56.1 to 73.0 minutes)',
+    'overview_zh': 'Chinese 216 words and 12,654 characters (50.3 to 65.4 minutes)',
+    'overview_over': '1297',
     'over_hour': 'thirteen',
-    'ov_words': '47',
-    'ov_zh': '116',
-    'front': '1,365 words, 10.5 to 13.7',
-    'front_over': '265',
-    'hour': '6,500 words, 50.0 to 65.0 minutes',
-    'hour_over': '500',
-    'whole': '146 to 190',
+    'midpoint': 'five',
+    'ov_words': '65',
+    'ov_zh': '148',
+    'front': '1,376 words, 10.6 to 13.8',
+    'front_over': '276',
+    'hour': '6,535 words, 50.3 to 65.3 minutes',
+    'hour_over': '535',
+    'whole': '147 to 191',
 }
 
 EDITS = {
@@ -157,8 +158,9 @@ def budget_edits():
         RB: [
             ("7,223 words and 19 characters (55.6 to 72.3 minutes)", f['overview']),
             ("Chinese 216 words and 12,506 characters (49.8 to 64.7 minutes)", f['overview_zh']),
-            ("Done: 1232 budget-words over; the upper bound is over the hour by about twelve minutes,",
-             f"Done: {f['overview_over']} budget-words over; the upper bound is over the hour by about {f['over_hour']} minutes,"),
+            ("Done: 1232 budget-words over; the upper bound is over the hour by about twelve minutes, the midpoint by about four",
+             f"Done: {f['overview_over']} budget-words over; the upper bound is over the hour by about {f['over_hour']} minutes, "
+             f"the midpoint by about {f['midpoint']}"),
             ("what the two simulations' passes test ([T1's standing](../review-packet/T1-STANDING.md)). Recorded in",
              "what the two simulations' passes test ([T1's standing](../review-packet/T1-STANDING.md)). UE32's run added "
              f"{f['ov_words']} words to T2's row in §9 (Chinese {f['ov_zh']} characters): its fourth frozen fish-stock "
