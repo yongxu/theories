@@ -67,9 +67,11 @@ Per cue factor (F1 to F4, each against base on the same contents):
   the last state's, so a lower bound), on the occasions base, identical and the factor's arm of every
   main content (two cue-down occasions and one cue-up, so the values differ from Stage 0's symmetric
   tables). Fixed where lumped: Becoming.Learning.lumped_determines; not fixed where no read occasion
-  shares the lump, among laws reading through the measured lumping: Becoming.Learning.twin_selected
-  (being in the lump decided, as equality of hashes is, and a second act value). Expected to be
-  settled by the token change, as the exact states are;
+  shares the lump, among laws reading through the measured lumping: for any selection through
+  agreement on the readings that selects such a law, Becoming.Learning.twin_selected gives a selected
+  twin taking every value there (being in the lump decided, as equality of hashes is), so with a second
+  act value one acts otherwise; the selection is the theorem's hypothesis, which the run does not
+  measure. Expected to be settled by the token change, as the exact states are;
 - the misled share of a reader whose class reads only the content, under S1 with the contents matched:
   the share of contents whose greedy category the cue changes. It has no Lean (in prose only, as the
   record says), and nothing rests on it.

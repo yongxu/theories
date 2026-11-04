@@ -29,7 +29,7 @@
  },
  "a letter's probability a rounding above 1": {
   "a sum above 1 met at a gap of": 0.01,
-  "the group made, each letter at 1": true,
+  "the group made, A at 1 in each pass": true,
   "ok": true
  },
  "formations": [
@@ -1648,6 +1648,15 @@
   "the folder loads": true,
   "ok": true
  },
+ "a run stopped with a state file missing goes on": {
+  "before the resume: partial, the last group read as absent": true,
+  "a run beside it under other threads, not refused": true,
+  "the line kept beside the log, no state file to keep": true,
+  "the group made again, once": true,
+  "the records equal a run made whole": true,
+  "the reading lists the group made again": true,
+  "ok": true
+ },
  "a torn old folder beside a whole one": {
   "the whole folder read": true,
   "the old folder listed, its torn line read as absent": true,
@@ -1735,6 +1744,15 @@
   "a last line ending in its newline but not whole: refused, not taken as torn": true,
   "a run beside a refused folder, refused": true,
   "a run whose own folder is refused, refused, the folder unchanged": true,
+  "the run's own meta.json not whole: refused, nothing written": true,
+  "the run's own last line a list: refused, nothing written": true,
+  "the run's own folder refused under a new link, its torn line kept: refused, nothing written": true,
+  "a newest smoke report not whole: the run refused, never a traceback": true,
+  "a run while another holds the checkpoint's lock, refused": true,
+  "the lock let go, the same run goes on": true,
+  "a folder that loads, not set aside": true,
+  "a refused folder set aside: unchanged, the run then goes on beside it, the reading lists it": true,
+  "a refused folder listed with how far it got": true,
   "ok": true
  },
  "files_and_packages": {

@@ -75,7 +75,7 @@ Three readers, each with a lens of its own:
 
 Each high or medium finding went to a verifier of its own, asked to refute it: fourteen verifiers, seventeen agents in all. F, C and R number the three readers' findings. As in round 1, none ran the dry run or the power check, and none downloaded or ran a model. The code reader could not run torch or transformers, which are not installed here, and read their behaviour from what it knew of them.
 
-They found 47 points, three of them "none found". The verifiers held two high, one of them found by all three readers in two forms; six medium; and one not real. The rest are low. Every finding was taken, the one not real included, as follows.
+They found 47 points, three of them "none found". The verifiers held two high (C1 and F3) and seven medium (F1, C2, C4, R1, R2, R3 and R4), of which C2 and R4 are F3's defect in other forms, so they share its row in the high table; and one not real (F4). C12, in F1's row, was a reader's low finding. The rest are low. Every finding was taken, the one not real included, as follows.
 
 **High**
 
@@ -132,7 +132,7 @@ After the fixes, the power check and the dry run were run again on the changed c
 
 The same three lenses as round 2, each reader given round 2's fixes to check besides its own lens. The high and medium findings of each reader went to one verifier for that reader, asked to refute them: three verifiers, six agents in all. None ran the dry run or the power check, and none downloaded or ran a model.
 
-They found 33 points, three of them "none found". There is no high finding. The verifiers held seven medium, which are five defects, three of them found by two or three readers; two that were sent as medium they held low. The rest are low. Every finding was taken, as follows.
+They found 33 points, three of them "none found". There is no high finding. The verifiers held seven medium, which are five defects, each also found by a second reader and the first by three (F1, C1 and R2, all held medium); two sent as medium they held low (F2 and F3). The rest are low. Every finding was taken, as follows.
 
 **Medium**
 
@@ -142,7 +142,7 @@ They found 33 points, three of them "none found". There is no high finding. The 
 | C2 (and F4) | The run's gate asked only whether another folder was whole. A refused folder counted as not whole, so a whole folder that the reading refuses let a second one begin; and the run never asked whether its own folder loaded, so it could add passes for days to a folder the reading would refuse. | The run refuses while any other folder of the checkpoint is whole or refused, and, after setting aside a torn last record, refuses unless its own folder loads as the reading loads it. Dry-run cases for both, the own folder left unchanged. |
 | C3 (and R4) | "No run can be chosen by its outcome" claimed more than the code does. Partial folders can go on side by side, under other threads or devices, and their records can be read before one is finished; the readout listed an abandoned folder with its phases' whole or not, so a folder at 1,599 of 1,600 showed as "main: false". | Section 7, 12 and 13 now say what holds: no second whole run can be chosen between, and every folder not read is listed with its groups per phase against the plan's and the times of its first and last pass. A checkpoint whose folders are all refused has the status "refused: every folder refused". |
 | C4 (and R3) | The kept states were written with no sync before their group's line, which was synced. After a machine stop the line could survive and a state file not: the reading would refuse the folder for good, and no new folder could begin under the same name. | Each state file is written to a temporary name, synced (with a full flush where the system has one) and moved into place before its group's line; the log's line is flushed the same way. On resuming, a last group whose state files differ from their hashes is moved aside like a torn line, the differing files kept beside it, and made again. A dry-run case stops a run after a group keeping states, damages one of its files, and resumes to a run equal to one made whole. |
-| R1 (and F2) | Section 4 said the smoke run's decode check catches a template that adds to the text. It cannot: the text the ids must decode to is built by that same template. | Said as it is: the check catches a tokenizer adding a token of its own, not what a template adds. A check was added that can: `MODELS.json` lists the sha256 of each tuned checkpoint's chat template, read at the pinned revision, and smoke and run refuse a tokenizer holding another text. Dry-run cases with a stand-in hash: the pinned text read, another or none refused, a base checkpoint not checked. |
+| R1 (and F2, held low) | Section 4 said the smoke run's decode check catches a template that adds to the text. It cannot: the text the ids must decode to is built by that same template. | Said as it is: the check catches a tokenizer adding a token of its own, not what a template adds. A check was added that can: `MODELS.json` lists the sha256 of each tuned checkpoint's chat template, read at the pinned revision, and smoke and run refuse a tokenizer holding another text. Dry-run cases with a stand-in hash: the pinned text read, another or none refused, a base checkpoint not checked. |
 
 **Low**
 
@@ -150,7 +150,7 @@ They found 33 points, three of them "none found". There is no high finding. The 
 |---|---|---|
 | F3 | The addendum reader's check was narrower than what an engine supplies: torch, the model and the tokenizer, any of which could be wrapped or hooked; eager attention was stated and not checked. (Verifier: low.) | The reader's check in sections 4 and 12 and the engine's docstring now names the model and tokenizer as loaded, with no wrapper, hook or replaced module. The engine reports its attention and its model's class, and the run refuses other than eager and `MODELS.json`'s class. Dry-run cases for each. |
 | F5, C7 | Only the first state's dtype and the logits' device were checked. | The pass reports the dtypes and devices of every state and of the logits; the run requires bfloat16 throughout and the one device. Dry-run cases: one state in float16, one state on another device. |
-| C6 | The stand-in made one position and named its device "cpu", unlike torch. | It makes two positions, the pass reading the last, and names its device "cpu:0". |
+| C6 | The stand-in made one position and named its device with no index. (Round 4, R5: torch too names a CPU device "cpu"; only an accelerator's carries an index.) | It makes two positions, the pass reading the last, and names its device with an index ("cpu:0"), as torch names Apple's GPU ("mps:0"), so the run's reading of a device by its type is exercised. |
 | C5 | The dry run's docstring said it ran every refusal. | It names the refusals as those listed in its output, which now include the cases above. |
 | C8 | A checkpoint whose folders are all refused was "partial". | "refused: every folder refused"; the dry run checks it. |
 | C9 | A damaged last line ending in its newline was read as torn. | Torn means a last line with no newline at its end; any other line not whole is refused. A dry-run case. |
@@ -160,10 +160,51 @@ They found 33 points, three of them "none found". There is no high finding. The 
 | F9 | Olmo 3 does not alternate its attention. | Three sliding-window layers in every four, full in the fourth. |
 | F6, R6 | In the stand-in, only A and B decode from two tokens. | "A and B each decode from two tokens, and Yes and No from one". |
 | F11 | The pilot check did not check that the line apart is the fifth. | It does. |
-| F7, R7 | Round 2's counts were off. | Corrected: one high found by all three readers, six medium. |
+| F7, R7 | Round 2's counts did not say which findings the high row and the medium row hold. | Corrected. Round 3 first wrote "six medium", counting the medium table's rows; round 4 (R4) restored what the verifiers held, seven, and the summary now names them. |
 | F8 | Round 2's row C1 said each letter is at 1. | "With A at 1 in each pass". |
 | F10, R8 | The placeholders were still in the texts. | Filled at the landing, with every round's counts. |
 
 The three "none found": the fixes reader on the rest of round 2's fixes; the code reader on the pass and engine against torch 2.9 and transformers 4.57.1 as it knew them; the freeze reader on every number in sections 2, 3, 5, 9, 10 and 11, the kit files' hashes, the Lean names and the departures.
 
 After the fixes, the power check and the dry run were run again on the changed code. Every check holds, and the power check's figures are unchanged.
+
+## Round 4: three readers, a verifier for each that found a high or medium
+
+The same three lenses, on round 3's diff and on the whole. The fixes reader's and the code reader's high and medium findings went to one verifier each; the freeze reader sent none. Five agents in all. None ran the dry run or the power check, and none downloaded or ran a model.
+
+They found 38 points, ten of them "none found". There is no high finding. The verifiers held three medium, which are two defects. The rest are low. Every finding was taken, as follows.
+
+**Medium**
+
+| # | Finding | How it was taken |
+|---|---|---|
+| F1, C2 | A refused folder stopped every later run of its checkpoint, and nothing frozen gave a way past: an engine addendum names a new folder, but the old one still loads to the same refusal. A last group whose state files a machine stop left differing was mended only in the run's own folder; in any other it refused that folder, and so stopped the checkpoint. Moving the folder out by hand would drop it from the listing. | A last group whose kept states are missing or differ is read as absent in every folder, as a torn last line is: the folder is partial, and the readout marks it. A new command, `set-aside`, moves a refused folder, unchanged, to `open/results/set-aside/` with the reason and the time beside it; only a refused folder is moved, nothing is deleted, and the reading lists it there with its reason then and now and its lines per phase. A run may then go on beside it. Sections 7 and 12. Dry-run cases: a folder that loads is not set aside; a refused folder blocks a run, is set aside unchanged, and the run then goes on and the reading lists it; another folder's last group missing a state file reads as partial and blocks no run. |
+| C1 | Nothing stopped two runs of one checkpoint at once: two on different devices could both finish whole, refusing the checkpoint, and two with the same arguments would write each group twice, refusing the folder for good. | A run holds an exclusive lock on `results/<checkpoint>.lock` from its gate to its end, and is refused while another holds it. Sections 7 and 12 say partial folders go on one after another, never at once. Dry-run cases: refused while the lock is held, going on once it is let go. |
+
+**Low**
+
+| # | Finding | How it was taken |
+|---|---|---|
+| F2, C3, F3, C7, R8 | A damaged own folder could stop the run with a traceback (its `meta.json`, or a last line that is no record), and before the own folder was checked the run could add a link to its `meta.json` and move its torn line aside. | The run checks that its own folder loads before anything is written to it, and again after its repairs; any error is the refusal "the run's own folder is refused". Dry-run cases: a `meta.json` not whole, a last line that is a list, and a refused folder under a new link with a torn line, each refused with every file of the folder unchanged. |
+| C8 | The smoke report was written with no sync, and a report not whole crashed the run's check. | Written durably; a report or meta not whole says no. A dry-run case. |
+| C5 | Each refusal case counted any refusal. | Each case now names its reason, and holds only where the refusal's message gives it. The dry run found one real fault that way: `set-aside` read a loaded folder's entry wrongly and would have moved it. Fixed before the freeze. |
+| C6 | No case removed a state file. | A case removes one: the folder reads as partial, blocks no run under other threads, and the resume keeps the line beside the log, has no file to keep, and makes the group once. |
+| F5, R9 | A refused folder was listed with its reason only, a folder with no `meta.json` not at all, and the mixed status went unnamed. | A refused folder is listed with its lines per phase; any folder of the checkpoint is listed, `meta.json` or not; the status "partial" names how many folders are refused. |
+| F6 | Groups made again were not in view. | Each folder's listing, and the read folder's readout, counts the lines and state files set aside. |
+| F4, C4, R5 | Torch names a CPU device "cpu", not "cpu:0". | Sections 11 and the dry run's docstring: the stand-in names its device with an index, as torch names Apple's GPU, and the run reads a device by its type. Round 3's C6 row corrected. |
+| F7 | The rule's docstring kept round 3's old statement of `twin_selected`'s hypotheses. | Carried over from section 6. |
+| R7 | The pass's docstring said only the logits' device is kept. | "The dtypes of every state and of the logits, and the devices they were made on". |
+| F8 | The dry run's key said each letter is at 1. | "A at 1 in each pass". |
+| R1 | The standing read as a three-way open outcome, with coverage measured. | It says how far the difference is expected to reach in exact bits, that coverage is then settled, and what is measured: the total variation, the greedy changes, the sampled net shift, and the probe's direction. |
+| R2 | The probe was listed as if its outcome were open. | "What is settled before the run": under exact passes it is expected to reject for every factor, showing the cue's tokens readable along one direction, not recognition. |
+| R3 | Round 3's summary miscounted who found the medium defects. | Corrected, and F2's row marks it held low. |
+| R4 | Round 3's correction of round 2's count counted the table's rows, not what the verifiers held. | Round 2's summary names the two high and seven medium the verifiers held. |
+| R6 | The time understated the CPU case and left out that float32 does not fit. | Up to about four days a checkpoint at 30 s a pass, over two weeks for the four; float32 does not fit, so a CPU too slow leaves the GPU, where the premise may fail. |
+| R10 | Four smoke contents are made and not used. | Section 3: two a family set aside for the smoke run, which uses the first of each. |
+| R11 | The states, 5.5 GB, would land in the working copy with no rule for them. | An ignore rule keeps the states and the lock files out of the history; the logs and the readout are committed after a run, each state hashed in them; where the states are archived is Ren's (section 7). |
+| R12 | The record's page was not rendered, and the history entry's gloss of the lumping left out the shared draw. | Rendered at the landing; the entry adds the shared draw. |
+
+The ten "none found": the template hashes recomputed, and what transformers 4.57.1 holds for each; the dtype and device lists and the engine's report against torch 2.9 and transformers 4.57.1; every stop point in the repairs, `held()` and the counts; the numbers; the Lean citations and the law's standing; what would make a reading wrong or stop the run; the totals; the departures; and round 3's fixes and counts.
+
+After the fixes, the power check and the dry run were run again on the changed code. Every check holds, and the power check's figures are unchanged.
+

@@ -26,7 +26,7 @@ last position (the token after which the act is the next):
 - the probability of each act letter (every token that decodes, leading and trailing whitespace aside,
   to the letter), summed in float64 and taken at most 1 (a float32 softmax can put a letter split over
   two tokens a rounding above 1), and of any other token; the greedy token's category;
-- the dtype of the states and of the logits, and the device the logits were made on, which the run
+- the dtypes of every state and of the logits, and the devices they were made on, which the run
   checks.
 """
 

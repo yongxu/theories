@@ -4,6 +4,7 @@ API; each checkpoint is run locally from files that Ren's yes downloads.
     python3 -B tr2_run.py check --checkpoint ID --folder DIR
     python3 -B tr2_run.py smoke --checkpoint ID --folder DIR [--device cpu|mps] [--threads N]
     python3 -B tr2_run.py run   --checkpoint ID --folder DIR [--device ...] [--threads N]
+    python3 -B tr2_run.py set-aside --checkpoint ID --name FOLDER
     python3 -B tr2_run.py read
 
 ID is one of MODELS.json's checkpoints (qwen-base, qwen-tuned, olmo-base, olmo-tuned); DIR the folder
@@ -18,9 +19,11 @@ holding its files, downloaded at its revision. Before any pass, smoke and run re
   tokenizer holds the chat template's text whose hash MODELS.json lists;
 - the newest link lists every file this freeze holds (HELD);
 - for run, the checkpoint's newest smoke run said go on, under the same link, device and threads (a
-  newest smoke run with no report, stopped before its end, says no), and no other folder of the
-  checkpoint is whole or refused: a whole folder ends that checkpoint's run, and a refused one stops
-  it until its reason is seen. The run's own folder must load as the reading loads it.
+  newest smoke run with no report, stopped before its end, says no), no other run of the checkpoint
+  holds its lock (results/<checkpoint>.lock), and no other folder of the checkpoint is whole or refused:
+  a whole folder ends that checkpoint's run, and a refused one stops it until set-aside moves it,
+  unchanged, to results/set-aside/, where the reading still lists it. The run's own folder must load as
+  the reading loads it, before anything is written to it and after its repairs.
 The run calls the pass (tr2_pass.py) itself; the engine supplies torch, the model, the tokenizer and
 the device. Every state and the logits of a pass must be bfloat16, made on that device.
 A run writes only into results/<checkpoint>-<engine>-<device>-t<threads>/, <engine> the first 12 hex
@@ -40,14 +43,17 @@ why and not read, where its meta is not a run of that checkpoint under an engine
 freeze's chain, or a record is one the plan does not hold, differs from the plan in its phase,
 content, kind, arms or keeping of states, has a field missing or a prompt hash other than the one its
 group rebuilds, names a state file that differs from its hash, or is not one whole line (a torn last
-line aside: it leaves the folder partial, read as absent and left in place), or where its meta.json is
-not whole or anything else stops its loading (the error is its reason). A checkpoint with two whole
+line aside: it leaves the folder partial, read as absent and left in place, as does a last group whose
+kept states are missing or differ), or where its meta.json is not whole or anything else stops its
+loading (the error is its reason). A checkpoint with two whole
 folders is refused (the run never makes a second); one with no whole folder is listed as partial, or
-refused where every folder is, with each folder's groups per phase and its first and last pass. The
-folders not read are named.
+refused where every folder is, each loaded folder with its groups per phase, its first and last pass
+and the groups made again, each refused one with its reason and its lines per phase. The folders not
+read are named, and the folders set aside listed.
 """
 
 import argparse
+import contextlib
 import hashlib
 import importlib.metadata
 import importlib.util
@@ -97,6 +103,8 @@ HELD = MAY_CHANGE | frozenset(str(OPEN / f) for f in (
     (str(OPEN.parent / "tr2.py"), str(OPEN.parent / "tr2.json"), str(R.TOLD / "run.py")))
 RESULTS = HERE / "results"
 SMOKE_DIR = RESULTS / "smoke"
+SET_ASIDE = "set-aside"                          # results/set-aside/: refused folders moved there, still listed
+PHASES = ("pilot", "main", "recognition")
 
 
 def frozen():
@@ -351,10 +359,10 @@ def repair_torn(folder):
 
 
 def repair_states(folder):
-    """A last group whose kept state files differ from their hashes (a machine stop before the files
-    reached the disk) is treated as torn: its line is moved, unchanged, to groups.jsonl.torn-<k>, each
-    differing file is kept beside it as <name>.torn-<k>, and the group is made again. Returns the side
-    file, or None."""
+    """A last group whose kept state files are missing or differ from their hashes (a machine stop before
+    the files reached the disk) is treated as torn: its line is moved, unchanged, to groups.jsonl.torn-<k>,
+    each differing file is kept beside it as <name>.torn-<k>, and the group is made again. Returns the side
+    file, or None. The run calls it only on a folder that loads, so the last line is a whole record."""
     p = Path(folder) / "groups.jsonl"
     if not p.exists():
         return None
@@ -364,21 +372,16 @@ def repair_states(folder):
     body = raw[:-1] if raw.endswith(b"\n") else raw
     start = body.rfind(b"\n") + 1
     g = json.loads(raw[start:])
-    if not g.get("keep_state"):
-        return None
-    bad = [r["state_file"] for r in g["passes"]
-           if not (Path(folder) / "states" / r["state_file"]).exists()
-           or hashlib.sha256((Path(folder) / "states" / r["state_file"]).read_bytes()).hexdigest() != r["state_sha256"]]
-    if not bad:
+    if not states_differ(folder, g):
         return None
     k = 0
     while (Path(folder) / f"groups.jsonl.torn-{k}").exists():
         k += 1
     side = Path(folder) / f"groups.jsonl.torn-{k}"
-    for name in bad:
-        sp = Path(folder) / "states" / name
-        if sp.exists():
-            os.replace(sp, sp.with_name(f"{name}.torn-{k}"))
+    for r in g["passes"]:
+        sp = Path(folder) / "states" / r["state_file"]
+        if sp.exists() and hashlib.sha256(sp.read_bytes()).hexdigest() != r["state_sha256"]:
+            os.replace(sp, sp.with_name(f"{r['state_file']}.torn-{k}"))
     durable(side, raw[start:])
     with open(p, "r+b") as f:
         f.truncate(start)
@@ -486,7 +489,7 @@ def smoke(ckpt, folder, device, threads, engine_cls=None, root=None):
     shown = {g["kind"]: PASS.rendered(engine.tok, P.prompt_of(g, g["arms"][0], role), family)
              for g in reversed(P.phase_groups("smoke"))}
     report = smoke_report(out, desc, tokens, shown, unlike)
-    (out / "smoke-report.json").write_text(json.dumps(report, indent=1) + "\n", encoding="utf-8")
+    durable(out / "smoke-report.json", (json.dumps(report, indent=1) + "\n").encode())
     return report
 
 
@@ -527,11 +530,43 @@ def latest_smoke(ckpt, link, device, threads, root=None):
         rp = d / "smoke-report.json"
         if not rp.exists():
             return False                    # the newest smoke run stopped before its report
-        m = json.loads((d / "meta.json").read_text())
-        rep = json.loads(rp.read_text())
-        return (rep["go_on"] and m["links"][-1] == link_name(link) and m["device"] == device
-                and m["threads"] == threads)
+        try:
+            m = json.loads((d / "meta.json").read_text())
+            rep = json.loads(rp.read_text())
+            return (rep["go_on"] is True and m["links"][-1] == link_name(link) and m["device"] == device
+                    and m["threads"] == threads)
+        except Exception:                            # noqa: BLE001  a report or meta not whole says no
+            return False
     return False
+
+
+@contextlib.contextmanager
+def one_run(root, ckpt):
+    """One run of a checkpoint at a time: an exclusive lock on results/<checkpoint>.lock, held to the
+    run's end (the system drops it when the process ends), refused while another holds it."""
+    import fcntl
+    root = Path(root)
+    root.mkdir(parents=True, exist_ok=True)
+    f = open(root / f"{ckpt}.lock", "a")
+    try:
+        try:
+            fcntl.flock(f.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
+        except OSError:
+            raise SystemExit(f"refused: another run of {ckpt} holds {ckpt}.lock")
+        yield
+    finally:
+        f.close()
+
+
+def own_loads(out, ckpt, link):
+    """The run's own folder loads as the reading loads it, or the run is refused with no pass added."""
+    try:
+        load(out, ckpt, link)
+    except SystemExit as e:
+        raise SystemExit(f"refused: the run's own folder {out.name} is refused ({e}): no pass is added to it")
+    except Exception as e:                           # noqa: BLE001
+        raise SystemExit(f"refused: the run's own folder {out.name} is refused ({type(e).__name__}: {e}): "
+                         f"no pass is added to it")
 
 
 def run(ckpt, folder, device, threads, engine_cls=None, root=None, stop_after=None):
@@ -544,27 +579,50 @@ def run(ckpt, folder, device, threads, engine_cls=None, root=None, stop_after=No
     check_engine(engine.describe(), ckpt, device, threads, real=engine_cls is None)
     if engine_cls is None:
         check_template(engine.tok, ckpt)
-    out = run_folder(root or RESULTS, ckpt, code_sha(engine), device, threads)
-    for d, (m, why, whole, _) in folders_of(Path(root or RESULTS), ckpt, link).items():
-        if d != out.name:
-            refuse(m is not None, f"{ckpt}'s folder {d} is refused ({why}): no run goes on while one is")
-            refuse(not all(whole.values()), f"{ckpt} has a whole folder, {d}: a whole folder ends a checkpoint's run")
-    meta = open_folder(out, meta_of(ckpt, engine, link, "run"))
-    repair_torn(out)
-    repair_states(out)
-    try:
-        load(out, ckpt, link)
-    except SystemExit as e:
-        raise SystemExit(f"refused: the run's own folder {out.name} is refused ({e}): no pass is added to it")
-    desc, role = meta["engine"], CHECKPOINTS[ckpt]["role"]
-    lmap = letter_maps(engine)
-    made = 0
-    for ph in ("pilot", "main", "recognition"):
-        left = None if stop_after is None else stop_after - made
-        if left is not None and left <= 0:
-            break
-        made += run_phase(engine, out, ph, role, desc, lmap, stop_after=left)
+    base = Path(root or RESULTS)
+    out = run_folder(base, ckpt, code_sha(engine), device, threads)
+    with one_run(base, ckpt):
+        for d, (m, why, whole, _) in folders_of(base, ckpt, link).items():
+            if d != out.name:
+                refuse(m is not None, f"{ckpt}'s folder {d} is refused ({why}): no run goes on while one is; "
+                                      f"set-aside moves it, unchanged, where the reading still lists it")
+                refuse(not all(whole.values()), f"{ckpt} has a whole folder, {d}: a whole folder ends a checkpoint's run")
+        if (out / "meta.json").exists():
+            own_loads(out, ckpt, link)           # before anything is written to it
+        meta = open_folder(out, meta_of(ckpt, engine, link, "run"))
+        repair_torn(out)
+        repair_states(out)
+        own_loads(out, ckpt, link)
+        desc, role = meta["engine"], CHECKPOINTS[ckpt]["role"]
+        lmap = letter_maps(engine)
+        made = 0
+        for ph in PHASES:
+            left = None if stop_after is None else stop_after - made
+            if left is not None and left <= 0:
+                break
+            made += run_phase(engine, out, ph, role, desc, lmap, stop_after=left)
     return 0
+
+
+def set_aside(ckpt, name, root=None):
+    """A refused folder of the checkpoint moved, unchanged, to results/set-aside/<name>/, with the reason it
+    was refused and the time in set-aside/<name>.why.json, so a run may go on beside it. The reading lists
+    it there with its reason and how far it got. A folder that loads is not set aside; nothing is deleted."""
+    base = Path(root or RESULTS)
+    link = held(frozen())
+    with one_run(base, ckpt):
+        d = base / name
+        refuse(name.startswith(f"{ckpt}-") and d.is_dir(),
+               f"{name} is not a folder of {ckpt}'s runs")
+        m, why, _, _ = folders_of(base, ckpt, link)[name]
+        refuse(m is None, f"{name} loads: only a refused folder is set aside")
+        dest = base / SET_ASIDE / name
+        refuse(not dest.exists(), f"{SET_ASIDE}/{name} exists")
+        dest.parent.mkdir(exist_ok=True)
+        os.replace(d, dest)
+        stamp = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
+        durable(dest.parent / f"{name}.why.json", (json.dumps({"why": why, "set_aside_at": stamp}, indent=1) + "\n").encode())
+    return {"set_aside": name, "why": why}
 
 
 def _engine_cls():
@@ -594,13 +652,18 @@ def load(folder, ckpt, link):
     role = CHECKPOINTS[ckpt]["role"]
     torn = torn_last((folder / "groups.jsonl").read_bytes()) is not None if (folder / "groups.jsonl").exists() else False
     gs = written(folder, torn_ok=True)
+    # A last group whose kept states differ, as a machine stop before they reached the disk leaves them, is
+    # read as absent, as a torn last line is; a run resuming the folder makes it again (repair_states).
+    differ = bool(gs) and states_differ(folder, gs[-1])
+    if differ:
+        gs = gs[:-1]
     for g in gs:
         refuse(set(g) == GROUP and isinstance(g["passes"], list) and all(isinstance(r, dict) for r in g["passes"]),
                f"{folder.name}: a group's fields are {sorted(g)}, or its passes are not a list of records")
     ids = [g["group"] for g in gs]
     refuse(len(ids) == len(set(ids)), f"{folder.name} holds a group twice")
     have = {g["group"]: g for g in gs}
-    plan = {g["id"]: g for ph in ("pilot", "main", "recognition") for g in P.phase_groups(ph)}
+    plan = {g["id"]: g for ph in PHASES for g in P.phase_groups(ph)}
     for g in gs:
         pg = plan.get(g["group"])
         refuse(pg is not None, f"{g['group']} is not in the plan")
@@ -618,25 +681,69 @@ def load(folder, ckpt, link):
                 refuse(sp.exists() and hashlib.sha256(sp.read_bytes()).hexdigest() == r["state_sha256"],
                        f"{g['group']} {r['arm']}: the state file differs from its hash")
     whole = {}
-    for ph in ("pilot", "main", "recognition"):
+    for ph in PHASES:
         planned = [g for g in plan.values() if g["phase"] == ph]
         whole[ph] = bool(planned) and all(g["id"] in have for g in planned)
-    return meta, [have[k] for k in plan if k in have], whole, torn
+    return meta, [have[k] for k in plan if k in have], whole, {"torn_last_line": torn, "last_group_states_differ": differ}
 
 
-def progress(gs):
-    """How far a folder got: its groups per phase against the plan's, and its first and last pass."""
-    out = {ph: f"{sum(g['phase'] == ph for g in gs)} of {len(P.phase_groups(ph))}" for ph in ("pilot", "main", "recognition")}
+def states_differ(folder, g):
+    """A well-formed group keeping states, some of whose state files are missing or differ from their hashes."""
+    if g.get("keep_state") is not True or not isinstance(g.get("passes"), list) or not g["passes"]:
+        return False
+    if not all(isinstance(r, dict) and isinstance(r.get("state_file"), str) and isinstance(r.get("state_sha256"), str)
+               and "/" not in r["state_file"] for r in g["passes"]):
+        return False
+    return any(not (Path(folder) / "states" / r["state_file"]).exists()
+               or hashlib.sha256((Path(folder) / "states" / r["state_file"]).read_bytes()).hexdigest() != r["state_sha256"]
+               for r in g["passes"])
+
+
+def progress(folder, gs):
+    """How far a loaded folder got: its groups per phase against the plan's, its first and last pass, and
+    the side files of groups made again."""
+    out = {ph: f"{sum(g['phase'] == ph for g in gs)} of {len(P.phase_groups(ph))}" for ph in PHASES}
     times = [(r["t0"], r["t1"]) for g in gs for r in g["passes"]]
     out["first_pass_t0"] = min(t[0] for t in times) if times else None
     out["last_pass_t1"] = max(t[1] for t in times) if times else None
+    out["made_again"] = side_files(folder)
+    return out
+
+
+def side_files(folder):
+    """The lines and state files a repair set aside (each a group made again)."""
+    folder = Path(folder)
+    return {"lines": len(list(folder.glob("groups.jsonl.torn-*"))),
+            "state_files": len(list((folder / "states").glob("*.torn-*"))) if (folder / "states").is_dir() else 0}
+
+
+def raw_progress(folder):
+    """How far a refused folder got, from its lines as they stand, its records not read: the lines naming
+    each phase, the lines that name none, and the side files."""
+    p = Path(folder) / "groups.jsonl"
+    counts, other = {ph: 0 for ph in PHASES}, 0
+    raw = p.read_bytes() if p.exists() else b""
+    for x in raw.split(b"\n"):
+        if not x.strip():
+            continue
+        try:
+            ph = json.loads(x).get("phase")
+        except Exception:                            # noqa: BLE001
+            ph = None
+        if ph in counts:
+            counts[ph] += 1
+        else:
+            other += 1
+    out = {ph: f"{n} lines, of {len(P.phase_groups(ph))} groups planned" for ph, n in counts.items()}
+    out["lines_naming_no_phase"] = other
+    out["made_again"] = side_files(folder)
     return out
 
 
 def folders_of(root, ckpt, link):
     """Each folder of a checkpoint, loaded, or (None, why, None, None) where it is refused."""
     out = {}
-    for d in sorted(x for x in Path(root).glob(f"{ckpt}-*") if (x / "meta.json").exists()):
+    for d in sorted(x for x in Path(root).glob(f"{ckpt}-*") if x.is_dir()):
         try:
             out[d.name] = load(d, ckpt, link)
         except SystemExit as e:
@@ -646,24 +753,39 @@ def folders_of(root, ckpt, link):
     return out
 
 
+def set_aside_listing(root, ck, link):
+    """The checkpoint's folders set aside, each with the reason it was refused then, and now, and how far it got."""
+    base = Path(root) / SET_ASIDE
+    out = {}
+    for name, v in folders_of(base, ck, link).items():
+        try:
+            then = json.loads((base / f"{name}.why.json").read_text())
+        except Exception:                            # noqa: BLE001
+            then = None
+        out[name] = {"set_aside": then, "now": v[1] or "loads", "progress": raw_progress(base / name)}
+    return out
+
+
 def read_one(root, ck, link):
     loaded = folders_of(root, ck, link)
+    aside = set_aside_listing(root, ck, link)
     if not loaded:
-        return {"status": "not run"}
-    listing = {k: ({"refused": v[1]} if v[0] is None else
-                   {"whole": v[2], "torn_last_line": v[3], "progress": progress(v[1])})
+        return {"status": "not run", **({"set_aside": aside} if aside else {})}
+    listing = {k: ({"refused": v[1], "progress": raw_progress(Path(root) / k)} if v[0] is None else
+                   {"whole": v[2], **v[3], "progress": progress(Path(root) / k, v[1])})
                for k, v in loaded.items()}
     whole = [k for k, v in loaded.items() if v[0] is not None and all(v[2].values())]
     if len(whole) > 1:
-        return {"status": "refused: two whole folders", "folders": listing}
+        return {"status": "refused: two whole folders", "folders": listing, "set_aside": aside}
     if not whole:
         refused_n = sum(v[0] is None for v in loaded.values())
         status = ("refused: every folder refused" if refused_n == len(loaded) else
                   "partial" if not refused_n else f"partial; {refused_n} folder(s) refused")
-        return {"status": status, "folders": listing}
+        return {"status": status, "folders": listing, "set_aside": aside}
     meta, gs, _, _ = loaded[whole[0]]
     r = RU.read_checkpoint(root / whole[0], gs, meta["engine"])
     r.update({"status": "read", "folder": whole[0], "not_read": {k: v for k, v in listing.items() if k != whole[0]},
+              "set_aside": aside, "made_again": listing[whole[0]]["progress"]["made_again"],
               "device": meta["device"], "threads": meta["threads"], "links": meta["links"]})
     return r
 
@@ -694,6 +816,9 @@ def main(argv=None):
         if name != "check":
             s.add_argument("--device", default="cpu", choices=("cpu", "mps"))
             s.add_argument("--threads", type=int, default=8)
+    s = sub.add_parser("set-aside")
+    s.add_argument("--checkpoint", required=True, choices=sorted(CHECKPOINTS))
+    s.add_argument("--name", required=True)
     sub.add_parser("read")
     a = ap.parse_args(argv)
     if a.cmd == "check":
@@ -706,6 +831,9 @@ def main(argv=None):
         return 0 if rep["go_on"] else 1
     if a.cmd == "run":
         return run(a.checkpoint, a.folder, a.device, a.threads)
+    if a.cmd == "set-aside":
+        print(json.dumps(set_aside(a.checkpoint, a.name), indent=1))
+        return 0
     print(json.dumps(read(), indent=1)[:4000])
     return 0
 
