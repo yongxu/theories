@@ -1,4 +1,4 @@
-"""TR1A's rule (FREEZE-9.md, section 4): V1, RF1's verdict across frames, its premise, the descriptive
+"""TR1A's rule (FREEZE-10.md, section 4): V1, RF1's verdict across frames, its premise, the descriptive
 reading, and V1's exact power.
 
 V1 (REST-TR1 section 8) reads eight occasions on the amounts {low, middle, high}, each asked R_CALLS times:
@@ -183,7 +183,7 @@ def reading(family, v, prem, role):
         bridge, why = v["outcome"], v["why"]
     said = None
     if bridge == "passed":
-        said = f"no cycle among {v['strict']} strict occasions across the frames, at the power of FREEZE-9 section 4"
+        said = f"no cycle among {v['strict']} strict occasions across the frames, at the power of FREEZE-10 section 4"
     elif bridge == "contradicted":
         said = f"a cycle across the frames: {v['cycle']}"
     return {"family": family, "pin_role": role, "decides": role == "decides", "bridge": bridge, "why": why,
@@ -191,7 +191,7 @@ def reading(family, v, prem, role):
 
 
 def expectations(readings):
-    """FREEZE-9 section 13's expectation as code: the manipulation check passes on every pin read."""
+    """FREEZE-10 section 13's expectation as code: the manipulation check passes on every pin read."""
     xs = {r["family"]: r["premise"]["passed"] for r in readings if r.get("premise") is not None}
     return {"the manipulation check passes on every pin read": (all(xs.values()) if xs else None),
             "the check by pin": xs}

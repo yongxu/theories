@@ -1,5 +1,5 @@
 """The run of TR1's informing variant and its reading, frozen with its rule, on freeze 1's harness and
-FREEZE-5's folder handling (FREEZE-9.md).
+FREEZE-5's folder handling (FREEZE-10.md).
 
     python3 -B tr1a_run.py plan                                    # the calls and the usage estimate, no call
     python3 -B tr1a_run.py smoke --family PIN --max-usd 1          # the release's first step (section 8)
@@ -13,7 +13,7 @@ through OpenRouter with his key. The calls are made, logged and checked by freez
 execute, resume, catalog read, spend guard and served check; told/client.py's client and parser),
 imported unchanged; the folder handling is FREEZE-5's (told-tr1/tr1_run.py: its line writer, the
 whole meta, the check of a log cut short, `mend`, and the smoke run's cause of a stop), imported
-unchanged, its messages citing FREEZE-5's section 8, which FREEZE-9's section 8 carries over. This module
+unchanged, its messages citing FREEZE-5's section 8, which FREEZE-10's section 8 carries over. This module
 gives them TR1A's plan, call builder and parser (tr1a_design), its folder (results/tr1a/<pin>/) and its
 lock, and reads the smoke runs, the starts and the verdicts as FREEZE-5's run reads TR1's.
 
@@ -94,10 +94,10 @@ def pin_lock(family, root=None):
             fcntl.flock(fh.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
         except BlockingIOError:
             raise SystemExit(f"another command of {family} is running, holding {p.name}: one command of a pin at a "
-                             "time (FREEZE-9.md, section 8); nothing was done") from None
+                             "time (FREEZE-10.md, section 8); nothing was done") from None
         except OSError as e:
             raise SystemExit(f"{p.name} could not be locked ({e}): a pin's commands need a folder that locks "
-                             "(FREEZE-9.md, section 8); nothing was done") from None
+                             "(FREEZE-10.md, section 8); nothing was done") from None
         yield p
 
 
@@ -287,19 +287,19 @@ def smoke_passed(family, hashes, conditions, root=None):
     if any(held[c] for c in conditions):
         raise SystemExit("; ".join(f"{family}'s condition {c} was stopped by the pin's own answers at its smoke run "
                                    f"({held[c]}), a stop that stands" for c in sorted(conditions) if held[c])
-                         + " (FREEZE-9.md, section 8); no call was made")
+                         + " (FREEZE-10.md, section 8); no call was made")
     left = [c for c in sorted(conditions) if not read_whole(family, c, root)]
     if not left:
         raise SystemExit(f"{family}'s {', '.join(sorted(conditions))} read whole: no call is left to make "
-                         "(FREEZE-9.md, section 8); no call was made")
+                         "(FREEZE-10.md, section 8); no call was made")
     last = runs[-1]
     if last["hashes"] != hashes:
         raise SystemExit(f"{family}'s latest smoke run ({last['folder']}) was made on other frozen files, or made no "
-                         "call: a run needs a smoke run on its own frozen files (FREEZE-9.md, section 8); no call was made")
+                         "call: a run needs a smoke run on its own frozen files (FREEZE-10.md, section 8); no call was made")
     stopped = [c for c in left if not last["go_on"][c]]
     if stopped:
         raise SystemExit(f"{family}'s latest smoke run ({last['folder']}) stopped {', '.join(stopped)}, a stop of the "
-                         "run, which a later smoke run that passes lifts (FREEZE-9.md, section 8); no call was made")
+                         "run, which a later smoke run that passes lifts (FREEZE-10.md, section 8); no call was made")
     return last["folder"]
 
 
@@ -432,7 +432,7 @@ def main(argv=None):
         with pin_lock(a.family):
             frozen()
             got = mend(scored(a.family), a.family, a.cause)
-            print(f"moved, per log, a line of so many bytes: {got} (FREEZE-9.md, section 8); start `run` again")
+            print(f"moved, per log, a line of so many bytes: {got} (FREEZE-10.md, section 8); start `run` again")
             if "catalog.jsonl" in got:
                 put = json.loads((scored(a.family) / "catalog.jsonl").read_bytes().splitlines()[-1])
                 print(f"put in the catalog's place: a read naming no snapshot, at t {put['t']} (section 8)")
@@ -446,7 +446,7 @@ def main(argv=None):
                 raise SystemExit(f"no smoke run of {a.family} is needed: each condition is read whole, stopped by the "
                                  "pin's own answers, a stop that stands, or released by its latest smoke run on these "
                                  "frozen files, so another could release nothing and could only add a stop "
-                                 "(FREEZE-9.md, section 8); no call was made")
+                                 "(FREEZE-10.md, section 8); no call was made")
             may = {c: c not in begun(a.family) for c in D.CONDITIONS}
             calls = D.plan(a.family, smoke=True)
             out = Path(ROOT) / "smoke" / (a.family.replace("/", "__") + "-"
@@ -478,7 +478,7 @@ def main(argv=None):
                 raise SystemExit(f"unknown condition in {a.conditions}; known: {', '.join(D.CONDITIONS)}; no call was made")
             if want & set(D.COURSES) and a.parallel != 1:
                 raise SystemExit("a course's calls carry its earlier rounds, so U and I run at --parallel 1 "
-                                 "(FREEZE-9.md, section 6); no call was made")
+                                 "(FREEZE-10.md, section 6); no call was made")
             if a.parallel < 1:
                 raise SystemExit("--parallel is at least 1; no call was made")
             out = scored(a.family)

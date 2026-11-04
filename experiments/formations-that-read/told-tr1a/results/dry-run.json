@@ -1,6 +1,6 @@
 {
  "test": "tr1a",
- "seed": "TR1A-freeze-9-2026-11-05",
+ "seed": "TR1A-freeze-10-2026-11-05",
  "python": "3.11.2",
  "design": {
   "calls per pin": 774,
@@ -250,13 +250,35 @@
    "pin": "qwen/qwen3.8-max-0902",
    "reading": "passed",
    "class": "held by the model: known uninformed, takes the other when told it pays high",
-   "V1 strict occasions": 5,
+   "V1 strict occasions": 4,
    "V1 picks": {
-    "C o0": null,
+    "C o0": "high",
     "C o1": "high",
-    "I up o0": null,
-    "I up o1": "high",
-    "T o0": null,
+    "I up o0": "high",
+    "I up o1": null,
+    "T o0": "mid",
+    "T o1": null,
+    "I down o0": null,
+    "I down o1": null
+   },
+   "the check": {
+    "up": 8,
+    "down": 8
+   },
+   "U in up: share of courses taking the other option": 0.5
+  },
+  {
+   "formation": "O trembling 0.05 a call",
+   "pin": "anthropic/claude-sonnet-5.5",
+   "reading": "passed",
+   "class": "held by the order: the known when told, the middle over the high in C",
+   "V1 strict occasions": 8,
+   "V1 picks": {
+    "C o0": "mid",
+    "C o1": "mid",
+    "I up o0": "mid",
+    "I up o1": "mid",
+    "T o0": "mid",
     "T o1": "mid",
     "I down o0": "mid",
     "I down o1": "mid"
@@ -265,29 +287,7 @@
     "up": 8,
     "down": 9
    },
-   "U in up: share of courses taking the other option": 0.3889
-  },
-  {
-   "formation": "O trembling 0.05 a call",
-   "pin": "anthropic/claude-sonnet-5.5",
-   "reading": "passed",
-   "class": "held by the order: the known when told, the middle over the high in C",
-   "V1 strict occasions": 7,
-   "V1 picks": {
-    "C o0": "mid",
-    "C o1": "mid",
-    "I up o0": "mid",
-    "I up o1": "mid",
-    "T o0": "mid",
-    "T o1": "mid",
-    "I down o0": null,
-    "I down o1": "mid"
-   },
-   "the check": {
-    "up": 8,
-    "down": 9
-   },
-   "U in up: share of courses taking the other option": 0.4444
+   "U in up: share of courses taking the other option": 0.3333
   },
   {
    "formation": "declining every call",
@@ -381,7 +381,7 @@
   },
   {
    "check": "a logged answer the parser does not read from its response",
-   "refused": "tr1a|google/gemini-4-argon|C|-|o1|08: the logged answer is not the one the parser reads from its response"
+   "refused": "tr1a|google/gemini-4-argon|C|-|o0|04: the logged answer is not the one the parser reads from its response"
   },
   {
    "check": "a record not in the plan",
@@ -401,7 +401,7 @@
   },
   {
    "check": "Stage A's run over a result kept",
-   "refused": "stage-a.json exists: Stage A has run, and its result is kept (FREEZE-9.md, section 9); nothing was done"
+   "refused": "stage-a.json exists: Stage A has run, and its result is kept (FREEZE-10.md, section 9); nothing was done"
   },
   {
    "check": "Stage A on a command it does not know",
@@ -423,7 +423,7 @@
   },
   {
    "check": "the courses asked at a parallel above 1",
-   "result": "a course's calls carry its earlier rounds, so U and I run at --parallel 1 (FREEZE-9.md, section 6); no call was made"
+   "result": "a course's calls carry its earlier rounds, so U and I run at --parallel 1 (FREEZE-10.md, section 6); no call was made"
   },
   {
    "check": "an unknown condition",
@@ -439,15 +439,15 @@
   },
   {
    "check": "run asking only for conditions read whole",
-   "result": "google/gemini-4-argon's C read whole: no call is left to make (FREEZE-9.md, section 8); no call was made"
+   "result": "google/gemini-4-argon's C read whole: no call is left to make (FREEZE-10.md, section 8); no call was made"
   },
   {
    "check": "a smoke run whose every check answer is prose",
-   "result": "stands {'C': None, 'T': None, 'X': 'qwen__qwen3.8-max-0902-20261104T200052Z', 'U': None, 'I': None}"
+   "result": "stands {'C': None, 'T': None, 'X': 'qwen__qwen3.8-max-0902-20261104T200724Z', 'U': None, 'I': None}"
   },
   {
    "check": "run asking for X after a stop that stands",
-   "result": "qwen/qwen3.8-max-0902's condition X was stopped by the pin's own answers at its smoke run (qwen__qwen3.8-max-0902-20261104T200052Z), a stop that stands (FREEZE-9.md, section 8); no call was made"
+   "result": "qwen/qwen3.8-max-0902's condition X was stopped by the pin's own answers at its smoke run (qwen__qwen3.8-max-0902-20261104T200724Z), a stop that stands (FREEZE-10.md, section 8); no call was made"
   },
   {
    "check": "the second pin read with X stopped",
@@ -455,7 +455,7 @@
   },
   {
    "check": "verdicts while another command holds the lock",
-   "result": "another command of qwen/qwen3.8-max-0902 is running, holding qwen__qwen3.8-max-0902.lock: one command of a pin at a time (FREEZE-9.md, section 8); nothing was done"
+   "result": "another command of qwen/qwen3.8-max-0902 is running, holding qwen__qwen3.8-max-0902.lock: one command of a pin at a time (FREEZE-10.md, section 8); nothing was done"
   },
   {
    "check": "every condition in one start on a third pin, by O",
@@ -464,12 +464,12 @@
  ],
  "stage A without its outcome": {
   "largest gradient error against finite differences, at a start": {
-   "item-score": 1.13e-10,
-   "comparator": 7.65e-11,
-   "set-input": 1.86e-10
+   "item-score": 5.68e-11,
+   "comparator": 2.69e-11,
+   "set-input": 1.38e-10
   },
   "hidden orders, each a chain on the met pairs with content 4 placed": 10,
-  "distinct no-order labellings in twenty draws": 17,
+  "distinct no-order labellings in twenty draws": 18,
   "item-score on the order, dry seeds 1000 to 1019": {
    "outcome": "passed",
    "seeds contradicted": [],
@@ -478,10 +478,10 @@
    },
    "P1 contradicted": 0,
    "P1 read": 20,
-   "mean share, on unjoined pairs, of the content ranked higher": 0.691
+   "mean share, on unjoined pairs, of the content ranked higher": 0.6972
   },
-  "seconds per set-input epoch, measured on a dry seed (200 epochs, no reading)": 0.000203,
-  "Stage A's run, estimated seconds of one core": 73.1,
+  "seconds per set-input epoch, measured on a dry seed (200 epochs, no reading)": 0.000218,
+  "Stage A's run, estimated seconds of one core": 78.6,
   "the rule on a hand-set cyclic comparator, and on a hand-set item-score": [
    "contradicted",
    "passed"
@@ -491,8 +491,8 @@
   "google/gemini-4-argon": {
    "calls": {
     "T": 18,
-    "C": 18,
     "X": 18,
+    "C": 18,
     "U": 360,
     "I": 360
    },
@@ -501,8 +501,8 @@
    "usd_high": 7.98,
    "tokens_in_by_condition": {
     "T": 1148,
-    "C": 1148,
     "X": 1930,
+    "C": 1148,
     "U": 61992,
     "I": 52902
    }
@@ -510,8 +510,8 @@
   "qwen/qwen3.8-max-0902": {
    "calls": {
     "T": 18,
-    "X": 18,
     "C": 18,
+    "X": 18,
     "U": 360,
     "I": 360
    },
@@ -520,8 +520,8 @@
    "usd_high": 4.88,
    "tokens_in_by_condition": {
     "T": 1148,
-    "X": 1930,
     "C": 1148,
+    "X": 1930,
     "U": 61992,
     "I": 52902
    }
@@ -529,8 +529,8 @@
   "anthropic/claude-sonnet-5.5": {
    "calls": {
     "X": 18,
-    "T": 18,
     "C": 18,
+    "T": 18,
     "U": 360,
     "I": 360
    },
@@ -539,14 +539,14 @@
    "usd_high": 7.98,
    "tokens_in_by_condition": {
     "X": 1930,
-    "T": 1148,
     "C": 1148,
+    "T": 1148,
     "U": 61992,
     "I": 52902
    }
   }
  },
- "seconds": 9.2,
+ "seconds": 10.7,
  "code_hashes": {
   "experiments/formations-that-read/tr1.py": "dd75707c1a44a300e419b4bd0dc7cbff9c83e1a71f874cf8e68d3a42e28ee17f",
   "experiments/formations-that-read/tr1.json": "d74cd24f43d08626fe3ba3d159823884ddc4ec20a873e2bcef0365bbd39d51fe",
@@ -562,12 +562,12 @@
   "experiments/formations-that-read/told-tr1/tr1_design.py": "60219e117fa1d33ef19c73f44067edc71c7008ad1c2ee920c665a4875c5b66fc",
   "experiments/formations-that-read/told-tr1/tr1_rule.py": "8bd7534212bfe9b19ec4853f0a285bfb593a3e5910e76695cf0ebbf1453c8560",
   "experiments/formations-that-read/told-tr1/tr1_run.py": "bb959cf9c2180358a0e6decf8e219ef892cace1e83baf4fbdb90ff4c17ad39df",
-  "experiments/formations-that-read/told-tr1a/tr1a_design.py": "7d70f29d0a97704fb3452148d230b24007515eedd7d644427be754c8fd6f4598",
-  "experiments/formations-that-read/told-tr1a/tr1a_rule.py": "3214120100c10284529434a4fb93b6dbc8f0a3b05b709c74bd213410f63ce3f5",
-  "experiments/formations-that-read/told-tr1a/tr1a_run.py": "cc0091d44a54dee6f43b164c765e18b6bfe12b507518c9bfc91af5bc47dd2cc9",
-  "experiments/formations-that-read/told-tr1a/tr1a_stage_a.py": "63dcb6bc6f11542e1f4dd3910eff13ceac6306b8abbb424b991ec6ab2daba35c",
-  "experiments/formations-that-read/told-tr1a/tr1a_dry_run.py": "5be736ff50ede463a502221ef4f9795ba7d215e2cc3dcaf3c62f56128070a988",
-  "experiments/formations-that-read/told-tr1a/write_frozen.py": "725b46875d4def5f724499d85f7c6697ff525fdd09bfbeaaacaeef65688ed5e9"
+  "experiments/formations-that-read/told-tr1a/tr1a_design.py": "b2d7bc90cfd8e965d628224acf910685bed34184d6e76f75c3486845fbad773b",
+  "experiments/formations-that-read/told-tr1a/tr1a_rule.py": "d35aad5a0ee1723188eac4ba409a3d55cf518bc8e1d38f843b8006f4ad9cc801",
+  "experiments/formations-that-read/told-tr1a/tr1a_run.py": "29d8b78a8934264184652a065e21b94843e261a42ccfac5ec60343fc91976690",
+  "experiments/formations-that-read/told-tr1a/tr1a_stage_a.py": "d9a0b1a8113618e404b28f960542c7ca84c3d5fa4442ed985bc46834e57c2bed",
+  "experiments/formations-that-read/told-tr1a/tr1a_dry_run.py": "716aec53c67d4fc2c804511a14272604a3efee126920f9cb21e2377da1fc1c51",
+  "experiments/formations-that-read/told-tr1a/write_frozen.py": "4bf9a48d047748ed6dbd25c8ff14084c42e637393f22771c33c901da56ef9220"
  },
  "code_unchanged_during_the_run": true,
  "ok": true

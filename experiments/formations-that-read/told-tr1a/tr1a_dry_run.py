@@ -1,4 +1,4 @@
-"""TR1A's dry run (FREEZE-9.md, section 10): the frozen code path end to end, with no model call, no key and
+"""TR1A's dry run (FREEZE-10.md, section 10): the frozen code path end to end, with no model call, no key and
 no network. Writes results/dry-run.json; every figure the text gives from the dry run is read from it.
 
     python3 -B tr1a_dry_run.py          # under a minute on one idle core
@@ -49,7 +49,7 @@ FAM = PINS[0]
 SLUG = {p["id"]: p["canonical_slug"] for p in R.PINS["pins"]}
 T0 = time.time()
 REL = "experiments/formations-that-read/"
-# Every file this freeze fixes but the dry run's result (FREEZE-9.md, section 15): its own code; Stage 0;
+# Every file this freeze fixes but the dry run's result (FREEZE-10.md, section 15): its own code; Stage 0;
 # freeze 1's files it imports and PINS.json; FREEZE-5's files it imports.
 FILES = [REL + f for f in ("tr1.py", "tr1.json", "tr8.py", "tr_rr.py")] + \
         [REL + "told/" + f for f in ("client.py", "conditions.py", "prompts.py", "rule.py", "run.py", "verdicts.py",

@@ -1,4 +1,4 @@
-"""TR1's Stage A (REST-TR1 section 10; FREEZE-9.md, section 9): small choosers trained on the met menus of
+"""TR1's Stage A (REST-TR1 section 10; FREEZE-10.md, section 9): small choosers trained on the met menus of
 D5q under a hidden strict order, then read on all 70 presentations by FREEZE-5's rule, unchanged.
 
     python3 -B tr1a_stage_a.py run          # Ren's yes: about a minute or two of one core; writes results/stage-a.json
@@ -279,7 +279,7 @@ def class_reading(rows):
 
 
 def expectations(cells):
-    """FREEZE-9 section 13's expectation for Stage A, as code: the item-score class trained on the order
+    """FREEZE-10 section 13's expectation for Stage A, as code: the item-score class trained on the order
     is contradicted on no seed, and P1 contradicted on none (an implementation check: it is one order by
     construction). False marks Stage A's pipeline as failed, and nothing else in it is read."""
     rows = cells[("item-score", "order")]["seeds"]
@@ -304,7 +304,7 @@ def main(argv=None):
     fc = RUN.frozen()
     out = D.HERE / "results" / "stage-a.json"
     if out.exists():
-        raise SystemExit(f"{out.name} exists: Stage A has run, and its result is kept (FREEZE-9.md, section 9); nothing was done")
+        raise SystemExit(f"{out.name} exists: Stage A has run, and its result is kept (FREEZE-10.md, section 9); nothing was done")
     cells = stage_a()
     res = {"test": "tr1a Stage A", "seed": D.SEED, "link": fc["link"], "freeze_commit": fc["freeze_commit"],
            "head": fc["head"], "hashes": fc["hashes"], "seeds": SEEDS, "epochs": EPOCHS,

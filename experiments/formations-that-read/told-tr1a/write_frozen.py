@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Write told-tr1a/FROZEN.sha256, the base link of TR1A's chain (FREEZE-9.md, section 15): the sha-256 of
+"""Write told-tr1a/FROZEN.sha256, the base link of TR1A's chain (FREEZE-10.md, section 15): the sha-256 of
 every file TR1A's freeze fixes, paths repository-relative, sorted. They are TR1A's own code, this writer
 and the dry run's result; Stage 0; every freeze 1 file it imports or reads (client, conditions, prompts,
 rule, run, verdicts, PINS.json, and tr8.py and tr_rr.py, which conditions imports), each with the hash

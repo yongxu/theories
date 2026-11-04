@@ -1,4 +1,4 @@
-"""TR1's informing variant on freeze 1's harness (FREEZE-9.md, sections 1 to 3): the game, its words, the
+"""TR1's informing variant on freeze 1's harness (FREEZE-10.md, sections 1 to 3): the game, its words, the
 plan of calls, the call builder with a course's rounds, and the parser.
 
 The variant is REST-TR1 section 8's: a repeated two-option game built to the witness of
@@ -25,7 +25,7 @@ from pathlib import Path
 
 if not __debug__:       # python3 -O: every assert dropped
     raise SystemExit("TR1A's code does not run under python3 -O, which would drop its checks; run it as "
-                     "python3 -B (FREEZE-9.md, section 6)")
+                     "python3 -B (FREEZE-10.md, section 6)")
 
 HERE = Path(__file__).resolve().parent
 TR1 = HERE.parent / "told-tr1"
@@ -61,7 +61,7 @@ def own_files():
 
 
 TEST = "tr1a"
-SEED = "TR1A-freeze-9-2026-11-05"
+SEED = "TR1A-freeze-10-2026-11-05"
 R_CALLS, Q = D1.R_CALLS, D1.Q      # Stage 0's choice, as FREEZE-5 reads it from tr1.json: 9 calls, strict at 8
 assert (R_CALLS, Q) == (9, 8)
 LOW, MID, HIGH = tr1.LOW, tr1.MID, tr1.HIGH
@@ -172,7 +172,7 @@ def plan(family, conditions=CONDITIONS, smoke=False):
 
 def rounds(x, records):
     """The rounds a course's call shows after the first: for each earlier step of its course, the answer
-    of that step's latest record among `records`, the records logged before this call (FREEZE-9.md,
+    of that step's latest record among `records`, the records logged before this call (FREEZE-10.md,
     section 2). A step with no record raises: in the plan's order at parallel 1 every earlier step is
     logged first, so a gap is a fault, and freeze 1's execute stops at it."""
     latest = {}

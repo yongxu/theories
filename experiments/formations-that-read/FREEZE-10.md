@@ -227,7 +227,7 @@ As REST-TR1's table says, nothing separates M from the pessimistic expected-valu
 **Stage A, without its outcome**:
 - the gradients of all three classes agree with finite differences at a start, the largest error below 2 × 10⁻¹⁰;
 - the ten hidden orders are distinct, each a chain on the met pairs;
-- twenty no-order labellings give 17 distinct ones;
+- twenty no-order labellings give 18 distinct ones;
 - the item-score class on the order, seeds 1000 to 1019, passes on all 20, P1 kept on all 20;
 - a hand-set cyclic comparator is read as contradicted, and a hand-set item-score as passed.
 
