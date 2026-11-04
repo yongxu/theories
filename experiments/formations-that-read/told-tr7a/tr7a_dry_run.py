@@ -27,10 +27,13 @@ learner trained.
    CPU estimate with a margin of 1.5 times, since the machine is shared: an estimate, not a bound, since
    nothing stops the run at it.
 7. The frozen check's state: it passes only once this freeze's FROZEN.sha256 is committed.
+8. The code it ran: the sha-256 of each file this folder's link lists but this record, taken as the dry run
+   starts, and whether they are the same at its end; FROZEN.sha256 is written only where they are its own.
 Standard library only.
 """
 
 import contextlib
+import hashlib
 import io
 import json
 import math
@@ -55,6 +58,7 @@ PLUMBING = "dry-plumbing"     # the plumbing's seed, none of the frozen seeds 0 
 STEPS_DRY = 2                 # steps a learner, in the plumbing
 MARGIN = 1.5                  # the CPU estimate's margin over the measure
 LINKS = {"dry"}               # the scripted records' link commit
+FROZEN_FILES = ("tr7a_stage.py", "tr7a_reading.py", "tr7a_stage0.py", "tr7a_dry_run.py", "results/stage0.json")
 TR7_CURVES = {                # tr7.json's Stage A reference curves, by this freeze's run
     "A1": "A1 from uniform", "A3": "A3 from uniform", "A3 leaning to ownThenComply": "A3 from a lean to ownThenComply",
     "A5": "A5 (tie) from uniform", "A5 leaning to complyThenOwn": "A5 (tie) from a lean to complyThenOwn",
@@ -350,8 +354,14 @@ def check_reading(chk, stage0):
         chk("the reading: refusals", f"{what}: refused", refuses(read, recs))
 
 
+def code_hashes():
+    """The sha-256 of each file this folder's link lists but the dry run's record, repository-relative."""
+    return {str(S.FOLDER / f): hashlib.sha256((HERE / f).read_bytes()).hexdigest() for f in FROZEN_FILES}
+
+
 def main():
     t0 = time.process_time()
+    code = code_hashes()
     chk, timing = Checks(), {}
     stage0 = json.loads((HERE / "results" / "stage0.json").read_text())
     check_game(chk)
@@ -372,7 +382,8 @@ def main():
            "CPU estimate": {"measured, minutes": round(seconds / 60, 1),
                             "with a margin of 1.5 times, minutes": round(MARGIN * seconds / 60, 1)},
            "the dry run's own CPU seconds": round(time.process_time() - t0, 1),
-           "frozen check": frozen}
+           "frozen check": frozen,
+           "code hashes": code, "code unchanged during the run": code_hashes() == code}
     path = HERE / "results" / "dry-run.json"
     path.parent.mkdir(exist_ok=True)
     path.write_text(json.dumps(out, indent=1) + "\n")
@@ -384,6 +395,7 @@ def main():
     print("CPU an episode (us):", out["CPU an episode, microseconds"], "| estimate:", out["CPU estimate"],
           "| the dry run:", out["the dry run's own CPU seconds"], "s")
     print("frozen check:", frozen[:160])
+    print("code unchanged during the run:", out["code unchanged during the run"])
 
 
 if __name__ == "__main__":

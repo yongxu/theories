@@ -300,15 +300,23 @@
   ]
  },
  "CPU an episode, microseconds": {
-  "told": 11.3,
-  "chance": 0.71,
+  "told": 11.83,
+  "chance": 0.72,
   "mixture": 0.61
  },
  "episodes in all": 296000000,
  "CPU estimate": {
-  "measured, minutes": 19.0,
-  "with a margin of 1.5 times, minutes": 28.5
+  "measured, minutes": 19.8,
+  "with a margin of 1.5 times, minutes": 29.7
  },
- "the dry run's own CPU seconds": 3.2,
- "frozen check": "does not pass yet: experiments/formations-that-read/told-tr7a/FROZEN.sha256 must be committed exactly once and never changed; found 0 contents in 0 commits"
+ "the dry run's own CPU seconds": 3.4,
+ "frozen check": "does not pass yet: experiments/formations-that-read/told-tr7a/FROZEN.sha256 must be committed exactly once and never changed; found 0 contents in 0 commits",
+ "code hashes": {
+  "experiments/formations-that-read/told-tr7a/tr7a_stage.py": "dedc5a951f108c3ff063e1b9a96d1068ac3ab9851759246bafc7362549cf77f7",
+  "experiments/formations-that-read/told-tr7a/tr7a_reading.py": "4583321767b6cc954a8aff95a7c7b78ef5f8a382a683b44d2432833d07cc60b7",
+  "experiments/formations-that-read/told-tr7a/tr7a_stage0.py": "171e9d27ae5fad3d456e3096ae419c5979509dfb16f4d89408e4d346594b6aac",
+  "experiments/formations-that-read/told-tr7a/tr7a_dry_run.py": "087f2a239d60e1d4bfc6639f9deca8b8b7b69ad48d6835dce2c45aa83524b1d2",
+  "experiments/formations-that-read/told-tr7a/results/stage0.json": "cdacf68eaaa19c23f644dfb5fa81c10b04fc691c34c6131d8f990b5761825868"
+ },
+ "code unchanged during the run": true
 }
