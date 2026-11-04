@@ -56,11 +56,10 @@ EVID_02 = ("on MQ5's stocks one year ahead, against the field's fitted delay emb
            "of the 65 (both in 46), and the embedding lost more the longer the history it chose: that bears on the "
            "three numbers' sufficiency against the series' longer history at these lengths, not on the lag's place or "
            "T2's law")
-EVID_08 = ("UE32 found the three numbers better than the field's fitted delay embedding by its frozen criterion (42 of "
-           "65 stocks, p = 0.025; expected: not separated), both behind persistence in most stocks, the embedding "
-           "losing more the longer its history: sufficiency against the longer history at these lengths, not the "
-           "lag's place or T2's law")
-QUOTE_08 = EVID_08[len('UE32 '):]
+EVID_08 = ("UE32 found T2's numbers better than the field's fitted embedding by its frozen criterion, both behind "
+           "persistence in most stocks, the embedding losing more with longer history: sufficiency against it at these "
+           "lengths, not the lag's place or T2's law (42 of 65 stocks, p = 0.025; expected: not separated)")
+QUOTE_08 = EVID_08[len('UE32 '):EVID_08.index(' (42 of 65')]
 assert EVID_08.startswith('UE32 found ')
 
 L316 = '#316-fates-on-either-side-of-the-curve-in-the-plane-in-the-field-mq7)'
@@ -68,18 +67,18 @@ L316 = '#316-fates-on-either-side-of-the-curve-in-the-plane-in-the-field-mq7)'
 # The figures measured on the landing tree with these edits (rehearsal); the landing script asserts the measure.
 RB_FIGURES = {
     'whole_stated': '140 to 195',
-    'slowest': 'SLOWEST',
-    'overview': 'OVERVIEW',
-    'overview_zh': 'OVERVIEW_ZH',
-    'overview_over': 'OVERVIEW_OVER',
-    'over_hour': 'OVER_HOUR',
-    'ov_words': 'OV_WORDS',
-    'ov_zh': 'OV_ZH',
-    'front': 'FRONT',
-    'front_over': 'FRONT_OVER',
-    'hour': 'HOUR',
-    'hour_over': 'HOUR_OVER',
-    'whole': 'WHOLE',
+    'slowest': '190.3',
+    'overview': '7,270 words and 19 characters (56.0 to 72.8 minutes)',
+    'overview_zh': 'Chinese 216 words and 12,616 characters (50.2 to 65.2 minutes)',
+    'overview_over': '1279',
+    'over_hour': 'thirteen',
+    'ov_words': '47',
+    'ov_zh': '110',
+    'front': '1,365 words, 10.5 to 13.7',
+    'front_over': '265',
+    'hour': '6,500 words, 50.0 to 65.0 minutes',
+    'hour_over': '500',
+    'whole': '146 to 190',
 }
 
 EDITS = {
@@ -102,11 +101,11 @@ EDITS = {
          'Quote [theories/becoming/chapters/08-METHOD.md]: "conjectured, on four frozen fish-stock tests; untested '
          'outside fisheries"'),
         ("and C2 was not testable. In yeast both chapters",
-         f'and C2 was not testable. UE32 ([result]({RESULT_SCI})) Quote [theories/becoming/chapters/08-METHOD.md]: '
+         f'and C2 was not testable. [UE32]({RESULT_SCI}) Quote [theories/becoming/chapters/08-METHOD.md]: '
          f'"{QUOTE_08}". In yeast both chapters'),
         ("| of three on fish stocks, one passed its state verdict; a frozen test (UE31)",
-         "| of four on fish stocks, one passed its state verdict, and in UE32 the three numbers forecast better than the "
-         "field's fitted embedding, both behind persistence in most stocks; a frozen test (UE31)"),
+         "| of four on fish stocks, one passed its state verdict; in UE32 T2's numbers beat the field's embedding, "
+         "both behind persistence in most stocks; a frozen test (UE31)"),
     ],
     MQREADME: [
         ("This is thesis T2, conjectured (of three frozen fish-stock tests, MQ5's passed) and untested outside fisheries.",
