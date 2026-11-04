@@ -1762,6 +1762,7 @@
   "a reading of a whole folder beside a refused one whole by its lines, refused": true,
   "a run beside a whole folder in set-aside/, refused; the reading not run, naming it": true,
   "a set-aside slot that cannot be read: a run refused, the reading naming it": true,
+  "set-aside/ listed but not searched: a run refused, the reading naming its slot": true,
   "a refused folder whose line names its phase as a list: listed as not whole, set aside": true,
   "a refused folder set aside: unchanged, the run then goes on beside it, the reading lists it": true,
   "a refused folder listed with how far it got": true,

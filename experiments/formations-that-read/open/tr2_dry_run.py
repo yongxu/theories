@@ -565,16 +565,24 @@ def locked_and_set_aside(tmp, copy, edit):
     TR.smoke(CKPT, d / "files", "cpu", 4, engine_cls=make_engine("detected"), root=d / "smoke")
     drive_t4 = lambda: TR.run(CKPT, d / "files", "cpu", 4, engine_cls=make_engine("detected"), root=d, stop_after=1)  # noqa: E731
     out["a run beside a whole folder in set-aside/, refused; the reading not run, naming it"] = \
-        refused(drive_t4, "set aside, is whole by its lines") and rd["status"] == "not run; 1 set aside" \
+        refused(drive_t4, "set aside, is whole by its lines") and rd["status"] == "not run; 1 set aside; 1 in doubt" \
         and rd["doubt"] == [f"{TR.SET_ASIDE}/0/{name}"]
     (d / TR.SET_ASIDE / "0").chmod(0)
     try:
         rd = TR.read(root=d)["checkpoints"][CKPT]
         out["a set-aside slot that cannot be read: a run refused, the reading naming it"] = \
             refused(drive_t4, "cannot all be read") and rd["doubt"] == [f"{TR.SET_ASIDE}/0"] \
-            and "unreadable" in rd["set_aside"]["0"]
+            and "unreadable" in rd["set_aside"]["0"] \
+            and rd["status"] == "not run; 1 unreadable in set-aside; 1 in doubt"
     finally:
         (d / TR.SET_ASIDE / "0").chmod(0o755)
+    (d / TR.SET_ASIDE).chmod(0o444)                              # set-aside/ listed, not searched
+    try:
+        rd = TR.read(root=d)["checkpoints"][CKPT]
+        out["set-aside/ listed but not searched: a run refused, the reading naming its slot"] = \
+            refused(drive_t4, "cannot all be read") and rd["doubt"] == [f"{TR.SET_ASIDE}/0"]
+    finally:
+        (d / TR.SET_ASIDE).chmod(0o755)
     d = copy("phase-not-a-name")
     pb = renamed_refused(d, keep=300)
     rows = (pb / "groups.jsonl").read_bytes().split(b"\n")

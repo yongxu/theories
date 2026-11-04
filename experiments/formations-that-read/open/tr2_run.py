@@ -22,7 +22,8 @@ holding its files, downloaded at its revision. Before any pass, smoke and run re
   newest smoke run with no report, stopped before its end, says no), no other run of the checkpoint
   holds its lock (results/<checkpoint>.lock), and no other folder of the checkpoint is whole or refused:
   a whole folder ends that checkpoint's run, refused or not, as does one whole by its lines or whose
-  log cannot be read (raw_whole_why), in results/ or set aside, and a refused one stops it until
+  log cannot be read (raw_whole_why), in results/ or set aside, or while a set-aside slot, or set-aside/
+  itself, cannot be read, and a refused one stops it until
   set-aside moves it, unchanged, to results/set-aside/<k>/, where the reading still lists it; a folder
   whole by its lines is never set aside, so it ends the checkpoint's run under this freeze unless its
   own run makes it whole. The run's own folder must load as
@@ -651,8 +652,8 @@ def set_aside(ckpt, name, root=None):
     """A refused folder of the checkpoint moved, unchanged, to results/set-aside/<k>/<name>/ (k the first
     free number), with the reason it was refused and the time in set-aside/<k>/why.json, written first, so
     a run may go on beside it. The reading lists it there with its reason and how far it got. Refused: a
-    folder that loads, and a folder whose log is whole by its lines (raw_whole), since a whole folder, refused or
-    not, ends its checkpoint's run (no second whole run is begun). Nothing is deleted."""
+    folder that loads, and a folder whose log is whole by its lines or cannot be read (raw_whole_why), since a
+    whole folder, refused or not, ends its checkpoint's run (no second whole run is begun). Nothing is deleted."""
     base = Path(root or RESULTS)
     with one_run(base, ckpt):
         link = held(frozen())
@@ -837,9 +838,9 @@ def aside_folders(root, ckpt):
         return found, {SET_ASIDE: f"{type(e).__name__}: {e}"}
     for s in slots:
         slot = top / s
-        if not slot.is_dir():
-            continue
         try:
+            if not slot.is_dir():
+                continue
             found += [slot / n for n in sorted(os.listdir(slot)) if n.startswith(f"{ckpt}-") and (slot / n).is_dir()]
         except OSError as e:
             bad[s] = f"{type(e).__name__}: {e}"
@@ -917,11 +918,15 @@ def read_one(root, ck, link):
     # set aside, a slot that cannot be read among them. Beside one, no whole folder is read, so a second whole
     # run is never the one read.
     doubt = sorted([k for k, v in listing.items() if "refused" in v and v["progress"]["whole_by_its_lines"]]
-                   + [f"{SET_ASIDE}/{k}" for k, v in aside.items()
+                   + [k if k == SET_ASIDE else f"{SET_ASIDE}/{k}" for k, v in aside.items()
                       if "progress" not in v or v["progress"]["whole_by_its_lines"]])
+    named = {"doubt": doubt} if doubt else {}            # named whatever the status
     if not loaded:
-        return {"status": f"not run; {len(aside)} set aside" if aside else "not run",
-                **({"set_aside": aside} if aside else {}), **({"doubt": doubt} if doubt else {})}
+        n_aside = sum("progress" in v for v in aside.values())
+        n_bad = len(aside) - n_aside
+        status = "not run" + (f"; {n_aside} set aside" if n_aside else "") \
+            + (f"; {n_bad} unreadable in set-aside" if n_bad else "") + (f"; {len(doubt)} in doubt" if doubt else "")
+        return {"status": status, **({"set_aside": aside} if aside else {}), **named}
     whole = [k for k, v in loaded.items() if v[0] is not None and all(v[2].values())]
     if whole and doubt:
         return {"status": "refused: a whole folder beside another whole by its lines, or one that cannot be read",
@@ -932,7 +937,7 @@ def read_one(root, ck, link):
         refused_n = sum(v[0] is None for v in loaded.values())
         status = ("refused: every folder refused" if refused_n == len(loaded) else
                   "partial" if not refused_n else f"partial; {refused_n} folder(s) refused")
-        return {"status": status, "folders": listing, "set_aside": aside}
+        return {"status": status, "folders": listing, "set_aside": aside, **named}
     meta, gs, _, _ = loaded[whole[0]]
     r = RU.read_checkpoint(root / whole[0], gs, meta["engine"])
     r.update({"status": "read", "folder": whole[0], "not_read": {k: v for k, v in listing.items() if k != whole[0]},

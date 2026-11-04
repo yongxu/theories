@@ -1,6 +1,6 @@
 # Review of freeze 7 (TR2's Stage B): readers other than its author
 
-4 November 2026. AI-written (a Claude Code session). Readers other than the freeze's author read the frozen files before the freeze landed, in rounds, each round checking the fixes of the one before. Every reader was a Claude Opus subagent, of the theory's own family, as is every reader this session can call. Each was given the files, the designs, freeze 1's harness and what this freeze was asked to do, not the author's conclusions. Each worked read-only, with small checks of the code, and none downloaded or ran a model. ROUNDS-SUMMARY The text the reviews changed is [FREEZE-7.md](../FREEZE-7.md).
+4 November 2026. AI-written (a Claude Code session). Readers other than the freeze's author read the frozen files before the freeze landed, in rounds, each round checking the fixes of the one before. Every reader was a Claude Opus subagent, of the theory's own family, as is every reader this session can call. Each was given the files, the designs, freeze 1's harness and what this freeze was asked to do, not the author's conclusions. Each worked read-only, with small checks of the code, and none downloaded or ran a model. Eight rounds read it, each after the fixes of the one before: 44, 47, 33, 38, 26, 24, 23 and 18 points. The first two found five high findings (three in round 1, two of them one point, and two in round 2), none since; rounds 3 to 7 found medium findings that were 5, 2, 3, 2 and 2 defects, most in the handling of a folder stopped, damaged or set aside, which each round's fixes widened; round 8 found only low ones. Every finding was taken, and where the fix differs from the reader's, the reason is given. The text the reviews changed is [FREEZE-7.md](../FREEZE-7.md).
 
 ## Round 1: three readers, each finding verified
 
@@ -305,3 +305,21 @@ They found 23 points, nine of them "none found". There is no high finding. The v
 The nine "none found": the ignore rules against every path a run or `set-aside` writes (twice); no normal path read as whole by its lines but C3's; `set-aside`'s name check and slot loop; the reading's listing, the own-refused case and the no-meta case; section 11's count of 56 and its groups; round 6's counts; the reading time; and round 6's other fixes.
 
 After the fixes, the power check and the dry run were run again on the changed code. Every check holds, the power check's figures are unchanged, and the dry run now meets 61 refusals.
+
+## Round 8: two readers on round 7's diff
+
+The same two lenses, on round 7's diff: the code reader tested the new byte test on a whole log of 2,400 lines at 439 positions, with six kinds of change at each, and on partial logs cut at every phase. Neither reader found a high or medium finding, so no verifier was called: two agents. None ran the dry run or the power check, and none downloaded or ran a model.
+
+They found 18 points, eleven of them "none found", and seven low. Every one was taken, as follows.
+
+| # | Finding | How it was taken |
+|---|---|---|
+| C1, R1 | Where `set-aside/` can be listed but not searched, a slot's test stood outside its guard, so the run stopped with a traceback, before any write, and the reading refused every checkpoint, instead of each naming the slot. | The test is inside the guard. A dry-run case: a run refused, the reading naming the slot in doubt. |
+| C2 | Beside loaded partial folders, the folders in doubt were not named. | They are named whatever the status (section 7). |
+| C3 | "Not run; N set aside" counted an unreadable slot as a folder set aside, an unreadable `set-aside/` was named `set-aside/set-aside`, and the status did not say a folder was in doubt. | The status counts the folders set aside, the slots that cannot be read and the folders in doubt apart; `set-aside/` is named as itself. |
+| C4, R2 | `set-aside`'s docstring named only "whole by its lines", not a log that cannot be read; the module docstring did not say a run is refused while a slot cannot be read. | Both said. |
+| R3 | Section 7's "A run may then go on beside a folder set aside" was qualified only two clauses later. | Qualified where it stands. |
+
+The eleven "none found": the one-byte guarantee (no change at any of the 439 positions made a whole log look partial, and the last group's bytes cannot match falsely); no normal partial folder read as whole but one torn inside the plan's last group, as section 7 says; the run's gate and `set-aside`'s checks, their order and the slots; the listing's one test and the reading's doubt; each new dry-run case against its key; section 11's count of 61 and its groups; round 7's counts and rows; the reading time; round 7's claims; and sections 12 and 13 against what is tested.
+
+After the fixes, the power check and the dry run were run again on the changed code. Every check holds, the power check's figures are unchanged, and the dry run now meets 62 refusals.
