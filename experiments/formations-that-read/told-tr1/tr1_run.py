@@ -27,8 +27,10 @@ The folder handling, in one place (section 8):
   line cut short, by FREEZE-1's dated note, and a line before the last that does not read leaves the
   folder refused.
 - A smoke run is read by the client as it now stands, per condition (smoke_stops): a stop of the run,
-  lifted by a later smoke run that passes; a stop by the pin's own answers, which stands, except that
-  once a condition's run has begun nothing the pin answers at a smoke run stops it (begun).
+  lifted by a later smoke run that passes; a stop by the pin's own answers, which stands, where at least
+  two of the condition's four answers do not read and its run has not begun (begun). Fewer, or any once
+  its run has begun, are a stop of the run.
+- `--max-usd` caps the folder's spend over every start of `run`, the records already logged counted.
 - A command is refused before any call where it could gain nothing: `smoke` where no smoke run is
   needed (smoke_needed), `run` where every condition asked is read whole or one has a stop that stands,
   or where H is asked at a parallel above 1; `mend` where nothing is cut.
@@ -63,6 +65,7 @@ D.own_files()
 HERE = Path(__file__).resolve().parent
 FOLDER = HERE.relative_to(R.REPO)     # told-tr1/, repository-relative
 LOGS = ("calls.jsonl", "catalog.jsonl")
+SMOKE_STANDS = 2        # a condition's unreadable smoke answers (of its four) that stop it for good (section 8)
 # What an addendum to this freeze may change (section 8): freeze 1's client, where freeze 1's own addendum
 # changed it, and this freeze's dry run and its result; in freeze 1's PINS.json only a pin's served_as
 # (run.chain reads that file so). Every other file the chain lists is fixed.
@@ -375,11 +378,14 @@ def smoke_stops(folder, stopped, may_stand=None):
     """A smoke run's stops, its records read by the parser as it now stands. stopped: the run's own stop
     (execute's), or None. "all": calls another model answered or made under another catalog slug, which,
     with a stop of the run, a call not made or a line of the log that does not read ("cut"), stop every
-    condition, a stop of the run. Per condition, "run": its calls the provider rejected or filtered or the
-    token limit cut, a stop of the run, which a later smoke run that passes lifts; "answers": its answers
-    the parser cannot read, the pin's own, a stop that stands. may_stand: per condition, whether the pin's
-    own answers may stop it, False once its run has begun (begun), True for all where None; "stands": the
-    "answers" where they may, else none. "go": each condition goes on where nothing stops it."""
+    condition, a stop of the run. Per condition, "answers": its answers the parser cannot read, the pin's
+    own; "stands": those answers where there are at least SMOKE_STANDS of them and the pin's own answers
+    may stop the condition for good (may_stand: False once its run has begun, begun; True for all where
+    None), a stop that stands; "run": its calls the provider rejected or filtered or the token limit cut,
+    and its unreadable answers that do not stand, a stop of the run, which a later smoke run that passes
+    lifts. So one unreadable answer, or any once the condition's run has begun (a changed client may be
+    misreading the pin), stops the condition until a smoke run passes, and never for good. "go": each
+    condition goes on where nothing stops it."""
     folder = Path(folder)
     meta = read_json(folder / "meta.json") or {}
     family = meta["family"]
@@ -397,8 +403,9 @@ def smoke_stops(folder, stopped, may_stand=None):
     whole = stopped is None and not every and not cut
     for c in D.CONDITIONS:
         answers = list(by[c]["answer"])
-        out[c] = {"run": by[c]["provider"] + by[c]["limit"], "answers": answers,
-                  "stands": answers if may_stand is None or may_stand[c] else []}
+        stands = answers if len(answers) >= SMOKE_STANDS and (may_stand is None or may_stand[c]) else []
+        out[c] = {"run": by[c]["provider"] + by[c]["limit"] + [i for i in answers if i not in stands],
+                  "answers": answers, "stands": stands}
     out["go"] = {c: whole and made[c] == planned[c] and not out[c]["run"] and not out[c]["stands"]
                  for c in D.CONDITIONS}
     return out
@@ -407,7 +414,7 @@ def smoke_stops(folder, stopped, may_stand=None):
 def smoke_report(folder, stopped=None, may_stand=None):
     """The smoke run's report (section 8), written for a stopped smoke run too: each condition's go or stop,
     the calls that stop every condition, per condition those that stop it (a stop of the run, or a stop
-    that stands) and the pin's own answers stopping nothing, its run begun; the served models and the
+    that stands) and the pin's unreadable answers that stop it only as a stop of the run; the served models and the
     catalog's slugs; tokens and cost per call, and the full plan's projection. Nothing of the answers is
     reported beyond whether each was read. Exit 0 where a condition goes on, 2 where none does."""
     folder = Path(folder)
@@ -423,7 +430,7 @@ def smoke_report(folder, stopped=None, may_stand=None):
               "go_on": s["go"], "stops every condition": s["all"], "log lines that do not read": s["cut"],
               "stops of the run": {c: s[c]["run"] for c in D.CONDITIONS},
               "stops that stand": {c: s[c]["stands"] for c in D.CONDITIONS},
-              "the pin's own answers stopping nothing, the condition's run begun":
+              "the pin's unreadable answers that stop as a stop of the run (fewer than two, or its run begun)":
                   {c: [i for i in s[c]["answers"] if i not in s[c]["stands"]] for c in D.CONDITIONS},
               "served_by": dict(Counter(str(R.served_model(r["response"])) for r in recs)),
               "catalog": sorted({str(r.get("catalog")) for r in recs}),
@@ -479,15 +486,16 @@ def read_whole(family, cond, root=None):
 
 
 def begun(family, root=None):
-    """The conditions whose run has begun: those a start of `run` asked for that has a call logged, a
-    record begun after the start and before the next one. A start with no call logged counts as none. The
+    """The conditions whose run has begun: those of which a start of `run` that asked for them has a call
+    logged, a record of that condition begun after the start and before the next one. A start with no call
+    of a condition logged begins none of it. The
     windows read the machine's clock, and a pin's commands run one at a time (pin_lock). Once a
     condition's run has begun, nothing the pin answers at a smoke run, earlier or later, stops it."""
     out = scored(family, root)
     starts = scored_meta(family, root).get("starts") or []
-    t0 = [r["t0"] for r in R.logged(out) if r.get("t0") is not None]
+    made = [(r["t0"], r.get("condition")) for r in R.logged(out) if r.get("t0") is not None]
     ends = [s["t"] for s in starts[1:]] + [float("inf")]
-    return {c for s, end in zip(starts, ends) if any(s["t"] <= t < end for t in t0) for c in s["conditions"]}
+    return {c for s, end in zip(starts, ends) for t, c in made if s["t"] <= t < end and c in s["conditions"]}
 
 
 def smoke_runs(family, root=None):
@@ -769,10 +777,12 @@ def main(argv=None):
                 write_whole(mp, json.dumps(old, indent=1) + "\n")
             else:
                 write_whole(mp, json.dumps(meta, indent=1) + "\n")
-            sink, logged_ids = open_sink(out)
+            sink, _ = open_sink(out)
             done = R.resume(out, a.family, sink, CATALOG)      # calls outside good reads made again
             calls = [x for x in D.plan(a.family) if x["context"] in want]    # the full plan's order
-            guard = R.SpendGuard(a.max_usd, len(calls) + len(logged_ids))
+            # the guard's limits are the folder's totals: what every record logged has cost, and its calls
+            # with those this start has left to make
+            guard = R.SpendGuard(a.max_usd, len(R.logged(out)) + len([x for x in calls if x["id"] not in done]))
             guard.usd, guard.calls = sink.spent, len(R.logged(out))
             R.execute(calls, CLIENT(), sink, guard, done, a.parallel, catalog=CATALOG, link=fc["link"],
                       prepare=D.preparer(sink.records), classify=D.classify)

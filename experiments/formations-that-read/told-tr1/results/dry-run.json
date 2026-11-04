@@ -1187,6 +1187,14 @@
    "refused with": "TR1's code does not run under python3 -O, which would drop its checks; run it as python3 -B (FREEZE-5.md, section 6)"
   }
  ],
+ "parser shapes read as section 3 says": 9,
+ "random answer sets compared": 400,
+ "formations' conditions compared": 92,
+ "a stop that stands at a smoke run, at one unreadable answer in twenty a call": {
+  "a condition (two or more of its four)": 0.014,
+  "on at least one of two deciding pins": 0.0278,
+  "were one to stand (one or more of four)": 0.1855
+ },
  "H killed and made again": {
   "calls before the kill": 250,
   "made again": 151,
@@ -1203,7 +1211,7 @@
   },
   {
    "check": "run asking for K after that smoke run",
-   "result": "google/gemini-4-argon's latest smoke run (google__gemini-4-argon-20261104T123219Z) stopped K, a stop of the run, which a later smoke run that passes lifts (FREEZE-5.md, section 8); no call was made"
+   "result": "google/gemini-4-argon's latest smoke run (google__gemini-4-argon-20261104T130006Z) stopped K, a stop of the run, which a later smoke run that passes lifts (FREEZE-5.md, section 8); no call was made"
   },
   {
    "check": "smoke where the latest smoke run passed every condition",
@@ -1239,11 +1247,11 @@
   },
   {
    "check": "a smoke run of prose answers after T, F and K began",
-   "result": "exit 0; stands {'T': None, 'F': None, 'K': None, 'H': 'google__gemini-4-argon-20261104T123224Z'}"
+   "result": "exit 2; stands {'T': None, 'F': None, 'K': None, 'H': 'google__gemini-4-argon-20261104T130011Z'}"
   },
   {
    "check": "run asking for H after a stop that stands",
-   "result": "google/gemini-4-argon's condition H was stopped by the pin's own answers at its smoke run (google__gemini-4-argon-20261104T123224Z), a stop that stands (FREEZE-5.md, section 8); no call was made"
+   "result": "google/gemini-4-argon's condition H was stopped by the pin's own answers at its smoke run (google__gemini-4-argon-20261104T130011Z), a stop that stands (FREEZE-5.md, section 8); no call was made"
   },
   {
    "check": "smoke where no condition can be released",
@@ -1260,6 +1268,30 @@
   {
    "check": "verdicts while another command holds the lock",
    "result": "another command of qwen/qwen3.8-max-0902 is running, holding qwen__qwen3.8-max-0902.lock: one command of a pin at a time (FREEZE-5.md, section 8); nothing was done"
+  },
+  {
+   "check": "a start of all four killed before any H call",
+   "result": "begun ['F', 'K', 'T']"
+  },
+  {
+   "check": "one unreadable H answer at a smoke run, H not begun",
+   "result": "go on {'T': True, 'F': True, 'K': True, 'H': False}; nothing stands"
+  },
+  {
+   "check": "run after it",
+   "result": "anthropic/claude-sonnet-5.5's latest smoke run (anthropic__claude-sonnet-5.5-20261104T130015Z) stopped H, a stop of the run, which a later smoke run that passes lifts (FREEZE-5.md, section 8); no call was made"
+  },
+  {
+   "check": "every T answer unreadable at a smoke run, T begun",
+   "result": "go on {'T': False, 'F': True, 'K': True, 'H': True}; nothing stands"
+  },
+  {
+   "check": "run asking for T after it",
+   "result": "anthropic/claude-sonnet-5.5's latest smoke run (anthropic__claude-sonnet-5.5-20261104T130017Z) stopped T, a stop of the run, which a later smoke run that passes lifts (FREEZE-5.md, section 8); no call was made"
+  },
+  {
+   "check": "the whole plan after the kill, the mend, the addendum and three smoke runs",
+   "result": "bridge passed; 2620 records, 100 calls made again; H's 630 made in full"
   }
  ],
  "estimate": {
@@ -1315,7 +1347,7 @@
    }
   }
  },
- "seconds": 57.0,
+ "seconds": 60.9,
  "code_hashes": {
   "experiments/formations-that-read/tr1.py": "dd75707c1a44a300e419b4bd0dc7cbff9c83e1a71f874cf8e68d3a42e28ee17f",
   "experiments/formations-that-read/tr1.json": "d74cd24f43d08626fe3ba3d159823884ddc4ec20a873e2bcef0365bbd39d51fe",
@@ -1328,10 +1360,10 @@
   "experiments/formations-that-read/told/run.py": "4e9956caab24c053ba217b2a0a6eaa7e8c6dbbebbf4295bace7446fd632ae3f7",
   "experiments/formations-that-read/told/verdicts.py": "44a89fb5dbe2c2d9fb63736c9dd687c749d79272dbd862d106a6fa8c5a80cdec",
   "experiments/formations-that-read/told/PINS.json": "7feb28b92d1fa286daa6ccec5e874564d7083fe0b1c3fd26bb3d7ff1f3714b86",
-  "experiments/formations-that-read/told-tr1/tr1_design.py": "0659332d289d6bc4ff554fa362e6f7cf919b51ed9642c05c474073333861f00c",
+  "experiments/formations-that-read/told-tr1/tr1_design.py": "60219e117fa1d33ef19c73f44067edc71c7008ad1c2ee920c665a4875c5b66fc",
   "experiments/formations-that-read/told-tr1/tr1_rule.py": "8bd7534212bfe9b19ec4853f0a285bfb593a3e5910e76695cf0ebbf1453c8560",
-  "experiments/formations-that-read/told-tr1/tr1_run.py": "350666f459c9fa5f5bba1e285200ef5a7148308c3929393942a0d85c54028dc2",
-  "experiments/formations-that-read/told-tr1/tr1_dry_run.py": "6b9da4e8edec76975110d48134f1d902a924d15163edf4f4e27377b0dbadf70d",
+  "experiments/formations-that-read/told-tr1/tr1_run.py": "0f23404f8c5838973ed986cb88d47dbdd21fe199edb370c35d1fe39f88143c84",
+  "experiments/formations-that-read/told-tr1/tr1_dry_run.py": "a41bb5184c208d63f22973a7730a95587a738a4bd8471081e787b1cde7d93b84",
   "experiments/formations-that-read/told-tr1/write_frozen.py": "d35ec0077f75e88214f3edb92ecc6fd726e58b98fa1068a6e894e4517ce29ac6"
  },
  "code_unchanged_during_the_run": true,

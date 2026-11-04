@@ -711,6 +711,68 @@ def commands(root):
         with RUN.pin_lock(fam2):
             note("verdicts while another command holds the lock", main("verdicts", "--family", fam2))
         assert "another command" in out[-1]["result"]
+        # a third pin: a start of all four killed in the fresh calls begins no H; the catalog's last read cut and
+        # mended, so calls are made again; after an addendum, one unreadable H answer and a begun T's unreadable
+        # answers each stop only as a stop of the run, lifted by a smoke run that passes; then the whole plan,
+        # H's 630 calls made in full under the folder's spend guard
+        fam3 = PINS[2]
+        behaviour["decide"] = Formation("L.05", fam3)
+        assert main("smoke", "--family", fam3, "--max-usd", "1") == 0
+        killed["n"] = 0
+        RUN.CLIENT = lambda: Killing(behaviour["decide"])
+        try:
+            quiet(RUN.main, ["run", "--family", fam3, "--max-usd", "50"])
+        except KeyboardInterrupt:
+            pass
+        RUN.CLIENT = lambda: Stub(lambda s, m: behaviour["decide"](s, m))
+        out3 = RUN.scored(fam3)
+        assert RUN.begun(fam3) == {"T", "F", "K"}
+        note("a start of all four killed before any H call", f"begun {sorted(RUN.begun(fam3))}")
+        cat = (out3 / "catalog.jsonl").read_bytes()
+        (out3 / "catalog.jsonl").write_bytes(cat[:cat[:-1].rfind(b"\n") + 12])
+        assert main("mend", "--family", fam3, "--cause", "a kill") == 0
+        hashes3 = {**hashes2, "told-tr1/addenda/ADDENDUM-2.md": "2" * 64}
+        fc3 = {**fc2, "link": "addenda/FROZEN-2.sha256", "link_commit": "c2", "hashes": hashes3,
+               "chain": {**fc2["chain"], "addenda/FROZEN-2.sha256": hashes3},
+               "commits": {**fc2["commits"], "addenda/FROZEN-2.sha256": "c2"}}
+        RUN.frozen = lambda repo=None: fc3
+        time.sleep(1.1)
+        first_h = {"n": 0}
+
+        def one_bad(s, m):
+            if s["series"] and not first_h["n"]:
+                first_h["n"] = 1
+                return "invalid"
+            return Formation("L.05", fam3)(s, m)
+        behaviour["decide"] = one_bad
+        main("smoke", "--family", fam3, "--max-usd", "1")
+        last = RUN.smoke_runs(fam3)[-1]
+        assert not last["stands"]["H"] and not last["go_on"]["H"] and last["go_on"]["T"]
+        note("one unreadable H answer at a smoke run, H not begun", f"go on {last['go_on']}; nothing stands")
+        note("run after it", main("run", "--family", fam3, "--max-usd", "50"))
+        assert "stopped H, a stop of the run" in out[-1]["result"]
+        time.sleep(1.1)
+        behaviour["decide"] = lambda s, m: ("invalid" if s["domain"] == "T" and s["none"] and not s["series"]
+                                            else Formation("L.05", fam3)(s, m))
+        main("smoke", "--family", fam3, "--max-usd", "1")
+        last = RUN.smoke_runs(fam3)[-1]
+        assert not last["stands"]["T"] and not last["go_on"]["T"] and last["go_on"]["H"]
+        note("every T answer unreadable at a smoke run, T begun", f"go on {last['go_on']}; nothing stands")
+        note("run asking for T after it", main("run", "--family", fam3, "--conditions", "T", "--max-usd", "50"))
+        assert "stopped T, a stop of the run" in out[-1]["result"]
+        time.sleep(1.1)
+        behaviour["decide"] = Formation("L.05", fam3)
+        assert main("smoke", "--family", fam3, "--max-usd", "1") == 0
+        assert main("run", "--family", fam3, "--conditions", "T,F,K", "--max-usd", "50", "--parallel", "4") == 0
+        assert main("run", "--family", fam3, "--conditions", "H", "--max-usd", "50") == 0
+        assert all(RUN.read_whole(fam3, c) for c in D.CONDITIONS)
+        assert main("verdicts", "--family", fam3) == 0
+        v3 = RUN.read_json(out3 / "verdicts.json")
+        assert v3["reading"]["bridge"] == "passed" and v3["calls_made_again"] > 0
+        assert v3["reads_naming_no_snapshot_put_in_by_mend"]
+        note("the whole plan after the kill, the mend, the addendum and three smoke runs",
+             f"bridge {v3['reading']['bridge']}; {len(R.logged(out3))} records, {v3['calls_made_again']} calls made again; "
+             f"H's 630 made in full")
     finally:
         RUN.ROOT, RUN.CLIENT, RUN.CATALOG, RUN.frozen = saved
     return out
@@ -738,7 +800,12 @@ def main():
                       "smoke calls per pin": len(D.plan(FAM, smoke=True)),
                       "met presentations": sum(D.DESIGN.met), "course order": D.DESIGN.course_order},
            "formations": rows, "rule against Stage 0 (conditions and answer sets compared)": n_rule,
-           "prompts": pr, "refusals": refs, "H killed and made again": h_killed, "commands": cmds,
+           "prompts": pr, "refusals": refs, "parser shapes read as section 3 says": 9,
+           "random answer sets compared": 400, "formations' conditions compared": n_rule - 400,
+           "a stop that stands at a smoke run, at one unreadable answer in twenty a call":
+               {"a condition (two or more of its four)": round(1 - 0.95 ** 4 - 4 * 0.05 * 0.95 ** 3, 4),
+                "on at least one of two deciding pins": round(1 - (0.95 ** 4 + 4 * 0.05 * 0.95 ** 3) ** 2, 4),
+                "were one to stand (one or more of four)": round(1 - 0.95 ** 4, 4)}, "H killed and made again": h_killed, "commands": cmds,
            "estimate": est, "seconds": round(time.time() - T0, 1),
            "code_hashes": start, "code_unchanged_during_the_run": code_hashes() == start, "ok": True}
     OUT.parent.mkdir(exist_ok=True)

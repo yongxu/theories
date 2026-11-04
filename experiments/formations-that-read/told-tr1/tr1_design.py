@@ -43,7 +43,7 @@ import tr1  # noqa: E402  (tr1.py's __main__ guard: importing runs nothing)
 
 # Freeze 1's conditions.py puts the parent folder first again when it is imported, so each module is
 # checked to resolve to its own file, and the order restored once all are imported.
-for _name, _where in [(m, TOLD) for m in ("client", "conditions", "rule", "run", "verdicts")] \
+for _name, _where in [(m, TOLD) for m in ("client", "conditions", "prompts", "rule", "run", "verdicts")] \
         + [(m, HERE.parent) for m in ("tr1", "tr8", "tr_rr")]:
     _file = Path(importlib.import_module(_name).__file__).resolve()
     assert _file == _where / f"{_name}.py", f"{_name} resolves to {_file}, not the file the hashes list"
