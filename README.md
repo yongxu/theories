@@ -12,7 +12,7 @@
 
 **Its ethics** rests on [two unasserted premises](theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order), their warrant open: the continuation condition (from every standpoint, for anything, its continuation into the future has significance) fixes scope, whose losses count, ranking nothing; C (widening what can form is better) gives order. [Thesis T8](theories/becoming/chapters/07-SIGNIFICANCE.md#theses) argues this ethics as life's way, claiming no verdict binding every possible mind.
 
-**Start with** [the one page](theories/becoming/ONE-PAGE.md) (11–14 minutes). [The opening](#truth-exists) is a first-person conviction (21–28 minutes).
+**Start with** [the one page](theories/becoming/ONE-PAGE.md) (11–15 minutes). [The opening](#truth-exists) is a first-person conviction (21–28 minutes).
 
 **Lean receipts** credit 502 of [533 registered results](RESULTS.md), showing each Lean statement follows from its premises, not that they hold. [Empirical theses](theories/becoming/chapters/08-METHOD.md#theses) face tests frozen before scoring: some passed, some failed. No human review yet.
 
