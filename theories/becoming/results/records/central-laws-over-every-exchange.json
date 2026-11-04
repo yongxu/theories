@@ -304,12 +304,12 @@
     {
       "path": "theories/becoming/results/completion/COVERAGE.json",
       "role": "integration",
-      "sha256": "7374867682589a4c810cbeae887a3e9d4b8f318fb18a1ad1ceb96e826de9447f"
+      "sha256": "432883b022026e0cbb495bf382a6256ebe0dcae5a501c8195ed47936ee64cba6"
     },
     {
       "path": "tools/research/completion.py",
       "role": "integration",
-      "sha256": "773e22f6c590f4943fe75930b293c7a8116e00e058bb6dd03a0a0d078da429e7"
+      "sha256": "4be91d44874df21a45ce99231551f441c31751099d29baa6b7837b9b97af1749"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
