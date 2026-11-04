@@ -1,0 +1,711 @@
+@Becoming.Presence.count_succ_of_true : ∀ {p : Nat → Bool} {m : Nat},
+  p m = true → Becoming.Presence.count p (m + 1) = Becoming.Presence.count p m + 1
+@Becoming.Presence.count_succ_of_false : ∀ {p : Nat → Bool} {m : Nat},
+  p m = false → Becoming.Presence.count p (m + 1) = Becoming.Presence.count p m
+Becoming.Presence.count_le_succ : ∀ (p : Nat → Bool) (m : Nat),
+  Becoming.Presence.count p m ≤ Becoming.Presence.count p (m + 1)
+Becoming.Presence.count_le_add : ∀ (p : Nat → Bool) (m k : Nat),
+  Becoming.Presence.count p m ≤ Becoming.Presence.count p (m + k)
+Becoming.Presence.count_mono : ∀ (p : Nat → Bool) {m m' : Nat},
+  m ≤ m' → Becoming.Presence.count p m ≤ Becoming.Presence.count p m'
+Becoming.Presence.count_le : ∀ (p : Nat → Bool) (m : Nat), Becoming.Presence.count p m ≤ m
+@Becoming.Presence.count_lt_of : ∀ {p : Nat → Bool} {x y : Nat},
+  p x = true → x < y → Becoming.Presence.count p x < Becoming.Presence.count p y
+@Becoming.Presence.count_inj : ∀ {p : Nat → Bool} {x y : Nat},
+  p x = true → p y = true → Becoming.Presence.count p x = Becoming.Presence.count p y → x = y
+Becoming.Presence.count_reaches : ∀ (p : Nat → Bool) (m r : Nat),
+  r < Becoming.Presence.count p m → ∃ i, i < m ∧ p i = true ∧ Becoming.Presence.count p i = r
+@Becoming.Presence.not_false_of_true : ∀ {b : Bool}, b = true → (!b) = false
+@Becoming.Presence.bool_absurd : ∀ {b : Bool}, b = true → b = false → False
+Becoming.Presence.count_add_not : ∀ (p : Nat → Bool) (m : Nat),
+  Becoming.Presence.count p m + Becoming.Presence.count (fun x => !p x) m = m
+@Becoming.Presence.front_of_true : ∀ {p : Nat → Bool} {n i : Nat},
+  p i = true → Becoming.Presence.front p n i = Becoming.Presence.count p i
+@Becoming.Presence.front_of_false : ∀ {p : Nat → Bool} {n i : Nat},
+  p i = false → Becoming.Presence.front p n i = Becoming.Presence.count p n + Becoming.Presence.count (fun x => !p x) i
+@Becoming.Presence.front_lt : ∀ {p : Nat → Bool} {n i : Nat}, i < n → Becoming.Presence.front p n i < n
+@Becoming.Presence.front_true_lt_false : ∀ {p : Nat → Bool} {n x y : Nat},
+  p x = true → p y = false → x < n → Becoming.Presence.front p n x < Becoming.Presence.front p n y
+@Becoming.Presence.front_lt_count_iff : ∀ {p : Nat → Bool} {n x : Nat},
+  x < n → (Becoming.Presence.front p n x < Becoming.Presence.count p n ↔ p x = true)
+@Becoming.Presence.front_inj : ∀ {p : Nat → Bool} {n i j : Nat},
+  i < n → j < n → Becoming.Presence.front p n i = Becoming.Presence.front p n j → i = j
+@Becoming.Presence.front_onto : ∀ {p : Nat → Bool} {n r : Nat}, r < n → ∃ i, i < n ∧ Becoming.Presence.front p n i = r
+@Becoming.Presence.lt_zero_add : ∀ {i n : Nat}, i < n → i < 0 + n
+@Becoming.Presence.of_lt_zero_add : ∀ {i n : Nat}, i < 0 + n → i < n
+@Becoming.Presence.front_reindexes : ∀ {p : Nat → Bool} {n : Nat},
+  Becoming.Reindexes 0 n (Becoming.Presence.front p n) (Becoming.Presence.back p n)
+@Becoming.Presence.front_keeps : ∀ {p : Nat → Bool} {n : Nat} {J : Nat → Nat → Prop},
+  (∀ {x y : Nat}, J x y → p y = true → p x = true) → Becoming.KeepsOrder J 0 n (Becoming.Presence.front p n)
+@Becoming.Presence.NaturalLabelling.at : ∀ {c : Becoming.CausalGrowth.Causet} {π σ : Nat → Nat},
+  Becoming.Presence.NaturalLabelling c π σ → ∀ {i : Nat}, i < c.size → π i < c.size ∧ σ (π i) = i
+@Becoming.Presence.NaturalLabelling.back : ∀ {c : Becoming.CausalGrowth.Causet} {π σ : Nat → Nat},
+  Becoming.Presence.NaturalLabelling c π σ → ∀ {j : Nat}, j < c.size → σ j < c.size ∧ π (σ j) = j
+@Becoming.Presence.NaturalLabelling.before : ∀ {c : Becoming.CausalGrowth.Causet} {π σ : Nat → Nat},
+  c.Ordered → Becoming.Presence.NaturalLabelling c π σ → ∀ {i j : Nat}, c.prec i j → π i < π j
+Becoming.Presence.natural_identity : ∀ (c : Becoming.CausalGrowth.Causet),
+  Becoming.Presence.NaturalLabelling c (fun i => i) fun i => i
+@Becoming.Presence.relabel_ordered : ∀ {c : Becoming.CausalGrowth.Causet} {π σ : Nat → Nat},
+  c.Ordered → Becoming.Presence.NaturalLabelling c π σ → (Becoming.Presence.relabel c σ).Ordered
+@Becoming.Presence.natural_relabels : ∀ {c : Becoming.CausalGrowth.Causet} {π σ : Nat → Nat},
+  Becoming.Presence.NaturalLabelling c π σ → Becoming.CausalGrowth.Kinds.Relabels c (Becoming.Presence.relabel c σ) π σ
+@Becoming.Presence.natural_of_relabels : ∀ {c : Becoming.CausalGrowth.Causet} {π σ : Nat → Nat}
+  {c' : Becoming.CausalGrowth.Causet},
+  c'.Ordered →
+    c'.size = c.size → Becoming.CausalGrowth.Kinds.Relabels c c' π σ → Becoming.Presence.NaturalLabelling c π σ
+@Becoming.Presence.pastIn_stem : ∀ {c : Becoming.CausalGrowth.Causet},
+  c.Ordered →
+    ∀ (t : Nat),
+      Becoming.CausalGrowth.Stem (Becoming.CausalGrowth.grown (Becoming.Presence.pastIn c) t)
+        (Becoming.Presence.pastIn c t)
+@Becoming.Presence.courseOf_grows : ∀ {c : Becoming.CausalGrowth.Causet} (ordered : c.Ordered),
+  (Becoming.Presence.courseOf c ordered).state 0 = Becoming.CausalGrowth.empty ∧
+    ((Becoming.Presence.courseOf c ordered).state c.size).size = c.size ∧
+      ∀ (i j : Nat), ((Becoming.Presence.courseOf c ordered).state c.size).prec i j ↔ c.prec i j
+@Becoming.Presence.courseOf_isomorphic : ∀ {c : Becoming.CausalGrowth.Causet} (ordered : c.Ordered),
+  Becoming.CausalGrowth.Kinds.Isomorphic c ((Becoming.Presence.courseOf c ordered).state c.size)
+@Becoming.Presence.natural_iff_course : ∀ {c : Becoming.CausalGrowth.Causet} {π σ : Nat → Nat},
+  c.Ordered →
+    (Becoming.Presence.NaturalLabelling c π σ ↔
+      ∃ r, r.state 0 = Becoming.CausalGrowth.empty ∧ Becoming.CausalGrowth.Kinds.Relabels c (r.state c.size) π σ)
+@Becoming.Presence.natural_congr : ∀ {c c' : Becoming.CausalGrowth.Causet},
+  c'.size = c.size →
+    (∀ (a b : Nat), c.prec a b ↔ c'.prec a b) →
+      ∀ {π σ : Nat → Nat}, Becoming.Presence.NaturalLabelling c π σ → Becoming.Presence.NaturalLabelling c' π σ
+@Becoming.Presence.every_congr : ∀ {c c' : Becoming.CausalGrowth.Causet},
+  c'.size = c.size →
+    (∀ (a b : Nat), c.prec a b ↔ c'.prec a b) →
+      ∀ (Φ : (Nat → Nat) → Prop),
+        (∀ (π σ : Nat → Nat), Becoming.Presence.NaturalLabelling c π σ → Φ π) ↔
+          ∀ (π σ : Nat → Nat), Becoming.Presence.NaturalLabelling c' π σ → Φ π
+@Becoming.Presence.some_congr : ∀ {c c' : Becoming.CausalGrowth.Causet},
+  c'.size = c.size →
+    (∀ (a b : Nat), c.prec a b ↔ c'.prec a b) →
+      ∀ (Φ : (Nat → Nat) → Prop),
+        (∃ π σ, Becoming.Presence.NaturalLabelling c π σ ∧ Φ π) ↔ ∃ π σ, Becoming.Presence.NaturalLabelling c' π σ ∧ Φ π
+@Becoming.Presence.comparable_symm : ∀ {c : Becoming.CausalGrowth.Causet} (a b : Nat),
+  Becoming.Presence.Comparable c a b → Becoming.Presence.Comparable c b a
+@Becoming.Presence.natural_orients : ∀ {c : Becoming.CausalGrowth.Causet},
+  c.Ordered →
+    ∀ {π σ π' σ' : Nat → Nat},
+      Becoming.Presence.NaturalLabelling c π σ →
+        Becoming.Presence.NaturalLabelling c π' σ' → Becoming.Orients (Becoming.Presence.Comparable c) 0 c.size π π'
+@Becoming.Presence.rearranges_iff_natural : ∀ {c : Becoming.CausalGrowth.Causet},
+  c.Ordered →
+    ∀ {π σ π' σ' : Nat → Nat},
+      Becoming.Presence.NaturalLabelling c π σ →
+        Becoming.Reindexes 0 c.size π' σ' →
+          (Becoming.Rearranges (Becoming.Presence.Comparable c) 0 c.size π σ π' ↔
+            Becoming.Presence.NaturalLabelling c π' σ')
+@Becoming.Presence.front_natural : ∀ {c : Becoming.CausalGrowth.Causet} {p : Nat → Bool},
+  (∀ {x y : Nat}, c.prec x y → p y = true → p x = true) →
+    Becoming.Presence.NaturalLabelling c (Becoming.Presence.front p c.size) (Becoming.Presence.back p c.size)
+@Becoming.Presence.born_closed : ∀ {c : Becoming.CausalGrowth.Causet},
+  c.Ordered →
+    ∀ {π σ : Nat → Nat}, Becoming.Presence.NaturalLabelling c π σ → ∀ {x y t : Nat}, c.prec x y → π y < t → π x < t
+@Becoming.Presence.born_stem : ∀ {c : Becoming.CausalGrowth.Causet},
+  c.Ordered →
+    ∀ {π σ : Nat → Nat},
+      Becoming.Presence.NaturalLabelling c π σ → ∀ (t : Nat), Becoming.CausalGrowth.Stem c fun x => x < c.size ∧ π x < t
+@Becoming.Presence.stem_born_first : ∀ {c : Becoming.CausalGrowth.Causet} {D : Nat → Prop}
+  [inst : (x : Nat) → Decidable (D x)],
+  Becoming.CausalGrowth.Stem c D →
+    Becoming.Presence.NaturalLabelling c (Becoming.Presence.front (fun x => decide (D x)) c.size)
+        (Becoming.Presence.back (fun x => decide (D x)) c.size) ∧
+      ∀ (x : Nat),
+        x < c.size →
+          (Becoming.Presence.front (fun x => decide (D x)) c.size x <
+              Becoming.Presence.count (fun x => decide (D x)) c.size ↔
+            D x)
+@Becoming.Presence.beq_false_of_ne : ∀ {a b : Nat}, a ≠ b → a.beq b = false
+@Becoming.Presence.table_yes : ∀ {Q : Nat → Prop} {n : Nat} {f : Nat → Bool},
+  Becoming.Presence.Tabulates f Q n → Q n → Becoming.Presence.Tabulates (fun x => x.beq n || f x) Q (n + 1)
+@Becoming.Presence.table_no : ∀ {Q : Nat → Prop} {n : Nat} {f : Nat → Bool},
+  Becoming.Presence.Tabulates f Q n → ¬Q n → Becoming.Presence.Tabulates (fun x => !x.beq n && f x) Q (n + 1)
+Becoming.Presence.table_not_not : ∀ (Q : Nat → Prop) (n : Nat), ¬¬∃ f, Becoming.Presence.Tabulates f Q n
+@Becoming.Presence.table_of : ∀ {Q : Nat → Prop},
+  (∀ (x : Nat), Becoming.Decided (Q x)) → ∀ (n : Nat), ∃ f, Becoming.Presence.Tabulates f Q n
+@Becoming.Presence.natural_of_table : ∀ {c : Becoming.CausalGrowth.Causet},
+  c.Ordered →
+    ∀ {Q : Nat → Prop} {f : Nat → Bool},
+      Becoming.Presence.Tabulates f Q c.size →
+        (∀ {x y : Nat}, c.prec x y → Q y → Q x) →
+          Becoming.Presence.NaturalLabelling c (Becoming.Presence.front f c.size) (Becoming.Presence.back f c.size)
+@Becoming.Presence.table_false : ∀ {b : Bool} {P : Prop}, (b = true ↔ P) → ¬P → b = false
+@Becoming.Presence.down_closed : ∀ {c : Becoming.CausalGrowth.Causet},
+  c.Ordered → ∀ (j : Nat) {x y : Nat}, c.prec x y → c.prec y j ∨ y = j → c.prec x j ∨ x = j
+Becoming.Presence.decided_true : ∀ (b : Bool), Becoming.Decided (b = true)
+@Becoming.Presence.weakly_exists_below : ∀ {P : Nat → Prop} {U : Nat},
+  (∀ (t : Nat), t < U → Becoming.WeaklyDecided (P t)) → Becoming.WeaklyDecided (∃ t, t < U ∧ P t)
+@Becoming.Presence.downTo_closed : ∀ {c : Becoming.CausalGrowth.Causet} [inst : (a b : Nat) → Decidable (c.prec a b)],
+  c.Ordered →
+    ∀ (j : Nat) {x y : Nat}, c.prec x y → Becoming.Presence.downTo c j y = true → Becoming.Presence.downTo c j x = true
+@Becoming.Presence.downTo_self : ∀ {c : Becoming.CausalGrowth.Causet} [inst : (a b : Nat) → Decidable (c.prec a b)]
+  (j : Nat), Becoming.Presence.downTo c j j = true
+@Becoming.Presence.downTo_other : ∀ {c : Becoming.CausalGrowth.Causet} [inst : (a b : Nat) → Decidable (c.prec a b)]
+  {j x : Nat}, ¬c.prec x j → x ≠ j → Becoming.Presence.downTo c j x = false
+@Becoming.Presence.downTo_before : ∀ {c : Becoming.CausalGrowth.Causet} [inst : (a b : Nat) → Decidable (c.prec a b)],
+  c.Ordered →
+    ∀ {j x : Nat},
+      j < c.size →
+        ¬c.prec x j →
+          x ≠ j →
+            Becoming.Presence.NaturalLabelling c (Becoming.Presence.front (Becoming.Presence.downTo c j) c.size)
+                (Becoming.Presence.back (Becoming.Presence.downTo c j) c.size) ∧
+              Becoming.Presence.front (Becoming.Presence.downTo c j) c.size j <
+                Becoming.Presence.front (Becoming.Presence.downTo c j) c.size x
+@Becoming.Presence.prec_iff_every : ∀ {c : Becoming.CausalGrowth.Causet} [(a b : Nat) → Decidable (c.prec a b)],
+  c.Ordered →
+    ∀ {i j : Nat}, j < c.size → (c.prec i j ↔ ∀ (π σ : Nat → Nat), Becoming.Presence.NaturalLabelling c π σ → π i < π j)
+@Becoming.Presence.past_every_iff : ∀ {c : Becoming.CausalGrowth.Causet} [(a b : Nat) → Decidable (c.prec a b)],
+  c.Ordered →
+    ∀ {x y : Nat},
+      x < c.size →
+        y < c.size → ((∀ (π σ : Nat → Nat), Becoming.Presence.NaturalLabelling c π σ → π y ≤ π x) ↔ y = x ∨ c.prec y x)
+@Becoming.Presence.past_largest : ∀ {c : Becoming.CausalGrowth.Causet} [(a b : Nat) → Decidable (c.prec a b)],
+  c.Ordered →
+    ∀ (R : Nat → Nat → Prop),
+      (∀ (x y : Nat), R x y → ∀ (π σ : Nat → Nat), Becoming.Presence.NaturalLabelling c π σ → π y ≤ π x) →
+        ∀ {x y : Nat}, x < c.size → y < c.size → R x y → y = x ∨ c.prec y x
+@Becoming.Presence.every_not_not : ∀ {c : Becoming.CausalGrowth.Causet},
+  c.Ordered →
+    ∀ {i j : Nat},
+      i < c.size →
+        j < c.size → (∀ (π σ : Nat → Nat), Becoming.Presence.NaturalLabelling c π σ → π i < π j) → ¬¬c.prec i j
+@Becoming.Presence.every_iff_not_not : ∀ {c : Becoming.CausalGrowth.Causet},
+  c.Ordered →
+    ∀ {i j : Nat},
+      i < c.size →
+        j < c.size → ((∀ (π σ : Nat → Nat), Becoming.Presence.NaturalLabelling c π σ → π i < π j) ↔ ¬¬c.prec i j)
+@Becoming.Presence.before_of_weakly : ∀ {c : Becoming.CausalGrowth.Causet},
+  (∀ (a b : Nat), Becoming.WeaklyDecided (c.prec a b)) →
+    c.Ordered →
+      ∀ {x y : Nat},
+        x < c.size → y < c.size → x ≠ y → ¬c.prec y x → ∃ π σ, Becoming.Presence.NaturalLabelling c π σ ∧ π x < π y
+@Becoming.Presence.before_some_iff : ∀ {c : Becoming.CausalGrowth.Causet},
+  (∀ (a b : Nat), Becoming.WeaklyDecided (c.prec a b)) →
+    c.Ordered →
+      ∀ {i j : Nat},
+        i < c.size → j < c.size → ((∃ π σ, Becoming.Presence.NaturalLabelling c π σ ∧ π i < π j) ↔ i ≠ j ∧ ¬c.prec j i)
+@Becoming.Presence.either_order : ∀ {c : Becoming.CausalGrowth.Causet},
+  (∀ (a b : Nat), Becoming.WeaklyDecided (c.prec a b)) →
+    c.Ordered →
+      ∀ {x y : Nat},
+        x < c.size →
+          y < c.size →
+            ¬c.prec x y →
+              ¬c.prec y x →
+                x ≠ y →
+                  (∃ π σ, Becoming.Presence.NaturalLabelling c π σ ∧ π x < π y) ∧
+                    ∃ π σ, Becoming.Presence.NaturalLabelling c π σ ∧ π y < π x
+Becoming.Presence.pairIf_ordered : ∀ (P : Prop), (Becoming.Presence.pairIf P).Ordered
+Becoming.Presence.every_needs_decision : (∀ (c : Becoming.CausalGrowth.Causet),
+    c.Ordered →
+      ∀ (i j : Nat),
+        i < c.size →
+          j < c.size → (∀ (π σ : Nat → Nat), Becoming.Presence.NaturalLabelling c π σ → π i < π j) → c.prec i j) →
+  ∀ (P : Prop), ¬¬P → P
+Becoming.Presence.every_iff_em : (∀ (c : Becoming.CausalGrowth.Causet),
+    c.Ordered →
+      ∀ (i j : Nat),
+        i < c.size →
+          j < c.size → (∀ (π σ : Nat → Nat), Becoming.Presence.NaturalLabelling c π σ → π i < π j) → c.prec i j) ↔
+  ∀ (p : Prop), Becoming.Decided p
+Becoming.Presence.past_every_needs_decision : (∀ (c : Becoming.CausalGrowth.Causet),
+    c.Ordered →
+      ∀ (x y : Nat),
+        x < c.size →
+          y < c.size →
+            (∀ (π σ : Nat → Nat), Becoming.Presence.NaturalLabelling c π σ → π y ≤ π x) → y = x ∨ c.prec y x) →
+  ∀ (p : Prop), Becoming.Decided p
+Becoming.Presence.past_every_iff_em : (∀ (c : Becoming.CausalGrowth.Causet),
+    c.Ordered →
+      ∀ (x y : Nat),
+        x < c.size →
+          y < c.size →
+            (∀ (π σ : Nat → Nat), Becoming.Presence.NaturalLabelling c π σ → π y ≤ π x) → y = x ∨ c.prec y x) ↔
+  ∀ (p : Prop), Becoming.Decided p
+Becoming.Presence.weakly_of_deMorgan : (∀ (p q : Prop), ¬(p ∧ q) → ¬p ∨ ¬q) → ∀ (p : Prop), Becoming.WeaklyDecided p
+Becoming.Presence.middleIf_ordered : ∀ (p q : Prop), (Becoming.Presence.middleIf p q).Ordered
+Becoming.Presence.middleIf_not_two_zero : ∀ (p q : Prop), ¬(Becoming.Presence.middleIf p q).prec 2 0
+@Becoming.Presence.middleIf_not_zero_two : ∀ {p q : Prop}, ¬(p ∧ q) → ¬(Becoming.Presence.middleIf p q).prec 0 2
+Becoming.Presence.either_order_deMorgan : (∀ (c : Becoming.CausalGrowth.Causet),
+    c.Ordered →
+      ∀ (x y : Nat),
+        x < c.size →
+          y < c.size →
+            ¬c.prec x y →
+              ¬c.prec y x →
+                x ≠ y →
+                  (∃ π σ, Becoming.Presence.NaturalLabelling c π σ ∧ π x < π y) ∧
+                    ∃ π σ, Becoming.Presence.NaturalLabelling c π σ ∧ π y < π x) →
+  ∀ (p q : Prop), ¬(p ∧ q) → ¬p ∨ ¬q
+Becoming.Presence.either_order_iff_weakly : (∀ (c : Becoming.CausalGrowth.Causet),
+    c.Ordered →
+      ∀ (x y : Nat),
+        x < c.size →
+          y < c.size →
+            ¬c.prec x y →
+              ¬c.prec y x →
+                x ≠ y →
+                  (∃ π σ, Becoming.Presence.NaturalLabelling c π σ ∧ π x < π y) ∧
+                    ∃ π σ, Becoming.Presence.NaturalLabelling c π σ ∧ π y < π x) ↔
+  ∀ (p : Prop), Becoming.WeaklyDecided p
+Becoming.Presence.before_some_iff_weakly : (∀ (c : Becoming.CausalGrowth.Causet),
+    c.Ordered →
+      ∀ (i j : Nat),
+        i < c.size → j < c.size → i ≠ j → ¬c.prec j i → ∃ π σ, Becoming.Presence.NaturalLabelling c π σ ∧ π i < π j) ↔
+  ∀ (p : Prop), Becoming.WeaklyDecided p
+Becoming.Presence.maximalBorn_iff_ends : ∀ (c : Becoming.CausalGrowth.Causet) (π : Nat → Nat) (t x : Nat),
+  Becoming.Presence.MaximalBorn c π t x ↔
+    x < c.size ∧ π x < t ∧ Becoming.«亡» (Becoming.Presence.bornBy c π t) Becoming.«一» x
+@Becoming.Presence.maximalBorn_unrelated : ∀ {c : Becoming.CausalGrowth.Causet} {π : Nat → Nat} {t x y : Nat},
+  Becoming.Presence.MaximalBorn c π t x → Becoming.Presence.MaximalBorn c π t y → ¬c.prec x y
+@Becoming.Presence.maximalBorn_front : ∀ {c : Becoming.CausalGrowth.Causet},
+  c.Ordered →
+    ∀ (d : Nat → Bool) {x : Nat},
+      Becoming.Presence.MaximalBorn c (Becoming.Presence.front d c.size) (Becoming.Presence.count d c.size) x ↔
+        x < c.size ∧ d x = true ∧ ∀ (k : Nat), c.prec x k → d k = false
+@Becoming.Presence.weakly_above : ∀ {c : Becoming.CausalGrowth.Causet},
+  (∀ (a b : Nat), Becoming.WeaklyDecided (c.prec a b)) →
+    ∀ (q : Nat → Bool),
+      (∀ {x : Nat}, q x = true → x < c.size) →
+        ∀ (z : Nat), Becoming.WeaklyDecided (∃ y, q y = true ∧ (z = y ∨ c.prec z y))
+@Becoming.Presence.antichain_present : ∀ {c : Becoming.CausalGrowth.Causet},
+  (∀ (a b : Nat), Becoming.WeaklyDecided (c.prec a b)) →
+    c.Ordered →
+      ∀ (q : Nat → Bool),
+        (∀ {x : Nat}, q x = true → x < c.size) →
+          (∀ {x y : Nat}, q x = true → q y = true → ¬c.prec x y) →
+            ∃ π σ t,
+              Becoming.Presence.NaturalLabelling c π σ ∧ ∀ (x : Nat), Becoming.Presence.MaximalBorn c π t x ↔ q x = true
+@Becoming.Presence.together_some_iff : ∀ {c : Becoming.CausalGrowth.Causet},
+  (∀ (a b : Nat), Becoming.WeaklyDecided (c.prec a b)) →
+    c.Ordered →
+      ∀ {x y : Nat},
+        (∃ π σ t,
+            Becoming.Presence.NaturalLabelling c π σ ∧
+              Becoming.Presence.MaximalBorn c π t x ∧ Becoming.Presence.MaximalBorn c π t y) ↔
+          x < c.size ∧ y < c.size ∧ ¬c.prec x y ∧ ¬c.prec y x
+@Becoming.Presence.future_of_together_every : ∀ {c : Becoming.CausalGrowth.Causet}
+  [(a b : Nat) → Decidable (c.prec a b)],
+  c.Ordered →
+    ∀ {x y : Nat},
+      (∀ (π σ : Nat → Nat),
+          Becoming.Presence.NaturalLabelling c π σ →
+            ∃ t, Becoming.Presence.MaximalBorn c π t x ∧ Becoming.Presence.MaximalBorn c π t y) →
+        ∀ {k : Nat}, c.prec x k → c.prec y k
+@Becoming.Presence.together_every_iff : ∀ {c : Becoming.CausalGrowth.Causet} [(a b : Nat) → Decidable (c.prec a b)],
+  c.Ordered →
+    ∀ {x y : Nat},
+      x < c.size →
+        y < c.size →
+          ((∀ (π σ : Nat → Nat),
+              Becoming.Presence.NaturalLabelling c π σ →
+                ∃ t, Becoming.Presence.MaximalBorn c π t x ∧ Becoming.Presence.MaximalBorn c π t y) ↔
+            ∀ (k : Nat), c.prec x k ↔ c.prec y k)
+@Becoming.Presence.together_not_not : ∀ {c : Becoming.CausalGrowth.Causet},
+  c.Ordered →
+    ∀ {x y : Nat},
+      (∀ (π σ : Nat → Nat),
+          Becoming.Presence.NaturalLabelling c π σ →
+            ∃ t, Becoming.Presence.MaximalBorn c π t x ∧ Becoming.Presence.MaximalBorn c π t y) →
+        ∀ {k : Nat}, c.prec x k → ¬¬c.prec y k
+@Becoming.Presence.together_every_iff_not_not : ∀ {c : Becoming.CausalGrowth.Causet},
+  c.Ordered →
+    ∀ {x y : Nat},
+      x < c.size →
+        y < c.size →
+          ((∀ (π σ : Nat → Nat),
+              Becoming.Presence.NaturalLabelling c π σ →
+                ∃ t, Becoming.Presence.MaximalBorn c π t x ∧ Becoming.Presence.MaximalBorn c π t y) ↔
+            ∀ (k : Nat), (c.prec x k → ¬¬c.prec y k) ∧ (c.prec y k → ¬¬c.prec x k))
+Becoming.Presence.apartIf_ordered : ∀ (p : Prop), (Becoming.Presence.apartIf p).Ordered
+Becoming.Presence.together_every_needs_decision : (∀ (c : Becoming.CausalGrowth.Causet),
+    c.Ordered →
+      ∀ (x y : Nat),
+        x < c.size →
+          y < c.size →
+            (∀ (π σ : Nat → Nat),
+                Becoming.Presence.NaturalLabelling c π σ →
+                  ∃ t, Becoming.Presence.MaximalBorn c π t x ∧ Becoming.Presence.MaximalBorn c π t y) →
+              ∀ (k : Nat), c.prec x k → c.prec y k) →
+  ∀ (p : Prop), ¬¬p → p
+Becoming.Presence.together_every_iff_em : (∀ (c : Becoming.CausalGrowth.Causet),
+    c.Ordered →
+      ∀ (x y : Nat),
+        x < c.size →
+          y < c.size →
+            (∀ (π σ : Nat → Nat),
+                Becoming.Presence.NaturalLabelling c π σ →
+                  ∃ t, Becoming.Presence.MaximalBorn c π t x ∧ Becoming.Presence.MaximalBorn c π t y) →
+              ∀ (k : Nat), c.prec x k → c.prec y k) ↔
+  ∀ (p : Prop), Becoming.Decided p
+Becoming.Presence.together_some_deMorgan : (∀ (c : Becoming.CausalGrowth.Causet),
+    c.Ordered →
+      ∀ (x y : Nat),
+        x < c.size →
+          y < c.size →
+            ¬c.prec x y →
+              ¬c.prec y x →
+                ∃ π σ t,
+                  Becoming.Presence.NaturalLabelling c π σ ∧
+                    Becoming.Presence.MaximalBorn c π t x ∧ Becoming.Presence.MaximalBorn c π t y) →
+  ∀ (p q : Prop), ¬(p ∧ q) → ¬p ∨ ¬q
+Becoming.Presence.together_some_iff_weakly : (∀ (c : Becoming.CausalGrowth.Causet),
+    c.Ordered →
+      ∀ (x y : Nat),
+        x < c.size →
+          y < c.size →
+            ¬c.prec x y →
+              ¬c.prec y x →
+                ∃ π σ t,
+                  Becoming.Presence.NaturalLabelling c π σ ∧
+                    Becoming.Presence.MaximalBorn c π t x ∧ Becoming.Presence.MaximalBorn c π t y) ↔
+  ∀ (p : Prop), Becoming.WeaklyDecided p
+Becoming.Presence.together_of_antichain : (∀ (c : Becoming.CausalGrowth.Causet),
+    c.Ordered →
+      ∀ (q : Nat → Bool),
+        (∀ {x : Nat}, q x = true → x < c.size) →
+          (∀ {x y : Nat}, q x = true → q y = true → ¬c.prec x y) →
+            ∃ π σ t,
+              Becoming.Presence.NaturalLabelling c π σ ∧
+                ∀ (x : Nat), Becoming.Presence.MaximalBorn c π t x ↔ q x = true) →
+  ∀ {c : Becoming.CausalGrowth.Causet},
+    c.Ordered →
+      ∀ {x y : Nat},
+        x < c.size →
+          y < c.size →
+            ¬c.prec x y →
+              ¬c.prec y x →
+                ∃ π σ t,
+                  Becoming.Presence.NaturalLabelling c π σ ∧
+                    Becoming.Presence.MaximalBorn c π t x ∧ Becoming.Presence.MaximalBorn c π t y
+Becoming.Presence.antichain_present_iff_weakly : (∀ (c : Becoming.CausalGrowth.Causet),
+    c.Ordered →
+      ∀ (q : Nat → Bool),
+        (∀ {x : Nat}, q x = true → x < c.size) →
+          (∀ {x y : Nat}, q x = true → q y = true → ¬c.prec x y) →
+            ∃ π σ t,
+              Becoming.Presence.NaturalLabelling c π σ ∧
+                ∀ (x : Nat), Becoming.Presence.MaximalBorn c π t x ↔ q x = true) ↔
+  ∀ (p : Prop), Becoming.WeaklyDecided p
+@Becoming.Presence.link_of_least : ∀ {c : Becoming.CausalGrowth.Causet},
+  c.Ordered → ∀ {i j : Nat}, Becoming.Presence.LeastAbove c i j → Becoming.CausalGrowth.links c.prec i j
+@Becoming.Presence.present_iff_maximalBorn : ∀ {c : Becoming.CausalGrowth.Causet},
+  c.Ordered →
+    ∀ {π σ : Nat → Nat},
+      Becoming.Presence.NaturalLabelling c π σ →
+        ∀ {i j : Nat}, Becoming.Presence.PresentAt c π i j ↔ c.prec i j ∧ Becoming.Presence.MaximalBorn c π (π j) i
+@Becoming.Presence.link_of_present : ∀ {c : Becoming.CausalGrowth.Causet},
+  c.Ordered →
+    ∀ {π σ : Nat → Nat},
+      Becoming.Presence.NaturalLabelling c π σ →
+        ∀ {i j : Nat}, Becoming.Presence.PresentAt c π i j → Becoming.CausalGrowth.links c.prec i j
+@Becoming.Presence.present_some_iff_link : ∀ {c : Becoming.CausalGrowth.Causet},
+  (∀ (a b : Nat), Becoming.WeaklyDecided (c.prec a b)) →
+    c.Ordered →
+      ∀ {i j : Nat},
+        j < c.size →
+          ((∃ π σ, Becoming.Presence.NaturalLabelling c π σ ∧ Becoming.Presence.PresentAt c π i j) ↔
+            Becoming.CausalGrowth.links c.prec i j)
+@Becoming.Presence.present_every_iff : ∀ {c : Becoming.CausalGrowth.Causet} [(a b : Nat) → Decidable (c.prec a b)],
+  c.Ordered →
+    ∀ {i j : Nat},
+      (∀ (π σ : Nat → Nat), Becoming.Presence.NaturalLabelling c π σ → Becoming.Presence.PresentAt c π i j) ↔
+        Becoming.Presence.LeastAbove c i j
+@Becoming.Presence.least_iff_only_link : ∀ {c : Becoming.CausalGrowth.Causet} [(a b : Nat) → Decidable (c.prec a b)],
+  c.Ordered →
+    ∀ {i j : Nat},
+      Becoming.Presence.LeastAbove c i j ↔
+        Becoming.CausalGrowth.links c.prec i j ∧ ∀ (k : Nat), Becoming.CausalGrowth.links c.prec i k → k = j
+@Becoming.Presence.above_of_only_not_not : ∀ {c : Becoming.CausalGrowth.Causet},
+  c.Ordered →
+    ∀ {i j : Nat},
+      (∀ (k : Nat), Becoming.CausalGrowth.links c.prec i k → k = j) →
+        ∀ (n k : Nat), k < n → c.prec i k → ¬¬(k = j ∨ c.prec j k)
+@Becoming.Presence.present_every_of_only_link : ∀ {c : Becoming.CausalGrowth.Causet},
+  c.Ordered →
+    ∀ {i j : Nat},
+      Becoming.CausalGrowth.links c.prec i j →
+        (∀ (k : Nat), Becoming.CausalGrowth.links c.prec i k → k = j) →
+          ∀ (π σ : Nat → Nat), Becoming.Presence.NaturalLabelling c π σ → Becoming.Presence.PresentAt c π i j
+@Becoming.Presence.only_link_of_present_every : ∀ {c : Becoming.CausalGrowth.Causet},
+  c.Ordered →
+    ∀ {i j : Nat},
+      (∀ (π σ : Nat → Nat), Becoming.Presence.NaturalLabelling c π σ → Becoming.Presence.PresentAt c π i j) →
+        Becoming.CausalGrowth.links c.prec i j ∧ ∀ (k : Nat), Becoming.CausalGrowth.links c.prec i k → k = j
+@Becoming.Presence.present_every_iff_only_link : ∀ {c : Becoming.CausalGrowth.Causet},
+  c.Ordered →
+    ∀ {i j : Nat},
+      (∀ (π σ : Nat → Nat), Becoming.Presence.NaturalLabelling c π σ → Becoming.Presence.PresentAt c π i j) ↔
+        Becoming.CausalGrowth.links c.prec i j ∧ ∀ (k : Nat), Becoming.CausalGrowth.links c.prec i k → k = j
+@Becoming.Presence.above_of_every_not_not : ∀ {c : Becoming.CausalGrowth.Causet},
+  c.Ordered →
+    ∀ {i j : Nat},
+      (∀ (π σ : Nat → Nat), Becoming.Presence.NaturalLabelling c π σ → Becoming.Presence.PresentAt c π i j) →
+        ∀ {k : Nat}, c.prec i k → ¬¬(k = j ∨ c.prec j k)
+Becoming.Presence.leastIf_ordered : ∀ (P : Prop), (Becoming.Presence.leastIf P).Ordered
+Becoming.Presence.present_every_needs_decision : (∀ (c : Becoming.CausalGrowth.Causet),
+    c.Ordered →
+      ∀ (i j : Nat),
+        (∀ (π σ : Nat → Nat), Becoming.Presence.NaturalLabelling c π σ → Becoming.Presence.PresentAt c π i j) →
+          Becoming.Presence.LeastAbove c i j) →
+  ∀ (P : Prop), ¬¬P → P
+Becoming.Presence.present_least_iff_em : (∀ (c : Becoming.CausalGrowth.Causet),
+    c.Ordered →
+      ∀ (i j : Nat),
+        (∀ (π σ : Nat → Nat), Becoming.Presence.NaturalLabelling c π σ → Becoming.Presence.PresentAt c π i j) →
+          Becoming.Presence.LeastAbove c i j) ↔
+  ∀ (p : Prop), Becoming.Decided p
+Becoming.Presence.only_link_least_iff_em : (∀ (c : Becoming.CausalGrowth.Causet),
+    c.Ordered →
+      ∀ (i j : Nat),
+        Becoming.CausalGrowth.links c.prec i j →
+          (∀ (k : Nat), Becoming.CausalGrowth.links c.prec i k → k = j) → Becoming.Presence.LeastAbove c i j) ↔
+  ∀ (p : Prop), Becoming.Decided p
+Becoming.Presence.linkIf_ordered : ∀ (p q : Prop), (Becoming.Presence.linkIf p q).Ordered
+Becoming.Presence.present_some_deMorgan : (∀ (c : Becoming.CausalGrowth.Causet),
+    c.Ordered →
+      ∀ (i j : Nat),
+        j < c.size →
+          Becoming.CausalGrowth.links c.prec i j →
+            ∃ π σ, Becoming.Presence.NaturalLabelling c π σ ∧ Becoming.Presence.PresentAt c π i j) →
+  ∀ (p q : Prop), ¬(p ∧ q) → ¬p ∨ ¬q
+Becoming.Presence.present_some_iff_weakly : (∀ (c : Becoming.CausalGrowth.Causet),
+    c.Ordered →
+      ∀ (i j : Nat),
+        j < c.size →
+          Becoming.CausalGrowth.links c.prec i j →
+            ∃ π σ, Becoming.Presence.NaturalLabelling c π σ ∧ Becoming.Presence.PresentAt c π i j) ↔
+  ∀ (p : Prop), Becoming.WeaklyDecided p
+@Becoming.Presence.every_course_iff : ∀ {c : Becoming.CausalGrowth.Causet},
+  c.Ordered →
+    ∀ (Φ : (Nat → Nat) → Prop),
+      (∀ (π σ : Nat → Nat), Becoming.Presence.NaturalLabelling c π σ → Φ π) ↔
+        ∀ (r : Becoming.Run Becoming.CausalGrowth.process) (π σ : Nat → Nat),
+          r.state 0 = Becoming.CausalGrowth.empty → Becoming.CausalGrowth.Kinds.Relabels c (r.state c.size) π σ → Φ π
+@Becoming.Presence.some_course_iff : ∀ {c : Becoming.CausalGrowth.Causet},
+  c.Ordered →
+    ∀ (Φ : (Nat → Nat) → Prop),
+      (∃ π σ, Becoming.Presence.NaturalLabelling c π σ ∧ Φ π) ↔
+        ∃ r π σ,
+          r.state 0 = Becoming.CausalGrowth.empty ∧ Becoming.CausalGrowth.Kinds.Relabels c (r.state c.size) π σ ∧ Φ π
+@Becoming.Presence.rearranges_iff_course : ∀ {c : Becoming.CausalGrowth.Causet},
+  c.Ordered →
+    ∀ {r : Becoming.Run Becoming.CausalGrowth.process} {π σ π' σ' : Nat → Nat},
+      r.state 0 = Becoming.CausalGrowth.empty →
+        Becoming.CausalGrowth.Kinds.Relabels c (r.state c.size) π σ →
+          Becoming.Reindexes 0 c.size π' σ' →
+            (Becoming.Rearranges (Becoming.Presence.Comparable c) 0 c.size π σ π' ↔
+              ∃ r',
+                r'.state 0 = Becoming.CausalGrowth.empty ∧
+                  Becoming.CausalGrowth.Kinds.Relabels c (r'.state c.size) π' σ')
+@Becoming.Presence.stem_born_first_course : ∀ {c : Becoming.CausalGrowth.Causet} {D : Nat → Prop}
+  [inst : (x : Nat) → Decidable (D x)],
+  c.Ordered →
+    Becoming.CausalGrowth.Stem c D →
+      ∃ r π σ,
+        r.state 0 = Becoming.CausalGrowth.empty ∧
+          Becoming.CausalGrowth.Kinds.Relabels c (r.state c.size) π σ ∧
+            ∀ (x : Nat), x < c.size → (π x < Becoming.Presence.count (fun x => decide (D x)) c.size ↔ D x)
+@Becoming.Presence.prec_iff_every_course : ∀ {c : Becoming.CausalGrowth.Causet} [(a b : Nat) → Decidable (c.prec a b)],
+  c.Ordered →
+    ∀ {i j : Nat},
+      j < c.size →
+        (c.prec i j ↔
+          ∀ (r : Becoming.Run Becoming.CausalGrowth.process) (π σ : Nat → Nat),
+            r.state 0 = Becoming.CausalGrowth.empty →
+              Becoming.CausalGrowth.Kinds.Relabels c (r.state c.size) π σ → π i < π j)
+@Becoming.Presence.past_every_course : ∀ {c : Becoming.CausalGrowth.Causet} [(a b : Nat) → Decidable (c.prec a b)],
+  c.Ordered →
+    ∀ {x y : Nat},
+      x < c.size →
+        y < c.size →
+          ((∀ (r : Becoming.Run Becoming.CausalGrowth.process) (π σ : Nat → Nat),
+              r.state 0 = Becoming.CausalGrowth.empty →
+                Becoming.CausalGrowth.Kinds.Relabels c (r.state c.size) π σ → π y ≤ π x) ↔
+            y = x ∨ c.prec y x)
+@Becoming.Presence.past_largest_course : ∀ {c : Becoming.CausalGrowth.Causet} [(a b : Nat) → Decidable (c.prec a b)],
+  c.Ordered →
+    ∀ (R : Nat → Nat → Prop),
+      (∀ (x y : Nat),
+          R x y →
+            ∀ (r : Becoming.Run Becoming.CausalGrowth.process) (π σ : Nat → Nat),
+              r.state 0 = Becoming.CausalGrowth.empty →
+                Becoming.CausalGrowth.Kinds.Relabels c (r.state c.size) π σ → π y ≤ π x) →
+        ∀ {x y : Nat}, x < c.size → y < c.size → R x y → y = x ∨ c.prec y x
+@Becoming.Presence.every_course_not_not : ∀ {c : Becoming.CausalGrowth.Causet},
+  c.Ordered →
+    ∀ {i j : Nat},
+      i < c.size →
+        j < c.size →
+          ((∀ (r : Becoming.Run Becoming.CausalGrowth.process) (π σ : Nat → Nat),
+              r.state 0 = Becoming.CausalGrowth.empty →
+                Becoming.CausalGrowth.Kinds.Relabels c (r.state c.size) π σ → π i < π j) ↔
+            ¬¬c.prec i j)
+@Becoming.Presence.before_some_course : ∀ {c : Becoming.CausalGrowth.Causet},
+  (∀ (a b : Nat), Becoming.WeaklyDecided (c.prec a b)) →
+    c.Ordered →
+      ∀ {i j : Nat},
+        i < c.size →
+          j < c.size →
+            ((∃ r π σ,
+                r.state 0 = Becoming.CausalGrowth.empty ∧
+                  Becoming.CausalGrowth.Kinds.Relabels c (r.state c.size) π σ ∧ π i < π j) ↔
+              i ≠ j ∧ ¬c.prec j i)
+@Becoming.Presence.either_order_course : ∀ {c : Becoming.CausalGrowth.Causet},
+  (∀ (a b : Nat), Becoming.WeaklyDecided (c.prec a b)) →
+    c.Ordered →
+      ∀ {x y : Nat},
+        x < c.size →
+          y < c.size →
+            ¬c.prec x y →
+              ¬c.prec y x →
+                x ≠ y →
+                  (∃ r π σ,
+                      r.state 0 = Becoming.CausalGrowth.empty ∧
+                        Becoming.CausalGrowth.Kinds.Relabels c (r.state c.size) π σ ∧ π x < π y) ∧
+                    ∃ r π σ,
+                      r.state 0 = Becoming.CausalGrowth.empty ∧
+                        Becoming.CausalGrowth.Kinds.Relabels c (r.state c.size) π σ ∧ π y < π x
+@Becoming.Presence.antichain_present_course : ∀ {c : Becoming.CausalGrowth.Causet},
+  (∀ (a b : Nat), Becoming.WeaklyDecided (c.prec a b)) →
+    c.Ordered →
+      ∀ (q : Nat → Bool),
+        (∀ {x : Nat}, q x = true → x < c.size) →
+          (∀ {x y : Nat}, q x = true → q y = true → ¬c.prec x y) →
+            ∃ r π σ t,
+              r.state 0 = Becoming.CausalGrowth.empty ∧
+                Becoming.CausalGrowth.Kinds.Relabels c (r.state c.size) π σ ∧
+                  ∀ (x : Nat), Becoming.Presence.MaximalBorn c π t x ↔ q x = true
+@Becoming.Presence.together_some_course : ∀ {c : Becoming.CausalGrowth.Causet},
+  (∀ (a b : Nat), Becoming.WeaklyDecided (c.prec a b)) →
+    c.Ordered →
+      ∀ {x y : Nat},
+        (∃ r π σ t,
+            r.state 0 = Becoming.CausalGrowth.empty ∧
+              Becoming.CausalGrowth.Kinds.Relabels c (r.state c.size) π σ ∧
+                Becoming.Presence.MaximalBorn c π t x ∧ Becoming.Presence.MaximalBorn c π t y) ↔
+          x < c.size ∧ y < c.size ∧ ¬c.prec x y ∧ ¬c.prec y x
+@Becoming.Presence.together_every_course : ∀ {c : Becoming.CausalGrowth.Causet} [(a b : Nat) → Decidable (c.prec a b)],
+  c.Ordered →
+    ∀ {x y : Nat},
+      x < c.size →
+        y < c.size →
+          ((∀ (r : Becoming.Run Becoming.CausalGrowth.process) (π σ : Nat → Nat),
+              r.state 0 = Becoming.CausalGrowth.empty →
+                Becoming.CausalGrowth.Kinds.Relabels c (r.state c.size) π σ →
+                  ∃ t, Becoming.Presence.MaximalBorn c π t x ∧ Becoming.Presence.MaximalBorn c π t y) ↔
+            ∀ (k : Nat), c.prec x k ↔ c.prec y k)
+@Becoming.Presence.together_every_course_not_not : ∀ {c : Becoming.CausalGrowth.Causet},
+  c.Ordered →
+    ∀ {x y : Nat},
+      x < c.size →
+        y < c.size →
+          ((∀ (r : Becoming.Run Becoming.CausalGrowth.process) (π σ : Nat → Nat),
+              r.state 0 = Becoming.CausalGrowth.empty →
+                Becoming.CausalGrowth.Kinds.Relabels c (r.state c.size) π σ →
+                  ∃ t, Becoming.Presence.MaximalBorn c π t x ∧ Becoming.Presence.MaximalBorn c π t y) ↔
+            ∀ (k : Nat), (c.prec x k → ¬¬c.prec y k) ∧ (c.prec y k → ¬¬c.prec x k))
+@Becoming.Presence.present_some_course : ∀ {c : Becoming.CausalGrowth.Causet},
+  (∀ (a b : Nat), Becoming.WeaklyDecided (c.prec a b)) →
+    c.Ordered →
+      ∀ {i j : Nat},
+        j < c.size →
+          ((∃ r π σ,
+              r.state 0 = Becoming.CausalGrowth.empty ∧
+                Becoming.CausalGrowth.Kinds.Relabels c (r.state c.size) π σ ∧ Becoming.Presence.PresentAt c π i j) ↔
+            Becoming.CausalGrowth.links c.prec i j)
+@Becoming.Presence.present_every_course_only_link : ∀ {c : Becoming.CausalGrowth.Causet},
+  c.Ordered →
+    ∀ {i j : Nat},
+      (∀ (r : Becoming.Run Becoming.CausalGrowth.process) (π σ : Nat → Nat),
+          r.state 0 = Becoming.CausalGrowth.empty →
+            Becoming.CausalGrowth.Kinds.Relabels c (r.state c.size) π σ → Becoming.Presence.PresentAt c π i j) ↔
+        Becoming.CausalGrowth.links c.prec i j ∧ ∀ (k : Nat), Becoming.CausalGrowth.links c.prec i k → k = j
+@Becoming.Presence.below_three : ∀ {i : Nat}, i < 3 → i = 0 ∨ i = 1 ∨ i = 2
+@Becoming.Presence.below_four : ∀ {i : Nat}, i < 4 → i = 0 ∨ i = 1 ∨ i = 2 ∨ i = 3
+Becoming.Presence.swap12_three : Becoming.Reindexes 0 3 Becoming.Presence.swap12 Becoming.Presence.swap12
+Becoming.Presence.swap12_four : Becoming.Reindexes 0 4 Becoming.Presence.swap12 Becoming.Presence.swap12
+Becoming.Presence.Vee.ordered : Becoming.Presence.Vee.vee.Ordered
+Becoming.Presence.Vee.natural_swap : Becoming.Presence.NaturalLabelling Becoming.Presence.Vee.vee
+  Becoming.Presence.swap12 Becoming.Presence.swap12
+Becoming.Presence.Vee.not_present_identity : ¬Becoming.Presence.PresentAt Becoming.Presence.Vee.vee (fun i => i) 0 2
+Becoming.Presence.Vee.present_swap : Becoming.Presence.PresentAt Becoming.Presence.Vee.vee Becoming.Presence.swap12 0 2
+Becoming.Presence.Vee.link : Becoming.CausalGrowth.links Becoming.Presence.Vee.vee.prec 0 2
+Becoming.Presence.Vee.not_least : ¬Becoming.Presence.LeastAbove Becoming.Presence.Vee.vee 0 2
+Becoming.Presence.Vee.maximal_after_two_identity : ∀ (x : Nat),
+  Becoming.Presence.MaximalBorn Becoming.Presence.Vee.vee (fun i => i) 2 x ↔ x = 1
+Becoming.Presence.Vee.maximal_after_two_swap : ∀ (x : Nat),
+  Becoming.Presence.MaximalBorn Becoming.Presence.Vee.vee Becoming.Presence.swap12 2 x ↔ x = 2
+@Becoming.Presence.Diamond.prec_below : ∀ {a b : Nat}, Becoming.Presence.Diamond.diamond.prec a b → a < 4 ∧ b < 4
+Becoming.Presence.Diamond.ordered : Becoming.Presence.Diamond.diamond.Ordered
+Becoming.Presence.Diamond.pastOrPair_refl : ∀ (a : Nat), Becoming.Presence.Diamond.PastOrPair a a
+@Becoming.Presence.Diamond.pastOrPair_below : ∀ {a b : Nat},
+  Becoming.Presence.Diamond.PastOrPair a b → a ≠ b → a < 4 ∧ b < 4
+@Becoming.Presence.Diamond.pastOrPair_trans : ∀ {a b c : Nat},
+  Becoming.Presence.Diamond.PastOrPair a b →
+    Becoming.Presence.Diamond.PastOrPair b c → Becoming.Presence.Diamond.PastOrPair a c
+Becoming.Presence.Diamond.middle_iff : ∀ (a : Nat), Becoming.Presence.Diamond.Middle a ↔ a = 1 ∨ a = 2
+@Becoming.Presence.Diamond.pair_of_middle : ∀ {a b : Nat},
+  Becoming.Presence.Diamond.Middle a → Becoming.Presence.Diamond.Middle b → a ≠ b → a = 1 ∧ b = 2 ∨ a = 2 ∧ b = 1
+@Becoming.Presence.Diamond.middle_of_pair : ∀ {a b : Nat},
+  a = 1 ∧ b = 2 ∨ a = 2 ∧ b = 1 → Becoming.Presence.Diamond.Middle a ∧ Becoming.Presence.Diamond.Middle b ∧ a ≠ b
+@Becoming.Presence.Diamond.auto_middle : ∀ {σ τ : Nat → Nat},
+  Becoming.CausalGrowth.Kinds.Relabels Becoming.Presence.Diamond.diamond Becoming.Presence.Diamond.diamond σ τ →
+    ∀ {a : Nat}, Becoming.Presence.Diamond.Middle a → Becoming.Presence.Diamond.Middle (σ a)
+@Becoming.Presence.Diamond.auto_middle_back : ∀ {σ τ : Nat → Nat},
+  Becoming.CausalGrowth.Kinds.Relabels Becoming.Presence.Diamond.diamond Becoming.Presence.Diamond.diamond σ τ →
+    ∀ {a : Nat}, a < 4 → Becoming.Presence.Diamond.Middle (σ a) → Becoming.Presence.Diamond.Middle a
+@Becoming.Presence.Diamond.auto_inj : ∀ {σ τ : Nat → Nat},
+  Becoming.CausalGrowth.Kinds.Relabels Becoming.Presence.Diamond.diamond Becoming.Presence.Diamond.diamond σ τ →
+    ∀ {a b : Nat}, a < 4 → b < 4 → σ a = σ b → a = b
+@Becoming.Presence.Diamond.pastOrPair_kept : ∀ {σ τ : Nat → Nat},
+  Becoming.CausalGrowth.Kinds.Relabels Becoming.Presence.Diamond.diamond Becoming.Presence.Diamond.diamond σ τ →
+    ∀ {a b : Nat},
+      a < 4 → b < 4 → (Becoming.Presence.Diamond.PastOrPair a b ↔ Becoming.Presence.Diamond.PastOrPair (σ a) (σ b))
+Becoming.Presence.Diamond.pastOrPair_pair : Becoming.Presence.Diamond.PastOrPair 1 2 ∧
+  ¬Becoming.Presence.Diamond.diamond.prec 1 2 ∧
+    ¬Becoming.Presence.Diamond.diamond.prec 2 1 ∧ ¬Becoming.Presence.Diamond.PastOrPair 1 3
+Becoming.Presence.Diamond.future_one_two : ∀ (k : Nat),
+  Becoming.Presence.Diamond.diamond.prec 1 k ↔ Becoming.Presence.Diamond.diamond.prec 2 k
+@Becoming.Presence.Diamond.pastOrPair_iff_together : ∀ {a b : Nat},
+  a < 4 →
+    b < 4 →
+      (Becoming.Presence.Diamond.PastOrPair a b ↔
+        Becoming.Presence.Diamond.diamond.prec b a ∨
+          ∀ (π σ : Nat → Nat),
+            Becoming.Presence.NaturalLabelling Becoming.Presence.Diamond.diamond π σ →
+              ∃ t,
+                Becoming.Presence.MaximalBorn Becoming.Presence.Diamond.diamond π t a ∧
+                  Becoming.Presence.MaximalBorn Becoming.Presence.Diamond.diamond π t b)
+@Becoming.Presence.Diamond.pastOrTogether_iff : ∀ {a b : Nat},
+  a < 4 →
+    b < 4 →
+      (Becoming.Presence.PastOrTogether Becoming.Presence.Diamond.diamond a b ↔
+        Becoming.Presence.Diamond.PastOrPair a b)
+Becoming.Presence.Diamond.courses_disagree : Becoming.Presence.NaturalLabelling Becoming.Presence.Diamond.diamond
+    Becoming.Presence.swap12 Becoming.Presence.swap12 ∧
+  Becoming.Presence.swap12 2 < Becoming.Presence.swap12 1
+Becoming.Presence.Diamond.kept_not_agreed : (∀ (σ τ : Nat → Nat),
+    Becoming.CausalGrowth.Kinds.Relabels Becoming.Presence.Diamond.diamond Becoming.Presence.Diamond.diamond σ τ →
+      ∀ (a b : Nat),
+        a < 4 → b < 4 → (Becoming.Presence.Diamond.PastOrPair a b ↔ Becoming.Presence.Diamond.PastOrPair (σ a) (σ b))) ∧
+  Becoming.Presence.Diamond.PastOrPair 1 2 ∧
+    ¬∀ (π σ : Nat → Nat), Becoming.Presence.NaturalLabelling Becoming.Presence.Diamond.diamond π σ → π 2 ≤ π 1
+@Becoming.Presence.SameFuture.prec_below : ∀ {a b : Nat},
+  Becoming.Presence.SameFuture.sameFuture.prec a b → a < 4 ∧ b < 4
+Becoming.Presence.SameFuture.ordered : Becoming.Presence.SameFuture.sameFuture.Ordered
+Becoming.Presence.SameFuture.future_one_two : ∀ (k : Nat),
+  Becoming.Presence.SameFuture.sameFuture.prec 1 k ↔ Becoming.Presence.SameFuture.sameFuture.prec 2 k
+Becoming.Presence.SameFuture.together_different_pasts : (∀ (π σ : Nat → Nat),
+    Becoming.Presence.NaturalLabelling Becoming.Presence.SameFuture.sameFuture π σ →
+      ∃ t,
+        Becoming.Presence.MaximalBorn Becoming.Presence.SameFuture.sameFuture π t 1 ∧
+          Becoming.Presence.MaximalBorn Becoming.Presence.SameFuture.sameFuture π t 2) ∧
+  Becoming.Presence.SameFuture.sameFuture.prec 0 1 ∧ ¬Becoming.Presence.SameFuture.sameFuture.prec 0 2
+Becoming.Presence.SameFuture.pastOrTogether_not_trans : Becoming.Presence.PastOrTogether
+    Becoming.Presence.SameFuture.sameFuture 2 1 ∧
+  Becoming.Presence.PastOrTogether Becoming.Presence.SameFuture.sameFuture 1 0 ∧
+    ¬Becoming.Presence.PastOrTogether Becoming.Presence.SameFuture.sameFuture 2 0

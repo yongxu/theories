@@ -1,0 +1,27 @@
+import Becoming.ReflexivePrediction
+#print axioms Becoming.ReflexivePrediction.Right
+#print axioms Becoming.ReflexivePrediction.none_right_of_moves
+#print axioms Becoming.ReflexivePrediction.no_predictor_right
+#print axioms Becoming.ReflexivePrediction.not_moves
+#print axioms Becoming.ReflexivePrediction.predictor_iff
+#print axioms Becoming.ReflexivePrediction.rests_iff_right
+#print axioms Becoming.ReflexivePrediction.right_rests
+#print axioms Becoming.ReflexivePrediction.reached_rests
+#print axioms Becoming.ReflexivePrediction.on_chain
+#print axioms Becoming.ReflexivePrediction.rises
+#print axioms Becoming.ReflexivePrediction.below_right
+#print axioms Becoming.ReflexivePrediction.stays_from
+#print axioms Becoming.ReflexivePrediction.again_or_risen
+#print axioms Becoming.ReflexivePrediction.bottom_rests
+#print axioms Becoming.ReflexivePrediction.ThresholdResponse.threshold
+#print axioms Becoming.ReflexivePrediction.ThresholdResponse.within
+#print axioms Becoming.ReflexivePrediction.ThresholdResponse.keeps
+#print axioms Becoming.ReflexivePrediction.ThresholdResponse.both_right
+#print axioms Becoming.ReflexivePrediction.ThresholdResponse.reached_by_start
+#print axioms Becoming.ReflexivePrediction.Negating.negate
+#print axioms Becoming.ReflexivePrediction.Negating.none_right
+#print axioms Becoming.ReflexivePrediction.Negating.alternates
+#print axioms Becoming.ReflexivePrediction.Reflecting.reflect
+#print axioms Becoming.ReflexivePrediction.Reflecting.sub_antitone
+#print axioms Becoming.ReflexivePrediction.Reflecting.reverses
+#print axioms Becoming.ReflexivePrediction.Reflecting.middle_right

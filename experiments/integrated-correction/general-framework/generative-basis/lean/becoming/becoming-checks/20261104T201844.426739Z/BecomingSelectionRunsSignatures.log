@@ -1,0 +1,38 @@
+@Becoming.SelectionRuns.choice_withholds_of_constant : ∀ {S : Type u_1} {A : Type u_2} {V : Type u_3}
+  {P : Generative.Process S A} {rule : (Nat → V) → Option Nat},
+  Becoming.Relabel.EquivariantChoice rule →
+    ∀ {reg : S → V} {r : Becoming.Run P},
+      (∀ (n : Nat), reg (r.state n) = reg (r.state 0)) → rule (Becoming.Parting.course reg r) = none
+@Becoming.SelectionRuns.values_alike_of_constant : ∀ {S : Type u_1} {A : Type u_2} {V : Type u_3}
+  {P : Generative.Process S A} {W : Type u_4} {value : (Nat → V) → Nat → W},
+  Becoming.Relabel.EquivariantValue value →
+    ∀ {reg : S → V} {r : Becoming.Run P},
+      (∀ (n : Nat), reg (r.state n) = reg (r.state 0)) →
+        ∀ (i i' : Nat), value (Becoming.Parting.course reg r) i = value (Becoming.Parting.course reg r) i'
+@Becoming.SelectionRuns.value_level_alike : ∀ {S : Type u_1} {A : Type u_2} {V : Type u_3} {P : Generative.Process S A}
+  {W : Type u_4} {value : (Nat → V) → Nat → W},
+  Becoming.Relabel.EquivariantValue value →
+    ∀ (c : W) {reg : S → V} {r : Becoming.Run P} {j k : Nat},
+      reg (r.state j) = reg (r.state k) →
+        (value (Becoming.Parting.course reg r) j = c ↔ value (Becoming.Parting.course reg r) k = c)
+@Becoming.SelectionRuns.selects_through_coupling : ∀ {S : Type u_1} {A : Type u_2} {V : Type u_3}
+  {P : Generative.Process S A} {select : (Nat → V) → Nat → Prop},
+  Becoming.Relabel.Equivariant select →
+    ∀ (reg : S → V) (r : Becoming.Run P),
+      Becoming.Learning.Training.Through (fun i i' => reg (r.state i) = reg (r.state i'))
+        (select (Becoming.Parting.course reg r))
+@Becoming.SelectionRuns.values_lumped : ∀ {S : Type u_1} {A : Type u_2} {V : Type u_3} {P : Generative.Process S A}
+  {W : Type u_4} {value : (Nat → V) → Nat → W},
+  Becoming.Relabel.EquivariantValue value →
+    ∀ (reg : S → V) (r : Becoming.Run P),
+      Becoming.Learning.Lumped (Becoming.Parting.course reg r) (value (Becoming.Parting.course reg r))
+@Becoming.SelectionRuns.selects_right_of_reads : ∀ {S : Type u_1} {A : Type u_2} {V : Type u_3}
+  {P : Generative.Process S A} {reg : S → V} {r : Becoming.Run P} {target : S → Prop} (q : V → Prop),
+  (∀ (s : S), target s ↔ q (reg s)) →
+    (Becoming.Relabel.Equivariant fun m i => q (m i)) ∧
+      ∀ (i : Nat), q (Becoming.Parting.course reg r i) ↔ target (r.state i)
+@Becoming.SelectionRuns.values_right_of_reads : ∀ {S : Type u_1} {A : Type u_2} {V : Type u_3}
+  {P : Generative.Process S A} {W : Type u_4} {reg : S → V} {r : Becoming.Run P} {f : S → W} (h : V → W),
+  (∀ (s : S), f s = h (reg s)) →
+    (Becoming.Relabel.EquivariantValue fun m i => h (m i)) ∧
+      ∀ (i : Nat), h (Becoming.Parting.course reg r i) = f (r.state i)

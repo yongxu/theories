@@ -1,0 +1,108 @@
+@Becoming.ChoiceOccasions.shown_accords : ∀ {α : Type u_1} {O : Type u_2} {ch : Becoming.ChoiceOccasions α O},
+  ch.Accords ch.Shown
+@Becoming.ChoiceOccasions.reach_accords : ∀ {α : Type u_1} {O : Type u_2} {ch : Becoming.ChoiceOccasions α O},
+  ch.Accords (Becoming.«及» ch.Shown)
+@Becoming.ChoiceOccasions.reach_within : ∀ {α : Type u_1} {O : Type u_2} {ch : Becoming.ChoiceOccasions α O}
+  {P : Becoming.«际» α}, (∀ (x y z : α), P x y → P y z → P x z) → ch.Accords P → Becoming.«则» (Becoming.«及» ch.Shown) P
+@Becoming.ChoiceOccasions.accorded_iff_noCycle : ∀ {α : Type u_1} {O : Type u_2} {ch : Becoming.ChoiceOccasions α O},
+  (∃ P, (∀ (x : α), ¬P x x) ∧ (∀ (x y z : α), P x y → P y z → P x z) ∧ ch.Accords P) ↔ Becoming.«无环» ch.Shown
+@Becoming.ChoiceOccasions.above_in_every_iff_reach : ∀ {α : Type u_1} {O : Type u_2}
+  {ch : Becoming.ChoiceOccasions α O},
+  Becoming.«无环» ch.Shown →
+    ∀ {x y : α},
+      (∀ (P : Becoming.«际» α), (∀ (a : α), ¬P a a) → (∀ (a b c : α), P a b → P b c → P a c) → ch.Accords P → P x y) ↔
+        Becoming.«及» ch.Shown x y
+@Becoming.ChoiceOccasions.above_in_class_of_every : ∀ {α : Type u_1} {O : Type u_2} {ch : Becoming.ChoiceOccasions α O}
+  {Q : Becoming.«际» α → Prop},
+  (∀ (P : Becoming.«际» α), Q P → (∀ (a : α), ¬P a a) ∧ (∀ (a b c : α), P a b → P b c → P a c) ∧ ch.Accords P) →
+    ∀ {x y : α},
+      (∀ (P : Becoming.«际» α), (∀ (a : α), ¬P a a) → (∀ (a b c : α), P a b → P b c → P a c) → ch.Accords P → P x y) →
+        ∀ (P : Becoming.«际» α), Q P → P x y
+@Becoming.ChoiceOccasions.top_in_every_iff_reach : ∀ {α : Type u_1} {O : Type u_2} {ch : Becoming.ChoiceOccasions α O},
+  Becoming.«无环» ch.Shown →
+    ∀ {N : α → Prop} {x : α},
+      (∀ (P : Becoming.«际» α),
+          (∀ (a : α), ¬P a a) →
+            (∀ (a b c : α), P a b → P b c → P a c) → ch.Accords P → ∀ (y : α), N y → y ≠ x → P x y) ↔
+        ∀ (y : α), N y → y ≠ x → Becoming.«及» ch.Shown x y
+@Becoming.ChoiceOccasions.reach_withPair : ∀ {α : Type u_1} {R : Becoming.«际» α} {x y a b : α},
+  Becoming.«及» (Becoming.ChoiceOccasions.withPair R x y) a b →
+    Becoming.«及» R a b ∨ (a = x ∨ Becoming.«及» R a x) ∧ (y = b ∨ Becoming.«及» R y b)
+@Becoming.ChoiceOccasions.reach_withPair_iff : ∀ {α : Type u_1} {R : Becoming.«际» α} {x y a b : α},
+  Becoming.«及» (Becoming.ChoiceOccasions.withPair R x y) a b ↔
+    Becoming.«及» R a b ∨ (a = x ∨ Becoming.«及» R a x) ∧ (y = b ∨ Becoming.«及» R y b)
+@Becoming.ChoiceOccasions.noCycle_withPair : ∀ {α : Type u_1} {R : Becoming.«际» α},
+  Becoming.«无环» R → ∀ {x y : α}, x ≠ y → ¬Becoming.«及» R y x → Becoming.«无环» (Becoming.ChoiceOccasions.withPair R x y)
+@Becoming.ChoiceOccasions.noCycle_withPair_iff : ∀ {α : Type u_1} {R : Becoming.«际» α} {x y : α},
+  Becoming.«无环» (Becoming.ChoiceOccasions.withPair R x y) ↔ Becoming.«无环» R ∧ y ≠ x ∧ ¬Becoming.«及» R y x
+@Becoming.ChoiceOccasions.above_in_some_of_unreached : ∀ {α : Type u_1} {O : Type u_2}
+  {ch : Becoming.ChoiceOccasions α O},
+  Becoming.«无环» ch.Shown →
+    ∀ {x y : α},
+      x ≠ y →
+        ¬Becoming.«及» ch.Shown y x →
+          ∃ P, (∀ (a : α), ¬P a a) ∧ (∀ (a b c : α), P a b → P b c → P a c) ∧ ch.Accords P ∧ P x y
+@Becoming.ChoiceOccasions.both_ways_of_unreached : ∀ {α : Type u_1} {O : Type u_2} {ch : Becoming.ChoiceOccasions α O},
+  Becoming.«无环» ch.Shown →
+    ∀ {x y : α},
+      x ≠ y →
+        ¬Becoming.«及» ch.Shown x y →
+          ¬Becoming.«及» ch.Shown y x →
+            (∃ P, (∀ (a : α), ¬P a a) ∧ (∀ (a b c : α), P a b → P b c → P a c) ∧ ch.Accords P ∧ P x y) ∧
+              ∃ P, (∀ (a : α), ¬P a a) ∧ (∀ (a b c : α), P a b → P b c → P a c) ∧ ch.Accords P ∧ P y x
+@Becoming.ChoiceOccasions.weakly_forces_no_comparison : ∀ {α : Type u_1} {O : Type u_2}
+  {ch : Becoming.ChoiceOccasions α O} (x y : α),
+  ¬∀ (P : Becoming.«际» α), (∀ (a : α), ¬P a a) → (∀ (a b c : α), P a b → P b c → P a c) → ch.AccordsWeakly P → P x y
+Becoming.ChoiceOccasions.Untried.first_ne_second : Becoming.ChoiceOccasions.Untried.Alt.first ≠
+  Becoming.ChoiceOccasions.Untried.Alt.second
+Becoming.ChoiceOccasions.Untried.first_ne_third : Becoming.ChoiceOccasions.Untried.Alt.first ≠
+  Becoming.ChoiceOccasions.Untried.Alt.third
+@Becoming.ChoiceOccasions.Untried.shown_from_first : ∀ {a b : Becoming.ChoiceOccasions.Untried.Alt},
+  Becoming.ChoiceOccasions.Untried.occasions.Shown a b → a = Becoming.ChoiceOccasions.Untried.Alt.first
+@Becoming.ChoiceOccasions.Untried.shown_to_second : ∀ {a b : Becoming.ChoiceOccasions.Untried.Alt},
+  Becoming.ChoiceOccasions.Untried.occasions.Shown a b → b = Becoming.ChoiceOccasions.Untried.Alt.second
+@Becoming.ChoiceOccasions.Untried.reach_first_second : ∀ {a b : Becoming.ChoiceOccasions.Untried.Alt},
+  Becoming.«及» Becoming.ChoiceOccasions.Untried.occasions.Shown a b →
+    a = Becoming.ChoiceOccasions.Untried.Alt.first ∧ b = Becoming.ChoiceOccasions.Untried.Alt.second
+Becoming.ChoiceOccasions.Untried.noCycle : Becoming.«无环» Becoming.ChoiceOccasions.Untried.occasions.Shown
+Becoming.ChoiceOccasions.Untried.met_fixed : ∀ (P : Becoming.«际» Becoming.ChoiceOccasions.Untried.Alt),
+  Becoming.ChoiceOccasions.Untried.occasions.Accords P →
+    P Becoming.ChoiceOccasions.Untried.Alt.first Becoming.ChoiceOccasions.Untried.Alt.second
+Becoming.ChoiceOccasions.Untried.untried_free : (∃ P,
+    (∀ (a : Becoming.ChoiceOccasions.Untried.Alt), ¬P a a) ∧
+      (∀ (a b c : Becoming.ChoiceOccasions.Untried.Alt), P a b → P b c → P a c) ∧
+        Becoming.ChoiceOccasions.Untried.occasions.Accords P ∧
+          P Becoming.ChoiceOccasions.Untried.Alt.first Becoming.ChoiceOccasions.Untried.Alt.third) ∧
+  ∃ P,
+    (∀ (a : Becoming.ChoiceOccasions.Untried.Alt), ¬P a a) ∧
+      (∀ (a b c : Becoming.ChoiceOccasions.Untried.Alt), P a b → P b c → P a c) ∧
+        Becoming.ChoiceOccasions.Untried.occasions.Accords P ∧
+          P Becoming.ChoiceOccasions.Untried.Alt.third Becoming.ChoiceOccasions.Untried.Alt.first
+Becoming.ChoiceOccasions.Untried.noTrue : false ≠ true
+Becoming.ChoiceOccasions.Untried.aboveFirst_strict : (∀ (a : Becoming.ChoiceOccasions.Untried.Alt),
+    ¬Becoming.ChoiceOccasions.Untried.aboveFirst a a = true) ∧
+  ∀ (a b c : Becoming.ChoiceOccasions.Untried.Alt),
+    Becoming.ChoiceOccasions.Untried.aboveFirst a b = true →
+      Becoming.ChoiceOccasions.Untried.aboveFirst b c = true → Becoming.ChoiceOccasions.Untried.aboveFirst a c = true
+Becoming.ChoiceOccasions.Untried.aboveThird_strict : (∀ (a : Becoming.ChoiceOccasions.Untried.Alt),
+    ¬Becoming.ChoiceOccasions.Untried.aboveThird a a = true) ∧
+  ∀ (a b c : Becoming.ChoiceOccasions.Untried.Alt),
+    Becoming.ChoiceOccasions.Untried.aboveThird a b = true →
+      Becoming.ChoiceOccasions.Untried.aboveThird b c = true → Becoming.ChoiceOccasions.Untried.aboveThird a c = true
+Becoming.ChoiceOccasions.Untried.both_accord : (Becoming.ChoiceOccasions.Untried.occasions.Accords fun a b =>
+    Becoming.ChoiceOccasions.Untried.aboveFirst a b = true) ∧
+  Becoming.ChoiceOccasions.Untried.occasions.Accords fun a b => Becoming.ChoiceOccasions.Untried.aboveThird a b = true
+Becoming.ChoiceOccasions.Untried.same_search_met : Becoming.ChoiceOccasions.Untried.search
+      Becoming.ChoiceOccasions.Untried.aboveFirst
+      [Becoming.ChoiceOccasions.Untried.Alt.first, Becoming.ChoiceOccasions.Untried.Alt.second] =
+    some Becoming.ChoiceOccasions.Untried.Alt.first ∧
+  Becoming.ChoiceOccasions.Untried.search Becoming.ChoiceOccasions.Untried.aboveThird
+      [Becoming.ChoiceOccasions.Untried.Alt.first, Becoming.ChoiceOccasions.Untried.Alt.second] =
+    some Becoming.ChoiceOccasions.Untried.Alt.first
+Becoming.ChoiceOccasions.Untried.same_search_after : Becoming.ChoiceOccasions.Untried.search
+      Becoming.ChoiceOccasions.Untried.aboveFirst
+      [Becoming.ChoiceOccasions.Untried.Alt.first, Becoming.ChoiceOccasions.Untried.Alt.third] =
+    some Becoming.ChoiceOccasions.Untried.Alt.first ∧
+  Becoming.ChoiceOccasions.Untried.search Becoming.ChoiceOccasions.Untried.aboveThird
+      [Becoming.ChoiceOccasions.Untried.Alt.first, Becoming.ChoiceOccasions.Untried.Alt.third] =
+    some Becoming.ChoiceOccasions.Untried.Alt.third

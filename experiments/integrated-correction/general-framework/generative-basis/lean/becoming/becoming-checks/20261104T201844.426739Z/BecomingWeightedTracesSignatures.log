@@ -1,0 +1,36 @@
+@Becoming.possibility_transfer_iff : ∀ {S : Type u_1} {A : Type u_2} (P : Generative.Process S A)
+  (step : S → A → S → Bool),
+  (∀ (s : S) (a : A) (t : S), step s a t = true ↔ P.step s a t) →
+    ∀ (moves : List A) (all : List S),
+      (∀ (a : A), a ∈ moves) →
+        (∀ (s : S), s ∈ all) →
+          ∀ (f : S → Bool) (n : Nat) (s : S),
+            Becoming.possibility.transfer step moves all f n s = true ↔
+              ∃ as t, as.length = n ∧ Generative.Trace P s as t ∧ f t = true
+@Becoming.counting_transfer_iff : ∀ {S : Type u_1} {A : Type u_2} (P : Generative.Process S A) (step : S → A → S → Nat),
+  (∀ (s : S) (a : A) (t : S), Becoming.nonzero (step s a t) = true ↔ P.step s a t) →
+    ∀ (moves : List A) (all : List S),
+      (∀ (a : A), a ∈ moves) →
+        (∀ (s : S), s ∈ all) →
+          ∀ (f : S → Nat) (n : Nat) (s : S),
+            Becoming.nonzero (Becoming.counting.transfer step moves all f n s) = true ↔
+              ∃ as t, as.length = n ∧ Generative.Trace P s as t ∧ Becoming.nonzero (f t) = true
+@Becoming.WeightedTraces.lumped_iff : ∀ {S : Type u_1} {A : Type u_2} {K : Type u_3} (P : Generative.Process S A)
+  (step : S → A → S → Bool),
+  (∀ (s : S) (a : A) (t : S), step s a t = true ↔ P.step s a t) →
+    ∀ (moves : List A) (all : List S),
+      (∀ (a : A), a ∈ moves) →
+        (∀ (s : S), s ∈ all) →
+          ∀ (π : S → K) (rep : K → S),
+            (∀ (k : K), π (rep k) = k) →
+              ((∀ (n : Nat) (g : K → Bool) (s s' : S),
+                  π s = π s' →
+                    (Becoming.WeightedTraces.Reaches P π g n s ↔ Becoming.WeightedTraces.Reaches P π g n s')) ↔
+                ∀ (g : K → Bool) (s s' : S),
+                  π s = π s' → (Becoming.WeightedTraces.Reaches P π g 1 s ↔ Becoming.WeightedTraces.Reaches P π g 1 s'))
+Becoming.WeightedTraces.memory_not_steps : ¬∃ P step,
+    (∀ (s : Unit) (a : Bool) (t : Unit), step s a t = true ↔ P.step s a t) ∧
+      ∀ (a b : Bool), Generative.Trace P () [a, b] () ↔ Becoming.Memory.differ a b = true
+@Becoming.WeightedTraces.lands_eq : ∀ {m : Option Bool} {a : Bool}, Becoming.Memory.lands m a = true → m = some a
+Becoming.WeightedTraces.kept_traces : ∀ (a b : Bool),
+  Generative.Trace Becoming.WeightedTraces.keptLaw none [a, b] (some b) ↔ Becoming.Memory.differ a b = true

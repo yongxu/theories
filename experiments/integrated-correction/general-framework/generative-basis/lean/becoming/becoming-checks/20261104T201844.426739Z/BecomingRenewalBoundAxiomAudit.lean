@@ -1,0 +1,26 @@
+import Becoming.RenewalBound
+#print axioms Becoming.RenewalBound.no_unrenewed_tail_of_accessible
+#print axioms Becoming.RenewalBound.no_renewal_free_tail
+#print axioms Becoming.RenewalBound.renewal_after_of_accessible
+#print axioms Becoming.RenewalBound.renewal_arbitrarily_late
+#print axioms Becoming.RenewalBound.renewal_arbitrarily_late_of_decidable
+#print axioms Becoming.RenewalBound.renewal_within_rank_bound
+#print axioms Becoming.RenewalBound.renewal_within_rank_plus_one_steps
+#print axioms Becoming.RenewalBound.rank_renewal_arbitrarily_late
+#print axioms Becoming.RenewalBound.run_no_renewal_free_tail
+#print axioms Becoming.RenewalBound.run_renewal_arbitrarily_late
+#print axioms Becoming.RenewalBound.run_renewal_within_rank
+#print axioms Becoming.RenewalBound.alternation
+#print axioms Becoming.RenewalBound.rank
+#print axioms Becoming.RenewalBound.Restoring
+#print axioms Becoming.RenewalBound.AlternatingStep
+#print axioms Becoming.RenewalBound.state_succ
+#print axioms Becoming.RenewalBound.actual_steps
+#print axioms Becoming.RenewalBound.nonrestoring_decreases
+#print axioms Becoming.RenewalBound.restores_arbitrarily_late
+#print axioms Becoming.RenewalBound.period_two
+#print axioms Becoming.RenewalBound.one_restoring_form
+#print axioms Becoming.RenewalBound.restoration_raises_rank
+#print axioms Becoming.RenewalBound.unrenewed_first_step
+#print axioms Becoming.RenewalBound.no_new_configurations
+#print axioms Becoming.RenewalBound.every_score_bounded

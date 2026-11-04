@@ -1,0 +1,199 @@
+Becoming.Narrowing.beq_true_iff : ∀ (x b : Bool), (x == b) = true ↔ x = b
+@Becoming.Narrowing.mem_filter : ∀ {α : Type} (p : α → Bool) (x : α) (l : List α),
+  x ∈ List.filter p l ↔ x ∈ l ∧ p x = true
+@Becoming.Narrowing.filter_cons_true : ∀ {α : Type} {p : α → Bool} {a : α} (l : List α),
+  p a = true → List.filter p (a :: l) = a :: List.filter p l
+@Becoming.Narrowing.filter_cons_false : ∀ {α : Type} {p : α → Bool} {a : α} (l : List α),
+  p a = false → List.filter p (a :: l) = List.filter p l
+@Becoming.Narrowing.filter_filter_self : ∀ {α : Type} (p : α → Bool) (l : List α),
+  List.filter p (List.filter p l) = List.filter p l
+@Becoming.Narrowing.filter_map_comm : ∀ {α β : Type} (f : α → β) (p : β → Bool) (l : List α),
+  List.filter p (List.map f l) = List.map f (List.filter (fun x => p (f x)) l)
+@Becoming.Narrowing.all_map : ∀ {α β : Type} (f : α → β) (p : β → Bool) (l : List α),
+  (List.map f l).all p = l.all fun x => p (f x)
+@Becoming.Narrowing.all_true : ∀ {α : Type} (p : α → Bool) (l : List α), l.all p = true → ∀ (x : α), x ∈ l → p x = true
+@Becoming.Narrowing.all_of : ∀ {α : Type} (p : α → Bool) (l : List α), (∀ (x : α), x ∈ l → p x = true) → l.all p = true
+@Becoming.Narrowing.after_observe_iff : ∀ {S A : Type} {k : Nat} (obs : S → A → Fin k) (B : S → Prop) (q : A)
+  (o : Fin k) (t : S),
+  Generative.InquirySufficiency.After Becoming.Narrowing.observe (fun s q x => obs s q) B q o t ↔ B t ∧ obs t q = o
+@Becoming.Narrowing.encode_inj : ∀ {a b : Bool}, Becoming.Narrowing.encode a = Becoming.Narrowing.encode b → a = b
+@Becoming.Narrowing.mem_revise : ∀ {Q : Type} (h : Becoming.Narrowing.Rule Q) (hs : List (Becoming.Narrowing.Rule Q))
+  (o : Becoming.Narrowing.Observation Q), h ∈ Becoming.Narrowing.revise hs o ↔ h ∈ hs ∧ h o.fst = o.snd
+@Becoming.Narrowing.revise_is_after : ∀ {Q : Type} (hs : List (Becoming.Narrowing.Rule Q)) (q : Q) (b : Bool)
+  (h : Becoming.Narrowing.Rule Q),
+  h ∈ Becoming.Narrowing.revise hs (q, b) ↔
+    Generative.InquirySufficiency.After Becoming.Narrowing.observe Becoming.Narrowing.sense (fun x => x ∈ hs) q
+      (Becoming.Narrowing.encode b) h
+@Becoming.Narrowing.narrow_once_iff : ∀ {Q : Type} (hs : List (Becoming.Narrowing.Rule Q)) (q : Q) (b : Bool)
+  (h : Becoming.Narrowing.Rule Q),
+  Generative.InquirySufficiency.After Becoming.Narrowing.observe Becoming.Narrowing.sense (fun x => x ∈ hs) q
+      (Becoming.Narrowing.encode b) h ↔
+    h ∈ hs ∧ h q = b
+@Becoming.Narrowing.after_congr : ∀ {Q : Type} {B B' : Becoming.Narrowing.Rule Q → Prop},
+  (∀ (h : Becoming.Narrowing.Rule Q), B h ↔ B' h) →
+    ∀ (q : Q) (o : Fin 2) (h : Becoming.Narrowing.Rule Q),
+      Generative.InquirySufficiency.After Becoming.Narrowing.observe Becoming.Narrowing.sense B q o h ↔
+        Generative.InquirySufficiency.After Becoming.Narrowing.observe Becoming.Narrowing.sense B' q o h
+@Becoming.Narrowing.narrowed_congr : ∀ {Q : Type} (e : List (Becoming.Narrowing.Observation Q))
+  {B B' : Becoming.Narrowing.Rule Q → Prop},
+  (∀ (h : Becoming.Narrowing.Rule Q), B h ↔ B' h) →
+    ∀ (h : Becoming.Narrowing.Rule Q), Becoming.Narrowing.narrowed B e h ↔ Becoming.Narrowing.narrowed B' e h
+@Becoming.Narrowing.mem_learn_iff : ∀ {Q : Type} (e : List (Becoming.Narrowing.Observation Q))
+  (hs : List (Becoming.Narrowing.Rule Q)) (h : Becoming.Narrowing.Rule Q),
+  h ∈ Becoming.Narrowing.learn hs e ↔ Becoming.Narrowing.narrowed (fun x => x ∈ hs) e h
+@Becoming.Narrowing.mem_learn : ∀ {Q : Type} (h : Becoming.Narrowing.Rule Q) (hs : List (Becoming.Narrowing.Rule Q))
+  (e : List (Becoming.Narrowing.Observation Q)),
+  h ∈ Becoming.Narrowing.learn hs e ↔ h ∈ hs ∧ Becoming.Narrowing.Fits h e
+@Becoming.Narrowing.narrowed_iff_fits : ∀ {Q : Type} (hs : List (Becoming.Narrowing.Rule Q))
+  (e : List (Becoming.Narrowing.Observation Q)) (h : Becoming.Narrowing.Rule Q),
+  Becoming.Narrowing.narrowed (fun x => x ∈ hs) e h ↔ h ∈ hs ∧ Becoming.Narrowing.Fits h e
+@Becoming.Narrowing.actual_retained : ∀ {Q : Type} (actual : Becoming.Narrowing.Rule Q)
+  (hs : List (Becoming.Narrowing.Rule Q)) (e : List (Becoming.Narrowing.Observation Q)),
+  actual ∈ hs → Becoming.Narrowing.Fits actual e → actual ∈ Becoming.Narrowing.learn hs e
+@Becoming.Narrowing.counterevidence_of_not_fits : ∀ {Q : Type} (h : Becoming.Narrowing.Rule Q)
+  (e : List (Becoming.Narrowing.Observation Q)), ¬Becoming.Narrowing.Fits h e → ∃ o, o ∈ e ∧ h o.fst ≠ o.snd
+@Becoming.Narrowing.counterevidence_of_eliminated : ∀ {Q : Type} (h : Becoming.Narrowing.Rule Q)
+  (hs : List (Becoming.Narrowing.Rule Q)) (e : List (Becoming.Narrowing.Observation Q)),
+  h ∈ hs → ¬h ∈ Becoming.Narrowing.learn hs e → ∃ o, o ∈ e ∧ h o.fst ≠ o.snd
+@Becoming.Narrowing.counterevidence_of_dropped : ∀ {Q : Type} {hs : List (Becoming.Narrowing.Rule Q)}
+  {e : List (Becoming.Narrowing.Observation Q)} {h : Becoming.Narrowing.Rule Q},
+  h ∈ hs → ¬Becoming.Narrowing.narrowed (fun x => x ∈ hs) e h → ∃ o, o ∈ e ∧ h o.fst ≠ o.snd
+@Becoming.Narrowing.revise_revise : ∀ {Q : Type} (hs : List (Becoming.Narrowing.Rule Q))
+  (o : Becoming.Narrowing.Observation Q),
+  Becoming.Narrowing.revise (Becoming.Narrowing.revise hs o) o = Becoming.Narrowing.revise hs o
+@Becoming.Narrowing.repeated_observation_idle : ∀ {Q : Type} (hs : List (Becoming.Narrowing.Rule Q))
+  (o : Becoming.Narrowing.Observation Q) (h : Becoming.Narrowing.Rule Q),
+  Becoming.Narrowing.narrowed (fun x => x ∈ hs) [o, o] h ↔ Becoming.Narrowing.narrowed (fun x => x ∈ hs) [o] h
+@Becoming.Narrowing.answer_some : ∀ {Q : Type} {hs : List (Becoming.Narrowing.Rule Q)} {q : Q} {b : Bool},
+  Becoming.Narrowing.answer hs q = some b → Becoming.Narrowing.Settles (fun x => x ∈ hs) q b
+@Becoming.Narrowing.answer_none : ∀ {Q : Type} {hs : List (Becoming.Narrowing.Rule Q)} {q : Q} {b : Bool},
+  Becoming.Narrowing.answer hs q = none → ¬Becoming.Narrowing.Settles (fun x => x ∈ hs) q b
+@Becoming.Narrowing.answer_of_settles : ∀ {Q : Type} {hs : List (Becoming.Narrowing.Rule Q)} {q : Q} {b : Bool},
+  Becoming.Narrowing.Settles (fun x => x ∈ hs) q b → Becoming.Narrowing.answer hs q = some b
+@Becoming.Narrowing.answer_iff : ∀ {Q : Type} (hs : List (Becoming.Narrowing.Rule Q)) (q : Q) (b : Bool),
+  Becoming.Narrowing.answer hs q = some b ↔ hs ≠ [] ∧ ∀ (h : Becoming.Narrowing.Rule Q), h ∈ hs → h q = b
+@Becoming.Narrowing.settles_learn_iff : ∀ {Q : Type} {hs : List (Becoming.Narrowing.Rule Q)}
+  {e : List (Becoming.Narrowing.Observation Q)} {q : Q} {b : Bool},
+  Becoming.Narrowing.Settles (fun x => x ∈ Becoming.Narrowing.learn hs e) q b ↔
+    Becoming.Narrowing.Settles (Becoming.Narrowing.narrowed (fun x => x ∈ hs) e) q b
+@Becoming.Narrowing.answer_safe : ∀ {Q : Type} (hs : List (Becoming.Narrowing.Rule Q)),
+  Becoming.Narrowing.Safe hs (Becoming.Narrowing.answer hs)
+@Becoming.Narrowing.safe_definite_requires_agreement : ∀ {Q : Type} (hs : List (Becoming.Narrowing.Rule Q))
+  (a : Q → Option Bool),
+  Becoming.Narrowing.Safe hs a → hs ≠ [] → ∀ (q : Q) (b : Bool), a q = some b → Becoming.Narrowing.answer hs q = some b
+@Becoming.Narrowing.answer_maximal : ∀ {Q : Type} (hs : List (Becoming.Narrowing.Rule Q)),
+  hs ≠ [] → Becoming.Narrowing.Maximal hs (Becoming.Narrowing.answer hs)
+@Becoming.Narrowing.unique_maximal_safe : ∀ {Q : Type} (hs : List (Becoming.Narrowing.Rule Q)),
+  hs ≠ [] →
+    ∀ (a : Q → Option Bool),
+      Becoming.Narrowing.Safe hs a → Becoming.Narrowing.Maximal hs a → ∀ (q : Q), a q = Becoming.Narrowing.answer hs q
+@Becoming.Narrowing.unique_maximal_safe_of_ext : ∀ {Q : Type},
+  (∀ (f g : Q → Option Bool), (∀ (q : Q), f q = g q) → f = g) →
+    ∀ (hs : List (Becoming.Narrowing.Rule Q)),
+      hs ≠ [] →
+        ∀ (a : Q → Option Bool),
+          Becoming.Narrowing.Safe hs a → Becoming.Narrowing.Maximal hs a → a = Becoming.Narrowing.answer hs
+@Becoming.Narrowing.known_rule_makes_answer_correct : ∀ {Q : Type} (actual : Becoming.Narrowing.Rule Q)
+  (hs : List (Becoming.Narrowing.Rule Q)) (e : List (Becoming.Narrowing.Observation Q)),
+  actual ∈ hs →
+    Becoming.Narrowing.Fits actual e →
+      ∀ (q : Q) (b : Bool), Becoming.Narrowing.answer (Becoming.Narrowing.learn hs e) q = some b → b = actual q
+@Becoming.Narrowing.acquired_evidence_faithful : ∀ {Q : Type} (actual : Becoming.Narrowing.Rule Q) (fuel : Nat)
+  (qs : List Q), Becoming.Narrowing.Fits actual (Becoming.Narrowing.acquire actual fuel qs)
+@Becoming.Narrowing.acquired_answers_correct : ∀ {Q : Type} (actual : Becoming.Narrowing.Rule Q)
+  (hs : List (Becoming.Narrowing.Rule Q)),
+  actual ∈ hs →
+    ∀ (fuel : Nat) (qs : List Q) (q : Q) (b : Bool),
+      Becoming.Narrowing.answer (Becoming.Narrowing.learn hs (Becoming.Narrowing.acquire actual fuel qs)) q = some b →
+        b = actual q
+@Becoming.Narrowing.answer_transport : ∀ {Q R : Type} (hs : List (Becoming.Narrowing.Rule Q)) (decode : R → Q) (r : R),
+  Becoming.Narrowing.answer (List.map (Becoming.Narrowing.transport decode) hs) r =
+    Becoming.Narrowing.answer hs (decode r)
+@Becoming.Narrowing.learning_transport : ∀ {Q R : Type} (encode' : Q → R) (decode : R → Q),
+  (∀ (q : Q), decode (encode' q) = q) →
+    ∀ (hs : List (Becoming.Narrowing.Rule Q)) (e : List (Becoming.Narrowing.Observation Q)),
+      Becoming.Narrowing.learn (List.map (Becoming.Narrowing.transport decode) hs)
+          (List.map (fun o => (encode' o.fst, o.snd)) e) =
+        List.map (Becoming.Narrowing.transport decode) (Becoming.Narrowing.learn hs e)
+@Becoming.Narrowing.narrowing_transport : ∀ {Q R : Type} (hs : List (Becoming.Narrowing.Rule Q))
+  (e : List (Becoming.Narrowing.Observation Q)) (encode' : Q → R) (decode : R → Q),
+  (∀ (q : Q), decode (encode' q) = q) →
+    ∀ (g : Becoming.Narrowing.Rule R),
+      Becoming.Narrowing.narrowed (fun x => x ∈ List.map (Becoming.Narrowing.transport decode) hs)
+          (List.map (fun o => (encode' o.fst, o.snd)) e) g ↔
+        g ∈ List.map (Becoming.Narrowing.transport decode) (Becoming.Narrowing.learn hs e)
+Becoming.Narrowing.wrong_reencoding_breaks_transfer : Becoming.Narrowing.answer
+    (List.map (Becoming.Narrowing.transport fun b => !b) [id]) true ≠
+  Becoming.Narrowing.answer [id] true
+Becoming.Narrowing.repertoire_complete : ∀ (h : Becoming.Narrowing.Rule Bool),
+  ∃ g, g ∈ Becoming.Narrowing.repertoire ∧ ∀ (b : Bool), g b = h b
+Becoming.Narrowing.repertoire_complete_of_ext : (∀ (f g : Becoming.Narrowing.Rule Bool),
+    (∀ (b : Bool), f b = g b) → f = g) →
+  ∀ (h : Becoming.Narrowing.Rule Bool), h ∈ Becoming.Narrowing.repertoire
+Becoming.Narrowing.full_repertoire_correct : ∀ (actual : Becoming.Narrowing.Rule Bool) (fuel : Nat) (qs : List Bool)
+  (q b : Bool),
+  Becoming.Narrowing.answer
+        (Becoming.Narrowing.learn Becoming.Narrowing.repertoire (Becoming.Narrowing.acquire actual fuel qs)) q =
+      some b →
+    b = actual q
+Becoming.Narrowing.full_repertoire_settles_actual : ∀ (actual : Becoming.Narrowing.Rule Bool) (fuel : Nat)
+  (qs : List Bool) {q b : Bool},
+  Becoming.Narrowing.Settles
+      (Becoming.Narrowing.narrowed (fun x => x ∈ Becoming.Narrowing.repertoire)
+        (Becoming.Narrowing.acquire actual fuel qs))
+      q b →
+    b = actual q
+Becoming.Narrowing.before_acquisition_abstains : Becoming.Narrowing.answer Becoming.Narrowing.repertoire true = none
+Becoming.Narrowing.one_sample_leaves_other_case_unsettled : Becoming.Narrowing.answer
+      (Becoming.Narrowing.learn Becoming.Narrowing.repertoire Becoming.Narrowing.oneSample) true =
+    some true ∧
+  Becoming.Narrowing.answer (Becoming.Narrowing.learn Becoming.Narrowing.repertoire Becoming.Narrowing.oneSample)
+      false =
+    none
+Becoming.Narrowing.contrasting_acquisition_settles_both : Becoming.Narrowing.answer
+      (Becoming.Narrowing.learn Becoming.Narrowing.repertoire Becoming.Narrowing.twoSamples) true =
+    some true ∧
+  Becoming.Narrowing.answer (Becoming.Narrowing.learn Becoming.Narrowing.repertoire Becoming.Narrowing.twoSamples)
+      false =
+    some false
+Becoming.Narrowing.learned_response_differs_from_last_report : Becoming.Narrowing.twoSamples.getLast? =
+    some (false, false) ∧
+  Becoming.Narrowing.answer (Becoming.Narrowing.learn Becoming.Narrowing.repertoire Becoming.Narrowing.twoSamples)
+      true =
+    some true
+Becoming.Narrowing.repeated_same_case_does_not_settle_other : Becoming.Narrowing.answer
+    (Becoming.Narrowing.learn Becoming.Narrowing.repertoire (Becoming.Narrowing.acquire id 2 [true, true])) false =
+  none
+Becoming.Narrowing.insufficient_support_retains_ambiguity : Becoming.Narrowing.answer
+    (Becoming.Narrowing.learn Becoming.Narrowing.repertoire (Becoming.Narrowing.acquire id 1 [true, false])) false =
+  none
+Becoming.Narrowing.wrong_model_class_can_be_confidently_wrong : Becoming.Narrowing.answer
+      (Becoming.Narrowing.learn [fun x => true] (Becoming.Narrowing.acquire id 1 [true])) false =
+    some true ∧
+  id false = false
+Becoming.Narrowing.inconsistent_evidence_yields_no_answer : Becoming.Narrowing.answer
+    (Becoming.Narrowing.learn Becoming.Narrowing.repertoire [(true, true), (true, false)]) false =
+  none
+Becoming.Narrowing.one_sample_settles_one : Becoming.Narrowing.Settles
+    (Becoming.Narrowing.narrowed (fun x => x ∈ Becoming.Narrowing.repertoire) Becoming.Narrowing.oneSample) true true ∧
+  ∀ (b : Bool),
+    ¬Becoming.Narrowing.Settles
+        (Becoming.Narrowing.narrowed (fun x => x ∈ Becoming.Narrowing.repertoire) Becoming.Narrowing.oneSample) false b
+Becoming.Narrowing.contrasting_settles_both : Becoming.Narrowing.Settles
+    (Becoming.Narrowing.narrowed (fun x => x ∈ Becoming.Narrowing.repertoire) Becoming.Narrowing.twoSamples) true true ∧
+  Becoming.Narrowing.Settles
+    (Becoming.Narrowing.narrowed (fun x => x ∈ Becoming.Narrowing.repertoire) Becoming.Narrowing.twoSamples) false false
+Becoming.Narrowing.settled_differs_from_last : Becoming.Narrowing.twoSamples.getLast? = some (false, false) ∧
+  Becoming.Narrowing.Settles
+    (Becoming.Narrowing.narrowed (fun x => x ∈ Becoming.Narrowing.repertoire) Becoming.Narrowing.twoSamples) true true
+Becoming.Narrowing.repeated_case_leaves_other : ∀ (b : Bool),
+  ¬Becoming.Narrowing.Settles
+      (Becoming.Narrowing.narrowed (fun x => x ∈ Becoming.Narrowing.repertoire)
+        (Becoming.Narrowing.acquire id 2 [true, true]))
+      false b
+Becoming.Narrowing.contradiction_settles_nothing : ∀ (b : Bool),
+  ¬Becoming.Narrowing.Settles
+      (Becoming.Narrowing.narrowed (fun x => x ∈ Becoming.Narrowing.repertoire) [(true, true), (true, false)]) false b
+Becoming.Narrowing.narrow_class_settles_wrongly : Becoming.Narrowing.Settles
+    (Becoming.Narrowing.narrowed (fun x => x ∈ [fun x => true]) (Becoming.Narrowing.acquire id 1 [true])) false true ∧
+  id false = false

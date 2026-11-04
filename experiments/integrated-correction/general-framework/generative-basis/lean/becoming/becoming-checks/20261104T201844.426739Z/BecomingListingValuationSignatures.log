@@ -1,0 +1,1270 @@
+Becoming.ListingValuation.ite_mul_add : ∀ (p : Prop) [inst : Decidable p] (w a b : Nat),
+  (if p then w * (a + b) else 0) = (if p then w * a else 0) + if p then w * b else 0
+Becoming.ListingValuation.ite_mul_left : ∀ (p : Prop) [inst : Decidable p] (w k f : Nat),
+  (if p then w * (k * f) else 0) = k * if p then w * f else 0
+Becoming.ListingValuation.cond_split_least : ∀ (x y : Nat) (b : Bool),
+  (bif b then x else y) = (bif decide (x ≤ y) then x else y) + bif b then x - y else y - x
+Becoming.ListingValuation.cond_sub_eq_zero_iff : ∀ (x y : Nat) (b : Bool),
+  (bif b then x - y else y - x) = 0 ↔ (b = true → x ≤ y) ∧ (b = false → y ≤ x)
+@Becoming.ListingValuation.lt_of_sub_pos_core : ∀ {m n : Nat}, 0 < n - m → m < n
+Becoming.ListingValuation.cond_sub_pos_iff : ∀ (x y : Nat) (b : Bool),
+  (0 < bif b then x - y else y - x) ↔ b = true ∧ y < x ∨ b = false ∧ x < y
+@Becoming.ListingValuation.answer_true_iff : ∀ {C K : Type} [inst : DecidableEq K]
+  (pm : Becoming.HeldForReading.Model C) (g l : C → Nat) (π : C → K) (z : K),
+  Becoming.ListingValuation.answer pm g l π z = true ↔
+    Becoming.ListingValuation.within pm π g z < Becoming.ListingValuation.within pm π l z
+@Becoming.ListingValuation.answer_false_iff : ∀ {C K : Type} [inst : DecidableEq K]
+  (pm : Becoming.HeldForReading.Model C) (g l : C → Nat) (π : C → K) (z : K),
+  Becoming.ListingValuation.answer pm g l π z = false ↔
+    ¬Becoming.ListingValuation.within pm π g z < Becoming.ListingValuation.within pm π l z
+@Becoming.ListingValuation.goExcessWithin_eq : ∀ {C K : Type} [inst : DecidableEq K]
+  (m : Becoming.HeldForReading.Model C) (gain loss : C → Nat) (π : C → K) (z : K),
+  Becoming.HeldForReading.goExcessWithin m gain loss π z =
+    Becoming.ListingValuation.within m π (fun c => gain c - loss c) z
+@Becoming.ListingValuation.offExcessWithin_eq : ∀ {C K : Type} [inst : DecidableEq K]
+  (m : Becoming.HeldForReading.Model C) (gain loss : C → Nat) (π : C → K) (z : K),
+  Becoming.HeldForReading.offExcessWithin m gain loss π z =
+    Becoming.ListingValuation.within m π (fun c => loss c - gain c) z
+@Becoming.ListingValuation.within_add : ∀ {C K : Type} [inst : DecidableEq K] (pm : Becoming.HeldForReading.Model C)
+  (π : C → K) (f h : C → Nat) (z : K),
+  Becoming.ListingValuation.within pm π (fun c => f c + h c) z =
+    Becoming.ListingValuation.within pm π f z + Becoming.ListingValuation.within pm π h z
+@Becoming.ListingValuation.within_mul : ∀ {C K : Type} [inst : DecidableEq K] (pm : Becoming.HeldForReading.Model C)
+  (π : C → K) (k : Nat) (f : C → Nat) (z : K),
+  Becoming.ListingValuation.within pm π (fun c => k * f c) z = k * Becoming.ListingValuation.within pm π f z
+@Becoming.ListingValuation.within_congr_weighted : ∀ {C K : Type} [inst : DecidableEq K]
+  (pm : Becoming.HeldForReading.Model C) (π : C → K) {f h : C → Nat},
+  (∀ (c : C), c ∈ pm.listed → 0 < pm.weight c → f c = h c) →
+    ∀ (z : K), Becoming.ListingValuation.within pm π f z = Becoming.ListingValuation.within pm π h z
+@Becoming.ListingValuation.within_turn : ∀ {C K : Type} [inst : DecidableEq K] (m : Becoming.HeldForReading.Model C)
+  (gain loss : C → Nat) (π : C → K) (z : K),
+  Becoming.ListingValuation.within m π loss z + Becoming.HeldForReading.goExcessWithin m gain loss π z =
+    Becoming.ListingValuation.within m π gain z + Becoming.HeldForReading.offExcessWithin m gain loss π z
+@Becoming.ListingValuation.shortfall_split : ∀ {C K : Type} [inst : DecidableEq K] (m : Becoming.HeldForReading.Model C)
+  (gain loss : C → Nat) (π : C → K) {zs : List K},
+  List.Pairwise (fun a b => a ≠ b) zs →
+    (∀ (c : C), c ∈ m.listed → π c ∈ zs) →
+      ∀ (s : K → Bool),
+        (Becoming.HeldForReading.shortfall m gain loss fun c => s (π c)) =
+          (Becoming.HeldForReading.shortfall m gain loss fun c =>
+              Becoming.HeldForReading.leastThrough m gain loss π (π c)) +
+            Becoming.ListingValuation.residual m gain loss π zs s
+@Becoming.ListingValuation.residual_zero_iff : ∀ {C K : Type} [inst : DecidableEq K]
+  (m : Becoming.HeldForReading.Model C) (gain loss : C → Nat) (π : C → K) (zs : List K) (s : K → Bool),
+  Becoming.ListingValuation.residual m gain loss π zs s = 0 ↔
+    ∀ (z : K),
+      z ∈ zs →
+        (s z = true →
+            Becoming.HeldForReading.goExcessWithin m gain loss π z ≤
+              Becoming.HeldForReading.offExcessWithin m gain loss π z) ∧
+          (s z = false →
+            Becoming.HeldForReading.offExcessWithin m gain loss π z ≤
+              Becoming.HeldForReading.goExcessWithin m gain loss π z)
+@Becoming.ListingValuation.residual_pos_iff : ∀ {C K : Type} [inst : DecidableEq K]
+  (m : Becoming.HeldForReading.Model C) (gain loss : C → Nat) (π : C → K) (zs : List K) (s : K → Bool),
+  0 < Becoming.ListingValuation.residual m gain loss π zs s ↔
+    ∃ z,
+      z ∈ zs ∧
+        (s z = true ∧
+            Becoming.HeldForReading.offExcessWithin m gain loss π z <
+              Becoming.HeldForReading.goExcessWithin m gain loss π z ∨
+          s z = false ∧
+            Becoming.HeldForReading.goExcessWithin m gain loss π z <
+              Becoming.HeldForReading.offExcessWithin m gain loss π z)
+@Becoming.ListingValuation.unweighted_cell : ∀ {C K : Type} [inst : DecidableEq K] (m : Becoming.HeldForReading.Model C)
+  (gain loss : C → Nat) (π : C → K) {z : K},
+  (∀ (c : C), c ∈ m.listed → π c = z → m.weight c = 0) →
+    Becoming.HeldForReading.goExcessWithin m gain loss π z = 0 ∧
+      Becoming.HeldForReading.offExcessWithin m gain loss π z = 0 ∧
+        ∀ (b : Bool),
+          (bif b then
+              Becoming.HeldForReading.goExcessWithin m gain loss π z -
+                Becoming.HeldForReading.offExcessWithin m gain loss π z
+            else
+              Becoming.HeldForReading.offExcessWithin m gain loss π z -
+                Becoming.HeldForReading.goExcessWithin m gain loss π z) =
+            0
+@Becoming.ListingValuation.answer_residual_zero_iff : ∀ {C K : Type} [inst : DecidableEq K]
+  (m pm : Becoming.HeldForReading.Model C) (gain loss g l : C → Nat) (π : C → K) (zs : List K),
+  Becoming.ListingValuation.residual m gain loss π zs (Becoming.ListingValuation.answer pm g l π) = 0 ↔
+    ∀ (z : K),
+      z ∈ zs →
+        (Becoming.ListingValuation.within pm π g z < Becoming.ListingValuation.within pm π l z →
+            Becoming.HeldForReading.goExcessWithin m gain loss π z ≤
+              Becoming.HeldForReading.offExcessWithin m gain loss π z) ∧
+          (¬Becoming.ListingValuation.within pm π g z < Becoming.ListingValuation.within pm π l z →
+            Becoming.HeldForReading.offExcessWithin m gain loss π z ≤
+              Becoming.HeldForReading.goExcessWithin m gain loss π z)
+@Becoming.ListingValuation.answer_least_of_scaled : ∀ {C K : Type} [inst : DecidableEq K]
+  (m : Becoming.HeldForReading.Model C) (gain loss g l : C → Nat) (π : C → K) (zs : List K) {p q : Nat},
+  0 < p →
+    0 < q →
+      (∀ (c : C), c ∈ m.listed → 0 < m.weight c → q * g c + p * loss c = q * l c + p * gain c) →
+        Becoming.ListingValuation.residual m gain loss π zs (Becoming.ListingValuation.answer m g l π) = 0
+@Becoming.ListingValuation.answer_least_of_net : ∀ {C K : Type} [inst : DecidableEq K]
+  (m : Becoming.HeldForReading.Model C) (gain loss g l : C → Nat) (π : C → K) (zs : List K),
+  (∀ (c : C), c ∈ m.listed → 0 < m.weight c → g c + loss c = l c + gain c) →
+    Becoming.ListingValuation.residual m gain loss π zs (Becoming.ListingValuation.answer m g l π) = 0
+@Becoming.ListingValuation.after_le_iff_shortfall : ∀ {C : Type} (m : Becoming.HeldForReading.Model C)
+  (gain loss : C → Nat) (r r' : C → Bool),
+  m.after (Becoming.HeldForReading.shifted gain loss) (Becoming.HeldForReading.byRule r) ≤
+      m.after (Becoming.HeldForReading.shifted gain loss) (Becoming.HeldForReading.byRule r') ↔
+    Becoming.HeldForReading.shortfall m gain loss r' ≤ Becoming.HeldForReading.shortfall m gain loss r
+@Becoming.ListingValuation.after_lt_iff_shortfall : ∀ {C : Type} (m : Becoming.HeldForReading.Model C)
+  (gain loss : C → Nat) (r r' : C → Bool),
+  m.after (Becoming.HeldForReading.shifted gain loss) (Becoming.HeldForReading.byRule r) <
+      m.after (Becoming.HeldForReading.shifted gain loss) (Becoming.HeldForReading.byRule r') ↔
+    Becoming.HeldForReading.shortfall m gain loss r' < Becoming.HeldForReading.shortfall m gain loss r
+@Becoming.ListingValuation.const_worth : ∀ {C : Type} (m : Becoming.HeldForReading.Model C) (gain loss : C → Nat)
+  (r : C → Bool) (b : Bool),
+  (∀ (c : C), c ∈ m.listed → r c = b) →
+    m.after (Becoming.HeldForReading.shifted gain loss) (Becoming.HeldForReading.byRule r) =
+      m.committed (Becoming.HeldForReading.shifted gain loss)
+        (bif b then Becoming.HeldForReading.Move.off else Becoming.HeldForReading.Move.go)
+@Becoming.ListingValuation.weightOf_pos_iff : ∀ {C : Type} [inst : DecidableEq C] (pm : Becoming.HeldForReading.Model C)
+  (c : C), 0 < Becoming.ListingValuation.weightOf pm c ↔ c ∈ pm.listed ∧ 0 < pm.weight c
+@Becoming.ListingValuation.within_id : ∀ {C : Type} [inst : DecidableEq C] (pm : Becoming.HeldForReading.Model C)
+  (f : C → Nat) (c : C), Becoming.ListingValuation.within pm id f c = f c * Becoming.ListingValuation.weightOf pm c
+@Becoming.ListingValuation.unweighted_released : ∀ {C : Type} [inst : DecidableEq C]
+  (pm : Becoming.HeldForReading.Model C) (g l : C → Nat) (z : C),
+  Becoming.ListingValuation.weightOf pm z = 0 →
+    ¬Becoming.ListingValuation.within pm id g z < Becoming.ListingValuation.within pm id l z
+@Becoming.ListingValuation.weighed_stops_iff : ∀ {C : Type} [inst : DecidableEq C]
+  (pm : Becoming.HeldForReading.Model C) (gain loss g l : C → Nat),
+  (∀ (c : C), c ∈ pm.listed → 0 < pm.weight c → g c + loss c = l c + gain c) →
+    ∀ (z : C),
+      0 < Becoming.ListingValuation.weightOf pm z →
+        (Becoming.ListingValuation.within pm id g z < Becoming.ListingValuation.within pm id l z ↔ gain z < loss z)
+@Becoming.ListingValuation.told_residual_zero_iff : ∀ {C : Type} [inst : DecidableEq C]
+  (m pm : Becoming.HeldForReading.Model C) (gain loss g l : C → Nat) {zs : List C},
+  (∀ (c : C), c ∈ m.listed → c ∈ zs) →
+    (∀ (c : C), c ∈ pm.listed → 0 < pm.weight c → g c + loss c = l c + gain c) →
+      (Becoming.ListingValuation.residual m gain loss id zs (Becoming.ListingValuation.answer pm g l id) = 0 ↔
+        ∀ (c : C), c ∈ m.listed → 0 < m.weight c → gain c < loss c → 0 < Becoming.ListingValuation.weightOf pm c)
+@Becoming.ListingValuation.told_shortfall_zero_iff : ∀ {C : Type} [inst : DecidableEq C]
+  (m pm : Becoming.HeldForReading.Model C) (gain loss g l : C → Nat),
+  (∀ (c : C), c ∈ pm.listed → 0 < pm.weight c → g c + loss c = l c + gain c) →
+    (Becoming.HeldForReading.shortfall m gain loss (Becoming.ListingValuation.answer pm g l id) = 0 ↔
+      ∀ (c : C), c ∈ m.listed → 0 < m.weight c → gain c < loss c → 0 < Becoming.ListingValuation.weightOf pm c)
+@Becoming.ListingValuation.shortfall_congr_on : ∀ {C : Type} (m : Becoming.HeldForReading.Model C) (gain loss : C → Nat)
+  {r r' : C → Bool},
+  (∀ (c : C), c ∈ m.listed → r c = r' c) →
+    Becoming.HeldForReading.shortfall m gain loss r = Becoming.HeldForReading.shortfall m gain loss r'
+@Becoming.ListingValuation.least_falls : ∀ {C K L : Type} [inst : DecidableEq K] [inst_1 : DecidableEq L]
+  (m : Becoming.HeldForReading.Model C) (gain loss : C → Nat) (π : C → K) (π' : C → L) (f : L → K),
+  (∀ (c : C), c ∈ m.listed → π c = f (π' c)) →
+    ∀ {zs' : List L},
+      List.Pairwise (fun a b => a ≠ b) zs' →
+        (∀ (c : C), c ∈ m.listed → π' c ∈ zs') →
+          (Becoming.HeldForReading.shortfall m gain loss fun c =>
+              Becoming.HeldForReading.leastThrough m gain loss π' (π' c)) ≤
+            Becoming.HeldForReading.shortfall m gain loss fun c =>
+              Becoming.HeldForReading.leastThrough m gain loss π (π c)
+@Becoming.ListingValuation.informed_le : ∀ {C K L : Type} [inst : DecidableEq L] (m : Becoming.HeldForReading.Model C)
+  (gain loss : C → Nat) (π : C → K) (π' : C → L) (f : L → K),
+  (∀ (c : C), c ∈ m.listed → π c = f (π' c)) →
+    ∀ {zs' : List L},
+      List.Pairwise (fun a b => a ≠ b) zs' →
+        (∀ (c : C), c ∈ m.listed → π' c ∈ zs') →
+          ∀ (s' : L → Bool),
+            Becoming.ListingValuation.residual m gain loss π' zs' s' = 0 →
+              ∀ (s : K → Bool),
+                ((Becoming.HeldForReading.shortfall m gain loss fun c => s' (π' c)) ≤
+                    Becoming.HeldForReading.shortfall m gain loss fun c => s (π c)) ∧
+                  m.after (Becoming.HeldForReading.shifted gain loss)
+                      (Becoming.HeldForReading.byRule fun c => s (π c)) ≤
+                    m.after (Becoming.HeldForReading.shifted gain loss)
+                      (Becoming.HeldForReading.byRule fun c => s' (π' c))
+@Becoming.ListingValuation.informed_answer_le : ∀ {C K L : Type} [inst : DecidableEq L]
+  (m : Becoming.HeldForReading.Model C) (gain loss g l : C → Nat),
+  (∀ (c : C), c ∈ m.listed → 0 < m.weight c → g c + loss c = l c + gain c) →
+    ∀ (π : C → K) (π' : C → L) (f : L → K),
+      (∀ (c : C), c ∈ m.listed → π c = f (π' c)) →
+        ∀ {zs' : List L},
+          List.Pairwise (fun a b => a ≠ b) zs' →
+            (∀ (c : C), c ∈ m.listed → π' c ∈ zs') →
+              ∀ (s : K → Bool),
+                m.after (Becoming.HeldForReading.shifted gain loss) (Becoming.HeldForReading.byRule fun c => s (π c)) ≤
+                  m.after (Becoming.HeldForReading.shifted gain loss)
+                    (Becoming.HeldForReading.byRule fun c => Becoming.ListingValuation.answer m g l π' (π' c))
+@Becoming.ListingValuation.informed_le_add_residual : ∀ {C K L : Type} [inst : DecidableEq L]
+  (m : Becoming.HeldForReading.Model C) (gain loss : C → Nat) (π : C → K) (π' : C → L) (f : L → K),
+  (∀ (c : C), c ∈ m.listed → π c = f (π' c)) →
+    ∀ {zs' : List L},
+      List.Pairwise (fun a b => a ≠ b) zs' →
+        (∀ (c : C), c ∈ m.listed → π' c ∈ zs') →
+          ∀ (s' : L → Bool) (s : K → Bool),
+            m.after (Becoming.HeldForReading.shifted gain loss) (Becoming.HeldForReading.byRule fun c => s (π c)) ≤
+              m.after (Becoming.HeldForReading.shifted gain loss) (Becoming.HeldForReading.byRule fun c => s' (π' c)) +
+                Becoming.ListingValuation.residual m gain loss π' zs' s'
+@Becoming.ListingValuation.informed_lt_iff : ∀ {C K L : Type} [inst : DecidableEq K] [inst_1 : DecidableEq L]
+  (m : Becoming.HeldForReading.Model C) (gain loss : C → Nat) (π : C → K) (π' : C → L) (f : L → K),
+  (∀ (c : C), c ∈ m.listed → π c = f (π' c)) →
+    ∀ {zs : List K} {zs' : List L},
+      List.Pairwise (fun a b => a ≠ b) zs →
+        (∀ (c : C), c ∈ m.listed → π c ∈ zs) →
+          List.Pairwise (fun a b => a ≠ b) zs' →
+            (∀ (c : C), c ∈ m.listed → π' c ∈ zs') →
+              ∀ (s' : L → Bool),
+                Becoming.ListingValuation.residual m gain loss π' zs' s' = 0 →
+                  ∀ (s : K → Bool),
+                    m.after (Becoming.HeldForReading.shifted gain loss)
+                          (Becoming.HeldForReading.byRule fun c => s (π c)) <
+                        m.after (Becoming.HeldForReading.shifted gain loss)
+                          (Becoming.HeldForReading.byRule fun c => s' (π' c)) ↔
+                      ((Becoming.HeldForReading.shortfall m gain loss fun c =>
+                            Becoming.HeldForReading.leastThrough m gain loss π' (π' c)) <
+                          Becoming.HeldForReading.shortfall m gain loss fun c =>
+                            Becoming.HeldForReading.leastThrough m gain loss π (π c)) ∨
+                        0 < Becoming.ListingValuation.residual m gain loss π zs s
+@Becoming.ListingValuation.forgone_lt_iff : ∀ {C : Type} (m : Becoming.HeldForReading.Model C) (gain loss : C → Nat)
+  (r r' : C → Bool) (k k' : Nat),
+  m.after (Becoming.HeldForReading.shifted gain loss) (Becoming.HeldForReading.byRule r') + k <
+      m.after (Becoming.HeldForReading.shifted gain loss) (Becoming.HeldForReading.byRule r) + k' ↔
+    Becoming.HeldForReading.shortfall m gain loss r + k < Becoming.HeldForReading.shortfall m gain loss r' + k'
+@Becoming.ListingValuation.forgone_through_lt_iff : ∀ {C K L : Type} [inst : DecidableEq K] [inst_1 : DecidableEq L]
+  (m : Becoming.HeldForReading.Model C) (gain loss : C → Nat) (π : C → K) (π' : C → L) {zs : List K} {zs' : List L},
+  List.Pairwise (fun a b => a ≠ b) zs →
+    (∀ (c : C), c ∈ m.listed → π c ∈ zs) →
+      List.Pairwise (fun a b => a ≠ b) zs' →
+        (∀ (c : C), c ∈ m.listed → π' c ∈ zs') →
+          ∀ (s : K → Bool) (s' : L → Bool) (k k' : Nat),
+            m.after (Becoming.HeldForReading.shifted gain loss) (Becoming.HeldForReading.byRule fun c => s' (π' c)) +
+                  k <
+                m.after (Becoming.HeldForReading.shifted gain loss) (Becoming.HeldForReading.byRule fun c => s (π c)) +
+                  k' ↔
+              (Becoming.HeldForReading.shortfall m gain loss fun c =>
+                      Becoming.HeldForReading.leastThrough m gain loss π (π c)) +
+                    Becoming.ListingValuation.residual m gain loss π zs s +
+                  k <
+                (Becoming.HeldForReading.shortfall m gain loss fun c =>
+                      Becoming.HeldForReading.leastThrough m gain loss π' (π' c)) +
+                    Becoming.ListingValuation.residual m gain loss π' zs' s' +
+                  k'
+Becoming.ListingValuation.add_lt_add_left_iff : ∀ (a x y : Nat), a + x < a + y ↔ x < y
+@Becoming.ListingValuation.add_lt_iff_sub_add_lt : ∀ {a a' r r' k : Nat},
+  a' ≤ a → (a + r + k < a' + r' + k ↔ a - a' + r < r')
+@Becoming.ListingValuation.refined_lt_iff : ∀ {C K L : Type} [inst : DecidableEq K] [inst_1 : DecidableEq L]
+  (m : Becoming.HeldForReading.Model C) (gain loss : C → Nat) (π : C → K) (π' : C → L) (f : L → K),
+  (∀ (c : C), c ∈ m.listed → π c = f (π' c)) →
+    ∀ {zs : List K} {zs' : List L},
+      List.Pairwise (fun a b => a ≠ b) zs →
+        (∀ (c : C), c ∈ m.listed → π c ∈ zs) →
+          List.Pairwise (fun a b => a ≠ b) zs' →
+            (∀ (c : C), c ∈ m.listed → π' c ∈ zs') →
+              ∀ (s : K → Bool) (s' : L → Bool) (k : Nat),
+                m.after (Becoming.HeldForReading.shifted gain loss)
+                        (Becoming.HeldForReading.byRule fun c => s' (π' c)) +
+                      k <
+                    m.after (Becoming.HeldForReading.shifted gain loss)
+                        (Becoming.HeldForReading.byRule fun c => s (π c)) +
+                      k ↔
+                  ((Becoming.HeldForReading.shortfall m gain loss fun c =>
+                          Becoming.HeldForReading.leastThrough m gain loss π (π c)) -
+                        Becoming.HeldForReading.shortfall m gain loss fun c =>
+                          Becoming.HeldForReading.leastThrough m gain loss π' (π' c)) +
+                      Becoming.ListingValuation.residual m gain loss π zs s <
+                    Becoming.ListingValuation.residual m gain loss π' zs' s'
+@Becoming.ListingValuation.forgone_least_iff : ∀ {C K L : Type} [inst : DecidableEq K] [inst_1 : DecidableEq L]
+  (m : Becoming.HeldForReading.Model C) (gain loss g l : C → Nat),
+  (∀ (c : C), c ∈ m.listed → 0 < m.weight c → g c + loss c = l c + gain c) →
+    ∀ (π : C → K) (π' : C → L) {zs : List K} {zs' : List L},
+      List.Pairwise (fun a b => a ≠ b) zs →
+        (∀ (c : C), c ∈ m.listed → π c ∈ zs) →
+          List.Pairwise (fun a b => a ≠ b) zs' →
+            (∀ (c : C), c ∈ m.listed → π' c ∈ zs') →
+              ∀ (k k' : Nat),
+                m.after (Becoming.HeldForReading.shifted gain loss)
+                        (Becoming.HeldForReading.byRule fun c => Becoming.ListingValuation.answer m g l π' (π' c)) +
+                      k <
+                    m.after (Becoming.HeldForReading.shifted gain loss)
+                        (Becoming.HeldForReading.byRule fun c => Becoming.ListingValuation.answer m g l π (π c)) +
+                      k' ↔
+                  (Becoming.HeldForReading.shortfall m gain loss fun c =>
+                        Becoming.HeldForReading.leastThrough m gain loss π (π c)) +
+                      k <
+                    (Becoming.HeldForReading.shortfall m gain loss fun c =>
+                        Becoming.HeldForReading.leastThrough m gain loss π' (π' c)) +
+                      k'
+@Becoming.ListingValuation.coarser_not_above : ∀ {C K L : Type} [inst : DecidableEq K] [inst_1 : DecidableEq L]
+  (m : Becoming.HeldForReading.Model C) (gain loss g l : C → Nat),
+  (∀ (c : C), c ∈ m.listed → 0 < m.weight c → g c + loss c = l c + gain c) →
+    ∀ (π : C → K) (π' : C → L) (f : L → K),
+      (∀ (c : C), c ∈ m.listed → π c = f (π' c)) →
+        ∀ {zs : List K} {zs' : List L},
+          List.Pairwise (fun a b => a ≠ b) zs →
+            (∀ (c : C), c ∈ m.listed → π c ∈ zs) →
+              List.Pairwise (fun a b => a ≠ b) zs' →
+                (∀ (c : C), c ∈ m.listed → π' c ∈ zs') →
+                  ∀ {k k' : Nat},
+                    k' ≤ k →
+                      ¬m.after (Becoming.HeldForReading.shifted gain loss)
+                              (Becoming.HeldForReading.byRule fun c =>
+                                Becoming.ListingValuation.answer m g l π' (π' c)) +
+                            k <
+                          m.after (Becoming.HeldForReading.shifted gain loss)
+                              (Becoming.HeldForReading.byRule fun c => Becoming.ListingValuation.answer m g l π (π c)) +
+                            k'
+@Becoming.ListingValuation.answer_shortfall_least : ∀ {C K : Type} [inst : DecidableEq K]
+  (m : Becoming.HeldForReading.Model C) (gain loss g l : C → Nat) (π : C → K) {zs : List K},
+  List.Pairwise (fun a b => a ≠ b) zs →
+    (∀ (c : C), c ∈ m.listed → π c ∈ zs) →
+      (∀ (c : C), c ∈ m.listed → 0 < m.weight c → g c + loss c = l c + gain c) →
+        (Becoming.HeldForReading.shortfall m gain loss fun c => Becoming.ListingValuation.answer m g l π (π c)) =
+          Becoming.HeldForReading.shortfall m gain loss fun c =>
+            Becoming.HeldForReading.leastThrough m gain loss π (π c)
+@Becoming.ListingValuation.revalued_split : ∀ {C K : Type} [inst : DecidableEq K]
+  (m pm : Becoming.HeldForReading.Model C) (gain loss g l g' l' : C → Nat) (π : C → K) {zs : List K},
+  List.Pairwise (fun a b => a ≠ b) zs →
+    (∀ (c : C), c ∈ m.listed → π c ∈ zs) →
+      (Becoming.HeldForReading.shortfall m gain loss fun c => Becoming.ListingValuation.answer pm g l π (π c)) +
+          Becoming.ListingValuation.residual m gain loss π zs (Becoming.ListingValuation.answer pm g' l' π) =
+        (Becoming.HeldForReading.shortfall m gain loss fun c => Becoming.ListingValuation.answer pm g' l' π (π c)) +
+          Becoming.ListingValuation.residual m gain loss π zs (Becoming.ListingValuation.answer pm g l π)
+@Becoming.ListingValuation.own_least : ∀ {C K : Type} [inst : DecidableEq K] (m : Becoming.HeldForReading.Model C)
+  (g l : C → Nat) (π : C → K) {zs : List K},
+  List.Pairwise (fun a b => a ≠ b) zs →
+    (∀ (c : C), c ∈ m.listed → π c ∈ zs) →
+      ∀ (s : K → Bool),
+        m.after (Becoming.HeldForReading.shifted g l) (Becoming.HeldForReading.byRule fun c => s (π c)) ≤
+          m.after (Becoming.HeldForReading.shifted g l)
+            (Becoming.HeldForReading.byRule fun c => Becoming.ListingValuation.answer m g l π (π c))
+@Becoming.ListingValuation.revalued_lowers_iff : ∀ {C K : Type} [inst : DecidableEq K]
+  (m : Becoming.HeldForReading.Model C) (g l g' l' : C → Nat) (π : C → K) {zs : List K},
+  List.Pairwise (fun a b => a ≠ b) zs →
+    (∀ (c : C), c ∈ m.listed → π c ∈ zs) →
+      (m.after (Becoming.HeldForReading.shifted g l)
+            (Becoming.HeldForReading.byRule fun c => Becoming.ListingValuation.answer m g' l' π (π c)) <
+          m.after (Becoming.HeldForReading.shifted g l)
+            (Becoming.HeldForReading.byRule fun c => Becoming.ListingValuation.answer m g l π (π c)) ↔
+        ∃ z,
+          z ∈ zs ∧
+            (Becoming.ListingValuation.answer m g' l' π z = true ∧
+                Becoming.HeldForReading.offExcessWithin m g l π z < Becoming.HeldForReading.goExcessWithin m g l π z ∨
+              Becoming.ListingValuation.answer m g' l' π z = false ∧
+                Becoming.HeldForReading.goExcessWithin m g l π z < Becoming.HeldForReading.offExcessWithin m g l π z))
+@Becoming.ListingValuation.outcome_least : ∀ {C K : Type} [inst : DecidableEq K] (m : Becoming.HeldForReading.Model C)
+  (g' l' : C → Nat) (π : C → K) (zs : List K),
+  Becoming.ListingValuation.residual m g' l' π zs (Becoming.ListingValuation.answer m g' l' π) = 0
+@Becoming.ListingValuation.residual_pos_of_gains : ∀ {C K : Type} [inst : DecidableEq K]
+  (m pm : Becoming.HeldForReading.Model C) (gain loss g l : C → Nat) (π : C → K) {zs : List K},
+  List.Pairwise (fun a b => a ≠ b) zs →
+    (∀ (c : C), c ∈ m.listed → π c ∈ zs) →
+      (∃ g' l',
+          m.after (Becoming.HeldForReading.shifted gain loss)
+              (Becoming.HeldForReading.byRule fun c => Becoming.ListingValuation.answer pm g l π (π c)) <
+            m.after (Becoming.HeldForReading.shifted gain loss)
+              (Becoming.HeldForReading.byRule fun c => Becoming.ListingValuation.answer pm g' l' π (π c))) →
+        0 < Becoming.ListingValuation.residual m gain loss π zs (Becoming.ListingValuation.answer pm g l π)
+@Becoming.ListingValuation.revaluing_gains_iff : ∀ {C K : Type} [inst : DecidableEq K]
+  (m : Becoming.HeldForReading.Model C) (gain loss g l : C → Nat) (π : C → K) {zs : List K},
+  List.Pairwise (fun a b => a ≠ b) zs →
+    (∀ (c : C), c ∈ m.listed → π c ∈ zs) →
+      ((∃ g' l',
+          m.after (Becoming.HeldForReading.shifted gain loss)
+              (Becoming.HeldForReading.byRule fun c => Becoming.ListingValuation.answer m g l π (π c)) <
+            m.after (Becoming.HeldForReading.shifted gain loss)
+              (Becoming.HeldForReading.byRule fun c => Becoming.ListingValuation.answer m g' l' π (π c))) ↔
+        0 < Becoming.ListingValuation.residual m gain loss π zs (Becoming.ListingValuation.answer m g l π))
+@Becoming.ListingValuation.revaluing_gain : ∀ {C K : Type} [inst : DecidableEq K] (m : Becoming.HeldForReading.Model C)
+  (gain loss g l : C → Nat) (π : C → K) {zs : List K},
+  List.Pairwise (fun a b => a ≠ b) zs →
+    (∀ (c : C), c ∈ m.listed → π c ∈ zs) →
+      m.after (Becoming.HeldForReading.shifted gain loss)
+            (Becoming.HeldForReading.byRule fun c => Becoming.ListingValuation.answer m g l π (π c)) +
+          Becoming.ListingValuation.residual m gain loss π zs (Becoming.ListingValuation.answer m g l π) =
+        m.after (Becoming.HeldForReading.shifted gain loss)
+          (Becoming.HeldForReading.byRule fun c => Becoming.ListingValuation.answer m gain loss π (π c))
+@Becoming.ListingValuation.revalued_forgone_lt_iff : ∀ {C K : Type} [inst : DecidableEq K]
+  (m pm : Becoming.HeldForReading.Model C) (gain loss g l g' l' : C → Nat) (π : C → K) {zs : List K},
+  List.Pairwise (fun a b => a ≠ b) zs →
+    (∀ (c : C), c ∈ m.listed → π c ∈ zs) →
+      ∀ (k k' : Nat),
+        m.after (Becoming.HeldForReading.shifted gain loss)
+                (Becoming.HeldForReading.byRule fun c => Becoming.ListingValuation.answer pm g l π (π c)) +
+              k' <
+            m.after (Becoming.HeldForReading.shifted gain loss)
+                (Becoming.HeldForReading.byRule fun c => Becoming.ListingValuation.answer pm g' l' π (π c)) +
+              k ↔
+          Becoming.ListingValuation.residual m gain loss π zs (Becoming.ListingValuation.answer pm g' l' π) + k' <
+            Becoming.ListingValuation.residual m gain loss π zs (Becoming.ListingValuation.answer pm g l π) + k
+@Becoming.ListingValuation.const_below_iff : ∀ {C : Type} (m : Becoming.HeldForReading.Model C) (gain loss : C → Nat)
+  (r : C → Bool) (b : Bool),
+  (∀ (c : C), c ∈ m.listed → r c = b) →
+    ∀ (k : Nat),
+      m.after (Becoming.HeldForReading.shifted gain loss) (Becoming.HeldForReading.byRule r) <
+          m.committed (Becoming.HeldForReading.shifted gain loss)
+              (bif b then Becoming.HeldForReading.Move.off else Becoming.HeldForReading.Move.go) +
+            k ↔
+        0 < k
+@Becoming.ListingValuation.one_cell_worth : ∀ {C : Type} (m pm : Becoming.HeldForReading.Model C)
+  (gain loss g l : C → Nat),
+  m.after (Becoming.HeldForReading.shifted gain loss)
+      (Becoming.HeldForReading.byRule fun x => Becoming.ListingValuation.answer pm g l (fun x => ()) ()) =
+    m.committed (Becoming.HeldForReading.shifted gain loss)
+      (bif Becoming.ListingValuation.answer pm g l (fun x => ()) () then Becoming.HeldForReading.Move.off
+      else Becoming.HeldForReading.Move.go)
+@Becoming.ListingValuation.after_rule_total : ∀ {C : Type} (m : Becoming.HeldForReading.Model C) (gain loss : C → Nat)
+  (r : C → Bool),
+  m.after (Becoming.HeldForReading.shifted gain loss) (Becoming.HeldForReading.byRule r) =
+    Becoming.total m.listed fun c => bif r c then m.weight c * loss c else m.weight c * gain c
+@Becoming.ListingValuation.total_cond_by_cells : ∀ {C K : Type} [inst : DecidableEq K]
+  (m : Becoming.HeldForReading.Model C) (π : C → K) {zs : List K},
+  List.Pairwise (fun a b => a ≠ b) zs →
+    (∀ (c : C), c ∈ m.listed → π c ∈ zs) →
+      ∀ (s : K → Bool) (x y : C → Nat),
+        (Becoming.total m.listed fun c => bif s (π c) then x c else y c) =
+          Becoming.total zs fun z =>
+            bif s z then Becoming.total m.listed fun c => if π c = z then x c else 0
+            else Becoming.total m.listed fun c => if π c = z then y c else 0
+Becoming.ListingValuation.ite_split_rule : ∀ (p : Prop) [inst : Decidable p] (b : Bool) (v : Nat),
+  (if p then v else 0) = (bif decide p && !b then v else 0) + bif decide p && b then v else 0
+Becoming.ListingValuation.ite_cond_split : ∀ (p : Prop) [inst : Decidable p] (b : Bool) (x y : Nat),
+  (if p then bif b then x else y else 0) = (bif decide p && b then x else 0) + bif decide p && !b then y else 0
+@Becoming.ListingValuation.within_split : ∀ {C K : Type} [inst : DecidableEq K] (pm : Becoming.HeldForReading.Model C)
+  (π : C → K) (t : C → Bool) (h : C → Nat) (z : K),
+  Becoming.ListingValuation.within pm π h z =
+    Becoming.ListingValuation.weightedOn pm (fun c => decide (π c = z) && !t c) h +
+      Becoming.ListingValuation.weightedOn pm (fun c => decide (π c = z) && t c) h
+@Becoming.ListingValuation.within_rule_split : ∀ {C K : Type} [inst : DecidableEq K]
+  (m : Becoming.HeldForReading.Model C) (π : C → K) (t : C → Bool) (x y : C → Nat) (z : K),
+  (Becoming.total m.listed fun c => if π c = z then bif t c then m.weight c * x c else m.weight c * y c else 0) =
+    Becoming.ListingValuation.weightedOn m (fun c => decide (π c = z) && t c) x +
+      Becoming.ListingValuation.weightedOn m (fun c => decide (π c = z) && !t c) y
+@Becoming.ListingValuation.weightedOn_by_cells : ∀ {C L : Type} [inst : DecidableEq L]
+  (pm : Becoming.HeldForReading.Model C) (π' : C → L) {zs' : List L},
+  List.Pairwise (fun a b => a ≠ b) zs' →
+    (∀ (c : C), c ∈ pm.listed → π' c ∈ zs') →
+      ∀ {B : C → Bool} {t : L → Bool},
+        (∀ (c : C), c ∈ pm.listed → B c = t (π' c)) →
+          ∀ (h : C → Nat),
+            Becoming.ListingValuation.weightedOn pm B h =
+              Becoming.total zs' fun y => bif t y then Becoming.ListingValuation.within pm π' h y else 0
+@Becoming.ListingValuation.total_lt_of_mem : ∀ {α : Type} {p q : α → Nat} {a : α} {as : List α},
+  (∀ (b : α), b ∈ as → p b ≤ q b) → a ∈ as → p a < q a → Becoming.total as p < Becoming.total as q
+@Becoming.ListingValuation.cond_zero_le : ∀ {x y : Nat} {b : Bool},
+  (b = true → x ≤ y) → (bif b then x else 0) ≤ bif b then y else 0
+@Becoming.ListingValuation.split_cell_le : ∀ {BL DL BG DG : Nat} {b : Bool},
+  (b = false → DG ≤ DL) → (b = true → BL ≤ BG) → (bif b then BL + DL else BG + DG) ≤ DL + BG
+@Becoming.ListingValuation.cell_refined_le : ∀ {C K L : Type} [inst : DecidableEq K] [inst_1 : DecidableEq L]
+  (m pm : Becoming.HeldForReading.Model C) (gain loss g l : C → Nat),
+  Becoming.ListingValuation.SplitsKeep m pm gain loss g l →
+    ∀ (π : C → K) (π' : C → L) (f : L → K) {zs' : List L},
+      (∀ (c : C), c ∈ m.listed → π c = f (π' c)) →
+        (∀ (c : C), c ∈ pm.listed → π c = f (π' c)) →
+          List.Pairwise (fun a b => a ≠ b) zs' →
+            (∀ (c : C), c ∈ m.listed → π' c ∈ zs') →
+              (∀ (c : C), c ∈ pm.listed → π' c ∈ zs') →
+                ∀ (z : K),
+                  (bif Becoming.ListingValuation.answer pm g l π z then Becoming.ListingValuation.within m π loss z
+                    else Becoming.ListingValuation.within m π gain z) ≤
+                    Becoming.total m.listed fun c =>
+                      if π c = z then
+                        bif Becoming.ListingValuation.answer pm g l π' (π' c) then m.weight c * loss c
+                        else m.weight c * gain c
+                      else 0
+@Becoming.ListingValuation.refined_le_of_splitsKeep : ∀ {C K L : Type} [inst : DecidableEq K] [inst_1 : DecidableEq L]
+  (m pm : Becoming.HeldForReading.Model C) (gain loss g l : C → Nat),
+  Becoming.ListingValuation.SplitsKeep m pm gain loss g l →
+    ∀ (π : C → K) (π' : C → L) (f : L → K) {zs : List K} {zs' : List L},
+      (∀ (c : C), c ∈ m.listed → π c = f (π' c)) →
+        (∀ (c : C), c ∈ pm.listed → π c = f (π' c)) →
+          List.Pairwise (fun a b => a ≠ b) zs →
+            (∀ (c : C), c ∈ m.listed → π c ∈ zs) →
+              List.Pairwise (fun a b => a ≠ b) zs' →
+                (∀ (c : C), c ∈ m.listed → π' c ∈ zs') →
+                  (∀ (c : C), c ∈ pm.listed → π' c ∈ zs') →
+                    m.after (Becoming.HeldForReading.shifted gain loss)
+                        (Becoming.HeldForReading.byRule fun c => Becoming.ListingValuation.answer pm g l π (π c)) ≤
+                      m.after (Becoming.HeldForReading.shifted gain loss)
+                        (Becoming.HeldForReading.byRule fun c => Becoming.ListingValuation.answer pm g l π' (π' c))
+Becoming.ListingValuation.either_which : ∀ (bB bD : Bool),
+  (bif bB || bD then 0 else 1) = (bif bB then 0 else bif bD then 1 else 2) - 1
+Becoming.ListingValuation.either_mem : ∀ (bB bD : Bool), (bif bB || bD then 0 else 1) ∈ [0, 1]
+Becoming.ListingValuation.which_mem : ∀ (bB bD : Bool), (bif bB then 0 else bif bD then 1 else 2) ∈ [0, 1, 2]
+Becoming.ListingValuation.which_first : ∀ (v : Nat) (bB bD : Bool),
+  (if (bif bB then 0 else bif bD then 1 else 2) = 0 then v else 0) = bif bB then v else 0
+Becoming.ListingValuation.which_second : ∀ (v : Nat) (bB bD : Bool),
+  (bB = true → bD = false) → (if (bif bB then 0 else bif bD then 1 else 2) = 1 then v else 0) = bif bD then v else 0
+Becoming.ListingValuation.either_both : ∀ (v : Nat) (bB bD : Bool),
+  (bB = true → bD = false) →
+    (if (bif bB || bD then 0 else 1) = 0 then v else 0) = (bif bB then v else 0) + bif bD then v else 0
+Becoming.ListingValuation.either_neither : ∀ (v : Nat) (bB bD : Bool),
+  (if (bif bB || bD then 0 else 1) = 1 then v else 0) = if (bif bB then 0 else bif bD then 1 else 2) = 2 then v else 0
+@Becoming.ListingValuation.split_released_term : ∀ {s t : Nat → Bool},
+  s 0 = false →
+    t 0 = false →
+      t 1 = true →
+        s 1 = t 2 →
+          ∀ (x y : Nat) (bB bD : Bool),
+            (bB = true → bD = false) →
+              ((bif t (bif bB then 0 else bif bD then 1 else 2) then x else y) + bif bD then y else 0) =
+                (bif s (bif bB || bD then 0 else 1) then x else y) + bif bD then x else 0
+@Becoming.ListingValuation.split_stopped_term : ∀ {s t : Nat → Bool},
+  s 0 = true →
+    t 0 = false →
+      t 1 = true →
+        s 1 = t 2 →
+          ∀ (x y : Nat) (bB bD : Bool),
+            (bB = true → bD = false) →
+              ((bif t (bif bB then 0 else bif bD then 1 else 2) then x else y) + bif bB then x else 0) =
+                (bif s (bif bB || bD then 0 else 1) then x else y) + bif bB then y else 0
+@Becoming.ListingValuation.worth_split_released : ∀ {C : Type} (m : Becoming.HeldForReading.Model C)
+  (gain loss : C → Nat) {B D : C → Bool},
+  (∀ (c : C), B c = true → D c = false) →
+    ∀ {s t : Nat → Bool},
+      s 0 = false →
+        t 0 = false →
+          t 1 = true →
+            s 1 = t 2 →
+              m.after (Becoming.HeldForReading.shifted gain loss)
+                    (Becoming.HeldForReading.byRule fun c => t (Becoming.ListingValuation.whichCell B D c)) +
+                  Becoming.ListingValuation.weightedOn m D gain =
+                m.after (Becoming.HeldForReading.shifted gain loss)
+                    (Becoming.HeldForReading.byRule fun c => s (Becoming.ListingValuation.eitherCell B D c)) +
+                  Becoming.ListingValuation.weightedOn m D loss
+@Becoming.ListingValuation.worth_split_stopped : ∀ {C : Type} (m : Becoming.HeldForReading.Model C)
+  (gain loss : C → Nat) {B D : C → Bool},
+  (∀ (c : C), B c = true → D c = false) →
+    ∀ {s t : Nat → Bool},
+      s 0 = true →
+        t 0 = false →
+          t 1 = true →
+            s 1 = t 2 →
+              m.after (Becoming.HeldForReading.shifted gain loss)
+                    (Becoming.HeldForReading.byRule fun c => t (Becoming.ListingValuation.whichCell B D c)) +
+                  Becoming.ListingValuation.weightedOn m B loss =
+                m.after (Becoming.HeldForReading.shifted gain loss)
+                    (Becoming.HeldForReading.byRule fun c => s (Becoming.ListingValuation.eitherCell B D c)) +
+                  Becoming.ListingValuation.weightedOn m B gain
+@Becoming.ListingValuation.splitsKeep_of_refined_le : ∀ {C : Type} (m pm : Becoming.HeldForReading.Model C)
+  (gain loss g l : C → Nat),
+  (∀ (K L : Type) [inst : DecidableEq K] [inst_1 : DecidableEq L] (π : C → K) (π' : C → L) (f : L → K) (zs : List K)
+      (zs' : List L),
+      (∀ (c : C), c ∈ m.listed → π c = f (π' c)) →
+        (∀ (c : C), c ∈ pm.listed → π c = f (π' c)) →
+          List.Pairwise (fun a b => a ≠ b) zs →
+            (∀ (c : C), c ∈ m.listed → π c ∈ zs) →
+              List.Pairwise (fun a b => a ≠ b) zs' →
+                (∀ (c : C), c ∈ m.listed → π' c ∈ zs') →
+                  (∀ (c : C), c ∈ pm.listed → π' c ∈ zs') →
+                    m.after (Becoming.HeldForReading.shifted gain loss)
+                        (Becoming.HeldForReading.byRule fun c => Becoming.ListingValuation.answer pm g l π (π c)) ≤
+                      m.after (Becoming.HeldForReading.shifted gain loss)
+                        (Becoming.HeldForReading.byRule fun c => Becoming.ListingValuation.answer pm g l π' (π' c))) →
+    Becoming.ListingValuation.SplitsKeep m pm gain loss g l
+@Becoming.ListingValuation.splitsKeep_of_net : ∀ {C : Type} (m : Becoming.HeldForReading.Model C)
+  (gain loss g l : C → Nat),
+  (∀ (c : C), c ∈ m.listed → 0 < m.weight c → g c + loss c = l c + gain c) →
+    Becoming.ListingValuation.SplitsKeep m m gain loss g l
+@Becoming.ListingValuation.splitsKeep_of_off_le_go : ∀ {C : Type} (m pm : Becoming.HeldForReading.Model C)
+  (gain loss g l : C → Nat),
+  (∀ (c : C), c ∈ pm.listed → l c ≤ g c) → Becoming.ListingValuation.SplitsKeep m pm gain loss g l
+@Becoming.ListingValuation.refining_never_lowers_iff : ∀ {C : Type} (m pm : Becoming.HeldForReading.Model C)
+  (gain loss g l : C → Nat),
+  (∀ (K L : Type) [inst : DecidableEq K] [inst_1 : DecidableEq L] (π : C → K) (π' : C → L) (f : L → K) (zs : List K)
+      (zs' : List L),
+      (∀ (c : C), c ∈ m.listed → π c = f (π' c)) →
+        (∀ (c : C), c ∈ pm.listed → π c = f (π' c)) →
+          List.Pairwise (fun a b => a ≠ b) zs →
+            (∀ (c : C), c ∈ m.listed → π c ∈ zs) →
+              List.Pairwise (fun a b => a ≠ b) zs' →
+                (∀ (c : C), c ∈ m.listed → π' c ∈ zs') →
+                  (∀ (c : C), c ∈ pm.listed → π' c ∈ zs') →
+                    m.after (Becoming.HeldForReading.shifted gain loss)
+                        (Becoming.HeldForReading.byRule fun c => Becoming.ListingValuation.answer pm g l π (π c)) ≤
+                      m.after (Becoming.HeldForReading.shifted gain loss)
+                        (Becoming.HeldForReading.byRule fun c => Becoming.ListingValuation.answer pm g l π' (π' c))) ↔
+    Becoming.ListingValuation.SplitsKeep m pm gain loss g l
+Becoming.ListingValuation.scales_by_candidate : (∀ (c : Bool),
+    ((1 * bif c then 0 else 10) + (bif c then 1 else 10) * bif c then 2 else 0) =
+      (1 * bif c then 2 else 0) + (bif c then 1 else 10) * bif c then 0 else 1) ∧
+  Becoming.ListingValuation.answer { listed := [false, true], weight := fun x => 1 } (fun c => bif c then 0 else 10)
+        (fun c => bif c then 2 else 0) (fun x => ()) () =
+      false ∧
+    Becoming.ListingValuation.residual { listed := [false, true], weight := fun x => 1 } (fun c => bif c then 0 else 1)
+        (fun c => bif c then 2 else 0) (fun x => ()) [()]
+        (Becoming.ListingValuation.answer { listed := [false, true], weight := fun x => 1 }
+          (fun c => bif c then 0 else 10) (fun c => bif c then 2 else 0) fun x => ()) =
+      1
+Becoming.ListingValuation.unweighted_told : (∀ (g l : Unit → Nat),
+    Becoming.ListingValuation.answer { listed := [()], weight := fun x => 0 } g l id () = false) ∧
+  Becoming.ListingValuation.residual { listed := [()], weight := fun x => 1 } (fun x => 0) (fun x => 1) id [()]
+        (Becoming.ListingValuation.answer { listed := [()], weight := fun x => 0 } (fun x => 0) (fun x => 1) id) =
+      1 ∧
+    (Becoming.HeldForReading.shortfall { listed := [()], weight := fun x => 1 } (fun x => 0) (fun x => 1) fun c =>
+        Becoming.ListingValuation.answer { listed := [()], weight := fun x => 0 } (fun x => 0) (fun x => 1) id (id c)) =
+      1
+Becoming.ListingValuation.release_keeps : (Becoming.ListingValuation.SplitsKeep { listed := [()], weight := fun x => 1 }
+    { listed := [()], weight := fun x => 1 } (fun x => 0) (fun x => 1) (fun x => 1) fun x => 0) ∧
+  Becoming.ListingValuation.residual { listed := [()], weight := fun x => 1 } (fun x => 0) (fun x => 1) (fun x => ())
+      [()]
+      (Becoming.ListingValuation.answer { listed := [()], weight := fun x => 1 } (fun x => 1) (fun x => 0) fun x =>
+        ()) =
+    1
+Becoming.ListingValuation.Informing.informing_lowers : Becoming.ListingValuation.Informing.model.after
+      (Becoming.HeldForReading.shifted Becoming.ListingValuation.Informing.gain
+        Becoming.ListingValuation.Informing.loss)
+      (Becoming.HeldForReading.byRule fun x =>
+        Becoming.ListingValuation.answer Becoming.ListingValuation.Informing.model
+          Becoming.ListingValuation.Informing.goValue Becoming.ListingValuation.Informing.offValue (fun x => ()) ()) =
+    10 ∧
+  (Becoming.HeldForReading.shortfall Becoming.ListingValuation.Informing.model Becoming.ListingValuation.Informing.gain
+        Becoming.ListingValuation.Informing.loss fun x =>
+        Becoming.ListingValuation.answer Becoming.ListingValuation.Informing.model
+          Becoming.ListingValuation.Informing.goValue Becoming.ListingValuation.Informing.offValue (fun x => ()) ()) =
+      1 ∧
+    Becoming.ListingValuation.residual Becoming.ListingValuation.Informing.model
+          Becoming.ListingValuation.Informing.gain Becoming.ListingValuation.Informing.loss (fun x => ()) [()]
+          (Becoming.ListingValuation.answer Becoming.ListingValuation.Informing.model
+            Becoming.ListingValuation.Informing.goValue Becoming.ListingValuation.Informing.offValue fun x => ()) =
+        0 ∧
+      Becoming.ListingValuation.Informing.model.after
+            (Becoming.HeldForReading.shifted Becoming.ListingValuation.Informing.gain
+              Becoming.ListingValuation.Informing.loss)
+            (Becoming.HeldForReading.byRule fun c =>
+              Becoming.ListingValuation.answer Becoming.ListingValuation.Informing.model
+                Becoming.ListingValuation.Informing.goValue Becoming.ListingValuation.Informing.offValue id c) =
+          0 ∧
+        (Becoming.HeldForReading.shortfall Becoming.ListingValuation.Informing.model
+              Becoming.ListingValuation.Informing.gain Becoming.ListingValuation.Informing.loss fun c =>
+              Becoming.ListingValuation.answer Becoming.ListingValuation.Informing.model
+                Becoming.ListingValuation.Informing.goValue Becoming.ListingValuation.Informing.offValue id c) =
+            11 ∧
+          Becoming.ListingValuation.residual Becoming.ListingValuation.Informing.model
+                Becoming.ListingValuation.Informing.gain Becoming.ListingValuation.Informing.loss id [false, true]
+                (Becoming.ListingValuation.answer Becoming.ListingValuation.Informing.model
+                  Becoming.ListingValuation.Informing.goValue Becoming.ListingValuation.Informing.offValue id) =
+              11 ∧
+            Becoming.ListingValuation.Informing.model.committed
+                  (Becoming.HeldForReading.shifted Becoming.ListingValuation.Informing.gain
+                    Becoming.ListingValuation.Informing.loss)
+                  Becoming.HeldForReading.Move.go =
+                1 ∧
+              Becoming.ListingValuation.Informing.model.committed
+                  (Becoming.HeldForReading.shifted Becoming.ListingValuation.Informing.gain
+                    Becoming.ListingValuation.Informing.loss)
+                  Becoming.HeldForReading.Move.off =
+                10
+Becoming.ListingValuation.WeightsApart.weights_matter : Becoming.ListingValuation.WeightsApart.holding.after
+      (Becoming.HeldForReading.shifted Becoming.ListingValuation.WeightsApart.gain
+        Becoming.ListingValuation.WeightsApart.loss)
+      (Becoming.HeldForReading.byRule fun x =>
+        Becoming.ListingValuation.answer Becoming.ListingValuation.WeightsApart.reading
+          Becoming.ListingValuation.WeightsApart.gain Becoming.ListingValuation.WeightsApart.loss (fun x => ()) ()) =
+    3 ∧
+  Becoming.ListingValuation.WeightsApart.holding.after
+        (Becoming.HeldForReading.shifted Becoming.ListingValuation.WeightsApart.gain
+          Becoming.ListingValuation.WeightsApart.loss)
+        (Becoming.HeldForReading.byRule fun c =>
+          Becoming.ListingValuation.answer Becoming.ListingValuation.WeightsApart.reading
+            Becoming.ListingValuation.WeightsApart.gain Becoming.ListingValuation.WeightsApart.loss
+            (fun c => decide (c = 2)) (decide (c = 2))) =
+      2 ∧
+    Becoming.ListingValuation.WeightsApart.holding.after
+        (Becoming.HeldForReading.shifted Becoming.ListingValuation.WeightsApart.gain
+          Becoming.ListingValuation.WeightsApart.loss)
+        (Becoming.HeldForReading.byRule fun c =>
+          Becoming.ListingValuation.answer Becoming.ListingValuation.WeightsApart.reading
+            Becoming.ListingValuation.WeightsApart.gain Becoming.ListingValuation.WeightsApart.loss id c) =
+      4
+Becoming.ListingValuation.WeightsApart.weights_split : (Becoming.HeldForReading.shortfall
+      Becoming.ListingValuation.WeightsApart.holding Becoming.ListingValuation.WeightsApart.gain
+      Becoming.ListingValuation.WeightsApart.loss fun x =>
+      Becoming.HeldForReading.leastThrough Becoming.ListingValuation.WeightsApart.holding
+        Becoming.ListingValuation.WeightsApart.gain Becoming.ListingValuation.WeightsApart.loss (fun x => ()) ()) =
+    1 ∧
+  Becoming.ListingValuation.residual Becoming.ListingValuation.WeightsApart.holding
+        Becoming.ListingValuation.WeightsApart.gain Becoming.ListingValuation.WeightsApart.loss (fun x => ()) [()]
+        (Becoming.ListingValuation.answer Becoming.ListingValuation.WeightsApart.reading
+          Becoming.ListingValuation.WeightsApart.gain Becoming.ListingValuation.WeightsApart.loss fun x => ()) =
+      0 ∧
+    (Becoming.HeldForReading.shortfall Becoming.ListingValuation.WeightsApart.holding
+          Becoming.ListingValuation.WeightsApart.gain Becoming.ListingValuation.WeightsApart.loss fun c =>
+          Becoming.HeldForReading.leastThrough Becoming.ListingValuation.WeightsApart.holding
+            Becoming.ListingValuation.WeightsApart.gain Becoming.ListingValuation.WeightsApart.loss
+            (fun c => decide (c = 2)) (decide (c = 2))) =
+        1 ∧
+      Becoming.ListingValuation.residual Becoming.ListingValuation.WeightsApart.holding
+            Becoming.ListingValuation.WeightsApart.gain Becoming.ListingValuation.WeightsApart.loss
+            (fun c => decide (c = 2)) [false, true]
+            (Becoming.ListingValuation.answer Becoming.ListingValuation.WeightsApart.reading
+              Becoming.ListingValuation.WeightsApart.gain Becoming.ListingValuation.WeightsApart.loss fun c =>
+              decide (c = 2)) =
+          1 ∧
+        (Becoming.HeldForReading.shortfall Becoming.ListingValuation.WeightsApart.holding
+              Becoming.ListingValuation.WeightsApart.gain Becoming.ListingValuation.WeightsApart.loss fun c =>
+              Becoming.HeldForReading.leastThrough Becoming.ListingValuation.WeightsApart.holding
+                Becoming.ListingValuation.WeightsApart.gain Becoming.ListingValuation.WeightsApart.loss id c) =
+            0 ∧
+          Becoming.ListingValuation.residual Becoming.ListingValuation.WeightsApart.holding
+              Becoming.ListingValuation.WeightsApart.gain Becoming.ListingValuation.WeightsApart.loss id [0, 1, 2]
+              (Becoming.ListingValuation.answer Becoming.ListingValuation.WeightsApart.reading
+                Becoming.ListingValuation.WeightsApart.gain Becoming.ListingValuation.WeightsApart.loss id) =
+            0
+Becoming.ListingValuation.WeightsApart.not_splitsKeep : ¬Becoming.ListingValuation.SplitsKeep
+    Becoming.ListingValuation.WeightsApart.holding Becoming.ListingValuation.WeightsApart.reading
+    Becoming.ListingValuation.WeightsApart.gain Becoming.ListingValuation.WeightsApart.loss
+    Becoming.ListingValuation.WeightsApart.gain Becoming.ListingValuation.WeightsApart.loss
+Becoming.ListingValuation.OneListing.refined_lowers : (∀ (c : Bool),
+    c ∈ Becoming.ListingValuation.OneListing.holding.listed → id c = (fun x => false) ((fun x => ()) c)) ∧
+  Becoming.ListingValuation.SplitsKeep Becoming.ListingValuation.OneListing.holding
+      Becoming.ListingValuation.OneListing.reading Becoming.ListingValuation.OneListing.gain
+      Becoming.ListingValuation.OneListing.loss Becoming.ListingValuation.OneListing.goValue
+      Becoming.ListingValuation.OneListing.offValue ∧
+    Becoming.ListingValuation.OneListing.holding.after
+          (Becoming.HeldForReading.shifted Becoming.ListingValuation.OneListing.gain
+            Becoming.ListingValuation.OneListing.loss)
+          (Becoming.HeldForReading.byRule fun c =>
+            Becoming.ListingValuation.answer Becoming.ListingValuation.OneListing.reading
+              Becoming.ListingValuation.OneListing.goValue Becoming.ListingValuation.OneListing.offValue id c) =
+        1 ∧
+      Becoming.ListingValuation.OneListing.holding.after
+          (Becoming.HeldForReading.shifted Becoming.ListingValuation.OneListing.gain
+            Becoming.ListingValuation.OneListing.loss)
+          (Becoming.HeldForReading.byRule fun x =>
+            Becoming.ListingValuation.answer Becoming.ListingValuation.OneListing.reading
+              Becoming.ListingValuation.OneListing.goValue Becoming.ListingValuation.OneListing.offValue (fun x => ())
+              ()) =
+        0
+Becoming.ListingValuation.no_order_across : { listed := [()], weight := fun x => 1 }.after
+      (Becoming.HeldForReading.shifted (fun x => 10) fun x => 9)
+      (Becoming.HeldForReading.byRule fun x =>
+        Becoming.ListingValuation.answer { listed := [()], weight := fun x => 1 } (fun x => 10) (fun x => 9)
+          (fun x => ()) ()) =
+    10 ∧
+  { listed := [()], weight := fun x => 1 }.after (Becoming.HeldForReading.shifted (fun x => 1) fun x => 2)
+      (Becoming.HeldForReading.byRule fun x =>
+        Becoming.ListingValuation.answer { listed := [()], weight := fun x => 1 } (fun x => 1) (fun x => 2)
+          (fun x => ()) ()) =
+    2
+Becoming.ListingValuation.Revaluing.revaluing_best : Becoming.ListingValuation.Revaluing.model.after
+      (Becoming.HeldForReading.shifted Becoming.ListingValuation.Revaluing.gain
+        Becoming.ListingValuation.Revaluing.loss)
+      (Becoming.HeldForReading.byReading Becoming.ListingValuation.Revaluing.gain
+        Becoming.ListingValuation.Revaluing.loss) =
+    2 ∧
+  Becoming.ListingValuation.Revaluing.model.committed
+        (Becoming.HeldForReading.shifted Becoming.ListingValuation.Revaluing.gain
+          Becoming.ListingValuation.Revaluing.loss)
+        Becoming.HeldForReading.Move.go =
+      1 ∧
+    Becoming.ListingValuation.Revaluing.model.committed
+          (Becoming.HeldForReading.shifted Becoming.ListingValuation.Revaluing.gain
+            Becoming.ListingValuation.Revaluing.loss)
+          Becoming.HeldForReading.Move.off =
+        1 ∧
+      Becoming.ListingValuation.Revaluing.model.after
+            (Becoming.HeldForReading.shifted Becoming.ListingValuation.Revaluing.gain
+              Becoming.ListingValuation.Revaluing.loss)
+            (Becoming.HeldForReading.byRule fun c =>
+              Becoming.ListingValuation.answer Becoming.ListingValuation.Revaluing.model (fun x => 0) (fun x => 1) id
+                c) =
+          1 ∧
+        Becoming.ListingValuation.Revaluing.model.after
+              (Becoming.HeldForReading.shifted Becoming.ListingValuation.Revaluing.gain
+                Becoming.ListingValuation.Revaluing.loss)
+              (Becoming.HeldForReading.byRule fun c =>
+                Becoming.ListingValuation.answer Becoming.ListingValuation.Revaluing.model
+                  Becoming.ListingValuation.Revaluing.gain Becoming.ListingValuation.Revaluing.loss id c) =
+            2 ∧
+          (Becoming.HeldForReading.shortfall Becoming.ListingValuation.Revaluing.model
+                Becoming.ListingValuation.Revaluing.gain Becoming.ListingValuation.Revaluing.loss fun x => false) =
+              1 ∧
+            (Becoming.HeldForReading.shortfall Becoming.ListingValuation.Revaluing.model
+                  Becoming.ListingValuation.Revaluing.gain Becoming.ListingValuation.Revaluing.loss fun x => true) =
+                1 ∧
+              (Becoming.HeldForReading.shortfall Becoming.ListingValuation.Revaluing.model
+                    Becoming.ListingValuation.Revaluing.gain Becoming.ListingValuation.Revaluing.loss fun c =>
+                    Becoming.ListingValuation.answer Becoming.ListingValuation.Revaluing.model (fun x => 0) (fun x => 1)
+                      id c) =
+                  1 ∧
+                (Becoming.HeldForReading.shortfall Becoming.ListingValuation.Revaluing.model
+                    Becoming.ListingValuation.Revaluing.gain Becoming.ListingValuation.Revaluing.loss fun c =>
+                    Becoming.ListingValuation.answer Becoming.ListingValuation.Revaluing.model
+                      Becoming.ListingValuation.Revaluing.gain Becoming.ListingValuation.Revaluing.loss id c) =
+                  0
+@Becoming.ListingValuation.internal_step : ∀ {W V O X H : Type} [inst : DecidableEq O]
+  (rd : Becoming.ListingValuation.Reader W V O X) (hd : Becoming.ListingValuation.Holder H X)
+  (x : Becoming.Blanket.Parts (List W × V) (Becoming.ListingValuation.Input O X) Bool (W × H)),
+  ((Becoming.ListingValuation.joint rd hd).step x).internal = rd.update x.internal x.sensory
+@Becoming.ListingValuation.active_step : ∀ {W V O X H : Type} [inst : DecidableEq O]
+  (rd : Becoming.ListingValuation.Reader W V O X) (hd : Becoming.ListingValuation.Holder H X)
+  (x : Becoming.Blanket.Parts (List W × V) (Becoming.ListingValuation.Input O X) Bool (W × H)),
+  ((Becoming.ListingValuation.joint rd hd).step x).active = rd.answerOf (rd.update x.internal x.sensory)
+@Becoming.ListingValuation.sensory_step : ∀ {W V O X H : Type} [inst : DecidableEq O]
+  (rd : Becoming.ListingValuation.Reader W V O X) (hd : Becoming.ListingValuation.Holder H X)
+  (x : Becoming.Blanket.Parts (List W × V) (Becoming.ListingValuation.Input O X) Bool (W × H)),
+  ((Becoming.ListingValuation.joint rd hd).step x).sensory = rd.input x.external.fst (hd.act x.external.snd)
+@Becoming.ListingValuation.external_step : ∀ {W V O X H : Type} [inst : DecidableEq O]
+  (rd : Becoming.ListingValuation.Reader W V O X) (hd : Becoming.ListingValuation.Holder H X)
+  (x : Becoming.Blanket.Parts (List W × V) (Becoming.ListingValuation.Input O X) Bool (W × H)),
+  ((Becoming.ListingValuation.joint rd hd).step x).external = (x.external.fst, hd.next x.external.snd x.active)
+@Becoming.ListingValuation.active_answer : ∀ {W V O X H : Type} [inst : DecidableEq O]
+  (rd : Becoming.ListingValuation.Reader W V O X) (hd : Becoming.ListingValuation.Holder H X)
+  (x : Becoming.Blanket.Parts (List W × V) (Becoming.ListingValuation.Input O X) Bool (W × H)) (n : Nat),
+  ((Becoming.ListingValuation.joint rd hd).course x (n + 1)).active =
+    rd.answerOf ((Becoming.ListingValuation.joint rd hd).course x (n + 1)).internal
+@Becoming.ListingValuation.world_fixed : ∀ {W V O X H : Type} [inst : DecidableEq O]
+  (rd : Becoming.ListingValuation.Reader W V O X) (hd : Becoming.ListingValuation.Holder H X)
+  (x : Becoming.Blanket.Parts (List W × V) (Becoming.ListingValuation.Input O X) Bool (W × H)) (n : Nat),
+  ((Becoming.ListingValuation.joint rd hd).course x n).external.fst = x.external.fst
+@Becoming.ListingValuation.timing : ∀ {W V O X H : Type} [inst : DecidableEq O]
+  (rd : Becoming.ListingValuation.Reader W V O X) (hd : Becoming.ListingValuation.Holder H X)
+  (x : Becoming.Blanket.Parts (List W × V) (Becoming.ListingValuation.Input O X) Bool (W × H)) (t : Nat),
+  ((Becoming.ListingValuation.joint rd hd).course x (t + 1)).sensory =
+      rd.input x.external.fst (hd.act ((Becoming.ListingValuation.joint rd hd).course x t).external.snd) ∧
+    ((Becoming.ListingValuation.joint rd hd).course x (t + 2)).internal =
+        rd.update ((Becoming.ListingValuation.joint rd hd).course x (t + 1)).internal
+          ((Becoming.ListingValuation.joint rd hd).course x (t + 1)).sensory ∧
+      ((Becoming.ListingValuation.joint rd hd).course x (t + 2)).active =
+          rd.answerOf ((Becoming.ListingValuation.joint rd hd).course x (t + 2)).internal ∧
+        ((Becoming.ListingValuation.joint rd hd).course x (t + 3)).external.snd =
+          hd.next ((Becoming.ListingValuation.joint rd hd).course x (t + 2)).external.snd
+            ((Becoming.ListingValuation.joint rd hd).course x (t + 2)).active
+@Becoming.ListingValuation.through_sensed : ∀ {W V O X H : Type} [inst : DecidableEq O]
+  (rd : Becoming.ListingValuation.Reader W V O X) (hd : Becoming.ListingValuation.Holder H X)
+  {x y : Becoming.Blanket.Parts (List W × V) (Becoming.ListingValuation.Input O X) Bool (W × H)},
+  x.internal = y.internal →
+    x.active = y.active →
+      ∀ (n : Nat),
+        (∀ (k : Nat),
+            k < n →
+              ((Becoming.ListingValuation.joint rd hd).course x k).sensory =
+                ((Becoming.ListingValuation.joint rd hd).course y k).sensory) →
+          ((Becoming.ListingValuation.joint rd hd).course x n).internal =
+              ((Becoming.ListingValuation.joint rd hd).course y n).internal ∧
+            ((Becoming.ListingValuation.joint rd hd).course x n).active =
+              ((Becoming.ListingValuation.joint rd hd).course y n).active
+@Becoming.ListingValuation.updates_commute : ∀ {W V O X : Type} [inst : DecidableEq O]
+  (rd : Becoming.ListingValuation.Reader W V O X) (st : List W × V) (o : O) (x : X),
+  rd.update (rd.update st (Becoming.ListingValuation.Input.shown o)) (Becoming.ListingValuation.Input.presented x) =
+    rd.update (rd.update st (Becoming.ListingValuation.Input.presented x)) (Becoming.ListingValuation.Input.shown o)
+@Becoming.ListingValuation.total_filter_shows : ∀ {W O : Type} [inst : DecidableEq O] (reveal : W → O) (o : O)
+  (q : W → Nat) (L : List W),
+  Becoming.total (List.filter (fun c => decide (reveal c = o)) L) q =
+    Becoming.total L fun c => if reveal c = o then q c else 0
+@Becoming.ListingValuation.within_one_cell : ∀ {W : Type} (pm : Becoming.HeldForReading.Model W) (f : W → Nat),
+  Becoming.ListingValuation.within pm (fun x => ()) f () = Becoming.total pm.listed fun c => pm.weight c * f c
+@Becoming.ListingValuation.within_shown : ∀ {W V O X : Type} [inst : DecidableEq O]
+  (rd : Becoming.ListingValuation.Reader W V O X) (L : List W) (o : O) (f : W → Nat),
+  Becoming.ListingValuation.within { listed := List.filter (fun c => decide (rd.reveal c = o)) L, weight := rd.weight }
+      (fun x => ()) f () =
+    Becoming.ListingValuation.within { listed := L, weight := rd.weight } rd.reveal f o
+@Becoming.ListingValuation.answer_shown : ∀ {W V O X : Type} [inst : DecidableEq O]
+  (rd : Becoming.ListingValuation.Reader W V O X) (L : List W) (v : V) (w : W),
+  rd.update (L, v) (Becoming.ListingValuation.Input.shown (rd.reveal w)) =
+      (List.filter (fun c => decide (rd.reveal c = rd.reveal w)) L, v) ∧
+    rd.answerOf (rd.update (L, v) (Becoming.ListingValuation.Input.shown (rd.reveal w))) =
+      Becoming.ListingValuation.answer { listed := L, weight := rd.weight } (rd.goVal v) (rd.offVal v) rd.reveal
+        (rd.reveal w)
+@Becoming.ListingValuation.shown_split : ∀ {W V O X : Type} [inst : DecidableEq O]
+  (rd : Becoming.ListingValuation.Reader W V O X) (L : List W) (v : V) (m : Becoming.HeldForReading.Model W)
+  (gain loss : W → Nat) {os : List O},
+  List.Pairwise (fun a b => a ≠ b) os →
+    (∀ (w : W), w ∈ m.listed → rd.reveal w ∈ os) →
+      (Becoming.HeldForReading.shortfall m gain loss fun w =>
+          rd.answerOf (rd.update (L, v) (Becoming.ListingValuation.Input.shown (rd.reveal w)))) =
+        (Becoming.HeldForReading.shortfall m gain loss fun w =>
+            Becoming.HeldForReading.leastThrough m gain loss rd.reveal (rd.reveal w)) +
+          Becoming.ListingValuation.residual m gain loss rd.reveal os
+            (Becoming.ListingValuation.answer { listed := L, weight := rd.weight } (rd.goVal v) (rd.offVal v) rd.reveal)
+@Becoming.ListingValuation.shown_least_le : ∀ {W O : Type} [inst : DecidableEq O] (reveal : W → O)
+  (m : Becoming.HeldForReading.Model W) (gain loss : W → Nat) {os : List O},
+  List.Pairwise (fun a b => a ≠ b) os →
+    (∀ (w : W), w ∈ m.listed → reveal w ∈ os) →
+      (Becoming.HeldForReading.shortfall m gain loss fun w =>
+          Becoming.HeldForReading.leastThrough m gain loss reveal (reveal w)) ≤
+        Becoming.HeldForReading.shortfall m gain loss fun x =>
+          Becoming.HeldForReading.leastThrough m gain loss (fun x => ()) ()
+@Becoming.ListingValuation.shown_never_lowers : ∀ {W V O X : Type} [inst : DecidableEq O]
+  (rd : Becoming.ListingValuation.Reader W V O X) (L : List W) (v : V) (gain loss : W → Nat),
+  (∀ (w : W), w ∈ L → 0 < rd.weight w → rd.goVal v w + loss w = rd.offVal v w + gain w) →
+    ∀ {os : List O},
+      List.Pairwise (fun a b => a ≠ b) os →
+        (∀ (w : W), w ∈ L → rd.reveal w ∈ os) →
+          { listed := L, weight := rd.weight }.after (Becoming.HeldForReading.shifted gain loss)
+              (Becoming.HeldForReading.byRule fun x => rd.answerOf (L, v)) ≤
+            { listed := L, weight := rd.weight }.after (Becoming.HeldForReading.shifted gain loss)
+              (Becoming.HeldForReading.byRule fun w =>
+                rd.answerOf (rd.update (L, v) (Becoming.ListingValuation.Input.shown (rd.reveal w))))
+@Becoming.ListingValuation.input_eq_of_reveal_eq : ∀ {W V O X : Type} (rd : Becoming.ListingValuation.Reader W V O X)
+  {w w' : W}, rd.reveal w = rd.reveal w' → ∀ (act : Becoming.ListingValuation.Act X), rd.input w act = rd.input w' act
+@Becoming.ListingValuation.inputs_alike_before : ∀ {W V O X H : Type} [inst : DecidableEq O]
+  (rd : Becoming.ListingValuation.Reader W V O X) (hd : Becoming.ListingValuation.Holder H X) (i : List W × V)
+  (s : Becoming.ListingValuation.Input O X) (a : Bool) (h : H) (w w' : W) (n : Nat),
+  (∀ (k : Nat),
+      k < n →
+        rd.input w
+            (hd.act
+              ((Becoming.ListingValuation.joint rd hd).course
+                    { internal := i, sensory := s, active := a, external := (w, h) } k).external.snd) =
+          rd.input w'
+            (hd.act
+              ((Becoming.ListingValuation.joint rd hd).course
+                    { internal := i, sensory := s, active := a, external := (w, h) } k).external.snd)) →
+    ((Becoming.ListingValuation.joint rd hd).course { internal := i, sensory := s, active := a, external := (w, h) }
+            n).internal =
+        ((Becoming.ListingValuation.joint rd hd).course
+            { internal := i, sensory := s, active := a, external := (w', h) } n).internal ∧
+      ((Becoming.ListingValuation.joint rd hd).course { internal := i, sensory := s, active := a, external := (w, h) }
+              n).sensory =
+          ((Becoming.ListingValuation.joint rd hd).course
+              { internal := i, sensory := s, active := a, external := (w', h) } n).sensory ∧
+        ((Becoming.ListingValuation.joint rd hd).course { internal := i, sensory := s, active := a, external := (w, h) }
+                n).active =
+            ((Becoming.ListingValuation.joint rd hd).course
+                { internal := i, sensory := s, active := a, external := (w', h) } n).active ∧
+          ((Becoming.ListingValuation.joint rd hd).course
+                  { internal := i, sensory := s, active := a, external := (w, h) } n).external.snd =
+            ((Becoming.ListingValuation.joint rd hd).course
+                  { internal := i, sensory := s, active := a, external := (w', h) } n).external.snd
+@Becoming.ListingValuation.inputs_alike : ∀ {W V O X H : Type} [inst : DecidableEq O]
+  (rd : Becoming.ListingValuation.Reader W V O X) (hd : Becoming.ListingValuation.Holder H X) (i : List W × V)
+  (s : Becoming.ListingValuation.Input O X) (a : Bool) (h : H) {w w' : W},
+  rd.reveal w = rd.reveal w' →
+    ∀ (n : Nat),
+      ((Becoming.ListingValuation.joint rd hd).course { internal := i, sensory := s, active := a, external := (w, h) }
+              n).internal =
+          ((Becoming.ListingValuation.joint rd hd).course
+              { internal := i, sensory := s, active := a, external := (w', h) } n).internal ∧
+        ((Becoming.ListingValuation.joint rd hd).course { internal := i, sensory := s, active := a, external := (w, h) }
+                n).sensory =
+            ((Becoming.ListingValuation.joint rd hd).course
+                { internal := i, sensory := s, active := a, external := (w', h) } n).sensory ∧
+          ((Becoming.ListingValuation.joint rd hd).course
+                  { internal := i, sensory := s, active := a, external := (w, h) } n).active =
+              ((Becoming.ListingValuation.joint rd hd).course
+                  { internal := i, sensory := s, active := a, external := (w', h) } n).active ∧
+            ((Becoming.ListingValuation.joint rd hd).course
+                    { internal := i, sensory := s, active := a, external := (w, h) } n).external.snd =
+              ((Becoming.ListingValuation.joint rd hd).course
+                    { internal := i, sensory := s, active := a, external := (w', h) } n).external.snd
+@Becoming.ListingValuation.input_eq_of_ne_demonstrate : ∀ {W V O X : Type}
+  (rd : Becoming.ListingValuation.Reader W V O X) (w w' : W) (act : Becoming.ListingValuation.Act X),
+  act ≠ Becoming.ListingValuation.Act.demonstrate → rd.input w act = rd.input w' act
+@Becoming.ListingValuation.undemonstrated_alike : ∀ {W V O X H : Type} [inst : DecidableEq O]
+  (rd : Becoming.ListingValuation.Reader W V O X) (hd : Becoming.ListingValuation.Holder H X) (i : List W × V)
+  (s : Becoming.ListingValuation.Input O X) (a : Bool) (h : H) (w w' : W) (n : Nat),
+  (∀ (k : Nat),
+      k < n →
+        hd.act
+            ((Becoming.ListingValuation.joint rd hd).course
+                  { internal := i, sensory := s, active := a, external := (w, h) } k).external.snd ≠
+          Becoming.ListingValuation.Act.demonstrate) →
+    ((Becoming.ListingValuation.joint rd hd).course { internal := i, sensory := s, active := a, external := (w, h) }
+            n).internal =
+        ((Becoming.ListingValuation.joint rd hd).course
+            { internal := i, sensory := s, active := a, external := (w', h) } n).internal ∧
+      ((Becoming.ListingValuation.joint rd hd).course { internal := i, sensory := s, active := a, external := (w, h) }
+              n).sensory =
+          ((Becoming.ListingValuation.joint rd hd).course
+              { internal := i, sensory := s, active := a, external := (w', h) } n).sensory ∧
+        ((Becoming.ListingValuation.joint rd hd).course { internal := i, sensory := s, active := a, external := (w, h) }
+                n).active =
+            ((Becoming.ListingValuation.joint rd hd).course
+                { internal := i, sensory := s, active := a, external := (w', h) } n).active ∧
+          ((Becoming.ListingValuation.joint rd hd).course
+                  { internal := i, sensory := s, active := a, external := (w, h) } n).external.snd =
+            ((Becoming.ListingValuation.joint rd hd).course
+                  { internal := i, sensory := s, active := a, external := (w', h) } n).external.snd
+@Becoming.ListingValuation.undemonstrated_worth : ∀ {W V O X H : Type} [inst : DecidableEq O]
+  (rd : Becoming.ListingValuation.Reader W V O X) (hd : Becoming.ListingValuation.Holder H X) (i : List W × V)
+  (s : Becoming.ListingValuation.Input O X) (a : Bool) (h : H) (m : Becoming.HeldForReading.Model W)
+  (gain loss : W → Nat) (w₀ : W) (n : Nat),
+  (∀ (k : Nat),
+      k < n →
+        hd.act
+            ((Becoming.ListingValuation.joint rd hd).course
+                  { internal := i, sensory := s, active := a, external := (w₀, h) } k).external.snd ≠
+          Becoming.ListingValuation.Act.demonstrate) →
+    m.after (Becoming.HeldForReading.shifted gain loss)
+        (Becoming.HeldForReading.byRule fun w =>
+          ((Becoming.ListingValuation.joint rd hd).course
+              { internal := i, sensory := s, active := a, external := (w, h) } n).active) =
+      m.committed (Becoming.HeldForReading.shifted gain loss)
+        (bif
+            ((Becoming.ListingValuation.joint rd hd).course
+                { internal := i, sensory := s, active := a, external := (w₀, h) } n).active then
+          Becoming.HeldForReading.Move.off
+        else Becoming.HeldForReading.Move.go)
+@Becoming.ListingValuation.answer_constant : ∀ {W V O X H : Type} [inst : DecidableEq O]
+  (rd : Becoming.ListingValuation.Reader W V O X) (hd : Becoming.ListingValuation.Holder H X) (i : List W × V)
+  (s : Becoming.ListingValuation.Input O X) (a : Bool) (h : H) (m : Becoming.HeldForReading.Model W)
+  (gain loss : W → Nat) {o : O},
+  (∀ (w : W), w ∈ m.listed → rd.reveal w = o) →
+    ∀ (w₀ : W),
+      rd.reveal w₀ = o →
+        ∀ (n : Nat),
+          m.after (Becoming.HeldForReading.shifted gain loss)
+              (Becoming.HeldForReading.byRule fun w =>
+                ((Becoming.ListingValuation.joint rd hd).course
+                    { internal := i, sensory := s, active := a, external := (w, h) } n).active) =
+            m.committed (Becoming.HeldForReading.shifted gain loss)
+              (bif
+                  ((Becoming.ListingValuation.joint rd hd).course
+                      { internal := i, sensory := s, active := a, external := (w₀, h) } n).active then
+                Becoming.HeldForReading.Move.off
+              else Becoming.HeldForReading.Move.go)
+@Becoming.ListingValuation.presented_forgone_lt_iff : ∀ {W V O X : Type} [inst : DecidableEq O]
+  (rd : Becoming.ListingValuation.Reader W V O X) (m : Becoming.HeldForReading.Model W) (gain loss : W → Nat)
+  (L : List W) (v : V) (x : X) (k k' : Nat),
+  m.after (Becoming.HeldForReading.shifted gain loss) (Becoming.HeldForReading.byRule fun x => rd.answerOf (L, v)) +
+        k' <
+      m.after (Becoming.HeldForReading.shifted gain loss)
+          (Becoming.HeldForReading.byRule fun x_1 =>
+            rd.answerOf (rd.update (L, v) (Becoming.ListingValuation.Input.presented x))) +
+        k ↔
+    (Becoming.ListingValuation.residual m gain loss (fun x => ()) [()] fun x_1 =>
+          rd.answerOf (rd.update (L, v) (Becoming.ListingValuation.Input.presented x))) +
+        k' <
+      (Becoming.ListingValuation.residual m gain loss (fun x => ()) [()] fun x => rd.answerOf (L, v)) + k
+Becoming.ListingValuation.TwoWorlds.shown_turns : Becoming.ListingValuation.TwoWorlds.rd.answerOf
+      ([Becoming.ListingValuation.TwoWorlds.World.first, Becoming.ListingValuation.TwoWorlds.World.second],
+        Becoming.ListingValuation.TwoWorlds.Val.agree) =
+    true ∧
+  Becoming.ListingValuation.TwoWorlds.rd.answerOf
+        (Becoming.ListingValuation.TwoWorlds.rd.update
+          ([Becoming.ListingValuation.TwoWorlds.World.first, Becoming.ListingValuation.TwoWorlds.World.second],
+            Becoming.ListingValuation.TwoWorlds.Val.agree)
+          (Becoming.ListingValuation.Input.shown Becoming.ListingValuation.TwoWorlds.World.first)) =
+      false ∧
+    Becoming.ListingValuation.TwoWorlds.rd.answerOf
+        (Becoming.ListingValuation.TwoWorlds.rd.update
+          ([Becoming.ListingValuation.TwoWorlds.World.first, Becoming.ListingValuation.TwoWorlds.World.second],
+            Becoming.ListingValuation.TwoWorlds.Val.agree)
+          (Becoming.ListingValuation.Input.presented Becoming.ListingValuation.TwoWorlds.Val.raised)) =
+      true
+Becoming.ListingValuation.TwoWorlds.presented_turns : Becoming.ListingValuation.TwoWorlds.rd.answerOf
+      ([Becoming.ListingValuation.TwoWorlds.World.first], Becoming.ListingValuation.TwoWorlds.Val.reversed) =
+    true ∧
+  Becoming.ListingValuation.TwoWorlds.rd.answerOf
+        (Becoming.ListingValuation.TwoWorlds.rd.update
+          ([Becoming.ListingValuation.TwoWorlds.World.first], Becoming.ListingValuation.TwoWorlds.Val.reversed)
+          (Becoming.ListingValuation.Input.shown Becoming.ListingValuation.TwoWorlds.World.first)) =
+      true ∧
+    Becoming.ListingValuation.TwoWorlds.rd.answerOf
+        (Becoming.ListingValuation.TwoWorlds.rd.update
+          ([Becoming.ListingValuation.TwoWorlds.World.first], Becoming.ListingValuation.TwoWorlds.Val.reversed)
+          (Becoming.ListingValuation.Input.presented Becoming.ListingValuation.TwoWorlds.Val.agree)) =
+      false
+Becoming.ListingValuation.TwoWorlds.shown_removes_least : (Becoming.HeldForReading.shortfall
+      { listed := [Becoming.ListingValuation.TwoWorlds.World.first, Becoming.ListingValuation.TwoWorlds.World.second],
+        weight := Becoming.ListingValuation.TwoWorlds.rd.weight }
+      (Becoming.ListingValuation.TwoWorlds.rd.goVal Becoming.ListingValuation.TwoWorlds.Val.agree)
+      (Becoming.ListingValuation.TwoWorlds.rd.offVal Becoming.ListingValuation.TwoWorlds.Val.agree) fun x =>
+      Becoming.ListingValuation.answer
+        { listed := [Becoming.ListingValuation.TwoWorlds.World.first, Becoming.ListingValuation.TwoWorlds.World.second],
+          weight := Becoming.ListingValuation.TwoWorlds.rd.weight }
+        (Becoming.ListingValuation.TwoWorlds.rd.goVal Becoming.ListingValuation.TwoWorlds.Val.agree)
+        (Becoming.ListingValuation.TwoWorlds.rd.offVal Becoming.ListingValuation.TwoWorlds.Val.agree) (fun x => ())
+        ()) =
+    1 ∧
+  Becoming.ListingValuation.residual
+        { listed := [Becoming.ListingValuation.TwoWorlds.World.first, Becoming.ListingValuation.TwoWorlds.World.second],
+          weight := Becoming.ListingValuation.TwoWorlds.rd.weight }
+        (Becoming.ListingValuation.TwoWorlds.rd.goVal Becoming.ListingValuation.TwoWorlds.Val.agree)
+        (Becoming.ListingValuation.TwoWorlds.rd.offVal Becoming.ListingValuation.TwoWorlds.Val.agree) (fun x => ()) [()]
+        (Becoming.ListingValuation.answer
+          {
+            listed :=
+              [Becoming.ListingValuation.TwoWorlds.World.first, Becoming.ListingValuation.TwoWorlds.World.second],
+            weight := Becoming.ListingValuation.TwoWorlds.rd.weight }
+          (Becoming.ListingValuation.TwoWorlds.rd.goVal Becoming.ListingValuation.TwoWorlds.Val.agree)
+          (Becoming.ListingValuation.TwoWorlds.rd.offVal Becoming.ListingValuation.TwoWorlds.Val.agree) fun x => ()) =
+      0 ∧
+    (Becoming.HeldForReading.shortfall
+        { listed := [Becoming.ListingValuation.TwoWorlds.World.first, Becoming.ListingValuation.TwoWorlds.World.second],
+          weight := Becoming.ListingValuation.TwoWorlds.rd.weight }
+        (Becoming.ListingValuation.TwoWorlds.rd.goVal Becoming.ListingValuation.TwoWorlds.Val.agree)
+        (Becoming.ListingValuation.TwoWorlds.rd.offVal Becoming.ListingValuation.TwoWorlds.Val.agree) fun c =>
+        Becoming.ListingValuation.answer
+          {
+            listed :=
+              [Becoming.ListingValuation.TwoWorlds.World.first, Becoming.ListingValuation.TwoWorlds.World.second],
+            weight := Becoming.ListingValuation.TwoWorlds.rd.weight }
+          (Becoming.ListingValuation.TwoWorlds.rd.goVal Becoming.ListingValuation.TwoWorlds.Val.agree)
+          (Becoming.ListingValuation.TwoWorlds.rd.offVal Becoming.ListingValuation.TwoWorlds.Val.agree)
+          Becoming.ListingValuation.TwoWorlds.rd.reveal (Becoming.ListingValuation.TwoWorlds.rd.reveal c)) =
+      0
+Becoming.ListingValuation.TwoWorlds.shown_course : (Becoming.HeldForReading.shortfall
+      { listed := [Becoming.ListingValuation.TwoWorlds.World.first, Becoming.ListingValuation.TwoWorlds.World.second],
+        weight := Becoming.ListingValuation.TwoWorlds.rd.weight }
+      (Becoming.ListingValuation.TwoWorlds.rd.goVal Becoming.ListingValuation.TwoWorlds.Val.agree)
+      (Becoming.ListingValuation.TwoWorlds.rd.offVal Becoming.ListingValuation.TwoWorlds.Val.agree) fun w =>
+      ((Becoming.ListingValuation.joint Becoming.ListingValuation.TwoWorlds.rd
+              Becoming.ListingValuation.TwoWorlds.schedule).course
+          {
+            internal :=
+              ([Becoming.ListingValuation.TwoWorlds.World.first, Becoming.ListingValuation.TwoWorlds.World.second],
+                Becoming.ListingValuation.TwoWorlds.Val.agree),
+            sensory := Becoming.ListingValuation.Input.none, active := true,
+            external := (w, [Becoming.ListingValuation.Act.demonstrate]) }
+          1).active) =
+    1 ∧
+  (Becoming.HeldForReading.shortfall
+      { listed := [Becoming.ListingValuation.TwoWorlds.World.first, Becoming.ListingValuation.TwoWorlds.World.second],
+        weight := Becoming.ListingValuation.TwoWorlds.rd.weight }
+      (Becoming.ListingValuation.TwoWorlds.rd.goVal Becoming.ListingValuation.TwoWorlds.Val.agree)
+      (Becoming.ListingValuation.TwoWorlds.rd.offVal Becoming.ListingValuation.TwoWorlds.Val.agree) fun w =>
+      ((Becoming.ListingValuation.joint Becoming.ListingValuation.TwoWorlds.rd
+              Becoming.ListingValuation.TwoWorlds.schedule).course
+          {
+            internal :=
+              ([Becoming.ListingValuation.TwoWorlds.World.first, Becoming.ListingValuation.TwoWorlds.World.second],
+                Becoming.ListingValuation.TwoWorlds.Val.agree),
+            sensory := Becoming.ListingValuation.Input.none, active := true,
+            external := (w, [Becoming.ListingValuation.Act.demonstrate]) }
+          2).active) =
+    0
+Becoming.ListingValuation.TwoWorlds.presented_removes_residual : Becoming.ListingValuation.residual
+      { listed := [Becoming.ListingValuation.TwoWorlds.World.first],
+        weight := Becoming.ListingValuation.TwoWorlds.rd.weight }
+      (Becoming.ListingValuation.TwoWorlds.rd.goVal Becoming.ListingValuation.TwoWorlds.Val.agree)
+      (Becoming.ListingValuation.TwoWorlds.rd.offVal Becoming.ListingValuation.TwoWorlds.Val.agree) (fun x => ()) [()]
+      (Becoming.ListingValuation.answer
+        { listed := [Becoming.ListingValuation.TwoWorlds.World.first],
+          weight := Becoming.ListingValuation.TwoWorlds.rd.weight }
+        (Becoming.ListingValuation.TwoWorlds.rd.goVal Becoming.ListingValuation.TwoWorlds.Val.reversed)
+        (Becoming.ListingValuation.TwoWorlds.rd.offVal Becoming.ListingValuation.TwoWorlds.Val.reversed) fun x => ()) =
+    1 ∧
+  (Becoming.HeldForReading.shortfall
+        { listed := [Becoming.ListingValuation.TwoWorlds.World.first],
+          weight := Becoming.ListingValuation.TwoWorlds.rd.weight }
+        (Becoming.ListingValuation.TwoWorlds.rd.goVal Becoming.ListingValuation.TwoWorlds.Val.agree)
+        (Becoming.ListingValuation.TwoWorlds.rd.offVal Becoming.ListingValuation.TwoWorlds.Val.agree) fun x =>
+        Becoming.HeldForReading.leastThrough
+          { listed := [Becoming.ListingValuation.TwoWorlds.World.first],
+            weight := Becoming.ListingValuation.TwoWorlds.rd.weight }
+          (Becoming.ListingValuation.TwoWorlds.rd.goVal Becoming.ListingValuation.TwoWorlds.Val.agree)
+          (Becoming.ListingValuation.TwoWorlds.rd.offVal Becoming.ListingValuation.TwoWorlds.Val.agree) (fun x => ())
+          ()) =
+      0 ∧
+    (Becoming.HeldForReading.shortfall
+        { listed := [Becoming.ListingValuation.TwoWorlds.World.first],
+          weight := Becoming.ListingValuation.TwoWorlds.rd.weight }
+        (Becoming.ListingValuation.TwoWorlds.rd.goVal Becoming.ListingValuation.TwoWorlds.Val.agree)
+        (Becoming.ListingValuation.TwoWorlds.rd.offVal Becoming.ListingValuation.TwoWorlds.Val.agree) fun x =>
+        Becoming.ListingValuation.answer
+          { listed := [Becoming.ListingValuation.TwoWorlds.World.first],
+            weight := Becoming.ListingValuation.TwoWorlds.rd.weight }
+          (Becoming.ListingValuation.TwoWorlds.rd.goVal Becoming.ListingValuation.TwoWorlds.Val.agree)
+          (Becoming.ListingValuation.TwoWorlds.rd.offVal Becoming.ListingValuation.TwoWorlds.Val.agree) (fun x => ())
+          ()) =
+      0
+Becoming.ListingValuation.TwoWorlds.presented_course : (Becoming.HeldForReading.shortfall
+      { listed := [Becoming.ListingValuation.TwoWorlds.World.first],
+        weight := Becoming.ListingValuation.TwoWorlds.rd.weight }
+      (Becoming.ListingValuation.TwoWorlds.rd.goVal Becoming.ListingValuation.TwoWorlds.Val.agree)
+      (Becoming.ListingValuation.TwoWorlds.rd.offVal Becoming.ListingValuation.TwoWorlds.Val.agree) fun w =>
+      ((Becoming.ListingValuation.joint Becoming.ListingValuation.TwoWorlds.rd
+              Becoming.ListingValuation.TwoWorlds.schedule).course
+          {
+            internal :=
+              ([Becoming.ListingValuation.TwoWorlds.World.first], Becoming.ListingValuation.TwoWorlds.Val.reversed),
+            sensory := Becoming.ListingValuation.Input.none, active := true,
+            external := (w, [Becoming.ListingValuation.Act.present Becoming.ListingValuation.TwoWorlds.Val.agree]) }
+          1).active) =
+    1 ∧
+  (Becoming.HeldForReading.shortfall
+      { listed := [Becoming.ListingValuation.TwoWorlds.World.first],
+        weight := Becoming.ListingValuation.TwoWorlds.rd.weight }
+      (Becoming.ListingValuation.TwoWorlds.rd.goVal Becoming.ListingValuation.TwoWorlds.Val.agree)
+      (Becoming.ListingValuation.TwoWorlds.rd.offVal Becoming.ListingValuation.TwoWorlds.Val.agree) fun w =>
+      ((Becoming.ListingValuation.joint Becoming.ListingValuation.TwoWorlds.rd
+              Becoming.ListingValuation.TwoWorlds.schedule).course
+          {
+            internal :=
+              ([Becoming.ListingValuation.TwoWorlds.World.first], Becoming.ListingValuation.TwoWorlds.Val.reversed),
+            sensory := Becoming.ListingValuation.Input.none, active := true,
+            external := (w, [Becoming.ListingValuation.Act.present Becoming.ListingValuation.TwoWorlds.Val.agree]) }
+          2).active) =
+    0
+Becoming.ListingValuation.TwoWorlds.reached_rests : (Becoming.ListingValuation.joint
+        Becoming.ListingValuation.TwoWorlds.rd Becoming.ListingValuation.TwoWorlds.schedule).step
+    Becoming.ListingValuation.TwoWorlds.reached =
+  Becoming.ListingValuation.TwoWorlds.reached
+Becoming.ListingValuation.TwoWorlds.routes_rest : ∀ (b : Bool) (n : Nat),
+  (Becoming.ListingValuation.joint Becoming.ListingValuation.TwoWorlds.rd
+          Becoming.ListingValuation.TwoWorlds.schedule).course
+      (Becoming.ListingValuation.TwoWorlds.route b) (n + 2) =
+    Becoming.ListingValuation.TwoWorlds.reached
+Becoming.ListingValuation.TwoWorlds.answers_alike : ∀ (n : Nat),
+  ((Becoming.ListingValuation.joint Becoming.ListingValuation.TwoWorlds.rd
+            Becoming.ListingValuation.TwoWorlds.schedule).course
+        (Becoming.ListingValuation.TwoWorlds.route false) n).active =
+    ((Becoming.ListingValuation.joint Becoming.ListingValuation.TwoWorlds.rd
+            Becoming.ListingValuation.TwoWorlds.schedule).course
+        (Becoming.ListingValuation.TwoWorlds.route true) n).active
+Becoming.ListingValuation.TwoWorlds.route_answers : ∀ (b : Bool),
+  ((Becoming.ListingValuation.joint Becoming.ListingValuation.TwoWorlds.rd
+              Becoming.ListingValuation.TwoWorlds.schedule).course
+          (Becoming.ListingValuation.TwoWorlds.route b) 0).active =
+      true ∧
+    ((Becoming.ListingValuation.joint Becoming.ListingValuation.TwoWorlds.rd
+                Becoming.ListingValuation.TwoWorlds.schedule).course
+            (Becoming.ListingValuation.TwoWorlds.route b) 1).active =
+        true ∧
+      ∀ (n : Nat),
+        ((Becoming.ListingValuation.joint Becoming.ListingValuation.TwoWorlds.rd
+                  Becoming.ListingValuation.TwoWorlds.schedule).course
+              (Becoming.ListingValuation.TwoWorlds.route b) (n + 2)).active =
+          false
+@Becoming.ListingValuation.TwoWorlds.answersBefore_congr : ∀ {f g : Nat → Bool},
+  (∀ (n : Nat), f n = g n) →
+    ∀ (T : Nat),
+      Becoming.ListingValuation.TwoWorlds.answersBefore f T = Becoming.ListingValuation.TwoWorlds.answersBefore g T
+Becoming.ListingValuation.TwoWorlds.shown_keeps_agree : ∀ (n : Nat),
+  ((Becoming.ListingValuation.joint Becoming.ListingValuation.TwoWorlds.rd
+              Becoming.ListingValuation.TwoWorlds.schedule).course
+          (Becoming.ListingValuation.TwoWorlds.route false) n).internal.snd =
+    Becoming.ListingValuation.TwoWorlds.Val.agree
+@Becoming.ListingValuation.TwoWorlds.changedBefore_of_constant : ∀ {val : Nat → Becoming.ListingValuation.TwoWorlds.Val}
+  {v : Becoming.ListingValuation.TwoWorlds.Val},
+  (∀ (n : Nat), val n = v) → ∀ (T : Nat), Becoming.ListingValuation.TwoWorlds.changedBefore val T = false
+@Becoming.ListingValuation.TwoWorlds.changedBefore_succ_of_true : ∀
+  {val : Nat → Becoming.ListingValuation.TwoWorlds.Val} {k : Nat},
+  Becoming.ListingValuation.TwoWorlds.changedBefore val k = true →
+    Becoming.ListingValuation.TwoWorlds.changedBefore val (k + 1) = true
+Becoming.ListingValuation.TwoWorlds.presented_changed : ∀ (n : Nat),
+  Becoming.ListingValuation.TwoWorlds.changed (n + 2) true = true
+Becoming.ListingValuation.TwoWorlds.routes_alike : ∀ (T : Nat),
+  2 ≤ T → Becoming.ListingValuation.TwoWorlds.record T false = Becoming.ListingValuation.TwoWorlds.record T true
+Becoming.ListingValuation.TwoWorlds.changed_apart : ∀ (T : Nat),
+  2 ≤ T →
+    Becoming.ListingValuation.TwoWorlds.changed T false = false ∧
+      Becoming.ListingValuation.TwoWorlds.changed T true = true
+Becoming.ListingValuation.TwoWorlds.starts_apart : (Becoming.ListingValuation.TwoWorlds.route false).internal ≠
+  (Becoming.ListingValuation.TwoWorlds.route true).internal
+Becoming.ListingValuation.TwoWorlds.not_lumped : ∀ (T : Nat),
+  2 ≤ T →
+    ¬Becoming.Learning.Lumped (Becoming.ListingValuation.TwoWorlds.record T)
+        (Becoming.ListingValuation.TwoWorlds.changed T)
+Becoming.ListingValuation.TwoWorlds.lumped_with_start : ∀ (T : Nat),
+  Becoming.Learning.Lumped
+    (fun b => (Becoming.ListingValuation.TwoWorlds.record T b, (Becoming.ListingValuation.TwoWorlds.route b).internal))
+    (Becoming.ListingValuation.TwoWorlds.changed T)
+Becoming.ListingValuation.TwoWorlds.orderEnd_rests : (Becoming.ListingValuation.joint
+        Becoming.ListingValuation.TwoWorlds.rd Becoming.ListingValuation.TwoWorlds.schedule).step
+    Becoming.ListingValuation.TwoWorlds.orderEnd =
+  Becoming.ListingValuation.TwoWorlds.orderEnd
+Becoming.ListingValuation.TwoWorlds.orders_rest : ∀ (first : Bool) (n : Nat),
+  (Becoming.ListingValuation.joint Becoming.ListingValuation.TwoWorlds.rd
+          Becoming.ListingValuation.TwoWorlds.schedule).course
+      (Becoming.ListingValuation.TwoWorlds.orderStart first) (n + 3) =
+    Becoming.ListingValuation.TwoWorlds.orderEnd
+Becoming.ListingValuation.TwoWorlds.orders_apart : ((Becoming.ListingValuation.joint
+            Becoming.ListingValuation.TwoWorlds.rd Becoming.ListingValuation.TwoWorlds.schedule).course
+        (Becoming.ListingValuation.TwoWorlds.orderStart true) 2).active =
+    false ∧
+  ((Becoming.ListingValuation.joint Becoming.ListingValuation.TwoWorlds.rd
+              Becoming.ListingValuation.TwoWorlds.schedule).course
+          (Becoming.ListingValuation.TwoWorlds.orderStart false) 2).active =
+      true ∧
+    ∀ (n : Nat),
+      (Becoming.ListingValuation.joint Becoming.ListingValuation.TwoWorlds.rd
+              Becoming.ListingValuation.TwoWorlds.schedule).course
+          (Becoming.ListingValuation.TwoWorlds.orderStart true) (n + 3) =
+        (Becoming.ListingValuation.joint Becoming.ListingValuation.TwoWorlds.rd
+              Becoming.ListingValuation.TwoWorlds.schedule).course
+          (Becoming.ListingValuation.TwoWorlds.orderStart false) (n + 3)

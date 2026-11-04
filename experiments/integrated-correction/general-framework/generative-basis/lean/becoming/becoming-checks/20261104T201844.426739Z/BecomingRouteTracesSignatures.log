@@ -1,0 +1,29 @@
+@Becoming.RouteTraces.within_trace : ∀ {S A : Type} (P : Generative.Process S A) (ground response : S → A → S → Nat),
+  (∀ (s : S) (a : A) (t : S), Becoming.nonzero (ground s a t + response s a t) = true ↔ P.step s a t) →
+    ∀ (moves : List A) (all : List S),
+      (∀ (a : A), a ∈ moves) →
+        (∀ (s : S), s ∈ all) →
+          ∀ (f : S → Nat) (j n : Nat) (s : S),
+            Becoming.nonzero (Becoming.counting.within ground response moves all f j n s) = true →
+              ∃ as t, as.length = n ∧ Generative.Trace P s as t ∧ Becoming.nonzero (f t) = true
+@Becoming.RouteTraces.possibility_within_trace : ∀ {S A : Type} (P : Generative.Process S A)
+  (ground response : S → A → S → Nat),
+  (∀ (s : S) (a : A) (t : S), Becoming.nonzero (ground s a t + response s a t) = true ↔ P.step s a t) →
+    ∀ (moves : List A) (all : List S),
+      (∀ (a : A), a ∈ moves) →
+        (∀ (s : S), s ∈ all) →
+          ∀ (f : S → Nat) (j n : Nat) (s : S),
+            Becoming.possibility.within (fun s a t => Becoming.nonzero (ground s a t))
+                  (fun s a t => Becoming.nonzero (response s a t)) moves all (fun s => Becoming.nonzero (f s)) j n s =
+                true →
+              ∃ as t, as.length = n ∧ Generative.Trace P s as t ∧ Becoming.nonzero (f t) = true
+Becoming.RouteTraces.selfLoopWorld_geomBound : ∀ (M D t : Nat),
+  (Becoming.FormedLoops.scheduleWorld (fun x => true) M D).web.level t (Sum.inr ()) = Becoming.Loops.geomBound M D t
+Becoming.RouteTraces.selfLoopWorld_mono : ∀ (M D : Nat) {s t : Nat},
+  s ≤ t →
+    (Becoming.FormedLoops.scheduleWorld (fun x => true) M D).web.level s (Sum.inr ()) ≤
+      (Becoming.FormedLoops.scheduleWorld (fun x => true) M D).web.level t (Sum.inr ())
+Becoming.RouteTraces.selfLoopWorld_full_order : ∀ (M D t : Nat),
+  (Becoming.FormedLoops.scheduleWorld (fun x => true) M D).web.level t (Sum.inr ()) = D * Becoming.Loops.orderSum M t t
+Becoming.RouteTraces.scheduleWorld_le_always : ∀ (on : Nat → Bool) (M D t : Nat),
+  (Becoming.FormedLoops.scheduleWorld on M D).web.level t (Sum.inr ()) ≤ D * (1 + M) ^ t

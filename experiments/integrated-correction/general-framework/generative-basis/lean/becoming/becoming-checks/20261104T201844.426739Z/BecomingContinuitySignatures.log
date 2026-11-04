@@ -1,0 +1,175 @@
+@Becoming.Continuity.adj_symm : ∀ {R : Type} (rel : R → R → Bool) (a b : R),
+  Becoming.Continuity.adj rel a b = Becoming.Continuity.adj rel b a
+@Becoming.Continuity.within_true : ∀ {R : Type} {p : R → Bool} {x : R} (q : R → Nat),
+  p x = true → Becoming.Continuity.within p q x = q x
+@Becoming.Continuity.within_false : ∀ {R : Type} {p : R → Bool} {x : R} (q : R → Nat),
+  p x = false → Becoming.Continuity.within p q x = 0
+@Becoming.Continuity.within_add : ∀ {R : Type} (p : R → Bool) (q r : R → Nat) (x : R),
+  Becoming.Continuity.within p (fun y => q y + r y) x =
+    Becoming.Continuity.within p q x + Becoming.Continuity.within p r x
+@Becoming.Continuity.inside_of_true : ∀ {R : Type} {p : R → Bool} {move : R → R → Nat} {a b : R},
+  p a = true → Becoming.Continuity.inside p move a b = Becoming.Continuity.within p (move a) b
+@Becoming.Continuity.inside_of_false : ∀ {R : Type} {p : R → Bool} {move : R → R → Nat} {a b : R},
+  p a = false → Becoming.Continuity.inside p move a b = 0
+@Becoming.Continuity.within_sent : ∀ {R : Type} {rel : R → R → Bool} {us : List R} {p : R → Bool} {move : R → R → Nat},
+  (∀ (a b : R), 0 < move a b → Becoming.Continuity.adj rel a b = true) →
+    Becoming.Continuity.Closes rel us p →
+      ∀ {c : R},
+        c ∈ us →
+          Becoming.Continuity.within p (fun c => Becoming.total us (move c)) c =
+            Becoming.total us (Becoming.Continuity.inside p move c)
+@Becoming.Continuity.within_received : ∀ {R : Type} {rel : R → R → Bool} {us : List R} {p : R → Bool}
+  {move : R → R → Nat},
+  (∀ (a b : R), 0 < move a b → Becoming.Continuity.adj rel a b = true) →
+    Becoming.Continuity.Closes rel us p →
+      ∀ {c : R},
+        c ∈ us →
+          Becoming.Continuity.within p (fun c => Becoming.total us fun a => move a c) c =
+            Becoming.total us fun a => Becoming.Continuity.inside p move a c
+@Becoming.Continuity.conserved_of_balancing : ∀ {R : Type} {rel : R → R → Bool} {us : List R} {prev next : R → Nat}
+  {move : R → R → Nat},
+  Becoming.Continuity.Balancing rel us prev next move → Becoming.Continuity.ConservedOn rel us prev next
+@Becoming.Continuity.conservedOn_of_law : ∀ {R : Type} {rel : R → R → Bool} {us : List R} {law : (R → Nat) → R → Nat},
+  Becoming.Continuity.ReadsAdjacent rel us law →
+    Becoming.Continuity.Conserves us law → ∀ (a : R → Nat), Becoming.Continuity.ConservedOn rel us a (law a)
+@Becoming.Continuity.direct_add_via : ∀ {R : Type} (rel : R → R → Bool) (move : R → R → Nat) (a b : R),
+  Becoming.Continuity.direct rel move a b + Becoming.Continuity.via rel move a b = move a b
+@Becoming.Continuity.joined_of_adj : ∀ {R : Type} {rel : R → R → Bool} {x u v : R},
+  Becoming.Continuity.adj rel u v = true → Becoming.Continuity.adj (Becoming.Continuity.joined rel x) u v = true
+@Becoming.Continuity.joined_of_both : ∀ {R : Type} {rel : R → R → Bool} {x u v : R},
+  Becoming.Continuity.adj rel u x = true →
+    Becoming.Continuity.adj rel v x = true → Becoming.Continuity.adj (Becoming.Continuity.joined rel x) u v = true
+@Becoming.Continuity.joined_apart : ∀ {R : Type} {rel : R → R → Bool} {x u v : R},
+  Becoming.Continuity.adj (Becoming.Continuity.joined rel x) u v = true →
+    Becoming.Continuity.adj rel u v = false →
+      Becoming.Continuity.adj rel u x = true ∧ Becoming.Continuity.adj rel v x = true
+@Becoming.Continuity.not_eq_of_mem_rest : ∀ {R : Type} {x a : R} {rest : List R},
+  Becoming.Distinct (x :: rest) → a ∈ rest → a ≠ x
+@Becoming.Continuity.add_pos_cases : ∀ {a b : Nat}, 0 < a + b → 0 < a ∨ 0 < b
+@Becoming.Continuity.via_through : ∀ {R : Type} {rel : R → R → Bool} {x : R} {rest : List R} {move : R → R → Nat},
+  (∀ (a b : R), 0 < move a b → Becoming.Continuity.adj (Becoming.Continuity.joined rel x) a b = true) →
+    (∀ (a b : R), 0 < move a b → a ∈ rest ∧ b ∈ rest) →
+      ∀ {u v : R},
+        0 < Becoming.Continuity.via rel move u v →
+          Becoming.Continuity.adj rel u x = true ∧ Becoming.Continuity.adj rel v x = true ∧ u ∈ rest ∧ v ∈ rest
+@Becoming.Continuity.route_cons : ∀ {R : Type} [inst : DecidableEq R] (x : R) (rest : List R) (rel : R → R → Bool)
+  (prev next : R → Nat),
+  Becoming.Continuity.route (x :: rest) rel prev next =
+    Becoming.Continuity.expand rel x rest
+      (Becoming.Continuity.route rest (Becoming.Continuity.joined rel x)
+        (fun z =>
+          prev z +
+            Becoming.Continuity.edge (List.find? (fun u => Becoming.Continuity.adj rel u x) rest) (prev x - next x) z)
+        fun z =>
+        next z +
+          Becoming.Continuity.edge (List.find? (fun u => Becoming.Continuity.adj rel u x) rest) (next x - prev x) z)
+      (List.find? (fun u => Becoming.Continuity.adj rel u x) rest) (next x - prev x) (prev x - next x)
+@Becoming.Continuity.edge_pos : ∀ {R : Type} [inst : DecidableEq R] {y : Option R} {v : Nat} {a : R},
+  0 < Becoming.Continuity.edge y v a → ∃ y', y = some y' ∧ a = y'
+@Becoming.Continuity.total_edge : ∀ {R : Type} [inst : DecidableEq R] {y' : R} {v : Nat} {l : List R},
+  Becoming.Distinct l → y' ∈ l → Becoming.total l (Becoming.Continuity.edge (some y') v) = v
+@Becoming.Continuity.within_edge_off : ∀ {R : Type} [inst : DecidableEq R] {p : R → Bool} {y' a : R} {v : Nat},
+  a ≠ y' → Becoming.Continuity.within p (Becoming.Continuity.edge (some y') v) a = 0
+@Becoming.Continuity.total_within_edge : ∀ {R : Type} [inst : DecidableEq R] {p : R → Bool} {y' : R} {v : Nat}
+  {l : List R},
+  Becoming.Distinct l →
+    y' ∈ l →
+      Becoming.total l (Becoming.Continuity.within p (Becoming.Continuity.edge (some y') v)) =
+        Becoming.Continuity.within p (fun x => v) y'
+@Becoming.Continuity.rearrange : ∀ {v e d m : Nat}, d + v = m → v + e + d = m + e
+@Becoming.Continuity.expand_sent : ∀ {R : Type} [inst : DecidableEq R] {rel : R → R → Bool} {x : R} {rest : List R}
+  {move : R → R → Nat} {y : Option R} {gx lx : Nat},
+  Becoming.Distinct (x :: rest) →
+    ∀ {c : R},
+      c ∈ rest →
+        Becoming.total (x :: rest) (Becoming.Continuity.expand rel x rest move y gx lx c) =
+          Becoming.total rest (move c) + Becoming.Continuity.edge y gx c
+@Becoming.Continuity.expand_received : ∀ {R : Type} [inst : DecidableEq R] {rel : R → R → Bool} {x : R} {rest : List R}
+  {move : R → R → Nat} {y : Option R} {gx lx : Nat},
+  Becoming.Distinct (x :: rest) →
+    ∀ {c : R},
+      c ∈ rest →
+        (Becoming.total (x :: rest) fun a => Becoming.Continuity.expand rel x rest move y gx lx a c) =
+          (Becoming.total rest fun a => move a c) + Becoming.Continuity.edge y lx c
+@Becoming.Continuity.expand_sent_x : ∀ {R : Type} [inst : DecidableEq R] {rel : R → R → Bool} {x : R} {rest : List R}
+  {move : R → R → Nat} {y : Option R} {gx lx : Nat},
+  Becoming.Distinct (x :: rest) →
+    Becoming.total (x :: rest) (Becoming.Continuity.expand rel x rest move y gx lx x) =
+      (Becoming.total rest fun b => Becoming.total rest fun u => Becoming.Continuity.via rel move u b) +
+        Becoming.total rest (Becoming.Continuity.edge y lx)
+@Becoming.Continuity.expand_received_x : ∀ {R : Type} [inst : DecidableEq R] {rel : R → R → Bool} {x : R}
+  {rest : List R} {move : R → R → Nat} {y : Option R} {gx lx : Nat},
+  Becoming.Distinct (x :: rest) →
+    (Becoming.total (x :: rest) fun a => Becoming.Continuity.expand rel x rest move y gx lx a x) =
+      (Becoming.total rest fun a => Becoming.total rest fun v => Becoming.Continuity.via rel move a v) +
+        Becoming.total rest (Becoming.Continuity.edge y gx)
+@Becoming.Continuity.expand_along : ∀ {R : Type} [inst : DecidableEq R] {rel : R → R → Bool} {x : R} {rest : List R}
+  {move : R → R → Nat} {gx lx : Nat},
+  (∀ (a b : R), 0 < move a b → Becoming.Continuity.adj (Becoming.Continuity.joined rel x) a b = true) →
+    (∀ (a b : R), 0 < move a b → a ∈ rest ∧ b ∈ rest) →
+      ∀ {a b : R},
+        0 <
+            Becoming.Continuity.expand rel x rest move (List.find? (fun u => Becoming.Continuity.adj rel u x) rest) gx
+              lx a b →
+          Becoming.Continuity.adj rel a b = true ∧ a ∈ x :: rest ∧ b ∈ x :: rest
+@Becoming.Continuity.shift : ∀ {n p a b g l : Nat}, n + a = p + b → p + g = n + l → a + g = b + l
+@Becoming.Continuity.conservedOn_rest : ∀ {R : Type} [inst : DecidableEq R] {rel : R → R → Bool} {x : R} {rest : List R}
+  {prev next : R → Nat},
+  Becoming.Distinct (x :: rest) →
+    Becoming.Continuity.ConservedOn rel (x :: rest) prev next →
+      Becoming.Continuity.ConservedOn (Becoming.Continuity.joined rel x) rest
+        (fun z =>
+          prev z +
+            Becoming.Continuity.edge (List.find? (fun u => Becoming.Continuity.adj rel u x) rest) (prev x - next x) z)
+        fun z =>
+        next z +
+          Becoming.Continuity.edge (List.find? (fun u => Becoming.Continuity.adj rel u x) rest) (next x - prev x) z
+@Becoming.Continuity.kept_alone : ∀ {R : Type} [DecidableEq R] {rel : R → R → Bool} {x : R} {rest : List R}
+  {prev next : R → Nat},
+  Becoming.Distinct (x :: rest) →
+    Becoming.Continuity.ConservedOn rel (x :: rest) prev next →
+      (∀ (u : R), u ∈ rest → Becoming.Continuity.adj rel u x = false) → next x = prev x
+@Becoming.Continuity.mid : ∀ {a b c d s : Nat}, b + d = a + c → a + (s + c) = b + (s + d)
+@Becoming.Continuity.mid2 : ∀ {a b t t' e1 e2 : Nat}, a + e1 + t = b + e2 + t' → a + (t + e1) = b + (t' + e2)
+@Becoming.Continuity.route_balancing : ∀ {R : Type} [inst : DecidableEq R] (us : List R) (rel : R → R → Bool)
+  (prev next : R → Nat),
+  Becoming.Distinct us →
+    Becoming.Continuity.ConservedOn rel us prev next →
+      Becoming.Continuity.Balancing rel us prev next (Becoming.Continuity.route us rel prev next)
+@Becoming.Continuity.balancing_iff : ∀ {R : Type} [DecidableEq R] {rel : R → R → Bool} {us : List R}
+  {prev next : R → Nat},
+  Becoming.Distinct us →
+    ((∃ move, Becoming.Continuity.Balancing rel us prev next move) ↔ Becoming.Continuity.ConservedOn rel us prev next)
+@Becoming.Continuity.balancesOn_iff_conserved : ∀ {R : Type} [DecidableEq R] {us : List R} {rel : Nat → R → R → Bool}
+  {W : Becoming.Web R R},
+  Becoming.Distinct us →
+    ((∃ move,
+        (∀ (t : Nat) (a b : R), 0 < move t a b → Becoming.Continuity.adj (rel t) a b = true ∧ a ∈ us ∧ b ∈ us) ∧
+          ∀ (t : Nat), (Becoming.Continuity.flow us move).BalancesOn W us t) ↔
+      ∀ (t : Nat), Becoming.Continuity.ConservedOn (rel t) us (W.level t) (W.level (t + 1)))
+@Becoming.Continuity.balances_of_conserved : ∀ {R : Type} [inst : DecidableEq R] {us : List R}
+  {rel : Nat → R → R → Bool} {W : Becoming.Web R R},
+  Becoming.Distinct us →
+    (∀ (c : R), c ∈ us) →
+      (∀ (t : Nat), Becoming.Continuity.ConservedOn (rel t) us (W.level t) (W.level (t + 1))) →
+        (Becoming.Continuity.routed us rel W).Balances W
+@Becoming.Continuity.balancesOn_of_law : ∀ {R : Type} [inst : DecidableEq R] {us : List R} {rel : R → R → Bool}
+  {law : (R → Nat) → R → Nat} {W : Becoming.Web R R},
+  Becoming.Distinct us →
+    Becoming.Continuity.ReadsAdjacent rel us law →
+      Becoming.Continuity.Conserves us law →
+        (∀ (t : Nat) (x : R), x ∈ us → W.level (t + 1) x = law (W.level t) x) →
+          ∀ (t : Nat), (Becoming.Continuity.routed us (fun x => rel) W).BalancesOn W us t
+Becoming.Continuity.Teleport.distinct : Becoming.Distinct Becoming.Continuity.Teleport.all
+Becoming.Continuity.Teleport.conserves : Becoming.Continuity.Conserves Becoming.Continuity.Teleport.all
+  Becoming.Continuity.Teleport.swap
+Becoming.Continuity.Teleport.reads : Becoming.Continuity.ReadsAdjacent Becoming.Continuity.Teleport.together
+  Becoming.Continuity.Teleport.all Becoming.Continuity.Teleport.swap
+Becoming.Continuity.Teleport.no_transfers_apart : ¬∃ move,
+    Becoming.Continuity.Balancing Becoming.Continuity.Teleport.apart Becoming.Continuity.Teleport.all
+      Becoming.Continuity.Teleport.unit (Becoming.Continuity.Teleport.swap Becoming.Continuity.Teleport.unit) move
+Becoming.Continuity.Teleport.balanced_together : ∀ (a : Bool → Nat),
+  Becoming.Continuity.Balancing Becoming.Continuity.Teleport.together Becoming.Continuity.Teleport.all a
+    (Becoming.Continuity.Teleport.swap a)
+    (Becoming.Continuity.route Becoming.Continuity.Teleport.all Becoming.Continuity.Teleport.together a
+      (Becoming.Continuity.Teleport.swap a))

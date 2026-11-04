@@ -1,0 +1,407 @@
+@Becoming.RuleShaping.eq_of_counts : ∀ {x y : Becoming.RuleCapture.CarrierCounts},
+  x.carrier = y.carrier → x.other = y.other → x = y
+@Becoming.RuleShaping.favours_iff : ∀ {a s p c : Nat} {pos : 0 < a},
+  (Becoming.RuleShaping.shaped a s p c pos).favours ↔ c ≤ s
+@Becoming.RuleShaping.disfavours_iff : ∀ {a s p c : Nat} {pos : 0 < a},
+  (Becoming.RuleShaping.shaped a s p c pos).disfavours ↔ s ≤ c
+@Becoming.RuleShaping.favours_alike : ∀ {a s p p' c : Nat} {pos : 0 < a},
+  (Becoming.RuleShaping.shaped a s p c pos).favours ↔ (Becoming.RuleShaping.shaped a s p' c pos).favours
+@Becoming.RuleShaping.shared_lowers : ∀ {a s p p' c : Nat} {pos : 0 < a},
+  c ≤ s →
+    p ≤ p' →
+      Becoming.RuleCapture.CarrierCounts.order.le (Becoming.RuleShaping.shaped a s p' c pos)
+        (Becoming.RuleShaping.shaped a s p c pos)
+@Becoming.RuleShaping.shared_lowers_strictly : ∀ {a s p p' c : Nat} {pos : 0 < a},
+  c < s →
+    p < p' →
+      (Becoming.RuleShaping.shaped a s p' c pos).carrier * (Becoming.RuleShaping.shaped a s p c pos).other <
+        (Becoming.RuleShaping.shaped a s p c pos).carrier * (Becoming.RuleShaping.shaped a s p' c pos).other
+@Becoming.RuleShaping.shared_raises : ∀ {a s p p' c : Nat} {pos : 0 < a},
+  s ≤ c →
+    p ≤ p' →
+      Becoming.RuleCapture.CarrierCounts.order.le (Becoming.RuleShaping.shaped a s p c pos)
+        (Becoming.RuleShaping.shaped a s p' c pos)
+@Becoming.RuleShaping.lower_c_raises : ∀ {a s p c c' : Nat} {pos : 0 < a},
+  c' ≤ c →
+    Becoming.RuleCapture.CarrierCounts.order.le (Becoming.RuleShaping.shaped a s p c pos)
+      (Becoming.RuleShaping.shaped a s p c' pos)
+@Becoming.RuleShaping.lower_c_raises_strictly : ∀ {a s p c c' : Nat} {pos : 0 < a},
+  c' < c →
+    (Becoming.RuleShaping.shaped a s p c pos).carrier * (Becoming.RuleShaping.shaped a s p c' pos).other <
+      (Becoming.RuleShaping.shaped a s p c' pos).carrier * (Becoming.RuleShaping.shaped a s p c pos).other
+@Becoming.RuleShaping.shaped_shift : ∀ {a s p c : Nat} {pos : 0 < a},
+  Becoming.RuleShaping.shaped a s p c pos = Becoming.RuleShaping.shaped (a + p) s 0 c ⋯
+@Becoming.RuleShaping.falls_strictly : ∀ {x g : Becoming.RuleCapture.CarrierCounts},
+  0 < x.carrier → g.carrier < g.other → (x.select g).carrier * x.other < x.carrier * (x.select g).other
+@Becoming.RuleShaping.present_along : ∀ {g : Becoming.RuleCapture.CarrierCounts},
+  0 < g.carrier →
+    ∀ {x : Becoming.RuleCapture.CarrierCounts},
+      0 < x.carrier → ∀ (n : Nat), 0 < (Becoming.Law.orbit (fun y => y.select g) x n).carrier
+@Becoming.RuleShaping.present_of_le : ∀ {x y : Becoming.RuleCapture.CarrierCounts},
+  Becoming.RuleCapture.CarrierCounts.order.le x y → 0 < x.carrier → 0 < y.carrier
+@Becoming.RuleShaping.nothing_back_falls : ∀ {a p c : Nat} {pos : 0 < a},
+  0 < c →
+    ∀ {x : Becoming.RuleCapture.CarrierCounts},
+      0 < x.carrier →
+        ∀ (n : Nat),
+          (Becoming.Law.orbit (fun y => y.select (Becoming.RuleShaping.shaped a 0 p c pos)) x (n + 1)).carrier *
+              (Becoming.Law.orbit (fun y => y.select (Becoming.RuleShaping.shaped a 0 p c pos)) x n).other <
+            (Becoming.Law.orbit (fun y => y.select (Becoming.RuleShaping.shaped a 0 p c pos)) x n).carrier *
+              (Becoming.Law.orbit (fun y => y.select (Becoming.RuleShaping.shaped a 0 p c pos)) x (n + 1)).other
+@Becoming.RuleShaping.c_zero_favours : ∀ {a s p : Nat} {pos : 0 < a}, (Becoming.RuleShaping.shaped a s p 0 pos).favours
+@Becoming.RuleShaping.neutral_steady : ∀ {a p : Nat} {pos : 0 < a} (x : Becoming.RuleCapture.CarrierCounts),
+  Becoming.RuleCapture.CarrierCounts.order.le x (x.select (Becoming.RuleShaping.shaped a 0 p 0 pos)) ∧
+    Becoming.RuleCapture.CarrierCounts.order.le (x.select (Becoming.RuleShaping.shaped a 0 p 0 pos)) x
+Becoming.RuleShaping.select_thenBy : ∀ (x g g' : Becoming.RuleCapture.CarrierCounts),
+  (x.select g).select g' = x.select (Becoming.RuleShaping.thenBy g g')
+@Becoming.RuleShaping.pow_pos_of_pos : ∀ {b : Nat}, 0 < b → ∀ (n : Nat), 0 < b ^ n
+Becoming.RuleShaping.orbit_held : ∀ (g x : Becoming.RuleCapture.CarrierCounts) (n : Nat),
+  Becoming.Law.orbit (fun y => y.select g) x n = x.select (Becoming.RuleShaping.held g n)
+@Becoming.RuleShaping.le_select_iff : ∀ {x g : Becoming.RuleCapture.CarrierCounts},
+  0 < x.carrier → (Becoming.RuleCapture.CarrierCounts.order.le x (x.select g) ↔ g.favours)
+@Becoming.RuleShaping.lt_select_iff : ∀ {x g : Becoming.RuleCapture.CarrierCounts},
+  0 < x.carrier → (x.carrier * (x.select g).other < (x.select g).carrier * x.other ↔ g.other < g.carrier)
+@Becoming.RuleShaping.stretch_eq : ∀ {a s p c : Nat} {pos : 0 < a} (x : Becoming.RuleCapture.CarrierCounts) (m n : Nat),
+  Becoming.Law.orbit (fun y => y.select (Becoming.RuleShaping.shaped a s p c pos))
+      (Becoming.Law.orbit (fun y => y.select (Becoming.RuleShaping.shaped a 0 p c pos)) x m) n =
+    x.select
+      (Becoming.RuleShaping.thenBy (Becoming.RuleShaping.held (Becoming.RuleShaping.shaped a 0 p c pos) m)
+        (Becoming.RuleShaping.held (Becoming.RuleShaping.shaped a s p c pos) n))
+@Becoming.RuleShaping.stretch_iff : ∀ {a s p c : Nat} {pos : 0 < a} {x : Becoming.RuleCapture.CarrierCounts},
+  0 < x.carrier →
+    ∀ (m n : Nat),
+      Becoming.RuleCapture.CarrierCounts.order.le x
+          (Becoming.Law.orbit (fun y => y.select (Becoming.RuleShaping.shaped a s p c pos))
+            (Becoming.Law.orbit (fun y => y.select (Becoming.RuleShaping.shaped a 0 p c pos)) x m) n) ↔
+        (a + c + p) ^ m * (a + c + p) ^ n ≤ (a + p) ^ m * (a + s + p) ^ n
+@Becoming.RuleShaping.stretch_lt_iff : ∀ {a s p c : Nat} {pos : 0 < a} {x : Becoming.RuleCapture.CarrierCounts},
+  0 < x.carrier →
+    ∀ (m n : Nat),
+      x.carrier *
+            (Becoming.Law.orbit (fun y => y.select (Becoming.RuleShaping.shaped a s p c pos))
+                (Becoming.Law.orbit (fun y => y.select (Becoming.RuleShaping.shaped a 0 p c pos)) x m) n).other <
+          (Becoming.Law.orbit (fun y => y.select (Becoming.RuleShaping.shaped a s p c pos))
+                (Becoming.Law.orbit (fun y => y.select (Becoming.RuleShaping.shaped a 0 p c pos)) x m) n).carrier *
+            x.other ↔
+        (a + c + p) ^ m * (a + c + p) ^ n < (a + p) ^ m * (a + s + p) ^ n
+@Becoming.RuleShaping.wait_not_more : ∀ {a s p c m n : Nat},
+  0 < a →
+    (a + c + p) ^ (m + 1) * (a + c + p) ^ n ≤ (a + p) ^ (m + 1) * (a + s + p) ^ n →
+      (a + c + p) ^ m * (a + c + p) ^ n ≤ (a + p) ^ m * (a + s + p) ^ n
+@Becoming.RuleShaping.back_longer_not_less : ∀ {a s p c m n : Nat},
+  c ≤ s →
+    (a + c + p) ^ m * (a + c + p) ^ n ≤ (a + p) ^ m * (a + s + p) ^ n →
+      (a + c + p) ^ m * (a + c + p) ^ (n + 1) ≤ (a + p) ^ m * (a + s + p) ^ (n + 1)
+@Becoming.RuleShaping.byBack_reads_iff : ∀ {a p c : Nat} {pos : 0 < a} {σ : Becoming.RuleCapture.CarrierCounts → Nat},
+  Becoming.RuleCapture.ReadsShare Becoming.RuleCapture.CarrierCounts.order Becoming.RuleCapture.CarrierCounts.order
+      (Becoming.RuleShaping.byBack a p c pos σ) ↔
+    ∀ (x y : Becoming.RuleCapture.CarrierCounts), Becoming.RuleCapture.CarrierCounts.order.le x y → σ x ≤ σ y
+@Becoming.RuleShaping.covering_locks : ∀ {a p c : Nat} {pos : 0 < a} {σ : Becoming.RuleCapture.CarrierCounts → Nat},
+  (∀ (x y : Becoming.RuleCapture.CarrierCounts), Becoming.RuleCapture.CarrierCounts.order.le x y → σ x ≤ σ y) →
+    (∀ (x : Becoming.RuleCapture.CarrierCounts), c ≤ σ x) →
+      ∀ {reads : Nat → Bool} {x : Becoming.RuleCapture.CarrierCounts} {s : Nat},
+        c ≤ s →
+          (∀ (t : Nat),
+              Becoming.RuleCapture.CarrierCounts.order.le
+                (Becoming.Pace.paced Becoming.RuleCapture.CarrierCounts.select (Becoming.RuleShaping.byBack a p c pos σ)
+                    reads (x, Becoming.RuleShaping.shaped a s p c pos) t).fst
+                (Becoming.Pace.paced Becoming.RuleCapture.CarrierCounts.select (Becoming.RuleShaping.byBack a p c pos σ)
+                    reads (x, Becoming.RuleShaping.shaped a s p c pos) (t + 1)).fst) ∧
+            ∀ (r : Nat),
+              reads r = true →
+                Becoming.RuleCapture.Locked Becoming.RuleCapture.CarrierCounts.order
+                  Becoming.RuleCapture.CarrierCounts.favours (Becoming.RuleShaping.byBack a p c pos σ)
+                  (Becoming.Pace.paced Becoming.RuleCapture.CarrierCounts.select
+                    (Becoming.RuleShaping.byBack a p c pos σ) reads (x, Becoming.RuleShaping.shaped a s p c pos)
+                    (r + 1))
+@Becoming.RuleShaping.thresholdBack_above : ∀ {hi lo : Nat} {x : Becoming.RuleCapture.CarrierCounts},
+  x.favours → Becoming.RuleShaping.thresholdBack hi lo x = hi
+@Becoming.RuleShaping.thresholdBack_below : ∀ {hi lo : Nat} {x : Becoming.RuleCapture.CarrierCounts},
+  ¬x.favours → Becoming.RuleShaping.thresholdBack hi lo x = lo
+@Becoming.RuleShaping.thresholdBack_mono : ∀ {hi lo : Nat},
+  lo ≤ hi →
+    ∀ (x y : Becoming.RuleCapture.CarrierCounts),
+      Becoming.RuleCapture.CarrierCounts.order.le x y →
+        Becoming.RuleShaping.thresholdBack hi lo x ≤ Becoming.RuleShaping.thresholdBack hi lo y
+@Becoming.RuleShaping.threshold_from_above : ∀ {a p c hi lo : Nat} {pos : 0 < a},
+  lo ≤ hi →
+    c ≤ hi →
+      ∀ {reads : Nat → Bool} {x : Becoming.RuleCapture.CarrierCounts},
+        x.favours →
+          ∀ (k : Nat),
+            Becoming.RuleCapture.CarrierCounts.order.le x
+              (Becoming.Pace.paced Becoming.RuleCapture.CarrierCounts.select
+                  (Becoming.RuleShaping.byBack a p c pos (Becoming.RuleShaping.thresholdBack hi lo)) reads
+                  (x, Becoming.RuleShaping.shaped a hi p c pos) k).fst
+@Becoming.RuleShaping.threshold_from_below : ∀ {a p c hi lo : Nat} {pos : 0 < a},
+  lo ≤ hi →
+    lo ≤ c →
+      ∀ {reads : Nat → Bool} {x : Becoming.RuleCapture.CarrierCounts},
+        ¬x.favours →
+          ∀ (k : Nat),
+            Becoming.RuleCapture.CarrierCounts.order.le
+              (Becoming.Pace.paced Becoming.RuleCapture.CarrierCounts.select
+                  (Becoming.RuleShaping.byBack a p c pos (Becoming.RuleShaping.thresholdBack hi lo)) reads
+                  (x, Becoming.RuleShaping.shaped a lo p c pos) k).fst
+              x
+@Becoming.RuleShaping.threshold_rule_above : ∀ {a p c hi lo : Nat} {pos : 0 < a},
+  lo ≤ hi →
+    c ≤ hi →
+      ∀ {reads : Nat → Bool} {x : Becoming.RuleCapture.CarrierCounts},
+        x.favours →
+          ∀ (t : Nat),
+            (Becoming.Pace.paced Becoming.RuleCapture.CarrierCounts.select
+                  (Becoming.RuleShaping.byBack a p c pos (Becoming.RuleShaping.thresholdBack hi lo)) reads
+                  (x, Becoming.RuleShaping.shaped a hi p c pos) t).snd =
+              Becoming.RuleShaping.shaped a hi p c pos
+@Becoming.RuleShaping.threshold_rule_below : ∀ {a p c hi lo : Nat} {pos : 0 < a},
+  lo ≤ hi →
+    lo ≤ c →
+      ∀ {reads : Nat → Bool} {x : Becoming.RuleCapture.CarrierCounts},
+        ¬x.favours →
+          ∀ (t : Nat),
+            (Becoming.Pace.paced Becoming.RuleCapture.CarrierCounts.select
+                  (Becoming.RuleShaping.byBack a p c pos (Becoming.RuleShaping.thresholdBack hi lo)) reads
+                  (x, Becoming.RuleShaping.shaped a lo p c pos) t).snd =
+              Becoming.RuleShaping.shaped a lo p c pos
+@Becoming.RuleShaping.threshold_rises : ∀ {a p c hi lo : Nat} {pos : 0 < a},
+  lo ≤ hi →
+    c < hi →
+      ∀ {reads : Nat → Bool} {x : Becoming.RuleCapture.CarrierCounts},
+        x.favours →
+          0 < x.carrier →
+            ∀ (t : Nat),
+              (Becoming.Pace.paced Becoming.RuleCapture.CarrierCounts.select
+                        (Becoming.RuleShaping.byBack a p c pos (Becoming.RuleShaping.thresholdBack hi lo)) reads
+                        (x, Becoming.RuleShaping.shaped a hi p c pos) t).fst.carrier *
+                  (Becoming.Pace.paced Becoming.RuleCapture.CarrierCounts.select
+                        (Becoming.RuleShaping.byBack a p c pos (Becoming.RuleShaping.thresholdBack hi lo)) reads
+                        (x, Becoming.RuleShaping.shaped a hi p c pos) (t + 1)).fst.other <
+                (Becoming.Pace.paced Becoming.RuleCapture.CarrierCounts.select
+                        (Becoming.RuleShaping.byBack a p c pos (Becoming.RuleShaping.thresholdBack hi lo)) reads
+                        (x, Becoming.RuleShaping.shaped a hi p c pos) (t + 1)).fst.carrier *
+                  (Becoming.Pace.paced Becoming.RuleCapture.CarrierCounts.select
+                        (Becoming.RuleShaping.byBack a p c pos (Becoming.RuleShaping.thresholdBack hi lo)) reads
+                        (x, Becoming.RuleShaping.shaped a hi p c pos) t).fst.other
+@Becoming.RuleShaping.threshold_present_below : ∀ {a p c hi lo : Nat} {pos : 0 < a},
+  lo ≤ hi →
+    lo ≤ c →
+      ∀ {reads : Nat → Bool} {x : Becoming.RuleCapture.CarrierCounts},
+        ¬x.favours →
+          0 < x.carrier →
+            ∀ (t : Nat),
+              0 <
+                (Becoming.Pace.paced Becoming.RuleCapture.CarrierCounts.select
+                      (Becoming.RuleShaping.byBack a p c pos (Becoming.RuleShaping.thresholdBack hi lo)) reads
+                      (x, Becoming.RuleShaping.shaped a lo p c pos) t).fst.carrier
+@Becoming.RuleShaping.threshold_falls : ∀ {a p c hi lo : Nat} {pos : 0 < a},
+  lo ≤ hi →
+    lo < c →
+      ∀ {reads : Nat → Bool} {x : Becoming.RuleCapture.CarrierCounts},
+        ¬x.favours →
+          0 < x.carrier →
+            ∀ (t : Nat),
+              (Becoming.Pace.paced Becoming.RuleCapture.CarrierCounts.select
+                        (Becoming.RuleShaping.byBack a p c pos (Becoming.RuleShaping.thresholdBack hi lo)) reads
+                        (x, Becoming.RuleShaping.shaped a lo p c pos) (t + 1)).fst.carrier *
+                  (Becoming.Pace.paced Becoming.RuleCapture.CarrierCounts.select
+                        (Becoming.RuleShaping.byBack a p c pos (Becoming.RuleShaping.thresholdBack hi lo)) reads
+                        (x, Becoming.RuleShaping.shaped a lo p c pos) t).fst.other <
+                (Becoming.Pace.paced Becoming.RuleCapture.CarrierCounts.select
+                        (Becoming.RuleShaping.byBack a p c pos (Becoming.RuleShaping.thresholdBack hi lo)) reads
+                        (x, Becoming.RuleShaping.shaped a lo p c pos) t).fst.carrier *
+                  (Becoming.Pace.paced Becoming.RuleCapture.CarrierCounts.select
+                        (Becoming.RuleShaping.byBack a p c pos (Becoming.RuleShaping.thresholdBack hi lo)) reads
+                        (x, Becoming.RuleShaping.shaped a lo p c pos) (t + 1)).fst.other
+@Becoming.RuleShaping.grouped_returns : ∀ {α : Type} {gs : List (List α)} {w shapes : α → Nat} {a s q c : Nat}
+  {pos : 0 < a},
+  Becoming.RuleShaping.Grouped gs w shapes a s q c pos →
+    ∀ (g : List α), g ∈ gs → ∀ (x : α), x ∈ g → w x + c * shapes x = a + c + s * shapes x + q * Becoming.total g shapes
+@Becoming.RuleShaping.grouped_rises_iff : ∀ {α : Type} {gs : List (List α)} {w shapes : α → Nat} {a s q c m : Nat}
+  {pos : 0 < a},
+  (∀ (g : List α), g ∈ gs → g.length = m) →
+    Becoming.RuleShaping.Grouped gs w shapes a s q c pos →
+      (Becoming.SelectionTerm.discord (Becoming.SelectionLevels.whole gs) w shapes <
+          Becoming.SelectionTerm.concord (Becoming.SelectionLevels.whole gs) w shapes ↔
+        c * Becoming.SelectionTerm.concord (Becoming.SelectionLevels.whole gs) shapes shapes <
+          s * Becoming.SelectionTerm.concord (Becoming.SelectionLevels.whole gs) shapes shapes +
+            m * q * Becoming.SelectionLevels.concordAmong gs shapes shapes)
+@Becoming.RuleShaping.grouped_rises_iff_sized : ∀ {α : Type} {gs : List (List α)} {w shapes : α → Nat} {a s q c n : Nat}
+  {pos : 0 < a} (f : List α → Nat),
+  (∀ (g : List α), g ∈ gs → g.length * f g = n) →
+    0 < n →
+      Becoming.RuleShaping.Grouped gs w shapes a s q c pos →
+        (Becoming.SelectionTerm.discord (Becoming.SelectionLevels.whole gs) w shapes <
+            Becoming.SelectionTerm.concord (Becoming.SelectionLevels.whole gs) w shapes ↔
+          (c * (n * Becoming.SelectionTerm.concord (Becoming.SelectionLevels.whole gs) shapes shapes) +
+              q *
+                Becoming.SelectionTerm.discord (Becoming.SelectionLevels.context gs) (fun g => Becoming.total g shapes)
+                  fun g => f g * Becoming.total g shapes) <
+            s * (n * Becoming.SelectionTerm.concord (Becoming.SelectionLevels.whole gs) shapes shapes) +
+              q *
+                Becoming.SelectionTerm.concord (Becoming.SelectionLevels.context gs) (fun g => Becoming.total g shapes)
+                  fun g => f g * Becoming.total g shapes)
+@Becoming.RuleShaping.grouped_alike_iff : ∀ {α : Type} {gs : List (List α)} {w shapes : α → Nat} {a s q c m d : Nat}
+  {pos : 0 < a},
+  (∀ (g : List α), g ∈ gs → g.length = m) →
+    Becoming.RuleShaping.Grouped gs w shapes a s q c pos →
+      (∀ (g : List α), g ∈ gs → Becoming.total g shapes = d) →
+        0 < Becoming.SelectionTerm.concord (Becoming.SelectionLevels.whole gs) shapes shapes →
+          (Becoming.SelectionTerm.discord (Becoming.SelectionLevels.whole gs) w shapes <
+              Becoming.SelectionTerm.concord (Becoming.SelectionLevels.whole gs) w shapes ↔
+            c < s)
+@Becoming.RuleShaping.grouped_kept_rises : ∀ {α : Type} {gs : List (List α)} {w shapes : α → Nat} {a s q c m : Nat}
+  {pos : 0 < a},
+  (∀ (g : List α), g ∈ gs → g.length = m) →
+    Becoming.RuleShaping.Grouped gs w shapes a s q c pos →
+      c < s →
+        0 < Becoming.SelectionTerm.concord (Becoming.SelectionLevels.whole gs) shapes shapes →
+          Becoming.SelectionTerm.discord (Becoming.SelectionLevels.whole gs) w shapes <
+            Becoming.SelectionTerm.concord (Becoming.SelectionLevels.whole gs) w shapes
+@Becoming.RuleShaping.grouped_uniform_iff : ∀ {α : Type} {gs : List (List α)} {w shapes : α → Nat} {a s q c m : Nat}
+  {pos : 0 < a},
+  (∀ (g : List α), g ∈ gs → g.length = m) →
+    Becoming.RuleShaping.Grouped gs w shapes a s q c pos →
+      (∀ (g : List α), g ∈ gs → ∃ v, ∀ (x : α), x ∈ g → shapes x = v) →
+        0 < Becoming.SelectionLevels.concordAmong gs shapes shapes →
+          (Becoming.SelectionTerm.discord (Becoming.SelectionLevels.whole gs) w shapes <
+              Becoming.SelectionTerm.concord (Becoming.SelectionLevels.whole gs) w shapes ↔
+            c < s + m * q)
+Becoming.RuleShaping.Split.one_pos : 0 < 1
+Becoming.RuleShaping.Split.favours : (Becoming.RuleShaping.shaped 1 2 3 1 Becoming.RuleShaping.Split.one_pos).favours
+Becoming.RuleShaping.Split.shared_disfavours : ¬(Becoming.RuleShaping.shaped 1 0 5 1
+      Becoming.RuleShaping.Split.one_pos).favours
+Becoming.RuleShaping.Split.rises : Becoming.RuleShaping.Split.even.carrier *
+    (Becoming.RuleShaping.Split.even.select
+        (Becoming.RuleShaping.shaped 1 2 3 1 Becoming.RuleShaping.Split.one_pos)).other <
+  (Becoming.RuleShaping.Split.even.select
+        (Becoming.RuleShaping.shaped 1 2 3 1 Becoming.RuleShaping.Split.one_pos)).carrier *
+    Becoming.RuleShaping.Split.even.other
+Becoming.RuleShaping.Split.falls : (Becoming.RuleShaping.Split.even.select
+        (Becoming.RuleShaping.shaped 1 0 5 1 Becoming.RuleShaping.Split.one_pos)).carrier *
+    Becoming.RuleShaping.Split.even.other <
+  Becoming.RuleShaping.Split.even.carrier *
+    (Becoming.RuleShaping.Split.even.select
+        (Becoming.RuleShaping.shaped 1 0 5 1 Becoming.RuleShaping.Split.one_pos)).other
+Becoming.RuleShaping.SharedFlips.one_pos : 0 < 1
+@Becoming.RuleShaping.SharedFlips.without_falls : ∀ {x : Becoming.RuleCapture.CarrierCounts},
+  0 < x.carrier →
+    ¬Becoming.RuleCapture.CarrierCounts.order.le x
+        (Becoming.Law.orbit
+          (fun y => y.select (Becoming.RuleShaping.shaped 1 2 0 1 Becoming.RuleShaping.SharedFlips.one_pos))
+          (Becoming.Law.orbit
+            (fun y => y.select (Becoming.RuleShaping.shaped 1 0 0 1 Becoming.RuleShaping.SharedFlips.one_pos)) x 2)
+          3)
+@Becoming.RuleShaping.SharedFlips.with_rises : ∀ {x : Becoming.RuleCapture.CarrierCounts},
+  0 < x.carrier →
+    x.carrier *
+        (Becoming.Law.orbit
+            (fun y => y.select (Becoming.RuleShaping.shaped 1 2 1 1 Becoming.RuleShaping.SharedFlips.one_pos))
+            (Becoming.Law.orbit
+              (fun y => y.select (Becoming.RuleShaping.shaped 1 0 1 1 Becoming.RuleShaping.SharedFlips.one_pos)) x 2)
+            3).other <
+      (Becoming.Law.orbit
+            (fun y => y.select (Becoming.RuleShaping.shaped 1 2 1 1 Becoming.RuleShaping.SharedFlips.one_pos))
+            (Becoming.Law.orbit
+              (fun y => y.select (Becoming.RuleShaping.shaped 1 0 1 1 Becoming.RuleShaping.SharedFlips.one_pos)) x 2)
+            3).carrier *
+        x.other
+Becoming.RuleShaping.Timing.two_pos : 0 < 2
+@Becoming.RuleShaping.Timing.soon_rises : ∀ {x : Becoming.RuleCapture.CarrierCounts},
+  0 < x.carrier →
+    x.carrier *
+        (Becoming.Law.orbit
+            (fun y => y.select (Becoming.RuleShaping.shaped 2 2 0 1 Becoming.RuleShaping.Timing.two_pos))
+            (Becoming.Law.orbit
+              (fun y => y.select (Becoming.RuleShaping.shaped 2 0 0 1 Becoming.RuleShaping.Timing.two_pos)) x 1)
+            2).other <
+      (Becoming.Law.orbit (fun y => y.select (Becoming.RuleShaping.shaped 2 2 0 1 Becoming.RuleShaping.Timing.two_pos))
+            (Becoming.Law.orbit
+              (fun y => y.select (Becoming.RuleShaping.shaped 2 0 0 1 Becoming.RuleShaping.Timing.two_pos)) x 1)
+            2).carrier *
+        x.other
+@Becoming.RuleShaping.Timing.late_falls : ∀ {x : Becoming.RuleCapture.CarrierCounts},
+  0 < x.carrier →
+    ¬Becoming.RuleCapture.CarrierCounts.order.le x
+        (Becoming.Law.orbit
+          (fun y => y.select (Becoming.RuleShaping.shaped 2 2 0 1 Becoming.RuleShaping.Timing.two_pos))
+          (Becoming.Law.orbit
+            (fun y => y.select (Becoming.RuleShaping.shaped 2 0 0 1 Becoming.RuleShaping.Timing.two_pos)) x 2)
+          2)
+@Becoming.RuleShaping.Timing.shorter_falls : ∀ {x : Becoming.RuleCapture.CarrierCounts},
+  0 < x.carrier →
+    ¬Becoming.RuleCapture.CarrierCounts.order.le x
+        (Becoming.Law.orbit
+          (fun y => y.select (Becoming.RuleShaping.shaped 2 2 0 1 Becoming.RuleShaping.Timing.two_pos))
+          (Becoming.Law.orbit
+            (fun y => y.select (Becoming.RuleShaping.shaped 2 0 0 1 Becoming.RuleShaping.Timing.two_pos)) x 1)
+          1)
+@Becoming.RuleShaping.Timing.seven_falls : ∀ {x : Becoming.RuleCapture.CarrierCounts},
+  0 < x.carrier →
+    ¬Becoming.RuleCapture.CarrierCounts.order.le x
+        (Becoming.Law.orbit
+          (fun y => y.select (Becoming.RuleShaping.shaped 2 2 0 1 Becoming.RuleShaping.Timing.two_pos))
+          (Becoming.Law.orbit
+            (fun y => y.select (Becoming.RuleShaping.shaped 2 0 0 1 Becoming.RuleShaping.Timing.two_pos)) x 5)
+          7)
+@Becoming.RuleShaping.Timing.eight_rises : ∀ {x : Becoming.RuleCapture.CarrierCounts},
+  0 < x.carrier →
+    x.carrier *
+        (Becoming.Law.orbit
+            (fun y => y.select (Becoming.RuleShaping.shaped 2 2 0 1 Becoming.RuleShaping.Timing.two_pos))
+            (Becoming.Law.orbit
+              (fun y => y.select (Becoming.RuleShaping.shaped 2 0 0 1 Becoming.RuleShaping.Timing.two_pos)) x 5)
+            8).other <
+      (Becoming.Law.orbit (fun y => y.select (Becoming.RuleShaping.shaped 2 2 0 1 Becoming.RuleShaping.Timing.two_pos))
+            (Becoming.Law.orbit
+              (fun y => y.select (Becoming.RuleShaping.shaped 2 0 0 1 Becoming.RuleShaping.Timing.two_pos)) x 5)
+            8).carrier *
+        x.other
+Becoming.RuleShaping.Assorting.one_pos : 0 < 1
+Becoming.RuleShaping.Assorting.assorted_grouped : Becoming.RuleShaping.Grouped
+  Becoming.SelectionLevels.Founding.assorted Becoming.RuleShaping.Assorting.assortedOffspring
+  Becoming.SelectionLevels.Founding.keeps 1 1 1 2 Becoming.RuleShaping.Assorting.one_pos
+Becoming.RuleShaping.Assorting.mixed_grouped : Becoming.RuleShaping.Grouped Becoming.SelectionLevels.Founding.mixed
+  Becoming.RuleShaping.Assorting.mixedOffspring Becoming.SelectionLevels.Founding.keeps 1 1 1 2
+  Becoming.RuleShaping.Assorting.one_pos
+Becoming.RuleShaping.Assorting.either_verdict : ¬(Becoming.RuleShaping.shaped 1 1 2 2
+        Becoming.RuleShaping.Assorting.one_pos).favours ∧
+  Becoming.SelectionTerm.discord (Becoming.SelectionLevels.whole Becoming.SelectionLevels.Founding.assorted)
+        Becoming.RuleShaping.Assorting.assortedOffspring Becoming.SelectionLevels.Founding.keeps <
+      Becoming.SelectionTerm.concord (Becoming.SelectionLevels.whole Becoming.SelectionLevels.Founding.assorted)
+        Becoming.RuleShaping.Assorting.assortedOffspring Becoming.SelectionLevels.Founding.keeps ∧
+    2 *
+          Becoming.SelectionTerm.concord (Becoming.SelectionLevels.whole Becoming.SelectionLevels.Founding.assorted)
+            Becoming.SelectionLevels.Founding.keeps Becoming.SelectionLevels.Founding.keeps =
+        8 ∧
+      1 *
+              Becoming.SelectionTerm.concord (Becoming.SelectionLevels.whole Becoming.SelectionLevels.Founding.assorted)
+                Becoming.SelectionLevels.Founding.keeps Becoming.SelectionLevels.Founding.keeps +
+            2 * 1 *
+              Becoming.SelectionLevels.concordAmong Becoming.SelectionLevels.Founding.assorted
+                Becoming.SelectionLevels.Founding.keeps Becoming.SelectionLevels.Founding.keeps =
+          12 ∧
+        Becoming.SelectionTerm.concord (Becoming.SelectionLevels.whole Becoming.SelectionLevels.Founding.mixed)
+              Becoming.RuleShaping.Assorting.mixedOffspring Becoming.SelectionLevels.Founding.keeps <
+            Becoming.SelectionTerm.discord (Becoming.SelectionLevels.whole Becoming.SelectionLevels.Founding.mixed)
+              Becoming.RuleShaping.Assorting.mixedOffspring Becoming.SelectionLevels.Founding.keeps ∧
+          Becoming.SelectionLevels.concordAmong Becoming.SelectionLevels.Founding.mixed
+              Becoming.SelectionLevels.Founding.keeps Becoming.SelectionLevels.Founding.keeps =
+            0
+Becoming.RuleShaping.Sized.one_pos : 0 < 1
+Becoming.RuleShaping.Sized.together_grouped : Becoming.RuleShaping.Grouped Becoming.SelectionLevels.Sized.together
+  Becoming.SelectionLevels.Sized.togetherOffspring Becoming.SelectionLevels.Founding.keeps 1 0 2 3
+  Becoming.RuleShaping.Sized.one_pos
+Becoming.RuleShaping.Sized.apart_grouped : Becoming.RuleShaping.Grouped Becoming.SelectionLevels.Sized.apart
+  Becoming.SelectionLevels.Sized.apartOffspring Becoming.SelectionLevels.Founding.keeps 1 0 2 3
+  Becoming.RuleShaping.Sized.one_pos
+Becoming.RuleShaping.Sized.either_verdict : ¬(Becoming.RuleShaping.shaped 1 0 0 3
+        Becoming.RuleShaping.Sized.one_pos).favours ∧
+  Becoming.SelectionTerm.discord (Becoming.SelectionLevels.whole Becoming.SelectionLevels.Sized.together)
+        Becoming.SelectionLevels.Sized.togetherOffspring Becoming.SelectionLevels.Founding.keeps <
+      Becoming.SelectionTerm.concord (Becoming.SelectionLevels.whole Becoming.SelectionLevels.Sized.together)
+        Becoming.SelectionLevels.Sized.togetherOffspring Becoming.SelectionLevels.Founding.keeps ∧
+    Becoming.SelectionTerm.concord (Becoming.SelectionLevels.whole Becoming.SelectionLevels.Sized.apart)
+        Becoming.SelectionLevels.Sized.apartOffspring Becoming.SelectionLevels.Founding.keeps <
+      Becoming.SelectionTerm.discord (Becoming.SelectionLevels.whole Becoming.SelectionLevels.Sized.apart)
+        Becoming.SelectionLevels.Sized.apartOffspring Becoming.SelectionLevels.Founding.keeps

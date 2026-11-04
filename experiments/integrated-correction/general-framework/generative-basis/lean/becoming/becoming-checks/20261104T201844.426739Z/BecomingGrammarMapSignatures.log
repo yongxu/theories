@@ -1,0 +1,75 @@
+@Becoming.«传则异» : ∀ {α : Type u_1} {R L E : Becoming.«际» α} {x y : α}, Becoming.«传» R L E x y → Becoming.«异» R L E x y
+@Becoming.«所及之传递» : ∀ {α : Type u_1} {R L : Becoming.«际» α} {x y z : α},
+  Becoming.«所及» R L x y → Becoming.«所及» R L y z → Becoming.«所及» R L x z
+@Becoming.«全生成有终不并» : ∀ {α : Type u_1} {R L E : Becoming.«际» α} {x : α}, ¬(Becoming.«全生成» R L E x ∧ Becoming.«有终» R L x)
+@Becoming.«全生成全守不并» : ∀ {α : Type u_1} {R L E : Becoming.«际» α} {x : α},
+  ¬(Becoming.«全生成» R L E x ∧ Becoming.«全守» R L E x)
+@Becoming.«全守有终不并» : ∀ {α : Type u_1} {R L E : Becoming.«际» α} {x : α}, ¬(Becoming.«全守» R L E x ∧ Becoming.«有终» R L x)
+@Becoming.«有常则无终» : ∀ {α : Type u_1} {R L : Becoming.«际» α},
+  Becoming.«有常» R L → ∀ {x : α}, Becoming.«有前» R L x → ¬Becoming.«有终» R L x
+@Becoming.«有终则粗不有常» : ∀ {α : Type u_1} {R L : Becoming.«际» α} {x : α},
+  Becoming.«有前» R L x → Becoming.«有终» R L x → ¬Becoming.«有常» R L
+Becoming.«不穷有终之定当且仅当排中» : (∀ (β : Type) (R L : Becoming.«际» β) (x : β), Becoming.«不穷» R L x ∨ Becoming.«有终» R L x) ↔
+  ∀ (P : Prop), P ∨ ¬P
+@Becoming.«全生成之所及亦全生成» : ∀ {α : Type u_1} {R L E : Becoming.«际» α} {x y : α},
+  Becoming.«全生成» R L E x → Becoming.«所及» R L x y → Becoming.«全生成» R L E y
+@Becoming.«有终之所前亦有终» : ∀ {α : Type u_1} {R L : Becoming.«际» α} {x y : α},
+  Becoming.«所及» R L x y → Becoming.«有终» R L y → Becoming.«有终» R L x
+@Becoming.«全三域之周» : ∀ {α : Type u_1},
+  (∀ (P : Prop), P ∨ ¬P) →
+    ∀ (R L E : Becoming.«际» α) (x : α), Becoming.«全生成» R L E x ∨ Becoming.«全守» R L E x ∨ Becoming.«有终» R L x
+Becoming.«全三域之定当且仅当排中» : (∀ (β : Type) (R L E : Becoming.«际» β) (x : β),
+    Becoming.«全生成» R L E x ∨ Becoming.«全守» R L E x ∨ Becoming.«有终» R L x) ↔
+  ∀ (P : Prop), P ∨ ¬P
+@Becoming.«阶全生成则上无终» : ∀ {α : Type u_1} {R : Becoming.«际» α} {Es : Nat → Becoming.«际» α} {k : Nat} {x : α},
+  Becoming.«阶全生成» R Es k x → ¬Becoming.«有终» R (Es (k + 1)) x
+@Becoming.«相续之续» : ∀ {α : Type u_1} {R L : Becoming.«际» α} {x z w : α},
+  Becoming.«相续» R L x z → Becoming.«续» R L z w → Becoming.«相续» R L x w
+@Becoming.«延尽不并» : ∀ {α : Type u_1} {R L : Becoming.«际» α} {x : α}, Becoming.«尽» R L x → ¬Becoming.«延» R L x
+@Becoming.«不穷则延» : ∀ {α : Type u_1} {R L : Becoming.«际» α} {x : α}, Becoming.«不穷» R L x → Becoming.«延» R L x
+@Becoming.«尽则非不穷» : ∀ {α : Type u_1} {R L : Becoming.«际» α} {x : α}, Becoming.«尽» R L x → ¬Becoming.«不穷» R L x
+@Becoming.«尽则非无终» : ∀ {α : Type u_1} {R L : Becoming.«际» α} {x : α}, Becoming.«尽» R L x → ¬¬Becoming.«有终» R L x
+@Becoming.«尽而续可定则有终» : ∀ {α : Type u_1} {R L : Becoming.«际» α} {x : α},
+  Becoming.«尽» R L x →
+    (∀ (y : α), Becoming.«所及» R L x y → Becoming.«有后» R L y ∨ ¬Becoming.«有后» R L y) → Becoming.«有终» R L x
+@Becoming.«生成则延» : ∀ {α : Type u_1} {R L E : Becoming.«际» α} {x : α}, Becoming.«生成» R L E x → Becoming.«延» R L x
+@Becoming.«守则延» : ∀ {α : Type u_1} {R L E : Becoming.«际» α} {x : α}, Becoming.«守» R L E x → Becoming.«延» R L x
+@Becoming.«生成退化不并» : ∀ {α : Type u_1} {R L E : Becoming.«际» α} {x : α}, ¬(Becoming.«生成» R L E x ∧ Becoming.«退化» R L x)
+@Becoming.«守退化不并» : ∀ {α : Type u_1} {R L E : Becoming.«际» α} {x : α}, ¬(Becoming.«守» R L E x ∧ Becoming.«退化» R L x)
+@Becoming.«单行则族含所及» : ∀ {α : Type u_1} {R L : Becoming.«际» α},
+  (∀ {z w w' : α}, R z w → R z w' → w = w') →
+    ∀ {S : α → Prop},
+      (∀ (z : α), S z → ∃ w, S w ∧ Becoming.«续» R L z w) → ∀ {z y : α}, S z → Becoming.«相续» R L z y → S y
+@Becoming.«单行则生守不并» : ∀ {α : Type u_1} {R L E : Becoming.«际» α},
+  (∀ {z w w' : α}, R z w → R z w' → w = w') → ∀ {x : α}, ¬(Becoming.«生成» R L E x ∧ Becoming.«守» R L E x)
+Becoming.«延尽之定当且仅当排中» : (∀ (β : Type) (R L : Becoming.«际» β) (x : β), Becoming.«延» R L x ∨ Becoming.«尽» R L x) ↔
+  ∀ (P : Prop), P ∨ ¬P
+@Becoming.«阶生成则上不退化» : ∀ {α : Type u_1} {R : Becoming.«际» α} {Es : Nat → Becoming.«际» α} {k : Nat} {x : α},
+  Becoming.«阶生成» R Es k x → ¬Becoming.«退化» R (Es (k + 1)) x
+@Becoming.«生生即延» : ∀ {α : Type u_1} {R E : Becoming.«际» α} {x : α},
+  Becoming.«生生» R E x ↔ Becoming.«延» (Becoming.«复生至» R E) Becoming.«一» x
+@Becoming.«息即尽» : ∀ {α : Type u_1} {R E : Becoming.«际» α} {x : α},
+  Becoming.«息» R E x ↔ Becoming.«尽» (Becoming.«复生至» R E) Becoming.«一» x
+Becoming.Map.step_irrefl : ∀ (n : Nat), ¬Becoming.Map.step n n
+@Becoming.Map.step_reached_le : ∀ {L : Becoming.«际» Nat} {x y : Nat}, Becoming.«所及» Becoming.Map.step L x y → x ≤ y
+Becoming.Map.step_reaches : ∀ (n : Nat), Becoming.«所及» Becoming.Map.step Becoming.«一» 0 n
+@Becoming.Map.step_reaches_of_le : ∀ {z n : Nat}, z ≤ n → Becoming.«所及» Becoming.Map.step Becoming.«一» z n
+Becoming.Map.Endless.generation : Becoming.«全生成» Becoming.Map.step Becoming.«一» Becoming.«静» 0
+Becoming.Map.Still.keeping : Becoming.«全守» Becoming.Map.still Becoming.«一» Becoming.«一» ()
+Becoming.Map.short_end : Becoming.«亡» Becoming.Map.short Becoming.«一» true
+Becoming.Map.Short.reaches_end : Becoming.«有终» Becoming.Map.short Becoming.«一» false
+Becoming.Map.Short.renews_and_ends : Becoming.«新而有终» Becoming.Map.short Becoming.«一» Becoming.«静» false
+Becoming.Map.Endless.generates : Becoming.«生成» Becoming.Map.step Becoming.«一» Becoming.«静» 0
+Becoming.Map.Still.keeps : Becoming.«守» Becoming.Map.still Becoming.«一» Becoming.«一» ()
+Becoming.Map.Short.ends : Becoming.«退化» Becoming.Map.short Becoming.«一» false
+Becoming.Map.Short.renews_and_ends_everywhere : Becoming.«新而尽» Becoming.Map.short Becoming.«一» Becoming.«静» false
+Becoming.Map.StepWhere.ends : ∀ (P : Prop), Becoming.«尽» (Becoming.Map.StepWhere.relation P) Becoming.«一» false
+Becoming.Map.StepWhere.has_next_iff : ∀ (P : Prop),
+  Becoming.«有后» (Becoming.Map.StepWhere.relation P) Becoming.«一» false ↔ P
+@Becoming.Map.StepWhere.end_decides : ∀ {P : Prop},
+  Becoming.«有终» (Becoming.Map.StepWhere.relation P) Becoming.«一» false → P ∨ ¬P
+Becoming.Map.fork_chain_begins : ∀ (n : Nat), Becoming.«生» Becoming.Map.fork Becoming.«静» (Becoming.Map.Branch.chain n)
+Becoming.Map.«生守相杂» : Becoming.«生成» Becoming.Map.fork Becoming.«一» Becoming.«静» Becoming.Map.Branch.root ∧
+  Becoming.«守» Becoming.Map.fork Becoming.«一» Becoming.«静» Becoming.Map.Branch.root
+Becoming.«尽则有终当且仅当排中» : (∀ (β : Type) (R L : Becoming.«际» β) (x : β), Becoming.«尽» R L x → Becoming.«有终» R L x) ↔
+  ∀ (P : Prop), P ∨ ¬P
