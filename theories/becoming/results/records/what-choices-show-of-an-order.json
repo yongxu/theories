@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F04",
-  "reviewed_at_utc": "2026-11-04T12:34:42+00:00",
+  "reviewed_at_utc": "2026-11-04T20:05:01+00:00",
   "statement": {
     "en": "Strict choices come from some strict order exactly where nothing they show returns; then the positive comparisons every such order shares are exactly the reach of the relation they show, and beyond that reach no comparison is forced.",
     "zh": "严择出于某一严序，恰当其所示无返；其时每一此序所共有之正比较，恰为其所示之关系之及；及之外，无比较为所迫。"
@@ -183,8 +183,8 @@
     "zh": "纯核，公理报告皆空：ShownOrder 唯引 Grammar。例之表为逐一论元之嵌套匹配；搜之例于其二单上以 rfl 计算。"
   },
   "next_delta": {
-    "en": "A realizable class: a training installing either order of a search; a finite mechanism of prediction, selection, revision and intervention on which inner alignment and assistance are stated (RF round 2); a run of the frozen test of the correspondence, that a chooser picks by strict dominance under one strict order (TR1); review by a person.",
-    "zh": "可实现之类：训练装入一搜之任一序；预测、选择、修订与干预之有限机制，内对齐与协助于其上陈述（RF 第二轮）；择者之对应之冻结检验之运行，即择者依一严序以严胜而择（TR1）；人之审查。"
+    "en": "A realizable class: a training installing either order of a search; a finite mechanism of prediction, selection, revision and intervention on which inner alignment and assistance are stated (RF round 2); a run of the frozen test of the correspondence, that a chooser picks by strict dominance under one strict order (TR1), and of trained choosers read by its rule (TR1A); review by a person.",
+    "zh": "可实现之类：训练装入一搜之任一序；预测、选择、修订与干预之有限机制，内对齐与协助于其上陈述（RF 第二轮）；择者之对应之冻结检验之运行，即择者依一严序以严胜而择（TR1），及以其则读所训之择者（TR1A）；人之审查。"
   },
   "correspondence": {
     "en": "Rationalizing strict choices by a strict partial order, through the least transitive relation holding what they show, is close to Richter's theorem (1966) without completeness: a strict partial order, not a complete preference, so no extension principle (Szpilrajn 1930) is needed; it is not Afriat's theorem (1967), which concerns expenditure data and utility. AI reading: read with training, where the training restricts the orders no further, comparisons beyond the shown reach stay open, goal misgeneralization located exactly as a possibility, not shown (Langosco and others 2022; Shah and others 2022), and inner alignment (Hubinger and others 2019) for searches by an order; the kernel on a law's own courses is what training installs. Read with a helper, what strict choices alone fix of an order: maximal choices force none, the order form of the degenerate reward (Ng and Russell 2000); that behaviour fixes a planner and a reward together only under assumptions on the planner (Armstrong and Mindermann 2018) lies outside: the law assumes strict dominance at the occasions shown and does not represent how choices are computed. These are readings, not containments.",
@@ -355,6 +355,10 @@
     {
       "en": "4 November 2026, board item TR1: the test TR1 frozen before any call to a model (experiments/formations-that-read/FREEZE-5.md), on freeze 1's pins: five things that could happen in 70 presentations, nine calls each, its verdict a cycle among the stable picks, read only where a control on amounts passes, with a forced condition and one showing each course's history beside it; not run. The law is unchanged; next_delta's step is now the frozen test's run, which waits on Ren's yes.",
       "zh": "2026年11月4日，看板项 TR1：检验 TR1 于任一模型调用之前冻结（experiments/formations-that-read/FREEZE-5.md），用冻结一所钉之模型：五可发生之事，七十呈示，各问九次，其判为稳择之中有环，唯于数额之对照通过处读之，强择之条件与示各历程之条件并列；未运行。律不变；next_delta 之步今为冻结检验之运行，待 Ren 之可。"
+    },
+    {
+      "en": "5 November 2026, board item TR1A: TR1's Stage A frozen before any training (experiments/formations-that-read/FREEZE-9.md): an item-score chooser, a conjunctive pairwise comparator and a set-input network, trained on the met menus under a hidden order whose met pairs are a chain, with labels carrying no order as the negative control, each read on all 70 presentations by TR1's frozen rule; with TR1's informing variant, whose one verdict is this law's across frames; not run. The law is unchanged; next_delta adds Stage A's run, which waits on Ren's yes.",
+      "zh": "2026年11月5日，看板项 TR1A：TR1 之甲阶于任何训练之前冻结（experiments/formations-that-read/FREEZE-9.md）：项分之择者、合取之对比者与集入之网，于所会之单上依其会对成链之隐序而训，以不携序之标为反对照，各以 TR1 冻结之则读其七十呈示；并 TR1 之告之变体，其唯一判定为此律跨框者；未运行。律不变；next_delta 增甲阶之运行，待 Ren 之可。"
     }
   ]
 }
