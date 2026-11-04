@@ -240,7 +240,14 @@ Two items were measured and left:
 - **One driver per module for the audit and the signatures.** Each driver costs about 0.3 s ([result](gt2/out/drivers.json)), so merging them saves about 115 s of processor time and 20 s of a full run's wall time. It would change the `<Module>Signatures.log` layout that kits read statements from, so it is not done. That holds so far (5 November 2026): it lapses if drivers grow costly or kits stop reading the logs by name.
 - **Skipping the root's empty drivers** saves about 0.6 s, which is not worth a different receipt.
 
-GT2 lands without a fresh core run. GT2 changed no step's command, arguments or driver text where it kept a key; the comparison shows that. What it changed in running a step, the lock, the slots, the timing and the store, ran in the comparison's 356 steps. A fresh run would rerun 1,188 unchanged steps, minutes of a busy machine for no other check. The weekly fresh run in CI and the run before a push remain.
+Two readers read the change, one for what is checked and one for concurrency. They found no change to what is checked. They made eight findings, six of them distinct, and two were medium: the slots were claimed for every periphery checker, and the removed-lock test could not fail. All were taken. A wait for a step's lock or a slot now ends at the step's timeout and goes on without it. A failed or interrupted run stops the steps still waiting. A file system that cannot lock takes no lock. The lock test was shown to fail without the inode check, and the fixes were read again.
+
+The first measured runs:
+
+- **The fallible-inquiry receipt, stale since 31 October, renewed through `gate.py hold`.** It passed: 4 steps ran in 3.7 s of Lean, and 41 were reused. Its five minutes were the wait for a gate slot. Its three records bind FallibleInquiry.lean's own bytes through the 31 October run, and those bytes have not changed, so none was rebound.
+- **BoundaryModels' current bytes (AA's E11).** No checker run can bind them. The pre-spine checker (`lean/check.py`) requires its modules byte for byte as preserved on 6 October, and the 16 October comment on the first line of BoundaryModels (and of Depletion) fails that before any Lean runs. Binding them needs a new checker for the pre-spine modules, or the comment's removal; that is the record owner's choice. E11 keeps its fallback wording.
+
+GT2 lands with the new checker's core run on the merged tree, so the committed receipt is the new checker's. That run reuses the comparison's steps; it is not a fresh run. GT2 changed no step's command, arguments or driver text where it kept a key; the comparison shows that. What it changed in running a step, the lock, the slots, the timing and the store, ran in the comparison's 356 steps. A fresh run would rerun 1,188 unchanged steps, minutes of a busy machine for no other check. The weekly fresh run in CI and the run before a push remain.
 
 ## 6. The text changed
 
@@ -275,6 +282,7 @@ Before-copies: [AGENTS](../../../../history/2026-11-04-instructions/AGENTS-befor
 ## 8. What comes next
 
 - **GT2, the Lean checker** (§5.1): done 5 November 2026, with an independent reading of the checker; the merged drivers measured and left.
+- **The other periphery checkers onto the runner.** 29 periphery checkers still run Lean themselves, outside the slots and the step locks. Each moves onto `lean_step` at its next renewal, in one batch, as `check_fallible_inquiry.py` did.
 - **GT3, the tests on fixtures.** Thirteen test files assert on the live records today, so a landing that touches a record runs most of the suite. The test map gives the way out:
   - move the live assertions the strict check does not yet make into it: the regions, the front-page rules, the stock against the standard boundaries, the shape of the shared laws;
   - drop those it already makes;
