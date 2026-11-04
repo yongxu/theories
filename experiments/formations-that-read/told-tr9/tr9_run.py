@@ -16,10 +16,11 @@ addenda/FROZEN-k.sha256; the files of freeze 1 it imports among them) equals its
 holds for every context asked: TR8's abstract unit of the same presentation, for the same pin, read
 by freeze 1's reading from freeze 1's folder (told/results/tr8/<pin>) and supported; and unless the
 readability rule (tr9_rule.readability) lets every context asked start, on TR9's own calls of the pin
-under these frozen files: every smoke run here made on them and every scored call logged under the
-chain's newest link (readable). `smoke` is refused where another smoke run of the pin could release
-nothing (smoke_needed). `readability` gives the rule for TR9 or, as FREEZE-1.md's dated note asks,
-for freeze 1's TR8 and TR-RR on their own calls, making no call. `smoke`, `run` and `mend` each hold
+under freeze 1's client in force: every smoke run here and every scored call logged under a link of
+the chain whose client is the one in force (readable), so that only a link changing the client counts
+calls afresh. `smoke` is refused where another smoke run of the pin could release nothing
+(smoke_needed). `readability` gives the rule for TR9 or, as FREEZE-1.md's dated note asks, for freeze
+1's TR8 and TR-RR on their own calls, making no call; for those it checks freeze 1's chain alone. `smoke`, `run` and `mend` each hold
 the pin's lock while they work, on the command line until their process ends, and refuse while
 another command of the pin holds it, so a pin's commands run one at a time (pin_lock, TR7's). `run`
 writes only into results/<pin>/, one folder per pin whatever contexts a run makes, the full plan's
@@ -69,6 +70,7 @@ TOLD = HERE.relative_to(R.REPO)
 # What an addendum to this freeze may change (FREEZE-8.md, section 8): the dry run and its result, and
 # freeze 1's client, where an addendum to freeze 1 changed it. Every other file is fixed.
 MAY_CHANGE = frozenset({str(TOLD / "tr9_dry_run.py"), str(TOLD / "results/dry-run.json"), str(R.TOLD / "client.py")})
+CLIENT = str(R.TOLD / "client.py")     # of the files an addendum may change, the one an answer's reading turns on
 TR8_RESULTS = R.HERE / "results" / "tr8"       # freeze 1's folders of TR8, one per pin
 LOCKS = HERE / "results"      # where each pin's lock is, beside its results folder
 HELD = []      # on the command line, a duplicate of each pin's lock's descriptor, open until the process ends
@@ -256,10 +258,15 @@ def moved_lines(folder):
 def frozen(repo=R.REPO, told=TOLD):
     """Freeze 1's chain first, so that freeze 1's files taken here are taken only as its newest link
     has them; then this freeze's chain."""
-    first = R.frozen_check(repo, R.TOLD)
     fc = R.frozen_check(repo, told, MAY_CHANGE)
-    fc["freeze_1_link"], fc["freeze_1_hashes"] = first["link"], first["hashes"]
+    fc.update(freeze_1(repo))
     return fc
+
+
+def freeze_1(repo=R.REPO):
+    """Freeze 1's chain checked, alone: its newest link, that link's hashes and every link's."""
+    first = R.frozen_check(repo, R.TOLD)
+    return {"freeze_1_link": first["link"], "freeze_1_hashes": first["hashes"], "freeze_1_chain": first["chain"]}
 
 
 @contextlib.contextmanager
@@ -471,14 +478,18 @@ def read_meta(folder):
 
 def readable(test, family, contexts, fc, smokes=None, scored_folder=None):
     """The readability rule for one pin and test (FREEZE-8.md, section 8; for freeze 1's TR8 and TR-RR,
-    FREEZE-1.md's dated note), on the test's own calls under the frozen files in force: every call of
-    the test in every smoke run of the pin on the test's harness made on its chain's hashes (this
-    freeze's for TR9, freeze 1's for TR8 and TR-RR), and every call in its scored folder logged under its
-    chain's newest link; each answered by the pin while the catalog named its snapshot, since a call
-    another model answered reads nothing of the pin. An addendum's calls are so counted afresh. Every log
-    read must read whole. smokes and scored_folder default to the pin's own; the dry run gives others."""
+    FREEZE-1.md's dated note), on the test's own calls under freeze 1's client in force: every call of
+    the test in every smoke run of the pin on the test's harness made on hashes with that client (this
+    freeze's chain for TR9, freeze 1's for TR8 and TR-RR), and every call in its scored folder logged
+    under a link of its chain with that client; each answered by the pin while the catalog named its
+    snapshot, since a call another model answered reads nothing of the pin. Of the files an addendum
+    may change, only the client bears on whether an answer can be read (its request, its limits, its
+    parser), so only a link changing it counts calls afresh: one changing the dry run or a pin's
+    served_as, landed for this pin or another, lifts no stop. Every log read must read whole. smokes and
+    scored_folder default to the pin's own; the dry run gives others."""
     own = test == D.TEST
-    hashes, link = (fc["hashes"], fc["link"]) if own else (fc["freeze_1_hashes"], fc["freeze_1_link"])
+    hashes, chain = (fc["hashes"], fc["chain"]) if own else (fc["freeze_1_hashes"], fc["freeze_1_chain"])
+    client = hashes[CLIENT]
     slug = R.pin(family)["canonical_slug"]
 
     def pins(recs):
@@ -486,7 +497,7 @@ def readable(test, family, contexts, fc, smokes=None, scored_folder=None):
                 and r.get("catalog") == slug]
     recs, used = [], []
     for f in (smoke_runs(HERE if own else R.HERE, family) if smokes is None else smokes):
-        if read_meta(f).get("hashes") != hashes:
+        if (read_meta(f).get("hashes") or {}).get(CLIENT) != client:
             continue
         log_whole(f)
         got = pins(R.logged(f))
@@ -496,7 +507,7 @@ def readable(test, family, contexts, fc, smokes=None, scored_folder=None):
     made = []
     if folder.exists():
         log_whole(folder)
-        made = [r for r in pins(R.logged(folder)) if r.get("link") == link]
+        made = [r for r in pins(R.logged(folder)) if (chain.get(r.get("link")) or {}).get(CLIENT) == client]
     out = TR.readability(test, contexts, recs + made)
     out.update({"test": test, "family": family, "smoke_runs": used, "scored": {"folder": str(folder),
                                                                                "calls": len(made)}})
@@ -506,7 +517,8 @@ def readable(test, family, contexts, fc, smokes=None, scored_folder=None):
 def smoke_needed(family, fc, root=HERE, scored_folder=None):
     """Why another TR9 smoke run of the pin could release something, or None (FREEZE-8.md, section 8):
     the pin has none on these frozen files; its latest on them did not go on, so no scored call can be
-    made; or the readability rule stops a context of the pin, a stop that only further evidence lifts.
+    made; or the readability rule stops a context of the pin, a stop that only further calls of the pin
+    or a link changing the client lift.
     Otherwise another smoke run could release nothing, so `smoke` is refused. root and scored_folder
     default to this freeze's own; the dry run gives others."""
     every = smoke_runs(root, family)
@@ -519,7 +531,7 @@ def smoke_needed(family, fc, root=HERE, scored_folder=None):
     held = [c for c, v in readable(D.TEST, family, [D.ctx_id(c) for c in D.contexts()], fc, smokes=every,
                                    scored_folder=scored_folder)["contexts"].items() if not v["start"]]
     if held:
-        return f"the readability rule stops {held}, a stop that only further evidence lifts"
+        return f"the readability rule stops {held}, a stop that only further calls of the pin or a new client lift"
     return None
 
 
@@ -585,7 +597,7 @@ def main(argv=None, hold=False):
         want = cs if a.contexts == "all" else a.contexts.split(",")
         if set(want) - set(cs):
             raise SystemExit(f"no such context of {a.test}: {sorted(set(want) - set(cs))}")
-        out = readable(a.test, a.family, want, frozen())
+        out = readable(a.test, a.family, want, frozen() if a.test == D.TEST else freeze_1())
         print(json.dumps(out, indent=1))
         sys.exit(0 if all(v["start"] for v in out["contexts"].values()) else 2)
     if a.cmd == "smoke":

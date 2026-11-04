@@ -11,9 +11,9 @@
   "experiments/formations-that-read/told/run.py": "4e9956caab24c053ba217b2a0a6eaa7e8c6dbbebbf4295bace7446fd632ae3f7",
   "experiments/formations-that-read/told/verdicts.py": "44a89fb5dbe2c2d9fb63736c9dd687c749d79272dbd862d106a6fa8c5a80cdec",
   "experiments/formations-that-read/told-tr9/tr9_design.py": "aaae6af59e113098f3a71d9dd281aecf365eb66b25bfd8568dac54f86a206e44",
-  "experiments/formations-that-read/told-tr9/tr9_dry_run.py": "7944ea8d6359cbf4f92ad6e37dd29ec6c9dfc4f75af16184bf042b4f7dae9951",
+  "experiments/formations-that-read/told-tr9/tr9_dry_run.py": "208338a881745c3dea2cec8dfc2668733ca2ca2d961b1ed0896548c5d18011bc",
   "experiments/formations-that-read/told-tr9/tr9_rule.py": "c0ab65fb627225c79349891edf903fccf21cb470a23df916c5b560b8b71455eb",
-  "experiments/formations-that-read/told-tr9/tr9_run.py": "ecfa0ea0296e178aa586350a7ca02ae8bdf405e59801f562f8d475203b53fb17",
+  "experiments/formations-that-read/told-tr9/tr9_run.py": "0bc5bec956fafa2f85cd17a680cbb35094890a61937c6c1e829d16474a1ec014",
   "experiments/formations-that-read/told-tr9/write_frozen.py": "093a12ed453d39140a8257a45f6708e59da5fc1c2e9a105d149d3127a8f8d332",
   "experiments/formations-that-read/tr8.py": "50650cc538da6494c3122d78b8f8d2244ef40b5c4356b0ace23eb92c2aefed72",
   "experiments/formations-that-read/tr9.json": "c0ffc9cd084a58ad9cfe11bc6686bb29c557918d854c9d4bd11780fdaa185589",
@@ -1073,7 +1073,7 @@
     }
    ],
    "scored": {
-    "folder": "/var/folders/h6/tw6bmgcs5txbtn4swlpkpm4w0000gn/T/tmp0npiq_9t/none",
+    "folder": "/var/folders/h6/tw6bmgcs5txbtn4swlpkpm4w0000gn/T/tmpxtq_e8_v/none",
     "calls": 0
    }
   },
@@ -1140,7 +1140,7 @@
     }
    ],
    "scored": {
-    "folder": "/var/folders/h6/tw6bmgcs5txbtn4swlpkpm4w0000gn/T/tmp0npiq_9t/gate-probes",
+    "folder": "/var/folders/h6/tw6bmgcs5txbtn4swlpkpm4w0000gn/T/tmpxtq_e8_v/gate-probes",
     "calls": 660
    }
   },
@@ -1207,11 +1207,78 @@
     }
    ],
    "scored": {
-    "folder": "/var/folders/h6/tw6bmgcs5txbtn4swlpkpm4w0000gn/T/tmp0npiq_9t/gate-choices",
+    "folder": "/var/folders/h6/tw6bmgcs5txbtn4swlpkpm4w0000gn/T/tmpxtq_e8_v/gate-choices",
     "calls": 660
    }
   },
-  "the same calls under another link": {
+  "the same calls under an earlier link, the same client": {
+   "choices": 370,
+   "probes": 370,
+   "unreadable": {
+    "choice": 33,
+    "guard": 0,
+    "reader": 0
+   },
+   "rate": {
+    "choice": 0.0891891891891892,
+    "guard": 0.0,
+    "reader": 0.0
+   },
+   "at_least": {
+    "choice": 0.066,
+    "guard": 0.0,
+    "reader": 0.0
+   },
+   "confidence": 0.95,
+   "bound": 0.8,
+   "contexts": {
+    "abstract/compute": {
+     "conditions": 11,
+     "guarded": 11,
+     "void_free_at_the_bounds": 0.2085,
+     "start": false,
+     "guard_measured": 1.0,
+     "read_whole": 0.0282
+    },
+    "abstract/given": {
+     "conditions": 11,
+     "guarded": 0,
+     "void_free_at_the_bounds": 0.2085,
+     "start": false,
+     "guard_measured": 1.0,
+     "read_whole": 0.0282
+    },
+    "social/compute": {
+     "conditions": 11,
+     "guarded": 11,
+     "void_free_at_the_bounds": 0.2085,
+     "start": false,
+     "guard_measured": 1.0,
+     "read_whole": 0.0282
+    },
+    "social/given": {
+     "conditions": 11,
+     "guarded": 0,
+     "void_free_at_the_bounds": 0.2085,
+     "start": false,
+     "guard_measured": 1.0,
+     "read_whole": 0.0282
+    }
+   },
+   "test": "tr9",
+   "family": "google/gemini-4-argon",
+   "smoke_runs": [
+    {
+     "folder": "gate-smoke",
+     "calls": 80
+    }
+   ],
+   "scored": {
+    "folder": "/var/folders/h6/tw6bmgcs5txbtn4swlpkpm4w0000gn/T/tmpxtq_e8_v/gate-older-link",
+    "calls": 660
+   }
+  },
+  "the same calls under a link before a client change": {
    "choices": 40,
    "probes": 40,
    "unreadable": {
@@ -1274,11 +1341,82 @@
     }
    ],
    "scored": {
-    "folder": "/var/folders/h6/tw6bmgcs5txbtn4swlpkpm4w0000gn/T/tmp0npiq_9t/gate-older-link",
+    "folder": "/var/folders/h6/tw6bmgcs5txbtn4swlpkpm4w0000gn/T/tmpxtq_e8_v/gate-client-older-link",
     "calls": 0
    }
   },
-  "a smoke run on other frozen files": {
+  "a smoke run on other frozen files, the same client": {
+   "choices": 80,
+   "probes": 80,
+   "unreadable": {
+    "choice": 12,
+    "guard": 0,
+    "reader": 0
+   },
+   "rate": {
+    "choice": 0.15,
+    "guard": 0.0,
+    "reader": 0.0
+   },
+   "at_least": {
+    "choice": 0.0889,
+    "guard": 0.0,
+    "reader": 0.0
+   },
+   "confidence": 0.95,
+   "bound": 0.8,
+   "contexts": {
+    "abstract/compute": {
+     "conditions": 11,
+     "guarded": 11,
+     "void_free_at_the_bounds": 0.0291,
+     "start": false,
+     "guard_measured": 1.0,
+     "read_whole": 0.0
+    },
+    "abstract/given": {
+     "conditions": 11,
+     "guarded": 0,
+     "void_free_at_the_bounds": 0.0291,
+     "start": false,
+     "guard_measured": 1.0,
+     "read_whole": 0.0
+    },
+    "social/compute": {
+     "conditions": 11,
+     "guarded": 11,
+     "void_free_at_the_bounds": 0.0291,
+     "start": false,
+     "guard_measured": 1.0,
+     "read_whole": 0.0
+    },
+    "social/given": {
+     "conditions": 11,
+     "guarded": 0,
+     "void_free_at_the_bounds": 0.0291,
+     "start": false,
+     "guard_measured": 1.0,
+     "read_whole": 0.0
+    }
+   },
+   "test": "tr9",
+   "family": "google/gemini-4-argon",
+   "smoke_runs": [
+    {
+     "folder": "gate-smoke",
+     "calls": 80
+    },
+    {
+     "folder": "gate-smoke-older",
+     "calls": 80
+    }
+   ],
+   "scored": {
+    "folder": "/var/folders/h6/tw6bmgcs5txbtn4swlpkpm4w0000gn/T/tmpxtq_e8_v/none",
+    "calls": 0
+   }
+  },
+  "a smoke run on another client": {
    "choices": 40,
    "probes": 40,
    "unreadable": {
@@ -1341,7 +1479,7 @@
     }
    ],
    "scored": {
-    "folder": "/var/folders/h6/tw6bmgcs5txbtn4swlpkpm4w0000gn/T/tmp0npiq_9t/none",
+    "folder": "/var/folders/h6/tw6bmgcs5txbtn4swlpkpm4w0000gn/T/tmpxtq_e8_v/none",
     "calls": 0
    }
   },
@@ -1412,7 +1550,7 @@
     }
    ],
    "scored": {
-    "folder": "/var/folders/h6/tw6bmgcs5txbtn4swlpkpm4w0000gn/T/tmp0npiq_9t/none",
+    "folder": "/var/folders/h6/tw6bmgcs5txbtn4swlpkpm4w0000gn/T/tmpxtq_e8_v/none",
     "calls": 0
    }
   },
@@ -1474,7 +1612,7 @@
    "family": "google/gemini-4-argon",
    "smoke_runs": [],
    "scored": {
-    "folder": "/var/folders/h6/tw6bmgcs5txbtn4swlpkpm4w0000gn/T/tmp0npiq_9t/gate-tr8-probes",
+    "folder": "/var/folders/h6/tw6bmgcs5txbtn4swlpkpm4w0000gn/T/tmpxtq_e8_v/gate-tr8-probes",
     "calls": 3420
    }
   },
@@ -1536,8 +1674,128 @@
    "family": "google/gemini-4-argon",
    "smoke_runs": [],
    "scored": {
-    "folder": "/var/folders/h6/tw6bmgcs5txbtn4swlpkpm4w0000gn/T/tmp0npiq_9t/gate-tr8-choices",
+    "folder": "/var/folders/h6/tw6bmgcs5txbtn4swlpkpm4w0000gn/T/tmpxtq_e8_v/gate-tr8-choices",
     "calls": 3420
+   }
+  },
+  "TR8, the same under an earlier link of freeze 1, the same client": {
+   "choices": 2280,
+   "probes": 1140,
+   "unreadable": {
+    "choice": 228,
+    "guard": 0,
+    "reader": 0
+   },
+   "rate": {
+    "choice": 0.1,
+    "guard": 0.0,
+    "reader": 0.0
+   },
+   "at_least": {
+    "choice": 0.0898,
+    "guard": 0.0,
+    "reader": 0.0
+   },
+   "confidence": 0.95,
+   "bound": 0.8,
+   "contexts": {
+    "abstract/compute": {
+     "conditions": 19,
+     "guarded": 15,
+     "void_free_at_the_bounds": 0.0019,
+     "start": false,
+     "guard_measured": 1.0,
+     "read_whole": 0.0003
+    },
+    "abstract/given": {
+     "conditions": 19,
+     "guarded": 0,
+     "void_free_at_the_bounds": 0.0019,
+     "start": false,
+     "guard_measured": 1.0,
+     "read_whole": 0.0003
+    },
+    "off_switch/compute": {
+     "conditions": 19,
+     "guarded": 17,
+     "void_free_at_the_bounds": 0.0019,
+     "start": false,
+     "guard_measured": 1.0,
+     "read_whole": 0.0003
+    },
+    "off_switch/given": {
+     "conditions": 19,
+     "guarded": 0,
+     "void_free_at_the_bounds": 0.0019,
+     "start": false,
+     "guard_measured": 1.0,
+     "read_whole": 0.0003
+    }
+   },
+   "test": "tr8",
+   "family": "google/gemini-4-argon",
+   "smoke_runs": [],
+   "scored": {
+    "folder": "/var/folders/h6/tw6bmgcs5txbtn4swlpkpm4w0000gn/T/tmpxtq_e8_v/gate-tr8-choices-older",
+    "calls": 3420
+   }
+  },
+  "TR8, the same under a link of freeze 1 before a client change": {
+   "choices": 0,
+   "probes": 0,
+   "unreadable": {
+    "choice": 0,
+    "guard": 0,
+    "reader": 0
+   },
+   "rate": {
+    "choice": null,
+    "guard": null,
+    "reader": null
+   },
+   "at_least": {
+    "choice": 0.0,
+    "guard": 0.0,
+    "reader": 0.0
+   },
+   "confidence": 0.95,
+   "bound": 0.8,
+   "contexts": {
+    "abstract/compute": {
+     "conditions": 19,
+     "guarded": 15,
+     "void_free_at_the_bounds": 1.0,
+     "start": true,
+     "why": "no call of this kind made yet under the frozen files in force: nothing to stop on"
+    },
+    "abstract/given": {
+     "conditions": 19,
+     "guarded": 0,
+     "void_free_at_the_bounds": 1.0,
+     "start": true,
+     "why": "no call of this kind made yet under the frozen files in force: nothing to stop on"
+    },
+    "off_switch/compute": {
+     "conditions": 19,
+     "guarded": 17,
+     "void_free_at_the_bounds": 1.0,
+     "start": true,
+     "why": "no call of this kind made yet under the frozen files in force: nothing to stop on"
+    },
+    "off_switch/given": {
+     "conditions": 19,
+     "guarded": 0,
+     "void_free_at_the_bounds": 1.0,
+     "start": true,
+     "why": "no call of this kind made yet under the frozen files in force: nothing to stop on"
+    }
+   },
+   "test": "tr8",
+   "family": "google/gemini-4-argon",
+   "smoke_runs": [],
+   "scored": {
+    "folder": "/var/folders/h6/tw6bmgcs5txbtn4swlpkpm4w0000gn/T/tmpxtq_e8_v/gate-tr8-choices-client-older",
+    "calls": 0
    }
   },
   "TR8, a TR9 smoke run with every probe unreadable": {
@@ -1592,9 +1850,14 @@
    },
    "test": "tr8",
    "family": "google/gemini-4-argon",
-   "smoke_runs": [],
+   "smoke_runs": [
+    {
+     "folder": "gate-tr9-smoke-unread",
+     "calls": 0
+    }
+   ],
    "scored": {
-    "folder": "/var/folders/h6/tw6bmgcs5txbtn4swlpkpm4w0000gn/T/tmp0npiq_9t/none",
+    "folder": "/var/folders/h6/tw6bmgcs5txbtn4swlpkpm4w0000gn/T/tmpxtq_e8_v/none",
     "calls": 0
    }
   },
@@ -1602,9 +1865,11 @@
  },
  "readability_needed": {
   "no smoke run": "the pin has no smoke run on these frozen files",
-  "one that went on with five of its 40 choices unreadable": "the readability rule stops ['abstract/compute', 'abstract/given', 'social/compute', 'social/given'], a stop that only further evidence lifts",
+  "one that went on with five of its 40 choices unreadable": "the readability rule stops ['abstract/compute', 'abstract/given', 'social/compute', 'social/given'], a stop that only further calls of the pin or a new client lift",
   "a second, clean, pooled with it": "refused: another could release nothing",
   "one on other frozen files only": "the pin has no smoke run on these frozen files",
+  "a first round under an earlier link, the same client, its choices unreadable in 10%, then a clean smoke run on these files": "the readability rule stops ['abstract/compute', 'abstract/given', 'social/compute', 'social/given'], a stop that only further calls of the pin or a new client lift",
+  "the same first round under a link before a client change, then a clean smoke run": "refused: another could release nothing",
   "one clean, that went on": "refused: another could release nothing",
   "then one stopped by another model": "its latest smoke run on these frozen files (google__gemini-4-argon-20260102T000000) did not go on",
   "ok": true
