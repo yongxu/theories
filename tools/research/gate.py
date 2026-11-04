@@ -738,6 +738,37 @@ def link_only(path: str, sha: str) -> bool:
     return strip(frozen) == strip((ROOT / path).read_text(errors='replace'))
 
 
+def pinned_parent(manifest: str) -> str | None:
+    """The commit a freeze JSON binds its sources to (`parent_commit`, `accepted_parent_commit`), if it names one."""
+    try:
+        data = json.loads(show('HEAD', manifest) or '{}')
+    except ValueError:
+        return None
+    for k in ('parent_commit', 'accepted_parent_commit'):
+        if isinstance(data, dict) and isinstance(data.get(k), str):
+            commit = git('rev-parse', '--verify', '-q', data[k] + '^{commit}', check=False).strip()
+            if commit:
+                return commit
+    return None
+
+
+def sha_at(rev: str, path: str) -> str | None:
+    out = subprocess.run(['git', 'show', f'{rev}:{path}'], cwd=ROOT, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL)
+    return hashlib.sha256(out.stdout).hexdigest() if out.returncode == 0 else None
+
+
+def ever_frozen(path: str, sha: str) -> bool:
+    """Whether the file was ever committed at the bytes its record names (HEAD's history, its former paths included)."""
+    from tools.research import registry
+    try:
+        return registry.reviewed_version(path, sha) is not None
+    except (OSError, ValueError, subprocess.CalledProcessError):
+        return True  # unknown: judged as an ordinary change
+
+
+REBASED = re.compile(r'(?:on main, rebased,|rebased onto main as)\s+([0-9a-f]{7,40})')
+
+
 def acknowledged() -> set:
     """The paths GATE_FROZEN_ACK names: entries separated by ';' or new lines, each 'path' or 'path: reason'."""
     raw = os.environ.get('GATE_FROZEN_ACK', '')
@@ -752,7 +783,7 @@ def frozen_check(base='main', everything=False) -> dict:
     stands on main (an entry whose bytes moved on long after its experiment ran, a pin naming no commit in main's
     history) is listed for its owner and never fails: a landing cannot cause it, and history is not undone by a gate.
     With `everything` (the full set) the standing list is given whole, with each pinned file changed since its pin."""
-    errors, standing, unverified, links = [], [], [], []
+    errors, standing, unverified, links, moved, never = [], [], [], [], [], []
     start = base_commit(base)
     changed = changes(start, 'HEAD')
     touched = {p for _, p in changed}
@@ -774,11 +805,29 @@ def frozen_check(base='main', everything=False) -> dict:
                 errors.append(f'{m}: a freeze the check cannot read, in a folder this landing changes; read it and name it '
                               'in GATE_FROZEN_ACK with the reason')
         mine = m in touched or any(p in touched for p, _ in entries)
+        parent = pinned_parent(m)
         for p, sha in entries:
             f = ROOT / p
+            now = hashlib.sha256(f.read_bytes()).hexdigest() if f.is_file() else None
+            if parent and sha_at(parent, p) is not None:
+                # a record bound to a parent commit: its sources are judged there, and may move on after it; one written
+                # after the parent to its frozen bytes, or differing from them in link targets only, holds too
+                if sha_at(parent, p) == sha:
+                    if now != sha:
+                        moved.append(f'{m}: {p} moved on since its pinned parent {parent[:9]}')
+                elif now == sha:
+                    pass
+                elif link_only(p, sha):
+                    links.append(f'{m}: {p} differs from its frozen bytes in link targets only')
+                else:
+                    (errors if mine and p not in ack else standing).append(f'{m}: {p} is at its frozen bytes neither at its pinned parent {parent[:9]} nor now')
+                continue
             if f.is_file() and hashlib.sha256(f.read_bytes()).hexdigest() != sha and link_only(p, sha):
                 links.append(f'{m}: {p} differs from its frozen bytes in link targets only')
                 continue  # a move rewrote its links; its content is the frozen content
+            if f.is_file() and hashlib.sha256(f.read_bytes()).hexdigest() != sha and p not in modified and not ever_frozen(p, sha):
+                never.append(f'{m}: {p} was never at its frozen bytes in history (the record states a state before its first commit)')
+                continue
             if p in modified and p not in ack and m not in touched:
                 errors.append(f'{m}: this landing changes {p}, which it froze; if that is meant, name it in GATE_FROZEN_ACK with the reason')
                 continue
@@ -797,6 +846,10 @@ def frozen_check(base='main', everything=False) -> dict:
             continue
         if not any(is_ancestor(c) for c in commits):  # a pin may name a pre-rebase or salvage commit beside the one on main
             (errors if mine else standing).append(f'{pin}: names no commit in HEAD\'s history')
+        for x in REBASED.findall((ROOT / pin).read_text(errors='replace')):
+            c = git('rev-parse', '--verify', '-q', x + '^{commit}', check=False).strip()
+            if not c or not is_ancestor(c):
+                (errors if mine else standing).append(f'{pin}: its rebased commit {x} is not in HEAD\'s history')
         for c in commits:
             if not is_ancestor(c) and not salvaged(c):
                 (errors if mine else standing).append(f'{pin}: {c[:9]} is neither in HEAD\'s history nor kept under refs/salvage/')
@@ -814,7 +867,8 @@ def frozen_check(base='main', everything=False) -> dict:
     for s in standing:
         by_record[s.split(':', 1)[0]] = by_record.get(s.split(':', 1)[0], 0) + 1
     return {'errors': errors, 'standing': standing if everything else sorted(f'{k}: {n}' for k, n in by_record.items()),
-            'link_only': links, 'unverified': unverified, 'acknowledged': sorted(ack) or None}
+            'link_only': links, 'moved_on_since_parent': moved, 'never_at_frozen_bytes': never,
+            'unverified': unverified, 'acknowledged': sorted(ack) or None}
 
 
 def receipt_check(base='main') -> dict:

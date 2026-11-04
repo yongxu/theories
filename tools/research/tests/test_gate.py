@@ -133,6 +133,10 @@ class GateCase(unittest.TestCase):
         root = self.repo.root
         self.patch(mock.patch.object(gate, 'ROOT', root))
         self.patch(mock.patch.object(paths, 'role', lambda p: paths.Classifier(settings=CONFIG, root=root).role(p)))
+        # gate reads history through the registry (a frozen file's earlier versions), so it reads this repository too
+        self.patch(mock.patch.object(registry, 'ROOT', root))
+        self.patch(mock.patch.object(registry, 'VERSION_CACHE', self.tmp / 'versions.json'))
+        self.patch(mock.patch.dict(registry._versions, clear=True))
 
     def patch(self, patcher):
         patcher.start()
@@ -882,9 +886,6 @@ class FrozenTests(GateCase):
         text = 'See [the design](../old/DESIGN.md) and [the run](run.md).\n'
         self.on_main({'experiments/f4/NOTE.md': text,
                       'experiments/f4/FROZEN.sha256': sha(text) + '  experiments/f4/NOTE.md\n'})
-        self.patch(mock.patch.object(registry, 'ROOT', self.repo.root))
-        self.patch(mock.patch.object(registry, 'VERSION_CACHE', self.tmp / 'versions.json'))
-        self.patch(mock.patch.dict(registry._versions, clear=True))
         return text
 
     def test_a_link_only_difference_is_listed_apart_and_does_not_fail(self):
@@ -912,6 +913,34 @@ class FrozenTests(GateCase):
         self.assertEqual(self.frozen()['errors'], [])
         self.repo.git('update-ref', '-d', 'refs/salvage/pin-original')
         self.assertFails(self.frozen(), 'neither in HEAD')
+
+    def test_a_record_pinned_to_a_parent_is_read_there(self):
+        self.on_main({'experiments/f5/source.md': 'v1\n'})
+        parent = self.repo.head()
+        self.on_main({'experiments/f5/FREEZE.json': json.dumps({'parent_commit': parent, 'source_sha256': {'experiments/f5/source.md': sha('v1\n')}})})
+        self.repo.commit({'experiments/f5/source.md': 'v2, moved on\n'})
+        result = self.frozen(everything=True)
+        self.assertEqual(result['errors'], [])
+        self.assertTrue(any('moved on since its pinned parent' in x for x in result['moved_on_since_parent']), result)
+
+    def test_a_hash_never_matched_in_history_is_a_note(self):
+        self.on_main({'experiments/f6/code.py': 'committed\n',
+                      'experiments/f6/FROZEN.sha256': sha('before the first commit\n') + '  experiments/f6/code.py\n'})
+        self.repo.commit({'drafts/a.md': '# A, changed\n'})
+        result = self.frozen(everything=True)
+        self.assertEqual(result['errors'], [])
+        self.assertTrue(any('never at its frozen bytes in history' in x for x in result['never_at_frozen_bytes']), result)
+
+    def test_a_pins_rebased_commit_must_be_on_main(self):
+        self.repo.branch('elsewhere')
+        other = self.repo.commit({'drafts/b.md': '# B, elsewhere\n'}, 'elsewhere')
+        self.fresh()
+        self.repo.git('update-ref', 'refs/salvage/kept', other)
+        self.repo.commit({'experiments/r/results/FROZEN-AT': f'r {other[:9]} (kept); on main, rebased, {self.pinned[:9]}\n', 'experiments/r/x.txt': 'x\n'})
+        self.assertEqual(self.frozen()['errors'], [])
+        self.fresh()
+        self.repo.commit({'experiments/s/results/FROZEN-AT': f's {self.pinned[:9]}; rebased onto main as {other[:9]}\n', 'experiments/s/x.txt': 'x\n'})
+        self.assertFails(self.frozen(), 'its rebased commit')
 
     def test_a_pin_is_never_changed(self):
         self.repo.commit({PIN: f'exp {self.pinned[:9]} (the freeze, reworded)\n'})
