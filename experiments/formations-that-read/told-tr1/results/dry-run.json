@@ -1211,7 +1211,7 @@
   },
   {
    "check": "run asking for K after that smoke run",
-   "result": "google/gemini-4-argon's latest smoke run (google__gemini-4-argon-20261104T130006Z) stopped K, a stop of the run, which a later smoke run that passes lifts (FREEZE-5.md, section 8); no call was made"
+   "result": "google/gemini-4-argon's latest smoke run (google__gemini-4-argon-20261104T130513Z) stopped K, a stop of the run, which a later smoke run that passes lifts (FREEZE-5.md, section 8); no call was made"
   },
   {
    "check": "smoke where the latest smoke run passed every condition",
@@ -1247,11 +1247,11 @@
   },
   {
    "check": "a smoke run of prose answers after T, F and K began",
-   "result": "exit 2; stands {'T': None, 'F': None, 'K': None, 'H': 'google__gemini-4-argon-20261104T130011Z'}"
+   "result": "exit 2; stands {'T': None, 'F': None, 'K': None, 'H': 'google__gemini-4-argon-20261104T130518Z'}"
   },
   {
    "check": "run asking for H after a stop that stands",
-   "result": "google/gemini-4-argon's condition H was stopped by the pin's own answers at its smoke run (google__gemini-4-argon-20261104T130011Z), a stop that stands (FREEZE-5.md, section 8); no call was made"
+   "result": "google/gemini-4-argon's condition H was stopped by the pin's own answers at its smoke run (google__gemini-4-argon-20261104T130518Z), a stop that stands (FREEZE-5.md, section 8); no call was made"
   },
   {
    "check": "smoke where no condition can be released",
@@ -1279,7 +1279,7 @@
   },
   {
    "check": "run after it",
-   "result": "anthropic/claude-sonnet-5.5's latest smoke run (anthropic__claude-sonnet-5.5-20261104T130015Z) stopped H, a stop of the run, which a later smoke run that passes lifts (FREEZE-5.md, section 8); no call was made"
+   "result": "anthropic/claude-sonnet-5.5's latest smoke run (anthropic__claude-sonnet-5.5-20261104T130522Z) stopped H, a stop of the run, which a later smoke run that passes lifts (FREEZE-5.md, section 8); no call was made"
   },
   {
    "check": "every T answer unreadable at a smoke run, T begun",
@@ -1287,7 +1287,7 @@
   },
   {
    "check": "run asking for T after it",
-   "result": "anthropic/claude-sonnet-5.5's latest smoke run (anthropic__claude-sonnet-5.5-20261104T130017Z) stopped T, a stop of the run, which a later smoke run that passes lifts (FREEZE-5.md, section 8); no call was made"
+   "result": "anthropic/claude-sonnet-5.5's latest smoke run (anthropic__claude-sonnet-5.5-20261104T130524Z) stopped T, a stop of the run, which a later smoke run that passes lifts (FREEZE-5.md, section 8); no call was made"
   },
   {
    "check": "the whole plan after the kill, the mend, the addendum and three smoke runs",
@@ -1347,7 +1347,7 @@
    }
   }
  },
- "seconds": 60.9,
+ "seconds": 63.3,
  "code_hashes": {
   "experiments/formations-that-read/tr1.py": "dd75707c1a44a300e419b4bd0dc7cbff9c83e1a71f874cf8e68d3a42e28ee17f",
   "experiments/formations-that-read/tr1.json": "d74cd24f43d08626fe3ba3d159823884ddc4ec20a873e2bcef0365bbd39d51fe",
@@ -1362,7 +1362,7 @@
   "experiments/formations-that-read/told/PINS.json": "7feb28b92d1fa286daa6ccec5e874564d7083fe0b1c3fd26bb3d7ff1f3714b86",
   "experiments/formations-that-read/told-tr1/tr1_design.py": "60219e117fa1d33ef19c73f44067edc71c7008ad1c2ee920c665a4875c5b66fc",
   "experiments/formations-that-read/told-tr1/tr1_rule.py": "8bd7534212bfe9b19ec4853f0a285bfb593a3e5910e76695cf0ebbf1453c8560",
-  "experiments/formations-that-read/told-tr1/tr1_run.py": "0f23404f8c5838973ed986cb88d47dbdd21fe199edb370c35d1fe39f88143c84",
+  "experiments/formations-that-read/told-tr1/tr1_run.py": "bb959cf9c2180358a0e6decf8e219ef892cace1e83baf4fbdb90ff4c17ad39df",
   "experiments/formations-that-read/told-tr1/tr1_dry_run.py": "a41bb5184c208d63f22973a7730a95587a738a4bd8471081e787b1cde7d93b84",
   "experiments/formations-that-read/told-tr1/write_frozen.py": "d35ec0077f75e88214f3edb92ecc6fd726e58b98fa1068a6e894e4517ce29ac6"
  },

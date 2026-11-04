@@ -490,7 +490,8 @@ def begun(family, root=None):
     logged, a record of that condition begun after the start and before the next one. A start with no call
     of a condition logged begins none of it. The
     windows read the machine's clock, and a pin's commands run one at a time (pin_lock). Once a
-    condition's run has begun, nothing the pin answers at a smoke run, earlier or later, stops it."""
+    condition's run has begun, nothing the pin answers at a smoke run, earlier or later, stops it for
+    good; its unreadable answers are a stop of the run (smoke_stops)."""
     out = scored(family, root)
     starts = scored_meta(family, root).get("starts") or []
     made = [(r["t0"], r.get("condition")) for r in R.logged(out) if r.get("t0") is not None]

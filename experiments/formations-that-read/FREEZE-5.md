@@ -1,6 +1,6 @@
 # TR1, frozen
 
-*Board item TR1, 4 November 2026: TR1 frozen on freeze 1's harness, at TR71's owner's split. AI-written (a Claude Code session), not yet reviewed by a person. Frozen before any call to a model: no model has been called with any of these prompts. The run is Ren's. About 61 to 79 minutes to read, at 100 to 130 words a minute; the first part takes nine to eleven.*
+*Board item TR1, 4 November 2026: TR1 frozen on freeze 1's harness, at TR71's owner's split. AI-written (a Claude Code session), not yet reviewed by a person. Frozen before any call to a model: no model has been called with any of these prompts. The run is Ren's. About 61 to 80 minutes to read, at 100 to 130 words a minute; the first part takes nine to eleven.*
 
 ## What is frozen, and what it can refute
 
@@ -146,7 +146,7 @@ A record not made between two catalog reads naming the frozen snapshot is not re
 - **A stop of the run**, which a later smoke run that passes lifts. Every condition is stopped so by: the smoke run's own stop (`execute`'s), a call not made, a response naming another model, a call made while the catalog named another snapshot, or a line of the log that does not read. One condition is stopped so by its own calls the provider rejected or filtered, or that the client's token limit cut.
 - **A stop by the pin's own answers**, which stands for that condition: at least two of its four smoke answers that the parser cannot read, in prose or outside the schema, where the condition's run has not begun. One such answer, or any once its run has begun, is a stop of the run instead: a changed client may be misreading the pin, and a later smoke run that passes lifts it. A refusal by the refusal field is the model's answer, a decline, and stops nothing.
 
-Why two of four: one unreadable answer in twenty a call, which the power check allows (section 4), would make a stop stand on one answer of four at chance 0.1855; at two of four, a condition's stop stands at chance 0.014, and one of T on either deciding pin at 0.0278 (from the dry run).
+Why two of four: one unreadable answer in twenty a call, which the power check allows (section 4), would make a stop stand on one answer of four at chance 0.1855; at two of four, a condition's stop stands at chance 0.014 per smoke run, and one of T on either deciding pin at 0.0278 per smoke run (from the dry run). A pin may need more than one smoke run, since one unreadable answer is a stop of the run, and each exposes every condition not yet begun again; T can be started as soon as a smoke run passes it, which keeps the whole chance near these.
 
 A condition goes on where every one of its smoke calls was made and nothing stops it. The report (`smoke-report.json`) names each condition's go or stop, the calls behind each stop, the served models, the catalog's slugs, and the tokens and cost per call. It projects the full plan at the smoke run's tokens per character and mean output, and the pin's listed prices. It shows nothing of the answers beyond whether each was read.
 
@@ -274,7 +274,7 @@ K passes on every pin read: five amounts to receive, "no preference" offered, pi
 
 ## 14. Provenance and the reading of the freeze
 
-Frozen on 4 November 2026 by a Claude Code session from REST-TR1, its Stage 0 and the plan TR71's owner left for it, on freeze 1's harness, with TR6's and TR7's line writer, `mend` and whole meta copied into this folder rather than imported. No model was called and no key used. Readers other than the author read it in rounds, as the coordinator set: a full read first, then the same reader on each diff, at most five rounds, stopping at the first with no finding of high or medium severity. [`told-tr1/REVIEW-FREEZE.md`](told-tr1/REVIEW-FREEZE.md) records each round, each finding and how it was taken, and what kept the rounds going.
+Frozen on 4 November 2026 by a Claude Code session from REST-TR1, its Stage 0 and the plan TR71's owner left for it, on freeze 1's harness, with TR6's and TR7's line writer, `mend` and whole meta copied into this folder rather than imported. No model was called and no key used. Readers other than the author read it in rounds, as the coordinator set: a full read first, then the same reader on each diff, at most five rounds, stopping at the first with no finding of high or medium severity. That was the second: the first found three of medium severity, all taken. [`told-tr1/REVIEW-FREEZE.md`](told-tr1/REVIEW-FREEZE.md) records each round, each finding and how it was taken, and what kept the rounds going.
 
 A later edit of this file is allowed only for a link or a typo, or as a dated note argued as FREEZE-1's are. A fault found later is fixed by an addendum (section 8) or by a new freeze.
 
