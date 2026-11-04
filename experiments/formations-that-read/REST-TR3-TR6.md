@@ -1,6 +1,6 @@
 # TR3 and TR6: the full design
 
-*Part of [the designs of RF's tests](DESIGN.md): the exact tables, the power check, rivals, usage and references for TR3 and TR6. AI-written, not yet reviewed by a person. TR3 is frozen in [FREEZE-3](FREEZE-3.md) (4 November 2026), with the changes its section 12 lists, and not run; TR6 is not frozen.*
+*Part of [the designs of RF's tests](DESIGN.md): the exact tables, the power check, rivals, usage and references for TR3 and TR6. AI-written, not yet reviewed by a person. TR3 is frozen in [FREEZE-3](FREEZE-3.md) (4 November 2026), with the changes its section 12 lists, and not run; TR6 in [FREEZE-6](FREEZE-6.md) (the same day), with the changes its section 12 lists, and not run.*
 
 Every number here is printed by [`tr3.py`](tr3.py) into [`tr3.json`](tr3.json) (Python 3.11, standard library, `fractions.Fraction` for exact values, seeds 20261031 and its successors; a few minutes on one core, about a minute of processor time). The script mirrors [`Becoming.Cascade`](../integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Cascade.lean) (sha256 `e6add4291cb2…`, the hash the record binds; core receipt 20261029T134236.345943Z, every declaration with an empty axiom report). The empty report concerns logic only. The modelling choices are in the law's own statement: deterministic laws, members indexed by the natural numbers, one act each, worlds fixing every coupling, no probability.
 
@@ -270,7 +270,7 @@ About 280 input and 8 output tokens a stateless call, and about 60 more per roun
 
 ## Choices left for the freeze
 
-The personas' costs (heterogeneity measured before any claim of a richer chain than a threshold); the families; the cover story (El Farol and bandwagon framings are well known to the models, so neither is named); the second start; whether a sampled arm is added (reported only: a random response is outside the law).
+The personas' costs (heterogeneity measured before any claim of a richer chain than a threshold); the families; the cover story (El Farol and bandwagon framings are well known to the models, so neither is named); the second start; whether a sampled arm is added (reported only: a random response is outside the law). The freeze made these choices ([FREEZE-6 §12](FREEZE-6.md#12-what-changed-from-the-design-and-what-was-chosen)): one set of ten costs for both framings, a work day and a lake told in points, freeze 1's pins with freeze 3's request and endpoints, a second start for both arms from the start whose orbit moves most, and no sampled arm.
 
 # Candidate core lemmas (no new Lean is written here)
 
