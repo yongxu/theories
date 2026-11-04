@@ -16,8 +16,9 @@ Checks, each against the repository's own files:
      (default: the newest under becoming-checks/), or, for a module of this kit not yet landed, in
      its source, reported as such;
   5. every record a passage names exists, and no passage id repeats one of the Y1 passage map;
-  6. the chapter (06-CLASSICAL-TEXTS, its section 六) gives, for each part and in all, the numbers of passages and of
-     each kind that passages.json gives; a missing chapter, section or row is a failure. The passage tables were
+  6. the chapter (06-CLASSICAL-TEXTS, its section 六) gives, in its table of counts, for each part and in all, the
+     numbers of passages and of each kind that passages.json gives, and says the total in its assessment; a missing
+     chapter, section or row, or a row twice, is a failure. The section's other numbers are not checked. The passage tables were
      checked against the chapter of the map until RA moved it to history/ (23 October 2026); that chapter is frozen
      there and not checked, and --table prints the tables as the data now gives them;
   7. where the archives are present, passages.json is what build_passages.py builds from the mappers'
@@ -306,6 +307,8 @@ def main():
         for line in section.splitlines():
             cells = [c.strip() for c in line.strip().strip('|').split('|')]
             if len(cells) == 5 and all(c.isdigit() for c in cells[1:]):
+                if cells[0] in rows:
+                    failures.append(f'{args.chapter.name}: row {cells[0]} appears twice in the table of counts')
                 rows[cells[0]] = tuple(map(int, cells[1:]))
         for t in TRADITIONS + [None]:
             mine = [p for p in passages if t is None or p['tradition'] == t]

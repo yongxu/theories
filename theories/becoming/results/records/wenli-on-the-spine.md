@@ -91,7 +91,7 @@ Aliases: `文理生生`, `文`, `文同`, `the course named 文`, `the epistemol
 - 23 October 2026, WL3: the 文 line joined to the one-unfolding root (record wen-in-the-grammar, study section 374); the chapter gained a paragraph in §一 and a bullet in its head.
 - 23 October 2026, ZE: the controlled English control run; the chapter's testing section, head and open item 6 state its result.
 - 25 October 2026, board item DF (study section 418): the scope item saying the coarsest value-keeping, law-carrying class is not one theorem removed, and the Lean part of the next step with it: the coarsest class is stated as one theorem and the laws of 文 are joined to Web.AlikeThroughUpTo and CrossSituational (WL2); the remaining next step is unchanged.
-- 4 November 2026, board item RAE: the validation scope said in the present tense that verify_zh.py passes on the three chapters' generated tables; that run was of 22 October, and RA moved the chapters to history/ the next day, so the scope is dated. verify_zh.py now checks 06-CLASSICAL-TEXTS (civilization-thought-on-the-spine). Claims unchanged.
+- 4 November 2026, board item RAE: the validation scope said in the present tense that verify_zh.py passes on the three chapters' generated tables; that run was of 22 October, and RA moved the chapters to history/ the next day, so the scope is dated. verify_zh.py now checks 06-CLASSICAL-TEXTS's Lean names, record links and nine numbers instead (civilization-thought-on-the-spine). Claims unchanged.
 
 </details>
 

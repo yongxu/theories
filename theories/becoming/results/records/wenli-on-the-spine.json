@@ -178,7 +178,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/verify_zh.py",
       "role": "integration",
-      "sha256": "9dd8b685a6cdbf8dc7d414a21b36a3ac1c2019525640023002244e3e0cfdbf46"
+      "sha256": "ba7e897e186caaa583313059b1fd3ae3629ab9e801f8cc265046cc91804b1de3"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/import_wenli.py",
@@ -244,8 +244,8 @@
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：删去“守值载法之最粗之类不是一条定理”之范围项，并删去下一步中的 Lean 部分：最粗之类已作一条定理陈述，文之律已接到 Web.AlikeThroughUpTo 与 CrossSituational（WL2）；其余下一步不变。"
     },
     {
-      "en": "4 November 2026, board item RAE: the validation scope said in the present tense that verify_zh.py passes on the three chapters' generated tables; that run was of 22 October, and RA moved the chapters to history/ the next day, so the scope is dated. verify_zh.py now checks 06-CLASSICAL-TEXTS (civilization-thought-on-the-spine). Claims unchanged.",
-      "zh": "2026年11月4日，看板项 RAE：验证范围以现在时说 verify_zh.py 于三章之生成表上通过；该次运行在 10 月 22 日，RA 于次日将诸章移入 history/，故验证范围注明日期。verify_zh.py 今核 06-CLASSICAL-TEXTS（见 civilization-thought-on-the-spine）。断言未变。"
+      "en": "4 November 2026, board item RAE: the validation scope said in the present tense that verify_zh.py passes on the three chapters' generated tables; that run was of 22 October, and RA moved the chapters to history/ the next day, so the scope is dated. verify_zh.py now checks 06-CLASSICAL-TEXTS's Lean names, record links and nine numbers instead (civilization-thought-on-the-spine). Claims unchanged.",
+      "zh": "2026年11月4日，看板项 RAE：验证范围以现在时说 verify_zh.py 于三章之生成表上通过；该次运行在 10 月 22 日，RA 于次日将诸章移入 history/，故验证范围注明日期。verify_zh.py 今改核 06-CLASSICAL-TEXTS 之 Lean 名、记录链接与九数（见 civilization-thought-on-the-spine）。断言未变。"
     }
   ]
 }

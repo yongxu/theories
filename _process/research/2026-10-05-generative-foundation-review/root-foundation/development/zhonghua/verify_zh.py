@@ -13,11 +13,15 @@ Everything is checked against repository copies only:
      apart); every result record exists;
   4. names: one name per concept, no two names alike once simplified, every anchor current, every quotation in
      the frozen text it names;
-  5. the chapter (06-CLASSICAL-TEXTS; a missing one is a failure): every 「…」〔ID〕 quotation is in source ID's frozen
-     text, every `Becoming.…` declaration is current, every record link exists, every 对照 line names entries of the
-     map with the kind the map gives them, the generated tables equal what the data gives, and the numbers its
-     section 七 states of the map and the names are the data's (STATED). The three chapters this checked until RA
-     moved them to history/ (23 October 2026) are frozen there and not checked.
+  5. the chapter (06-CLASSICAL-TEXTS; a missing one is a failure): every Lean name it cites in backticks is an audited
+     declaration, module or namespace of the newest core receipt, read whole, with `Becoming.` put before it, or as
+     the end of one (the chapter's tables leave a namespace out), but for OUTSIDE, which it names as off the spine;
+     every record link exists; every 「…」〔ID〕 quotation is in source ID's frozen text, every 对照 line names
+     entries of the map with the kind the map gives them, and the generated tables equal what the data gives (06
+     has none of these three today); and nine numbers its section 七 states of the map and the name table are the
+     data's (STATED). A chapter in which no Lean name is found fails. Its other quotations and numbers are not
+     checked. The three chapters this checked until RA moved them to history/ (23 October 2026) are frozen there
+     and not checked.
 Failures are printed, not written to a file.
 """
 import argparse, csv, glob, hashlib, json, os, re, sys
@@ -29,6 +33,10 @@ SRC = ROOT / 'sources/civilization-thought-v1.0'
 PKG = ROOT / 'experiments/integrated-correction/general-framework/generative-basis/lean/becoming'
 RECORDS = ROOT / 'theories/becoming/results/records'
 CHAPTER = ROOT / 'theories/becoming/chapters/06-CLASSICAL-TEXTS.md'
+# Lean modules the chapter names outside the core receipt, each with the file it is; the chapter says each is off the spine.
+OUTSIDE = {'SituatedPractice': ROOT / 'experiments/integrated-correction/general-framework/generative-basis/'
+                                     'noninstrumental-concern/SituatedPractice.lean'}
+IDENT = re.compile(r"[A-Za-z_][A-Za-z0-9_'.₀-₉]*")
 
 
 def stated(n):
@@ -199,10 +207,20 @@ def main():
             n_q += 1
             if not in_text(m.group(2), m.group(1)):
                 fail.append('%s: quotation not in %s: %s' % (ch.name, m.group(2), m.group(1)[:30]))
-        for m in re.finditer(r'`(Becoming\.[A-Za-z0-9_.\'₀-₉]+)`', t):
+        spaces = {'.'.join(d.split('.')[:i]) for d in decls for i in range(1, d.count('.') + 1)}
+        known = decls | modules | spaces | periphery
+        for m in re.finditer(r'`([^`\n]+)`', t):
+            x = m.group(1).rstrip('.')                   # a name ending in a dot names its namespace (a prefix left out)
+            if len(x) < 2 or not IDENT.fullmatch(x):
+                continue
             n_d += 1
-            if not decl_ok(m.group(1).rstrip('.')):     # a name ending in a dot names its namespace (a prefix left out)
-                fail.append('%s: declaration %s' % (ch.name, m.group(1)))
+            if x in OUTSIDE:
+                if not OUTSIDE[x].exists():
+                    fail.append('%s: %s, named as outside the receipt, is not at %s' % (ch.name, x, OUTSIDE[x]))
+            elif not (x in known or 'Becoming.' + x in known or any(k.endswith('.' + x) for k in known)):
+                fail.append('%s: Lean name %s is not in receipt %s' % (ch.name, x, receipt.parent.name))
+        if not n_d:
+            fail.append('%s: no Lean name found to check' % ch.name)
         for m in re.finditer(r'\]\(\.\./results/records/([a-z0-9\-]+)\.md\)', t):
             n_l += 1
             if m.group(1) not in records:
@@ -254,7 +272,7 @@ def main():
     e_recs = {x for d in P.values() for e in d['entries'] for x in e['records']}
     print('%s: %d files bound; %d judgments, %d flagged; %d entries (%s), %d fragments, %d declarations, %d records; '
           '%d names; '
-          'chapter %s: %d quotations, %d declarations, %d record links, %d 对照 lines, %d stated numbers; receipt %s; '
+          'chapter %s: %d quotations with a source id, %d Lean names, %d record links, %d 对照 lines, %d stated numbers; receipt %s; '
           'periphery declarations: %d'
           % ('FAILED' if fail else 'ok', len(prov['files']), len(rel_ids), n['flagged'],
              n_entries, ', '.join('%s %d' % kv for kv in sorted(tot.items())), n_frag, len(e_decls), len(e_recs),

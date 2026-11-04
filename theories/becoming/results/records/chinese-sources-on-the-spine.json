@@ -50,8 +50,8 @@
     "nondual-method-not-proof"
   ],
   "validation_scope": {
-    "en": "verify_ro.py passes (4 November 2026, board item RAE; with research-test since): 248 passages (91 agreements, 98 exact scopes, 59 divergences), 486 fragments verbatim in 93 files bound by SHA-256, 604 declarations in receipt 20261103T211917.845905Z, 122 records, the atlas excerpt rebuilt from the archives, passages.json the build, and the counts 06-CLASSICAL-TEXTS states; the chapter's tables were checked until it moved to history/ on 23 October 2026. Five mappers drafted; the integrator corrected six (study section 207). Not independently reviewed; no collation with a printed edition.",
-    "zh": "verify_ro.py 通过（2026 年 11 月 4 日，看板项 RAE；此后随 research-test）：248 段（相合 91、定域 98、相分 59），486 片段逐字见于 93 个以 SHA-256 绑定之文件，604 个声明在回执 20261103T211917.845905Z 中，122 份记录，图谱摘录由存档重建，passages.json 即其构建，06 所述之数；章之逐段表核至 10 月 23 日移入 history/。未经独立审查；未与刻本对校。"
+    "en": "verify_ro.py passes (4 November 2026, board item RAE; with research-test since): 248 passages (91 agreements, 98 exact scopes, 59 divergences), 486 fragments verbatim in 93 files bound by SHA-256, 604 declarations in receipt 20261103T211917.845905Z, 122 records, the atlas excerpt rebuilt, passages.json the build, and 06-CLASSICAL-TEXTS §六's table of counts and its total; the chapter's tables were checked until it moved to history/ on 23 October 2026. Five mappers drafted; the integrator corrected six (study section 207). Not independently reviewed; no collation with a printed edition.",
+    "zh": "verify_ro.py 通过（2026 年 11 月 4 日，看板项 RAE；此后随 research-test）：248 段（相合 91、定域 98、相分 59），486 片段逐字见于 93 个以 SHA-256 绑定之文件，604 个声明在回执 20261103T211917.845905Z 中，122 份记录，图谱摘录重建，passages.json 即其构建，06 第六节之数表与总数；章之逐段表核至 10 月 23 日移入 history/。五个映射者起草，整合者改正六处。未经独立审查；未与刻本对校。"
   },
   "next_delta": {
     "en": "The Hall-type existence condition for division across several conditions; whether a graded order by closure level can be a law, and which part of graded concern it would keep.",
@@ -141,12 +141,12 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ro-relational-sources/passages.json",
       "role": "integration",
-      "sha256": "e209921293658564fed53b77c548adbb43fbb42fe3ac50bc674b871c0cdf4dd1"
+      "sha256": "2bfe907169e71fdb9793faa03b031ae3671a6aa9467d05a5c337d3a1b30ef343"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ro-relational-sources/verify_ro.py",
       "role": "integration",
-      "sha256": "bc9d6817858ce783695a1472fa30762de199dcbd24a2d623ef4f36f8250940a7"
+      "sha256": "80287c2dc9e6f8e51d38a1e1e7ef331ee6e8588ae933ec9b38c616193cd5ac81"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ro-relational-sources/atlas-excerpt.json",
@@ -242,8 +242,8 @@
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：下一步与进展依缺口之现状更新：第二、三、七项缺口补上，跨律之容忍所拟两面皆已证，跨多个条件之分有一个充分条件；所余为霍尔型存在条件，以及以闭包层级分等的次序能否成律。"
     },
     {
-      "en": "4 November 2026, board item RAE (AA Phase 0's E3, E1, E2): verify_ro.py had pointed at the chapter RA moved to history/ (23 October), so it failed, and it ran in no test; the map named a record CD renamed (whole-first-and-bounded-centers, now whole-and-regions-and-bounded-centers, 10 citations) and a declaration ND renamed in OU7 (Pool.difference_belongs_to_the_joint, now Pool.difference_only_together, 2 declarations and their readings). passages.json rebuilt by build_passages.py with ND's pair, and two readings that stated the ownership ND renamed away given the home's words; the verifier now checks the numbers 06-CLASSICAL-TEXTS states of the map, fails on a missing chapter, and runs with research-test; the validation scope is restated from the passing run's own summary. Claims, kinds and the law unchanged.",
-      "zh": "2026年11月4日，看板项 RAE（AA 第零阶段之 E3、E1、E2）：verify_ro.py 原指向 RA 于 10 月 23 日移入 history/ 之章，故不通过，且不在任何测试中；对应表引一份 CD 已更名之记录（whole-first-and-bounded-centers，今为 whole-and-regions-and-bounded-centers，10 处）与一个 ND 于 OU7 更名之声明（Pool.difference_belongs_to_the_joint，今为 Pool.difference_only_together，2 个声明及其读法）。passages.json 以 build_passages.py 加 ND 之对重建，两段读法所述 ND 已去之“属于”改用本章之语；检查脚本今核 06-CLASSICAL-TEXTS 所述对应表之数，缺章即不通过，并随 research-test 运行；验证范围依通过之运行自身之摘要重写。断言、类别与律未变。"
+      "en": "4 November 2026, board item RAE (AA Phase 0's E3, E1, E2): verify_ro.py had pointed at the chapter RA moved to history/ (23 October), so it failed, and it ran in no test; the map named a record CD renamed (whole-first-and-bounded-centers, now whole-and-regions-and-bounded-centers, 10 citations) and a declaration ND renamed in OU7 (Pool.difference_belongs_to_the_joint, now Pool.difference_only_together, 2 declarations and their readings). passages.json rebuilt by build_passages.py with ND's pair, and two readings that stated the ownership ND renamed away given the home's words; the verifier now checks 06-CLASSICAL-TEXTS §六's table of counts and its total, fails on a missing chapter, and runs with research-test; the validation scope is restated from the passing run's own summary, and, to keep within the length rule, no longer says that \"the integrator checked every quotation, declaration and record and read every reading\" or that \"four agreements became exact scopes under D62 (board item ZHK)\", both true of that work as before. Claims, kinds and the law unchanged.",
+      "zh": "2026年11月4日，看板项 RAE（AA 第零阶段之 E3、E1、E2）：verify_ro.py 原指向 RA 于 10 月 23 日移入 history/ 之章，故不通过，且不在任何测试中；对应表引一份 CD 已更名之记录（whole-first-and-bounded-centers，今为 whole-and-regions-and-bounded-centers，10 处）与一个 ND 于 OU7 更名之声明（Pool.difference_belongs_to_the_joint，今为 Pool.difference_only_together，2 个声明及其读法）。passages.json 以 build_passages.py 加 ND 之对重建，两段读法所述 ND 已去之“属于”改用本章之语；检查脚本今核 06-CLASSICAL-TEXTS 第六节之数表与总数，缺章即不通过，并随 research-test 运行；验证范围依通过之运行自身之摘要重写，并为合长度之规，不再写“整合者核对每条引文、声明与记录，通读每条读法”与“四段相合依 D62 改为定域（看板项 ZHK）”，二者于其工作仍真。断言、类别与律未变。"
     }
   ],
   "text_versions": [

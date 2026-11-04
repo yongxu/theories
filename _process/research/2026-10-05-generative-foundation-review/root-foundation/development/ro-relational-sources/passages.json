@@ -3350,7 +3350,7 @@
     }
    ],
    "relational": "Generating, acting and raising stand in relation to the generated without holding it, relying on it or steering its moves.",
-   "reading": "AI 的读法：生而不有、为而不恃、长而不宰。脊柱有三处结构相合。（1）“不宰”：动作是部分的，恰当它是部分自身的策略（`partForms_iff`）；当其余的规律以部分的策略为输入时，部分所做即其余所受（`Run.rest_driven_by_part`）——这正是“宰”的结构，脊柱两者都给出，不说哪个更好。（2）“不恃”：一个部分造成的差别不属于它自己：同一部分、同样的汲取，有一个其他汲取者时它造成差别，有两个时则不造成（`Pool.difference_only_together`），差别可以只由共同者造成（`Dependence.differenceOnlyTogether_iff`）。（3）“不有”：脊柱没有占有关系。规范方向（宜不宰）只在延续条件之下：凡物之延续都有意义时，没有立场有特权（`Web.retains_agree`）；从“不宰”到“应当不宰”还需要比较承诺（C）与不变性一步，经文与脊柱都没有自行给出。异文：郭店第二章作“为而弗志（恃）也，成而弗居”而无“生而不有”；帛书乙第十章作“生而弗有長而弗宰也是胃玄德”，无“为而不恃”。",
+   "reading": "AI 的读法：生而不有、为而不恃、长而不宰。脊柱有三处结构相合。（1）“不宰”：动作是部分的，恰当它是部分自身的策略（`partForms_iff`）；当其余的规律以部分的策略为输入时，部分所做即其余所受（`Run.rest_driven_by_part`）——这正是“宰”的结构，脊柱两者都给出，不说哪个更好。（2）“不恃”：一个见证中，同一部分、同样的汲取，有一个其他汲取者时它造成差别，有两个时则不造成（`Pool.difference_only_together`），差别可以只由共同者造成（`Dependence.differenceOnlyTogether_iff`）。（3）“不有”：脊柱没有占有关系。规范方向（宜不宰）只在延续条件之下：凡物之延续都有意义时，没有立场有特权（`Web.retains_agree`）；从“不宰”到“应当不宰”还需要比较承诺（C）与不变性一步，经文与脊柱都没有自行给出。异文：郭店第二章作“为而弗志（恃）也，成而弗居”而无“生而不有”；帛书乙第十章作“生而弗有長而弗宰也是胃玄德”，无“为而不恃”。",
    "reading_en": "AI reading: 'not steering' matches the distinction between a move that is the part's own policy and a rest driven by another's policy, 'not relying' matches the law that a difference can be made only together, and the spine has no relation of possession; that one ought not to steer holds only under the continuation condition with the comparison commitment.",
    "mapper": "lao",
    "layer": "经",
@@ -3368,7 +3368,7 @@
      "note": "帛书乙第十章无“为而不恃”。"
     }
    ],
-   "corrected": "RAE (AA Phase 0, E2): the English reading stated the ownership ND renamed away (OU7, e5951932b: difference_belongs_to_the_joint -> difference_only_together); its words are now the home's; names follow the declaration ND renamed in OU7 (e5951932b; development/nd-nondual-names/part2/nd_rename.py), statement unchanged; record ids follow the renamed records (R35; receipts in _process/architecture/renames), claims unchanged"
+   "corrected": "RAE (AA Phase 0, E2): both readings stated the ownership ND renamed away (OU7, e5951932b: difference_belongs_to_the_joint -> difference_only_together), the Chinese without saying the case is one witness; their words are now the home's (06-CLASSICAL-TEXTS: 一个见证中……差别可以只由共同者造成); names follow the declaration ND renamed in OU7 (e5951932b; development/nd-nondual-names/part2/nd_rename.py), statement unchanged; record ids follow the renamed records (R35; receipts in _process/architecture/renames), claims unchanged"
   },
   {
    "id": "lao-30-55-wu-zhuang-ze-lao",
@@ -4763,11 +4763,11 @@
     }
    ],
    "relational": "Things cannot complete themselves; near and far take from each other, hard and soft interact, and what accumulates from that is 勢.",
-   "reading": "AI 的读法：苏辙解“势成之”：物不能自成，远近相取，刚柔相交，积而为势，而后兴亡治乱之变成。脊柱：每次上升都是被给予的（`Flow.rise_netGiver`）；一个部分有一个其他汲取者时造成差别，有两个时不造成（`Pool.difference_only_together`），差别可以只由共同者造成（`Dependence.differenceOnlyTogether_iff`）；携带量由耦合携带并携带自身（`carriedFrom_carried`），环经由闭合形成（`onLoop_succ_iff`），环形成后差异倍增。所以“积而为势”对应携带量在耦合之环上的积累。经文的“势成之”本身只有三字，此结构属苏辙的解，不是经文的。",
-   "reading_en": "AI reading: 苏辙's 'things cannot complete themselves; near and far take from each other, hard and soft interact, and accumulation becomes momentum' matches the laws that every rise is given, a part makes a difference with one other drawer and none with two, so a difference can be made only together, and a carried amount grows along loops once they close.",
+   "reading": "AI 的读法：苏辙解“势成之”：物不能自成，远近相取，刚柔相交，积而为势，而后兴亡治乱之变成。脊柱：每次上升都是被给予的（`Flow.rise_netGiver`）；一个见证中，同一部分同样之汲取，有一个其他汲取者时造成差别，有两个时不造成（`Pool.difference_only_together`），差别可以只由共同者造成（`Dependence.differenceOnlyTogether_iff`）；携带量由耦合携带并携带自身（`carriedFrom_carried`），环经由闭合形成（`onLoop_succ_iff`），环形成后差异倍增。所以“积而为势”对应携带量在耦合之环上的积累。经文的“势成之”本身只有三字，此结构属苏辙的解，不是经文的。",
+   "reading_en": "AI reading: 苏辙's 'things cannot complete themselves; near and far take from each other, hard and soft interact, and accumulation becomes momentum' matches the laws that every rise is given, a difference can be made only together (in one witness the same part, drawing the same, makes a difference with one other drawer and none with two), and a carried amount grows along loops once they close.",
    "mapper": "lao",
    "layer": "注（苏辙）",
-   "corrected": "RAE (AA Phase 0, E2): the reading stated the ownership ND renamed away (OU7, e5951932b: difference_belongs_to_the_joint -> difference_only_together); its words are now the home's (06-CLASSICAL-TEXTS: 有一个其他汲取者时造成差别，有两个时不造成); names follow the declaration ND renamed in OU7 (e5951932b; development/nd-nondual-names/part2/nd_rename.py), statement unchanged"
+   "corrected": "RAE (AA Phase 0, E2): the reading stated the ownership ND renamed away (OU7, e5951932b: difference_belongs_to_the_joint -> difference_only_together), and as a law what is one witness; its words are now the home's (06-CLASSICAL-TEXTS: 一个见证中，同一部分同样之汲取，有一个其他汲取者时造成差别，有两个时不造成); names follow the declaration ND renamed in OU7 (e5951932b; development/nd-nondual-names/part2/nd_rename.py), statement unchanged"
   },
   {
    "id": "ru-tansitong-xiang-ren-ou",
@@ -4870,7 +4870,7 @@
    "reading": "AI 的读法：经文先把仁放在人与人的关系中（关系的），随即说亲亲有“杀”（递减）、尊贤有“等”，礼由此而生。脊柱中嵌套的闭包确有次第（喂养闭包在影响闭包之内：Flow.withinInfluence_of_withinFeeding），但这是“触及到哪里”的事实，不是“意义多少”的度量。延续条件下混合的部分不被排序（Transfer.unordered：排序需要一个度量）；以各自依赖为界的中心彼此不一致（Clearing.centers_disagree）；在立场不变的步骤下，意义在一个边界之内成立只能通过对一切成立（unrestricted_iff_presupposed_along）。所以“亲亲之杀”作为意义的递减是理论没有断言的，不是它的定理。分歧不在于有无亲疏，而在于把亲疏读成意义的等差。",
    "reading_en": "The text grounds 仁 in human relating and then grades it by kinship and worth as the source of 礼; the spine has nested closures (a fact of reach) but no graded measure of significance, and under the invariance step significance within a boundary holds only by holding for everything, so the gradient is asserted, not derived.",
    "mapper": "ru",
-   "corrected": "record ids follow the renamed records (R35; receipts in _process/architecture/renames), claims unchanged"
+   "corrected": "record ids follow the renamed records (R35-E4-renames, 2026-10-20; cd-ranking-names, 2026-11-03; receipts in _process/architecture/renames), claims unchanged"
   },
   {
    "id": "ru-lunyu-ji-yu-li-er-li-ren",
@@ -5592,7 +5592,7 @@
     ],
     "why_it_matters": "差等 (graded care by nearness) is the most used relational ethic in the Confucian line and the sharpest test of the invariance step; the theorem would say exactly which part of graded care survives (an order of attention that follows reach) and which does not (a standpoint-relative measure of significance), instead of leaving the comparison to prose."
    },
-   "corrected": "record ids follow the renamed records (R35; receipts in _process/architecture/renames), claims unchanged"
+   "corrected": "record ids follow the renamed records (cd-ranking-names, 2026-11-03; receipts in _process/architecture/renames), claims unchanged"
   },
   {
    "id": "ru-mengzi-si-duan-kuo-chong",
@@ -5981,7 +5981,7 @@
    "reading": "AI 的读法：大同与小康在脊柱上对应两种边界的划法。小康的“各亲其亲，货力为己”是以各自依赖为界的意义：以依赖为界的中心容许搭便车者并彼此不一致（Clearing.centers_disagree、clearer_loses_dweller）。大同的“不独亲其亲”是以整体为界的意义：以整体为界的意义就是延续条件（bounded_whole）；在一个形成的喂养闭包是整体之处，两者在每个比较上一致（Flow.within_closure_iff_retains），否则分开。从小康到大同需要的是不变性的步骤（unrestricted_iff_presupposed_along），这是条件，理论不断言它。范围的修正：经文把大同说成过去曾行之道，是叙述，不是推导；脊柱只说两种边界各给出什么，以及它们在哪里分开。",
    "reading_en": "小康 bounds care by the household and 大同 by the whole: the spine shows bounded centres license the free rider and disagree, that significance bounded by the whole is the continuation condition, and that the move from one to the other is the invariance step, a condition the theory does not assert.",
    "mapper": "ru",
-   "corrected": "names follow the renamed declarations (R22, R30; tables in development/r22-names and development/r30-names), statements unchanged; record ids follow the renamed records (R35; receipts in _process/architecture/renames), claims unchanged"
+   "corrected": "names follow the renamed declarations (R22, R30; tables in development/r22-names and development/r30-names), statements unchanged; record ids follow the renamed records (R35-E4-renames, 2026-10-20; cd-ranking-names, 2026-11-03; receipts in _process/architecture/renames), claims unchanged"
   },
   {
    "id": "ru-zhoudunyi-shi",
@@ -6158,7 +6158,7 @@
    "reading": "AI 的读法：内容上一致，地位上分歧。“手足不仁，气已不贯”的结构在脊柱上成立：凡以水平耦合进来的差别才使历史有别（Web.observed_level_couples），耦合闭包之外选择是盲的（Flow.unselected_beyond_coupling）——麻木就是耦合断了。“以天地万物为一体”对应：把自己的边界画在整体，在每个容许区域上不变的前提，恰是延续条件（unrestricted_iff_presupposed_along、BoundaryInvariant），而不变性恰是从前提到延续条件的条件句（boundaryInvariant_iff_conditional）。分歧在地位：程颢把一体说成仁之所是，是体认到的事实；理论把它作为延续条件加上不变性的步骤，条件本身不被断言，其根据与必要性是开放的。",
    "reading_en": "Numbness as lost connection matches the spine (only what couples in registers), and taking all things as one body with oneself matches the continuation condition reached by the invariance step; but Cheng Hao states it as what 仁 is, while the theory holds it as a condition it does not assert.",
    "mapper": "ru",
-   "corrected": "record ids follow the renamed records (R35; receipts in _process/architecture/renames), claims unchanged"
+   "corrected": "record ids follow the renamed records (R35-E4-renames, 2026-10-20; cd-ranking-names, 2026-11-03; receipts in _process/architecture/renames), claims unchanged"
   },
   {
    "id": "ru-chenghao-sheng-yi",
@@ -6323,7 +6323,7 @@
    "reading": "AI 的读法：朱熹在“天地有心”与“天地无志”之间取了中间：天地以生物为心，但是“无心之心”。脊柱给出这一中间立场成立的范围：生成携带补充的要求（Web.embodiedArising_needs_replenishment），规律从展开中读出（exists_law_iff、Law.alike_iff_sameFuture），所以“以生物为心”可以读成整体之生成的规律性；中心不是沿依赖导出的（Clearing.center_not_derived），动力学不蕴含意义（Web.significance_undetermined），所以“无心”——没有一个审议的中心——与脊柱一致。范围的修正：朱熹仍用“心、情”的语法并反问“安得谓天地无心”，脊柱不承接这一语法；它承接的只是“无心之心”所指的无中心的规律性。",
    "reading_en": "Zhu Xi's 'heart without a mind' reads the whole's generating as a direction with no deliberating centre, which the spine supports (laws read off the unfolding, no centre derived), while his insistence that heaven and earth do have a heart keeps a grammar the spine does not carry.",
    "mapper": "ru",
-   "corrected": "names follow the renamed declarations (R22, R30; tables in development/r22-names and development/r30-names), statements unchanged; record ids follow the renamed records (R35; receipts in _process/architecture/renames), claims unchanged"
+   "corrected": "names follow the renamed declarations (R22, R30; tables in development/r22-names and development/r30-names), statements unchanged; record ids follow the renamed records (cd-ranking-names, 2026-11-03; receipts in _process/architecture/renames), claims unchanged"
   },
   {
    "id": "ru-zhuxi-li-yi-fen-shu",
@@ -6363,7 +6363,7 @@
    "reading": "AI 的读法：朱熹指出两种失败，各有脊柱对应。“理一而不言分殊”：对一切有意义而无度量，混合的部分无序（Transfer.unordered：排序需要一个度量）。“分殊而不言理一”：以各自依赖为界的中心容许搭便车者并彼此不一致（Clearing.centers_disagree、clearer_loses_dweller）。而“理一分殊”本身有一个成立的结构：语境索引的读法符合一切所示（Contextual.indexed_fits），而无语境的读法只在各语境一致时存在（fitsFree_iff）——同一规律在不同位置给出不同的读法。范围：脊柱给出“一规律、诸语境读法”的结构，但“分殊”所含的等差（亲疏之分）需要一个度量，脊柱只有两层字典序的定义（Lexical.Above），没有按关系层级分层的序（见孟子“亲亲而仁民”条的 gap）。层次：墨、杨在此是朱熹的论辩性概括，不是两家原文。",
    "reading_en": "Zhu Xi's two failures match the spine (significance for all without a measure leaves mixed parts unordered; centres bounded by their own dependence disagree), and one law read differently in each context matches context-indexed readings; the grading inside 分殊 needs a measure the spine does not have.",
    "mapper": "ru",
-   "corrected": "names follow the renamed declarations (R22, R30; tables in development/r22-names and development/r30-names), statements unchanged; record ids follow the renamed records (R35; receipts in _process/architecture/renames), claims unchanged"
+   "corrected": "names follow the renamed declarations (R22, R30; tables in development/r22-names and development/r30-names), statements unchanged; record ids follow the renamed records (R35-E4-renames, 2026-10-20; cd-ranking-names, 2026-11-03; receipts in _process/architecture/renames), claims unchanged"
   },
   {
    "id": "ru-zhuxi-li-qi-er-wu",
@@ -6705,7 +6705,7 @@
    "reading": "AI 的读法：两处有脊柱定律。“以我之大私为天下之大公”：一个中心把自身区域当作整体，而中心不是沿依赖导出的（Clearing.center_not_derived），以依赖为界的中心彼此不一致（centers_disagree）。“天下之利尽归于己”的结构：一个取尽所给的形成若持续，旁边不留其他取者（Flow.continuing_excludes、TakesAll），取尽者与其他取者并存时，每个依赖者终结，取尽者自己也在内（Flow.full_taking_ends）。“天下为主，君为客”与此相反：部分在整体之中，不把整体当作自己的。此条只承接结构；经文的“古者”是叙述，不是推导。",
    "reading_en": "Passing one's own region off as the whole matches the spine's centres not derived along dependence, and the one who takes all leaves no other taker and, alongside another, ends every dependent including itself; 天下为主 reverses this, though its 'in antiquity' is narrative.",
    "mapper": "ru",
-   "corrected": "record ids follow the renamed records (R35; receipts in _process/architecture/renames), claims unchanged"
+   "corrected": "record ids follow the renamed records (cd-ranking-names, 2026-11-03; receipts in _process/architecture/renames), claims unchanged"
   },
   {
    "id": "ru-dongzhongshu-tian-yi",
@@ -6744,7 +6744,7 @@
    "reading": "AI 的读法：这是此线中“天作为意志”的最清楚的一处，与理论冲突。脊柱上规律从展开中读出（exists_law_iff），动力学不蕴含任何意义或意图（Web.significance_undetermined），中心不是沿依赖导出的（Clearing.center_not_derived）。“王承天意以成民之性”还把他者之性的形成交给一个中心，而单一中心的选择在其耦合闭包之外是盲的（Flow.unselected_beyond_coupling），池化才能补上（Clearing.pool_closes_gap）。对照：荀子“天行有常，不为尧存”（见该条）与孟子“天不言，以行与事示之”都离这一读法更远。",
    "reading_en": "Heaven with an intent that installs one centre to complete everyone's nature is the clearest reading of 天 as a will in the line; the spine reads laws off the unfolding with no intent in the dynamics and derives no centre, and a single centre's selection is blind beyond its coupling.",
    "mapper": "ru",
-   "corrected": "record ids follow the renamed records (R35; receipts in _process/architecture/renames), claims unchanged"
+   "corrected": "record ids follow the renamed records (cd-ranking-names, 2026-11-03; receipts in _process/architecture/renames), claims unchanged"
   },
   {
    "id": "ru-wangfuzhi-mu-suo-bu-jian",
@@ -8647,7 +8647,7 @@
    "reading": "AI 读法：\"以物观之，自贵而相贱\"对应以依赖为界的中心：各形成的意义止于其区域时，各中心意见不一（Clearing.centers_disagree）；有界的意义是在已形成的边界内接受的延续条件规则（bounded_rival）。\"以道观之，物无贵贱\"对应跨立场不变：在前设与中心覆盖之下，跨边界不变与跨立场不变等价，此即延续条件（boundaryInvariant_iff_standpointInvariant, unrestricted_of_standpointInvariant）。延续条件本身不排序，排序需要一个度量（Transfer.unordered），与\"物无贵贱\"同构。没有断言：表示的动力学蕴含意义（significance_undetermined 证明不蕴含）；延续条件的依据仍开放。",
    "reading_en": "Seen from each thing, bounded centers disagree (centers_disagree); seen without a privileged standpoint, standpoint invariance is the continuation condition (unrestricted_of_standpointInvariant), and that condition by itself ranks nothing (Transfer.unordered), which is 物无贵贱's structure. The dynamics do not entail the condition (significance_undetermined), so 以道观之 is not thereby warranted.",
    "mapper": "other",
-   "corrected": "record ids follow the renamed records (R35; receipts in _process/architecture/renames), claims unchanged"
+   "corrected": "record ids follow the renamed records (R35-E4-renames, 2026-10-20; cd-ranking-names, 2026-11-03; receipts in _process/architecture/renames), claims unchanged"
   },
   {
    "id": "zhuangzi-yangsheng-pao-ding",
@@ -9002,7 +9002,7 @@
    "reading": "AI 读法：\"视人若视其\"是跨边界不变：在前设与中心覆盖之下，跨各自我边界不变恰等于跨立场不变，即延续条件（boundaryInvariant_iff_standpointInvariant, unrestricted_of_standpointInvariant）；以边界为止的中心彼此不一（centers_disagree），对应\"别\"。但延续条件本身不排序：混合即各加对方所缺（mixed_iff_adds），排序需要度量（Transfer.unordered）。所以\"兼以易别\"作为排序还需\"扩大更好\"（C）这一比较承诺；\"祸篡怨恨皆起于不相爱\"是单一原因的普遍断言，脊柱没有证明。",
    "reading_en": "Regarding others' as one's own is boundary invariance, which given the presupposition is the continuation condition (unrestricted_of_standpointInvariant); but invariance orders nothing (Transfer.unordered), so ranking 兼 over 别 needs the comparison commitment C, and \"all disorder arises from not loving one another\" is a single-cause claim the spine does not prove.",
    "mapper": "other",
-   "corrected": "record ids follow the renamed records (R35; receipts in _process/architecture/renames), claims unchanged"
+   "corrected": "record ids follow the renamed records (R35-E4-renames, 2026-10-20; cd-ranking-names, 2026-11-03; receipts in _process/architecture/renames), claims unchanged"
   },
   {
    "id": "mozi-feigong",
