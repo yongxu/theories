@@ -1,5 +1,5 @@
 {
-  "about": "The completion criterion K1-K7 (adopted 20 October 2026; study section 218), as data the tool tools/research/completion.py reads. K1: one row per phase, differentiation and domain, naming its central core declarations (Lean full names), the records stating them, the chapter sections and a status. K3: witnesses meeting and failing each premise a central statement uses. K4: the natural-number laws and their dense forms or counterexamples. K5: the parameters a central statement may leave supplied, each a named condition of chapter section 0. K6: the ethics chain. Written by AI (R39) from the records and the chapter; the tool checks it, it does not choose it.",
+  "about": "The completion criterion K1-K7 (adopted 20 October 2026; study section 218), as data the tool tools/research/completion.py reads. K1: one row per phase, differentiation and domain, naming its central core declarations (Lean full names), the records stating them, the chapter sections and a status. K3: witnesses meeting and failing each premise a central statement uses. K4: the natural-number laws and their dense forms or counterexamples. K5: the parameters a central statement may leave supplied, each a named condition of 08 §4 (the premise card). K6: the ethics chain. Written by AI (R39) from the records and the chapter; the tool checks it, it does not choose it.",
   "statuses": {
     "proved": "the row's central laws are theorems on the spine; what of the row is open is named in open_items",
     "prose": "stated in the chapter or the periphery, not on the spine",
@@ -11,8 +11,10 @@
       "axis": "phase",
       "name": "Generation",
       "sections": [
-        "2.2",
-        "2.6"
+        "02 §3",
+        "02 §4",
+        "02 §7",
+        "04 §1"
       ],
       "records": [
         "unceasing-generation-needs-renewal",
@@ -42,9 +44,9 @@
       "axis": "phase",
       "name": "Maintenance",
       "sections": [
-        "2.1",
-        "2.2",
-        "4.4"
+        "02 §3",
+        "05 §4",
+        "05 §5"
       ],
       "records": [
         "supported-renewal-recovery",
@@ -67,10 +69,9 @@
       "axis": "phase",
       "name": "Transformation",
       "sections": [
-        "1.2",
-        "1.3",
-        "2.2",
-        "4.4"
+        "01 §9",
+        "02 §2",
+        "02 §8"
       ],
       "records": [
         "attraction-is-not-returning",
@@ -96,10 +97,13 @@
       "axis": "phase",
       "name": "Degeneration",
       "sections": [
-        "1.2",
-        "2.3",
-        "2.5",
-        "4.5"
+        "02 §2",
+        "02 §3",
+        "02 §5",
+        "02 §6",
+        "02 §9",
+        "05 §1",
+        "05 §7"
       ],
       "records": [
         "consumption-ends-with-feeders",
@@ -155,8 +159,9 @@
       "axis": "phase",
       "name": "Dissolution",
       "sections": [
-        "1.3",
-        "2.2"
+        "01 §9",
+        "02 §4",
+        "02 §8"
       ],
       "records": [
         "least-loss-rest",
@@ -192,9 +197,10 @@
       "axis": "differentiation",
       "name": "Actor",
       "sections": [
-        "2.2",
-        "2.6",
-        "4.1"
+        "01 §9",
+        "02 §7",
+        "04 §1",
+        "05 §1"
       ],
       "records": [
         "life-as-condition-of-life",
@@ -218,9 +224,10 @@
       "axis": "differentiation",
       "name": "Patient",
       "sections": [
-        "2.2",
-        "2.5",
-        "2.6"
+        "01 §9",
+        "02 §6",
+        "02 §7",
+        "04 §1"
       ],
       "records": [
         "life-as-condition-of-life",
@@ -247,10 +254,11 @@
       "axis": "differentiation",
       "name": "Knowing",
       "sections": [
-        "2.6",
-        "3.1",
-        "3.2",
-        "3.3"
+        "01 §8",
+        "03 §2",
+        "03 §3",
+        "03 §5",
+        "03 §6"
       ],
       "records": [
         "testing-within-couplings",
@@ -286,9 +294,9 @@
       "axis": "differentiation",
       "name": "Evaluation",
       "sections": [
-        "5",
-        "6.1",
-        "6.2"
+        "02 §3",
+        "07 §3",
+        "07 §4"
       ],
       "records": [
         "metaethical-core-characterization",
@@ -323,8 +331,11 @@
       "axis": "differentiation",
       "name": "Capacity",
       "sections": [
-        "2.1",
-        "6.1"
+        "02 §2",
+        "02 §3",
+        "07 §2",
+        "07 §4",
+        "07 §6"
       ],
       "records": [
         "effective-capacity-and-eventual-reachability",
@@ -350,10 +361,10 @@
       "axis": "differentiation",
       "name": "Responsibility",
       "sections": [
-        "2.6",
-        "3.4",
-        "4.1",
-        "6.5"
+        "05 §1",
+        "07 §2",
+        "07 §4",
+        "07 §6"
       ],
       "records": [
         "the-gap-for-ones-own-act",
@@ -383,7 +394,8 @@
       "axis": "domain",
       "name": "Life",
       "sections": [
-        "2.2"
+        "02 §3",
+        "04 §1"
       ],
       "records": [
         "life-as-condition-of-life",
@@ -404,7 +416,11 @@
       "axis": "domain",
       "name": "Evolution",
       "sections": [
-        "2.4"
+        "04 §2",
+        "04 §3",
+        "04 §4",
+        "04 §5",
+        "04 §6"
       ],
       "records": [
         "evolution-on-descent",
@@ -470,8 +486,8 @@
       "axis": "domain",
       "name": "Learning",
       "sections": [
-        "3.2",
-        "3.3"
+        "03 §5",
+        "03 §6"
       ],
       "records": [
         "generalization-through-lumping",
@@ -503,10 +519,12 @@
       "axis": "domain",
       "name": "Collective",
       "sections": [
-        "4.2",
-        "4.3",
-        "4.4",
-        "4.5"
+        "02 §9",
+        "05 §1",
+        "05 §2",
+        "05 §3",
+        "05 §5",
+        "05 §9"
       ],
       "records": [
         "mutual-dependence-and-its-pace",
@@ -541,10 +559,9 @@
       "axis": "domain",
       "name": "Significance",
       "sections": [
-        "6.1",
-        "6.2",
-        "6.4",
-        "6.5"
+        "07 §2",
+        "07 §3",
+        "07 §4"
       ],
       "records": [
         "continuation-condition-yields-living-significance",
@@ -575,11 +592,11 @@
       "axis": "domain",
       "name": "Alignment",
       "sections": [
-        "7.1",
-        "7.2",
-        "7.3",
-        "7.4",
-        "7.5"
+        "03 §1",
+        "05 §7",
+        "05 §8",
+        "07 §6",
+        "07 §7"
       ],
       "records": [
         "selection-through-couplings",
@@ -831,7 +848,7 @@
     }
   },
   "representation": {
-    "about": "K4. Modelling choices of chapter section 0, block A, and the pattern that finds each in a central statement; the natural-number laws (whose truth depends on whole-number amounts) with their form over dense amounts or a counterexample (kind: form or counterexample). A statement with no choice found is a law over any type (of configurations, claims or standpoints) that uses none of them.",
+    "about": "K4. Modelling choices named in 08 §4 (the premise card), and the pattern that finds each in a central statement; the natural-number laws (whose truth depends on whole-number amounts) with their form over dense amounts or a counterexample (kind: form or counterexample). A statement with no choice found is a law over any type (of configurations, claims or standpoints) that uses none of them.",
     "choices": [
       {
         "name": "natural-number amounts",
@@ -881,7 +898,7 @@
         "law": "Becoming.Flow.excess_bounded",
         "dense": "Becoming.Amounts.losses_within",
         "kind": "form",
-        "note": "for one amount: the level after n steps with the excesses summed is within the level before; the unit bound fails without a least loss (Halving.no_least_loss); flows over any amounts are open (chapter 8.1 item 6); the joint-excess laws at a gated renewal, Flow.joint_excess_ends, Flow.outrun_below and Web.Whole.family_excess_ends, rest on this unit bound through excess_bounded_at and its family form, so their n steps from below n + m are whole-number laws too"
+        "note": "for one amount: the level after n steps with the excesses summed is within the level before; the unit bound fails without a least loss (Halving.no_least_loss); flows over any amounts are open (08 §12, open items ranked, item 6); the joint-excess laws at a gated renewal, Flow.joint_excess_ends, Flow.outrun_below and Web.Whole.family_excess_ends, rest on this unit bound through excess_bounded_at and its family form, so their n steps from below n + m are whole-number laws too"
       },
       {
         "law": "Becoming.Flow.More.replenishment_unbounded",
@@ -904,7 +921,7 @@
     ]
   },
   "enclosure": {
-    "about": "K5. The parameters a central statement may leave supplied, the pattern that finds each, and the Lean name chapter section 0 states it under; a found parameter not listed here, or listed with a name section 0 does not state, is reported.",
+    "about": "K5. The parameters a central statement may leave supplied, the pattern that finds each, and the Lean name 08 §4 (the premise card) states it under; a found parameter not listed here, or listed with a name the premise card does not state, is reported.",
     "parameters": [
       {
         "name": "significance",
@@ -980,7 +997,7 @@
     ]
   },
   "open_register": {
-    "about": "K7. The classes an open item of chapter 8.1 may have.",
+    "about": "K7. The classes an open item of 08 §12 (open items, ranked) may have.",
     "classes": [
       "further proof",
       "philosophical warrant",
@@ -988,7 +1005,7 @@
     ]
   },
   "unity": {
-    "about": "K2's families. A definition can reach another only one way (definitions are acyclic), so families_reach_each_other cannot hold in every direction by definition. The World family reaches the Process family by definition (a world is a run, its history); every other direction is met by a construction, a declaration that reads each object of one family as an object of the other and keeps what it reads.",
+    "about": "K2's families. A definition can reach another only one way (definitions are acyclic), so families_reach_each_other cannot hold in every direction by definition. The World family reaches the Process family by definition (a world is a run, its history); every other direction is met by a construction, a declaration that reads each object of one family as an object of the other and keeps what it reads. Item 1 of 08 §12's ranked open items, one base, has these constructions in what landed; its open part, lifting the World and process laws onto the grammar, which law holds (item 7) and the representation (item 6), bears on every row and is listed in none.",
     "definitional": [
       "World reaches Process family"
     ],

@@ -1248,7 +1248,8 @@ def render_record_v2(r):
     if r.get('progress') and r['kind'] != 'target':
         lines += [''] + progress[:-1]
     lines += ['', heading('##', 'Evidence', 'Evidence / 证据'), '', en(r['validation_scope']), '', 'Canonical source: ' + link(r['canonical_source'], base), '',
-              heading('##', 'Next', 'Next / 下一步'), '', en(r['next_delta']), '',
+              heading('##', 'Next', 'Next / 下一步'), '',
+              (f'Superseded by {result_link(r["superseded_by"])}, whose record carries the next step. When this record was current, its next step read: ' + en(r['next_delta'])) if r.get('status') == 'superseded' else en(r['next_delta']), '',
               '<details><summary>Correspondence, dependencies, sources and history</summary>', '',
               heading('###', 'Correspondence', 'Correspondence / 对应'), '', en(r['correspondence']), '',
               heading('###', 'Dependencies', 'Dependencies / 依赖'), '']

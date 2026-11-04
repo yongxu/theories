@@ -19,7 +19,7 @@ There are two forms. A reader of a dossier gets [the first](#to-a-reader). A cod
 >
 > It was written with AI, the proofs included, which are in the proof language Lean. [Your part: what you directed, and what you yourself have read.] The proofs are checked by machine. Everything else has been checked only by further AI reviews, and no person has reviewed any of it. So I am asking for what a machine cannot give. [The paragraph for this reader.]
 >
-> Attached, as PDFs of a fixed version of the work (`0f1d9aa13`, 3 November 2026): the dossier for your field, the packet's cover, the theory on one page, and the overview. The dossier is what you are asked to answer. It opens by naming what to read if you have one hour, the items only a reader of your field can judge. Reading all of it takes [the cover's time], and a reply on every item [the cover's time]. Any one item can be answered alone, so a partial reply is a real help, and a plain no is fine. [Whether the time is paid; if it is not, say so.]
+> Attached, as PDFs of a fixed version of the work (`7735fa07a`, 5 November 2026): the dossier for your field, the packet's cover, the theory on one page, and the overview. The dossier is what you are asked to answer. It opens by naming what to read if you have one hour, the items only a reader of your field can judge. Reading all of it takes [the cover's time], and a reply on every item [the cover's time]. Any one item can be answered alone, so a partial reply is a real help, and a plain no is fine. [Whether the time is paid; if it is not, say so.]
 >
 > To reply, answer this email. The dossier ends with a form, and a numbered list is enough. A reply by [the date eight weeks after sending] would help; later is still welcome. I will write to you afterwards with what changed because of it.
 >
@@ -93,7 +93,7 @@ There are two forms. A reader of a dossier gets [the first](#to-a-reader). A cod
 ## Before it goes
 
 - Every bracket is filled, the notes on this page are gone, and the letter says nothing he would not say. It makes promises in his name: to report back; to read a reply himself if asked, and pass on only his own note of it; not to report a reply as endorsing the work; to keep a reply out of the repository unless told otherwise; and any payment. Each stays only if he means it.
-- Its description of the theory is read again against the frozen edition's one page and cover (`0f1d9aa13`).
+- Its description of the theory is read again against the frozen edition's one page and cover (`7735fa07a`).
 - **Recipients**, as the board recommended: first one reader for each dossier, people who will say plainly what is wrong, and two coders who work apart and read Buddhist texts as well; more are sent only once the first replies are back. Who they are is his, since they are people he can ask and the letter goes from his address. Any payment to coders, and its amount, is his.
 - The remote has the commit and the tag the letter offers. The push follows [the board's line on it](../../../../../BECOMING-WORKBOARD.md#decisions-pending-ren).
 - A reply to be kept goes into `sources/` verbatim, in its own language, with its source. A reply to stay out is kept in a path [`.gitignore`](../../../../../../.gitignore) lists, as private conversations are, and AI sessions read it there unless the reader asked otherwise.

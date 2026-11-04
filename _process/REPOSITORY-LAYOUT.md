@@ -16,11 +16,16 @@ DEPENDENCIES.md      generated: compact dependency adjacency and used-by
 RESEARCH.md, MAP.md, GLOSSARY.md   short current pages or stubs; paths and anchors kept
 Makefile, .gitignore, .gitattributes, .github/
 
-theories/becoming/            the canonical theory
+theories/becoming/            the canonical theory, in four layers: one page, overview, eight chapters, the evidence
+  ONE-PAGE.md                 the one page (with ONE-PAGE.zh.md)
+  THE-THEORY-OF-BECOMING.md   the overview, the canonical entry (with .zh.md)
   OPENING.md                  Ren's text
-  chapters/                   THE-THEORY-OF-BECOMING.md, current studies, generated README index
+  COLLECTIVE-DIRECTION.md, FREE-ENERGY-PRINCIPLE.md, ONE-ARGUMENT.md   pages for one question or field, off the reading path
+  README.md                   generated landing page
+  chapters/                   01-ROOT.md … 08-METHOD.md, CLAIMS.md (stub), generated README index
+  review/                     the review packet: cover (README, README.zh), six dossiers, recoding/
   results/                    records/, data/, generated views
-  history/                    retired chapters, verification/, lineage/
+  history/                    retired chapters (the canonical chapter among them), verification/, lineage/, lean-declarations/
 theories/<branch folders>/    September syntheses, in place, with a generated status header
 
 experiments/integrated-correction/general-framework/generative-basis/lean/   the Lean root
@@ -54,7 +59,7 @@ tmp/, work/                   scratch; nothing tracked
 
 **Root pages.** README, RESULTS, GOALS, OPEN-QUESTIONS and DEPENDENCIES are generated from records, goals and the config by `make research-render` and are never edited by hand. `RESULTS.md` is the one register; `RESEARCH.md`, `theories/becoming/README.md`, `chapters/CLAIMS.md` and `results/RESULT-REGISTER.md` are stubs pointing to it, and `results/ROADMAP.md` points to GOALS. `AGENTS.md` and the short MAP and GLOSSARY pages are maintained by hand. Superseded root corpus pages (TIMELINE, BOOKS, the originals of MAP and GLOSSARY) go to `_process/history/2026-09-consolidation/`.
 
-**`theories/`.** Current arguments. `theories/becoming/` is the canonical theory: Ren's opening, the canonical chapter, the current studies, and the result records with their generated views. A retired chapter goes to `theories/becoming/history/`, at the same depth as `chapters/`, so its relative links still resolve. The fifteen September branch folders stay in place as historical syntheses.
+**`theories/`.** Current arguments. `theories/becoming/` is the canonical theory: Ren's opening, the one page and the overview (each with a Chinese edition), the eight chapters, the pages for one question or field, the review packet, and the result records with their generated views. A retired chapter goes to `theories/becoming/history/`, at the same depth as `chapters/`, so its relative links still resolve. The fifteen September branch folders stay in place as historical syntheses.
 
 **The Lean root.** The Lean package stays at `experiments/integrated-correction/general-framework/generative-basis/lean/` (decision 4). `becoming/` holds the pure core and the bridge; `check_becoming.py` compiles them together with the three foundation modules, which it finds by file stem under the Lean root. The periphery keeps its paths. Retired run folders go to `lean/history/` inside the Lean root, where the checker's receipt discovery still finds them and its archive rule never mistakes them for live modules.
 
@@ -66,7 +71,7 @@ tmp/, work/                   scratch; nothing tracked
 
 **`tools/`.** Shared infrastructure in `tools/research/` (path roles, moves, landing, scanners, tests), publishing builders in `tools/publishing/`. Old dated tool paths stay as compatibility entry points.
 
-**`drafts/`, `output/`, `worldbuilding/`.** Dated drafts, exports with their builder named, and the worldbuilding subproject. Each has a README index.
+**`drafts/`, `output/`, `worldbuilding/`.** Dated drafts, exports with their builder named, and the worldbuilding subproject. Each is to have a README index; on 4 November 2026 only `worldbuilding/` has one.
 
 **Scratch.** `tmp/`, `work/`, `.claude/worktrees/`, `.lake/` and caches are not tracked. Unique scratch work is saved into the right area before delivery.
 

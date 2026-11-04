@@ -45,7 +45,7 @@ Canonical source: [FIXED-FINISH-LINE-AUDIT.md](../../../../_process/research/202
 <a id="next--下一步"></a>
 ## Next
 
-Reuse the completed candidate; stronger targets must state their additional completion conditions.
+Superseded by [theory-of-becoming-foundation](theory-of-becoming-foundation.md), whose record carries the next step. When this record was current, its next step read: Reuse the completed candidate; stronger targets must state their additional completion conditions.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 

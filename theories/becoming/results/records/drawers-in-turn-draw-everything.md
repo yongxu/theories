@@ -45,7 +45,7 @@ Canonical source: [Becoming.Optimum.lean](../../../../experiments/integrated-cor
 <a id="next--下一步"></a>
 ## Next
 
-Drawing at once; noisy or partial revision; an independent review.
+Superseded by [drawers-in-turn](drawers-in-turn.md), whose record carries the next step. When this record was current, its next step read: Drawing at once; noisy or partial revision; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
