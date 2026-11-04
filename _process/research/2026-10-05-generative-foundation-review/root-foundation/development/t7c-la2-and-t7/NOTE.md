@@ -1,38 +1,60 @@
 # What LA2's occurrence does to T7 (T7C)
 
-Board item T7C, the coordinator's, 4 November 2026: the question AJE left open, from AA's Phase 0 erratum E15. The fronts told a reader that LA2 found "another case T7 forbids", and nothing said what that does to T7, so a reader would conclude T7 failed or be left unsure. Reading time: five minutes. AI-written.
+Board item T7C, the coordinator's, 4 November 2026: the question AJE left open, from AA's Phase 0 erratum E15. The fronts told a reader that LA2 found "another case T7 forbids", and nothing said what that does to T7. Reading time: six minutes. AI-written.
 
 ## 1. The question
 
-LA2 ([experiment](../../../../../../experiments/self-rewarding-lock/README.md)) froze its predictions before any call to the model. In its `late` condition, eight of the judge's nine readers were list answers and one prose answer carried a note of the loss. The judge chose prose in all 50 picks of that reading, where without the note it chose lists in 60 of 60. LA2 numbers this T7's third forbidden case; since AJ8 it is the fourth in [02 §9](../../../../../../theories/becoming/chapters/02-MAP.md#t7): "a metric whose loss is read only by those it disfavours, dropped once the selection has left them no more than its carriers among its readers, with nothing else changed", AJ8 adding "more often than drift alone would allow", which LA2 did not test. Does the occurrence count against T7, or fall outside its premise?
+LA2 ([experiment](../../../../../../experiments/self-rewarding-lock/README.md)) froze its predictions before any call to the model. In its `late` condition, eight of the judge's nine readers were list answers, and one prose answer carried a note of the loss. The judge chose prose in all 50 picks of that reading; without the note it chose lists in 60 of 60. LA2 numbers this T7's third forbidden case. Since AJ8 it is the fourth in [02 §9](../../../../../../theories/becoming/chapters/02-MAP.md#t7): "a metric whose loss is read only by those it disfavours, dropped once the selection has left them no more than its carriers among its readers, with nothing else changed". AJ8 also added "more often than drift alone would allow", which LA2 did not test. Does the occurrence count against T7?
 
-## 2. The argument
+## 2. The answer: it counts against the fourth case
 
-Three things decide it, each from the frozen record or the home.
+**The record** (`results/runs.json`, `late`, identical in all five seeds, since every call was unanimous):
 
-1. **The metric was not dropped.** The case forbids a metric dropped. LA2's `late` was kept in all five seeds by the frozen rule (`results/VERDICTS.json`: kept 5, turned 0), and read post hoc it alternated about the share at which the last of the thinned readers leaves the reference set, neither kept nor left. LA2's own frozen rule for the case needs `late` to fail, and printed it as not supported. What occurred is a turn of the judge's picks at one reading, not a drop.
-2. **The way out it took is one T7 allows.** T7 says such a metric is dropped "only through a change in what the loop reads (a reader outside the share, a loss entering it, a new reading)". One note put the loss into what the judge reads.
-3. **The case is a law of a pool read by kind, and the judge is not one.** In the model the case comes from the rule as the pool of readers drawn from those it selects, read from the share exactly where each kind reads at least as favourably for its own kind: a loss read only by those it disfavours then keeps the lock for good where the carriers are at least as many when it is read. LA2's bridge, H1-LA2, was that this judge is such a pool, and it failed.
+| Step | Readers (lists : prose) | Note | Judge's picks |
+|---|---|---|---|
+| 3 | 8 : 1 | yes | prose, 10 of 10 |
+| 4 | 9 : 0 | no reader carries it | lists |
+| 5 | 7 : 2 | yes | prose, 10 of 10 |
+| 6 | 9 : 0 | no reader carries it | lists |
 
-So LA2 does not count against T7's *Forbids*, and does not meet its *Refuted by*, which asks for a metric documented in advance as set by those it ranks, dropped while a coding fixed in advance finds no new reader, no change in what is read and no loss entering the share. It counts, for this judge, against the conjecture LA2 tested, that a measure formed from what it selected is such a pool (LA2's README: "What the test can refute, for this system, is T7's conjecture that a measure formed from what it selected is such a pool"). That counterexample is kept: a trained judge formed from what it selected, one reading of the loss among nine readers turning it.
+- The rule in force turned to prose after each reading where the disfavoured carried the loss. It turned back only after the readings where no reader carried it.
+- The share of lists was 32 : 1 at steps 4, 6 and 8, and lower at the odd steps.
+- The frozen course rule, `kept`, compares step 8 with step 4 and lets a tie count. So `late` passed as kept only by an exact tie that holds at every even step. A run ending at step 5 or 7 would have printed it as turned.
 
-**What would count against the Forbids.** A course in which such a single reading drops the metric, `late` failing by its frozen rule. And if a judge so formed is not a pool read by kind, the model's forbidden cases are not shown to hold of it at all. That is the weight of the counterexample: T7's forbidden cases are proved of a model that this trained judge does not instantiate.
+**What T7 says.** Its premise is a metric whose rule and reading are formed from the share it selects. This judge meets it: `unread` passed, and the lock formed from the loop's own selections. The fourth forbidden case is stated of such a metric, not only of the model's pool of readers. So the case occurred in this system, at both readings, and LA2 counts against it as a claim about trained judges. It is kept as that counterexample.
 
-**The case for the other reading, and why it does not decide.** One could read T7's Forbids as about any metric formed from its selections, pooled or not. On that reading the judge's premise is met. But the metric was still not dropped, so point 1 decides either way.
+**What else it counts against, and what stands.**
+- It counts against H1-LA2, the bridge that such a judge is a pool of readers read by kind.
+- The law of the rule as the pool of readers drawn from those it selects stands within its hypotheses, which this judge does not meet.
+- T7's other forbidden cases are not touched.
+- T7's *Refuted by* is narrower: it asks for no change in what is read. So it names no test of this case, and a refuter for the fourth case is open design work.
+
+**My first decision, and why it was wrong.** The first draft (5dc96f6fe) found the opposite, on three grounds. One reader other than the author refuted all three:
+- **"The metric was not dropped."** This rested on the frozen rule's tie, which is an artifact of the run's even end step.
+- **"A loss entering what is read is a way out T7 allows."** This would excuse every instance of the fourth case, which forbids exactly that entry by the disfavoured.
+- **"The case is a law of a pool read by kind."** This narrowed T7's *Forbids* after the result, against a premise the judge meets.
+
+The lesson: read the per-step record before a frozen summary rule, and do not narrow a forbidden case to the model it was proved in once an instance appears.
 
 ## 3. Texts
 
-- [02 §9](../../../../../../theories/becoming/chapters/02-MAP.md#t7), the home: LA2's paragraph now says the loss read only by those it disfavours turned the judge at that reading, as in the fourth case, and then what this does to T7, in the terms above.
-- [08](../../../../../../theories/becoming/chapters/08-METHOD.md#theses)'s T7 row: the same, shortened.
-- **The fronts, for ED2** (ONE-PAGE and its zh edition, the overview and its zh edition, under ED2's freeze). They say "another case T7 forbids" (ONE-PAGE) and "a case T7 forbids" (the overview's T7 row), and a reader takes that to mean T7 failed. Proposed, in 02's words shortened:
-  - ONE-PAGE: "one note of the loss among nine readers turning it at one reading, as in a case T7 forbids, though the metric was not dropped and the judge is not the pool the case assumes, so it counts against that conjecture, not T7's *Forbids*";
-  - the overview's T7 row: "one note of the loss among nine readers turning it at one reading, as in a case T7 forbids, though the metric was not dropped, so it counts against the conjecture that such a judge is a pool read by kind, not against T7's *Forbids*";
-  - the zh editions to match. The overview's zh T7 row also lists three forbidden cases, the list before AJ8.
+- **[02 §9](../../../../../../theories/becoming/chapters/02-MAP.md#t7), the home:** LA2's paragraph now says what this does to T7, in the terms above.
+- **[08](../../../../../../theories/becoming/chapters/08-METHOD.md#theses)'s T7 row:** the same, shortened.
+- **The fronts, for ED2.** ONE-PAGE and its zh edition, and the overview and its zh edition, are under ED2's freeze.
+  - ONE-PAGE says "another case T7 forbids", and the overview's T7 row says "a case T7 forbids". Both are true, but neither says what follows.
+  - Proposed for ONE-PAGE: "one note of the loss among nine readers turning it at each reading where the loss was read, a case T7 forbids, so that case is contradicted in this system; the course passed the frozen rule only by an exact tie at its last step".
+  - The overview's row: the same, with "the bridge, that such a judge is a pool read by kind, failed".
+  - The zh editions to match. The overview's zh T7 row also lists three forbidden cases, the list before AJ8.
 
 ## 4. Review
 
-One AI reader other than the author checks the argument and the two texts: below.
+One AI reader other than the author read the first draft adversarially against LA2's frozen record and T7's paragraph. Its findings reversed the decision (§2), and all are taken:
+- **High:** "not dropped" rests on the tie; the "way out" point empties the case; the pool narrowing is post hoc; "the conjecture" named the wrong sentence, so the text now names H1-LA2.
+- **Medium:** both readings, not one; the five seeds' courses identical; *Refuted by* names no test of this case; the fronts' proposed words corrected.
+- **Low:** the 02 sentence split.
 
-## 5. The reader's findings
+The same reader checks the revision: below.
+
+## 5. The reader's check of the revision
 
 (Filled after the reading.)
