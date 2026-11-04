@@ -15,21 +15,22 @@ learner trained.
 3. The run's plumbing, at seed PLUMBING, none of the frozen seeds: `run_all` on a temporary file, every run
    once, with step size 0 and STEPS_DRY steps. Each policy stays at its start, and each record has the
    fields the reading reads, its run's values and the stamp it was given. Then the file's last line is cut,
-   as a kill would leave it, and `run_all` runs again: the cut line set aside, its learner trained again and
-   nothing else; a whole file trains nothing; a record that lost only its newline gets one; a bad line
-   before the last refuses.
+   as a kill would leave it: the reading's read refuses it, and `run_all` runs again, the cut line set
+   aside, its learner trained again and nothing else; a whole file trains nothing; a record that lost only
+   its newline gets one; a bad line before the last, and a line that is not a record, refuse.
 4. Stage 0's reference ends against tr7.json's, at the ten runs both compute.
 5. The reading on scripted records: each verdict at its thresholds, the reading's four outcomes and their
    order, a seed with d = 0 counted neither way, a reported run changing no verdict, a chance learner
-   falling to 0 at B3, the reports read with stage0.json, and the refusals: a learner twice, a seed or run
-   not frozen, fields not the run's, a final policy of the wrong shape, a record not stamped with a link.
+   falling toward 0 at B3, the reports read with stage0.json, and the refusals: a record not an object, a
+   learner twice, a seed or run not frozen, fields not the run's, a final policy of the wrong shape, a
+   record not stamped with a link.
 6. Timing. The CPU seconds an episode takes for each learner, measured on step 2's batches, and the run's
    CPU estimate with a margin of 1.5 times, since the machine is shared: an estimate, not a bound, since
    nothing stops the run at it.
 7. The frozen check's state: it passes only once this freeze's FROZEN.sha256 is committed.
-8. The code it ran: the sha-256 of each file this folder's link lists but this record, taken as the dry run
-   starts, and whether they are the same at its end; write_frozen.py writes FROZEN.sha256 only where they
-   are the files' hashes then.
+8. The code it ran: the sha-256 of each file the dry run runs with, taken as it starts, and whether they are
+   the same at its end, and FREEZE-4's newest link, which holds the files Stage A imports; write_frozen.py
+   writes FROZEN.sha256 only where those hashes are the files' then.
 Standard library only.
 """
 
@@ -233,6 +234,7 @@ def check_plumbing(chk):
         lines = out.read_text().split("\n")[:-1]
         cut = lines[-1][: len(lines[-1]) // 2]
         out.write_text("".join(x + "\n" for x in lines[:-1]) + cut)
+        chk("the plumbing: resume", "a cut last line: the reading's read refuses it, unmended", refuses(S.records, out))
         made, again = go(), S.records(out)
         side = Path(str(out) + ".cut")
         chk("the plumbing: resume", "a cut last line set aside byte for byte, its learner trained again, nothing else",
@@ -247,6 +249,9 @@ def check_plumbing(chk):
         out.write_text("".join(x + "\n" for x in [lines[0], "{not a record", *lines[1:]]))
         chk("the plumbing: resume", "a bad line before the last refuses, and is not set aside",
             refuses(S.records, out, mend=True) and refuses(go) and not Path(str(out) + ".cut").read_text().count("{not"))
+        out.write_text("".join(x + "\n" for x in [*lines, "[1, 2]"]))
+        chk("the plumbing: resume", "a line that is not a record refuses", refuses(S.records, out, mend=True)
+            and refuses(go))
 
 
 def check_stage0(chk, stage0):
@@ -323,9 +328,9 @@ def check_reading(chk, stage0):
     r = read(records({reported: [False] * S.SEEDS}))
     chk("the reading: verdicts", "a reported run against the law changes no verdict",
         r["reading"] == "supported" and "verdict" not in r["runs"][reported])
-    r = read(records({"B3": [0.0] * S.SEEDS}))
-    key = [x for x in r["runs"]["B3"] if x.startswith("seeds ending within the improving chances")]
-    chk("the reading: reports", "B3 falling to 0: the law's way by d, none within the improving chances",
+    r = read(records({"B3": [0.0001] * S.SEEDS}))
+    key = [x for x in r["runs"]["B3"] if x.startswith("seeds ending nearer the best chance than 0")]
+    chk("the reading: reports", "B3 falling toward 0, to 0.0001: the law's way by d, none nearer the best chance than 0",
         r["runs"]["B3"]["verdict"] == "supported" and len(key) == 1 and r["runs"]["B3"][key[0]] == 0, r["runs"]["B3"])
     r = read(records({}), stage0)
     for run in S.RUNS:
@@ -333,7 +338,7 @@ def check_reading(chk, stage0):
         dist = [x for x in row if x.startswith("mean distance from the reference end")]
         chk("the reading: reports", f"the distance from stage0.json's reference end: {run[0]}", len(dist) == 1, sorted(row))
         inner = run[2] == "chance" and 0 < RD.target(run) < 1
-        imp = [x for x in row if x.startswith("seeds ending within the improving chances")]
+        imp = [x for x in row if x.startswith("seeds ending nearer the best chance than 0")]
         chk("the reading: reports", f"the improving chances counted where the best chance is inside (0, 1): {run[0]}",
             len(imp) == (1 if inner else 0) and (not inner or row[imp[0]] == S.SEEDS), sorted(row))
         chk("the reading: reports", f"how the tie settles, at A3 and A5 only: {run[0]}",
@@ -350,13 +355,16 @@ def check_reading(chk, stage0):
         "a chance outside [0, 1]": [dict(x, final=1.5) if x["run"] == "B1" and x["seed"] == 0 else x for x in good],
         "a record stamped with another link": [dict(good[0], frozen={"link commit": "elsewhere"})] + good[1:],
         "a record with no stamp": [{k: v for k, v in good[0].items() if k != "frozen"}] + good[1:],
+        "a stamp that is not an object": [dict(good[0], frozen="dry")] + good[1:],
+        "a seed written as true": [dict(good[1], seed=True)] + good[:1] + good[2:],
+        "a record that is not an object": [["A1", 0]] + good[1:],
     }
     for what, recs in bad.items():
         chk("the reading: refusals", f"{what}: refused", refuses(read, recs))
 
 
 def code_hashes():
-    """The sha-256 of each file this folder's link lists but the dry run's record, repository-relative."""
+    """The sha-256 of each file the dry run runs with, repository-relative: Stage A's code and Stage 0's output."""
     return {str(S.FOLDER / f): hashlib.sha256((HERE / f).read_bytes()).hexdigest() for f in FROZEN_FILES}
 
 
@@ -372,6 +380,7 @@ def main():
     check_reading(chk, stage0)
     per_episode = {k: v[0] / v[1] for k, v in timing.items()}
     seconds = sum(S.SEEDS * S.episodes(r[2]) * per_episode[r[2]] for r in S.RUNS)
+    f4 = S.TR.frozen()                      # FREEZE-4's frozen check, freeze 1's within it: it must pass here
     try:
         S.frozen()
         frozen = "passes"
@@ -384,7 +393,8 @@ def main():
                             "with a margin of 1.5 times, minutes": round(MARGIN * seconds / 60, 1)},
            "the dry run's own CPU seconds": round(time.process_time() - t0, 1),
            "frozen check": frozen,
-           "code hashes": code, "code unchanged during the run": code_hashes() == code}
+           "code hashes": code, "code unchanged during the run": code_hashes() == code,
+           "FREEZE-4's newest link": {"link": f4["link"], "link commit": f4["link_commit"]}}
     path = HERE / "results" / "dry-run.json"
     path.parent.mkdir(exist_ok=True)
     path.write_text(json.dumps(out, indent=1) + "\n")

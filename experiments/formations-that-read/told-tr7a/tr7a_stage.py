@@ -29,6 +29,7 @@ library only.
 import argparse
 import json
 import math
+import os
 import random
 import sys
 import time
@@ -200,8 +201,8 @@ def generators(cid, p0, seed, mixture=False):
 def chance_run(cid, p0, seed, lr=LR, steps=None, mixture=False):
     """A chance learner (one chance of complying, drawn afresh at each stage) or, with mixture, a mixture
     learner (one draw before the read stage: comply at both stages, or act by one's own law at both). Its
-    acts and the game's draws come from one generator each a run. Returns the final chance and the chance at
-    each tenth of the steps."""
+    acts and the game's draws come from two generators for each learner, a run at a seed. Returns the final
+    chance and the chance at each tenth of the steps."""
     steps = STEPS["mixture" if mixture else "chance"] if steps is None else steps
     s = prospects(cid)
     th = logit(float(p0))
@@ -237,9 +238,10 @@ def frozen(repo=None):
 def records(path=OUT, mend=False):
     """The records of a run's file, in order. A kill or a full disk can cut the last line. Where mend is
     true, a last line that does not read as JSON is moved, byte for byte, to the file with .cut added, with
-    a line naming the time, and the file rewritten without it, so its learner is trained again; and a last
-    line that reads but lacks its newline is given one, so the next record starts a line of its own. Any
-    other line that does not read refuses."""
+    a line naming the time, and the file rewritten without it, through a temporary file that replaces it in
+    one step, so a kill or a full disk during the mend leaves the file as it was; its learner is then
+    trained again. A last line that reads but lacks its newline is given one, so the next record starts a
+    line of its own. Any other line that does not read, and any line that is not a record, refuses."""
     path = Path(path)
     if not path.exists():
         return []
@@ -250,14 +252,19 @@ def records(path=OUT, mend=False):
     out = []
     for k, line in enumerate(lines):
         try:
-            out.append(json.loads(line))
+            rec = json.loads(line)
         except ValueError:
             if k == len(lines) - 1 and mend:
                 with open(str(path) + ".cut", "a") as cut:
                     cut.write(line + "\n# cut " + time.strftime("%Y-%m-%dT%H:%M:%S") + "\n")
-                path.write_text("".join(l + "\n" for l in lines[:-1]))
+                tmp = Path(str(path) + ".tmp")
+                tmp.write_text("".join(l + "\n" for l in lines[:-1]))
+                os.replace(tmp, path)
                 return out
             raise SystemExit(f"{path}: line {k + 1} does not read as JSON; a cut last line is set aside by run")
+        if not isinstance(rec, dict):
+            raise SystemExit(f"{path}: line {k + 1} is not a record")
+        out.append(rec)
     if mend and lines and not whole:
         with path.open("a") as f:
             f.write("\n")

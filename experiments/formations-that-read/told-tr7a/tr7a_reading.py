@@ -17,9 +17,10 @@ verdict run is supported where at least SUPPORT_AT seeds give d > 0 (an exact on
 unresolved otherwise; it cannot be both. The reading is incomplete while any verdict run lacks a seed, and
 otherwise contradicted where any verdict run is, supported where every one is, unresolved otherwise.
 Reported beside it, ruling on nothing: the final policies, their distance from the reference curve's end at
-the same step size and steps (results/stage0.json), how each tie settles by its start, and at a best chance
-inside (0, 1) the seeds ending within the improving chances (0 < p below tr7.improving_bound), since d alone
-counts a chance learner falling to 0 as nearer 7/20 than 9/10. Standard library only.
+the same step size and steps (results/stage0.json), how each tie settles by its start, and, at a best chance
+p* inside (0, 1), the seeds ending nearer p* than 0 and within the improving chances (p*/2 < p below
+tr7.improving_bound). d alone counts a chance learner falling toward 0 as nearer 7/20 than 9/10, and such a
+learner ends near 0, not at it. Standard library only.
 """
 
 import json
@@ -119,9 +120,12 @@ def check_records(records, links=None):
     runs = {r[0]: r for r in S.RUNS}
     seen = set()
     for rec in records:
-        run = runs.get(rec.get("run"))
-        if run is None or rec.get("seed") not in range(S.SEEDS):
-            raise SystemExit(f"a record for no frozen run or seed: {rec.get('run')!r} seed {rec.get('seed')!r}")
+        if not isinstance(rec, dict):
+            raise SystemExit(f"a record that is not an object: {rec!r}")
+        name, seed = rec.get("run"), rec.get("seed")
+        run = runs.get(name) if isinstance(name, str) else None
+        if run is None or not isinstance(seed, int) or isinstance(seed, bool) or seed not in range(S.SEEDS):
+            raise SystemExit(f"a record for no frozen run or seed: {name!r} seed {seed!r}")
         key = (rec["run"], rec["seed"])
         if key in seen:
             raise SystemExit(f"a learner recorded twice: {key}")
@@ -132,8 +136,9 @@ def check_records(records, links=None):
             raise SystemExit(f"a record's fields differ from its run's: {key}: {got} against {want}")
         if not shaped(run[2], rec.get("final")):
             raise SystemExit(f"a record's final policy is not of its learner's shape: {key}: {rec.get('final')!r}")
-        if links is not None and (rec.get("frozen") or {}).get("link commit") not in links:
-            raise SystemExit(f"a record not made under this freeze's chain: {key}: {rec.get('frozen')}")
+        stamp = rec.get("frozen")
+        if links is not None and (not isinstance(stamp, dict) or stamp.get("link commit") not in links):
+            raise SystemExit(f"a record not made under this freeze's chain: {key}: {stamp!r}")
 
 
 def read(records, stage0=None, links=None):
@@ -167,10 +172,10 @@ def read(records, stage0=None, links=None):
                     sum(0.5 * sum(abs(r["final"][k] - ref[k]) for k in range(4)) for r in recs) / len(recs), 6)
             else:
                 row["mean distance from the reference end"] = round(sum(abs(r["final"] - ref) for r in recs) / len(recs), 6)
-        if learner == "chance" and 0 < target(run) < 1:  # within the improving chances: reported, no verdict
-            ib = float(tr7.improving_bound(S.prospects(cid)))
-            row["seeds ending within the improving chances (0, %s)" % tr7.improving_bound(S.prospects(cid))] = \
-                sum(0 < r["final"] < ib for r in recs)
+        if learner == "chance" and 0 < target(run) < 1:  # nearer p* than 0, within the improving chances: reported
+            t, ib = target(run), tr7.improving_bound(S.prospects(cid))
+            row[f"seeds ending nearer the best chance than 0, within the improving chances ({t / 2}, {ib})"] = \
+                sum(float(t) / 2 < r["final"] < float(ib) for r in recs)
         if cid in ("A3", "A5"):                      # how the tie settles by the start: reported, no verdict
             tied = target(run)
             row["how the tie settles"] = {n: sum(r["final"][S.NAMES.index(n)] > r["final"][S.NAMES.index(m)]
