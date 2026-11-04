@@ -39,13 +39,11 @@ The lesson: read the per-step record before a frozen summary rule, and do not na
 
 ## 3. Texts
 
-- **[02 §9](../../../../../../theories/becoming/chapters/02-MAP.md#t7), the home:** LA2's paragraph now says what this does to T7, in the terms above.
-- **[08](../../../../../../theories/becoming/chapters/08-METHOD.md#theses)'s T7 row:** the same, shortened.
-- **The fronts, for ED2.** ONE-PAGE and its zh edition, and the overview and its zh edition, are under ED2's freeze.
-  - ONE-PAGE says "another case T7 forbids", and the overview's T7 row says "a case T7 forbids". Both are true, but neither says what follows.
-  - Proposed for ONE-PAGE: landed in T7C itself (§3 below the list), since ONE-PAGE is not a dossier.
-  - The overview's row: the same, with "the bridge, that such a judge is a pool read by kind, failed".
-  - The zh editions to match. The overview's zh T7 row also lists three forbidden cases, the list before AJ8.
+- [02 §9](../../../../../../theories/becoming/chapters/02-MAP.md#t7), the home: LA2's paragraph says what this does to T7, in the terms above.
+- [08](../../../../../../theories/becoming/chapters/08-METHOD.md#theses)'s T7 row: the same, shortened.
+- The fronts that are not dossiers, in both languages: [ONE-PAGE](../../../../../../theories/becoming/ONE-PAGE.md)'s T7 cell and [the overview](../../../../../../theories/becoming/THE-THEORY-OF-BECOMING.md)'s two (the whole at a glance and §9's T7 row). Each said LA2 found "another case T7 forbids", or "a case T7 forbids", and that T7's conjecture failed for the judge; each now names the bridge as what failed, says the case occurred and counts against it for trained judges, and says what stands. The overview's §9 row keeps the frozen rule's pass as an exact tie. ONE-PAGE grew 38 words and the overview 61, both recorded in READING-BUDGETS.
+- Read and left, true as they stand: 07 §6's tests paragraph, 02 §9's reading of the timing law, COLLECTIVE-DIRECTION's open item, 08 §8's lesson on frozen rules, the experiments index, and the record loss-read-in-time-by-the-others' Does not show. None states T7's standing; each says the bridge failed or one note turned the judge. No record states T7 (its theses are unmigrated), so no record changes.
+- For ED2, under its freeze: the alignment dossier's front (its Failed and Held lines), A-19 (the bridge bullet and its standing, "its bridge, T7's conjecture for this system", which names H1-LA2 as T7's conjecture), and the items that cite LA2 at A-09's premise. The overview's T7 Forbids column in both languages lists three cases, the list before AJ8, which is less exact, not false.
 
 ## 4. Review
 
