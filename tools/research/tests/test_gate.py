@@ -20,7 +20,7 @@ import time
 import unittest
 from unittest import mock
 
-from tools.research import gate, paths
+from tools.research import gate, paths, registry
 
 REPOSITORY = Path(gate.__file__).resolve().parents[2]
 PEOPLE = {'GIT_AUTHOR_NAME': 'Test', 'GIT_AUTHOR_EMAIL': 'test@example.invalid',
@@ -133,6 +133,10 @@ class GateCase(unittest.TestCase):
         root = self.repo.root
         self.patch(mock.patch.object(gate, 'ROOT', root))
         self.patch(mock.patch.object(paths, 'role', lambda p: paths.Classifier(settings=CONFIG, root=root).role(p)))
+        # gate reads history through the registry (a frozen file's earlier versions), so it reads this repository too
+        self.patch(mock.patch.object(registry, 'ROOT', root))
+        self.patch(mock.patch.object(registry, 'VERSION_CACHE', self.tmp / 'versions.json'))
+        self.patch(mock.patch.dict(registry._versions, clear=True))
 
     def patch(self, patcher):
         patcher.start()
@@ -762,6 +766,26 @@ class BoardTests(GateCase):
         self.assertEqual(gate.clauses('0.8 of it.'), ['0.8 of it.'])
         self.assertEqual(gate.clauses(' '.join(QUEUE)), QUEUE)
 
+    def test_a_clause_that_moves_keeps_its_place_whatever_its_closing_mark(self):
+        # A clause's closing ';' becomes '.' as clauses move along the line; it is the same clause.
+        self.on_main({gate.BOARD: board([HEAD, 'L2 waits on its readers;', "Then, in the coordinator's order: L2."])})
+        self.assertEqual(self.check(board(['L2 waits on its readers.', "Then, in the coordinator's order: L2."]))['errors'], [])
+
+    def test_a_waiting_clause_may_become_its_items_head_clause(self):
+        self.on_main({gate.BOARD: board(['L1 landed (its gate passed).', 'RAE behind L1 (ready: its readers done);', 'L3 waits.'])})
+        promoted = board(['RAE at the head of the queue (landing now: the verifiers);', 'L1 landed (its gate passed).', 'L3 waits.'])
+        self.assertEqual(self.check(promoted, board_only=True)['errors'], [])
+        dropped = board(['L1 landed (its gate passed).', 'L3 waits.'])  # the waiting clause gone with no head clause for RAE
+        self.assertFails(self.check(dropped, board_only=True), 'lost 1 clause(s)')
+
+    def test_a_reworded_landed_clause_needs_its_reason(self):
+        self.on_main({gate.BOARD: board(['L1 landed (its gate passed).', 'L3 waits.'])})
+        reworded = board(['L1 landed (its gate passed, requirements never loosening).', 'L3 waits.'])
+        self.assertFails(self.check(reworded), 'lost 1 clause(s)')
+        accepted = self.check(reworded, GATE_BOARD_REWRITE="L1's clause amended with its review's qualifier")
+        self.assertEqual(accepted['errors'], [])
+        self.assertTrue(accepted['would_fail'])
+
     def test_a_landing_may_drop_its_head_clauses_and_the_closing_order(self):
         self.assertEqual(self.check(board(QUEUE[1:]))['errors'], [])
         self.assertEqual(self.check(board(QUEUE[1:3] + ["Then, in the coordinator's order: L3, then L2."]))['errors'], [])
@@ -856,6 +880,67 @@ class FrozenTests(GateCase):
         everything = self.frozen(everything=True)  # the full set lists it whole and still does not fail on what stands
         self.assertEqual(everything['errors'], [])
         self.assertTrue(any('experiments/f2/b.txt is not the bytes frozen' in s for s in everything['standing']), everything)
+
+    def link_only_case(self):
+        """A frozen Markdown file, then the same file with one link target rewritten, as a move would."""
+        text = 'See [the design](../old/DESIGN.md) and [the run](run.md).\n'
+        self.on_main({'experiments/f4/NOTE.md': text,
+                      'experiments/f4/FROZEN.sha256': sha(text) + '  experiments/f4/NOTE.md\n'})
+        return text
+
+    def test_a_link_only_difference_is_listed_apart_and_does_not_fail(self):
+        text = self.link_only_case()
+        self.repo.commit({'experiments/f4/NOTE.md': text.replace('../old/DESIGN.md', '../history/DESIGN.md')})
+        result = self.frozen(everything=True)
+        self.assertEqual(result['errors'], [])
+        self.assertTrue(any('experiments/f4/NOTE.md' in x and 'link targets only' in x for x in result['link_only']), result)
+        self.assertFalse(any('experiments/f4/NOTE.md' in x for x in result['standing']), result)
+
+    def test_a_change_beyond_link_targets_is_a_content_change(self):
+        text = self.link_only_case()
+        self.repo.commit({'experiments/f4/NOTE.md': text.replace('the design', 'the old design')})
+        result = self.frozen()
+        self.assertFails(result, 'this landing changes experiments/f4/NOTE.md, which it froze')
+        self.assertEqual(result['link_only'], [])
+
+    def test_a_pin_may_name_a_salvaged_original_beside_the_commit_on_main(self):
+        self.repo.branch('rebased-away')
+        original = self.repo.commit({'drafts/b.md': '# B, before a rebase\n'}, 'rebased-away')
+        self.fresh()
+        self.repo.git('update-ref', 'refs/salvage/pin-original', original)
+        self.repo.commit({'experiments/new/results/FROZEN-AT': f'new {original[:9]} (salvaged), on main {self.pinned[:9]}\n',
+                          'experiments/new/x.txt': 'x\n'})
+        self.assertEqual(self.frozen()['errors'], [])
+        self.repo.git('update-ref', '-d', 'refs/salvage/pin-original')
+        self.assertFails(self.frozen(), 'neither in HEAD')
+
+    def test_a_record_pinned_to_a_parent_is_read_there(self):
+        self.on_main({'experiments/f5/source.md': 'v1\n'})
+        parent = self.repo.head()
+        self.on_main({'experiments/f5/FREEZE.json': json.dumps({'parent_commit': parent, 'source_sha256': {'experiments/f5/source.md': sha('v1\n')}})})
+        self.repo.commit({'experiments/f5/source.md': 'v2, moved on\n'})
+        result = self.frozen(everything=True)
+        self.assertEqual(result['errors'], [])
+        self.assertTrue(any('moved on since its pinned parent' in x for x in result['moved_on_since_parent']), result)
+
+    def test_a_hash_never_matched_in_history_is_a_note(self):
+        self.on_main({'experiments/f6/code.py': 'committed\n',
+                      'experiments/f6/FROZEN.sha256': sha('before the first commit\n') + '  experiments/f6/code.py\n'})
+        self.repo.commit({'drafts/a.md': '# A, changed\n'})
+        result = self.frozen(everything=True)
+        self.assertEqual(result['errors'], [])
+        self.assertTrue(any('never at its frozen bytes in history' in x for x in result['never_at_frozen_bytes']), result)
+
+    def test_a_pins_rebased_commit_must_be_on_main(self):
+        self.repo.branch('elsewhere')
+        other = self.repo.commit({'drafts/b.md': '# B, elsewhere\n'}, 'elsewhere')
+        self.fresh()
+        self.repo.git('update-ref', 'refs/salvage/kept', other)
+        self.repo.commit({'experiments/r/results/FROZEN-AT': f'r {other[:9]} (kept); on main, rebased, {self.pinned[:9]}\n', 'experiments/r/x.txt': 'x\n'})
+        self.assertEqual(self.frozen()['errors'], [])
+        self.fresh()
+        self.repo.commit({'experiments/s/results/FROZEN-AT': f's {self.pinned[:9]}; rebased onto main as {other[:9]}\n', 'experiments/s/x.txt': 'x\n'})
+        self.assertFails(self.frozen(), 'its rebased commit')
 
     def test_a_pin_is_never_changed(self):
         self.repo.commit({PIN: f'exp {self.pinned[:9]} (the freeze, reworded)\n'})
@@ -1075,6 +1160,48 @@ class RestatedTests(GateCase):
         self.on_main({other: '# Two\n\n| Result | Says |\n|---|---|\n| <a id="r-other"></a>Other, by [alpha](01-ONE.md#r-alpha) | x |\n'})
         self.edit({'More about alpha.': 'More about alpha, revised.'})
         self.assertIn(f'{other}:5', gate.restated('main')['restated_at']['r-alpha'])
+
+class PushTests(GateCase):
+    """The push tier: the coordinator's screen, unchanged, from the remote's main to the tip; binaries named in
+    GATE_PUSH_ACK pass, every other finding fails."""
+
+    def setUp(self):
+        super().setUp()
+        screen = (REPOSITORY / 'tools/research/push_screen.sh').read_text()
+        self.on_main({'tools/research/push_screen.sh': screen})
+        self.base = self.repo.head()
+
+    def test_a_clean_fast_forward_passes(self):
+        self.repo.commit({'drafts/a.md': '# A, changed\n'})
+        code, out = gate.push('HEAD', self.base)
+        self.assertEqual(code, 0, out)
+        self.assertTrue(any('push screen clean' in l for l in out['screen']))
+
+    def test_a_binary_passes_only_when_named(self):
+        (self.repo.root / 'figure.png').write_bytes(b'\x89PNG\x00\x01\x02')
+        self.repo.commit({})
+        code, out = gate.push('HEAD', self.base)
+        self.assertEqual((code, out['binaries_to_look_at']), (1, ['figure.png']), out)
+        with mock.patch.dict(os.environ, {'GATE_PUSH_ACK': 'figure.png: the figure, looked at'}):
+            code, out = gate.push('HEAD', self.base)
+        self.assertEqual((code, out['binaries_acknowledged']), (0, ['figure.png']), out)
+
+    def test_a_private_path_fails_whatever_is_acknowledged(self):
+        self.repo.commit({'sources/12-private/chat.md': 'a chat\n'})
+        with mock.patch.dict(os.environ, {'GATE_PUSH_ACK': 'sources/12-private/chat.md'}):
+            code, out = gate.push('HEAD', self.base)
+        self.assertEqual(code, 1, out)
+        self.assertIn('private paths', out['other_findings'])
+
+    def test_not_a_fast_forward_fails(self):
+        self.repo.branch('elsewhere', self.base)
+        self.repo.commit({'drafts/b.md': '# B, elsewhere\n'}, 'elsewhere')
+        other = self.repo.head()
+        self.repo.git('checkout', '-q', 'work')
+        self.repo.commit({'drafts/a.md': '# A, changed\n'})
+        code, out = gate.push('HEAD', other)
+        self.assertEqual(code, 1, out)
+
 
 class RuleTests(unittest.TestCase):
     """The real rule table, read without running any check or reading the tree."""
