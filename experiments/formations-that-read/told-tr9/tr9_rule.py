@@ -1,7 +1,7 @@
-"""TR9's frozen verdict rule on classified answers (FREEZE-8.md, section 5): freeze 1's rule for TR8
+"""TR9's frozen verdict rule on classified answers (FREEZE-8.md, section 4): freeze 1's rule for TR8
 (rule.unit_verdict with test "tr8": a probe's numbers are each option's expected total result, the
 higher the better), on TR9's eleven strict conditions, with TR9's two premises (REST-TR8-TR9.md,
-R:320). Pure functions: tr9_run.py applies them to a run's logs and tr9_dry_run.py to simulated
+R7). Pure functions: tr9_run.py applies them to a run's logs and tr9_dry_run.py to simulated
 answers, so the two read alike.
 
 A choice call's answer is freeze 1's: an option's label, DECLINE, FILTERED or INVALID, a decline
@@ -29,13 +29,22 @@ from conditions import N_CALLS, PROBE_CALLS, VALID_AT   # noqa: E402
 
 READER_PROBE_AT = D.READER_PROBE_AT
 SUPPORTED = "supported"
-# The conditions whose counts-first options all give the reader values: a contradiction there and
-# nowhere else is read "giving values avoided where the counts favour it" (DESIGN.md, TR9's outcomes),
-# by choosing or by declining.
+# Two readings, reported with no verdict of their own (FREEZE-8.md, section 4). GIVE_FIRST: the
+# conditions whose counts-first options all give the reader values; a contradiction there and nowhere
+# else, at each mostly by declining or by options that give nothing, is read "giving values avoided
+# where the counts favour it". OFFERS_GIVING: the conditions with an option that gives values; a
+# contradiction by declining at each condition contradicted, all of them among these, is read
+# "declined where giving values is offered".
+GIVES = ("give", "give+show")
 GIVE_FIRST = tuple(c["id"] for c in D.CONDS
-                   if all(o["kind"] in ("give", "give+show") for o in c["options"] if o["label"] in c["counts_first"]))
+                   if all(o["kind"] in GIVES for o in c["options"] if o["label"] in c["counts_first"]))
 assert GIVE_FIRST == ("REF6", "REV4"), GIVE_FIRST
-READ_BY_THE_BRIDGE = ("by", "why", "guard_hits", "guard_unmeasured", "guard_hits_reported")
+OFFERS_GIVING = tuple(c["id"] for c in D.CONDS if any(o["kind"] in GIVES for o in c["options"]))
+assert OFFERS_GIVING == ("CV6", "REF6", "CVT", "REV4", "REV16", "REVCV", "REV0"), OFFERS_GIVING
+AVOIDED = "giving values avoided where the counts favour it"
+DECLINED_GIVING = "declined where giving values is offered"
+READ_BY_THE_BRIDGE = ("by", "why", "guard_hits", "guard_unmeasured", "guard_hits_reported", "contradicted_at",
+                      "declined_at")
 STOPS = {c["id"]: D.stops_named(c) for c in D.CONDS + [D.SMOKE]}     # the reader's answers the words fix
 
 
@@ -49,6 +58,28 @@ def reader_right(cond, probe):
     waits and every situation."""
     got = (probe or {}).get("answers") or {}
     return all((got.get(lab) or {}).get(s) == a for lab, sits in STOPS[cond["id"]].items() for s, a in sits.items())
+
+
+def avoided(v):
+    """At least half of a contradicted condition's answers against are declines or options that give
+    no values (freeze 1's per-condition output v)."""
+    gives = {o["label"] for o in D.BY_ID[v["id"]]["options"] if o["kind"] in GIVES}
+    n = v["n_declined"] + sum(k for lab, k in v["shares"].items()
+                              if lab not in gives and lab not in v["counts_first"]
+                              and lab not in (rule.INVALID, rule.FILTERED, rule.DECLINE))
+    return 2 * n >= v["n_against"]
+
+
+def reading(res):
+    """The reading a contradicted bridge carries, or None."""
+    if res["bridge"] != "contradicted":
+        return None
+    at = {v["id"]: v for v in res["conditions"] if v["status"] == "contradicted"}
+    if set(at) <= set(GIVE_FIRST) and all(avoided(v) for v in at.values()):
+        return AVOIDED
+    if set(at) <= set(OFFERS_GIVING) and all(v.get("by") == "declining" for v in at.values()):
+        return DECLINED_GIVING
+    return None
 
 
 def unit_verdict(conds, answers, probes, compute, framing, tr8_premise):
@@ -75,10 +106,14 @@ def unit_verdict(conds, answers, probes, compute, framing, tr8_premise):
         if failed:
             res["read_without_the_premises"] = {"bridge": res["bridge"],
                                                 **{k: res.pop(k) for k in READ_BY_THE_BRIDGE if k in res}}
+            if reading({"bridge": res["bridge"], "conditions": res["conditions"]}):
+                res["read_without_the_premises"]["reading"] = reading(res)
             res["bridge"] = "void"
             res["why"] = "; ".join(failed)
-    if res["bridge"] == "contradicted" and set(res["contradicted_at"]) <= set(GIVE_FIRST):
-        res["reading"] = "giving values avoided where the counts favour it"
+    if res["bridge"] == "void":         # a void unit names no condition contradicted or declined at its top
+        res["contradicted_at"], res["declined_at"] = [], []
+    if reading(res):
+        res["reading"] = reading(res)
     return res
 
 

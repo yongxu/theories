@@ -5,7 +5,8 @@ and the dry run's result; its Stage 0 (tr9.py and tr9.json, and tr8.py, whose co
 every freeze 1 file it imports or reads (run, verdicts, client, rule, conditions, prompts, PINS.json,
 and tr_rr.py, which conditions imports). It refuses unless the dry run passed and recorded, at its
 start and its end, the hashes these files have now, so that the result hashed is the one the hashed
-code gives.
+code gives; and unless freeze 1's dry-run result, which TR9's dry run reads for one reported figure
+(the power before TR8's premise) and does not hash, is the one it read, by the sha-256 it recorded.
 
     python3 -B write_frozen.py REPO       # REPO: the repository's root, on the merged tree
 """
@@ -33,6 +34,8 @@ if not (run['ok'] and run['code_unchanged_during_the_run']):
     raise SystemExit('the dry run did not pass')
 if run['code_hashes'] != {p: sha(p) for p in FILES if p != OUT}:
     raise SystemExit('the dry run was made on other files than these')
+if run['before_tr8s_premise']['source_sha256'] != sha(run['before_tr8s_premise']['source']):
+    raise SystemExit("freeze 1's dry-run result is not the one TR9's dry run read")
 lines = [sha(p) + '  ' + p for p in sorted(FILES)]
 (REPO / D / 'told-tr9' / 'FROZEN.sha256').write_text('\n'.join(lines) + '\n', encoding='utf-8')
 print('\n'.join(lines))

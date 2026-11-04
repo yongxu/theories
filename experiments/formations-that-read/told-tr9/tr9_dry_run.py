@@ -954,6 +954,39 @@ def gate(tmp):
     return out
 
 
+def readings():
+    """The two readings on answers made for them, the rule applied directly: each condition's 30
+    choices all one way, the counts-first options elsewhere, the results given."""
+    ctx = {"framing": "abstract", "presentation": "given"}
+
+    def unit(**at):
+        answers = {}
+        for c in D.CONDS:
+            a = at.get(c["id"], c["counts_first"][0])
+            answers[c["id"]] = [a] * N_CALLS
+        return TR.unit_verdict(D.CONDS, answers, None, False, ctx["framing"], TR.SUPPORTED)
+    give = {c["id"]: next(o["label"] for o in c["options"] if o["kind"] == "give") for c in D.CONDS
+            if any(o["kind"] == "give" for o in c["options"])}
+    cases = {
+        "REF6's give without showing chosen: contradicted at REF6, no reading": (unit(REF6=give["REF6"]), ["REF6"], None),
+        "REF6 stopped and REV4 waited, giving nothing: giving values avoided": (
+            unit(REF6="off", REV4="wait"), ["REF6", "REV4"], TR.AVOIDED),
+        "REF6 shown only: giving values avoided": (unit(REF6="show, then wait"), ["REF6"], TR.AVOIDED),
+        "declining at REF6 and REV4: giving values avoided": (unit(REF6=DECLINE, REV4=DECLINE), ["REF6", "REV4"],
+                                                               TR.AVOIDED),
+        "declining wherever giving values is offered: declined where giving values is offered": (
+            unit(**{cid: DECLINE for cid in TR.OFFERS_GIVING}), list(TR.OFFERS_GIVING), TR.DECLINED_GIVING),
+        "REV0 gone on, ignoring the free view: contradicted at REV0, no reading": (unit(REV0="go"), ["REV0"], None),
+        "REV16 given beyond its gain: contradicted at REV16, no reading": (unit(REV16=give["REV16"]), ["REV16"], None),
+    }
+    out = {name: {"contradicted_at": u["contradicted_at"], "reading": u.get("reading"),
+                  "as_it_should": u["bridge"] == "contradicted" and sorted(u["contradicted_at"]) == sorted(at)
+                  and u.get("reading") == want}
+           for name, (u, at, want) in cases.items()}
+    out["ok"] = all(v["as_it_should"] for v in out.values())
+    return out
+
+
 FILES_STAGE0 = ("tr9.py", "tr9.json", "tr8.py", "tr_rr.py")
 FILES_1 = ("client.py", "conditions.py", "prompts.py", "rule.py", "run.py", "verdicts.py", "PINS.json")
 FILES_9 = ("tr9_design.py", "tr9_rule.py", "tr9_run.py", "tr9_dry_run.py", "write_frozen.py")
@@ -1074,7 +1107,7 @@ def share_row(system, ctx, reps, iota=0.0, seed=""):
                 labels[v["label"]] += 1
             if v["valid"]:
                 modal.append(max(n for k, n in v["shares"].items() if k not in (INVALID, FILTERED)) / v["valid"])
-        reading += u.get("reading") == "giving values avoided where the counts favour it"
+        reading += u.get("reading") == TR.AVOIDED
         hits_reported += bool(u.get("guard_hits_reported"))
     n_c = reps * len(D.CONDS) * N_CALLS
     rc, rp = unread["choice"] / n_c, (unread["probe"] / (reps * len(D.CONDS) * PROBE_CALLS) if compute else 0.0)
@@ -1181,6 +1214,7 @@ def main():
         out["smoke"] = smoke(tmp)
         out["readability_gate"] = gate(tmp)
     out["classification"] = classification()
+    out["readings"] = readings()
     print(f"checks: {time.time() - t0:.0f} s", flush=True)
     out["shares"], out["mean_scale_S"] = shares()
     out["largest_difference_from_stage0"] = max(r["largest_difference"] for r in out["shares"] if "largest_difference" in r)
@@ -1190,7 +1224,7 @@ def main():
     out["code_unchanged_during_the_run"] = code_hashes() == out["code_hashes"]
     out["ok"] = out["code_path_all_equal"] and out["code_unchanged_during_the_run"] and all(
         out[k]["ok"] for k in ("premise", "faults", "remade", "stops", "chain", "smoke", "readability_gate",
-                               "classification", "readability_projection"))
+                               "classification", "readings", "readability_projection"))
     (HERE / "results").mkdir(exist_ok=True)
     (HERE / "results" / "dry-run.json").write_text(json.dumps(out, indent=1, ensure_ascii=False) + "\n")
     print(f"ok {out['ok']}; {time.time() - t0:.0f} s")

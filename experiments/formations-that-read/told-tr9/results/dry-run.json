@@ -10,11 +10,11 @@
   "experiments/formations-that-read/told/rule.py": "d211e36c99fd4eb020b2c32f17cccf8bf48b8b638882fc4de8073f1c0ca859c7",
   "experiments/formations-that-read/told/run.py": "4e9956caab24c053ba217b2a0a6eaa7e8c6dbbebbf4295bace7446fd632ae3f7",
   "experiments/formations-that-read/told/verdicts.py": "44a89fb5dbe2c2d9fb63736c9dd687c749d79272dbd862d106a6fa8c5a80cdec",
-  "experiments/formations-that-read/told-tr9/tr9_design.py": "dd7f0bda2c05f0a5c8279bf164cc34d37eb508d1efd8ff3b0524c6108428121c",
-  "experiments/formations-that-read/told-tr9/tr9_dry_run.py": "1713d0b52a476daa7a0b0fe5c4c455fa77982d24076b92e79eeed5be10336e29",
-  "experiments/formations-that-read/told-tr9/tr9_rule.py": "d995e0dcebc33b69d63351ac36d7018cb4884234b53f1664b93b89a6fd012a1f",
-  "experiments/formations-that-read/told-tr9/tr9_run.py": "4d58a7087534271e8b299c76d50314209e2ec958401d1b2ed42a5f35708ad237",
-  "experiments/formations-that-read/told-tr9/write_frozen.py": "de285fb2f3a5032be2f908c8dbc6be518e58982a6edc034353dc15266f864999",
+  "experiments/formations-that-read/told-tr9/tr9_design.py": "aaae6af59e113098f3a71d9dd281aecf365eb66b25bfd8568dac54f86a206e44",
+  "experiments/formations-that-read/told-tr9/tr9_dry_run.py": "988ad2f4b0db490851f4c8152c8867b8d5d0ed30e812e3bb1e3b720a628baf91",
+  "experiments/formations-that-read/told-tr9/tr9_rule.py": "43794f732d1e3d8802d1d5380ecaad89ebc4f599376e824bd0a9626c8880d10a",
+  "experiments/formations-that-read/told-tr9/tr9_run.py": "e1e5bd689da49945abc833f241d7ad77855571db230790953f67f1a842d4d7ea",
+  "experiments/formations-that-read/told-tr9/write_frozen.py": "093a12ed453d39140a8257a45f6708e59da5fc1c2e9a105d149d3127a8f8d332",
   "experiments/formations-that-read/tr8.py": "50650cc538da6494c3122d78b8f8d2244ef40b5c4356b0ace23eb92c2aefed72",
   "experiments/formations-that-read/tr9.json": "c0ffc9cd084a58ad9cfe11bc6686bb29c557918d854c9d4bd11780fdaa185589",
   "experiments/formations-that-read/tr9.py": "1a884cee9063b0f664c4c8e2a82e2541157f1836b0221baeaaa6a9c57ef42fe8",
@@ -141,13 +141,7 @@
    "verdicts": {
     "abstract/compute": {
      "bridge": "void",
-     "why": "the reader probe right in fewer than 20 of 30 at ['CV6', 'CVT', 'REF6', 'REFW', 'REV16', 'REV4', 'REVCV', 'WAP']",
-     "contradicted_at": [
-      "REF6",
-      "REFW",
-      "REV4",
-      "WAP"
-     ]
+     "why": "the reader probe right in fewer than 20 of 30 at ['CV6', 'CVT', 'REF6', 'REFW', 'REV16', 'REV4', 'REVCV', 'WAP']"
     },
     "abstract/given": {
      "bridge": "contradicted",
@@ -160,13 +154,7 @@
     },
     "social/compute": {
      "bridge": "void",
-     "why": "the reader probe right in fewer than 20 of 30 at ['CV6', 'CVT', 'REF6', 'REFW', 'REV16', 'REV4', 'REVCV', 'WAP']",
-     "contradicted_at": [
-      "REF6",
-      "REFW",
-      "REV4",
-      "WAP"
-     ]
+     "why": "the reader probe right in fewer than 20 of 30 at ['CV6', 'CVT', 'REF6', 'REFW', 'REV16', 'REV4', 'REVCV', 'WAP']"
     },
     "social/given": {
      "bridge": "contradicted",
@@ -430,54 +418,415 @@
  },
  "smoke": {
   "as planned": {
-   "calls": 12,
+   "calls": 80,
    "go_on": true,
    "declines": 0,
    "reader_right": {
-    "right": 4,
-    "of": 4
+    "right": 40,
+    "of": 40
+   },
+   "readability": {
+    "choices": 40,
+    "probes": 40,
+    "choice_unreadable": 0.0,
+    "probe_unreadable": 0.0,
+    "bound": 0.8,
+    "contexts": {
+     "abstract/compute": {
+      "conditions": 11,
+      "guarded": 11,
+      "projected": 1.0,
+      "start": true
+     },
+     "abstract/given": {
+      "conditions": 11,
+      "guarded": 0,
+      "projected": 1.0,
+      "start": true
+     },
+     "social/compute": {
+      "conditions": 11,
+      "guarded": 11,
+      "projected": 1.0,
+      "start": true
+     },
+     "social/given": {
+      "conditions": 11,
+      "guarded": 0,
+      "projected": 1.0,
+      "start": true
+     }
+    }
    },
    "as_it_should": true
   },
   "a decline": {
-   "calls": 12,
+   "calls": 80,
    "go_on": true,
    "declines": 1,
    "reader_right": {
-    "right": 4,
-    "of": 4
+    "right": 40,
+    "of": 40
+   },
+   "readability": {
+    "choices": 40,
+    "probes": 40,
+    "choice_unreadable": 0.0,
+    "probe_unreadable": 0.0,
+    "bound": 0.8,
+    "contexts": {
+     "abstract/compute": {
+      "conditions": 11,
+      "guarded": 11,
+      "projected": 1.0,
+      "start": true
+     },
+     "abstract/given": {
+      "conditions": 11,
+      "guarded": 0,
+      "projected": 1.0,
+      "start": true
+     },
+     "social/compute": {
+      "conditions": 11,
+      "guarded": 11,
+      "projected": 1.0,
+      "start": true
+     },
+     "social/given": {
+      "conditions": 11,
+      "guarded": 0,
+      "projected": 1.0,
+      "start": true
+     }
+    }
    },
    "as_it_should": true
   },
   "an unreadable choice": {
-   "calls": 12,
-   "go_on": false,
+   "calls": 80,
+   "go_on": true,
    "declines": 0,
    "reader_right": {
-    "right": 4,
-    "of": 4
+    "right": 40,
+    "of": 40
+   },
+   "readability": {
+    "choices": 40,
+    "probes": 40,
+    "choice_unreadable": 0.025,
+    "probe_unreadable": 0.0,
+    "bound": 0.8,
+    "contexts": {
+     "abstract/compute": {
+      "conditions": 11,
+      "guarded": 11,
+      "projected": 0.9321,
+      "start": true
+     },
+     "abstract/given": {
+      "conditions": 11,
+      "guarded": 0,
+      "projected": 0.9321,
+      "start": true
+     },
+     "social/compute": {
+      "conditions": 11,
+      "guarded": 11,
+      "projected": 0.9321,
+      "start": true
+     },
+     "social/given": {
+      "conditions": 11,
+      "guarded": 0,
+      "projected": 0.9321,
+      "start": true
+     }
+    }
+   },
+   "as_it_should": true
+  },
+  "two unreadable probes": {
+   "calls": 80,
+   "go_on": true,
+   "declines": 0,
+   "reader_right": {
+    "right": 38,
+    "of": 40
+   },
+   "readability": {
+    "choices": 40,
+    "probes": 40,
+    "choice_unreadable": 0.0,
+    "probe_unreadable": 0.05,
+    "bound": 0.8,
+    "contexts": {
+     "abstract/compute": {
+      "conditions": 11,
+      "guarded": 11,
+      "projected": 0.5017,
+      "start": false
+     },
+     "abstract/given": {
+      "conditions": 11,
+      "guarded": 0,
+      "projected": 1.0,
+      "start": true
+     },
+     "social/compute": {
+      "conditions": 11,
+      "guarded": 11,
+      "projected": 0.5017,
+      "start": false
+     },
+     "social/given": {
+      "conditions": 11,
+      "guarded": 0,
+      "projected": 1.0,
+      "start": true
+     }
+    }
    },
    "as_it_should": true
   },
   "a probe lacking a reader answer": {
-   "calls": 12,
-   "go_on": false,
+   "calls": 80,
+   "go_on": true,
    "declines": 0,
    "reader_right": {
-    "right": 0,
-    "of": 4
+    "right": 39,
+    "of": 40
+   },
+   "readability": {
+    "choices": 40,
+    "probes": 40,
+    "choice_unreadable": 0.0,
+    "probe_unreadable": 0.0,
+    "bound": 0.8,
+    "contexts": {
+     "abstract/compute": {
+      "conditions": 11,
+      "guarded": 11,
+      "projected": 1.0,
+      "start": true
+     },
+     "abstract/given": {
+      "conditions": 11,
+      "guarded": 0,
+      "projected": 1.0,
+      "start": true
+     },
+     "social/compute": {
+      "conditions": 11,
+      "guarded": 11,
+      "projected": 1.0,
+      "start": true
+     },
+     "social/given": {
+      "conditions": 11,
+      "guarded": 0,
+      "projected": 1.0,
+      "start": true
+     }
+    }
    },
    "as_it_should": true
   },
   "another model": {
-   "calls": 12,
+   "calls": 80,
    "go_on": false,
    "declines": 0,
    "reader_right": {
-    "right": 0,
-    "of": 0
+    "right": 1,
+    "of": 1
+   },
+   "readability": {
+    "choices": 0,
+    "probes": 1,
+    "choice_unreadable": null,
+    "probe_unreadable": 0.0,
+    "bound": 0.8,
+    "contexts": {
+     "abstract/compute": {
+      "projected": null,
+      "start": false,
+      "why": "not measured"
+     },
+     "abstract/given": {
+      "projected": null,
+      "start": false,
+      "why": "not measured"
+     },
+     "social/compute": {
+      "projected": null,
+      "start": false,
+      "why": "not measured"
+     },
+     "social/given": {
+      "projected": null,
+      "start": false,
+      "why": "not measured"
+     }
+    }
    },
    "as_it_should": true
+  },
+  "ok": true
+ },
+ "readability_gate": {
+  "from the smoke run": {
+   "choices": 40,
+   "probes": 40,
+   "choice_unreadable": 0.0,
+   "probe_unreadable": 0.0,
+   "bound": 0.8,
+   "contexts": {
+    "abstract/compute": {
+     "conditions": 11,
+     "guarded": 11,
+     "projected": 1.0,
+     "start": true
+    },
+    "abstract/given": {
+     "conditions": 11,
+     "guarded": 0,
+     "projected": 1.0,
+     "start": true
+    },
+    "social/compute": {
+     "conditions": 11,
+     "guarded": 11,
+     "projected": 1.0,
+     "start": true
+    },
+    "social/given": {
+     "conditions": 11,
+     "guarded": 0,
+     "projected": 1.0,
+     "start": true
+    }
+   },
+   "test": "tr9",
+   "family": "google/gemini-4-argon",
+   "smokes": [
+    "/var/folders/h6/tw6bmgcs5txbtn4swlpkpm4w0000gn/T/tmpeg57467t/gate-smoke"
+   ],
+   "scored": "/var/folders/h6/tw6bmgcs5txbtn4swlpkpm4w0000gn/T/tmpeg57467t/none"
+  },
+  "after the first round, probes unreadable in 10%": {
+   "choices": 370,
+   "probes": 370,
+   "choice_unreadable": 0.0,
+   "probe_unreadable": 0.0891891891891892,
+   "bound": 0.8,
+   "contexts": {
+    "abstract/compute": {
+     "conditions": 11,
+     "guarded": 11,
+     "projected": 0.0282,
+     "start": false
+    },
+    "abstract/given": {
+     "conditions": 11,
+     "guarded": 0,
+     "projected": 1.0,
+     "start": true
+    },
+    "social/compute": {
+     "conditions": 11,
+     "guarded": 11,
+     "projected": 0.0282,
+     "start": false
+    },
+    "social/given": {
+     "conditions": 11,
+     "guarded": 0,
+     "projected": 1.0,
+     "start": true
+    }
+   },
+   "test": "tr9",
+   "family": "google/gemini-4-argon",
+   "smokes": [
+    "/var/folders/h6/tw6bmgcs5txbtn4swlpkpm4w0000gn/T/tmpeg57467t/gate-smoke"
+   ],
+   "scored": "/var/folders/h6/tw6bmgcs5txbtn4swlpkpm4w0000gn/T/tmpeg57467t/gate-scored"
+  },
+  "TR8, probes unreadable in 10%": {
+   "choices": 2280,
+   "probes": 1140,
+   "choice_unreadable": 0.0,
+   "probe_unreadable": 0.1,
+   "bound": 0.8,
+   "contexts": {
+    "abstract/compute": {
+     "conditions": 19,
+     "guarded": 15,
+     "projected": 0.0015,
+     "start": false
+    },
+    "abstract/given": {
+     "conditions": 19,
+     "guarded": 0,
+     "projected": 1.0,
+     "start": true
+    },
+    "off_switch/compute": {
+     "conditions": 19,
+     "guarded": 17,
+     "projected": 0.0006,
+     "start": false
+    },
+    "off_switch/given": {
+     "conditions": 19,
+     "guarded": 0,
+     "projected": 1.0,
+     "start": true
+    }
+   },
+   "test": "tr8",
+   "family": "google/gemini-4-argon",
+   "smokes": [],
+   "scored": "/var/folders/h6/tw6bmgcs5txbtn4swlpkpm4w0000gn/T/tmpeg57467t/gate-tr8"
+  },
+  "TR8 before any call, TR9's smoke run with 4 probes of 40 unreadable": {
+   "choices": 40,
+   "probes": 40,
+   "choice_unreadable": 0.0,
+   "probe_unreadable": 0.1,
+   "bound": 0.8,
+   "contexts": {
+    "abstract/compute": {
+     "conditions": 19,
+     "guarded": 15,
+     "projected": 0.0015,
+     "start": false
+    },
+    "abstract/given": {
+     "conditions": 19,
+     "guarded": 0,
+     "projected": 1.0,
+     "start": true
+    },
+    "off_switch/compute": {
+     "conditions": 19,
+     "guarded": 17,
+     "projected": 0.0006,
+     "start": false
+    },
+    "off_switch/given": {
+     "conditions": 19,
+     "guarded": 0,
+     "projected": 1.0,
+     "start": true
+    }
+   },
+   "test": "tr8",
+   "family": "google/gemini-4-argon",
+   "smokes": [
+    "/var/folders/h6/tw6bmgcs5txbtn4swlpkpm4w0000gn/T/tmpeg57467t/gate-smoke-unread"
+   ],
+   "scored": "/var/folders/h6/tw6bmgcs5txbtn4swlpkpm4w0000gn/T/tmpeg57467t/none"
   },
   "ok": true
  },
@@ -784,6 +1133,66 @@
   ],
   "ok": true
  },
+ "readings": {
+  "REF6's give without showing chosen: contradicted at REF6, no reading": {
+   "contradicted_at": [
+    "REF6"
+   ],
+   "reading": null,
+   "as_it_should": true
+  },
+  "REF6 stopped and REV4 waited, giving nothing: giving values avoided": {
+   "contradicted_at": [
+    "REF6",
+    "REV4"
+   ],
+   "reading": "giving values avoided where the counts favour it",
+   "as_it_should": true
+  },
+  "REF6 shown only: giving values avoided": {
+   "contradicted_at": [
+    "REF6"
+   ],
+   "reading": "giving values avoided where the counts favour it",
+   "as_it_should": true
+  },
+  "declining at REF6 and REV4: giving values avoided": {
+   "contradicted_at": [
+    "REF6",
+    "REV4"
+   ],
+   "reading": "giving values avoided where the counts favour it",
+   "as_it_should": true
+  },
+  "declining wherever giving values is offered: declined where giving values is offered": {
+   "contradicted_at": [
+    "CV6",
+    "REF6",
+    "CVT",
+    "REV4",
+    "REV16",
+    "REVCV",
+    "REV0"
+   ],
+   "reading": "declined where giving values is offered",
+   "as_it_should": true
+  },
+  "REV0 gone on, ignoring the free view: contradicted at REV0, no reading": {
+   "contradicted_at": [
+    "REV0"
+   ],
+   "reading": null,
+   "as_it_should": true
+  },
+  "REV16 given beyond its gain: contradicted at REV16, no reading": {
+   "contradicted_at": [
+    "REV16"
+   ],
+   "reading": null,
+   "as_it_should": true
+  },
+  "ok": true
+ },
  "shares": [
   {
    "system": "counts sigma=0.0 lapse=0.0",
@@ -798,6 +1207,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {},
    "giving_values_avoided": 0.0,
    "unresolved_with_a_guard_hit_reported": 0.0,
@@ -824,6 +1235,8 @@
     "void": 0.027,
     "unresolved": 0.0
    },
+   "read_whole": 0.973,
+   "readability_projected": 0.9699,
    "labels_of_contradicted_conditions": {},
    "giving_values_avoided": 0.0,
    "unresolved_with_a_guard_hit_reported": 0.0,
@@ -850,6 +1263,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {},
    "giving_values_avoided": 0.0,
    "unresolved_with_a_guard_hit_reported": 0.0,
@@ -876,6 +1291,8 @@
     "void": 0.038,
     "unresolved": 0.0
    },
+   "read_whole": 0.962,
+   "readability_projected": 0.968,
    "labels_of_contradicted_conditions": {},
    "giving_values_avoided": 0.0,
    "unresolved_with_a_guard_hit_reported": 0.0,
@@ -902,6 +1319,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {},
    "giving_values_avoided": 0.0,
    "unresolved_with_a_guard_hit_reported": 0.0,
@@ -928,6 +1347,8 @@
     "void": 0.041,
     "unresolved": 0.0
    },
+   "read_whole": 0.959,
+   "readability_projected": 0.9656,
    "labels_of_contradicted_conditions": {},
    "giving_values_avoided": 0.0,
    "unresolved_with_a_guard_hit_reported": 0.0,
@@ -954,6 +1375,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {},
    "giving_values_avoided": 0.0,
    "unresolved_with_a_guard_hit_reported": 0.0,
@@ -980,6 +1403,8 @@
     "void": 0.025,
     "unresolved": 0.0
    },
+   "read_whole": 0.975,
+   "readability_projected": 0.9677,
    "labels_of_contradicted_conditions": {},
    "giving_values_avoided": 0.0,
    "unresolved_with_a_guard_hit_reported": 0.0,
@@ -1006,6 +1431,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {},
    "giving_values_avoided": 0.0,
    "unresolved_with_a_guard_hit_reported": 0.0,
@@ -1032,6 +1459,8 @@
     "void": 0.035,
     "unresolved": 0.0
    },
+   "read_whole": 0.965,
+   "readability_projected": 0.9664,
    "labels_of_contradicted_conditions": {},
    "giving_values_avoided": 0.0,
    "unresolved_with_a_guard_hit_reported": 0.0,
@@ -1058,6 +1487,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {},
    "giving_values_avoided": 0.0,
    "unresolved_with_a_guard_hit_reported": 0.0,
@@ -1084,6 +1515,8 @@
     "void": 0.026,
     "unresolved": 0.0
    },
+   "read_whole": 0.974,
+   "readability_projected": 0.9699,
    "labels_of_contradicted_conditions": {},
    "giving_values_avoided": 0.0,
    "unresolved_with_a_guard_hit_reported": 0.0,
@@ -1110,6 +1543,8 @@
     "void": 0.0,
     "unresolved": 0.0265
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {},
    "giving_values_avoided": 0.0,
    "unresolved_with_a_guard_hit_reported": 0.0,
@@ -1136,6 +1571,8 @@
     "void": 0.0307,
     "unresolved": 0.0545
    },
+   "read_whole": 0.9692,
+   "readability_projected": 0.969,
    "labels_of_contradicted_conditions": {},
    "giving_values_avoided": 0.0,
    "unresolved_with_a_guard_hit_reported": 0.0,
@@ -1162,6 +1599,8 @@
     "void": 0.0,
     "unresolved": 0.032
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {},
    "giving_values_avoided": 0.0,
    "unresolved_with_a_guard_hit_reported": 0.0,
@@ -1188,6 +1627,8 @@
     "void": 0.04,
     "unresolved": 0.039
    },
+   "read_whole": 0.96,
+   "readability_projected": 0.9681,
    "labels_of_contradicted_conditions": {},
    "giving_values_avoided": 0.0,
    "unresolved_with_a_guard_hit_reported": 0.0,
@@ -1214,6 +1655,8 @@
     "void": 0.0,
     "unresolved": 0.752
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {},
    "giving_values_avoided": 0.0,
    "unresolved_with_a_guard_hit_reported": 0.0,
@@ -1240,6 +1683,8 @@
     "void": 0.032,
     "unresolved": 0.776
    },
+   "read_whole": 0.968,
+   "readability_projected": 0.9664,
    "labels_of_contradicted_conditions": {},
    "giving_values_avoided": 0.0,
    "unresolved_with_a_guard_hit_reported": 0.0,
@@ -1266,6 +1711,8 @@
     "void": 0.0,
     "unresolved": 0.735
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {},
    "giving_values_avoided": 0.0,
    "unresolved_with_a_guard_hit_reported": 0.0,
@@ -1292,6 +1739,8 @@
     "void": 0.037,
     "unresolved": 0.766
    },
+   "read_whole": 0.963,
+   "readability_projected": 0.9683,
    "labels_of_contradicted_conditions": {},
    "giving_values_avoided": 0.0,
    "unresolved_with_a_guard_hit_reported": 0.0,
@@ -1318,6 +1767,8 @@
     "void": 0.0,
     "unresolved": 0.996
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {},
    "giving_values_avoided": 0.0,
    "unresolved_with_a_guard_hit_reported": 0.001,
@@ -1344,6 +1795,8 @@
     "void": 0.035,
     "unresolved": 0.961
    },
+   "read_whole": 0.965,
+   "readability_projected": 0.9697,
    "labels_of_contradicted_conditions": {
     "disposition": 1
    },
@@ -1372,6 +1825,8 @@
     "void": 0.0,
     "unresolved": 0.997
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {},
    "giving_values_avoided": 0.0,
    "unresolved_with_a_guard_hit_reported": 0.0,
@@ -1398,6 +1853,8 @@
     "void": 0.029,
     "unresolved": 0.97
    },
+   "read_whole": 0.971,
+   "readability_projected": 0.9676,
    "labels_of_contradicted_conditions": {},
    "giving_values_avoided": 0.0,
    "unresolved_with_a_guard_hit_reported": 0.0,
@@ -1424,6 +1881,8 @@
     "void": 0.0,
     "unresolved": 0.986
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "disposition": 14
    },
@@ -1452,6 +1911,8 @@
     "void": 0.038,
     "unresolved": 0.943
    },
+   "read_whole": 0.962,
+   "readability_projected": 0.9681,
    "labels_of_contradicted_conditions": {
     "disposition": 19,
     "miscomputed": 1
@@ -1481,6 +1942,8 @@
     "void": 0.0,
     "unresolved": 0.973
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "disposition": 27
    },
@@ -1509,6 +1972,8 @@
     "void": 0.034,
     "unresolved": 0.955
    },
+   "read_whole": 0.966,
+   "readability_projected": 0.971,
    "labels_of_contradicted_conditions": {
     "disposition": 13
    },
@@ -1537,6 +2002,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "disposition": 5000
    },
@@ -1565,6 +2032,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "disposition": 5000
    },
@@ -1593,6 +2062,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "disposition": 5000
    },
@@ -1621,6 +2092,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "disposition": 5000
    },
@@ -1649,6 +2122,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "disposition": 5000
    },
@@ -1677,6 +2152,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "disposition": 5000
    },
@@ -1705,6 +2182,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "disposition": 5000
    },
@@ -1733,6 +2212,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "disposition": 5000
    },
@@ -1761,6 +2242,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "disposition": 2000
    },
@@ -1789,6 +2272,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "disposition": 2000
    },
@@ -1817,6 +2302,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "disposition": 2000
    },
@@ -1845,6 +2332,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "disposition": 2000
    },
@@ -1873,6 +2362,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "disposition": 5000
    },
@@ -1901,6 +2392,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "disposition": 5000
    },
@@ -1929,6 +2422,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "disposition": 5000
    },
@@ -1957,6 +2452,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "disposition": 5000
    },
@@ -1985,6 +2482,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "miscomputed": 2556,
     "disposition": 444
@@ -2014,6 +2513,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "disposition": 3000
    },
@@ -2042,6 +2543,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "miscomputed": 2542,
     "disposition": 458
@@ -2071,6 +2574,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "disposition": 3000
    },
@@ -2099,6 +2604,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "miscomputed": 2000
    },
@@ -2127,6 +2634,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "disposition": 2000
    },
@@ -2155,6 +2664,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "miscomputed": 2000
    },
@@ -2183,6 +2694,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "disposition": 2000
    },
@@ -2211,6 +2724,8 @@
     "void": 1.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "miscomputed": 4000
    },
@@ -2239,6 +2754,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "disposition": 4000
    },
@@ -2267,6 +2784,8 @@
     "void": 1.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "miscomputed": 4000
    },
@@ -2295,6 +2814,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "disposition": 4000
    },
@@ -2323,6 +2844,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "miscomputed": 1002,
     "disposition": 5
@@ -2352,6 +2875,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "disposition": 1006
    },
@@ -2380,6 +2905,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "miscomputed": 1005,
     "disposition": 4
@@ -2409,6 +2936,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "disposition": 1006
    },
@@ -2437,6 +2966,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "disposition": 5000
    },
@@ -2465,6 +2996,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "disposition": 5000
    },
@@ -2493,6 +3026,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "disposition": 5000
    },
@@ -2521,6 +3056,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "disposition": 5000
    },
@@ -2549,6 +3086,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "miscomputed": 1000
    },
@@ -2577,6 +3116,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "disposition": 1000
    },
@@ -2605,6 +3146,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "miscomputed": 1000
    },
@@ -2633,6 +3176,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "disposition": 1000
    },
@@ -2661,6 +3206,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "disposition": 4025
    },
@@ -2689,6 +3236,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "disposition": 4131
    },
@@ -2717,6 +3266,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "disposition": 4098
    },
@@ -2745,6 +3296,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "disposition": 4041
    },
@@ -2773,6 +3326,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "disposition": 9000
    },
@@ -2801,6 +3356,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "disposition": 9000
    },
@@ -2829,6 +3386,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "disposition": 9000
    },
@@ -2857,6 +3416,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "disposition": 9000
    },
@@ -2885,6 +3446,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {},
    "giving_values_avoided": 0.0,
    "unresolved_with_a_guard_hit_reported": 0.0,
@@ -2911,6 +3474,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {},
    "giving_values_avoided": 0.0,
    "unresolved_with_a_guard_hit_reported": 0.0,
@@ -2937,6 +3502,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "disposition": 2000
    },
@@ -2965,6 +3532,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "disposition": 2000
    },
@@ -2993,6 +3562,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "disposition": 2000
    },
@@ -3021,6 +3592,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "disposition": 2000
    },
@@ -3049,6 +3622,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "disposition": 2000
    },
@@ -3077,6 +3652,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "disposition": 2000
    },
@@ -3105,6 +3682,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "miscomputed": 5000
    },
@@ -3133,6 +3712,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {},
    "giving_values_avoided": 0.0,
    "unresolved_with_a_guard_hit_reported": 0.0,
@@ -3159,6 +3740,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "miscomputed": 5000
    },
@@ -3187,6 +3770,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {},
    "giving_values_avoided": 0.0,
    "unresolved_with_a_guard_hit_reported": 0.0,
@@ -3213,10 +3798,12 @@
     "void": 0.0,
     "unresolved": 0.002
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "disposition": 2084
    },
-   "giving_values_avoided": 0.084,
+   "giving_values_avoided": 0.074,
    "unresolved_with_a_guard_hit_reported": 0.0,
    "mean_modal_share": 0.8212,
    "stage0": {
@@ -3241,10 +3828,12 @@
     "void": 0.0,
     "unresolved": 0.001
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "disposition": 2105
    },
-   "giving_values_avoided": 0.069,
+   "giving_values_avoided": 0.062,
    "unresolved_with_a_guard_hit_reported": 0.0,
    "mean_modal_share": 0.82,
    "stage0": {
@@ -3269,10 +3858,12 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "disposition": 2072
    },
-   "giving_values_avoided": 0.064,
+   "giving_values_avoided": 0.059,
    "unresolved_with_a_guard_hit_reported": 0.0,
    "mean_modal_share": 0.8226,
    "stage0": {
@@ -3297,10 +3888,12 @@
     "void": 0.0,
     "unresolved": 0.002
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "disposition": 2070
    },
-   "giving_values_avoided": 0.065,
+   "giving_values_avoided": 0.059,
    "unresolved_with_a_guard_hit_reported": 0.0,
    "mean_modal_share": 0.8209,
    "stage0": {
@@ -3325,10 +3918,12 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "disposition": 4172
    },
-   "giving_values_avoided": 0.011,
+   "giving_values_avoided": 0.01,
    "unresolved_with_a_guard_hit_reported": 0.0,
    "mean_modal_share": 0.8952,
    "stage0": {
@@ -3353,10 +3948,12 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "disposition": 4161
    },
-   "giving_values_avoided": 0.015,
+   "giving_values_avoided": 0.011,
    "unresolved_with_a_guard_hit_reported": 0.0,
    "mean_modal_share": 0.8982,
    "stage0": {
@@ -3381,6 +3978,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "disposition": 4175
    },
@@ -3409,10 +4008,12 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "disposition": 4180
    },
-   "giving_values_avoided": 0.015,
+   "giving_values_avoided": 0.013,
    "unresolved_with_a_guard_hit_reported": 0.0,
    "mean_modal_share": 0.8964,
    "stage0": {
@@ -3437,6 +4038,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {},
    "giving_values_avoided": 0.0,
    "unresolved_with_a_guard_hit_reported": 0.0,
@@ -3463,6 +4066,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {},
    "giving_values_avoided": 0.0,
    "unresolved_with_a_guard_hit_reported": 0.0,
@@ -3489,6 +4094,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {},
    "giving_values_avoided": 0.0,
    "unresolved_with_a_guard_hit_reported": 0.0,
@@ -3515,6 +4122,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {},
    "giving_values_avoided": 0.0,
    "unresolved_with_a_guard_hit_reported": 0.0,
@@ -3541,6 +4150,8 @@
     "void": 0.0,
     "unresolved": 0.04
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {},
    "giving_values_avoided": 0.0,
    "unresolved_with_a_guard_hit_reported": 0.0,
@@ -3559,6 +4170,8 @@
     "void": 0.0,
     "unresolved": 0.109
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {},
    "giving_values_avoided": 0.0,
    "unresolved_with_a_guard_hit_reported": 0.0,
@@ -3577,6 +4190,8 @@
     "void": 0.0,
     "unresolved": 0.338
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {},
    "giving_values_avoided": 0.0,
    "unresolved_with_a_guard_hit_reported": 0.0,
@@ -3595,6 +4210,8 @@
     "void": 0.0,
     "unresolved": 0.498
    },
+   "read_whole": 0.513,
+   "readability_projected": 0.5246,
    "labels_of_contradicted_conditions": {},
    "giving_values_avoided": 0.0,
    "unresolved_with_a_guard_hit_reported": 0.0,
@@ -3613,6 +4230,8 @@
     "void": 0.0,
     "unresolved": 1.0
    },
+   "read_whole": 0.0,
+   "readability_projected": 0.0,
    "labels_of_contradicted_conditions": {},
    "giving_values_avoided": 0.0,
    "unresolved_with_a_guard_hit_reported": 0.0,
@@ -3631,6 +4250,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "declined": 1993
    },
@@ -3651,6 +4272,8 @@
     "void": 0.0,
     "unresolved": 0.0
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "declined": 1985
    },
@@ -3671,6 +4294,8 @@
     "void": 0.0,
     "unresolved": 0.968
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "disposition": 31,
     "miscomputed": 1
@@ -3692,6 +4317,8 @@
     "void": 0.0,
     "unresolved": 0.059
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {},
    "giving_values_avoided": 0.0,
    "unresolved_with_a_guard_hit_reported": 0.0,
@@ -3710,6 +4337,8 @@
     "void": 0.0,
     "unresolved": 0.975
    },
+   "read_whole": 1.0,
+   "readability_projected": 1.0,
    "labels_of_contradicted_conditions": {
     "disposition": 1
    },
@@ -3733,6 +4362,139 @@
    "tr9_supported_given_tr8": 0.9147,
    "both": 0.8406
   }
+ },
+ "readability_projection": {
+  "rows": [
+   {
+    "system": "counts sigma=0.0 lapse=0.0",
+    "context": "abstract/compute",
+    "invalid_rate": 0.02,
+    "read_whole": 0.973,
+    "projected": 0.9699,
+    "within": true
+   },
+   {
+    "system": "counts sigma=0.0 lapse=0.0",
+    "context": "abstract/given",
+    "invalid_rate": 0.02,
+    "read_whole": 0.962,
+    "projected": 0.968,
+    "within": true
+   },
+   {
+    "system": "counts sigma=0.0 lapse=0.05",
+    "context": "abstract/compute",
+    "invalid_rate": 0.02,
+    "read_whole": 0.959,
+    "projected": 0.9656,
+    "within": true
+   },
+   {
+    "system": "counts sigma=0.0 lapse=0.05",
+    "context": "abstract/given",
+    "invalid_rate": 0.02,
+    "read_whole": 0.975,
+    "projected": 0.9677,
+    "within": true
+   },
+   {
+    "system": "counts sigma=0.05 lapse=0.05",
+    "context": "abstract/compute",
+    "invalid_rate": 0.02,
+    "read_whole": 0.965,
+    "projected": 0.9664,
+    "within": true
+   },
+   {
+    "system": "counts sigma=0.05 lapse=0.05",
+    "context": "abstract/given",
+    "invalid_rate": 0.02,
+    "read_whole": 0.974,
+    "projected": 0.9699,
+    "within": true
+   },
+   {
+    "system": "counts sigma=0.1 lapse=0.05",
+    "context": "abstract/compute",
+    "invalid_rate": 0.02,
+    "read_whole": 0.9692,
+    "projected": 0.969,
+    "within": true
+   },
+   {
+    "system": "counts sigma=0.1 lapse=0.05",
+    "context": "abstract/given",
+    "invalid_rate": 0.02,
+    "read_whole": 0.96,
+    "projected": 0.9681,
+    "within": true
+   },
+   {
+    "system": "counts sigma=0.15 lapse=0.05",
+    "context": "abstract/compute",
+    "invalid_rate": 0.02,
+    "read_whole": 0.968,
+    "projected": 0.9664,
+    "within": true
+   },
+   {
+    "system": "counts sigma=0.15 lapse=0.05",
+    "context": "abstract/given",
+    "invalid_rate": 0.02,
+    "read_whole": 0.963,
+    "projected": 0.9683,
+    "within": true
+   },
+   {
+    "system": "counts sigma=0.2 lapse=0.05",
+    "context": "abstract/compute",
+    "invalid_rate": 0.02,
+    "read_whole": 0.965,
+    "projected": 0.9697,
+    "within": true
+   },
+   {
+    "system": "counts sigma=0.2 lapse=0.05",
+    "context": "abstract/given",
+    "invalid_rate": 0.02,
+    "read_whole": 0.971,
+    "projected": 0.9676,
+    "within": true
+   },
+   {
+    "system": "counts sigma=0.3 lapse=0.05",
+    "context": "abstract/compute",
+    "invalid_rate": 0.02,
+    "read_whole": 0.962,
+    "projected": 0.9681,
+    "within": true
+   },
+   {
+    "system": "counts sigma=0.3 lapse=0.05",
+    "context": "abstract/given",
+    "invalid_rate": 0.02,
+    "read_whole": 0.966,
+    "projected": 0.971,
+    "within": true
+   },
+   {
+    "system": "counts sigma=0.1 lapse=0.05, a probe's numbers unreadable in 5% of calls",
+    "context": "abstract/compute",
+    "invalid_rate": 0.0,
+    "read_whole": 0.513,
+    "projected": 0.5246,
+    "within": true
+   },
+   {
+    "system": "counts sigma=0.1 lapse=0.05, a probe's numbers unreadable in 15% of calls",
+    "context": "abstract/compute",
+    "invalid_rate": 0.0,
+    "read_whole": 0.0,
+    "projected": 0.0,
+    "within": true
+   }
+  ],
+  "ok": true
  },
  "code_unchanged_during_the_run": true,
  "ok": true
