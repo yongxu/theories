@@ -285,7 +285,7 @@ Estimates, to be replaced at the freeze by a smoke run. Every Stage B run waits 
 |---|---|---|---|
 | TR1 | six model families | 630 per condition, four conditions: 15,120 | about 17M; the optional informing variant about 4,600 calls more |
 | TR2 | two open-weight families, on a machine suited to them | per model and checkpoint: about 4,000 forward passes; a pilot of about 800 generations; 6,000 to 16,000 generations for behaviour (600 to 1,600 pairs per factor) | no API tokens; downloads of about 14 to 16 GB per model, named at the freeze |
-| TR3 | three to six families, temperature 0 | at most 2,766 per model, 1,916 for BHW (FREEZE-3) | about 0.6M to 1.0M per model, before reasoning |
+| TR3 | three pins (FREEZE-3), at temperature 0 but Sonnet | at most 2,766 per model, 1,916 for BHW (FREEZE-3) | about 0.6M to 1.0M per model, before reasoning |
 | TR4 | six families | 440 per model: 2,640 | about 1.2M |
 | TR5 | six families | 459 per model: 2,754 (upper 3,834) | about 2.5M (upper 3.5M) |
 | TR6 | three families, temperature 0 | about 3,970 per model | about 1.47M per model |

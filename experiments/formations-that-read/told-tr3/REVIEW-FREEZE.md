@@ -1,6 +1,6 @@
 # Review of TR3's freeze (FREEZE-3): independent readers, round by round
 
-4 November 2026. AI-written (a Claude Code session). Independent readers read the frozen files before the freeze landed, a fresh Claude Opus subagent each round, of the theory's own family. Each was given the files and the coordinator's requirements and, from the second round on, this record, which it was asked to check, not to trust; none was given the session's conclusions otherwise. Each worked read-only, with small checks of the code in memory. Each round's findings are listed as it gave them, with how each was taken. The rounds went on until a round found nothing of high or medium severity.
+4 November 2026. AI-written (a Claude Code session). Independent readers read the frozen files before the freeze landed, a fresh Claude Opus subagent each round, of the theory's own family. Each was given the files and the coordinator's requirements and, from the second round on, this record, which it was asked to check, not to trust; none was given the session's conclusions otherwise. Each worked read-only, with small checks of the code in memory or in scratch of its own outside the worktree. Each round's findings are listed as it gave them, with how each was taken. The rounds went on until a round found nothing of high or medium severity.
 
 ## Round 1
 
@@ -100,7 +100,7 @@ Also taken: §8's shared-client paragraph names both ways a change that would re
 
 | Id | Severity | Finding | How it was taken |
 |---|---|---|---|
-| T57 | medium | The tie reading claimed less than the cells show: "three on the X side alone fit a lean toward the name listed first as well as one toward the public" is false where the two Y-side ties are resolved with the own light, which tells the leans apart; the label was the same whether they were read so or flagged, so BHW with ties toward X took "toward the public belief" in every run. The mirror, toward Y, was not discussed, and X is also the setting a green light indicates. | Taken. Where the three X-side ties are toward the public belief and the two Y-side ties with the own light, the reading is *contradicted at the ties, X at every tie, not toward the public belief*, a lean toward that name, which does not tell the name listed first from green's setting; *Y at every tie* for the mirror. Every label but the five-of-five one carries each side's counts toward the public belief and with the own light. The pattern fits both leans only where the other side is unresolved, and §4 says so. Dry run 13: BHW with ties toward X is read as X at every tie in every run, and in 0.987 at flips of 1/100. |
+| T57 | medium | The tie reading claimed less than the cells show: "three on the X side alone fit a lean toward the name listed first as well as one toward the public" is false where the two Y-side ties are resolved with the own light, which tells the leans apart; the label was the same whether they were read so or flagged, so BHW with ties toward X took "toward the public belief" in every run. The mirror, toward Y, was not discussed, and X is also the setting a green light indicates. | Taken. Where the three X-side ties are toward the public belief and the two Y-side ties with the own light, the reading is *contradicted at the ties, X at every tie, not toward the public belief*, a lean toward that name, which does not tell the name listed first from green's setting; *Y at every tie* for the mirror. The count labels and the *not toward the public belief* label carry each side's counts toward the public belief and with the own light (with those otherwise, after round 7); the X and Y labels imply theirs. The pattern fits both leans only where the other side is unresolved, and §4 says so. Dry run 13: BHW with ties toward X is read as X at every tie in every run, and in 0.987 at flips of 1/100. |
 | T58 | medium | T1's fix was incomplete: REST-TR3-TR6 and Stage 0's `conditional_verdict` docstring still called the re-ask the backstop for a channel the log does not show, §12 listed no change, and the first screen's "as the design reads it" holds of DESIGN.md, not REST. | Taken: a §12 item; a dated note at REST's passage; Stage 0's docstring says what the frozen run reads; "as DESIGN.md reads it". |
 | T59 | low | "No cell at precision 3/5" and "parts from BHW at exactly the five tie cells" hold at the 33 timing cells only; "the dry run checks each" was more than the table check did. | Taken: "no timing cell", "among the 33 timing cells"; the table check now asserts that the threshold member read as BHW reads differs from BHW with public ties at every exploration cell. |
 | T60 | low | "These members ignore their light from one net light on" is given where the cells beyond the ties are unresolved too. | Taken: at one net light, and from there on where the cells beyond the ties are placed; §10 gives that share. |
@@ -114,3 +114,26 @@ Also taken: §8's shared-client paragraph names both ways a change that would re
 | T68 | low | "One independent reader … in rounds": the rounds were read by separate readers, given this record. | Taken in §14 and this file's header. |
 
 After this round FREEZE-3 measures 11,208 words, about 85 to 115 minutes, the first part 1,553, twelve to sixteen; the header says so.
+
+## Round 7, the sixth round's fixes only
+
+At the coordinator's word this round read only the diff of the sixth round's twelve fixes, with the sections each touches in full and the dry run's output after them (run 13) beside the run before (run 12). The rest had been read in full six times, and the sixth round's two medium findings were a sentence or two each, so the round's purpose was to check that the fixes were right and broke nothing near them. It found nothing of high or medium severity, so the gate is met; it judged every fix right, with the leftovers below. Its twelve low findings were taken after it, as freeze 1's last round's were, and checked by the focused checks and the final dry run on the merged tree.
+
+| Id | Severity | Finding | How it was taken |
+|---|---|---|---|
+| T69 | low | "Each but the first carries the counts" (the rule's docstring) and T57's wording: the X and Y labels carry none. | Taken: the count labels and *not toward the public belief* carry them; the X and Y labels imply theirs. |
+| T70 | low | The first screen read X at every tie as a lean toward the name listed first, dropping §4's point that the cells do not tell it from green's setting. | Taken. |
+| T71 | low | "Answers X at every tie" holds only where "tie" is the light at which the posterior ties; a member answering X with both lights at every tie cell is read *not toward the public belief*. | Taken: "answers X wherever its light ties with the public evidence (a red light at the X-side ties, a green one at the Y-side)", in the first screen, §4 and the docstring, and §4 names the other case. |
+| T72 | low | §12 kept "a cascade one net guess earlier" without "where the cells beyond the ties are placed". | Taken. |
+| T73 | low | The *not toward* label did not tell the otherwise cells from flagged ones. | Taken in the code: every count label ends with the otherwise count; §4 says so. |
+| T74 | low | "The re-ask's positive control" without its limit in §12, REST's note and Stage 0's docstring. | Taken: "for a member whose guess the shown light changes". |
+| T75 | low | "As DESIGN.md reads it" was set beside "or chance", which DESIGN.md does not say; §5 still said "the design". | Taken: "a fault of the harness, as DESIGN.md reads it, or chance", in the first screen and §12; "DESIGN.md" in §5. |
+| T76 | low | The first screen's list left out the re-ask item added in round 6. | Taken. |
+| T77 | low | "A later k … is not measured": the prefixes (X,X,X) and (Y,Y,Y) measure k = 3 on one branch. | Taken. |
+| T78 | low | REST's exploration-cell sentence was corrected with no dated note. | Taken: a dated note. |
+| T79 | low | §10's checks did not list the table check's two additions. | Taken. |
+| T80 | low | DESIGN.md's usage row said "three to six families, temperature 0" beside the frozen counts. | Taken: "three pins (FREEZE-3), at temperature 0 but Sonnet". |
+
+After these, FREEZE-3 measures 11,392 words, about 90 to 115 minutes, the first part 1,633, thirteen to sixteen; the header says so.
+
+Also noted by the round, outside the fixes and not pursued: FREEZE-1 and freeze 1's review say "one independent reader … in six rounds"; freeze 1 is frozen and that wording is left to its next edition. A member that weighs the prior above one light is read as a count at the ties; no text claims more for it.

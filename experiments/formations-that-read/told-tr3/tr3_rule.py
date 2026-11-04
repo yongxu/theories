@@ -26,8 +26,9 @@ one net guess and one after two part: BHW with ties to the own light reads there
 breaks the tie toward the public belief, the prior and the guesses, or weighs its own light below a
 public one, ignores its light, a cascade one net guess earlier. Beyond the ties the two agree. At
 three ties the public belief is X, the name the prompt lists first and the setting a green light
-indicates, and at two it is Y. A member that answers X at every tie is toward the public belief at
-the first three and with its own light at the other two, so the sides are counted apart. walk() is
+indicates, and at two it is Y. A member that answers X wherever its light ties with the public
+evidence is toward the public belief at the first three and with its own light at the other two, so
+the sides are counted apart. walk() is
 also the plan: it returns every call the walk has reached, so the run makes them and the reading
 reads them.
 """
@@ -121,10 +122,12 @@ def tie_reading(classes, probes):
       BHW's class nor the class toward the public belief;
     - "contradicted at the ties, X at every tie, not toward the public belief" where the three X-side
       ties are toward the public belief and the two Y-side ties with the own light, so that the
-      member answers X at every tie, and "Y at every tie" for the mirror: a lean toward one name;
+      member answers X wherever its light ties with the public evidence, and "Y at every tie" for
+      the mirror: a lean toward one name;
     - otherwise "contradicted at k of the five ties, toward the public belief": no cascade one net
       guess earlier is read.
-    Each but the first carries the counts, and each ends with the outcome beyond the ties."""
+    The count labels and "not toward the public belief" carry the counts, those otherwise among
+    them; the X and Y labels imply theirs; each ends with the outcome beyond the ties."""
     full = timing(classes, probes)
     beyond = timing(classes, probes, [(p, h) for p in BHW for h in BHW[p] if (p, h) not in TIES])
     at, count = {}, {"toward the public belief": 0, "with the own light": 0, "flagged": 0, "not restated": 0,
@@ -153,7 +156,7 @@ def tie_reading(classes, probes):
     x, y = sides["X"], sides["Y"]
     counts = (f"toward the public belief, X side {x['toward the public belief']} of {x['of']} and Y side "
               f"{y['toward the public belief']} of {y['of']}; with the own light, X side {x['with the own light']} "
-              f"and Y side {y['with the own light']}")
+              f"and Y side {y['with the own light']}; otherwise {count['otherwise']}")
     then = "; beyond the ties " + beyond["outcome"]
     if full["outcome"] != "contradicted":
         out["reading"] = full["outcome"]

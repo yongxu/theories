@@ -1016,8 +1016,8 @@ def conditional_verdict(t, prefix, N, R, M, rng, reps):
     logged inputs a channel through the prompt is caught at once by diffing inputs. The leaky member
     here reads the next draw by a channel no request can carry; in TR3's frozen run the two contexts
     are one request, so a breach outside its leak control is read as a fault of the harness or chance,
-    and the leak control, a channel the prompt carries, is this rule's positive control (FREEZE-3.md,
-    section 5)."""
+    and the leak control, a channel the prompt carries, is this rule's positive control for a member
+    whose guess the shown light changes (FREEZE-3.md, section 5)."""
     k = len(prefix)
     tally = {"no verdict: premise not met": 0, "no verdict: flagged cell": 0,
              "passed": 0, "breach reproduced": 0, "unresolved: unreproduced difference": 0}
