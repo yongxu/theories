@@ -2,7 +2,7 @@
 
 [English](ONE-PAGE.md) · [总览](THE-THEORY-OF-BECOMING.zh.md) · [八章](chapters/README.md) · [理论图](results/THEORY-GRAPH.md)
 
-*约十一分钟读完。*
+*约十至十四分钟读完。*
 
 **它是什么。** 一种说明：在一个关系性的展开之中，任何东西如何出现、持续、变化与消逝，生命与认知如何在那里成形，评价又到什么程度；它不预先假定生灭变化是好的。它借助 AI 做成，证明也在内；证明由机器检验，其余一切只经过 AI 的复审，迄今无人审查（[审查包](review/README.zh.md)）。
 
