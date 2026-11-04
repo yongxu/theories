@@ -58,8 +58,8 @@ EVID_02 = ("on MQ5's stocks one year ahead, against the field's fitted delay emb
            "T2's law")
 EVID_08 = ("UE32 found T2's numbers better than the field's fitted embedding by its frozen criterion, both behind "
            "persistence in most stocks, the embedding losing more with longer history: sufficiency against it at these "
-           "lengths, not the lag's place or T2's law (42 of 65 stocks, p = 0.025; expected: not separated)")
-QUOTE_08 = EVID_08[len('UE32 '):EVID_08.index(' (42 of 65')]
+           "lengths, not the lag's place or T2's law (better in 42 of 65 stocks, p = 0.025; expected: not separated)")
+QUOTE_08 = EVID_08[len('UE32 '):EVID_08.index(' (better in 42')]
 assert EVID_08.startswith('UE32 found ')
 
 L316 = '#316-fates-on-either-side-of-the-curve-in-the-plane-in-the-field-mq7)'
@@ -104,7 +104,7 @@ EDITS = {
          f'and C2 was not testable. [UE32]({RESULT_SCI}) Quote [theories/becoming/chapters/08-METHOD.md]: '
          f'"{QUOTE_08}". In yeast both chapters'),
         ("| of three on fish stocks, one passed its state verdict; a frozen test (UE31)",
-         "| of four on fish stocks, one passed its state verdict; in UE32 T2's numbers beat the field's embedding, "
+         "| of four on fish stocks, one passed its state verdict; UE32: T2's numbers beat the field's fitted embedding, "
          "both behind persistence in most stocks; a frozen test (UE31)"),
     ],
     MQREADME: [
@@ -123,8 +123,8 @@ EDITS = {
     ZH: [
         ("| 猜想；三项冻结的鱼类种群检验中一项通过；在渔业之外未经检验 |",
          "| 猜想；四项冻结的鱼类种群检验中，一项通过，一项未通过其状态裁决，一项未达其冻结界限；第四项中，按其冻结的判据，"
-         "水平、近来的给予与滞后这三个量对下一次给予的预报胜过该领域拟合的延迟嵌入，这显示它们相对于更长历史的充分性，"
-         "而非滞后的位置，但在多数种群中二者都不如直接沿用上一次的给予；在渔业之外未经检验 |"),
+         "水平、近来的给予与滞后这三个量对下一次给予的预报胜过该领域拟合的延迟嵌入，这是它们相对于更长历史之充分性的一个迹象，"
+         "而非滞后位置的迹象，但在多数种群中二者都不如直接沿用上一次的给予；在渔业之外未经检验 |"),
     ],
     EXPIDX: [
         (", and a test designed and frozen 3 Nov 2026 before any series was read by it, its download and run Ren's |",

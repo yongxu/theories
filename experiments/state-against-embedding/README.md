@@ -49,12 +49,19 @@ The verdict is the same in each reading reported beside it: with the embedding's
 | 3 | N plus three numbers | 9 | +0.340 | 1 |
 | 4 | N plus five numbers | 8 | +1.186 | 3 |
 
-Where F chose D ≥ 2, holding all of N's information and more, the median r is +0.200 (in the dry runs +0.11 under T2's law, +0.03 in the mixed world and −0.34 to −0.40 in the age worlds). Where it chose MQ4's smaller state, the two tie. The dry runs show the same growth wherever no age structure or second lag held (under T2's law, +0.45 and +0.75 at D = 3 and 4), so it shows what the longer history costs at these lengths, not that it carries nothing.
+Where F chose D ≥ 2, holding all of N's information and more, the median r is +0.200 (in the dry runs +0.11 under T2's law, +0.03 in the mixed world and −0.34 to −0.40 in the age worlds). Where it chose MQ4's smaller state, the two tie. The dry runs show the same growth in the five worlds with neither an age structure nor a second lag in any stock (under T2's law, +0.45 and +0.75 at D = 3 and 4), so it shows what the longer history costs at these lengths, not that it carries nothing.
 
 **What it means, as the design froze it (DESIGN §8).**
 - The three numbers named in advance forecast the next giving better than the field's fitted embedding of the same two series, on the field's own criterion. That is a prediction that could fail and did not, in the design's sense: in its dry runs the test failed T2 in 44.5% to 78% of the archives where every stock carried an age structure or a second lag.
 - It supports the three numbers' sufficiency against the series' longer history at these lengths. It does not support the lag's place in the state: in the dry runs "T2 better" also came where the giving reads only the level (24.5% of archives) or only itself (12%). Nor does it show T2's law, which is not fitted here.
-- It does not change [08's verdict](../../theories/becoming/chapters/08-METHOD.md#known-results) that what survives of the account is no discovery, though 08 names a prediction that could fail and does not among what would. What it bears out, three numbers holding their own against a longer embedding on about 20 training rows, is in large part what the field's own bound of about √N coordinates foresees (DESIGN §4; F at D ≥ 3 held 6 or 8 coordinates and lost most). In the dry runs it came also where the giving reads less than T2's state (24.5% of the regime's step's archives, against 33% under T2's law), and both states trailed persistence. Its sharpest part is F at D = 2, four coordinates, within that bound, losing in 16 of 22 stocks: one test, on assessment outputs.
+
+**Against 08's verdict on what is new** (read after the run, not frozen). 08 names a prediction that could fail and does not among what would change [its verdict](../../theories/becoming/chapters/08-METHOD.md#known-results) that what survives of the account is no discovery. This one does not change it.
+- Not failing was foreseen: the design expected "not separated" (§1).
+- What went past the expectation rests on the stocks where F went past the field's own bound of about √N coordinates (DESIGN §4). Over the 48 stocks where F chose D ≤ 2, within it, the test would say "not separated": median r +0.035, the three numbers better in 29 and F in 19, p = 0.19. The verdict needs the 17 where F chose 3 or 4 and held 6 or 8 coordinates (13 to 4, p = 0.049), and a loss there is in large part what that bound foresees.
+- Its sharpest part, F at D = 2 with four coordinates, within the bound, losing in 16 of 22 stocks, falls short of 0.05 on its own (p = 0.052), and is one test on assessment outputs.
+- In the dry runs "T2 better" came also where the giving reads less than T2's state (24.5% of the regime's step's archives, against 33% under T2's law), and both states trailed persistence.
+
+So it moves T2's evidence, not 08's verdict.
 
 **The answer expected was "not separated", and it was not borne out.** The design expected it from one model of MQ5's readings, the mixed world: a third of the stocks carrying an age structure's memory and the rest following T2's law. There the test said "not separated" in 94% of archives and "T2 better" in 6% (§1, §7). In the design's own terms, "T2 better" places the stocks "nearer a world whose state N holds than MQ5's readings do" (§1); under T2's law the test said it in 33% of archives.
 
@@ -62,12 +69,12 @@ The output does not show why the expectation missed. Read after the run, not fro
 - **The pairing with MQ5's S3**, reported as frozen, gives a gap, the median r below MQ5's bound less that at or above it, of −0.039: +0.134 over the 39 stocks below, +0.173 over the 26 at or above. That lies within the range of archives in both T2's world (−0.95 to 0.29) and the mixed world (−0.135 to 0.705), below the 0.3 beyond which §7 says the pairing would suggest a minority carrying memory. So it suggests no such minority, and cannot show one absent (§8).
 - **S3 flagged 26 of the 65 stocks** in sample, within the mixed world's 22 to 39 of 66 and above every archive of T2's world (6 to 14). So the in-sample excess stays unexplained by T2's world alone.
 
-The run is consistent with a minority of stocks whose memory does not pay its way out of sample at these lengths, an outcome the mixed world gave in 6% of its archives, and with an in-sample excess that does not carry out of sample. It does not tell them apart.
+The run is consistent with a minority of stocks whose memory does not pay its way out of sample at these lengths, as in the mixed world's archives that said "T2 better" (6%), and with an in-sample excess that does not carry out of sample. It does not tell them apart.
 
 **Beside the dry runs** (read after the run, not frozen). No one world of §7 reproduces the run's reported figures.
-- **On persistence** the run lies with the worlds where the giving reads less than T2's state, or carries an age structure. There the three numbers did worse than persistence in 81.5% of the stocks, their skill against it −0.85. In the MQ4, drifting and age worlds the figures were 78.8% to 89.4% and −0.90 to −1.86, against 50% and −0.01 in T2's own world and 62% and −0.40 in the mixed one.
+- **On persistence** the run lies with the MQ4, drifting and age worlds. In the run the three numbers did worse than persistence in 81.5% of the stocks, their skill against it −0.85; in those worlds, 78.8% to 89.4% and −0.90 to −1.86, against 50% and −0.01 in T2's own world, 62% and −0.40 in the mixed one and 42.5% and +0.19 in the level world.
 - **On the escapement alone** (median log ratio to the three numbers' error +0.71) and **the three numbers' skill against the training mean** (+0.23), it lies inside the ten worlds' spread (0.06 to 1.47, and 0.12 to 0.78) without pointing to any one of them.
-- **The run's median r of +0.163** lies within the range of the archives' medians in T2's world, the mixed one, MQ4's and the drifting one: up to +0.30, +0.31, +0.44 and +0.35.
+- **The run's median r of +0.163** lies within the range of the archives' medians in six worlds: T2's (up to +0.30), its noisy one (+0.24), the level world (+0.27), the drifting one (+0.35), MQ4's (+0.44) and the mixed one (+0.31).
 
 **Also reported.** The escapement alone, the regime's step's state, had a held-out error about twice the three numbers' in the median stock (median log ratio +0.71). That is one year ahead, not the five steps T2's second forbidden item reads. The three numbers were read linearly (θ = 0) in 26 of the 65 stocks.
 

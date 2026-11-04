@@ -1,6 +1,6 @@
 # UE32's run: the reader's findings and what was done with each
 
-4 November 2026. AI-written (a Claude Code session; no person has checked it). One reader other than the author, an independent AI reader, read the result and the changed texts against the run's output, the frozen design and the dry runs. It read only; it ran nothing but short reads of the output's figures. About eight minutes to read.
+4 November 2026. AI-written (a Claude Code session; no person has checked it). One reader other than the author, an independent AI reader, read the result and the changed texts against the run's output, the frozen design and the dry runs, twice: once the first text, then the fixes. It read only; it ran nothing but short reads of the output's figures and, in the second reading, a recount of r by the dimension the embedding chose. About eleven minutes to read.
 
 ## First reading
 
@@ -59,3 +59,34 @@ Apart from findings 3 and 5, every figure it checked matched the output.
 - The front's row gives the verdict with persistence beside it, and leaves the loss with D and the reach to S-15 and the homes.
 
 The hour now measures 6,500 words, 65.0 minutes at the slower rate. The whole measures 190.3 minutes, so its stated time is now 140 to 195, on the dossier and both review covers.
+
+## Second reading
+
+**What the reader read.**
+- **In full:** the diff of the fixes in the texts: the study section, READING-BUDGETS, this file, the experiments index, MQ's README, UE32's README, the overview's T2 rows in both editions, 02, 08, both review covers and the sciences dossier.
+- **Not read:** the scripts, the study's source text and the board's drafts.
+- **Checked:** the figures against `run-embed.json`, with a recount by the dimension F chose, against `dry-runs-embed.json` and against `probe-design.out`.
+
+Every finding of the first reading but those below it found taken as this file says. Every statement of the verdict carries the persistence caveat (the coordinator's first condition), and the Chinese row says nothing the English does not but item 8. The budget figures follow from the counts. The two words of S-15's addition the reader could not place are the quote's prefix, `Quote [path]:`, which the measure does not count.
+
+**Errors:**
+
+1. **The README's persistence bullet** set the run beside "the worlds where the giving reads less than T2's state". DESIGN §7 counts the level world among those, and its figures, worse than persistence in 42.5% of the stocks with skill +0.19, are far from the run's. The bullet's "There" also pointed at the worlds before the run's own figures. Taken: it now names the MQ4, drifting and age worlds, as the study does, gives the run's figures and then theirs, and sets the level world's beside T2's and the mixed one's. The study's comparison names the level world too.
+2. **The argument on 08's verdict sat under the frozen heading** "What it means, as the design froze it (DESIGN §8)". It was made after the run, and §8 says nothing of 08. The study's paragraph on it carried no label. Taken: in the README it has its own heading, marked read after the run, not frozen, and the study's label says the same.
+3. **"Within four worlds' ranges"** (first reading, item 5, and the README's median-r bullet). The run's +0.163 lies within six worlds' ranges: T2's noisy world's (up to +0.24) and the level world's (up to +0.27) as well. The author checked the ten worlds' ranges in `dry-runs-embed.json`. Taken: the README lists the six with their maxima.
+
+**On 08's verdict.** The reader found the argument sound and, if anything, understated. Its recount by the dimension F chose:
+- over the 48 stocks where F chose D ≤ 2, the median r is +0.035, the three numbers better in 29 and F in 19, p = 0.19: on those stocks alone the test would say "not separated";
+- so the verdict rests on the 17 where F held 6 or 8 coordinates;
+- at D = 2 alone, 16 of 22, p = 0.052.
+
+The author recounted from `run-embed.json` and found the same, and over the 17 stocks at D ≥ 3, 13 to 4, p = 0.049. Taken, in the README and the study, labelled read after the run: not failing was foreseen, since the design expected "not separated" (§1); what went past the expectation rests on the stocks where F went past the field's own bound of about √N coordinates; the D = 2 stocks fall short of 0.05 on their own. The landed clause says it in a sentence.
+
+**Improvements:**
+
+4. **"An outcome the mixed world gave in 6%".** The 6% is the share of "T2 better" verdicts, not a measure of memory failing to pay its way. Taken: "as in the mixed world's archives that said 'T2 better' (6%)".
+5. **"The same growth wherever no age structure or second lag held".** The mixed world does not show it (+0.16 at D = 3, +0.01 at D = 4). The reader proposed "in the six worlds with neither in any stock". The dry runs have five such worlds: T2's, its noisy one, the level, the drifting and MQ4's; each shows the growth. Taken with five, in the README and the study.
+6. **08's closing parenthesis** followed the reach and read as attached to it. Taken: "(better in 42 of 65 stocks, …)". S-15 does not quote it.
+7. **S-15 no longer says that the expected answer was "not separated".** Not taken. S-15 is on the sciences hour, which measures 6,500 words, 65.0 minutes at the slower rate, the edge of what it states. The expectation stands in the closing parenthesis of 08's row, which S-15 quotes up to it, and in the README and the study, to which the dossier links.
+8. **The Chinese row's "这显示……充分性"** is stronger than the English "a sign of". Taken: "这是……的一个迹象".
+9. **The sciences front's "beat the field's embedding"** may be read as the field's standard embedding. Taken by a trade within the hour: "UE32: T2's numbers beat the field's fitted embedding", where it said "in UE32 T2's numbers beat the field's embedding".
