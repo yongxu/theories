@@ -14,9 +14,10 @@
    answered, a call not in the plan, a record another provider or another tier served, the offline
    table's records dropped while the loops derived from them stay, a smoke folder, a log whose last
    line is cut short, cut inside a character or lacks its newline (refused until tr6_run.mend applies
-   FREEZE-1's note, then read as before), a catalog read cut short (mended with a read naming no
-   snapshot where calls ended after the last whole read, and with nothing where none did), and a line
-   holding a line separator; a response another provider or another tier served
+   FREEZE-1's note, then read as before), a cut line with lines written after it, a catalog read cut
+   short (mended with a read naming no snapshot, timed at the move), both files cut at once, a mend
+   stopped between its two writes and made again, a full disk under --parallel, and a line holding a
+   line separator; a response another provider or another tier served
    stops the run, logging nothing. Every stub response carries U+2028, U+2029 and U+0085 in a field no
    reader reads, so every log passes through this freeze's line writer with them. A run stopped before
    its loops, and one with a probe record dropped, are read as partial. A round's closing read
@@ -393,6 +394,32 @@ def faults(tmp, folder, m):
     finally:
         (folder / "calls.jsonl").write_text(text)
         (folder / "calls.jsonl.cut").unlink(missing_ok=True)
+    # both files cut at once, the cause given on two lines: mended in one call, the cut call and the calls
+    # after the last whole read unread, the note on one line; and a mend stopped after its .cut was written
+    # but before the log was, made again: the lines are not added to the .cut twice
+    cat0 = (folder / "catalog.jsonl").read_text()
+    try:
+        cl = cat0.split("\n")[:-1]
+        (folder / "catalog.jsonl").write_text("\n".join(cl[:-1] + [cl[-1][:len(cl[-1]) // 2]]))
+        (folder / "calls.jsonl").write_bytes(body + lines[-1][:len(lines[-1]) // 2].encode("utf-8"))
+        refuses = refused(load)
+        T.mend(folder, "the dry run:\nboth files cut")
+        mv = T.moved_lines(folder)
+        load()
+        out["both files cut, the cause on two lines: refused, then mended at once, each note on one line"] = \
+            refuses and [len(mv[n]["lines_moved"]) for n in ("calls.jsonl.cut", "catalog.jsonl.cut")] == [1, 1] and \
+            [len(mv[n]["notes"]) for n in ("calls.jsonl.cut", "catalog.jsonl.cut")] == [1, 1] and \
+            sum(s is None for _, s in R.catalog_reads(folder)) == 1
+        before_cut = (folder / "calls.jsonl.cut").read_bytes()
+        (folder / "calls.jsonl").write_bytes(body + lines[-1][:len(lines[-1]) // 2].encode("utf-8"))
+        T.mend(folder, "the dry run: made again")
+        out["a mend stopped between its two writes, made again: the moved line not added twice"] = \
+            (folder / "calls.jsonl.cut").read_bytes() == before_cut and (folder / "calls.jsonl").read_bytes() == body
+    finally:
+        (folder / "calls.jsonl").write_text(text)
+        (folder / "catalog.jsonl").write_text(cat0)
+        for n in ("calls.jsonl.cut", "catalog.jsonl.cut"):
+            (folder / n).unlink(missing_ok=True)
     # a catalog read cut short: refused; mended, a read naming no snapshot put in its place at the move's
     # time, later than every read and call, so that exactly the calls that ended after the last whole read
     # are no longer read (resume makes them again); and a cut read that follows a whole read with no call
@@ -458,6 +485,31 @@ def faults(tmp, folder, m):
         stopped and len(made) <= 4 + 4 and not raw_full.endswith(b"\n") and raw_full.count(b"\n") == 4 and \
         refused(lambda: T.log_whole(full)) and len(T.mend(full, "the dry run: a full disk")) == 1 and \
         len(R.logged(full)) == 4
+    # a response holding a high and a low surrogate as two code points, as a body of raw encoded
+    # surrogates decodes: no JSON line keeps them two, so the sink raises before it writes, and the run
+    # stops at that call with the log whole
+    class Paired(Stub):
+        def call(self, request, meta):
+            got = super().call(request, meta)
+            if self.n == 2:
+                got["response"]["choices"][0]["message"]["reasoning"] = chr(0xd83d) + chr(0xde00)
+            self.n += 1
+            return got
+    pf = dry_folder(tmp, "paired-" + folder.name)
+    st = Paired(lambda x: m.answer(x, 0))
+    st.n = 0
+    try:
+        T.rounds(pf, FAMILY, st, T.open_sink(pf)[0], R.SpendGuard(1.0, 10 ** 6), catalog=CATALOG)
+        stopped = False
+    except RuntimeError:
+        stopped = True
+    try:
+        T.log_whole(pf)
+        whole_pf = True
+    except SystemExit:
+        whole_pf = False
+    out["a response holding a surrogate pair as two code points: the run stops at that call, its record not "
+        "written, the log whole"] = stopped and whole_pf and len(R.logged(pf)) == 2
     # freeze 1's open_sink creates both files empty: a run stopped before any read or call is whole
     empty = dry_folder(tmp, "empty-" + folder.name)
     T.open_sink(empty)

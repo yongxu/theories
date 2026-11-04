@@ -207,19 +207,27 @@ def individual(seeds, dec):
 
 
 def replays(seeds, offline):
-    """Reported only: per arm, the share of loop answers from round 1 on, in the rounds read, that are the
-    member's own offline answer in the same presentation at the forecast published, over all of them and
-    over those where the five offline answers there are not all alike. At temperature 0 a prompt whose
-    difference from the table's request moves no answer gets that answer again, so arm A's share there
-    says whether its frame redraws a dissenting answer or replays it (FREEZE-6.md, section 5)."""
+    """Reported only: per arm, the share of loop answers from round 1 on that are the member's own
+    offline answer in the same presentation at the forecast published, read as the table counts them
+    (taking part, or not: a decline as staying out), over all of them and over those where the five
+    offline answers there are not all alike so read; an offline answer that is unreadable is skipped.
+    Each pair of seeds is read up to the rounds both reached, as V2 reads them. At temperature 0 a
+    prompt whose difference from the table's request moves no answer gets that answer again, so arm
+    A's share shows whether its frame redraws a dissenting answer or replays it (FREEZE-6.md, section
+    5); no verdict reads it. None where no such answer was read."""
+    def part(a):
+        return a == TAKE if a in READABLE else None
+    both = [min(len(sa["counts"]), len(sb["counts"])) for sa, sb in zip(seeds["A"], seeds["B"])]
     out = {}
     for a in ARMS:
         n = m = nd = md = 0
-        for s in seeds[a]:
-            for k in range(1, len(s["counts"])):
+        for s, upto in zip(seeds[a], both):
+            for k in range(1, upto):
                 for i, x in enumerate(s["answers"][k]):
-                    o = offline[(i, s["pubs"][k])]
-                    same, differ = x == o[s["variant"]], len(set(o)) > 1
+                    o = [part(y) for y in offline[(i, s["pubs"][k])]]
+                    if o[s["variant"]] is None:
+                        continue
+                    same, differ = part(x) == o[s["variant"]], len({y for y in o if y is not None}) > 1
                     n, m, nd, md = n + 1, m + same, nd + differ, md + (same and differ)
         out[a] = {"share": round(m / n, 4) if n else None, "answers": n,
                   "share_where_the_presentations_differ": round(md / nd, 4) if nd else None, "answers_there": nd}

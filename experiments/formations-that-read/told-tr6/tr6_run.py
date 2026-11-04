@@ -36,6 +36,7 @@ does it for a last line cut short.
 
 import argparse
 import json
+import os
 import random
 import re
 import sys
@@ -73,7 +74,10 @@ def line(rec):
     str.splitlines breaks at and JSON leaves raw written as their escapes, and a surrogate standing
     alone, which UTF-8 cannot encode, as its escape (a response escaped in UTF-16 can hold one, cut
     mid-character at its token limit). json.dumps writes them only inside strings, and every backslash
-    it writes is part of a whole escape, so the line loads as rec."""
+    it writes is part of a whole escape, so the line loads as rec. A high and a low surrogate side by
+    side, which a response body holding raw encoded surrogates decodes to, are left as they are: no
+    JSON line keeps them two code points, so the sink's encoding raises before it writes, and the run
+    stops at that call, as FREEZE-1's note says."""
     s = json.dumps(rec, ensure_ascii=False).replace("\u2028", "\\u2028").replace("\u2029", "\\u2029") \
         .replace("\x85", "\\u0085")
     return LONE.sub(lambda m: "\\u%04x" % ord(m.group()), s)
@@ -133,7 +137,7 @@ def mend(folder, cause):
     """FREEZE-1's note "A log cut short": in calls.jsonl and catalog.jsonl, the first line that does not
     read whole, or the last where the file does not end in a newline, and every line after it, are
     moved, byte for byte, to NAME.cut beside it, followed by one line beginning "# " that names the time
-    and the cause. With this freeze's line writer that is the last line alone. Where catalog lines move,
+    and the cause (on one line). With this freeze's line writer that is the last line alone. Where catalog lines move,
     a whole read naming no snapshot is put in their place, timed at the move, later than every read and
     every call: the calls that ended after the last whole read then lack a good closing read, and
     resume makes them again rather than the rerun's first read closing them. A moved call's record is no
@@ -152,8 +156,9 @@ def mend(folder, cause):
             try:
                 s = ln.decode("utf-8")
                 rec = json.loads(s)
-                assert isinstance(rec, dict) and (ends or k < len(lines) - 1)
-            except (ValueError, AssertionError):
+            except ValueError:
+                break
+            if not isinstance(rec, dict) or not (ends or k < len(lines) - 1):
                 break
             if any(c in s for c in "\u2028\u2029\x85"):
                 raise SystemExit(f"{p}: line {k + 1} holds a raw line separator; nothing changed, and the folder "
@@ -178,10 +183,20 @@ def mend(folder, cause):
         kept["catalog.jsonl"].append(line({"t": now, "family": family, "slug": None}).encode("utf-8"))
         done.append(f"catalog.jsonl: a read naming no snapshot put in their place, at t {now}")
     stamp = time.strftime("%Y-%m-%dT%H:%M:%S%z")
+    note = f"# cut {stamp}: {' '.join(cause.split())}\n".encode("utf-8")
     for name, c in cut.items():
-        with (folder / (name + ".cut")).open("ab") as fh:
-            fh.write(b"".join(ln + b"\n" for ln in c) + f"# cut {stamp}: {cause}\n".encode("utf-8"))
-        (folder / name).write_bytes(b"".join(ln + b"\n" for ln in kept[name]))
+        # the .cut first, then the log, each whole by a rename: a stop between leaves the lines in both,
+        # and a second mend, finding them already at the .cut's end before its note, does not add them again
+        moved, p, q = b"".join(ln + b"\n" for ln in c), folder / name, folder / (name + ".cut")
+        old = q.read_bytes() if q.exists() else b""
+        body, _, last = old.rstrip(b"\n").rpartition(b"\n")
+        if not (last.startswith(b"# cut ") and (body + b"\n").endswith(moved)):
+            tmp = folder / (name + ".cut.tmp")
+            tmp.write_bytes(old + moved + note)
+            os.replace(tmp, q)
+        tmp = folder / (name + ".tmp")
+        tmp.write_bytes(b"".join(ln + b"\n" for ln in kept[name]))
+        os.replace(tmp, p)
     log_whole(folder)
     for d in done:
         print(f"{folder}: {d}")

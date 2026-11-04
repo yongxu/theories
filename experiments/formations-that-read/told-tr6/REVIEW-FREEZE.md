@@ -97,3 +97,26 @@ It did not rerun the whole dry run or the chain checks, and could not check whet
 - A response holding a surrogate standing alone stops freeze 1's sink before it writes. TR6's writer escapes it, which loads as the same code point, and every stub response now carries one.
 
 The dry run plants each: a cut line with lines written after it, the catalog cases at the move's time, and the full disk under `--parallel` 4.
+
+## Round 4: the diff of round 3's fixes and the procedure beside it (518f1dc8c to 53b4c7063)
+
+Eight findings: no high, two medium, six low. The reader checked and found right:
+- `mend` against FREEZE-1's note, clause by clause, both its refusals included;
+- the read naming no snapshot timed at the move, against `bracketed`, `catalog_reads` and a later resume, in every case it built: a cut read after calls, after a whole read with no call between, under `--parallel` with calls in flight across a read and records logged out of order, both files cut, and a cut call with a whole line after it;
+- the writer's refusal after a failed write, and the bound of the calls in flight: 6 to 7 calls at `--parallel` 4, 7 to 11 at 8 and 5 to 9 at 16, each time with the cut line last;
+- that the escape keeps every lone surrogate's value, over 30,000 random records;
+- every new figure of sections 5 and 10 against the dry run, its 26 fault cases and its 21 code hashes;
+- T30 to T39 as this record says they were taken, and FREEZE-1's length.
+
+It did not rerun the whole dry run or the chain checks, and could not check how a provider encodes a response's bytes, or where a real model's replay share will fall.
+
+| Id | Severity | Finding | How it was taken |
+|---|---|---|---|
+| T40 | medium | Section 5 read V2 one way where arm A's replay share is "near 1", with no criterion fixed before the run, so which reading applies would be chosen after the data. Where no visited forecast has differing presentations the share is undefined, and the text did not say so. The best case's range was given as 0.75 to 0.80 for 0.746 to 0.821. | Taken the second way the reader gave: the share is a report with no verdict, and no reading of V2 is conditioned on it. Section 5 says why no line between replaying and redrawing is fixed (a public that remembers lowers arm B's share too), that the share is undefined there, and that the dry run's figures show what V2's outcomes can mean in either case. The first screen says the same, and the range is 0.75 to 0.82. |
+| T41 | medium | FREEZE-1's argument said the frozen code reads every whole log as frozen, though its own sink writes a separator its own readers split. FREEZE-3's citing note took the argument over. | Fixed: a write cut short is not a fault of the frozen code; a separator is one. Neither can be reached by an addendum, which may change only the client, the dry run and a pin's `served_as`, not the sink or the readers, and the rewrite keeps every value. |
+| T42 | low | A response body holding raw encoded surrogates decodes, through freeze 1's client, to a high and a low surrogate as two code points; `line()` leaves them, and the encoding raises before the write. | Stated in `line()`'s docstring, section 7 and FREEZE-1's note ("any surrogate"): the run stops at that call each time, as for freeze 1's sink, since no JSON line keeps the pair's value. The dry run plants it: the run stops at that call, its record unwritten, the log whole. |
+| T43 | low | "A full disk leaves only the last line cut" holds for `calls.jsonl` alone: `catalog.jsonl` is written by freeze 1's buffered note, and the closing read is made after a stop. | Fixed in section 7; the dry run now cuts both files at once and mends them in one call. |
+| T44 | low | The dry run's docstring still described the read naming no snapshot under the old condition. | Restated. |
+| T45 | low | `mend` let a cause holding a newline split its note line; a stop between appending to the `.cut` file and rewriting the log, then a second `mend`, would add the moved lines twice; and an `assert` carried control flow. | Fixed: the cause is joined onto one line; the `.cut` file is written first and the log second, each whole by a rename, and a second `mend` that finds the lines already at the `.cut`'s end before its note does not add them again; an explicit test replaces the `assert`. The dry run plants the two-line cause and the stopped `mend`. |
+| T46 | low | `replays` read each seed's own counted rounds, not V2's paired rounds, and compared raw answers, so a decline against a stay-out counted as differing presentations, and as not a replay. | Fixed: the pairs are read up to the rounds both reached, answers are compared as the table counts them, and an offline answer that is unreadable is skipped. |
+| T47 | low | The first part is 1,366 words, 11 to 14 minutes, not ten to thirteen; FREEZE-3's note still said "whose last line is cut short". | Fixed: "eleven to fourteen"; "with a line cut short". |
