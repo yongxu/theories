@@ -12,23 +12,26 @@ from pathlib import Path
 
 QUEUE = '- **Queue:** '
 HEAD = ("GT2 at the head of the queue (landing now: the Lean checker made fast, what it checks unchanged: the environment "
-        "audit in one pass, one plan and one runner for the checker, the fallible-inquiry checker and scratch_build, a lock "
-        "per step key, the machine's Lean slots, each step's seconds, the compiles from the prelude keyed by their inputs; "
-        "the fallible-inquiry receipt renewed; Python, documents and one periphery receipt, no Lean source, no record, "
-        "no core run); ")
-LANDED = ("GT2 landed (`{commit}`; Python, documents and the fallible-inquiry receipt: no Lean source, no record, no core "
-          "run; two readers, their fixes read again). The checker, the fallible-inquiry checker and `scratch_build.py` take "
-          "their steps from one plan and run each through one runner. The environment audit lists the constants once, its "
-          "output byte for byte the old one's on the core's 386 modules, in 27 s where it took 90. A step not in the cache "
-          "runs under its key's lock, so two runs of one tree compute it once, and every Lean process of the three takes "
-          "one of the machine's slots (`BECOMING_LEAN_SLOTS`). Each step's seconds are in the receipt. The 32 compiles "
-          "from the prelude whose inputs are their modules' are their modules' steps, and a scratch build's steps are the "
-          "checker's, so a landing reuses them. Run beside the old checker on one tree, it gave the same 29 receipt fields "
-          "and the same 1,544 steps. The fallible-inquiry receipt is renewed and passed. BoundaryModels' current bytes "
-          "cannot be bound by the pre-spine checker, which requires them as preserved on 6 October, so AA's E11 keeps its "
-          "fallback wording. The merged drivers were measured, about 20 s of a full run, and left, since kits read the "
-          "signature logs by name ([GATE.md §5.1](research/2026-10-05-repository-reconciliation/architecture/gt/GATE.md"
-          "#51-gt2-what-was-done-and-measured)); ")
+        "audit in one pass, one plan and one runner for the checker, the fallible-inquiry checker and scratch_build, the "
+        "runner in every step's key, a lock per step key, the machine's Lean slots, each step's seconds; its fresh core run "
+        "compared step by step with the old checker's results, the fallible-inquiry receipt renewed, eleven records "
+        "re-pointed; Python, documents and receipts, no Lean source, no record's law); ")
+LANDED = ("GT2 landed (`{commit}`; Python, documents and receipts: no Lean source and no record's law; core receipt "
+          "`20261104T201844.426739Z`, run fresh; eleven records re-pointed with `repoint.py`; readers on what is checked, "
+          "on concurrency and on the runner in the key, each round's fixes read again). The checker, the fallible-inquiry "
+          "checker and `scratch_build.py` take their steps from one plan and run each through one runner. Every step's key "
+          "holds a digest of that runner's code, so a change to what a step runs changes every key by itself, and each "
+          "cache entry names the runner that wrote it. The environment audit lists the constants once, its output byte for "
+          "byte the old one's on the core's 386 modules, in 27 s where it took 90. A step not in the cache runs under its "
+          "key's lock, so two runs of one tree compute it once, and every Lean process of the three takes one of the "
+          "machine's slots (`BECOMING_LEAN_SLOTS`). Each step's seconds are in the receipt, and a scratch build's steps "
+          "are the checker's, so a landing reuses them. The fresh run took 219 s, and every one of its 1,544 steps gave "
+          "the old checker's log and output digests. The fallible-inquiry receipt is renewed from it and passed. "
+          "BoundaryModels' current bytes cannot be bound by the pre-spine checker, which requires them as preserved on "
+          "6 October, so AA's E11 keeps its fallback wording. The merged drivers were measured, about 20 s of a full run, "
+          "and left, since kits read the signature logs by name. A periphery checker's search for its inherited receipts "
+          "(about 215 s for the fallible-inquiry checker) comes next ([GATE.md §5.1](research/2026-10-05-repository-"
+          "reconciliation/architecture/gt/GATE.md#51-gt2-what-was-done-and-measured)); ")
 ROW_START = '| **GT2: the Lean checker made fast, what it checks unchanged** ('
 ROW_TITLE_OLD = '| **GT2: the Lean checker made fast, what it checks unchanged** ('
 ROW_TITLE_NEW = '| **GT2: the Lean checker made fast, what it checks unchanged, done** ('

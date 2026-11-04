@@ -1,0 +1,15 @@
+check_fallible_inquiry.py under cProfile, 5 November 2026, every Lean step reused (BECOMING_OUT in the scratchpad).
+cProfile inflates wall time about two to four times here; the shares hold. Total under the profiler: 920 s.
+Cumulative seconds and share of the run, by function:
+   920.5  100.0%  ~:0 <built-in method builtins.exec>  (34 calls)
+   920.5  100.0%  check_fallible_inquiry.py:1 <module>  (1 calls)
+   919.5   99.9%  check_fallible_inquiry.py:75 main  (1 calls)
+   899.6   97.7%  check_becoming.py:4373 receipts_for  (41 calls)
+   899.6   97.7%  ~:0 <built-in method builtins.sorted>  (53 calls)
+   899.6   97.7%  check_becoming.py:4375 <genexpr>  (7381 calls)
+   899.5   97.7%  check_becoming.py:4341 binds  (53013 calls)
+   898.4   97.6%  check_becoming.py:4355 walk  (908379167 calls)
+   837.1   90.9%  ~:0 <built-in method builtins.any>  (382076130 calls)
+   823.7   89.5%  check_becoming.py:4357 <genexpr>  (432646684 calls)
+    77.3    8.4%  ~:0 <built-in method builtins.isinstance>  (1664965381 calls)
+    66.6    7.2%  check_becoming.py:4348 names  (32299452 calls)
