@@ -17,7 +17,7 @@ Live counts every file outside a `history/` folder, frozen run evidence included
 | `2026-10-05-concern-theory/` | — | 48 | `reward-association/ (13)` | 0 |
 | `2026-10-05-generative-foundation-review/` | — | 6818 | [foundation-assessment/ (105)](2026-10-05-generative-foundation-review/foundation-assessment/README.md) · [root-foundation/ (6713)](2026-10-05-generative-foundation-review/root-foundation/INDEX.md) | 4404 |
 | `2026-10-05-generative-health/` | — | 1 | `discovery/ (1)` | 0 |
-| `2026-10-05-repository-reconciliation/` | — | 356 | `architecture/ (338)` · `r19/ (3)` · `r20/ (4)` · [whole-repo-review-2026-10-16/ (8)](2026-10-05-repository-reconciliation/whole-repo-review-2026-10-16/README.md) | 0 |
+| `2026-10-05-repository-reconciliation/` | — | 373 | `architecture/ (355)` · `r19/ (3)` · `r20/ (4)` · [whole-repo-review-2026-10-16/ (8)](2026-10-05-repository-reconciliation/whole-repo-review-2026-10-16/README.md) | 0 |
 | `2026-10-05-revisable-concern/` | — | 3 | `settlement/ (3)` | 0 |
 | `2026-10-05-support-and-shared-generativity/` | — | 24 | `completion/ (24)` | 0 |
 

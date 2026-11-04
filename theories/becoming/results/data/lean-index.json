@@ -19,12 +19,12 @@
     "classification": "Path-based documentary roles; working-source is not a claim of accepted, complete, canonical or checked status. A file containing only #print axioms and no inventoried named declarations is an audit-driver."
   },
   "statistics": {
-    "lean_paths": 2303,
-    "distinct_byte_contents": 1852,
+    "lean_paths": 2306,
+    "distinct_byte_contents": 1855,
     "byte_identical_duplicate_groups": 182,
     "roles": {
       "audit-driver": 13,
-      "development-attempt": 1299,
+      "development-attempt": 1302,
       "historical-draft": 3,
       "imported-archive": 23,
       "working-source": 965
@@ -8315,6 +8315,39 @@
       "group": "other",
       "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
       "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-repository-reconciliation/architecture/gt/gt2/count-only.lean",
+      "sha256": "530e576c33925a24eb03c0b42e84eaee62eb44b1b6929ff60e67e526d14e59fd",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-repository-reconciliation/architecture/gt/gt2/README.md",
+      "direct_documentation_links_from": [
+        "_process/research/2026-10-05-repository-reconciliation/architecture/gt/gt2/README.md"
+      ],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-repository-reconciliation/architecture/gt/gt2/onepass.lean",
+      "sha256": "995c0419b33fbf490e3188ef168d0c1acd5e7812400c2fd6855658ccb8fb617a",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-repository-reconciliation/architecture/gt/gt2/README.md",
+      "direct_documentation_links_from": [
+        "_process/research/2026-10-05-repository-reconciliation/architecture/gt/gt2/README.md"
+      ],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-repository-reconciliation/architecture/gt/gt2/per-module.lean",
+      "sha256": "a938a42f9100e8f80b98d6a8116f23b3a54d8dbc35ee5c9b0fc8948447d3d8a1",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-repository-reconciliation/architecture/gt/gt2/README.md",
+      "direct_documentation_links_from": [
+        "_process/research/2026-10-05-repository-reconciliation/architecture/gt/gt2/README.md"
+      ],
       "proof_status": "not_assessed_by_catalogue"
     },
     {
@@ -199129,6 +199162,23 @@
       },
       "print_axioms_commands": 0
     },
+    "530e576c33925a24eb03c0b42e84eaee62eb44b1b6929ff60e67e526d14e59fd": {
+      "byte_size": 792,
+      "line_count": 22,
+      "imports": [
+        "Lean"
+      ],
+      "declarations": [],
+      "declaration_counts": {},
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
     "533a79ef770db2d5675f9f71a940223751740a73a17b40b1c70ec444841e3d46": {
       "byte_size": 37410,
       "line_count": 744,
@@ -346095,6 +346145,23 @@
       },
       "print_axioms_commands": 0
     },
+    "995c0419b33fbf490e3188ef168d0c1acd5e7812400c2fd6855658ccb8fb617a": {
+      "byte_size": 906,
+      "line_count": 23,
+      "imports": [
+        "Lean"
+      ],
+      "declarations": [],
+      "declaration_counts": {},
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
     "998bca3b8a24fd84c957e11b5b3cf9ef838fba5f76a432b0cbb35255a18c6aa3": {
       "byte_size": 17134,
       "line_count": 314,
@@ -377915,6 +377982,23 @@
         "def": 2,
         "theorem": 41
       },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
+    "a938a42f9100e8f80b98d6a8116f23b3a54d8dbc35ee5c9b0fc8948447d3d8a1": {
+      "byte_size": 529,
+      "line_count": 15,
+      "imports": [
+        "Lean"
+      ],
+      "declarations": [],
+      "declaration_counts": {},
       "textual_markers": {
         "sorry": [],
         "admit": [],
