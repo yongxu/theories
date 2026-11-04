@@ -1,0 +1,127 @@
+Becoming.Square.yy_entries : Becoming.Square.yy.Same fun i j =>
+  if ↑i + ↑j = 3 then if ↑i = 0 ∨ ↑i = 3 then -1 else 1 else 0
+Becoming.Square.obs_sq : ∀ (i j : Fin 3),
+  ((Becoming.Square.obs (i, j)).mul (Becoming.Square.obs (i, j))).Same Becoming.Square.Mat4.one
+Becoming.Square.row_commute : ∀ (i j j' : Fin 3),
+  ((Becoming.Square.obs (i, j)).mul (Becoming.Square.obs (i, j'))).Same
+    ((Becoming.Square.obs (i, j')).mul (Becoming.Square.obs (i, j)))
+Becoming.Square.column_commute : ∀ (j i i' : Fin 3),
+  ((Becoming.Square.obs (i, j)).mul (Becoming.Square.obs (i', j))).Same
+    ((Becoming.Square.obs (i', j)).mul (Becoming.Square.obs (i, j)))
+Becoming.Square.off_line_anticommute : ∀ (i j i' j' : Fin 3),
+  i ≠ i' →
+    j ≠ j' →
+      ((Becoming.Square.obs (i, j)).mul (Becoming.Square.obs (i', j'))).Same
+        ((Becoming.Square.obs (i', j')).mul (Becoming.Square.obs (i, j))).neg
+Becoming.Square.row_product : ∀ (i : Fin 3), (Becoming.Square.rowProduct i).Same Becoming.Square.Mat4.one
+Becoming.Square.column_product : ∀ (j : Fin 3),
+  (Becoming.Square.columnProduct j).Same
+    (if (↑j).beq 2 = true then Becoming.Square.Mat4.one.neg else Becoming.Square.Mat4.one)
+Becoming.Square.obs_signed : ∀ (i j : Fin 3) (k m : Fin 4),
+  Becoming.Square.obs (i, j) k m =
+    if Becoming.Square.src (i, j) k = m then Becoming.Square.sign (Becoming.Square.negAt (i, j) k) else 0
+Becoming.Square.int_neg_one_mul : ∀ (x : Int), -1 * x = -x
+Becoming.Square.sign_mul : ∀ (b : Bool) (x : Int), Becoming.Square.sign b * x = Becoming.Square.flip b x
+Becoming.Square.mulVec_signed : ∀ (A : Becoming.Square.Mat4) (v : Fin 4 → Int) (k j : Fin 4) (b : Bool),
+  (∀ (m : Fin 4), A k m = if j = m then Becoming.Square.sign b else 0) → A.mulVec v k = Becoming.Square.flip b (v j)
+Becoming.Square.mulVec_obs : ∀ (i j : Fin 3) (v : Fin 4 → Int) (k : Fin 4),
+  (Becoming.Square.obs (i, j)).mulVec v k = Becoming.Square.act (i, j) v k
+Becoming.Square.flip_flip : ∀ (a b : Bool) (x : Int),
+  Becoming.Square.flip a (Becoming.Square.flip b x) = Becoming.Square.flip (a ^^ b) x
+Becoming.Square.flip_comm : ∀ (a b : Bool) (x : Int),
+  Becoming.Square.flip a (Becoming.Square.flip b x) = Becoming.Square.flip b (Becoming.Square.flip a x)
+Becoming.Square.eq_zero_of_neg_eq : ∀ (x : Int), -x = x → x = 0
+@Becoming.Square.flip_cancel : ∀ {a b : Bool} {x : Int},
+  Becoming.Square.flip a x = Becoming.Square.flip b x → a ≠ b → x = 0
+@Becoming.Square.Shows.act : ∀ {v : Fin 4 → Int} {i j : Fin 3} {b : Bool},
+  Becoming.Square.Shows v (i, j) b → ∀ (k : Fin 4), Becoming.Square.act (i, j) v k = Becoming.Square.flip b (v k)
+Becoming.Square.act_three : ∀ (c₀ c₁ c₂ : Becoming.Square.Cell) (v : Fin 4 → Int) (k : Fin 4),
+  Becoming.Square.act c₀ (Becoming.Square.act c₁ (Becoming.Square.act c₂ v)) k =
+    Becoming.Square.flip
+      (Becoming.Square.negAt c₀ k ^^ Becoming.Square.negAt c₁ (Becoming.Square.src c₀ k) ^^
+        Becoming.Square.negAt c₂ (Becoming.Square.src c₁ (Becoming.Square.src c₀ k)))
+      (v (Becoming.Square.src c₂ (Becoming.Square.src c₁ (Becoming.Square.src c₀ k))))
+Becoming.Square.row_signed : ∀ (i : Fin 3) (k : Fin 4),
+  Becoming.Square.src (i, Becoming.Square.i2)
+        (Becoming.Square.src (i, Becoming.Square.i1) (Becoming.Square.src (i, Becoming.Square.i0) k)) =
+      k ∧
+    (Becoming.Square.negAt (i, Becoming.Square.i0) k ^^
+          Becoming.Square.negAt (i, Becoming.Square.i1) (Becoming.Square.src (i, Becoming.Square.i0) k) ^^
+        Becoming.Square.negAt (i, Becoming.Square.i2)
+          (Becoming.Square.src (i, Becoming.Square.i1) (Becoming.Square.src (i, Becoming.Square.i0) k))) =
+      false
+Becoming.Square.column_signed : ∀ (j : Fin 3) (k : Fin 4),
+  Becoming.Square.src (Becoming.Square.i2, j)
+        (Becoming.Square.src (Becoming.Square.i1, j) (Becoming.Square.src (Becoming.Square.i0, j) k)) =
+      k ∧
+    (Becoming.Square.negAt (Becoming.Square.i0, j) k ^^
+          Becoming.Square.negAt (Becoming.Square.i1, j) (Becoming.Square.src (Becoming.Square.i0, j) k) ^^
+        Becoming.Square.negAt (Becoming.Square.i2, j)
+          (Becoming.Square.src (Becoming.Square.i1, j) (Becoming.Square.src (Becoming.Square.i0, j) k))) =
+      (↑j).beq 2
+Becoming.Square.act_congr : ∀ (c : Becoming.Square.Cell) {u v : Fin 4 → Int} {b : Bool},
+  (∀ (m : Fin 4), u m = Becoming.Square.flip b (v m)) →
+    ∀ (k : Fin 4), Becoming.Square.act c u k = Becoming.Square.flip b (Becoming.Square.act c v k)
+@Becoming.Square.shows_three : ∀ {v : Fin 4 → Int} {c₀ c₁ c₂ : Becoming.Square.Cell} {b₀ b₁ b₂ : Bool},
+  (∀ (k : Fin 4), Becoming.Square.act c₀ v k = Becoming.Square.flip b₀ (v k)) →
+    (∀ (k : Fin 4), Becoming.Square.act c₁ v k = Becoming.Square.flip b₁ (v k)) →
+      (∀ (k : Fin 4), Becoming.Square.act c₂ v k = Becoming.Square.flip b₂ (v k)) →
+        ∀ (k : Fin 4),
+          Becoming.Square.act c₀ (Becoming.Square.act c₁ (Becoming.Square.act c₂ v)) k =
+            Becoming.Square.flip (b₀ ^^ (b₁ ^^ b₂)) (v k)
+@Becoming.Square.row_parity : ∀ {v : Fin 4 → Int} {i : Fin 3} {b₀ b₁ b₂ : Bool},
+  (¬∀ (k : Fin 4), v k = 0) →
+    Becoming.Square.Shows v (i, Becoming.Square.i0) b₀ →
+      Becoming.Square.Shows v (i, Becoming.Square.i1) b₁ →
+        Becoming.Square.Shows v (i, Becoming.Square.i2) b₂ → (b₀ ^^ (b₁ ^^ b₂)) = false
+@Becoming.Square.column_parity : ∀ {v : Fin 4 → Int} {j : Fin 3} {b₀ b₁ b₂ : Bool},
+  (¬∀ (k : Fin 4), v k = 0) →
+    Becoming.Square.Shows v (Becoming.Square.i0, j) b₀ →
+      Becoming.Square.Shows v (Becoming.Square.i1, j) b₁ →
+        Becoming.Square.Shows v (Becoming.Square.i2, j) b₂ → (b₀ ^^ (b₁ ^^ b₂)) = (↑j).beq 2
+Becoming.Square.row_realized : ∀ (i : Fin 3) (b₀ b₁ : Bool),
+  (¬∀ (k : Fin 4), Becoming.Square.rowWitness i b₀ b₁ k = 0) ∧
+    Becoming.Square.Shows (Becoming.Square.rowWitness i b₀ b₁) (i, Becoming.Square.i0) b₀ ∧
+      Becoming.Square.Shows (Becoming.Square.rowWitness i b₀ b₁) (i, Becoming.Square.i1) b₁ ∧
+        Becoming.Square.Shows (Becoming.Square.rowWitness i b₀ b₁) (i, Becoming.Square.i2)
+          (Becoming.Square.parity b₀ b₁ false)
+Becoming.Square.column_realized : ∀ (j : Fin 3) (b₀ b₁ : Bool),
+  (¬∀ (k : Fin 4), Becoming.Square.columnWitness j b₀ b₁ k = 0) ∧
+    Becoming.Square.Shows (Becoming.Square.columnWitness j b₀ b₁) (Becoming.Square.i0, j) b₀ ∧
+      Becoming.Square.Shows (Becoming.Square.columnWitness j b₀ b₁) (Becoming.Square.i1, j) b₁ ∧
+        Becoming.Square.Shows (Becoming.Square.columnWitness j b₀ b₁) (Becoming.Square.i2, j)
+          (Becoming.Square.parity b₀ b₁ ((↑j).beq 2))
+Becoming.Square.line_product : ∀ (l : Becoming.Square.Line),
+  (Becoming.Square.lineProduct l).Same
+    (if Becoming.Square.odd l = true then Becoming.Square.Mat4.one.neg else Becoming.Square.Mat4.one)
+Becoming.Square.line_commute : ∀ (l : Becoming.Square.Line) (q q' : Fin 3),
+  ((Becoming.Square.obs (Becoming.Square.at_ l q)).mul (Becoming.Square.obs (Becoming.Square.at_ l q'))).Same
+    ((Becoming.Square.obs (Becoming.Square.at_ l q')).mul (Becoming.Square.obs (Becoming.Square.at_ l q)))
+@Becoming.Square.line_parity : ∀ {v : Fin 4 → Int} {l : Becoming.Square.Line} {b₀ b₁ b₂ : Bool},
+  (¬∀ (k : Fin 4), v k = 0) →
+    Becoming.Square.Shows v (Becoming.Square.at_ l Becoming.Square.i0) b₀ →
+      Becoming.Square.Shows v (Becoming.Square.at_ l Becoming.Square.i1) b₁ →
+        Becoming.Square.Shows v (Becoming.Square.at_ l Becoming.Square.i2) b₂ →
+          Becoming.Square.parity b₀ b₁ b₂ = Becoming.Square.odd l
+@Becoming.Square.shows_support : ∀ {v : Fin 4 → Int} {l : Becoming.Square.Line} {f : Becoming.Square.Cell → Bool},
+  (¬∀ (k : Fin 4), v k = 0) →
+    (∀ (q : Fin 3), Becoming.Square.Shows v (Becoming.Square.at_ l q) (f (Becoming.Square.at_ l q))) →
+      Becoming.Square.support l f
+Becoming.Square.line_realized : ∀ (l : Becoming.Square.Line) (b₀ b₁ : Bool),
+  (¬∀ (k : Fin 4), Becoming.Square.lineWitness l b₀ b₁ k = 0) ∧
+    Becoming.Square.Shows (Becoming.Square.lineWitness l b₀ b₁) (Becoming.Square.at_ l Becoming.Square.i0) b₀ ∧
+      Becoming.Square.Shows (Becoming.Square.lineWitness l b₀ b₁) (Becoming.Square.at_ l Becoming.Square.i1) b₁ ∧
+        Becoming.Square.Shows (Becoming.Square.lineWitness l b₀ b₁) (Becoming.Square.at_ l Becoming.Square.i2)
+          (Becoming.Square.parity b₀ b₁ (Becoming.Square.odd l))
+Becoming.Square.parity_third : ∀ (a b c d : Bool), Becoming.Square.parity a b c = d → c = Becoming.Square.parity a b d
+Becoming.Square.three : ∀ (q : Fin 3), q = Becoming.Square.i0 ∨ q = Becoming.Square.i1 ∨ q = Becoming.Square.i2
+@Becoming.Square.support_shown : ∀ {l : Becoming.Square.Line} {f : Becoming.Square.Cell → Bool},
+  Becoming.Square.support l f →
+    ∃ v,
+      (¬∀ (k : Fin 4), v k = 0) ∧
+        ∀ (q : Fin 3), Becoming.Square.Shows v (Becoming.Square.at_ l q) (f (Becoming.Square.at_ l q))
+Becoming.Square.no_context_free_values : ¬∃ f,
+    ∀ (l : Becoming.Square.Line),
+      ∃ v,
+        (¬∀ (k : Fin 4), v k = 0) ∧
+          ∀ (q : Fin 3), Becoming.Square.Shows v (Becoming.Square.at_ l q) (f (Becoming.Square.at_ l q))

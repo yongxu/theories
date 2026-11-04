@@ -9,23 +9,24 @@ TREE holds the modules a session changed or added, at their package paths
 MODULE names the modules to build and audit; by default every module in TREE.
 
 The import closure is compiled in dependency order with the checker's Lean (`LEAN`, else
-`elan which lean` in the package folder, else elan's default path), toolchain
-and step keys (`check_becoming.step_key`), steps running concurrently as in the checker
-(`BECOMING_JOBS`). A step whose inputs match a step that passed is restored from the
-shared cache instead of run; a step that passes (exit 0, no error or warning) is stored
-there, so the landing run and other sessions reuse it. Each named module's declarations
-are audited, once it is compiled, with the checker's own `#print axioms` driver, cached
-the same way; loading `import Lean` for an audit is left to the checker's environment
-audit. This is a working build, not a receipt: nothing is retained, and the environment
-audit, the controls and the prelude-only compile of the core run only in the checker.
-Writes only into TREE/.build and the cache.
+`elan which lean` in the package folder, else elan's default path), toolchain and steps:
+they come from the checker's own plan (`check_becoming.lean_plan`) and run through its
+runner (`check_becoming.lean_step`), concurrently as in the checker (`BECOMING_JOBS`), each
+Lean process in one of the machine's slots. A step whose inputs match a step that passed is
+restored from the shared cache instead of run; a step that passes (exit 0, no error or
+warning) is stored there, so the landing run and other sessions reuse it. Each named module,
+once compiled, has its declarations' axioms printed and, if the checker checks it, its
+theorems' statements; a named module of the core closure is compiled again from Lean's
+prelude with the modules it imports, as the checker does. Every such step is the checker's
+own, so the checker reuses it. This is a working build, not a receipt: nothing is retained,
+and the environment audit and the controls run only in the checker. Writes only into
+TREE/.build and the cache.
 """
 from datetime import datetime, timezone
 import json
 import os
 from pathlib import Path
 import re
-import subprocess
 import sys
 import threading
 
@@ -68,74 +69,54 @@ def main():
     build = tree / ".build"
     origin = {"utc": datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S.%fZ"),
               "retained": "scratch build, not retained: " + str(tree)}
-    report = {"tree": str(tree), "modules": len(order), "ran": [], "reused": 0, "unclean": [], "audits": {}}
+    report = {"tree": str(tree), "modules": len(order), "ran": [], "reused": 0, "unclean": [], "audits": {},
+              "seconds": {}}
+    registries = {name: cb.declarations(sources[name]) for name in targets}
+    # Named modules the checker's core closure holds (with TREE's modules in place) are compiled from the
+    # prelude too, each with the modules it imports.
+    core = set(cb.closure(index, cb.CORE))
+    plan, files = cb.lean_plan(context, sources, keys, registries, order, audited=targets,
+                               signed=[name for name in targets if name in cb.CHECKED],
+                               prelude=cb.closure(index, [name for name in targets if name in core]))
+    labels = [step.log[:-4] for step in plan]
 
     lock = threading.Lock()
-
-    def step(args, label, key, outputs=()):
-        """Restore a passed step or run it; store it when it passes. Returns the log, or
-        None where Lean failed."""
-        found = cb.reuse(key, [build / output for output in outputs])
-        if found:
-            with lock:
-                report["reused"] += 1
-            return found[0]
-        p = subprocess.run(command + args, cwd=build, env={**os.environ, "LEAN_PATH": str(build)},
-                           text=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, timeout=TIMEOUT)
-        with lock:
-            report["ran"].append(label)
-        if p.returncode != 0:
-            with lock:
-                print(p.stdout[-8000:], file=sys.stderr)
-            return None
-        if re.search(r"\b(?:error|warning):", p.stdout):
-            with lock:
-                report["unclean"].append(label)
-                print(p.stdout[-8000:], file=sys.stderr)
-        else:
-            cb.store(key, [build / output for output in outputs], p.stdout, origin)
-        return p.stdout
 
     class Failed(Exception):
         pass
 
-    def checked(args, label, key, outputs=()):
+    def checked(step):
+        """Restore a passed step or run it; a step that fails stops the build, one with an error or
+        warning in its log is reported and not stored."""
         def action():
-            output = step(args, label, key, outputs)
-            if output is None:
-                raise Failed(label)
-            return output
+            label = step.log[:-4]
+            outcome = cb.lean_step(command, step, build, origin, TIMEOUT)
+            with lock:
+                if outcome.reused_from:
+                    report["reused"] += 1
+                    return outcome.output
+                report["ran"].append(label)
+                report["seconds"][label] = outcome.seconds
+                if not outcome.passed:
+                    print(outcome.output[-8000:], file=sys.stderr)
+                if outcome.returncode != 0:
+                    raise Failed(label)
+                if not outcome.passed:
+                    report["unclean"].append(label)
+            return outcome.output
         return action
 
-    for name, data in sources.items():
-        target = build / cb.source_file(name)
-        target.parent.mkdir(parents=True, exist_ok=True)
-        if not target.is_file() or target.read_bytes() != data:
-            target.write_bytes(data)
-    # Steps run concurrently as in the checker (`BECOMING_JOBS`), each once the compiles of
-    # the modules it imports have passed; an audit waits for its module's compile.
-    tasks, labels, registries = {}, [], {}
-    for name in order:
-        olean = cb.source_file(name)[:-5] + ".olean"
-        tasks["compile " + name] = (["compile " + m for m in cb.imports_of(sources[name]) if m in keys],
-                                    checked(["-o", olean, cb.source_file(name)], name, keys[name], [olean]))
-        labels.append(name)
-    for name in targets:
-        flat = name.replace(".", "")
-        registries[name] = cb.declarations(sources[name])
-        audit = "import " + name + "\n" + "\n".join(
-            "#print axioms " + item["name"] for item in registries[name]) + "\n"
-        (build / (flat + "AxiomAudit.lean")).write_text(audit)
-        tasks["audit " + name] = (["compile " + name],
-                                  checked([flat + "AxiomAudit.lean"], flat + "AxiomAudit",
-                                          cb.step_key(context, flat + "AxiomAudit.lean", audit.encode(), keys)))
-        labels.append(flat + "AxiomAudit")
+    cb.write_files(build, files)
+    # Steps run concurrently as in the checker (`BECOMING_JOBS`), each once the compiles of the
+    # modules it imports have passed; an audit waits for its module's compile.
+    tasks = {step.task: (step.needs, checked(step)) for step in plan}
     try:
         outputs = cb.run_graph(tasks)
     except Failed as failure:
         report["failed"] = str(failure)
     report["ran"].sort(key=labels.index)
     report["unclean"].sort(key=labels.index)
+    report["seconds"] = {label: report["seconds"][label] for label in report["ran"]}
     if "failed" in report:
         print(json.dumps(report, ensure_ascii=False, indent=2))
         return 1

@@ -1,0 +1,293 @@
+Becoming.Rooms.alike_class : Becoming.«类» Becoming.Rooms.alike
+Becoming.Rooms.next_rest : ∀ (m c : Nat), Becoming.Rooms.next m c m m = m
+Becoming.Rooms.warms_open : ∀ (n c : Nat), Becoming.Rooms.next (n + 1) c 0 (n + 1) = n + c
+Becoming.Rooms.rest_step : ∀ (m c : Nat), Becoming.Rooms.net m c (Becoming.Rooms.start m) (Becoming.Rooms.start m)
+Becoming.Rooms.opens : ∀ (m c : Nat) (x : Becoming.Rooms.Occurrence),
+  Becoming.Rooms.net m c x { opened := true, level := Becoming.Rooms.next m c 0 x.level }
+@Becoming.Rooms.net_open : ∀ {m c l : Nat} {y : Becoming.Rooms.Occurrence},
+  Becoming.Rooms.net m c { opened := true, level := l } y → y = { opened := true, level := Becoming.Rooms.next m c 0 l }
+@Becoming.Rooms.net_shut : ∀ {m c l : Nat} {y : Becoming.Rooms.Occurrence},
+  Becoming.Rooms.net m c { opened := false, level := l } y →
+    y = { opened := false, level := Becoming.Rooms.next m c m l } ∨
+      y = { opened := true, level := Becoming.Rooms.next m c 0 l }
+@Becoming.Rooms.shut_start : ∀ {m c : Nat} {y : Becoming.Rooms.Occurrence},
+  Becoming.Rooms.shut m c (Becoming.Rooms.start m) y → y = Becoming.Rooms.start m
+@Becoming.Rooms.begins_open : ∀ {m c l : Nat},
+  Becoming.Rooms.next m c 0 l ≠ l →
+    Becoming.«生» (Becoming.Rooms.net m c) Becoming.Rooms.sameLevel { opened := true, level := l }
+Becoming.Rooms.not_begins_start : ∀ (m c : Nat),
+  ¬Becoming.«生» (Becoming.Rooms.net m c) Becoming.Rooms.sameLevel (Becoming.Rooms.start m)
+@Becoming.Rooms.warm_of_pos : ∀ {x : Becoming.Rooms.Occurrence}, 0 < x.level → Becoming.Rooms.warm x = true
+@Becoming.Rooms.warm_of_level : ∀ {x y : Becoming.Rooms.Occurrence},
+  x.level = y.level → Becoming.Rooms.warm x = Becoming.Rooms.warm y
+@Becoming.Rooms.next_pos : ∀ {m c : Nat}, 1 ≤ m → 1 ≤ c → ∀ (σ x : Nat), 0 < Becoming.Rooms.next m c σ x
+@Becoming.Rooms.heated_warm : ∀ {m c : Nat},
+  1 ≤ m → 1 ≤ c → ∀ {x y : Becoming.Rooms.Occurrence}, Becoming.Rooms.net m c x y → Becoming.Rooms.warm y = true
+Becoming.Rooms.exchange_ge : ∀ (σ x : Nat), x - 1 ≤ Becoming.Rooms.exchange σ x
+Becoming.Rooms.heater_zero : ∀ (m z : Nat), Becoming.Rooms.heater m 0 z = 0
+Becoming.Rooms.next_zero : ∀ (m σ x : Nat), Becoming.Rooms.next m 0 σ x = Becoming.Rooms.exchange σ x
+Becoming.Rooms.cools : ∀ (m : Nat) (b : Bool) (l : Nat),
+  Becoming.Rooms.net m 0 { opened := b, level := l + 1 } { opened := true, level := l }
+Becoming.Rooms.cold_after : ∀ (m : Nat),
+  Becoming.«亡» (Becoming.Rooms.net m 0) Becoming.Rooms.alike { opened := true, level := 1 }
+@Becoming.Rooms.cold_step : ∀ {m : Nat} {y : Becoming.Rooms.Occurrence},
+  Becoming.Rooms.net m 0 { opened := true, level := 0 } y → y = { opened := true, level := 0 }
+Becoming.Rooms.Unheated.s3_b2 : Becoming.Rooms.net 3 0 (Becoming.Rooms.start 3) Becoming.Rooms.Unheated.b2
+Becoming.Rooms.Unheated.b2_b1 : Becoming.Rooms.net 3 0 Becoming.Rooms.Unheated.b2 Becoming.Rooms.Unheated.b1
+Becoming.Rooms.Unheated.b1_b0 : Becoming.Rooms.net 3 0 Becoming.Rooms.Unheated.b1 Becoming.Rooms.Unheated.b0
+Becoming.Rooms.Unheated.begins_b2 : Becoming.«生» (Becoming.Rooms.net 3 0) Becoming.Rooms.sameLevel
+  Becoming.Rooms.Unheated.b2
+Becoming.Rooms.Unheated.begins_b1 : Becoming.«生» (Becoming.Rooms.net 3 0) Becoming.Rooms.sameLevel
+  Becoming.Rooms.Unheated.b1
+Becoming.Rooms.Unheated.b1_ends : Becoming.«亡» (Becoming.Rooms.net 3 0) Becoming.Rooms.alike Becoming.Rooms.Unheated.b1
+Becoming.Rooms.Unheated.closed : Becoming.«闭» (Becoming.«续» (Becoming.Rooms.net 3 0) Becoming.Rooms.alike) fun y =>
+  y = Becoming.Rooms.start 3 ∨ y = Becoming.Rooms.Unheated.b2 ∨ y = Becoming.Rooms.Unheated.b1
+@Becoming.Rooms.Unheated.reach : ∀ {y : Becoming.Rooms.Occurrence},
+  Becoming.«所及» (Becoming.Rooms.net 3 0) Becoming.Rooms.alike (Becoming.Rooms.start 3) y →
+    y = Becoming.Rooms.start 3 ∨ y = Becoming.Rooms.Unheated.b2 ∨ y = Becoming.Rooms.Unheated.b1
+Becoming.Rooms.Unheated.keeps : Becoming.«守» (Becoming.Rooms.net 3 0) Becoming.Rooms.alike Becoming.Rooms.sameLevel
+  (Becoming.Rooms.start 3)
+Becoming.Rooms.Unheated.ends : Becoming.«有终» (Becoming.Rooms.net 3 0) Becoming.Rooms.alike (Becoming.Rooms.start 3)
+Becoming.Rooms.Unheated.not_generates : ¬Becoming.«生成» (Becoming.Rooms.net 3 0) Becoming.Rooms.alike
+    Becoming.Rooms.sameLevel (Becoming.Rooms.start 3)
+Becoming.Rooms.Unheated.ends_b1 : Becoming.«尽» (Becoming.Rooms.net 3 0) Becoming.Rooms.alike Becoming.Rooms.Unheated.b1
+Becoming.Rooms.Unheated.ends_b2 : Becoming.«尽» (Becoming.Rooms.net 3 0) Becoming.Rooms.alike Becoming.Rooms.Unheated.b2
+Becoming.Rooms.Unheated.rows : ¬Becoming.«全生成» (Becoming.Rooms.net 3 0) Becoming.Rooms.alike Becoming.Rooms.sameLevel
+      (Becoming.Rooms.start 3) ∧
+  ¬Becoming.«全守» (Becoming.Rooms.net 3 0) Becoming.Rooms.alike Becoming.Rooms.sameLevel (Becoming.Rooms.start 3) ∧
+    Becoming.«后守» (Becoming.Rooms.net 3 0) Becoming.Rooms.alike Becoming.Rooms.sameLevel (Becoming.Rooms.start 3) ∧
+      ¬Becoming.«有常» (Becoming.Rooms.net 3 0) Becoming.Rooms.alike ∧
+        ¬Becoming.«生成» (Becoming.Rooms.net 3 0) Becoming.Rooms.alike Becoming.Rooms.sameLevel
+              Becoming.Rooms.Unheated.b2 ∧
+          ¬Becoming.«守» (Becoming.Rooms.net 3 0) Becoming.Rooms.alike Becoming.Rooms.sameLevel
+                Becoming.Rooms.Unheated.b2 ∧
+            ¬Becoming.«后守» (Becoming.Rooms.net 3 0) Becoming.Rooms.alike Becoming.Rooms.sameLevel
+                  Becoming.Rooms.Unheated.b2 ∧
+              ¬Becoming.«全生成» (Becoming.Rooms.net 3 0) Becoming.Rooms.alike Becoming.Rooms.sameLevel
+                    Becoming.Rooms.Unheated.b2 ∧
+                ¬Becoming.«全守» (Becoming.Rooms.net 3 0) Becoming.Rooms.alike Becoming.Rooms.sameLevel
+                      Becoming.Rooms.Unheated.b2 ∧
+                  Becoming.«有终» (Becoming.Rooms.net 3 0) Becoming.Rooms.alike Becoming.Rooms.Unheated.b2
+Becoming.Rooms.«平衡守而有终» : Becoming.«守» (Becoming.Rooms.net 3 0) Becoming.Rooms.alike Becoming.Rooms.sameLevel
+    (Becoming.Rooms.start 3) ∧
+  Becoming.«有终» (Becoming.Rooms.net 3 0) Becoming.Rooms.alike (Becoming.Rooms.start 3) ∧
+    Becoming.«新而有终» (Becoming.Rooms.net 3 0) Becoming.Rooms.alike Becoming.Rooms.sameLevel (Becoming.Rooms.start 3) ∧
+      ¬Becoming.«生成» (Becoming.Rooms.net 3 0) Becoming.Rooms.alike Becoming.Rooms.sameLevel (Becoming.Rooms.start 3) ∧
+        ¬Becoming.«退化» (Becoming.Rooms.net 3 0) Becoming.Rooms.alike (Becoming.Rooms.start 3)
+Becoming.Rooms.«开窗则平衡新而尽» : Becoming.«退化» (Becoming.Rooms.net 3 0) Becoming.Rooms.alike Becoming.Rooms.Unheated.b2 ∧
+  Becoming.«新而尽» (Becoming.Rooms.net 3 0) Becoming.Rooms.alike Becoming.Rooms.sameLevel Becoming.Rooms.Unheated.b2
+@Becoming.Rooms.Matched.open_rest : ∀ {m : Nat}, 1 ≤ m → Becoming.Rooms.next m 1 0 m = m
+@Becoming.Rooms.Matched.start_kept : ∀ {m : Nat},
+  1 ≤ m → Becoming.Rooms.net m 1 (Becoming.Rooms.start m) (Becoming.Rooms.Matched.kept m)
+@Becoming.Rooms.Matched.kept_kept : ∀ {m : Nat},
+  1 ≤ m → Becoming.Rooms.net m 1 (Becoming.Rooms.Matched.kept m) (Becoming.Rooms.Matched.kept m)
+@Becoming.Rooms.Matched.not_begins_kept : ∀ {m : Nat},
+  1 ≤ m → ¬Becoming.«生» (Becoming.Rooms.net m 1) Becoming.Rooms.sameLevel (Becoming.Rooms.Matched.kept m)
+@Becoming.Rooms.Matched.closed : ∀ {m : Nat},
+  1 ≤ m → Becoming.«闭» (Becoming.Rooms.net m 1) fun y => y = Becoming.Rooms.start m ∨ y = Becoming.Rooms.Matched.kept m
+@Becoming.Rooms.Matched.reach : ∀ {m : Nat},
+  1 ≤ m →
+    ∀ {x y : Becoming.Rooms.Occurrence},
+      x = Becoming.Rooms.start m ∨ x = Becoming.Rooms.Matched.kept m →
+        Becoming.«所及» (Becoming.Rooms.net m 1) Becoming.Rooms.alike x y →
+          y = Becoming.Rooms.start m ∨ y = Becoming.Rooms.Matched.kept m
+@Becoming.Rooms.Matched.no_renewal : ∀ {m : Nat},
+  1 ≤ m →
+    ∀ {x z w : Becoming.Rooms.Occurrence},
+      x = Becoming.Rooms.start m ∨ x = Becoming.Rooms.Matched.kept m →
+        Becoming.«所及» (Becoming.Rooms.net m 1) Becoming.Rooms.alike x z →
+          ¬Becoming.«传» (Becoming.Rooms.net m 1) Becoming.Rooms.alike Becoming.Rooms.sameLevel z w
+@Becoming.Rooms.Matched.keeping : ∀ {m : Nat},
+  1 ≤ m →
+    ∀ {x : Becoming.Rooms.Occurrence},
+      x = Becoming.Rooms.start m ∨ x = Becoming.Rooms.Matched.kept m →
+        Becoming.«全守» (Becoming.Rooms.net m 1) Becoming.Rooms.alike Becoming.Rooms.sameLevel x
+@Becoming.Rooms.Matched.not_generates : ∀ {m : Nat},
+  1 ≤ m →
+    ∀ {x : Becoming.Rooms.Occurrence},
+      x = Becoming.Rooms.start m ∨ x = Becoming.Rooms.Matched.kept m →
+        ¬Becoming.«生成» (Becoming.Rooms.net m 1) Becoming.Rooms.alike Becoming.Rooms.sameLevel x
+@Becoming.Rooms.Matched.keeps_at : ∀ {m : Nat},
+  1 ≤ m →
+    ∀ {x : Becoming.Rooms.Occurrence},
+      x = Becoming.Rooms.start m ∨ x = Becoming.Rooms.Matched.kept m →
+        Becoming.«守» (Becoming.Rooms.net m 1) Becoming.Rooms.alike Becoming.Rooms.sameLevel x
+@Becoming.Rooms.Matched.rows : ∀ {m : Nat},
+  1 ≤ m →
+    Becoming.«守» (Becoming.Rooms.net m 1) Becoming.Rooms.alike Becoming.Rooms.sameLevel (Becoming.Rooms.start m) ∧
+      Becoming.«守» (Becoming.Rooms.net m 1) Becoming.Rooms.alike Becoming.Rooms.sameLevel
+          (Becoming.Rooms.Matched.kept m) ∧
+        Becoming.«后守» (Becoming.Rooms.net m 1) Becoming.Rooms.alike Becoming.Rooms.sameLevel (Becoming.Rooms.start m) ∧
+          Becoming.«后守» (Becoming.Rooms.net m 1) Becoming.Rooms.alike Becoming.Rooms.sameLevel
+              (Becoming.Rooms.Matched.kept m) ∧
+            ¬Becoming.«生成» (Becoming.Rooms.net m 1) Becoming.Rooms.alike Becoming.Rooms.sameLevel
+                  (Becoming.Rooms.Matched.kept m) ∧
+              ¬Becoming.«全生成» (Becoming.Rooms.net m 1) Becoming.Rooms.alike Becoming.Rooms.sameLevel
+                    (Becoming.Rooms.start m) ∧
+                ¬Becoming.«全生成» (Becoming.Rooms.net m 1) Becoming.Rooms.alike Becoming.Rooms.sameLevel
+                      (Becoming.Rooms.Matched.kept m) ∧
+                  ¬Becoming.«有终» (Becoming.Rooms.net m 1) Becoming.Rooms.alike (Becoming.Rooms.start m) ∧
+                    ¬Becoming.«有终» (Becoming.Rooms.net m 1) Becoming.Rooms.alike (Becoming.Rooms.Matched.kept m) ∧
+                      ¬Becoming.«退化» (Becoming.Rooms.net m 1) Becoming.Rooms.alike (Becoming.Rooms.start m) ∧
+                        ¬Becoming.«退化» (Becoming.Rooms.net m 1) Becoming.Rooms.alike (Becoming.Rooms.Matched.kept m)
+@Becoming.Rooms.«给如所取则全守» : ∀ {m : Nat},
+  1 ≤ m →
+    Becoming.«全守» (Becoming.Rooms.net m 1) Becoming.Rooms.alike Becoming.Rooms.sameLevel (Becoming.Rooms.start m) ∧
+      Becoming.«全守» (Becoming.Rooms.net m 1) Becoming.Rooms.alike Becoming.Rooms.sameLevel
+          (Becoming.Rooms.Matched.kept m) ∧
+        ¬Becoming.«生成» (Becoming.Rooms.net m 1) Becoming.Rooms.alike Becoming.Rooms.sameLevel (Becoming.Rooms.start m)
+Becoming.Rooms.Overshooting.s3_o4 : Becoming.Rooms.net 3 2 (Becoming.Rooms.start 3) Becoming.Rooms.Overshooting.o4
+Becoming.Rooms.Overshooting.o4_o3 : Becoming.Rooms.net 3 2 Becoming.Rooms.Overshooting.o4 Becoming.Rooms.Overshooting.o3
+Becoming.Rooms.Overshooting.o3_o4 : Becoming.Rooms.net 3 2 Becoming.Rooms.Overshooting.o3 Becoming.Rooms.Overshooting.o4
+Becoming.Rooms.Overshooting.begins_o4 : Becoming.«生» (Becoming.Rooms.net 3 2) Becoming.Rooms.sameLevel
+  Becoming.Rooms.Overshooting.o4
+Becoming.Rooms.Overshooting.begins_o3 : Becoming.«生» (Becoming.Rooms.net 3 2) Becoming.Rooms.sameLevel
+  Becoming.Rooms.Overshooting.o3
+Becoming.Rooms.Overshooting.closed : Becoming.«闭» (Becoming.Rooms.net 3 2) Becoming.Rooms.Overshooting.Reached
+@Becoming.Rooms.Overshooting.reach : ∀ {x y : Becoming.Rooms.Occurrence},
+  Becoming.Rooms.Overshooting.Reached x →
+    Becoming.«所及» (Becoming.Rooms.net 3 2) Becoming.Rooms.alike x y → Becoming.Rooms.Overshooting.Reached y
+@Becoming.Rooms.Overshooting.renews : ∀ {y : Becoming.Rooms.Occurrence},
+  Becoming.Rooms.Overshooting.Reached y →
+    ∃ w,
+      Becoming.«传» (Becoming.Rooms.net 3 2) Becoming.Rooms.alike Becoming.Rooms.sameLevel y w ∧
+        Becoming.Rooms.Overshooting.Reached w
+Becoming.Rooms.Overshooting.renewing_steps : Becoming.«传» (Becoming.Rooms.net 3 2) Becoming.Rooms.alike
+    Becoming.Rooms.sameLevel (Becoming.Rooms.start 3) Becoming.Rooms.Overshooting.o4 ∧
+  ¬Becoming.«传» (Becoming.Rooms.net 3 2) Becoming.Rooms.alike Becoming.Rooms.sameLevel (Becoming.Rooms.start 3)
+        (Becoming.Rooms.start 3) ∧
+    ∀ {y w : Becoming.Rooms.Occurrence},
+      y = Becoming.Rooms.Overshooting.o4 ∨ y = Becoming.Rooms.Overshooting.o3 →
+        Becoming.Rooms.net 3 2 y w →
+          Becoming.«传» (Becoming.Rooms.net 3 2) Becoming.Rooms.alike Becoming.Rooms.sameLevel y w
+@Becoming.Rooms.Overshooting.generation : ∀ {x : Becoming.Rooms.Occurrence},
+  Becoming.Rooms.Overshooting.Reached x →
+    Becoming.«全生成» (Becoming.Rooms.net 3 2) Becoming.Rooms.alike Becoming.Rooms.sameLevel x
+@Becoming.Rooms.Overshooting.generates : ∀ {x : Becoming.Rooms.Occurrence},
+  Becoming.Rooms.Overshooting.Reached x →
+    Becoming.«生成» (Becoming.Rooms.net 3 2) Becoming.Rooms.alike Becoming.Rooms.sameLevel x
+Becoming.Rooms.Overshooting.keeps : Becoming.«守» (Becoming.Rooms.net 3 2) Becoming.Rooms.alike Becoming.Rooms.sameLevel
+  (Becoming.Rooms.start 3)
+Becoming.Rooms.Overshooting.generation_strong : Becoming.«全生成» (Becoming.Rooms.net 3 2) Becoming.Rooms.alike
+    Becoming.Rooms.sameLevel (Becoming.Rooms.start 3) ∧
+  Becoming.«全生成» (Becoming.Rooms.net 3 2) Becoming.Rooms.alike Becoming.Rooms.sameLevel Becoming.Rooms.Overshooting.o4 ∧
+    Becoming.«全生成» (Becoming.Rooms.net 3 2) Becoming.Rooms.alike Becoming.Rooms.sameLevel Becoming.Rooms.Overshooting.o3
+@Becoming.Rooms.Overshooting.openNet_single : ∀ {m c : Nat} {z w w' : Becoming.Rooms.Occurrence},
+  Becoming.Rooms.openNet m c z w → Becoming.Rooms.openNet m c z w' → w = w'
+@Becoming.Rooms.Overshooting.begins_open_line : ∀ {y : Becoming.Rooms.Occurrence},
+  Becoming.«生» (Becoming.Rooms.net 3 2) Becoming.Rooms.sameLevel y →
+    Becoming.«生» (Becoming.Rooms.openNet 3 2) Becoming.Rooms.sameLevel y
+Becoming.Rooms.Overshooting.generates_open : Becoming.«生成» (Becoming.Rooms.openNet 3 2) Becoming.Rooms.alike
+  Becoming.Rooms.sameLevel Becoming.Rooms.Overshooting.o4
+Becoming.Rooms.Overshooting.single_line_tested : ¬Becoming.«后守» (Becoming.Rooms.openNet 3 2) Becoming.Rooms.alike
+      Becoming.Rooms.sameLevel Becoming.Rooms.Overshooting.o4 ∧
+  (¬∀ {z w w' : Becoming.Rooms.Occurrence}, Becoming.Rooms.net 3 2 z w → Becoming.Rooms.net 3 2 z w' → w = w') ∧
+    Becoming.«生成» (Becoming.Rooms.net 3 2) Becoming.Rooms.alike Becoming.Rooms.sameLevel (Becoming.Rooms.start 3) ∧
+      Becoming.«后守» (Becoming.Rooms.net 3 2) Becoming.Rooms.alike Becoming.Rooms.sameLevel (Becoming.Rooms.start 3)
+Becoming.Rooms.Overshooting.closed_open : Becoming.«闭» (Becoming.Rooms.net 3 2) fun y =>
+  y = Becoming.Rooms.Overshooting.o4 ∨ y = Becoming.Rooms.Overshooting.o3
+@Becoming.Rooms.Overshooting.not_keepsAfter_open : ∀ {x : Becoming.Rooms.Occurrence},
+  x = Becoming.Rooms.Overshooting.o4 ∨ x = Becoming.Rooms.Overshooting.o3 →
+    ¬Becoming.«后守» (Becoming.Rooms.net 3 2) Becoming.Rooms.alike Becoming.Rooms.sameLevel x
+Becoming.Rooms.Overshooting.rows : ¬Becoming.«全守» (Becoming.Rooms.net 3 2) Becoming.Rooms.alike Becoming.Rooms.sameLevel
+      (Becoming.Rooms.start 3) ∧
+  ¬Becoming.«有终» (Becoming.Rooms.net 3 2) Becoming.Rooms.alike (Becoming.Rooms.start 3) ∧
+    ¬Becoming.«退化» (Becoming.Rooms.net 3 2) Becoming.Rooms.alike (Becoming.Rooms.start 3) ∧
+      ∀ {x : Becoming.Rooms.Occurrence},
+        x = Becoming.Rooms.Overshooting.o4 ∨ x = Becoming.Rooms.Overshooting.o3 →
+          Becoming.«生成» (Becoming.Rooms.net 3 2) Becoming.Rooms.alike Becoming.Rooms.sameLevel x ∧
+            ¬Becoming.«守» (Becoming.Rooms.net 3 2) Becoming.Rooms.alike Becoming.Rooms.sameLevel x ∧
+              ¬Becoming.«后守» (Becoming.Rooms.net 3 2) Becoming.Rooms.alike Becoming.Rooms.sameLevel x ∧
+                ¬Becoming.«退化» (Becoming.Rooms.net 3 2) Becoming.Rooms.alike x ∧
+                  ¬Becoming.«全守» (Becoming.Rooms.net 3 2) Becoming.Rooms.alike Becoming.Rooms.sameLevel x ∧
+                    ¬Becoming.«有终» (Becoming.Rooms.net 3 2) Becoming.Rooms.alike x
+Becoming.Rooms.«给过所取则生守相杂» : Becoming.«生成» (Becoming.Rooms.net 3 2) Becoming.Rooms.alike Becoming.Rooms.sameLevel
+    (Becoming.Rooms.start 3) ∧
+  Becoming.«守» (Becoming.Rooms.net 3 2) Becoming.Rooms.alike Becoming.Rooms.sameLevel (Becoming.Rooms.start 3)
+Becoming.Rooms.shut_rest_step : ∀ (m c : Nat), Becoming.Rooms.shut m c (Becoming.Rooms.start m) (Becoming.Rooms.start m)
+Becoming.Rooms.shut_rests : ∀ (m c : Nat),
+  Becoming.«全守» (Becoming.Rooms.shut m c) Becoming.Rooms.alike Becoming.Rooms.sameLevel (Becoming.Rooms.start m)
+Becoming.Rooms.cold_rests : ∀ (m : Nat),
+  Becoming.«全守» (Becoming.Rooms.net m 0) Becoming.Rooms.alike Becoming.Rooms.sameLevel { opened := true, level := 0 }
+Becoming.Rooms.«温有常当且仅当有给» : ∀ (m c : Nat),
+  1 ≤ m → (Becoming.«有常» (Becoming.Rooms.net m c) Becoming.Rooms.alike ↔ 1 ≤ c)
+Becoming.Rooms.alike_in_core_iff : ∀ (m c : Nat),
+  1 ≤ m → (Becoming.«则» Becoming.Rooms.alike (Becoming.«核» (Becoming.Rooms.net m c) Becoming.Rooms.alike) ↔ 1 ≤ c)
+Becoming.Rooms.cools_to : ∀ (m j : Nat),
+  Becoming.«所及» (Becoming.Rooms.net m 0) Becoming.Rooms.alike { opened := true, level := j + 1 }
+    { opened := true, level := 1 }
+Becoming.Rooms.«温不穷当且仅当有给» : ∀ (m c : Nat),
+  2 ≤ m → (Becoming.«不穷» (Becoming.Rooms.net m c) Becoming.Rooms.alike (Becoming.Rooms.start m) ↔ 1 ≤ c)
+@Becoming.Rooms.heated_unended : ∀ {m c : Nat},
+  1 ≤ m →
+    1 ≤ c →
+      Becoming.«不穷» (Becoming.Rooms.net m c) Becoming.Rooms.alike (Becoming.Rooms.start m) ∧
+        ¬Becoming.«有终» (Becoming.Rooms.net m c) Becoming.Rooms.alike (Becoming.Rooms.start m)
+Becoming.Rooms.unended_at_one : ∀ (c : Nat),
+  Becoming.«不穷» (Becoming.Rooms.net 1 c) Becoming.Rooms.alike (Becoming.Rooms.start 1)
+Becoming.Rooms.«不开窗则同核» : ∀ (m c c' : Nat),
+  Becoming.«核» (Becoming.Rooms.jointShut m) Becoming.Rooms.jointLevel (c, Becoming.Rooms.start m)
+    (c', Becoming.Rooms.start m)
+Becoming.Rooms.shut_one_class_alike : ∀ (m c c' : Nat),
+  Becoming.«核» (Becoming.Rooms.jointShut m) Becoming.Rooms.jointAlike (c, Becoming.Rooms.start m)
+    (c', Becoming.Rooms.start m)
+@Becoming.Rooms.«开窗则一层可分» : ∀ {m c : Nat},
+  1 ≤ m →
+    1 ≤ c →
+      ¬Becoming.«层» (Becoming.Rooms.joint m) Becoming.Rooms.jointLevel 1 (0, Becoming.Rooms.start m)
+            (c, Becoming.Rooms.start m) ∧
+        ¬Becoming.«核» (Becoming.Rooms.joint m) Becoming.Rooms.jointLevel (0, Becoming.Rooms.start m)
+            (c, Becoming.Rooms.start m)
+Becoming.Rooms.heaters_told_apart : ¬Becoming.«层» (Becoming.Rooms.joint 3) Becoming.Rooms.jointLevel 1
+    (2, Becoming.Rooms.start 3) (1, Becoming.Rooms.start 3)
+@Becoming.Rooms.unheated_step : ∀ {m : Nat} {x y : Becoming.Rooms.Occurrence},
+  Becoming.Rooms.net m 0 x y → x.level - 1 ≤ y.level
+@Becoming.Rooms.lasts : ∀ {m c : Nat},
+  1 ≤ m →
+    1 ≤ c →
+      ∀ (k : Nat) {a b : Becoming.Rooms.Occurrence},
+        k + 1 ≤ a.level →
+          Becoming.Rooms.warm b = true → Becoming.«层» (Becoming.Rooms.joint m) Becoming.Rooms.jointAlike k (0, a) (c, b)
+@Becoming.Rooms.empties : ∀ {m c : Nat},
+  1 ≤ m →
+    1 ≤ c →
+      ∀ (j : Nat) {b : Becoming.Rooms.Occurrence},
+        Becoming.Rooms.warm b = true →
+          ¬Becoming.«层» (Becoming.Rooms.joint m) Becoming.Rooms.jointAlike j (0, { opened := true, level := j }) (c, b)
+@Becoming.Rooms.«开窗以温层如其余乃分» : ∀ {n c : Nat},
+  1 ≤ c →
+    Becoming.«层» (Becoming.Rooms.joint (n + 1)) Becoming.Rooms.jointAlike n (0, Becoming.Rooms.start (n + 1))
+        (c, Becoming.Rooms.start (n + 1)) ∧
+      ¬Becoming.«层» (Becoming.Rooms.joint (n + 1)) Becoming.Rooms.jointAlike (n + 1) (0, Becoming.Rooms.start (n + 1))
+          (c, Becoming.Rooms.start (n + 1))
+@Becoming.Rooms.«有给之室以温不可分» : ∀ {m c c' : Nat},
+  1 ≤ m →
+    1 ≤ c →
+      1 ≤ c' →
+        Becoming.«核» (Becoming.Rooms.joint m) Becoming.Rooms.jointAlike (c, Becoming.Rooms.start m)
+          (c', Becoming.Rooms.start m)
+@Becoming.Rooms.joint_converse : ∀ {m c : Nat},
+  1 ≤ m →
+    1 ≤ c →
+      ¬Becoming.«有常» (Becoming.Rooms.joint m) Becoming.Rooms.jointAlike ∧
+        Becoming.«不穷» (Becoming.Rooms.joint m) Becoming.Rooms.jointAlike (c, Becoming.Rooms.start m)
+Becoming.Rooms.before_window_moves : Becoming.Rooms.nextBefore 3 1 0 3 = 2 ∧
+  Becoming.Rooms.nextBefore 3 1 0 2 = 2 ∧ Becoming.Rooms.nextBefore 3 2 0 3 = 2 ∧ Becoming.Rooms.nextBefore 3 2 0 2 = 3
+@Becoming.Rooms.before_pos : ∀ {m c : Nat}, 2 ≤ m → 1 ≤ c → ∀ (σ x : Nat), 0 < Becoming.Rooms.nextBefore m c σ x
+Becoming.Rooms.before_at_one : ∀ (c : Nat), Becoming.Rooms.nextBefore 1 c 0 1 = 0
+Becoming.Rooms.before_unheated : ∀ (m σ x : Nat), Becoming.Rooms.nextBefore m 0 σ x = Becoming.Rooms.next m 0 σ x
+Becoming.Rooms.toy_branches : (∀ (x y : Becoming.Room),
+    x.opened y → Becoming.Rooms.joint 1 (Becoming.Rooms.toy x) (Becoming.Rooms.toy y)) ∧
+  (∀ (x y : Becoming.Room), x.closed y → Becoming.Rooms.jointShut 1 (Becoming.Rooms.toy x) (Becoming.Rooms.toy y)) ∧
+    (∀ (x : Becoming.Room),
+        x = Becoming.Room.balanced ∨ x = Becoming.Room.held →
+          ∀ (w : Becoming.Rooms.Tagged),
+            Becoming.Rooms.joint 1 (Becoming.Rooms.toy x) w → ∃ y, x.opened y ∧ w = Becoming.Rooms.toy y) ∧
+      (∀ (x : Becoming.Room),
+          x = Becoming.Room.balanced ∨ x = Becoming.Room.held →
+            ∀ (w : Becoming.Rooms.Tagged),
+              Becoming.Rooms.jointShut 1 (Becoming.Rooms.toy x) w → ∃ y, x.closed y ∧ w = Becoming.Rooms.toy y) ∧
+        ∀ (x : Becoming.Room), Becoming.Rooms.warm (Becoming.Rooms.toy x).snd = x.warm
+Becoming.Rooms.toy_verdict : ¬Becoming.«层» Becoming.Room.opened Becoming.Room.alike 1 Becoming.Room.balanced
+      Becoming.Room.held ∧
+  ¬Becoming.«核» Becoming.Room.opened Becoming.Room.alike Becoming.Room.balanced Becoming.Room.held

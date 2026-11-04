@@ -35,22 +35,42 @@ directory and leaves the repository untouched; `BECOMING_LEAN_CACHE` moves the c
 Spine names that contain a word of exchange (cost, charge, credit and the like) are listed
 in the receipt as `market_names`, apart from a few scientific terms; they do not fail the run.
 
-A Lean step whose inputs match a step that passed in an earlier run is not run again:
-its outputs and log come from a cache shared by runs and worktrees (`step_key`). The
+A Lean step whose inputs match a step that passed, in an earlier run or earlier in this one (a
+compile from the prelude whose inputs are its module's), is not run again: its outputs and log come
+from a cache shared by runs and worktrees (`step_key`). Its inputs include the runner (`RUNNER`, the
+receipt's `runner_sha256`): a digest of the code that finds Lean, makes and writes a step's arguments,
+drivers and files, runs it and keeps its outputs, read without comments, docstrings or layout, so a
+change to what a step runs changes every key. Each entry names the runner that wrote it, and only an
+entry this runner wrote is reused here. The
 receipt lists which steps ran and which were reused, with the run each came from and
 each step's key. `BECOMING_FRESH=1` runs every step; `LEAN_TIMEOUT` sets the seconds
 allowed for each Lean run. Steps run concurrently (`BECOMING_JOBS` at once, by default half
 the cores; 1 runs them one at a time), each once the compiles of the modules it imports have
-passed; the receipt lists them in the order of a one-at-a-time run.
+passed; the receipt lists them in the order of a one-at-a-time run. A step not in the cache
+runs under its key's lock, so a second run wanting the same step at the same time waits and then
+reuses it, and every Lean process of this checker, `check_fallible_inquiry.py` and `scratch_build.py`
+takes one of the machine's `BECOMING_LEAN_SLOTS` (by default the number of cores) for as long as it
+runs. The holder of a step's lock touches its file at least every ten seconds, and a run waiting for
+the lock goes on without it only when the file has gone untouched for two minutes (its holder stopped
+or gone); a wait for a slot ends only when one is free or the run stops, noted on stderr every five
+minutes. The receipt keeps each step's seconds (`lean_steps.seconds`, the wait for a slot not counted)
+and the Lean part's wall time.
 
 The run folder keeps the receipt, the drivers and logs of the steps that ran, and a copy
 of each source and checker file that `main` does not hold byte for byte. A file `main`
 holds is named by the receipt's `source_commit` and its sha256; a reused step's log stays
 in the cache under its key.
 """
+import ast
+from collections import namedtuple
 from concurrent.futures import FIRST_COMPLETED, ThreadPoolExecutor, wait
+from contextlib import contextmanager, nullcontext
 from datetime import datetime, timezone
+import fcntl
+import functools
 import hashlib
+import inspect
+import io
 import json
 import os
 from pathlib import Path
@@ -59,6 +79,10 @@ import shutil
 import subprocess
 import sys
 import tempfile
+import textwrap
+import threading
+import time
+import tokenize
 
 sys.dont_write_bytecode = True
 HERE = Path(__file__).resolve().parent
@@ -3764,21 +3788,32 @@ SCOPE = (
 # Every constant of the given modules, generated ones, private declarations and unnamed
 # instances included, with the axioms it uses: run once on the core closure and once on the
 # bridge modules (whose imports may use axioms; only the bridge modules' own constants count).
+# The environment's constants are listed once and sorted by module, each module's in the list's
+# order, so the messages are those of a pass over the whole list for each module in turn (GT2:
+# byte for byte on the core closure's 386 modules, in 27 s where the pass per module took 90 s).
 ENVIRONMENT_AUDIT = """import Lean
 {imports}
 open Lean Elab Command
 
 #eval show CommandElabM Unit from do
   let env ← getEnv
-  for m in [{modules}] do
+  let modules : Array Name := #[{modules}]
+  let mut position : Std.HashMap Nat Nat := {{}}
+  for i in [0:modules.size] do
+    let m := modules[i]!
     let some index := env.getModuleIdx? m | throwError m!"no module {{m}}"
-    let mut count := 0
-    for (n, _) in env.constants.map₁.toList do
-      if env.getModuleIdxFor? n == some index then
-        count := count + 1
-        let axioms ← liftCoreM <| Lean.collectAxioms n
-        if axioms.size > 0 then logInfo m!"AXIOMS {{n}} {{axioms.toList}}"
-    logInfo m!"CONSTANTS {{m}} {{count}}"
+    position := position.insert index.toNat i
+  let mut found : Array (Array Name) := Array.replicate modules.size #[]
+  for (n, _) in env.constants.map₁.toList do
+    if let some index := env.getModuleIdxFor? n then
+      if let some i := position[index.toNat]? then
+        found := found.modify i (·.push n)
+  for i in [0:modules.size] do
+    let names := found[i]!
+    for n in names do
+      let axioms ← liftCoreM <| Lean.collectAxioms n
+      if axioms.size > 0 then logInfo m!"AXIOMS {{n}} {{axioms.toList}}"
+    logInfo m!"CONSTANTS {{modules[i]!}} {{names.size}}"
 """
 
 
@@ -3803,8 +3838,14 @@ def source_file(name):
 
 
 def imports_of(data):
+    """The modules a source imports, `Std` aside, each text parsed once in a run."""
+    return list(_imports(bytes(data)))
+
+
+@functools.lru_cache(maxsize=None)
+def _imports(data):
     code = audit_support.code_only(data.decode())
-    return [m.strip() for m in re.findall(r"^import\s+(.+)$", code, re.M) if m.strip() != "Std"]
+    return tuple(m.strip() for m in re.findall(r"^import\s+(.+)$", code, re.M) if m.strip() != "Std")
 
 
 def ring_direction(index):
@@ -3848,16 +3889,17 @@ EXTERNAL_ROOTS = {"Init", "Std", "Lean", "Mathlib"}
 
 
 def step_key(context, label, data, keys):
-    """A Lean step's key: the toolchain context, the step, the bytes it reads and the keys
-    of the modules it imports, so a module's key covers its whole import closure. No
-    source in the closure reads files at compile time."""
+    """A Lean step's key: the toolchain context, the runner (`RUNNER`, the code that builds,
+    runs and keeps a step), the step, the bytes it reads and the keys of the modules it
+    imports, so a module's key covers its whole import closure, and a change to what a step
+    runs changes every key. No source in the closure reads files at compile time."""
     imported = []
     for name in imports_of(data):
         if name not in keys:
             assert name.split(".")[0] in EXTERNAL_ROOTS, ("import without a key", label, name)
         imported.append(keys.get(name, name))
     h = hashlib.sha256()
-    for part in [*context, label, data, *imported]:
+    for part in [*context, "runner " + RUNNER, label, data, *imported]:
         part = part if isinstance(part, bytes) else str(part).encode()
         h.update(len(part).to_bytes(8, "big") + part)
     return h.hexdigest()
@@ -3871,13 +3913,16 @@ def module_keys(context, sources, order):
     return keys
 
 
-def reuse(key, outputs):
+def reuse(key, outputs, runner=None):
     """For a step that passed with this key: restore its outputs and return its log and
-    the run it came from. Otherwise None."""
+    the run it came from. Otherwise None. With `runner`, only an entry that runner wrote
+    counts, so a step another tool ran with its own code under the same key is not taken."""
     if FRESH:
         return None
     try:
         entry = json.loads((CACHE / (key + ".json")).read_text())
+        if runner is not None and entry.get("runner") != runner:
+            return None
         blobs = [(CACHE / key / path.name).read_bytes() for path in outputs]
         if [audit_support.digest(blob) for blob in blobs] != entry["outputs"]:
             return None
@@ -3888,10 +3933,11 @@ def reuse(key, outputs):
     return entry["log"], entry["run"]
 
 
-def store(key, outputs, log, run):
-    """Keep a passed step for later runs. The cache only saves work, so a failed write is ignored."""
+def store(key, outputs, log, run, seconds=None, runner=None):
+    """Keep a passed step for later runs, with the seconds it took and the runner that ran it. The
+    cache only saves work, so a failed write is ignored."""
     def write(path, data):
-        temporary = path.with_name(f".{path.name}.{os.getpid()}.tmp")
+        temporary = path.with_name(f".{path.name}.{os.getpid()}.{threading.get_ident()}.tmp")
         temporary.write_bytes(data)
         os.replace(temporary, path)
 
@@ -3903,9 +3949,217 @@ def store(key, outputs, log, run):
         for path, blob in zip(outputs, blobs):
             write(CACHE / key / path.name, blob)
         entry = {"run": run, "log": log, "outputs": [audit_support.digest(blob) for blob in blobs]}
+        if seconds is not None:
+            entry["seconds"] = seconds
+        if runner is not None:
+            entry["runner"] = runner
         write(CACHE / (key + ".json"), json.dumps(entry, ensure_ascii=False).encode())
     except OSError:
         pass
+
+
+LOCKS = CACHE / "locks"
+# Set when a step of a run fails or the run is interrupted, so that steps still waiting for a lock or a
+# slot start no Lean; `run_graph` clears it as it starts.
+STOP = threading.Event()
+
+
+def try_flock(handle):
+    """Take the lock of an open file without waiting: True when taken, False when another holds it, None
+    when the file system cannot lock."""
+    try:
+        fcntl.flock(handle, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        return True
+    except BlockingIOError:
+        return False
+    except OSError:
+        return None
+
+
+def wait_for(take, what, stale=None, beat=None, note_every=300):
+    """Call `take` until it returns True (held), calling `beat` between tries and noting on stderr every
+    `note_every` seconds that the wait goes on. Raises once the run has stopped. Returns False when
+    `stale()` says that what holds it has shown no sign of life for longer than a step may take, so the
+    step goes on without it (a lock only saves work)."""
+    started, pause, noted = time.monotonic(), 0.02, 0
+    while not take():
+        if STOP.is_set():
+            raise RuntimeError("the run stopped while a step waited for " + what)
+        if stale and stale():
+            print(f"{what}: its holder has shown no sign of life for longer than a step may take; "
+                  "going on without it", file=sys.stderr)
+            return False
+        waited = time.monotonic() - started
+        if waited >= noted + note_every:
+            noted += note_every
+            print(f"still waiting for {what} after {int(waited)} s", file=sys.stderr)
+        if beat:
+            beat()
+        time.sleep(pause)
+        pause = min(2 * pause, 0.25)
+    return True
+
+
+@contextmanager
+def step_lock(key, quiet=120):
+    """The lock of a step's key, held while the step runs and is stored, so a run wanting the same
+    step meanwhile waits and then finds it in the cache. It yields `beat`, which touches the lock's
+    file: the holder beats while it waits for a slot and while Lean runs, at least every ten seconds,
+    and a run waiting for the lock goes on without it only when the file has not been touched for
+    `quiet` seconds (a holder stopped or gone, not a slow one). The lock's file is removed before the lock is released, and a run that then
+    holds the removed file takes the lock again. Without a writable cache, or on a file system that
+    cannot lock, the step runs without the lock: the lock only saves work."""
+    path, handle = LOCKS / (key + ".lock"), None
+
+    def stale():
+        try:
+            return time.time() - os.stat(path).st_mtime > quiet
+        except OSError:
+            return False
+
+    while True:
+        try:
+            LOCKS.mkdir(parents=True, exist_ok=True)
+            handle = open(path, "a")
+        except OSError:
+            handle = None
+            break
+        state = []
+        try:
+            waited = wait_for(lambda: state.append(try_flock(handle)) or state[-1] is not False,
+                              "the lock of step " + key, stale=stale)
+        except BaseException:
+            handle.close()
+            raise
+        if not waited or state[-1] is None:
+            handle.close()
+            handle = None
+            break
+        try:
+            if os.stat(path).st_ino == os.fstat(handle.fileno()).st_ino:
+                break
+        except OSError:
+            pass
+        handle.close()
+
+    def beat():
+        if handle:
+            try:
+                os.utime(path)
+            except OSError:
+                pass
+
+    beat()
+    try:
+        yield beat
+    finally:
+        if handle:
+            try:
+                os.unlink(path)
+            except OSError:
+                pass
+            handle.close()
+
+
+SLOTS = CACHE / "slots"
+# Lean processes run at once by this checker, check_fallible_inquiry.py and scratch_build.py, in every
+# worktree sharing the cache (`BECOMING_LEAN_SLOTS`).
+LEAN_SLOTS = max(1, int(os.environ.get("BECOMING_LEAN_SLOTS") or os.cpu_count() or 2))
+
+
+@contextmanager
+def lean_slot(beat=None):
+    """One of the machine's Lean slots, held while a Lean process runs, so runs going at once share
+    the cores rather than each starting `JOBS` processes. The wait ends only when a slot is free or the
+    run stops, noted on stderr every five minutes; `beat` is called while it waits. Without a writable
+    cache, or on a file system that cannot lock, Lean runs without a slot."""
+    try:
+        SLOTS.mkdir(parents=True, exist_ok=True)
+    except OSError:
+        yield
+        return
+    start, held = threading.get_ident() % LEAN_SLOTS, []
+
+    def take():
+        for i in range(LEAN_SLOTS):
+            try:
+                handle = open(SLOTS / f"lean-{(start + i) % LEAN_SLOTS}.lock", "a")
+            except OSError:
+                return True
+            state = try_flock(handle)
+            if state:
+                held.append(handle)
+                return True
+            handle.close()
+            if state is None:
+                return True
+        return False
+
+    wait_for(take, "a Lean slot", beat=beat)
+    try:
+        yield
+    finally:
+        for handle in held:
+            handle.close()
+
+
+# A Lean step's outcome: its log, the run it was restored from (None for a step that ran), and for a
+# step that ran its exit code, whether it passed (exit 0, no error or warning) and its seconds.
+Outcome = namedtuple("Outcome", "output reused_from returncode passed seconds")
+
+
+def lean_step(command, step, base, origin=None, timeout=TIMEOUT, before=None):
+    """One step of a plan (`lean_plan`), in its directory below `base`: restored from the cache when
+    this runner kept a step with its key, else run in one of the machine's Lean slots (its timeout
+    starting once it has one), its driver written first, and stored with `origin` as its run and this
+    runner as its writer when it passes. A keyed step not in the cache runs under its key's lock,
+    beating while it waits for a slot and while Lean runs, and is looked up again once the lock is held.
+    `before` is called just before Lean starts."""
+    where = base / step.where
+    paths = [where / output for output in step.outputs]
+    found = reuse(step.key, paths, RUNNER) if step.key else None
+    if found:
+        return Outcome(found[0], found[1], 0, True, None)
+    with step_lock(step.key) if step.key else nullcontext(lambda: None) as beat:
+        found = reuse(step.key, paths, RUNNER) if step.key else None
+        if found:
+            return Outcome(found[0], found[1], 0, True, None)
+        with lean_slot(beat):
+            if STOP.is_set():
+                raise RuntimeError("the run stopped before this step started")
+            if step.driver:
+                (where / step.driver).write_text(step.text)
+            if before:
+                before()
+            started = time.perf_counter()
+            returncode, output = run_lean(command + step.args, where, timeout, beat)
+            seconds = round(time.perf_counter() - started, 3)
+        passed = returncode == 0 and not re.search(r"\b(?:error|warning):", output)
+        if step.key and passed:
+            store(step.key, paths, output, origin, seconds, RUNNER)
+        return Outcome(output, None, returncode, passed, seconds)
+
+
+def run_lean(command, where, timeout, beat, every=10):
+    """Lean in `where` as `subprocess.run` with `timeout` runs it (killed and `TimeoutExpired` raised at
+    the timeout, killed on any other exception), calling `beat` every `every` seconds while it runs.
+    Returns the exit code and the output, standard error merged."""
+    with subprocess.Popen(command, cwd=where, env={**os.environ, "LEAN_PATH": str(where)}, text=True,
+                          stdout=subprocess.PIPE, stderr=subprocess.STDOUT) as process:
+        started = time.monotonic()
+        try:
+            while True:
+                left = timeout - (time.monotonic() - started)
+                try:
+                    output, _ = process.communicate(timeout=max(0.01, min(every, left)))
+                    return process.returncode, output
+                except subprocess.TimeoutExpired:
+                    if time.monotonic() - started >= timeout:
+                        raise subprocess.TimeoutExpired(command, timeout)
+                    beat()
+        except BaseException:
+            process.kill()
+            raise
 
 
 # Lean steps run at once (`BECOMING_JOBS`); 1 runs them one at a time.
@@ -3917,7 +4171,8 @@ def run_graph(tasks, jobs=JOBS):
     it needs has finished; return the actions' results by name. A step waits only for the
     steps whose outputs it reads, so the outcome is the one-at-a-time outcome. Among ready
     tasks, the one with the longest chain of tasks waiting on it goes first. After a failure
-    no task starts; the first failure is raised once the running tasks end."""
+    no task starts, and a running task still waiting for a step's lock or a Lean slot stops; the first
+    failure is raised once the running tasks end."""
     waiting_on = {name: [] for name in tasks}
     for name, (needs, _) in tasks.items():
         for need in needs:
@@ -3933,23 +4188,30 @@ def run_graph(tasks, jobs=JOBS):
         chain(name)
     rank = {name: i for i, name in enumerate(tasks)}
     results, waiting, running, failure = {}, set(tasks), {}, None
+    STOP.clear()
     with ThreadPoolExecutor(max_workers=jobs) as pool:
-        while running or (waiting and failure is None):
-            if failure is None:
-                ready = sorted((name for name in waiting if all(n in results for n in tasks[name][0])),
-                               key=lambda name: (-depth[name], rank[name]))
-                for name in ready[:jobs - len(running)]:
-                    waiting.discard(name)
-                    running[pool.submit(tasks[name][1])] = name
-            if not running:
-                break
-            done, _ = wait(running, return_when=FIRST_COMPLETED)
-            for future in sorted(done, key=lambda f: rank[running[f]]):
-                name = running.pop(future)
-                try:
-                    results[name] = future.result()
-                except Exception as error:
-                    failure = failure or error
+        try:
+            while running or (waiting and failure is None):
+                if failure is None:
+                    ready = sorted((name for name in waiting if all(n in results for n in tasks[name][0])),
+                                   key=lambda name: (-depth[name], rank[name]))
+                    for name in ready[:jobs - len(running)]:
+                        waiting.discard(name)
+                        running[pool.submit(tasks[name][1])] = name
+                if not running:
+                    break
+                done, _ = wait(running, return_when=FIRST_COMPLETED)
+                for future in sorted(done, key=lambda f: rank[running[f]]):
+                    name = running.pop(future)
+                    try:
+                        results[name] = future.result()
+                    except Exception as error:
+                        failure = failure or error
+                        STOP.set()
+        except BaseException:
+            # Interrupted: steps still waiting for a lock or a slot start no Lean.
+            STOP.set()
+            raise
     if failure is not None:
         raise failure
     assert not waiting, ("tasks whose needs never finished", sorted(waiting))
@@ -3961,8 +4223,67 @@ def in_serial_order(steps, logs):
     position = {log: i for i, log in enumerate(logs)}
     place = lambda log: (position.get(log, len(logs)), log)  # noqa: E731
     steps["ran"] = sorted(steps["ran"], key=place)
-    for part in ("reused", "keys"):
-        steps[part] = {log: steps[part][log] for log in sorted(steps[part], key=place)}
+    for part in ("reused", "keys", "seconds"):
+        if part in steps:
+            steps[part] = {log: steps[part][log] for log in sorted(steps[part], key=place)}
+
+
+# One Lean step of a run: its task, the tasks whose outputs it reads, Lean's arguments, its log, the
+# directory below the run's own it runs in, its key, the files it writes and, for a driver, its file and text.
+Step = namedtuple("Step", "task needs args log where key outputs driver text")
+
+
+def lean_plan(context, sources, keys, registry, order, audited=(), signed=(), prelude=(), extra=()):
+    """The Lean steps of a run in the order a one-at-a-time run takes them, and the files each of its
+    directories holds. Each module of `order` is compiled; each of `audited` has its declarations'
+    axioms printed (`registry`) and each of `signed` its theorems' statements; the drivers `extra`
+    (task, file, text) follow; then each module of `prelude`, closed under its imports, is compiled
+    again in `prelude-only` with the foundation's `import Std` line removed. A step's key comes from its
+    inputs, so a compile from the prelude whose bytes and imports are its module's has its module's key:
+    it is the same step, held once in the cache. The checker and `scratch_build.py` both take their steps
+    from here, so a step a scratch build ran is the checker's step."""
+    def needs(data, prefix="compile "):
+        return [prefix + name for name in imports_of(data) if name in keys]
+
+    def driver(task, file, text):
+        return Step(task, needs(text.encode()), [file], file[:-5] + ".log", "",
+                    step_key(context, file, text.encode(), keys), [], file, text)
+
+    def compile_step(task, name, data, log, where, key):
+        olean = source_file(name)[:-5] + ".olean"
+        return Step(task, needs(data, task.split(" ")[0] + " "), ["-o", olean, source_file(name)], log, where,
+                    key, [olean], None, None)
+
+    audited, signed = set(audited), set(signed)
+    steps, files = [], {"": {source_file(name): sources[name] for name in order}}
+    for name in order:
+        flat = name.replace(".", "")
+        steps.append(compile_step("compile " + name, name, sources[name], name + ".log", "", keys[name]))
+        if name in audited:
+            steps.append(driver("audit " + name, flat + "AxiomAudit.lean", "import " + name + "\n" + "\n".join(
+                "#print axioms " + item["name"] for item in registry[name]) + "\n"))
+        if name in signed:
+            steps.append(driver("signatures " + name, flat + "Signatures.lean", "import " + name + "\n" + "\n".join(
+                "#check @" + item["name"] for item in registry[name] if item["kind"] == "theorem") + "\n"))
+    steps += [driver(task, file, text) for task, file, text in extra]
+    stripped = {name: re.sub(r"^import Std\n", "", sources[name].decode(), flags=re.M).encode() for name in prelude}
+    bare_keys = module_keys(context, stripped, prelude)
+    files["prelude-only"] = {source_file(name): stripped[name] for name in prelude}
+    for name in prelude:
+        steps.append(compile_step("prelude " + name, name, stripped[name], name + ".PreludeOnly.log", "prelude-only",
+                                  bare_keys[name]))
+    return steps, files
+
+
+def write_files(base, files):
+    """Write a plan's files (`lean_plan`: directory → path → bytes) below `base`, each one not
+    already there with those bytes."""
+    for where, contents in files.items():
+        for relative, data in contents.items():
+            target = base / where / relative
+            if not target.is_file() or target.read_bytes() != data:
+                target.parent.mkdir(parents=True, exist_ok=True)
+                target.write_bytes(data)
 
 
 def held_in_main(files):
@@ -4203,6 +4524,60 @@ example : ((Renewable.conditions.dependence.along Renewable.escalating).valuatio
 """
 
 
+def code_digest(functions):
+    """The sha256 of the functions' code read as tokens, with comments, docstrings and line breaks
+    inside brackets left out but statements and blocks kept, so that only a change to what the
+    code does changes it, the same under any Python."""
+    parts = []
+    for function in functions:
+        source = textwrap.dedent(inspect.getsource(inspect.unwrap(function)))
+        docstrings = set()
+        for node in ast.walk(ast.parse(source)):
+            if (isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef)) and node.body
+                    and isinstance(node.body[0], ast.Expr) and isinstance(node.body[0].value, ast.Constant)
+                    and isinstance(node.body[0].value.value, str)):
+                # By where it starts: indentation, where ast's byte columns and tokenize's character columns agree.
+                docstrings.add((node.body[0].lineno, node.body[0].col_offset))
+        lines = source.splitlines(True)
+        marks = {tokenize.NEWLINE: ";", tokenize.INDENT: "{", tokenize.DEDENT: "}"}
+        # From Python 3.12 an f-string is several tokens; it is read whole, as earlier Pythons read it.
+        opens, closes = getattr(tokenize, "FSTRING_START", None), getattr(tokenize, "FSTRING_END", None)
+        tokens, depth, begun, after_docstring = [], 0, None, False
+        for token in tokenize.generate_tokens(io.StringIO("".join(lines)).readline):
+            if after_docstring:
+                # The rest of the docstring's statement: its comments and its end of line.
+                if token.type in (tokenize.COMMENT, tokenize.NL):
+                    continue
+                after_docstring = False
+                if token.type == tokenize.NEWLINE:
+                    continue
+            if token.type == opens:
+                depth, begun = depth + 1, begun if depth else token.start
+            elif token.type == closes:
+                depth -= 1
+                if not depth:
+                    (row, column), (end_row, end_column) = begun, token.end
+                    text = "".join(lines[row - 1:end_row])
+                    tokens.append(text[column:len(text) - len(lines[end_row - 1]) + end_column])
+            elif not depth and token.type == tokenize.STRING and token.start in docstrings:
+                after_docstring = True
+            elif not depth and token.type not in (tokenize.COMMENT, tokenize.NL, tokenize.ENDMARKER):
+                tokens.append(marks.get(token.type, token.string))
+        parts.append(function.__name__ + " " + " ".join(tokens))
+    return hashlib.sha256("\n".join(parts).encode()).hexdigest()
+
+
+# What runs a step and keeps its result: how the Lean command is found, how a step's arguments,
+# drivers and files are made and written, how it runs and how its outputs are kept and restored. Each
+# step's key holds this digest (`step_key`), so a change to any of it changes every key, and each entry
+# `lean_step` keeps names it, so the steps this runner reuses are steps it ran: an entry another tool
+# stored under the same key with its own code is not taken. The rest of the checker (what a receipt
+# reports, the locks and slots) is not in it.
+RUNNER_FUNCTIONS = (resolve_lean, source_file, imports_of, _imports, step_key, module_keys, reuse, store,
+                    lean_plan, write_files, lean_step, run_lean)
+RUNNER = code_digest(RUNNER_FUNCTIONS)
+
+
 def main():
     stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S.%fZ")
     receipt_path, runs = output_paths(RECEIPT, RETAINED)
@@ -4233,13 +4608,15 @@ def main():
         "source_paths": {name: str(paths[name].relative_to(LEAN_ROOT)) for name in order},
         "source_sha256": {name: audit_support.digest(data) for name, data in sources.items()},
         "checker_sha256": {name: audit_support.digest(data) for name, data in helpers.items()},
+        "runner_sha256": RUNNER,
         # Files main holds byte for byte are named by this commit; the rest are copied here.
         "source_commit": {"main": commit, "copied": sorted(copied)},
         "scope": SCOPE,
     }
     # A reused step passed in the named run with the same binary and identical inputs; its log
     # stays in the cache under its key. Drivers and logs of the steps that ran are kept here.
-    steps = receipt["lean_steps"] = {"cache": str(CACHE), "fresh": FRESH, "ran": [], "reused": {}, "keys": {}}
+    steps = receipt["lean_steps"] = {"cache": str(CACHE), "fresh": FRESH, "ran": [], "reused": {}, "keys": {},
+                                     "seconds": {}}
     try:
         assert sorted(core_closure) == sorted(PURE), ("core imports outside the core", core_closure)
         assert not set(CORE) & set(RING) and len(set(RING)) == len(RING), ("ring lists overlap", sorted(set(CORE) & set(RING)))
@@ -4286,98 +4663,47 @@ def main():
         with tempfile.TemporaryDirectory(prefix="becoming-spine-lean-") as scratch:
             work = Path(scratch)
 
-            def run(args, log, where=work, key=None, outputs=(), driver=None):
-                outputs = [where / output for output in outputs]
-                if key:
-                    steps["keys"][log] = key
-                found = reuse(key, outputs) if key else None
-                if found:
-                    output, steps["reused"][log] = found
-                    return output
-                if driver:
-                    (retained / driver).write_bytes((where / driver).read_bytes())
-                env = {**os.environ, "LEAN_PATH": str(where)}
-                p = subprocess.run(command + args, cwd=where, env=env, text=True,
-                                   stdout=subprocess.PIPE, stderr=subprocess.STDOUT, timeout=TIMEOUT)
-                (retained / log).write_text(p.stdout)
-                assert p.returncode == 0, p.stdout
-                assert not re.search(r"\b(?:error|warning):", p.stdout), p.stdout
-                steps["ran"].append(log)
-                if key:
-                    store(key, outputs, p.stdout, origin)
-                return p.stdout
+            def run(step):
+                if step.key:
+                    steps["keys"][step.log] = step.key
+                keep = (lambda: (retained / step.driver).write_text(step.text)) if step.driver else None
+                outcome = lean_step(command, step, work, origin, before=keep)
+                if outcome.reused_from:
+                    steps["reused"][step.log] = outcome.reused_from
+                    return outcome.output
+                (retained / step.log).write_text(outcome.output)
+                assert outcome.returncode == 0, outcome.output
+                assert not re.search(r"\b(?:error|warning):", outcome.output), outcome.output
+                steps["ran"].append(step.log)
+                steps["seconds"][step.log] = outcome.seconds
+                return outcome.output
 
-            receipt["lean_version"] = run(["--version"], "version.log").strip()
+            started = time.perf_counter()
+            receipt["lean_version"] = run(Step("version", [], ["--version"], "version.log", "", None, [], None, None)).strip()
             assert "version 4.29.1" in receipt["lean_version"]
-            for name, data in sources.items():
-                target = work / source_file(name)
-                target.parent.mkdir(parents=True, exist_ok=True)
-                target.write_bytes(data)
+            # Constants Lean generates are not source declarations; audit them as well, and the
+            # bridge's own constants by the same driver: its imports may use axioms.
+            extra = [("environment", "EnvironmentAudit.lean", ENVIRONMENT_AUDIT.format(
+                imports="\n".join("import " + name for name in core_closure),
+                modules=", ".join("`" + name for name in core_closure)))]
+            if BRIDGE:
+                extra.append(("bridge environment", "BridgeEnvironmentAudit.lean", ENVIRONMENT_AUDIT.format(
+                    imports="\n".join("import " + name for name in BRIDGE),
+                    modules=", ".join("`" + name for name in BRIDGE))))
+            extra.append(("controls", "Controls.lean", CONTROLS))
+            # The core needs nothing beyond Lean's prelude: it is compiled again from the prelude alone.
+            plan, files = lean_plan(context, sources, keys, registry, order, audited=order,
+                                    signed=[name for name in order if name in CHECKED], prelude=core_closure, extra=extra)
+            write_files(work, files)
             # Each Lean step waits for the compiles of the modules it imports (run_graph);
             # `sequence` is the order of a one-at-a-time run, which the receipt keeps.
-            tasks, sequence = {}, ["version.log"]
-
-            def compiled(text, prefix="compile "):
-                """The compile steps a driver or module reads: those of the package modules it imports."""
-                data = text.encode() if isinstance(text, str) else text
-                return [prefix + name for name in imports_of(data) if name in keys]
-
-            def compile_step(name, log, where, key):
-                olean = source_file(name)[:-5] + ".olean"
-                return lambda: run(["-o", olean, source_file(name)], log, where, key=key, outputs=[olean])
-
-            def driver_step(driver, text):
-                def step():
-                    (work / driver).write_text(text)
-                    return run([driver], driver[:-5] + ".log",
-                               key=step_key(context, driver, text.encode(), keys), driver=driver)
-                return step
-
-            for name in order:
-                flat = name.replace(".", "")
-                tasks["compile " + name] = (compiled(sources[name]),
-                                            compile_step(name, name + ".log", work, keys[name]))
-                audit = "import " + name + "\n" + "\n".join(
-                    "#print axioms " + item["name"] for item in registry[name]) + "\n"
-                tasks["audit " + name] = (["compile " + name], driver_step(flat + "AxiomAudit.lean", audit))
-                sequence += [name + ".log", flat + "AxiomAudit.log"]
-                if name in CHECKED:
-                    signatures = "import " + name + "\n" + "\n".join(
-                        "#check @" + item["name"] for item in registry[name] if item["kind"] == "theorem") + "\n"
-                    tasks["signatures " + name] = (["compile " + name],
-                                                   driver_step(flat + "Signatures.lean", signatures))
-                    sequence.append(flat + "Signatures.log")
-            # Constants Lean generates are not source declarations; audit them as well.
-            environment = ENVIRONMENT_AUDIT.format(
-                imports="\n".join("import " + name for name in core_closure),
-                modules=", ".join("`" + name for name in core_closure))
-            tasks["environment"] = (compiled(environment), driver_step("EnvironmentAudit.lean", environment))
-            # The bridge's own constants, by the same driver: its imports may use axioms.
-            bridge_environment = ENVIRONMENT_AUDIT.format(
-                imports="\n".join("import " + name for name in BRIDGE),
-                modules=", ".join("`" + name for name in BRIDGE))
-            if BRIDGE:
-                tasks["bridge environment"] = (compiled(bridge_environment),
-                                               driver_step("BridgeEnvironmentAudit.lean", bridge_environment))
-            tasks["controls"] = (compiled(CONTROLS), driver_step("Controls.lean", CONTROLS))
-            sequence += ["EnvironmentAudit.log"] + (["BridgeEnvironmentAudit.log"] if BRIDGE else []) + ["Controls.log"]
-            # The core needs nothing beyond Lean's prelude.
-            bare = work / "prelude-only"
-            bare.mkdir()
-            stripped = {name: re.sub(r"^import Std\n", "", sources[name].decode(), flags=re.M).encode()
-                        for name in core_closure}
-            bare_keys = module_keys(context + ["prelude only"], stripped, core_closure)
-            for name in core_closure:
-                target = bare / source_file(name)
-                target.parent.mkdir(parents=True, exist_ok=True)
-                target.write_bytes(stripped[name])
-                tasks["prelude " + name] = (compiled(stripped[name], "prelude "),
-                                            compile_step(name, name + ".PreludeOnly.log", bare, bare_keys[name]))
-                sequence.append(name + ".PreludeOnly.log")
+            tasks = {step.task: (step.needs, lambda step=step: run(step)) for step in plan}
+            sequence = ["version.log"] + [step.log for step in plan]
             try:
                 outputs = run_graph(tasks)
             finally:
                 in_serial_order(steps, sequence)
+                steps["wall_seconds"] = round(time.perf_counter() - started, 3)
             for name in order:
                 output = outputs["audit " + name]
                 dependencies = {}
@@ -4469,6 +4795,7 @@ def main():
                                     for aa in r["axiom_dependencies"].values() for a in aa}),
         "market_names": receipt.get("market_names", {}),
         "lean_steps_run": len(steps["ran"]), "lean_steps_reused": len(steps["reused"]),
+        "lean_wall_seconds": steps.get("wall_seconds"),
         "lean": receipt.get("lean_resolution"),
         "receipt": str(receipt_path),
     }))

@@ -1,0 +1,37 @@
+'Becoming.FallibleInquiry.answer_alike_beyond_response' does not depend on any axioms
+'Becoming.FallibleInquiry.different_answers_not_beyond' does not depend on any axioms
+'Becoming.FallibleInquiry.answer_alike_beyond_law' does not depend on any axioms
+'Becoming.FallibleInquiry.observeWithResidual' does not depend on any axioms
+'Becoming.FallibleInquiry.regionWithResidual' does not depend on any axioms
+'Becoming.FallibleInquiry.residual_couples_nothing' does not depend on any axioms
+'Becoming.FallibleInquiry.closed_with_imbalance' depends on axioms: [propext, Quot.sound]
+'Becoming.FallibleInquiry.common_imbalance_of_balanced' does not depend on any axioms
+'Becoming.FallibleInquiry.alike_with_common_imbalance' depends on axioms: [propext, Quot.sound]
+'Becoming.FallibleInquiry.answer_alike_with_common_imbalance' depends on axioms: [propext, Quot.sound]
+'Becoming.FallibleInquiry.coverage_le_errors_add_reach' depends on axioms: [propext, Quot.sound]
+'Becoming.FallibleInquiry.error_bounds_require_reach' depends on axioms: [propext, Quot.sound]
+'Becoming.FallibleInquiry.beyond_reach_coverage_eq_errors' depends on axioms: [propext, Quot.sound]
+'Becoming.FallibleInquiry.Witness.web' does not depend on any axioms
+'Becoming.FallibleInquiry.Witness.flow' does not depend on any axioms
+'Becoming.FallibleInquiry.Witness.law' does not depend on any axioms
+'Becoming.FallibleInquiry.Witness.read' does not depend on any axioms
+'Becoming.FallibleInquiry.Witness.balanced' depends on axioms: [propext, Quot.sound]
+'Becoming.FallibleInquiry.Witness.law_through' does not depend on any axioms
+'Becoming.FallibleInquiry.Witness.follows' depends on axioms: [propext, Quot.sound]
+'Becoming.FallibleInquiry.Witness.read_through' does not depend on any axioms
+'Becoming.FallibleInquiry.Witness.connected' depends on axioms: [propext, Quot.sound]
+'Becoming.FallibleInquiry.Witness.correct_answers' does not depend on any axioms
+'Becoming.FallibleInquiry.Witness.ignored_signal' does not depend on any axioms
+'Becoming.FallibleInquiry.Witness.omitted_exchange_none' depends on axioms: [propext, Quot.sound]
+'Becoming.FallibleInquiry.Witness.omitted_exchange_no_reach' depends on axioms: [propext, Quot.sound]
+'Becoming.FallibleInquiry.Witness.omitted_exchange_unbalanced' depends on axioms: [propext, Quot.sound]
+'Becoming.FallibleInquiry.Witness.omitted_exchange_follows' depends on axioms: [propext, Quot.sound]
+'Becoming.FallibleInquiry.Witness.omitted_exchange_keeps_task' does not depend on any axioms
+'Becoming.FallibleInquiry.Witness.counted_residual_balances' does not depend on any axioms
+'Becoming.FallibleInquiry.Witness.counted_residual_differs' does not depend on any axioms
+'Becoming.FallibleInquiry.Witness.counted_residual_not_response' does not depend on any axioms
+'Becoming.FallibleInquiry.Witness.counted_residual_reaches' does not depend on any axioms
+'Becoming.FallibleInquiry.Witness.common_nonzero_imbalance' depends on axioms: [propext, Quot.sound]
+'Becoming.FallibleInquiry.coverage_le_errors_add_timed_reach' depends on axioms: [propext, Quot.sound]
+'Becoming.FallibleInquiry.error_bounds_require_timed_reach' depends on axioms: [propext, Quot.sound]
+'Becoming.FallibleInquiry.unreached_in_time_coverage_eq_errors' depends on axioms: [propext, Quot.sound]

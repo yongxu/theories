@@ -1,4 +1,12 @@
-"""The Becoming checker's concurrent steps: each waits for what it reads; the receipt keeps serial order."""
+"""The Becoming checker's concurrent steps: each waits for what it reads; the receipt keeps serial order.
+A step not in the cache runs once under its key's lock, Lean processes take the machine's slots, and the
+plan the checker and scratch_build share keys every step by its inputs."""
+import fcntl
+import os
+from pathlib import Path
+import re
+import subprocess
+import tempfile
 import threading
 import time
 import unittest
@@ -51,6 +59,420 @@ class CheckerSteps(unittest.TestCase):
         self.assertEqual(steps['ran'], ['version.log', 'a.log', 'c.log'])
         self.assertEqual(list(steps['reused']), ['b.log', 'x.log'])
         self.assertEqual(list(steps['keys']), ['a.log', 'b.log', 'c.log'])
+
+
+
+class SharedSteps(unittest.TestCase):
+    """The runner every checker and scratch build uses (`lean_step`), on a scratch cache and a stand-in for Lean."""
+
+    def setUp(self):
+        self.checker = load_checker()
+        self.scratch = tempfile.TemporaryDirectory()
+        self.root = Path(self.scratch.name)
+        cache = self.root / 'cache'
+        self.checker.CACHE, self.checker.LOCKS, self.checker.SLOTS = cache, cache / 'locks', cache / 'slots'
+        self.checker.FRESH = False
+
+    def tearDown(self):
+        self.scratch.cleanup()
+
+    def step(self, args, key):
+        return self.checker.Step('t', [], args, 't.log', '', key, ['out.olean'], None, None)
+
+    def test_an_entry_another_tool_stored_is_not_this_runners(self):
+        directory = self.directory('a')
+        (directory / 'out.olean').write_text('theirs')
+        self.checker.store('k10', [directory / 'out.olean'], 'their log', {'run': 'theirs'})
+        self.assertEqual(self.checker.reuse('k10', [directory / 'out.olean'])[1], {'run': 'theirs'},
+                         'other tools may still read it')
+        mine = self.checker.lean_step(self.lean(0), self.step(['x'], 'k10'), self.directory('b'), {'run': 'mine'})
+        self.assertIsNone(mine.reused_from, 'the runner ran the step itself')
+        again = self.checker.lean_step(self.lean(0), self.step(['x'], 'k10'), self.directory('c'), {'run': 'again'})
+        self.assertEqual(again.reused_from, {'run': 'mine'})
+
+    def test_the_runner_writes_a_steps_driver_and_the_plans_files(self):
+        base = self.directory('a')
+        self.checker.write_files(base, {'': {'X.lean': b'-- x\n'}, 'prelude-only': {'X.lean': b'-- y\n'}})
+        self.assertEqual((base / 'prelude-only' / 'X.lean').read_bytes(), b'-- y\n')
+        driver = self.checker.Step('t', [], ['D.lean'], 'D.log', '', 'k11', [], 'D.lean', 'import X\n')
+        script = 'import sys; print(open(sys.argv[1]).read())'
+        outcome = self.checker.lean_step(['python3', '-c', script], driver, base, {'run': 'a'})
+        self.assertIn('import X', outcome.output)
+
+    def directory(self, name):
+        path = self.root / name
+        path.mkdir()
+        return path
+
+    # The stand-in: writes its output file, sleeps, prints its arguments; `fail` and `warn` as told.
+    def lean(self, seconds=0.2):
+        script = ('import sys, time; time.sleep(%s); open("out.olean", "w").write("o");'
+                  'a = sys.argv[1:]; print(*a);'
+                  'sys.exit(1 if "fail" in a else 0)') % seconds
+        return ['python3', '-c', script]
+
+    def test_a_step_wanted_twice_at_once_runs_once(self):
+        outcomes = {}
+
+        def go(name):
+            outcomes[name] = self.checker.lean_step(self.lean(), self.step(['x'], 'k1'), self.directory(name), {'run': name})
+        threads = [threading.Thread(target=go, args=(n,)) for n in ('one', 'two')]
+        for thread in threads:
+            thread.start()
+        for thread in threads:
+            thread.join()
+        ran = [n for n, o in outcomes.items() if o.reused_from is None]
+        self.assertEqual(len(ran), 1, outcomes)
+        other = 'two' if ran == ['one'] else 'one'
+        self.assertEqual(outcomes[other].reused_from, {'run': ran[0]})
+        self.assertEqual((self.root / other / 'out.olean').read_text(), 'o')
+        self.assertEqual(outcomes[ran[0]].output, outcomes[other].output)
+        self.assertFalse(list(self.checker.LOCKS.iterdir()), 'the lock file goes with the lock')
+
+    def test_seconds_are_kept_and_a_failure_is_not_stored(self):
+        first = self.checker.lean_step(self.lean(0), self.step(['x'], 'k2'), self.directory('a'), {'run': 'a'})
+        self.assertTrue(first.passed and first.seconds is not None and first.reused_from is None)
+        entry = (self.checker.CACHE / 'k2.json').read_text()
+        self.assertIn('"seconds"', entry)
+        again = self.checker.lean_step(self.lean(0), self.step(['x'], 'k2'), self.directory('b'), {'run': 'b'})
+        self.assertEqual(again.reused_from, {'run': 'a'})
+        failed = self.checker.lean_step(self.lean(0), self.step(['fail'], 'k3'), self.directory('c'), {'run': 'c'})
+        self.assertEqual((failed.returncode, failed.passed), (1, False))
+        warned = self.checker.lean_step(self.lean(0), self.step(['warning:'], 'k4'), self.directory('d'), {'run': 'd'})
+        self.assertEqual((warned.returncode, warned.passed), (0, False))
+        self.assertFalse((self.checker.CACHE / 'k3.json').exists() or (self.checker.CACHE / 'k4.json').exists())
+
+    def test_fresh_runs_every_step(self):
+        self.checker.lean_step(self.lean(0), self.step(['x'], 'k5'), self.directory('a'), {'run': 'a'})
+        self.checker.FRESH = True
+        again = self.checker.lean_step(self.lean(0), self.step(['x'], 'k5'), self.directory('b'), {'run': 'b'})
+        self.assertIsNone(again.reused_from)
+
+    def test_lean_processes_keep_to_the_slots(self):
+        self.checker.LEAN_SLOTS = 2
+        lock, inside, peak = threading.Lock(), [0], [0]
+
+        def go():
+            with self.checker.lean_slot():
+                with lock:
+                    inside[0] += 1
+                    peak[0] = max(peak[0], inside[0])
+                time.sleep(0.15)
+                with lock:
+                    inside[0] -= 1
+        threads = [threading.Thread(target=go) for _ in range(5)]
+        for thread in threads:
+            thread.start()
+        for thread in threads:
+            thread.join()
+        self.assertEqual(peak[0], 2)
+
+    def test_a_waiter_on_a_removed_lock_file_takes_the_new_one(self):
+        # Every attempt to lock, by thread and by the file's inode, recorded on the main thread's side.
+        real, tries, seen = self.checker.try_flock, [], {}
+        events = {name: threading.Event() for name in ('held', 'waiter_tried', 'release', 'third_tried', 'leave')}
+
+        def recording(handle):
+            state = real(handle)
+            who = threading.current_thread().name
+            tries.append((who, os.fstat(handle.fileno()).st_ino, state))
+            if state is False:
+                events[who + '_tried'].set()
+            return state
+        self.checker.try_flock = recording
+        inside, peak, order, lock = [0], [0], [], threading.Lock()
+
+        def body(name, wait_on):
+            with lock:
+                inside[0] += 1
+                peak[0] = max(peak[0], inside[0])
+                order.append(name)
+                seen[name] = os.stat(self.checker.LOCKS / 'k6.lock').st_ino
+            if name == 'holder':
+                events['held'].set()
+            events[wait_on].wait(5)
+            with lock:
+                inside[0] -= 1
+
+        def holder():
+            with self.checker.step_lock('k6'):
+                body('holder', 'release')
+
+        def waiter():
+            with self.checker.step_lock('k6'):
+                body('waiter', 'leave')
+
+        def third():
+            with self.checker.step_lock('k6'):
+                body('third', 'leave')
+        threads = {name: threading.Thread(target=f, name=name)
+                   for name, f in (('holder', holder), ('waiter', waiter), ('third', third))}
+        threads['holder'].start()
+        self.assertTrue(events['held'].wait(5))
+        threads['waiter'].start()
+        self.assertTrue(events['waiter_tried'].wait(5), 'the waiter opened the holder\'s file and found it held')
+        events['release'].set()
+        threads['holder'].join(5)
+        while 'waiter' not in order and threads['waiter'].is_alive():
+            time.sleep(0.01)
+        threads['third'].start()
+        self.assertTrue(events['third_tried'].wait(5), 'the third arrives while the waiter holds the new file')
+        events['leave'].set()
+        for thread in threads.values():
+            thread.join(5)
+        self.assertEqual(order, ['holder', 'waiter', 'third'])
+        self.assertEqual(peak[0], 1, 'no two holders at once')
+        first = seen['holder']
+        waiter_files = [inode for who, inode, _ in tries if who == 'waiter']
+        self.assertEqual(waiter_files[0], first, 'the waiter tried the removed file first')
+        self.assertNotEqual(seen['waiter'], first, 'and holds a new one')
+        self.assertIn((first, True), [(i, s) for who, i, s in tries if who == 'waiter'],
+                      'it took the removed file\'s lock, saw the file gone and took the new one')
+        self.assertFalse((self.checker.LOCKS / 'k6.lock').exists())
+
+    def test_a_stopped_run_starts_no_waiting_step(self):
+        self.checker.LEAN_SLOTS = 1
+        started = []
+        with self.checker.lean_slot():
+            self.checker.STOP.set()
+            with self.assertRaises(RuntimeError):
+                with self.checker.lean_slot():
+                    started.append('lean')
+            with self.assertRaises(RuntimeError):
+                self.checker.lean_step(self.lean(0), self.step(['x'], 'k7'), self.directory('a'), {'run': 'a'})
+        self.assertEqual(started, [])
+        self.assertFalse((self.checker.CACHE / 'k7.json').exists())
+
+    def hold(self, key, seconds, beat_every=None):
+        """A thread holding `key`'s lock for `seconds`, beating every `beat_every` seconds if given."""
+        held, left = threading.Event(), {}
+
+        def holder():
+            with self.checker.step_lock(key) as beat:
+                held.set()
+                end = time.monotonic() + seconds
+                while time.monotonic() < end:
+                    time.sleep(beat_every or 0.02)
+                    if beat_every:
+                        beat()
+                left['at'] = time.monotonic()
+        thread = threading.Thread(target=holder)
+        thread.start()
+        self.assertTrue(held.wait(5))
+        return thread, left
+
+    def test_a_silent_holder_is_passed_and_a_live_one_is_waited_for(self):
+        thread, left = self.hold('k8', 1.0)
+        with self.checker.step_lock('k8', quiet=0.3):
+            entered = time.monotonic()
+        thread.join(5)
+        self.assertLess(entered, left['at'], 'a holder silent for longer than quiet is passed')
+        thread, left = self.hold('k8b', 1.0, beat_every=0.05)
+        with self.checker.step_lock('k8b', quiet=0.3):
+            entered = time.monotonic()
+        thread.join(5)
+        self.assertGreaterEqual(entered, left['at'], 'a holder that beats is waited for')
+
+    def test_a_file_system_that_cannot_lock_takes_no_lock_at_once(self):
+        thread, _ = self.hold('k9', 2.0)
+        self.checker.try_flock = lambda handle: None
+        done = threading.Event()
+
+        def waiter():
+            with self.checker.step_lock('k9'):
+                with self.checker.lean_slot():
+                    done.set()
+        self.checker.LEAN_SLOTS = 1
+        self.checker.SLOTS.mkdir(parents=True, exist_ok=True)
+        with open(self.checker.SLOTS / 'lean-0.lock', 'a') as slot:
+            fcntl.flock(slot, fcntl.LOCK_EX)
+            threading.Thread(target=waiter).start()
+            self.assertTrue(done.wait(1.0), 'neither the held lock nor the held slot was waited for')
+        thread.join(5)
+
+    def test_a_failed_step_stops_the_steps_still_waiting(self):
+        self.checker.LEAN_SLOTS = 1
+        self.checker.SLOTS.mkdir(parents=True, exist_ok=True)
+        ran = []
+
+        def fails():
+            time.sleep(0.2)
+            raise ValueError('a')
+
+        def waits():
+            with self.checker.lean_slot():
+                ran.append('b')
+        outcome = {}
+
+        def graph():
+            try:
+                self.checker.run_graph({'a': ([], fails), 'b': ([], waits)}, jobs=2)
+            except Exception as error:
+                outcome['error'] = error
+        with open(self.checker.SLOTS / 'lean-0.lock', 'a') as slot:
+            fcntl.flock(slot, fcntl.LOCK_EX)
+            thread = threading.Thread(target=graph)
+            thread.start()
+            thread.join(5)
+            stopped = not thread.is_alive()
+        thread.join(5)
+        self.assertTrue(stopped, 'the waiting step stopped once the other failed')
+        self.assertIsInstance(outcome.get('error'), ValueError)
+        self.assertEqual(ran, [])
+
+    def test_a_stopped_run_with_a_free_slot_starts_no_lean(self):
+        self.checker.STOP.set()
+        called = []
+        with self.assertRaises(RuntimeError):
+            self.checker.lean_step(self.lean(0), self.step(['x'], None), self.directory('a'), {'run': 'a'},
+                                   before=lambda: called.append('before'))
+        self.assertEqual(called, [])
+        self.assertFalse((self.root / 'a' / 'out.olean').exists())
+
+    def test_lean_is_run_with_beats_and_killed_at_its_timeout(self):
+        beats = []
+        code, output = self.checker.run_lean(self.lean(0.3), self.directory('a'), 5, lambda: beats.append(1), every=0.05)
+        self.assertEqual(code, 0)
+        self.assertGreaterEqual(len(beats), 3)
+        began = time.monotonic()
+        with self.assertRaises(subprocess.TimeoutExpired):
+            self.checker.run_lean(self.lean(5), self.directory('b'), 0.3, lambda: None, every=0.05)
+        self.assertLess(time.monotonic() - began, 3)
+        self.assertFalse((self.root / 'b' / 'out.olean').exists(), 'the stand-in was killed before it wrote')
+
+
+class Plan(unittest.TestCase):
+    """The plan on a small package of modules: keys by inputs, the order of a one-at-a-time run."""
+
+    def setUp(self):
+        self.checker = load_checker()
+        self.sources = {'Base': b'-- base\n', 'Found': b'import Std\nimport Base\n', 'Top': b'import Found\nimport Base\n'}
+        self.order = ['Base', 'Found', 'Top']
+        self.context = ['toolchain', 'binary']
+        self.keys = self.checker.module_keys(self.context, self.sources, self.order)
+        self.registry = {name: [{'name': name + '.t', 'kind': 'theorem'}, {'name': name + '.d', 'kind': 'def'}]
+                         for name in self.order}
+
+    def test_steps_in_the_old_order_with_the_old_keys(self):
+        plan, files = self.checker.lean_plan(self.context, self.sources, self.keys, self.registry, self.order,
+                                             audited=self.order, signed=['Top'], prelude=self.order,
+                                             extra=[('controls', 'Controls.lean', 'import Top\n')])
+        self.assertEqual([s.log for s in plan], [
+            'Base.log', 'BaseAxiomAudit.log', 'Found.log', 'FoundAxiomAudit.log', 'Top.log', 'TopAxiomAudit.log',
+            'TopSignatures.log', 'Controls.log', 'Base.PreludeOnly.log', 'Found.PreludeOnly.log', 'Top.PreludeOnly.log'])
+        steps = {s.task: s for s in plan}
+        self.assertEqual(steps['compile Top'].needs, ['compile Found', 'compile Base'])
+        self.assertEqual(steps['compile Top'].key, self.keys['Top'])
+        audit = 'import Top\n#print axioms Top.t\n#print axioms Top.d\n'
+        self.assertEqual(steps['audit Top'].text, audit)
+        self.assertEqual(steps['audit Top'].key, self.checker.step_key(self.context, 'TopAxiomAudit.lean', audit.encode(), self.keys))
+        self.assertEqual(steps['signatures Top'].text, 'import Top\n#check @Top.t\n')
+        self.assertEqual(steps['controls'].needs, ['compile Top'])
+        self.assertEqual(steps['prelude Top'].needs, ['prelude Found', 'prelude Base'])
+        self.assertEqual(files['prelude-only']['Found.lean'], b'import Base\n')
+
+    def test_a_compile_from_the_prelude_with_its_modules_inputs_is_its_modules_step(self):
+        plan, _ = self.checker.lean_plan(self.context, self.sources, self.keys, self.registry, self.order,
+                                         prelude=self.order)
+        steps = {s.task: s for s in plan}
+        # Base reads no Std: the same bytes, the same imports, the same step.
+        self.assertEqual(steps['prelude Base'].key, steps['compile Base'].key)
+        # Found loses its `import Std` line, and Top imports Found: other inputs, other steps.
+        self.assertNotEqual(steps['prelude Found'].key, steps['compile Found'].key)
+        self.assertNotEqual(steps['prelude Top'].key, steps['compile Top'].key)
+        self.assertEqual({s.args[0] for s in plan if s.task.split()[0] in ('compile', 'prelude')}, {'-o'})
+
+    def test_imports_are_parsed_once_and_returned_fresh(self):
+        data = b'import A\n-- import B\nimport Std\nimport C\n'
+        first = self.checker.imports_of(data)
+        self.assertEqual(first, ['A', 'C'])
+        first.append('Z')
+        self.assertEqual(self.checker.imports_of(data), ['A', 'C'])
+        self.assertEqual(self.checker._imports.cache_info().hits, 1)
+
+
+class Runner(unittest.TestCase):
+    """The runner's digest, which every step's key holds: code read without comments, docstrings or layout."""
+
+    def digest_of(self, text):
+        checker = load_checker()
+        with tempfile.TemporaryDirectory() as folder:
+            path = Path(folder) / 'runner_probe.py'
+            path.write_text(text)
+            import importlib.util
+            spec = importlib.util.spec_from_file_location('runner_probe', path)
+            module = importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(module)
+            return checker.code_digest([module.step])
+
+    def test_the_digest_reads_what_the_code_does(self):
+        plain = 'def step(args, ok):\n    if ok:\n        args.append("-o")\n    return args\n'
+        dressed = ('def step(args, ok):  # a comment\n    """A docstring,\n    over two lines."""\n\n'
+                   '    if ok:\n            args.append(\n                "-o")  # another\n    return args\n')
+        changed = plain.replace('"-o"', '"-j"')
+        moved = 'def step(args, ok):\n    if ok:\n        args.append("-o")\n        return args\n'
+        self.assertEqual(self.digest_of(plain), self.digest_of(dressed))
+        self.assertNotEqual(self.digest_of(plain), self.digest_of(changed))
+        self.assertNotEqual(self.digest_of(plain), self.digest_of(moved), 'a statement moved into a block')
+
+    def test_every_key_holds_the_runner(self):
+        checker = load_checker()
+        self.assertEqual(len(checker.RUNNER), 64)
+        first = checker.step_key(['t', 'b'], 'compile X', b'-- x\n', {})
+        checker.RUNNER = 'another runner'
+        self.assertNotEqual(checker.step_key(['t', 'b'], 'compile X', b'-- x\n', {}), first)
+        self.assertNotEqual(checker.module_keys(['t', 'b'], {'X': b'-- x\n'}, ['X'])['X'], first)
+
+    @staticmethod
+    def uncovered(checker, functions):
+        """The checker's module functions (cached ones included) that the given functions call and that
+        are neither among them nor helpers that only wait or lock."""
+        import ast
+        import inspect
+        import textwrap
+        listed = {function.__name__ for function in functions}
+        waits = {'step_lock', 'lean_slot', 'wait_for', 'try_flock'}
+        own = {name for name, value in vars(checker).items()
+               if inspect.isfunction(inspect.unwrap(value)) and inspect.unwrap(value).__module__ == checker.__name__}
+        missing = set()
+        for function in functions:
+            tree = ast.parse(textwrap.dedent(inspect.getsource(inspect.unwrap(function))))
+            called = {node.func.id for node in ast.walk(tree)
+                      if isinstance(node, ast.Call) and isinstance(node.func, ast.Name) and node.func.id in own}
+            missing |= called - listed - waits
+        return missing
+
+    def test_the_runner_covers_every_function_of_the_checker_it_calls(self):
+        """A helper split out of the runner, cached or not, cannot fall outside its digest unnoticed."""
+        checker = load_checker()
+        self.assertEqual(self.uncovered(checker, checker.RUNNER_FUNCTIONS), set())
+        without = tuple(f for f in checker.RUNNER_FUNCTIONS if f.__name__ != '_imports')
+        self.assertEqual(self.uncovered(checker, without), {'_imports'})
+
+    def test_an_f_string_and_code_beside_a_docstring_count(self):
+        base = 'def step(x):\n    return f"-o {x}.olean"\n'
+        self.assertNotEqual(self.digest_of(base), self.digest_of(base.replace('{x}', '{x!r}')))
+        self.assertEqual(self.digest_of(base), self.digest_of(base.replace('return f"', 'return   f"')))
+        beside = 'def step(x):\n    """doc"""; x.append(1)\n    return x\n'
+        self.assertNotEqual(self.digest_of(beside), self.digest_of(beside.replace('; x.append(1)', '')))
+        self.assertEqual(self.digest_of(beside), self.digest_of(beside.replace('"""doc"""', '"""other"""')))
+        wide = 'def step(x):\n    """From `A.B` → `A/B.lean`."""\n    return x\n'
+        bare = 'def step(x):\n    return x\n'
+        self.assertEqual(self.digest_of(wide), self.digest_of(bare), 'a docstring with a non-ASCII character')
+        self.assertEqual(self.digest_of(bare), self.digest_of(bare.replace('(x):\n', '(x):\n    """doc"""  # a note\n')),
+                         'a docstring with a comment after it')
+
+
+class EnvironmentAudit(unittest.TestCase):
+    def test_one_listing_of_the_constants(self):
+        checker = load_checker()
+        text = checker.ENVIRONMENT_AUDIT.format(imports='import M', modules='`M, `N')
+        self.assertEqual(text.count('env.constants.map₁.toList'), 1)
+        self.assertIn('let modules : Array Name := #[`M, `N]', text)
+        loop = text.index('for (n, _) in env.constants.map₁.toList')
+        self.assertLess(text.index('position := position.insert'), loop)
+        self.assertLess(loop, text.index('Lean.collectAxioms n'))
+        self.assertEqual(re.findall(r'logInfo m!"(\w+)', text), ['AXIOMS', 'CONSTANTS'])
 
 
 if __name__ == '__main__':

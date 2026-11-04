@@ -1,0 +1,580 @@
+@Becoming.WindowedWaiting.invariant : ∀ {S : Type u_1} {next : S → S} {s : S} (P : S → Prop),
+  P s → (∀ (x : S), P x → P (next x)) → ∀ (n : Nat), P ((Becoming.Law.run next s).state n)
+@Becoming.WindowedWaiting.course_congr : ∀ {S : Type u_1} {next next' : S → S},
+  (∀ (x : S), next x = next' x) →
+    ∀ (s : S) (n : Nat), (Becoming.Law.run next s).state n = (Becoming.Law.run next' s).state n
+@Becoming.WindowedWaiting.course_rel : ∀ {S : Type u_1} {S' : Type u_2} {next : S → S} {next' : S' → S'}
+  (R : S → S' → Prop) {s : S} {s' : S'},
+  R s s' →
+    (∀ (x : S) (y : S'), R x y → R (next x) (next' y)) →
+      ∀ (n : Nat), R ((Becoming.Law.run next s).state n) ((Becoming.Law.run next' s').state n)
+Becoming.WindowedWaiting.boolOr_true_iff : ∀ (a b : Bool), (a || b) = true ↔ a = true ∨ b = true
+Becoming.WindowedWaiting.boolNot_true_iff : ∀ (b : Bool), (!b) = true ↔ b = false
+@Becoming.WindowedWaiting.or_congr_both : ∀ {A A' B B' : Prop}, (A ↔ A') → (B ↔ B') → (A ∨ B ↔ A' ∨ B')
+@Becoming.WindowedWaiting.eq_table_of : ∀ {f : Bool → Bool → Bool} {tt tf ft ff : Bool},
+  f true true = tt →
+    f true false = tf →
+      f false true = ft → f false false = ff → ∀ (a b : Bool), f a b = Becoming.WindowedWaiting.table tt tf ft ff a b
+@Becoming.WindowedWaiting.pairStep_congr : ∀ {f g : Bool → Bool → Bool},
+  (∀ (a b : Bool), f a b = g a b) →
+    ∀ (x : Bool × Bool), Becoming.WindowedWaiting.pairStep f x = Becoming.WindowedWaiting.pairStep g x
+@Becoming.WindowedWaiting.restores_congr : ∀ {f g : Bool → Bool → Bool},
+  (∀ (a b : Bool), f a b = g a b) → (Becoming.WindowedWaiting.Restores f ↔ Becoming.WindowedWaiting.Restores g)
+@Becoming.WindowedWaiting.neverRestores_congr : ∀ {f g : Bool → Bool → Bool},
+  (∀ (a b : Bool), f a b = g a b) →
+    (Becoming.WindowedWaiting.NeverRestores f ↔ Becoming.WindowedWaiting.NeverRestores g)
+@Becoming.WindowedWaiting.NeverRestores.not : ∀ {f : Bool → Bool → Bool},
+  Becoming.WindowedWaiting.NeverRestores f → ¬Becoming.WindowedWaiting.Restores f
+@Becoming.WindowedWaiting.never_restores_of : ∀ {f : Bool → Bool → Bool} (inv : Bool × Bool → Bool),
+  inv Becoming.WindowedWaiting.oneWithheldBool = true →
+    (∀ (x : Bool × Bool), inv x = true → inv (Becoming.WindowedWaiting.pairStep f x) = true) →
+      inv (true, true) = false → Becoming.WindowedWaiting.NeverRestores f
+@Becoming.WindowedWaiting.never_answers_of : ∀ {f : Bool → Bool → Bool},
+  f true false = true → Becoming.WindowedWaiting.NeverAnswers f
+Becoming.WindowedWaiting.answersWithholder_iff : ∀ (f : Bool → Bool → Bool),
+  Becoming.WindowedWaiting.AnswersWithholder f ↔ f true false = false
+Becoming.WindowedWaiting.answersWithholder_at_one : ∀ (f : Bool → Bool → Bool),
+  Becoming.WindowedWaiting.AnswersWithholder f ↔
+    (Becoming.Law.run (Becoming.WindowedWaiting.againstWithholder f) true).state 1 = false
+@Becoming.WindowedWaiting.NeverAnswers.not : ∀ {f : Bool → Bool → Bool},
+  Becoming.WindowedWaiting.NeverAnswers f → ¬Becoming.WindowedWaiting.AnswersWithholder f
+@Becoming.WindowedWaiting.pairKeepsInclusion_iff : ∀ {f : Bool → Bool → Bool},
+  f true true = true →
+    (Becoming.WindowedWaiting.PairKeepsInclusion f ↔
+      (f false false = true → f true false = true) ∧ (f false false = true → f false true = true))
+Becoming.WindowedWaiting.partnerGave_eq : ∀ (a b : Bool), Becoming.WindowedWaiting.partnerGave a b = b
+Becoming.WindowedWaiting.agreement_eq : ∀ (a b : Bool), Becoming.WindowedWaiting.agreement a b = (a == b)
+Becoming.WindowedWaiting.bothGave_keeps : Becoming.WindowedWaiting.PairKeepsInclusion Becoming.WindowedWaiting.bothGave
+Becoming.WindowedWaiting.partnerGave_keeps : Becoming.WindowedWaiting.PairKeepsInclusion
+  Becoming.WindowedWaiting.partnerGave
+Becoming.WindowedWaiting.ownGave_keeps : Becoming.WindowedWaiting.PairKeepsInclusion Becoming.WindowedWaiting.ownGave
+Becoming.WindowedWaiting.eitherGave_keeps : Becoming.WindowedWaiting.PairKeepsInclusion
+  Becoming.WindowedWaiting.eitherGave
+Becoming.WindowedWaiting.alwaysGives_keeps : Becoming.WindowedWaiting.PairKeepsInclusion
+  Becoming.WindowedWaiting.alwaysGives
+Becoming.WindowedWaiting.pairKeepsInclusion_table_iff : ∀ (tf ft ff : Bool),
+  Becoming.WindowedWaiting.PairKeepsInclusion (Becoming.WindowedWaiting.table true tf ft ff) ↔
+    (tf, ft, ff) = (false, false, false) ∨
+      (tf, ft, ff) = (false, true, false) ∨
+        (tf, ft, ff) = (true, false, false) ∨ (tf, ft, ff) = (true, true, false) ∨ (tf, ft, ff) = (true, true, true)
+Becoming.WindowedWaiting.bothGave_never_restores : Becoming.WindowedWaiting.NeverRestores
+  Becoming.WindowedWaiting.bothGave
+Becoming.WindowedWaiting.partnerGave_never_restores : Becoming.WindowedWaiting.NeverRestores
+  Becoming.WindowedWaiting.partnerGave
+Becoming.WindowedWaiting.ownGave_never_restores : Becoming.WindowedWaiting.NeverRestores
+  Becoming.WindowedWaiting.ownGave
+Becoming.WindowedWaiting.ownGave_never_answers : Becoming.WindowedWaiting.NeverAnswers Becoming.WindowedWaiting.ownGave
+Becoming.WindowedWaiting.eitherGave_never_answers : Becoming.WindowedWaiting.NeverAnswers
+  Becoming.WindowedWaiting.eitherGave
+Becoming.WindowedWaiting.alwaysGives_never_answers : Becoming.WindowedWaiting.NeverAnswers
+  Becoming.WindowedWaiting.alwaysGives
+@Becoming.WindowedWaiting.keeps_split : ∀ {f : Bool → Bool → Bool},
+  f true true = true →
+    Becoming.WindowedWaiting.PairKeepsInclusion f →
+      Becoming.WindowedWaiting.NeverRestores f ∨ Becoming.WindowedWaiting.NeverAnswers f
+@Becoming.WindowedWaiting.keeps_not_both : ∀ {f : Bool → Bool → Bool},
+  f true true = true →
+    Becoming.WindowedWaiting.PairKeepsInclusion f →
+      ¬(Becoming.WindowedWaiting.Restores f ∧ Becoming.WindowedWaiting.AnswersWithholder f)
+Becoming.WindowedWaiting.agreement_restores_at_two : (Becoming.Law.run
+          (Becoming.WindowedWaiting.pairStep Becoming.WindowedWaiting.agreement)
+          Becoming.WindowedWaiting.oneWithheldBool).state
+      1 =
+    (false, false) ∧
+  (Becoming.Law.run (Becoming.WindowedWaiting.pairStep Becoming.WindowedWaiting.agreement)
+          Becoming.WindowedWaiting.oneWithheldBool).state
+      2 =
+    (true, true)
+Becoming.WindowedWaiting.agreement_restores : Becoming.WindowedWaiting.Restores Becoming.WindowedWaiting.agreement
+Becoming.WindowedWaiting.agreement_answers_at_one : (Becoming.Law.run
+        (Becoming.WindowedWaiting.againstWithholder Becoming.WindowedWaiting.agreement) true).state
+    1 =
+  false
+Becoming.WindowedWaiting.agreement_answers : Becoming.WindowedWaiting.AnswersWithholder
+  Becoming.WindowedWaiting.agreement
+Becoming.WindowedWaiting.agreement_against : ∀ (k : Nat),
+  (Becoming.Law.run (Becoming.WindowedWaiting.againstWithholder Becoming.WindowedWaiting.agreement) true).state
+        (2 * k) =
+      true ∧
+    (Becoming.Law.run (Becoming.WindowedWaiting.againstWithholder Becoming.WindowedWaiting.agreement) true).state
+        (2 * k + 1) =
+      false
+Becoming.WindowedWaiting.agreement_not_keeps : ¬Becoming.WindowedWaiting.PairKeepsInclusion
+    Becoming.WindowedWaiting.agreement
+@Becoming.WindowedWaiting.restores_and_answers_iff : ∀ {f : Bool → Bool → Bool},
+  f true true = true →
+    (Becoming.WindowedWaiting.Restores f ∧ Becoming.WindowedWaiting.AnswersWithholder f ↔
+      ∀ (a b : Bool), f a b = (a == b))
+Becoming.WindowedWaiting.windowTwo_keeps : Becoming.WindowedWaiting.PairKeepsInclusion
+  Becoming.WindowedWaiting.windowTwo
+Becoming.WindowedWaiting.windowTwo_restored_stays : ∀ (n : Nat),
+  ((Becoming.Law.run Becoming.WindowedWaiting.windowStep Becoming.WindowedWaiting.windowOneWithheld).state
+        (n + 1)).fst =
+    (true, true)
+Becoming.WindowedWaiting.windowTwo_restores : ((Becoming.Law.run Becoming.WindowedWaiting.windowStep
+            Becoming.WindowedWaiting.windowOneWithheld).state
+        0).fst =
+    (false, true) ∧
+  ((Becoming.Law.run Becoming.WindowedWaiting.windowStep Becoming.WindowedWaiting.windowOneWithheld).state 1).fst =
+    (true, true)
+Becoming.WindowedWaiting.windowTwo_answers : ((Becoming.Law.run Becoming.WindowedWaiting.windowAgainst
+              Becoming.WindowedWaiting.windowFacing).state
+          1).fst.fst =
+    true ∧
+  ((Becoming.Law.run Becoming.WindowedWaiting.windowAgainst Becoming.WindowedWaiting.windowFacing).state 2).fst.fst =
+    false
+Becoming.WindowedWaiting.windowTwo_answers_stays : ∀ (n : Nat),
+  ((Becoming.Law.run Becoming.WindowedWaiting.windowAgainst Becoming.WindowedWaiting.windowFacing).state
+          (n + 2)).fst.fst =
+    false
+Becoming.WindowedWaiting.alternator_course : ∀ (k : Nat),
+  (Becoming.Law.run Becoming.WindowedWaiting.alternatorStep Becoming.WindowedWaiting.alternatorStart).state (2 * k) =
+      Becoming.WindowedWaiting.alternatorStart ∧
+    (Becoming.Law.run Becoming.WindowedWaiting.alternatorStep Becoming.WindowedWaiting.alternatorStart).state
+        (2 * k + 1) =
+      ((true, true), true, false)
+Becoming.WindowedWaiting.alternator_never_answered : ∀ (n : Nat),
+  ((Becoming.Law.run Becoming.WindowedWaiting.alternatorStep Becoming.WindowedWaiting.alternatorStart).state
+          n).fst.fst =
+    true
+Becoming.WindowedWaiting.alternator_gives_half : ∀ (k : Nat),
+  ((Becoming.Law.run Becoming.WindowedWaiting.alternatorStep Becoming.WindowedWaiting.alternatorStart).state
+            (2 * k)).fst.snd =
+      false ∧
+    ((Becoming.Law.run Becoming.WindowedWaiting.alternatorStep Becoming.WindowedWaiting.alternatorStart).state
+            (2 * k + 1)).fst.snd =
+      true
+Becoming.WindowedWaiting.even_two_mul : ∀ (k : Nat),
+  Becoming.WindowedWaiting.even (2 * k) = true ∧ Becoming.WindowedWaiting.even (2 * k + 1) = false
+Becoming.WindowedWaiting.alternator_second : ∀ (n : Nat),
+  ((Becoming.Law.run Becoming.WindowedWaiting.alternatorStep Becoming.WindowedWaiting.alternatorStart).state
+          n).fst.snd =
+    !Becoming.WindowedWaiting.even n
+@Becoming.WindowedWaiting.Pair.answers_first : ∀ {s : Becoming.WindowedWaiting.Pair → Prop},
+  Becoming.Withholding.answers Becoming.WindowedWaiting.Pair.Waits s Becoming.WindowedWaiting.Pair.first ↔
+    s Becoming.WindowedWaiting.Pair.second
+@Becoming.WindowedWaiting.Pair.answers_second : ∀ {s : Becoming.WindowedWaiting.Pair → Prop},
+  Becoming.Withholding.answers Becoming.WindowedWaiting.Pair.Waits s Becoming.WindowedWaiting.Pair.second ↔
+    s Becoming.WindowedWaiting.Pair.first
+Becoming.WindowedWaiting.Pair.loop : Becoming.Withholding.Chain Becoming.WindowedWaiting.Pair.Waits 2
+  Becoming.WindowedWaiting.Pair.first Becoming.WindowedWaiting.Pair.first
+@Becoming.WindowedWaiting.Pair.swap_first : ∀ {s : Becoming.WindowedWaiting.Pair → Prop},
+  ¬s Becoming.WindowedWaiting.Pair.first ∧ s Becoming.WindowedWaiting.Pair.second →
+    Becoming.Withholding.answers Becoming.WindowedWaiting.Pair.Waits s Becoming.WindowedWaiting.Pair.first ∧
+      ¬Becoming.Withholding.answers Becoming.WindowedWaiting.Pair.Waits s Becoming.WindowedWaiting.Pair.second
+@Becoming.WindowedWaiting.Pair.swap_second : ∀ {s : Becoming.WindowedWaiting.Pair → Prop},
+  s Becoming.WindowedWaiting.Pair.first ∧ ¬s Becoming.WindowedWaiting.Pair.second →
+    ¬Becoming.Withholding.answers Becoming.WindowedWaiting.Pair.Waits s Becoming.WindowedWaiting.Pair.first ∧
+      Becoming.Withholding.answers Becoming.WindowedWaiting.Pair.Waits s Becoming.WindowedWaiting.Pair.second
+Becoming.WindowedWaiting.Pair.echo : ∀ (k : Nat),
+  (¬(Becoming.Law.run (Becoming.Withholding.answers Becoming.WindowedWaiting.Pair.Waits)
+              Becoming.WindowedWaiting.Pair.oneWithheld).state
+          (2 * k) Becoming.WindowedWaiting.Pair.first ∧
+      (Becoming.Law.run (Becoming.Withholding.answers Becoming.WindowedWaiting.Pair.Waits)
+            Becoming.WindowedWaiting.Pair.oneWithheld).state
+        (2 * k) Becoming.WindowedWaiting.Pair.second) ∧
+    (Becoming.Law.run (Becoming.Withholding.answers Becoming.WindowedWaiting.Pair.Waits)
+            Becoming.WindowedWaiting.Pair.oneWithheld).state
+        (2 * k + 1) Becoming.WindowedWaiting.Pair.first ∧
+      ¬(Becoming.Law.run (Becoming.Withholding.answers Becoming.WindowedWaiting.Pair.Waits)
+              Becoming.WindowedWaiting.Pair.oneWithheld).state
+          (2 * k + 1) Becoming.WindowedWaiting.Pair.second
+Becoming.WindowedWaiting.Pair.exactly_one : ∀ (n : Nat),
+  ¬(Becoming.Law.run (Becoming.Withholding.answers Becoming.WindowedWaiting.Pair.Waits)
+              Becoming.WindowedWaiting.Pair.oneWithheld).state
+          n Becoming.WindowedWaiting.Pair.first ∧
+      (Becoming.Law.run (Becoming.Withholding.answers Becoming.WindowedWaiting.Pair.Waits)
+            Becoming.WindowedWaiting.Pair.oneWithheld).state
+        n Becoming.WindowedWaiting.Pair.second ∨
+    (Becoming.Law.run (Becoming.Withholding.answers Becoming.WindowedWaiting.Pair.Waits)
+            Becoming.WindowedWaiting.Pair.oneWithheld).state
+        n Becoming.WindowedWaiting.Pair.first ∧
+      ¬(Becoming.Law.run (Becoming.Withholding.answers Becoming.WindowedWaiting.Pair.Waits)
+              Becoming.WindowedWaiting.Pair.oneWithheld).state
+          n Becoming.WindowedWaiting.Pair.second
+Becoming.WindowedWaiting.Pair.never_together : ∀ (n : Nat),
+  ¬((Becoming.Law.run (Becoming.Withholding.answers Becoming.WindowedWaiting.Pair.Waits)
+            Becoming.WindowedWaiting.Pair.oneWithheld).state
+        n Becoming.WindowedWaiting.Pair.first ∧
+      (Becoming.Law.run (Becoming.Withholding.answers Becoming.WindowedWaiting.Pair.Waits)
+            Becoming.WindowedWaiting.Pair.oneWithheld).state
+        n Becoming.WindowedWaiting.Pair.second)
+Becoming.WindowedWaiting.Pair.echo_returns : ∀ (k : Nat),
+  ¬(Becoming.Law.run (Becoming.Withholding.answers Becoming.WindowedWaiting.Pair.Waits)
+          Becoming.WindowedWaiting.Pair.oneWithheld).state
+      (k * 2) Becoming.WindowedWaiting.Pair.first
+Becoming.WindowedWaiting.Pair.partnerGave_course : ∀ (n : Nat),
+  Becoming.WindowedWaiting.Pair.Matches
+    ((Becoming.Law.run (Becoming.WindowedWaiting.pairStep Becoming.WindowedWaiting.partnerGave)
+          Becoming.WindowedWaiting.oneWithheldBool).state
+      n)
+    ((Becoming.Law.run (Becoming.Withholding.answers Becoming.WindowedWaiting.Pair.Waits)
+          Becoming.WindowedWaiting.Pair.oneWithheld).state
+      n)
+Becoming.WindowedWaiting.Pair.partnerGave_never_restores_of_echo : Becoming.WindowedWaiting.NeverRestores
+  Becoming.WindowedWaiting.partnerGave
+Becoming.WindowedWaiting.Pair.waits_partner : ∀ (p : Becoming.WindowedWaiting.Pair), p.partner.Waits p
+Becoming.WindowedWaiting.Pair.induced_partner : ∀ (s : Becoming.WindowedWaiting.Pair → Prop)
+  (p : Becoming.WindowedWaiting.Pair),
+  Becoming.WindowedWaiting.Pair.induced (fun x partnerStep => partnerStep) s p ↔
+    Becoming.Withholding.answers Becoming.WindowedWaiting.Pair.Waits s p
+@Becoming.WindowedWaiting.Pair.induced_keeps : ∀ {g : Prop → Prop → Prop},
+  Becoming.WindowedWaiting.Pair.InputsKeepInclusion g →
+    Becoming.Tolerance.KeepsInclusion (Becoming.WindowedWaiting.Pair.induced g)
+@Becoming.WindowedWaiting.Pair.keeps_of_induced : ∀ {g : Prop → Prop → Prop} {f : Bool → Bool → Bool},
+  Becoming.WindowedWaiting.Pair.Agrees g f →
+    Becoming.Tolerance.KeepsInclusion (Becoming.WindowedWaiting.Pair.induced g) →
+      Becoming.WindowedWaiting.PairKeepsInclusion f
+@Becoming.WindowedWaiting.Pair.agrees_table : ∀ {g : Prop → Prop → Prop} {f : Bool → Bool → Bool} {tt tf ft ff : Bool},
+  Becoming.WindowedWaiting.Pair.Agrees g (Becoming.WindowedWaiting.table tt tf ft ff) →
+    (∀ (a b : Bool), f a b = Becoming.WindowedWaiting.table tt tf ft ff a b) → Becoming.WindowedWaiting.Pair.Agrees g f
+Becoming.WindowedWaiting.Pair.agrees_never : Becoming.WindowedWaiting.Pair.Agrees (fun x x_1 => False)
+  (Becoming.WindowedWaiting.table false false false false)
+Becoming.WindowedWaiting.Pair.agrees_both : Becoming.WindowedWaiting.Pair.Agrees (fun A B => A ∧ B)
+  (Becoming.WindowedWaiting.table true false false false)
+Becoming.WindowedWaiting.Pair.agrees_partner : Becoming.WindowedWaiting.Pair.Agrees (fun x B => B)
+  (Becoming.WindowedWaiting.table true false true false)
+Becoming.WindowedWaiting.Pair.agrees_own : Becoming.WindowedWaiting.Pair.Agrees (fun A x => A)
+  (Becoming.WindowedWaiting.table true true false false)
+Becoming.WindowedWaiting.Pair.agrees_either : Becoming.WindowedWaiting.Pair.Agrees (fun A B => A ∨ B)
+  (Becoming.WindowedWaiting.table true true true false)
+Becoming.WindowedWaiting.Pair.agrees_always : Becoming.WindowedWaiting.Pair.Agrees (fun x x_1 => True)
+  (Becoming.WindowedWaiting.table true true true true)
+Becoming.WindowedWaiting.Pair.pairKeepsInclusion_iff_induced : ∀ (f : Bool → Bool → Bool),
+  Becoming.WindowedWaiting.PairKeepsInclusion f ↔
+    ∃ g,
+      Becoming.WindowedWaiting.Pair.Agrees g f ∧
+        Becoming.Tolerance.KeepsInclusion (Becoming.WindowedWaiting.Pair.induced g)
+Becoming.WindowedWaiting.Pair.agrees_dnf : Becoming.WindowedWaiting.Pair.Agrees
+  Becoming.WindowedWaiting.Pair.partnerGaveDnf Becoming.WindowedWaiting.partnerGave
+Becoming.WindowedWaiting.Pair.dnf_keeps_iff_em : Becoming.Tolerance.KeepsInclusion
+    (Becoming.WindowedWaiting.Pair.induced Becoming.WindowedWaiting.Pair.partnerGaveDnf) ↔
+  ∀ (P : Prop), P ∨ ¬P
+Becoming.WindowedWaiting.Pair.dnf_keeps_em : Becoming.Tolerance.KeepsInclusion
+    (Becoming.WindowedWaiting.Pair.induced Becoming.WindowedWaiting.Pair.partnerGaveDnf) →
+  ∀ (P : Prop), P ∨ ¬P
+Becoming.WindowedWaiting.Pair.all_agreeing_keeps_em : (∀ (g : Prop → Prop → Prop),
+    Becoming.WindowedWaiting.Pair.Agrees g Becoming.WindowedWaiting.partnerGave →
+      Becoming.Tolerance.KeepsInclusion (Becoming.WindowedWaiting.Pair.induced g)) →
+  ∀ (P : Prop), P ∨ ¬P
+@Becoming.WindowedWaiting.lag_below_one : ∀ {X : Nat → Prop}, (∃ i, i < 1 ∧ X i) ↔ X 0
+@Becoming.WindowedWaiting.lag_below_two : ∀ {X : Nat → Prop}, (∃ i, i < 2 ∧ X i) ↔ X 0 ∨ X 1
+@Becoming.WindowedWaiting.window_one : ∀ {α : Type u_1} (up : α → α → Prop) (h : α × Nat → Prop) (n : Nat) (a : α),
+  (Becoming.Law.run (Becoming.WindowedWaiting.answersWithin 1 up) h).state n (a, 0) ↔
+    (Becoming.Law.run (Becoming.Withholding.answers up) fun a => h (a, 0)).state n a
+@Becoming.WindowedWaiting.answersWithin_into : ∀ {α : Type u_1} {w w' : Nat},
+  w ≤ w' →
+    ∀ (up : α → α → Prop),
+      Becoming.Tolerance.KeepsInclusionInto (Becoming.WindowedWaiting.answersWithin w up)
+        (Becoming.WindowedWaiting.answersWithin w' up)
+@Becoming.WindowedWaiting.answersWithin_keeps : ∀ {α : Type u_1} (w : Nat) (up : α → α → Prop),
+  Becoming.Tolerance.KeepsInclusion (Becoming.WindowedWaiting.answersWithin w up)
+@Becoming.WindowedWaiting.window_mono : ∀ {α : Type u_1} {w w' : Nat},
+  w ≤ w' →
+    ∀ (up : α → α → Prop) (h : α × Nat → Prop) (n : Nat) (p : α × Nat),
+      (Becoming.Law.run (Becoming.WindowedWaiting.answersWithin w up) h).state n p →
+        (Becoming.Law.run (Becoming.WindowedWaiting.answersWithin w' up) h).state n p
+@Becoming.WindowedWaiting.window_worst_start : ∀ {α : Type u_1} (w : Nat) (up : α → α → Prop) (n : Nat) (p : α × Nat),
+  (∀ (h : α × Nat → Prop), (Becoming.Law.run (Becoming.WindowedWaiting.answersWithin w up) h).state n p) ↔
+    (Becoming.Law.run (Becoming.WindowedWaiting.answersWithin w up) Becoming.Tolerance.allWithheld).state n p
+@Becoming.WindowedWaiting.window_restored_stays : ∀ {α : Type u_1} (w : Nat) (up : α → α → Prop) {n : Nat}
+  {p : α × Nat},
+  (∀ (h : α × Nat → Prop), (Becoming.Law.run (Becoming.WindowedWaiting.answersWithin w up) h).state n p) →
+    ∀ (m : Nat),
+      n ≤ m → ∀ (h : α × Nat → Prop), (Becoming.Law.run (Becoming.WindowedWaiting.answersWithin w up) h).state m p
+@Becoming.WindowedWaiting.window_withheld_kept : ∀ {α : Type u_1} {up : α → α → Prop} (w : Nat),
+  (∀ (a : α), ∃ b, up b a) →
+    ∀ (n : Nat) (p : α × Nat),
+      ¬(Becoming.Law.run (Becoming.WindowedWaiting.answersWithin w up) Becoming.Tolerance.allWithheld).state n p
+@Becoming.WindowedWaiting.lag_shift : ∀ {α : Type u_1} {w : Nat} {up : α → α → Prop} (h : α × Nat → Prop) (b : α)
+  (m i : Nat),
+  (Becoming.Law.run (Becoming.WindowedWaiting.answersWithin w up) h).state (m + i) (b, i) ↔
+    (Becoming.Law.run (Becoming.WindowedWaiting.answersWithin w up) h).state m (b, 0)
+@Becoming.WindowedWaiting.withholder_answered : ∀ {α : Type u_1} {w : Nat} {up : α → α → Prop} {h : α × Nat → Prop}
+  {c : α} {T : Nat},
+  (∀ (t : Nat), T ≤ t → ¬(Becoming.Law.run (Becoming.WindowedWaiting.answersWithin (w + 1) up) h).state t (c, 0)) →
+    ∀ (a : α),
+      up c a →
+        ∀ (n : Nat),
+          T + (w + 1) ≤ n → ¬(Becoming.Law.run (Becoming.WindowedWaiting.answersWithin (w + 1) up) h).state n (a, 0)
+Becoming.WindowedWaiting.Pair.waited_on : ∀ (a : Becoming.WindowedWaiting.Pair), ∃ b, b.Waits a
+Becoming.WindowedWaiting.Pair.withholder_answered_holds : ∀ (n : Nat),
+  2 ≤ n →
+    ¬(Becoming.Law.run (Becoming.WindowedWaiting.answersWithin 2 Becoming.WindowedWaiting.Pair.Waits)
+            Becoming.Tolerance.allWithheld).state
+        n (Becoming.WindowedWaiting.Pair.second, 0)
+@Becoming.WindowedWaiting.Pair.within_first : ∀ {h : Becoming.WindowedWaiting.Pair × Nat → Prop},
+  Becoming.WindowedWaiting.answersWithin 2 Becoming.WindowedWaiting.Pair.Waits h
+      (Becoming.WindowedWaiting.Pair.first, 0) ↔
+    h (Becoming.WindowedWaiting.Pair.second, 0) ∨ h (Becoming.WindowedWaiting.Pair.second, 1)
+@Becoming.WindowedWaiting.Pair.within_second : ∀ {h : Becoming.WindowedWaiting.Pair × Nat → Prop},
+  Becoming.WindowedWaiting.answersWithin 2 Becoming.WindowedWaiting.Pair.Waits h
+      (Becoming.WindowedWaiting.Pair.second, 0) ↔
+    h (Becoming.WindowedWaiting.Pair.first, 0) ∨ h (Becoming.WindowedWaiting.Pair.first, 1)
+Becoming.WindowedWaiting.Pair.windowStep_course : ∀ (n : Nat),
+  Becoming.WindowedWaiting.Pair.WindowMatches
+    ((Becoming.Law.run Becoming.WindowedWaiting.windowStep Becoming.WindowedWaiting.windowOneWithheld).state n)
+    ((Becoming.Law.run (Becoming.WindowedWaiting.answersWithin 2 Becoming.WindowedWaiting.Pair.Waits)
+          Becoming.WindowedWaiting.Pair.oneWithheldHistory).state
+      n)
+Becoming.WindowedWaiting.Pair.window_restores : ∀ (n : Nat),
+  (Becoming.Law.run (Becoming.WindowedWaiting.answersWithin 2 Becoming.WindowedWaiting.Pair.Waits)
+          Becoming.WindowedWaiting.Pair.oneWithheldHistory).state
+      (n + 1) (Becoming.WindowedWaiting.Pair.first, 0) ∧
+    (Becoming.Law.run (Becoming.WindowedWaiting.answersWithin 2 Becoming.WindowedWaiting.Pair.Waits)
+          Becoming.WindowedWaiting.Pair.oneWithheldHistory).state
+      (n + 1) (Becoming.WindowedWaiting.Pair.second, 0)
+Becoming.WindowedWaiting.Line.source_out : ∀ (n i : Nat),
+  ¬(Becoming.Law.run (Becoming.WindowedWaiting.answersWithin 2 Becoming.WindowedWaiting.Line.Waits)
+          Becoming.WindowedWaiting.Line.sourceWithheld).state
+      n (Becoming.WindowedWaiting.Line.source, i)
+Becoming.WindowedWaiting.Line.relay_course : (Becoming.Law.run
+        (Becoming.WindowedWaiting.answersWithin 2 Becoming.WindowedWaiting.Line.Waits)
+        Becoming.WindowedWaiting.Line.sourceWithheld).state
+    0 (Becoming.WindowedWaiting.Line.relay, 0) ∧
+  ∀ (t : Nat),
+    1 ≤ t →
+      ¬(Becoming.Law.run (Becoming.WindowedWaiting.answersWithin 2 Becoming.WindowedWaiting.Line.Waits)
+              Becoming.WindowedWaiting.Line.sourceWithheld).state
+          t (Becoming.WindowedWaiting.Line.relay, 0)
+Becoming.WindowedWaiting.Line.withholder_answered_reached : (Becoming.Law.run
+        (Becoming.WindowedWaiting.answersWithin 2 Becoming.WindowedWaiting.Line.Waits)
+        Becoming.WindowedWaiting.Line.sourceWithheld).state
+    2 (Becoming.WindowedWaiting.Line.last, 0) ∧
+  ∀ (n : Nat),
+    3 ≤ n →
+      ¬(Becoming.Law.run (Becoming.WindowedWaiting.answersWithin 2 Becoming.WindowedWaiting.Line.Waits)
+              Becoming.WindowedWaiting.Line.sourceWithheld).state
+          n (Becoming.WindowedWaiting.Line.last, 0)
+@Becoming.WindowedWaiting.erring_keeps : ∀ {α : Type u_1} (e : Nat → α → Prop) (w : Nat) (up : α → α → Prop) (t : Nat),
+  Becoming.Tolerance.KeepsInclusion (Becoming.WindowedWaiting.answersWithinErring e w up t)
+@Becoming.WindowedWaiting.clocked_state : ∀ {α : Type u_1} (e : Nat → α → Prop) (w : Nat) (up : α → α → Prop) (n : Nat),
+  (Becoming.Law.run (Becoming.WindowedWaiting.clocked e w up) (0, Becoming.WindowedWaiting.erringStart e)).state n =
+    (n, Becoming.WindowedWaiting.erringRun e w up n)
+@Becoming.WindowedWaiting.erring_shift : ∀ {α : Type u_1} {e : Nat → α → Prop} {w : Nat} {up : α → α → Prop} (b : α)
+  (m i : Nat),
+  Becoming.WindowedWaiting.erringRun e w up (m + i) (b, i) ↔ Becoming.WindowedWaiting.erringRun e w up m (b, 0)
+@Becoming.WindowedWaiting.erring_history : ∀ {α : Type u_1} {e : Nat → α → Prop} {w : Nat} {up : α → α → Prop} (b : α)
+  (i j : Nat), Becoming.WindowedWaiting.erringRun e w up i (b, j + 1 + i)
+@Becoming.WindowedWaiting.erringRun_no_error : ∀ {α : Type u_1} {e : Nat → α → Prop} {w : Nat} {up : α → α → Prop}
+  {b : α} (m : Nat), Becoming.WindowedWaiting.erringRun e w up m (b, 0) → ¬e m b
+@Becoming.WindowedWaiting.spaced_mono : ∀ {α : Type u_1} {e : Nat → α → Prop} {w w' : Nat},
+  w ≤ w' → Becoming.WindowedWaiting.Spaced e w → Becoming.WindowedWaiting.Spaced e w'
+Becoming.WindowedWaiting.window_turn : ∀ (t i d : Nat), i + 1 + d + t = t + i + d + 1
+@Becoming.WindowedWaiting.window_of_gap : ∀ {α : Type u_1} {e : Nat → α → Prop} {w : Nat} {up : α → α → Prop} {c : α}
+  (n : Nat),
+  (∀ (t : Nat), n + 1 = w + t → ∃ i, i < w ∧ Becoming.WindowedWaiting.erringRun e w up (t + i) (c, 0)) →
+    ∃ i, i < w ∧ Becoming.WindowedWaiting.erringRun e w up n (c, i)
+@Becoming.WindowedWaiting.gap_le : ∀ {w n t i : Nat}, n + 1 = w + t → i < w → t + i ≤ n
+@Becoming.WindowedWaiting.gives_unless_errs_le : ∀ {α : Type u_1} {e : Nat → α → Prop} {w : Nat} {up : α → α → Prop},
+  Becoming.WindowedWaiting.Spaced e w →
+    ∀ (n m : Nat), m ≤ n → ∀ (a : α), ¬e m a → Becoming.WindowedWaiting.erringRun e w up m (a, 0)
+@Becoming.WindowedWaiting.gives_unless_errs : ∀ {α : Type u_1} {e : Nat → α → Prop} {w : Nat} {up : α → α → Prop},
+  Becoming.WindowedWaiting.Spaced e w →
+    ∀ (n : Nat) (a : α),
+      ((Becoming.Law.run (Becoming.WindowedWaiting.clocked e w up) (0, Becoming.WindowedWaiting.erringStart e)).state
+              n).snd
+          (a, 0) ↔
+        ¬e n a
+@Becoming.WindowedWaiting.errs_answered : ∀ {α : Type u_1} {e : Nat → α → Prop} {w : Nat} {up : α → α → Prop} {b a : α},
+  up b a →
+    ∀ (t : Nat),
+      (∀ (i : Nat), i < w + 1 → e (t + i) b) →
+        ¬((Becoming.Law.run (Becoming.WindowedWaiting.clocked e (w + 1) up)
+                    (0, Becoming.WindowedWaiting.erringStart e)).state
+                (t + w + 1)).snd
+            (a, 0)
+@Becoming.WindowedWaiting.withholder_answered_clocked : ∀ {α : Type u_1} {e : Nat → α → Prop} {w : Nat}
+  {up : α → α → Prop} {c : α} {T : Nat},
+  (∀ (t : Nat), T ≤ t → e t c) →
+    ∀ (a : α),
+      up c a →
+        ∀ (n : Nat),
+          T + (w + 1) ≤ n →
+            ¬((Becoming.Law.run (Becoming.WindowedWaiting.clocked e (w + 1) up)
+                        (0, Becoming.WindowedWaiting.erringStart e)).state
+                    n).snd
+                (a, 0)
+@Becoming.WindowedWaiting.window_holds_of_gaps : ∀ {α : Type u_1} {e : Nat → α → Prop} {w : Nat} {up : α → α → Prop}
+  {c : α},
+  (∀ (t : Nat),
+      ∃ i,
+        i < w ∧
+          ((Becoming.Law.run (Becoming.WindowedWaiting.clocked e w up)
+                    (0, Becoming.WindowedWaiting.erringStart e)).state
+                (t + i)).snd
+            (c, 0)) →
+    ∀ (n : Nat),
+      ∃ i,
+        i < w ∧
+          ((Becoming.Law.run (Becoming.WindowedWaiting.clocked e w up)
+                    (0, Becoming.WindowedWaiting.erringStart e)).state
+                n).snd
+            (c, i)
+@Becoming.WindowedWaiting.spaced_window_holds : ∀ {α : Type u_1} {e : Nat → α → Prop} {w : Nat} {up : α → α → Prop},
+  Becoming.WindowedWaiting.Spaced e w →
+    ∀ (c : α) (n : Nat),
+      ∃ i,
+        i < w ∧
+          ((Becoming.Law.run (Becoming.WindowedWaiting.clocked e w up)
+                    (0, Becoming.WindowedWaiting.erringStart e)).state
+                n).snd
+            (c, i)
+Becoming.WindowedWaiting.Pair.firstErrsOnce_spaced : Becoming.WindowedWaiting.Spaced
+  Becoming.WindowedWaiting.Pair.firstErrsOnce 2
+@Becoming.WindowedWaiting.Pair.window_absorbs_within : ∀ {w : Nat},
+  2 ≤ w →
+    ∀ (n : Nat) (a : Becoming.WindowedWaiting.Pair),
+      ((Becoming.Law.run
+                (Becoming.WindowedWaiting.clocked Becoming.WindowedWaiting.Pair.firstErrsOnce w
+                  Becoming.WindowedWaiting.Pair.Waits)
+                (0, Becoming.WindowedWaiting.erringStart Becoming.WindowedWaiting.Pair.firstErrsOnce)).state
+            (n + 1)).snd
+        (a, 0)
+Becoming.WindowedWaiting.Pair.window_absorbs : (∀ (n : Nat) (a : Becoming.WindowedWaiting.Pair),
+    ((Becoming.Law.run
+              (Becoming.WindowedWaiting.clocked Becoming.WindowedWaiting.Pair.firstErrsOnce 2
+                Becoming.WindowedWaiting.Pair.Waits)
+              (0, Becoming.WindowedWaiting.erringStart Becoming.WindowedWaiting.Pair.firstErrsOnce)).state
+          (n + 1)).snd
+      (a, 0)) ∧
+  ¬((Becoming.Law.run
+              (Becoming.WindowedWaiting.clocked Becoming.WindowedWaiting.Pair.firstErrsOnce 2
+                Becoming.WindowedWaiting.Pair.Waits)
+              (0, Becoming.WindowedWaiting.erringStart Becoming.WindowedWaiting.Pair.firstErrsOnce)).state
+          0).snd
+      (Becoming.WindowedWaiting.Pair.first, 0)
+Becoming.WindowedWaiting.Pair.secondErrsEven_spaced : Becoming.WindowedWaiting.Spaced
+  Becoming.WindowedWaiting.Pair.secondErrsEven 2
+@Becoming.WindowedWaiting.Pair.alternator_received_within : ∀ {w : Nat},
+  2 ≤ w →
+    ∀ (n : Nat),
+      ((Becoming.Law.run
+                (Becoming.WindowedWaiting.clocked Becoming.WindowedWaiting.Pair.secondErrsEven w
+                  Becoming.WindowedWaiting.Pair.Waits)
+                (0, Becoming.WindowedWaiting.erringStart Becoming.WindowedWaiting.Pair.secondErrsEven)).state
+            n).snd
+        (Becoming.WindowedWaiting.Pair.first, 0)
+@Becoming.WindowedWaiting.Pair.alternator_gives_odd_within : ∀ {w : Nat},
+  2 ≤ w →
+    ∀ (n : Nat),
+      ((Becoming.Law.run
+                  (Becoming.WindowedWaiting.clocked Becoming.WindowedWaiting.Pair.secondErrsEven w
+                    Becoming.WindowedWaiting.Pair.Waits)
+                  (0, Becoming.WindowedWaiting.erringStart Becoming.WindowedWaiting.Pair.secondErrsEven)).state
+              n).snd
+          (Becoming.WindowedWaiting.Pair.second, 0) ↔
+        Becoming.WindowedWaiting.even n = false
+Becoming.WindowedWaiting.Pair.alternator_received : ∀ (n : Nat),
+  ((Becoming.Law.run
+            (Becoming.WindowedWaiting.clocked Becoming.WindowedWaiting.Pair.secondErrsEven 2
+              Becoming.WindowedWaiting.Pair.Waits)
+            (0, Becoming.WindowedWaiting.erringStart Becoming.WindowedWaiting.Pair.secondErrsEven)).state
+        n).snd
+    (Becoming.WindowedWaiting.Pair.first, 0)
+Becoming.WindowedWaiting.Pair.alternator_gives_odd : ∀ (n : Nat),
+  ((Becoming.Law.run
+              (Becoming.WindowedWaiting.clocked Becoming.WindowedWaiting.Pair.secondErrsEven 2
+                Becoming.WindowedWaiting.Pair.Waits)
+              (0, Becoming.WindowedWaiting.erringStart Becoming.WindowedWaiting.Pair.secondErrsEven)).state
+          n).snd
+      (Becoming.WindowedWaiting.Pair.second, 0) ↔
+    Becoming.WindowedWaiting.even n = false
+Becoming.WindowedWaiting.Pair.alternator_answered_one : ∀ (k : Nat),
+  ¬((Becoming.Law.run
+              (Becoming.WindowedWaiting.clocked Becoming.WindowedWaiting.Pair.secondErrsEven 1
+                Becoming.WindowedWaiting.Pair.Waits)
+              (0, Becoming.WindowedWaiting.erringStart Becoming.WindowedWaiting.Pair.secondErrsEven)).state
+          (2 * k + 1)).snd
+      (Becoming.WindowedWaiting.Pair.first, 0)
+@Becoming.WindowedWaiting.Pair.absorbs_needs_two : ∀ {w : Nat},
+  ((Becoming.Law.run
+              (Becoming.WindowedWaiting.clocked Becoming.WindowedWaiting.Pair.firstErrsOnce w
+                Becoming.WindowedWaiting.Pair.Waits)
+              (0, Becoming.WindowedWaiting.erringStart Becoming.WindowedWaiting.Pair.firstErrsOnce)).state
+          1).snd
+      (Becoming.WindowedWaiting.Pair.second, 0) →
+    2 ≤ w
+Becoming.WindowedWaiting.Pair.not_absorbs_and_answers_spaced : ∀ (w : Nat)
+  {e : Nat → Becoming.WindowedWaiting.Pair → Prop},
+  Becoming.WindowedWaiting.Spaced e 2 →
+    ¬(((Becoming.Law.run
+                  (Becoming.WindowedWaiting.clocked Becoming.WindowedWaiting.Pair.firstErrsOnce w
+                    Becoming.WindowedWaiting.Pair.Waits)
+                  (0, Becoming.WindowedWaiting.erringStart Becoming.WindowedWaiting.Pair.firstErrsOnce)).state
+              1).snd
+          (Becoming.WindowedWaiting.Pair.second, 0) ∧
+        ∃ n a,
+          ¬e n a ∧
+            ¬((Becoming.Law.run (Becoming.WindowedWaiting.clocked e w Becoming.WindowedWaiting.Pair.Waits)
+                        (0, Becoming.WindowedWaiting.erringStart e)).state
+                    n).snd
+                (a, 0))
+Becoming.WindowedWaiting.Pair.not_absorbs_and_answers : ∀ (w : Nat),
+  ¬(((Becoming.Law.run
+                (Becoming.WindowedWaiting.clocked Becoming.WindowedWaiting.Pair.firstErrsOnce w
+                  Becoming.WindowedWaiting.Pair.Waits)
+                (0, Becoming.WindowedWaiting.erringStart Becoming.WindowedWaiting.Pair.firstErrsOnce)).state
+            1).snd
+        (Becoming.WindowedWaiting.Pair.second, 0) ∧
+      ∃ n,
+        ¬((Becoming.Law.run
+                    (Becoming.WindowedWaiting.clocked Becoming.WindowedWaiting.Pair.secondErrsEven w
+                      Becoming.WindowedWaiting.Pair.Waits)
+                    (0, Becoming.WindowedWaiting.erringStart Becoming.WindowedWaiting.Pair.secondErrsEven)).state
+                n).snd
+            (Becoming.WindowedWaiting.Pair.first, 0))
+Becoming.WindowedWaiting.Pair.alternator_bridge : ∀ (n : Nat),
+  (((Becoming.Law.run Becoming.WindowedWaiting.alternatorStep Becoming.WindowedWaiting.alternatorStart).state
+              n).fst.fst =
+        true ↔
+      ((Becoming.Law.run
+                (Becoming.WindowedWaiting.clocked Becoming.WindowedWaiting.Pair.secondErrsEven 2
+                  Becoming.WindowedWaiting.Pair.Waits)
+                (0, Becoming.WindowedWaiting.erringStart Becoming.WindowedWaiting.Pair.secondErrsEven)).state
+            n).snd
+        (Becoming.WindowedWaiting.Pair.first, 0)) ∧
+    (((Becoming.Law.run Becoming.WindowedWaiting.alternatorStep Becoming.WindowedWaiting.alternatorStart).state
+              n).fst.snd =
+        true ↔
+      ((Becoming.Law.run
+                (Becoming.WindowedWaiting.clocked Becoming.WindowedWaiting.Pair.secondErrsEven 2
+                  Becoming.WindowedWaiting.Pair.Waits)
+                (0, Becoming.WindowedWaiting.erringStart Becoming.WindowedWaiting.Pair.secondErrsEven)).state
+            n).snd
+        (Becoming.WindowedWaiting.Pair.second, 0))
+Becoming.WindowedWaiting.Pair.withholder_answered_tight : ((Becoming.Law.run
+            (Becoming.WindowedWaiting.clocked Becoming.WindowedWaiting.Pair.firstAlwaysErrs 2
+              Becoming.WindowedWaiting.Pair.Waits)
+            (0, Becoming.WindowedWaiting.erringStart Becoming.WindowedWaiting.Pair.firstAlwaysErrs)).state
+        1).snd
+    (Becoming.WindowedWaiting.Pair.second, 0) ∧
+  ∀ (n : Nat),
+    2 ≤ n →
+      ¬((Becoming.Law.run
+                  (Becoming.WindowedWaiting.clocked Becoming.WindowedWaiting.Pair.firstAlwaysErrs 2
+                    Becoming.WindowedWaiting.Pair.Waits)
+                  (0, Becoming.WindowedWaiting.erringStart Becoming.WindowedWaiting.Pair.firstAlwaysErrs)).state
+              n).snd
+          (Becoming.WindowedWaiting.Pair.second, 0)
+@Becoming.WindowedWaiting.Pair.firstAlwaysErrs_second : ∀ {t : Nat} {h : Becoming.WindowedWaiting.Pair × Nat → Prop},
+  Becoming.WindowedWaiting.answersWithinErring Becoming.WindowedWaiting.Pair.firstAlwaysErrs 2
+      Becoming.WindowedWaiting.Pair.Waits t h (Becoming.WindowedWaiting.Pair.second, 0) ↔
+    h (Becoming.WindowedWaiting.Pair.first, 0) ∨ h (Becoming.WindowedWaiting.Pair.first, 1)
+Becoming.WindowedWaiting.Pair.windowAgainst_course : ∀ (n : Nat),
+  Becoming.WindowedWaiting.Pair.AgainstMatches
+    ((Becoming.Law.run Becoming.WindowedWaiting.windowAgainst Becoming.WindowedWaiting.windowFacing).state n)
+    ((Becoming.Law.run
+            (Becoming.WindowedWaiting.clocked Becoming.WindowedWaiting.Pair.firstAlwaysErrs 2
+              Becoming.WindowedWaiting.Pair.Waits)
+            (0, Becoming.WindowedWaiting.erringStart Becoming.WindowedWaiting.Pair.firstAlwaysErrs)).state
+        n).snd
+Becoming.WindowedWaiting.Pair.windowAgainst_withholds_of_clocked : ∀ (n : Nat),
+  2 ≤ n →
+    ((Becoming.Law.run Becoming.WindowedWaiting.windowAgainst Becoming.WindowedWaiting.windowFacing).state n).fst.fst =
+      false
+Becoming.WindowedWaiting.ringTwoErrors_answered : ¬((Becoming.Law.run
+            (Becoming.WindowedWaiting.clocked Becoming.WindowedWaiting.ringTwoErrors 2 Becoming.Withholding.Ring.Waits)
+            (0, Becoming.WindowedWaiting.erringStart Becoming.WindowedWaiting.ringTwoErrors)).state
+        (0 + 1 + 1)).snd
+    (Becoming.Withholding.Ring.second, 0)

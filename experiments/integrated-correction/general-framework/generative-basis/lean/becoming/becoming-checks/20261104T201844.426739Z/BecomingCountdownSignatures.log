@@ -1,0 +1,86 @@
+@Becoming.Countdown.invariant_iff_reach : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {I : S → Prop},
+  Becoming.Invariant P I ↔ ∀ (s t : S), Becoming.Reach P s t → I s → I t
+@Becoming.Countdown.admitted_invariant_iff : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → Option S}
+  {allow : S → A → Prop} {I : S → Prop},
+  (∀ (s : S) (a : A) (t : S), allow s a → f s a = some t → I s → I t) ↔
+    ∀ (s t : S), Becoming.Reach (Becoming.Countdown.admitted f allow) s t → I s → I t
+@Becoming.Countdown.ticks_succ : ∀ {S : Type u_1} (tick : S → Option S) (n : Nat) (s : S),
+  Becoming.Countdown.ticks tick (n + 1) s = (Becoming.Countdown.ticks tick n s).bind tick
+@Becoming.Countdown.ticks_eq_runPartial : ∀ {S : Type u_1} (tick : S → Option S) (n : Nat) (s : S),
+  Becoming.Countdown.ticks tick n s = Becoming.Assurance.runPartial (fun s x => tick s) s (List.replicate n ())
+@Becoming.Countdown.eq_zero_of_add_eq : ∀ {n : Nat} (k : Nat), n + k = k → n = 0
+@Becoming.Countdown.pos_of_add_eq : ∀ {f w F : Nat}, f + w = F → w + 1 ≤ F → 0 < f
+@Becoming.Countdown.ticks_busy : ∀ {S : Type u_1} {tick : S → Option S} {busy done : S → Prop} {work fuel : S → Nat},
+  Becoming.Countdown.CountedWork tick busy done work fuel →
+    ∀ (k : Nat) (s : S),
+      busy s →
+        k ≤ work s →
+          k ≤ fuel s →
+            ∃ t, Becoming.Countdown.ticks tick k s = some t ∧ busy t ∧ work t + k = work s ∧ fuel t + k = fuel s
+@Becoming.Countdown.stalls_beyond : ∀ {S : Type u_1} {tick : S → Option S} {busy done : S → Prop} {work fuel : S → Nat},
+  Becoming.Countdown.CountedWork tick busy done work fuel →
+    ∀ (n : Nat) (s : S), busy s → fuel s ≤ work s → fuel s < n → Becoming.Countdown.ticks tick n s = none
+@Becoming.Countdown.completes_iff : ∀ {S : Type u_1} {tick : S → Option S} {busy done : S → Prop} {work fuel : S → Nat},
+  Becoming.Countdown.CountedWork tick busy done work fuel →
+    ∀ {s : S}, busy s → ((∃ t, Becoming.Countdown.ticks tick (work s + 1) s = some t ∧ done t) ↔ work s + 1 ≤ fuel s)
+@Becoming.Countdown.pending_before : ∀ {S : Type u_1} {tick : S → Option S} {busy done : S → Prop}
+  {work fuel : S → Nat},
+  Becoming.Countdown.CountedWork tick busy done work fuel →
+    ∀ {s t : S} {k : Nat},
+      busy s → k ≤ work s → Becoming.Countdown.ticks tick k s = some t → busy t ∧ work t + k = work s
+@Becoming.Countdown.not_done_before : ∀ {S : Type u_1} {tick : S → Option S} {busy done : S → Prop}
+  {work fuel : S → Nat},
+  Becoming.Countdown.CountedWork tick busy done work fuel →
+    (∀ (s : S), busy s → done s → False) →
+      ∀ {s t : S} {k : Nat}, busy s → k ≤ work s → Becoming.Countdown.ticks tick k s = some t → ¬done t
+@Becoming.Countdown.completes_plan_iff : ∀ {S : Type u_1} {tick : S → Option S} {busy done : S → Prop}
+  {work fuel : S → Nat},
+  Becoming.Countdown.CountedWork tick busy done work fuel →
+    ∀ {s : S},
+      busy s →
+        (Generative.InquirySufficiency.Completes (Becoming.Assurance.ofPartial fun s x => tick s)
+            Becoming.Assurance.free done s (List.replicate (work s + 1) ()) ↔
+          work s + 1 ≤ fuel s)
+@Becoming.Countdown.Advances.countedWork : ∀ {S : Type u_1} {tick : S → Option S} {busy done : S → Prop}
+  {work : S → Nat},
+  Becoming.Countdown.Advances tick busy done work →
+    Becoming.Countdown.CountedWork tick busy done work fun s => work s + 1
+@Becoming.Countdown.Advances.completes : ∀ {S : Type u_1} {tick : S → Option S} {busy done : S → Prop} {work : S → Nat},
+  Becoming.Countdown.Advances tick busy done work →
+    ∀ {s : S}, busy s → ∃ t, Becoming.Countdown.ticks tick (work s + 1) s = some t ∧ done t
+@Becoming.Countdown.runs_valid : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → Option S} {adm : A → Prop}
+  {valid exit : S → Prop} {margin : S → Nat},
+  Becoming.Countdown.Reserved f adm valid exit margin →
+    ∀ (plan : List A) (s : S),
+      valid s → (∀ (a : A), a ∈ plan → adm a) → ∃ t, Becoming.Assurance.runPartial f s plan = some t ∧ valid t
+@Becoming.Countdown.stays_exit : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → Option S} {adm : A → Prop}
+  {valid exit : S → Prop} {margin : S → Nat},
+  Becoming.Countdown.Reserved f adm valid exit margin →
+    ∀ (plan : List A) (s : S),
+      valid s →
+        exit s → (∀ (a : A), a ∈ plan → adm a) → ∃ t, Becoming.Assurance.runPartial f s plan = some t ∧ valid t ∧ exit t
+@Becoming.Countdown.exits : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → Option S} {adm : A → Prop}
+  {valid exit : S → Prop} {margin : S → Nat},
+  Becoming.Countdown.Reserved f adm valid exit margin →
+    ∀ (plan : List A) (s : S),
+      valid s →
+        (∀ (a : A), a ∈ plan → adm a) →
+          margin s < plan.length → ∃ t, Becoming.Assurance.runPartial f s plan = some t ∧ valid t ∧ exit t
+Becoming.Countdown.Slow.reserved : Becoming.Countdown.Reserved Becoming.Countdown.Slow.step (fun x => True)
+  (fun x => True) (fun s => s = none) Becoming.Countdown.Slow.margin
+Becoming.Countdown.Slow.misses : ∀ (n : Nat),
+  Becoming.Assurance.runPartial Becoming.Countdown.Slow.step (some n) (List.replicate n ()) = some (some 0)
+@Becoming.CountdownCourses.not_done_before_course : ∀ {S : Type u_1} {tick : S → Option S} {busy done : S → Prop}
+  {work fuel : S → Nat},
+  Becoming.Countdown.CountedWork tick busy done work fuel →
+    (∀ (s : S), busy s → done s → False) →
+      ∀ {s t : S} {k : Nat},
+        busy s →
+          k ≤ work s →
+            Generative.Trace (Becoming.Assurance.ofPartial fun s x => tick s) s (List.replicate k ()) t → ¬done t
+@Becoming.CountdownCourses.slow_exits : ∀ {n : Nat} {plan : List Unit},
+  n < plan.length →
+    ∀ {t : Option Nat},
+      Generative.Trace (Becoming.Assurance.ofPartial Becoming.Countdown.Slow.step) (some n) plan t → t = none
+Becoming.CountdownCourses.slow_misses : ∀ (n : Nat),
+  Generative.Trace (Becoming.Assurance.ofPartial Becoming.Countdown.Slow.step) (some n) (List.replicate n ()) (some 0)

@@ -27,9 +27,9 @@ concurrency:
 jobs:
   becoming-core:
     runs-on: ubuntu-latest
-    # About 1,100 Lean steps (compile, axiom audit, signatures and prelude-only compile per
+    # About 1,550 Lean steps (compile, axiom audit, signatures and prelude-only compile per
     # module, plus the environment audit and controls). Runs of 500-730 steps took 3-11
-    # minutes on the development workstation; the limit leaves a 4-core runner a wide margin
+    # minutes on the development workstation before GT2 (5 November 2026); the limit leaves a 4-core runner a wide margin
     # for a fresh run, which has not yet been timed on GitHub.
     timeout-minutes: 120
     env:

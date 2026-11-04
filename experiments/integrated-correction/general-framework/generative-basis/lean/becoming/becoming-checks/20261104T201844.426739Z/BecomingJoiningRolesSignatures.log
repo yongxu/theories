@@ -1,0 +1,114 @@
+@Becoming.Joining.roleFrame_leave_holds : ∀ {F : Type u_1} (J : Becoming.Joining F) (e : J.Occurrence)
+  (r : Becoming.Joining.Role) (φ : Becoming.BranchingTest Becoming.Joining.RoleMove Empty),
+  Becoming.BranchingTest.Holds J.roleFrame (Sum.inr e)
+      (Becoming.BranchingTest.can (Becoming.Joining.RoleMove.leave r) φ) ↔
+    Becoming.BranchingTest.Holds J.roleFrame (Sum.inl (e.at r)) φ
+@Becoming.Joining.slots_sameBranchingTests : ∀ {F : Type u_1} {G : Type u_2} {J : Becoming.Joining F}
+  {K : Becoming.Joining G} {e : J.Occurrence} {f : K.Occurrence},
+  Becoming.SameBranchingTests J.roleFrame K.roleFrame (Sum.inr e) (Sum.inr f) →
+    ∀ (r : Becoming.Joining.Role),
+      Becoming.SameBranchingTests J.roleFrame K.roleFrame (Sum.inl (e.at r)) (Sum.inl (f.at r))
+@Becoming.Joining.fragment_not_sameBranchingTests_occurrence : ∀ {F : Type u_1} {G : Type u_2} {J : Becoming.Joining F}
+  {K : Becoming.Joining G} (x : F) (f : K.Occurrence),
+  ¬Becoming.SameBranchingTests J.roleFrame K.roleFrame (Sum.inl x) (Sum.inr f)
+@Becoming.Joining.match_incident_of_em : ∀ {F : Type u_1} {G : Type u_2},
+  (∀ (p : Prop), Becoming.Decided p) →
+    ∀ {J : Becoming.Joining F} {K : Becoming.Joining G},
+      K.LocallyFinite →
+        ∀ {x : F} {y : G},
+          Becoming.SameBranchingTests J.roleFrame K.roleFrame (Sum.inl x) (Sum.inl y) →
+            ∀ (e : J.Occurrence) (r : Becoming.Joining.Role),
+              e.at r = x →
+                ∃ f,
+                  f.at r = y ∧
+                    ∀ (i : Becoming.Joining.Role),
+                      Becoming.SameBranchingTests J.roleFrame K.roleFrame (Sum.inl (e.at i)) (Sum.inl (f.at i))
+@Becoming.Joining.covers_of_em : ∀ {F : Type u_1} {G : Type u_2},
+  (∀ (p : Prop), Becoming.Decided p) →
+    ∀ {J : Becoming.Joining F} {K : Becoming.Joining G},
+      J.LocallyFinite →
+        K.LocallyFinite →
+          ∀ {x : F} {y : G},
+            Becoming.SameBranchingTests J.roleFrame K.roleFrame (Sum.inl x) (Sum.inl y) →
+              J.ConnectedFrom x →
+                ∀ (a : F), ∃ b, Becoming.SameBranchingTests J.roleFrame K.roleFrame (Sum.inl a) (Sum.inl b)
+@Becoming.Joining.Occurrence.ofTuple_at : ∀ {F : Type u_1} {J : Becoming.Joining F} (t : Becoming.Joining.Role → F)
+  (formed : J (t Becoming.Joining.Role.first) (t Becoming.Joining.Role.second) (t Becoming.Joining.Role.result))
+  (r : Becoming.Joining.Role), (Becoming.Joining.Occurrence.ofTuple t formed).at r = t r
+@Becoming.Joining.placeMap_step : ∀ {F : Type u_1} {G : Type u_2} {J : Becoming.Joining F} {K : Becoming.Joining G}
+  {p : F → G} (keeps : J.Keeps K p) {s t : F ⊕ J.Occurrence} {m : Becoming.Joining.RoleMove},
+  J.roleFrame.P.step s m t →
+    K.roleFrame.P.step (Becoming.Joining.placeMap keeps s) m (Becoming.Joining.placeMap keeps t)
+@Becoming.Joining.factor_unique_of_ext : ∀ {F : Type u_1} {G : Type u_2} {H : Type u_3} {L : Becoming.Joining H}
+  {J : Becoming.Joining F} {K : Becoming.Joining G} {p : H → F} {q : H → G},
+  (∀ (g g' : H → J.Matched K), (∀ (z : H), g z = g' z) → g = g') →
+    ∀ (hp : L.OpenMap J p) (hq : L.OpenMap K q) (g : H → J.Matched K),
+      (∀ (z : H), (g z).val.fst = p z ∧ (g z).val.snd = q z) → g = Becoming.Joining.factor hp hq
+@Becoming.Joining.HasUnits.roleTotal : ∀ {F : Type u_1} {J : Becoming.Joining F}, J.HasUnits → J.RoleTotal
+@Becoming.Joining.HasUnits.collapse : ∀ {F : Type u_1} {J : Becoming.Joining F},
+  J.HasUnits →
+    (J.OpenMap Becoming.Joining.coarse fun x => ()) ∧
+      ∀ (x : F), Becoming.SameBranchingTests J.roleFrame Becoming.Joining.coarse.roleFrame (Sum.inl x) (Sum.inl ())
+@Becoming.Joining.collapsed_exact : ∀ {F : Type u_1} {J : Becoming.Joining F},
+  J.HasUnits →
+    Becoming.Presentations.Exact (fun x φ => Becoming.BranchingTest.Holds J.roleFrame (Sum.inl x) φ) J.collapsed
+@Becoming.Joining.collapsed_reduced : ∀ {F : Type u_1} (J : Becoming.Joining F),
+  Becoming.Presentations.Reduced (fun x φ => Becoming.BranchingTest.Holds J.roleFrame (Sum.inl x) φ) J.collapsed
+@Becoming.Joining.retained_step_extends : ∀ {F : Type u_1} {J : Becoming.Joining F} {xs ys : List F} {ij : Nat × Nat},
+  J.retainedFrame.P.step xs ij ys → ∃ z, ys = xs ++ [z]
+@Becoming.Joining.retained_pair_matches_of_em : ∀ {F : Type u_1} {G : Type u_2},
+  (∀ (p : Prop), Becoming.Decided p) →
+    ∀ {J : Becoming.Joining F} {K : Becoming.Joining G},
+      K.FiniteOutcomes →
+        ∀ {xs : List F} {ys : List G},
+          Becoming.SameBranchingTests J.retainedFrame K.retainedFrame xs ys →
+            xs.length = ys.length →
+              ∀ {i j : Nat} {a b z : F},
+                Becoming.Copying.nth xs i = some a →
+                  Becoming.Copying.nth xs j = some b →
+                    J a b z →
+                      ∃ a' b' z',
+                        Becoming.Copying.nth ys i = some a' ∧
+                          Becoming.Copying.nth ys j = some b' ∧
+                            K a' b' z' ∧
+                              (xs ++ [z]).length = (ys ++ [z']).length ∧
+                                Becoming.SameBranchingTests J.retainedFrame K.retainedFrame (xs ++ [z]) (ys ++ [z'])
+@Becoming.Fragment.traces_collapse : ∀ {S : Type u_1} {A : Type u_2} (P : Generative.Process S A)
+  (x : Becoming.Fragment.Traces P),
+  Becoming.SameBranchingTests (Becoming.Fragment.joining P).roleFrame Becoming.Joining.coarse.roleFrame (Sum.inl x)
+    (Sum.inl ())
+Becoming.Fragment.passageTrace_alone : ¬(Becoming.Fragment.joining Becoming.Fragment.once).SelfJoinable
+    Becoming.Fragment.passageTrace
+Becoming.Fragment.once_roles_hide_failure : Becoming.SameBranchingTests
+    (Becoming.Fragment.joining Becoming.Fragment.once).roleFrame Becoming.Joining.coarse.roleFrame
+    (Sum.inl Becoming.Fragment.passageTrace) (Sum.inl ()) ∧
+  Becoming.Joining.coarse () () () ∧
+    ¬(Becoming.Fragment.joining Becoming.Fragment.once).SelfJoinable Becoming.Fragment.passageTrace
+Becoming.Fragment.once_open_not_pairLifting : ((Becoming.Fragment.joining Becoming.Fragment.once).OpenMap
+    Becoming.Joining.coarse fun x => ()) ∧
+  ¬(Becoming.Fragment.joining Becoming.Fragment.once).PairLifting Becoming.Joining.coarse fun x => ()
+Becoming.Fragment.once_roles_hide_ends : Becoming.SameBranchingTests
+    (Becoming.Fragment.joining Becoming.Fragment.once).roleFrame
+    (Becoming.Fragment.joining Becoming.Fragment.once).roleFrame
+    (Sum.inl (Becoming.Fragment.idleTrace Becoming.Fragment.once false))
+    (Sum.inl (Becoming.Fragment.idleTrace Becoming.Fragment.once true)) ∧
+  ¬Becoming.Presentations.SameAnswers (Becoming.Fragment.probes Becoming.Fragment.once) (Becoming.Fragment.idle false)
+      (Becoming.Fragment.idle true)
+Becoming.Fragment.once_self_apart : Becoming.Joining.coarse.SelfJoinable () ∧
+  ¬(Becoming.Fragment.joining Becoming.Fragment.once).SelfJoinable Becoming.Fragment.passageTrace
+@Becoming.Fragment.idle_self_retained : ∀ {S : Type u_1} {A : Type u_2} (P : Generative.Process S A) (s : S),
+  Becoming.BranchingTest.Holds (Becoming.Fragment.joining P).retainedFrame [Becoming.Fragment.idleTrace P s]
+    (Becoming.BranchingTest.can (0, 0) Becoming.BranchingTest.top)
+Becoming.Fragment.once_retained_apart : Becoming.BranchingTest.Holds Becoming.Joining.coarse.retainedFrame [()]
+    (Becoming.BranchingTest.can (0, 0) Becoming.BranchingTest.top) ∧
+  ¬Becoming.BranchingTest.Holds (Becoming.Fragment.joining Becoming.Fragment.once).retainedFrame
+        [Becoming.Fragment.passageTrace] (Becoming.BranchingTest.can (0, 0) Becoming.BranchingTest.top) ∧
+    ¬Becoming.SameBranchingTests (Becoming.Fragment.joining Becoming.Fragment.once).retainedFrame
+        Becoming.Joining.coarse.retainedFrame [Becoming.Fragment.passageTrace] [()]
+@Becoming.Fragment.once_codes_apart : ∀ {C : Type u_1}
+  {p :
+    Becoming.Presentations.Presentation (List (Becoming.Fragment.Traces Becoming.Fragment.once))
+      (Becoming.BranchingTest (Nat × Nat) Empty) C},
+  Becoming.Presentations.Exact
+      (Becoming.BranchingTest.Holds (Becoming.Fragment.joining Becoming.Fragment.once).retainedFrame) p →
+    p.encode [Becoming.Fragment.idleTrace Becoming.Fragment.once false] ≠ p.encode [Becoming.Fragment.passageTrace]

@@ -1,0 +1,10 @@
+{
+  "steps": 1544,
+  "fresh": true,
+  "reused": 0,
+  "same_log": 1544,
+  "same_outputs": 1544,
+  "wall_seconds": 206.269,
+  "seconds_of_lean": 1077.0,
+  "problems": []
+}

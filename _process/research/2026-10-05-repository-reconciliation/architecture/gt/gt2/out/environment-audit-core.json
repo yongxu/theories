@@ -1,0 +1,40 @@
+{
+  "modules": 386,
+  "load": [
+    13.56884765625,
+    11.427734375,
+    11.89453125
+  ],
+  "runs": [
+    {
+      "driver": "current",
+      "exit": 0,
+      "wall_s": 89.9,
+      "cpu_s": 79.0,
+      "output_bytes": 27672,
+      "identical_to_current": true,
+      "constants_lines": 386,
+      "axioms_lines": 263
+    },
+    {
+      "driver": "onepass",
+      "exit": 0,
+      "wall_s": 27.3,
+      "cpu_s": 27.0,
+      "output_bytes": 27672,
+      "identical_to_current": true,
+      "constants_lines": 386,
+      "axioms_lines": 263
+    },
+    {
+      "driver": "count-only",
+      "exit": 0,
+      "wall_s": 1.5,
+      "cpu_s": 1.5,
+      "output_bytes": 13555,
+      "identical_to_current": false,
+      "constants_lines": 386,
+      "axioms_lines": 0
+    }
+  ]
+}

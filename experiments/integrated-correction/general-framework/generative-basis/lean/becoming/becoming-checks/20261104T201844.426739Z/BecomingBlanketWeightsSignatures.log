@@ -1,0 +1,143 @@
+@Becoming.BlanketWeights.cross_of_move : ∀ {a a' c c' r r' s s' : Nat},
+  0 < r → 0 < s' → a * r = c * r' → a' * s = c' * s' → r * s' = r' * s → a * c' = a' * c
+@Becoming.BlanketWeights.ratio_of_cross : ∀ {a a' c c' r r' s s' : Nat},
+  0 < a' → 0 < c → a * r = c * r' → a' * s = c' * s' → a * c' = a' * c → r * s' = r' * s
+@Becoming.BlanketWeights.cross_trans : ∀ {wi wi' wj wj' wk wk' : Nat},
+  0 < wj → 0 < wj' → wi * wj' = wi' * wj → wj * wk' = wj' * wk → wi * wk' = wi' * wk
+@Becoming.BlanketWeights.pos_of_mul_eq : ∀ {a b c d : Nat}, 0 < a → 0 < b → a * b = c * d → 0 < d
+@Becoming.BlanketWeights.cross_of_closure : ∀ {I B E : Type u_1} (w : I → B → E → Nat) (rate : B → E → I → I → Nat)
+  (adj : B → Becoming.«际» I),
+  (∀ (i : I) (b : B) (e : E), 0 < w i b e) →
+    Becoming.BlanketWeights.DetailedBalance w rate →
+      (∀ (b : B) (e : E) (i i' : I), adj b i i' → 0 < rate b e i i') →
+        (∀ (b : B) (e e' : E) (i i' : I),
+            adj b i i' → rate b e i i' * rate b e' i' i = rate b e i' i * rate b e' i i') →
+          ∀ (b : B) (e e' : E) (i : I) {k : I}, Becoming.«所闭» (adj b) i k → w i b e * w k b e' = w i b e' * w k b e
+@Becoming.BlanketWeights.crossForm_of_detailedBalance : ∀ {I B E : Type u_1} (w : I → B → E → Nat)
+  (rate : B → E → I → I → Nat) (adj : B → Becoming.«际» I),
+  (∀ (i : I) (b : B) (e : E), 0 < w i b e) →
+    Becoming.BlanketWeights.DetailedBalance w rate →
+      (∀ (b : B) (e : E) (i i' : I), adj b i i' → 0 < rate b e i i') →
+        (∀ (b : B) (e e' : E) (i i' : I),
+            adj b i i' → rate b e i i' * rate b e' i' i = rate b e i' i * rate b e' i i') →
+          (∀ (b : B) (i i' : I), Becoming.«所闭» (adj b) i i') → Becoming.BlanketWeights.CrossForm w
+@Becoming.BlanketWeights.crossForm_of_detailedBalance_unread : ∀ {I B E : Type u_1} (w : I → B → E → Nat)
+  (rate : B → I → I → Nat) (adj : B → Becoming.«际» I),
+  (∀ (i : I) (b : B) (e : E), 0 < w i b e) →
+    (Becoming.BlanketWeights.DetailedBalance w fun b x => rate b) →
+      (∀ (b : B) (i i' : I), adj b i i' → 0 < rate b i i') →
+        (∀ (b : B) (i i' : I), Becoming.«所闭» (adj b) i i') → Becoming.BlanketWeights.CrossForm w
+@Becoming.BlanketWeights.ratio_of_crossForm : ∀ {I B E : Type u_1} (w : I → B → E → Nat) (rate : B → E → I → I → Nat),
+  (∀ (i : I) (b : B) (e : E), 0 < w i b e) →
+    Becoming.BlanketWeights.DetailedBalance w rate →
+      Becoming.BlanketWeights.CrossForm w →
+        ∀ (b : B) (e e' : E) (i i' : I), rate b e i i' * rate b e' i' i = rate b e i' i * rate b e' i i'
+@Becoming.BlanketWeights.crossFormOn_of_crossForm : ∀ {I B E : Type} (li : List I) (le : List E) (w : I → B → E → Nat),
+  Becoming.BlanketWeights.CrossForm w → Becoming.BlanketWeights.CrossFormOn li le w
+@Becoming.BlanketWeights.crossForm_of_crossFormOn : ∀ {I B E : Type} (li : List I) (le : List E) (w : I → B → E → Nat),
+  (∀ (i : I), i ∈ li) →
+    (∀ (e : E), e ∈ le) → Becoming.BlanketWeights.CrossFormOn li le w → Becoming.BlanketWeights.CrossForm w
+@Becoming.BlanketWeights.total_congr_mem : ∀ {α : Type} {p q : α → Nat} {as : List α},
+  (∀ (a : α), a ∈ as → p a = q a) → Becoming.total as p = Becoming.total as q
+@Becoming.BlanketWeights.total_mul_total : ∀ {α β : Type} (f : α → Nat) (g : β → Nat) (as : List α) (bs : List β),
+  (Becoming.total as fun a => Becoming.total bs fun b => f a * g b) = Becoming.total as f * Becoming.total bs g
+@Becoming.BlanketWeights.factorsGiven_of_crossFormOn : ∀ {I B E : Type} (li : List I) (le : List E)
+  (w : I → B → E → Nat), Becoming.BlanketWeights.CrossFormOn li le w → Becoming.BlanketWeights.FactorsGiven li le w
+@Becoming.BlanketWeights.whole_zero_entry : ∀ {I B E : Type} (li : List I) (le : List E) (w : I → B → E → Nat) {i : I}
+  {b : B} {e : E}, i ∈ li → e ∈ le → Becoming.BlanketWeights.blanketWeight li le w b = 0 → w i b e = 0
+@Becoming.BlanketWeights.crossFormOn_of_factorsGiven : ∀ {I B E : Type} (li : List I) (le : List E)
+  (w : I → B → E → Nat), Becoming.BlanketWeights.FactorsGiven li le w → Becoming.BlanketWeights.CrossFormOn li le w
+@Becoming.BlanketWeights.mass_whole : ∀ {α : Type} (f : α → Nat) (l : List α),
+  (Becoming.mass l f fun x => true) = Becoming.total l f
+@Becoming.BlanketWeights.mass_atBlanket : ∀ {I B E : Type} (li : List I) (le : List E) (w : I → B → E → Nat) (b : B)
+  (p : I → Bool) (q : E → Bool),
+  (Becoming.mass (Becoming.openSteps li le) (Becoming.BlanketWeights.atBlanket w b) fun c => p c.fst && q c.snd) =
+    Becoming.mass li (fun i => Becoming.mass le (fun e => w i b e) q) p
+@Becoming.BlanketWeights.scaled_of_factorsGiven : ∀ {I B E : Type} (li : List I) (le : List E) (w : I → B → E → Nat),
+  Becoming.BlanketWeights.FactorsGiven li le w →
+    ∀ (b : B) (ev : I → Bool) (r : E → Bool),
+      Becoming.BlanketWeights.blanketWeight li le w b *
+          Becoming.mass li (fun i => Becoming.mass le (fun e => w i b e) r) ev =
+        Becoming.mass li (fun i => Becoming.BlanketWeights.internalWeight le w i b) ev *
+          Becoming.mass le (fun e => Becoming.BlanketWeights.externalWeight li w b e) r
+@Becoming.BlanketWeights.independentGiven_of_factorsGiven : ∀ {I B E : Type} (li : List I) (le : List E)
+  (w : I → B → E → Nat), Becoming.BlanketWeights.FactorsGiven li le w → Becoming.BlanketWeights.IndependentGiven li le w
+@Becoming.BlanketWeights.factorsGiven_of_independentGiven : ∀ {I B E : Type} (li : List I) (le : List E)
+  (w : I → B → E → Nat) [DecidableEq I] [DecidableEq E],
+  Becoming.Distinct li →
+    Becoming.Distinct le →
+      Becoming.BlanketWeights.IndependentGiven li le w → Becoming.BlanketWeights.FactorsGiven li le w
+@Becoming.BlanketWeights.independentGiven_of_crossFormOn : ∀ {I B E : Type} (li : List I) (le : List E)
+  (w : I → B → E → Nat), Becoming.BlanketWeights.CrossFormOn li le w → Becoming.BlanketWeights.IndependentGiven li le w
+@Becoming.BlanketWeights.crossFormOn_of_independentGiven : ∀ {I B E : Type} (li : List I) (le : List E)
+  (w : I → B → E → Nat) [DecidableEq I] [DecidableEq E],
+  Becoming.Distinct li →
+    Becoming.Distinct le →
+      Becoming.BlanketWeights.IndependentGiven li le w → Becoming.BlanketWeights.CrossFormOn li le w
+@Becoming.BlanketWeights.independentGiven_of_detailedBalance : ∀ {I B E : Type} (li : List I) (le : List E)
+  (w : I → B → E → Nat) (rate : B → E → I → I → Nat) (adj : B → Becoming.«际» I),
+  (∀ (i : I) (b : B) (e : E), 0 < w i b e) →
+    Becoming.BlanketWeights.DetailedBalance w rate →
+      (∀ (b : B) (e : E) (i i' : I), adj b i i' → 0 < rate b e i i') →
+        (∀ (b : B) (e e' : E) (i i' : I),
+            adj b i i' → rate b e i i' * rate b e' i' i = rate b e i' i * rate b e' i i') →
+          (∀ (b : B) (i i' : I), Becoming.«所闭» (adj b) i i') → Becoming.BlanketWeights.IndependentGiven li le w
+@Becoming.BlanketWeights.crossForm_product : ∀ {α β : Type} (w₁ : α → Nat) (w₂ : β → Nat),
+  Becoming.BlanketWeights.CrossForm fun a x c => w₁ a * w₂ c
+@Becoming.BlanketWeights.restrict_independent_case : ∀ {α β : Type} (w₁ : α → Nat) (w₂ : β → Nat) (e₁ : α → Bool)
+  (r : β → Bool) (as : List α) (bs : List β),
+  (Becoming.ConditionalWeights.share (Becoming.openSteps as bs)
+        (Becoming.ConditionalWeights.restrict (fun c => r c.snd) fun c => w₁ c.fst * w₂ c.snd) fun c => e₁ c.fst).Same
+    (Becoming.ConditionalWeights.share (Becoming.openSteps as bs) (fun c => w₁ c.fst * w₂ c.snd) fun c => e₁ c.fst)
+Becoming.BlanketWeights.LagRelay.steady : ∀ (μ s e : Bool),
+  Becoming.BlanketWeights.LagRelay.inflow (μ, s, e) = Becoming.BlanketWeights.LagRelay.outflow (μ, s, e)
+Becoming.BlanketWeights.LagRelay.not_independentGiven : ¬Becoming.BlanketWeights.IndependentGiven [false, true]
+    [false, true] Becoming.BlanketWeights.LagRelay.w
+Becoming.BlanketWeights.LagRelay.circulates : ¬Becoming.BlanketWeights.DetailedBalance
+    Becoming.BlanketWeights.LagRelay.w fun s x => Becoming.BlanketWeights.LagRelay.rate s
+Becoming.BlanketWeights.Turning.steady : ∀ (μ : Becoming.BlanketWeights.Turning.Phase) (s e : Bool),
+  Becoming.BlanketWeights.Turning.inflow (μ, s, e) = Becoming.BlanketWeights.Turning.outflow (μ, s, e)
+Becoming.BlanketWeights.Turning.circulates : ¬Becoming.BlanketWeights.DetailedBalance Becoming.BlanketWeights.Turning.w
+    Becoming.BlanketWeights.Turning.rate
+Becoming.BlanketWeights.Turning.independentGiven : ∀ (li : List Becoming.BlanketWeights.Turning.Phase) (le : List Bool),
+  Becoming.BlanketWeights.IndependentGiven li le Becoming.BlanketWeights.Turning.w
+Becoming.BlanketWeights.ReadsDirectly.balanced : Becoming.BlanketWeights.DetailedBalance
+  Becoming.BlanketWeights.ReadsDirectly.w Becoming.BlanketWeights.ReadsDirectly.rate
+Becoming.BlanketWeights.ReadsDirectly.crossForm : Becoming.BlanketWeights.CrossForm
+  Becoming.BlanketWeights.ReadsDirectly.w
+Becoming.BlanketWeights.ReadsDirectly.reads_external : Becoming.BlanketWeights.ReadsDirectly.rate false false false
+    true ≠
+  Becoming.BlanketWeights.ReadsDirectly.rate false true false true
+Becoming.BlanketWeights.MovesReadExternal.balanced : Becoming.BlanketWeights.DetailedBalance
+  Becoming.BlanketWeights.MovesReadExternal.w Becoming.BlanketWeights.MovesReadExternal.rate
+Becoming.BlanketWeights.MovesReadExternal.joined : ∀ (s e : Bool) (μ μ' : Becoming.BlanketWeights.Turning.Phase),
+  Becoming.«所闭» (fun a b => 0 < Becoming.BlanketWeights.MovesReadExternal.rate s e a b) μ μ'
+Becoming.BlanketWeights.MovesReadExternal.ratio : ∀ (s : Bool) (μ μ' : Becoming.BlanketWeights.Turning.Phase),
+  0 < Becoming.BlanketWeights.MovesReadExternal.rate s false μ μ' →
+    0 < Becoming.BlanketWeights.MovesReadExternal.rate s true μ μ' →
+      Becoming.BlanketWeights.MovesReadExternal.rate s false μ μ' *
+          Becoming.BlanketWeights.MovesReadExternal.rate s true μ' μ =
+        Becoming.BlanketWeights.MovesReadExternal.rate s false μ' μ *
+          Becoming.BlanketWeights.MovesReadExternal.rate s true μ μ'
+Becoming.BlanketWeights.MovesReadExternal.not_crossForm : ¬Becoming.BlanketWeights.CrossForm
+    Becoming.BlanketWeights.MovesReadExternal.w
+Becoming.BlanketWeights.SynchronousCopy.exact_steady : ∀ (μ s e : Bool),
+  (Becoming.total Becoming.BlanketWeights.SynchronousCopy.states fun x =>
+      Becoming.BlanketWeights.SynchronousCopy.exactWeight x *
+        Becoming.BlanketWeights.SynchronousCopy.kernel 0 x (μ, s, e)) =
+    64 * Becoming.BlanketWeights.SynchronousCopy.exactWeight (μ, s, e)
+Becoming.BlanketWeights.SynchronousCopy.noisy_steady : ∀ (μ s e : Bool),
+  (Becoming.total Becoming.BlanketWeights.SynchronousCopy.states fun x =>
+      Becoming.BlanketWeights.SynchronousCopy.noisyWeight x *
+        Becoming.BlanketWeights.SynchronousCopy.kernel 1 x (μ, s, e)) =
+    64 * Becoming.BlanketWeights.SynchronousCopy.noisyWeight (μ, s, e)
+Becoming.BlanketWeights.SynchronousCopy.exact_independentGiven : ∀ (li le : List Bool),
+  Becoming.BlanketWeights.IndependentGiven li le Becoming.BlanketWeights.SynchronousCopy.exactW
+Becoming.BlanketWeights.SynchronousCopy.noisy_not_independentGiven : ¬Becoming.BlanketWeights.IndependentGiven
+    [false, true] [false, true] Becoming.BlanketWeights.SynchronousCopy.noisyW
+Becoming.BlanketWeights.Cycle.periodic : Becoming.BlanketWeights.Cycle.run 4 = Becoming.BlanketWeights.Cycle.run 0
+Becoming.BlanketWeights.Cycle.not_crossForm : ¬Becoming.BlanketWeights.CrossForm Becoming.BlanketWeights.Cycle.w
+Becoming.BlanketWeights.Uncovered.crossFormOn : Becoming.BlanketWeights.CrossFormOn
+  [Becoming.BlanketWeights.Turning.Phase.two] [Becoming.BlanketWeights.Turning.Phase.two]
+  Becoming.BlanketWeights.Uncovered.w
+Becoming.BlanketWeights.Uncovered.not_crossForm : ¬Becoming.BlanketWeights.CrossForm Becoming.BlanketWeights.Uncovered.w

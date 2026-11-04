@@ -1,0 +1,293 @@
+@Becoming.ReorderingGrowth.exchanges_ordered : ∀ {X : Type} (r : Becoming.Footprinted X) (m : Nat),
+  (Becoming.ReorderingGrowth.exchanges r m).Ordered
+@Becoming.ReorderingGrowth.keeps_precedes : ∀ {X : Type} {r : Becoming.Footprinted X} {m : Nat} {π : Nat → Nat}
+  {S : Nat}, r.Keeps S m π → ∀ {i j : Nat}, r.Precedes i j → S ≤ i → j < S + m → π i < π j
+@Becoming.ReorderingGrowth.natural_iff : ∀ {X : Type} {r : Becoming.Footprinted X} {m : Nat} {π σ : Nat → Nat},
+  Becoming.Presence.NaturalLabelling (Becoming.ReorderingGrowth.exchanges r m) π σ ↔
+    Becoming.Reindexes 0 m π σ ∧ r.Keeps 0 m π
+@Becoming.ReorderingGrowth.reordering_natural : ∀ {X : Type} {r : Becoming.Footprinted X} {m : Nat},
+  r.Contains →
+    ∀ {ts : List Nat},
+      Becoming.ReorderingGrowth.Reordering r m ts →
+        Becoming.Presence.NaturalLabelling (Becoming.ReorderingGrowth.exchanges r m) (Becoming.place ts)
+          (Becoming.origin ts)
+@Becoming.ReorderingGrowth.natural_reordering : ∀ {X : Type} {r : Becoming.Footprinted X} {m : Nat} {π σ : Nat → Nat},
+  r.Contains →
+    Becoming.Presence.NaturalLabelling (Becoming.ReorderingGrowth.exchanges r m) π σ →
+      ∃ ts, Becoming.ReorderingGrowth.Reordering r m ts ∧ ∀ (i : Nat), i < m → Becoming.place ts i = π i
+@Becoming.ReorderingGrowth.every_reordering_iff : ∀ {X : Type} {r : Becoming.Footprinted X} {m : Nat},
+  r.Contains →
+    ∀ {Φ : (Nat → Nat) → Prop},
+      (∀ (π π' : Nat → Nat), (∀ (k : Nat), k < m → π k = π' k) → Φ π → Φ π') →
+        ((∀ (π σ : Nat → Nat), Becoming.Presence.NaturalLabelling (Becoming.ReorderingGrowth.exchanges r m) π σ → Φ π) ↔
+          ∀ (ts : List Nat), Becoming.ReorderingGrowth.Reordering r m ts → Φ (Becoming.place ts))
+@Becoming.ReorderingGrowth.some_reordering_iff : ∀ {X : Type} {r : Becoming.Footprinted X} {m : Nat},
+  r.Contains →
+    ∀ {Φ : (Nat → Nat) → Prop},
+      (∀ (π π' : Nat → Nat), (∀ (k : Nat), k < m → π k = π' k) → Φ π → Φ π') →
+        ((∃ π σ, Becoming.Presence.NaturalLabelling (Becoming.ReorderingGrowth.exchanges r m) π σ ∧ Φ π) ↔
+          ∃ ts, Becoming.ReorderingGrowth.Reordering r m ts ∧ Φ (Becoming.place ts))
+@Becoming.ReorderingGrowth.reordering_nil : ∀ {X : Type} {r : Becoming.Footprinted X} {m : Nat},
+  (∀ (t : Nat), t + 2 ≤ m → r.Joined t (t + 1)) →
+    ∀ (ts : List Nat), Becoming.ReorderingGrowth.Reordering r m ts → ts = []
+@Becoming.ReorderingGrowth.reordering_iff_course : ∀ {X : Type} {r : Becoming.Footprinted X} {m : Nat}
+  {π σ : Nat → Nat},
+  r.Contains →
+    Becoming.Reindexes 0 m π σ →
+      ((∃ ts, Becoming.ReorderingGrowth.Reordering r m ts ∧ ∀ (i : Nat), i < m → Becoming.place ts i = π i) ↔
+          Becoming.Presence.NaturalLabelling (Becoming.ReorderingGrowth.exchanges r m) π σ) ∧
+        ((∃ ts, Becoming.ReorderingGrowth.Reordering r m ts ∧ ∀ (i : Nat), i < m → Becoming.place ts i = π i) ↔
+          ∃ run,
+            run.state 0 = Becoming.CausalGrowth.empty ∧
+              Becoming.CausalGrowth.Kinds.Relabels (Becoming.ReorderingGrowth.exchanges r m) (run.state m) π σ)
+@Becoming.ReorderingGrowth.course_converse : ∀ {X : Type} {r r₂ : Becoming.Footprinted X} {m : Nat} {π σ : Nat → Nat},
+  r.Contains →
+    r₂.Contains →
+      ∀ {run : Becoming.Run Becoming.CausalGrowth.process},
+        run.state 0 = Becoming.CausalGrowth.empty →
+          Becoming.CausalGrowth.Kinds.Relabels (Becoming.ReorderingGrowth.exchanges r m) (run.state m) π σ →
+            (∀ (i : Nat), i < m → r.flow.SameExchange i r₂.flow (π i)) →
+              (∀ (i : Nat) (x : X), i < m → r₂.touch (π i) x = r.touch i x) →
+                (∀ (i : Nat) (x : X), i < m → r.touch i x = true → r.web.SameAt (i + 1) r₂.web (π i + 1) x) →
+                  (∀ (x : X), r.web.SameAt 0 r₂.web 0 x) →
+                    ∃ ts,
+                      Becoming.ReorderingGrowth.Reordering r m ts ∧
+                        (∀ (i : Nat), i < m → Becoming.place ts i = π i) ∧
+                          (∀ (a : Nat), a < m → (r.reorder ts).flow.SameExchange a r₂.flow a) ∧
+                            ∀ (k : Nat) (x : X), k ≤ m → (r.reorder ts).web.SameAt k r₂.web k x
+@Becoming.ReorderingGrowth.last_of_precedes : ∀ {X : Type} {r : Becoming.Footprinted X} {i j : Nat},
+  r.Precedes i j → i < j ∧ r.Joined i j ∨ ∃ k, k < j ∧ i < k ∧ r.Precedes i k ∧ r.Joined k j
+@Becoming.ReorderingGrowth.precedes_iff_last : ∀ {X : Type} {r : Becoming.Footprinted X} {i j : Nat},
+  r.Precedes i j ↔ i < j ∧ r.Joined i j ∨ ∃ k, k < j ∧ i < k ∧ r.Precedes i k ∧ r.Joined k j
+@Becoming.ReorderingGrowth.precedes_decided_below : ∀ {X : Type} {r : Becoming.Footprinted X} {m : Nat},
+  (∀ (a b : Nat), a < b → b < m → Becoming.Decided (r.Joined a b)) →
+    ∀ (n j : Nat), j < n → j < m → ∀ (i : Nat), Becoming.Decided (r.Precedes i j)
+@Becoming.ReorderingGrowth.precedes_decided : ∀ {X : Type} {r : Becoming.Footprinted X} {m : Nat},
+  (∀ (a b : Nat), a < b → b < m → Becoming.Decided (r.Joined a b)) →
+    ∀ {i j : Nat}, j < m → Becoming.Decided (r.Precedes i j)
+@Becoming.ReorderingGrowth.precedes_weakly_below : ∀ {X : Type} {r : Becoming.Footprinted X} {m : Nat},
+  (∀ (a b : Nat), a < b → b < m → Becoming.WeaklyDecided (r.Joined a b)) →
+    ∀ (n j : Nat), j < n → j < m → ∀ (i : Nat), Becoming.WeaklyDecided (r.Precedes i j)
+@Becoming.ReorderingGrowth.precedes_weakly : ∀ {X : Type} {r : Becoming.Footprinted X} {m : Nat},
+  (∀ (a b : Nat), a < b → b < m → Becoming.WeaklyDecided (r.Joined a b)) →
+    ∀ (i j : Nat), i < m → j < m → Becoming.WeaklyDecided (r.Precedes i j)
+@Becoming.ReorderingGrowth.exchanges_weakly : ∀ {X : Type} {r : Becoming.Footprinted X} {m : Nat},
+  (∀ (a b : Nat), a < m → b < m → Becoming.WeaklyDecided (r.Precedes a b)) →
+    ∀ (a b : Nat), Becoming.WeaklyDecided ((Becoming.ReorderingGrowth.exchanges r m).prec a b)
+@Becoming.ReorderingGrowth.links_exchanges : ∀ {X : Type} {r : Becoming.Footprinted X} {m i k : Nat},
+  k < m →
+    (Becoming.CausalGrowth.links (Becoming.ReorderingGrowth.exchanges r m).prec i k ↔
+      Becoming.CausalGrowth.links r.Precedes i k)
+@Becoming.ReorderingGrowth.before_stretch : ∀ {m i j : Nat},
+  i < m → j < m → ∀ (π π' : Nat → Nat), (∀ (k : Nat), k < m → π k = π' k) → π i < π j → π' i < π' j
+@Becoming.ReorderingGrowth.maximalBorn_stretch : ∀ {X : Type} {r : Becoming.Footprinted X} {m t x : Nat}
+  (π π' : Nat → Nat),
+  (∀ (k : Nat), k < m → π k = π' k) →
+    Becoming.Presence.MaximalBorn (Becoming.ReorderingGrowth.exchanges r m) π t x →
+      Becoming.Presence.MaximalBorn (Becoming.ReorderingGrowth.exchanges r m) π' t x
+@Becoming.ReorderingGrowth.presentAt_stretch : ∀ {X : Type} {r : Becoming.Footprinted X} {m i j : Nat}
+  (π π' : Nat → Nat),
+  (∀ (k : Nat), k < m → π k = π' k) →
+    Becoming.Presence.PresentAt (Becoming.ReorderingGrowth.exchanges r m) π i j →
+      Becoming.Presence.PresentAt (Becoming.ReorderingGrowth.exchanges r m) π' i j
+@Becoming.ReorderingGrowth.every_reordering_not_not : ∀ {X : Type} {r : Becoming.Footprinted X} {m : Nat},
+  r.Contains →
+    ∀ {i j : Nat},
+      i < m →
+        j < m →
+          ((∀ (ts : List Nat),
+              Becoming.ReorderingGrowth.Reordering r m ts → Becoming.place ts i < Becoming.place ts j) ↔
+            ¬¬r.Precedes i j)
+@Becoming.ReorderingGrowth.precedes_iff_every_reordering : ∀ {X : Type} {r : Becoming.Footprinted X} {m : Nat},
+  r.Contains →
+    ∀ {i j : Nat},
+      i < m →
+        j < m →
+          Becoming.Decided (r.Precedes i j) →
+            (r.Precedes i j ↔
+              ∀ (ts : List Nat),
+                Becoming.ReorderingGrowth.Reordering r m ts → Becoming.place ts i < Becoming.place ts j)
+@Becoming.ReorderingGrowth.precedes_iff_every_reordering_of_joined : ∀ {X : Type} {r : Becoming.Footprinted X}
+  {m : Nat},
+  r.Contains →
+    (∀ (a b : Nat), a < b → b < m → Becoming.Decided (r.Joined a b)) →
+      ∀ {i j : Nat},
+        i < m →
+          j < m →
+            (r.Precedes i j ↔
+              ∀ (ts : List Nat),
+                Becoming.ReorderingGrowth.Reordering r m ts → Becoming.place ts i < Becoming.place ts j)
+@Becoming.ReorderingGrowth.before_some_reordering : ∀ {X : Type} {r : Becoming.Footprinted X} {m : Nat},
+  r.Contains →
+    (∀ (a b : Nat), a < m → b < m → Becoming.WeaklyDecided (r.Precedes a b)) →
+      ∀ {i j : Nat},
+        i < m →
+          j < m →
+            ((∃ ts, Becoming.ReorderingGrowth.Reordering r m ts ∧ Becoming.place ts i < Becoming.place ts j) ↔
+              i ≠ j ∧ ¬r.Precedes j i)
+@Becoming.ReorderingGrowth.either_order_reordering : ∀ {X : Type} {r : Becoming.Footprinted X} {m : Nat},
+  r.Contains →
+    (∀ (a b : Nat), a < m → b < m → Becoming.WeaklyDecided (r.Precedes a b)) →
+      ∀ {x y : Nat},
+        x < m →
+          y < m →
+            ¬r.Precedes x y →
+              ¬r.Precedes y x →
+                x ≠ y →
+                  (∃ ts, Becoming.ReorderingGrowth.Reordering r m ts ∧ Becoming.place ts x < Becoming.place ts y) ∧
+                    ∃ ts, Becoming.ReorderingGrowth.Reordering r m ts ∧ Becoming.place ts y < Becoming.place ts x
+@Becoming.ReorderingGrowth.present_unrelated : ∀ {X : Type} {r : Becoming.Footprinted X} {m : Nat} {π : Nat → Nat}
+  {t x y : Nat},
+  Becoming.Presence.MaximalBorn (Becoming.ReorderingGrowth.exchanges r m) π t x →
+    Becoming.Presence.MaximalBorn (Becoming.ReorderingGrowth.exchanges r m) π t y → ¬r.Precedes x y
+@Becoming.ReorderingGrowth.antichain_present_reordering : ∀ {X : Type} {r : Becoming.Footprinted X} {m : Nat},
+  r.Contains →
+    (∀ (a b : Nat), a < m → b < m → Becoming.WeaklyDecided (r.Precedes a b)) →
+      ∀ (q : Nat → Bool),
+        (∀ {x : Nat}, q x = true → x < m) →
+          (∀ {x y : Nat}, q x = true → q y = true → ¬r.Precedes x y) →
+            ∃ ts t,
+              Becoming.ReorderingGrowth.Reordering r m ts ∧
+                ∀ (x : Nat),
+                  Becoming.Presence.MaximalBorn (Becoming.ReorderingGrowth.exchanges r m) (Becoming.place ts) t x ↔
+                    q x = true
+@Becoming.ReorderingGrowth.together_some_reordering : ∀ {X : Type} {r : Becoming.Footprinted X} {m : Nat},
+  r.Contains →
+    (∀ (a b : Nat), a < m → b < m → Becoming.WeaklyDecided (r.Precedes a b)) →
+      ∀ {x y : Nat},
+        (∃ ts t,
+            Becoming.ReorderingGrowth.Reordering r m ts ∧
+              Becoming.Presence.MaximalBorn (Becoming.ReorderingGrowth.exchanges r m) (Becoming.place ts) t x ∧
+                Becoming.Presence.MaximalBorn (Becoming.ReorderingGrowth.exchanges r m) (Becoming.place ts) t y) ↔
+          x < m ∧ y < m ∧ ¬r.Precedes x y ∧ ¬r.Precedes y x
+@Becoming.ReorderingGrowth.together_every_reordering_not_not : ∀ {X : Type} {r : Becoming.Footprinted X} {m : Nat},
+  r.Contains →
+    ∀ {x y : Nat},
+      x < m →
+        y < m →
+          ((∀ (ts : List Nat),
+              Becoming.ReorderingGrowth.Reordering r m ts →
+                ∃ t,
+                  Becoming.Presence.MaximalBorn (Becoming.ReorderingGrowth.exchanges r m) (Becoming.place ts) t x ∧
+                    Becoming.Presence.MaximalBorn (Becoming.ReorderingGrowth.exchanges r m) (Becoming.place ts) t y) ↔
+            ∀ (k : Nat), k < m → (r.Precedes x k → ¬¬r.Precedes y k) ∧ (r.Precedes y k → ¬¬r.Precedes x k))
+@Becoming.ReorderingGrowth.present_some_reordering : ∀ {X : Type} {r : Becoming.Footprinted X} {m : Nat},
+  r.Contains →
+    (∀ (a b : Nat), a < m → b < m → Becoming.WeaklyDecided (r.Precedes a b)) →
+      ∀ {i j : Nat},
+        j < m →
+          ((∃ ts,
+              Becoming.ReorderingGrowth.Reordering r m ts ∧
+                Becoming.Presence.PresentAt (Becoming.ReorderingGrowth.exchanges r m) (Becoming.place ts) i j) ↔
+            Becoming.CausalGrowth.links r.Precedes i j)
+@Becoming.ReorderingGrowth.present_every_reordering : ∀ {X : Type} {r : Becoming.Footprinted X} {m : Nat},
+  r.Contains →
+    ∀ {i j : Nat},
+      j < m →
+        ((∀ (ts : List Nat),
+            Becoming.ReorderingGrowth.Reordering r m ts →
+              Becoming.Presence.PresentAt (Becoming.ReorderingGrowth.exchanges r m) (Becoming.place ts) i j) ↔
+          Becoming.CausalGrowth.links r.Precedes i j ∧
+            ∀ (k : Nat), k < m → Becoming.CausalGrowth.links r.Precedes i k → k = j)
+@Becoming.ReorderingGrowth.sameAt_of_unmoved : ∀ {X : Type} {W : Becoming.Web X X} {x : X} {a : Nat} (d : Nat),
+  (∀ (k : Nat), a ≤ k → k < a + d → W.Unmoved k x) → W.SameAt a W (a + d) x
+@Becoming.ReorderingGrowth.first_of_precedes : ∀ {X : Type} {r : Becoming.Footprinted X} {i k : Nat},
+  r.Precedes i k → ∃ k', i < k' ∧ k' ≤ k ∧ r.Joined i k'
+@Becoming.ReorderingGrowth.present_identity_iff : ∀ {X : Type} {r : Becoming.Footprinted X} {m i j : Nat},
+  Becoming.Presence.PresentAt (Becoming.ReorderingGrowth.exchanges r m) (fun k => k) i j ↔
+    (i < m ∧ j < m ∧ r.Precedes i j) ∧ ∀ (k : Nat), i < k → k < j → ¬r.Joined i k
+@Becoming.ReorderingGrowth.persists_of_present : ∀ {X : Type} {r : Becoming.Footprinted X} {m : Nat},
+  r.Contains →
+    ∀ {i j : Nat},
+      Becoming.Presence.PresentAt (Becoming.ReorderingGrowth.exchanges r m) (fun k => k) i j →
+        ∀ {x : X}, r.touch i x = true → r.web.SameAt (i + 1) r.web j x
+@Becoming.ReorderingGrowth.persists_of_present_reordering : ∀ {X : Type} {r : Becoming.Footprinted X} {m : Nat},
+  r.Contains →
+    ∀ {ts : List Nat},
+      Becoming.ReorderingGrowth.Reordering r m ts →
+        ∀ {i j : Nat},
+          Becoming.Presence.PresentAt (Becoming.ReorderingGrowth.exchanges r m) (Becoming.place ts) i j →
+            ∀ {x : X}, r.touch i x = true → r.web.SameAt (i + 1) (r.reorder ts).web (Becoming.place ts j) x
+Becoming.ReorderingGrowth.ByDependence.dependent : Becoming.ReorderingGrowth.ByDependence.web.Dependent
+Becoming.ReorderingGrowth.ByDependence.contains : Becoming.ReorderingGrowth.ByDependence.world.Contains
+Becoming.ReorderingGrowth.ByDependence.joined_first_middle : Becoming.ReorderingGrowth.ByDependence.world.Joined 0 1
+Becoming.ReorderingGrowth.ByDependence.joined_first_last : Becoming.ReorderingGrowth.ByDependence.world.Joined 0 2
+Becoming.ReorderingGrowth.ByDependence.joined_middle_last : Becoming.ReorderingGrowth.ByDependence.world.Joined 1 2
+Becoming.ReorderingGrowth.ByDependence.persists_not_present : Becoming.ReorderingGrowth.ByDependence.world.Contains ∧
+  Becoming.ReorderingGrowth.ByDependence.world.Precedes 0 2 ∧
+    (∀ (x : Nat),
+        Becoming.ReorderingGrowth.ByDependence.world.touch 0 x = true →
+          Becoming.ReorderingGrowth.ByDependence.world.web.SameAt (0 + 1)
+            Becoming.ReorderingGrowth.ByDependence.world.web 2 x) ∧
+      (∀ (ts : List Nat),
+          Becoming.ReorderingGrowth.Reordering Becoming.ReorderingGrowth.ByDependence.world 3 ts →
+            ¬Becoming.Presence.PresentAt
+                (Becoming.ReorderingGrowth.exchanges Becoming.ReorderingGrowth.ByDependence.world 3) (Becoming.place ts)
+                0 2) ∧
+        Becoming.ReorderingGrowth.ByDependence.world.Joined 0 1 ∧
+          ∀ (x : Nat),
+            Becoming.ReorderingGrowth.ByDependence.world.touch 0 x = true →
+              Becoming.ReorderingGrowth.ByDependence.world.touch 1 x = false
+Becoming.ReorderingGrowth.ByDependence.only_reordering : ∀ (ts : List Nat),
+  Becoming.ReorderingGrowth.Reordering Becoming.ReorderingGrowth.ByDependence.world 3 ts → ts = []
+Becoming.ReorderingGrowth.MovedBack.contains : Becoming.ReorderingGrowth.MovedBack.world.Contains
+Becoming.ReorderingGrowth.MovedBack.touches_moved : ∀ (n x : Nat),
+  Becoming.ReorderingGrowth.MovedBack.world.touch n x = true →
+    ¬Becoming.ReorderingGrowth.MovedBack.world.web.Unmoved n x
+Becoming.ReorderingGrowth.MovedBack.joined : ∀ (a b : Nat),
+  a < 4 → b < 4 → Becoming.ReorderingGrowth.MovedBack.world.Joined a b
+Becoming.ReorderingGrowth.MovedBack.persists_not_present : Becoming.ReorderingGrowth.MovedBack.world.Contains ∧
+  (∀ (t f c : Nat), ¬Becoming.ReorderingGrowth.MovedBack.world.web.requires t f c) ∧
+    (∀ (n x : Nat),
+        Becoming.ReorderingGrowth.MovedBack.world.touch n x = true →
+          ¬Becoming.ReorderingGrowth.MovedBack.world.web.Unmoved n x) ∧
+      Becoming.ReorderingGrowth.MovedBack.world.Precedes 0 3 ∧
+        (∀ (x : Nat),
+            Becoming.ReorderingGrowth.MovedBack.world.touch 0 x = true →
+              Becoming.ReorderingGrowth.MovedBack.world.web.SameAt (0 + 1) Becoming.ReorderingGrowth.MovedBack.world.web
+                3 x) ∧
+          ∀ (ts : List Nat),
+            Becoming.ReorderingGrowth.Reordering Becoming.ReorderingGrowth.MovedBack.world 4 ts →
+              ¬Becoming.Presence.PresentAt
+                  (Becoming.ReorderingGrowth.exchanges Becoming.ReorderingGrowth.MovedBack.world 4) (Becoming.place ts)
+                  0 3
+Becoming.ReorderingGrowth.MovedBack.only_reordering : ∀ (ts : List Nat),
+  Becoming.ReorderingGrowth.Reordering Becoming.ReorderingGrowth.MovedBack.world 4 ts → ts = []
+Becoming.ReorderingGrowth.VeeWorld.contains : Becoming.ReorderingGrowth.VeeWorld.world.Contains
+Becoming.ReorderingGrowth.VeeWorld.joined_first_second : Becoming.ReorderingGrowth.VeeWorld.world.Joined 0 1
+Becoming.ReorderingGrowth.VeeWorld.joined_first_third : Becoming.ReorderingGrowth.VeeWorld.world.Joined 0 2
+Becoming.ReorderingGrowth.VeeWorld.apart : ¬Becoming.ReorderingGrowth.VeeWorld.world.Joined 1 2
+Becoming.ReorderingGrowth.VeeWorld.not_second_third : ¬Becoming.ReorderingGrowth.VeeWorld.world.Precedes 1 2
+@Becoming.ReorderingGrowth.VeeWorld.vee_of_precedes : ∀ {a b : Nat},
+  b < 3 → Becoming.ReorderingGrowth.VeeWorld.world.Precedes a b → a = 0 ∧ (b = 1 ∨ b = 2)
+Becoming.ReorderingGrowth.VeeWorld.prec_iff_vee : ∀ (a b : Nat),
+  (Becoming.ReorderingGrowth.exchanges Becoming.ReorderingGrowth.VeeWorld.world 3).prec a b ↔
+    Becoming.Presence.Vee.vee.prec a b
+@Becoming.ReorderingGrowth.VeeWorld.natural_iff_vee : ∀ {π σ : Nat → Nat},
+  Becoming.Presence.NaturalLabelling (Becoming.ReorderingGrowth.exchanges Becoming.ReorderingGrowth.VeeWorld.world 3) π
+      σ ↔
+    Becoming.Presence.NaturalLabelling Becoming.Presence.Vee.vee π σ
+Becoming.ReorderingGrowth.VeeWorld.reordering : Becoming.ReorderingGrowth.Reordering
+  Becoming.ReorderingGrowth.VeeWorld.world 3 [1]
+Becoming.ReorderingGrowth.VeeWorld.presence_varies : Becoming.ReorderingGrowth.Reordering
+    Becoming.ReorderingGrowth.VeeWorld.world 3 [] ∧
+  Becoming.ReorderingGrowth.Reordering Becoming.ReorderingGrowth.VeeWorld.world 3 [1] ∧
+    ¬Becoming.Presence.PresentAt (Becoming.ReorderingGrowth.exchanges Becoming.ReorderingGrowth.VeeWorld.world 3)
+          (Becoming.place []) 0 2 ∧
+      Becoming.Presence.PresentAt (Becoming.ReorderingGrowth.exchanges Becoming.ReorderingGrowth.VeeWorld.world 3)
+        (Becoming.place [1]) 0 2
+@Becoming.ReorderingGrowth.VeeWorld.swap_below : ∀ {i : Nat}, i < 3 → Becoming.swapAt 1 i < 3
+@Becoming.ReorderingGrowth.VeeWorld.vee_swap : ∀ {i j : Nat},
+  i < 3 →
+    j < 3 →
+      (Becoming.Presence.Vee.vee.prec i j ↔
+        Becoming.Presence.Vee.vee.prec (Becoming.place [1] i) (Becoming.place [1] j))
+Becoming.ReorderingGrowth.VeeWorld.one_course_two_numberings : ∃ run,
+  run.state 0 = Becoming.CausalGrowth.empty ∧
+    Becoming.CausalGrowth.Kinds.Relabels
+        (Becoming.ReorderingGrowth.exchanges Becoming.ReorderingGrowth.VeeWorld.world 3) (run.state 3)
+        (Becoming.place []) (Becoming.origin []) ∧
+      Becoming.CausalGrowth.Kinds.Relabels
+          (Becoming.ReorderingGrowth.exchanges Becoming.ReorderingGrowth.VeeWorld.world 3) (run.state 3)
+          (Becoming.place [1]) (Becoming.origin [1]) ∧
+        Becoming.place [] 1 ≠ Becoming.place [1] 1

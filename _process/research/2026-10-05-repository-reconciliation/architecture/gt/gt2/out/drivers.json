@@ -1,0 +1,63 @@
+{
+  "load": [
+    5.63232421875,
+    9.4560546875,
+    11.083984375
+  ],
+  "rows": [
+    {
+      "module": "Becoming.Segmentation",
+      "imports_closure": 1,
+      "declarations": 32,
+      "audit_s": 1.52,
+      "signatures_s": 0.19,
+      "merged_s": 0.2,
+      "merged_is_joined": true
+    },
+    {
+      "module": "Becoming.Capture",
+      "imports_closure": 22,
+      "declarations": 15,
+      "audit_s": 1.06,
+      "signatures_s": 0.27,
+      "merged_s": 0.28,
+      "merged_is_joined": true
+    },
+    {
+      "module": "Becoming.Enough",
+      "imports_closure": 37,
+      "declarations": 19,
+      "audit_s": 0.35,
+      "signatures_s": 0.29,
+      "merged_s": 0.37,
+      "merged_is_joined": true
+    },
+    {
+      "module": "Becoming.SecuredContent",
+      "imports_closure": 51,
+      "declarations": 63,
+      "audit_s": 0.31,
+      "signatures_s": 0.3,
+      "merged_s": 0.3,
+      "merged_is_joined": true
+    },
+    {
+      "module": "Becoming.ModelStatements",
+      "imports_closure": 133,
+      "declarations": 121,
+      "audit_s": 0.34,
+      "signatures_s": 0.35,
+      "merged_s": 0.42,
+      "merged_is_joined": true
+    },
+    {
+      "module": "Becoming",
+      "imports_closure": 386,
+      "declarations": 0,
+      "audit_s": 0.32,
+      "signatures_s": 0.32,
+      "merged_s": 0.31,
+      "merged_is_joined": true
+    }
+  ]
+}

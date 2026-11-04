@@ -1,0 +1,242 @@
+@Becoming.Ideals.InteriorBy.holds : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} {X : Type u_2}
+  {ι : X → Becoming.Ideals.Ideal P} {K : X → Prop} {x : X}, Becoming.Ideals.InteriorBy ι K x → K x
+@Becoming.Ideals.verifiableBy_iff_interior : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} {X : Type u_2}
+  {ι : X → Becoming.Ideals.Ideal P} {K : X → Prop},
+  Becoming.Ideals.VerifiableBy ι K ↔ ∀ (x : X), K x → Becoming.Ideals.InteriorBy ι K x
+@Becoming.Ideals.interiorBy_verifiable : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} {X : Type u_2}
+  {ι : X → Becoming.Ideals.Ideal P} (K : X → Prop), Becoming.Ideals.VerifiableBy ι (Becoming.Ideals.InteriorBy ι K)
+@Becoming.Ideals.interiorBy_largest : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} {X : Type u_2}
+  {ι : X → Becoming.Ideals.Ideal P} {K L : X → Prop},
+  Becoming.Ideals.VerifiableBy ι L → (∀ (y : X), L y → K y) → ∀ {x : X}, L x → Becoming.Ideals.InteriorBy ι K x
+@Becoming.Ideals.VerifiableBy.interior_iff : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} {X : Type u_2}
+  {ι : X → Becoming.Ideals.Ideal P} {K : X → Prop},
+  Becoming.Ideals.VerifiableBy ι K → ∀ {x : X}, Becoming.Ideals.InteriorBy ι K x ↔ K x
+@Becoming.Ideals.refutableBy_iff_compl : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} {X : Type u_2}
+  {ι : X → Becoming.Ideals.Ideal P} {K : X → Prop},
+  Becoming.Ideals.RefutableBy ι K ↔ Becoming.Ideals.VerifiableBy ι fun x => ¬K x
+@Becoming.Ideals.VerifiableBy.compl_refutable : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} {X : Type u_2}
+  {ι : X → Becoming.Ideals.Ideal P} {K : X → Prop},
+  Becoming.Ideals.VerifiableBy ι K → (∀ (x : X), ¬¬K x → K x) → Becoming.Ideals.RefutableBy ι fun x => ¬K x
+@Becoming.Ideals.AdheresBy.not_interior_compl : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} {X : Type u_2}
+  {ι : X → Becoming.Ideals.Ideal P} {K : X → Prop} {x : X},
+  Becoming.Ideals.AdheresBy ι K x → ¬Becoming.Ideals.InteriorBy ι (fun y => ¬K y) x
+@Becoming.Ideals.InteriorBy.not_adheres_compl : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} {X : Type u_2}
+  {ι : X → Becoming.Ideals.Ideal P} {K : X → Prop} {x : X},
+  Becoming.Ideals.InteriorBy ι K x → ¬Becoming.Ideals.AdheresBy ι (fun y => ¬K y) x
+@Becoming.Ideals.splitBy : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} {X : Type u_2}
+  {ι : X → Becoming.Ideals.Ideal P} {K : X → Prop} {x : X},
+  K x ↔ Becoming.Ideals.AdheresBy ι K x ∧ Becoming.Ideals.RemainderBy ι K x
+@Becoming.Ideals.remainderBy_largest : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} {X : Type u_2}
+  {ι : X → Becoming.Ideals.Ideal P} {K C L : X → Prop},
+  (∀ (y : X), Becoming.Ideals.AdheresBy ι C y → C y) →
+    (∀ (y : X), K y ↔ C y ∧ L y) → ∀ {x : X}, L x → Becoming.Ideals.RemainderBy ι K x
+@Becoming.Ideals.remainderBy_iff_of_adheres : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} {X : Type u_2}
+  {ι : X → Becoming.Ideals.Ideal P} {K : X → Prop} {x : X},
+  Becoming.Ideals.AdheresBy ι K x → (Becoming.Ideals.RemainderBy ι K x ↔ K x)
+@Becoming.Ideals.remainderBy_not_refuted : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} {X : Type u_2}
+  {ι : X → Becoming.Ideals.Ideal P} {K : X → Prop} {x : X} {p : α},
+  (ι x).mem p → ¬∀ (y : X), (ι y).mem p → ¬Becoming.Ideals.RemainderBy ι K y
+@Becoming.Ideals.remainderBy_meets_not_not : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} {X : Type u_2}
+  {ι : X → Becoming.Ideals.Ideal P} {K : X → Prop} {x : X} {p : α},
+  (ι x).mem p → ¬¬∃ y, Becoming.Ideals.RemainderBy ι K y ∧ (ι y).mem p
+@Becoming.Ideals.remainderBy_meets_of_decided : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} {X : Type u_2}
+  {ι : X → Becoming.Ideals.Ideal P} {K : X → Prop} {x : X} {p : α},
+  (ι x).mem p →
+    ((∃ y, K y ∧ (ι y).mem p) ∨ ¬∃ y, K y ∧ (ι y).mem p) → ∃ y, Becoming.Ideals.RemainderBy ι K y ∧ (ι y).mem p
+@Becoming.Ideals.splitBy_or : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} {X : Type u_2}
+  {ι : X → Becoming.Ideals.Ideal P} {K : X → Prop} {x : X},
+  K x ↔ Becoming.Ideals.AdheresBy ι K x ∧ Becoming.Ideals.OrNotAdheresBy ι K x
+@Becoming.Ideals.OrNotAdheresBy.remainder : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} {X : Type u_2}
+  {ι : X → Becoming.Ideals.Ideal P} {K : X → Prop} {x : X},
+  Becoming.Ideals.OrNotAdheresBy ι K x → Becoming.Ideals.RemainderBy ι K x
+@Becoming.Ideals.orNotAdheresBy_meets_of_decided : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} {X : Type u_2}
+  {ι : X → Becoming.Ideals.Ideal P} {K : X → Prop} {x : X} {p : α},
+  (ι x).mem p →
+    ((∃ y, K y ∧ (ι y).mem p) ∨ ¬∃ y, K y ∧ (ι y).mem p) → ∃ y, Becoming.Ideals.OrNotAdheresBy ι K y ∧ (ι y).mem p
+@Becoming.Ideals.Open.same : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} {C : Becoming.Ideals.Ideal P → Prop},
+  Becoming.Ideals.Open C → ∀ {I J : Becoming.Ideals.Ideal P}, C I → I.Same J → C J
+@Becoming.Ideals.open_of_iff : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} {C E : Becoming.Ideals.Ideal P → Prop},
+  Becoming.Ideals.Open C → (∀ (I : Becoming.Ideals.Ideal P), C I ↔ E I) → Becoming.Ideals.Open E
+@Becoming.Ideals.meets_open : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} (U : α → Prop),
+  Becoming.Ideals.Open (Becoming.Ideals.Meets U)
+@Becoming.Ideals.Open.principal_of_mem : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α}
+  {C : Becoming.Ideals.Ideal P → Prop},
+  Becoming.Ideals.Open C → ∀ {I : Becoming.Ideals.Ideal P}, C I → ∃ p, I.mem p ∧ C (Becoming.Ideals.principal P p)
+@Becoming.Ideals.open_iff_meets_principal : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α}
+  {C : Becoming.Ideals.Ideal P → Prop},
+  Becoming.Ideals.Open C →
+    ∀ (I : Becoming.Ideals.Ideal P), C I ↔ Becoming.Ideals.Meets (fun p => C (Becoming.Ideals.principal P p)) I
+@Becoming.Ideals.principal_upper : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α}
+  {C : Becoming.Ideals.Ideal P → Prop},
+  Becoming.Ideals.Open C → Becoming.Ideals.Upper P fun p => C (Becoming.Ideals.principal P p)
+@Becoming.Ideals.open_iff_upper : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α}
+  (C : Becoming.Ideals.Ideal P → Prop),
+  Becoming.Ideals.Open C ↔
+    ∃ U, Becoming.Ideals.Upper P U ∧ ∀ (I : Becoming.Ideals.Ideal P), C I ↔ Becoming.Ideals.Meets U I
+@Becoming.Ideals.meets_principal_iff : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} {U : α → Prop},
+  Becoming.Ideals.Upper P U → ∀ {p : α}, Becoming.Ideals.Meets U (Becoming.Ideals.principal P p) ↔ U p
+@Becoming.Ideals.upper_unique : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} {C : Becoming.Ideals.Ideal P → Prop}
+  {U : α → Prop},
+  Becoming.Ideals.Upper P U →
+    (∀ (I : Becoming.Ideals.Ideal P), C I ↔ Becoming.Ideals.Meets U I) →
+      ∀ (p : α), U p ↔ C (Becoming.Ideals.principal P p)
+@Becoming.Ideals.Open.verifiable : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α}
+  {C : Becoming.Ideals.Ideal P → Prop}, Becoming.Ideals.Open C → Becoming.Ideals.Verifiable C
+@Becoming.Ideals.verifiable_open : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α}
+  {C : Becoming.Ideals.Ideal P → Prop}, Becoming.Ideals.Verifiable C → Becoming.Ideals.Open C
+@Becoming.Ideals.open_iff_verifiable : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α}
+  {C : Becoming.Ideals.Ideal P → Prop}, Becoming.Ideals.Open C ↔ Becoming.Ideals.Verifiable C
+@Becoming.Ideals.refutable_iff_compl_open : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α}
+  {C : Becoming.Ideals.Ideal P → Prop}, Becoming.Ideals.Refutable C ↔ Becoming.Ideals.Open fun I => ¬C I
+@Becoming.Ideals.avoids_iff_not_meets : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} (F : α → Prop)
+  (I : Becoming.Ideals.Ideal P), Becoming.Ideals.Avoids F I ↔ ¬Becoming.Ideals.Meets F I
+@Becoming.Ideals.Open.compl_closed : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α}
+  {C : Becoming.Ideals.Ideal P → Prop}, Becoming.Ideals.Open C → Becoming.Ideals.ScottClosed fun I => ¬C I
+Becoming.Ideals.verifiable_compl_refutable_iff : (∀ (α : Type) (P : Becoming.Ideals.Preorder α)
+    (C : Becoming.Ideals.Ideal P → Prop), Becoming.Ideals.Verifiable C → Becoming.Ideals.Refutable fun I => ¬C I) ↔
+  ∀ (φ : Prop), ¬¬φ → φ
+@Becoming.Ideals.open_exists : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} {β : Type u_2}
+  (C : β → Becoming.Ideals.Ideal P → Prop),
+  (∀ (i : β), Becoming.Ideals.Open (C i)) → Becoming.Ideals.Open fun I => ∃ i, C i I
+@Becoming.Ideals.open_and : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} {C E : Becoming.Ideals.Ideal P → Prop},
+  Becoming.Ideals.Open C → Becoming.Ideals.Open E → Becoming.Ideals.Open fun I => C I ∧ E I
+@Becoming.Ideals.open_true : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α}, Becoming.Ideals.Open fun x => True
+@Becoming.Ideals.open_false : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α}, Becoming.Ideals.Open fun x => False
+@Becoming.Ideals.interior_iff_meets : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α}
+  (C : Becoming.Ideals.Ideal P → Prop) (I : Becoming.Ideals.Ideal P),
+  Becoming.Ideals.Interior C I ↔ Becoming.Ideals.Meets (fun p => ∀ (J : Becoming.Ideals.Ideal P), J.mem p → C J) I
+@Becoming.Ideals.interior_open : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} (C : Becoming.Ideals.Ideal P → Prop),
+  Becoming.Ideals.Open (Becoming.Ideals.Interior C)
+@Becoming.Ideals.interior_largest : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α}
+  {C E : Becoming.Ideals.Ideal P → Prop},
+  Becoming.Ideals.Open E →
+    (∀ (I : Becoming.Ideals.Ideal P), E I → C I) → ∀ {I : Becoming.Ideals.Ideal P}, E I → Becoming.Ideals.Interior C I
+@Becoming.Ideals.Open.interior_iff : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α}
+  {C : Becoming.Ideals.Ideal P → Prop},
+  Becoming.Ideals.Open C → ∀ (I : Becoming.Ideals.Ideal P), Becoming.Ideals.Interior C I ↔ C I
+@Becoming.verifiable_iff_verifiableBy : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {K : Becoming.Run P → Prop}, Becoming.Verifiable K ↔ Becoming.Ideals.VerifiableBy Becoming.Run.stretches K
+@Becoming.verified_iff_interiorBy : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {K : Becoming.Run P → Prop} {r : Becoming.Run P},
+  Becoming.Verified K r ↔ Becoming.Ideals.InteriorBy Becoming.Run.stretches K r
+@Becoming.Verified.holds : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {K : Becoming.Run P → Prop}
+  {r : Becoming.Run P}, Becoming.Verified K r → K r
+@Becoming.verifiable_iff_verified : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {K : Becoming.Run P → Prop}, Becoming.Verifiable K ↔ ∀ (r : Becoming.Run P), K r → Becoming.Verified K r
+@Becoming.verified_verifiable : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  (K : Becoming.Run P → Prop), Becoming.Verifiable (Becoming.Verified K)
+@Becoming.verified_largest : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {K L : Becoming.Run P → Prop},
+  Becoming.Verifiable L → (∀ (r : Becoming.Run P), L r → K r) → ∀ {r : Becoming.Run P}, L r → Becoming.Verified K r
+@Becoming.refutable_iff_compl_verifiable : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {K : Becoming.Run P → Prop}, Becoming.Refutable K ↔ Becoming.Verifiable fun r => ¬K r
+@Becoming.Verifiable.compl_refutable : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {K : Becoming.Run P → Prop},
+  Becoming.Verifiable K → (∀ (r : Becoming.Run P), ¬¬K r → K r) → Becoming.Refutable fun r => ¬K r
+@Becoming.Adheres.not_verified_compl : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {K : Becoming.Run P → Prop} {r : Becoming.Run P}, Becoming.Adheres K r → ¬Becoming.Verified (fun r' => ¬K r') r
+@Becoming.Verified.not_adheres_compl : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {K : Becoming.Run P → Prop} {r : Becoming.Run P}, Becoming.Verified K r → ¬Becoming.Adheres (fun r' => ¬K r') r
+@Becoming.decided_at_stretch : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {K : Becoming.Run P → Prop},
+  Becoming.Verifiable K →
+    Becoming.Refutable K →
+      ∀ {r : Becoming.Run P},
+        K r ∨ ¬K r →
+          ∃ h,
+            (∀ (r' : Becoming.Run P), Becoming.Run.AgreeUpTo h r r' → K r') ∨
+              ∀ (r' : Becoming.Run P), Becoming.Run.AgreeUpTo h r r' → ¬K r'
+Becoming.verifiable_compl_refutable_markov : (∀ (S A : Type) (P : Generative.Process S A) (K : Becoming.Run P → Prop),
+    Becoming.Verifiable K → Becoming.Refutable fun r => ¬K r) →
+  Becoming.Markov
+@Becoming.remainder_iff_remainderBy : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {K : Becoming.Run P → Prop} {r : Becoming.Run P},
+  Becoming.Remainder K r ↔ Becoming.Ideals.RemainderBy Becoming.Run.stretches K r
+@Becoming.split : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {K : Becoming.Run P → Prop}
+  {r : Becoming.Run P}, K r ↔ Becoming.Adheres K r ∧ Becoming.Remainder K r
+@Becoming.remainder_largest : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {K C L : Becoming.Run P → Prop},
+  (∀ (r : Becoming.Run P), Becoming.Adheres C r → C r) →
+    (∀ (r : Becoming.Run P), K r ↔ C r ∧ L r) → ∀ {r : Becoming.Run P}, L r → Becoming.Remainder K r
+@Becoming.remainder_iff_of_adheres : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {K : Becoming.Run P → Prop} {r : Becoming.Run P}, Becoming.Adheres K r → (Becoming.Remainder K r ↔ K r)
+@Becoming.remainder_not_refuted : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  (K : Becoming.Run P → Prop) (r : Becoming.Run P) (h : Nat),
+  ¬∀ (r' : Becoming.Run P), Becoming.Run.AgreeUpTo h r r' → ¬Becoming.Remainder K r'
+@Becoming.remainder_meets_not_not : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  (K : Becoming.Run P → Prop) (r : Becoming.Run P) (h : Nat),
+  ¬¬∃ r', Becoming.Remainder K r' ∧ Becoming.Run.AgreeUpTo h r r'
+@Becoming.remainder_dense_of_decided : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {K : Becoming.Run P → Prop},
+  (∀ (r : Becoming.Run P) (h : Nat),
+      (∃ r', K r' ∧ Becoming.Run.AgreeUpTo h r r') ∨ ¬∃ r', K r' ∧ Becoming.Run.AgreeUpTo h r r') →
+    Becoming.Dense (Becoming.Remainder K)
+@Becoming.split_or : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {K : Becoming.Run P → Prop}
+  {r : Becoming.Run P}, K r ↔ Becoming.Adheres K r ∧ Becoming.OrNotAdheres K r
+@Becoming.OrNotAdheres.remainder : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {K : Becoming.Run P → Prop} {r : Becoming.Run P}, Becoming.OrNotAdheres K r → Becoming.Remainder K r
+Becoming.orNotAdheres_dense_iff_em : (∀ (S A : Type) (P : Generative.Process S A) (K : Becoming.Run P → Prop),
+    Becoming.Dense (Becoming.OrNotAdheres K)) ↔
+  ∀ (φ : Prop), φ ∨ ¬φ
+@Becoming.refutes_iff_refutes_hull : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {K : Becoming.Run P → Prop} {r : Becoming.Run P} {h : Nat},
+  (∀ (r' : Becoming.Run P), Becoming.Run.AgreeUpTo h r r' → ¬K r') ↔
+    ∀ (r' : Becoming.Run P), Becoming.Run.AgreeUpTo h r r' → ¬Becoming.Adheres K r'
+@Becoming.same_hull_same_refutations : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {K K' : Becoming.Run P → Prop},
+  (∀ (r : Becoming.Run P), Becoming.Adheres K r ↔ Becoming.Adheres K' r) →
+    ∀ {r : Becoming.Run P} {h : Nat},
+      (∀ (r' : Becoming.Run P), Becoming.Run.AgreeUpTo h r r' → ¬K r') ↔
+        ∀ (r' : Becoming.Run P), Becoming.Run.AgreeUpTo h r r' → ¬K' r'
+@Becoming.Dense.noStretchRefutes : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {K : Becoming.Run P → Prop}, Becoming.Dense K → Becoming.NoStretchRefutes K
+@Becoming.Refutable.noStretchRefutes_not_not : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {K : Becoming.Run P → Prop}, Becoming.Refutable K → Becoming.NoStretchRefutes K → ∀ (r : Becoming.Run P), ¬¬K r
+@Becoming.Refutable.remainder_not_not : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {K : Becoming.Run P → Prop},
+  Becoming.Refutable (Becoming.Remainder K) → ∀ {r : Becoming.Run P}, Becoming.Adheres K r → ¬¬K r
+@Becoming.insulates_iff_dense : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {F : Becoming.Run P → Prop}, (∃ V, Becoming.ByRecord V ∧ Becoming.Insulates V F) ↔ Becoming.Dense F
+@Becoming.Insulates.refutable_not_not : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {V : Becoming.Practice P} {F : Becoming.Run P → Prop},
+  Becoming.Insulates V F → Becoming.Refutable F → ∀ (r : Becoming.Run P), ¬¬F r
+@Becoming.Stretches.open_runs : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {C : Becoming.Ideals.Ideal (Becoming.stretchOrder P) → Prop},
+  Becoming.Ideals.Open C →
+    ∀ (r : Becoming.Run P),
+      C r.stretches ↔ ∃ e, r.stretches.mem e ∧ C (Becoming.Ideals.principal (Becoming.stretchOrder P) e)
+@Becoming.Stretches.open_iff_upper : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {C : Becoming.Ideals.Ideal (Becoming.stretchOrder P) → Prop},
+  Becoming.Ideals.Open C ↔
+    ∃ U,
+      Becoming.Ideals.Upper (Becoming.stretchOrder P) U ∧
+        (∀ (I : Becoming.Ideals.Ideal (Becoming.stretchOrder P)), C I ↔ Becoming.Ideals.Meets U I) ∧
+          ∀ (e : Becoming.Run P × Nat), U e ↔ C (Becoming.Ideals.principal (Becoming.stretchOrder P) e)
+@Becoming.Stretches.refutable_of_compl_open : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {C : Becoming.Ideals.Ideal (Becoming.stretchOrder P) → Prop},
+  (Becoming.Ideals.Open fun I => ¬C I) → Becoming.Refutable fun r => C r.stretches
+@Becoming.Stretches.verifiable_of_class : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {C : Becoming.Ideals.Ideal (Becoming.stretchOrder P) → Prop},
+  Becoming.Ideals.Open C → Becoming.Verifiable fun r => C r.stretches
+@Becoming.Stretches.verifiable_iff_open : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {K : Becoming.Run P → Prop},
+  Becoming.Verifiable K ↔ ∃ C, Becoming.Ideals.Open C ∧ ∀ (r : Becoming.Run P), K r ↔ C r.stretches
+@Becoming.Stretches.open_compl_adheres : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {C : Becoming.Ideals.Ideal (Becoming.stretchOrder P) → Prop},
+  Becoming.Ideals.Open C → ∀ {r : Becoming.Run P}, Becoming.Adheres (fun r' => ¬C r'.stretches) r → ¬C r.stretches
+@Becoming.Stretches.verifiable_iff_class : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {K : Becoming.Run P → Prop},
+  Becoming.Verifiable K ↔ ∀ (r : Becoming.Run P), K r ↔ Becoming.Stretches.verifyingClass K r.stretches
+@Becoming.Stretches.verifiable_and : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {K L : Becoming.Run P → Prop}, Becoming.Verifiable K → Becoming.Verifiable L → Becoming.Verifiable fun r => K r ∧ L r
+@Becoming.Stretches.verifiable_exists : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {β : Type u_3}
+  {K : β → Becoming.Run P → Prop}, (∀ (i : β), Becoming.Verifiable (K i)) → Becoming.Verifiable fun r => ∃ i, K i r
+@Becoming.Stretches.refutable_or : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {K L : Becoming.Run P → Prop}, Becoming.Refutable K → Becoming.Refutable L → Becoming.Refutable fun r => K r ∨ L r
+@Becoming.Stretches.verifiable_true_false : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A},
+  (Becoming.Verifiable fun x => True) ∧ Becoming.Verifiable fun x => False
+@Becoming.Stretches.closed_iff_remainder : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {K : Becoming.Run P → Prop},
+  (∀ (r : Becoming.Run P), Becoming.Adheres K r → K r) ↔ ∀ (r : Becoming.Run P), Becoming.Remainder K r
+Becoming.Sequences.eventually_verifiable : Becoming.Verifiable Becoming.Sequences.Eventually
+Becoming.Sequences.eventually_dense : Becoming.Dense Becoming.Sequences.Eventually
+Becoming.Sequences.recurs_dense : Becoming.Dense Becoming.Sequences.Recurs
+Becoming.Sequences.recurs_not_verifiable : ¬Becoming.Verifiable Becoming.Sequences.Recurs

@@ -169,6 +169,16 @@ TESTS = {
                       ROOTF + '/THEOREM-CONNECTIVITY.py', ROOTF + '/development/ou3b-master-laws-on-the-grammar/measure_grammar.py',
                       BECOMING + '/lean-toolchain'),
     'test_checker_steps': ('tools/research/tests/test_style.py', BECOMING + '/check_becoming.py', LEAN + '/universal-ethics/generative-capacity/check.py'),
+    # The three classical-text verifiers it runs, what each reads (their maps, the preserved texts, the records, 06,
+    # the frozen 易传 chapter, the newest core receipt and the receipts beside it, the modules they name), and
+    # beyond the tree only RO's atlas archives, read where present and bound by their SHA-256.
+    'test_classical_verifiers': (ROOTF + '/development/y1-changes/**', ROOTF + '/development/ro-relational-sources/**',
+                                 ROOTF + '/development/zhonghua/**', 'sources/zhouyi-yizhuan/**',
+                                 'sources/chinese-classical-texts/**', 'sources/civilization-thought-v1.0/**', RECORDS,
+                                 'theories/becoming/chapters/06-CLASSICAL-TEXTS.md',
+                                 'theories/becoming/history/YI-ZHUAN-AND-BECOMING.md',
+                                 BECOMING + '/becoming-checks/*/verification.json', LEAN + '/*/*verification.json',
+                                 BECOMING + '/Becoming/*.lean', 'experiments/integrated-correction/general-framework/generative-basis/noninstrumental-concern/SituatedPractice.lean'),
     'test_completion': ('theories/becoming/results/completion/COVERAGE.json', BECOMING + '/becoming-verification.json', LEAN + '/**/*.lean',
                         ROOTF + '/THEOREM-CONNECTIVITY.json', 'theories/becoming/chapters/08-METHOD.md', RECORDS),
     'test_credentials': (),

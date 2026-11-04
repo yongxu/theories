@@ -1,0 +1,2 @@
+python3 -B measure_environment_audit.py onepass.lean count-only.lean >  2>   111.98s user 2.87s system 89% cpu 2:07.65 total
+exit 0

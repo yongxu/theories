@@ -1,0 +1,50 @@
+{
+  "inherited_receipts_added": {
+    "RelationalRenewal": [
+      "becoming/fallible-inquiry-checks/20261104T193445.323928Z/verification.json"
+    ],
+    "GenerativeCore": [
+      "becoming/fallible-inquiry-checks/20261104T193445.323928Z/verification.json"
+    ]
+  },
+  "fields_compared": 28,
+  "steps": 1544,
+  "before": {
+    "ran": 1,
+    "reused": 1543
+  },
+  "after": {
+    "ran": 1544,
+    "reused": 0,
+    "wall_seconds": 206.269,
+    "seconds_ran": 1077.0
+  },
+  "keys_changed": 1543,
+  "every_key_holds_the_runner": true,
+  "prelude_keys_now_their_modules": 0,
+  "prelude_keys_new": 0,
+  "environment_audit_seconds": 28.988,
+  "slowest": [
+    [
+      "EnvironmentAudit.log",
+      28.988
+    ],
+    [
+      "Becoming.Identification.PreludeOnly.log",
+      11.153
+    ],
+    [
+      "Becoming.Identification.log",
+      10.829
+    ],
+    [
+      "Becoming.HexagramSites.log",
+      9.166
+    ],
+    [
+      "Becoming.HexagramLaws.log",
+      8.94
+    ]
+  ],
+  "problems": []
+}

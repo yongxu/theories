@@ -1,0 +1,26 @@
+import Becoming.StrictTransport
+#print axioms Becoming.StrictTransport.Strict
+#print axioms Becoming.StrictTransport.Transitive
+#print axioms Becoming.StrictTransport.Compatible
+#print axioms Becoming.StrictTransport.strict_above_trans
+#print axioms Becoming.StrictTransport.strict_below_trans
+#print axioms Becoming.StrictTransport.strict_above_of_compatible
+#print axioms Becoming.StrictTransport.strict_below_of_compatible
+#print axioms Becoming.StrictTransport.SuppliesReason
+#print axioms Becoming.StrictTransport.reason_of_strict_above
+#print axioms Becoming.StrictTransport.strict_iff_of_faithful
+#print axioms Becoming.StrictTransport.strict_above_along
+#print axioms Becoming.StrictTransport.strict_below_along
+#print axioms Becoming.StrictTransport.Route
+#print axioms Becoming.StrictTransport.Cutoff
+#print axioms Becoming.StrictTransport.cutoff_transitive
+#print axioms Becoming.StrictTransport.shorter_interruption_no_worse
+#print axioms Becoming.StrictTransport.cutoff_priority_iff
+#print axioms Becoming.StrictTransport.cutoff_rejection_iff
+#print axioms Becoming.StrictTransport.cutoffs_disagree
+#print axioms Becoming.StrictTransport.anchor_licenses_no_longer_repair
+#print axioms Becoming.StrictTransport.ContinuationFirst
+#print axioms Becoming.StrictTransport.continuation_first_transitive
+#print axioms Becoming.StrictTransport.continuation_first_prefers_shorter
+#print axioms Becoming.StrictTransport.continuation_first_above_every
+#print axioms Becoming.StrictTransport.continuation_first_no_cutoff

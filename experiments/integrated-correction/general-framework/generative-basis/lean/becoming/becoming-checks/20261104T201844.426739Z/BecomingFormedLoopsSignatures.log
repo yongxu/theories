@@ -1,0 +1,65 @@
+@Becoming.formedWorld_before : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {present : Nat → List F} {δ : C → Nat} {κ : (Nat → C → Nat) → Nat → F → C → Nat → C → Nat},
+  Becoming.ReadsBefore κ →
+    ∀ {T t : Nat},
+      t ≤ T →
+        ∀ (c : C),
+          (Becoming.formedWorld cs part σ κ present δ).web.level t (Sum.inr c) =
+              (Becoming.carriedWorld cs part σ
+                      (Becoming.strengthsBefore T (Becoming.formedCouplings cs part σ κ present δ)) present δ).web.level
+                t (Sum.inr c) ∧
+            (Becoming.carriedWorld cs part σ
+                (Becoming.strengthsBefore T (Becoming.formedCouplings cs part σ κ present δ)) present δ).Balanced
+Becoming.FormedLoops.onsetWorld_level : ∀ (T D t : Nat),
+  (Becoming.FormedLoops.onsetWorld T D).web.level t (Sum.inr ()) = Becoming.Closing.Onset.amount T D t
+Becoming.FormedLoops.onsetWorld_course : ∀ (T D : Nat),
+  (Becoming.FormedLoops.onsetWorld T D).Balanced ∧
+    (∀ (t : Nat), t ≤ T → (Becoming.FormedLoops.onsetWorld T D).web.level t (Sum.inr ()) = D) ∧
+      (∀ (r : Nat), (Becoming.FormedLoops.onsetWorld T D).web.level (T + r) (Sum.inr ()) = D * 2 ^ r) ∧
+        ∀ (T' : Nat),
+          T ≤ T' →
+            ∀ (t : Nat),
+              t ≤ T →
+                (Becoming.FormedLoops.onsetWorld T D).web.level t (Sum.inr ()) =
+                  (Becoming.FormedLoops.onsetWorld T' D).web.level t (Sum.inr ())
+Becoming.FormedLoops.thresholdWorld_level : ∀ (θ t : Nat),
+  (Becoming.FormedLoops.thresholdWorld θ).web.level t (Sum.inr ()) = Becoming.Closing.Threshold.level θ t
+Becoming.FormedLoops.thresholdWorld_course : ∀ (θ : Nat),
+  (Becoming.FormedLoops.thresholdWorld θ).Balanced ∧
+    (Becoming.OnLoop [()] (fun h => h) (Becoming.strengthsBefore (θ + 1) (Becoming.FormedLoops.readOff θ))
+          (fun x => [true, false]) () ∧
+        ¬Becoming.OnLoop [()] (fun h => h) (Becoming.strengthsBefore θ (Becoming.FormedLoops.readOff θ))
+            (fun x => [true, false]) ()) ∧
+      (∀ (t : Nat), t ≤ θ → (Becoming.FormedLoops.thresholdWorld θ).web.level t (Sum.inr ()) = t) ∧
+        (∀ (r : Nat), (Becoming.FormedLoops.thresholdWorld θ).web.level (θ + r) (Sum.inr ()) + 1 = (θ + 1) * 2 ^ r) ∧
+          ∀ (θ' : Nat),
+            θ ≤ θ' →
+              ∀ (t : Nat),
+                t ≤ θ →
+                  (Becoming.FormedLoops.thresholdWorld θ).web.level t (Sum.inr ()) =
+                    (Becoming.FormedLoops.thresholdWorld θ').web.level t (Sum.inr ())
+Becoming.FormedLoops.scheduleWorld_course : ∀ (on : Nat → Bool) (M D : Nat),
+  (Becoming.FormedLoops.scheduleWorld on M D).Balanced ∧
+    (∀ (t : Nat),
+        (Becoming.FormedLoops.scheduleWorld on M D).web.level t (Sum.inr ()) =
+          D * (1 + M) ^ Becoming.Frequency.count on t) ∧
+      (1 ≤ M →
+        1 ≤ D →
+          ((∃ A n,
+              ∀ (t : Nat), (Becoming.FormedLoops.scheduleWorld on M D).web.level t (Sum.inr ()) ≤ A * (t + 1) ^ n) ↔
+            ∃ A n, ∀ (t : Nat), 2 ^ Becoming.Frequency.count on t ≤ A * (t + 1) ^ n))
+@Becoming.FormedLoops.sparseWorld_course : ∀ {M D : Nat},
+  0 < M →
+    0 < D →
+      (Becoming.FormedLoops.scheduleWorld Becoming.Frequency.Sparse.on M D).Balanced ∧
+        Becoming.CouplingRecurs [()] (fun x => false)
+            (Becoming.Frequency.SelfLoop.strengths Becoming.Frequency.Sparse.on M) (fun x => [()]) () () ∧
+          (∀ (t : Nat),
+              (Becoming.FormedLoops.scheduleWorld Becoming.Frequency.Sparse.on M D).web.level t (Sum.inr ()) ≤
+                D * 2 ^ M * (t + 1) ^ (1 * M)) ∧
+            ∀ (J : Nat),
+              ∃ t,
+                Becoming.carriedWithin [()] (fun x => false) (fun x x_1 x_2 => 0)
+                    (Becoming.Frequency.SelfLoop.strengths Becoming.Frequency.Sparse.on M) (fun x => [()]) (fun x => D)
+                    J t () <
+                  (Becoming.FormedLoops.scheduleWorld Becoming.Frequency.Sparse.on M D).web.level t (Sum.inr ())

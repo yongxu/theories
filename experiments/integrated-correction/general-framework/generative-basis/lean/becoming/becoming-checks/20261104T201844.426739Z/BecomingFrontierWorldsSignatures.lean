@@ -1,0 +1,9 @@
+import Becoming.FrontierWorlds
+#check @Becoming.FrontierWorlds.Served.successor
+#check @Becoming.FrontierWorlds.served_of_handover
+#check @Becoming.FrontierWorlds.Served.not_of_gap
+#check @Becoming.FrontierWorlds.sole_giver_required
+#check @Becoming.FrontierWorlds.giver_active
+#check @Becoming.FrontierWorlds.sole_giver_active
+#check @Becoming.FrontierWorlds.Discharged.no_residual
+#check @Becoming.FrontierWorlds.residual_of_unfulfilled

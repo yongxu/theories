@@ -1,0 +1,52 @@
+@Becoming.le_of_sub_eq_zero : ∀ {n m : Nat}, n - m = 0 → n ≤ m
+@Becoming.mem_of_some_mem : ∀ {α : Type} {a : α} {l : List α}, some a ∈ List.map some l → a ∈ l
+@Becoming.Flow.withImbalance_taken : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} (t : Nat) (c : C),
+  (L.withImbalance W).taken t c = W.level t c + L.given t c - (W.level (t + 1) c + L.taken t c) + L.taken t c
+@Becoming.Flow.withImbalance_given : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} (t : Nat) (c : C),
+  (L.withImbalance W).given t c = W.level (t + 1) c + L.taken t c - (W.level t c + L.given t c) + L.given t c
+@Becoming.Flow.withImbalance_balances : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  (L.withImbalance W).Balances W.withRefinement
+@Becoming.Flow.withImbalance_balancesOn : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} (cs : List C)
+  (t : Nat), (L.withImbalance W).BalancesOn W.withRefinement cs t
+@Becoming.Flow.balancesOn_iff_idle : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C}
+  {t : Nat},
+  L.BalancesOn W cs t ↔
+    ∀ (c : C), c ∈ cs → (L.withImbalance W).give t none c = 0 ∧ (L.withImbalance W).take t none c = 0
+@Becoming.Flow.balances_iff_idle : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W ↔ ∀ (t : Nat) (c : C), (L.withImbalance W).give t none c = 0 ∧ (L.withImbalance W).take t none c = 0
+@Becoming.Flow.withImbalance_acting_at_iff : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {t : Nat}
+  {c : C},
+  (∀ (f : Option F),
+      f ∈ (L.withImbalance W).present t → 0 < (L.withImbalance W).give t f c → W.withRefinement.active t f) ↔
+    (∀ (g : F), g ∈ L.present t → 0 < L.give t g c → W.active t g) ∧
+      W.level (t + 1) c + L.taken t c ≤ W.level t c + L.given t c
+@Becoming.Flow.withImbalance_taking_at_iff : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {t : Nat}
+  {c : C},
+  (∀ (f : Option F),
+      f ∈ (L.withImbalance W).present t →
+        0 < (L.withImbalance W).take t f c → W.withRefinement.active t f ∧ W.withRefinement.draws t f c) ↔
+    (∀ (g : F), g ∈ L.present t → 0 < L.take t g c → W.active t g ∧ W.draws t g c) ∧
+      W.level t c + L.given t c ≤ W.level (t + 1) c + L.taken t c
+@Becoming.Flow.withImbalance_acting_taking_on_iff : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {cs : List C} {t : Nat},
+  (∀ (c : C),
+      c ∈ cs →
+        (∀ (f : Option F),
+            f ∈ (L.withImbalance W).present t → 0 < (L.withImbalance W).give t f c → W.withRefinement.active t f) ∧
+          ∀ (f : Option F),
+            f ∈ (L.withImbalance W).present t →
+              0 < (L.withImbalance W).take t f c → W.withRefinement.active t f ∧ W.withRefinement.draws t f c) ↔
+    (∀ (c : C),
+        c ∈ cs →
+          (∀ (g : F), g ∈ L.present t → 0 < L.give t g c → W.active t g) ∧
+            ∀ (g : F), g ∈ L.present t → 0 < L.take t g c → W.active t g ∧ W.draws t g c) ∧
+      L.BalancesOn W cs t
+@Becoming.Flow.withImbalance_acting_iff : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  (L.withImbalance W).Acting W.withRefinement ↔
+    L.Acting W ∧ ∀ (t : Nat) (c : C), W.level (t + 1) c + L.taken t c ≤ W.level t c + L.given t c
+@Becoming.Flow.withImbalance_taking_iff : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  (L.withImbalance W).Taking W.withRefinement ↔
+    L.Taking W ∧ ∀ (t : Nat) (c : C), W.level t c + L.given t c ≤ W.level (t + 1) c + L.taken t c
+@Becoming.Flow.withImbalance_acting_taking_iff : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  (L.withImbalance W).Acting W.withRefinement ∧ (L.withImbalance W).Taking W.withRefinement ↔
+    (L.Acting W ∧ L.Taking W) ∧ L.Balances W

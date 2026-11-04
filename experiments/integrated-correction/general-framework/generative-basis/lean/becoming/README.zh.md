@@ -247,9 +247,9 @@ python3 -B experiments/integrated-correction/general-framework/generative-basis/
 
 [`check_becoming.py`](check_becoming.py) 解析导入闭包，核对每个继承模块的当前字节与其已通过回执一致，按依赖顺序用 Lean 4.29.1 编译，逐条审计公理（含核心闭包中 Lean 的全部常量），并核对核心的三项纯净条件。结果写入 [`becoming-verification.json`](becoming-verification.json)；每次运行在 `becoming-checks/` 保留回执、实际运行步骤的驱动与日志，以及 `main` 未逐字节持有的源与检查器文件的副本（2026-10-12 起；其余由回执的 `source_commit` 与 sha256 指明）。
 
-每个 Lean 步骤以其读入的全部内容为键：工具链与二进制、本身字节，以及（经其键）所导入模块闭包的字节。键与先前已通过的步骤相同时，从各运行与各工作树共享的缓存（`~/.cache/becoming-lean`，可用 `BECOMING_LEAN_CACHE` 改）取回其输出与日志，不再重跑；所以只有改动的模块及依赖它的模块重新编译与审计。回执的 `lean_steps` 列出本次实际运行的步骤和被复用的步骤及其来源运行。`BECOMING_FRESH=1` 重跑全部步骤；`LEAN_TIMEOUT` 设每次 Lean 运行的秒数。[`check_correction_inquiry.py`](../universal-ethics/generative-capacity/check_correction_inquiry.py) 用同一缓存，键中另含 Mathlib 修订。
+每个 Lean 步骤以其读入的全部内容为键：工具链与二进制、执行器（检查器中寻找 Lean、生成步骤的参数、驱动与文件、运行步骤并保存其输出的代码的摘要，不计注释、文档字符串与排版，所以改动步骤的运行方式就会改动所有键；每个缓存条目注明写下它的执行器，这些工具只复用本执行器写下的条目）、本身字节，以及（经其键）所导入模块闭包的字节。键与先前已通过的步骤相同时，从各运行与各工作树共享的缓存（`~/.cache/becoming-lean`，可用 `BECOMING_LEAN_CACHE` 改）取回其输出与日志，不再重跑；所以只有改动的模块及依赖它的模块重新编译与审计。回执的 `lean_steps` 列出本次实际运行的步骤和被复用的步骤及其来源运行，以及每个实际运行的步骤所用的秒数。缓存中没有的步骤在其键的锁下运行，所以两次运行同时需要同一步骤时只算一次；本检查器、`check_fallible_inquiry.py` 与 `scratch_build.py` 的每个 Lean 进程运行期间各占本机的一个 Lean 槽位。持有步骤锁者至少每十秒触碰一次锁文件，等锁者只有在锁文件两分钟无人触碰时才不再等、照常运行；等槽位则直到有空位或本次运行停止。`BECOMING_FRESH=1` 重跑全部步骤；`LEAN_TIMEOUT` 设每次 Lean 运行的秒数。[`check_correction_inquiry.py`](../universal-ethics/generative-capacity/check_correction_inquiry.py) 用同一缓存，键中另含 Mathlib 修订。
 
-在 scratch 中构建改动或新增的模块，用 [`scratch_build.py`](scratch_build.py) `TREE [MODULE ...]`：TREE 按包路径放自己改动或新增的模块，其余模块取自本检出；它用检查器的命令、工具链与步骤键编译导入闭包，复用缓存中已通过的步骤，并把通过的步骤存入缓存，所以落地运行与其他会话直接复用；再用检查器本身的 `#print axioms` 驱动审计所指模块的声明（同样缓存）。它不是回执：环境审计、对照与核心的仅序言编译只在检查器中运行。
+在 scratch 中构建改动或新增的模块，用 [`scratch_build.py`](scratch_build.py) `TREE [MODULE ...]`：TREE 按包路径放自己改动或新增的模块，其余模块取自本检出；它的步骤就是检查器的步骤，出自同一计划与同一执行器：编译导入闭包，输出所指模块的公理报告与定理陈述，并把所指的核心模块再从序言单独编译一次；复用缓存中已通过的步骤，并把通过的步骤存入缓存，所以落地运行与其他会话直接复用。它不是回执：环境审计与对照只在检查器中运行。
 
 <a id="自行验证--verify-it-yourself"></a>
 ## 自行验证
@@ -263,7 +263,7 @@ BECOMING_FRESH=1 BECOMING_OUT=/tmp/becoming-run \
 ```
 
 3. 最后一行 JSON 的 `"status": "passed"` 表示以下各项都已在本机检查：**核心纯净**：核心的导入闭包恰为基础模块、核心模块与实例和应用环（除根 `Becoming` 外没有核心模块导入此环），都是本仓库的文件（不含 Mathlib 或 `Lean` 元编程）；**公理报告为空**：基础与核心的每条源声明 `#print axioms` 都报告不依赖任何公理；**只用序言编译**：去掉 `import Std` 后，核心闭包仅凭 Lean 的序言编译通过，警告即失败；**环境审计**：核心闭包与桥模块中 Lean 的每个常量（含生成的常量、私有声明与无名实例）都不依赖公理，唯一例外是构造子的单射引理 `injEq` 依赖 `propext`，且它们都不是源声明。此外：Lean 版本须为 4.29.1，二进制的 sha256 写入回执；对照例子编译通过。
-4. 环境变量：`BECOMING_FRESH=1` 重跑全部步骤，不用缓存（缓存在仓库之外且无认证，所以对外声称结果时要用它）；`BECOMING_OUT=<dir>` 把运行目录与回执写到该目录，仓库不变；`BECOMING_JOBS` 同时运行的 Lean 步骤数（默认核数的一半，1 为逐个运行）；`LEAN_TIMEOUT` 每次 Lean 运行的秒数（默认 600，机器繁忙时调大）；`BECOMING_LEAN_CACHE` 缓存目录（默认 `~/.cache/becoming-lean`）；`LEAN` 指定 Lean 二进制，否则用本目录下 `elan which lean` 的结果，再否则用 elan 的默认路径。
+4. 环境变量：`BECOMING_FRESH=1` 重跑全部步骤，不用缓存（缓存在仓库之外且无认证，所以对外声称结果时要用它）；`BECOMING_OUT=<dir>` 把运行目录与回执写到该目录，仓库不变；`BECOMING_JOBS` 一次运行同时启动的 Lean 步骤数（默认核数的一半，1 为逐个运行）；`BECOMING_LEAN_SLOTS` 共用缓存的所有运行在本机同时运行的 Lean 进程数（默认核数）；`LEAN_TIMEOUT` 每次 Lean 运行的秒数（默认 600，机器繁忙时调大）；`BECOMING_LEAN_CACHE` 缓存目录（默认 `~/.cache/becoming-lean`）；`LEAN` 指定 Lean 二进制，否则用本目录下 `elan which lean` 的结果，再否则用 elan 的默认路径。
 
 外围中用 Mathlib 的检查器（如 `check_correction_inquiry.py`）依赖仓库之外的 Mathlib 项目：`SYSTEMS_MATHLIB_PROJECT`，默认 `~/repos/生生不息`，工具链 v4.30.0-rc2，与核心的 v4.29.1 不同。其 `lakefile.lean` 与 `lake-manifest.json` 原样保存在 [`../periphery-mathlib-pin/`](../periphery-mathlib-pin/README.md)，固定 Mathlib 修订；上面的核心检查不需要它。
 
