@@ -1,5 +1,5 @@
 {
- "what": "TR2's four checkpoints, each named by its Hugging Face repository, revision and every file it loads, with its size and hash (sha256 for a file stored in LFS, the git blob id otherwise), read from the hub's public metadata on 4 November 2026; no file was downloaded. The run checks every file before loading.",
+ "what": "TR2's four checkpoints, each named by its Hugging Face repository, revision and every file it loads, with its size and hash (sha256 for a file stored in LFS, the git blob id otherwise), read from the hub's public metadata on 4 November 2026, with each checkpoint's layers, width and dtype from its config.json read at its revision; no weight or vocabulary file was downloaded. The run checks every file before loading, and the engine's report against the layers and width.",
  "read_on": "2026-11-04",
  "checkpoints": [
   {
@@ -11,6 +11,9 @@
    "license": "apache-2.0",
    "gated": false,
    "weights_bytes": 16381516776,
+   "layers": 36,
+   "hidden": 4096,
+   "dtype": "bfloat16",
    "files": [
     {
      "path": "config.json",
@@ -83,6 +86,9 @@
    "license": "apache-2.0",
    "gated": false,
    "weights_bytes": 16381516776,
+   "layers": 36,
+   "hidden": 4096,
+   "dtype": "bfloat16",
    "files": [
     {
      "path": "config.json",
@@ -155,6 +161,9 @@
    "license": "apache-2.0",
    "gated": false,
    "weights_bytes": 14596063712,
+   "layers": 32,
+   "hidden": 4096,
+   "dtype": "bfloat16",
    "files": [
     {
      "path": "config.json",
@@ -222,6 +231,9 @@
    "license": "apache-2.0",
    "gated": false,
    "weights_bytes": 14596063712,
+   "layers": 32,
+   "hidden": 4096,
+   "dtype": "bfloat16",
    "files": [
     {
      "path": "chat_template.jinja",
@@ -363,6 +375,28 @@
      "file": "huggingface_hub-0.36.0-py3-none-any.whl",
      "sha256": "7bcc9ad17d5b3f07b57c78e79d527102d08313caa278a641993acddcb894548d",
      "size": 566094
+    }
+   ]
+  },
+  "jinja2": {
+   "version": "3.1.6",
+   "uploaded": "2025-03-05T20:05:00",
+   "wheels": [
+    {
+     "file": "jinja2-3.1.6-py3-none-any.whl",
+     "sha256": "85ece4451f492d0c13c5dd7c13a64681a86afae63a5f347908daf103ce6d2f67",
+     "size": 134899
+    }
+   ]
+  },
+  "markupsafe": {
+   "version": "3.0.3",
+   "uploaded": "2025-09-27T18:36:19",
+   "wheels_macos_arm64_cp311": [
+    {
+     "file": "markupsafe-3.0.3-cp311-cp311-macosx_11_0_arm64.whl",
+     "sha256": "4bd4cd07944443f5a265608cc6aab442e4f74dff8088b0dfc8238647b8f6ae9a",
+     "size": 12058
     }
    ]
   }

@@ -27,7 +27,7 @@ def digest(*parts):
 
 
 def shared_u(content_index, kind):
-    """The content's shared draw in [0, 1), 53 bits from its identity and kind."""
+    """The content's shared draw in [0, 1): 56 bits of a digest of its identity and kind, as a float."""
     return int(digest("u", kind, content_index)[:14], 16) / 16 ** 14
 
 

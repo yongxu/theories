@@ -23,7 +23,8 @@ What it computes, each from the frozen rule (tr2_rule.py) and Stage 0's exact te
   files Ren's yes downloads; the time per pass is measured by the smoke run, and is projected here at
   seven rates. A pass is a prefill of about 100 to 200 tokens through about 8 billion parameters, some
   2.5e12 floating-point operations, so a second or less on a GPU that sustains a few teraflops, and
-  several to tens of seconds on a CPU in bfloat16; the smoke run decides.
+  several to tens of seconds on a CPU in bfloat16, where a checkpoint's run may take a day or more;
+  the smoke run decides.
 """
 
 import json

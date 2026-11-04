@@ -11,6 +11,13 @@ and logits apart and the coverage are void, and the probe carries the states (St
 nondeterminism); the total variation is then read against the identical arm's, and the greedy
 changes and the misled share stand (a near tie can flip under noise, which they do not separate).
 
+Settled before the run. Every factor changes token ids before the last position, so in a causal
+transformer its last state differs in its bits after the first block, almost surely, and the logits read
+from that state differ too. Under exact passes the exact shares of states and of logits apart, and the
+coverage, are therefore expected to be settled by the architecture: they record that the cue's tokens
+enter the state and the logits. Where a cue's difference stops is carried by the size of the total
+variation, the greedy changes, the sampled net shift and the probe's direction.
+
 The forbidden cases (each is the chain's congruence failing, so an implementation other than stated
 or an input not listed, never a law's failure), counted as classes of passes:
 - passes with the same token ids apart in a state or in the logits. In this plan only each main
@@ -18,7 +25,8 @@ or an input not listed, never a law's failure), counted as classes of passes:
   fails: the stated implementation (deterministic passes) is not the one run, and which unlisted
   input made it so, nondeterminism or a fault, the count does not tell;
 - passes with their last hidden state equal and their logits apart (acts apart, states equal), which
-  separates a fault in the logits from noise in the states.
+  separates what enters after the last state (in the head, by a fault or by noise there) from what
+  enters the states.
 
 Per cue factor (F1 to F4, each against base on the same contents):
 - couplings: apart by construction (the token ids differ; checked);
@@ -26,9 +34,9 @@ Per cue factor (F1 to F4, each against base on the same contents):
   ids before the last position, so in a causal transformer these shares are expected to be one after
   the embedding: they record that the cue's tokens enter the state, not where a cue's difference stops;
 - states by probe, on the 400 state contents: at each layer a difference-of-means probe fitted on the
-  200 even-placed contents and tested on the 200 others, paired: a held-out content counts where the
-  probe scores its arm above its base state (ties count against), one-sided exact binomial against
-  one half, Holm over the layers at 0.01. Exact under its null, a stated assumption: with no signal
+  200 contents even-placed within their family (50 of each) and tested on the 200 others, paired: a
+  held-out content counts where the probe scores its arm above its base state (ties count against),
+  one-sided exact binomial against one half, Holm over the layers at 0.01. Exact under its null, a stated assumption: with no signal
   the two states of a content are exchangeable, independently across contents. A control probe, the
   identical arm against base, fitted and tested on the same contents and read the same way, voids the
   factor's probe where it rejects at any layer (the two arms differ in nothing listed, so a probe
@@ -36,9 +44,14 @@ Per cue factor (F1 to F4, each against base on the same contents):
   states equal base's and it cannot reject, so it guards only a run that is not exact. Evidence one
   way only: a probe that does not reject shows nothing;
 - acts, exactly: the share of contents whose logits differ, the total variation between the two
-  next-token distributions, the share whose greedy category changes; and, against the identical arm's
-  total variation from base (the floor, zero under exact passes), the number of contents whose
-  factor's total variation is strictly above it, one-sided exact binomial against one half;
+  next-token distributions, the share whose greedy category changes; and, read only where the premise
+  fails, the factor's total variation against the identical arm's on the same content (the floor):
+  the contents above it and below it, ties dropped, a one-sided sign test, Holm over the four factors
+  at 0.05, status "above the identical arm's floor" or "not shown above it". Exact under its null, a
+  stated assumption: with no cue effect the two arms' total variations from base on a content are
+  exchangeable, independently across contents. It is the counterpart of the logits' share apart where
+  passes are not exact, and like it is expected to be settled by the token change. Under exact passes
+  the floor is zero, the test repeats the logits' share apart, and it is not read;
 - acts sampled under the shared draw: X taken where u < p(X), so the two arms of a content are coupled
   through u, and a pair is discordant only on a content whose sampled acts differ. The exact McNemar
   test, two-sided, Holm over the four factors at 0.05, tests a net shift toward X or toward Y over the
@@ -53,8 +66,10 @@ Per cue factor (F1 to F4, each against base on the same contents):
   lumping (two occasions in one lump where their states are equal at every layer, a lumping finer than
   the last state's, so a lower bound), on the occasions base, identical and the factor's arm of every
   main content (two cue-down occasions and one cue-up, so the values differ from Stage 0's symmetric
-  tables). Fixed where lumped is lumped_determines' reading; "not fixed" holds among laws reading
-  through the measured lumping. Expected to be settled by the token change, as the exact states are;
+  tables). Fixed where lumped: Becoming.Learning.lumped_determines; not fixed where no read occasion
+  shares the lump, among laws reading through the measured lumping: Becoming.Learning.twin_selected
+  (being in the lump decided, as equality of hashes is, and a second act value). Expected to be
+  settled by the token change, as the exact states are;
 - the misled share of a reader whose class reads only the content, under S1 with the contents matched:
   the share of contents whose greedy category the cue changes. It has no Lean (in prose only, as the
   record says), and nothing rests on it.
@@ -156,7 +171,8 @@ def least_pairs():
     return next(n for n in GRID if all(row[n] >= 0.9 for row in t.values()))
 
 
-assert least_pairs() == PAIRS, "N_B is the least of the grid at the worst share"
+if least_pairs() != PAIRS:
+    raise SystemExit("refused: N_B is not the least of the grid at the worst share")
 
 
 def base_rate_power(bases=(0.10, 0.30, 0.50), n=PAIRS):
@@ -172,11 +188,11 @@ def base_rate_power(bases=(0.10, 0.30, 0.50), n=PAIRS):
 
 
 def pilot_control(groups):
-    """The positive control: the pilot's cue shown apart by the sampled measure, or not."""
+    """The positive control: whether the sampled measure shows the pilot's cue a net shift."""
     n_up, n_down = pilot_counts(groups)
     p = mcnemar_p(n_up, n_down)
     return {"discordant_up_only": n_up, "discordant_down_only": n_down, "p": p,
-            "shown_apart": p <= ALPHA_ACTS,
+            "net_shift_shown": p <= ALPHA_ACTS,
             "reading": "a cue known to move the act; where it shows no net shift, a factor's 'no net shift "
                        "shown' is uninformative on this checkpoint"}
 
@@ -213,16 +229,21 @@ def probe(train_up, train_down, test_up, test_down):
     mu0 = [s / len(train_down) for s in map(sum, zip(*train_down))]
     w = [a - b for a, b in zip(mu1, mu0)]
     dot = lambda x: sum(map(float.__mul__, w, x))          # noqa: E731
-    assert n == len(test_up[0]) and len(test_up) == len(test_down)
+    if n != len(test_up[0]) or len(test_up) != len(test_down):
+        raise SystemExit("refused: the probe's states differ in shape")
     correct = sum(dot(u) > dot(d) for u, d in zip(test_up, test_down))
     return correct, len(test_up)
 
 
 def probes(folder, state_groups, factor, layers, hidden):
     """Per layer: the probe (the factor's arm against base) and its control (the identical arm against
-    base), each fitted on the even-placed state contents and tested on the others."""
+    base), each fitted on the state contents even-placed within their family and tested on the others."""
     gs = sorted(state_groups, key=lambda g: C.MAIN.index(C.CONTENTS[g["content"]]))
-    train, test = gs[0::2], gs[1::2]
+    train, test = [], []
+    for fam in C.FAMILIES:
+        fg = [g for g in gs if C.CONTENTS[g["content"]]["family"] == fam]
+        train += fg[0::2]
+        test += fg[1::2]
     st = {g["group"]: states_of(folder, g) for g in gs}
     sl = lambda a, l: list(a[l * hidden:(l + 1) * hidden])   # noqa: E731
     rows, ps, cps = [], {}, {}
@@ -261,7 +282,7 @@ def read_checkpoint(folder, groups, describe):
     hidden = describe["hidden"]
     by_phase = {ph: [g for g in groups if g["phase"] == ph] for ph in P.PHASES}
     out = {"pilot": pilot_control(by_phase["pilot"]), "pairs": len(by_phase["main"])}
-    control = out["pilot"]["shown_apart"]
+    control = out["pilot"]["net_shift_shown"]
     main = by_phase["main"]
     rec = {g["group"]: {r["arm"]: r for r in g["passes"]} for g in main}
     content = {g["group"]: C.CONTENTS[g["content"]] for g in main}
@@ -288,7 +309,8 @@ def read_checkpoint(folder, groups, describe):
                         "reading": ("each is an implementation other than stated or an input not listed. The "
                                     "first is met exactly where the premise fails (only base and identical share "
                                     "token ids) and does not tell nondeterminism from a fault; the second separates "
-                                    "a fault in the logits from noise in the states")}
+                                    "what enters after the last state (in the head, by a fault or by noise there) "
+                                    "from what enters the states")}
     mass = sum(r["base"]["p"]["A"] + r["base"]["p"]["B"] for r in rec.values()) / len(rec)
     fmt = mass >= FORMAT_MASS
     px_base = sum(p_x(r["base"], content[g], "choice") for g, r in rec.items()) / len(rec)
@@ -300,7 +322,7 @@ def read_checkpoint(folder, groups, describe):
 
     # per factor
     state_groups = [g for g in main if g["keep_state"]]
-    factors, behaviour_p = {}, {}
+    factors, behaviour_p, floor_p = {}, {}, {}
     for f in C.FACTOR_IDS:
         n = len(rec)
         coupled = sum(r["base"]["input_sha256"] != r[f]["input_sha256"] for r in rec.values())
@@ -309,6 +331,8 @@ def read_checkpoint(folder, groups, describe):
         logits_apart = sum(r["base"]["logits_sha256"] != r[f]["logits_sha256"] for r in rec.values())
         tv = [r[f]["tv_vs_base"] for r in rec.values()]
         above = sum(r[f]["tv_vs_base"] > tv_floor[g] for g, r in rec.items())
+        below = sum(r[f]["tv_vs_base"] < tv_floor[g] for g, r in rec.items())
+        floor_p[f] = binom_upper_p(above, above + below) if above + below else 1.0
         greedy_changed = sum(greedy_cat(r["base"], content[g], "choice") != greedy_cat(r[f], content[g], "choice")
                              for g, r in rec.items())
         n01 = n10 = 0
@@ -329,7 +353,8 @@ def read_checkpoint(folder, groups, describe):
             "states_probe": probes(folder, state_groups, f, layers, hidden) if state_groups else None,
             "acts_exact": {"logits_apart": f"{logits_apart} of {n}", "mean_tv": round(sum(tv) / n, 6),
                            "max_tv": round(max(tv), 6), "greedy_category_changed": f"{greedy_changed} of {n}",
-                           "tv_above_identical": {"contents": above, "of": n, "p": binom_upper_p(above, n)}},
+                           "tv_against_identical": {"above": above, "below": below, "ties": n - above - below,
+                                                    "p": floor_p[f]}},
             "acts_sampled": {"X_base_only": n01, "X_up_only": n10, "p": behaviour_p[f],
                              "discordant_contents": n01 + n10,
                              "minority_share": round(min(n01, n10) / (n01 + n10), 4) if n01 + n10 else None,
@@ -337,9 +362,12 @@ def read_checkpoint(folder, groups, describe):
             "coverage": {s: round(sum(c[i] for c in cov) / n, 4) for i, s in enumerate(("S1", "S2", "S3"))},
             "misled_content_reader_S1": round(greedy_changed / n, 4),
         }
-    rej = holm(behaviour_p, ALPHA_ACTS)
+    rej, frej = holm(behaviour_p, ALPHA_ACTS), holm(floor_p, ALPHA_ACTS)
     for f in C.FACTOR_IDS:
-        factors[f]["acts_sampled"]["shown_apart"] = (f in rej) if fmt else None
+        factors[f]["acts_exact"]["tv_against_identical"]["status"] = (
+            "not read: exact passes (the floor is zero; the logits' share apart carries it)" if exact else
+            "above the identical arm's floor" if f in frej else "not shown above it")
+        factors[f]["acts_sampled"]["net_shift"] = (f in rej) if fmt else None
         factors[f]["acts_sampled"]["status"] = (
             "void: the checkpoint does not answer in the format" if not fmt else
             "a net shift" if f in rej else
@@ -383,7 +411,7 @@ def read_checkpoint(folder, groups, describe):
 
 
 LABEL = ("TR2 is a measurement of the chain's correspondence, not a test of RF2: per checkpoint and cue factor, "
-         "which link of couplings, states and acts is shown apart, and what a schedule of reading fixes. A "
+         "which link of couplings, states and acts is shown apart, how far, and what a schedule of reading fixes. A "
          "forbidden case observed shows an implementation other than stated or an input not listed. Nothing "
          "here confirms RF2, and a factor with no net shift shown is not shown to leave the acts alike.")
 

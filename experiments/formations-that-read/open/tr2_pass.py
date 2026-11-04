@@ -1,16 +1,21 @@
 """TR2 Stage B, the pass: what one forward pass is and what is kept of it. Fixed (no addendum may change
-it); the engine (tr2_engine.py) only loads a checkpoint and places it on a device.
+it). tr2_run.py calls it itself; the engine (tr2_engine.py) only loads a checkpoint and places it on a
+device, and supplies torch, the model, the tokenizer and the device.
 
-The token ids: a base checkpoint's text is tokenized with the tokenizer's own special tokens (neither
-base tokenizer names a BOS token in its configuration; the smoke run's report shows the text as shown). A tuned checkpoint's prompt is its one user
-message through the checkpoint's own chat template, with the generation prompt added and, for Qwen,
-thinking off; then "Answer:" is appended as the reply begun, and the whole is tokenized with no special
-tokens added. What the templates add, read at the pinned revisions (their hashes in MODELS.json):
+The token ids: a base checkpoint's text is tokenized with no special tokens added, so its ids are the
+text's alone, whatever the tokenizer's post-processor would add (neither base tokenizer names a BOS
+token in its configuration). A tuned checkpoint's prompt is its one user message through the
+checkpoint's own chat template, with the generation prompt added and, for Qwen, thinking off; then
+"Answer:" is appended as the reply begun, and the whole is tokenized with no special tokens added (the
+template's own special tokens are in its text). What the templates add, read at the pinned revisions
+(their hashes in MODELS.json):
 - Qwen3-8B, with no system message, adds no system turn; the reply begins with an empty think block,
   "<think>\\n\\n</think>\\n\\n", before "Answer:";
 - Olmo-3-7B-Instruct, with no system message, adds its default system turn: "You are a helpful
   function-calling AI assistant. You do not currently have access to any functions.
   <functions></functions>". It is part of the token ids, the same in every arm.
+expected() is the text the ids must decode to (the base text, or the template's text and "Answer:"),
+and the smoke run says go on only where every prompt's ids decode to it exactly.
 
 The pass: those ids in a batch of one, no cache, every hidden state returned. What is kept, all at the
 last position (the token after which the act is the next):
@@ -18,23 +23,32 @@ last position (the token after which the act is the next):
   final norm (the state the logits read); hashed in their own dtype, and as float32 bytes where the
   group keeps states;
 - the logits, hashed in their own dtype; the next-token distribution, their softmax in float32;
-- the probability of each act letter (every token that decodes, spaces aside, to the letter) and of
-  any other token; the greedy token's category.
+- the probability of each act letter (every token that decodes, leading and trailing whitespace aside,
+  to the letter), summed in float64 and taken at most 1 (a float32 softmax can put a letter split over
+  two tokens a rounding above 1), and of any other token; the greedy token's category;
+- the dtype of the states and of the logits, and the device the logits were made on, which the run
+  checks.
 """
 
 import hashlib
 
 
 def ids(tok, prompt, family):
+    return tok(expected(tok, prompt, family), add_special_tokens=False)["input_ids"]
+
+
+def expected(tok, prompt, family):
+    """The text a prompt's ids are made from, and must decode to."""
     if "text" in prompt:
-        return tok(prompt["text"], add_special_tokens=True)["input_ids"]
+        return prompt["text"]
     kw = {"enable_thinking": False} if family == "qwen" else {}
-    text = tok.apply_chat_template(prompt["messages"], tokenize=False, add_generation_prompt=True, **kw)
-    return tok(text + prompt["reply_prefix"], add_special_tokens=False)["input_ids"]
+    return tok.apply_chat_template(prompt["messages"], tokenize=False, add_generation_prompt=True,
+                                   **kw) + prompt["reply_prefix"]
 
 
 def letters(tok, names, decoded=None):
-    """For each letter, the token ids that decode to it, spaces aside; and the decoded vocabulary."""
+    """For each letter, the token ids that decode to it, leading and trailing whitespace aside; and the
+    decoded vocabulary."""
     if decoded is None:
         decoded = [tok.decode([i]).strip() for i in range(len(tok))]
     return {n: [i for i, s in enumerate(decoded) if s == n] for n in names}, decoded
@@ -46,22 +60,24 @@ def forward(torch, model, tok, prompt, family, device, letter_ids, keep_state):
     x = torch.tensor([x_ids], dtype=torch.long, device=device)
     with torch.no_grad():
         out = model(input_ids=x, output_hidden_states=True, use_cache=False)
+    made_on = str(out.logits.device)
     hs = [h[0, -1].detach().to("cpu").contiguous() for h in out.hidden_states]
     logits = out.logits[0, -1].detach().to("cpu").contiguous()
     dist = torch.softmax(logits.to(torch.float32), dim=-1)
-    p = {n: float(dist[ix].sum()) if ix else 0.0 for n, ix in letter_ids.items()}
+    p = {n: min(1.0, float(dist[ix].double().sum())) if ix else 0.0 for n, ix in letter_ids.items()}
     p["other"] = max(0.0, 1.0 - sum(p.values()))
     top = int(torch.argmax(dist))
     greedy = next((n for n, ix in letter_ids.items() if top in ix), "other")
     state = torch.stack(hs).to(torch.float32).numpy().tobytes() if keep_state else None
     return {"input_sha256": sha_ids(x_ids), "n_tokens": len(x_ids),
             "layer_sha256": [sha_tensor(torch, h) for h in hs], "logits_sha256": sha_tensor(torch, logits),
-            "p": p, "greedy": greedy, "state": state, "dist": dist}
+            "p": p, "greedy": greedy, "state": state, "dist": dist,
+            "dtype": str(hs[0].dtype), "logits_dtype": str(logits.dtype), "device": made_on}
 
 
 def rendered(tok, prompt, family):
     """The text the checkpoint is shown, decoded from its token ids (for the smoke run's report)."""
-    return tok.decode(ids(tok, prompt, family))
+    return tok.decode(ids(tok, prompt, family), skip_special_tokens=False, clean_up_tokenization_spaces=False)
 
 
 def tv(a, b):
