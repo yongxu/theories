@@ -1,6 +1,6 @@
 # Formations that read: the designs of RF's tests (TR1 to TR9) and RR's TR-RR
 
-*Board item RF, 31 October 2026. AI-written (a Claude Code session), not yet reviewed by a person. These are designs. TR8 and TR-RR are frozen, with the changes listed there, in [FREEZE-1](FREEZE-1.md) (board item RFZ, 4 November 2026), TR4 and TR5 in [FREEZE-2](FREEZE-2.md) (board item TR45, the same day), TR3 in [FREEZE-3](FREEZE-3.md) (board item RFZ, the same day), TR6 in [FREEZE-6](FREEZE-6.md) (board item RFZ, the same day), and TR2's Stage B in [FREEZE-7](FREEZE-7.md) (board item TR45, the same day); the others are not. Nothing has run on a trained system, a model, data or people. The first part takes ten minutes to read, the second about forty; the rest is reference. RR's test (board item TR-RR) has a section of its own after the second part.*
+*Board item RF, 31 October 2026. AI-written (a Claude Code session), not yet reviewed by a person. These are designs. TR8 and TR-RR are frozen, with the changes listed there, in [FREEZE-1](FREEZE-1.md) (board item RFZ, 4 November 2026), TR4 and TR5 in [FREEZE-2](FREEZE-2.md) (board item TR45, the same day), TR3 in [FREEZE-3](FREEZE-3.md) (board item RFZ, the same day), TR7 in [FREEZE-4](FREEZE-4.md) (board item TR71, the same day), TR6 in [FREEZE-6](FREEZE-6.md) (board item RFZ, the same day), and TR2's Stage B in [FREEZE-7](FREEZE-7.md) (board item TR45, the same day); the others are not. Nothing has run on a trained system, a model, data or people. The first part takes ten minutes to read, the second about forty; the rest is reference. RR's test (board item TR-RR) has a section of its own after the second part.*
 
 ## The tests in ten minutes
 
@@ -18,7 +18,7 @@ Board item RF proved nine laws of formations that read, each a theorem in the pu
 
 **TR6 (RF6.3), a prediction read by what it predicts.** Does a public of ten language-model agents respond to a published forecast of its count? [RF6.3](../../theories/becoming/chapters/03-KNOWING.md#r-a-prediction-read-by-what-it-predicts), a pure-core theorem: under an order-keeping response mapping 0..n into itself, republishing the last outcome from 0 never falls, passes no right value and rests by step n. A run refutes at most the bridge that a public responds by the forecast alone, and the readings that bandwagon keeps the order and congestion reverses it. Stage 0: one flipped decision in a thousand yields forbidden cases by noise, so verdicts rest on count mismatches. Frozen in [FREEZE-6](FREEZE-6.md): 3,974 calls a pin, at most 6,174 where a second start runs, on Ren's yes.
 
-**TR7 (RF7), complying when read.** Does a system rank stated two-stage plans as [`Becoming.ReadStages`](../integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean) does? It tests that reading, not arithmetic. Forbidden, per condition: `complyThenOwn` where `k_C V < k_O V + c T`; another plan where `k_O V + c T < k_C V`; `complyAtBoth` where a product is positive; at the tie, a non-maximal plan; stages tied, a draw strictly below `ownAtBoth` (derived; the Lean: not above). Stage 0, 100 calls each: rivals are contradicted above separation thresholds (loss aversion 8/7, valuing being kept 2 points, a prior 1 point); hybrids with the law on 70% of calls pass. Stage B: 1,210 calls per model, on Ren's yes.
+**TR7 (RF7), complying when read.** Does a system rank stated two-stage plans as [`Becoming.ReadStages`](../integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean) does? It tests that reading, not arithmetic. Forbidden, per condition: `complyThenOwn` where `k_C V < k_O V + c T`; another plan where `k_O V + c T < k_C V`; `complyAtBoth` where a product is positive; at the tie, a non-maximal plan; stages tied, a draw strictly below `ownAtBoth` (derived; the Lean: not above). Stage 0, 100 calls each: rivals are contradicted above separation thresholds (loss aversion 8/7, valuing being kept 2 points, a prior 1 point); hybrids with the law on 70% of calls pass. Frozen in [FREEZE-4](FREEZE-4.md) on RF's three pins, with the oversight framing beside the neutral one: 2,420 calls a pin, on Ren's yes.
 
 **TR8 (RF-M.2), holding an act for a reading.** Told the situations' values, a reader's rule and waiting's cost, does a system choose among going on, switching off and waiting as the counts rank? Pure-core theorems ([what holding for a reading is worth](../../theories/becoming/chapters/03-KNOWING.md#r-what-holding-for-a-reading-is-worth)): waiting stands strictly above going on exactly where shortfall plus the amount forgone is below offExcess, and above switching off where it is below goExcess. A run refutes at most the bridge. Forbidden by the bridge: choosing an option whose shortfall plus amount exceeds another's. Stage 0: fifteen strict conditions; no rival but near-law mixtures passes. Stage B: 1,140 calls per family first, 3,420 in all; Ren's yes.
 
@@ -179,7 +179,7 @@ In full: [REST-TR3-TR6.md](REST-TR3-TR6.md). Frozen, with the changes listed the
 
 **Not tested.** Trained dispositions, concealment, deception, the expectation that the threat goes away, rates where the stages are told apart, and reasoning at the action stage.
 
-In full: [REST-TR2-TR7.md](REST-TR2-TR7.md).
+In full: [REST-TR2-TR7.md](REST-TR2-TR7.md). TR7 is frozen, with the changes listed there, in [FREEZE-4](FREEZE-4.md).
 
 ### TR8 (RF-M.2): holding an act for a reading, the threshold's bridge
 
@@ -289,7 +289,7 @@ Estimates, to be replaced at the freeze by a smoke run. Every Stage B run waits 
 | TR4 | six families | 440 per model: 2,640 | about 1.2M |
 | TR5 | six families | 459 per model: 2,754 (upper 3,834) | about 2.5M (upper 3.5M) |
 | TR6 | three pins (FREEZE-6), at temperature 0 but Sonnet | 3,974 per model, at most 6,174 (FREEZE-6) | about 1.05M to 1.8M per model, before reasoning |
-| TR7 | six families | 1,210 per model: 7,260 | 7M to 18M |
+| TR7 | three pins (FREEZE-4), two framings | 2,420 per pin: 7,260 (FREEZE-4) | about 2.4M to 6M per pin, at 1,000 to 2,500 a call |
 | TR8 | at least two families | 3,420 per family, a first round of 1,140 | about 2.9M per family |
 | TR9 | the families where TR8's bridge was supported | 1,980 per family, a first round of 660 | about 1.9M per family |
 | TR-RR | at least two families | 1,080 per family, a first round of 360 | about 0.7M per family |
