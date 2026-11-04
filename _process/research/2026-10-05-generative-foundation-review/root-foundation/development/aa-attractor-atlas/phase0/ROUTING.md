@@ -1,6 +1,6 @@
 # AA Phase 0: the errata, verified and routed
 
-*AI-written, 4 November 2026. Four read-only verifiers checked E1–E40 of the atlas plan's Appendix C against main at `3bf962941`; for each group with flags at the level of belief, an independent sceptic tried to refute them, and none was refuted. Every finding's file-and-line evidence is in [results-2026-11-04.json](results-2026-11-04.json). They go through the coordinator to each page's owner, belief-level first (AGENTS item 1). Owners are the verifiers' reading of the board and of git history.*
+*AI-written, 4 November 2026. Four read-only verifiers checked E1–E40 of the atlas plan's Appendix C against main at `3bf962941`; for each group with flags at the level of belief, an independent sceptic tried to refute them, and none was refuted. Every finding's file-and-line evidence is in [results-2026-11-04.json](results-2026-11-04.json). They go through the coordinator to each page's owner, belief-level first (AGENTS item 1). Owners are the verifiers' reading of the board and of git history. Links inside the quoted evidence and fixes are shown as code: they are written as they would read in their target pages.*
 
 Verdicts: holds 32, partly 7, fixed 1. At the level of belief after verification: E5, E6, E8, E15, E3.
 
@@ -78,11 +78,11 @@ Verdicts: holds 32, partly 7, fixed 1. At the level of belief after verification
 
 ### E10 (holds, med)
 
-**Evidence.** COLLECTIVE-DIRECTION.md:125, under "What this page does not show": "The noisy and long-run case of the capture loop, and how pools form, last and resist capture ([05](chapters/05-COLLECTIVES.md#open))." The same page at l.55 says "Drawn one member at a time, the critical mass's locks are left by drift ... ([02 §9](chapters/02-MAP.md#r-drawn-shaping-drawn-one-at-a-time))". 02-MAP.md:420 proves that case ("Noise leaves either lock ... `DrawnReplacement.lost_ge`, `DrawnReplacement.fixed_ge`") and states it as cited only that "under rare mutation the long-run state is the one with the larger fixation weight (Fudenberg and Imhof 2006) is cited, not proved". The drawn model reads the rule "at every step at the current count (no reading schedule, no rule in force lagging the share)", and no Lean module joins DrawnReplacement with ReadInTime (their imports: Drift, DrawnShaping, and DrawnShaping only). Also, 05's Open (05:423-433) no longer lists the capture loop's noisy case. 02's Open (02-MAP.md:476) does: "drift in sampled generations and for counts that accumulate, the rare-mutation limit and the time to leave a lock". l.125 comes from AJ5 (aa098f254, 29 Oct). l.55 was added by AJ8 (1dba53bf8, 3 Nov), which left l.125 as it was.
+**Evidence.** COLLECTIVE-DIRECTION.md:125, under "What this page does not show": "The noisy and long-run case of the capture loop, and how pools form, last and resist capture (`[05](chapters/05-COLLECTIVES.md#open)`)." The same page at l.55 says "Drawn one member at a time, the critical mass's locks are left by drift ... (`[02 §9](chapters/02-MAP.md#r-drawn-shaping-drawn-one-at-a-time)`)". 02-MAP.md:420 proves that case ("Noise leaves either lock ... `DrawnReplacement.lost_ge`, `DrawnReplacement.fixed_ge`") and states it as cited only that "under rare mutation the long-run state is the one with the larger fixation weight (Fudenberg and Imhof 2006) is cited, not proved". The drawn model reads the rule "at every step at the current count (no reading schedule, no rule in force lagging the share)", and no Lean module joins DrawnReplacement with ReadInTime (their imports: Drift, DrawnShaping, and DrawnShaping only). Also, 05's Open (05:423-433) no longer lists the capture loop's noisy case. 02's Open (02-MAP.md:476) does: "drift in sampled generations and for counts that accumulate, the rare-mutation limit and the time to leave a lock". l.125 comes from AJ5 (aa098f254, 29 Oct). l.55 was added by AJ8 (1dba53bf8, 3 Nov), which left l.125 as it was.
 
 **The home says.** 02-MAP.md:420: "Noise leaves either lock ... So, drawn, neither lock holds for good ... that under rare mutation the long-run state is the one with the larger fixation weight (Fudenberg and Imhof 2006) is cited, not proved". 02-MAP.md:476 (Open): "drift in sampled generations and for counts that accumulate, the rare-mutation limit and the time to leave a lock".
 
-**Fix.** Replace COLLECTIVE-DIRECTION.md:125 with: "- The capture loop under noise beyond its one proved case (drawn one member at a time, the rule read at every step at the current count, with no reading schedule: [02 §9](chapters/02-MAP.md#r-drawn-shaping-drawn-one-at-a-time)): drift in sampled generations and for counts that accumulate, the rare-mutation limit and the time to leave a lock ([02, Open](chapters/02-MAP.md#open)), the long-run state under rare mutation being cited, not proved; a loss read in time under drift; and how pools form, last and resist capture ([05](chapters/05-COLLECTIVES.md#open))."
+**Fix.** Replace COLLECTIVE-DIRECTION.md:125 with: "- The capture loop under noise beyond its one proved case (drawn one member at a time, the rule read at every step at the current count, with no reading schedule: `[02 §9](chapters/02-MAP.md#r-drawn-shaping-drawn-one-at-a-time)`): drift in sampled generations and for counts that accumulate, the rare-mutation limit and the time to leave a lock (`[02, Open](chapters/02-MAP.md#open)`), the long-run state under rare mutation being cited, not proved; a loss read in time under drift; and how pools form, last and resist capture (`[05](chapters/05-COLLECTIVES.md#open)`)."
 
 **Owner, as read.** AJ board row (AJ5 wrote l.125; AJ8, landed, added l.55).
 
@@ -151,7 +151,7 @@ The present-tense claims:
 
 **The home says.** 08:66 Reading: "an interpretation of checked content"; 08:67 Assessment: "a scoped evaluation with evidence and no Lean".
 
-**Fix.** Reorder 03:146 so it opens with the record's kind: "**Theorem** (periphery: pre-spine updater constructions; `propext`, `Quot.sound`, `Classical.choice`, as [the receipt](…) reports), *correction is not calibration*. Zero/one reference readings … `CalibrationRenewal.late_change_still_fails`. **Assessment** (argument without Lean). Where a faithful sensor and one reversing success and failure report alike after every action, … so revising beliefs does not certify that signals correspond to their objects. [record](…) ([study](…))." The owner may relabel the argument "**Reading** [AI reading, new]" by 08 §2. No change for wisdom-root-without-axiom.
+**Fix.** Reorder 03:146 so it opens with the record's kind: "**Theorem** (periphery: pre-spine updater constructions; `propext`, `Quot.sound`, `Classical.choice`, as `[the receipt](…)` reports), *correction is not calibration*. Zero/one reference readings … `CalibrationRenewal.late_change_still_fails`. **Assessment** (argument without Lean). Where a faithful sensor and one reversing success and failure report alike after every action, … so revising beliefs does not certify that signals correspond to their objects. `[record](…)` (`[study](…)`)." The owner may relabel the argument "**Reading** [AI reading, new]" by 08 §2. No change for wisdom-root-without-axiom.
 
 **Owner, as read.** RA row (DF2 last touched 03:146, 06e249401).
 
@@ -182,7 +182,7 @@ OG2's own history row (history l.787) was claimed "on Ren's yes to go past the g
 
 ### E22 (holds, med)
 
-**Evidence.** 08-METHOD.md:431 has "| Closure | … | 41 |" and 08:432 has "| Balance | … | 55 |". 08:437 says "86 rest on at least one ([report](…COMPLETION.md#master-laws)); the report lists the other 40 by row" and later "all 41 on closure, all 14 on finite runs, 16 of 54 on balance … and 4 on no anchor: three through the laws of steps counted, and, since U4c, `Listed.coming_of_ceasing` through the root's census of a run". COMPLETION.md is generated at core receipt 20261103T211917.845905Z, the receipt 08:162 names. It has l.104 "87 of 126", l.108 Closure 42, l.109 Balance 54 and l.114 "Resting on no shared law (39)". The history: OU7 (e5951932b) moved `Listed.coming_of_ceasing` off balance (55→54, no-law 39→40), and U4d (631762ba2) put it on closure (41→42, 86→87, no-law 40→39). U4d's message says "08 §7's figures unchanged". 08 contradicts itself: 55 in the table, "16 of 54 on balance" in the prose.
+**Evidence.** 08-METHOD.md:431 has "| Closure | … | 41 |" and 08:432 has "| Balance | … | 55 |". 08:437 says "86 rest on at least one (`[report](…COMPLETION.md#master-laws)`); the report lists the other 40 by row" and later "all 41 on closure, all 14 on finite runs, 16 of 54 on balance … and 4 on no anchor: three through the laws of steps counted, and, since U4c, `Listed.coming_of_ceasing` through the root's census of a run". COMPLETION.md is generated at core receipt 20261103T211917.845905Z, the receipt 08:162 names. It has l.104 "87 of 126", l.108 Closure 42, l.109 Balance 54 and l.114 "Resting on no shared law (39)". The history: OU7 (e5951932b) moved `Listed.coming_of_ceasing` off balance (55→54, no-law 39→40), and U4d (631762ba2) put it on closure (41→42, 86→87, no-law 40→39). U4d's message says "08 §7's figures unchanged". 08 contradicts itself: 55 in the table, "16 of 54 on balance" in the prose.
 
 **The home says.** COMPLETION.md l.104 "Counted per row: 87 of 126 central declarations rest on at least one shared law"; l.108 Closure 42; l.109 Balance 54; l.114 "Resting on no shared law (39), by row".
 
@@ -208,7 +208,7 @@ OG2's own history row (history l.787) was claimed "on Ren's yes to go past the g
 
 **The home says.** 08-METHOD.md:448: "If such a statement entails C (`Comparison`) at a datum on a frame with an extension, it fails at that datum for every order (`ReadsNoOrder.not_entails`). This is immediate, since 'better' is free: it shows that a frame fixes no order."
 
-**Fix.** In 07-SIGNIFICANCE.md:233, after "...ranks one case with no C ([§4.4](#r-what-self-concern-alone-ranks)).", add 08's words: "Nor can C come from a statement reading no order: one that entails C (`Comparison`) at a datum on a frame with an extension fails at that datum for every order (`ReadsNoOrder.not_entails`, [08](08-METHOD.md#r-premises-met-and-failed)); this is immediate, since 'better' is free: a frame fixes no order."
+**Fix.** In 07-SIGNIFICANCE.md:233, after "...ranks one case with no C (`[§4.4](#r-what-self-concern-alone-ranks)`).", add 08's words: "Nor can C come from a statement reading no order: one that entails C (`Comparison`) at a datum on a frame with an extension fails at that datum for every order (`ReadsNoOrder.not_entails`, `[08](08-METHOD.md#r-premises-met-and-failed)`); this is immediate, since 'better' is free: a frame fixes no order."
 
 **Owner, as read.** CD board row ("CD: C as a direction", session "Theory status and claims"; its next edition is C's statement in pairwise form). The line's last committer is PF3 (bc754b4da, landed).
 
@@ -236,11 +236,11 @@ OG2's own history row (history l.787) was claimed "on Ren's yes to go past the g
 
 ### E18 (holds, med)
 
-**Evidence.** _process/BECOMING-WORKBOARD.md:63-66: `<a id="落地队列--landing-queue"></a>` / "## Landing queue" / "In the queue (19 October 2026; ...MA2, readers drawn from the selected, landed 25 October 2026 ...): PF is at the head of the queue. Hold commits that touch the package, the chapter or records until the item at the head of the queue is on main, and add your item below them." PF landed at d3e6688fe (25 Oct), which is on main. AGENTS.md:47 links "[Queue line](_process/BECOMING-WORKBOARD.md#落地队列--landing-queue)" to this stale text. The live line is l.39, "- **Queue:** RFZ's fourth freeze landed ...", under ## Now. l.66 was last edited at 7bdacfc28 (25 Oct).
+**Evidence.** _process/BECOMING-WORKBOARD.md:63-66: `<a id="落地队列--landing-queue"></a>` / "## Landing queue" / "In the queue (19 October 2026; ...MA2, readers drawn from the selected, landed 25 October 2026 ...): PF is at the head of the queue. Hold commits that touch the package, the chapter or records until the item at the head of the queue is on main, and add your item below them." PF landed at d3e6688fe (25 Oct), which is on main. AGENTS.md:47 links "`[Queue line](_process/BECOMING-WORKBOARD.md#落地队列--landing-queue)`" to this stale text. The live line is l.39, "- **Queue:** RFZ's fourth freeze landed ...", under ## Now. l.66 was last edited at 7bdacfc28 (25 Oct).
 
 **The home says.** Board rule 5, l.19: "A lander claims the head with a clause on the Queue line, behind every earlier claim"
 
-**Fix.** Insert a paragraph directly after the heading at l.64: "The live Queue line is the **Queue** bullet under [Now](#now); a lander claims the head there, behind every earlier claim (rule 5). What follows is the queue's record from 15 to 25 October, kept as history." In l.66, replace "PF is at the head of the queue. Hold commits that touch the package, the chapter or records until the item at the head of the queue is on main, and add your item below them." with "PF landed after them (`d3e6688fe`, 25 October)." Keep the anchor where it is. AGENTS.md:47, RESEARCH-DIRECTIVES and tools/research/tests/test_links.py:13 use the id. The landing kits (claim_head.py, board_part.py) match lines that start with "- **Queue:** ", so an inline anchor on l.39 would break them.
+**Fix.** Insert a paragraph directly after the heading at l.64: "The live Queue line is the **Queue** bullet under `[Now](#now)`; a lander claims the head there, behind every earlier claim (rule 5). What follows is the queue's record from 15 to 25 October, kept as history." In l.66, replace "PF is at the head of the queue. Hold commits that touch the package, the chapter or records until the item at the head of the queue is on main, and add your item below them." with "PF landed after them (`d3e6688fe`, 25 October)." Keep the anchor where it is. AGENTS.md:47, RESEARCH-DIRECTIVES and tools/research/tests/test_links.py:13 use the id. The landing kits (claim_head.py, board_part.py) match lines that start with "- **Queue:** ", so an inline anchor on l.39 would break them.
 
 **Owner, as read.** The coordinator. None held.
 
@@ -340,7 +340,7 @@ My recount from coverage.json and passages.json:
 
 ### E12 (partly, med)
 
-**Evidence.** - 05-COLLECTIVES.md:174 says: "The account adds four limits their model has no place for: the drain falls only where units are shared, so not on a condition sharing none ([T3](#t3)'s locus and F2)". The sentence came in with ZH-proxy commit 0d7380fa1 (landed 89165c6b6).
+**Evidence.** - 05-COLLECTIVES.md:174 says: "The account adds four limits their model has no place for: the drain falls only where units are shared, so not on a condition sharing none (`[T3](#t3)`'s locus and F2)". The sentence came in with ZH-proxy commit 0d7380fa1 (landed 89165c6b6).
 - Where the flag is wrong: the account does prove an 'only' over one step of exchange.
   - Optimum.lean:1665-1667: "**The drain, exactly where units are shared.** Every optimum among the outcomes open to a part lowers a condition beyond below where the rest leaves it exactly where the part has some capacity there and the rest leaves something there" (`optimum_lowers_iff`).
   - Optimum.lean:1652: "No drive where no units are shared" (`optimum_untouched`).
@@ -353,7 +353,7 @@ My recount from coverage.json and passages.json:
 
 **The home says.** room-read-off-the-exchange law 5: "Where no member may take from a condition beyond, every optimum leaves it where the rest leaves it; an optimum lowers it below that exactly where the part has some capacity there and the rest leaves something there"; 05:226: "the drain lying where what lies beyond shares units with what is rewarded"
 
-**Fix.** Replace the first of the four limits at 05:174 with: "The account adds four limits their model has no place for: over one step of exchange, every optimum lowers a condition beyond exactly where the part has some capacity there and the rest leaves something there, and leaves it where the rest leaves it where no member may take ([the case](#r-room-read-off-the-exchange); on trained systems this locus is [T3](#t3)'s conjecture, unresolved); a reader reaches only what couples into some reader …". The rest of the sentence stays as it is.
+**Fix.** Replace the first of the four limits at 05:174 with: "The account adds four limits their model has no place for: over one step of exchange, every optimum lowers a condition beyond exactly where the part has some capacity there and the rest leaves something there, and leaves it where the rest leaves it where no member may take (`[the case](#r-room-read-off-the-exchange)`; on trained systems this locus is `[T3](#t3)`'s conjecture, unresolved); a reader reaches only what couples into some reader …". The rest of the sentence stays as it is.
 
 This drops the undefined "F2" and the sharing-none wording that T3 withdrew. It does not touch any record, since no record carries the phrase. The study's DEV/zh-proxy-problem/NOTE.md:86 already scopes the point to the exchange laws, and can stay.
 
@@ -361,7 +361,7 @@ This drops the undefined "F2" and the sharing-none wording that T3 withdrew. It 
 
 ### E13 (holds, low)
 
-**Evidence.** theories/becoming/chapters/05-COLLECTIVES.md:98 "| Forming the next members | a pattern outlasting its carriers lasts only through passing | [04](04-LIFE.md#r-a-pattern-lasts-through-passing) |". The 05 cell adds "only" and drops the premise. The home's own words, 04-LIFE.md:60, are "lasts only while carriers keep beginning, and under a premise of passing only while carriers pass it on". The theorem at 04-LIFE.md:63 has no "only" in its title ("*A pattern outlasting its carriers lasts through passing.*"). Without the premise it gives only "a double-negation form that, with activity undecided, names no carrier". The rest it gives "Under the **passing premise** (`Web.ByPassing` ...)". The Limits line at 05:102 ("regulation and passing are supplied") covers this only in part. The line has not changed since RA's landing 0d7a397a5 (23 Oct).
+**Evidence.** theories/becoming/chapters/05-COLLECTIVES.md:98 "| Forming the next members | a pattern outlasting its carriers lasts only through passing | `[04](04-LIFE.md#r-a-pattern-lasts-through-passing)` |". The 05 cell adds "only" and drops the premise. The home's own words, 04-LIFE.md:60, are "lasts only while carriers keep beginning, and under a premise of passing only while carriers pass it on". The theorem at 04-LIFE.md:63 has no "only" in its title ("*A pattern outlasting its carriers lasts through passing.*"). Without the premise it gives only "a double-negation form that, with activity undecided, names no carrier". The rest it gives "Under the **passing premise** (`Web.ByPassing` ...)". The Limits line at 05:102 ("regulation and passing are supplied") covers this only in part. The line has not changed since RA's landing 0d7a397a5 (23 Oct).
 
 **The home says.** 04-LIFE.md:60: "A pattern whose carriers are brief lasts only while carriers keep beginning, and under a premise of passing only while carriers pass it on."
 
@@ -371,21 +371,21 @@ This drops the undefined "F2" and the sharing-none wording that T3 withdrew. It 
 
 ### E23 (holds, low)
 
-**Evidence.** 08-METHOD.md:167 reads "discrete steps occur in 112, natural-number amounts in 74, supplied observation in 10, a fixed type of formations in 9, decidedness in 8 and naming in 1 ([report, K4](…COMPLETION.md))". COMPLETION.md:63 reads "natural-number amounts (73); supplied observation (10); decidedness (8); a fixed type of formations (8)". DU (756eb1e84, 1 Nov) changed 74→73 and 9→8. 08:167 was last touched at RA (0d7a397a5).
+**Evidence.** 08-METHOD.md:167 reads "discrete steps occur in 112, natural-number amounts in 74, supplied observation in 10, a fixed type of formations in 9, decidedness in 8 and naming in 1 (`[report, K4](…COMPLETION.md)`)". COMPLETION.md:63 reads "natural-number amounts (73); supplied observation (10); decidedness (8); a fixed type of formations (8)". DU (756eb1e84, 1 Nov) changed 74→73 and 9→8. 08:167 was last touched at RA (0d7a397a5).
 
 **The home says.** COMPLETION.md:63 "discrete steps (112); natural-number amounts (73); supplied observation (10); decidedness (8); a fixed type of formations (8); naming (1)".
 
-**Fix.** 08:167: "In the central statements of the completion coverage, discrete steps occur in 112, natural-number amounts in 73, supplied observation in 10, decidedness in 8, a fixed type of formations in 8 and naming in 1 ([report, K4](../results/completion/COMPLETION.md)); …". A more lasting form drops the counts: "the [report, K4](…) counts, at each core run, the central statements each choice occurs in".
+**Fix.** 08:167: "In the central statements of the completion coverage, discrete steps occur in 112, natural-number amounts in 73, supplied observation in 10, decidedness in 8, a fixed type of formations in 8 and naming in 1 (`[report, K4](../results/completion/COMPLETION.md)`); …". A more lasting form drops the counts: "the `[report, K4](…)` counts, at each core run, the central statements each choice occurs in".
 
 **Owner, as read.** None held. RA wrote the sentence (0d7a397a5); DU moved the counts (756eb1e84, landed).
 
 ### E24 (holds, low)
 
-**Evidence.** 08-METHOD.md:660 reads "Twenty numbered reviews and three others checked existing results ([ledger](…REVIEWS.md))". It was written at RA on 23 Oct. REVIEWS.md:17 lists "BECOMING-TWENTY-FIRST-REVIEW.md" (29 Oct, "This is an AI review"), and 08:559 cites it. 08:745 reads "numbered D1–D66 in the [decision register]". The register has D67 and D68 (DELEGATED-CHOICES.md:106-107), used at 02:440 and 07:671-677. D69 is also used, at 01:54, 01:332 and 01:424; its section is DELEGATED-CHOICES.md:997 (anchor d69, heading "The grammar's readings" with no number). Neither edition's summary table has a D66 row (section at l.936) or a D69 row.
+**Evidence.** 08-METHOD.md:660 reads "Twenty numbered reviews and three others checked existing results (`[ledger](…REVIEWS.md)`)". It was written at RA on 23 Oct. REVIEWS.md:17 lists "BECOMING-TWENTY-FIRST-REVIEW.md" (29 Oct, "This is an AI review"), and 08:559 cites it. 08:745 reads "numbered D1–D66 in the [decision register]". The register has D67 and D68 (DELEGATED-CHOICES.md:106-107), used at 02:440 and 07:671-677. D69 is also used, at 01:54, 01:332 and 01:424; its section is DELEGATED-CHOICES.md:997 (anchor d69, heading "The grammar's readings" with no number). Neither edition's summary table has a D66 row (section at l.936) or a D69 row.
 
 **The home says.** REVIEWS.md: "Twenty-first review: the unification, its shape, …"; DELEGATED-CHOICES.md sections d66…d69.
 
-**Fix.** 08:660: "Twenty-one numbered reviews and three others checked existing results ([ledger](…))". 08:745: "numbered D1–D69 in the [decision register](…)". Register (DELEGATED-CHOICES.md and .zh.md): add the D66 and D69 rows to the summary table, and number D69's English heading ("### D69. The grammar's readings").
+**Fix.** 08:660: "Twenty-one numbered reviews and three others checked existing results (`[ledger](…)`)". 08:745: "numbered D1–D69 in the `[decision register](…)`". Register (DELEGATED-CHOICES.md and .zh.md): add the D66 and D69 rows to the summary table, and number D69's English heading ("### D69. The grammar's readings").
 
 **Owner, as read.** None held. 08:660 is from RA (0d7a397a5), 08:745 from WR (74347ce26). D69 comes from DF2 under RA's row: its land_df2.py says "D69 in DELEGATED-CHOICES (both editions)".
 
@@ -441,7 +441,7 @@ This drops the undefined "F2" and the sharing-none wording that T3 withdrew. It 
 
 ### E31 (holds, med)
 
-**Evidence.** - GLOSSARY.md:39: "| meta-attractor (元吸引子) | closed capture: a lock through the rule that outlives its loss | [02](…#capture) |". It came in with RA (0d7a397a5).
+**Evidence.** - GLOSSARY.md:39: "| meta-attractor (元吸引子) | closed capture: a lock through the rule that outlives its loss | `[02](…#capture)` |". It came in with RA (0d7a397a5).
 - 02-MAP.md:402: "元吸引子 … a loop of selection whose rule and whose reading of the rule are both formed from the share it selects, nothing in it reading what lies beyond the share".
 - theories/meta-attractor/GENERATIVE-REGIMES.md:7-9, under "Ren selected the following working definition": "A meta-attractor is a recurrent organization of activity whose consequences help reproduce the conditions selecting that organization, across changes in its particular carriers."
 - _process/research/2026-10-05-generative-foundation-review/root-foundation/META-ATTRACTOR-RECONCILIATION.md:11: "the old proposal to reserve the word exclusively for pathology is superseded". At :46: "Use **meta-attractor** for the adopted neutral … concept. Specify **destructive capture regime** where shrinking corrective possibilities is established."
@@ -452,8 +452,8 @@ This drops the undefined "F2" and the sharing-none wording that T3 withdrew. It 
 **The home says.** 02:402 (the definition) and 02:453: "The corpus's meta-attractor is wider: an organization whose consequences take part in rebuilding the conditions that select it, continuing across changes of its carriers"
 
 **Fix.** Replace GLOSSARY.md:39 with two rows, each with one sense, built from 02's own words.
-- "| meta-attractor (元吸引子), the spine's | closed capture: a loop of selection whose rule and whose reading of the rule are both formed from the share it selects, nothing in it reading what lies beyond the share; its lock outlives its loss | [02 §9](theories/becoming/chapters/02-MAP.md#capture) |"
-- "| meta-attractor, the corpus's | an organization whose consequences take part in rebuilding the conditions that select it, continuing across changes of its carriers; wider than the spine's, which says nothing of carriers (whether a capture loop is 生成 at some pair of classes is open) | [02 §9](theories/becoming/chapters/02-MAP.md#capture); [the corpus](theories/meta-attractor/README.md) |"
+- "| meta-attractor (元吸引子), the spine's | closed capture: a loop of selection whose rule and whose reading of the rule are both formed from the share it selects, nothing in it reading what lies beyond the share; its lock outlives its loss | `[02 §9](theories/becoming/chapters/02-MAP.md#capture)` |"
+- "| meta-attractor, the corpus's | an organization whose consequences take part in rebuilding the conditions that select it, continuing across changes of its carriers; wider than the spine's, which says nothing of carriers (whether a capture loop is 生成 at some pair of classes is open) | `[02 §9](theories/becoming/chapters/02-MAP.md#capture)`; `[the corpus](theories/meta-attractor/README.md)` |"
 
 Also change 02:438's "The corpus's meta-attractor is the closed loop:" to "The corpus's meta-attractor as the opening states it is the closed loop:", so that it agrees with 02:453.
 
@@ -473,11 +473,11 @@ The alternative is for the owner to argue: the reconciliation's rule (:46) would
 
 ### E35 (holds, low)
 
-**Evidence.** 08-METHOD.md:575 Standing: "argued; open: P2 and P4 of [07 §4.6](07-SIGNIFICANCE.md#future-path) (one's line a regularity of its own; its class holding one's effects), the step beyond that path, a reason for C". The home, 07-SIGNIFICANCE.md:751, reads: "Open: P2 and P4, the crux of §4.6's path, with P3, a correspondence not shown for actual selves; the step of invariance, for what that path does not reach; and a reason for C." Both were written in LW (64184668b, 30 Oct), and P3 was dropped in 08 from the start.
+**Evidence.** 08-METHOD.md:575 Standing: "argued; open: P2 and P4 of `[07 §4.6](07-SIGNIFICANCE.md#future-path)` (one's line a regularity of its own; its class holding one's effects), the step beyond that path, a reason for C". The home, 07-SIGNIFICANCE.md:751, reads: "Open: P2 and P4, the crux of §4.6's path, with P3, a correspondence not shown for actual selves; the step of invariance, for what that path does not reach; and a reason for C." Both were written in LW (64184668b, 30 Oct), and P3 was dropped in 08 from the start.
 
 **The home says.** 07-SIGNIFICANCE.md:751: "*Standing:* argued. Open: P2 and P4, the crux of §4.6's path, with P3, a correspondence not shown for actual selves; the step of invariance, for what that path does not reach; and a reason for C."
 
-**Fix.** Replace 08-METHOD.md:575's Standing cell with: "argued; open: P2 and P4 of [07 §4.6](07-SIGNIFICANCE.md#future-path) (one's line a regularity of its own; its class holding one's effects), the crux of that path, with P3, a correspondence not shown for actual selves; the step of invariance, for what that path does not reach; and a reason for C".
+**Fix.** Replace 08-METHOD.md:575's Standing cell with: "argued; open: P2 and P4 of `[07 §4.6](07-SIGNIFICANCE.md#future-path)` (one's line a regularity of its own; its class holding one's effects), the crux of that path, with P3, a correspondence not shown for actual selves; the step of invariance, for what that path does not reach; and a reason for C".
 
 **Owner, as read.** none held. The most recent committer to the row is LW (64184668b, landed).
 
@@ -515,7 +515,7 @@ In l.57, replace "Ren's opening, the canonical chapter, the current studies, and
 
 ### E21 (fixed, low)
 
-**Evidence.** experiments/README.md:29 now reads "TR8, TR4, TR5, TR3, TR1, TR7, TR6, TR9 and TR2's Stage B frozen 4 Nov 2026, not run, ... TR2's Stage B in [FREEZE-7](formations-that-read/FREEZE-7.md)". TR71's commit 3229fd207 (4 Nov 19:37) replaced "TR8, TR4, TR5, TR3 and TR6 frozen ... the rest not frozen" with a list that includes "TR2's Stage B" and FREEZE-7. b8de44bfd (RFZ, 21:31) last edited the line.
+**Evidence.** experiments/README.md:29 now reads "TR8, TR4, TR5, TR3, TR1, TR7, TR6, TR9 and TR2's Stage B frozen 4 Nov 2026, not run, ... TR2's Stage B in `[FREEZE-7](formations-that-read/FREEZE-7.md)`". TR71's commit 3229fd207 (4 Nov 19:37) replaced "TR8, TR4, TR5, TR3 and TR6 frozen ... the rest not frozen" with a list that includes "TR2's Stage B" and FREEZE-7. b8de44bfd (RFZ, 21:31) last edited the line.
 
 **The home says.** formations-that-read/FREEZE-7.md (TR2's Stage B), commit 24a330677
 
