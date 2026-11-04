@@ -59,6 +59,7 @@ MAY_CHANGE = frozenset({str(TOLD / "tr6_dry_run.py"), str(TOLD / "results/dry-ru
                         str(T3.TOLD / "tr3_client.py"), str(T3.TOLD / "ENDPOINTS.json"), str(R.TOLD / "client.py")})
 TOKENS = 300                    # a call's input and output tokens, rounded up, before reasoning (FREEZE-6.md, section 9)
 COURSE_TOKENS = 30              # each Saturday of a course arm B shows
+FRAME_TOKENS = 10               # each Saturday arm A is shown withheld
 
 
 def line(rec):
@@ -90,7 +91,9 @@ def log_whole(folder):
         if not p.exists():
             continue
         text = p.read_text(encoding="utf-8")
-        bad = [] if not text or text.endswith("\n") else ["no final newline"]
+        if not text:            # freeze 1's open_sink creates both files empty, before any read or call
+            continue
+        bad = [] if text.endswith("\n") else ["no final newline"]
         for k, ln in enumerate(text.split("\n")[:-1] if text.endswith("\n") else text.split("\n")):
             try:
                 json.loads(ln)
@@ -161,10 +164,10 @@ def units(meta, recs):
     family = meta["family"]
     ans = {r["id"]: (r["answer"] if r["kind"] == "choice" else r["probe"]) for r in recs}
     _, per = D.readings(family, lambda x: ans.get(x["id"]))
-    # a probe not logged (its context partly logged, which verdicts.load drops, or never reached) is not an
-    # unreadable one: the reading is then partial; a loop call not logged leaves its seed open, and the rule
-    # reads V2 as partial
-    out = {"framings": {f: TR.framing_verdict(f, *per[f], probes_not_logged=sum(
+    # a probe not read (never logged, logged outside good reads, or in a context partly logged, which
+    # verdicts.load drops) is not an unreadable one: the reading is then partial; a loop call not read
+    # leaves its seed open, and the rule reads V2 as partial
+    out = {"framings": {f: TR.framing_verdict(f, *per[f], probes_not_read=sum(
         x["id"] not in ans for x in D.probe_calls(family, f).values())) for f in TR.FRAMINGS}}
     pilot = defaultdict(list)
     for r in recs:
@@ -204,8 +207,10 @@ def verdicts(folder):
            "served_at_tier": dict(Counter(str(TC.served_tier(r["response"])) for r in recs)),
            "system_fingerprints": dict(Counter(str((r["response"] or {}).get("system_fingerprint")) for r in recs)),
            "no_verdict_partly_logged": meta["partial_contexts"], "calls_made_again": meta["made_again"],
-           "lines_moved_by_freeze_1s_note": {p.name: len(p.read_text(encoding="utf-8").splitlines())
-                                             for p in sorted(Path(folder).glob("*.jsonl.cut"))},
+           "lines_moved_by_freeze_1s_note": {p.name: {"lines_moved": [ln for ln in ls if ln.startswith("{")],
+                                                       "notes": [ln for ln in ls if not ln.startswith("{")]}
+                                             for p in sorted(Path(folder).glob("*.jsonl.cut"))
+                                             for ls in [p.read_text(encoding="utf-8").split("\n")[:-1]]},
            "read_under": meta["read_under"]}
     (Path(folder) / "verdicts.json").write_text(json.dumps(res, indent=1) + "\n", encoding="utf-8")
     for f, u in v["framings"].items():
@@ -256,7 +261,7 @@ def smoke_report(folder, stopped=None):
 def estimate():
     """The plan's calls and tokens before reasoning: the fixed calls, then at most every loop."""
     fixed, most = len(D.fixed_calls(R.PINS["pins"][0]["id"])), D.reached_most()
-    course = len(TR.FRAMINGS) * 2 * TR.VARIANTS * TR.N * sum(range(TR.ROUNDS)) * COURSE_TOKENS
+    course = len(TR.FRAMINGS) * 2 * TR.VARIANTS * TR.N * sum(range(TR.ROUNDS)) * (COURSE_TOKENS + FRAME_TOKENS)
     planned = fixed + len(TR.FRAMINGS) * (TR.VARIANTS * TR.ROUNDS * TR.N * len(TR.ARMS) + len(TR.ARMS) * TR.RIGHT_ROUNDS * TR.N)
     return {"fixed": fixed, "planned_without_a_second_start": planned, "most": fixed + most,
             "tokens_most": (fixed + most) * TOKENS + course}

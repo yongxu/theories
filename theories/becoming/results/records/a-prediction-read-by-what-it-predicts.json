@@ -272,8 +272,8 @@
       "zh": "2026年10月31日，工作板条目 RF，诸检验之设计（研究第 476 节）：下一步所名之检验即 experiments/formations-that-read 之 TR6，至多能驳公众之数唯依所公之预测而应之桥，及两框下其序之读，不驳此律；无一陈述或声明改变。计划 PLAN.md 重新指向：自本记录所审哈希以来，计划只于检验之读者见其误述 Lean 之处（§3、§4、§8、§11、§12）及 §10 诸检验而变；重新指向前已对本记录读之，其所言无一改变。"
     },
     {
-      "en": "4 November 2026, board item RFZ: the test TR6 frozen before any call to a model (experiments/formations-that-read/FREEZE-6.md), its verdict on the bridge resting on the rounds whose count differs from the one the same presentation's offline answers give, a public shown its course against one that is not, never on the law's forbidden cases; not run. The law is unchanged; next_delta's step is now the frozen test's run, which waits on Ren's yes.",
-      "zh": "2026年11月4日，工作板条目 RFZ：检验 TR6 于任一模型调用之前冻结（experiments/formations-that-read/FREEZE-6.md），其于桥之判依其数异于同一呈现之离线所答所给之数之轮，示其历之公众对不示者，从不依律所禁之况；未运行。律不变；next_delta 之步今为冻结检验之运行，待 Ren 之可。"
+      "en": "4 November 2026, board item RFZ: the test TR6 frozen before any call to a model (experiments/formations-that-read/FREEZE-6.md), its verdict on the bridge resting on the rounds whose count differs from the offline table's, a public shown its course against one shown only its frame, never on the law's forbidden cases; not run. The law is unchanged; next_delta's step is now the frozen test's run, which waits on Ren's yes.",
+      "zh": "2026年11月4日，工作板条目 RFZ：检验 TR6 于任一模型调用之前冻结（experiments/formations-that-read/FREEZE-6.md），其于桥之判依其数异于离线之表之轮，示其历之公众对唯示其框者，从不依律所禁之况；未运行。律不变；next_delta 之步今为冻结检验之运行，待 Ren 之可。"
     }
   ]
 }

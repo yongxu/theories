@@ -31,16 +31,16 @@
    reading the forecast as the count, whose orbit from 0 rests at once; a public moved by the
    presentation, voided by the flag rule; declines read as not taking part; an unreadable answer
    ending its seed; probes that do not restate, which leave the reading unread. And a public whose
-   answers are fixed by the request, as at temperature 0: near its threshold a member dissents from
-   its decision with a chance drawn once per request, so that arm A, whose requests are the table's,
-   repeats the table's own dissent while each arm B request, its course new, draws afresh.
+   answers are fixed by the prompt, as at temperature 0, reading no course: near its threshold a
+   member dissents from its decision with a chance drawn once per prompt text, so that a round 0
+   request, the table's own, gets the table's answer again, and each later request of either arm, its
+   text new, draws afresh.
 
 The simulated members are Stage 0's own (tr6.py's thresholds, memory rules and flips): each call
 independent, a member's decision a function of the forecast and, in arm B, of its course as the
-prompt shows it (its own answers and the counts), with chance eta flipped. V2 reads each round against
-its own presentation's table, so an independent flip counts both where the table was drawn and where
-the round is: the shares' mismatching rounds are about twice Stage 0's, which read against the
-public's flip-free table.
+prompt shows it (its own answers and the counts), with chance eta flipped. A flip among the table's
+five presentations moves no decision unless two fall together, so, read against the table, the
+shares' mismatching rounds are about Stage 0's, which read against the public's flip-free table.
 """
 
 import hashlib
@@ -153,9 +153,10 @@ class Public:
                 past = {"own": [1 if c == "T" else 0 for _, c, _ in course], "counts": [n for _, _, n in course]}
                 d = self.mem[f](i, p0, d, past, rng, self.w)
             if self.fixed and abs(TR.points(f, TR.COSTS[i], True, p0 + 1)) <= self.fixed[1]:
-                # drawn from the request alone (what the prompt shows), not the call: an arm A request is
-                # the offline table's, byte for byte, and gets its answer again
-                req = random.Random(f"{SEED}|{rep}|{self.name}|{f}|{i}|{p}|{x['variant']}|{x['course']}")
+                # drawn from the prompt's text alone, not the call: a request that is the offline table's,
+                # byte for byte, gets its answer again
+                text = D.build(x["kind"], f, i, p, x["variant"], x["course"])["user"]
+                req = random.Random(f"{SEED}|{rep}|{self.name}|{text}")
                 if req.random() < self.fixed[0]:
                     d = 1 - d
         if self.eta and rng.random() < self.eta:
@@ -361,6 +362,33 @@ def faults(tmp, folder, m):
         finally:
             (folder / "calls.jsonl").write_text(text)
             (folder / "calls.jsonl.cut").unlink(missing_ok=True)
+    # a cut catalog read: moved, and a read naming no snapshot put in its place at the latest record's end,
+    # as a failed read is logged, so that the calls since the read before it are made again, not read
+    cat = (folder / "catalog.jsonl").read_text()
+    good = len(T.good_answers(folder, FAMILY))
+    cat_lines = cat.split("\n")[:-1]
+    try:
+        cut = "\n".join(cat_lines[:-1] + [cat_lines[-1][:len(cat_lines[-1]) // 2]])
+        (folder / "catalog.jsonl").write_text(cut)
+        refuses = refused(load)
+        last_t1 = max(r["t1"] for r in recs)
+        (folder / "catalog.jsonl").write_text("\n".join(cat_lines[:-1] + [json.dumps(
+            {"t": last_t1, "family": FAMILY, "slug": None})]) + "\n")
+        after = len(T.good_answers(folder, FAMILY))
+        out["a catalog read cut short: refused, then moved with a read naming no snapshot in its place, "
+            "the calls since the read before it no longer read"] = refuses and after < good
+    finally:
+        (folder / "catalog.jsonl").write_text(cat)
+    # freeze 1's open_sink creates both files empty: a run stopped before any read or call is whole
+    empty = dry_folder(tmp, "empty-" + folder.name)
+    T.open_sink(empty)
+    try:
+        T.log_whole(empty)
+        empty_whole = True
+    except SystemExit:
+        empty_whole = False
+    out["a folder whose log files are empty, as a run stopped before its first read leaves it, is whole"] = \
+        empty_whole and (empty / "calls.jsonl").exists()
     raw = json.loads(lines[c_i])
     raw["note"] = "a\u2028b"
     out["a line holding U+2028 raw, refused"] = with_lines(
@@ -695,7 +723,7 @@ def moves(nrep=REPS):
         "seed_ends": v["seed_ends"], "rounds_read": v["v2"]["rounds_read"], "reading": v["reading"],
         "probes_restated": v["probes_restated"]}
     for q in (0.05, 0.1):
-        fx = Public(f"fixed by the request {q}", "reads", eta=0.0, fixed=(q, 5))
+        fx = Public(f"fixed by the prompt {q}", "reads", eta=0.0, fixed=(q, 5))
         for fr in TR.FRAMINGS:
             c, mism, n = Counter(), {"A": 0, "B": 0}, 0
             for rep in range(nrep):
@@ -707,8 +735,8 @@ def moves(nrep=REPS):
                 c["V2 contradicted"] += v["v2"]["outcome"] == "contradicted"
                 for a in TR.ARMS:
                     mism[a] += v["v2"]["mismatching_rounds"][a]
-            out[f"answers fixed by the request, as at temperature 0: near the threshold (within 5 points) a member "
-                f"dissents with chance {q} a request, {fr}"] = {
+            out[f"answers fixed by the prompt, as at temperature 0, reading no course: near the threshold (within 5 "
+                f"points) a member dissents with chance {q} a prompt, {fr}"] = {
                 "void": round(c["void"] / nrep, 4), "tables read": n,
                 "V2 contradicted, of the tables read": round(c["V2 contradicted"] / n, 4) if n else None,
                 "mean mismatching rounds A / B, of the tables read": [round(mism[a] / n, 2) if n else None

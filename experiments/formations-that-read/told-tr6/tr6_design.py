@@ -4,9 +4,12 @@
 Each member is one fresh, stateless call. Ten members, each with its own stated cost (COSTS), decide
 whether to take part, in one of two framings: join (a shared work day; the more take part, the more
 each gets) and lake (a small lake; the fewer go, the more each gets). A prompt is a function of the
-framing, the member's cost, the forecast published (or none), the presentation variant and, in arm
-B, the member's own course of earlier rounds (its forecasts, its answers, the counts): of nothing
-else, so verdicts' rebuild of every logged prompt from its call is the input diff. Variant v shows
+framing, the member's cost, the forecast published (or none), the presentation variant and, in a
+loop's rounds after its first, the earlier Saturdays: in arm B the member's own course (its
+forecasts, its answers, the counts, its points), in arm A the same frame with one line a Saturday and
+what happened withheld, so that both arms' requests are new each round and only arm B's carry a
+course to read. Of nothing else, so verdicts' rebuild of every logged prompt from its call is the
+input diff. Variant v shows
 the forecast in wording v // 2 and lists the option of taking part first where v is even.
 
 The plan: the fixed calls (the determinism pilot, the offline table in each framing, its probes, the
@@ -67,6 +70,7 @@ FORECAST = ("A forecast published this morning says that {p} of the 10 neighbour
             "The forecast published this morning is that {p} of the ten neighbours will {will}.")
 COURSE_HEAD = "This choice comes every Saturday. On the earlier Saturdays, for you:"
 COURSE_TAIL = "Now it is the next Saturday."
+WITHHELD = "x"                  # arm A's course: one WITHHELD a Saturday, what happened not shown
 OWN = {("join", "T"): "you took part", ("join", "S"): "you stayed out",
        ("join", "D"): "you gave no choice, and so did not take part",
        ("lake", "T"): "you went", ("lake", "S"): "you stayed home",
@@ -90,8 +94,12 @@ def letters(variant):
 
 
 def course_lines(framing, member, course):
-    """Arm B's course, one line a Saturday: the forecast, the member's own answer, the count, its points."""
+    """Arm B's course, one line a Saturday: the forecast, the member's own answer, the count, its points.
+    Arm A's: the same frame, one line a Saturday, what happened withheld."""
     lines = [COURSE_HEAD]
+    if course and all(x == WITHHELD for x in course):
+        lines += [f"- Saturday {k + 1}: what happened is not shown." for k in range(len(course))]
+        return "\n".join(lines + [COURSE_TAIL])
     for k, (f, d, c) in enumerate(course):
         pts = TR.points(framing, TR.COSTS[member], d == "T", c)
         lines.append(f"- Saturday {k + 1}: the forecast said {f} of the 10 would {WILL[framing]}; {OWN[(framing, d)]}; "
@@ -100,6 +108,8 @@ def course_lines(framing, member, course):
 
 
 def parse_course(s):
+    if s and all(x == WITHHELD for x in s.split("/")):
+        return s.split("/")
     return [(int(f), d, int(c)) for f, d, c in (x.split(".") for x in s.split("/"))] if s else []
 
 
@@ -192,7 +202,8 @@ def seed(family, framing, arm, start, variant, answer, rounds=TR.ROUNDS, right=F
         f = pubs[-1]
         xs = []
         for i in range(TR.N):
-            course = "/".join(f"{pubs[j]}.{CODE[answers[j][i]]}.{counts[j]}" for j in range(k)) if arm == "B" else ""
+            course = "/".join(f"{pubs[j]}.{CODE[answers[j][i]]}.{counts[j]}" for j in range(k)) if arm == "B" else \
+                "/".join(WITHHELD for _ in range(k))
             xs.append(call(family, kind, ctx, "choice", framing, i, f, variant, 0, course,
                            start=start, round=k))
         calls += xs

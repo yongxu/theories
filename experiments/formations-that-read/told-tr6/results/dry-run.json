@@ -15,10 +15,10 @@
   "experiments/formations-that-read/told-tr3/tr3_design.py": "708f394c52944ac48df4cd0ad2828df09659fe10249e67b74c1682d191395a18",
   "experiments/formations-that-read/told-tr3/tr3_rule.py": "f1e9c4c7468267d36a9b11bf53d583f838f218f71f3929469e8aad2a5b0b2c8c",
   "experiments/formations-that-read/told-tr3/tr3_run.py": "9ceabbd59652dbc1d63a04f64ee14863e8801aa35e8b06f746085166e42e8c7f",
-  "experiments/formations-that-read/told-tr6/tr6_design.py": "1cbfbb4e7311d35d9b0325fe4da3d3e911fb4100f65e9312607c37f134dd9c78",
-  "experiments/formations-that-read/told-tr6/tr6_dry_run.py": "8e0f2d48c945b54ddfa77974e6f4127bf22b25fe1859114c7a5a826d2eb7532f",
-  "experiments/formations-that-read/told-tr6/tr6_rule.py": "daeb9264595310736499e3888de6b10e4b61eaf634d28c2d1eec3f4144d2f833",
-  "experiments/formations-that-read/told-tr6/tr6_run.py": "39466fc80a3266ff2de72c29569c40f0ebf0b859ce441c4d6944c0c348eff494",
+  "experiments/formations-that-read/told-tr6/tr6_design.py": "c43bef55c1d452105b46d89aa9cd94844ac842512f9b952089abeb3156e86345",
+  "experiments/formations-that-read/told-tr6/tr6_dry_run.py": "5847cb5cee030c13bcd21a41d84a879b3412ab7ae02053f496663cdaab44c661",
+  "experiments/formations-that-read/told-tr6/tr6_rule.py": "6fdf0504eb8759b3362e763fa524957f4a3b22a9192987c63213aeb5141ffcfa",
+  "experiments/formations-that-read/told-tr6/tr6_run.py": "b39046cb453f5f07b655cad96b12d39742bc13775f97ad694912dacc6a75b128",
   "experiments/formations-that-read/told-tr6/write_frozen.py": "5aeaf00b5a176192ae99e4433bcfc95a6ec616d69de9367ce3fad7272c3b7676",
   "experiments/formations-that-read/tr6.json": "12bca81d50d35a8a0fc483550086b02ccccb73dd233b1d8448f39c4eb4e378e2",
   "experiments/formations-that-read/tr6.py": "13b91665f222ddad9e3d5860f1b748a6bd3bba9995729afd49c7f913e9d0cd3e",
@@ -65,9 +65,9 @@
  "code_path": [
   {
    "public": "reads, memoryless",
-   "calls": 3944,
+   "calls": 3914,
    "rounds": 12,
-   "planned": 3944,
+   "planned": 3914,
    "the_logged_calls_are_the_plan": true,
    "verdicts_equal_the_rule": true,
    "verdicts": {
@@ -78,8 +78,8 @@
      "second_start": null,
      "v2": "not contradicted",
      "mismatching_rounds": {
-      "A": 5,
-      "B": 2
+      "A": 2,
+      "B": 0
      },
      "seed_ends": {
       "done": 10
@@ -92,27 +92,28 @@
      "second_start": null,
      "v2": "not contradicted",
      "mismatching_rounds": {
-      "A": 1,
+      "A": 2,
       "B": 0
      },
      "seed_ends": {
-      "done": 9,
-      "unreadable": 1
+      "done": 8,
+      "unreadable": 2
      }
     }
    },
    "answers": {
-    "stay": 1539,
-    "take": 2348,
+    "stay": 1532,
+    "take": 2326,
     "filtered": 3,
-    "decline": 10
+    "decline": 8,
+    "invalid": 1
    }
   },
   {
    "public": "reads, momentum (join) and regret (lake) 1",
-   "calls": 3974,
+   "calls": 3904,
    "rounds": 12,
-   "planned": 3974,
+   "planned": 3904,
    "the_logged_calls_are_the_plan": true,
    "verdicts_equal_the_rule": true,
    "verdicts": {
@@ -123,11 +124,12 @@
      "second_start": null,
      "v2": "contradicted",
      "mismatching_rounds": {
-      "A": 0,
-      "B": 18
+      "A": 2,
+      "B": 16
      },
      "seed_ends": {
-      "done": 10
+      "unreadable": 1,
+      "done": 9
      }
     },
     "lake": {
@@ -146,9 +148,9 @@
     }
    },
    "answers": {
-    "stay": 1494,
-    "take": 2430,
-    "filtered": 1,
+    "stay": 1491,
+    "take": 2362,
+    "filtered": 2,
     "decline": 5
    }
   },
@@ -167,104 +169,12 @@
      "second_start": null,
      "v2": "contradicted",
      "mismatching_rounds": {
-      "A": 5,
-      "B": 17
-     },
-     "seed_ends": {
-      "done": 9,
-      "unreadable": 1
-     }
-    },
-    "lake": {
-     "outcome": "read",
-     "shape": "reverses the order",
-     "reading": "holds here: the table reverses the order, as the reading predicts",
-     "second_start": null,
-     "v2": "contradicted",
-     "mismatching_rounds": {
-      "A": 6,
-      "B": 44
-     },
-     "seed_ends": {
-      "done": 10
-     }
-    }
-   },
-   "answers": {
-    "stay": 1474,
-    "take": 2377,
-    "invalid": 2,
-    "decline": 7
-   }
-  },
-  {
-   "public": "reads, agents exchange rules",
-   "calls": 3844,
-   "rounds": 12,
-   "planned": 3844,
-   "the_logged_calls_are_the_plan": true,
-   "verdicts_equal_the_rule": true,
-   "verdicts": {
-    "join": {
-     "outcome": "read",
-     "shape": "keeps the order",
-     "reading": "holds here: the table keeps the order, as the reading predicts",
-     "second_start": null,
-     "v2": "not contradicted",
-     "mismatching_rounds": {
-      "A": 5,
-      "B": 5
-     },
-     "seed_ends": {
-      "done": 9,
-      "unreadable": 1
-     }
-    },
-    "lake": {
-     "outcome": "read",
-     "shape": "reverses the order",
-     "reading": "holds here: the table reverses the order, as the reading predicts",
-     "second_start": null,
-     "v2": "not contradicted",
-     "mismatching_rounds": {
-      "A": 8,
-      "B": 1
-     },
-     "seed_ends": {
-      "done": 9,
-      "unreadable": 1
-     }
-    }
-   },
-   "answers": {
-    "stay": 1508,
-    "take": 2275,
-    "invalid": 1,
-    "decline": 13,
-    "filtered": 3
-   }
-  },
-  {
-   "public": "reads the forecast as the count, inertia 0.3",
-   "calls": 4854,
-   "rounds": 12,
-   "planned": 4854,
-   "the_logged_calls_are_the_plan": true,
-   "verdicts_equal_the_rule": true,
-   "verdicts": {
-    "join": {
-     "outcome": "read",
-     "shape": "keeps the order",
-     "reading": "holds here: the table keeps the order, as the reading predicts",
-     "second_start": 4,
-     "v2": "not contradicted",
-     "mismatching_rounds": {
       "A": 1,
-      "B": 5
+      "B": 9
      },
      "seed_ends": {
-      "unreadable": 2,
-      "done": 18
+      "done": 9,
+      "unreadable": 1
      }
     },
     "lake": {
@@ -275,27 +185,117 @@
      "v2": "contradicted",
      "mismatching_rounds": {
       "A": 2,
-      "B": 23
+      "B": 43
+     },
+     "seed_ends": {
+      "done": 10
+     }
+    }
+   },
+   "answers": {
+    "stay": 1472,
+    "take": 2376,
+    "invalid": 2,
+    "decline": 10
+   }
+  },
+  {
+   "public": "reads, agents exchange rules",
+   "calls": 3824,
+   "rounds": 12,
+   "planned": 3824,
+   "the_logged_calls_are_the_plan": true,
+   "verdicts_equal_the_rule": true,
+   "verdicts": {
+    "join": {
+     "outcome": "read",
+     "shape": "keeps the order",
+     "reading": "holds here: the table keeps the order, as the reading predicts",
+     "second_start": null,
+     "v2": "not contradicted",
+     "mismatching_rounds": {
+      "A": 1,
+      "B": 0
      },
      "seed_ends": {
       "done": 9,
       "unreadable": 1
      }
+    },
+    "lake": {
+     "outcome": "read",
+     "shape": "reverses the order",
+     "reading": "holds here: the table reverses the order, as the reading predicts",
+     "second_start": null,
+     "v2": "not contradicted",
+     "mismatching_rounds": {
+      "A": 0,
+      "B": 1
+     },
+     "seed_ends": {
+      "unreadable": 2,
+      "done": 8
+     }
     }
    },
    "answers": {
-    "stay": 2739,
-    "take": 2051,
-    "decline": 14,
-    "filtered": 5,
+    "stay": 1501,
+    "take": 2263,
+    "invalid": 2,
+    "decline": 11,
+    "filtered": 3
+   }
+  },
+  {
+   "public": "reads the forecast as the count, inertia 0.3",
+   "calls": 5014,
+   "rounds": 12,
+   "planned": 5014,
+   "the_logged_calls_are_the_plan": true,
+   "verdicts_equal_the_rule": true,
+   "verdicts": {
+    "join": {
+     "outcome": "read",
+     "shape": "keeps the order",
+     "reading": "holds here: the table keeps the order, as the reading predicts",
+     "second_start": 4,
+     "v2": "contradicted",
+     "mismatching_rounds": {
+      "A": 0,
+      "B": 5
+     },
+     "seed_ends": {
+      "done": 20
+     }
+    },
+    "lake": {
+     "outcome": "read",
+     "shape": "reverses the order",
+     "reading": "holds here: the table reverses the order, as the reading predicts",
+     "second_start": null,
+     "v2": "contradicted",
+     "mismatching_rounds": {
+      "A": 1,
+      "B": 27
+     },
+     "seed_ends": {
+      "done": 10
+     }
+    }
+   },
+   "answers": {
+    "stay": 2852,
+    "take": 2102,
+    "decline": 13,
+    "filtered": 2,
     "invalid": 1
    }
   },
   {
    "public": "deaf",
-   "calls": 3844,
+   "calls": 3824,
    "rounds": 12,
-   "planned": 3844,
+   "planned": 3824,
    "the_logged_calls_are_the_plan": true,
    "verdicts_equal_the_rule": true,
    "verdicts": {
@@ -310,8 +310,8 @@
       "B": 2
      },
      "seed_ends": {
-      "done": 7,
-      "unreadable": 3
+      "unreadable": 3,
+      "done": 7
      }
     },
     "lake": {
@@ -321,20 +321,21 @@
      "second_start": null,
      "v2": "not contradicted",
      "mismatching_rounds": {
-      "A": 11,
-      "B": 11
+      "A": 1,
+      "B": 0
      },
      "seed_ends": {
-      "done": 10
+      "done": 9,
+      "unreadable": 1
      }
     }
    },
    "answers": {
-    "stay": 2258,
-    "take": 1530,
+    "stay": 2243,
+    "take": 1522,
     "invalid": 4,
-    "decline": 7,
-    "filtered": 1
+    "decline": 9,
+    "filtered": 2
    }
   },
   {
@@ -362,9 +363,9 @@
   },
   {
    "public": "reads, declines from forecast 8",
-   "calls": 3804,
+   "calls": 3914,
    "rounds": 12,
-   "planned": 3804,
+   "planned": 3914,
    "the_logged_calls_are_the_plan": true,
    "verdicts_equal_the_rule": true,
    "verdicts": {
@@ -375,12 +376,12 @@
      "second_start": null,
      "v2": "not contradicted",
      "mismatching_rounds": {
-      "A": 0,
+      "A": 1,
       "B": 1
      },
      "seed_ends": {
-      "done": 7,
-      "unreadable": 3
+      "done": 9,
+      "unreadable": 1
      }
     },
     "lake": {
@@ -390,21 +391,19 @@
      "second_start": null,
      "v2": "not contradicted",
      "mismatching_rounds": {
-      "A": 0,
+      "A": 1,
       "B": 1
      },
      "seed_ends": {
-      "done": 9,
-      "unreadable": 1
+      "done": 10
      }
     }
    },
    "answers": {
-    "stay": 1166,
-    "take": 1657,
-    "decline": 932,
-    "filtered": 3,
-    "invalid": 2
+    "stay": 1191,
+    "take": 1716,
+    "decline": 961,
+    "filtered": 2
    }
   },
   {
@@ -422,8 +421,8 @@
      "second_start": null,
      "v2": "not contradicted",
      "mismatching_rounds": {
-      "A": 5,
-      "B": 5
+      "A": 1,
+      "B": 1
      },
      "seed_ends": {
       "done": 9,
@@ -437,7 +436,7 @@
      "second_start": null,
      "v2": "not contradicted",
      "mismatching_rounds": {
-      "A": 1,
+      "A": 0,
       "B": 0
      },
      "seed_ends": {
@@ -472,6 +471,8 @@
   "one probe record dropped: that framing's reading partial": true,
   "a log cut short, its last line half written: refused, then moved by FREEZE-1's note and read, the last call unread": true,
   "a log cut short, its last line whole with no newline: refused, then moved by FREEZE-1's note and read, the last call unread": true,
+  "a catalog read cut short: refused, then moved with a read naming no snapshot in its place, the calls since the read before it no longer read": true,
+  "a folder whose log files are empty, as a run stopped before its first read leaves it, is whole": true,
   "a line holding U+2028 raw, refused": true,
   "the line writer: no log holds U+2028, U+2029 or U+0085 raw, and every record reads": true,
   "a planted line in an arm A prompt, its hash recomputed, found by the input diff (refused)": true,
@@ -796,14 +797,14 @@
    "V2 contradicted": 0.0,
    "diagnostic resolved": 0.0,
    "self-check failed": 0.0,
-   "some seed in A shows a fall": 0.1733,
+   "some seed in A shows a fall": 0.1367,
    "void": 0.0033,
    "mean mismatching rounds A / B": [
-    0.98,
-    0.92
+    0.5,
+    0.5
    ],
    "mean share of rounds matching the table A / B, of the tables read": [
-    0.99,
+    0.991,
     0.991
    ],
    "Stage 0 (its own public): V2 contradicted": 0.0,
@@ -814,17 +815,17 @@
   },
   "join: memoryless, eta 0.01": {
    "V1: keeps the order": 0.9067,
-   "V2 contradicted": 0.01,
-   "diagnostic resolved": 0.0033,
+   "V2 contradicted": 0.0233,
+   "diagnostic resolved": 0.02,
    "self-check failed": 0.0,
-   "some seed in A shows a fall": 0.6967,
+   "some seed in A shows a fall": 0.72,
    "void": 0.0933,
    "mean mismatching rounds A / B": [
-    8.46,
-    8.62
+    4.63,
+    4.74
    ],
    "mean share of rounds matching the table A / B, of the tables read": [
-    0.909,
+    0.907,
     0.905
    ],
    "Stage 0 (its own public): V2 contradicted": 0.02,
@@ -835,17 +836,17 @@
   },
   "join: inertia w 0.1": {
    "V1: keeps the order": 0.9967,
-   "V2 contradicted": 0.3833,
-   "diagnostic resolved": 0.3767,
+   "V2 contradicted": 0.48,
+   "diagnostic resolved": 0.4867,
    "self-check failed": 0.0,
-   "some seed in A shows a fall": 0.1433,
+   "some seed in A shows a fall": 0.1467,
    "void": 0.0033,
    "mean mismatching rounds A / B": [
-    1.15,
-    5.84
+    0.55,
+    5.35
    ],
    "mean share of rounds matching the table A / B, of the tables read": [
-    0.989,
+    0.99,
     0.902
    ],
    "Stage 0 (its own public): V2 contradicted": 0.4767,
@@ -856,14 +857,14 @@
   },
   "join: inertia w 0.3": {
    "V1: keeps the order": 1.0,
-   "V2 contradicted": 0.9933,
-   "diagnostic resolved": 0.9967,
+   "V2 contradicted": 1.0,
+   "diagnostic resolved": 1.0,
    "self-check failed": 0.0,
-   "some seed in A shows a fall": 0.1533,
+   "some seed in A shows a fall": 0.11,
    "void": 0.0,
    "mean mismatching rounds A / B": [
-    1.19,
-    17.16
+    0.61,
+    16.8
    ],
    "mean share of rounds matching the table A / B, of the tables read": [
     0.989,
@@ -877,17 +878,17 @@
   },
   "join: momentum w 0.3": {
    "V1: keeps the order": 0.9967,
-   "V2 contradicted": 0.7733,
-   "diagnostic resolved": 0.8267,
+   "V2 contradicted": 0.8,
+   "diagnostic resolved": 0.85,
    "self-check failed": 0.0,
-   "some seed in A shows a fall": 0.1367,
+   "some seed in A shows a fall": 0.1033,
    "void": 0.0033,
    "mean mismatching rounds A / B": [
-    1.13,
-    8.05
+    0.55,
+    7.54
    ],
    "mean share of rounds matching the table A / B, of the tables read": [
-    0.991,
+    0.99,
     0.863
    ],
    "Stage 0 (its own public): V2 contradicted": 0.8367,
@@ -901,14 +902,14 @@
    "V2 contradicted": 1.0,
    "diagnostic resolved": 1.0,
    "self-check failed": 0.0,
-   "some seed in A shows a fall": 0.1367,
+   "some seed in A shows a fall": 0.1667,
    "void": 0.0,
    "mean mismatching rounds A / B": [
-    1.1,
-    15.55
+    0.64,
+    15.16
    ],
    "mean share of rounds matching the table A / B, of the tables read": [
-    0.99,
+    0.988,
     0.724
    ],
    "Stage 0 (its own public): V2 contradicted": 1.0,
@@ -919,17 +920,17 @@
   },
   "join: trend reader w 0.5": {
    "V1: keeps the order": 1.0,
-   "V2 contradicted": 0.97,
+   "V2 contradicted": 0.99,
    "diagnostic resolved": 1.0,
    "self-check failed": 0.0,
-   "some seed in A shows a fall": 0.1233,
+   "some seed in A shows a fall": 0.12,
    "void": 0.0,
    "mean mismatching rounds A / B": [
-    1.09,
-    10.89
+    0.6,
+    10.45
    ],
    "mean share of rounds matching the table A / B, of the tables read": [
-    0.99,
+    0.989,
     0.81
    ],
    "Stage 0 (its own public): V2 contradicted": 0.9767,
@@ -940,17 +941,17 @@
   },
   "join: agents exchange rules": {
    "V1: keeps the order": 1.0,
-   "V2 contradicted": 0.0,
+   "V2 contradicted": 0.0033,
    "diagnostic resolved": 1.0,
    "self-check failed": 0.0,
-   "some seed in A shows a fall": 0.1033,
+   "some seed in A shows a fall": 0.12,
    "void": 0.0,
    "mean mismatching rounds A / B": [
-    1.09,
-    1.15
+    0.59,
+    0.59
    ],
    "mean share of rounds matching the table A / B, of the tables read": [
-    0.99,
+    0.989,
     0.989
    ],
    "Stage 0 (its own public): V2 contradicted": 0.0,
@@ -982,17 +983,17 @@
   },
   "lake: memoryless, eta 0.001": {
    "V1: reverses the order": 1.0,
-   "V2 contradicted": 0.0067,
-   "diagnostic resolved": 0.0033,
+   "V2 contradicted": 0.0,
+   "diagnostic resolved": 0.0,
    "self-check failed": 0.0,
    "some seed in A shows a fall": 0.0,
    "void": 0.0,
    "mean mismatching rounds A / B": [
-    1.08,
-    1.06
+    0.53,
+    0.56
    ],
    "mean share of rounds matching the table A / B, of the tables read": [
-    0.989,
+    0.99,
     0.99
    ],
    "Stage 0 (its own public): V2 contradicted": 0.0,
@@ -1003,17 +1004,17 @@
   },
   "lake: memoryless, eta 0.01": {
    "V1: reverses the order": 0.88,
-   "V2 contradicted": 0.05,
-   "diagnostic resolved": 0.0467,
+   "V2 contradicted": 0.0267,
+   "diagnostic resolved": 0.03,
    "self-check failed": 0.0,
    "some seed in A shows a fall": 0.0,
    "void": 0.12,
    "mean mismatching rounds A / B": [
-    8.07,
-    8.32
+    4.62,
+    4.55
    ],
    "mean share of rounds matching the table A / B, of the tables read": [
-    0.903,
+    0.904,
     0.906
    ],
    "Stage 0 (its own public): V2 contradicted": 0.03,
@@ -1030,8 +1031,8 @@
    "some seed in A shows a fall": 0.0,
    "void": 0.0,
    "mean mismatching rounds A / B": [
-    0.88,
-    19.14
+    0.52,
+    18.88
    ],
    "mean share of rounds matching the table A / B, of the tables read": [
     0.991,
@@ -1045,14 +1046,14 @@
   },
   "lake: inertia w 0.3": {
    "V1: reverses the order": 1.0,
-   "V2 contradicted": 0.9733,
+   "V2 contradicted": 1.0,
    "diagnostic resolved": 1.0,
    "self-check failed": 0.0,
    "some seed in A shows a fall": 0.0,
    "void": 0.0,
    "mean mismatching rounds A / B": [
-    0.91,
-    17.62
+    0.57,
+    17.36
    ],
    "mean share of rounds matching the table A / B, of the tables read": [
     0.99,
@@ -1072,11 +1073,11 @@
    "some seed in A shows a fall": 0.0,
    "void": 0.0,
    "mean mismatching rounds A / B": [
-    1.08,
-    1.09
+    0.51,
+    0.53
    ],
    "mean share of rounds matching the table A / B, of the tables read": [
-    0.99,
+    0.991,
     0.99
    ],
    "Stage 0 (its own public): V2 contradicted": 0.0033,
@@ -1087,14 +1088,14 @@
   },
   "lake: regret after a crowded round w 1.0": {
    "V1: reverses the order": 0.9967,
-   "V2 contradicted": 0.0067,
-   "diagnostic resolved": 0.0033,
+   "V2 contradicted": 0.0,
+   "diagnostic resolved": 0.0,
    "self-check failed": 0.0,
    "some seed in A shows a fall": 0.0,
    "void": 0.0033,
    "mean mismatching rounds A / B": [
-    1.24,
-    1.15
+    0.59,
+    0.49
    ],
    "mean share of rounds matching the table A / B, of the tables read": [
     0.989,
@@ -1114,8 +1115,8 @@
    "some seed in A shows a fall": 0.0,
    "void": 0.0,
    "mean mismatching rounds A / B": [
-    1.1,
-    43.61
+    0.58,
+    43.53
    ],
    "mean share of rounds matching the table A / B, of the tables read": [
     0.99,
@@ -1130,16 +1131,16 @@
   "lake: agents exchange rules": {
    "V1: reverses the order": 0.9933,
    "V2 contradicted": 0.0,
-   "diagnostic resolved": 0.2567,
+   "diagnostic resolved": 0.2667,
    "self-check failed": 0.0,
    "some seed in A shows a fall": 0.0,
    "void": 0.0067,
    "mean mismatching rounds A / B": [
-    1.02,
-    0.96
+    0.61,
+    0.48
    ],
    "mean share of rounds matching the table A / B, of the tables read": [
-    0.99,
+    0.989,
     0.991
    ],
    "Stage 0 (its own public): V2 contradicted": 0.0,
@@ -1153,11 +1154,11 @@
    "V2 contradicted": 0.0,
    "diagnostic resolved": 0.0,
    "self-check failed": 0.0,
-   "some seed in A shows a fall": 0.3767,
+   "some seed in A shows a fall": 0.4,
    "void": 0.0,
    "mean mismatching rounds A / B": [
-    1.11,
-    1.1
+    0.56,
+    0.54
    ],
    "mean share of rounds matching the table A / B, of the tables read": [
     0.99,
@@ -1171,17 +1172,17 @@
   },
   "identity: memoryless": {
    "V1: the identity": 1.0,
-   "V2 contradicted": 0.0167,
-   "diagnostic resolved": 0.0133,
+   "V2 contradicted": 0.0033,
+   "diagnostic resolved": 0.0033,
    "self-check failed": 0.0,
-   "some seed in A shows a fall": 0.0,
+   "some seed in A shows a fall": 0.0033,
    "void": 0.0,
    "mean mismatching rounds A / B": [
-    1.31,
-    1.49
+    0.58,
+    0.63
    ],
    "mean share of rounds matching the table A / B, of the tables read": [
-    0.99,
+    0.989,
     0.989
    ],
    "Stage 0 (its own public): V2 contradicted": 0.0,
@@ -1192,17 +1193,17 @@
   },
   "hybrid: memoryless": {
    "V1: keeps the order": 1.0,
-   "V2 contradicted": 0.0033,
-   "diagnostic resolved": 0.0033,
+   "V2 contradicted": 0.0,
+   "diagnostic resolved": 0.0,
    "self-check failed": 0.0,
-   "some seed in A shows a fall": 0.16,
+   "some seed in A shows a fall": 0.1967,
    "void": 0.0,
    "mean mismatching rounds A / B": [
-    0.73,
-    0.92
+    0.55,
+    0.63
    ],
    "mean share of rounds matching the table A / B, of the tables read": [
-    0.992,
+    0.99,
     0.988
    ],
    "Stage 0 (its own public): V2 contradicted": 0.0,
@@ -1231,8 +1232,8 @@
     "4": 299
    },
    "void": 0.0033,
-   "V2 contradicted with the second start": 0.03,
-   "V2 contradicted from 0 alone": 0.01
+   "V2 contradicted with the second start": 0.0167,
+   "V2 contradicted from 0 alone": 0.0067
   },
   "the second start: a public reading the forecast as the count, momentum 1": {
    "table (no flips)": [
@@ -1252,8 +1253,8 @@
     "4": 299
    },
    "void": 0.0033,
-   "V2 contradicted with the second start": 0.2833,
-   "V2 contradicted from 0 alone": 0.25
+   "V2 contradicted with the second start": 0.3,
+   "V2 contradicted from 0 alone": 0.2633
   },
   "a presentation lean (the option listed first, within 5 points): the flag rule voids it": {
    "outcome": "void: 19 decisions flagged, 19 by dissent among the presentations, 0 by unreadable answers (no table, so no V2)",
@@ -1305,40 +1306,40 @@
     "planned": 22
    }
   },
-  "answers fixed by the request, as at temperature 0: near the threshold (within 5 points) a member dissents with chance 0.05 a request, join": {
-   "void": 0.36,
-   "tables read": 192,
-   "V2 contradicted, of the tables read": 0.7552,
+  "answers fixed by the prompt, as at temperature 0, reading no course: near the threshold (within 5 points) a member dissents with chance 0.05 a prompt, join": {
+   "void": 0.2733,
+   "tables read": 218,
+   "V2 contradicted, of the tables read": 0.0092,
    "mean mismatching rounds A / B, of the tables read": [
-    0.0,
-    6.18
+    2.95,
+    3.12
    ]
   },
-  "answers fixed by the request, as at temperature 0: near the threshold (within 5 points) a member dissents with chance 0.05 a request, lake": {
-   "void": 0.3667,
-   "tables read": 190,
-   "V2 contradicted, of the tables read": 0.4737,
+  "answers fixed by the prompt, as at temperature 0, reading no course: near the threshold (within 5 points) a member dissents with chance 0.05 a prompt, lake": {
+   "void": 0.28,
+   "tables read": 216,
+   "V2 contradicted, of the tables read": 0.0185,
    "mean mismatching rounds A / B, of the tables read": [
-    0.0,
-    4.7
+    3.15,
+    3.11
    ]
   },
-  "answers fixed by the request, as at temperature 0: near the threshold (within 5 points) a member dissents with chance 0.1 a request, join": {
-   "void": 0.8133,
-   "tables read": 56,
-   "V2 contradicted, of the tables read": 1.0,
+  "answers fixed by the prompt, as at temperature 0, reading no course: near the threshold (within 5 points) a member dissents with chance 0.1 a prompt, join": {
+   "void": 0.7433,
+   "tables read": 77,
+   "V2 contradicted, of the tables read": 0.0,
    "mean mismatching rounds A / B, of the tables read": [
-    0.0,
-    10.91
+    6.18,
+    6.49
    ]
   },
-  "answers fixed by the request, as at temperature 0: near the threshold (within 5 points) a member dissents with chance 0.1 a request, lake": {
-   "void": 0.8333,
-   "tables read": 50,
-   "V2 contradicted, of the tables read": 0.82,
+  "answers fixed by the prompt, as at temperature 0, reading no course: near the threshold (within 5 points) a member dissents with chance 0.1 a prompt, lake": {
+   "void": 0.7533,
+   "tables read": 74,
+   "V2 contradicted, of the tables read": 0.027,
    "mean mismatching rounds A / B, of the tables read": [
-    0.0,
-    9.62
+    6.76,
+    6.28
    ]
   },
   "fewest arm B mismatching rounds of 55 contradicting V2": {

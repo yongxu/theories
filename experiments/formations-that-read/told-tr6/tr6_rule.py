@@ -18,18 +18,17 @@ restates the forecast and the payoff.
 
 A loop republishes the last count: round t publishes f_t (f_0 the start), and its count is the number
 of TAKE answers where all ten are readable; that count is f_{t+1}. A round with an unreadable answer
-has no count and ends its seed. Arm A is memoryless; in arm B each member is shown its own course.
-V2 (the Lean's r is the count, not the members): a round mismatches where its count differs from the
-count its own presentation's offline answers give at the forecast it published (the presentation's
-table: an arm A request is that table's own request, byte for byte, so this is the round's
-memoryless counterfactual, and the table's dissent among presentations falls on neither arm); each
-arm A seed is paired with the arm B seed of the same start and presentation, and both are read up to
-the rounds both reached; V2 is contradicted where arm B's
-mismatching rounds exceed arm A's by a one-sided Fisher exact test at ALPHA, and not contradicted
-otherwise (no support is claimed: memory then adds no mismatch the test resolves beyond the
-memoryless arm's, whose own mismatches nothing bounds; the share of rounds whose count is the table's,
-along which a loop is the table's orbit, is reported). A verdict is partial where a call it reads was not logged: V1's reading where a probe was
-not, V2 and the loops' reports where a loop is not whole. Members' departures from their own table
+has no count and ends its seed. In arm B each member is shown its own course; in arm A the same frame,
+what happened withheld, so that both arms' requests are new each round and only arm B's can be read
+for a course. V2 (the Lean's r is the count, not the members): a round mismatches where its count
+differs from the table's at the forecast it published; each arm A seed is paired with the arm B seed
+of the same start and presentation, and both are read up to the rounds both reached; V2 is
+contradicted where arm B's mismatching rounds exceed arm A's by a one-sided Fisher exact test at
+ALPHA, and not contradicted otherwise (no support is claimed: the course then adds no mismatch the
+test resolves beyond the withheld frame's, whose own mismatches nothing bounds; the share of rounds
+whose count is the table's, along which a loop is the table's orbit, is reported). A verdict is
+partial where a call it reads was not read: V1's reading where a probe was not, V2 and the loops'
+reports where a loop is not whole. Members' departures from their own table
 decisions are a diagnostic with no verdict. The Lean's forbidden cases are reported for the loops from
 0; one in a seed whose every count is the table's would be the table's own orbit breaking a theorem,
 which only a fault in this code can give: a self-check of the rule against the Lean. From a second
@@ -95,16 +94,7 @@ def table(offline):
     flagged = sorted(k for k, d in dec.items() if d is None)
     causes = {c: sum(flag_cause(offline[k]) == c for k in flagged) for c in ("dissent", "unreadable answers")}
     return {"decisions": dec, "flagged": flagged, "flagged_by_cause": causes,
-            "count": [sum(dec[(i, p)] == TAKE for i in range(N)) for p in range(N + 1)],
-            "by_presentation": [[sum(own(offline, dec, i, p, v) == TAKE for i in range(N)) for p in range(N + 1)]
-                                for v in range(VARIANTS)]}
-
-
-def own(offline, dec, i, p, v):
-    """Member i's offline answer at forecast p in presentation v, read as TAKE or not; where that answer
-    is unreadable, its decision."""
-    a = offline[(i, p)][v]
-    return (TAKE if a == TAKE else STAY) if a in READABLE else dec[(i, p)]
+            "count": [sum(dec[(i, p)] == TAKE for i in range(N)) for p in range(N + 1)]}
 
 
 def keeps(t):
@@ -186,27 +176,23 @@ def mismatches(seed, t, upto=None):
     return sum(1 for k, c in enumerate(counts) if c != t[pubs[k]])
 
 
-def v2(seeds, tb):
+def v2(seeds, t):
     """seeds: {arm: [seed]}, the two arms' lists in the same order (start, then presentation); each seed
-    {"pubs", "counts", "variant", ...}; tb: table()'s output. A round mismatches against its own
-    presentation's table. Each pair of seeds is read up to the rounds both reached, so that an arm whose
-    seeds end sooner, at an unreadable answer, is not read from fewer resting rounds. Mismatching rounds
-    of the rounds read, per arm, Fisher's one-sided p for arm B over arm A, and, reported, the share of
-    rounds whose count is the table's."""
-    by = tb["by_presentation"]
+    {"pubs", "counts", ...}. Each pair of seeds is read up to the rounds both reached, so that an arm
+    whose seeds end sooner, at an unreadable answer, is not read from fewer resting rounds. Mismatching
+    rounds of the rounds read, per arm, the share of rounds whose count is the table's, and Fisher's
+    one-sided p for arm B over arm A."""
     both = [min(len(sa["counts"]), len(sb["counts"])) for sa, sb in zip(seeds["A"], seeds["B"])]
-    m = {a: sum(mismatches(s, by[s["variant"]], k) for s, k in zip(seeds[a], both)) for a in ARMS}
+    m = {a: sum(mismatches(s, t, k) for s, k in zip(seeds[a], both)) for a in ARMS}
     n = {a: sum(both) for a in ARMS}
     p = fisher_one_sided(m["B"], n["B"], m["A"], n["A"])
-    on = {a: sum(len(s["counts"][:k]) - mismatches(s, tb["count"], k) for s, k in zip(seeds[a], both)) for a in ARMS}
     return {"mismatching_rounds": m, "rounds_read": n,
-            "share_of_rounds_whose_count_is_the_tables": {a: round(on[a] / n[a], 4) if n[a] else None for a in ARMS},
+            "share_of_rounds_whose_count_is_the_tables": {a: round(1 - m[a] / n[a], 4) if n[a] else None for a in ARMS},
             "p": round(p, 6), "outcome": "contradicted" if p < ALPHA else "not contradicted"}
 
 
-def individual(seeds, offline, dec):
-    """The diagnostic: live answers departing from the member's own offline answer in the same
-    presentation at the forecast published (TAKE or not; its decision where that answer is unreadable)."""
+def individual(seeds, dec):
+    """The diagnostic: live answers departing from the member's own table decision (TAKE or not)."""
     m, n = {}, {}
     for a in ARMS:
         m[a] = n[a] = 0
@@ -214,7 +200,7 @@ def individual(seeds, offline, dec):
             for k, ans in enumerate(s["answers"][:len(s["counts"])]):
                 for i, x in enumerate(ans):
                     n[a] += 1
-                    m[a] += (x == TAKE) != (own(offline, dec, i, s["pubs"][k], s["variant"]) == TAKE)
+                    m[a] += (x == TAKE) != (dec[(i, s["pubs"][k])] == TAKE)
     return {"departures": m, "decisions": n, "p": round(fisher_one_sided(m["B"], n["B"], m["A"], n["A"]), 6),
             "verdict": "none (a diagnostic of a stronger premise than the Lean's)"}
 
@@ -263,10 +249,11 @@ def restated(probe, framing, member, forecast):
     return probe == {"forecast": forecast, "points": points(framing, COSTS[member], True, k)}
 
 
-def framing_verdict(framing, offline, probes, seeds, second, right_seeds, probes_not_logged=0):
+def framing_verdict(framing, offline, probes, seeds, second, right_seeds, probes_not_read=0):
     """One framing's verdicts. offline: {(member, forecast): [answers]} or None where not whole; probes:
-    {(member, forecast): probe or None}, None for an unreadable probe or one not logged, of which
-    probes_not_logged were not logged; seeds: {arm: [seed]} from 0; second: {arm: [seed]} from the
+    {(member, forecast): probe or None}, None for an unreadable probe or one not read, of which
+    probes_not_read were not read (not logged, logged outside good reads, or in a context the reading
+    drops); seeds: {arm: [seed]} from 0; second: {arm: [seed]} from the
     second start, or None; right_seeds: {arm: [seed]} from the least right value, or None. A seed is
     {"pubs", "counts", "answers", "end"}."""
     if offline is None:
@@ -288,8 +275,8 @@ def framing_verdict(framing, offline, probes, seeds, second, right_seeds, probes
                 "moving_rounds_from_0": moving(orbit(t, 0, ROUNDS)), "second_start": second_start(t)})
     if sh in ("constant", "the identity"):
         out["reading"] = f"not read: the table is {sh}"
-    elif probes_not_logged:
-        out["reading"] = f"partial: {probes_not_logged} of {len(probes)} probes not logged"
+    elif probes_not_read:
+        out["reading"] = f"partial: {probes_not_read} of {len(probes)} probes not read"
     elif restate < len(probes):
         out["reading"] = f"not read: {restate} of {len(probes)} probes restated"
     elif sh == PREDICTED[framing]:
@@ -297,10 +284,9 @@ def framing_verdict(framing, offline, probes, seeds, second, right_seeds, probes
     else:
         out["reading"] = f"contradicted: the table {'is ' if sh == 'neither' else ''}{sh}, not as the reading predicts"
     every = {a: seeds[a] + (second[a] if second else []) for a in ARMS}
-    out["tables_by_presentation"] = tb["by_presentation"]
-    out["v2"] = v2(every, tb)
-    out["v2_from_0_alone_reported"] = v2(seeds, tb)
-    out["individual_diagnostic"] = individual(every, offline, tb["decisions"])
+    out["v2"] = v2(every, t)
+    out["v2_from_0_alone_reported"] = v2(seeds, t)
+    out["individual_diagnostic"] = individual(every, tb["decisions"])
     out["seed_ends"] = {a: [s["end"] for s in every[a]] for a in ARMS}
     out["moving_rounds"] = {a: [moving(s["pubs"]) for s in every[a]] for a in ARMS}
     fb = {a: [forbidden(s, t) for s in seeds[a]] for a in ARMS}

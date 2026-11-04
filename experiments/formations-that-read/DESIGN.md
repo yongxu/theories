@@ -288,7 +288,7 @@ Estimates, to be replaced at the freeze by a smoke run. Every Stage B run waits 
 | TR3 | three pins (FREEZE-3), at temperature 0 but Sonnet | at most 2,766 per model, 1,916 for BHW (FREEZE-3) | about 0.6M to 1.0M per model, before reasoning |
 | TR4 | six families | 440 per model: 2,640 | about 1.2M |
 | TR5 | six families | 459 per model: 2,754 (upper 3,834) | about 2.5M (upper 3.5M) |
-| TR6 | three pins (FREEZE-6), at temperature 0 but Sonnet | 3,974 per model, at most 6,174 (FREEZE-6) | about 1.0M to 1.7M per model, before reasoning |
+| TR6 | three pins (FREEZE-6), at temperature 0 but Sonnet | 3,974 per model, at most 6,174 (FREEZE-6) | about 1.05M to 1.8M per model, before reasoning |
 | TR7 | six families | 1,210 per model: 7,260 | 7M to 18M |
 | TR8 | at least two families | 3,420 per family, a first round of 1,140 | about 2.9M per family |
 | TR9 | the families where TR8's bridge was supported | 1,980 per family, a first round of 660 | about 1.9M per family |
