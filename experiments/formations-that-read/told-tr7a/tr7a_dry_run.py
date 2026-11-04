@@ -28,7 +28,8 @@ learner trained.
    nothing stops the run at it.
 7. The frozen check's state: it passes only once this freeze's FROZEN.sha256 is committed.
 8. The code it ran: the sha-256 of each file this folder's link lists but this record, taken as the dry run
-   starts, and whether they are the same at its end; FROZEN.sha256 is written only where they are its own.
+   starts, and whether they are the same at its end; write_frozen.py writes FROZEN.sha256 only where they
+   are the files' hashes then.
 Standard library only.
 """
 
