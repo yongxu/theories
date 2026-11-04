@@ -603,7 +603,7 @@ def render_report(result: dict) -> str:
     for row in result['rows']:
         decl = ', '.join('`' + d.removeprefix('Becoming.') + '`' for d in row['declarations'])
         recs = ', '.join(f'[{r}](../records/{r}.md)' for r in row['records'])
-        secs = ', '.join('§' + s for s in row['sections'])
+        secs = ', '.join(row['sections'])
         items = ', '.join(str(n) for n in row.get('open_items', [])) or '—'
         out.append(f'| {row["name"]} | {row["axis"]} | {decl} | {recs} | {secs} | {row["status"]} | {items} |')
     for k in NAMES:
@@ -648,7 +648,7 @@ def render_report(result: dict) -> str:
                     for b, e in result['chain']]
             out += ['', 'Normative hypotheses in its statements: ' + (', '.join(result['normative_hypotheses']) or 'none') + '.', '']
         if k == 'K7':
-            out += [f'Section 8.1 has {len(result["open_items"])} items: ' + '; '.join(
+            out += [f'08 §12 ranks {len(result["open_items"])} open items: ' + '; '.join(
                 f'{i["n"]} ({i["class"]})' for i in result['open_items']) + '.', '']
         out += [f'- {f}' for f in result['findings'][k]] or ['No finding.']
     ml = result.get('shared_laws')

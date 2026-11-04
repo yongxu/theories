@@ -160,6 +160,19 @@ class OneLanguageTests(unittest.TestCase):
                 self.assertNotIn(' / 证据', page)
                 self.assertIn('evidence--证据' if r.get('schema_version') == 2 else '沿革-history', anchors_from_text(page))
 
+    def test_superseded_record_names_its_successor_under_next(self):
+        records, errors = registry.load_records()
+        self.assertEqual(errors, [])
+        superseded = [r for r in records if r.get('status') == 'superseded' and r.get('schema_version') == 2]
+        self.assertTrue(superseded)
+        for r in superseded:
+            page = registry.render_record(r)
+            with self.subTest(id=r['id']):
+                self.assertIn(f'Superseded by [{r["superseded_by"]}](', page)
+                self.assertIn('When this record was current, its next step read: ' + registry.en(r['next_delta']), page)
+        current = next(r for r in records if r.get('status') != 'superseded' and r.get('schema_version') == 2)
+        self.assertNotIn('When this record was current', registry.render_record(current))
+
     def test_rebinding_history_folds_into_one_counted_line(self):
         r = {'id': 'example', 'history': [
             {'en': '2026-10-09: added as a result.', 'zh': '新增。'},
