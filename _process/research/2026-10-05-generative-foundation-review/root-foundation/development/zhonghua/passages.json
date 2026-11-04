@@ -23461,16 +23461,17 @@
      "record_id": "LAO2-C14-R07",
      "same_as_entry": "laozi-14-zhi-gu-yu-jin",
      "note": "「能知古始，是谓道纪」是第十四章同句，帛书乙「以知古始是胃道紀」已在 laozi-14-zhi-gu-yu-jin 中读出；不属五十二章之母子。"
+    },
+    {
+     "record_id": "TP-H22-X4-R01",
+     "same_as_entry": "C17:xiaoxiang-weidang",
+     "note": "RAE3 (5 November 2026, AA E4): moved here from C07's rejections, as C17's reviser asked: the line is in Lean's Hexagram.placeStatements as (22, .p4, true), carried by placeStatements_agree, so it is a parallel of C17's census entry xiaoxiang-weidang, not of a C07 entry. The rejection, which read the line as having no structure to check, said: 「六四，当位疑也」之疑是六四在应与比之间之迟疑（爻位之读），无修正之结构，也无可检之律；只是字面上与旧称「疑」相同。位之关系见 lin-tuan-gang-zhong-er-ying 之定域。"
     }
    ],
    "rejected": [
     {
      "record_id": "TP-H09-X6-R02",
      "why": "「君子征凶，有所疑也」之疑是行者因有所疑而不宜征之迟疑，是行者之状态，不是修正中之未定值；与 Undecided 只有字面之同。此例是不以疑名第三值之理由之一。"
-    },
-    {
-     "record_id": "TP-H22-X4-R01",
-     "why": "「六四，当位疑也」之疑是六四在应与比之间之迟疑（爻位之读），无修正之结构，也无可检之律；只是字面上与旧称「疑」相同。位之关系见 lin-tuan-gang-zhong-er-ying 之定域。"
     },
     {
      "record_id": "ZX130-H48-R01",

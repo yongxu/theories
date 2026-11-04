@@ -1,18 +1,22 @@
 """Add the two ZH chapters to the reading catalogue (arguments-a-l / arguments-m-z), in the files' own format
-(sorted by id, indent 2), and re-point the RO chapter's entry after its pointer line: python3 -I catalogue_entries.py"""
+(sorted by id, indent 2), and re-point the RO chapter's entry after its pointer line: python3 -I catalogue_entries.py
+
+Since 22 October 2026 the two entries are kept by edits (RA moved the chapters to history/ on 23 October; AA's E4 and
+RAE3 scoped "each in one place" to the cluster each judgment was flagged for on 4 and 5 November), so this script adds an
+entry only where the catalogue has none and refuses where one is there; its wording of the placement is the current one."""
 import json, hashlib
 sha = lambda p: hashlib.sha256(open(p, 'rb').read()).hexdigest()
 K = '_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua'
-CH = 'theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md'
-ED = 'theories/becoming/chapters/THE-THEORY-OF-BECOMING-ZHONGHUA.md'
-RO = 'theories/becoming/chapters/CHINESE-SOURCES-AND-BECOMING.md'
+CH = 'theories/becoming/history/CIVILIZATION-THOUGHT-AND-BECOMING.md'
+ED = 'theories/becoming/history/THE-THEORY-OF-BECOMING-ZHONGHUA.md'
+RO = 'theories/becoming/history/CHINESE-SOURCES-AND-BECOMING.md'
 a = {"id": "civilization-thought-and-becoming", "source": CH,
      "title_zh": "《中华思想脉络》与变化论：逐条对应、古典之名与论题的检验",
      "title_en": "《中华思想脉络》 and the theory of becoming: every judgment mapped, the classical names, the thesis tested",
      "category": "classical-comparison",
      "status": "全部判断已对应并检查；无新 Lean / Every judgment mapped and checked; no new Lean",
-     "argument_zh": "《中华思想脉络》v1.0 的 5,673 条完整判断逐条读过：3,499 条关乎理论之结构，各落一处，成 1,300 个已检查条目（相合 453、定域 647、相分 200）。“一元、关系、动态”之论题按域与按时代检验：在根上成立，全称形式大多需要定域，作为每一体系之性质不成立。由这些文字定出古典之名。",
-     "argument_en": "Every one of the 5,673 complete judgments of 《中华思想脉络》 v1.0 is read: 3,499 bear on a structure of the theory and each lies in one place, in 1,300 checked entries (453 agreements, 647 exact scopes, 200 divergences). The thesis that the system is one, relational and dynamic is tested by domain and by era: it holds at the root, its universal forms mostly need a scope, and it fails as every system's property. The classical names are fixed from these texts.",
+     "argument_zh": "《中华思想脉络》v1.0 的 5,673 条完整判断逐条读过：3,514 条关乎理论之结构，各在所标之簇恰落一处，成 1,300 个已检查条目（相合 453、定域 647、相分 200）。“一元、关系、动态”之论题按域与按时代检验：在根上成立，全称形式大多需要定域，作为每一体系之性质不成立。由这些文字定出古典之名。",
+     "argument_en": "Every one of the 5,673 complete judgments of 《中华思想脉络》 v1.0 is read: 3,514 bear on a structure of the theory and each lies in one place in the cluster it was flagged for, in 1,300 checked entries (453 agreements, 647 exact scopes, 200 divergences). The thesis that the system is one, relational and dynamic is tested by domain and by era: it holds at the root, its universal forms mostly need a scope, and it fails as every system's property. The classical names are fixed from these texts.",
      "significance_zh": "RO 之选读扩展为一部图谱之全读；相分与四层保留，使原典能检验理论；古典之名有其出处与所不带之义。",
      "significance_en": "RO's selection becomes the full reading of one atlas; divergences and the four layers are kept so the texts can test the theory; the classical names carry their witnesses and what they do not carry.",
      "scope_zh": "读法与名为 AI 之读与约定（D62）；不新增 Lean；不说作者意谓这些律；未与刻本对校；无出处之名的先秦用例未全经检查。",
@@ -38,7 +42,11 @@ z = {"id": "the-theory-of-becoming-zhonghua", "source": ED,
      "lean": [],
      "evidence": [K + '/work/names-decisions.tsv', K + '/book.py', K + '/finish.py', K + '/verify_zh.py'],
      "source_sha256": sha(ED)}
-for f, e in [('theories/becoming/results/data/arguments-a-l.json', a), ('theories/becoming/results/data/arguments-m-z.json', z)]:
+PAIRS = [('theories/becoming/results/data/arguments-a-l.json', a), ('theories/becoming/results/data/arguments-m-z.json', z)]
+held = [f"{f} holds {e['id']}" for f, e in PAIRS if any(x['id'] == e['id'] for x in json.load(open(f, encoding='utf-8')))]
+if held:      # checked for both files before either is written
+    raise SystemExit('; '.join(held) + ': kept by edits since, which this script would undo')
+for f, e in PAIRS:
     d = [x for x in json.load(open(f, encoding='utf-8')) if x['id'] != e['id']]
     for x in d:
         if x['id'] == 'chinese-sources-and-becoming':

@@ -3,7 +3,10 @@
 
 verify_zh.py must pass with both chapters in place, and the study section and the decision must exist. No Lean is
 added: the record is an assessment, reviewed and scoped, whose evidence is the checked map, the name table and their
-check. Rewrites the record if it exists (the history keeps the first date)."""
+check. Since 22 October 2026 the record is kept by edits with history notes (RA's move of the chapters to history/ on
+23 October; RAE's verifiers on 06-CLASSICAL-TEXTS; AA's E4 and RAE3 scoping "each placed once" to the flagged cluster on
+4 and 5 November), so this script writes it only where it is absent and refuses where it exists; its wording of the
+placement is the current one."""
 import collections
 import datetime
 import hashlib
@@ -55,6 +58,8 @@ records = sorted({r for e in entries for r in e['records']})
 files = len(json.loads((ROOT / PROVENANCE).read_text())['files'])
 ANCHOR = f'{STUDY}#{section}-中华思想脉络-on-the-spine-and-the-中华本-zh'
 old = RECORDS / f'{ID}.json'
+if old.exists():
+    raise SystemExit(f'{old.relative_to(ROOT)} exists, kept by edits with history notes: this script would undo them')
 first = json.loads(old.read_text())['history'][0] if old.exists() else None
 n, a, s, v = len(entries), kinds['agreement'], kinds['scope'], kinds['divergence']
 
@@ -69,9 +74,9 @@ record = {
     'reviewed_at_utc': NOW,
     'statement': {
         'en': (f'Every one of the {len(cov):,} judgments of 《中华思想脉络》 v1.0 is read against the spine: {flagged:,} bear on '
-               f'its structures, each placed once, in {n:,} checked entries ({a} agreements, {s} exact scopes, {v} '
+               f'its structures, each placed once in its flagged cluster, in {n:,} checked entries ({a} agreements, {s} exact scopes, {v} '
                f'divergences). {names} classical names, one per concept, state the theory in the 中华本《变化论》.'),
-        'zh': (f'《中华思想脉络》v1.0 的 {len(cov):,} 条判断逐条对照脊柱：{flagged:,} 条关乎其结构，各落一处，成 {n:,} 个已检查条目'
+        'zh': (f'《中华思想脉络》v1.0 的 {len(cov):,} 条判断逐条对照脊柱：{flagged:,} 条关乎其结构，各在所标之簇恰落一处，成 {n:,} 个已检查条目'
                f'（相合 {a}、定域 {s}、相分 {v}）；{names} 个古典之名，每概念一个，写成中华本《变化论》。')},
     'hypotheses': [{
         'en': (f'No Lean and no premise is added: each entry is tied to audited declarations and records as they stand; '
@@ -107,11 +112,11 @@ record = {
                             'omission-not-refutation', 'nondual-method-not-proof'],
     'validation_scope': {
         'en': (f'verify_zh.py passes: the import ({files} files by SHA-256), one verdict per judgment, each flagged one '
-               f'placed once, every fragment verbatim, {decls} declarations in the current receipt, {len(records)} '
+               f'placed once in its flagged cluster, every fragment verbatim, {decls} declarations in the current receipt, {len(records)} '
                f'records, the name table, and both chapters\' quotations, declarations, links, 对照 kinds and tables. '
                f'Each entry had three readings (mapper, reviser, independent checker); the 中华本 was reviewed as one '
                f'book three times. All readers were AI; no collation with a printed edition.'),
-        'zh': (f'verify_zh.py 通过：导入（{files} 个文件以 SHA-256 绑定）、每条判断一个分拣裁定、每条所标判断恰落一处、每个片段在其冻结原文中'
+        'zh': (f'verify_zh.py 通过：导入（{files} 个文件以 SHA-256 绑定）、每条判断一个分拣裁定、每条所标判断在所标之簇恰落一处、每个片段在其冻结原文中'
                f'逐字可见、{decls} 个声明在现行回执中、{len(records)} 份记录、名表（锚为现行之名、引文逐字、简化后无重），以及两章的引文、'
                f'声明、记录链接与生成之表。每个条目经三读（映射者、以现行主干重读的修订者、独立检查者）；中华本各篇起草后经对抗审读改为'
                f'精确修改。读者都是 AI；未与刻本对校。')},
