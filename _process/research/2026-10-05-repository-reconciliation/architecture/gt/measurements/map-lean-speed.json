@@ -1,0 +1,190 @@
+{
+ "run_structure": "One run of check_becoming.py (main, check_becoming.py:4206-4442) has 1,544 Lean steps: 1,543 keyed steps plus an unkeyed `lean --version` (4310-4311). The committed receipt has lean_steps.keys = 1,543 (9 ran, 1,535 reused at 20261103T211917.845905Z). The comment in .github/workflows/lean.yml:30 still says \"About 1,100\" and is out of date.\n\nModule set. order = closure(CHECKED) and core_closure = closure(CORE) are the same 386 modules: 3 foundation, 365 core, 11 instance, 7 application. The run asserts core_closure == PURE (4244). Per-module steps, built at 4336-4376:\n- compile, for all 386 modules: `lean -o M.olean M.lean` with LEAN_PATH set to the temp work dir (4299, 4325-4327).\n- audit, for all 386: a driver that imports M and runs `#print axioms` on every scanned declaration (4340-4342).\n- signatures, for the 383 CHECKED modules: `#check @thm` for every theorem (4344-4349).\n- prelude, for all 386 core-closure modules: a recompile with `import Std` stripped, in work/prelude-only, keyed with context+[\"prelude only\"] (4364-4376).\n\nWhole-package steps:\n- EnvironmentAudit (4351-4354; driver at 3767-3783). It imports Lean and all 386 modules and runs collectAxioms on each of the 56,235 constants.\n- Controls (4362; text at 4140-4203). It imports the root Becoming.\n- Bridge environment, only if BRIDGE is non-empty. It is empty now (102, 4355-4361).\n\nKeys. step_key (3850-3863) hashes the toolchain string, the lean binary's sha256 (4282), the label, the step's own bytes and the keys of its imports. module_keys (3866-3871) chains these keys, so a compile key covers the module's whole import closure. Audit, signature and controls drivers are keyed by their text plus the keys of the modules they import (4329-4333).\n\nWhat the keys leave out:\n- the lean argument vector;\n- the toolchain's own Init/Std/Lean .olean files (only the binary is hashed);\n- check_becoming.py's bytes, so editing CORE or SCOPE invalidates nothing.\n\nCache. Entries live in ~/.cache/becoming-lean (3842), shared by worktrees, scratch_build.py, check_fallible_inquiry.py:124-169, THEOREM-CONNECTIVITY.py:145-161 and DECIDABILITY-INVENTORY.py:45-57.\n- reuse() (3874-3888) restores outputs only when their digests match the entry.\n- store() (3891-3909) writes the blobs first, then the json, via temp files and os.replace. A torn concurrent write therefore shows up as a miss, not a false hit.\n- Only steps that pass are stored: exit 0 and no `error:`/`warning:` (4303-4307).\n- BECOMING_FRESH=1 bypasses reuse (3843). Locally it is off by default; CI turns it on weekly (lean.yml:20-21, 38).\n- Locally the cache is 34 GB in 139,511 entries, with no eviction. Only CI trims (lean.yml:70-87).\n- Reused steps' logs exist only in the cache (docstring 44-47).\n\nScheduling. run_graph (3915-3956) is a ThreadPoolExecutor with JOBS = BECOMING_JOBS, or cpu_count//2 by default (3912), so 6 on this Mac. A task starts once its needs are done, ready tasks with the longest chain of dependents go first, and nothing new starts after a failure.\n- Each step is its own `lean` process with TIMEOUT = LEAN_TIMEOUT, default 600 s (3845, 4300-4301). scratch_build uses 1800 (scratch_build.py:38), CI uses 1800 (lean.yml:37) and the kits use 2400.\n- The checker passes no -j. Each lean process therefore runs its own task pool sized to the hardware (Lean/Shell.lean:226-229), with Elab.async on from the command line (Lean/Elab/Frontend.lean:152-153). That is up to 6 x 12 threads per run, and the cap is per run: there is no machine-wide limit or lock anywhere in the checker (grep found none).\n- CI runs BECOMING_JOBS=$(nproc) (lean.yml:69).\n\nPython preamble, before any Lean step:\n- module_index rglobs every *.lean under the Lean root: 73,773 files are walked, of which 28,409 are .lean and 19,580 are copies in becoming-checks; archive directories are filtered only after they are walked (3786-3797).\n- passed_receipts walks every *.json and reads the 1,130 outside the checker's own outputs (161 MB). Those receipts bind the 3 inherited foundation modules; GenerativeCore alone is bound by 467 receipts (3993-4013, 4249-4258).\n- All 386 sources are scanned (4267), and git ls-tree runs (3968-3990).\n- The first step finished 28-67 s after the stamp in recent runs.\n\nMeasured wall time, from the store times of cache entries against each run's stamp:\n- Near-full cascades on 21-28 Oct (1,020-1,170 steps ran, 300-337 modules, JOBS=6): compiles done at 1.3-2.2 min, audits/signatures/prelude at 2.1-3.4 min, EnvironmentAudit at 3.1-4.7 min.\n- Small landings on 1-3 Nov (72-135 steps): everything except the environment audit was done by 0.6-1.7 min, but EnvironmentAudit finished at 2.0-3.6 min.\n- So the environment audit is a fixed tail of about 80-115 s on every run that changes anything, and makes up 55-65% of a small landing's Lean time.\n\nCascade. A changed module invalidates the compile, audit, signatures and prelude keys of itself and every transitive dependent, plus EnvironmentAudit and Controls (the root Becoming imports everything). These counts come from a regex over import lines, not the checker's parser:\n- Prelude has 372 dependents, Grammar 369, GrammarMap 364, GrammarLaws 362, Frame 351, World 331. A Grammar edit reruns about 4x370+2 = 1,482 of 1,543 keyed steps.\n- 17 modules have more than 300 dependents, 27 more than 200 and 45 more than 100. Together, the up-closures of those 45 cover 383 of the 386 modules.\n- 112 modules have only the root above them. Changing one costs about 10 steps (its own 4, the root's 4, env, controls).\n- The longest import chain is 41 modules.\n\nscratch_build.py. It compiles only the import closure of the named targets (62), not their dependents, and audits the targets with the checker's identical driver and keys (117-132). It stores only clean passes (91-96). It never runs signatures, prelude, environment or controls (19-20). That is why landing 20261101T094230 reran 375 signature steps and 375 prelude compiles even though only 34 compiles were new.",
+ "step_kinds": [
+  {
+   "kind": "version",
+   "per_module": false,
+   "purpose": "Runs `lean --version` and asserts 4.29.1 (check_becoming.py:4310-4311).",
+   "reruns_when": "Every run; it is unkeyed and cheap."
+  },
+  {
+   "kind": "compile",
+   "per_module": true,
+   "purpose": "Compiles each of the 386 modules with `lean -o M.olean M.lean` in dependency order, with LEAN_PATH set to the work dir (4325-4327, 4336-4339). The .olean is the cached output.",
+   "reruns_when": "M's bytes change, any module in M's import closure changes (module_keys chain, 3866-3871), or the toolchain string or lean binary sha256 changes (4282)."
+  },
+  {
+   "kind": "audit",
+   "per_module": true,
+   "purpose": "Imports M and runs `#print axioms` on each scanned declaration, for 386 modules (4340-4342). The output is parsed and every spine or pure declaration must have none (4381-4393). `#print axioms` calls Lean.collectAxioms (Lean/Elab/Print.lean:237-251).",
+   "reruns_when": "M's compile key changes (so anything in M's closure changes), or the scanner's declaration list for M changes (it is part of the driver text)."
+  },
+  {
+   "kind": "signatures",
+   "per_module": true,
+   "purpose": "Imports M and runs `#check @thm` for each theorem, for the 383 CHECKED modules (4344-4349). The output is not parsed; it only has to be clean. No tool outside the checkers reads these logs (git grep).",
+   "reruns_when": "Same as the audit."
+  },
+  {
+   "kind": "prelude",
+   "per_module": true,
+   "purpose": "Recompiles the core closure with `import Std` lines stripped, in work/prelude-only, keyed with context+['prelude only'] (4364-4376). Only GenerativeCore.lean:1 imports Std, so for the 32 modules whose closure lacks GenerativeCore the inputs are identical to the main compile.",
+   "reruns_when": "The stripped closure of M changes; that is, any change in M's closure."
+  },
+  {
+   "kind": "environment",
+   "per_module": false,
+   "purpose": "One process imports Lean and all 386 modules. For each module it scans every constant in the environment, runs collectAxioms on that module's constants (3767-3783), and asserts that only generated injEq lemmas on propext carry an axiom (4405-4418). This is the check that covers private declarations, unnamed instances and generated constants.",
+   "reruns_when": "Any change anywhere in the core closure (its key includes all 386 module keys). It can start only after every compile has finished."
+  },
+  {
+   "kind": "bridge environment",
+   "per_module": false,
+   "purpose": "The same environment audit for BRIDGE modules (4355-4361).",
+   "reruns_when": "Not run now: BRIDGE is empty (102)."
+  },
+  {
+   "kind": "controls",
+   "per_module": false,
+   "purpose": "Imports Becoming and checks nonvacuity examples (CONTROLS, 4140-4203; task at 4362).",
+   "reruns_when": "Any change in the closure (the root Becoming imports everything)."
+  }
+ ],
+ "speedups": [
+  {
+   "idea": "Make the environment audit a single pass. Today the driver loops `for m in modules` and rebuilds `env.constants.map₁.toList` over the whole environment, including all of Lean's constants, for each of 386 modules (3773-3776). That is about 386 interpreted passes over a few hundred thousand constants. Iterate once instead, bucket constants by getModuleIdxFor?, and call the same collectAxioms on the same constants. Print the same CONSTANTS lines (one per module, including 0) and AXIOMS lines, so environment_audit's parsing (4405-4418) does not change.",
+   "where": "check_becoming.py:3767-3783 (ENVIRONMENT_AUDIT)",
+   "saving": "Probably most of the fixed 80-115 s tail that every changing run pays: 38 s vs 118 s at 20261103T102739, 52 s vs 144 s at 20261103T203347, 101 s vs 215 s at 20261101T033635. That is 55-65% of a small landing's Lean wall time. Attributing it to the repeated scans is a hypothesis from reading the code; one timed run will confirm or refute it.",
+   "risk": "Low. The same Lean function runs over the same constant set, so nothing checked changes. The driver text changes, so the env key reruns once.",
+   "effort": "small"
+  },
+  {
+   "idea": "Record per-step wall time, and CPU time via Popen plus os.wait4, in the receipt's lean_steps and in each cache entry. The checker records no durations today, so every saving below is estimated from cache-entry store times.",
+   "where": "check_becoming.py:4289-4308 (run), scratch_build.py:75-97",
+   "saving": "No direct saving. It makes the rest measurable and lets the train scheduler predict a batch's cost.",
+   "risk": "None for soundness; it adds a receipt field.",
+   "effort": "small"
+  },
+  {
+   "idea": "Put all argument vectors into step_key: the lean args (-o, any future -j, --json, -D) and a driver-format version. Today a key covers the label, bytes, import keys, toolchain and binary, but not the args. This is a precondition for the -j, --json and batching changes below; without it, a cached plain-text log would be reused under a parser that expects JSON, or results from different options would mix under one key.",
+   "where": "check_becoming.py:3850-3863, 4325-4334",
+   "saving": "None. It keeps the cache exact as options change.",
+   "risk": "Low. It is a one-time rerun of every step when it lands; schedule it with a batch that reruns everything anyway.",
+   "effort": "small"
+  },
+  {
+   "idea": "Add a machine-wide cap on Lean processes plus a per-process thread cap. Use N slot files under ~/.cache/becoming-lean/slots/, taken with flock (the kernel releases them on exit; the pattern is in experiments/formations-that-read/told-tr7/tr7_run.py:268-276). Acquire the slot before subprocess.run so waiting does not count against LEAN_TIMEOUT. Pass `-j T` to each lean so that N x T is about the CPU budget (today each run is 6 jobs x up to 12 threads: 3912; Lean/Shell.lean:226-229; Lean/Elab/Frontend.lean:152-153). Use the same helper in scratch_build and check_fallible_inquiry. Optionally nice non-landing runs.",
+   "where": "check_becoming.py:4300 and 3912; scratch_build.py:83; check_fallible_inquiry.py run()",
+   "saving": "No CPU saving within one run. It stops concurrent runs from multiplying (today two sessions mean 12 lean processes x 12 threads), makes timings predictable, and makes LEAN_TIMEOUT load reds rarer. The throughput effect at load 30-80 is unmeasured.",
+   "risk": "Low. A hung holder blocks one slot until its own timeout. A step holds one slot and never waits on another, so it cannot deadlock. Too small a -j slows big modules on the 41-deep critical path, so tune it with the timings from S2.",
+   "effort": "small"
+  },
+  {
+   "idea": "Add a per-key in-progress lock: flock CACHE/<key>.lock around reuse, run and store, and call reuse again after acquiring it. Two concurrent runs of the same tree (rehearsal and landing, scratch_build and checker, two members of a train) then compute each step once.",
+   "where": "check_becoming.py:3874-3909 and run() at 4289; scratch_build.py:75",
+   "saving": "The whole duplicate when runs overlap: up to a full cascade (~1,500 lean processes).",
+   "risk": "Low. If the holder's step fails, the waiter reruns it and fails the same way. Locks are taken one at a time in task order, so there is no deadlock.",
+   "effort": "small"
+  },
+  {
+   "idea": "Merge the audit and signatures steps into one driver per module: import M, then `#print axioms` for every declaration, then `#check @thm`. Parse with `lean --json` (Lean/Shell.lean:175), or by message position, so that only #print axioms messages are read as audit results.",
+   "where": "check_becoming.py:4340-4349; the same naming is used in scratch_build.py:126-131 and check_fallible_inquiry.py:164-169",
+   "saving": "383 lean processes, each importing M's closure, per full cascade (about 25% of 1,543), and |U| per landing.",
+   "risk": "Low. Log names and the receipt's lean_steps entries change, so there is one rerun. Keep scratch_build and check_fallible_inquiry on the same naming.",
+   "effort": "small-medium"
+  },
+  {
+   "idea": "Batch the per-module drivers into J processes (about JOBS), each importing a chunk of this run's dirty modules in compile order. Slice the --json output per module and store each slice under that module's existing per-module key. This is sound because #print axioms X traverses only the constants reachable from X (Lean/Util/CollectAxioms.lean:23-42), which lie in X's closure, and imports only add constants. Importing modules jointly adds no new failure mode, because the root Becoming already imports all of them.",
+   "where": "check_becoming.py:4336-4349 and 4381-4393",
+   "saving": "From about 2|U| import processes down to about J per run. For a full cascade that is about 760 processes down to about 6.",
+   "risk": "Medium. A cache entry's log becomes a slice of a combined run, and the receipt must say so. Attribution must be exact (--json).",
+   "effort": "medium"
+  },
+  {
+   "idea": "Fold the per-declaration audit into the environment audit. The environment audit already runs collectAxioms, the same function #print axioms calls (Print.lean:237-251), on every constant of every core-closure module, with a stricter assertion (4413-4416). Have it also print each scanned source declaration's result and assert that each scanned name exists. Every module in the run is in core_closure: the receipt has 386 in compile_order and 386 in core_closure.",
+   "where": "check_becoming.py:3767-3783, 4340-4342, 4381-4393",
+   "saving": "All 386 audit processes per full cascade, and |U| per landing.",
+   "risk": "The checking function is the same, but README step 3 names `#print axioms`, so the stated method changes. Per-module caching of the audit is lost unless the environment audit is made incremental. Modules outside core_closure (inherited, joins) would still need the per-module audit. This is a decision for the checker's maintainer.",
+   "effort": "medium"
+  },
+  {
+   "idea": "Make the environment audit incremental. Run it per chunk of dirty modules and cache each module's CONSTANTS count and AXIOMS lines under a key over that module's closure keys. A module's own constants and their axioms depend only on its closure. Use chunks rather than one process per module, because each process needs `import Lean`; scratch_build.py:18-19 avoids that import for cost.",
+   "where": "check_becoming.py:4351-4354",
+   "saving": "The fixed tail becomes proportional to |U|. It may be unnecessary once the single-pass rewrite lands; measure first.",
+   "risk": "Medium; same attribution care as batching the drivers.",
+   "effort": "medium"
+  },
+  {
+   "idea": "Let the prelude chain reuse identical inputs. For the 32 modules whose closure contains no `import Std` (only GenerativeCore.lean:1 has one, and 353 modules depend on it), the prelude compile reads the same bytes and closure as the main compile. Drop the 'prelude only' tag from the context (4369), so equal inputs give equal keys, or have the prelude task copy the main .olean.",
+   "where": "check_becoming.py:4364-4376",
+   "saving": "Up to 32 compiles per cascade from a low module (about 2% of steps).",
+   "risk": "Low: identical inputs and toolchain, and the cache already assumes outputs do not depend on paths.",
+   "effort": "small"
+  },
+  {
+   "idea": "Remove `import Std` from GenerativeCore. The prelude compile shows it is unneeded on every run (core_compiles_from_prelude: true). Then the source closure and the stripped closure are byte-identical, the prelude chain is the main chain, and the checker can assert that no module in the closure imports Std, Lean or Mathlib.",
+   "where": "GenerativeCore.lean:1; check_becoming.py:4364-4376",
+   "saving": "About 386 compiles per full cascade: about 25% of steps and roughly the elaboration-heavy half of compile work (unmeasured).",
+   "risk": "It changes a foundation module. 467 passed receipts bind its current bytes, and the run requires a passed receipt for the new bytes (4249-4258), which must come from the foundation's own checker. Its 353 dependents recompile once. The docstring says inherited reports are recorded, not changed (lines 7-8). This is a decision with a provenance cost.",
+   "effort": "small code, large decision"
+  },
+  {
+   "idea": "Have scratch_build run every per-module step kind (compile, audit, signatures, prelude) through one task builder shared with check_becoming. The two currently carry duplicated code (scratch_build.py:117-132 vs check_becoming.py:4336-4376), and the drivers must stay byte-identical for keys to match.",
+   "where": "scratch_build.py:117-132; check_becoming.py:4336-4376",
+   "saving": "Moves about 2|U| steps off the landing queue (as in landing 20261101T094230: 375 signatures and 375 prelude compiles). The machine time is the same, but main is blocked for less time.",
+   "risk": "Low with a shared builder; drift if the code stays duplicated.",
+   "effort": "small-medium"
+  },
+  {
+   "idea": "Rehearse each train on its exact merged tree with BECOMING_OUT. store() writes to the shared cache whatever OUT is (3891-3909, 4083-4088), so the landing run then reuses every step, the environment audit and controls included. The bd-boundaries kits already did this (rehearse_bd*.sh).",
+   "where": "Practice, in the gate and train script",
+   "saving": "The landing takes about the preamble (under 1 min) instead of 4-5 min for a full cascade. It is queue time, not machine time.",
+   "risk": "None. If main moves in lean/** between rehearsal and landing, the moved part's dependents rerun.",
+   "effort": "none (process)"
+  },
+  {
+   "idea": "Add a 'receipt still current' tier skip to the gate. Using the checker's own preamble functions (module_index, closure, digests, passed_receipts), compare the committed becoming-verification.json (status passed) against the current tree: source_sha256 for the closure, checker_sha256, lean_binary_sha256, the superseded digests and inherited_receipts. If all are equal, skip the Lean tier, with no Lean run and no new receipt.",
+   "where": "New function in check_becoming.py beside main (4206)",
+   "saving": "The whole Lean tier (about 30-60 s even when everything is reused) for any landing whose checker inputs are unchanged.",
+   "risk": "Low if it reuses the checker's functions; a predicate written separately would drift.",
+   "effort": "small"
+  },
+  {
+   "idea": "Prune the directory walks. In module_index, apply the ARCHIVE exclusion during an os.walk instead of after rglob (3790-3797); this skips 19,580 .lean copies and most of the 73,773 files. In passed_receipts, prune only the checker's own RECEIPT and RETAINED while walking (3993-4013). Do not prune other archive directories there: fallible-inquiry-checks/*/verification.json bind GenerativeCore.",
+   "where": "check_becoming.py:3790-3797, 3993-4013",
+   "saving": "Seconds per run (unmeasured), out of the 28-67 s before the first step completes.",
+   "risk": "Low; the file sets are the same.",
+   "effort": "small"
+  },
+  {
+   "idea": "Restore cached .olean files by hard link instead of read and write. The current receipt's keys cover 772 blobs, 601 MB (half of it prelude). Keep the digest check.",
+   "where": "check_becoming.py:3874-3888",
+   "saving": "About 600 MB of writes per run.",
+   "risk": "Low. Lean writes only the -o paths of steps that run, never restored paths, and any corruption is caught by the digest on the next reuse.",
+   "effort": "small"
+  },
+  {
+   "idea": "Skip empty drivers. The root Becoming declares nothing (4127-4129), yet its audit and signatures drivers each import all 385 modules on every run.",
+   "where": "check_becoming.py:4340-4349",
+   "saving": "2 import-everything processes per run.",
+   "risk": "Negligible; the root's compile already shows it loads.",
+   "effort": "trivial"
+  },
+  {
+   "idea": "Run fresh only on CI and before a push, and spot-check locally. The local gate never sets BECOMING_FRESH (default off, 3843); the weekly fresh run on CI audits the cache (lean.yml:20-21, 38). Optionally rerun a random 1-3% of reused steps fresh at each landing and compare pass/fail and olean digests. This catches cache corruption between pushes, which matters because CI covers only what has been pushed, and pushing is Ren's.",
+   "where": "check_becoming.py reuse() (3874); lean.yml",
+   "saving": "Keeps local landings at cached cost (a fresh run is all 1,544 steps).",
+   "risk": "Between pushes the evidence is unauthenticated cache (README step 4 says so). The spot-check narrows that gap. A fresh run on GitHub's 4-core runner is untimed (lean.yml:30-33); not checked.",
+   "effort": "small"
+  },
+  {
+   "idea": "Set a local cache retention policy. Keep every key named by a committed receipt's lean_steps.keys, because reused logs live only in the cache (docstring 44-47), and evict the rest by age. CI already trims to the keys a run used (lean.yml:70-87).",
+   "where": "New maintenance script; lean.yml:70-87 as the model",
+   "saving": "Disk, not CPU: 34 GB and 139,511 entries now. About 600 MB of new oleans per full cascade, more with development churn.",
+   "risk": "Deleting the only copy of logs that receipts name. They can be regenerated by rerunning, but AGENTS.md's no-deletion rule makes this a decision.",
+   "effort": "small + decision"
+  }
+ ],
+ "lifting_batches": "Scale. 303 of the 382 core modules do not yet state their laws on the grammar (aa-attractor-atlas/PLAN.md:34; 79 of 382 do, :130), and the plan says to lift bottom-up (:320).\n\nCost of a landing. The key scheme makes a landing's core run cost about 4|U|+2 Lean steps, where U is the set of changed modules together with all their transitive dependents. A batch therefore costs as much as its lowest-reaching member, however many modules it carries:\n- Changing any of the 25 lowest modules (Prelude 372 dependents, Grammar 369, GrammarMap 364, GrammarLaws 362, Frame 351, World 331, Witnesses 330, Amounts 326, Renewal 325, Dependence 324, ... down to Space 281) is a near-full run of about 1,450-1,500 steps.\n- The next 20 (Continuation 207 down to Premises 106) cost 430-830 steps.\n- Each of the 112 modules with only the root above them adds about 4 steps to whichever batch carries it.\n- Observed at JOBS=6 between 21 and 28 Oct, a near-full run took 3.6-4.7 min wall. That is before the environment-audit and merged-driver changes.\n\nThe number of core runs is the number of landings, not the number of modules. So:\n\n1. One landing per batch, never one per module. Each batch is developed on its own branch and lands as one train with one core run. When two batches are ready together, a single train checks the union once.\n\n2. Order the batches bottom-up by the import DAG (maximum depth 41). A lift that uses its imports' lifted statements must follow them. A lift that keeps the model law's name and statement (restatement plus lifting theorem; board rule 9 puts the grammar law below and proves the model law from it) needs no edits to dependents; they only recompile. A lift that changes a statement must carry the dependents' edits in the same batch.\n\n3. Base batch first. Put every lift that touches the roughly 25 core modules with more than 200 dependents into one batch, ideally with any grammar-level additions. GenerativeCore and RelationalRenewal are foundation modules, presumably not lifted. This is one full cascade, and the rest can then build on it.\n\n4. Do not edit the grammar modules or Prelude for new grammar-level laws unless a law must sit there. Put a batch's new grammar laws in a new module just above GrammarLaws, imported only by that batch's modules. Its cascade is then that batch's U, not 362-372 modules. If edits to Grammar, GrammarLaws or Prelude are unavoidable, make them all in the base batch.\n\n5. Middle batches: the modules whose imports' lifts have landed. Group modules sharing a subtree, so their U overlap. About 25-40 modules per batch gives roughly 8-12 batches for 303 lifts. That means about 8-12 near-full cascades of about 1,500 lean processes each, against about 303 if each module landed alone. Choose the batch size for review capacity, not build cost: past the first low module in a batch, more modules cost little.\n\n6. The 112 root-only modules go into whichever batch is convenient. Never land one alone: each standalone landing still pays the root's 4 steps, controls and the environment-audit tail (1.3-1.9 min today).\n\n7. Representation theorems are new modules importing a model and the grammar. They cost about 4 steps plus the root, env audit and controls, unless they edit low modules, so they can land in small trains or ride with a batch.\n\nInside a batch:\n- Run `scratch_build.py TREE M` per lifted module. It compiles only M's imports (scratch_build.py:62), so it never rebuilds dependents.\n- Rebuild dependents once, near the end, with `scratch_build.py TREE Becoming`.\n- Then run one rehearsal `check_becoming.py` with BECOMING_OUT on the exact merged train tree. It stores signatures, prelude, the environment audit and controls in the shared cache, so the landing run reuses all of it.\n- Never run the checker per edit. Each edit to a low module followed by a dependents build is another full cascade, and roughly another 600 MB in the cache.\n- Gate the base batch on the env-audit and audit/signatures changes, the -j/slot cap and the per-key lock (S1, S5, S3, S4) landing first: they cut every one of the 8-12 cascades.",
+ "report_md": "## Lean runs for the root unification: structure, cascade, speedups, batches\n\nI only read code. I ran no make, research.py, unittest, check_becoming.py, scratch_build.py, lake or lean, and wrote no files. My evidence:\n- reading check_becoming.py, scratch_build.py, the README, lean.yml, the Lean 4.29.1 sources under ~/.elan and the two memory files;\n- inline Python that parsed import lines (a regex, not the checker's own parser);\n- reading the committed receipts' lean_steps;\n- stat calls on cache entries to time past runs.\n\n### The run (check_becoming.py:4206-4442)\n- **1,544 Lean steps:** 1,543 keyed plus an unkeyed `--version`. lean.yml:30 still says \"About 1,100\".\n  - Per module: compile (386), `#print axioms` audit (386), `#check @` signatures (383), and a prelude-only recompile with `import Std` stripped (386). Built at 4336-4376.\n  - Whole package: EnvironmentAudit (3767-3783, 4351-4354) and Controls (4362).\n- **Keys** (step_key, 3850-3863) hash the toolchain string, the binary's sha256, the label, the step's bytes and its imports' keys, chained by module_keys (3866-3871). A key therefore covers the whole import closure.\n  - Not in the key: the lean argument vector, the toolchain's own Init/Std .olean files, and the checker's bytes.\n- **Cache:** ~/.cache/becoming-lean, shared by all worktrees and tools. Outputs are digest-checked on reuse, and only passed steps are stored (3874-3909, 4303-4307). It holds 34 GB in 139,511 entries locally, with no eviction.\n- **Parallelism exists already:** run_graph (3915-3956) with JOBS = cpu_count//2, 6 here (3912), runs ready tasks by longest dependent chain first.\n  - Each step is its own lean process with LEAN_TIMEOUT 600 s (3845).\n  - No `-j` is passed, so every process uses a hardware-sized thread pool (Lean/Shell.lean:226-229) with Elab.async on (Lean/Elab/Frontend.lean:152-153).\n  - There is no machine-wide cap or lock.\n\n### Cascade\nA change reruns compile, audit, signatures and prelude for the module and every dependent, plus EnvironmentAudit and Controls.\n- Prelude has 372 dependents, Grammar 369, GrammarMap 364, GrammarLaws 362, Frame 351, World 331.\n- A Grammar edit reruns about 1,482 of 1,543 steps.\n- 17 modules have more than 300 dependents and 45 more than 100. 112 modules have only the root above them (about 10 steps each). The longest chain is 41.\n\n### Measured (cache store times against run stamps)\n- Near-full cascades on 21-28 Oct (1,020-1,170 steps ran) took 3.6-4.7 min.\n- Small landings on 1-3 Nov (72-135 steps) took 2.0-3.6 min, of which **EnvironmentAudit is a fixed 80-115 s tail** (38 s vs 118 s, 52 vs 144, 101 vs 215).\n- scratch_build stores only compile and audit results. Landing 20261101T094230 therefore reran 375 signature steps and 375 prelude compiles.\n\n### Speedups, in priority order\n1. **Single-pass environment audit.** The driver rebuilds `env.constants.map₁.toList` over the whole environment once for each of 386 modules (3773-3776). Iterate once, with the same collectAxioms (CollectAxioms.lean:46-49). This likely removes most of the tail; confirm with one timed run. Risk is low.\n2. **Record step durations,** wall and CPU, in the receipt and cache. Nothing is timed today.\n3. **Put the argument vectors into step_key** before adding -j, --json or batching.\n4. **Machine-wide slots plus a per-process -j:** flock slot files (pattern at tr7_run.py:268-276), acquired before the timeout clock starts.\n5. **Per-key in-progress lock,** so concurrent identical runs compute each step once.\n6. **One driver per module for audit and signatures,** parsed with `--json`. Saves 383 processes per full cascade.\n7. **Further batching:**\n   - drivers per dirty chunk, J processes, with per-module result slices;\n   - optionally, fold the audit into the environment audit, which uses the same function (Print.lean:237-251) with a stricter assertion. That one is a method decision.\n8. **Prelude chain:**\n   - The 32 modules that do not depend on GenerativeCore have identical inputs; drop the 'prelude only' tag from their keys (4369).\n   - Larger: GenerativeCore.lean:1 is the only Std import. Removing it merges the two chains (about 386 compiles saved per cascade). It changes a foundation module bound by 467 receipts and needs a new receipt, so it is a decision.\n9. **Shared task builder** so scratch_build runs every per-module step kind.\n10. **Rehearse on the exact merged train tree** with BECOMING_OUT, so the landing reuses everything.\n11. **A 'receipt still current' tier skip** that uses the checker's own preamble functions.\n12. Smaller items:\n   - prune the directory walks (73,773 files walked; 161 MB of JSON read per run);\n   - restore oleans by hard link (601 MB per run);\n   - skip the root's empty drivers;\n   - spot-check reused steps fresh, with the full fresh run left to CI (weekly) and to before a push;\n   - a cache retention policy that keeps receipt-named keys.\n\n### What the Lean tier reads (for a sound path rule)\n- Every `*.lean` under the Lean root outside archive directories. A file there can clash with a module's stem (3794, 3829-3830).\n- Every `*.json` under the Lean root except the checker's own receipt and run folders (passed_receipts 3993-4013; these bind the foundation).\n- check_becoming.py and universal-ethics/generative-capacity/check.py (4216).\n- becoming/lean-toolchain and the Lean binary (4062-4080, 4282).\n- Environment variables: LEAN, BECOMING_*, LEAN_TIMEOUT.\n\nChanges only to other files (for example *.md) cannot change its result. A narrower rule, such as watching only Becoming/*.lean, would be unsound. Inside the tier, the step cache already reruns only what changed.\n\n### Batches\n- One train, one core run per batch.\n- Bottom-up, with the base batch first: all lifts that touch the roughly 25 modules with more than 200 dependents.\n- New grammar laws go in a new module just above GrammarLaws rather than edits to Grammar, GrammarLaws or Prelude.\n- Middle batches of 25-40 modules grouped by subtree, giving 8-12 cascades instead of about 303.\n- Root-only modules ride along with any batch; never land one alone.\n- Inside a batch: scratch-build each target, build dependents once with the root as target, rehearse on the merged tree, then land."
+}

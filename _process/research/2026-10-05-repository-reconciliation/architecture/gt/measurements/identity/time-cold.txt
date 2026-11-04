@@ -1,0 +1,6 @@
+22:09  up 2 days, 13:06, 2 users, load averages: 19.35 17.24 12.13
+real 72.67
+user 60.55
+sys 6.46
+exit 2
+22:10  up 2 days, 13:07, 2 users, load averages: 20.90 18.20 12.92

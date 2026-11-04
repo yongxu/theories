@@ -1,0 +1,8 @@
+records 533, drifted (record, source) pairs 838, Markdown pairs 837, distinct (source, reviewed hash) comparisons 79
+original: 50.1 s; comparisons not in history: 0
+cold: 53.1 s; cache entries written 79, bytes 6323
+warm: 7.6 s (difflib forbidden)
+cold: changed_lines equal for 79 of 79, scoped_drift equal for 838 of 838
+warm: changed_lines equal for 79 of 79, scoped_drift equal for 838 of 838
+non-empty comparisons 29, spans 187; pairs with bearing changes 1, without 837
+exit 0
