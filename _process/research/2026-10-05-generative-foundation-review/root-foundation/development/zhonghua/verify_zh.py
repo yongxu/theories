@@ -187,7 +187,7 @@ def main():
         fail.append('names: a name appears twice')
 
     # 5. the chapter
-    n_q = n_d = n_l = n_dz = n_st = 0
+    n_q = n_d = n_l = n_dz = n_st = n_out = 0
     tot = {}
     for v in counts.values():
         for k, n in v.items():
@@ -219,6 +219,9 @@ def main():
             elif line.startswith('### '):
                 opening = False
             left_out = [s.rstrip('.') for s in re.findall(r'`(Becoming\.[A-Za-z0-9_.]+\.)`', line)] if '省去' in line else []
+            for s in left_out:
+                if s not in spaces and s not in modules:
+                    fail.append('%s: the namespace it says is left out, %s, is not in receipt %s' % (ch.name, s, receipt.parent.name))
             if line.startswith('|'):
                 if left_out:
                     table_ns = left_out[0]
@@ -230,11 +233,12 @@ def main():
                 x = m.group(1).rstrip('.')               # a name ending in a dot names its namespace (a prefix left out)
                 if len(x) < 2 or not IDENT.fullmatch(x) or x in left_out:
                     continue
-                n_d += 1
                 if x in OUTSIDE:
+                    n_out += 1
                     if not OUTSIDE[x].exists():
                         fail.append('%s: %s, named as outside the receipt, is not at %s' % (ch.name, x, OUTSIDE[x]))
                     continue
+                n_d += 1
                 cands = {x, 'Becoming.' + x} | {ns + '.' + x for ns in (section_ns, table_ns) if ns}
                 hits = sorted(c for c in cands if c in known)
                 if not hits:
@@ -294,12 +298,13 @@ def main():
     e_recs = {x for d in P.values() for e in d['entries'] for x in e['records']}
     print('%s: %d files bound; %d judgments, %d flagged; %d entries (%s), %d fragments, %d declarations, %d records; '
           '%d names; '
-          'chapter %s: %d quotations with a source id, %d Lean names, %d record links, %d 对照 lines, %d stated numbers; receipt %s; '
+          'chapter %s: %d quotations with a source id, %d Lean names (each exact) and %d named as off the spine, %d record links, '
+          '%d 对照 lines, %d stated numbers; receipt %s; '
           'periphery declarations: %d'
           % ('FAILED' if fail else 'ok', len(prov['files']), len(rel_ids), n['flagged'],
              n_entries, ', '.join('%s %d' % kv for kv in sorted(tot.items())), n_frag, len(e_decls), len(e_recs),
              len(rows), args.chapter.name,
-             n_q, n_d, n_l, n_dz, n_st, receipt.parent.name, len(used_periphery)))
+             n_q, n_d, n_out, n_l, n_dz, n_st, receipt.parent.name, len(used_periphery)))
     for x in sorted(used_periphery):
         print('  periphery:', x)
     sys.exit(1 if fail else 0)
