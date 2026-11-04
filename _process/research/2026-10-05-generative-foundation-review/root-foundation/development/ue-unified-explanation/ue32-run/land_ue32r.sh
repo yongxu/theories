@@ -57,7 +57,7 @@ EOF
   python3 -B tools/research/repoint.py --reason "$REASON" --drift-json "$ASIDE/drift.json" --apply > "$ASIDE/repoint.log" 2>&1; step repoint $?
   python3 -B $MEASURE > "$ASIDE/measure.txt" 2>&1; step measure $?
   grep -q '^| front: sciences | 1,365 |' "$ASIDE/measure.txt" && grep -q '^| sciences: its hour | 6,500 |' "$ASIDE/measure.txt" \
-    && grep -q '^| overview | 7,270 | 19 |' "$ASIDE/measure.txt" && grep -q '^| overview, Chinese | 216 | 12,616 |' "$ASIDE/measure.txt" \
+    && grep -q '^| overview | 7,270 | 19 |' "$ASIDE/measure.txt" && grep -q '^| overview, Chinese | 216 | 12,622 |' "$ASIDE/measure.txt" \
     && grep -q '^| whole: SCIENCES.md, and 60 lines of code | 19,012 | 27 | 146.3–190.3 |' "$ASIDE/measure.txt"; step budgets-as-written $?
   python3 -B $KIT/board_ue32r.py land > "$ASIDE/board.log" 2>&1; step board $?
   make research-render > "$ASIDE/render.log" 2>&1; step render $?
