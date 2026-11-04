@@ -2317,6 +2317,7 @@
         "experiments/README.md",
         "experiments/formations-that-read/FREEZE-1.md",
         "experiments/formations-that-read/FREEZE-2.md",
+        "experiments/formations-that-read/FREEZE-3.md",
         "experiments/formations-that-read/REST-TR-RR.md",
         "experiments/formations-that-read/REST-TR1.md",
         "experiments/formations-that-read/REST-TR2-TR7.md",
@@ -2358,6 +2359,30 @@
         "theories/becoming/chapters/03-KNOWING.md",
         "theories/becoming/chapters/05-COLLECTIVES.md",
         "theories/becoming/chapters/07-SIGNIFICANCE.md"
+      ]
+    },
+    "experiments/formations-that-read/FREEZE-3.md": {
+      "title": "TR3, frozen",
+      "local_links": [
+        "experiments/README.md",
+        "experiments/formations-that-read/FREEZE-1.md",
+        "experiments/formations-that-read/REST-TR3-TR6.md",
+        "experiments/formations-that-read/told-tr3/ENDPOINTS.json",
+        "experiments/formations-that-read/told-tr3/REVIEW-FREEZE.md",
+        "experiments/formations-that-read/told-tr3/results/dry-run.json",
+        "experiments/formations-that-read/told-tr3/tr3_client.py",
+        "experiments/formations-that-read/told-tr3/tr3_design.py",
+        "experiments/formations-that-read/told-tr3/tr3_dry_run.py",
+        "experiments/formations-that-read/told-tr3/tr3_rule.py",
+        "experiments/formations-that-read/told-tr3/tr3_run.py",
+        "experiments/formations-that-read/told-tr3/write_frozen.py",
+        "experiments/formations-that-read/told/PINS.json",
+        "experiments/formations-that-read/tr3.json",
+        "experiments/formations-that-read/tr3.py",
+        "experiments/formations-that-read/tr8.py",
+        "experiments/formations-that-read/tr_rr.py",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReachedCascade.lean",
+        "theories/becoming/chapters/05-COLLECTIVES.md"
       ]
     },
     "experiments/formations-that-read/REST-TR-RR.md": {
@@ -2422,6 +2447,7 @@
         "experiments/README.md",
         "experiments/direction-installation/README.md",
         "experiments/formations-that-read/DESIGN.md",
+        "experiments/formations-that-read/FREEZE-3.md",
         "experiments/formations-that-read/tr3.json",
         "experiments/formations-that-read/tr3.py",
         "experiments/formations-that-read/tr6.json",

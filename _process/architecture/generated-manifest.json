@@ -252,8 +252,8 @@
     "theories/becoming/results/README.md": "aca37f134b6d479e2e107afacd26e60589f6bb8f169e572cef8b97712815ca40",
     "theories/becoming/results/ARGUMENTS-A-L.md": "9104da86efbffbbd24287ad57f93c5e41972578788e0167d69c627bea8b38759",
     "theories/becoming/results/ARGUMENTS-M-Z.md": "c173e1b2bb39737f52c5fd357019bffc0d7737d688c8e596b2d11ffeaa61170e",
-    "theories/becoming/results/data/lean-index.json": "9d7038662c3dc56296dd20a7b5cda52cef86617899b23bdaa1069f71444012a9",
-    "theories/becoming/results/data/source-index.json": "c9a595aa63681f04cda693eae0328715d908a40980a82c0786d26f12a382771a",
+    "theories/becoming/results/data/lean-index.json": "288ec86b4b98cb4e7bd1bf04b73e3235c744b926047782db9f22775dc659fe47",
+    "theories/becoming/results/data/source-index.json": "1a6c166b1033b3229210228b6e78ee40d20f3744cadd84af485216fe08c4b06a",
     "theories/becoming/results/LEAN-INDEX.md": "81819d8d55a5c3befe8c3db5aadcb757457ad9984ecacd631eabc25cfe1ae7dc",
     "theories/becoming/results/LEAN-DECLARATIONS.md": "f79914fd5a1edd2e764b0d21e7912920dfce3c5740ea85ba3a66f2311eed709a",
     "theories/becoming/results/lean-declarations/becoming-core.md": "995534a57ed624bae3ce8875833413a61dc9d01cfe5705feb250b86465e32f2a",
@@ -540,7 +540,7 @@
     "theories/becoming/results/records/the-present-on-causal-set-growth.md": "e1ed4a4d6966770c0af44e3d685cc3a661c4314f65bf0a04beea02f2170d65a8",
     "theories/becoming/results/records/reorderings-as-courses-of-growth.md": "87ff08337be160874bef157ec97451abd9494ec5d734cc3223e9aab7aaf330f7",
     "theories/becoming/results/records/the-world-represented-both-ways.md": "34157a0b5a1cff94c7e3cfcf20ae6728a24206bc0b1e58a59937903137e1d16a",
-    "theories/becoming/results/records/readers-reading-readers.md": "27c7b737ce37b6e93612e77c061ef0c2216174acac4afd21df2ea17c64935938",
+    "theories/becoming/results/records/readers-reading-readers.md": "0dd679cc5bdb44c5d621e8195c789014fb92771a71d286fa02a3b19d9a01f620",
     "theories/becoming/results/records/what-choices-show-of-an-order.md": "7eb9fdc08a3792c3b1dd8e1a9b0fc4a2f155f7667ff06a892658dce2c146463a",
     "theories/becoming/results/records/what-readings-fix-of-the-unread.md": "f9c383dc8b2159ae488c9c298331cfadc27861d32111595f3975cf1370451d4c",
     "theories/becoming/results/records/processes-represented-both-ways.md": "084f5c732b08e6f51514db3c8eb9d7a657fc86bf360bf7f060e27ebaad2d324c",
@@ -596,6 +596,6 @@
     "theories/becoming/results/records/shaping-selected-among-groups.md": "6d3eac158dfd0250904fcb996ff8d096645aa828f85c699135cc75ba42e07360",
     "theories/becoming/results/records/coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it.md": "7206e4d3a5314cf11b3f40a322e67b80e17c45d4c61a4db458a6c654bf613908",
     "theories/becoming/results/records/unequal-groups-not-decided-by-the-spread-among-groups.md": "0eeeb7065b133cf5d4c0ed66155046df84c013b167253a4c2d75a173e18099e9",
-    "theories/becoming/results/records/a-cascade-at-the-histories-reached.md": "c445b01754bd2f6809bba0d45df9748efa80850f7ea06e196cbdab0a69870986"
+    "theories/becoming/results/records/a-cascade-at-the-histories-reached.md": "ea38a133a8dbf15ca6d719e16d3ef59bb3f114bd8369e5bc1f5c2dbb21347566"
   }
 }

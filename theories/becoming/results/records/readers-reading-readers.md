@@ -48,7 +48,7 @@ Canonical source: [Cascade.lean](../../../../experiments/integrated-correction/g
 <a id="next--下一步"></a>
 ## Next
 
-The probabilistic form, a cascade once public evidence outweighs every private signal; a test of where sequential choosers meet the premise at the histories reached (the plan's TR3, resting on a-cascade-at-the-histories-reached), a named probabilistic model's timing judged apart; review by a person.
+The probabilistic form, a cascade once public evidence outweighs every private signal; a run of the frozen test of where sequential choosers meet the premise at the histories reached (TR3, resting on a-cascade-at-the-histories-reached), a named probabilistic model's timing judged apart; review by a person.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -89,6 +89,7 @@ Aliases: `readers reading readers`, `读者读读者`, `a cascade`, `级联`, `B
 - 29 October 2026: added (RF round 1), readers reading readers: from a cascade on, a pool's acts carry no more than the couplings of the members before it; a member carrying its coupling; copying; after a review of the plan, a review of the Lean and a cold read of the texts; study section 446.
 - 31 October 2026, board item RF, the tests' designs (study section 476): the next step names its test as designed, TR3 in experiments/formations-that-read, which can refute at most the bridge that sequential choosers meet the premise at the histories reached, never the law; no statement or declaration changed. PLAN.md re-pointed: since this record's reviewed hash the plan changed only where the tests' readers found it misstating the Lean (§3, §4, §8, §11, §12) and in §10, the tests; read against this record before re-pointing, nothing it says changed.
 - 4 November 2026, board item TRL: the lemma the next step named is stated, a-cascade-at-the-histories-reached, with the premise asked only at the histories a world reaches and weaker by a witness; this record's statement and declarations unchanged, its next step and related list updated.
+- 4 November 2026, board item RFZ: the test TR3 frozen before any call to a model (experiments/formations-that-read/FREEZE-3.md), its walk following the act a member ignores its draw with and resting on a-cascade-at-the-histories-reached; not run. The law is unchanged; next_delta's step is now the frozen test's run, which waits on Ren's yes.
 
 </details>
 
