@@ -10,8 +10,8 @@
   "family": "F01",
   "reviewed_at_utc": "2026-10-21T22:12:39+00:00",
   "statement": {
-    "en": "Every one of the 5,673 judgments of 《中华思想脉络》 v1.0 is read against the spine: 3,499 bear on its structures, each placed once, in 1,300 checked entries (453 agreements, 647 exact scopes, 200 divergences). 449 classical names, one per concept, state the theory in the 中华本《变化论》.",
-    "zh": "《中华思想脉络》v1.0 的 5,673 条判断逐条对照脊柱：3,499 条关乎其结构，各落一处，成 1,300 个已检查条目（相合 453、定域 647、相分 200）；449 个古典之名，每概念一个，写成中华本《变化论》。"
+    "en": "Every one of the 5,673 judgments of 《中华思想脉络》 v1.0 is read against the spine: 3,499 bear on its structures, each placed once in its flagged cluster, in 1,300 checked entries (453 agreements, 647 exact scopes, 200 divergences). 449 classical names, one per concept, state the theory in the 中华本《变化论》.",
+    "zh": "《中华思想脉络》v1.0 的 5,673 条判断逐条对照脊柱：3,499 条关乎其结构，各在所标之簇恰落一处，成 1,300 个已检查条目（相合 453、定域 647、相分 200）；449 个古典之名，每概念一个，写成中华本《变化论》。"
   },
   "hypotheses": [
     {
@@ -39,6 +39,11 @@
       "en": "That a divergence of standing (a text asserting what the theory gives only under the continuation condition) shows the text wrong; the theory asserts no ethical axiom.",
       "zh": "地位的相分（原文断言理论只在延续条件之下给出者）说明原文错了；理论不断言伦理公理。",
       "kind": "non-implication"
+    },
+    {
+      "en": "That a judgment flagged for one cluster lies in no other: 96 are placed in other clusters too, 6 of them kept in one and rejected in another, not yet decided; placements outside a judgment's flagged cluster are not checked.",
+      "zh": "所标之判断不落于他簇：96 条另落他簇，其中 6 条在一簇取而在他簇不取，尚未判定；判断在所标之簇以外落几处，未经检查。",
+      "kind": "scope"
     }
   ],
   "counterexamples": [],
@@ -50,8 +55,8 @@
     "nondual-method-not-proof"
   ],
   "validation_scope": {
-    "en": "verify_zh.py passes: the import (438 files by SHA-256), one verdict per judgment, each flagged one placed once, every fragment verbatim, 1495 declarations in the current receipt, 196 records, the name table, and both chapters' quotations, declarations, links, 对照 kinds and tables. Each entry had three readings (mapper, reviser, independent checker); the 中华本 was reviewed as one book three times. All readers were AI; no collation with a printed edition.",
-    "zh": "verify_zh.py 通过：导入（438 个文件以 SHA-256 绑定）、每条判断一个分拣裁定、每条所标判断恰落一处、每个片段在其冻结原文中逐字可见、1495 个声明在现行回执中、196 份记录、名表（锚为现行之名、引文逐字、简化后无重），以及两章的引文、声明、记录链接与生成之表。每个条目经三读（映射者、以现行主干重读的修订者、独立检查者）；中华本各篇起草后经对抗审读改为精确修改。读者都是 AI；未与刻本对校。"
+    "en": "verify_zh.py passes: the import (438 files by SHA-256), one verdict per judgment, each flagged one placed once in its flagged cluster (placements in other clusters not checked), every fragment verbatim, 1495 declarations in the current receipt, 196 records, the name table, and both chapters' quotations, declarations, links, 对照 kinds and tables. Each entry had three readings (mapper, reviser, independent checker); the 中华本 was reviewed as one book three times. All readers were AI; no collation with a printed edition.",
+    "zh": "verify_zh.py 通过：导入（438 个文件以 SHA-256 绑定）、每条判断一个分拣裁定、每条所标判断在所标之簇恰落一处（他簇之落处未查）、每个片段在其冻结原文中逐字可见、1495 个声明在现行回执中、196 份记录、名表（锚为现行之名、引文逐字、简化后无重），以及两章的引文、声明、记录链接与生成之表。每个条目经三读（映射者、以现行主干重读的修订者、独立检查者）；中华本各篇起草后经对抗审读改为精确修改。读者都是 AI；未与刻本对校。"
   },
   "next_delta": {
     "en": "The gaps the texts raise, each to be claimed before it is written: witnesses that are functions of one another; measures of a juncture; a pool weighted by share. Then the three RO and 易传 kinds decided in the chapter written into those maps.",
@@ -464,6 +469,10 @@
     {
       "en": "22 October 2026 (WL, study section 346, D63): the name table's seventh pass adds 文 and 文同 (449 names) and revises others against 文理生生's sources; the 中华本 gains 一·二十一; the map entry xici-ji-qi-shu reads 「极其数」 as the yarrow count only, with the bound laws as a contrast, as xici-can-wu-cuo-zong and 一·二十一 do; see wenli-on-the-spine.",
       "zh": "2026年10月22日（WL，研究第 346 节，D63）：名表第七次之改立文与文同（449 个名），并据文理生生之出处修订他名；中华本增一·二十一；对应表条目 xici-ji-qi-shu 读「极其数」只为揲蓍之数，有界之律只作对照，与 xici-can-wu-cuo-zong 及一·二十一同；见 wenli-on-the-spine。"
+    },
+    {
+      "en": "4 November 2026 (AA, erratum E4): 'each placed once' is scoped to the cluster each judgment was flagged for, which is what verify_zh.py checks; a recount of coverage.json and passages.json finds 96 of the 3,499 placed in other clusters too (3,600 placements), 6 of them kept in one cluster and rejected in another, now a does-not-show item. No count, kind or entry changed.",
+      "zh": "2026年11月4日（AA，勘误 E4）：“各落一处”限于各判断所标之簇，即 verify_zh.py 所查；据 coverage.json 与 passages.json 重数，3,499 条中 96 条另落他簇（共 3,600 处），其中 6 条在一簇取而在他簇不取，今列入不能说明之项。计数、类别与条目均未改。"
     }
   ]
 }
