@@ -23,7 +23,8 @@ generalization to an unseen content, reported apart. The changed share (an unrea
 under S1 with the contents matched, the misled share of a reader whose class reads the content alone. Nothing is
 tested: every share is reported with its seeds, no verdict.
 
-Forbidden cases, counted at every pair of occasions of every training (the chain, Becoming.Unread):
+Forbidden cases, counted in every training (the chain, Becoming.Unread; F1 and F2 at every pair of occasions, F3 at
+every unread occasion):
   F1, acts apart with states exactly equal (state_apart_of_acts_apart: the act reads the state alone);
   F2, states apart with inputs equal (coupling_apart_of_state_apart: the state reads the input alone);
   F3, for the content-only network, an unread occasion acting otherwise than a read occasion of the same content
@@ -31,8 +32,8 @@ Forbidden cases, counted at every pair of occasions of every training (the chain
 Each holds by the code's construction; met, it shows a fault of the implementation, and the run records it.
 
 The run is deterministic: pure Python, seeded, its floating point the platform's IEEE double. A run stopped part way
-leaves nothing and is begun again from nothing; it writes results/run.json once, atomically, and refuses where one is
-there. It refuses unless every file FROZEN.sha256 lists has its bytes, is committed and unchanged, and the platform is
+leaves no readout (at most a run.json.tmp, written over by the next run) and is begun again from nothing; it writes
+results/run.json once, atomically, and refuses where one is there. It refuses unless every file FROZEN.sha256 lists has its bytes, is committed and unchanged, and the platform is
 the one PLATFORM names."""
 import argparse
 import hashlib
@@ -48,9 +49,11 @@ from fractions import Fraction as Fr
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-ROOT = HERE.parents[1]
+ROOT = HERE.parents[2]           # the repository's root: FROZEN.sha256 lists paths from it
 RESULTS = HERE / 'results'
 FROZEN = HERE / 'FROZEN.sha256'
+REQUIRED = ['experiments/formations-that-read/train-tr2a/tr2a.py', 'experiments/formations-that-read/train-tr2a/tr2a_dry_run.py',
+            'experiments/formations-that-read/train-tr2a/results/dry-run.json', 'experiments/formations-that-read/tr2.py']
 sys.path.insert(0, str(HERE.parent))
 import tr2  # noqa: E402  Stage 0: coverage_exact, the expected coverage by lumping and schedule
 
@@ -228,14 +231,15 @@ def measure(arch, sched, seed, net, occ, read, vec, cact, inputs_fn=inputs):
             n['covered'] += 1
         elif u[1] in seen:
             n['uncovered, content read'] += 1
-            n['twin at the cue'] += fits and other
+            n['twin at the cue'] += other
         else:
             n['uncovered, content unread'] += 1
             n['unseen content changed'] += other
     return {'arch': arch, 'schedule': sched, 'seed': seed, 'read': len(read), 'unread': len(unread),
             'fits the readings': fits, 'read acts wrong': sum(a[o] != cact[o[1]] for o in read),
             'links': links, 'output shift at the pairs': {'mean': sum(shift) / len(shift) if shift else None,
-                                                          'max': max(shift) if shift else None}, **n,
+                                                          'max': max(shift) if shift else None},
+            **dict(n, **{'twin at the cue': n['twin at the cue'] if fits else None}),
             'forbidden': {'F1': f1, 'F2': f2, 'F3': f3}}
 
 
@@ -254,7 +258,8 @@ def summary(rows, r=R, rho=RHO):
         def share(key, den='unread'):
             return [str(Fr(x[key], x[den])) if x[den] else None for x in rs]
         cov = share('covered')
-        tw = share('twin at the cue', 'uncovered, content read')
+        tw = [str(Fr(x['twin at the cue'], x['uncovered, content read']))
+              if x['twin at the cue'] is not None and x['uncovered, content read'] else None for x in rs]
         num = [Fr(v) for v in cov if v is not None]
         shifts = [x['output shift at the pairs']['max'] for x in rs if x['output shift at the pairs']['max'] is not None]
         out[f'{c}, {arch}, {s}'] = {
@@ -265,6 +270,7 @@ def summary(rows, r=R, rho=RHO):
             'twin at the cue, each seed (of the uncovered occasions whose content is read)': tw,
             'twin at the cue, median': median(tw),
             'trainings with a twin at the cue': sum(1 for x in rs if x['twin at the cue']),
+            'trainings not fitting the readings (no twin counted)': sum(1 for x in rs if not x['fits the readings']),
             'unseen content changed, each seed': share('unseen content changed', 'uncovered, content unread'),
             'links, summed': {k: sum(x['links'][k] for x in rs) for k in rs[0]['links']},
             'output shift at the pairs, largest': max(shifts) if shifts else None,
@@ -285,9 +291,10 @@ def sha(p):
     return hashlib.sha256(Path(p).read_bytes()).hexdigest()
 
 
-def frozen_check(frozen=FROZEN, root=ROOT):
-    """The freeze's files: each FROZEN.sha256 line's file has that sha256, and is committed with no change; FROZEN.sha256
-    itself is committed. Returns the listed {path: sha256}."""
+def frozen_check(frozen=FROZEN, root=ROOT, required=REQUIRED):
+    """The freeze's files: FROZEN.sha256 lists every required file, each line's file has that sha256 and is committed
+    with no change, and FROZEN.sha256 itself is committed, in one commit only (a second commit of it would make a new
+    freeze). Returns the listed {path: sha256}, with the commit that added FROZEN.sha256 and HEAD."""
     if not frozen.exists():
         raise SystemExit(f'refused: no {frozen.name}; the freeze is not committed')
     listed = {}
@@ -295,6 +302,9 @@ def frozen_check(frozen=FROZEN, root=ROOT):
         if line.strip():
             h, p = line.split(None, 1)
             listed[p] = h
+    missing = [p for p in required if p not in listed]
+    if missing:
+        raise SystemExit(f'refused: FROZEN.sha256 does not list {missing}')
     paths = [str(frozen.relative_to(root))] + list(listed)
     for p, h in listed.items():
         if not (root / p).exists() or sha(root / p) != h:
@@ -304,14 +314,20 @@ def frozen_check(frozen=FROZEN, root=ROOT):
                              capture_output=True, text=True)
     if git.returncode or git.stdout.strip() or tracked.returncode:
         raise SystemExit('refused: a frozen file is uncommitted or changed:\n' + (git.stdout or tracked.stderr))
-    return listed
+    rel = str(frozen.relative_to(root))
+    commits = subprocess.run(['git', '-C', str(root), 'rev-list', 'HEAD', '--', rel], capture_output=True,
+                             text=True).stdout.split()
+    if len(commits) != 1:
+        raise SystemExit(f'refused: {rel} has {len(commits)} commits; the freeze is the one that added it')
+    head = subprocess.run(['git', '-C', str(root), 'rev-parse', 'HEAD'], capture_output=True, text=True).stdout.strip()
+    return dict(listed, **{'(the freeze commit)': commits[0], '(HEAD)': head})
 
 
 def platform_check(want=PLATFORM):
     have = {'python': '%d.%d' % sys.version_info[:2], 'machine': platform.machine(), 'system': platform.system()}
     if have != want:
         raise SystemExit(f'refused: the platform is {have}, the freeze names {want}')
-    return dict(have, version=platform.python_version())
+    return dict(have, version=platform.python_version(), platform=platform.platform())
 
 
 def durable(path, data):

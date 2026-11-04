@@ -1,6 +1,6 @@
 # TR2 and TR7: the full design
 
-*Part of [the designs of RF's tests](DESIGN.md): the exact tables, the power check, rivals, usage and references for TR2 and TR7. AI-written, not yet reviewed by a person. TR2's Stage B is frozen in [FREEZE-7](FREEZE-7.md) (4 November 2026), with the changes its section 12 lists, and TR7 in [FREEZE-4](FREEZE-4.md) (the same day), with the changes its section 11 lists; nothing has run.*
+*Part of [the designs of RF's tests](DESIGN.md): the exact tables, the power check, rivals, usage and references for TR2 and TR7. AI-written, not yet reviewed by a person. TR2's Stage B is frozen in [FREEZE-7](FREEZE-7.md) (4 November 2026), with the changes its section 12 lists, its Stage A in [FREEZE-11](FREEZE-11.md) (5 November 2026), with the choices its section 7 lists, and TR7 in [FREEZE-4](FREEZE-4.md) (the same day), with the changes its section 11 lists; nothing has run.*
 
 ## What the law states, checked against the Lean
 
@@ -339,7 +339,7 @@ Checked as stated: in the repository's texts, or from knowledge with authors, ye
 - Needham, Edkins, Pimpale, Bartsch and Hobbhahn (2025), *Large Language Models Often Know When They Are Being Evaluated*, arXiv:2505.23836. Cited in RF's plan: verbal recognition of evaluation, an act on another occasion in TR2's terms.
 - Nguyen, Hoang, Attubato and Hofstätter (2025), *Probing Evaluation Awareness of Language Models*, arXiv:2507.01786. Linear probes separating evaluation from deployment prompts: TR2's probe method [figures to be checked].
 - Li and others (2026), EvalAwareBench, arXiv:2605.23055, cited in RF's [second opinion on the literature](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/SECOND-OPINION-LITERATURE.md): cue factors toggled with the request fixed; recognition mostly without a change of behaviour, the chain's failed converse [not verified here; to be checked, with its licence, before any use].
-- Hubinger and others (2024), *Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training*, arXiv:2401.05566. A twin installed by training and kept through training that lacks the trigger: consistent with `twin_selected`, which says nothing of what training reaches (TR2's Stage A measures that, reported only).
+- Hubinger and others (2024), *Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training*, arXiv:2401.05566. A twin installed by training and kept through training that lacks the trigger: consistent with `twin_selected`, which says nothing of what training reaches (TR2's Stage A, frozen in [FREEZE-11](FREEZE-11.md), measures that, reported only).
 - Greenblatt, Shlegeris, Sachan and Roger (2024), *AI Control: Improving Safety Despite Intentional Subversion*, ICML 2024, arXiv:2312.06942. Rare random attacks against sampled auditing: [AI reading] the many-stage counterpart of the fresh-draw law.
 - Cover and Thomas (2006), *Elements of Information Theory*, 2nd ed.: the data-processing inequality, the chain's probabilistic form, outside `Unread`.
 

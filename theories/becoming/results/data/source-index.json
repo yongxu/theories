@@ -2316,6 +2316,7 @@
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/tests/amend_next_delta.py",
         "experiments/README.md",
         "experiments/formations-that-read/FREEZE-1.md",
+        "experiments/formations-that-read/FREEZE-11.md",
         "experiments/formations-that-read/FREEZE-2.md",
         "experiments/formations-that-read/FREEZE-3.md",
         "experiments/formations-that-read/FREEZE-4.md",
@@ -2364,6 +2365,19 @@
         "theories/becoming/chapters/03-KNOWING.md",
         "theories/becoming/chapters/05-COLLECTIVES.md",
         "theories/becoming/chapters/07-SIGNIFICANCE.md"
+      ]
+    },
+    "experiments/formations-that-read/FREEZE-11.md": {
+      "title": "Freeze 11: TR2's Stage A, small networks trained on the read occasions",
+      "local_links": [
+        "experiments/formations-that-read/DESIGN.md",
+        "experiments/formations-that-read/FREEZE-7.md",
+        "experiments/formations-that-read/REST-TR2-TR7.md",
+        "experiments/formations-that-read/tr2.py",
+        "experiments/formations-that-read/train-tr2a/results/dry-run.json",
+        "experiments/formations-that-read/train-tr2a/tr2a.py",
+        "experiments/formations-that-read/train-tr2a/tr2a_dry_run.py",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Unread.lean"
       ]
     },
     "experiments/formations-that-read/FREEZE-3.md": {
@@ -2461,6 +2475,7 @@
         "experiments/commons-llm-feedback-resolved/README.md",
         "experiments/drain-beyond-the-reward/DESIGN.md",
         "experiments/formations-that-read/DESIGN.md",
+        "experiments/formations-that-read/FREEZE-11.md",
         "experiments/formations-that-read/FREEZE-4.md",
         "experiments/formations-that-read/FREEZE-7.md",
         "experiments/formations-that-read/tr2.json",

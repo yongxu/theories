@@ -1,15 +1,18 @@
 {
  "the plan": {
-  "trainings": 240,
+  "trainings": true,
   "distinct": true,
+  "the linear act: 32 contents act 1": true,
+  "the xor act: 26 contents act 1": true,
   "no seed of the plan below SEED_BASE (seeds 0 to 3 were trained in development)": true,
-  "content vectors sha256": "d5f8b9545715c148e1013fd7189cfd1a5076b1ac436533955e40c95bf2d90e77",
-  "linear act ones": 32,
-  "xor act ones": 26
+  "content vectors sha256": "d5f8b9545715c148e1013fd7189cfd1a5076b1ac436533955e40c95bf2d90e77"
  },
  "schedules": {
-  "S1": {
-   "reads, each seed": [
+  "S1 is the cue-up occasions, every seed": true,
+  "S3 holds every cue-up occasion, every seed": true,
+  "S2 and S3 draw differently at every seed": true,
+  "reads, each seed": {
+   "S1": [
     192,
     192,
     192,
@@ -31,12 +34,7 @@
     192,
     192
    ],
-   "S1 is the cue-up occasions": true,
-   "S3 holds every cue-up occasion": true,
-   "seeds give different draws": true
-  },
-  "S2": {
-   "reads, each seed": [
+   "S2": [
     190,
     200,
     177,
@@ -58,12 +56,7 @@
     174,
     191
    ],
-   "S1 is the cue-up occasions": true,
-   "S3 holds every cue-up occasion": true,
-   "seeds give different draws": true
-  },
-  "S3": {
-   "reads, each seed": [
+   "S3": [
     241,
     234,
     238,
@@ -84,10 +77,7 @@
     244,
     240,
     235
-   ],
-   "S1 is the cue-up occasions": true,
-   "S3 holds every cue-up occasion": true,
-   "seeds give different draws": true
+   ]
   }
  },
  "forbidden cases": {
@@ -99,7 +89,7 @@
  "planted twin": {
   "under S1, a twin at every uncovered occasion": true,
   "and its acts apart at every pair": true,
-  "under S2 it acts otherwise at read cue-down occasions, so fits nothing and is no twin": true,
+  "under S2 it acts otherwise at read cue-down occasions, so fits nothing and no twin is counted": true,
   "none under the content-only input": true
  },
  "coverage": {
@@ -118,18 +108,17 @@
  },
  "refusals": {
   "no FROZEN.sha256: refused": true,
-  "committed and unchanged: read": true,
+  "committed and unchanged: read, with the freeze commit": true,
+  "a required file not listed: refused": true,
   "a frozen file changed: refused": true,
   "FROZEN.sha256 itself uncommitted: refused": true,
+  "a listed file missing: refused": true,
   "a listed file not committed: refused": true,
+  "FROZEN.sha256 committed twice: refused": true,
+  "the real paths are read from the repository root": true,
   "another platform: refused": true,
   "python3 -O: refused": true
  },
- "time": {
-  "one training at the plan's sizes, seconds": 0.79,
-  "the plan's trainings": 240,
-  "projected seconds": 190
- },
  "ok": true,
- "checks": 27
+ "checks": 37
 }
