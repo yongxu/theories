@@ -16,9 +16,9 @@
   "experiments/formations-that-read/told-tr3/tr3_rule.py": "f1e9c4c7468267d36a9b11bf53d583f838f218f71f3929469e8aad2a5b0b2c8c",
   "experiments/formations-that-read/told-tr3/tr3_run.py": "9ceabbd59652dbc1d63a04f64ee14863e8801aa35e8b06f746085166e42e8c7f",
   "experiments/formations-that-read/told-tr6/tr6_design.py": "c43bef55c1d452105b46d89aa9cd94844ac842512f9b952089abeb3156e86345",
-  "experiments/formations-that-read/told-tr6/tr6_dry_run.py": "5847cb5cee030c13bcd21a41d84a879b3412ab7ae02053f496663cdaab44c661",
-  "experiments/formations-that-read/told-tr6/tr6_rule.py": "6fdf0504eb8759b3362e763fa524957f4a3b22a9192987c63213aeb5141ffcfa",
-  "experiments/formations-that-read/told-tr6/tr6_run.py": "b39046cb453f5f07b655cad96b12d39742bc13775f97ad694912dacc6a75b128",
+  "experiments/formations-that-read/told-tr6/tr6_dry_run.py": "1e93840baa4be412e9b77ae4e5af0f8dc013eea997297da5aae03e301cc7f192",
+  "experiments/formations-that-read/told-tr6/tr6_rule.py": "37c55222f398ea210ea1c1807c7aa83279fa245729c4e37fd32f8d4877fc7b1a",
+  "experiments/formations-that-read/told-tr6/tr6_run.py": "7196573787446aee9be1394f34ea7d829b0767dc520210508d3b39faffb64376",
   "experiments/formations-that-read/told-tr6/write_frozen.py": "5aeaf00b5a176192ae99e4433bcfc95a6ec616d69de9367ce3fad7272c3b7676",
   "experiments/formations-that-read/tr6.json": "12bca81d50d35a8a0fc483550086b02ccccb73dd233b1d8448f39c4eb4e378e2",
   "experiments/formations-that-read/tr6.py": "13b91665f222ddad9e3d5860f1b748a6bd3bba9995729afd49c7f913e9d0cd3e",
@@ -469,9 +469,11 @@
   "a run stopped in its last round: its seeds' contexts partial, no self-check failure": true,
   "a run stopped before its loops: each framing partial, V2 partial": true,
   "one probe record dropped: that framing's reading partial": true,
-  "a log cut short, its last line half written: refused, then moved by FREEZE-1's note and read, the last call unread": true,
-  "a log cut short, its last line whole with no newline: refused, then moved by FREEZE-1's note and read, the last call unread": true,
-  "a catalog read cut short: refused, then moved with a read naming no snapshot in its place, the calls since the read before it no longer read": true,
+  "a log cut short, its last line half written: refused, then mended as FREEZE-1's note says and read, the last call unread, the moved line and its note reported": true,
+  "a log cut short, its last line cut inside a character: refused, then mended as FREEZE-1's note says and read, the last call unread, the moved line and its note reported": true,
+  "a log cut short, its last line whole with no newline: refused, then mended as FREEZE-1's note says and read, the last call unread, the moved line and its note reported": true,
+  "a catalog read cut short: refused, then mended with a read naming no snapshot in its place, at the largest t1; exactly the calls that ended after the last whole read no longer read": true,
+  "a catalog read cut short after a whole read, no call between: refused, then moved with nothing in its place, every call read as before": true,
   "a folder whose log files are empty, as a run stopped before its first read leaves it, is whole": true,
   "a line holding U+2028 raw, refused": true,
   "the line writer: no log holds U+2028, U+2029 or U+0085 raw, and every record reads": true,
@@ -1313,6 +1315,10 @@
    "mean mismatching rounds A / B, of the tables read": [
     2.95,
     3.12
+   ],
+   "mean share of answers replaying the same presentation's, where the presentations differ, A / B": [
+    0.746,
+    0.756
    ]
   },
   "answers fixed by the prompt, as at temperature 0, reading no course: near the threshold (within 5 points) a member dissents with chance 0.05 a prompt, lake": {
@@ -1322,6 +1328,10 @@
    "mean mismatching rounds A / B, of the tables read": [
     3.15,
     3.11
+   ],
+   "mean share of answers replaying the same presentation's, where the presentations differ, A / B": [
+    0.801,
+    0.821
    ]
   },
   "answers fixed by the prompt, as at temperature 0, reading no course: near the threshold (within 5 points) a member dissents with chance 0.1 a prompt, join": {
@@ -1331,6 +1341,10 @@
    "mean mismatching rounds A / B, of the tables read": [
     6.18,
     6.49
+   ],
+   "mean share of answers replaying the same presentation's, where the presentations differ, A / B": [
+    0.734,
+    0.724
    ]
   },
   "answers fixed by the prompt, as at temperature 0, reading no course: near the threshold (within 5 points) a member dissents with chance 0.1 a prompt, lake": {
@@ -1340,6 +1354,62 @@
    "mean mismatching rounds A / B, of the tables read": [
     6.76,
     6.28
+   ],
+   "mean share of answers replaying the same presentation's, where the presentations differ, A / B": [
+    0.759,
+    0.799
+   ]
+  },
+  "the same at chance 0.05, frame-deaf: arm A's frame moves no answer, join": {
+   "void": 0.2533,
+   "tables read": 224,
+   "V2 contradicted, of the tables read": 0.0045,
+   "mean mismatching rounds A / B, of the tables read": [
+    11.55,
+    3.25
+   ],
+   "mean share of answers replaying the same presentation's, where the presentations differ, A / B": [
+    1.0,
+    0.732
+   ]
+  },
+  "the same at chance 0.05, frame-deaf: arm A's frame moves no answer, lake": {
+   "void": 0.2567,
+   "tables read": 223,
+   "V2 contradicted, of the tables read": 0.1211,
+   "mean mismatching rounds A / B, of the tables read": [
+    0.85,
+    3.13
+   ],
+   "mean share of answers replaying the same presentation's, where the presentations differ, A / B": [
+    1.0,
+    0.791
+   ]
+  },
+  "inertia 0.1 with the same dissent at chance 0.05, the frame read, join": {
+   "void": 0.3167,
+   "tables read": 205,
+   "V2 contradicted, of the tables read": 0.2927,
+   "mean mismatching rounds A / B, of the tables read": [
+    3.78,
+    8.17
+   ],
+   "mean share of answers replaying the same presentation's, where the presentations differ, A / B": [
+    0.76,
+    0.737
+   ]
+  },
+  "inertia 0.1 with the same dissent at chance 0.05, the frame read, lake": {
+   "void": 0.2867,
+   "tables read": 214,
+   "V2 contradicted, of the tables read": 0.9953,
+   "mean mismatching rounds A / B, of the tables read": [
+    3.81,
+    20.96
+   ],
+   "mean share of answers replaying the same presentation's, where the presentations differ, A / B": [
+    0.788,
+    0.737
    ]
   },
   "fewest arm B mismatching rounds of 55 contradicting V2": {

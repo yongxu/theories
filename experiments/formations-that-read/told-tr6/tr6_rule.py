@@ -28,8 +28,9 @@ ALPHA, and not contradicted otherwise (no support is claimed: the course then ad
 test resolves beyond the withheld frame's, whose own mismatches nothing bounds; the share of rounds
 whose count is the table's, along which a loop is the table's orbit, is reported). A verdict is
 partial where a call it reads was not read: V1's reading where a probe was not, V2 and the loops'
-reports where a loop is not whole. Members' departures from their own table
-decisions are a diagnostic with no verdict. The Lean's forbidden cases are reported for the loops from
+reports where a loop is not whole. Members' departures from their own table decisions are a
+diagnostic with no verdict, and so is the share of loop answers that are the same presentation's
+offline answer, which says whether arm A's frame redraws a dissenting answer or replays it. The Lean's forbidden cases are reported for the loops from
 0; one in a seed whose every count is the table's would be the table's own orbit breaking a theorem,
 which only a fault in this code can give: a self-check of the rule against the Lean. From a second
 start they are reported against the candidate lemma, not judged.
@@ -205,6 +206,26 @@ def individual(seeds, dec):
             "verdict": "none (a diagnostic of a stronger premise than the Lean's)"}
 
 
+def replays(seeds, offline):
+    """Reported only: per arm, the share of loop answers from round 1 on, in the rounds read, that are the
+    member's own offline answer in the same presentation at the forecast published, over all of them and
+    over those where the five offline answers there are not all alike. At temperature 0 a prompt whose
+    difference from the table's request moves no answer gets that answer again, so arm A's share there
+    says whether its frame redraws a dissenting answer or replays it (FREEZE-6.md, section 5)."""
+    out = {}
+    for a in ARMS:
+        n = m = nd = md = 0
+        for s in seeds[a]:
+            for k in range(1, len(s["counts"])):
+                for i, x in enumerate(s["answers"][k]):
+                    o = offline[(i, s["pubs"][k])]
+                    same, differ = x == o[s["variant"]], len(set(o)) > 1
+                    n, m, nd, md = n + 1, m + same, nd + differ, md + (same and differ)
+        out[a] = {"share": round(m / n, 4) if n else None, "answers": n,
+                  "share_where_the_presentations_differ": round(md / nd, 4) if nd else None, "answers_there": nd}
+    return out
+
+
 def forbidden(seed, t):
     """The Lean's forbidden cases in one seed from 0 (the chain laws where the table keeps the order,
     right_rests always, none_right_of_moves where it moves every value)."""
@@ -287,6 +308,7 @@ def framing_verdict(framing, offline, probes, seeds, second, right_seeds, probes
     out["v2"] = v2(every, t)
     out["v2_from_0_alone_reported"] = v2(seeds, t)
     out["individual_diagnostic"] = individual(every, tb["decisions"])
+    out["replays_reported_only"] = replays(every, offline)
     out["seed_ends"] = {a: [s["end"] for s in every[a]] for a in ARMS}
     out["moving_rounds"] = {a: [moving(s["pubs"]) for s in every[a]] for a in ARMS}
     fb = {a: [forbidden(s, t) for s in seeds[a]] for a in ARMS}

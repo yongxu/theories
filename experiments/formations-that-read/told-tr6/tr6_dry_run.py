@@ -13,8 +13,10 @@
    record's course edited, a logged answer the parser reads otherwise, a record another model
    answered, a call not in the plan, a record another provider or another tier served, the offline
    table's records dropped while the loops derived from them stay, a smoke folder, a log whose last
-   line is cut short or lacks its newline (refused until moved by FREEZE-1's note, then read as
-   before), and a line holding a line separator; a response another provider or another tier served
+   line is cut short, cut inside a character or lacks its newline (refused until tr6_run.mend applies
+   FREEZE-1's note, then read as before), a catalog read cut short (mended with a read naming no
+   snapshot where calls ended after the last whole read, and with nothing where none did), and a line
+   holding a line separator; a response another provider or another tier served
    stops the run, logging nothing. Every stub response carries U+2028, U+2029 and U+0085 in a field no
    reader reads, so every log passes through this freeze's line writer with them. A run stopped before
    its loops, and one with a probe record dropped, are read as partial. A round's closing read
@@ -34,7 +36,9 @@
    answers are fixed by the prompt, as at temperature 0, reading no course: near its threshold a
    member dissents from its decision with a chance drawn once per prompt text, so that a round 0
    request, the table's own, gets the table's answer again, and each later request of either arm, its
-   text new, draws afresh.
+   text new, draws afresh; the same frame-deaf, arm A's frame moving no answer, so that arm A replays
+   the table's answers; and inertia with that dissent. Each reports the share of answers that replay
+   the same presentation's offline answer.
 
 The simulated members are Stage 0's own (tr6.py's thresholds, memory rules and flips): each call
 independent, a member's decision a function of the forecast and, in arm B, of its course as the
@@ -111,7 +115,7 @@ class Public:
     that miscompute, and a filter at one arm B round."""
 
     def __init__(self, name, kind, eta=0.001, memory=None, w=0.0, noise=None, lean=None, declines_from=None,
-                 bad_probes=False, filter_at=None, untold=None, fixed=None):
+                 bad_probes=False, filter_at=None, untold=None, fixed=None, frame_deaf=False):
         self.name, self.kind, self.eta, self.memory, self.w = name, kind, eta, memory, w
         self.base = {f: base_of(kind, f) for f in TR.FRAMINGS}
         pick = {"momentum": {"join": "momentum", "lake": "regret after a crowded round"}}.get(memory)
@@ -120,6 +124,7 @@ class Public:
         self.noise, self.lean, self.declines_from, self.bad_probes = noise or {}, lean, declines_from, bad_probes
         self.filter_at, self.untold = filter_at, untold or (lambda p: int(p >= 5))
         self.fixed = fixed      # (q, near): dissent with chance q per request where the points are within near
+        self.frame_deaf = frame_deaf    # the fixed draw reads arm A's prompt as if its frame were not there
 
     def answer(self, x, rep, again=0):
         rng = random.Random(f"{SEED}|{rep}|{self.name}|{again}|{x['id']}")
@@ -155,7 +160,10 @@ class Public:
             if self.fixed and abs(TR.points(f, TR.COSTS[i], True, p0 + 1)) <= self.fixed[1]:
                 # drawn from the prompt's text alone, not the call: a request that is the offline table's,
                 # byte for byte, gets its answer again
-                text = D.build(x["kind"], f, i, p, x["variant"], x["course"])["user"]
+                course = x["course"]
+                if self.frame_deaf and course and all(c == D.WITHHELD for c in course.split("/")):
+                    course = ""
+                text = D.build(x["kind"], f, i, p, x["variant"], course)["user"]
                 req = random.Random(f"{SEED}|{rep}|{self.name}|{text}")
                 if req.random() < self.fixed[0]:
                     d = 1 - d
@@ -342,43 +350,62 @@ def faults(tmp, folder, m):
     f4 = recs[p_i]["framing"]
     out["one probe record dropped: that framing's reading partial"] = \
         T.units(m4, r4)["framings"][f4].get("reading", "").startswith("partial")
-    # a log cut short: the last line half written, or whole with no newline; run and reading refuse;
-    # moved by FREEZE-1's note, the folder reads as it did
+    # a log cut short: the last line half written, cut inside a character, or whole with no newline; run
+    # and reading refuse; mend (FREEZE-1's note) moves it, and the folder reads as it did, that call unread,
+    # the one moved line and its note reported
     whole = T.units(*load())
     text = "\n".join(lines) + "\n"
-    for name, cut in (("its last line half written", "\n".join(lines[:-1] + [lines[-1][:len(lines[-1]) // 2]])),
-                      ("its last line whole with no newline", "\n".join(lines))):
-        (folder / "calls.jsonl").write_text(cut)
+    body = ("\n".join(lines[:-1]) + "\n").encode("utf-8")
+    for name, cut in (("its last line half written", body + lines[-1][:len(lines[-1]) // 2].encode("utf-8")),
+                      ("its last line cut inside a character", body + lines[-1][:len(lines[-1]) // 2].encode("utf-8")
+                       + "\u2028".encode("utf-8")[:2]),
+                      ("its last line whole with no newline", body + lines[-1].encode("utf-8"))):
+        (folder / "calls.jsonl").write_bytes(cut)
         try:
             refuses = refused(load) and refused(lambda: T.log_whole(folder))
-            # the note: the last line moved, byte for byte, to calls.jsonl.cut with the time and cause
-            body, last = cut.rsplit("\n", 1)
-            (folder / "calls.jsonl").write_text(body + "\n")
-            (folder / "calls.jsonl.cut").write_text(last + "\ncut by the dry run: " + name + "\n")
+            T.mend(folder, "the dry run: " + name)
             again = T.units(*load())
-            out[f"a log cut short, {name}: refused, then moved by FREEZE-1's note and read, the last call unread"] = \
+            moved = T.moved_lines(folder)["calls.jsonl.cut"]
+            out[f"a log cut short, {name}: refused, then mended as FREEZE-1's note says and read, the last call "
+                "unread, the moved line and its note reported"] = \
                 refuses and again["framings"] != {} and \
-                all(again["framings"][f].get("table") == whole["framings"][f].get("table") for f in TR.FRAMINGS)
+                all(again["framings"][f].get("table") == whole["framings"][f].get("table") for f in TR.FRAMINGS) and \
+                len(moved["lines_moved"]) == 1 and len(moved["notes"]) == 1 and \
+                (folder / "calls.jsonl.cut").read_bytes().startswith(cut[len(body):] + b"\n# cut ")
         finally:
             (folder / "calls.jsonl").write_text(text)
             (folder / "calls.jsonl.cut").unlink(missing_ok=True)
-    # a cut catalog read: moved, and a read naming no snapshot put in its place at the latest record's end,
-    # as a failed read is logged, so that the calls since the read before it are made again, not read
+    # a catalog read cut short: refused; mended, a read naming no snapshot put in its place at the largest
+    # t1 of any call, so that exactly the calls that ended after the last whole read are no longer read
+    # (resume makes them again); and a cut read that follows a whole read with no call between: moved with
+    # nothing put in its place, every call read as before
     cat = (folder / "catalog.jsonl").read_text()
-    good = len(T.good_answers(folder, FAMILY))
     cat_lines = cat.split("\n")[:-1]
+    good = set(T.good_answers(folder, FAMILY))
+    latest = {r["id"]: r for r in recs}
+    last_whole = max(float(json.loads(ln)["t"]) for ln in cat_lines[:-1])
+    expect = {k for k, r in latest.items() if float(r["t1"]) > last_whole} & good
     try:
-        cut = "\n".join(cat_lines[:-1] + [cat_lines[-1][:len(cat_lines[-1]) // 2]])
-        (folder / "catalog.jsonl").write_text(cut)
+        (folder / "catalog.jsonl").write_text("\n".join(cat_lines[:-1] + [cat_lines[-1][:len(cat_lines[-1]) // 2]]))
         refuses = refused(load)
-        last_t1 = max(r["t1"] for r in recs)
-        (folder / "catalog.jsonl").write_text("\n".join(cat_lines[:-1] + [json.dumps(
-            {"t": last_t1, "family": FAMILY, "slug": None})]) + "\n")
-        after = len(T.good_answers(folder, FAMILY))
-        out["a catalog read cut short: refused, then moved with a read naming no snapshot in its place, "
-            "the calls since the read before it no longer read"] = refuses and after < good
+        T.mend(folder, "the dry run: a catalog read half written")
+        nulls = [t_ for t_, s in R.catalog_reads(folder) if s is None]
+        after = set(T.good_answers(folder, FAMILY))
+        load()
+        out["a catalog read cut short: refused, then mended with a read naming no snapshot in its place, at the "
+            "largest t1; exactly the calls that ended after the last whole read no longer read"] = \
+            refuses and bool(expect) and good - after == expect and nulls == [max(float(r["t1"]) for r in recs)]
+        (folder / "catalog.jsonl.cut").unlink()
+        extra = json.dumps({**json.loads(cat_lines[-1]), "t": float(json.loads(cat_lines[-1])["t"]) + 1})
+        (folder / "catalog.jsonl").write_text(cat + extra[:len(extra) // 2])
+        refuses = refused(load)
+        T.mend(folder, "the dry run: a catalog read half written after a whole read")
+        out["a catalog read cut short after a whole read, no call between: refused, then moved with nothing in "
+            "its place, every call read as before"] = \
+            refuses and (folder / "catalog.jsonl").read_text() == cat and set(T.good_answers(folder, FAMILY)) == good
     finally:
         (folder / "catalog.jsonl").write_text(cat)
+        (folder / "catalog.jsonl.cut").unlink(missing_ok=True)
     # freeze 1's open_sink creates both files empty: a run stopped before any read or call is whole
     empty = dry_folder(tmp, "empty-" + folder.name)
     T.open_sink(empty)
@@ -722,10 +749,20 @@ def moves(nrep=REPS):
     out["a filtered answer at arm B's round 3 ends its seed; probes miscomputed leave the reading unread"] = {
         "seed_ends": v["seed_ends"], "rounds_read": v["v2"]["rounds_read"], "reading": v["reading"],
         "probes_restated": v["probes_restated"]}
-    for q in (0.05, 0.1):
-        fx = Public(f"fixed by the prompt {q}", "reads", eta=0.0, fixed=(q, 5))
+    # answers fixed by the prompt, as at temperature 0: the frame read (any change of text redraws), and
+    # frame-deaf (arm A's frame moves no answer, so arm A replays the table's); and memory with that dissent
+    fixed_publics = [(f"answers fixed by the prompt, as at temperature 0, reading no course: near the threshold "
+                      f"(within 5 points) a member dissents with chance {q} a prompt",
+                      Public(f"fixed by the prompt {q}", "reads", eta=0.0, fixed=(q, 5))) for q in (0.05, 0.1)]
+    fixed_publics.append(("the same at chance 0.05, frame-deaf: arm A's frame moves no answer",
+                          Public("fixed by the prompt 0.05, frame-deaf", "reads", eta=0.0, fixed=(0.05, 5),
+                                 frame_deaf=True)))
+    fixed_publics.append(("inertia 0.1 with the same dissent at chance 0.05, the frame read",
+                          Public("inertia 0.1, fixed by the prompt 0.05", "reads", memory="inertia", w=0.1,
+                                 fixed=(0.05, 5))))
+    for label, fx in fixed_publics:
         for fr in TR.FRAMINGS:
-            c, mism, n = Counter(), {"A": 0, "B": 0}, 0
+            c, mism, rep_, n = Counter(), {"A": 0, "B": 0}, {"A": [], "B": []}, 0
             for rep in range(nrep):
                 v = fast(lambda x, rep=rep: fx.answer(x, rep))[1]["framings"][fr]
                 if "v2" not in v:
@@ -735,12 +772,16 @@ def moves(nrep=REPS):
                 c["V2 contradicted"] += v["v2"]["outcome"] == "contradicted"
                 for a in TR.ARMS:
                     mism[a] += v["v2"]["mismatching_rounds"][a]
-            out[f"answers fixed by the prompt, as at temperature 0, reading no course: near the threshold (within 5 "
-                f"points) a member dissents with chance {q} a prompt, {fr}"] = {
+                    s = v["replays_reported_only"][a]["share_where_the_presentations_differ"]
+                    if s is not None:
+                        rep_[a].append(s)
+            out[f"{label}, {fr}"] = {
                 "void": round(c["void"] / nrep, 4), "tables read": n,
                 "V2 contradicted, of the tables read": round(c["V2 contradicted"] / n, 4) if n else None,
                 "mean mismatching rounds A / B, of the tables read": [round(mism[a] / n, 2) if n else None
-                                                                      for a in TR.ARMS]}
+                                                                      for a in TR.ARMS],
+                "mean share of answers replaying the same presentation's, where the presentations differ, A / B":
+                    [round(sum(rep_[a]) / len(rep_[a]), 3) if rep_[a] else None for a in TR.ARMS]}
     fewest = {}
     for b in (0, 1, 2, 5):
         a = 0

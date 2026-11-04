@@ -5,6 +5,7 @@ check (FREEZE-6.md).
     python3 -B tr6_run.py smoke --family PIN --max-usd 1         # the release's first step for a pin
     python3 -B tr6_run.py run --family PIN --max-usd 20 [--parallel 8]
     python3 -B tr6_run.py verdicts results/<pin folder>          # writes verdicts.json beside calls.jsonl
+    python3 -B tr6_run.py mend results/<pin folder> --cause TEXT # FREEZE-1's note on a log cut short, no call
 
 Nothing here runs without Ren's yes: `smoke` and `run` call a model through OpenRouter with his key.
 Both refuse to start unless freeze 1's chain and freeze 3's chain check (freeze 3's run.frozen, which
@@ -29,7 +30,8 @@ The log is freeze 1's, written by this freeze's line writer (open_sink), which w
 and U+0085 as their JSON escapes, so that freeze 1's readers, which split lines at them too, read every
 record whole; each record loads as the same values. `run` and `verdicts` refuse, before any call or
 reading, a folder whose calls.jsonl or catalog.jsonl does not end in a newline or holds a line that
-does not read whole (log_whole): FREEZE-1's note "A log cut short" says what is done then.
+does not read whole (log_whole): FREEZE-1's note "A log cut short" says what is done then, and `mend`
+does it for a last line cut short.
 """
 
 import argparse
@@ -90,7 +92,11 @@ def log_whole(folder):
         p = Path(folder) / name
         if not p.exists():
             continue
-        text = p.read_text(encoding="utf-8")
+        try:
+            text = p.read_bytes().decode("utf-8")
+        except UnicodeDecodeError:  # a write cut inside a character
+            raise SystemExit(f"{p}: does not decode as UTF-8; see FREEZE-1.md's note \"A log cut short\" before "
+                             "any run or reading")
         if not text:            # freeze 1's open_sink creates both files empty, before any read or call
             continue
         bad = [] if text.endswith("\n") else ["no final newline"]
@@ -104,6 +110,72 @@ def log_whole(folder):
         if bad:
             raise SystemExit(f"{p}: {', '.join(bad[:3])}; see FREEZE-1.md's note \"A log cut short\" before any "
                              "run or reading")
+
+
+def mend(folder, cause):
+    """FREEZE-1's note "A log cut short", for a last line cut short: where calls.jsonl or catalog.jsonl
+    does not end in a newline, or its last line does not read, that line is moved, byte for byte, to
+    NAME.cut beside it, followed by a newline and one line beginning "# " that names the time and the
+    cause. A catalog read moved is replaced by a whole read naming no snapshot, timed at the largest t1
+    of any logged call, where some logged call ended after the last whole read before it (or there is
+    none), so that resume makes those calls again rather than the rerun's first read closing them; where
+    none did, a good read already closed every call, and nothing is put in its place. Only a last line
+    moves: where any other line does not read whole, nothing is changed and the folder stays refused."""
+    folder = Path(folder)
+    kept, cut = {}, {}
+    for name in ("calls.jsonl", "catalog.jsonl"):
+        p = folder / name
+        raw = p.read_bytes() if p.exists() else b""
+        lines = raw.split(b"\n")
+        ends = lines[-1] == b""
+        lines = lines[:-1] if ends else lines
+        try:
+            whole = ends and isinstance(json.loads(lines[-1].decode("utf-8")), dict)
+        except ValueError:
+            whole = False
+        if raw and not whole:
+            kept[name], cut[name] = lines[:-1], lines[-1]
+        else:
+            kept[name] = lines if raw else []
+    if not cut:
+        print(f"{folder}: no last line cut short; nothing moved")
+        return []
+    recs = {}
+    for name, lines in kept.items():
+        try:
+            recs[name] = [json.loads(ln.decode("utf-8")) for ln in lines]
+            assert not any(c in ln.decode("utf-8") for ln in lines for c in "\u2028\u2029\x85")
+        except (ValueError, AssertionError):
+            raise SystemExit(f"{folder}/{name}: a line other than the last does not read whole; nothing changed, "
+                             "and the folder stays refused (FREEZE-1.md)")
+    done = [f"{name}: its last line moved to {name}.cut ({len(c)} bytes)" for name, c in cut.items()]
+    if "catalog.jsonl" in cut:
+        last = max((float(c["t"]) for c in recs["catalog.jsonl"]), default=None)
+        ends_ = [float(r["t1"]) for r in recs["calls.jsonl"]]
+        if ends_ and (last is None or max(ends_) > last):
+            family = json.loads((folder / "meta.json").read_text(encoding="utf-8"))["family"]
+            kept["catalog.jsonl"].append(line({"t": max(ends_), "family": family, "slug": None}).encode("utf-8"))
+            done.append(f"catalog.jsonl: a read naming no snapshot put in its place, at t {max(ends_)}")
+    stamp = time.strftime("%Y-%m-%dT%H:%M:%S%z")
+    for name, c in cut.items():
+        with (folder / (name + ".cut")).open("ab") as fh:
+            fh.write(c + b"\n" + f"# cut {stamp}: {cause}\n".encode("utf-8"))
+        (folder / name).write_bytes(b"".join(ln + b"\n" for ln in kept[name]))
+    log_whole(folder)
+    for d in done:
+        print(f"{folder}: {d}")
+    return done
+
+
+def moved_lines(folder):
+    """The lines FREEZE-1's note moved, per .cut file: the moved records, and the notes beside them (lines
+    beginning "# "). A record cut inside a character is shown with the replacement character."""
+    out = {}
+    for p in sorted(Path(folder).glob("*.jsonl.cut")):
+        ls = [ln for ln in p.read_bytes().decode("utf-8", errors="replace").split("\n") if ln]
+        out[p.name] = {"lines_moved": [ln for ln in ls if not ln.startswith("# ")],
+                       "notes": [ln for ln in ls if ln.startswith("# ")]}
+    return out
 
 
 def frozen(repo=R.REPO, told=TOLD):
@@ -207,10 +279,8 @@ def verdicts(folder):
            "served_at_tier": dict(Counter(str(TC.served_tier(r["response"])) for r in recs)),
            "system_fingerprints": dict(Counter(str((r["response"] or {}).get("system_fingerprint")) for r in recs)),
            "no_verdict_partly_logged": meta["partial_contexts"], "calls_made_again": meta["made_again"],
-           "lines_moved_by_freeze_1s_note": {p.name: {"lines_moved": [ln for ln in ls if ln.startswith("{")],
-                                                       "notes": [ln for ln in ls if not ln.startswith("{")]}
-                                             for p in sorted(Path(folder).glob("*.jsonl.cut"))
-                                             for ls in [p.read_text(encoding="utf-8").split("\n")[:-1]]},
+           "lines_moved_by_freeze_1s_note": moved_lines(folder),
+           "catalog_reads": [{"t": t_, "slug": s} for t_, s in R.catalog_reads(folder)],
            "read_under": meta["read_under"]}
     (Path(folder) / "verdicts.json").write_text(json.dumps(res, indent=1) + "\n", encoding="utf-8")
     for f, u in v["framings"].items():
@@ -280,6 +350,9 @@ def main(argv=None):
     rn.add_argument("--parallel", type=int, default=1)
     vd = sub.add_parser("verdicts")
     vd.add_argument("folder")
+    md = sub.add_parser("mend")
+    md.add_argument("folder")
+    md.add_argument("--cause", required=True)
     a = ap.parse_args(argv)
     if a.cmd == "plan":
         e = estimate()
@@ -290,6 +363,9 @@ def main(argv=None):
         return
     if a.cmd == "verdicts":
         verdicts(a.folder)
+        return
+    if a.cmd == "mend":
+        mend(a.folder, a.cause)
         return
     fc = frozen()
     if a.cmd == "smoke":
