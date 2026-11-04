@@ -45,8 +45,8 @@
     "nondual-method-not-proof"
   ],
   "validation_scope": {
-    "en": "verify_zh.py passes: 1342 quotations in their frozen texts, 5479 citations of Lean names (each in receipt 20261022T070506.681048Z or a listed periphery declaration), 709 record links, the name table (449 names) and the generated tables of the three chapters; import_wenli.py --check binds 98 files. The central section was checked against each cited Lean statement; the chapter, the changed 條 and the landing texts were reviewed in four rounds (the landing texts in the last three) by independent lenses, a skeptic checking each finding. All readers AI.",
-    "zh": "verify_zh.py 通过：1342 句引文在其冻结原文中，5479 处所引之 Lean 名皆为回执 20261022T070506.681048Z 中之名或所列外围之声明，709 个记录链接，名表（449 个名）与三章之生成表；import_wenli.py --check 绑定 98 个文件。中心一节逐条对照所引 Lean 声明检查；本章、所改之條与落地之文经四轮独立视角审读（落地之文在后三轮），每一发现各有一个质疑者。读者都是 AI。"
+    "en": "verify_zh.py passed on 22 October 2026, before the chapters went to history/: 1342 quotations in the frozen texts, 5479 citations of Lean names (each in receipt 20261022T070506.681048Z or a listed periphery one), 709 record links, the name table (449 names) and the generated tables of the three chapters; import_wenli.py --check binds 98 files. The central section was checked against each cited Lean statement; the chapter, the changed 條 and the landing texts were reviewed in four rounds (the landing texts in the last three) by independent lenses, a skeptic checking each finding. All readers AI.",
+    "zh": "verify_zh.py 于 2026 年 10 月 22 日通过（其后诸章移入 history/）：1342 句引文在其冻结原文中，5479 处所引之 Lean 名皆为回执 20261022T070506.681048Z 中之名或所列外围之声明，709 个记录链接，名表（449 个名）与三章之生成表；import_wenli.py --check 绑定 98 个文件。中心一节逐条对照所引 Lean 声明检查；本章、所改之條与落地之文经四轮独立视角审读（落地之文在后三轮），每一发现各有一个质疑者。读者都是 AI。"
   },
   "next_delta": {
     "en": "The H2 reading test (experiments/wenli-reading-transfer; the fidelity count is run, fidelity-of-the-classical-statements); 文理生生's G1 as a query layer of the spine.",
@@ -178,7 +178,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/verify_zh.py",
       "role": "integration",
-      "sha256": "83448941bc3e65efcb563246fc7ba00bd0f6eb33f0682d23a072fb4b4ff09f91"
+      "sha256": "9dd8b685a6cdbf8dc7d414a21b36a3ac1c2019525640023002244e3e0cfdbf46"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/import_wenli.py",
@@ -242,6 +242,10 @@
     {
       "en": "25 October 2026, board item DF (study section 418): the scope item saying the coarsest value-keeping, law-carrying class is not one theorem removed, and the Lean part of the next step with it: the coarsest class is stated as one theorem and the laws of 文 are joined to Web.AlikeThroughUpTo and CrossSituational (WL2); the remaining next step is unchanged.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：删去“守值载法之最粗之类不是一条定理”之范围项，并删去下一步中的 Lean 部分：最粗之类已作一条定理陈述，文之律已接到 Web.AlikeThroughUpTo 与 CrossSituational（WL2）；其余下一步不变。"
+    },
+    {
+      "en": "4 November 2026, board item RAE: the validation scope said in the present tense that verify_zh.py passes on the three chapters' generated tables; that run was of 22 October, and RA moved the chapters to history/ the next day, so the scope is dated. verify_zh.py now checks 06-CLASSICAL-TEXTS (civilization-thought-on-the-spine). Claims unchanged.",
+      "zh": "2026年11月4日，看板项 RAE：验证范围以现在时说 verify_zh.py 于三章之生成表上通过；该次运行在 10 月 22 日，RA 于次日将诸章移入 history/，故验证范围注明日期。verify_zh.py 今核 06-CLASSICAL-TEXTS（见 civilization-thought-on-the-spine）。断言未变。"
     }
   ]
 }

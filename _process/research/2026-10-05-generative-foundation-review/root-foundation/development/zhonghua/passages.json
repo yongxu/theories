@@ -17852,12 +17852,12 @@
      "kind": "scope",
      "declarations": [
       "Becoming.Dependence.differenceOnlyTogether_iff",
-      "Becoming.Pool.difference_belongs_to_the_joint"
+      "Becoming.Pool.difference_only_together"
      ],
      "records": [
       "joint-difference-making"
      ],
-     "reading": "AI读法：“功成而弗居”之居是居功、据其位；以下读法是 AI 的类比，置信低。若以“功”为一部分造成的差别（有力），脊柱给出它不属于该部分之处：在动作确定步、且单独扣留任一成员时动作可行而依存仍成立且被满足的条件下，一组部分只合起来造成差别，恰当扣留全部则依存保持、扣留任一则同一动作断之（Dependence.differenceOnlyTogether_iff）；同一部分、同样的汲取，有一个其他汲取者时它造成差别，有两个时则不造成，一个构造模型中确有其例（Pool.difference_belongs_to_the_joint，见证）。故差别可以只由共同者造成，无可居于一部分。“是以不去”（功不离去）脊柱不给：不居与功之存否无律相连。原条以“弗居”为不净汲取、以“不去”为支持不断（Web.renewing_keeps_support），二者与文义无关，已删。圣人的施事之位与“功”的评价不被携带。",
+     "reading": "AI读法：“功成而弗居”之居是居功、据其位；以下读法是 AI 的类比，置信低。若以“功”为一部分造成的差别（有力），脊柱给出它不属于该部分之处：在动作确定步、且单独扣留任一成员时动作可行而依存仍成立且被满足的条件下，一组部分只合起来造成差别，恰当扣留全部则依存保持、扣留任一则同一动作断之（Dependence.differenceOnlyTogether_iff）；同一部分、同样的汲取，有一个其他汲取者时它造成差别，有两个时则不造成，一个构造模型中确有其例（Pool.difference_only_together，见证）。故差别可以只由共同者造成，无可居于一部分。“是以不去”（功不离去）脊柱不给：不居与功之存否无律相连。原条以“弗居”为不净汲取、以“不去”为支持不断（Web.renewing_keeps_support），二者与文义无关，已删。圣人的施事之位与“功”的评价不被携带。",
      "names_used": [
       "有力"
      ],
@@ -17865,7 +17865,8 @@
      "tradition": "道",
      "work": "老子",
      "relational": "功与其所属：差别只由共同者造成。",
-     "checked": "passed"
+     "checked": "passed",
+     "corrected": "names follow the declaration ND renamed in OU7 (e5951932b, 1 November 2026), statement unchanged"
     },
     {
      "id": "laozi-08-shan-li-wan-wu-er-bu-zheng",
@@ -18124,7 +18125,7 @@
       "Becoming.partForms_iff",
       "Becoming.Run.rest_driven_by_part",
       "Becoming.Dependence.differenceOnlyTogether_iff",
-      "Becoming.Pool.difference_belongs_to_the_joint",
+      "Becoming.Pool.difference_only_together",
       "Becoming.Unrestricted",
       "Becoming.Web.retains_agree"
      ],
@@ -18133,7 +18134,7 @@
       "joint-difference-making",
       "continuation-condition-decomposition"
      ],
-     "reading": "AI读法：沿用 RO（lao-51-sheng-er-bu-you）。“不宰”：部分之动作恰当它是部分自身的策略时由部分形成（partForms_iff），当其余之律以部分之策略为输入时，部分所做即其余所受（Run.rest_driven_by_part）——这正是“宰”的结构，脊柱两者都给出，不说哪个更好。“不恃”：一组部分造成的差别可以只由共同者造成（Dependence.differenceOnlyTogether_iff）；同一部分同样的汲取，有一个其他汲取者时造成差别、有两个时不造成，一个构造模型中确有其例（Pool.difference_belongs_to_the_joint，见证）。“不有”：脊柱没有占有关系（同 RO）。在凡续皆有顾（陈述而不断言）之下没有方有特权（Web.retains_agree）；从“不宰”到“应当不宰”须另有比较承诺，排序只在以广为愈（C），条件本身不排序。原条补句把“生而不有”读作给予而不净汲取，与 RO 冲突，已删。",
+     "reading": "AI读法：沿用 RO（lao-51-sheng-er-bu-you）。“不宰”：部分之动作恰当它是部分自身的策略时由部分形成（partForms_iff），当其余之律以部分之策略为输入时，部分所做即其余所受（Run.rest_driven_by_part）——这正是“宰”的结构，脊柱两者都给出，不说哪个更好。“不恃”：一组部分造成的差别可以只由共同者造成（Dependence.differenceOnlyTogether_iff）；同一部分同样的汲取，有一个其他汲取者时造成差别、有两个时不造成，一个构造模型中确有其例（Pool.difference_only_together，见证）。“不有”：脊柱没有占有关系（同 RO）。在凡续皆有顾（陈述而不断言）之下没有方有特权（Web.retains_agree）；从“不宰”到“应当不宰”须另有比较承诺，排序只在以广为愈（C），条件本身不排序。原条补句把“生而不有”读作给予而不净汲取，与 RO 冲突，已删。",
      "names_used": [
       "凡续皆有顾",
       "方",
@@ -18144,7 +18145,8 @@
      "work": "老子",
      "relational": "生、为、长与不有、不恃、不宰。",
      "ro_passage": "lao-51-sheng-er-bu-you",
-     "checked": "passed"
+     "checked": "passed",
+     "corrected": "names follow the declaration ND renamed in OU7 (e5951932b, 1 November 2026), statement unchanged"
     },
     {
      "id": "suzhe-55-sheng-bu-ke-yi",
@@ -19670,7 +19672,7 @@
      "proposal": "不立名；对照表中写“结构同护闭／成闭”，并注明与成生、绝生不同构，免一字二义。"
     }
    ],
-   "notes": "一、依据与核查。全部声明与记录 id 都用 work/resolve.py 核过（解析到当前核心收据与现存记录）；全部片段与 reading 中所引原文都用 ctq.py text 核过冻结文本。R30 改名一律改正：Web.Returns→Branching.Returns（构形之复）或 Web.Restored（复足），Web.Unceasing.regeneration_recurs→Web.Unceasing.activeRenewer_recurs（结论是双重否定，写作“更新活动不从任何一步起停止”，属不息 D5），g0_of_unrestricted→livingSignificance_of_unrestricted；记录 axiom-decomposition→continuation-condition-decomposition，one-axiom-yields-g0→continuation-condition-yields-living-significance，testing-within-registration→testing-within-couplings，selection-through-registration→selection-through-couplings，runaway-distance-unregistered→runaway-distance-uncoupled；hun-dun 条 generalization-through-lumping 换为 selects_not_right_of_parted 实际所在之 selection-through-a-model-of-the-options。见证一律标“一个构造模型中确有其例（见证）”：Clearing.narrows、Clearing.loses_beyond、Clearing.unselected、Restoring.Inflow.widens、Restoring.Adapting.restores、Transfer.mixed、Transfer.unordered（延续条件下）、Switching.fixed_loses、Switching.changing_regains、Pool.difference_belongs_to_the_joint、ArisingDrawer.arises_narrows、ArisingGiver.arises_widens、Requirement.Routes.opposite_routes／none_robust、DrawingMore.grow_and_fall、Closing.Threshold.forms／unforeseen。定义或定义性的等价也标出：Web.supported_iff_admits（Iff.rfl）、Web.Admits、Web.Widens、Web.Mixed、Web.Forms、Web.Dissolves、Web.Dependent、Law.Absorbing、ExchangeLaw.RespondsTo、Flow.withhold；Web.includes_iff_within_every 与 Web.LosesBeyond.narrow 近于定义之展开；Hexagram.pi_of_tai 由定义计算即得。Clearing.center_not_derived 是估值立场之见证，原用于“生物之心”“一主”是误用，两处都删。二、排序。凡说排序之处一律写“排序只在以广为愈（C）”；延续条件（凡续皆有顾）陈述而不断言，定范围不排序；不易乎畛一步推广范围，也不排序。结构 verifier 对 huiyuan 条的改法“C（及不变性一步）”与对 xici-tiandi 条的“在 C 与不变性一步”已过时（AGENTS 与章今作排序只在 C），未照用。条件下的定理（livingSignificance_of_unrestricted 等）写作条件之实例。三、verifier 改法本身有误、未照用之处。(1) 语文 verifier 要同人条以 Web.AdmitsWithin.narrow 为主对应，读作“区内容许狭于全体”；该定理实说“在一区域内成立者在其每一子区域内也成立”，照结构 verifier 改用 Web.includes_iff_within_every、Web.LosesBeyond.narrow、Clearing.loses_beyond（见证）。同一误述（comparison_within_reach 被说成“比较只在所及之内成立”）也在两 verifier 都判 keep 的中和条里，故中和条移入 revised 改正。(2) 语文 verifier 对坤翕辟条的改法写“所容之变由阖与辟构成（LosesSupport.falls、GainsSupport.rises）”：那是跨步交替一层，不是名表之阖（反事实之部分），故用平常语写交替，阖只用于反事实一层（见名旗阖）。(3) 结构 verifier 要给老子五十章加王弼注平行 LC2-WB-C50-R02：此记录是 C07 wangbi-50-ru-wu-sheng 的条目，未加。(4) 语文 verifier 要以 YD-JP28 与 TP-H28-X5-R01 立大过新条：此记录是 C05 yi-daguo-ku-yang-sheng-hua 之条目，JG2-H28-L5-R01 是其平行；新条改以程颐注（YD-CY2，无记录）为源，所补正是 C05 未写的“稊与华之对”，并互相引见。(5) 墨经损条：记录 MI1-N-JS-027 证在经上，条目源却是经说上；经说上之关系记录 MI1-R-SS-damage 已是 C03 mojing-sun-jian-ti 之条目，故把本条之源改为经上 MI1-S-JS、片段改为“損，偏去也”，经说上在 reading 中引并互见。(6) 语文 verifier 要荀子条删 Onward.run_iff_continues，结构 verifier 要移入 reading 作对照：取后者。荀子条之相合是定义层（Web.Admits、Web.Dependent），已明说不是定理。四、两个 verifier 都判 keep 而仍改动者：zhongyong-cheng-ji-cheng-wu（补句“这是成生之成”把支持之所从来当成广，属一名二用，删并加“不蕴涵成己必然成物”）；wangbi-20（补标见证、删名“益”、引见骈拇新条）；mengzi-si-duan（补标 Closing.Threshold 两个见证）；zhongyong-zhi-zhong-he（见上）。laozi-18 与 suzhe-18 原以“识”作“被登记／被识见”，是名表已去之旧义，改用平常语与感。laozi-27、ying-ning 不用稳／元闭，改用复归。其余 kept 七条照旧；它们的 layer 字串仍是 mapper 的“经·先秦”式，整合时须改为期在先（先秦·经……）。五、kind 之变：yichuan-fu 相分→定域（与 RO ru-chengyi-fu-tiandi-zhi-xin 一致，“心”之层在 reading 中标为不承接）；laozi-11、heshang-34、hanzhu-qu-cheng、laozi-02（置信低）、ying-ning、hanfei-xindu、mojing-sun、mojing-yi-lei、mojing-qiong、daxue 相合→定域；zhuangzi-sheng-sheng-zhe-bu-sheng 定域→相分。六、四个非关系层在本簇之相分覆盖：本原——heshang-51（兼一主之单一中心）、zhuangzi-sheng-sheng-zhe-bu-sheng；固定本性或价值——wangbi-20、zhuangzi-pian-mu（新）；意志或单一中心——heshang-51 之“主”；争胜与等级——sunzi-sheng-di-er-yi-qiang（新）。其他结构——laozi-38（起点完满、分化即丧失，kept）、huiyuan（方向相反，与 RO zaahan-ku-mie 同层）。同层统一判法：一、母、本、生生者之为先在根据，凡经文断言之处判相分；结构部分为主者判定域而在 reading 中标该层不承接（yichuan-fu 之天地之心、heshang-34 之唯一养育者、wangbi-39 之一／母、suzhe-55 之本与赤子之性、mozi-suo 之天乡其德、zhongyong-zan 之尽物之性）。七、新条四：yichuan-daguo-gen-ti-yu-hua（D1 与“凡新非生”最强之对照，两 verifier 的 missing 都举）；zhonglun-kong-yi-yi-qie-fa-de-cheng（批评之佛典覆盖；只取空之关系核心，空作解脱目标仍由 huiyuan 与 RO zaahan-ku-mie 作相分）；sunzi-sheng-di-er-yi-qiang（批评之兵家覆盖，争胜与等级层）；zhuangzi-pian-mu-xing-chang-fei-suo-duan（语文 verifier missing 8，wangbi-20 所本之先秦层）。法家已有 jielao、xindu 两条。新条均无脉络关系记录，引文只核对冻结文本。八、missing 中未加者及理由：老子67“俭故能广”已是 C04 lao-67-jian-gu-neng-guang（LL-R036 在 C02）；老子42“损之而益”在 C04；大过小象 TP-H28-X5-R01 在 C05（见上）；王弼五十章注在 C07；同人经文 JF-R038 在 C13 tongren-yu-ye-yu-zong（同人条只互见）；朱熹同人注与涣卦程朱之读不另立（前者带私／公之评价，后者随涣条删去）；孔疏“生生，不絕之辭”已并入 xici-sheng-sheng 条，荀子“可以为，未必能也”已并入荀子条，苏辙五十二章注已并入 laozi-52 条，孔疏“日日增新”已并入日新条；墨经“不可偏去而二”是表示之界（所扣之部分须可分），不是一条律，留作偏去名之注；论语“繼絕世”是字面，属 C02／C03；老子72“无狭其所居”与注是心境义；程颐比卦“遂其生”属 C02 依存；苏辙72“無廣狹”之辨是心境且带性层；宗密之“各有所長”与孟子“出于其类，拔乎其萃”只关名，见名旗；王弼略例之应由名表（相应）解决；国语和实生物之句不在脉络冻结文本（检索 0 条），只经 RO guoyu-shibo-he-sheng-wu 互见；RO ru-daizhen-gong-sui-qi-sheng（以生生论仁）与 guiguzi-bai-he（阖之策术义）只互见；Ren《生生不息论》诸句不在冻结语料，只作 D1／D22／D49 之出处，不立条；FO2-KS-C 之层次问题不在本簇条目中。九、平行之注须随条目改：ZX130-H15-R01（朱熹“謙者有而不居”）之注“不净汲取”应改为“不据其所有（同条之 AI 类比）”；LC2-SZ-C34-R01、LE-R019、LE-R044、MO1-C25-R004、RU1-LY-01-02-R02、LC-R005、LC2-HS-C11-R01/R02/R03、LC2-WB-C21-R01、LC2-HS-C34-R02、LC2-HS-C64-R03、LAO2-C50-R03、YCM130-H4-K-11-R01、XC-R056、TP-H26-T-R02、RU1-DX-05-R01、YCM130-H5-H-04-R01、WH-R026、YCM130-H5-K-03-R01 照旧为平行。原三条 rejected 照旧。十、未决：G1（支持之传递反复出现）即使证得也不即是生生，须加方向（Web.Widens）与新类（Flow.GrownBy；R25：Web.Widens 只比较固定类型，生生可多于广所能记）；G2（各有所长之度量）是设，不是待证之定理；通则久之“久”与 C05 之久、不息之单锚（C03／C05）、复与复足之分，须整合者统一；生生只锚 Web.Widens，生生不息不设单锚（与 D5 对照），本簇已照此写。",
+   "notes": "一、依据与核查。全部声明与记录 id 都用 work/resolve.py 核过（解析到当前核心收据与现存记录）；全部片段与 reading 中所引原文都用 ctq.py text 核过冻结文本。R30 改名一律改正：Web.Returns→Branching.Returns（构形之复）或 Web.Restored（复足），Web.Unceasing.regeneration_recurs→Web.Unceasing.activeRenewer_recurs（结论是双重否定，写作“更新活动不从任何一步起停止”，属不息 D5），g0_of_unrestricted→livingSignificance_of_unrestricted；记录 axiom-decomposition→continuation-condition-decomposition，one-axiom-yields-g0→continuation-condition-yields-living-significance，testing-within-registration→testing-within-couplings，selection-through-registration→selection-through-couplings，runaway-distance-unregistered→runaway-distance-uncoupled；hun-dun 条 generalization-through-lumping 换为 selects_not_right_of_parted 实际所在之 selection-through-a-model-of-the-options。见证一律标“一个构造模型中确有其例（见证）”：Clearing.narrows、Clearing.loses_beyond、Clearing.unselected、Restoring.Inflow.widens、Restoring.Adapting.restores、Transfer.mixed、Transfer.unordered（延续条件下）、Switching.fixed_loses、Switching.changing_regains、Pool.difference_only_together、ArisingDrawer.arises_narrows、ArisingGiver.arises_widens、Requirement.Routes.opposite_routes／none_robust、DrawingMore.grow_and_fall、Closing.Threshold.forms／unforeseen。定义或定义性的等价也标出：Web.supported_iff_admits（Iff.rfl）、Web.Admits、Web.Widens、Web.Mixed、Web.Forms、Web.Dissolves、Web.Dependent、Law.Absorbing、ExchangeLaw.RespondsTo、Flow.withhold；Web.includes_iff_within_every 与 Web.LosesBeyond.narrow 近于定义之展开；Hexagram.pi_of_tai 由定义计算即得。Clearing.center_not_derived 是估值立场之见证，原用于“生物之心”“一主”是误用，两处都删。二、排序。凡说排序之处一律写“排序只在以广为愈（C）”；延续条件（凡续皆有顾）陈述而不断言，定范围不排序；不易乎畛一步推广范围，也不排序。结构 verifier 对 huiyuan 条的改法“C（及不变性一步）”与对 xici-tiandi 条的“在 C 与不变性一步”已过时（AGENTS 与章今作排序只在 C），未照用。条件下的定理（livingSignificance_of_unrestricted 等）写作条件之实例。三、verifier 改法本身有误、未照用之处。(1) 语文 verifier 要同人条以 Web.AdmitsWithin.narrow 为主对应，读作“区内容许狭于全体”；该定理实说“在一区域内成立者在其每一子区域内也成立”，照结构 verifier 改用 Web.includes_iff_within_every、Web.LosesBeyond.narrow、Clearing.loses_beyond（见证）。同一误述（comparison_within_reach 被说成“比较只在所及之内成立”）也在两 verifier 都判 keep 的中和条里，故中和条移入 revised 改正。(2) 语文 verifier 对坤翕辟条的改法写“所容之变由阖与辟构成（LosesSupport.falls、GainsSupport.rises）”：那是跨步交替一层，不是名表之阖（反事实之部分），故用平常语写交替，阖只用于反事实一层（见名旗阖）。(3) 结构 verifier 要给老子五十章加王弼注平行 LC2-WB-C50-R02：此记录是 C07 wangbi-50-ru-wu-sheng 的条目，未加。(4) 语文 verifier 要以 YD-JP28 与 TP-H28-X5-R01 立大过新条：此记录是 C05 yi-daguo-ku-yang-sheng-hua 之条目，JG2-H28-L5-R01 是其平行；新条改以程颐注（YD-CY2，无记录）为源，所补正是 C05 未写的“稊与华之对”，并互相引见。(5) 墨经损条：记录 MI1-N-JS-027 证在经上，条目源却是经说上；经说上之关系记录 MI1-R-SS-damage 已是 C03 mojing-sun-jian-ti 之条目，故把本条之源改为经上 MI1-S-JS、片段改为“損，偏去也”，经说上在 reading 中引并互见。(6) 语文 verifier 要荀子条删 Onward.run_iff_continues，结构 verifier 要移入 reading 作对照：取后者。荀子条之相合是定义层（Web.Admits、Web.Dependent），已明说不是定理。四、两个 verifier 都判 keep 而仍改动者：zhongyong-cheng-ji-cheng-wu（补句“这是成生之成”把支持之所从来当成广，属一名二用，删并加“不蕴涵成己必然成物”）；wangbi-20（补标见证、删名“益”、引见骈拇新条）；mengzi-si-duan（补标 Closing.Threshold 两个见证）；zhongyong-zhi-zhong-he（见上）。laozi-18 与 suzhe-18 原以“识”作“被登记／被识见”，是名表已去之旧义，改用平常语与感。laozi-27、ying-ning 不用稳／元闭，改用复归。其余 kept 七条照旧；它们的 layer 字串仍是 mapper 的“经·先秦”式，整合时须改为期在先（先秦·经……）。五、kind 之变：yichuan-fu 相分→定域（与 RO ru-chengyi-fu-tiandi-zhi-xin 一致，“心”之层在 reading 中标为不承接）；laozi-11、heshang-34、hanzhu-qu-cheng、laozi-02（置信低）、ying-ning、hanfei-xindu、mojing-sun、mojing-yi-lei、mojing-qiong、daxue 相合→定域；zhuangzi-sheng-sheng-zhe-bu-sheng 定域→相分。六、四个非关系层在本簇之相分覆盖：本原——heshang-51（兼一主之单一中心）、zhuangzi-sheng-sheng-zhe-bu-sheng；固定本性或价值——wangbi-20、zhuangzi-pian-mu（新）；意志或单一中心——heshang-51 之“主”；争胜与等级——sunzi-sheng-di-er-yi-qiang（新）。其他结构——laozi-38（起点完满、分化即丧失，kept）、huiyuan（方向相反，与 RO zaahan-ku-mie 同层）。同层统一判法：一、母、本、生生者之为先在根据，凡经文断言之处判相分；结构部分为主者判定域而在 reading 中标该层不承接（yichuan-fu 之天地之心、heshang-34 之唯一养育者、wangbi-39 之一／母、suzhe-55 之本与赤子之性、mozi-suo 之天乡其德、zhongyong-zan 之尽物之性）。七、新条四：yichuan-daguo-gen-ti-yu-hua（D1 与“凡新非生”最强之对照，两 verifier 的 missing 都举）；zhonglun-kong-yi-yi-qie-fa-de-cheng（批评之佛典覆盖；只取空之关系核心，空作解脱目标仍由 huiyuan 与 RO zaahan-ku-mie 作相分）；sunzi-sheng-di-er-yi-qiang（批评之兵家覆盖，争胜与等级层）；zhuangzi-pian-mu-xing-chang-fei-suo-duan（语文 verifier missing 8，wangbi-20 所本之先秦层）。法家已有 jielao、xindu 两条。新条均无脉络关系记录，引文只核对冻结文本。八、missing 中未加者及理由：老子67“俭故能广”已是 C04 lao-67-jian-gu-neng-guang（LL-R036 在 C02）；老子42“损之而益”在 C04；大过小象 TP-H28-X5-R01 在 C05（见上）；王弼五十章注在 C07；同人经文 JF-R038 在 C13 tongren-yu-ye-yu-zong（同人条只互见）；朱熹同人注与涣卦程朱之读不另立（前者带私／公之评价，后者随涣条删去）；孔疏“生生，不絕之辭”已并入 xici-sheng-sheng 条，荀子“可以为，未必能也”已并入荀子条，苏辙五十二章注已并入 laozi-52 条，孔疏“日日增新”已并入日新条；墨经“不可偏去而二”是表示之界（所扣之部分须可分），不是一条律，留作偏去名之注；论语“繼絕世”是字面，属 C02／C03；老子72“无狭其所居”与注是心境义；程颐比卦“遂其生”属 C02 依存；苏辙72“無廣狹”之辨是心境且带性层；宗密之“各有所長”与孟子“出于其类，拔乎其萃”只关名，见名旗；王弼略例之应由名表（相应）解决；国语和实生物之句不在脉络冻结文本（检索 0 条），只经 RO guoyu-shibo-he-sheng-wu 互见；RO ru-daizhen-gong-sui-qi-sheng（以生生论仁）与 guiguzi-bai-he（阖之策术义）只互见；Ren《生生不息论》诸句不在冻结语料，只作 D1／D22／D49 之出处，不立条；FO2-KS-C 之层次问题不在本簇条目中。九、平行之注须随条目改：ZX130-H15-R01（朱熹“謙者有而不居”）之注“不净汲取”应改为“不据其所有（同条之 AI 类比）”；LC2-SZ-C34-R01、LE-R019、LE-R044、MO1-C25-R004、RU1-LY-01-02-R02、LC-R005、LC2-HS-C11-R01/R02/R03、LC2-WB-C21-R01、LC2-HS-C34-R02、LC2-HS-C64-R03、LAO2-C50-R03、YCM130-H4-K-11-R01、XC-R056、TP-H26-T-R02、RU1-DX-05-R01、YCM130-H5-H-04-R01、WH-R026、YCM130-H5-K-03-R01 照旧为平行。原三条 rejected 照旧。十、未决：G1（支持之传递反复出现）即使证得也不即是生生，须加方向（Web.Widens）与新类（Flow.GrownBy；R25：Web.Widens 只比较固定类型，生生可多于广所能记）；G2（各有所长之度量）是设，不是待证之定理；通则久之“久”与 C05 之久、不息之单锚（C03／C05）、复与复足之分，须整合者统一；生生只锚 Web.Widens，生生不息不设单锚（与 D5 对照），本簇已照此写。",
    "check_notes": "核查方式：57 条全部片段以 ctq.py text 核对，皆 exact 1 hit 且出处正确；读法内另引之文逐条核对（共 60 余处）。129 个声明经 resolve.py 对照最新收据（20261020T093308）全部存在，未改名；每条在 Lean 源中读出其陈述与前提；55 个理论记录皆存在；脉络记录号以 ctq get 核对。\n\n改正 38 条，系统性问题如下。\n(1) 前提遗漏：Web.Whole.needs_arising 需“整体从某步起持续活动、部分之活动皆终、活动之部分有清单”，xici-sheng-sheng、wangbi-39、zhongyong-cheng-ji、huiyuan 四条省去，读成无条件的“整体只经由部分之不断作而续”；Flow.unsupported_stays 需流平衡、只有活动者给予、活动需支持（feng 漏）；narrows_of_consumed 需“每步所给不多于所取”（wangbi-49 写成“此后”，mozi-gua-ren 写成“另无所加”）。\n(2) 建模承诺：rises_late_of_new、unbounded_of_new、whole_not_new/whole_recurs_of_rest_idle、new_beyond_every 依于量为自然数（D5 明言），原文只写“无前提”。已在 yichuan-fu、xugua、xici-ri-xin、xici-sheng-sheng、mojing-qiong 补注。\n(3) new_beyond_every／new_from_rest_or_open 的析取项是“其余净给予 ∨ ¬ClosedAt”，后者只是与边界外有交换，不是“跨边界净给予”，已改。\n(4) 只在一个模型中成立的见证未标：Excluding.three_courses、ChoicePoint.no_rule_decides_joint、Specker.no_whole（是第 290 行 Specker 模型，不是一般的 Becoming.no_whole）、MatchedCourses.recovery_retains_loss（decide）、Renewable.prefix_does_not_decide。\n(5) 名之误用：用“止息”（名表属“已”）指 Law.rests_iff 的不动点，按 D49／D45 应为静与足而止；kongshu、sheng-sheng-zhe 用“生”指获得支持；hun-dun 用“耦合闭包”，名表应作感域，又以 Flow.act_unselected 支撑“善意不改其所为”，该定理不证此事，已改引 Web.Widens 定义与 D2；tai 的“互不相赅”可读成 ¬Keeps，与 Mixed 不同；tongren 的“同之所及”误借“所及”；xici-qiong 把“久”用于吸收区域，名表之久锚于 Web.Holds。\n(6) 逻辑：xici-qiong 把“穷”读作不能再续，却用确定之律（每一构形必有下一步）的“入”去说“穷不蕴涵变”；已重写为：穷则变不由固定之律给出，变则通、通则久在有限构形中成立（run_iff_returning、returning_absorbing），途中所经可以成闭。yichuan-daguo 的“作而不更新其所依者，不入生之一面”过度引申，D2 修订明言恒是保持、不是成生；“凡新非生”放在引号里像古语，其实不是任何文本中的话。xici-kun 先说疏之广不是名表之广，随后又以 widens 作“广生”的确切条件；已标为 AI 改读。laozi-11 把余地写成“所给与所需之差”，应为无此部分时之水平超出所需之量。zhuxi-pi 所引 returning_absorbing 不说“整条轨道”，已改引 Law.Absorbing.orbit 与 Hexagram.six_steps。you-ren 角色错配：余地律保全的是他者之支持，不是部分自身，已改为刃作为形成。\n(7) 引文：孔疏“坤是陰柔，閉藏翕斂”是第六章疏，不是第十一章阖户之疏，第十一章之疏不在冻结文本中；“天地之所以为大”冻结本作“為”；“强改则伤”“不收取则不阖”像引文却不在原文中，已去掉引号。\n(8) 判类：suzhe-55 的前提“生不可益”是定分（赤子之性），与同簇 wangbi-20、pian-mu 同属固定本性之层，原判定域而那两条判相分，前后不一，改判相分，并以无明名“欲益”之结构（老子同章以“知常曰明”与“益生曰祥”对举）；laozi-31 的片段是评价（不祥之器）加预言，读法自己说只在 C 之下成立，改判定域；zhuangzi-xiang-ru 的主断是“不如”之比较，同理改判定域。\n(9) 影响之断：“王弼第二十章注……即本于此”是凭共用词语断定承袭，与脉络规则相违，已改为“共用凫鹤之象，不据此断定承袭”。\n(10) 其他：feng 把“自藏”（族内只与族内交换）说成闭，名表中闭只指吸收区域，已删去 returning_absorbing 与相应记录；zhongyong-cheng-ji 删去读法未用的 change_readings 及其记录；shuogua 补出所列而未用的 waxWane_complement 与 complement。\n\n通过的 19 条中仍有小瑕，未改：laozi-18、suzhe-18、daizhen 的 names_used 列了“感”，读法只用“耦合”；zhonglun 列了“容”而未用；mengzi 列了“环”“成环”，读法用“回路”。xunzi-ke-yi 判相合，只依定义层（Web.Dependent 的单向性），读法自认“不是一条定理”；若整合者要求相合必须有定理，可另找一个“被支持而不活动”的见证。\n\nname_flags 已读，未逐条改动：其中“阖”锚定与“辟”字形、“赅／該”、“穷”的 not_carried、“益”的 not_carried 都与本次核查发现一致，建议整合者采纳。另需新增一条：“静”在 D49 中指律不改变的构形，名表的静行目前无锚，可锚到 D49 与 Law.rests_iff 的右端。"
   },
   "C07": {
@@ -29711,7 +29713,7 @@
      ],
      "records": [
       "a-code-formed-between-formations",
-      "whole-first-and-bounded-centers",
+      "whole-and-regions-and-bounded-centers",
       "claims-shown-in-context"
      ],
      "reading": "AI读法：「正處」「正色」这些名，在人、鳅、猿各自的记录上给出不同的义项，所以不跨情境成立（贯）：一个义项不成立，恰当某条相关记录不给出它（CrossSituational.stands_false_iff）。在一个构造的模型里，各以其依赖为界的中心彼此不一致（Clearing.centers_disagree，见证）。带语境指标的「正處」（人之正处、鳅之正处）符合所显示的一切（Contextual.indexed_fits，按定义）。王倪不说没有处与色，只说没有跨情境的「正」。",
@@ -29723,7 +29725,8 @@
      "relational": "正处、正色是在各自的居处关系中成立，不是脱离关系的唯一标准。",
      "tradition": "庄",
      "work": "庄子",
-     "checked": "passed"
+     "checked": "passed",
+     "corrected": "record ids follow the renamed records (cd-ranking-names, 3 November 2026), claims unchanged"
     },
     {
      "id": "zhuangzi-tian-di-yi-zhi",
@@ -29812,7 +29815,7 @@
      ],
      "records": [
       "a-code-formed-between-formations",
-      "whole-first-and-bounded-centers"
+      "whole-and-regions-and-bounded-centers"
      ],
      "reading": "AI读法：「以俗觀之，貴賤不在己」：俗是一个已形成的共享码（约定俗成），它所达到的形式由起点与听的次序定（SharedCodes.run_origin）；在有一张列出全体的表时，能被弄成共享的只是已在使用中的形式（shared_iff_in_use），不由被评者自己定。律也不在码上给出排序：在一个构造的模型里，各以依赖为界的中心不一致（Clearing.centers_disagree，见证）；在延续条件（凡续皆有顾，陈述而不断言）之下，一个模型里的诸部分仍不可比（Transfer.unordered，见证）——延续条件只定范围，不定次序；次序只来自另加的比较前提以广为愈（C：扩大更好）。",
      "names_used": [
@@ -29826,7 +29829,8 @@
      "ro_passage": "zhuangzi-qiushui-yi-dao-guan-zhi",
      "tradition": "庄",
      "work": "庄子",
-     "checked": "corrected"
+     "checked": "corrected",
+     "corrected": "record ids follow the renamed records (cd-ranking-names, 3 November 2026), claims unchanged"
     },
     {
      "id": "zhuangzi-qiu-li",
@@ -41891,7 +41895,7 @@
       "Becoming.Flow.withinInfluence_of_withinFeeding"
      ],
      "records": [
-      "whole-first-and-bounded-centers",
+      "whole-and-regions-and-bounded-centers",
       "living-significance-on-held-lives",
       "presupposition-scopes"
      ],
@@ -41909,7 +41913,8 @@
      "ro_passage": "ru-zhongyong-qinqin-zhi-sha",
      "tradition": "儒",
      "work": "中庸",
-     "checked": "corrected"
+     "checked": "corrected",
+     "corrected": "record ids follow the renamed records (cd-ranking-names, 3 November 2026), claims unchanged"
     },
     {
      "id": "xunzi-gui-jian-you-deng",
@@ -42011,7 +42016,7 @@
      ],
      "records": [
       "continuation-condition-decomposition",
-      "whole-first-and-bounded-centers",
+      "whole-and-regions-and-bounded-centers",
       "comparison-by-widening",
       "mutual-dependence-and-its-pace"
      ],
@@ -42027,7 +42032,8 @@
      "ro_passage": "mozi-jianai-zhong-shi-ren-ruo-ji",
      "tradition": "墨",
      "work": "墨子",
-     "checked": "passed"
+     "checked": "passed",
+     "corrected": "record ids follow the renamed records (cd-ranking-names, 3 November 2026), claims unchanged"
     },
     {
      "id": "mozi-shangxian-xia-xiang-zhu",
@@ -42174,7 +42180,7 @@
      "records": [
       "claims-shown-in-context",
       "gluing-under-parity",
-      "whole-first-and-bounded-centers",
+      "whole-and-regions-and-bounded-centers",
       "separation-loses-the-relation"
      ],
      "reading": "AI读法：墨子在此看到：各国各自已治，合起来未必治，因为「此皆是其國而非人之國」。脊柱：各语境所示恰在交界处一致时才拼合为一（Contextual.glues_iff_agree），各语境各自一致仍可不是任何整体之部分（Specker.no_whole，构造之例）；以各自依赖为界之中心彼此不一（Clearing.centers_disagree，构造之例）；一个关系可以由整体持有而不由任何两者持有（whole_not_in_pairs，构造之例）。这一半是确切之相合。定域：墨子之出路是下文「故又使國君選其國之義，以尚同於天子」，即以一个中心之读法取代交界处之一致；合用等于一个成员恰当该成员之分辨已含其余一切（Web.pooled_iff_member，〈同而不和〉），这是单一中心，而脊柱给出的拼合条件是交界处之一致，不是向上之统一。",
@@ -42189,7 +42195,8 @@
      "ro_passage": "",
      "tradition": "墨",
      "work": "墨子",
-     "checked": "passed"
+     "checked": "passed",
+     "corrected": "record ids follow the renamed records (cd-ranking-names, 3 November 2026), claims unchanged"
     },
     {
      "id": "mozi-tianzhi",
@@ -42343,7 +42350,7 @@
      ],
      "records": [
       "mutual-dependence-and-its-pace",
-      "whole-first-and-bounded-centers",
+      "whole-and-regions-and-bounded-centers",
       "the-gap-for-ones-own-act",
       "raising-what-couples-in-draws-from-beyond"
      ],
@@ -42361,7 +42368,8 @@
      "ro_passage": "",
      "tradition": "法",
      "work": "韩非子",
-     "checked": "corrected"
+     "checked": "corrected",
+     "corrected": "record ids follow the renamed records (cd-ranking-names, 3 November 2026), claims unchanged"
     },
     {
      "id": "hanfei-wudu-ren-zhong-cai-gua",
@@ -42425,7 +42433,7 @@
      "records": [
       "conditions-kept-together",
       "separation-loses-the-relation",
-      "whole-first-and-bounded-centers"
+      "whole-and-regions-and-bounded-centers"
      ],
      "reading": "AI读法：韩非两处立论：「皆見愛而未必治也，雖厚愛矣，奚遽不亂？」否认厚爱之充分；「上下之利，若是其異也，而人主兼舉匹夫之行，而求致社稷之福，必不幾矣」更断言必败，前文「故令尹誅而楚姦不上聞，仲尼賞而魯民易降北」表明「匹夫之行」指与国相反之个人之行。脊柱只同意不充分之一半：两个条件各自可保持而共同不可保持（Viability.ChoicePoint.each_not_joint，构造之例），没有依据各自之判定之规则能判定共同之判定（no_rule_decides_joint）；一个关系可以由整体持有而不由任何两者持有（whole_not_in_pairs，构造之例）；一个形成在每一走法下都活动，并不决定其条件之更新（Renewable.kept_part_not_renewal，构造之例）。利益相反与必败之断言都不载：脊柱给出的是共同之保持须以共同之走法问之，不是以一个中心之法压过部分；以各自依赖为界之中心彼此不一（Clearing.centers_disagree），但这不推出利益相反。",
      "names_used": [
@@ -42438,7 +42446,8 @@
      "ro_passage": "",
      "tradition": "法",
      "work": "韩非子",
-     "checked": "passed"
+     "checked": "passed",
+     "corrected": "record ids follow the renamed records (cd-ranking-names, 3 November 2026), claims unchanged"
     },
     {
      "id": "shangjunshu-yi-shang-yi-xing-yi-jiao",
@@ -43250,7 +43259,7 @@
       "Becoming.RelativePosition.positions_balance"
      ],
      "records": [
-      "whole-first-and-bounded-centers",
+      "whole-and-regions-and-bounded-centers",
       "presupposition-scopes",
       "continuation-condition-decomposition",
       "relative-position-is-zero-sum"
@@ -43266,7 +43275,8 @@
      "ro_passage": "zhuangzi-qiushui-yi-dao-guan-zhi",
      "tradition": "庄",
      "work": "庄子",
-     "checked": "passed"
+     "checked": "passed",
+     "corrected": "record ids follow the renamed records (cd-ranking-names, 3 November 2026), claims unchanged"
     },
     {
      "id": "zhuangzi-shanmu-yi-li-he-yi-tian-shu",
@@ -43327,7 +43337,7 @@
      "records": [
       "claims-shown-in-context",
       "gluing-under-parity",
-      "whole-first-and-bounded-centers",
+      "whole-and-regions-and-bounded-centers",
       "separation-loses-the-relation"
      ],
      "reading": "AI读法：此篇说各家「以自爲方」，「往而不反，必不合矣」。脊柱：各语境所示恰在交界处一致时才拼合为一（Contextual.glues_iff_agree）；各语境各自一致仍可不是任何整体之部分（Specker.no_whole，构造之例）；以各自依赖为界之中心彼此不一（Clearing.centers_disagree，构造之例）；一个关系可以由整体持有而不由任何两者持有（whole_not_in_pairs，构造之例）。定域：「必不合」在各方于交界处不一致时成立；「不反」即不回到交界处相读，正是不合之条件。作者以古之「道術」为未裂之全（「道術將爲天下裂」），这一先在之全是本原之层，本条不取。",
@@ -43341,7 +43351,8 @@
      "ro_passage": "",
      "tradition": "庄",
      "work": "庄子",
-     "checked": "passed"
+     "checked": "passed",
+     "corrected": "record ids follow the renamed records (cd-ranking-names, 3 November 2026), claims unchanged"
     },
     {
      "id": "qian-yong-jiu-qun-long-wu-shou",
@@ -43557,13 +43568,13 @@
      "declarations": [
       "Becoming.Dependence.MakesDifferenceTogether",
       "Becoming.Dependence.makesDifference_iff_together",
-      "Becoming.Pool.difference_belongs_to_the_joint",
+      "Becoming.Pool.difference_only_together",
       "Becoming.Dependence.DifferenceOnlyTogether"
      ],
      "records": [
       "joint-difference-making"
      ],
-     "reading": "AI读法：语境是「君子之道，或出或处，或默或语。二人同心，其利断金。同心之言，其臭如兰。」，释同人九五：外行之出处语默不同而心同，更近〈和而不同〉；「断金」是喻同心之利。在结构上取二人合而断金为〈同力〉：一族部分合起来造成一个变化，即一并扣留则同一走法保持依赖（Dependence.MakesDifferenceTogether，定义）；单个部分之〈有力〉恰是单元素一族之〈同力〉（makesDifference_iff_together，Iff.rfl）。构造之例中，同一取者与另一个取者一起时其部分造成损失之差别，与另两个取者一起时损失被多重决定，它不造成差别，而扣留两部分仍保持依赖（Pool.difference_belongs_to_the_joint）：差别属于合起来之一族。对照：合起来造成而没有任何单个部分造成（Dependence.DifferenceOnlyTogether）是多重决定，不是此句；二人缺一则不能断金，是每人都造成差别之情形。剩余：「同心」指心志之同，脊柱之合起来造成不需要一个共同之心。",
+     "reading": "AI读法：语境是「君子之道，或出或处，或默或语。二人同心，其利断金。同心之言，其臭如兰。」，释同人九五：外行之出处语默不同而心同，更近〈和而不同〉；「断金」是喻同心之利。在结构上取二人合而断金为〈同力〉：一族部分合起来造成一个变化，即一并扣留则同一走法保持依赖（Dependence.MakesDifferenceTogether，定义）；单个部分之〈有力〉恰是单元素一族之〈同力〉（makesDifference_iff_together，Iff.rfl）。构造之例中，同一取者与另一个取者一起时其部分造成损失之差别，与另两个取者一起时损失被多重决定，它不造成差别，而扣留两部分仍保持依赖（Pool.difference_only_together）：差别属于合起来之一族。对照：合起来造成而没有任何单个部分造成（Dependence.DifferenceOnlyTogether）是多重决定，不是此句；二人缺一则不能断金，是每人都造成差别之情形。剩余：「同心」指心志之同，脊柱之合起来造成不需要一个共同之心。",
      "names_used": [
       "同力",
       "有力",
@@ -43576,7 +43587,8 @@
      "ro_passage": "",
      "tradition": "共享经典",
      "work": "易传",
-     "checked": "passed"
+     "checked": "passed",
+     "corrected": "names follow the declaration ND renamed in OU7 (e5951932b, 1 November 2026), statement unchanged"
     },
     {
      "id": "xici-tian-zun-di-bei",
@@ -45407,7 +45419,7 @@
     {
      "name": "同力",
      "issue": "锚 Dependence.MakesDifferenceTogether 正确，但说明「只在合起来时造成的差别」描述的是 DifferenceOnlyTogether（合起来造成而无一部分单独造成，即多重决定）；用例「三軍同力」「比知同力」「二人同心」都是每一方不可少之合起来造成。",
-     "proposal": "说明改为「合起来造成的差别（difference made together）」：一并扣留则同一走法保持依赖（MakesDifferenceTogether，定义）；加 Dependence.makesDifference_iff_together（Iff.rfl，与〈有力〉之桥：单个部分之有力即单元素一族之同力）与 Pool.difference_belongs_to_the_joint（构造之例）；用例：荀子富國／議兵／彊國「三軍同力」（RU2-S-XZ10、XZ15、XZ16）、臣道「比知同力」（RU2-S-XZ13）；通知 C02〈有力〉之 lean 删 DifferenceOnlyTogether。"
+     "proposal": "说明改为「合起来造成的差别（difference made together）」：一并扣留则同一走法保持依赖（MakesDifferenceTogether，定义）；加 Dependence.makesDifference_iff_together（Iff.rfl，与〈有力〉之桥：单个部分之有力即单元素一族之同力）与 Pool.difference_only_together（构造之例）；用例：荀子富國／議兵／彊國「三軍同力」（RU2-S-XZ10、XZ15、XZ16）、臣道「比知同力」（RU2-S-XZ13）；通知 C02〈有力〉之 lean 删 DifferenceOnlyTogether。"
     },
     {
      "name": "（DifferenceOnlyTogether 未命名）",
@@ -45733,7 +45745,7 @@
      ],
      "records": [
       "significance-retained-within-margin",
-      "whole-first-and-bounded-centers",
+      "whole-and-regions-and-bounded-centers",
       "continuation-condition-decomposition"
      ],
      "reading": "AI读法：「吉凶者，失得之象也」把吉凶读成失得，在脊柱上有确切对应，名为无丧与有得：在凡续皆有顾下，无丧恰是包含，有得恰是超出（Web.retains_iff_includes、Web.adds_iff_exceeds）；在平衡的流中，一个部分恰在其净汲取于某个所需条件上超出余地之处丧失有顾的延续（Flow.Balances.loses_iff_beyond_margin）。定域：失得相对于方。在清除者的构造模型中，以各自依存为界的我对同一部分判断不一：从清除者之方它无丧，从居住者之方，不带它的水平有得于带它的水平，即它有所丧（Clearing.centers_disagree，见证）；在凡续皆有顾下，各方的无丧判断一致（Web.retains_agree）。所以吉凶即失得在把失得读成对一切被顾者的无丧与有得时成立；占问者一方之吉凶不是这种失得。系辞「吉凶悔吝者，生乎动者也」（XC-R017）同属此层。",
@@ -45753,7 +45765,8 @@
      "ro_passage": "",
      "tradition": "共享经典（易）",
      "work": "易传·系辞上传",
-     "checked": "corrected"
+     "checked": "corrected",
+     "corrected": "record ids follow the renamed records (cd-ranking-names, 3 November 2026), claims unchanged"
     },
     {
      "id": "wangbi-fu-yi-you-wei-xin",
@@ -45776,7 +45789,7 @@
      ],
      "records": [
       "continuation-condition-yields-living-significance",
-      "whole-first-and-bounded-centers",
+      "whole-and-regions-and-bounded-centers",
       "continuation-condition-decomposition",
       "living-significance-on-held-lives"
      ],
@@ -45796,7 +45809,8 @@
      "ro_passage": "",
      "tradition": "共享经典（易）",
      "work": "王弼《周易注》复卦彖注（孔颖达正义本）",
-     "checked": "corrected"
+     "checked": "corrected",
+     "corrected": "record ids follow the renamed records (cd-ranking-names, 3 November 2026), claims unchanged"
     },
     {
      "id": "kongshu-wei-er-bu-zai",
@@ -45813,14 +45827,14 @@
      "declarations": [
       "Becoming.Run.rest_driven_by_part",
       "Becoming.partForms_iff",
-      "Becoming.Pool.difference_belongs_to_the_joint",
+      "Becoming.Pool.difference_only_together",
       "Becoming.Dependence.differenceOnlyTogether_iff"
      ],
      "records": [
       "where-a-move-is-formed",
       "joint-difference-making"
      ],
-     "reading": "AI读法：孔疏以「為而不宰，功成不居」解释「法道而施政」。这八字是撮合《老子》第二、十、五十一章之语（王弼本作「生而不有，为而不恃，长而不宰」与「功成而弗居」）；疏所解释的是韩康伯注「君子體道以為用也」，层次是经（系辞）、注（韩康伯）、疏（孔颖达）三层。脊柱给出「不宰」的结构（与 RO 第五十一章条同）：当其余的律以一方的策略为输入时，这一方所做即其余所受（Run.rest_driven_by_part），一个动作属于部分恰在它是部分自己的策略（partForms_iff）。「功成不居」只有一个较窄的对应，而且说的是对损失的差别，不是功：在一个构造模型中，同一汲取在有一个其他汲取者时造成一处依存的断开，有两个时不造成，损失被多重决定（Pool.difference_belongs_to_the_joint，见证）；差别也可以只由共同者造成（Dependence.differenceOnlyTogether_iff）。所以在有其他汲取者的构形中，差别可以不属于单一部分，「不居」不是一般地错，但功属于共同不是一般事实。规范方向应当不宰需要以广为愈（C）这一排序前提；不易乎畛只定范围。「法道而施政」把它放在治者一方，是理论不需要的我。苏辙「無為之之意」（LC2-SZ-C37-R01）同此。",
+     "reading": "AI读法：孔疏以「為而不宰，功成不居」解释「法道而施政」。这八字是撮合《老子》第二、十、五十一章之语（王弼本作「生而不有，为而不恃，长而不宰」与「功成而弗居」）；疏所解释的是韩康伯注「君子體道以為用也」，层次是经（系辞）、注（韩康伯）、疏（孔颖达）三层。脊柱给出「不宰」的结构（与 RO 第五十一章条同）：当其余的律以一方的策略为输入时，这一方所做即其余所受（Run.rest_driven_by_part），一个动作属于部分恰在它是部分自己的策略（partForms_iff）。「功成不居」只有一个较窄的对应，而且说的是对损失的差别，不是功：在一个构造模型中，同一汲取在有一个其他汲取者时造成一处依存的断开，有两个时不造成，损失被多重决定（Pool.difference_only_together，见证）；差别也可以只由共同者造成（Dependence.differenceOnlyTogether_iff）。所以在有其他汲取者的构形中，差别可以不属于单一部分，「不居」不是一般地错，但功属于共同不是一般事实。规范方向应当不宰需要以广为愈（C）这一排序前提；不易乎畛只定范围。「法道而施政」把它放在治者一方，是理论不需要的我。苏辙「無為之之意」（LC2-SZ-C37-R01）同此。",
      "names_used": [
       "以广为愈",
       "不易乎畛",
@@ -45833,7 +45847,8 @@
      "ro_passage": "",
      "tradition": "共享经典（易）",
      "work": "孔颖达等《周易正义》",
-     "checked": "passed"
+     "checked": "passed",
+     "corrected": "names follow the declaration ND renamed in OU7 (e5951932b, 1 November 2026), statement unchanged"
     },
     {
      "id": "lao-62-he-qi-zhi-you",
@@ -45858,7 +45873,7 @@
       "presupposition-scopes",
       "continuation-condition-decomposition",
       "derived-extent-limits",
-      "whole-first-and-bounded-centers"
+      "whole-and-regions-and-bounded-centers"
      ],
      "reading": "AI读法：「人之不善，何弃之有？」是一个全称否定：不以善与不善为门槛，没有谁被排除。但它是自一方而言的全称：本章是「道」与圣人一方之事，结构是从一个方 p 对一切步、一切形成的顾，即 subTrue_total_iff 之形——沿全关系整体是唯一的畛，畛内之顾次真恰是从 p 一切延续都有顾，即该方上的凡续皆有顾。到 Unrestricted（对一切方）还需无方：若每个形成都在某个我的闭包之内、各方的畛内之顾都次真，立场不变给出凡续皆有顾（unrestricted_of_standpointInvariant）。根据也不同：经文以「不善人之所保」与「有罪以免」说明不弃，这是保护与赦免，属实施；理论分开顾与实施。再者，不弃不等于以其所为为活：在清除者的构造模型中，剥他者的那一步不是活的（Clearing.clearer_not_living，见证），在凡续皆有顾下清除者的部分仍丧失居住者（Clearing.clearer_loses_dweller，见证），所以不弃并不取消损失。帛书甲本已有此句（作「之不善也何棄□」，下接「有」字）。地位：老子把它说成「道」与圣人之所为，理论把凡续皆有顾作为陈述而不断言的条件，根据开放；排序只在以广为愈（C），不易乎畛定范围，不排序。",
      "names_used": [
@@ -45881,7 +45896,8 @@
      "ro_passage": "",
      "tradition": "道",
      "work": "《老子》",
-     "checked": "passed"
+     "checked": "passed",
+     "corrected": "record ids follow the renamed records (cd-ranking-names, 3 November 2026), claims unchanged"
     },
     {
      "id": "suzhe-33-ke-ji-fu-xing",
@@ -46174,7 +46190,7 @@
       "presupposition-scopes",
       "continuation-condition-decomposition",
       "derived-extent-limits",
-      "whole-first-and-bounded-centers",
+      "whole-and-regions-and-bounded-centers",
       "significance-retained-within-margin"
      ],
      "reading": "AI读法：「不善者，吾亦善之」不以对方的善恶为门槛，结构是从吾一方对一切对象的不变：沿全关系整体是唯一的畛，此时畛内之顾次真恰是从该方一切延续都有顾（subTrue_total_iff），即吾一方上的凡续皆有顾；到每个方还需无方（StandpointInvariant：从一方有顾则从每方有顾）。苏辙「善不善在彼吾之所以善之者未甞渝也」（LC2-SZ-C49-R01）把「善之」放在吾一方的不变上，同属此形。定域：「善之」若是给予正价，就超出了条件，条件只给顾不给正价；在清除者的构造模型中，被顾者剥他者的那一步不是活的（Clearing.clearer_not_living，见证），在凡续皆有顾下它的部分仍丧失居住者（Clearing.clearer_loses_dweller，见证）；条件也不排序：各有所长即彼此各有得（Web.mixed_iff_adds；Transfer.unordered 是见证）。「信者，吾信之；不信者，吾亦信之」（LAO2-C49-R03）同式。",
@@ -46197,7 +46213,8 @@
      "ro_passage": "",
      "tradition": "道",
      "work": "《老子》",
-     "checked": "passed"
+     "checked": "passed",
+     "corrected": "record ids follow the renamed records (cd-ranking-names, 3 November 2026), claims unchanged"
     },
     {
      "id": "lao-56-bu-ke-de-er-gui-jian",
@@ -46221,7 +46238,7 @@
      "records": [
       "continuation-condition-yields-living-significance",
       "relative-position-is-zero-sum",
-      "whole-first-and-bounded-centers"
+      "whole-and-regions-and-bounded-centers"
      ],
      "reading": "AI读法：玄同者「不可得而亲，不可得而疏；不可得而利，不可得而害；不可得而贵，不可得而贱」：没有一个我能对它施加亲疏利害贵贱。相合只限于不分贵贱：理论之顾不分等级，顾式中 sig 只取是否（Valuation）；贵贱作为称，按计数是零和的（RelativePosition.positions_balance）；亲疏贵贱若从一个以依存为界的我作出，各我彼此不一——在清除者的构造模型中，同一部分从清除者之方无丧，从居住者之方有丧（Clearing.centers_disagree，见证）。这里说的是一个主体的状态，不是各方之间的不变，所以不对应无方。相分有二。其一，「不可得而害」断言玄同者不受害，而在凡续皆有顾下损失照样发生：在构造模型中清除者的部分从每个方都丧失居住者（Clearing.clearer_loses_dweller，见证），条件只计入损失，不防止损失。其二，「故为天下贵」把不可贵贱者重新放进贵的位阶，理论没有这一步。苏辙「體道者均覆萬物而孰為親踈」，并以「此所以為天下貴也」收束（LC2-SZ-C56-R02），同属此读，也同样重新引入贵。",
      "names_used": [
@@ -46241,7 +46258,8 @@
      "ro_passage": "",
      "tradition": "道",
      "work": "《老子》",
-     "checked": "passed"
+     "checked": "passed",
+     "corrected": "record ids follow the renamed records (cd-ranking-names, 3 November 2026), claims unchanged"
     },
     {
      "id": "lao-72-zi-ai-bu-zi-gui",
@@ -46818,7 +46836,7 @@
      "records": [
       "continuation-condition-decomposition",
       "metaethical-core-characterization",
-      "whole-first-and-bounded-centers"
+      "whole-and-regions-and-bounded-centers"
      ],
      "reading": "AI读法：孟子以「心之所同然」为「理也，义也」：每个人的「心」都同样地肯定它。这里的「理」是规范，不是理论之理（对结构与变化之律的建模）。理论中无方是一个条件，不是关于各人之「心」的事实：在构造模型中，有萌与无亲而缺无方，活皆有顾就不成立（Model.standpoint_neutrality_is_needed，见证）；在清除者的模型中，以各自资域为界的顾使每个畛内之顾次真、每个形成都在自身闭包内，顾却不随方而不变（Clearing.without_standpoint_invariance，见证），以依存为界的我判断不一（Clearing.centers_disagree，见证）。所以「同然」作为对各人之「心」的事实断言，与理论相分；作为条件读（若各方之顾一致，StandpointInvariant），它就是无方。",
      "names_used": [
@@ -46841,7 +46859,8 @@
      "ro_passage": "",
      "tradition": "儒",
      "work": "《孟子》",
-     "checked": "passed"
+     "checked": "passed",
+     "corrected": "record ids follow the renamed records (cd-ranking-names, 3 November 2026), claims unchanged"
     },
     {
      "id": "ru-mengzi-qinqin-renmin-aiwu",
@@ -46870,7 +46889,7 @@
      "records": [
       "levels-of-closure",
       "presupposition-scopes",
-      "whole-first-and-bounded-centers",
+      "whole-and-regions-and-bounded-centers",
       "significance-retained-within-margin",
       "continuation-condition-decomposition",
       "protection-priority-excludes-uniform-aggregation"
@@ -46897,7 +46916,8 @@
      "ro_passage": "ru-mengzi-qinqin-renmin-aiwu",
      "tradition": "儒",
      "work": "《孟子》",
-     "checked": "passed"
+     "checked": "passed",
+     "corrected": "record ids follow the renamed records (cd-ranking-names, 3 November 2026), claims unchanged"
     },
     {
      "id": "xunzi-tian-jun",
@@ -47490,7 +47510,7 @@
       "Becoming.RelativePosition.positions_balance"
      ],
      "records": [
-      "whole-first-and-bounded-centers",
+      "whole-and-regions-and-bounded-centers",
       "continuation-condition-yields-living-significance",
       "continuation-condition-decomposition",
       "relative-position-is-zero-sum"
@@ -47517,7 +47537,8 @@
      "ro_passage": "zhuangzi-qiushui-yi-dao-guan-zhi",
      "tradition": "庄",
      "work": "《庄子》",
-     "checked": "passed"
+     "checked": "passed",
+     "corrected": "record ids follow the renamed records (cd-ranking-names, 3 November 2026), claims unchanged"
     },
     {
      "id": "zhuangzi-yi-ji-yang-yang-niao",
@@ -47584,7 +47605,7 @@
       "Becoming.Web.Excludes.not_of_alike"
      ],
      "records": [
-      "whole-first-and-bounded-centers",
+      "whole-and-regions-and-bounded-centers",
       "continuation-condition-yields-living-significance",
       "selection-through-a-model-of-the-options",
       "testing-within-couplings"
@@ -47605,7 +47626,8 @@
      "ro_passage": "",
      "tradition": "庄",
      "work": "《庄子》",
-     "checked": "passed"
+     "checked": "passed",
+     "corrected": "record ids follow the renamed records (cd-ranking-names, 3 November 2026), claims unchanged"
     },
     {
      "id": "zhuangzi-shendao-qu-ji",
@@ -47763,7 +47785,7 @@
      ],
      "records": [
       "continuation-condition-decomposition",
-      "whole-first-and-bounded-centers",
+      "whole-and-regions-and-bounded-centers",
       "significance-retained-within-margin",
       "comparison-by-widening"
      ],
@@ -47788,7 +47810,8 @@
      "ro_passage": "mozi-jianai-zhong-shi-ren-ruo-ji",
      "tradition": "墨",
      "work": "《墨子》",
-     "checked": "passed"
+     "checked": "passed",
+     "corrected": "record ids follow the renamed records (cd-ranking-names, 3 November 2026), claims unchanged"
     },
     {
      "id": "mozi-jian-yi-yi-bie",
@@ -47818,7 +47841,7 @@
      ],
      "records": [
       "continuation-condition-yields-living-significance",
-      "whole-first-and-bounded-centers",
+      "whole-and-regions-and-bounded-centers",
       "continuation-condition-decomposition",
       "significance-retained-within-margin"
      ],
@@ -47845,7 +47868,8 @@
      "ro_passage": "",
      "tradition": "墨",
      "work": "《墨子》",
-     "checked": "passed"
+     "checked": "passed",
+     "corrected": "record ids follow the renamed records (cd-ranking-names, 3 November 2026), claims unchanged"
     },
     {
      "id": "daqu-ai-bu-jia-hou",
@@ -48092,7 +48116,7 @@
       "presupposition-scopes",
       "living-significance-on-held-lives",
       "closure-verdict-meets-continuation-condition",
-      "whole-first-and-bounded-centers",
+      "whole-and-regions-and-bounded-centers",
       "feeding-from-a-step"
      ],
      "reading": "AI读法：经说上：「仁，愛民者，非爲用民也，不若愛馬者」：此爱不是为了用，不同于爱马（为用而爱）。冻结本（维基文库，非校勘定本）作愛民、用民；通行校本（道藏本、孙诒让《墨子閒詁》）多作爱己、用己。若作爱己，本条说的是以非工具性的爱己为式，接近自顾，下面的读法就要改到自顾一侧，定读待查。按冻结本读：理论的两条路线正好对应。以各我闭包为界的意义，是无论畛怎样划都落在自身之内者的意义（bounded_closure_iff），即路线 (b)；沿喂养，它对一物的顾止于该物在某一步对我有所供给之处（资域跨一切步取闭包），这是爱马式的顾；在清除者的构造模型中，这样的顾不及居住者（Clearing.center_not_derived，见证）。凡续皆有顾的顾不以供给为条件。两者在资域即整体之处一致——在凡续皆有顾下，以资域为界的无丧判断在每个比较上与条件的判断相同（Flow.within_closure_iff_retains），以整体为界的意义就是凡续皆有顾（bounded_whole，立得）——资域不是整体时可以分开：在构造模型中清除者的部分在凡续皆有顾下从每个方丧失居住者（Clearing.clearer_loses_dweller，见证）。所释经文是「仁，體愛也」。已补：按步之资域：自第 s 步起之资域（Flow.WithinFeedingFrom）自第 0 步起即资域（withinFeedingFrom_zero），随时而缩（WithinFeedingFrom.earlier）；自 s 起不给任何所需者，不在他者自 s 起之资域内（not_withinFeedingFrom）。所以以每步之资域为界之顾，许可终结不再供给者（Flow.feedingFrom_permits），而在凡续皆有顾之下同一部分有丧（Flow.feedingFrom_parts）：「不若愛馬」之顾随供给停止而撤回。",
@@ -48113,7 +48137,8 @@
      "ro_passage": "",
      "tradition": "名辩",
      "work": "《墨子·经说上》",
-     "checked": "corrected"
+     "checked": "corrected",
+     "corrected": "record ids follow the renamed records (cd-ranking-names, 3 November 2026), claims unchanged"
     },
     {
      "id": "simafa-ren-ben-yi-zhi",
@@ -48135,7 +48160,7 @@
      ],
      "records": [
       "significance-retained-within-margin",
-      "whole-first-and-bounded-centers"
+      "whole-and-regions-and-bounded-centers"
      ],
      "reading": "AI读法：司马法「以仁為本」、以「義」治之；「正不獲意則權」，「權出於戰，不出於仁也」。一层与理论的分层相合：顾不直接给出行动，「權出於戰，不出於仁」承认战不由「仁」导出。在凡续皆有顾下终结有其损失：以无丧作比较不许可任何终结（Web.Retains.not_added，此条不需条件）；一个部分恰在其净汲取超出余地处丧失有顾的延续（Flow.Balances.loses_iff_beyond_margin）；在清除者的构造模型中，清除者的部分从每个方都丧失居住者（Clearing.clearer_loses_dweller，见证）。条件本身不排序：各有所长即彼此各有得（Web.mixed_iff_adds），许可与否需要以广为愈（C）与实践的承诺，理论不为以战为权背书。剩余：「以仁為本」把一个先在的「仁」立为根据（本原层），理论没有这一层；凡续皆有顾陈述而不断言，根据开放。",
      "names_used": [
@@ -48155,7 +48180,8 @@
      "ro_passage": "",
      "tradition": "兵",
      "work": "《司马法》",
-     "checked": "passed"
+     "checked": "passed",
+     "corrected": "record ids follow the renamed records (cd-ranking-names, 3 November 2026), claims unchanged"
     },
     {
      "id": "hanfei-ai-zeng-zhi-bian",
@@ -48300,7 +48326,7 @@
       "Becoming.Unrestricted"
      ],
      "records": [
-      "whole-first-and-bounded-centers",
+      "whole-and-regions-and-bounded-centers",
       "continuation-condition-yields-living-significance"
      ],
      "reading": "AI读法：起信论以「依於境界，心起分別愛與不愛」为智相：爱与不爱是依境界、依「心」的分别，属于一个我的评价，不是境界本身的性质。这与理论把顾和正负价分开相合：在清除者的构造模型中，以依存为界的我判断不一（Clearing.centers_disagree，见证）；有界意义在其界内是别，只要某物落在某方的区域之外它就不是凡续皆有顾（bounded_rival）；被表示的动力学不决定顾（Web.significance_undetermined 只对两个常值的顾作评价）。定域：理论之顾只取是否（Valuation），这本身就是一种分别，起信论对分别的批评同样落在它上面；在凡续皆有顾下（Unrestricted：一切皆有顾），这一分别不起作用（全无之顾下它也不起作用，但那是什么都不顾）。剩余：起信论把分别判为妄，以先在真如为准，理论不作此判。",
@@ -48318,7 +48344,8 @@
      "ro_passage": "",
      "tradition": "佛",
      "work": "《大乘起信论》",
-     "checked": "corrected"
+     "checked": "corrected",
+     "corrected": "record ids follow the renamed records (cd-ranking-names, 3 November 2026), claims unchanged"
     },
     {
      "id": "qixin-zhong-sheng-ke-min",
@@ -48555,7 +48582,7 @@
      "records": [
       "presupposition-scopes",
       "continuation-condition-yields-living-significance",
-      "whole-first-and-bounded-centers",
+      "whole-and-regions-and-bounded-centers",
       "continuation-condition-decomposition"
      ],
      "reading": "AI读法：「觀者如市，匠伯不顧，遂行不輟」：匠伯不顾栎社树，因为它于匠人无用。匠之「顧」是看中其用（取材），即以用为界的顾：以各我闭包为界的意义，是无论畛怎样划都落在自身之内者的意义（bounded_closure_iff），即路线 (b)；这种顾与凡续皆有顾分开。树因不被这样顾而得存：栎树说「使予也而有用，且得有此大也邪」，以无用为自身之大用，对应自顾一侧的读法（想要自身的延续，AI读法）。顾以方为索引（顾式中的 sig p，Valuation），匠人之顾与栎树之顾不同；在清除者的构造模型中，以依存为界的我判断不一（Clearing.centers_disagree，见证）。「且也若與予也，皆物也，奈何哉其相物也？」否认任何一物有以用评价他物的特权，在凡续皆有顾下没有哪个方被特权（Web.retains_agree）。所以本条的「顧」是回顾、看中其用之意，不是名表之顾；它所指的结构是以用为界的顾（路线 (b)）。",
@@ -48575,7 +48602,8 @@
      "ro_passage": "",
      "tradition": "庄",
      "work": "《庄子》",
-     "checked": "corrected"
+     "checked": "corrected",
+     "corrected": "record ids follow the renamed records (cd-ranking-names, 3 November 2026), claims unchanged"
     },
     {
      "id": "zhuangzi-qiwu-fei-bi-wu-wo",
@@ -48635,7 +48663,7 @@
      "records": [
       "continuation-condition-yields-living-significance",
       "presupposition-scopes",
-      "whole-first-and-bounded-centers",
+      "whole-and-regions-and-bounded-centers",
       "significance-retained-within-margin"
      ],
      "reading": "AI读法：「是以圣人常善救人，故无弃人；常善救物，故无弃物」：「无弃」是圣人「善救」的结果，是一个施动之我的实践，带正价（善）。凡续皆有顾不是这件事。其一，凡续皆有顾（Unrestricted）是陈述而不断言的条件，对一切方、一切步、一切形成给顾；它不是任何我的行动，也不给正价。圣人一方的「无弃」至多是该方上的全称，即 subTrue_total_iff 之形（沿全关系，从该方一切延续都有顾），到每个方还需无方。其二，条件不保证无失：在清除者的构造模型中，在凡续皆有顾下清除者的部分从每个方都丧失居住者（Clearing.clearer_loses_dweller，见证），条件只计入损失；救与不救是实践，许可与否需要以广为愈（C），条件本身不排序（在凡续皆有顾下各有所长即彼此各有得，Web.mixed_iff_adds）。所以本簇不以「无弃」名凡续皆有顾。异文：帛书甲本作「恆善救人而無棄人物無棄財」（V130-LAO-MA），「物」作「財」，「无弃物」这一全称只见于传世本。",
@@ -48656,7 +48684,8 @@
      "ro_passage": "",
      "tradition": "道",
      "work": "《老子》",
-     "checked": "passed"
+     "checked": "passed",
+     "corrected": "record ids follow the renamed records (cd-ranking-names, 3 November 2026), claims unchanged"
     },
     {
      "id": "wangbi-lao-62-27-bu-qi",
@@ -49095,7 +49124,7 @@
      ],
      "records": [
       "living-significance-on-held-lives",
-      "whole-first-and-bounded-centers"
+      "whole-and-regions-and-bounded-centers"
      ],
      "reading": "AI读法：「物无非彼，物无非是，自彼則不見，自知則知之」：每一物都既是彼又是是，从彼一方看不见的，从自身一方就知晓。在脊柱上，方是自成一类的索引，取方为形成是它的一个实例：取每个形成为一个方、以沿某一关系的闭包为其畛与自身区域，则每个事件都是它所属形成自身的，即在己（Web.selfValuation_held）；此时活皆有顾恰是每个形成处处自顾加无方（Web.selfValuation_significant_iff）。「自彼則不見」对应：从一个方作出的顾可以不及另一方之所顾，在清除者的构造模型中，以依存为界的我判断不一（Clearing.centers_disagree，见证）。定域：「彼出於是，是亦因彼」是彼是相待而生，属 C02；本条只取其中取方为形成与各方之顾不一两点。",
      "names_used": [
@@ -49116,7 +49145,8 @@
      "ro_passage": "",
      "tradition": "庄",
      "work": "《庄子》",
-     "checked": "corrected"
+     "checked": "corrected",
+     "corrected": "record ids follow the renamed records (cd-ranking-names, 3 November 2026), claims unchanged"
     }
    ],
    "parallels": [
@@ -49581,7 +49611,7 @@
      "proposal": "Give table names or fixed plain phrases so that readings across clusters state these hypotheses the same way."
     }
    ],
-   "notes": "WHAT CHANGED. 70 mapper entries were revised; none was kept unchanged. 12 new entries were added and 1 entry was dropped. ru-lunyu-shu, the only entry with a keep-with-fix verdict, needed a locator fix, citations for its declarations and a missing record, so it is revised rather than kept.\n\n1. Names\n- 生生之意义 is replaced throughout by the table's 活皆有顾.\n- 兼 is used only for the whole. The table's 尽 = Neutral.\n- Non-adopted symbols (仁 道 天 性 德 心 端 礼 无弃 无己 …) appear only inside 「」 quotations.\n- Verb uses of 称 (a table name) are replaced by 说 / 名之为.\n\n2. Records\n- Retired record ids are renamed to their current ids:\n  - one-axiom-yields-g0 → continuation-condition-yields-living-significance\n  - axiom-decomposition → continuation-condition-decomposition\n  - held-lives-g0-is-centering → living-significance-on-held-lives\n  - closure-verdict-meets-axiom → closure-verdict-meets-continuation-condition\n  - contextual-registration → claims-shown-in-context\n  - selection-through-registration → selection-through-couplings\n  - testing-within-registration → testing-within-couplings\n- Missing records were added: where-a-level-couples (lao-79, zhongyong-da-de), testing-within-couplings (tong-yu-ji), selection-through-couplings (yang-niao) and others.\n- Every declaration resolves to itself through resolve.py, and each is named in its entry's reading.\n- For every declaration that some record mentions, a record that mentions it is among the entry's records.\n\n3. Witnesses and definitional results\n- Every one-model construction is marked 见证 and never stated as a general law. These are: Clearing.*, Transfer.unordered, Model.*, Relayed.*, Preemption.*, Downstream.one_way, Overshoot.ends_through_feeder, Brood.descent_connected, Excluding.three_courses, Viability.ChoicePoint.*, Renewable.kept_part_not_renewal and Pool.difference_belongs_to_the_joint.\n- Neutral.within and bounded_whole are marked as definitional (立得 / 由定义立得).\n- livingSignificance_of_unrestricted and premises_of_unrestricted are named as instantiations of Unrestricted.\n- Web.significance_undetermined is stated as evaluating only the two constant significances.\n- Wherever boundaryInvariant_iff_standpointInvariant or unrestricted_of_standpointInvariant is used, its hypotheses are stated (every formation lies within some center's closure; each standpoint's presupposition is sub-true), and the reading says when the source gives neither.\n- Representational facts (sig is a given field) are said to be facts of the representation, not theorems: jingxia, xunzi-yu.\n\n4. Order\n- Every entry that touches ranking says that the condition fixes scope and does not order.\n- Ranking lies only in 以广为愈 (C).\n- 不易乎畛 fixes scope and does not order.\n\n5. Layers\n- Every layer now starts with a period (先秦 / 先秦至秦汉 / 魏晋南北朝 / 隋唐 / 宋明 / 清), then 经 / 传 / 注 / 疏 / 论.\n- Dating disputes are given, and so are the 郭店 / 帛书 variants for 老子 5, 20, 27, 49, 56, 62, 72 and 79.\n\n6. Fragments and quotations\n- Every fragment is an exact substring of its frozen source text.\n- Every 「」 quotation in a reading occurs in the frozen corpus.\n- AI paraphrases were taken out of 「」.\n- 帛书甲62 is not contiguous (a line break and a ﹦ mark), so it is quoted as 「之不善也何棄□」 with 下接「有」字.\n- The 經說上 variant 爱己 / 用己 is not in the frozen text, so it is written without 「」.\n- Final mechanical validation of 82 entries: 0 problems.\n\n7. Kind changes\n- To scope: wangbi-fu, kongshu, lao-62, lao-49-yi-bai, xunzi-yu, zhuangzi-tong-ze-wu-hao, hanfei-ai-zeng, qixin-ai, zhuangzi-li-she, zhuangzi-qiwu-fei-bi.\n- To divergence: shengman (本原).\n- lao-62 is split into a 经 entry (chapter unit LAO-62) and a 注 entry, wangbi-lao-62-27-bu-qi.\n\nVERIFIER FIXES THAT WERE WRONG OR INCOMPLETE\n- STRUCT proposed 生命意义. It is not a table name, so I used 活皆有顾.\n- The critic's 兼 = Neutral is superseded by the table's 尽.\n- The suggestion to read 墨子's 別 through Neutral.within was wrong: 墨子's 別 is `bounded`, and Within holds of it only inside its bound. I used bounded and bounded_rival and raised it in name_flags.\n- exists_law_iff was dropped from chengyi: it is not about the evaluation standard.\n- The qinqin gap was rewritten so that GradedRetains takes Web.Retains' parameter order. Part (1) follows from Retains.of_fewer without Unrestricted.\n- The daqu-ai-shang-shi gap was corrected to T = 1, with the dweller's index 2 from loses_beyond.\n- The jingshuo gap was reduced to the route (b) side: the 凡续皆有顾 side holds by definition.\n\nCOVERAGE OF THE FOUR NON-RELATIONAL LAYERS\n- 本原: shengman, wangyangming-zhi-shan; remainders in simafa and wangbi-fu.\n- 固定本性或价值: chengyi-wuwang, daxiang, wenyan, xici-ji, suzhe-33, mengzi-wo-gu-you, mengzi-xin-zhi, zhoudunyi, chengyi-ren-xing, wangyangming-zhi-shan, zaahan, amituo, lunyu-sha-shen, zhuangzi-ai-qin, zhuangzi-zhi-ren-wu-ji, chenghao.\n- 意志或单一中心: lao-79, lao-27, mozi-tianzhi, mozi-tian-yu, wangyangming-xin-zhu-zai, zhongyong-da-de, huanxuan.\n- 争胜与等级: qinqin, xici-xia-shou-wei, xunzi-wangzhi, zhongyong-da-de, huanxuan, zhuangzi-ai-qin.\n- Symbols the table does not adopt now each have their own entries:\n  - 仁: lunyu-sha-shen, xici-xia, qinqin, lao-05, lunyu-ai-ren, zhuangzi-ze-ji, zhuangzi-zhi-ren-wu-qin, hanfei-jielao, zhuangzi-qiushui-wu-fang.\n  - 无弃: lao-27, wangbi-lao-62-27.\n  - 无己: zhuangzi-zhi-ren-wu-ji, zhuangzi-shendao, zhuangzi-tong-ze-wu-hao.\n- 在己 is covered by daqu-ai-ren-bu-wai-ji, lao-72, zhoudunyi, daizhen, lao-49-yi-bai and zhuangzi-qiwu-bi-shi.\n- 皆顾之活 is covered by wenyan-side and chengyi-ren-xing-ai-qing.\n\nNEW ENTRIES (12)\n- lao-27-wu-qi-ren: 无弃 as a divergence.\n- wangbi-lao-62-27-bu-qi: the 注 half of lao-62.\n- xici-xia-shou-wei-yue-ren: the 生 / 位 / 守位曰仁 chain that 桓玄 draws on.\n- lunyu-sha-shen-cheng-ren: 仁 ranked above continuation.\n- zhuangzi-zhi-ren-wu-qin: a better 无亲 anchor.\n- zhuangzi-ze-ji-wan-shi: 不爲仁.\n- xunzi-wangzhi-zui-wei-tianxia-gui: a graded hierarchy.\n- xunzi-rongru-chang-lv-gu-hou: a 顾 anchor.\n- mengzi-yang-mo-wei-wo-jian-ai: 为我 / 兼爱 / 执中 as three boundaries.\n- zhuangzi-zhi-ren-wu-ji: 无己 as a divergence.\n- hanfei-jielao-ren: 非求其報, as route (b).\n- zhuangzi-qiwu-bi-shi: standpoints as formations, and 在己.\n\nRECORD IDS OUTSIDE THE C14 PRIMARIES (for the integrator)\n- Every one of the 161 C14 primaries is checked to be in exactly one place: an entry, a parallel or the rejection.\n- No parallel points to a missing entry.\n- Some entries use 脉络 chapter or reading-unit ids because the 脉络 has no relation node for the passage: LAO-27, LAO-62, ZH1-U02, U04, U06, U14, U17, U23, RU1-LY-15-08, RU2-U-XZ04, XZ09, RU2-U-MZ13-26 and MZ06-09.\n- Some entries cite another cluster's primary as a supporting id:\n  - ZH1-C17-R-07 (C09)\n  - MO1-C16-R002 (C15)\n  - MO1-C16-R003 (C13)\n  - ZH1-C04-R-13 (C17)\n  - WP-XCX-C01-S06-R01 (C06)\n  - ZH1-C01-R-06 (C02)\n  - ZH1-C02-R-04 (C02)\n- WP-XCX-C01-S06-R03, RU1-LY-12-01-R01 and CV1-JL-R004 have no cluster verdict.\n- The integrator decides whether these stay as secondary ids here or the entries move.\n\nMISSING ITEMS NOT TAKEN, WITH REASONS\n- 舍生取义: a C15 primary.\n- 民非水火不生活 and 自作孽不可活: survival sense of 活, flagged as not_carried.\n- 立贤无方 and 无方之民: 方 as fixed category or method, flagged as not_carried.\n- 苏辙62注 「罪不能汙」: a C05 primary; the same divergence as suzhe-33, cited there.\n- 王倪正处: already a parallel and cited in yang-niao.\n- 易地则皆然: about conduct across roles, not significance.\n- 不易乎世: gives only a model for the name, with no structure.\n- 老子13: contested grammar; covered as the precursor in suzhe-44.\n- STRUCT integrator notes 17–18: they concern the name table and are carried in name_flags.\n\nPOINTS FOR THE INTEGRATOR\n- Five zh record titles still read 生生之意义. They should follow the table's 活皆有顾.\n- name_flags proposes new anchors for 方, 无亲, 无方 and 顾, and a decision on 别 (Within vs bounded).\n\nSTILL OPEN\n- Graded order across closure levels and agreement between centers: the qinqin gap.\n- Route (b) significance changing with supply: the jingshuo gap.\n- A time-bounded rival rule: the daqu-ai-shang-shi-hou-shi gap.\n- The 约分 reading, pending 郭象注.\n- The 經說上 爱民 / 爱己 reading, pending 墨子閒詁.\n- 王弼 27th-chapter note 「以善弃不善」, which is in tension with 无弃, pending a collated text.\n- No Lean was built and no file was edited. All results are mechanical checks against frozen text, resolve.py and the record files.",
+   "notes": "WHAT CHANGED. 70 mapper entries were revised; none was kept unchanged. 12 new entries were added and 1 entry was dropped. ru-lunyu-shu, the only entry with a keep-with-fix verdict, needed a locator fix, citations for its declarations and a missing record, so it is revised rather than kept.\n\n1. Names\n- 生生之意义 is replaced throughout by the table's 活皆有顾.\n- 兼 is used only for the whole. The table's 尽 = Neutral.\n- Non-adopted symbols (仁 道 天 性 德 心 端 礼 无弃 无己 …) appear only inside 「」 quotations.\n- Verb uses of 称 (a table name) are replaced by 说 / 名之为.\n\n2. Records\n- Retired record ids are renamed to their current ids:\n  - one-axiom-yields-g0 → continuation-condition-yields-living-significance\n  - axiom-decomposition → continuation-condition-decomposition\n  - held-lives-g0-is-centering → living-significance-on-held-lives\n  - closure-verdict-meets-axiom → closure-verdict-meets-continuation-condition\n  - contextual-registration → claims-shown-in-context\n  - selection-through-registration → selection-through-couplings\n  - testing-within-registration → testing-within-couplings\n- Missing records were added: where-a-level-couples (lao-79, zhongyong-da-de), testing-within-couplings (tong-yu-ji), selection-through-couplings (yang-niao) and others.\n- Every declaration resolves to itself through resolve.py, and each is named in its entry's reading.\n- For every declaration that some record mentions, a record that mentions it is among the entry's records.\n\n3. Witnesses and definitional results\n- Every one-model construction is marked 见证 and never stated as a general law. These are: Clearing.*, Transfer.unordered, Model.*, Relayed.*, Preemption.*, Downstream.one_way, Overshoot.ends_through_feeder, Brood.descent_connected, Excluding.three_courses, Viability.ChoicePoint.*, Renewable.kept_part_not_renewal and Pool.difference_only_together.\n- Neutral.within and bounded_whole are marked as definitional (立得 / 由定义立得).\n- livingSignificance_of_unrestricted and premises_of_unrestricted are named as instantiations of Unrestricted.\n- Web.significance_undetermined is stated as evaluating only the two constant significances.\n- Wherever boundaryInvariant_iff_standpointInvariant or unrestricted_of_standpointInvariant is used, its hypotheses are stated (every formation lies within some center's closure; each standpoint's presupposition is sub-true), and the reading says when the source gives neither.\n- Representational facts (sig is a given field) are said to be facts of the representation, not theorems: jingxia, xunzi-yu.\n\n4. Order\n- Every entry that touches ranking says that the condition fixes scope and does not order.\n- Ranking lies only in 以广为愈 (C).\n- 不易乎畛 fixes scope and does not order.\n\n5. Layers\n- Every layer now starts with a period (先秦 / 先秦至秦汉 / 魏晋南北朝 / 隋唐 / 宋明 / 清), then 经 / 传 / 注 / 疏 / 论.\n- Dating disputes are given, and so are the 郭店 / 帛书 variants for 老子 5, 20, 27, 49, 56, 62, 72 and 79.\n\n6. Fragments and quotations\n- Every fragment is an exact substring of its frozen source text.\n- Every 「」 quotation in a reading occurs in the frozen corpus.\n- AI paraphrases were taken out of 「」.\n- 帛书甲62 is not contiguous (a line break and a ﹦ mark), so it is quoted as 「之不善也何棄□」 with 下接「有」字.\n- The 經說上 variant 爱己 / 用己 is not in the frozen text, so it is written without 「」.\n- Final mechanical validation of 82 entries: 0 problems.\n\n7. Kind changes\n- To scope: wangbi-fu, kongshu, lao-62, lao-49-yi-bai, xunzi-yu, zhuangzi-tong-ze-wu-hao, hanfei-ai-zeng, qixin-ai, zhuangzi-li-she, zhuangzi-qiwu-fei-bi.\n- To divergence: shengman (本原).\n- lao-62 is split into a 经 entry (chapter unit LAO-62) and a 注 entry, wangbi-lao-62-27-bu-qi.\n\nVERIFIER FIXES THAT WERE WRONG OR INCOMPLETE\n- STRUCT proposed 生命意义. It is not a table name, so I used 活皆有顾.\n- The critic's 兼 = Neutral is superseded by the table's 尽.\n- The suggestion to read 墨子's 別 through Neutral.within was wrong: 墨子's 別 is `bounded`, and Within holds of it only inside its bound. I used bounded and bounded_rival and raised it in name_flags.\n- exists_law_iff was dropped from chengyi: it is not about the evaluation standard.\n- The qinqin gap was rewritten so that GradedRetains takes Web.Retains' parameter order. Part (1) follows from Retains.of_fewer without Unrestricted.\n- The daqu-ai-shang-shi gap was corrected to T = 1, with the dweller's index 2 from loses_beyond.\n- The jingshuo gap was reduced to the route (b) side: the 凡续皆有顾 side holds by definition.\n\nCOVERAGE OF THE FOUR NON-RELATIONAL LAYERS\n- 本原: shengman, wangyangming-zhi-shan; remainders in simafa and wangbi-fu.\n- 固定本性或价值: chengyi-wuwang, daxiang, wenyan, xici-ji, suzhe-33, mengzi-wo-gu-you, mengzi-xin-zhi, zhoudunyi, chengyi-ren-xing, wangyangming-zhi-shan, zaahan, amituo, lunyu-sha-shen, zhuangzi-ai-qin, zhuangzi-zhi-ren-wu-ji, chenghao.\n- 意志或单一中心: lao-79, lao-27, mozi-tianzhi, mozi-tian-yu, wangyangming-xin-zhu-zai, zhongyong-da-de, huanxuan.\n- 争胜与等级: qinqin, xici-xia-shou-wei, xunzi-wangzhi, zhongyong-da-de, huanxuan, zhuangzi-ai-qin.\n- Symbols the table does not adopt now each have their own entries:\n  - 仁: lunyu-sha-shen, xici-xia, qinqin, lao-05, lunyu-ai-ren, zhuangzi-ze-ji, zhuangzi-zhi-ren-wu-qin, hanfei-jielao, zhuangzi-qiushui-wu-fang.\n  - 无弃: lao-27, wangbi-lao-62-27.\n  - 无己: zhuangzi-zhi-ren-wu-ji, zhuangzi-shendao, zhuangzi-tong-ze-wu-hao.\n- 在己 is covered by daqu-ai-ren-bu-wai-ji, lao-72, zhoudunyi, daizhen, lao-49-yi-bai and zhuangzi-qiwu-bi-shi.\n- 皆顾之活 is covered by wenyan-side and chengyi-ren-xing-ai-qing.\n\nNEW ENTRIES (12)\n- lao-27-wu-qi-ren: 无弃 as a divergence.\n- wangbi-lao-62-27-bu-qi: the 注 half of lao-62.\n- xici-xia-shou-wei-yue-ren: the 生 / 位 / 守位曰仁 chain that 桓玄 draws on.\n- lunyu-sha-shen-cheng-ren: 仁 ranked above continuation.\n- zhuangzi-zhi-ren-wu-qin: a better 无亲 anchor.\n- zhuangzi-ze-ji-wan-shi: 不爲仁.\n- xunzi-wangzhi-zui-wei-tianxia-gui: a graded hierarchy.\n- xunzi-rongru-chang-lv-gu-hou: a 顾 anchor.\n- mengzi-yang-mo-wei-wo-jian-ai: 为我 / 兼爱 / 执中 as three boundaries.\n- zhuangzi-zhi-ren-wu-ji: 无己 as a divergence.\n- hanfei-jielao-ren: 非求其報, as route (b).\n- zhuangzi-qiwu-bi-shi: standpoints as formations, and 在己.\n\nRECORD IDS OUTSIDE THE C14 PRIMARIES (for the integrator)\n- Every one of the 161 C14 primaries is checked to be in exactly one place: an entry, a parallel or the rejection.\n- No parallel points to a missing entry.\n- Some entries use 脉络 chapter or reading-unit ids because the 脉络 has no relation node for the passage: LAO-27, LAO-62, ZH1-U02, U04, U06, U14, U17, U23, RU1-LY-15-08, RU2-U-XZ04, XZ09, RU2-U-MZ13-26 and MZ06-09.\n- Some entries cite another cluster's primary as a supporting id:\n  - ZH1-C17-R-07 (C09)\n  - MO1-C16-R002 (C15)\n  - MO1-C16-R003 (C13)\n  - ZH1-C04-R-13 (C17)\n  - WP-XCX-C01-S06-R01 (C06)\n  - ZH1-C01-R-06 (C02)\n  - ZH1-C02-R-04 (C02)\n- WP-XCX-C01-S06-R03, RU1-LY-12-01-R01 and CV1-JL-R004 have no cluster verdict.\n- The integrator decides whether these stay as secondary ids here or the entries move.\n\nMISSING ITEMS NOT TAKEN, WITH REASONS\n- 舍生取义: a C15 primary.\n- 民非水火不生活 and 自作孽不可活: survival sense of 活, flagged as not_carried.\n- 立贤无方 and 无方之民: 方 as fixed category or method, flagged as not_carried.\n- 苏辙62注 「罪不能汙」: a C05 primary; the same divergence as suzhe-33, cited there.\n- 王倪正处: already a parallel and cited in yang-niao.\n- 易地则皆然: about conduct across roles, not significance.\n- 不易乎世: gives only a model for the name, with no structure.\n- 老子13: contested grammar; covered as the precursor in suzhe-44.\n- STRUCT integrator notes 17–18: they concern the name table and are carried in name_flags.\n\nPOINTS FOR THE INTEGRATOR\n- Five zh record titles still read 生生之意义. They should follow the table's 活皆有顾.\n- name_flags proposes new anchors for 方, 无亲, 无方 and 顾, and a decision on 别 (Within vs bounded).\n\nSTILL OPEN\n- Graded order across closure levels and agreement between centers: the qinqin gap.\n- Route (b) significance changing with supply: the jingshuo gap.\n- A time-bounded rival rule: the daqu-ai-shang-shi-hou-shi gap.\n- The 约分 reading, pending 郭象注.\n- The 經說上 爱民 / 爱己 reading, pending 墨子閒詁.\n- 王弼 27th-chapter note 「以善弃不善」, which is in tension with 无弃, pending a collated text.\n- No Lean was built and no file was edited. All results are mechanical checks against frozen text, resolve.py and the record files.",
    "check_notes": "I checked all 82 entries: 70 revised and 12 new. The reviser's copy at /private/tmp/claude-501/-Users-ren-theories/ab4fc732-b2ac-420a-aa49-cf63c999271c/scratchpad/c14/build/out.json matches the task JSON.\n\nMechanical checks, all clean:\n- Every fragment is exact in its stated source (`ctq.py text`).\n- Every 「」 quotation inside a reading or gap occurs in some frozen text. This was rechecked after my corrections.\n- All 127 declarations and 46 result records exist under their full names (`resolve.py`, receipt 20261020T093308).\n- Every 脉络 id exists, both in record_ids and the secondary ids cited inside readings. The quote beside each secondary id matches that record's evidence.\n- Every RO passage id exists.\n- Every name in names_used is a table name and appears in its reading.\n\nSubstantive errors fixed (31 corrections):\n1. **False \"only\" claims.**\n   - `Web.retains_agree` only says that under `Unrestricted` the standpoints' 无丧 verdicts agree. It is not \"只有在凡续皆有顾下才一致\"; any standpoint-invariant sig also agrees. Fixed in xici-jixiong-shide, wangbi-fu-yi-you-wei-xin and hanfei-ai-zeng-zhi-bian.\n   - \"活皆有顾只在凡续皆有顾下成立\" (wenyan-side) is false: `significant_iff_held` and `significant_iff` give it without the condition.\n   - \"只在凡续皆有顾下这一分别才不起作用\" (qixin-ai-yu-bu-ai) is false: the constant-False sig also makes the distinction inert.\n   - \"回报只在…时保持\" (lao-79) turned a sufficient condition (`loop_kept`) into a necessary one.\n   - \"脊柱只在有共同条件时给出\" (huishi-li-wu) and \"理论中唯一的比较是广\" (xici-mao) overclaim.\n   - \"恰在…时正确\" for `selects_right_through` (xunzi-yu-bu-dai-ke-de) states only the necessary direction as an iff.\n2. **Missing hypotheses.**\n   - `Valuation.premises_of_unrestricted` needs its `reads` link: a claim's 顾 is read from some formation's continuation at some step. Added in xici-ji-zhi-zhe-shan, mozi-tianzhi and zaahan-ku-mie.\n   - `not_subTrue_of_invariant` needs the whole to be admissible. The phrase \"在任何划法下都不次真\" was also incoherent. Fixed in suzhe-44, zhuangzi-shendao-qu-ji and hanshan.\n   - `UnderminingOn.not_retains_unrestricted` needs needs that do not loosen and admission by the comparison levels. `possible_extends_iff` is under `Unrestricted` (lao-20).\n   - zhongyong-shi-zhu claimed both forms of the step \"are\" the continuation condition but cited only the equivalence. `unrestricted_of_standpointInvariant` is now added.\n3. **Wrong witness content.**\n   - `Model.relational_neutrality_is_needed` gives 自顾 only at the evaluator, not \"处处自顾\" (zhuangzi-zhi-ren-wu-qin).\n   - `Flow.nothing_supported_stays` concerns the whole ceasing, not the 苦灭 of one ring of birth. The reviser had added \"苦灭…一经达成便保持\"; RO did not have it.\n   - `center_not_derived` was glossed \"动力学固定顾闭合的范围\" (wangyangming-xin-zhu-zai); it now states what the theorem shows.\n   - zhuangzi-qiwu-bi-shi said \"方本身就是形成\"; `Pos := F` is only an instance.\n   - ru-zhangzai said \"传递穿过畛\". The family's region is shown not closed under conveyance, so along conveyance it cannot be a 畛. The unaddressed 「天地之帅，吾其性」 (fixed nature) was added as remainder.\n4. **Kinds.**\n   - jingxia agreement → scope: the reading itself says the match is representational, not a law, and the law only bounds 择.\n   - zhoudunyi divergence → scope: the divergence rested on reading 欲 as 自顾, which the reading admits is not 周敦颐's 私欲. The spine gives the range.\n5. **Ordering and C.**\n   - lunyu-sha-shen-cheng-ren claimed \"理论的方向与此相反\". Under the condition a sacrifice that saves others is mixed with the alternative, and even C does not rank mixed paths. The divergence is placed in 仁 as a prior value above continuation.\n   - xici-xia-shou-wei-yue-ren equated 仁 with 顾 (\"把顾放在位阶之下\") and now states that only C calls widening better.\n6. **Gaps.**\n   - daqu (1) stated `Within` for an `Unrestricted` sig instead of for sig_T.\n   - jingshuo's gap was definitional and cited `bounded_closure_iff`. `Flow.WithinFeeding` closes over all steps, so route (b) cannot withdraw 顾 when supply stops. The gap is restated with a step-indexed closure and a substantive licensing claim.\n7. **Other.**\n   - 「大人无己…与不易乎畛同构」 (zhuangzi-qiushui-wu-fang) contradicted the 无己 not-adopted decision and zhuangzi-zhi-ren-wu-ji; it is now a remainder.\n   - jingxia's relational field used the retired word 登记.\n   - suzhe-33 used 法 for \"a theorem holds\".\n   - zhuangzi-li-she's \"不是同一个意思：它是以用为界的顾\" contradicted itself.\n   - mengzi-yang-mo now marks 为我 → 顾 as an AI reading over a passage about implementation (利天下).\n\nLeft as is, for the integrator:\n- wangbi-lao-62-27 says the frozen 「以善弃不善也」 conflicts with 无弃. Its own note already flags the reading as unverified (\"校读待查\"), and the conflict depends on that wording.\n- jingshuo's agreement depends on the frozen 愛民 against 道藏本/閒詁 爱己 (already flagged 定读待查).\n- \"一方之自善\" (subTrue_empty_iff's \"own good\") carries 善 into a reading of significance. Consider a neutral gloss.\n- daizhen agreement leans partly on the shared word 不顧, though the structural match through `significant_iff_held` and `center_not_derived` is real.\n- The dropped zhuangzi-tianxia-zi-wei-fang was not checked here; it moves to C13."
   },
   "C15": {
@@ -56734,7 +56764,7 @@
       "Becoming.Flow.withinInfluence_of_withinFeeding"
      ],
      "records": [
-      "whole-first-and-bounded-centers",
+      "whole-and-regions-and-bounded-centers",
       "living-significance-on-held-lives",
       "presupposition-scopes"
      ],
@@ -56746,7 +56776,8 @@
      "ro_passage": "ru-zhongyong-qinqin-zhi-sha",
      "tradition": "儒",
      "work": "《礼记·中庸》",
-     "checked": "passed"
+     "checked": "passed",
+     "corrected": "record ids follow the renamed records (cd-ranking-names, 3 November 2026), claims unchanged"
     },
     {
      "id": "daxue-zhi-suo-xianhou",
@@ -57436,18 +57467,19 @@
      "kind": "scope",
      "declarations": [
       "Becoming.Dependence.MakesDifference",
-      "Becoming.Pool.difference_belongs_to_the_joint"
+      "Becoming.Pool.difference_only_together"
      ],
      "records": [
       "joint-difference-making"
      ],
-     "reading": "AI读法：《难势》中应慎子者说：同一势，贤者用之则治，不肖者用之则乱。结构是：同一部分是否造成差别，取决于其余部分所为。Dependence.MakesDifference 是“若无此则不然”这一判别的定义（所行不变，扣去此部分，则依存得保）。Pool.difference_belongs_to_the_joint 是一个所构之例：在同一进程、同一水平下，同一部分在只有一个其他部分时造成差别，在有两个其他部分时则多因冗余而不造成。例足以证“差别可以不单属于一部分”，不是一般律。韩非之意也不是多因冗余：单扣去势本身也会改变结果，所以不取“只在合时才有差别”（DifferenceOnlyTogether）之律。定域：这一合成结构可证；此处的势是位势，不是名表的势（吸引域）；贤与不肖、治与乱是评价与等级一层，不带入。",
+     "reading": "AI读法：《难势》中应慎子者说：同一势，贤者用之则治，不肖者用之则乱。结构是：同一部分是否造成差别，取决于其余部分所为。Dependence.MakesDifference 是“若无此则不然”这一判别的定义（所行不变，扣去此部分，则依存得保）。Pool.difference_only_together 是一个所构之例：在同一进程、同一水平下，同一部分在只有一个其他部分时造成差别，在有两个其他部分时则多因冗余而不造成。例足以证“差别可以不单属于一部分”，不是一般律。韩非之意也不是多因冗余：单扣去势本身也会改变结果，所以不取“只在合时才有差别”（DifferenceOnlyTogether）之律。定域：这一合成结构可证；此处的势是位势，不是名表的势（吸引域）；贤与不肖、治与乱是评价与等级一层，不带入。",
      "names_used": [],
      "locator": "难势 转录第3段（应慎子者之言）",
      "relational": "同一势是否造成治乱之差，取决于用者所为：差别属于势与用者之合。",
      "tradition": "法",
      "work": "《韩非子·难势》",
-     "checked": "passed"
+     "checked": "passed",
+     "corrected": "names follow the declaration ND renamed in OU7 (e5951932b, 1 November 2026), statement unchanged"
     },
     {
      "id": "hanfei-nanshi-renshe",
@@ -57465,19 +57497,20 @@
      "kind": "divergence",
      "declarations": [
       "Becoming.Dependence.MakesDifference",
-      "Becoming.Pool.difference_belongs_to_the_joint"
+      "Becoming.Pool.difference_only_together"
      ],
      "records": [
       "joint-difference-making"
      ],
-     "reading": "AI读法：《难势》的复应者（通常读作韩非本人的立场）区分自然之势与人设之势：「吾所爲言勢者，言人之所設也」。他主张以法与势之设，使治乱不依居位者的贤否：「抱法處勢則治，背法去勢則亂」，中人居位也能治，所以说「賢何事焉」。这是把治乱归于一个所设之中心（法与势），属意志或单一中心一层，相分。脊柱中相关的是：一部分是否造成差别，取决于其余部分所为（Dependence.MakesDifference 是这一判别的定义；Pool.difference_belongs_to_the_joint 是所构之例），所以治乱之差属于势与用者之合（见 hanfei-nanshi-shi-yu-ren）。复应者主张所设之势能使用者一方的贡献消失，这一点脊柱不证。原映射把人设之势读作 RuleCapture（读其所选之份额并偏向之的规则会锁定），那是 AI 类比，原文没有读份额而偏向的机制，此处删去。此处的势是位势，不是名表的势（吸引域）。",
+     "reading": "AI读法：《难势》的复应者（通常读作韩非本人的立场）区分自然之势与人设之势：「吾所爲言勢者，言人之所設也」。他主张以法与势之设，使治乱不依居位者的贤否：「抱法處勢則治，背法去勢則亂」，中人居位也能治，所以说「賢何事焉」。这是把治乱归于一个所设之中心（法与势），属意志或单一中心一层，相分。脊柱中相关的是：一部分是否造成差别，取决于其余部分所为（Dependence.MakesDifference 是这一判别的定义；Pool.difference_only_together 是所构之例），所以治乱之差属于势与用者之合（见 hanfei-nanshi-shi-yu-ren）。复应者主张所设之势能使用者一方的贡献消失，这一点脊柱不证。原映射把人设之势读作 RuleCapture（读其所选之份额并偏向之的规则会锁定），那是 AI 类比，原文没有读份额而偏向的机制，此处删去。此处的势是位势，不是名表的势（吸引域）。",
      "names_used": [],
      "layer_checked": "意志或单一中心",
      "locator": "难势 转录第5段（复应者之言）",
      "relational": "人设之势要使治乱不依居位者：把治乱归于所设之法与势这一中心。",
      "tradition": "法",
      "work": "《韩非子·难势》",
-     "checked": "passed"
+     "checked": "passed",
+     "corrected": "names follow the declaration ND renamed in OU7 (e5951932b, 1 November 2026), statement unchanged"
     },
     {
      "id": "laozi-sz-ji-er-wei-shi",
@@ -57492,7 +57525,7 @@
      ],
      "kind": "agreement",
      "declarations": [
-      "Becoming.Pool.difference_belongs_to_the_joint",
+      "Becoming.Pool.difference_only_together",
       "Becoming.Dependence.differenceOnlyTogether_iff",
       "Becoming.Flow.rise_netGiver",
       "Becoming.carriedFrom_carried",
@@ -57504,14 +57537,15 @@
       "how-a-carried-difference-grows",
       "how-loops-form"
      ],
-     "reading": "AI读法：沿用 RO：物不能自成，远近相取、刚柔相交而积为势：所成之差属于诸方之合。在其所列前提下，Dependence.differenceOnlyTogether_iff 刻画“诸部分合起来造成差别，而单独任何一个都不造成”；Pool.difference_belongs_to_the_joint 是一个所构之例：同一部分是否造成差别，取决于其余部分所为，例不是一般律。存量之升必有净给出者（Flow.rise_netGiver）；所携之量由耦合携带并携带自身（carriedFrom_carried），回路经由闭合而成（onLoop_succ_iff）。C17 只记：此「勢」是积于关系中的可发之量，不是名表的势（吸引域），二者的关系交 C07；此处「剛柔」是苏辙之语，不是名表的刚柔（爻值）。",
+     "reading": "AI读法：沿用 RO：物不能自成，远近相取、刚柔相交而积为势：所成之差属于诸方之合。在其所列前提下，Dependence.differenceOnlyTogether_iff 刻画“诸部分合起来造成差别，而单独任何一个都不造成”；Pool.difference_only_together 是一个所构之例：同一部分是否造成差别，取决于其余部分所为，例不是一般律。存量之升必有净给出者（Flow.rise_netGiver）；所携之量由耦合携带并携带自身（carriedFrom_carried），回路经由闭合而成（onLoop_succ_iff）。C17 只记：此「勢」是积于关系中的可发之量，不是名表的势（吸引域），二者的关系交 C07；此处「剛柔」是苏辙之语，不是名表的刚柔（爻值）。",
      "names_used": [],
      "locator": "老子解·第五十一章",
      "relational": "势由远近相取、刚柔相交积成，不属一物。",
      "ro_passage": "sz-51-ji-er-wei-shi",
      "tradition": "道",
      "work": "苏辙《老子解》第五十一章",
-     "checked": "corrected"
+     "checked": "corrected",
+     "corrected": "names follow the declaration ND renamed in OU7 (e5951932b, 1 November 2026), statement unchanged"
     },
     {
      "id": "zhuangzi-shanmu-cai-bucai",
@@ -59096,7 +59130,7 @@
      "proposal": "易传中读作“在各步上”的「時」一律只在引文中出现，读法写作步（C01 之名）；C17 修订读法已照此区分。"
     }
    ],
-   "notes": "范围与计数。C17 原有 95 条。修订 86 条，新增 3 条，保留 8 条，移出 1 条（xiaoxiang-guimei-xiangcheng，入 rejected）。两个核查都判 keep 的 25 条中，有 17 条仍须修订，理由是任务第 2、3 步：读法在引文外用阴、阳作爻值之名（不采之符号），或以“消息之律”指 waxWane（与名表消息同字异义），或未标明所引声明是定义（Iff.rfl）或所构之例，或未写出 loss_passes_juncture 的 Returns 前提与双重否定结论。这 17 条是 tuan-liuwei-shicheng、xiaoxiang-weidang、xiaoxiang-zhongzheng、xiaoxiang-yizhong、xiaoxiang-chenggang、tuan-guai-cheng-wugang、tuan-gangzhong-erying、tuan-bi-shangxia-ying、lueli-yiyao-weizhu、xiaoxiang-qianlong、wangbi-fu-liuer、wangbi-fu-liusi、sunzi-sidi、jing-guimei-chiqi、zhuangzi-shanmu-cai-bucai、zhuangzi-paoding-zhizu、lunyu-yan-jizhi，改动都只限于此，不改种类与结构判断。另有几条两核查都 keep，但因同样的理由修订：daqu-yushu-yuxiong、xunzi-jieyu-ming（finerLaw_determined 是构造所致，Confound 是例，名「遇」改为时）、zhongyong-qinqin-zhi-sha（Transfer.unordered、Clearing.centers_disagree 是例，写出两个前提）、simafa-rong-bu-xiangru、sunzi-huo-fa-bing-jing、sunzi-wu-chengshi、shangjun-fagu-wuguo、shangjun-dangshi-lifa、xici-biantong-qushi、jinsilu-zhong-yi-ting、zhuangzi-bu-guishou、zhuangzi-shuqi-shuji、laozi-sz-ji-er-wei-shi、lunyu-ke-yu-yan。\n\n种类改动。scope：shuogua-sancai-liuhua（本章语境与朱熹都取每才两位之带，高度之读无古注）、tuan-gen-shizhi（rests_unrefuted_enclosed 有五个条件且结论为双重否定，「時行則行」未映射）、mengzi-xianni-qixin（Confound.confounded：归因不能由记录定，须变动与返回）、zhuangzi-wu-gujin（作修养次第读与 D43 相容，字面本体读法一半相分）、fahua-fangbian（一佛乘与本性不带）。agreement：lueli-tongbian-yingbi（王弼「召雲者龍，命呂者律。故二女相違，而剛柔合體」是异类之应，与相异为应同向；RO wenyan-tongsheng 的定域只适用于文言原句）。\n\n声明的处理。所有声明与记录都用 work/resolve.py 解析，全部为现名（对 zhonghua 工作树的 receipt 20261020T093308.742793Z）；critic 所列 main 上 17 处失效锚点没有一处在 C17 中。新加的声明：Interleavings.LocalLaw（结构）、LocalLaw.Apart、Diagonal.Unfolds.unheld、Becoming.no_whole（一般形式；Specker.no_whole 是三盒之例）、Hexagram.reverse、inPhase_reverse、rises_reverse、opposed_reverse、Hexagram.opposed、Contextual.Glues.agree、Contextual.fitsFree_iff（替换需要 Local、NoGlobal、Respects 三前提的 no_free_frame）、World.exchange_step_iff、Flow.Balances.rise_given、fall_taken、Dependence.MakesDifference（定义，替换结构不对的 differenceOnlyTogether_iff）、Hexagram.holdsPlace、Hexagram.middle 等。删去的声明：zhongyong-cuoxing、huayan-shixuan-tongshi、jinshizi-shishi-gefa 中无据的 Interleavings 条；zhuangzi-anshi-chushun 与 zhuangzi-wu-gujin 中的 World.arising_iff_ceasing（重现律，文本不说重现）；laozi-sz-yusu 中的 pace_law、dissolving、stretch_fixed；lueli-tongbian-yingbi 中的 Learning、Law.alike_iff_sameFuture、pairs_goAlike；lueli-shibian-xiang 中的 answers（远近是距险难之远近）与 sole_top_passes；hanfei-nanshi-renshe 中的 RuleCapture（AI 类比）；lueli-lizhu-dingyi 中用来证冲突的计数。定义（Iff.rfl）照实说：Contextual.indexed_fits、Branching.juncture_iff、World.balances_iff_exchange；构造所致：Situations.finerLaw_determined、Pace.rule_at_reading、rule_kept。所构之例照实说：Confound.misattributes、confounded、Pool.difference_belongs_to_the_joint、CrossingContexts.pooled_crosses、not_inOne、ChangingContext.erased_not_lifted、Cancelling.coarse_not_fine、Excluding.three_courses、Viability.ChoicePoint.each_not_joint、no_rule_decides_joint、Switching.fixed_loses、changing_regains、TimedResponse.Delayed.*、HorizonWebs.prefix_does_not_decide、Negation.each_through_other、Transfer.unordered、Clearing.centers_disagree、RuleCapture.Alternating.never_locked、Branching.Many.no_juncture、Specker.no_whole；例只用来证否定之言或存在之言。Hexagram.* 多是按六十四卦编码的计算，读法中照此说。\n\n我判定为错或不取的修订意见。(1) 语文核查对 hanfei-nanshi-renshe 建议引「勢治者則不可亂」作人设之势的根据；这句在原文是说自然之势（其下文以「此自然之勢也」收），不是复应者的人设之势。改用「抱法處勢則治，背法去勢則亂」与「賢何事焉」，并把前者加为 fragment。(2) 结构核查在 xiaoxiang-gangrou-jie 说「剛柔接」是比的确切先秦复词；程颐读作二五相应（「二與五剛柔之情相接」），解初六「剛柔之際」也读作初四相应，所以不取，两读并存。(3) 结构核查在 lueli-tongbian-yingbi 判 keep（scope），语文核查判 revise 为 agreement；依王弼紧接的「二女相違，而剛柔合體」取后者。(4) 结构核查对遲速之名的意见以 name_flag 处理：删遲速，留與時轉。\n\n新条目。lueli-bianwei-zunbei（王弼辩位，外延相合、根据属争胜与等级一层，相分；YCM130-LB-W-02-R01 由平行升为条目）；sunzi-qianhou-bu-xiangji（孙子九地，单元 BI1-SZ-U11，部分之间的到达被切断，定域；回应 critic 的补兵）；xunzi-yuzuo-yu-shi（荀子宥坐，单元 RU2-U-XZ28，时与材分，定域，作名「時」的先秦出处）。记录增补：sunzi-shu-sheng-cheng 加单元 BI1-SZ-U04（「以鎰稱銖」），hanfei-gufen-shi 加单元 FA1-H11-U02（「故資必不勝而勢不兩存」）；mojing-xianhou-jiu 保留 MI1-U-SS-39，读法已用其經說上「始，時或有久，或無久，始當無久」。新加的 fragment：lueli-zhongshi-zhidi、lueli-chushang-wu-dingwei、lueli-tongbian-yingbi、lueli-yishi-zhizhi-kefan、hanfei-nanshi-renshe 各一条，都已用 ctq.py text 对其 source_id 核过。\n\n未采的 missing 与 coverage 项及理由。秋水「時无止，分无常，終始无故」：结构核心（无止）只是自然数索引之步的建模选择，「分无常」「終始无故」的义训未定，且 ZH1-S17 的单元已为 C14 另一段所用，不立条目。系辞「推而行之谓之通」：WP-XCS-C12-S04-R05、S06-R04 已在 C04。孙子「奇正相生，如循環之無端」：已在 C11（sunzi-qi-zheng-xun-huan）。至乐「萬物皆出於機」：已在 C12，入名「機」的 name_flag。墨经「宇，彌異所也」：归 C01。系辞「几者，动之微」：XC-R045 在 C07。時中：归 C15。形、形勢与節、候：脊柱无对应之律，势已归 C07，「其節短」在 sunzi-shi-jie-ji 中注为未映射。司马法「遲速不過誡命」：BI1-SM-R-11 已在 C02 为平行，只是快慢受命之限，入名「遲速」的 name_flag。郭店、帛书《老子》异文：并入 lao02-gaoxia-qianhou 的 layer 与读法。王弼「故卦以反對」与「召雲者龍」：并入 lueli-yishi-zhizhi-kefan 与 lueli-tongbian-yingbi。荀子天论「四时代御」：只作名「錯行」的对照。\n\n平行之注须改（位置不变）。TP-H40-X1-R01（解初六「剛柔之際」）：程颐释为「初四相應是剛柔相際接也」，注应改为“程颐读作初四相应，亦可读作初六与九二相比”。WH-R028（韩康伯「因而制其會通」）：原注说“在会通之处截取”不对，韩注是制其会通，孔疏说「陰陽變化而相裁節之」，都不是截取；注应改为“韩注、孔疏以裁为相裁节，不支持截取之读”。CY-R004（程颐「以同德相應」）：注不变，同值之应，与相异为应方向相反。YCM130-LB-W-02-R01 已升为条目。\n\n待核（不在冻结语料中，读法已标“待核”，不作引文）：韩康伯注说卦以二四、三五说分阴分阳；王弼注贲彖以坤上六、乾九二相易；王弼注艮六五；朱熹以艮六五之「正」为衍字之说；传世本「相倾」为避汉惠帝讳所改之说。朱熹《本义》卷八（evidence/texts/YD-ZX8.txt）未在 model.json 登记，ctq 不能查；其以上二爻为天、中二爻为人、下二爻为地之说，与 DS03 的两处异文（其遇不同；不利近者），只在此注中提及，读法不引；读法所引朱熹之句取卷七（YD-ZX7）。冻结 DS03 为九章页，系辞下各条的 locator 统一写作“冻结第 N 章（朱熹本义第 M 章）”。\n\n四种非关系层的覆盖（相分）。争胜与等级：tuan-dayou-zunwei、xici-guijian-wei、zhongyong-qinqin-zhi-sha、lueli-bianwei-zunbei；另 xici-tonggong-yiwei（「近五」）、hanfei-gufen-shi、sunzi-shu-sheng-cheng、sunzi-qianhou-bu-xiangji 中的取胜与贵贱作所余不带。意志或单一中心：lueli-lizhu-dingyi、hanfei-nanshi-renshe；daxue-zhi-suo-xianhou 的本末定序作所余。固定本性或价值：xici-wen-budang、shangjun-fagu-wuguo；mengzi-xianni-qixin、mengzi-shui-shi 的性善一步作所余。本原：C17 没有整条相分；fahua-fangbian 的一佛乘（若读作先在之根）与 zhuangzi-wu-gujin 的字面本体读法是定域条中的相分之半，至乐之機在 C12。其他结构：xiaoxiang-gen-liuwu（用字「正」与 inPhase 冲突，可能是字义之别）、shuogua-di-chu-zhen（指派的列表之序，不由构形关系导出；原读法以「帝」为单一中心，与 RO 相反，已改）、zhonglun-guanshi（无自性之「無」）、huayan-shixuan-tongshi（若作时间读，因果先后之无）。\n\n伦理的写法。凡涉意义与排序之处（xici-wen-budang、zhongyong-qinqin-zhi-sha），读法写明两个前提各有其职：延续条件定范围，本身不排序；排序只在 C（以扩展为更好）。没有一处说伦理由延续条件推出。\n\n仍开放。G9（窗口：到达之后、机过之前，同一过程、同一构形 x、到达可判定）未证，xici-daishi-erdong、wenyan-jishi、tuan-gen-shizhi、zhuangzi-hezhe-zhi-fu、laozi-sz-bu-shishi 依之。三才之带（初二、三四、五上）未在 HexagramPlaces 定义（shuogua-sancai-liuhua 的 gap）。共享关系项而两种次序到达不同构形的见证未给（sunzi-qinfu-fa 的 gap）。Situations 与 Confound 之间的一般定理未给（daqu-yushu-yuxiong 的 gap）。各名的定名见 name_flags，由整合者定。",
+   "notes": "范围与计数。C17 原有 95 条。修订 86 条，新增 3 条，保留 8 条，移出 1 条（xiaoxiang-guimei-xiangcheng，入 rejected）。两个核查都判 keep 的 25 条中，有 17 条仍须修订，理由是任务第 2、3 步：读法在引文外用阴、阳作爻值之名（不采之符号），或以“消息之律”指 waxWane（与名表消息同字异义），或未标明所引声明是定义（Iff.rfl）或所构之例，或未写出 loss_passes_juncture 的 Returns 前提与双重否定结论。这 17 条是 tuan-liuwei-shicheng、xiaoxiang-weidang、xiaoxiang-zhongzheng、xiaoxiang-yizhong、xiaoxiang-chenggang、tuan-guai-cheng-wugang、tuan-gangzhong-erying、tuan-bi-shangxia-ying、lueli-yiyao-weizhu、xiaoxiang-qianlong、wangbi-fu-liuer、wangbi-fu-liusi、sunzi-sidi、jing-guimei-chiqi、zhuangzi-shanmu-cai-bucai、zhuangzi-paoding-zhizu、lunyu-yan-jizhi，改动都只限于此，不改种类与结构判断。另有几条两核查都 keep，但因同样的理由修订：daqu-yushu-yuxiong、xunzi-jieyu-ming（finerLaw_determined 是构造所致，Confound 是例，名「遇」改为时）、zhongyong-qinqin-zhi-sha（Transfer.unordered、Clearing.centers_disagree 是例，写出两个前提）、simafa-rong-bu-xiangru、sunzi-huo-fa-bing-jing、sunzi-wu-chengshi、shangjun-fagu-wuguo、shangjun-dangshi-lifa、xici-biantong-qushi、jinsilu-zhong-yi-ting、zhuangzi-bu-guishou、zhuangzi-shuqi-shuji、laozi-sz-ji-er-wei-shi、lunyu-ke-yu-yan。\n\n种类改动。scope：shuogua-sancai-liuhua（本章语境与朱熹都取每才两位之带，高度之读无古注）、tuan-gen-shizhi（rests_unrefuted_enclosed 有五个条件且结论为双重否定，「時行則行」未映射）、mengzi-xianni-qixin（Confound.confounded：归因不能由记录定，须变动与返回）、zhuangzi-wu-gujin（作修养次第读与 D43 相容，字面本体读法一半相分）、fahua-fangbian（一佛乘与本性不带）。agreement：lueli-tongbian-yingbi（王弼「召雲者龍，命呂者律。故二女相違，而剛柔合體」是异类之应，与相异为应同向；RO wenyan-tongsheng 的定域只适用于文言原句）。\n\n声明的处理。所有声明与记录都用 work/resolve.py 解析，全部为现名（对 zhonghua 工作树的 receipt 20261020T093308.742793Z）；critic 所列 main 上 17 处失效锚点没有一处在 C17 中。新加的声明：Interleavings.LocalLaw（结构）、LocalLaw.Apart、Diagonal.Unfolds.unheld、Becoming.no_whole（一般形式；Specker.no_whole 是三盒之例）、Hexagram.reverse、inPhase_reverse、rises_reverse、opposed_reverse、Hexagram.opposed、Contextual.Glues.agree、Contextual.fitsFree_iff（替换需要 Local、NoGlobal、Respects 三前提的 no_free_frame）、World.exchange_step_iff、Flow.Balances.rise_given、fall_taken、Dependence.MakesDifference（定义，替换结构不对的 differenceOnlyTogether_iff）、Hexagram.holdsPlace、Hexagram.middle 等。删去的声明：zhongyong-cuoxing、huayan-shixuan-tongshi、jinshizi-shishi-gefa 中无据的 Interleavings 条；zhuangzi-anshi-chushun 与 zhuangzi-wu-gujin 中的 World.arising_iff_ceasing（重现律，文本不说重现）；laozi-sz-yusu 中的 pace_law、dissolving、stretch_fixed；lueli-tongbian-yingbi 中的 Learning、Law.alike_iff_sameFuture、pairs_goAlike；lueli-shibian-xiang 中的 answers（远近是距险难之远近）与 sole_top_passes；hanfei-nanshi-renshe 中的 RuleCapture（AI 类比）；lueli-lizhu-dingyi 中用来证冲突的计数。定义（Iff.rfl）照实说：Contextual.indexed_fits、Branching.juncture_iff、World.balances_iff_exchange；构造所致：Situations.finerLaw_determined、Pace.rule_at_reading、rule_kept。所构之例照实说：Confound.misattributes、confounded、Pool.difference_only_together、CrossingContexts.pooled_crosses、not_inOne、ChangingContext.erased_not_lifted、Cancelling.coarse_not_fine、Excluding.three_courses、Viability.ChoicePoint.each_not_joint、no_rule_decides_joint、Switching.fixed_loses、changing_regains、TimedResponse.Delayed.*、HorizonWebs.prefix_does_not_decide、Negation.each_through_other、Transfer.unordered、Clearing.centers_disagree、RuleCapture.Alternating.never_locked、Branching.Many.no_juncture、Specker.no_whole；例只用来证否定之言或存在之言。Hexagram.* 多是按六十四卦编码的计算，读法中照此说。\n\n我判定为错或不取的修订意见。(1) 语文核查对 hanfei-nanshi-renshe 建议引「勢治者則不可亂」作人设之势的根据；这句在原文是说自然之势（其下文以「此自然之勢也」收），不是复应者的人设之势。改用「抱法處勢則治，背法去勢則亂」与「賢何事焉」，并把前者加为 fragment。(2) 结构核查在 xiaoxiang-gangrou-jie 说「剛柔接」是比的确切先秦复词；程颐读作二五相应（「二與五剛柔之情相接」），解初六「剛柔之際」也读作初四相应，所以不取，两读并存。(3) 结构核查在 lueli-tongbian-yingbi 判 keep（scope），语文核查判 revise 为 agreement；依王弼紧接的「二女相違，而剛柔合體」取后者。(4) 结构核查对遲速之名的意见以 name_flag 处理：删遲速，留與時轉。\n\n新条目。lueli-bianwei-zunbei（王弼辩位，外延相合、根据属争胜与等级一层，相分；YCM130-LB-W-02-R01 由平行升为条目）；sunzi-qianhou-bu-xiangji（孙子九地，单元 BI1-SZ-U11，部分之间的到达被切断，定域；回应 critic 的补兵）；xunzi-yuzuo-yu-shi（荀子宥坐，单元 RU2-U-XZ28，时与材分，定域，作名「時」的先秦出处）。记录增补：sunzi-shu-sheng-cheng 加单元 BI1-SZ-U04（「以鎰稱銖」），hanfei-gufen-shi 加单元 FA1-H11-U02（「故資必不勝而勢不兩存」）；mojing-xianhou-jiu 保留 MI1-U-SS-39，读法已用其經說上「始，時或有久，或無久，始當無久」。新加的 fragment：lueli-zhongshi-zhidi、lueli-chushang-wu-dingwei、lueli-tongbian-yingbi、lueli-yishi-zhizhi-kefan、hanfei-nanshi-renshe 各一条，都已用 ctq.py text 对其 source_id 核过。\n\n未采的 missing 与 coverage 项及理由。秋水「時无止，分无常，終始无故」：结构核心（无止）只是自然数索引之步的建模选择，「分无常」「終始无故」的义训未定，且 ZH1-S17 的单元已为 C14 另一段所用，不立条目。系辞「推而行之谓之通」：WP-XCS-C12-S04-R05、S06-R04 已在 C04。孙子「奇正相生，如循環之無端」：已在 C11（sunzi-qi-zheng-xun-huan）。至乐「萬物皆出於機」：已在 C12，入名「機」的 name_flag。墨经「宇，彌異所也」：归 C01。系辞「几者，动之微」：XC-R045 在 C07。時中：归 C15。形、形勢与節、候：脊柱无对应之律，势已归 C07，「其節短」在 sunzi-shi-jie-ji 中注为未映射。司马法「遲速不過誡命」：BI1-SM-R-11 已在 C02 为平行，只是快慢受命之限，入名「遲速」的 name_flag。郭店、帛书《老子》异文：并入 lao02-gaoxia-qianhou 的 layer 与读法。王弼「故卦以反對」与「召雲者龍」：并入 lueli-yishi-zhizhi-kefan 与 lueli-tongbian-yingbi。荀子天论「四时代御」：只作名「錯行」的对照。\n\n平行之注须改（位置不变）。TP-H40-X1-R01（解初六「剛柔之際」）：程颐释为「初四相應是剛柔相際接也」，注应改为“程颐读作初四相应，亦可读作初六与九二相比”。WH-R028（韩康伯「因而制其會通」）：原注说“在会通之处截取”不对，韩注是制其会通，孔疏说「陰陽變化而相裁節之」，都不是截取；注应改为“韩注、孔疏以裁为相裁节，不支持截取之读”。CY-R004（程颐「以同德相應」）：注不变，同值之应，与相异为应方向相反。YCM130-LB-W-02-R01 已升为条目。\n\n待核（不在冻结语料中，读法已标“待核”，不作引文）：韩康伯注说卦以二四、三五说分阴分阳；王弼注贲彖以坤上六、乾九二相易；王弼注艮六五；朱熹以艮六五之「正」为衍字之说；传世本「相倾」为避汉惠帝讳所改之说。朱熹《本义》卷八（evidence/texts/YD-ZX8.txt）未在 model.json 登记，ctq 不能查；其以上二爻为天、中二爻为人、下二爻为地之说，与 DS03 的两处异文（其遇不同；不利近者），只在此注中提及，读法不引；读法所引朱熹之句取卷七（YD-ZX7）。冻结 DS03 为九章页，系辞下各条的 locator 统一写作“冻结第 N 章（朱熹本义第 M 章）”。\n\n四种非关系层的覆盖（相分）。争胜与等级：tuan-dayou-zunwei、xici-guijian-wei、zhongyong-qinqin-zhi-sha、lueli-bianwei-zunbei；另 xici-tonggong-yiwei（「近五」）、hanfei-gufen-shi、sunzi-shu-sheng-cheng、sunzi-qianhou-bu-xiangji 中的取胜与贵贱作所余不带。意志或单一中心：lueli-lizhu-dingyi、hanfei-nanshi-renshe；daxue-zhi-suo-xianhou 的本末定序作所余。固定本性或价值：xici-wen-budang、shangjun-fagu-wuguo；mengzi-xianni-qixin、mengzi-shui-shi 的性善一步作所余。本原：C17 没有整条相分；fahua-fangbian 的一佛乘（若读作先在之根）与 zhuangzi-wu-gujin 的字面本体读法是定域条中的相分之半，至乐之機在 C12。其他结构：xiaoxiang-gen-liuwu（用字「正」与 inPhase 冲突，可能是字义之别）、shuogua-di-chu-zhen（指派的列表之序，不由构形关系导出；原读法以「帝」为单一中心，与 RO 相反，已改）、zhonglun-guanshi（无自性之「無」）、huayan-shixuan-tongshi（若作时间读，因果先后之无）。\n\n伦理的写法。凡涉意义与排序之处（xici-wen-budang、zhongyong-qinqin-zhi-sha），读法写明两个前提各有其职：延续条件定范围，本身不排序；排序只在 C（以扩展为更好）。没有一处说伦理由延续条件推出。\n\n仍开放。G9（窗口：到达之后、机过之前，同一过程、同一构形 x、到达可判定）未证，xici-daishi-erdong、wenyan-jishi、tuan-gen-shizhi、zhuangzi-hezhe-zhi-fu、laozi-sz-bu-shishi 依之。三才之带（初二、三四、五上）未在 HexagramPlaces 定义（shuogua-sancai-liuhua 的 gap）。共享关系项而两种次序到达不同构形的见证未给（sunzi-qinfu-fa 的 gap）。Situations 与 Confound 之间的一般定理未给（daqu-yushu-yuxiong 的 gap）。各名的定名见 name_flags，由整合者定。",
    "check_notes": "核查范围：修订者 89 条（88 条 revised，1 条 new）全部核过。改正 23 条，通过 66 条，没有删除的条目。修订者删去 xiaoxiang-guimei-xiangcheng（「相承」与线间之承同形异义），这一删除成立。\n\n核查方法：所有片段都用 ctq.py text 对照冻结文本，全部逐字相符，出处也对。所引全部声明都用 resolve.py 对照最新回执并在 Lean 中 grep 过，都以全名存在，所引记录也都能解析。改正中新加的引文共 122 处，都在冻结文本中逐字核过；YWH-Q 孔疏、YD-CY2 程颐、FO1-S-MMK 观四谛品释、YWH-LB 辩位、MI1-S-JX 經下、FO2-FQ 海印三昧句与「舉一為首，餘則為伴」都有命中。\n\n改正要点：\n（1）shuogua-sancai：「以高度读三才，没有古注支持」不确。孔疏两说并记：先儒以为上下两体各论天地人，与 halves×Height 同构；又有「一、二為地道」的六位之读。「朱熹卷八系辞下注同」无法核：YD-ZX8 虽有文件，但未登记进 model，ctq 查不到，所以改为不引。\n（2）zhonglun：原读把无自性当作无，改用观四谛品释文；同时去掉“相分的一半”之说。\n（3）zhongyong-cuoxing：原读对 RO 所引失实，RO 以 three_courses、level_kept、zip_keeps、no_rule_decides_joint 读并育，以 glues_iff_agree、no_whole 读并行。现恢复 RO 的分配，交换之读另作第二读，并写明其条件。\n（4）huayan：原读讲因果共享关系项之序，却没有引 Interleavings。现补 act_comm、unique_iff，并注明 boundaryInvariant 一条是 RO 对主伴（因陀羅網境界門）的读法。\n（5）hanfei：favouring_locks 的条件原读写错，已按 Lean 改正。Alternating 是逆其所读、迟一步读取的所构之例。\n（6）shuogua-tiandi：oppositions_glue_iff 的成立条件是每一高度都相应，或都不相应（重卦）。\n（7）sunzi 两条：levels_alike_before 只说未被路由所及的条件水平相同；对方所耦合者相同要另引 coupling_alike_before。\n（8）laozi-yusu：never_reads_lost 说的是第 n 步上不能由该律从任何起点得到（Law.Reachable），不是“n 步内”。\n（9）zhuangzi-anshi：Web.change_readings 是定义（Iff.rfl），原读未说明，现改正，并把 ceasing_needs_arising 的计数内容写准确。\n（10）xunzi：性是生之所以然，不是所行。\n（11）lao02：RO 的定域是有界性，原读写成“相对一个划分”，已改正；each_through_other 是所构之例。\n（12）xici-hua-er-cai：名表以此句为「變」（过程）的出处，与本条的粗步之读是两种读法，已注明。\n（13）tuan-bi：补入程颐，虞翻与王弼注两说标为待核。\n（14）mojing：补經下「宇或徙」；mojing、lueli-yishi、wenyan-jishi 三条的 names_used 删去不是为其本概念而用的久和时。\n（15）mengzi-shui-shi：「其势」改为冻结文本的简体字形。\n（16）lueli-gua-shi-yao-bian：原读只靠定义，现补 halves_no_free_frame 一条律作为承载。\n\n所有读法都没有把延续条件当作断言，也没有排序，排序只在 C。\n\n通过条目中的未尽之处（不影响结论）：\n- Lean 文档注释把 odd_above 标为「迭用柔剛」，shuogua-dieyong 则把它归于「分阴分阳」，这是两种 AI 读法之间的分歧，交整合者。\n- zhongyong-qinqin 引了 Flow.withinInfluence_of_withinFeeding，xiaoxiang-chenggang 引了 guiMei_falls，但读法正文都没有提到。\n- 「可回与否可判定时，存在一个机」一句的依据是 Branching.loss_passes_juncture_decided，相关条目没有引它。\n- xici-biantong 对 rule_alike_until_reading 的措辞是近似说法：该定理比较的是两条进程。\n- sunzi-wu-chengshi 所引的 rule_kept 要求规则从不读取。\n\n名的意见：名表以 Law.Commutes 一般地锚定并行不悖，不限于不共享关系项的交换；「時」在王弼处指构形，在文言「及時」中指时限，都不是名表的时（情境）。"
   }
  }

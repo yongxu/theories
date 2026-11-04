@@ -13,9 +13,12 @@ Everything is checked against repository copies only:
      apart); every result record exists;
   4. names: one name per concept, no two names alike once simplified, every anchor current, every quotation in
      the frozen text it names;
-  5. the chapters, when present: every 「…」〔ID〕 quotation is in source ID's frozen text, every `Becoming.…`
-     declaration is current, every record link exists, every 对照 line names entries of the map with the kind the
-     map gives them, and the generated tables equal what the data gives.
+  5. the chapter (06-CLASSICAL-TEXTS; a missing one is a failure): every 「…」〔ID〕 quotation is in source ID's frozen
+     text, every `Becoming.…` declaration is current, every record link exists, every 对照 line names entries of the
+     map with the kind the map gives them, the generated tables equal what the data gives, and the numbers its
+     section 七 states of the map and the names are the data's (STATED). The three chapters this checked until RA
+     moved them to history/ (23 October 2026) are frozen there and not checked.
+Failures are printed, not written to a file.
 """
 import argparse, csv, glob, hashlib, json, os, re, sys
 from pathlib import Path
@@ -25,9 +28,20 @@ ROOT = HERE.parents[5]
 SRC = ROOT / 'sources/civilization-thought-v1.0'
 PKG = ROOT / 'experiments/integrated-correction/general-framework/generative-basis/lean/becoming'
 RECORDS = ROOT / 'theories/becoming/results/records'
-CHAPTER = ROOT / 'theories/becoming/chapters/THE-THEORY-OF-BECOMING-ZHONGHUA.md'
-MAP_CHAPTER = ROOT / 'theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md'
-WL_CHAPTER = ROOT / 'theories/becoming/chapters/WENLI-AND-BECOMING.md'
+CHAPTER = ROOT / 'theories/becoming/chapters/06-CLASSICAL-TEXTS.md'
+
+
+def stated(n):
+    """The numbers the chapter's section 七 states, each as the words it is stated in, from the data's counts n."""
+    return [f"v1.0 的 {n['judgments']:,} 条判断",
+            f"{n['flagged']:,} 条涉及其结构",
+            f"条目共 {n['entries']:,} 个",
+            f"（相合 {n['agreement']}，定域 {n['scope']}，相分 {n['divergence']}）",
+            f"另有 {n['judgments'] - n['flagged']:,} 条没有脊柱可读的结构",
+            f"以 {n['names']} 个古典之名",
+            f"已对应的 {n['flagged'] - n['rejected']:,} 条计（{n['flagged']:,} 条除去读后不取之 {n['rejected']} 条",
+            f"{n['names']} 名中 {n['anchored']} 个录有锚，其余 {n['names'] - n['anchored']} 个",
+            f"{n['names']} 个名中 {n['quoted']} 个录有引文"]
 sys.path.insert(0, str(HERE / 'work'))
 from simplify import simp  # noqa: E402
 
@@ -161,19 +175,33 @@ def main():
     if len({r['名'] for r in rows}) != len(rows):
         fail.append('names: a name appears twice')
 
-    # 5. chapters
-    n_q = n_d = n_l = n_dz = 0
-    for ch in [args.chapter, MAP_CHAPTER, WL_CHAPTER]:
+    # 5. the chapter
+    n_q = n_d = n_l = n_dz = n_st = 0
+    tot = {}
+    for v in counts.values():
+        for k, n in v.items():
+            tot[k] = tot.get(k, 0) + n
+    n = {'judgments': len(rel_ids), 'flagged': sum(1 for v in verdicts.values() if v['c'] != '-'),
+         'entries': n_entries, 'names': len(rows),
+         'rejected': sum(1 for c, d in P.items() for r in d['rejected'] if verdicts.get(r['record_id'], {}).get('c') == c),
+         'anchored': sum(1 for r in rows if r['锚'].strip() not in ('', '—')),
+         'quoted': sum(1 for r in rows if r['引'].strip() not in ('', '—')), **tot}
+    for ch in [args.chapter]:
         if not ch.exists():
+            fail.append('no chapter at %s' % ch)
             continue
         t = ch.read_text(encoding='utf-8')
+        for s in stated(n):
+            n_st += 1
+            if s not in t:
+                fail.append('%s: does not state, as the data gives it: %s' % (ch.name, s))
         for m in re.finditer(r'「([^」]{2,})」〔([A-Za-z0-9\-]+)〕', t):
             n_q += 1
             if not in_text(m.group(2), m.group(1)):
                 fail.append('%s: quotation not in %s: %s' % (ch.name, m.group(2), m.group(1)[:30]))
         for m in re.finditer(r'`(Becoming\.[A-Za-z0-9_.\'₀-₉]+)`', t):
             n_d += 1
-            if not decl_ok(m.group(1)):
+            if not decl_ok(m.group(1).rstrip('.')):     # a name ending in a dot names its namespace (a prefix left out)
                 fail.append('%s: declaration %s' % (ch.name, m.group(1)))
         for m in re.finditer(r'\]\(\.\./results/records/([a-z0-9\-]+)\.md\)', t):
             n_l += 1
@@ -217,19 +245,21 @@ def main():
             if m.group(2).strip() != want.strip():
                 fail.append('%s: generated table %s differs from the data (run build_tables.py)' % (ch.name, m.group(1)))
 
-    open(HERE / "work/verify-failures.txt", "w", encoding="utf-8").write("\n".join(fail) + "\n")
     for f in fail[:60]:
         print('FAIL', f)
     if len(fail) > 60:
         print('… and %d more' % (len(fail) - 60))
-    tot = {}
-    for v in counts.values():
-        for k, n in v.items():
-            tot[k] = tot.get(k, 0) + n
-    print('%s: %d files bound; %d judgments, %d flagged; %d entries (%s), %d fragments; %d names; '
-          'chapters: %d quotations, %d declarations, %d record links, %d 对照 lines; receipt %s; periphery declarations: %d'
-          % ('FAILED' if fail else 'ok', len(prov['files']), len(rel_ids), sum(1 for v in verdicts.values() if v['c'] != '-'),
-             n_entries, ', '.join('%s %d' % kv for kv in sorted(tot.items())), n_frag, len(rows), n_q, n_d, n_l, n_dz, receipt.parent.name, len(used_periphery)))
+    e_decls = {x.strip('`') if x.strip('`').startswith('Becoming.') else 'Becoming.' + x.strip('`')
+               for d in P.values() for e in d['entries'] for x in e['declarations']}
+    e_recs = {x for d in P.values() for e in d['entries'] for x in e['records']}
+    print('%s: %d files bound; %d judgments, %d flagged; %d entries (%s), %d fragments, %d declarations, %d records; '
+          '%d names; '
+          'chapter %s: %d quotations, %d declarations, %d record links, %d 对照 lines, %d stated numbers; receipt %s; '
+          'periphery declarations: %d'
+          % ('FAILED' if fail else 'ok', len(prov['files']), len(rel_ids), n['flagged'],
+             n_entries, ', '.join('%s %d' % kv for kv in sorted(tot.items())), n_frag, len(e_decls), len(e_recs),
+             len(rows), args.chapter.name,
+             n_q, n_d, n_l, n_dz, n_st, receipt.parent.name, len(used_periphery)))
     for x in sorted(used_periphery):
         print('  periphery:', x)
     sys.exit(1 if fail else 0)

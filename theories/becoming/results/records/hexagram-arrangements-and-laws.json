@@ -948,13 +948,13 @@
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ro-relational-sources/passages.json",
       "role": "integration",
       "declarations": [],
-      "sha256": "7e307adaebc2d236b921edf79d940568410c20cea9ab4ea7cf7d77495f50d177"
+      "sha256": "e209921293658564fed53b77c548adbb43fbb42fe3ac50bc674b871c0cdf4dd1"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ro-relational-sources/verify_ro.py",
       "role": "integration",
       "declarations": [],
-      "sha256": "bd963dfde041adcdcc5a894dc3f39159b0c8d62191ad0b999918f8f36d61467f"
+      "sha256": "bc9d6817858ce783695a1472fa30762de199dcbd24a2d623ef4f36f8250940a7"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",

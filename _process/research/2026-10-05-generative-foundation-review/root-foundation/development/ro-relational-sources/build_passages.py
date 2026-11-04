@@ -582,6 +582,19 @@ FIXES = {
                        "withholding stays (gives_needs_sparing, total_stays), so 柔弱者生之徒 holds where withholding is "
                        "local, not universally; the comparison 'the soft overcomes the hard' across laws is a gap."),
         'why': ZHK_WHY},
+    'sz-51-ji-er-wei-shi': {
+        'reading_sub': [('一个部分造成的差别属于共同活动（`Pool.difference_belongs_to_the_joint`）',
+                         '一个部分有一个其他汲取者时造成差别，有两个时不造成（`Pool.difference_belongs_to_the_joint`）')],
+        'reading_en_sub': [('the difference a part makes belongs to the joint activity',
+                            'a part makes a difference with one other drawer and none with two, so a difference can be made only together')],
+        'why': ('RAE (AA Phase 0, E2): the reading stated the ownership ND renamed away (OU7, e5951932b: '
+                'difference_belongs_to_the_joint -> difference_only_together); its words are now the home\'s '
+                '(06-CLASSICAL-TEXTS: 有一个其他汲取者时造成差别，有两个时不造成)')},
+    'lao-51-sheng-er-bu-you': {
+        'reading_en_sub': [('the law that the difference a part makes belongs to the joint activity',
+                            'the law that a difference can be made only together')],
+        'why': ('RAE (AA Phase 0, E2): the English reading stated the ownership ND renamed away (OU7, e5951932b: '
+                'difference_belongs_to_the_joint -> difference_only_together); its words are now the home\'s')},
     'zuo-xuan12-zhi-ge-wei-wu': {
         'reading_sub': [('Widening 证明：', 'LoopReturn 证明：')],
         'why': ('DF (DEFECTS-FOUND, 06): the reading named the module of its laws by its name before R22 (Widening, now '
@@ -658,6 +671,13 @@ def rename_text(s, table):
 
 RENAMES = renamed()
 R30_WINDOWS, R30_WORDS = r30_rules()
+
+# ND's rename in OU7 (e5951932b; its table is the NAMES dict of development/nd-nondual-names/part2/nd_rename.py,
+# with no RENAME-TABLE.json): the one declaration of it a passage names. Applied after R22 and R30, with its own note,
+# so the passages R22 and R30 renamed keep theirs.
+ND_RENAMES = {'Becoming.Pool.difference_belongs_to_the_joint': 'Becoming.Pool.difference_only_together'}
+ND_RENAMED_WHY = ('names follow the declaration ND renamed in OU7 (e5951932b; development/nd-nondual-names/part2/'
+                  'nd_rename.py), statement unchanged')
 
 # Renamed records (R35, E4): a passage's records, and record ids named in its readings, follow the record renames
 # (receipts in _process/architecture/renames/), claims unchanged. Applied after FIXES, so a FIXES entry may still
@@ -785,6 +805,14 @@ def main():
             p['reading_en'] = rename_text_r30(rename_text(p['reading_en'], RENAMES), R30_WINDOWS, R30_WORDS)
             if (p['declarations'], p['reading'], p['reading_en'], nearest()) != before:
                 p['corrected'] = (p['corrected'] + '; ' if p.get('corrected') else '') + RENAMED_WHY
+            before = (p['declarations'], p['reading'], p['reading_en'], nearest())
+            p['declarations'] = [ND_RENAMES.get(d, d) for d in p['declarations']]
+            if nearest():
+                p['gap'] = dict(p['gap'], nearest=[ND_RENAMES.get(d, d) for d in nearest()])
+            p['reading'] = rename_text(p['reading'], ND_RENAMES)
+            p['reading_en'] = rename_text(p['reading_en'], ND_RENAMES)
+            if (p['declarations'], p['reading'], p['reading_en'], nearest()) != before:
+                p['corrected'] = (p['corrected'] + '; ' if p.get('corrected') else '') + ND_RENAMED_WHY
             before = (p['records'], p['reading'], p['reading_en'])
             p['records'] = [RECORD_RENAMES.get(r, r) for r in p['records']]
             p['reading'] = rename_records_text(p['reading'], RECORD_RENAMES)

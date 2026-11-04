@@ -368,7 +368,7 @@
 **机制。** 文法从古文读出，不说明古文全体都是关系的。检验后者，要在更广的文本中逐段读：找原文中的关系、条件与方向，再找脊柱上结构相同的律，按[三种关系](#three-relations)定其类别，原文逐字核对。
 
 <a id="r-chinese-sources-on-the-spine"></a>
-**评估。** 九部分中国思想的 248 段文字，逐字引出，逐段对到脊柱上，记为相合、定域或相分。关系的起点在诸线中都成立；其全称形式多需定域；四种非关系之层反复出现，每一种在同一传统内部都有回应（[对应之章](../history/CHINESE-SOURCES-AND-BECOMING.md)；检查脚本 [verify_ro.py](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ro-relational-sources/verify_ro.py)；记录 [chinese-sources-on-the-spine](../results/records/chinese-sources-on-the-spine.md)）。不新增 Lean 与前提；所对之声明与记录照其现状，类别与读法是 AI 的 [AI reading, D54]。检查脚本核对每一片段逐字见于所存文本，所引之声明皆在纯核回执之审计清单中，所引之记录皆存在。
+**评估。** 九部分中国思想的 248 段文字，逐字引出，逐段对到脊柱上，记为相合、定域或相分。关系的起点在诸线中都成立；其全称形式多需定域；四种非关系之层反复出现，每一种在同一传统内部都有回应（[对应之章](../history/CHINESE-SOURCES-AND-BECOMING.md)；检查脚本 [verify_ro.py](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ro-relational-sources/verify_ro.py)；记录 [chinese-sources-on-the-spine](../results/records/chinese-sources-on-the-spine.md)）。不新增 Lean 与前提；所对之声明与记录照其现状，类别与读法是 AI 的 [AI reading, D54]。检查脚本（随 research-test 运行）核对每一片段逐字见于所存文本，所引之声明皆在最新纯核回执之审计清单中，所引之记录皆存在，下表之数皆为对应表所给；对应之章于 2026 年 10 月 23 日移入 history/，其逐段之表此后不再核对。
 
 | 部分 | 段数 | 相合 | 定域 | 相分 |
 |---|---:|---:|---:|---:|

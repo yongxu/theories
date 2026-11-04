@@ -30,7 +30,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-verify_zh.py passes: 1342 quotations in their frozen texts, 5479 citations of Lean names (each in receipt 20261022T070506.681048Z or a listed periphery declaration), 709 record links, the name table (449 names) and the generated tables of the three chapters; import_wenli.py --check binds 98 files. The central section was checked against each cited Lean statement; the chapter, the changed 條 and the landing texts were reviewed in four rounds (the landing texts in the last three) by independent lenses, a skeptic checking each finding. All readers AI.
+verify_zh.py passed on 22 October 2026, before the chapters went to history/: 1342 quotations in the frozen texts, 5479 citations of Lean names (each in receipt 20261022T070506.681048Z or a listed periphery one), 709 record links, the name table (449 names) and the generated tables of the three chapters; import_wenli.py --check binds 98 files. The central section was checked against each cited Lean statement; the chapter, the changed 條 and the landing texts were reviewed in four rounds (the landing texts in the last three) by independent lenses, a skeptic checking each finding. All readers AI.
 
 Canonical source: [WENLI-AND-BECOMING.md](../../history/WENLI-AND-BECOMING.md)
 
@@ -91,6 +91,7 @@ Aliases: `文理生生`, `文`, `文同`, `the course named 文`, `the epistemol
 - 23 October 2026, WL3: the 文 line joined to the one-unfolding root (record wen-in-the-grammar, study section 374); the chapter gained a paragraph in §一 and a bullet in its head.
 - 23 October 2026, ZE: the controlled English control run; the chapter's testing section, head and open item 6 state its result.
 - 25 October 2026, board item DF (study section 418): the scope item saying the coarsest value-keeping, law-carrying class is not one theorem removed, and the Lean part of the next step with it: the coarsest class is stated as one theorem and the laws of 文 are joined to Web.AlikeThroughUpTo and CrossSituational (WL2); the remaining next step is unchanged.
+- 4 November 2026, board item RAE: the validation scope said in the present tense that verify_zh.py passes on the three chapters' generated tables; that run was of 22 October, and RA moved the chapters to history/ the next day, so the scope is dated. verify_zh.py now checks 06-CLASSICAL-TEXTS (civilization-thought-on-the-spine). Claims unchanged.
 
 </details>
 
