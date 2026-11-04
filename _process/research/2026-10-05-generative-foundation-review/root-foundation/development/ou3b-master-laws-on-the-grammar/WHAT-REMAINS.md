@@ -492,6 +492,11 @@ The review's docstring-only findings outside the grammar ride UE29.
 - **What remains of item 7** is the sending, Ren's own act: the letter under his name from an address he reads, to people he can ask, and any payment. The push of main and the tag follows the board's line on it.
 - **What it does not change.** No Lean, and no record's or result's statement; seven records bound to the overview and the free-energy page were re-pointed to their new bytes after reading, in sections that changed by links alone. Items 1 to 6 stay met.
 
+## Edition 2 (5 November 2026)
+
+- **The edition to send** is edition 2: its frozen commit is `7735fa07a`, tagged `review-packet-2` on this machine only. Every dossier was read again from edition 1's frozen commit to `132ec551e`, which differs from it in no chapter, Lean file or source, since main had changed what a reader is told after edition 1 ([what edition 2 did](../review-packet/FREEZE-STEPS.md#edition-2-of-5-november-2026)); its reader edition was built with `--release` from a clean worktree of it, thirteen parts, the sheet in two forms and a manifest of their sums, committed at [`output/pdf/review-packet/`](../../../../../../output/pdf/review-packet/MANIFEST.txt). Edition 1 is kept at [`output/pdf/history/review-packet-1/`](../../../../../../output/pdf/history/review-packet-1/MANIFEST.txt).
+- **What remains of item 7** is still the sending, Ren's own act, and the push, which follows the board's line on it. No Lean, and no record's or result's statement, changed.
+
 ## What this note does not do
 
 It edits no row but its own, changes no module, and decides no definition another owner holds (rule 3). The board's open-claims table holds the items once they are claimed.
