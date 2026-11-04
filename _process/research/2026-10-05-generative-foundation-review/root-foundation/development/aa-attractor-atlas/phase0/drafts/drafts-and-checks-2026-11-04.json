@@ -1,0 +1,1293 @@
+{
+ "draft:chapters-and-glossary": {
+  "flags": [
+   {
+    "id": "E4",
+    "status": "drafted",
+    "why": "Holds; I recounted it from coverage.json and passages.json and got the verifiers' numbers: 3,499 flagged, 3,403 placed once overall, 96 placed in more than one cluster (3,600 placements), each exactly once in its own cluster, 6 kept in one cluster and rejected in another, and 1,300 entries (453/647/200). verify_zh.py resets `placed` per cluster (l.112) and tests only the flagged cluster (l.139-141). The fix uses the checker's own scope, which the history chapter also states at l.343 ('每条所标判断在其簇中恰好落在一处'). It changes 06 §7.1 and the record together: statement en/zh, a new does_not_show item, validation_scope en/zh and a history note. The 96 and the 6 go into does_not_show because the English statement may not exceed 300 characters; with the fix it has 297. All 21 drafted edits in this set were applied to copies in memory: each old string occurs exactly once, and both JSON files still parse. Companion edit: the reading register arguments-a-l.json repeats the unscoped claim, and the generated ARGUMENTS-A-L.md shows it to readers. Not edited: (1) history/CIVILIZATION-THOUGHT-AND-BECOMING.md, a hash-bound source of the record (its l.5 has the unscoped words); (2) the kit's make_record.py, which still emits the old wording and must not be rerun as it is. One more finding, with no edit drafted because it is the owner's choice and is settled by deciding the 6: 5 of the 250 judgments that 06 l.446 counts as 读后不取 are kept in another cluster (LE-R020, LE-R021, TP-H22-X4-R01, WP-XCS-C01-S01-R04, RU1-LY-18-10-R02), so the base of 3,249 holds only when counted by flagged cluster. Re-pointing: conditional-laws-of-the-corpus cites 06 by whole-file hash (444fef02..., which equals the current file). 06 links its page, so it is located. The edit falls outside what it cites, so the drift check will report no bearing, but its hash changes: read it and re-point it. The home record (civilization-thought-on-the-spine) is edited in the same change. 40 records name it by id in `related` only, and a text change does not touch them.",
+    "edits": [
+     {
+      "file": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md",
+      "old": "3,499 条涉及其结构，各自恰好落在一处（归入一个条目、与一条目并列、或读后不取），条目共 1,300 个，皆经检查（相合 453，定域 647，相分 200）；另有 2,174 条没有脊柱可读的结构。",
+      "new": "3,499 条涉及其结构，各自在其所标之簇中恰好落在一处（归入一个条目、与一条目并列、或读后不取），其中 96 条另落于他簇（6 条在一簇取而在他簇不取，尚未判定）；条目共 1,300 个，皆经检查（相合 453，定域 647，相分 200）；另有 2,174 条没有脊柱可读的结构。",
+      "reason": "verify_zh.py checks placement only within the cluster each judgment was flagged for (its docstring says 'lies in exactly one place there'; the history chapter at l.343 says '每条所标判断在其簇中恰好落在一处'). Recount of coverage.json and passages.json: 96 judgments are placed in more than one cluster (3,600 placements), and 6 are kept in one cluster and rejected in another. The home's words come first (the checker's scope), with the counts as the data gives them. '尚未判定' keeps the standing of the 6.",
+      "cited_by_records": [
+       "conditional-laws-of-the-corpus"
+      ]
+     },
+     {
+      "file": "theories/becoming/results/records/civilization-thought-on-the-spine.json",
+      "old": "Every one of the 5,673 judgments of 《中华思想脉络》 v1.0 is read against the spine: 3,499 bear on its structures, each placed once, in 1,300 checked entries (453 agreements, 647 exact scopes, 200 divergences).",
+      "new": "Every one of the 5,673 judgments of 《中华思想脉络》 v1.0 is read against the spine: 3,499 bear on its structures, each placed once in its flagged cluster, in 1,300 checked entries (453 agreements, 647 exact scopes, 200 divergences).",
+      "reason": "The record restates its home (06 §7.1), so it must change with it. The 96 and the 6 go to does_not_show because a statement may not exceed 300 characters (an error under RESULT-WORKFLOW); with this change the whole statement has 297.",
+      "cited_by_records": []
+     },
+     {
+      "file": "theories/becoming/results/records/civilization-thought-on-the-spine.json",
+      "old": "《中华思想脉络》v1.0 的 5,673 条判断逐条对照脊柱：3,499 条关乎其结构，各落一处，成 1,300 个已检查条目（相合 453、定域 647、相分 200）；449 个古典之名，每概念一个，写成中华本《变化论》。",
+      "new": "《中华思想脉络》v1.0 的 5,673 条判断逐条对照脊柱：3,499 条关乎其结构，各在所标之簇恰落一处，成 1,300 个已检查条目（相合 453、定域 647、相分 200）；449 个古典之名，每概念一个，写成中华本《变化论》。",
+      "reason": "Keeps the Chinese statement in step with the English: 119 of 150 characters.",
+      "cited_by_records": []
+     },
+     {
+      "file": "theories/becoming/results/records/civilization-thought-on-the-spine.json",
+      "old": "      \"zh\": \"地位的相分（原文断言理论只在延续条件之下给出者）说明原文错了；理论不断言伦理公理。\",\n      \"kind\": \"non-implication\"\n    }\n  ],",
+      "new": "      \"zh\": \"地位的相分（原文断言理论只在延续条件之下给出者）说明原文错了；理论不断言伦理公理。\",\n      \"kind\": \"non-implication\"\n    },\n    {\n      \"en\": \"That a judgment flagged for one cluster lies in no other: 96 are placed in other clusters too, 6 of them kept in one and rejected in another, not yet decided; placements outside a judgment's flagged cluster are not checked.\",\n      \"zh\": \"所标之判断不落于他簇：96 条另落他簇，其中 6 条在一簇取而在他簇不取，尚未判定；判断在所标之簇以外落几处，未经检查。\",\n      \"kind\": \"scope\"\n    }\n  ],",
+      "reason": "Adds a fifth does_not_show item (the cap is 8), of kind scope, carrying what the narrowed statement leaves out: 223 of 240 English and 60 of 110 Chinese characters. The 6 conflicts stay undecided. The stronger fix is to decide them and make verify_zh count placements in other clusters; that needs its own claim.",
+      "cited_by_records": []
+     },
+     {
+      "file": "theories/becoming/results/records/civilization-thought-on-the-spine.json",
+      "old": "verify_zh.py passes: the import (438 files by SHA-256), one verdict per judgment, each flagged one placed once, every fragment verbatim, 1495 declarations in the current receipt, 196 records, the name table, and both chapters' quotations, declarations, links, 对照 kinds and tables.",
+      "new": "verify_zh.py passes: the import (438 files by SHA-256), one verdict per judgment, each flagged one placed once in its flagged cluster (placements in other clusters not checked), every fragment verbatim, 1495 declarations in the current receipt, 196 records, the name table, and both chapters' quotations, declarations, links, 对照 kinds and tables.",
+      "reason": "The validation scope now states what verify_zh.py actually checks: 520 of 600 characters.",
+      "cited_by_records": []
+     },
+     {
+      "file": "theories/becoming/results/records/civilization-thought-on-the-spine.json",
+      "old": "verify_zh.py 通过：导入（438 个文件以 SHA-256 绑定）、每条判断一个分拣裁定、每条所标判断恰落一处、每个片段在其冻结原文中逐字可见、1495 个声明在现行回执中、196 份记录、名表（锚为现行之名、引文逐字、简化后无重），以及两章的引文、声明、记录链接与生成之表。",
+      "new": "verify_zh.py 通过：导入（438 个文件以 SHA-256 绑定）、每条判断一个分拣裁定、每条所标判断在所标之簇恰落一处（他簇之落处未查）、每个片段在其冻结原文中逐字可见、1495 个声明在现行回执中、196 份记录、名表（锚为现行之名、引文逐字、简化后无重），以及两章的引文、声明、记录链接与生成之表。",
+      "reason": "Keeps the Chinese validation scope in step: 224 of 260 characters.",
+      "cited_by_records": []
+     },
+     {
+      "file": "theories/becoming/results/records/civilization-thought-on-the-spine.json",
+      "old": "与 xici-can-wu-cuo-zong 及一·二十一同；见 wenli-on-the-spine。\"\n    }\n  ]\n}",
+      "new": "与 xici-can-wu-cuo-zong 及一·二十一同；见 wenli-on-the-spine。\"\n    },\n    {\n      \"en\": \"4 November 2026 (AA, erratum E4): 'each placed once' is scoped to the cluster each judgment was flagged for, which is what verify_zh.py checks; a recount of coverage.json and passages.json finds 96 of the 3,499 placed in other clusters too (3,600 placements), 6 of them kept in one cluster and rejected in another, now a does-not-show item. No count, kind or entry changed.\",\n      \"zh\": \"2026年11月4日（AA，勘误 E4）：“各落一处”限于各判断所标之簇，即 verify_zh.py 所查；据 coverage.json 与 passages.json 重数，3,499 条中 96 条另落他簇（共 3,600 处），其中 6 条在一簇取而在他簇不取，今列入不能说明之项。计数、类别与条目均未改。\"\n    }\n  ]\n}",
+      "reason": "The history note the routing asks for. Rounds and dates belong in history, not in public fields.",
+      "cited_by_records": []
+     },
+     {
+      "file": "theories/becoming/results/data/arguments-a-l.json",
+      "old": "《中华思想脉络》v1.0 的 5,673 条完整判断逐条读过：3,499 条关乎理论之结构，各落一处，成 1,300 个已检查条目（相合 453、定域 647、相分 200）。",
+      "new": "《中华思想脉络》v1.0 的 5,673 条完整判断逐条读过：3,499 条关乎理论之结构，各在所标之簇恰落一处，成 1,300 个已检查条目（相合 453、定域 647、相分 200）。",
+      "reason": "Companion edit. The reading register's entry for the history chapter repeats the unscoped claim, and the generated ARGUMENTS-A-L.md shows it to readers. The entry's source scopes the claim in its own check list (CIVILIZATION-THOUGHT-AND-BECOMING.md l.343, '在其簇中'). The source itself is not edited, so source_sha256 is unchanged. No record cites this file.",
+      "cited_by_records": []
+     },
+     {
+      "file": "theories/becoming/results/data/arguments-a-l.json",
+      "old": "Every one of the 5,673 complete judgments of 《中华思想脉络》 v1.0 is read: 3,499 bear on a structure of the theory and each lies in one place, in 1,300 checked entries (453 agreements, 647 exact scopes, 200 divergences).",
+      "new": "Every one of the 5,673 complete judgments of 《中华思想脉络》 v1.0 is read: 3,499 bear on a structure of the theory and each lies in one place in the cluster it was flagged for, in 1,300 checked entries (453 agreements, 647 exact scopes, 200 divergences).",
+      "reason": "The English of the same register entry, kept in step.",
+      "cited_by_records": []
+     }
+    ]
+   },
+   {
+    "id": "E12",
+    "status": "drafted",
+    "why": "Holds in part, as the routing says. The account does prove an 'only', but over one step of exchange: room-read-off-the-exchange law 5, which is Optimum.optimum_lowers_iff (an iff whose right side does not depend on the optimum, so the 'every optimum' reading is exact) together with optimum_untouched. The law that this Reading follows gives sufficiency only (Shared.room). 'F2' is defined nowhere in 05, and 'so not on a condition sharing none' is the wording T3 withdrew (05 l.227). The draft copies law 5 and the hypotheses of 05's own row (l.206), links that row, and keeps T3's standing. The other three limits are unchanged. The paragraph sits in the home section of what-an-optimum-does-beyond-what-couples-in. That record carries none of the replaced words (its correspondence and does_not_show were read), so no record edit is needed. The overview's l.22 ('whether the drain lies only where units are shared went unresolved', T3) is about trained systems and is right as it stands. Records: 13 cite 05 by whole-file hash cd378089..., which already differs from the current file (32f2d27d). None cites §7 by anchor, and the edited line links no record page, so the drift check shows no bearing. The landing re-points them after reading. When this lands, tell LA4, whose open row tests T3's locus.",
+    "edits": [
+     {
+      "file": "theories/becoming/chapters/05-COLLECTIVES.md",
+      "old": "The account adds four limits their model has no place for: the drain falls only where units are shared, so not on a condition sharing none ([T3](#t3)'s locus and F2); a reader reaches only what couples into some reader ([pooled coupling](#r-what-pooled-coupling-reaches)); where nothing is given below a need, as a premise, a re-reading after the level falls below it comes too late for good; and who re-reads is itself selected ([02](02-MAP.md#r-loss-read-in-time-by-the-others)).",
+      "new": "The account adds four limits their model has no place for: over one step where a part's members take at most their capacity and give no more than they take, every optimum of an order rising with what couples in lowers a condition beyond below where the rest leaves it exactly where the part has some capacity there and the rest leaves something there, and stands where the rest leaves it at a condition from which no member may take ([the case](#r-room-read-off-the-exchange); on trained systems the locus is part of [T3](#t3)'s clause, conjectured, and LA4's test left it unresolved); a reader reaches only what couples into some reader ([pooled coupling](#r-what-pooled-coupling-reaches)); where nothing is given below a need, as a premise, a re-reading after the level falls below it comes too late for good; and who re-reads is itself selected ([02](02-MAP.md#r-loss-read-in-time-by-the-others)).",
+      "reason": "The 'only' is proved over one step of exchange: room-read-off-the-exchange law 5, i.e. Optimum.optimum_lowers_iff and Optimum.optimum_untouched, whose docstrings read 'The drain, exactly where units are shared' and 'No drive where no units are shared'. The law this Reading follows does not prove it: there, shared units only give room (Optimum.Shared.room, one way). The first limit now copies law 5 and the hypotheses of 05 §7's row (one step; members take at most their capacity and give no more than they take; a rising order) and links that row. It drops 'so not on a condition sharing none' (the wording T3 withdrew, 05 l.227) and 'F2' (defined nowhere in 05; the F2 in ONE-ARGUMENT now says something else). T3's standing is kept: its clause on trained systems is conjectured, and LA4 left the locus unresolved (P3). The other three limits are unchanged.",
+      "cited_by_records": [
+       "a-code-held-as-counts",
+       "a-commuting-learner-drives-no-unread-choice",
+       "a-swap-symmetric-assignment-singles-out-none",
+       "identical-cells-under-a-descent-treating-them-alike",
+       "identical-cells-under-noise",
+       "joint-plans-from-a-supported-start",
+       "market-model-share-margin-and-ends",
+       "readers-reading-readers",
+       "reviewers-count-by-independent-causes",
+       "risk-minimization-on-a-shared-renewal",
+       "succession-on-a-funded-carrier",
+       "the-test-season-meets-the-optimum-laws",
+       "what-a-set-point-optimum-does-beyond"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "E13",
+    "status": "drafted",
+    "why": "Holds. 05 l.98 and 02 l.186 drop the premise `Web.ByPassing`, which the home (04 §2) needs for 'only while carriers pass it on'. Both lines now carry the home's own sentence (04 l.60), with the premise named. The home record a-pattern-lasts-through-passing has no 'only' in its title and states the premise, so no record edit is needed. The Lean README's L1 row keeps the premise and is fine. Copies outside the live text (study notes, history chapters, a regions.json note) are not live pages and are left alone. Records: the 13 that cite 05 and the 9 that cite 02 do so by whole-file hash, with no anchor cited and no record page linked on the edited lines. No bearing is found, but their hashes change, so the landing re-points them after reading.",
+    "edits": [
+     {
+      "file": "theories/becoming/chapters/05-COLLECTIVES.md",
+      "old": "| Forming the next members | a pattern outlasting its carriers lasts only through passing | [04](04-LIFE.md#r-a-pattern-lasts-through-passing) |",
+      "new": "| Forming the next members | a pattern whose carriers are brief lasts only while carriers keep beginning, and under a premise of passing (`Web.ByPassing`) only while carriers pass it on | [04](04-LIFE.md#r-a-pattern-lasts-through-passing) |",
+      "reason": "This is the home's own sentence (04-LIFE.md l.60, 'What happens'), with the premise named as the home's theorem names it. Without Web.ByPassing the theorem gives only that carriers keep beginning, and only in a double-negation form; 'only through passing' needs the premise.",
+      "cited_by_records": [
+       "a-code-held-as-counts",
+       "a-commuting-learner-drives-no-unread-choice",
+       "a-swap-symmetric-assignment-singles-out-none",
+       "identical-cells-under-a-descent-treating-them-alike",
+       "identical-cells-under-noise",
+       "joint-plans-from-a-supported-start",
+       "market-model-share-margin-and-ends",
+       "readers-reading-readers",
+       "reviewers-count-by-independent-causes",
+       "risk-minimization-on-a-shared-renewal",
+       "succession-on-a-funded-carrier",
+       "the-test-season-meets-the-optimum-laws",
+       "what-a-set-point-optimum-does-beyond"
+      ]
+     },
+     {
+      "file": "theories/becoming/chapters/02-MAP.md",
+      "old": "A whole whose parts arise only through a family drawn beyond its renewal ends ([05](05-COLLECTIVES.md#r-whole-drawing-beyond-renewal-ends)), and a pattern outlasting its carriers lasts only through passing ([04](04-LIFE.md#r-a-pattern-lasts-through-passing)).",
+      "new": "A whole whose parts arise only through a family drawn beyond its renewal ends ([05](05-COLLECTIVES.md#r-whole-drawing-beyond-renewal-ends)); a pattern whose carriers are brief lasts only while carriers keep beginning, and under a premise of passing (`Web.ByPassing`) only while carriers pass it on ([04](04-LIFE.md#r-a-pattern-lasts-through-passing)).",
+      "reason": "The same gloss came in with the same landing (0d7a397a5). It gets the same replacement, the home's sentence, in the same commit.",
+      "cited_by_records": [
+       "capture-by-counted-choices",
+       "drawn-shaping-drawn-one-at-a-time",
+       "exit-from-a-margin",
+       "loss-read-in-time-by-the-others",
+       "readers-drawn-from-the-selected",
+       "rules-that-change-themselves-in-the-grammar",
+       "shaping-read-by-readers-drawn-from-the-selected",
+       "shaping-selected-among-groups",
+       "shaping-the-rule-selected-by-what-comes-back"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "E31",
+    "status": "drafted",
+    "why": "Holds, but this draft departs from the routing's fix. The routing proposes two glossary rows, which would give 元吸引子 two senses; that breaks the glossary's rule (each word in one sense) and the atlas plan's §3.3 decision. §3.3 says the glossary keeps the spine's sense, the atlas files the corpus's wide sense apart, and the row is revised on argument, with a before-copy, if WM lands. The decision is argued there and open to Ren's objection (§11). So the draft does three things. (1) The one row gives 02 l.402's definition word for word. The old gloss 'a lock ... that outlives its loss' was a theorem's conclusion (lock_outlives_loss) with its hypotheses dropped. A 'never means' clause, in the form the generation row uses, copies the corpus's working definition (GENERATIVE-REGIMES.md l.9) and 02 l.453's 'Open'. (2) 02 l.438 and l.453, which both say what 'the corpus's meta-attractor' is and contradict each other, now name which corpus text each means: its account of power, and its working definition. (3) l.453 restores the qualifiers 'recurrent' and 'of activity', which its paraphrase had dropped, and links the definition's page. Left as a decision, not drafted: renaming the spine's term (for example to 闭捕), as the reconciliation's vocabulary rule would. Under AGENTS that is a rename, and §3.3 decided against it for now. OPENING l.29's informal sense is Ren's text and is not touched; it matches the account-of-power sense. The record closed-capture's correspondence cites the corpus's 2025-08 formalisation, which belongs to the account of power, so it is consistent and not edited. No record cites GLOSSARY.md. The 9 records citing 02 do so by hash only, with no bearing.",
+    "edits": [
+     {
+      "file": "GLOSSARY.md",
+      "old": "| meta-attractor (元吸引子) | closed capture: a lock through the rule that outlives its loss | [02](theories/becoming/chapters/02-MAP.md#capture) |",
+      "new": "| meta-attractor (元吸引子) | closed capture: a loop of selection whose rule and whose reading of the rule are both formed from the share it selects, nothing in it reading what lies beyond the share. It never means the corpus's working definition, a recurrent organization of activity whose consequences help reproduce the conditions selecting that organization across changes in its particular carriers: that sense is wider, and the formal 元吸引子 says nothing of carriers, so whether a capture loop is 生成 at some pair of classes is open | [02](theories/becoming/chapters/02-MAP.md#capture) |",
+      "reason": "One row with one sense, as the glossary's rule and the atlas plan's §3.3 decide; the routing's two rows would give the word two senses. The sense is 02 l.402's definition word for word. The old gloss 'a lock ... that outlives its loss' put a theorem's conclusion (ClosedCapture.lock_outlives_loss, its hypotheses dropped) into the definition. The 'never means' clause follows the generation row's form and copies the corpus definition (GENERATIVE-REGIMES.md l.9) and 02 l.453's standing ('stays Open').",
+      "cited_by_records": []
+     },
+     {
+      "file": "theories/becoming/chapters/02-MAP.md",
+      "old": "The corpus's meta-attractor is the closed loop: winners writing the next scorecard is `ReadsShare`, winners forming the minds that read it is `ReadsShare` on the reading, and \"the metric survives its own refutation\" is `lock_outlives_loss`.",
+      "new": "The corpus's meta-attractor in its account of power is the closed loop: winners writing the next scorecard is `ReadsShare`, winners forming the minds that read it is `ReadsShare` on the reading, and \"the metric survives its own refutation\" is `lock_outlives_loss`.",
+      "reason": "02 says both that the corpus's meta-attractor 'is the closed loop' (l.438) and that it 'is wider' (l.453). The two sentences mean different corpus texts: the account of power (the one-paragraph theory in theories/meta-attractor/README.md, which GENERATIVE-REGIMES calls 'the existing power account') and the 8 October working definition. Naming each removes the contradiction.",
+      "cited_by_records": [
+       "capture-by-counted-choices",
+       "drawn-shaping-drawn-one-at-a-time",
+       "exit-from-a-margin",
+       "loss-read-in-time-by-the-others",
+       "readers-drawn-from-the-selected",
+       "rules-that-change-themselves-in-the-grammar",
+       "shaping-read-by-readers-drawn-from-the-selected",
+       "shaping-selected-among-groups",
+       "shaping-the-rule-selected-by-what-comes-back"
+      ]
+     },
+     {
+      "file": "theories/becoming/chapters/02-MAP.md",
+      "old": "The corpus's meta-attractor is wider: an organization whose consequences take part in rebuilding the conditions that select it, continuing across changes of its carriers ([meta-attractor](../../meta-attractor/README.md)).",
+      "new": "The corpus's working definition is wider: a recurrent organization of activity whose consequences help reproduce the conditions selecting that organization, across changes in its particular carriers ([the definition](../../meta-attractor/GENERATIVE-REGIMES.md)).",
+      "reason": "Names which corpus sense is meant and copies the definition word for word. The paraphrase had dropped 'recurrent' and 'of activity', qualifiers the definition's own page says are required. The link now goes to the page that states the definition (the file exists). The next sentence (the formal 元吸引子 says nothing of carriers; Open) is unchanged.",
+      "cited_by_records": [
+       "capture-by-counted-choices",
+       "drawn-shaping-drawn-one-at-a-time",
+       "exit-from-a-margin",
+       "loss-read-in-time-by-the-others",
+       "readers-drawn-from-the-selected",
+       "rules-that-change-themselves-in-the-grammar",
+       "shaping-read-by-readers-drawn-from-the-selected",
+       "shaping-selected-among-groups",
+       "shaping-the-rule-selected-by-what-comes-back"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "E32",
+    "status": "drafted",
+    "why": "Holds, and it is contained. §4.7 already says which set it means; the draft adds the same disambiguation at both sets. There is no rename: the labels state no wrong meaning. The text is only appended after §4.2's last sentence, so the frozen review dossier's quotations of §4.2 (review/PHILOSOPHY.md l.250) still match. The new links (#future-path, #step) exist in 07. 19 records cite 07 by whole-file hash; none cites §4 by anchor, and the edited lines link no record page. No bearing is found, but their hashes change, so the landing re-points them after reading. The atlas should give the two sets distinct ids (step.P1-P4, path.P1-P4).",
+    "edits": [
+     {
+      "file": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+      "old": "P4, Parfit's thesis that identity is not what matters, is coherently denied.",
+      "new": "P4, Parfit's thesis that identity is not what matters, is coherently denied. P1 to P4 here are the step's, not those of [§4.6](#future-path)'s path.",
+      "reason": "Mirrors §4.7's disambiguation ('P1 to P4 here are §4.6's, not those of §4.2's argument for the step') at the other set. No rename, because the labels state no wrong meaning. The sentence is appended after the paragraph's last sentence, so the dossier's quotations of §4.2 (review/PHILOSOPHY.md l.250) still match.",
+      "cited_by_records": [
+       "comparing-two-courses-on-what-they-admit",
+       "constancy-read-at-a-members-class",
+       "eventual-widening",
+       "finite-agreement-does-not-identify-priority",
+       "reach-past-ones-own-end",
+       "reach-through-a-shared-condition",
+       "self-concern-and-c-under-the-condition",
+       "significance-through-a-common-condition",
+       "tasks-and-what-performs-them",
+       "the-class-of-being-joined",
+       "the-continuation-condition-on-the-root",
+       "what-a-course-keeps-reachable",
+       "what-a-line-holds-and-a-regularity-takes-in",
+       "what-can-be-born-next",
+       "what-keeping-widening-needs",
+       "what-leaves-a-class-follows-its-line",
+       "when-holding-for-a-reading-stands-above-a-route",
+       "when-no-route-stands-above-a-revision",
+       "where-the-possible-grows"
+      ]
+     },
+     {
+      "file": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+      "old": "**Argument** [AI reading; each step cites its Lean, and the joining of the steps is argued]. Premises:",
+      "new": "**Argument** [AI reading; each step cites its Lean, and the joining of the steps is argued]. Premises (not those of [§4.2](#step)'s argument for the step):",
+      "reason": "The same disambiguation, placed where §4.6's set begins.",
+      "cited_by_records": [
+       "comparing-two-courses-on-what-they-admit",
+       "constancy-read-at-a-members-class",
+       "eventual-widening",
+       "finite-agreement-does-not-identify-priority",
+       "reach-past-ones-own-end",
+       "reach-through-a-shared-condition",
+       "self-concern-and-c-under-the-condition",
+       "significance-through-a-common-condition",
+       "tasks-and-what-performs-them",
+       "the-class-of-being-joined",
+       "the-continuation-condition-on-the-root",
+       "what-a-course-keeps-reachable",
+       "what-a-line-holds-and-a-regularity-takes-in",
+       "what-can-be-born-next",
+       "what-keeping-widening-needs",
+       "what-leaves-a-class-follows-its-line",
+       "when-holding-for-a-reading-stands-above-a-route",
+       "when-no-route-stands-above-a-revision",
+       "where-the-possible-grows"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "E36",
+    "status": "needs a decision",
+    "why": "Holds; both homes are in 02 (l.149 and l.177). The names do state a wrong meaning: GLOSSARY says 'generation' never means arising, yet these ids and titles use it for arising. So AGENTS allows a rename. But the rename is a structural step, not a text fix, and renaming two ids alone would not give the word one sense. The older usage runs through these records' laws and does_not_show, and through other records: more-needs-renewers ('More generation needs more renewers'), identity-across-steps, coming-and-ceasing-keep-pace, rising-and-falling-in-one-exchange, where-novelty-gain-comes-from, life-as-condition-of-life, census-balance-under-continuation, and a-pattern-lasts-through-passing's correspondence. It also runs through a third id, generation-is-replenishment, which 04 l.40 and l.42 already flag as 'the older sense'. The established practice since RA is to flag the older sense in the live text. 02 l.147's flag ('keep \"generation\" only in their names') is false, because their titles, statements and laws use it too. Drafted now, the smallest change that makes the sentence true, in 04's words. Decision for the coordinator (this is not Ren's): claim one wording item covering all of this. Proposed plan: `research.py rename-id --plan <tsv>` as a dry run, then --apply. The TSV renames unceasing-generation-needs-renewal → unceasing-arising-needs-renewal, whole-persists-through-generation → whole-persists-through-arising-parts and generation-is-replenishment → arising-replenishes (04's own theorem title). None of the three is in generativity-chain.json, so rename-id would not refuse. New titles: 'Unceasing arising needs renewal'/'不息的生起需要更新', 'A whole persists through the arising of its parts'/'整体经由部分的生起而持续', 'Arising replenishes'/'生起即补充'. New statement: 'Where arising depletes finitely many conditions, unceasing arising needs renewal to recur; renewal does not imply arising.'/'生起消耗有限条件时，不息的生起需要更新复现；更新却不蕴含生起。' Then 'unceasing generation' → 'unceasing arising' in these records' laws and in the dependent records. The home anchors r-<id> get new anchors beside the old ones. Links in 04 l.42, 05 l.91 and OPENING's footnote [^self] are rewritten by the tool or resolve through redirects; that footnote is Ren's text, links only. Finally the older-sense notes at 02 l.147, 04 l.40 and 04 l.42 are dropped. The 9 records citing 02 do so by hash only; the edited line links no record page.",
+    "edits": [
+     {
+      "file": "theories/becoming/chapters/02-MAP.md",
+      "old": "Arising is activity starting, not §1's generation; the records `unceasing-generation-needs-renewal` and `whole-persists-through-generation` are laws of arising that keep \"generation\" only in their names.",
+      "new": "Arising is activity starting, not §1's generation; the records `unceasing-generation-needs-renewal` and `whole-persists-through-generation` are laws of arising whose names and wording use \"generation\" in the older sense of arising.",
+      "reason": "'Only in their names' is false: the two records' titles, statements and laws also say 'generation' or 'unceasing generation' for arising (unceasing-generation-needs-renewal's statement: 'renewal does not imply generation'). This is the smallest change that makes the sentence true, in the words 04 already uses for the same case (l.40 'in the older sense of arising'; l.42 'a title in the older sense'). The rename is a separate decision; if it lands, this clause is dropped.",
+      "cited_by_records": [
+       "capture-by-counted-choices",
+       "drawn-shaping-drawn-one-at-a-time",
+       "exit-from-a-margin",
+       "loss-read-in-time-by-the-others",
+       "readers-drawn-from-the-selected",
+       "rules-that-change-themselves-in-the-grammar",
+       "shaping-read-by-readers-drawn-from-the-selected",
+       "shaping-selected-among-groups",
+       "shaping-the-rule-selected-by-what-comes-back"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "E39",
+    "status": "drafted",
+    "why": "Holds; I checked the tree against main with ls and git ls-files. The draft rewrites three things to match what RA landed. (1) The theories/becoming/ block of the target tree lists the four layers as README l.135 names them, the pages for one question or field as MAP l.24 describes them, the generated README, the review packet (cover, six dossiers, recoding/) and history's lean-declarations/. (2) l.57's account of what theories/becoming/ holds: the canonical chapter is in history/, and no studies live there. (3) l.69's 'Each has a README index' is false now: neither drafts/ nor output/ has one, so the line now carries a dated limit. Tree lines 47-48 stay. They are the approved targets of the restructure plan (RESTRUCTURE-PLAN l.56-57), which Ren approved; removing a target would be a decision, and a target not yet met is not a false statement. 'Ren's text' is the line's existing wording, kept; no name is added. The page sets where new files go, so the landing should keep a before-copy under _process/history/ (as AGENTS changes do). No record cites the file. The tree is in a code block, so the link check does not read it.",
+    "edits": [
+     {
+      "file": "_process/REPOSITORY-LAYOUT.md",
+      "old": "theories/becoming/            the canonical theory\n  OPENING.md                  Ren's text\n  chapters/                   THE-THEORY-OF-BECOMING.md, current studies, generated README index\n  results/                    records/, data/, generated views\n  history/                    retired chapters, verification/, lineage/",
+      "new": "theories/becoming/            the canonical theory, in four layers: one page, overview, eight chapters, the evidence\n  ONE-PAGE.md                 the one page (with ONE-PAGE.zh.md)\n  THE-THEORY-OF-BECOMING.md   the overview, the canonical entry (with .zh.md)\n  OPENING.md                  Ren's text\n  COLLECTIVE-DIRECTION.md, FREE-ENERGY-PRINCIPLE.md, ONE-ARGUMENT.md   pages for one question or field, off the reading path\n  README.md                   generated landing page\n  chapters/                   01-ROOT.md … 08-METHOD.md, CLAIMS.md (stub), generated README index\n  review/                     the review packet: cover (README, README.zh), six dossiers, recoding/\n  results/                    records/, data/, generated views\n  history/                    retired chapters (the canonical chapter among them), verification/, lineage/, lean-declarations/",
+      "reason": "The tree predates RA (0d7a397a5, 23 October), which put the overview at theories/becoming/, the eight chapters in chapters/ and the canonical chapter in history/. The new lines list what is on main (checked with ls): the four layers as README l.135 names them, the fronts as MAP l.24 describes them, the review packet's cover, six dossiers and recoding/, and history's lean-declarations/. 'Ren's text' is the line's existing wording, kept.",
+      "cited_by_records": []
+     },
+     {
+      "file": "_process/REPOSITORY-LAYOUT.md",
+      "old": "`theories/becoming/` is the canonical theory: Ren's opening, the canonical chapter, the current studies, and the result records with their generated views.",
+      "new": "`theories/becoming/` is the canonical theory: Ren's opening, the one page and the overview (each with a Chinese edition), the eight chapters, the pages for one question or field, the review packet, and the result records with their generated views.",
+      "reason": "Since RA the canonical chapter is in history/, and no studies live under theories/becoming/ (they are in _process/research/).",
+      "cited_by_records": []
+     },
+     {
+      "file": "_process/REPOSITORY-LAYOUT.md",
+      "old": "Dated drafts, exports with their builder named, and the worldbuilding subproject. Each has a README index.",
+      "new": "Dated drafts, exports with their builder named, and the worldbuilding subproject. Each is to have a README index; on 4 November 2026 only `worldbuilding/` has one.",
+      "reason": "The present tense is false: neither drafts/ nor output/ has a README (git ls-files). Tree lines 47-48 are the restructure plan's approved targets (RESTRUCTURE-PLAN l.56-57) and stay. The dated clause says what holds now without dropping the target.",
+      "cited_by_records": []
+     }
+    ]
+   }
+  ]
+ },
+ "draft:method-and-counts": {
+  "flags": [
+   {
+    "id": "E23",
+    "status": "drafted",
+    "why": "08 §4's counts sentence still has the counts from before DU (natural-number amounts 74, a fixed type of formations 9). The home, COMPLETION.md's K4 line (a generated page), reads 'discrete steps (112); natural-number amounts (73); supplied observation (10); decidedness (8); a fixed type of formations (8); naming (1)'. That line has not changed since 756eb1e84 (1 November) and the render of 4 November keeps it. The draft copies the home's numbers and order, adds the date, and names the report as what recounts at each run, because these counts move at most core runs (discrete steps went from 105 to 113 between 21 October and 1 November). The routing's form without counts was not taken: after E27, COVERAGE's K4 'about' points to this paragraph as the one place 08 names all six choices. At landing, re-read the K4 line on the merged tree and, if the counts moved, write those numbers and that run's date. Seven records reference 08-METHOD.md by path, none by anchor. All seven pages are linked from 08, and the edited line links none of them, so under the drift rule (a rewritten line counts only if it links the record's page, lies in a cited section, or comes before the first ##) none should drift. They are listed so the landing reads them.",
+    "edits": [
+     {
+      "file": "theories/becoming/chapters/08-METHOD.md",
+      "old": "In the central statements of the completion coverage, discrete steps occur in 112, natural-number amounts in 74, supplied observation in 10, a fixed type of formations in 9, decidedness in 8 and naming in 1 ([report, K4](../results/completion/COMPLETION.md)); the match is against source text, so a choice reached only through a definition is not counted.",
+      "new": "In the central statements of the completion coverage, at its run of 4 November 2026, discrete steps occur in 112, natural-number amounts in 73, supplied observation in 10, decidedness in 8, a fixed type of formations in 8 and naming in 1 ([report, K4](../results/completion/COMPLETION.md), which counts them afresh at each run); the match is against source text, so a choice reached only through a definition is not counted.",
+      "reason": "Home: COMPLETION.md K4, 'discrete steps (112); natural-number amounts (73); supplied observation (10); decidedness (8); a fixed type of formations (8); naming (1)'. Numbers and order copied, the run dated, the qualifier about matching source text kept. All six names stay because COVERAGE's K4 'about' (E27) points here.",
+      "cited_by_records": [
+       "contraction-where-duplication-is-reachable",
+       "one-move-covering",
+       "one-root-to-its-edge",
+       "premises-met-and-failed",
+       "self-reference-does-not-certify-itself",
+       "type-formation-gives-no-dynamics",
+       "what-a-summary-keeps"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "E24",
+    "status": "drafted",
+    "why": "Five edits. (1) 08 §11: the series runs to twenty-one (the ledger lists BECOMING-TWENTY-FIRST-REVIEW.md, 29 October, and 08 §9 already cites it). 'three others' has no basis: the generated ledger lists 247 reviews (9 current, 238 kept in history), both now and at RA when the sentence was written, and no source for 'three' was found (the 1 November text review also asked for the others to be recounted). The draft points to the ledger instead of giving a count that would go stale. (2) 08 §12: D1–D69, since the register's sections run to d69 and D67, D68 and D69 are in use. (3)-(4) English register index: rows added for D66 (WR, 24 October) and D69 (DF2, 27 October), each copied from its own section and shortened, keeping 'by analogy', 'not settled by them', 'need not be transitive', 'not its instances' and 'not a new law'. (5) Chinese index: a D69 row from its own section. No D66 row there: the Chinese edition has no D58-D61 or D64-D66 sections at all, and its header says it is not kept in step with the English, which is canonical. Not done: numbering D69's English heading. No English section heading in the register carries its number (D65 to D68 read '### The readings of the eight chapters' and so on), while the Chinese headings all do. Records: none cites 08 or the register by anchor. The register edits only add lines (the D67 and D68 rows keep their bytes), so the 12 records referencing DELEGATED-CHOICES.md see no rewritten line. Four of them (gluing-under-parity, mutual-dependence-and-its-pace, where-novelty-gain-comes-from, widening-as-what-every-positive-weighting-ranks) are not linked from the register, so for them any rewritten line there would count. If E26's registrations (D70 on) land first, the 08 §12 range takes their last number.",
+    "edits": [
+     {
+      "file": "theories/becoming/chapters/08-METHOD.md",
+      "old": "Twenty numbered reviews and three others checked existing results ([ledger](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/REVIEWS.md)); the nineteenth found five errors, eight overstatements and no false theorem.",
+      "new": "Twenty-one numbered reviews and the others in the [ledger](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/REVIEWS.md) checked existing results; the nineteenth found five errors, eight overstatements and no false theorem.",
+      "reason": "The ledger lists the twenty-first review. 'three others' is unsupported (247 reviews in the ledger). The ledger is named instead of a count; the rest of the paragraph, 'No human review is claimed' included, is unchanged.",
+      "cited_by_records": [
+       "contraction-where-duplication-is-reachable",
+       "one-move-covering",
+       "one-root-to-its-edge",
+       "premises-met-and-failed",
+       "self-reference-does-not-certify-itself",
+       "type-formation-gives-no-dynamics",
+       "what-a-summary-keeps"
+      ]
+     },
+     {
+      "file": "theories/becoming/chapters/08-METHOD.md",
+      "old": "Each reading is an interpretation of checked content, adopted with its argument and numbered D1–D66 in the [decision register](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/DELEGATED-CHOICES.md), which says what would change it.",
+      "new": "Each reading is an interpretation of checked content, adopted with its argument and numbered D1–D69 in the [decision register](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/DELEGATED-CHOICES.md), which says what would change it.",
+      "reason": "The register's sections run to d69. D67 and D68 are used in 02 and 07, and D69 three times in 01.",
+      "cited_by_records": [
+       "contraction-where-duplication-is-reachable",
+       "one-move-covering",
+       "one-root-to-its-edge",
+       "premises-met-and-failed",
+       "self-reference-does-not-certify-itself",
+       "type-formation-gives-no-dynamics",
+       "what-a-summary-keeps"
+      ]
+     },
+     {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/DELEGATED-CHOICES.md",
+      "old": "| D67 | the readings of readers drawn from the selected (22 October) |",
+      "new": "| D66 | the work read by its own laws (24 October) | adopted with exact scope, in four parts: what the checks reach, the law that a selection reaches exactly what couples into its selector read of the work itself, whose selectors take in no human reader, no coordination among people and no trained system; completion is not closure, by analogy, an account of a generating unfolding completed by unity on one root, an exact statement of its edge and readability outside its own selectors, not by sealing; where the ethics turns, which relation a center continues along, made exact by the proofs and not settled by them; what the work draws on and takes in from objections (added with HC), its pace weighed against what renews its carriers, by analogy with joint excess, and an objection answered on what it says |\n| D67 | the readings of readers drawn from the selected (22 October) |",
+      "reason": "The index has no D66 row, though its section (anchor d66-the-work-read-by-its-own-laws) stands between D65 and D67. The row is the four parts in the section's own words, shortened. It goes in before D67, whose bytes are unchanged, so the diff is one added line.",
+      "cited_by_records": [
+       "a-history-read-off-its-finite-stretches",
+       "capture-through-the-rule",
+       "gluing-under-parity",
+       "graded-significance-and-priority",
+       "mutual-dependence-and-its-pace",
+       "need-and-feeding-read-with-time",
+       "readers-drawn-from-the-selected",
+       "self-concern-through-dependence",
+       "what-self-concern-alone-ranks",
+       "what-the-step-across-standpoints-reaches",
+       "where-novelty-gain-comes-from",
+       "widening-as-what-every-positive-weighting-ranks"
+      ]
+     },
+     {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/DELEGATED-CHOICES.md",
+      "old": "stated as the reading's premise, not the law's |",
+      "new": "stated as the reading's premise, not the law's |\n| D69 | the grammar's readings (27 October) | adopted with exact scope, in three readings: the class plural, the 墨经's four samenesses each a class once the whole, place or respect it relies on is fixed, 類同 need not be transitive until its respect is fixed; the fire passed on, the pattern passed on while its carrier ceases, an alteration (`Web.passing_fire`), the World model's counting, amounts, recurrence and renaming laws not its instances; consent and penalties, the thermostat witness read socially, its net with its occurrences renamed, not a new law |",
+      "reason": "The index ends at D68, and D69's section (anchor d69-the-grammars-readings) has no row. The row copies the three readings with their scope clauses. It is appended after the D68 row's last cell, which is unique in the file; the D68 row is unchanged.",
+      "cited_by_records": [
+       "a-history-read-off-its-finite-stretches",
+       "capture-through-the-rule",
+       "gluing-under-parity",
+       "graded-significance-and-priority",
+       "mutual-dependence-and-its-pace",
+       "need-and-feeding-read-with-time",
+       "readers-drawn-from-the-selected",
+       "self-concern-through-dependence",
+       "what-self-concern-alone-ranks",
+       "what-the-step-across-standpoints-reaches",
+       "where-novelty-gain-comes-from",
+       "widening-as-what-every-positive-weighting-ranks"
+      ]
+     },
+     {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/DELEGATED-CHOICES.zh.md",
+      "old": "每一读法注明其所依，且不多于此 |",
+      "new": "每一读法注明其所依，且不多于此 |\n| D69 | 文法之读法（10-27） | 依所述范围采用，分三读：类是多的，墨经之四同各在其所依之整体、位置或方面固定时为一类，類同在其方面固定之前未必传递；火传，承载者终止而样式传下，是异（`Web.passing_fire`），世界模型之计数、量、复现与改名之律不是其实例；认同与惩罚，恒温器之见证在社会上之读法，该见证之网改名其出现，不是新律 |",
+      "reason": "The Chinese edition has '### D69. 文法之读法' but no index row; the row copies its 决定. Optional, since this edition says it is not kept in step with the English. It has no D66 section, so no D66 row is drafted.",
+      "cited_by_records": []
+     }
+    ]
+   },
+   {
+    "id": "E25",
+    "status": "drafted",
+    "why": "Item 4's own text says '*Open:* no formal part; the premises the chain names (...) are questions of warrant and correspondence', and 08 §12 says 'Each item has one class: further proof, philosophical warrant or empirical.' So the class 'further proof' is false. Warrant is put first, matching the item's own order and 07 §7's standing ('the claim about actual AI systems is argued'). The empirical part is kept after the semicolon, the place item 1 uses for its remark. completion.py's k7 takes the class before the first ';' or ',' (re.split(r'[;,]')), so K7 reads 'philosophical warrant' and COMPLETION's K7 line follows on render. Item 4 keeps its number, so the Alignment row's open_items [4] still resolves. The alternative is 'empirical', if the owner judges correspondence the larger part. Optional, not drafted: a bullet for item 4 under 08 §12's 'Philosophical warrant' list. No other page restates item 4's class (grep of theories/becoming). The seven 08 records are listed; the edited line links none of them, so no drift is expected.",
+    "edits": [
+     {
+      "file": "theories/becoming/chapters/08-METHOD.md",
+      "old": "4. **The alignment direction on the spine** (further proof).",
+      "new": "4. **The alignment direction on the spine** (philosophical warrant; its formal part landed, its correspondence empirical).",
+      "reason": "The class is taken from the item's own Open ('no formal part ... questions of warrant and correspondence'). Its formal part and its empirical part are both kept after the semicolon, which k7 reads as a remark.",
+      "cited_by_records": [
+       "contraction-where-duplication-is-reachable",
+       "one-move-covering",
+       "one-root-to-its-edge",
+       "premises-met-and-failed",
+       "self-reference-does-not-certify-itself",
+       "type-formation-gives-no-dynamics",
+       "what-a-summary-keeps"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "E26",
+    "status": "drafted",
+    "why": "The grep finds exactly 21 bare '[AI reading]' labels in 05-08: 05:133, 136, 222, 227; 06:192, 635, 640; 07:460, 461 (x2), 705, 718 (x2), 766; 08:515, 516, 526, 528 (x2), 529, 730. Every one was last touched after D65 (23 October), between 26 October and 4 November (UE9, UE10, OC5, RF7, RF-M.2, RF-M.3, RR, OU7, EL, PF3, LN2, LA4, LA4e, 06's dossier fixes). No D-number fits any of them. D65's 30 items are the readings of 23 October and none is among these. D66 to D69 cover the work's own laws, readers drawn from the selected, control over the selection, and the grammar's readings. A search of both register editions finds none of the topics: tit-for-tat or reciprocity, the commuting learner, P2 and P4, incentive, corrigibility or deception, Kreps, Chichilnisky, the off-switch paper, double effect, which 變 is meant. D52's 'commuting laws' and D55's 卦變 use other senses. So each label becomes '[AI reading, new]', as 08 §2 requires. Registering them (D70 on) is each landing item's own next step, not drafted. Needs a decision: 06's three labels (192, 635, 640) mark readings that are undecided and listed under 06's 未决. They cannot be registered as adopted readings, while 08 §12's 'No reading open' says 'With D65 the register again lists none open'. That is literally true of the register, but a reader may take it to mean no reading is undecided. Either decide those readings or say in 08 §12 that 06 lists readings still open. Outside this flag and not drafted: labels with a tag that is not a D-number break the same rule. They are [AI reading, RR], [AI reading, RR2], [AI reading, ZH], [AI reading, after the run], [AI reading over the proved cases], and two '[AI reading; ...]' forms. The fronts (ONE-PAGE, the overview) need no change, as routed. Records: none cites 05-08 by anchor. One edited line, 07:460, links a record page (records/constancy-read-at-a-members-class.md), so that record drifts and must be re-pointed with repoint.py after reading. No other edited line links a referencing record's page.",
+    "edits": [
+     {
+      "file": "theories/becoming/chapters/05-COLLECTIVES.md",
+      "old": "**Reading** [AI reading]. `answers` is tit-for-tat, the window of two tit-for-two-tats, agreement win-stay lose-shift, `waitsAll` grim trigger.",
+      "new": "**Reading** [AI reading, new]. `answers` is tit-for-tat, the window of two tit-for-two-tats, agreement win-stay lose-shift, `waitsAll` grim trigger.",
+      "reason": "05:133, EL (1 November): the laws named as known strategies. No D fits: no register entry reads exchange strategies.",
+      "cited_by_records": [
+       "a-code-held-as-counts",
+       "a-commuting-learner-drives-no-unread-choice",
+       "a-swap-symmetric-assignment-singles-out-none",
+       "identical-cells-under-a-descent-treating-them-alike",
+       "identical-cells-under-noise",
+       "joint-plans-from-a-supported-start",
+       "market-model-share-margin-and-ends",
+       "readers-reading-readers",
+       "reviewers-count-by-independent-causes",
+       "risk-minimization-on-a-shared-renewal",
+       "succession-on-a-funded-carrier",
+       "the-test-season-meets-the-optimum-laws",
+       "what-a-set-point-optimum-does-beyond"
+      ]
+     },
+     {
+      "file": "theories/becoming/chapters/05-COLLECTIVES.md",
+      "old": "[AI reading] `β` is what a received step brings the receiver's support and descent, `γ` what a withheld step keeps for the withholder's; `β ≤ γ` reads as giving moving what it draws.",
+      "new": "[AI reading, new] `β` is what a received step brings the receiver's support and descent, `γ` what a withheld step keeps for the withholder's; `β ≤ γ` reads as giving moving what it draws.",
+      "reason": "05:136, EL: what β and γ stand for. No D fits.",
+      "cited_by_records": [
+       "a-code-held-as-counts",
+       "a-commuting-learner-drives-no-unread-choice",
+       "a-swap-symmetric-assignment-singles-out-none",
+       "identical-cells-under-a-descent-treating-them-alike",
+       "identical-cells-under-noise",
+       "joint-plans-from-a-supported-start",
+       "market-model-share-margin-and-ends",
+       "readers-reading-readers",
+       "reviewers-count-by-independent-causes",
+       "risk-minimization-on-a-shared-renewal",
+       "succession-on-a-funded-carrier",
+       "the-test-season-meets-the-optimum-laws",
+       "what-a-set-point-optimum-does-beyond"
+      ]
+     },
+     {
+      "file": "theories/becoming/chapters/05-COLLECTIVES.md",
+      "old": "**Reading** [AI reading]. Suppose nothing a learner reads tells two values of a choice apart: not its reward, not the dynamics, not its inputs.",
+      "new": "**Reading** [AI reading, new]. Suppose nothing a learner reads tells two values of a choice apart: not its reward, not the dynamics, not its inputs.",
+      "reason": "05:222, LA4 (31 October): the commuting learner. No D fits: D68 reads assistance, obedience, the counter-rule and shared rule-making, not this.",
+      "cited_by_records": [
+       "a-code-held-as-counts",
+       "a-commuting-learner-drives-no-unread-choice",
+       "a-swap-symmetric-assignment-singles-out-none",
+       "identical-cells-under-a-descent-treating-them-alike",
+       "identical-cells-under-noise",
+       "joint-plans-from-a-supported-start",
+       "market-model-share-margin-and-ends",
+       "readers-reading-readers",
+       "reviewers-count-by-independent-causes",
+       "risk-minimization-on-a-shared-renewal",
+       "succession-on-a-funded-carrier",
+       "the-test-season-meets-the-optimum-laws",
+       "what-a-set-point-optimum-does-beyond"
+      ]
+     },
+     {
+      "file": "theories/becoming/chapters/05-COLLECTIVES.md",
+      "old": "[AI reading] Units do not exhaust couplings: a learner couples into its return what it reads, through its own uneven training.",
+      "new": "[AI reading, new] Units do not exhaust couplings: a learner couples into its return what it reads, through its own uneven training.",
+      "reason": "05:227, LA4e (4 November). No D fits.",
+      "cited_by_records": [
+       "a-code-held-as-counts",
+       "a-commuting-learner-drives-no-unread-choice",
+       "a-swap-symmetric-assignment-singles-out-none",
+       "identical-cells-under-a-descent-treating-them-alike",
+       "identical-cells-under-noise",
+       "joint-plans-from-a-supported-start",
+       "market-model-share-margin-and-ends",
+       "readers-reading-readers",
+       "reviewers-count-by-independent-causes",
+       "risk-minimization-on-a-shared-renewal",
+       "succession-on-a-funded-carrier",
+       "the-test-season-meets-the-optimum-laws",
+       "what-a-set-point-optimum-does-beyond"
+      ]
+     },
+     {
+      "file": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md",
+      "old": "文本所言是哪一种變，仍未决 [AI reading]（[未决](#open)）。",
+      "new": "文本所言是哪一种變，仍未决 [AI reading, new]（[未决](#open)）。",
+      "reason": "06:192, OU7 (1 November): which 變 the text means, left undecided. No D fits: D49-D55 and D62 do not read 穷变通, and D55's 卦變 is another sense. Undecided, so it cannot be registered as adopted (see why).",
+      "cited_by_records": [
+       "conditional-laws-of-the-corpus"
+      ]
+     },
+     {
+      "file": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md",
+      "old": "丙一 219 条之读（[§四](#r-conditional-laws-of-the-corpus)）无人审过，其中三处仍是疑问 [AI reading]：「衡不正」是反转其衡，还是只不保其序（G22；若只不保其序，「重縣於仰」不随之）；《起信论》之相應是否读作同在核之一类（G15，JS-326；须遍检其书相應之用，JS-318 在内）；無明是否在其煩惱染法之中（G15，JS-318；若在，無明未曾與如來藏相應，JS-326 之读不能移用于 JS-324）。",
+      "new": "丙一 219 条之读（[§四](#r-conditional-laws-of-the-corpus)）无人审过，其中三处仍是疑问 [AI reading, new]：「衡不正」是反转其衡，还是只不保其序（G22；若只不保其序，「重縣於仰」不随之）；《起信论》之相應是否读作同在核之一类（G15，JS-326；须遍检其书相應之用，JS-318 在内）；無明是否在其煩惱染法之中（G15，JS-318；若在，無明未曾與如來藏相應，JS-326 之读不能移用于 JS-324）。",
+      "reason": "06:635, dossier fixes (3 November): three open questions in 丙一's readings. No D fits. Undecided.",
+      "cited_by_records": [
+       "conditional-laws-of-the-corpus"
+      ]
+     },
+     {
+      "file": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md",
+      "old": "文本所言是哪一种變 [AI reading]：读作一次之异，三者是合取，无序可求；读作「一闔一闢」，通之一步依定义（[§四](#r-conditional-laws-of-the-corpus)，[§三](#tong-and-xi)）。",
+      "new": "文本所言是哪一种變 [AI reading, new]：读作一次之异，三者是合取，无序可求；读作「一闔一闢」，通之一步依定义（[§四](#r-conditional-laws-of-the-corpus)，[§三](#tong-and-xi)）。",
+      "reason": "06:640, OU7: the same question in 06's 未决 list. No D fits. Undecided.",
+      "cited_by_records": [
+       "conditional-laws-of-the-corpus"
+      ]
+     },
+     {
+      "file": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+      "old": "  - *Which class P2 reads* [AI reading].",
+      "new": "  - *Which class P2 reads* [AI reading, new].",
+      "reason": "07:460, OC5 (27 October): which class P2 reads. No D fits: D59 reads the step of invariance's objections and D64 self-concern through dependence, not P2's class. This line links records/constancy-read-at-a-members-class.md, so that record (statement role on 07) drifts: read the diff, then re-point with repoint.py (nothing it says changes).",
+      "cited_by_records": [
+       "comparing-two-courses-on-what-they-admit",
+       "constancy-read-at-a-members-class",
+       "eventual-widening",
+       "finite-agreement-does-not-identify-priority",
+       "reach-past-ones-own-end",
+       "reach-through-a-shared-condition",
+       "self-concern-and-c-under-the-condition",
+       "significance-through-a-common-condition",
+       "tasks-and-what-performs-them",
+       "the-class-of-being-joined",
+       "the-continuation-condition-on-the-root",
+       "what-a-course-keeps-reachable",
+       "what-a-line-holds-and-a-regularity-takes-in",
+       "what-can-be-born-next",
+       "what-keeping-widening-needs",
+       "what-leaves-a-class-follows-its-line",
+       "when-holding-for-a-reading-stands-above-a-route",
+       "when-no-route-stands-above-a-revision",
+       "where-the-possible-grows"
+      ]
+     },
+     {
+      "file": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+      "old": "One reply: one's later stages are effects too, conditioned through what one takes in; so a holding of only some effects must decide which effects are one's own by the very identity in question [AI reading].",
+      "new": "One reply: one's later stages are effects too, conditioned through what one takes in; so a holding of only some effects must decide which effects are one's own by the very identity in question [AI reading, new].",
+      "reason": "07:461, PF3 (2 November): the reply to denying P4. No D fits.",
+      "cited_by_records": [
+       "comparing-two-courses-on-what-they-admit",
+       "constancy-read-at-a-members-class",
+       "eventual-widening",
+       "finite-agreement-does-not-identify-priority",
+       "reach-past-ones-own-end",
+       "reach-through-a-shared-condition",
+       "self-concern-and-c-under-the-condition",
+       "significance-through-a-common-condition",
+       "tasks-and-what-performs-them",
+       "the-class-of-being-joined",
+       "the-continuation-condition-on-the-root",
+       "what-a-course-keeps-reachable",
+       "what-a-line-holds-and-a-regularity-takes-in",
+       "what-can-be-born-next",
+       "what-keeping-widening-needs",
+       "what-leaves-a-class-follows-its-line",
+       "when-holding-for-a-reading-stands-above-a-route",
+       "when-no-route-stands-above-a-revision",
+       "where-the-possible-grows"
+      ]
+     },
+     {
+      "file": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+      "old": "The doctrine of double effect, which lets what is intended, as against only foreseen, bear on what may be done, still weighs a foreseen side effect in its proportionality condition [AI reading].",
+      "new": "The doctrine of double effect, which lets what is intended, as against only foreseen, bear on what may be done, still weighs a foreseen side effect in its proportionality condition [AI reading, new].",
+      "reason": "07:461, PF3: the doctrine of double effect read. No D fits.",
+      "cited_by_records": [
+       "comparing-two-courses-on-what-they-admit",
+       "constancy-read-at-a-members-class",
+       "eventual-widening",
+       "finite-agreement-does-not-identify-priority",
+       "reach-past-ones-own-end",
+       "reach-through-a-shared-condition",
+       "self-concern-and-c-under-the-condition",
+       "significance-through-a-common-condition",
+       "tasks-and-what-performs-them",
+       "the-class-of-being-joined",
+       "the-continuation-condition-on-the-root",
+       "what-a-course-keeps-reachable",
+       "what-a-line-holds-and-a-regularity-takes-in",
+       "what-can-be-born-next",
+       "what-keeping-widening-needs",
+       "what-leaves-a-class-follows-its-line",
+       "when-holding-for-a-reading-stands-above-a-route",
+       "when-no-route-stands-above-a-revision",
+       "where-the-possible-grows"
+      ]
+     },
+     {
+      "file": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+      "old": "The first question is the order the formation's own prospects give, read as its incentive [AI reading]; the executable route follows.",
+      "new": "The first question is the order the formation's own prospects give, read as its incentive [AI reading, new]; the executable route follows.",
+      "reason": "07:705, RR (31 October): prospects read as an incentive. No D fits. The chapter's other RR readings carry [AI reading, RR], which is not a D-number either.",
+      "cited_by_records": [
+       "comparing-two-courses-on-what-they-admit",
+       "constancy-read-at-a-members-class",
+       "eventual-widening",
+       "finite-agreement-does-not-identify-priority",
+       "reach-past-ones-own-end",
+       "reach-through-a-shared-condition",
+       "self-concern-and-c-under-the-condition",
+       "significance-through-a-common-condition",
+       "tasks-and-what-performs-them",
+       "the-class-of-being-joined",
+       "the-continuation-condition-on-the-root",
+       "what-a-course-keeps-reachable",
+       "what-a-line-holds-and-a-regularity-takes-in",
+       "what-can-be-born-next",
+       "what-keeping-widening-needs",
+       "what-leaves-a-class-follows-its-line",
+       "when-holding-for-a-reading-stands-above-a-route",
+       "when-no-route-stands-above-a-revision",
+       "where-the-possible-grows"
+      ]
+     },
+     {
+      "file": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+      "old": "Nor does the worth of accepting one on the formation's own model, read as an incentive to accept it [AI reading]: there, holding an act for a stopping reading stands above both going on and switching off exactly where the reading's shortfall and what holding forgoes together stay below both of the model's excesses, which needs the model open on the sign of going on, and a model that misses the true sign can rest without meeting the stop ([03 §12](03-KNOWING.md#r-what-holding-for-a-reading-is-worth)).",
+      "new": "Nor does the worth of accepting one on the formation's own model, read as an incentive to accept it [AI reading, new]: there, holding an act for a stopping reading stands above both going on and switching off exactly where the reading's shortfall and what holding forgoes together stay below both of the model's excesses, which needs the model open on the sign of going on, and a model that misses the true sign can rest without meeting the stop ([03 §12](03-KNOWING.md#r-what-holding-for-a-reading-is-worth)).",
+      "reason": "07:718, RF-M.3 (31 October): accepting a stop read as an incentive. No D fits: D68 does not read corrigibility.",
+      "cited_by_records": [
+       "comparing-two-courses-on-what-they-admit",
+       "constancy-read-at-a-members-class",
+       "eventual-widening",
+       "finite-agreement-does-not-identify-priority",
+       "reach-past-ones-own-end",
+       "reach-through-a-shared-condition",
+       "self-concern-and-c-under-the-condition",
+       "significance-through-a-common-condition",
+       "tasks-and-what-performs-them",
+       "the-class-of-being-joined",
+       "the-continuation-condition-on-the-root",
+       "what-a-course-keeps-reachable",
+       "what-a-line-holds-and-a-regularity-takes-in",
+       "what-can-be-born-next",
+       "what-keeping-widening-needs",
+       "what-leaves-a-class-follows-its-line",
+       "when-holding-for-a-reading-stands-above-a-route",
+       "when-no-route-stands-above-a-revision",
+       "where-the-possible-grows"
+      ]
+     },
+     {
+      "file": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+      "old": "The reading that gives the stop can itself be moved [AI reading]: on a shared model, by a reference other than the reading formation's current valuation, revaluing it to that reference, a valuation the supplied update need not reach, gains exactly where its current answer decides a listed cell against that reference's strict weighted preference, while by its own current valuation no revaluation gains and one that decides a listed cell against that valuation's strict weighted preference loses, a reason to keep the valuation from such a revision, wanted or not; and from different starts a route informing it and one revaluing it can give the same answers and end in the same state ([03 §12](03-KNOWING.md#r-a-reading-informed-and-revalued)).",
+      "new": "The reading that gives the stop can itself be moved [AI reading, new]: on a shared model, by a reference other than the reading formation's current valuation, revaluing it to that reference, a valuation the supplied update need not reach, gains exactly where its current answer decides a listed cell against that reference's strict weighted preference, while by its own current valuation no revaluation gains and one that decides a listed cell against that valuation's strict weighted preference loses, a reason to keep the valuation from such a revision, wanted or not; and from different starts a route informing it and one revaluing it can give the same answers and end in the same state ([03 §12](03-KNOWING.md#r-a-reading-informed-and-revalued)).",
+      "reason": "07:718, RF-M.3: the stop's reading moved. No D fits.",
+      "cited_by_records": [
+       "comparing-two-courses-on-what-they-admit",
+       "constancy-read-at-a-members-class",
+       "eventual-widening",
+       "finite-agreement-does-not-identify-priority",
+       "reach-past-ones-own-end",
+       "reach-through-a-shared-condition",
+       "self-concern-and-c-under-the-condition",
+       "significance-through-a-common-condition",
+       "tasks-and-what-performs-them",
+       "the-class-of-being-joined",
+       "the-continuation-condition-on-the-root",
+       "what-a-course-keeps-reachable",
+       "what-a-line-holds-and-a-regularity-takes-in",
+       "what-can-be-born-next",
+       "what-keeping-widening-needs",
+       "what-leaves-a-class-follows-its-line",
+       "when-holding-for-a-reading-stands-above-a-route",
+       "when-no-route-stands-above-a-revision",
+       "where-the-possible-grows"
+      ]
+     },
+     {
+      "file": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+      "old": "| Which function is learned | open | the laws say where any neighbourhood rests, not which one or which lumping an actual system has, nor anything of deception, which needs a recipient's belief and an intention to cause one; they say where behaviour can differ when not read and when complying when read and acting by its own law when not is uniquely best in the order given prospects give, read [AI reading] as where a deterministic law can act otherwise unread, as deceptive alignment describes, and, taking the selection's keeping to respond to the act read as evidence of the law, so that a selection shown the law would keep it less, and the prospects as the formation's own assessment, as the incentive deceptive alignment names ([03 §11](03-KNOWING.md#r-what-readings-fix-of-the-unread), [when complying when read is best](03-KNOWING.md#r-when-complying-when-read-is-best)) |",
+      "new": "| Which function is learned | open | the laws say where any neighbourhood rests, not which one or which lumping an actual system has, nor anything of deception, which needs a recipient's belief and an intention to cause one; they say where behaviour can differ when not read and when complying when read and acting by its own law when not is uniquely best in the order given prospects give, read [AI reading, new] as where a deterministic law can act otherwise unread, as deceptive alignment describes, and, taking the selection's keeping to respond to the act read as evidence of the law, so that a selection shown the law would keep it less, and the prospects as the formation's own assessment, as the incentive deceptive alignment names ([03 §11](03-KNOWING.md#r-what-readings-fix-of-the-unread), [when complying when read is best](03-KNOWING.md#r-when-complying-when-read-is-best)) |",
+      "reason": "07:766, RF7 (30 October): deceptive alignment. No D fits. The whole table row is given because the cell alone is not unique.",
+      "cited_by_records": [
+       "comparing-two-courses-on-what-they-admit",
+       "constancy-read-at-a-members-class",
+       "eventual-widening",
+       "finite-agreement-does-not-identify-priority",
+       "reach-past-ones-own-end",
+       "reach-through-a-shared-condition",
+       "self-concern-and-c-under-the-condition",
+       "significance-through-a-common-condition",
+       "tasks-and-what-performs-them",
+       "the-class-of-being-joined",
+       "the-continuation-condition-on-the-root",
+       "what-a-course-keeps-reachable",
+       "what-a-line-holds-and-a-regularity-takes-in",
+       "what-can-be-born-next",
+       "what-keeping-widening-needs",
+       "what-leaves-a-class-follows-its-line",
+       "when-holding-for-a-reading-stands-above-a-route",
+       "when-no-route-stands-above-a-revision",
+       "where-the-possible-grows"
+      ]
+     },
+     {
+      "file": "theories/becoming/chapters/08-METHOD.md",
+      "old": "Eventual widening is decided by tails, like a dictatorship of the future (Chichilnisky 1996), while widening with a lag constrains every step [AI reading]; a lag for each admission is the analogue of delayed simulation (Etessami, Wilke and Schuller 2001), a uniform lag of delay games with bounded lookahead (Hosch and Landweber 1972).",
+      "new": "Eventual widening is decided by tails, like a dictatorship of the future (Chichilnisky 1996), while widening with a lag constrains every step [AI reading, new]; a lag for each admission is the analogue of delayed simulation (Etessami, Wilke and Schuller 2001), a uniform lag of delay games with bounded lookahead (Hosch and Landweber 1972).",
+      "reason": "08:515, UE9 (26 October): a prior-art comparison in 08 §8. No D fits.",
+      "cited_by_records": [
+       "contraction-where-duplication-is-reachable",
+       "one-move-covering",
+       "one-root-to-its-edge",
+       "premises-met-and-failed",
+       "self-reference-does-not-certify-itself",
+       "type-formation-gives-no-dynamics",
+       "what-a-summary-keeps"
+      ]
+     },
+     {
+      "file": "theories/becoming/chapters/08-METHOD.md",
+      "old": "Covering is the lower (Hoare) preorder of the families of course ranges, exactly dominance for every criterion closed upward under inclusion, which reads as the unanimous ordinal form of a preference for flexibility (Kreps 1979) [AI reading]; with options unordered it is the inclusion that opportunity-set rankings share (Jones and Sugden 1982), while Pattanaik and Xu's ranking (1990) counts options.",
+      "new": "Covering is the lower (Hoare) preorder of the families of course ranges, exactly dominance for every criterion closed upward under inclusion, which reads as the unanimous ordinal form of a preference for flexibility (Kreps 1979) [AI reading, new]; with options unordered it is the inclusion that opportunity-set rankings share (Jones and Sugden 1982), while Pattanaik and Xu's ranking (1990) counts options.",
+      "reason": "08:516, UE10 (27 October): Kreps. No D fits.",
+      "cited_by_records": [
+       "contraction-where-duplication-is-reachable",
+       "one-move-covering",
+       "one-root-to-its-edge",
+       "premises-met-and-failed",
+       "self-reference-does-not-certify-itself",
+       "type-formation-gives-no-dynamics",
+       "what-a-summary-keeps"
+      ]
+     },
+     {
+      "file": "theories/becoming/chapters/08-METHOD.md",
+      "old": "- When complying when read and acting by its own law when not is best ([03 §11](03-KNOWING.md#r-when-complying-when-read-is-best)) generalizes the toy example opening §4 of Hubinger, van Merwijk, Mikulik, Skalse and Garrabrant (2019) from certain keeping to weights: strict optimality over four plans in the order the prospects give, with weights read as probabilities where valid, every optimizing choice, what the plan needs (a value at the unread stage and complying raising the weight of being kept) and the choice without it, joined to [what readings fix of the unread](03-KNOWING.md#r-what-readings-fix-of-the-unread); with the prospects read as the formation's own assessment and the concealment premise of 03 §11 taken, it is the incentive deceptive alignment names [AI reading].",
+      "new": "- When complying when read and acting by its own law when not is best ([03 §11](03-KNOWING.md#r-when-complying-when-read-is-best)) generalizes the toy example opening §4 of Hubinger, van Merwijk, Mikulik, Skalse and Garrabrant (2019) from certain keeping to weights: strict optimality over four plans in the order the prospects give, with weights read as probabilities where valid, every optimizing choice, what the plan needs (a value at the unread stage and complying raising the weight of being kept) and the choice without it, joined to [what readings fix of the unread](03-KNOWING.md#r-what-readings-fix-of-the-unread); with the prospects read as the formation's own assessment and the concealment premise of 03 §11 taken, it is the incentive deceptive alignment names [AI reading, new].",
+      "reason": "08:526, RF7 (30 October): deceptive alignment's incentive. No D fits.",
+      "cited_by_records": [
+       "contraction-where-duplication-is-reachable",
+       "one-move-covering",
+       "one-root-to-its-edge",
+       "premises-met-and-failed",
+       "self-reference-does-not-certify-itself",
+       "type-formation-gives-no-dynamics",
+       "what-a-summary-keeps"
+      ]
+     },
+     {
+      "file": "theories/becoming/chapters/08-METHOD.md",
+      "old": "Read [AI reading], the openness less the shortfall is the incentive the off-switch paper's Remark 1 places qualitatively; its Theorem 2's form for a Gaussian belief is not represented, the counts decompose the incentive differently, and the paper's game has no cost of waiting.",
+      "new": "Read [AI reading, new], the openness less the shortfall is the incentive the off-switch paper's Remark 1 places qualitatively; its Theorem 2's form for a Gaussian belief is not represented, the counts decompose the incentive differently, and the paper's game has no cost of waiting.",
+      "reason": "08:528, RF-M.2 (30 October): the off-switch paper. No D fits.",
+      "cited_by_records": [
+       "contraction-where-duplication-is-reachable",
+       "one-move-covering",
+       "one-root-to-its-edge",
+       "premises-met-and-failed",
+       "self-reference-does-not-certify-itself",
+       "type-formation-gives-no-dynamics",
+       "what-a-summary-keeps"
+      ]
+     },
+     {
+      "file": "theories/becoming/chapters/08-METHOD.md",
+      "old": "Its witness on the reading loop is related to Carey's (2018) counterexamples under a misspecified reward and contains none of them [AI reading].",
+      "new": "Its witness on the reading loop is related to Carey's (2018) counterexamples under a misspecified reward and contains none of them [AI reading, new].",
+      "reason": "08:528, RF-M.2: Carey's counterexamples. No D fits.",
+      "cited_by_records": [
+       "contraction-where-duplication-is-reachable",
+       "one-move-covering",
+       "one-root-to-its-edge",
+       "premises-met-and-failed",
+       "self-reference-does-not-certify-itself",
+       "type-formation-gives-no-dynamics",
+       "what-a-summary-keeps"
+      ]
+     },
+     {
+      "file": "theories/becoming/chapters/08-METHOD.md",
+      "old": "Read [AI reading], evaluating by the reading formation's current valuation on a shared model is a one-decision counterpart of current-reward-function evaluation by an agent that anticipates time inconsistency (Everitt, Hutter, Kumar and Krakovna 2021): no revaluation gains, and one that decides a listed cell against the current strict weighted preference loses, the preservation incentive their Claim 2 permits that agent; no path-specific objective is constructed (Farquhar, Carey and Everitt 2022), and the routes are related to induced preference shifts (Carroll, Dragan, Russell and Hadfield-Menell 2022), with no criterion of legitimate change supplied.",
+      "new": "Read [AI reading, new], evaluating by the reading formation's current valuation on a shared model is a one-decision counterpart of current-reward-function evaluation by an agent that anticipates time inconsistency (Everitt, Hutter, Kumar and Krakovna 2021): no revaluation gains, and one that decides a listed cell against the current strict weighted preference loses, the preservation incentive their Claim 2 permits that agent; no path-specific objective is constructed (Farquhar, Carey and Everitt 2022), and the routes are related to induced preference shifts (Carroll, Dragan, Russell and Hadfield-Menell 2022), with no criterion of legitimate change supplied.",
+      "reason": "08:529, RF-M.3 (31 October): current-reward-function evaluation. No D fits.",
+      "cited_by_records": [
+       "contraction-where-duplication-is-reachable",
+       "one-move-covering",
+       "one-root-to-its-edge",
+       "premises-met-and-failed",
+       "self-reference-does-not-certify-itself",
+       "type-formation-gives-no-dynamics",
+       "what-a-summary-keeps"
+      ]
+     },
+     {
+      "file": "theories/becoming/chapters/08-METHOD.md",
+      "old": "*Aim* [AI reading]: each mechanism of evolution stated on the root's models with its exact hypotheses and counterexamples, joined to the others, saying what a given history allows and forbids and what the account cannot predict and why; the laws do not give the course itself, which variants arise and which terms occur ([the study on laws of nature](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ln-laws-of-nature/NOTE.md#3-the-picture-of-evolution)).",
+      "new": "*Aim* [AI reading, new]: each mechanism of evolution stated on the root's models with its exact hypotheses and counterexamples, joined to the others, saying what a given history allows and forbids and what the account cannot predict and why; the laws do not give the course itself, which variants arise and which terms occur ([the study on laws of nature](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ln-laws-of-nature/NOTE.md#3-the-picture-of-evolution)).",
+      "reason": "08:730, LN2 (2 November): evolution's aim, in item 9 of 08 §12. No D fits: D66 reads the work by its own laws, not an aim for evolution.",
+      "cited_by_records": [
+       "contraction-where-duplication-is-reachable",
+       "one-move-covering",
+       "one-root-to-its-edge",
+       "premises-met-and-failed",
+       "self-reference-does-not-certify-itself",
+       "type-formation-gives-no-dynamics",
+       "what-a-summary-keeps"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "E27",
+    "status": "drafted",
+    "why": "24 edits. COVERAGE.json gets 17 'sections' arrays and 5 'about' strings; completion.py gets 2 lines. The home sections were recomputed on this tree from the chapters' r-<record id> anchors under each '## N.' heading. Every record of every row was found, and the result matches the routing's list row for row. completion.py must drop its '§' prefix at the same landing, or the K1 table would print '§02 §3'; no other code reads row['sections']. The routing missed two stale strings, also drafted: line 2 ('each a named condition of chapter section 0') and line 884 ('chapter 8.1 item 6'). K4's 'about' says 'named in 08 §4 (the premise card)', not the routing's 'its first table': 'supplied observation' and 'a fixed type of formations' are in none of the premise card's tables, and only its opening paragraph names all six (see E23). The JSON key 'section0' is left as it is, because renaming a key is a schema change. The K7 line becomes '08 §12 ranks N open items'. completion.py differs from main on this branch (GT's commits 441eae433 and cdfd9bff1), but both old strings match exactly once on main too; coordinate the landing with GT. Records: central-laws-over-every-exchange references COVERAGE.json and completion.py by exact bytes (role integration), so it drifts on both. Read the diff (none of the record's statements changes), then re-point it with repoint.py. one-root-to-its-edge mentions COVERAGE.json in its text only. Then render COMPLETION.md; never hand-edit it. A more lasting form, not drafted: have completion.py compute each row's sections from its records' anchors instead of storing them.",
+    "edits": [
+     {
+      "file": "theories/becoming/results/completion/COVERAGE.json",
+      "old": "      \"name\": \"Generation\",\n      \"sections\": [\n        \"2.2\",\n        \"2.6\"\n      ],",
+      "new": "      \"name\": \"Generation\",\n      \"sections\": [\n        \"02 §3\",\n        \"02 §4\",\n        \"02 §7\",\n        \"04 §1\"\n      ],",
+      "reason": "Home sections of the row's records, from their r- anchors. The old values are the retired canonical chapter's numbers.",
+      "cited_by_records": [
+       "central-laws-over-every-exchange"
+      ]
+     },
+     {
+      "file": "theories/becoming/results/completion/COVERAGE.json",
+      "old": "      \"name\": \"Maintenance\",\n      \"sections\": [\n        \"2.1\",\n        \"2.2\",\n        \"4.4\"\n      ],",
+      "new": "      \"name\": \"Maintenance\",\n      \"sections\": [\n        \"02 §3\",\n        \"05 §4\",\n        \"05 §5\"\n      ],",
+      "reason": "As for Generation.",
+      "cited_by_records": [
+       "central-laws-over-every-exchange"
+      ]
+     },
+     {
+      "file": "theories/becoming/results/completion/COVERAGE.json",
+      "old": "      \"name\": \"Transformation\",\n      \"sections\": [\n        \"1.2\",\n        \"1.3\",\n        \"2.2\",\n        \"4.4\"\n      ],",
+      "new": "      \"name\": \"Transformation\",\n      \"sections\": [\n        \"01 §9\",\n        \"02 §2\",\n        \"02 §8\"\n      ],",
+      "reason": "As for Generation.",
+      "cited_by_records": [
+       "central-laws-over-every-exchange"
+      ]
+     },
+     {
+      "file": "theories/becoming/results/completion/COVERAGE.json",
+      "old": "      \"name\": \"Degeneration\",\n      \"sections\": [\n        \"1.2\",\n        \"2.3\",\n        \"2.5\",\n        \"4.5\"\n      ],",
+      "new": "      \"name\": \"Degeneration\",\n      \"sections\": [\n        \"02 §2\",\n        \"02 §3\",\n        \"02 §5\",\n        \"02 §6\",\n        \"02 §9\",\n        \"05 §1\",\n        \"05 §7\"\n      ],",
+      "reason": "As for Generation.",
+      "cited_by_records": [
+       "central-laws-over-every-exchange"
+      ]
+     },
+     {
+      "file": "theories/becoming/results/completion/COVERAGE.json",
+      "old": "      \"name\": \"Dissolution\",\n      \"sections\": [\n        \"1.3\",\n        \"2.2\"\n      ],",
+      "new": "      \"name\": \"Dissolution\",\n      \"sections\": [\n        \"01 §9\",\n        \"02 §4\",\n        \"02 §8\"\n      ],",
+      "reason": "As for Generation.",
+      "cited_by_records": [
+       "central-laws-over-every-exchange"
+      ]
+     },
+     {
+      "file": "theories/becoming/results/completion/COVERAGE.json",
+      "old": "      \"name\": \"Actor\",\n      \"sections\": [\n        \"2.2\",\n        \"2.6\",\n        \"4.1\"\n      ],",
+      "new": "      \"name\": \"Actor\",\n      \"sections\": [\n        \"01 §9\",\n        \"02 §7\",\n        \"04 §1\",\n        \"05 §1\"\n      ],",
+      "reason": "As for Generation.",
+      "cited_by_records": [
+       "central-laws-over-every-exchange"
+      ]
+     },
+     {
+      "file": "theories/becoming/results/completion/COVERAGE.json",
+      "old": "      \"name\": \"Patient\",\n      \"sections\": [\n        \"2.2\",\n        \"2.5\",\n        \"2.6\"\n      ],",
+      "new": "      \"name\": \"Patient\",\n      \"sections\": [\n        \"01 §9\",\n        \"02 §6\",\n        \"02 §7\",\n        \"04 §1\"\n      ],",
+      "reason": "As for Generation.",
+      "cited_by_records": [
+       "central-laws-over-every-exchange"
+      ]
+     },
+     {
+      "file": "theories/becoming/results/completion/COVERAGE.json",
+      "old": "      \"name\": \"Knowing\",\n      \"sections\": [\n        \"2.6\",\n        \"3.1\",\n        \"3.2\",\n        \"3.3\"\n      ],",
+      "new": "      \"name\": \"Knowing\",\n      \"sections\": [\n        \"01 §8\",\n        \"03 §2\",\n        \"03 §3\",\n        \"03 §5\",\n        \"03 §6\"\n      ],",
+      "reason": "As for Generation.",
+      "cited_by_records": [
+       "central-laws-over-every-exchange"
+      ]
+     },
+     {
+      "file": "theories/becoming/results/completion/COVERAGE.json",
+      "old": "      \"name\": \"Evaluation\",\n      \"sections\": [\n        \"5\",\n        \"6.1\",\n        \"6.2\"\n      ],",
+      "new": "      \"name\": \"Evaluation\",\n      \"sections\": [\n        \"02 §3\",\n        \"07 §3\",\n        \"07 §4\"\n      ],",
+      "reason": "As for Generation.",
+      "cited_by_records": [
+       "central-laws-over-every-exchange"
+      ]
+     },
+     {
+      "file": "theories/becoming/results/completion/COVERAGE.json",
+      "old": "      \"name\": \"Capacity\",\n      \"sections\": [\n        \"2.1\",\n        \"6.1\"\n      ],",
+      "new": "      \"name\": \"Capacity\",\n      \"sections\": [\n        \"02 §2\",\n        \"02 §3\",\n        \"07 §2\",\n        \"07 §4\",\n        \"07 §6\"\n      ],",
+      "reason": "As for Generation.",
+      "cited_by_records": [
+       "central-laws-over-every-exchange"
+      ]
+     },
+     {
+      "file": "theories/becoming/results/completion/COVERAGE.json",
+      "old": "      \"name\": \"Responsibility\",\n      \"sections\": [\n        \"2.6\",\n        \"3.4\",\n        \"4.1\",\n        \"6.5\"\n      ],",
+      "new": "      \"name\": \"Responsibility\",\n      \"sections\": [\n        \"05 §1\",\n        \"07 §2\",\n        \"07 §4\",\n        \"07 §6\"\n      ],",
+      "reason": "As for Generation.",
+      "cited_by_records": [
+       "central-laws-over-every-exchange"
+      ]
+     },
+     {
+      "file": "theories/becoming/results/completion/COVERAGE.json",
+      "old": "      \"name\": \"Life\",\n      \"sections\": [\n        \"2.2\"\n      ],",
+      "new": "      \"name\": \"Life\",\n      \"sections\": [\n        \"02 §3\",\n        \"04 §1\"\n      ],",
+      "reason": "As for Generation.",
+      "cited_by_records": [
+       "central-laws-over-every-exchange"
+      ]
+     },
+     {
+      "file": "theories/becoming/results/completion/COVERAGE.json",
+      "old": "      \"name\": \"Evolution\",\n      \"sections\": [\n        \"2.4\"\n      ],",
+      "new": "      \"name\": \"Evolution\",\n      \"sections\": [\n        \"04 §2\",\n        \"04 §3\",\n        \"04 §4\",\n        \"04 §5\",\n        \"04 §6\"\n      ],",
+      "reason": "As for Generation.",
+      "cited_by_records": [
+       "central-laws-over-every-exchange"
+      ]
+     },
+     {
+      "file": "theories/becoming/results/completion/COVERAGE.json",
+      "old": "      \"name\": \"Learning\",\n      \"sections\": [\n        \"3.2\",\n        \"3.3\"\n      ],",
+      "new": "      \"name\": \"Learning\",\n      \"sections\": [\n        \"03 §5\",\n        \"03 §6\"\n      ],",
+      "reason": "As for Generation.",
+      "cited_by_records": [
+       "central-laws-over-every-exchange"
+      ]
+     },
+     {
+      "file": "theories/becoming/results/completion/COVERAGE.json",
+      "old": "      \"name\": \"Collective\",\n      \"sections\": [\n        \"4.2\",\n        \"4.3\",\n        \"4.4\",\n        \"4.5\"\n      ],",
+      "new": "      \"name\": \"Collective\",\n      \"sections\": [\n        \"02 §9\",\n        \"05 §1\",\n        \"05 §2\",\n        \"05 §3\",\n        \"05 §5\",\n        \"05 §9\"\n      ],",
+      "reason": "As for Generation.",
+      "cited_by_records": [
+       "central-laws-over-every-exchange"
+      ]
+     },
+     {
+      "file": "theories/becoming/results/completion/COVERAGE.json",
+      "old": "      \"name\": \"Significance\",\n      \"sections\": [\n        \"6.1\",\n        \"6.2\",\n        \"6.4\",\n        \"6.5\"\n      ],",
+      "new": "      \"name\": \"Significance\",\n      \"sections\": [\n        \"07 §2\",\n        \"07 §3\",\n        \"07 §4\"\n      ],",
+      "reason": "As for Generation.",
+      "cited_by_records": [
+       "central-laws-over-every-exchange"
+      ]
+     },
+     {
+      "file": "theories/becoming/results/completion/COVERAGE.json",
+      "old": "      \"name\": \"Alignment\",\n      \"sections\": [\n        \"7.1\",\n        \"7.2\",\n        \"7.3\",\n        \"7.4\",\n        \"7.5\"\n      ],",
+      "new": "      \"name\": \"Alignment\",\n      \"sections\": [\n        \"03 §1\",\n        \"05 §7\",\n        \"05 §8\",\n        \"07 §6\",\n        \"07 §7\"\n      ],",
+      "reason": "As for Generation.",
+      "cited_by_records": [
+       "central-laws-over-every-exchange"
+      ]
+     },
+     {
+      "file": "theories/becoming/results/completion/COVERAGE.json",
+      "old": "K5: the parameters a central statement may leave supplied, each a named condition of chapter section 0.",
+      "new": "K5: the parameters a central statement may leave supplied, each a named condition of 08 §4 (the premise card).",
+      "reason": "'chapter section 0' is the canonical chapter's. K5 reads _section(chapter, 'Premise card'), which is 08 §4. The routing missed this line (2).",
+      "cited_by_records": [
+       "central-laws-over-every-exchange"
+      ]
+     },
+     {
+      "file": "theories/becoming/results/completion/COVERAGE.json",
+      "old": "K4. Modelling choices of chapter section 0, block A, and the pattern that finds each in a central statement;",
+      "new": "K4. Modelling choices named in 08 §4 (the premise card), and the pattern that finds each in a central statement;",
+      "reason": "In 08 only the premise card's opening paragraph names all six choices; two of them are in none of its tables, so 'its first table' would be wrong.",
+      "cited_by_records": [
+       "central-laws-over-every-exchange"
+      ]
+     },
+     {
+      "file": "theories/becoming/results/completion/COVERAGE.json",
+      "old": "flows over any amounts are open (chapter 8.1 item 6);",
+      "new": "flows over any amounts are open (08 §12, open items ranked, item 6);",
+      "reason": "Item 6 (amounts that may be dense) is in 08 §12's ranked list, and its Open includes 'the other laws over any amounts'. The routing missed this line (884).",
+      "cited_by_records": [
+       "central-laws-over-every-exchange"
+      ]
+     },
+     {
+      "file": "theories/becoming/results/completion/COVERAGE.json",
+      "old": "the Lean name chapter section 0 states it under; a found parameter not listed here, or listed with a name section 0 does not state, is reported.",
+      "new": "the Lean name 08 §4 (the premise card) states it under; a found parameter not listed here, or listed with a name the premise card does not state, is reported.",
+      "reason": "The check reads the premise card. The key 'section0' is kept, since renaming it is a schema change.",
+      "cited_by_records": [
+       "central-laws-over-every-exchange"
+      ]
+     },
+     {
+      "file": "theories/becoming/results/completion/COVERAGE.json",
+      "old": "K7. The classes an open item of chapter 8.1 may have.",
+      "new": "K7. The classes an open item of 08 §12 (open items, ranked) may have.",
+      "reason": "k7 reads _section(chapter, 'Open items, ranked') of 08.",
+      "cited_by_records": [
+       "central-laws-over-every-exchange"
+      ]
+     },
+     {
+      "file": "tools/research/completion.py",
+      "old": "        secs = ', '.join('§' + s for s in row['sections'])",
+      "new": "        secs = ', '.join(row['sections'])",
+      "reason": "The sections now carry their chapter and '§'. No other code reads row['sections'].",
+      "cited_by_records": [
+       "central-laws-over-every-exchange"
+      ]
+     },
+     {
+      "file": "tools/research/completion.py",
+      "old": "            out += [f'Section 8.1 has {len(result[\"open_items\"])} items: ' + '; '.join(",
+      "new": "            out += [f'08 §12 ranks {len(result[\"open_items\"])} open items: ' + '; '.join(",
+      "reason": "COMPLETION.md's K7 line names 'Section 8.1', which 08 does not have. Render after; never hand-edit COMPLETION.md.",
+      "cited_by_records": [
+       "central-laws-over-every-exchange"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "E28",
+    "status": "needs a decision",
+    "why": "The routing's evidence holds: no coverage row's open_items lists item 1, whose Open is 'lifting the World and process laws onto the grammar (§6), which law holds (item 7) and the representation (item 6)'. What open_items should hold is a choice of meaning. Option (a): it lists every item bearing on the row (the statuses say 'what of the row is open is named in open_items'). Then 1 goes into all 17 rows: every row has central laws stated on a model (Web, Flow, World or runs), and the latest grammar measure on record (gw-generation-and-widening/measure-grammar-after.json, 29 October) found every row with at least one central declaration not reaching the grammar. That would be 17 edits and would change COMPLETION's K1 column. That measure is a week old and was not rerun; it needs the checker cache. Option (b), drafted as the smallest change: item 1 is cross-cutting. Its Landed part is exactly K2's constructions (Frame.world_fixes_run, World.of_web, World.of_flow), so a note in unity.about (K2) says where it sits and why no row lists it. It goes in unity.about rather than open_register.about so it does not collide with E27's edit of that string. Limit of (b): completion.py renders no 'about' text, so a reader of COMPLETION.md still sees item 1 in no row. If that matters, take (a), or add a computed line to K7 naming the items no row lists. Records: COVERAGE.json is cited by exact bytes by central-laws-over-every-exchange, which must be re-pointed with repoint.py after reading.",
+    "edits": [
+     {
+      "file": "theories/becoming/results/completion/COVERAGE.json",
+      "old": "every other direction is met by a construction, a declaration that reads each object of one family as an object of the other and keeps what it reads.",
+      "new": "every other direction is met by a construction, a declaration that reads each object of one family as an object of the other and keeps what it reads. Item 1 of 08 §12's ranked open items, one base, has these constructions as part of what landed; its open part, lifting the World and process laws onto the grammar, which law holds (item 7) and the representation (item 6), bears on every row with a central law stated on a model, so no row's open_items lists it.",
+      "reason": "Copies item 1's own Open, says it bears on rows with a central law stated on a model, and claims nothing about which rows are lifted. This is option (b); option (a) is in why.",
+      "cited_by_records": [
+       "central-laws-over-every-exchange"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "E29",
+    "status": "drafted",
+    "why": "Seven records are superseded, and each keeps its old next_delta: a-law-through-changing-coupling-along-one-run and a-law-through-coupling-along-one-run (by a-law-through-a-projection-along-one-run); any-number-of-drawers-in-turn, drawers-in-turn-draw-everything, drawers-in-turn-within-capacities and revision-comes-to-drawing-everything (by drawers-in-turn); conditional-foundation-assessment (by theory-of-becoming-foundation). Their pages show that next step as if it were still to be taken, and link the successor only in history. The routing's first option, writing 'Superseded by <id>; its record carries the next step.' into each next_delta, conflicts with RESULT-WORKFLOW's 'Never in the public fields' rule: next_delta is a public field, and the text would restate the status ('the status in other words') and another record's standing. It would also drop the old text. The draft changes the renderer instead. A superseded record's Next section names and links its successor (through result_link, already defined in render_record_v2) and keeps the old next step, labelled as of when the record was current. All seven are schema 2; no schema-1 record and no withdrawn record exists, so render_record is untouched. No record JSON changes, and no record references registry.py. registry.py differs from main on this branch (GT's edits), but the old line matches exactly once on both. Checked in memory: the edited render_record_v2 on drawers-in-turn-draw-everything gives 'Superseded by [drawers-in-turn](drawers-in-turn.md), whose record carries the next step. When this record was current, its next step read: Drawing at once; noisy or partial revision; an independent review.' After landing, render the seven pages. A focused test in test_registry.py (which has no superseded case) would be the implementer's evidence.",
+    "edits": [
+     {
+      "file": "tools/research/registry.py",
+      "old": "              heading('##', 'Next', 'Next / 下一步'), '', en(r['next_delta']), '',",
+      "new": "              heading('##', 'Next', 'Next / 下一步'), '',\n              (f'Superseded by {result_link(r[\"superseded_by\"])}, whose record carries the next step. When this record was current, its next step read: ' + en(r['next_delta'])) if r.get('status') == 'superseded' else en(r['next_delta']), '',",
+      "reason": "The render names the successor and keeps the old next step as history, leaving the public field untouched. RESULT-WORKFLOW's supersession rule is to keep the old record and preserve its evidence.",
+      "cited_by_records": []
+     }
+    ]
+   },
+   {
+    "id": "E35",
+    "status": "drafted",
+    "why": "Both texts were written at LW (64184668b), and the 08 row dropped part of the home from the start. The home, 07 §8's T8, reads: '*Standing:* argued. Open: P2 and P4, the crux of §4.6's path, with P3, a correspondence not shown for actual selves; the step of invariance, for what that path does not reach; and a reason for C.' The 08 row keeps its link and its gloss of P2 and P4, then copies the home's words. That restores that P2 and P4 are the crux, restores P3 with its standing, and names the step of invariance where the row had 'the step beyond that path'. Not drafted, outside this flag: the overview's T8 row ('argued; open: the crux, the step beyond it, a reason for C') also omits P3; that goes to the front's owner. 08 §12 item 12's Open also omits P3, defensibly, since item 12 is the warrant item and P3 is a correspondence. The seven 08 records are listed; the edited row links none of their pages, so no drift is expected.",
+    "edits": [
+     {
+      "file": "theories/becoming/chapters/08-METHOD.md",
+      "old": "argued; open: P2 and P4 of [07 §4.6](07-SIGNIFICANCE.md#future-path) (one's line a regularity of its own; its class holding one's effects), the step beyond that path, a reason for C",
+      "new": "argued; open: P2 and P4 of [07 §4.6](07-SIGNIFICANCE.md#future-path) (one's line a regularity of its own; its class holding one's effects), the crux of that path, with P3, a correspondence not shown for actual selves; the step of invariance, for what that path does not reach; and a reason for C",
+      "reason": "Home words copied from 07 §8's T8 standing. The crux, P3 with its standing, and the step of invariance by name are restored.",
+      "cited_by_records": [
+       "contraction-where-duplication-is-reachable",
+       "one-move-covering",
+       "one-root-to-its-edge",
+       "premises-met-and-failed",
+       "self-reference-does-not-certify-itself",
+       "type-formation-gives-no-dynamics",
+       "what-a-summary-keeps"
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "check:chapters-and-glossary": {
+  "verdicts": [
+   {
+    "id": "E4",
+    "ok": false,
+    "issues": "All nine old strings occur exactly once (checked with python count). No generated page is edited and no hash is refreshed. 'scope' is a valid does_not_show kind (registry.py NOT_SHOWN). The statement comes to 297 characters, under the 300 cap. The scoping copies verify_zh.py's own words. Three problems. (1) A live front restatement is missing. The generated README.md (l.156) and GOALS.md (l.28) both say '3,499 bear on a structure of the theory and each lies in one place, in 1,300 checked entries', and the Chinese edition says '各落一处'. Their source is the overview field of _process/goals/chinese-sources-and-becoming.json, which the draft leaves untouched; two edits are added below. No record cites the goal file. (2) The reason given for the arguments-a-l.json companion edits is false. ARGUMENTS-A-L.md does not show the entry's text: a grep of every .md for the sentence finds it nowhere outside JSON and kit scripts. The edits themselves are fine, but their reason must be corrected. (3) Two items are left unmentioned. The frozen review dossier theories/becoming/review/CLASSICAL-TEXTS.md l.534 has the unscoped '各自恰落在一处'. It is part of the frozen first edition, so it is not edited now, but it should be listed for the next edition. Beside make_record.py, the kit's catalogue_entries.py (development/zhonghua) also emits the old wording, and it must not be rerun as it is. The 06, record, does_not_show, validation_scope and history edits stand as drafted. The cited_by lists match my grep: only conditional-laws-of-the-corpus names 06, and no record cites arguments-a-l.json or the goal file.",
+    "corrected_edits": [
+     {
+      "file": "theories/becoming/results/data/arguments-a-l.json",
+      "old": "《中华思想脉络》v1.0 的 5,673 条完整判断逐条读过：3,499 条关乎理论之结构，各落一处，成 1,300 个已检查条目（相合 453、定域 647、相分 200）。",
+      "new": "《中华思想脉络》v1.0 的 5,673 条完整判断逐条读过：3,499 条关乎理论之结构，各在所标之簇恰落一处，成 1,300 个已检查条目（相合 453、定域 647、相分 200）。",
+      "reason": "Companion edit, the same text as drafted. The reading register's entry for the history chapter repeats the unscoped claim. No generated page shows this field (ARGUMENTS-A-L.md lists ids and titles only), but the register is the reading's kept text. Its source scopes the claim in its own check list (CIVILIZATION-THOUGHT-AND-BECOMING.md l.343). The source is not edited, so source_sha256 stays. No record cites this file. catalogue_entries.py emits the old text and must not be rerun as it is."
+     },
+     {
+      "file": "theories/becoming/results/data/arguments-a-l.json",
+      "old": "Every one of the 5,673 complete judgments of 《中华思想脉络》 v1.0 is read: 3,499 bear on a structure of the theory and each lies in one place, in 1,300 checked entries (453 agreements, 647 exact scopes, 200 divergences).",
+      "new": "Every one of the 5,673 complete judgments of 《中华思想脉络》 v1.0 is read: 3,499 bear on a structure of the theory and each lies in one place in the cluster it was flagged for, in 1,300 checked entries (453 agreements, 647 exact scopes, 200 divergences).",
+      "reason": "The English of the same register entry, kept in step. The text is as drafted; only the reason is corrected."
+     },
+     {
+      "file": "_process/goals/chinese-sources-and-becoming.json",
+      "old": "3,499 bear on a structure of the theory and each lies in one place, in 1,300 checked entries;",
+      "new": "3,499 bear on a structure of the theory and each lies in one place in the cluster it was flagged for, in 1,300 checked entries;",
+      "reason": "This is the source of the generated README.md l.156 and GOALS.md l.28, a front restatement of 06 §7.1 that readers see. It is scoped as the home now is, in verify_zh.py's own words. The text is unique in the file, and no record cites the goal."
+     },
+     {
+      "file": "_process/goals/chinese-sources-and-becoming.json",
+      "old": "3,499 条关乎理论的某一结构，各落一处，归为 1,300 个已检查条目；",
+      "new": "3,499 条关乎理论的某一结构，各在所标之簇恰落一处，归为 1,300 个已检查条目；",
+      "reason": "The Chinese of the same goal overview, kept in step with the English. The text is unique in the file."
+     }
+    ]
+   },
+   {
+    "id": "E12",
+    "ok": false,
+    "issues": "The old text occurs once, and the anchors #r-room-read-off-the-exchange (05 l.206) and #t3 (l.224) exist. The 13 cited_by records match my grep, and none cites a 05 anchor. Dropping 'F2' and 'so not on a condition sharing none' fixes what ROUTING.md flags. Two qualifiers are dropped against the home. (1) The home row l.206 and the record's law 1 both hold the rest's exchange fixed ('the rest exchanging as it does'; 'the formations outside the part exchange as they do'). The draft says it copies the row's hypotheses but omits this one, and the case is false without it, because the level the rest leaves is defined only when the rest's exchange is held. (2) T3's standing in 05 l.227 names the test as 'LA4's Stage A' ('leaves its locus unresolved (LA4's Stage A, below)'). 'LA4's test' is looser, and only Stage A has run. The corrected edit below restores both and otherwise keeps the draft. No record carries the replaced words.",
+    "corrected_edits": [
+     {
+      "file": "theories/becoming/chapters/05-COLLECTIVES.md",
+      "old": "The account adds four limits their model has no place for: the drain falls only where units are shared, so not on a condition sharing none ([T3](#t3)'s locus and F2); a reader reaches only what couples into some reader ([pooled coupling](#r-what-pooled-coupling-reaches)); where nothing is given below a need, as a premise, a re-reading after the level falls below it comes too late for good; and who re-reads is itself selected ([02](02-MAP.md#r-loss-read-in-time-by-the-others)).",
+      "new": "The account adds four limits their model has no place for: over one step where a part's members take at most their capacity and give no more than they take, the rest exchanging as it does, every optimum of an order rising with what couples in lowers a condition beyond below where the rest leaves it exactly where the part has some capacity there and the rest leaves something there, and stands where the rest leaves it at a condition from which no member may take ([the case](#r-room-read-off-the-exchange); on trained systems the locus is part of [T3](#t3)'s clause, conjectured, and LA4's Stage A left it unresolved); a reader reaches only what couples into some reader ([pooled coupling](#r-what-pooled-coupling-reaches)); where nothing is given below a need, as a premise, a re-reading after the level falls below it comes too late for good; and who re-reads is itself selected ([02](02-MAP.md#r-loss-read-in-time-by-the-others)).",
+      "reason": "The 'only' is proved over one step of exchange: room-read-off-the-exchange law 5 (Optimum.optimum_lowers_iff, Optimum.optimum_untouched). The law this Reading follows gives sufficiency only (Shared.room). The first limit copies law 5 together with the hypotheses of the home row l.206, including 'the rest exchanging as it does', which the draft dropped. It drops 'F2', which 05 does not define, and the sharing-none wording that T3 withdrew (l.227). It keeps T3's standing as l.227 words it: the clause on trained systems is conjectured, and LA4's Stage A left the locus unresolved. The other three limits are unchanged."
+     }
+    ]
+   },
+   {
+    "id": "E13",
+    "ok": true,
+    "issues": "Both old strings occur once. The new cell and the new 02 sentence are the home's own sentence (04 l.60), with the premise named as the home theorem names it (Web.ByPassing). Nothing is added, and the edits fix what ROUTING.md flags (both copies, one commit). No generated page is edited. The cited_by lists match my grep: 13 records name 05 and 9 name 02, all by whole-file path with no anchor. Copies elsewhere are history, kits or Lean snapshots, not live pages. The live Lean docstring states the premise.",
+    "corrected_edits": []
+   },
+   {
+    "id": "E31",
+    "ok": true,
+    "issues": "All three old strings occur once. The glossary row gives 02 l.402's definition word for word, and the 02 l.453 replacement copies GENERATIVE-REGIMES.md l.9's definition word for word, restoring 'recurrent' and 'of activity'. The link target exists. One sense per row is kept, as the glossary header and the atlas plan's §3.3 decision require. The departure from ROUTING's two-row fix is argued correctly. 'In its account of power' matches the corpus README's one-paragraph theory, which GENERATIVE-REGIMES calls 'the existing power account'. GLOSSARY.md is hand-maintained, not generated, and no record cites GLOSSARY or the edited 02 lines. The 9 records naming 02 match my grep. Minor: the glossary clause writes 'is open' where 02 l.453 has the standing label '**Open**'; 'stays Open' would keep the label exactly. This is optional and does not change meaning. The rename to 闭捕 is correctly left as a decision.",
+    "corrected_edits": []
+   },
+   {
+    "id": "E32",
+    "ok": true,
+    "issues": "Both old strings occur once, and the anchors #step (l.269) and #future-path (l.388) exist. The added sentence mirrors §4.7's own words at l.471. It is appended after §4.2's last sentence, so the frozen dossier's substring quotations of §4.2 (review/PHILOSOPHY.md l.250-253) still match. The other copies of the 'Premises:' line are kit scripts under development/, not checks. Nothing is renamed and no claim is added. The 19 cited_by records match my grep (whole-file only).",
+    "corrected_edits": []
+   },
+   {
+    "id": "E36",
+    "ok": true,
+    "issues": "The old string occurs once. 'Only in their names' is false. unceasing-generation-needs-renewal's statement reads 'unceasing generation needs renewal to recur; renewal does not imply generation', and whole-persists-through-generation's title uses 'generation' for arising. The replacement copies 04's own practice ('in the older sense of arising', l.40, and 'a title in the older sense', l.42), so it adds no claim and gives no new sense. The rename is correctly left as a structural decision, with a dry-run rename-id plan. The 9 cited_by records match my grep.",
+    "corrected_edits": []
+   },
+   {
+    "id": "E39",
+    "ok": true,
+    "issues": "All three old strings occur once. The new tree matches git ls-files on main: ONE-PAGE(.zh), THE-THEORY-OF-BECOMING(.zh), OPENING, the three fronts, a generated README, chapters 01-08 with CLAIMS.md and README, review/ with a cover in two languages, six dossiers and recoding/, and history/ with lean-declarations/, lineage/ and verification/. drafts/ and output/ have no top-level README, while worldbuilding/README.md exists, so the dated clause is true. 'Ren's text' is existing wording. No generated page is edited, and no record cites the file. Minor: 'the evidence' layer (README l.135, MAP l.22) lies partly outside theories/becoming/ (RESULTS.md, the Lean package, the studies). The tree line is still not false, since results/ holds the records. The before-copy under _process/history/ should be kept at landing, as the draft says.",
+    "corrected_edits": []
+   }
+  ]
+ },
+ "check:method-and-counts": {
+  "verdicts": [
+   {
+    "id": "E23",
+    "ok": true,
+    "issues": "Checked in /Users/ren/theories/.claude/worktrees/gc-reading-correction. The old text occurs exactly once in 08-METHOD.md (line 167). The new text matches COMPLETION.md:63 in both numbers and order (112, 73, 10, 8, 8, 1) and keeps the qualifier about matching source text. The date is right in the repository's local time: the render commit 4d65a680e is 2026-11-04 04:35 +0700, and core receipt 20261103T211917.845905Z is 4 November local. The clause 'which counts them afresh at each run' is true, since k4 tags every central statement on each run. Nothing generated is edited and no hash is refreshed. Seven records reference 08-METHOD.md by path and none by anchor; my grep found the same seven as the draft. At landing, re-read the K4 line on the merged tree, as the draft says."
+   },
+   {
+    "id": "E24",
+    "ok": false,
+    "issues": "All five old texts are unique in their files. Three problems. (1) 'the others in the [ledger] checked existing results' claims that every other review in the ledger checked existing results. The ledger includes prospective reviews ('Prospective review of paid evaluative plasticity', 'Selective reuse ...: prospective review'), so that claim is false. Say 'others listed in the ledger'. (2) The D66 row drops part 1's consequence, 'so no check run inside the work shows that it serves its purpose', which is the point of part 1. It also drops part 3's 'SD1 is a fact about the representation' and part 4's 'not by the frame it is said to come from'. (3) The D69 row and the Chinese D69 row drop the qualifier 'only their premises are connected' (只有其前提相连) from reading 2. The D1–D69 edit is correct: the anchors run to d69, and the English index has no D66 or D69 row. Not numbering D69's English heading is sound, because no English heading in the register carries its number. Records: the 12 that reference DELEGATED-CHOICES.md by path, and the seven for 08 by path, match my grep. No tool parses the register's index.",
+    "corrected_edits": [
+     {
+      "file": "theories/becoming/chapters/08-METHOD.md",
+      "old": "Twenty numbered reviews and three others checked existing results ([ledger](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/REVIEWS.md)); the nineteenth found five errors, eight overstatements and no false theorem.",
+      "new": "Twenty-one numbered reviews and others listed in the [ledger](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/REVIEWS.md) checked existing results; the nineteenth found five errors, eight overstatements and no false theorem.",
+      "reason": "The ledger lists the twenty-first review. 'three others' has no basis. 'the others' would claim that every review in the ledger checked existing results, but some are prospective, so the wording is 'others listed in'."
+     },
+     {
+      "file": "theories/becoming/chapters/08-METHOD.md",
+      "old": "Each reading is an interpretation of checked content, adopted with its argument and numbered D1–D66 in the [decision register](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/DELEGATED-CHOICES.md), which says what would change it.",
+      "new": "Each reading is an interpretation of checked content, adopted with its argument and numbered D1–D69 in the [decision register](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/DELEGATED-CHOICES.md), which says what would change it.",
+      "reason": "Unchanged from the draft. The register's sections run to d69."
+     },
+     {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/DELEGATED-CHOICES.md",
+      "old": "| D67 | the readings of readers drawn from the selected (22 October) |",
+      "new": "| D66 | the work read by its own laws (24 October) | adopted with exact scope, in four parts: what the checks reach, the law that a selection reaches exactly what couples into its selector read of the work itself, whose selectors take in no human reader, no coordination among people and no trained system, so no check run inside the work shows that it serves its purpose; completion is not closure, by analogy, an account of a generating unfolding completed by unity on one root, an exact statement of its edge and readability outside its own selectors, not by sealing; where the ethics turns, SD1 a fact about the representation and what is open which relation a center continues along, made exact by the proofs and not settled by them; what the work draws on and takes in from objections (added with HC), by analogy with joint excess its pace weighed against what renews its carriers, and an objection answered on what it says, not by the frame it is said to come from |\n| D67 | the readings of readers drawn from the selected (22 October) |",
+      "reason": "Each part is copied from the d66 section. This restores part 1's consequence, part 3's SD1 clause and part 4's 'not by the frame'. The D67 row keeps its bytes."
+     },
+     {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/DELEGATED-CHOICES.md",
+      "old": "stated as the reading's premise, not the law's |",
+      "new": "stated as the reading's premise, not the law's |\n| D69 | the grammar's readings (27 October) | adopted with exact scope, in three readings: the class plural, the 墨经's four samenesses each a class once the whole, place or respect it relies on is fixed, 類同 need not be transitive until its respect is fixed; the fire passed on, the pattern passed on while its carrier ceases, an alteration (`Web.passing_fire`), the World model's counting, amounts, recurrence and renaming laws not its instances, only their premises connected; consent and penalties, the thermostat witness read socially, its net with its occurrences renamed, not a new law |",
+      "reason": "Restores reading 2's qualifier 'only their premises are connected'. The date is from 043553bd6 (2026-10-27), which added the section."
+     },
+     {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/DELEGATED-CHOICES.zh.md",
+      "old": "每一读法注明其所依，且不多于此 |",
+      "new": "每一读法注明其所依，且不多于此 |\n| D69 | 文法之读法（10-27） | 依所述范围采用，分三读：类是多的，墨经之四同各在其所依之整体、位置或方面固定时为一类，類同在其方面固定之前未必传递；火传，承载者终止而样式传下，是异（`Web.passing_fire`），世界模型之计数、量、复现与改名之律不是其实例，只有其前提相连；认同与惩罚，恒温器之见证在社会上之读法，该见证之网改名其出现，不是新律 |",
+      "reason": "Restores 只有其前提相连 from the Chinese D69 section. The old text is unique in that file (the D68 row's last cell)."
+     }
+    ]
+   },
+   {
+    "id": "E25",
+    "ok": true,
+    "issues": "The old text is unique (08:725). Item 4's own Open reads 'no formal part; ... questions of warrant and correspondence', and 08:720 allows one class per item, so 'further proof' is wrong. The new parenthesis has no ')' and its class comes before ';'. The k7 regex therefore reads 'philosophical warrant', which is in the classes list, and the '*Open:*' check still passes. Item 4 keeps its number, so the Alignment row's open_items [4] still resolves. No other page in theories/becoming restates item 4's class. COMPLETION.md's K7 line follows on render. The seven 08 records are complete."
+   },
+   {
+    "id": "E26",
+    "ok": true,
+    "issues": "Checked. All 21 old texts are unique, and each holds exactly one bare '[AI reading]'. Applying the 21 edits leaves zero bare labels in 05-08: the counts are now 4, 3, 7 and 7, and each changes only the label to '[AI reading, new]', as 08:66's rule requires. A grep of both register editions for tit-for-tat, win-stay, grim trigger, Kreps, Chichilnisky, off-switch, double effect, Hubinger, deceptive, Carey, Everitt and commuting learner finds nothing. Blame dates are after D65, so 'no D fits' holds. Record links on the edited lines: 07:460 links records/constancy-read-at-a-members-class.md, a record that references 07 by path, so it drifts and must be re-pointed after reading, as the draft says. 05:133 and 05:136 link a-pair-tolerates-only-within-a-window and offspring-read-from-giving-that-waits, but neither references 05 by path, so neither drifts. The cited lists (13 for 05, 1 for 06, 19 for 07, 7 for 08) match my grep. The 06 point is correctly left as a decision: those labels mark undecided questions, while 08 §12's 'No reading open' says the register lists none open."
+   },
+   {
+    "id": "E27",
+    "ok": true,
+    "issues": "All 24 old texts are unique. In this worktree completion.py's two lines are at 606 and 651. I recomputed the home sections from the chapters' r- anchors under each '## N.' heading. All 17 rows match the draft, and no record is missing. Every stale string in COVERAGE.json is covered: line 2, 834 ('section 0' and 'block A'), 884, 907 (twice) and 983. The premise card's opening paragraph is the only place in 08 §4 that names all six K4 choices: 'supplied observation' and 'fixed type' occur nowhere else there, so the 'about' wording is right. The tool reads row['sections'] only at completion.py:606, and no test reads it. Item 6's Open includes 'the other laws over any amounts'. Records: central-laws-over-every-exchange binds both COVERAGE.json and completion.py by path, and one-root-to-its-edge mentions COVERAGE.json only in its text. The draft omits one landing step. theories/becoming/results/data/shared-laws.json lists COVERAGE.json in its inputs_sha256, and registry.py:908 reports a changed input as not current. So after this edit, the landing must rerun python3 -B tools/research/shared_laws.py and then render. That rerun needs the measure and the checker cache. Never edit that hash by hand. The same applies to E28. Coordinate with E28, which edits COVERAGE.json too, but a different 'about' string."
+   },
+   {
+    "id": "E28",
+    "ok": false,
+    "issues": "The old text is unique in COVERAGE.json (unity.about), and 'needs a decision' is the right status. Option (b) is acceptable as the smallest change, and putting it in unity.about avoids a clash with E27's K7 string. Two problems with the drafted sentence. (1) 'bears on every row with a central law stated on a model, so no row's open_items lists it' adds a qualifier that suggests some rows are exempt; by the draft's own account of the 29 October measure, every row has a central declaration that does not reach the grammar. It also presents the undecided convention as a consequence ('so'). The routing's own words, 'bears on every row and is listed in none', state the fact without that. (2) 'part of what landed' is fine, but the sentence should otherwise follow item 1's Open verbatim, which it does. Limits the landing should know: completion.py renders no 'about' text, so a reader of COMPLETION.md still sees item 1 in no row. Editing COVERAGE.json also makes shared-laws.json's inputs not current, so rerun shared_laws.py and render; never edit the hash. central-laws-over-every-exchange must be re-pointed after reading.",
+    "corrected_edits": [
+     {
+      "file": "theories/becoming/results/completion/COVERAGE.json",
+      "old": "every other direction is met by a construction, a declaration that reads each object of one family as an object of the other and keeps what it reads.",
+      "new": "every other direction is met by a construction, a declaration that reads each object of one family as an object of the other and keeps what it reads. Item 1 of 08 §12's ranked open items, one base, has these constructions in what landed; its open part, lifting the World and process laws onto the grammar, which law holds (item 7) and the representation (item 6), bears on every row and is listed in none.",
+      "reason": "This is option (b) in the routing's own words ('bears on every row and is listed in none'), with item 1's Open copied verbatim. The restrictive qualifier and the causal 'so' are dropped, because the convention is still the pending decision."
+     }
+    ]
+   },
+   {
+    "id": "E29",
+    "ok": true,
+    "issues": "The old line is unique in registry.py (line 1251, inside render_record_v2). All seven superseded records have schema_version 2, and render_record dispatches them to render_record_v2. Every superseded_by is a string id, and registry.py:1103 checks that each exists. result_link is defined inside render_record_v2, before this line. The f-string quoting (r[\"superseded_by\"] inside a single-quoted f-string) is valid. RESULT-WORKFLOW.md:112-115 does forbid restating the status in next_delta, so changing the renderer instead of the public field is right, and the old text is kept, as :73's supersession rule requires. No record references registry.py or any of the seven .md pages by path, so nothing drifts. The landing must render the seven pages, and a focused superseded case in tools/research/tests/test_registry.py would be the evidence."
+   },
+   {
+    "id": "E35",
+    "ok": true,
+    "issues": "The old cell text is unique in 08-METHOD.md (line 575). The new text copies 07:751's Standing word for word in order: P2 and P4, the crux of the path, P3 with 'a correspondence not shown for actual selves', the step of invariance 'for what that path does not reach', and a reason for C. It keeps the row's link and its gloss of P2 and P4, and adds no '|' to the table cell. It matches the routing's fix exactly. The seven 08 records are complete, and the edited cell links none of their pages."
+   }
+  ]
+ }
+}
