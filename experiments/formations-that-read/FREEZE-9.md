@@ -1,6 +1,6 @@
 # TR7's Stage A, frozen
 
-*Board item TR7A, 5 November 2026: TR7's Stage A frozen before any training run, at the coordinator's offer (FREEZE-9). AI-written (a Claude Code session), not yet reviewed by a person. No learner has been trained: the dry run draws episodes only to check the game, the estimator and the run's plumbing, and applies none of them. The run is Ren's. About 40 to 55 minutes to read, at 100 to 130 words a minute; the first part takes ten to thirteen.*
+*Board item TR7A, 5 November 2026: TR7's Stage A frozen before any training run, at the coordinator's offer (FREEZE-9). AI-written (a Claude Code session), not yet reviewed by a person. No learner has been trained: the dry run draws episodes only to check the game, the estimator and the run's plumbing, and applies none of them. The run is Ren's. About 43 to 56 minutes to read, at 100 to 130 words a minute; the first part takes ten to thirteen.*
 
 ## What is frozen, and what it can refute
 
