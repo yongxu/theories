@@ -1,9 +1,10 @@
-Review: one independent AI reader of the result and the changed texts against the run's output, the design and the dry
-       runs, three times ([REVIEW](development/ue-unified-explanation/ue32-run/REVIEW.md)): eight errors and eight
-       improvements in its first reading, all taken, the chief that two fronts still gave T2's old count, that both
-       states were worse than persistence in 46 stocks, not 53, and that the expectation's miss was explained past
-       what the design froze; three errors and six improvements in its second, all taken but one the sciences hour
-       leaves no room for, among them that the argument on 08's verdict was made after the run; in its third, on the
-       lines the coordinator asked to carry the second reading's recount by the embedding's size, that the recount was
-       one-sided: the verdict needs the stocks within the field's bound as well as those past it, so the fronts keep
-       the embedding's loss with longer history and the recount stands in full in the README and above.
+Review: two independent AI readers of the result and the changed texts against the run's output, the design and the
+       dry runs ([REVIEW](development/ue-unified-explanation/ue32-run/REVIEW.md)). The first read twice: eight errors
+       and eight improvements in its first reading, all taken, the chief that two fronts still gave T2's old count,
+       that both states were worse than persistence in 46 stocks, not 53, and that the expectation's miss was
+       explained past what the design froze; three errors and six improvements in its second, all taken but one the
+       sciences hour leaves no room for, among them that the argument on 08's verdict was made after the run. The
+       second read the lines a condition of the coordinator's changed, to carry the first's recount by the embedding's
+       size beside the verdict, then the correction: the recount was one-sided, since the three numbers led within the
+       field's bound as well as past it, though within it short of 0.05, so the fronts keep the embedding's loss with
+       longer history and the recount stands in full in the README and above; five errors in all, every one taken.

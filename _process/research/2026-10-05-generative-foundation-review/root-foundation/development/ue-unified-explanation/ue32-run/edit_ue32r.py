@@ -54,13 +54,14 @@ EVID_02 = ("on MQ5's stocks one year ahead, against the field's fitted delay emb
            f"(§{N}: median log ratio of the embedding's error to theirs 0.16, the three numbers better in 42 of 65 "
            "stocks, p = 0.025, where UE32 expected \"not separated\"), though each forecast worse than persistence in 53 "
            "of the 65 (both in 46), and the embedding lost more the longer the history it chose (post hoc: a tie, 13 to 13, "
-           "where it held less than the three numbers; they were better in 29 of the 39 where it held more): that "
-           "bears on the "
+           "where it held less than the three numbers; they were better in 29 of the 39 where it held more, within the "
+           "field's bound on its size short of 0.05: 16 of 22 at D = 2, p = 0.052): that bears on the "
            "three numbers' sufficiency against the series' longer history at these lengths, not on the lag's place or "
            "T2's law")
 EVID_08 = ("UE32 found T2's numbers better than the field's fitted embedding by its frozen criterion, both behind "
            "persistence in most stocks, the embedding losing more with longer history: sufficiency against it at these "
-           "lengths, not the lag's place or T2's law (better in 42 of 65 stocks, p = 0.025; expected: not separated)")
+           "lengths, not the lag's place or T2's law (better in 42 of 65 stocks, p = 0.025; expected: not separated; post "
+           "hoc, within the field's bound on its size short of 0.05: 16 of 22 at D = 2, p = 0.052)")
 QUOTE_08 = EVID_08[len('UE32 '):EVID_08.index(' (better in 42')]
 assert EVID_08.startswith('UE32 found ')
 

@@ -1,6 +1,6 @@
 ## {N}. {TITLE}
 
-Board item UE32, run on 4 November 2026 on Ren's yes ([his words](../../../../sources/15-codex-theory-conversations/2026-11-04-ue32-download-and-run.md)) by its design and script, frozen on 3 November before any series was read by them ([DESIGN](../../../../experiments/state-against-embedding/DESIGN.md)). The result in full, with its tables, is in UE32's README ([the result](../../../../experiments/state-against-embedding/README.md#the-result)); one reader's findings are in [REVIEW](development/ue-unified-explanation/ue32-run/REVIEW.md). T2 is unmigrated, as every thesis is (§505).
+Board item UE32, run on 4 November 2026 on Ren's yes ([his words](../../../../sources/15-codex-theory-conversations/2026-11-04-ue32-download-and-run.md)) by its design and script, frozen on 3 November before any series was read by them ([DESIGN](../../../../experiments/state-against-embedding/DESIGN.md)). The result in full, with its tables, is in UE32's README ([the result](../../../../experiments/state-against-embedding/README.md#the-result)); two readers' findings are in [REVIEW](development/ue-unified-explanation/ue32-run/REVIEW.md). T2 is unmigrated, as every thesis is (§505).
 
 ```text
 Result(s): none reused and none new in the register; thesis T2 (home 02 §5, 08's thesis table), unmigrated.
@@ -11,12 +11,13 @@ Delta: a fourth frozen fish-stock test of T2, its first against a state read fro
        Median r = ln(MSE_F / MSE_N) = +0.163 (frozen margin +0.105), N better in 42 stocks and F in 23, sign test p =
        0.025: "T2 better than the field's fitted embedding". The same verdict with simplex's choice of D (p = 0.046),
        with N in the draw's form and with N's form chosen per stock (p = 0.013 each). Read after the run, not frozen:
-       a tie where F held less than N (D = 1, 13 to 13), N better in 29 of the 39 where it held more; no cut by D puts
-       the verdict in one group of stocks: at D = 2, within the field's bound of about sqrt(N) coordinates at the
-       median 20 training rows (DESIGN §4), 16 of 22 (median r +0.158, p = 0.052); over D <= 2, 29 to 19 (p = 0.19),
-       the tie at D = 1 diluting D = 2; at D 3 or 4, 13 to 4 (p = 0.049), and without the D = 2 stocks 26 to 17 (p =
-       0.22); cut by each stock's own training rows, 30 to 17 within the bound (p = 0.079) and 12 to 6 past it (p =
-       0.24). The answer expected was "not separated" (DESIGN §1), kept as written.
+       a tie where F held less than N (D = 1, 13 to 13), N better in 29 of the 39 where it held more (p = 0.003); the
+       advantage is not confined to the stocks past the field's bound of about sqrt(N) coordinates at the median 20
+       training rows (DESIGN §4), though within it no cut reaches 0.05: at D = 2, 16 of 22 (median r +0.158, p =
+       0.052); over D <= 2, 29 to 19 (p = 0.19), the tie at D = 1 diluting D = 2; cut by each stock's own training
+       rows, 30 to 17 within the bound (p = 0.079) and 12 to 6 past it (p = 0.24). The 17 at D 3 or 4 meet the verdict
+       alone (13 to 4, p = 0.049), but without the D = 2 stocks the 65 lose it (26 to 17, p = 0.22). The answer
+       expected was "not separated" (DESIGN §1), kept as written.
 Evidence: the frozen run (experiments/state-against-embedding/results/run-embed.json and run-embed.out):
        Python 3.11.2, 80 s of CPU; RAM Legacy v4.66's assessment workbook, the archive's size and md5 as the design
        gives them, the workbook's sha-256 written with the output; before any rule ran, MQ5's stocks and fits
@@ -42,11 +43,11 @@ Against 08's verdict on what is new (08 §8), read after the run, not frozen: 08
        does not among what would change its verdict that what survives is no discovery. This one does not change it.
        Not failing was foreseen: the design expected "not separated" (§1). Part of what went past the expectation is
        what the field's own bound of about sqrt(N) coordinates foresees (DESIGN §4): F lost most at D = 3 and 4, past
-       it at the median length; the verdict needs the D = 2 stocks as well (Delta). Its sharpest part, F at D = 2 with
-       four coordinates, within the bound, losing in 16 of 22 stocks, falls short of 0.05 on its own (p = 0.052) and
-       is one test on assessment outputs. In the dry runs "T2 better" came also where the giving reads less than T2's
-       state (24.5% of the regime's step's archives, against 33% under T2's law), and both states trailed persistence.
-       It moves T2's evidence, not 08's verdict.
+       it at the median length; without the D = 2 stocks, within it, the 65 lose the verdict (Delta). Its sharpest
+       part, F at D = 2 with four coordinates, within the bound, losing in 16 of 22 stocks, falls short of 0.05 on its
+       own (p = 0.052) and is one test on assessment outputs. In the dry runs "T2 better" came also where the giving
+       reads less than T2's state (24.5% of the regime's step's archives, against 33% under T2's law), and both states
+       trailed persistence. It moves T2's evidence, not 08's verdict.
 Why the expectation missed: the expectation rested on the mixed world, a third of the stocks age-structured, as a
        reading of MQ5's in-sample S3, where "T2 better" came in 6% of archives; in the design's terms (§1) the verdict
        places the stocks "nearer a world whose state N holds than MQ5's readings do". The output does not show why.

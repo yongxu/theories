@@ -1,6 +1,6 @@
 # UE32: T2 against empirical dynamic modelling
 
-Board item UE32, 3 November 2026; run 4 November 2026. AI-written (a Claude Code session; no person has checked it). About twenty to twenty-six minutes to read, [the result](#the-result) fourteen to nineteen of them; its parts are listed with their own times.
+Board item UE32, 3 November 2026; run 4 November 2026. AI-written (a Claude Code session; no person has checked it). About twenty to twenty-seven minutes to read, [the result](#the-result) fourteen to nineteen of them; its parts are listed with their own times.
 
 **Why.** Thesis T2 names in advance the state of a renewable condition under a draw: its level, its recent giving and one lag ([02 §5](../../theories/becoming/chapters/02-MAP.md#t2)).
 - Where a stage before recruitment is counted, the field's state is that stage. UE31 and UE31b test T2 against it in the flour beetle ([UE31](../state-named-in-advance/README.md), [UE31b](../state-named-in-advance/cells/DESIGN.md)).
@@ -35,7 +35,7 @@ A state named in advance that forecasts as well as the field's fitted embedding,
 - The median r is +0.163, past the frozen margin of +0.105.
 - The three numbers forecast better in 42 stocks, the embedding in 23.
 - The two-sided sign test gives p = 0.025.
-- Read after the run, not frozen: where the embedding held less than the three numbers (D = 1) the two tie, 13 stocks to 13; where it held more (D ≥ 2) the three numbers are better in 29 stocks and the embedding in 10 (below, by the dimension chosen).
+- Read after the run, not frozen: where the embedding held less than the three numbers (D = 1) the two tie, 13 stocks to 13; where it held more (D ≥ 2) the three numbers are better in 29 stocks and the embedding in 10, p = 0.003 (below, by the dimension chosen).
 
 The verdict is the same in each reading reported beside it: with the embedding's dimension chosen by simplex projection (median r +0.133, 41 to 24, p = 0.046), with the three numbers in the draw's form (+0.183, 43 to 22, p = 0.013), and with their form chosen per stock (+0.177, 43 to 22, p = 0.013). By absolute error the embedding was also worse, by less (median log ratio +0.069).
 
@@ -52,13 +52,13 @@ The verdict is the same in each reading reported beside it: with the embedding's
 
 Where F chose D ≥ 2, holding all of N's information and more, the median r is +0.200 (in the dry runs +0.11 under T2's law, +0.03 in the mixed world and −0.34 to −0.40 in the age worlds). Where it chose MQ4's smaller state, the two tie. The dry runs show the same growth in the five worlds with neither an age structure nor a second lag in any stock (under T2's law, +0.45 and +0.75 at D = 3 and 4), so it shows what the longer history costs at these lengths, not that it carries nothing.
 
-Read after the run, not frozen: no cut by the dimension chosen puts the verdict in one group of stocks.
+Read after the run, not frozen, by the dimension chosen and the field's bound:
 - At D = 2, within the field's bound of about √N coordinates at the median 20 training rows (DESIGN §4), the three numbers were better in 16 of 22 stocks, median r +0.158, past the margin, p = 0.052.
 - Over all 48 stocks at D ≤ 2 the test would say "not separated" (median r +0.035, 29 to 19, p = 0.19): the tie at D = 1, where F holds less than the three numbers, dilutes them.
-- The 17 stocks at D = 3 or 4 give 13 to 4 (p = 0.049), but without the 22 at D = 2 the verdict is lost too (26 to 17, p = 0.22).
+- The 17 stocks at D = 3 or 4 give 13 to 4 (median r +0.340, p = 0.049), the verdict on their own. Without the 22 at D = 2 the 65 lose it (26 to 17, p = 0.22), as they do without the 17 (the 48 above).
 - Cut by each stock's own training rows, which run from 12 to 64, the bound puts 47 stocks within it (median r +0.133, 30 to 17, p = 0.079) and 18 past it (+0.269, 12 to 6, p = 0.24).
 
-So the verdict needs both the stocks within the bound and those past it.
+So the advantage is not confined to the stocks past the bound: without those at D = 2 the verdict is lost, though within the bound no cut reaches 0.05.
 
 **What it means, as the design froze it (DESIGN §8).**
 - The three numbers named in advance forecast the next giving better than the field's fitted embedding of the same two series, on the field's own criterion. That is a prediction that could fail and did not, in the design's sense: in its dry runs the test failed T2 in 44.5% to 78% of the archives where every stock carried an age structure or a second lag.
@@ -66,7 +66,7 @@ So the verdict needs both the stocks within the bound and those past it.
 
 **Against 08's verdict on what is new** (read after the run, not frozen). 08 names a prediction that could fail and does not among what would change [its verdict](../../theories/becoming/chapters/08-METHOD.md#known-results) that what survives of the account is no discovery. This one does not change it.
 - Not failing was foreseen: the design expected "not separated" (§1).
-- Part of what went past the expectation is what the field's own bound of about √N coordinates foresees (DESIGN §4): F lost most at D = 3 and 4, past that bound at the median 20 training rows. The verdict needs the stocks at D = 2 as well (above).
+- Part of what went past the expectation is what the field's own bound of about √N coordinates foresees (DESIGN §4): F lost most at D = 3 and 4, past that bound at the median 20 training rows. Without the stocks at D = 2, within it, the 65 lose the verdict (above).
 - Its sharpest part, F at D = 2 with four coordinates, within the bound, losing in 16 of 22 stocks, falls short of 0.05 on its own (p = 0.052), and is one test on assessment outputs.
 - In the dry runs "T2 better" came also where the giving reads less than T2's state (24.5% of the regime's step's archives, against 33% under T2's law), and both states trailed persistence.
 
