@@ -1162,8 +1162,8 @@ class RestatedTests(GateCase):
         self.assertIn(f'{other}:5', gate.restated('main')['restated_at']['r-alpha'])
 
 class PushTests(GateCase):
-    """The push tier: the coordinator's screen, unchanged, from the remote's main to the tip; binaries named in
-    GATE_PUSH_ACK pass, every other finding fails."""
+    """The push tier: the coordinator's screen, unchanged, from the remote's main to the tip; binaries and large files
+    named in GATE_PUSH_ACK pass, as do core run receipts, every other finding fails."""
 
     def setUp(self):
         super().setUp()
@@ -1185,6 +1185,31 @@ class PushTests(GateCase):
         with mock.patch.dict(os.environ, {'GATE_PUSH_ACK': 'figure.png: the figure, looked at'}):
             code, out = gate.push('HEAD', self.base)
         self.assertEqual((code, out['binaries_acknowledged']), (0, ['figure.png']), out)
+
+    def receipt_at(self, stamp, utc):
+        path = f'{gate.BECOMING}/becoming-checks/{stamp}/verification.json'
+        return path, json.dumps({'utc': utc, 'status': 'passed', 'padding': 'x' * 2_100_000})
+
+    def test_a_core_receipt_over_2_mb_passes(self):
+        stamp = '20261104T201844.426739Z'
+        path, text = self.receipt_at(stamp, stamp)
+        self.repo.commit({path: text})
+        code, out = gate.push('HEAD', self.base)
+        self.assertEqual((code, out['core_receipts_passed'], out['large_to_look_at']), (0, [path], []), out)
+
+    def test_a_receipt_naming_another_stamp_is_a_finding(self):
+        path, text = self.receipt_at('20261104T201844.426739Z', '20261031T125855.282103Z')
+        self.repo.commit({path: text})
+        code, out = gate.push('HEAD', self.base)
+        self.assertEqual((code, out['large_to_look_at']), (1, [path]), out)
+
+    def test_a_large_file_elsewhere_passes_only_when_named(self):
+        self.repo.commit({'drafts/big.txt': 'y' * 2_100_000 + '\n'})
+        code, out = gate.push('HEAD', self.base)
+        self.assertEqual((code, out['large_to_look_at']), (1, ['drafts/big.txt']), out)
+        with mock.patch.dict(os.environ, {'GATE_PUSH_ACK': 'drafts/big.txt: the draft, looked at'}):
+            code, out = gate.push('HEAD', self.base)
+        self.assertEqual((code, out['large_acknowledged']), (0, ['drafts/big.txt']), out)
 
     def test_a_private_path_fails_whatever_is_acknowledged(self):
         self.repo.commit({'sources/12-private/chat.md': 'a chat\n'})

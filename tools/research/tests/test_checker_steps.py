@@ -463,6 +463,50 @@ class Runner(unittest.TestCase):
                          'a docstring with a comment after it')
 
 
+class InheritedReceipts(unittest.TestCase):
+    """`receipts_for` reads each receipt's bindings once; it must find what `binds`, walking per module, finds."""
+
+    def test_the_index_finds_what_the_walk_finds(self):
+        import random
+        checker = load_checker()
+        rng = random.Random(5)
+        root = checker.LEAN_ROOT
+        modules = [('Becoming.X', root / 'becoming/Becoming/X.lean'), ('GenerativeCore', root / 'GenerativeCore.lean'),
+                   ('Y', root / 'deeper/Y.lean')]
+        digests = ['d1', 'd2', 'd3']
+        values = [n for n, _ in modules] + [str(p.relative_to(root)) for _, p in modules] + ['X.lean', 'X', 'other',
+                  'runs/becoming/Becoming/X.lean'] + digests
+        keys = ['source_sha256', 'sha256', 'module', 'name', 'source', 'path', 'modules', 'sources', 'artifact_sha256',
+                'artifact_sources', 'inherited', 'note'] + values
+
+        def tree(depth):
+            if depth == 0 or rng.random() < 0.3:
+                return rng.choice(values + [1, None])
+            if rng.random() < 0.3:
+                return [tree(depth - 1) for _ in range(rng.randint(0, 3))]
+            return {rng.choice(keys): tree(depth - 1) for _ in range(rng.randint(0, 4))}
+        checked = agreed = bound = 0
+        for _ in range(1500):
+            data = tree(5)
+            for name, path in modules:
+                for digest in digests:
+                    walked = checker.binds(data, name, path, digest)
+                    indexed = checker.receipts_for(name, path, digest, [('r', data)]) == ['r']
+                    checked += 1
+                    agreed += walked == indexed
+                    bound += walked
+                    self.assertEqual(walked, indexed, (data, name, digest))
+        self.assertEqual(agreed, checked)
+        self.assertGreater(bound, 50, 'the receipts drawn bind as well as fail to')
+
+    def test_artifact_copies_do_not_bind(self):
+        checker = load_checker()
+        path = checker.LEAN_ROOT / 'becoming/Becoming/X.lean'
+        bound = {'source_sha256': {'Becoming.X': 'd'}}
+        copied = {'artifact_sha256': {'Becoming.X': 'd'}}
+        self.assertEqual(checker.receipts_for('Becoming.X', path, 'd', [('a', bound), ('b', copied)]), ['a'])
+
+
 class EnvironmentAudit(unittest.TestCase):
     def test_one_listing_of_the_constants(self):
         checker = load_checker()

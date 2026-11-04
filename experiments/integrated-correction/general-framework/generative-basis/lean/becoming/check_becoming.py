@@ -4370,9 +4370,57 @@ def binds(data, name, path, digest):
     return walk(data, None)
 
 
+def bindings(data):
+    """Every (digest → names) a receipt maps, gathered in one walk: the pairs `binds` looks for, an
+    entry's hash with each of its name fields, and under a key of sources or modules (not of
+    artifacts) a key with its hash. `binds(data, name, path, digest)` is true exactly when some name
+    the result gives for `digest` names the module."""
+    found = {}
+
+    def add(digest, value):
+        if isinstance(digest, str) and isinstance(value, str):
+            found.setdefault(digest, set()).add(value)
+
+    def walk(value, under):
+        if isinstance(value, list):
+            for item in value:
+                walk(item, under)
+            return
+        if not isinstance(value, dict):
+            return
+        for h in HASH_FIELDS:
+            for f in NAME_FIELDS:
+                add(value.get(h), value.get(f))
+        keyed = under is not None and "artifact" not in under and ("source" in under or "module" in under)
+        for key, item in value.items():
+            if keyed:
+                for digest in [item] + ([item.get(h) for h in HASH_FIELDS] if isinstance(item, dict) else []):
+                    add(digest, key)
+            walk(item, key)
+
+    walk(data, None)
+    return found
+
+
+_BINDINGS = {}
+
+
 def receipts_for(name, path, digest, receipts):
-    """The passed receipts (from `passed_receipts`) that map this module to these bytes."""
-    return sorted(where for where, data in receipts if binds(data, name, path, digest))
+    """The passed receipts (from `passed_receipts`) that map this module to these bytes, as `binds`
+    finds them; each receipt's bindings are gathered once (`bindings`), not walked again per module."""
+    relative = str(path.relative_to(LEAN_ROOT))
+
+    def names(value):
+        return value in (name, path.name, path.stem, relative) or value.endswith("/" + relative)
+
+    found = []
+    for where, data in receipts:
+        kept = _BINDINGS.get(id(data))
+        if kept is None or kept[0] is not data:
+            kept = _BINDINGS[id(data)] = (data, bindings(data))
+        if any(names(value) for value in kept[1].get(digest, ())):
+            found.append(where)
+    return sorted(found)
 
 
 # The Lean binary: `LEAN` if set; else `elan which lean` run in this folder, whose

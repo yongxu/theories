@@ -181,7 +181,7 @@ On main on 5 November, of 47 live freeze records, the check reads 25, alongside 
 make gate-plan                 # what the change reaches, and the steps before the gate
 make gate                      # the gate on the merged tree (BASE=main by default)
 make gate FULL=1               # every check: at a phase's end and before a push; FRESH=1 with it reuses nothing
-make gate-push                 # the push screen from the remote's main (git ls-remote) to HEAD; GATE_PUSH_ACK names binaries looked at
+make gate-push                 # the push screen from the remote's main (git ls-remote) to HEAD; GATE_PUSH_ACK names binaries and large files looked at
 python3 -B tools/research/gate.py run --train BRANCH ...   # names, under each check, the landings that reach it
 python3 -B tools/research/gate.py hold -- make research-render
 python3 -B tools/research/gate.py status
@@ -286,7 +286,7 @@ Before-copies: [AGENTS](../../../../history/2026-11-04-instructions/AGENTS-befor
 ## 8. What comes next
 
 - **GT2, the Lean checker** (§5.1): done 5 November 2026, with an independent reading of the checker; the merged drivers measured and left.
-- **A periphery checker's inherited receipts.** `receipts_for` walks every passed receipt, about 160 MB of JSON, once for each inherited module. That is about 215 s of processor time for the fallible-inquiry checker's 41 modules, against 5 s of Lean ([profile](gt2/out/fallible-profile.txt)), and the core checker pays it for its 3. Indexing each receipt's bindings once keeps the result and cuts the time to seconds. It comes right after GT2, shown equal to the walk on every receipt.
+- **A periphery checker's inherited receipts, done in GT2b (5 November 2026).** `receipts_for` walked every passed receipt, about 160 MB of JSON, once for each inherited module: about 215 s of processor time for the fallible-inquiry checker's 41 modules, against 5 s of Lean ([profile](gt2/out/fallible-profile.txt)). Each receipt's bindings are now gathered once (`bindings`). On every receipt each checker reads (814 for the core, 1,293 for the fallible-inquiry checker), for the 44 modules the two ask about and 19 more, the index gives the walk's lists, 63 of 63, in 11 s where the walk took 295 s ([comparison](gt2b/compare_receipts_for.py), [result](gt2b/out/receipts-for-equal.json)); a seeded test over random receipts covers both branches and the artifact exclusion. It shapes no step, so the runner's digest and every key are unchanged.
 - **The other periphery checkers onto the runner.** 29 periphery checkers still run Lean themselves, outside the slots and the step locks. Each moves onto `lean_step` at its next renewal, in one batch, as `check_fallible_inquiry.py` did.
 - **GT3, the tests on fixtures.** Thirteen test files assert on the live records today, so a landing that touches a record runs most of the suite. The test map gives the way out:
   - move the live assertions the strict check does not yet make into it: the regions, the front-page rules, the stock against the standard boundaries, the shape of the shared laws;
@@ -308,7 +308,7 @@ The coordinator sent ten requirements on 4 November before any slot was asked ([
 4. **Board-only commits in gaps only,** needing only links and the board's parse. §3.5, §3.2.
 5. **Freeze integrity derived from the hash files, and the review packet's check.** §3.6, §3.1.
 6. **A missing path fails, and an unplaced one selects everything.** §0, §3.1.
-7. **The push screen outside the research checks.** The coordinator's script, copied unchanged into `tools/research/push_screen.sh`, run by `gate.py push` (`make gate-push`) from the remote's main read by `git ls-remote`; a binary is a finding to look at, passed when `GATE_PUSH_ACK` names it; every other finding fails. Pushing stays Ren's.
+7. **The push screen outside the research checks.** The coordinator's script, copied unchanged into `tools/research/push_screen.sh`, run by `gate.py push` (`make gate-push`) from the remote's main read by `git ls-remote`. A binary or a new file over 2 MB is a finding to look at, passed when `GATE_PUSH_ACK` names it. A core run's receipt also passes: every core run adds one of about 5.3 MB at `becoming-checks/<stamp>/verification.json`, so the size rule flagged every Lean landing, and the wrapper passes a file there that parses as a receipt whose `utc` is that stamp (GT2b, 5 November 2026; the script itself is unchanged). Every other finding fails. Pushing stays Ren's.
 8. **Load:** slots shared by this repository's worktrees, the core run included, a dead holder's lock freed, no second copy of a run, and a red rerun alone. §3.3, §3.7.
 9. **Trains:** each landing keeps its own commits and clause, and the Queue line decides who boards. §4.
 10. **Before-copies** in `_process/history/…-instructions/`, linked from AGENTS.md's header. §6.

@@ -1076,10 +1076,27 @@ def restated(base='main') -> dict:
 REMOTE = os.environ.get('GATE_PUSH_REMOTE', 'git@github.com:yongxu/theories.git')
 
 
+CORE_RECEIPT = re.compile(re.escape(BECOMING) + r'/becoming-checks/(\d{8}T\d{6}\.\d{6}Z)/verification\.json')
+
+
+def core_receipt(path: str, tip: str) -> bool:
+    """Whether a new file is a core run's receipt: at becoming-checks/<stamp>/verification.json, a JSON object whose
+    `utc` is that stamp. Every core run adds one of about 5.3 MB, which the screen's size rule would flag."""
+    m = CORE_RECEIPT.fullmatch(path)
+    if not m:
+        return False
+    try:
+        data = json.loads(git('show', f'{tip}:{path}'))
+    except (ValueError, subprocess.CalledProcessError):
+        return False
+    return isinstance(data, dict) and data.get('utc') == m[1]
+
+
 def push(tip='HEAD', base=None) -> tuple[int, dict]:
     """The push screen (tools/research/push_screen.sh, the coordinator's, unchanged) from the remote's main to `tip`.
     The base is read from the remote itself (`git ls-remote`), since a push by URL leaves refs/remotes stale. A binary
-    is a finding to look at: one named in GATE_PUSH_ACK passes; every other finding fails. Pushing stays Ren's."""
+    or a new file over 2 MB is a finding to look at: one named in GATE_PUSH_ACK passes, and so does a core run's
+    receipt (`core_receipt`); every other finding fails. Pushing stays Ren's."""
     if base is None:
         out = subprocess.run(['git', 'ls-remote', REMOTE, 'refs/heads/main'], cwd=ROOT, stdout=subprocess.PIPE,
                              stderr=subprocess.PIPE, text=True, timeout=120)
@@ -1100,12 +1117,17 @@ def push(tip='HEAD', base=None) -> tuple[int, dict]:
         elif current:
             sections[current].append(line)
     binaries = sections.pop('binary files (look at each)', [])
+    large = [line.rsplit(' ', 1)[0] for line in sections.pop('files over 2 MB', [])]
+    receipts = [f for f in large if core_receipt(f, tip)]
     other = {k: v for k, v in sections.items() if v} or ({'not a fast-forward': [l for l in lines if l.startswith('not a fast-forward')]}
                                                       if any(l.startswith('not a fast-forward') for l in lines) else {})
     unacked = [b for b in binaries if b not in ack]
-    code = 0 if run_.returncode == 0 or (not other and not unacked) else 1
+    large_unacked = [f for f in large if f not in ack and f not in receipts]
+    code = 0 if run_.returncode == 0 or (not other and not unacked and not large_unacked) else 1
     return code, {'base': base[:12], 'tip': git('rev-parse', '--short', tip).strip(), 'screen': lines,
-                  'binaries_acknowledged': sorted(set(binaries) & ack), 'binaries_to_look_at': unacked, 'other_findings': other}
+                  'binaries_acknowledged': sorted(set(binaries) & ack), 'binaries_to_look_at': unacked,
+                  'core_receipts_passed': receipts, 'large_acknowledged': sorted(set(large) & ack - set(receipts)),
+                  'large_to_look_at': large_unacked, 'other_findings': other}
 
 
 def status() -> dict:

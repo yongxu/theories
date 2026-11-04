@@ -1,0 +1,11 @@
+{
+  "receipts": {
+    "core": 814,
+    "fallible inquiry": 1293
+  },
+  "comparisons": 63,
+  "asked_by_the_checkers": 44,
+  "seconds_walk": 295.2,
+  "seconds_index": 11.0,
+  "differ": []
+}
