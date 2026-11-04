@@ -37,7 +37,10 @@ in the receipt as `market_names`, apart from a few scientific terms; they do not
 
 A Lean step whose inputs match a step that passed, in an earlier run or earlier in this one (a
 compile from the prelude whose inputs are its module's), is not run again: its outputs and log come
-from a cache shared by runs and worktrees (`step_key`). The
+from a cache shared by runs and worktrees (`step_key`). Its inputs include the runner (`RUNNER`, the
+receipt's `runner_sha256`): a digest of the code that finds Lean, makes a step's arguments, drivers and
+files, runs it and keeps its outputs, read without comments, docstrings or layout, so a change to what
+a step runs changes every key. The
 receipt lists which steps ran and which were reused, with the run each came from and
 each step's key. `BECOMING_FRESH=1` runs every step; `LEAN_TIMEOUT` sets the seconds
 allowed for each Lean run. Steps run concurrently (`BECOMING_JOBS` at once, by default half
@@ -57,6 +60,7 @@ of each source and checker file that `main` does not hold byte for byte. A file 
 holds is named by the receipt's `source_commit` and its sha256; a reused step's log stays
 in the cache under its key.
 """
+import ast
 from collections import namedtuple
 from concurrent.futures import FIRST_COMPLETED, ThreadPoolExecutor, wait
 from contextlib import contextmanager, nullcontext
@@ -64,6 +68,8 @@ from datetime import datetime, timezone
 import fcntl
 import functools
 import hashlib
+import inspect
+import io
 import json
 import os
 from pathlib import Path
@@ -72,8 +78,10 @@ import shutil
 import subprocess
 import sys
 import tempfile
+import textwrap
 import threading
 import time
+import tokenize
 
 sys.dont_write_bytecode = True
 HERE = Path(__file__).resolve().parent
@@ -3880,16 +3888,17 @@ EXTERNAL_ROOTS = {"Init", "Std", "Lean", "Mathlib"}
 
 
 def step_key(context, label, data, keys):
-    """A Lean step's key: the toolchain context, the step, the bytes it reads and the keys
-    of the modules it imports, so a module's key covers its whole import closure. No
-    source in the closure reads files at compile time."""
+    """A Lean step's key: the toolchain context, the runner (`RUNNER`, the code that builds,
+    runs and keeps a step), the step, the bytes it reads and the keys of the modules it
+    imports, so a module's key covers its whole import closure, and a change to what a step
+    runs changes every key. No source in the closure reads files at compile time."""
     imported = []
     for name in imports_of(data):
         if name not in keys:
             assert name.split(".")[0] in EXTERNAL_ROOTS, ("import without a key", label, name)
         imported.append(keys.get(name, name))
     h = hashlib.sha256()
-    for part in [*context, label, data, *imported]:
+    for part in [*context, "runner " + RUNNER, label, data, *imported]:
         part = part if isinstance(part, bytes) else str(part).encode()
         h.update(len(part).to_bytes(8, "big") + part)
     return h.hexdigest()
@@ -4494,6 +4503,36 @@ example : ((Renewable.conditions.dependence.along Renewable.escalating).valuatio
 """
 
 
+def code_digest(functions):
+    """The sha256 of the functions' code read as tokens, with comments, docstrings and line breaks
+    inside brackets left out but statements and blocks kept, so that only a change to what the
+    code does changes it, the same under any Python."""
+    parts = []
+    for function in functions:
+        source = textwrap.dedent(inspect.getsource(inspect.unwrap(function)))
+        docstrings = set()
+        for node in ast.walk(ast.parse(source)):
+            if (isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef)) and node.body
+                    and isinstance(node.body[0], ast.Expr) and isinstance(node.body[0].value, ast.Constant)
+                    and isinstance(node.body[0].value.value, str)):
+                docstrings.update(range(node.body[0].lineno, node.body[0].end_lineno + 1))
+        code = "".join(line for number, line in enumerate(source.splitlines(True), 1) if number not in docstrings)
+        marks = {tokenize.NEWLINE: ";", tokenize.INDENT: "{", tokenize.DEDENT: "}"}
+        tokens = [marks.get(token.type, token.string)
+                  for token in tokenize.generate_tokens(io.StringIO(code).readline)
+                  if token.type not in (tokenize.COMMENT, tokenize.NL, tokenize.ENDMARKER)]
+        parts.append(function.__name__ + " " + " ".join(tokens))
+    return hashlib.sha256("\n".join(parts).encode()).hexdigest()
+
+
+# What runs a step and keeps its result: how the Lean command is found, how a step's arguments,
+# drivers and files are made, how it runs and how its outputs are kept and restored. Each step's key
+# holds this digest (`step_key`), so a change to any of it changes every key and no step is reused
+# across it. The rest of the checker (what a receipt reports, the locks and slots) is not in it.
+RUNNER = code_digest([resolve_lean, source_file, imports_of, _imports, step_key, module_keys, reuse, store,
+                      lean_plan, lean_step, run_lean])
+
+
 def main():
     stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S.%fZ")
     receipt_path, runs = output_paths(RECEIPT, RETAINED)
@@ -4524,6 +4563,7 @@ def main():
         "source_paths": {name: str(paths[name].relative_to(LEAN_ROOT)) for name in order},
         "source_sha256": {name: audit_support.digest(data) for name, data in sources.items()},
         "checker_sha256": {name: audit_support.digest(data) for name, data in helpers.items()},
+        "runner_sha256": RUNNER,
         # Files main holds byte for byte are named by this commit; the rest are copied here.
         "source_commit": {"main": commit, "copied": sorted(copied)},
         "scope": SCOPE,

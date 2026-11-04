@@ -369,6 +369,47 @@ class Plan(unittest.TestCase):
         self.assertEqual(self.checker._imports.cache_info().hits, 1)
 
 
+class Runner(unittest.TestCase):
+    """The runner's digest, which every step's key holds: code read without comments, docstrings or layout."""
+
+    def digest_of(self, text):
+        checker = load_checker()
+        with tempfile.TemporaryDirectory() as folder:
+            path = Path(folder) / 'runner_probe.py'
+            path.write_text(text)
+            import importlib.util
+            spec = importlib.util.spec_from_file_location('runner_probe', path)
+            module = importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(module)
+            return checker.code_digest([module.step])
+
+    def test_the_digest_reads_what_the_code_does(self):
+        plain = 'def step(args, ok):\n    if ok:\n        args.append("-o")\n    return args\n'
+        dressed = ('def step(args, ok):  # a comment\n    """A docstring,\n    over two lines."""\n\n'
+                   '    if ok:\n            args.append(\n                "-o")  # another\n    return args\n')
+        changed = plain.replace('"-o"', '"-j"')
+        moved = 'def step(args, ok):\n    if ok:\n        args.append("-o")\n        return args\n'
+        self.assertEqual(self.digest_of(plain), self.digest_of(dressed))
+        self.assertNotEqual(self.digest_of(plain), self.digest_of(changed))
+        self.assertNotEqual(self.digest_of(plain), self.digest_of(moved), 'a statement moved into a block')
+
+    def test_every_key_holds_the_runner(self):
+        checker = load_checker()
+        self.assertEqual(len(checker.RUNNER), 64)
+        first = checker.step_key(['t', 'b'], 'compile X', b'-- x\n', {})
+        checker.RUNNER = 'another runner'
+        self.assertNotEqual(checker.step_key(['t', 'b'], 'compile X', b'-- x\n', {}), first)
+        self.assertNotEqual(checker.module_keys(['t', 'b'], {'X': b'-- x\n'}, ['X'])['X'], first)
+
+    def test_the_runner_covers_what_builds_runs_and_keeps_a_step(self):
+        checker = load_checker()
+        covered = {'resolve_lean', 'source_file', 'imports_of', '_imports', 'step_key', 'module_keys', 'reuse', 'store',
+                   'lean_plan', 'lean_step', 'run_lean'}
+        source = Path(checker.__file__).read_text()
+        listed = re.search(r'RUNNER = code_digest\(\[([^]]*)\]\)', source)[1]
+        self.assertEqual({name.strip() for name in listed.split(',')}, covered)
+
+
 class EnvironmentAudit(unittest.TestCase):
     def test_one_listing_of_the_constants(self):
         checker = load_checker()
