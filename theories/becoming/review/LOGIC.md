@@ -510,7 +510,7 @@ File: `Becoming/Tail.lean`. **Meaning.** A number read off a sequence of levels 
 
 **Known weaknesses.**
 - The statements concern uniform rule forms, `Nonempty` of a decision function, which imply the propositions WLPO and LPO (`WLPO.of_rule`, `LPO.of_rule`); the reverse implications are not established, and no separation is proved (comparisons of strength with the constructive literature also depend on the base theory, L-14): Quote [theories/becoming/chapters/08-METHOD.md]: "That the proposition WLPO gives a rule is not shown, since that step chooses a function from a relation."
-- Since 3 November 2026, after edition 1, 08's table of known results lists separations among what the closest prior frameworks state that the account does not yet: Quote [theories/becoming/chapters/08-METHOD.md]: "separations by realizability and Kripke models: WLPO does not give LPO ... LLPO does not give WLPO, Markov's principle is independent of LLPO (here implications and equivalences only)".
+- Since 3 November 2026, after edition 1, 08's table of known results lists separations among what the closest prior frameworks state that the account does not yet: Quote [theories/becoming/chapters/08-METHOD.md]: "separations by realizability and Kripke models: WLPO does not give LPO (... cites it, not checked), LLPO does not give WLPO, Markov's principle is independent of LLPO (here implications and equivalences only)".
 
 **Questions.**
 44. Is calling these WLPO and LPO accurate, or should they carry the names of the rule forms only?
@@ -690,11 +690,11 @@ Files: `Becoming/Significance.lean`, `Becoming/PremiseWitnesses.lean`. **Meaning
 **Known weaknesses.**
 - The proof instantiates the significance as the empty one; the method chapter rates it near-definitional.
 - [this dossier, AI] *Reading only the dynamics* is semantic invariance, not a syntactic condition on statements.
-- Since 3 November 2026, after edition 1, 08's table of known results records this among what the closest prior frameworks state that the account does not yet: Quote [theories/becoming/chapters/08-METHOD.md]: "Hume's law for relevant consequence, with mixed premises and bridge principles (Schurz 1997), and Prior's counterexamples to the plain form". 07 §1 credits neither at the theorem.
+- Since 3 November 2026, after edition 1, 08's table of known results records a related debt among what the closest prior frameworks state that the account does not yet: Quote [theories/becoming/chapters/08-METHOD.md]: "Hume's law for relevant consequence, with mixed premises and bridge principles (Schurz 1997), and Prior's counterexamples to the plain form". 07 §1 credits neither at the theorem.
 - The first two theorems here quantify over the free significance, which is not stated on the grammar: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "The free significance of §1 is not lifted onto the root." Only the own-closure reading above is on the root, where 07 proves one of the condition's consequences; three more are proved on a web's level paths.
 
 **Questions.**
-60. Is invariance under change of significance the right formalization of reading only the dynamics, against syntactic forms of Hume's law (Prior 1960; Schurz 1997)? 08's table now says what they state that the account does not: is that accurate, and should 07 credit them at the theorem?
+60. Is invariance under change of significance the right formalization of reading only the dynamics, against syntactic forms of Hume's law (Prior 1960; Schurz 1997)? 08's table now says what they state that the account does not yet: is that accurate, and should 07 credit them at the theorem?
 61. Is the double-negation calibration informative about evaluation, or a lemma of the logic?
 
 <a id="l-24"></a>
