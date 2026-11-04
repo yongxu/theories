@@ -194,8 +194,8 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261019T092027.048735Z): the 98 declarations of Becoming.Hexagrams, 72 of them theorems, have empty axiom reports; the checker verifies core purity. The passage map (44 passages) is checked by verify_mapping.py against the preserved Wikisource revisions and the receipt's declaration list. Author self-review in study section 192; not independently reviewed.",
-    "zh": "Lean 4.29.1 合并检查器实查（回执 20261019T092027.048735Z）：Becoming.Hexagrams 的 98 项声明（72 项定理）公理报告为空；检查器并核对核心纯净。逐句对应（44 段）由 verify_mapping.py 对照保存的维基文库版本与回执的声明清单检查。作者自审见研究第 192 节；未经独立审查。"
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261019T092027.048735Z): the 98 declarations of Becoming.Hexagrams, 72 of them theorems, have empty axiom reports; the checker verifies core purity. The passage map (44 passages when it landed, 19 October 2026; 90 now) is checked by verify_mapping.py against the preserved Wikisource revisions and the receipt's declaration list. Author self-review in study section 192; not independently reviewed.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261019T092027.048735Z）：Becoming.Hexagrams 的 98 项声明（72 项定理）公理报告为空；检查器并核对核心纯净。逐句对应（10 月 19 日 44 段，今 90 段）由 verify_mapping.py 对照保存的维基文库版本与回执的声明清单检查。作者自审见研究第 192 节；未经独立审查。"
   },
   "next_delta": {
     "en": "Comparison with the readings of 王弼, 程頤 and 朱熹; collation against a printed edition; an independent review.",
@@ -584,7 +584,7 @@
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/y1-changes/verify_mapping.py",
       "role": "integration",
       "declarations": [],
-      "sha256": "df8d99e2a281a0717879e836f029559ff6ad0e7ad2be506ad18a577149cb8fad"
+      "sha256": "85db20adb525dc9003890a8e32a8d614794661f180d7955e16726d3ca51944b1"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
@@ -804,6 +804,10 @@
     {
       "en": "22 October 2026, ZHK (decision D62): in the passage map, 繫辭下「天下之動，貞夫一者也」 changed from agreement to exact scope, as the 脉络 map judged it: of World.unity's four parts the first two hold of every world by construction, and the two with content, a world's own readings gluing everywhere, hold exactly where it balances, which is where the rest is never active (World.withRest_balanced, Flow.changeReadings_glue_everywhere_iff, World.withRest_closed_iff added). The map's counts become 51 agreements, 27 exact scopes, 12 divergences; passages.json and YI-ZHUAN-AND-BECOMING.md (table and summary) follow. The laws and the claim are unchanged.",
       "zh": "2026年10月22日，ZHK（决定 D62）：逐句对应中，繫辭下「天下之動，貞夫一者也」依脉络之图之判由相合改为定域：World.unity 四项中前两项由构造对每个世界成立，有内容的后两项，即世界自身的读法处处粘合，恰在它平衡之处成立，平衡恰是其余从不活跃之处（加 World.withRest_balanced、Flow.changeReadings_glue_everywhere_iff、World.withRest_closed_iff）。对应之计数变为相合 51、定域 27、相分 12；passages.json 与 YI-ZHUAN-AND-BECOMING.md（表与概述）随之。诸律与论断不变。"
+    },
+    {
+      "en": "4 November 2026, board item RAE: the validation scope gave the passage map's size when this record landed in the present tense; it is dated, and today's figure added from the passing run of verify_mapping.py (90 passages, receipt 20261103T211917.845905Z), which runs with research-test since. Claims unchanged.",
+      "zh": "2026年11月4日，看板项 RAE：验证范围以现在时写本记录落地时逐句对应之段数；今注明日期，并依 verify_mapping.py 通过之运行补今日之数（90 段，回执 20261103T211917.845905Z），此后随 research-test 运行。断言未变。"
     }
   ],
   "text_versions": [

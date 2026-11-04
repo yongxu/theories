@@ -582,6 +582,24 @@ FIXES = {
                        "withholding stays (gives_needs_sparing, total_stays), so 柔弱者生之徒 holds where withholding is "
                        "local, not universally; the comparison 'the soft overcomes the hard' across laws is a gap."),
         'why': ZHK_WHY},
+    'sz-51-ji-er-wei-shi': {
+        'reading_sub': [('一个部分造成的差别属于共同活动（`Pool.difference_belongs_to_the_joint`）',
+                         '一个见证中，同一部分同样之汲取，有一个其他汲取者时造成差别，有两个时不造成'
+                         '（`Pool.difference_belongs_to_the_joint`）')],
+        'reading_en_sub': [('the difference a part makes belongs to the joint activity',
+                            'a difference can be made only together (in one witness the same part, drawing the same, '
+                            'makes a difference with one other drawer and none with two)')],
+        'why': ('RAE (AA Phase 0, E2): the reading stated the ownership ND renamed away (OU7, e5951932b: '
+                'difference_belongs_to_the_joint -> difference_only_together), and as a law what is one witness; its '
+                'words are now the home\'s (06-CLASSICAL-TEXTS: 一个见证中，同一部分同样之汲取，有一个其他汲取者时造成'
+                '差别，有两个时不造成)')},
+    'lao-51-sheng-er-bu-you': {
+        'reading_sub': [('一个部分造成的差别不属于它自己：同一部分、同样的汲取，', '一个见证中，同一部分、同样的汲取，')],
+        'reading_en_sub': [('the law that the difference a part makes belongs to the joint activity',
+                            'the case, in one witness, that a difference can be made only together')],
+        'why': ('RAE (AA Phase 0, E2): both readings stated the ownership ND renamed away (OU7, e5951932b: '
+                'difference_belongs_to_the_joint -> difference_only_together), neither saying the case is one witness; '
+                'their words are now the home\'s (06-CLASSICAL-TEXTS: 一个见证中……差别可以只由共同者造成)')},
     'zuo-xuan12-zhi-ge-wei-wu': {
         'reading_sub': [('Widening 证明：', 'LoopReturn 证明：')],
         'why': ('DF (DEFECTS-FOUND, 06): the reading named the module of its laws by its name before R22 (Widening, now '
@@ -659,6 +677,13 @@ def rename_text(s, table):
 RENAMES = renamed()
 R30_WINDOWS, R30_WORDS = r30_rules()
 
+# ND's rename in OU7 (e5951932b; its table is the NAMES dict of development/nd-nondual-names/part2/nd_rename.py,
+# with no RENAME-TABLE.json): the one declaration of it a passage names. Applied after R22 and R30, with its own note,
+# so the passages R22 and R30 renamed keep theirs.
+ND_RENAMES = {'Becoming.Pool.difference_belongs_to_the_joint': 'Becoming.Pool.difference_only_together'}
+ND_RENAMED_WHY = ('names follow the declaration ND renamed in OU7 (e5951932b; development/nd-nondual-names/part2/'
+                  'nd_rename.py), statement unchanged')
+
 # Renamed records (R35, E4): a passage's records, and record ids named in its readings, follow the record renames
 # (receipts in _process/architecture/renames/), claims unchanged. Applied after FIXES, so a FIXES entry may still
 # name a former id.
@@ -666,11 +691,22 @@ RECORDS_RENAMED_WHY = 'record ids follow the renamed records (R35; receipts in _
 
 
 def renamed_records():
-    out = {}
+    out, batch = {}, {}
     for f in sorted((V.ROOT / '_process/architecture/renames').glob('*.json')):
-        for x in json.loads(f.read_text())['renames']:
+        r = json.loads(f.read_text())
+        for x in r['renames']:
             out[x['old']] = x['new']
-    return out
+            batch[x['old']] = f"{r['batch']}, {r['date']}"
+    return out, batch
+
+
+def records_renamed_why(batches):
+    """The note for a passage whose record ids follow renames: R35's own words where R35 alone renamed them (the
+    note they have carried since), else the receipts that did (RAE: CD's rename of 3 November had been labelled R35)."""
+    if batches <= {RECORD_BATCH.get(o) for o in R35_OLD}:
+        return RECORDS_RENAMED_WHY
+    return ('record ids follow the renamed records (' + '; '.join(sorted(batches)) +
+            '; receipts in _process/architecture/renames), claims unchanged')
 
 
 def rename_records_text(s, table):
@@ -680,7 +716,8 @@ def rename_records_text(s, table):
     return s
 
 
-RECORD_RENAMES = renamed_records()
+RECORD_RENAMES, RECORD_BATCH = renamed_records()
+R35_OLD = {o for o, b in RECORD_BATCH.items() if b.startswith('R35-')}
 
 
 def tradition(slice_, e):
@@ -785,12 +822,22 @@ def main():
             p['reading_en'] = rename_text_r30(rename_text(p['reading_en'], RENAMES), R30_WINDOWS, R30_WORDS)
             if (p['declarations'], p['reading'], p['reading_en'], nearest()) != before:
                 p['corrected'] = (p['corrected'] + '; ' if p.get('corrected') else '') + RENAMED_WHY
+            before = (p['declarations'], p['reading'], p['reading_en'], nearest())
+            p['declarations'] = [ND_RENAMES.get(d, d) for d in p['declarations']]
+            if nearest():
+                p['gap'] = dict(p['gap'], nearest=[ND_RENAMES.get(d, d) for d in nearest()])
+            p['reading'] = rename_text(p['reading'], ND_RENAMES)
+            p['reading_en'] = rename_text(p['reading_en'], ND_RENAMES)
+            if (p['declarations'], p['reading'], p['reading_en'], nearest()) != before:
+                p['corrected'] = (p['corrected'] + '; ' if p.get('corrected') else '') + ND_RENAMED_WHY
             before = (p['records'], p['reading'], p['reading_en'])
+            used = {RECORD_BATCH[o] for o in RECORD_RENAMES if o in p['records']
+                    or rename_records_text(p['reading'] + p['reading_en'], {o: RECORD_RENAMES[o]}) != p['reading'] + p['reading_en']}
             p['records'] = [RECORD_RENAMES.get(r, r) for r in p['records']]
             p['reading'] = rename_records_text(p['reading'], RECORD_RENAMES)
             p['reading_en'] = rename_records_text(p['reading_en'], RECORD_RENAMES)
             if (p['records'], p['reading'], p['reading_en']) != before:
-                p['corrected'] = (p['corrected'] + '; ' if p.get('corrected') else '') + RECORDS_RENAMED_WHY
+                p['corrected'] = (p['corrected'] + '; ' if p.get('corrected') else '') + records_renamed_why(used)
             if not src.startswith('wikisource/'):
                 wanted.add(src)
             passages.append(p)

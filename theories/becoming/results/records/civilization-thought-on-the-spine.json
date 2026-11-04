@@ -50,8 +50,8 @@
     "nondual-method-not-proof"
   ],
   "validation_scope": {
-    "en": "verify_zh.py passes: the import (438 files by SHA-256), one verdict per judgment, each flagged one placed once, every fragment verbatim, 1495 declarations in the current receipt, 196 records, the name table, and both chapters' quotations, declarations, links, 对照 kinds and tables. Each entry had three readings (mapper, reviser, independent checker); the 中华本 was reviewed as one book three times. All readers were AI; no collation with a printed edition.",
-    "zh": "verify_zh.py 通过：导入（438 个文件以 SHA-256 绑定）、每条判断一个分拣裁定、每条所标判断恰落一处、每个片段在其冻结原文中逐字可见、1495 个声明在现行回执中、196 份记录、名表（锚为现行之名、引文逐字、简化后无重），以及两章的引文、声明、记录链接与生成之表。每个条目经三读（映射者、以现行主干重读的修订者、独立检查者）；中华本各篇起草后经对抗审读改为精确修改。读者都是 AI；未与刻本对校。"
+    "en": "verify_zh.py passes (4 November 2026, board item RAE; with research-test since): the import (438 files by SHA-256), one verdict for each of 5,673 judgments, each of the 3,499 flagged placed once, 2,023 fragments verbatim, 1,603 declarations in receipt 20261103T211917.845905Z, 234 records, the name table (449 names), and 06-CLASSICAL-TEXTS's 116 citations of Lean names, its record links and nine numbers of its §七; the chapters' quotations, declarations, links, 对照 kinds and tables were checked until they moved to history/ on 23 October 2026. All readers AI; no collation with a printed edition.",
+    "zh": "verify_zh.py 通过（2026 年 11 月 4 日，看板项 RAE；此后随 research-test）：导入 438 个文件，5,673 条判断各一裁定，所标 3,499 条各落一处，2,023 片段逐字，1,603 个声明在回执 20261103T211917.845905Z 中，234 份记录，名表 449 名，06 之 116 处 Lean 名、记录链接与第七节九数；诸章之引文、声明、链接、对照与表核至 10 月 23 日移入 history/。读者皆 AI；未与刻本对校。"
   },
   "next_delta": {
     "en": "The gaps the texts raise, each to be claimed before it is written: witnesses that are functions of one another; measures of a juncture; a pool weighted by share. Then the three RO and 易传 kinds decided in the chapter written into those maps.",
@@ -385,7 +385,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json",
       "role": "integration",
-      "sha256": "c32cc989794d54f344c652545597c844c1e24878ab657c4e244bfd664dc84701"
+      "sha256": "8bdc186bf496262c4db953a088f4fb0cd82c67ab4f3c3741caff8bdecbb3660e"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/coverage.json",
@@ -400,7 +400,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/verify_zh.py",
       "role": "integration",
-      "sha256": "83448941bc3e65efcb563246fc7ba00bd0f6eb33f0682d23a072fb4b4ff09f91"
+      "sha256": "ba7e897e186caaa583313059b1fd3ae3629ab9e801f8cc265046cc91804b1de3"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/build_tables.py",
@@ -464,6 +464,10 @@
     {
       "en": "22 October 2026 (WL, study section 346, D63): the name table's seventh pass adds 文 and 文同 (449 names) and revises others against 文理生生's sources; the 中华本 gains 一·二十一; the map entry xici-ji-qi-shu reads 「极其数」 as the yarrow count only, with the bound laws as a contrast, as xici-can-wu-cuo-zong and 一·二十一 do; see wenli-on-the-spine.",
       "zh": "2026年10月22日（WL，研究第 346 节，D63）：名表第七次之改立文与文同（449 个名），并据文理生生之出处修订他名；中华本增一·二十一；对应表条目 xici-ji-qi-shu 读「极其数」只为揲蓍之数，有界之律只作对照，与 xici-can-wu-cuo-zong 及一·二十一同；见 wenli-on-the-spine。"
+    },
+    {
+      "en": "4 November 2026, board item RAE (AA Phase 0's E3, E1, E2): verify_zh.py had pointed at the three chapters RA moved to history/ (23 October) and skipped them without a word, ran in no test, and rewrote a tracked file on every run; the map named a record CD renamed (whole-first-and-bounded-centers, now whole-and-regions-and-bounded-centers, 27 citations) and a declaration ND renamed in OU7 (Pool.difference_belongs_to_the_joint, now Pool.difference_only_together, 7 declaration lists and 11 mentions in readings, notes and a proposal). passages.json renamed by a dated script (zhonghua/rename_2026-11-04.py), each entry changed noted; the verifier now checks 06-CLASSICAL-TEXTS's Lean names, record links and nine numbers its §七 states of the map and the name table, fails on a missing chapter or one where it finds no Lean name, writes no file, and runs with research-test; the validation scope is restated from the passing run's own summary, and, to keep within the length rule, no longer says that \"each entry had three readings (mapper, reviser, independent checker); the 中华本 was reviewed as one book three times\", true of that work as before. Claims, kinds, readings' words and the law unchanged.",
+      "zh": "2026年11月4日，看板项 RAE（AA 第零阶段之 E3、E1、E2）：verify_zh.py 原指向 RA 于 10 月 23 日移入 history/ 之三章，缺之则默然跳过，不在任何测试中，且每次运行改写一个受版本管理之文件；对应表引一份 CD 已更名之记录（whole-first-and-bounded-centers，今为 whole-and-regions-and-bounded-centers，27 处）与一个 ND 于 OU7 更名之声明（Pool.difference_belongs_to_the_joint，今为 Pool.difference_only_together，7 个声明表及读法、注与一提议中 11 处）。passages.json 以一份注明日期之脚本更名（zhonghua/rename_2026-11-04.py），每个改动之条目皆有注；检查脚本今核 06-CLASSICAL-TEXTS 之 Lean 名、记录链接及其第七节所述对应表与名表之九数，缺章或章中不见 Lean 名即不通过，不写文件，并随 research-test 运行；验证范围依通过之运行自身之摘要重写，并为合长度之规，不再写“每个条目经三读（映射者、以现行主干重读的修订者、独立检查者）；中华本各篇起草后经对抗审读改为精确修改”，其于该工作仍真。断言、类别、读法之文与律未变。"
     }
   ]
 }
