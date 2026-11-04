@@ -4,7 +4,7 @@ An account of how anything comes to be, lasts, changes and passes away within on
 
 [中文](THE-THEORY-OF-BECOMING.zh.md) · [The one page](ONE-PAGE.md) · [The eight chapters](chapters/README.md) · [The theory graph](results/THEORY-GRAPH.md)
 
-*About an hour to read.*
+*About an hour to an hour and a quarter to read.*
 
 ## How to read this
 

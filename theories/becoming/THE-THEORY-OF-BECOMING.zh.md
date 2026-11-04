@@ -4,7 +4,7 @@
 
 [English](THE-THEORY-OF-BECOMING.md) · [一页](ONE-PAGE.zh.md) · [八章](chapters/README.md) · [理论图](results/THEORY-GRAPH.md)
 
-*约一小时读完。*
+*约五十分钟至一小时十分钟读完。*
 
 ## 怎样读本文
 

@@ -18,7 +18,10 @@ Checks, each against the repository's own files:
   5. the names the chapter gives to configurations are right: `rising k` and `falling k` are
      the lines of 坤 復 臨 泰 大壯 夬 乾 and 乾 姤 遯 否 觀 剝 坤, `sui` is 隨, and the law of
      waxing and waning carries 隨 → 中孚 → 蠱 → 小過 → 隨 and 乾 → 姤 → … → 坤 → 復 → … → 乾;
-  6. the chapter's passage table, between its two markers, is the table printed by --table;
+  6. the chapter's passage table, between its two markers, is the table printed by --table. The table lives only in
+     the chapter of this map, which RA moved to history/ on 23 October 2026 and which 06-CLASSICAL-TEXTS's section
+     五 links to; it is read there, frozen, so a failure here says the data has moved from the table the chapter
+     shows (a missing chapter is a failure too);
   7. each configuration HexagramPlaces.lean, HexagramSites.lean or HexagramSequences.lean names by its number
      (`def jiJi : Hexagram := number 63`) carries in its doc comment the name of that page of the
      received order;
@@ -57,7 +60,7 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[5]
 SRC = ROOT / 'sources/zhouyi-yizhuan'
 PKG = ROOT / 'experiments/integrated-correction/general-framework/generative-basis/lean/becoming'
-CHAPTER = ROOT / 'theories/becoming/chapters/YI-ZHUAN-AND-BECOMING.md'
+CHAPTER = ROOT / 'theories/becoming/history/YI-ZHUAN-AND-BECOMING.md'   # frozen there since 23 October 2026 (RA)
 ZAGUA = ROOT / 'sources/chinese-classical-texts/yidao-v1.3/evidence/texts/YD-OW-ZG.txt'
 BEGIN, END = '<!-- passage-map:begin -->', '<!-- passage-map:end -->'
 KIND_ZH = {'agreement': '相合', 'scope': '定域', 'divergence': '相分'}

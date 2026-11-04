@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Check the map of the Chinese sources onto the spine (board item RO). usage, from anywhere:
   python3 -B verify_ro.py [--receipt PATH] [--chapter PATH]   # check, exit 1 on any failure
-  python3 -B verify_ro.py --table                             # print the chapter's passage tables
+  python3 -B verify_ro.py --table                             # print the passage tables, as the data now gives them
   python3 -B verify_ro.py --excerpt                           # rebuild atlas-excerpt.json from the packages
 
 Checks, each against the repository's own files:
@@ -16,7 +16,11 @@ Checks, each against the repository's own files:
      (default: the newest under becoming-checks/), or, for a module of this kit not yet landed, in
      its source, reported as such;
   5. every record a passage names exists, and no passage id repeats one of the Y1 passage map;
-  6. the chapter's passage tables, between their markers, are the tables printed by --table;
+  6. the chapter (06-CLASSICAL-TEXTS, its section 六) gives, in its table of counts, for each part and in all, the
+     numbers of passages and of each kind that passages.json gives, and says the total in its assessment; a missing
+     chapter, section or row, or a row twice, is a failure. The section's other numbers are not checked. The passage tables were
+     checked against the chapter of the map until RA moved it to history/ (23 October 2026); that chapter is frozen
+     there and not checked, and --table prints the tables as the data now gives them;
   7. where the archives are present, passages.json is what build_passages.py builds from the mappers'
      entries and its FIXES (build_passages.py --check), so no edit was made in place.
 It checks text and names, not the proofs: the core checker proves the declarations."""
@@ -35,7 +39,12 @@ ROOT = HERE.parents[5]
 SRC = ROOT / 'sources/chinese-classical-texts'
 PKG = ROOT / 'experiments/integrated-correction/general-framework/generative-basis/lean/becoming'
 RECORDS = ROOT / 'theories/becoming/results/records'
-CHAPTER = ROOT / 'theories/becoming/chapters/CHINESE-SOURCES-AND-BECOMING.md'
+CHAPTER = ROOT / 'theories/becoming/chapters/06-CLASSICAL-TEXTS.md'
+SECTION = '<a id="nine-traditions"></a>'
+# The chapter's name for each part, in the row of its table of counts.
+ROW = {'易传': '易传（卦之诸节以外）', '老子': '老子（经与王弼、河上公、苏辙注，郭店与帛书之释文）', '儒家': '儒家',
+       '文字': '文字', '庄子与玄学': '庄子与玄学', '墨家与名家': '墨家与名家', '兵家、法家与轻重纵横': '兵家、法家、管子与纵横',
+       '佛教': '汉传佛教', '其他': '其他', None: '合计'}
 Y1 = HERE.parent / 'y1-changes/passages.json'
 KIND_ZH = {'agreement': '相合', 'scope': '定域', 'divergence': '相分'}
 TRADITIONS = ['易传', '老子', '庄子与玄学', '儒家', '文字', '墨家与名家', '兵家、法家与轻重纵横', '佛教', '其他']
@@ -283,20 +292,35 @@ def main():
             if not (RECORDS / f'{r}.json').exists():
                 failures.append(f"{p['id']}: no such record: {r}")
 
-    # 6. the chapter tables
-    if args.chapter.exists():
-        text = args.chapter.read_text()
-        for t in TRADITIONS:
-            if not any(p['tradition'] == t for p in passages):
-                continue
-            if begin(t) not in text or end(t) not in text:
-                failures.append(f'chapter has no passage-map markers for {t}')
-                continue
-            got = text[text.index(begin(t)) + len(begin(t)):text.index(end(t))].strip()
-            if got != table(passages, t):
-                failures.append(f'chapter table for {t} differs from passages.json (print it with --table)')
-    else:
+    # 6. the chapter's table of counts
+    n_rows = 0
+    if not args.chapter.exists():
         failures.append(f'no chapter at {args.chapter}')
+    elif SECTION not in args.chapter.read_text():
+        failures.append(f'{args.chapter.name}: no section {SECTION}')
+    else:
+        text = args.chapter.read_text()
+        section = text[text.index(SECTION):]
+        nxt = section.find('\n## ', section.find('\n## ') + 1)   # the section ends at the next heading of its level
+        section = section if nxt < 0 else section[:nxt]
+        rows = {}
+        for line in section.splitlines():
+            cells = [c.strip() for c in line.strip().strip('|').split('|')]
+            if len(cells) == 5 and all(c.isdigit() for c in cells[1:]):
+                if cells[0] in rows:
+                    failures.append(f'{args.chapter.name}: row {cells[0]} appears twice in the table of counts')
+                rows[cells[0]] = tuple(map(int, cells[1:]))
+        for t in TRADITIONS + [None]:
+            mine = [p for p in passages if t is None or p['tradition'] == t]
+            want = (len(mine),) + tuple(sum(p['kind'] == k for p in mine) for k in KIND_ZH)
+            if ROW[t] not in rows:
+                failures.append(f'{args.chapter.name}: no row {ROW[t]} in the table of counts')
+            elif rows[ROW[t]] != want:
+                failures.append(f'{args.chapter.name}: row {ROW[t]} says {rows[ROW[t]]}, passages.json gives {want}')
+            else:
+                n_rows += 1
+        if f'的 {len(passages)} 段文字' not in section:
+            failures.append(f'{args.chapter.name}: the section does not say {len(passages)} passages')
 
     # 7. the map is the build: passages.json changes only through build_passages.py's FIXES
     if full is not None:
@@ -310,11 +334,14 @@ def main():
     kinds = {k: sum(p['kind'] == k for p in passages) for k in KIND_ZH}
     per = {t: sum(p['tradition'] == t for p in passages) for t in TRADITIONS}
     decls = {d for p in passages for d in p['declarations']}
+    recs = {r for p in passages for r in p.get('records', [])}
     print(f"{len(passages)} passages ({kinds['agreement']} agreement, {kinds['scope']} scope, "
-          f"{kinds['divergence']} divergence), {sum(len(p['fragments']) for p in passages)} fragments, "
-          f"{len(decls)} declarations, {len(cited)} atlas ids; receipt {receipt.parent.name}; {rebuilt}"
+          f"{kinds['divergence']} divergence), {sum(len(p['fragments']) for p in passages)} fragments in "
+          f"{len(bound)} files bound, {len(decls)} declarations, {len(recs)} records, {len(cited)} atlas ids; "
+          f"receipt {receipt.parent.name}; {rebuilt}"
           + (f'; {len(by_source)} names checked against the kit modules, not yet in the receipt' if by_source else ''))
     print('by tradition: ' + ', '.join(f'{t} {n}' for t, n in per.items() if n))
+    print(f'chapter {args.chapter.name}: {n_rows} of {len(TRADITIONS) + 1} rows of its table of counts agree')
     print(level_line(passages, KIND_ZH))
     for f in failures:
         print('FAIL', f)
