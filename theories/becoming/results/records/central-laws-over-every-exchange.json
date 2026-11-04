@@ -309,7 +309,7 @@
     {
       "path": "tools/research/completion.py",
       "role": "integration",
-      "sha256": "d0219272bb2503285e72f838398997e6e3509800f7ecfb95d184306f972831df"
+      "sha256": "773e22f6c590f4943fe75930b293c7a8116e00e058bb6dd03a0a0d078da429e7"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
