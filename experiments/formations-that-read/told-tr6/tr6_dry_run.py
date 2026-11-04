@@ -16,10 +16,12 @@
    line is cut short, cut inside a character or lacks its newline (refused until tr6_run.mend applies
    FREEZE-1's note, then read as before), a cut line with lines written after it, a catalog read cut
    short (mended with a read naming no snapshot, timed at the move), both files cut at once, a mend
-   stopped between its two writes and made again, a full disk under --parallel, and a line holding a
-   line separator; a response another provider or another tier served
-   stops the run, logging nothing. Every stub response carries U+2028, U+2029 and U+0085 in a field no
-   reader reads, so every log passes through this freeze's line writer with them. A run stopped before
+   stopped between its two writes and made again, a later cut of the same bytes, a full disk under
+   --parallel, and a line holding a line separator; a response another provider or another tier
+   served stops the run, logging nothing, and so does one holding a surrogate pair as two code points,
+   its record not written and the log whole. Every stub response carries U+2028, U+2029, U+0085 and a
+   surrogate standing alone in a field no reader reads, so every log passes through this freeze's line
+   writer with them. A run stopped before
    its loops, and one with a probe record dropped, are read as partial. A round's closing read
    lost, then made by a rerun, must be read with the plan its answers give; a pin that moved and came
    back likewise, the calls made again answering otherwise. The smoke run's stop rule is run through
@@ -395,26 +397,40 @@ def faults(tmp, folder, m):
         (folder / "calls.jsonl").write_text(text)
         (folder / "calls.jsonl.cut").unlink(missing_ok=True)
     # both files cut at once, the cause given on two lines: mended in one call, the cut call and the calls
-    # after the last whole read unread, the note on one line; and a mend stopped after its .cut was written
-    # but before the log was, made again: the lines are not added to the .cut twice
+    # after the last whole read unread, the note on one line; a mend stopped after its .cut was written
+    # but before the log was, made again: the lines are not added to the .cut twice; and a later cut of the
+    # same bytes, the call made again and cut again at the same place: added with its own note
     cat0 = (folder / "catalog.jsonl").read_text()
+    good0 = set(T.good_answers(folder, FAMILY))
     try:
         cl = cat0.split("\n")[:-1]
+        last_whole0 = max(float(json.loads(ln)["t"]) for ln in cl[:-1])
+        unread0 = ({k for k, r in {r["id"]: r for r in recs}.items() if float(r["t1"]) > last_whole0}
+                   | {recs[-1]["id"]}) & good0
         (folder / "catalog.jsonl").write_text("\n".join(cl[:-1] + [cl[-1][:len(cl[-1]) // 2]]))
-        (folder / "calls.jsonl").write_bytes(body + lines[-1][:len(lines[-1]) // 2].encode("utf-8"))
+        half = body + lines[-1][:len(lines[-1]) // 2].encode("utf-8")
+        (folder / "calls.jsonl").write_bytes(half)
         refuses = refused(load)
         T.mend(folder, "the dry run:\nboth files cut")
         mv = T.moved_lines(folder)
         load()
-        out["both files cut, the cause on two lines: refused, then mended at once, each note on one line"] = \
+        out["both files cut, the cause on two lines: refused, then mended at once, each note on one line, "
+            "exactly the cut call and the calls that ended after the last whole read no longer read"] = \
             refuses and [len(mv[n]["lines_moved"]) for n in ("calls.jsonl.cut", "catalog.jsonl.cut")] == [1, 1] and \
             [len(mv[n]["notes"]) for n in ("calls.jsonl.cut", "catalog.jsonl.cut")] == [1, 1] and \
-            sum(s is None for _, s in R.catalog_reads(folder)) == 1
+            sum(s is None for _, s in R.catalog_reads(folder)) == 1 and bool(unread0) and \
+            good0 - set(T.good_answers(folder, FAMILY)) == unread0
         before_cut = (folder / "calls.jsonl.cut").read_bytes()
-        (folder / "calls.jsonl").write_bytes(body + lines[-1][:len(lines[-1]) // 2].encode("utf-8"))
+        (folder / "calls.jsonl").write_bytes(half)
         T.mend(folder, "the dry run: made again")
         out["a mend stopped between its two writes, made again: the moved line not added twice"] = \
             (folder / "calls.jsonl.cut").read_bytes() == before_cut and (folder / "calls.jsonl").read_bytes() == body
+        (folder / "calls.jsonl").write_bytes(body + (lines[-1] + "\n").encode("utf-8") + half[len(body):])
+        T.mend(folder, "the dry run: cut again at the same place")
+        mv = T.moved_lines(folder)["calls.jsonl.cut"]
+        out["a later cut of the same bytes, the log grown since: its line and note added"] = \
+            len(mv["lines_moved"]) == 2 and len(mv["notes"]) == 2 and \
+            (folder / "calls.jsonl").read_bytes() == text.encode("utf-8")
     finally:
         (folder / "calls.jsonl").write_text(text)
         (folder / "catalog.jsonl").write_text(cat0)

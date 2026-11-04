@@ -35,6 +35,7 @@ does it for a last line cut short.
 """
 
 import argparse
+import hashlib
 import json
 import os
 import random
@@ -136,18 +137,18 @@ def log_whole(folder):
 def mend(folder, cause):
     """FREEZE-1's note "A log cut short": in calls.jsonl and catalog.jsonl, the first line that does not
     read whole, or the last where the file does not end in a newline, and every line after it, are
-    moved, byte for byte, to NAME.cut beside it, followed by one line beginning "# " that names the time
-    and the cause (on one line). With this freeze's line writer that is the last line alone. Where catalog lines move,
-    a whole read naming no snapshot is put in their place, timed at the move, later than every read and
-    every call: the calls that ended after the last whole read then lack a good closing read, and
-    resume makes them again rather than the rerun's first read closing them. A moved call's record is no
-    longer logged, so its call is made again. Where a line holds a raw line separator, nothing is
-    changed and the folder stays refused."""
+    moved, byte for byte, to NAME.cut beside it, followed by one line beginning "# " that names the time,
+    the log's length and sha-256 before the move, and the cause (on one line). With this freeze's line
+    writer that is the last line alone. Where catalog lines move, a whole read naming no snapshot is put
+    in their place, timed at the move, later than every read and every call: the calls that ended after
+    the last whole read then lack a good closing read, and resume makes them again rather than the
+    rerun's first read closing them. A moved call's record is no longer logged, so its call is made
+    again. Where a line holds a raw line separator, nothing is changed and the folder stays refused."""
     folder = Path(folder)
-    kept, cut, recs = {}, {}, {}
+    kept, cut, recs, raws = {}, {}, {}, {}
     for name in ("calls.jsonl", "catalog.jsonl"):
         p = folder / name
-        raw = p.read_bytes() if p.exists() else b""
+        raw = raws[name] = p.read_bytes() if p.exists() else b""
         lines = raw.split(b"\n")
         ends = lines[-1] == b""
         lines = lines[:-1] if ends else lines
@@ -183,24 +184,39 @@ def mend(folder, cause):
         kept["catalog.jsonl"].append(line({"t": now, "family": family, "slug": None}).encode("utf-8"))
         done.append(f"catalog.jsonl: a read naming no snapshot put in their place, at t {now}")
     stamp = time.strftime("%Y-%m-%dT%H:%M:%S%z")
-    note = f"# cut {stamp}: {' '.join(cause.split())}\n".encode("utf-8")
     for name, c in cut.items():
         # the .cut first, then the log, each whole by a rename: a stop between leaves the lines in both,
-        # and a second mend, finding them already at the .cut's end before its note, does not add them again
+        # and a second mend, finding the .cut's last note naming the log as it still stands, does not add
+        # them again; a later cut of the same bytes, the log grown since, is added with its own note
         moved, p, q = b"".join(ln + b"\n" for ln in c), folder / name, folder / (name + ".cut")
+        left = f"from {len(raws[name])} bytes, sha-256 {hashlib.sha256(raws[name]).hexdigest()}"
         old = q.read_bytes() if q.exists() else b""
         body, _, last = old.rstrip(b"\n").rpartition(b"\n")
-        if not (last.startswith(b"# cut ") and (body + b"\n").endswith(moved)):
-            tmp = folder / (name + ".cut.tmp")
-            tmp.write_bytes(old + moved + note)
-            os.replace(tmp, q)
-        tmp = folder / (name + ".tmp")
-        tmp.write_bytes(b"".join(ln + b"\n" for ln in kept[name]))
-        os.replace(tmp, p)
+        if not (last.startswith(b"# cut ") and last[6:].partition(b" ")[2].startswith(left.encode() + b": ")
+                and (body + b"\n").endswith(moved)):
+            _whole(q, old + moved + f"# cut {stamp} {left}: {' '.join(cause.split())}\n".encode("utf-8"))
+        _whole(p, b"".join(ln + b"\n" for ln in kept[name]))
     log_whole(folder)
     for d in done:
         print(f"{folder}: {d}")
     return done
+
+
+def _whole(p, data):
+    """p holds data, written whole by a rename: the new file, and then the folder, flushed to the file system
+    (fsync) before and after it, so that a stopped process or a crashed machine leaves the old file or the
+    new one, as far as the file system's fsync holds."""
+    tmp = p.with_name(p.name + ".tmp")
+    with open(tmp, "wb") as f:
+        f.write(data)
+        f.flush()
+        os.fsync(f.fileno())
+    os.replace(tmp, p)
+    fd = os.open(p.parent, os.O_RDONLY)
+    try:
+        os.fsync(fd)
+    finally:
+        os.close(fd)
 
 
 def moved_lines(folder):
