@@ -4516,11 +4516,22 @@ def code_digest(functions):
                     and isinstance(node.body[0], ast.Expr) and isinstance(node.body[0].value, ast.Constant)
                     and isinstance(node.body[0].value.value, str)):
                 docstrings.update(range(node.body[0].lineno, node.body[0].end_lineno + 1))
-        code = "".join(line for number, line in enumerate(source.splitlines(True), 1) if number not in docstrings)
+        lines = [line for number, line in enumerate(source.splitlines(True), 1) if number not in docstrings]
         marks = {tokenize.NEWLINE: ";", tokenize.INDENT: "{", tokenize.DEDENT: "}"}
-        tokens = [marks.get(token.type, token.string)
-                  for token in tokenize.generate_tokens(io.StringIO(code).readline)
-                  if token.type not in (tokenize.COMMENT, tokenize.NL, tokenize.ENDMARKER)]
+        # From Python 3.12 an f-string is several tokens; it is read whole, as earlier Pythons read it.
+        opens, closes = getattr(tokenize, "FSTRING_START", None), getattr(tokenize, "FSTRING_END", None)
+        tokens, depth, begun = [], 0, None
+        for token in tokenize.generate_tokens(io.StringIO("".join(lines)).readline):
+            if token.type == opens:
+                depth, begun = depth + 1, begun if depth else token.start
+            elif token.type == closes:
+                depth -= 1
+                if not depth:
+                    (row, column), (end_row, end_column) = begun, token.end
+                    text = "".join(lines[row - 1:end_row])
+                    tokens.append(text[column:len(text) - len(lines[end_row - 1]) + end_column])
+            elif not depth and token.type not in (tokenize.COMMENT, tokenize.NL, tokenize.ENDMARKER):
+                tokens.append(marks.get(token.type, token.string))
         parts.append(function.__name__ + " " + " ".join(tokens))
     return hashlib.sha256("\n".join(parts).encode()).hexdigest()
 
