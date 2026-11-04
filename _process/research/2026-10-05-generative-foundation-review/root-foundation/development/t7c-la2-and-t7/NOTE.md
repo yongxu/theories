@@ -14,10 +14,11 @@ LA2 ([experiment](../../../../../../experiments/self-rewarding-lock/README.md)) 
 |---|---|---|---|
 | 3 | 8 : 1 | yes | prose, 10 of 10 |
 | 4 | 9 : 0 | no reader carries it | lists |
-| 5 | 7 : 2 | yes | prose, 10 of 10 |
+| 5 | 7 : 2 | yes, two notes | prose, 10 of 10 |
 | 6 | 9 : 0 | no reader carries it | lists |
 
 - The rule in force turned to prose after each reading where the disfavoured carried the loss. It turned back only after the readings where no reader carried it.
+- The note's effect is tested by the frozen paired measure (`late` against `unread`) at step 3 only. At step 5, `unread` read 9 : 0, so the turn there is read post hoc, against one call without notes at 7 : 2 from another condition, which chose lists 9 of 10.
 - The share of lists was 32 : 1 at steps 4, 6 and 8, and lower at the odd steps.
 - The frozen course rule, `kept`, compares step 8 with step 4 and lets a tie count. So `late` passed as kept only by an exact tie that holds at every even step. A run ending at step 5 or 7 would have printed it as turned.
 
@@ -42,7 +43,7 @@ The lesson: read the per-step record before a frozen summary rule, and do not na
 - **[08](../../../../../../theories/becoming/chapters/08-METHOD.md#theses)'s T7 row:** the same, shortened.
 - **The fronts, for ED2.** ONE-PAGE and its zh edition, and the overview and its zh edition, are under ED2's freeze.
   - ONE-PAGE says "another case T7 forbids", and the overview's T7 row says "a case T7 forbids". Both are true, but neither says what follows.
-  - Proposed for ONE-PAGE: "one note of the loss among nine readers turning it at each reading where the loss was read, a case T7 forbids, so that case is contradicted in this system; the course passed the frozen rule only by an exact tie at its last step".
+  - Proposed for ONE-PAGE: landed in T7C itself (§3 below the list), since ONE-PAGE is not a dossier.
   - The overview's row: the same, with "the bridge, that such a judge is a pool read by kind, failed".
   - The zh editions to match. The overview's zh T7 row also lists three forbidden cases, the list before AJ8.
 
@@ -57,4 +58,4 @@ The same reader checks the revision: below.
 
 ## 5. The reader's check of the revision
 
-(Filled after the reading.)
+The same reader checked the revision against `runs.json` and `analyze.py`: every number holds (`late`'s FROM_STEP 4; 32 : 1 at steps 4, 6 and 8; the odd steps lower; the rule (1,11) after the readings of the loss). Taken: at 7 : 2 two prose readers carried notes, not one; the second reading's turn has no frozen paired control and is read post hoc; the case's drift clause named in 02 as in 08, with lists in 60 of 60 without the note; the tie stated once; "contradicted" too strong for one judge and two readings, so the fronts say "occurred".
