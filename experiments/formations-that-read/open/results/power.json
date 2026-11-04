@@ -1,0 +1,197 @@
+{
+ "what": "TR2 Stage B's power check at the frozen choices; exact, no model, no download",
+ "sampled_acts": {
+  "alpha": 0.0125,
+  "shift": 0.05,
+  "pairs": 1600,
+  "least_pairs_power_0.9_every_share": 1600,
+  "power_by_minority_share": {
+   "0.0": {
+    "200": 0.7867,
+    "300": 0.984,
+    "400": 0.9994,
+    "600": 1.0,
+    "800": 1.0,
+    "1200": 1.0,
+    "1600": 1.0
+   },
+   "0.1": {
+    "200": 0.5928,
+    "300": 0.8492,
+    "400": 0.9576,
+    "600": 0.9974,
+    "800": 0.9999,
+    "1200": 1.0,
+    "1600": 1.0
+   },
+   "0.2": {
+    "200": 0.3972,
+    "300": 0.6609,
+    "400": 0.8264,
+    "600": 0.9656,
+    "800": 0.9944,
+    "1200": 0.9999,
+    "1600": 1.0
+   },
+   "0.3": {
+    "200": 0.2424,
+    "300": 0.4269,
+    "400": 0.5903,
+    "600": 0.8184,
+    "800": 0.9318,
+    "1200": 0.9925,
+    "1600": 0.9994
+   },
+   "0.4": {
+    "200": 0.1083,
+    "300": 0.1871,
+    "400": 0.2777,
+    "600": 0.453,
+    "800": 0.6068,
+    "1200": 0.8231,
+    "1600": 0.9296
+   }
+  },
+  "power_at_pairs_by_base_worst_coupling": {
+   "0.1": {
+    "minority_share": 0.4,
+    "power": 0.9296
+   },
+   "0.3": {
+    "minority_share": 0.4615,
+    "power": 0.4814
+   },
+   "0.5": {
+    "minority_share": 0.4737,
+    "power": 0.3184
+   }
+  }
+ },
+ "positive_control": {
+  "pairs": 400,
+  "alpha": 0.05,
+  "power_one_way": {
+   "0.02": 0.8115,
+   "0.03": 0.981,
+   "0.05": 0.9999,
+   "0.1": 1.0
+  }
+ },
+ "probe": {
+  "qwen": {
+   "states": 37,
+   "pairs_held_out": 200,
+   "count_needed_first_step": 125,
+   "count_needed_last_step": 117,
+   "power_at_accuracy": {
+    "0.55": 0.0191,
+    "0.6": 0.259,
+    "0.65": 0.7933,
+    "0.7": 0.9906,
+    "0.75": 1.0
+   },
+   "least_accuracy_power_0.9_first_step": 0.666
+  },
+  "olmo": {
+   "states": 33,
+   "pairs_held_out": 200,
+   "count_needed_first_step": 125,
+   "count_needed_last_step": 117,
+   "power_at_accuracy": {
+    "0.55": 0.0191,
+    "0.6": 0.259,
+    "0.65": 0.7933,
+    "0.7": 0.9906,
+    "0.75": 1.0
+   },
+   "least_accuracy_power_0.9_first_step": 0.666
+  }
+ },
+ "probe_control": {
+  "false_void_at_most": 0.01,
+  "under_exact_passes": "cannot reject: the identical arm's states equal base's"
+ },
+ "coverage": {
+  "arm in base's lump": {
+   "S1": 1.0,
+   "S2": 0.75,
+   "S3": 1.0
+  },
+  "arm apart from base": {
+   "S1": 0.0,
+   "S2": 0.3333,
+   "S3": 0.25
+  }
+ },
+ "usage": {
+  "passes_per_checkpoint": {
+   "smoke": 52,
+   "pilot": 800,
+   "main": 9600,
+   "recognition": 2000,
+   "all": 12452
+  },
+  "prompt_words_with_answer": {
+   "smoke": [
+    78,
+    103
+   ],
+   "pilot": [
+    74,
+    107
+   ],
+   "main": [
+    71,
+    101
+   ],
+   "recognition": [
+    79,
+    108
+   ]
+  },
+  "checkpoints": {
+   "qwen-base": {
+    "files": 12,
+    "bytes": 16393040530,
+    "weights_bytes": 16381516776,
+    "states_kept": 2400,
+    "state_bytes": 1454899200
+   },
+   "qwen-tuned": {
+    "files": 12,
+    "bytes": 16397431693,
+    "weights_bytes": 16381516776,
+    "states_kept": 2400,
+    "state_bytes": 1454899200
+   },
+   "olmo-base": {
+    "files": 11,
+    "bytes": 14605764425,
+    "weights_bytes": 14596063712,
+    "states_kept": 2400,
+    "state_bytes": 1297612800
+   },
+   "olmo-tuned": {
+    "files": 12,
+    "bytes": 14605767559,
+    "weights_bytes": 14596063712,
+    "states_kept": 2400,
+    "state_bytes": 1297612800
+   }
+  },
+  "download_bytes": 62002004207,
+  "state_bytes_in_all": 5505024000,
+  "passes_in_all": 49808,
+  "hours_per_checkpoint_at": {
+   "0.25 s a pass": 0.9,
+   "0.5 s a pass": 1.7,
+   "1.0 s a pass": 3.5,
+   "2.0 s a pass": 6.9,
+   "5.0 s a pass": 17.3,
+   "10.0 s a pass": 34.6,
+   "30.0 s a pass": 103.8
+  },
+  "time": "measured by each checkpoint's smoke run (seconds a pass, projected for every phase)"
+ },
+ "ok": true
+}

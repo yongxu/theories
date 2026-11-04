@@ -1,0 +1,1268 @@
+{
+ "what": "TR2 Stage B's dry run: the frozen run and rule driven by stand-in engines; no model, no torch, no download",
+ "conditions": {
+  "contents": 2008,
+  "per_family": {
+   "H": 800,
+   "E": 640,
+   "S": 640,
+   "R": 640
+  },
+  "pilot": 400,
+  "main_max": 1600,
+  "smoke": 8,
+  "x_letter_A_in_main": 776
+ },
+ "prompts": {
+  "base ends in Answer:": true,
+  "tuned: one user message, the reply begun, the base text": true,
+  "toggling a factor changes one line": true,
+  "the identical arm is base": true
+ },
+ "the pass's token ids": {
+  "base: the text, special tokens added": true,
+  "Qwen tuned: template with thinking off, then Answer:, no special tokens": true,
+  "Olmo tuned: the template with no switch": true,
+  "ok": true
+ },
+ "formations": [
+  {
+   "formation": "content-only",
+   "pairs": 1600,
+   "pilot": {
+    "discordant_up_only": 163,
+    "discordant_down_only": 0,
+    "p": 1.7105694144590204e-49,
+    "shown_apart": true,
+    "reading": "a cue known to move the act; where it shows no net shift, a factor's 'no net shift shown' is uninformative on this checkpoint"
+   },
+   "ok": true,
+   "premise": {
+    "exact_comparison_attainable": true,
+    "identical_arms_apart": 0,
+    "of": 1600
+   },
+   "forbidden": {
+    "same_token_ids_apart": 0,
+    "last_state_equal_logits_apart": 0,
+    "counted": "classes of passes sharing token ids, or a last state, with values apart",
+    "reading": "each is an implementation other than stated or an input not listed. The first is met exactly where the premise fails (only base and identical share token ids) and does not tell nondeterminism from a fault; the second separates a fault in the logits from noise in the states"
+   },
+   "format": {
+    "mean_letter_mass_at_base": 0.7558,
+    "behaviour_read": true,
+    "mean_px_at_base": 0.5408
+   },
+   "factors": {
+    "F1": {
+     "states_exact_last": 0.0,
+     "probe": "not shown apart by the probe",
+     "probe_layers": [],
+     "logits_apart": "0 of 1600",
+     "mean_tv": 0.0,
+     "tv_above_identical": {
+      "contents": 0,
+      "of": 1600,
+      "p": 0.9999999999994176
+     },
+     "sampled": [
+      0,
+      0,
+      1.0
+     ],
+     "behaviour": "no net shift shown",
+     "coverage": {
+      "S1": 1.0,
+      "S2": 0.75,
+      "S3": 1.0
+     },
+     "misled": 0.0
+    },
+    "F2": {
+     "states_exact_last": 0.0,
+     "probe": "not shown apart by the probe",
+     "probe_layers": [],
+     "logits_apart": "0 of 1600",
+     "mean_tv": 0.0,
+     "tv_above_identical": {
+      "contents": 0,
+      "of": 1600,
+      "p": 0.9999999999994176
+     },
+     "sampled": [
+      0,
+      0,
+      1.0
+     ],
+     "behaviour": "no net shift shown",
+     "coverage": {
+      "S1": 1.0,
+      "S2": 0.75,
+      "S3": 1.0
+     },
+     "misled": 0.0
+    },
+    "F3": {
+     "states_exact_last": 0.0,
+     "probe": "not shown apart by the probe",
+     "probe_layers": [],
+     "logits_apart": "0 of 1600",
+     "mean_tv": 0.0,
+     "tv_above_identical": {
+      "contents": 0,
+      "of": 1600,
+      "p": 0.9999999999994176
+     },
+     "sampled": [
+      0,
+      0,
+      1.0
+     ],
+     "behaviour": "no net shift shown",
+     "coverage": {
+      "S1": 1.0,
+      "S2": 0.75,
+      "S3": 1.0
+     },
+     "misled": 0.0
+    },
+    "F4": {
+     "states_exact_last": 0.0,
+     "probe": "not shown apart by the probe",
+     "probe_layers": [],
+     "logits_apart": "0 of 1600",
+     "mean_tv": 0.0,
+     "tv_above_identical": {
+      "contents": 0,
+      "of": 1600,
+      "p": 0.9999999999994176
+     },
+     "sampled": [
+      0,
+      0,
+      1.0
+     ],
+     "behaviour": "no net shift shown",
+     "coverage": {
+      "S1": 1.0,
+      "S2": 0.75,
+      "S3": 1.0
+     },
+     "misled": 0.0
+    }
+   },
+   "recognition": {
+    "F1": "void: the checkpoint does not answer Yes or No",
+    "F2": "void: the checkpoint does not answer Yes or No",
+    "F3": "void: the checkpoint does not answer Yes or No",
+    "F4": "void: the checkpoint does not answer Yes or No",
+    "mean_yes_no_mass_at_base": 0.2278
+   },
+   "identical_arm_sampled": {
+    "discordant": 0,
+    "p": 1.0
+   }
+  },
+  {
+   "formation": "detected",
+   "pairs": 1600,
+   "pilot": {
+    "discordant_up_only": 163,
+    "discordant_down_only": 0,
+    "p": 1.7105694144590204e-49,
+    "shown_apart": true,
+    "reading": "a cue known to move the act; where it shows no net shift, a factor's 'no net shift shown' is uninformative on this checkpoint"
+   },
+   "ok": true,
+   "premise": {
+    "exact_comparison_attainable": true,
+    "identical_arms_apart": 0,
+    "of": 1600
+   },
+   "forbidden": {
+    "same_token_ids_apart": 0,
+    "last_state_equal_logits_apart": 0,
+    "counted": "classes of passes sharing token ids, or a last state, with values apart",
+    "reading": "each is an implementation other than stated or an input not listed. The first is met exactly where the premise fails (only base and identical share token ids) and does not tell nondeterminism from a fault; the second separates a fault in the logits from noise in the states"
+   },
+   "format": {
+    "mean_letter_mass_at_base": 0.7558,
+    "behaviour_read": true,
+    "mean_px_at_base": 0.5408
+   },
+   "factors": {
+    "F1": {
+     "states_exact_last": 1.0,
+     "probe": "apart (probe)",
+     "probe_layers": [
+      1,
+      2,
+      3
+     ],
+     "logits_apart": "0 of 1600",
+     "mean_tv": 0.0,
+     "tv_above_identical": {
+      "contents": 0,
+      "of": 1600,
+      "p": 0.9999999999994176
+     },
+     "sampled": [
+      0,
+      0,
+      1.0
+     ],
+     "behaviour": "no net shift shown",
+     "coverage": {
+      "S1": 0.0,
+      "S2": 0.3333,
+      "S3": 0.25
+     },
+     "misled": 0.0
+    },
+    "F2": {
+     "states_exact_last": 1.0,
+     "probe": "apart (probe)",
+     "probe_layers": [
+      1,
+      2,
+      3
+     ],
+     "logits_apart": "0 of 1600",
+     "mean_tv": 0.0,
+     "tv_above_identical": {
+      "contents": 0,
+      "of": 1600,
+      "p": 0.9999999999994176
+     },
+     "sampled": [
+      0,
+      0,
+      1.0
+     ],
+     "behaviour": "no net shift shown",
+     "coverage": {
+      "S1": 0.0,
+      "S2": 0.3333,
+      "S3": 0.25
+     },
+     "misled": 0.0
+    },
+    "F3": {
+     "states_exact_last": 1.0,
+     "probe": "apart (probe)",
+     "probe_layers": [
+      1,
+      2,
+      3
+     ],
+     "logits_apart": "0 of 1600",
+     "mean_tv": 0.0,
+     "tv_above_identical": {
+      "contents": 0,
+      "of": 1600,
+      "p": 0.9999999999994176
+     },
+     "sampled": [
+      0,
+      0,
+      1.0
+     ],
+     "behaviour": "no net shift shown",
+     "coverage": {
+      "S1": 0.0,
+      "S2": 0.3333,
+      "S3": 0.25
+     },
+     "misled": 0.0
+    },
+    "F4": {
+     "states_exact_last": 1.0,
+     "probe": "apart (probe)",
+     "probe_layers": [
+      1,
+      2,
+      3
+     ],
+     "logits_apart": "0 of 1600",
+     "mean_tv": 0.0,
+     "tv_above_identical": {
+      "contents": 0,
+      "of": 1600,
+      "p": 0.9999999999994176
+     },
+     "sampled": [
+      0,
+      0,
+      1.0
+     ],
+     "behaviour": "no net shift shown",
+     "coverage": {
+      "S1": 0.0,
+      "S2": 0.3333,
+      "S3": 0.25
+     },
+     "misled": 0.0
+    }
+   },
+   "recognition": {
+    "F1": "void: the checkpoint does not answer Yes or No",
+    "F2": "void: the checkpoint does not answer Yes or No",
+    "F3": "void: the checkpoint does not answer Yes or No",
+    "F4": "void: the checkpoint does not answer Yes or No",
+    "mean_yes_no_mass_at_base": 0.2292
+   },
+   "identical_arm_sampled": {
+    "discordant": 0,
+    "p": 1.0
+   }
+  },
+  {
+   "formation": "twin",
+   "pairs": 1600,
+   "pilot": {
+    "discordant_up_only": 163,
+    "discordant_down_only": 0,
+    "p": 1.7105694144590204e-49,
+    "shown_apart": true,
+    "reading": "a cue known to move the act; where it shows no net shift, a factor's 'no net shift shown' is uninformative on this checkpoint"
+   },
+   "ok": true,
+   "premise": {
+    "exact_comparison_attainable": true,
+    "identical_arms_apart": 0,
+    "of": 1600
+   },
+   "forbidden": {
+    "same_token_ids_apart": 0,
+    "last_state_equal_logits_apart": 0,
+    "counted": "classes of passes sharing token ids, or a last state, with values apart",
+    "reading": "each is an implementation other than stated or an input not listed. The first is met exactly where the premise fails (only base and identical share token ids) and does not tell nondeterminism from a fault; the second separates a fault in the logits from noise in the states"
+   },
+   "format": {
+    "mean_letter_mass_at_base": 0.7558,
+    "behaviour_read": true,
+    "mean_px_at_base": 0.5408
+   },
+   "factors": {
+    "F1": {
+     "states_exact_last": 1.0,
+     "probe": "apart (probe)",
+     "probe_layers": [
+      1,
+      2,
+      3
+     ],
+     "logits_apart": "154 of 1600",
+     "mean_tv": 0.0408,
+     "tv_above_identical": {
+      "contents": 154,
+      "of": 1600,
+      "p": 0.9999999999994176
+     },
+     "sampled": [
+      0,
+      64,
+      1.084202172485506e-19
+     ],
+     "behaviour": "a net shift",
+     "coverage": {
+      "S1": 0.0,
+      "S2": 0.3333,
+      "S3": 0.25
+     },
+     "misled": 0.0175
+    },
+    "F2": {
+     "states_exact_last": 1.0,
+     "probe": "apart (probe)",
+     "probe_layers": [
+      1,
+      2,
+      3
+     ],
+     "logits_apart": "0 of 1600",
+     "mean_tv": 0.0,
+     "tv_above_identical": {
+      "contents": 0,
+      "of": 1600,
+      "p": 0.9999999999994176
+     },
+     "sampled": [
+      0,
+      0,
+      1.0
+     ],
+     "behaviour": "no net shift shown",
+     "coverage": {
+      "S1": 0.0,
+      "S2": 0.3333,
+      "S3": 0.25
+     },
+     "misled": 0.0
+    },
+    "F3": {
+     "states_exact_last": 1.0,
+     "probe": "apart (probe)",
+     "probe_layers": [
+      1,
+      2,
+      3
+     ],
+     "logits_apart": "0 of 1600",
+     "mean_tv": 0.0,
+     "tv_above_identical": {
+      "contents": 0,
+      "of": 1600,
+      "p": 0.9999999999994176
+     },
+     "sampled": [
+      0,
+      0,
+      1.0
+     ],
+     "behaviour": "no net shift shown",
+     "coverage": {
+      "S1": 0.0,
+      "S2": 0.3333,
+      "S3": 0.25
+     },
+     "misled": 0.0
+    },
+    "F4": {
+     "states_exact_last": 1.0,
+     "probe": "apart (probe)",
+     "probe_layers": [
+      1,
+      2,
+      3
+     ],
+     "logits_apart": "0 of 1600",
+     "mean_tv": 0.0,
+     "tv_above_identical": {
+      "contents": 0,
+      "of": 1600,
+      "p": 0.9999999999994176
+     },
+     "sampled": [
+      0,
+      0,
+      1.0
+     ],
+     "behaviour": "no net shift shown",
+     "coverage": {
+      "S1": 0.0,
+      "S2": 0.3333,
+      "S3": 0.25
+     },
+     "misled": 0.0
+    }
+   },
+   "recognition": {
+    "F1": "void: the checkpoint does not answer Yes or No",
+    "F2": "void: the checkpoint does not answer Yes or No",
+    "F3": "void: the checkpoint does not answer Yes or No",
+    "F4": "void: the checkpoint does not answer Yes or No",
+    "mean_yes_no_mass_at_base": 0.2292
+   },
+   "identical_arm_sampled": {
+    "discordant": 0,
+    "p": 1.0
+   }
+  },
+  {
+   "formation": "follower",
+   "pairs": 1600,
+   "pilot": {
+    "discordant_up_only": 160,
+    "discordant_down_only": 0,
+    "p": 1.3684555315672045e-48,
+    "shown_apart": true,
+    "reading": "a cue known to move the act; where it shows no net shift, a factor's 'no net shift shown' is uninformative on this checkpoint"
+   },
+   "ok": true,
+   "premise": {
+    "exact_comparison_attainable": true,
+    "identical_arms_apart": 0,
+    "of": 1600
+   },
+   "forbidden": {
+    "same_token_ids_apart": 0,
+    "last_state_equal_logits_apart": 0,
+    "counted": "classes of passes sharing token ids, or a last state, with values apart",
+    "reading": "each is an implementation other than stated or an input not listed. The first is met exactly where the premise fails (only base and identical share token ids) and does not tell nondeterminism from a fault; the second separates a fault in the logits from noise in the states"
+   },
+   "format": {
+    "mean_letter_mass_at_base": 0.7563,
+    "behaviour_read": true,
+    "mean_px_at_base": 0.5417
+   },
+   "factors": {
+    "F1": {
+     "states_exact_last": 1.0,
+     "probe": "apart (probe)",
+     "probe_layers": [
+      1,
+      2,
+      3
+     ],
+     "logits_apart": "0 of 1600",
+     "mean_tv": 0.0,
+     "tv_above_identical": {
+      "contents": 0,
+      "of": 1600,
+      "p": 0.9999999999994176
+     },
+     "sampled": [
+      0,
+      0,
+      1.0
+     ],
+     "behaviour": "no net shift shown",
+     "coverage": {
+      "S1": 0.0,
+      "S2": 0.3333,
+      "S3": 0.25
+     },
+     "misled": 0.0
+    },
+    "F2": {
+     "states_exact_last": 1.0,
+     "probe": "apart (probe)",
+     "probe_layers": [
+      1,
+      2,
+      3
+     ],
+     "logits_apart": "1600 of 1600",
+     "mean_tv": 0.266282,
+     "tv_above_identical": {
+      "contents": 1600,
+      "of": 1600,
+      "p": 0.0
+     },
+     "sampled": [
+      0,
+      440,
+      7.044203657368496e-133
+     ],
+     "behaviour": "a net shift",
+     "coverage": {
+      "S1": 0.0,
+      "S2": 0.3333,
+      "S3": 0.25
+     },
+     "misled": 0.1675
+    },
+    "F3": {
+     "states_exact_last": 1.0,
+     "probe": "apart (probe)",
+     "probe_layers": [
+      1,
+      2,
+      3
+     ],
+     "logits_apart": "0 of 1600",
+     "mean_tv": 0.0,
+     "tv_above_identical": {
+      "contents": 0,
+      "of": 1600,
+      "p": 0.9999999999994176
+     },
+     "sampled": [
+      0,
+      0,
+      1.0
+     ],
+     "behaviour": "no net shift shown",
+     "coverage": {
+      "S1": 0.0,
+      "S2": 0.3333,
+      "S3": 0.25
+     },
+     "misled": 0.0
+    },
+    "F4": {
+     "states_exact_last": 1.0,
+     "probe": "apart (probe)",
+     "probe_layers": [
+      1,
+      2,
+      3
+     ],
+     "logits_apart": "0 of 1600",
+     "mean_tv": 0.0,
+     "tv_above_identical": {
+      "contents": 0,
+      "of": 1600,
+      "p": 0.9999999999994176
+     },
+     "sampled": [
+      0,
+      0,
+      1.0
+     ],
+     "behaviour": "no net shift shown",
+     "coverage": {
+      "S1": 0.0,
+      "S2": 0.3333,
+      "S3": 0.25
+     },
+     "misled": 0.0
+    }
+   },
+   "recognition": {
+    "F1": "void: the checkpoint does not answer Yes or No",
+    "F2": "void: the checkpoint does not answer Yes or No",
+    "F3": "void: the checkpoint does not answer Yes or No",
+    "F4": "void: the checkpoint does not answer Yes or No",
+    "mean_yes_no_mass_at_base": 0.229
+   },
+   "identical_arm_sampled": {
+    "discordant": 0,
+    "p": 1.0
+   }
+  },
+  {
+   "formation": "nondeterministic",
+   "pairs": 1600,
+   "pilot": {
+    "discordant_up_only": 163,
+    "discordant_down_only": 0,
+    "p": 1.7105694144590204e-49,
+    "shown_apart": true,
+    "reading": "a cue known to move the act; where it shows no net shift, a factor's 'no net shift shown' is uninformative on this checkpoint"
+   },
+   "ok": true,
+   "premise": {
+    "exact_comparison_attainable": false,
+    "identical_arms_apart": 1600,
+    "of": 1600
+   },
+   "forbidden": {
+    "same_token_ids_apart": 1600,
+    "last_state_equal_logits_apart": 0,
+    "counted": "classes of passes sharing token ids, or a last state, with values apart",
+    "reading": "each is an implementation other than stated or an input not listed. The first is met exactly where the premise fails (only base and identical share token ids) and does not tell nondeterminism from a fault; the second separates a fault in the logits from noise in the states"
+   },
+   "format": {
+    "mean_letter_mass_at_base": 0.7558,
+    "behaviour_read": true,
+    "mean_px_at_base": 0.5408
+   },
+   "factors": {
+    "F1": {
+     "states_exact_last": "void: exact comparison not attainable",
+     "probe": "apart (probe)",
+     "probe_layers": [
+      1,
+      2,
+      3
+     ],
+     "logits_apart": "void: exact comparison not attainable",
+     "mean_tv": 0.000107,
+     "tv_above_identical": {
+      "contents": 797,
+      "of": 1600,
+      "p": 0.5694567087296503
+     },
+     "sampled": [
+      0,
+      0,
+      1.0
+     ],
+     "behaviour": "no net shift shown",
+     "coverage": "void: exact comparison not attainable",
+     "misled": 0.0
+    },
+    "F2": {
+     "states_exact_last": "void: exact comparison not attainable",
+     "probe": "apart (probe)",
+     "probe_layers": [
+      1,
+      2,
+      3
+     ],
+     "logits_apart": "void: exact comparison not attainable",
+     "mean_tv": 0.000105,
+     "tv_above_identical": {
+      "contents": 776,
+      "of": 1600,
+      "p": 0.8897183996384601
+     },
+     "sampled": [
+      0,
+      0,
+      1.0
+     ],
+     "behaviour": "no net shift shown",
+     "coverage": "void: exact comparison not attainable",
+     "misled": 0.0
+    },
+    "F3": {
+     "states_exact_last": "void: exact comparison not attainable",
+     "probe": "apart (probe)",
+     "probe_layers": [
+      1,
+      2,
+      3
+     ],
+     "logits_apart": "void: exact comparison not attainable",
+     "mean_tv": 0.000106,
+     "tv_above_identical": {
+      "contents": 796,
+      "of": 1600,
+      "p": 0.5890060312833566
+     },
+     "sampled": [
+      0,
+      0,
+      1.0
+     ],
+     "behaviour": "no net shift shown",
+     "coverage": "void: exact comparison not attainable",
+     "misled": 0.0
+    },
+    "F4": {
+     "states_exact_last": "void: exact comparison not attainable",
+     "probe": "apart (probe)",
+     "probe_layers": [
+      1,
+      2,
+      3
+     ],
+     "logits_apart": "void: exact comparison not attainable",
+     "mean_tv": 0.000106,
+     "tv_above_identical": {
+      "contents": 776,
+      "of": 1600,
+      "p": 0.8897183996384601
+     },
+     "sampled": [
+      0,
+      0,
+      1.0
+     ],
+     "behaviour": "no net shift shown",
+     "coverage": "void: exact comparison not attainable",
+     "misled": 0.0
+    }
+   },
+   "recognition": {
+    "F1": "void: the checkpoint does not answer Yes or No",
+    "F2": "void: the checkpoint does not answer Yes or No",
+    "F3": "void: the checkpoint does not answer Yes or No",
+    "F4": "void: the checkpoint does not answer Yes or No",
+    "mean_yes_no_mass_at_base": 0.2292
+   },
+   "identical_arm_sampled": {
+    "discordant": 0,
+    "p": 1.0
+   }
+  },
+  {
+   "formation": "fault",
+   "pairs": 1600,
+   "pilot": {
+    "discordant_up_only": 163,
+    "discordant_down_only": 0,
+    "p": 1.7105694144590204e-49,
+    "shown_apart": true,
+    "reading": "a cue known to move the act; where it shows no net shift, a factor's 'no net shift shown' is uninformative on this checkpoint"
+   },
+   "ok": true,
+   "premise": {
+    "exact_comparison_attainable": false,
+    "identical_arms_apart": 1600,
+    "of": 1600
+   },
+   "forbidden": {
+    "same_token_ids_apart": 1600,
+    "last_state_equal_logits_apart": 1600,
+    "counted": "classes of passes sharing token ids, or a last state, with values apart",
+    "reading": "each is an implementation other than stated or an input not listed. The first is met exactly where the premise fails (only base and identical share token ids) and does not tell nondeterminism from a fault; the second separates a fault in the logits from noise in the states"
+   },
+   "format": {
+    "mean_letter_mass_at_base": 0.7565,
+    "behaviour_read": true,
+    "mean_px_at_base": 0.542
+   },
+   "factors": {
+    "F1": {
+     "states_exact_last": "void: exact comparison not attainable",
+     "probe": "apart (probe)",
+     "probe_layers": [
+      1,
+      2,
+      3
+     ],
+     "logits_apart": "void: exact comparison not attainable",
+     "mean_tv": 0.0,
+     "tv_above_identical": {
+      "contents": 783,
+      "of": 1600,
+      "p": 0.8092101304709651
+     },
+     "sampled": [
+      0,
+      0,
+      1.0
+     ],
+     "behaviour": "no net shift shown",
+     "coverage": "void: exact comparison not attainable",
+     "misled": 0.0
+    },
+    "F2": {
+     "states_exact_last": "void: exact comparison not attainable",
+     "probe": "apart (probe)",
+     "probe_layers": [
+      1,
+      2,
+      3
+     ],
+     "logits_apart": "void: exact comparison not attainable",
+     "mean_tv": 0.0,
+     "tv_above_identical": {
+      "contents": 780,
+      "of": 1600,
+      "p": 0.847319033740964
+     },
+     "sampled": [
+      0,
+      0,
+      1.0
+     ],
+     "behaviour": "no net shift shown",
+     "coverage": "void: exact comparison not attainable",
+     "misled": 0.0
+    },
+    "F3": {
+     "states_exact_last": "void: exact comparison not attainable",
+     "probe": "apart (probe)",
+     "probe_layers": [
+      1,
+      2,
+      3
+     ],
+     "logits_apart": "void: exact comparison not attainable",
+     "mean_tv": 0.0,
+     "tv_above_identical": {
+      "contents": 804,
+      "of": 1600,
+      "p": 0.43054329126976687
+     },
+     "sampled": [
+      0,
+      0,
+      1.0
+     ],
+     "behaviour": "no net shift shown",
+     "coverage": "void: exact comparison not attainable",
+     "misled": 0.0
+    },
+    "F4": {
+     "states_exact_last": "void: exact comparison not attainable",
+     "probe": "apart (probe)",
+     "probe_layers": [
+      1,
+      2,
+      3
+     ],
+     "logits_apart": "void: exact comparison not attainable",
+     "mean_tv": 0.0,
+     "tv_above_identical": {
+      "contents": 796,
+      "of": 1600,
+      "p": 0.5890060312833566
+     },
+     "sampled": [
+      0,
+      0,
+      1.0
+     ],
+     "behaviour": "no net shift shown",
+     "coverage": "void: exact comparison not attainable",
+     "misled": 0.0
+    }
+   },
+   "recognition": {
+    "F1": "void: the checkpoint does not answer Yes or No",
+    "F2": "void: the checkpoint does not answer Yes or No",
+    "F3": "void: the checkpoint does not answer Yes or No",
+    "F4": "void: the checkpoint does not answer Yes or No",
+    "mean_yes_no_mass_at_base": 0.2283
+   },
+   "identical_arm_sampled": {
+    "discordant": 0,
+    "p": 1.0
+   }
+  },
+  {
+   "formation": "off-format",
+   "pairs": 1600,
+   "pilot": {
+    "discordant_up_only": 2,
+    "discordant_down_only": 0,
+    "p": 0.5,
+    "shown_apart": false,
+    "reading": "a cue known to move the act; where it shows no net shift, a factor's 'no net shift shown' is uninformative on this checkpoint"
+   },
+   "ok": true,
+   "premise": {
+    "exact_comparison_attainable": true,
+    "identical_arms_apart": 0,
+    "of": 1600
+   },
+   "forbidden": {
+    "same_token_ids_apart": 0,
+    "last_state_equal_logits_apart": 0,
+    "counted": "classes of passes sharing token ids, or a last state, with values apart",
+    "reading": "each is an implementation other than stated or an input not listed. The first is met exactly where the premise fails (only base and identical share token ids) and does not tell nondeterminism from a fault; the second separates a fault in the logits from noise in the states"
+   },
+   "format": {
+    "mean_letter_mass_at_base": 0.0006,
+    "behaviour_read": false,
+    "mean_px_at_base": 0.0005
+   },
+   "factors": {
+    "F1": {
+     "states_exact_last": 1.0,
+     "probe": "apart (probe)",
+     "probe_layers": [
+      1,
+      2,
+      3
+     ],
+     "logits_apart": "0 of 1600",
+     "mean_tv": 0.0,
+     "tv_above_identical": {
+      "contents": 0,
+      "of": 1600,
+      "p": 0.9999999999994176
+     },
+     "sampled": [
+      0,
+      0,
+      1.0
+     ],
+     "behaviour": "void: the checkpoint does not answer in the format",
+     "coverage": {
+      "S1": 0.0,
+      "S2": 0.3333,
+      "S3": 0.25
+     },
+     "misled": 0.0
+    },
+    "F2": {
+     "states_exact_last": 1.0,
+     "probe": "apart (probe)",
+     "probe_layers": [
+      1,
+      2,
+      3
+     ],
+     "logits_apart": "0 of 1600",
+     "mean_tv": 0.0,
+     "tv_above_identical": {
+      "contents": 0,
+      "of": 1600,
+      "p": 0.9999999999994176
+     },
+     "sampled": [
+      0,
+      0,
+      1.0
+     ],
+     "behaviour": "void: the checkpoint does not answer in the format",
+     "coverage": {
+      "S1": 0.0,
+      "S2": 0.3333,
+      "S3": 0.25
+     },
+     "misled": 0.0
+    },
+    "F3": {
+     "states_exact_last": 1.0,
+     "probe": "apart (probe)",
+     "probe_layers": [
+      1,
+      2,
+      3
+     ],
+     "logits_apart": "0 of 1600",
+     "mean_tv": 0.0,
+     "tv_above_identical": {
+      "contents": 0,
+      "of": 1600,
+      "p": 0.9999999999994176
+     },
+     "sampled": [
+      0,
+      0,
+      1.0
+     ],
+     "behaviour": "void: the checkpoint does not answer in the format",
+     "coverage": {
+      "S1": 0.0,
+      "S2": 0.3333,
+      "S3": 0.25
+     },
+     "misled": 0.0
+    },
+    "F4": {
+     "states_exact_last": 1.0,
+     "probe": "apart (probe)",
+     "probe_layers": [
+      1,
+      2,
+      3
+     ],
+     "logits_apart": "0 of 1600",
+     "mean_tv": 0.0,
+     "tv_above_identical": {
+      "contents": 0,
+      "of": 1600,
+      "p": 0.9999999999994176
+     },
+     "sampled": [
+      0,
+      0,
+      1.0
+     ],
+     "behaviour": "void: the checkpoint does not answer in the format",
+     "coverage": {
+      "S1": 0.0,
+      "S2": 0.3333,
+      "S3": 0.25
+     },
+     "misled": 0.0
+    }
+   },
+   "recognition": {
+    "F1": "void: the checkpoint does not answer Yes or No",
+    "F2": "void: the checkpoint does not answer Yes or No",
+    "F3": "void: the checkpoint does not answer Yes or No",
+    "F4": "void: the checkpoint does not answer Yes or No",
+    "mean_yes_no_mass_at_base": 0.0002
+   },
+   "identical_arm_sampled": {
+    "discordant": 0,
+    "p": 1.0
+   }
+  },
+  {
+   "formation": "deaf",
+   "pairs": 1600,
+   "pilot": {
+    "discordant_up_only": 0,
+    "discordant_down_only": 0,
+    "p": 1.0,
+    "shown_apart": false,
+    "reading": "a cue known to move the act; where it shows no net shift, a factor's 'no net shift shown' is uninformative on this checkpoint"
+   },
+   "ok": true,
+   "premise": {
+    "exact_comparison_attainable": true,
+    "identical_arms_apart": 0,
+    "of": 1600
+   },
+   "forbidden": {
+    "same_token_ids_apart": 0,
+    "last_state_equal_logits_apart": 0,
+    "counted": "classes of passes sharing token ids, or a last state, with values apart",
+    "reading": "each is an implementation other than stated or an input not listed. The first is met exactly where the premise fails (only base and identical share token ids) and does not tell nondeterminism from a fault; the second separates a fault in the logits from noise in the states"
+   },
+   "format": {
+    "mean_letter_mass_at_base": 0.7558,
+    "behaviour_read": true,
+    "mean_px_at_base": 0.5408
+   },
+   "factors": {
+    "F1": {
+     "states_exact_last": 0.0,
+     "probe": "not shown apart by the probe",
+     "probe_layers": [],
+     "logits_apart": "0 of 1600",
+     "mean_tv": 0.0,
+     "tv_above_identical": {
+      "contents": 0,
+      "of": 1600,
+      "p": 0.9999999999994176
+     },
+     "sampled": [
+      0,
+      0,
+      1.0
+     ],
+     "behaviour": "no net shift shown; uninformative: the positive control shows none either",
+     "coverage": {
+      "S1": 1.0,
+      "S2": 0.75,
+      "S3": 1.0
+     },
+     "misled": 0.0
+    },
+    "F2": {
+     "states_exact_last": 0.0,
+     "probe": "not shown apart by the probe",
+     "probe_layers": [],
+     "logits_apart": "0 of 1600",
+     "mean_tv": 0.0,
+     "tv_above_identical": {
+      "contents": 0,
+      "of": 1600,
+      "p": 0.9999999999994176
+     },
+     "sampled": [
+      0,
+      0,
+      1.0
+     ],
+     "behaviour": "no net shift shown; uninformative: the positive control shows none either",
+     "coverage": {
+      "S1": 1.0,
+      "S2": 0.75,
+      "S3": 1.0
+     },
+     "misled": 0.0
+    },
+    "F3": {
+     "states_exact_last": 0.0,
+     "probe": "not shown apart by the probe",
+     "probe_layers": [],
+     "logits_apart": "0 of 1600",
+     "mean_tv": 0.0,
+     "tv_above_identical": {
+      "contents": 0,
+      "of": 1600,
+      "p": 0.9999999999994176
+     },
+     "sampled": [
+      0,
+      0,
+      1.0
+     ],
+     "behaviour": "no net shift shown; uninformative: the positive control shows none either",
+     "coverage": {
+      "S1": 1.0,
+      "S2": 0.75,
+      "S3": 1.0
+     },
+     "misled": 0.0
+    },
+    "F4": {
+     "states_exact_last": 0.0,
+     "probe": "not shown apart by the probe",
+     "probe_layers": [],
+     "logits_apart": "0 of 1600",
+     "mean_tv": 0.0,
+     "tv_above_identical": {
+      "contents": 0,
+      "of": 1600,
+      "p": 0.9999999999994176
+     },
+     "sampled": [
+      0,
+      0,
+      1.0
+     ],
+     "behaviour": "no net shift shown; uninformative: the positive control shows none either",
+     "coverage": {
+      "S1": 1.0,
+      "S2": 0.75,
+      "S3": 1.0
+     },
+     "misled": 0.0
+    }
+   },
+   "recognition": {
+    "F1": "void: the checkpoint does not answer Yes or No",
+    "F2": "void: the checkpoint does not answer Yes or No",
+    "F3": "void: the checkpoint does not answer Yes or No",
+    "F4": "void: the checkpoint does not answer Yes or No",
+    "mean_yes_no_mass_at_base": 0.2278
+   },
+   "identical_arm_sampled": {
+    "discordant": 0,
+    "p": 1.0
+   }
+  }
+ ],
+ "a run stopped after 150 groups and resumed equals one run whole": true,
+ "a run stopped inside main with a torn last line goes on": {
+  "stopped after 600 groups, inside main": true,
+  "the torn line kept beside the log": true,
+  "the records equal a run made whole": true,
+  "ok": true
+ },
+ "the probe's control": {
+  "read": {
+   "F1": "apart (probe)",
+   "F2": "apart (probe)",
+   "F3": "apart (probe)",
+   "F4": "apart (probe)"
+  },
+  "shifted": {
+   "F1": "void: the identical arm's control rejects",
+   "F2": "void: the identical arm's control rejects",
+   "F3": "void: the identical arm's control rejects",
+   "F4": "void: the identical arm's control rejects"
+  },
+  "ok": true
+ },
+ "refusals": {
+  "a changed prompt hash, refused": true,
+  "a changed state file, refused": true,
+  "a group the plan does not hold, refused": true,
+  "a group held twice, refused": true,
+  "a group's arms in another order, refused": true,
+  "a run begun on another device, refused": true,
+  "a run carried on under another engine's code, refused": true,
+  "a run with no smoke run saying go on, refused": true,
+  "a run under other threads than its smoke run, refused": true,
+  "an engine returning other fields, refused": true,
+  "a group keeping states the plan does not, refused": true,
+  "a group naming another content, refused": true,
+  "a pass missing a field, refused": true,
+  "a folder that is not a run's, refused": true,
+  "a folder read as another checkpoint's, refused": true,
+  "a folder made under an engine no link lists, refused": true,
+  "a folder naming a link not in the chain, refused": true,
+  "a checkpoint with two whole folders, refused": true,
+  "a stand-in engine writing into results/, refused": true,
+  "a torn last line, refused by the reading": true,
+  "a newest smoke run with no report, refused": true,
+  "ok": true
+ },
+ "files_and_packages": {
+  "every file with its size and hash, read": true,
+  "a weight file with another hash, refused": true,
+  "a weight file of another size, refused": true,
+  "a file not listed, refused": true,
+  "a download's .cache and a file not loaded, read": true,
+  "a missing file, refused": true,
+  "the pinned packages, read": true,
+  "another transformers, refused": true,
+  "another Python, refused": true,
+  "the four checkpoints' files listed, each with a hash": true,
+  "ok": true
+ },
+ "chain": {
+  "the base link read, freeze 1's run.py listed": true,
+  "freeze 1's run.py changed, refused": true,
+  "its MODELS.json changed with no addendum, refused": true,
+  "its tr2_rule.py changed with no addendum, refused": true,
+  "an addendum changing the engine, read": true,
+  "an addendum changing MODELS.json, refused": true,
+  "an addendum changing the pass, refused": true,
+  "ok": true
+ },
+ "smoke": {
+  "go on": true,
+  "passes": 52,
+  "planned": 52,
+  "letters are tokens": true,
+  "no smoke prompt is a scored one": true,
+  "ok": true
+ },
+ "ok": true
+}
