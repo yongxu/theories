@@ -174,14 +174,14 @@ def smoke_report(folder, stopped=None, may_stand=None):
 
 
 def plan_chars(family):
-    """The characters of every planned call's text, a course's with stand-in rounds (the other option taken
-    at every round, which pays its words the longest), by condition."""
+    """The characters of every planned call's text, a course's with stand-in rounds (each round an answer
+    that could not be read, whose line is the longest a round shows), by condition."""
     recs, out = [], Counter()
     for x in D.plan(family):
         prompt = D.build(x, recs if x["condition"] in D.COURSES else ())
         out[x["condition"]] += len(prompt["user"])
         if x["condition"] in D.COURSES:
-            recs.append({"id": x["id"], "answer": D.UNTRIED})
+            recs.append({"id": x["id"], "answer": D.INVALID})
     return dict(out)
 
 
@@ -319,7 +319,11 @@ def load(folder, allow_dry=False, check=None):
     def prepare(x):
         k = next(pos)
         assert recs[k]["id"] == x["id"], "freeze 1's reading takes the records in their logged order"
-        return D.prepared(x, recs[:k] if x["condition"] in D.COURSES else ())
+        try:
+            return D.prepared(x, recs[:k] if x["condition"] in D.COURSES else ())
+        except RuntimeError as e:      # a course's round logged before the round it shows
+            raise SystemExit(f"{e}: a course's record logged before an earlier round of its course, which no run "
+                             "in the plan's order leaves (FREEZE-10.md, section 6); nothing was read") from None
     meta, good = VD.load(folder, allow_dry, plan=lambda test, fam: D.plan(fam), prepare=prepare,
                          classify=D.classify, frozen=check or frozen)
     plan = {x["id"]: x for x in D.plan(meta["family"])}
@@ -334,9 +338,10 @@ def rounds_apart(family, good, recs):
     """The course records read whose rounds show, for an earlier step, an answer other than that step's
     record read: none where each course carried the answers the reading reads (section 6)."""
     read = {r["id"]: r for r in good}
+    last = {r["id"]: k for k, r in enumerate(recs)}     # a record read is its id's latest in the log
     out = []
     for k, r in enumerate(recs):
-        if r["condition"] not in D.COURSES or read.get(r["id"]) is not r:
+        if r["condition"] not in D.COURSES or r["id"] not in read or last[r["id"]] != k:
             continue
         for s, a in enumerate(D.rounds(r, recs[:k]), 1):
             i = D.call_id(family, r["condition"], r["world"], r["order"], r["rep"], s)
@@ -362,7 +367,7 @@ def verdicts(folder, check=None, allow_dry=False):
                    "why": "not read whole: " + ", ".join(c for c in ("C", "T", "I", "X") if not whole[c]), "said": None}
     else:
         reading = TR.reading(family, v, prem, role)
-    desc = TR.descriptive(by, family, v, prem) if v is not None and prem is not None and whole["U"] else None
+    desc = TR.descriptive(by, family, v, prem) if whole["U"] and whole["I"] else None
     runs = smoke_runs(family, Path(folder).parents[2]) if not allow_dry else []
     res = {"test": D.TEST, "family": family, "pin_role": role, "reading": reading, "V1": v, "premise": prem,
            "descriptive": desc,

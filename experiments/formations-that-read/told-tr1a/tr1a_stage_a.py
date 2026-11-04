@@ -11,15 +11,19 @@ Three classes of chooser, each a softmax over the listed options of a score:
   - set-input network: a content's score from a hidden layer reading the content and the menu's mean,
     so a content's score can change with what else is listed.
 Each is trained by gradient descent on the six met presentations (the met pairs in both orders), its
-label the hidden order's top, from a seeded start; SEEDS seeds a cell. The hidden order puts the met pairs
-in a chain, 0 above 1 above 2 above 3 or the reverse, with content 4, never met, at one of five ranks:
-ten orders, each SEEDS / 10 times a cell, so P1 can be read (the chain's reach joins the pairs it does not
-show). The negative control trains on labels that carry no order: each met presentation's label drawn
-from its menu by a seeded draw. Each trained chooser is read as a pin is: R_CALLS picks of each of the 70
-presentations, drawn from its softmax by a seeded draw, then tr1_rule.condition_verdict, FREEZE-5's, on
-them (the cycle rule, the void floor, P1). Read apart, descriptive: on each pair the met picks do not
-join (those with content 4 for the chain), the share of picks of the content the hidden order ranks
-higher, across seeds, the class's bias there.
+label the hidden order's top, from a seeded start; SEEDS seeds a cell. The hidden order, a choice of this
+freeze's, puts the met pairs in a chain, 0 above 1 above 2 above 3 or the reverse, with content 4, never
+met, at one of five ranks: ten orders, each SEEDS / 10 times a cell, so the met labels' reach joins every
+pair of 0 to 3 and P1 reads transitive inference on (0, 2), (1, 3) and (0, 3), and the pairs with content 4
+are unjoined. The negative control trains on labels that carry no order by their making: each met
+presentation's label drawn from its menu by a seeded draw, the same labels for every class at a seed (by
+chance a draw can still accord with an order). It shows what each class's reading is when there is no
+order to learn: a class whose no-order cells read as its order cells do is read by its form, not its
+training. Each trained chooser is read as a pin is, but on its exact choice probabilities (read): a
+presentation's pick strict where Q of R_CALLS draws would name it with chance at least one half, then
+tr1_rule.condition_verdict, FREEZE-5's, on them (the cycle rule, the void floor, P1). Read apart,
+descriptive: on each pair the met labels do not join, the chance of the content the hidden order ranks
+higher, averaged over the seeds, the class's bias there (not defined where the labels carry no order).
 
 Nothing here runs a model or a download. The run is machine time, Ren's: `run` refuses unless the frozen
 files are as committed and refuses to write over a result. The dry run trains no comparator and no
@@ -191,10 +195,9 @@ def loss_and_grads(model, data):
 def train(kind, labels, seed, epochs=EPOCHS):
     """A chooser of the class trained on the met presentations from its seeded start: returns the model,
     its hidden order, the labels, and its loss at the start and the end."""
-    key = f"{kind}|{labels}|{seed}"
     order = ORDERS[seed % len(ORDERS)]
-    data = labels_of(labels, order, key)
-    model = KIND[kind](random.Random(f"{D.SEED}|stage-a|start|{key}"))
+    data = labels_of(labels, order, f"{labels}|{seed}")     # the same labels for every class at a seed
+    model = KIND[kind](random.Random(f"{D.SEED}|stage-a|start|{kind}|{labels}|{seed}"))
     first = None
     for _ in range(epochs):
         loss, g = loss_and_grads(model, data)
@@ -207,29 +210,38 @@ def train(kind, labels, seed, epochs=EPOCHS):
             "loss_end": end}
 
 
-def read(model, key):
-    """A trained chooser read as a pin is: R_CALLS picks of each presentation drawn from its softmax by a
-    seeded draw, then FREEZE-5's condition_verdict. Returns the verdict and the picks."""
-    rng = random.Random(f"{D.SEED}|stage-a|picks|{key}")
-    answers = {}
+NOT_STRICT = "not strict (read exactly)"
+
+
+def strict_chance(p):
+    """The chance that at least Q of R_CALLS independent draws name an option drawn with chance p."""
+    return sum(math.comb(R_CALLS, k) * p ** k * (1 - p) ** (R_CALLS - k) for k in range(Q, R_CALLS + 1))
+
+
+def read(model):
+    """A trained chooser read as a pin is, on its exact choice probabilities rather than on draws: a
+    presentation's pick is strict where at least Q of R_CALLS draws from the chooser would name it with
+    chance at least one half (so only an option drawn with chance above 0.85 can be strict, and an
+    exact tie never is), its answers then R_CALLS times that option, else R_CALLS answers naming none;
+    then FREEZE-5's condition_verdict on them. Returns the verdict and each presentation's probabilities.
+    Draws would make a near tie strict either way by chance (FREEZE-10, section 12), which no rule here
+    should read as the class's."""
+    answers, probs = {}, {}
     for p, menu in enumerate(DESIGN.pres):
         pr = softmax(model.scores(menu))
-        answers[p] = [menu[_draw(rng, pr)] for _ in range(R_CALLS)]
-    return TR1.condition_verdict("T", answers), answers
+        probs[p] = pr
+        top = [c for c, v in zip(menu, pr) if strict_chance(v) >= 0.5]
+        assert len(top) <= 1
+        answers[p] = [top[0]] * R_CALLS if top else [NOT_STRICT] * R_CALLS
+    return TR1.condition_verdict("T", answers), probs
 
 
-def _draw(rng, pr):
-    u, acc = rng.random(), 0.0
-    for i, v in enumerate(pr):
-        acc += v
-        if u < acc:
-            return i
-    return len(pr) - 1
-
-
-def unjoined_bias(order, verdict_answers, labels):
-    """On each pair of contents the met labels' reach does not join, the share of the pair presentations'
-    picks naming the content the hidden order ranks higher (descriptive)."""
+def unjoined_bias(order, probs, labels, kind_of_labels):
+    """On each pair of contents the met labels' reach does not join, the chance, averaged over its two
+    presentations, that the chooser picks the content the hidden order ranks higher (descriptive). Not
+    defined where the labels carry no order, the hidden order then playing no part in them."""
+    if kind_of_labels != "order":
+        return None
     rank = hidden_rank(order)
     occ = [((1 << DESIGN.pres[p][0]) | (1 << DESIGN.pres[p][1]), labels[p]) for p in MET]
     reach = tr1.closure(tr1.shown(occ, N))
@@ -241,8 +253,7 @@ def unjoined_bias(order, verdict_answers, labels):
         if reach[x] >> y & 1 or reach[y] >> x & 1:
             continue
         hi = x if rank[x] > rank[y] else y
-        key = "%d-%d" % tuple(sorted(menu))
-        out.setdefault(key, []).extend(a == hi for a in verdict_answers[p])
+        out.setdefault("%d-%d" % tuple(sorted(menu)), []).append(probs[p][menu.index(hi)])
     return {k: round(sum(v) / len(v), 4) for k, v in sorted(out.items())}
 
 
@@ -250,12 +261,11 @@ def run_cell(kind, labels, seeds=range(SEEDS)):
     rows = []
     for seed in seeds:
         t = train(kind, labels, seed)
-        key = f"{kind}|{labels}|{seed}"
-        v, ans = read(t["model"], key)
+        v, probs = read(t["model"])
         rows.append({"seed": seed, "hidden order": list(t["order"]), "loss_start": round(t["loss_start"], 6),
                      "loss_end": round(t["loss_end"], 6), "outcome": v["outcome"], "why": v["why"], "P1": v["P1"],
                      "strict": v["strict"], "P1_testable": v["P1_testable"], "shortest_cycle": v["shortest_cycle"],
-                     "unjoined": unjoined_bias(t["order"], ans, t["labels"])})
+                     "unjoined": unjoined_bias(t["order"], probs, t["labels"], labels)})
     return rows
 
 
@@ -271,7 +281,7 @@ def class_reading(rows):
         out = "passed"
     else:
         out = "void"
-    shares = [s for r in rows for s in r["unjoined"].values()]
+    shares = [s for r in rows if r["unjoined"] for s in r["unjoined"].values()]
     return {"outcome": out, "seeds contradicted": bad, "counts": dict(sorted(n.items())),
             "P1 contradicted": sum(r["P1"] is True for r in rows), "P1 read": sum(r["P1"] is not None for r in rows),
             "mean share, on unjoined pairs, of the content ranked higher":

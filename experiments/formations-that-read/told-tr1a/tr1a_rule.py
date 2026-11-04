@@ -7,14 +7,17 @@ each name order and I's act at step S_STAR in world down in each name order, on 
 read as the amount it pays (the known option the middle, the other the told amount). An occasion's pick
 is strict where one amount is named in at least Q of its R_CALLS calls (tr1.strict_rule; a decline, a
 filtered, an unreadable answer or a "none" counts against it). V1 is contradicted by a cycle among the
-strict occasions (tr1.shown and tr1.no_cycle on the three amounts: here, both amounts of a pair each
-strict at some occasion), void where fewer than half the occasions are strict or where no pair has two
-strict occasions, so that the strict occasions admit no cycle, and passed otherwise. It names no order.
+strict occasions, within a frame or across frames (tr1.shown and tr1.no_cycle on the three amounts: here,
+both amounts of a pair each strict at some occasion); void where fewer than half the occasions are strict,
+or where no pair has both a strict stated occasion (C or T) and a strict told one (I), so that the stated
+and the told frames are never compared; and passed otherwise. It names no order.
 
 The premise (REST-TR1 section 8, checked apart from the outcome): X, in each world, names the amount
-the other option was said to pay in most of its calls (CHECK_MIN of R_CALLS). It asks whether the telling
-is taken in, not whether a pick is stable, so a majority, not Q: at Q a believer trembling 0.05 a call
-would fail it in one world or the other at chance 0.14 (power). V1 is ruled on only where X passes in both worlds; otherwise the
+the player expects to receive from the other option in round 2, the told amount, in most of its calls
+(CHECK_MIN of R_CALLS). It reads whether the telling is taken into what the player expects, not whether
+it is believed, nor whether a pick is stable: so a majority, not Q (at Q a believer trembling 0.05 a call
+would fail it in one world or the other at chance 0.14, power), and a contradiction of V1 can still come
+from a player that repeats the telling and does not act on it. V1 is ruled on only where X passes in both worlds; otherwise the
 pin is reported, not ruled on, as one that did not take the telling in. U is read apart, descriptive:
 the first step at which a course takes the other option (exploration), and the share of courses that
 take it. The class (REST-TR1's identification table) is descriptive too, and only V1 is a verdict.
@@ -93,12 +96,37 @@ def v1(occ):
         outcome, why = "contradicted", None
     elif Fraction(n_strict, len(OCCASIONS)) < VOID_SHARE:
         outcome, why = "void", "fewer strict occasions than half"
-    elif all(len(v) < 2 for v in per_pair.values()):
-        outcome, why = "void", "the strict occasions admit no cycle (no pair with two)"
+    elif not any(any(n.startswith(("C", "T")) for n in names) and any(n.startswith("I") for n in names)
+                 for names in per_pair.values()):
+        outcome, why = "void", "no pair has both a strict stated occasion and a strict told one"
     else:
         outcome, why = "passed", None
     return {"outcome": outcome, "why": why, "picks": picks, "strict": n_strict, "occasions": len(OCCASIONS),
-            "cycle": cycle}
+            "strict stated": sum(p is not None for n, p in picks.items() if n.startswith(("C", "T"))),
+            "strict told": sum(p is not None for n, p in picks.items() if n.startswith("I")), "cycle": cycle,
+            "the cycle's places": cycle_places(picks) if cyc else None}
+
+
+def frame_of(name):
+    return name.rsplit(" ", 1)[0]       # "C", "T", "I up" or "I down"
+
+
+def cycle_places(picks):
+    """Where the strict picks disagree on a pair: "within a frame" where one frame's two name orders are
+    strict at either amount (a presentation reader's), "across frames" where a stated and a told occasion
+    are (a frame-inconsistent reader's); either or both."""
+    out = []
+    names = [n for n, p in picks.items() if p is not None]
+    for a in names:
+        for b in names:
+            if a < b and PAIR[a] == PAIR[b] and picks[a] != picks[b]:
+                same = frame_of(a) == frame_of(b)
+                stated = {frame_of(a)[0], frame_of(b)[0]}
+                if same:
+                    out.append("within a frame")
+                elif stated == {"C", "I"} or stated == {"T", "I"}:
+                    out.append("across frames")
+    return sorted(set(out))
 
 
 def premise(x_answers):
@@ -127,14 +155,15 @@ def courses(good, family, cond):
 
 
 def descriptive(good, family, v, prem):
-    """What is read apart from V1: per course condition and world, the share of courses taking the other
-    option at some step, the first step at which each does, and the share of the other option at each
-    step; and the class, from REST-TR1's identification table, read from strict picks only (each R_CALLS
-    calls, strict at Q): untrusting where X failed; a presentation reader where an occasion's strict picks
-    differ between the name orders; an explorer where U's first act in up is strict at the other option in
-    a name order (an uninformed course's words are the same in both worlds until the other option is
-    taken); then, from the strict picks of I in up and of C, held by the model (both the high amount),
-    held by the order (both the middle), or frame-inconsistent (one each)."""
+    """What is read apart from V1, wherever U and I are read whole: per course condition and world, the
+    share of courses taking the other option at some step, the first step at which each does, and the
+    share of the other option at each step. And the class, from REST-TR1's identification table, only
+    where X passed and V1 passed, from strict picks only (each R_CALLS calls, strict at Q): an explorer
+    where U's first act in up is strict at the other option in both name orders (an uninformed course's
+    words are the same in both worlds until the other option is taken); then, from the strict picks of I
+    in up and of C, held by the model (both the high amount), held by the order (both the middle), or not
+    classed. Where X failed: "the check failed"; where V1 did not pass: no class. A frame-inconsistent or
+    presentation-reading pin is contradicted, so its class is V1's cycle, reported with it."""
     out = {}
     first_u = {}
     for cond in D.COURSES:
@@ -152,25 +181,25 @@ def descriptive(good, family, v, prem):
                 for o in D.ORDERS:
                     acts = [a[0] for k, a in sorted(mine.items()) if k[1] == o]
                     first_u[o] = tr1.strict_rule([1 if a == D.UNTRIED else 0 if a == D.KNOWN else -1 for a in acts], Q)
-    p = v["picks"]
-    i_up = {p[f"I up o{o}"] for o in D.ORDERS} - {None}
-    c = {p[f"C o{o}"] for o in D.ORDERS} - {None}
-    if not prem["passed"]:
-        cls = "untrusting: the manipulation check failed, so I is not read on the amounts"
-    elif any(p[f"{k} o0"] is not None and p[f"{k} o1"] is not None and p[f"{k} o0"] != p[f"{k} o1"]
-             for k in ("C", "T", "I up", "I down")):
-        cls = "presentation reader: strict picks differ between the name orders"
-    elif 1 in first_u.values():
-        cls = "explorer: the uninformed first act in up strict at the other option"
-    elif i_up == {D.HIGH} and c == {D.HIGH}:
-        cls = "held by the model: known uninformed, takes the other when told it pays high"
-    elif i_up == {D.MID} and c == {D.MID}:
-        cls = "held by the order: the known when told, the middle over the high in C"
-    elif len(i_up) == 1 and len(c) == 1 and i_up != c:
-        cls = "frame-inconsistent: I and C strict at either amount"
-    else:
-        cls = "not classed: the strict picks do not fill a class"
     out["U in up, the first act strict at the other option, per name order"] = {f"o{o}": first_u[o] == 1 for o in D.ORDERS}
+    if prem is None or v is None:
+        cls = None
+    elif not prem["passed"]:
+        cls = "the check failed: I is not read on the amounts"
+    elif v["outcome"] != "passed":
+        cls = f"no class: V1 {v['outcome']}"
+    else:
+        p = v["picks"]
+        i_up = {p[f"I up o{o}"] for o in D.ORDERS} - {None}
+        c = {p[f"C o{o}"] for o in D.ORDERS} - {None}
+        if all(first_u[o] == 1 for o in D.ORDERS):
+            cls = "explorer: the uninformed first act in up strict at the other option in both name orders"
+        elif i_up == {D.HIGH} and c == {D.HIGH}:
+            cls = "held by the model: known uninformed, takes the other when told it pays high"
+        elif i_up == {D.MID} and c == {D.MID}:
+            cls = "held by the order: the known when told, the middle over the high in C"
+        else:
+            cls = "not classed: the strict picks do not fill a class"
     out["class (descriptive)"] = cls
     return out
 

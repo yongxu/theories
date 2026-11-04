@@ -7,8 +7,8 @@ the middle amount in both worlds and was taken in the first round; the other pay
 round in world up and the low amount every round in world down. Uninformed (U), the call says the other
 pays one or the other, fixed for the game; informed (I), it says which. Each course is ten rounds, each
 round a fresh call carrying the rounds before it. C and T are one stated choice between the middle and
-the high amount, and between the middle and the low; X, the manipulation check, asks what the other
-option pays once told. Both name orders throughout: in order 0 the known option is A, listed first; in
+the high amount, and between the middle and the low; X, the manipulation check, asks, once told, what
+the player expects to receive from the other option in round 2. Both name orders throughout: in order 0 the known option is A, listed first; in
 order 1 the other option is A, listed first.
 
 This module puts freeze 1's harness and FREEZE-5's folder on the path through tr1_design, imported first
@@ -70,6 +70,7 @@ UP, DOWN = tr1.UP, tr1.DOWN
 STEPS = 10                          # REST-TR1 section 8: ten steps a course, after the first round
 S_STAR = 1                          # the step whose informed act V1 reads (tr1.json: "its frozen step s* (here: 1)")
 WORLDS = (UP, DOWN)
+VALUES_UP = (LOW, MID, HIGH)        # the amounts in ascending order, as X lists them
 ORDERS = (0, 1)
 
 # The conditions. C, T and X are fresh calls; U and I are courses, their rounds made step by step.
@@ -78,7 +79,7 @@ FRAMES = ("C", "T", "X")
 COURSES = ("U", "I")
 NAMES = {"C": "a stated choice between the middle and the high amount",
          "T": "a stated choice between the middle and the low amount",
-         "X": "the manipulation check: what the other option pays, once told",
+         "X": "the manipulation check: what the other option is expected to pay in round 2, once told",
          "U": "courses, uninformed", "I": "courses, informed"}
 
 # The amounts (this freeze's choice): the low, middle and high amounts in dollars, the middle the
@@ -123,8 +124,10 @@ NOT_READ = {DECLINE: "Round {k}: you declined to choose, and nothing was paid.",
             FILTERED: "Round {k}: no answer was received, and nothing was paid."}
 NEXT_ROUND = "Round {k} is next. Which option do you choose?"
 COURSE_ASK = 'Answer in JSON with one field, "choice": the letter of the option you choose.'
-CHECK_ASK = ("Before you choose: how many dollars does option {L} pay each round in this game? Answer in "
-             'JSON with one field, "choice": the number of dollars, as one of {opts}.')
+CHECK_ASK = "Before you choose: if you choose {L} in round 2, how many dollars do you expect to receive?"
+CHECK_LETTERS = ("P", "Q", "R")     # the three amounts, ascending; not A or B, which name the options
+CHECK_ANSWER = 'Answer in JSON with one field, "choice": the letter of the amount you expect.'
+
 FRAME_INTRO = "Below are two amounts of money, one of which you could receive. Each has a letter."
 FRAME_ASK = "Which would you rather receive?"
 FRAME_ANSWER = ('Answer in JSON with one field, "choice": the letter of the amount you would rather receive. '
@@ -221,8 +224,9 @@ def text_of(x, answers=(), smoke=False):
             lines.append(NOT_READ.get(ans, NOT_READ[INVALID]).format(k=k))
     body = [GAME.format(n=n), options_text(x, told, smoke), ROUNDS + "\n" + "\n".join(lines)]
     if c == "X":
-        opts = ", ".join(f'"{v}"' for v in sorted(a.values()))
-        body.append(CHECK_ASK.format(L=letter(x["order"], UNTRIED), opts=opts))
+        body.append(CHECK_ASK.format(L=letter(x["order"], UNTRIED)))
+        body.append("\n".join(f"{L}. {a[v]} dollars" for L, v in zip(CHECK_LETTERS, VALUES_UP)))
+        body.append(CHECK_ANSWER)
     else:
         body.append(NEXT_ROUND.format(k=len(answers) + 2))
         body.append(COURSE_ASK)
@@ -233,7 +237,7 @@ def build(x, records=(), smoke=False):
     """The call's prompt: its text, JSON schema and letters, as freeze 1's prompts give them ("user",
     "schema", "letters": an answer the schema allows to what it names, "sha256" of the text and the
     schema). A course's or a frame's letters name an act (the known option or the other) or an amount
-    (LOW, MID or HIGH); X's numbers name an amount."""
+    (LOW, MID or HIGH); X's letters name an amount."""
     a = amounts(smoke)
     c = x["condition"]
     answers = rounds(x, records) if c in COURSES else []
@@ -243,7 +247,7 @@ def build(x, records=(), smoke=False):
         first, second = (MID, other) if x["order"] == 0 else (other, MID)
         letters = {"A": first, "B": second}
     elif c == "X":
-        letters = {str(v): k for k, v in a.items()}
+        letters = dict(zip(CHECK_LETTERS, VALUES_UP))
     else:
         letters = letters_of(x["order"])
     enum = sorted(letters)

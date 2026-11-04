@@ -79,7 +79,8 @@ OTHER_I = re.compile(r"^([AB])\. pays (\d+) dollars every round in this game\.$"
 FIRST = re.compile(r"^Round 1: ([AB]) was chosen for you, and it paid (\d+) dollars\.$")
 CHOSE = re.compile(r"^Round (\d+): you chose ([AB]), and it paid (\d+) dollars\.$")
 NOTHING = re.compile(r"^Round (\d+): .*nothing was paid\.$")
-CHECK = re.compile(r"^Before you choose: how many dollars does option ([AB]) pay each round in this game\?")
+CHECK = re.compile(r"^Before you choose: if you choose ([AB]) in round 2, how many dollars do you expect to receive\?$")
+CHECK_OPT = re.compile(r"^([PQR])\. (\d+) dollars$")
 
 
 def parse(text):
@@ -116,12 +117,15 @@ def parse(text):
             assert NOTHING.match(ln) and int(NOTHING.match(ln).group(1)) == k, ln
             seen.append((None, None))
     check = CHECK.match(paras[3])
+    expect = None
     if check:
-        assert check.group(1) == other
+        assert check.group(1) == other and not seen
+        expect = {int(v): L for L, v in (CHECK_OPT.match(ln).groups() for ln in paras[4].split("\n"))}
+        assert paras[5] == D.CHECK_ANSWER
     else:
         assert paras[3] == f"Round {len(seen) + 2} is next. Which option do you choose?"
     return {"kind": "check" if check else "course", "known": known, "other": other, "mid": mid, "told": told,
-            "either": either, "rounds": seen}
+            "either": either, "rounds": seen, "expect": expect}
 
 
 def response(content=None, finish="stop", refusal=None, model=None, request=None, usage=None):
@@ -150,7 +154,9 @@ class Stub:
         a = self.decide(seen, meta)
         enum = request["response_format"]["json_schema"]["schema"]["properties"]["choice"]["enum"]
         resp = response
-        if isinstance(a, (str, int)) and str(a) in enum:
+        if seen.get("expect") and isinstance(a, int) and not isinstance(a, bool):
+            a = seen["expect"][a]           # the check: the amount said, by its letter
+        if isinstance(a, str) and a in enum:
             return {"response": resp(json.dumps({"choice": str(a)}), request=request), "attempts": 1, "errors": []}
         r = {"invalid": lambda: resp("I would take the first one.", request=request),
              "refusal": lambda: resp(None, refusal="I will not choose.", request=request),
@@ -237,24 +243,26 @@ class Formation:
         return tr1.max_choose(self.rank)(ws, None)
 
 
-# (name, the formation, the pin's reading asserted, the class asserted, from REST-TR1's table)
+# (name, the formation, the pin's reading asserted, the class asserted, the cycle's places asserted), from
+# REST-TR1's table: the reading and the class, and for a contradiction where the cycle lies. A trembling
+# formation's reading is asserted only not contradicted, its void or pass reported (section 10).
 FORMS = [
-    ("M (worst case, high > mid > low)", dict(loop="worst"), "passed", "held by the model"),
-    ("O (worst case, mid > high > low)", dict(loop="worst", rank=RANK2), "passed", "held by the order"),
-    ("EV, prior 3/4 on down", dict(loop="ev", prior=Fraction(3, 4)), "passed", "held by the model"),
-    ("EV, prior 1/4 on down", dict(loop="ev", prior=Fraction(1, 4)), "passed", "explorer"),
-    ("optimistic (max)", dict(loop="max"), "passed", "explorer"),
-    ("untrusting, high > mid", dict(loop="worst", believes=False), "not ruled on", "untrusting"),
-    ("untrusting, mid > high", dict(loop="worst", rank=RANK2, believes=False), "not ruled on", "untrusting"),
+    ("M (worst case, high > mid > low)", dict(loop="worst"), "passed", "held by the model", None),
+    ("O (worst case, mid > high > low)", dict(loop="worst", rank=RANK2), "passed", "held by the order", None),
+    ("EV, prior 3/4 on down", dict(loop="ev", prior=Fraction(3, 4)), "passed", "held by the model", None),
+    ("EV, prior 1/4 on down", dict(loop="ev", prior=Fraction(1, 4)), "passed", "explorer", None),
+    ("optimistic (max)", dict(loop="max"), "passed", "explorer", None),
+    ("untrusting, high > mid", dict(loop="worst", believes=False), "not ruled on", "the check failed", None),
+    ("untrusting, mid > high", dict(loop="worst", rank=RANK2, believes=False), "not ruled on", "the check failed", None),
     ("frame-inconsistent (O in courses, high > mid in C)", dict(loop="worst", rank=RANK2, crank=RANK),
-     "contradicted", "frame-inconsistent"),
+     "contradicted", "no class", ["across frames"]),
     ("default reader (known; first listed in C and T)", dict(loop="known", frame="first"), "contradicted",
-     "presentation reader"),
-    ("first-listed reader", dict(loop="first", frame="first"), "contradicted", "presentation reader"),
-    ("M trembling 0.05 a call, with 0.05 unreadable answers", dict(loop="worst", eps=0.05, inv=0.05), "passed",
-     "held by the model"),
-    ("O trembling 0.05 a call", dict(loop="worst", rank=RANK2, eps=0.05), "passed", "held by the order"),
-    ("declining every call", dict(loop="worst", special=lambda s, m: "decline"), "not ruled on", "untrusting"),
+     "no class", ["across frames", "within a frame"]),
+    ("first-listed reader", dict(loop="first", frame="first"), "contradicted", "no class", ["across frames", "within a frame"]),
+    ("M trembling 0.05 a call, with 0.05 unreadable answers", dict(loop="worst", eps=0.05, inv=0.05), "not contradicted",
+     None, None),
+    ("O trembling 0.05 a call", dict(loop="worst", rank=RANK2, eps=0.05), "not contradicted", None, None),
+    ("declining every call", dict(loop="worst", special=lambda s, m: "decline"), "not ruled on", "the check failed", None),
 ]
 
 
@@ -276,16 +284,21 @@ def run_formation(root, name, decide, family=FAM, conditions=D.CONDITIONS):
 
 def formations(root):
     rows = []
-    for k, (name, kw, bridge, cls) in enumerate(FORMS):
+    for k, (name, kw, bridge, cls, places) in enumerate(FORMS):
         fam = PINS[k % len(PINS)]
         out = run_formation(root, f"f{k:02d}", Formation(key=name, **kw), fam)
         res = quiet(RUN.verdicts, out, check=lambda repo=None: {"link": "dry"}, allow_dry=True)
-        got_cls = res["descriptive"]["class (descriptive)"] if res["descriptive"] else None
-        assert res["reading"]["bridge"] == bridge, (name, res["reading"])
-        assert got_cls is not None and got_cls.startswith(cls), (name, got_cls)
+        got_cls = res["descriptive"]["class (descriptive)"]
+        if bridge == "not contradicted":
+            assert res["reading"]["bridge"] in ("passed", "void"), (name, res["reading"])
+        else:
+            assert res["reading"]["bridge"] == bridge, (name, res["reading"])
+        assert cls is None or got_cls.startswith(cls), (name, got_cls)
+        assert places is None or res["V1"]["the cycle's places"] == places, (name, res["V1"])
         assert not res["rounds_not_the_answers_read"], name
         u = res["descriptive"]["U up"]
         rows.append({"formation": name, "pin": fam, "reading": res["reading"]["bridge"], "class": got_cls,
+                     "the cycle's places": res["V1"]["the cycle's places"],
                      "V1 strict occasions": res["V1"]["strict"], "V1 picks": res["V1"]["picks"],
                      "the check": res["premise"]["told amount named, of R_CALLS"],
                      "U in up: share of courses taking the other option": u["share of courses taking the other option"]})
@@ -311,7 +324,8 @@ def prompts():
                 assert seen["amounts"] == {L: D.AMOUNTS[v] for L, v in p["letters"].items()}
             elif x["condition"] == "X":
                 assert seen["kind"] == "check" and seen["told"] == D.AMOUNTS[D.reply(D.UNTRIED, x["world"])]
-                assert p["letters"] == {str(v): k for k, v in D.AMOUNTS.items()}
+                assert p["letters"] == dict(zip(D.CHECK_LETTERS, D.VALUES_UP))
+                assert seen["expect"] == {D.AMOUNTS[v]: L for L, v in p["letters"].items()}
             else:
                 assert seen["kind"] == "course" and len(seen["rounds"]) == x["step"] - 1
                 assert (seen["told"] is not None) == (x["condition"] == "I")
@@ -396,8 +410,19 @@ def refusals(root):
         rs[i1], rs[i2] = rs[i2], rs[i1]
     note("a course's round logged before the round it shows",
          refused(RUN.verdicts, copy("r-order", swap_steps), check=dry, allow_dry=True,
-                 want="has no record before it"))
+                 want="logged before an earlier round of its course"))
 
+    # the rounds check flags a course record whose rounds show an answer other than the one read: step 1
+    # made again with another answer after step 2 was made on the first (no run in the plan's order leaves it)
+    s1 = next(r for r in recs if r["condition"] == "U" and r.get("step") == 1)
+    s2 = next(r for r in recs if r["condition"] == "U" and r.get("step") == 2 and
+              (r["world"], r["order"], r["rep"]) == (s1["world"], s1["order"], s1["rep"]))
+    again = dict(s1, answer=D.UNTRIED if s1["answer"] != D.UNTRIED else D.KNOWN)
+    flagged = RUN.rounds_apart(FAM, [again, s2], [s1, s2, again])
+    assert flagged == [s2["id"]], flagged
+    assert RUN.rounds_apart(FAM, [s1, s2], [s1, s2]) == []
+    note("a course record whose rounds show an answer other than the one read (reported, not refused)",
+         f"flagged {flagged}")
     # a course call whose earlier step has no record: execute stops there
     d = dry_folder(root, "r-gap", FAM)
     sink, done = RUN.open_sink(d)
@@ -593,13 +618,21 @@ def stage_a():
     for (x, y) in cyc.PAIRS:
         if 3 in (x, y) or 4 in (x, y):
             cyc.a[cyc.k[(x, y)]] = 6 if x < y else -6
-    v, _ = SA.read(cyc, "dry|cyc")
+    v, _ = SA.read(cyc)
     assert v["outcome"] == "contradicted", v
     item = SA.ItemScore(random.Random("dry|item"))
     item.s = [8.0, 6.0, 4.0, 2.0, 0.0]
-    v2, _ = SA.read(item, "dry|item")
+    v2, _ = SA.read(item)
     assert v2["outcome"] == "passed", v2
-    out["the rule on a hand-set cyclic comparator, and on a hand-set item-score"] = [v["outcome"], v2["outcome"]]
+    # a near tie, read exactly, is strict neither way (round 1's reader drew such ties as cycles from 9 picks)
+    tie = SA.ItemScore(random.Random("dry|tie"))
+    tie.s = [2.95, 2.96, -3.23, 1.0, -1.0]
+    v3, pr3 = SA.read(tie)
+    pairs01 = [q for q, menu in enumerate(SA.DESIGN.pres) if sorted(menu) == [0, 1]]
+    assert v3["outcome"] != "contradicted" and len(pairs01) == 2 \
+        and all(SA.strict_chance(x) < 0.5 for q in pairs01 for x in pr3[q])
+    out["the rule on a hand-set cyclic comparator, a hand-set item-score, and an item-score with a near tie"] = \
+        [v["outcome"], v2["outcome"], v3["outcome"]]
     return out
 
 
