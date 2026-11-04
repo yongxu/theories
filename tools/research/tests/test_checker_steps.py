@@ -76,6 +76,29 @@ class SharedSteps(unittest.TestCase):
     def tearDown(self):
         self.scratch.cleanup()
 
+    def step(self, args, key):
+        return self.checker.Step('t', [], args, 't.log', '', key, ['out.olean'], None, None)
+
+    def test_an_entry_another_tool_stored_is_not_this_runners(self):
+        directory = self.directory('a')
+        (directory / 'out.olean').write_text('theirs')
+        self.checker.store('k10', [directory / 'out.olean'], 'their log', {'run': 'theirs'})
+        self.assertEqual(self.checker.reuse('k10', [directory / 'out.olean'])[1], {'run': 'theirs'},
+                         'other tools may still read it')
+        mine = self.checker.lean_step(self.lean(0), self.step(['x'], 'k10'), self.directory('b'), {'run': 'mine'})
+        self.assertIsNone(mine.reused_from, 'the runner ran the step itself')
+        again = self.checker.lean_step(self.lean(0), self.step(['x'], 'k10'), self.directory('c'), {'run': 'again'})
+        self.assertEqual(again.reused_from, {'run': 'mine'})
+
+    def test_the_runner_writes_a_steps_driver_and_the_plans_files(self):
+        base = self.directory('a')
+        self.checker.write_files(base, {'': {'X.lean': b'-- x\n'}, 'prelude-only': {'X.lean': b'-- y\n'}})
+        self.assertEqual((base / 'prelude-only' / 'X.lean').read_bytes(), b'-- y\n')
+        driver = self.checker.Step('t', [], ['D.lean'], 'D.log', '', 'k11', [], 'D.lean', 'import X\n')
+        script = 'import sys; print(open(sys.argv[1]).read())'
+        outcome = self.checker.lean_step(['python3', '-c', script], driver, base, {'run': 'a'})
+        self.assertIn('import X', outcome.output)
+
     def directory(self, name):
         path = self.root / name
         path.mkdir()
@@ -92,8 +115,7 @@ class SharedSteps(unittest.TestCase):
         outcomes = {}
 
         def go(name):
-            outcomes[name] = self.checker.lean_step(self.lean(), ['x'], self.directory(name), 'k1', ['out.olean'],
-                                                    {'run': name})
+            outcomes[name] = self.checker.lean_step(self.lean(), self.step(['x'], 'k1'), self.directory(name), {'run': name})
         threads = [threading.Thread(target=go, args=(n,)) for n in ('one', 'two')]
         for thread in threads:
             thread.start()
@@ -108,22 +130,22 @@ class SharedSteps(unittest.TestCase):
         self.assertFalse(list(self.checker.LOCKS.iterdir()), 'the lock file goes with the lock')
 
     def test_seconds_are_kept_and_a_failure_is_not_stored(self):
-        first = self.checker.lean_step(self.lean(0), ['x'], self.directory('a'), 'k2', ['out.olean'], {'run': 'a'})
+        first = self.checker.lean_step(self.lean(0), self.step(['x'], 'k2'), self.directory('a'), {'run': 'a'})
         self.assertTrue(first.passed and first.seconds is not None and first.reused_from is None)
         entry = (self.checker.CACHE / 'k2.json').read_text()
         self.assertIn('"seconds"', entry)
-        again = self.checker.lean_step(self.lean(0), ['x'], self.directory('b'), 'k2', ['out.olean'], {'run': 'b'})
+        again = self.checker.lean_step(self.lean(0), self.step(['x'], 'k2'), self.directory('b'), {'run': 'b'})
         self.assertEqual(again.reused_from, {'run': 'a'})
-        failed = self.checker.lean_step(self.lean(0), ['fail'], self.directory('c'), 'k3', ['out.olean'], {'run': 'c'})
+        failed = self.checker.lean_step(self.lean(0), self.step(['fail'], 'k3'), self.directory('c'), {'run': 'c'})
         self.assertEqual((failed.returncode, failed.passed), (1, False))
-        warned = self.checker.lean_step(self.lean(0), ['warning:'], self.directory('d'), 'k4', ['out.olean'], {'run': 'd'})
+        warned = self.checker.lean_step(self.lean(0), self.step(['warning:'], 'k4'), self.directory('d'), {'run': 'd'})
         self.assertEqual((warned.returncode, warned.passed), (0, False))
         self.assertFalse((self.checker.CACHE / 'k3.json').exists() or (self.checker.CACHE / 'k4.json').exists())
 
     def test_fresh_runs_every_step(self):
-        self.checker.lean_step(self.lean(0), ['x'], self.directory('a'), 'k5', ['out.olean'], {'run': 'a'})
+        self.checker.lean_step(self.lean(0), self.step(['x'], 'k5'), self.directory('a'), {'run': 'a'})
         self.checker.FRESH = True
-        again = self.checker.lean_step(self.lean(0), ['x'], self.directory('b'), 'k5', ['out.olean'], {'run': 'b'})
+        again = self.checker.lean_step(self.lean(0), self.step(['x'], 'k5'), self.directory('b'), {'run': 'b'})
         self.assertIsNone(again.reused_from)
 
     def test_lean_processes_keep_to_the_slots(self):
@@ -217,7 +239,7 @@ class SharedSteps(unittest.TestCase):
                 with self.checker.lean_slot():
                     started.append('lean')
             with self.assertRaises(RuntimeError):
-                self.checker.lean_step(self.lean(0), ['x'], self.directory('a'), 'k7', ['out.olean'], {'run': 'a'})
+                self.checker.lean_step(self.lean(0), self.step(['x'], 'k7'), self.directory('a'), {'run': 'a'})
         self.assertEqual(started, [])
         self.assertFalse((self.checker.CACHE / 'k7.json').exists())
 
@@ -302,7 +324,7 @@ class SharedSteps(unittest.TestCase):
         self.checker.STOP.set()
         called = []
         with self.assertRaises(RuntimeError):
-            self.checker.lean_step(self.lean(0), ['x'], self.directory('a'), None, ['out.olean'], {'run': 'a'},
+            self.checker.lean_step(self.lean(0), self.step(['x'], None), self.directory('a'), {'run': 'a'},
                                    before=lambda: called.append('before'))
         self.assertEqual(called, [])
         self.assertFalse((self.root / 'a' / 'out.olean').exists())
@@ -401,13 +423,30 @@ class Runner(unittest.TestCase):
         self.assertNotEqual(checker.step_key(['t', 'b'], 'compile X', b'-- x\n', {}), first)
         self.assertNotEqual(checker.module_keys(['t', 'b'], {'X': b'-- x\n'}, ['X'])['X'], first)
 
-    def test_the_runner_covers_what_builds_runs_and_keeps_a_step(self):
+    def test_the_runner_covers_every_function_of_the_checker_it_calls(self):
+        """A module function a listed one calls is listed too, unless it only waits or locks: a helper
+        split out of the runner cannot fall outside its digest unnoticed."""
+        import ast
+        import inspect
+        import textwrap
         checker = load_checker()
-        covered = {'resolve_lean', 'source_file', 'imports_of', '_imports', 'step_key', 'module_keys', 'reuse', 'store',
-                   'lean_plan', 'lean_step', 'run_lean'}
-        source = Path(checker.__file__).read_text()
-        listed = re.search(r'RUNNER = code_digest\(\[([^]]*)\]\)', source)[1]
-        self.assertEqual({name.strip() for name in listed.split(',')}, covered)
+        listed = {function.__name__ for function in checker.RUNNER_FUNCTIONS}
+        waits = {'step_lock', 'lean_slot', 'wait_for', 'try_flock'}
+        own = {name for name, value in vars(checker).items()
+               if inspect.isfunction(value) and value.__module__ == checker.__name__}
+        for function in checker.RUNNER_FUNCTIONS:
+            tree = ast.parse(textwrap.dedent(inspect.getsource(inspect.unwrap(function))))
+            called = {node.func.id for node in ast.walk(tree)
+                      if isinstance(node, ast.Call) and isinstance(node.func, ast.Name) and node.func.id in own}
+            self.assertLessEqual(called - {function.__name__}, listed | waits, function.__name__)
+
+    def test_an_f_string_and_code_beside_a_docstring_count(self):
+        base = 'def step(x):\n    return f"-o {x}.olean"\n'
+        self.assertNotEqual(self.digest_of(base), self.digest_of(base.replace('{x}', '{x!r}')))
+        self.assertEqual(self.digest_of(base), self.digest_of(base.replace('return f"', 'return   f"')))
+        beside = 'def step(x):\n    """doc"""; x.append(1)\n    return x\n'
+        self.assertNotEqual(self.digest_of(beside), self.digest_of(beside.replace('; x.append(1)', '')))
+        self.assertEqual(self.digest_of(beside), self.digest_of(beside.replace('"""doc"""', '"""other"""')))
 
 
 class EnvironmentAudit(unittest.TestCase):

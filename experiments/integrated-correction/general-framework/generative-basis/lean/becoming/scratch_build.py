@@ -89,10 +89,8 @@ def main():
         """Restore a passed step or run it; a step that fails stops the build, one with an error or
         warning in its log is reported and not stored."""
         def action():
-            where, label = build / step.where, step.log[:-4]
-            if step.driver:
-                (where / step.driver).write_text(step.text)
-            outcome = cb.lean_step(command, step.args, where, step.key, step.outputs, origin, TIMEOUT)
+            label = step.log[:-4]
+            outcome = cb.lean_step(command, step, build, origin, TIMEOUT)
             with lock:
                 if outcome.reused_from:
                     report["reused"] += 1
@@ -108,12 +106,7 @@ def main():
             return outcome.output
         return action
 
-    for where, contents in files.items():
-        for relative, data in contents.items():
-            target = build / where / relative
-            target.parent.mkdir(parents=True, exist_ok=True)
-            if not target.is_file() or target.read_bytes() != data:
-                target.write_bytes(data)
+    cb.write_files(build, files)
     # Steps run concurrently as in the checker (`BECOMING_JOBS`), each once the compiles of the
     # modules it imports have passed; an audit waits for its module's compile.
     tasks = {step.task: (step.needs, checked(step)) for step in plan}

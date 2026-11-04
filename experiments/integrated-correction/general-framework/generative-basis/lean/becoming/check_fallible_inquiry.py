@@ -127,42 +127,31 @@ def main():
         with tempfile.TemporaryDirectory(prefix="fallible-inquiry-") as scratch:
             work = Path(scratch)
 
-            def run(args, log, key=None, outputs=(), driver=None):
-                # The checker's runner: the cache, the step's lock and one of the machine's Lean slots.
-                if key:
-                    steps["keys"][log] = key
-                keep = (lambda: (retained / driver).write_bytes((work / driver).read_bytes())) if driver else None
-                outcome = core.lean_step(command, args, work, key, outputs, origin, TIMEOUT, before=keep)
+            def run(step):
+                # The checker's plan and runner: the cache, the step's lock and one of the machine's Lean slots.
+                if step.key:
+                    steps["keys"][step.log] = step.key
+                keep = (lambda: (retained / step.driver).write_text(step.text)) if step.driver else None
+                outcome = core.lean_step(command, step, work, origin, TIMEOUT, before=keep)
                 if outcome.reused_from:
-                    steps["reused"][log] = outcome.reused_from
+                    steps["reused"][step.log] = outcome.reused_from
                     return outcome.output
-                (retained / log).write_text(outcome.output)
+                (retained / step.log).write_text(outcome.output)
                 assert outcome.returncode == 0, outcome.output
                 assert not re.search(r"\b(?:error|warning):", outcome.output), outcome.output
-                steps["ran"].append(log)
-                steps["seconds"][log] = outcome.seconds
+                steps["ran"].append(step.log)
+                steps["seconds"][step.log] = outcome.seconds
                 return outcome.output
 
-            receipt["lean_version"] = run(["--version"], "version.log").strip()
+            receipt["lean_version"] = run(core.Step("version", [], ["--version"], "version.log", "", None, [],
+                                                    None, None)).strip()
             assert "version 4.29.1" in receipt["lean_version"]
-            for name, data in sources.items():
-                target = work / core.source_file(name)
-                target.parent.mkdir(parents=True, exist_ok=True)
-                target.write_bytes(data)
-            for name in order:
-                olean = core.source_file(name)[:-5] + ".olean"
-                run(["-o", olean, core.source_file(name)], name + ".log", key=keys[name], outputs=[olean])
-            audit = f"import {TARGET}\n" + "".join(f"#print axioms {d['name']}\n" for d in registry)
-            signatures = f"import {TARGET}\n" + "".join(
-                f"#check @{d['name']}\n" for d in registry if d["kind"] == "theorem")
-            for label, text in [("AxiomAudit", audit), ("Signatures", signatures)]:
-                (work / (TARGET + label + ".lean")).write_text(text)
-            output = run([TARGET + "AxiomAudit.lean"], TARGET + "AxiomAudit.log",
-                         key=core.step_key(context, TARGET + "AxiomAudit.lean", audit.encode(), keys),
-                         driver=TARGET + "AxiomAudit.lean")
-            run([TARGET + "Signatures.lean"], TARGET + "Signatures.log",
-                key=core.step_key(context, TARGET + "Signatures.lean", signatures.encode(), keys),
-                driver=TARGET + "Signatures.lean")
+            # The closure's compiles, then the adapter's axiom audit and signatures, as the checker plans them.
+            plan, files = core.lean_plan(context, sources, keys, {TARGET: registry}, order,
+                                         audited=[TARGET], signed=[TARGET])
+            core.write_files(work, files)
+            outputs = {step.task: run(step) for step in plan}
+            output = outputs["audit " + TARGET]
         dependencies = {}
         for item in registry:
             name = item["name"]

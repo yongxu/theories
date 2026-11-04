@@ -38,9 +38,10 @@ in the receipt as `market_names`, apart from a few scientific terms; they do not
 A Lean step whose inputs match a step that passed, in an earlier run or earlier in this one (a
 compile from the prelude whose inputs are its module's), is not run again: its outputs and log come
 from a cache shared by runs and worktrees (`step_key`). Its inputs include the runner (`RUNNER`, the
-receipt's `runner_sha256`): a digest of the code that finds Lean, makes a step's arguments, drivers and
-files, runs it and keeps its outputs, read without comments, docstrings or layout, so a change to what
-a step runs changes every key. The
+receipt's `runner_sha256`): a digest of the code that finds Lean, makes and writes a step's arguments,
+drivers and files, runs it and keeps its outputs, read without comments, docstrings or layout, so a
+change to what a step runs changes every key. Each entry names the runner that wrote it, and only an
+entry this runner wrote is reused here. The
 receipt lists which steps ran and which were reused, with the run each came from and
 each step's key. `BECOMING_FRESH=1` runs every step; `LEAN_TIMEOUT` sets the seconds
 allowed for each Lean run. Steps run concurrently (`BECOMING_JOBS` at once, by default half
@@ -3912,13 +3913,16 @@ def module_keys(context, sources, order):
     return keys
 
 
-def reuse(key, outputs):
+def reuse(key, outputs, runner=None):
     """For a step that passed with this key: restore its outputs and return its log and
-    the run it came from. Otherwise None."""
+    the run it came from. Otherwise None. With `runner`, only an entry that runner wrote
+    counts, so a step another tool ran with its own code under the same key is not taken."""
     if FRESH:
         return None
     try:
         entry = json.loads((CACHE / (key + ".json")).read_text())
+        if runner is not None and entry.get("runner") != runner:
+            return None
         blobs = [(CACHE / key / path.name).read_bytes() for path in outputs]
         if [audit_support.digest(blob) for blob in blobs] != entry["outputs"]:
             return None
@@ -3929,9 +3933,9 @@ def reuse(key, outputs):
     return entry["log"], entry["run"]
 
 
-def store(key, outputs, log, run, seconds=None):
-    """Keep a passed step for later runs, with the seconds it took. The cache only saves work, so a
-    failed write is ignored."""
+def store(key, outputs, log, run, seconds=None, runner=None):
+    """Keep a passed step for later runs, with the seconds it took and the runner that ran it. The
+    cache only saves work, so a failed write is ignored."""
     def write(path, data):
         temporary = path.with_name(f".{path.name}.{os.getpid()}.{threading.get_ident()}.tmp")
         temporary.write_bytes(data)
@@ -3947,6 +3951,8 @@ def store(key, outputs, log, run, seconds=None):
         entry = {"run": run, "log": log, "outputs": [audit_support.digest(blob) for blob in blobs]}
         if seconds is not None:
             entry["seconds"] = seconds
+        if runner is not None:
+            entry["runner"] = runner
         write(CACHE / (key + ".json"), json.dumps(entry, ensure_ascii=False).encode())
     except OSError:
         pass
@@ -4102,31 +4108,35 @@ def lean_slot(beat=None):
 Outcome = namedtuple("Outcome", "output reused_from returncode passed seconds")
 
 
-def lean_step(command, args, where, key=None, outputs=(), origin=None, timeout=TIMEOUT, before=None):
-    """One Lean step in `where`: restored from the cache when a step with its key passed, else run in
-    one of the machine's Lean slots (its timeout starting once it has one) and, when it passes, stored
-    with `origin` as its run. A keyed step not in the cache runs under its key's lock, beating while it
-    waits for a slot and as Lean starts, and is looked up again once the lock is held. `before` is called
-    just before Lean starts."""
-    paths = [where / output for output in outputs]
-    found = reuse(key, paths) if key else None
+def lean_step(command, step, base, origin=None, timeout=TIMEOUT, before=None):
+    """One step of a plan (`lean_plan`), in its directory below `base`: restored from the cache when
+    this runner kept a step with its key, else run in one of the machine's Lean slots (its timeout
+    starting once it has one), its driver written first, and stored with `origin` as its run and this
+    runner as its writer when it passes. A keyed step not in the cache runs under its key's lock,
+    beating while it waits for a slot and while Lean runs, and is looked up again once the lock is held.
+    `before` is called just before Lean starts."""
+    where = base / step.where
+    paths = [where / output for output in step.outputs]
+    found = reuse(step.key, paths, RUNNER) if step.key else None
     if found:
         return Outcome(found[0], found[1], 0, True, None)
-    with step_lock(key) if key else nullcontext(lambda: None) as beat:
-        found = reuse(key, paths) if key else None
+    with step_lock(step.key) if step.key else nullcontext(lambda: None) as beat:
+        found = reuse(step.key, paths, RUNNER) if step.key else None
         if found:
             return Outcome(found[0], found[1], 0, True, None)
         with lean_slot(beat):
             if STOP.is_set():
                 raise RuntimeError("the run stopped before this step started")
+            if step.driver:
+                (where / step.driver).write_text(step.text)
             if before:
                 before()
             started = time.perf_counter()
-            returncode, output = run_lean(command + args, where, timeout, beat)
+            returncode, output = run_lean(command + step.args, where, timeout, beat)
             seconds = round(time.perf_counter() - started, 3)
         passed = returncode == 0 and not re.search(r"\b(?:error|warning):", output)
-        if key and passed:
-            store(key, paths, output, origin, seconds)
+        if step.key and passed:
+            store(step.key, paths, output, origin, seconds, RUNNER)
         return Outcome(output, None, returncode, passed, seconds)
 
 
@@ -4263,6 +4273,17 @@ def lean_plan(context, sources, keys, registry, order, audited=(), signed=(), pr
         steps.append(compile_step("prelude " + name, name, stripped[name], name + ".PreludeOnly.log", "prelude-only",
                                   bare_keys[name]))
     return steps, files
+
+
+def write_files(base, files):
+    """Write a plan's files (`lean_plan`: directory → path → bytes) below `base`, each one not
+    already there with those bytes."""
+    for where, contents in files.items():
+        for relative, data in contents.items():
+            target = base / where / relative
+            if not target.is_file() or target.read_bytes() != data:
+                target.parent.mkdir(parents=True, exist_ok=True)
+                target.write_bytes(data)
 
 
 def held_in_main(files):
@@ -4515,13 +4536,18 @@ def code_digest(functions):
             if (isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef)) and node.body
                     and isinstance(node.body[0], ast.Expr) and isinstance(node.body[0].value, ast.Constant)
                     and isinstance(node.body[0].value.value, str)):
-                docstrings.update(range(node.body[0].lineno, node.body[0].end_lineno + 1))
-        lines = [line for number, line in enumerate(source.splitlines(True), 1) if number not in docstrings]
+                first = node.body[0]
+                docstrings.add(((first.lineno, first.col_offset), (first.end_lineno, first.end_col_offset)))
+        lines = source.splitlines(True)
         marks = {tokenize.NEWLINE: ";", tokenize.INDENT: "{", tokenize.DEDENT: "}"}
         # From Python 3.12 an f-string is several tokens; it is read whole, as earlier Pythons read it.
         opens, closes = getattr(tokenize, "FSTRING_START", None), getattr(tokenize, "FSTRING_END", None)
-        tokens, depth, begun = [], 0, None
+        tokens, depth, begun, after_docstring = [], 0, None, False
         for token in tokenize.generate_tokens(io.StringIO("".join(lines)).readline):
+            if after_docstring:
+                after_docstring = False
+                if token.type == tokenize.NEWLINE:
+                    continue
             if token.type == opens:
                 depth, begun = depth + 1, begun if depth else token.start
             elif token.type == closes:
@@ -4530,6 +4556,8 @@ def code_digest(functions):
                     (row, column), (end_row, end_column) = begun, token.end
                     text = "".join(lines[row - 1:end_row])
                     tokens.append(text[column:len(text) - len(lines[end_row - 1]) + end_column])
+            elif token.type == tokenize.STRING and (token.start, token.end) in docstrings:
+                after_docstring = True
             elif not depth and token.type not in (tokenize.COMMENT, tokenize.NL, tokenize.ENDMARKER):
                 tokens.append(marks.get(token.type, token.string))
         parts.append(function.__name__ + " " + " ".join(tokens))
@@ -4537,11 +4565,14 @@ def code_digest(functions):
 
 
 # What runs a step and keeps its result: how the Lean command is found, how a step's arguments,
-# drivers and files are made, how it runs and how its outputs are kept and restored. Each step's key
-# holds this digest (`step_key`), so a change to any of it changes every key and no step is reused
-# across it. The rest of the checker (what a receipt reports, the locks and slots) is not in it.
-RUNNER = code_digest([resolve_lean, source_file, imports_of, _imports, step_key, module_keys, reuse, store,
-                      lean_plan, lean_step, run_lean])
+# drivers and files are made and written, how it runs and how its outputs are kept and restored. Each
+# step's key holds this digest (`step_key`), so a change to any of it changes every key, and each entry
+# `lean_step` keeps names it, so the steps this runner reuses are steps it ran: an entry another tool
+# stored under the same key with its own code is not taken. The rest of the checker (what a receipt
+# reports, the locks and slots) is not in it.
+RUNNER_FUNCTIONS = (resolve_lean, source_file, imports_of, _imports, step_key, module_keys, reuse, store,
+                    lean_plan, write_files, lean_step, run_lean)
+RUNNER = code_digest(RUNNER_FUNCTIONS)
 
 
 def main():
@@ -4630,13 +4661,10 @@ def main():
             work = Path(scratch)
 
             def run(step):
-                where = work / step.where
-                if step.driver:
-                    (where / step.driver).write_text(step.text)
                 if step.key:
                     steps["keys"][step.log] = step.key
                 keep = (lambda: (retained / step.driver).write_text(step.text)) if step.driver else None
-                outcome = lean_step(command, step.args, where, step.key, step.outputs, origin, before=keep)
+                outcome = lean_step(command, step, work, origin, before=keep)
                 if outcome.reused_from:
                     steps["reused"][step.log] = outcome.reused_from
                     return outcome.output
@@ -4663,11 +4691,7 @@ def main():
             # The core needs nothing beyond Lean's prelude: it is compiled again from the prelude alone.
             plan, files = lean_plan(context, sources, keys, registry, order, audited=order,
                                     signed=[name for name in order if name in CHECKED], prelude=core_closure, extra=extra)
-            for where, contents in files.items():
-                for relative, data in contents.items():
-                    target = work / where / relative
-                    target.parent.mkdir(parents=True, exist_ok=True)
-                    target.write_bytes(data)
+            write_files(work, files)
             # Each Lean step waits for the compiles of the modules it imports (run_graph);
             # `sequence` is the order of a one-at-a-time run, which the receipt keeps.
             tasks = {step.task: (step.needs, lambda step=step: run(step)) for step in plan}
