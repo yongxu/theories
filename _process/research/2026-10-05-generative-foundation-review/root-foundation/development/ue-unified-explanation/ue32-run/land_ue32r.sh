@@ -39,7 +39,9 @@ land)
   git show -s --format=%s HEAD | grep -q "^Board: UE32 at the head of the queue"; step head-claim $?
   git merge --no-ff --no-commit -q $BRANCH > "$ASIDE/merge.log" 2>&1; step merge $?
   [ -z "$(git diff --name-only --diff-filter=U)" ]; step no-conflicts $?
-  ! grep -q 'REVIEW_LINE\|TODO\|FIGURES\|REVIEW_SUMMARY\|(rehearsal)' $KIT/*.txt $KIT/REVIEW.md; step no-placeholders $?
+  # study.txt keeps REVIEW_LINE: it is the slot the edit script fills from review_line.txt
+  ! grep -q 'REVIEW_LINE\|TODO\|FIGURES\|REVIEW_SUMMARY\|(rehearsal)' $(ls $KIT/*.txt | grep -v '/study\.txt$') $KIT/REVIEW.md \
+    && ! grep -q 'TODO\|FIGURES\|REVIEW_SUMMARY\|(rehearsal)' $KIT/study.txt; step no-placeholders $?
   [ -s $KIT/review_line.txt ]; step review-line $?
   python3 -B $KIT/edit_ue32r.py > "$ASIDE/edit.log" 2>&1; step edit $?
   N=$(grep -o '§[0-9]*' "$ASIDE/edit.log" | tail -1); grep -q "study $N" $KIT/message.txt; step message-section $?
