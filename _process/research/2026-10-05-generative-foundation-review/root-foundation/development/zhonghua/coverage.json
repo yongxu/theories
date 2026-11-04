@@ -382,10 +382,16 @@
 "w": ""
 },
 "XC-R056": {
+"c": "C06",
+"s": [],
+"k": "s",
+"w": "placed in the map, not flagged by the sweep (RAE3, flag_2026-11-05.py)",
+"swept": {
 "c": "-",
 "s": [],
 "k": "-",
 "w": ""
+}
 },
 "XC-R057": {
 "c": "C06",
@@ -1740,10 +1746,16 @@
 "w": "益而转损，损益相转"
 },
 "LL-R010": {
+"c": "C11",
+"s": [],
+"k": "d",
+"w": "placed in the map, not flagged by the sweep (RAE3, flag_2026-11-05.py)",
+"swept": {
 "c": "-",
 "s": [],
 "k": "-",
 "w": ""
+}
 },
 "LL-R011": {
 "c": "C04",
@@ -1952,10 +1964,16 @@
 "w": "识其病则不病，自识而纠"
 },
 "LL-R043": {
+"c": "C16",
+"s": [],
+"k": "s",
+"w": "placed in the map, not flagged by the sweep (RAE3, flag_2026-11-05.py)",
+"swept": {
 "c": "-",
 "s": [],
 "k": "-",
 "w": ""
+}
 },
 "LL-R044": {
 "c": "C11",
@@ -2354,10 +2372,16 @@
 "w": ""
 },
 "JF-R052": {
+"c": "C12",
+"s": [],
+"k": "s",
+"w": "placed in the map, not flagged by the sweep (RAE3, flag_2026-11-05.py)",
+"swept": {
 "c": "-",
 "s": [],
 "k": "-",
 "w": ""
+}
 },
 "JF-R053": {
 "c": "-",
@@ -2776,10 +2800,16 @@
 "w": ""
 },
 "JL-R029": {
+"c": "C12",
+"s": [],
+"k": "a",
+"w": "placed in the map, not flagged by the sweep (RAE3, flag_2026-11-05.py)",
+"swept": {
 "c": "-",
 "s": [],
 "k": "-",
 "w": ""
+}
 },
 "JL-R030": {
 "c": "-",
@@ -6730,10 +6760,16 @@
 "w": ""
 },
 "TP-H38-T-R02": {
+"c": "C10",
+"s": [],
+"k": "a",
+"w": "placed in the map, not flagged by the sweep (RAE3, flag_2026-11-05.py)",
+"swept": {
 "c": "-",
 "s": [],
 "k": "-",
 "w": ""
+}
 },
 "TP-H38-T-R03": {
 "c": "-",
@@ -8757,10 +8793,16 @@
 "w": ""
 },
 "JG2-H06-L3-R01": {
+"c": "C02",
+"s": [],
+"k": "s",
+"w": "placed in the map, not flagged by the sweep (RAE3, flag_2026-11-05.py)",
+"swept": {
 "c": "-",
 "s": [],
 "k": "-",
 "w": ""
+}
 },
 "JG2-H06-L3-R02": {
 "c": "-",
@@ -9901,10 +9943,16 @@
 "w": ""
 },
 "JG2-H42-L2-R01": {
+"c": "C12",
+"s": [],
+"k": "a",
+"w": "placed in the map, not flagged by the sweep (RAE3, flag_2026-11-05.py)",
+"swept": {
 "c": "-",
 "s": [],
 "k": "-",
 "w": ""
+}
 },
 "JG2-H42-L2-R02": {
 "c": "-",
@@ -11572,10 +11620,16 @@
 "w": "刚柔立本：以相对两相为本，非单一先在之体"
 },
 "WP-XCX-C01-S03-R02": {
+"c": "C01",
+"s": [],
+"k": "s",
+"w": "placed in the map, not flagged by the sweep (RAE3, flag_2026-11-05.py)",
+"swept": {
 "c": "-",
 "s": [],
 "k": "-",
 "w": ""
+}
 },
 "WP-XCX-C01-S04-R01": {
 "c": "-",
@@ -11618,10 +11672,16 @@
 "w": "圣人大宝曰位：以所居之位为价值中心"
 },
 "WP-XCX-C01-S06-R03": {
+"c": "C14",
+"s": [],
+"k": "d",
+"w": "placed in the map, not flagged by the sweep (RAE3, flag_2026-11-05.py)",
+"swept": {
 "c": "-",
 "s": [],
 "k": "-",
 "w": ""
+}
 },
 "WP-XCX-C01-S06-R04": {
 "c": "-",
@@ -18506,10 +18566,16 @@
 "w": "各有君而万国宁：单中心之治"
 },
 "YCM130-Q-Z-Q13a-R01": {
+"c": "C05",
+"s": [],
+"k": "a",
+"w": "placed in the map, not flagged by the sweep (RAE3, flag_2026-11-05.py)",
+"swept": {
 "c": "-",
 "s": [],
 "k": "-",
 "w": ""
+}
 },
 "YCM130-Q-Z-Q13b-R01": {
 "c": "C15",
@@ -22640,16 +22706,28 @@
 "w": "错误不重复：经反馈而改"
 },
 "RU1-LY-06-10-R01": {
+"c": "C15",
+"s": [],
+"k": "a",
+"w": "placed in the map, not flagged by the sweep (RAE3, flag_2026-11-05.py)",
+"swept": {
 "c": "-",
 "s": [],
 "k": "-",
 "w": ""
+}
 },
 "RU1-LY-06-10-R02": {
+"c": "C15",
+"s": [],
+"k": "a",
+"w": "placed in the map, not flagged by the sweep (RAE3, flag_2026-11-05.py)",
+"swept": {
 "c": "-",
 "s": [],
 "k": "-",
 "w": ""
+}
 },
 "RU1-LY-06-16-R01": {
 "c": "C11",
@@ -23022,10 +23100,16 @@
 "w": "耦合不能及则止"
 },
 "RU1-LY-12-01-R01": {
+"c": "C14",
+"s": [],
+"k": "d",
+"w": "placed in the map, not flagged by the sweep (RAE3, flag_2026-11-05.py)",
+"swept": {
 "c": "-",
 "s": [],
 "k": "-",
 "w": ""
+}
 },
 "RU1-LY-12-01-R02": {
 "c": "-",
@@ -31521,10 +31605,16 @@
 "w": "不以无为为有常：无固定之则"
 },
 "CV1-JL-R004": {
+"c": "C14",
+"s": [],
+"k": "s",
+"w": "placed in the map, not flagged by the sweep (RAE3, flag_2026-11-05.py)",
+"swept": {
 "c": "-",
 "s": [],
 "k": "-",
 "w": ""
+}
 },
 "CV1-JL-R005": {
 "c": "C17",

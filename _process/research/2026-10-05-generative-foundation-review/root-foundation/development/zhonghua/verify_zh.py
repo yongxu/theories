@@ -6,8 +6,9 @@ Everything is checked against repository copies only:
   1. the import: every file of sources/civilization-thought-v1.0 hashes to its PROVENANCE.json entry;
   2. coverage: coverage.json has one verdict for every judgment (relation) of the imported model;
   3. passages: every judgment the sweep flagged for a cluster lies in exactly one place there (an entry, a
-     parallel or a rejection), and across clusters a judgment one cluster takes (in an entry or a parallel) is
-     rejected in another only where that rejection names the cluster or the entry that takes it; every id an entry cites exists in the model (a judgment, a reading unit, a sense
+     parallel or a rejection), no judgment the sweep left unflagged lies anywhere in the map, and across clusters a
+     judgment one cluster takes (in an entry or a parallel) is rejected in another only where that rejection names the
+     cluster that takes it or an entry that lists it; every id an entry cites exists in the model (a judgment, a reading unit, a sense
      or a chapter of the Laozi); every fragment is in its source's frozen
      text, character for character (whitespace may differ); every declaration is in the audited list of the
      newest core receipt (or is a module of it), or of a periphery receipt (Mathlib, axioms reported; listed
@@ -22,7 +23,7 @@ Everything is checked against repository copies only:
      these fails, but for OUTSIDE, which the chapter names as off the spine;
      every record link exists; every 「…」〔ID〕 quotation is in source ID's frozen text, every 对照 line names
      entries of the map with the kind the map gives them, and the generated tables equal what the data gives (06
-     has none of these three today); and nine numbers its section 七 states of the map and the name table are the
+     has none of these three today); and twelve numbers its section 七 states of the map and the name table are the
      data's (STATED). A chapter in which no Lean name is found fails. Its other quotations and numbers are not
      checked. The three chapters this checked until RA moved them to history/ (23 October 2026) are frozen there
      and not checked.
@@ -69,6 +70,7 @@ def across(P, verdicts):
             'multi': sum(1 for r in flagged if len({c for c, _, _ in pl.get(r, [])}) > 1),
             'kept_and_rejected': sum(1 for r in flagged if any(x[1] == 'rejected' for x in pl.get(r, []))
                                      and any(x[1] != 'rejected' for x in pl.get(r, []))),
+            'kind_differs': sum(1 for r in flagged if len({k for _, h, k in pl.get(r, []) if h != 'rejected'}) > 1),
             'domain_shares': shares, 'share': round(100 * kinds.count('divergence') / mapped),
             'kept_not_divergent': round(100 * (kinds.count('agreement') + kinds.count('scope')) / mapped)}
 
@@ -82,7 +84,7 @@ def stated(n):
             f"另有 {n['judgments'] - n['flagged']:,} 条没有脊柱可读的结构",
             f"以 {n['names']} 个古典之名",
             f"已对应的 {n['flagged'] - n['not_taken']:,} 条计（{n['flagged']:,} 条除去读后各簇皆不取之 {n['not_taken']} 条",
-            f"其中 {n['multi']} 条另落于他簇（{n['kept_and_rejected']} 条在一簇取，在他簇不取而注明归彼）",
+            f"其中 {n['multi']} 条另落于他簇（{n['kept_and_rejected']} 条在一簇取，在他簇不取而注明归彼；{n['kind_differs']} 条他簇之类与所标之簇不同，未经检查）",
             '按脉络之域，相分在已对应者中所占：' + '，'.join(f'{k} {v}%' for k, v in n['domain_shares']) + f"；合计 {n['share']}%（以判断计）",
             f"已对应者中相合与定域合占 {n['kept_not_divergent']}%",
             f"{n['names']} 名中 {n['anchored']} 个录有锚，其余 {n['names'] - n['anchored']} 个",
@@ -202,6 +204,9 @@ def main():
     # 3b. across clusters: a rejection of a judgment another cluster takes names the cluster or entry that takes it
     from build_tables import places
     pl = places(P)
+    for r in pl:
+        if verdicts.get(r, {}).get('c') == '-':
+            fail.append('passages: %s, which the sweep left unflagged, is placed in %s' % (r, ', '.join(sorted({c for c, _, _ in pl[r]}))))
     for r, ps in pl.items():
         takers = {c for c, k, _ in ps if k != 'rejected'}
         if not takers:
