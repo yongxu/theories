@@ -232,7 +232,7 @@
 |---|---|---|
 | 錯之对 | 一卦与其錯卦合为一对，是消息之律所同行的归并 | `pairs_goAlike` |
 | 阳爻之数 | 不是消息之律所同行的归并：泰与否阳爻皆三，下一步分属四与二 | `yang_not_goAlike` |
-| 只入阴爻之律 | 正是打破錯之对称的律：它不与錯交换（[HexagramCommuting](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HexagramCommuting.lean)） | `Hexagram.wane_breaks` |
+| 只入阴爻之律 | 正是打破錯之对称的律：它不与錯交换（[HexagramCommuting](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HexagramCommuting.lean)） | `wane_breaks` |
 | 生起与止息 | 沿消息之律自任一卦起之运行：任意晚之步上都有某一位之爻转为阳，也都有某一位之爻不再为阳；读作框架之世界，任意晚之步上都有某一位生起，也都有某一位止息 | `arising_recurs`、`ceasing_recurs`、`world_arising_recurs`、`world_ceasing_recurs` |
 | 重访 | 任一过程之下，任一运行的前六十五个状态中必有重访；带着历史的律不被任何清单所含 | `revisits_within_order`、`kept_history_unlisted` |
 | 所传卦序 | 两两成对，后一卦是前一卦倒转，倒转不变者则六爻皆变，即孔颖达所说“非覆即變” | `order_paired` |

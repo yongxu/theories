@@ -233,6 +233,10 @@ def main():
                 x = m.group(1).rstrip('.')               # a name ending in a dot names its namespace (a prefix left out)
                 if len(x) < 2 or not IDENT.fullmatch(x) or x in left_out:
                     continue
+                if '省去' in line and x + '.' == m.group(1):     # a namespace named as an example on the line that says so
+                    if x not in known and 'Becoming.' + x not in known:
+                        fail.append('%s: namespace %s is not in receipt %s' % (ch.name, x, receipt.parent.name))
+                    continue
                 if x in OUTSIDE:
                     n_out += 1
                     if not OUTSIDE[x].exists():
@@ -298,13 +302,13 @@ def main():
     e_recs = {x for d in P.values() for e in d['entries'] for x in e['records']}
     print('%s: %d files bound; %d judgments, %d flagged; %d entries (%s), %d fragments, %d declarations, %d records; '
           '%d names; '
-          'chapter %s: %d quotations with a source id, %d Lean names (each exact) and %d named as off the spine, %d record links, '
+          'chapter %s: %d quotations with a source id, %d Lean-name citations%s and %d named as off the spine, %d record links, '
           '%d 对照 lines, %d stated numbers; receipt %s; '
           'periphery declarations: %d'
           % ('FAILED' if fail else 'ok', len(prov['files']), len(rel_ids), n['flagged'],
              n_entries, ', '.join('%s %d' % kv for kv in sorted(tot.items())), n_frag, len(e_decls), len(e_recs),
              len(rows), args.chapter.name,
-             n_q, n_d, n_out, n_l, n_dz, n_st, receipt.parent.name, len(used_periphery)))
+             n_q, n_d, '' if fail else ' (each exact)', n_out, n_l, n_dz, n_st, receipt.parent.name, len(used_periphery)))
     for x in sorted(used_periphery):
         print('  periphery:', x)
     sys.exit(1 if fail else 0)
