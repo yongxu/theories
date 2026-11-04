@@ -53,7 +53,7 @@ Canonical source: [ReflexivePrediction.lean](../../../../experiments/integrated-
 <a id="next--下一步"></a>
 ## Next
 
-Probabilistic forecasts and calibration under performativity in the periphery; a formation's self-prediction within the reading loop; a frozen test of whether a public responds to a published forecast by the forecast alone (the plan's TR6); review by a person.
+Probabilistic forecasts and calibration under performativity in the periphery; a formation's self-prediction within the reading loop; a run of the frozen test of whether a public responds to a published forecast by the forecast alone (TR6); review by a person.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -90,6 +90,7 @@ Aliases: `reflexive prediction`, `反身之预言`, `self-fulfilling prophecy`, 
 
 - 30 October 2026: added (RF round 2), a prediction read by what it predicts: right where the response leaves it, none where it moves every value, the least right one reached on a chain; after a cross-model review of the Lean with a re-check, every finding taken; study section 456.
 - 31 October 2026, board item RF, the tests' designs (study section 476): the next step names its test as designed, TR6 in experiments/formations-that-read, which can refute at most the bridge that a public's count is a response of the published forecast alone, and the readings of its order under the two framings, never the law; no statement or declaration changed. PLAN.md re-pointed: since this record's reviewed hash the plan changed only where the tests' readers found it misstating the Lean (§3, §4, §8, §11, §12) and in §10, the tests; read against this record before re-pointing, nothing it says changed.
+- 4 November 2026, board item RFZ: the test TR6 frozen before any call to a model (experiments/formations-that-read/FREEZE-6.md), its verdict on the bridge resting on the rounds whose count differs from the offline table's, a public shown its course against one shown only its frame, never on the law's forbidden cases; not run. The law is unchanged; next_delta's step is now the frozen test's run, which waits on Ren's yes.
 
 </details>
 
