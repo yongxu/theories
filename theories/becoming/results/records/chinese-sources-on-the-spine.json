@@ -141,7 +141,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ro-relational-sources/passages.json",
       "role": "integration",
-      "sha256": "2bfe907169e71fdb9793faa03b031ae3671a6aa9467d05a5c337d3a1b30ef343"
+      "sha256": "84effd535676769d4d970aa06377ac6cad74c764af23eb54cb20bb77988f4061"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ro-relational-sources/verify_ro.py",

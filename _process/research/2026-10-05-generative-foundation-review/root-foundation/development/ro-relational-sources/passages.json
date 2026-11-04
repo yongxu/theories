@@ -3351,7 +3351,7 @@
    ],
    "relational": "Generating, acting and raising stand in relation to the generated without holding it, relying on it or steering its moves.",
    "reading": "AI 的读法：生而不有、为而不恃、长而不宰。脊柱有三处结构相合。（1）“不宰”：动作是部分的，恰当它是部分自身的策略（`partForms_iff`）；当其余的规律以部分的策略为输入时，部分所做即其余所受（`Run.rest_driven_by_part`）——这正是“宰”的结构，脊柱两者都给出，不说哪个更好。（2）“不恃”：一个见证中，同一部分、同样的汲取，有一个其他汲取者时它造成差别，有两个时则不造成（`Pool.difference_only_together`），差别可以只由共同者造成（`Dependence.differenceOnlyTogether_iff`）。（3）“不有”：脊柱没有占有关系。规范方向（宜不宰）只在延续条件之下：凡物之延续都有意义时，没有立场有特权（`Web.retains_agree`）；从“不宰”到“应当不宰”还需要比较承诺（C）与不变性一步，经文与脊柱都没有自行给出。异文：郭店第二章作“为而弗志（恃）也，成而弗居”而无“生而不有”；帛书乙第十章作“生而弗有長而弗宰也是胃玄德”，无“为而不恃”。",
-   "reading_en": "AI reading: 'not steering' matches the distinction between a move that is the part's own policy and a rest driven by another's policy, 'not relying' matches the law that a difference can be made only together, and the spine has no relation of possession; that one ought not to steer holds only under the continuation condition with the comparison commitment.",
+   "reading_en": "AI reading: 'not steering' matches the distinction between a move that is the part's own policy and a rest driven by another's policy, 'not relying' matches the case, in one witness, that a difference can be made only together, and the spine has no relation of possession; that one ought not to steer holds only under the continuation condition with the comparison commitment.",
    "mapper": "lao",
    "layer": "经",
    "variants": [
@@ -3368,7 +3368,7 @@
      "note": "帛书乙第十章无“为而不恃”。"
     }
    ],
-   "corrected": "RAE (AA Phase 0, E2): both readings stated the ownership ND renamed away (OU7, e5951932b: difference_belongs_to_the_joint -> difference_only_together), the Chinese without saying the case is one witness; their words are now the home's (06-CLASSICAL-TEXTS: 一个见证中……差别可以只由共同者造成); names follow the declaration ND renamed in OU7 (e5951932b; development/nd-nondual-names/part2/nd_rename.py), statement unchanged; record ids follow the renamed records (R35; receipts in _process/architecture/renames), claims unchanged"
+   "corrected": "RAE (AA Phase 0, E2): both readings stated the ownership ND renamed away (OU7, e5951932b: difference_belongs_to_the_joint -> difference_only_together), neither saying the case is one witness; their words are now the home's (06-CLASSICAL-TEXTS: 一个见证中……差别可以只由共同者造成); names follow the declaration ND renamed in OU7 (e5951932b; development/nd-nondual-names/part2/nd_rename.py), statement unchanged; record ids follow the renamed records (R35; receipts in _process/architecture/renames), claims unchanged"
   },
   {
    "id": "lao-30-55-wu-zhuang-ze-lao",

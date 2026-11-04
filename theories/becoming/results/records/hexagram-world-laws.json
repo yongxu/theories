@@ -325,8 +325,8 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261019T103817.145646Z): the 187 declarations of Becoming.HexagramLaws, 130 of them theorems, have empty axiom reports; the checker verifies core purity. Every count was also recomputed by enumeration (development/y1-changes/y3/hexcount.py). The passage map (69 passages, 9 citing this module) is checked by verify_mapping.py against the preserved Wikisource revisions and the receipt's declaration list. Author self-review in study section 198; not independently reviewed.",
-    "zh": "Lean 4.29.1 合并检查器实查（回执 20261019T103817.145646Z）：Becoming.HexagramLaws 的 187 项声明（130 项定理）公理报告为空；检查器并核对核心纯净。每一计数另以穷举重算（development/y1-changes/y3/hexcount.py）。逐句对应（69 段，其中 9 段引本模块）由 verify_mapping.py 对照保存的维基文库版本与回执的声明清单检查。作者自审见研究第 198 节；未经独立审查。"
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261019T103817.145646Z): the 187 declarations of Becoming.HexagramLaws, 130 of them theorems, have empty axiom reports; the checker verifies core purity. Every count was also recomputed by enumeration (development/y1-changes/y3/hexcount.py). The passage map (69 passages, 9 citing this module when it landed, 19 October 2026; 90 now) is checked by verify_mapping.py against the preserved Wikisource revisions and the receipt's declaration list. Author self-review in study section 198; not independently reviewed.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261019T103817.145646Z）：Becoming.HexagramLaws 的 187 项声明（130 项定理）公理报告为空；检查器并核对核心纯净。每一计数另以穷举重算（development/y1-changes/y3/hexcount.py）。逐句对应（10 月 19 日 69 段，其中 9 段引本模块，今 90 段）由 verify_mapping.py 对照保存的维基文库版本与回执的声明清单检查。作者自审见研究第 198 节；未经独立审查。"
   },
   "next_delta": {
     "en": "The odds of the cast (大衍: old and young lines with their weights) as a law of a weighted course; the nuclear law read on the sites of place-relations-in-context; 邵雍's 先天 sequence as a theorem; an independent review.",
@@ -1157,6 +1157,10 @@
     {
       "en": "25 October 2026, board item DF (study section 418): The retired 归于静止 replaced by 停息 (coming to rest).",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：退役的“归于静止”改为“停息”。"
+    },
+    {
+      "en": "4 November 2026, board item RAE: the validation scope gave the passage map's size when this record landed in the present tense; it is dated, and today's figure added from the passing run of verify_mapping.py (90 passages, receipt 20261103T211917.845905Z), which runs with research-test since. Claims unchanged.",
+      "zh": "2026年11月4日，看板项 RAE：验证范围以现在时写本记录落地时逐句对应之段数；今注明日期，并依 verify_mapping.py 通过之运行补今日之数（90 段，回执 20261103T211917.845905Z），此后随 research-test 运行。断言未变。"
     }
   ],
   "text_versions": [

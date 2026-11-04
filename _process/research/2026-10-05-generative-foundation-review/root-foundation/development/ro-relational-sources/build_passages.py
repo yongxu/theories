@@ -596,10 +596,10 @@ FIXES = {
     'lao-51-sheng-er-bu-you': {
         'reading_sub': [('一个部分造成的差别不属于它自己：同一部分、同样的汲取，', '一个见证中，同一部分、同样的汲取，')],
         'reading_en_sub': [('the law that the difference a part makes belongs to the joint activity',
-                            'the law that a difference can be made only together')],
+                            'the case, in one witness, that a difference can be made only together')],
         'why': ('RAE (AA Phase 0, E2): both readings stated the ownership ND renamed away (OU7, e5951932b: '
-                'difference_belongs_to_the_joint -> difference_only_together), the Chinese without saying the case is one '
-                'witness; their words are now the home\'s (06-CLASSICAL-TEXTS: 一个见证中……差别可以只由共同者造成)')},
+                'difference_belongs_to_the_joint -> difference_only_together), neither saying the case is one witness; '
+                'their words are now the home\'s (06-CLASSICAL-TEXTS: 一个见证中……差别可以只由共同者造成)')},
     'zuo-xuan12-zhi-ge-wei-wu': {
         'reading_sub': [('Widening 证明：', 'LoopReturn 证明：')],
         'why': ('DF (DEFECTS-FOUND, 06): the reading named the module of its laws by its name before R22 (Widening, now '

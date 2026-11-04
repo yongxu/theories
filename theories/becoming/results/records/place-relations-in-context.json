@@ -282,8 +282,8 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261019T080527.161049Z): the 156 declarations of Becoming.HexagramPlaces, 108 of them theorems, have empty axiom reports; the checker verifies core purity. The passage map (64 passages, 22 citing this module) and the four censuses are checked by verify_mapping.py against the preserved Wikisource revisions and the receipt's declaration list. Author self-review in study section 195; not independently reviewed.",
-    "zh": "Lean 4.29.1 合并检查器实查（回执 20261019T080527.161049Z）：Becoming.HexagramPlaces 的 156 项声明（108 项定理）公理报告为空；检查器并核对核心纯净。逐句对应（64 段，其中 22 段引本模块）与四项普查由 verify_mapping.py 对照保存的维基文库版本与回执的声明清单检查。作者自审见研究第 195 节；未经独立审查。"
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261019T080527.161049Z): the 156 declarations of Becoming.HexagramPlaces, 108 of them theorems, have empty axiom reports; the checker verifies core purity. The passage map (64 passages, 22 citing this module when it landed, 19 October 2026; 90 now) and the four censuses are checked by verify_mapping.py against the preserved Wikisource revisions and the receipt's declaration list. Author self-review in study section 195; not independently reviewed.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261019T080527.161049Z）：Becoming.HexagramPlaces 的 156 项声明（108 项定理）公理报告为空；检查器并核对核心纯净。逐句对应（10 月 19 日 64 段，其中 22 段引本模块，今 90 段）与四项普查由 verify_mapping.py 对照保存的维基文库版本与回执的声明清单检查。作者自审见研究第 195 节；未经独立审查。"
   },
   "next_delta": {
     "en": "A census of the 文言; the nuclear law read on these sites; an independent review.",
@@ -927,6 +927,10 @@
     {
       "en": "2026-10-20: 23 bookkeeping notes condensed from 19 October 2026 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/4c88922cd0392551/place-relations-in-context.json and in git.",
       "zh": "2026-10-20：23 条记账性说明合并（19 October 2026 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/4c88922cd0392551/place-relations-in-context.json 和 git 中。"
+    },
+    {
+      "en": "4 November 2026, board item RAE: the validation scope gave the passage map's size when this record landed in the present tense; it is dated, and today's figure added from the passing run of verify_mapping.py (90 passages, receipt 20261103T211917.845905Z), which runs with research-test since. Claims unchanged.",
+      "zh": "2026年11月4日，看板项 RAE：验证范围以现在时写本记录落地时逐句对应之段数；今注明日期，并依 verify_mapping.py 通过之运行补今日之数（90 段，回执 20261103T211917.845905Z），此后随 research-test 运行。断言未变。"
     }
   ],
   "text_versions": [

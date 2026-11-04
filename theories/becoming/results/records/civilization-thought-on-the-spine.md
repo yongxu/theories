@@ -30,7 +30,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-verify_zh.py passes (4 November 2026, board item RAE; with research-test since): the import (438 files by SHA-256), one verdict for each of 5,673 judgments, each of the 3,499 flagged placed once, 2,023 fragments verbatim, 1,603 declarations in receipt 20261103T211917.845905Z, 234 records, the name table (449 names), and 06-CLASSICAL-TEXTS's 116 Lean names, its record links and nine numbers of its §七; the chapters' quotations, declarations, links, 对照 kinds and tables were checked until they moved to history/ on 23 October 2026. All readers AI; no collation with a printed edition.
+verify_zh.py passes (4 November 2026, board item RAE; with research-test since): the import (438 files by SHA-256), one verdict for each of 5,673 judgments, each of the 3,499 flagged placed once, 2,023 fragments verbatim, 1,603 declarations in receipt 20261103T211917.845905Z, 234 records, the name table (449 names), and 06-CLASSICAL-TEXTS's 116 citations of Lean names, its record links and nine numbers of its §七; the chapters' quotations, declarations, links, 对照 kinds and tables were checked until they moved to history/ on 23 October 2026. All readers AI; no collation with a printed edition.
 
 Canonical source: [CIVILIZATION-THOUGHT-AND-BECOMING.md](../../history/CIVILIZATION-THOUGHT-AND-BECOMING.md)
 

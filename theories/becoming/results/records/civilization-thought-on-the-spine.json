@@ -50,8 +50,8 @@
     "nondual-method-not-proof"
   ],
   "validation_scope": {
-    "en": "verify_zh.py passes (4 November 2026, board item RAE; with research-test since): the import (438 files by SHA-256), one verdict for each of 5,673 judgments, each of the 3,499 flagged placed once, 2,023 fragments verbatim, 1,603 declarations in receipt 20261103T211917.845905Z, 234 records, the name table (449 names), and 06-CLASSICAL-TEXTS's 116 Lean names, its record links and nine numbers of its §七; the chapters' quotations, declarations, links, 对照 kinds and tables were checked until they moved to history/ on 23 October 2026. All readers AI; no collation with a printed edition.",
-    "zh": "verify_zh.py 通过（2026 年 11 月 4 日，看板项 RAE；此后随 research-test）：导入 438 个文件，5,673 条判断各一裁定，所标 3,499 条各落一处，2,023 片段逐字，1,603 个声明在回执 20261103T211917.845905Z 中，234 份记录，名表 449 名，06 之 116 个 Lean 名、记录链接与第七节九数；诸章之引文、声明、链接、对照与表核至 10 月 23 日移入 history/。读者皆 AI；未与刻本对校。"
+    "en": "verify_zh.py passes (4 November 2026, board item RAE; with research-test since): the import (438 files by SHA-256), one verdict for each of 5,673 judgments, each of the 3,499 flagged placed once, 2,023 fragments verbatim, 1,603 declarations in receipt 20261103T211917.845905Z, 234 records, the name table (449 names), and 06-CLASSICAL-TEXTS's 116 citations of Lean names, its record links and nine numbers of its §七; the chapters' quotations, declarations, links, 对照 kinds and tables were checked until they moved to history/ on 23 October 2026. All readers AI; no collation with a printed edition.",
+    "zh": "verify_zh.py 通过（2026 年 11 月 4 日，看板项 RAE；此后随 research-test）：导入 438 个文件，5,673 条判断各一裁定，所标 3,499 条各落一处，2,023 片段逐字，1,603 个声明在回执 20261103T211917.845905Z 中，234 份记录，名表 449 名，06 之 116 处 Lean 名、记录链接与第七节九数；诸章之引文、声明、链接、对照与表核至 10 月 23 日移入 history/。读者皆 AI；未与刻本对校。"
   },
   "next_delta": {
     "en": "The gaps the texts raise, each to be claimed before it is written: witnesses that are functions of one another; measures of a juncture; a pool weighted by share. Then the three RO and 易传 kinds decided in the chapter written into those maps.",
