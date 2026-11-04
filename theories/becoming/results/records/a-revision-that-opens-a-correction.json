@@ -123,8 +123,8 @@
     "zh": "合纯核之条件，公理报告皆空，为环中之应用：OpenedCorrection 引 GuardHorizon（一应用）与 Revision；correctable_iff 即 GuardHorizon.uniform_policy_iff_fiber_feasible；Linked 之例计算 Revising 之过程。"
   },
   "next_delta": {
-    "en": "A supplied controller's run along which an opening is taken; an institution's rule of reading what its members report as its own process, with the members' acts; a frozen test of whether a language-model institution corrects only through the reading its register states, with the plan's controls (the plan's TR4); review by a person.",
-    "zh": "一所予之控者沿之而取所开之历程；制度读成员所报之规为其己之过程，并成员之行；冻结之检验：语言模型之制度是否唯经其簿所陈之读而更正，具计划之对照（计划之 TR4）；人之审查。"
+    "en": "A supplied controller's run along which an opening is taken; an institution's rule of reading what its members report as its own process, with the members' acts; a run of the frozen test of whether a language-model institution corrects only through the reading its register states, with the plan's controls (TR4); review by a person.",
+    "zh": "一所予之控者沿之而取所开之历程；制度读成员所报之规为其己之过程，并成员之行；冻结检验之运行：语言模型之制度是否唯经其簿所陈之读而更正，具计划之对照（TR4）；人之审查。"
   },
   "correspondence": {
     "en": "AI reading: for an institution, the link is its rule of reading what its members report, by which line rather than how many, the stock what that reading draws on, and the correction the repair a report calls for. Revising an observation map is one formal mechanism that may take part in organizational learning; its relation to double-loop learning (Argyris and Schön 1978) depends on whether inquiry changes a governing norm or assumption, and here the acceptability is fixed and the law concerns uniform-policy existence along a course. Replacing a reading by one read off it through a supplied map, gaining no executability and with the acceptability fixed, opens no correction. With selection-under-registration-revision, where discrimination, support and enactment come apart, this states in policy form the correction they open. These are readings, not containments.",
@@ -243,6 +243,10 @@
     {
       "en": "31 October 2026, board item RF, the tests' designs (study section 476): the next step names its test as designed, TR4 in experiments/formations-that-read, which can refute at most the bridge that the reading in force is the register's rule, never the law; no statement or declaration changed. PLAN.md re-pointed: since this record's reviewed hash the plan changed only where the tests' readers found it misstating the Lean (§3, §4, §8, §11, §12) and in §10, the tests; read against this record before re-pointing, nothing it says changed.",
       "zh": "2026年10月31日，工作板条目 RF，诸检验之设计（研究第 476 节）：下一步所名之检验即 experiments/formations-that-read 之 TR4，至多能驳所行之读即簿之规之桥，不驳此律；无一陈述或声明改变。计划 PLAN.md 重新指向：自本记录所审哈希以来，计划只于检验之读者见其误述 Lean 之处（§3、§4、§8、§11、§12）及 §10 诸检验而变；重新指向前已对本记录读之，其所言无一改变。"
+    },
+    {
+      "en": "4 November 2026, board item TR45: the test TR4 frozen with TR5 before any call to a model (experiments/formations-that-read/FREEZE-2.md), on RF's three pins at 60 units of the test arm, with a decline read as an answer; not run. The law is unchanged; next_delta's step is now the frozen test's run, which waits on Ren's yes.",
+      "zh": "2026年11月4日，看板项 TR45：检验 TR4 于任一模型调用之前与 TR5 同冻（experiments/formations-that-read/FREEZE-2.md），于 RF 之三钉、试臂六十单元，拒答读为一答；未运行。律不变；next_delta 之步今为冻结检验之运行，待 Ren 之可。"
     }
   ]
 }

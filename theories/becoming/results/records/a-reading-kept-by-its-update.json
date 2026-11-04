@@ -167,8 +167,8 @@
     "zh": "纯核，公理报告皆空：ReadingLoop 引 Blanket、Keeping、Narrowing 与 ShownOrder；闭为文法之 «闭» 与 «闭之及»；历之形以历之递归证之，不用判定。"
   },
   "next_delta": {
-    "en": "The existence of a history policy as a choice along the histories it generates; probabilistic belief in the periphery; a frozen test of whether a language-model agent acts as a policy from its visible history, audited on the worlds possible after each history, and of two bridges for a reading it states (the plan's TR5); review by a person.",
-    "zh": "历策略之存在为沿其所生之历之择；外围之概率信念；冻结之检验：语言模型之行者是否为由其可见之历而行之策略，于每一历后可能之诸世审之，及其所陈之读之二桥（计划之 TR5）；人之审查。"
+    "en": "The existence of a history policy as a choice along the histories it generates; probabilistic belief in the periphery; a run of the frozen test of whether a language-model agent acts as a policy from its visible history, audited on the worlds possible after each history, and of two bridges for a reading it states (TR5); review by a person.",
+    "zh": "历策略之存在为沿其所生之历之择；外围之概率信念；冻结检验之运行：语言模型之行者是否为由其可见之历而行之策略，于每一历后可能之诸世审之，及其所陈之读之二桥（TR5）；人之审查。"
   },
   "correspondence": {
     "en": "A safety composition related to possibilistic belief interpretations of regulation (Virgo, Biehl, Baltieri and Capucci 2025), whose closure is under the policy chosen, as keeps_of_leadsInto takes it, where KeptBy asks it under every act; with GuardHorizon's choice from readings it is requisite variety along a loop. AI reading: the history form says what a regulator acting from what couples in must meet: safety and enabledness at every world compatible with its own history and the starts, the least reading kept by recording; a coarser reading can suffice where its further worlds ask compatible acts, and verifying a given policy is not finding one. The good regulator theorem (Conant and Ashby 1970) concerns simplest optimal regulation and is not reproduced. These are readings, not containments.",
@@ -309,6 +309,10 @@
     {
       "en": "1 November 2026, board item ND (study section 492): declarations renamed so that each name states what it means, not a command, a value or an ownership: GoodEnabled → LeadsIntoEnabled, PairwiseShared.good → PairwiseShared.leads, ReadingLoop.Good → ReadingLoop.LeadsInto, everything_good_iff → everything_leadsInto_iff, good_of_keeps → leadsInto_of_keeps, keeps_iff_good → keeps_iff_leadsInto, keeps_of_good → keeps_of_leadsInto, nothing_good → nothing_leadsInto. The statements are kept but for the names, and laws 2 to 6 and the counterexample follow them: an act leads into the task from a reading, or at a world, where they said it is good for it, a value the definition does not state; the claim is unchanged.",
       "zh": "2026年11月1日，工作板条目 ND（研究第 492 节）：声明更名，使名言其所指，不言命令、价值或所有：GoodEnabled → LeadsIntoEnabled, PairwiseShared.good → PairwiseShared.leads, ReadingLoop.Good → ReadingLoop.LeadsInto, everything_good_iff → everything_leadsInto_iff, good_of_keeps → leadsInto_of_keeps, keeps_iff_good → keeps_iff_leadsInto, keeps_of_good → keeps_of_leadsInto, nothing_good → nothing_leadsInto。陈述除名外不变；第二至第六律与反例随名而改：行自一读或于一世通务，原言其于之为善，而定义不言此价值；论断不变。"
+    },
+    {
+      "en": "4 November 2026, board item TR45: the test TR5 frozen with TR4 before any call to a model (experiments/formations-that-read/FREEZE-2.md), on RF's three pins with 9 episodes a course, a decline read as an act with no successor; not run. The law is unchanged; next_delta's step is now the frozen test's run, which waits on Ren's yes.",
+      "zh": "2026年11月4日，看板项 TR45：检验 TR5 于任一模型调用之前与 TR4 同冻（experiments/formations-that-read/FREEZE-2.md），于 RF 之三钉、每程九回，拒答读为无后继之行；未运行。律不变；next_delta 之步今为冻结检验之运行，待 Ren 之可。"
     }
   ]
 }
