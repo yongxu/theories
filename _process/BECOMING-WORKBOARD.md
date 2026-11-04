@@ -89,6 +89,7 @@ Findings that only make a correct statement more exact, kept for one pass in the
 - **08's two rows on MQ1** (ED2's sciences reader, E2S-23): the unifications row has T3 across domains "supported in simulation (MQ1)", while the T3 row, since LA4e, says T3 was first worded after MQ1 ran, each test's predictions their own. The unifications row would add that MQ1 ran before T3 was worded; the sciences front follows the row.
 - **ALIGNMENT:549's label** (aa-errata's restatement reader): "[AI reading]" becomes "[AI reading, new]", as its home now has it.
 - **Two older restatements looser than their homes** (aa-errata's restatement reader): 03:29 says Zhuang and Hadfield-Menell's Theorem 1 "is 05's law" without 05's "with shared units for room"; 08:489 says "a discrete analogue of their Theorem 2" where 08:539 has "first direction".
+- **02:444's bare "meta-attractor"** (ED3's alignment reader, E3A-08): "the meta-attractor's lock and its second order" uses the bare term in the corpus's sense, where 02:442 credits that order to "the corpus"; the glossary now keeps the bare term for closed capture and A-10b says "the earlier work's meta-attractor", so 02:444 would say "the earlier work's" or "the corpus's".
 - **Two questions AA's errata left open, no owner active** (aa-errata's implementer): E40, whether GrammarPath's region in the theory graph is significance (RA's tool); E37, whether 03's sensor argument becomes a Reading. Each is decided on argument by whoever next claims 03 or the graph's regions.
 
 ## Decisions pending Ren
