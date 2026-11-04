@@ -189,7 +189,7 @@
 
 族号沿用设计之编号，G12 与 G24 已解散。“新”是自有其推导之律；“定义之展开”与“推论”只在一族之“Y 当且仅当 Z”须之以确切陈述时才写成引理，否则在此为文。断只一义：亡于“一”之下，无物续之（G13、G16 同）。
 
-**穷 → 变 → 通（G01）。** 亡于一类而于他类有后者异（文；是 `«生于细而续于粗则异»` 在后之一侧之镜像），恰于有后处异（`«亡者异当且仅当有后»`）；类两向有常时，有前者通，不论其异否（`«两向有常有前则通»`），且此条件充分而非必要（`«不有常而通之例»`）。不穷依定义是通之一半。三者合陈是合取：亡给异，有常给通，变于通无所为；所以它在此为文，不是律。读變为文本自己的「一闔一闢謂之變」（XCS-11-009），每一步皆分，则通即每处往来之变，依定义。文本所言是哪一种變，仍未决 [AI reading]（[未决](#open)）。
+**穷 → 变 → 通（G01）。** 亡于一类而于他类有后者异（文；是 `«生于细而续于粗则异»` 在后之一侧之镜像），恰于有后处异（`«亡者异当且仅当有后»`）；类两向有常时，有前者通，不论其异否（`«两向有常有前则通»`），且此条件充分而非必要（`«不有常而通之例»`）。不穷依定义是通之一半。三者合陈是合取：亡给异，有常给通，变于通无所为；所以它在此为文，不是律。读變为文本自己的「一闔一闢謂之變」（XCS-11-009），每一步皆分，则通即每处往来之变，依定义。文本所言是哪一种變，仍未决 [AI reading, new]（[未决](#open)）。
 
 **依其读法不成立者六**，各有反模型：「不爾，便無恒相持用」（CWS-P6+P7+P8-020，G11）陈相须之逆，类不有常而线不穷（`«不有常而不穷之例»`）；「若無常即墮斷邊」（ZL-21-113，G13），计数于一，在同一之类下亡而在“一”之下住（`«亡于静而住于一之例»`）；「若離業有果報，則有斷常」（ZL-17-051，G13），反模型中果报全无缘（不只无业），于任何类下不住，非常；另一事（业）有后，非断（`«无缘不住而他有后之例»`）；「若無因而有萬物者，是則為常」（ZL-01-099，G16），无缘者于任何类下不住，且可亡（`«生亡并之例»`）；「若決定有去、有去者，應有初發」（ZL-02-070，G16），读定性为自缘，则于任何类下不生（`«自缘而不生之例»`），是归谬之前提；「以如來藏無前際故，無明之相亦無有始」（QXL-JS-324，G15），读故为依，依于无始者可以有始（`«依于无始而有始之例»`，须一类分开二种）。
 
@@ -212,7 +212,7 @@
 
 **机制。** 周易所描述的，首先是一组构形：一卦是自下而上的六爻，每爻阳（刚）或阴（柔）；一爻可变；消息之律使每爻升一位，上爻以其反入初位；所传卦序把六十四卦排成一列。这些都是关系之物：一卦之所是，就是它的六个位上各是什么，以及它怎样经一律走到下一卦。写成脊柱上的一个世界，只是写出经文自己描述的结构；脊柱对一切世界证明的律（复返与合并、吸收、归并承载律、语境之读的粘合）便在这些构形上被检查，不只被断言。
 
-六个模块都在纯核之外的实例环中，合乎纯核之条件（只引前奏，每个声明的公理报告为空）：[Hexagrams](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Hexagrams.lean)（构形与两律）、[HexagramPlaces](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HexagramPlaces.lean)（爻位之关系与普查）、[HexagramLaws](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HexagramLaws.lean)（互、之卦、錯綜、加一、消息之轨）、[HexagramSites](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HexagramSites.lean)（王弼之读）、[HexagramCommuting](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HexagramCommuting.lean)（錯之对称及其打破之处）、[HexagramSequences](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HexagramSequences.lean)（传中诸排列）。经文取自中文维基文库，记有版本号与 SHA-256，未与刻本对校；逐句对应由检查脚本核对，随 research-test 运行；所核之逐段表在[易传之对应](../history/YI-ZHUAN-AND-BECOMING.md#4-逐句对应)中。模块中没有吉凶、贵贱、德或意义之谓词，也没有判断。
+六个模块都在纯核之外的实例环中，合乎纯核之条件（只引前奏，每个声明的公理报告为空）：[Hexagrams](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Hexagrams.lean)（构形与两律）、[HexagramPlaces](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HexagramPlaces.lean)（爻位之关系与普查）、[HexagramLaws](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HexagramLaws.lean)（互、之卦、錯綜、加一、消息之轨）、[HexagramSites](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HexagramSites.lean)（王弼之读）、[HexagramCommuting](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HexagramCommuting.lean)（錯之对称及其打破之处）、[HexagramSequences](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HexagramSequences.lean)（传中诸排列）。经文取自中文维基文库，记有版本号与 SHA-256，未与刻本对校；逐句对应由检查脚本核对，随 research-test 运行；所核之逐段表在[易传之对应](../history/YI-ZHUAN-AND-BECOMING.md#4-逐句对应)中。模块中没有吉凶、贵贱、德或意义之谓词，也没有判断。本节所引卦之 Lean 名在命名空间 `Becoming.Hexagram.` 中，省去此前缀；所引其余之律写出其命名空间（如 `Law.`、`World.`）。
 
 <a id="hexagram-world"></a>
 ### 5.1 六十四卦之世界
@@ -232,7 +232,7 @@
 |---|---|---|
 | 錯之对 | 一卦与其錯卦合为一对，是消息之律所同行的归并 | `pairs_goAlike` |
 | 阳爻之数 | 不是消息之律所同行的归并：泰与否阳爻皆三，下一步分属四与二 | `yang_not_goAlike` |
-| 只入阴爻之律 | 正是打破錯之对称的律：它不与錯交换（[HexagramCommuting](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HexagramCommuting.lean)） | `Hexagram.wane_breaks` |
+| 只入阴爻之律 | 正是打破錯之对称的律：它不与錯交换（[HexagramCommuting](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HexagramCommuting.lean)） | `wane_breaks` |
 | 生起与止息 | 沿消息之律自任一卦起之运行：任意晚之步上都有某一位之爻转为阳，也都有某一位之爻不再为阳；读作框架之世界，任意晚之步上都有某一位生起，也都有某一位止息 | `arising_recurs`、`ceasing_recurs`、`world_arising_recurs`、`world_ceasing_recurs` |
 | 重访 | 任一过程之下，任一运行的前六十五个状态中必有重访；带着历史的律不被任何清单所含 | `revisits_within_order`、`kept_history_unlisted` |
 | 所传卦序 | 两两成对，后一卦是前一卦倒转，倒转不变者则六爻皆变，即孔颖达所说“非覆即變” | `order_paired` |
@@ -312,7 +312,7 @@
 | 阳爻之数的奇偶 | 消息之律与一爻之变都同行于此归并，阳爻之数本身不是，互之律也不同行于奇偶；三爻之卦奇偶恰分阳卦阴卦（「陽卦奇，陰卦偶」） | `yangOdd_goAlike`、`nuclear_yangOdd_not_goAlike`、`odd3_iff` |
 | 杂卦 | 保留同样的三十二对，前五十六卦置每卦于其配之旁，末八卦交错四对，也不是任何与錯、綜或二者交换之律的运行 | `zagua_partners`、`zagua_last_eight`、`zagua_not_commutes` |
 | 静止 | 消息之律没有静止之处，既濟亦然 | `never_comes_to_rest` |
-| 说卦第五章之八站 | 运行八站之律无一与錯、綜或轮转交换；相对四对中只有離、坎互为錯，第三章之四对则皆是 | `stations_not_commutes`、`Trigram.opposite_stations` |
+| 说卦第五章之八站 | 运行八站之律无一与錯、綜或轮转交换；相对四对中只有離、坎互为錯，第三章之四对则皆是 | `Trigram.stations_not_commutes`、`Trigram.opposite_stations` |
 | 泰与否 | 否既是泰之錯，也是泰之綜；凡錯所保持之读法，沿消息之律自二者起之运行，每步皆读之为同；“交”（下阳上阴）在泰之每一高度成立、在否之任一高度不成立，所以“交”不为錯所保持 | `pi_of_tai`、`kept_alike`、`meets_tai_pi` |
 
 所以卦序是一条律之轨（`orderNext_one_orbit`），只是此律由卦序这张表定义。序卦在对与对之间给出的理由（「物不可以終否，故受之以同人」）是加在清单上的言说，不是构形承载之律 [AI reading, D55]。脚本另算的最好部分相合（三格局部规则最多 63 步中 9 步，置换加掩码之律 28 步；八站 8 步中 5 步与 4 步）未写成 Lean。
@@ -406,7 +406,7 @@
 | 先在的根据 | 有物混成，先天地生；以无为本；元气混而为一；未有天地之先毕竟是先有此理；自性能生万法 | 王夫之“乾坤并建，时无先后”；程颐“体用一源”；戴震“理者情之不爽失”；郭店“生于有，生于亡” | 表示中每个世界就是它自己的运行（`World.run_world`，依定义）；世界平衡，恰当交换之律有一运行具其网与交换（`World.balanced_iff_exists_run`，[第一章](01-ROOT.md#r-worlds-are-runs)）：表示不需要先于运行之始；这不裁决先在根据是否存在 |
 | 先定的性或价值 | 性善、性恶、性即理；天命之谓性；五声有善恶 | 孟子牛山；荀子化性起伪；嵇康声无哀乐 | 同一依存网与无物有意义、一切皆有意义都相容（`Web.significance_undetermined`，[第七章](07-SIGNIFICANCE.md#r-what-the-dynamics-leave-open)） |
 | 意志或单一统摄者 | 天志；董仲舒之天意；王一贯三；利出一孔；将欲歙之、愚民 | 荀子“天行有常”；孟子“天不言”；老子“以百姓心为心”；黄宗羲“天下为主，君为客” | 沿依存导出之范围中，中心不由动力学推出（`Clearing.center_not_derived`，World 上构造的反模型，[第七章](07-SIGNIFICANCE.md#r-derived-extent-limits)）；只对沿依存导出之范围成立；沿已形成之关系，受影响者与之相关，传递不限于自身之区域 |
-| 争胜与等级 | 不战而屈人之兵；二柄；民弱国强；贵贱有等；亲亲之杀 | 老子“人之道，损不足以奉有余”；楚庄王“犹有晋在”；墨子“先从事”；和而不同 | 一方位置之升须有他方之降（`RelativePosition.rise_needs_fall`，[第五章](05-COLLECTIVES.md#r-relative-position-is-zero-sum)）；所施之码使诸形成一致，不偏任何形成（`SharedCodes.impose_agrees`、`impose_keeps_exchange`），各形成所失恰是其码所分而所施之码所并者（`SharedCodes.impose_loses_iff`） |
+| 争胜与等级 | 不战而屈人之兵；二柄；民弱国强；贵贱有等；亲亲之杀 | 老子“人之道，损不足以奉有余”；楚庄王“犹有晋在”；墨子“先从事”；和而不同 | 一方位置之升须有他方之降（`RelativePosition.rise_needs_fall`，[第五章](05-COLLECTIVES.md#r-relative-position-is-zero-sum)）；所施之码使诸形成一致，不偏任何形成（`SharedCodes.impose_agrees`、`SharedCodes.impose_keeps_exchange`），各形成所失恰是其码所分而所施之码所并者（`SharedCodes.impose_loses_iff`） |
 
 <a id="laozi-51"></a>
 **读法** [AI reading, D54]。**老子第五十一章。**最强之一例是「生而不有，为而不恃，长而不宰」。两处结构相合：动作是部分的，恰当它是部分自身的策略，其余以之为输入时即受其驱动，这是“宰”的结构；一个见证中，同一部分同样之汲取，有一个其他汲取者时造成差别，有两个时不造成（`Pool.difference_only_together`）：差别可以只由共同者造成，这是“不恃”。“不有”在脊柱上没有可读之结构：脊柱不立占有之关系，这只是未表示，不是相合。从“不宰”到“应当不宰”，还需要两个前提：延续之条件（含不变性一步，即条件在自身之预设以外的内容）定范围（谁的损失算数），以广为愈（C）定次序（[第七章](07-SIGNIFICANCE.md)）。经文与脊柱都没有自行给出它们，理论也不断言它们。
@@ -437,7 +437,7 @@
 **机制。** 上节是选读；论题在一部思想图谱全体上是否成立，须读其全部判断。《中华思想脉络》1.0 是以 AI 协助建成的研究图谱，从易道扩展到三教、庄、墨、名辩、兵与法；其“完整判断”是带出处的论断（谁在何文本中对何说了什么，引了哪几句），是阅读的单位。脊柱按结构分为十七簇，每簇一位映射者读其全部判断：同一段说同一结构者归为一个条目，其余并列，只共享一字者写明理由后不取；每个条目再经修订者重读、检查者独立核对。
 
 <a id="r-civilization-thought-on-the-spine"></a>
-**评估。** 《中华思想脉络》v1.0 的 5,673 条判断逐条对着脊柱读过：3,499 条涉及其结构，各自恰好落在一处（归入一个条目、与一条目并列、或读后不取），条目共 1,300 个，皆经检查（相合 453，定域 647，相分 200）；另有 2,174 条没有脊柱可读的结构。以 449 个古典之名，一概念一名，写成中华本《变化论》（[脉络之章](../history/CIVILIZATION-THOUGHT-AND-BECOMING.md)；检查脚本 [verify_zh.py](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/verify_zh.py)；记录 [civilization-thought-on-the-spine](../results/records/civilization-thought-on-the-spine.md)）。不新增 Lean，不新增前提；类别、读法与名都是 AI 的 [AI reading, D62]。名是在理论的使用者之间形成的一份码，受所见之义约束，不是从历史中复原的意义（[第五章](05-COLLECTIVES.md#r-a-code-formed-between-formations)）。
+**评估。** 《中华思想脉络》v1.0 的 5,673 条判断逐条对着脊柱读过：3,499 条涉及其结构，各自在其所标之簇中恰好落在一处（归入一个条目、与一条目并列、或读后不取），其中 96 条另落于他簇（6 条在一簇取而在他簇不取，尚未判定）；条目共 1,300 个，皆经检查（相合 453，定域 647，相分 200）；另有 2,174 条没有脊柱可读的结构。以 449 个古典之名，一概念一名，写成中华本《变化论》（[脉络之章](../history/CIVILIZATION-THOUGHT-AND-BECOMING.md)；检查脚本 [verify_zh.py](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/verify_zh.py)；记录 [civilization-thought-on-the-spine](../results/records/civilization-thought-on-the-spine.md)）。不新增 Lean，不新增前提；类别、读法与名都是 AI 的 [AI reading, D62]。名是在理论的使用者之间形成的一份码，受所见之义约束，不是从历史中复原的意义（[第五章](05-COLLECTIVES.md#r-a-code-formed-between-formations)）。
 
 三读是必要的：修订者原样保留的 88 条，第二位检查者读后 84 条要改正（各读之数见记录）；实质的改正是改类别（21 条，多由相合改为定域）、补漏写的 Lean 前提、标出被当作一般律引用的构造之见证。只经两读的条目不可靠；三读之后仍可能有错，此比例也不能推到第一位检查者所通过的 696 条。读法另有两条界：同语不等于同指，也不等于相承（如孟子“不舍昼夜”与论语川上章）；每一条目先写原文之义，再写结构之读，例如「生生之谓易」孔疏释为“不絕之辭”是史义，脊柱上的相续之结构是读法，读法不替代史义（[脉络之章 §七](../history/CIVILIZATION-THOUGHT-AND-BECOMING.md#七几种读法的界)）。
 
@@ -595,7 +595,7 @@
 **读法** [AI reading, D49]。这一映射得出一个与早期文本相反的结果：早期说“开之四相不可缺一”，视四标为独立的；在脊柱上它们不独立。转作复返即给出可，不需前提；有限构形中，一个运行开始恰当一条历程到达一个复返（`Onward.run_iff_returning`，[第一章](01-ROOT.md#r-where-a-run-goes-on)），所到之复返者不必是起点。所以在那里，可就是到达一个复返；未则要一个不为任何清单所含的世界。早期的“九句”分归与不归，于是在脊柱上成为三种情形：无损之复返（语料所谓“不息”而无“生生”）；被吸入（不归之“收”：只入阴爻之律下，坤以外的每一构形永不回到自身，有限构形中即有，[§5.1](#hexagram-world)）；永不重访任何已经过之构形（不为任何清单所含，`unlisted_of_new`，有限构形中不可能，任一运行的前 N + 1 个状态必有重访）。唯第三种可当九句之“生”（不归而继续）；它不就是第二章之生成，生成是经传而延续的样式（[第二章](02-MAP.md)）。律不动的构形每步复返，是静，不是熄。稳与元闭在脊柱上是同一结构（扰动被吸回规则所持之处），从规则所持一侧读为稳，从将要到达它的改变一侧读为法源冻结：判断不同而结构相同，这正是评价只经比较进入、从不经定义进入的理由。
 
 <a id="glossary-senses"></a>
-**读法** [AI reading, D1, D5]。语料词表中有几个词与本理论之词同字而不同义，不可合并。语料之“生生不息”分为生、生生（进入亦保持、恢复或创造下一轮之条件与生成者）与不息（经代谢、死亡与传递而样式再实现）；形式之 `Unceasing`（某一形成在任意晚之步生起）远弱于它，复返而成既有形式之抄本不及之；文法之 `«息»` 以归纳正面定义（一事所复生至者皆息，则此事息，[§三](#tong-and-xi)），说的是复生之串有尽，与语料之“息”也不同。语料之“开”是四标并立，本理论之“开放”只是其中之“未”。“理”在语料之化／理对偶中是轨迹之不变量，与本理论“建模结构与变化之律”二义不并。“道”在语料中有指南、形式谓词与代数三种用法，本理论不立形式之道。善、恶、智没有形式谓词；“足”最近于寻求之静（`Law.rests_iff`，[第三章](03-KNOWING.md#r-seeking-boundary)）。
+**读法** [AI reading, D1, D5]。语料词表中有几个词与本理论之词同字而不同义，不可合并。语料之“生生不息”分为生、生生（进入亦保持、恢复或创造下一轮之条件与生成者）与不息（经代谢、死亡与传递而样式再实现）；形式之 `Web.Unceasing`（某一形成在任意晚之步生起）远弱于它，复返而成既有形式之抄本不及之；文法之 `«息»` 以归纳正面定义（一事所复生至者皆息，则此事息，[§三](#tong-and-xi)），说的是复生之串有尽，与语料之“息”也不同。语料之“开”是四标并立，本理论之“开放”只是其中之“未”。“理”在语料之化／理对偶中是轨迹之不变量，与本理论“建模结构与变化之律”二义不并。“道”在语料中有指南、形式谓词与代数三种用法，本理论不立形式之道。善、恶、智没有形式谓词；“足”最近于寻求之静（`Law.rests_iff`，[第三章](03-KNOWING.md#r-seeking-boundary)）。
 
 ---
 
@@ -632,12 +632,12 @@
 ## 未决
 
 - **人审。** 归类、对应、读法、名与普查之选，都是 AI 所为，没有人通读过。古文学者、佛学学者、逻辑学者的审读是这条线的最后一步；审读包要从结构生成，含一份对归类的抽样重编。
-- **新候选与丙一之读。** 后加三部文本的 181 条乙类候选尚未检验。丙一 219 条之读（[§四](#r-conditional-laws-of-the-corpus)）无人审过，其中三处仍是疑问 [AI reading]：「衡不正」是反转其衡，还是只不保其序（G22；若只不保其序，「重縣於仰」不随之）；《起信论》之相應是否读作同在核之一类（G15，JS-326；须遍检其书相應之用，JS-318 在内）；無明是否在其煩惱染法之中（G15，JS-318；若在，無明未曾與如來藏相應，JS-326 之读不能移用于 JS-324）。
+- **新候选与丙一之读。** 后加三部文本的 181 条乙类候选尚未检验。丙一 219 条之读（[§四](#r-conditional-laws-of-the-corpus)）无人审过，其中三处仍是疑问 [AI reading, new]：「衡不正」是反转其衡，还是只不保其序（G22；若只不保其序，「重縣於仰」不随之）；《起信论》之相應是否读作同在核之一类（G15，JS-326；须遍检其书相應之用，JS-318 在内）；無明是否在其煩惱染法之中（G15，JS-318；若在，無明未曾與如來藏相應，JS-326 之读不能移用于 JS-324）。
 - **同在。** 中观之第二角（缘在所缘生起时是否须在场）与唯识之“空缺之后的再现何时是续”，都只写成了开放之问；文法要说出它们，须加一个同在之关系，这是对模型的选择。
 - **对应之缺口。** 以闭包层级分等的次序是否对每一立场相同（从中心按最小闭包层级分等之律尚无，[§六](#ro-gaps)）；跨多个条件之“分”的霍尔型存在条件。
 - **易。** 未做：文言中言位、言中之处之普查；王弼《周易注》（未存）逐爻之读之对照；王弼于独应之外所举之主与“時”“位”合读；卦气、纳甲、取象与方位；邵雍先天之序之定理（今只在模块文档中）。序卦对间之理由与诸排列的最好部分相合，仍是脚本之算。
 - **文本。** 全部为电子转录，未与刻本对校；郭店与帛书以所载释文为准；脉络未收之书（如《诗经》、阴阳家、农家之原典）未读；老子第三十四、五十七章与中庸第一、十三章未入映射；对应之章所列值得再读之段（[§11](../history/CHINESE-SOURCES-AND-BECOMING.md#11-未做之事)）未读；坛经敦煌本未收。
-- **穷 → 变 → 通。** 文本所言是哪一种變 [AI reading]：读作一次之异，三者是合取，无序可求；读作「一闔一闢」，通之一步依定义（[§四](#r-conditional-laws-of-the-corpus)，[§三](#tong-and-xi)）。
+- **穷 → 变 → 通。** 文本所言是哪一种變 [AI reading, new]：读作一次之异，三者是合取，无序可求；读作「一闔一闢」，通之一步依定义（[§四](#r-conditional-laws-of-the-corpus)，[§三](#tong-and-xi)）。
 - **配对与幂。** 语料中尚无带投影的函数性配对之用例（[§三](#pairing-and-power)）。
 - **汉字之较强假说。** 某些字词及其组合，能否在明确的范围内稳定地保留概念之间的关系与操作（产生、保留、反复、识别、选择、修订、扣留怎样依赖、怎样失败），而不只是逐个对应名称；按四级验收，须在未参与设计的样本上检验。
 - **文理生生。** 阅读试验（H2）未运行；文理生生的语法 G1 作为脊柱上系辞一层的查询语言，须在判定之下证明两边相等，尚未做。

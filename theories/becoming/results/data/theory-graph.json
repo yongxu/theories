@@ -351,8 +351,8 @@
    "title_zh": "所至之历上之级联",
    "status": "recorded-checked",
    "kind": "theorem",
-   "region": "unassigned",
-   "base": "",
+   "region": "collective",
+   "base": "general",
    "page": "theories/becoming/results/records/a-cascade-at-the-histories-reached.md"
   },
   {
@@ -1803,8 +1803,8 @@
    "title_zh": "耦合的抽取者只在耦合不低于需要时留住它",
    "status": "recorded-checked",
    "kind": "theorem",
-   "region": "unassigned",
-   "base": "",
+   "region": "collective",
+   "base": "general",
    "page": "theories/becoming/results/records/coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it.md"
   },
   {
@@ -1995,8 +1995,8 @@
    "title_zh": "临界量，逐一而抽",
    "status": "recorded-checked",
    "kind": "theorem",
-   "region": "unassigned",
-   "base": "",
+   "region": "map",
+   "base": "general",
    "page": "theories/becoming/results/records/drawn-shaping-drawn-one-at-a-time.md"
   },
   {
@@ -5079,8 +5079,8 @@
    "title_zh": "塑规之能，于群间被选",
    "status": "recorded-checked",
    "kind": "theorem",
-   "region": "unassigned",
-   "base": "",
+   "region": "map",
+   "base": "general",
    "page": "theories/becoming/results/records/shaping-selected-among-groups.md"
   },
   {
@@ -5859,8 +5859,8 @@
    "title_zh": "不等大之群，不由群间离散决定",
    "status": "recorded-checked",
    "kind": "theorem",
-   "region": "unassigned",
-   "base": "",
+   "region": "life",
+   "base": "general",
    "page": "theories/becoming/results/records/unequal-groups-not-decided-by-the-spread-among-groups.md"
   },
   {
@@ -8494,8 +8494,8 @@
    "name": "Becoming.ReachedCascade",
    "level": "L1",
    "theorems": 8,
-   "region": "unassigned",
-   "base": "",
+   "region": "collective",
+   "base": "general",
    "on_grammar": false,
    "reaches_grammar": true
   },
@@ -10551,8 +10551,8 @@
    "name": "Becoming.CoupledDrawers",
    "level": "L1",
    "theorems": 57,
-   "region": "unassigned",
-   "base": "",
+   "region": "collective",
+   "base": "general",
    "on_grammar": false,
    "reaches_grammar": true
   },
@@ -10925,8 +10925,8 @@
    "name": "Becoming.GrammarPath",
    "level": "L1",
    "theorems": 102,
-   "region": "unassigned",
-   "base": "",
+   "region": "significance",
+   "base": "grammar",
    "on_grammar": true,
    "reaches_grammar": true
   },

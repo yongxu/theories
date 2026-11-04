@@ -5,7 +5,7 @@
 
 `civilization-thought-on-the-spine` · **reviewed-scoped** · assessment · F01 · [record](civilization-thought-on-the-spine.json) · [register](../../../../RESULTS.md)
 
-> Every one of the 5,673 judgments of 《中华思想脉络》 v1.0 is read against the spine: 3,499 bear on its structures, each placed once, in 1,300 checked entries (453 agreements, 647 exact scopes, 200 divergences). 449 classical names, one per concept, state the theory in the 中华本《变化论》.
+> Every one of the 5,673 judgments of 《中华思想脉络》 v1.0 is read against the spine: 3,499 bear on its structures, each placed once in its flagged cluster, in 1,300 checked entries (453 agreements, 647 exact scopes, 200 divergences). 449 classical names, one per concept, state the theory in the 中华本《变化论》.
 
 <a id="conditions--条件"></a>
 ## Conditions
@@ -19,6 +19,7 @@
 - That the language or the tradition is relational by nature: the relational start is a dominant thread strongest at the earliest layer, not a property of every system; the distribution by era is of this corpus, whose later texts were chosen for their debates on ground and nature.
 - That the classical names recover what the texts meant, or that names without a recorded witness were in pre-Qin use: 95 classical words in the table carry no checked quotation.
 - That a divergence of standing (a text asserting what the theory gives only under the continuation condition) shows the text wrong; the theory asserts no ethical axiom.
+- That a judgment flagged for one cluster lies in no other: 96 are placed in other clusters too, 6 of them kept in one and rejected in another, not yet decided; placements outside a judgment's flagged cluster are not checked.
 
 **Standard boundaries:** No ethical premise and no Lean axiom is used. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account. · The nondual method is a requirement of method, not a proof of ontology or ethical necessity.
 
@@ -30,7 +31,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-verify_zh.py passes (4 November 2026, board item RAE; with research-test since): the import (438 files by SHA-256), one verdict for each of 5,673 judgments, each of the 3,499 flagged placed once, 2,023 fragments verbatim, 1,603 declarations in receipt 20261103T211917.845905Z, 234 records, the name table (449 names), and 06-CLASSICAL-TEXTS's 116 citations of Lean names, its record links and nine numbers of its §七; the chapters' quotations, declarations, links, 对照 kinds and tables were checked until they moved to history/ on 23 October 2026. All readers AI; no collation with a printed edition.
+verify_zh.py passes (RAE, RAE2: 4 and 5 November 2026; in research-test since): the import (438 files, SHA-256), a verdict for each of 5,673 judgments, each of the 3,499 flagged placed once in its flagged cluster, 2,023 fragments verbatim, 1,603 declarations in receipt 20261103T211917.845905Z, 234 records, 449 names, and 06's 114 Lean-name citations, each exact (one more off the spine), record links and nine numbers of §七; the chapters' quotations, declarations, links, 对照 kinds and tables were checked until they went to history/ (23 October 2026). All readers AI; no printed edition collated.
 
 Canonical source: [CIVILIZATION-THOUGHT-AND-BECOMING.md](../../history/CIVILIZATION-THOUGHT-AND-BECOMING.md)
 
@@ -124,6 +125,8 @@ Aliases: `《中华思想脉络》 on the spine`, `中华思想脉络`, `中华�
 - 22 October 2026, ZG8: the last open gap note, 唯识「無因」, reads the law of forming, necessary and sufficient (record forming-anew-necessary-and-sufficient; study section 345); no gap note of the map is open.
 - 22 October 2026 (WL, study section 346, D63): the name table's seventh pass adds 文 and 文同 (449 names) and revises others against 文理生生's sources; the 中华本 gains 一·二十一; the map entry xici-ji-qi-shu reads 「极其数」 as the yarrow count only, with the bound laws as a contrast, as xici-can-wu-cuo-zong and 一·二十一 do; see wenli-on-the-spine.
 - 4 November 2026, board item RAE (AA Phase 0's E3, E1, E2): verify_zh.py had pointed at the three chapters RA moved to history/ (23 October) and skipped them without a word, ran in no test, and rewrote a tracked file on every run; the map named a record CD renamed (whole-first-and-bounded-centers, now whole-and-regions-and-bounded-centers, 27 citations) and a declaration ND renamed in OU7 (Pool.difference_belongs_to_the_joint, now Pool.difference_only_together, 7 declaration lists and 11 mentions in readings, notes and a proposal). passages.json renamed by a dated script (zhonghua/rename_2026-11-04.py), each entry changed noted; the verifier now checks 06-CLASSICAL-TEXTS's Lean names, record links and nine numbers its §七 states of the map and the name table, fails on a missing chapter or one where it finds no Lean name, writes no file, and runs with research-test; the validation scope is restated from the passing run's own summary, and, to keep within the length rule, no longer says that "each entry had three readings (mapper, reviser, independent checker); the 中华本 was reviewed as one book three times", true of that work as before. Claims, kinds, readings' words and the law unchanged.
+- 4 November 2026 (AA, erratum E4): 'each placed once' is scoped to the cluster each judgment was flagged for, which is what verify_zh.py checks; a recount of coverage.json and passages.json finds 96 of the 3,499 placed in other clusters too (3,600 placements), 6 of them kept in one cluster and rejected in another, now a does-not-show item. No count, kind or entry changed.
+- 5 November 2026, board item RAE2: verify_zh.py had read 06-CLASSICAL-TEXTS's unprefixed Lean names as the end of any audited declaration, so a name ending some declaration passed and an ambiguous one was not refused; each now resolves to exactly one, whole, with Becoming. before it, or in the namespace 06 states for its section or table; §五 states Becoming.Hexagram for the configurations' names and writes the other laws' namespaces, and three names that resolved to no declaration as written are written in full in 06. The scope's count (114 citations, and one module named off the spine, checked as a file) is the passing run's. Claims unchanged.
 
 </details>
 

@@ -36,7 +36,7 @@ The words of the Theory of Becoming, each in one sense and with one home: the se
 | juncture (机) | where a loss passes | [02](theories/becoming/chapters/02-MAP.md#return) |
 | loop, coupling, carried amount | a closed route of influence; how strongly one level responds to another; what a difference carries along a route | [02](theories/becoming/chapters/02-MAP.md#loops) |
 | first law | the spine's name for `Flow.Gainless`: a closed family without repetition gets back at most what is taken from it; under the exergy balance, thermodynamics' second law read in available work gives it (`EntropyProduction.gainless_of_secondLaw`). Thermodynamics' first law, the conservation of energy, is always named in full | [02](theories/becoming/chapters/02-MAP.md#how-to-read) |
-| meta-attractor (元吸引子) | closed capture: a lock through the rule that outlives its loss | [02](theories/becoming/chapters/02-MAP.md#capture) |
+| meta-attractor (元吸引子) | closed capture: a loop of selection whose rule and whose reading of the rule are both formed from the share it selects, nothing in it reading what lies beyond the share. It never means the corpus's working definition, a recurrent organization of activity whose consequences help reproduce the conditions selecting that organization across changes in its particular carriers: that sense is wider, and the formal 元吸引子 says nothing of carriers, so whether a capture loop is 生成 at some pair of classes stays Open | [02](theories/becoming/chapters/02-MAP.md#capture) |
 
 ## Knowing
 

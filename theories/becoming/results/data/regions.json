@@ -2640,6 +2640,31 @@
    "region": "collective",
    "base": "grammar",
    "note": "RuleRebuilding OG2: a rule of entry rebuilt from the members it limits, the test system of one kind of institution"
+  },
+  "a-cascade-at-the-histories-reached": {
+   "region": "collective",
+   "base": "general",
+   "note": "ReachedCascade TRL: from member k on, where each gives one act for two worlds' couplings at the acts the first gives it, the two get the same acts if alike in couplings before k; weaker than Cascade's (05 §8)"
+  },
+  "coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it": {
+   "region": "collective",
+   "base": "general",
+   "note": "CoupledDrawers CDR: drawers in turn counting a coupling for each step a need is met drain it where the coupling is below the need, whatever the renewal, and keep it under a gate where it is above; drawing at once with no pivotal drawer, no portion returning more than one for one, the drain is perfect at any coupling (05 §7)"
+  },
+  "drawn-shaping-drawn-one-at-a-time": {
+   "region": "map",
+   "base": "general",
+   "note": "DrawnReplacement AJ8: drawn one member at a time, the stag hunt of shapers and readers drawn from the selected leaves either lock by drift, at a weight whose bound falls across the distance from the critical mass (02 §9)"
+  },
+  "shaping-selected-among-groups": {
+   "region": "map",
+   "base": "general",
+   "note": "RuleShaping and SelectionLevels AJ8: where a group's shared part is what its shapers give, the whole selects for shaping exactly where the cost falls short of what comes back to the shapers alone with the group's part weighted by assortment (02 §9)"
+  },
+  "unequal-groups-not-decided-by-the-spread-among-groups": {
+   "region": "life",
+   "base": "general",
+   "note": "SelectionLevels US: where each member gains for every unit its group keeps, groups of unequal size with the same whole spread and size-weighted spread of their means can select for keeping or against it (04 §5)"
   }
  },
  "modules": {
@@ -4542,6 +4567,21 @@
    "region": "collective",
    "base": "grammar",
    "note": "OG2: where a rule of entry is taught from; one kind of institution's minimal model"
+  },
+  "Becoming.CoupledDrawers": {
+   "region": "collective",
+   "base": "general",
+   "note": "CDR: a coupling in each drawer's worth for each step a need is met, on Optimum's two arrangements, drawers in turn and at once (05 §7)"
+  },
+  "Becoming.GrammarPath": {
+   "region": "significance",
+   "base": "grammar",
+   "note": "PF: what a line under a class must hold (所经必同) and what a regularity takes in (常闭则后皆续) (07 §4.6)"
+  },
+  "Becoming.ReachedCascade": {
+   "region": "collective",
+   "base": "general",
+   "note": "TRL: Cascade's premise at the histories reached, weaker than Cascade's (05 §8)"
   }
  }
 }

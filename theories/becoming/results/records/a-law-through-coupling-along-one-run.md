@@ -44,7 +44,7 @@ Canonical source: [LawThroughCoupling.lean](../../../../experiments/integrated-c
 <a id="next--下一步"></a>
 ## Next
 
-How many steps settle whether a law at a finite coupling holds; observation that changes along the run; an independent review.
+Superseded by [a-law-through-a-projection-along-one-run](a-law-through-a-projection-along-one-run.md), whose record carries the next step. When this record was current, its next step read: How many steps settle whether a law at a finite coupling holds; observation that changes along the run; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 

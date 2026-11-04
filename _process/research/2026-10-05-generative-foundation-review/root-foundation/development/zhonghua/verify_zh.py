@@ -13,9 +13,12 @@ Everything is checked against repository copies only:
      apart); every result record exists;
   4. names: one name per concept, no two names alike once simplified, every anchor current, every quotation in
      the frozen text it names;
-  5. the chapter (06-CLASSICAL-TEXTS; a missing one is a failure): every Lean name it cites in backticks is an audited
-     declaration, module or namespace of the newest core receipt, read whole, with `Becoming.` put before it, or as
-     the end of one (the chapter's tables leave a namespace out), but for OUTSIDE, which it names as off the spine;
+  5. the chapter (06-CLASSICAL-TEXTS; a missing one is a failure): every Lean name it cites in backticks is exactly one
+     audited declaration, module or namespace of the newest core receipt (or a listed periphery declaration), read
+     whole, with `Becoming.` put before it, or with the namespace the chapter states for that name's section or table
+     (a line saying that `Becoming.X.` is left out, 省去: in a section's opening, before its first ### heading, for the
+     section; in a table's header, for the table) put before it; a name that resolves to none, or to more than one, of
+     these fails, but for OUTSIDE, which the chapter names as off the spine;
      every record link exists; every 「…」〔ID〕 quotation is in source ID's frozen text, every 对照 line names
      entries of the map with the kind the map gives them, and the generated tables equal what the data gives (06
      has none of these three today); and nine numbers its section 七 states of the map and the name table are the
@@ -184,7 +187,7 @@ def main():
         fail.append('names: a name appears twice')
 
     # 5. the chapter
-    n_q = n_d = n_l = n_dz = n_st = 0
+    n_q = n_d = n_l = n_dz = n_st = n_out = 0
     tot = {}
     for v in counts.values():
         for k, n in v.items():
@@ -209,16 +212,43 @@ def main():
                 fail.append('%s: quotation not in %s: %s' % (ch.name, m.group(2), m.group(1)[:30]))
         spaces = {'.'.join(d.split('.')[:i]) for d in decls for i in range(1, d.count('.') + 1)}
         known = decls | modules | spaces | periphery
-        for m in re.finditer(r'`([^`\n]+)`', t):
-            x = m.group(1).rstrip('.')                   # a name ending in a dot names its namespace (a prefix left out)
-            if len(x) < 2 or not IDENT.fullmatch(x):
-                continue
-            n_d += 1
-            if x in OUTSIDE:
-                if not OUTSIDE[x].exists():
-                    fail.append('%s: %s, named as outside the receipt, is not at %s' % (ch.name, x, OUTSIDE[x]))
-            elif not (x in known or 'Becoming.' + x in known or any(k.endswith('.' + x) for k in known)):
-                fail.append('%s: Lean name %s is not in receipt %s' % (ch.name, x, receipt.parent.name))
+        section_ns, table_ns, opening = None, None, False
+        for line in t.split('\n'):
+            if line.startswith('## '):
+                section_ns, opening = None, True
+            elif line.startswith('### '):
+                opening = False
+            left_out = [s.rstrip('.') for s in re.findall(r'`(Becoming\.[A-Za-z0-9_.]+\.)`', line)] if '省去' in line else []
+            for s in left_out:
+                if s not in spaces and s not in modules:
+                    fail.append('%s: the namespace it says is left out, %s, is not in receipt %s' % (ch.name, s, receipt.parent.name))
+            if line.startswith('|'):
+                if left_out:
+                    table_ns = left_out[0]
+            else:
+                table_ns = None
+                if left_out and opening:
+                    section_ns = left_out[0]
+            for m in re.finditer(r'`([^`\n]+)`', line):
+                x = m.group(1).rstrip('.')               # a name ending in a dot names its namespace (a prefix left out)
+                if len(x) < 2 or not IDENT.fullmatch(x) or x in left_out:
+                    continue
+                if '省去' in line and x + '.' == m.group(1):     # a namespace named as an example on the line that says so
+                    if x not in known and 'Becoming.' + x not in known:
+                        fail.append('%s: namespace %s is not in receipt %s' % (ch.name, x, receipt.parent.name))
+                    continue
+                if x in OUTSIDE:
+                    n_out += 1
+                    if not OUTSIDE[x].exists():
+                        fail.append('%s: %s, named as outside the receipt, is not at %s' % (ch.name, x, OUTSIDE[x]))
+                    continue
+                n_d += 1
+                cands = {x, 'Becoming.' + x} | {ns + '.' + x for ns in (section_ns, table_ns) if ns}
+                hits = sorted(c for c in cands if c in known)
+                if not hits:
+                    fail.append('%s: Lean name %s is not in receipt %s' % (ch.name, x, receipt.parent.name))
+                elif len(hits) > 1:
+                    fail.append('%s: Lean name %s is ambiguous: %s' % (ch.name, x, ', '.join(hits)))
         if not n_d:
             fail.append('%s: no Lean name found to check' % ch.name)
         for m in re.finditer(r'\]\(\.\./results/records/([a-z0-9\-]+)\.md\)', t):
@@ -272,12 +302,13 @@ def main():
     e_recs = {x for d in P.values() for e in d['entries'] for x in e['records']}
     print('%s: %d files bound; %d judgments, %d flagged; %d entries (%s), %d fragments, %d declarations, %d records; '
           '%d names; '
-          'chapter %s: %d quotations with a source id, %d Lean names, %d record links, %d 对照 lines, %d stated numbers; receipt %s; '
+          'chapter %s: %d quotations with a source id, %d Lean-name citations%s and %d named as off the spine, %d record links, '
+          '%d 对照 lines, %d stated numbers; receipt %s; '
           'periphery declarations: %d'
           % ('FAILED' if fail else 'ok', len(prov['files']), len(rel_ids), n['flagged'],
              n_entries, ', '.join('%s %d' % kv for kv in sorted(tot.items())), n_frag, len(e_decls), len(e_recs),
              len(rows), args.chapter.name,
-             n_q, n_d, n_l, n_dz, n_st, receipt.parent.name, len(used_periphery)))
+             n_q, n_d, '' if fail else ' (each exact)', n_out, n_l, n_dz, n_st, receipt.parent.name, len(used_periphery)))
     for x in sorted(used_periphery):
         print('  periphery:', x)
     sys.exit(1 if fail else 0)

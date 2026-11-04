@@ -7,15 +7,14 @@ One graph of the theory: the grammar's concepts, the results, the Lean modules, 
 | Region | Concepts | Results | Modules | Texts |
 |---|---:|---:|---:|---:|
 | The root: relation, condition, class, continuation, core | 31 | 86 | 74 | 0 |
-| The map: generation, keeping, degeneration, orders | 5 | 92 | 76 | 0 |
+| The map: generation, keeping, degeneration, orders | 5 | 94 | 76 | 0 |
 | Knowing and testing | 0 | 110 | 88 | 0 |
-| Life and evolution | 0 | 45 | 22 | 0 |
-| Collectives and selection | 0 | 70 | 24 | 0 |
+| Life and evolution | 0 | 46 | 22 | 0 |
+| Collectives and selection | 0 | 72 | 26 | 0 |
 | The classical texts | 5 | 16 | 10 | 1724 |
-| Significance and alignment | 0 | 81 | 60 | 0 |
+| Significance and alignment | 0 | 81 | 61 | 0 |
 | Method and the formal core | 0 | 21 | 25 | 0 |
 | To retire | 0 | 7 | 0 | 0 |
-| Not yet assigned | 0 | 5 | 3 | 0 |
 
 ## The grammar's concepts
 
@@ -145,7 +144,7 @@ Modules (74, 22 stated on the grammar): `BalanceRegions`, `BranchingCorresponden
 
 ## The map: generation, keeping, degeneration, orders
 
-Results (92):
+Results (94):
 
 - [A chooser reading what couples in, its rule read from the count of its choices](records/capture-by-counted-choices.md) (recorded-checked)
 - [A continuing family cannot go unfed from beyond](records/continuing-self-fed-from-beyond.md) (recorded-checked)
@@ -212,9 +211,11 @@ Results (92):
 - [Sums over histories by support, horizon and exact order](records/sums-over-histories-by-support-horizon-and-order.md) (recorded-checked)
 - [Support passed on by later gainers](records/support-passed-on.md) (recorded-checked)
 - [Supported repair and reformation of a sustaining relation](records/supported-renewal-recovery.md) (recorded-checked)
+- [The capacity to shape the rule, selected among groups](records/shaping-selected-among-groups.md) (recorded-checked)
 - [The capacity to shape the rule, selected by what comes back to it](records/shaping-the-rule-selected-by-what-comes-back.md) (recorded-checked)
 - [The capture of a target, and why perturbing the state alone is re-absorbed](records/target-capture.md) (recorded-checked)
 - [The counterfactual is the course](records/counterfactual-is-the-course.md) (recorded-checked)
+- [The critical mass, drawn one member at a time](records/drawn-shaping-drawn-one-at-a-time.md) (recorded-checked)
 - [The difference between two acts' worlds](records/two-act-worlds-carry-the-difference.md) (recorded-checked)
 - [The exit from a margin, and what a record of the course says of it](records/exit-from-a-margin.md) (recorded-checked)
 - [The feeding closure](records/feeding-closure.md) (recorded-checked)
@@ -363,7 +364,7 @@ Modules (88, 14 stated on the grammar): `Blanket`, `BlanketCouplings`, `BlanketW
 
 ## Life and evolution
 
-Results (45):
+Results (46):
 
 - [A confined rise within a whole, and what a founding carries](records/confined-rise-within-a-whole.md) (recorded-checked)
 - [A dependence formed from drawing](records/dependence-formed-from-drawing.md) (recorded-checked)
@@ -387,6 +388,7 @@ Results (45):
 - [Generation is replenishment](records/generation-is-replenishment.md) (recorded-checked)
 - [Groups formed by bonds share a founder](records/groups-formed-by-bonds-share-a-founder.md) (recorded-checked)
 - [Groups formed by descent](records/groups-formed-by-descent.md) (recorded-checked)
+- [Groups of unequal size not decided by the spread among groups](records/unequal-groups-not-decided-by-the-spread-among-groups.md) (recorded-checked)
 - [Groups whose conditions are coupled](records/groups-whose-conditions-are-coupled.md) (recorded-checked)
 - [Inherited arrangement changes further copying](records/inherited-structural-copying.md) (recorded-checked)
 - [Learning procedures reconstructed through actual performance](records/learned-procedure-transmission.md) (recorded-checked)
@@ -416,8 +418,9 @@ Modules (22, 7 stated on the grammar): `ContinuingRevision`, `ConveyanceBoundari
 
 ## Collectives and selection
 
-Results (70):
+Results (72):
 
+- [A cascade at the histories reached](records/a-cascade-at-the-histories-reached.md) (recorded-checked)
 - [A code formed between formations](records/a-code-formed-between-formations.md) (recorded-checked)
 - [A code held as counts, learned from what is heard](records/a-code-held-as-counts.md) (recorded-checked)
 - [A commuting learner drives no choice whose values nothing it reads tells apart](records/a-commuting-learner-drives-no-unread-choice.md) (recorded-checked)
@@ -436,6 +439,7 @@ Results (70):
 - [Continued market operation under a protection certificate](records/market-protected-continuation.md) (recorded-checked)
 - [Copied witnesses change nothing](records/copied-witnesses-change-nothing.md) (recorded-checked)
 - [Counting one's own draw misses joint excess](records/own-count-misses-joint-excess.md) (recorded-checked)
+- [Coupled drawers keep a need only where the coupling reaches it](records/coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it.md) (recorded-checked)
 - [Difference-making in joint activity](records/joint-difference-making.md) (recorded-checked)
 - [Division by exclusive footprints](records/division-by-exclusive-footprints.md) (recorded-checked)
 - [Drawers in turn](records/drawers-in-turn.md) (recorded-checked)
@@ -489,7 +493,7 @@ Results (70):
 - [What position reads](records/what-position-reads.md) (recorded-checked)
 - [What taking all that is given excludes](records/what-taking-all-excludes.md) (recorded-checked)
 
-Modules (24, 3 stated on the grammar): `Cascade`, `Centers`, `CountedCodes`, `Exclusion`, `FreeEnergyGuarantees`, `Joint`, `JointDraw`, `JointPlans`, `ListFootprints`, `Optimum`, `OptimumSeason`, `PairSelection`, `PoolCourse`, `PoolResponse`, `RelativePosition`, `RuleHandoff`, `RuleRebuilding`, `SelectionPool`, `SetPointOptimum`, `SharedCodes`, `Tolerance`, `WeightedCommuting`, `WindowedWaiting`, `Withholding`
+Modules (26, 3 stated on the grammar): `Cascade`, `Centers`, `CountedCodes`, `CoupledDrawers`, `Exclusion`, `FreeEnergyGuarantees`, `Joint`, `JointDraw`, `JointPlans`, `ListFootprints`, `Optimum`, `OptimumSeason`, `PairSelection`, `PoolCourse`, `PoolResponse`, `ReachedCascade`, `RelativePosition`, `RuleHandoff`, `RuleRebuilding`, `SelectionPool`, `SetPointOptimum`, `SharedCodes`, `Tolerance`, `WeightedCommuting`, `WindowedWaiting`, `Withholding`
 
 
 ## The classical texts
@@ -602,7 +606,7 @@ Results (81):
 - [Widening as what every positive weighting ranks](records/widening-as-what-every-positive-weighting-ranks.md) (recorded-checked)
 - [Widening on late tails, and what carries a widening](records/eventual-widening.md) (recorded-checked)
 
-Modules (60, 10 stated on the grammar): `Acceptance`, `ActivationCapacity`, `ActiveReading`, `Actuation`, `Alternatives`, `Assurance`, `AssurancePlans`, `Boundaries`, `BoundedSignificance`, `Bundles`, `CausalGrowth`, `ChanceFloors`, `Clearing`, `ComparingCourses`, `Correspondence`, `Direction`, `Dispatch`, `EventualWidening`, `EventualWideningInstances`, `Extension`, `Frontier`, `FrontierFrames`, `FrontierWorlds`, `GrammarScope`, `Growth`, `Handoff`, `HeldPossible`, `Interdependence`, `KeepingWidening`, `Lexical`, `Lifting`, `LossMatching`, `MatchedCourses`, `Metaethics`, `MutualDependence`, `OwnWidening`, `ProfileReach`, `Ranking`, `ReachableRanges`, `Regrouping`, `RegroupingSelection`, `Relevance`, `Retaining`, `RevisionPlans`, `RevisionRoutes`, `ScoreRepresentation`, `SecuredContent`, `Seeking`, `SelectionGap`, `SelectionReach`, `Significance`, `SignificanceStatements`, `Standpoints`, `StrictTransport`, `Tasks`, `Training`, `Transactions`, `ValuationFrames`, `Weightings`, `WideningOnTheMap`
+Modules (61, 11 stated on the grammar): `Acceptance`, `ActivationCapacity`, `ActiveReading`, `Actuation`, `Alternatives`, `Assurance`, `AssurancePlans`, `Boundaries`, `BoundedSignificance`, `Bundles`, `CausalGrowth`, `ChanceFloors`, `Clearing`, `ComparingCourses`, `Correspondence`, `Direction`, `Dispatch`, `EventualWidening`, `EventualWideningInstances`, `Extension`, `Frontier`, `FrontierFrames`, `FrontierWorlds`, `GrammarPath`, `GrammarScope`, `Growth`, `Handoff`, `HeldPossible`, `Interdependence`, `KeepingWidening`, `Lexical`, `Lifting`, `LossMatching`, `MatchedCourses`, `Metaethics`, `MutualDependence`, `OwnWidening`, `ProfileReach`, `Ranking`, `ReachableRanges`, `Regrouping`, `RegroupingSelection`, `Relevance`, `Retaining`, `RevisionPlans`, `RevisionRoutes`, `ScoreRepresentation`, `SecuredContent`, `Seeking`, `SelectionGap`, `SelectionReach`, `Significance`, `SignificanceStatements`, `Standpoints`, `StrictTransport`, `Tasks`, `Training`, `Transactions`, `ValuationFrames`, `Weightings`, `WideningOnTheMap`
 
 
 ## Method and the formal core
@@ -645,19 +649,6 @@ Results (7):
 - [Drawers in turn within capacities](records/drawers-in-turn-within-capacities.md) (superseded) ·
 - [Five-condition acceptance of the conditional foundation](records/conditional-foundation-assessment.md) (superseded) ·
 - [Revision comes to drawing everything](records/revision-comes-to-drawing-everything.md) (superseded) ·
-
-
-## Not yet assigned
-
-Results (5):
-
-- [A cascade at the histories reached](records/a-cascade-at-the-histories-reached.md) (recorded-checked)
-- [Coupled drawers keep a need only where the coupling reaches it](records/coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it.md) (recorded-checked)
-- [Groups of unequal size not decided by the spread among groups](records/unequal-groups-not-decided-by-the-spread-among-groups.md) (recorded-checked)
-- [The capacity to shape the rule, selected among groups](records/shaping-selected-among-groups.md) (recorded-checked)
-- [The critical mass, drawn one member at a time](records/drawn-shaping-drawn-one-at-a-time.md) (recorded-checked)
-
-Modules (3, 1 stated on the grammar): `CoupledDrawers`, `GrammarPath`, `ReachedCascade`
 
 
 ## Not yet on the root

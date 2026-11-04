@@ -1,0 +1,396 @@
+{
+ "draft:ra-and-cd": {
+  "flags": [
+   {
+    "id": "E11",
+    "status": "drafted",
+    "why": "Still holds on current main (e7312e246, after T7C, AJE and LA4e). The record recurrence-without-selector-revision is kind theorem, status reviewed-scoped, proof_bindings []. Its validation_scope says the 6 October 2026 checker run passed BoundaryModels, but a comment added to line 1 on 16 October means no receipt binds the current bytes (sha 3ca0b210…; no file under the lean folder holds that hash). 04:276 says only 'empty axiom report' and gives no standing. 08 §2's 'Theorem (…; witness)' label still fits: the Lean was checked on bytes that differ only by that comment. So the edits keep the label, date the axiom report in it, and add the record's own validation_scope words as a body sentence, keeping every qualifier. The preferred fix is the record's next_delta: a checker run on BoundaryModels that binds the current bytes, then status recorded-checked with a proof binding. If that run lands first, drop both edits. No anchor or name changes. Records citing the file: none cites 04-LIFE.md by anchor. All 11 records that cite 04 as a statement source are listed. By RESULT-WORKFLOW's Markdown-drift rule, three will report drift and must be read and re-pointed at landing: recurrence-without-selector-revision (the line links its page), and drawn-shaping-drawn-one-at-a-time and shaping-selected-among-groups (04 neither links their pages nor is cited by anchor, so every rewritten line counts). Paths are relative to the repository root.",
+    "edits": [
+     {
+      "file": "theories/becoming/chapters/04-LIFE.md",
+      "old": "**Theorem** (one declared process; witness; pre-spine module, empty axiom report). *Recurrence without revision of the selector.*",
+      "new": "**Theorem** (one declared process; witness; pre-spine module; empty axiom report at the bytes checked on 6 October 2026). *Recurrence without revision of the selector.*",
+      "reason": "The label claims an empty axiom report without saying it is for bytes no receipt binds now. Dating it keeps 08 §2's Theorem (…; witness) label and stops the label claiming more than the record does.",
+      "cited_by_records": [
+       "recurrence-without-selector-revision",
+       "drawn-shaping-drawn-one-at-a-time",
+       "shaping-selected-among-groups",
+       "a-selected-template-need-not-raise-structure",
+       "equal-totals-can-hide-what-a-capacity-carries",
+       "groups-formed-by-bonds-share-a-founder",
+       "pace-of-selection-within-what-flows-in",
+       "same-carrier-need-not-fix-the-response",
+       "stronger-arrangement-formed-by-reconfiguration",
+       "the-updater-line",
+       "unequal-groups-not-decided-by-the-spread-among-groups"
+      ]
+     },
+     {
+      "file": "theories/becoming/chapters/04-LIFE.md",
+      "old": "This refutes an unconditional inference from recurrence to learning or selector revision; it does not refute learning in a richer process ([record](../results/records/recurrence-without-selector-revision.md); [BoundaryModels.lean][boundary]).",
+      "new": "This refutes an unconditional inference from recurrence to learning or selector revision; it does not refute learning in a richer process. The repository checker with Lean 4.29.1 passed BoundaryModels on 6 October 2026, every FixedSelector theorem with an empty axiom report; on 16 October a comment was added to the file's first line, so no passing receipt binds the current bytes and the record is reviewed, not receipt-bound, until a checker run does ([record](../results/records/recurrence-without-selector-revision.md); [BoundaryModels.lean][boundary]).",
+      "reason": "States the record's standing in the home section in the record's own validation_scope words (AGENTS: a proof claim says exactly what was checked). The home section and the record then agree.",
+      "cited_by_records": [
+       "recurrence-without-selector-revision",
+       "drawn-shaping-drawn-one-at-a-time",
+       "shaping-selected-among-groups"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "E37",
+    "status": "drafted",
+    "why": "Re-checked on current main. correction-is-not-calibration: the flag holds. The record is kind theorem, recorded-checked, and its statement is the theorem part. 03:146 opens with '**Assessment** (argument without Lean)', and the record's does_not_show calls the sensor argument 'the chapter's argument, without Lean'. The edits move the Theorem label and the italic title to the lead, keep the r- anchor on the record's statement and put the argument after the record link, with no word changed. 04:271's link to 03#r-correction-is-not-calibration still lands on the theorem. One label choice is left to the owner (RA/DF), with no edit drafted: by 08 §2, the argument's 'Assessment' (a scoped evaluation) could become 'Reading [AI reading, new]', but that needs a register entry in DELEGATED-CHOICES; the current label stays. wisdom-root-without-axiom: no edit needed. The record is kind argument, reviewed-scoped. Its hypotheses say the matching of laws to aspects of wisdom 'is the AI's reading', and DELEGATED-CHOICES registers D26 for learning and wisdom. So 03:474's 'Reading [AI reading, D26]' fits 08 §2's Reading ('an interpretation of checked content'). 08 §2 has no label for kind argument; the other four argument records are led as Conditional. Records: none cites 03-KNOWING.md by anchor. 34 cite it as a statement source. By the drift rule, three will report drift at landing: correction-is-not-calibration (the line links its page), and capture-by-counted-choices and exit-from-a-margin (03 neither links their pages nor is cited by anchor).",
+    "edits": [
+     {
+      "file": "theories/becoming/chapters/03-KNOWING.md",
+      "old": "**Assessment** (argument without Lean), *correction is not calibration*. Where a faithful sensor and one reversing success and failure report alike after every action, no adaptive action, repeated reading or internal criticism tells the two worlds apart, only a distinguishing route such as a calibrated reference intervention; so revising beliefs does not certify that signals correspond to their objects. **Theorem** (periphery: pre-spine updater constructions; `propext`, `Quot.sound`, `Classical.choice`, as [the receipt](../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/calibration-renewal-verification.json) reports).",
+      "new": "**Theorem** (periphery: pre-spine updater constructions; `propext`, `Quot.sound`, `Classical.choice`, as [the receipt](../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/calibration-renewal-verification.json) reports), *correction is not calibration*.",
+      "reason": "The lead after the r- anchor now carries the record's kind (theorem, recorded-checked), not 08 §2's Assessment (no Lean). The argument moves unchanged to after the record link (next edit).",
+      "cited_by_records": [
+       "correction-is-not-calibration",
+       "capture-by-counted-choices",
+       "exit-from-a-margin",
+       "a-formations-couplings-as-its-blanket",
+       "a-prediction-read-by-what-it-predicts",
+       "a-reading-informed-and-revalued",
+       "a-reading-kept-by-its-update",
+       "a-revision-that-opens-a-correction",
+       "access-yet-to-form",
+       "acts-alike-from-a-model-or-from-an-order",
+       "adaptive-closure-cannot-resolve",
+       "certificates-sound-and-available",
+       "composition-route",
+       "conditioning-by-restriction",
+       "evidence-through-change",
+       "expected-free-energy-and-its-terms",
+       "free-energy-bound-in-counts",
+       "free-energy-bounds-surprisal",
+       "learning-a-rule-by-narrowing",
+       "one-move-covering",
+       "readings-a-response-needs",
+       "rooms-tested-by-a-window",
+       "the-blanket-at-a-steady-state",
+       "the-blanket-in-a-linear-steady-state",
+       "the-markov-blanket-as-a-coupling-structure",
+       "what-a-course-chosen-through-its-model-does-not-test",
+       "what-a-total-keeps",
+       "what-choices-show-of-an-order",
+       "what-holding-for-a-reading-is-worth",
+       "what-readings-fix-of-the-unread",
+       "what-seeking-cannot-separate",
+       "what-the-existence-claim-forbids",
+       "when-complying-when-read-is-best",
+       "when-to-inquire-and-when-to-respond"
+      ]
+     },
+     {
+      "file": "theories/becoming/chapters/03-KNOWING.md",
+      "old": "Lean: `CalibratedUpdater.acquired_local_exact`, `CalibrationRenewal.all_signs_transfer_iff`, `CalibrationRenewal.renewed_run`, `CalibrationRenewal.late_change_still_fails`; [record](../results/records/correction-is-not-calibration.md) ([study](../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/EVOLUTION-CALIBRATION-RENEWAL.md)).",
+      "new": "Lean: `CalibratedUpdater.acquired_local_exact`, `CalibrationRenewal.all_signs_transfer_iff`, `CalibrationRenewal.renewed_run`, `CalibrationRenewal.late_change_still_fails`; [record](../results/records/correction-is-not-calibration.md) ([study](../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/EVOLUTION-CALIBRATION-RENEWAL.md)). **Assessment** (argument without Lean). Where a faithful sensor and one reversing success and failure report alike after every action, no adaptive action, repeated reading or internal criticism tells the two worlds apart, only a distinguishing route such as a calibrated reference intervention; so revising beliefs does not certify that signals correspond to their objects.",
+      "reason": "Puts the argument, with its label and words unchanged, after the theorem and its record link, where the record's does_not_show places it (the chapter's argument, outside the record).",
+      "cited_by_records": [
+       "correction-is-not-calibration",
+       "capture-by-counted-choices",
+       "exit-from-a-margin"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "E40",
+    "status": "drafted",
+    "why": "Still holds on current main. regions.json has 528 record entries for 533 records, and the same five are unassigned. Three core modules imported by Becoming.lean are unassigned: Becoming.CoupledDrawers, Becoming.GrammarPath and Becoming.ReachedCascade. Every one of the 521 non-retired entries already has the region of its home anchor's chapter (0 mismatches; the 7 retire entries have no anchor). So the drafts follow regions.json's own 'about' rule ('Regions follow the chapter that states each result (its anchor)') and do not go by family. Family does not decide region: F01 spans all nine regions. Homes: 05 §8 and 05 §7 (collective), 02 §9 twice (map), 04 §5 (life). Bases are 'general', as for their modules: DrawnReplacement, RuleShaping, SelectionLevels and Cascade are general, and CoupledDrawers uses no Web, World or Flow, only Optimum's InTurn and AtOnce, which use none either (drawers-in-turn is general). This settles the routing's question about Optimum's old-base. One choice differs from the routing: GrammarPath goes to significance, not root. Its header says it states 07 §4.6, all three of its records' homes are in 07 and are assigned significance, and GrammarScope, also 07's, is significance. Entries are appended at the end of each section, as recent landings (OG, OG2) did. The notes copy each record's statement words. The two new tests follow the routing's fix. Simulated by hand on the edited data (no test run): no record or imported module is left unassigned, and no region differs from its home's chapter. This is RA's data and RA's test file: RA confirms the regions, especially GrammarPath, and may drop the tests. At landing, render the generated THEORY-GRAPH.md and theory-graph.json, run the focused test_theory_graph and check the JSON parses (it does in memory). No record cites regions.json or the test file.",
+    "edits": [
+     {
+      "file": "theories/becoming/results/data/regions.json",
+      "old": "  \"a-rule-rebuilt-from-the-members-it-limits\": {\n   \"region\": \"collective\",\n   \"base\": \"grammar\",\n   \"note\": \"RuleRebuilding OG2: a rule of entry rebuilt from the members it limits, the test system of one kind of institution\"\n  }\n },\n \"modules\": {\n",
+      "new": "  \"a-rule-rebuilt-from-the-members-it-limits\": {\n   \"region\": \"collective\",\n   \"base\": \"grammar\",\n   \"note\": \"RuleRebuilding OG2: a rule of entry rebuilt from the members it limits, the test system of one kind of institution\"\n  },\n  \"a-cascade-at-the-histories-reached\": {\n   \"region\": \"collective\",\n   \"base\": \"general\",\n   \"note\": \"ReachedCascade TRL: from member k on, where each gives one act for two worlds' couplings at the acts the first gives it, the two get the same acts if alike in couplings before k; weaker than Cascade's (05 §8)\"\n  },\n  \"coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it\": {\n   \"region\": \"collective\",\n   \"base\": \"general\",\n   \"note\": \"CoupledDrawers CDR: drawers in turn counting a coupling for each step a need is met drain it where the coupling is below the need, whatever the renewal, and keep it under a gate where it is above; drawing at once with no pivotal drawer, no portion returning more than one for one, the drain is perfect at any coupling (05 §7)\"\n  },\n  \"drawn-shaping-drawn-one-at-a-time\": {\n   \"region\": \"map\",\n   \"base\": \"general\",\n   \"note\": \"DrawnReplacement AJ8: drawn one member at a time, the stag hunt of shapers and readers drawn from the selected leaves either lock by drift, at a weight whose bound falls across the distance from the critical mass (02 §9)\"\n  },\n  \"shaping-selected-among-groups\": {\n   \"region\": \"map\",\n   \"base\": \"general\",\n   \"note\": \"RuleShaping and SelectionLevels AJ8: where a group's shared part is what its shapers give, the whole selects for shaping exactly where the cost falls short of what comes back to the shapers alone with the group's part weighted by assortment (02 §9)\"\n  },\n  \"unequal-groups-not-decided-by-the-spread-among-groups\": {\n   \"region\": \"life\",\n   \"base\": \"general\",\n   \"note\": \"SelectionLevels US: where each member gains for every unit its group keeps, groups of unequal size with the same whole spread and size-weighted spread of their means can select for keeping or against it (04 §5)\"\n  }\n },\n \"modules\": {\n",
+      "reason": "Assigns the five unassigned records to the regions of their home anchors' chapters and their bases, so the theory graph no longer lists them as 'Not yet assigned'.",
+      "cited_by_records": []
+     },
+     {
+      "file": "theories/becoming/results/data/regions.json",
+      "old": "  \"Becoming.RuleRebuilding\": {\n   \"region\": \"collective\",\n   \"base\": \"grammar\",\n   \"note\": \"OG2: where a rule of entry is taught from; one kind of institution's minimal model\"\n  }\n }\n}\n",
+      "new": "  \"Becoming.RuleRebuilding\": {\n   \"region\": \"collective\",\n   \"base\": \"grammar\",\n   \"note\": \"OG2: where a rule of entry is taught from; one kind of institution's minimal model\"\n  },\n  \"Becoming.CoupledDrawers\": {\n   \"region\": \"collective\",\n   \"base\": \"general\",\n   \"note\": \"CDR: a coupling in each drawer's worth for each step a need is met, on Optimum's two arrangements, drawers in turn and at once (05 §7)\"\n  },\n  \"Becoming.GrammarPath\": {\n   \"region\": \"significance\",\n   \"base\": \"grammar\",\n   \"note\": \"PF: what a line under a class must hold (所经必同) and what a regularity takes in (常闭则后皆续) (07 §4.6)\"\n  },\n  \"Becoming.ReachedCascade\": {\n   \"region\": \"collective\",\n   \"base\": \"general\",\n   \"note\": \"TRL: Cascade's premise at the histories reached, weaker than Cascade's (05 §8)\"\n  }\n }\n}\n",
+      "reason": "Assigns the three unassigned core modules to the regions where their results are stated. GrammarPath goes to significance (07 §4.6, its records' homes), not root as the routing proposed: RA to confirm.",
+      "cited_by_records": []
+     },
+     {
+      "file": "tools/research/tests/test_theory_graph.py",
+      "old": "    def test_regions_are_known(self):\n        for n in self.graph['nodes']:\n            if 'region' in n:\n                self.assertIn(n['region'], theory_graph.REGION_ORDER, n['id'])\n",
+      "new": "    def test_regions_are_known(self):\n        for n in self.graph['nodes']:\n            if 'region' in n:\n                self.assertIn(n['region'], theory_graph.REGION_ORDER, n['id'])\n\n    def test_every_result_and_module_is_assigned(self):\n        for n in self.graph['nodes']:\n            if n['type'] in ('result', 'module'):\n                self.assertNotEqual(n['region'], 'unassigned', n['id'])\n\n    def test_a_results_region_is_its_homes_chapter(self):\n        chapter = {'01': 'root', '02': 'map', '03': 'knowing', '04': 'life', '05': 'collective', '06': 'classical',\n                   '07': 'significance', '08': 'method'}\n        homes = {}\n        for path, anchor in theory_graph.sections():\n            homes.setdefault(anchor, set()).add(chapter.get(path.rsplit('/', 1)[-1][:2]))\n        for n in self.graph['nodes']:\n            if n['type'] == 'result' and n['record'] in homes:\n                self.assertIn(n['region'], homes[n['record']], n['id'])\n",
+      "reason": "The routing's test: no result or core module may be left unassigned, and a result's region must be its home anchor's chapter. Today only test_regions_are_known exists, so a new record can land unassigned. theory_graph.sections() already yields (chapter path, anchor without r-). Not run here; simulated on the edited data with 0 failures. RA's file: RA may keep or drop it.",
+      "cited_by_records": []
+     }
+    ]
+   },
+   {
+    "id": "E33",
+    "status": "drafted",
+    "why": "Still holds on current main: grep finds no ReadsNoOrder in 07-SIGNIFICANCE.md. C's home is 07 §4 (#scope-and-order, per GLOSSARY's C row), and its paragraph at 07:233 says what gives order without the not-entailed law. The law's home is 08 §7 (#r-premises-met-and-failed, 08:448, record premises-met-and-failed). The draft copies 08's sentences whole, including the bullet's heading as its first clause, the definition of reading no order, the hypotheses (at a datum, on a frame with an extension, fails at that datum for every order) and 'immediate, since better is free'. Its last sentence uses 08's own parallel to ReadsOnlyDynamics.not_entails, linked to 07 §1's anchor r-what-the-dynamics-leave-open. It does not say C derives from the condition, nor shorten the law to 'nothing entails C'. Both link targets exist (08:442, 07:20); the links check was not run on the edited text. Owner: the CD row (C as a direction). AGENTS asks that a reader other than the author check this restatement against 08's home before landing. Records: none cites 07-SIGNIFICANCE.md by anchor. 19 cite it as a statement source, and every one links its page in 07 elsewhere, so by the drift rule none drifts on this line (it links no record page). They are listed so the landing can confirm with the checker.",
+    "edits": [
+     {
+      "file": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+      "old": "A ranking of courses needs C or a premise in its place: C gives order, in general alone, and an order rising with one's own continuation ranks one case with no C ([§4.4](#r-what-self-concern-alone-ranks)).",
+      "new": "A ranking of courses needs C or a premise in its place: C gives order, in general alone, and an order rising with one's own continuation ranks one case with no C ([§4.4](#r-what-self-concern-alone-ranks)). A statement reading no order entails C only where it fails: a statement about some data and an order reads no order where its truth does not change with the order (`ReadsNoOrder`), and if such a statement entails C (`Comparison`) at a datum on a frame with an extension, it fails at that datum for every order (`ReadsNoOrder.not_entails`, [08 §7](08-METHOD.md#r-premises-met-and-failed)). This is immediate, since \"better\" is free: it shows that a frame fixes no order. It follows the pattern of `ReadsOnlyDynamics.not_entails` for the condition's free form ([§1](#r-what-the-dynamics-leave-open)), with the order in the place of the significance.",
+      "reason": "C's home now cites the law AGENTS and COLLECTIVE-DIRECTION cite for C's not being derivable from anything that reads no order, in 08 §7's words with every hypothesis kept. It matches the parallel 07 §1 already gives for the condition.",
+      "cited_by_records": [
+       "comparing-two-courses-on-what-they-admit",
+       "constancy-read-at-a-members-class",
+       "eventual-widening",
+       "finite-agreement-does-not-identify-priority",
+       "reach-past-ones-own-end",
+       "reach-through-a-shared-condition",
+       "self-concern-and-c-under-the-condition",
+       "significance-through-a-common-condition",
+       "tasks-and-what-performs-them",
+       "the-class-of-being-joined",
+       "the-continuation-condition-on-the-root",
+       "what-a-course-keeps-reachable",
+       "what-a-line-holds-and-a-regularity-takes-in",
+       "what-can-be-born-next",
+       "what-keeping-widening-needs",
+       "what-leaves-a-class-follows-its-line",
+       "when-holding-for-a-reading-stands-above-a-route",
+       "when-no-route-stands-above-a-revision",
+       "where-the-possible-grows"
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "draft:aj-and-ou": {
+  "flags": [
+   {
+    "id": "E9",
+    "status": "no edit needed",
+    "why": "Already fixed on main. AJE landed it in 5895c57aa, and its reader's pass 3bc3415fd placed 'among it' (finding 8). Both are ancestors of main e7312e246. COLLECTIVE-DIRECTION.md:76 now reads: \"What that path does not reach still needs the step: each center counting from another's standpoint beyond its part as a condition; what affects one's conditions without being fed by them, counted as more than a cause; present beings beyond every closure; and whatever no chain joins, among it future beings in no one's line.\" That gives all four items of 07-SIGNIFICANCE.md:453 in the home's words. research.py links on the page: 74 links checked, 0 broken.",
+    "edits": []
+   },
+   {
+    "id": "E10",
+    "status": "no edit needed",
+    "why": "Already fixed on main by AJE (5895c57aa; 3bc3415fd homed the clause). COLLECTIVE-DIRECTION.md:125 now reads: \"The capture loop under noise beyond its one proved case (drawn one member at a time, the rule read at every step at the current count, with no reading schedule: [02 §9](chapters/02-MAP.md#r-drawn-shaping-drawn-one-at-a-time)): drift in sampled generations and for counts that accumulate, the rare-mutation limit and the time to leave a lock ([02, Open](chapters/02-MAP.md#open)), the long-run state under rare mutation being cited, not proved; a loss read in time under drift (the joined course drawn is not stated: [02 §9](chapters/02-MAP.md#which-locks-noise-leaves)); and how pools form, last and resist capture ([05](chapters/05-COLLECTIVES.md#open)).\" Every anchor it uses exists: 02:419, 02:446, 02:467 and 05's #open. 02:447 carries 'the joined course drawn is not stated', and 05's Open still lists 'How pools form, last and resist capture'. Links: 0 broken.",
+    "edits": []
+   },
+   {
+    "id": "E14",
+    "status": "no edit needed",
+    "why": "Already fixed on main by AJE (5895c57aa). T7C's later changes to 02 §9 (5dc96f6fe, 373a6c7fa, fae4e22d7) kept the fix. 02-MAP.md:434 ends: \"*Evidence*: no frozen field test of reform events, which needs a coding of reform events fixed before the cases are read; one frozen test in one trained system, LA2, below.\" 02:436 still says \"It is not the field test of reform events above, which stays open.\" 02:478 (Open) reads \"a frozen field test of T7's reform events\".",
+    "edits": []
+   },
+   {
+    "id": "E34",
+    "status": "no edit needed",
+    "why": "Already fixed on main by AJE (5895c57aa). It took a narrower fix than the routing file's: that fix said 'which the spreads do not decide' of groups of any sizes, which is false at equal sizes (AJE NOTE §1, E34). 07-SIGNIFICANCE.md:665 now reads: \"Listed in groups of `m` whose shapers give the group's shared part, the condition is Hamilton's rule with what comes back alone added: read over the rationals where shaping varies, with the assortment `ρ` the share of the spread among groups, exactly where `c < s + m q ρ`; in groups of any sizes it goes through the covariance, member by member, of a member's group's shapers with its group's share of them, which at unequal sizes the whole's spread and the size-weighted spread of the group means do not decide, ...\". That matches 02-MAP.md:414.",
+    "edits": []
+   },
+   {
+    "id": "E20",
+    "status": "drafted",
+    "why": "Still holds on main. The OU row's state cell (board l.47) still ends 'item 9's institution (OG having given the organism its model, §497) ... each to be claimed as an item of its own on Ren's word to go past the gate'. Three things are wrong with it. AGENTS' list of what is Ren's (pushing, licence, who is sent what, money or machine time for runs) does not include going past the gate. Board l.36 already orders post-gate work: 'Behind these in the queue, unless it changes what a reader is told or what could fail'. OG2 landed (§501), so item 9 is no longer only 'the institution'. No source under sources/ records a word of Ren's to go past the gate: grep finds only an unrelated hit in sources/14-claude-code-prompts. The OU row belongs to OU's owner, the 'Unification and coherence progress' session, and to the coordinator. This is drafted text only, for OU's owner to apply. One part goes beyond the routing file's fix. The same sentence says 'item 7, the freeze, is Ren's', but board l.34 says the freeze was 'made on 3 November as edition 1 (`review-packet-1`, D `0f1d9aa13`)', and the freeze is not on AGENTS' list. So the draft corrects that clause too, in l.34's words; OU's owner can drop that part. Left unchanged on purpose: close_rows.py, the kit's record, and OG2's landed history row (history l.787, 'on Ren's yes to go past the gate'), since history rows are not live text. No record's references or text name the board, so no record needs re-pointing.",
+    "edits": [
+     {
+      "file": "_process/BECOMING-WORKBOARD.md",
+      "old": "Then plan §八 steps 6–10; 2 November 2026: the release gate's items 1 to 6 are met, item 4 the last (OU7, §492), and item 7, the freeze, is Ren's; left after the gate (WHAT-REMAINS): plan §十三 item 6 (the map on each model class), item 8 (pairing and power with their uses, and the fragments mutual translation reaches, in Lean), item 9's institution (OG having given the organism its model, §497) and item 11 (the three minimalities' report, MDL and Pareto), each to be claimed as an item of its own on Ren's word to go past the gate",
+      "new": "Then plan §八 steps 6–10; 2 November 2026: the release gate's items 1 to 6 are met, item 4 the last (OU7, §492); item 7, the freeze, was made on 3 November as edition 1 (`review-packet-1`); left after the gate (WHAT-REMAINS): plan §十三 item 6 (the map on each model class), item 8 (pairing and power with their uses, and the fragments mutual translation reaches, in Lean), item 9 (the test systems of plan §六, each with its model; OG having given the organism its model, §497, and OG2 one kind of institution, a rule of entry rebuilt from the members it limits, §501; other kinds and purposes stay open) and item 11 (the three minimalities' report, with MDL and Pareto not yet done), each to be claimed as an item of its own, behind the way now's items in the queue unless it changes what a reader is told or what could fail",
+      "reason": "For OU's owner. This is the last sentence of the OU row's state cell, unique on the board. Item 9 and item 11 now use WHAT-REMAINS.md:459's own words: 'the test systems of plan §六, each with its model (9) ... OG2 landed (study §501): one kind of institution, a rule of entry rebuilt from the members it limits; other kinds and purposes stay open', and 'the three minimalities' report, with MDL and Pareto not yet done (11)'. The row's own 'OG having given the organism its model, §497' is kept. 'On Ren's word to go past the gate' gives way to board l.36's ordering ('Behind these in the queue, unless it changes what a reader is told or what could fail'), since going past the gate is not on AGENTS' list of what is Ren's. The freeze clause now uses board l.34's words (beyond the routing file's fix).",
+      "cited_by_records": []
+     }
+    ]
+   },
+   {
+    "id": "E22",
+    "status": "drafted",
+    "why": "Still holds on main. 08-METHOD.md:162 names core receipt 20261103T211917.845905Z, and COMPLETION.md (generated) is at that same receipt. COMPLETION l.104: 87 of 126 rest on a shared law; l.108 Closure 42; l.109 Balance 54; l.114 'Resting on no shared law (39)'. 08 §7 still has Closure 41 and Balance 55 in its table, and '86 ... the other 40' and '16 of 54 on balance' in its prose, so it contradicts itself (55 against 54). History: OU7 (e5951932b) moved `Listed.coming_of_ceasing` off balance. dbebfeabc updated 08's prose to 86/40/'16 of 54' but left the table's 55. U4d (631762ba2) put it on closure (COMPLETION 41→42, 40→39), and its message says '08 §7's figures unchanged'. I recounted from the data files without running measure_grammar.py. I joined THEOREM-CONNECTIVITY.json's shared_laws rows (commit e0f3fa2c3, the same receipt: 126 rows; closure 42, balance 54, return 14, lumping 2, order 8; 39 on no shared law) with results/data/shared-laws.json's per-declaration 'dependence' (117 distinct, none ambiguous). Result: 46 rows reach the grammar; all 42 on closure reach it (Listed.coming_of_ceasing among them), all 14 on finite runs, 16 of 54 on balance, 1 of 8 on widening, 1 of 2 on lumping, and 3 on no anchor (Tolerance.answers_restores_iff, WithinMoves.after_course, Withholding.withholding_spreads). The distinct split 45/30/6/36 and F5's 45/16/6/50 are unchanged (shared-laws.json central_reach.counts), so the rest of l.437 stands. COMPLETION is generated and already right, so only 08, a hand-written page, changes. Possible later decision, not drafted: have the column cite COMPLETION's table instead of copying it, so this does not recur. Owner: the OU row (shared laws on the grammar, OU3b's measure); no row holds 08 §7 by name. Records: 7 records reference 08-METHOD.md, none cites it by path#anchor, and 08 links all 7. Two have their home in the same level-2 section, '## 7. Shared laws and connectivity': one-root-to-its-edge (anchor at 08:439) and premises-met-and-failed (08:442). I emulated the checker's scoped_drift on current→new: none of the changed lines (431, 432, 437) links a record or sits in a cited section, so none of the 7 bears. At landing each still shows a changed sha256 and must be read and re-pointed as RESULT-WORKFLOW requires, not refreshed blind. The new wording for coming_of_ceasing reuses 08:440's 'a case of the root's census of a run'.",
+    "edits": [
+     {
+      "file": "theories/becoming/chapters/08-METHOD.md",
+      "old": "| Closure | what a relation carries reaches exactly its closure | `WithinClosure` | `«所闭当且仅当同一或及»`; `WithinClosure` is `«所闭»` by definition | 41 |",
+      "new": "| Closure | what a relation carries reaches exactly its closure | `WithinClosure` | `«所闭当且仅当同一或及»`; `WithinClosure` is `«所闭»` by definition | 42 |",
+      "reason": "COMPLETION.md l.108 (same receipt) has Closure 42, and THEOREM-CONNECTIVITY.json shared_laws.by_law.closure = 42. U4d put Listed.coming_of_ceasing on closure.",
+      "cited_by_records": [
+       "one-root-to-its-edge",
+       "premises-met-and-failed",
+       "contraction-where-duplication-is-reachable",
+       "one-move-covering",
+       "self-reference-does-not-certify-itself",
+       "type-formation-gives-no-dynamics",
+       "what-a-summary-keeps"
+      ]
+     },
+     {
+      "file": "theories/becoming/chapters/08-METHOD.md",
+      "old": "| Balance | a level changes by what is given and taken, at each step and over every stretch | `Flow.Balances` | `«守数当且仅当可对»`, `«程守数当且仅当可对»`: represented both ways (`Flow.balances_iff_units`), not derived | 55 |",
+      "new": "| Balance | a level changes by what is given and taken, at each step and over every stretch | `Flow.Balances` | `«守数当且仅当可对»`, `«程守数当且仅当可对»`: represented both ways (`Flow.balances_iff_units`), not derived | 54 |",
+      "reason": "COMPLETION.md l.109 has Balance 54, and by_law.balance = 54. OU7 moved Listed.coming_of_ceasing off balance. 08's own prose already says '16 of 54 on balance'.",
+      "cited_by_records": [
+       "one-root-to-its-edge",
+       "premises-met-and-failed",
+       "contraction-where-duplication-is-reachable",
+       "one-move-covering",
+       "self-reference-does-not-certify-itself",
+       "type-formation-gives-no-dynamics",
+       "what-a-summary-keeps"
+      ]
+     },
+     {
+      "file": "theories/becoming/chapters/08-METHOD.md",
+      "old": "Of the 126 central rows (nine declarations stand in two), 86 rest on at least one ([report](../results/completion/COMPLETION.md#master-laws)); the report lists the other 40 by row.",
+      "new": "Of the 126 central rows (nine declarations stand in two), 87 rest on at least one ([report](../results/completion/COMPLETION.md#master-laws)); the report lists the other 39 by row.",
+      "reason": "COMPLETION.md l.104: 'Counted per row: 87 of 126 central declarations rest on at least one shared law'; l.114: 'Resting on no shared law (39), by row'. The connectivity JSON lists 39 rows on no shared law.",
+      "cited_by_records": [
+       "one-root-to-its-edge",
+       "premises-met-and-failed",
+       "contraction-where-duplication-is-reachable",
+       "one-move-covering",
+       "self-reference-does-not-certify-itself",
+       "type-formation-gives-no-dynamics",
+       "what-a-summary-keeps"
+      ]
+     },
+     {
+      "file": "theories/becoming/chapters/08-METHOD.md",
+      "old": "Of the 126 rows, 46 now reach the grammar ([measure](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py)), and none did before OU3b: all 41 on closure, all 14 on finite runs, 16 of 54 on balance, 1 of 8 on widening, 1 of 2 on lumping, and 4 on no anchor: three through the laws of steps counted, and, since U4c, `Listed.coming_of_ceasing` through the root's census of a run.",
+      "new": "Of the 126 rows, 46 now reach the grammar ([measure](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py)), and none did before OU3b: all 42 on closure, among them `Listed.coming_of_ceasing`, a case of the root's census of a run since U4c and resting on closure since U4d; all 14 on finite runs, 16 of 54 on balance, 1 of 8 on widening, 1 of 2 on lumping, and 3 on no anchor, through the laws of steps counted.",
+      "reason": "Recounted from THEOREM-CONNECTIVITY.json shared_laws rows joined with shared-laws.json's per-declaration dependence: of the 46 rows reaching the grammar, closure 42 (all), return 14, balance 16, order 1, lumping 1, and no anchor 3 (Tolerance.answers_restores_iff, WithinMoves.after_course, Withholding.withholding_spreads). Listed.coming_of_ceasing now has closure as its shared law (THEOREM-CONNECTIVITY row 'dissolution'; shared-laws.json record ceasing-needs-arising law 1: shared_laws [closure], dependence grammar). The qualifier 'since U4c ... the root's census of a run' is kept, in 08:440's words. measure_grammar.py was not run.",
+      "cited_by_records": [
+       "one-root-to-its-edge",
+       "premises-met-and-failed",
+       "contraction-where-duplication-is-reachable",
+       "one-move-covering",
+       "self-reference-does-not-certify-itself",
+       "type-formation-gives-no-dynamics",
+       "what-a-summary-keeps"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "E38",
+    "status": "drafted",
+    "why": "Still holds on main. In 05-COLLECTIVES.md, `<a id=\"not-shown\"></a>` is at l.392, directly above '## 12. One kind of institution' (l.393). '## What this chapter does not show' (l.415) has no anchor. The fix is NOT on main: branch ch05-not-shown-anchor holds one commit beyond main, 4aa7c1cd1 ('05: the not-shown anchor back above What this chapter does not show'), on parent b8e2cf264, which is on main (`git log main..ch05-not-shown-anchor` shows only 4aa7c1cd1; `merge-base --is-ancestor` fails). It is checked out in worktree og2-institution, which has no uncommitted changes; do not remove that worktree without asking its owner. The two edits below do exactly what 4aa7c1cd1 does, against main's current text; cherry-picking 4aa7c1cd1 is the alternative. Owner: OU's owner (OG2's owner, 'Unification and coherence progress'). No .md, .py or .json in the repository links 05#not-shown, apart from the AA reader's report that found this. A possible choice, not drafted: also giving 05 the `does-not-show` anchor that chapters 01, 03, 04, 06, 07 and 08 use. 02 also uses not-shown, and no link needs either, so the smallest correct change is the move alone. Records: 13 records reference 05-COLLECTIVES.md, none cites it by path#anchor, and 05 links all 13. The removed line sits in the checker's section '## 11. Joint plans and applications'. Of the records with homes in §11 (joint-plan-composition, joint-plans-from-a-supported-start, formed-software-continuation, organizational-formation-from-generative-comparison), only joint-plans-from-a-supported-start references 05. a-rule-rebuilt-from-the-members-it-limits has its home in §12 (05:397) but does not reference 05 at all. The emulated scoped_drift check finds no record bearing: the change only removes an anchor line and inserts one. At landing all 13 show a changed sha256 and are to be read and re-pointed.",
+    "edits": [
+     {
+      "file": "theories/becoming/chapters/05-COLLECTIVES.md",
+      "old": "<a id=\"not-shown\"></a>\n## 12. One kind of institution",
+      "new": "## 12. One kind of institution",
+      "reason": "OG2's commit ef87160b9 put §12 between the anchor (from 0d7a397a5) and the heading it marks. This removes the anchor from above §12, as the first hunk of 4aa7c1cd1 does.",
+      "cited_by_records": [
+       "joint-plans-from-a-supported-start",
+       "a-code-held-as-counts",
+       "a-commuting-learner-drives-no-unread-choice",
+       "a-swap-symmetric-assignment-singles-out-none",
+       "identical-cells-under-a-descent-treating-them-alike",
+       "identical-cells-under-noise",
+       "market-model-share-margin-and-ends",
+       "readers-reading-readers",
+       "reviewers-count-by-independent-causes",
+       "risk-minimization-on-a-shared-renewal",
+       "succession-on-a-funded-carrier",
+       "the-test-season-meets-the-optimum-laws",
+       "what-a-set-point-optimum-does-beyond"
+      ]
+     },
+     {
+      "file": "theories/becoming/chapters/05-COLLECTIVES.md",
+      "old": "## What this chapter does not show",
+      "new": "<a id=\"not-shown\"></a>\n## What this chapter does not show",
+      "reason": "The home is 05-COLLECTIVES.md:415, '## What this chapter does not show'. The anchor goes back directly above it, as the second hunk of 4aa7c1cd1 does. The old text is unique in 05.",
+      "cited_by_records": [
+       "a-code-held-as-counts",
+       "a-commuting-learner-drives-no-unread-choice",
+       "a-swap-symmetric-assignment-singles-out-none",
+       "identical-cells-under-a-descent-treating-them-alike",
+       "identical-cells-under-noise",
+       "joint-plans-from-a-supported-start",
+       "market-model-share-margin-and-ends",
+       "readers-reading-readers",
+       "reviewers-count-by-independent-causes",
+       "risk-minimization-on-a-shared-renewal",
+       "succession-on-a-funded-carrier",
+       "the-test-season-meets-the-optimum-laws",
+       "what-a-set-point-optimum-does-beyond"
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "check:ra-and-cd": {
+  "verdicts": [
+   {
+    "id": "E11",
+    "ok": true,
+    "issues": "None blocking. Both old texts occur exactly once in 04-LIFE.md, in this worktree and on main. The new label and body sentence follow the record's validation_scope and hypotheses: Lean 4.29.1, passed 6 October 2026, every FixedSelector theorem with an empty axiom report, the comment added on 16 October, no receipt binding the current bytes, and 'reviewed, not receipt-bound, until a checker run does'. No claim is added. Leaving out 'not reviewed by a person' and the run-folder detail drops no proof qualifier. No generated page is edited and no hash is refreshed. cited_by_records is complete: grep finds exactly these 11 records citing 04-LIFE.md by path and none citing it by anchor. The three listed as drifting are right: 04 links neither drawn-shaping-drawn-one-at-a-time nor shaping-selected-among-groups. Minor: the 'why' calls e7312e246 current main, but main is now 9a6f1949a; the edited text is the same there. As the draft says, if the next_delta checker run lands first, drop both edits."
+   },
+   {
+    "id": "E37",
+    "ok": true,
+    "issues": "None blocking. Both old texts occur once in 03-KNOWING.md and do not overlap, so they apply in either order. The two edits only reorder: the Theorem label (with its axioms and receipt) now leads after the r- anchor, matching the record's kind theorem and status recorded-checked. The Assessment sentence keeps every word and now follows the record link. This placement differs from ROUTING's sketch, which put the record link after the Assessment. The draft's order is better supported: the record's does_not_show says the sensor argument is 'the chapter's argument, without Lean', so the record link should sit with the theorem part. 04:271's link to #r-correction-is-not-calibration still lands on the theorem. No word changes and no generated page is edited. cited_by_records is complete: 34 records cite 03-KNOWING.md by path, none by anchor. The two not linked from 03 are capture-by-counted-choices and exit-from-a-margin, as listed. The relabel to Reading [AI reading, new] is rightly left to the owner. No change to wisdom-root-without-axiom is correct, per ROUTING."
+   },
+   {
+    "id": "E40",
+    "ok": true,
+    "issues": "None blocking. All three old texts occur once and match main. I applied the edits in memory: regions.json parses (533 records, 383 modules), and the test file compiles. On the edited data, no record and no module imported by Becoming.lean is left unassigned, and no record's region differs from its home anchor's chapter. The new homes are 02 §9 twice, 04 §5, 05 §7 and 05 §8, matching the notes. The notes shorten the record statements and the module headers without adding claims. theory_graph.py never renders notes, so they reach no reader. The bases hold: CoupledDrawers has no World, Web or Flow and imports only Optimum (drawers-in-turn is general); ReachedCascade imports Cascade (general); GrammarPath imports Becoming.Grammar (grammar). Placing GrammarPath in significance rather than ROUTING's root is well argued: its header states 07 §4.6, its three records are homed in 07 and assigned significance, and GrammarScope is significance. The draft flags this choice for RA. No record cites regions.json or the test file. At landing, the generated THEORY-GRAPH.md and theory-graph.json must be rendered, not hand-edited, and the focused test_theory_graph run, as the draft says."
+   },
+   {
+    "id": "E33",
+    "ok": true,
+    "issues": "None blocking. The old text occurs once in 07-SIGNIFICANCE.md, both in this worktree, where the AA errata changed other lines of 07, and on main; ReadsNoOrder occurs in neither. The new sentences copy 08 §7's bullet (08:448, under '## 7. Shared laws and connectivity') with every hypothesis kept: the definition of ReadsNoOrder, 'at a datum on a frame with an extension', 'fails at that datum for every order', 'immediate, since \"better\" is free', 'a frame fixes no order', and the ReadsOnlyDynamics parallel. They do not say C derives from the condition and do not shorten the law to 'nothing entails C'. Both link targets exist: 08 #r-premises-met-and-failed and 07 #r-what-the-dynamics-leave-open. No generated page is edited. cited_by_records is complete: 19 records cite 07 by path, none by anchor, and 07 links every one of their pages, so none drifts on this line. AGENTS' rule still applies: before landing, a reader other than the author checks this restatement against 08's home."
+   }
+  ]
+ },
+ "check:aj-and-ou": {
+  "verdicts": [
+   {
+    "id": "E9",
+    "ok": true,
+    "issues": "Confirmed on the worktree. COLLECTIVE-DIRECTION.md:76 already gives all four of 07-SIGNIFICANCE.md:453's items in the home's words, ending with 'whatever no chain joins, among it future beings in no one's line'. No edit is needed."
+   },
+   {
+    "id": "E10",
+    "ok": true,
+    "issues": "Confirmed. COLLECTIVE-DIRECTION.md:125 already carries the routed fix plus '(the joined course drawn is not stated: ...#which-locks-noise-leaves)', which is homed at 02-MAP.md:447. These anchors exist: 02 #r-drawn-shaping-drawn-one-at-a-time (l.419), #which-locks-noise-leaves (l.446) and #open (l.467), and 05 #open (l.423, where 'How pools form, last and resist capture' is still listed). No edit is needed."
+   },
+   {
+    "id": "E14",
+    "ok": true,
+    "issues": "Confirmed. 02-MAP.md:434 ends 'Evidence: no frozen field test of reform events, which needs a coding of reform events fixed before the cases are read; one frozen test in one trained system, LA2, below.' 02:478 reads 'a frozen field test of T7's reform events'. No edit is needed."
+   },
+   {
+    "id": "E34",
+    "ok": true,
+    "issues": "Confirmed. 07-SIGNIFICANCE.md:665 already has 'groups of `m`', 'read over the rationals where shaping varies, with the assortment ρ the share of the spread among groups, exactly where c < s + m q ρ', and the covariance clause restricted to unequal sizes. That restriction matches 02:414 ('With unequal sizes that is not a function of the whole's spread and the size-weighted spread of the group means'). It is a better fix than the routing file's wording. No edit is needed."
+   },
+   {
+    "id": "E20",
+    "ok": false,
+    "issues": "The old text occurs exactly once in _process/BECOMING-WORKBOARD.md and is the end of the OU row's state cell (it is followed by ' |'). The board is not generated, and no record references it (grep for BECOMING-WORKBOARD under results/records finds nothing), so cited_by_records [] is complete. Items 9 and 11 correctly take WHAT-REMAINS.md:459's words, and the queue ordering correctly takes board l.36's. Problem: the freeze clause, which goes beyond the routing file, drops a standing. WHAT-REMAINS.md:207, the gate's own home for item 7, says 'Met but for the sending, Ren's own act, and the push', and l.488/l.492 say 'What remains of item 7 is the sending, Ren's own act'. The draft's 'item 7, the freeze, was made on 3 November as edition 1' reads as if item 7 were fully done. The original 'is Ren's' was half right, because what remains of it is his. The correction keeps the remaining part and who holds it. Minor: item 9's home also adds 'and part 2 is the two families on the World's flows', which is restored as OG2's part 2 so the list of what is left stays whole. The rest of the draft stands, including OU's owner applying it, close_rows.py left unchanged, and the history row left unchanged.",
+    "corrected_edits": [
+     {
+      "file": "_process/BECOMING-WORKBOARD.md",
+      "old": "Then plan §八 steps 6–10; 2 November 2026: the release gate's items 1 to 6 are met, item 4 the last (OU7, §492), and item 7, the freeze, is Ren's; left after the gate (WHAT-REMAINS): plan §十三 item 6 (the map on each model class), item 8 (pairing and power with their uses, and the fragments mutual translation reaches, in Lean), item 9's institution (OG having given the organism its model, §497) and item 11 (the three minimalities' report, MDL and Pareto), each to be claimed as an item of its own on Ren's word to go past the gate",
+      "new": "Then plan §八 steps 6–10; 2 November 2026: the release gate's items 1 to 6 are met, item 4 the last (OU7, §492); item 7, the freeze, made on 3 November as edition 1 (`review-packet-1`), is met but for the sending, Ren's own act, and the push; left after the gate (WHAT-REMAINS): plan §十三 item 6 (the map on each model class), item 8 (pairing and power with their uses, and the fragments mutual translation reaches, in Lean), item 9 (the test systems of plan §六, each with its model; OG having given the organism its model, §497, and OG2 one kind of institution, a rule of entry rebuilt from the members it limits, §501; other kinds and purposes stay open, and OG2's part 2 is the two families on the World's flows) and item 11 (the three minimalities' report, with MDL and Pareto not yet done), each to be claimed as an item of its own, behind the way now's items in the queue unless it changes what a reader is told or what could fail",
+      "reason": "For OU's owner. This keeps the drafter's item 9, item 11 and queue-order fixes (WHAT-REMAINS.md:459 and board l.36), as the routing file asks. The freeze clause now uses the gate's own standing for item 7 (WHAT-REMAINS.md:207, 'Met but for the sending, Ren's own act, and the push'; l.492) with board l.34's date and tag, so the part that is still Ren's is not dropped. Item 9 keeps the home's remaining clause about OG2's part 2. No record cites the board."
+     }
+    ]
+   },
+   {
+    "id": "E22",
+    "ok": true,
+    "issues": "Each of the four old texts occurs exactly once in 08-METHOD.md. 08 is hand-written (not generated), and the 08 §7 lines are identical on main and on the worktree. I recounted independently. THEOREM-CONNECTIVITY.json shared_laws gives by_law closure 42, balance 54, return 14, lumping 2, order 8, and 39 rows on no shared law, so 87 of 126 rest on one; COMPLETION.md (generated) agrees: 87 of 126, Closure 42, Balance 54, 39. Joining the rows with shared-laws.json's per-declaration 'central' entries (117 distinct, none ambiguous; the law-level 'dependence' field would be ambiguous) gives: 46 rows reach the grammar, 42 of 42 on closure, 14 of 14 on return, 16 of 54 on balance, 1 of 8 on order, 1 of 2 on lumping, and 3 with no anchor (Tolerance.answers_restores_iff, WithinMoves.after_course, Withholding.withholding_spreads). At 631762ba2^ coming_of_ceasing had laws [] (closure 41, no-law 40); at 631762ba2 it had ['closure'] (42, 39). So 'resting on closure since U4d' is right. '3 on no anchor, through the laws of steps counted' is 08's original wording for these three, and 'a case of the root's census of a run' is 08:440's. No claim is added and no hash is touched. The cited_by_records list (7 records) matches grep exactly, and no record cites 08 with an anchor.",
+    "corrected_edits": []
+   },
+   {
+    "id": "E38",
+    "ok": true,
+    "issues": "Both old texts are unique in 05-COLLECTIVES.md (anchor at l.392 directly above '## 12. One kind of institution' at l.393; '## What this chapter does not show' at l.415). The two edits match 4aa7c1cd1's two hunks exactly. 4aa7c1cd1 is on neither main nor the worktree HEAD. 05 is not generated. Outside the AA reader's files, nothing in the repository links 05#not-shown. The cited_by_records list (13 records) matches grep exactly, and no record cites 05 with an anchor. The decision left open (a does-not-show alias) is correctly not drafted.",
+    "corrected_edits": []
+   }
+  ]
+ }
+}
