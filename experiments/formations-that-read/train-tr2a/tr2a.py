@@ -33,8 +33,9 @@ Each holds by the code's construction; met, it shows a fault of the implementati
 
 The run is deterministic: pure Python, seeded, its floating point the platform's IEEE double. A run stopped part way
 leaves no readout (at most a run.json.tmp, written over by the next run) and is begun again from nothing; it writes
-results/run.json once, atomically, and refuses where one is there. It refuses unless every file FROZEN.sha256 lists has its bytes, is committed and unchanged, and the platform is
-the one PLATFORM names."""
+results/run.json once, atomically, and refuses where one is there. It refuses unless FROZEN.sha256 lists every file
+REQUIRED names, each listed file has its bytes and is committed unchanged, FROZEN.sha256 has one commit (a second would
+make a new freeze), and the platform is the one PLATFORM names."""
 import argparse
 import hashlib
 import json
@@ -294,7 +295,7 @@ def sha(p):
 def frozen_check(frozen=FROZEN, root=ROOT, required=REQUIRED):
     """The freeze's files: FROZEN.sha256 lists every required file, each line's file has that sha256 and is committed
     with no change, and FROZEN.sha256 itself is committed, in one commit only (a second commit of it would make a new
-    freeze). Returns the listed {path: sha256}, with the commit that added FROZEN.sha256 and HEAD."""
+    freeze). Returns the listed {path: sha256} and {the freeze commit, HEAD}."""
     if not frozen.exists():
         raise SystemExit(f'refused: no {frozen.name}; the freeze is not committed')
     listed = {}
@@ -320,7 +321,7 @@ def frozen_check(frozen=FROZEN, root=ROOT, required=REQUIRED):
     if len(commits) != 1:
         raise SystemExit(f'refused: {rel} has {len(commits)} commits; the freeze is the one that added it')
     head = subprocess.run(['git', '-C', str(root), 'rev-parse', 'HEAD'], capture_output=True, text=True).stdout.strip()
-    return dict(listed, **{'(the freeze commit)': commits[0], '(HEAD)': head})
+    return listed, {'the freeze commit': commits[0], 'HEAD': head}
 
 
 def platform_check(want=PLATFORM):
@@ -350,13 +351,13 @@ def run(out=RESULTS / 'run.json', trainings=None, frozen=None, plat=None, **kw):
     """Every training of the plan (or of `trainings`), then the readout, written once."""
     if out.exists():
         raise SystemExit(f'refused: {out.name} is there; a run is written once')
-    listed = frozen() if frozen else frozen_check()
+    listed, commits = frozen() if frozen else frozen_check()
     have = plat() if plat else platform_check()
     data = {c: contents(c) for c in CONTENT_ACTS}
     started = time.time()
     rows = [train_one(c, a, s, k, *data[c], **kw) for c, a, s, k in (trainings or plan())]
     readout = {'about': 'TR2 Stage A (FREEZE-11): every training of the plan; reported, no verdict.',
-               'frozen': listed, 'platform': have, 'seconds': round(time.time() - started, 1),
+               'frozen': listed, 'commits': commits, 'platform': have, 'seconds': round(time.time() - started, 1),
                'plan': {'J': J, 'DIM': DIM, 'R': R, 'HIDDEN': HIDDEN, 'EPOCHS': EPOCHS, 'RATE': RATE, 'RHO': str(RHO),
                         'SEEDS': SEEDS, 'SEED_BASE': SEED_BASE, 'DATA_SEED': DATA_SEED, 'CONTENT_ACTS': list(CONTENT_ACTS)},
                'content act ones': {c: sum(data[c][1]) for c in CONTENT_ACTS}, 'summary': summary(rows), 'trainings': rows}
@@ -369,8 +370,8 @@ def main():
     ap.add_argument('cmd', choices=('check', 'run'))
     a = ap.parse_args()
     if a.cmd == 'check':
-        listed = frozen_check()
-        print(json.dumps({'frozen': len(listed), 'platform': platform_check()}, indent=1))
+        listed, commits = frozen_check()
+        print(json.dumps({'frozen files': len(listed), **commits, 'platform': platform_check()}, indent=1))
         return 0
     r = run()
     print(json.dumps(r['summary'], indent=1))

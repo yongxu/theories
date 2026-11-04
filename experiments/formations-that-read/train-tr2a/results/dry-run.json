@@ -115,7 +115,7 @@
   "a listed file missing: refused": true,
   "a listed file not committed: refused": true,
   "FROZEN.sha256 committed twice: refused": true,
-  "the real paths are read from the repository root": true,
+  "the required paths exist under the repository root": true,
   "another platform: refused": true,
   "python3 -O: refused": true
  },

@@ -153,10 +153,10 @@ def main():
     with tempfile.TemporaryDirectory() as tmp:
         o = Path(tmp) / 'run.json'
         small = [('linear', 'content-and-cue', 'S1', -1), ('xor', 'content-only', 'S2', -2)]
-        rd = T.run(out=o, trainings=small, frozen=lambda: {'(dry)': '0'}, plat=lambda: {'(dry)': True}, epochs=5)
+        rd = T.run(out=o, trainings=small, frozen=lambda: ({'(dry)': '0'}, {}), plat=lambda: {'(dry)': True}, epochs=5)
         dt['a run on a small plan writes its readout'] = o.exists() and len(rd['trainings']) == 2 and \
             json.loads(o.read_text())['summary'] == rd['summary']
-        dt['a readout there: refused'] = refused(lambda: T.run(out=o, trainings=small, frozen=lambda: {},
+        dt['a readout there: refused'] = refused(lambda: T.run(out=o, trainings=small, frozen=lambda: ({}, {}),
                                                                plat=lambda: {}), 'written once')
     out['the run'] = dt
 
@@ -176,9 +176,9 @@ def main():
         fz.write_text(f"{T.sha(sub / 'a.py')}  x/a.py\n")
         git('add', '-A')
         git('commit', '-q', '-m', 'freeze')
-        got = T.frozen_check(fz, root, ['x/a.py'])
-        rf['committed and unchanged: read, with the freeze commit'] = got['x/a.py'] == T.sha(sub / 'a.py') and \
-            got['(the freeze commit)'] == got['(HEAD)']
+        got, commits = T.frozen_check(fz, root, ['x/a.py'])
+        rf['committed and unchanged: read, with the freeze commit'] = got == {'x/a.py': T.sha(sub / 'a.py')} and \
+            commits['the freeze commit'] == commits['HEAD']
         rf['a required file not listed: refused'] = refused(lambda: T.frozen_check(fz, root, ['x/a.py', 'x/c.py']),
                                                            'does not list')
         (sub / 'a.py').write_text('a = 2\n')
@@ -198,7 +198,7 @@ def main():
         git('add', 'x/b.py')
         git('commit', '-q', '-m', 'b')
         rf['FROZEN.sha256 committed twice: refused'] = refused(lambda: T.frozen_check(fz, root, ['x/a.py']), 'has 2 commits')
-    rf['the real paths are read from the repository root'] = (T.ROOT / 'AGENTS.md').exists() and all(
+    rf['the required paths exist under the repository root'] = (T.ROOT / 'AGENTS.md').exists() and all(
         (T.ROOT / q).exists() for q in T.REQUIRED)
     rf['another platform: refused'] = refused(lambda: T.platform_check({'python': '0.0', 'machine': 'x', 'system': 'y'}),
                                               'the platform is')
