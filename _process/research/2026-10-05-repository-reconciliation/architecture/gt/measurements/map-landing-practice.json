@@ -1,0 +1,360 @@
+{
+ "landing_steps": [
+  {
+   "step": "Claim the item on the board in a gap (no head clause standing): a board-only commit. The coordinator treats a board-only commit as needing no render.",
+   "source": "_process/BECOMING-WORKBOARD.md:15 (rule 1); board_fv.py:2-3 (FV claimed by board-only commit 14b0276fb); memory feedback_render_in_clean_worktree.md:36",
+   "cost": "seconds"
+  },
+  {
+   "step": "Prepare the work in your own worktree or branch. Scratch Lean is built with scratch_build.py so its steps go into the shared cache. Many items then rehearse the whole landing in a scratch worktree before claiming: main merged in without a commit, the core receipt sent to BECOMING_OUT, every later step run.",
+   "source": "board:19 (rule 5); u4e-kit/rehearse_u4e.sh:1-4; 18 rehearse_*.sh scripts in kits",
+   "cost": "one more full gate run, plus a core run for Lean items"
+  },
+  {
+   "step": "Ask the coordinator for a slot and wait for its word and verbatim order sentence, texts included.",
+   "source": "memory feedback_landing_queue_order.md:43-45; Queue line tail at board:39 ('ask the coordinator for a slot')",
+   "cost": "waiting time"
+  },
+  {
+   "step": "Head claim. In a worktree detached at main: refuse if main's Queue line contains '(landing now'; put 'X at the head of the queue (landing now, …); ' at the front of the Queue line; commit the board only; check again that main has not moved and no clause holds the head; then git merge --ff-only in the shared checkout /Users/ren/theories.",
+   "source": "land_fv.sh:22-33; board_fv.py:35-43; board:19; memory feedback_landing_queue_order.md:26,31,38",
+   "cost": "seconds"
+  },
+  {
+   "step": "Branch landings: merge main into the landing branch and record main-at-merge. Read the whole merge output. Resolve conflicts in generated files by restoring one side and re-rendering. Commit the merge before rendering or checking, or drift reads false.",
+   "source": "land_u4e.sh:21-22; memory feedback_landing_merge_conflicts.md:15-25; RESULT-WORKFLOW.md:61",
+   "cost": "generated files conflict almost every time (memory feedback_landing_merge_conflicts.md:13)"
+  },
+  {
+   "step": "Core (Lean) landings only. check_becoming.py writes a new run folder and receipt into the repository. Then the area steps: signature audit; THEOREM-CONNECTIVITY.py --check, apart roots registered, --write, --check; shared_laws.py with a comparison of its figures; records written against the receipt; 08's receipt sentence and the study section by script.",
+   "source": "land_u4e.sh:23-30; steps_u4e.sh:7-16; us-unequal-sizes/kit/land_us.py:1-43",
+   "cost": "core run 3-11 min for 500-730 steps (lean.yml:30-33); latest receipt ran 9 steps and reused 1,535"
+  },
+  {
+   "step": "Bring the kit in from the branch and apply the edits by script. Refuse if any placeholder is left.",
+   "source": "land_fv.sh:39-41",
+   "cost": "seconds"
+  },
+  {
+   "step": "Run research.py check to list drift. Assert the drift is exactly the records read and that there are no errors. Then repoint.py --reason … --drift-json … --apply, which appends one line to rebinds.jsonl.",
+   "source": "land_fv.sh:42-53; steps_u4e.sh:17-19; RESULT-WORKFLOW.md:49",
+   "cost": "one check run, 179 s (board main 3bf962941:58)"
+  },
+  {
+   "step": "Where a front changes, run measure_layers.py and grep for the stated figure.",
+   "source": "land_fv.sh:54-55",
+   "cost": "not recorded"
+  },
+  {
+   "step": "Board: the landed clause replaces the head clause at the front of the Queue line; the claim row is removed; a history row goes before '## Lapsed claims' in the board history file; a batched-pass entry is added.",
+   "source": "land_fv.sh:56; board_fv.py:46-74",
+   "cost": "seconds"
+  },
+  {
+   "step": "make research-render",
+   "source": "land_fv.sh:57; AGENTS.md:48; RESULT-WORKFLOW.md:155",
+   "cost": "about 2:00 (t2-land, 11-03) and up to 4:03 (ue31-land); about 5.5 min (memory project_la4_drain_under_training.md:30)"
+  },
+  {
+   "step": "make research-check-strict (secrets plus check --strict-fresh), then research-links, then research-test, asserting 'Ran N tests'.",
+   "source": "land_fv.sh:58-59; steps_u4e.sh:22-23; AGENTS.md:48",
+   "cost": "strict 1:56 / 3:21; links 6-9 s; tests 281.6 s / 454.3 s for 307-308 tests (/Users/ren/tmp/coordinator/t2-land and ue31-land logs)"
+  },
+  {
+   "step": "check_dossiers.py with no arguments, then again on theories/becoming/review/SCIENCES.md.",
+   "source": "land_fv.sh:60-61; memory feedback_landing_queue_order.md:45",
+   "cost": "not recorded separately"
+  },
+  {
+   "step": "Freezes only: write FROZEN.sha256 and commit it alone, last, after the checks. Because the new hashed file changes source-index.json, re-render after it.",
+   "source": "commits 18ed73b7e and c7ae7f356; memory project_rfz_freeze.md:43,61",
+   "cost": "one extra render (and strict check)"
+  },
+  {
+   "step": "List every changed path, untracked included. Refuse if .build/.lake/__pycache__ is among them. git add --pathspec-from-file, then commit.",
+   "source": "land_fv.sh:62-66; land_u4e.sh:31-36",
+   "cost": "seconds"
+  },
+  {
+   "step": "Fast-forward. The shared checkout must be on main, main must equal the landing commit's parent, and the head clause must be this landing's; then git merge --ff-only.",
+   "source": "land_fv.sh:67-72; board:19 ('re-read the Queue line right before git merge --ff-only')",
+   "cost": "seconds; if main moved, back to the merge step"
+  },
+  {
+   "step": "Send the coordinator the hash.",
+   "source": "memory feedback_landing_queue_order.md:45",
+   "cost": "-"
+  }
+ ],
+ "area_checks": [
+  {
+   "name": "secrets scan",
+   "command": "python3 -B tools/research/research.py secrets",
+   "path": "tools/research/research.py:213-238",
+   "trigger_paths": [
+    "any tracked text file (git grep -I)",
+    "_process/research-config.json (secrets_allowlist)"
+   ],
+   "already_run_by": "make research-check and research-check-strict (Makefile:5,10); CI via research-check-strict",
+   "cost": "not recorded (git grep)"
+  },
+  {
+   "name": "strict check",
+   "command": "make research-check-strict  (research.py check --strict-fresh)",
+   "path": "tools/research/research.py:253-339",
+   "trigger_paths": [
+    "global: every record JSON and every file a record references (sha256, declarations, receipts) (registry.py:992-1033 at 1e9bc6b85)",
+    "goals, research-config.json, navigation inputs, history manifest (research.py:37-56)",
+    "every file the indexes count, tracked AND untracked (research.py:68-72; RESULT-WORKFLOW.md:155)",
+    "every .lean file rg finds with --no-ignore outside .git/.lake/.build/node_modules/.venv/venv/__pycache__/.claude/worktrees, ignored files included (lean_catalogue.py:27,95-100)",
+    "the core receipt, shared-laws.json, law-families.json, COVERAGE.json, THEOREM-CONNECTIVITY.json (completion.py:1-31)",
+    "HEAD's git history (drift finds the reviewed version by hash, registry.py:46-60)"
+   ],
+   "already_run_by": "CI research.yml:19-20 (fetch-depth 0)",
+   "cost": "179 s, of which 131 s is drift comparisons (board main 3bf962941:58); 1:56 and 3:21 in landing logs"
+  },
+  {
+   "name": "render",
+   "command": "make research-render",
+   "path": "tools/research/research.py:253-303",
+   "trigger_paths": [
+    "same as the strict check; it writes the generated pages and _process/architecture/generated-manifest.json"
+   ],
+   "already_run_by": "every landing; the lock is per worktree, not machine-wide (research.py:22-34)",
+   "cost": "about 2-4 min (logs); about 5.5 min (LA4 memory)"
+  },
+  {
+   "name": "links",
+   "command": "make research-links  (research.py links)",
+   "path": "tools/research/moves.py (check_links); research.py:431-436",
+   "trigger_paths": [
+    "every live or generated .md file, tracked and untracked, and every path or anchor they target (global)"
+   ],
+   "already_run_by": "no other gate; CI does not run it (research.yml)",
+   "cost": "6-9 s (t2-land, ue31-land)"
+  },
+  {
+   "name": "research-test",
+   "command": "make research-test  (unittest discover tools/research/tests)",
+   "path": "tools/research/tests/",
+   "trigger_paths": [
+    "tools/research/**",
+    "all live records (test_architecture.py:91; test_theory_graph.py:9; test_boundary.py:794,860; test_shared_laws.py:90; others)",
+    "theories/becoming/results/completion/COVERAGE.json (test_completion.py:94,110)",
+    "the review packet and everything check_dossiers reads (test_review_packet.py:37-51)",
+    "theories/becoming/results/data/shared-laws.json (test_shared_laws.py:357)",
+    "core receipts (test_registry.py:98)",
+    "lean/becoming/check_becoming.py (test_style.py:176)",
+    "THEOREM-CONNECTIVITY-DUMP.lean, the spine's lean-toolchain and the installed Lean binary (test_boundary.py:1296-1340)",
+    "history migration drafts (test_schema2.py:17)"
+   ],
+   "already_run_by": "CI research.yml:15-16 (the Lean stub test is skipped there: no toolchain)",
+   "cost": "281.6-454.3 s, 307-308 tests, skipped=1 (landing logs)"
+  },
+  {
+   "name": "review-packet dossier check",
+   "command": "python3 -B _process/research/2026-10-05-generative-foundation-review/root-foundation/development/review-packet/check_dossiers.py [DOSSIER.md ...]",
+   "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/review-packet/check_dossiers.py",
+   "trigger_paths": [
+    "theories/becoming/review/*.md and review/recoding/CODEBOOK.md (default set, :175-177)",
+    "development/one-unfolding-root/corpus/*.tsv (:27,38-46)",
+    "lean/becoming/Becoming/**, lean/physics/**, lean/warning/** (:28-30); lean/deeper/** and development/one-unfolding-root/review-checks/** (:33-34)",
+    "every file a dossier quotes with Quote[PATH] or 引〔PATH〕 (:152-156): today 100 files, 713 quotations (49 under theories/becoming, 16 under _process/research, sources and experiments). This set has to be computed from the dossiers on the new tree."
+   ],
+   "already_run_by": "research-test (test_review_packet.py:37-51) on the same default set. Kits run it twice more (land_fv.sh:60-61); the SCIENCES.md run is redundant since ee4810d59 (3 Nov) moved SCIENCES.md into review/ (/Users/ren/tmp/coordinator/check_main.sh:19)",
+   "cost": "not recorded separately"
+  },
+  {
+   "name": "core checker",
+   "command": "cd experiments/integrated-correction/general-framework/generative-basis/lean/becoming && LEAN_TIMEOUT=2400 python3 -B check_becoming.py  (BECOMING_OUT=<dir> to keep the repository untouched)",
+   "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py",
+   "trigger_paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/** (the CI path filter, lean.yml:7-13). Within it: every non-archive .lean, because the module index asserts each name is unique (check_becoming.py:3790-3830); every passed *.json receipt (3993-4010); universal-ethics/generative-capacity/check.py (67, 4216); lean-toolchain",
+    "outside the repository: the Lean binary (keyed) and ~/.cache/becoming-lean (3842)"
+   ],
+   "already_run_by": "CI lean.yml on pushes touching lean/** (runs only when pushed). Not run by check or research-test, which read only its receipt (registry.py:572,861-907)",
+   "cost": "lean.yml:30-33: about 1,100 steps; 3-11 min for 500-730 steps on the workstation. Receipt 20261103T211917.845905Z ran 9 and reused 1,535. No wall time is recorded in receipts. Memory feedback_cpu_efficiency.md:13: 2-67 min under load before the cache"
+  },
+  {
+   "name": "theorem connectivity",
+   "command": "python3 -B _process/research/2026-10-05-generative-foundation-review/root-foundation/THEOREM-CONNECTIVITY.py --check  (and --write)",
+   "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/THEOREM-CONNECTIVITY.py",
+   "trigger_paths": [
+    "spine Lean sources, after check_becoming has passed on them (restored from the cache, docstring 1-12)",
+    "THEOREM-CONNECTIVITY-DUMP.lean",
+    "THEOREM-CONNECTIVITY-APART.json (:37-43)",
+    "records naming spine theorems"
+   ],
+   "already_run_by": "core landing kits only (steps_u4e.sh:10-13). Not run by check or test; completion, inside check, reads its THEOREM-CONNECTIVITY.json",
+   "cost": "not recorded"
+  },
+  {
+   "name": "shared laws generator",
+   "command": "python3 -B tools/research/shared_laws.py, then make research-render",
+   "path": "tools/research/shared_laws.py",
+   "trigger_paths": [
+    "lean/becoming/becoming-verification.json and the sources it checked (:84,289-300)",
+    "records' laws, statements_at_model and boundary",
+    "theories/becoming/results/completion/COVERAGE.json",
+    "ou3b-master-laws-on-the-grammar/measure_grammar.py and ec-elegant-completion/measure.py",
+    "THEOREM-CONNECTIVITY.py and -DUMP.lean",
+    "tools/research/boundary.py, boundary_check.lean, shared_laws.py (:269-274)",
+    "~/.cache/becoming-lean"
+   ],
+   "already_run_by": "core landing kits (steps_u4e.sh:15-16). check only reports it stale, never as an error (registry.py:861-864 at 1e9bc6b85); test_shared_laws reads its output",
+   "cost": "not recorded"
+  },
+  {
+   "name": "completion criterion",
+   "command": "inside research.py check/render (python3 -B tools/research/completion.py [--json] standalone)",
+   "path": "tools/research/completion.py",
+   "trigger_paths": [
+    "COVERAGE.json, the core receipt, THEOREM-CONNECTIVITY.json, records, 08-METHOD.md open items, Lean sources (completion.py:1-31,44-67 at 1e9bc6b85)"
+   ],
+   "already_run_by": "research.py check (research.py:270-272)",
+   "cost": "inside check's 179 s"
+  },
+  {
+   "name": "Lean catalogue",
+   "command": "inside render and check --strict-fresh",
+   "path": "tools/research/lean_catalogue.py",
+   "trigger_paths": [
+    "every .lean rg --no-ignore finds outside EXCLUDED, untracked and ignored included (lean_catalogue.py:27,95-100)",
+    "links in the documentation, generated pages included (research.py:296-303)"
+   ],
+   "already_run_by": "strict check and render only (research.py:241-250)",
+   "cost": "about 1 min (memory feedback_cpu_efficiency.md:19)"
+  },
+  {
+   "name": "reading times",
+   "command": "python3 -B _process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj4-alignment-readers/kit/measure_layers.py [REF]",
+   "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj4-alignment-readers/kit/measure_layers.py",
+   "trigger_paths": [
+    "README.md (generated)",
+    "theories/becoming/ONE-PAGE.md and .zh.md",
+    "theories/becoming/THE-THEORY-OF-BECOMING.md and .zh.md",
+    "theories/becoming/review/*.md",
+    "development/aj4-alignment-readers/FAILURE-MODE-MAP.md (:21-52)"
+   ],
+   "already_run_by": "nothing. It always exits 0 (:110-151; 'measure warns never blocks', memory project_coordinator_role.md:144). Kits grep its output for the stated figure (land_fv.sh:54-55). README's first-screen times are filled in by render (RESULT-WORKFLOW.md:85)",
+   "cost": "not recorded"
+  },
+  {
+   "name": "ZH / RO / Y source-mapping verifiers",
+   "command": "python3 -I development/zhonghua/verify_zh.py; python3 -B development/ro-relational-sources/verify_ro.py; python3 -B development/y1-changes/verify_mapping.py",
+   "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/{zhonghua/verify_zh.py,ro-relational-sources/verify_ro.py,y1-changes/verify_mapping.py}",
+   "trigger_paths": [
+    "their kit folders",
+    "chapters THE-THEORY-OF-BECOMING-ZHONGHUA.md, CIVILIZATION-THOUGHT-AND-BECOMING.md, WENLI-AND-BECOMING.md (verify_zh.py:28-30), CHINESE-SOURCES-AND-BECOMING.md (verify_ro.py:38), YI-ZHUAN-AND-BECOMING.md (verify_mapping.py:60)",
+    "sources/civilization-thought-v1.0, sources/chinese-classical-texts, sources/zhouyi-yizhuan",
+    "the list of record files",
+    "the NEWEST becoming-checks/*/verification.json, so any new core receipt is an input (verify_zh.py:81; verify_ro.py:264; verify_mapping.py:456)",
+    "periphery receipts lean/*/*verification.json (verify_zh.py:89)",
+    "the Hexagram*.lean modules (verify_mapping.py)"
+   ],
+   "already_run_by": "nothing automatic. No landing kit has run them since 23 Oct (71d781f8f). verify_zh writes the tracked file work/verify-failures.txt (verify_zh.py:220)",
+   "cost": "not recorded"
+  },
+  {
+   "name": "periphery Lean checkers",
+   "command": "e.g. python3 -B lean/becoming/check_fallible_inquiry.py; python3 -B lean/universal-ethics/generative-capacity/check_correction_inquiry.py (Lean 4.30.0-rc2 + Mathlib at ~/repos/生生不息); about 300 check*.py under the Lean root outside run folders",
+   "path": "experiments/integrated-correction/general-framework/generative-basis/lean/**/check*.py",
+   "trigger_paths": [
+    "the module itself and its import closure, core modules included",
+    "check_becoming.py, which they import (check_fallible_inquiry.py:22-24)",
+    "inherited passed receipts",
+    "Mathlib revision (CorrectionInquiry)"
+   ],
+   "already_run_by": "nothing (not check, test, CI or recent kits). check verifies only that a record's bound receipt hashes the record's cited source (registry.py:1010-1033)",
+   "cost": "RV21c: under 1 h each when fresh (memory project_coordinator_role.md:198). formal/check.py was found failing since 6 Oct (:206)"
+  },
+  {
+   "name": "freeze hash chains",
+   "command": "write_frozen.py at freeze time; each tr*_run.py checks the chain before a run",
+   "path": "experiments/formations-that-read/*/FROZEN.sha256; told-tr1/write_frozen.py:2-6,36-40; open/tr2_run.py:12; told-tr3/tr3_run.py:11",
+   "trigger_paths": [
+    "every file a FROZEN.sha256 lists, freeze 1's files included"
+   ],
+   "already_run_by": "nothing at landing. No shared tool checks freeze hashes (grep of tools/research found none)",
+   "cost": "not recorded"
+  },
+  {
+   "name": "experiment dry runs and design checks",
+   "command": "e.g. python3 -I -B experiments/state-named-in-advance/cells/check_cells.py OUT.xlsx; told-*/tr*_dry_run.py",
+   "path": "experiments/*",
+   "trigger_paths": [
+    "the experiment's own folder and the harness files it imports"
+   ],
+   "already_run_by": "freeze kits only (land_ue31b.sh:42)",
+   "cost": "not recorded"
+  },
+  {
+   "name": "generativity chain",
+   "command": "python3 -B tools/research/generative_chain.py --check",
+   "path": "tools/research/generative_chain.py:165-197",
+   "trigger_paths": [
+    "theories/becoming/results/data/generativity-chain.json, its reviewed_sources, its discovery globs, GENERATIVITY-CHAIN.md"
+   ],
+   "already_run_by": "nothing. It exits 2 by design when reviewed sources change (:193-197); its own workflow applies (RESULT-WORKFLOW.md:132,151)",
+   "cost": "not recorded"
+  },
+  {
+   "name": "9 October rename receipt",
+   "command": "python3 -B _process/architecture/check_rename.py",
+   "path": "_process/architecture/check_rename.py:106-121",
+   "trigger_paths": [
+    "_process/architecture/check_rename.py and rename-2026-10-09.json only: it reads git objects at the commit that added the receipt"
+   ],
+   "already_run_by": "nothing; REPOSITORY-LAYOUT.md:83 says it must keep passing",
+   "cost": "not recorded"
+  },
+  {
+   "name": "move receipts",
+   "command": "python3 -B tools/research/research.py move --check _process/architecture/moves/<batch>.json",
+   "path": "tools/research/moves.py:1131-1151",
+   "trigger_paths": [
+    "bytes at each moved path",
+    "live files naming an old path"
+   ],
+   "already_run_by": "nothing (REPOSITORY-LAYOUT.md:83)",
+   "cost": "not recorded"
+  },
+  {
+   "name": "growth ratchet / lint",
+   "command": "python3 -B tools/research/research.py check --changed-since <commit>; lint --changed-since <commit>",
+   "path": "tools/research/research.py:75-107",
+   "trigger_paths": [
+    "changed record JSONs"
+   ],
+   "already_run_by": "nothing: no Makefile target, CI step or kit passes --changed-since",
+   "cost": "not recorded"
+  },
+  {
+   "name": "reader edition",
+   "command": "python3 tools/publishing/build_review_packet.py PART; python3 -B development/aj4-alignment-readers/kit/check_edition.py",
+   "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj4-alignment-readers/kit/check_edition.py:1-7",
+   "trigger_paths": [
+    "theories/becoming/review/*.md, through the HTML built in tmp/pdfs/review-packet"
+   ],
+   "already_run_by": "edition and freeze time only (FREEZE-STEPS)",
+   "cost": "not recorded"
+  }
+ ],
+ "disagreements": [
+  "Whether research-test runs on every landing. AGENTS.md:48 says yes. RESULT-WORKFLOW.md:161 says it 'runs after any infrastructure change', and tools/research/README.md:11 calls it an infrastructure test. But test_review_packet.py:1-8,37-51 runs check_dossiers over the live packet, and many tests read live records, COVERAGE.json and receipts. A tier that ran research-test only on tools/ changes would skip a content check.",
+  "The dossier check runs three times per landing: in research-test (test_review_packet.py:37-51), plain, and on SCIENCES.md (land_fv.sh:60-61). Since ee4810d59 (3 Nov) SCIENCES.md is inside review/, so the default already covers it (/Users/ren/tmp/coordinator/check_main.sh:19). Three memories are stale: feedback_landing_queue_order.md:45 and project_coordinator_role.md:145 still point at development/ue8-sciences-dossier/SCIENCES.md, which no longer exists; project_coordinator_role.md:160 says check_dossiers is in neither research-check nor research-test, which has been wrong since 7b29360f1 (25 Oct). steps_u4e.sh:25 still passes the missing path.",
+  "AGENTS.md:48 requires links at every landing. CI does not run links (research.yml:15-20). RESULT-WORKFLOW.md:161 says only that 'CI runs the check and the tests'.",
+  "/Users/ren/.claude/CLAUDE.md:7-9 says run focused tests per change and the full suite once per phase. AGENTS.md:48 requires the full research-test and strict check on every landing. CLAUDE.md:15 defers to project rules that ask for more, so the project rule currently governs.",
+  "Shared laws. RESULT-WORKFLOW.md:134,143,145 make the generator, 'none unverified' and 'all four empty' conditions of certain landings. check reports staleness 'never an error' (registry.py:861-864 at 1e9bc6b85), and no make target enforces it; only kits run it (steps_u4e.sh:15-16).",
+  "The growth ratchet. RESULT-WORKFLOW.md:147 documents check --changed-since as the ratchet, but no gate runs it: the Makefile's research-check-strict has no --changed-since, and neither CI nor any kit passes it.",
+  "Board-only commits. AGENTS.md:48 says render before landing, and RESULT-WORKFLOW.md:155 says a between-landings commit renders where it adds counted files. The coordinator ruled on 31 Oct that a board line alone needs no render (memory feedback_render_in_clean_worktree.md:36). That exemption holds only while the edit adds no file and no link to a .lean file (source-index.json lists documents that link Lean files) and breaks no link.",
+  "Rule 5 says to edit the board in your own worktree (board:19). The coordinator's scripts write the shared checkout's board directly: /Users/ren/tmp/coordinator/queue_restore_order.py:1,20; edition2_order.py:1,26; rfz_order.py:1; t2_order.py:1.",
+  "Rule 5 says a lander claims the head 'behind every earlier claim'. The scripts put the head clause at the front of the line and refuse while any head clause stands (board_fv.py:38-41). The order is kept in time (one head at a time, the coordinator's slots), not by position on the line.",
+  "Rule 5 says 'one checker run at a time', but there is no machine-wide lock. render_lock lives in each worktree's git dir (research.py:22-34 resolves to .git/worktrees/<name>/research-navigation.lock), and check_becoming defaults to half the cores (check_becoming.py:3912), so a rehearsal and a landing, or two core runs, can overlap.",
+  "Memory feedback_render_in_clean_worktree.md:21 names master_laws.py and master-laws.json. The tool is tools/research/shared_laws.py writing shared-laws.json (shared_laws.py:83).",
+  "'Proof claims are checked' (AGENTS.md) against practice: no landing reruns periphery checkers or the ZH/RO/Y verifiers when the core changes. RV21c found formal/check.py failing since 6 Oct (memory project_coordinator_role.md:206) and 25 stale periphery receipts (:196)."
+ ],
+ "ci": "Two workflows. .github/workflows/research.yml (lines 1-20) runs on every push and pull request, with no path filter. It checks out with fetch-depth 0, which drift needs, installs ripgrep for the Lean catalogue, then runs `make research-test` and `make research-check-strict`. It runs no links check, no separate dossier check and no Lean, so test_boundary's Lean stub test skips itself. .github/workflows/lean.yml (lines 1-101) is path-filtered to experiments/integrated-correction/general-framework/generative-basis/lean/** and the workflow file, plus workflow_dispatch and a weekly fresh run. It sparse-checks out only the Lean root, installs the pinned toolchain, restores ~/.cache/becoming-lean under a key built from lean-toolchain and all *.lean, check_becoming.py and check.py (line 61), runs check_becoming.py with BECOMING_OUT in the runner's temp folder, prunes the cache to the receipt's keys and uploads the receipt. Its path filter is an existing sound tier for check_becoming: the checker reads only the Lean root, the binary and the cache. CI runs only when Ren pushes, so it is not part of a landing.",
+ "queue_mechanics": "The Queue line is one line, _process/BECOMING-WORKBOARD.md:39, starting '- **Queue:** '. It is 30,947 characters at 1e9bc6b85; it was 108,775 before US's landing cut it (memory feedback_shared_board_diff_before_commit.md:17). It reads newest first.\n\n- **The head clause.** It is prepended as 'X at the head of the queue (landing now, …); ' (board_fv.py:35-43). It went from 28,776 to 29,065 characters at acb3dc87a.\n- **The landed clause.** It replaces only the head clause, at the front (board_fv.py:50-59). It went from 29,065 to 30,947 characters at 1e9bc6b85. The earlier landed clauses stay after it, joined by '; ': 13 landed clauses from US to RFZ's fourth freeze, plus a 'FREEZE-2's header corrected' clause.\n- **The tail.** A pointer ('The landed clauses before US's … stand on the Queue line at `90c8bfbaa`') and the coordinator's order sentence ('Then, in the coordinator's order, by readiness: …; ask the coordinator for a slot.').\n- **Head detection.** Scripts grep '(landing now' on main's Queue line (land_fv.sh:24,32). The memory also guards 'at the head' (feedback_landing_queue_order.md:28-29,38).\n- **What else a landing edits.** It removes its claim row (board_fv.py:60-62), adds a batched-pass entry (63-67), and inserts its history row before '## Lapsed claims' in _process/history/workboard/BECOMING-WORKBOARD-2026-10-11_to_2026-10-17.md (46,69-73).\n- **No shared tool.** 194 per-kit board*.py scripts exist and 176 of them edit the Queue line, each copied from an earlier kit (RESULT-WORKFLOW.md:155 acknowledges this). tools/research holds none.\n- **The coordinator's scripts** in /Users/ren/tmp/coordinator:\n  - queue_restore_order.py, edition2_order.py, rfz_order.py, t2_order.py, order_cleanup.py, after_freeze_board.py and commons_clause.py do string replacements on the line and assert that no '(landing now' clause stands.\n  - owners_note.py also refuses if the checkout differs from main. wait_gap_note.sh waits for a gap, then runs it.\n  - watch_main.sh prints queue and board sizes on each move of main and warns when the board shrinks by more than 3,000 characters.\n  - check_main.sh runs the strict check, links and dossiers, and checks that a render leaves no diff, in wt-check.\n- **Conflicts.** Cherry-picks of board lines conflict whenever a landed clause rewrites the line. The fix is to reapply by string replacement on the new main (feedback_landing_queue_order.md:37).",
+ "report_md": "# How a landing is done today, and every area's own check\n\nAll files were read at main `1e9bc6b85` (worktree `gc-reading-correction`). Nothing was run. While I read, this worktree moved to `3bf962941` (GT's claim) and gained uncommitted edits by another session to `AGENTS.md`, `Makefile`, `RESULT-WORKFLOW.md`, `registry.py`, `completion.py`, `test_scoped_drift.py` and `gate.py`. Every line cited for those files is from the committed `1e9bc6b85`.\n\n## 1. The steps of a landing, in order\n\n1. **Claim in a gap.** Add the item's row with a board-only commit while no head clause stands (board:15). FV did this at 14b0276fb (`board_fv.py:2-3`).\n2. **Prepare in your own worktree.** Scratch Lean goes through `scratch_build.py` (board:19). Often the whole landing is rehearsed in a scratch worktree first (`rehearse_u4e.sh:1-4`; 18 rehearse scripts in kits). That is a second full gate run.\n3. **Ask the coordinator for a slot** and wait for its word and verbatim order sentence (`feedback_landing_queue_order.md:43-45`).\n4. **Claim the head.**\n   - In a worktree detached at main, refuse if `'(landing now'` is on main's Queue line.\n   - Prepend `X at the head of the queue (landing now, …); `.\n   - Commit the board only.\n   - Re-check that main has not moved and no head clause stands, then `git -C /Users/ren/theories merge --ff-only` (`land_fv.sh:22-33`; `board_fv.py:35-43`).\n5. **Merge main** (branch landings). Read the whole merge output, restore and re-render generated files that conflict, and commit the merge before checking (`land_u4e.sh:21-22`; `feedback_landing_merge_conflicts.md:15-25`; `RESULT-WORKFLOW.md:61`).\n6. **Core landings only.**\n   - `check_becoming.py` writes a run folder and receipt into the repository (`land_u4e.sh:23-26`).\n   - Then a signature audit; `THEOREM-CONNECTIVITY.py --check`, `--write`, `--check`; `shared_laws.py` (`steps_u4e.sh:7-16`).\n   - Then records, 08's receipt sentence and the study section are written by script (`land_us.py`).\n7. **Apply the kit's edits** by script (`land_fv.sh:39-41`).\n8. **Re-point drifted records.** `research.py check` lists drift; assert it is exactly the records read; then `repoint.py --reason --drift-json --apply`, which appends to `rebinds.jsonl` (`land_fv.sh:42-53`).\n9. **Reading times**, where a front changed: `measure_layers.py`, grep for the stated figure (`land_fv.sh:54-55`).\n10. **Board edits.** The landed clause replaces the head clause; the claim row goes; a history row goes before `## Lapsed claims`; a batched-pass entry is added (`board_fv.py:46-74`).\n11. **The gate.**\n    - `make research-render`, then `research-check-strict`, `research-links`, `research-test` (`land_fv.sh:57-59`).\n    - `check_dossiers.py` plain and on `SCIENCES.md` (`land_fv.sh:60-61`).\n12. **Freezes only.** `FROZEN.sha256` is committed alone, last, after the checks. Then a re-render, because the new hashed file changes `source-index.json` (`18ed73b7e`, `c7ae7f356`; `project_rfz_freeze.md:61`).\n13. **Commit** every changed path, untracked included, refusing build output (`land_fv.sh:62-66`).\n14. **Fast-forward.** The shared checkout must be on main, main must equal the commit's parent, and the head clause must be this landing's; then `--ff-only` (`land_fv.sh:67-72`; board:19).\n15. **Report the hash** to the coordinator.\n\n**Measured costs, docs landing** (from the log mtimes in `/Users/ren/tmp/coordinator/{t2-land,ue31-land}`):\n\n| Step | t2-land | ue31-land |\n|---|---|---|\n| render | ≈2:00 | ≤4:03 |\n| strict check | 1:56 | 3:21 |\n| links | 6 s | 9 s |\n| research-test | 281.6 s (308 tests) | 454.3 s (307 tests) |\n| **total** | **≈8:45** | **≈15:10** |\n\nTwo other figures: `check` takes 179 s, of which 131 s is drift comparisons (GT row, board `3bf962941`:58). For a core run, `lean.yml:30-33` gives 3–11 min for 500–730 steps. Receipts record no wall time.\n\n## 2. Area checks: what each reads, and what already runs it\n\nThe `area_checks` field has the full list. These points matter for soundness:\n\n- **The strict check and render are global.**\n  - They read every record and every file a record references (`registry.py:992-1033`).\n  - Indexes count tracked **and untracked** files (`research.py:68-72`; `RESULT-WORKFLOW.md:155`).\n  - The Lean catalogue reads every `.lean` that `rg --no-ignore` finds, **ignored files included**, outside `.git/.lake/.build/node_modules/.venv/__pycache__/.claude/worktrees` (`lean_catalogue.py:27,95-100`).\n  - Drift looks up reviewed versions in **HEAD's history** (`registry.py:46-60`).\n  - So a cache keyed only by `git write-tree` misses inputs. As history grows, reviewed versions can only be found, never lost. A pass can therefore be reused only on the same full tree (untracked and ignored inputs included) and only if the cached HEAD is an ancestor of the new one.\n- **research-test is a content check.**\n  - It runs `check_dossiers` over the live packet (`test_review_packet.py:37-51`).\n  - It reads all records, `COVERAGE.json`, `shared-laws.json`, receipts and `check_becoming.py`.\n  - It compiles stubs with the installed Lean against `THEOREM-CONNECTIVITY-DUMP.lean` (`test_boundary.py:1296-1340`).\n- **check_dossiers' inputs.** The 9 dossier files; the corpus TSVs; `Becoming/`, `physics/`, `warning/`, `deeper/` and `review-checks/`; and the 100 files the dossiers quote (713 quotations). The quoted set has to be computed from the dossiers on the new tree.\n- **check_becoming's inputs.** Everything under the Lean root:\n  - a new `.lean` anywhere there can break the uniqueness assert (`check_becoming.py:3830`);\n  - every passed `*.json` receipt (3993-4010);\n  - the helper `check.py`;\n  - the toolchain and the binary;\n  - `~/.cache/becoming-lean`.\n\n  `lean.yml`'s path filter matches this set.\n- **Checks no gate runs.**\n  - THEOREM-CONNECTIVITY and `shared_laws` run only in kits. `check` reports `shared_laws` stale, never as an error (`registry.py:861-864`).\n  - The ZH/RO/Y verifiers take the **newest** core receipt by glob (`verify_zh.py:81`; `verify_ro.py:264`; `verify_mapping.py:456`), so any core landing is one of their inputs. No kit has run them since 23 Oct. `verify_zh` also writes a tracked file (`verify_zh.py:220`).\n  - Periphery checkers (about 300 `check*.py` under the Lean root) import the core but never run on core landings. `formal/check.py` failed unnoticed from 6 Oct until 31 Oct (`project_coordinator_role.md:206`).\n  - Freeze hash chains are checked only by each run script.\n  - The growth ratchet (`--changed-since`), `check_rename.py`, `move --check` and `generative_chain.py --check`.\n- **measure_layers never fails** (exit 0). Kits grep its figures.\n- **No machine-wide lock exists.** `render_lock` is per worktree (`research.py:22-34`). `check_becoming` uses half the cores by default (`check_becoming.py:3912`).\n\n## 3. How often a landing reruns its checks because main moved\n\n- Rule 5 (board:19): each commit to main during a hold \"sends the lander round another merge and render\".\n- Before landers claimed the head first, \"main moves every few minutes … a landing merges main two or three times\" (`feedback_landing_merge_conflicts.md:13`). On 30 Oct a docs-only branch's ~5-min check was overtaken by another landing three times in a row (`feedback_landing_queue_order.md:31`).\n- The memories record holds being broken on 29 Oct (three times), 30 Oct (twice), 31 Oct (twice) and 1 Nov (`feedback_landing_queue_order.md:20-45`).\n- A heuristic count over git, since 30 Oct (merges of main into a branch after its head claim):\n\n  | Merges after the claim | Head claims |\n  |---|---|\n  | 0 | 4 |\n  | 1 | 29 |\n  | 2 | 5 (T1F, IGF, IGF2, AJ8b, ZH's note) |\n  | 3 | 2 (TR45, US) |\n\n  Each extra merge reruns the whole gate, about 9–15 min. Rehearsals and freezes add one more render or check pass each.\n\n## 4. Where the documents disagree\n\nListed in the `disagreements` field. The main ones:\n\n- AGENTS.md runs `research-test` on every landing; RESULT-WORKFLOW runs it only after infrastructure changes.\n- The dossier check runs three times, and its second run is redundant.\n- Links are required at landing but not run in CI.\n- The `shared_laws` and growth-ratchet conditions are documented but nothing enforces them.\n- Board-only commits are exempt from render by practice, not by the rule.\n- The coordinator's scripts edit the shared checkout's board directly.\n- Several memories are stale (`master_laws`, the old `SCIENCES.md` path, \"the dossier check is not in research-test\").\n\n## 5. Not found\n\n- A shared tool for editing the Queue line (there are 194 per-kit `board*.py` scripts).\n- Any machine-wide lock.\n- Any shared check of freeze hashes.\n- Wall times in core receipts, and per-test timings.\n- A record of whether RFZ's checks reran on the final tree after `18ed73b7e` and `c7ae7f356`.\n- Whether the ZH/RO/Y verifiers and the periphery checkers pass today (not run, as instructed)."
+}
