@@ -1,0 +1,3 @@
+primary {'stocks': 69, 'testable': 65, 'fitted': "T2 better than the field's fitted embedding", 'reading': "T2 better than the field's fitted embedding", 'median_r': 0.1625629257663748, 'f_better': 23, 'n_better': 42, 'p': 0.024811974571552164, 'dims': {1: 26, 2: 22, 3: 9, 4: 8}}
+control {'stocks': 5, 'testable': 5, 'fitted': 'not testable', 'reading': 'not testable', 'median_r': None, 'f_better': None, 'n_better': None, 'p': None, 'dims': None}
+other {'stocks': 24, 'testable': 21, 'fitted': "not separated on the field's criterion", 'reading': "not separated on the field's criterion", 'median_r': 0.0031841162197096787, 'f_better': 10, 'n_better': 11, 'p': 1.0, 'dims': {1: 6, 2: 9, 3: 4, 4: 2}}

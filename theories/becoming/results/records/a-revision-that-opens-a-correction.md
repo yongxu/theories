@@ -51,7 +51,7 @@ Canonical source: [OpenedCorrection.lean](../../../../experiments/integrated-cor
 <a id="next--下一步"></a>
 ## Next
 
-A supplied controller's run along which an opening is taken; an institution's rule of reading what its members report as its own process, with the members' acts; a frozen test of whether a language-model institution corrects only through the reading its register states, with the plan's controls (the plan's TR4); review by a person.
+A supplied controller's run along which an opening is taken; an institution's rule of reading what its members report as its own process, with the members' acts; a run of the frozen test of whether a language-model institution corrects only through the reading its register states, with the plan's controls (TR4); review by a person.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -88,6 +88,7 @@ Aliases: `opening a correction`, `开更正`, `a correctable configuration`, `�
 
 - 30 October 2026: added (RF round 2), a revision of a reading that opens a correction along one process: correctable at a configuration, opening along a trace, the two monotonicities, acceptability held fixed, on Revising's process; after a cross-model review of the Lean with a re-check, every finding taken; study section 457.
 - 31 October 2026, board item RF, the tests' designs (study section 476): the next step names its test as designed, TR4 in experiments/formations-that-read, which can refute at most the bridge that the reading in force is the register's rule, never the law; no statement or declaration changed. PLAN.md re-pointed: since this record's reviewed hash the plan changed only where the tests' readers found it misstating the Lean (§3, §4, §8, §11, §12) and in §10, the tests; read against this record before re-pointing, nothing it says changed.
+- 4 November 2026, board item TR45: the test TR4 frozen with TR5 before any call to a model (experiments/formations-that-read/FREEZE-2.md), on RF's three pins at 60 units of the test arm, with a decline read as an answer; not run. The law is unchanged; next_delta's step is now the frozen test's run, which waits on Ren's yes.
 
 </details>
 
