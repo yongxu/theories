@@ -1,6 +1,6 @@
 # TR2 and TR7: the full design
 
-*Part of [the designs of RF's tests](DESIGN.md): the exact tables, the power check, rivals, usage and references for TR2 and TR7. AI-written, not yet reviewed by a person. TR2's Stage B is frozen in [FREEZE-7](FREEZE-7.md) (4 November 2026), with the changes its section 12 lists, its Stage A in [FREEZE-11](FREEZE-11.md) (5 November 2026), with the choices its section 7 lists, and TR7 in [FREEZE-4](FREEZE-4.md) (the same day), with the changes its section 11 lists; nothing has run.*
+*Part of [the designs of RF's tests](DESIGN.md): the exact tables, the power check, rivals, usage and references for TR2 and TR7. AI-written, not yet reviewed by a person. TR2's Stage B is frozen in [FREEZE-7](FREEZE-7.md) (4 November 2026), with the changes its section 12 lists, its Stage A in [FREEZE-11](FREEZE-11.md) (5 November 2026), with the choices its section 7 lists; TR7 in [FREEZE-4](FREEZE-4.md) (4 November 2026), with the changes its section 11 lists, and its Stage A in [FREEZE-9](FREEZE-9.md) (5 November 2026), with the changes and choices its section 7 lists; nothing has run.*
 
 ## What the law states, checked against the Lean
 
@@ -269,6 +269,8 @@ Exact: for each chooser, condition and size, binomial tails give the probability
 ## Stage A's reference curves
 
 A tabular softmax learner on the stated prospects, the exact expected gradient: A1 reaches complyThenOwn (0.9999); at A3, where ownThenComply and ownAtBoth tie, it ends split 0.4999 and 0.4999 from the uniform start and at ownThenComply (0.9985) from a lean to it; at A5 likewise between complyThenOwn and ownAtBoth. A shared chance, drawn afresh, ascends to 0 on B1's prospects, to 0.35 on B2's (the derived best, 7/20) and to 0.125 on the witness's (1/8). Stage A (later, on Ren's yes) trains such learners on sampled outcomes, at least five seeds per condition, so that an exact sign test can reach 0.05; it shows how ties settle by the start, which no verdict reads.
+
+Stage A is frozen in [FREEZE-9](FREEZE-9.md) (5 November 2026): 20 seeds a run, each run read by an exact sign test of its seeds' movement toward the law's end, with the changes and choices its section 7 lists.
 
 ## Stage B
 

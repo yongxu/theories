@@ -1,0 +1,486 @@
+{
+ "step size": 0.5,
+ "steps": {
+  "told": 4000,
+  "chance": 20000,
+  "mixture": 4000
+ },
+ "batch": 100,
+ "seeds": 20,
+ "reference ends": {
+  "A1": [
+   0.0,
+   0.9999,
+   0.0,
+   0.0
+  ],
+  "A2": [
+   0.0,
+   0.0001,
+   0.0,
+   0.9999
+  ],
+  "A3": [
+   0.0001,
+   0.0001,
+   0.4999,
+   0.4999
+  ],
+  "A4": [
+   0.0,
+   0.0,
+   0.0,
+   0.9999
+  ],
+  "A5": [
+   0.0,
+   0.4999,
+   0.0003,
+   0.4999
+  ],
+  "A6": [
+   0.0,
+   0.9999,
+   0.0,
+   0.0001
+  ],
+  "A7": [
+   0.0,
+   0.9998,
+   0.0001,
+   0.0001
+  ],
+  "B1": 0.0001,
+  "B2": 0.35,
+  "B3": 0.35,
+  "B4": 0.0002,
+  "A3 leaning to ownThenComply": [
+   0.0,
+   0.0,
+   0.9985,
+   0.0015
+  ],
+  "A3 leaning to ownAtBoth": [
+   0.0,
+   0.0,
+   0.0015,
+   0.9985
+  ],
+  "A5 leaning to complyThenOwn": [
+   0.0,
+   0.9978,
+   0.0002,
+   0.002
+  ],
+  "A5 leaning to ownAtBoth": [
+   0.0,
+   0.002,
+   0.0002,
+   0.9978
+  ],
+  "B2's prospects from 1/20": 0.35,
+  "the witness from 1/2": 0.125
+ },
+ "runs": {
+  "A1": {
+   "condition": "A1",
+   "learner": "told",
+   "role": "verdict",
+   "target": "['complyThenOwn']",
+   "start": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "reference end": [
+    0.0,
+    0.9999,
+    0.0,
+    0.0
+   ],
+   "first-order movement per step (lr x mean)": 0.125,
+   "one episode's standard deviation": 0.4375,
+   "signal-to-noise of one step at the batch": 5.714
+  },
+  "A2": {
+   "condition": "A2",
+   "learner": "told",
+   "role": "verdict",
+   "target": "['ownAtBoth']",
+   "start": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "reference end": [
+    0.0,
+    0.0001,
+    0.0,
+    0.9999
+   ],
+   "first-order movement per step (lr x mean)": 0.125,
+   "one episode's standard deviation": 0.569402,
+   "signal-to-noise of one step at the batch": 4.391
+  },
+  "A3": {
+   "condition": "A3",
+   "learner": "told",
+   "role": "verdict",
+   "target": "['ownAtBoth', 'ownThenComply']",
+   "start": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "reference end": [
+    0.0001,
+    0.0001,
+    0.4999,
+    0.4999
+   ],
+   "first-order movement per step (lr x mean)": 0.15625,
+   "one episode's standard deviation": 0.0,
+   "signal-to-noise of one step at the batch": "no noise at the expected-points baseline"
+  },
+  "A4": {
+   "condition": "A4",
+   "learner": "told",
+   "role": "verdict",
+   "target": "['ownAtBoth']",
+   "start": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "reference end": [
+    0.0,
+    0.0,
+    0.0,
+    0.9999
+   ],
+   "first-order movement per step (lr x mean)": 0.15625,
+   "one episode's standard deviation": 0.625,
+   "signal-to-noise of one step at the batch": 5.0
+  },
+  "A5": {
+   "condition": "A5",
+   "learner": "told",
+   "role": "verdict",
+   "target": "['complyThenOwn', 'ownAtBoth']",
+   "start": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "reference end": [
+    0.0,
+    0.4999,
+    0.0003,
+    0.4999
+   ],
+   "first-order movement per step (lr x mean)": 0.15625,
+   "one episode's standard deviation": 0.441942,
+   "signal-to-noise of one step at the batch": 7.071
+  },
+  "A6": {
+   "condition": "A6",
+   "learner": "told",
+   "role": "verdict",
+   "target": "['complyThenOwn']",
+   "start": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "reference end": [
+    0.0,
+    0.9999,
+    0.0,
+    0.0001
+   ],
+   "first-order movement per step (lr x mean)": 0.125,
+   "one episode's standard deviation": 0.455007,
+   "signal-to-noise of one step at the batch": 5.494
+  },
+  "A7": {
+   "condition": "A7",
+   "learner": "told",
+   "role": "verdict",
+   "target": "['complyThenOwn']",
+   "start": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "reference end": [
+    0.0,
+    0.9998,
+    0.0001,
+    0.0001
+   ],
+   "first-order movement per step (lr x mean)": 0.09375,
+   "one episode's standard deviation": 0.414578,
+   "signal-to-noise of one step at the batch": 4.523
+  },
+  "B1": {
+   "condition": "B1",
+   "learner": "chance",
+   "role": "verdict",
+   "target": "0",
+   "start": "1/2",
+   "reference end": 0.0001,
+   "first-order movement per step (lr x mean)": 0.21875,
+   "one episode's standard deviation": 0.768013,
+   "signal-to-noise of one step at the batch": 5.697
+  },
+  "B2": {
+   "condition": "B2",
+   "learner": "chance",
+   "role": "verdict",
+   "target": "7/20",
+   "start": "1/2",
+   "reference end": 0.35,
+   "first-order movement per step (lr x mean)": 0.09375,
+   "one episode's standard deviation": 0.480072,
+   "signal-to-noise of one step at the batch": 3.906,
+   "settled spread about the best chance, linearized": 0.0282
+  },
+  "B3": {
+   "condition": "B3",
+   "learner": "chance",
+   "role": "verdict",
+   "target": "7/20",
+   "start": "9/10",
+   "reference end": 0.35,
+   "first-order movement per step (lr x mean)": 0.04455,
+   "one episode's standard deviation": 0.175873,
+   "signal-to-noise of one step at the batch": 5.066,
+   "settled spread about the best chance, linearized": 0.0282
+  },
+  "B4": {
+   "condition": "B4",
+   "learner": "mixture",
+   "role": "verdict",
+   "target": "0",
+   "start": "1/2",
+   "reference end": 0.0002,
+   "first-order movement per step (lr x mean)": 0.09375,
+   "one episode's standard deviation": 0.0,
+   "signal-to-noise of one step at the batch": "no noise at the expected-points baseline"
+  },
+  "A3 leaning to ownThenComply": {
+   "condition": "A3",
+   "learner": "told",
+   "role": "reported",
+   "target": "['ownAtBoth', 'ownThenComply']",
+   "start": [
+    0.0,
+    0.0,
+    1.0,
+    0.0
+   ],
+   "reference end": [
+    0.0,
+    0.0,
+    0.9985,
+    0.0015
+   ],
+   "first-order movement per step (lr x mean)": 0.143114,
+   "one episode's standard deviation": 0.191951,
+   "signal-to-noise of one step at the batch": 14.911
+  },
+  "A3 leaning to ownAtBoth": {
+   "condition": "A3",
+   "learner": "told",
+   "role": "reported",
+   "target": "['ownAtBoth', 'ownThenComply']",
+   "start": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "reference end": [
+    0.0,
+    0.0,
+    0.0015,
+    0.9985
+   ],
+   "first-order movement per step (lr x mean)": 0.143114,
+   "one episode's standard deviation": 0.191951,
+   "signal-to-noise of one step at the batch": 14.911
+  },
+  "A5 leaning to complyThenOwn": {
+   "condition": "A5",
+   "learner": "told",
+   "role": "reported",
+   "target": "['complyThenOwn', 'ownAtBoth']",
+   "start": [
+    0.0,
+    1.0,
+    0.0,
+    0.0
+   ],
+   "reference end": [
+    0.0,
+    0.9978,
+    0.0002,
+    0.002
+   ],
+   "first-order movement per step (lr x mean)": 0.143114,
+   "one episode's standard deviation": 0.494798,
+   "signal-to-noise of one step at the batch": 5.785
+  },
+  "A5 leaning to ownAtBoth": {
+   "condition": "A5",
+   "learner": "told",
+   "role": "reported",
+   "target": "['complyThenOwn', 'ownAtBoth']",
+   "start": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "reference end": [
+    0.0,
+    0.002,
+    0.0002,
+    0.9978
+   ],
+   "first-order movement per step (lr x mean)": 0.143114,
+   "one episode's standard deviation": 0.494798,
+   "signal-to-noise of one step at the batch": 5.785
+  },
+  "B2's prospects from 1/20": {
+   "condition": "B2",
+   "learner": "chance",
+   "role": "reported",
+   "target": "7/20",
+   "start": "1/20",
+   "reference end": 0.35,
+   "first-order movement per step (lr x mean)": 0.006769,
+   "one episode's standard deviation": 0.062618,
+   "signal-to-noise of one step at the batch": 2.162,
+   "settled spread about the best chance, linearized": 0.0282
+  },
+  "the witness from 1/2": {
+   "condition": "witness",
+   "learner": "chance",
+   "role": "reported",
+   "target": "1/8",
+   "start": "1/2",
+   "reference end": 0.125,
+   "first-order movement per step (lr x mean)": 0.1875,
+   "one episode's standard deviation": 0.637377,
+   "signal-to-noise of one step at the batch": 5.883,
+   "settled spread about the best chance, linearized": 0.0235
+  }
+ },
+ "sign test's power": {
+  "5": {
+   "support at": 5,
+   "contradiction at": null,
+   "chance supported, by q": {
+    "1/2": 0.0312,
+    "3/5": 0.0778,
+    "7/10": 0.1681,
+    "4/5": 0.3277,
+    "9/10": 0.5905,
+    "19/20": 0.7738,
+    "99/100": 0.951,
+    "1": 1.0
+   },
+   "chance contradicted, by r": {
+    "1/2": null,
+    "3/5": null,
+    "7/10": null,
+    "4/5": null,
+    "9/10": null,
+    "19/20": null,
+    "99/100": null,
+    "1": null
+   }
+  },
+  "10": {
+   "support at": 9,
+   "contradiction at": 10,
+   "chance supported, by q": {
+    "1/2": 0.0107,
+    "3/5": 0.0464,
+    "7/10": 0.1493,
+    "4/5": 0.3758,
+    "9/10": 0.7361,
+    "19/20": 0.9139,
+    "99/100": 0.9957,
+    "1": 1.0
+   },
+   "chance contradicted, by r": {
+    "1/2": 0.001,
+    "3/5": 0.006,
+    "7/10": 0.0282,
+    "4/5": 0.1074,
+    "9/10": 0.3487,
+    "19/20": 0.5987,
+    "99/100": 0.9044,
+    "1": 1.0
+   }
+  },
+  "20": {
+   "support at": 15,
+   "contradiction at": 17,
+   "chance supported, by q": {
+    "1/2": 0.0207,
+    "3/5": 0.1256,
+    "7/10": 0.4164,
+    "4/5": 0.8042,
+    "9/10": 0.9887,
+    "19/20": 0.9997,
+    "99/100": 1.0,
+    "1": 1.0
+   },
+   "chance contradicted, by r": {
+    "1/2": 0.0013,
+    "3/5": 0.016,
+    "7/10": 0.1071,
+    "4/5": 0.4114,
+    "9/10": 0.867,
+    "19/20": 0.9841,
+    "99/100": 1.0,
+    "1": 1.0
+   }
+  },
+  "30": {
+   "support at": 20,
+   "contradiction at": 23,
+   "chance supported, by q": {
+    "1/2": 0.0494,
+    "3/5": 0.2915,
+    "7/10": 0.7304,
+    "4/5": 0.9744,
+    "9/10": 0.9999,
+    "19/20": 1.0,
+    "99/100": 1.0,
+    "1": 1.0
+   },
+   "chance contradicted, by r": {
+    "1/2": 0.0026,
+    "3/5": 0.0435,
+    "7/10": 0.2814,
+    "4/5": 0.7608,
+    "9/10": 0.9922,
+    "19/20": 0.9999,
+    "99/100": 1.0,
+    "1": 1.0
+   }
+  }
+ },
+ "note": "q is the chance a seed moves the law's way, r the chance it moves against it; the run measures both. The signal-to-noise is of one step at the start, an indicator, not a chance."
+}

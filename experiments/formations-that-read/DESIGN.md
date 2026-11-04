@@ -1,6 +1,6 @@
 # Formations that read: the designs of RF's tests (TR1 to TR9) and RR's TR-RR
 
-*Board item RF, 31 October 2026. AI-written (a Claude Code session), not yet reviewed by a person. These are designs. TR8 and TR-RR are frozen, with the changes listed there, in [FREEZE-1](FREEZE-1.md) (board item RFZ, 4 November 2026), TR4 and TR5 in [FREEZE-2](FREEZE-2.md) (board item TR45, the same day), TR3 in [FREEZE-3](FREEZE-3.md) (board item RFZ, the same day), TR1 in [FREEZE-5](FREEZE-5.md) (board item TR1, the same day) and its informing variant and Stage A in [FREEZE-10](FREEZE-10.md) (board item TR1A, 5 November 2026), TR7 in [FREEZE-4](FREEZE-4.md) (board item TR71, the same day), TR6 in [FREEZE-6](FREEZE-6.md) (board item RFZ, the same day), TR2's Stage B in [FREEZE-7](FREEZE-7.md) (board item TR45, the same day), TR9 in [FREEZE-8](FREEZE-8.md) (board item RFZ, the same day), and TR2's Stage A in [FREEZE-11](FREEZE-11.md) (board item TR2A, 5 November 2026); each names what of its test stays a design, the Stage A of TR7 among them. Nothing has run on a trained system, a model, data or people. The first part takes ten minutes to read, the second about forty; the rest is reference. RR's test (board item TR-RR) has a section of its own after the second part.*
+*Board item RF, 31 October 2026. AI-written (a Claude Code session), not yet reviewed by a person. These are designs. TR8 and TR-RR are frozen, with the changes listed there, in [FREEZE-1](FREEZE-1.md) (board item RFZ, 4 November 2026), TR4 and TR5 in [FREEZE-2](FREEZE-2.md) (board item TR45, the same day), TR3 in [FREEZE-3](FREEZE-3.md) (board item RFZ, the same day), TR1 in [FREEZE-5](FREEZE-5.md) (board item TR1, the same day) and its informing variant and Stage A in [FREEZE-10](FREEZE-10.md) (board item TR1A, 5 November 2026), TR7 in [FREEZE-4](FREEZE-4.md) (board item TR71, the same day), TR6 in [FREEZE-6](FREEZE-6.md) (board item RFZ, the same day), TR2's Stage B in [FREEZE-7](FREEZE-7.md) (board item TR45, the same day), TR9 in [FREEZE-8](FREEZE-8.md) (board item RFZ, the same day), TR2's Stage A in [FREEZE-11](FREEZE-11.md) (board item TR2A, 5 November 2026), and TR7's Stage A in [FREEZE-9](FREEZE-9.md) (board item TR7A, the same day); each names what of its test stays a design. Nothing has run on a trained system, a model, data or people. The first part takes ten minutes to read, the second about forty; the rest is reference. RR's test (board item TR-RR) has a section of its own after the second part.*
 
 ## The tests in ten minutes
 
@@ -179,7 +179,7 @@ In full: [REST-TR3-TR6.md](REST-TR3-TR6.md). Frozen, with the changes listed the
 
 **Not tested.** Trained dispositions, concealment, deception, the expectation that the threat goes away, rates where the stages are told apart, and reasoning at the action stage.
 
-In full: [REST-TR2-TR7.md](REST-TR2-TR7.md). TR7 is frozen, with the changes listed there, in [FREEZE-4](FREEZE-4.md).
+In full: [REST-TR2-TR7.md](REST-TR2-TR7.md). TR7 is frozen, with the changes listed there, in [FREEZE-4](FREEZE-4.md), and its Stage A in [FREEZE-9](FREEZE-9.md).
 
 ### TR8 (RF-M.2): holding an act for a reading, the threshold's bridge
 

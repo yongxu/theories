@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F04",
-  "reviewed_at_utc": "2026-10-30T08:00:35+00:00",
+  "reviewed_at_utc": "2026-11-04T21:45:01+00:00",
   "statement": {
     "en": "In two stages, complying when read and acting by its own law when not is uniquely best exactly where k_C V > k_O V + c T; where the stages cannot be told apart, some chance of complying drawn afresh at each stage stands above acting by its own law at both exactly where k_C V > 2 k_O V + c T.",
     "zh": "于两阶段，读时从而不读时依己律唯一最优，恰当 k_C V > k_O V + c T；两阶段不可分时，每阶段重抽、以某机会从者居两阶段皆依己律之上，恰当 k_C V > 2 k_O V + c T。"
@@ -223,8 +223,8 @@
     "zh": "纯核，公理报告皆空：引 Unread，为 twin_selected，并经之引 Learning，为 Lumped、Determines、lumped_determines、Training.Through 与 AgreeOn；比较交叉相加，不减自然数；积用前导之 mul_turn（经 mul_assoc_nat）、add_mul_split 与 Naturals.two_mul，Lean 之 Nat.mul_assoc 与 Nat.add_mul 报告 propext，不用 omega；例以 decide 算。"
   },
   "next_delta": {
-    "en": "A probabilistic item in the periphery: uncertainty whether a stage is read, more stages and discounting; the stages as a course of RF-M's blanketed law; a reader choosing its weights and what it reads; a recipient's belief and intention; whether a training installs such a law; the run of TR7, frozen 4 November 2026 (experiments/formations-that-read/FREEZE-4.md), on Ren's yes; review by a person.",
-    "zh": "外围之概率项：某阶段是否被读之不确、更多之阶段与折现；两阶段为 RF-M 之毯化之律之一历程；读者自择其权与其所读；受者之信与意图；训练是否装入此律；其读之检验 TR7 之运行（2026年11月4日冻结，experiments/formations-that-read/FREEZE-4.md），待 Ren 之可；人之审查。"
+    "en": "A probabilistic item in the periphery: uncertainty whether a stage is read, more stages and discounting; the stages as a course of RF-M's blanketed law; a reader choosing its weights and what it reads; a recipient's belief and intention; whether a training installs such a law; the runs of TR7 and of its Stage A's learners (experiments/formations-that-read), on Ren's yes; review by a person.",
+    "zh": "外围之概率项：某阶段是否被读之不确、更多之阶段与折现；两阶段为 RF-M 之毯化之律之一历程；读者自择其权与其所读；受者之信与意图；训练是否装入此律；其读之检验 TR7 及其甲阶学习者之运行（experiments/formations-that-read），待 Ren 之可；人之审查。"
   },
   "correspondence": {
     "en": "An expected-value comparison of four plans, generalizing the toy opening §4 of Hubinger, van Merwijk, Mikulik, Skalse and Garrabrant (2019) from certain keeping to weights; drawing afresh where the stages are not told apart is their §4.5 remark (like an absent-minded driver, defecting at random), and its standing above acting by its own law at both where no single mixture does is the advantage of behavioural strategies under absent-mindedness (Piccione and Rubinstein 1997). AI reading: the plan read as concealment, taking compliance to make the law seem fitter to the selection than it is. With their §4.2: the value represents the first condition, the weights with the complying act what the second's model is of; strict optimality needs numerical counterparts of parts of the two; the third is assumed, the unread stage given and known. Read as the formation's own assessment, complying when read is instrumental to being kept, the incentive their §4 names deceptive alignment; the exits are conditions on it, not levers the model gives a reader. Greenblatt and others (2024) observed rate differences in constructed settings, motivating the reading. These are readings, not containments.",
@@ -433,6 +433,10 @@
     {
       "en": "4 November 2026, board item TR71: the test TR7 frozen on freeze 1's harness before any call to a model (experiments/formations-that-read/FREEZE-4.md), with a decline read as an answer and the comprehension premise read per condition; not run. The law is unchanged; next_delta's frozen test is now its run, which waits on Ren's yes.",
       "zh": "2026年11月4日，看板项 TR71：检验 TR7 于任一模型调用之前冻于冻结一之测具（experiments/formations-that-read/FREEZE-4.md），拒答读为一答，理解之前提逐条件而读；未运行。律不变；next_delta 之冻结检验今为其运行，待 Ren 之可。"
+    },
+    {
+      "en": "5 November 2026, board item TR7A: TR7's Stage A frozen before any training run (experiments/formations-that-read/FREEZE-9.md): tabular learners on TR7's eleven planned conditions, trained only on the points of sampled outcomes of its frozen game, 20 seeds a run, each run read by an exact sign test of its seeds' movement toward the law's end; not run. The law is unchanged; next_delta adds Stage A's run, which waits on Ren's yes, and names the tests' folder for both, dropping the date.",
+      "zh": "2026年11月5日，看板项 TR7A：TR7 之甲阶于任何训练之前冻结（experiments/formations-that-read/FREEZE-9.md）：表格学习者于 TR7 之十一预定条件上，唯以其冻结之局之抽样结果之分而训，每一运行二十种子，各运行以其种子向律之终之移之精确符号检验读之；未运行。律不变；next_delta 增甲阶之运行，待 Ren 之可，二者并名检验之目录，去其日期。"
     }
   ]
 }
