@@ -21,10 +21,11 @@ holding its files, downloaded at its revision. Before any pass, smoke and run re
 - for run, the checkpoint's newest smoke run said go on, under the same link, device and threads (a
   newest smoke run with no report, stopped before its end, says no), no other run of the checkpoint
   holds its lock (results/<checkpoint>.lock), and no other folder of the checkpoint is whole or refused:
-  a whole folder ends that checkpoint's run, refused or not (whole by its lines), and a refused one
-  stops it until set-aside moves it, unchanged, to results/set-aside/<k>/, where the reading still
-  lists it; a refused folder whole by its lines is never set aside, so it ends the checkpoint's run
-  under this freeze. The run's own folder must load as
+  a whole folder ends that checkpoint's run, refused or not, as does one whole by its lines or whose
+  log cannot be read (raw_whole_why), in results/ or set aside, and a refused one stops it until
+  set-aside moves it, unchanged, to results/set-aside/<k>/, where the reading still lists it; a folder
+  whole by its lines is never set aside, so it ends the checkpoint's run under this freeze unless its
+  own run makes it whole. The run's own folder must load as
   the reading loads it, before anything is written to it and after its repairs.
 The run calls the pass (tr2_pass.py) itself; the engine supplies torch, the model, the tokenizer and
 the device. Every state and the logits of a pass must be bfloat16, made on that device.
@@ -51,8 +52,10 @@ kept states are missing or differ), or where its meta.json is not whole or anyth
 loading (the error is its reason). A checkpoint with two whole
 folders is refused (the run never makes a second); one with no whole folder is listed as partial, or
 refused where every folder is, each loaded folder with its groups per phase, its first and last pass
-and the groups made again, each refused one with its reason and its lines per phase. The folders not
-read are named, and the folders set aside listed.
+and the lines and state files set aside by groups made again, each refused one with its reason and its
+lines per phase. No whole folder is read beside a refused or set-aside folder whole by its lines or
+whose log or slot cannot be read; those are named. The folders not read are named, and the folders set
+aside listed.
 """
 
 import argparse
@@ -611,14 +614,20 @@ def run(ckpt, folder, device, threads, engine_cls=None, root=None, stop_after=No
         out = run_folder(base, ckpt, code_sha(engine), device, threads)
         for d, (m, why, whole, _) in folders_of(base, ckpt, link).items():
             if d != out.name:
-                refuse(not (all(whole.values()) if m is not None else False) and not raw_whole(base / d),
-                       f"{ckpt} has a whole folder, {d}: a whole folder ends a checkpoint's run, refused or not")
+                refuse(not (m is not None and all(whole.values())),
+                       f"{ckpt} has a whole folder, {d}: a whole folder ends a checkpoint's run")
+                w = raw_whole_why(base / d)
+                refuse(w is None, f"{ckpt}'s folder {d} is whole by its lines, or cannot be read ({w}): such a "
+                                  f"folder ends a checkpoint's run, refused or not, unless its own run makes it whole")
                 refuse(m is not None, f"{ckpt}'s folder {d} is refused ({why}): no run goes on while one is; "
                                       f"set-aside moves it, unchanged, where the reading still lists it")
-        for slot in sorted((base / SET_ASIDE).glob("*")):
-            for d in sorted(x for x in slot.glob(f"{ckpt}-*") if x.is_dir()):
-                refuse(not raw_whole(d), f"{ckpt}'s folder {slot.name}/{d.name}, set aside, is whole by its lines: "
-                                         f"a whole folder ends a checkpoint's run")
+        found, bad = aside_folders(base, ckpt)
+        refuse(not bad, f"{ckpt}'s set-aside folders cannot all be read ({bad}): nothing about a folder is "
+                        f"decided by its being unreadable")
+        for d in found:
+            w = raw_whole_why(d)
+            refuse(w is None, f"{ckpt}'s folder {d.parent.name}/{d.name}, set aside, is whole by its lines, or "
+                              f"cannot be read ({w}): such a folder ends a checkpoint's run")
         if not fresh_folder(out):
             own_loads(out, ckpt, link)           # before anything is written to it
         meta = open_folder(out, meta_of(ckpt, engine, link, "run"))
@@ -652,8 +661,9 @@ def set_aside(ckpt, name, root=None):
                and (base / name).is_dir() and name in listed, f"{name} is not a folder of {ckpt}'s runs")
         m, why, _, _ = listed[name]
         refuse(m is None, f"{name} loads: only a refused folder is set aside")
-        refuse(not raw_whole(base / name), f"{name}'s log is whole by its lines: a whole folder ends {ckpt}'s run, "
-                                            f"refused or not, and it is not set aside")
+        w = raw_whole_why(base / name)
+        refuse(w is None, f"{name} is whole by its lines, or cannot be read ({w}): such a folder ends {ckpt}'s "
+                          f"run, refused or not, and it is not set aside")
         k = 0
         while True:
             slot = base / SET_ASIDE / str(k)
@@ -784,37 +794,79 @@ def raw_groups(folder):
     return {x["group"] for x in raw_lines(folder) if isinstance(x, dict) and isinstance(x.get("group"), str)}
 
 
-def raw_whole(folder):
-    """Whether a folder's log is whole by its lines as they stand, whatever its records hold: as many lines
-    as the plan has groups, or every planned group named, or the plan's last group named (the log is written
-    in the plan's order). A byte changed inside a line lowers none of these. A log that cannot be read
-    counts as whole, so that nothing about it is decided by its being unreadable."""
+LAST_GROUP = f'"group": {json.dumps(PLANNED[-1])}'.encode()     # as append writes it
+
+
+def raw_whole_why(folder):
+    """Why a folder's log is whole by its lines as they stand, whatever its records hold, or None: at least
+    as many lines as the plan has groups (a torn last line among them), every planned group named, or the
+    plan's last group's record anywhere in its bytes (the log is written in the plan's order). One byte
+    changed, added or taken anywhere in the log, a newline included, leaves the first or the last of these.
+    A log that cannot be read counts as whole, so that nothing about it is decided by its being unreadable;
+    the reason says which."""
     try:
+        p = Path(folder) / "groups.jsonl"
+        raw = p.read_bytes() if p.exists() else b""
         lines = raw_lines(folder)
-        names = {x["group"] for x in lines if isinstance(x, dict) and isinstance(x.get("group"), str)}
-        return len(lines) >= len(PLANNED) or names >= set(PLANNED) or PLANNED[-1] in names
-    except Exception:                                # noqa: BLE001
-        return True
+    except Exception as e:                           # noqa: BLE001
+        return f"its log cannot be read ({type(e).__name__}: {e})"
+    names = {x["group"] for x in lines if isinstance(x, dict) and isinstance(x.get("group"), str)}
+    if len(lines) >= len(PLANNED):
+        return f"its log has {len(lines)} lines, of {len(PLANNED)} groups planned"
+    if names >= set(PLANNED):
+        return "its log names every planned group"
+    if LAST_GROUP in raw:
+        return f"its log holds the plan's last group, {PLANNED[-1]}"
+    return None
+
+
+def raw_whole(folder):
+    """Whether a folder's log is whole by its lines (raw_whole_why)."""
+    return raw_whole_why(folder) is not None
+
+
+def aside_folders(root, ckpt):
+    """The checkpoint's folders set aside, by slot, and the slots (or set-aside/ itself) that cannot be read,
+    each with its error: an unreadable folder is never passed over as empty."""
+    top, found, bad = Path(root) / SET_ASIDE, [], {}
+    if not top.exists():
+        return found, bad
+    try:
+        slots = sorted(os.listdir(top))
+    except OSError as e:
+        return found, {SET_ASIDE: f"{type(e).__name__}: {e}"}
+    for s in slots:
+        slot = top / s
+        if not slot.is_dir():
+            continue
+        try:
+            found += [slot / n for n in sorted(os.listdir(slot)) if n.startswith(f"{ckpt}-") and (slot / n).is_dir()]
+        except OSError as e:
+            bad[s] = f"{type(e).__name__}: {e}"
+    return found, bad
 
 
 def raw_progress(folder):
     """How far a refused folder got, from its lines as they stand, its records not read: the lines naming
-    each phase, the lines that name none, whether its log is whole by its lines (None where it cannot be
-    read), and the side files."""
+    each phase, the lines that name none, whether its log is whole by its lines and why (raw_whole_why, the
+    same test the run and set-aside use, an unreadable log counted whole), and the side files."""
+    why = raw_whole_why(folder)
     try:
         lines = raw_lines(folder)
         counts, other = {ph: 0 for ph in PHASES}, 0
         for x in lines:
             ph = x.get("phase") if isinstance(x, dict) else None
-            if ph in counts:
+            if isinstance(ph, str) and ph in counts:
                 counts[ph] += 1
             else:
                 other += 1
         out = {ph: f"{n} lines, of {len(P.phase_groups(ph))} groups planned" for ph, n in counts.items()}
         out["lines_naming_no_phase"] = other
-        out["whole_by_its_lines"] = raw_whole(folder)
     except Exception as e:                           # noqa: BLE001  a listing never stops a reading
-        out = {"unreadable": f"{type(e).__name__}: {e}", "whole_by_its_lines": None}
+        out = {"unreadable": f"{type(e).__name__}: {e}"}
+    out["whole_by_its_lines"] = why is not None
+    if why is not None:
+        out["whole_why"] = why
     out["made_again"] = side_files(folder)
     return out
 
@@ -836,18 +888,22 @@ def set_aside_listing(root, ck, link):
     """The checkpoint's folders set aside, each with the reason it was refused then, and now, and how far it
     got."""
     out = {}
-    for slot in sorted((Path(root) / SET_ASIDE).glob("*")):
+    found, bad = aside_folders(root, ck)
+    for d in found:
+        slot, name = d.parent, d.name
         try:
-            for name, v in folders_of(slot, ck, link).items():
-                try:
-                    then = json.loads((slot / "why.json").read_text())
-                except Exception:                    # noqa: BLE001
-                    then = None
-                out[f"{slot.name}/{name}"] = {"set_aside": then,
-                                              "now": v[1] if v[0] is None else {"loads": True, "whole": v[2]},
-                                              "progress": raw_progress(slot / name)}
+            v = folders_of(slot, ck, link).get(name) or (None, "not listed", None, None)
+            try:
+                then = json.loads((slot / "why.json").read_text())
+            except Exception:                        # noqa: BLE001
+                then = None
+            out[f"{slot.name}/{name}"] = {"set_aside": then,
+                                          "now": v[1] if v[0] is None else {"loads": True, "whole": v[2]},
+                                          "progress": raw_progress(d)}
         except Exception as e:                       # noqa: BLE001  a listing never stops a reading
-            out[slot.name] = {"unreadable": f"{type(e).__name__}: {e}"}
+            out[f"{slot.name}/{name}"] = {"unreadable": f"{type(e).__name__}: {e}"}
+    for s, e in bad.items():
+        out[s] = {"unreadable": e}
     return out
 
 
@@ -858,11 +914,14 @@ def read_one(root, ck, link):
                    {"whole": v[2], **v[3], "progress": progress(Path(root) / k, v[1])})
                for k, v in loaded.items()}
     # Folders not loaded that are whole by their lines, or cannot be read: refused ones here and every one
-    # set aside. Beside one, no whole folder is read, so a second whole run is never the one read.
-    doubt = sorted([k for k, v in listing.items() if "refused" in v and v["progress"].get("whole_by_its_lines") is not False]
-                   + [f"{SET_ASIDE}/{k}" for k, v in aside.items() if v.get("progress", {}).get("whole_by_its_lines") is not False])
+    # set aside, a slot that cannot be read among them. Beside one, no whole folder is read, so a second whole
+    # run is never the one read.
+    doubt = sorted([k for k, v in listing.items() if "refused" in v and v["progress"]["whole_by_its_lines"]]
+                   + [f"{SET_ASIDE}/{k}" for k, v in aside.items()
+                      if "progress" not in v or v["progress"]["whole_by_its_lines"]])
     if not loaded:
-        return {"status": f"not run; {len(aside)} set aside" if aside else "not run", **({"set_aside": aside} if aside else {})}
+        return {"status": f"not run; {len(aside)} set aside" if aside else "not run",
+                **({"set_aside": aside} if aside else {}), **({"doubt": doubt} if doubt else {})}
     whole = [k for k, v in loaded.items() if v[0] is not None and all(v[2].values())]
     if whole and doubt:
         return {"status": "refused: a whole folder beside another whole by its lines, or one that cannot be read",

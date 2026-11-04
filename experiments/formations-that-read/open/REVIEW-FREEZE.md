@@ -275,3 +275,33 @@ They found 24 points, eight of them "none found". There is no high finding. The 
 The eight "none found": the lock (taken first, held across every phase, let go on any exit, only a held lock read as held); the last group read as absent only after its own checks, a whole folder unable to read as partial, the own folder checked before any write, no state file overwritten, a blank line refused; round 5's counts (twice); the count of 53 refusals then; the reading time; a set-aside folder never read, the names and slots, `why.json` written first, each new dry-run case against its key but the no-meta one (C8); and round 5's other claims, the record's entry and the probe's wording among them.
 
 After the fixes, the power check and the dry run were run again on the changed code. Every check holds, the power check's figures are unchanged, and the dry run now meets 56 refusals.
+
+## Round 7: two readers on round 6's diff, a verifier for each
+
+The same two lenses, on round 6's diff: a code reader, with small scratch checks, and a reader of the text against the code and of round 6's record against its readers' reports. Each sent its medium findings to a verifier of its own: four agents. None ran the dry run or the power check, and none downloaded or ran a model.
+
+They found 23 points, nine of them "none found". There is no high finding. The verifiers held three medium, which are two defects. The rest are low. Every finding was taken, as follows.
+
+**Medium**
+
+| # | Finding | How it was taken |
+|---|---|---|
+| C1, R1 | One byte could still make a whole folder look partial: the newline before the plan's last record, changed, merges the last two records into one line that does not parse, so the log has one line too few, names neither group, and round 6's three tests all fail. The folder could then be set aside and a second whole run made and read. Round 6's own verifier had pointed to a merged line; the fix did not cover a merge taking in the last record. | A folder is also whole by its lines where the record of the plan's last group is anywhere in its bytes, as the run writes it, not only in a line that parses. One byte changed, added or taken anywhere in the log, a newline included, leaves either the count of lines or those bytes, so it cannot make a whole folder look partial. Dry-run cases: the newline before the last record changed, and the last record's group changed (where only the count of lines holds), each not set aside, each for its own reason. |
+| C2 | The listing judged "whole by its lines" inside a block that any error ended, so a line giving its phase as a list made a refused partial folder read "unreadable" there, though `set-aside` and the run, testing directly, read it as not whole. Such a folder could be set aside and a whole run made beside it that the reading would then refuse for good: a whole run's machine time spent for nothing. | The listing, the run and `set-aside` use one test (`raw_whole_why`), outside any block an error ends; a phase is counted only where it is a name. A dry-run case: such a folder is listed as not whole by its lines, with no error, and set aside. |
+
+**Low**
+
+| # | Finding | How it was taken |
+|---|---|---|
+| C3, R2 | A folder stopped while writing its last line counts that torn line among its lines, so it is whole by its lines, and a run under another engine, device or threads is refused beside it, though the folder loads as partial. | Kept, and said (section 7 and the module docstring): such a folder is made whole only by its own run, under the same engine, device and threads, and without that run ends its checkpoint's run under this freeze. Leaving the torn line out of the count would let one taken newline make a whole folder look partial. |
+| C4 | A set-aside slot, or `set-aside/` itself, that could not be read was passed over as empty: the run went on, and the reading did not name it. | The slots are listed so that an error is not passed over: a run is refused while any cannot be read, and the reading names each such slot among the folders in doubt. A dry-run case. |
+| C5, R4 | No case ran beside a whole folder in `set-aside/`, read a whole folder beside a refused one in `results/` whole by its lines, or isolated the count of lines. | Each added (with C1's and C4's cases): a run beside a whole folder moved into `set-aside/` by hand is refused, and the reading, with no folder left in `results/`, is "not run", naming it; a reading of a whole folder beside a refused one whole by its lines is refused, naming it; the last record's group changed leaves only the count of lines. |
+| C6, R6 | Section 7 said "as many lines", the code "at least as many"; the messages called an unreadable log whole without saying why; a dry-run key still said the status names the refused; a "not run" status gave no folders in doubt. | "At least as many"; each refusal gives the reason the test found (the count, the names, the last group, or the error); the key says "counting"; the "not run" status names the folders in doubt. |
+| R3 | The module docstring still said the readout lists the groups made again, and did not state the reading's refusal beside a folder in doubt. | Both said. |
+| R5 | Section 7's "A run may then go on beside it" followed the reading's sentence, its "it" unclear; section 11's "the reading goes on" held only with no whole folder beside. | The sentence follows the set-aside's; section 11 says "with no whole folder beside it, the reading goes on as partial". |
+| R7 | Section 11 said the dry run keeps the group's state files beside the log, but `states_resume` checked only the differing one. | It also checks that every state file of the group is kept. |
+| R8 | The reading of a whole folder beside one moved into `set-aside/` by hand was listed among the refusals of a run. | Listed among those of a folder at the reading. |
+
+The nine "none found": the ignore rules against every path a run or `set-aside` writes (twice); no normal path read as whole by its lines but C3's; `set-aside`'s name check and slot loop; the reading's listing, the own-refused case and the no-meta case; section 11's count of 56 and its groups; round 6's counts; the reading time; and round 6's other fixes.
+
+After the fixes, the power check and the dry run were run again on the changed code. Every check holds, the power check's figures are unchanged, and the dry run now meets 61 refusals.

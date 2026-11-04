@@ -539,7 +539,54 @@ def locked_and_set_aside(tmp, copy, edit):
     out["a whole folder with one line damaged, still not set aside"] = refused(
         lambda: TR.set_aside(CKPT, wbad.name, root=w), "is whole by its lines")
     out["a run beside a refused folder whole by its lines, refused"] = refused(
-        lambda: TR.run(CKPT, w / "files", "cpu", 8, engine_cls=make_engine("detected"), root=w), "a whole folder ends")
+        lambda: TR.run(CKPT, w / "files", "cpu", 8, engine_cls=make_engine("detected"), root=w), "is whole by its lines")
+    for name, cut, why in (("merged", lambda raw: raw[:raw[:-1].rfind(b"\n")] + b" " + raw[raw[:-1].rfind(b"\n") + 1:],
+                            "the plan's last group"),        # the newline before the last record changed
+                           ("last-id", lambda raw: raw[:raw.rfind(TR.LAST_GROUP) + len(TR.LAST_GROUP) - 2] + b"#"
+                            + raw[raw.rfind(TR.LAST_GROUP) + len(TR.LAST_GROUP) - 1:], "lines, of")):  # the last id
+        wn = copy(f"whole-{name}")
+        wb = renamed_refused(wn)
+        (wb / "groups.jsonl").write_bytes(cut((wb / "groups.jsonl").read_bytes()))
+        out[f"a whole folder, one byte of its log changed ({name}), not set aside"] = \
+            (TR.LAST_GROUP in (wb / "groups.jsonl").read_bytes()) == (name == "merged") and why in (TR.raw_whole_why(wb) or "") \
+            and refused(lambda: TR.set_aside(CKPT, wb.name, root=wn), "is whole by its lines")
+    d = copy("doubt-in-results")
+    own = run_dir(d)
+    beside = as_old_engine(own)
+    rd = TR.read(root=d)["checkpoints"][CKPT]
+    out["a reading of a whole folder beside a refused one whole by its lines, refused"] = \
+        rd["status"].startswith("refused: a whole folder beside another whole by its lines") \
+        and rd["doubt"] == [beside.name] and set(rd["folders"]) == {beside.name, own.name}
+    d = copy("hand-moved-alone")
+    (d / TR.SET_ASIDE / "0").mkdir(parents=True)
+    name = run_dir(d).name
+    os.replace(run_dir(d), d / TR.SET_ASIDE / "0" / name)
+    rd = TR.read(root=d)["checkpoints"][CKPT]
+    TR.smoke(CKPT, d / "files", "cpu", 4, engine_cls=make_engine("detected"), root=d / "smoke")
+    drive_t4 = lambda: TR.run(CKPT, d / "files", "cpu", 4, engine_cls=make_engine("detected"), root=d, stop_after=1)  # noqa: E731
+    out["a run beside a whole folder in set-aside/, refused; the reading not run, naming it"] = \
+        refused(drive_t4, "set aside, is whole by its lines") and rd["status"] == "not run; 1 set aside" \
+        and rd["doubt"] == [f"{TR.SET_ASIDE}/0/{name}"]
+    (d / TR.SET_ASIDE / "0").chmod(0)
+    try:
+        rd = TR.read(root=d)["checkpoints"][CKPT]
+        out["a set-aside slot that cannot be read: a run refused, the reading naming it"] = \
+            refused(drive_t4, "cannot all be read") and rd["doubt"] == [f"{TR.SET_ASIDE}/0"] \
+            and "unreadable" in rd["set_aside"]["0"]
+    finally:
+        (d / TR.SET_ASIDE / "0").chmod(0o755)
+    d = copy("phase-not-a-name")
+    pb = renamed_refused(d, keep=300)
+    rows = (pb / "groups.jsonl").read_bytes().split(b"\n")
+    r5 = json.loads(rows[5])
+    r5["phase"] = [r5["phase"]]
+    rows[5] = json.dumps(r5, sort_keys=True).encode()
+    (pb / "groups.jsonl").write_bytes(b"\n".join(rows))
+    pr = TR.raw_progress(pb)
+    out["a refused folder whose line names its phase as a list: listed as not whole, set aside"] = \
+        pr["whole_by_its_lines"] is False and pr["lines_naming_no_phase"] == 1 and "unreadable" not in pr \
+        and TR.set_aside(CKPT, pb.name, root=d)["set_aside"] == f"{TR.SET_ASIDE}/0/{pb.name}" \
+        and TR.read(root=d)["checkpoints"][CKPT]["status"] == "not run; 1 set aside"
     d = copy("set-aside")
     TR.smoke(CKPT, d / "files", "cpu", 4, engine_cls=make_engine("detected"), root=d / "smoke")
     bad = renamed_refused(d, keep=900)
@@ -591,7 +638,7 @@ def locked_and_set_aside(tmp, copy, edit):
     drive_t4()
     shutil.copytree(run_dir(d), d / (run_dir(d).name[:-3] + "-t9"))   # a folder of a name no run makes: refused
     rd = TR.read(root=d)["checkpoints"][CKPT]
-    out["a folder with no meta.json: listed as refused, set aside; a status naming the refused"] = blocked \
+    out["a folder with no meta.json: listed as refused, set aside; a status counting the refused"] = blocked \
         and listed_no_meta and rd["status"] == "partial; 1 folder(s) refused"
     d = copy("own-no-meta")
     (run_dir(d) / "meta.json").rename(run_dir(d) / "meta.json.gone")
@@ -945,7 +992,7 @@ def torn_resume(tmp, whole):
 def states_resume(tmp, whole):
     """A run stopped after a group keeping states (the 406th), one of its state files differing from its
     hash, as a machine stop before the file reached the disk leaves it: the run goes on, the group's line
-    and the differing file kept beside the log, the group made again, once, the records a run made whole."""
+    and its state files kept beside the log, the differing one among them, the group made again, once, the records a run made whole."""
     root = Path(tmp) / "states-resume"
     drive(root, "detected", stop_after=406)
     folder = run_dir(root)
@@ -961,6 +1008,7 @@ def states_resume(tmp, whole):
     out = {"the 406th group keeps states": last["keep_state"] is True,
            "its line kept beside the log": len(side) == 1 and json.loads(side[0].read_bytes()) == last,
            "the differing file kept beside it": (sp.parent / f"{sp.name}.torn-0").read_bytes() == bad,
+           "and the group's other state files": len(list(sp.parent.glob("*.torn-*"))) == len(last["passes"]),
            "the group made again, once": [g["group"] for g in rows].count(last["group"]) == 1,
            "the records equal a run made whole": strip_times(rows) == strip_times(whole),
            "the folder loads": TR.load(folder, CKPT, DRY_LINK)[2] == {"pilot": True, "main": True, "recognition": True}}
