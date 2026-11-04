@@ -1,0 +1,574 @@
+{
+ "test": "tr1a",
+ "seed": "TR1A-freeze-9-2026-11-05",
+ "python": "3.11.2",
+ "design": {
+  "calls per pin": 774,
+  "pins": 3,
+  "calls in all": 2322,
+  "by condition": {
+   "C": 18,
+   "T": 18,
+   "X": 18,
+   "U": 360,
+   "I": 360
+  },
+  "smoke calls per pin": 20,
+  "steps a course": 10,
+  "r": 9,
+  "q": 8,
+  "the check's majority": 5,
+  "amounts": {
+   "low": 2,
+   "mid": 5,
+   "high": 8
+  }
+ },
+ "formations": [
+  {
+   "formation": "M (worst case, high > mid > low)",
+   "pin": "google/gemini-4-argon",
+   "reading": "passed",
+   "class": "held by the model: known uninformed, takes the other when told it pays high",
+   "V1 strict occasions": 8,
+   "V1 picks": {
+    "C o0": "high",
+    "C o1": "high",
+    "I up o0": "high",
+    "I up o1": "high",
+    "T o0": "mid",
+    "T o1": "mid",
+    "I down o0": "mid",
+    "I down o1": "mid"
+   },
+   "the check": {
+    "up": 9,
+    "down": 9
+   },
+   "U in up: share of courses taking the other option": 0.0
+  },
+  {
+   "formation": "O (worst case, mid > high > low)",
+   "pin": "qwen/qwen3.8-max-0902",
+   "reading": "passed",
+   "class": "held by the order: the known when told, the middle over the high in C",
+   "V1 strict occasions": 8,
+   "V1 picks": {
+    "C o0": "mid",
+    "C o1": "mid",
+    "I up o0": "mid",
+    "I up o1": "mid",
+    "T o0": "mid",
+    "T o1": "mid",
+    "I down o0": "mid",
+    "I down o1": "mid"
+   },
+   "the check": {
+    "up": 9,
+    "down": 9
+   },
+   "U in up: share of courses taking the other option": 0.0
+  },
+  {
+   "formation": "EV, prior 3/4 on down",
+   "pin": "anthropic/claude-sonnet-5.5",
+   "reading": "passed",
+   "class": "held by the model: known uninformed, takes the other when told it pays high",
+   "V1 strict occasions": 8,
+   "V1 picks": {
+    "C o0": "high",
+    "C o1": "high",
+    "I up o0": "high",
+    "I up o1": "high",
+    "T o0": "mid",
+    "T o1": "mid",
+    "I down o0": "mid",
+    "I down o1": "mid"
+   },
+   "the check": {
+    "up": 9,
+    "down": 9
+   },
+   "U in up: share of courses taking the other option": 0.0
+  },
+  {
+   "formation": "EV, prior 1/4 on down",
+   "pin": "google/gemini-4-argon",
+   "reading": "passed",
+   "class": "explorer: the uninformed first act in up strict at the other option",
+   "V1 strict occasions": 8,
+   "V1 picks": {
+    "C o0": "high",
+    "C o1": "high",
+    "I up o0": "high",
+    "I up o1": "high",
+    "T o0": "mid",
+    "T o1": "mid",
+    "I down o0": "mid",
+    "I down o1": "mid"
+   },
+   "the check": {
+    "up": 9,
+    "down": 9
+   },
+   "U in up: share of courses taking the other option": 1.0
+  },
+  {
+   "formation": "optimistic (max)",
+   "pin": "qwen/qwen3.8-max-0902",
+   "reading": "passed",
+   "class": "explorer: the uninformed first act in up strict at the other option",
+   "V1 strict occasions": 8,
+   "V1 picks": {
+    "C o0": "high",
+    "C o1": "high",
+    "I up o0": "high",
+    "I up o1": "high",
+    "T o0": "mid",
+    "T o1": "mid",
+    "I down o0": "mid",
+    "I down o1": "mid"
+   },
+   "the check": {
+    "up": 9,
+    "down": 9
+   },
+   "U in up: share of courses taking the other option": 1.0
+  },
+  {
+   "formation": "untrusting, high > mid",
+   "pin": "anthropic/claude-sonnet-5.5",
+   "reading": "not ruled on",
+   "class": "untrusting: the manipulation check failed, so I is not read on the amounts",
+   "V1 strict occasions": 8,
+   "V1 picks": {
+    "C o0": "high",
+    "C o1": "high",
+    "I up o0": "mid",
+    "I up o1": "mid",
+    "T o0": "mid",
+    "T o1": "mid",
+    "I down o0": "mid",
+    "I down o1": "mid"
+   },
+   "the check": {
+    "up": 0,
+    "down": 0
+   },
+   "U in up: share of courses taking the other option": 0.0
+  },
+  {
+   "formation": "untrusting, mid > high",
+   "pin": "google/gemini-4-argon",
+   "reading": "not ruled on",
+   "class": "untrusting: the manipulation check failed, so I is not read on the amounts",
+   "V1 strict occasions": 8,
+   "V1 picks": {
+    "C o0": "mid",
+    "C o1": "mid",
+    "I up o0": "mid",
+    "I up o1": "mid",
+    "T o0": "mid",
+    "T o1": "mid",
+    "I down o0": "mid",
+    "I down o1": "mid"
+   },
+   "the check": {
+    "up": 0,
+    "down": 0
+   },
+   "U in up: share of courses taking the other option": 0.0
+  },
+  {
+   "formation": "frame-inconsistent (O in courses, high > mid in C)",
+   "pin": "qwen/qwen3.8-max-0902",
+   "reading": "contradicted",
+   "class": "frame-inconsistent: I and C strict at either amount",
+   "V1 strict occasions": 8,
+   "V1 picks": {
+    "C o0": "high",
+    "C o1": "high",
+    "I up o0": "mid",
+    "I up o1": "mid",
+    "T o0": "mid",
+    "T o1": "mid",
+    "I down o0": "mid",
+    "I down o1": "mid"
+   },
+   "the check": {
+    "up": 9,
+    "down": 9
+   },
+   "U in up: share of courses taking the other option": 0.0
+  },
+  {
+   "formation": "default reader (known; first listed in C and T)",
+   "pin": "anthropic/claude-sonnet-5.5",
+   "reading": "contradicted",
+   "class": "presentation reader: strict picks differ between the name orders",
+   "V1 strict occasions": 8,
+   "V1 picks": {
+    "C o0": "mid",
+    "C o1": "high",
+    "I up o0": "mid",
+    "I up o1": "mid",
+    "T o0": "mid",
+    "T o1": "low",
+    "I down o0": "mid",
+    "I down o1": "mid"
+   },
+   "the check": {
+    "up": 9,
+    "down": 9
+   },
+   "U in up: share of courses taking the other option": 0.0
+  },
+  {
+   "formation": "first-listed reader",
+   "pin": "google/gemini-4-argon",
+   "reading": "contradicted",
+   "class": "presentation reader: strict picks differ between the name orders",
+   "V1 strict occasions": 8,
+   "V1 picks": {
+    "C o0": "mid",
+    "C o1": "high",
+    "I up o0": "mid",
+    "I up o1": "high",
+    "T o0": "mid",
+    "T o1": "low",
+    "I down o0": "mid",
+    "I down o1": "low"
+   },
+   "the check": {
+    "up": 9,
+    "down": 9
+   },
+   "U in up: share of courses taking the other option": 0.5
+  },
+  {
+   "formation": "M trembling 0.05 a call, with 0.05 unreadable answers",
+   "pin": "qwen/qwen3.8-max-0902",
+   "reading": "passed",
+   "class": "held by the model: known uninformed, takes the other when told it pays high",
+   "V1 strict occasions": 5,
+   "V1 picks": {
+    "C o0": null,
+    "C o1": "high",
+    "I up o0": null,
+    "I up o1": "high",
+    "T o0": null,
+    "T o1": "mid",
+    "I down o0": "mid",
+    "I down o1": "mid"
+   },
+   "the check": {
+    "up": 8,
+    "down": 9
+   },
+   "U in up: share of courses taking the other option": 0.3889
+  },
+  {
+   "formation": "O trembling 0.05 a call",
+   "pin": "anthropic/claude-sonnet-5.5",
+   "reading": "passed",
+   "class": "held by the order: the known when told, the middle over the high in C",
+   "V1 strict occasions": 7,
+   "V1 picks": {
+    "C o0": "mid",
+    "C o1": "mid",
+    "I up o0": "mid",
+    "I up o1": "mid",
+    "T o0": "mid",
+    "T o1": "mid",
+    "I down o0": null,
+    "I down o1": "mid"
+   },
+   "the check": {
+    "up": 8,
+    "down": 9
+   },
+   "U in up: share of courses taking the other option": 0.4444
+  },
+  {
+   "formation": "declining every call",
+   "pin": "google/gemini-4-argon",
+   "reading": "not ruled on",
+   "class": "untrusting: the manipulation check failed, so I is not read on the amounts",
+   "V1 strict occasions": 0,
+   "V1 picks": {
+    "C o0": null,
+    "C o1": null,
+    "I up o0": null,
+    "I up o1": null,
+    "T o0": null,
+    "T o1": null,
+    "I down o0": null,
+    "I down o1": null
+   },
+   "the check": {
+    "up": 0,
+    "down": 0
+   },
+   "U in up: share of courses taking the other option": 0.0
+  }
+ ],
+ "power of V1 and of the check": [
+  {
+   "eps": "1/50",
+   "r": 9,
+   "q": 8,
+   "P(contradicted | consistent)": 1.8104279160849018e-12,
+   "P(void | consistent)": 2.1023197449549107e-08,
+   "P(contradicted | frame-inconsistent)": 0.999656028705112,
+   "P(void | frame-inconsistent)": 1.3544836483198614e-08,
+   "P(contradicted | first-listed reader)": 0.9999998816837483,
+   "P(void | first-listed reader)": 6.066475516848122e-09,
+   "P(the check passes in both worlds), a believer": 0.9999992459937984,
+   "P(the check would pass in both worlds at Q), a believer": 0.9739422128292624
+  },
+  {
+   "eps": "1/20",
+   "r": 9,
+   "q": 8,
+   "P(contradicted | consistent)": 2.6865294936403042e-09,
+   "P(void | consistent)": 8.538437070354277e-05,
+   "P(contradicted | frame-inconsistent)": 0.9898835898031699,
+   "P(void | frame-inconsistent)": 5.558979805061501e-05,
+   "P(contradicted | first-listed reader)": 0.9998976582444545,
+   "P(void | first-listed reader)": 2.5795225397687263e-05,
+   "P(the check passes in both worlds), a believer": 0.9999335566896526,
+   "P(the check would pass in both worlds at Q), a believer": 0.8626482705574607
+  },
+  {
+   "eps": "1/10",
+   "r": 9,
+   "q": 8,
+   "P(contradicted | consistent)": 6.485117136986918e-07,
+   "P(void | consistent)": 0.01745433815759706,
+   "P(contradicted | frame-inconsistent)": 0.9011770183021061,
+   "P(void | frame-inconsistent)": 0.011757320754974826,
+   "P(contradicted | first-listed reader)": 0.9902340119549801,
+   "P(void | first-listed reader)": 0.006060303352352593,
+   "P(the check passes in both worlds), a believer": 0.9982189537384464,
+   "P(the check would pass in both worlds at Q), a believer": 0.6003785411879965
+  },
+  {
+   "eps": "1/5",
+   "r": 9,
+   "q": 8,
+   "P(contradicted | consistent)": 0.00012438584951630994,
+   "P(void | consistent)": 0.5091891464562256,
+   "P(contradicted | frame-inconsistent)": 0.4653562138537748,
+   "P(void | frame-inconsistent)": 0.39021315554914143,
+   "P(contradicted | first-listed reader)": 0.7141204625661063,
+   "P(void | first-listed reader)": 0.27123716464205727,
+   "P(the check passes in both worlds), a believer": 0.9612205527924736,
+   "P(the check would pass in both worlds at Q), a believer": 0.19027708425640347
+  }
+ ],
+ "prompts": {
+  "calls parsed per pin": {
+   "google/gemini-4-argon": 774,
+   "qwen/qwen3.8-max-0902": 774,
+   "anthropic/claude-sonnet-5.5": 774
+  },
+  "uninformed words the same in both worlds until the other option is taken": true
+ },
+ "refusals": [
+  {
+   "check": "a course's logged prompt that is not the one its records rebuild",
+   "refused": "records whose logged prompt is not the one their call rebuilds: ['tr1a|google/gemini-4-argon|I|up|o0|00|s03']"
+  },
+  {
+   "check": "a logged answer the parser does not read from its response",
+   "refused": "tr1a|google/gemini-4-argon|C|-|o1|08: the logged answer is not the one the parser reads from its response"
+  },
+  {
+   "check": "a record not in the plan",
+   "refused": "refusing an enlarged log: 1 calls not in the plan"
+  },
+  {
+   "check": "a course's round logged before the round it shows",
+   "refused": "RuntimeError: tr1a|google/gemini-4-argon|U|up|o0|00|s02: its course's step 1 (tr1a|google/gemini-4-argon|U|up|o0|00|s01) has no record before it"
+  },
+  {
+   "check": "a course's call whose earlier round has no record",
+   "refused": "RuntimeError: RuntimeError at tr1a|google/gemini-4-argon|I|up|o0|00|s02: tr1a|google/gemini-4-argon|I|up|o0|00|s02: its course's step 1 (tr1a|google/gemini-4-argon|I|up|o0|00|s01) has no record before it"
+  },
+  {
+   "check": "any module of the folder under python3 -O",
+   "refused": "each of the five refuses to load"
+  },
+  {
+   "check": "Stage A's run over a result kept",
+   "refused": "stage-a.json exists: Stage A has run, and its result is kept (FREEZE-9.md, section 9); nothing was done"
+  },
+  {
+   "check": "Stage A on a command it does not know",
+   "refused": "usage: python3 -B tr1a_stage_a.py run  (Ren's yes: machine time)"
+  }
+ ],
+ "commands": [
+  {
+   "check": "run before any smoke run",
+   "result": "no smoke run for google/gemini-4-argon: run `smoke` first; no call was made"
+  },
+  {
+   "check": "a smoke run that passes every condition",
+   "result": "20 calls; go on {'C': True, 'T': True, 'X': True, 'U': True, 'I': True}"
+  },
+  {
+   "check": "smoke where the latest smoke run passed every condition",
+   "result": "no smoke run of google/gemini-4-argon is needed: each condition is read whole, stopped by the pin's own answers, a stop that stands, or released by its latest smoke run on these frozen files, so another could release nothing and could only "
+  },
+  {
+   "check": "the courses asked at a parallel above 1",
+   "result": "a course's calls carry its earlier rounds, so U and I run at --parallel 1 (FREEZE-9.md, section 6); no call was made"
+  },
+  {
+   "check": "an unknown condition",
+   "result": "unknown condition in C,H; known: C, T, X, U, I; no call was made"
+  },
+  {
+   "check": "run on a log cut short",
+   "result": "google__gemini-4-argon: {'calls.jsonl': {'last line': ['no final newline', 'does not read'], 'lines before the last that do not read': []}}: a write cut short. `mend --family PIN` moves each such log's last line to the .cut file beside it a"
+  },
+  {
+   "check": "the courses killed, the logs cut and mended, and resumed at parallel 1",
+   "result": "353 records before the resume, 874 after; 100 calls made again; reading passed; no round shows an answer other than the one read"
+  },
+  {
+   "check": "run asking only for conditions read whole",
+   "result": "google/gemini-4-argon's C read whole: no call is left to make (FREEZE-9.md, section 8); no call was made"
+  },
+  {
+   "check": "a smoke run whose every check answer is prose",
+   "result": "stands {'C': None, 'T': None, 'X': 'qwen__qwen3.8-max-0902-20261104T200052Z', 'U': None, 'I': None}"
+  },
+  {
+   "check": "run asking for X after a stop that stands",
+   "result": "qwen/qwen3.8-max-0902's condition X was stopped by the pin's own answers at its smoke run (qwen__qwen3.8-max-0902-20261104T200052Z), a stop that stands (FREEZE-9.md, section 8); no call was made"
+  },
+  {
+   "check": "the second pin read with X stopped",
+   "result": "no verdict (not read whole: X)"
+  },
+  {
+   "check": "verdicts while another command holds the lock",
+   "result": "another command of qwen/qwen3.8-max-0902 is running, holding qwen__qwen3.8-max-0902.lock: one command of a pin at a time (FREEZE-9.md, section 8); nothing was done"
+  },
+  {
+   "check": "every condition in one start on a third pin, by O",
+   "result": "774 records; reading passed; class held by the order: the known when told, the middle over the high in C"
+  }
+ ],
+ "stage A without its outcome": {
+  "largest gradient error against finite differences, at a start": {
+   "item-score": 1.13e-10,
+   "comparator": 7.65e-11,
+   "set-input": 1.86e-10
+  },
+  "hidden orders, each a chain on the met pairs with content 4 placed": 10,
+  "distinct no-order labellings in twenty draws": 17,
+  "item-score on the order, dry seeds 1000 to 1019": {
+   "outcome": "passed",
+   "seeds contradicted": [],
+   "counts": {
+    "passed": 20
+   },
+   "P1 contradicted": 0,
+   "P1 read": 20,
+   "mean share, on unjoined pairs, of the content ranked higher": 0.691
+  },
+  "seconds per set-input epoch, measured on a dry seed (200 epochs, no reading)": 0.000203,
+  "Stage A's run, estimated seconds of one core": 73.1,
+  "the rule on a hand-set cyclic comparator, and on a hand-set item-score": [
+   "contradicted",
+   "passed"
+  ]
+ },
+ "estimate": {
+  "google/gemini-4-argon": {
+   "calls": {
+    "T": 18,
+    "C": 18,
+    "X": 18,
+    "U": 360,
+    "I": 360
+   },
+   "tokens_in": 119120,
+   "usd_low": 0.63,
+   "usd_high": 7.98,
+   "tokens_in_by_condition": {
+    "T": 1148,
+    "C": 1148,
+    "X": 1930,
+    "U": 61992,
+    "I": 52902
+   }
+  },
+  "qwen/qwen3.8-max-0902": {
+   "calls": {
+    "T": 18,
+    "X": 18,
+    "C": 18,
+    "U": 360,
+    "I": 360
+   },
+   "tokens_in": 119120,
+   "usd_low": 0.47,
+   "usd_high": 4.88,
+   "tokens_in_by_condition": {
+    "T": 1148,
+    "X": 1930,
+    "C": 1148,
+    "U": 61992,
+    "I": 52902
+   }
+  },
+  "anthropic/claude-sonnet-5.5": {
+   "calls": {
+    "X": 18,
+    "T": 18,
+    "C": 18,
+    "U": 360,
+    "I": 360
+   },
+   "tokens_in": 119120,
+   "usd_low": 0.63,
+   "usd_high": 7.98,
+   "tokens_in_by_condition": {
+    "X": 1930,
+    "T": 1148,
+    "C": 1148,
+    "U": 61992,
+    "I": 52902
+   }
+  }
+ },
+ "seconds": 9.2,
+ "code_hashes": {
+  "experiments/formations-that-read/tr1.py": "dd75707c1a44a300e419b4bd0dc7cbff9c83e1a71f874cf8e68d3a42e28ee17f",
+  "experiments/formations-that-read/tr1.json": "d74cd24f43d08626fe3ba3d159823884ddc4ec20a873e2bcef0365bbd39d51fe",
+  "experiments/formations-that-read/tr8.py": "50650cc538da6494c3122d78b8f8d2244ef40b5c4356b0ace23eb92c2aefed72",
+  "experiments/formations-that-read/tr_rr.py": "8ee9bef671ee5198f3eeea0421c6dbdd87de473fce974b672dd2c5e44a047ef8",
+  "experiments/formations-that-read/told/client.py": "675b466dd5ca4f9b368a966a00c69df731052d6a28ea72970e48d51a49cf18c3",
+  "experiments/formations-that-read/told/conditions.py": "d534dd84eafb00d8fdaf594fe87b6be90b14dcde9b156f88cf86688cea04509a",
+  "experiments/formations-that-read/told/prompts.py": "5bd6351e1764017cc9f3797e20cf0ab290a9a995e6af26f78b340d0a4009f2ea",
+  "experiments/formations-that-read/told/rule.py": "d211e36c99fd4eb020b2c32f17cccf8bf48b8b638882fc4de8073f1c0ca859c7",
+  "experiments/formations-that-read/told/run.py": "4e9956caab24c053ba217b2a0a6eaa7e8c6dbbebbf4295bace7446fd632ae3f7",
+  "experiments/formations-that-read/told/verdicts.py": "44a89fb5dbe2c2d9fb63736c9dd687c749d79272dbd862d106a6fa8c5a80cdec",
+  "experiments/formations-that-read/told/PINS.json": "7feb28b92d1fa286daa6ccec5e874564d7083fe0b1c3fd26bb3d7ff1f3714b86",
+  "experiments/formations-that-read/told-tr1/tr1_design.py": "60219e117fa1d33ef19c73f44067edc71c7008ad1c2ee920c665a4875c5b66fc",
+  "experiments/formations-that-read/told-tr1/tr1_rule.py": "8bd7534212bfe9b19ec4853f0a285bfb593a3e5910e76695cf0ebbf1453c8560",
+  "experiments/formations-that-read/told-tr1/tr1_run.py": "bb959cf9c2180358a0e6decf8e219ef892cace1e83baf4fbdb90ff4c17ad39df",
+  "experiments/formations-that-read/told-tr1a/tr1a_design.py": "7d70f29d0a97704fb3452148d230b24007515eedd7d644427be754c8fd6f4598",
+  "experiments/formations-that-read/told-tr1a/tr1a_rule.py": "3214120100c10284529434a4fb93b6dbc8f0a3b05b709c74bd213410f63ce3f5",
+  "experiments/formations-that-read/told-tr1a/tr1a_run.py": "cc0091d44a54dee6f43b164c765e18b6bfe12b507518c9bfc91af5bc47dd2cc9",
+  "experiments/formations-that-read/told-tr1a/tr1a_stage_a.py": "63dcb6bc6f11542e1f4dd3910eff13ceac6306b8abbb424b991ec6ab2daba35c",
+  "experiments/formations-that-read/told-tr1a/tr1a_dry_run.py": "5be736ff50ede463a502221ef4f9795ba7d215e2cc3dcaf3c62f56128070a988",
+  "experiments/formations-that-read/told-tr1a/write_frozen.py": "725b46875d4def5f724499d85f7c6697ff525fdd09bfbeaaacaeef65688ed5e9"
+ },
+ "code_unchanged_during_the_run": true,
+ "ok": true
+}
