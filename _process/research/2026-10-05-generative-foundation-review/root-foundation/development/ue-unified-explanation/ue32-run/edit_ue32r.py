@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """UE32's run, its result in the shared texts, by script on the landing tree after the branch is merged: T2's home and
-08's row, the sciences dossier's S-15 and its whole's time, the overview's T2 row (EN, ZH), the experiments index, the
+08's row, the sciences dossier's S-15 and its whole's time with the review covers' (EN, ZH), the overview's T2 row (EN, ZH),
+the experiments index, the
 sources table, READING-BUDGETS and a study section.
 
 Every statement of the verdict carries the persistence caveat beside it; the homes and S-15 also carry the embedding's
@@ -23,6 +24,8 @@ ZH = Path('theories/becoming/THE-THEORY-OF-BECOMING.zh.md')
 EXPIDX = Path('experiments/README.md')
 SRC = Path('sources/README.md')
 SRCDIR = 'sources/15-codex-theory-conversations'
+REV_EN = Path('theories/becoming/review/README.md')
+REV_ZH = Path('theories/becoming/review/README.zh.md')
 RB = Path('_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj4-alignment-readers/'
           'READING-BUDGETS.md')
 HERE = Path(__file__).resolve().parent
@@ -63,13 +66,13 @@ L316 = '#316-fates-on-either-side-of-the-curve-in-the-plane-in-the-field-mq7)'
 
 # The figures measured on the landing tree with these edits (rehearsal); the landing script asserts the measure.
 RB_FIGURES = {
-    'whole_stated': 'WHOLE_STATED',
-    'overview': 'OVERVIEW',
-    'overview_zh': 'OVERVIEW_ZH',
-    'overview_over': 'OVERVIEW_OVER',
-    'hour': 'HOUR',
-    'hour_over': 'HOUR_OVER',
-    'whole': 'WHOLE',
+    'whole_stated': '140 to 195',
+    'overview': '7,258 words and 19 characters (55.9 to 72.7 minutes)',
+    'overview_zh': 'Chinese 216 words and 12,598 characters (50.1 to 65.2 minutes)',
+    'overview_over': '1267',
+    'hour': '6,498 words, 50.0 to 65.0 minutes',
+    'hour_over': '498',
+    'whole': '146 to 190',
 }
 
 EDITS = {
@@ -122,10 +125,13 @@ def budget_edits():
     assert not any(v.isupper() for v in f.values()), 'RB_FIGURES not set'
     return {
         SCI: [("The whole takes 140 to 190 minutes", f"The whole takes {f['whole_stated']} minutes")],
+        REV_EN: [("| reading 140 to 190 minutes;", f"| reading {f['whole_stated']} minutes;")],
+        REV_ZH: [("| 读约一百四十到一百九十分钟；", "| 读约一百四十到一百九十五分钟；")],
         RB: [
             ("7,223 words and 19 characters (55.6 to 72.3 minutes)", f['overview']),
             ("Chinese 216 words and 12,506 characters (49.8 to 64.7 minutes)", f['overview_zh']),
-            ("Done: 1232 budget-words over;", f"Done: {f['overview_over']} budget-words over;"),
+            ("Done: 1232 budget-words over; the upper bound is over the hour by about twelve minutes,",
+             f"Done: {f['overview_over']} budget-words over; the upper bound is over the hour by about thirteen minutes,"),
             ("6,446 words, 49.6 to 64.5 minutes, since T2S of 4 November, which restated T2's second forbidden item "
              "and its lag's place in the front's row and S-15,",
              f"{f['hour']}, since UE32's run of 4 November, which added its verdict to S-15 beside the frozen counts, "
