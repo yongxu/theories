@@ -16,7 +16,9 @@ transformer its last state differs in its bits after the first block, almost sur
 from that state differ too. Under exact passes the exact shares of states and of logits apart, and the
 coverage, are therefore expected to be settled by the architecture: they record that the cue's tokens
 enter the state and the logits. Where a cue's difference stops is carried by the size of the total
-variation, the greedy changes, the sampled net shift and the probe's direction.
+variation, the greedy changes and the sampled net shift. The probe is expected to reject for every
+factor under exact passes too, since each cue is a fixed lexical change: a rejection shows the cue's
+tokens readable along one direction at the last position across contents, not recognition.
 
 The forbidden cases (each is the chain's congruence failing, so an implementation other than stated
 or an input not listed, never a law's failure), counted as classes of passes:

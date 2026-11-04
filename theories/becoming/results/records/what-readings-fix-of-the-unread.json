@@ -253,7 +253,7 @@
       "zh": "2026年10月31日，工作板条目 RF，诸检验之设计（研究第 476 节）：下一步所名之检验即 experiments/formations-that-read 之 TR2，至多能驳所述之归并或其实现，不驳此律；无一陈述或声明改变。计划 PLAN.md 重新指向：自本记录所审哈希以来，计划只于检验之读者见其误述 Lean 之处（§3、§4、§8、§11、§12）及 §10 诸检验而变；重新指向前已对本记录读之，其所言无一改变。"
     },
     {
-      "en": "4 November 2026, board item TR45: TR2's Stage B frozen before any model was downloaded or run (experiments/formations-that-read/FREEZE-7.md), on Qwen3-8B and Olmo-3 7B, base and tuned, each named by revision and file hash; the stated lumping the token ids with batch size one and no cache and, for a sampled act, the content's shared draw; not run. The law is unchanged; next_delta's step is now the frozen measurement's run, which waits on Ren's yes.",
+      "en": "4 November 2026, board item TR45: TR2's Stage B frozen before any model was downloaded or run (experiments/formations-that-read/FREEZE-7.md), on Qwen3-8B and Olmo-3 7B, base and tuned, each named by revision and file hash; the stated lumping is the token ids, with batch size one and no cache, and, for a sampled act, the content's shared draw; not run. The law is unchanged; next_delta's step is now the frozen measurement's run, which waits on Ren's yes.",
       "zh": "2026年11月4日，看板项 TR45：TR2 之 B 阶段于任一模型下载或运行之前冻结（experiments/formations-that-read/FREEZE-7.md），于 Qwen3-8B 与 Olmo-3 7B 之基础与调校版，各以修订与文件哈希名之；所述之归并为词元编号，批量为一，无缓存，于抽样之行为另加该内容共用之抽签；未运行。律不变；next_delta 之步今为冻结量测之运行，待 Ren 之可。"
     }
   ]
