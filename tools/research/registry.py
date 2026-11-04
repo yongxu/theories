@@ -14,6 +14,7 @@ import json
 import os
 from pathlib import Path
 import re
+import sys
 
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / 'theories/becoming/results'
@@ -40,6 +41,12 @@ def digest(path):
 # found in the history of HEAD by its sha256; blob hashes are cached outside the
 # repository, since a blob never changes. Lean and other sources still need exact bytes.
 VERSION_CACHE = Path(os.environ.get('RESEARCH_SOURCE_CACHE') or Path.home() / '.cache' / 'research-source-versions.json')
+# Comparing a reviewed version with the current text depends on the two texts alone and is
+# most of a check's time, so each comparison is kept outside the repository too: one file per
+# pair of texts, named by their sha256, under a tag of the algorithm and of Python's version
+# (difflib's output may change with it). Sessions running at once never write one file.
+DRIFT_CACHE = Path(os.environ.get('RESEARCH_DRIFT_CACHE') or Path.home() / '.cache' / 'research-drift-comparisons')
+DRIFT_VERSION = 'sequence-matcher-lines-1-py{}.{}'.format(*sys.version_info[:2])
 _versions, _comparisons = {}, {}
 
 
@@ -106,7 +113,6 @@ def changed_lines(path, sha256, current):
     in HEAD's history. Otherwise (heading, removed lines, replacing lines) for each place a
     line was removed or rewritten; lines only added are not listed. A Markdown paragraph,
     list item or table row is one line."""
-    import difflib
     key = (path, sha256)
     if key not in _comparisons:
         old = reviewed_version(path, sha256)
@@ -115,10 +121,33 @@ def changed_lines(path, sha256, current):
         else:
             a, b = old.splitlines(), current.splitlines()
             heads = sections(a)
-            _comparisons[key] = [(heads[i1], a[i1:i2], b[j1:j2])
-                                 for op, i1, i2, j1, j2 in difflib.SequenceMatcher(None, a, b, autojunk=False).get_opcodes()
-                                 if op in ('replace', 'delete')]
+            _comparisons[key] = [(heads[i1], a[i1:i2], b[j1:j2]) for op, i1, i2, j1, j2 in rewrites(old, a, current, b)]
     return _comparisons[key]
+
+
+def rewrites(old, a, current, b):
+    """difflib's replace and delete opcodes from lines `a` of `old` to lines `b` of `current`,
+    from DRIFT_CACHE where these two texts were compared before. An entry that cannot be read,
+    or whose spans do not fit the lines, is computed again and rewritten."""
+    import difflib
+    entry = DRIFT_CACHE / DRIFT_VERSION / '{}-{}.json'.format(*(hashlib.sha256(t.encode()).hexdigest() for t in (old, current)))
+    try:
+        cached = json.loads(entry.read_text())
+    except (OSError, ValueError):
+        cached = None
+    fits = lambda x: (isinstance(x, list) and len(x) == 5 and x[0] in ('replace', 'delete') and all(type(n) is int for n in x[1:])
+                      and 0 <= x[1] < x[2] <= len(a) and 0 <= x[3] <= x[4] <= len(b))
+    if isinstance(cached, list) and all(fits(x) for x in cached):
+        return cached
+    ops = [x for x in difflib.SequenceMatcher(None, a, b, autojunk=False).get_opcodes() if x[0] in ('replace', 'delete')]
+    try:
+        entry.parent.mkdir(parents=True, exist_ok=True)
+        temporary = entry.with_name(f'.{entry.name}.{os.getpid()}')
+        temporary.write_text(json.dumps(ops))
+        os.replace(temporary, entry)
+    except OSError:
+        pass  # The cache only saves work.
+    return ops
 
 
 def links_record(record, text):

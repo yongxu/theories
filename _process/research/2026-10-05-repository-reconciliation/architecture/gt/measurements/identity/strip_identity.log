@@ -1,0 +1,5 @@
+exhaustive: 960800 strings over '-/"\\\'\na' up to length 7, all equal
+random: 200000 strings of length 8-79, all equal
+tracked .lean files: 30373 (446965946 characters), all equal; original 98.84 s, new 3.40 s
+parse_module: 386 pure modules of the receipt, all equal
+sources(): 26373 declarations, equal (order too)

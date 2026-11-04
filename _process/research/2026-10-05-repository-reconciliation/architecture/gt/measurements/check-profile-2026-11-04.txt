@@ -1,0 +1,55 @@
+Wed Nov  4 21:47:03 2026    check.prof
+
+         640627651 function calls (639992317 primitive calls) in 178.688 seconds
+
+   Ordered by: cumulative time
+   List reduced from 1430 to 45 due to restriction <45>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+     43/1    0.000    0.000  179.005  179.005 {built-in method builtins.exec}
+        1    0.000    0.000  179.005  179.005 tools/research/research.py:1(<module>)
+        1    0.007    0.007  178.910  178.910 tools/research/research.py:367(main)
+        1    0.430    0.430  178.898  178.898 tools/research/research.py:253(check_or_render)
+        1    1.654    1.654  148.391  148.391 tools/research/registry.py:907(validate)
+      837    0.066    0.000  130.744    0.156 tools/research/registry.py:137(scoped_drift)
+      837    0.051    0.000  126.857    0.152 tools/research/registry.py:104(changed_lines)
+       79    0.001    0.000  117.913    1.493 <python3.11>/difflib.py:492(get_opcodes)
+       79    0.003    0.000  117.911    1.493 <python3.11>/difflib.py:421(get_matching_blocks)
+      500   98.695    0.197  117.907    0.236 <python3.11>/difflib.py:305(find_longest_match)
+506826193   19.596    0.000   19.596    0.000 {method 'get' of 'dict' objects}
+        1    0.002    0.002   15.712   15.712 tools/research/completion.py:671(render)
+        1    0.003    0.003   15.709   15.709 tools/research/completion.py:549(evaluate)
+        1    0.044    0.044   13.455   13.455 tools/research/completion.py:209(sources)
+      386    0.463    0.001   13.366    0.035 tools/research/completion.py:128(parse_module)
+      386    6.287    0.016    9.399    0.024 tools/research/completion.py:75(_strip_comments)
+      105    0.012    0.000    6.042    0.058 <python3.11>/subprocess.py:506(run)
+       79    0.004    0.000    5.760    0.073 tools/research/registry.py:46(reviewed_version)
+     7649    4.719    0.001    5.617    0.001 {method 'read' of '_io.TextIOWrapper' objects}
+      103    0.006    0.000    5.505    0.053 <python3.11>/subprocess.py:417(check_output)
+        1    0.000    0.000    5.015    5.015 tools/research/research.py:241(index_outputs)
+      105    0.005    0.000    4.961    0.047 <python3.11>/subprocess.py:1163(communicate)
+        1    0.000    0.000    4.444    4.444 tools/research/indexes.py:471(render)
+     6569    0.017    0.000    4.015    0.001 tools/research/registry.py:34(digest)
+     6892    3.913    0.001    3.913    0.001 {method 'read' of '_io.BufferedReader' objects}
+     4512    0.007    0.000    3.823    0.001 <python3.11>/json/__init__.py:299(loads)
+     4512    0.010    0.000    3.814    0.001 <python3.11>/json/decoder.py:332(decode)
+     4512    3.797    0.001    3.797    0.001 <python3.11>/json/decoder.py:343(raw_decode)
+     2749    0.005    0.000    3.750    0.001 tools/research/registry.py:270(receipt)
+     7625    0.017    0.000    3.487    0.000 <python3.11>/pathlib.py:1053(read_text)
+      533    1.999    0.004    3.190    0.006 tools/research/registry.py:1033(<setcomp>)
+        2    0.012    0.006    3.177    1.588 tools/research/research.py:37(input_snapshot)
+ 36940425    3.079    0.000    3.079    0.000 {method 'startswith' of 'str' objects}
+     1992    0.003    0.000    3.077    0.002 tools/research/registry.py:275(receipt_names)
+      220    0.393    0.002    3.075    0.014 tools/research/registry.py:540(receipt_declaration_names)
+       10    0.000    0.000    2.980    0.298 tools/research/indexes.py:59(files_under)
+    34683    0.052    0.000    2.770    0.000 <python3.11>/pathlib.py:981(resolve)
+  3761525    1.006    0.000    2.682    0.000 <python3.11>/re/__init__.py:163(match)
+769121/461316    0.379    0.000    2.577    0.000 {built-in method builtins.any}
+        2    0.015    0.007    2.560    1.280 tools/research/research.py:56(<dictcomp>)
+     6768    0.012    0.000    2.387    0.000 <python3.11>/pathlib.py:1046(read_bytes)
+    26408    1.007    0.000    2.318    0.000 tools/research/completion.py:111(_split)
+        1    0.068    0.068    2.307    2.307 tools/research/research.py:178(check_links)
+   266284    0.139    0.000    2.289    0.000 {built-in method builtins.sorted}
+  1098617    2.263    0.000    2.263    0.000 {method 'search' of 're.Pattern' objects}
+
+

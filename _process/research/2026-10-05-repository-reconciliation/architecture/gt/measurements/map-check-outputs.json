@@ -1,0 +1,282 @@
+{
+ "outputs": [
+  {
+   "name": "Record pages theories/becoming/results/records/<id>.md",
+   "generator": "tools/research/registry.py:render_record (1248-1291) / render_record_v2 (1171-1245), assembled at tools/research/research.py:280",
+   "inputs": [
+    "the record's own JSON (registry.py:1348-1361, glob of record_directories/*.json, filesystem so untracked JSON counts)",
+    "all records: _record_links and _used_by reverse edges (registry.py:1364-1372)",
+    "theories/becoming/results/data/law-families.json (registry.py:565-568, 1373-1376, 1153-1160)",
+    "theories/becoming/results/data/shared-laws.json incl. its boundary report (registry.py:575-585, 1377-1391, 1315-1338, 603-680, 747-796)",
+    "standard boundaries file named by config key standard_boundaries (registry.py:303-317, used at 1216-1218)",
+    "_process/research-config.json (record_directories, standard_boundaries)",
+    "drift status: sha256 of every reference path (registry.py:989-998); for a drifted .md reference, HEAD's history via git log/cat-file (registry.py:46-90, 137-158) and move receipts for former paths (registry.py:53-56)"
+   ],
+   "mode": "check: compared, mismatch is a hard error (research.py:304-310), but only for selected ids and never for a record with source drift (research.py:279-280); render: written (research.py:295); --strict-fresh: same as check",
+   "notes": "A drifted record's page is neither written nor compared. --changed-since narrows the selection through registry.affected_ids (registry.py:1395-1425), which ignores code/config changes, misses a record dropped from law-families.json (1397, 1417 use the current _law_family), and misses a producer whose consumer edge or consumer record was removed (1420-1425 follow current dependencies only). Rendering itself is cheap; the selection does not narrow validate()."
+  },
+  {
+   "name": "Redirect pages records/<former id>.md and theories/becoming/results/RESULT-REGISTER.md",
+   "generator": "registry.redirect_pages (registry.py:1428-1439), registry.render_index (registry.py:1294-1308); research.py:281-282",
+   "inputs": [
+    "every record's id, title, former_ids",
+    "RESULT-REGISTER.md depends only on len(records) (registry.py:1300)"
+   ],
+   "mode": "check: always computed for all records and compared as hard errors (research.py:281-282, 304-310); render: written",
+   "notes": "Changes only on record add/delete, title or former_ids change."
+  },
+  {
+   "name": "Navigation pages (11): README.md, RESULTS.md, GOALS.md, DEPENDENCIES.md, OPEN-QUESTIONS.md, _process/BRIEF.md, root-foundation/README.md, RESEARCH.md, theories/becoming/README.md, theories/becoming/chapters/CLAIMS.md, theories/becoming/results/ROADMAP.md",
+   "generator": "tools/research/navigation.py:render_views (502-635), page list PAGES (427-438); research.py:267",
+   "inputs": [
+    "all records (ids, titles, status, kind, canonical_source, dependencies, overview, statement/claim, next_delta)",
+    "_process/research-config.json (readme_status, readme_featured_*, readme_conditional_results, readme_research_goals, open_questions, readme_* paths)",
+    "_process/goals/*.json (navigation.py:81-83; filesystem glob)",
+    "_process/architecture/history-manifest.json (navigation.py:19, 503, 628-633) and anchors of the preserved reading editions it lists (navigation.py:367-378)",
+    "theories/becoming/OPENING.md via readme_opening (navigation.py:197-201)",
+    "_process/navigation/README-FIRST-SCREEN.md via readme_first_screen (navigation.py:253-304)",
+    "full text of each {{time:PATH}} file, currently theories/becoming/ONE-PAGE.md (navigation.py:242-250, 283-289; README-FIRST-SCREEN.md:8)",
+    "_process/navigation/README-LEAD.md and _process/navigation/REPOSITORY.md (navigation.py:151-165, 524, 565)",
+    "theories/becoming/results/data/law-families.json (navigation.py:393-404)",
+    "move receipts and existence of FOUNDATION_COMPOSITION and MAP.md (navigation.py:26, 623, 625; moves.py:1107-1115)"
+   ],
+   "mode": "check: hard error on mismatch (research.py:304-310); render: written; always all 11 pages regardless of --ids/--changed-since",
+   "notes": "Cheap to compute. OPEN-QUESTIONS.md carries a fragment link into _process/BECOMING-WORKBOARD.md#decisions-pending-ren (from config open_questions), so the board's headings are a check input through research.check_links."
+  },
+  {
+   "name": "Completion report theories/becoming/results/completion/COMPLETION.md",
+   "generator": "tools/research/completion.py:render (671-676) / evaluate (549-577); research.py:270-272",
+   "inputs": [
+    "theories/becoming/results/completion/COVERAGE.json (completion.py:44)",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json (completion.py:46; parsed at 212 and again at 568)",
+    "every Lean source the receipt's source_paths lists for layers core/instance/application/foundation, resolved under the Lean root (completion.py:67-68, 209-225): 386 files, 16 MB",
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/THEOREM-CONNECTIVITY.json (completion.py:47, 552)",
+    "theories/becoming/chapters/08-METHOD.md, sections 'Premise card' and 'Open items, ranked' (completion.py:48, 553, 431-443, 523-546)",
+    "file names (stems) in theories/becoming/results/records/*.json (completion.py:554)"
+   ],
+   "mode": "check: hard error on mismatch; completion errors are hard errors (research.py:270-272); render: written",
+   "notes": "Expensive: char-by-char Python comment stripper over 16 MB at HEAD (completion.py:75-103); reaches() rebuilds the whole _references closure and its lru_cache on every call (completion.py:446-488). The working tree currently holds an uncommitted rewrite of _strip_comments by another session."
+  },
+  {
+   "name": "Theory graph theories/becoming/results/data/theory-graph.json and theories/becoming/results/THEORY-GRAPH.md",
+   "generator": "tools/research/theory_graph.py:render (287-289) / build (171-231); research.py:274",
+   "inputs": [
+    "records: id, aliases, title, status, kind, dependencies, related, references of role proof, record path (theory_graph.py:171-201)",
+    "theories/becoming/results/data/regions.json (theory_graph.py:31, 67-70)",
+    "lean/becoming/Becoming.lean and every Becoming.* module it imports (theory_graph.py:99-132)",
+    "headers of Becoming/{Grammar,GrammarReadings,GrammarMap,GrammarTesting,GrammarCandidates}.lean (theory_graph.py:38, 73-96)",
+    "root-foundation/development/one-unfolding-root/classify/*.tsv (theory_graph.py:35, 135-146; filesystem glob)",
+    "root-foundation/development/ou2-candidates/outcomes.tsv (theory_graph.py:37, 149-158)",
+    "every theories/becoming/chapters/*.md, scanned for <a id=\"r-...\"> (theory_graph.py:161-168; filesystem glob)"
+   ],
+   "mode": "check: hard error on mismatch (not an index page); render: written",
+   "notes": "No error path of its own. CORPUS (theory_graph.py:36) is declared but never read."
+  },
+  {
+   "name": "Directory indexes (6): theories/becoming/chapters/README.md, _process/research/README.md, root-foundation/INDEX.md, root-foundation/REVIEWS.md, sources/README.md, _process/DIRECTIVE-INDEX.md",
+   "generator": "tools/research/indexes.py:render (471-487) via research.index_outputs (241-250)",
+   "inputs": [
+    "inventory = git ls-files -s (index) union git ls-files --others --exclude-standard (moves.py:86-122; indexes.py:52-62): file lists under _process/research/, _process/history/, sources/, root-foundation; untracked files count",
+    "theories/becoming/chapters/*.md filesystem glob and first '# ' heading within 41 lines of each (indexes.py:76-88, 140, 154)",
+    "theories/becoming/THE-THEORY-OF-BECOMING.md table rows (indexes.py:103-115)",
+    "move receipts _process/architecture/moves/*.json (indexes.py:172-192; moves.py:1038-1041)",
+    "titles of each study's README.md/INDEX.md and of unentered studies' top-level .md (indexes.py:203-250)",
+    "titles of root-foundation top-level files; first 25 lines of each REVIEW file there and in history/root-foundation (indexes.py:266-353)",
+    "iterdir of sources/ (indexes.py:361, 438): includes git-ignored local directories; sources/*/README.md titles (376); directive-group (sources/15-*, 16-*) .md titles (436-451)",
+    "_process/RESEARCH-DIRECTIVES.md links (indexes.py:421-433)",
+    "keys of _process/architecture/generated-manifest.json (indexes.py:475-479)",
+    "path roles from config path_roles, generated manifest and records/*.md glob (paths.py:57-107)",
+    "config indexes.adopted_pages (render guard only, indexes.py:490-494; research.py:287)"
+   ],
+   "mode": "check: a difference is only reported in stale_indexes (research.py:307-308); --strict-fresh: error (research.py:311-313); render: written. Their bodies' links are checked in plain check (research.py:284-285)",
+   "notes": "Depend on untracked files and on ignored directories: in this worktree the untracked sources/15-codex-theory-conversations/2026-11-04-checks-and-order.md would add a DIRECTIVE-INDEX row; in /Users/ren/theories the ignored sources/12-, 13-, 18- directories would add sources/README.md rows."
+  },
+  {
+   "name": "Reading catalogue theories/becoming/results/README.md, ARGUMENTS-A-L.md, ARGUMENTS-M-Z.md",
+   "generator": "tools/research/reading_catalogue.py:render (363-367); research.py:246-247",
+   "inputs": [
+    "theories/becoming/results/data/arguments-a-l.json, arguments-m-z.json, theory-map.json (reading_catalogue.py:292-296)",
+    "keys of generated-manifest.json (reading_catalogue.py:316)",
+    "chapters/*.md filesystem glob plus chapters the move receipts moved (reading_catalogue.py:74-83, 299-309)",
+    "theories/*/README.md glob (reading_catalogue.py:319)",
+    "existence of every entry's source, lean and evidence path (reading_catalogue.py:332-334)",
+    "sha256 of every entry's source file, rendered as a drift note (reading_catalogue.py:338-341, 186-189)",
+    "anchors of theories/becoming/history/ARGUMENTS-A-L-2026-10-08.md and -M-Z (reading_catalogue.py:103, 107-113)",
+    "path roles (reading_catalogue.py:86-91)"
+   ],
+   "mode": "check: structural errors are hard errors (research.py:250, 277); page differences only stale_indexes; --strict-fresh: error; render: written",
+   "notes": "reading_drift count is reported only (research.py:330)."
+  },
+  {
+   "name": "Lean catalogue theories/becoming/results/data/lean-index.json, data/source-index.json, LEAN-INDEX.md, LEAN-DECLARATIONS.md, lean-declarations/<12 groups>.md",
+   "generator": "tools/research/lean_catalogue.py:render (546-548) / catalogue (326-389); research.py:248-249 and 299-303",
+   "inputs": [
+    "every *.lean from rg --files --hidden --no-ignore (lean_catalogue.py:95-100) minus EXCLUDED components (27) and saved-copy paths (193-219, 333): about 2,308 tracked files, 58 MB, plus untracked AND ignored files (tmp/, work/, ignored sources dirs are not excluded); includes tools/research/boundary_check.lean, drafts/** and sources/** .lean",
+    "every *.md under theories/ (except theories/becoming/results/), _process/research/, experiments/ or at the root, whatever its role (lean_catalogue.py:283-300): about 3,353 files, 91 MB; generated pages among them",
+    "existence of every local link target of those .md files (lean_catalogue.py:269-280)",
+    "core receipt via config lean_receipt (lean_catalogue.py:222-242)",
+    "keys of generated-manifest.json, re-read for every active file (lean_catalogue.py:395)",
+    "move receipts for concept entries (lean_catalogue.py:83-92, 413-419)"
+   ],
+   "mode": "not computed in plain check; render: computed and written, then recomputed and rewritten as a fixed point (research.py:249, 299-303); --strict-fresh: computed and compared, mismatch an error (research.py:248-249, 311-313)",
+   "notes": "The heaviest generator. Its inputs include generated pages (root-level README.md, RESULTS.md, _process/research/README.md, root-foundation/README.md/INDEX.md/REVIEWS.md), which is why render needs the second pass."
+  },
+  {
+   "name": "Generated manifest _process/architecture/generated-manifest.json",
+   "generator": "navigation.write_views (navigation.py:670-695, written at 693-694)",
+   "inputs": [
+    "the sha256 of every output written"
+   ],
+   "mode": "render only; never compared by check",
+   "notes": "Only its key set is read by outputs (paths.py:79-82, indexes.py:477, reading_catalogue.py:316, lean_catalogue.py:395); its values feed only the overwrite guard (navigation.py:679-681)."
+  },
+  {
+   "name": "Validation: records (registry.validate)",
+   "generator": "tools/research/registry.py:validate (907-1091); research.py:260",
+   "inputs": [
+    "all record JSONs",
+    "sha256 of every reference path (989-998): 1,634 distinct paths, about 1.22 GB, 1.18 GB of it JSON",
+    "declaration-name scans of reference sources (999-1001, 255-296): 30,473 names",
+    "proof-binding receipts parsed (1010-1030, 270-287): 220 distinct receipts, about 533 MB of JSON",
+    "text_versions files: sha256 and JSON parse (494-509)",
+    "progress anchors in .md references (479-485)",
+    "standard boundaries file and existence of each boundary's source (320-341)",
+    "law-families.json (890-904)",
+    "review texts for statements_at_model and the boundary field (355-360, 401-402, 430-434; boundary.py:128-258)",
+    "HEAD history and ~/.cache/research-source-versions.json for drifted .md references (46-90)"
+   ],
+   "mode": "check and render, every record, regardless of --ids/--changed-since",
+   "notes": "Errors are hard; drift goes to source_drift (exit 2 when selected, research.py:339) or changed_outside_cited (GROWN, registry.py:995-998)."
+  },
+  {
+   "name": "Validation: goals, README inputs, open questions (navigation.validate_goals)",
+   "generator": "navigation.py:325-364; research.py:261",
+   "inputs": [
+    "_process/goals/*.json; existence of each goal source (345-347)",
+    "record ids, status, kind, overview/statement for featured/conditional lists (96-125)",
+    "readme_opening, readme_first_screen and its timed files, readme_lead, readme_repository",
+    "existence of open_questions paths (navigation.py:307-322)"
+   ],
+   "mode": "check and render; hard errors",
+   "notes": ""
+  },
+  {
+   "name": "Validation: preserved history (navigation.validate_history)",
+   "generator": "navigation.py:638-646; research.py:261",
+   "inputs": [
+    "_process/architecture/history-manifest.json and sha256 of every raw and reading artifact of every version (30 files, 7.4 MB)"
+   ],
+   "mode": "check and render; hard errors",
+   "notes": ""
+  },
+  {
+   "name": "Validation: orphan record pages",
+   "generator": "registry.orphan_pages (registry.py:1442-1446); research.py:261",
+   "inputs": [
+    "filesystem glob of record_directories/*.md",
+    "record ids and former_ids"
+   ],
+   "mode": "check and render; hard errors",
+   "notes": ""
+  },
+  {
+   "name": "Validation: links inside generated bodies (research.check_links)",
+   "generator": "tools/research/research.py:178-195, called at 284-285",
+   "inputs": [
+    "filesystem existence of every relative link target in every output body (187), so untracked or ignored files satisfy it",
+    "anchors of fragment-linked .md targets: from the planned body if planned, else read from disk with reading_catalogue.anchors (191-192; reading_catalogue.py:120-150)"
+   ],
+   "mode": "check: planned = index and reading pages only (284); render: planned = all outputs",
+   "notes": "Uses reading_catalogue's slug, not moves.github_slug which `links` uses (moves.py:259-315), so the two link checks are not interchangeable."
+  },
+  {
+   "name": "Readability lint and growth ratchet",
+   "generator": "style.lint (style.py:126) for every record, research.py:316; ratchet research.py:75-96, 317",
+   "inputs": [
+    "record JSONs (style.py is pure)",
+    "with --changed-since (check only): git diff base, untracked files, git show base:<record> (research.py:68-72, 86)"
+   ],
+   "mode": "warnings in check and render; ratchet errors only in check with --changed-since",
+   "notes": ""
+  },
+  {
+   "name": "Report: shared_laws_status",
+   "generator": "registry.shared_laws_status (registry.py:861-887); research.py:335",
+   "inputs": [
+    "data/shared-laws.json",
+    "core receipt JSON (877)",
+    "sha256 of every path in shared-laws.json inputs_sha256 (879): measure_grammar.py, measure.py, COVERAGE.json, THEOREM-CONNECTIVITY.py, THEOREM-CONNECTIVITY-DUMP.lean, tools/research/boundary.py, boundary_check.lean, shared_laws.py"
+   ],
+   "mode": "check and render; report only, never an error",
+   "notes": ""
+  },
+  {
+   "name": "Race check input_snapshot",
+   "generator": "research.py:37-60, at 258, 292 (render), 320",
+   "inputs": [
+    "config, history-manifest, shared-laws.json, law-families.json, readme_* files, timed files, standard boundaries file, goals/*.json, record JSONs and their reference paths"
+   ],
+   "mode": "check: 2 snapshots; render: 3",
+   "notes": "A race guard, not a cache key. Misses most inputs."
+  },
+  {
+   "name": "links command (make research-links)",
+   "generator": "moves.check_links (moves.py:337-416); research.py:431-436",
+   "inputs": [
+    "inventory = tracked union untracked-not-ignored (moves.py:340)",
+    "content of every live/generated .md in it (moves.py:345-346; about 2,575 files, 64 MB)",
+    "anchors of any fragment-linked .md target, any role (moves.py:349-356, 380-382)",
+    "path roles (config path_roles, generated-manifest keys, records/*.md)",
+    "gitlinks from the index (moves.py:96-102)",
+    ".gitignore via git check-ignore for missing targets (moves.py:105-112, 397-402)"
+   ],
+   "mode": "separate command; not part of check/render",
+   "notes": "A target that exists only as an ignored file is listed under not_in_repository, not counted as broken."
+  },
+  {
+   "name": "secrets command (first step of make research-check)",
+   "generator": "research.secrets (research.py:213-238)",
+   "inputs": [
+    "working-tree content of every tracked text file via git grep -I -F (research.py:219-220)",
+    "config secrets_allowlist (research.py:217)"
+   ],
+   "mode": "separate command; Makefile:5 and 10 run it before check",
+   "notes": "Findings depend only on the matched files and the allowlist. It can be made incremental per changed file, with a full run when the allowlist or the patterns change."
+  }
+ ],
+ "expensive": [
+  "input_snapshot (research.py:37-56) re-hashes every reference file in full with registry.digest (registry.py:34-35): 1,634 distinct paths, about 1.22 GB (1.18 GB JSON receipts). It runs twice in check (research.py:258, 320) and three times in render (258, 292, 320), on top of validate's own pass (registry.py:992). That is about 3.7 GB of hashing per check and 4.9 GB per render.",
+  "registry.validate parses 220 distinct proof receipts (about 533 MB of JSON) with json.loads (registry.py:270-273, 1016) and scans the declarations of every Lean reference source (registry.py:289-296; 30,473 names). It does this for every record even with --ids/--changed-since (research.py:259-261).",
+  "registry.reviewed_version runs one `git log -m --raw HEAD -- path former_paths` per drifted .md reference over 5,603 commits, plus git cat-file (registry.py:58-77). It then runs difflib.SequenceMatcher(autojunk=False) on whole texts (registry.py:118-120). The uncommitted working-tree edit adds an on-disk cache for this and calls it 'most of a check's time'.",
+  "completion.sources parses 386 Lean files (16 MB) with a character-by-character Python loop at HEAD (completion.py:75-103). reaches() rebuilds _references and its lru_cache on every call (completion.py:446-488). The receipt JSON (5.3 MB) is parsed twice (completion.py:212, 568).",
+  "The Lean catalogue (render and --strict-fresh only) does two whole-tree `rg --files --hidden --no-ignore` scans (lean_catalogue.py:95-100), reads and parses about 2,308 .lean files (58 MB) and about 3,353 .md files (91 MB), and stats every link target (269-280). It re-reads and re-parses the 84 KB generated manifest for every active module in doc_links (395), about 2,000 times per pass. It dumps a 17.6 MB lean-index.json. In render all of this runs twice (research.py:249, 300).",
+  "indexes.render runs `git ls-files -s` and `git ls-files --others` over 104,495 tracked files (moves.py:86-122). It stats and role-classifies every file under _process/research (11,620), sources (6,477) and _process/history. It parses all 59 move receipts (17 MB) in indexes.receipts (indexes.py:172-181), and parses them again in moves.receipt_maps (moves.py:1048-1076).",
+  "reading_catalogue.validate hashes the full source of all 171 entries (reading_catalogue.py:338-341).",
+  "links reads every live/generated .md (about 2,575 files, 64 MB), masks code, extracts links, computes anchors of linked targets, and runs git ls-files twice plus git check-ignore (moves.py:337-416).",
+  "secrets runs git grep with 14 fixed prefixes over the working-tree content of all 104,495 tracked files (research.py:219-220).",
+  "render's write_views re-reads every output before writing (navigation.py:675-687), and render compares on-disk text of every record page for adoption (research.py:288-291)."
+ ],
+ "unaffecting_paths": [
+  "tools/research/tests/** (modification only). Only research-test reads it (Makefile:19-20). Deleting or renaming a test breaks live links, e.g. _process/research/2026-10-05-repository-reconciliation/architecture/mv/BOUNDARY-FIELD.md:3, and changes data/source-index.json.",
+  ".github/** (modification only). No tool reads it. Deletion breaks the link at _process/research/2026-10-05-repository-reconciliation/r20/TOOLING.md:9.",
+  ".claude/launch.json (modification). It is scratch by path role and is neither .lean nor a docs-scope .md.",
+  "tools/publishing/** (modification only). research.py:19 does not import it. Deletion breaks the links at root-foundation/development/review-packet/FREEZE-STEPS.md:152-153.",
+  "tools/research/split_languages.py, repoint.py, evidence_store.py, generative_chain.py (modification). check, render and links neither import nor call them. evidence_store is loaded only for the `evidence` subcommand (research.py:412-415).",
+  "tools/research/shared_laws.py (modification). It changes only the report fields shared_laws.inputs_changed/current (registry.py:879-884), never an error, an exit code or a page.",
+  "theories/becoming/results/data/generativity-chain.json and data/session-results.json (modification). Only generative_chain.py and session_map.py read them, and check_or_render does not call either. No record references them.",
+  "Non-.md, non-.lean files under worldbuilding/**, output/** and drafts/** (modification). No record reference, catalogue entry or fixed input lies there; the two drafts references are .md.",
+  "Computed rule (modification only). A file is inert when it is neither .md nor .lean, is not a record reference or text_versions path at base or head, is not a reading-catalogue source, is not a fixed input (the config, both manifests, move receipts, goals, records, results/data/*.json read above, COVERAGE.json, the core receipt, THEOREM-CONNECTIVITY.json, the classify/*.tsv and outcomes.tsv), is not a generated output, is not a history-manifest artifact, and is not imported tools/research code, Makefile, .gitignore or .gitattributes. Examples: unreferenced experiment scripts and result files under experiments/**.",
+  "Caveat for every entry above: secrets still has to scan the changed file (research.py:219-220). Additions, deletions and renames are never inert by path alone: inventories, globs and link-target existence (indexes, links, lean catalogue local_link, check_links) see them."
+ ],
+ "cache_ideas": [
+  "Replace re-hashing of unchanged files with a git blob id to sha256 map, as registry.VERSION_CACHE already does for history (registry.py:42, 64-85). This is sound only on a clean checkout and for paths without a filter/eol attribute (.gitattributes routes *.mat and *.pkl through LFS).",
+  "Cache the facts each receipt yields (at_pointer values, elaborated names per module, receipt_declaration_names), keyed by the receipt's sha256 or blob id. Cache the DECLARATION scan of each Lean reference by blob id.",
+  "Cache per-record validation keyed by (record bytes, the blob ids of its references, text_versions and reviews, the standard-boundaries bytes, the config bytes, the tool code hash, and the reviewed-version lookup result for each drifted .md reference). Always rerun the cheap cross-record checks: ids, aliases, former ids, edges, cycles, statements_at_model_across, boundary_across, law families.",
+  "Always render all record pages instead of relying on affected_ids. Rendering is cheap; the cost is in validate.",
+  "Lean catalogue: persist parse_lean results by content sha and doc link-sets by blob id. Re-stat link targets only after an addition or deletion. Read the manifest once per pass.",
+  "links: keep a reverse index (target path to referrers and fragments) from the last full run, keyed by referrer blob ids. Recheck changed referrers, referrers of changed or added/deleted targets, and everything when path_roles, manifest keys, records/*.md or .gitignore change.",
+  "secrets: cache git grep hits per blob. Recompute findings from the cache when secrets_allowlist or SECRET_PATTERNS change.",
+  "Whole-result cache key: merged commit tree id (covers code and generated pages), a clean-checkout assertion (git status --porcelain --ignored empty), Python version (unicodedata in slug/github_slug, difflib), and HEAD commit id whenever any .md reference has drifted. Add the base commit for --changed-since."
+ ],
+ "report_md": "## The research check's inputs, and what a tiered landing gate can skip\n\n### Summary for the gate design\n\n1. **Most of the cost is not narrowed by any existing option.**\n   - `registry.validate` re-hashes about 1.22 GB of reference files and parses about 533 MB of receipt JSON on every check (registry.py:989-1030). `input_snapshot` hashes the same 1.22 GB another two times in check and three times in render (research.py:258, 292, 320).\n   - `--ids` and `--changed-since` narrow only the record-page comparison (research.py:263, 280). Every validation and every other family still runs over everything (research.py:259-275).\n   - The biggest saving that stays sound is a content-addressed cache (blob id to sha256, receipt facts by blob), not skipping families.\n2. **The check is a function of the tree only under conditions.**\n   - The checkout must be clean: no untracked files and no ignored files (inventories, globs, `iterdir` and `rg --no-ignore`).\n   - HEAD's history is consulted whenever an `.md` reference has drifted.\n   - The Python version enters through `unicodedata` and `difflib`.\n   - Trains must run on a fresh worktree of the merged commit, take tiers from `git diff base merged`, and render-and-commit before the strict check.\n3. **Family skipping is sound only with the triggers listed under \"Skipping and caching\" below.** Record pages can be cheaply recomputed for all records instead of trusting `affected_ids`, which is unsound for removals.\n4. **There is no machine-wide lock today.**\n   - `render_lock` resolves to the worktree's own git dir (`/Users/ren/theories/.git/worktrees/gc-reading-correction/research-navigation.lock`, research.py:25). It is non-blocking (28), so it fails instead of waiting.\n   - check takes no lock (research.py:459-460).\n   - A shared lock belongs under `git rev-parse --git-common-dir` or a home-directory cache.\n\n### State of the checkout read\n\n- HEAD `3bf962941` is `1e9bc6b85` plus one board commit; `tools/` is identical to `1e9bc6b85`.\n- The working tree holds edits I did not make, all uncommitted:\n  - `tools/research/registry.py` adds `DRIFT_CACHE` (a cache of drift comparisons under `~/.cache`, keyed by both texts' sha256 and the Python version).\n  - `tools/research/completion.py` rewrites `_strip_comments`.\n  - `tools/research/tests/test_scoped_drift.py` is changed.\n  - `sources/15-codex-theory-conversations/2026-11-04-checks-and-order.md` is untracked.\n- All line numbers below are HEAD's.\n- Nothing was run except `git` reads and read-only Python counts over records and receipts.\n\n### How `check_or_render` runs (research.py:253-339)\n\n1. A snapshot of the inputs is taken (258).\n2. Records are loaded (259) and validated (260): orphan pages, goals and history (261).\n3. If there are errors, it stops early (265-266).\n4. The generated families are computed:\n   - navigation (267)\n   - completion (270-272)\n   - theory graph (274)\n   - indexes and the reading catalogue (275); the Lean catalogue only when `render or strict_fresh` (241-250)\n   - record pages for selected ids without drift (279-282)\n5. Links in all outputs are checked (284-285).\n6. Render writes everything through the guarded writer (286-295), then runs the Lean catalogue a second time to reach a fixed point (299-303).\n7. Check compares the outputs:\n   - Index and reading-catalogue pages are only reported as stale (307-308).\n   - Under `--strict-fresh`, stale index pages are errors (311-313).\n   - Every other page is a hard error when it differs (310).\n8. Lint runs (316). The ratchet runs only with a base and only in check (317).\n9. The snapshot is checked again (320). The shared-laws status is reported (335).\n10. Exit codes: 1 for errors, 2 for drift in selected records (339).\n\n`session_map` is imported (research.py:19) but never called. The config note (`indexes.note`) saying it renders through `research.py render` is not borne out by the code.\n\nThe output families and validations, with every input and its line, are in the `outputs` field.\n\n### What `input_snapshot` covers, and what it misses\n\n**Covered** (research.py:37-56):\n- the config and the history manifest\n- `shared-laws.json` and `law-families.json`\n- the four `readme_*` files and the timed files\n- the standard boundaries file\n- `goals/*.json`\n- record JSONs and their reference paths\n\nIt also adds a bogus `ROOT/PATH`, because the `{{time:PATH}}` example in the comment at README-FIRST-SCREEN.md:1 matches the field pattern. This is harmless.\n\n**Missed** (all read):\n- the generated manifest's keys\n- move receipts (`_process/architecture/moves/*.json`)\n- `text_versions` files and history-manifest artifacts\n- `THEOREM-CONNECTIVITY.json`, and the 26 of the 386 completion Lean sources that no record references\n- the theory graph's inputs: `regions.json`, the Becoming modules, `classify/*.tsv`, `outcomes.tsv`, `chapters/*.md`\n- every index input\n- the reading catalogue's registers and sources\n- the whole Lean catalogue's input set\n- link-target existence and anchors\n- standard-boundary and goal source existence\n- the shared-laws `inputs_sha256` paths\n- the generator code\n- HEAD's history and `~/.cache`\n- on-disk generated pages (lean docs, titles, anchors)\n\nThe snapshot is a race guard for a shared checkout, not a cache key.\n\n### Dependence on git history\n\n**HEAD's history** is used only through `registry.reviewed_version` (registry.py:46-90). That happens only for references that are `.md` files and whose sha256 differs from the record's (non-`.md` files return before any git call, registry.py:145-146). The result decides three things:\n- source drift versus `changed_outside_cited` (registry.py:993-998)\n- which record pages are skipped as stale (research.py:279-280)\n- exit code 2\n\nCI fetches full history for this reason (`.github/workflows/research.yml`, `fetch-depth: 0`).\n\n**`--changed-since`** additionally uses the base commit: `git diff`, untracked files, and `git show` per changed record (research.py:68-96).\n\n**The git index**, not the history, feeds:\n- the inventories (moves.py:86-122)\n- secrets' `git grep` over tracked files\n- `gitlinks` in `links`\n\n### Dependence on untracked and ignored files\n\n**Untracked, not ignored:**\n- the index inventory (indexes.py:52-62); the untracked file in this worktree would add a row to `DIRECTIVE-INDEX.md` and change the `sources/README.md` count\n- `changed_paths` (research.py:71)\n- `links` (moves.py:340)\n\n**Any file on disk, filesystem globs:**\n- `records/*.json` (registry.py:1352)\n- `records/*.md` (registry.py:1446; paths.py:85-86)\n- `goals/*.json` (navigation.py:83)\n- `chapters/*.md` (indexes.py:140; reading_catalogue.py:304; theory_graph.py:163)\n- `classify/*.tsv` (theory_graph.py:137)\n- `theories/*/README.md` (reading_catalogue.py:319)\n- move receipts (moves.py:1041)\n\n**Ignored files too:**\n- `iterdir` of `sources/` (indexes.py:361, 438); the main checkout's ignored `sources/12-`, `13-` and `18-` directories would add rows to `sources/README.md`\n- the Lean catalogue's `rg --no-ignore` (lean_catalogue.py:95-100); only `.git`, `.lake`, `.build`, `node_modules`, `.venv`, `venv`, `__pycache__` and `.claude/worktrees` are excluded, so `tmp/` and `work/` are scanned\n- `Path.exists()` link checks (research.py:187; lean_catalogue.py:280; registry.py:219-223)\n\n**Not the same in `links`:** it accepts only inventory files and reports ignored targets apart (moves.py:378, 397-402).\n\n### Skipping and caching by changed paths (conservative)\n\n**Global triggers: run everything.** A change to any of these:\n- imported tools code: `research`, `registry`, `navigation`, `completion`, `lean_catalogue`, `reading_catalogue`, `style`, `paths`, `moves`, `indexes`, `session_map`, `history_notes`, `rename_ids`, `theory_graph`, `boundary`, `__init__`\n- `Makefile`\n- `_process/research-config.json`\n- move receipts\n- `.gitignore`, `.gitattributes`\n- the key set of `generated-manifest.json`; its values only feed the write guard, navigation.py:679-681\n\n**Per-family triggers:**\n\n| Family | Rerun when the change touches |\n|---|---|\n| **Records and validate** | Record JSONs; any record reference or `text_versions` path; review files; standard boundaries; `law-families.json`; `shared-laws.json`. Cache per record (see `cache_ideas`) rather than trusting `affected_ids`. |\n| **Navigation** | Records, goals, history manifest and artifacts, the four `readme_*` files, timed files (ONE-PAGE.md), `law-families.json`, existence of `FOUNDATION_COMPOSITION` or `MAP.md`. Cheap, so always recompute when any of these change. |\n| **Completion** | `COVERAGE.json`, the core receipt, the receipt-listed pure-layer Lean files (computable from the receipt), `THEOREM-CONNECTIVITY.json`, `08-METHOD.md`, additions or deletions in `records/`. |\n| **Theory graph** | Records, `regions.json`, `Becoming.lean` and the modules it imports, the grammar module headers, `classify/*.tsv`, `outcomes.tsv`, `chapters/*.md`. |\n| **Indexes** | Any addition or deletion under `_process/research/`, `_process/history/`, `sources/` or `chapters/`; modification of chapters, `THE-THEORY-OF-BECOMING.md`, study entry files, root-foundation top-level files, `history/root-foundation` REVIEW files, `sources/*/README.md`, directive-group `.md`, `RESEARCH-DIRECTIVES.md`. |\n| **Reading catalogue** | The three registers, chapters (additions, deletions, edits), every entry source, existence of lean or evidence paths, the frozen volumes, `theories/*/README.md`. |\n| **Lean catalogue (strict and render)** | Any `.lean` outside saved-copy paths (`tools/research/boundary_check.lean`, `drafts/` and `sources/` included); any `.md` in its docs scope (theories/ except results/, `_process/research/`, `experiments/`, root); any addition or deletion that a docs-scope `.md` links to; the core receipt. |\n| **`check_links` on outputs** | Rerun on cached outputs when a fragment-linked `.md` target changes. Example: OPEN-QUESTIONS.md links `_process/BECOMING-WORKBOARD.md#decisions-pending-ren`. |\n| **links** | Changed live or generated `.md` as referrers; referrers of changed `.md` targets with fragments; referrers of added or deleted targets. |\n| **secrets** | Changed files, plus a full run when the allowlist or patterns change. |\n\n**Worked example: a board-only change.** A modification of `_process/BECOMING-WORKBOARD.md` alone affects only:\n- `links` for the board itself and the 7 files that link into it with a fragment\n- `check_links`' test of OPEN-QUESTIONS.md's anchor into it\n- secrets\n\nIt is not a record reference. It is outside the Lean docs scope (`_process/`, not `_process/research/`). Its existence is listed in `source-index.json`, but its content is not read there.\n\n### Problems in `affected_ids` (registry.py:1395-1425)\n\n- It ignores changes to code and config.\n- It misses a member removed from a law family, because it uses the current `_law_family` (1397, 1417).\n- It misses producers when a dependency edge or a consumer record is removed, because it follows current dependencies only (1420-1425).\n- Drifted records are never compared at all (research.py:279-280).\n\n### Two anchor algorithms\n\n`check_links` uses `reading_catalogue.slug` (reading_catalogue.py:129-150). `links` uses `moves.github_slug` (moves.py:259-315). The two are not equivalent, so one cannot stand in for the other.\n\n### Inert paths\n\nThe conservative list is in `unaffecting_paths`. All entries are modification-only. Additions, deletions and renames always need the inventory and link tiers."
+}

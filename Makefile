@@ -1,4 +1,4 @@
-.PHONY: research-check research-check-strict research-render research-find research-test research-imports research-links research-secrets
+.PHONY: research-check research-check-strict research-render research-find research-test research-imports research-links research-secrets gate gate-plan
 export QUERY
 
 research-check:
@@ -27,3 +27,12 @@ research-links:
 
 research-secrets:
 	python3 -B tools/research/research.py secrets
+
+# A landing's gate: the checks its changed paths can reach, a pass kept per tree, heavy runs in the
+# slots this repository's worktrees share (tools/research/gate.py). FULL=1 runs every check, reusing only passes on
+# this same tree, at a phase's end and before a push; FRESH=1 with it reuses none.
+gate:
+	python3 -B tools/research/gate.py run --base $(or $(BASE),main) $(if $(FULL),--full,) $(if $(FRESH),--fresh,)
+
+gate-plan:
+	python3 -B tools/research/gate.py plan --base $(or $(BASE),main)
