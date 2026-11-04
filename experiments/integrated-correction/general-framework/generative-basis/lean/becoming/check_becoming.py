@@ -4536,8 +4536,8 @@ def code_digest(functions):
             if (isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef)) and node.body
                     and isinstance(node.body[0], ast.Expr) and isinstance(node.body[0].value, ast.Constant)
                     and isinstance(node.body[0].value.value, str)):
-                first = node.body[0]
-                docstrings.add(((first.lineno, first.col_offset), (first.end_lineno, first.end_col_offset)))
+                # By where it starts: indentation, where ast's byte columns and tokenize's character columns agree.
+                docstrings.add((node.body[0].lineno, node.body[0].col_offset))
         lines = source.splitlines(True)
         marks = {tokenize.NEWLINE: ";", tokenize.INDENT: "{", tokenize.DEDENT: "}"}
         # From Python 3.12 an f-string is several tokens; it is read whole, as earlier Pythons read it.
@@ -4545,6 +4545,9 @@ def code_digest(functions):
         tokens, depth, begun, after_docstring = [], 0, None, False
         for token in tokenize.generate_tokens(io.StringIO("".join(lines)).readline):
             if after_docstring:
+                # The rest of the docstring's statement: its comments and its end of line.
+                if token.type in (tokenize.COMMENT, tokenize.NL):
+                    continue
                 after_docstring = False
                 if token.type == tokenize.NEWLINE:
                     continue
@@ -4556,7 +4559,7 @@ def code_digest(functions):
                     (row, column), (end_row, end_column) = begun, token.end
                     text = "".join(lines[row - 1:end_row])
                     tokens.append(text[column:len(text) - len(lines[end_row - 1]) + end_column])
-            elif token.type == tokenize.STRING and (token.start, token.end) in docstrings:
+            elif not depth and token.type == tokenize.STRING and token.start in docstrings:
                 after_docstring = True
             elif not depth and token.type not in (tokenize.COMMENT, tokenize.NL, tokenize.ENDMARKER):
                 tokens.append(marks.get(token.type, token.string))

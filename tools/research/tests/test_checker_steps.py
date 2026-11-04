@@ -423,22 +423,31 @@ class Runner(unittest.TestCase):
         self.assertNotEqual(checker.step_key(['t', 'b'], 'compile X', b'-- x\n', {}), first)
         self.assertNotEqual(checker.module_keys(['t', 'b'], {'X': b'-- x\n'}, ['X'])['X'], first)
 
-    def test_the_runner_covers_every_function_of_the_checker_it_calls(self):
-        """A module function a listed one calls is listed too, unless it only waits or locks: a helper
-        split out of the runner cannot fall outside its digest unnoticed."""
+    @staticmethod
+    def uncovered(checker, functions):
+        """The checker's module functions (cached ones included) that the given functions call and that
+        are neither among them nor helpers that only wait or lock."""
         import ast
         import inspect
         import textwrap
-        checker = load_checker()
-        listed = {function.__name__ for function in checker.RUNNER_FUNCTIONS}
+        listed = {function.__name__ for function in functions}
         waits = {'step_lock', 'lean_slot', 'wait_for', 'try_flock'}
         own = {name for name, value in vars(checker).items()
-               if inspect.isfunction(value) and value.__module__ == checker.__name__}
-        for function in checker.RUNNER_FUNCTIONS:
+               if inspect.isfunction(inspect.unwrap(value)) and inspect.unwrap(value).__module__ == checker.__name__}
+        missing = set()
+        for function in functions:
             tree = ast.parse(textwrap.dedent(inspect.getsource(inspect.unwrap(function))))
             called = {node.func.id for node in ast.walk(tree)
                       if isinstance(node, ast.Call) and isinstance(node.func, ast.Name) and node.func.id in own}
-            self.assertLessEqual(called - {function.__name__}, listed | waits, function.__name__)
+            missing |= called - listed - waits
+        return missing
+
+    def test_the_runner_covers_every_function_of_the_checker_it_calls(self):
+        """A helper split out of the runner, cached or not, cannot fall outside its digest unnoticed."""
+        checker = load_checker()
+        self.assertEqual(self.uncovered(checker, checker.RUNNER_FUNCTIONS), set())
+        without = tuple(f for f in checker.RUNNER_FUNCTIONS if f.__name__ != '_imports')
+        self.assertEqual(self.uncovered(checker, without), {'_imports'})
 
     def test_an_f_string_and_code_beside_a_docstring_count(self):
         base = 'def step(x):\n    return f"-o {x}.olean"\n'
@@ -447,6 +456,11 @@ class Runner(unittest.TestCase):
         beside = 'def step(x):\n    """doc"""; x.append(1)\n    return x\n'
         self.assertNotEqual(self.digest_of(beside), self.digest_of(beside.replace('; x.append(1)', '')))
         self.assertEqual(self.digest_of(beside), self.digest_of(beside.replace('"""doc"""', '"""other"""')))
+        wide = 'def step(x):\n    """From `A.B` → `A/B.lean`."""\n    return x\n'
+        bare = 'def step(x):\n    return x\n'
+        self.assertEqual(self.digest_of(wide), self.digest_of(bare), 'a docstring with a non-ASCII character')
+        self.assertEqual(self.digest_of(bare), self.digest_of(bare.replace('(x):\n', '(x):\n    """doc"""  # a note\n')),
+                         'a docstring with a comment after it')
 
 
 class EnvironmentAudit(unittest.TestCase):
