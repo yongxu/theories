@@ -55,8 +55,8 @@
     "nondual-method-not-proof"
   ],
   "validation_scope": {
-    "en": "verify_zh.py passes (RAE to RAE3, 4–5 November 2026; in research-test since): 438 files bound, a verdict per judgment (5,673), the 3,514 flagged each placed once in its flagged cluster and rejected elsewhere only as taken there, 2,023 fragments verbatim, 1,603 declarations in receipt 20261103T211917.845905Z, 234 records, 449 names, and 06's 114 Lean-name citations, each exact (one more off the spine), record links and 12 numbers of §七; the chapters' own checks ran until they went to history/ (23 October 2026). All readers AI; no edition collated.",
-    "zh": "verify_zh.py 通过（RAE 至 RAE3，11 月 4、5 日；此后随 research-test）：导入 438 文件，5,673 条判断各一裁定，所标 3,514 条各在所标之簇落一处、他簇不取必注所归，2,023 片段逐字，1,603 声明在回执 20261103T211917.845905Z 中，234 份记录，449 名，06 之 114 处 Lean 名（各确指一名，另一在脊柱外）、记录链接与第七节十二数；诸章之核止于 10 月 23 日入 history/。读者皆 AI；未与刻本对校。"
+    "en": "verify_zh.py passes (RAE to RAE3, 4–5 November 2026; in research-test since): 438 files bound, a verdict per judgment (5,673), the 3,514 flagged (15 by the map) each placed once in its flagged cluster and rejected elsewhere only as taken there, 2,023 fragments verbatim, 1,603 declarations in receipt 20261103T211917.845905Z, 234 records, 449 names, and 06's 114 Lean-name citations, each exact (one more off the spine), record links and 12 numbers of §七; the chapters' own checks ran until they went to history/ (23 October 2026). All readers AI; no edition collated.",
+    "zh": "verify_zh.py 通过（RAE 至 RAE3，11 月 4、5 日，此后随 research-test）：导入 438 件，5,673 判断各一裁定，所标 3,514 条（15 依映射）各在其簇落一处、他簇不取必注所归，2,023 片段逐字，1,603 声明在回执 20261103T211917.845905Z 中，234 记录，449 名，06 之 114 处 Lean 名（各确指一名，另一在脊柱外）、记录链接与第七节十二数；诸章之核止于 10 月 23 日入 history/。读者皆 AI，未对校刻本。"
   },
   "next_delta": {
     "en": "The gaps the texts raise, each to be claimed before it is written: witnesses that are functions of one another; measures of a juncture; a pool weighted by share. Then the three RO and 易传 kinds decided in the chapter written into those maps.",
@@ -395,7 +395,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/coverage.json",
       "role": "integration",
-      "sha256": "01d71a6da57eb3044951d614cb562b61e41080ea5fef07cdcf0d066e3d2ca8c0"
+      "sha256": "f8d230ca97b1c8db8e6f6725a3a8e15ffd790133c0ccb88b94e7820878e66ddf"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/work/names-decisions.tsv",
@@ -405,7 +405,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/verify_zh.py",
       "role": "integration",
-      "sha256": "b1a6c29bce3506ed76a3315975860a92cc48f3f36f738e6365179e7213394098"
+      "sha256": "8be5e82ca9d2225cb3fcb4a2bae6abcbbacd09f2cce0936948acec79238e7a8f"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/build_tables.py",

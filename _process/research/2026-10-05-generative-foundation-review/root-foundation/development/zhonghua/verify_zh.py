@@ -5,7 +5,8 @@
 Everything is checked against repository copies only:
   1. the import: every file of sources/civilization-thought-v1.0 hashes to its PROVENANCE.json entry;
   2. coverage: coverage.json has one verdict for every judgment (relation) of the imported model;
-  3. passages: every judgment the sweep flagged for a cluster lies in exactly one place there (an entry, a
+  3. passages: every judgment flagged for a cluster (by the sweep, or, for 15 the map places, by flag_2026-11-05.py)
+     lies in exactly one place there (an entry, a
      parallel or a rejection), no judgment the sweep left unflagged lies anywhere in the map, and across clusters a
      judgment one cluster takes (in an entry or a parallel) is rejected in another only where that rejection names the
      cluster that takes it or an entry that lists it; every id an entry cites exists in the model (a judgment, a reading unit, a sense

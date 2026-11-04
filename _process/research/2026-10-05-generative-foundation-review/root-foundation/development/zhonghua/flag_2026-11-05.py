@@ -36,6 +36,9 @@ def main():
         old = cov['verdicts'][r]
         cov['verdicts'][r] = {'c': c, 's': [], 'k': CODE[k], 'w': 'placed in the map, not flagged by the sweep (RAE3, flag_2026-11-05.py)',
                               'swept': old}
+    cov['about'] += (' Fifteen verdicts are not the sweep\'s: judgments it left at "-" that the map places are flagged for '
+                     'the cluster that places them, with k the kind of that place, their swept verdict kept under "swept" '
+                     '(board item RAE3, flag_2026-11-05.py, 5 November 2026).')
     C.write_text(json.dumps(cov, ensure_ascii=False, indent=0), encoding='utf-8')
     print(len(todo), 'flagged:', ', '.join(todo))
     return 0

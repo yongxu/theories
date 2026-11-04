@@ -31,7 +31,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-verify_zh.py passes (RAE to RAE3, 4–5 November 2026; in research-test since): 438 files bound, a verdict per judgment (5,673), the 3,514 flagged each placed once in its flagged cluster and rejected elsewhere only as taken there, 2,023 fragments verbatim, 1,603 declarations in receipt 20261103T211917.845905Z, 234 records, 449 names, and 06's 114 Lean-name citations, each exact (one more off the spine), record links and 12 numbers of §七; the chapters' own checks ran until they went to history/ (23 October 2026). All readers AI; no edition collated.
+verify_zh.py passes (RAE to RAE3, 4–5 November 2026; in research-test since): 438 files bound, a verdict per judgment (5,673), the 3,514 flagged (15 by the map) each placed once in its flagged cluster and rejected elsewhere only as taken there, 2,023 fragments verbatim, 1,603 declarations in receipt 20261103T211917.845905Z, 234 records, 449 names, and 06's 114 Lean-name citations, each exact (one more off the spine), record links and 12 numbers of §七; the chapters' own checks ran until they went to history/ (23 October 2026). All readers AI; no edition collated.
 
 Canonical source: [CIVILIZATION-THOUGHT-AND-BECOMING.md](../../history/CIVILIZATION-THOUGHT-AND-BECOMING.md)
 

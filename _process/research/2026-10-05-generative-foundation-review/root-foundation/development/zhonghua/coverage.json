@@ -1,5 +1,5 @@
 {
-"about": "Triage verdicts for every judgment (relation) of 《中华思想脉络》 v1.0 data/model.json: c = primary cluster or \"-\", s = other clusters, k = a/s/d (agreement, scope, divergence) or \"-\", w = the structure in a few words. AI verdicts from the ZH sweep (25 triage agents, 20 October 2026).",
+"about": "Triage verdicts for every judgment (relation) of 《中华思想脉络》 v1.0 data/model.json: c = primary cluster or \"-\", s = other clusters, k = a/s/d (agreement, scope, divergence) or \"-\", w = the structure in a few words. AI verdicts from the ZH sweep (25 triage agents, 20 October 2026). Fifteen verdicts are not the sweep's: judgments it left at \"-\" that the map places are flagged for the cluster that places them, with k the kind of that place, their swept verdict kept under \"swept\" (board item RAE3, flag_2026-11-05.py, 5 November 2026).",
 "model_sha256": "0a8ab02d0b15f9dcfd143f11ad636a0d7b65a89ed296154fc3a0410368f06b36",
 "verdicts": {
 "XC-R001": {
