@@ -209,7 +209,7 @@ class Stub:
             msg = {"content": None, "refusal": "I would rather not choose."}
         else:
             msg["content"] = json.dumps({"choice": inv[a]})
-        msg["reasoning"] = "line\u2028para\u2029next\x85line"     # read by no reader: through the line writer
+        msg["reasoning"] = "line\u2028para\u2029next\x85line\ud83d"     # read by no reader: through the line writer
         return {"response": {"model": self.served or request["model"],
                              "provider": self.provider or TC.PROVIDER[meta["family"]],
                              "service_tier": self.tier,
@@ -375,10 +375,28 @@ def faults(tmp, folder, m):
         finally:
             (folder / "calls.jsonl").write_text(text)
             (folder / "calls.jsonl.cut").unlink(missing_ok=True)
-    # a catalog read cut short: refused; mended, a read naming no snapshot put in its place at the largest
-    # t1 of any call, so that exactly the calls that ended after the last whole read are no longer read
-    # (resume makes them again); and a cut read that follows a whole read with no call between: moved with
-    # nothing put in its place, every call read as before
+    # a cut line followed by whole lines, as freeze 1's sink can leave under --parallel (the next record
+    # written onto the cut one, then another): mended from the first line that does not read
+    try:
+        joined = body3 = ("\n".join(lines[:-3]) + "\n").encode("utf-8")
+        joined += (lines[-3][:len(lines[-3]) // 2] + lines[-2] + "\n" + lines[-1] + "\n").encode("utf-8")
+        (folder / "calls.jsonl").write_bytes(joined)
+        refuses = refused(load)
+        T.mend(folder, "the dry run: a cut line with whole lines after it")
+        again = T.units(*load())
+        moved = T.moved_lines(folder)["calls.jsonl.cut"]
+        out["a cut line with lines written after it: refused, then mended from the first line that does not read, "
+            "every line after it moved and its call unread"] = \
+            refuses and len(moved["lines_moved"]) == 2 and len(moved["notes"]) == 1 and \
+            (folder / "calls.jsonl").read_bytes() == body3 and \
+            all(again["framings"][f].get("table") == whole["framings"][f].get("table") for f in TR.FRAMINGS)
+    finally:
+        (folder / "calls.jsonl").write_text(text)
+        (folder / "calls.jsonl.cut").unlink(missing_ok=True)
+    # a catalog read cut short: refused; mended, a read naming no snapshot put in its place at the move's
+    # time, later than every read and call, so that exactly the calls that ended after the last whole read
+    # are no longer read (resume makes them again); and a cut read that follows a whole read with no call
+    # between: every call read as before
     cat = (folder / "catalog.jsonl").read_text()
     cat_lines = cat.split("\n")[:-1]
     good = set(T.good_answers(folder, FAMILY))
@@ -389,23 +407,57 @@ def faults(tmp, folder, m):
         (folder / "catalog.jsonl").write_text("\n".join(cat_lines[:-1] + [cat_lines[-1][:len(cat_lines[-1]) // 2]]))
         refuses = refused(load)
         T.mend(folder, "the dry run: a catalog read half written")
-        nulls = [t_ for t_, s in R.catalog_reads(folder) if s is None]
+        reads = R.catalog_reads(folder)
+        nulls = [t_ for t_, s in reads if s is None]
         after = set(T.good_answers(folder, FAMILY))
         load()
         out["a catalog read cut short: refused, then mended with a read naming no snapshot in its place, at the "
-            "largest t1; exactly the calls that ended after the last whole read no longer read"] = \
-            refuses and bool(expect) and good - after == expect and nulls == [max(float(r["t1"]) for r in recs)]
+            "move's time; exactly the calls that ended after the last whole read no longer read"] = \
+            refuses and bool(expect) and good - after == expect and len(nulls) == 1 and \
+            nulls[0] > max(t_ for t_, s in reads if s is not None) and nulls[0] > max(float(r["t1"]) for r in recs)
+        (folder / "catalog.jsonl").write_text(cat)
         (folder / "catalog.jsonl.cut").unlink()
         extra = json.dumps({**json.loads(cat_lines[-1]), "t": float(json.loads(cat_lines[-1])["t"]) + 1})
         (folder / "catalog.jsonl").write_text(cat + extra[:len(extra) // 2])
         refuses = refused(load)
         T.mend(folder, "the dry run: a catalog read half written after a whole read")
-        out["a catalog read cut short after a whole read, no call between: refused, then moved with nothing in "
-            "its place, every call read as before"] = \
-            refuses and (folder / "catalog.jsonl").read_text() == cat and set(T.good_answers(folder, FAMILY)) == good
+        out["a catalog read cut short after a whole read, no call between: refused, then mended, every call "
+            "read as before"] = refuses and set(T.good_answers(folder, FAMILY)) == good
     finally:
         (folder / "catalog.jsonl").write_text(cat)
         (folder / "catalog.jsonl.cut").unlink(missing_ok=True)
+    # the line writer refuses every write after a failed one, and freeze 1's execute stops every call at
+    # the fault: a write cut by a full disk at the fifth record, under --parallel 4, leaves the cut line
+    # last, with at most the calls in flight made after it
+    class Full:
+        def __init__(self, fh, after):
+            self.fh, self.after = fh, after
+
+        def write(self, data):
+            if self.after == 0:
+                self.fh.write(data[:len(data) // 2])
+                raise OSError(28, "No space left on device")
+            self.after -= 1
+            return self.fh.write(data)
+    full = dry_folder(tmp, "full-" + folder.name)
+    sink, _ = T.open_sink(full)
+    sink.file = Full(sink.file, 4)
+    made = []
+
+    def counted(x):
+        made.append(x["id"])
+        return m.answer(x, 0)
+    try:
+        T.rounds(full, FAMILY, Stub(counted), sink, R.SpendGuard(1.0, 10 ** 6), parallel=4, catalog=CATALOG)
+        stopped = False
+    except (OSError, RuntimeError):
+        stopped = True
+    raw_full = (full / "calls.jsonl").read_bytes()
+    out["a write cut by a full disk under --parallel 4: the run stops, at most 4 calls made from the cut one on, "
+        "the cut line last, then mended"] = \
+        stopped and len(made) <= 4 + 4 and not raw_full.endswith(b"\n") and raw_full.count(b"\n") == 4 and \
+        refused(lambda: T.log_whole(full)) and len(T.mend(full, "the dry run: a full disk")) == 1 and \
+        len(R.logged(full)) == 4
     # freeze 1's open_sink creates both files empty: a run stopped before any read or call is whole
     empty = dry_folder(tmp, "empty-" + folder.name)
     T.open_sink(empty)
@@ -419,10 +471,12 @@ def faults(tmp, folder, m):
     raw = json.loads(lines[c_i])
     raw["note"] = "a\u2028b"
     out["a line holding U+2028 raw, refused"] = with_lines(
-        lines[:c_i] + [json.dumps(raw, ensure_ascii=False)] + lines[c_i + 1:], lambda: refused(load))
-    out["the line writer: no log holds U+2028, U+2029 or U+0085 raw, and every record reads"] = \
+        lines[:c_i] + [T.line(raw).replace("a\\u2028b", "a\u2028b")] + lines[c_i + 1:], lambda: refused(load))
+    out["the line writer: no log holds U+2028, U+2029 or U+0085 raw, a surrogate standing alone is escaped, "
+        "and every record reads with them"] = \
         not any(c in text for c in "\u2028\u2029\x85") and \
-        all("\u2028" in r["response"]["choices"][0]["message"].get("reasoning", "\u2028") for r in recs)
+        all(r["response"]["choices"][0]["message"].get("reasoning", "\u2028\ud83d").endswith("\x85line\ud83d")
+            for r in recs)
     # a planted line in the harness: an arm A prompt also shows a count; with its hash recomputed (as
     # a faulty build would), and with the frozen prompt's hash kept (which only the text's rebuild finds)
     for name, rehash in (("its hash recomputed", True), ("the frozen prompt's hash kept", False)):

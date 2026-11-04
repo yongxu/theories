@@ -37,6 +37,7 @@ does it for a last line cut short.
 import argparse
 import json
 import random
+import re
 import sys
 import time
 from collections import Counter, defaultdict
@@ -64,23 +65,39 @@ COURSE_TOKENS = 30              # each Saturday of a course arm B shows
 FRAME_TOKENS = 10               # each Saturday arm A is shown withheld
 
 
+LONE = re.compile("[\ud800-\udbff](?![\udc00-\udfff])|(?<![\ud800-\udbff])[\udc00-\udfff]")
+
+
 def line(rec):
     """A record's line: freeze 1's json.dumps(rec, ensure_ascii=False), with the three characters that
-    str.splitlines breaks at and JSON leaves raw written as their escapes. json.dumps writes them only
-    inside strings, and every backslash it writes is part of a whole escape, so the line loads as rec."""
-    return json.dumps(rec, ensure_ascii=False).replace("\u2028", "\\u2028").replace("\u2029", "\\u2029") \
+    str.splitlines breaks at and JSON leaves raw written as their escapes, and a surrogate standing
+    alone, which UTF-8 cannot encode, as its escape (a response escaped in UTF-16 can hold one, cut
+    mid-character at its token limit). json.dumps writes them only inside strings, and every backslash
+    it writes is part of a whole escape, so the line loads as rec."""
+    s = json.dumps(rec, ensure_ascii=False).replace("\u2028", "\\u2028").replace("\u2029", "\\u2029") \
         .replace("\x85", "\\u0085")
+    return LONE.sub(lambda m: "\\u%04x" % ord(m.group()), s)
 
 
 def open_sink(out):
     """Freeze 1's run.open_sink (the ids logged, what they cost, the catalog's note), with this line
-    writer in place of its own."""
+    writer in place of its own: unbuffered, and once a write fails, every later write refused, so that
+    nothing is appended after a line cut short. The failed write raises, and freeze 1's execute stops
+    every call at a fault, so only the calls already in flight are made after it."""
     first, done = R.open_sink(out)
-    fh = (Path(out) / "calls.jsonl").open("a", encoding="utf-8")
 
     def sink(rec):
-        fh.write(line(rec) + "\n")
-        fh.flush()
+        if sink.broken:
+            raise RuntimeError(f"an earlier write to the log failed ({sink.broken}); nothing more is written")
+        data = (line(rec) + "\n").encode("utf-8")
+        try:
+            k = 0
+            while k < len(data):
+                k += sink.file.write(data[k:])
+        except Exception as e:
+            sink.broken = repr(e)
+            raise
+    sink.file, sink.broken = (Path(out) / "calls.jsonl").open("ab", buffering=0), None
     sink.spent, sink.note = first.spent, first.note
     return sink, done
 
@@ -113,53 +130,57 @@ def log_whole(folder):
 
 
 def mend(folder, cause):
-    """FREEZE-1's note "A log cut short", for a last line cut short: where calls.jsonl or catalog.jsonl
-    does not end in a newline, or its last line does not read, that line is moved, byte for byte, to
-    NAME.cut beside it, followed by a newline and one line beginning "# " that names the time and the
-    cause. A catalog read moved is replaced by a whole read naming no snapshot, timed at the largest t1
-    of any logged call, where some logged call ended after the last whole read before it (or there is
-    none), so that resume makes those calls again rather than the rerun's first read closing them; where
-    none did, a good read already closed every call, and nothing is put in its place. Only a last line
-    moves: where any other line does not read whole, nothing is changed and the folder stays refused."""
+    """FREEZE-1's note "A log cut short": in calls.jsonl and catalog.jsonl, the first line that does not
+    read whole, or the last where the file does not end in a newline, and every line after it, are
+    moved, byte for byte, to NAME.cut beside it, followed by one line beginning "# " that names the time
+    and the cause. With this freeze's line writer that is the last line alone. Where catalog lines move,
+    a whole read naming no snapshot is put in their place, timed at the move, later than every read and
+    every call: the calls that ended after the last whole read then lack a good closing read, and
+    resume makes them again rather than the rerun's first read closing them. A moved call's record is no
+    longer logged, so its call is made again. Where a line holds a raw line separator, nothing is
+    changed and the folder stays refused."""
     folder = Path(folder)
-    kept, cut = {}, {}
+    kept, cut, recs = {}, {}, {}
     for name in ("calls.jsonl", "catalog.jsonl"):
         p = folder / name
         raw = p.read_bytes() if p.exists() else b""
         lines = raw.split(b"\n")
         ends = lines[-1] == b""
         lines = lines[:-1] if ends else lines
-        try:
-            whole = ends and isinstance(json.loads(lines[-1].decode("utf-8")), dict)
-        except ValueError:
-            whole = False
-        if raw and not whole:
-            kept[name], cut[name] = lines[:-1], lines[-1]
+        k, recs[name] = 0, []
+        for k, ln in enumerate(lines):
+            try:
+                s = ln.decode("utf-8")
+                rec = json.loads(s)
+                assert isinstance(rec, dict) and (ends or k < len(lines) - 1)
+            except (ValueError, AssertionError):
+                break
+            if any(c in s for c in "\u2028\u2029\x85"):
+                raise SystemExit(f"{p}: line {k + 1} holds a raw line separator; nothing changed, and the folder "
+                                 "stays refused (FREEZE-1.md)")
+            recs[name].append(rec)
         else:
-            kept[name] = lines if raw else []
+            k = len(lines)
+        kept[name] = lines[:k]
+        if k < len(lines):
+            cut[name] = lines[k:]
     if not cut:
-        print(f"{folder}: no last line cut short; nothing moved")
+        print(f"{folder}: every line reads whole; nothing moved")
         return []
-    recs = {}
-    for name, lines in kept.items():
-        try:
-            recs[name] = [json.loads(ln.decode("utf-8")) for ln in lines]
-            assert not any(c in ln.decode("utf-8") for ln in lines for c in "\u2028\u2029\x85")
-        except (ValueError, AssertionError):
-            raise SystemExit(f"{folder}/{name}: a line other than the last does not read whole; nothing changed, "
-                             "and the folder stays refused (FREEZE-1.md)")
-    done = [f"{name}: its last line moved to {name}.cut ({len(c)} bytes)" for name, c in cut.items()]
+    now = time.time()
+    done = [f"{name}: {len(c)} line{'s' if len(c) > 1 else ''} from line {len(kept[name]) + 1} moved to {name}.cut"
+            for name, c in cut.items()]
     if "catalog.jsonl" in cut:
-        last = max((float(c["t"]) for c in recs["catalog.jsonl"]), default=None)
-        ends_ = [float(r["t1"]) for r in recs["calls.jsonl"]]
-        if ends_ and (last is None or max(ends_) > last):
-            family = json.loads((folder / "meta.json").read_text(encoding="utf-8"))["family"]
-            kept["catalog.jsonl"].append(line({"t": max(ends_), "family": family, "slug": None}).encode("utf-8"))
-            done.append(f"catalog.jsonl: a read naming no snapshot put in its place, at t {max(ends_)}")
+        times = [float(c["t"]) for c in recs["catalog.jsonl"]] + [float(r["t1"]) for r in recs["calls.jsonl"]]
+        if times and now <= max(times):
+            raise SystemExit(f"{folder}: the clock is not later than every read and call; nothing changed")
+        family = json.loads((folder / "meta.json").read_text(encoding="utf-8"))["family"]
+        kept["catalog.jsonl"].append(line({"t": now, "family": family, "slug": None}).encode("utf-8"))
+        done.append(f"catalog.jsonl: a read naming no snapshot put in their place, at t {now}")
     stamp = time.strftime("%Y-%m-%dT%H:%M:%S%z")
     for name, c in cut.items():
         with (folder / (name + ".cut")).open("ab") as fh:
-            fh.write(c + b"\n" + f"# cut {stamp}: {cause}\n".encode("utf-8"))
+            fh.write(b"".join(ln + b"\n" for ln in c) + f"# cut {stamp}: {cause}\n".encode("utf-8"))
         (folder / name).write_bytes(b"".join(ln + b"\n" for ln in kept[name]))
     log_whole(folder)
     for d in done:
