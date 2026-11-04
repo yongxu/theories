@@ -221,6 +221,27 @@ The checker itself can be made faster without changing what it checks. In order 
 
 Removing `import Std` from GenerativeCore would save about a quarter of the steps, but it changes a foundation module that 467 receipts bind, so it is a decision, not a speedup. These are GT2 (§8). They come before RU, after the atlas plan's objectives.
 
+### 5.1 GT2: what was done, and measured
+
+GT2 (5 November 2026) gives the checker, the fallible-inquiry checker and `scratch_build.py` one plan of a run's steps (`lean_plan`) and one runner of a step (`lean_step`). Each part keeps what is checked the same, and says why:
+
+- **The environment audit in one pass.** It lists the environment's constants once and sorts them by module, each module's constants in the list's order, so its messages are the old ones in the old order. On the core's 386 modules its output was byte for byte the old driver's, in 27 s where the old driver took 90 s; the rest is `collectAxioms`, unchanged ([harness](gt2/measure_environment_audit.py), [result](gt2/out/environment-audit-core.json)).
+- **A lock per step key.** A step not in the cache runs under its key's lock and is looked up again once the lock is held, so a second run wanting the same step waits and then reuses it.
+- **Lean processes in the machine's slots** (`BECOMING_LEAN_SLOTS`, by default the cores): every Lean process of the three tools takes one while it runs, its timeout starting once it has it.
+- **Each step's seconds** in the receipt (`lean_steps.seconds`, `wall_seconds`) and in the cache entry.
+- **The compiles from the prelude keyed by their inputs alone.** Without the old tag, a module whose bytes and imports do not change when `import Std` is removed (32 of them, those below GenerativeCore) has its module's compile key: it is the same command on the same bytes with the same imports, so it is the same step.
+- **Imports parsed once in a run**, about 8 s of the run's Python.
+- **One task builder.** A scratch build now takes the checker's own steps for the modules it names, its signatures and its compiles from the prelude included, so a landing reuses them.
+
+The evidence, on one tree: a run of the new checker beside one of the old gave receipts whose 29 non-run fields are equal and which list the same 1,544 steps. Keys changed only where inputs did: the environment audit and the 386 compiles from the prelude, 32 now their modules' keys ([comparison](gt2/compare_receipts.py), [result](gt2/out/compare-first-run.json)). In that run 356 steps ran under the new runner; its Lean part took 58 s on a machine at load 22. A scratch build of two unchanged modules reused all 270 of its steps. A comment added to one module ran its audit, signatures and compile from the prelude, and the compile, the same step, waited on the lock and was reused. Twelve unit tests cover the runner, the lock, the slots and the plan ([tests](../../../../../tools/research/tests/test_checker_steps.py)).
+
+Two items were measured and left:
+
+- **One driver per module for the audit and the signatures.** Each driver costs about 0.3 s ([result](gt2/out/drivers.json)), so merging them saves about 115 s of processor time and 20 s of a full run's wall time. It would change the `<Module>Signatures.log` layout that kits read statements from, so it is not done. That holds so far (5 November 2026): it lapses if drivers grow costly or kits stop reading the logs by name.
+- **Skipping the root's empty drivers** saves about 0.6 s, which is not worth a different receipt.
+
+GT2 lands without a fresh core run. GT2 changed no step's command, arguments or driver text where it kept a key; the comparison shows that. What it changed in running a step, the lock, the slots, the timing and the store, ran in the comparison's 356 steps. A fresh run would rerun 1,188 unchanged steps, minutes of a busy machine for no other check. The weekly fresh run in CI and the run before a push remain.
+
 ## 6. The text changed
 
 - **AGENTS.md, Working together.** Before landing:
@@ -253,7 +274,7 @@ Before-copies: [AGENTS](../../../../history/2026-11-04-instructions/AGENTS-befor
 
 ## 8. What comes next
 
-- **GT2, the Lean checker** (§5): the environment audit in one pass, the merged drivers, the per-key lock, Lean processes in the slots. Each keeps every check identical and lands with a fresh core run and an independent reader of the checker. It comes before RU.
+- **GT2, the Lean checker** (§5.1): done 5 November 2026, with an independent reading of the checker; the merged drivers measured and left.
 - **GT3, the tests on fixtures.** Thirteen test files assert on the live records today, so a landing that touches a record runs most of the suite. The test map gives the way out:
   - move the live assertions the strict check does not yet make into it: the regions, the front-page rules, the stock against the standard boundaries, the shape of the shared laws;
   - drop those it already makes;
@@ -261,7 +282,7 @@ Before-copies: [AGENTS](../../../../history/2026-11-04-instructions/AGENTS-befor
 
   Each test then runs only when its code changes ([map](measurements/map-test-suite.md)).
 - **E30**, found in Phase 0 of the atlas: an explicit `<a id>` or a `###` anchor a record cites locates no section, so 39 citations are not protected from drift. Fixing it will show drift on main that then needs reading, so it is its own item.
-- **The area checks no landing runs**: the RO, ZH and Y verifiers (mended under the atlas's Phase 0, E3), the periphery checkers (the fallible-inquiry receipt first), the move receipts. Each joins the gate with its inputs once it passes.
+- **The area checks no landing runs**: the periphery checkers (the fallible-inquiry receipt first) and the move receipts. Each joins the gate with its inputs once it passes. The RO, ZH and Y verifiers joined as RAE's test (`test_classical_verifiers`), given their inputs by GT2.
 - **The freeze records with no paths**, and the seven standing mismatches: for their owners, through the coordinator.
 
 ## 9. The coordinator's requirements

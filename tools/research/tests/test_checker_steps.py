@@ -144,26 +144,94 @@ class SharedSteps(unittest.TestCase):
         self.assertEqual(peak[0], 2)
 
     def test_a_waiter_on_a_removed_lock_file_takes_the_new_one(self):
-        entered, order = threading.Event(), []
+        # Every attempt to lock, by thread and by the file's inode, recorded on the main thread's side.
+        real, tries, seen = self.checker.try_flock, [], {}
+        events = {name: threading.Event() for name in ('held', 'waiter_tried', 'release', 'third_tried', 'leave')}
+
+        def recording(handle):
+            state = real(handle)
+            who = threading.current_thread().name
+            tries.append((who, os.fstat(handle.fileno()).st_ino, state))
+            if state is False:
+                events[who + '_tried'].set()
+            return state
+        self.checker.try_flock = recording
+        inside, peak, order, lock = [0], [0], [], threading.Lock()
+
+        def body(name, wait_on):
+            with lock:
+                inside[0] += 1
+                peak[0] = max(peak[0], inside[0])
+                order.append(name)
+                seen[name] = os.stat(self.checker.LOCKS / 'k6.lock').st_ino
+            if name == 'holder':
+                events['held'].set()
+            events[wait_on].wait(5)
+            with lock:
+                inside[0] -= 1
 
         def holder():
             with self.checker.step_lock('k6'):
-                entered.set()
-                time.sleep(0.2)
-                order.append('holder')
+                body('holder', 'release')
 
         def waiter():
-            entered.wait()
             with self.checker.step_lock('k6'):
-                order.append('waiter')
-                self.assertTrue((self.checker.LOCKS / 'k6.lock').exists())
-        threads = [threading.Thread(target=holder), threading.Thread(target=waiter)]
-        for thread in threads:
-            thread.start()
-        for thread in threads:
-            thread.join()
-        self.assertEqual(order, ['holder', 'waiter'])
+                body('waiter', 'leave')
+
+        def third():
+            with self.checker.step_lock('k6'):
+                body('third', 'leave')
+        threads = {name: threading.Thread(target=f, name=name)
+                   for name, f in (('holder', holder), ('waiter', waiter), ('third', third))}
+        threads['holder'].start()
+        self.assertTrue(events['held'].wait(5))
+        threads['waiter'].start()
+        self.assertTrue(events['waiter_tried'].wait(5), 'the waiter opened the holder\'s file and found it held')
+        events['release'].set()
+        threads['holder'].join(5)
+        while 'waiter' not in order and threads['waiter'].is_alive():
+            time.sleep(0.01)
+        threads['third'].start()
+        self.assertTrue(events['third_tried'].wait(5), 'the third arrives while the waiter holds the new file')
+        events['leave'].set()
+        for thread in threads.values():
+            thread.join(5)
+        self.assertEqual(order, ['holder', 'waiter', 'third'])
+        self.assertEqual(peak[0], 1, 'no two holders at once')
+        first = seen['holder']
+        waiter_files = [inode for who, inode, _ in tries if who == 'waiter']
+        self.assertEqual(waiter_files[0], first, 'the waiter tried the removed file first')
+        self.assertNotEqual(seen['waiter'], first, 'and holds a new one')
+        self.assertIn((first, True), [(i, s) for who, i, s in tries if who == 'waiter'],
+                      'it took the removed file\'s lock, saw the file gone and took the new one')
         self.assertFalse((self.checker.LOCKS / 'k6.lock').exists())
+
+    def test_a_stopped_run_starts_no_waiting_step(self):
+        self.checker.LEAN_SLOTS = 1
+        started = []
+        with self.checker.lean_slot():
+            self.checker.STOP.set()
+            with self.assertRaises(RuntimeError):
+                with self.checker.lean_slot():
+                    started.append('lean')
+            with self.assertRaises(RuntimeError):
+                self.checker.lean_step(self.lean(0), ['x'], self.directory('a'), 'k7', ['out.olean'], {'run': 'a'})
+        self.assertEqual(started, [])
+        self.assertFalse((self.checker.CACHE / 'k7.json').exists())
+
+    def test_waits_end_at_their_deadline_and_a_file_system_without_locks_is_no_lock(self):
+        with self.checker.step_lock('k8'):
+            began = time.monotonic()
+            with self.checker.step_lock('k8', deadline=0.3):
+                waited = time.monotonic() - began
+        self.assertGreaterEqual(waited, 0.3)
+        self.assertLess(waited, 3)
+        self.checker.try_flock = lambda handle: None
+        with self.checker.step_lock('k9'):
+            with self.checker.step_lock('k9', deadline=30):
+                pass
+        with self.checker.lean_slot(deadline=30):
+            pass
 
 
 class Plan(unittest.TestCase):

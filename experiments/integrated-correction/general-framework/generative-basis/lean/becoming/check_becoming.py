@@ -35,17 +35,18 @@ directory and leaves the repository untouched; `BECOMING_LEAN_CACHE` moves the c
 Spine names that contain a word of exchange (cost, charge, credit and the like) are listed
 in the receipt as `market_names`, apart from a few scientific terms; they do not fail the run.
 
-A Lean step whose inputs match a step that passed in an earlier run is not run again:
-its outputs and log come from a cache shared by runs and worktrees (`step_key`). The
+A Lean step whose inputs match a step that passed, in an earlier run or earlier in this one (a
+compile from the prelude whose inputs are its module's), is not run again: its outputs and log come
+from a cache shared by runs and worktrees (`step_key`). The
 receipt lists which steps ran and which were reused, with the run each came from and
 each step's key. `BECOMING_FRESH=1` runs every step; `LEAN_TIMEOUT` sets the seconds
 allowed for each Lean run. Steps run concurrently (`BECOMING_JOBS` at once, by default half
 the cores; 1 runs them one at a time), each once the compiles of the modules it imports have
 passed; the receipt lists them in the order of a one-at-a-time run. A step not in the cache
 runs under its key's lock, so a second run wanting the same step at the same time waits and then
-reuses it, and every Lean process of this checker, the periphery checkers and `scratch_build.py`
+reuses it, and every Lean process of this checker, `check_fallible_inquiry.py` and `scratch_build.py`
 takes one of the machine's `BECOMING_LEAN_SLOTS` (by default the number of cores) for as long as it
-runs. The receipt keeps each step's seconds (`lean_steps.seconds`, the wait for a slot not counted)
+runs; a wait for a lock or a slot longer than `LEAN_TIMEOUT` goes on without it. The receipt keeps each step's seconds (`lean_steps.seconds`, the wait for a slot not counted)
 and the Lean part's wall time.
 
 The run folder keeps the receipt, the drivers and logs of the steps that ran, and a copy
@@ -3940,15 +3941,47 @@ def store(key, outputs, log, run, seconds=None):
 
 
 LOCKS = CACHE / "locks"
+# Set when a step of a run fails or the run is interrupted, so that steps still waiting for a lock or a
+# slot start no Lean; `run_graph` clears it as it starts.
+STOP = threading.Event()
+
+
+def try_flock(handle):
+    """Take the lock of an open file without waiting: True when taken, False when another holds it, None
+    when the file system cannot lock."""
+    try:
+        fcntl.flock(handle, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        return True
+    except BlockingIOError:
+        return False
+    except OSError:
+        return None
+
+
+def wait_for(take, what, deadline):
+    """Call `take` until it returns True (held). Raises once the run has stopped; after `deadline`
+    seconds returns False, so the step goes on without what it waited for (a lock or a slot only saves
+    work and spares the machine), with a line on stderr."""
+    started, pause = time.monotonic(), 0.02
+    while not take():
+        if STOP.is_set():
+            raise RuntimeError("the run stopped while a step waited for " + what)
+        if time.monotonic() - started > deadline:
+            print(f"waited {deadline} s for {what}; going on without it", file=sys.stderr)
+            return False
+        time.sleep(pause)
+        pause = min(2 * pause, 0.5)
+    return True
 
 
 @contextmanager
-def step_lock(key):
+def step_lock(key, deadline=TIMEOUT):
     """The lock of a step's key, held while the step runs and is stored, so a run wanting the same
     step meanwhile waits and then finds it in the cache. The lock's file is removed before the lock is
-    released, and a run that then holds the removed file takes the lock again. Without a writable
-    cache no lock is taken; the cache only saves work."""
-    path = LOCKS / (key + ".lock")
+    released, and a run that then holds the removed file takes the lock again. Without a writable cache,
+    on a file system that cannot lock, or after `deadline` seconds of waiting, the step runs without the
+    lock: the lock only saves work."""
+    path, handle = LOCKS / (key + ".lock"), None
     while True:
         try:
             LOCKS.mkdir(parents=True, exist_ok=True)
@@ -3956,7 +3989,17 @@ def step_lock(key):
         except OSError:
             handle = None
             break
-        fcntl.flock(handle, fcntl.LOCK_EX)
+        state = []
+        try:
+            waited = wait_for(lambda: state.append(try_flock(handle)) or state[-1] is not False,
+                              "the lock of step " + key, deadline)
+        except BaseException:
+            handle.close()
+            raise
+        if not waited or state[-1] is None:
+            handle.close()
+            handle = None
+            break
         try:
             if os.stat(path).st_ino == os.fstat(handle.fileno()).st_ino:
                 break
@@ -3975,38 +4018,44 @@ def step_lock(key):
 
 
 SLOTS = CACHE / "slots"
-# Lean processes run at once by every checker and scratch build sharing the cache (`BECOMING_LEAN_SLOTS`).
+# Lean processes run at once by this checker, check_fallible_inquiry.py and scratch_build.py, in every
+# worktree sharing the cache (`BECOMING_LEAN_SLOTS`).
 LEAN_SLOTS = max(1, int(os.environ.get("BECOMING_LEAN_SLOTS") or os.cpu_count() or 2))
 
 
 @contextmanager
-def lean_slot():
+def lean_slot(deadline=TIMEOUT):
     """One of the machine's Lean slots, held while a Lean process runs, so runs going at once share
-    the cores rather than each starting `JOBS` processes. Without a writable cache no slot is taken."""
+    the cores rather than each starting `JOBS` processes. Without a writable cache, on a file system
+    that cannot lock, or after `deadline` seconds of waiting, Lean runs without a slot."""
     try:
         SLOTS.mkdir(parents=True, exist_ok=True)
     except OSError:
         yield
         return
-    start = threading.get_ident() % LEAN_SLOTS
-    while True:
+    start, held = threading.get_ident() % LEAN_SLOTS, []
+
+    def take():
         for i in range(LEAN_SLOTS):
             try:
                 handle = open(SLOTS / f"lean-{(start + i) % LEAN_SLOTS}.lock", "a")
             except OSError:
-                yield
-                return
-            try:
-                fcntl.flock(handle, fcntl.LOCK_EX | fcntl.LOCK_NB)
-            except OSError:
-                handle.close()
-                continue
-            try:
-                yield
-            finally:
-                handle.close()
-            return
-        time.sleep(0.1)
+                return True
+            state = try_flock(handle)
+            if state:
+                held.append(handle)
+                return True
+            handle.close()
+            if state is None:
+                return True
+        return False
+
+    wait_for(take, "a Lean slot", deadline)
+    try:
+        yield
+    finally:
+        for handle in held:
+            handle.close()
 
 
 # A Lean step's outcome: its log, the run it was restored from (None for a step that ran), and for a
@@ -4023,13 +4072,15 @@ def lean_step(command, args, where, key=None, outputs=(), origin=None, timeout=T
     found = reuse(key, paths) if key else None
     if found:
         return Outcome(found[0], found[1], 0, True, None)
-    with step_lock(key) if key else nullcontext():
+    with step_lock(key, timeout) if key else nullcontext():
         found = reuse(key, paths) if key else None
         if found:
             return Outcome(found[0], found[1], 0, True, None)
-        if before:
-            before()
-        with lean_slot():
+        with lean_slot(timeout):
+            if STOP.is_set():
+                raise RuntimeError("the run stopped before this step started")
+            if before:
+                before()
             started = time.perf_counter()
             p = subprocess.run(command + args, cwd=where, env={**os.environ, "LEAN_PATH": str(where)}, text=True,
                                stdout=subprocess.PIPE, stderr=subprocess.STDOUT, timeout=timeout)
@@ -4049,7 +4100,8 @@ def run_graph(tasks, jobs=JOBS):
     it needs has finished; return the actions' results by name. A step waits only for the
     steps whose outputs it reads, so the outcome is the one-at-a-time outcome. Among ready
     tasks, the one with the longest chain of tasks waiting on it goes first. After a failure
-    no task starts; the first failure is raised once the running tasks end."""
+    no task starts, and a running task still waiting for a step's lock or a Lean slot stops; the first
+    failure is raised once the running tasks end."""
     waiting_on = {name: [] for name in tasks}
     for name, (needs, _) in tasks.items():
         for need in needs:
@@ -4065,23 +4117,30 @@ def run_graph(tasks, jobs=JOBS):
         chain(name)
     rank = {name: i for i, name in enumerate(tasks)}
     results, waiting, running, failure = {}, set(tasks), {}, None
+    STOP.clear()
     with ThreadPoolExecutor(max_workers=jobs) as pool:
-        while running or (waiting and failure is None):
-            if failure is None:
-                ready = sorted((name for name in waiting if all(n in results for n in tasks[name][0])),
-                               key=lambda name: (-depth[name], rank[name]))
-                for name in ready[:jobs - len(running)]:
-                    waiting.discard(name)
-                    running[pool.submit(tasks[name][1])] = name
-            if not running:
-                break
-            done, _ = wait(running, return_when=FIRST_COMPLETED)
-            for future in sorted(done, key=lambda f: rank[running[f]]):
-                name = running.pop(future)
-                try:
-                    results[name] = future.result()
-                except Exception as error:
-                    failure = failure or error
+        try:
+            while running or (waiting and failure is None):
+                if failure is None:
+                    ready = sorted((name for name in waiting if all(n in results for n in tasks[name][0])),
+                                   key=lambda name: (-depth[name], rank[name]))
+                    for name in ready[:jobs - len(running)]:
+                        waiting.discard(name)
+                        running[pool.submit(tasks[name][1])] = name
+                if not running:
+                    break
+                done, _ = wait(running, return_when=FIRST_COMPLETED)
+                for future in sorted(done, key=lambda f: rank[running[f]]):
+                    name = running.pop(future)
+                    try:
+                        results[name] = future.result()
+                    except Exception as error:
+                        failure = failure or error
+                        STOP.set()
+        except BaseException:
+            # Interrupted: steps still waiting for a lock or a slot start no Lean.
+            STOP.set()
+            raise
     if failure is not None:
         raise failure
     assert not waiting, ("tasks whose needs never finished", sorted(waiting))
