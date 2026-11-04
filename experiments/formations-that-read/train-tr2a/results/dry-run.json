@@ -1,0 +1,135 @@
+{
+ "the plan": {
+  "trainings": 240,
+  "distinct": true,
+  "no seed of the plan below SEED_BASE (seeds 0 to 3 were trained in development)": true,
+  "content vectors sha256": "d5f8b9545715c148e1013fd7189cfd1a5076b1ac436533955e40c95bf2d90e77",
+  "linear act ones": 32,
+  "xor act ones": 26
+ },
+ "schedules": {
+  "S1": {
+   "reads, each seed": [
+    192,
+    192,
+    192,
+    192,
+    192,
+    192,
+    192,
+    192,
+    192,
+    192,
+    192,
+    192,
+    192,
+    192,
+    192,
+    192,
+    192,
+    192,
+    192,
+    192
+   ],
+   "S1 is the cue-up occasions": true,
+   "S3 holds every cue-up occasion": true,
+   "seeds give different draws": true
+  },
+  "S2": {
+   "reads, each seed": [
+    190,
+    200,
+    177,
+    196,
+    188,
+    174,
+    209,
+    184,
+    184,
+    193,
+    199,
+    199,
+    192,
+    203,
+    197,
+    190,
+    199,
+    187,
+    174,
+    191
+   ],
+   "S1 is the cue-up occasions": true,
+   "S3 holds every cue-up occasion": true,
+   "seeds give different draws": true
+  },
+  "S3": {
+   "reads, each seed": [
+    241,
+    234,
+    238,
+    242,
+    237,
+    236,
+    243,
+    232,
+    243,
+    234,
+    240,
+    240,
+    238,
+    237,
+    248,
+    240,
+    235,
+    244,
+    240,
+    235
+   ],
+   "S1 is the cue-up occasions": true,
+   "S3 holds every cue-up occasion": true,
+   "seeds give different draws": true
+  }
+ },
+ "forbidden cases": {
+  "F1 counted where the act reads more than its state": true,
+  "F2 counted where the state reads more than its input": true,
+  "F3 counted where the cue leaks into the content-only input": true,
+  "none counted by a network acting as the content act": true
+ },
+ "planted twin": {
+  "under S1, a twin at every uncovered occasion": true,
+  "and its acts apart at every pair": true,
+  "under S2 it acts otherwise at read cue-down occasions, so fits nothing and is no twin": true,
+  "none under the content-only input": true
+ },
+ "coverage": {
+  "content-only, S1: measured coverage is the read set's": true,
+  "content-only, S2: measured coverage is the read set's": true,
+  "content-only, S3: measured coverage is the read set's": true,
+  "content-and-cue, S1: measured coverage is the read set's": true,
+  "content-and-cue, S2: measured coverage is the read set's": true,
+  "content-and-cue, S3: measured coverage is the read set's": true,
+  "Stage 0: coverage_exact against its enumeration": true
+ },
+ "the run": {
+  "a training is the same twice": true,
+  "a run on a small plan writes its readout": true,
+  "a readout there: refused": true
+ },
+ "refusals": {
+  "no FROZEN.sha256: refused": true,
+  "committed and unchanged: read": true,
+  "a frozen file changed: refused": true,
+  "FROZEN.sha256 itself uncommitted: refused": true,
+  "a listed file not committed: refused": true,
+  "another platform: refused": true,
+  "python3 -O: refused": true
+ },
+ "time": {
+  "one training at the plan's sizes, seconds": 0.79,
+  "the plan's trainings": 240,
+  "projected seconds": 190
+ },
+ "ok": true,
+ "checks": 27
+}
