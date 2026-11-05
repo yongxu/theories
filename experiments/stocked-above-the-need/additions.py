@@ -1,0 +1,256 @@
+"""What T1R reads beyond T1N's reader (DESIGN.md, sections 3, 5 and 10): the years of the stocking files' dates,
+where they give one, on the rows T1N's reader keeps, so that a stocking filed under another year's entry counts in
+the year it was made; R8, the
+unmarked share of a stocked year's fall age-0 catch, where the agency records it for a stocking it marked; and
+the lake-years with more than one fall survey. The layout facts read the structural columns alone (the lake, the
+year, the species and the date), never a count, a number stocked or a share.
+
+    python3 -B additions.py facts FOLDER     # the layout step's facts on T1R's additions; no value is printed
+"""
+
+import collections
+import csv
+import datetime
+import json
+import re
+import sys
+from pathlib import Path
+
+HERE = Path(__file__).resolve().parent
+sys.path.insert(0, str(HERE))
+import t1r                       # noqa: E402  (checks T1N's files against T1N's freeze as it loads)
+import reader                    # noqa: E402  (T1N's, checked by t1r)
+
+LAYOUT = json.loads((HERE / "layout.json").read_text())
+DATES, MARKS = LAYOUT["dates"], LAYOUT["marks"]
+MONTHS = "jan feb mar apr may jun jul aug sep oct nov dec".split()
+
+
+def _day_month(a, b):
+    """Whether a and b are a day and a month, either way round."""
+    a, b = int(a), int(b)
+    return (1 <= a <= 31 and 1 <= b <= 12) or (1 <= a <= 12 and 1 <= b <= 31)
+
+
+def _two(yy):
+    """A two-digit year: 00 to 29 read as 2000 to 2029, 30 to 99 as 1930 to 1999."""
+    return 2000 + int(yy) if int(yy) < 30 else 1900 + int(yy)
+
+
+def _one_date(s):
+    """The year of one date in a form `date_year` names, None otherwise."""
+    Y = r"(19\d\d|20\d\d)"
+    if m := re.fullmatch(Y, s):
+        return int(m.group(1))
+    if m := re.fullmatch(Y + r"[-/.](\d{1,2})[-/.](\d{1,2})", s):
+        return int(m.group(1)) if 1 <= int(m.group(2)) <= 12 and 1 <= int(m.group(3)) <= 31 else None
+    if m := re.fullmatch(r"(\d{1,2})[-/.](\d{1,2})[-/.]" + Y, s):
+        return int(m.group(3)) if _day_month(m.group(1), m.group(2)) else None
+    if m := re.fullmatch(r"(\d{1,2})[-/.](\d{1,2})[-/.](\d\d)", s):
+        return _two(m.group(3)) if _day_month(m.group(1), m.group(2)) else None
+    if m := re.fullmatch(r"(\d{1,2})[-/ ]([A-Za-z]{3,9})\.?[-/ ,]+(\d{4}|\d\d)", s):
+        y = m.group(3)
+        if not 1 <= int(m.group(1)) <= 31 or m.group(2)[:3].lower() not in MONTHS:
+            return None
+        return _two(y) if len(y) == 2 else (int(y) if 1900 <= int(y) <= 2099 else None)
+    if m := re.fullmatch(r"([A-Za-z]{3,9})\.?\s+(\d{1,2}),?\s+" + Y, s):
+        return int(m.group(3)) if m.group(1)[:3].lower() in MONTHS and 1 <= int(m.group(2)) <= 31 else None
+    if m := re.fullmatch(Y + r"(0[1-9]|1[0-2])(0[1-9]|[12]\d|3[01])", s):
+        return int(m.group(1))
+    if m := re.fullmatch(r"(\d{5})(\.\d+)?", s):
+        y = (datetime.date(1899, 12, 30) + datetime.timedelta(days=int(m.group(1)))).year
+        return y if 1900 <= y <= 2099 else None
+    return None
+
+
+def date_year(text):
+    """The year of a date as the files may give it, None where it cannot be told. The forms, each whole and perhaps
+    followed by a time:
+    - a four-digit year from 1900 to 2099 alone (2014);
+    - year, month and day (2014-05-02, 2014/05/02), or eight digits (20140502);
+    - month and day either way round, then a four- or two-digit year (5/2/2014, 13/2/94);
+    - day, month's name and year (02-May-2014, 2 May 14), or month's name, day and year (May 2, 2014);
+    - a spreadsheet's count of days from 1899-12-30, five digits and perhaps a fraction (41761, the 2nd of May
+      2014);
+    - two such dates joined by a dash or "to", in the same year (5/2/2014-5/9/2014).
+    A two-digit year reads 00 to 29 as 2000 to 2029 and 30 to 99 as 1930 to 1999. A day or month out of range, a
+    range across years, and any other form (a fiscal year, 2014-15) give None (round 2's R-22)."""
+    s = re.sub(r"[ T]\d{1,2}:\d\d(?::\d\d(?:\.\d+)?)?(?:\s*[AaPp][Mm])?$", "", (text or "").strip())
+    y = _one_date(s)
+    if y is not None:
+        return y
+    for m in re.finditer(r"\s*(?:-|–|\bto\b)\s*", s):
+        a, b = _one_date(s[:m.start()].strip()), _one_date(s[m.end():].strip())
+        if a is not None and a == b:
+            return a
+    return None
+
+
+def rows_of(folder, kind, columns):
+    path = Path(folder) / reader.FILES[kind]
+    if not path.exists():
+        return None, None
+    with path.open(newline="", encoding="utf-8-sig") as f:
+        rd = csv.DictReader(f)
+        names = rd.fieldnames or []
+        return [{k: row.get(c) for k, c in columns.items() if c in names} for row in rd], names
+
+
+DROPPED = ("walleye rows T1N's reader drops, with no readable entry year or no number stocked above 0: their dates "
+           "not read")
+DROPPED_YEAR = "walleye rows with no readable entry year, which T1N's reader drops: their dates not read"
+
+
+def kept(r, numbers=True):
+    """Whether T1N's reader keeps a stocking from this walleye row, as its `read_all` does: a readable entry year and
+    a number stocked above 0, each read by T1N's own `year_of` and `num` (round 4's R-28). With `numbers` False, as
+    in the layout step, which reads no number, the entry year alone."""
+    return reader.year_of(r.get("year") or "") is not None and (
+        not numbers or (reader.num(r.get("number") or "") or 0) > 0)
+
+
+def dated(folder, numbers=True):
+    """(the years its walleye stockings' dates fall in, by lake; the lakes undated; the facts), from the stocking
+    files' rows T1N's reader keeps (`kept`): a walleye row with no readable entry year or no number stocked above 0
+    gives no date and undates no lake (round 4's R-28). A lake is undated where a kept row of it gives no readable
+    year in its date, or a year more than one from its entry's, which is read as no date (round 2's R-22), or stands
+    in a stocking file with no date column while the other file has one. The map is None where neither file gives a
+    date column, and every lake is then undated. The facts count the rows whose date falls in another year than
+    their entry, the rows with no readable year, the rows whose date falls more than a year from their entry, the
+    rows T1N's reader drops, and the lakes undated. The layout step passes `numbers` False and reads no number: its
+    facts count the walleye rows with a readable entry year, those with no fish stocked among them."""
+    out, undated, facts, any_dates = {}, set(), {}, False
+    for kind in ("stocking", "other"):
+        cols = dict(reader.COLUMNS[kind])
+        keys = ("lake", "year", "species", "number") if numbers else ("lake", "year", "species")
+        rows, names = rows_of(folder, kind, {**{k: cols[k] for k in keys}, "date": DATES[kind]})
+        if rows is None:
+            facts[reader.FILES[kind]] = "not in the folder"
+            continue
+        walleye = [r for r in rows if reader.is_species(r.get("species") or "")]
+        read = [r for r in walleye if kept(r, numbers)]
+        if DATES[kind] not in names:
+            facts[reader.FILES[kind]] = f"no date column ({DATES[kind]!r})"
+            undated |= {reader.code(r.get("lake") or "") for r in read}
+            continue
+        any_dates = True
+        other_year = unread = far = 0
+        for r in read:
+            lid = reader.code(r.get("lake") or "")
+            y, d = reader.year_of(r.get("year") or ""), date_year(r.get("date"))
+            if d is None or abs(d - y) > 1:
+                unread += d is None
+                far += d is not None
+                undated.add(lid)
+                continue
+            other_year += d != y
+            out.setdefault(lid, set()).add(d)
+        facts[reader.FILES[kind]] = {"walleye rows whose date falls in another year than their entry": other_year,
+                                     "walleye rows with no readable year in the date": unread,
+                                     "walleye rows whose date falls more than a year from their entry, read as no "
+                                     "date": far,
+                                     DROPPED if numbers else DROPPED_YEAR: len(walleye) - len(read)}
+    if not any_dates:
+        return None, set(), facts
+    facts["lakes with a walleye stocking whose date could not be read"] = len(undated)
+    return out, undated, facts
+
+
+def marks(folder):
+    """R8: ({lake: {year: the unmarked share of that fall's age-0 catch}}, the facts), where the file is there. A
+    row with no year, or a share blank or below 0, is skipped and counted; a lake-year given twice with different
+    shares is dropped and counted. Where any share is above 1, the file may give percentages, and the second route
+    is not read: the map is None, since no rule here guesses the file's scale. None where the file is not there."""
+    path = Path(folder) / MARKS["file"]
+    if not path.exists():
+        return None, {"R8": "not in the folder"}
+    out, skipped, above, twice = {}, 0, 0, set()
+    c = MARKS["columns"]
+    with path.open(newline="", encoding="utf-8-sig") as f:
+        for row in csv.DictReader(f):
+            lid, yr = reader.code(row.get(c["lake"]) or ""), reader.year_of(row.get(c["year"]) or "")
+            share = reader.num(row.get(c["unmarked share"]) or "")
+            if yr is None or share is None or share < 0:
+                skipped += 1
+                continue
+            if share > 1:
+                above += 1
+                continue
+            if yr in out.get(lid, {}) and out[lid][yr] != share:
+                twice.add((lid, yr))
+            out.setdefault(lid, {})[yr] = share
+    for lid, yr in twice:
+        del out[lid][yr]
+    facts = {"R8 lake-years read": sum(len(v) for v in out.values()), "R8 rows skipped": skipped,
+             "R8 lake-years given twice with different shares, dropped": len(twice), "R8 shares above 1": above}
+    if above:
+        return None, {**facts, "R8": "not read: shares above 1, so the file may give percentages"}
+    return out, facts
+
+
+def repeated_fall(folder):
+    """The lake-years with more than one fall-survey row in R2, by its lake and year columns alone."""
+    cols = reader.COLUMNS["age0"]
+    rows, _ = rows_of(folder, "age0", {"lake": cols["lake"], "year": cols["year"]})
+    counts = collections.Counter((reader.code(r.get("lake") or ""), reader.year_of(r.get("year") or ""))
+                                 for r in rows or ())
+    return {k for k, n in counts.items() if n > 1 and k[1] is not None}
+
+
+def facts(folder):
+    """The layout step's facts on T1R's additions, from the structural columns alone: the stocking files' date
+    columns, the rows filed under another year than their date's and the lakes undated; R8's rows and lakes by
+    its lake and year columns, never its shares; the lake-years with more than one fall survey."""
+    out = {"stocking dates": dated(folder, numbers=False)[2],
+           "fall surveys: lake-years with more than one row": len(repeated_fall(folder))}
+    path = Path(folder) / MARKS["file"]
+    if not path.exists():
+        out["R8"] = "not in the folder"
+    else:
+        with path.open(newline="", encoding="utf-8-sig") as f:
+            rd = csv.DictReader(f)
+            names = rd.fieldnames or []
+            missing = [c for c in MARKS["columns"].values() if c not in names]
+            keys = [(reader.code(r.get(MARKS["columns"]["lake"]) or ""), reader.year_of(r.get(MARKS["columns"]["year"]) or ""))
+                    for r in rd]
+        out["R8"] = {"header": names, "columns layout.json names and the file lacks": missing,
+                     "lake-years": len({k for k in keys if k[1] is not None}), "lakes": len({k[0] for k in keys}),
+                     "rows naming a lake-year another row names": len(keys) - len(set(keys))}
+    return out
+
+
+def write_synthetic(lakes, folder, dated_map=None, marks_map=None, unreadable=()):
+    """Add T1R's columns to synthetic files T1N's reader wrote: a date for each stocking row, in its entry's year
+    or, where `dated_map` names one year for the lake's entry year less one, that year; no readable date for the
+    lakes `unreadable` names; and R8 from `marks_map`. For the dry run's reader and run checks."""
+    for kind in ("stocking", "other"):
+        path = Path(folder) / reader.FILES[kind]
+        if not path.exists():
+            continue
+        with path.open(newline="", encoding="utf-8") as f:
+            rd = csv.DictReader(f)
+            names, rows = list(rd.fieldnames or []), list(rd)
+        for r in rows:
+            y = reader.year_of(r[reader.COLUMNS[kind]["year"]])
+            lid = reader.code(r[reader.COLUMNS[kind]["lake"]])
+            moved = dated_map and y is not None and (y + 1) in dated_map.get(lid, set()) and y not in dated_map.get(lid, set())
+            r[DATES[kind]] = ("spring" if lid in unreadable else f"{(y + 1) if moved else y}-05-02" if y is not None
+                              else "")
+        with path.open("w", newline="", encoding="utf-8") as f:
+            w = csv.DictWriter(f, fieldnames=names + [DATES[kind]])
+            w.writeheader()
+            w.writerows(rows)
+    if marks_map:
+        c = MARKS["columns"]
+        with (Path(folder) / MARKS["file"]).open("w", newline="", encoding="utf-8") as f:
+            w = csv.DictWriter(f, fieldnames=[c["lake"], c["year"], c["unmarked share"]])
+            w.writeheader()
+            for lid, years in sorted(marks_map.items()):
+                for yr, share in sorted(years.items()):
+                    w.writerow({c["lake"]: lid, c["year"]: yr, c["unmarked share"]: share})
+
+
+if __name__ == "__main__":
+    if len(sys.argv) != 3 or sys.argv[1] != "facts":
+        raise SystemExit(__doc__)
+    print(json.dumps(facts(sys.argv[2]), indent=1, default=sorted))

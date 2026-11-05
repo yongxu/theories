@@ -1,0 +1,1535 @@
+{
+ "worlds, 900 lakes an archive": {
+  "need": {
+   "family": "T1 holds",
+   "speed 0.1": {
+    "V1": {
+     "Renewal rose with the level": 38,
+     "not decided": 2
+    },
+    "clauses, by outcome": {
+     "Renewal rose with the level": {
+      "unrecorded stocking": 38,
+      "something other than the level changed renewal or its survey between the years compared": 38,
+      "connected waters": 27
+     }
+    },
+    "a need fitted": 40,
+    "lakes read, median": 30,
+    "lakes read in a year below the need too, median": 9,
+    "the rise with the first fall after the low survey as the year below shown (reported), by outcome": {
+     "Renewal rose with the level": 14
+    }
+   },
+   "speed 0.03": {
+    "V1": {
+     "not decided": 14,
+     "Renewal rose with the level": 26
+    },
+    "clauses, by outcome": {
+     "Renewal rose with the level": {
+      "unrecorded stocking": 26,
+      "something other than the level changed renewal or its survey between the years compared": 26,
+      "connected waters": 24
+     }
+    },
+    "a need fitted": 40,
+    "lakes read, median": 15,
+    "lakes read in a year below the need too, median": 6,
+    "the rise with the first fall after the low survey as the year below shown (reported), by outcome": {
+     "Renewal rose with the level": 9
+    }
+   }
+  },
+  "needs vary": {
+   "family": "T1 holds",
+   "speed 0.1": {
+    "V1": {
+     "Renewal rose with the level": 40
+    },
+    "clauses, by outcome": {
+     "Renewal rose with the level": {
+      "unrecorded stocking": 40,
+      "something other than the level changed renewal or its survey between the years compared": 40,
+      "connected waters": 1
+     }
+    },
+    "a need fitted": 40,
+    "lakes read, median": 98,
+    "lakes read in a year below the need too, median": 44,
+    "the rise with the first fall after the low survey as the year below shown (reported), by outcome": {
+     "Renewal rose with the level": 40
+    }
+   },
+   "speed 0.03": {
+    "V1": {
+     "Renewal rose with the level": 40
+    },
+    "clauses, by outcome": {
+     "Renewal rose with the level": {
+      "unrecorded stocking": 40,
+      "something other than the level changed renewal or its survey between the years compared": 40
+     }
+    },
+    "a need fitted": 40,
+    "lakes read, median": 51,
+    "lakes read in a year below the need too, median": 29,
+    "the rise with the first fall after the low survey as the year below shown (reported), by outcome": {
+     "Renewal rose with the level": 40
+    }
+   }
+  },
+  "lakes differ": {
+   "family": "T1 holds",
+   "speed 0.1": {
+    "V1": {
+     "Renewal rose with the level": 40
+    },
+    "clauses, by outcome": {
+     "Renewal rose with the level": {
+      "unrecorded stocking": 40,
+      "something other than the level changed renewal or its survey between the years compared": 40
+     }
+    },
+    "a need fitted": 40,
+    "lakes read, median": 55,
+    "lakes read in a year below the need too, median": 23,
+    "the rise with the first fall after the low survey as the year below shown (reported), by outcome": {
+     "Renewal rose with the level": 40
+    }
+   },
+   "speed 0.03": {
+    "V1": {
+     "Renewal rose with the level": 40
+    },
+    "clauses, by outcome": {
+     "Renewal rose with the level": {
+      "unrecorded stocking": 40,
+      "connected waters": 15,
+      "something other than the level changed renewal or its survey between the years compared": 40
+     }
+    },
+    "a need fitted": 40,
+    "lakes read, median": 30,
+    "lakes read in a year below the need too, median": 15,
+    "the rise with the first fall after the low survey as the year below shown (reported), by outcome": {
+     "Renewal rose with the level": 40
+    }
+   }
+  },
+  "episodic": {
+   "family": "T1 holds",
+   "speed 0.1": {
+    "V1": {
+     "Renewal rose with the level": 40
+    },
+    "clauses, by outcome": {
+     "Renewal rose with the level": {
+      "unrecorded stocking": 40,
+      "something other than the level changed renewal or its survey between the years compared": 40
+     }
+    },
+    "a need fitted": 40,
+    "lakes read, median": 153,
+    "lakes read in a year below the need too, median": 62,
+    "the rise with the first fall after the low survey as the year below shown (reported), by outcome": {
+     "Renewal rose with the level": 40
+    }
+   },
+   "speed 0.03": {
+    "V1": {
+     "Renewal rose with the level": 40
+    },
+    "clauses, by outcome": {
+     "Renewal rose with the level": {
+      "unrecorded stocking": 40,
+      "something other than the level changed renewal or its survey between the years compared": 40,
+      "connected waters": 1
+     }
+    },
+    "a need fitted": 40,
+    "lakes read, median": 76,
+    "lakes read in a year below the need too, median": 39,
+    "the rise with the first fall after the low survey as the year below shown (reported), by outcome": {
+     "Renewal rose with the level": 40
+    }
+   }
+  },
+  "stocked every year": {
+   "family": "T1 holds",
+   "speed 0.1": {
+    "V1": {
+     "Renewal rose with the level": 40
+    },
+    "clauses, by outcome": {
+     "Renewal rose with the level": {
+      "unrecorded stocking": 40,
+      "something other than the level changed renewal or its survey between the years compared": 40,
+      "connected waters": 24
+     }
+    },
+    "a need fitted": 40,
+    "lakes read, median": 29,
+    "lakes read in a year below the need too, median": 12,
+    "the rise with the first fall after the low survey as the year below shown (reported), by outcome": {
+     "Renewal rose with the level": 17
+    }
+   },
+   "speed 0.03": {
+    "V1": {
+     "Renewal rose with the level": 32,
+     "not decided": 8
+    },
+    "clauses, by outcome": {
+     "Renewal rose with the level": {
+      "unrecorded stocking": 32,
+      "connected waters": 31,
+      "something other than the level changed renewal or its survey between the years compared": 32
+     }
+    },
+    "a need fitted": 40,
+    "lakes read, median": 15,
+    "lakes read in a year below the need too, median": 6,
+    "the rise with the first fall after the low survey as the year below shown (reported), by outcome": {
+     "Renewal rose with the level": 7
+    }
+   }
+  },
+  "open": {
+   "family": "T1 holds",
+   "speed 0.1": {
+    "V1": {
+     "Renewal rose with the level": 15,
+     "not decided": 25
+    },
+    "clauses, by outcome": {
+     "Renewal rose with the level": {
+      "unrecorded stocking": 15,
+      "connected waters": 11,
+      "something other than the level changed renewal or its survey between the years compared": 15
+     }
+    },
+    "a need fitted": 40,
+    "lakes read, median": 17,
+    "lakes read in a year below the need too, median": 5,
+    "the rise with the first fall after the low survey as the year below shown (reported), by outcome": {
+     "Renewal rose with the level": 1
+    }
+   },
+   "speed 0.03": {
+    "V1": {
+     "not decided": 37,
+     "Renewal rose with the level": 3
+    },
+    "clauses, by outcome": {
+     "Renewal rose with the level": {
+      "unrecorded stocking": 3,
+      "connected waters": 3,
+      "something other than the level changed renewal or its survey between the years compared": 3
+     }
+    },
+    "a need fitted": 40,
+    "lakes read, median": 8,
+    "lakes read in a year below the need too, median": 3,
+    "the rise with the first fall after the low survey as the year below shown (reported), by outcome": {
+     "not decided": 1
+    }
+   }
+  },
+  "yearlings read as age 0": {
+   "family": "T1 holds",
+   "speed 0.1": {
+    "V1": {
+     "Renewal rose with the level": 38,
+     "not decided": 2
+    },
+    "clauses, by outcome": {
+     "Renewal rose with the level": {
+      "unrecorded stocking": 38,
+      "connected waters": 26,
+      "something other than the level changed renewal or its survey between the years compared": 38
+     }
+    },
+    "a need fitted": 40,
+    "lakes read, median": 28,
+    "lakes read in a year below the need too, median": 10,
+    "the rise with the first fall after the low survey as the year below shown (reported), by outcome": {
+     "Renewal rose with the level": 19
+    }
+   },
+   "speed 0.03": {
+    "V1": {
+     "not decided": 15,
+     "Renewal rose with the level": 25
+    },
+    "clauses, by outcome": {
+     "Renewal rose with the level": {
+      "unrecorded stocking": 25,
+      "connected waters": 25,
+      "something other than the level changed renewal or its survey between the years compared": 25
+     }
+    },
+    "a need fitted": 40,
+    "lakes read, median": 14,
+    "lakes read in a year below the need too, median": 5,
+    "the rise with the first fall after the low survey as the year below shown (reported), by outcome": {
+     "Renewal rose with the level": 6
+    }
+   }
+  },
+  "stocking suppresses": {
+   "family": "a rival of the negative outcome",
+   "speed 0.1": {
+    "V1": {
+     "Renewal rose with the level": 40
+    },
+    "clauses, by outcome": {
+     "Renewal rose with the level": {
+      "unrecorded stocking": 40,
+      "connected waters": 25,
+      "something other than the level changed renewal or its survey between the years compared": 40
+     }
+    },
+    "a need fitted": 40,
+    "lakes read, median": 34,
+    "lakes read in a year below the need too, median": 10,
+    "the rise with the first fall after the low survey as the year below shown (reported), by outcome": {
+     "Renewal rose with the level": 17
+    }
+   },
+   "speed 0.03": {
+    "V1": {
+     "Renewal rose with the level": 18,
+     "not decided": 22
+    },
+    "clauses, by outcome": {
+     "Renewal rose with the level": {
+      "unrecorded stocking": 18,
+      "connected waters": 18,
+      "something other than the level changed renewal or its survey between the years compared": 18
+     }
+    },
+    "a need fitted": 40,
+    "lakes read, median": 15,
+    "lakes read in a year below the need too, median": 4,
+    "the rise with the first fall after the low survey as the year below shown (reported), by outcome": {
+     "Renewal rose with the level": 3
+    }
+   }
+  },
+  "stocked fish counted before they spawn": {
+   "family": "a rival of the negative outcome",
+   "speed 0.1": {
+    "V1": {
+     "Renewal fell short of the fit at the levels restored": 40
+    },
+    "clauses, by outcome": {
+     "Renewal fell short of the fit at the levels restored": {
+      "stocking suppresses natural renewal": 40,
+      "their own needs lie above the common one": 40,
+      "the adults restored count stocked fish not yet spawning": 40
+     }
+    },
+    "a need fitted": 40,
+    "lakes read, median": 31,
+    "lakes read in a year below the need too, median": 10,
+    "the rise with the first fall after the low survey as the year below shown (reported), by outcome": {}
+   },
+   "speed 0.03": {
+    "V1": {
+     "Renewal fell short of the fit at the levels restored": 29,
+     "not decided": 11
+    },
+    "clauses, by outcome": {
+     "Renewal fell short of the fit at the levels restored": {
+      "stocking suppresses natural renewal": 29,
+      "their own needs lie above the common one": 29,
+      "the adults restored count stocked fish not yet spawning": 29
+     }
+    },
+    "a need fitted": 40,
+    "lakes read, median": 13,
+    "lakes read in a year below the need too, median": 5,
+    "the rise with the first fall after the low survey as the year below shown (reported), by outcome": {}
+   }
+  },
+  "renewal lost, light harvest": {
+   "family": "renewal lost",
+   "speed 0.1": {
+    "V1": {
+     "Renewal fell short of the fit at the levels restored": 40
+    },
+    "clauses, by outcome": {
+     "Renewal fell short of the fit at the levels restored": {
+      "stocking suppresses natural renewal": 40,
+      "their own needs lie above the common one": 40,
+      "the adults restored count stocked fish not yet spawning": 40
+     }
+    },
+    "a need fitted": 40,
+    "lakes read, median": 47,
+    "lakes read in a year below the need too, median": 15,
+    "the rise with the first fall after the low survey as the year below shown (reported), by outcome": {},
+    "lakes read that had lost their renewal, by outcome: lost, read; of the lakes that renewed above the need and not below, lost, all": {
+     "Renewal fell short of the fit at the levels restored": [
+      1769,
+      1844,
+      0,
+      1
+     ]
+    }
+   },
+   "speed 0.03": {
+    "V1": {
+     "Renewal fell short of the fit at the levels restored": 40
+    },
+    "clauses, by outcome": {
+     "Renewal fell short of the fit at the levels restored": {
+      "stocking suppresses natural renewal": 40,
+      "their own needs lie above the common one": 40,
+      "the adults restored count stocked fish not yet spawning": 40
+     }
+    },
+    "a need fitted": 40,
+    "lakes read, median": 21,
+    "lakes read in a year below the need too, median": 8,
+    "the rise with the first fall after the low survey as the year below shown (reported), by outcome": {},
+    "lakes read that had lost their renewal, by outcome: lost, read; of the lakes that renewed above the need and not below, lost, all": {
+     "Renewal fell short of the fit at the levels restored": [
+      831,
+      856,
+      0,
+      0
+     ]
+    }
+   }
+  },
+  "renewal lost": {
+   "family": "renewal lost",
+   "speed 0.1": {
+    "V1": {
+     "Renewal fell short of the fit at the levels restored": 40
+    },
+    "clauses, by outcome": {
+     "Renewal fell short of the fit at the levels restored": {
+      "stocking suppresses natural renewal": 40,
+      "their own needs lie above the common one": 40,
+      "the adults restored count stocked fish not yet spawning": 40
+     }
+    },
+    "a need fitted": 40,
+    "lakes read, median": 38,
+    "lakes read in a year below the need too, median": 10,
+    "the rise with the first fall after the low survey as the year below shown (reported), by outcome": {},
+    "lakes read that had lost their renewal, by outcome: lost, read; of the lakes that renewed above the need and not below, lost, all": {
+     "Renewal fell short of the fit at the levels restored": [
+      1398,
+      1473,
+      0,
+      2
+     ]
+    }
+   },
+   "speed 0.03": {
+    "V1": {
+     "Renewal fell short of the fit at the levels restored": 40
+    },
+    "clauses, by outcome": {
+     "Renewal fell short of the fit at the levels restored": {
+      "stocking suppresses natural renewal": 40,
+      "their own needs lie above the common one": 40,
+      "the adults restored count stocked fish not yet spawning": 40
+     }
+    },
+    "a need fitted": 40,
+    "lakes read, median": 20,
+    "lakes read in a year below the need too, median": 7,
+    "the rise with the first fall after the low survey as the year below shown (reported), by outcome": {},
+    "lakes read that had lost their renewal, by outcome: lost, read; of the lakes that renewed above the need and not below, lost, all": {
+     "Renewal fell short of the fit at the levels restored": [
+      761,
+      793,
+      0,
+      0
+     ]
+    }
+   }
+  },
+  "renewal lost, other stocking read": {
+   "family": "renewal lost",
+   "speed 0.1": {
+    "V1": {
+     "not decided": 2,
+     "Renewal fell short of the fit at the levels restored": 38
+    },
+    "clauses, by outcome": {
+     "Renewal fell short of the fit at the levels restored": {
+      "stocking suppresses natural renewal": 38,
+      "their own needs lie above the common one": 38,
+      "the adults restored count stocked fish not yet spawning": 38
+     }
+    },
+    "a need fitted": 40,
+    "lakes read, median": 17,
+    "lakes read in a year below the need too, median": 5,
+    "the rise with the first fall after the low survey as the year below shown (reported), by outcome": {},
+    "lakes read that had lost their renewal, by outcome: lost, read; of the lakes that renewed above the need and not below, lost, all": {
+     "not decided": [
+      13,
+      14,
+      0,
+      0
+     ],
+     "Renewal fell short of the fit at the levels restored": [
+      607,
+      653,
+      0,
+      0
+     ]
+    }
+   },
+   "speed 0.03": {
+    "V1": {
+     "not decided": 32,
+     "Renewal fell short of the fit at the levels restored": 8
+    },
+    "clauses, by outcome": {
+     "Renewal fell short of the fit at the levels restored": {
+      "stocking suppresses natural renewal": 8,
+      "their own needs lie above the common one": 8,
+      "the adults restored count stocked fish not yet spawning": 8
+     }
+    },
+    "a need fitted": 40,
+    "lakes read, median": 7,
+    "lakes read in a year below the need too, median": 2,
+    "the rise with the first fall after the low survey as the year below shown (reported), by outcome": {},
+    "lakes read that had lost their renewal, by outcome: lost, read; of the lakes that renewed above the need and not below, lost, all": {
+     "not decided": [
+      185,
+      191,
+      0,
+      0
+     ],
+     "Renewal fell short of the fit at the levels restored": [
+      83,
+      91,
+      0,
+      0
+     ]
+    }
+   }
+  },
+  "renewal lost, dated": {
+   "family": "renewal lost",
+   "speed 0.1": {
+    "V1": {
+     "Renewal fell short of the fit at the levels restored": 40
+    },
+    "clauses, by outcome": {
+     "Renewal fell short of the fit at the levels restored": {
+      "stocking suppresses natural renewal": 40,
+      "their own needs lie above the common one": 40,
+      "the adults restored count stocked fish not yet spawning": 40
+     }
+    },
+    "a need fitted": 40,
+    "lakes read, median": 41,
+    "lakes read in a year below the need too, median": 11,
+    "the rise with the first fall after the low survey as the year below shown (reported), by outcome": {},
+    "lakes read that had lost their renewal, by outcome: lost, read; of the lakes that renewed above the need and not below, lost, all": {
+     "Renewal fell short of the fit at the levels restored": [
+      1586,
+      1636,
+      0,
+      0
+     ]
+    }
+   },
+   "speed 0.03": {
+    "V1": {
+     "Renewal fell short of the fit at the levels restored": 40
+    },
+    "clauses, by outcome": {
+     "Renewal fell short of the fit at the levels restored": {
+      "stocking suppresses natural renewal": 40,
+      "their own needs lie above the common one": 40,
+      "the adults restored count stocked fish not yet spawning": 40
+     }
+    },
+    "a need fitted": 40,
+    "lakes read, median": 20,
+    "lakes read in a year below the need too, median": 7,
+    "the rise with the first fall after the low survey as the year below shown (reported), by outcome": {},
+    "lakes read that had lost their renewal, by outcome: lost, read; of the lakes that renewed above the need and not below, lost, all": {
+     "Renewal fell short of the fit at the levels restored": [
+      765,
+      792,
+      0,
+      1
+     ]
+    }
+   }
+  },
+  "renewal lost, the lost lakes left unstocked": {
+   "family": "renewal lost",
+   "speed 0.1": {
+    "V1": {
+     "not decided": 36,
+     "Renewal fell short of the fit at the levels restored": 4
+    },
+    "clauses, by outcome": {
+     "Renewal fell short of the fit at the levels restored": {
+      "stocking suppresses natural renewal": 4,
+      "their own needs lie above the common one": 4,
+      "the adults restored count stocked fish not yet spawning": 4
+     }
+    },
+    "a need fitted": 40,
+    "lakes read, median": 87,
+    "lakes read in a year below the need too, median": 4,
+    "the rise with the first fall after the low survey as the year below shown (reported), by outcome": {},
+    "lakes read that had lost their renewal, by outcome: lost, read; of the lakes that renewed above the need and not below, lost, all": {
+     "not decided": [
+      414,
+      3131,
+      0,
+      5
+     ],
+     "Renewal fell short of the fit at the levels restored": [
+      61,
+      321,
+      0,
+      0
+     ]
+    }
+   },
+   "speed 0.03": {
+    "V1": {
+     "not decided": 38,
+     "Renewal fell short of the fit at the levels restored": 2
+    },
+    "clauses, by outcome": {
+     "Renewal fell short of the fit at the levels restored": {
+      "stocking suppresses natural renewal": 2,
+      "their own needs lie above the common one": 2,
+      "the adults restored count stocked fish not yet spawning": 2
+     }
+    },
+    "a need fitted": 40,
+    "lakes read, median": 16,
+    "lakes read in a year below the need too, median": 3,
+    "the rise with the first fall after the low survey as the year below shown (reported), by outcome": {},
+    "lakes read that had lost their renewal, by outcome: lost, read; of the lakes that renewed above the need and not below, lost, all": {
+     "not decided": [
+      80,
+      659,
+      0,
+      9
+     ],
+     "Renewal fell short of the fit at the levels restored": [
+      11,
+      28,
+      0,
+      0
+     ]
+    }
+   }
+  },
+  "renewal lost, yearlings read as age 0": {
+   "family": "renewal lost",
+   "speed 0.1": {
+    "V1": {
+     "Renewal fell short of the fit at the levels restored": 40
+    },
+    "clauses, by outcome": {
+     "Renewal fell short of the fit at the levels restored": {
+      "stocking suppresses natural renewal": 40,
+      "their own needs lie above the common one": 40,
+      "the adults restored count stocked fish not yet spawning": 40
+     }
+    },
+    "a need fitted": 40,
+    "lakes read, median": 46,
+    "lakes read in a year below the need too, median": 14,
+    "the rise with the first fall after the low survey as the year below shown (reported), by outcome": {},
+    "lakes read that had lost their renewal, by outcome: lost, read; of the lakes that renewed above the need and not below, lost, all": {
+     "Renewal fell short of the fit at the levels restored": [
+      1728,
+      1811,
+      0,
+      1
+     ]
+    }
+   },
+   "speed 0.03": {
+    "V1": {
+     "Renewal fell short of the fit at the levels restored": 39,
+     "not decided": 1
+    },
+    "clauses, by outcome": {
+     "Renewal fell short of the fit at the levels restored": {
+      "stocking suppresses natural renewal": 39,
+      "their own needs lie above the common one": 39,
+      "the adults restored count stocked fish not yet spawning": 39
+     }
+    },
+    "a need fitted": 40,
+    "lakes read, median": 23,
+    "lakes read in a year below the need too, median": 9,
+    "the rise with the first fall after the low survey as the year below shown (reported), by outcome": {},
+    "lakes read that had lost their renewal, by outcome: lost, read; of the lakes that renewed above the need and not below, lost, all": {
+     "Renewal fell short of the fit at the levels restored": [
+      808,
+      853,
+      0,
+      1
+     ],
+     "not decided": [
+      7,
+      7,
+      0,
+      0
+     ]
+    }
+   }
+  },
+  "renewal lost, need": {
+   "family": "mixed",
+   "speed 0.1": {
+    "V1": {
+     "Renewal rose with the level": 32,
+     "Renewal fell short of the fit at the levels restored": 8
+    },
+    "clauses, by outcome": {
+     "Renewal rose with the level": {
+      "unrecorded stocking": 32,
+      "connected waters": 29,
+      "something other than the level changed renewal or its survey between the years compared": 32
+     },
+     "Renewal fell short of the fit at the levels restored": {
+      "stocking suppresses natural renewal": 8,
+      "their own needs lie above the common one": 8,
+      "the adults restored count stocked fish not yet spawning": 8
+     }
+    },
+    "a need fitted": 40,
+    "lakes read, median": 68,
+    "lakes read in a year below the need too, median": 23,
+    "the rise with the first fall after the low survey as the year below shown (reported), by outcome": {
+     "Renewal rose with the level": 6
+    },
+    "lakes read that had lost their renewal, by outcome: lost, read; of the lakes that renewed above the need and not below, lost, all": {
+     "Renewal rose with the level": [
+      1520,
+      2217,
+      0,
+      247
+     ],
+     "Renewal fell short of the fit at the levels restored": [
+      354,
+      474,
+      0,
+      25
+     ]
+    }
+   },
+   "speed 0.03": {
+    "V1": {
+     "Renewal rose with the level": 22,
+     "Renewal fell short of the fit at the levels restored": 18
+    },
+    "clauses, by outcome": {
+     "Renewal rose with the level": {
+      "unrecorded stocking": 22,
+      "connected waters": 22,
+      "something other than the level changed renewal or its survey between the years compared": 22
+     },
+     "Renewal fell short of the fit at the levels restored": {
+      "stocking suppresses natural renewal": 18,
+      "their own needs lie above the common one": 18,
+      "the adults restored count stocked fish not yet spawning": 18
+     }
+    },
+    "a need fitted": 40,
+    "lakes read, median": 32,
+    "lakes read in a year below the need too, median": 14,
+    "the rise with the first fall after the low survey as the year below shown (reported), by outcome": {
+     "Renewal rose with the level": 4
+    },
+    "lakes read that had lost their renewal, by outcome: lost, read; of the lakes that renewed above the need and not below, lost, all": {
+     "Renewal rose with the level": [
+      429,
+      715,
+      0,
+      136
+     ],
+     "Renewal fell short of the fit at the levels restored": [
+      391,
+      561,
+      0,
+      51
+     ]
+    }
+   }
+  },
+  "renewal lost, other stocking unread": {
+   "family": "confounded",
+   "speed 0.1": {
+    "V1": {
+     "Renewal fell short of the fit at the levels restored": 11,
+     "Renewal rose with the level": 29
+    },
+    "clauses, by outcome": {
+     "Renewal fell short of the fit at the levels restored": {
+      "stocking suppresses natural renewal": 11,
+      "their own needs lie above the common one": 11,
+      "the adults restored count stocked fish not yet spawning": 11
+     },
+     "Renewal rose with the level": {
+      "unrecorded stocking": 29,
+      "connected waters": 23,
+      "something other than the level changed renewal or its survey between the years compared": 29
+     }
+    },
+    "a need fitted": 40,
+    "lakes read, median": 45,
+    "lakes read in a year below the need too, median": 13,
+    "the rise with the first fall after the low survey as the year below shown (reported), by outcome": {
+     "Renewal rose with the level": 19
+    },
+    "lakes read that had lost their renewal, by outcome: lost, read; of the lakes that renewed above the need and not below, lost, all": {
+     "Renewal fell short of the fit at the levels restored": [
+      409,
+      426,
+      37,
+      37
+     ],
+     "Renewal rose with the level": [
+      1298,
+      1350,
+      209,
+      211
+     ]
+    }
+   },
+   "speed 0.03": {
+    "V1": {
+     "Renewal rose with the level": 19,
+     "Renewal fell short of the fit at the levels restored": 18,
+     "not decided": 3
+    },
+    "clauses, by outcome": {
+     "Renewal rose with the level": {
+      "unrecorded stocking": 19,
+      "connected waters": 19,
+      "something other than the level changed renewal or its survey between the years compared": 19
+     },
+     "Renewal fell short of the fit at the levels restored": {
+      "stocking suppresses natural renewal": 18,
+      "their own needs lie above the common one": 18,
+      "the adults restored count stocked fish not yet spawning": 18
+     }
+    },
+    "a need fitted": 40,
+    "lakes read, median": 22,
+    "lakes read in a year below the need too, median": 9,
+    "the rise with the first fall after the low survey as the year below shown (reported), by outcome": {
+     "Renewal rose with the level": 16
+    },
+    "lakes read that had lost their renewal, by outcome: lost, read; of the lakes that renewed above the need and not below, lost, all": {
+     "Renewal rose with the level": [
+      444,
+      461,
+      123,
+      123
+     ],
+     "Renewal fell short of the fit at the levels restored": [
+      336,
+      347,
+      44,
+      44
+     ],
+     "not decided": [
+      53,
+      55,
+      11,
+      11
+     ]
+    }
+   }
+  },
+  "renewal lost, other stocking in no record": {
+   "family": "confounded",
+   "speed 0.1": {
+    "V1": {
+     "Renewal rose with the level": 36,
+     "Renewal fell short of the fit at the levels restored": 4
+    },
+    "clauses, by outcome": {
+     "Renewal rose with the level": {
+      "unrecorded stocking": 36,
+      "something other than the level changed renewal or its survey between the years compared": 36,
+      "connected waters": 25
+     },
+     "Renewal fell short of the fit at the levels restored": {
+      "stocking suppresses natural renewal": 4,
+      "their own needs lie above the common one": 4,
+      "the adults restored count stocked fish not yet spawning": 4
+     }
+    },
+    "a need fitted": 40,
+    "lakes read, median": 46,
+    "lakes read in a year below the need too, median": 14,
+    "the rise with the first fall after the low survey as the year below shown (reported), by outcome": {
+     "Renewal rose with the level": 27
+    },
+    "lakes read that had lost their renewal, by outcome: lost, read; of the lakes that renewed above the need and not below, lost, all": {
+     "Renewal rose with the level": [
+      1644,
+      1703,
+      292,
+      294
+     ],
+     "Renewal fell short of the fit at the levels restored": [
+      157,
+      166,
+      12,
+      12
+     ]
+    }
+   },
+   "speed 0.03": {
+    "V1": {
+     "not decided": 6,
+     "Renewal rose with the level": 17,
+     "Renewal fell short of the fit at the levels restored": 17
+    },
+    "clauses, by outcome": {
+     "Renewal rose with the level": {
+      "unrecorded stocking": 17,
+      "connected waters": 13,
+      "something other than the level changed renewal or its survey between the years compared": 17
+     },
+     "Renewal fell short of the fit at the levels restored": {
+      "stocking suppresses natural renewal": 17,
+      "their own needs lie above the common one": 17,
+      "the adults restored count stocked fish not yet spawning": 17
+     }
+    },
+    "a need fitted": 40,
+    "lakes read, median": 24,
+    "lakes read in a year below the need too, median": 10,
+    "the rise with the first fall after the low survey as the year below shown (reported), by outcome": {
+     "Renewal rose with the level": 14,
+     "Renewal fell short of the fit at the levels restored": 3
+    },
+    "lakes read that had lost their renewal, by outcome: lost, read; of the lakes that renewed above the need and not below, lost, all": {
+     "not decided": [
+      99,
+      100,
+      18,
+      18
+     ],
+     "Renewal rose with the level": [
+      425,
+      439,
+      114,
+      114
+     ],
+     "Renewal fell short of the fit at the levels restored": [
+      392,
+      406,
+      56,
+      56
+     ]
+    }
+   }
+  },
+  "renewal lost, no dates": {
+   "family": "confounded",
+   "speed 0.1": {
+    "V1": {
+     "Renewal fell short of the fit at the levels restored": 40
+    },
+    "clauses, by outcome": {
+     "Renewal fell short of the fit at the levels restored": {
+      "stocking suppresses natural renewal": 40,
+      "their own needs lie above the common one": 40,
+      "the adults restored count stocked fish not yet spawning": 40
+     }
+    },
+    "a need fitted": 40,
+    "lakes read, median": 52,
+    "lakes read in a year below the need too, median": 22,
+    "the rise with the first fall after the low survey as the year below shown (reported), by outcome": {},
+    "lakes read that had lost their renewal, by outcome: lost, read; of the lakes that renewed above the need and not below, lost, all": {
+     "Renewal fell short of the fit at the levels restored": [
+      1988,
+      2063,
+      0,
+      1
+     ]
+    }
+   },
+   "speed 0.03": {
+    "V1": {
+     "Renewal fell short of the fit at the levels restored": 40
+    },
+    "clauses, by outcome": {
+     "Renewal fell short of the fit at the levels restored": {
+      "stocking suppresses natural renewal": 40,
+      "their own needs lie above the common one": 40,
+      "the adults restored count stocked fish not yet spawning": 40
+     }
+    },
+    "a need fitted": 40,
+    "lakes read, median": 23,
+    "lakes read in a year below the need too, median": 11,
+    "the rise with the first fall after the low survey as the year below shown (reported), by outcome": {},
+    "lakes read that had lost their renewal, by outcome: lost, read; of the lakes that renewed above the need and not below, lost, all": {
+     "Renewal fell short of the fit at the levels restored": [
+      911,
+      940,
+      0,
+      0
+     ]
+    }
+   }
+  },
+  "renewal lost, open": {
+   "family": "confounded",
+   "speed 0.1": {
+    "V1": {
+     "Renewal fell short of the fit at the levels restored": 40
+    },
+    "clauses, by outcome": {
+     "Renewal fell short of the fit at the levels restored": {
+      "stocking suppresses natural renewal": 40,
+      "their own needs lie above the common one": 40,
+      "the adults restored count stocked fish not yet spawning": 40
+     }
+    },
+    "a need fitted": 40,
+    "lakes read, median": 29,
+    "lakes read in a year below the need too, median": 9,
+    "the rise with the first fall after the low survey as the year below shown (reported), by outcome": {},
+    "lakes read that had lost their renewal, by outcome: lost, read; of the lakes that renewed above the need and not below, lost, all": {
+     "Renewal fell short of the fit at the levels restored": [
+      1213,
+      1215,
+      48,
+      48
+     ]
+    }
+   },
+   "speed 0.03": {
+    "V1": {
+     "Renewal fell short of the fit at the levels restored": 37,
+     "not decided": 3
+    },
+    "clauses, by outcome": {
+     "Renewal fell short of the fit at the levels restored": {
+      "stocking suppresses natural renewal": 37,
+      "their own needs lie above the common one": 37,
+      "the adults restored count stocked fish not yet spawning": 37
+     }
+    },
+    "a need fitted": 40,
+    "lakes read, median": 14,
+    "lakes read in a year below the need too, median": 5,
+    "the rise with the first fall after the low survey as the year below shown (reported), by outcome": {},
+    "lakes read that had lost their renewal, by outcome: lost, read; of the lakes that renewed above the need and not below, lost, all": {
+     "Renewal fell short of the fit at the levels restored": [
+      567,
+      568,
+      28,
+      28
+     ],
+     "not decided": [
+      24,
+      24,
+      1,
+      1
+     ]
+    }
+   }
+  },
+  "renewal lost, the cause ends": {
+   "family": "confounded",
+   "speed 0.1": {
+    "V1": {
+     "Renewal rose with the level": 40
+    },
+    "clauses, by outcome": {
+     "Renewal rose with the level": {
+      "unrecorded stocking": 40,
+      "connected waters": 17,
+      "something other than the level changed renewal or its survey between the years compared": 40
+     }
+    },
+    "a need fitted": 40,
+    "lakes read, median": 43,
+    "lakes read in a year below the need too, median": 14,
+    "the rise with the first fall after the low survey as the year below shown (reported), by outcome": {
+     "Renewal rose with the level": 40
+    },
+    "lakes read that had lost their renewal, by outcome: lost, read; of the lakes that renewed above the need and not below, lost, all": {
+     "Renewal rose with the level": [
+      1663,
+      1718,
+      546,
+      547
+     ]
+    }
+   },
+   "speed 0.03": {
+    "V1": {
+     "Renewal rose with the level": 33,
+     "not decided": 7
+    },
+    "clauses, by outcome": {
+     "Renewal rose with the level": {
+      "unrecorded stocking": 33,
+      "connected waters": 24,
+      "something other than the level changed renewal or its survey between the years compared": 33
+     }
+    },
+    "a need fitted": 40,
+    "lakes read, median": 22,
+    "lakes read in a year below the need too, median": 8,
+    "the rise with the first fall after the low survey as the year below shown (reported), by outcome": {
+     "Renewal rose with the level": 28
+    },
+    "lakes read that had lost their renewal, by outcome: lost, read; of the lakes that renewed above the need and not below, lost, all": {
+     "Renewal rose with the level": [
+      725,
+      758,
+      287,
+      289
+     ],
+     "not decided": [
+      124,
+      127,
+      24,
+      24
+     ]
+    }
+   }
+  },
+  "renewal lost, stocked after a failed survey": {
+   "family": "confounded",
+   "speed 0.1": {
+    "V1": {
+     "not decided": 15,
+     "Renewal rose with the level": 25
+    },
+    "clauses, by outcome": {
+     "Renewal rose with the level": {
+      "unrecorded stocking": 25,
+      "connected waters": 22,
+      "something other than the level changed renewal or its survey between the years compared": 25
+     }
+    },
+    "a need fitted": 40,
+    "lakes read, median": 35,
+    "lakes read in a year below the need too, median": 12,
+    "the rise with the first fall after the low survey as the year below shown (reported), by outcome": {
+     "not decided": 1,
+     "Renewal rose with the level": 1
+    },
+    "lakes read that had lost their renewal, by outcome: lost, read; of the lakes that renewed above the need and not below, lost, all": {
+     "not decided": [
+      78,
+      445,
+      0,
+      64
+     ],
+     "Renewal rose with the level": [
+      101,
+      888,
+      0,
+      217
+     ]
+    }
+   },
+   "speed 0.03": {
+    "V1": {
+     "Renewal rose with the level": 11,
+     "not decided": 26,
+     "Renewal fell short of the fit at the levels restored": 3
+    },
+    "clauses, by outcome": {
+     "Renewal rose with the level": {
+      "unrecorded stocking": 11,
+      "connected waters": 10,
+      "something other than the level changed renewal or its survey between the years compared": 11
+     },
+     "Renewal fell short of the fit at the levels restored": {
+      "stocking suppresses natural renewal": 3,
+      "their own needs lie above the common one": 3,
+      "the adults restored count stocked fish not yet spawning": 3
+     }
+    },
+    "a need fitted": 40,
+    "lakes read, median": 16,
+    "lakes read in a year below the need too, median": 6,
+    "the rise with the first fall after the low survey as the year below shown (reported), by outcome": {
+     "Renewal fell short of the fit at the levels restored": 1
+    },
+    "lakes read that had lost their renewal, by outcome: lost, read; of the lakes that renewed above the need and not below, lost, all": {
+     "Renewal rose with the level": [
+      28,
+      211,
+      0,
+      72
+     ],
+     "not decided": [
+      38,
+      363,
+      0,
+      76
+     ],
+     "Renewal fell short of the fit at the levels restored": [
+      18,
+      60,
+      0,
+      13
+     ]
+    }
+   }
+  },
+  "renewal lost, stocking suppresses": {
+   "family": "confounded",
+   "speed 0.1": {
+    "V1": {
+     "not decided": 39,
+     "Renewal rose with the level": 1
+    },
+    "clauses, by outcome": {
+     "Renewal rose with the level": {
+      "unrecorded stocking": 1,
+      "connected waters": 1,
+      "something other than the level changed renewal or its survey between the years compared": 1
+     }
+    },
+    "a need fitted": 40,
+    "lakes read, median": 140,
+    "lakes read in a year below the need too, median": 11,
+    "the rise with the first fall after the low survey as the year below shown (reported), by outcome": {},
+    "lakes read that had lost their renewal, by outcome: lost, read; of the lakes that renewed above the need and not below, lost, all": {
+     "not decided": [
+      758,
+      5387,
+      0,
+      121
+     ],
+     "Renewal rose with the level": [
+      16,
+      100,
+      0,
+      5
+     ]
+    }
+   },
+   "speed 0.03": {
+    "V1": {
+     "not decided": 38,
+     "Renewal fell short of the fit at the levels restored": 2
+    },
+    "clauses, by outcome": {
+     "Renewal fell short of the fit at the levels restored": {
+      "stocking suppresses natural renewal": 2,
+      "their own needs lie above the common one": 2,
+      "the adults restored count stocked fish not yet spawning": 2
+     }
+    },
+    "a need fitted": 40,
+    "lakes read, median": 27,
+    "lakes read in a year below the need too, median": 4,
+    "the rise with the first fall after the low survey as the year below shown (reported), by outcome": {},
+    "lakes read that had lost their renewal, by outcome: lost, read; of the lakes that renewed above the need and not below, lost, all": {
+     "not decided": [
+      128,
+      1003,
+      0,
+      31
+     ],
+     "Renewal fell short of the fit at the levels restored": [
+      16,
+      59,
+      0,
+      2
+     ]
+    }
+   }
+  },
+  "renewal held low, the year in both counts": {
+   "family": "confounded",
+   "speed 0.1": {
+    "V1": {
+     "Renewal fell short of the fit at the levels restored": 34,
+     "Renewal rose with the level": 6
+    },
+    "clauses, by outcome": {
+     "Renewal fell short of the fit at the levels restored": {
+      "stocking suppresses natural renewal": 34,
+      "their own needs lie above the common one": 34,
+      "the adults restored count stocked fish not yet spawning": 34
+     },
+     "Renewal rose with the level": {
+      "unrecorded stocking": 6,
+      "connected waters": 6,
+      "something other than the level changed renewal or its survey between the years compared": 6
+     }
+    },
+    "a need fitted": 40,
+    "lakes read, median": 32,
+    "lakes read in a year below the need too, median": 9,
+    "the rise with the first fall after the low survey as the year below shown (reported), by outcome": {
+     "Renewal rose with the level": 1,
+     "Renewal fell short of the fit at the levels restored": 1
+    },
+    "lakes read that had lost their renewal, by outcome: lost, read; of the lakes that renewed above the need and not below, lost, all": {
+     "Renewal fell short of the fit at the levels restored": [
+      991,
+      1067,
+      70,
+      77
+     ],
+     "Renewal rose with the level": [
+      184,
+      203,
+      29,
+      37
+     ]
+    }
+   },
+   "speed 0.03": {
+    "V1": {
+     "Renewal fell short of the fit at the levels restored": 37,
+     "not decided": 3
+    },
+    "clauses, by outcome": {
+     "Renewal fell short of the fit at the levels restored": {
+      "stocking suppresses natural renewal": 37,
+      "their own needs lie above the common one": 37,
+      "the adults restored count stocked fish not yet spawning": 37
+     }
+    },
+    "a need fitted": 40,
+    "lakes read, median": 14,
+    "lakes read in a year below the need too, median": 5,
+    "the rise with the first fall after the low survey as the year below shown (reported), by outcome": {},
+    "lakes read that had lost their renewal, by outcome: lost, read; of the lakes that renewed above the need and not below, lost, all": {
+     "Renewal fell short of the fit at the levels restored": [
+      502,
+      546,
+      52,
+      55
+     ],
+     "not decided": [
+      22,
+      26,
+      3,
+      3
+     ]
+    }
+   }
+  },
+  "renewal held low, the year in both counts, region-wide": {
+   "family": "confounded",
+   "speed 0.1": {
+    "V1": {
+     "Renewal fell short of the fit at the levels restored": 35,
+     "Renewal rose with the level": 2,
+     "not decided": 2,
+     "no need": 1
+    },
+    "clauses, by outcome": {
+     "Renewal fell short of the fit at the levels restored": {
+      "stocking suppresses natural renewal": 35,
+      "their own needs lie above the common one": 35,
+      "the adults restored count stocked fish not yet spawning": 35
+     },
+     "Renewal rose with the level": {
+      "unrecorded stocking": 2,
+      "connected waters": 2,
+      "something other than the level changed renewal or its survey between the years compared": 2
+     }
+    },
+    "a need fitted": 39,
+    "lakes read, median": 25,
+    "lakes read in a year below the need too, median": 7,
+    "the rise with the first fall after the low survey as the year below shown (reported), by outcome": {
+     "Renewal rose with the level": 1
+    },
+    "lakes read that had lost their renewal, by outcome: lost, read; of the lakes that renewed above the need and not below, lost, all": {
+     "Renewal fell short of the fit at the levels restored": [
+      888,
+      924,
+      58,
+      59
+     ],
+     "Renewal rose with the level": [
+      39,
+      40,
+      13,
+      14
+     ],
+     "not decided": [
+      17,
+      17,
+      1,
+      1
+     ]
+    }
+   },
+   "speed 0.03": {
+    "V1": {
+     "not decided": 17,
+     "Renewal fell short of the fit at the levels restored": 22,
+     "Renewal rose with the level": 1
+    },
+    "clauses, by outcome": {
+     "Renewal fell short of the fit at the levels restored": {
+      "stocking suppresses natural renewal": 22,
+      "their own needs lie above the common one": 22,
+      "the adults restored count stocked fish not yet spawning": 22
+     },
+     "Renewal rose with the level": {
+      "unrecorded stocking": 1,
+      "connected waters": 1,
+      "something other than the level changed renewal or its survey between the years compared": 1
+     }
+    },
+    "a need fitted": 40,
+    "lakes read, median": 11,
+    "lakes read in a year below the need too, median": 3,
+    "the rise with the first fall after the low survey as the year below shown (reported), by outcome": {},
+    "lakes read that had lost their renewal, by outcome: lost, read; of the lakes that renewed above the need and not below, lost, all": {
+     "not decided": [
+      119,
+      120,
+      15,
+      15
+     ],
+     "Renewal fell short of the fit at the levels restored": [
+      302,
+      314,
+      23,
+      25
+     ],
+     "Renewal rose with the level": [
+      23,
+      25,
+      5,
+      5
+     ]
+    }
+   }
+  },
+  "no need": {
+   "family": "no need",
+   "speed 0.1": {
+    "V1": {
+     "no need": 40
+    },
+    "clauses, by outcome": {},
+    "a need fitted": 0,
+    "lakes read, median": null,
+    "lakes read in a year below the need too, median": null,
+    "the rise with the first fall after the low survey as the year below shown (reported), by outcome": {}
+   },
+   "speed 0.03": {
+    "V1": {
+     "no need": 40
+    },
+    "clauses, by outcome": {},
+    "a need fitted": 0,
+    "lakes read, median": null,
+    "lakes read in a year below the need too, median": null,
+    "the rise with the first fall after the low survey as the year below shown (reported), by outcome": {}
+   }
+  },
+  "no need, lakes differ": {
+   "family": "no need",
+   "speed 0.1": {
+    "V1": {
+     "no need": 40
+    },
+    "clauses, by outcome": {},
+    "a need fitted": 0,
+    "lakes read, median": null,
+    "lakes read in a year below the need too, median": null,
+    "the rise with the first fall after the low survey as the year below shown (reported), by outcome": {}
+   },
+   "speed 0.03": {
+    "V1": {
+     "not decided": 8,
+     "no need": 32
+    },
+    "clauses, by outcome": {},
+    "a need fitted": 8,
+    "lakes read, median": 2,
+    "lakes read in a year below the need too, median": 1,
+    "the rise with the first fall after the low survey as the year below shown (reported), by outcome": {}
+   }
+  },
+  "no need, catch 0.1": {
+   "family": "no need",
+   "speed 0.1": {
+    "V1": {
+     "not decided": 37,
+     "no need": 3
+    },
+    "clauses, by outcome": {},
+    "a need fitted": 37,
+    "lakes read, median": 5,
+    "lakes read in a year below the need too, median": 2,
+    "the rise with the first fall after the low survey as the year below shown (reported), by outcome": {}
+   },
+   "speed 0.03": {
+    "V1": {
+     "not decided": 39,
+     "no need": 1
+    },
+    "clauses, by outcome": {},
+    "a need fitted": 39,
+    "lakes read, median": 2,
+    "lakes read in a year below the need too, median": 0,
+    "the rise with the first fall after the low survey as the year below shown (reported), by outcome": {}
+   }
+  }
+ },
+ "checks": 107,
+ "checks by kind": {
+  "rules: the fit": 1,
+  "rules: the scope": 14,
+  "rules: dates": 3,
+  "rules: the first fall": 3,
+  "rules: the other records": 1,
+  "rules: marks": 1,
+  "rules: own level": 1,
+  "rules: T1N's fit": 1,
+  "rules: V1": 14,
+  "rules: the tails": 1,
+  "additions": 13,
+  "the run": 4,
+  "the chain": 4,
+  "worlds: T1 holds": 14,
+  "worlds: renewal lost": 12,
+  "worlds: confounded": 18,
+  "worlds: power": 2
+ },
+ "failed": [],
+ "CPU seconds": 242.5,
+ "code hashes": {
+  "experiments/stocked-above-the-need/t1r.py": "c7f87e62ab4f2031666d42a6396c82b5856182657e88466ad4b3e4362cac3958",
+  "experiments/stocked-above-the-need/additions.py": "082926e9adf0c799a20fe20d3425a844b8c0e79357505559641f61da3a37c470",
+  "experiments/stocked-above-the-need/run.py": "ded4fddda1724d379ca59170ae4749f07d0a6540221cb14b0e4efd90f31fb348",
+  "experiments/stocked-above-the-need/dry_run.py": "bb3d3d43c3e7b3077aa9c0d630af69f6ba92422688be16caf14155f9753ceb38",
+  "experiments/stocked-above-the-need/layout.json": "d0ef9f7f941fbe72e847f75321b118991ab270565c9891c577798b2197743ce2"
+ },
+ "code unchanged during the run": true
+}
