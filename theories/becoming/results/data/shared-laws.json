@@ -1,7 +1,7 @@
 {
  "about": "MV: the shared laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/shared_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261104T201844.426739Z",
- "core_sources_sha256": "6a0bc81fc7de3a55243d26c447552933db0db43fe529a63c6e9e25654132fdc3",
+ "core_receipt": "20261105T210745.530949Z",
+ "core_sources_sha256": "d1cab910f4255da0861b49aa06e9185be1022a6959a41ecc316b4fedc788ac0a",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "438b65fe8bc281ab9796cfbff00af7db8441123a5aba8f3779f7c08586b443c7",
@@ -58,16 +58,16 @@
   ]
  },
  "counts": {
-  "laws": 4143,
+  "laws": 4158,
   "no_declarations": 9,
   "outside": 391,
-  "grammar": 896,
-  "balance, represented": 628,
+  "grammar": 899,
+  "balance, represented": 633,
   "anchor, not reached": 131,
-  "no shared law": 2088,
+  "no shared law": 2095,
   "vocabulary_only": 79,
   "closure": 528,
-  "balance": 836,
+  "balance": 844,
   "return": 253,
   "lumping": 84,
   "order": 85
@@ -15977,7 +15977,14 @@
    {
     "law": 4,
     "declarations": [
-     "Becoming.LineageRegimes.dissipation_degenerates_every_member"
+     "Becoming.LineageDrawdown.degeneration_of_excess",
+     "Becoming.LineageDrawdown.landed_of_excess",
+     "Becoming.LineageDrawdown.landed_of_excess_eq",
+     "Becoming.LineageDrawdown.below_iff",
+     "Becoming.LineageDrawdown.below_of_excess",
+     "Becoming.LineageDrawdown.degeneration_of_unmet",
+     "Becoming.LineageDrawdown.degeneration_of_unmet_listed",
+     "Becoming.LineageDrawdown.degeneration_of_drawdown"
     ],
     "shared_laws": [
      "balance"
@@ -15987,6 +15994,37 @@
    },
    {
     "law": 5,
+    "declarations": [
+     "Becoming.LineageDrawdown.gone_of_excess",
+     "Becoming.LineageDrawdown.horizon_of_excess",
+     "Becoming.LineageDrawdown.landed_gone",
+     "Becoming.LineageDrawdown.landed_horizon",
+     "Becoming.LineageDrawdown.landed_gone_eq",
+     "Becoming.LineageDrawdown.landed_horizon_eq",
+     "Becoming.LineageDrawdown.next_empty_of_unmet",
+     "Becoming.LineageDrawdown.ends_of_unmet",
+     "Becoming.LineageDrawdown.ends_of_drawdown",
+     "Becoming.LineageDrawdown.no_term_of_drawdown"
+    ],
+    "shared_laws": [
+     "balance"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 6,
+    "declarations": [
+     "Becoming.LineageRegimes.dissipation_degenerates_every_member"
+    ],
+    "shared_laws": [
+     "balance"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 7,
     "declarations": [
      "Becoming.LineageRegimes.pow_le_drawnBefore_of_ge",
      "Becoming.LineageRegimes.exceeds_doubles",
@@ -16000,7 +16038,7 @@
     "dependence": "balance, represented"
    },
    {
-    "law": 6,
+    "law": 8,
     "declarations": [
      "Becoming.LineageRegimes.sizes_double",
      "Becoming.LineageRegimes.size_le_taken",
@@ -16015,7 +16053,7 @@
     "dependence": "balance, represented"
    },
    {
-    "law": 7,
+    "law": 9,
     "declarations": [
      "Becoming.LineageRegimes.MultiplyingTakers.present",
      "Becoming.LineageRegimes.MultiplyingTakers.take",
@@ -16056,7 +16094,7 @@
     "dependence": "grammar"
    },
    {
-    "law": 8,
+    "law": 10,
     "declarations": [
      "Becoming.LineageRegimes.Handover.holder",
      "Becoming.LineageRegimes.Handover.pick",
@@ -16103,7 +16141,7 @@
     "dependence": "grammar"
    },
    {
-    "law": 9,
+    "law": 11,
     "declarations": [
      "Becoming.LineageRegimes.Handover.draw_not_doubling",
      "Becoming.LineageRegimes.Handover.not_draw_regime",
@@ -16131,7 +16169,7 @@
     "dependence": "grammar"
    },
    {
-    "law": 10,
+    "law": 12,
     "declarations": [
      "Becoming.LineageRegimes.Handover.both_fates",
      "Becoming.LineageRegimes.GatedPairCourse",
@@ -16144,7 +16182,7 @@
     "dependence": "grammar"
    },
    {
-    "law": 11,
+    "law": 13,
     "declarations": [
      "Becoming.LineageRegimes.FromOutside.flow",
      "Becoming.LineageRegimes.FromOutside.web",
@@ -16160,6 +16198,22 @@
     ],
     "grammar": false,
     "dependence": "balance, represented"
+   },
+   {
+    "law": 14,
+    "declarations": [
+     "Becoming.LineageDrawdown.Drain.flow",
+     "Becoming.LineageDrawdown.Drain.web",
+     "Becoming.LineageDrawdown.Drain.landed_met",
+     "Becoming.LineageDrawdown.Drain.not_gated",
+     "Becoming.LineageDrawdown.Drain.outside_ends",
+     "Becoming.LineageDrawdown.Drain.renewer_goes_on_outside"
+    ],
+    "shared_laws": [
+     "balance"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
    }
   ],
   "endpoint-loss-and-return": [
@@ -16517,6 +16571,60 @@
      "OrganizedScaleLoop.same_organ_amount_distinct_signal",
      "OrganizedScaleLoop.no_amount_only_acquisition"
     ]
+   }
+  ],
+  "errors-by-chance-in-a-pair-keeping-mutual-withholding": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.PairChance.KeepsWithheld",
+     "Becoming.PairChance.keeps_answering",
+     "Becoming.PairChance.keeps_windowed",
+     "Becoming.PairChance.keeps_withholding",
+     "Becoming.PairChance.keeps_waitingBoth",
+     "Becoming.PairChance.not_keeps_agreeing",
+     "Becoming.PairChance.not_keeps_sparing",
+     "Becoming.PairChance.not_keeps_alternating"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.PairChance.err_withholds",
+     "Becoming.PairChance.dead_stays",
+     "Becoming.PairChance.burst_absorbs",
+     "Becoming.PairChance.burst_absorbs_from"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.PairChance.errorsOf",
+     "Becoming.PairChance.burstFree",
+     "Becoming.PairChance.still_gives_free",
+     "Becoming.PairChance.block_total",
+     "Becoming.PairChance.block_lt",
+     "Becoming.PairChance.still_giving_le",
+     "Becoming.PairChance.absorbed_share"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.PairChance.window_witness"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
    }
   ],
   "eventual-widening": [
@@ -57634,6 +57742,131 @@
     "dependence": "grammar"
    }
   ],
+  "what-decides-giving-against-keeping-on-a-flow": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.PairFlow.levels_agree_until",
+     "Becoming.PairFlow.levels_agree",
+     "Becoming.PairFlow.factors_equal"
+    ],
+    "shared_laws": [
+     "balance"
+    ],
+    "grammar": false,
+    "dependence": "balance, represented"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.PairFlow.metNeed",
+     "Becoming.PairFlow.metNeed_le",
+     "Becoming.PairFlow.metNeed_of_supported",
+     "Becoming.PairFlow.met_needs_le_stock",
+     "Becoming.PairFlow.met_needs_within_start",
+     "Becoming.PairFlow.NeedsAtCapacity.at_capacity"
+    ],
+    "shared_laws": [
+     "balance"
+    ],
+    "grammar": false,
+    "dependence": "balance, represented"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.PairFlow.Routes.Parts",
+     "Becoming.PairFlow.Routes.flow",
+     "Becoming.PairFlow.Routes.web",
+     "Becoming.PairFlow.Routes.balances",
+     "Becoming.PairFlow.Routes.acting",
+     "Becoming.PairFlow.Routes.dependent",
+     "Becoming.PairFlow.Routes.supported",
+     "Becoming.PairFlow.Routes.lineAt_eq",
+     "Becoming.PairFlow.Routes.line_offspring"
+    ],
+    "shared_laws": [
+     "balance"
+    ],
+    "grammar": false,
+    "dependence": "balance, represented"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.PairFlow.Routes.factor_gap",
+     "Becoming.PairFlow.Routes.gap_iff",
+     "Becoming.PairFlow.Routes.plain",
+     "Becoming.PairFlow.Routes.perishing",
+     "Becoming.PairFlow.Routes.carried",
+     "Becoming.PairFlow.Routes.matching",
+     "Becoming.PairFlow.Routes.signs"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "Becoming.PairFlow.WhileStanding.Parts",
+     "Becoming.PairFlow.WhileStanding.Setting",
+     "Becoming.PairFlow.WhileStanding.balances",
+     "Becoming.PairFlow.WhileStanding.acting",
+     "Becoming.PairFlow.WhileStanding.dependent",
+     "Becoming.PairFlow.WhileStanding.runs_agree_until",
+     "Becoming.PairFlow.WhileStanding.factors_equal_while_supported",
+     "Becoming.PairFlow.WhileStanding.stays_fallen"
+    ],
+    "shared_laws": [
+     "balance"
+    ],
+    "grammar": false,
+    "dependence": "balance, represented"
+   },
+   {
+    "law": 6,
+    "declarations": [
+     "Becoming.PairFlow.WhileStanding.lineAt_of_active",
+     "Becoming.PairFlow.WhileStanding.lines_agree_while_active",
+     "Becoming.PairFlow.GiverAtNeed.standings_differ"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 7,
+    "declarations": [
+     "Becoming.PairFlow.FailedRenewal.sharing",
+     "Becoming.PairFlow.FailedRenewal.keeping",
+     "Becoming.PairFlow.FailedRenewal.agree_to_shortfall",
+     "Becoming.PairFlow.FailedRenewal.keeping_fallen",
+     "Becoming.PairFlow.FailedRenewal.lines_gain",
+     "Becoming.PairFlow.FailedRenewal.gifts_sharing"
+    ],
+    "shared_laws": [
+     "balance"
+    ],
+    "grammar": false,
+    "dependence": "balance, represented"
+   },
+   {
+    "law": 8,
+    "declarations": [
+     "Becoming.PairFlow.GiverAtNeed.giverAlone",
+     "Becoming.PairFlow.GiverAtNeed.alone_fallen",
+     "Becoming.PairFlow.GiverAtNeed.gift_lost",
+     "Becoming.PairFlow.GiverAtNeed.withholder_same",
+     "Becoming.PairFlow.DrawnBelowNeed.keeping",
+     "Becoming.PairFlow.DrawnBelowNeed.drawn",
+     "Becoming.PairFlow.DrawnBelowNeed.fallen"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   }
+  ],
   "what-dependence-alone-carries-of-a-level": [
    {
     "law": 1,
@@ -63871,7 +64104,7 @@
   ],
   "lean_check": {
    "toolchain": "leanprover/lean4:v4.29.1",
-   "modules_sha256": "1a49639a0e9b416ab05788afb82109c4a46d0fcbcc9f266430e8e19e0f242190",
+   "modules_sha256": "9a8667c8454b517e42832f5685fe13e1ca0e40a10b4cf4aa64f4db942dda75d8",
    "check_sha256": "e5ef1c274e3e3f81aa13dbe78732d1f6883a207a5685f736102ee4a2d5b1fc34",
    "ran": true
   },

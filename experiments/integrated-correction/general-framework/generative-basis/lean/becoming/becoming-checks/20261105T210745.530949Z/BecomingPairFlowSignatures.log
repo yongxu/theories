@@ -1,0 +1,433 @@
+@Becoming.PairFlow.levels_agree_until : ∀ {F C : Type} {L₁ L₂ : Becoming.Flow F C} {W₁ W₂ : Becoming.Web F C},
+  L₁.Balances W₁ →
+    L₂.Balances W₂ →
+      ∀ {T : Nat},
+        (∀ (c : C), W₁.level 0 c = W₂.level 0 c) →
+          (∀ (t : Nat),
+              t < T →
+                (∀ (c : C), W₁.level t c = W₂.level t c) →
+                  ∀ (c : C), L₁.taken t c + L₂.given t c = L₂.taken t c + L₁.given t c) →
+            ∀ (t : Nat), t ≤ T → ∀ (c : C), W₁.level t c = W₂.level t c
+@Becoming.PairFlow.levels_agree : ∀ {F C : Type} {L₁ L₂ : Becoming.Flow F C} {W₁ W₂ : Becoming.Web F C},
+  L₁.Balances W₁ →
+    L₂.Balances W₂ →
+      (∀ (c : C), W₁.level 0 c = W₂.level 0 c) →
+        (∀ (t : Nat),
+            (∀ (c : C), W₁.level t c = W₂.level t c) →
+              ∀ (c : C), L₁.taken t c + L₂.given t c = L₂.taken t c + L₁.given t c) →
+          ∀ (t : Nat) (c : C), W₁.level t c = W₂.level t c
+@Becoming.PairFlow.factors_equal : ∀ {F C : Type} {W₁ W₂ : Becoming.Web F C} {n : Nat},
+  (∀ (t : Nat), t ≤ n → ∀ (c : C), W₁.level t c = W₂.level t c) →
+    ∀ (read : (Nat → C → Nat) → Nat),
+      (∀ (l l' : Nat → C → Nat), (∀ (t : Nat), t ≤ n → ∀ (c : C), l t c = l' t c) → read l = read l') →
+        ∀ {a β γ : Nat}, 0 < n → read W₁.level = a + β * n → read W₂.level = a + γ * n → β = γ
+@Becoming.PairFlow.metNeed_le : ∀ {F C : Type} (W : Becoming.Web F C) (own : F → C) (t : Nat) (f : F),
+  Becoming.PairFlow.metNeed W own t f ≤ W.level t (own f)
+@Becoming.PairFlow.metNeed_of_supported : ∀ {F C : Type} {W : Becoming.Web F C} {own : F → C} {t : Nat} {f : F},
+  W.requires t f (own f) → W.Supported t f → Becoming.PairFlow.metNeed W own t f = W.need t f (own f)
+@Becoming.PairFlow.met_needs_le_stock : ∀ {F C : Type} (W : Becoming.Web F C) (own : F → C) (t : Nat) (fs : List F),
+  Becoming.total fs (Becoming.PairFlow.metNeed W own t) ≤ W.stock (List.map own fs) t
+@Becoming.PairFlow.met_needs_within_start : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    ∀ (own : F → C) (fs : List F) {S : Nat} (N : Nat),
+      (∀ (t : Nat), S ≤ t → t < S + N → L.GainlessOn (List.map own fs) t) →
+        Becoming.total fs (Becoming.PairFlow.metNeed W own (S + N)) ≤ W.stock (List.map own fs) S
+Becoming.PairFlow.mul_cond : ∀ (x : Nat) (b : Bool), (x * bif b then 1 else 0) = bif b then x else 0
+@Becoming.PairFlow.cond_pos : ∀ {b : Bool} {x : Nat}, (0 < bif b then x else 0) → b = true
+Becoming.PairFlow.cond_le : ∀ (x : Nat) (b : Bool), (bif b then x else 0) ≤ x
+Becoming.PairFlow.regroup : ∀ (s x y z x' y' z' : Nat),
+  s + x + y + z + (x' + y' + z') = s + (x + x') + (y + y') + (z + z')
+@Becoming.PairFlow.lt_of_add_lt_add_left' : ∀ {k a b : Nat}, k + a < k + b → a < b
+Becoming.PairFlow.Routes.taken_member : ∀ (P : Becoming.PairFlow.Routes.Parts)
+  (g : Becoming.WindowedWaiting.Pair → Nat → Bool) (t : Nat) (p : Becoming.WindowedWaiting.Pair),
+  (Becoming.PairFlow.Routes.flow P g).taken t (Becoming.PairFlow.Member.member p) =
+    Becoming.PairFlow.Routes.drawn P g p t
+Becoming.PairFlow.Routes.given_member : ∀ (P : Becoming.PairFlow.Routes.Parts)
+  (g : Becoming.WindowedWaiting.Pair → Nat → Bool) (t : Nat) (p : Becoming.WindowedWaiting.Pair),
+  (Becoming.PairFlow.Routes.flow P g).given t (Becoming.PairFlow.Member.member p) =
+    Becoming.PairFlow.Routes.renewed P g p t + bif g p.partner t then P.reach else 0
+Becoming.PairFlow.Routes.given_line : ∀ (P : Becoming.PairFlow.Routes.Parts)
+  (g : Becoming.WindowedWaiting.Pair → Nat → Bool) (t : Nat) (p : Becoming.WindowedWaiting.Pair),
+  (Becoming.PairFlow.Routes.flow P g).given t (Becoming.PairFlow.Member.line p) =
+    Becoming.PairFlow.Routes.toLine P g p t
+Becoming.PairFlow.Routes.drawn_eq : ∀ (P : Becoming.PairFlow.Routes.Parts)
+  (g : Becoming.WindowedWaiting.Pair → Nat → Bool) (p : Becoming.WindowedWaiting.Pair) (t : Nat),
+  Becoming.PairFlow.Routes.drawn P g p t =
+    Becoming.PairFlow.Routes.renewed P g p t + bif g p.partner t then P.reach else 0
+Becoming.PairFlow.Routes.balances : ∀ (P : Becoming.PairFlow.Routes.Parts)
+  (g : Becoming.WindowedWaiting.Pair → Nat → Bool),
+  (Becoming.PairFlow.Routes.flow P g).Balances (Becoming.PairFlow.Routes.web P g)
+Becoming.PairFlow.Routes.acting : ∀ (P : Becoming.PairFlow.Routes.Parts)
+  (g : Becoming.WindowedWaiting.Pair → Nat → Bool),
+  (Becoming.PairFlow.Routes.flow P g).Acting (Becoming.PairFlow.Routes.web P g)
+Becoming.PairFlow.Routes.dependent : ∀ (P : Becoming.PairFlow.Routes.Parts)
+  (g : Becoming.WindowedWaiting.Pair → Nat → Bool), P.need ≤ P.stand → (Becoming.PairFlow.Routes.web P g).Dependent
+Becoming.PairFlow.Routes.supported : ∀ (P : Becoming.PairFlow.Routes.Parts)
+  (g : Becoming.WindowedWaiting.Pair → Nat → Bool),
+  P.need ≤ P.stand →
+    ∀ (t : Nat) (p : Becoming.WindowedWaiting.Pair),
+      (Becoming.PairFlow.Routes.web P g).Supported t (Becoming.PairFlow.Member.member p)
+Becoming.PairFlow.Routes.lineAt_eq : ∀ (P : Becoming.PairFlow.Routes.Parts)
+  (g : Becoming.WindowedWaiting.Pair → Nat → Bool) (p : Becoming.WindowedWaiting.Pair) (n : Nat),
+  Becoming.PairFlow.Routes.lineAt P g p n =
+    P.start + P.own * n + (P.reach + P.matched) * Becoming.PairSelection.tally (g p.partner) n +
+      P.kept * Becoming.PairSelection.tally (fun t => !g p t) n
+Becoming.PairFlow.Routes.line_offspring : ∀ (P : Becoming.PairFlow.Routes.Parts) (s : Becoming.PairSelection.Place)
+  (n : Nat),
+  (Becoming.PairFlow.Routes.web P (Becoming.PairFlow.Routes.gaveIn s)).level n (Becoming.PairFlow.Member.line s.side) =
+    Becoming.PairSelection.Place.offspring (P.start + P.own * n) (P.reach + P.matched) P.kept n s
+Becoming.PairFlow.Routes.factor_gap : ∀ (P : Becoming.PairFlow.Routes.Parts),
+  P.kept + P.spoiled = P.reach + P.spill → P.reach + P.matched + P.spill = P.kept + P.spoiled + P.matched
+Becoming.PairFlow.Routes.gap_iff : ∀ (P : Becoming.PairFlow.Routes.Parts),
+  P.kept + P.spoiled = P.reach + P.spill → (P.kept < P.reach + P.matched ↔ P.spill < P.spoiled + P.matched)
+Becoming.PairFlow.Routes.plain : ∀ (P : Becoming.PairFlow.Routes.Parts),
+  P.kept + P.spoiled = P.reach + P.spill →
+    P.spill = 0 →
+      P.spoiled = 0 →
+        P.matched = 0 →
+          ∀ (s : Becoming.PairSelection.Place) (n : Nat),
+            (Becoming.PairFlow.Routes.web P (Becoming.PairFlow.Routes.gaveIn s)).level n
+                (Becoming.PairFlow.Member.line s.side) =
+              Becoming.PairSelection.Place.offspring (P.start + P.own * n) P.reach P.reach n s
+Becoming.PairFlow.Routes.signs : (Becoming.PairFlow.Routes.perishing.kept + Becoming.PairFlow.Routes.perishing.spoiled =
+      Becoming.PairFlow.Routes.perishing.reach + Becoming.PairFlow.Routes.perishing.spill ∧
+    Becoming.PairFlow.Routes.perishing.need ≤ Becoming.PairFlow.Routes.perishing.stand ∧
+      Becoming.PairFlow.Routes.perishing.kept <
+        Becoming.PairFlow.Routes.perishing.reach + Becoming.PairFlow.Routes.perishing.matched) ∧
+  (Becoming.PairFlow.Routes.carried.kept + Becoming.PairFlow.Routes.carried.spoiled =
+        Becoming.PairFlow.Routes.carried.reach + Becoming.PairFlow.Routes.carried.spill ∧
+      Becoming.PairFlow.Routes.carried.need ≤ Becoming.PairFlow.Routes.carried.stand ∧
+        Becoming.PairFlow.Routes.carried.reach + Becoming.PairFlow.Routes.carried.matched <
+          Becoming.PairFlow.Routes.carried.kept) ∧
+    Becoming.PairFlow.Routes.matching.kept + Becoming.PairFlow.Routes.matching.spoiled =
+        Becoming.PairFlow.Routes.matching.reach + Becoming.PairFlow.Routes.matching.spill ∧
+      Becoming.PairFlow.Routes.matching.need ≤ Becoming.PairFlow.Routes.matching.stand ∧
+        Becoming.PairFlow.Routes.matching.kept <
+          Becoming.PairFlow.Routes.matching.reach + Becoming.PairFlow.Routes.matching.matched
+Becoming.PairFlow.WhileStanding.capped_le : ∀ (want there : Nat),
+  Becoming.PairFlow.WhileStanding.capped want there ≤ there
+Becoming.PairFlow.WhileStanding.standing_advance : ∀ (G : Becoming.PairFlow.WhileStanding.Parts)
+  (S : Becoming.PairFlow.WhileStanding.Setting) (t : Nat) (x : Nat × Nat) (p : Becoming.WindowedWaiting.Pair),
+  Becoming.PairFlow.WhileStanding.standing (Becoming.PairFlow.WhileStanding.advance G S t x) p =
+    Becoming.PairFlow.WhileStanding.next G S t x p
+Becoming.PairFlow.WhileStanding.taken_member : ∀ (G : Becoming.PairFlow.WhileStanding.Parts)
+  (S : Becoming.PairFlow.WhileStanding.Setting) (t : Nat) (p : Becoming.WindowedWaiting.Pair),
+  (Becoming.PairFlow.WhileStanding.flow G S).taken t (Becoming.PairFlow.Member.member p) =
+    Becoming.PairFlow.WhileStanding.drawTaken G S t (Becoming.PairFlow.WhileStanding.levels G S t) p +
+      Becoming.PairFlow.WhileStanding.ownTake G S t (Becoming.PairFlow.WhileStanding.levels G S t) p
+Becoming.PairFlow.WhileStanding.given_member : ∀ (G : Becoming.PairFlow.WhileStanding.Parts)
+  (S : Becoming.PairFlow.WhileStanding.Setting) (t : Nat) (p : Becoming.WindowedWaiting.Pair),
+  (Becoming.PairFlow.WhileStanding.flow G S).given t (Becoming.PairFlow.Member.member p) =
+    Becoming.PairFlow.WhileStanding.renewal G S t (Becoming.PairFlow.WhileStanding.levels G S t) p +
+      Becoming.PairFlow.WhileStanding.gets G S t (Becoming.PairFlow.WhileStanding.levels G S t) p
+Becoming.PairFlow.WhileStanding.given_line : ∀ (G : Becoming.PairFlow.WhileStanding.Parts)
+  (S : Becoming.PairFlow.WhileStanding.Setting) (t : Nat) (p : Becoming.WindowedWaiting.Pair),
+  (Becoming.PairFlow.WhileStanding.flow G S).given t (Becoming.PairFlow.Member.line p) =
+    bif Becoming.PairFlow.WhileStanding.isActive G (Becoming.PairFlow.WhileStanding.levels G S t) p then G.own else 0
+Becoming.PairFlow.WhileStanding.ownTake_le : ∀ (G : Becoming.PairFlow.WhileStanding.Parts)
+  (S : Becoming.PairFlow.WhileStanding.Setting) (t : Nat) (x : Nat × Nat) (p : Becoming.WindowedWaiting.Pair),
+  Becoming.PairFlow.WhileStanding.ownTake G S t x p ≤ Becoming.PairFlow.WhileStanding.standing x p
+@Becoming.PairFlow.WhileStanding.settle : ∀ {l o r d : Nat}, o ≤ l → d ≤ l - o + r → l - o + r - d + (d + o) = l + r
+Becoming.PairFlow.WhileStanding.member_balance : ∀ (G : Becoming.PairFlow.WhileStanding.Parts)
+  (S : Becoming.PairFlow.WhileStanding.Setting) (t : Nat) (p : Becoming.WindowedWaiting.Pair),
+  Becoming.PairFlow.WhileStanding.next G S t (Becoming.PairFlow.WhileStanding.levels G S t) p +
+      (Becoming.PairFlow.WhileStanding.flow G S).taken t (Becoming.PairFlow.Member.member p) =
+    Becoming.PairFlow.WhileStanding.standing (Becoming.PairFlow.WhileStanding.levels G S t) p +
+      (Becoming.PairFlow.WhileStanding.flow G S).given t (Becoming.PairFlow.Member.member p)
+Becoming.PairFlow.WhileStanding.balances : ∀ (G : Becoming.PairFlow.WhileStanding.Parts)
+  (S : Becoming.PairFlow.WhileStanding.Setting),
+  (Becoming.PairFlow.WhileStanding.flow G S).Balances (Becoming.PairFlow.WhileStanding.web G S)
+Becoming.PairFlow.WhileStanding.active_of_give : ∀ (G : Becoming.PairFlow.WhileStanding.Parts)
+  (S : Becoming.PairFlow.WhileStanding.Setting) {t : Nat} {p : Becoming.WindowedWaiting.Pair}
+  {c : Becoming.PairFlow.Member},
+  0 < Becoming.PairFlow.WhileStanding.give G S t (Becoming.PairFlow.Member.member p) c →
+    Becoming.PairFlow.WhileStanding.isActive G (Becoming.PairFlow.WhileStanding.levels G S t) p = true
+Becoming.PairFlow.WhileStanding.acting : ∀ (G : Becoming.PairFlow.WhileStanding.Parts)
+  (S : Becoming.PairFlow.WhileStanding.Setting),
+  (Becoming.PairFlow.WhileStanding.flow G S).Acting (Becoming.PairFlow.WhileStanding.web G S)
+Becoming.PairFlow.WhileStanding.dependent : ∀ (G : Becoming.PairFlow.WhileStanding.Parts)
+  (S : Becoming.PairFlow.WhileStanding.Setting), (Becoming.PairFlow.WhileStanding.web G S).Dependent
+@Becoming.PairFlow.WhileStanding.pair_ext : ∀ {x y : Nat × Nat}, x.fst = y.fst → x.snd = y.snd → x = y
+@Becoming.PairFlow.WhileStanding.avail_same : ∀ {l U k r : Nat}, U + k ≤ l → l - (U + k) + (r + k) = l - U + r
+Becoming.PairFlow.WhileStanding.swap_net : ∀ (d u k r : Nat), d + (u + k) + (r + 0) = d + u + (r + k)
+Becoming.PairFlow.WhileStanding.member_net : ∀ (G : Becoming.PairFlow.WhileStanding.Parts)
+  {S₁ S₂ : Becoming.PairFlow.WhileStanding.Setting} (x : Nat × Nat) (t : Nat) (p : Becoming.WindowedWaiting.Pair),
+  (∀ (q : Becoming.WindowedWaiting.Pair), Becoming.PairFlow.WhileStanding.isActive G x q = true) →
+    (∀ (q : Becoming.WindowedWaiting.Pair) (t : Nat), S₁.intends q t = true) →
+      (∀ (q : Becoming.WindowedWaiting.Pair) (t : Nat), S₂.intends q t = false) →
+        S₁.renew p t = S₂.renew p t →
+          S₁.draw p t = S₂.draw p t →
+            Becoming.PairFlow.WhileStanding.drawTaken G S₁ t x p + Becoming.PairFlow.WhileStanding.ownTake G S₁ t x p +
+                (Becoming.PairFlow.WhileStanding.renewal G S₂ t x p + Becoming.PairFlow.WhileStanding.gets G S₂ t x p) =
+              Becoming.PairFlow.WhileStanding.drawTaken G S₂ t x p +
+                  Becoming.PairFlow.WhileStanding.ownTake G S₂ t x p +
+                (Becoming.PairFlow.WhileStanding.renewal G S₁ t x p + Becoming.PairFlow.WhileStanding.gets G S₁ t x p)
+Becoming.PairFlow.WhileStanding.runs_agree_until : ∀ (G : Becoming.PairFlow.WhileStanding.Parts)
+  {S₁ S₂ : Becoming.PairFlow.WhileStanding.Setting},
+  (∀ (p : Becoming.WindowedWaiting.Pair) (t : Nat), S₁.intends p t = true) →
+    (∀ (p : Becoming.WindowedWaiting.Pair) (t : Nat), S₂.intends p t = false) →
+      (∀ (p : Becoming.WindowedWaiting.Pair) (t : Nat), S₁.renew p t = S₂.renew p t) →
+        (∀ (p : Becoming.WindowedWaiting.Pair) (t : Nat), S₁.draw p t = S₂.draw p t) →
+          S₁.start = S₂.start →
+            ∀ {T : Nat},
+              (∀ (t : Nat),
+                  t < T →
+                    ∀ (p : Becoming.WindowedWaiting.Pair),
+                      Becoming.PairFlow.WhileStanding.isActive G (Becoming.PairFlow.WhileStanding.levels G S₁ t) p =
+                        true) →
+                ∀ (t : Nat),
+                  t ≤ T →
+                    ∀ (c : Becoming.PairFlow.Member),
+                      (Becoming.PairFlow.WhileStanding.web G S₁).level t c =
+                        (Becoming.PairFlow.WhileStanding.web G S₂).level t c
+Becoming.PairFlow.WhileStanding.factors_equal_while_supported : ∀ (G : Becoming.PairFlow.WhileStanding.Parts)
+  {S₁ S₂ : Becoming.PairFlow.WhileStanding.Setting},
+  (∀ (p : Becoming.WindowedWaiting.Pair) (t : Nat), S₁.intends p t = true) →
+    (∀ (p : Becoming.WindowedWaiting.Pair) (t : Nat), S₂.intends p t = false) →
+      (∀ (p : Becoming.WindowedWaiting.Pair) (t : Nat), S₁.renew p t = S₂.renew p t) →
+        (∀ (p : Becoming.WindowedWaiting.Pair) (t : Nat), S₁.draw p t = S₂.draw p t) →
+          S₁.start = S₂.start →
+            ∀ {n : Nat},
+              (∀ (t : Nat),
+                  t < n →
+                    ∀ (p : Becoming.WindowedWaiting.Pair),
+                      Becoming.PairFlow.WhileStanding.isActive G (Becoming.PairFlow.WhileStanding.levels G S₁ t) p =
+                        true) →
+                ∀ (read : (Nat → Becoming.PairFlow.Member → Nat) → Nat),
+                  (∀ (l l' : Nat → Becoming.PairFlow.Member → Nat),
+                      (∀ (t : Nat), t ≤ n → ∀ (c : Becoming.PairFlow.Member), l t c = l' t c) → read l = read l') →
+                    ∀ {a β γ : Nat},
+                      0 < n →
+                        read (Becoming.PairFlow.WhileStanding.web G S₁).level = a + β * n →
+                          read (Becoming.PairFlow.WhileStanding.web G S₂).level = a + γ * n → β = γ
+@Becoming.PairFlow.WhileStanding.lt_of_ble_false : ∀ {n m : Nat}, n.ble m = false → m < n
+Becoming.PairFlow.WhileStanding.next_le_of_idle : ∀ (G : Becoming.PairFlow.WhileStanding.Parts)
+  (S : Becoming.PairFlow.WhileStanding.Setting) {t : Nat} {x : Nat × Nat} {p : Becoming.WindowedWaiting.Pair},
+  Becoming.PairFlow.WhileStanding.isActive G x p = false →
+    Becoming.PairFlow.WhileStanding.sends G S t x p.partner = false →
+      Becoming.PairFlow.WhileStanding.next G S t x p ≤ Becoming.PairFlow.WhileStanding.standing x p
+Becoming.PairFlow.WhileStanding.stays_fallen : ∀ (G : Becoming.PairFlow.WhileStanding.Parts)
+  (S : Becoming.PairFlow.WhileStanding.Setting) {p : Becoming.WindowedWaiting.Pair} {t : Nat},
+  Becoming.PairFlow.WhileStanding.isActive G (Becoming.PairFlow.WhileStanding.levels G S t) p = false →
+    (∀ (s : Nat),
+        t ≤ s →
+          Becoming.PairFlow.WhileStanding.sends G S s (Becoming.PairFlow.WhileStanding.levels G S s) p.partner =
+            false) →
+      ∀ (d : Nat),
+        Becoming.PairFlow.WhileStanding.standing (Becoming.PairFlow.WhileStanding.levels G S (t + d)) p ≤
+            Becoming.PairFlow.WhileStanding.standing (Becoming.PairFlow.WhileStanding.levels G S t) p ∧
+          Becoming.PairFlow.WhileStanding.isActive G (Becoming.PairFlow.WhileStanding.levels G S (t + d)) p = false
+Becoming.PairFlow.WhileStanding.lineAt_of_active : ∀ (G : Becoming.PairFlow.WhileStanding.Parts)
+  (S : Becoming.PairFlow.WhileStanding.Setting) {p : Becoming.WindowedWaiting.Pair} (n : Nat),
+  (∀ (t : Nat),
+      t < n → Becoming.PairFlow.WhileStanding.isActive G (Becoming.PairFlow.WhileStanding.levels G S t) p = true) →
+    Becoming.PairFlow.WhileStanding.lineAt G S p n = G.own * n
+Becoming.PairFlow.WhileStanding.lines_agree_while_active : ∀ (G : Becoming.PairFlow.WhileStanding.Parts)
+  {S₁ S₂ : Becoming.PairFlow.WhileStanding.Setting} (p : Becoming.WindowedWaiting.Pair) (n : Nat),
+  (∀ (t : Nat),
+      t < n →
+        Becoming.PairFlow.WhileStanding.isActive G (Becoming.PairFlow.WhileStanding.levels G S₁ t) p =
+          Becoming.PairFlow.WhileStanding.isActive G (Becoming.PairFlow.WhileStanding.levels G S₂ t) p) →
+    Becoming.PairFlow.WhileStanding.lineAt G S₁ p n = Becoming.PairFlow.WhileStanding.lineAt G S₂ p n
+Becoming.PairFlow.FailedRenewal.agree_to_shortfall : ∀ (t : Nat),
+  t ≤ 2 →
+    ∀ (c : Becoming.PairFlow.Member),
+      (Becoming.PairFlow.WhileStanding.web Becoming.PairFlow.FailedRenewal.parts
+              Becoming.PairFlow.FailedRenewal.sharing).level
+          t c =
+        (Becoming.PairFlow.WhileStanding.web Becoming.PairFlow.FailedRenewal.parts
+              Becoming.PairFlow.FailedRenewal.keeping).level
+          t c
+Becoming.PairFlow.FailedRenewal.shortfall : Becoming.PairFlow.WhileStanding.levels Becoming.PairFlow.FailedRenewal.parts
+      Becoming.PairFlow.FailedRenewal.sharing 2 =
+    (5, 1) ∧
+  Becoming.PairFlow.WhileStanding.levels Becoming.PairFlow.FailedRenewal.parts Becoming.PairFlow.FailedRenewal.keeping
+      2 =
+    (5, 1)
+Becoming.PairFlow.FailedRenewal.levels_sharing : ∀ (m : Nat),
+  Becoming.PairFlow.WhileStanding.levels Becoming.PairFlow.FailedRenewal.parts Becoming.PairFlow.FailedRenewal.sharing
+      (m + 4) =
+    (3, 3)
+Becoming.PairFlow.FailedRenewal.levels_keeping : ∀ (m : Nat),
+  Becoming.PairFlow.WhileStanding.levels Becoming.PairFlow.FailedRenewal.parts Becoming.PairFlow.FailedRenewal.keeping
+      (m + 2) =
+    (5, 1)
+Becoming.PairFlow.FailedRenewal.keeping_fallen : ∀ (d : Nat),
+  Becoming.PairFlow.WhileStanding.isActive Becoming.PairFlow.FailedRenewal.parts
+      (Becoming.PairFlow.WhileStanding.levels Becoming.PairFlow.FailedRenewal.parts
+        Becoming.PairFlow.FailedRenewal.keeping (2 + d))
+      Becoming.WindowedWaiting.Pair.second =
+    false
+Becoming.PairFlow.FailedRenewal.first_active_sharing : ∀ (n : Nat),
+  Becoming.PairFlow.WhileStanding.isActive Becoming.PairFlow.FailedRenewal.parts
+      (Becoming.PairFlow.WhileStanding.levels Becoming.PairFlow.FailedRenewal.parts
+        Becoming.PairFlow.FailedRenewal.sharing n)
+      Becoming.WindowedWaiting.Pair.first =
+    true
+Becoming.PairFlow.FailedRenewal.first_active_keeping : ∀ (n : Nat),
+  Becoming.PairFlow.WhileStanding.isActive Becoming.PairFlow.FailedRenewal.parts
+      (Becoming.PairFlow.WhileStanding.levels Becoming.PairFlow.FailedRenewal.parts
+        Becoming.PairFlow.FailedRenewal.keeping n)
+      Becoming.WindowedWaiting.Pair.first =
+    true
+Becoming.PairFlow.FailedRenewal.first_sharing : ∀ (n : Nat),
+  Becoming.PairFlow.WhileStanding.lineAt Becoming.PairFlow.FailedRenewal.parts Becoming.PairFlow.FailedRenewal.sharing
+      Becoming.WindowedWaiting.Pair.first n =
+    n
+Becoming.PairFlow.FailedRenewal.first_keeping : ∀ (n : Nat),
+  Becoming.PairFlow.WhileStanding.lineAt Becoming.PairFlow.FailedRenewal.parts Becoming.PairFlow.FailedRenewal.keeping
+      Becoming.WindowedWaiting.Pair.first n =
+    n
+Becoming.PairFlow.FailedRenewal.second_sharing : ∀ (m : Nat),
+  Becoming.PairFlow.WhileStanding.lineAt Becoming.PairFlow.FailedRenewal.parts Becoming.PairFlow.FailedRenewal.sharing
+      Becoming.WindowedWaiting.Pair.second (m + 4) =
+    m + 2
+Becoming.PairFlow.FailedRenewal.second_keeping : ∀ (m : Nat),
+  Becoming.PairFlow.WhileStanding.lineAt Becoming.PairFlow.FailedRenewal.parts Becoming.PairFlow.FailedRenewal.keeping
+      Becoming.WindowedWaiting.Pair.second (m + 2) =
+    2
+Becoming.PairFlow.FailedRenewal.lines_gain : ∀ (m : Nat),
+  Becoming.PairFlow.WhileStanding.lineAt Becoming.PairFlow.FailedRenewal.parts Becoming.PairFlow.FailedRenewal.sharing
+        Becoming.WindowedWaiting.Pair.first (m + 4) +
+      Becoming.PairFlow.WhileStanding.lineAt Becoming.PairFlow.FailedRenewal.parts
+        Becoming.PairFlow.FailedRenewal.sharing Becoming.WindowedWaiting.Pair.second (m + 4) =
+    Becoming.PairFlow.WhileStanding.lineAt Becoming.PairFlow.FailedRenewal.parts Becoming.PairFlow.FailedRenewal.keeping
+          Becoming.WindowedWaiting.Pair.first (m + 4) +
+        Becoming.PairFlow.WhileStanding.lineAt Becoming.PairFlow.FailedRenewal.parts
+          Becoming.PairFlow.FailedRenewal.keeping Becoming.WindowedWaiting.Pair.second (m + 4) +
+      m
+Becoming.PairFlow.FailedRenewal.second_sends : ∀ (m : Nat),
+  Becoming.PairSelection.tally
+      (fun t =>
+        Becoming.PairFlow.WhileStanding.sends Becoming.PairFlow.FailedRenewal.parts
+          Becoming.PairFlow.FailedRenewal.sharing t
+          (Becoming.PairFlow.WhileStanding.levels Becoming.PairFlow.FailedRenewal.parts
+            Becoming.PairFlow.FailedRenewal.sharing t)
+          Becoming.WindowedWaiting.Pair.second)
+      (m + 4) =
+    m + 2
+Becoming.PairFlow.FailedRenewal.first_sends : ∀ (n : Nat),
+  Becoming.PairSelection.tally
+      (fun t =>
+        Becoming.PairFlow.WhileStanding.sends Becoming.PairFlow.FailedRenewal.parts
+          Becoming.PairFlow.FailedRenewal.sharing t
+          (Becoming.PairFlow.WhileStanding.levels Becoming.PairFlow.FailedRenewal.parts
+            Becoming.PairFlow.FailedRenewal.sharing t)
+          Becoming.WindowedWaiting.Pair.first)
+      n =
+    n
+Becoming.PairFlow.FailedRenewal.gifts_sharing : ∀ (m : Nat),
+  Becoming.PairSelection.tally
+      (fun t =>
+        Becoming.PairFlow.WhileStanding.sends Becoming.PairFlow.FailedRenewal.parts
+          Becoming.PairFlow.FailedRenewal.sharing t
+          (Becoming.PairFlow.WhileStanding.levels Becoming.PairFlow.FailedRenewal.parts
+            Becoming.PairFlow.FailedRenewal.sharing t)
+          Becoming.WindowedWaiting.Pair.first)
+      (m + 4) =
+    Becoming.PairSelection.tally
+        (fun t =>
+          Becoming.PairFlow.WhileStanding.sends Becoming.PairFlow.FailedRenewal.parts
+            Becoming.PairFlow.FailedRenewal.sharing t
+            (Becoming.PairFlow.WhileStanding.levels Becoming.PairFlow.FailedRenewal.parts
+              Becoming.PairFlow.FailedRenewal.sharing t)
+            Becoming.WindowedWaiting.Pair.second)
+        (m + 4) +
+      2
+@Becoming.PairFlow.FailedRenewal.read_to_shortfall : ∀ {β γ : Nat},
+  (Becoming.PairFlow.WhileStanding.web Becoming.PairFlow.FailedRenewal.parts
+            Becoming.PairFlow.FailedRenewal.sharing).level
+        2 (Becoming.PairFlow.Member.line Becoming.WindowedWaiting.Pair.second) =
+      0 + β * 2 →
+    (Becoming.PairFlow.WhileStanding.web Becoming.PairFlow.FailedRenewal.parts
+              Becoming.PairFlow.FailedRenewal.keeping).level
+          2 (Becoming.PairFlow.Member.line Becoming.WindowedWaiting.Pair.second) =
+        0 + γ * 2 →
+      β = γ
+Becoming.PairFlow.FailedRenewal.read_to_shortfall_met : (Becoming.PairFlow.WhileStanding.web
+          Becoming.PairFlow.FailedRenewal.parts Becoming.PairFlow.FailedRenewal.sharing).level
+      2 (Becoming.PairFlow.Member.line Becoming.WindowedWaiting.Pair.second) =
+    0 + 1 * 2 ∧
+  (Becoming.PairFlow.WhileStanding.web Becoming.PairFlow.FailedRenewal.parts
+          Becoming.PairFlow.FailedRenewal.keeping).level
+      2 (Becoming.PairFlow.Member.line Becoming.WindowedWaiting.Pair.second) =
+    0 + 1 * 2
+Becoming.PairFlow.GiverAtNeed.levels_alone : ∀ (m : Nat),
+  Becoming.PairFlow.WhileStanding.levels Becoming.PairFlow.FailedRenewal.parts Becoming.PairFlow.GiverAtNeed.giverAlone
+      (m + 1) =
+    (2, 4)
+Becoming.PairFlow.GiverAtNeed.levels_kept : ∀ (n : Nat),
+  Becoming.PairFlow.WhileStanding.levels Becoming.PairFlow.FailedRenewal.parts Becoming.PairFlow.GiverAtNeed.bothKeep
+      n =
+    (3, 3)
+Becoming.PairFlow.GiverAtNeed.alone_fallen : ∀ (d : Nat),
+  Becoming.PairFlow.WhileStanding.isActive Becoming.PairFlow.FailedRenewal.parts
+      (Becoming.PairFlow.WhileStanding.levels Becoming.PairFlow.FailedRenewal.parts
+        Becoming.PairFlow.GiverAtNeed.giverAlone (1 + d))
+      Becoming.WindowedWaiting.Pair.first =
+    false
+Becoming.PairFlow.GiverAtNeed.alone_first : ∀ (m : Nat),
+  Becoming.PairFlow.WhileStanding.lineAt Becoming.PairFlow.FailedRenewal.parts Becoming.PairFlow.GiverAtNeed.giverAlone
+      Becoming.WindowedWaiting.Pair.first (m + 1) =
+    1
+Becoming.PairFlow.GiverAtNeed.kept_first : ∀ (n : Nat),
+  Becoming.PairFlow.WhileStanding.lineAt Becoming.PairFlow.FailedRenewal.parts Becoming.PairFlow.GiverAtNeed.bothKeep
+      Becoming.WindowedWaiting.Pair.first n =
+    n
+Becoming.PairFlow.GiverAtNeed.gift_lost : ∀ (m : Nat),
+  Becoming.PairFlow.WhileStanding.lineAt Becoming.PairFlow.FailedRenewal.parts Becoming.PairFlow.GiverAtNeed.bothKeep
+      Becoming.WindowedWaiting.Pair.first (m + 1) =
+    Becoming.PairFlow.WhileStanding.lineAt Becoming.PairFlow.FailedRenewal.parts
+        Becoming.PairFlow.GiverAtNeed.giverAlone Becoming.WindowedWaiting.Pair.first (m + 1) +
+      m
+Becoming.PairFlow.GiverAtNeed.second_active : ∀ (t : Nat),
+  Becoming.PairFlow.WhileStanding.isActive Becoming.PairFlow.FailedRenewal.parts
+      (Becoming.PairFlow.WhileStanding.levels Becoming.PairFlow.FailedRenewal.parts
+        Becoming.PairFlow.GiverAtNeed.giverAlone t)
+      Becoming.WindowedWaiting.Pair.second =
+    Becoming.PairFlow.WhileStanding.isActive Becoming.PairFlow.FailedRenewal.parts
+      (Becoming.PairFlow.WhileStanding.levels Becoming.PairFlow.FailedRenewal.parts
+        Becoming.PairFlow.GiverAtNeed.bothKeep t)
+      Becoming.WindowedWaiting.Pair.second
+Becoming.PairFlow.GiverAtNeed.withholder_same : ∀ (n : Nat),
+  Becoming.PairFlow.WhileStanding.lineAt Becoming.PairFlow.FailedRenewal.parts Becoming.PairFlow.GiverAtNeed.giverAlone
+      Becoming.WindowedWaiting.Pair.second n =
+    Becoming.PairFlow.WhileStanding.lineAt Becoming.PairFlow.FailedRenewal.parts Becoming.PairFlow.GiverAtNeed.bothKeep
+      Becoming.WindowedWaiting.Pair.second n
+Becoming.PairFlow.GiverAtNeed.standings_differ : Becoming.PairFlow.WhileStanding.levels
+      Becoming.PairFlow.FailedRenewal.parts Becoming.PairFlow.GiverAtNeed.giverAlone 1 =
+    (2, 4) ∧
+  Becoming.PairFlow.WhileStanding.levels Becoming.PairFlow.FailedRenewal.parts Becoming.PairFlow.GiverAtNeed.bothKeep
+      1 =
+    (3, 3)
+Becoming.PairFlow.DrawnBelowNeed.drawn : Becoming.PairFlow.WhileStanding.drawTaken Becoming.PairFlow.FailedRenewal.parts
+      Becoming.PairFlow.DrawnBelowNeed.keeping 1
+      (Becoming.PairFlow.WhileStanding.levels Becoming.PairFlow.FailedRenewal.parts
+        Becoming.PairFlow.DrawnBelowNeed.keeping 1)
+      Becoming.WindowedWaiting.Pair.second =
+    2 ∧
+  ∀ (t : Nat), Becoming.PairFlow.DrawnBelowNeed.keeping.draw Becoming.WindowedWaiting.Pair.second (t + 2) = 0
+Becoming.PairFlow.DrawnBelowNeed.levels_drawn : ∀ (m : Nat),
+  Becoming.PairFlow.WhileStanding.levels Becoming.PairFlow.FailedRenewal.parts Becoming.PairFlow.DrawnBelowNeed.keeping
+      (m + 2) =
+    (5, 1)
+Becoming.PairFlow.DrawnBelowNeed.fallen : ∀ (d : Nat),
+  Becoming.PairFlow.WhileStanding.isActive Becoming.PairFlow.FailedRenewal.parts
+      (Becoming.PairFlow.WhileStanding.levels Becoming.PairFlow.FailedRenewal.parts
+        Becoming.PairFlow.DrawnBelowNeed.keeping (2 + d))
+      Becoming.WindowedWaiting.Pair.second =
+    false
+Becoming.PairFlow.NeedsAtCapacity.gainless : ∀ (t : Nat),
+  0 ≤ t →
+    t < 0 + 1 → (Becoming.PairSelection.Needs.flow 1).GainlessOn (List.map id Becoming.PairFlow.NeedsAtCapacity.pair) t
+Becoming.PairFlow.NeedsAtCapacity.at_capacity : Becoming.total Becoming.PairFlow.NeedsAtCapacity.pair
+      (Becoming.PairFlow.metNeed (Becoming.PairSelection.Needs.web 1) id 0) =
+    1 ∧
+  Becoming.total Becoming.PairFlow.NeedsAtCapacity.pair
+        (Becoming.PairFlow.metNeed (Becoming.PairSelection.Needs.web 1) id (0 + 1)) =
+      3 ∧
+    (Becoming.PairSelection.Needs.web 1).stock (List.map id Becoming.PairFlow.NeedsAtCapacity.pair) 0 = 3 ∧
+      (Becoming.PairSelection.Needs.web 1).stock (List.map id Becoming.PairFlow.NeedsAtCapacity.pair) 1 = 3 ∧
+        Becoming.total Becoming.PairFlow.NeedsAtCapacity.pair
+            (Becoming.PairFlow.metNeed (Becoming.PairSelection.Needs.web 1) id (0 + 1)) ≤
+          (Becoming.PairSelection.Needs.web 1).stock (List.map id Becoming.PairFlow.NeedsAtCapacity.pair) 0

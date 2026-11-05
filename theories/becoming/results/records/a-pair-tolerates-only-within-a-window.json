@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-31T23:52:00+00:00",
+  "reviewed_at_utc": "2026-11-05T20:42:24+00:00",
   "statement": {
     "en": "In a pair, keeping inclusion splits one-step laws restoring mutual giving after a withholding from those answering a constant withholder; a window of two or more does both and absorbs errors spaced within it; no window both absorbs one error and answers a formation never erring twice running.",
     "zh": "在一对中，保持包含把一次扣留后恢复相互给出的一步律与回应恒定扣留者的一步律分开；至少两步的窗口两者皆成，并吸收窗口内稀疏的差错；没有窗口既吸收一次差错、又回应一个从不连续两次出错的形成。"
@@ -263,8 +263,8 @@
       "kind": "non-implication"
     },
     {
-      "en": "Probabilities, and so not generous tit-for-tat's forgiveness with a probability; the window is a deterministic relative of it.",
-      "zh": "概率，因而不含慷慨以牙还牙以概率给出的宽恕；窗口只是其确定性的亲属。",
+      "en": "Forgiveness with a probability, and errors turning withholding into giving; with one-way errors by chance the window delays total withholding and does not prevent it (the chance record).",
+      "zh": "以概率的宽恕，以及把扣留变为给出的差错；单向的随机差错下，窗口延迟全面扣留而不阻止之（见机会之记录）。",
       "kind": "scope"
     },
     {
@@ -314,12 +314,12 @@
     "zh": "由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.WindowedWaiting，回执 20261101T024359.312453Z，181 个声明（130 条定理），公理报告均为空；经独立 AI 验证者四轮审查重新编译，所见皆采纳。"
   },
   "next_delta": {
-    "en": "Errors with a probability, so that the window meets generous tit-for-tat's forgiveness; laws of giving with amounts; how a pairing and its waiting form.",
-    "zh": "带概率的差错，使窗口与慷慨以牙还牙的宽恕相接；带数量的给出之律；一对及其等待如何形成。"
+    "en": "Forgiveness with a probability, so that generous tit-for-tat is represented; laws of giving with amounts; how a pairing and its waiting form.",
+    "zh": "以概率的宽恕，使慷慨以牙还牙得以表示；带数量的给出之律；一对及其等待如何形成。"
   },
   "correspondence": {
-    "en": "Evolutionary game theory of reciprocity, as readings (AI reading, not formal names): answers is tit-for-tat, the window of two tit-for-two-tats (Axelrod and Hamilton 1981; Axelrod 1984), agreement win-stay lose-shift (Kraines and Kraines 1989, Pavlov; Nowak and Sigmund 1993), waitsAll grim trigger, giving whatever comes unconditional cooperation. The window is a deterministic relative of generous tit-for-tat (Molander 1985; Nowak and Sigmund 1992), whose forgiveness with a probability is not represented; errors as a supplied pattern stand where that literature has noise (Wu and Axelrod 1995). The split by keeping inclusion is near-definitional, the monotone Boolean functions of two inputs. That agreement is the one law, among those giving after mutual giving, restoring and answering corresponds to win-stay lose-shift being the only memory-one strategy of the prisoner's dilemma, stochastic ones included, that is mutually cooperative, corrects errors and retaliates (Hilbe, Martinez-Vaquero, Chatterjee and Nowak 2017, Fig. 1B); the Lean covers the eight deterministic laws only, and the definitions are not yet compared clause by clause.",
-    "zh": "互惠的演化博弈论，作为读法（AI 读法，非形式名称）：answers 即以牙还牙，两步窗口即两报还一报（Axelrod 与 Hamilton 1981；Axelrod 1984），一致律即赢留输变（Kraines 与 Kraines 1989，Pavlov；Nowak 与 Sigmund 1993），waitsAll 即冷酷触发，不论如何都给出即无条件合作。窗口是慷慨以牙还牙（Molander 1985；Nowak 与 Sigmund 1992）的确定性亲属，其以概率的宽恕未被表示；给定的差错模式处在该文献的噪声之位（Wu 与 Axelrod 1995）。按保持包含的划分近乎定义：二输入的单调布尔函数。在相互给出后仍给出的律中，一致律是唯一既恢复又回应之律，对应于赢留输变是囚徒困境中唯一相互合作、纠正差错且报复的一记忆策略，随机策略亦在其内（Hilbe、Martinez-Vaquero、Chatterjee 与 Nowak 2017，图 1B）；Lean 只涵盖八条确定之律，定义尚未逐条比较。"
+    "en": "Evolutionary game theory of reciprocity, as readings (AI reading, not formal names): answers is tit-for-tat, the window of two tit-for-two-tats (Axelrod and Hamilton 1981; Axelrod 1984), agreement win-stay lose-shift (Kraines and Kraines 1989, Pavlov; Nowak and Sigmund 1993), waitsAll grim trigger, giving whatever comes unconditional cooperation. The window is a relative of forgiveness for errors spaced within it; generous tit-for-tat (Molander 1985; Nowak and Sigmund 1992) forgives with a probability, which is not represented, and where errors come by chance and only withhold the window ends in total withholding while it does not (the chance record, by hand); errors as a supplied pattern stand where that literature has noise (Wu and Axelrod 1995). The split by keeping inclusion is near-definitional, the monotone Boolean functions of two inputs. That agreement is the one law, among those giving after mutual giving, restoring and answering corresponds to win-stay lose-shift being the only memory-one strategy of the prisoner's dilemma, stochastic ones included, that is mutually cooperative, corrects errors and retaliates (Hilbe, Martinez-Vaquero, Chatterjee and Nowak 2017, Fig. 1B); the Lean covers the eight deterministic laws only, and the definitions are not yet compared clause by clause.",
+    "zh": "互惠的演化博弈论，作为读法（AI 读法，非形式名称）：answers 即以牙还牙，两步窗口即两报还一报（Axelrod 与 Hamilton 1981；Axelrod 1984），一致律即赢留输变（Kraines 与 Kraines 1989，Pavlov；Nowak 与 Sigmund 1993），waitsAll 即冷酷触发，不论如何都给出即无条件合作。窗口是对其内间隔之差错的宽恕之亲属；慷慨以牙还牙（Molander 1985；Nowak 与 Sigmund 1992）以概率宽恕，未被表示；差错随机且只扣留时窗口终于全面扣留，而它不然（见机会之记录，手算）；给定的差错模式处在该文献的噪声之位（Wu 与 Axelrod 1995）。按保持包含的划分近乎定义：二输入的单调布尔函数。在相互给出后仍给出的律中，一致律是唯一既恢复又回应之律，对应于赢留输变是囚徒困境中唯一相互合作、纠正差错且报复的一记忆策略，随机策略亦在其内（Hilbe、Martinez-Vaquero、Chatterjee 与 Nowak 2017，图 1B）；Lean 只涵盖八条确定之律，定义尚未逐条比较。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WindowedWaiting.lean",
   "aliases": [
@@ -371,7 +371,15 @@
       }
     }
   ],
-  "related": [],
+  "related": [
+    {
+      "id": "errors-by-chance-in-a-pair-keeping-mutual-withholding",
+      "detail": {
+        "en": "There errors come by chance and only withhold, and the window delays total withholding.",
+        "zh": "那里差错随机而来且只扣留，窗口延迟全面扣留。"
+      }
+    }
+  ],
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WindowedWaiting.lean",
@@ -585,6 +593,10 @@
     {
       "en": "5 November 2026, board item EL7: the correspondence names Hilbe et al. 2017, whose uniqueness of win-stay lose-shift among memory-one strategies is close to the one law restoring and answering; nothing the record proves changes.",
       "zh": "2026年11月5日，工作板条目 EL7：对应之说加上 Hilbe 等 2017，其一记忆策略中赢留输变的唯一性接近唯一既恢复又回应之律；本记录所证不变。"
+    },
+    {
+      "en": "6 November 2026, board item EL7, correction: the window was read as a deterministic relative of forgiveness without saying that under chance errors it ends in total withholding; that is now said, and the next step narrowed.",
+      "zh": "2026年11月6日，工作板条目 EL7，更正：窗口曾被读作宽恕的确定性亲属，而未说明随机差错下它终于全面扣留；现已说明，下一步相应收窄。"
     }
   ]
 }

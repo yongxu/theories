@@ -71,7 +71,8 @@ draws supplied as patterns, an active formation able to pay its upkeep, its line
 from its standing (`WhileStanding.Parts.fits`), and a draw taken within what the standing holds. No
 ethical predicate or ranking occurs. An empty axiom report says nothing of these.
 
-Every declaration has an empty axiom report.
+Every declaration has an empty axiom report, except the generated `injEq` lemmas, which depend on
+`propext`, as the checker's audit admits.
 -/
 
 namespace Becoming

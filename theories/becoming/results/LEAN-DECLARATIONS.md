@@ -12,7 +12,7 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 
 | Topic | Entries | theorem/lemma occurrences |
 |---|---:|---:|
-| [Becoming pure core](lean-declarations/becoming-core.md) | 368 | 18,277 |
+| [Becoming pure core](lean-declarations/becoming-core.md) | 371 | 18,442 |
 | [Becoming instances and applications](lean-declarations/becoming-ring.md) | 18 | 1,071 |
 | [Normative grounding and generative direction](lean-declarations/ethics.md) | 139 | 2,533 |
 | [Valuation development and liangzhi](lean-declarations/valuation.md) | 19 | 202 |
@@ -547,6 +547,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [Likeness.lean](lean-declarations/becoming-core.md#module-b00054b2fe2f) | Becoming pure core |
 | [LimitVerification.lean](lean-declarations/becoming-core.md#module-39b79d5784de) | Becoming pure core |
 | [LineageAudit.lean](lean-declarations/valuation.md#module-7d1b924b40d2) | Valuation development and liangzhi |
+| [LineageDrawdown.lean](lean-declarations/becoming-core.md#module-7b87ffe50415) | Becoming pure core |
 | [LineageInProcess.lean](lean-declarations/valuation.md#module-45b450e65721) | Valuation development and liangzhi |
 | [LineageRegimes.lean](lean-declarations/becoming-core.md#module-aee8fdbd9169) | Becoming pure core |
 | [LineageRegions.lean](lean-declarations/becoming-core.md#module-312a8e4b92b4) | Becoming pure core |
@@ -635,6 +636,8 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [PaidArchiveReader.lean](lean-declarations/shared.md#module-dacef2fbbee5) | Organizational formation through revisable evaluation |
 | [PaidPreImport.lean](lean-declarations/shared.md#module-72d53bbb0ddb) | Organizational formation through revisable evaluation |
 | [PaidRecipientReasons.lean](lean-declarations/shared.md#module-c2e841f7d5e2) | Organizational formation through revisable evaluation |
+| [PairChance.lean](lean-declarations/becoming-core.md#module-ec4710e5e96b) | Becoming pure core |
+| [PairFlow.lean](lean-declarations/becoming-core.md#module-3cf0eb4ddc7c) | Becoming pure core |
 | [PairSelection.lean](lean-declarations/becoming-core.md#module-d55633e90703) | Becoming pure core |
 | [PairedPlasticity.lean](lean-declarations/shared.md#module-0f653cfbf240) | Organizational formation through revisable evaluation |
 | [ParityReadings.lean](lean-declarations/becoming-core.md#module-fa188c889ab1) | Becoming pure core |

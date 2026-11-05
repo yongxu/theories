@@ -19,21 +19,21 @@
     "classification": "Path-based documentary roles; working-source is not a claim of accepted, complete, canonical or checked status. A file containing only #print axioms and no inventoried named declarations is an audit-driver."
   },
   "statistics": {
-    "lean_paths": 2306,
-    "distinct_byte_contents": 1855,
+    "lean_paths": 2309,
+    "distinct_byte_contents": 1858,
     "byte_identical_duplicate_groups": 182,
     "roles": {
       "audit-driver": 13,
       "development-attempt": 1302,
       "historical-draft": 3,
       "imported-archive": 23,
-      "working-source": 965
+      "working-source": 968
     },
-    "working_named_theorem_lemma_occurrences": 30973,
-    "working_explicit_named_declaration_occurrences": 45193,
+    "working_named_theorem_lemma_occurrences": 31138,
+    "working_explicit_named_declaration_occurrences": 45430,
     "working_groups": {
       "abstraction": 45,
-      "becoming-core": 368,
+      "becoming-core": 371,
       "becoming-ring": 18,
       "concern": 15,
       "core": 144,
@@ -9061,7 +9061,7 @@
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean",
-      "sha256": "5cea3c1bb5389ce67d4e485b9aedc0ac96d6580a0d854e6d66093015b7eebce2",
+      "sha256": "2f2de35f9a28c364071443d646f467361e546971fe40054a9f3a290d7d0fa5d3",
       "role": "working-source",
       "group": "becoming-core",
       "receipt_layer": "core",
@@ -12339,6 +12339,20 @@
       "proof_status": "not_assessed_by_catalogue"
     },
     {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineageDrawdown.lean",
+      "sha256": "64472b9de56688da43e5f6c533fe0803c03f12ce1ad9da233520841a9803c77f",
+      "role": "working-source",
+      "group": "becoming-core",
+      "receipt_layer": "core",
+      "receipt_bytes_match": true,
+      "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
+      "direct_documentation_links_from": [
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md"
+      ],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineageRegimes.lean",
       "sha256": "d1c123edee1618429ab9db66ce56e4b099b0a2f29c34fb2ef64c163e24467cc9",
       "role": "working-source",
@@ -12965,6 +12979,38 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
         "theories/becoming/history/THE-THEORY-OF-BECOMING-2026-10-20.md",
         "theories/becoming/history/THE-THEORY-OF-BECOMING.md"
+      ],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PairChance.lean",
+      "sha256": "6e4a5ffd122fa3c1a98ffc84917061bbf616244999c7f3b71bc2447a2821f1b5",
+      "role": "working-source",
+      "group": "becoming-core",
+      "receipt_layer": "core",
+      "receipt_bytes_match": true,
+      "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
+      "direct_documentation_links_from": [
+        "RESULTS.md",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md",
+        "theories/becoming/chapters/05-COLLECTIVES.md"
+      ],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PairFlow.lean",
+      "sha256": "c4f9db3077643955baf204aba4c1847dbaa66956c1e149d6247d171c5eacecca",
+      "role": "working-source",
+      "group": "becoming-core",
+      "receipt_layer": "core",
+      "receipt_bytes_match": true,
+      "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
+      "direct_documentation_links_from": [
+        "RESULTS.md",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md",
+        "theories/becoming/chapters/05-COLLECTIVES.md"
       ],
       "proof_status": "not_assessed_by_catalogue"
     },
@@ -129437,6 +129483,407 @@
       },
       "print_axioms_commands": 27
     },
+    "2f2de35f9a28c364071443d646f467361e546971fe40054a9f3a290d7d0fa5d3": {
+      "byte_size": 409705,
+      "line_count": 4767,
+      "imports": [
+        "Becoming.Grammar",
+        "Becoming.GrammarReadings",
+        "Becoming.GrammarMap",
+        "Becoming.GrammarTesting",
+        "Becoming.GrammarCandidates",
+        "Becoming.MapInstances",
+        "Becoming.MapRegions",
+        "Becoming.GrammarLaws",
+        "Becoming.GrammarConditionals",
+        "Becoming.CommonResponse",
+        "Becoming.GrammarTransport",
+        "Becoming.ShownOrder",
+        "Becoming.World",
+        "Becoming.Witnesses",
+        "Becoming.Frame",
+        "Becoming.Laws",
+        "Becoming.Labelled",
+        "Becoming.Inquiry",
+        "Becoming.Derivation",
+        "Becoming.ClassifiedBeliefProcesses",
+        "Becoming.MoveOutcomeProcesses",
+        "Becoming.Recurrence",
+        "Becoming.Diagonal",
+        "Becoming.Context",
+        "Becoming.ContextArrivalTraces",
+        "Becoming.Quantum",
+        "Becoming.Renewal",
+        "Becoming.Dependence",
+        "Becoming.Restoration",
+        "Becoming.Horizon",
+        "Becoming.Joint",
+        "Becoming.Experiment",
+        "Becoming.Mechanism",
+        "Becoming.Unfolding",
+        "Becoming.LawAlongRun",
+        "Becoming.Irreversibility",
+        "Becoming.Histories",
+        "Becoming.Branching",
+        "Becoming.Listing",
+        "Becoming.Stuttering",
+        "Becoming.Reordering",
+        "Becoming.IdleRemoval",
+        "Becoming.OrderNormal",
+        "Becoming.OneStep",
+        "Becoming.Weighted",
+        "Becoming.Transmission",
+        "Becoming.Succession",
+        "Becoming.Attraction",
+        "Becoming.Substitution",
+        "Becoming.Arising",
+        "Becoming.Flow",
+        "Becoming.Stock",
+        "Becoming.Change",
+        "Becoming.Population",
+        "Becoming.Identity",
+        "Becoming.Persistence",
+        "Becoming.ContinuedClasses",
+        "Becoming.WorldRepresentation",
+        "Becoming.Wholes",
+        "Becoming.Dissipation",
+        "Becoming.Locality",
+        "Becoming.Seeking",
+        "Becoming.Roles",
+        "Becoming.LabelledRoles",
+        "Becoming.Reserve",
+        "Becoming.Evolution",
+        "Becoming.Capture",
+        "Becoming.SelectionTerm",
+        "Becoming.Reproduction",
+        "Becoming.SelectionLevels",
+        "Becoming.GroupEnding",
+        "Becoming.RootForms",
+        "Becoming.Founding",
+        "Becoming.Drift",
+        "Becoming.Space",
+        "Becoming.Premises",
+        "Becoming.Sampling",
+        "Becoming.Tower",
+        "Becoming.Openness",
+        "Becoming.Decidedness",
+        "Becoming.Refinement",
+        "Becoming.CensusTable",
+        "Becoming.Counting",
+        "Becoming.Standing",
+        "Becoming.Resolution",
+        "Becoming.Amounts",
+        "Becoming.LeastLoss",
+        "Becoming.WholeAmounts",
+        "Becoming.InAmounts",
+        "Becoming.Entropy",
+        "Becoming.SelectionPace",
+        "Becoming.Units",
+        "Becoming.Imbalance",
+        "Becoming.Continuity",
+        "Becoming.Continuation",
+        "Becoming.RenewalFlow",
+        "Becoming.Admission",
+        "Becoming.Exclusion",
+        "Becoming.Exhaustion",
+        "Becoming.Regions",
+        "Becoming.EventualWidening",
+        "Becoming.EventualWideningInstances",
+        "Becoming.ComparingCourses",
+        "Becoming.ReachableRanges",
+        "Becoming.HeldPossible",
+        "Becoming.Tasks",
+        "Becoming.CausalGrowth",
+        "Becoming.Presence",
+        "Becoming.ReorderingGrowth",
+        "Becoming.FreeEnergyGuarantees",
+        "Becoming.Blanket",
+        "Becoming.BlanketWeights",
+        "Becoming.BlanketCouplings",
+        "Becoming.LumpedSeeking",
+        "Becoming.FreeEnergyCounting",
+        "Becoming.ModelStatements",
+        "Becoming.Growth",
+        "Becoming.Retaining",
+        "Becoming.OwnWidening",
+        "Becoming.Clearing",
+        "Becoming.Extension",
+        "Becoming.Metaethics",
+        "Becoming.Lifting",
+        "Becoming.Ranking",
+        "Becoming.ActiveReading",
+        "Becoming.LossMatching",
+        "Becoming.StrictTransport",
+        "Becoming.MatchedCourses",
+        "Becoming.Correspondence",
+        "Becoming.Descent",
+        "Becoming.Standpoints",
+        "Becoming.Significance",
+        "Becoming.ValuationFrames",
+        "Becoming.RelativePosition",
+        "Becoming.Interdependence",
+        "Becoming.Feeding",
+        "Becoming.Feedback",
+        "Becoming.BoundedSignificance",
+        "Becoming.Cuts",
+        "Becoming.EdgeClosure",
+        "Becoming.SeedReach",
+        "Becoming.ScopedReach",
+        "Becoming.Boundaries",
+        "Becoming.ConveyanceBoundaries",
+        "Becoming.BalanceRegions",
+        "Becoming.Weightings",
+        "Becoming.Relevance",
+        "Becoming.Testing",
+        "Becoming.Runaway",
+        "Becoming.Response",
+        "Becoming.TimedResponse",
+        "Becoming.Latency",
+        "Becoming.Centers",
+        "Becoming.Counterfactual",
+        "Becoming.Regrouping",
+        "Becoming.Selection",
+        "Becoming.Learning",
+        "Becoming.Unread",
+        "Becoming.Cascade",
+        "Becoming.ReachedCascade",
+        "Becoming.RevisionRoutes",
+        "Becoming.ReadStages",
+        "Becoming.PropositionIdentity",
+        "Becoming.Hexagrams",
+        "Becoming.HexagramPlaces",
+        "Becoming.HexagramLaws",
+        "Becoming.HexagramSites",
+        "Becoming.HexagramSequences",
+        "Becoming.Withholding",
+        "Becoming.LoopReturn",
+        "Becoming.Pace",
+        "Becoming.RuleCapture",
+        "Becoming.ClosedCapture",
+        "Becoming.RuleShaping",
+        "Becoming.ChoiceCountCapture",
+        "Becoming.DrawnShaping",
+        "Becoming.DrawnReplacement",
+        "Becoming.ReadInTime",
+        "Becoming.PatternPassing",
+        "Becoming.JointKeeping",
+        "Becoming.Undecided",
+        "Becoming.Junctures",
+        "Becoming.Commuting",
+        "Becoming.WeightedCommuting",
+        "Becoming.HexagramCommuting",
+        "Becoming.Tolerance",
+        "Becoming.Revision",
+        "Becoming.Contacts",
+        "Becoming.RegroupingSelection",
+        "Becoming.ReferencePlan",
+        "Becoming.ContinuingRevision",
+        "Becoming.Description",
+        "Becoming.Identification",
+        "Becoming.Learnable",
+        "Becoming.Assurance",
+        "Becoming.AssurancePlans",
+        "Becoming.Integers",
+        "Becoming.Segmentation",
+        "Becoming.Readout",
+        "Becoming.Dephasing",
+        "Becoming.ProjectedLaws",
+        "Becoming.JointPhase",
+        "Becoming.SummaryFutures",
+        "Becoming.Gated",
+        "Becoming.Viability",
+        "Becoming.Keeping",
+        "Becoming.ReflexivePrediction",
+        "Becoming.Prelude",
+        "Becoming.Ideals",
+        "Becoming.ContingentPlans",
+        "Becoming.Actuation",
+        "Becoming.TreeSearch",
+        "Becoming.Dispatch",
+        "Becoming.FaultEnvelopes",
+        "Becoming.Transactions",
+        "Becoming.Reconfiguration",
+        "Becoming.PooledEnvelopes",
+        "Becoming.WitnessRefinement",
+        "Becoming.WitnessRefinementRuns",
+        "Becoming.ChanceFloors",
+        "Becoming.IntegerOrder",
+        "Becoming.Acceptance",
+        "Becoming.GuardHorizon",
+        "Becoming.OpenedCorrection",
+        "Becoming.Countdown",
+        "Becoming.Lasting",
+        "Becoming.Copying",
+        "Becoming.Retrodiction",
+        "Becoming.CrossSituational",
+        "Becoming.Likeness",
+        "Becoming.Distinguishing",
+        "Becoming.JointPlans",
+        "Becoming.Composition",
+        "Becoming.Joining",
+        "Becoming.Granularity",
+        "Becoming.HistoryLanguages",
+        "Becoming.HistoryIdeals",
+        "Becoming.HistoryIdealsTraces",
+        "Becoming.Verification",
+        "Becoming.Coverage",
+        "Becoming.Presentations",
+        "Becoming.Carriers",
+        "Becoming.BranchingCorrespondence",
+        "Becoming.JointCorrespondence",
+        "Becoming.ListFootprints",
+        "Becoming.Fragments",
+        "Becoming.LocalUnits",
+        "Becoming.JoiningContexts",
+        "Becoming.JoiningCodes",
+        "Becoming.JoiningRoles",
+        "Becoming.Postponement",
+        "Becoming.Novelty",
+        "Becoming.Reading",
+        "Becoming.PlaceTransitionNets",
+        "Becoming.SharedCodes",
+        "Becoming.CountedCodes",
+        "Becoming.ExchangePremises",
+        "Becoming.OverExchange",
+        "Becoming.Readings",
+        "Becoming.MoveFormation",
+        "Becoming.Sensitivity",
+        "Becoming.Tail",
+        "Becoming.Courses",
+        "Becoming.Parting",
+        "Becoming.Onward",
+        "Becoming.Typicality",
+        "Becoming.ConditionalWeights",
+        "Becoming.Situations",
+        "Becoming.Propagation",
+        "Becoming.Regulation",
+        "Becoming.ReadingSchedule",
+        "Becoming.RegimeMargin",
+        "Becoming.RoomNet",
+        "Becoming.RoomRuns",
+        "Becoming.ReaderRebuilding",
+        "Becoming.RuleRebuilding",
+        "Becoming.ListingRefutations",
+        "Becoming.Loops",
+        "Becoming.Remainder",
+        "Becoming.Routes",
+        "Becoming.Closing",
+        "Becoming.Thresholds",
+        "Becoming.Observation",
+        "Becoming.Frequency",
+        "Becoming.MutualDependence",
+        "Becoming.Gain",
+        "Becoming.KeepingWidening",
+        "Becoming.SelectionShift",
+        "Becoming.LineageRegions",
+        "Becoming.LineageRegimes",
+        "Becoming.LineageDrawdown",
+        "Becoming.WideningOnTheMap",
+        "Becoming.Gluing",
+        "Becoming.Runs",
+        "Becoming.CourseWorlds",
+        "Becoming.LearnableRuns",
+        "Becoming.PartialReadout",
+        "Becoming.CodeAcquisition",
+        "Becoming.RouteFormation",
+        "Becoming.ResponseLearning",
+        "Becoming.LearnedGrouping",
+        "Becoming.ParityReadings",
+        "Becoming.FinerTraces",
+        "Becoming.HistorySums",
+        "Becoming.FormedLoops",
+        "Becoming.AttractionRuns",
+        "Becoming.ContactCourses",
+        "Becoming.ContextualRuns",
+        "Becoming.ContinuingRuns",
+        "Becoming.CopyCourses",
+        "Becoming.CounterfactualRuns",
+        "Becoming.CouplingTraces",
+        "Becoming.CourseRoles",
+        "Becoming.HorizonWebs",
+        "Becoming.IdentificationRuns",
+        "Becoming.LastingRuns",
+        "Becoming.LearningRuns",
+        "Becoming.ListedWebs",
+        "Becoming.ReferencePlanTraces",
+        "Becoming.RouteTraces",
+        "Becoming.SeekingRuns",
+        "Becoming.SelectionRuns",
+        "Becoming.SensitivityWebs",
+        "Becoming.SituationTraces",
+        "Becoming.StrengthFlows",
+        "Becoming.TypicalRuns",
+        "Becoming.WeightedTraces",
+        "Becoming.LevelCoupling",
+        "Becoming.Interleavings",
+        "Becoming.CensusCounts",
+        "Becoming.CensusBinding",
+        "Becoming.Unrolling",
+        "Becoming.Labels",
+        "Becoming.Enough",
+        "Becoming.Settling",
+        "Becoming.LastChange",
+        "Becoming.LimitVerification",
+        "Becoming.SelectionGap",
+        "Becoming.SelectionReach",
+        "Becoming.UnitMatchings",
+        "Becoming.UnreadStandings",
+        "Becoming.DrawnBeyond",
+        "Becoming.WindowedWaiting",
+        "Becoming.PairSelection",
+        "Becoming.PairFlow",
+        "Becoming.PairChance",
+        "Becoming.JointDraw",
+        "Becoming.Optimum",
+        "Becoming.OptimumSeason",
+        "Becoming.CoupledDrawers",
+        "Becoming.SetPointOptimum",
+        "Becoming.SelectionPool",
+        "Becoming.PoolResponse",
+        "Becoming.Training",
+        "Becoming.PoolCourse",
+        "Becoming.Rejoining",
+        "Becoming.Lexical",
+        "Becoming.Frontier",
+        "Becoming.FrontierFrames",
+        "Becoming.FrontierWorlds",
+        "Becoming.Direction",
+        "Becoming.ScoreRepresentation",
+        "Becoming.Alternatives",
+        "Becoming.Bundles",
+        "Becoming.ActivationCapacity",
+        "Becoming.Narrowing",
+        "Becoming.NarrowingRuns",
+        "Becoming.ReadingLoop",
+        "Becoming.RevisionPlans",
+        "Becoming.HeldForReading",
+        "Becoming.ListingValuation",
+        "Becoming.SecuredContent",
+        "Becoming.ProfileReach",
+        "Becoming.RenewalBound",
+        "Becoming.Handoff",
+        "Becoming.RuleHandoff",
+        "Becoming.GrammarCourse",
+        "Becoming.GrammarRegularity",
+        "Becoming.ProcessRepresentation",
+        "Becoming.GrammarScope",
+        "Becoming.GrammarCases",
+        "Becoming.GrammarCrossing",
+        "Becoming.PremiseWitnesses",
+        "Becoming.GrammarPath",
+        "Becoming.SignificanceStatements"
+      ],
+      "declarations": [],
+      "declaration_counts": {},
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
     "2f402bd0a9f6168290aed6758b4fb1162a56cb5d31e3414aa37e443a21edc0cc": {
       "byte_size": 22668,
       "line_count": 512,
@@ -221902,404 +222349,6 @@
       },
       "print_axioms_commands": 0
     },
-    "5cea3c1bb5389ce67d4e485b9aedc0ac96d6580a0d854e6d66093015b7eebce2": {
-      "byte_size": 405906,
-      "line_count": 4724,
-      "imports": [
-        "Becoming.Grammar",
-        "Becoming.GrammarReadings",
-        "Becoming.GrammarMap",
-        "Becoming.GrammarTesting",
-        "Becoming.GrammarCandidates",
-        "Becoming.MapInstances",
-        "Becoming.MapRegions",
-        "Becoming.GrammarLaws",
-        "Becoming.GrammarConditionals",
-        "Becoming.CommonResponse",
-        "Becoming.GrammarTransport",
-        "Becoming.ShownOrder",
-        "Becoming.World",
-        "Becoming.Witnesses",
-        "Becoming.Frame",
-        "Becoming.Laws",
-        "Becoming.Labelled",
-        "Becoming.Inquiry",
-        "Becoming.Derivation",
-        "Becoming.ClassifiedBeliefProcesses",
-        "Becoming.MoveOutcomeProcesses",
-        "Becoming.Recurrence",
-        "Becoming.Diagonal",
-        "Becoming.Context",
-        "Becoming.ContextArrivalTraces",
-        "Becoming.Quantum",
-        "Becoming.Renewal",
-        "Becoming.Dependence",
-        "Becoming.Restoration",
-        "Becoming.Horizon",
-        "Becoming.Joint",
-        "Becoming.Experiment",
-        "Becoming.Mechanism",
-        "Becoming.Unfolding",
-        "Becoming.LawAlongRun",
-        "Becoming.Irreversibility",
-        "Becoming.Histories",
-        "Becoming.Branching",
-        "Becoming.Listing",
-        "Becoming.Stuttering",
-        "Becoming.Reordering",
-        "Becoming.IdleRemoval",
-        "Becoming.OrderNormal",
-        "Becoming.OneStep",
-        "Becoming.Weighted",
-        "Becoming.Transmission",
-        "Becoming.Succession",
-        "Becoming.Attraction",
-        "Becoming.Substitution",
-        "Becoming.Arising",
-        "Becoming.Flow",
-        "Becoming.Stock",
-        "Becoming.Change",
-        "Becoming.Population",
-        "Becoming.Identity",
-        "Becoming.Persistence",
-        "Becoming.ContinuedClasses",
-        "Becoming.WorldRepresentation",
-        "Becoming.Wholes",
-        "Becoming.Dissipation",
-        "Becoming.Locality",
-        "Becoming.Seeking",
-        "Becoming.Roles",
-        "Becoming.LabelledRoles",
-        "Becoming.Reserve",
-        "Becoming.Evolution",
-        "Becoming.Capture",
-        "Becoming.SelectionTerm",
-        "Becoming.Reproduction",
-        "Becoming.SelectionLevels",
-        "Becoming.GroupEnding",
-        "Becoming.RootForms",
-        "Becoming.Founding",
-        "Becoming.Drift",
-        "Becoming.Space",
-        "Becoming.Premises",
-        "Becoming.Sampling",
-        "Becoming.Tower",
-        "Becoming.Openness",
-        "Becoming.Decidedness",
-        "Becoming.Refinement",
-        "Becoming.CensusTable",
-        "Becoming.Counting",
-        "Becoming.Standing",
-        "Becoming.Resolution",
-        "Becoming.Amounts",
-        "Becoming.LeastLoss",
-        "Becoming.WholeAmounts",
-        "Becoming.InAmounts",
-        "Becoming.Entropy",
-        "Becoming.SelectionPace",
-        "Becoming.Units",
-        "Becoming.Imbalance",
-        "Becoming.Continuity",
-        "Becoming.Continuation",
-        "Becoming.RenewalFlow",
-        "Becoming.Admission",
-        "Becoming.Exclusion",
-        "Becoming.Exhaustion",
-        "Becoming.Regions",
-        "Becoming.EventualWidening",
-        "Becoming.EventualWideningInstances",
-        "Becoming.ComparingCourses",
-        "Becoming.ReachableRanges",
-        "Becoming.HeldPossible",
-        "Becoming.Tasks",
-        "Becoming.CausalGrowth",
-        "Becoming.Presence",
-        "Becoming.ReorderingGrowth",
-        "Becoming.FreeEnergyGuarantees",
-        "Becoming.Blanket",
-        "Becoming.BlanketWeights",
-        "Becoming.BlanketCouplings",
-        "Becoming.LumpedSeeking",
-        "Becoming.FreeEnergyCounting",
-        "Becoming.ModelStatements",
-        "Becoming.Growth",
-        "Becoming.Retaining",
-        "Becoming.OwnWidening",
-        "Becoming.Clearing",
-        "Becoming.Extension",
-        "Becoming.Metaethics",
-        "Becoming.Lifting",
-        "Becoming.Ranking",
-        "Becoming.ActiveReading",
-        "Becoming.LossMatching",
-        "Becoming.StrictTransport",
-        "Becoming.MatchedCourses",
-        "Becoming.Correspondence",
-        "Becoming.Descent",
-        "Becoming.Standpoints",
-        "Becoming.Significance",
-        "Becoming.ValuationFrames",
-        "Becoming.RelativePosition",
-        "Becoming.Interdependence",
-        "Becoming.Feeding",
-        "Becoming.Feedback",
-        "Becoming.BoundedSignificance",
-        "Becoming.Cuts",
-        "Becoming.EdgeClosure",
-        "Becoming.SeedReach",
-        "Becoming.ScopedReach",
-        "Becoming.Boundaries",
-        "Becoming.ConveyanceBoundaries",
-        "Becoming.BalanceRegions",
-        "Becoming.Weightings",
-        "Becoming.Relevance",
-        "Becoming.Testing",
-        "Becoming.Runaway",
-        "Becoming.Response",
-        "Becoming.TimedResponse",
-        "Becoming.Latency",
-        "Becoming.Centers",
-        "Becoming.Counterfactual",
-        "Becoming.Regrouping",
-        "Becoming.Selection",
-        "Becoming.Learning",
-        "Becoming.Unread",
-        "Becoming.Cascade",
-        "Becoming.ReachedCascade",
-        "Becoming.RevisionRoutes",
-        "Becoming.ReadStages",
-        "Becoming.PropositionIdentity",
-        "Becoming.Hexagrams",
-        "Becoming.HexagramPlaces",
-        "Becoming.HexagramLaws",
-        "Becoming.HexagramSites",
-        "Becoming.HexagramSequences",
-        "Becoming.Withholding",
-        "Becoming.LoopReturn",
-        "Becoming.Pace",
-        "Becoming.RuleCapture",
-        "Becoming.ClosedCapture",
-        "Becoming.RuleShaping",
-        "Becoming.ChoiceCountCapture",
-        "Becoming.DrawnShaping",
-        "Becoming.DrawnReplacement",
-        "Becoming.ReadInTime",
-        "Becoming.PatternPassing",
-        "Becoming.JointKeeping",
-        "Becoming.Undecided",
-        "Becoming.Junctures",
-        "Becoming.Commuting",
-        "Becoming.WeightedCommuting",
-        "Becoming.HexagramCommuting",
-        "Becoming.Tolerance",
-        "Becoming.Revision",
-        "Becoming.Contacts",
-        "Becoming.RegroupingSelection",
-        "Becoming.ReferencePlan",
-        "Becoming.ContinuingRevision",
-        "Becoming.Description",
-        "Becoming.Identification",
-        "Becoming.Learnable",
-        "Becoming.Assurance",
-        "Becoming.AssurancePlans",
-        "Becoming.Integers",
-        "Becoming.Segmentation",
-        "Becoming.Readout",
-        "Becoming.Dephasing",
-        "Becoming.ProjectedLaws",
-        "Becoming.JointPhase",
-        "Becoming.SummaryFutures",
-        "Becoming.Gated",
-        "Becoming.Viability",
-        "Becoming.Keeping",
-        "Becoming.ReflexivePrediction",
-        "Becoming.Prelude",
-        "Becoming.Ideals",
-        "Becoming.ContingentPlans",
-        "Becoming.Actuation",
-        "Becoming.TreeSearch",
-        "Becoming.Dispatch",
-        "Becoming.FaultEnvelopes",
-        "Becoming.Transactions",
-        "Becoming.Reconfiguration",
-        "Becoming.PooledEnvelopes",
-        "Becoming.WitnessRefinement",
-        "Becoming.WitnessRefinementRuns",
-        "Becoming.ChanceFloors",
-        "Becoming.IntegerOrder",
-        "Becoming.Acceptance",
-        "Becoming.GuardHorizon",
-        "Becoming.OpenedCorrection",
-        "Becoming.Countdown",
-        "Becoming.Lasting",
-        "Becoming.Copying",
-        "Becoming.Retrodiction",
-        "Becoming.CrossSituational",
-        "Becoming.Likeness",
-        "Becoming.Distinguishing",
-        "Becoming.JointPlans",
-        "Becoming.Composition",
-        "Becoming.Joining",
-        "Becoming.Granularity",
-        "Becoming.HistoryLanguages",
-        "Becoming.HistoryIdeals",
-        "Becoming.HistoryIdealsTraces",
-        "Becoming.Verification",
-        "Becoming.Coverage",
-        "Becoming.Presentations",
-        "Becoming.Carriers",
-        "Becoming.BranchingCorrespondence",
-        "Becoming.JointCorrespondence",
-        "Becoming.ListFootprints",
-        "Becoming.Fragments",
-        "Becoming.LocalUnits",
-        "Becoming.JoiningContexts",
-        "Becoming.JoiningCodes",
-        "Becoming.JoiningRoles",
-        "Becoming.Postponement",
-        "Becoming.Novelty",
-        "Becoming.Reading",
-        "Becoming.PlaceTransitionNets",
-        "Becoming.SharedCodes",
-        "Becoming.CountedCodes",
-        "Becoming.ExchangePremises",
-        "Becoming.OverExchange",
-        "Becoming.Readings",
-        "Becoming.MoveFormation",
-        "Becoming.Sensitivity",
-        "Becoming.Tail",
-        "Becoming.Courses",
-        "Becoming.Parting",
-        "Becoming.Onward",
-        "Becoming.Typicality",
-        "Becoming.ConditionalWeights",
-        "Becoming.Situations",
-        "Becoming.Propagation",
-        "Becoming.Regulation",
-        "Becoming.ReadingSchedule",
-        "Becoming.RegimeMargin",
-        "Becoming.RoomNet",
-        "Becoming.RoomRuns",
-        "Becoming.ReaderRebuilding",
-        "Becoming.RuleRebuilding",
-        "Becoming.ListingRefutations",
-        "Becoming.Loops",
-        "Becoming.Remainder",
-        "Becoming.Routes",
-        "Becoming.Closing",
-        "Becoming.Thresholds",
-        "Becoming.Observation",
-        "Becoming.Frequency",
-        "Becoming.MutualDependence",
-        "Becoming.Gain",
-        "Becoming.KeepingWidening",
-        "Becoming.SelectionShift",
-        "Becoming.LineageRegions",
-        "Becoming.LineageRegimes",
-        "Becoming.WideningOnTheMap",
-        "Becoming.Gluing",
-        "Becoming.Runs",
-        "Becoming.CourseWorlds",
-        "Becoming.LearnableRuns",
-        "Becoming.PartialReadout",
-        "Becoming.CodeAcquisition",
-        "Becoming.RouteFormation",
-        "Becoming.ResponseLearning",
-        "Becoming.LearnedGrouping",
-        "Becoming.ParityReadings",
-        "Becoming.FinerTraces",
-        "Becoming.HistorySums",
-        "Becoming.FormedLoops",
-        "Becoming.AttractionRuns",
-        "Becoming.ContactCourses",
-        "Becoming.ContextualRuns",
-        "Becoming.ContinuingRuns",
-        "Becoming.CopyCourses",
-        "Becoming.CounterfactualRuns",
-        "Becoming.CouplingTraces",
-        "Becoming.CourseRoles",
-        "Becoming.HorizonWebs",
-        "Becoming.IdentificationRuns",
-        "Becoming.LastingRuns",
-        "Becoming.LearningRuns",
-        "Becoming.ListedWebs",
-        "Becoming.ReferencePlanTraces",
-        "Becoming.RouteTraces",
-        "Becoming.SeekingRuns",
-        "Becoming.SelectionRuns",
-        "Becoming.SensitivityWebs",
-        "Becoming.SituationTraces",
-        "Becoming.StrengthFlows",
-        "Becoming.TypicalRuns",
-        "Becoming.WeightedTraces",
-        "Becoming.LevelCoupling",
-        "Becoming.Interleavings",
-        "Becoming.CensusCounts",
-        "Becoming.CensusBinding",
-        "Becoming.Unrolling",
-        "Becoming.Labels",
-        "Becoming.Enough",
-        "Becoming.Settling",
-        "Becoming.LastChange",
-        "Becoming.LimitVerification",
-        "Becoming.SelectionGap",
-        "Becoming.SelectionReach",
-        "Becoming.UnitMatchings",
-        "Becoming.UnreadStandings",
-        "Becoming.DrawnBeyond",
-        "Becoming.WindowedWaiting",
-        "Becoming.PairSelection",
-        "Becoming.JointDraw",
-        "Becoming.Optimum",
-        "Becoming.OptimumSeason",
-        "Becoming.CoupledDrawers",
-        "Becoming.SetPointOptimum",
-        "Becoming.SelectionPool",
-        "Becoming.PoolResponse",
-        "Becoming.Training",
-        "Becoming.PoolCourse",
-        "Becoming.Rejoining",
-        "Becoming.Lexical",
-        "Becoming.Frontier",
-        "Becoming.FrontierFrames",
-        "Becoming.FrontierWorlds",
-        "Becoming.Direction",
-        "Becoming.ScoreRepresentation",
-        "Becoming.Alternatives",
-        "Becoming.Bundles",
-        "Becoming.ActivationCapacity",
-        "Becoming.Narrowing",
-        "Becoming.NarrowingRuns",
-        "Becoming.ReadingLoop",
-        "Becoming.RevisionPlans",
-        "Becoming.HeldForReading",
-        "Becoming.ListingValuation",
-        "Becoming.SecuredContent",
-        "Becoming.ProfileReach",
-        "Becoming.RenewalBound",
-        "Becoming.Handoff",
-        "Becoming.RuleHandoff",
-        "Becoming.GrammarCourse",
-        "Becoming.GrammarRegularity",
-        "Becoming.ProcessRepresentation",
-        "Becoming.GrammarScope",
-        "Becoming.GrammarCases",
-        "Becoming.GrammarCrossing",
-        "Becoming.PremiseWitnesses",
-        "Becoming.GrammarPath",
-        "Becoming.SignificanceStatements"
-      ],
-      "declarations": [],
-      "declaration_counts": {},
-      "textual_markers": {
-        "sorry": [],
-        "admit": [],
-        "axiom": [],
-        "native_decide": [],
-        "unsafe": []
-      },
-      "print_axioms_commands": 0
-    },
     "5d3a4c3b0bf127012c7857b12e6f0a04f10b39f71c4dcfa65de5993d4696f903": {
       "byte_size": 2194,
       "line_count": 32,
@@ -236618,6 +236667,460 @@
       "declaration_counts": {
         "def": 2,
         "theorem": 33
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
+    "64472b9de56688da43e5f6c533fe0803c03f12ce1ad9da233520841a9803c77f": {
+      "byte_size": 42403,
+      "line_count": 810,
+      "imports": [
+        "Becoming.LineageRegimes"
+      ],
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "below_iff",
+          "qualified_name_hint": "Becoming.LineageDrawdown.below_iff",
+          "line": 84
+        },
+        {
+          "kind": "theorem",
+          "name": "below_of_excess",
+          "qualified_name_hint": "Becoming.LineageDrawdown.below_of_excess",
+          "line": 94
+        },
+        {
+          "kind": "theorem",
+          "name": "degeneration_of_unmet",
+          "qualified_name_hint": "Becoming.LineageDrawdown.degeneration_of_unmet",
+          "line": 115
+        },
+        {
+          "kind": "theorem",
+          "name": "degeneration_of_unmet_listed",
+          "qualified_name_hint": "Becoming.LineageDrawdown.degeneration_of_unmet_listed",
+          "line": 130
+        },
+        {
+          "kind": "theorem",
+          "name": "degeneration_of_drawdown",
+          "qualified_name_hint": "Becoming.LineageDrawdown.degeneration_of_drawdown",
+          "line": 145
+        },
+        {
+          "kind": "theorem",
+          "name": "degeneration_of_excess",
+          "qualified_name_hint": "Becoming.LineageDrawdown.degeneration_of_excess",
+          "line": 157
+        },
+        {
+          "kind": "theorem",
+          "name": "landed_of_excess",
+          "qualified_name_hint": "Becoming.LineageDrawdown.landed_of_excess",
+          "line": 168
+        },
+        {
+          "kind": "theorem",
+          "name": "landed_of_excess_eq",
+          "qualified_name_hint": "Becoming.LineageDrawdown.landed_of_excess_eq",
+          "line": 181
+        },
+        {
+          "kind": "theorem",
+          "name": "gone_of_excess",
+          "qualified_name_hint": "Becoming.LineageDrawdown.gone_of_excess",
+          "line": 196
+        },
+        {
+          "kind": "theorem",
+          "name": "horizon_of_excess",
+          "qualified_name_hint": "Becoming.LineageDrawdown.horizon_of_excess",
+          "line": 210
+        },
+        {
+          "kind": "theorem",
+          "name": "landed_gone",
+          "qualified_name_hint": "Becoming.LineageDrawdown.landed_gone",
+          "line": 221
+        },
+        {
+          "kind": "theorem",
+          "name": "landed_horizon",
+          "qualified_name_hint": "Becoming.LineageDrawdown.landed_horizon",
+          "line": 233
+        },
+        {
+          "kind": "theorem",
+          "name": "landed_gone_eq",
+          "qualified_name_hint": "Becoming.LineageDrawdown.landed_gone_eq",
+          "line": 246
+        },
+        {
+          "kind": "theorem",
+          "name": "landed_horizon_eq",
+          "qualified_name_hint": "Becoming.LineageDrawdown.landed_horizon_eq",
+          "line": 249
+        },
+        {
+          "kind": "theorem",
+          "name": "next_empty_of_unmet",
+          "qualified_name_hint": "Becoming.LineageDrawdown.next_empty_of_unmet",
+          "line": 263
+        },
+        {
+          "kind": "theorem",
+          "name": "ends_of_unmet",
+          "qualified_name_hint": "Becoming.LineageDrawdown.ends_of_unmet",
+          "line": 277
+        },
+        {
+          "kind": "theorem",
+          "name": "ends_of_drawdown",
+          "qualified_name_hint": "Becoming.LineageDrawdown.ends_of_drawdown",
+          "line": 294
+        },
+        {
+          "kind": "theorem",
+          "name": "no_term_of_drawdown",
+          "qualified_name_hint": "Becoming.LineageDrawdown.no_term_of_drawdown",
+          "line": 307
+        },
+        {
+          "kind": "structure",
+          "name": "Phase",
+          "qualified_name_hint": "Becoming.LineageDrawdown.Drain.Phase",
+          "line": 339
+        },
+        {
+          "kind": "def",
+          "name": "draw",
+          "qualified_name_hint": "Becoming.LineageDrawdown.Drain.draw",
+          "line": 344
+        },
+        {
+          "kind": "def",
+          "name": "levelOf",
+          "qualified_name_hint": "Becoming.LineageDrawdown.Drain.levelOf",
+          "line": 351
+        },
+        {
+          "kind": "def",
+          "name": "activeOf",
+          "qualified_name_hint": "Becoming.LineageDrawdown.Drain.activeOf",
+          "line": 356
+        },
+        {
+          "kind": "def",
+          "name": "takeOf",
+          "qualified_name_hint": "Becoming.LineageDrawdown.Drain.takeOf",
+          "line": 361
+        },
+        {
+          "kind": "def",
+          "name": "giveOf",
+          "qualified_name_hint": "Becoming.LineageDrawdown.Drain.giveOf",
+          "line": 367
+        },
+        {
+          "kind": "structure",
+          "name": "Course",
+          "qualified_name_hint": "Becoming.LineageDrawdown.Drain.Course",
+          "line": 378
+        },
+        {
+          "kind": "def",
+          "name": "flow",
+          "qualified_name_hint": "Becoming.LineageDrawdown.Drain.flow",
+          "line": 383
+        },
+        {
+          "kind": "def",
+          "name": "requires",
+          "qualified_name_hint": "Becoming.LineageDrawdown.Drain.requires",
+          "line": 389
+        },
+        {
+          "kind": "def",
+          "name": "web",
+          "qualified_name_hint": "Becoming.LineageDrawdown.Drain.web",
+          "line": 394
+        },
+        {
+          "kind": "def",
+          "name": "generations",
+          "qualified_name_hint": "Becoming.LineageDrawdown.Drain.generations",
+          "line": 401
+        },
+        {
+          "kind": "def",
+          "name": "phaseP",
+          "qualified_name_hint": "Becoming.LineageDrawdown.Drain.phaseP",
+          "line": 410
+        },
+        {
+          "kind": "def",
+          "name": "kidsP",
+          "qualified_name_hint": "Becoming.LineageDrawdown.Drain.kidsP",
+          "line": 423
+        },
+        {
+          "kind": "def",
+          "name": "familyP",
+          "qualified_name_hint": "Becoming.LineageDrawdown.Drain.familyP",
+          "line": 431
+        },
+        {
+          "kind": "def",
+          "name": "courseP",
+          "qualified_name_hint": "Becoming.LineageDrawdown.Drain.courseP",
+          "line": 444
+        },
+        {
+          "kind": "theorem",
+          "name": "pos_of_bif",
+          "qualified_name_hint": "Becoming.LineageDrawdown.Drain.pos_of_bif",
+          "line": 451
+        },
+        {
+          "kind": "theorem",
+          "name": "left_of_and",
+          "qualified_name_hint": "Becoming.LineageDrawdown.Drain.left_of_and",
+          "line": 456
+        },
+        {
+          "kind": "theorem",
+          "name": "right_of_and",
+          "qualified_name_hint": "Becoming.LineageDrawdown.Drain.right_of_and",
+          "line": 461
+        },
+        {
+          "kind": "theorem",
+          "name": "right_of_gate",
+          "qualified_name_hint": "Becoming.LineageDrawdown.Drain.right_of_gate",
+          "line": 467
+        },
+        {
+          "kind": "theorem",
+          "name": "active_of_give",
+          "qualified_name_hint": "Becoming.LineageDrawdown.Drain.active_of_give",
+          "line": 474
+        },
+        {
+          "kind": "theorem",
+          "name": "acting",
+          "qualified_name_hint": "Becoming.LineageDrawdown.Drain.acting",
+          "line": 484
+        },
+        {
+          "kind": "theorem",
+          "name": "dependent",
+          "qualified_name_hint": "Becoming.LineageDrawdown.Drain.dependent",
+          "line": 489
+        },
+        {
+          "kind": "theorem",
+          "name": "gated",
+          "qualified_name_hint": "Becoming.LineageDrawdown.Drain.gated",
+          "line": 499
+        },
+        {
+          "kind": "theorem",
+          "name": "from_outside",
+          "qualified_name_hint": "Becoming.LineageDrawdown.Drain.from_outside",
+          "line": 513
+        },
+        {
+          "kind": "theorem",
+          "name": "not_gated",
+          "qualified_name_hint": "Becoming.LineageDrawdown.Drain.not_gated",
+          "line": 519
+        },
+        {
+          "kind": "theorem",
+          "name": "org_of_give",
+          "qualified_name_hint": "Becoming.LineageDrawdown.Drain.org_of_give",
+          "line": 525
+        },
+        {
+          "kind": "theorem",
+          "name": "step_org",
+          "qualified_name_hint": "Becoming.LineageDrawdown.Drain.step_org",
+          "line": 534
+        },
+        {
+          "kind": "theorem",
+          "name": "line_org",
+          "qualified_name_hint": "Becoming.LineageDrawdown.Drain.line_org",
+          "line": 541
+        },
+        {
+          "kind": "theorem",
+          "name": "reach_org",
+          "qualified_name_hint": "Becoming.LineageDrawdown.Drain.reach_org",
+          "line": 547
+        },
+        {
+          "kind": "theorem",
+          "name": "depends_pool",
+          "qualified_name_hint": "Becoming.LineageDrawdown.Drain.depends_pool",
+          "line": 555
+        },
+        {
+          "kind": "theorem",
+          "name": "renewer_goes_on_outside",
+          "qualified_name_hint": "Becoming.LineageDrawdown.Drain.renewer_goes_on_outside",
+          "line": 566
+        },
+        {
+          "kind": "theorem",
+          "name": "familyP_step",
+          "qualified_name_hint": "Becoming.LineageDrawdown.Drain.familyP_step",
+          "line": 577
+        },
+        {
+          "kind": "theorem",
+          "name": "familyP_eq",
+          "qualified_name_hint": "Becoming.LineageDrawdown.Drain.familyP_eq",
+          "line": 590
+        },
+        {
+          "kind": "theorem",
+          "name": "stepP",
+          "qualified_name_hint": "Becoming.LineageDrawdown.Drain.stepP",
+          "line": 600
+        },
+        {
+          "kind": "theorem",
+          "name": "balances_P",
+          "qualified_name_hint": "Becoming.LineageDrawdown.Drain.balances_P",
+          "line": 618
+        },
+        {
+          "kind": "theorem",
+          "name": "descendsP",
+          "qualified_name_hint": "Becoming.LineageDrawdown.Drain.descendsP",
+          "line": 621
+        },
+        {
+          "kind": "theorem",
+          "name": "descends_atP",
+          "qualified_name_hint": "Becoming.LineageDrawdown.Drain.descends_atP",
+          "line": 636
+        },
+        {
+          "kind": "theorem",
+          "name": "descended_P",
+          "qualified_name_hint": "Becoming.LineageDrawdown.Drain.descended_P",
+          "line": 651
+        },
+        {
+          "kind": "theorem",
+          "name": "selection_P",
+          "qualified_name_hint": "Becoming.LineageDrawdown.Drain.selection_P",
+          "line": 660
+        },
+        {
+          "kind": "theorem",
+          "name": "length_two_P",
+          "qualified_name_hint": "Becoming.LineageDrawdown.Drain.length_two_P",
+          "line": 665
+        },
+        {
+          "kind": "theorem",
+          "name": "sizes_P",
+          "qualified_name_hint": "Becoming.LineageDrawdown.Drain.sizes_P",
+          "line": 679
+        },
+        {
+          "kind": "theorem",
+          "name": "kids_one_P",
+          "qualified_name_hint": "Becoming.LineageDrawdown.Drain.kids_one_P",
+          "line": 682
+        },
+        {
+          "kind": "theorem",
+          "name": "uniform_P",
+          "qualified_name_hint": "Becoming.LineageDrawdown.Drain.uniform_P",
+          "line": 693
+        },
+        {
+          "kind": "theorem",
+          "name": "share_P",
+          "qualified_name_hint": "Becoming.LineageDrawdown.Drain.share_P",
+          "line": 703
+        },
+        {
+          "kind": "theorem",
+          "name": "excess_P",
+          "qualified_name_hint": "Becoming.LineageDrawdown.Drain.excess_P",
+          "line": 710
+        },
+        {
+          "kind": "theorem",
+          "name": "no_excess_first_P",
+          "qualified_name_hint": "Becoming.LineageDrawdown.Drain.no_excess_first_P",
+          "line": 724
+        },
+        {
+          "kind": "theorem",
+          "name": "start_P",
+          "qualified_name_hint": "Becoming.LineageDrawdown.Drain.start_P",
+          "line": 730
+        },
+        {
+          "kind": "theorem",
+          "name": "draws_past_P",
+          "qualified_name_hint": "Becoming.LineageDrawdown.Drain.draws_past_P",
+          "line": 736
+        },
+        {
+          "kind": "theorem",
+          "name": "landed_met",
+          "qualified_name_hint": "Becoming.LineageDrawdown.Drain.landed_met",
+          "line": 745
+        },
+        {
+          "kind": "theorem",
+          "name": "outside_ends",
+          "qualified_name_hint": "Becoming.LineageDrawdown.Drain.outside_ends",
+          "line": 756
+        },
+        {
+          "kind": "theorem",
+          "name": "every_active_degenerates_P",
+          "qualified_name_hint": "Becoming.LineageDrawdown.Drain.every_active_degenerates_P",
+          "line": 763
+        },
+        {
+          "kind": "theorem",
+          "name": "members_need_P",
+          "qualified_name_hint": "Becoming.LineageDrawdown.Drain.members_need_P",
+          "line": 771
+        },
+        {
+          "kind": "theorem",
+          "name": "ends_P",
+          "qualified_name_hint": "Becoming.LineageDrawdown.Drain.ends_P",
+          "line": 783
+        },
+        {
+          "kind": "theorem",
+          "name": "selection_after_P",
+          "qualified_name_hint": "Becoming.LineageDrawdown.Drain.selection_after_P",
+          "line": 791
+        }
+      ],
+      "declaration_counts": {
+        "def": 13,
+        "structure": 2,
+        "theorem": 57
       },
       "textual_markers": {
         "sorry": [],
@@ -257897,6 +258400,232 @@
       ],
       "declaration_counts": {
         "def": 10
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
+    "6e4a5ffd122fa3c1a98ffc84917061bbf616244999c7f3b71bc2447a2821f1b5": {
+      "byte_size": 20322,
+      "line_count": 366,
+      "imports": [
+        "Becoming.PairSelection",
+        "Becoming.Typicality"
+      ],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "KeepsWithheld",
+          "qualified_name_hint": "Becoming.PairChance.KeepsWithheld",
+          "line": 55
+        },
+        {
+          "kind": "theorem",
+          "name": "keeps_answering",
+          "qualified_name_hint": "Becoming.PairChance.keeps_answering",
+          "line": 57
+        },
+        {
+          "kind": "theorem",
+          "name": "keeps_windowed",
+          "qualified_name_hint": "Becoming.PairChance.keeps_windowed",
+          "line": 58
+        },
+        {
+          "kind": "theorem",
+          "name": "keeps_withholding",
+          "qualified_name_hint": "Becoming.PairChance.keeps_withholding",
+          "line": 59
+        },
+        {
+          "kind": "theorem",
+          "name": "keeps_waitingBoth",
+          "qualified_name_hint": "Becoming.PairChance.keeps_waitingBoth",
+          "line": 60
+        },
+        {
+          "kind": "theorem",
+          "name": "not_keeps_agreeing",
+          "qualified_name_hint": "Becoming.PairChance.not_keeps_agreeing",
+          "line": 63
+        },
+        {
+          "kind": "theorem",
+          "name": "not_keeps_sparing",
+          "qualified_name_hint": "Becoming.PairChance.not_keeps_sparing",
+          "line": 64
+        },
+        {
+          "kind": "theorem",
+          "name": "not_keeps_alternating",
+          "qualified_name_hint": "Becoming.PairChance.not_keeps_alternating",
+          "line": 65
+        },
+        {
+          "kind": "theorem",
+          "name": "err_withholds",
+          "qualified_name_hint": "Becoming.PairChance.err_withholds",
+          "line": 68
+        },
+        {
+          "kind": "theorem",
+          "name": "dead_stays",
+          "qualified_name_hint": "Becoming.PairChance.dead_stays",
+          "line": 83
+        },
+        {
+          "kind": "theorem",
+          "name": "burst_absorbs",
+          "qualified_name_hint": "Becoming.PairChance.burst_absorbs",
+          "line": 93
+        },
+        {
+          "kind": "theorem",
+          "name": "burst_absorbs_from",
+          "qualified_name_hint": "Becoming.PairChance.burst_absorbs_from",
+          "line": 112
+        },
+        {
+          "kind": "def",
+          "name": "blockErrors",
+          "qualified_name_hint": "Becoming.PairChance.blockErrors",
+          "line": 125
+        },
+        {
+          "kind": "def",
+          "name": "errorsOf",
+          "qualified_name_hint": "Becoming.PairChance.errorsOf",
+          "line": 135
+        },
+        {
+          "kind": "def",
+          "name": "burstFree",
+          "qualified_name_hint": "Becoming.PairChance.burstFree",
+          "line": 143
+        },
+        {
+          "kind": "theorem",
+          "name": "burst_of_not_free",
+          "qualified_name_hint": "Becoming.PairChance.burst_of_not_free",
+          "line": 151
+        },
+        {
+          "kind": "theorem",
+          "name": "still_gives_free",
+          "qualified_name_hint": "Becoming.PairChance.still_gives_free",
+          "line": 173
+        },
+        {
+          "kind": "theorem",
+          "name": "weight_append",
+          "qualified_name_hint": "Becoming.PairChance.weight_append",
+          "line": 193
+        },
+        {
+          "kind": "theorem",
+          "name": "total_courses_split",
+          "qualified_name_hint": "Becoming.PairChance.total_courses_split",
+          "line": 200
+        },
+        {
+          "kind": "def",
+          "name": "survive",
+          "qualified_name_hint": "Becoming.PairChance.survive",
+          "line": 212
+        },
+        {
+          "kind": "theorem",
+          "name": "cond_and_mul",
+          "qualified_name_hint": "Becoming.PairChance.cond_and_mul",
+          "line": 214
+        },
+        {
+          "kind": "theorem",
+          "name": "survive_four",
+          "qualified_name_hint": "Becoming.PairChance.survive_four",
+          "line": 221
+        },
+        {
+          "kind": "theorem",
+          "name": "nil_of_mem_zero",
+          "qualified_name_hint": "Becoming.PairChance.nil_of_mem_zero",
+          "line": 226
+        },
+        {
+          "kind": "theorem",
+          "name": "shape_of_mem_four",
+          "qualified_name_hint": "Becoming.PairChance.shape_of_mem_four",
+          "line": 233
+        },
+        {
+          "kind": "theorem",
+          "name": "total_blocks",
+          "qualified_name_hint": "Becoming.PairChance.total_blocks",
+          "line": 244
+        },
+        {
+          "kind": "theorem",
+          "name": "block_lt",
+          "qualified_name_hint": "Becoming.PairChance.block_lt",
+          "line": 260
+        },
+        {
+          "kind": "theorem",
+          "name": "weight_burst",
+          "qualified_name_hint": "Becoming.PairChance.weight_burst",
+          "line": 277
+        },
+        {
+          "kind": "theorem",
+          "name": "free_but_burst",
+          "qualified_name_hint": "Becoming.PairChance.free_but_burst",
+          "line": 281
+        },
+        {
+          "kind": "theorem",
+          "name": "block_total",
+          "qualified_name_hint": "Becoming.PairChance.block_total",
+          "line": 286
+        },
+        {
+          "kind": "theorem",
+          "name": "block_free_weight",
+          "qualified_name_hint": "Becoming.PairChance.block_free_weight",
+          "line": 303
+        },
+        {
+          "kind": "def",
+          "name": "stillGives",
+          "qualified_name_hint": "Becoming.PairChance.stillGives",
+          "line": 308
+        },
+        {
+          "kind": "theorem",
+          "name": "still_giving_le",
+          "qualified_name_hint": "Becoming.PairChance.still_giving_le",
+          "line": 314
+        },
+        {
+          "kind": "theorem",
+          "name": "absorbed_share",
+          "qualified_name_hint": "Becoming.PairChance.absorbed_share",
+          "line": 342
+        },
+        {
+          "kind": "theorem",
+          "name": "window_witness",
+          "qualified_name_hint": "Becoming.PairChance.window_witness",
+          "line": 359
+        }
+      ],
+      "declaration_counts": {
+        "def": 6,
+        "theorem": 28
       },
       "textual_markers": {
         "sorry": [],
@@ -438595,6 +439324,815 @@
         "unsafe": []
       },
       "print_axioms_commands": 14
+    },
+    "c4f9db3077643955baf204aba4c1847dbaa66956c1e149d6247d171c5eacecca": {
+      "byte_size": 56173,
+      "line_count": 1110,
+      "imports": [
+        "Becoming.PairSelection"
+      ],
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "levels_agree_until",
+          "qualified_name_hint": "Becoming.PairFlow.levels_agree_until",
+          "line": 94
+        },
+        {
+          "kind": "theorem",
+          "name": "levels_agree",
+          "qualified_name_hint": "Becoming.PairFlow.levels_agree",
+          "line": 120
+        },
+        {
+          "kind": "theorem",
+          "name": "factors_equal",
+          "qualified_name_hint": "Becoming.PairFlow.factors_equal",
+          "line": 131
+        },
+        {
+          "kind": "def",
+          "name": "metNeed",
+          "qualified_name_hint": "Becoming.PairFlow.metNeed",
+          "line": 144
+        },
+        {
+          "kind": "theorem",
+          "name": "metNeed_le",
+          "qualified_name_hint": "Becoming.PairFlow.metNeed_le",
+          "line": 147
+        },
+        {
+          "kind": "theorem",
+          "name": "metNeed_of_supported",
+          "qualified_name_hint": "Becoming.PairFlow.metNeed_of_supported",
+          "line": 155
+        },
+        {
+          "kind": "theorem",
+          "name": "met_needs_le_stock",
+          "qualified_name_hint": "Becoming.PairFlow.met_needs_le_stock",
+          "line": 163
+        },
+        {
+          "kind": "theorem",
+          "name": "met_needs_within_start",
+          "qualified_name_hint": "Becoming.PairFlow.met_needs_within_start",
+          "line": 172
+        },
+        {
+          "kind": "inductive",
+          "name": "Member",
+          "qualified_name_hint": "Becoming.PairFlow.Member",
+          "line": 184
+        },
+        {
+          "kind": "def",
+          "name": "present",
+          "qualified_name_hint": "Becoming.PairFlow.present",
+          "line": 193
+        },
+        {
+          "kind": "def",
+          "name": "ownStanding",
+          "qualified_name_hint": "Becoming.PairFlow.ownStanding",
+          "line": 196
+        },
+        {
+          "kind": "def",
+          "name": "needOf",
+          "qualified_name_hint": "Becoming.PairFlow.needOf",
+          "line": 203
+        },
+        {
+          "kind": "theorem",
+          "name": "mul_cond",
+          "qualified_name_hint": "Becoming.PairFlow.mul_cond",
+          "line": 212
+        },
+        {
+          "kind": "theorem",
+          "name": "cond_pos",
+          "qualified_name_hint": "Becoming.PairFlow.cond_pos",
+          "line": 216
+        },
+        {
+          "kind": "theorem",
+          "name": "cond_le",
+          "qualified_name_hint": "Becoming.PairFlow.cond_le",
+          "line": 221
+        },
+        {
+          "kind": "theorem",
+          "name": "regroup",
+          "qualified_name_hint": "Becoming.PairFlow.regroup",
+          "line": 225
+        },
+        {
+          "kind": "theorem",
+          "name": "lt_of_add_lt_add_left'",
+          "qualified_name_hint": "Becoming.PairFlow.lt_of_add_lt_add_left'",
+          "line": 230
+        },
+        {
+          "kind": "structure",
+          "name": "Parts",
+          "qualified_name_hint": "Becoming.PairFlow.Routes.Parts",
+          "line": 238
+        },
+        {
+          "kind": "def",
+          "name": "renewed",
+          "qualified_name_hint": "Becoming.PairFlow.Routes.renewed",
+          "line": 264
+        },
+        {
+          "kind": "def",
+          "name": "drawn",
+          "qualified_name_hint": "Becoming.PairFlow.Routes.drawn",
+          "line": 269
+        },
+        {
+          "kind": "def",
+          "name": "toLine",
+          "qualified_name_hint": "Becoming.PairFlow.Routes.toLine",
+          "line": 274
+        },
+        {
+          "kind": "def",
+          "name": "lineAt",
+          "qualified_name_hint": "Becoming.PairFlow.Routes.lineAt",
+          "line": 278
+        },
+        {
+          "kind": "def",
+          "name": "take",
+          "qualified_name_hint": "Becoming.PairFlow.Routes.take",
+          "line": 282
+        },
+        {
+          "kind": "def",
+          "name": "give",
+          "qualified_name_hint": "Becoming.PairFlow.Routes.give",
+          "line": 297
+        },
+        {
+          "kind": "def",
+          "name": "level",
+          "qualified_name_hint": "Becoming.PairFlow.Routes.level",
+          "line": 317
+        },
+        {
+          "kind": "def",
+          "name": "active",
+          "qualified_name_hint": "Becoming.PairFlow.Routes.active",
+          "line": 324
+        },
+        {
+          "kind": "def",
+          "name": "web",
+          "qualified_name_hint": "Becoming.PairFlow.Routes.web",
+          "line": 330
+        },
+        {
+          "kind": "def",
+          "name": "flow",
+          "qualified_name_hint": "Becoming.PairFlow.Routes.flow",
+          "line": 333
+        },
+        {
+          "kind": "theorem",
+          "name": "taken_member",
+          "qualified_name_hint": "Becoming.PairFlow.Routes.taken_member",
+          "line": 335
+        },
+        {
+          "kind": "theorem",
+          "name": "given_member",
+          "qualified_name_hint": "Becoming.PairFlow.Routes.given_member",
+          "line": 339
+        },
+        {
+          "kind": "theorem",
+          "name": "given_line",
+          "qualified_name_hint": "Becoming.PairFlow.Routes.given_line",
+          "line": 344
+        },
+        {
+          "kind": "theorem",
+          "name": "drawn_eq",
+          "qualified_name_hint": "Becoming.PairFlow.Routes.drawn_eq",
+          "line": 348
+        },
+        {
+          "kind": "theorem",
+          "name": "balances",
+          "qualified_name_hint": "Becoming.PairFlow.Routes.balances",
+          "line": 358
+        },
+        {
+          "kind": "theorem",
+          "name": "acting",
+          "qualified_name_hint": "Becoming.PairFlow.Routes.acting",
+          "line": 366
+        },
+        {
+          "kind": "theorem",
+          "name": "dependent",
+          "qualified_name_hint": "Becoming.PairFlow.Routes.dependent",
+          "line": 373
+        },
+        {
+          "kind": "theorem",
+          "name": "supported",
+          "qualified_name_hint": "Becoming.PairFlow.Routes.supported",
+          "line": 380
+        },
+        {
+          "kind": "theorem",
+          "name": "lineAt_eq",
+          "qualified_name_hint": "Becoming.PairFlow.Routes.lineAt_eq",
+          "line": 385
+        },
+        {
+          "kind": "def",
+          "name": "gaveIn",
+          "qualified_name_hint": "Becoming.PairFlow.Routes.gaveIn",
+          "line": 399
+        },
+        {
+          "kind": "theorem",
+          "name": "line_offspring",
+          "qualified_name_hint": "Becoming.PairFlow.Routes.line_offspring",
+          "line": 405
+        },
+        {
+          "kind": "theorem",
+          "name": "factor_gap",
+          "qualified_name_hint": "Becoming.PairFlow.Routes.factor_gap",
+          "line": 412
+        },
+        {
+          "kind": "theorem",
+          "name": "gap_iff",
+          "qualified_name_hint": "Becoming.PairFlow.Routes.gap_iff",
+          "line": 417
+        },
+        {
+          "kind": "theorem",
+          "name": "plain",
+          "qualified_name_hint": "Becoming.PairFlow.Routes.plain",
+          "line": 434
+        },
+        {
+          "kind": "def",
+          "name": "perishing",
+          "qualified_name_hint": "Becoming.PairFlow.Routes.perishing",
+          "line": 443
+        },
+        {
+          "kind": "def",
+          "name": "carried",
+          "qualified_name_hint": "Becoming.PairFlow.Routes.carried",
+          "line": 446
+        },
+        {
+          "kind": "def",
+          "name": "matching",
+          "qualified_name_hint": "Becoming.PairFlow.Routes.matching",
+          "line": 449
+        },
+        {
+          "kind": "theorem",
+          "name": "signs",
+          "qualified_name_hint": "Becoming.PairFlow.Routes.signs",
+          "line": 453
+        },
+        {
+          "kind": "structure",
+          "name": "Parts",
+          "qualified_name_hint": "Becoming.PairFlow.WhileStanding.Parts",
+          "line": 469
+        },
+        {
+          "kind": "structure",
+          "name": "Setting",
+          "qualified_name_hint": "Becoming.PairFlow.WhileStanding.Setting",
+          "line": 484
+        },
+        {
+          "kind": "def",
+          "name": "standing",
+          "qualified_name_hint": "Becoming.PairFlow.WhileStanding.standing",
+          "line": 493
+        },
+        {
+          "kind": "def",
+          "name": "isActive",
+          "qualified_name_hint": "Becoming.PairFlow.WhileStanding.isActive",
+          "line": 498
+        },
+        {
+          "kind": "def",
+          "name": "sends",
+          "qualified_name_hint": "Becoming.PairFlow.WhileStanding.sends",
+          "line": 501
+        },
+        {
+          "kind": "def",
+          "name": "ownTake",
+          "qualified_name_hint": "Becoming.PairFlow.WhileStanding.ownTake",
+          "line": 505
+        },
+        {
+          "kind": "def",
+          "name": "renewal",
+          "qualified_name_hint": "Becoming.PairFlow.WhileStanding.renewal",
+          "line": 509
+        },
+        {
+          "kind": "def",
+          "name": "gets",
+          "qualified_name_hint": "Becoming.PairFlow.WhileStanding.gets",
+          "line": 512
+        },
+        {
+          "kind": "def",
+          "name": "avail",
+          "qualified_name_hint": "Becoming.PairFlow.WhileStanding.avail",
+          "line": 515
+        },
+        {
+          "kind": "def",
+          "name": "capped",
+          "qualified_name_hint": "Becoming.PairFlow.WhileStanding.capped",
+          "line": 519
+        },
+        {
+          "kind": "theorem",
+          "name": "capped_le",
+          "qualified_name_hint": "Becoming.PairFlow.WhileStanding.capped_le",
+          "line": 521
+        },
+        {
+          "kind": "def",
+          "name": "drawTaken",
+          "qualified_name_hint": "Becoming.PairFlow.WhileStanding.drawTaken",
+          "line": 528
+        },
+        {
+          "kind": "def",
+          "name": "next",
+          "qualified_name_hint": "Becoming.PairFlow.WhileStanding.next",
+          "line": 531
+        },
+        {
+          "kind": "def",
+          "name": "advance",
+          "qualified_name_hint": "Becoming.PairFlow.WhileStanding.advance",
+          "line": 534
+        },
+        {
+          "kind": "def",
+          "name": "levels",
+          "qualified_name_hint": "Becoming.PairFlow.WhileStanding.levels",
+          "line": 537
+        },
+        {
+          "kind": "def",
+          "name": "lineAt",
+          "qualified_name_hint": "Becoming.PairFlow.WhileStanding.lineAt",
+          "line": 542
+        },
+        {
+          "kind": "def",
+          "name": "level",
+          "qualified_name_hint": "Becoming.PairFlow.WhileStanding.level",
+          "line": 546
+        },
+        {
+          "kind": "def",
+          "name": "active",
+          "qualified_name_hint": "Becoming.PairFlow.WhileStanding.active",
+          "line": 554
+        },
+        {
+          "kind": "def",
+          "name": "needs",
+          "qualified_name_hint": "Becoming.PairFlow.WhileStanding.needs",
+          "line": 560
+        },
+        {
+          "kind": "def",
+          "name": "take",
+          "qualified_name_hint": "Becoming.PairFlow.WhileStanding.take",
+          "line": 569
+        },
+        {
+          "kind": "def",
+          "name": "give",
+          "qualified_name_hint": "Becoming.PairFlow.WhileStanding.give",
+          "line": 587
+        },
+        {
+          "kind": "def",
+          "name": "web",
+          "qualified_name_hint": "Becoming.PairFlow.WhileStanding.web",
+          "line": 607
+        },
+        {
+          "kind": "def",
+          "name": "flow",
+          "qualified_name_hint": "Becoming.PairFlow.WhileStanding.flow",
+          "line": 610
+        },
+        {
+          "kind": "theorem",
+          "name": "standing_advance",
+          "qualified_name_hint": "Becoming.PairFlow.WhileStanding.standing_advance",
+          "line": 612
+        },
+        {
+          "kind": "theorem",
+          "name": "taken_member",
+          "qualified_name_hint": "Becoming.PairFlow.WhileStanding.taken_member",
+          "line": 617
+        },
+        {
+          "kind": "theorem",
+          "name": "given_member",
+          "qualified_name_hint": "Becoming.PairFlow.WhileStanding.given_member",
+          "line": 623
+        },
+        {
+          "kind": "theorem",
+          "name": "given_line",
+          "qualified_name_hint": "Becoming.PairFlow.WhileStanding.given_line",
+          "line": 629
+        },
+        {
+          "kind": "theorem",
+          "name": "ownTake_le",
+          "qualified_name_hint": "Becoming.PairFlow.WhileStanding.ownTake_le",
+          "line": 634
+        },
+        {
+          "kind": "theorem",
+          "name": "settle",
+          "qualified_name_hint": "Becoming.PairFlow.WhileStanding.settle",
+          "line": 642
+        },
+        {
+          "kind": "theorem",
+          "name": "member_balance",
+          "qualified_name_hint": "Becoming.PairFlow.WhileStanding.member_balance",
+          "line": 649
+        },
+        {
+          "kind": "theorem",
+          "name": "balances",
+          "qualified_name_hint": "Becoming.PairFlow.WhileStanding.balances",
+          "line": 657
+        },
+        {
+          "kind": "theorem",
+          "name": "active_of_give",
+          "qualified_name_hint": "Becoming.PairFlow.WhileStanding.active_of_give",
+          "line": 664
+        },
+        {
+          "kind": "theorem",
+          "name": "acting",
+          "qualified_name_hint": "Becoming.PairFlow.WhileStanding.acting",
+          "line": 673
+        },
+        {
+          "kind": "theorem",
+          "name": "dependent",
+          "qualified_name_hint": "Becoming.PairFlow.WhileStanding.dependent",
+          "line": 680
+        },
+        {
+          "kind": "theorem",
+          "name": "pair_ext",
+          "qualified_name_hint": "Becoming.PairFlow.WhileStanding.pair_ext",
+          "line": 687
+        },
+        {
+          "kind": "theorem",
+          "name": "avail_same",
+          "qualified_name_hint": "Becoming.PairFlow.WhileStanding.avail_same",
+          "line": 690
+        },
+        {
+          "kind": "theorem",
+          "name": "swap_net",
+          "qualified_name_hint": "Becoming.PairFlow.WhileStanding.swap_net",
+          "line": 694
+        },
+        {
+          "kind": "theorem",
+          "name": "member_net",
+          "qualified_name_hint": "Becoming.PairFlow.WhileStanding.member_net",
+          "line": 699
+        },
+        {
+          "kind": "theorem",
+          "name": "runs_agree_until",
+          "qualified_name_hint": "Becoming.PairFlow.WhileStanding.runs_agree_until",
+          "line": 736
+        },
+        {
+          "kind": "theorem",
+          "name": "factors_equal_while_supported",
+          "qualified_name_hint": "Becoming.PairFlow.WhileStanding.factors_equal_while_supported",
+          "line": 765
+        },
+        {
+          "kind": "theorem",
+          "name": "lt_of_ble_false",
+          "qualified_name_hint": "Becoming.PairFlow.WhileStanding.lt_of_ble_false",
+          "line": 778
+        },
+        {
+          "kind": "theorem",
+          "name": "next_le_of_idle",
+          "qualified_name_hint": "Becoming.PairFlow.WhileStanding.next_le_of_idle",
+          "line": 784
+        },
+        {
+          "kind": "theorem",
+          "name": "stays_fallen",
+          "qualified_name_hint": "Becoming.PairFlow.WhileStanding.stays_fallen",
+          "line": 800
+        },
+        {
+          "kind": "theorem",
+          "name": "lineAt_of_active",
+          "qualified_name_hint": "Becoming.PairFlow.WhileStanding.lineAt_of_active",
+          "line": 817
+        },
+        {
+          "kind": "theorem",
+          "name": "lines_agree_while_active",
+          "qualified_name_hint": "Becoming.PairFlow.WhileStanding.lines_agree_while_active",
+          "line": 830
+        },
+        {
+          "kind": "def",
+          "name": "parts",
+          "qualified_name_hint": "Becoming.PairFlow.FailedRenewal.parts",
+          "line": 848
+        },
+        {
+          "kind": "def",
+          "name": "renew",
+          "qualified_name_hint": "Becoming.PairFlow.FailedRenewal.renew",
+          "line": 851
+        },
+        {
+          "kind": "def",
+          "name": "sharing",
+          "qualified_name_hint": "Becoming.PairFlow.FailedRenewal.sharing",
+          "line": 856
+        },
+        {
+          "kind": "def",
+          "name": "keeping",
+          "qualified_name_hint": "Becoming.PairFlow.FailedRenewal.keeping",
+          "line": 859
+        },
+        {
+          "kind": "theorem",
+          "name": "agree_to_shortfall",
+          "qualified_name_hint": "Becoming.PairFlow.FailedRenewal.agree_to_shortfall",
+          "line": 863
+        },
+        {
+          "kind": "theorem",
+          "name": "shortfall",
+          "qualified_name_hint": "Becoming.PairFlow.FailedRenewal.shortfall",
+          "line": 874
+        },
+        {
+          "kind": "theorem",
+          "name": "levels_sharing",
+          "qualified_name_hint": "Becoming.PairFlow.FailedRenewal.levels_sharing",
+          "line": 878
+        },
+        {
+          "kind": "theorem",
+          "name": "levels_keeping",
+          "qualified_name_hint": "Becoming.PairFlow.FailedRenewal.levels_keeping",
+          "line": 883
+        },
+        {
+          "kind": "theorem",
+          "name": "keeping_fallen",
+          "qualified_name_hint": "Becoming.PairFlow.FailedRenewal.keeping_fallen",
+          "line": 889
+        },
+        {
+          "kind": "theorem",
+          "name": "first_active_sharing",
+          "qualified_name_hint": "Becoming.PairFlow.FailedRenewal.first_active_sharing",
+          "line": 892
+        },
+        {
+          "kind": "theorem",
+          "name": "first_active_keeping",
+          "qualified_name_hint": "Becoming.PairFlow.FailedRenewal.first_active_keeping",
+          "line": 899
+        },
+        {
+          "kind": "theorem",
+          "name": "first_sharing",
+          "qualified_name_hint": "Becoming.PairFlow.FailedRenewal.first_sharing",
+          "line": 904
+        },
+        {
+          "kind": "theorem",
+          "name": "first_keeping",
+          "qualified_name_hint": "Becoming.PairFlow.FailedRenewal.first_keeping",
+          "line": 909
+        },
+        {
+          "kind": "theorem",
+          "name": "second_sharing",
+          "qualified_name_hint": "Becoming.PairFlow.FailedRenewal.second_sharing",
+          "line": 914
+        },
+        {
+          "kind": "theorem",
+          "name": "second_keeping",
+          "qualified_name_hint": "Becoming.PairFlow.FailedRenewal.second_keeping",
+          "line": 920
+        },
+        {
+          "kind": "theorem",
+          "name": "lines_gain",
+          "qualified_name_hint": "Becoming.PairFlow.FailedRenewal.lines_gain",
+          "line": 929
+        },
+        {
+          "kind": "theorem",
+          "name": "second_sends",
+          "qualified_name_hint": "Becoming.PairFlow.FailedRenewal.second_sends",
+          "line": 935
+        },
+        {
+          "kind": "theorem",
+          "name": "first_sends",
+          "qualified_name_hint": "Becoming.PairFlow.FailedRenewal.first_sends",
+          "line": 943
+        },
+        {
+          "kind": "theorem",
+          "name": "gifts_sharing",
+          "qualified_name_hint": "Becoming.PairFlow.FailedRenewal.gifts_sharing",
+          "line": 950
+        },
+        {
+          "kind": "theorem",
+          "name": "read_to_shortfall",
+          "qualified_name_hint": "Becoming.PairFlow.FailedRenewal.read_to_shortfall",
+          "line": 959
+        },
+        {
+          "kind": "theorem",
+          "name": "read_to_shortfall_met",
+          "qualified_name_hint": "Becoming.PairFlow.FailedRenewal.read_to_shortfall_met",
+          "line": 973
+        },
+        {
+          "kind": "def",
+          "name": "giverAlone",
+          "qualified_name_hint": "Becoming.PairFlow.GiverAtNeed.giverAlone",
+          "line": 988
+        },
+        {
+          "kind": "def",
+          "name": "bothKeep",
+          "qualified_name_hint": "Becoming.PairFlow.GiverAtNeed.bothKeep",
+          "line": 994
+        },
+        {
+          "kind": "theorem",
+          "name": "levels_alone",
+          "qualified_name_hint": "Becoming.PairFlow.GiverAtNeed.levels_alone",
+          "line": 998
+        },
+        {
+          "kind": "theorem",
+          "name": "levels_kept",
+          "qualified_name_hint": "Becoming.PairFlow.GiverAtNeed.levels_kept",
+          "line": 1002
+        },
+        {
+          "kind": "theorem",
+          "name": "alone_fallen",
+          "qualified_name_hint": "Becoming.PairFlow.GiverAtNeed.alone_fallen",
+          "line": 1007
+        },
+        {
+          "kind": "theorem",
+          "name": "alone_first",
+          "qualified_name_hint": "Becoming.PairFlow.GiverAtNeed.alone_first",
+          "line": 1011
+        },
+        {
+          "kind": "theorem",
+          "name": "kept_first",
+          "qualified_name_hint": "Becoming.PairFlow.GiverAtNeed.kept_first",
+          "line": 1017
+        },
+        {
+          "kind": "theorem",
+          "name": "gift_lost",
+          "qualified_name_hint": "Becoming.PairFlow.GiverAtNeed.gift_lost",
+          "line": 1023
+        },
+        {
+          "kind": "theorem",
+          "name": "second_active",
+          "qualified_name_hint": "Becoming.PairFlow.GiverAtNeed.second_active",
+          "line": 1028
+        },
+        {
+          "kind": "theorem",
+          "name": "withholder_same",
+          "qualified_name_hint": "Becoming.PairFlow.GiverAtNeed.withholder_same",
+          "line": 1037
+        },
+        {
+          "kind": "theorem",
+          "name": "standings_differ",
+          "qualified_name_hint": "Becoming.PairFlow.GiverAtNeed.standings_differ",
+          "line": 1041
+        },
+        {
+          "kind": "def",
+          "name": "draw",
+          "qualified_name_hint": "Becoming.PairFlow.DrawnBelowNeed.draw",
+          "line": 1055
+        },
+        {
+          "kind": "def",
+          "name": "keeping",
+          "qualified_name_hint": "Becoming.PairFlow.DrawnBelowNeed.keeping",
+          "line": 1061
+        },
+        {
+          "kind": "theorem",
+          "name": "drawn",
+          "qualified_name_hint": "Becoming.PairFlow.DrawnBelowNeed.drawn",
+          "line": 1064
+        },
+        {
+          "kind": "theorem",
+          "name": "levels_drawn",
+          "qualified_name_hint": "Becoming.PairFlow.DrawnBelowNeed.levels_drawn",
+          "line": 1069
+        },
+        {
+          "kind": "theorem",
+          "name": "fallen",
+          "qualified_name_hint": "Becoming.PairFlow.DrawnBelowNeed.fallen",
+          "line": 1075
+        },
+        {
+          "kind": "def",
+          "name": "pair",
+          "qualified_name_hint": "Becoming.PairFlow.NeedsAtCapacity.pair",
+          "line": 1088
+        },
+        {
+          "kind": "theorem",
+          "name": "gainless",
+          "qualified_name_hint": "Becoming.PairFlow.NeedsAtCapacity.gainless",
+          "line": 1090
+        },
+        {
+          "kind": "theorem",
+          "name": "at_capacity",
+          "qualified_name_hint": "Becoming.PairFlow.NeedsAtCapacity.at_capacity",
+          "line": 1101
+        }
+      ],
+      "declaration_counts": {
+        "def": 47,
+        "inductive": 1,
+        "structure": 3,
+        "theorem": 80
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
     },
     "c519ad516cab11f1c3f0ec041c5e4c4faf02672459af9451d1f2a24f2f8517b4": {
       "byte_size": 2527,

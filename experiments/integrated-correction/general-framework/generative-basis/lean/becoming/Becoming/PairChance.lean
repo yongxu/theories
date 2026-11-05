@@ -354,8 +354,8 @@ theorem absorbed_share {f g : PairLaw} (wf : KeepsWithheld f) (wg : KeepsWithhel
       (Nat.lt_of_lt_of_le (block_lt p q pos) (Nat.le_of_eq (Typicality.total_weight p q 4)))⟩
 
 /-- A witness, each value weighing one: of the sixteen courses of four values, the pair of windows
-still gives at step `2` under twelve, the four with both formations erring at step `2` ending it
-there; the bound is fifteen. -/
+still gives at step `2` under twelve, neither giving there in the four with both formations erring at
+step `2`, which is total withholding only where both erred at step `1` too; the bound is fifteen. -/
 theorem window_witness :
     total (Typicality.courses 4) (fun w => cond (stillGives windowed windowed 1 w)
         (Typicality.weight 1 1 w) 0) = 12 ∧

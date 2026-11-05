@@ -61,7 +61,8 @@ own standing there, draws its draw from the pool while active and gives each of 
 unit, the renewer gives three units a step while active, and the offspring numbers are supplied, not
 derived from the draws. An empty axiom report says nothing of these.
 
-Every declaration has an empty axiom report.
+Every declaration has an empty axiom report, except the generated `injEq` lemmas, which depend on
+`propext`, as the checker's audit admits.
 -/
 
 namespace Becoming

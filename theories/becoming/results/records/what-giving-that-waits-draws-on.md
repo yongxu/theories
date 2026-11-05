@@ -5,7 +5,7 @@
 
 `what-giving-that-waits-draws-on` · **recorded-checked** · theorem · F01 · [record](what-giving-that-waits-draws-on.json) · [register](../../../../RESULTS.md)
 
-> Single witnesses on balanced webs show a gift bringing support beyond what it draws, through need asymmetry in the pair (its slack bound across family and beyond) or renewal from outside; read as a line's rise with no dependence beyond broken, a factor is within the slack beyond and the inflow.
+> Single witnesses on balanced webs show two ways a gift can bring support beyond what it draws on the giver: need asymmetry in the pair (the slack bound, pair split) or renewal from outside. Read as a line's rise with no dependence beyond broken, a factor is within the slack beyond and the inflow.
 
 <a id="laws--规律"></a>
 ## Laws
@@ -30,8 +30,8 @@
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
-- The join of the witnesses to the formula's β and γ: no statement makes the pair's run a flow on a web or derives the offspring from one, so neither factor is bounded for the formula itself.
-- Any comparison of β with γ from a web: both bounds have the same form, so the sign that decides selection among pairs is not reached from the webs.
+- The join of these witnesses to the formula's factors: on a flow the factors follow from the routes, read on places supported in every run compared, which does not reach a receiver that would otherwise fall below its need.
+- Any comparison of β with γ from these bounds: both have the same form; on the flow the sign follows from the routes, the matching among them, not from these bounds.
 - That a gift brings more than it draws on the giver only by carrying a flux in: only the renewal witness is shown. Witness: `Becoming.PairSelection.Renewed.renewal_carried`.
 - That the pair supplies the child's unit: the descent under needs one and two shows only that the giver's support decides whether it can give. Witness: `Becoming.PairSelection.Needs.childless`.
 - The pace of selection within what flows in, applied to these runs.
@@ -49,7 +49,7 @@ Canonical source: [PairSelection.lean](../../../../experiments/integrated-correc
 <a id="next--下一步"></a>
 ## Next
 
-A model of the pair's run as a flow on a web, with offspring derived from it, support over the run and a constant rise per step, so that β and γ follow from the flow and can be compared.
+Renewal reaching the giver only, read through support, so that the two witnesses meet the formula's factors.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -66,6 +66,9 @@ Food sharing among vampire bats (Wilkinson 1984) is the classical case of need a
 - **formal-reuse**: [what-a-rise-draws-from-beyond](what-a-rise-draws-from-beyond.md). Reuses the slack beyond (Web.slack) and the dependences met at a step: need asymmetry is that slack bound with the pair split into family and beyond.
 - **formal-reuse**: [evolution-on-descent](evolution-on-descent.md). Reuses support at a need and Flow.unsupported_childless: under needs two and two the giver, unsupported, leaves no descendant.
 - **interpretive**: [pace-of-selection-within-what-flows-in](pace-of-selection-within-what-flows-in.md). Renewal from outside reads the first source, where selection is bounded by the flux carried in per step; that law is not applied to these runs.
+- related, not a proved adapter: [what-decides-giving-against-keeping-on-a-flow](what-decides-giving-against-keeping-on-a-flow.md). There the factors follow from a flow where renewal reaches both formations alike; here renewal reaches the giver only.
+
+**Used by:** [what-decides-giving-against-keeping-on-a-flow](what-decides-giving-against-keeping-on-a-flow.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -81,7 +84,8 @@ Aliases: `what giving that waits draws on`, `Becoming.PairSelection.Needs.asymme
 ### History
 
 - 1 November 2026, board item EL (EL4a/b/c): added from EL's design, the parts of Becoming.PairSelection on need asymmetry, renewal from outside and a factor read on a web; whether need asymmetry counts as a third source or as the slack bound read inside the pair is settled as the latter.
+- 6 November 2026, board item EL7, correction: the opening said giving that waits does bring support beyond what it draws; it now says a gift can. Renewal from outside can be free to the giver's level; what it costs the giver's line is a further part. The join is scoped by the flow record, which meets the earlier next step for renewal reaching both alike.
 
 </details>
 
-Documentary review UTC: `2026-10-31T23:52:00+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-05T20:42:24+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

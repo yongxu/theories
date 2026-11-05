@@ -78,7 +78,7 @@ Reciprocity in evolutionary game theory (Trivers 1971; Axelrod and Hamilton 1981
 - **formal-reuse**: [selection-within-and-among-groups-of-any-sizes](selection-within-and-among-groups-of-any-sizes.md). Reuses SelectionLevels.rises_iff_sized, restated with groups of two for families listed by pairs.
 - **formal-reuse**: [shaping-the-rule-selected-by-what-comes-back](shaping-the-rule-selected-by-what-comes-back.md). Reuses RuleShaping's favours_iff, disfavours_iff, lt_select_iff and falls_strictly: under complete assortment the pairs' offspring are the rule after shaping, with s = βn coming back to the carriers and c = γn to the others.
 
-**Used by:** [what-giving-that-waits-draws-on](what-giving-that-waits-draws-on.md)
+**Used by:** [errors-by-chance-in-a-pair-keeping-mutual-withholding](errors-by-chance-in-a-pair-keeping-mutual-withholding.md) · [what-decides-giving-against-keeping-on-a-flow](what-decides-giving-against-keeping-on-a-flow.md) · [what-giving-that-waits-draws-on](what-giving-that-waits-draws-on.md)
 
 <a id="sources--来源"></a>
 ### Sources

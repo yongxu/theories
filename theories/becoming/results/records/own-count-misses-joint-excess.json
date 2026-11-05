@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-25T17:03:04+00:00",
+  "reviewed_at_utc": "2026-11-05T20:42:24+00:00",
   "statement": {
     "zh": "各自在所给之内取用的形成，合起来可以超出；在自然数的量中，联合超出持续不过原有的。更新者依存于所更新者时，它终结更新与以其所需依存者，取用者以这样的需要依存时也在内。",
     "en": "Formations each taking within what is given can together exceed it; with natural-number amounts, joint excess cannot outlast what was held. Where renewers depend on what they renew, it ends the renewal and those depending at such a need, a taker among them where it so depends."
@@ -107,8 +107,8 @@
   ],
   "does_not_show": [
     {
-      "zh": "门控的结论只对依存于所更新者的更新成立，不对外部来源（如太阳）给予的更新成立。",
-      "en": "The gated conclusions hold only for renewal that depends on what it renews, not for renewal given from an outside source such as a sun.",
+      "zh": "超出所及之步以后的门控结论只对依存于所更新者的更新有证明；在该步终结对任何更新都成立，而由外部更新的形成可再活跃。",
+      "en": "The gated conclusions after the step the excess reaches are proved only for renewal that depends on what it renews; at that step the end holds for any renewal, and a formation renewed from outside can be active again.",
       "kind": "scope"
     },
     {
@@ -560,6 +560,10 @@
     {
       "en": "29 October 2026, board item UE16 (study section 449): related to risk-minimization-on-a-shared-renewal; no statement, next step or declaration changed.",
       "zh": "2026年10月29日，工作板条目 UE16（研究第 449 节）：与 risk-minimization-on-a-shared-renewal 相关联；无一陈述、下一步或声明改变。"
+    },
+    {
+      "en": "6 November 2026, board item EL7, correction: the scope limit on renewal from outside now says it applies after the step the excess reaches, and that at that step the end holds for any renewal. The laws are unchanged.",
+      "zh": "2026年11月6日，工作板条目 EL7，更正：关于来自外部之更新的范围之限，现说明它适用于超出所及之步以后，而在该步终结对任何更新都成立。诸律不变。"
     }
   ],
   "text_versions": [

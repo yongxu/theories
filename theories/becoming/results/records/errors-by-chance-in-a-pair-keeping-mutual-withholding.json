@@ -1,0 +1,201 @@
+{
+  "schema_version": 2,
+  "id": "errors-by-chance-in-a-pair-keeping-mutual-withholding",
+  "title": {
+    "en": "Errors by chance in a pair keeping mutual withholding",
+    "zh": "保持相互扣留的一对中的随机差错"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-11-05T20:42:24+00:00",
+  "statement": {
+    "en": "Where errors only withhold and both formations err at two consecutive steps, a pair of laws keeping mutual withholding, the window among them, withholds from then on; read from a weighted course, the courses still giving at step 2k weigh at most ((p+q)^4 − p^4)^k of ((p+q)^4)^k.",
+    "zh": "差错只扣留、双方连续两步都出错时，保持相互扣留的一对之律（窗口在内）自此扣留；读自加权进程，第 2k 步仍给出的进程之权至多为 ((p+q)^4)^k 中的 ((p+q)^4 − p^4)^k。"
+  },
+  "laws": [
+    {
+      "en": "A law keeps mutual withholding where, after two steps at which both formations withheld, it withholds: answering, the window of two, waiting on both and withholding do; agreement, sparing and the alternator do not.",
+      "zh": "一条律保持相互扣留，指在双方都扣留的两步之后它扣留：回应、两步窗口、等待双方与扣留皆如此；一致、宽待与交替者则否。",
+      "declarations": [
+        "Becoming.PairChance.KeepsWithheld",
+        "Becoming.PairChance.keeps_answering",
+        "Becoming.PairChance.keeps_windowed",
+        "Becoming.PairChance.keeps_withholding",
+        "Becoming.PairChance.keeps_waitingBoth",
+        "Becoming.PairChance.not_keeps_agreeing",
+        "Becoming.PairChance.not_keeps_sparing",
+        "Becoming.PairChance.not_keeps_alternating"
+      ]
+    },
+    {
+      "en": "An error only withholds. Where both formations err at two consecutive steps, a pair of laws keeping mutual withholding withholds at every step from the first of them on, whatever the errors after.",
+      "zh": "差错只扣留。双方在连续两步都出错时，保持相互扣留的一对之律，自其中第一步起每步都扣留，无论之后差错如何。",
+      "declarations": [
+        "Becoming.PairChance.err_withholds",
+        "Becoming.PairChance.dead_stays",
+        "Becoming.PairChance.burst_absorbs",
+        "Becoming.PairChance.burst_absorbs_from"
+      ]
+    },
+    {
+      "en": "Errors read from a course of 4k values, each error weighing p and each step without one q. Where a formation still gives at step 2k no block of four is all errors, so those courses weigh at most ((p + q)^4 − p^4)^k of the whole ((p + q)^4)^k, and where an error weighs something the block's part is less than the whole.",
+      "zh": "差错读自 4k 个值的进程，每个差错权 p，无差错之步权 q。形成在第 2k 步仍给出时，没有四值之块全为差错，故这些进程之权至多为整体 ((p + q)^4)^k 中的 ((p + q)^4 − p^4)^k；差错有权时，块之部分小于整体。",
+      "declarations": [
+        "Becoming.PairChance.errorsOf",
+        "Becoming.PairChance.burstFree",
+        "Becoming.PairChance.still_gives_free",
+        "Becoming.PairChance.block_total",
+        "Becoming.PairChance.block_lt",
+        "Becoming.PairChance.still_giving_le",
+        "Becoming.PairChance.absorbed_share"
+      ]
+    },
+    {
+      "en": "Witness, each value weighing one: of the sixteen courses of four values, the pair of windows still gives at step two under twelve, against the bound fifteen.",
+      "zh": "见证，每个值权一：四值的十六个进程中，一对窗口在第二步仍给出的有十二个，界为十五。",
+      "declarations": [
+        "Becoming.PairChance.window_witness"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "Discrete steps; a pair's run of two laws of giving; errors one-way, turning an intended giving into withholding.",
+      "zh": "离散步；两条给出之律下一对的运行；差错单向，把所欲之给出变为扣留。"
+    },
+    {
+      "en": "Errors read from a course of Booleans, each formation's errors at two steps per block of four; weights natural numbers, so a chance is a ratio of weights.",
+      "zh": "差错读自布尔值进程，每四值之块含各形成两步的差错；权为自然数，故机会是权之比。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That any law of giving is better: that is asked under the ethics' two premises, the continuation condition for scope and C for order.",
+      "zh": "任何给出之律更好：这在伦理的两个前提下才问及，延续条件定范围，C 定次序。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Forgiveness with a probability, as in generous tit-for-tat, or errors turning a withholding into giving: neither is represented.",
+      "zh": "以概率的宽恕（如慷慨以牙还牙），或把扣留变为给出的差错：两者皆未表示。",
+      "kind": "scope"
+    },
+    {
+      "en": "How long total withholding takes, or how much a law gives before it: the bound counts only bursts aligned to blocks, so it is loose.",
+      "zh": "全面扣留需时多久，或一条律此前给出多少：此界只计与块对齐的连错，故宽松。",
+      "kind": "scope"
+    },
+    {
+      "en": "A limit: that the share falls to nothing is by hand, a ratio of the weights.",
+      "zh": "极限：份额趋于无是手算的，即权之比。",
+      "kind": "scope"
+    },
+    {
+      "en": "That errors in any actual pair are one-way, or independent of the pair's history.",
+      "zh": "任何实际一对的差错是单向的，或独立于其历史。",
+      "kind": "correspondence"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "discrete-steps",
+    "no-evaluation",
+    "no-ethical-premise",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.PairChance at receipt 20261105T210745.530949Z, each declaration with an empty axiom report; near-definitional once errors are one-way and a law keeps mutual withholding. An earlier scratch form was compiled by one independent AI skeptic, who reran the design numbers (mean steps to total withholding, share of steps giving) from the study's chain; those numbers are computed, not proved.",
+    "zh": "由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.PairChance，回执 20261105T210745.530949Z，公理报告均为空；差错单向且律保持相互扣留既定后，近乎定义。较早的草稿形式由一位独立 AI 怀疑者编译，并由研究中的链重算设计数字（至全面扣留的平均步数、给出之步的份额）；这些数字是计算的，不是证明的。"
+  },
+  "next_delta": {
+    "en": "Forgiveness with a probability on the pair's run, so that generous tit-for-tat is represented and its difference from the window stated as a law.",
+    "zh": "在一对的运行上表示以概率的宽恕，使慷慨以牙还牙得以表示，其与窗口之别作为定律陈述。"
+  },
+  "correspondence": {
+    "en": "Noise in repeated games (Wu and Axelrod 1995), and a chain with a reachable absorbing state reaching it with probability one. Generous tit-for-tat (Molander 1985; Nowak and Sigmund 1992) has no such absorbing state, since it can give after mutual withholding; here that is by hand. Readings (the AI's): under chance errors that only withhold the window delays total withholding and does not prevent it; the field's noise need not be one-way.",
+    "zh": "重复博弈中的噪声（Wu 与 Axelrod 1995），以及具有可达吸收态之链以概率一到达之。慷慨以牙还牙（Molander 1985；Nowak 与 Sigmund 1992）无此吸收态，因其在相互扣留后可给出；此处为手算。读法（AI 的）：在只扣留的随机差错下，窗口延迟全面扣留而不阻止之；该领域的噪声未必单向。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PairChance.lean",
+  "aliases": [
+    "errors by chance in a pair keeping mutual withholding",
+    "Becoming.PairChance.absorbed_share",
+    "Becoming.PairChance.burst_absorbs",
+    "Becoming.PairChance.KeepsWithheld"
+  ],
+  "dependencies": [
+    {
+      "id": "offspring-read-from-giving-that-waits",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses the pair's run and its laws with supplied errors: errors are read here from a course.",
+        "zh": "复用一对的运行及其带给定差错之律：此处差错读自进程。"
+      }
+    },
+    {
+      "id": "a-pair-tolerates-only-within-a-window",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses the window: keeps_windowed places it among the laws keeping mutual withholding.",
+        "zh": "复用窗口：keeps_windowed 把它列入保持相互扣留之律。"
+      }
+    }
+  ],
+  "related": [],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PairChance.lean",
+      "role": "proof",
+      "sha256": "6e4a5ffd122fa3c1a98ffc84917061bbf616244999c7f3b71bc2447a2821f1b5",
+      "declarations": [
+        "Becoming.PairChance.KeepsWithheld",
+        "Becoming.PairChance.absorbed_share",
+        "Becoming.PairChance.block_lt",
+        "Becoming.PairChance.block_total",
+        "Becoming.PairChance.burstFree",
+        "Becoming.PairChance.burst_absorbs",
+        "Becoming.PairChance.burst_absorbs_from",
+        "Becoming.PairChance.dead_stays",
+        "Becoming.PairChance.err_withholds",
+        "Becoming.PairChance.errorsOf",
+        "Becoming.PairChance.keeps_answering",
+        "Becoming.PairChance.keeps_waitingBoth",
+        "Becoming.PairChance.keeps_windowed",
+        "Becoming.PairChance.keeps_withholding",
+        "Becoming.PairChance.not_keeps_agreeing",
+        "Becoming.PairChance.not_keeps_alternating",
+        "Becoming.PairChance.not_keeps_sparing",
+        "Becoming.PairChance.still_gives_free",
+        "Becoming.PairChance.still_giving_le",
+        "Becoming.PairChance.window_witness"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261105T122637.488502Z/verification.json",
+      "role": "receipt",
+      "sha256": "99e0a9304bd881892020e074b261147c683652ba5816e24004d4515a06f609fd"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261105T210745.530949Z/verification.json",
+      "role": "receipt",
+      "sha256": "82d20bfa86c867883b091edd8471f908e3c5402881dbc9a77677f7053548f08b",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PairChance.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261105T210745.530949Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.PairChance",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "6 November 2026, board item EL7: added from EL7's investigation of chance and stability (el7/a), its scratch Lean moved to the core; 05 §5's reading of the window as a deterministic relative of forgiveness corrected with it.",
+      "zh": "2026年11月6日，工作板条目 EL7：据 EL7 对机会与稳定性的调查（el7/a）新增，其草稿 Lean 移入核心；05 §5 把窗口读作宽恕之确定性亲属的说法一并更正。"
+    }
+  ]
+}

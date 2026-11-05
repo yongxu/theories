@@ -170,7 +170,7 @@ Every completed result is kept, `FromOutside` included as the boundary of no exc
 - Change "The gated conclusions hold only for" to "The gated conclusions after the step the excess reaches hold only for".
 - Replace the parenthetical with:
 
-> (at that step the end holds for any renewal, `Flow.ends_at_race_end`; read on a lineage at a class within activity it lasts, since the line cannot pass that step, so a lineage drawn past a sun's renewal from too small a stock ends without any gate, [04 §4](04-LIFE.md#r-ending-laws-as-regimes-on-a-lineage))
+> (at that step the end holds for any renewal, `Flow.ends_at_race_end`; read on a lineage at a class within activity it lasts, since the line cannot pass that step, so a lineage drawn past a sun's renewal from too small a stock ends without any gate, [04 §4](../../../../../../../../theories/becoming/chapters/04-LIFE.md#r-ending-laws-as-regimes-on-a-lineage))
 
 - Optionally, give the own-count-misses-joint-excess record's first does-not-show entry the same qualifier.
 

@@ -35,7 +35,7 @@
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
-- The gated conclusions hold only for renewal that depends on what it renews, not for renewal given from an outside source such as a sun.
+- The gated conclusions after the step the excess reaches are proved only for renewal that depends on what it renews; at that step the end holds for any renewal, and a formation renewed from outside can be active again.
 - Stated for natural-number amounts; excess compares totals at each step and treats neither reserves nor delayed renewal.
 - Exceeding and Alone are minimal witnesses; Exceeding's ending is stipulated in its activity and shown consistent with the laws. Witness: `Becoming.Exceeding.all_end`.
 - The joint count binds only a want that outlasts what the condition holds, and a taker ends with it only where it depends at such a need.
@@ -139,6 +139,7 @@ Aliases: `Becoming.Flow.WithinOwn`, `Becoming.Flow.WithinJoint`, `Becoming.Flow.
 - 21 October 2026, SG4: the joint excess these laws take as given, derived for optimizers re-optimizing along a course, the loss exactly where the draw exceeds the renewal and, for a draw the same at every step, without the premise that renewal stops below the need (record re-optimizing-above-a-renewal-ends-it, study section 291); this record's laws and their statements are unchanged.
 - 25 October 2026, board item DF (study section 418): in the correspondence "the author's reading (an AI argument)" now reads "a reading (the AI's argument)", keeping its AI label; the laws are unchanged.
 - 29 October 2026, board item UE16 (study section 449): related to risk-minimization-on-a-shared-renewal; no statement, next step or declaration changed.
+- 6 November 2026, board item EL7, correction: the scope limit on renewal from outside now says it applies after the step the excess reaches, and that at that step the end holds for any renewal. The laws are unchanged.
 - 2 rebinding entries (2026-10-13 to 2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](own-count-misses-joint-excess.json).
 
 <a id="earlier-text--早期文本"></a>
@@ -150,4 +151,4 @@ Aliases: `Becoming.Flow.WithinOwn`, `Becoming.Flow.WithinJoint`, `Becoming.Flow.
 
 </details>
 
-Documentary review UTC: `2026-10-25T17:03:04+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-05T20:42:24+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

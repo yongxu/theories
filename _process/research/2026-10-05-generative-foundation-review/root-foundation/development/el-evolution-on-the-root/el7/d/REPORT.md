@@ -152,7 +152,7 @@ A new `does_not_show` entry, of kind `correspondence`:
 
 **Home: 04 §4 (`r-ending-laws-as-regimes-on-a-lineage`).** After "(`Handover.both_fates`, `stock_forces_neither`).", insert:
 
-> The laws take each regime's premise as given, and whether it holds can turn on the level, as at the gate's need ([T1](02-MAP.md#t1)): under the same conditions, small populations of cooperatively growing yeast collapse while large ones persist (Sanchez and Gore 2013), and evolutionary rescue has a threshold in population size (Bell and Gonzalez 2009).
+> The laws take each regime's premise as given, and whether it holds can turn on the level, as at the gate's need ([T1](../../../../../../../../theories/becoming/chapters/02-MAP.md#t1)): under the same conditions, small populations of cooperatively growing yeast collapse while large ones persist (Sanchez and Gore 2013), and evolutionary rescue has a threshold in population size (Bell and Gonzalez 2009).
 
 **Elsewhere.**
 - **NOTE §2 (line 29) and §4 (line 260):** add "once a regime's premise holds", but only if no record cites those sections.

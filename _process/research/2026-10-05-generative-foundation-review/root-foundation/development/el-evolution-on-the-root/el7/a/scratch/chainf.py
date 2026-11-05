@@ -48,10 +48,10 @@ grim = lambda o, p: o[0] and p[0]
 e = 1/20
 for name, law, H in (('answering', W(1), 1), ('window2', W(2), 2), ('window3', W(3), 3), ('grim', grim, 1), ('agreement', agree, 1), ('sparing', spare, 1)):
     row = [f'{name:9s}']
-    for n in (20, 200, 2000):
+    for n in (20, 200, 2000, 6000, 7000, 10000):
         gs, dd = run(law, law, H, e, n); row.append(f'n={n}: give {gs:.4f} dead {dd:.4f}')
     print(' | '.join(row))
 for name, law, H in (('answering', W(1), 1), ('window2', W(2), 2), ('window3', W(3), 3), ('grim', grim, 1)):
     print(name, 'mean steps to total withholding', f'{mean_time(law, law, H, e):.4g}')
 for q in (0.1, 1/3):
-    print('GTFT q', round(q, 3), ' | '.join(f'n={n}: give {run(W(1), W(1), 1, e, n, q)[0]:.4f} dead {run(W(1), W(1), 1, e, n, q)[1]:.4f}' for n in (20, 200, 2000)))
+    print('GTFT q', round(q, 3), ' | '.join(f'n={n}: give {run(W(1), W(1), 1, e, n, q)[0]:.4f} dead {run(W(1), W(1), 1, e, n, q)[1]:.4f}' for n in (20, 200, 2000, 6000, 7000, 10000)))
