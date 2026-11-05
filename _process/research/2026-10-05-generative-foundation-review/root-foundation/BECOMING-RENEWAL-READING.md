@@ -24710,12 +24710,13 @@ Board item RUN6, run on 6 November 2026 on Ren's yes ([his words](../../../../so
 
 ```text
 Result(s): none reused and none new in the register; thesis T2 (home 02 §5, 08's thesis table), unmigrated.
-Delta: T2's first frozen test outside fisheries to decide anything. The Beetle Team archive's 40 adult-loss
+Delta: the first frozen test of T2's forbidden items outside fisheries to decide anything. The Beetle Team archive's 40 adult-loss
        cultures, which UE31's rules found too short, read as ten cells (one strain at one set loss, four replicates
        under one law) by UE31's rules at that unit. The reading is the one expected before the run: "separated on the
        next step: the rival's state; three numbers suffice on the course", the sign not separated. W, the pupae and
        the adults beyond T2's three numbers: excess 0.831 (per-loss medians 0.362, 0.537, 0.831, 0.832, 0.913),
-       detected in 8 of 10 cells: T2's wording "as far as anything measured does" fails. V2, T2's numbers beyond the
+       detected in 8 of 10 cells: T2's wording "as far as anything measured does" fails (excess is what is removed
+       beyond chance; a difference between replicates that neither law carries moves W toward the rival). V2, T2's numbers beyond the
        pupae and the adults: excess 0.004, detected in none: the rival holds. H1, a further lag beyond T2's three
        numbers with the lag at the delay: excess 0.052, under the bound 0.10 (per-loss medians -0.006, 0.179, 0.076,
        -0.003, 0.052), detected in one cell: three numbers suffice on the course. Sign: not separated, the two rules
@@ -24729,7 +24730,7 @@ Evidence: the frozen run (experiments/state-named-in-advance/cells/results/run-c
        passed, 8 of 360 rows with recruits above the pupae against the 12.5% that would stop the reading; week 12's
        entry read by the frozen rule in all 40 cultures.
 Forbidden items as now read: the first as worded (W) is met in this domain, and on the level's own history (H1) it is
-       not; the second (V4) and third (V5, the sign) are not decided.
+       not; the second (V4) is not decided, and the third (V5) not testable.
 Decision on the wording: T2-PROPOSALS' proposal 3 said to keep the clause until a frozen test's run fails it, then
        record the failure and narrow the clause, with the failure kept beside it. This is that run, so the clause
        becomes "as far as the level's own history does" and the first forbidden item "a fourth variable from the level's
