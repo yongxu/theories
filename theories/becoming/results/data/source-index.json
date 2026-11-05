@@ -2262,6 +2262,20 @@
         "tools/research/tests/test_boundary.py"
       ]
     },
+    "experiments/critical-mass-located/DESIGN.md": {
+      "title": "CMT: the critical mass located before the adoption data (design)",
+      "local_links": [
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aa-attractor-atlas/refuters/readers",
+        "experiments/critical-mass-located/cmt_dry_run.py",
+        "experiments/critical-mass-located/cmt_rule.py",
+        "experiments/critical-mass-located/results/dry-run.json",
+        "experiments/critical-mass-located/studies.json",
+        "experiments/critical-mass-located/write_frozen.py",
+        "experiments/formations-that-read/told/PINS.json",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnShaping.lean",
+        "theories/becoming/chapters/02-MAP.md"
+      ]
+    },
     "experiments/drain-beyond-the-reward/DESIGN.md": {
       "title": "LA4: the drain beyond the reward, under training by gradient (design)",
       "local_links": [
