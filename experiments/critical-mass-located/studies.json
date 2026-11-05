@@ -1,0 +1,48 @@
+{
+ "about": "CMT's closed list (DESIGN.md section 7). Every study here is screened by its design documents and accounted for in data/cases.json, either cased or set aside with a reason; no study is added after the freeze except the frozen search's hits, committed in data/search.json before any case. Every bibliographic detail and every recollection of a design below is from memory, not checked. The recollections say why a study is listed and what its screen is expected to find; the screen decides, not these notes.",
+ "studies": [
+  {"id": "bsv2001", "cite": "Battalio, Samuelson and Van Huyck 2001, 'Optimization incentives and coordination failure in laboratory stag hunt games', Econometrica 69(3)", "recalled": "three stag hunts sharing one mixed equilibrium, random matching within cohorts over many rounds; my recollection is that the safe action's payoff depends on the partner there, which item (b) would exclude", "from_memory": true},
+  {"id": "cdfr1992", "cite": "Cooper, DeJong, Forsythe and Ross 1992, 'Communication in coordination games', Quarterly Journal of Economics 107(2)", "recalled": "a two-action coordination game in which one action pays the same against either action; a no-communication baseline with rematching; payoffs in lottery points", "from_memory": true},
+  {"id": "cdfr1990", "cite": "Cooper, DeJong, Forsythe and Ross 1990, 'Selection criteria in coordination games: some experimental results', American Economic Review 80(1)", "recalled": "mostly games of three actions, which item (a) would exclude", "from_memory": true},
+  {"id": "straub1995", "cite": "Straub 1995, 'Risk dominance and coordination failures in static games', Quarterly Review of Economics and Finance 35(4)", "recalled": "several two-action coordination games with rematching", "from_memory": true},
+  {"id": "cks2001", "cite": "Clark, Kay and Sefton 2001, 'When are Nash equilibria self-enforcing? An experimental analysis', International Journal of Game Theory 29(4)", "recalled": "two-action coordination games with and without messages", "from_memory": true},
+  {"id": "ssw2003", "cite": "Schmidt, Shupp, Walker and Ostrom 2003, 'Playing safe in coordination games: the roles of risk dominance, payoff dominance, and history of play', Games and Economic Behavior 42(2)", "recalled": "two-action coordination games varying risk and payoff dominance, random and fixed matching treatments", "from_memory": true},
+  {"id": "ro2005", "cite": "Rydval and Ortmann 2005, 'Loss avoidance as selection principle: evidence from simple stag-hunt games', Economics Letters 88(1)", "recalled": "stag hunts some with negative payoffs", "from_memory": true},
+  {"id": "fio2012", "cite": "Feltovich, Iwasaki and Oda 2012, 'Payoff levels, loss avoidance, and equilibrium selection in games with multiple equilibria: an experimental study', Economic Inquiry 50(4)", "recalled": "stag hunts whose payoffs differ by a constant added to every cell: candidates for the shift pairs", "from_memory": true},
+  {"id": "dwn2012", "cite": "Dubois, Willinger and Van Nguyen 2012, 'Optimization incentive and relative riskiness in experimental stag-hunt games', International Journal of Game Theory 41(2)", "recalled": "stag hunts varying the optimization premium and riskiness, repeated play", "from_memory": true},
+  {"id": "dfk2021", "cite": "Dal Bo, Frechette and Kim 2021, 'The determinants of efficient behavior in coordination games', Games and Economic Behavior 130", "recalled": "many stag hunts with random rematching across sessions; replication files may be public", "from_memory": true},
+  {"id": "buy2014", "cite": "Buyukboyaci 2014, 'Risk attitudes and the stag-hunt game', Economics Letters 124(3)", "recalled": "stag hunts with measured risk attitudes", "from_memory": true},
+  {"id": "friedman1996", "cite": "Friedman 1996, 'Equilibrium in evolutionary games: some experimental results', Economic Journal 106(434)", "recalled": "two-action games, coordination games among them, under random pairwise and mean matching in groups over many periods", "from_memory": true},
+  {"id": "cf1997", "cite": "Cheung and Friedman 1997, 'Individual learning in normal form games: some laboratory results', Games and Economic Behavior 19(1)", "recalled": "two-action games, coordination games among them, random pairwise and mean matching", "from_memory": true},
+  {"id": "rvb2000", "cite": "Rankin, Van Huyck and Battalio 2000, 'Strategic similarity and emergent conventions: evidence from similar stag hunt games', Games and Economic Behavior 32(2)", "recalled": "payoffs drawn anew each round, which item (d) would exclude", "from_memory": true},
+  {"id": "vhbb1990", "cite": "Van Huyck, Battalio and Beil 1990, 'Tacit coordination games, strategic uncertainty, and coordination failure', American Economic Review 80(1)", "recalled": "a minimum-effort game of seven actions with a group-level payoff, which item (a) would exclude", "from_memory": true},
+  {"id": "ajw2013", "cite": "Al-Ubaydli, Jones and Weel 2013, 'Patience, cognitive skill and coordination in the repeated stag hunt', Journal of Neuroscience, Psychology, and Economics 6(2)", "recalled": "fixed partners, which item (c) would exclude", "from_memory": true},
+  {"id": "bbbd2019", "cite": "Belloc, Bilancini, Boncinelli and D'Alessandro 2019, 'Intuition and deliberation in the stag hunt game', Scientific Reports 9", "recalled": "one-shot play, which item (g) would exclude", "from_memory": true},
+  {"id": "cbbb2018", "cite": "Centola, Becker, Brackbill and Baronchelli 2018, 'Experimental evidence for tipping points in social convention', Science 360", "recalled": "a naming game with a committed minority and a partner-dependent payoff for the status quo, which items (b) and (e) would exclude; listed as the out-of-class case", "from_memory": true},
+  {"id": "ans2021", "cite": "Andreoni, Nikiforakis and Siegenthaler 2021, 'Predicting social tipping and norm change in controlled experiments', PNAS 118(16)", "recalled": "thresholds measured and distributed across members; expected to fail (b) or (a)", "from_memory": true}
+ ],
+ "search": {
+  "about": "Run once, on Ren's yes, before any screen; its hits are written to data/search.json and committed once, after the freeze and before data/codings.json, data/layout.json and data/cases.json are committed (cmt_rule.closed_list checks the order and refuses a second commit of any of the four; cmt_rule.run refuses a search not committed after the freeze). The archives and their query forms are from memory, not checked.",
+  "archives": ["openICPSR (the AEA data and code repository)", "Harvard Dataverse", "the Open Science Framework", "Zenodo"],
+  "query": "the exact phrase \"stag hunt\" in the title, description or keywords",
+  "cutoff": "deposits public on or before 5 November 2026",
+  "hit": "a deposit holding data of a laboratory or online experiment, written in search.json's 'hits' as {\"id\", \"deposit\", \"title\"}; a deposit of a study already listed above goes under 'already listed' with that study's id, not among the hits, and adds nothing",
+  "cap": "if more than 150 deposits match, every one is still listed in search.json and screened; the cap is only the spend guard of DESIGN.md section 12"
+ },
+ "coding_form": {
+  "about": "What each deciding coder records from a study's design documents alone (instructions, payoff tables, protocol), with every result, figure and data file withheld. One form per game a study ran; the two forms must be identical for the game to be admitted.",
+  "status_quo": "the action whose payoff is the coded HS and HH: the action that is not the payoff-dominant equilibrium's; where the game has none, the action whose payoff varies less with the partner",
+  "payoff": "SS, SH, HS, HH: the row player's payoff in the experiment's own units, S the other action, H the status quo; exactly as the table gives it",
+  "two_actions_symmetric": "true where each member chooses one of two actions each round and the payoff table is the same for both members of a pair",
+  "matching": "'random pairs' (partners drawn anew each round within the matching group), 'mean matching' (payoff against the group's average), 'fixed partners' or 'other'",
+  "independent_groups": "true where members of different matching groups never meet",
+  "constant_parameters": "true where the payoff table, the group and the rules do not change over the rounds of the game",
+  "committed_members": "true where any member is a confederate, a programmed player or one whose action is fixed",
+  "communication": "true where members can send messages, or the round has another stage (punishment, voting, a second game)",
+  "first_game_of_group": "true where this game is the first the group plays in the session",
+  "feedback_own_payoff": "true where each member learns at least the own payoff after each round",
+  "group_size": "members in a matching group, as the design sets it",
+  "rounds": "rounds of this game",
+  "shift_of": "the game_id of a game of the same study whose every payoff differs from this one's by one constant, or null"
+ }
+}

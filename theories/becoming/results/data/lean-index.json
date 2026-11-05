@@ -9644,7 +9644,8 @@
         "RESULTS.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-PLAN.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
-        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md"
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md",
+        "experiments/reform-events/DESIGN.md"
       ],
       "proof_status": "not_assessed_by_catalogue"
     },
@@ -10449,7 +10450,8 @@
       "direct_documentation_links_from": [
         "RESULTS.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
-        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md"
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md",
+        "experiments/reform-events/DESIGN.md"
       ],
       "proof_status": "not_assessed_by_catalogue"
     },
@@ -10463,6 +10465,7 @@
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
       "direct_documentation_links_from": [
         "RESULTS.md",
+        "experiments/critical-mass-located/DESIGN.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md"
       ],
@@ -13479,6 +13482,7 @@
         "RESULTS.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-RFM2.md",
         "experiments/formations-that-read/DESIGN.md",
+        "experiments/formations-that-read/FREEZE-12.md",
         "experiments/formations-that-read/REST-TR1.md",
         "experiments/formations-that-read/REST-TR4-TR5.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",

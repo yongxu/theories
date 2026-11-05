@@ -1,0 +1,145 @@
+{
+ "home": [
+  {
+   "path": "AGENTS.md",
+   "lines": "42",
+   "quote": "Still his: pushing to the public remote, the licence, who is sent what, and money or machine time for runs. Prepare them fully, freezing designs included; only their release waits for him, and only he changes this list."
+  },
+  {
+   "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aa-attractor-atlas/PLAN.md",
+   "lines": "379, 385, 387",
+   "quote": "Each dynamic's `forbids` field is checked for reach. Where a forbidden case could be met but no test is designed, a design is drafted and frozen. Freezing is not Ren's; any run with model calls or downloads is. ... - **T1 with a need measured in advance** (02 Open). ... Each design names who decides its verdict, a family that neither wrote nor read the theory, as RF's freezes do."
+  },
+  {
+   "path": "experiments/formations-that-read/FREEZE-1.md",
+   "lines": "40",
+   "quote": "- Two families that neither wrote nor read the theory decide; the theory's own is reported apart. Every response must name the pin's model."
+  },
+  {
+   "path": "experiments/formations-that-read/FREEZE-1.md",
+   "lines": "142",
+   "quote": "7. **Who decides** (PINS.json's rule). A verdict moves a reading only where a deciding pin gives it. The theory's own family is reported apart and moves nothing alone."
+  },
+  {
+   "path": "experiments/formations-that-read/FREEZE-1.md",
+   "lines": "154-159",
+   "quote": "**The theory's own families** are those whose models wrote or read it:\n- Anthropic's Claude wrote it;\n- OpenAI's models reviewed it through Codex;\n- DeepSeek's and xAI's models discussed its early argument with Ren in 2025 ([the consolidation's timeline](../../_process/history/2026-09-consolidation/TIMELINE.md)).\n\nNone of them decides alone."
+  },
+  {
+   "path": "experiments/formations-that-read/FREEZE-1.md",
+   "lines": "388",
+   "quote": "One independent reader read the frozen files before the freeze landed, in six rounds, until nothing of high or medium severity remained; ... It was a Claude Opus subagent given the files and the coordinator's two requirements, not this session's conclusions, and it worked read-only, with small checks of the code. It is of the theory's own family, as is every reader the session can call (section 5). The deciding pins' families have read nothing here."
+  },
+  {
+   "path": "experiments/formations-that-read/FREEZE-1.md",
+   "lines": "390",
+   "quote": "**How this file is frozen.** By the commit that adds `told/FROZEN.sha256`: its text there is the frozen one. It is not hashed, so that a link it gives can be repaired if its target moves without touching the code's hashes. A later edit may only repair a link or a typo, is listed in a dated note at the end of this file, and changes no rule, threshold or reading. FROZEN.sha256 is committed last, after the render and every check pass on the merged tree, so that the landing's own checks need no fix to a hashed file after it. A fault found later can be fixed only by an addendum (the client, the dry run, a pin's `served_as`) or by a new freeze. A second commit of FROZEN.sha256 would make the chain refuse for good."
+  },
+  {
+   "path": "experiments/formations-that-read/FREEZE-11.md",
+   "lines": "101",
+   "quote": "Whatever the run shows is kept, and this paragraph is not revised after it."
+  },
+  {
+   "path": "experiments/formations-that-read/FREEZE-11.md",
+   "lines": "105-107",
+   "quote": "It refuses unless `FROZEN.sha256` lists the four files, each has its bytes and is committed unchanged, `FROZEN.sha256` has one commit, the platform is the one named, and no readout is there; the readout records the freeze commit and HEAD. ... **What his yes releases:** about 194 seconds of one CPU core on this machine (the dry run's projection); no download, no model call, no key and no money. The readout is kept whatever it shows."
+  },
+  {
+   "path": "experiments/formations-that-read/FREEZE-11.md",
+   "lines": "113",
+   "quote": "**How this file is frozen:** by the commit that adds `train-tr2a/FROZEN.sha256`, its text there being the frozen one. It is not hashed, so that a link can be repaired without touching the code's hashes. A later edit may only repair a link or a typo, or correct a false statement to a reader; each is listed in a dated note at the end of this file and changes no rule, size or reading. `FROZEN.sha256` is committed last, after the render and every check pass on the merged tree."
+  },
+  {
+   "path": "experiments/formations-that-read/FREEZE-10.md",
+   "lines": "266",
+   "quote": "Readers other than the author read it in rounds: a full read first, then the same reader on each diff, at most five rounds, stopping at the first with no finding of high or medium severity. [`told-tr1a/REVIEW-FREEZE.md`](told-tr1a/REVIEW-FREEZE.md) records each round, each finding and how it was taken, and what kept the rounds going."
+  },
+  {
+   "path": "experiments/formations-that-read/FREEZE-10.md",
+   "lines": "272",
+   "quote": "`told-tr1a/write_frozen.py REPO` writes `told-tr1a/FROZEN.sha256`, the base link of TR1A's chain: the sha-256 of every file the first part lists, paths repository-relative, sorted. It refuses unless the dry run passed and recorded the files' hashes now, unless each freeze 1 file has freeze 1's own hash, and unless each FREEZE-5 file has FREEZE-5's. The hash file is committed once, last, on the merged tree, after the gate passes."
+  },
+  {
+   "path": "experiments/formations-that-read/told/PINS.json",
+   "lines": "key 'rule'",
+   "quote": "A verdict moves a reading only where a pin marked 'decides' gives it. The theory's own families, those whose models wrote or read the theory (Anthropic's Claude wrote it; OpenAI's models reviewed it through Codex; DeepSeek's and xAI's models discussed its early argument with Ren in 2025), never decide alone: a pin of one is reported apart, beside the others, and moves nothing by itself."
+  },
+  {
+   "path": "experiments/README.md",
+   "lines": "55-56",
+   "quote": "- **Make the reading refuse a run it was not frozen for.** ... A reading that takes whatever is in the folder can be given a run the design never planned, and its verdict looks the same.\n- **Check that the inputs can meet every rule's minimum before freezing.** ... Read the inputs' layout, or the run's plan of calls, and check it against every rule's minimum before the design is frozen."
+  },
+  {
+   "path": "tools/research/gate.py",
+   "lines": "788-795",
+   "quote": "\"\"\"Every freeze, read from its own files, judged by what this landing does to it. The landing fails if it deletes or edits a freeze record (a manifest or a pin); if it changes a file a manifest lists, or a file a pin's experiment held at a pinned commit, unless GATE_FROZEN_ACK names that file with the reason; if a manifest it touches has an entry that is not the bytes it names; or if it changes a folder whose freeze the check cannot read."
+  },
+  {
+   "path": "tools/research/gate.py",
+   "lines": "663",
+   "quote": "FREEZE_RECORDS = ('experiments/**/*FROZEN*.sha256', 'experiments/**/*.json', 'experiments/**/*FROZEN-AT')"
+  },
+  {
+   "path": "_process/BECOMING-WORKBOARD.md",
+   "lines": "58",
+   "quote": "A test designed and frozen before any value it reads is seen: the need measured or fixed from a source independent of the persistence series, as UE31 named T2's state in advance; a public field archive recording the condition, the draw and the renewal, read after MQ1, MQ2, MQ3 and MQ6 and T1's standing; the verdict decided by a family that neither wrote nor read the theory; *Refuted by* in 02's words; a dry run on synthetic data; `FROZEN.sha256` last; the Decisions line with the download (its source and size) and the run's cost. If no archive fits, the reasons, as a result; if the data cannot be named before the series is read, what is frozen and what waits. One independent reader by the freeze rule. No Lean, no record's law, no model call, no download"
+  },
+  {
+   "path": "theories/becoming/chapters/02-MAP.md",
+   "lines": "278",
+   "quote": "*Forbids*: a condition below a need measured in advance returning with nothing given from beyond; a dependent active while its condition stood below its need. *Refuted by*: a stock driven below a need measured beforehand returning with no measured giving from beyond, or fates across a predicted point separated no better than by a null."
+  },
+  {
+   "path": "theories/becoming/chapters/02-MAP.md",
+   "lines": "436",
+   "quote": "*Frozen test* (frozen 25 October 2026, run 25 and 26 October): LA2, a lock in a self-rewarding loop, frozen at `36c8b79cb` ([experiment](../../../experiments/self-rewarding-lock/README.md))."
+  },
+  {
+   "path": "theories/becoming/chapters/02-MAP.md",
+   "lines": "478",
+   "quote": "- A field test of T1 with a need measured in advance; T2 on grazed grassland or harvested forests; a frozen field test of T7's reform events."
+  }
+ ],
+ "forbids": "Two layers. (1) What the practice itself forbids, and what meets it: a frozen file's bytes changing after the freeze commit (the in-code frozen check and the gate's `frozen` check both refuse; the gate fails a landing that edits or deletes a manifest or pin, or changes a listed file, unless GATE_FROZEN_ACK names it with a reason); a second commit of FROZEN.sha256 (\"would make the chain refuse for good\", FREEZE-1 l.390; tr2a.py's check refuses it); an edit of the frozen design text other than a link, a typo or a false statement to a reader, each in a dated note changing no rule, size or reading (FREEZE-11 l.113; FREEZE-1's later dated notes are argued exceptions, each argued on the grounds that no run had been seen); revising the stated expectation after the run (\"this paragraph is not revised after it\", FREEZE-11 l.101); a run, download, model call or spend before Ren's yes (AGENTS.md l.42; AA PLAN l.379); a reading that takes whatever is in the folder (experiments/README l.55); a family that wrote or read the theory deciding a verdict alone (PINS.json rule; FREEZE-1 l.40, l.142). (2) For the T1N case the board row names, 02 §5's own refutable content (02-MAP.md l.278): \"*Forbids*: a condition below a need measured in advance returning with nothing given from beyond; a dependent active while its condition stood below its need. *Refuted by*: a stock driven below a need measured beforehand returning with no measured giving from beyond, or fates across a predicted point separated no better than by a null.\" Meeting it takes a series where the need was fixed before the series was read, from a source independent of the persistence series, a stock driven below it, and measured giving from beyond (or, for the second clause, a fates-versus-null separation fixed in advance). 02's Open (l.478) and T1's standing (\"No field test of a need measured in advance has run\") say no such test exists yet.",
+ "existing": [
+  "experiments/formations-that-read/FREEZE-1.md to FREEZE-11.md: eleven RF/RR freezes, all landed, none run. FREEZE-1 (TR-RR+TR8, 0ff7bb75d), FREEZE-2 (TR4+TR5, 02446e40a), FREEZE-3 (TR3, 7b78e24cc), FREEZE-4 (TR7, caff74ecb/f1d8ad939), FREEZE-5 (TR1, bb4e5bb6d), FREEZE-6 (TR6, e889dcc8d), FREEZE-7 (TR2 Stage B), FREEZE-8 (TR9, 18ed73b7e), FREEZE-10 (TR1A: TR1's informing variant + Stage A, af58484ea), FREEZE-11 (TR2A: TR2's Stage A, 7f59154e2). Every run waits on Ren's yes; the board's Decisions line (l.101) lists what each yes releases.",
+  "experiments/formations-that-read/told-tr1a/ (FROZEN.sha256 with 21 entries, imported freeze 1 and FREEZE-5 files at their own freezes' hashes; write_frozen.py; tr1a_design/rule/run/stage_a/dry_run.py; results/dry-run.json; REVIEW-FREEZE.md, two rounds, round 1 two high and five medium findings taken, round 2 nothing high or medium). Done, frozen.",
+  "experiments/formations-that-read/train-tr2a/ (FROZEN.sha256 with 4 entries: tr2a.py, tr2a_dry_run.py, results/dry-run.json, ../tr2.py; no write_frozen.py: the frozen check lives in tr2a.py frozen_check with REQUIRED, one commit of FROZEN.sha256, platform pin, refusal of python3 -O; REVIEW-FREEZE.md, two rounds, round 1 six medium findings taken). Done, frozen.",
+  "Board row RF (_process/BECOMING-WORKBOARD.md l.50): owner of RF's laws; the tests' designs landed (study §476) with 'two independent AI reviews in three rounds before any person reads it; nothing frozen or run, the runs on Ren's yes'.",
+  "RFZ row, done (_process/history/workboard/BECOMING-WORKBOARD-2026-10-11_to_2026-10-17.md l.822): 'a family not the theory's own pinned, so that no family that wrote or read the theory decides a verdict alone; the run and analysis code, its refusals of wrong runs and a dry run through the same code path; the smoke run the release's first step, reading no outcome ... One reader other than the author per freeze; each freeze on the Decisions line with what Ren's yes would release'.",
+  "TR1A row, done (board l.57): 'readers as the coordinator set: a full read, then the same reader on each diff, at most five rounds; its Decisions line, calls and money per pin for the variant and machine time for Stage A; no model call and no key used'.",
+  "T1N row (board l.58), claimed 5 November 2026 on c5663e4c3 by Claude Code desktop session 'Names and identity discussion', branch t1n, target folder experiments/need-measured-in-advance/. Branch t1n is at 592055816 (main's tip) with no commits of its own; its worktree /Users/ren/tmp/t1n/wt has a clean status and no experiments/need-measured-in-advance/ folder. No T1N design file exists yet. Claimed by another owner: do not reprove or draft it in parallel.",
+  "experiments/state-named-in-advance/DESIGN.md (UE31): the field-archive precedent T1N's row names. It is frozen by its commit with no FROZEN.sha256 ('The design, the rules ..., the dry runs ... and this file are committed together before any value of the data is read. No data has been downloaded.'). Its §9 names source, licence, version, files and bytes and lists what was read and not read; §11 'What waits on Ren' names the download (238,350 bytes, Dryad, CC0) and run. It was run 3 November and decided nothing (13 censuses under the loss against the rules' 20). That is the source of the README lesson 'check that the inputs can meet every rule's minimum before freezing'.",
+  "02-MAP.md l.436: the one 'Frozen test' line in a home section found by grep (T7's LA2), giving the date frozen, the date run, the freeze commit and a link to the experiment. RF's freezes reach their homes through the records' Next lines and history notes instead (e.g. commit 180af7c7e changed what-choices-show-of-an-order and acts-alike-from-a-model-or-from-an-order: next_delta names the frozen test's run, and a dated history line names the FREEZE file and 'not run'), rendered on the merged tree.",
+  "experiments/README.md §'Freezing a test on a trained system' (l.44-59): the repository's lessons list for freezes (verdict only on a difference resolved, the law's own quantifier, simulate the system the test may meet, measure exploration apart, guard support rules against contradiction, controls, refuse runs not frozen for, inputs meet every minimum, shared harness, log writing, stops on estimated rates). RFZ added to it; new freezes are expected to meet it."
+ ],
+ "data": "For the practice itself no data is needed. Everything above is in the repo and read with git and sed. For new designs: (a) Pure-code designs (Stage A style: standard-library training or simulation, seeds outside the plan, a dry run) need no download and no model call. Freezing them waits on no one. The run is only CPU time, which is still Ren's under AGENTS.md l.42: FREEZE-11 §9 names \"about 194 seconds of one CPU core\", and FREEZE-10 names \"about a minute or two of one core\". (b) Model-call designs reuse freeze 1's harness (told/client.py, run.py, verdicts.py, PINS.json with gemini-4-argon and qwen3.8-max deciding and Sonnet 5.5 reported apart), imported at freeze 1's hashes. Every call waits on Ren's yes, through OpenRouter with his key, with a spend guard and a smoke run first. (c) Field-archive designs (T1N, T7 reform events, hysteresis, critical mass) need a download, which waits on Ren. Before the freeze the design may read only the archive's metadata (landing page, API listing, papers), as UE31 §9 did. It names the source, licence, version, files and byte sizes, and lists what was and was not read. Known difficulties: inputs too short for the rules' minimums (UE31's failure, l.56 of the README lesson); the analyst having already seen the series (T1's standing says MQ1/MQ2 regimes were 'held out from the fit but not from the analyst'); and the need having to come from a source independent of the persistence series. The T1N row allows \"If no archive fits, the reasons, as a result; if the data cannot be named before the series is read, what is frozen and what waits.\"",
+ "design_constraints": [
+  "Claim on the board first (a row with Purpose, owner, base commit, branch, paths). Never draft a design another row holds: T1N is claimed by 'Names and identity discussion' on branch t1n.",
+  "Own folder under experiments/<name>/ (or a sub-folder beside an existing freeze). It holds: the design text (FREEZE-k.md or DESIGN.md); the rule/reading code; the run code; a dry run script and its committed result (results/dry-run.json, identical on every run; any timing goes to an unhashed, uncommitted file); a hash writer (write_frozen.py) or an in-code frozen_check; REVIEW-FREEZE.md; FROZEN.sha256 last. The manifest must sit on a live path (gate.py ignores manifests whose paths.role is not 'live') and be named *FROZEN*.sha256 (or a *freeze*.json with files/sources, or a FROZEN-AT pin), so the gate's frozen check reads it.",
+  "The header says board item, date, 'AI-written (a Claude Code session), not yet reviewed by a person', what has not been done ('Frozen before any call to a model / any training / any value of the data is read'), 'The run is Ren's', and a reading time at 100 to 130 words a minute, with the first part's time.",
+  "A first part, 'What is frozen, and what it can refute', with the standing first. It says what a run can and cannot move (a correspondence, bridge or reading, never a theorem). It quotes the home's Forbids / Refuted by in the home's words, with links to the home anchor and the Lean names. It lists every frozen file and says what each outcome would change.",
+  "The forbidden cases are counted, and the design shows they can be met: a dry run plants each forbidden case or fault and finds it counted, and plants passing cases that must not be. For field tests: synthetic data with known answers, the power at each rule computed exactly or by simulation, and the inputs' layout checked against every rule's minimum before freezing (README l.56).",
+  "Measures, thresholds, units, the void/unresolved/not-testable clauses, the stopping rule and the sample sizes or seeds are all fixed in the text and in code. The power is stated (false contradiction and detection at named noise levels). The law's own quantifier is used (README). No verdict rests on a difference the data cannot resolve. Exploration and controls are measured apart.",
+  "Who decides is stated. Where systems are tested, deciding pins come from families that neither wrote nor read the theory (PINS.json rule: Anthropic, OpenAI, DeepSeek and xAI are the theory's own families and are reported apart, never deciding alone). Every response must name its pinned model. Where the verdict is computed by frozen code on data, say so. Where coding by readers is needed (T7's 'a coding fixed in advance'), name a coder family that neither wrote nor read the theory, and the coding rule, before the cases are read.",
+  "Data: name the source, licence, version, files and bytes. List exactly what was read before the freeze and what was not (no value of the series). Disclose any development runs or values seen, and use plan seeds or held-out data that no one has seen (FREEZE-11 §7).",
+  "The reading refuses a run it was not frozen for: it refuses unless FROZEN.sha256 lists the required files, each at its bytes and committed unchanged, with FROZEN.sha256 committed once. It also refuses where a readout already exists, under `python3 -O`, where the platform differs if floats are compared exactly, and where a run is incomplete or enlarged. The dry run exercises each refusal.",
+  "An expectation section, marked as an AI expectation and not the account's prediction, written before the run, with 'Whatever the run shows is kept, and this paragraph is not revised after it.'",
+  "A 'What changed from the design, and what was chosen' section, and a usage section, 'what Ren's yes releases': calls, money per pin, CPU time, download source and size, spend guard, smoke run first, logs kept whatever they show.",
+  "Reader rounds before the freeze: a reader other than the author does a full read, then the same reader reads each diff. At most five rounds, stopping at the first with no high or medium finding. The reader gets the files, not the author's conclusions, works read-only and may run small checks in scratch. REVIEW-FREEZE.md records, per round, what was read and run, each finding with its severity and how it was taken, and what kept the rounds going. The provenance section of the design says the same.",
+  "Freezing sequence: commit the design, code and dry-run result. Run the dry run and the write_frozen.py (or check) on the merged tree. Render on the merged tree (records' next steps and history notes, source index, generated manifest). Pass `make gate`. Commit FROZEN.sha256 once, last of the content. The design text is frozen by that commit and is not hashed, so links can be repaired.",
+  "Landing: a board Queue clause. The home record's next_delta and a dated history line naming the FREEZE file and 'not run', or a '*Frozen test*' line in the home section in 02's form (date frozen, commit, link). The board row is marked done with the freeze commit, and the row moves to the history file. The Decisions line ('Runs that wait on Ren's yes') states exactly what his yes releases. Add a lesson to experiments/README's freeze list if the reading found a new kind of fault.",
+  "Later edits only for a link, a typo or a false statement to a reader, each as a dated note changing no rule, size or reading. A fault found later is fixed by an addendum (FROZEN-k.sha256) or by a new freeze, never by recommitting FROZEN.sha256.",
+  "Nothing here runs a model, downloads or spends before Ren's yes. Freezing itself waits on no one."
+ ],
+ "open_questions": [
+  "Who decides a verdict that frozen code computes on field data? In the RF freezes the 'family that neither wrote nor read the theory' means the deciding model pins, the systems under test. The freeze readers were Claude Opus subagents of the theory's own family (FREEZE-1 l.388: 'It is of the theory's own family, as is every reader the session can call'). So the computed task's phrase 'a family of readers that neither wrote nor read the theory, as the RF freezes do' misdescribes them. Stage A freezes (FREEZE-11) have no deciding family at all ('reported, no verdict'). For T1N, whose row says 'no model call', it is open what 'the verdict decided by a family that neither wrote nor read the theory' can mean: perhaps a coder or reader of the archive from another family on Ren's yes, perhaps verdicts computed by frozen code, with 'decides' naming only that no theory-family judgment enters. The design must state which.",
+  "The five-round reader rule ('a full read, then the same reader on each diff, at most five rounds, stopping at the first with no finding of high or medium severity') is written only in board rows and freeze texts ('as the coordinator set them'), not in AGENTS.md, RESULT-WORKFLOW or experiments/README. Earlier freezes ran six (FREEZE-1) and eight (FREEZE-7) rounds before the rule. Should it be lifted into a written home?",
+  "FROZEN.sha256 versus freeze-by-commit: UE31 (the field precedent T1N names) froze by commit with no manifest, so the gate's frozen check cannot see it. T1N's row asks for FROZEN.sha256 last. New field designs should use the manifest.",
+  "Home line form: 02 has one '*Frozen test*' line (T7/LA2, l.436). RF's freezes landed through record next_delta/history lines instead. Which form a new atlas-driven design uses depends on whether its home is a thesis paragraph (T1, T7) or a record.",
+  "Is CPU time for a Stage-A-style run Ren's? AGENTS.md l.42 says 'money or machine time for runs', and FREEZE-11 §9 treats 194 s of one core as released by his yes. AA PLAN l.379 says only 'any run with model calls or downloads is'. The stricter reading (AGENTS) governs."
+ ],
+ "read": "Read in full: experiments/formations-that-read/FREEZE-11.md (113 lines); FREEZE-10.md (272 lines); told-tr1a/FROZEN.sha256; told-tr1a/write_frozen.py (49 lines); train-tr2a/FROZEN.sha256; train-tr2a/REVIEW-FREEZE.md (21 lines); told-tr1a/REVIEW-FREEZE.md (74 lines, read as lines 1-30 and 40-74); board rows RF (l.50), TR1A (l.57), T1N (l.58); RFZ history row (history file l.822); experiments/README.md l.44-59; AA PLAN.md §7 (l.377-389); tools/research/gate.py l.84-92 and l.660-883 (manifests, entries_of, pins, link_only, frozen_check); 02-MAP.md l.276-282, l.434-437. Read in part: FREEZE-1.md l.1-80, l.135-175, l.380-392, plus grep hits l.123, 339, 368, 374, 394-415; told/PINS.json, its top-level keys and 'rule'; DESIGN.md of formations-that-read, grep hits on families only; train-tr2a/tr2a.py, grep for its frozen_check and platform lines only (l.3, 34-38, 53-56, 295-331); review-packet FREEZE-STEPS.md l.1-40 (it covers the edition freeze of the review packet, not test freezes; a grep for FROZEN.sha256 and test designs found nothing); experiments/state-named-in-advance/DESIGN.md l.1-12, l.419-440, l.518-524, l.565-580; the board Decisions line l.101 (first ~3,000 characters) and its TR2A clause; git diff of commit 180af7c7e for one record; git log/--stat of the TR1A/TR2A landing commits; AGENTS.md lines 17 and 42 (by grep). Searched only, not read: FREEZE-2 to FREEZE-9 (only grep hits named above); FREEZE-STEPS beyond l.40; _process/RESULT-WORKFLOW.md (grep for freeze: only l.151, l.163, neither about test freezes); chapters for 'Frozen test' and 'FREEZE-' (one hit, 02 l.436); the repo for 'at most five' (hits only in board rows and freeze texts). Checked that no T1N design file exists: experiments/need-measured-in-advance/ is absent on main and in the t1n worktree (/Users/ren/tmp/t1n/wt, clean, branch at 592055816). Nothing was edited or run beyond git, grep, sed, ls and one python3 -c that printed PINS.json keys.",
+ "lean": []
+}

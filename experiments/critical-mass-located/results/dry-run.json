@@ -1,0 +1,1372 @@
+{
+ "about": "CMT dry run (DESIGN.md section 9): no data read; every check through cmt_rule.py.",
+ "code sha256": {
+  "cmt_rule.py": "cf2eefb51cc15ef93c3104ddc8ad93c0e3865deac2d1bb7d69246744bf4aa297",
+  "cmt_dry_run.py": "4b1133bcbd6781dfb41e7424cf63a98db274c96fdf349aef3d1949618eec03a1",
+  "studies.json": "0d0c6db42d78c74a468b270abe1cc5c8b5635c5ea74e8ffdaa061641df7a9a32",
+  "write_frozen.py": "768b6ee880af7d90c0f632ae9b9055e9b378e5387d3ea57fb57400cb31ed5ae6"
+ },
+ "rule": {
+  "margin": "0",
+  "alpha": "1/40",
+  "n_min": 6,
+  "n_min is the fewest groups reaching alpha": true
+ },
+ "the location is the Lean model's": {
+  "favours exactly where the share is at least f* (drawn_favours_iff, critical_iff), a and p moving nothing": true,
+  "strictly exactly where above f*": true,
+  "the regimes are critical_mass_iff, favours_everywhere_iff and disfavours_strictly_everywhere_iff": true,
+  "no round with one kind absent is classified": true,
+  "cases enumerated": 32256
+ },
+ "planted tables": {
+  "moving away from f* on both sides: parted from one half": true,
+  "the outer starts followed, the inner ones still: both sides, not parted": true,
+  "falling at inner starts above f*: contradicted, the above inner bin against": true,
+  "rising at inner starts below f*: contradicted, the below inner bin against": true,
+  "falling at outer starts above f* only: not contradicted, one side, the outer bin against reported": true,
+  "a majority rule (the mass at one half): contradicted through both inner bins, no outer bin against": true,
+  "reversion to one half (no revision, exploration persisting): unresolved, not parted, both outer bins against": true,
+  "a shift pair resolved apart in an inner bin at one f*: contradicted, the bins pooled not against": true,
+  "a shift pair apart in an outer bin only (starts near 1 falling, starts near 2/3 rising): reported, not contradicted": true,
+  "a shift pair alike: parted from one half, nothing resolved apart": true,
+  "a scaled pair coded as a shift (24, 0, 6 against 12, 0, 3, both f* 1/4): no shift pair, not contradicted": true,
+  "a shift coded across two studies: no shift pair, not contradicted": true,
+  "the everywhere regimes followed: every regime bin predicted, beside the location void": true,
+  "favoured everywhere, yet falling from inner starts: contradicted": true,
+  "each of the screen's thirteen conditions alone (twelve items and coders who differ): set aside with its reason, void": true,
+  "too few groups (5): void by the layout, before any choice": true,
+  "every share at the mass: unresolved, nothing classified": true,
+  "shares standing still above: unresolved, every group a zero": true,
+  "above followed, below unseen: one side": true,
+  "a start near one half (5 of 11 at f* 1/4): classified, in no bin": true,
+  "a pass from one game's inner bin, the other game with outer starts alone: parted, the other named as not told from one half": true,
+  "a pass beside a game whose own inner starts there are not testable (3 falling): parted, that game named as not told from one half, with its signs": true,
+  "the same pass, 3 falling: g2 listed among the games whose own inner bin is against, in plain words, only where it is": true,
+  "a pass beside a game whose own inner starts there are against (6 falling): parted, that game named as not told from one half, with its signs": true,
+  "the same pass, 6 falling: g2 listed among the games whose own inner bin is against, in plain words, only where it is": true,
+  "a game falling from inner starts above: contradicted, and listed among the games whose own inner bin is against": true,
+  "a pass beside a game favoured everywhere (12, 2, 1) whose 6 inner starts fall, pooled with one rising: parted, the pooled regime bin predicted, the falling game listed among the games whose own inner bin is against": true
+ },
+ "refusals": {
+  "no FROZEN.sha256: refused": true,
+  "the freeze as committed: accepted": true,
+  "a required file not listed: refused": true,
+  "a frozen file changed: refused": true,
+  "FROZEN.sha256 itself uncommitted: refused": true,
+  "FROZEN.sha256 committed twice: refused": true,
+  "a study added to the closed list: refused (enlarged)": true,
+  "a listed study neither cased nor set aside: refused (incomplete)": true,
+  "a listed study set aside with its reason: accepted": true,
+  "a study set aside with no reason: refused": true,
+  "a table in another layout: refused": true,
+  "a count above its group: refused": true,
+  "a coding with keys beyond the form: refused": true,
+  "a game listed twice: refused": true,
+  "a group listed twice in a game: refused": true,
+  "a group larger than the coded group size: refused": true,
+  "a group with more rounds than the coded rounds: refused": true,
+  "the codings as committed: accepted": true,
+  "a cased coding edited after the codings were committed: refused": true,
+  "a coded game dropped from the cases, its study cased: refused": true,
+  "a game coded twice: refused": true,
+  "coded games of a study set aside whole: accepted": true,
+  "the cases as laid out: accepted": true,
+  "the reader's plant: a contradicted table's six inner groups dropped gives parted from one half": true,
+  "groups dropped from the cases after the layout: refused": true,
+  "a group's rounds changed after the layout: refused": true,
+  "a game removed and its study set aside after the layout: refused": true,
+  "a set-aside's reason changed after the layout: refused": true,
+  "a layout in another layout: refused": true,
+  "a layout carrying choices in a group, at the run: refused": true,
+  "a layout carrying choices in a game, at the run: refused": true,
+  "a layout carrying choices in a set-aside, at the run: refused": true,
+  "a layout carrying choices in the layout, at the run: refused": true,
+  "a run with the freeze, then the search, codings, layout and cases each committed once: parted from one half, the freeze an ancestor of the search": true,
+  "a readout already there: refused": true,
+  "no cases: refused": true,
+  "the cases uncommitted: refused": true,
+  "no codings at the run: refused": true,
+  "no layout at the run: refused": true,
+  "the data committed before the freeze: refused": true,
+  "the freeze committed with the search: refused": true,
+  "a layout carrying choices, committed in order: refused by the run": true,
+  "the search, codings, layout and cases committed once each, in order: the hits on the closed list": true,
+  "no search: refused": true,
+  "the search uncommitted: refused": true,
+  "the search committed with the codings, layout and cases: refused": true,
+  "the search committed after the cases: refused": true,
+  "a hit removed from the search after the cases were committed: refused": true,
+  "no codings: refused": true,
+  "the codings committed with the layout and cases: refused": true,
+  "the codings committed after the cases: refused": true,
+  "the codings committed twice: refused": true,
+  "no layout: refused": true,
+  "the layout committed with the cases: refused": true,
+  "the layout committed after the cases: refused": true,
+  "the layout committed twice: refused": true,
+  "the cases committed twice: refused": true,
+  "python3 -O: refused": true,
+  "the fixed outward rival refused where SS = SH or f* lies outside 0.10 to 0.90, allowed at f* 1/4 and 3/4": true,
+  "the power at a layout (an SS = SH game and an everywhere game admitted): the admitted games simulated, the outward rival placed by f*, written beside, deciding nothing": true,
+  "a layout carrying choices: refused": true,
+  "the required paths are the folder's, from the repository's root": true
+ },
+ "simulation": {
+  "groups": "12 members, 10 rounds, random pairs; two games, SS 12, SH 0 and C 3 (f* 1/4) or C 9 (f* 3/4); each group starting at a share drawn uniformly in 0.05 to 0.95; each member revising with the cell's chance a round; the noise a tremble of play, exploration persisting into the held action, or logit response at the cell's level (simulate_group)",
+  "seeds": "20261105 + 1000 * the cell index, one random.Random per cell",
+  "cells": [
+   {
+    "population": "bridge",
+    "noise": "tremble",
+    "level": "0",
+    "revise": "1/2",
+    "groups per game": 12,
+    "margin": "0",
+    "replications": 100,
+    "verdicts": {
+     "both sides": 24,
+     "one side": 54,
+     "unresolved": 22
+    },
+    "both outer bins against": 0,
+    "bins against": {}
+   },
+   {
+    "population": "bridge",
+    "noise": "tremble",
+    "level": "0",
+    "revise": "1/2",
+    "groups per game": 24,
+    "margin": "0",
+    "replications": 100,
+    "verdicts": {
+     "both sides": 79,
+     "one side": 15,
+     "parted from one half": 6
+    },
+    "both outer bins against": 0,
+    "bins against": {}
+   },
+   {
+    "population": "bridge",
+    "noise": "tremble",
+    "level": "0",
+    "revise": "1/2",
+    "groups per game": 48,
+    "margin": "0",
+    "replications": 100,
+    "verdicts": {
+     "both sides": 74,
+     "parted from one half": 26
+    },
+    "both outer bins against": 0,
+    "bins against": {}
+   },
+   {
+    "population": "bridge",
+    "noise": "tremble",
+    "level": "0.05",
+    "revise": "1/2",
+    "groups per game": 12,
+    "margin": "0",
+    "replications": 100,
+    "verdicts": {
+     "both sides": 11,
+     "one side": 49,
+     "unresolved": 40
+    },
+    "both outer bins against": 0,
+    "bins against": {}
+   },
+   {
+    "population": "bridge",
+    "noise": "tremble",
+    "level": "0.05",
+    "revise": "1/2",
+    "groups per game": 24,
+    "margin": "0",
+    "replications": 100,
+    "verdicts": {
+     "both sides": 60,
+     "one side": 34,
+     "parted from one half": 2,
+     "unresolved": 4
+    },
+    "both outer bins against": 0,
+    "bins against": {}
+   },
+   {
+    "population": "bridge",
+    "noise": "tremble",
+    "level": "0.05",
+    "revise": "1/2",
+    "groups per game": 48,
+    "margin": "0",
+    "replications": 100,
+    "verdicts": {
+     "both sides": 68,
+     "one side": 4,
+     "parted from one half": 28
+    },
+    "both outer bins against": 0,
+    "bins against": {}
+   },
+   {
+    "population": "bridge",
+    "noise": "tremble",
+    "level": "0.1",
+    "revise": "1/2",
+    "groups per game": 12,
+    "margin": "0",
+    "replications": 100,
+    "verdicts": {
+     "both sides": 4,
+     "one side": 41,
+     "unresolved": 55
+    },
+    "both outer bins against": 0,
+    "bins against": {}
+   },
+   {
+    "population": "bridge",
+    "noise": "tremble",
+    "level": "0.1",
+    "revise": "1/2",
+    "groups per game": 24,
+    "margin": "0",
+    "replications": 100,
+    "verdicts": {
+     "both sides": 34,
+     "one side": 49,
+     "parted from one half": 2,
+     "unresolved": 15
+    },
+    "both outer bins against": 0,
+    "bins against": {}
+   },
+   {
+    "population": "bridge",
+    "noise": "tremble",
+    "level": "0.1",
+    "revise": "1/2",
+    "groups per game": 48,
+    "margin": "0",
+    "replications": 100,
+    "verdicts": {
+     "both sides": 56,
+     "one side": 13,
+     "parted from one half": 31
+    },
+    "both outer bins against": 0,
+    "bins against": {}
+   },
+   {
+    "population": "bridge",
+    "noise": "tremble",
+    "level": "0.2",
+    "revise": "1/2",
+    "groups per game": 12,
+    "margin": "0",
+    "replications": 100,
+    "verdicts": {
+     "one side": 26,
+     "unresolved": 74
+    },
+    "both outer bins against": 0,
+    "bins against": {}
+   },
+   {
+    "population": "bridge",
+    "noise": "tremble",
+    "level": "0.2",
+    "revise": "1/2",
+    "groups per game": 24,
+    "margin": "0",
+    "replications": 100,
+    "verdicts": {
+     "both sides": 10,
+     "contradicted": 1,
+     "one side": 52,
+     "unresolved": 37
+    },
+    "both outer bins against": 0,
+    "bins against": {
+     "above, inner": 1
+    }
+   },
+   {
+    "population": "bridge",
+    "noise": "tremble",
+    "level": "0.2",
+    "revise": "1/2",
+    "groups per game": 48,
+    "margin": "0",
+    "replications": 100,
+    "verdicts": {
+     "both sides": 40,
+     "one side": 40,
+     "parted from one half": 15,
+     "unresolved": 5
+    },
+    "both outer bins against": 0,
+    "bins against": {}
+   },
+   {
+    "population": "bridge",
+    "noise": "tremble",
+    "level": "0.1",
+    "revise": "1/2",
+    "groups per game": 24,
+    "margin": "1/20",
+    "replications": 100,
+    "verdicts": {
+     "both sides": 42,
+     "one side": 45,
+     "unresolved": 13
+    },
+    "both outer bins against": 0,
+    "bins against": {}
+   },
+   {
+    "population": "majority",
+    "noise": "tremble",
+    "level": "0.05",
+    "revise": "1/2",
+    "groups per game": 24,
+    "margin": "0",
+    "replications": 100,
+    "verdicts": {
+     "both sides": 12,
+     "contradicted": 8,
+     "one side": 52,
+     "unresolved": 28
+    },
+    "both outer bins against": 0,
+    "bins against": {
+     "above, inner": 5,
+     "below, inner": 3
+    }
+   },
+   {
+    "population": "majority",
+    "noise": "tremble",
+    "level": "0.05",
+    "revise": "1/2",
+    "groups per game": 48,
+    "margin": "0",
+    "replications": 100,
+    "verdicts": {
+     "both sides": 35,
+     "contradicted": 34,
+     "one side": 28,
+     "unresolved": 3
+    },
+    "both outer bins against": 0,
+    "bins against": {
+     "above, inner": 26,
+     "below, inner": 11
+    }
+   },
+   {
+    "population": "mass at 0.9",
+    "noise": "tremble",
+    "level": "0.05",
+    "revise": "1/2",
+    "groups per game": 6,
+    "margin": "0",
+    "replications": 100,
+    "verdicts": {
+     "one side": 8,
+     "unresolved": 92
+    },
+    "both outer bins against": 0,
+    "bins against": {
+     "above, outer": 1
+    }
+   },
+   {
+    "population": "mass at 0.9",
+    "noise": "tremble",
+    "level": "0.05",
+    "revise": "1/2",
+    "groups per game": 12,
+    "margin": "0",
+    "replications": 100,
+    "verdicts": {
+     "contradicted": 3,
+     "one side": 58,
+     "unresolved": 39
+    },
+    "both outer bins against": 0,
+    "bins against": {
+     "above, inner": 3,
+     "above, outer": 24
+    }
+   },
+   {
+    "population": "still",
+    "noise": "tremble",
+    "level": "0.05",
+    "revise": "1/2",
+    "groups per game": 48,
+    "margin": "0",
+    "replications": 100,
+    "verdicts": {
+     "one side": 4,
+     "unresolved": 96
+    },
+    "both outer bins against": 0,
+    "bins against": {
+     "above, outer": 4
+    }
+   },
+   {
+    "population": "still",
+    "noise": "tremble",
+    "level": "0.2",
+    "revise": "1/2",
+    "groups per game": 48,
+    "margin": "0",
+    "replications": 100,
+    "verdicts": {
+     "one side": 6,
+     "unresolved": 94
+    },
+    "both outer bins against": 0,
+    "bins against": {
+     "above, outer": 2,
+     "below, outer": 2
+    }
+   },
+   {
+    "population": "bridge",
+    "noise": "persist",
+    "level": "0.05",
+    "revise": "1/2",
+    "groups per game": 48,
+    "margin": "0",
+    "replications": 100,
+    "verdicts": {
+     "both sides": 15,
+     "one side": 54,
+     "parted from one half": 12,
+     "unresolved": 19
+    },
+    "both outer bins against": 0,
+    "bins against": {}
+   },
+   {
+    "population": "bridge",
+    "noise": "persist",
+    "level": "0.1",
+    "revise": "1/2",
+    "groups per game": 48,
+    "margin": "0",
+    "replications": 100,
+    "verdicts": {
+     "one side": 8,
+     "parted from one half": 1,
+     "unresolved": 91
+    },
+    "both outer bins against": 0,
+    "bins against": {}
+   },
+   {
+    "population": "bridge",
+    "noise": "persist",
+    "level": "0.2",
+    "revise": "1/2",
+    "groups per game": 48,
+    "margin": "0",
+    "replications": 100,
+    "verdicts": {
+     "one side": 1,
+     "unresolved": 99
+    },
+    "both outer bins against": 3,
+    "bins against": {
+     "above, outer": 24,
+     "below, outer": 12
+    }
+   },
+   {
+    "population": "bridge",
+    "noise": "persist",
+    "level": "0.15",
+    "revise": "1/4",
+    "groups per game": 48,
+    "margin": "0",
+    "replications": 100,
+    "verdicts": {
+     "unresolved": 100
+    },
+    "both outer bins against": 18,
+    "bins against": {
+     "above, outer": 46,
+     "below, outer": 36
+    }
+   },
+   {
+    "population": "bridge",
+    "noise": "persist",
+    "level": "0.2",
+    "revise": "1/4",
+    "groups per game": 48,
+    "margin": "0",
+    "replications": 100,
+    "verdicts": {
+     "unresolved": 100
+    },
+    "both outer bins against": 27,
+    "bins against": {
+     "above, outer": 55,
+     "below, outer": 52
+    }
+   },
+   {
+    "population": "bridge",
+    "noise": "persist",
+    "level": "0.1",
+    "revise": "1/2",
+    "groups per game": 24,
+    "margin": "0",
+    "replications": 100,
+    "verdicts": {
+     "one side": 6,
+     "unresolved": 94
+    },
+    "both outer bins against": 0,
+    "bins against": {
+     "above, outer": 1,
+     "below, outer": 1
+    }
+   },
+   {
+    "population": "bridge",
+    "noise": "logit",
+    "level": "0.5",
+    "revise": "1/2",
+    "groups per game": 48,
+    "margin": "0",
+    "replications": 100,
+    "verdicts": {
+     "one side": 39,
+     "parted from one half": 36,
+     "unresolved": 25
+    },
+    "both outer bins against": 0,
+    "bins against": {}
+   },
+   {
+    "population": "bridge",
+    "noise": "logit",
+    "level": "0.25",
+    "revise": "1/2",
+    "groups per game": 48,
+    "margin": "0",
+    "replications": 100,
+    "verdicts": {
+     "one side": 5,
+     "unresolved": 95
+    },
+    "both outer bins against": 0,
+    "bins against": {}
+   },
+   {
+    "population": "still",
+    "noise": "persist",
+    "level": "0.2",
+    "revise": "1/2",
+    "groups per game": 48,
+    "margin": "0",
+    "replications": 100,
+    "verdicts": {
+     "unresolved": 100
+    },
+    "both outer bins against": 84,
+    "bins against": {
+     "above, outer": 91,
+     "below, outer": 92
+    }
+   },
+   {
+    "population": "majority",
+    "noise": "persist",
+    "level": "0.1",
+    "revise": "1/2",
+    "groups per game": 48,
+    "margin": "0",
+    "replications": 100,
+    "verdicts": {
+     "contradicted": 1,
+     "unresolved": 99
+    },
+    "both outer bins against": 3,
+    "bins against": {
+     "above, outer": 32,
+     "below, inner": 1,
+     "below, outer": 7
+    }
+   },
+   {
+    "population": "mass at 0.9",
+    "noise": "persist",
+    "level": "0.1",
+    "revise": "1/2",
+    "groups per game": 12,
+    "margin": "0",
+    "replications": 100,
+    "verdicts": {
+     "contradicted": 2,
+     "one side": 11,
+     "unresolved": 87
+    },
+    "both outer bins against": 0,
+    "bins against": {
+     "above, inner": 2,
+     "above, outer": 69
+    }
+   },
+   {
+    "population": "mass at 0.9",
+    "noise": "tremble",
+    "level": "0.05",
+    "revise": "1/2",
+    "groups per game": 48,
+    "margin": "0",
+    "replications": 100,
+    "verdicts": {
+     "contradicted": 84,
+     "one side": 16
+    },
+    "both outer bins against": 0,
+    "bins against": {
+     "above, inner": 84,
+     "above, outer": 96
+    }
+   },
+   {
+    "population": "mass at 0.9",
+    "noise": "persist",
+    "level": "0.1",
+    "revise": "1/2",
+    "groups per game": 48,
+    "margin": "0",
+    "replications": 100,
+    "verdicts": {
+     "contradicted": 52,
+     "one side": 32,
+     "unresolved": 16
+    },
+    "both outer bins against": 0,
+    "bins against": {
+     "above, inner": 52,
+     "above, outer": 100
+    }
+   },
+   {
+    "population": "mass at 0.10 and 0.90",
+    "noise": "tremble",
+    "level": "0.05",
+    "revise": "1/2",
+    "groups per game": 24,
+    "margin": "0",
+    "replications": 100,
+    "verdicts": {
+     "both sides": 53,
+     "one side": 32,
+     "parted from one half": 9,
+     "unresolved": 6
+    },
+    "both outer bins against": 0,
+    "bins against": {}
+   },
+   {
+    "population": "mass at 0.10 and 0.90",
+    "noise": "tremble",
+    "level": "0.05",
+    "revise": "1/2",
+    "groups per game": 48,
+    "margin": "0",
+    "replications": 100,
+    "verdicts": {
+     "both sides": 13,
+     "one side": 4,
+     "parted from one half": 83
+    },
+    "both outer bins against": 0,
+    "bins against": {}
+   },
+   {
+    "population": "mass at 0.10 and 0.90",
+    "noise": "tremble",
+    "level": "0.1",
+    "revise": "1/2",
+    "groups per game": 48,
+    "margin": "0",
+    "replications": 100,
+    "verdicts": {
+     "both sides": 15,
+     "one side": 13,
+     "parted from one half": 72
+    },
+    "both outer bins against": 0,
+    "bins against": {}
+   },
+   {
+    "population": "mass at 0.10 and 0.90",
+    "noise": "persist",
+    "level": "0.1",
+    "revise": "1/2",
+    "groups per game": 48,
+    "margin": "0",
+    "replications": 100,
+    "verdicts": {
+     "one side": 26,
+     "parted from one half": 3,
+     "unresolved": 71
+    },
+    "both outer bins against": 0,
+    "bins against": {}
+   },
+   {
+    "population": "mass at 0.15 and 0.85",
+    "noise": "tremble",
+    "level": "0.05",
+    "revise": "1/2",
+    "groups per game": 48,
+    "margin": "0",
+    "replications": 100,
+    "verdicts": {
+     "both sides": 29,
+     "one side": 1,
+     "parted from one half": 70
+    },
+    "both outer bins against": 0,
+    "bins against": {}
+   },
+   {
+    "population": "mass at 0.15 and 0.85",
+    "noise": "tremble",
+    "level": "0.1",
+    "revise": "1/2",
+    "groups per game": 48,
+    "margin": "0",
+    "replications": 100,
+    "verdicts": {
+     "both sides": 20,
+     "one side": 10,
+     "parted from one half": 70
+    },
+    "both outer bins against": 0,
+    "bins against": {}
+   },
+   {
+    "population": "mass at 0.05 and 0.95",
+    "noise": "tremble",
+    "level": "0.05",
+    "revise": "1/2",
+    "groups per game": 48,
+    "margin": "0",
+    "replications": 100,
+    "verdicts": {
+     "both sides": 10,
+     "one side": 9,
+     "parted from one half": 81
+    },
+    "both outer bins against": 0,
+    "bins against": {}
+   },
+   {
+    "population": "mass at 0.05 and 0.95",
+    "noise": "tremble",
+    "level": "0.1",
+    "revise": "1/2",
+    "groups per game": 48,
+    "margin": "0",
+    "replications": 100,
+    "verdicts": {
+     "both sides": 8,
+     "one side": 16,
+     "parted from one half": 76
+    },
+    "both outer bins against": 0,
+    "bins against": {}
+   }
+  ],
+  "shift pairs": [
+   {
+    "population": "bridge",
+    "shifted game": "bridge",
+    "noise": "tremble",
+    "level": "0.1",
+    "revise": "1/2",
+    "groups per game": 48,
+    "starts": [
+     "0.88 to 0.97",
+     "0.55 to 0.75"
+    ],
+    "replications": 100,
+    "verdicts": {
+     "one side": 100
+    },
+    "an inner bin testable in both games": 0,
+    "pair resolved apart in an inner bin (counted)": 0,
+    "pair resolved apart in an outer bin (reported, not counted)": 0,
+    "pooled bins against": {}
+   },
+   {
+    "population": "bridge",
+    "shifted game": "bridge",
+    "noise": "persist",
+    "level": "0.1",
+    "revise": "1/2",
+    "groups per game": 48,
+    "starts": [
+     "0.88 to 0.97",
+     "0.55 to 0.75"
+    ],
+    "replications": 100,
+    "verdicts": {
+     "one side": 19,
+     "unresolved": 81
+    },
+    "an inner bin testable in both games": 0,
+    "pair resolved apart in an inner bin (counted)": 0,
+    "pair resolved apart in an outer bin (reported, not counted)": 2,
+    "pooled bins against": {}
+   },
+   {
+    "population": "bridge",
+    "shifted game": "bridge",
+    "noise": "persist",
+    "level": "0.15",
+    "revise": "1/2",
+    "groups per game": 48,
+    "starts": [
+     "0.88 to 0.97",
+     "0.55 to 0.75"
+    ],
+    "replications": 100,
+    "verdicts": {
+     "unresolved": 100
+    },
+    "an inner bin testable in both games": 0,
+    "pair resolved apart in an inner bin (counted)": 0,
+    "pair resolved apart in an outer bin (reported, not counted)": 5,
+    "pooled bins against": {
+     "above, outer": 8
+    }
+   },
+   {
+    "population": "bridge",
+    "shifted game": "bridge",
+    "noise": "logit",
+    "level": "0.2",
+    "revise": "1/2",
+    "groups per game": 48,
+    "starts": [
+     "0.88 to 0.97",
+     "0.55 to 0.75"
+    ],
+    "replications": 100,
+    "verdicts": {
+     "one side": 4,
+     "unresolved": 96
+    },
+    "an inner bin testable in both games": 0,
+    "pair resolved apart in an inner bin (counted)": 0,
+    "pair resolved apart in an outer bin (reported, not counted)": 13,
+    "pooled bins against": {}
+   },
+   {
+    "population": "bridge",
+    "shifted game": "bridge",
+    "noise": "logit",
+    "level": "0.25",
+    "revise": "1/2",
+    "groups per game": 48,
+    "starts": [
+     "0.88 to 0.97",
+     "0.55 to 0.75"
+    ],
+    "replications": 100,
+    "verdicts": {
+     "one side": 69,
+     "unresolved": 31
+    },
+    "an inner bin testable in both games": 0,
+    "pair resolved apart in an inner bin (counted)": 0,
+    "pair resolved apart in an outer bin (reported, not counted)": 1,
+    "pooled bins against": {}
+   },
+   {
+    "population": "bridge",
+    "shifted game": "bridge",
+    "noise": "persist",
+    "level": "0.15",
+    "revise": "1/2",
+    "groups per game": 48,
+    "starts": [
+     "0.05 to 0.95",
+     "0.05 to 0.95"
+    ],
+    "replications": 100,
+    "verdicts": {
+     "one side": 8,
+     "unresolved": 92
+    },
+    "an inner bin testable in both games": 75,
+    "pair resolved apart in an inner bin (counted)": 0,
+    "pair resolved apart in an outer bin (reported, not counted)": 0,
+    "pooled bins against": {
+     "below, outer": 81
+    }
+   },
+   {
+    "population": "bridge",
+    "shifted game": "bridge",
+    "noise": "logit",
+    "level": "0.25",
+    "revise": "1/2",
+    "groups per game": 48,
+    "starts": [
+     "0.05 to 0.95",
+     "0.05 to 0.95"
+    ],
+    "replications": 100,
+    "verdicts": {
+     "one side": 81,
+     "unresolved": 19
+    },
+    "an inner bin testable in both games": 70,
+    "pair resolved apart in an inner bin (counted)": 0,
+    "pair resolved apart in an outer bin (reported, not counted)": 0,
+    "pooled bins against": {
+     "below, outer": 100
+    }
+   },
+   {
+    "population": "bridge",
+    "shifted game": "mass at 0.9",
+    "noise": "tremble",
+    "level": "0.05",
+    "revise": "1/2",
+    "groups per game": 48,
+    "starts": [
+     "0.05 to 0.95",
+     "0.05 to 0.95"
+    ],
+    "replications": 100,
+    "verdicts": {
+     "contradicted": 28,
+     "one side": 34,
+     "unresolved": 38
+    },
+    "an inner bin testable in both games": 75,
+    "pair resolved apart in an inner bin (counted)": 3,
+    "pair resolved apart in an outer bin (reported, not counted)": 96,
+    "pooled bins against": {
+     "above, inner": 25
+    }
+   },
+   {
+    "population": "bridge",
+    "shifted game": "bridge",
+    "noise": "tremble",
+    "level": "0.1",
+    "revise": "1/2",
+    "groups per game": 48,
+    "starts": [
+     "0.27 to 0.35",
+     "0.36 to 0.48"
+    ],
+    "replications": 100,
+    "verdicts": {
+     "both sides": 3,
+     "one side": 93,
+     "parted from one half": 3,
+     "unresolved": 1
+    },
+    "an inner bin testable in both games": 100,
+    "pair resolved apart in an inner bin (counted)": 0,
+    "pair resolved apart in an outer bin (reported, not counted)": 0,
+    "pooled bins against": {}
+   },
+   {
+    "population": "bridge",
+    "shifted game": "bridge",
+    "noise": "persist",
+    "level": "0.1",
+    "revise": "1/2",
+    "groups per game": 48,
+    "starts": [
+     "0.27 to 0.35",
+     "0.36 to 0.48"
+    ],
+    "replications": 100,
+    "verdicts": {
+     "one side": 73,
+     "unresolved": 27
+    },
+    "an inner bin testable in both games": 100,
+    "pair resolved apart in an inner bin (counted)": 0,
+    "pair resolved apart in an outer bin (reported, not counted)": 0,
+    "pooled bins against": {
+     "below, outer": 51
+    }
+   },
+   {
+    "population": "bridge",
+    "shifted game": "bridge",
+    "noise": "persist",
+    "level": "0.15",
+    "revise": "1/2",
+    "groups per game": 48,
+    "starts": [
+     "0.27 to 0.35",
+     "0.36 to 0.48"
+    ],
+    "replications": 100,
+    "verdicts": {
+     "one side": 29,
+     "unresolved": 71
+    },
+    "an inner bin testable in both games": 100,
+    "pair resolved apart in an inner bin (counted)": 0,
+    "pair resolved apart in an outer bin (reported, not counted)": 0,
+    "pooled bins against": {
+     "below, outer": 66
+    }
+   },
+   {
+    "population": "bridge",
+    "shifted game": "bridge",
+    "noise": "logit",
+    "level": "0.2",
+    "revise": "1/2",
+    "groups per game": 48,
+    "starts": [
+     "0.27 to 0.35",
+     "0.36 to 0.48"
+    ],
+    "replications": 100,
+    "verdicts": {
+     "one side": 83,
+     "unresolved": 17
+    },
+    "an inner bin testable in both games": 100,
+    "pair resolved apart in an inner bin (counted)": 0,
+    "pair resolved apart in an outer bin (reported, not counted)": 0,
+    "pooled bins against": {
+     "below, outer": 97
+    }
+   },
+   {
+    "population": "bridge",
+    "shifted game": "bridge",
+    "noise": "logit",
+    "level": "0.25",
+    "revise": "1/2",
+    "groups per game": 48,
+    "starts": [
+     "0.27 to 0.35",
+     "0.36 to 0.48"
+    ],
+    "replications": 100,
+    "verdicts": {
+     "one side": 97,
+     "unresolved": 3
+    },
+    "an inner bin testable in both games": 100,
+    "pair resolved apart in an inner bin (counted)": 0,
+    "pair resolved apart in an outer bin (reported, not counted)": 0,
+    "pooled bins against": {
+     "below, outer": 98
+    }
+   }
+  ],
+  "two games of different f*": [
+   {
+    "population of g1 (f* 1/4)": "bridge",
+    "groups of g1": 48,
+    "population of g2": "majority",
+    "table of g2 (SS, SH, C)": [
+     12,
+     0,
+     9
+    ],
+    "f* of g2": "3/4",
+    "groups of g2": 24,
+    "starts of g2": "0.05 to 0.4",
+    "noise": "tremble",
+    "level": "0.05",
+    "replications": 100,
+    "verdicts": {
+     "both sides": 83,
+     "one side": 11,
+     "parted from one half": 6
+    },
+    "parted, with g2 told from one half": 0,
+    "parted, with g2 named as not told from one half": 6,
+    "parted, g2 not told though it has a start in a pooled inner bin predicted": 0,
+    "parted, by the number of g2's own outer bins predicted (told from reversion on those sides)": {
+     "1": 6
+    },
+    "g2 groups at an inner start, all replications": 81,
+    "replications with a g2 group at an inner start": 58,
+    "replications with an own inner bin of g2 testable": 0
+   },
+   {
+    "population of g1 (f* 1/4)": "bridge",
+    "groups of g1": 48,
+    "population of g2": "majority",
+    "table of g2 (SS, SH, C)": [
+     12,
+     0,
+     9
+    ],
+    "f* of g2": "3/4",
+    "groups of g2": 24,
+    "starts of g2": "0.05 to 0.4",
+    "noise": "tremble",
+    "level": "0.1",
+    "replications": 100,
+    "verdicts": {
+     "both sides": 51,
+     "one side": 43,
+     "parted from one half": 6
+    },
+    "parted, with g2 told from one half": 0,
+    "parted, with g2 named as not told from one half": 6,
+    "parted, g2 not told though it has a start in a pooled inner bin predicted": 0,
+    "parted, by the number of g2's own outer bins predicted (told from reversion on those sides)": {
+     "0": 1,
+     "1": 5
+    },
+    "g2 groups at an inner start, all replications": 85,
+    "replications with a g2 group at an inner start": 57,
+    "replications with an own inner bin of g2 testable": 0
+   },
+   {
+    "population of g1 (f* 1/4)": "bridge",
+    "groups of g1": 48,
+    "population of g2": "bridge",
+    "table of g2 (SS, SH, C)": [
+     12,
+     0,
+     9
+    ],
+    "f* of g2": "3/4",
+    "groups of g2": 24,
+    "starts of g2": "0.05 to 0.4",
+    "noise": "tremble",
+    "level": "0.1",
+    "replications": 100,
+    "verdicts": {
+     "both sides": 72,
+     "one side": 13,
+     "parted from one half": 15
+    },
+    "parted, with g2 told from one half": 0,
+    "parted, with g2 named as not told from one half": 15,
+    "parted, g2 not told though it has a start in a pooled inner bin predicted": 0,
+    "parted, by the number of g2's own outer bins predicted (told from reversion on those sides)": {
+     "1": 15
+    },
+    "g2 groups at an inner start, all replications": 77,
+    "replications with a g2 group at an inner start": 49,
+    "replications with an own inner bin of g2 testable": 0
+   },
+   {
+    "population of g1 (f* 1/4)": "bridge",
+    "groups of g1": 96,
+    "population of g2": "majority",
+    "table of g2 (SS, SH, C)": [
+     12,
+     0,
+     9
+    ],
+    "f* of g2": "3/4",
+    "groups of g2": 24,
+    "starts of g2": "0.05 to 0.4",
+    "noise": "tremble",
+    "level": "0.1",
+    "replications": 100,
+    "verdicts": {
+     "both sides": 49,
+     "one side": 38,
+     "parted from one half": 13
+    },
+    "parted, with g2 told from one half": 0,
+    "parted, with g2 named as not told from one half": 13,
+    "parted, g2 not told though it has a start in a pooled inner bin predicted": 0,
+    "parted, by the number of g2's own outer bins predicted (told from reversion on those sides)": {
+     "0": 3,
+     "1": 10
+    },
+    "g2 groups at an inner start, all replications": 97,
+    "replications with a g2 group at an inner start": 64,
+    "replications with an own inner bin of g2 testable": 0
+   },
+   {
+    "population of g1 (f* 1/4)": "bridge",
+    "groups of g1": 96,
+    "population of g2": "bridge",
+    "table of g2 (SS, SH, C)": [
+     12,
+     0,
+     9
+    ],
+    "f* of g2": "3/4",
+    "groups of g2": 24,
+    "starts of g2": "0.05 to 0.4",
+    "noise": "tremble",
+    "level": "0.1",
+    "replications": 100,
+    "verdicts": {
+     "both sides": 69,
+     "one side": 10,
+     "parted from one half": 21
+    },
+    "parted, with g2 told from one half": 0,
+    "parted, with g2 named as not told from one half": 21,
+    "parted, g2 not told though it has a start in a pooled inner bin predicted": 0,
+    "parted, by the number of g2's own outer bins predicted (told from reversion on those sides)": {
+     "1": 21
+    },
+    "g2 groups at an inner start, all replications": 91,
+    "replications with a g2 group at an inner start": 62,
+    "replications with an own inner bin of g2 testable": 0
+   },
+   {
+    "population of g1 (f* 1/4)": "bridge",
+    "groups of g1": 96,
+    "population of g2": "majority",
+    "table of g2 (SS, SH, C)": [
+     24,
+     0,
+     6
+    ],
+    "f* of g2": "1/4",
+    "groups of g2": 6,
+    "starts of g2": "0.3 to 0.42",
+    "noise": "tremble",
+    "level": "0.1",
+    "replications": 100,
+    "verdicts": {
+     "both sides": 7,
+     "one side": 92,
+     "parted from one half": 1
+    },
+    "parted, with g2 told from one half": 0,
+    "parted, with g2 named as not told from one half": 1,
+    "parted, g2 not told though it has a start in a pooled inner bin predicted": 1,
+    "parted, by the number of g2's own outer bins predicted (told from reversion on those sides)": {
+     "0": 1
+    },
+    "g2 groups at an inner start, all replications": 274,
+    "replications with a g2 group at an inner start": 97,
+    "replications with an own inner bin of g2 testable": 1
+   },
+   {
+    "population of g1 (f* 1/4)": "bridge",
+    "groups of g1": 192,
+    "population of g2": "still",
+    "table of g2 (SS, SH, C)": [
+     12,
+     0,
+     9
+    ],
+    "f* of g2": "3/4",
+    "groups of g2": 12,
+    "starts of g2": "0.05 to 0.95",
+    "noise": "tremble",
+    "level": "0.1",
+    "replications": 100,
+    "verdicts": {
+     "both sides": 4,
+     "one side": 90,
+     "parted from one half": 6
+    },
+    "parted, with g2 told from one half": 0,
+    "parted, with g2 named as not told from one half": 6,
+    "parted, g2 not told though it has a start in a pooled inner bin predicted": 0,
+    "parted, by the number of g2's own outer bins predicted (told from reversion on those sides)": {
+     "0": 6
+    },
+    "g2 groups at an inner start, all replications": 232,
+    "replications with a g2 group at an inner start": 91,
+    "replications with an own inner bin of g2 testable": 0
+   },
+   {
+    "population of g1 (f* 1/4)": "bridge",
+    "groups of g1": 192,
+    "population of g2": "majority",
+    "table of g2 (SS, SH, C)": [
+     24,
+     0,
+     6
+    ],
+    "f* of g2": "1/4",
+    "groups of g2": 6,
+    "starts of g2": "0.3 to 0.42",
+    "noise": "tremble",
+    "level": "0.1",
+    "replications": 100,
+    "verdicts": {
+     "both sides": 8,
+     "one side": 86,
+     "parted from one half": 6
+    },
+    "parted, with g2 told from one half": 0,
+    "parted, with g2 named as not told from one half": 6,
+    "parted, g2 not told though it has a start in a pooled inner bin predicted": 6,
+    "parted, by the number of g2's own outer bins predicted (told from reversion on those sides)": {
+     "0": 6
+    },
+    "g2 groups at an inner start, all replications": 300,
+    "replications with a g2 group at an inner start": 99,
+    "replications with an own inner bin of g2 testable": 0
+   }
+  ],
+  "the next round from the start, reported and not used": [
+   {
+    "population": "bridge",
+    "noise": "tremble",
+    "level": "0.1",
+    "groups per game": 24,
+    "replications": 100,
+    "verdicts": {
+     "one side": 8,
+     "unresolved": 92
+    }
+   },
+   {
+    "population": "mass at 0.9",
+    "noise": "tremble",
+    "level": "0.05",
+    "groups per game": 12,
+    "replications": 100,
+    "verdicts": {
+     "one side": 12,
+     "unresolved": 88
+    }
+   },
+   {
+    "population": "still",
+    "noise": "tremble",
+    "level": "0.2",
+    "groups per game": 48,
+    "replications": 100,
+    "verdicts": {
+     "contradicted": 1,
+     "unresolved": 99
+    }
+   }
+  ]
+ },
+ "checks": 94,
+ "ok": true
+}

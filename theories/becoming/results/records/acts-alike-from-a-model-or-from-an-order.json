@@ -92,8 +92,8 @@
     "zh": "纯核，公理报告皆空：model_or_order 为 observed_alike 之一例，其关系持起点与止处；诸止为 Loop.rests_of_unrefuted 之例。"
   },
   "next_delta": {
-    "en": "The reading formation's learning beyond filtering by what it is shown, and a holding formation planning over several steps (after RF-M.3's carrier); a run of TR1's frozen informing variant (TR1A), whose one verdict is an order across frames; which of a model and an order holds is described, not tested; review by a person.",
-    "zh": "读之形成依所示而滤以外之学，与持之形成多步之谋（RF-M.3 之载体之后）；TR1 之告之变体既冻结而运行之（TR1A），其唯一判定为跨框之一序；模型与序孰成，述而不验；人之审查。"
+    "en": "The reading formation's learning beyond filtering by what it is shown, and a holding formation planning over several steps (after RF-M.3's carrier); runs of TR1's frozen informing variant (TR1A), whose one verdict is an order across frames, and of SCL's frozen test of the lock's exits (FREEZE-12); which of a model and an order holds is described, not tested; review by a person.",
+    "zh": "读之形成依所示而滤以外之学，与持之形成多步之谋（RF-M.3 之载体之后）；TR1 之告之变体既冻结而运行之（TR1A），其唯一判定为跨框之一序，及 SCL 所冻结之锁之出口之验之运行（FREEZE-12）；模型与序孰成，述而不验；人之审查。"
   },
   "correspondence": {
     "en": "One observed course can leave an unresolved model and a reversed ranking indistinguishable: an illustration of the ambiguity between beliefs and preferences in inferring what a formation values from what it does (Armstrong and Mindermann 2018, for planner and reward; Reddy, Dragan and Levine 2018, for beliefs about dynamics). AI reading: a training, an overseer or a helper reading the acts cannot tell a formation held by what its model does not separate from one held by how it ranks; starting the first with the true candidate changes its course and leaves the second's, so whether informing helps depends on which holds, a reason for assistance to read more than acts. With what-choices-show-of-an-order: both rankings accord with the occasion, and the comparison beyond the shown reach is free. These are readings, not containments.",
@@ -225,6 +225,10 @@
     {
       "en": "5 November 2026, board item TR1A: TR1's informing variant frozen before any call to a model (experiments/formations-that-read/FREEZE-10.md), on freeze 1's pins: a two-option game built to this record's witness, uninformed and informed courses of ten rounds, stated choices between the amounts, and a manipulation check; its one verdict RF1's across the frames, read only where the check passes; which of a model and an order holds described, never tested; not run. The law is unchanged; next_delta's step is now the frozen variant's run, which waits on Ren's yes.",
       "zh": "2026年11月5日，看板项 TR1A：TR1 之告之变体于任一模型调用之前冻结（experiments/formations-that-read/FREEZE-10.md），用冻结一所钉之模型：依此记录之见证所造之二选之戏，未告与既告之十轮历程，数额间之陈述之择，与操纵之验；其唯一判定为 RF1 跨诸框者，唯于验通过处读之；模型与序孰成，述而不验；未运行。律不变；next_delta 之步今为冻结变体之运行，待 Ren 之可。"
+    },
+    {
+      "en": "5 November 2026, board item SCL: the self-confirming lock of this record's witness frozen before any call to a model (experiments/formations-that-read/FREEZE-12.md), on FREEZE-10's game and freeze 1's harness and pins, imported by hash: the lock left by an untried act at a fixed round or by a reading from outside, and the controls behind \"nothing else\" (more answers of the same kind, more rounds, rewording, name order); a forked probe of what the formation keeps; verdicts on three bridges (elimination, choice from what is kept, the exits), never on the law; not run. The law is unchanged; next_delta's steps now include the frozen test's run, which waits on Ren's yes.",
+      "zh": "2026年11月5日，看板项 SCL：此记录之见证之自证之锁，于任一模型调用之前冻结（experiments/formations-that-read/FREEZE-12.md），用 FREEZE-10 之戏与冻结一之器与所钉之模型，以哈希引入：锁由定轮之未试之行或外来之读而出，及「无他」所指之对照（同类之答更多、轮更多、改写、名序）；分叉之探问其所持；判定在三桥（消去、依所持而择、出口），不在律；未运行。律不变；next_delta 之步今含此冻结之验之运行，待 Ren 之可。"
     }
   ]
 }

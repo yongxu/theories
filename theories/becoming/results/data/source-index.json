@@ -2262,6 +2262,20 @@
         "tools/research/tests/test_boundary.py"
       ]
     },
+    "experiments/critical-mass-located/DESIGN.md": {
+      "title": "CMT: the critical mass located before the adoption data (design)",
+      "local_links": [
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aa-attractor-atlas/refuters/readers",
+        "experiments/critical-mass-located/cmt_dry_run.py",
+        "experiments/critical-mass-located/cmt_rule.py",
+        "experiments/critical-mass-located/results/dry-run.json",
+        "experiments/critical-mass-located/studies.json",
+        "experiments/critical-mass-located/write_frozen.py",
+        "experiments/formations-that-read/told/PINS.json",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnShaping.lean",
+        "theories/becoming/chapters/02-MAP.md"
+      ]
+    },
     "experiments/drain-beyond-the-reward/DESIGN.md": {
       "title": "LA4: the drain beyond the reward, under training by gradient (design)",
       "local_links": [
@@ -2383,6 +2397,24 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Unread.lean"
       ]
     },
+    "experiments/formations-that-read/FREEZE-12.md": {
+      "title": "The self-confirming lock on agents, frozen",
+      "local_links": [
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aa-attractor-atlas/PLAN.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aa-attractor-atlas/refuters/readers/lock.json",
+        "experiments/formations-that-read/FREEZE-10.md",
+        "experiments/formations-that-read/lock-scl/REVIEW-FREEZE.md",
+        "experiments/formations-that-read/lock-scl/results/dry-run.json",
+        "experiments/formations-that-read/lock-scl/scl_design.py",
+        "experiments/formations-that-read/lock-scl/scl_dry_run.py",
+        "experiments/formations-that-read/lock-scl/scl_rule.py",
+        "experiments/formations-that-read/lock-scl/scl_run.py",
+        "experiments/formations-that-read/lock-scl/scl_stage0.py",
+        "experiments/formations-that-read/lock-scl/write_frozen.py",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingLoop.lean",
+        "theories/becoming/chapters/03-KNOWING.md"
+      ]
+    },
     "experiments/formations-that-read/FREEZE-3.md": {
       "title": "TR3, frozen",
       "local_links": [
@@ -2459,6 +2491,7 @@
         "experiments/README.md",
         "experiments/formations-that-read/DESIGN.md",
         "experiments/formations-that-read/FREEZE-10.md",
+        "experiments/formations-that-read/FREEZE-12.md",
         "experiments/formations-that-read/FREEZE-5.md",
         "experiments/formations-that-read/tr1.json",
         "experiments/formations-that-read/tr1.py",
@@ -4964,6 +4997,26 @@
         "theories/becoming/history/VALUATION-IDENTIFICATION-BOUNDS.md"
       ]
     },
+    "experiments/reform-events/DESIGN.md": {
+      "title": "T7F: T7's field test of reform events (design)",
+      "local_links": [
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/t7c-la2-and-t7/NOTE.md",
+        "experiments/formations-that-read/told/PINS.json",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnReplacement.lean",
+        "experiments/reform-events/CODEBOOK.md",
+        "experiments/reform-events/HOLD.md",
+        "experiments/reform-events/REVIEW-FREEZE.md",
+        "experiments/reform-events/reform_dry_run.py",
+        "experiments/reform-events/reform_rule.py",
+        "experiments/reform-events/results/dry-run.json",
+        "experiments/reform-events/write_frozen.py",
+        "experiments/self-rewarding-lock/README.md",
+        "theories/becoming/chapters/02-MAP.md",
+        "theories/becoming/chapters/07-SIGNIFICANCE.md",
+        "theories/becoming/chapters/08-METHOD.md"
+      ]
+    },
     "experiments/shared-renewal-capability/formal/README.md": {
       "title": "Machine-checked typed renewal and support accounting",
       "local_links": [
@@ -5518,6 +5571,7 @@
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue1-fep-bridge/NOTE.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/GrownFragmentation.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/RenewingFormation.lean",
+        "experiments/reform-events/HOLD.md",
         "experiments/self-rewarding-lock/README.md",
         "experiments/state-against-embedding/T2-PROPOSALS.md",
         "experiments/state-named-in-advance/DESIGN.md",

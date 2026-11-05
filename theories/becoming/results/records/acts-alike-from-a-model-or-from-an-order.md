@@ -44,7 +44,7 @@ Canonical source: [ReadingLoop.lean](../../../../experiments/integrated-correcti
 <a id="next--下一步"></a>
 ## Next
 
-The reading formation's learning beyond filtering by what it is shown, and a holding formation planning over several steps (after RF-M.3's carrier); a run of TR1's frozen informing variant (TR1A), whose one verdict is an order across frames; which of a model and an order holds is described, not tested; review by a person.
+The reading formation's learning beyond filtering by what it is shown, and a holding formation planning over several steps (after RF-M.3's carrier); runs of TR1's frozen informing variant (TR1A), whose one verdict is an order across frames, and of SCL's frozen test of the lock's exits (FREEZE-12); which of a model and an order holds is described, not tested; review by a person.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -85,6 +85,7 @@ Aliases: `not knowing or not wanting`, `不知或不欲`, `a model or an order`,
 - 31 October 2026, board item RF, RF-M.3 (study section 473): related to a-reading-informed-and-revalued, where informing and revaluing are acts within one law; the next step keeps the reading formation's learning beyond filtering by what it is shown; no statement or declaration changed.
 - 31 October 2026, board item RF, the tests' designs (study section 476): the next step names its test as designed, TR1 in experiments/formations-that-read, which can refute at most the correspondence that the strict picks accord with one order across frames, which of a model and an order holds being described only, never the law; no statement or declaration changed. PLAN.md re-pointed: since this record's reviewed hash the plan changed only where the tests' readers found it misstating the Lean (§3, §4, §8, §11, §12) and in §10, the tests; read against this record before re-pointing, nothing it says changed.
 - 5 November 2026, board item TR1A: TR1's informing variant frozen before any call to a model (experiments/formations-that-read/FREEZE-10.md), on freeze 1's pins: a two-option game built to this record's witness, uninformed and informed courses of ten rounds, stated choices between the amounts, and a manipulation check; its one verdict RF1's across the frames, read only where the check passes; which of a model and an order holds described, never tested; not run. The law is unchanged; next_delta's step is now the frozen variant's run, which waits on Ren's yes.
+- 5 November 2026, board item SCL: the self-confirming lock of this record's witness frozen before any call to a model (experiments/formations-that-read/FREEZE-12.md), on FREEZE-10's game and freeze 1's harness and pins, imported by hash: the lock left by an untried act at a fixed round or by a reading from outside, and the controls behind "nothing else" (more answers of the same kind, more rounds, rewording, name order); a forked probe of what the formation keeps; verdicts on three bridges (elimination, choice from what is kept, the exits), never on the law; not run. The law is unchanged; next_delta's steps now include the frozen test's run, which waits on Ren's yes.
 
 </details>
 

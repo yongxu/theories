@@ -152,8 +152,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261025T165537.368039Z）：Becoming.DrawnShaping，38 项声明，公理报告皆空，本记录全引。于一会话中构建；另一 AI 代理作一次独立只读审查（十六项意见，无不健全之 Lean），依工作包说明采纳，见研究第 414 节；未经人审。"
   },
   "next_delta": {
-    "en": "Readers who learn; a cost changing with the share; mutation with drift and the time to leave the lock; the generic lock at a start read there, upper_strictly and present_along_course lifted into RuleCapture (rule 9, its owner's call); an independent review by a person.",
-    "zh": "会学之读者；随份额而变之成本；噪声与长期状态；彼处所读起点之一般锁定、upper_strictly 与 present_along_course 提入 RuleCapture（规则 9，由其所有者定）；人之独立审查。"
+    "en": "Readers who learn; a cost changing with the share; mutation with drift and the time to leave the lock; the generic lock at a start read there, upper_strictly and present_along_course lifted into RuleCapture (rule 9, its owner's call); a run of CMT's frozen test of the critical mass on laboratory stag hunts (experiments/critical-mass-located); an independent review by a person.",
+    "zh": "会学之读者；随份额而变之成本；噪声与长期状态；彼处所读起点之一般锁定、upper_strictly 与 present_along_course 提入 RuleCapture（规则 9，由其所有者定）；CMT 所冻结之临界质量之验于实验室猎鹿博弈之运行（experiments/critical-mass-located）；人之独立审查。"
   },
   "correspondence": {
     "en": "Where lo < c < hi the model is the stag hunt in which the second strategy's payoff does not depend on the partner: a shaper meeting a shaper leaves a + p + hi, a shaper meeting an other a + p + lo, an other meeting anyone a + p + c. The critical mass is its mixed equilibrium, at the shapers' share (c − lo)/(hi − lo), and risk dominance compares hi + lo with 2c (Harsanyi and Selten 1988; Skyrms 2004). Both readings give each other a + c + p, so the rule read is the frequency-weighted mean of the two readings up to a common factor, and reading at every step is discrete-time replicator selection up to a lag of one step (Hofbauer and Sigmund 1998). The threshold is the critical mass of binary choices with externalities (Schelling 1973; Schelling 1978, chapters 3 and 7; Granovetter 1978, whose thresholds are distributed where here there is one; Oliver, Marwell and Teixeira 1985, for the term), and the lock is the lock-in of increasing returns (Arthur 1989), here decided by the start rather than by random arrivals; in the limit of rare mutation against a deterministic dynamic the risk-dominant state is selected (Kandori, Mailath and Rob 1993; Young 1993), and drawn one member at a time the Moran criterion parts from it under strong selection (drawn-shaping-drawn-one-at-a-time). A biological comparator for readers favouring their own kind is the greenbeard (Gardner and West 2010; only the bibliographic record verified). Read on the meta-attractor (theories/meta-attractor), this joins its second order, selection for control over selection, to its closed loop. The lock half is near-definitional (RuleCapture's locked_stays and locked_not_below at a start read there), and drawn_reads_iff is a two-step composition (ClosedCapture.Drawn.pool_reads_iff, then shaped_le_iff); what is new on the spine is the critical-mass computation, which is elementary.",
@@ -324,7 +324,7 @@
     {
       "path": "theories/becoming/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "24f0779706a3599d9755ab42ab4ceb05780f0a761aa02d7a5f735841c0ddf13c"
+      "sha256": "1862c80a17ff7487ea150923d7aa4af0ba3a75c0957c4d34bc1ed5d3e3d081dc"
     },
     {
       "path": "theories/meta-attractor/README.md",
@@ -369,6 +369,10 @@
     {
       "en": "3 November 2026, board item AJ8 (study section 503): the noise boundary narrowed: drawn one member at a time either lock is left by drift (drawn-shaping-drawn-one-at-a-time), and the long-run state under noise is not the risk-dominant one in general; the laws are unchanged.",
       "zh": "2026年11月3日，工作板条目 AJ8（研究第 503 节）：噪声之界收窄：逐一而抽时任一锁定为漂变所离（drawn-shaping-drawn-one-at-a-time），噪声下之长期之态一般非风险占优者；诸律不变。"
+    },
+    {
+      "en": "5 November 2026, board item CMT: the critical mass's correspondence to adoption frozen before any study's choice data is read (experiments/critical-mass-located/DESIGN.md): laboratory stag hunts whose payoffs the experimenter set, a status quo paying the same whatever the partner does, screened by their design documents first; the mass located at the shapers' share (c - lo)/(hi - lo) (critical_iff) in the regime lo < c < hi (critical_mass_iff); exact sign tests of the share's change by start, a readout of each game's own inner bin; verdicts on the correspondence, never on the law; not run. The law is unchanged; next_delta's steps now include the frozen test's run, whose downloads and coding wait on Ren's yes.",
+      "zh": "2026年11月5日，看板项 CMT：临界质量与采纳之对应，于读任一研究之选择数据之前冻结（experiments/critical-mass-located/DESIGN.md）：收益由实验者所定之实验室猎鹿博弈，现状之收益不随伙伴而变，先以其设计文件筛选；临界质量定于塑造者之份额 (c - lo)/(hi - lo)（critical_iff），于区间 lo < c < hi（critical_mass_iff）；按起点之份额变化之精确符号检验，及每一博弈自身内侧区间之读出；判定在对应，不在律；未运行。律不变；next_delta 之步今含此冻结之验之运行，其下载与编码待 Ren 之可。"
     }
   ]
 }
