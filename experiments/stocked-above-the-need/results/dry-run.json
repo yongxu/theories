@@ -9,6 +9,7 @@
     },
     "clauses, by outcome": {
      "Renewal rose with the level": {
+      "unrecorded stocking": 38,
       "what held their renewal down ended by the year read": 38,
       "connected waters": 27
      }
@@ -27,6 +28,7 @@
     },
     "clauses, by outcome": {
      "Renewal rose with the level": {
+      "unrecorded stocking": 26,
       "what held their renewal down ended by the year read": 26,
       "connected waters": 24
      }
@@ -47,6 +49,7 @@
     },
     "clauses, by outcome": {
      "Renewal rose with the level": {
+      "unrecorded stocking": 40,
       "what held their renewal down ended by the year read": 40,
       "connected waters": 1
      }
@@ -64,6 +67,7 @@
     },
     "clauses, by outcome": {
      "Renewal rose with the level": {
+      "unrecorded stocking": 40,
       "what held their renewal down ended by the year read": 40
      }
     },
@@ -83,6 +87,7 @@
     },
     "clauses, by outcome": {
      "Renewal rose with the level": {
+      "unrecorded stocking": 40,
       "what held their renewal down ended by the year read": 40
      }
     },
@@ -99,6 +104,7 @@
     },
     "clauses, by outcome": {
      "Renewal rose with the level": {
+      "unrecorded stocking": 40,
       "connected waters": 15,
       "what held their renewal down ended by the year read": 40
      }
@@ -119,6 +125,7 @@
     },
     "clauses, by outcome": {
      "Renewal rose with the level": {
+      "unrecorded stocking": 40,
       "what held their renewal down ended by the year read": 40
      }
     },
@@ -135,6 +142,7 @@
     },
     "clauses, by outcome": {
      "Renewal rose with the level": {
+      "unrecorded stocking": 40,
       "what held their renewal down ended by the year read": 40,
       "connected waters": 1
      }
@@ -155,6 +163,7 @@
     },
     "clauses, by outcome": {
      "Renewal rose with the level": {
+      "unrecorded stocking": 40,
       "what held their renewal down ended by the year read": 40,
       "connected waters": 24
      }
@@ -173,6 +182,7 @@
     },
     "clauses, by outcome": {
      "Renewal rose with the level": {
+      "unrecorded stocking": 32,
       "connected waters": 31,
       "what held their renewal down ended by the year read": 32
      }
@@ -194,6 +204,7 @@
     },
     "clauses, by outcome": {
      "Renewal rose with the level": {
+      "unrecorded stocking": 15,
       "connected waters": 11,
       "what held their renewal down ended by the year read": 15
      }
@@ -212,6 +223,7 @@
     },
     "clauses, by outcome": {
      "Renewal rose with the level": {
+      "unrecorded stocking": 3,
       "connected waters": 3,
       "what held their renewal down ended by the year read": 3
      }
@@ -233,6 +245,7 @@
     },
     "clauses, by outcome": {
      "Renewal rose with the level": {
+      "unrecorded stocking": 38,
       "connected waters": 26,
       "what held their renewal down ended by the year read": 38
      }
@@ -251,6 +264,7 @@
     },
     "clauses, by outcome": {
      "Renewal rose with the level": {
+      "unrecorded stocking": 25,
       "connected waters": 25,
       "what held their renewal down ended by the year read": 25
      }
@@ -271,6 +285,7 @@
     },
     "clauses, by outcome": {
      "Renewal rose with the level": {
+      "unrecorded stocking": 40,
       "connected waters": 25,
       "what held their renewal down ended by the year read": 40
      }
@@ -289,6 +304,7 @@
     },
     "clauses, by outcome": {
      "Renewal rose with the level": {
+      "unrecorded stocking": 18,
       "connected waters": 18,
       "what held their renewal down ended by the year read": 18
      }
@@ -687,6 +703,7 @@
     },
     "clauses, by outcome": {
      "Renewal rose with the level": {
+      "unrecorded stocking": 32,
       "connected waters": 29,
       "what held their renewal down ended by the year read": 32
      },
@@ -724,6 +741,7 @@
     },
     "clauses, by outcome": {
      "Renewal rose with the level": {
+      "unrecorded stocking": 22,
       "connected waters": 22,
       "what held their renewal down ended by the year read": 22
      },
@@ -837,6 +855,93 @@
       55,
       11,
       11
+     ]
+    }
+   }
+  },
+  "renewal lost, other stocking in no record": {
+   "family": "confounded",
+   "speed 0.1": {
+    "V1": {
+     "Renewal rose with the level": 36,
+     "Renewal fell short of the fit at the levels restored": 4
+    },
+    "clauses, by outcome": {
+     "Renewal rose with the level": {
+      "unrecorded stocking": 36,
+      "what held their renewal down ended by the year read": 36,
+      "connected waters": 25
+     },
+     "Renewal fell short of the fit at the levels restored": {
+      "stocking suppresses natural renewal": 4,
+      "their own needs lie above the common one": 4,
+      "the adults restored count stocked fish not yet spawning": 4
+     }
+    },
+    "a need fitted": 40,
+    "lakes read, median": 46,
+    "lakes read in a year below the need too, median": 14,
+    "the rise with the first fall after the low survey as the year below shown (reported), by outcome": {
+     "Renewal rose with the level": 27
+    },
+    "lakes read that had lost their renewal, by outcome: lost, read; of the lakes that renewed above the need and not below, lost, all": {
+     "Renewal rose with the level": [
+      1644,
+      1703,
+      292,
+      294
+     ],
+     "Renewal fell short of the fit at the levels restored": [
+      157,
+      166,
+      12,
+      12
+     ]
+    }
+   },
+   "speed 0.03": {
+    "V1": {
+     "not decided": 6,
+     "Renewal rose with the level": 17,
+     "Renewal fell short of the fit at the levels restored": 17
+    },
+    "clauses, by outcome": {
+     "Renewal rose with the level": {
+      "unrecorded stocking": 17,
+      "connected waters": 13,
+      "what held their renewal down ended by the year read": 17
+     },
+     "Renewal fell short of the fit at the levels restored": {
+      "stocking suppresses natural renewal": 17,
+      "their own needs lie above the common one": 17,
+      "the adults restored count stocked fish not yet spawning": 17
+     }
+    },
+    "a need fitted": 40,
+    "lakes read, median": 24,
+    "lakes read in a year below the need too, median": 10,
+    "the rise with the first fall after the low survey as the year below shown (reported), by outcome": {
+     "Renewal rose with the level": 14,
+     "Renewal fell short of the fit at the levels restored": 3
+    },
+    "lakes read that had lost their renewal, by outcome: lost, read; of the lakes that renewed above the need and not below, lost, all": {
+     "not decided": [
+      99,
+      100,
+      18,
+      18
+     ],
+     "Renewal rose with the level": [
+      425,
+      439,
+      114,
+      114
+     ],
+     "Renewal fell short of the fit at the levels restored": [
+      392,
+      406,
+      56,
+      56
      ]
     }
    }
@@ -958,6 +1063,7 @@
     },
     "clauses, by outcome": {
      "Renewal rose with the level": {
+      "unrecorded stocking": 40,
       "connected waters": 17,
       "what held their renewal down ended by the year read": 40
      }
@@ -984,6 +1090,7 @@
     },
     "clauses, by outcome": {
      "Renewal rose with the level": {
+      "unrecorded stocking": 33,
       "connected waters": 24,
       "what held their renewal down ended by the year read": 33
      }
@@ -1019,6 +1126,7 @@
     },
     "clauses, by outcome": {
      "Renewal rose with the level": {
+      "unrecorded stocking": 25,
       "connected waters": 22,
       "what held their renewal down ended by the year read": 25
      }
@@ -1053,6 +1161,7 @@
     },
     "clauses, by outcome": {
      "Renewal rose with the level": {
+      "unrecorded stocking": 11,
       "connected waters": 10,
       "what held their renewal down ended by the year read": 11
      },
@@ -1099,6 +1208,7 @@
     },
     "clauses, by outcome": {
      "Renewal rose with the level": {
+      "unrecorded stocking": 1,
       "connected waters": 1,
       "what held their renewal down ended by the year read": 1
      }
@@ -1168,6 +1278,7 @@
       "the adults restored count stocked fish not yet spawning": 34
      },
      "Renewal rose with the level": {
+      "unrecorded stocking": 6,
       "connected waters": 6,
       "what held their renewal down ended by the year read": 6
      }
@@ -1242,6 +1353,7 @@
       "the adults restored count stocked fish not yet spawning": 35
      },
      "Renewal rose with the level": {
+      "unrecorded stocking": 2,
       "connected waters": 2,
       "what held their renewal down ended by the year read": 2
      }
@@ -1286,6 +1398,7 @@
       "the adults restored count stocked fish not yet spawning": 22
      },
      "Renewal rose with the level": {
+      "unrecorded stocking": 1,
       "connected waters": 1,
       "what held their renewal down ended by the year read": 1
      }
@@ -1389,11 +1502,11 @@
    }
   }
  },
- "checks": 102,
+ "checks": 105,
  "checks by kind": {
   "rules: the fit": 1,
   "rules: the scope": 14,
-  "rules: dates": 2,
+  "rules: dates": 3,
   "rules: the first fall": 3,
   "rules: the other records": 1,
   "rules: marks": 1,
@@ -1406,16 +1519,16 @@
   "the chain": 4,
   "worlds: T1 holds": 14,
   "worlds: renewal lost": 12,
-  "worlds: confounded": 16,
+  "worlds: confounded": 18,
   "worlds: power": 2
  },
  "failed": [],
- "CPU seconds": 235.4,
+ "CPU seconds": 291.9,
  "code hashes": {
-  "experiments/stocked-above-the-need/t1r.py": "86d3d770eab22f9aa8f0605cf3da43cb124af62d911c5e10099378bf389ba636",
+  "experiments/stocked-above-the-need/t1r.py": "a574e53b9f8b79b86ef94ae20d42ad1c250c0dd401284d280ec08550a793bc42",
   "experiments/stocked-above-the-need/additions.py": "b27718fcad48a0ce29c2a1b6c4b9ab2e1e0c668d887d049d017eb16d260155b7",
   "experiments/stocked-above-the-need/run.py": "ded4fddda1724d379ca59170ae4749f07d0a6540221cb14b0e4efd90f31fb348",
-  "experiments/stocked-above-the-need/dry_run.py": "502c138d0189fc2f7f259be095f75ec7f74fdb461d17680cf1ed0e8c6917be25",
+  "experiments/stocked-above-the-need/dry_run.py": "aa282c855bb0f35eaab56f9a8b2ca5871e13ff5619c458da0f83e439bc4c63c7",
   "experiments/stocked-above-the-need/layout.json": "d0ef9f7f941fbe72e847f75321b118991ab270565c9891c577798b2197743ce2"
  },
  "code unchanged during the run": true

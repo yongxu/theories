@@ -53,6 +53,7 @@ FLOOR = t1n.FLOOR
 ROSE = "Renewal rose with the level"
 SHORT = "Renewal fell short of the fit at the levels restored"
 ABATED = "what held their renewal down ended by the year read"
+UNRECORDED = "unrecorded stocking"
 SUPPRESSED = "stocking suppresses natural renewal"
 OWN_NEEDS = "their own needs lie above the common one"
 YOUNG = "the adults restored count stocked fish not yet spawning"
@@ -105,8 +106,9 @@ def scope(lk, need_, stocked, marks=None, made=None):
     """The lake's low survey, its year read and its year below the need (DESIGN.md, section 5), and the reason it
     is out. The low survey is its first spring estimate wholly below the need. Stocking is recorded from that
     year on, and no spring estimate wholly above the need comes before the first such stocking: for a lake whose
-    stockings' dates are all read, the first made from that year on, by `made`, the years of its dates and of its
-    other records (round 2's R-21); otherwise the first recorded. The year read is
+    stockings' dates are all read, in WDNR's database and in the other records, the first made from that year on,
+    by `made`, the years its dates give (round 2's R-21, round 3's R-25); otherwise the first recorded. The year
+    read is
     its first year after the low survey wholly above the need, with stocking recorded in T1N's records from the
     low survey's year within the WINDOW years before it, so that T1N's fit never reads it, none recorded in it or
     the year before, and a fall survey. The year below is its last year from the low survey to the year read
@@ -174,7 +176,7 @@ def rows(lakes, nd, dated=None, floor=FLOOR, first=None, marks=None, undated=())
         stocked = stocked_years(lk, dated)
         row = {"id": lk["id"], "closed": lk.get("closed"), "other stocking read": lk.get("other") is not None,
                "dated": dated is not None and lk["id"] not in undated}
-        made = (set((dated or {}).get(lk["id"], ())) | set(lk.get("other") or ())) if row["dated"] else None
+        made = set((dated or {}).get(lk["id"], ())) if row["dated"] else None      # round 3's R-25
         low, read, under, why = scope(lk, nd["need"], stocked, marks, made)
         if first is not None and not why and read < first:
             why = f"its year read before {first}"
@@ -253,10 +255,11 @@ def v1(table, own=None, closed=None):
       some of these lakes at least, not
       lost to another cause in all of them; the line gives what the need's fit expects at the levels restored,
       and does not say what share follows it. It carries what held their renewal down ending by the year read,
-      always; unrecorded stocking where the other stocking records were not read, or a stocking's date could not
-      be read, for a lake that renewed above the need and not below; and connected waters where such a lake is
-      not a recorded seepage lake and the closed lakes alone (`closed`, the same rule on them) do not also show
-      the rise.
+      always; unrecorded stocking, always, since the year below nearly always comes before a lake's first recorded
+      stocking, so stocking no record shows reaches the year read and not the year below (round 3's R-24), the
+      lakes that renewed above the need and not below with the other stocking records unread or a stocking's date
+      unread counted; and connected waters where such a lake is not a recorded seepage lake and the closed lakes
+      alone (`closed`, the same rule on them) do not also show the rise.
     - Renewal fell short of the fit at the levels restored: fewer renewed than the fit expects even at the lower
       bounds of the levels restored, by an exact test at ALPHA, and the rise not shown, whichever way its counts
       lean. Read as renewal short of the level's in some of these lakes at least, as where it is lost to another
@@ -272,11 +275,11 @@ def v1(table, own=None, closed=None):
         out["the closed lakes alone, read before the clauses"] = closed
     if own is not None:
         out["the lakes restored to their own renewing level alone, read before the clauses"] = own
+    rose = [r for r in inn if r["renewed"] and r["renewed below"] is False]
+    out["renewed above the need and not below: with the other stocking records or a stocking's date unread, all"] = [
+        sum(1 for r in rose if not r["other stocking read"] or not r["dated"]), len(rose)]
     if outcome == ROSE:
-        unless = []
-        rose = [r for r in inn if r["renewed"] and r["renewed below"] is False]
-        if any(not r["other stocking read"] or not r["dated"] for r in rose):
-            unless.append("unrecorded stocking")
+        unless = [UNRECORDED]
         if any(r["closed"] is not True for r in rose) and (closed is None or not closed.startswith(ROSE)):
             unless.append("connected waters")
         verdict = (f"{line}; renewal read as following the level in some of these lakes at least, not lost to another "

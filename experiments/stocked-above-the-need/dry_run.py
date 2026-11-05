@@ -77,6 +77,9 @@ WORLDS = {
     # renewal lost, and a confound only a clause answers
     "renewal lost, other stocking unread": dict(family="confounded", q=1, loss=LOSS, harvest=LIGHT, fry=0.5,
                                                 other_read=False),
+    # round 3's R-24: the same fry, with R5b read and holding none of them, so no record read shows them
+    "renewal lost, other stocking in no record": dict(family="confounded", q=1, loss=LOSS, harvest=LIGHT, fry=0.5,
+                                                      fry_recorded=False),
     "renewal lost, no dates": dict(family="confounded", q=1, loss=LOSS, harvest=LIGHT, filed=0.5, dates=False),
     "renewal lost, open": dict(family="confounded", q=1, loss=LOSS, harvest=LIGHT, immigrants=1.5),
     "renewal lost, the cause ends": dict(family="confounded", q=1, loss=LOSS, harvest=LIGHT, ends=True),
@@ -103,7 +106,8 @@ WORLDS = {
     "no need, lakes differ": dict(family="no need", q=1, prod_spread=0.7),
     "no need, catch 0.1": dict(family="no need", q=1, catch=0.1),         # T1N's: a need fitted near T1's world's
 }
-QUALIFIER = {"renewal lost, other stocking unread": "unrecorded stocking", "renewal lost, no dates": "unrecorded stocking",
+QUALIFIER = {"renewal lost, other stocking unread": t1r.UNRECORDED, "renewal lost, no dates": t1r.UNRECORDED,
+             "renewal lost, other stocking in no record": t1r.UNRECORDED,
              "renewal lost, open": "connected waters", "renewal lost, the cause ends": t1r.ABATED,
              "renewal lost, stocked after a failed survey": t1r.ABATED,
              "renewal lost, stocking suppresses": t1r.ABATED, "renewal held low, the year in both counts": t1r.ABATED,
@@ -174,7 +178,10 @@ def lake(rng, i, world, speed, zr=None):
         fry = 0.0
         if w.get("fry") and stocked_true and yr not in stocked_true and rng.random() < w["fry"]:
             fry = FINGERLINGS / 3                  # fry stocked in a year between, recorded only in R5b
-            other.add(yr)
+            if w.get("fry_recorded", True):        # or in no record at all (round 3's R-24)
+                other.add(yr)
+                if w.get("other_read", True):
+                    dated.add(yr)                  # R5b's dates are read with the stocking file's (additions.dated)
             stocked_true.add(yr)
         fish[yr] = f + fry
         rec["label"][yr] = label
@@ -247,7 +254,7 @@ def refusal(f):
     return ""
 
 
-CLAUSES = ("unrecorded stocking", "connected waters", t1r.ABATED, t1r.SUPPRESSED, t1r.OWN_NEEDS, t1r.YOUNG)
+CLAUSES = (t1r.UNRECORDED, "connected waters", t1r.ABATED, t1r.SUPPRESSED, t1r.OWN_NEEDS, t1r.YOUNG)
 
 
 def cell(world, speed, n=ARCHIVES, lakes_=LAKES):
@@ -377,6 +384,11 @@ def scripted(chk):
     chk("rules: dates", "a lake back above the need in the spring of its first stocking's dated year, the stocking "
         "filed under the year before, is out; undated, it is read (round 2's R-21)",
         got[0].startswith("back above the need before") and got[1] == "", got)
+    l = lk(47, stock=(), extra={"adults": {2000: (0.5, 0.4, 0.6), 2005: (3.0, 2.7, 3.3), 2008: (3.0, 2.7, 3.3)},
+                                "age0": {2000: 0.0, 2008: 5.0}, "other": {2004}})
+    got = [r.get("out", "") for r in t1r.rows([l], nd, {"S47": {2005}})] + [r.get("out", "") for r in t1r.rows([l], nd)]
+    chk("rules: dates", "the same with the stocking filed in R5b: out where dated, read where undated (round 3's R-25)",
+        got[0].startswith("back above the need before") and got[1] == "", got)
     ff = lambda l: t1r.first_fall(l, 1.0, st(l), 2000, 2004)
     l = lk(41, stock=(2001,), extra={"age0": {2000: 0.0, 2001: 9.0, 2002: 0.0, 2003: 4.0, 2004: 5.0}})
     chk("rules: the first fall", "the first fall after the low survey with no stocking that year or the year before "
@@ -442,15 +454,17 @@ def scripted(chk):
     v = t1r.v1(table(up=9))
     chk("rules: V1", "nine lakes: not decided, its line opening with the counts", v["outcome"] == "not decided"
         and v["verdict"].startswith("not decided: of 9 lakes") and "fewer than 10" in v["verdict"], v)
+    UNREAD = "renewed above the need and not below: with the other stocking records or a stocking's date unread, all"
     v = t1r.v1(table(up=10, other=False))
-    chk("rules: V1", "the other records not read for a lake that rose: unless unrecorded stocking",
-        "unrecorded stocking" in v["verdict"], v["verdict"])
+    chk("rules: V1", "the other records not read for a lake that rose: unless unrecorded stocking, and the lakes so "
+        "counted", t1r.UNRECORDED in v["verdict"] and v[UNREAD] == [10, 10], v)
     v = t1r.v1(table(up=10, undated=True))
-    chk("rules: V1", "a lake that rose with a stocking's date unread: unless unrecorded stocking (round 1's R-04)",
-        "unrecorded stocking" in v["verdict"], v["verdict"])
+    chk("rules: V1", "a lake that rose with a stocking's date unread: unless unrecorded stocking, and the lakes so "
+        "counted (round 1's R-04)", t1r.UNRECORDED in v["verdict"] and v[UNREAD] == [10, 10], v)
     v = t1r.v1(table(up=10))
-    chk("rules: V1", "a seepage lake's rise needs no clause of connected waters, nor dated records one of unrecorded "
-        "stocking", "connected waters" not in v["verdict"] and "unrecorded stocking" not in v["verdict"], v["verdict"])
+    chk("rules: V1", "a seepage lake's rise needs no clause of connected waters; with every record read and dated, "
+        "it still carries unrecorded stocking (round 3's R-24)", "connected waters" not in v["verdict"]
+        and t1r.UNRECORDED in v["verdict"] and v[UNREAD] == [0, 10], v)
     v = t1r.v1(table(up=10, closed=False), closed="not decided: of 0 lakes")
     chk("rules: V1", "open lakes rising, the closed lakes alone not deciding: unless connected waters",
         "connected waters" in v["verdict"], v["verdict"])
