@@ -1,708 +1,1737 @@
 {
- "worlds (branch B), 300 lakes an archive": {
+ "worlds, 300 lakes an archive": {
   "need": {
-   "stocking chance 0.3 a year": {
-    "V1 verdicts, of 40 archives": {
+   "family": "T1 holds",
+   "speed 0.3": {
+    "V1": {
      "not decided": 40
     },
-    "V1 with the label alone a fall (the reading set aside)": {
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": [
+     0.357,
+     0.375
+    ],
+    "no need fitted": 33,
+    "resolved lakes below the need, median": 0
+   },
+   "speed 0.1": {
+    "V1": {
      "not decided": 40
     },
-    "V2 met, archives": 0,
-    "the fitted need, median": 0.34,
-    "resolved lakes where T1 and the null differ, median": 2
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 1,
+    "the fitted need: median, largest": [
+     0.345,
+     0.392
+    ],
+    "no need fitted": 0,
+    "resolved lakes below the need, median": 3
    },
-   "stocking chance 0.1 a year": {
-    "V1 verdicts, of 40 archives": {
-     "supported": 3,
-     "not decided": 37
+   "speed 0.03": {
+    "V1": {
+     "supported": 29,
+     "not decided": 11
     },
-    "V1 with the label alone a fall (the reading set aside)": {
-     "supported": 7,
-     "not decided": 33
-    },
-    "V2 met, archives": 1,
-    "the fitted need, median": 0.339,
-    "resolved lakes where T1 and the null differ, median": 13
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 2,
+    "the fitted need: median, largest": [
+     0.342,
+     0.378
+    ],
+    "no need fitted": 0,
+    "resolved lakes below the need, median": 13
    },
-   "stocking chance 0.03 a year": {
-    "V1 verdicts, of 40 archives": {
-     "supported": 36,
-     "not decided": 4
-    },
-    "V1 with the label alone a fall (the reading set aside)": {
-     "supported": 36,
-     "not decided": 4
-    },
-    "V2 met, archives": 0,
-    "the fitted need, median": 0.339,
-    "resolved lakes where T1 and the null differ, median": 33
-   },
-   "stocking chance 0.0 a year": {
-    "V1 verdicts, of 40 archives": {
+   "speed 0.0": {
+    "V1": {
      "supported": 40
     },
-    "V1 with the label alone a fall (the reading set aside)": {
-     "supported": 40
-    },
-    "V2 met, archives": 0,
-    "the fitted need, median": 0.34,
-    "resolved lakes where T1 and the null differ, median": 54
-   }
-  },
-  "no need": {
-   "stocking chance 0.3 a year": {
-    "V1 verdicts, of 40 archives": {
-     "not decided": 40
-    },
-    "V1 with the label alone a fall (the reading set aside)": {
-     "not decided": 40
-    },
-    "V2 met, archives": 0,
-    "the fitted need, median": 0.024,
-    "resolved lakes where T1 and the null differ, median": 0
-   },
-   "stocking chance 0.1 a year": {
-    "V1 verdicts, of 40 archives": {
-     "not decided": 40
-    },
-    "V1 with the label alone a fall (the reading set aside)": {
-     "not decided": 40
-    },
-    "V2 met, archives": 0,
-    "the fitted need, median": 0.0,
-    "resolved lakes where T1 and the null differ, median": 0
-   },
-   "stocking chance 0.03 a year": {
-    "V1 verdicts, of 40 archives": {
-     "not decided": 40
-    },
-    "V1 with the label alone a fall (the reading set aside)": {
-     "not decided": 40
-    },
-    "V2 met, archives": 0,
-    "the fitted need, median": 0.006,
-    "resolved lakes where T1 and the null differ, median": 0
-   },
-   "stocking chance 0.0 a year": {
-    "V1 verdicts, of 40 archives": {
-     "not decided": 40
-    },
-    "V1 with the label alone a fall (the reading set aside)": {
-     "not decided": 40
-    },
-    "V2 met, archives": 0,
-    "the fitted need, median": 0.014,
-    "resolved lakes where T1 and the null differ, median": 0
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 1,
+    "the fitted need: median, largest": [
+     0.348,
+     0.373
+    ],
+    "no need fitted": 0,
+    "resolved lakes below the need, median": 26
    }
   },
   "needs vary": {
-   "stocking chance 0.3 a year": {
-    "V1 verdicts, of 40 archives": {
+   "family": "T1 holds",
+   "speed 0.3": {
+    "V1": {
      "not decided": 40
     },
-    "V1 with the label alone a fall (the reading set aside)": {
-     "not decided": 40
-    },
-    "V2 met, archives": 0,
-    "the fitted need, median": 0.551,
-    "resolved lakes where T1 and the null differ, median": 3
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 5,
+    "the fitted need: median, largest": [
+     0.441,
+     0.548
+    ],
+    "no need fitted": 0,
+    "resolved lakes below the need, median": 0
    },
-   "stocking chance 0.1 a year": {
-    "V1 verdicts, of 40 archives": {
-     "supported": 25,
-     "not decided": 15
+   "speed 0.1": {
+    "V1": {
+     "not decided": 37,
+     "supported": 3
     },
-    "V1 with the label alone a fall (the reading set aside)": {
-     "supported": 34,
-     "not decided": 6
-    },
-    "V2 met, archives": 0,
-    "the fitted need, median": 0.519,
-    "resolved lakes where T1 and the null differ, median": 19
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 13,
+    "the fitted need: median, largest": [
+     0.482,
+     0.554
+    ],
+    "no need fitted": 0,
+    "resolved lakes below the need, median": 5
    },
-   "stocking chance 0.03 a year": {
-    "V1 verdicts, of 40 archives": {
+   "speed 0.03": {
+    "V1": {
      "supported": 40
     },
-    "V1 with the label alone a fall (the reading set aside)": {
-     "supported": 40
-    },
-    "V2 met, archives": 1,
-    "the fitted need, median": 0.494,
-    "resolved lakes where T1 and the null differ, median": 66
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 14,
+    "the fitted need: median, largest": [
+     0.478,
+     0.546
+    ],
+    "no need fitted": 0,
+    "resolved lakes below the need, median": 22
    },
-   "stocking chance 0.0 a year": {
-    "V1 verdicts, of 40 archives": {
+   "speed 0.0": {
+    "V1": {
      "supported": 40
     },
-    "V1 with the label alone a fall (the reading set aside)": {
-     "supported": 40
-    },
-    "V2 met, archives": 0,
-    "the fitted need, median": 0.481,
-    "resolved lakes where T1 and the null differ, median": 117
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 17,
+    "the fitted need: median, largest": [
+     0.487,
+     0.55
+    ],
+    "no need fitted": 0,
+    "resolved lakes below the need, median": 41
    }
   },
   "need rises": {
-   "stocking chance 0.3 a year": {
-    "V1 verdicts, of 40 archives": {
+   "family": "T1 holds",
+   "speed 0.3": {
+    "V1": {
      "not decided": 40
     },
-    "V1 with the label alone a fall (the reading set aside)": {
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": [
+     0.368,
+     0.421
+    ],
+    "no need fitted": 31,
+    "resolved lakes below the need, median": 0
+   },
+   "speed 0.1": {
+    "V1": {
      "not decided": 40
     },
-    "V2 met, archives": 0,
-    "the fitted need, median": 0.338,
-    "resolved lakes where T1 and the null differ, median": 2
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": [
+     0.355,
+     0.394
+    ],
+    "no need fitted": 0,
+    "resolved lakes below the need, median": 5
    },
-   "stocking chance 0.1 a year": {
-    "V1 verdicts, of 40 archives": {
-     "not decided": 9,
-     "supported": 31
-    },
-    "V1 with the label alone a fall (the reading set aside)": {
-     "supported": 39,
-     "not decided": 1
-    },
-    "V2 met, archives": 0,
-    "the fitted need, median": 0.347,
-    "resolved lakes where T1 and the null differ, median": 17
-   },
-   "stocking chance 0.03 a year": {
-    "V1 verdicts, of 40 archives": {
+   "speed 0.03": {
+    "V1": {
      "supported": 40
     },
-    "V1 with the label alone a fall (the reading set aside)": {
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": [
+     0.344,
+     0.375
+    ],
+    "no need fitted": 0,
+    "resolved lakes below the need, median": 18
+   },
+   "speed 0.0": {
+    "V1": {
      "supported": 40
     },
-    "V2 met, archives": 1,
-    "the fitted need, median": 0.347,
-    "resolved lakes where T1 and the null differ, median": 47
-   },
-   "stocking chance 0.0 a year": {
-    "V1 verdicts, of 40 archives": {
-     "supported": 40
-    },
-    "V1 with the label alone a fall (the reading set aside)": {
-     "supported": 40
-    },
-    "V2 met, archives": 3,
-    "the fitted need, median": 0.347,
-    "resolved lakes where T1 and the null differ, median": 78
-   }
-  },
-  "need falls": {
-   "stocking chance 0.3 a year": {
-    "V1 verdicts, of 40 archives": {
-     "not decided": 40
-    },
-    "V1 with the label alone a fall (the reading set aside)": {
-     "not decided": 40
-    },
-    "V2 met, archives": 0,
-    "the fitted need, median": 0.348,
-    "resolved lakes where T1 and the null differ, median": 2
-   },
-   "stocking chance 0.1 a year": {
-    "V1 verdicts, of 40 archives": {
-     "not decided": 38,
-     "refuted unless connected waters": 2
-    },
-    "V1 with the label alone a fall (the reading set aside)": {
-     "not decided": 38,
-     "refuted unless connected waters": 1,
-     "supported": 1
-    },
-    "V2 met, archives": 1,
-    "the fitted need, median": 0.343,
-    "resolved lakes where T1 and the null differ, median": 11
-   },
-   "stocking chance 0.03 a year": {
-    "V1 verdicts, of 40 archives": {
-     "not decided": 18,
-     "refuted unless connected waters": 17,
-     "supported": 5
-    },
-    "V1 with the label alone a fall (the reading set aside)": {
-     "not decided": 22,
-     "supported": 7,
-     "refuted unless connected waters": 11
-    },
-    "V2 met, archives": 3,
-    "the fitted need, median": 0.343,
-    "resolved lakes where T1 and the null differ, median": 27
-   },
-   "stocking chance 0.0 a year": {
-    "V1 verdicts, of 40 archives": {
-     "not decided": 20,
-     "supported": 19,
-     "refuted unless connected waters": 1
-    },
-    "V1 with the label alone a fall (the reading set aside)": {
-     "not decided": 20,
-     "supported": 19,
-     "refuted unless connected waters": 1
-    },
-    "V2 met, archives": 5,
-    "the fitted need, median": 0.347,
-    "resolved lakes where T1 and the null differ, median": 43
-   }
-  },
-  "unrecorded": {
-   "stocking chance 0.3 a year": {
-    "V1 verdicts, of 40 archives": {
-     "not decided": 28,
-     "refuted unless connected waters or unrecorded stocking": 12
-    },
-    "V1 with the label alone a fall (the reading set aside)": {
-     "not decided": 28,
-     "refuted unless connected waters or unrecorded stocking": 12
-    },
-    "V2 met, archives": 6,
-    "the fitted need, median": 0.335,
-    "resolved lakes where T1 and the null differ, median": 10
-   },
-   "stocking chance 0.1 a year": {
-    "V1 verdicts, of 40 archives": {
-     "supported": 7,
-     "not decided": 26,
-     "refuted unless connected waters or unrecorded stocking": 7
-    },
-    "V1 with the label alone a fall (the reading set aside)": {
-     "supported": 10,
-     "refuted unless connected waters or unrecorded stocking": 5,
-     "not decided": 25
-    },
-    "V2 met, archives": 14,
-    "the fitted need, median": 0.344,
-    "resolved lakes where T1 and the null differ, median": 20
-   },
-   "stocking chance 0.03 a year": {
-    "V1 verdicts, of 40 archives": {
-     "supported": 35,
-     "not decided": 5
-    },
-    "V1 with the label alone a fall (the reading set aside)": {
-     "supported": 36,
-     "not decided": 4
-    },
-    "V2 met, archives": 8,
-    "the fitted need, median": 0.347,
-    "resolved lakes where T1 and the null differ, median": 36
-   },
-   "stocking chance 0.0 a year": {
-    "V1 verdicts, of 40 archives": {
-     "supported": 39,
-     "not decided": 1
-    },
-    "V1 with the label alone a fall (the reading set aside)": {
-     "supported": 39,
-     "not decided": 1
-    },
-    "V2 met, archives": 3,
-    "the fitted need, median": 0.341,
-    "resolved lakes where T1 and the null differ, median": 52
-   }
-  },
-  "open": {
-   "stocking chance 0.3 a year": {
-    "V1 verdicts, of 40 archives": {
-     "not decided": 40
-    },
-    "V1 with the label alone a fall (the reading set aside)": {
-     "not decided": 40
-    },
-    "V2 met, archives": 0,
-    "the fitted need, median": 0.345,
-    "resolved lakes where T1 and the null differ, median": 2
-   },
-   "stocking chance 0.1 a year": {
-    "V1 verdicts, of 40 archives": {
-     "not decided": 38,
-     "refuted unless connected waters": 2
-    },
-    "V1 with the label alone a fall (the reading set aside)": {
-     "not decided": 39,
-     "refuted unless connected waters": 1
-    },
-    "V2 met, archives": 0,
-    "the fitted need, median": 0.335,
-    "resolved lakes where T1 and the null differ, median": 8
-   },
-   "stocking chance 0.03 a year": {
-    "V1 verdicts, of 40 archives": {
-     "not decided": 34,
-     "supported": 4,
-     "refuted unless connected waters": 2
-    },
-    "V1 with the label alone a fall (the reading set aside)": {
-     "not decided": 31,
-     "refuted unless connected waters": 2,
-     "supported": 7
-    },
-    "V2 met, archives": 3,
-    "the fitted need, median": 0.335,
-    "resolved lakes where T1 and the null differ, median": 17
-   },
-   "stocking chance 0.0 a year": {
-    "V1 verdicts, of 40 archives": {
-     "refuted unless connected waters": 4,
-     "not decided": 21,
-     "supported": 15
-    },
-    "V1 with the label alone a fall (the reading set aside)": {
-     "refuted unless connected waters": 4,
-     "not decided": 21,
-     "supported": 15
-    },
-    "V2 met, archives": 3,
-    "the fitted need, median": 0.337,
-    "resolved lakes where T1 and the null differ, median": 27
-   }
-  },
-  "survival compensates": {
-   "stocking chance 0.3 a year": {
-    "V1 verdicts, of 40 archives": {
-     "not decided": 40
-    },
-    "V1 with the label alone a fall (the reading set aside)": {
-     "not decided": 40
-    },
-    "V2 met, archives": 0,
-    "the fitted need, median": 0.364,
-    "resolved lakes where T1 and the null differ, median": 5
-   },
-   "stocking chance 0.1 a year": {
-    "V1 verdicts, of 40 archives": {
-     "not decided": 32,
-     "refuted unless connected waters": 8
-    },
-    "V1 with the label alone a fall (the reading set aside)": {
-     "not decided": 31,
-     "refuted unless connected waters": 9
-    },
-    "V2 met, archives": 0,
-    "the fitted need, median": 0.36,
-    "resolved lakes where T1 and the null differ, median": 7
-   },
-   "stocking chance 0.03 a year": {
-    "V1 verdicts, of 40 archives": {
-     "refuted unless connected waters": 24,
-     "not decided": 16
-    },
-    "V1 with the label alone a fall (the reading set aside)": {
-     "refuted unless connected waters": 25,
-     "not decided": 15
-    },
-    "V2 met, archives": 2,
-    "the fitted need, median": 0.356,
-    "resolved lakes where T1 and the null differ, median": 11
-   },
-   "stocking chance 0.0 a year": {
-    "V1 verdicts, of 40 archives": {
-     "not decided": 13,
-     "refuted unless connected waters": 26,
-     "refuted": 1
-    },
-    "V1 with the label alone a fall (the reading set aside)": {
-     "not decided": 13,
-     "refuted unless connected waters": 26,
-     "refuted": 1
-    },
-    "V2 met, archives": 0,
-    "the fitted need, median": 0.359,
-    "resolved lakes where T1 and the null differ, median": 11
-   }
-  },
-  "episodic": {
-   "stocking chance 0.3 a year": {
-    "V1 verdicts, of 40 archives": {
-     "not decided": 40
-    },
-    "V1 with the label alone a fall (the reading set aside)": {
-     "not decided": 40
-    },
-    "V2 met, archives": 0,
-    "the fitted need, median": 0.131,
-    "resolved lakes where T1 and the null differ, median": 0
-   },
-   "stocking chance 0.1 a year": {
-    "V1 verdicts, of 40 archives": {
-     "not decided": 40
-    },
-    "V1 with the label alone a fall (the reading set aside)": {
-     "not decided": 37,
-     "supported": 3
-    },
-    "V2 met, archives": 3,
-    "the fitted need, median": 0.142,
-    "resolved lakes where T1 and the null differ, median": 5
-   },
-   "stocking chance 0.03 a year": {
-    "V1 verdicts, of 40 archives": {
-     "not decided": 30,
-     "supported": 7,
-     "refuted unless connected waters": 3
-    },
-    "V1 with the label alone a fall (the reading set aside)": {
-     "not decided": 24,
-     "supported": 14,
-     "refuted unless connected waters": 2
-    },
-    "V2 met, archives": 6,
-    "the fitted need, median": 0.15,
-    "resolved lakes where T1 and the null differ, median": 21
-   },
-   "stocking chance 0.0 a year": {
-    "V1 verdicts, of 40 archives": {
-     "not decided": 18,
-     "supported": 21,
-     "refuted unless connected waters": 1
-    },
-    "V1 with the label alone a fall (the reading set aside)": {
-     "not decided": 18,
-     "supported": 21,
-     "refuted unless connected waters": 1
-    },
-    "V2 met, archives": 3,
-    "the fitted need, median": 0.148,
-    "resolved lakes where T1 and the null differ, median": 39
-   }
-  },
-  "renewal unseen": {
-   "stocking chance 0.3 a year": {
-    "V1 verdicts, of 40 archives": {
-     "not decided": 40
-    },
-    "V1 with the label alone a fall (the reading set aside)": {
-     "not decided": 40
-    },
-    "V2 met, archives": 0,
-    "the fitted need, median": 0.124,
-    "resolved lakes where T1 and the null differ, median": 0
-   },
-   "stocking chance 0.1 a year": {
-    "V1 verdicts, of 40 archives": {
-     "not decided": 40
-    },
-    "V1 with the label alone a fall (the reading set aside)": {
-     "not decided": 40
-    },
-    "V2 met, archives": 0,
-    "the fitted need, median": 0.122,
-    "resolved lakes where T1 and the null differ, median": 1
-   },
-   "stocking chance 0.03 a year": {
-    "V1 verdicts, of 40 archives": {
-     "not decided": 40
-    },
-    "V1 with the label alone a fall (the reading set aside)": {
-     "not decided": 40
-    },
-    "V2 met, archives": 0,
-    "the fitted need, median": 0.118,
-    "resolved lakes where T1 and the null differ, median": 2
-   },
-   "stocking chance 0.0 a year": {
-    "V1 verdicts, of 40 archives": {
-     "not decided": 40
-    },
-    "V1 with the label alone a fall (the reading set aside)": {
-     "not decided": 40
-    },
-    "V2 met, archives": 1,
-    "the fitted need, median": 0.118,
-    "resolved lakes where T1 and the null differ, median": 3
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": [
+     0.347,
+     0.399
+    ],
+    "no need fitted": 0,
+    "resolved lakes below the need, median": 38
    }
   },
   "relabelled": {
-   "stocking chance 0.3 a year": {
-    "V1 verdicts, of 40 archives": {
+   "family": "T1 holds",
+   "speed 0.3": {
+    "V1": {
      "not decided": 40
     },
-    "V1 with the label alone a fall (the reading set aside)": {
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": [
+     0.37,
+     0.425
+    ],
+    "no need fitted": 30,
+    "resolved lakes below the need, median": 0,
+    "V1 with the label alone a fall": {
+     "not decided": 40
+    }
+   },
+   "speed 0.1": {
+    "V1": {
      "not decided": 40
     },
-    "V2 met, archives": 0,
-    "the fitted need, median": 0.344,
-    "resolved lakes where T1 and the null differ, median": 2
-   },
-   "stocking chance 0.1 a year": {
-    "V1 verdicts, of 40 archives": {
-     "not decided": 37,
-     "supported": 3
-    },
-    "V1 with the label alone a fall (the reading set aside)": {
-     "not decided": 28,
-     "supported": 12
-    },
-    "V2 met, archives": 1,
-    "the fitted need, median": 0.34,
-    "resolved lakes where T1 and the null differ, median": 10
-   },
-   "stocking chance 0.03 a year": {
-    "V1 verdicts, of 40 archives": {
-     "supported": 35,
-     "not decided": 5
-    },
-    "V1 with the label alone a fall (the reading set aside)": {
-     "supported": 39,
-     "not decided": 1
-    },
-    "V2 met, archives": 1,
-    "the fitted need, median": 0.349,
-    "resolved lakes where T1 and the null differ, median": 27
-   },
-   "stocking chance 0.0 a year": {
-    "V1 verdicts, of 40 archives": {
-     "supported": 40
-    },
-    "V1 with the label alone a fall (the reading set aside)": {
-     "supported": 40
-    },
-    "V2 met, archives": 3,
-    "the fitted need, median": 0.344,
-    "resolved lakes where T1 and the null differ, median": 44
-   }
-  },
-  "compensates, relabelled": {
-   "stocking chance 0.3 a year": {
-    "V1 verdicts, of 40 archives": {
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": [
+     0.345,
+     0.383
+    ],
+    "no need fitted": 0,
+    "resolved lakes below the need, median": 3,
+    "V1 with the label alone a fall": {
      "not decided": 40
-    },
-    "V1 with the label alone a fall (the reading set aside)": {
-     "not decided": 40
-    },
-    "V2 met, archives": 0,
-    "the fitted need, median": 0.364,
-    "resolved lakes where T1 and the null differ, median": 3
+    }
    },
-   "stocking chance 0.1 a year": {
-    "V1 verdicts, of 40 archives": {
-     "not decided": 35,
-     "refuted unless connected waters": 5
-    },
-    "V1 with the label alone a fall (the reading set aside)": {
-     "not decided": 34,
-     "refuted unless connected waters": 6
-    },
-    "V2 met, archives": 0,
-    "the fitted need, median": 0.351,
-    "resolved lakes where T1 and the null differ, median": 7
-   },
-   "stocking chance 0.03 a year": {
-    "V1 verdicts, of 40 archives": {
-     "refuted unless connected waters": 11,
-     "not decided": 29
-    },
-    "V1 with the label alone a fall (the reading set aside)": {
-     "refuted unless connected waters": 13,
-     "not decided": 27
-    },
-    "V2 met, archives": 1,
-    "the fitted need, median": 0.358,
-    "resolved lakes where T1 and the null differ, median": 8
-   },
-   "stocking chance 0.0 a year": {
-    "V1 verdicts, of 40 archives": {
-     "refuted unless connected waters": 21,
+   "speed 0.03": {
+    "V1": {
+     "supported": 21,
      "not decided": 19
     },
-    "V1 with the label alone a fall (the reading set aside)": {
-     "not decided": 19,
-     "refuted unless connected waters": 21
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 1,
+    "the fitted need: median, largest": [
+     0.34,
+     0.394
+    ],
+    "no need fitted": 0,
+    "resolved lakes below the need, median": 10,
+    "V1 with the label alone a fall": {
+     "supported": 21,
+     "not decided": 12,
+     "supported, contradicted by V2": 7
+    }
+   },
+   "speed 0.0": {
+    "V1": {
+     "supported": 38,
+     "not decided": 2
     },
-    "V2 met, archives": 2,
-    "the fitted need, median": 0.35,
-    "resolved lakes where T1 and the null differ, median": 10
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": [
+     0.34,
+     0.374
+    ],
+    "no need fitted": 0,
+    "resolved lakes below the need, median": 20,
+    "V1 with the label alone a fall": {
+     "supported": 30,
+     "supported, contradicted by V2": 10
+    }
+   }
+  },
+  "unrecorded": {
+   "family": "T1 holds",
+   "speed 0.3": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 1,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": [
+     0.332,
+     0.376
+    ],
+    "no need fitted": 7,
+    "resolved lakes below the need, median": 0
+   },
+   "speed 0.1": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 4,
+    "renewal below the need beyond the fit at 0.05 (reported)": 3,
+    "the fitted need: median, largest": [
+     0.344,
+     0.376
+    ],
+    "no need fitted": 0,
+    "resolved lakes below the need, median": 4
+   },
+   "speed 0.03": {
+    "V1": {
+     "supported": 23,
+     "supported, contradicted by V2": 3,
+     "not decided": 14
+    },
+    "V2 met": 6,
+    "renewal below the need beyond the fit at 0.05 (reported)": 2,
+    "the fitted need: median, largest": [
+     0.355,
+     0.388
+    ],
+    "no need fitted": 0,
+    "resolved lakes below the need, median": 15
+   },
+   "speed 0.0": {
+    "V1": {
+     "supported": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 1,
+    "the fitted need: median, largest": [
+     0.345,
+     0.393
+    ],
+    "no need fitted": 0,
+    "resolved lakes below the need, median": 26
    }
   },
   "unrecorded, read": {
-   "stocking chance 0.3 a year": {
-    "V1 verdicts, of 40 archives": {
+   "family": "T1 holds",
+   "speed 0.3": {
+    "V1": {
      "not decided": 40
     },
-    "V1 with the label alone a fall (the reading set aside)": {
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 1,
+    "the fitted need: median, largest": [
+     0.356,
+     0.459
+    ],
+    "no need fitted": 25,
+    "resolved lakes below the need, median": 0
+   },
+   "speed 0.1": {
+    "V1": {
      "not decided": 40
     },
-    "V2 met, archives": 0,
-    "the fitted need, median": 0.342,
-    "resolved lakes where T1 and the null differ, median": 3
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 2,
+    "the fitted need: median, largest": [
+     0.347,
+     0.385
+    ],
+    "no need fitted": 0,
+    "resolved lakes below the need, median": 4
    },
-   "stocking chance 0.1 a year": {
-    "V1 verdicts, of 40 archives": {
-     "supported": 5,
-     "not decided": 35
+   "speed 0.03": {
+    "V1": {
+     "supported": 29,
+     "not decided": 11
     },
-    "V1 with the label alone a fall (the reading set aside)": {
-     "supported": 9,
-     "not decided": 31
-    },
-    "V2 met, archives": 0,
-    "the fitted need, median": 0.343,
-    "resolved lakes where T1 and the null differ, median": 14
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": [
+     0.346,
+     0.381
+    ],
+    "no need fitted": 0,
+    "resolved lakes below the need, median": 14
    },
-   "stocking chance 0.03 a year": {
-    "V1 verdicts, of 40 archives": {
-     "supported": 38,
-     "not decided": 2
-    },
-    "V1 with the label alone a fall (the reading set aside)": {
-     "supported": 38,
-     "not decided": 2
-    },
-    "V2 met, archives": 2,
-    "the fitted need, median": 0.35,
-    "resolved lakes where T1 and the null differ, median": 36
-   },
-   "stocking chance 0.0 a year": {
-    "V1 verdicts, of 40 archives": {
+   "speed 0.0": {
+    "V1": {
      "supported": 40
     },
-    "V1 with the label alone a fall (the reading set aside)": {
-     "supported": 40
-    },
-    "V2 met, archives": 6,
-    "the fitted need, median": 0.347,
-    "resolved lakes where T1 and the null differ, median": 56
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 1,
+    "the fitted need: median, largest": [
+     0.345,
+     0.378
+    ],
+    "no need fitted": 0,
+    "resolved lakes below the need, median": 25
    }
   },
-  "survival compensates, 900 lakes an archive": {
-   "stocking chance 0.03 a year": {
-    "refuted": 35,
-    "refuted unless connected waters": 5
+  "open": {
+   "family": "T1 holds",
+   "speed 0.3": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": [
+     0.402,
+     0.418
+    ],
+    "no need fitted": 37,
+    "resolved lakes below the need, median": 0
    },
-   "stocking chance 0.0 a year": {
-    "refuted": 32,
-    "refuted unless connected waters": 8
+   "speed 0.1": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": [
+     0.337,
+     0.386
+    ],
+    "no need fitted": 5,
+    "resolved lakes below the need, median": 1
+   },
+   "speed 0.03": {
+    "V1": {
+     "not decided": 38,
+     "supported": 2
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 3,
+    "the fitted need: median, largest": [
+     0.341,
+     0.379
+    ],
+    "no need fitted": 0,
+    "resolved lakes below the need, median": 5
+   },
+   "speed 0.0": {
+    "V1": {
+     "not decided": 25,
+     "supported": 15
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": [
+     0.332,
+     0.376
+    ],
+    "no need fitted": 0,
+    "resolved lakes below the need, median": 11
+   }
+  },
+  "episodic": {
+   "family": "T1 holds",
+   "speed 0.3": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": [
+     0.445,
+     0.514
+    ],
+    "no need fitted": 0,
+    "resolved lakes below the need, median": 0
+   },
+   "speed 0.1": {
+    "V1": {
+     "supported": 37,
+     "not decided": 3
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": [
+     0.5,
+     0.543
+    ],
+    "no need fitted": 0,
+    "resolved lakes below the need, median": 16
+   },
+   "speed 0.03": {
+    "V1": {
+     "supported": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": [
+     0.509,
+     0.567
+    ],
+    "no need fitted": 0,
+    "resolved lakes below the need, median": 57
+   },
+   "speed 0.0": {
+    "V1": {
+     "supported": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": [
+     0.517,
+     0.56
+    ],
+    "no need fitted": 0,
+    "resolved lakes below the need, median": 106
+   }
+  },
+  "unsurveyed": {
+   "family": "T1 holds",
+   "speed 0.3": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": [
+     0.36,
+     0.406
+    ],
+    "no need fitted": 37,
+    "resolved lakes below the need, median": 0
+   },
+   "speed 0.1": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 2,
+    "the fitted need: median, largest": [
+     0.343,
+     0.374
+    ],
+    "no need fitted": 3,
+    "resolved lakes below the need, median": 0
+   },
+   "speed 0.03": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 3,
+    "the fitted need: median, largest": [
+     0.341,
+     0.383
+    ],
+    "no need fitted": 0,
+    "resolved lakes below the need, median": 0
+   },
+   "speed 0.0": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 1,
+    "the fitted need: median, largest": [
+     0.342,
+     0.385
+    ],
+    "no need fitted": 0,
+    "resolved lakes below the need, median": 0
+   }
+  },
+  "static labels": {
+   "family": "T1 holds",
+   "speed 0.3": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 1,
+    "the fitted need: median, largest": [
+     0.341,
+     0.392
+    ],
+    "no need fitted": 13,
+    "resolved lakes below the need, median": 0
+   },
+   "speed 0.1": {
+    "V1": {
+     "not decided": 39,
+     "supported": 1
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 1,
+    "the fitted need: median, largest": [
+     0.343,
+     0.388
+    ],
+    "no need fitted": 0,
+    "resolved lakes below the need, median": 5
+   },
+   "speed 0.03": {
+    "V1": {
+     "supported": 34,
+     "not decided": 6
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 4,
+    "the fitted need: median, largest": [
+     0.35,
+     0.381
+    ],
+    "no need fitted": 0,
+    "resolved lakes below the need, median": 15
+   },
+   "speed 0.0": {
+    "V1": {
+     "supported": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": [
+     0.341,
+     0.391
+    ],
+    "no need fitted": 0,
+    "resolved lakes below the need, median": 24
+   }
+  },
+  "survival compensates": {
+   "family": "need misplaced",
+   "speed 0.3": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 2,
+    "the fitted need: median, largest": [
+     0.385,
+     0.442
+    ],
+    "no need fitted": 31,
+    "resolved lakes below the need, median": 0
+   },
+   "speed 0.1": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": [
+     0.358,
+     0.45
+    ],
+    "no need fitted": 9,
+    "resolved lakes below the need, median": 0
+   },
+   "speed 0.03": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 5,
+    "the fitted need: median, largest": [
+     0.361,
+     0.404
+    ],
+    "no need fitted": 2,
+    "resolved lakes below the need, median": 0
+   },
+   "speed 0.0": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 5,
+    "the fitted need: median, largest": [
+     0.36,
+     0.448
+    ],
+    "no need fitted": 2,
+    "resolved lakes below the need, median": 0
+   }
+  },
+  "compensates, relabelled": {
+   "family": "need misplaced",
+   "speed 0.3": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": [
+     0.365,
+     0.485
+    ],
+    "no need fitted": 28,
+    "resolved lakes below the need, median": 0,
+    "V1 with the label alone a fall": {
+     "not decided": 40
+    }
+   },
+   "speed 0.1": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 3,
+    "the fitted need: median, largest": [
+     0.351,
+     0.487
+    ],
+    "no need fitted": 9,
+    "resolved lakes below the need, median": 0,
+    "V1 with the label alone a fall": {
+     "not decided": 40
+    }
+   },
+   "speed 0.03": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 2,
+    "the fitted need: median, largest": [
+     0.359,
+     0.418
+    ],
+    "no need fitted": 3,
+    "resolved lakes below the need, median": 0,
+    "V1 with the label alone a fall": {
+     "not decided": 40
+    }
+   },
+   "speed 0.0": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 5,
+    "the fitted need: median, largest": [
+     0.346,
+     0.412
+    ],
+    "no need fitted": 3,
+    "resolved lakes below the need, median": 0,
+    "V1 with the label alone a fall": {
+     "not decided": 40
+    }
+   }
+  },
+  "need falls": {
+   "family": "need misplaced",
+   "speed 0.3": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 2,
+    "the fitted need: median, largest": [
+     0.351,
+     0.391
+    ],
+    "no need fitted": 32,
+    "resolved lakes below the need, median": 0
+   },
+   "speed 0.1": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 29,
+    "the fitted need: median, largest": [
+     0.34,
+     0.391
+    ],
+    "no need fitted": 0,
+    "resolved lakes below the need, median": 1
+   },
+   "speed 0.03": {
+    "V1": {
+     "not decided": 36,
+     "supported": 4
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 40,
+    "the fitted need: median, largest": [
+     0.34,
+     0.378
+    ],
+    "no need fitted": 0,
+    "resolved lakes below the need, median": 8
+   },
+   "speed 0.0": {
+    "V1": {
+     "not decided": 14,
+     "supported": 26
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 39,
+    "the fitted need: median, largest": [
+     0.342,
+     0.39
+    ],
+    "no need fitted": 0,
+    "resolved lakes below the need, median": 15
+   }
+  },
+  "need falls far": {
+   "family": "need misplaced",
+   "speed 0.3": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 12,
+    "the fitted need: median, largest": [
+     0.372,
+     0.408
+    ],
+    "no need fitted": 23,
+    "resolved lakes below the need, median": 0
+   },
+   "speed 0.1": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 38,
+    "the fitted need: median, largest": [
+     0.345,
+     0.392
+    ],
+    "no need fitted": 0,
+    "resolved lakes below the need, median": 1
+   },
+   "speed 0.03": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 40,
+    "the fitted need: median, largest": [
+     0.34,
+     0.396
+    ],
+    "no need fitted": 0,
+    "resolved lakes below the need, median": 5
+   },
+   "speed 0.0": {
+    "V1": {
+     "not decided": 39,
+     "supported": 1
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 40,
+    "the fitted need: median, largest": [
+     0.348,
+     0.373
+    ],
+    "no need fitted": 0,
+    "resolved lakes below the need, median": 10
+   }
+  },
+  "weak depensation": {
+   "family": "need misplaced",
+   "speed 0.3": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": null,
+    "no need fitted": 40,
+    "resolved lakes below the need, median": null
+   },
+   "speed 0.1": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": [
+     0.15,
+     0.203
+    ],
+    "no need fitted": 20,
+    "resolved lakes below the need, median": 2
+   },
+   "speed 0.03": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 1,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": [
+     0.145,
+     0.183
+    ],
+    "no need fitted": 1,
+    "resolved lakes below the need, median": 7
+   },
+   "speed 0.0": {
+    "V1": {
+     "not decided": 35,
+     "refuted unless": 5
+    },
+    "V2 met": 2,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": [
+     0.155,
+     0.191
+    ],
+    "no need fitted": 0,
+    "resolved lakes below the need, median": 14
+   }
+  },
+  "renewal below the floor": {
+   "family": "need misplaced",
+   "speed 0.3": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": [
+     0.337,
+     0.382
+    ],
+    "no need fitted": 35,
+    "resolved lakes below the need, median": 0
+   },
+   "speed 0.1": {
+    "V1": {
+     "not decided": 36,
+     "refuted unless": 4
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": [
+     0.332,
+     0.362
+    ],
+    "no need fitted": 0,
+    "resolved lakes below the need, median": 5
+   },
+   "speed 0.03": {
+    "V1": {
+     "refuted": 40
+    },
+    "V2 met": 1,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": [
+     0.344,
+     0.362
+    ],
+    "no need fitted": 0,
+    "resolved lakes below the need, median": 42
+   },
+   "speed 0.0": {
+    "V1": {
+     "refuted": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": [
+     0.35,
+     0.363
+    ],
+    "no need fitted": 0,
+    "resolved lakes below the need, median": 97
+   }
+  },
+  "no need": {
+   "family": "no need",
+   "speed 0.3": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": null,
+    "no need fitted": 40,
+    "resolved lakes below the need, median": null
+   },
+   "speed 0.1": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": null,
+    "no need fitted": 40,
+    "resolved lakes below the need, median": null
+   },
+   "speed 0.03": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": null,
+    "no need fitted": 40,
+    "resolved lakes below the need, median": null
+   },
+   "speed 0.0": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": null,
+    "no need fitted": 40,
+    "resolved lakes below the need, median": null
+   }
+  },
+  "lakes differ 0.5": {
+   "family": "no need",
+   "speed 0.3": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": null,
+    "no need fitted": 40,
+    "resolved lakes below the need, median": null
+   },
+   "speed 0.1": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": null,
+    "no need fitted": 40,
+    "resolved lakes below the need, median": null
+   },
+   "speed 0.03": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": null,
+    "no need fitted": 40,
+    "resolved lakes below the need, median": null
+   },
+   "speed 0.0": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": null,
+    "no need fitted": 40,
+    "resolved lakes below the need, median": null
+   }
+  },
+  "lakes differ 0.7": {
+   "family": "no need",
+   "speed 0.3": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": null,
+    "no need fitted": 40,
+    "resolved lakes below the need, median": null
+   },
+   "speed 0.1": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": null,
+    "no need fitted": 40,
+    "resolved lakes below the need, median": null
+   },
+   "speed 0.03": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 1,
+    "the fitted need: median, largest": [
+     0.072,
+     0.079
+    ],
+    "no need fitted": 37,
+    "resolved lakes below the need, median": 2
+   },
+   "speed 0.0": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 2,
+    "the fitted need: median, largest": [
+     0.064,
+     0.081
+    ],
+    "no need fitted": 27,
+    "resolved lakes below the need, median": 7
+   }
+  },
+  "lakes differ 1.0": {
+   "family": "no need",
+   "speed 0.3": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": null,
+    "no need fitted": 40,
+    "resolved lakes below the need, median": null
+   },
+   "speed 0.1": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": [
+     0.102,
+     0.154
+    ],
+    "no need fitted": 34,
+    "resolved lakes below the need, median": 2
+   },
+   "speed 0.03": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 5,
+    "the fitted need: median, largest": [
+     0.071,
+     0.097
+    ],
+    "no need fitted": 4,
+    "resolved lakes below the need, median": 4
+   },
+   "speed 0.0": {
+    "V1": {
+     "not decided": 35,
+     "refuted unless": 5
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 9,
+    "the fitted need: median, largest": [
+     0.068,
+     0.085
+    ],
+    "no need fitted": 0,
+    "resolved lakes below the need, median": 12
+   }
+  },
+  "lakes differ 1.5": {
+   "family": "no need",
+   "speed 0.3": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": null,
+    "no need fitted": 40,
+    "resolved lakes below the need, median": null
+   },
+   "speed 0.1": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 2,
+    "the fitted need: median, largest": [
+     0.088,
+     0.161
+    ],
+    "no need fitted": 1,
+    "resolved lakes below the need, median": 1
+   },
+   "speed 0.03": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 12,
+    "the fitted need: median, largest": [
+     0.081,
+     0.122
+    ],
+    "no need fitted": 0,
+    "resolved lakes below the need, median": 7
+   },
+   "speed 0.0": {
+    "V1": {
+     "not decided": 30,
+     "refuted unless": 10
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 18,
+    "the fitted need: median, largest": [
+     0.082,
+     0.116
+    ],
+    "no need fitted": 0,
+    "resolved lakes below the need, median": 18
+   }
+  },
+  "general decline": {
+   "family": "no need",
+   "speed 0.3": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": null,
+    "no need fitted": 40,
+    "resolved lakes below the need, median": null
+   },
+   "speed 0.1": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": null,
+    "no need fitted": 40,
+    "resolved lakes below the need, median": null
+   },
+   "speed 0.03": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": null,
+    "no need fitted": 40,
+    "resolved lakes below the need, median": null
+   },
+   "speed 0.0": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": null,
+    "no need fitted": 40,
+    "resolved lakes below the need, median": null
+   }
+  },
+  "no need, relabelled": {
+   "family": "no need",
+   "speed 0.3": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": null,
+    "no need fitted": 40,
+    "resolved lakes below the need, median": null,
+    "V1 with the label alone a fall": {
+     "not decided": 40
+    }
+   },
+   "speed 0.1": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": null,
+    "no need fitted": 40,
+    "resolved lakes below the need, median": null,
+    "V1 with the label alone a fall": {
+     "not decided": 40
+    }
+   },
+   "speed 0.03": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": [
+     0.104,
+     0.104
+    ],
+    "no need fitted": 39,
+    "resolved lakes below the need, median": 2,
+    "V1 with the label alone a fall": {
+     "not decided": 40
+    }
+   },
+   "speed 0.0": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 1,
+    "the fitted need: median, largest": [
+     0.061,
+     0.077
+    ],
+    "no need fitted": 33,
+    "resolved lakes below the need, median": 3,
+    "V1 with the label alone a fall": {
+     "not decided": 40
+    }
+   }
+  },
+  "no need, unsurveyed": {
+   "family": "no need",
+   "speed 0.3": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": null,
+    "no need fitted": 40,
+    "resolved lakes below the need, median": null
+   },
+   "speed 0.1": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": null,
+    "no need fitted": 40,
+    "resolved lakes below the need, median": null
+   },
+   "speed 0.03": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": null,
+    "no need fitted": 40,
+    "resolved lakes below the need, median": null
+   },
+   "speed 0.0": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": null,
+    "no need fitted": 40,
+    "resolved lakes below the need, median": null
+   }
+  },
+  "renewal unseen": {
+   "family": "no need",
+   "speed 0.3": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": null,
+    "no need fitted": 40,
+    "resolved lakes below the need, median": null
+   },
+   "speed 0.1": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": null,
+    "no need fitted": 40,
+    "resolved lakes below the need, median": null
+   },
+   "speed 0.03": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": null,
+    "no need fitted": 40,
+    "resolved lakes below the need, median": null
+   },
+   "speed 0.0": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": null,
+    "no need fitted": 40,
+    "resolved lakes below the need, median": null
+   }
+  },
+  "floor by chance": {
+   "family": "no need",
+   "speed 0.3": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 5,
+    "the fitted need: median, largest": [
+     4.263,
+     5.889
+    ],
+    "no need fitted": 0,
+    "resolved lakes below the need, median": 1
+   },
+   "speed 0.1": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 2,
+    "renewal below the need beyond the fit at 0.05 (reported)": 6,
+    "the fitted need: median, largest": [
+     4.298,
+     5.599
+    ],
+    "no need fitted": 0,
+    "resolved lakes below the need, median": 1
+   },
+   "speed 0.03": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 1,
+    "renewal below the need beyond the fit at 0.05 (reported)": 3,
+    "the fitted need: median, largest": [
+     4.399,
+     6.426
+    ],
+    "no need fitted": 0,
+    "resolved lakes below the need, median": 1
+   },
+   "speed 0.0": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 2,
+    "renewal below the need beyond the fit at 0.05 (reported)": 3,
+    "the fitted need: median, largest": [
+     4.334,
+     7.334
+    ],
+    "no need fitted": 0,
+    "resolved lakes below the need, median": 1
+   }
+  },
+  "episodic, no need": {
+   "family": "no need",
+   "speed 0.3": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 1,
+    "the fitted need: median, largest": [
+     0.525,
+     0.897
+    ],
+    "no need fitted": 0,
+    "resolved lakes below the need, median": 0
+   },
+   "speed 0.1": {
+    "V1": {
+     "not decided": 39,
+     "refuted unless": 1
+    },
+    "V2 met": 2,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": [
+     0.64,
+     0.91
+    ],
+    "no need fitted": 0,
+    "resolved lakes below the need, median": 7
+   },
+   "speed 0.03": {
+    "V1": {
+     "refuted": 4,
+     "refuted unless": 29,
+     "not decided": 7
+    },
+    "V2 met": 8,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": [
+     0.673,
+     0.9
+    ],
+    "no need fitted": 0,
+    "resolved lakes below the need, median": 26
+   },
+   "speed 0.0": {
+    "V1": {
+     "refuted": 16,
+     "refuted unless": 21,
+     "not decided": 3
+    },
+    "V2 met": 14,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": [
+     0.658,
+     0.835
+    ],
+    "no need fitted": 0,
+    "resolved lakes below the need, median": 49
+   }
+  },
+  "episodic, lakes differ": {
+   "family": "no need",
+   "speed 0.3": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": [
+     0.217,
+     0.224
+    ],
+    "no need fitted": 36,
+    "resolved lakes below the need, median": 0
+   },
+   "speed 0.1": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": [
+     0.191,
+     0.304
+    ],
+    "no need fitted": 0,
+    "resolved lakes below the need, median": 2
+   },
+   "speed 0.03": {
+    "V1": {
+     "not decided": 37,
+     "refuted unless": 3
+    },
+    "V2 met": 3,
+    "renewal below the need beyond the fit at 0.05 (reported)": 1,
+    "the fitted need: median, largest": [
+     0.211,
+     0.269
+    ],
+    "no need fitted": 0,
+    "resolved lakes below the need, median": 11
+   },
+   "speed 0.0": {
+    "V1": {
+     "refuted unless": 28,
+     "not decided": 10,
+     "refuted": 2
+    },
+    "V2 met": 7,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": [
+     0.22,
+     0.285
+    ],
+    "no need fitted": 0,
+    "resolved lakes below the need, median": 26
+   }
+  },
+  "renewal stops after": {
+   "family": "no need",
+   "speed 0.3": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": null,
+    "no need fitted": 40,
+    "resolved lakes below the need, median": null
+   },
+   "speed 0.1": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": null,
+    "no need fitted": 40,
+    "resolved lakes below the need, median": null
+   },
+   "speed 0.03": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": [
+     0.065,
+     0.065
+    ],
+    "no need fitted": 39,
+    "resolved lakes below the need, median": 3
+   },
+   "speed 0.0": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": [
+     0.072,
+     0.091
+    ],
+    "no need fitted": 28,
+    "resolved lakes below the need, median": 8
+   }
+  },
+  "no renewal in some": {
+   "family": "no need",
+   "speed 0.3": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": [
+     0.247,
+     0.247
+    ],
+    "no need fitted": 38,
+    "resolved lakes below the need, median": 0
+   },
+   "speed 0.1": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 5,
+    "the fitted need: median, largest": [
+     0.142,
+     0.192
+    ],
+    "no need fitted": 0,
+    "resolved lakes below the need, median": 0
+   },
+   "speed 0.03": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 13,
+    "the fitted need: median, largest": [
+     0.136,
+     0.171
+    ],
+    "no need fitted": 0,
+    "resolved lakes below the need, median": 0
+   },
+   "speed 0.0": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 19,
+    "the fitted need: median, largest": [
+     0.129,
+     0.172
+    ],
+    "no need fitted": 0,
+    "resolved lakes below the need, median": 1
+   }
+  },
+  "half need": {
+   "family": "mixed",
+   "speed 0.3": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 0,
+    "the fitted need: median, largest": null,
+    "no need fitted": 40,
+    "resolved lakes below the need, median": null
+   },
+   "speed 0.1": {
+    "V1": {
+     "not decided": 40
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 4,
+    "the fitted need: median, largest": [
+     0.242,
+     0.261
+    ],
+    "no need fitted": 30,
+    "resolved lakes below the need, median": 1
+   },
+   "speed 0.03": {
+    "V1": {
+     "not decided": 38,
+     "supported": 2
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 12,
+    "the fitted need: median, largest": [
+     0.219,
+     0.269
+    ],
+    "no need fitted": 5,
+    "resolved lakes below the need, median": 6
+   },
+   "speed 0.0": {
+    "V1": {
+     "not decided": 18,
+     "supported": 22
+    },
+    "V2 met": 0,
+    "renewal below the need beyond the fit at 0.05 (reported)": 7,
+    "the fitted need: median, largest": [
+     0.222,
+     0.299
+    ],
+    "no need fitted": 3,
+    "resolved lakes below the need, median": 11
+   }
+  },
+  "weak depensation, 900 lakes an archive": {
+   "speed 0.03": {
+    "not decided": 23,
+    "refuted unless": 14,
+    "refuted": 2,
+    "supported": 1
+   },
+   "speed 0.0": {
+    "not decided": 6,
+    "refuted": 5,
+    "refuted unless": 28,
+    "supported": 1
    }
   }
  },
- "checks": 72,
+ "checks": 198,
  "checks by kind": {
-  "rules: V1": 17,
-  "rules: the point": 1,
-  "rules: the scope": 4,
-  "rules: the fate": 6,
-  "rules: renewal pending": 2,
-  "rules: V2": 3,
-  "rules: the reference": 1,
-  "rules: the confounds": 3,
-  "rules: the tail": 1,
-  "rules: branch A": 3,
-  "rules: branch B": 4,
-  "the reader": 4,
-  "the run": 5,
-  "worlds": 18
+  "rules: V1": 16,
+  "rules: the separation": 2,
+  "rules: the premise": 4,
+  "rules: the ratio test": 1,
+  "rules: the scope": 3,
+  "rules: the fate": 14,
+  "rules: renewal pending": 6,
+  "rules: the reference": 2,
+  "rules: V2": 4,
+  "rules: the confounds": 4,
+  "rules: V1 and V2": 1,
+  "rules: static labels": 1,
+  "rules: the tail": 3,
+  "rules: the renewal report": 1,
+  "the need": 7,
+  "the reader": 11,
+  "the run": 7,
+  "the chain": 7,
+  "worlds: confounds": 16,
+  "worlds: need misplaced": 20,
+  "worlds: no need": 56,
+  "worlds: power": 9,
+  "worlds: the renewal report": 3
  },
  "failed": [],
- "CPU seconds": 102.9,
+ "CPU seconds": 168.1,
  "code hashes": {
-  "experiments/need-measured-in-advance/t1n.py": "eccd32b8b5298d92e84e48834b8d45148ec40291ebde601a6c7653cc06504e1b",
-  "experiments/need-measured-in-advance/reader.py": "f825cbf910f440ede7348ee4cc656ecc0f165cb437273a31a41dde0513b6eb2d",
-  "experiments/need-measured-in-advance/run.py": "ce3bf5aac9f126940db067be21e75c52ee49a842fa90bacd5c092535c8e5a936",
-  "experiments/need-measured-in-advance/dry_run.py": "2149bfc652c1293c0374161b7868b2a5c100c382936ff36d4be177068db8bf15"
+  "experiments/need-measured-in-advance/t1n.py": "f883a74f26693a4186c127271eff256bb2bdc347796acd00e018510cffe5dace",
+  "experiments/need-measured-in-advance/reader.py": "628933493b8284acd4f2f37858105fdb5a23b36affc26ab2295863661605b9a1",
+  "experiments/need-measured-in-advance/run.py": "54cac65979c69cad6d3611fbfe328d53a136ca3cb6dcdafc1e7959c6abc6d5a0",
+  "experiments/need-measured-in-advance/dry_run.py": "880de3149016c5ebdb4f9b6a85d205adb180a287cac7a74ef0566fbf9f4ee69d",
+  "experiments/need-measured-in-advance/layout.json": "8d3bd5574ecba8b22836c5d78b0ad7327f34ec6298759d74287d30f4b5d18139"
  },
  "code unchanged during the run": true
 }

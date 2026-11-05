@@ -1,49 +1,33 @@
 """T1N's dry run (DESIGN.md, section 8): synthetic archives of walleye lakes in worlds with and without a need,
-read by the frozen rules; the reader on synthetic files in the assumed layout; and the rules on scripted
-cases. No value of the archive is read, and nothing is downloaded.
+read by the frozen rules; the rules on scripted lakes; the reader and the run on synthetic files in the assumed
+layout; and the freeze's chain in stand-in git repositories. No value of the archive is read, nothing is
+downloaded, and no model is called.
 
     python3 -B tools/research/gate.py hold -- python3 -B experiments/need-measured-in-advance/dry_run.py
                                        # writes results/dry-run.json
 
-A synthetic lake, year by year from 1990 to 2025: spring adults per acre x; fall age-0 per mile
-r = R(x) e^(s_r z), R(x) = A x^q / (K^q + x^q); next spring x' = S x - H + C r(t - 3), the draw H = e x (the
-lake's exploitation, part of it tribal and recorded, the angling part recorded only in creel years);
-the recorders estimate adults every 3 to 5 years (log-normal error, CV 0.25, and a 95% interval) and
-survey age-0 most years; managers cut the harvest of a lake that falls below a level and stock it, recording
-the stocking and changing its label, except where a world stocks unrecorded. Worlds:
-    need          q = 3: renewal stops below a need, as T1 has it (the primary world)
-    no need       q = 1: renewal goes on at every level above zero
-    needs vary    q = 3, each lake's K drawn about the common one (a factor of 2)
-    need rises    q = 3, K doubled from 2013: the need moved after the fit, the way MQ3's regimes moved
-    need falls    q = 3, K halved from 2013: the fitted need too high afterwards
-    unrecorded    q = 3, a third of the lakes that fall stocked with nothing recorded, the label kept
-    open          q = 3, adults arriving from connected waters every year, unmeasured giving from beyond
-    survival compensates   q = 3 for age-0, but the adults they make rise as age-0^0.3: renewal of adults
-                  does not stop where the age-0 surveys say, so the need is read at the wrong stage
-    episodic      q = 1.5 and renewal's spread doubled (1.6): below the need renewal is rare, not stopped,
-                  and a strong year class can bring a lake back with nothing given from beyond
-    renewal unseen   q = 1, renewal goes on at every level, but the survey catches age-0 in proportion to
-                  x / (x + 0.5), so the need is measured where renewal does not stop
-    relabelled    the need world, with managers relabelling and stocking lakes at 0.03 a year from 2013
-                  whatever the stock: a programme, not a fall
-    compensates, relabelled   survival compensates (T1 false), relabelled the same way
-    unrecorded, read   the unrecorded world, with the other stocking records (R5b) read and holding them
-A lake is a recorded seepage lake (closed) with chance 0.4; the connected waters of the open world reach
-only the others. The other stocking records are read, and empty, in every world but unrecorded, where they
-are not read, and unrecorded, read.
-In every world a lake loses nine tenths of its adults in a year with chance KNOCK (a winterkill or
-summerkill), which puts lakes below the need whatever the need's cause.
-Each world is run at four speeds of the managers' response (STOCK_SPEEDS), which no record gives before
-the data: how fast falling lakes are stocked and relabelled, and so leave the test. Standard library only;
+A synthetic lake, year by year from 1990 to 2025: spring adults per acre x; fall age-0 per mile r = R(x) e^(s z),
+R(x) = A x^q / (K^q + x^q); next spring x' = S x - h + C r(t - 3), with the lake's draw h = e x, cut to 0.05 x
+below one adult per acre, as safe harvests are, and in a year, with chance KNOCK, nine tenths of the adults
+lost (a winterkill). The recorders estimate adults every 3 to 5 years (log-normal error, CV 0.25, and a 95%
+interval) and survey age-0 most years; 40% of lakes are speared and their tribal harvest recorded, angling only
+in creel years; managers stock a lake below one adult per acre with a chance a year (the speed) and relabel it;
+a lake is a recorded seepage lake with chance 0.4. The worlds (WORLDS) are in three families: T1 holds (a
+need, renewal stopping below it), the need misplaced (where the surveys put a need, T1 is false, or holds only
+within the intervals' margin), and no need (renewal never stops with the level, though it may fail by chance or
+stop for another reason); a fourth, half the lakes with a need, is reported apart. Standard library only;
 seeded.
 """
 
+import contextlib
 import csv
 import hashlib
 import io
 import json
 import math
 import random
+import shutil
+import subprocess
 import sys
 import tempfile
 import time
@@ -57,41 +41,53 @@ import run as RUN                # noqa: E402
 
 SEED = "T1N-dry-run-2026-11-05"
 ARCHIVES = 40                   # synthetic archives a world and speed
-LAKES = 300                     # lakes an archive
-BIG = 900                       # lakes an archive in the report of a plain refutation's reach
+LAKES, BIG = 300, 900           # lakes an archive; and in the report of a plain refutation's reach
 YEARS = range(1990, 2026)
-A, K, S, C = 60.0, 1.5, 0.70, 0.03     # with these, a lake exploited above 0.3 a year has no level it keeps
-SIGMA_R, CV = 0.8, 0.25
+A, K, S, C = 60.0, 1.5, 0.70, 0.03     # with these, a lake exploited above 0.3 a year keeps no level
+SIGMA_R, CV, KNOCK = 0.8, 0.25, 0.02
+STOCK_BELOW, CUT = 1.0, 0.05    # managers stock a lake below this many adults per acre, and cut its draw to CUT x
+STOCK_SPEEDS = (0.3, 0.1, 0.03, 0.0)
+NO_NEED_SUPPORT_MAX = 5         # of 40: a level of 0.05 exceeds 5 supports in 40 archives with chance 0.014
+ALPHA_REPORT = 0.05             # the renewal report counted as beyond the fit at this chance (reported, no verdict)
+FROZEN_FILES = ("t1n.py", "reader.py", "run.py", "dry_run.py", "layout.json")   # the files the dry run runs with
 WORLDS = {
-    "need": dict(q=3, k_spread=0.0, k_after=1.0, unrecorded=0.0),
-    "no need": dict(q=1, k_spread=0.0, k_after=1.0, unrecorded=0.0),
-    "needs vary": dict(q=3, k_spread=math.log(2), k_after=1.0, unrecorded=0.0),
-    "need rises": dict(q=3, k_spread=0.0, k_after=2.0, unrecorded=0.0),
-    "need falls": dict(q=3, k_spread=0.0, k_after=0.5, unrecorded=0.0),
-    "unrecorded": dict(q=3, k_spread=0.0, k_after=1.0, unrecorded=1 / 3, other_read=False),
-    "open": dict(q=3, k_spread=0.0, k_after=1.0, unrecorded=0.0, immigration=0.15),
-    "survival compensates": dict(q=3, k_spread=0.0, k_after=1.0, unrecorded=0.0, gamma=0.3, c_gamma=0.40),
-    "episodic": dict(q=1.5, k_spread=0.0, k_after=1.0, unrecorded=0.0, sigma_r=1.6),
-    "renewal unseen": dict(q=1, k_spread=0.0, k_after=1.0, unrecorded=0.0, unseen=0.5),
-    "relabelled": dict(q=3, k_spread=0.0, k_after=1.0, unrecorded=0.0, relabel=0.03),
-    "compensates, relabelled": dict(q=3, k_spread=0.0, k_after=1.0, unrecorded=0.0, gamma=0.3, c_gamma=0.40,
-                                    relabel=0.03),
-    "unrecorded, read": dict(q=3, k_spread=0.0, k_after=1.0, unrecorded=1 / 3, other_read=True),
+    # T1 holds: renewal stops below a need
+    "need": dict(family="T1 holds", q=3),
+    "needs vary": dict(family="T1 holds", q=3, k_spread=math.log(2)),
+    "need rises": dict(family="T1 holds", q=3, k_after=2.0),
+    "relabelled": dict(family="T1 holds", q=3, relabel=0.03),
+    "unrecorded": dict(family="T1 holds", q=3, unrecorded=1 / 3, other_read=False),
+    "unrecorded, read": dict(family="T1 holds", q=3, unrecorded=1 / 3),
+    "open": dict(family="T1 holds", q=3, immigration=0.15),
+    "episodic": dict(family="T1 holds", q=3, sigma_r=1.6),
+    "unsurveyed": dict(family="T1 holds", q=3, no_estimate_below=0.15),
+    "static labels": dict(family="T1 holds", q=3, static_labels=True),
+    # the need misplaced: T1 false where the age-0 surveys put a need
+    "survival compensates": dict(family="need misplaced", q=3, gamma=0.3, c_gamma=0.40),
+    "compensates, relabelled": dict(family="need misplaced", q=3, gamma=0.3, c_gamma=0.40, relabel=0.03),
+    "need falls": dict(family="need misplaced", q=3, k_after=0.5),          # within the intervals' margin: reported
+    "need falls far": dict(family="need misplaced", q=3, k_after=0.25),
+    "weak depensation": dict(family="need misplaced", q=1.5, sigma_r=1.6),  # stopping well below the 50% point
+    "renewal below the floor": dict(family="need misplaced", q=3, gamma=0.3, c_gamma=0.10),
+    # no need: renewal never stops
+    "no need": dict(family="no need", q=1),
+    "lakes differ 0.5": dict(family="no need", q=1, prod_spread=0.5),
+    "lakes differ 0.7": dict(family="no need", q=1, prod_spread=0.7),
+    "lakes differ 1.0": dict(family="no need", q=1, prod_spread=1.0),
+    "lakes differ 1.5": dict(family="no need", q=1, prod_spread=1.5),
+    "general decline": dict(family="no need", q=1, decline=0.04),
+    "no need, relabelled": dict(family="no need", q=1, prod_spread=0.7, relabel=0.03),
+    "no need, unsurveyed": dict(family="no need", q=1, prod_spread=0.7, no_estimate_below=0.15),
+    "renewal unseen": dict(family="no need", q=1, unseen=0.5),
+    "floor by chance": dict(family="no need", q=1, floor_chance=(-0.847, 0.6)),
+    "episodic, no need": dict(family="no need", q=1, sigma_r=2.5),
+    "episodic, lakes differ": dict(family="no need", q=1, sigma_r=2.0, prod_spread=1.0),
+    "renewal stops after": dict(family="no need", q=1, prod_spread=0.7, collapse=0.2),   # for a fifth of the lakes
+    "no renewal in some": dict(family="no need", q=1, prod_spread=0.5, none=0.15),
+    # reported apart
+    "half need": dict(family="mixed", q_mix=(3, 1)),
 }
-STOCK_SPEEDS = (0.3, 0.1, 0.03, 0.0)   # the chance a year that managers stock a lake below STOCK_BELOW
-STOCK_BELOW = 1.0               # adults per acre below which managers stock a lake and cut its harvest
-CUT = 0.05                      # the exploitation a lake below STOCK_BELOW is cut to
-KNOCK = 0.02                    # a year's chance that a lake loses nine tenths of its adults
 NATURAL, STOCKED = t1n.NR, "stocked"
-
-
-FROZEN_FILES = ("t1n.py", "reader.py", "run.py", "dry_run.py")   # the files the dry run runs with
-
-
-def code_hashes():
-    """The sha-256 of each file the dry run runs with, repository-relative."""
-    rel = HERE.relative_to(HERE.parents[1])
-    return {str(rel / f): hashlib.sha256((HERE / f).read_bytes()).hexdigest() for f in FROZEN_FILES}
 
 
 class Checks:
@@ -104,40 +100,56 @@ class Checks:
             self.failed.append({"kind": kind, "check": name, "detail": detail})
 
 
-def recruitment(x, q, k):
-    return A * x ** q / (k ** q + x ** q) if x > 0 else 0.0
+def code_hashes():
+    """The sha-256 of each file the dry run runs with, repository-relative."""
+    rel = HERE.relative_to(HERE.parents[1])
+    return {str(rel / f): hashlib.sha256((HERE / f).read_bytes()).hexdigest() for f in FROZEN_FILES}
+
+
+def recruitment(x, q, k, a):
+    return a * x ** q / (k ** q + x ** q) if x > 0 else 0.0
 
 
 def lake(rng, i, world, speed):
-    """One synthetic lake's records, as reader.py builds them, and its true course."""
+    """One synthetic lake's records, as reader.py builds them."""
     w = WORLDS[world]
+    q = w["q_mix"][i % 2] if "q_mix" in w else w["q"]
     acres = math.exp(rng.uniform(math.log(100), math.log(5000)))
-    k0 = K * math.exp(rng.gauss(0, w["k_spread"])) if w["k_spread"] else K
-    e = rng.uniform(0.05, 0.6)                   # exploitation; above about 0.3 a lake declines
-    speared = rng.random() < 0.4
+    k0 = K * math.exp(rng.gauss(0, w["k_spread"])) if w.get("k_spread") else K
+    spread = w.get("prod_spread", 0.0)
+    a0 = A * math.exp(rng.gauss(0, spread)) if spread else A
+    c0 = C * math.exp(rng.gauss(0, spread)) if spread else C
+    e = rng.uniform(0.05, 0.6)
+    speared, closed = rng.random() < 0.4, rng.random() < 0.4
     x = rng.uniform(1.5, 8.0)
-    age0_hist = {}
-    closed = rng.random() < 0.4
-    rec = {"id": f"L{i:04d}", "acres": acres, "label": {}, "adults": {}, "age0": {}, "harvest": {},
-           "creel": set(), "stocked": set(), "closed": closed,
-           "other": set() if w.get("other_read", True) else None}
+    none = "none" in w and rng.random() < w["none"]                   # a lake with no renewal at all
+    collapse = "collapse" in w and rng.random() < w["collapse"]       # a lake whose renewal stops after the cutoff
+    hist = {}
+    rec = {"id": f"L{i:04d}", "acres": acres, "label": {}, "adults": {}, "age0": {}, "harvest": {}, "creel": set(),
+           "stocked": set(), "closed": closed, "other": set() if w.get("other_read", True) else None}
     unrec = set()
     phase, every = rng.randrange(5), rng.choice((3, 4, 5))
-    surveyed_age0 = rng.random() < 0.7
+    surveyed = rng.random() < 0.7
     label, rescued = NATURAL, False
     for yr in YEARS:
-        k = k0 * (w["k_after"] if yr > t1n.CUTOFF else 1.0)
+        k = k0 * (w.get("k_after", 1.0) if yr > t1n.CUTOFF else 1.0)
+        a = a0 * (1 - w.get("decline", 0.0)) ** (yr - 1990)
+        if none or (collapse and yr > t1n.CUTOFF):
+            a = 0.0
         sr = w.get("sigma_r", SIGMA_R)
-        r = recruitment(x, w["q"], k) * math.exp(sr * rng.gauss(0, 1) - sr * sr / 2 + SIGMA_R * SIGMA_R / 2)
-        age0_hist[yr] = r
+        r = recruitment(x, q, k, a) * math.exp(sr * rng.gauss(0, 1) - sr * sr / 2 + SIGMA_R * SIGMA_R / 2)
+        hist[yr] = r
         rec["label"][yr] = label
-        if (yr - 1990 + phase) % every == 0:
+        if (yr - 1990 + phase) % every == 0 and x >= w.get("no_estimate_below", 0.0):
             est = x * math.exp(CV * rng.gauss(0, 1) - CV * CV / 2)
             rec["adults"][yr] = (est, est * math.exp(-1.96 * CV), est * math.exp(1.96 * CV))
-        if surveyed_age0 or rng.random() < 0.4:
+        if surveyed or rng.random() < 0.4:
             seen = x / (x + w["unseen"]) if "unseen" in w else 1.0
             rec["age0"][yr] = round(r * seen * math.exp(0.3 * rng.gauss(0, 1)), 1)
-        h = (e if x >= STOCK_BELOW else CUT) * x      # harvest cut where a lake falls, as safe harvests are set
+            if "floor_chance" in w:                # the survey reaches the floor by a chance rising slowly with x
+                b0, b1 = w["floor_chance"]
+                rec["age0"][yr] = 5.0 if x > 0 and rng.random() < 1 / (1 + math.exp(-(b0 + b1 * math.log(x)))) else 0.0
+        h = (e if x >= STOCK_BELOW else CUT) * x
         creel = rng.random() < 0.2
         recorded = (0.6 * h if speared else 0.0) + (0.4 * h if creel else 0.0)
         if recorded:
@@ -146,8 +158,8 @@ def lake(rng, i, world, speed):
             rec["creel"].add(yr)
         add = 0.0
         if x < STOCK_BELOW and rng.random() < speed:
-            if w["unrecorded"] and (rescued or rng.random() < w["unrecorded"]):
-                rescued = True                     # stocked, not in WDNR's database, the label kept
+            if w.get("unrecorded") and (rescued or rng.random() < w["unrecorded"]):
+                rescued = True                     # stocked outside WDNR's database, the label kept
                 unrec.add(yr)
             else:
                 rec["stocked"].add(yr)
@@ -157,13 +169,16 @@ def lake(rng, i, world, speed):
             rec["stocked"].add(yr)                 # a programme's stocking and relabelling, whatever the stock
             label = STOCKED
             add = 1.0
-        r3 = age0_hist.get(yr - 3, recruitment(x, w["q"], k))
-        joins = w["c_gamma"] * r3 ** w["gamma"] if "gamma" in w else C * r3
+        r3 = hist.get(yr - 3, recruitment(x, q, k, a))
+        joins = w["c_gamma"] * r3 ** w["gamma"] if "gamma" in w else c0 * r3
         x = max(S * x - h + joins + add + (0.0 if closed else w.get("immigration", 0.0)), 0.0)
         if rng.random() < KNOCK:
             x *= 0.1
-    if rec["other"] is not None and w.get("other_read"):
-        rec["other"] = unrec
+    if rec["other"] is not None:
+        rec["other"] = unrec if w.get("unrecorded") else set()
+    if w.get("static_labels"):
+        final = rec["label"][max(YEARS)]
+        rec["label"] = {yr: final for yr in rec["label"]}
     return rec
 
 
@@ -172,254 +187,473 @@ def archive(world, a, speed=0.1, lakes=LAKES):
     return [lake(rng, i, world, speed) for i in range(lakes)]
 
 
+def verdict_of(lakes, world, label_alone=False):
+    """V1 on a synthetic archive as run.py reads it: the labels per year unless no lake's label changes."""
+    labels = any(len(set(lk["label"].values())) > 1 for lk in lakes)
+    nd = t1n.need(lakes, labels=labels)
+    if nd["need"] is None:
+        return "not decided", None, nd
+    res = t1n.read(lakes, nd["need"], labels=labels, label_alone=label_alone)
+    res["renewal below the need"] = t1n.renewal_below(lakes, nd, labels=labels)
+    return res["V1"]["verdict"], res, nd
+
+
+def kind(v):
+    if v.startswith("supported, contradicted"):
+        return "supported, contradicted by V2"
+    if v.startswith("supported"):
+        return "supported"
+    if v.startswith("refuted unless"):
+        return "refuted unless"
+    if v.startswith("refuted"):
+        return "refuted"
+    return "not decided"
+
+
 def worlds(chk):
-    """Each world's verdicts over ARCHIVES synthetic archives at each speed, under branch B."""
+    """Each world's verdicts over ARCHIVES archives at each speed, and the checks on them."""
     out = {}
-    key = "V1 verdicts, of %d archives" % ARCHIVES
-    for world in WORLDS:
-        out[world] = {}
+    for world, w in WORLDS.items():
+        out[world] = {"family": w["family"]}
         for speed in STOCK_SPEEDS:
-            tallies, alone, needs_, n_disc, ret = {}, {}, [], [], 0
+            tallies, alone, needs, n_below, v2, flagged = {}, {}, [], [], 0, 0
             for a in range(ARCHIVES):
                 lakes = archive(world, a, speed)
-                nb = t1n.need_branch_b(lakes)
-                needs_.append(nb["need"])
-                if nb["need"] is None:
-                    tallies["not decided"] = tallies.get("not decided", 0) + 1
-                    alone["not decided"] = alone.get("not decided", 0) + 1
-                    continue
-                needs = {lk["id"]: nb["need"] for lk in lakes}
-                res = t1n.read(lakes, needs)
-                v = res["V1"]["verdict"].split(":")[0]
-                tallies[v] = tallies.get(v, 0) + 1
-                v = t1n.read(lakes, needs, label_alone=True)["V1"]["verdict"].split(":")[0]
-                alone[v] = alone.get(v, 0) + 1
-                n_disc.append(res["V1"]["resolved"])
-                ret += res["V2"]["met"]
-            fitted = sorted(y for y in needs_ if y is not None)
-            out[world][f"stocking chance {speed} a year"] = {
-                key: tallies, "V1 with the label alone a fall (the reading set aside)": alone,
-                "V2 met, archives": ret,
-                "the fitted need, median": round(fitted[len(fitted) // 2], 3) if fitted else None,
-                "resolved lakes where T1 and the null differ, median":
-                    sorted(n_disc)[len(n_disc) // 2] if n_disc else None}
+                v, res, nd = verdict_of(lakes, world)
+                tallies[kind(v)] = tallies.get(kind(v), 0) + 1
+                needs.append(nd["need"])
+                if res:
+                    n_below.append(res["V1"]["below: resolved"])
+                    v2 += res["V2"]["met"]
+                    rb = res["renewal below the need"]
+                    flagged += bool(rb and rb["lake-years"] and rb["chance of so many or more under the fit"] <= ALPHA_REPORT)
+                if "relabel" in w:
+                    va = verdict_of(lakes, world, label_alone=True)[0]
+                    alone[kind(va)] = alone.get(kind(va), 0) + 1
+            fitted = sorted(y for y in needs if y is not None)
+            cell = {"V1": tallies, "V2 met": v2,
+                    "renewal below the need beyond the fit at 0.05 (reported)": flagged,
+                    "the fitted need: median, largest": [round(fitted[len(fitted) // 2], 3), round(fitted[-1], 3)] if fitted else None,
+                    "no need fitted": sum(1 for y in needs if y is None),
+                    "resolved lakes below the need, median": sorted(n_below)[len(n_below) // 2] if n_below else None}
+            if alone:
+                cell["V1 with the label alone a fall"] = alone
+            out[world][f"speed {speed}"] = cell
+            sup = tallies.get("supported", 0) + tallies.get("supported, contradicted by V2", 0)
+            if w["family"] == "no need" or (w["family"] == "need misplaced" and world != "need falls"):
+                chk(f"worlds: {w['family']}", f"{world} at speed {speed}: supported at most {NO_NEED_SUPPORT_MAX} of {ARCHIVES}",
+                    sup <= NO_NEED_SUPPORT_MAX, tallies)
+            if world in ("open", "unrecorded", "unsurveyed", "static labels"):
+                chk("worlds: confounds", f"{world} at speed {speed}: no plain refutation of T1 where it holds",
+                    tallies.get("refuted", 0) <= NO_NEED_SUPPORT_MAX, tallies)
+    for speed, least in ((0.03, ARCHIVES // 2), (0.0, 30)):       # DESIGN.md, section 8: half where managers act
+        t = out["need"][f"speed {speed}"]["V1"]
+        chk("worlds: power", f"need at speed {speed}: supported in at least {least} of {ARCHIVES}",
+            t.get("supported", 0) + t.get("supported, contradicted by V2", 0) >= least, t)
+    for world, speeds in (("renewal below the floor", (0.1, 0.03, 0.0)), ("weak depensation", (0.0,))):
+        for speed in speeds:
+            t = out[world][f"speed {speed}"]["V1"]
+            chk("worlds: power", f"{world} at speed {speed}: refuted, in some form, more often than supported",
+                t.get("refuted", 0) + t.get("refuted unless", 0) > t.get("supported", 0), t)
+    for speed in (0.03, 0.0):
+        t = out["renewal below the floor"][f"speed {speed}"]["V1"]
+        chk("worlds: power", f"renewal below the floor at speed {speed}: refuted plainly in at least 30 of {ARCHIVES}",
+            t.get("refuted", 0) >= 30, t)
+    chk("worlds: the renewal report", f"need falls far at speed 0.0: renewal below the need beyond the fit in at least 30 of {ARCHIVES}",
+        out["need falls far"]["speed 0.0"]["renewal below the need beyond the fit at 0.05 (reported)"] >= 30,
+        out["need falls far"]["speed 0.0"])
+    for speed in (0.03, 0.0):
+        chk("worlds: the renewal report", f"need at speed {speed}: renewal below the need beyond the fit in at most {NO_NEED_SUPPORT_MAX} of {ARCHIVES}",
+            out["need"][f"speed {speed}"]["renewal below the need beyond the fit at 0.05 (reported)"] <= NO_NEED_SUPPORT_MAX,
+            out["need"][f"speed {speed}"])
     big = {}
     for speed in (0.03, 0.0):
         tallies = {}
         for a in range(ARCHIVES):
-            lakes = archive("survival compensates", a, speed, lakes=BIG)
-            nb = t1n.need_branch_b(lakes)
-            v = ("not decided" if nb["need"] is None else
-                 t1n.read(lakes, {lk["id"]: nb["need"] for lk in lakes})["V1"]["verdict"].split(":")[0])
+            v = kind(verdict_of(archive("weak depensation", a, speed, lakes=BIG), "weak depensation")[0])
             tallies[v] = tallies.get(v, 0) + 1
-        big[f"stocking chance {speed} a year"] = tallies
-    out[f"survival compensates, {BIG} lakes an archive"] = big
-    chk("worlds", f"survival compensates at {BIG} lakes: a plain refutation reached",
-        sum(c.get("refuted", 0) for c in big.values()) > 0, big)
-    for speed in STOCK_SPEEDS:
-        cell = out["no need"][f"stocking chance {speed} a year"][key]
-        chk("worlds", f"no need: never supported, at stocking chance {speed}", cell.get("supported", 0) == 0, cell)
-    for speed in (0.03, 0.0):
-        cell = out["need"][f"stocking chance {speed} a year"][key]
-        chk("worlds", f"the need world supported more often than refuted at stocking chance {speed}",
-            cell.get("supported", 0) > cell.get("refuted", 0), cell)
-    for speed in (0.1, 0.03, 0.0):
-        cell = out["survival compensates"][f"stocking chance {speed} a year"][key]
-        chk("worlds", f"a need read at the wrong stage refuted more often than supported at stocking chance {speed}",
-            sum(v for k, v in cell.items() if k.startswith("refuted")) > cell.get("supported", 0), cell)
-    for speed in STOCK_SPEEDS:
-        for world, why in (("open", "connected waters"), ("unrecorded", "unrecorded stocking")):
-            cell = out[world][f"stocking chance {speed} a year"][key]
-            chk("worlds", f"{world}: no plain refutation, each qualified by {why}, at stocking chance {speed}",
-                cell.get("refuted", 0) == 0, cell)
+        big[f"speed {speed}"] = tallies
+    out[f"weak depensation, {BIG} lakes an archive"] = big
+    chk("worlds: power", f"weak depensation at {BIG} lakes: a plain refutation reached",
+        sum(t.get("refuted", 0) for t in big.values()) > 0, big)
     return out
 
 
+def refusal(f):
+    try:
+        f()
+    except SystemExit as e:
+        return str(e)
+    return ""
+
+
 def scripted(chk):
-    """The rules on scripted lakes: each verdict at its thresholds, the null, the scope and the fate."""
-    def lk(i, x, fate_est, h=0.0, label=NATURAL, stocked=(), width=0.1, label_fate=None, age0=None):
-        return {"id": f"S{i}", "acres": 100.0, "label": {2013: label, 2017: label_fate or label},
-                "adults": {2013: (x, x * (1 - width), x * (1 + width)),
-                           2017: (fate_est, fate_est * (1 - width), fate_est * (1 + width))},
-                "age0": dict(age0) if age0 is not None else {2010: 0.0, 2011: 0.0, 2012: 0.0},
-                "harvest": {2013: h} if h else {}, "creel": set(), "stocked": set(stocked)}
+    """The rules on scripted lakes: each verdict at its thresholds, the separation, the null, the premise, the
+    scope, the ratio test, the fate and its recovery, renewal pending and the surveys set aside, V2, the
+    confounds, the static labels and the renewal report."""
     y = 1.0
+
+    def lk(i, x, fate_est, label=NATURAL, label_fate=None, stocked=(), width=0.1, age0=None, held=True,
+           closed=True, other=True):
+        adults = {2013: (x, x * (1 - width), x * (1 + width)),
+                  2017: (fate_est, fate_est * (1 - width), fate_est * (1 + width))}
+        if held:
+            adults.update({2004: (3.0, 2.7, 3.3), 2008: (3.0, 2.7, 3.3)})
+        labels = {t: NATURAL for t in adults}
+        labels[2013], labels[2017] = label, label_fate or label
+        return {"id": f"S{i}", "acres": 100.0, "label": labels, "adults": adults,
+                "age0": dict(age0) if age0 is not None else {2010: 0.0, 2011: 0.0, 2012: 0.0},
+                "harvest": {}, "creel": set(), "stocked": set(stocked), "closed": closed,
+                "other": set() if other else None}
+
+    def v1(lakes):
+        return t1n.read(lakes, y, last=2014)["V1"]
+
+    above = [lk(500 + i, 3.0, 3.0) for i in range(20)]       # above the need, persisting: the other side
     for n in (10, 14, 20):
-        k = t1n.critical(n)
-        for fell, want in ((k, "supported"), (k - 1, "not decided"),
+        c = t1n.critical(n)
+        for fell, want in ((c, "supported"), (c - 1, "not decided"),
                            (n // 2, "refuted" if n >= t1n.N_REFUTE else "not decided"),
-                           (n - k, "refuted"), (n - k + 1, "refuted" if n >= t1n.N_REFUTE else "not decided")):
-            lakes = [lk(i, 0.5, 0.2 if i < fell else 2.0) for i in range(n)]
-            v = t1n.read(lakes, {l["id"]: y for l in lakes})["V1"]["verdict"]
-            chk("rules: V1", f"{fell} of {n} below the point fell: {want}", v.startswith(want), v)
-    lakes = [lk(i, 0.5, 0.2) for i in range(t1n.N_MIN - 1)]
-    v = t1n.read(lakes, {l["id"]: y for l in lakes})["V1"]["verdict"]
-    chk("rules: V1", "fewer than N_MIN resolved: not decided", v.startswith("not decided"), v)
-    lakes = [lk(i, 0.5, 0.2) for i in range(12)] + [lk(100 + i, 0.5, 1.0, width=0.5) for i in range(30)]
-    r = t1n.read(lakes, {l["id"]: y for l in lakes})["V1"]
-    chk("rules: V1", "unresolved fates are not counted", r["resolved"] == 12 and r["discordant"] == 42, r)
-    lakes = [lk(1, 1.5, 0.2, h=1.0), lk(2, 0.8, 0.2, h=1.0)]
-    t = t1n.rows(lakes, {l["id"]: y for l in lakes})
-    chk("rules: the point", "T1 predicts a fall below the need alone; the point with the draw is reported",
-        t[0]["T1 predicts"] == "persists" and t[0]["below the point with the recorded draw"]
-        and t[1]["T1 predicts"] == "falls" and all(r["null predicts"] == "persists" for r in t), t)
-    for why, l in (("label at the reference", lk(1, 0.5, 0.2, label=STOCKED)),
-                   ("stocking recorded before the reference", lk(2, 0.5, 0.2, stocked=(2010,))),
-                   ("stocking recorded before the reference", lk(3, 0.5, 0.2, stocked=(2013,)))):
-        t = t1n.rows([l], {l["id"]: y})
+                           (n - c, "refuted"), (n - c + 1, "refuted" if n >= t1n.N_REFUTE else "not decided")):
+            lakes = [lk(i, 0.5, 0.2 if i < fell else 2.0) for i in range(n)] + above
+            v = v1(lakes)["verdict"]
+            chk("rules: V1", f"{fell} of {n} below the need fell: {want}", v.startswith(want), v)
+    v = v1([lk(i, 0.5, 0.2) for i in range(t1n.N_MIN - 1)] + above)["verdict"]
+    chk("rules: V1", "fewer than N_MIN resolved below the need: not decided", v.startswith("not decided"), v)
+    falling_above = [lk(600 + i, 3.0, 0.3) for i in range(20)]
+    v = v1([lk(i, 0.5, 0.2) for i in range(12)] + falling_above)["verdict"]
+    chk("rules: the separation", "below the need fell, but the lakes above fell as often: not decided",
+        v.startswith("not decided") and "above it fell as often" in v, v)
+    v = v1([lk(i, 0.5, 0.2) for i in range(12)])["verdict"]
+    chk("rules: the separation", "no resolved lake above the need: not supported", not v.startswith("supported"), v)
+    t = t1n.rows([lk(1, 0.5, 0.2, held=False)], y, last=2014)
+    chk("rules: the premise", "a lake not shown to hold above the need before the cutoff: out",
+        t[0].get("out", "").startswith("the premise not shown"), t)
+    l = lk(2, 0.5, 0.2)
+    l["adults"][2008] = (1.0, 0.9, 1.1)
+    chk("rules: the premise", "two estimates up to the cutoff, one with its lower bound below the need: not shown",
+        t1n.held_above(l, y) is None, t1n.held_above(l, y))
+    l = lk(3, 0.5, 0.2)
+    l["stocked"] = {2003}
+    chk("rules: the premise", "held only with stocking recorded before it: not shown", t1n.held_above(l, y) is None)
+    l = lk(26, 0.5, 0.2)
+    l["adults"][2004] = (6.0, 5.4, 6.6)
+    chk("rules: the premise", "a pair above the need with a decline between them by the ratio test: not shown",
+        t1n.held_above(l, y) is None, t1n.held_above(l, y))
+    l = lk(30, 1.0, 0.8)
+    z = t1n.change(l, 2013, 2017)
+    chk("rules: the ratio test", "a change against its value by hand (ln 0.8 over the intervals' joint sd, -3.0823)",
+        abs(z + 3.0823) < 1e-3, z)
+    for why, l in (("label at the reference", lk(4, 0.5, 0.2, label=STOCKED)),
+                   ("stocking recorded before the reference", lk(5, 0.5, 0.2, stocked=(2010,))),
+                   ("stocking recorded before the reference", lk(6, 0.5, 0.2, stocked=(2013,)))):
+        t = t1n.rows([l], y, last=2014)
         chk("rules: the scope", f"out of scope: {why}", t[0].get("out", "").startswith(why), t)
-    t = t1n.rows([lk(4, 0.5, 0.2, stocked=(2007,))], {"S4": y})
-    chk("rules: the scope", "stocking more than STOCK_BEFORE years before the reference keeps the lake",
-        "out" not in t[0], t)
-    t = t1n.rows([lk(5, 0.5, 3.0, stocked=(2016,))], {"S5": y})
-    chk("rules: the fate", "stocking after the reference with the label kept: unresolved",
-        t[0]["fate"] == "unresolved" and "stocking" in t[0]["fate by"], t)
-    t = t1n.rows([lk(6, 0.5, 3.0, label_fate=STOCKED, stocked=(2016,))], {"S6": y})
-    chk("rules: the fate", "the label leaving natural recruitment with no recorded fall: unresolved",
-        t[0]["fate"] == "unresolved" and "no recorded fall" in t[0]["fate by"], t)
-    t = t1n.rows([lk(13, 0.5, 0.2, label_fate=STOCKED, stocked=(2016,))], {"S13": y})
-    chk("rules: the fate", "the label leaving natural recruitment with a recorded fall: fell",
-        t[0]["fate"] == "fell" and "with a recorded fall" in t[0]["fate by"], t)
-    t = t1n.rows([lk(14, 0.5, 3.0, label_fate=STOCKED, stocked=(2016,))], {"S14": y}, label_alone=True)
-    chk("rules: the fate", "the reading set aside, the label alone a fall, kept for the dry run's report",
-        t[0]["fate"] == "fell", t)
+    def with_later(l, year, est, width=0.1):
+        l["adults"][year] = (est, est * (1 - width), est * (1 + width))
+        l["label"][year] = NATURAL
+        return l
+    unread_interval = lk(24, 0.5, 0.2)
+    unread_interval["adults"][2017] = (0.0, 0.0, 0.3)
+    for name, l, want, by in (
+            ("a decline by the ratio test", lk(7, 0.5, 0.2), "fell", "a decline by the ratio test"),
+            ("holding below the need: no decline by the test", lk(8, 0.5, 0.48), "persisted", "no decline"),
+            ("a decline within the intervals' error", lk(21, 0.5, 0.45, width=0.2), "persisted", "no decline"),
+            ("back above the need: a return", lk(9, 0.5, 2.0), "persisted", "no decline"),
+            ("a decline, and a recovery by a later survey", with_later(lk(22, 0.5, 0.2), 2020, 0.5), "persisted", "recovery"),
+            ("a decline, the later rise after recorded stocking: the fall stands",
+             with_later(lk(23, 0.5, 0.2, stocked=(2018,)), 2020, 0.5), "fell", "a decline by the ratio test"),
+            ("stocking after the reference", lk(10, 0.5, 3.0, stocked=(2015,)), "unresolved", "stocking"),
+            ("the label to a combination", lk(11, 0.5, 0.1, label_fate="combination", stocked=(2015,)), "unresolved", "label left"),
+            ("the label to stocked", lk(12, 0.5, 0.1, label_fate=STOCKED, stocked=(2015,)), "unresolved", "label left"),
+            ("an interval not read on the log scale", unread_interval, "unresolved", "log scale"),
+            ("a lake above the need falling below it", lk(13, 3.0, 0.3), "fell", "a decline by the ratio test"),
+            ("above the need, declining and still above it: the same reading", lk(25, 3.0, 1.5), "fell", "a decline")):
+        t = t1n.rows([l], y, last=2014)
+        chk("rules: the fate", f"{name}: {want}", t[0].get("fate") == want and by in t[0].get("fate by", ""), t)
+    t = t1n.rows([lk(14, 0.5, 3.0, label_fate=STOCKED, stocked=(2015,))], y, last=2014, label_alone=True)
+    chk("rules: the fate", "the reading set aside: the label alone a fall", t[0]["fate"] == "fell", t)
     l = lk(15, 0.5, 3.0)
     l["other"] = {2015}
-    t = t1n.rows([l], {"S15": y})
+    t = t1n.rows([l], y, last=2014)
     chk("rules: the fate", "other stocking (R5b) after the reference: unresolved", t[0]["fate"] == "unresolved", t)
-    t = t1n.rows([lk(7, 0.5, 1.0, width=0.5)], {"S7": y})
-    chk("rules: the fate", "an interval holding the need: unresolved", t[0]["fate"] == "unresolved", t)
-    t = t1n.rows([lk(8, 0.5, 0.2, age0={2011: 3.0})], {"S8": y})
-    chk("rules: renewal pending", "a fall predicted with age-0 at or above the floor before it: read, marked pending",
-        "out" not in t[0] and t[0]["pending at the reference"].startswith("renewal pending"), t)
-    t = t1n.rows([lk(9, 0.5, 0.2, age0={})], {"S9": y})
-    chk("rules: renewal pending", "a fall predicted with no age-0 survey before it: read, marked unread",
-        "out" not in t[0] and t[0]["pending at the reference"].startswith("renewal unread"), t)
-    v = t1n.read([lk(12, 0.2, 3.0, age0={2011: 3.0})], {"S12": y})["V2"]
-    chk("rules: V2", "a return with renewal pending is not the single-lake form", not v["met"], v)
-    two = {"id": "S11", "acres": 100.0, "label": {2013: NATURAL, 2015: NATURAL, 2019: NATURAL},
-           "adults": {2013: (3.0, 2.9, 3.1), 2015: (0.5, 0.45, 0.55), 2019: (0.2, 0.18, 0.22)},
-           "age0": {2012: 0.0, 2013: 0.0, 2014: 0.0}, "harvest": {}, "creel": set(), "stocked": set()}
-    t = t1n.rows([two], {"S11": y})
-    chk("rules: the reference", "the first estimate at which T1 predicts a fall is the reference",
-        t[0]["ref"] == 2015 and t[0]["fate year"] == 2019 and t[0]["T1 predicts"] == "falls", t)
-    v = t1n.read([lk(1, 0.5, 3.0)], {"S1": y})["V2"]
-    chk("rules: V2", "a lake below its need returning above it with no stocking is the single-lake form",
-        v["met"] and [m["id"] for m in v["lakes"]] == ["S1"], v)
-    def refuting(closed, other_read, n=12):
-        ls = [lk(200 + i, 0.5, 3.0) for i in range(n)]
-        for l in ls:
-            l["closed"], l["other"] = closed, (set() if other_read else None)
-        return t1n.read(ls, {l["id"]: y for l in ls})["V1"]["verdict"]
-    chk("rules: the confounds", "refuted plainly where every lake is closed and the other stocking was read",
-        refuting(True, True).startswith("refuted:"), refuting(True, True))
-    chk("rules: the confounds", "refuted unless connected waters where the persisting lakes are not recorded closed",
-        refuting(False, True).startswith("refuted unless connected waters:"), refuting(False, True))
-    chk("rules: the confounds", "refuted unless unrecorded stocking where the other stocking records were not read",
-        refuting(True, False).startswith("refuted unless unrecorded stocking:"), refuting(True, False))
-    v = t1n.read([lk(1, 0.95, 3.0, width=0.2)], {"S1": y})["V2"]
-    chk("rules: V2", "a reference whose interval reaches the need is not below it", not v["met"], v)
-    chk("rules: the tail", "critical counts", (t1n.critical(10), t1n.critical(14), t1n.critical(20)) == (9, 11, 15))
+    for name, age0, want in (("age-0 at or above the floor before it", {2010: 0.0, 2011: 3.0, 2012: 0.0}, "renewal pending"),
+                             ("a year of the lag unsurveyed", {2010: 0.0, 2012: 0.0}, "renewal unread"),
+                             ("every year surveyed, all below the floor", {2010: 0.0, 2011: 0.5, 2012: 0.0}, None)):
+        got = t1n.pending(lk(16, 0.5, 0.2, age0=age0), 2013)
+        chk("rules: renewal pending", name, (got or "").startswith(want) if want else got is None, got)
+    t = t1n.rows([lk(27, 0.5, 0.2, age0={2010: 0.0, 2011: 3.0, 2012: 0.0})], y, last=2014)
+    chk("rules: renewal pending", "a survey below the need with renewal pending is set aside: out with no other reference",
+        t[0].get("out") == "below the need only with renewal pending"
+        and t[0].get("set aside, renewal pending") == {"ref": 2013, "fate": "fell"}, t)
+    l = with_later(with_later(lk(28, 0.5, 0.2, age0={2010: 0.0, 2011: 3.0, 2012: 0.0}), 2016, 3.0), 2020, 3.0)
+    del l["adults"][2017], l["label"][2017]
+    t = t1n.rows([l], y, last=2017)
+    chk("rules: renewal pending", "set aside, the lake's survey above the need is its reference",
+        t[0].get("ref") == 2016 and t[0].get("T1 predicts") == "persists" and "set aside, renewal pending" in t[0], t)
+    t = t1n.rows([lk(29, 0.3, 3.0, age0={2010: 0.0, 2012: 0.0})], y, last=2014)
+    chk("rules: renewal pending", "a year of the lag unread does not set the survey aside", t[0].get("T1 predicts") == "falls", t)
+    l = with_later(with_later(lk(31, 3.0, 3.0), 2016, 0.3), 2020, 0.1)
+    del l["adults"][2017], l["label"][2017]
+    t = t1n.rows([l], y, last=2017)
+    chk("rules: the reference", "the first readable survey in time: a lake above the need there, later below it, counts above",
+        t[0].get("ref") == 2013 and t[0].get("T1 predicts") == "persists" and t[0].get("fate") == "fell", t)
+    l = with_later(with_later(lk(32, 1.0, 1.0, width=0.2), 2016, 0.3), 2020, 0.1)
+    del l["adults"][2017], l["label"][2017]
+    t = t1n.rows([l], y, last=2017)
+    chk("rules: the reference", "a survey whose interval holds the need is passed over", t[0].get("ref") == 2016
+        and t[0].get("T1 predicts") == "falls", t)
+    v = t1n.read([lk(17, 0.3, 3.0)], y, last=2014)["V2"]
+    chk("rules: V2", "below the need, nothing pending, back above it with nothing recorded given: met",
+        v["met"] and [m["id"] for m in v["lakes"]] == ["S17"], v)
+    v = t1n.read([lk(18, 0.3, 0.6)], y, last=2014)["V2"]
+    chk("rules: V2", "risen but still below the need: not met", not v["met"], v)
+    v = t1n.read([lk(19, 0.3, 3.0, age0={2011: 3.0})], y, last=2014)["V2"]
+    chk("rules: V2", "a return with renewal pending: not met", not v["met"], v)
+    v = t1n.read([lk(29, 0.3, 3.0, age0={2010: 0.0, 2012: 0.0})], y, last=2014)["V2"]
+    chk("rules: V2", "a return with a year of the lag unread: in V1, not met", not v["met"], v)
+    for name, closed, other, want in (
+            ("refuted plainly where the persisting lakes are closed and R5b was read", True, True, "refuted:"),
+            ("unless connected waters where they are not recorded closed", False, True, "refuted unless connected waters"),
+            ("unless unrecorded stocking where R5b was not read", True, False, "refuted unless unrecorded stocking")):
+        lakes = [lk(200 + i, 0.5, 2.0, closed=closed, other=other) for i in range(12)] + above
+        v = v1(lakes)["verdict"]
+        chk("rules: the confounds", name, v.startswith(want), v)
+    lakes = [lk(300 + i, 0.5, 2.0) for i in range(10)] + above
+    gone = [lk(400 + i, 0.5, 2.0) for i in range(20)]
+    for g in gone:
+        del g["adults"][2017]
+        del g["label"][2017]
+    v = v1(lakes + gone)["verdict"]
+    chk("rules: the confounds", "unless the unsurveyed fell, where counting them as fallen undoes it",
+        "the unsurveyed fell" in v, v)
+    sup = [lk(i, 0.5, 0.2) for i in range(12)] + above + [lk(700, 0.3, 3.0)]
+    v = v1(sup)["verdict"]
+    chk("rules: V1 and V2", "a support with V2 met reads contradicted by V2", v.startswith("supported, contradicted by V2"), v)
+    t = t1n.rows([lk(20, 0.5, 0.2, label=STOCKED)], y, last=2014, labels=False)
+    chk("rules: static labels", "where the labels are not per year, the label decides nothing", "out" not in t[0], t)
+    chk("rules: the tail", "critical counts 9, 11, 15 of 10, 14, 20",
+        (t1n.critical(10), t1n.critical(14), t1n.critical(20)) == (9, 11, 15))
+    lb = t1n.lower_bound(9, 10)
+    chk("rules: the tail", "the exact lower bound on 9 of 10, where 10 p^9 (1 - p) + p^10 = 0.05 (0.6058)",
+        abs(lb - 0.6058) < 1e-3 and abs(10 * lb ** 9 * (1 - lb) + lb ** 10 - 0.05) < 1e-6, lb)
+    chk("rules: the tail", "Fisher's exact test against a table by hand",
+        t1n.fisher_greater(9, 10, 2, 10) == t1n.Fraction(506, 184756), float(t1n.fisher_greater(9, 10, 2, 10)))
+    rb_lakes = [{"id": f"R{i}", "adults": {2015: (0.5, 0.45, 0.55)}, "age0": {2015: a0}, "label": {2015: NATURAL},
+                 "stocked": set(), "other": set()} for i, a0 in enumerate((3.0, 2.0, 0.0))]
+    rb = t1n.renewal_below(rb_lakes, {"need": 1.0, "a": 0.0, "b": 1.0})
+    chk("rules: the renewal report", "two of three below the need renewing, each with chance 1/3 under the fit: 7/27",
+        rb["reached the floor"] == 2 and abs(rb["the fit expects"] - 1.0) < 1e-9
+        and abs(rb["chance of so many or more under the fit"] - 7 / 27) < 1e-6, rb)
 
 
-def branch_a(chk):
-    """Branch A's need on synthetic published curves: the bisection meets the floor."""
-    for form, p in (("bh-q", {"alpha": A / K ** 3, "beta": 1 / K ** 3, "q": 3}),
-                    ("ricker-q", {"alpha": 20.0, "beta": 0.3, "q": 2.5})):
-        y = t1n.need_branch_a(form, p)
-        f = t1n.CURVES[form]
-        chk("rules: branch A", f"the curve reaches the floor at the need: {form}",
-            y is not None and abs(f(y, p) - t1n.FLOOR) < 1e-6, (y, f(y, p) if y else None))
-    chk("rules: branch A", "a curve below the floor everywhere gives no need",
-        t1n.need_branch_a("bh-q", {"alpha": 1e-6, "beta": 1.0, "q": 3}) is None)
-
-
-def branch_b(chk):
-    """Branch B's fit on synthetic pairs with a known need, and its refusals."""
+def need_checks(chk):
+    """The need's fit on synthetic pairs with a known need, and its guards."""
     rng = random.Random(SEED + "|fit")
-    lakes = []
-    for i in range(60):
-        rec = {"id": f"F{i}", "adults": {}, "age0": {}}
-        for yr in range(1995, 2013):
-            x = math.exp(rng.uniform(math.log(0.1), math.log(8)))
-            rec["adults"][yr] = (x, x, x)
-            rec["age0"][yr] = 5.0 if rng.random() < 1 / (1 + (0.8 / x) ** 4) else 0.0
-        lakes.append(rec)
-    nb = t1n.need_branch_b(lakes)
-    chk("rules: branch B", "the fit recovers a known need within 25%", nb["need"] and abs(nb["need"] / 0.8 - 1) < 0.25, nb)
-    chk("rules: branch B", "too few pairs: no need", t1n.need_branch_b(lakes[:5])["need"] is None)
-    flat = [{"id": f"G{i}", "adults": {y: (1.0 + i % 7, 0, 0) for y in range(1995, 2013)},
-             "age0": {y: 5.0 * ((i + y) % 2) for y in range(1995, 2013)}} for i in range(40)]
-    chk("rules: branch B", "renewal not rising with the level: no need",
-        t1n.need_branch_b(flat)["need"] is None, t1n.need_branch_b(flat))
-    later = [dict(l, adults={**l["adults"], 2014: (0.01, 0.01, 0.01)}, age0={**l["age0"], 2014: 99.0})
-             for l in lakes]
-    chk("rules: branch B", "years after the cutoff do not enter the fit",
-        t1n.need_branch_b(later)["need"] == nb["need"])
+
+    def pairs_lakes(prob, n=60):
+        out = []
+        for i in range(n):
+            rec = {"id": f"F{i}", "adults": {}, "age0": {}, "label": {}, "stocked": set(), "other": set()}
+            for yr in range(1995, 2013):
+                x = math.exp(rng.uniform(math.log(0.1), math.log(8)))
+                rec["adults"][yr] = (x, x, x)
+                rec["label"][yr] = NATURAL
+                rec["age0"][yr] = 5.0 if rng.random() < prob(x) else 0.0
+            out.append(rec)
+        return out
+    known = pairs_lakes(lambda x: 1 / (1 + (0.8 / x) ** 4))
+    nd = t1n.need(known)
+    chk("the need", "the fit recovers a known need within 25%", nd["need"] and abs(nd["need"] / 0.8 - 1) < 0.25, nd)
+    chk("the need", "too few pairs: no need", t1n.need(known[:5])["need"] is None)
+    nd = t1n.need(pairs_lakes(lambda x: 0.3))
+    chk("the need", "renewal at the floor with one chance at every level: no need", nd["need"] is None, nd)
+    nd = t1n.need(pairs_lakes(lambda x: 1 / (1 + math.exp(0.847 - 0.3 * math.log(x)))))
+    chk("the need", "a shallow rise placing the need where the data do not reach: no need", nd["need"] is None, nd)
+    later = [dict(l, adults={**l["adults"], 2014: (0.01, 0.01, 0.01)}, age0={**l["age0"], 2014: 99.0}) for l in known]
+    chk("the need", "years after the cutoff do not enter the fit", t1n.need(later)["need"] == t1n.need(known)["need"])
+    stocked = [dict(l, stocked={2000}) for l in known]
+    chk("the need", "stocked lake-years do not enter the fit", t1n.need(stocked)["pairs"] < t1n.need(known)["pairs"])
+    chk("the need", "a fit that cannot converge returns None", t1n.logistic([1.0, 2.0], [0, 1], ridge=0.0, iters=1) is None)
 
 
 def reader_checks(chk):
-    """The reader on synthetic files in the assumed layout (reader.COLUMNS): it rebuilds the lakes, and
-    refuses a file lacking a column."""
+    """The reader on synthetic files in the assumed layout, its refusals, and the layout facts from structure
+    alone."""
     lakes = archive("need", 0)[:20]
     with tempfile.TemporaryDirectory() as tmp:
-        reader.write_synthetic(lakes, Path(tmp))
-        back = reader.read_all(Path(tmp))
-        same = all(abs(back[l["id"]]["adults"][y][0] - l["adults"][y][0]) < 1e-6
-                   and back[l["id"]]["label"].get(y) == l["label"].get(y)
-                   for l in lakes for y in l["adults"])
-        chk("the reader", "rebuilds the lakes from the assumed layout", same and len(back) == 20)
+        tmp = Path(tmp)
+        reader.write_synthetic(lakes, tmp)
+        back, meta = reader.read_all(tmp)
+        chk("the reader", "rebuilds the lakes from the assumed layout",
+            len(back) == 20 and all(abs(back[l["id"]]["adults"][y][0] - l["adults"][y][0]) < 1e-6
+                                    and back[l["id"]]["label"].get(y) == l["label"].get(y)
+                                    and back[l["id"]]["closed"] == l["closed"] for l in lakes for y in l["adults"]))
         chk("the reader", "keeps stocking, creel years and age-0 surveys",
             all(back[l["id"]]["stocked"] == l["stocked"] and back[l["id"]]["creel"] == l["creel"]
                 and set(back[l["id"]]["age0"]) == set(l["age0"]) for l in lakes))
-        p = Path(tmp) / reader.FILES["adults"]
-        text = p.read_text().split("\n")
-        p.write_text("\n".join([text[0].replace(reader.COLUMNS["adults"]["estimate"], "something else")] + text[1:]))
-        try:
-            reader.read_all(Path(tmp))
-            refused = False
-        except SystemExit:
-            refused = True
-        chk("the reader", "refuses a file lacking a column it reads", refused)
-        probe = reader.layout(Path(tmp))
-        chk("the reader", "the layout probe gives headers and counts, no value",
-            all(set(v) == {"columns", "rows"} for v in probe.values()), probe)
+        chk("the reader", "reads the labels per year where some lake's label changes",
+            meta["labels per year"] is any(len(set(l["label"].values())) > 1 for l in lakes), meta)
+        facts = reader.layout_facts(tmp)
+        structural = {reader.COLUMNS[k][f] for k in reader.COLUMNS for f in reader.COLUMNS[k] if f in reader.STRUCTURE}
+        for name in reader.FILES.values():
+            p = tmp / name
+            if p.exists():
+                rows = list(csv.reader(p.open()))
+                cols = [i for i, c in enumerate(rows[0]) if c not in structural]
+                for row in rows[1:]:
+                    for i in cols:
+                        row[i] = "987654321"
+                with p.open("w", newline="") as f:
+                    csv.writer(f).writerows(rows)
+        chk("the reader", "the layout facts are the same with every value column overwritten",
+            reader.layout_facts(tmp) == facts, facts)
+        chk("the reader", "neither the probe nor the facts hold a value column's content",
+            "987654321" not in json.dumps(reader.layout(tmp)) + json.dumps(reader.layout_facts(tmp)))
+    for name, spoil, want in (
+            ("a file lacking a column", lambda h, r: (h.replace(reader.COLUMNS["adults"]["estimate"], "x"), r), "adult_estimates.csv lacks"),
+            ("a label the map does not hold", lambda h, r: (h, r.replace(",NR,", ",Unheard,", 1)), "a label layout.json does not map")):
+        with tempfile.TemporaryDirectory() as tmp:
+            tmp = Path(tmp)
+            reader.write_synthetic(lakes, tmp)
+            p = tmp / reader.FILES["adults"]
+            head, rest = p.read_text().split("\n", 1)
+            head, rest = spoil(head, rest)
+            p.write_text(head + "\n" + rest)
+            got = refusal(lambda: reader.read_all(tmp))
+            chk("the reader", f"refuses {name}", got.startswith(want), got)
+    for name, kind_, old, new, want in (
+            ("a file whose lake codes match none of the estimates'", "stocking", ",", ",X", "the lake codes differ"),
+            ("a stocking file with no row of the species", "stocking", reader.SPECIES, "Muskellunge", "the species' text differs")):
+        with tempfile.TemporaryDirectory() as tmp:
+            tmp = Path(tmp)
+            reader.write_synthetic(lakes, tmp)
+            p = tmp / reader.FILES[kind_]
+            head, rest = p.read_text().split("\n", 1)
+            rest = "\n".join(("X" + line) if old == "," and line else line.replace(old, new) for line in rest.split("\n"))
+            p.write_text(head + "\n" + rest)
+            got = refusal(lambda: reader.read_all(tmp))
+            chk("the reader", f"refuses {name}", want in got, got)
+    chk("the reader", "codes and species in one form", reader.code(" 123456.0 ") == "123456" and reader.is_species(" WALLEYE "))
+    with tempfile.TemporaryDirectory() as tmp:
+        tmp = Path(tmp)
+        reader.write_synthetic(lakes, tmp)
+        (tmp / reader.FILES["tribal"]).unlink()
+        (tmp / reader.FILES["creel"]).unlink()
+        back, meta = reader.read_all(tmp)
+        chk("the reader", "reads without the draw's files, which V1 does not read", len(back) == 20, meta)
 
 
 def run_checks(chk):
-    """run.py end to end on synthetic files: under branch B, then with a curves file settling branch A; the
-    layout facts from structural columns only; and the run refusing before the freeze."""
+    """run.py end to end on synthetic files, and its refusals on the inputs and on a second run."""
     lakes = archive("need", 0, 0.03)
     with tempfile.TemporaryDirectory() as tmp:
-        reader.write_synthetic(lakes, Path(tmp))
-        facts = reader.layout_facts(Path(tmp))
-        chk("the run", "layout facts: the window, the pairs and the candidates, from structure alone",
-            facts["last estimate year"] == 2025 and facts["reference window"] == [2013, 2022]
-            and facts["pairs up to the cutoff"] > t1n.PAIRS_MIN and facts["curves"] is None, facts)
-        out = RUN.run(Path(tmp), check_frozen=False)
-        mine = t1n.read(lakes, {l["id"]: t1n.need_branch_b(lakes)["need"] for l in lakes}, 2013, 2022)
-        chk("the run", "branch B decides where no curves file is given, and V1 is the rules' own",
-            out["branch deciding V1"] == "B" and out["V1"] == mine["V1"], (out["V1"], mine["V1"]))
-        chk("the run", "the floors 0, 1 and 5 and the seepage lakes are reported",
-            set(out["branch B"]) == {f"floor {f}" for f in t1n.FLOORS_REPORTED}
-            and "seepage lakes alone (reported)" in out["branch B"]["floor 1.0"], sorted(out["branch B"]))
-        cols = reader.COLUMNS["curves"]
-        with (Path(tmp) / reader.FILES["curves"]).open("w", newline="") as f:
-            wr = csv.DictWriter(f, fieldnames=list(cols.values()))
-            wr.writeheader()
-            for lk in lakes[:t1n.BRANCH_A_LAKES]:
-                wr.writerow({cols["lake"]: lk["id"], cols["form"]: "bh-q", cols["alpha"]: A / K ** 3,
-                             cols["beta"]: 1 / K ** 3, cols["q"]: 3, cols["last year"]: 2015})
-        out = RUN.run(Path(tmp), check_frozen=False)
-        chk("the run", "a curves file for BRANCH_A_LAKES lakes settles branch A, its references after 2015",
-            out["branch deciding V1"] == "A" and out["branch A"]["floor 1.0"]["references from"] == 2016
-            and all(r.get("ref", 2016) >= 2016 for r in out["rows"]), out["branch deciding V1"])
-    try:
-        RUN.frozen()
-        refused = False
-    except SystemExit:
-        refused = True
-    chk("the run", "the run refuses while the freeze is not written", refused)
+        tmp = Path(tmp)
+        reader.write_synthetic(lakes, tmp)
+        out = RUN.run(tmp, check_frozen=False, check_inputs=False)
+        v, res, nd = verdict_of(list(reader.read_all(tmp)[0].values()), "need")
+        chk("the run", "a need is fitted on the files and V1 is the rules' own on the lakes the reader builds",
+            nd["need"] is not None and out["V1"]["verdict"] == v, (out["V1"].get("verdict"), v, nd.get("reason")))
+        chk("the run", "the floors are reported", set(out["by floor"]) == {f"floor {f}" for f in t1n.FLOORS_REPORTED},
+            sorted(out["by floor"]))
+        cell = out["by floor"][f"floor {t1n.FLOOR}"]
+        chk("the run", "the seepage lakes alone, the reading set aside and renewal below the need are reported",
+            "recorded seepage lakes alone (reported)" in cell and "V1 with the label alone a fall (the reading set aside)" in cell
+            and cell.get("renewal below the need (reported)", {}).get("lake-years") is not None, sorted(cell))
+        saved = RUN.DOWNLOADS
+        try:
+            RUN.DOWNLOADS = tmp / "downloads.json"
+            chk("the run", "refuses where no download is recorded", "no download is recorded" in refusal(lambda: RUN.inputs(tmp)))
+            RUN.DOWNLOADS.write_text(json.dumps({"files": [{"file": n, "sha256": "0" * 64} for n in reader.FILES.values()]}))
+            chk("the run", "refuses an input that is not the file recorded", "is not the file" in refusal(lambda: RUN.inputs(tmp)))
+            RUN.DOWNLOADS.write_text(json.dumps({"files": [{"file": n, "sha256": RUN.sha(tmp / n)}
+                                                           for n in reader.FILES.values() if (tmp / n).exists()]}))
+            chk("the run", "takes the inputs recorded", bool(RUN.inputs(tmp)))
+        finally:
+            RUN.DOWNLOADS = saved
+        saved_out, saved_argv = RUN.OUT, sys.argv
+        try:
+            RUN.OUT = tmp / "run.json"
+            RUN.OUT.write_text("{}")
+            sys.argv = ["run.py", str(tmp)]
+            chk("the run", "refuses a second run", "the run is made once" in refusal(RUN.main))
+        finally:
+            RUN.OUT, sys.argv = saved_out, saved_argv
+
+
+def chain_checks(chk):
+    """The freeze's chain in stand-in git repositories: passes when whole, refuses a changed file, an addendum
+    changing a file it may not, a cut chain and a link committed twice; takes an addendum changing layout.json
+    and the dry run's record alone."""
+    env = {"GIT_AUTHOR_NAME": "t", "GIT_AUTHOR_EMAIL": "t@t", "GIT_COMMITTER_NAME": "t", "GIT_COMMITTER_EMAIL": "t@t",
+           "PATH": "/usr/bin:/bin:/usr/local/bin:/opt/homebrew/bin", "HOME": tempfile.gettempdir()}
+    rel = HERE.relative_to(HERE.parents[1])
+
+    def stand_in(tmp):
+        repo = Path(tmp)
+        here = repo / rel
+        (here / "results").mkdir(parents=True)
+        for f in FROZEN_FILES + ("write_frozen.py",):
+            shutil.copy(HERE / f, here / f)
+        return repo, here
+
+    def record(repo, here):
+        hashes = {str(rel / f): hashlib.sha256((here / f).read_bytes()).hexdigest() for f in FROZEN_FILES}
+        (here / "results" / "dry-run.json").write_text(json.dumps({"failed": [], "code unchanged during the run": True,
+                                                                    "code hashes": hashes}))
+
+    def g(repo, *args):
+        subprocess.run(["git", "-C", str(repo), *args], capture_output=True, check=True, env=env)
+
+    def link(repo, path, extra=()):
+        files = sorted({str(rel / f) for f in FROZEN_FILES + ("write_frozen.py",)}
+                       | {str(rel / "results" / "dry-run.json")} | {str(rel / e) for e in extra})
+        path.write_text("".join(f"{hashlib.sha256((repo / p).read_bytes()).hexdigest()}  {p}\n" for p in files))
+
+    with tempfile.TemporaryDirectory() as tmp:
+        repo, here = stand_in(tmp)
+        record(repo, here)
+        chk("the chain", "the run refuses while FROZEN.sha256 is not written",
+            "is not written" in refusal(lambda: RUN.frozen(repo, here)))
+        g(repo, "init", "-q")
+        g(repo, "add", "-A")
+        g(repo, "commit", "-qm", "files")
+        link(repo, here / "FROZEN.sha256")
+        g(repo, "add", "-A")
+        g(repo, "commit", "-qm", "freeze")
+        r = refusal(lambda: RUN.frozen(repo, here))
+        chk("the chain", "a whole chain passes", r == "", r)
+        (here / "t1n.py").write_text((here / "t1n.py").read_text() + "\n# changed\n")
+        chk("the chain", "a changed frozen file refuses", "differ" in refusal(lambda: RUN.frozen(repo, here)))
+        g(repo, "checkout", "-q", "--", str(rel / "t1n.py"))
+        (here / "addenda").mkdir()
+        (here / "addenda" / "ADDENDUM-1.md").write_text("layout\n")
+        (here / "layout.json").write_text((here / "layout.json").read_text().replace('"Walleye"', '"WALLEYE"'))
+        record(repo, here)
+        link(repo, here / "addenda" / "FROZEN-1.sha256", ("addenda/ADDENDUM-1.md",))
+        g(repo, "add", "-A")
+        g(repo, "commit", "-qm", "addendum 1")
+        r = refusal(lambda: RUN.frozen(repo, here))
+        chk("the chain", "an addendum changing layout.json and the record alone passes", r == "", r)
+        (here / "addenda" / "ADDENDUM-2.md").write_text("rules\n")
+        (here / "t1n.py").write_text((here / "t1n.py").read_text() + "\n# a rule changed\n")
+        link(repo, here / "addenda" / "FROZEN-2.sha256", ("addenda/ADDENDUM-1.md", "addenda/ADDENDUM-2.md"))
+        g(repo, "add", "-A")
+        g(repo, "commit", "-qm", "addendum 2")
+        chk("the chain", "an addendum changing a rule refuses", "may not" in refusal(lambda: RUN.frozen(repo, here)))
+        g(repo, "rm", "-q", str(rel / "addenda" / "FROZEN-2.sha256"), str(rel / "addenda" / "ADDENDUM-2.md"))
+        g(repo, "checkout", "-q", "HEAD~1", "--", str(rel / "t1n.py"))
+        g(repo, "commit", "-qm", "cut")
+        chk("the chain", "a link committed and removed refuses: the chain cut", "cut" in refusal(lambda: RUN.frozen(repo, here)))
+    with tempfile.TemporaryDirectory() as tmp:
+        repo, here = stand_in(tmp)
+        record(repo, here)
+        g(repo, "init", "-q")
+        for msg in ("one", "two"):
+            (here / "FROZEN.sha256").write_text(f"{msg}\n")
+            g(repo, "add", "-A")
+            g(repo, "commit", "-qm", msg)
+        chk("the chain", "a link committed twice refuses", "exactly once" in refusal(lambda: RUN.frozen(repo, here)))
 
 
 def main():
@@ -427,11 +661,12 @@ def main():
     code = code_hashes()
     chk = Checks()
     scripted(chk)
-    branch_a(chk)
-    branch_b(chk)
+    need_checks(chk)
     reader_checks(chk)
-    run_checks(chk)
-    out = {"worlds (branch B), %d lakes an archive" % LAKES: worlds(chk)}
+    with contextlib.redirect_stdout(io.StringIO()):
+        run_checks(chk)
+    chain_checks(chk)
+    out = {f"worlds, {LAKES} lakes an archive": worlds(chk)}
     out.update({"checks": sum(chk.by_kind.values()), "checks by kind": chk.by_kind, "failed": chk.failed,
                 "CPU seconds": round(time.process_time() - t0, 1),
                 "code hashes": code, "code unchanged during the run": code_hashes() == code})
@@ -440,8 +675,8 @@ def main():
     path.write_text(json.dumps(out, indent=1) + "\n")
     print("checks:", out["checks"], "failed:", len(chk.failed), "CPU seconds:", out["CPU seconds"],
           "code unchanged:", out["code unchanged during the run"])
-    for f in chk.failed[:8]:
-        print("  FAILED", f["kind"], "|", f["check"], str(f["detail"])[:200])
+    for f in chk.failed[:12]:
+        print("  FAILED", f["kind"], "|", f["check"], str(f["detail"])[:240])
 
 
 if __name__ == "__main__":

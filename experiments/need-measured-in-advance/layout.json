@@ -1,0 +1,28 @@
+{
+ "note": "The layout assumed before any file was seen (DESIGN.md, sections 9 and 10). An addendum may change this file and the dry run's record alone, after the layout is read with no value.",
+ "files": {
+  "adults": "adult_estimates.csv",
+  "age0": "fall_age0.csv",
+  "tribal": "tribal_harvest.csv",
+  "creel": "creel_harvest.csv",
+  "stocking": "stocking.csv",
+  "other": "other_stocking.csv",
+  "types": "lake_types.csv"
+ },
+ "columns": {
+  "adults": {"lake": "WBIC", "year": "Survey Year", "acres": "Acres", "label": "Primary Recruitment Source",
+             "estimate": "Population Estimate", "lower": "Lower 95 C.I.", "upper": "Upper 95 C.I.",
+             "characteristics": "Lake Characteristics"},
+  "age0": {"lake": "WBIC", "year": "Survey Year", "per mile": "Age-0 per Mile"},
+  "tribal": {"lake": "WBIC", "year": "Year", "number": "Walleye Harvested"},
+  "creel": {"lake": "WBIC", "year": "Year", "number": "Walleye Harvested"},
+  "stocking": {"lake": "WBIC", "year": "Year", "species": "Species", "number": "Number Stocked"},
+  "other": {"lake": "WBIC", "year": "Year", "species": "Species", "number": "Number Stocked"},
+  "types": {"lake": "WBIC", "type": "Lake Type"}
+ },
+ "labels": {"NR": "natural", "Natural Reproduction": "natural", "C-NR": "combination", "C-ST": "combination",
+            "ST": "stocked", "Stocked": "stocked", "REM": "remnant"},
+ "species": "Walleye",
+ "optional files": ["tribal", "creel", "other", "types"],
+ "optional columns": [["adults", "characteristics"]]
+}
