@@ -2,7 +2,7 @@
 
 Board item T1N, 5 November 2026, at the coordinator's offer. AI-written (a Claude Code session), not yet reviewed by a person. The design, the rules ([`t1n.py`](t1n.py)), the reader ([`reader.py`](reader.py)), the run ([`run.py`](run.py)), the dry run ([`dry_run.py`](dry_run.py), [`results/dry-run.json`](results/dry-run.json)) and this file are frozen together before any value of the data is read. The hashes are in `FROZEN.sha256`, which [`write_frozen.py`](write_frozen.py) writes last. Nothing has been downloaded. The downloads and the run are Ren's decision (§12).
 
-*About 45 to 60 minutes to read, at 100 to 130 words a minute; §1 and §11 in eight to ten.*
+*About 50 to 70 minutes to read, at 100 to 130 words a minute; §1 and §11 in nine to twelve.*
 
 ## 1. What is tested, and the answer expected
 
@@ -12,14 +12,18 @@ Board item T1N, 5 November 2026, at the coordinator's offer. AI-written (a Claud
 
 **The verdict (V1, primary): the separation.** This is T1's *Refuted by* in its second form, "fates across a predicted point separated no better than by a null". The need is fixed before the series is read (§4). Lakes standing below it at a reference survey are set against the null, fixed in advance: T1's own classifier with no need, which predicts no fall. Below the need renewal stops under any draw, so T1 predicts a fall there whatever the managers do. The null predicts persistence there. Among the lakes below the need whose later fate is resolved:
 - **supported** where at least the critical count of an exact one-sided sign test at 0.05 fell;
-- **refuted** where at most half fell;
+- **refuted** where so few fell that the same test puts them on the null's side, or, at twenty lakes or more, where at most half fell;
 - **not decided** otherwise, or where fewer than ten are resolved (§7).
 
-**Reported beside it (V2): the single-lake form.** This is T1's *Refuted by* in its first form: a lake below its need, with no renewal pending, returning above it with no recorded giving from beyond. It counts against T1 only where the recorders' own label says natural recruitment throughout and no stocking is recorded. An unrecorded stocking, of fry or by a tribal or private hatchery, could produce it, and so could fish from connected waters (§5).
+Two confounds could produce a refutation on their own, and both are decided now, before any value is read. One is fish from connected waters. The other is stocking the database misses: fry, and fish from tribal or private hatcheries. A refutation either could make reads **refuted unless connected waters**, or **unless unrecorded stocking**, and not plainly *refuted* (§7).
+
+**Reported beside it (V2): the single-lake form.** This is T1's *Refuted by* in its first form: a lake below its need, with no renewal pending, returning above it with no recorded giving from beyond. It counts against T1 only where the recorders' own label says natural recruitment throughout and no stocking is recorded. An unrecorded stocking, of fry or by a tribal or private hatchery, could produce it, and so could fish from connected waters (§5). Each lake that meets it is listed with whether it is a recorded seepage lake and whether the records of other stocking were read.
 
 **Who decides.** Every value the verdict reads is recorded by WDNR or GLIFWC, families that neither wrote nor read the theory. Their own fields decide the scope and much of the fate: the label of a lake's primary recruitment source, the stocking records, the survey estimates and their intervals. Code frozen here decides the rest. After the freeze nobody of the theory's family chooses anything, and no model is called.
 
-**The answer expected.** The likeliest is *not decided*. Managers stock and relabel a falling lake, which takes it out of the test, and where they act fast few lakes stand below the need unstocked. In the dry runs, a stocking chance of 0.3 a year for a falling lake left V1 undecided in nearly every archive (§8). If decided, *supported* is expected, from Sass, Feiner and Shaw's finding of depensatory recruitment in about half of 82 Ceded Territory lakes (§13). A *refuted* would say one of two things. Either the need is misplaced, the adults' renewal not stopping where the age-0 surveys say. Or giving from beyond goes unrecorded: stocking the records miss, or fish from connected waters. §11 says what each outcome means, and §8 how often each came in worlds where the answer is known.
+**The answer expected.** The likeliest is *not decided*. Managers stock and relabel a falling lake, and where they act fast few lakes stand below the need unstocked. In the dry runs, a stocking chance of 0.3 a year for a falling lake left V1 undecided in nearly every archive (§8). If decided, *supported* is expected, from Sass, Feiner and Shaw's finding of depensatory recruitment in about half of 82 Ceded Territory lakes (§13).
+
+A plain *refuted* would mean the need is misplaced: the adults' renewal does not stop where the age-0 surveys say. It needs enough recorded seepage lakes below the need to refute on their own. In the dry runs that took an archive of about 900 lakes. At 300, a refutation stayed "unless connected waters". §11 says what each outcome means, and §8 how often each came in worlds where the answer is known.
 
 ## 2. Why this field, and the alternatives considered
 
@@ -61,7 +65,9 @@ Each is named by its recorder, read only after Ren's yes (§12), and turned into
 | R3 | Tribal harvest, by lake and year | WDNR, from the bands' declarations and creel | Walleye harvested | — |
 | R4 | Angling harvest, by lake and year | WDNR creel surveys | Walleye harvested, in creel years | Every year without a creel survey |
 | R5 | Fish stocking records | WDNR's stocking database | The years a lake was stocked with walleye of any size | Fry, and fish supplied by the U.S. Fish and Wildlife Service or by tribal or private hatcheries (the database's own note) |
+| R5b | Other walleye stocking: fry, and fish from tribal or private hatcheries | The bands' hatcheries, through GLIFWC's reports; WDNR's annual stocking summaries where they give fry | The years a lake was so stocked | Whatever those reports omit; where they cannot be had, refutations stay qualified (§7) |
 | R6 | The published per-lake stock-recruitment curves, if any | Sass, Feiner and Shaw (2021), *Fisheries* 46(6): 266–276, doi:10.1002/fsh.10584, or its supplement | Each lake's fitted curve, its form, its parameters and its last data year | Lakes the publication does not give |
+| R7 | Each lake's type (seepage, drainage, drained, spring, impoundment) | WDNR's lake records, where R1's lake characteristics do not give it | Whether a lake is a recorded seepage lake, with no inlet or outlet | Lakes with no recorded type |
 
 The draw the test reads, the **recorded draw** `h`, is R3 with R4 where a creel survey ran that year, per acre. It is a lower bound on the joint draw. V1 does not read it (§7), so its gaps do not enter the verdict. The point with it is reported.
 
@@ -92,15 +98,18 @@ Branch B is computed and reported in either case.
 
 A lake enters the test at a reference survey only where both of these hold (`in_scope`):
 - the recorders' label of its primary recruitment source that year says natural recruitment (reader.py maps the label's texts; any text the map does not hold refuses);
-- no walleye stocking is recorded in that year or the five before it (`STOCK_BEFORE`), so the level read is not one that stocked fish make.
+- no walleye stocking is recorded in that year or the five before it (`STOCK_BEFORE`), in WDNR's database or, where read, in the other stocking records (R5b). So the level read is not one that stocked fish make.
+
+**The two confounds, decided now.**
+- **Connected waters.** A lake is *closed* where its recorded type is seepage, with no inlet or outlet. That type comes from R1's lake characteristics, or else from WDNR's lake records (R7), and is read by `reader.closed_of`. Any other named type (drainage, drained, spring, impoundment, flowage, reservoir, river) counts as open, and a lake with no recorded type is unknown. Walleye can reach an open lake from other waters.
+- **Unrecorded stocking.** WDNR's database leaves out fry and fish from federal, tribal and private hatcheries. Where the other records (R5b) are read, their stocking enters the scope and the fate like the database's. Where they are not, the stocking they would show is unrecorded.
+
+How a refutation is read in their light is in §7.
 
 **What the scope leaves out.** The records give these as they are, and the test does not reach them:
-- fry stocking;
-- federal, tribal and private stocking (R5's own note);
 - the angling harvest outside creel years;
-- fish from connected waters, where a lake lies on a chain or a flowage and walleye can enter.
-
-Where R1's lake characteristics name the water body's type, V1 is also reported for seepage lakes alone, which have no inlet or outlet. That is a report, not a verdict.
+- whatever stocking R5b omits;
+- immigration into a lake recorded as seepage, by a route its type does not show.
 
 ## 6. The reference and the fate
 
@@ -108,10 +117,10 @@ Where R1's lake characteristics name the water body's type, V1 is also reported 
 
 **The reference** is the lake's first candidate in scope at which T1 predicts a fall, its level x below the need y. Failing that, it is the lake's first candidate in scope at which T1 predicts persistence (`rows`). The choice reads only the reference's own level and the need, never a later value.
 
-**The fate**, between the reference and the first later estimate (`fate_of`), by the recorders' own fields first:
-- **fell** where their label leaves natural recruitment at any survey after the reference up to the fate's. That is the recorders' judgement that natural renewal no longer sustains the lake, and it is how a falling lake, stocked and relabelled, stays in the test instead of leaving it.
-- **unresolved** where stocking is recorded after the reference with the label kept: giving from beyond, without that judgement.
-- otherwise by the later estimate against the need: **fell** where its interval's upper bound is below the need, **persisted** where its lower bound is at or above it, **unresolved** where the interval holds the need.
+**The fate**, between the reference and the first later estimate (`fate_of`):
+- **Where the recorders' label leaves natural recruitment** at a survey after the reference, up to the fate's, the label alone decides nothing. The fate is **fell** only where a recorded fall goes with it: either the fate's interval lies below the need, or an estimate after the reference has its upper bound below the reference's lower bound. Otherwise it is **unresolved**, since what persists may be stocked fish. A relabelling for another reason than failing natural recruitment, a programme's for instance, then counts no fall (§8 gives the reading set aside, the label alone counted as a fall, and which side it favours).
+- **Unresolved** where stocking is recorded after the reference with the label kept, in WDNR's database or in R5b: giving from beyond.
+- **Otherwise by the later estimate against the need:** **fell** where its interval's upper bound is below the need, **persisted** where its lower bound is at or above it, **unresolved** where the interval holds the need.
 
 **Renewal pending.** Walleye join the adults about three years after their fall (`RECRUIT_LAG`). A lake below the need can still hold a strong year class from before it fell, as the dry run's first single-lake hits showed (§8). T1's regime has no lag. Each row records whether a fall survey in the three years before the reference reached the floor (renewal pending), or whether none was made (renewal unread):
 - **V1 reads every lake below the need**, and reports the two kinds apart. A pending cohort that keeps a lake up then counts against T1, as it should against a claim stated on the level alone.
@@ -119,13 +128,20 @@ Where R1's lake characteristics name the water body's type, V1 is also reported 
 
 ## 7. The verdicts
 
-**V1** (`v1`). Every lake in the test has a row. T1 predicts a fall where x < y, and the null predicts none, so the two classifiers differ on exactly the lakes below the need. Let n be those with resolved fates, and k the ones that fell. The rule, in this order:
+**V1** (`v1`, `decide`). Every lake in the test has a row. T1 predicts a fall where x < y, and the null predicts none, so the two classifiers differ on exactly the lakes below the need. Let n be those with resolved fates, k the ones that fell, and c the critical count of an exact one-sided sign test at 0.05, which is McNemar's test on the discordant lakes. c is 9 of 10, 11 of 14 and 15 of 20. The rule, in this order:
 1. Not decided where n < 10 (`N_MIN`).
-2. Supported where k reaches the critical count of an exact one-sided sign test at 0.05, which is McNemar's test on the discordant lakes. The critical count is 9 of 10, 11 of 14 and 15 of 20.
+2. Supported where k ≥ c.
 3. Refuted, the fates separated no better than by the null, by either of two routes:
-   - k ≤ n − c, with c the critical count: so few fell that the same exact test at 0.05 puts the fates on the null's side. That is at most 1 of 10, 3 of 14 or 5 of 20.
+   - k ≤ n − c: so few fell that the same test at 0.05 puts the fates on the null's side. That is at most 1 of 10, 3 of 14 or 5 of 20.
    - by the home's letter, 2k ≤ n, where n ≥ 20 (`N_REFUTE`).
 4. Not decided otherwise.
+
+**A refutation, read against the two confounds.**
+- **Connected waters.** Where a lake counted as persisting is not a recorded seepage lake, V1 is decided again on the closed lakes alone. Where that is not also a refutation, the verdict reads *refuted unless connected waters*.
+- **Unrecorded stocking.** Where R5b was not read for a lake counted as persisting, the verdict reads *refuted unless unrecorded stocking*.
+- **Both** read *refuted unless connected waters or unrecorded stocking*.
+
+Neither confound qualifies a support: each can only make a lake below the need persist, so each works against support.
 
 **Why the letter needs twenty lakes.** The letter, no better than the null, is the one T1-STANDING read as met at equal accuracy after the salt shock, and it is kept. As a point estimate it is weak evidence at few lakes. Suppose a lake below the need falls with chance 0.7, as pending cohorts and quick recoveries after a kill give in T1's own dry-run world (§8). Then at least half of 10 lakes survive with chance 0.15, and at least half of 20 with 0.048. So the letter is read at twenty lakes or more. At fewer, a refutation needs the fates on the null's side at 0.05, which a fall chance of 0.7 gives among 10 lakes with chance 0.0001. Support at ten needs 9 of 10, a chance of 0.011 under the null.
 
@@ -144,48 +160,67 @@ Where R1's lake characteristics name the water body's type, V1 is also reported 
 
 ## 8. Dry runs
 
-[`dry_run.py`](dry_run.py) builds synthetic archives of 300 lakes, 1990 to 2025, and reads each with the frozen rules under branch B. Its record is [`results/dry-run.json`](results/dry-run.json): 57 checks, none failed, 57.8 CPU seconds.
+[`dry_run.py`](dry_run.py) builds synthetic archives of 300 lakes, 1990 to 2025, and reads each with the frozen rules under branch B. Its record is [`results/dry-run.json`](results/dry-run.json): 72 checks, none failed, 97.0 CPU seconds.
 
-**The model.** Each year, spring adults per acre x renew by fall age-0 r = R(x)·e^(σz), with R(x) = 60 x^q / (1.5^q + x^q) and σ = 0.8. Next spring's adults are 0.7x − h plus 0.03 times the age-0 of three years before. The exploitation e is drawn per lake from 0.05 to 0.6, and above 0.3 a lake keeps no level. The draw is h = e·x, cut to 0.05·x below one adult per acre, as safe harvests are. In a year, a lake loses nine tenths of its adults with chance 0.02 (a winterkill).
+**The model.** Each year, spring adults per acre x renew by fall age-0 r = R(x)·e^(σz), with R(x) = 60 x^q / (1.5^q + x^q) and σ = 0.8. Next spring's adults are 0.7x − h plus 0.03 times the age-0 of three years before. The exploitation e is drawn per lake from 0.05 to 0.6, and above 0.3 a lake keeps no level. The draw is h = e·x, cut to 0.05·x below one adult per acre, as safe harvests are. In a year, a lake loses nine tenths of its adults with chance 0.02 (a winterkill). A lake is a recorded seepage lake with chance 0.4.
 
 **What the recorders do.**
 - They estimate adults every three to five years, with log-normal error at a CV of 0.25 and a 95% interval.
 - They survey age-0 in most years.
 - 40% of lakes are speared, and the tribal part of the harvest is recorded; angling is recorded only in creel years (a fifth).
 - Below one adult per acre, managers stock a lake with a chance a year (the speed) and relabel it.
+- The other stocking records (R5b) are read, and empty, in every world but the two named below.
 
 **The worlds:**
-- *need*: q = 3;
+- *need*: q = 3, renewal stopping below a need, as T1 has it;
 - *no need*: q = 1;
 - *needs vary*: each lake's 1.5 scaled by a factor of about 2;
-- *need rises* and *need falls*: doubled or halved after 2012;
-- *unrecorded*: a third of stocked lakes stocked with nothing recorded and the label kept;
-- *open*: 0.15 adults per acre a year arriving from connected waters, unmeasured;
-- *survival compensates*: age-0 depensatory, but the adults they make rise as age-0^0.3, so the need is read at the wrong stage;
+- *need rises* and *need falls*: 1.5 doubled or halved after 2012;
+- *unrecorded*: a third of stocked lakes stocked outside WDNR's database with the label kept, and R5b not read;
+- *unrecorded, read*: the same, with R5b read and holding those stockings;
+- *open*: 0.15 adults per acre a year arriving from connected waters, in the lakes not recorded as seepage;
+- *survival compensates*: age-0 depensatory, but the adults they make rise as age-0^0.3, so the need is read at the wrong stage and T1 is false;
 - *episodic*: q = 1.5 and σ = 1.6, so below the need renewal is rare, not stopped;
-- *renewal unseen*: q = 1, with surveys catching age-0 in proportion to x/(x + 0.5).
+- *renewal unseen*: q = 1, with surveys catching age-0 in proportion to x/(x + 0.5);
+- *relabelled* and *compensates, relabelled*: the need world and the survival-compensates world, with managers relabelling and stocking lakes at 0.03 a year from 2013 whatever the stock, a programme rather than a fall.
 
-V1's verdicts in 40 archives a cell (S supported, R refuted, N not decided), by the managers' stocking chance a year for a falling lake; V2 met, in archives, after the slash:
+V1's verdicts in 40 archives a cell, by the managers' stocking chance a year for a falling lake. S is supported, R refuted, R? refuted unless a confound, and N not decided. V2 met, in archives, is after the slash:
 
 | World | 0.3 | 0.1 | 0.03 | 0 |
 |---|---|---|---|---|
-| need | N 40 / 0 | S 9, N 31 / 0 | S 39, N 1 / 0 | S 40 / 1 |
+| need | N 40 / 0 | S 3, N 37 / 1 | S 36, N 4 / 0 | S 40 / 0 |
 | no need | N 40 / 0 | N 40 / 0 | N 40 / 0 | N 40 / 0 |
-| needs vary | N 40 / 0 | S 28, N 12 / 0 | S 40 / 0 | S 40 / 0 |
-| need rises | N 40 / 0 | S 38, N 2 / 1 | S 40 / 1 | S 40 / 1 |
-| need falls | N 40 / 0 | S 2, R 2, N 36 / 0 | S 4, R 9, N 27 / 1 | S 18, R 2, N 20 / 3 |
-| unrecorded | R 12, N 28 / 3 | S 9, R 5, N 26 / 8 | S 38, N 2 / 7 | S 40 / 4 |
-| open | N 40 / 0 | R 1, N 39 / 1 | R 8, N 32 / 0 | R 17, N 23 / 2 |
-| survival compensates | R 1, N 39 / 0 | R 14, N 26 / 1 | R 27, N 13 / 1 | R 24, N 16 / 1 |
-| episodic | N 40 / 0 | N 40 / 1 | S 20, R 3, N 17 / 10 | S 21, R 3, N 16 / 9 |
-| renewal unseen | N 40 / 0 | N 40 / 1 | N 40 / 0 | R 1, N 39 / 0 |
+| needs vary | N 40 / 0 | S 25, N 15 / 0 | S 40 / 1 | S 40 / 0 |
+| need rises | N 40 / 0 | S 31, N 9 / 0 | S 40 / 1 | S 40 / 3 |
+| need falls | N 40 / 0 | R? 2, N 38 / 1 | S 5, R? 17, N 18 / 3 | S 19, R? 1, N 20 / 5 |
+| unrecorded | R? 12, N 28 / 6 | S 7, R? 7, N 26 / 14 | S 35, N 5 / 8 | S 39, N 1 / 3 |
+| open | N 40 / 0 | R? 2, N 38 / 0 | S 4, R? 2, N 34 / 3 | S 15, R? 4, N 21 / 3 |
+| survival compensates | N 40 / 0 | R? 8, N 32 / 0 | R? 24, N 16 / 2 | R 1, R? 26, N 13 / 0 |
+| episodic | N 40 / 0 | N 40 / 3 | S 7, R? 3, N 30 / 6 | S 21, R? 1, N 18 / 3 |
+| renewal unseen | N 40 / 0 | N 40 / 0 | N 40 / 0 | N 40 / 1 |
+| relabelled | N 40 / 0 | S 3, N 37 / 1 | S 35, N 5 / 1 | S 40 / 3 |
+| compensates, relabelled | N 40 / 0 | R? 5, N 35 / 0 | R? 11, N 29 / 1 | R? 21, N 19 / 2 |
+| unrecorded, read | N 40 / 0 | S 5, N 35 / 0 | S 38, N 2 / 2 | S 40 / 6 |
+
+**Which side the label's reading favours.** The frozen reading counts a label leaving natural recruitment as a fall only with a recorded fall (§6). The reading set aside, the label alone counted as a fall, is run beside it in the two relabelled worlds:
+
+| World | 0.3 | 0.1 | 0.03 | 0 |
+|---|---|---|---|---|
+| relabelled, frozen | N 40 | S 3, N 37 | S 35, N 5 | S 40 |
+| relabelled, label alone | N 40 | S 12, N 28 | S 39, N 1 | S 40 |
+| compensates, relabelled, frozen | N 40 | R? 5, N 35 | R? 11, N 29 | R? 21, N 19 |
+| compensates, relabelled, label alone | N 40 | R? 6, N 34 | R? 13, N 27 | R? 21, N 19 |
+
+The label alone counted as a fall favours support. With T1 true and lakes relabelled, it supported 12 archives at 0.1 where the frozen reading supported 3. With T1 false, the two readings refuted about equally often. So the frozen reading supports less readily, and does not push the chance to refute toward zero.
 
 **What the dry runs show:**
-- **Where there is no need, V1 is never supported.** The fitted need comes out near zero (at most 0.03 adults per acre), so almost no lake stands below it and V1 is not decided. Under *renewal unseen* the fitted need is near 0.12, but too few lakes fall below it to decide; one archive of 40 was refuted at the slowest speed.
-- **Where a need is real and fixed or rising, V1 is supported** once managers are slower than 0.3 a year, and it was refuted in none of the 480 archives of those three worlds. In T1's own world about one lake in five below the need still persists, from pending cohorts and quick recoveries after a kill. The two refutation routes (§7) keep that from refuting.
-- **V1 is refuted where the need is misplaced:** read at the wrong stage (*survival compensates*, 14 to 27 of 40 once managers are slower than 0.3), or fallen after the fit (*need falls*, up to 9). It is also refuted where giving from beyond goes unrecorded: connected waters (*open*, up to 17), and unrecorded stocking under fast managers (*unrecorded* at 0.3, 12 of 40). The last two are the confounds §5 names, and V1 cannot tell them from a misplaced need. The seepage-lake report is there for the first of them.
+- **Where there is no need, V1 is never supported.** The fitted need comes out near zero (at most 0.03 adults per acre), so almost no lake stands below it and V1 is not decided. Under *renewal unseen* the fitted need is near 0.12, but too few lakes fall below it to decide.
+- **Where a need is real and fixed or rising, V1 is supported** once managers are slower than 0.3 a year, and was never refuted. In T1's own world about one lake in five below the need still persists, from pending cohorts and quick recoveries after a kill. The two refutation routes (§7) keep that from refuting.
+- **Where the need is misplaced, V1 is refuted:** read at the wrong stage (*survival compensates*), or fallen after the fit (*need falls*). At 300 lakes nearly every such refutation reads *unless connected waters*, because the recorded seepage lakes alone are too few to decide.
+- **A plain refutation is reachable at the Ceded Territory's size.** At 900 lakes an archive, *survival compensates* gave a plain refutation in 35 of 40 archives at 0.03 and in 32 of 40 with no managers. The rest read *unless connected waters*.
+- **The confounds never refuted plainly:** connected waters (*open*) and unrecorded stocking (*unrecorded*, up to 12 of 40 under fast managers) gave only refutations read *unless*. With R5b read (*unrecorded, read*), V1 was supported where managers are slower than 0.3.
 - **Power rests on the managers' speed,** which no record gives before the data. At 0.3 a year almost no falling lake stays in the test unstocked.
-- **V2 is met mostly where giving from beyond goes unrecorded** (*unrecorded*, up to 8 of 40) **or renewal is episodic** (up to 10). It was also met in T1's own world without managers (1 of 40), from estimation error and rare strong year classes. So V2 alone refutes nothing: it is reported, as §1 says.
+- **V2 is met mostly where giving from beyond goes unrecorded or renewal is episodic,** and also at times in T1's own world, from estimation error and rare strong year classes. So V2 alone refutes nothing: it is reported, as §1 says.
 
 ## 9. Data and what has been seen
 
@@ -215,7 +250,8 @@ Each step is committed before the next.
 1. **The downloads**, on Ren's yes (§12): each record as a CSV file in one folder outside the repository, its source, date, size and sha-256 recorded.
 2. **The layout, with no value read.** `python3 -B reader.py layout FOLDER` gives each file's header and row count, and nothing else. Recorded beside it, still without values:
    - the label's distinct texts, for the map;
-   - the water body types R1 names;
+   - the water body types R1 names, and whether R7 gives the rest;
+   - whether R5b, the other stocking records, could be had;
    - whether R6 gives curves, in which forms and for how many lakes, and its last data year, which settles the branch (§4);
    - the archive's last estimate year, which settles the reference window;
    - the number of lake-years with both an adult estimate and a fall survey up to 2012, against branch B's 200 pairs from 30 lakes;
@@ -232,7 +268,9 @@ Fixed before the run.
 | V1 | What it means |
 |---|---|
 | supported | Lakes standing below a need measured in advance fell more often than an exact sign test allows by chance, where the null without a need predicts none: T1's *Refuted by* in its second form was met and not borne out, in the field, for the first time. It is a prediction that could fail and did not. It holds within the recorders' records: it says nothing of the stocking they miss, and nothing of the draw within the margin, which V1 does not read. |
-| refuted | Lakes below the need persisted at least as often as they fell: T1's *Refuted by* in its second form, met. Either the need is misplaced (the adults' renewal does not stop where the age-0 surveys say, or the need moved after 2012), or giving from beyond goes unrecorded (stocking R5 misses, fish from connected waters). The seepage-lake report and the split by renewal pending say which is likelier; neither is a verdict. T1's standing then records a frozen field test failed, as its *Evidence* records MQ3. |
+| refuted | Lakes below the need persisted at least as often as they fell, among the recorded seepage lakes too, with the other stocking records read: T1's *Refuted by* in its second form, met, with both confounds set aside. The need is then misplaced: the adults' renewal does not stop where the age-0 surveys say, or the need moved after 2012. T1's standing then records a frozen field test failed, as its *Evidence* records MQ3. |
+| refuted unless connected waters | The same among all lakes, but not among the seepage lakes alone, or too few of them to decide: fish from connected waters could have kept the lakes up. T1's *Refuted by* is met only where those waters are shown to give no walleye. T1's standing records a refutation the field test could not separate from immigration. |
+| refuted unless unrecorded stocking | The same, but the other stocking records (R5b) were not read for a lake that persisted: fry, or tribal or private stocking, could have kept it up. Reading those records, where they can be had, settles it. |
 | not decided | Too few lakes stood below the need unstocked, or no need was found. Where no need was found the lakes lie outside T1's scope, as most assessed fish stocks do; otherwise the test could not reach what T1 forbids, as the salt shock could not (T1-STANDING). |
 
 | V2 | What it means |
@@ -249,7 +287,9 @@ On the board's Decisions line:
   - R3: the Ceded Territory's tribal harvest (<https://dnr.wisconsin.gov/topic/Fishing/ceded/tribalharvest.html>);
   - R4: the creel surveys;
   - R5: WDNR's fish stocking database;
-  - R6: the 2021 paper's supplement, where one exists.
+  - R5b: fry, tribal and private stocking, from GLIFWC's reports of the bands' hatcheries and WDNR's annual stocking summaries, where they can be had as tables;
+  - R6: the 2021 paper's supplement, where one exists;
+  - R7: WDNR's lake types, where R1's characteristics do not give them.
   A page that offers no download, or a file behind a bot check, is fetched by Ren in a browser, as Dryad's files were for MQ6. Where R2 cannot be had, branch B cannot be computed, and the test runs only under branch A.
 - **The run**: a few seconds of CPU on the local machine, standard library, no model call, no key.
 

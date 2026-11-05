@@ -5,35 +5,49 @@
     "V1 verdicts, of 40 archives": {
      "not decided": 40
     },
+    "V1 with the label alone a fall (the reading set aside)": {
+     "not decided": 40
+    },
     "V2 met, archives": 0,
-    "the fitted need, median": 0.341,
-    "resolved lakes where T1 and the null differ, median": 3
+    "the fitted need, median": 0.34,
+    "resolved lakes where T1 and the null differ, median": 2
    },
    "stocking chance 0.1 a year": {
     "V1 verdicts, of 40 archives": {
-     "supported": 9,
-     "not decided": 31
+     "supported": 3,
+     "not decided": 37
     },
-    "V2 met, archives": 0,
-    "the fitted need, median": 0.338,
-    "resolved lakes where T1 and the null differ, median": 14
+    "V1 with the label alone a fall (the reading set aside)": {
+     "supported": 7,
+     "not decided": 33
+    },
+    "V2 met, archives": 1,
+    "the fitted need, median": 0.339,
+    "resolved lakes where T1 and the null differ, median": 13
    },
    "stocking chance 0.03 a year": {
     "V1 verdicts, of 40 archives": {
-     "supported": 39,
-     "not decided": 1
+     "supported": 36,
+     "not decided": 4
+    },
+    "V1 with the label alone a fall (the reading set aside)": {
+     "supported": 36,
+     "not decided": 4
     },
     "V2 met, archives": 0,
-    "the fitted need, median": 0.349,
-    "resolved lakes where T1 and the null differ, median": 36
+    "the fitted need, median": 0.339,
+    "resolved lakes where T1 and the null differ, median": 33
    },
    "stocking chance 0.0 a year": {
     "V1 verdicts, of 40 archives": {
      "supported": 40
     },
-    "V2 met, archives": 1,
-    "the fitted need, median": 0.353,
-    "resolved lakes where T1 and the null differ, median": 56
+    "V1 with the label alone a fall (the reading set aside)": {
+     "supported": 40
+    },
+    "V2 met, archives": 0,
+    "the fitted need, median": 0.34,
+    "resolved lakes where T1 and the null differ, median": 54
    }
   },
   "no need": {
@@ -41,12 +55,18 @@
     "V1 verdicts, of 40 archives": {
      "not decided": 40
     },
+    "V1 with the label alone a fall (the reading set aside)": {
+     "not decided": 40
+    },
     "V2 met, archives": 0,
-    "the fitted need, median": 0.013,
+    "the fitted need, median": 0.024,
     "resolved lakes where T1 and the null differ, median": 0
    },
    "stocking chance 0.1 a year": {
     "V1 verdicts, of 40 archives": {
+     "not decided": 40
+    },
+    "V1 with the label alone a fall (the reading set aside)": {
      "not decided": 40
     },
     "V2 met, archives": 0,
@@ -57,16 +77,22 @@
     "V1 verdicts, of 40 archives": {
      "not decided": 40
     },
+    "V1 with the label alone a fall (the reading set aside)": {
+     "not decided": 40
+    },
     "V2 met, archives": 0,
-    "the fitted need, median": 0.001,
+    "the fitted need, median": 0.006,
     "resolved lakes where T1 and the null differ, median": 0
    },
    "stocking chance 0.0 a year": {
     "V1 verdicts, of 40 archives": {
      "not decided": 40
     },
+    "V1 with the label alone a fall (the reading set aside)": {
+     "not decided": 40
+    },
     "V2 met, archives": 0,
-    "the fitted need, median": 0.024,
+    "the fitted need, median": 0.014,
     "resolved lakes where T1 and the null differ, median": 0
    }
   },
@@ -75,33 +101,46 @@
     "V1 verdicts, of 40 archives": {
      "not decided": 40
     },
+    "V1 with the label alone a fall (the reading set aside)": {
+     "not decided": 40
+    },
     "V2 met, archives": 0,
-    "the fitted need, median": 0.558,
-    "resolved lakes where T1 and the null differ, median": 4
+    "the fitted need, median": 0.551,
+    "resolved lakes where T1 and the null differ, median": 3
    },
    "stocking chance 0.1 a year": {
     "V1 verdicts, of 40 archives": {
-     "supported": 28,
-     "not decided": 12
+     "supported": 25,
+     "not decided": 15
+    },
+    "V1 with the label alone a fall (the reading set aside)": {
+     "supported": 34,
+     "not decided": 6
     },
     "V2 met, archives": 0,
-    "the fitted need, median": 0.517,
-    "resolved lakes where T1 and the null differ, median": 23
+    "the fitted need, median": 0.519,
+    "resolved lakes where T1 and the null differ, median": 19
    },
    "stocking chance 0.03 a year": {
     "V1 verdicts, of 40 archives": {
      "supported": 40
     },
-    "V2 met, archives": 0,
-    "the fitted need, median": 0.501,
-    "resolved lakes where T1 and the null differ, median": 69
+    "V1 with the label alone a fall (the reading set aside)": {
+     "supported": 40
+    },
+    "V2 met, archives": 1,
+    "the fitted need, median": 0.494,
+    "resolved lakes where T1 and the null differ, median": 66
    },
    "stocking chance 0.0 a year": {
     "V1 verdicts, of 40 archives": {
      "supported": 40
     },
+    "V1 with the label alone a fall (the reading set aside)": {
+     "supported": 40
+    },
     "V2 met, archives": 0,
-    "the fitted need, median": 0.482,
+    "the fitted need, median": 0.481,
     "resolved lakes where T1 and the null differ, median": 117
    }
   },
@@ -110,34 +149,47 @@
     "V1 verdicts, of 40 archives": {
      "not decided": 40
     },
+    "V1 with the label alone a fall (the reading set aside)": {
+     "not decided": 40
+    },
     "V2 met, archives": 0,
-    "the fitted need, median": 0.34,
-    "resolved lakes where T1 and the null differ, median": 3
+    "the fitted need, median": 0.338,
+    "resolved lakes where T1 and the null differ, median": 2
    },
    "stocking chance 0.1 a year": {
     "V1 verdicts, of 40 archives": {
-     "supported": 38,
-     "not decided": 2
+     "not decided": 9,
+     "supported": 31
     },
-    "V2 met, archives": 1,
-    "the fitted need, median": 0.344,
-    "resolved lakes where T1 and the null differ, median": 20
+    "V1 with the label alone a fall (the reading set aside)": {
+     "supported": 39,
+     "not decided": 1
+    },
+    "V2 met, archives": 0,
+    "the fitted need, median": 0.347,
+    "resolved lakes where T1 and the null differ, median": 17
    },
    "stocking chance 0.03 a year": {
     "V1 verdicts, of 40 archives": {
      "supported": 40
     },
+    "V1 with the label alone a fall (the reading set aside)": {
+     "supported": 40
+    },
     "V2 met, archives": 1,
-    "the fitted need, median": 0.34,
-    "resolved lakes where T1 and the null differ, median": 52
+    "the fitted need, median": 0.347,
+    "resolved lakes where T1 and the null differ, median": 47
    },
    "stocking chance 0.0 a year": {
     "V1 verdicts, of 40 archives": {
      "supported": 40
     },
-    "V2 met, archives": 1,
-    "the fitted need, median": 0.35,
-    "resolved lakes where T1 and the null differ, median": 81
+    "V1 with the label alone a fall (the reading set aside)": {
+     "supported": 40
+    },
+    "V2 met, archives": 3,
+    "the fitted need, median": 0.347,
+    "resolved lakes where T1 and the null differ, median": 78
    }
   },
   "need falls": {
@@ -145,38 +197,55 @@
     "V1 verdicts, of 40 archives": {
      "not decided": 40
     },
+    "V1 with the label alone a fall (the reading set aside)": {
+     "not decided": 40
+    },
     "V2 met, archives": 0,
-    "the fitted need, median": 0.337,
-    "resolved lakes where T1 and the null differ, median": 3
+    "the fitted need, median": 0.348,
+    "resolved lakes where T1 and the null differ, median": 2
    },
    "stocking chance 0.1 a year": {
     "V1 verdicts, of 40 archives": {
-     "not decided": 36,
-     "refuted": 2,
-     "supported": 2
+     "not decided": 38,
+     "refuted unless connected waters": 2
     },
-    "V2 met, archives": 0,
-    "the fitted need, median": 0.342,
-    "resolved lakes where T1 and the null differ, median": 12
+    "V1 with the label alone a fall (the reading set aside)": {
+     "not decided": 38,
+     "refuted unless connected waters": 1,
+     "supported": 1
+    },
+    "V2 met, archives": 1,
+    "the fitted need, median": 0.343,
+    "resolved lakes where T1 and the null differ, median": 11
    },
    "stocking chance 0.03 a year": {
     "V1 verdicts, of 40 archives": {
-     "not decided": 27,
-     "refuted": 9,
-     "supported": 4
+     "not decided": 18,
+     "refuted unless connected waters": 17,
+     "supported": 5
     },
-    "V2 met, archives": 1,
-    "the fitted need, median": 0.352,
-    "resolved lakes where T1 and the null differ, median": 29
+    "V1 with the label alone a fall (the reading set aside)": {
+     "not decided": 22,
+     "supported": 7,
+     "refuted unless connected waters": 11
+    },
+    "V2 met, archives": 3,
+    "the fitted need, median": 0.343,
+    "resolved lakes where T1 and the null differ, median": 27
    },
    "stocking chance 0.0 a year": {
     "V1 verdicts, of 40 archives": {
-     "supported": 18,
      "not decided": 20,
-     "refuted": 2
+     "supported": 19,
+     "refuted unless connected waters": 1
     },
-    "V2 met, archives": 3,
-    "the fitted need, median": 0.346,
+    "V1 with the label alone a fall (the reading set aside)": {
+     "not decided": 20,
+     "supported": 19,
+     "refuted unless connected waters": 1
+    },
+    "V2 met, archives": 5,
+    "the fitted need, median": 0.347,
     "resolved lakes where T1 and the null differ, median": 43
    }
   },
@@ -184,38 +253,56 @@
    "stocking chance 0.3 a year": {
     "V1 verdicts, of 40 archives": {
      "not decided": 28,
-     "refuted": 12
+     "refuted unless connected waters or unrecorded stocking": 12
     },
-    "V2 met, archives": 3,
-    "the fitted need, median": 0.345,
-    "resolved lakes where T1 and the null differ, median": 11
+    "V1 with the label alone a fall (the reading set aside)": {
+     "not decided": 28,
+     "refuted unless connected waters or unrecorded stocking": 12
+    },
+    "V2 met, archives": 6,
+    "the fitted need, median": 0.335,
+    "resolved lakes where T1 and the null differ, median": 10
    },
    "stocking chance 0.1 a year": {
     "V1 verdicts, of 40 archives": {
-     "supported": 9,
+     "supported": 7,
      "not decided": 26,
-     "refuted": 5
+     "refuted unless connected waters or unrecorded stocking": 7
     },
-    "V2 met, archives": 8,
-    "the fitted need, median": 0.341,
-    "resolved lakes where T1 and the null differ, median": 23
+    "V1 with the label alone a fall (the reading set aside)": {
+     "supported": 10,
+     "refuted unless connected waters or unrecorded stocking": 5,
+     "not decided": 25
+    },
+    "V2 met, archives": 14,
+    "the fitted need, median": 0.344,
+    "resolved lakes where T1 and the null differ, median": 20
    },
    "stocking chance 0.03 a year": {
     "V1 verdicts, of 40 archives": {
-     "supported": 38,
-     "not decided": 2
+     "supported": 35,
+     "not decided": 5
     },
-    "V2 met, archives": 7,
-    "the fitted need, median": 0.34,
-    "resolved lakes where T1 and the null differ, median": 41
+    "V1 with the label alone a fall (the reading set aside)": {
+     "supported": 36,
+     "not decided": 4
+    },
+    "V2 met, archives": 8,
+    "the fitted need, median": 0.347,
+    "resolved lakes where T1 and the null differ, median": 36
    },
    "stocking chance 0.0 a year": {
     "V1 verdicts, of 40 archives": {
-     "supported": 40
+     "supported": 39,
+     "not decided": 1
     },
-    "V2 met, archives": 4,
-    "the fitted need, median": 0.343,
-    "resolved lakes where T1 and the null differ, median": 57
+    "V1 with the label alone a fall (the reading set aside)": {
+     "supported": 39,
+     "not decided": 1
+    },
+    "V2 met, archives": 3,
+    "the fitted need, median": 0.341,
+    "resolved lakes where T1 and the null differ, median": 52
    }
   },
   "open": {
@@ -223,79 +310,117 @@
     "V1 verdicts, of 40 archives": {
      "not decided": 40
     },
+    "V1 with the label alone a fall (the reading set aside)": {
+     "not decided": 40
+    },
     "V2 met, archives": 0,
-    "the fitted need, median": 0.337,
-    "resolved lakes where T1 and the null differ, median": 3
+    "the fitted need, median": 0.345,
+    "resolved lakes where T1 and the null differ, median": 2
    },
    "stocking chance 0.1 a year": {
     "V1 verdicts, of 40 archives": {
-     "not decided": 39,
-     "refuted": 1
+     "not decided": 38,
+     "refuted unless connected waters": 2
     },
-    "V2 met, archives": 1,
-    "the fitted need, median": 0.328,
-    "resolved lakes where T1 and the null differ, median": 5
+    "V1 with the label alone a fall (the reading set aside)": {
+     "not decided": 39,
+     "refuted unless connected waters": 1
+    },
+    "V2 met, archives": 0,
+    "the fitted need, median": 0.335,
+    "resolved lakes where T1 and the null differ, median": 8
    },
    "stocking chance 0.03 a year": {
     "V1 verdicts, of 40 archives": {
-     "not decided": 32,
-     "refuted": 8
+     "not decided": 34,
+     "supported": 4,
+     "refuted unless connected waters": 2
     },
-    "V2 met, archives": 0,
-    "the fitted need, median": 0.329,
-    "resolved lakes where T1 and the null differ, median": 8
+    "V1 with the label alone a fall (the reading set aside)": {
+     "not decided": 31,
+     "refuted unless connected waters": 2,
+     "supported": 7
+    },
+    "V2 met, archives": 3,
+    "the fitted need, median": 0.335,
+    "resolved lakes where T1 and the null differ, median": 17
    },
    "stocking chance 0.0 a year": {
     "V1 verdicts, of 40 archives": {
-     "refuted": 17,
-     "not decided": 23
+     "refuted unless connected waters": 4,
+     "not decided": 21,
+     "supported": 15
     },
-    "V2 met, archives": 2,
-    "the fitted need, median": 0.318,
-    "resolved lakes where T1 and the null differ, median": 8
+    "V1 with the label alone a fall (the reading set aside)": {
+     "refuted unless connected waters": 4,
+     "not decided": 21,
+     "supported": 15
+    },
+    "V2 met, archives": 3,
+    "the fitted need, median": 0.337,
+    "resolved lakes where T1 and the null differ, median": 27
    }
   },
   "survival compensates": {
    "stocking chance 0.3 a year": {
     "V1 verdicts, of 40 archives": {
-     "not decided": 39,
-     "refuted": 1
+     "not decided": 40
+    },
+    "V1 with the label alone a fall (the reading set aside)": {
+     "not decided": 40
     },
     "V2 met, archives": 0,
-    "the fitted need, median": 0.366,
+    "the fitted need, median": 0.364,
     "resolved lakes where T1 and the null differ, median": 5
    },
    "stocking chance 0.1 a year": {
     "V1 verdicts, of 40 archives": {
-     "not decided": 26,
-     "refuted": 14
+     "not decided": 32,
+     "refuted unless connected waters": 8
     },
-    "V2 met, archives": 1,
-    "the fitted need, median": 0.364,
-    "resolved lakes where T1 and the null differ, median": 8
+    "V1 with the label alone a fall (the reading set aside)": {
+     "not decided": 31,
+     "refuted unless connected waters": 9
+    },
+    "V2 met, archives": 0,
+    "the fitted need, median": 0.36,
+    "resolved lakes where T1 and the null differ, median": 7
    },
    "stocking chance 0.03 a year": {
     "V1 verdicts, of 40 archives": {
-     "refuted": 27,
-     "not decided": 13
+     "refuted unless connected waters": 24,
+     "not decided": 16
     },
-    "V2 met, archives": 1,
-    "the fitted need, median": 0.355,
-    "resolved lakes where T1 and the null differ, median": 10
+    "V1 with the label alone a fall (the reading set aside)": {
+     "refuted unless connected waters": 25,
+     "not decided": 15
+    },
+    "V2 met, archives": 2,
+    "the fitted need, median": 0.356,
+    "resolved lakes where T1 and the null differ, median": 11
    },
    "stocking chance 0.0 a year": {
     "V1 verdicts, of 40 archives": {
-     "refuted": 24,
-     "not decided": 16
+     "not decided": 13,
+     "refuted unless connected waters": 26,
+     "refuted": 1
     },
-    "V2 met, archives": 1,
-    "the fitted need, median": 0.363,
+    "V1 with the label alone a fall (the reading set aside)": {
+     "not decided": 13,
+     "refuted unless connected waters": 26,
+     "refuted": 1
+    },
+    "V2 met, archives": 0,
+    "the fitted need, median": 0.359,
     "resolved lakes where T1 and the null differ, median": 11
    }
   },
   "episodic": {
    "stocking chance 0.3 a year": {
     "V1 verdicts, of 40 archives": {
+     "not decided": 40
+    },
+    "V1 with the label alone a fall (the reading set aside)": {
      "not decided": 40
     },
     "V2 met, archives": 0,
@@ -306,29 +431,43 @@
     "V1 verdicts, of 40 archives": {
      "not decided": 40
     },
-    "V2 met, archives": 1,
-    "the fitted need, median": 0.136,
-    "resolved lakes where T1 and the null differ, median": 6
+    "V1 with the label alone a fall (the reading set aside)": {
+     "not decided": 37,
+     "supported": 3
+    },
+    "V2 met, archives": 3,
+    "the fitted need, median": 0.142,
+    "resolved lakes where T1 and the null differ, median": 5
    },
    "stocking chance 0.03 a year": {
     "V1 verdicts, of 40 archives": {
-     "supported": 20,
-     "not decided": 17,
-     "refuted": 3
+     "not decided": 30,
+     "supported": 7,
+     "refuted unless connected waters": 3
     },
-    "V2 met, archives": 10,
-    "the fitted need, median": 0.154,
-    "resolved lakes where T1 and the null differ, median": 24
+    "V1 with the label alone a fall (the reading set aside)": {
+     "not decided": 24,
+     "supported": 14,
+     "refuted unless connected waters": 2
+    },
+    "V2 met, archives": 6,
+    "the fitted need, median": 0.15,
+    "resolved lakes where T1 and the null differ, median": 21
    },
    "stocking chance 0.0 a year": {
     "V1 verdicts, of 40 archives": {
-     "refuted": 3,
-     "not decided": 16,
-     "supported": 21
+     "not decided": 18,
+     "supported": 21,
+     "refuted unless connected waters": 1
     },
-    "V2 met, archives": 9,
-    "the fitted need, median": 0.156,
-    "resolved lakes where T1 and the null differ, median": 42
+    "V1 with the label alone a fall (the reading set aside)": {
+     "not decided": 18,
+     "supported": 21,
+     "refuted unless connected waters": 1
+    },
+    "V2 met, archives": 3,
+    "the fitted need, median": 0.148,
+    "resolved lakes where T1 and the null differ, median": 39
    }
   },
   "renewal unseen": {
@@ -336,60 +475,234 @@
     "V1 verdicts, of 40 archives": {
      "not decided": 40
     },
+    "V1 with the label alone a fall (the reading set aside)": {
+     "not decided": 40
+    },
     "V2 met, archives": 0,
-    "the fitted need, median": 0.125,
+    "the fitted need, median": 0.124,
     "resolved lakes where T1 and the null differ, median": 0
    },
    "stocking chance 0.1 a year": {
     "V1 verdicts, of 40 archives": {
      "not decided": 40
     },
-    "V2 met, archives": 1,
-    "the fitted need, median": 0.121,
+    "V1 with the label alone a fall (the reading set aside)": {
+     "not decided": 40
+    },
+    "V2 met, archives": 0,
+    "the fitted need, median": 0.122,
     "resolved lakes where T1 and the null differ, median": 1
    },
    "stocking chance 0.03 a year": {
     "V1 verdicts, of 40 archives": {
      "not decided": 40
     },
+    "V1 with the label alone a fall (the reading set aside)": {
+     "not decided": 40
+    },
     "V2 met, archives": 0,
-    "the fitted need, median": 0.112,
-    "resolved lakes where T1 and the null differ, median": 3
+    "the fitted need, median": 0.118,
+    "resolved lakes where T1 and the null differ, median": 2
    },
    "stocking chance 0.0 a year": {
     "V1 verdicts, of 40 archives": {
-     "not decided": 39,
-     "refuted": 1
+     "not decided": 40
+    },
+    "V1 with the label alone a fall (the reading set aside)": {
+     "not decided": 40
+    },
+    "V2 met, archives": 1,
+    "the fitted need, median": 0.118,
+    "resolved lakes where T1 and the null differ, median": 3
+   }
+  },
+  "relabelled": {
+   "stocking chance 0.3 a year": {
+    "V1 verdicts, of 40 archives": {
+     "not decided": 40
+    },
+    "V1 with the label alone a fall (the reading set aside)": {
+     "not decided": 40
     },
     "V2 met, archives": 0,
-    "the fitted need, median": 0.117,
+    "the fitted need, median": 0.344,
+    "resolved lakes where T1 and the null differ, median": 2
+   },
+   "stocking chance 0.1 a year": {
+    "V1 verdicts, of 40 archives": {
+     "not decided": 37,
+     "supported": 3
+    },
+    "V1 with the label alone a fall (the reading set aside)": {
+     "not decided": 28,
+     "supported": 12
+    },
+    "V2 met, archives": 1,
+    "the fitted need, median": 0.34,
+    "resolved lakes where T1 and the null differ, median": 10
+   },
+   "stocking chance 0.03 a year": {
+    "V1 verdicts, of 40 archives": {
+     "supported": 35,
+     "not decided": 5
+    },
+    "V1 with the label alone a fall (the reading set aside)": {
+     "supported": 39,
+     "not decided": 1
+    },
+    "V2 met, archives": 1,
+    "the fitted need, median": 0.349,
+    "resolved lakes where T1 and the null differ, median": 27
+   },
+   "stocking chance 0.0 a year": {
+    "V1 verdicts, of 40 archives": {
+     "supported": 40
+    },
+    "V1 with the label alone a fall (the reading set aside)": {
+     "supported": 40
+    },
+    "V2 met, archives": 3,
+    "the fitted need, median": 0.344,
+    "resolved lakes where T1 and the null differ, median": 44
+   }
+  },
+  "compensates, relabelled": {
+   "stocking chance 0.3 a year": {
+    "V1 verdicts, of 40 archives": {
+     "not decided": 40
+    },
+    "V1 with the label alone a fall (the reading set aside)": {
+     "not decided": 40
+    },
+    "V2 met, archives": 0,
+    "the fitted need, median": 0.364,
     "resolved lakes where T1 and the null differ, median": 3
+   },
+   "stocking chance 0.1 a year": {
+    "V1 verdicts, of 40 archives": {
+     "not decided": 35,
+     "refuted unless connected waters": 5
+    },
+    "V1 with the label alone a fall (the reading set aside)": {
+     "not decided": 34,
+     "refuted unless connected waters": 6
+    },
+    "V2 met, archives": 0,
+    "the fitted need, median": 0.351,
+    "resolved lakes where T1 and the null differ, median": 7
+   },
+   "stocking chance 0.03 a year": {
+    "V1 verdicts, of 40 archives": {
+     "refuted unless connected waters": 11,
+     "not decided": 29
+    },
+    "V1 with the label alone a fall (the reading set aside)": {
+     "refuted unless connected waters": 13,
+     "not decided": 27
+    },
+    "V2 met, archives": 1,
+    "the fitted need, median": 0.358,
+    "resolved lakes where T1 and the null differ, median": 8
+   },
+   "stocking chance 0.0 a year": {
+    "V1 verdicts, of 40 archives": {
+     "refuted unless connected waters": 21,
+     "not decided": 19
+    },
+    "V1 with the label alone a fall (the reading set aside)": {
+     "not decided": 19,
+     "refuted unless connected waters": 21
+    },
+    "V2 met, archives": 2,
+    "the fitted need, median": 0.35,
+    "resolved lakes where T1 and the null differ, median": 10
+   }
+  },
+  "unrecorded, read": {
+   "stocking chance 0.3 a year": {
+    "V1 verdicts, of 40 archives": {
+     "not decided": 40
+    },
+    "V1 with the label alone a fall (the reading set aside)": {
+     "not decided": 40
+    },
+    "V2 met, archives": 0,
+    "the fitted need, median": 0.342,
+    "resolved lakes where T1 and the null differ, median": 3
+   },
+   "stocking chance 0.1 a year": {
+    "V1 verdicts, of 40 archives": {
+     "supported": 5,
+     "not decided": 35
+    },
+    "V1 with the label alone a fall (the reading set aside)": {
+     "supported": 9,
+     "not decided": 31
+    },
+    "V2 met, archives": 0,
+    "the fitted need, median": 0.343,
+    "resolved lakes where T1 and the null differ, median": 14
+   },
+   "stocking chance 0.03 a year": {
+    "V1 verdicts, of 40 archives": {
+     "supported": 38,
+     "not decided": 2
+    },
+    "V1 with the label alone a fall (the reading set aside)": {
+     "supported": 38,
+     "not decided": 2
+    },
+    "V2 met, archives": 2,
+    "the fitted need, median": 0.35,
+    "resolved lakes where T1 and the null differ, median": 36
+   },
+   "stocking chance 0.0 a year": {
+    "V1 verdicts, of 40 archives": {
+     "supported": 40
+    },
+    "V1 with the label alone a fall (the reading set aside)": {
+     "supported": 40
+    },
+    "V2 met, archives": 6,
+    "the fitted need, median": 0.347,
+    "resolved lakes where T1 and the null differ, median": 56
+   }
+  },
+  "survival compensates, 900 lakes an archive": {
+   "stocking chance 0.03 a year": {
+    "refuted": 35,
+    "refuted unless connected waters": 5
+   },
+   "stocking chance 0.0 a year": {
+    "refuted": 32,
+    "refuted unless connected waters": 8
    }
   }
  },
- "checks": 57,
+ "checks": 72,
  "checks by kind": {
   "rules: V1": 17,
   "rules: the point": 1,
   "rules: the scope": 4,
-  "rules: the fate": 3,
+  "rules: the fate": 6,
   "rules: renewal pending": 2,
   "rules: V2": 3,
   "rules: the reference": 1,
+  "rules: the confounds": 3,
   "rules: the tail": 1,
   "rules: branch A": 3,
   "rules: branch B": 4,
   "the reader": 4,
   "the run": 5,
-  "worlds": 9
+  "worlds": 18
  },
  "failed": [],
- "CPU seconds": 57.8,
+ "CPU seconds": 102.9,
  "code hashes": {
-  "experiments/need-measured-in-advance/t1n.py": "d237eeccb78010f1a5b172acb7e4171174cb68aea3ae81e46b1de366ea546775",
-  "experiments/need-measured-in-advance/reader.py": "0ab1bb9879d4f65a232a760c56250a1f43ec1b8a13b5777217765094ac7f5549",
-  "experiments/need-measured-in-advance/run.py": "180ddadc27642a5ff74828119f6a9ef3bcaf534ff1c1b6741c005ca4a48cfd66",
-  "experiments/need-measured-in-advance/dry_run.py": "15240a57b188d8be7fbc75d4c3062ffa6a597ce1e42134bdc80b79528f653611"
+  "experiments/need-measured-in-advance/t1n.py": "eccd32b8b5298d92e84e48834b8d45148ec40291ebde601a6c7653cc06504e1b",
+  "experiments/need-measured-in-advance/reader.py": "f825cbf910f440ede7348ee4cc656ecc0f165cb437273a31a41dde0513b6eb2d",
+  "experiments/need-measured-in-advance/run.py": "ce3bf5aac9f126940db067be21e75c52ee49a842fa90bacd5c092535c8e5a936",
+  "experiments/need-measured-in-advance/dry_run.py": "2149bfc652c1293c0374161b7868b2a5c100c382936ff36d4be177068db8bf15"
  },
  "code unchanged during the run": true
 }

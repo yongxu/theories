@@ -10,7 +10,11 @@ A lake, as reader.py builds it from the recorders' tables:
     harvest   {year: recorded harvest of adult walleye per acre}: tribal harvest, and angling where a
               creel survey ran that year
     creel     the years with a creel survey
-    stocked   the years with recorded walleye stocking, of any size
+    stocked   the years with recorded walleye stocking, of any size (WDNR's database)
+    other     the years with fry, tribal or private walleye stocking (R5b), or None where those records
+              were not read
+    closed    True for a seepage lake (no inlet or outlet), False for another recorded type, None where no
+              type is recorded
 Standard library only.
 """
 
@@ -160,7 +164,7 @@ def in_scope(lk, ref):
     is not one stocked fish make. Returns the reason it is out, or None."""
     if lk["label"].get(ref) != NR:
         return f"label at the reference: {lk['label'].get(ref)!r}"
-    stocked = sorted(s for s in lk["stocked"] if ref - STOCK_BEFORE <= s <= ref)
+    stocked = sorted(s for s in lk["stocked"] | (lk.get("other") or set()) if ref - STOCK_BEFORE <= s <= ref)
     if stocked:
         return f"stocking recorded before the reference: {stocked}"
     return None
@@ -181,21 +185,30 @@ def pending(lk, ref, floor=FLOOR):
     return None
 
 
-def fate_of(lk, ref, fate, need):
-    """The lake's fate between its reference and the fate's survey, by the recorders' own fields first:
-    fell where their label leaves natural recruitment at any survey after the reference up to the fate's
-    (their judgement that natural renewal no longer sustains the lake); unresolved where stocking is recorded
-    after the reference with the label kept (giving from beyond, without that judgement); otherwise by the
+def fate_of(lk, ref, fate, need, label_alone=False):
+    """The lake's fate between its reference and the fate's survey. Where the recorders' label leaves
+    natural recruitment at a survey after the reference up to the fate's, the label alone decides nothing:
+    fell only where a recorded fall goes with it (the fate's interval below the need, or an estimate after
+    the reference whose upper bound is below the reference's lower bound), unresolved otherwise, since what
+    persists may be stocked fish. (label_alone reads the label's change as a fall by itself: the reading set
+    aside, which the dry run reports beside.) Unresolved where stocking is recorded after the reference with
+    the label kept, in WDNR's database or in the other stocking records: giving from beyond. Otherwise by the
     fate's estimate against the need: fell where its upper bound is below the need, persisted where its
     lower bound is at or above it, unresolved where its interval holds the need. Returns (fate, how)."""
     later = sorted(t for t in lk["label"] if ref < t <= fate)
     left = [t for t in later if lk["label"][t] != NR]
+    est, lo, hi = lk["adults"][fate]
     if left:
-        return "fell", f"the label left natural recruitment in {left[0]}"
-    stocked = sorted(s for s in lk["stocked"] if ref < s <= fate)
+        if label_alone:
+            return "fell", f"the label left natural recruitment in {left[0]}"
+        lo_ref = lk["adults"][ref][1]
+        drops = [t for t in sorted(lk["adults"]) if ref < t <= fate and lk["adults"][t][2] < lo_ref]
+        if hi < need or drops:
+            return "fell", f"the label left natural recruitment in {left[0]}, with a recorded fall"
+        return "unresolved", f"the label left natural recruitment in {left[0]}, with no recorded fall"
+    stocked = sorted(s for s in lk["stocked"] | (lk.get("other") or set()) if ref < s <= fate)
     if stocked:
         return "unresolved", f"stocking recorded in {stocked}, the label kept"
-    est, lo, hi = lk["adults"][fate]
     if hi < need:
         return "fell", "the estimate's interval below the need"
     if lo >= need:
@@ -203,7 +216,7 @@ def fate_of(lk, ref, fate, need):
     return "unresolved", "the estimate's interval holds the need"
 
 
-def rows(lakes, needs, first=FIRST_REF, last=LAST_REF, floor=FLOOR):
+def rows(lakes, needs, first=FIRST_REF, last=LAST_REF, floor=FLOOR, label_alone=False):
     """One row a lake. Its reference is its first candidate at which T1 predicts a fall (the level below
     the need, where renewal stops under any draw), in scope; failing that, its first candidate in scope at
     which T1 predicts persistence. The choice reads the reference's level and
@@ -247,12 +260,31 @@ def rows(lakes, needs, first=FIRST_REF, last=LAST_REF, floor=FLOOR):
                     "point with the recorded draw": y + h, "below the point with the recorded draw": x < y + h,
                     "fate estimate": list(lk["adults"][f]), "below the need at the reference": hi < y,
                     "pending at the reference": pending(lk, r, floor)})
-        row["fate"], row["fate by"] = fate_of(lk, r, f, y)
+        row["fate"], row["fate by"] = fate_of(lk, r, f, y, label_alone)
+        row["closed"] = lk.get("closed")
+        row["other stocking read"] = lk.get("other") is not None
         out.append(row)
     return out
 
 
 # --- the verdicts ----------------------------------------------------------------------------------------
+
+def decide(res):
+    """V1's decision on resolved rows of lakes below the need: (verdict, n, k, critical)."""
+    n, k = len(res), sum(r["fate"] == "fell" for r in res)
+    c = critical(n) if n else None
+    if n < N_MIN:
+        return f"not decided: {n} resolved lakes where T1 and the null differ, fewer than {N_MIN}", n, k, c
+    if k >= c:
+        return "supported", n, k, c
+    if k <= n - c:
+        return "refuted: the fates separated no better than by the null, on the null's side at 0.05", n, k, c
+    if 2 * k <= n and n >= N_REFUTE:
+        return "refuted: the fates separated no better than by the null, at most half fell", n, k, c
+    if 2 * k <= n:
+        return f"not decided: at most half fell, but {n} resolved lakes are fewer than {N_REFUTE}", n, k, c
+    return "not decided", n, k, c
+
 
 def v1(table):
     """The separation (primary): lakes below the need against lakes above it. T1 predicts a fall below the
@@ -263,29 +295,35 @@ def v1(table):
     least the critical count c fell. Refuted, the fates separated no better than by the null, where at most
     n - c fell, so few that the same test at 0.05 puts them on the null's side, or, by the home's letter,
     where at most half fell and at least N_REFUTE are resolved. Not decided where neither, or where fewer
-    than N_MIN are resolved."""
+    than N_MIN are resolved.
+
+    A refutation two confounds could make on their own is qualified, decided here before any value is read
+    (DESIGN.md, section 7): fish from connected waters, where a lake that persisted is not a recorded seepage
+    lake and the closed lakes alone do not refute; and unrecorded stocking, where the records of fry, tribal
+    and private stocking were not read for a lake that persisted. It then reads "refuted unless ..."."""
     disc = [r for r in table if "out" not in r and r["T1 predicts"] == "falls" and r["null predicts"] == "persists"]
     res = [r for r in disc if r["fate"] != "unresolved"]
-    n, k = len(res), sum(r["fate"] == "fell" for r in res)
-    out = {"discordant": len(disc), "resolved": n, "fell": k, "critical": critical(n) if n else None,
+    verdict, n, k, c = decide(res)
+    out = {"discordant": len(disc), "resolved": n, "fell": k, "critical": c,
            "reported apart, by renewal pending at the reference (fell, resolved)": {
                side: (sum(r["fate"] == "fell" for r in res if (r["pending at the reference"] is None) == (side == "none")),
                       sum(1 for r in res if (r["pending at the reference"] is None) == (side == "none")))
                for side in ("none", "pending or unread")}}
-    if n < N_MIN:
-        out["verdict"] = f"not decided: {n} resolved lakes where T1 and the null differ, fewer than {N_MIN}"
-    elif k >= out["critical"]:
-        out["verdict"] = "supported"
+    if verdict == "supported":
         out["p"] = float(tail_half(n, k))
-    elif k <= n - out["critical"]:
-        out["verdict"] = "refuted: the fates separated no better than by the null, on the null's side at 0.05"
-        out["p"] = float(tail_half(n, n - k))
-    elif 2 * k <= n and n >= N_REFUTE:
-        out["verdict"] = "refuted: the fates separated no better than by the null, at most half fell"
-    elif 2 * k <= n:
-        out["verdict"] = f"not decided: at most half fell, but {n} resolved lakes are fewer than {N_REFUTE}"
-    else:
-        out["verdict"] = "not decided"
+    if verdict.startswith("refuted"):
+        out["p"] = float(tail_half(n, n - k)) if k <= n - c else None
+        unless, kept = [], [r for r in res if r["fate"] == "persisted"]
+        if any(r["closed"] is not True for r in kept):
+            closed = decide([r for r in res if r["closed"] is True])[0]
+            out["closed lakes alone"] = closed
+            if not closed.startswith("refuted"):
+                unless.append("connected waters")
+        if any(not r["other stocking read"] for r in kept):
+            unless.append("unrecorded stocking")
+        if unless:
+            verdict = "refuted unless " + " or ".join(unless) + ": " + verdict.split(": ", 1)[1]
+    out["verdict"] = verdict
     return out
 
 
@@ -296,10 +334,10 @@ def v2(table):
     label at every survey between and no recorded stocking after the reference."""
     cand = [r for r in table if "out" not in r and r["below the need at the reference"]
             and r["pending at the reference"] is None]
-    met = [r["id"] for r in cand if r["fate"] == "persisted"]
-    below = len(cand)
-    return {"below the need at the reference": below, "returned": len(met), "lakes": met,
-            "met": bool(met)}
+    met = [r for r in cand if r["fate"] == "persisted"]
+    return {"below the need at the reference": len(cand), "returned": len(met), "met": bool(met),
+            "lakes": [{"id": r["id"], "closed": r["closed"], "other stocking read": r["other stocking read"]}
+                      for r in met]}
 
 
 def reports(table):
@@ -321,6 +359,6 @@ def reports(table):
             "references with a creel survey": sum(1 for r in inn if r["creel at the reference"])}
 
 
-def read(lakes, needs, first=FIRST_REF, last=LAST_REF, floor=FLOOR):
-    table = rows(lakes, needs, first, last, floor)
+def read(lakes, needs, first=FIRST_REF, last=LAST_REF, floor=FLOOR, label_alone=False):
+    table = rows(lakes, needs, first, last, floor, label_alone)
     return {"V1": v1(table), "V2": v2(table), "reports": reports(table), "rows": table}

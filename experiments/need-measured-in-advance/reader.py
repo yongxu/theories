@@ -21,6 +21,8 @@ FILES = {
     "tribal": "tribal_harvest.csv",       # the Ceded Territory's tribal harvest, by lake and year
     "creel": "creel_harvest.csv",         # angling harvest, by lake and year, where a creel survey ran
     "stocking": "stocking.csv",           # WDNR's fish stocking records
+    "other": "other_stocking.csv",        # R5b: fry, tribal and private stocking, where those records are had
+    "types": "lake_types.csv",            # R7: WDNR's lake type, where R1's characteristics do not give it
     "curves": "published_curves.csv",     # branch A: the published per-lake stock-recruitment curves, if any
 }
 COLUMNS = {
@@ -31,15 +33,29 @@ COLUMNS = {
     "tribal": {"lake": "WBIC", "year": "Year", "number": "Walleye Harvested"},
     "creel": {"lake": "WBIC", "year": "Year", "number": "Walleye Harvested"},
     "stocking": {"lake": "WBIC", "year": "Year", "species": "Species", "number": "Number Stocked"},
+    "other": {"lake": "WBIC", "year": "Year", "species": "Species", "number": "Number Stocked"},
+    "types": {"lake": "WBIC", "type": "Lake Type"},
     "curves": {"lake": "WBIC", "form": "Form", "alpha": "alpha", "beta": "beta", "q": "q",
                "last year": "Last Data Year"},
 }
 LABELS = {"NR": t1n.NR, "Natural Reproduction": t1n.NR, "C-NR": "combination", "C-ST": "combination",
           "ST": "stocked", "Stocked": "stocked", "REM": "remnant"}
 SPECIES = "Walleye"
-OPTIONAL = {"curves"}            # a folder without branch A's file reads under branch B
+OPTIONAL = {"curves", "other", "types"}   # read where present (branch A's curves; R5b; R7)
+OPEN_TYPES = ("drainage", "drained", "spring", "impoundment", "flowage", "reservoir", "river")
 OPTIONAL_COLUMNS = {("adults", "characteristics")}   # read where present: the water body's type, for a report
-STRUCTURE = {"lake", "year", "label", "characteristics", "species", "form", "last year"}   # read at the layout
+STRUCTURE = {"lake", "year", "label", "characteristics", "species", "form", "last year", "type"}   # read at the layout
+
+
+def closed_of(text):
+    """A recorded type read as closed: True for a seepage lake, False for another named type (OPEN_TYPES),
+    None where neither is named."""
+    t = (text or "").lower()
+    if "seepage" in t:
+        return True
+    if any(w in t for w in OPEN_TYPES):
+        return False
+    return None
 
 
 def table(folder, kind):
@@ -69,8 +85,8 @@ def read_all(folder):
         if row["label"].strip() not in LABELS:
             raise SystemExit(f"a label the map does not hold: {row['label']!r}")
         lk = lakes.setdefault(lid, {"id": lid, "acres": acres, "label": {}, "adults": {}, "age0": {},
-                                    "harvest": {}, "creel": set(), "stocked": set(),
-                                    "seepage": "seepage" in (row["characteristics"] or "").lower()})
+                                    "harvest": {}, "creel": set(), "stocked": set(), "other": None,
+                                    "closed": closed_of(row["characteristics"])})
         est, lo, hi = num(row["estimate"]), num(row["lower"]), num(row["upper"])
         if None in (est, lo, hi, acres) or acres <= 0:
             continue
@@ -93,6 +109,18 @@ def read_all(folder):
         lk = lakes.get(row["lake"].strip())
         if lk is not None and row["species"].strip() == SPECIES and (num(row["number"]) or 0) > 0:
             lk["stocked"].add(int(row["year"]))
+    if (Path(folder) / FILES["other"]).exists():
+        for lk in lakes.values():
+            lk["other"] = set()
+        for row in table(folder, "other"):
+            lk = lakes.get(row["lake"].strip())
+            if lk is not None and row["species"].strip() == SPECIES and (num(row["number"]) or 0) > 0:
+                lk["other"].add(int(row["year"]))
+    if (Path(folder) / FILES["types"]).exists():
+        for row in table(folder, "types"):
+            lk = lakes.get(row["lake"].strip())
+            if lk is not None and lk["closed"] is None:
+                lk["closed"] = closed_of(row["type"])
     return lakes
 
 
@@ -147,7 +175,10 @@ def layout_facts(folder, cutoff=t1n.CUTOFF):
     cand = sum(1 for ys in est_years.values()
                if any(t1n.FIRST_REF <= y <= (window_end or 0) and any(t1n.GAP_MIN <= z - y <= t1n.GAP_MAX for z in ys)
                       for y in ys))
+    types = rows_of("types")
     return {"label texts": sorted({r["label"].strip() for r in adults}),
+            "other stocking records (R5b) had": (Path(folder) / FILES["other"]).exists(),
+            "lake types (R7) had": types is not None,
             "water body types named": sorted({(r.get("characteristics") or "").strip() for r in adults} - {""})[:50],
             "last estimate year": last, "reference window": [t1n.FIRST_REF, window_end],
             "pairs up to the cutoff": len(pairs), "lakes in them": len({l for l, _ in pairs}),
@@ -162,13 +193,13 @@ def write_synthetic(lakes, folder):
     """The dry run's lakes written in the assumed layout, so the reader is checked on files of that form."""
     folder = Path(folder)
     back = {v: k for k, v in LABELS.items()}
-    rows = {k: [] for k in FILES if k != "curves"}
+    rows = {k: [] for k in FILES if k not in ("curves", "other", "types")}
     for lk in lakes:
         for yr, (est, lo, hi) in sorted(lk["adults"].items()):
             rows["adults"].append({"lake": lk["id"], "year": yr, "acres": lk["acres"],
                                    "label": back[lk["label"].get(yr, t1n.NR)], "estimate": est * lk["acres"],
                                    "lower": lo * lk["acres"], "upper": hi * lk["acres"],
-                                   "characteristics": "Seepage" if lk.get("seepage") else "Drainage"})
+                                   "characteristics": {True: "Seepage", False: "Drainage", None: ""}[lk.get("closed")]})
         for yr, v in sorted(lk["age0"].items()):
             rows["age0"].append({"lake": lk["id"], "year": yr, "per mile": v})
         for yr, v in sorted(lk["harvest"].items()):
@@ -178,6 +209,9 @@ def write_synthetic(lakes, folder):
             rows["creel"].append({"lake": lk["id"], "year": yr, "number": 0})
         for yr in sorted(lk["stocked"]):
             rows["stocking"].append({"lake": lk["id"], "year": yr, "species": SPECIES, "number": 1000})
+    if any(lk.get("other") is not None for lk in lakes):
+        rows["other"] = [{"lake": lk["id"], "year": yr, "species": SPECIES, "number": 1000}
+                         for lk in lakes for yr in sorted(lk.get("other") or ())]
     for kind, rs in rows.items():
         cols = COLUMNS[kind]
         with (folder / FILES[kind]).open("w", newline="", encoding="utf-8") as f:

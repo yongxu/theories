@@ -108,7 +108,7 @@ def run(folder, check_frozen=True):
         cell = {"need": nb}
         if nb["need"] is not None:
             cell.update(verdicts(lakes, {lk["id"]: nb["need"] for lk in lakes}, t1n.FIRST_REF, last, floor))
-            seep = [lk for lk in lakes if lk.get("seepage")]
+            seep = [lk for lk in lakes if lk.get("closed") is True]
             if seep:
                 cell["seepage lakes alone (reported)"] = verdicts(seep, {lk["id"]: nb["need"] for lk in seep},
                                                                   t1n.FIRST_REF, last, floor)["V1"]
