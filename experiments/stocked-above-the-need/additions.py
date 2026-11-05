@@ -25,29 +25,63 @@ DATES, MARKS = LAYOUT["dates"], LAYOUT["marks"]
 MONTHS = "jan feb mar apr may jun jul aug sep oct nov dec".split()
 
 
-def date_year(text):
-    """The year of a date as the files may give it, None where it cannot be told:
-    - a four-digit year from 1900 to 2099, one or the same twice (2014-05-02, 5/2/2014, 2014/05/02, 02-May-2014,
-      a range within one year); two different, a range across years, gives None;
-    - eight digits, year, month and day (20140502);
-    - a spreadsheet's count of days from 1899-12-30, five digits and perhaps a fraction (41761, the 2nd of May
-      2014);
-    - a month and day, either way round, and a two-digit year (5/2/14, 13/2/14), or a day, month's name and
-      two-digit year (02-May-14): 00 to 29 read as 2000 to 2029, 30 to 99 as 1930 to 1999."""
-    s = (text or "").strip()
-    runs = set(re.findall(r"(?<!\d)(19\d\d|20\d\d)(?!\d)", s))
-    if runs:
-        return int(runs.pop()) if len(runs) == 1 else None
-    if m := re.fullmatch(r"((?:19|20)\d\d)(0[1-9]|1[0-2])(0[1-9]|[12]\d|3[01])", s):
+def _day_month(a, b):
+    """Whether a and b are a day and a month, either way round."""
+    a, b = int(a), int(b)
+    return (1 <= a <= 31 and 1 <= b <= 12) or (1 <= a <= 12 and 1 <= b <= 31)
+
+
+def _two(yy):
+    """A two-digit year: 00 to 29 read as 2000 to 2029, 30 to 99 as 1930 to 1999."""
+    return 2000 + int(yy) if int(yy) < 30 else 1900 + int(yy)
+
+
+def _one_date(s):
+    """The year of one date in a form `date_year` names, None otherwise."""
+    Y = r"(19\d\d|20\d\d)"
+    if m := re.fullmatch(Y, s):
+        return int(m.group(1))
+    if m := re.fullmatch(Y + r"[-/.](\d{1,2})[-/.](\d{1,2})", s):
+        return int(m.group(1)) if 1 <= int(m.group(2)) <= 12 and 1 <= int(m.group(3)) <= 31 else None
+    if m := re.fullmatch(r"(\d{1,2})[-/.](\d{1,2})[-/.]" + Y, s):
+        return int(m.group(3)) if _day_month(m.group(1), m.group(2)) else None
+    if m := re.fullmatch(r"(\d{1,2})[-/.](\d{1,2})[-/.](\d\d)", s):
+        return _two(m.group(3)) if _day_month(m.group(1), m.group(2)) else None
+    if m := re.fullmatch(r"(\d{1,2})[-/ ]([A-Za-z]{3,9})\.?[-/ ,]+(\d{4}|\d\d)", s):
+        y = m.group(3)
+        if not 1 <= int(m.group(1)) <= 31 or m.group(2)[:3].lower() not in MONTHS:
+            return None
+        return _two(y) if len(y) == 2 else (int(y) if 1900 <= int(y) <= 2099 else None)
+    if m := re.fullmatch(r"([A-Za-z]{3,9})\.?\s+(\d{1,2}),?\s+" + Y, s):
+        return int(m.group(3)) if m.group(1)[:3].lower() in MONTHS and 1 <= int(m.group(2)) <= 31 else None
+    if m := re.fullmatch(Y + r"(0[1-9]|1[0-2])(0[1-9]|[12]\d|3[01])", s):
         return int(m.group(1))
     if m := re.fullmatch(r"(\d{5})(\.\d+)?", s):
         y = (datetime.date(1899, 12, 30) + datetime.timedelta(days=int(m.group(1)))).year
         return y if 1900 <= y <= 2099 else None
-    m = (re.fullmatch(r"(?:0?[1-9]|[12]\d|3[01])/(?:0?[1-9]|[12]\d|3[01])/(\d\d)", s)
-         or re.fullmatch(r"(?:0?[1-9]|[12]\d|3[01])[-/ ]([A-Za-z]{3,9})[-/ ]+(\d\d)", s))
-    if m and (m.lastindex == 1 or m.group(1)[:3].lower() in MONTHS):
-        yy = int(m.group(m.lastindex))
-        return 2000 + yy if yy < 30 else 1900 + yy
+    return None
+
+
+def date_year(text):
+    """The year of a date as the files may give it, None where it cannot be told. The forms, each whole and perhaps
+    followed by a time:
+    - a four-digit year from 1900 to 2099 alone (2014);
+    - year, month and day (2014-05-02, 2014/05/02), or eight digits (20140502);
+    - month and day either way round, then a four- or two-digit year (5/2/2014, 13/2/94);
+    - day, month's name and year (02-May-2014, 2 May 14), or month's name, day and year (May 2, 2014);
+    - a spreadsheet's count of days from 1899-12-30, five digits and perhaps a fraction (41761, the 2nd of May
+      2014);
+    - two such dates joined by a dash or "to", in the same year (5/2/2014-5/9/2014).
+    A two-digit year reads 00 to 29 as 2000 to 2029 and 30 to 99 as 1930 to 1999. A day or month out of range, a
+    range across years, and any other form (a fiscal year, 2014-15) give None (round 2's R-22)."""
+    s = re.sub(r"[ T]\d{1,2}:\d\d(?::\d\d(?:\.\d+)?)?(?:\s*[AaPp][Mm])?$", "", (text or "").strip())
+    y = _one_date(s)
+    if y is not None:
+        return y
+    for m in re.finditer(r"\s*(?:-|–|\bto\b)\s*", s):
+        a, b = _one_date(s[:m.start()].strip()), _one_date(s[m.end():].strip())
+        if a is not None and a == b:
+            return a
     return None
 
 
@@ -63,10 +97,11 @@ def rows_of(folder, kind, columns):
 
 def dated(folder):
     """(the years its walleye stockings' dates fall in, by lake; the lakes undated; the facts), from the stocking
-    files. A lake is undated where a walleye row of it gives no readable year in its date, or stands in a stocking
-    file with no date column while the other file has one. The map is None where neither file gives a date column,
-    and every lake is then undated. The facts count the rows whose date falls in another year than their entry,
-    the rows with no readable year, and the lakes undated."""
+    files. A lake is undated where a walleye row of it gives no readable year in its date, or a year more than one
+    from its entry's, which is read as no date (round 2's R-22), or stands in a stocking file with no date column
+    while the other file has one. The map is None where neither file gives a date column, and every lake is then
+    undated. The facts count the rows whose date falls in another year than their entry, the rows with no readable
+    year, the rows whose date falls more than a year from their entry, and the lakes undated."""
     out, undated, facts, any_dates = {}, set(), {}, False
     for kind in ("stocking", "other"):
         cols = dict(reader.COLUMNS[kind])
@@ -80,18 +115,21 @@ def dated(folder):
             undated |= {reader.code(r.get("lake") or "") for r in walleye}
             continue
         any_dates = True
-        other_year = unread = 0
+        other_year = unread = far = 0
         for r in walleye:
             lid = reader.code(r.get("lake") or "")
             y, d = reader.year_of(r.get("year") or ""), date_year(r.get("date"))
-            if d is None:
-                unread += 1
+            if d is None or (y is not None and abs(d - y) > 1):
+                unread += d is None
+                far += d is not None
                 undated.add(lid)
                 continue
             other_year += y is not None and d != y
             out.setdefault(lid, set()).add(d)
         facts[reader.FILES[kind]] = {"walleye rows whose date falls in another year than their entry": other_year,
-                                     "walleye rows with no readable year in the date": unread}
+                                     "walleye rows with no readable year in the date": unread,
+                                     "walleye rows whose date falls more than a year from their entry, read as no "
+                                     "date": far}
     if not any_dates:
         return None, set(), facts
     facts["lakes with a walleye stocking whose date could not be read"] = len(undated)

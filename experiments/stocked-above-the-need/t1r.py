@@ -45,10 +45,13 @@ import t1n                               # noqa: E402
 ALPHA = 0.05
 N_MIN = 10                    # lakes read, below which V1 is not decided
 WINDOW = t1n.STOCK_BEFORE     # a year read has stocking recorded in the WINDOW years before it, from the low survey on
-GAP = 2                       # and none in it or the year before: a fish stocked earlier is two or more by that fall
+GAP = 2                       # a year read or below has no stocking recorded in it or the year before: a fish stocked
+                              # earlier is two or more by that fall, past a stocking's first-year effects
+JOIN = 3                      # stocked fingerlings can join the adults counted from three years on (walleye mature
+                              # at three to five), so a lake's first fall after its low survey is read before then
 FLOOR = t1n.FLOOR
 ROSE = "Renewal rose with the level"
-NOT_ROSE = "Renewal did not rise with the level"
+SHORT = "Renewal fell short of the fit at the levels restored"
 ABATED = "what held their renewal down ended by the year read"
 SUPPRESSED = "stocking suppresses natural renewal"
 OWN_NEEDS = "their own needs lie above the common one"
@@ -98,14 +101,17 @@ def natural_catch(lk, t, stocked, marks=None, gap=1):
     return None if share is None else lk["age0"][t] * share
 
 
-def scope(lk, need_, stocked, marks=None):
+def scope(lk, need_, stocked, marks=None, made=None):
     """The lake's low survey, its year read and its year below the need (DESIGN.md, section 5), and the reason it
     is out. The low survey is its first spring estimate wholly below the need. Stocking is recorded from that
-    year on, and no spring estimate wholly above the need comes before the first such stocking. The year read is
+    year on, and no spring estimate wholly above the need comes before the first such stocking: for a lake whose
+    stockings' dates are all read, the first made from that year on, by `made`, the years of its dates and of its
+    other records (round 2's R-21); otherwise the first recorded. The year read is
     its first year after the low survey wholly above the need, with stocking recorded in T1N's records from the
     low survey's year within the WINDOW years before it, so that T1N's fit never reads it, none recorded in it or
     the year before, and a fall survey. The year below is its last year from the low survey to the year read
-    wholly below the need, with no stocking recorded in it and a fall survey; None where it has none.
+    wholly below the need, with no stocking recorded in it or the year before (round 2's R-17 and R-18: both
+    years compared stand apart from a stocking's first-year effects) and a fall survey; None where it has none.
     Returns (low survey, year read, year below, why out)."""
     A = lk["adults"]
     years = sorted(A)
@@ -115,7 +121,8 @@ def scope(lk, need_, stocked, marks=None):
     after = sorted(s for s in stocked if s >= low)
     if not after:
         return low, None, None, "no stocking recorded from its survey below the need"
-    if any(low < t <= after[0] and wholly_above(A[t], need_) for t in years):
+    first = min((s for s in made if s >= low), default=after[0]) if made is not None else after[0]
+    if any(low < t <= first and wholly_above(A[t], need_) for t in years):
         return low, None, None, "back above the need before it was stocked"
     read = next((t for t in years if t > low and wholly_above(A[t], need_)
                  and t1n.stocked_in(lk, max(low, t - WINDOW), t - 1)
@@ -123,8 +130,27 @@ def scope(lk, need_, stocked, marks=None):
     if read is None:
         return low, None, None, ("no year read: none wholly above the need, stocked in the five years before, not "
                                  "in it or the year before, and surveyed")
-    under = [b for b in years if low <= b < read and wholly_below(A[b], need_) and natural_catch(lk, b, stocked) is not None]
+    under = [b for b in years if low <= b < read and wholly_below(A[b], need_)
+             and natural_catch(lk, b, stocked, None, GAP) is not None]
     return low, read, (under[-1] if under else None), None
+
+
+def first_fall(lk, need_, stocked, low, read):
+    """The lake's first fall after its low survey whose renewal no spring estimate chose (reported only, DESIGN.md,
+    sections 5 and 7): a fall survey with no stocking recorded that year or the year before and no spring
+    estimate of its own, while every spring estimate since the low survey lies wholly below the need, and before
+    any stocking from JOIN - 1 years before the low survey on can have joined the adults counted, JOIN years after
+    it. Its level is presumed below the need, not measured. The low survey is chosen as the lake's first estimate
+    wholly below the need, so a year whose conditions lower both its count and its age-0 is chosen more often; a
+    year chosen by no estimate is not. None where the lake has none before its year read."""
+    A = lk["adults"]
+    joins = [s + JOIN for s in stocked if s >= low - (JOIN - 1)]
+    for b in range(low + 1, read):
+        if any(low < t < b and not wholly_below(A[t], need_) for t in A) or (joins and b >= min(joins)):
+            return None
+        if b not in A and natural_catch(lk, b, stocked, None, GAP) is not None:
+            return b
+    return None
 
 
 def own_level(lk, low, stocked, floor=FLOOR):
@@ -148,7 +174,8 @@ def rows(lakes, nd, dated=None, floor=FLOOR, first=None, marks=None, undated=())
         stocked = stocked_years(lk, dated)
         row = {"id": lk["id"], "closed": lk.get("closed"), "other stocking read": lk.get("other") is not None,
                "dated": dated is not None and lk["id"] not in undated}
-        low, read, under, why = scope(lk, nd["need"], stocked, marks)
+        made = (set((dated or {}).get(lk["id"], ())) | set(lk.get("other") or ())) if row["dated"] else None
+        low, read, under, why = scope(lk, nd["need"], stocked, marks, made)
         if first is not None and not why and read < first:
             why = f"its year read before {first}"
         if why:
@@ -156,9 +183,12 @@ def rows(lakes, nd, dated=None, floor=FLOOR, first=None, marks=None, undated=())
             continue
         A = lk["adults"]
         own = own_level(lk, low, stocked, floor)
+        fall = first_fall(lk, nd["need"], stocked, low, read)
         row.update({"low survey": low, "year read": read, "year below": under, "level read": A[read][0],
                     "renewed": t1n.reached(natural_catch(lk, read, stocked, marks, GAP), floor),
-                    "renewed below": None if under is None else t1n.reached(natural_catch(lk, under, stocked), floor),
+                    "renewed below": None if under is None else t1n.reached(natural_catch(lk, under, stocked, None, GAP), floor),
+                    "first fall after the low survey": fall,
+                    "renewed in it": None if fall is None else t1n.reached(natural_catch(lk, fall, stocked, None, GAP), floor),
                     "marked year read": read in stocked,
                     "years since stocking": read - max(s for s in stocked if s < read),
                     "at the level restored": chance(nd, A[read][1]),
@@ -208,7 +238,7 @@ def decide(table):
         return ROSE, (f"{ROSE}: {head}; {within}, more often above; the need's fit expecting {sum(e_est):.1f} at the "
                       f"levels restored ({sum(e):.1f} at their intervals' lower bounds)"), nums
     if short <= ALPHA:
-        return NOT_ROSE, (f"{NOT_ROSE}: {head}, fewer than the need's fit expects even at the lower bounds of the "
+        return SHORT, (f"{SHORT}: {head}, fewer than the need's fit expects even at the lower bounds of the "
                           f"levels restored ({sum(e):.1f} expected, p = {short:.3g}); {within}, not shown more often "
                           f"above"), nums
     return "not decided", (f"not decided: {head}; {within}, not shown more often above; and not shown fewer than the "
@@ -219,16 +249,18 @@ def decide(table):
 def v1(table, own=None, closed=None):
     """The verdict (primary), its line in full, decided before any value is read (DESIGN.md, section 7).
     - Renewal rose with the level: within the lakes read in a year below the need too, more renewed above it
-      and not below than the reverse. Read as renewal following the level in some of these lakes at least, not
+      and not below than the reverse, by an exact sign test at ALPHA. Read as renewal following the level in
+      some of these lakes at least, not
       lost to another cause in all of them; the line gives what the need's fit expects at the levels restored,
       and does not say what share follows it. It carries what held their renewal down ending by the year read,
       always; unrecorded stocking where the other stocking records were not read, or a stocking's date could not
       be read, for a lake that renewed above the need and not below; and connected waters where such a lake is
       not a recorded seepage lake and the closed lakes alone (`closed`, the same rule on them) do not also show
       the rise.
-    - Renewal did not rise with the level: fewer renewed than the fit expects even at the lower bounds of the
-      levels restored, and the rise not shown. Read as renewal short of the level's in some of these lakes at
-      least, as where it is lost to another cause; it carries stocking suppressing natural renewal, the lakes'
+    - Renewal fell short of the fit at the levels restored: fewer renewed than the fit expects even at the lower
+      bounds of the levels restored, by an exact test at ALPHA, and the rise not shown, whichever way its counts
+      lean. Read as renewal short of the level's in some of these lakes at least, as where it is lost to another
+      cause; it carries stocking suppressing natural renewal, the lakes'
       own needs lying above the common one, and the adults restored counting stocked fish not yet spawning,
       always. The lakes restored to a level they renewed at before (`own`) are reported, read before the
       clauses: the fit they are compared with is the common one, so a shortfall there does not rule their own
@@ -249,7 +281,7 @@ def v1(table, own=None, closed=None):
             unless.append("connected waters")
         verdict = (f"{line}; renewal read as following the level in some of these lakes at least, not lost to another "
                    "cause in all of them, unless " + " or ".join(unless + [ABATED]))
-    elif outcome == NOT_ROSE:
+    elif outcome == SHORT:
         verdict = (f"{line}; renewal read as short of the level's in some of these lakes at least, as where it is lost "
                    f"to another cause, unless {SUPPRESSED}, {OWN_NEEDS} or {YOUNG}")
     else:
@@ -260,7 +292,8 @@ def v1(table, own=None, closed=None):
 def reports(table):
     """Ruling on nothing: the lakes out by reason; renewal in the years read by the years since the last stocking,
     which a suppression by stocked fish would lower nearest the stocking; the lakes read with no year below the
-    need, and how they renewed."""
+    need, and how they renewed; and the rise read with each lake's first fall after its low survey in place of its
+    year below, a year no spring estimate chose (`first_fall`), by the same exact sign test."""
     outs, by_gap = {}, {}
     for r in table:
         if "out" in r:
@@ -270,7 +303,12 @@ def reports(table):
         cell[0] += r["renewed"]
         cell[1] += 1
     single = [r for r in table if "out" not in r and r["renewed below"] is None]
+    fall = [r for r in table if "out" not in r and r["renewed in it"] is not None]
+    up = sum(1 for r in fall if r["renewed"] and not r["renewed in it"])
+    down = sum(1 for r in fall if r["renewed in it"] and not r["renewed"])
     return {"lakes out, by reason": outs,
+            "the rise with the first fall after the low survey as the year below: lakes, renewed above the need and "
+            "not in that fall, in that fall and not above, p": [len(fall), up, down, float(t1n.tail_half(up + down, up))],
             "years read by years since the last stocking: renewed, read": {str(g): by_gap[g] for g in sorted(by_gap)},
             "lakes read with no year below the need: renewed, read": [sum(r["renewed"] for r in single), len(single)]}
 

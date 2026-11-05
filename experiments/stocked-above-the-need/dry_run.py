@@ -55,6 +55,7 @@ WORLDS = {
     "episodic": dict(family="T1 holds", q=3, sigma_r=1.6),
     "stocked every year": dict(family="T1 holds", q=3, every=1),
     "open": dict(family="T1 holds", q=3, immigrants=1.5),
+    "yearlings read as age 0": dict(family="T1 holds", q=3, yearlings=0.1),       # round 2's R-18
     # T1 holds, with a rival the negative outcome always names (reported): stocked fish suppressing natural renewal,
     # and stocked cohorts counted among the adults for three years before they spawn (round 1's R-03)
     "stocking suppresses": dict(family="a rival of the negative outcome", q=3, suppress=(3, 0.2)),
@@ -80,9 +81,23 @@ WORLDS = {
     "renewal lost, open": dict(family="confounded", q=1, loss=LOSS, harvest=LIGHT, immigrants=1.5),
     "renewal lost, the cause ends": dict(family="confounded", q=1, loss=LOSS, harvest=LIGHT, ends=True),
     # managers begin a programme only after a fall survey below the floor, renewal episodic: a run of poor years
-    # brings the stocking and then passes
+    # brings the stocking and then passes; the lost lakes left unstocked, so that the lakes read mostly kept their
+    # renewal (round 2's R-23)
     "renewal lost, stocked after a failed survey": dict(family="confounded", q=1, loss=LOSS, harvest=LIGHT,
-                                                         sigma_r=1.6, trigger=True),
+                                                         sigma_r=1.6, trigger=True, spare_lost=True, haste=10,
+                                                         knock=0.04),
+    # round 2's R-17: stocked fish cutting the lake's own age-0 to a fifth for three years after each stocking, where
+    # the lost lakes are left unstocked
+    "renewal lost, stocking suppresses": dict(family="confounded", q=1, loss=LOSS, spare_lost=True, haste=10,
+                                              knock=0.04, suppress=(3, 0.2)),
+    # the coordinator's point after round 1: the lost lakes keep a renewal held low whatever their adults, and a
+    # year's conditions scale the spring estimate and the fall catch together, each lake-year's own or the region's,
+    # so a low survey is chosen more often in a poor year, whose age-0 is low too
+    "renewal held low, the year in both counts": dict(family="confounded", q=1, loss=LOSS, harvest=LIGHT, resid=0.7,
+                                                      shared=(0.8, 1.2, "lake")),
+    "renewal held low, the year in both counts, region-wide": dict(family="confounded", q=1, loss=LOSS,
+                                                                   harvest=LIGHT, resid=0.7,
+                                                                   shared=(0.5, 0.8, "region")),
     # no need: renewal never stops with the level
     "no need": dict(family="no need", q=1),
     "no need, lakes differ": dict(family="no need", q=1, prod_spread=0.7),
@@ -90,7 +105,9 @@ WORLDS = {
 }
 QUALIFIER = {"renewal lost, other stocking unread": "unrecorded stocking", "renewal lost, no dates": "unrecorded stocking",
              "renewal lost, open": "connected waters", "renewal lost, the cause ends": t1r.ABATED,
-             "renewal lost, stocked after a failed survey": t1r.ABATED}
+             "renewal lost, stocked after a failed survey": t1r.ABATED,
+             "renewal lost, stocking suppresses": t1r.ABATED, "renewal held low, the year in both counts": t1r.ABATED,
+             "renewal held low, the year in both counts, region-wide": t1r.ABATED}
 NATURAL, STOCKED = t1n.NR, "stocked"
 
 
@@ -98,9 +115,11 @@ def recruitment(x, q, k, a):
     return a * x ** q / (k ** q + x ** q) if x > 0 else 0.0
 
 
-def lake(rng, i, world, speed):
-    """One synthetic lake's records, as T1N's reader builds them, and the years its stocking dates fall in."""
+def lake(rng, i, world, speed, zr=None):
+    """One synthetic lake's records, as T1N's reader builds them, and the years its stocking dates fall in. `zr`:
+    the region's year effects, where a world shares one year's conditions among all its lakes."""
     w = WORLDS[world]
+    s_a, s_c, scope = w.get("shared", (0.0, 0.0, None))
     q = w["q"]
     k0 = K * math.exp(rng.gauss(0, w["k_spread"])) if w.get("k_spread") else K
     a0 = A * math.exp(rng.gauss(0, w["prod_spread"])) if w.get("prod_spread") else A
@@ -119,15 +138,17 @@ def lake(rng, i, world, speed):
             loss_year = rng.randint(y0, y1)
     label, start, stocked_true, hist, fish, failed = NATURAL, None, set(), {}, {}, False
     for yr in YEARS:
+        z = rng.gauss(0, 1) if scope == "lake" else (zr[yr] if scope == "region" else 0.0)
         lost = loss_year is not None and yr >= loss_year
         if lost and w.get("ends") and stocked_true and min(stocked_true) <= yr:
             lost = False                           # the cause ends when the lake is first stocked
-        a = 0.0 if lost else a0
         sr = w.get("sigma_r", SIGMA_R)
         spawners = x
         if w.get("young"):                         # stocked cohorts counted for three years before they spawn
             spawners = max(x - C * sum(wt * fish.get(yr - 4 - j, 0.0) for j, wt in enumerate(YOUNG)), 0.0)
-        r = recruitment(spawners, q, k0, a) * math.exp(sr * rng.gauss(0, 1) - sr * sr / 2 + SIGMA_R * SIGMA_R / 2)
+        # a lost lake's renewal is none, or held at a low level whatever its adults (`resid`, per mile)
+        r = (w.get("resid", 0.0) if lost else recruitment(spawners, q, k0, a0)) * math.exp(
+            sr * rng.gauss(0, 1) - sr * sr / 2 + SIGMA_R * SIGMA_R / 2)
         past = [s for s in stocked_true if s < yr]
         if "suppress" in w and past and 1 <= yr - max(past) <= w["suppress"][0]:
             r *= w["suppress"][1]                  # stocked yearlings eating the lake's own age-0
@@ -158,12 +179,13 @@ def lake(rng, i, world, speed):
         fish[yr] = f + fry
         rec["label"][yr] = label
         if (yr - 1990 + phase) % every == 0:
-            est = x * math.exp(CV * rng.gauss(0, 1) - CV * CV / 2)
+            est = x * math.exp(CV * rng.gauss(0, 1) - CV * CV / 2) * math.exp(s_a * z - s_a * s_a / 2)
             rec["adults"][yr] = (est, est * math.exp(-1.96 * CV), est * math.exp(1.96 * CV))
         if surveyed or rng.random() < 0.4:
             immig = w["immigrants"] if (w.get("immigrants") and not closed and rng.random() < 0.5) else 0.0
             yl = w.get("yearlings", 0.0) * YEARLING_SURVIVAL * fish.get(yr - 1, 0.0)   # last year's, read as age 0
-            rec["age0"][yr] = round((r + f + fry + immig + yl) * w.get("catch", 1.0) * math.exp(0.3 * rng.gauss(0, 1)), 1)
+            rec["age0"][yr] = round((r + f + fry + immig + yl) * w.get("catch", 1.0) * math.exp(0.3 * rng.gauss(0, 1))
+                                    * math.exp(s_c * z - s_c * s_c / 2), 1)
             failed = rec["age0"][yr] < t1n.FLOOR
         h = (e if x >= STOCK_BELOW else CUT) * x
         r3 = hist.get(yr - 3, recruitment(x, q, k0, a0))
@@ -178,9 +200,13 @@ def lake(rng, i, world, speed):
 
 def archive(world, a, speed, lakes_=LAKES):
     rng = random.Random("|".join((SEED, world, str(speed), str(a), str(lakes_))))
+    zr = None
+    if WORLDS[world].get("shared", (0, 0, None))[2] == "region":
+        rz = random.Random("|".join((SEED, world, str(speed), str(a), "region")))
+        zr = {yr: rz.gauss(0, 1) for yr in YEARS}
     lakes, dated = [], {}
     for i in range(lakes_):
-        lk, d = lake(rng, i, world, speed)
+        lk, d = lake(rng, i, world, speed, zr)
         lakes.append(lk)
         if d is not None:
             dated[lk["id"]] = d
@@ -225,10 +251,11 @@ CLAUSES = ("unrecorded stocking", "connected waters", t1r.ABATED, t1r.SUPPRESSED
 
 
 def cell(world, speed, n=ARCHIVES, lakes_=LAKES):
-    """A world's outcomes at a speed over n archives, with the clauses each line carries, and, by outcome, the
-    lakes read that had lost their renewal and those whose rise within the lake (renewed above the need and not
-    below) drove it."""
-    tally, clauses, read, paired, needs, lost = {}, {}, [], [], 0, {}
+    """A world's outcomes at a speed over n archives, with the clauses each line carries; by outcome, the lakes
+    read that had lost their renewal and those whose rise within the lake (renewed above the need and not below)
+    drove it; and, by outcome, the archives whose rise read with each lake's first fall after its low survey as
+    its year below, a year no spring estimate chose, is shown (reported)."""
+    tally, clauses, read, paired, needs, lost, falls = {}, {}, [], [], 0, {}, {}
     for a in range(n):
         lakes, dated = archive(world, a, speed, lakes_)
         kind, res, nd = verdict_of(lakes, dated)
@@ -246,12 +273,16 @@ def cell(world, speed, n=ARCHIVES, lakes_=LAKES):
             cell_[1] += len(inn)
             cell_[2] += sum(1 for r in up if r in gone)
             cell_[3] += len(up)
+            fall = next(v for key, v in res["reports"].items() if key.startswith("the rise with the first fall"))
+            if fall[3] <= t1r.ALPHA:
+                falls[kind] = falls.get(kind, 0) + 1
             for q in CLAUSES:
                 if q in res["V1"]["verdict"]:
                     clauses.setdefault(kind, {})[q] = clauses.setdefault(kind, {}).get(q, 0) + 1
     out = {"V1": tally, "clauses, by outcome": clauses, "a need fitted": needs,
            "lakes read, median": sorted(read)[len(read) // 2] if read else None,
-           "lakes read in a year below the need too, median": sorted(paired)[len(paired) // 2] if paired else None}
+           "lakes read in a year below the need too, median": sorted(paired)[len(paired) // 2] if paired else None,
+           "the rise with the first fall after the low survey as the year below shown (reported), by outcome": falls}
     if "loss" in WORLDS[world]:
         out["lakes read that had lost their renewal, by outcome: lost, read; of the lakes that renewed above the need "
             "and not below, lost, all"] = lost
@@ -268,8 +299,8 @@ def worlds(chk):
             out[world][f"speed {speed}"] = c
             t = c["V1"]
             if w["family"] == "T1 holds":
-                chk(f"worlds: {w['family']}", f"{world} at speed {speed}: '{t1r.NOT_ROSE}' in at most {FALSE_MAX} of {ARCHIVES}",
-                    t.get(t1r.NOT_ROSE, 0) <= FALSE_MAX, t)
+                chk(f"worlds: {w['family']}", f"{world} at speed {speed}: '{t1r.SHORT}' in at most {FALSE_MAX} of {ARCHIVES}",
+                    t.get(t1r.SHORT, 0) <= FALSE_MAX, t)
             if w["family"] == "renewal lost":
                 chk(f"worlds: {w['family']}", f"{world} at speed {speed}: '{t1r.ROSE}' in at most {FALSE_MAX} of {ARCHIVES}",
                     t.get(t1r.ROSE, 0) <= FALSE_MAX, t)
@@ -282,8 +313,8 @@ def worlds(chk):
     chk("worlds: power", f"need at speed 0.1: the rise read in at least 30 of {ARCHIVES}",
         t.get(t1r.ROSE, 0) >= 30, t)
     t = out["renewal lost, light harvest"]["speed 0.1"]["V1"]
-    chk("worlds: power", f"renewal lost, light harvest at speed 0.1: '{t1r.NOT_ROSE}' in at least 30 of {ARCHIVES}",
-        t.get(t1r.NOT_ROSE, 0) >= 30, t)
+    chk("worlds: power", f"renewal lost, light harvest at speed 0.1: '{t1r.SHORT}' in at least 30 of {ARCHIVES}",
+        t.get(t1r.SHORT, 0) >= 30, t)
     return out
 
 
@@ -330,12 +361,35 @@ def scripted(chk):
     l = lk(11, stock=(2000,))
     chk("rules: the scope", "a stocking in the low survey's own year counts as after it; that year, stocked, is no "
         "year below", sc(l) == (2000, 2004, None, None), sc(l))
-    l = lk(12, stock=(2001,), extra={"adults": {2000: (0.5, 0.4, 0.6), 2002: (0.6, 0.5, 0.7), 2004: (3.0, 2.7, 3.3)},
+    l = lk(12, stock=(2001,), extra={"adults": {2000: (0.5, 0.4, 0.6), 2003: (0.6, 0.5, 0.7), 2004: (3.0, 2.7, 3.3)},
+                                     "age0": {2000: 0.0, 2003: 2.0, 2004: 5.0}})
+    chk("rules: the scope", "the year below is the last wholly below the need before the year read, with no "
+        "stocking that year or the year before, and surveyed", sc(l) == (2000, 2004, 2003, None), sc(l))
+    l = lk(46, stock=(2001,), extra={"adults": {2000: (0.5, 0.4, 0.6), 2002: (0.6, 0.5, 0.7), 2004: (3.0, 2.7, 3.3)},
                                      "age0": {2000: 0.0, 2002: 2.0, 2004: 5.0}})
-    chk("rules: the scope", "the year below is the last wholly below the need before the year read, unstocked and "
-        "surveyed, a stocking the year before it allowed", sc(l) == (2000, 2004, 2002, None), sc(l))
+    chk("rules: the scope", "a year below the need one year after a stocking is passed over (round 2's R-17 and "
+        "R-18)", sc(l) == (2000, 2004, 2000, None), sc(l))
     l = lk(13, extra={"age0": {2004: 5.0}})
     chk("rules: the scope", "no fall survey below the need: read, with no year below", sc(l) == (2000, 2004, None, None), sc(l))
+    l = lk(45, stock=(2004,), extra={"adults": {2000: (0.5, 0.4, 0.6), 2005: (3.0, 2.7, 3.3), 2008: (3.0, 2.7, 3.3)},
+                                     "age0": {2000: 0.0, 2008: 5.0}})
+    got = [r.get("out", "") for r in t1r.rows([l], nd, {"S45": {2005}})] + [r.get("out", "") for r in t1r.rows([l], nd)]
+    chk("rules: dates", "a lake back above the need in the spring of its first stocking's dated year, the stocking "
+        "filed under the year before, is out; undated, it is read (round 2's R-21)",
+        got[0].startswith("back above the need before") and got[1] == "", got)
+    ff = lambda l: t1r.first_fall(l, 1.0, st(l), 2000, 2004)
+    l = lk(41, stock=(2001,), extra={"age0": {2000: 0.0, 2001: 9.0, 2002: 0.0, 2003: 4.0, 2004: 5.0}})
+    chk("rules: the first fall", "the first fall after the low survey with no stocking that year or the year before "
+        "and no estimate of its own, before the stocked fish can join the adults", ff(l) == 2003, ff(l))
+    l = lk(42, stock=(1999, 2001), extra={"age0": {2000: 0.0, 2001: 9.0, 2002: 0.0, 2004: 5.0}})
+    chk("rules: the first fall", "none once a stocking from two years before the low survey can have joined the adults",
+        ff(l) is None, ff(l))
+    l = lk(43, stock=(2001,), extra={"adults": {2000: (0.5, 0.4, 0.6), 2002: (0.6, 0.5, 0.7), 2004: (3.0, 2.7, 3.3)},
+                                     "age0": {2000: 0.0, 2002: 2.0, 2003: 0.0, 2004: 5.0}})
+    l2 = lk(44, stock=(2001,), extra={"adults": {2000: (0.5, 0.4, 0.6), 2002: (1.2, 1.0, 1.4), 2004: (3.0, 2.7, 3.3)},
+                                      "age0": {2000: 0.0, 2002: 2.0, 2003: 0.0, 2004: 5.0}})
+    chk("rules: the first fall", "a year with a spring estimate of its own is passed over, and none after an estimate "
+        "not wholly below the need", ff(l) == 2003 and ff(l2) is None, (ff(l), ff(l2)))
     l = lk(14, stock=(2001,))
     chk("rules: dates", "a stocking dated in the year read or the year before, filed under another, keeps it out",
         sc(l, {"S14": {2004}})[1] is None and sc(l, {"S14": {2003}})[1] is None and sc(l, {"S14": {2002}})[1] == 2004)
@@ -378,8 +432,8 @@ def scripted(chk):
     v = t1r.v1(table(single=10))
     chk("rules: V1", "lakes with no year below the need do not show the rise", v["outcome"] != t1r.ROSE, v)
     v = t1r.v1(table(none=10))
-    chk("rules: V1", "none renewing: did not rise, its line carrying the three clauses",
-        v["outcome"] == t1r.NOT_ROSE and all(q in v["verdict"] for q in (t1r.SUPPRESSED, t1r.OWN_NEEDS, t1r.YOUNG))
+    chk("rules: V1", "none renewing: fell short, its line carrying the three clauses",
+        v["outcome"] == t1r.SHORT and all(q in v["verdict"] for q in (t1r.SUPPRESSED, t1r.OWN_NEEDS, t1r.YOUNG))
         and "some of these lakes at least" in v["verdict"], v)
     v = t1r.v1(table(up=2, both=3, none=5, high=1.2))
     chk("rules: V1", "neither shown: not decided, its line saying 'not shown' both ways (round 1's R-07)",
@@ -400,9 +454,9 @@ def scripted(chk):
     v = t1r.v1(table(up=10, closed=False), closed="not decided: of 0 lakes")
     chk("rules: V1", "open lakes rising, the closed lakes alone not deciding: unless connected waters",
         "connected waters" in v["verdict"], v["verdict"])
-    v = t1r.v1(table(none=10), own=t1r.NOT_ROSE + ": ...")
+    v = t1r.v1(table(none=10), own=t1r.SHORT + ": ...")
     chk("rules: V1", "the own-level reading, a shortfall there too, keeps the clause of own needs", t1r.OWN_NEEDS in v["verdict"]
-        and v["the lakes restored to their own renewing level alone, read before the clauses"].startswith(t1r.NOT_ROSE), v)
+        and v["the lakes restored to their own renewing level alone, read before the clauses"].startswith(t1r.SHORT), v)
     lo_, hi_ = t1r.tails([0.5, 0.5], 1)
     chk("rules: the tails", "two fair trials: at most one 0.75, at least one 0.75", abs(lo_ - 0.75) < 1e-12 and abs(hi_ - 0.75) < 1e-12)
 
@@ -458,6 +512,19 @@ def additions_checks(chk):
         chk("additions", "a lake whose stocking's date has no readable year is undated, and the others are not "
             "(round 1's R-04)", undated == {stocked_lakes[0]} and stocked_lakes[0] not in got
             and facts["lakes with a walleye stocking whose date could not be read"] == 1, (undated, facts))
+        p = tmp / reader.FILES["stocking"]
+        rows = list(csv.DictReader(p.open()))
+        far = next(r for r in rows if reader.code(r[reader.COLUMNS["stocking"]["lake"]]) == stocked_lakes[1]
+                   and reader.is_species(r[reader.COLUMNS["stocking"]["species"]]))
+        far[additions.DATES["stocking"]] = "25000"
+        with p.open("w", newline="") as f:
+            w = csv.DictWriter(f, fieldnames=list(rows[0]))
+            w.writeheader()
+            w.writerows(rows)
+        got, undated, facts = additions.dated(tmp)
+        chk("additions", "a date more than a year from its entry is read as no date, its lake undated and the row "
+            "counted (round 2's R-22)", stocked_lakes[1] in undated and facts[reader.FILES["stocking"]][
+                "walleye rows whose date falls more than a year from their entry, read as no date"] == 1, facts)
         p = tmp / reader.FILES["age0"]
         rows = list(csv.DictReader(p.open()))
         with p.open("a", newline="") as f:
@@ -468,8 +535,10 @@ def additions_checks(chk):
             additions.repeated_fall(tmp) == {key}, additions.repeated_fall(tmp))
     chk("additions", "a date's year in the files' forms (round 1's R-04)", [additions.date_year(t) for t in
         ("2014-05-02", "5/2/2014", "2014/05/02", "02-May-2014", "", "5/2/14", "13/2/94", "2014-2015", "20140502",
-         "41761", "41761.5", "5/2/2014-5/9/2014", "02-May-14", "spring", "32/1/14")]
-        == [2014, 2014, 2014, 2014, None, 2014, 1994, None, 2014, 2014, 2014, 2014, 2014, None, None])
+         "41761", "41761.5", "5/2/2014-5/9/2014", "02-May-14", "spring", "32/1/14", "1/0/1900", "FY2015", "2014-15",
+         "May 2, 2014", "2014-05-02 00:00:00", "5/2/2014 - 5/9/2015")]
+        == [2014, 2014, 2014, 2014, None, 2014, 1994, None, 2014, 2014, 2014, 2014, 2014, None, None, None, None, None,
+            2014, 2014, None])
 
 
 def run_checks(chk):
