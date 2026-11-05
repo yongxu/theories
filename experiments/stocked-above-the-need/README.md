@@ -9,7 +9,7 @@ Board item T1R, 5 November 2026. AI-written (a Claude Code session). *About 6 to
 - below the need, where it was surveyed there too: the last year before that one with the spring wholly below the need and no stocking recorded that year or the year before.
 
 V1 reads:
-- *renewal rose with the level*, where more lakes renewed above the need and not below than the reverse, by an exact sign test at 0.05. Unless what its clauses name gave it, this means renewal follows the level in some of these lakes at least, not lost to another cause in all of them. It always carries two clauses, what held their renewal down ending by the year read and unrecorded stocking, and connected waters where it applies.
+- *renewal rose with the level*, where more lakes renewed above the need and not below than the reverse, by an exact sign test at 0.05. Unless what its clauses name gave it, this means renewal follows the level in some of these lakes at least, not lost to another cause in all of them. It always carries two clauses, unrecorded stocking and something other than the level changing renewal or its survey between the years compared, and connected waters where it applies.
 - *renewal fell short of the fit at the levels restored*, where no rise is shown, whichever way the counts lean, and fewer lakes renewed above the need than its fit expects, even at the conservative bounds. This means renewal falls short of the level's in some of these lakes at least, as where it is lost to another cause. It always carries three clauses: stocked fish suppressing the lakes' own renewal, their own needs lying above the common one, and the adults restored counting stocked fish not yet spawning.
 - otherwise *not decided*.
 
@@ -17,7 +17,7 @@ Neither outcome shows that renewal *stops* below the need, and *rose* does not s
 
 **Shared lakes.** No year T1R reads above the need is one T1N's need is fitted on, but its lakes are partly lakes whose fates T1N reads after 2012. So the two verdicts are not two independent results, and the run reports how many lakes both read.
 
-**Status.** Designed, with its dry run passing. Its reader's rounds are in progress: the first three changed the design. It is not frozen until `FROZEN.sha256` is committed, and it has not been run. Nothing has been downloaded, and no value of the records has been read. The run waits on T1N's downloads, which wait on Ren's yes, and on R8, the marked shares, where they can be had.
+**Status.** Designed, with its dry run passing, and read by one reader in four rounds, the last finding nothing of high or medium severity ([REVIEW-FREEZE.md](REVIEW-FREEZE.md)). It is frozen by the commit that adds `FROZEN.sha256`. Not run. Nothing has been downloaded, and no value of the records has been read. The run waits on T1N's downloads, which wait on Ren's yes, and on R8, the marked shares, where they can be had.
 
 | File | What it holds |
 |---|---|

@@ -1,5 +1,6 @@
 """What T1R reads beyond T1N's reader (DESIGN.md, sections 3, 5 and 10): the years of the stocking files' dates,
-where they give one, so that a stocking filed under another year's entry counts in the year it was made; R8, the
+where they give one, on the rows T1N's reader keeps, so that a stocking filed under another year's entry counts in
+the year it was made; R8, the
 unmarked share of a stocked year's fall age-0 catch, where the agency records it for a stocking it marked; and
 the lake-years with more than one fall survey. The layout facts read the structural columns alone (the lake, the
 year, the species and the date), never a count, a number stocked or a share.
@@ -95,41 +96,60 @@ def rows_of(folder, kind, columns):
         return [{k: row.get(c) for k, c in columns.items() if c in names} for row in rd], names
 
 
-def dated(folder):
+DROPPED = ("walleye rows T1N's reader drops, with no readable entry year or no number stocked above 0: their dates "
+           "not read")
+DROPPED_YEAR = "walleye rows with no readable entry year, which T1N's reader drops: their dates not read"
+
+
+def kept(r, numbers=True):
+    """Whether T1N's reader keeps a stocking from this walleye row, as its `read_all` does: a readable entry year and
+    a number stocked above 0, each read by T1N's own `year_of` and `num` (round 4's R-28). With `numbers` False, as
+    in the layout step, which reads no number, the entry year alone."""
+    return reader.year_of(r.get("year") or "") is not None and (
+        not numbers or (reader.num(r.get("number") or "") or 0) > 0)
+
+
+def dated(folder, numbers=True):
     """(the years its walleye stockings' dates fall in, by lake; the lakes undated; the facts), from the stocking
-    files. A lake is undated where a walleye row of it gives no readable year in its date, or a year more than one
-    from its entry's, which is read as no date (round 2's R-22), or stands in a stocking file with no date column
-    while the other file has one. The map is None where neither file gives a date column, and every lake is then
-    undated. The facts count the rows whose date falls in another year than their entry, the rows with no readable
-    year, the rows whose date falls more than a year from their entry, and the lakes undated."""
+    files' rows T1N's reader keeps (`kept`): a walleye row with no readable entry year or no number stocked above 0
+    gives no date and undates no lake (round 4's R-28). A lake is undated where a kept row of it gives no readable
+    year in its date, or a year more than one from its entry's, which is read as no date (round 2's R-22), or stands
+    in a stocking file with no date column while the other file has one. The map is None where neither file gives a
+    date column, and every lake is then undated. The facts count the rows whose date falls in another year than
+    their entry, the rows with no readable year, the rows whose date falls more than a year from their entry, the
+    rows T1N's reader drops, and the lakes undated. The layout step passes `numbers` False and reads no number: its
+    facts count the walleye rows with a readable entry year, those with no fish stocked among them."""
     out, undated, facts, any_dates = {}, set(), {}, False
     for kind in ("stocking", "other"):
         cols = dict(reader.COLUMNS[kind])
-        rows, names = rows_of(folder, kind, {**{k: cols[k] for k in ("lake", "year", "species")}, "date": DATES[kind]})
+        keys = ("lake", "year", "species", "number") if numbers else ("lake", "year", "species")
+        rows, names = rows_of(folder, kind, {**{k: cols[k] for k in keys}, "date": DATES[kind]})
         if rows is None:
             facts[reader.FILES[kind]] = "not in the folder"
             continue
         walleye = [r for r in rows if reader.is_species(r.get("species") or "")]
+        read = [r for r in walleye if kept(r, numbers)]
         if DATES[kind] not in names:
             facts[reader.FILES[kind]] = f"no date column ({DATES[kind]!r})"
-            undated |= {reader.code(r.get("lake") or "") for r in walleye}
+            undated |= {reader.code(r.get("lake") or "") for r in read}
             continue
         any_dates = True
         other_year = unread = far = 0
-        for r in walleye:
+        for r in read:
             lid = reader.code(r.get("lake") or "")
             y, d = reader.year_of(r.get("year") or ""), date_year(r.get("date"))
-            if d is None or (y is not None and abs(d - y) > 1):
+            if d is None or abs(d - y) > 1:
                 unread += d is None
                 far += d is not None
                 undated.add(lid)
                 continue
-            other_year += y is not None and d != y
+            other_year += d != y
             out.setdefault(lid, set()).add(d)
         facts[reader.FILES[kind]] = {"walleye rows whose date falls in another year than their entry": other_year,
                                      "walleye rows with no readable year in the date": unread,
                                      "walleye rows whose date falls more than a year from their entry, read as no "
-                                     "date": far}
+                                     "date": far,
+                                     DROPPED if numbers else DROPPED_YEAR: len(walleye) - len(read)}
     if not any_dates:
         return None, set(), facts
     facts["lakes with a walleye stocking whose date could not be read"] = len(undated)
@@ -181,7 +201,8 @@ def facts(folder):
     """The layout step's facts on T1R's additions, from the structural columns alone: the stocking files' date
     columns, the rows filed under another year than their date's and the lakes undated; R8's rows and lakes by
     its lake and year columns, never its shares; the lake-years with more than one fall survey."""
-    out = {"stocking dates": dated(folder)[2], "fall surveys: lake-years with more than one row": len(repeated_fall(folder))}
+    out = {"stocking dates": dated(folder, numbers=False)[2],
+           "fall surveys: lake-years with more than one row": len(repeated_fall(folder))}
     path = Path(folder) / MARKS["file"]
     if not path.exists():
         out["R8"] = "not in the folder"

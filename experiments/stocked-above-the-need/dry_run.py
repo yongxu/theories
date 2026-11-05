@@ -108,10 +108,10 @@ WORLDS = {
 }
 QUALIFIER = {"renewal lost, other stocking unread": t1r.UNRECORDED, "renewal lost, no dates": t1r.UNRECORDED,
              "renewal lost, other stocking in no record": t1r.UNRECORDED,
-             "renewal lost, open": "connected waters", "renewal lost, the cause ends": t1r.ABATED,
-             "renewal lost, stocked after a failed survey": t1r.ABATED,
-             "renewal lost, stocking suppresses": t1r.ABATED, "renewal held low, the year in both counts": t1r.ABATED,
-             "renewal held low, the year in both counts, region-wide": t1r.ABATED}
+             "renewal lost, open": "connected waters", "renewal lost, the cause ends": t1r.CHANGED,
+             "renewal lost, stocked after a failed survey": t1r.CHANGED,
+             "renewal lost, stocking suppresses": t1r.CHANGED, "renewal held low, the year in both counts": t1r.CHANGED,
+             "renewal held low, the year in both counts, region-wide": t1r.CHANGED}
 NATURAL, STOCKED = t1n.NR, "stocked"
 
 
@@ -254,7 +254,7 @@ def refusal(f):
     return ""
 
 
-CLAUSES = (t1r.UNRECORDED, "connected waters", t1r.ABATED, t1r.SUPPRESSED, t1r.OWN_NEEDS, t1r.YOUNG)
+CLAUSES = (t1r.UNRECORDED, "connected waters", t1r.CHANGED, t1r.SUPPRESSED, t1r.OWN_NEEDS, t1r.YOUNG)
 
 
 def cell(world, speed, n=ARCHIVES, lakes_=LAKES):
@@ -430,9 +430,10 @@ def scripted(chk):
 
     v = t1r.v1(table(up=10))
     chk("rules: V1", "ten lakes renewing above the need and not below: rose", v["outcome"] == t1r.ROSE, v)
-    chk("rules: V1", "the rise's line gives the counts within the lakes and the fit's expectations, and carries what "
-        "held their renewal down ending, always", v["verdict"].endswith(t1r.ABATED) and "10 renewed above it and not "
-        "below and 0 below it and not above" in v["verdict"] and "lower bounds" in v["verdict"], v["verdict"])
+    chk("rules: V1", "the rise's line gives the counts within the lakes and the fit's expectations, and carries "
+        "something other than the level changing renewal or its survey, always",
+        v["verdict"].endswith(t1r.CHANGED) and "10 renewed above it and not below and 0 below it and not above"
+        in v["verdict"] and "lower bounds" in v["verdict"], v["verdict"])
     v = t1r.v1(table(up=4, none=6))
     chk("rules: V1", "four up and none down: the rise not shown (p = 1/16)", v["outcome"] != t1r.ROSE, v)
     v = t1r.v1(table(up=5, none=5))
@@ -547,6 +548,44 @@ def additions_checks(chk):
         key = (reader.code(rows[0][reader.COLUMNS["age0"]["lake"]]), reader.year_of(rows[0][reader.COLUMNS["age0"]["year"]]))
         chk("additions", "a lake-year with two fall-survey rows is found by its lake and year alone (round 1's R-13)",
             additions.repeated_fall(tmp) == {key}, additions.repeated_fall(tmp))
+    with tempfile.TemporaryDirectory() as tmp:
+        tmp = Path(tmp)
+        reader.write_synthetic(lakes, tmp)
+        additions.write_synthetic(lakes, tmp)                 # every date in its entry's year
+        p, C, D = tmp / reader.FILES["stocking"], reader.COLUMNS["stocking"], additions.DATES["stocking"]
+        rows = list(csv.DictReader(p.open()))
+        lid = stocked_lakes[2]
+        y = min(next(lk for lk in lakes if lk["id"] == lid)["stocked"]) - 3
+        base = {k: "" for k in rows[0]}
+        row = lambda year, number, date: {**base, C["lake"]: lid, C["year"]: year, C["species"]: reader.SPECIES,
+                                          C["number"]: number, D: date}
+        added = [row(str(y), "0", f"{y}-05-02"), row(str(y), "", f"{y}-05-02"), row("", "1000", f"{y}-05-02"),
+                 row(str(y), "0", "spring")]
+        with p.open("w", newline="") as f:
+            w = csv.DictWriter(f, fieldnames=list(rows[0]))
+            w.writeheader()
+            w.writerows(rows + added)
+        back = reader.read_all(tmp)[0]
+        want = {i: set(lk["stocked"]) | set(lk.get("other") or ()) for i, lk in back.items()}
+        got, undated, facts = additions.dated(tmp)
+        chk("additions", "the date reader keeps the stocking rows T1N's reader keeps and no other: with every date in "
+            "its entry's year, the years dated are the years T1N's reader records stocked, lake by lake, after rows with "
+            "no fish stocked, a blank number, a blank entry year, and no fish with an unreadable date are added, and "
+            "none undates its lake (round 4's R-28)",
+            got == {i: ys for i, ys in want.items() if ys} and not undated
+            and facts[reader.FILES["stocking"]][additions.DROPPED] == len(added), (lid, y, facts))
+        f1 = additions.facts(tmp)
+        rows = list(csv.DictReader(p.open()))
+        for r in rows:
+            r[C["number"]] = "987654321"
+        with p.open("w", newline="") as f:
+            w = csv.DictWriter(f, fieldnames=list(rows[0]))
+            w.writeheader()
+            w.writerows(rows)
+        chk("additions", "the layout step's facts on the dates read no number stocked: the same with every number "
+            "overwritten, and holding none (round 4's R-28)",
+            additions.facts(tmp) == f1 and "987654321" not in json.dumps(additions.facts(tmp))
+            and f1["stocking dates"][reader.FILES["stocking"]][additions.DROPPED_YEAR] == 1, f1)
     chk("additions", "a date's year in the files' forms (round 1's R-04)", [additions.date_year(t) for t in
         ("2014-05-02", "5/2/2014", "2014/05/02", "02-May-2014", "", "5/2/14", "13/2/94", "2014-2015", "20140502",
          "41761", "41761.5", "5/2/2014-5/9/2014", "02-May-14", "spring", "32/1/14", "1/0/1900", "FY2015", "2014-15",

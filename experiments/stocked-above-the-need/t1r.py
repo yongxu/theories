@@ -52,7 +52,9 @@ JOIN = 3                      # stocked fingerlings can join the adults counted 
 FLOOR = t1n.FLOOR
 ROSE = "Renewal rose with the level"
 SHORT = "Renewal fell short of the fit at the levels restored"
-ABATED = "what held their renewal down ended by the year read"
+# named "what held their renewal down ended by the year read" until round 4's R-29, which found it left out a good year
+# at the year read (DESIGN.md, section 7)
+CHANGED = "something other than the level changed renewal or its survey between the years compared"
 UNRECORDED = "unrecorded stocking"
 SUPPRESSED = "stocking suppresses natural renewal"
 OWN_NEEDS = "their own needs lie above the common one"
@@ -252,11 +254,11 @@ def v1(table, own=None, closed=None):
     """The verdict (primary), its line in full, decided before any value is read (DESIGN.md, section 7).
     - Renewal rose with the level: within the lakes read in a year below the need too, more renewed above it
       and not below than the reverse, by an exact sign test at ALPHA. Read as renewal following the level in
-      some of these lakes at least, not
-      lost to another cause in all of them; the line gives what the need's fit expects at the levels restored,
-      and does not say what share follows it. It carries what held their renewal down ending by the year read,
-      always; unrecorded stocking, always, since the year below nearly always comes before a lake's first recorded
-      stocking, so stocking no record shows reaches the year read and not the year below (round 3's R-24), the
+      some of these lakes at least, not lost to another cause in all of them; the line gives what the need's fit
+      expects at the levels restored, and does not say what share follows it. It carries something other than the
+      level changing renewal or its survey between the years compared, always (its five items in DESIGN.md,
+      section 7); unrecorded stocking, always, since the year below nearly always comes before a lake's first
+      recorded stocking, so stocking no record shows reaches the year read and not the year below (round 3's R-24), the
       lakes that renewed above the need and not below with the other stocking records unread or a stocking's date
       unread counted; and connected waters where such a lake is not a recorded seepage lake and the closed lakes
       alone (`closed`, the same rule on them) do not also show the rise.
@@ -283,7 +285,7 @@ def v1(table, own=None, closed=None):
         if any(r["closed"] is not True for r in rose) and (closed is None or not closed.startswith(ROSE)):
             unless.append("connected waters")
         verdict = (f"{line}; renewal read as following the level in some of these lakes at least, not lost to another "
-                   "cause in all of them, unless " + " or ".join(unless + [ABATED]))
+                   "cause in all of them, unless " + " or ".join(unless + [CHANGED]))
     elif outcome == SHORT:
         verdict = (f"{line}; renewal read as short of the level's in some of these lakes at least, as where it is lost "
                    f"to another cause, unless {SUPPRESSED}, {OWN_NEEDS} or {YOUNG}")
