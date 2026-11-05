@@ -54,4 +54,34 @@ None of this tests T2. The controls are not the primary group, and the design's 
 
 **The data.** Desharnais, Robert (2023), Beetle Team Tribolium Data Archive, Dryad, [doi 10.5061/dryad.qjq2bvqmp](https://doi.org/10.5061/dryad.qjq2bvqmp). Its terms are CC0. The two files were downloaded by hand, since Dryad refuses automated download, and their sha-256 digests equal those Dryad publishes (LAYOUT.md). They are not copied into the repository. They keep their own terms, as [COMMONS.md](../../COMMONS.md) has it for datasets made by others.
 
-**What follows.** A design that reads these cultures, made before any of their values is seen, is [UE31b](cells/DESIGN.md): the four replicates of one strain at one loss read together as one cell, ten cells, with UE31's rules at that unit and dry runs at the archive's own shape. It is frozen, and its run waits on Ren's yes. It is not part of UE31.
+**What follows.** A design that reads these cultures, made before any of their values is seen, is [UE31b](cells/DESIGN.md): the four replicates of one strain at one loss read together as one cell, ten cells, with UE31's rules at that unit and dry runs at the archive's own shape. It is not part of UE31. It ran on 6 November 2026: [below](#ue31bs-result).
+
+<a id="ue31bs-result"></a>
+## UE31b's result
+
+*About 4 minutes to read. AI-written (a Claude Code session); no person has checked it.*
+
+Run once on 6 November 2026, on Ren's yes ([his words](../../sources/15-codex-theory-conversations/2026-11-06-go-ahead-with-everything.md)), by its frozen script: [`cells/results/run-cells.json`](cells/results/run-cells.json) and [`run-cells.out`](cells/results/run-cells.out). The workbook's sha-256 was checked before anything was read, and the recording check let it through: 8 of 360 rows have more recruits than pupae, against the 12.5% that would stop the reading.
+
+**The reading is the one expected, stated before the run:** "separated on the next step: the rival's state; three numbers suffice on the course", with the sign not separated. A cell is one strain at one set loss, its four replicates under one law; there are ten. "The rival" is the field's state, the pupae and the adults. "Excess" below is the share of the residual variance removed beyond chance, the median across the five set losses of each loss's median cell.
+
+| Verdict | What it read | Result |
+|---|---|---|
+| W, the wording | the pupae and the adults beyond T2's three numbers | **fails**: excess 0.83 (by loss, low to high: 0.36, 0.54, 0.83, 0.83, 0.91), detected in 8 of 10 cells |
+| V2, the rival's refuter | T2's numbers beyond the pupae and the adults | **the rival holds**: excess 0.004, detected in none |
+| H1, the course | a further lag beyond T2's three numbers, bound 0.10 | **T2 holds**: excess 0.05 (by loss: −0.01, 0.18, 0.08, −0.00, 0.05), detected in one cell |
+| The sign | the lag's sign against the rival's turning point | **not separated**: the two rules differ in 4 cells, 6 needed (each right in 2); the lag's effect positive in 8 of 10 |
+| V5, the lag's sign between series | the detected cells' signs | **not testable**: 3 detected, 6 needed |
+| V4, the level alone at five steps | forecasts from the cell-mates' law | **not decided**: T2 better in 5, worse in 5; median error 0.27, the level alone's 0.23 |
+
+Reported, not verdicts: out of sample the rival's squared error was 0.06 of T2's in the median cell, smaller in all 10 (p = 0.002), and a difference between replicates that neither law carries moves this and W toward the rival, since four replicates share one law a cell (cells DESIGN §3, §8); residuals stood at 54 times the measured floor for T2's law and 7.8 times for the rival's; the lag placed one census back instead left 0.10 to a further variable, at the bound, where two censuses back left 0.05.
+
+**What it says, in the design's own terms (§1, §8), fixed before the run.**
+- T2's wording "as far as anything measured does" fails to the pupae and the adults, a class of fewer variables. That is 08 §9's defeater, met in this domain. A failure here counts against the claim for every renewable condition under a draw; it does not defeat T2 in the fisheries, nor the reading 08 §9 names.
+- T2's three numbers, with the lag at the delay, suffice on the adults' own course. That is the field's own state seen from the course, a tie by construction. It is a prediction that could fail, as it does in the dry runs where the life cycle is longer, and did not. The field's model makes the same prediction, so it shows nothing the field does not. It rests on H1 and on V5 not failing, here by not being testable; it is not T2 passed.
+- Their one contrary prediction is not decided by this archive, which says nothing for T2's sign. At this shape the sign could not go to the rival, and V4 never failed T2 in the field's simulated worlds (cells DESIGN §5, §6), so neither not-deciding counts for T2.
+- Read after the run, not frozen: the lag's effect was detected in three cells, two negative and one positive, each the sign the rival predicts there; of the four cells where the two rules differ, the rival's two right calls are detected cells and T2's two are not. The 8 of 10 positive effects lean toward T2 only where nothing was detected.
+
+**What it changed.** [UE32's third proposal](../state-against-embedding/T2-PROPOSALS.md#3-as-far-as-anything-measured-does-once-a-frozen-test-fails-it) waited on a frozen run that failed this wording. This is that run, so T2 in [02 §5](../../theories/becoming/chapters/02-MAP.md#t2) now says "as far as the level's own history does", with the failure kept beside it, and its first forbidden item reads a fourth variable from the level's own history. That forbids less; the loss of the broader claim stays on record.
+
+**What it does not show.** T2's numbers doing better than a field's state: they did worse on the next giving by a wide margin, and tied on the course by construction. Anything about a condition in the field. The one contrary prediction either way. And the rival's constants come from other analyses, the unit is four replicates under one law, and the model that wrote the design may have met these cultures' series in its training text ([DESIGN §9, §10](cells/DESIGN.md#9-data-what-has-been-seen-and-the-runs-order)).

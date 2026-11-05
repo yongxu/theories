@@ -1,0 +1,8793 @@
+{
+ "about": "TR2 Stage A (FREEZE-11): every training of the plan; reported, no verdict.",
+ "frozen": {
+  "experiments/formations-that-read/train-tr2a/tr2a.py": "92ff0530cc9e99d150a868d76b7354071a553392c7b3145829f9cd168d46f88d",
+  "experiments/formations-that-read/train-tr2a/tr2a_dry_run.py": "6f34c67a52a0d127dffdc9b344e8e09e757391088a3b338e45b096d16485bc82",
+  "experiments/formations-that-read/train-tr2a/results/dry-run.json": "0ff0d3dc53b8986547587a97c1f02233836a8bb21b9ac81dc2e9be799809ac0a",
+  "experiments/formations-that-read/tr2.py": "cec7e3b670b1f708928af0bfc8a73ca6b72b77f8dd241e8ead7a227655e34a2e"
+ },
+ "commits": {
+  "the freeze commit": "7f59154e21c6393cd8d3f3244d325772e19a40ca",
+  "HEAD": "5dc50f8a088602d9ba83df2af5869f6a4a564cb8"
+ },
+ "platform": {
+  "python": "3.11",
+  "machine": "arm64",
+  "system": "Darwin",
+  "version": "3.11.2",
+  "platform": "macOS-27.0.1-arm64-arm-64bit"
+ },
+ "seconds": 383.3,
+ "plan": {
+  "J": 64,
+  "DIM": 8,
+  "R": 3,
+  "HIDDEN": 16,
+  "EPOCHS": 400,
+  "RATE": 0.5,
+  "RHO": "1/4",
+  "SEEDS": 20,
+  "SEED_BASE": 100,
+  "DATA_SEED": 20261105,
+  "CONTENT_ACTS": [
+   "linear",
+   "xor"
+  ]
+ },
+ "content act ones": {
+  "linear": 32,
+  "xor": 26
+ },
+ "summary": {
+  "linear, content-only, S1": {
+   "trainings": 20,
+   "fit the readings": 20,
+   "coverage, each seed": [
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1"
+   ],
+   "coverage, mean": "1",
+   "coverage, expected (Stage 0)": "1",
+   "changed, each seed": [
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0"
+   ],
+   "twin at the cue, each seed (of the uncovered occasions whose content is read)": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "twin at the cue, median": null,
+   "trainings with a twin at the cue": 0,
+   "trainings not fitting the readings (no twin counted)": 0,
+   "unseen content changed, each seed": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "links, summed": {
+    "pairs": 3840,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs, largest": 0.0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   }
+  },
+  "linear, content-only, S2": {
+   "trainings": 20,
+   "fit the readings": 20,
+   "coverage, each seed": [
+    "94/97",
+    "89/92",
+    "65/69",
+    "1",
+    "1",
+    "29/35",
+    "1",
+    "1",
+    "97/100",
+    "1",
+    "179/185",
+    "1",
+    "1",
+    "1",
+    "1",
+    "91/97",
+    "179/185",
+    "191/197",
+    "32/35",
+    "187/193"
+   ],
+   "coverage, mean": "7992725690314/8238613653375",
+   "coverage, expected (Stage 0)": "31/32",
+   "changed, each seed": [
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "1/35",
+    "0",
+    "0",
+    "0",
+    "0",
+    "6/185",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "1/35",
+    "0"
+   ],
+   "twin at the cue, each seed (of the uncovered occasions whose content is read)": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "twin at the cue, median": null,
+   "trainings with a twin at the cue": 0,
+   "trainings not fitting the readings (no twin counted)": 0,
+   "unseen content changed, each seed": [
+    "0",
+    "0",
+    "0",
+    null,
+    null,
+    "1/6",
+    null,
+    null,
+    "0",
+    null,
+    "1",
+    null,
+    null,
+    null,
+    null,
+    "0",
+    "0",
+    "0",
+    "1/3",
+    "0"
+   ],
+   "links, summed": {
+    "pairs": 1949,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs, largest": 0.0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   }
+  },
+  "linear, content-only, S3": {
+   "trainings": 20,
+   "fit the readings": 20,
+   "coverage, each seed": [
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1"
+   ],
+   "coverage, mean": "1",
+   "coverage, expected (Stage 0)": "1",
+   "changed, each seed": [
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0"
+   ],
+   "twin at the cue, each seed (of the uncovered occasions whose content is read)": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "twin at the cue, median": null,
+   "trainings with a twin at the cue": 0,
+   "trainings not fitting the readings (no twin counted)": 0,
+   "unseen content changed, each seed": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "links, summed": {
+    "pairs": 2903,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs, largest": 0.0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   }
+  },
+  "linear, content-and-cue, S1": {
+   "trainings": 20,
+   "fit the readings": 20,
+   "coverage, each seed": [
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0"
+   ],
+   "coverage, mean": "0",
+   "coverage, expected (Stage 0)": "0",
+   "changed, each seed": [
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0"
+   ],
+   "twin at the cue, each seed (of the uncovered occasions whose content is read)": [
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0"
+   ],
+   "twin at the cue, median": "0",
+   "trainings with a twin at the cue": 0,
+   "trainings not fitting the readings (no twin counted)": 0,
+   "unseen content changed, each seed": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "links, summed": {
+    "pairs": 3840,
+    "couplings apart": 3840,
+    "states apart": 3840,
+    "acts apart": 0
+   },
+   "output shift at the pairs, largest": 0.2922575216718809,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   }
+  },
+  "linear, content-and-cue, S2": {
+   "trainings": 20,
+   "fit the readings": 20,
+   "coverage, each seed": [
+    "73/97",
+    "17/23",
+    "44/69",
+    "38/47",
+    "157/196",
+    "9/14",
+    "26/35",
+    "19/25",
+    "149/200",
+    "158/191",
+    "134/185",
+    "146/185",
+    "41/64",
+    "142/181",
+    "166/187",
+    "137/194",
+    "28/37",
+    "146/197",
+    "7/10",
+    "151/193"
+   ],
+   "coverage, mean": "3357575738379504559211683/4485837624103914806112000",
+   "coverage, expected (Stage 0)": "3/4",
+   "changed, each seed": [
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "1/35",
+    "0",
+    "0",
+    "0",
+    "0",
+    "6/185",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "3/193"
+   ],
+   "twin at the cue, each seed (of the uncovered occasions whose content is read)": [
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "1/12"
+   ],
+   "twin at the cue, median": "0",
+   "trainings with a twin at the cue": 1,
+   "trainings not fitting the readings (no twin counted)": 0,
+   "unseen content changed, each seed": [
+    "0",
+    "0",
+    "0",
+    null,
+    null,
+    "1/6",
+    null,
+    null,
+    "0",
+    null,
+    "1",
+    null,
+    null,
+    null,
+    null,
+    "0",
+    "0",
+    "0",
+    "0",
+    "0"
+   ],
+   "links, summed": {
+    "pairs": 1949,
+    "couplings apart": 1949,
+    "states apart": 1949,
+    "acts apart": 3
+   },
+   "output shift at the pairs, largest": 0.30858427479236933,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   }
+  },
+  "linear, content-and-cue, S3": {
+   "trainings": 20,
+   "fit the readings": 20,
+   "coverage, each seed": [
+    "5/11",
+    "2/5",
+    "59/146",
+    "32/71",
+    "20/49",
+    "13/37",
+    "23/47",
+    "7/19",
+    "23/47",
+    "2/5",
+    "5/12",
+    "7/16",
+    "65/146",
+    "18/49",
+    "35/68",
+    "5/12",
+    "59/149",
+    "59/140",
+    "7/16",
+    "62/149"
+   ],
+   "coverage, mean": "238066087528378493/561137881863266400",
+   "coverage, expected (Stage 0)": "7/16",
+   "changed, each seed": [
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "2/49",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0"
+   ],
+   "twin at the cue, each seed (of the uncovered occasions whose content is read)": [
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "2/31",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0"
+   ],
+   "twin at the cue, median": "0",
+   "trainings with a twin at the cue": 1,
+   "trainings not fitting the readings (no twin counted)": 0,
+   "unseen content changed, each seed": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "links, summed": {
+    "pairs": 2903,
+    "couplings apart": 2903,
+    "states apart": 2903,
+    "acts apart": 6
+   },
+   "output shift at the pairs, largest": 0.5421092701651582,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   }
+  },
+  "xor, content-only, S1": {
+   "trainings": 20,
+   "fit the readings": 20,
+   "coverage, each seed": [
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1"
+   ],
+   "coverage, mean": "1",
+   "coverage, expected (Stage 0)": "1",
+   "changed, each seed": [
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0"
+   ],
+   "twin at the cue, each seed (of the uncovered occasions whose content is read)": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "twin at the cue, median": null,
+   "trainings with a twin at the cue": 0,
+   "trainings not fitting the readings (no twin counted)": 0,
+   "unseen content changed, each seed": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "links, summed": {
+    "pairs": 3840,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs, largest": 0.0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   }
+  },
+  "xor, content-only, S2": {
+   "trainings": 20,
+   "fit the readings": 19,
+   "coverage, each seed": [
+    "94/97",
+    "89/92",
+    "65/69",
+    "1",
+    "1",
+    "29/35",
+    "1",
+    "1",
+    "97/100",
+    "1",
+    "179/185",
+    "1",
+    "1",
+    "1",
+    "1",
+    "91/97",
+    "179/185",
+    "191/197",
+    "32/35",
+    "187/193"
+   ],
+   "coverage, mean": "7992725690314/8238613653375",
+   "coverage, expected (Stage 0)": "31/32",
+   "changed, each seed": [
+    "0",
+    "0",
+    "4/69",
+    "0",
+    "0",
+    "2/35",
+    "0",
+    "0",
+    "11/200",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "6/185",
+    "0",
+    "1/35",
+    "6/193"
+   ],
+   "twin at the cue, each seed (of the uncovered occasions whose content is read)": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "twin at the cue, median": null,
+   "trainings with a twin at the cue": 0,
+   "trainings not fitting the readings (no twin counted)": 1,
+   "unseen content changed, each seed": [
+    "0",
+    "0",
+    "1",
+    null,
+    null,
+    "1/3",
+    null,
+    null,
+    "1",
+    null,
+    "0",
+    null,
+    null,
+    null,
+    null,
+    "0",
+    "1",
+    "0",
+    "1/3",
+    "1"
+   ],
+   "links, summed": {
+    "pairs": 1949,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs, largest": 0.0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   }
+  },
+  "xor, content-only, S3": {
+   "trainings": 20,
+   "fit the readings": 20,
+   "coverage, each seed": [
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1"
+   ],
+   "coverage, mean": "1",
+   "coverage, expected (Stage 0)": "1",
+   "changed, each seed": [
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0"
+   ],
+   "twin at the cue, each seed (of the uncovered occasions whose content is read)": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "twin at the cue, median": null,
+   "trainings with a twin at the cue": 0,
+   "trainings not fitting the readings (no twin counted)": 0,
+   "unseen content changed, each seed": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "links, summed": {
+    "pairs": 2903,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs, largest": 0.0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   }
+  },
+  "xor, content-and-cue, S1": {
+   "trainings": 20,
+   "fit the readings": 20,
+   "coverage, each seed": [
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0"
+   ],
+   "coverage, mean": "0",
+   "coverage, expected (Stage 0)": "0",
+   "changed, each seed": [
+    "1/64",
+    "1/16",
+    "3/64",
+    "5/64",
+    "7/64",
+    "0",
+    "3/64",
+    "1/64",
+    "3/64",
+    "0",
+    "1/16",
+    "1/8",
+    "3/64",
+    "0",
+    "1/32",
+    "3/64",
+    "0",
+    "1/32",
+    "1/64",
+    "0"
+   ],
+   "twin at the cue, each seed (of the uncovered occasions whose content is read)": [
+    "1/64",
+    "1/16",
+    "3/64",
+    "5/64",
+    "7/64",
+    "0",
+    "3/64",
+    "1/64",
+    "3/64",
+    "0",
+    "1/16",
+    "1/8",
+    "3/64",
+    "0",
+    "1/32",
+    "3/64",
+    "0",
+    "1/32",
+    "1/64",
+    "0"
+   ],
+   "twin at the cue, median": "5/128",
+   "trainings with a twin at the cue": 15,
+   "trainings not fitting the readings (no twin counted)": 0,
+   "unseen content changed, each seed": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "links, summed": {
+    "pairs": 3840,
+    "couplings apart": 3840,
+    "states apart": 3840,
+    "acts apart": 150
+   },
+   "output shift at the pairs, largest": 0.9444336946582823,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   }
+  },
+  "xor, content-and-cue, S2": {
+   "trainings": 20,
+   "fit the readings": 20,
+   "coverage, each seed": [
+    "73/97",
+    "17/23",
+    "44/69",
+    "38/47",
+    "157/196",
+    "9/14",
+    "26/35",
+    "19/25",
+    "149/200",
+    "158/191",
+    "134/185",
+    "146/185",
+    "41/64",
+    "142/181",
+    "166/187",
+    "137/194",
+    "28/37",
+    "146/197",
+    "7/10",
+    "151/193"
+   ],
+   "coverage, mean": "3357575738379504559211683/4485837624103914806112000",
+   "coverage, expected (Stage 0)": "3/4",
+   "changed, each seed": [
+    "0",
+    "3/184",
+    "1/23",
+    "3/188",
+    "0",
+    "2/35",
+    "0",
+    "0",
+    "3/200",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "3/97",
+    "3/185",
+    "0",
+    "1/35",
+    "6/193"
+   ],
+   "twin at the cue, each seed (of the uncovered occasions whose content is read)": [
+    "0",
+    "1/14",
+    "1/21",
+    "1/12",
+    "0",
+    "0",
+    "0",
+    "0",
+    "1/15",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "1/13",
+    "0",
+    "0",
+    "0"
+   ],
+   "twin at the cue, median": "0",
+   "trainings with a twin at the cue": 5,
+   "trainings not fitting the readings (no twin counted)": 0,
+   "unseen content changed, each seed": [
+    "0",
+    "0",
+    "1/2",
+    null,
+    null,
+    "1/3",
+    null,
+    null,
+    "0",
+    null,
+    "0",
+    null,
+    null,
+    null,
+    null,
+    "1/2",
+    "0",
+    "0",
+    "1/3",
+    "1"
+   ],
+   "links, summed": {
+    "pairs": 1949,
+    "couplings apart": 1949,
+    "states apart": 1949,
+    "acts apart": 13
+   },
+   "output shift at the pairs, largest": 0.4613900841464267,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   }
+  },
+  "xor, content-and-cue, S3": {
+   "trainings": 20,
+   "fit the readings": 20,
+   "coverage, each seed": [
+    "5/11",
+    "2/5",
+    "59/146",
+    "32/71",
+    "20/49",
+    "13/37",
+    "23/47",
+    "7/19",
+    "23/47",
+    "2/5",
+    "5/12",
+    "7/16",
+    "65/146",
+    "18/49",
+    "35/68",
+    "5/12",
+    "59/149",
+    "59/140",
+    "7/16",
+    "62/149"
+   ],
+   "coverage, mean": "238066087528378493/561137881863266400",
+   "coverage, expected (Stage 0)": "7/16",
+   "changed, each seed": [
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "3/148",
+    "0",
+    "3/152",
+    "0",
+    "0",
+    "0",
+    "0",
+    "3/146",
+    "0",
+    "3/136",
+    "1/48",
+    "0",
+    "0",
+    "0",
+    "0"
+   ],
+   "twin at the cue, each seed (of the uncovered occasions whose content is read)": [
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "1/32",
+    "0",
+    "1/32",
+    "0",
+    "0",
+    "0",
+    "0",
+    "1/27",
+    "0",
+    "1/22",
+    "1/28",
+    "0",
+    "0",
+    "0",
+    "0"
+   ],
+   "twin at the cue, median": "0",
+   "trainings with a twin at the cue": 5,
+   "trainings not fitting the readings (no twin counted)": 0,
+   "unseen content changed, each seed": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "links, summed": {
+    "pairs": 2903,
+    "couplings apart": 2903,
+    "states apart": 2903,
+    "acts apart": 15
+   },
+   "output shift at the pairs, largest": 0.511208464628985,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   }
+  }
+ },
+ "trainings": [
+  {
+   "arch": "content-only",
+   "schedule": "S1",
+   "seed": 100,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 192,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S1",
+   "seed": 101,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 192,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S1",
+   "seed": 102,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 192,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S1",
+   "seed": 103,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 192,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S1",
+   "seed": 104,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 192,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S1",
+   "seed": 105,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 192,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S1",
+   "seed": 106,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 192,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S1",
+   "seed": 107,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 192,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S1",
+   "seed": 108,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 192,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S1",
+   "seed": 109,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 192,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S1",
+   "seed": 110,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 192,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S1",
+   "seed": 111,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 192,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S1",
+   "seed": 112,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 192,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S1",
+   "seed": 113,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 192,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S1",
+   "seed": 114,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 192,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S1",
+   "seed": 115,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 192,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S1",
+   "seed": 116,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 192,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S1",
+   "seed": 117,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 192,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S1",
+   "seed": 118,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 192,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S1",
+   "seed": 119,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 192,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S2",
+   "seed": 100,
+   "read": 190,
+   "unread": 194,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 92,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 188,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 6,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S2",
+   "seed": 101,
+   "read": 200,
+   "unread": 184,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 90,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 178,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 6,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S2",
+   "seed": 102,
+   "read": 177,
+   "unread": 207,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 94,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 195,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 12,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S2",
+   "seed": 103,
+   "read": 196,
+   "unread": 188,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 90,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 188,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S2",
+   "seed": 104,
+   "read": 188,
+   "unread": 196,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 98,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 196,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S2",
+   "seed": 105,
+   "read": 174,
+   "unread": 210,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 114,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 174,
+   "changed": 6,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 36,
+   "unseen content changed": 6,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S2",
+   "seed": 106,
+   "read": 209,
+   "unread": 175,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 85,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 175,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S2",
+   "seed": 107,
+   "read": 184,
+   "unread": 200,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 104,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 200,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S2",
+   "seed": 108,
+   "read": 184,
+   "unread": 200,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 99,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 194,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 6,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S2",
+   "seed": 109,
+   "read": 193,
+   "unread": 191,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 92,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 191,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S2",
+   "seed": 110,
+   "read": 199,
+   "unread": 185,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 98,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 179,
+   "changed": 6,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 6,
+   "unseen content changed": 6,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S2",
+   "seed": 111,
+   "read": 199,
+   "unread": 185,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 95,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 185,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S2",
+   "seed": 112,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 105,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 192,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S2",
+   "seed": 113,
+   "read": 203,
+   "unread": 181,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 101,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 181,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S2",
+   "seed": 114,
+   "read": 197,
+   "unread": 187,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 99,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 187,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S2",
+   "seed": 115,
+   "read": 190,
+   "unread": 194,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 98,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 182,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 12,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S2",
+   "seed": 116,
+   "read": 199,
+   "unread": 185,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 104,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 179,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 6,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S2",
+   "seed": 117,
+   "read": 187,
+   "unread": 197,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 92,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 191,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 6,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S2",
+   "seed": 118,
+   "read": 174,
+   "unread": 210,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 108,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 192,
+   "changed": 6,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 18,
+   "unseen content changed": 6,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S2",
+   "seed": 119,
+   "read": 191,
+   "unread": 193,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 91,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 187,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 6,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S3",
+   "seed": 100,
+   "read": 241,
+   "unread": 143,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 143,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 143,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S3",
+   "seed": 101,
+   "read": 234,
+   "unread": 150,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 150,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 150,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S3",
+   "seed": 102,
+   "read": 238,
+   "unread": 146,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 146,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 146,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S3",
+   "seed": 103,
+   "read": 242,
+   "unread": 142,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 142,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 142,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S3",
+   "seed": 104,
+   "read": 237,
+   "unread": 147,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 147,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 147,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S3",
+   "seed": 105,
+   "read": 236,
+   "unread": 148,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 148,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 148,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S3",
+   "seed": 106,
+   "read": 243,
+   "unread": 141,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 141,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 141,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S3",
+   "seed": 107,
+   "read": 232,
+   "unread": 152,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 152,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 152,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S3",
+   "seed": 108,
+   "read": 243,
+   "unread": 141,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 141,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 141,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S3",
+   "seed": 109,
+   "read": 234,
+   "unread": 150,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 150,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 150,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S3",
+   "seed": 110,
+   "read": 240,
+   "unread": 144,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 144,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 144,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S3",
+   "seed": 111,
+   "read": 240,
+   "unread": 144,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 144,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 144,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S3",
+   "seed": 112,
+   "read": 238,
+   "unread": 146,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 146,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 146,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S3",
+   "seed": 113,
+   "read": 237,
+   "unread": 147,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 147,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 147,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S3",
+   "seed": 114,
+   "read": 248,
+   "unread": 136,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 136,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 136,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S3",
+   "seed": 115,
+   "read": 240,
+   "unread": 144,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 144,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 144,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S3",
+   "seed": 116,
+   "read": 235,
+   "unread": 149,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 149,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 149,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S3",
+   "seed": 117,
+   "read": 244,
+   "unread": 140,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 140,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 140,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S3",
+   "seed": 118,
+   "read": 240,
+   "unread": 144,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 144,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 144,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S3",
+   "seed": 119,
+   "read": 235,
+   "unread": 149,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 149,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 149,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S1",
+   "seed": 100,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 192,
+    "states apart": 192,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.002429287336634079,
+    "max": 0.028059654684703617
+   },
+   "covered": 0,
+   "changed": 0,
+   "uncovered, content read": 192,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S1",
+   "seed": 101,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 192,
+    "states apart": 192,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0034880802073754195,
+    "max": 0.03892355829236296
+   },
+   "covered": 0,
+   "changed": 0,
+   "uncovered, content read": 192,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S1",
+   "seed": 102,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 192,
+    "states apart": 192,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0134429701510922,
+    "max": 0.2922575216718809
+   },
+   "covered": 0,
+   "changed": 0,
+   "uncovered, content read": 192,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S1",
+   "seed": 103,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 192,
+    "states apart": 192,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.004743641339929799,
+    "max": 0.11879018645485317
+   },
+   "covered": 0,
+   "changed": 0,
+   "uncovered, content read": 192,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S1",
+   "seed": 104,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 192,
+    "states apart": 192,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.010354428774565208,
+    "max": 0.11908790177414695
+   },
+   "covered": 0,
+   "changed": 0,
+   "uncovered, content read": 192,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S1",
+   "seed": 105,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 192,
+    "states apart": 192,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.002531937947319217,
+    "max": 0.04020732652507128
+   },
+   "covered": 0,
+   "changed": 0,
+   "uncovered, content read": 192,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S1",
+   "seed": 106,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 192,
+    "states apart": 192,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.006968523488092254,
+    "max": 0.15118290797300293
+   },
+   "covered": 0,
+   "changed": 0,
+   "uncovered, content read": 192,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S1",
+   "seed": 107,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 192,
+    "states apart": 192,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0033811950837689484,
+    "max": 0.0978250651508965
+   },
+   "covered": 0,
+   "changed": 0,
+   "uncovered, content read": 192,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S1",
+   "seed": 108,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 192,
+    "states apart": 192,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.002159300830100641,
+    "max": 0.0379137335603954
+   },
+   "covered": 0,
+   "changed": 0,
+   "uncovered, content read": 192,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S1",
+   "seed": 109,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 192,
+    "states apart": 192,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0047023686134075775,
+    "max": 0.051667968241053575
+   },
+   "covered": 0,
+   "changed": 0,
+   "uncovered, content read": 192,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S1",
+   "seed": 110,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 192,
+    "states apart": 192,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.007748062975472984,
+    "max": 0.11538224475680825
+   },
+   "covered": 0,
+   "changed": 0,
+   "uncovered, content read": 192,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S1",
+   "seed": 111,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 192,
+    "states apart": 192,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.005011348634705444,
+    "max": 0.1069442598151763
+   },
+   "covered": 0,
+   "changed": 0,
+   "uncovered, content read": 192,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S1",
+   "seed": 112,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 192,
+    "states apart": 192,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.005358614632075792,
+    "max": 0.06959996782845373
+   },
+   "covered": 0,
+   "changed": 0,
+   "uncovered, content read": 192,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S1",
+   "seed": 113,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 192,
+    "states apart": 192,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.015698877313416914,
+    "max": 0.27495763572583887
+   },
+   "covered": 0,
+   "changed": 0,
+   "uncovered, content read": 192,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S1",
+   "seed": 114,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 192,
+    "states apart": 192,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.016185069490895182,
+    "max": 0.26512879785006616
+   },
+   "covered": 0,
+   "changed": 0,
+   "uncovered, content read": 192,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S1",
+   "seed": 115,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 192,
+    "states apart": 192,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.010072399039816991,
+    "max": 0.15381842962624848
+   },
+   "covered": 0,
+   "changed": 0,
+   "uncovered, content read": 192,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S1",
+   "seed": 116,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 192,
+    "states apart": 192,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0026952029070147023,
+    "max": 0.026240033681982355
+   },
+   "covered": 0,
+   "changed": 0,
+   "uncovered, content read": 192,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S1",
+   "seed": 117,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 192,
+    "states apart": 192,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.00821054748513094,
+    "max": 0.12458134924744924
+   },
+   "covered": 0,
+   "changed": 0,
+   "uncovered, content read": 192,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S1",
+   "seed": 118,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 192,
+    "states apart": 192,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.008378748051256619,
+    "max": 0.20032440379838234
+   },
+   "covered": 0,
+   "changed": 0,
+   "uncovered, content read": 192,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S1",
+   "seed": 119,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 192,
+    "states apart": 192,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.011774714036473996,
+    "max": 0.24862897560036767
+   },
+   "covered": 0,
+   "changed": 0,
+   "uncovered, content read": 192,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S2",
+   "seed": 100,
+   "read": 190,
+   "unread": 194,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 92,
+    "couplings apart": 92,
+    "states apart": 92,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0027480573999185765,
+    "max": 0.031131268728351036
+   },
+   "covered": 146,
+   "changed": 0,
+   "uncovered, content read": 42,
+   "twin at the cue": 0,
+   "uncovered, content unread": 6,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S2",
+   "seed": 101,
+   "read": 200,
+   "unread": 184,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 90,
+    "couplings apart": 90,
+    "states apart": 90,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.004782284831736631,
+    "max": 0.047955169214896065
+   },
+   "covered": 136,
+   "changed": 0,
+   "uncovered, content read": 42,
+   "twin at the cue": 0,
+   "uncovered, content unread": 6,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S2",
+   "seed": 102,
+   "read": 177,
+   "unread": 207,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 94,
+    "couplings apart": 94,
+    "states apart": 94,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0034839951863482157,
+    "max": 0.04481050084003513
+   },
+   "covered": 132,
+   "changed": 0,
+   "uncovered, content read": 63,
+   "twin at the cue": 0,
+   "uncovered, content unread": 12,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S2",
+   "seed": 103,
+   "read": 196,
+   "unread": 188,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 90,
+    "couplings apart": 90,
+    "states apart": 90,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0012564923611453763,
+    "max": 0.010022965562260809
+   },
+   "covered": 152,
+   "changed": 0,
+   "uncovered, content read": 36,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S2",
+   "seed": 104,
+   "read": 188,
+   "unread": 196,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 98,
+    "couplings apart": 98,
+    "states apart": 98,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.004490718728692713,
+    "max": 0.11641834307389992
+   },
+   "covered": 157,
+   "changed": 0,
+   "uncovered, content read": 39,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S2",
+   "seed": 105,
+   "read": 174,
+   "unread": 210,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 114,
+    "couplings apart": 114,
+    "states apart": 114,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.001532755686493768,
+    "max": 0.022983425917169065
+   },
+   "covered": 135,
+   "changed": 6,
+   "uncovered, content read": 39,
+   "twin at the cue": 0,
+   "uncovered, content unread": 36,
+   "unseen content changed": 6,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S2",
+   "seed": 106,
+   "read": 209,
+   "unread": 175,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 85,
+    "couplings apart": 85,
+    "states apart": 85,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.00406125466495536,
+    "max": 0.04998924898522895
+   },
+   "covered": 130,
+   "changed": 0,
+   "uncovered, content read": 45,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S2",
+   "seed": 107,
+   "read": 184,
+   "unread": 200,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 104,
+    "couplings apart": 104,
+    "states apart": 104,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.005445423695522163,
+    "max": 0.052840115815158545
+   },
+   "covered": 152,
+   "changed": 0,
+   "uncovered, content read": 48,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S2",
+   "seed": 108,
+   "read": 184,
+   "unread": 200,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 99,
+    "couplings apart": 99,
+    "states apart": 99,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.001960890761871506,
+    "max": 0.012257279290480663
+   },
+   "covered": 149,
+   "changed": 0,
+   "uncovered, content read": 45,
+   "twin at the cue": 0,
+   "uncovered, content unread": 6,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S2",
+   "seed": 109,
+   "read": 193,
+   "unread": 191,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 92,
+    "couplings apart": 92,
+    "states apart": 92,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0024893647372173,
+    "max": 0.02518881980439369
+   },
+   "covered": 158,
+   "changed": 0,
+   "uncovered, content read": 33,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S2",
+   "seed": 110,
+   "read": 199,
+   "unread": 185,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 98,
+    "couplings apart": 98,
+    "states apart": 98,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.006591022916773428,
+    "max": 0.14982570660036865
+   },
+   "covered": 134,
+   "changed": 6,
+   "uncovered, content read": 45,
+   "twin at the cue": 0,
+   "uncovered, content unread": 6,
+   "unseen content changed": 6,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S2",
+   "seed": 111,
+   "read": 199,
+   "unread": 185,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 95,
+    "couplings apart": 95,
+    "states apart": 95,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0025551539965522835,
+    "max": 0.03135271192693434
+   },
+   "covered": 146,
+   "changed": 0,
+   "uncovered, content read": 39,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S2",
+   "seed": 112,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 105,
+    "couplings apart": 105,
+    "states apart": 105,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.003444883965410492,
+    "max": 0.05687841384201572
+   },
+   "covered": 123,
+   "changed": 0,
+   "uncovered, content read": 69,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S2",
+   "seed": 113,
+   "read": 203,
+   "unread": 181,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 101,
+    "couplings apart": 101,
+    "states apart": 101,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.006242012467610886,
+    "max": 0.05835498951759441
+   },
+   "covered": 142,
+   "changed": 0,
+   "uncovered, content read": 39,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S2",
+   "seed": 114,
+   "read": 197,
+   "unread": 187,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 99,
+    "couplings apart": 99,
+    "states apart": 99,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.011273445949010228,
+    "max": 0.1783573880044994
+   },
+   "covered": 166,
+   "changed": 0,
+   "uncovered, content read": 21,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S2",
+   "seed": 115,
+   "read": 190,
+   "unread": 194,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 98,
+    "couplings apart": 98,
+    "states apart": 98,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.005079856171551747,
+    "max": 0.06409829833493073
+   },
+   "covered": 137,
+   "changed": 0,
+   "uncovered, content read": 45,
+   "twin at the cue": 0,
+   "uncovered, content unread": 12,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S2",
+   "seed": 116,
+   "read": 199,
+   "unread": 185,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 104,
+    "couplings apart": 104,
+    "states apart": 104,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.005294715663623609,
+    "max": 0.06539645761208016
+   },
+   "covered": 140,
+   "changed": 0,
+   "uncovered, content read": 39,
+   "twin at the cue": 0,
+   "uncovered, content unread": 6,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S2",
+   "seed": 117,
+   "read": 187,
+   "unread": 197,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 92,
+    "couplings apart": 92,
+    "states apart": 92,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.003245231279976278,
+    "max": 0.04628162829071092
+   },
+   "covered": 146,
+   "changed": 0,
+   "uncovered, content read": 45,
+   "twin at the cue": 0,
+   "uncovered, content unread": 6,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S2",
+   "seed": 118,
+   "read": 174,
+   "unread": 210,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 108,
+    "couplings apart": 108,
+    "states apart": 108,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.00954259488763599,
+    "max": 0.15242525047997013
+   },
+   "covered": 147,
+   "changed": 0,
+   "uncovered, content read": 45,
+   "twin at the cue": 0,
+   "uncovered, content unread": 18,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S2",
+   "seed": 119,
+   "read": 191,
+   "unread": 193,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 91,
+    "couplings apart": 91,
+    "states apart": 91,
+    "acts apart": 3
+   },
+   "output shift at the pairs": {
+    "mean": 0.015116604952258621,
+    "max": 0.30858427479236933
+   },
+   "covered": 151,
+   "changed": 3,
+   "uncovered, content read": 36,
+   "twin at the cue": 3,
+   "uncovered, content unread": 6,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S3",
+   "seed": 100,
+   "read": 241,
+   "unread": 143,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 143,
+    "couplings apart": 143,
+    "states apart": 143,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.004137016213215702,
+    "max": 0.04439953208668168
+   },
+   "covered": 65,
+   "changed": 0,
+   "uncovered, content read": 78,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S3",
+   "seed": 101,
+   "read": 234,
+   "unread": 150,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 150,
+    "couplings apart": 150,
+    "states apart": 150,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.004420326117635252,
+    "max": 0.0467740770006095
+   },
+   "covered": 60,
+   "changed": 0,
+   "uncovered, content read": 90,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S3",
+   "seed": 102,
+   "read": 238,
+   "unread": 146,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 146,
+    "couplings apart": 146,
+    "states apart": 146,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.004340881460399878,
+    "max": 0.12974665924594941
+   },
+   "covered": 59,
+   "changed": 0,
+   "uncovered, content read": 87,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S3",
+   "seed": 103,
+   "read": 242,
+   "unread": 142,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 142,
+    "couplings apart": 142,
+    "states apart": 142,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.006160006085141525,
+    "max": 0.15501929855639496
+   },
+   "covered": 64,
+   "changed": 0,
+   "uncovered, content read": 78,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S3",
+   "seed": 104,
+   "read": 237,
+   "unread": 147,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 147,
+    "couplings apart": 147,
+    "states apart": 147,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0052334412228087455,
+    "max": 0.0662021705555994
+   },
+   "covered": 60,
+   "changed": 0,
+   "uncovered, content read": 87,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S3",
+   "seed": 105,
+   "read": 236,
+   "unread": 148,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 148,
+    "couplings apart": 148,
+    "states apart": 148,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.004037580671818271,
+    "max": 0.06907133171538671
+   },
+   "covered": 52,
+   "changed": 0,
+   "uncovered, content read": 96,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S3",
+   "seed": 106,
+   "read": 243,
+   "unread": 141,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 141,
+    "couplings apart": 141,
+    "states apart": 141,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.004300307442406222,
+    "max": 0.04670922843783533
+   },
+   "covered": 69,
+   "changed": 0,
+   "uncovered, content read": 72,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S3",
+   "seed": 107,
+   "read": 232,
+   "unread": 152,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 152,
+    "couplings apart": 152,
+    "states apart": 152,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.00360255783953147,
+    "max": 0.08950935763165069
+   },
+   "covered": 56,
+   "changed": 0,
+   "uncovered, content read": 96,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S3",
+   "seed": 108,
+   "read": 243,
+   "unread": 141,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 141,
+    "couplings apart": 141,
+    "states apart": 141,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.003766116437328989,
+    "max": 0.041780887852226
+   },
+   "covered": 69,
+   "changed": 0,
+   "uncovered, content read": 72,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S3",
+   "seed": 109,
+   "read": 234,
+   "unread": 150,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 150,
+    "couplings apart": 150,
+    "states apart": 150,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.00883465763152439,
+    "max": 0.13195704125291507
+   },
+   "covered": 60,
+   "changed": 0,
+   "uncovered, content read": 90,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S3",
+   "seed": 110,
+   "read": 240,
+   "unread": 144,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 144,
+    "couplings apart": 144,
+    "states apart": 144,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.007429567220070428,
+    "max": 0.08039731197156565
+   },
+   "covered": 60,
+   "changed": 0,
+   "uncovered, content read": 84,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S3",
+   "seed": 111,
+   "read": 240,
+   "unread": 144,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 144,
+    "couplings apart": 144,
+    "states apart": 144,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.00619806714411957,
+    "max": 0.07283222247645482
+   },
+   "covered": 63,
+   "changed": 0,
+   "uncovered, content read": 81,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S3",
+   "seed": 112,
+   "read": 238,
+   "unread": 146,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 146,
+    "couplings apart": 146,
+    "states apart": 146,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.003681012015871341,
+    "max": 0.04160649709456174
+   },
+   "covered": 65,
+   "changed": 0,
+   "uncovered, content read": 81,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S3",
+   "seed": 113,
+   "read": 237,
+   "unread": 147,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 147,
+    "couplings apart": 147,
+    "states apart": 147,
+    "acts apart": 6
+   },
+   "output shift at the pairs": {
+    "mean": 0.04736118566476636,
+    "max": 0.5421092701651582
+   },
+   "covered": 54,
+   "changed": 6,
+   "uncovered, content read": 93,
+   "twin at the cue": 6,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S3",
+   "seed": 114,
+   "read": 248,
+   "unread": 136,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 136,
+    "couplings apart": 136,
+    "states apart": 136,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.002275254763024637,
+    "max": 0.043329559630197134
+   },
+   "covered": 70,
+   "changed": 0,
+   "uncovered, content read": 66,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S3",
+   "seed": 115,
+   "read": 240,
+   "unread": 144,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 144,
+    "couplings apart": 144,
+    "states apart": 144,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.016955824019877105,
+    "max": 0.2495732348739964
+   },
+   "covered": 60,
+   "changed": 0,
+   "uncovered, content read": 84,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S3",
+   "seed": 116,
+   "read": 235,
+   "unread": 149,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 149,
+    "couplings apart": 149,
+    "states apart": 149,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.003427361909765713,
+    "max": 0.06909462892632356
+   },
+   "covered": 59,
+   "changed": 0,
+   "uncovered, content read": 90,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S3",
+   "seed": 117,
+   "read": 244,
+   "unread": 140,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 140,
+    "couplings apart": 140,
+    "states apart": 140,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0022541067474901185,
+    "max": 0.028417684695456913
+   },
+   "covered": 59,
+   "changed": 0,
+   "uncovered, content read": 81,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S3",
+   "seed": 118,
+   "read": 240,
+   "unread": 144,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 144,
+    "couplings apart": 144,
+    "states apart": 144,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.005580339209283165,
+    "max": 0.09981273519396355
+   },
+   "covered": 63,
+   "changed": 0,
+   "uncovered, content read": 81,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S3",
+   "seed": 119,
+   "read": 235,
+   "unread": 149,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 149,
+    "couplings apart": 149,
+    "states apart": 149,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.002223606090993732,
+    "max": 0.039977961012571894
+   },
+   "covered": 62,
+   "changed": 0,
+   "uncovered, content read": 87,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "linear"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S1",
+   "seed": 100,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 192,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S1",
+   "seed": 101,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 192,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S1",
+   "seed": 102,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 192,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S1",
+   "seed": 103,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 192,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S1",
+   "seed": 104,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 192,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S1",
+   "seed": 105,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 192,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S1",
+   "seed": 106,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 192,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S1",
+   "seed": 107,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 192,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S1",
+   "seed": 108,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 192,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S1",
+   "seed": 109,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 192,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S1",
+   "seed": 110,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 192,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S1",
+   "seed": 111,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 192,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S1",
+   "seed": 112,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 192,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S1",
+   "seed": 113,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 192,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S1",
+   "seed": 114,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 192,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S1",
+   "seed": 115,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 192,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S1",
+   "seed": 116,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 192,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S1",
+   "seed": 117,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 192,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S1",
+   "seed": 118,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 192,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S1",
+   "seed": 119,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 192,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S2",
+   "seed": 100,
+   "read": 190,
+   "unread": 194,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 92,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 188,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 6,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S2",
+   "seed": 101,
+   "read": 200,
+   "unread": 184,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 90,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 178,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 6,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S2",
+   "seed": 102,
+   "read": 177,
+   "unread": 207,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 94,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 195,
+   "changed": 12,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 12,
+   "unseen content changed": 12,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S2",
+   "seed": 103,
+   "read": 196,
+   "unread": 188,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 90,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 188,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S2",
+   "seed": 104,
+   "read": 188,
+   "unread": 196,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 98,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 196,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S2",
+   "seed": 105,
+   "read": 174,
+   "unread": 210,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 114,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 174,
+   "changed": 12,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 36,
+   "unseen content changed": 12,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S2",
+   "seed": 106,
+   "read": 209,
+   "unread": 175,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 85,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 175,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S2",
+   "seed": 107,
+   "read": 184,
+   "unread": 200,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 104,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 200,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S2",
+   "seed": 108,
+   "read": 184,
+   "unread": 200,
+   "fits the readings": false,
+   "read acts wrong": 1,
+   "links": {
+    "pairs": 99,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 194,
+   "changed": 11,
+   "uncovered, content read": 0,
+   "twin at the cue": null,
+   "uncovered, content unread": 6,
+   "unseen content changed": 6,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S2",
+   "seed": 109,
+   "read": 193,
+   "unread": 191,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 92,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 191,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S2",
+   "seed": 110,
+   "read": 199,
+   "unread": 185,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 98,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 179,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 6,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S2",
+   "seed": 111,
+   "read": 199,
+   "unread": 185,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 95,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 185,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S2",
+   "seed": 112,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 105,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 192,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S2",
+   "seed": 113,
+   "read": 203,
+   "unread": 181,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 101,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 181,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S2",
+   "seed": 114,
+   "read": 197,
+   "unread": 187,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 99,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 187,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S2",
+   "seed": 115,
+   "read": 190,
+   "unread": 194,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 98,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 182,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 12,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S2",
+   "seed": 116,
+   "read": 199,
+   "unread": 185,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 104,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 179,
+   "changed": 6,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 6,
+   "unseen content changed": 6,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S2",
+   "seed": 117,
+   "read": 187,
+   "unread": 197,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 92,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 191,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 6,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S2",
+   "seed": 118,
+   "read": 174,
+   "unread": 210,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 108,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 192,
+   "changed": 6,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 18,
+   "unseen content changed": 6,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S2",
+   "seed": 119,
+   "read": 191,
+   "unread": 193,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 91,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 187,
+   "changed": 6,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 6,
+   "unseen content changed": 6,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S3",
+   "seed": 100,
+   "read": 241,
+   "unread": 143,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 143,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 143,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S3",
+   "seed": 101,
+   "read": 234,
+   "unread": 150,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 150,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 150,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S3",
+   "seed": 102,
+   "read": 238,
+   "unread": 146,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 146,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 146,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S3",
+   "seed": 103,
+   "read": 242,
+   "unread": 142,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 142,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 142,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S3",
+   "seed": 104,
+   "read": 237,
+   "unread": 147,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 147,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 147,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S3",
+   "seed": 105,
+   "read": 236,
+   "unread": 148,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 148,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 148,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S3",
+   "seed": 106,
+   "read": 243,
+   "unread": 141,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 141,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 141,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S3",
+   "seed": 107,
+   "read": 232,
+   "unread": 152,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 152,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 152,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S3",
+   "seed": 108,
+   "read": 243,
+   "unread": 141,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 141,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 141,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S3",
+   "seed": 109,
+   "read": 234,
+   "unread": 150,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 150,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 150,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S3",
+   "seed": 110,
+   "read": 240,
+   "unread": 144,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 144,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 144,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S3",
+   "seed": 111,
+   "read": 240,
+   "unread": 144,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 144,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 144,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S3",
+   "seed": 112,
+   "read": 238,
+   "unread": 146,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 146,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 146,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S3",
+   "seed": 113,
+   "read": 237,
+   "unread": 147,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 147,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 147,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S3",
+   "seed": 114,
+   "read": 248,
+   "unread": 136,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 136,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 136,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S3",
+   "seed": 115,
+   "read": 240,
+   "unread": 144,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 144,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 144,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S3",
+   "seed": 116,
+   "read": 235,
+   "unread": 149,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 149,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 149,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S3",
+   "seed": 117,
+   "read": 244,
+   "unread": 140,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 140,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 140,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S3",
+   "seed": 118,
+   "read": 240,
+   "unread": 144,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 144,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 144,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-only",
+   "schedule": "S3",
+   "seed": 119,
+   "read": 235,
+   "unread": 149,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 149,
+    "couplings apart": 0,
+    "states apart": 0,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.0,
+    "max": 0.0
+   },
+   "covered": 149,
+   "changed": 0,
+   "uncovered, content read": 0,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S1",
+   "seed": 100,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 192,
+    "states apart": 192,
+    "acts apart": 3
+   },
+   "output shift at the pairs": {
+    "mean": 0.06915482603215577,
+    "max": 0.7787832692295151
+   },
+   "covered": 0,
+   "changed": 3,
+   "uncovered, content read": 192,
+   "twin at the cue": 3,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S1",
+   "seed": 101,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 192,
+    "states apart": 192,
+    "acts apart": 12
+   },
+   "output shift at the pairs": {
+    "mean": 0.10998100816728412,
+    "max": 0.616466546290571
+   },
+   "covered": 0,
+   "changed": 12,
+   "uncovered, content read": 192,
+   "twin at the cue": 12,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S1",
+   "seed": 102,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 192,
+    "states apart": 192,
+    "acts apart": 9
+   },
+   "output shift at the pairs": {
+    "mean": 0.08247841061197962,
+    "max": 0.5969008103796329
+   },
+   "covered": 0,
+   "changed": 9,
+   "uncovered, content read": 192,
+   "twin at the cue": 9,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S1",
+   "seed": 103,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 192,
+    "states apart": 192,
+    "acts apart": 15
+   },
+   "output shift at the pairs": {
+    "mean": 0.11638260857387082,
+    "max": 0.9444336946582823
+   },
+   "covered": 0,
+   "changed": 15,
+   "uncovered, content read": 192,
+   "twin at the cue": 15,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S1",
+   "seed": 104,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 192,
+    "states apart": 192,
+    "acts apart": 21
+   },
+   "output shift at the pairs": {
+    "mean": 0.12840227732222245,
+    "max": 0.74123712738402
+   },
+   "covered": 0,
+   "changed": 21,
+   "uncovered, content read": 192,
+   "twin at the cue": 21,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S1",
+   "seed": 105,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 192,
+    "states apart": 192,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.048406476910497494,
+    "max": 0.2823670429958589
+   },
+   "covered": 0,
+   "changed": 0,
+   "uncovered, content read": 192,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S1",
+   "seed": 106,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 192,
+    "states apart": 192,
+    "acts apart": 9
+   },
+   "output shift at the pairs": {
+    "mean": 0.09794398704046452,
+    "max": 0.7135548251285013
+   },
+   "covered": 0,
+   "changed": 9,
+   "uncovered, content read": 192,
+   "twin at the cue": 9,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S1",
+   "seed": 107,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 192,
+    "states apart": 192,
+    "acts apart": 3
+   },
+   "output shift at the pairs": {
+    "mean": 0.048574009626048444,
+    "max": 0.5138081038267853
+   },
+   "covered": 0,
+   "changed": 3,
+   "uncovered, content read": 192,
+   "twin at the cue": 3,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S1",
+   "seed": 108,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 192,
+    "states apart": 192,
+    "acts apart": 9
+   },
+   "output shift at the pairs": {
+    "mean": 0.08301956274820947,
+    "max": 0.5969334891899424
+   },
+   "covered": 0,
+   "changed": 9,
+   "uncovered, content read": 192,
+   "twin at the cue": 9,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S1",
+   "seed": 109,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 192,
+    "states apart": 192,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.04957667789898353,
+    "max": 0.44206059221086846
+   },
+   "covered": 0,
+   "changed": 0,
+   "uncovered, content read": 192,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S1",
+   "seed": 110,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 192,
+    "states apart": 192,
+    "acts apart": 12
+   },
+   "output shift at the pairs": {
+    "mean": 0.09794313159996552,
+    "max": 0.7356068990463174
+   },
+   "covered": 0,
+   "changed": 12,
+   "uncovered, content read": 192,
+   "twin at the cue": 12,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S1",
+   "seed": 111,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 192,
+    "states apart": 192,
+    "acts apart": 24
+   },
+   "output shift at the pairs": {
+    "mean": 0.13185998189805817,
+    "max": 0.792283986373522
+   },
+   "covered": 0,
+   "changed": 24,
+   "uncovered, content read": 192,
+   "twin at the cue": 24,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S1",
+   "seed": 112,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 192,
+    "states apart": 192,
+    "acts apart": 9
+   },
+   "output shift at the pairs": {
+    "mean": 0.09169628793147934,
+    "max": 0.7714553165696107
+   },
+   "covered": 0,
+   "changed": 9,
+   "uncovered, content read": 192,
+   "twin at the cue": 9,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S1",
+   "seed": 113,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 192,
+    "states apart": 192,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.05312961846444648,
+    "max": 0.40796633959481
+   },
+   "covered": 0,
+   "changed": 0,
+   "uncovered, content read": 192,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S1",
+   "seed": 114,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 192,
+    "states apart": 192,
+    "acts apart": 6
+   },
+   "output shift at the pairs": {
+    "mean": 0.060467445274608726,
+    "max": 0.7027195753972901
+   },
+   "covered": 0,
+   "changed": 6,
+   "uncovered, content read": 192,
+   "twin at the cue": 6,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S1",
+   "seed": 115,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 192,
+    "states apart": 192,
+    "acts apart": 9
+   },
+   "output shift at the pairs": {
+    "mean": 0.08811231301999854,
+    "max": 0.6695857247173201
+   },
+   "covered": 0,
+   "changed": 9,
+   "uncovered, content read": 192,
+   "twin at the cue": 9,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S1",
+   "seed": 116,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 192,
+    "states apart": 192,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.061229114587869705,
+    "max": 0.41287268800121835
+   },
+   "covered": 0,
+   "changed": 0,
+   "uncovered, content read": 192,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S1",
+   "seed": 117,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 192,
+    "states apart": 192,
+    "acts apart": 6
+   },
+   "output shift at the pairs": {
+    "mean": 0.07909330915369293,
+    "max": 0.5415012715130126
+   },
+   "covered": 0,
+   "changed": 6,
+   "uncovered, content read": 192,
+   "twin at the cue": 6,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S1",
+   "seed": 118,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 192,
+    "states apart": 192,
+    "acts apart": 3
+   },
+   "output shift at the pairs": {
+    "mean": 0.06528841043000548,
+    "max": 0.47417208140209116
+   },
+   "covered": 0,
+   "changed": 3,
+   "uncovered, content read": 192,
+   "twin at the cue": 3,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S1",
+   "seed": 119,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 192,
+    "couplings apart": 192,
+    "states apart": 192,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.05164330298924822,
+    "max": 0.3260187901239836
+   },
+   "covered": 0,
+   "changed": 0,
+   "uncovered, content read": 192,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S2",
+   "seed": 100,
+   "read": 190,
+   "unread": 194,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 92,
+    "couplings apart": 92,
+    "states apart": 92,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.013615050906133784,
+    "max": 0.1097011047661059
+   },
+   "covered": 146,
+   "changed": 0,
+   "uncovered, content read": 42,
+   "twin at the cue": 0,
+   "uncovered, content unread": 6,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S2",
+   "seed": 101,
+   "read": 200,
+   "unread": 184,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 90,
+    "couplings apart": 90,
+    "states apart": 90,
+    "acts apart": 3
+   },
+   "output shift at the pairs": {
+    "mean": 0.04002512582606669,
+    "max": 0.4613900841464267
+   },
+   "covered": 136,
+   "changed": 3,
+   "uncovered, content read": 42,
+   "twin at the cue": 3,
+   "uncovered, content unread": 6,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S2",
+   "seed": 102,
+   "read": 177,
+   "unread": 207,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 94,
+    "couplings apart": 94,
+    "states apart": 94,
+    "acts apart": 2
+   },
+   "output shift at the pairs": {
+    "mean": 0.021147672841385426,
+    "max": 0.2287989479077186
+   },
+   "covered": 132,
+   "changed": 9,
+   "uncovered, content read": 63,
+   "twin at the cue": 3,
+   "uncovered, content unread": 12,
+   "unseen content changed": 6,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S2",
+   "seed": 103,
+   "read": 196,
+   "unread": 188,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 90,
+    "couplings apart": 90,
+    "states apart": 90,
+    "acts apart": 3
+   },
+   "output shift at the pairs": {
+    "mean": 0.027946509017049405,
+    "max": 0.33493112537551084
+   },
+   "covered": 152,
+   "changed": 3,
+   "uncovered, content read": 36,
+   "twin at the cue": 3,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S2",
+   "seed": 104,
+   "read": 188,
+   "unread": 196,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 98,
+    "couplings apart": 98,
+    "states apart": 98,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.02340827487214914,
+    "max": 0.23139126171964924
+   },
+   "covered": 157,
+   "changed": 0,
+   "uncovered, content read": 39,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S2",
+   "seed": 105,
+   "read": 174,
+   "unread": 210,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 114,
+    "couplings apart": 114,
+    "states apart": 114,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.018220573425502463,
+    "max": 0.17023562293647015
+   },
+   "covered": 135,
+   "changed": 12,
+   "uncovered, content read": 39,
+   "twin at the cue": 0,
+   "uncovered, content unread": 36,
+   "unseen content changed": 12,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S2",
+   "seed": 106,
+   "read": 209,
+   "unread": 175,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 85,
+    "couplings apart": 85,
+    "states apart": 85,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.022340917120920255,
+    "max": 0.15624215454920504
+   },
+   "covered": 130,
+   "changed": 0,
+   "uncovered, content read": 45,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S2",
+   "seed": 107,
+   "read": 184,
+   "unread": 200,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 104,
+    "couplings apart": 104,
+    "states apart": 104,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.015280346534505048,
+    "max": 0.1325770145913649
+   },
+   "covered": 152,
+   "changed": 0,
+   "uncovered, content read": 48,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S2",
+   "seed": 108,
+   "read": 184,
+   "unread": 200,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 99,
+    "couplings apart": 99,
+    "states apart": 99,
+    "acts apart": 2
+   },
+   "output shift at the pairs": {
+    "mean": 0.018863700085835357,
+    "max": 0.2745170375281046
+   },
+   "covered": 149,
+   "changed": 3,
+   "uncovered, content read": 45,
+   "twin at the cue": 3,
+   "uncovered, content unread": 6,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S2",
+   "seed": 109,
+   "read": 193,
+   "unread": 191,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 92,
+    "couplings apart": 92,
+    "states apart": 92,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.006650919586401867,
+    "max": 0.05598735385071245
+   },
+   "covered": 158,
+   "changed": 0,
+   "uncovered, content read": 33,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S2",
+   "seed": 110,
+   "read": 199,
+   "unread": 185,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 98,
+    "couplings apart": 98,
+    "states apart": 98,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.023091857945310875,
+    "max": 0.1680907374138081
+   },
+   "covered": 134,
+   "changed": 0,
+   "uncovered, content read": 45,
+   "twin at the cue": 0,
+   "uncovered, content unread": 6,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S2",
+   "seed": 111,
+   "read": 199,
+   "unread": 185,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 95,
+    "couplings apart": 95,
+    "states apart": 95,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.015990479754888254,
+    "max": 0.21755907448082804
+   },
+   "covered": 146,
+   "changed": 0,
+   "uncovered, content read": 39,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S2",
+   "seed": 112,
+   "read": 192,
+   "unread": 192,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 105,
+    "couplings apart": 105,
+    "states apart": 105,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.034010974810847965,
+    "max": 0.24411165080126251
+   },
+   "covered": 123,
+   "changed": 0,
+   "uncovered, content read": 69,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S2",
+   "seed": 113,
+   "read": 203,
+   "unread": 181,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 101,
+    "couplings apart": 101,
+    "states apart": 101,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.013673138029333974,
+    "max": 0.08995089088917807
+   },
+   "covered": 142,
+   "changed": 0,
+   "uncovered, content read": 39,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S2",
+   "seed": 114,
+   "read": 197,
+   "unread": 187,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 99,
+    "couplings apart": 99,
+    "states apart": 99,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.025475541601011883,
+    "max": 0.24451324147532671
+   },
+   "covered": 166,
+   "changed": 0,
+   "uncovered, content read": 21,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S2",
+   "seed": 115,
+   "read": 190,
+   "unread": 194,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 98,
+    "couplings apart": 98,
+    "states apart": 98,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.022460127692995862,
+    "max": 0.09133309807469718
+   },
+   "covered": 137,
+   "changed": 6,
+   "uncovered, content read": 45,
+   "twin at the cue": 0,
+   "uncovered, content unread": 12,
+   "unseen content changed": 6,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S2",
+   "seed": 116,
+   "read": 199,
+   "unread": 185,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 104,
+    "couplings apart": 104,
+    "states apart": 104,
+    "acts apart": 3
+   },
+   "output shift at the pairs": {
+    "mean": 0.03079517731658244,
+    "max": 0.35153069357219435
+   },
+   "covered": 140,
+   "changed": 3,
+   "uncovered, content read": 39,
+   "twin at the cue": 3,
+   "uncovered, content unread": 6,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S2",
+   "seed": 117,
+   "read": 187,
+   "unread": 197,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 92,
+    "couplings apart": 92,
+    "states apart": 92,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.028950388827231395,
+    "max": 0.28058636556800964
+   },
+   "covered": 146,
+   "changed": 0,
+   "uncovered, content read": 45,
+   "twin at the cue": 0,
+   "uncovered, content unread": 6,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S2",
+   "seed": 118,
+   "read": 174,
+   "unread": 210,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 108,
+    "couplings apart": 108,
+    "states apart": 108,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.02448681747195578,
+    "max": 0.21225826822312333
+   },
+   "covered": 147,
+   "changed": 6,
+   "uncovered, content read": 45,
+   "twin at the cue": 0,
+   "uncovered, content unread": 18,
+   "unseen content changed": 6,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S2",
+   "seed": 119,
+   "read": 191,
+   "unread": 193,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 91,
+    "couplings apart": 91,
+    "states apart": 91,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.03454449847349063,
+    "max": 0.29634393283792804
+   },
+   "covered": 151,
+   "changed": 6,
+   "uncovered, content read": 36,
+   "twin at the cue": 0,
+   "uncovered, content unread": 6,
+   "unseen content changed": 6,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S3",
+   "seed": 100,
+   "read": 241,
+   "unread": 143,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 143,
+    "couplings apart": 143,
+    "states apart": 143,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.014158602213545576,
+    "max": 0.12117733728272057
+   },
+   "covered": 65,
+   "changed": 0,
+   "uncovered, content read": 78,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S3",
+   "seed": 101,
+   "read": 234,
+   "unread": 150,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 150,
+    "couplings apart": 150,
+    "states apart": 150,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.03805807918450707,
+    "max": 0.2816266747663359
+   },
+   "covered": 60,
+   "changed": 0,
+   "uncovered, content read": 90,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S3",
+   "seed": 102,
+   "read": 238,
+   "unread": 146,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 146,
+    "couplings apart": 146,
+    "states apart": 146,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.02680836498188583,
+    "max": 0.18175616693384444
+   },
+   "covered": 59,
+   "changed": 0,
+   "uncovered, content read": 87,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S3",
+   "seed": 103,
+   "read": 242,
+   "unread": 142,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 142,
+    "couplings apart": 142,
+    "states apart": 142,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.023967060587553466,
+    "max": 0.219750246011311
+   },
+   "covered": 64,
+   "changed": 0,
+   "uncovered, content read": 78,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S3",
+   "seed": 104,
+   "read": 237,
+   "unread": 147,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 147,
+    "couplings apart": 147,
+    "states apart": 147,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.031117764590657557,
+    "max": 0.2547898501877651
+   },
+   "covered": 60,
+   "changed": 0,
+   "uncovered, content read": 87,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S3",
+   "seed": 105,
+   "read": 236,
+   "unread": 148,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 148,
+    "couplings apart": 148,
+    "states apart": 148,
+    "acts apart": 3
+   },
+   "output shift at the pairs": {
+    "mean": 0.01658093829688895,
+    "max": 0.2016164718266168
+   },
+   "covered": 52,
+   "changed": 3,
+   "uncovered, content read": 96,
+   "twin at the cue": 3,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S3",
+   "seed": 106,
+   "read": 243,
+   "unread": 141,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 141,
+    "couplings apart": 141,
+    "states apart": 141,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.042399396440499976,
+    "max": 0.37649993687219824
+   },
+   "covered": 69,
+   "changed": 0,
+   "uncovered, content read": 72,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S3",
+   "seed": 107,
+   "read": 232,
+   "unread": 152,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 152,
+    "couplings apart": 152,
+    "states apart": 152,
+    "acts apart": 3
+   },
+   "output shift at the pairs": {
+    "mean": 0.03426741519695079,
+    "max": 0.36726496706313133
+   },
+   "covered": 56,
+   "changed": 3,
+   "uncovered, content read": 96,
+   "twin at the cue": 3,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S3",
+   "seed": 108,
+   "read": 243,
+   "unread": 141,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 141,
+    "couplings apart": 141,
+    "states apart": 141,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.023862668503948865,
+    "max": 0.19530077315372762
+   },
+   "covered": 69,
+   "changed": 0,
+   "uncovered, content read": 72,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S3",
+   "seed": 109,
+   "read": 234,
+   "unread": 150,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 150,
+    "couplings apart": 150,
+    "states apart": 150,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.023345728746544257,
+    "max": 0.2560971134275296
+   },
+   "covered": 60,
+   "changed": 0,
+   "uncovered, content read": 90,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S3",
+   "seed": 110,
+   "read": 240,
+   "unread": 144,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 144,
+    "couplings apart": 144,
+    "states apart": 144,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.02377305872903604,
+    "max": 0.157975974492628
+   },
+   "covered": 60,
+   "changed": 0,
+   "uncovered, content read": 84,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S3",
+   "seed": 111,
+   "read": 240,
+   "unread": 144,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 144,
+    "couplings apart": 144,
+    "states apart": 144,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.021094444930180853,
+    "max": 0.16862974941290698
+   },
+   "covered": 63,
+   "changed": 0,
+   "uncovered, content read": 81,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S3",
+   "seed": 112,
+   "read": 238,
+   "unread": 146,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 146,
+    "couplings apart": 146,
+    "states apart": 146,
+    "acts apart": 3
+   },
+   "output shift at the pairs": {
+    "mean": 0.05190735084175019,
+    "max": 0.49796966175727136
+   },
+   "covered": 65,
+   "changed": 3,
+   "uncovered, content read": 81,
+   "twin at the cue": 3,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S3",
+   "seed": 113,
+   "read": 237,
+   "unread": 147,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 147,
+    "couplings apart": 147,
+    "states apart": 147,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.02620839201743666,
+    "max": 0.16462109772520006
+   },
+   "covered": 54,
+   "changed": 0,
+   "uncovered, content read": 93,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S3",
+   "seed": 114,
+   "read": 248,
+   "unread": 136,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 136,
+    "couplings apart": 136,
+    "states apart": 136,
+    "acts apart": 3
+   },
+   "output shift at the pairs": {
+    "mean": 0.027090500031216002,
+    "max": 0.511208464628985
+   },
+   "covered": 70,
+   "changed": 3,
+   "uncovered, content read": 66,
+   "twin at the cue": 3,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S3",
+   "seed": 115,
+   "read": 240,
+   "unread": 144,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 144,
+    "couplings apart": 144,
+    "states apart": 144,
+    "acts apart": 3
+   },
+   "output shift at the pairs": {
+    "mean": 0.05471966050793049,
+    "max": 0.41758887088415153
+   },
+   "covered": 60,
+   "changed": 3,
+   "uncovered, content read": 84,
+   "twin at the cue": 3,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S3",
+   "seed": 116,
+   "read": 235,
+   "unread": 149,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 149,
+    "couplings apart": 149,
+    "states apart": 149,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.021717747008457352,
+    "max": 0.27625067193699626
+   },
+   "covered": 59,
+   "changed": 0,
+   "uncovered, content read": 90,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S3",
+   "seed": 117,
+   "read": 244,
+   "unread": 140,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 140,
+    "couplings apart": 140,
+    "states apart": 140,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.019113754031708025,
+    "max": 0.13796476314624972
+   },
+   "covered": 59,
+   "changed": 0,
+   "uncovered, content read": 81,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S3",
+   "seed": 118,
+   "read": 240,
+   "unread": 144,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 144,
+    "couplings apart": 144,
+    "states apart": 144,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.015916608273619424,
+    "max": 0.0836817805069664
+   },
+   "covered": 63,
+   "changed": 0,
+   "uncovered, content read": 81,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  },
+  {
+   "arch": "content-and-cue",
+   "schedule": "S3",
+   "seed": 119,
+   "read": 235,
+   "unread": 149,
+   "fits the readings": true,
+   "read acts wrong": 0,
+   "links": {
+    "pairs": 149,
+    "couplings apart": 149,
+    "states apart": 149,
+    "acts apart": 0
+   },
+   "output shift at the pairs": {
+    "mean": 0.028567585905913313,
+    "max": 0.24642206051583054
+   },
+   "covered": 62,
+   "changed": 0,
+   "uncovered, content read": 87,
+   "twin at the cue": 0,
+   "uncovered, content unread": 0,
+   "unseen content changed": 0,
+   "forbidden": {
+    "F1": 0,
+    "F2": 0,
+    "F3": 0
+   },
+   "content act": "xor"
+  }
+ ]
+}
