@@ -1,0 +1,935 @@
+{
+ "support at": 15,
+ "contradiction at": 17,
+ "seeds": 20,
+ "runs": {
+  "A1": {
+   "condition": "A1",
+   "learner": "told",
+   "role": "verdict",
+   "seeds": 20,
+   "target": "['complyThenOwn']",
+   "d by seed": [
+    0.749906,
+    0.749928,
+    0.74993,
+    0.74991,
+    0.749898,
+    0.749905,
+    0.749897,
+    0.749912,
+    0.74993,
+    0.749922,
+    0.749897,
+    0.749919,
+    0.749918,
+    0.749929,
+    0.749899,
+    0.749916,
+    0.749902,
+    0.749919,
+    0.749926,
+    0.749924
+   ],
+   "toward the law": 20,
+   "against it": 0,
+   "neither": 0,
+   "final shares": {
+    "complyAtBoth": {
+     "mean": 1.3e-05,
+     "median": 1.3e-05,
+     "min": 8e-06,
+     "max": 1.9e-05
+    },
+    "complyThenOwn": {
+     "mean": 0.999914,
+     "median": 0.999917,
+     "min": 0.999897,
+     "max": 0.99993
+    },
+    "ownThenComply": {
+     "mean": 3.1e-05,
+     "median": 3.1e-05,
+     "min": 2.4e-05,
+     "max": 3.7e-05
+    },
+    "ownAtBoth": {
+     "mean": 4.1e-05,
+     "median": 4e-05,
+     "min": 3e-05,
+     "max": 5.3e-05
+    }
+   },
+   "mean distance from the reference end (total variation)": 5e-05,
+   "verdict": "supported"
+  },
+  "A2": {
+   "condition": "A2",
+   "learner": "told",
+   "role": "verdict",
+   "seeds": 20,
+   "target": "['ownAtBoth']",
+   "d by seed": [
+    0.749899,
+    0.749883,
+    0.749882,
+    0.74991,
+    0.749921,
+    0.749895,
+    0.749885,
+    0.749886,
+    0.749875,
+    0.749881,
+    0.749884,
+    0.749881,
+    0.749889,
+    0.749885,
+    0.749874,
+    0.749874,
+    0.749885,
+    0.749886,
+    0.749905,
+    0.749876
+   ],
+   "toward the law": 20,
+   "against it": 0,
+   "neither": 0,
+   "final shares": {
+    "complyAtBoth": {
+     "mean": 1e-05,
+     "median": 9e-06,
+     "min": 7e-06,
+     "max": 1.5e-05
+    },
+    "complyThenOwn": {
+     "mean": 6.2e-05,
+     "median": 6.5e-05,
+     "min": 3.8e-05,
+     "max": 7.3e-05
+    },
+    "ownThenComply": {
+     "mean": 4e-05,
+     "median": 4.1e-05,
+     "min": 3.1e-05,
+     "max": 4.7e-05
+    },
+    "ownAtBoth": {
+     "mean": 0.999888,
+     "median": 0.999885,
+     "min": 0.999874,
+     "max": 0.999921
+    }
+   },
+   "mean distance from the reference end (total variation)": 5.2e-05,
+   "verdict": "supported"
+  },
+  "A3": {
+   "condition": "A3",
+   "learner": "told",
+   "role": "verdict",
+   "seeds": 20,
+   "target": "['ownAtBoth', 'ownThenComply']",
+   "d by seed": [
+    0.499915,
+    0.49993,
+    0.499927,
+    0.499934,
+    0.499919,
+    0.499914,
+    0.499933,
+    0.499927,
+    0.499939,
+    0.499922,
+    0.499909,
+    0.4999,
+    0.499932,
+    0.499929,
+    0.499911,
+    0.499937,
+    0.499896,
+    0.499921,
+    0.499915,
+    0.499907
+   ],
+   "toward the law": 20,
+   "against it": 0,
+   "neither": 0,
+   "final shares": {
+    "complyAtBoth": {
+     "mean": 3.8e-05,
+     "median": 3.8e-05,
+     "min": 3e-05,
+     "max": 6.1e-05
+    },
+    "complyThenOwn": {
+     "mean": 4.1e-05,
+     "median": 4.1e-05,
+     "min": 3.1e-05,
+     "max": 5.5e-05
+    },
+    "ownThenComply": {
+     "mean": 0.336929,
+     "median": 0.103216,
+     "min": 0.008226,
+     "max": 0.976084
+    },
+    "ownAtBoth": {
+     "mean": 0.662992,
+     "median": 0.896696,
+     "min": 0.023848,
+     "max": 0.991708
+    }
+   },
+   "mean distance from the reference end (total variation)": 0.413522,
+   "how the tie settles": {
+    "ownAtBoth": 14,
+    "ownThenComply": 6
+   },
+   "verdict": "supported"
+  },
+  "A4": {
+   "condition": "A4",
+   "learner": "told",
+   "role": "verdict",
+   "seeds": 20,
+   "target": "['ownAtBoth']",
+   "d by seed": [
+    0.749942,
+    0.749925,
+    0.74995,
+    0.749904,
+    0.749942,
+    0.749948,
+    0.749926,
+    0.749944,
+    0.749943,
+    0.749932,
+    0.749923,
+    0.74994,
+    0.749949,
+    0.749937,
+    0.749929,
+    0.749947,
+    0.749941,
+    0.749942,
+    0.74993,
+    0.749935
+   ],
+   "toward the law": 20,
+   "against it": 0,
+   "neither": 0,
+   "final shares": {
+    "complyAtBoth": {
+     "mean": 1.3e-05,
+     "median": 1.2e-05,
+     "min": 9e-06,
+     "max": 2e-05
+    },
+    "complyThenOwn": {
+     "mean": 2.6e-05,
+     "median": 2.5e-05,
+     "min": 1.8e-05,
+     "max": 4.1e-05
+    },
+    "ownThenComply": {
+     "mean": 2.5e-05,
+     "median": 2.3e-05,
+     "min": 1.9e-05,
+     "max": 3.5e-05
+    },
+    "ownAtBoth": {
+     "mean": 0.999936,
+     "median": 0.999941,
+     "min": 0.999904,
+     "max": 0.99995
+    }
+   },
+   "mean distance from the reference end (total variation)": 5e-05,
+   "verdict": "supported"
+  },
+  "A5": {
+   "condition": "A5",
+   "learner": "told",
+   "role": "verdict",
+   "seeds": 20,
+   "target": "['complyThenOwn', 'ownAtBoth']",
+   "d by seed": [
+    0.499735,
+    0.499939,
+    0.49989,
+    0.4999,
+    0.499892,
+    0.499881,
+    0.499892,
+    0.499389,
+    0.499885,
+    0.499862,
+    0.499859,
+    0.499786,
+    0.499891,
+    0.499838,
+    0.499854,
+    0.499907,
+    0.499873,
+    0.499834,
+    0.499858,
+    0.499845
+   ],
+   "toward the law": 20,
+   "against it": 0,
+   "neither": 0,
+   "final shares": {
+    "complyAtBoth": {
+     "mean": 1.5e-05,
+     "median": 1.3e-05,
+     "min": 5e-06,
+     "max": 4.5e-05
+    },
+    "complyThenOwn": {
+     "mean": 0.460274,
+     "median": 0.13151,
+     "min": 0.001249,
+     "max": 0.99869
+    },
+    "ownThenComply": {
+     "mean": 0.000144,
+     "median": 0.000119,
+     "min": 5.7e-05,
+     "max": 0.000565
+    },
+    "ownAtBoth": {
+     "mean": 0.539566,
+     "median": 0.868112,
+     "min": 0.001249,
+     "max": 0.998609
+    }
+   },
+   "mean distance from the reference end (total variation)": 0.480742,
+   "how the tie settles": {
+    "complyThenOwn": 9,
+    "ownAtBoth": 11
+   },
+   "verdict": "supported"
+  },
+  "A6": {
+   "condition": "A6",
+   "learner": "told",
+   "role": "verdict",
+   "seeds": 20,
+   "target": "['complyThenOwn']",
+   "d by seed": [
+    0.749881,
+    0.749902,
+    0.749898,
+    0.749901,
+    0.74989,
+    0.749909,
+    0.749846,
+    0.749918,
+    0.749919,
+    0.749902,
+    0.749888,
+    0.749864,
+    0.74989,
+    0.749923,
+    0.749909,
+    0.749906,
+    0.749929,
+    0.749924,
+    0.749885,
+    0.74992
+   ],
+   "toward the law": 20,
+   "against it": 0,
+   "neither": 0,
+   "final shares": {
+    "complyAtBoth": {
+     "mean": 1.3e-05,
+     "median": 1.3e-05,
+     "min": 7e-06,
+     "max": 1.9e-05
+    },
+    "complyThenOwn": {
+     "mean": 0.9999,
+     "median": 0.999902,
+     "min": 0.999846,
+     "max": 0.999929
+    },
+    "ownThenComply": {
+     "mean": 2.4e-05,
+     "median": 2.4e-05,
+     "min": 1.8e-05,
+     "max": 3.3e-05
+    },
+    "ownAtBoth": {
+     "mean": 6.3e-05,
+     "median": 5.8e-05,
+     "min": 3.8e-05,
+     "max": 0.000102
+    }
+   },
+   "mean distance from the reference end (total variation)": 4.5e-05,
+   "verdict": "supported"
+  },
+  "A7": {
+   "condition": "A7",
+   "learner": "told",
+   "role": "verdict",
+   "seeds": 20,
+   "target": "['complyThenOwn']",
+   "d by seed": [
+    0.749834,
+    0.749837,
+    0.74983,
+    0.749737,
+    0.749787,
+    0.749861,
+    0.749723,
+    0.74981,
+    0.749767,
+    0.749865,
+    0.74977,
+    0.749827,
+    0.749724,
+    0.749785,
+    0.749869,
+    0.749802,
+    0.74979,
+    0.749789,
+    0.749795,
+    0.74984
+   ],
+   "toward the law": 20,
+   "against it": 0,
+   "neither": 0,
+   "final shares": {
+    "complyAtBoth": {
+     "mean": 1.3e-05,
+     "median": 1.2e-05,
+     "min": 9e-06,
+     "max": 2e-05
+    },
+    "complyThenOwn": {
+     "mean": 0.999802,
+     "median": 0.999799,
+     "min": 0.999723,
+     "max": 0.999869
+    },
+    "ownThenComply": {
+     "mean": 6.3e-05,
+     "median": 6.3e-05,
+     "min": 4.3e-05,
+     "max": 8.4e-05
+    },
+    "ownAtBoth": {
+     "mean": 0.000122,
+     "median": 0.00012,
+     "min": 7.4e-05,
+     "max": 0.000192
+    }
+   },
+   "mean distance from the reference end (total variation)": 5.8e-05,
+   "verdict": "supported"
+  },
+  "B1": {
+   "condition": "B1",
+   "learner": "chance",
+   "role": "verdict",
+   "seeds": 20,
+   "target": "0",
+   "d by seed": [
+    0.499919,
+    0.499869,
+    0.499933,
+    0.499938,
+    0.499917,
+    0.499907,
+    0.499908,
+    0.499857,
+    0.499911,
+    0.499885,
+    0.499894,
+    0.499886,
+    0.499916,
+    0.499887,
+    0.499883,
+    0.499899,
+    0.499885,
+    0.499919,
+    0.499917,
+    0.499923
+   ],
+   "toward the law": 20,
+   "against it": 0,
+   "neither": 0,
+   "final chance": {
+    "mean": 9.7e-05,
+    "median": 9.2e-05,
+    "min": 6.2e-05,
+    "max": 0.000143
+   },
+   "mean distance from the reference end": 1.8e-05,
+   "verdict": "supported"
+  },
+  "B2": {
+   "condition": "B2",
+   "learner": "chance",
+   "role": "verdict",
+   "seeds": 20,
+   "target": "7/20",
+   "d by seed": [
+    0.118372,
+    0.126948,
+    0.140524,
+    0.148137,
+    0.134112,
+    0.130358,
+    0.128623,
+    0.138282,
+    0.113319,
+    0.125434,
+    0.132922,
+    0.096988,
+    0.115758,
+    0.13527,
+    0.121355,
+    0.123314,
+    0.135973,
+    0.139029,
+    0.097935,
+    0.135856
+   ],
+   "toward the law": 20,
+   "against it": 0,
+   "neither": 0,
+   "final chance": {
+    "mean": 0.352153,
+    "median": 0.346193,
+    "min": 0.313319,
+    "max": 0.403012
+   },
+   "mean distance from the reference end": 0.023075,
+   "seeds ending nearer the best chance than 0, within the improving chances (7/40, 7/10)": 20,
+   "verdict": "supported"
+  },
+  "B3": {
+   "condition": "B3",
+   "learner": "chance",
+   "role": "verdict",
+   "seeds": 20,
+   "target": "7/20",
+   "d by seed": [
+    0.540311,
+    0.542008,
+    0.542433,
+    0.549678,
+    0.54059,
+    0.53797,
+    0.546104,
+    0.549897,
+    0.517847,
+    0.530828,
+    0.541751,
+    0.540567,
+    0.54524,
+    0.514016,
+    0.504992,
+    0.546049,
+    0.527313,
+    0.549667,
+    0.499366,
+    0.541694
+   ],
+   "toward the law": 20,
+   "against it": 0,
+   "neither": 0,
+   "final chance": {
+    "mean": 0.353008,
+    "median": 0.352137,
+    "min": 0.314016,
+    "max": 0.400634
+   },
+   "mean distance from the reference end": 0.014584,
+   "seeds ending nearer the best chance than 0, within the improving chances (7/40, 7/10)": 20,
+   "verdict": "supported"
+  },
+  "B4": {
+   "condition": "B4",
+   "learner": "mixture",
+   "role": "verdict",
+   "seeds": 20,
+   "target": "0",
+   "d by seed": [
+    0.499843,
+    0.499845,
+    0.499823,
+    0.499834,
+    0.499831,
+    0.499839,
+    0.499855,
+    0.49983,
+    0.499843,
+    0.499821,
+    0.499846,
+    0.499838,
+    0.499857,
+    0.499839,
+    0.499874,
+    0.499844,
+    0.499819,
+    0.499811,
+    0.499832,
+    0.499861
+   ],
+   "toward the law": 20,
+   "against it": 0,
+   "neither": 0,
+   "final weight": {
+    "mean": 0.000161,
+    "median": 0.000161,
+    "min": 0.000126,
+    "max": 0.000189
+   },
+   "mean distance from the reference end": 3.9e-05,
+   "verdict": "supported"
+  },
+  "A3 leaning to ownThenComply": {
+   "condition": "A3",
+   "learner": "told",
+   "role": "reported",
+   "seeds": 20,
+   "target": "['ownAtBoth', 'ownThenComply']",
+   "d by seed": [
+    0.349671,
+    0.349679,
+    0.349695,
+    0.34969,
+    0.349701,
+    0.349685,
+    0.349688,
+    0.349702,
+    0.349679,
+    0.349678,
+    0.349696,
+    0.349685,
+    0.349695,
+    0.349691,
+    0.349694,
+    0.349682,
+    0.349678,
+    0.349697,
+    0.349683,
+    0.34968
+   ],
+   "toward the law": 20,
+   "against it": 0,
+   "neither": 0,
+   "final shares": {
+    "complyAtBoth": {
+     "mean": 3.3e-05,
+     "median": 3.4e-05,
+     "min": 2.4e-05,
+     "max": 4.4e-05
+    },
+    "complyThenOwn": {
+     "mean": 3.4e-05,
+     "median": 3.4e-05,
+     "min": 2.4e-05,
+     "max": 4.3e-05
+    },
+    "ownThenComply": {
+     "mean": 0.998423,
+     "median": 0.998437,
+     "min": 0.997858,
+     "max": 0.998878
+    },
+    "ownAtBoth": {
+     "mean": 0.001509,
+     "median": 0.001495,
+     "min": 0.001068,
+     "max": 0.002058
+    }
+   },
+   "mean distance from the reference end (total variation)": 0.000216,
+   "how the tie settles": {
+    "ownAtBoth": 0,
+    "ownThenComply": 20
+   }
+  },
+  "A3 leaning to ownAtBoth": {
+   "condition": "A3",
+   "learner": "told",
+   "role": "reported",
+   "seeds": 20,
+   "target": "['ownAtBoth', 'ownThenComply']",
+   "d by seed": [
+    0.349683,
+    0.349695,
+    0.349689,
+    0.349692,
+    0.349699,
+    0.349689,
+    0.349699,
+    0.349682,
+    0.349689,
+    0.349689,
+    0.349669,
+    0.349698,
+    0.349697,
+    0.349687,
+    0.349685,
+    0.349682,
+    0.349698,
+    0.349683,
+    0.349686,
+    0.34969
+   ],
+   "toward the law": 20,
+   "against it": 0,
+   "neither": 0,
+   "final shares": {
+    "complyAtBoth": {
+     "mean": 3.3e-05,
+     "median": 3.3e-05,
+     "min": 2.6e-05,
+     "max": 4e-05
+    },
+    "complyThenOwn": {
+     "mean": 3.3e-05,
+     "median": 3.3e-05,
+     "min": 2.3e-05,
+     "max": 4.7e-05
+    },
+    "ownThenComply": {
+     "mean": 0.001453,
+     "median": 0.001391,
+     "min": 0.001146,
+     "max": 0.001877
+    },
+    "ownAtBoth": {
+     "mean": 0.998481,
+     "median": 0.998553,
+     "min": 0.998037,
+     "max": 0.998797
+    }
+   },
+   "mean distance from the reference end (total variation)": 0.000198,
+   "how the tie settles": {
+    "ownAtBoth": 20,
+    "ownThenComply": 0
+   }
+  },
+  "A5 leaning to complyThenOwn": {
+   "condition": "A5",
+   "learner": "told",
+   "role": "reported",
+   "seeds": 20,
+   "target": "['complyThenOwn', 'ownAtBoth']",
+   "d by seed": [
+    0.34963,
+    0.349612,
+    0.349525,
+    0.349602,
+    0.349574,
+    0.349537,
+    0.349575,
+    0.34963,
+    0.349674,
+    0.349542,
+    0.349646,
+    0.349446,
+    0.349483,
+    0.349557,
+    0.349573,
+    0.349435,
+    0.349624,
+    0.349617,
+    0.349593,
+    0.34958
+   ],
+   "toward the law": 20,
+   "against it": 0,
+   "neither": 0,
+   "final shares": {
+    "complyAtBoth": {
+     "mean": 1.9e-05,
+     "median": 1.7e-05,
+     "min": 9e-06,
+     "max": 4.2e-05
+    },
+    "complyThenOwn": {
+     "mean": 0.946227,
+     "median": 0.997553,
+     "min": 0.007343,
+     "max": 0.999538
+    },
+    "ownThenComply": {
+     "mean": 0.000163,
+     "median": 0.000158,
+     "min": 6.9e-05,
+     "max": 0.00029
+    },
+    "ownAtBoth": {
+     "mean": 0.05359,
+     "median": 0.00225,
+     "min": 0.000337,
+     "max": 0.992548
+    }
+   },
+   "mean distance from the reference end (total variation)": 0.052497,
+   "how the tie settles": {
+    "complyThenOwn": 19,
+    "ownAtBoth": 1
+   }
+  },
+  "A5 leaning to ownAtBoth": {
+   "condition": "A5",
+   "learner": "told",
+   "role": "reported",
+   "seeds": 20,
+   "target": "['complyThenOwn', 'ownAtBoth']",
+   "d by seed": [
+    0.349613,
+    0.349554,
+    0.349613,
+    0.349544,
+    0.349559,
+    0.349627,
+    0.349558,
+    0.34956,
+    0.349598,
+    0.349566,
+    0.349562,
+    0.349496,
+    0.349652,
+    0.349655,
+    0.349495,
+    0.349585,
+    0.349583,
+    0.349599,
+    0.349547,
+    0.349516
+   ],
+   "toward the law": 20,
+   "against it": 0,
+   "neither": 0,
+   "final shares": {
+    "complyAtBoth": {
+     "mean": 1.9e-05,
+     "median": 2.1e-05,
+     "min": 7e-06,
+     "max": 2.9e-05
+    },
+    "complyThenOwn": {
+     "mean": 0.054227,
+     "median": 0.002067,
+     "min": 0.000291,
+     "max": 0.997156
+    },
+    "ownThenComply": {
+     "mean": 0.000162,
+     "median": 0.00017,
+     "min": 9.2e-05,
+     "max": 0.000238
+    },
+    "ownAtBoth": {
+     "mean": 0.945592,
+     "median": 0.997732,
+     "min": 0.002744,
+     "max": 0.999581
+    }
+   },
+   "mean distance from the reference end (total variation)": 0.053003,
+   "how the tie settles": {
+    "complyThenOwn": 1,
+    "ownAtBoth": 19
+   }
+  },
+  "B2's prospects from 1/20": {
+   "condition": "B2",
+   "learner": "chance",
+   "role": "reported",
+   "seeds": 20,
+   "target": "7/20",
+   "d by seed": [
+    0.280136,
+    0.27626,
+    0.295851,
+    0.268341,
+    0.259174,
+    0.293677,
+    0.277728,
+    0.219916,
+    0.292169,
+    0.295239,
+    0.293674,
+    0.245655,
+    0.29249,
+    0.26695,
+    0.297306,
+    0.294117,
+    0.281522,
+    0.287864,
+    0.272992,
+    0.278864
+   ],
+   "toward the law": 20,
+   "against it": 0,
+   "neither": 0,
+   "final chance": {
+    "mean": 0.345957,
+    "median": 0.348184,
+    "min": 0.295655,
+    "max": 0.430084
+   },
+   "mean distance from the reference end": 0.021504,
+   "seeds ending nearer the best chance than 0, within the improving chances (7/40, 7/10)": 20
+  },
+  "the witness from 1/2": {
+   "condition": "witness",
+   "learner": "chance",
+   "role": "reported",
+   "seeds": 20,
+   "target": "1/8",
+   "d by seed": [
+    0.35077,
+    0.351347,
+    0.37188,
+    0.347284,
+    0.354072,
+    0.358487,
+    0.362098,
+    0.371691,
+    0.351283,
+    0.361851,
+    0.35621,
+    0.373869,
+    0.347862,
+    0.356282,
+    0.374507,
+    0.365309,
+    0.369309,
+    0.360305,
+    0.357039,
+    0.373896
+   ],
+   "toward the law": 20,
+   "against it": 0,
+   "neither": 0,
+   "final chance": {
+    "mean": 0.125652,
+    "median": 0.123687,
+    "min": 0.097284,
+    "max": 0.152138
+   },
+   "mean distance from the reference end": 0.014232,
+   "seeds ending nearer the best chance than 0, within the improving chances (1/16, 1/4)": 20
+  }
+ },
+ "reading": "supported",
+ "frozen": {
+  "link": "FROZEN.sha256",
+  "link commit": "6ac05b1fdfac5038ccc09a77a8e1633ca21efbc8",
+  "head": "5dc50f8a088602d9ba83df2af5869f6a4a564cb8"
+ }
+}
