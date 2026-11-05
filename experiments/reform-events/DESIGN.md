@@ -1,6 +1,6 @@
 # T7F: T7's field test of reform events (design)
 
-**Held 5 November 2026, not frozen.** After eleven reader rounds the design does not close as designed; [HOLD.md](HOLD.md) says why and what remains possible. Where the text below says *frozen*, read *designed to be frozen*.
+**Held 5 November 2026, not frozen.** After eleven reader rounds the design could not be frozen as designed; [HOLD.md](HOLD.md) says why and what remains possible. Where the text below says *frozen*, read *designed to be frozen*.
 
 *Board item T7F, 5 November 2026. AI-written (a Claude Code session), not yet reviewed by a person. Frozen before any record or value of the data is read; no download, no model call. The run is Ren's: the downloads, the coding and its money and time wait for his yes (§12). About 190 to 250 minutes to read, at 100 to 130 words a minute; the part before §1 takes 9 to 12.*
 

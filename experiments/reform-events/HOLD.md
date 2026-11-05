@@ -12,24 +12,25 @@ Readers who did not write it read it in eleven rounds, all recorded in [REVIEW-F
 - a hold after the sixth, which still found a high finding, and a simplification of where the faults came from (the packets the coders read, and absence coding);
 - five fresh rounds by a new reader.
 
-Every round found at least one finding of medium severity or higher. Each fix added rules, and the dry run grew from 59 checks to 234. By the coordinator's rule the rounds stop here, and the design is not frozen.
+Every round found at least one finding of medium severity or higher. Apart from the hold's simplification, each fix added rules, and the dry run grew from 59 checks to 234. By the coordinator's rule the rounds stop here. Fresh round 5's fixes were not read by a reader, and the design is not frozen.
 
 ## Why it does not close as designed
 
-1. **Absence.** T7's *Refuted by* needs a coding fixed in advance that finds no new reader outside the ranked share, no change in what the ranking reads and no loss entering the selectors' share. Those are findings of absence. A coder can report what the documents read show, but not what the record lacks. Every rule that kept "not shown in what was read" apart from "not in the record" needed further rules for what the coders read, and each round found faults in them.
-2. **Drift.** The *Refuted by*'s drift condition needs the selectors' number and their share's distance from the critical mass, read by the drawn model's premises: one member drawn at a time, constant readings and cost. Institutions' records, as they are kept, do not give these. Every reading of them the design tried, from voting thresholds and turnover, was a construction a reader could fault. This is a finding: **the drift condition cannot be read on institutions' records as they are kept.**
-3. **Controls.** A refutation counts only where the positive controls show their known exits. Making that check bite needed the same absence findings.
+1. **Absence.** T7's *Refuted by* needs a coding fixed in advance that finds no new reader outside the ranked share, no change in what the ranking reads and no loss entering the selectors' share. Those are findings of absence. A coder can report what the documents read show, but not what the record lacks. The rules for coding absence, and for what the coders read, needed further rules at every round, and each round found faults in them.
+2. **Drift.** The *Refuted by*'s drift condition needs the selectors' number and their share's distance from the critical mass, read by the drawn model's premises: one member drawn at a time, constant readings and cost. No reading of it was made on any record, since nothing was downloaded. The readings this design tried, from voting thresholds and from turnover, were faulted by its readers. The last one needs a body's every replacement over ten years, listed by the kind of who entered and who left, which few public records are expected to hold (from memory, not checked); in simulation it seldom reads "rare" even where the lock holds. So the drift condition was out of reach of this attempt. That holds so far, from 5 November 2026, and lapses when a reading of the condition on a kept record passes a reader round.
+3. **Controls.** A refutation counts only where the positive controls show their known exits, and that check needs the same absence findings.
 
 ## What remains possible
 
 A smaller test, which anyone may claim; it is not started:
 
 - one frame;
-- whole records only, with no packets to assemble;
-- three codes: kept, dropped by its selectors, and reformed in its reading alone;
+- whole records only, with no packets to assemble; a case whose record is too large to show whole is left out of the test by a rule fixed before any record is read (a larger cap is Ren's to give);
+- three codes: kept, dropped by its selectors, and reformed in its reading alone, with the exits (a new reader, a new reading, a loss entering the share) still coded on the whole record after a reform;
+- the two positive controls kept, each having to show its known exit;
 - no drift reading.
 
-It would test T7's first and third forbidden cases under a stated limit: the *Refuted by*'s drift condition is out of reach in the field, and the test says so rather than reading it. That is a "not yet" for the field test, not a ban.
+It could meet T7's third forbidden case. On the first it could report drops by the selectors with no exit found, but without the drift reading it cannot tell them from drift alone, so it cannot meet the *Refuted by* and cannot refute T7. So it is a "not yet", not a ban: a field test of the third case now, and of the *Refuted by* once a reading of its drift condition on a kept record passes a reader round.
 
 ## The record
 

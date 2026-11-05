@@ -342,4 +342,8 @@ Run twice, `results/dry-run.json` was byte-identical, and its code hashes match 
 
 Run twice, `results/dry-run.json` was byte-identical, and its code hashes match the files. Under this machine's load (load averages 12 to 18) a run took about a minute. Nothing was downloaded, no model was called, and `write_frozen.py` was not run.
 
-**What keeps the rounds going.** This round had two medium findings, so round fresh 6 reads this round's diff.
+**What keeps the rounds going.** This round had two medium findings, and no fresh round 6 follows: see *Where the rounds stop* below.
+
+## Where the rounds stop
+
+The rounds stop at fresh round 5, by the coordinator's rule (5 November 2026): five fresh rounds after the hold still found findings of medium severity, each from the rules the fixes added. Fresh round 5's fixes were not read by a reader. The design is held, not frozen; [HOLD.md](HOLD.md) says why and what remains possible. No round follows.
