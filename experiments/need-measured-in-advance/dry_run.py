@@ -256,10 +256,10 @@ def kind(v):
     if v.startswith(t1n.SEPARATED):
         m = re.search(r"(\d+) of them with every year of the lag surveyed", v)
         return DID_V2 if m and int(m.group(1)) else DID
+    if v.startswith(t1n.STRONGEST):
+        return "refuted"                       # the strongest form: the residual clause alone (DESIGN.md, §7)
     if v.startswith("refuted unless"):
         return "refuted unless"
-    if v.startswith("refuted"):
-        return "refuted"
     return "not decided"
 
 
@@ -298,7 +298,7 @@ def worlds(chk):
                     f"{NO_NEED_POSITIVE_MAX} of {ARCHIVES}", did <= NO_NEED_POSITIVE_MAX, tallies)
             if world in ("open", "unrecorded", "unsurveyed", "static labels", "estimates widen",
                          "estimates inflate at low density", "intervals understate the error", "inflated and understated"):
-                chk("worlds: confounds", f"{world} at speed {speed}: no plain refutation of T1 where it holds",
+                chk("worlds: confounds", f"{world} at speed {speed}: no refutation in its strongest form where T1 holds",
                     tallies.get("refuted", 0) <= NO_NEED_POSITIVE_MAX, tallies)
     t = out["need"]["speed 0.0"]["V1"]           # the draft's bar, set before any of these results; 0.03 reported (§8)
     chk("worlds: power", f"need with no managers: T1's forbidden case found not to occur in at least 30 of {ARCHIVES}",
@@ -306,8 +306,8 @@ def worlds(chk):
     for world, speeds in (("renewal below the floor", (0.1, 0.03, 0.0)), ("weak depensation", (0.0,))):
         for speed in speeds:
             t = out[world][f"speed {speed}"]["V1"]
-            chk("worlds: power", f"{world} at speed {speed}: refuted, in some form, more often than the forbidden case "
-                "found not to occur", t.get("refuted", 0) + t.get("refuted unless", 0) > t.get(DID, 0) + t.get(DID_V2, 0), t)
+            chk("worlds: power", f"{world} at speed {speed}: refuted, in some form, more often than the positive outcome",
+                t.get("refuted", 0) + t.get("refuted unless", 0) > t.get(DID, 0) + t.get(DID_V2, 0), t)
     chk("worlds: the renewal report", f"need falls far at speed 0.0: renewal below the need beyond the fit in at least 30 of {ARCHIVES}",
         out["need falls far"]["speed 0.0"]["renewal below the need beyond the fit at 0.05 (reported)"] >= 30,
         out["need falls far"]["speed 0.0"])
@@ -325,7 +325,7 @@ def worlds(chk):
             big[f"speed {speed}"] = tallies
         out[f"{world}, {BIG} lakes an archive"] = big
         if world == "weak depensation":
-            chk("worlds: power", f"weak depensation at {BIG} lakes: a plain refutation reached",
+            chk("worlds: power", f"weak depensation at {BIG} lakes: a refutation in its strongest form reached",
                 sum(t.get("refuted", 0) for t in big.values()) > 0, big)
     return out
 
@@ -467,7 +467,7 @@ def scripted(chk):
     v = t1n.read([lk(29, 0.3, 3.0, age0={2010: 0.0, 2012: 0.0})], y, last=2014)["V2"]
     chk("rules: V2", "a return with a year of the lag unread: in V1, not met", not v["met"], v)
     for name, closed, other, want in (
-            ("refuted plainly where the persisting lakes are closed and R5b was read", True, True, "refuted:"),
+            ("refuted, the residual alone, where the persisting lakes are closed and R5b was read", True, True, t1n.STRONGEST),
             ("unless connected waters where they are not recorded closed", False, True, "refuted unless connected waters"),
             ("unless unrecorded stocking where R5b was not read", True, False, "refuted unless unrecorded stocking")):
         lakes = [lk(200 + i, 0.5, 2.0, closed=closed, other=other) for i in range(12)] + above

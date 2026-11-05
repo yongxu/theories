@@ -93,4 +93,4 @@
 
 ## Round 4: the same reader on round 3's fixes
 
-Reading.
+Reading 4f45e647e. Added while it read, at the coordinator's request, as a high by the coordinator's own rule: the combined distortion, a T1-true world, was refuted with no named confound at 900 lakes, about the field's size, in 32 of 40 archives, and no reading these records allow separates it. A plain "refuted" would then be a false sentence there. So every refutation now carries the residual clause "unless the estimates distorted at low density beyond what the doubled intervals cover (§13)". No plain *refuted* comes from this archive, and its strongest refutation carries that clause alone (§1, §7, §11, §13; `t1n.RESIDUAL`, `t1n.STRONGEST`). The dry run's counts are unchanged: what it counted as a plain refutation is now that strongest form. The limit lapses with each estimate's mark-and-recapture counts, or the agency's precision by lake and year, where they show the distortion absent.

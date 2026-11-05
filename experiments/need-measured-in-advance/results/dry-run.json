@@ -2693,12 +2693,12 @@
   "worlds: the renewal report": 3
  },
  "failed": [],
- "CPU seconds": 740.8,
+ "CPU seconds": 361.7,
  "code hashes": {
-  "experiments/need-measured-in-advance/t1n.py": "30ab4d3087aba575a4e5b085e3a8b6713a7690c7d486be481111050c7d588fbd",
+  "experiments/need-measured-in-advance/t1n.py": "f27adfac7a2e0b3e6a390bc50032f7ba48b1a2a5ae8c801636344e69a76c4a87",
   "experiments/need-measured-in-advance/reader.py": "5fb80d956fa87a5ef2a7b1e940bb2dde36b2066fe468f445813d166759b9e0af",
   "experiments/need-measured-in-advance/run.py": "c5dd48536f9c7df2bf34cf566fc7dd6be0d40bda62ff52d938003c92c41429f0",
-  "experiments/need-measured-in-advance/dry_run.py": "d11e1b399d57f0f7711bbad42900ba68e3c7a5dc3f525148e92041d6c3bfc098",
+  "experiments/need-measured-in-advance/dry_run.py": "e6e10105b6cc3bb4d573bf6159786bc0f6c955e5843fffd58c198c7337a0587c",
   "experiments/need-measured-in-advance/layout.json": "5cf8f04439f12c3493b2be6abcd75853a37c85ddb092f5abb0ec45e7077f7e7f"
  },
  "code unchanged during the run": true

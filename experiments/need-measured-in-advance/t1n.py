@@ -43,6 +43,8 @@ KEPT = 0.25                   # persisted: the later estimate's ratio to the ref
 LABELS_SHARE = 0.05           # labels read per year where at least this share of lakes change category across surveys
 SEPARATED = "Refuted by's second form not met: the fates separated across the need"   # V1's positive outcome (§7)
 LOW_LEVEL, WIDEN = 2.0, 2.0   # the reading a refutation is checked against: intervals below LOW_LEVEL WIDEN as wide
+RESIDUAL = "the estimates distorted at low density beyond what the doubled intervals cover (DESIGN.md, section 13)"
+STRONGEST = "refuted unless " + RESIDUAL   # every refutation carries it: no reading these records allow rules it out
 SIDE_MIN = 20                 # the need must have at least this many of the fit's lake-years on each side
 
 
@@ -439,7 +441,10 @@ def v1(table, v2_=None, widened=None):
     records were not read for a lake that persisted), and the unsurveyed (counted as fallen, the lakes below
     the need with no later estimate undo the refutation); and the intervals understating the error at low
     density (`widened`, the same reading with every interval below LOW_LEVEL adults per acre WIDEN as wide on
-    the log scale, does not refute)."""
+    the log scale, does not refute). Every refutation also carries RESIDUAL: estimates both inflated and too
+    narrow at low density refute T1's own world at the field's size, and no reading these records allow rules that
+    out, so the strongest refutation the archive can give is STRONGEST, with no named confound (DESIGN.md,
+    section 13)."""
     inn = [r for r in table if "out" not in r]
     below = [r for r in inn if r["T1 predicts"] == "falls" and r["fate"] != "unresolved"]
     above = [r for r in inn if r["T1 predicts"] == "persists" and r["fate"] != "unresolved"]
@@ -485,8 +490,9 @@ def v1(table, v2_=None, widened=None):
             out["with the intervals widened at low density"] = wide
             if not wide.startswith("refuted"):
                 unless.append("the intervals understating the error at low density")
-        if unless:
-            verdict = "refuted unless " + " or ".join(unless) + ": " + verdict.split(": ", 1)[1]
+        reason = verdict.split(": ", 1)[1]
+        verdict = (f"{STRONGEST}: {reason}" if not unless else
+                   "refuted unless " + " or ".join(unless) + ", or " + RESIDUAL + ": " + reason)
     out["verdict"] = verdict
     return out
 
