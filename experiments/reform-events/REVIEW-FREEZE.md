@@ -346,4 +346,4 @@ Run twice, `results/dry-run.json` was byte-identical, and its code hashes match 
 
 ## Where the rounds stop
 
-The rounds stop at fresh round 5, by the coordinator's rule (5 November 2026): every one of the five fresh rounds after the hold found at least one finding of medium severity or higher, most of them in rules the fixes had added. Fresh round 5's fixes were not read by a reader. The design is held, not frozen; [HOLD.md](HOLD.md) says why and what remains possible. No round follows.
+The rounds stop at fresh round 5, by the coordinator's rule (5 November 2026): every one of the five fresh rounds after the hold found at least one finding of medium severity or higher, most of those findings in rules the fixes had added. Fresh round 5's fixes were not read by a reader. The design is held, not frozen; [HOLD.md](HOLD.md) says why and what remains possible. No round follows.

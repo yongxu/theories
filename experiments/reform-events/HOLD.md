@@ -30,10 +30,10 @@ A smaller test, which anyone may claim; it is not started:
 - the two positive controls kept, each having to show its known exit;
 - no drift reading.
 
-Its third case and its controls still rest on absence findings, as reason 1 says. Whole records are what would make those findings "not in the record" rather than "not shown in what was read". But the first round (T7F-R1-1) found realistic records too large to fit whole under the present cap, so whether any case fits is open until there is a cap and a count.
+Its third case and its controls still rest on absence findings, as reason 1 says. Whole records are what would make those findings "not in the record" rather than "not shown in what was read". But the first round (T7F-R1-1) found realistic records too large to fit whole under the present cap, so whether any case fits is open until the smaller test's cap is fixed and its records are counted.
 
 Where its records fit whole, it could meet T7's third forbidden case; meeting it would count against that case, as LA2 counts against the fourth. On the first case it could report drops by the selectors with no exit found, but without the drift reading it cannot tell them from drift alone, so it cannot meet the *Refuted by*. So it is a "not yet", not a ban: a field test of the third case where records fit whole, and of the *Refuted by* once a reading of its drift condition on a kept record passes a reader round.
 
 ## The record
 
-This folder keeps the design, the codebook, the code, the dry run's result and every reader round as the attempt's record. The readers' reports on the homes are in the atlas kit's [refuters/readers](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aa-attractor-atlas/refuters/readers/). The branch the rounds were made on is kept at `refs/salvage/aa7-refuters-2026-11-05`, with CMT's commits on top; T7F's last is `c789d3fb9`.
+This folder keeps the design, the codebook, the code, the dry run's result and every reader round as the attempt's record. The readers' reports on the homes are in the atlas kit's [refuters/readers](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aa-attractor-atlas/refuters/readers/). The branch the rounds were made on is kept at `refs/salvage/aa7-refuters-2026-11-05`, a branch shared with CMT and SCL: its tip is a CMT commit, and T7F's last is `c789d3fb9`.
