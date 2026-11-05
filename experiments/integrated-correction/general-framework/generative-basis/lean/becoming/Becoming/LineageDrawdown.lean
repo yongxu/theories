@@ -1,57 +1,67 @@
 import Becoming.LineageRegimes
 
 /-!
-# A lineage drawn below its need (EL7 (c), scratch)
+# A lineage drawn below its need: the lineage reading without its gate
 
-Scratch module of the EL7 investigation (c), AI-written. Not landed; nothing here is claimed until a
-reader has checked it.
+`Becoming.LineageRegimes` reads renewal gated on what it renews, run past what it gives, on a
+lineage (`LineageRegimes.degeneration_of_family_excess`), and `Becoming.MapInstances` reads it on
+the map (`Web.family_excess_gone`, `Web.family_excess_degenerates`). Their proofs use
+`Flow.family_excess_ends` only at the step the excess reaches, where neither the coupled gate nor
+the premise that only active formations give (`Acting`) is used. This module states those laws
+without the two premises and shows each landed statement to be a case. Every law here composes
+landed lemmas with premises dropped: a restatement, not a further result.
 
-* **The ledger.** Under balance, a family's stock after `n` steps, with everything taken from it
-  across them, is its stock before, with everything given to it (`stock_ledger`). So the stock is
-  below a need `m` after the `n` steps exactly where the stock before, with everything given, is
-  below `m` with everything taken (`below_iff`): the exact condition, in the draws.
-* **One decider through conditions.** Where activity needs support, a line from an active
-  occurrence ends on every branch at the kind grain where everything it reaches at one step `N` not
-  before it requires, at a need of at least `m`, a member of a family whose stock at `N` is below
-  `m` (`degeneration_of_unmet`); no flow premise enters. Read through the ledger
-  (`degeneration_of_drawdown`), and through `n` steps of excess (`degeneration_of_excess`), which is
-  the landed `LineageRegimes.degeneration_of_family_excess` without its gate and without `Acting`:
-  those two premises are idle in the landed proof (it uses `Flow.family_excess_ends` at `k = 0`,
-  where the gate and the givers' support are not used) (`landed_of_excess`).
+* **The ledger (restatements).** Under balance, a family's stock at `T + n` is below a need `m`
+  exactly where its stock at `T`, with everything given to it across the `n` steps, is below `m`
+  with everything taken from it (`below_iff`, read from `Flow.Balances.accumulates`, the landed
+  `balance_over_stretch` at the stock); `n` steps of excess of the family's uptake over its
+  replenishment from a stock below `n + m` leave it below `m` (`below_of_excess`,
+  `Flow.family_excess_bounded` read at the need).
+* **One decider through conditions.** Where activity needs support, the line from an active
+  occurrence at a step not after `N` ends on every branch at the kind grain where everything it
+  reaches at `N` requires, at a need of at least `m`, a member of a family whose stock at `N` is
+  below `m` (`degeneration_of_unmet`, composing `Flow.family_ends_below_at` with
+  `Web.kind_every_branch_ends_of_gone`); no flow premise enters. Read through the ledger
+  (`degeneration_of_drawdown`), and through `n` steps of excess from a stock below `n + m`
+  (`degeneration_of_excess`): the landed gated reading with its gate and `Acting` dropped. The landed
+  statement is its case (`landed_of_excess`), its type that of
+  `LineageRegimes.degeneration_of_family_excess` (`landed_of_excess_eq`, by `rfl`); where the census
+  holds every continuation, every member of generation `N` so depending suffices
+  (`degeneration_of_unmet_listed`).
 * **The map's horizon law, likewise.** `Web.family_excess_gone` and `Web.family_excess_degenerates`
-  (`Becoming.MapInstances`) hold without their gate and `Acting` (`gone_of_excess`,
-  `horizon_of_excess`) and are their cases (`landed_gone`, `landed_horizon`): the gate of
-  `Flow.family_excess_ends` is used only for the steps after the one the excess reaches, and a line
-  at a class within activity cannot pass a step at which nothing it reaches is active.
-* **What it forbids, on the census.** In generations of descent, where only active formations give
+  hold without their gate and `Acting` (`gone_of_excess`, `horizon_of_excess`) and are their cases
+  (`landed_gone`, `landed_horizon`; `landed_gone_eq`, `landed_horizon_eq`, by `rfl`).
+* **On the census (near-definitional).** In generations of descent, where only active formations give
   and activity needs support, a generation every member of which requires, at a need of at least
-  `m`, a member of a family whose stock at its step is below `m` has an empty next generation
-  (`next_empty_of_unmet`); every later generation is empty and the selection term proper is zero
-  from that step on (`ends_of_unmet`, through the ledger `ends_of_drawdown`). So no course has a
-  positive selection term at the step where its draws have passed its stock less the need
-  (`no_term_of_drawdown`).
-* **Selection on a draw past the renewal (`Drain`).** One law, three courses from one first
-  generation and one pool, each with the renewer gated on the pool or giving from outside (`gate`).
-  With selection on the draw (`courseS`: each drawer leaves as many offspring as it draws),
-  concordance of offspring number with the draw is positive at every step but the last nonempty
-  one, the drawers' share and the mean draw rise, the uptake meets the renewal at the first step and
-  runs past it after, and the lineage degenerates, the restrained line with it: every active
-  organism's line up to the step the ledger is met (`every_active_degenerates_S`). Without selection
-  (`courseN`: every member leaves one), the same draws keep the pool at eight and the lineage
-  generates, drawers included. With selection at the first step only and no growth (`courseP`: the
-  restrained member leaves none, the drawer two, which then relay), eight steps of excess from a
-  stock of eight meet the landed gated regime with a nonempty generation at its horizon
-  (`landed_met`), and with renewal from outside, every premise but the gate, the line ends the same
-  (`outside_ends`). The gate decides the renewal's fate, not the lineage's: with it and selection
-  the renewer's line degenerates too (`renewer_degenerates_S`); without the gate it goes on in every
-  course (`renewer_goes_on_outside`), and without selection with the gate (`renewer_goes_on_N`).
+  `m`, a member of a family whose stock at its step is below `m` has an empty next generation, every
+  later generation is empty and the selection term proper is zero from that step on
+  (`next_empty_of_unmet`, `ends_of_unmet`; through the ledger `ends_of_drawdown`,
+  `no_term_of_drawdown`). These follow from activity needing support, only active formations giving
+  and descent.
+* **What the gate does.** It makes the formations' end last: under it `Flow.family_excess_ends` ends
+  every formation requiring a member at such a need at every step from `T + n` on. Without it a
+  formation inactive at `T + n` can be active again (`Restored.returns`, `Becoming.RelativePosition`).
+  The laws here are verdicts on the line from before `T + n`, at the kind grain or the activity grain:
+  a line at a class within activity cannot pass a step at which nothing it reaches is active.
+* **A line drawn past renewal from outside (`Drain`, a witness with offspring numbers supplied).** On
+  one law of a pool, its renewer and organisms, and one course of generations, the renewer either
+  requires the pool at need one (the gate) or gives three units a step from no condition and requires
+  none (from outside). The restrained member leaves no offspring and the drawer two, which then relay:
+  selection at the first step only, and no growth. With the gate, eight steps of excess from a stock
+  of eight meet the landed gated law with a nonempty generation at its horizon (`Drain.landed_met`).
+  From outside the coupled gate fails at every need (`Drain.not_gated`), every other premise holds,
+  and the line degenerates the same (`Drain.outside_ends`), while the renewer's own line goes on
+  (`Drain.renewer_goes_on_outside`, a witness).
 
 Modelling choices: discrete steps; natural-number levels, needs, gifts, takes and offspring numbers;
 activity Prop-valued, decided in the witness by Booleans; a need a threshold on a level; giving not
-drawn from the giver's own level unless it takes; descent as giving to what comes to stand; in
-`Drain` each organism stands at one step only, takes its own standing there, draws its draw from the
-pool while active and gives each offspring one unit, and the renewer gives three units a step while
-active. An empty axiom report says nothing of these.
+drawn from the giver's own level unless it takes, so a renewer can give from no listed condition;
+descent as giving to what comes to stand; in `Drain` each organism stands at one step only, takes its
+own standing there, draws its draw from the pool while active and gives each of its offspring one
+unit, the renewer gives three units a step while active, and the offspring numbers are supplied, not
+derived from the draws. An empty axiom report says nothing of these.
+
+Every declaration has an empty axiom report.
 -/
 
 namespace Becoming
@@ -66,36 +76,15 @@ section Ledger
 
 variable {F C : Type} {L : Flow F C} {W : Web F C}
 
-/-- **The family's ledger over `n` steps**: under balance, the stock at `T + n`, with the family's
-uptake across the `n` steps from `T`, is the stock at `T`, with its replenishment across them. -/
-theorem stock_ledger (balances : L.Balances W) (ds : List C) :
-    ∀ n T, W.stock ds (T + n) + total (steps T n) (L.uptake ds) =
-      W.stock ds T + total (steps T n) (L.replenishment ds)
-  | 0, _ => rfl
-  | n + 1, T =>
-    have ih := stock_ledger balances ds n (T + 1)
-    have over := balances.over ds T
-    have shift : T + (n + 1) = T + 1 + n := Nat.add_right_comm T n 1
-    calc W.stock ds (T + (n + 1)) + (L.uptake ds T + total (steps (T + 1) n) (L.uptake ds))
-        = (W.stock ds (T + 1 + n) + total (steps (T + 1) n) (L.uptake ds)) + L.uptake ds T := by
-          rw [shift, Nat.add_left_comm, Nat.add_comm]
-      _ = (W.stock ds (T + 1) + total (steps (T + 1) n) (L.replenishment ds)) + L.uptake ds T := by
-          rw [ih]
-      _ = (W.stock ds (T + 1) + L.uptake ds T) + total (steps (T + 1) n) (L.replenishment ds) :=
-          Nat.add_right_comm _ _ _
-      _ = (W.stock ds T + L.replenishment ds T) + total (steps (T + 1) n) (L.replenishment ds) := by
-          rw [over]
-      _ = W.stock ds T + (L.replenishment ds T + total (steps (T + 1) n) (L.replenishment ds)) :=
-          Nat.add_assoc _ _ _
-
-/-- **Below a need exactly where the draws outrun the stock**: under balance, the family's stock at
-`T + n` is below `m` exactly where its stock at `T`, with everything given to it across the `n`
-steps, is below `m` with everything taken from it. -/
+/-- **Below a need exactly where the draws outrun the stock** (a restatement of
+`Flow.Balances.accumulates`): under balance, the family's stock at `T + n` is below `m` exactly
+where its stock at `T`, with everything given to it across the `n` steps, is below `m` with
+everything taken from it. -/
 theorem below_iff (balances : L.Balances W) (ds : List C) (T n m : Nat) :
     W.stock ds (T + n) < m ↔
       W.stock ds T + total (steps T n) (L.replenishment ds) <
         m + total (steps T n) (L.uptake ds) :=
-  have ledger := stock_ledger balances ds n T
+  have ledger := balances.accumulates ds T n
   ⟨fun below => Nat.lt_of_le_of_lt (Nat.le_of_eq ledger.symm) (Nat.add_lt_add_right below _),
    fun draws => Nat.lt_of_add_lt_add_right (Nat.lt_of_le_of_lt (Nat.le_of_eq ledger) draws)⟩
 
@@ -163,7 +152,7 @@ theorem degeneration_of_drawdown (balances : L.Balances W) (dependent : W.Depend
   degeneration_of_unmet dependent ((below_iff balances ds T n m).mpr draws) active le depends
 
 /-- **Excess past the stock less the need, with no gate**: `LineageRegimes.degeneration_of_family_excess`
-with its gate and `Acting` dropped. -/
+with its gate and `Acting` dropped, whatever renews the family. -/
 theorem degeneration_of_excess (balances : L.Balances W) (dependent : W.Dependent)
     {ds : List X} {m T n : Nat}
     (excess : ∀ k, k < n → L.replenishment ds (T + k) < L.uptake ds (T + k))
@@ -173,8 +162,8 @@ theorem degeneration_of_excess (balances : L.Balances W) (dependent : W.Dependen
     «退化» (lineStep L W Q) (W.kindClass Q) x :=
   degeneration_of_unmet dependent (below_of_excess balances excess start) active le depends
 
-/-- The landed gated reading is the case of `degeneration_of_excess`: its gate and `Acting` are
-not used. -/
+/-- The landed gated reading as the case of `degeneration_of_excess`: its gate and `Acting` are not
+used. -/
 theorem landed_of_excess (balances : L.Balances W) (_acting : L.Acting W)
     (dependent : W.Dependent) {ds : List X} {m : Nat}
     (_gated : ∀ t f, f ∈ L.present t → ∀ d, d ∈ ds → 0 < L.give t f d →
@@ -185,6 +174,11 @@ theorem landed_of_excess (balances : L.Balances W) (_acting : L.Acting W)
       ∃ e, e ∈ ds ∧ W.requires y.1 y.2 e ∧ m ≤ W.need y.1 y.2 e) :
     «退化» (lineStep L W Q) (W.kindClass Q) x :=
   degeneration_of_excess balances dependent excess start active le depends
+
+/-- `landed_of_excess` states exactly `LineageRegimes.degeneration_of_family_excess`: an equality
+of the two that type-checks only where their statements are the same. -/
+theorem landed_of_excess_eq :
+    @landed_of_excess = @LineageRegimes.degeneration_of_family_excess := rfl
 
 end Decider
 
@@ -222,7 +216,7 @@ theorem horizon_of_excess {W : Web F C} {R : Nat → F → F → Prop} {L : Flow
   Web.activity_every_branch_ends_of_gone start le fun y hy at_ =>
     gone_of_excess balances dependent excess stock at_ (held y hy at_)
 
-/-- `Web.family_excess_gone` is the case of `gone_of_excess`: its gate and `Acting` are not used. -/
+/-- `Web.family_excess_gone` as the case of `gone_of_excess`: its gate and `Acting` are not used. -/
 theorem landed_gone {W : Web F C} {L : Flow F C} (balances : L.Balances W)
     (_acting : L.Acting W) (dependent : W.Dependent) {ds : List C} {m : Nat}
     (_gated : ∀ t f, f ∈ L.present t → ∀ d, d ∈ ds → 0 < L.give t f d →
@@ -233,7 +227,7 @@ theorem landed_gone {W : Web F C} {L : Flow F C} (balances : L.Balances W)
     ¬ W.active y.1 y.2 :=
   gone_of_excess balances dependent excess stock at_ held
 
-/-- `Web.family_excess_degenerates` is the case of `horizon_of_excess`: its gate and `Acting` are
+/-- `Web.family_excess_degenerates` as the case of `horizon_of_excess`: its gate and `Acting` are
 not used. -/
 theorem landed_horizon {W : Web F C} {R : Nat → F → F → Prop} {L : Flow F C}
     (balances : L.Balances W) (_acting : L.Acting W) (dependent : W.Dependent) {ds : List C}
@@ -247,9 +241,15 @@ theorem landed_horizon {W : Web F C} {R : Nat → F → F → Prop} {L : Flow F 
     «退化» (Web.continuationStep R) W.activityClass x :=
   horizon_of_excess balances dependent excess stock start le held
 
+/-- `landed_gone` states exactly `Web.family_excess_gone`. -/
+theorem landed_gone_eq : @landed_gone = @Web.family_excess_gone := rfl
+
+/-- `landed_horizon` states exactly `Web.family_excess_degenerates`. -/
+theorem landed_horizon_eq : @landed_horizon = @Web.family_excess_degenerates := rfl
+
 end Horizon
 
-/-! ## What the drawdown forbids, on the census -/
+/-! ## What the drawdown forbids, on the census (near-definitional) -/
 
 section Forbids
 
@@ -318,21 +318,19 @@ theorem no_term_of_drawdown (balances : L.Balances W) (acting : L.Acting W)
 
 end Forbids
 
-/-! ## Selection on a draw past the renewal, and the same draws without it
+/-! ## A line drawn past renewal from outside
 
-Relata are numbered: `0` the pool, `1` its renewer, `2` and `3` the restrained relay (each draws one
-unit from the pool and leaves one offspring, the other), `4` to `18` drawers (each draws two units).
-The renewer gives the pool three units at every step it is active: what one drawer and one restrained
-member draw together. `gate` says whether the renewer requires the pool (at need one). Every
-organism requires the pool at need one, stands at its own step only, takes its own standing at that
-step, and while active takes its draw from the pool and gives one unit to each of its offspring.
+Relata are numbered: `0` the pool, `1` its renewer, `2` and `3` restrained (each draws one unit from
+the pool), `4` and on drawers (each draws two units); the course uses `2` and the drawers `4` to `8`.
+The renewer gives the pool three units at every step it is active. `gate` says whether the renewer
+requires the pool (at need one). Every organism requires the pool at need one, stands at its own step
+only, takes its own standing at that step, and while active takes its draw from the pool and gives
+one unit to each of its offspring.
 
-Three courses share the first generation (`2` and `4`) and the pool's eight. In `courseS` each
-drawer leaves as many offspring as it draws (two: `4` leaves `5` and `6`, they leave `7` to `10`,
-those `11` to `18`) and the restrained one. In `courseN` every member leaves one (`4` and `5` relay
-each other, as `2` and `3` do). In `courseP` the restrained member leaves none and `4` leaves two
-drawers, which then relay (`5` and `7`, `6` and `8`): selection at the first step only, and the
-generation's size two throughout. -/
+The course starts from the first generation `2` and `4` and the pool's eight. The restrained `2`
+leaves no offspring and the drawer `4` leaves two drawers, which then relay (`5` and `7`, `6` and
+`8`): selection at the first step only, and the generation's size two throughout. The offspring
+numbers are supplied by the course. -/
 
 namespace Drain
 
@@ -404,59 +402,7 @@ def generations (κ : Course) : SelectionTerm.Generations Nat where
   kids := κ.kids
   amount _ := draw
 
-/-! ### The three courses -/
-
-/-- With selection: the pool at eight, eight, six, then nothing; with the gate it stays at nothing,
-without it the renewer restores it three units a step. -/
-def phaseS (gate : Bool) : Nat → Phase
-  | 0 => ⟨8, fun c => c == 2 || c == 4⟩
-  | 1 => ⟨8, fun c => c == 3 || c == 5 || c == 6⟩
-  | 2 => ⟨6, fun c => c == 2 || c == 7 || c == 8 || c == 9 || c == 10⟩
-  | 3 => ⟨0, fun c => c == 3 || (Nat.ble 11 c && Nat.ble c 18)⟩
-  | t + 4 => ⟨bif gate then 0 else 3 * (t + 1), fun _ => false⟩
-
-def kidsS (t : Nat) : Nat → List Nat
-  | 2 => bif t == 0 || t == 2 then [3] else []
-  | 3 => bif t == 1 then [2] else []
-  | 4 => [5, 6]
-  | 5 => [7, 8]
-  | 6 => [9, 10]
-  | 7 => [11, 12]
-  | 8 => [13, 14]
-  | 9 => [15, 16]
-  | 10 => [17, 18]
-  | _ => []
-
-def familyS : Nat → List Nat
-  | 0 => [2, 4]
-  | 1 => [3, 5, 6]
-  | 2 => [2, 7, 8, 9, 10]
-  | 3 => [3, 11, 12, 13, 14, 15, 16, 17, 18]
-  | _ + 4 => []
-
-def courseS (gate : Bool) : Course where
-  phase := phaseS gate
-  kids := kidsS
-  members := familyS
-
-/-- Without selection, by the relay's turn: the pool at eight, `2` and `4` standing at even steps,
-`3` and `5` at odd ones. -/
-def phaseN (e : Bool) : Phase :=
-  ⟨8, fun c => (e && (c == 2 || c == 4)) || (!e && (c == 3 || c == 5))⟩
-
-def kidsN : Nat → List Nat
-  | 2 => [3]
-  | 3 => [2]
-  | 4 => [5]
-  | 5 => [4]
-  | _ => []
-
-def familyN (e : Bool) : List Nat := bif e then [2, 4] else [3, 5]
-
-def courseN : Course where
-  phase t := phaseN (Reproduction.Relay.turn t)
-  kids _ := kidsN
-  members t := familyN (Reproduction.Relay.turn t)
+/-! ### The course -/
 
 /-- Selection at the first step only: the pool at eight, eight, then one unit less a step, nothing
 at step nine; with the gate it stays at nothing, without it the renewer restores it. -/
@@ -547,9 +493,6 @@ theorem dependent (gate : Bool) (κ : Course) : (web gate κ).Dependent := by
   | _ + 2, 0, rfl =>
     exact of_decide_eq_true (right_of_and active)
 
-theorem within (κ : Course) : WithinKind (generations κ) (oneKind Nat) :=
-  fun _ _ _ _ _ => trivial
-
 /-- **The renewer is gated where there is a gate**: whatever gives to the pool requires it at
 need one. -/
 theorem gated (κ : Course) : ∀ t f, f ∈ (flow true κ).present t → ∀ d, d ∈ [0] →
@@ -569,6 +512,14 @@ units and requires no condition. -/
 theorem from_outside (κ : Course) (t : Nat) :
     0 < (flow false κ).give t 1 0 ∧ ∀ c, ¬ (web false κ).requires t 1 c :=
   ⟨Nat.zero_lt_succ 2, fun _ req => nomatch req.1⟩
+
+/-- **Without the gate the coupled gate fails, at every need**: the renewer, taking part at every
+step, gives the pool and requires no condition. -/
+theorem not_gated (κ : Course) (m : Nat) : ¬ ∀ t f, f ∈ (flow false κ).present t → ∀ d, d ∈ [0] →
+    0 < (flow false κ).give t f d → ∃ e, e ∈ [0] ∧ (web false κ).requires t f e ∧
+      m ≤ (web false κ).need t f e :=
+  fun coupled => match coupled 0 1 (List.Mem.head _) 0 (List.Mem.head _) (from_outside κ 0).1 with
+    | ⟨e, _, req, _⟩ => (from_outside κ 0).2 e req
 
 theorem org_of_give {gate : Bool} {φ : Phase} {kids : Nat → List Nat} :
     ∀ f c, 2 ≤ f → 0 < giveOf gate φ kids f c → 2 ≤ c
@@ -609,38 +560,8 @@ theorem depends_pool {gate : Bool} {κ : Course} {x : Nat × Nat} (org : 2 ≤ x
     | (_, 1), le => absurd le (Nat.not_succ_le_self 1)
     | (_, _ + 2), _ => ⟨0, .head _, rfl, Nat.le_refl 1⟩
 
-/-- From the renewer the line passes only to the renewer: it gives only to the pool, which is never
-active. -/
-theorem step_renewer {gate : Bool} {κ : Course} : ∀ {y z : Nat × Nat},
-    «续» (lineStep (flow gate κ) (web gate κ) (oneKind Nat))
-      ((web gate κ).kindClass (oneKind Nat)) y z → y.2 = 1 → z.2 = 1
-  | _, (_, 1), _, _ => rfl
-  | (_, _), (_, 0), c, at1 => match c.1.2 with
-    | .inl ⟨same, _⟩ => same.symm.trans at1
-    | .inr ⟨⟨_, gives, _⟩, _⟩ =>
-      absurd (c.2.1.mp (active_of_give _ 0 gives)) (fun h => nomatch h)
-  | (t, _), (_, k + 2), c, at1 => match c.1.2 with
-    | .inl ⟨same, _⟩ => same.symm.trans at1
-    | .inr ⟨⟨_, gives, _⟩, _⟩ =>
-      absurd (Eq.subst (motive := fun f => 0 < giveOf gate (κ.phase t) (κ.kids t) f (k + 2))
-          at1 gives)
-        (Nat.lt_irrefl 0)
-
-theorem line_renewer {gate : Bool} {κ : Course} :
-    ∀ {y z : Nat × Nat}, «及» («续» (lineStep (flow gate κ) (web gate κ) (oneKind Nat))
-      ((web gate κ).kindClass (oneKind Nat))) y z → y.2 = 1 → z.2 = 1
-  | _, _, .one c, at1 => step_renewer c at1
-  | _, _, .more c rest, at1 => line_renewer rest (step_renewer c at1)
-
-theorem reach_renewer {gate : Bool} {κ : Course} {x y : Nat × Nat}
-    (reached : «所及» (lineStep (flow gate κ) (web gate κ) (oneKind Nat))
-      ((web gate κ).kindClass (oneKind Nat)) x y) (at1 : x.2 = 1) : y.2 = 1 :=
-  match reached with
-  | .inl same => Eq.subst (motive := fun z : Nat × Nat => z.2 = 1) same at1
-  | .inr line => line_renewer line at1
-
-/-- **Without the gate the renewer's line goes on** (`«延»`) in every course: it carries on as
-itself at every step, requiring nothing. -/
+/-- **Without the gate the renewer's line goes on** (`«延»`), a witness: it carries on as itself at
+every step, requiring nothing. -/
 theorem renewer_goes_on_outside (κ : Course) :
     «延» (lineStep (flow false κ) (web false κ) (oneKind Nat))
       ((web false κ).kindClass (oneKind Nat)) (0, 1) :=
@@ -651,30 +572,6 @@ theorem renewer_goes_on_outside (κ : Course) :
         at1.symm rfl⟩, trivial⟩⟩⟩⟩
 
 /-! ### The census -/
-
-theorem familyS_eq (gate : Bool) : ∀ t, (generations (courseS gate)).family t = familyS t
-  | 0 => rfl
-  | 1 => rfl
-  | 2 => rfl
-  | 3 => rfl
-  | 4 => rfl
-  | t + 5 =>
-    have before := familyS_eq gate (t + 4)
-    show ((generations (courseS gate)).family (t + 4)).flatMap
-        ((generations (courseS gate)).kids (t + 4)) = []
-    by rw [before]; rfl
-
-theorem familyN_eq : ∀ t, (generations courseN).family t = familyN (Reproduction.Relay.turn t)
-  | 0 => rfl
-  | t + 1 =>
-    have before := familyN_eq t
-    show ((generations courseN).family t).flatMap ((generations courseN).kids t) =
-      familyN (!Reproduction.Relay.turn t)
-    by
-      rw [before]
-      show (familyN (Reproduction.Relay.turn t)).flatMap kidsN =
-        familyN (!Reproduction.Relay.turn t)
-      cases Reproduction.Relay.turn t <;> rfl
 
 theorem familyP_step : ∀ t, (familyP t).flatMap (kidsP t) = familyP (t + 1)
   | 0 => rfl
@@ -697,46 +594,7 @@ theorem familyP_eq (gate : Bool) : ∀ t, (generations (courseP gate)).family t 
         ((generations (courseP gate)).kids t) = familyP (t + 1)
     by rw [before]; exact familyP_step t
 
-/-! ### Balance, course by course -/
-
-theorem stepN (gate e : Bool) (c : Nat) :
-    levelOf (phaseN (!e)) c + total (1 :: familyN e) (fun f => takeOf gate (phaseN e) f c) =
-      levelOf (phaseN e) c + total (1 :: familyN e) (fun f => giveOf gate (phaseN e) kidsN f c) := by
-  cases gate <;> cases e <;>
-    exact match c with
-    | 0 | 1 | 2 | 3 | 4 | 5 => rfl
-    | _ + 6 => rfl
-
-theorem stepS (gate : Bool) : ∀ t c,
-    levelOf (phaseS gate (t + 1)) c +
-        total (1 :: familyS t) (fun f => takeOf gate (phaseS gate t) f c) =
-      levelOf (phaseS gate t) c +
-        total (1 :: familyS t) (fun f => giveOf gate (phaseS gate t) (kidsS t) f c)
-  | 0, c => by
-    cases gate <;>
-      exact match c with
-      | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 => rfl
-      | _ + 19 => rfl
-  | 1, c => by
-    cases gate <;>
-      exact match c with
-      | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 => rfl
-      | _ + 19 => rfl
-  | 2, c => by
-    cases gate <;>
-      exact match c with
-      | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 => rfl
-      | _ + 19 => rfl
-  | 3, c => by
-    cases gate <;>
-      exact match c with
-      | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 => rfl
-      | _ + 19 => rfl
-  | _ + 4, c => by
-    cases gate <;>
-      exact match c with
-      | 0 | 1 => rfl
-      | _ + 2 => rfl
+/-! ### Balance and descent -/
 
 theorem stepP (gate : Bool) : ∀ t c,
     levelOf (phaseP gate (t + 1)) c +
@@ -755,31 +613,9 @@ theorem stepP (gate : Bool) : ∀ t c,
   | 9, c => by cases gate <;> exact match c with | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 => rfl | _ + 9 => rfl
   | _ + 10, c => by cases gate <;> exact match c with | 0 | 1 => rfl | _ + 2 => rfl
 
-/-- **Every course balances.** -/
-theorem balances_S (gate : Bool) : (flow gate (courseS gate)).Balances (web gate (courseS gate)) :=
-  fun t c => stepS gate t c
-
-theorem balances_N (gate : Bool) : (flow gate courseN).Balances (web gate courseN) :=
-  fun t c => stepN gate (Reproduction.Relay.turn t) c
-
+/-- **The course balances**, with the gate or without it. -/
 theorem balances_P (gate : Bool) : (flow gate (courseP gate)).Balances (web gate (courseP gate)) :=
   fun t c => stepP gate t c
-
-/-! ### Descent, course by course -/
-
-theorem descendsS (gate : Bool) : ∀ t, t < 4 → ∀ p, p ∈ familyS t → ∀ k, k ∈ kidsS t p →
-    0 < giveOf gate (phaseS gate t) (kidsS t) p k ∧
-      ¬ 0 < levelOf (phaseS gate t) k ∧ 0 < levelOf (phaseS gate (t + 1)) k
-  | 0, _ => by cases gate <;> decide
-  | 1, _ => by cases gate <;> decide
-  | 2, _ => by cases gate <;> decide
-  | 3, _ => by cases gate <;> decide
-  | t + 4, lt => absurd lt (Nat.not_lt_of_le (Nat.le_add_left 4 t))
-
-theorem descendsN (gate e : Bool) : ∀ p, p ∈ familyN e → ∀ k, k ∈ kidsN p →
-    0 < giveOf gate (phaseN e) kidsN p k ∧
-      ¬ 0 < levelOf (phaseN e) k ∧ 0 < levelOf (phaseN (!e)) k := by
-  cases gate <;> cases e <;> decide
 
 theorem descendsP (gate : Bool) : ∀ t, t < 10 → ∀ p, p ∈ familyP t → ∀ k, k ∈ kidsP t p →
     0 < giveOf gate (phaseP gate t) (kidsP t) p k ∧
@@ -796,25 +632,6 @@ theorem descendsP (gate : Bool) : ∀ t, t < 10 → ∀ p, p ∈ familyP t → �
   | 9, _ => by cases gate <;> decide
   | t + 10, lt => absurd lt (Nat.not_lt_of_le (Nat.le_add_left 10 t))
 
-/-- **The generations are generations of descent** in every course. -/
-theorem descended_S (gate : Bool) : SelectionTerm.Flow.Descended (flow gate (courseS gate))
-    (web gate (courseS gate)) (generations (courseS gate)) :=
-  fun t p k mp mk =>
-    have mp' : p ∈ familyS t := Eq.subst (motive := fun l => p ∈ l) (familyS_eq gate t) mp
-    match t, mp' with
-    | 0, m => ⟨.tail _ m, descendsS gate 0 (by decide) p m k mk⟩
-    | 1, m => ⟨.tail _ m, descendsS gate 1 (by decide) p m k mk⟩
-    | 2, m => ⟨.tail _ m, descendsS gate 2 (by decide) p m k mk⟩
-    | 3, m => ⟨.tail _ m, descendsS gate 3 (by decide) p m k mk⟩
-    | _ + 4, m => nomatch m
-
-theorem descended_N (gate : Bool) : SelectionTerm.Flow.Descended (flow gate courseN)
-    (web gate courseN) (generations courseN) :=
-  fun t p k mp mk =>
-    have mp' : p ∈ familyN (Reproduction.Relay.turn t) :=
-      Eq.subst (motive := fun l => p ∈ l) (familyN_eq t) mp
-    ⟨.tail _ mp', descendsN gate (Reproduction.Relay.turn t) p mp' k mk⟩
-
 theorem descends_atP (gate : Bool) : ∀ t p, p ∈ familyP t → ∀ k, k ∈ kidsP t p →
     (flow gate (courseP gate)).DescendsAt (web gate (courseP gate)) t k p
   | 0, p, m, k, mk => ⟨.tail _ m, descendsP gate 0 (by decide) p m k mk⟩
@@ -829,250 +646,13 @@ theorem descends_atP (gate : Bool) : ∀ t p, p ∈ familyP t → ∀ k, k ∈ k
   | 9, p, m, k, mk => ⟨.tail _ m, descendsP gate 9 (by decide) p m k mk⟩
   | _ + 10, _, m, _, _ => nomatch m
 
+/-- **The generations are generations of descent**, with the gate or without it. -/
 theorem descended_P (gate : Bool) : SelectionTerm.Flow.Descended (flow gate (courseP gate))
     (web gate (courseP gate)) (generations (courseP gate)) :=
   fun t p k mp mk =>
     descends_atP gate t p (Eq.subst (motive := fun l => p ∈ l) (familyP_eq gate t) mp) k mk
 
-/-! ### Without selection the lineage generates -/
-
-theorem embodiedN (gate e : Bool) : ∀ k, k ∈ [2, 3, 4, 5] →
-    (activeOf gate (phaseN e) k = true ↔ 0 < levelOf (phaseN e) k) := by
-  cases gate <;> cases e <;> decide
-
-theorem embodied_N (gate : Bool) : EmbodiedOffspring (web gate courseN) (generations courseN) :=
-  fun t p k mp mk s =>
-    have mp' : p ∈ familyN (Reproduction.Relay.turn t) :=
-      Eq.subst (motive := fun l => p ∈ l) (familyN_eq t) mp
-    have mk' : k ∈ [2, 3, 4, 5] := match Reproduction.Relay.turn t, p, mp', mk with
-      | true, _, .head _, mk => match k, (mk : k ∈ [3]) with
-        | _, .head _ => .tail _ (.head _)
-      | true, _, .tail _ (.head _), mk => match k, (mk : k ∈ [5]) with
-        | _, .head _ => .tail _ (.tail _ (.tail _ (.head _)))
-      | false, _, .head _, mk => match k, (mk : k ∈ [2]) with
-        | _, .head _ => .head _
-      | false, _, .tail _ (.head _), mk => match k, (mk : k ∈ [4]) with
-        | _, .head _ => .tail _ (.tail _ (.head _))
-    embodiedN gate (Reproduction.Relay.turn s) k mk'
-
-theorem reproduces_N : ∀ s q, 0 ≤ s → q ∈ (generations courseN).family s →
-    ∃ k, k ∈ (generations courseN).kids s q :=
-  fun s q _ mq =>
-    have mq' : q ∈ familyN (Reproduction.Relay.turn s) :=
-      Eq.subst (motive := fun l => q ∈ l) (familyN_eq s) mq
-    match Reproduction.Relay.turn s, q, mq' with
-    | true, _, .head _ => ⟨3, List.Mem.head _⟩
-    | true, _, .tail _ (.head _) => ⟨5, List.Mem.head _⟩
-    | false, _, .head _ => ⟨2, List.Mem.head _⟩
-    | false, _, .tail _ (.head _) => ⟨4, List.Mem.head _⟩
-
-/-- **Without selection the lineage generates**, the drawer included, with the gate or without it:
-every member leaves an offspring like itself, at the pool's eight, at every step. -/
-theorem generates_N (gate : Bool) :
-    «生成» (lineStep (flow gate courseN) (web gate courseN) (oneKind Nat))
-        ((web gate courseN).kindClass (oneKind Nat)) (web gate courseN).carrierClass (0, 2) ∧
-      «生成» (lineStep (flow gate courseN) (web gate courseN) (oneKind Nat))
-        ((web gate courseN).kindClass (oneKind Nat)) (web gate courseN).carrierClass (0, 4) :=
-  ⟨generation_of_reproducing (acting gate courseN) (descended_N gate) (within courseN)
-     (embodied_N gate) reproduces_N (.head _),
-   generation_of_reproducing (acting gate courseN) (descended_N gate) (within courseN)
-     (embodied_N gate) reproduces_N (.tail _ (.head _))⟩
-
-theorem pool_N (gate : Bool) (t : Nat) : (web gate courseN).level t 0 = 8 := rfl
-
-theorem offspring_N : ∀ t p, p ∈ (generations courseN).family t →
-    (generations courseN).offspringNumber t p = 1 :=
-  fun t p mp =>
-    have mp' : p ∈ familyN (Reproduction.Relay.turn t) :=
-      Eq.subst (motive := fun l => p ∈ l) (familyN_eq t) mp
-    match Reproduction.Relay.turn t, p, mp' with
-    | true, _, .head _ => rfl
-    | true, _, .tail _ (.head _) => rfl
-    | false, _, .head _ => rfl
-    | false, _, .tail _ (.head _) => rfl
-
-/-- **Without selection the term is zero at every step**: every member leaves one offspring. -/
-theorem selection_N (t : Nat) :
-    (generations courseN).concordAt t = 0 ∧ (generations courseN).discordAt t = 0 :=
-  ⟨SelectionTerm.concord_uniform (offspring_N t) _, SelectionTerm.discord_uniform (offspring_N t) _⟩
-
-/-- **Without selection the renewer's line goes on too**, with the gate or without it: the pool
-stays at eight. -/
-theorem renewer_goes_on_N (gate : Bool) :
-    «延» (lineStep (flow gate courseN) (web gate courseN) (oneKind Nat))
-      ((web gate courseN).kindClass (oneKind Nat)) (0, 1) :=
-  have sup : ∀ t, (web gate courseN).Supported t 1 := fun t c req =>
-    Eq.subst (motive := fun c => (web gate courseN).need t 1 c ≤ (web gate courseN).level t c)
-      req.2.symm (by decide : 1 ≤ 8)
-  have act : ∀ t, (web gate courseN).active t 1 := fun _ => by cases gate <;> rfl
-  ⟨fun z => z.2 = 1, rfl, fun z at1 => ⟨(z.1 + 1, 1), rfl,
-    ⟨⟨rfl, .inl ⟨at1, Eq.subst (motive := fun g => (web gate courseN).Supported z.1 g) at1.symm
-        (sup z.1)⟩⟩,
-     ⟨⟨fun _ => act (z.1 + 1), fun _ => Eq.subst (motive := fun g => (web gate courseN).active z.1 g)
-        at1.symm (act z.1)⟩, trivial⟩⟩⟩⟩
-
-/-! ### With selection on the draw the lineage ends -/
-
-/-- **With selection the lineage degenerates**, the restrained line with it, with the gate or
-without it: at step three the pool is at nothing and everything the lines reach requires it at
-one. -/
-theorem degenerates_S (gate : Bool) :
-    «退化» (lineStep (flow gate (courseS gate)) (web gate (courseS gate)) (oneKind Nat))
-        ((web gate (courseS gate)).kindClass (oneKind Nat)) (0, 2) ∧
-      «退化» (lineStep (flow gate (courseS gate)) (web gate (courseS gate)) (oneKind Nat))
-        ((web gate (courseS gate)).kindClass (oneKind Nat)) (0, 4) :=
-  have below : (web gate (courseS gate)).stock [0] 3 < 1 := Nat.zero_lt_one
-  ⟨degeneration_of_unmet (dependent gate _) below (x := (0, 2)) rfl (Nat.zero_le 3)
-     (depends_pool (Nat.le_refl 2) 3),
-   degeneration_of_unmet (dependent gate _) below (x := (0, 4)) rfl (Nat.zero_le 3)
-     (depends_pool (by decide) 3)⟩
-
-theorem org_S : ∀ t q, q ∈ familyS t → 2 ≤ q
-  | 0 => by decide
-  | 1 => by decide
-  | 2 => by decide
-  | 3 => by decide
-  | _ + 4 => fun _ m => nomatch m
-
-/-- Every member of generation three requires the pool at need one. -/
-theorem members_need_S (gate : Bool) : ∀ q, q ∈ (generations (courseS gate)).family (0 + 3) →
-    ∃ e, e ∈ [0] ∧ (web gate (courseS gate)).requires (0 + 3) q e ∧
-      1 ≤ (web gate (courseS gate)).need (0 + 3) q e :=
-  fun q mq =>
-    match q, org_S 3 q (Eq.subst (motive := fun l => q ∈ l) (familyS_eq gate 3) mq) with
-    | 0, le => absurd le (Nat.not_succ_le_zero 1)
-    | 1, le => absurd le (Nat.not_succ_le_self 1)
-    | _ + 2, _ => ⟨0, .head _, rfl, Nat.le_refl 1⟩
-
-/-- **Every active organism's line up to step three degenerates**, whatever cohort it is in, with the
-gate or without it. -/
-theorem every_active_degenerates_S (gate : Bool) {x : Nat × Nat} (org : 2 ≤ x.2)
-    (active : (web gate (courseS gate)).active x.1 x.2) (le : x.1 ≤ 3) :
-    «退化» (lineStep (flow gate (courseS gate)) (web gate (courseS gate)) (oneKind Nat))
-      ((web gate (courseS gate)).kindClass (oneKind Nat)) x :=
-  degeneration_of_unmet (dependent gate (courseS gate)) (ds := [0]) (m := 1) (N := 3)
-    Nat.zero_lt_one active le (depends_pool org 3)
-
-/-- The generation born at step three finds the pool empty: none of it is supported. -/
-theorem stillborn_S (gate : Bool) : ∀ k, k ∈ (generations (courseS gate)).family 3 →
-    ¬ (web gate (courseS gate)).Supported 3 k :=
-  fun k mk sup =>
-    match k, org_S 3 k (Eq.subst (motive := fun l => k ∈ l) (familyS_eq gate 3) mk), sup with
-    | 0, le, _ => absurd le (Nat.not_succ_le_zero 1)
-    | 1, le, _ => absurd le (Nat.not_succ_le_self 1)
-    | _ + 2, _, sup => Nat.not_succ_le_zero 0 (sup 0 rfl)
-
-/-- **Concordance of offspring number with the draw** is one, two and four, with no discordance,
-and both are zero at the last nonempty generation; the generation after it is empty. -/
-theorem selection_S (gate : Bool) :
-    (generations (courseS gate)).concordAt 0 = 1 ∧ (generations (courseS gate)).discordAt 0 = 0 ∧
-    (generations (courseS gate)).concordAt 1 = 2 ∧ (generations (courseS gate)).discordAt 1 = 0 ∧
-    (generations (courseS gate)).concordAt 2 = 4 ∧ (generations (courseS gate)).discordAt 2 = 0 ∧
-    (generations (courseS gate)).concordAt 3 = 0 ∧ (generations (courseS gate)).discordAt 3 = 0 ∧
-    (generations (courseS gate)).size 4 = 0 := by
-  cases gate <;> decide
-
-/-- **The mean draw rises at each step**: three over two, five over three, nine over five,
-seventeen over nine (means compared by cross-multiplying). -/
-theorem mean_rises_S (gate : Bool) :
-    (generations (courseS gate)).size 1 * (generations (courseS gate)).sum 0 <
-        (generations (courseS gate)).size 0 * (generations (courseS gate)).sum 1 ∧
-      (generations (courseS gate)).size 2 * (generations (courseS gate)).sum 1 <
-        (generations (courseS gate)).size 1 * (generations (courseS gate)).sum 2 ∧
-      (generations (courseS gate)).size 3 * (generations (courseS gate)).sum 2 <
-        (generations (courseS gate)).size 2 * (generations (courseS gate)).sum 3 := by
-  cases gate <;> decide
-
-/-- **The drawers' share rises**: one of two, two of three, four of five, eight of nine. -/
-theorem share_rises_S (gate : Bool) :
-    total ((generations (courseS gate)).family 0) (fun p => draw p - 1) = 1 ∧
-    total ((generations (courseS gate)).family 1) (fun p => draw p - 1) = 2 ∧
-    total ((generations (courseS gate)).family 2) (fun p => draw p - 1) = 4 ∧
-    total ((generations (courseS gate)).family 3) (fun p => draw p - 1) = 8 ∧
-    (generations (courseS gate)).size 0 = 2 ∧ (generations (courseS gate)).size 1 = 3 ∧
-    (generations (courseS gate)).size 2 = 5 ∧ (generations (courseS gate)).size 3 = 9 := by
-  cases gate <;> decide
-
-/-- **Offspring number is the draw** at every member of the generations that reproduce. -/
-theorem offspring_is_draw_S (gate : Bool) : ∀ t, t < 3 → ∀ p,
-    p ∈ (generations (courseS gate)).family t →
-      (generations (courseS gate)).offspringNumber t p = draw p
-  | 0, _ => by cases gate <;> decide
-  | 1, _ => by cases gate <;> decide
-  | 2, _ => by cases gate <;> decide
-  | t + 3, lt => absurd lt (Nat.not_lt_of_le (Nat.le_add_left 3 t))
-
-/-- **The excess is selection's**: at step zero the uptake is the renewal, three; it is five and
-nine at the next two steps, against the same three. -/
-theorem excess_S (gate : Bool) :
-    (flow gate (courseS gate)).uptake [0] 0 = 3 ∧ (flow gate (courseS gate)).replenishment [0] 0 = 3 ∧
-    (flow gate (courseS gate)).uptake [0] 1 = 5 ∧ (flow gate (courseS gate)).replenishment [0] 1 = 3 ∧
-    (flow gate (courseS gate)).uptake [0] 2 = 9 ∧
-      (flow gate (courseS gate)).replenishment [0] 2 = 3 := by
-  cases gate <;> decide
-
-/-- **The exact condition, met at three steps**: the stock at the start with what is given across
-the three steps is below the need with what is taken. -/
-theorem draws_past_S (gate : Bool) :
-    (web gate (courseS gate)).stock [0] 0 +
-        total (steps 0 3) ((flow gate (courseS gate)).replenishment [0]) <
-      1 + total (steps 0 3) ((flow gate (courseS gate)).uptake [0]) := by
-  cases gate <;> decide
-
-/-- **And not at two**: across the first two steps the draws have not passed the stock. -/
-theorem short_at_two_S (gate : Bool) :
-    ¬ ((web gate (courseS gate)).stock [0] 0 +
-        total (steps 0 2) ((flow gate (courseS gate)).replenishment [0]) <
-      1 + total (steps 0 2) ((flow gate (courseS gate)).uptake [0])) := by
-  cases gate <;> decide
-
-/-- **The landed count of excess steps does not reach step three in this course**: there is no
-excess at step zero, eight is not below two plus one, nor six below one plus one; only the step
-itself (no steps of excess) does, which is `degeneration_of_unmet`. -/
-theorem count_short_S (gate : Bool) :
-    ¬ (flow gate (courseS gate)).replenishment [0] 0 < (flow gate (courseS gate)).uptake [0] 0 ∧
-    ¬ (web gate (courseS gate)).stock [0] 1 < 2 + 1 ∧
-    ¬ (web gate (courseS gate)).stock [0] 2 < 1 + 1 := by
-  cases gate <;> decide
-
-/-- **The drawdown law, met**: every premise of `ends_of_drawdown` holds at `T = 0`, `n = 3`,
-`m = 1`, so every generation after step three is empty and the selection term is zero from step
-three on. -/
-theorem ends_S (gate : Bool) : ∀ s, (generations (courseS gate)).size (0 + 3 + 1 + s) = 0 ∧
-    (generations (courseS gate)).concordAt (0 + 3 + s) = 0 ∧
-    (generations (courseS gate)).discordAt (0 + 3 + s) = 0 :=
-  ends_of_drawdown (balances_S gate) (acting gate _) (dependent gate _) (descended_S gate)
-    (draws_past_S gate) (members_need_S gate)
-
-/-- **With the gate and selection the renewal ends with the lineage**: from step three the pool
-stays at nothing and the renewer is never active again. -/
-theorem renewal_ends_S : ∀ n, (web true (courseS true)).level (n + 3) 0 = 0 ∧
-    ¬ (web true (courseS true)).active (n + 3) 1
-  | 0 => ⟨rfl, fun h => nomatch h⟩
-  | _ + 1 => ⟨rfl, fun h => nomatch h⟩
-
-/-- **Without the gate the renewal goes on after the lineage**: the renewer stays active and the
-pool comes back three units a step. -/
-theorem renewal_goes_on_S : (web false (courseS false)).level 3 0 = 0 ∧
-    (web false (courseS false)).active 3 1 ∧
-    ∀ n, (web false (courseS false)).level (n + 4) 0 = 3 * (n + 1) ∧
-      (web false (courseS false)).active (n + 4) 1 :=
-  ⟨rfl, rfl, fun _ => ⟨rfl, rfl⟩⟩
-
-/-- **With the gate and selection the renewer's line degenerates** (a lineage reading of the
-drawers' joint excess ending the renewal): at step three it requires the pool at one, and the pool
-is at nothing. -/
-theorem renewer_degenerates_S :
-    «退化» (lineStep (flow true (courseS true)) (web true (courseS true)) (oneKind Nat))
-      ((web true (courseS true)).kindClass (oneKind Nat)) (0, 1) :=
-  degeneration_of_unmet (dependent true (courseS true)) (ds := [0]) (m := 1) (N := 3)
-    Nat.zero_lt_one
-    (x := (0, 1)) rfl (Nat.zero_le 3) fun y hy _ =>
-      Eq.subst (motive := fun k => ∃ e, e ∈ [0] ∧ (web true (courseS true)).requires y.1 k e ∧
-          1 ≤ (web true (courseS true)).need y.1 k e)
-        (reach_renewer hy rfl).symm ⟨0, .head _, ⟨rfl, rfl⟩, Nat.le_refl 1⟩
-
-/-! ### Selection at one step, no growth: the landed count form met, with renewal from outside -/
+/-! ### Selection at one step, no growth: the landed law met, and renewal from outside -/
 
 /-- **Selection at the first step**: concordance two at step zero, with no discordance; the
 generation's size is two at steps zero and one. -/
@@ -1149,7 +729,16 @@ theorem no_excess_first_P (gate : Bool) :
 theorem start_P (gate : Bool) : (web gate (courseP gate)).stock [0] 1 < 8 + 1 := by
   cases gate <;> decide
 
-/-- **The landed gated regime, met with a nonempty generation at its horizon**: every premise of
+/-- **The ledger, met at the horizon**: the pool's eight at step one, with the twenty-four units the
+renewer gives across the eight steps of excess, is below the need with the thirty-two units the
+drawers take. -/
+theorem draws_past_P (gate : Bool) :
+    (web gate (courseP gate)).stock [0] 1 +
+        total (steps 1 8) ((flow gate (courseP gate)).replenishment [0]) <
+      1 + total (steps 1 8) ((flow gate (courseP gate)).uptake [0]) := by
+  cases gate <;> decide
+
+/-- **The landed gated law, met with a nonempty generation at its horizon**: every premise of
 `LineageRegimes.degeneration_of_family_excess` holds with the gate, at `T = 1`, `n = 8`, `m = 1`,
 and generation nine has two members, each requiring the pool. -/
 theorem landed_met :
@@ -1159,9 +748,10 @@ theorem landed_met :
     (dependent true _) (gated _) (excess_P true) (start_P true) (x := (0, 4)) rfl
     (Nat.zero_le _) (depends_pool (by decide) _)
 
-/-- **Renewal from outside, the same regime, the same end**: without the gate the renewer gives
-three units at every step and requires nothing (`from_outside`), every premise of the landed regime
-but the gate holds, and the line degenerates (`degeneration_of_excess`). -/
+/-- **Renewal from outside, the same excess, the same end**: without the gate the renewer gives
+three units at every step and requires nothing (`from_outside`), the coupled gate fails
+(`not_gated`), every other premise of the landed law holds, and the line degenerates
+(`degeneration_of_excess`). -/
 theorem outside_ends :
     «退化» (lineStep (flow false (courseP false)) (web false (courseP false)) (oneKind Nat))
       ((web false (courseP false)).kindClass (oneKind Nat)) (0, 4) :=
@@ -1186,13 +776,14 @@ theorem members_need_P (gate : Bool) : ∀ q, q ∈ (generations (courseP gate))
     | _, .head _ => ⟨0, .head _, rfl, Nat.le_refl 1⟩
     | _, .tail _ (.head _) => ⟨0, .head _, rfl, Nat.le_refl 1⟩
 
-/-- **And on the census**: every generation after step nine is empty and the selection term is
-zero from step nine on. -/
-theorem ends_P (gate : Bool) : ∀ s, (generations (courseP gate)).size (9 + 1 + s) = 0 ∧
-    (generations (courseP gate)).concordAt (9 + s) = 0 ∧
-    (generations (courseP gate)).discordAt (9 + s) = 0 :=
-  ends_of_unmet (acting gate _) (dependent gate _) (descended_P gate)
-    (Nat.zero_lt_one : (web gate (courseP gate)).stock [0] 9 < 1) (members_need_P gate)
+/-- **And on the census, through the ledger**: every premise of `ends_of_drawdown` holds at `T = 1`,
+`n = 8`, `m = 1`, with the gate or without it, so every generation after step nine is empty and the
+selection term is zero from step nine on. -/
+theorem ends_P (gate : Bool) : ∀ s, (generations (courseP gate)).size (1 + 8 + 1 + s) = 0 ∧
+    (generations (courseP gate)).concordAt (1 + 8 + s) = 0 ∧
+    (generations (courseP gate)).discordAt (1 + 8 + s) = 0 :=
+  ends_of_drawdown (balances_P gate) (acting gate _) (dependent gate _) (descended_P gate)
+    (draws_past_P gate) (members_need_P gate)
 
 /-- **And nothing after the first step**: the selection term proper is zero at every step after
 step zero, each drawer leaving one offspring until step nine and none from it on. -/

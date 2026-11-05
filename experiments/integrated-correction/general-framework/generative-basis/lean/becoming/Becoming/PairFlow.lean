@@ -3,9 +3,10 @@ import Becoming.PairSelection
 /-!
 # The pair's run as a flow: the factors derived, and where giving can bring more than keeping
 
-Scratch module of EL7 (b), AI-written, not landed. It reads a pair's run as balanced flows on a web,
-derives each formation's offspring from the flow, and asks when the factors `β` and `γ` of
-`PairSelection.Place.offspring` differ, and what a gift can bring beyond what it draws.
+`PairSelection` reads a pair's offspring as `a + β · received + γ · withheld`, the factors supplied.
+This module reads a pair's run as balanced flows on a web, derives each formation's offspring from
+the flow, and asks when `β` and `γ` differ and what a gift can bring beyond what it draws. Once the
+parts are fixed the derivation is close to definitional.
 
 * **What passes through changes no level** (`levels_agree_until`, `levels_agree`). Two balanced flows
   from the same levels whose takes and gives on each condition, at each step at which the levels
@@ -13,52 +14,64 @@ derives each formation's offspring from the flow, and asks when the factors `β`
   two runs is a difference of what is taken from or given to some condition at a step at which they
   still agreed. A reading of offspring through the levels then gives both runs the same, and where it
   reads `a + β n` on one and `a + γ n` on the other, `β = γ` (`factors_equal`).
-* **Support is not conserved; the needs met are within the stock** (`metNeed`, `metNeed_le`,
-  `met_needs_le_stock`, `met_needs_within_start`). Where each formation of a list depends on its own
+* **The needs met are within the stock** (`metNeed`, `metNeed_le`, `met_needs_le_stock`,
+  `met_needs_within_start`, near-definitional). Where each formation of a list depends on its own
   condition, the needs met at a step total at most the stock of those conditions; over a stretch at
   every step of which the family gains nothing, at most the family's stock at the stretch's start.
+  The landed need-asymmetry witness meets the bound with equality (`NeedsAtCapacity.at_capacity`).
 * **The run as a flow, with routes** (`Routes`). A renewer gives each formation's standing a constant
   amount and each formation passes what it holds on: its upkeep nowhere, its own part to its line, at
   each step its law gives a gift of which part reaches the partner's standing and part is lost, at each
   step it withholds the gift's amount of which part reaches its own line and part spoils, and what it
-  received, with a matching the renewer may give at each step its partner gives, to its line. The flow
-  balances, only active formations give, activity needs support, and both formations are supported at
-  every step (`Routes.balances`, `acting`, `dependent`, `supported`). Read as the level of its line, a
-  place's offspring is `Place.offspring` for any laws and errors, `β` what of a gift reaches the receiver
-  with the matching, `γ` what of a kept amount reaches the keeper's line (`Routes.line_offspring`).
-  Where what is kept is the gift's amount, `β` with what giving loses is `γ` with what keeping spoils and
-  the matching (`Routes.factor_gap`), so `γ < β` exactly where giving loses less than keeping spoils with
-  the matching (`Routes.gap_iff`); with no loss and no matching `β = γ` (`Routes.plain`).
-* **Renewal gated on what it renews** (`Gated`). A renewer gives a standing only while its formation is
-  active, a formation is active exactly where its standing meets its need, gives only while active and
-  as it intends, and a taker beyond may draw on any standing. The flow balances, only active formations
-  give, activity needs support (`Gated.balances`, `acting`, `dependent`). While both formations stand,
-  a run in which both give and one in which neither does keep the same levels, whatever the renewal, the
-  draws and the needs (`Gated.runs_agree_until`), so no reading through the levels tells them apart
-  (`Gated.factors_equal_while_supported`). A formation that has fallen below its need, to which its
-  partner gives nothing, never stands again (`Gated.stays_fallen`). Read by support, a formation
-  active at every step leaves `own · n` whatever is given (`Gated.lineAt_of_active`), and two runs
-  in which it stands at the same steps leave it the same (`Gated.lines_agree_while_active`).
+  received, with a matching the renewer may give at each step its partner gives, to its line. The
+  parts are the same for both formations, so the routes do not represent renewal reaching one of them
+  only, as in `PairSelection.Renewed`. The flow balances, only active formations give, activity needs
+  support, and both formations are supported at every step, their standings held constant by
+  construction (`Routes.balances`, `acting`, `dependent`, `supported`). Read as the level of its line,
+  a place's offspring is `Place.offspring` for any laws and errors, `β` what of a gift reaches the
+  receiver with the matching, `γ` what of a kept amount reaches the keeper's line
+  (`Routes.line_offspring`). Where what is kept is the gift's amount, `β` with what giving loses is `γ`
+  with what keeping spoils and the matching (`Routes.factor_gap`), so `γ < β` exactly where giving
+  loses less than keeping spoils with the matching (`Routes.gap_iff`); with no loss and no matching
+  `β = γ` (`Routes.plain`). Each sign is met (`Routes.signs`).
+* **Renewal while standing** (`WhileStanding`). A renewer gives a standing only while its formation
+  stands, that is, is active; a formation is active exactly where its standing meets its need, gives
+  only while active and as it intends, and a taker beyond may draw on any standing. The renewer
+  requires nothing, so this is not a gated renewal, in which every formation giving to a condition
+  depends on it: the renewal reads the receiver's activity. The flow balances, only active formations
+  give, activity needs support (`WhileStanding.balances`, `acting`, `dependent`). Mutual giving at
+  every step leaves the levels as no giving does while both stand, whatever the renewal, the draws and
+  the needs (`WhileStanding.runs_agree_until`), so no reading through the levels tells those two runs
+  apart (`WhileStanding.factors_equal_while_supported`); one-sided giving is not covered, and changes
+  the standings (`GiverAtNeed.standings_differ`). A formation that has fallen below its need, to which
+  its partner gives nothing, never stands again (`WhileStanding.stays_fallen`, near-definitional: with
+  no renewal while it is inactive and no gift, nothing flows in). Read by support, a formation active
+  at every step of a run leaves `own · n` in it, by construction (`WhileStanding.lineAt_of_active`),
+  and two runs in which it stands at the same steps leave it the same
+  (`WhileStanding.lines_agree_while_active`).
 * **A failed renewal** (`FailedRenewal`). One failed renewal takes the second formation below its
   need. Keeping, it never stands again; sharing, the first's two units of slack lift it, its renewal
   resumes, and the pair's lines over `m + 4` steps exceed the keeping pair's by `m`
-  (`FailedRenewal.lines_gain`), while the first gave only two units more than it received
-  (`FailedRenewal.gifts_sharing`); up to the shortfall the two runs keep the same levels
-  (`FailedRenewal.agree_to_shortfall`).
+  (`FailedRenewal.lines_gain`), the gain carried by the resumed renewal, an inflow from beyond the
+  pair, while the first gave only two units more than it received (`FailedRenewal.gifts_sharing`); up
+  to the shortfall the two runs keep the same levels (`FailedRenewal.agree_to_shortfall`).
 * **A gift at the giver's need** (`GiverAtNeed`). From standings at their needs, a formation giving
   to one that never gives falls below its need and never stands again; over `m + 1` steps its line is
   `m` short of what keeping leaves it, from one gift of one unit (`GiverAtNeed.gift_lost`), while the
   receiver, which stands either way, leaves the same (`GiverAtNeed.withholder_same`).
-* **A draw carried past the gate** (`DrawnBelowNeed`). A taker beyond the pair draws two units from
-  a standing at its need once; the formation never stands again, although nothing is drawn after
-  (`DrawnBelowNeed.drawn`, `DrawnBelowNeed.fallen`).
+* **A draw that ends the renewal** (`DrawnBelowNeed`). A taker beyond the pair draws two units from a
+  standing at its need once; the renewal stops and the formation never stands again, although nothing
+  is drawn after (`DrawnBelowNeed.drawn`, `DrawnBelowNeed.fallen`).
 
 Modelling choices: discrete steps; natural-number amounts; decided Bools for giving; needs as
 thresholds on a formation's own standing; offspring read as the level of a line, what a formation has
-given its descendants; in `Routes` the standings constant and every part a constant amount per step;
-in `Gated` the intended giving, the renewal offered and the draws supplied as patterns, an active
-formation able to pay its upkeep, its line's part and a gift from its standing (`Gated.Parts.fits`),
-and a draw taken within what the standing holds. No ethical predicate, ranking or axiom occurs.
+given its descendants; in `Routes` the standings constant and every part a constant amount per step,
+the same for both formations; in `WhileStanding` the intended giving, the renewal offered and the
+draws supplied as patterns, an active formation able to pay its upkeep, its line's part and a gift
+from its standing (`WhileStanding.Parts.fits`), and a draw taken within what the standing holds. No
+ethical predicate or ranking occurs. An empty axiom report says nothing of these.
+
+Every declaration has an empty axiom report.
 -/
 
 namespace Becoming
@@ -447,11 +460,11 @@ theorem signs :
 
 end Routes
 
-/-! ## Renewal gated on what it renews -/
+/-! ## Renewal while standing -/
 
-namespace Gated
+namespace WhileStanding
 
-/-- The parts of a gated run, constant over the run. -/
+/-- The parts of a run, constant over the run. -/
 structure Parts where
   /-- What each formation needs of its standing. -/
   need : Pair → Nat
@@ -464,7 +477,7 @@ structure Parts where
   /-- An active formation can pay its upkeep, its line's part and a gift from its standing. -/
   fits : ∀ p, upkeep + own + gift ≤ need p
 
-/-- What is supplied to a gated run: the giving each formation intends at each step, what the
+/-- What is supplied to a run: the giving each formation intends at each step, what the
 renewer offers each standing (given only while its formation is active), what a taker beyond the pair
 would draw from each standing, and the starting levels. -/
 structure Setting where
@@ -714,11 +727,11 @@ theorem member_net {S₁ S₂ : Setting} (x : Nat × Nat) (t : Nat) (p : Pair)
     rw [d, o₁, o₂, r₁, r₂, e₁, e₂]
     exact swap_net _ _ _ _
 
-/-- **While both formations stand, giving and keeping keep the same levels.** Two gated runs from the
-same standings, with the same renewal offered and the same draws, one in which both formations intend
-to give at every step and one in which neither does, keep the same levels up to step `T` where both
-formations are active at every step before `T` of the first: whatever the needs, the renewal and the
-draws, mutual giving passes through. -/
+/-- **While both formations stand, mutual giving leaves the levels as no giving does.** Two runs
+from the same standings, with the same renewal offered and the same draws, one in which both
+formations intend to give at every step and one in which neither does, keep the same levels up to
+step `T` where both formations are active at every step before `T` of the first: whatever the needs,
+the renewal and the draws, mutual giving passes through. One-sided giving is not covered. -/
 theorem runs_agree_until {S₁ S₂ : Setting}
     (giving : ∀ p t, S₁.intends p t = true) (withholding : ∀ p t, S₂.intends p t = false)
     (renew : ∀ p t, S₁.renew p t = S₂.renew p t) (draw : ∀ p t, S₁.draw p t = S₂.draw p t)
@@ -745,9 +758,9 @@ theorem runs_agree_until {S₁ S₂ : Setting}
           (congrArg (fun x => cond (isActive G x p) G.own 0) hx.symm)).trans
             (given_line G S₁ t p).symm))
 
-/-- **While both stand, no reading through the levels tells giving from keeping.** Under the
-hypotheses of `runs_agree_until` up to step `n`, a reading of offspring from the levels up to `n` that
-gives `a + β n` where both give at every step and `a + γ n` where neither does has `β = γ`. -/
+/-- **While both stand, no reading through the levels tells mutual giving from no giving.** Under
+the hypotheses of `runs_agree_until` up to step `n`, a reading of offspring from the levels up to `n`
+that gives `a + β n` where both give at every step and `a + γ n` where neither does has `β = γ`. -/
 theorem factors_equal_while_supported {S₁ S₂ : Setting}
     (giving : ∀ p t, S₁.intends p t = true) (withholding : ∀ p t, S₂.intends p t = false)
     (renew : ∀ p t, S₁.renew p t = S₂.renew p t) (draw : ∀ p t, S₁.draw p t = S₂.draw p t)
@@ -780,9 +793,9 @@ theorem next_le_of_idle {t : Nat} {x : Nat × Nat} {p : Pair} (idle : isActive G
       avail G S t x p = standing x p - 0 + (0 + 0))
   Nat.le_trans (Nat.sub_le _ _) (Nat.le_of_eq v)
 
-/-- **Renewal gated on what it renews keeps a fall.** A formation not active at `t`, to which its
-partner gives at no step from `t` on, never rises above its standing at `t` and is active at no later
-step. -/
+/-- **Renewal while standing keeps a fall** (near-definitional: with no renewal while it is inactive
+and no gift, nothing flows in). A formation not active at `t`, to which its partner gives at no step
+from `t` on, never rises above its standing at `t` and is active at no later step. -/
 theorem stays_fallen {p : Pair} {t : Nat} (idle : isActive G (levels G S t) p = false)
     (none : ∀ s, t ≤ s → sends G S s (levels G S s) (partner p) = false) :
     ∀ d, standing (levels G S (t + d)) p ≤ standing (levels G S t) p ∧
@@ -795,8 +808,11 @@ theorem stays_fallen {p : Pair} {t : Nat} (idle : isActive G (levels G S t) p = 
         (Nat.le_trans (next_le_of_idle G S ih.2 (none (t + d) (Nat.le_add_right t d))) ih.1)
     ⟨le, Naturals.ble_false_of_lt (Nat.lt_of_le_of_lt le (lt_of_ble_false idle))⟩
 
-/-- **Supported over the run, a formation leaves the same whatever is given.** A formation active at
-every step before `n` has given its line `own · n`, whatever the giving, the renewal and the draws. -/
+/-- **Standing at every step of a run, a formation leaves `own · n` in it** (by construction: its
+line gains its part exactly at the steps at which it is active). A formation active at every step
+before `n` of a run has given its line `own · n` there, whatever that run's giving, renewal and draws;
+giving changes the line only through the steps at which the formation stands
+(`lines_agree_while_active`). -/
 theorem lineAt_of_active {p : Pair} :
     ∀ n, (∀ t, t < n → isActive G (levels G S t) p = true) → lineAt G S p n = G.own * n
   | 0, _ => (Nat.mul_zero G.own).symm
@@ -807,9 +823,9 @@ theorem lineAt_of_active {p : Pair} :
         (Nat.mul_succ G.own n).symm)
 
 /-- **Read by support, giving matters only where it changes who stands.** A formation's line at
-step `n` is the same in two gated runs where it is active at the same steps before `n`: whatever the
-giving, the renewal and the draws, its offspring so read differ only through steps at which it stands
-in one run and not in the other. -/
+step `n` is the same in two runs where it is active at the same steps before `n`: whatever the giving,
+the renewal and the draws, its offspring so read differ only through steps at which it stands in one
+run and not in the other. -/
 theorem lines_agree_while_active {S₁ S₂ : Setting} (p : Pair) :
     ∀ n, (∀ t, t < n → isActive G (levels G S₁ t) p = isActive G (levels G S₂ t) p) →
       lineAt G S₁ p n = lineAt G S₂ p n
@@ -819,16 +835,16 @@ theorem lines_agree_while_active {S₁ S₂ : Setting} (p : Pair) :
     (congrArg (· + cond (isActive G (levels G S₁ n) p) G.own 0) ih).trans
       (congrArg (fun b => lineAt G S₂ p n + cond b G.own 0) (same n (Nat.lt_succ_self n)))
 
-end Gated
+end WhileStanding
 
 /-! ## A failed renewal: a gift at a shortfall -/
 
 namespace FailedRenewal
 
-open Gated
+open WhileStanding
 
 /-- Needs of three, upkeep, line's part and gift of one each. -/
-def parts : Gated.Parts := ⟨fun _ => 3, 1, 1, 1, fun _ => Nat.le_refl 3⟩
+def parts : WhileStanding.Parts := ⟨fun _ => 3, 1, 1, 1, fun _ => Nat.le_refl 3⟩
 
 /-- The renewer offers two a step; the second's renewal fails at step `1`. -/
 def renew : Pair → Nat → Nat
@@ -907,7 +923,8 @@ theorem second_keeping : ∀ m, lineAt parts keeping second (m + 2) = 2
         (congrArg (fun x => 2 + cond (isActive parts x second) 1 0) (levels_keeping m))
 
 /-- **The pair's lines gain without bound.** Over `m + 4` steps the sharing pair's lines exceed the
-keeping pair's by `m`. -/
+keeping pair's by `m`: the gain is carried by the second's renewal, resumed once the two units lift
+it, an inflow from beyond the pair. -/
 theorem lines_gain (m : Nat) :
     lineAt parts sharing first (m + 4) + lineAt parts sharing second (m + 4) =
       lineAt parts keeping first (m + 4) + lineAt parts keeping second (m + 4) + m := by
@@ -959,11 +976,11 @@ theorem read_to_shortfall_met :
 
 end FailedRenewal
 
-/-! ## A gift at the giver's need: its draw carried past the gate -/
+/-! ## A gift at the giver's need ends the giver's renewal -/
 
 namespace GiverAtNeed
 
-open Gated
+open WhileStanding
 
 /-- The first intends to give at every step and the second never, from standings at their needs,
 the renewer offering two a step to each. -/
@@ -1000,8 +1017,8 @@ theorem kept_first (n : Nat) : lineAt FailedRenewal.parts bothKeep first n = n :
   (lineAt_of_active FailedRenewal.parts bothKeep n (fun t _ =>
     congrArg (fun x => isActive FailedRenewal.parts x first) (levels_kept t))).trans (Nat.one_mul n)
 
-/-- **The gift's draw is carried past the gate**: over `m + 1` steps the giver's line is `m` short of
-what keeping leaves it, from one gift of one unit. -/
+/-- **One gift at the giver's need ends its renewal**: over `m + 1` steps the giver's line is `m`
+short of what keeping leaves it, from one gift of one unit. -/
 theorem gift_lost (m : Nat) :
     lineAt FailedRenewal.parts bothKeep first (m + 1) =
       lineAt FailedRenewal.parts giverAlone first (m + 1) + m :=
@@ -1026,11 +1043,11 @@ theorem standings_differ :
 
 end GiverAtNeed
 
-/-! ## A draw carried past the gate -/
+/-! ## A draw that ends the renewal -/
 
 namespace DrawnBelowNeed
 
-open Gated
+open WhileStanding
 
 /-- A taker beyond the pair would draw two units from the second's standing at step `1`, and nothing
 else. -/
@@ -1052,9 +1069,8 @@ theorem levels_drawn : ∀ m, levels FailedRenewal.parts keeping (m + 2) = (5, 1
   | 0 => rfl
   | m + 1 => (congrArg (advance FailedRenewal.parts keeping (m + 2)) (levels_drawn m)).trans rfl
 
-/-- **The draw is carried past the gate**: the second stands below its need from step `2` on and is
-active at no later step, although the taker draws nothing after step `1` (a case of
-`stays_fallen`). -/
+/-- **The draw ends the renewal**: the second stands below its need from step `2` on and is active
+at no later step, although the taker draws nothing after step `1` (a case of `stays_fallen`). -/
 theorem fallen (d : Nat) :
     isActive FailedRenewal.parts (levels FailedRenewal.parts keeping (2 + d)) second = false :=
   (stays_fallen FailedRenewal.parts keeping (p := second) (t := 2) rfl (fun _ _ => rfl) d).2

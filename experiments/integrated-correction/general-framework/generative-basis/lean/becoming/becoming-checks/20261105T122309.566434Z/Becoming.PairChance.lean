@@ -2,29 +2,49 @@ import Becoming.PairSelection
 import Becoming.Typicality
 
 /-!
-# EL7 (a), scratch: errors by chance end every pair keeping mutual withholding
+# Errors by chance in a pair's run: laws keeping mutual withholding end in it
 
-Scratch for the EL7 investigation (a); not part of the package and not landed. The pair's run of
-`PairSelection`, its errors one-way (an intended giving turns into withholding), read with
-errors drawn from a course of `Typicality`, each error weighing `p` and each step without one `q`.
+`PairSelection` runs a pair under two laws of giving with supplied errors, and an error only
+withholds: a formation erring at a step withholds there, whatever its law intended
+(`err_withholds`), and no error turns a withholding into giving. This module reads the errors from a
+course of `Becoming.Typicality`, each error weighing `p` and each step without one `q`, and counts the
+courses under which the pair still gives.
 
-* A law *keeps mutual withholding* where, after two steps at which both formations withheld, it
-  withholds (`KeepsWithheld`): answering, the window of two, waiting on both and withholding do;
-  agreement, sparing and the alternator do not.
-* Where both formations err at two consecutive steps, every pair of such laws withholds at every
-  step from the first of them on, whatever the errors after (`burst_absorbs`).
-* Errors read from a course of `4 k` values, two steps per block of four (`errorsOf`): where a
+* **Laws keeping mutual withholding.** A law *keeps mutual withholding* where, after two steps at
+  which both formations withheld, it withholds (`KeepsWithheld`): answering, the window of two,
+  waiting on both and withholding do; agreement, sparing and the alternator do not (`keeps_answering`
+  and the rest, `not_keeps_agreeing` and the rest). It is stated on the pair's laws directly, an
+  analogue of `Tolerance.total_stays`, not a case of it.
+* **A burst ends the pair.** Where both formations err at two consecutive steps, a pair of laws
+  keeping mutual withholding withholds at every step from the first of them on, whatever the errors
+  after (`burst_absorbs`, `burst_absorbs_from`).
+* **Errors read from a course** of `4 k` values, two steps per block of four (`errorsOf`): where a
   formation still gives at step `2 k`, no block is all errors (`still_gives_free`).
-* So the courses of `4 k` values under which the pair still gives at step `2 k` weigh at most
-  `S ^ k`, out of `T ^ k`, with `T = (p + q) ^ 4` the four values' whole weight and `S` that of
-  the blocks not all errors, `S < T` where `0 < p` (`absorbed_share`): a share falling
-  geometrically. The deterministic window absorbs every error pattern spaced at two
-  (`WindowedWaiting.gives_unless_errs`); that errors by chance leave such patterns a vanishing
-  share is by hand, not proved here.
+* **The share law.** The courses of `4 k` values under which a formation still gives at step `2 k`
+  weigh at most `S ^ k`, `S` the weight of the blocks of four not all errors (`still_giving_le`).
+  The one block all errors weighs `p ^ 4` and every other block is not all errors, so
+  `S + p ^ 4 = (p + q) ^ 4` (`block_total`): the still-giving courses weigh at most
+  `((p + q) ^ 4 - p ^ 4) ^ k` of the whole `((p + q) ^ 4) ^ k`, and where an error weighs something
+  the block's part is less than the whole (`absorbed_share`). Read as a share, at most
+  `(1 - r ^ 4) ^ k` with `r = p / (p + q)`, falling geometrically in `k` (by hand: a ratio of the
+  weights).
+* **A witness**, each value weighing one: of the sixteen courses of four values, the pair of windows
+  still gives at step `2` under twelve, against the bound fifteen (`window_witness`).
+
+The bound counts only bursts aligned to blocks, so it is loose. The deterministic window gives
+through every error pattern spaced within it (`WindowedWaiting.gives_unless_errs`); with errors by
+chance, that every course of enough steps meets a burst is not stated here. Forgiveness with a
+probability, as in generous tit-for-tat, turns a withholding into giving, and is not represented.
+
+Modelling choices: discrete steps; errors one-way, turning an intended giving into withholding;
+errors read from a course of Booleans, each formation's errors at two steps per block of four; weights
+natural numbers, so a chance is a ratio of weights. An empty axiom report says nothing of these.
+
+Every declaration has an empty axiom report.
 -/
 
 namespace Becoming
-namespace EL7a
+namespace PairChance
 
 open PairSelection WindowedWaiting WindowedWaiting.Pair
 
@@ -44,7 +64,7 @@ theorem not_keeps_agreeing : ¬ KeepsWithheld agreeing := fun h => Bool.noConfus
 theorem not_keeps_sparing : ¬ KeepsWithheld sparing := fun h => Bool.noConfusion h
 theorem not_keeps_alternating : ¬ KeepsWithheld alternating := fun h => Bool.noConfusion h
 
-/-- A formation erring at a step withholds there, whatever the laws. -/
+/-- **An error only withholds**: a formation erring at a step withholds there, whatever the laws. -/
 theorem err_withholds {f g : PairLaw} {e : Errors} {t : Nat} :
     ∀ a : Pair, e (t + 1) a = true → gives f g e a (t + 1) = false
   | first, h => by
@@ -58,9 +78,10 @@ theorem err_withholds {f g : PairLaw} {e : Errors} {t : Nat} :
     rw [time f g e t, h]
     exact and_not_true _
 
-/-- Where both formations withheld at their last two steps, laws keeping mutual withholding keep it. -/
-theorem dead_stays {f g : PairLaw} (wf : KeepsWithheld f) (wg : KeepsWithheld g) (e : Errors) (x : State)
-    (h1 : x.2.1 = (false, false)) (h2 : x.2.2 = (false, false)) :
+/-- Where both formations withheld at their last two steps, laws keeping mutual withholding keep
+it. -/
+theorem dead_stays {f g : PairLaw} (wf : KeepsWithheld f) (wg : KeepsWithheld g) (e : Errors)
+    (x : State) (h1 : x.2.1 = (false, false)) (h2 : x.2.2 = (false, false)) :
     (step f g e x).2.1 = (false, false) ∧ (step f g e x).2.2 = (false, false) := by
   show (f x.2.1 x.2.2 && !e (x.1 + 1) first, x.2.1.1) = (false, false) ∧
     (g x.2.2 x.2.1 && !e (x.1 + 1) second, x.2.2.1) = (false, false)
@@ -69,8 +90,8 @@ theorem dead_stays {f g : PairLaw} (wf : KeepsWithheld f) (wg : KeepsWithheld g)
 
 /-- **Where both formations err at steps `t + 1` and `t + 2`, a pair of laws keeping mutual
 withholding withholds at every step from `t + 1` on**, whatever the errors after. -/
-theorem burst_absorbs {f g : PairLaw} (wf : KeepsWithheld f) (wg : KeepsWithheld g) {e : Errors} {t : Nat}
-    (b1 : e (t + 1) first = true) (b2 : e (t + 1) second = true)
+theorem burst_absorbs {f g : PairLaw} (wf : KeepsWithheld f) (wg : KeepsWithheld g) {e : Errors}
+    {t : Nat} (b1 : e (t + 1) first = true) (b2 : e (t + 1) second = true)
     (b3 : e (t + 2) first = true) (b4 : e (t + 2) second = true) :
     ∀ k, gives f g e first (t + 1 + k) = false ∧ gives f g e second (t + 1 + k) = false :=
   have dead : ∀ k, ((course f g e).state (t + 1 + (k + 1))).2.1 = (false, false) ∧
@@ -87,8 +108,9 @@ theorem burst_absorbs {f g : PairLaw} (wf : KeepsWithheld f) (wg : KeepsWithheld
   | 0 => ⟨err_withholds first b1, err_withholds second b2⟩
   | k + 1 => ⟨congrArg (fun l : Lags => l.1) (dead k).1, congrArg (fun l : Lags => l.1) (dead k).2⟩
 
-theorem burst_absorbs_from {f g : PairLaw} (wf : KeepsWithheld f) (wg : KeepsWithheld g) {e : Errors}
-    {t : Nat} (b1 : e (t + 1) first = true) (b2 : e (t + 1) second = true)
+/-- The same at every step from the first of the burst on, for either formation. -/
+theorem burst_absorbs_from {f g : PairLaw} (wf : KeepsWithheld f) (wg : KeepsWithheld g)
+    {e : Errors} {t : Nat} (b1 : e (t + 1) first = true) (b2 : e (t + 1) second = true)
     (b3 : e (t + 2) first = true) (b4 : e (t + 2) second = true) {m : Nat} (le : t + 1 ≤ m) :
     ∀ a, gives f g e a m = false :=
   match le_dest le with
@@ -176,13 +198,15 @@ theorem weight_append (p q : Nat) : ∀ u w : List Bool,
 
 /-- The courses of `n + m` values, read as `m` values before the courses of `n`. -/
 theorem total_courses_split (n : Nat) : ∀ (m : Nat) (F : List Bool → Nat),
-    total (Typicality.courses (n + m)) F = total (Typicality.courses n) (fun w => total (Typicality.courses m) (fun u => F (u ++ w)))
+    total (Typicality.courses (n + m)) F =
+      total (Typicality.courses n) (fun w => total (Typicality.courses m) (fun u => F (u ++ w)))
   | 0, F => Typicality.total_congr (fun w => (Nat.add_zero (F w)).symm) (Typicality.courses n)
   | m + 1, F => by
     show total (Typicality.extend (Typicality.courses (n + m))) F = _
     rw [Typicality.total_extend, total_courses_split n m]
     exact Typicality.total_congr
-      (fun w => (Typicality.total_extend (fun u => F (u ++ w)) (Typicality.courses m)).symm) (Typicality.courses n)
+      (fun w => (Typicality.total_extend (fun u => F (u ++ w)) (Typicality.courses m)).symm)
+      (Typicality.courses n)
 
 /-- What a course weighs where no block is all errors, and nothing elsewhere. -/
 def survive (p q : Nat) (w : List Bool) : Nat := cond (burstFree w) (Typicality.weight p q w) 0
@@ -234,7 +258,8 @@ theorem total_blocks {F G : List Bool → Nat} (one : F [] = 1)
 
 /-- Where an error weighs something, the blocks not all errors weigh less than all blocks. -/
 theorem block_lt (p q : Nat) (pos : 0 < p) :
-    total (Typicality.courses 4) (survive p q) < total (Typicality.courses 4) (Typicality.weight p q) :=
+    total (Typicality.courses 4) (survive p q) <
+      total (Typicality.courses 4) (Typicality.weight p q) :=
   have le : ∀ w, survive p q w ≤ Typicality.weight p q w := fun w => by
     show cond (burstFree w) (Typicality.weight p q w) 0 ≤ Typicality.weight p q w
     cases burstFree w with
@@ -243,25 +268,55 @@ theorem block_lt (p q : Nat) (pos : 0 < p) :
   have W : 0 < Typicality.weight p q [true, true, true, true] :=
     Nat.mul_pos pos (Nat.mul_pos pos (Nat.mul_pos pos (Nat.mul_pos pos (Nat.succ_pos 0))))
   show survive p q [true, true, true, true] + total (Typicality.courses 4).tail (survive p q) <
-    Typicality.weight p q [true, true, true, true] + total (Typicality.courses 4).tail (Typicality.weight p q) from
+    Typicality.weight p q [true, true, true, true] +
+      total (Typicality.courses 4).tail (Typicality.weight p q) from
   Nat.lt_of_lt_of_le (Nat.add_lt_add_right W _)
     (Nat.add_le_add_left (Typicality.total_le le _) _)
+
+/-- The block all errors weighs `p ^ 4`. -/
+theorem weight_burst (p q : Nat) : Typicality.weight p q [true, true, true, true] = p ^ 4 :=
+  (Typicality.weight_pow p q [true, true, true, true]).trans (Nat.mul_one (p ^ 4))
+
+/-- Every block of four values but the one all errors is not all errors. -/
+theorem free_but_burst : ∀ w, w ∈ (Typicality.courses 4).tail → burstFree w = true := by
+  decide
+
+/-- **The blocks not all errors weigh the whole less the block all errors**: with it they weigh
+`(p + q) ^ 4`. -/
+theorem block_total (p q : Nat) :
+    total (Typicality.courses 4) (survive p q) + p ^ 4 = (p + q) ^ 4 :=
+  have rest : total (Typicality.courses 4).tail (survive p q) =
+      total (Typicality.courses 4).tail (Typicality.weight p q) :=
+    Typicality.total_congr_mem _ fun w mw =>
+      congrArg (fun b => cond b (Typicality.weight p q w) 0) (free_but_burst w mw)
+  calc total (Typicality.courses 4) (survive p q) + p ^ 4
+      = (0 + total (Typicality.courses 4).tail (survive p q)) + p ^ 4 := rfl
+    _ = p ^ 4 + total (Typicality.courses 4).tail (Typicality.weight p q) := by
+        rw [Nat.zero_add, rest, Nat.add_comm]
+    _ = Typicality.weight p q [true, true, true, true] +
+          total (Typicality.courses 4).tail (Typicality.weight p q) := by
+        rw [weight_burst]
+    _ = total (Typicality.courses 4) (Typicality.weight p q) := rfl
+    _ = (p + q) ^ 4 := Typicality.total_weight p q 4
+
+/-- The blocks not all errors weigh `(p + q) ^ 4 - p ^ 4`. -/
+theorem block_free_weight (p q : Nat) :
+    total (Typicality.courses 4) (survive p q) = (p + q) ^ 4 - p ^ 4 :=
+  (Naturals.add_sub_cancel _ (p ^ 4)).symm.trans (congrArg (· - p ^ 4) (block_total p q))
 
 /-- Whether a formation still gives at step `2 k`, errors read from the course. -/
 def stillGives (f g : PairLaw) (k : Nat) (w : List Bool) : Bool :=
   gives f g (errorsOf w) first (2 * k) || gives f g (errorsOf w) second (2 * k)
 
-/-- **Errors by chance end every pair keeping mutual withholding.** For every pair of laws
-keeping mutual withholding, the courses of `4 k` values under which a formation still gives at step `2 k` weigh at most
-`S ^ k`, out of the whole weight `T ^ k`, where `T = (p + q) ^ 4` is what four values weigh and
-`S` what the blocks of four not all errors weigh; where an error weighs something, `S < T`. -/
-theorem absorbed_share {f g : PairLaw} (wf : KeepsWithheld f) (wg : KeepsWithheld g) (p q k : Nat) :
-    total (Typicality.courses (4 * k)) (fun w => cond (stillGives f g k w) (Typicality.weight p q w) 0) ≤
-        total (Typicality.courses 4) (survive p q) ^ k ∧
-      total (Typicality.courses (4 * k)) (Typicality.weight p q) = total (Typicality.courses 4) (Typicality.weight p q) ^ k ∧
-      total (Typicality.courses 4) (Typicality.weight p q) = (p + q) ^ 4 ∧
-      (0 < p → total (Typicality.courses 4) (survive p q) < total (Typicality.courses 4) (Typicality.weight p q)) :=
-  ⟨Nat.le_trans (Becoming.total_le (Typicality.courses (4 * k)) fun w mw => by
+/-- **The courses still giving weigh at most the blocks' `k`-th power.** For every pair of laws
+keeping mutual withholding, the courses of `4 k` values under which a formation still gives at step
+`2 k` weigh at most `S ^ k`, `S` what the blocks of four not all errors weigh. -/
+theorem still_giving_le {f g : PairLaw} (wf : KeepsWithheld f) (wg : KeepsWithheld g)
+    (p q k : Nat) :
+    total (Typicality.courses (4 * k))
+        (fun w => cond (stillGives f g k w) (Typicality.weight p q w) 0) ≤
+      total (Typicality.courses 4) (survive p q) ^ k :=
+  Nat.le_trans (Becoming.total_le (Typicality.courses (4 * k)) fun w mw => by
       show cond (gives f g (errorsOf w) first (2 * k) || gives f g (errorsOf w) second (2 * k))
         (Typicality.weight p q w) 0 ≤ survive p q w
       cases h1 : gives f g (errorsOf w) first (2 * k) with
@@ -278,36 +333,34 @@ theorem absorbed_share {f g : PairLaw} (wf : KeepsWithheld f) (wg : KeepsWithhel
         | false => exact Nat.zero_le _)
     (Nat.le_of_eq (total_blocks (F := survive p q) rfl (fun u w mu =>
       match u, shape_of_mem_four mu with
-      | _, ⟨b0, b1, c0, c1, rfl⟩ => survive_four p q w b0 b1 c0 c1) k)),
-   total_blocks (F := Typicality.weight p q) rfl (fun u w _ => weight_append p q u w) k,
-   Typicality.total_weight p q 4,
-   block_lt p q⟩
+      | _, ⟨b0, b1, c0, c1, rfl⟩ => survive_four p q w b0 b1 c0 c1) k))
 
-/-- The premise is met: the window of two, answering and waiting on both, in any pairing. -/
-example (p q k : Nat) := absorbed_share keeps_windowed keeps_answering p q k
+/-- **Errors by chance: the share of courses still giving falls geometrically.** For every pair of
+laws keeping mutual withholding, errors only withholding, the courses of `4 k` values under which a
+formation still gives at step `2 k` weigh at most `((p + q) ^ 4 - p ^ 4) ^ k`, out of the whole weight
+`((p + q) ^ 4) ^ k`; where an error weighs something, `(p + q) ^ 4 - p ^ 4 < (p + q) ^ 4`. -/
+theorem absorbed_share {f g : PairLaw} (wf : KeepsWithheld f) (wg : KeepsWithheld g)
+    (p q k : Nat) :
+    total (Typicality.courses (4 * k))
+        (fun w => cond (stillGives f g k w) (Typicality.weight p q w) 0) ≤
+        ((p + q) ^ 4 - p ^ 4) ^ k ∧
+      total (Typicality.courses (4 * k)) (Typicality.weight p q) = ((p + q) ^ 4) ^ k ∧
+      (0 < p → (p + q) ^ 4 - p ^ 4 < (p + q) ^ 4) :=
+  ⟨Nat.le_trans (still_giving_le wf wg p q k)
+      (Nat.le_of_eq (congrArg (· ^ k) (block_free_weight p q))),
+   (total_blocks (F := Typicality.weight p q) rfl (fun u w _ => weight_append p q u w) k).trans
+      (congrArg (· ^ k) (Typicality.total_weight p q 4)),
+   fun pos => Nat.lt_of_le_of_lt (Nat.le_of_eq (block_free_weight p q).symm)
+      (Nat.lt_of_lt_of_le (block_lt p q pos) (Nat.le_of_eq (Typicality.total_weight p q 4)))⟩
 
-/-- A witness, each value weighing one: of the sixteen courses of four values, the window pair
-still gives at step `2` under twelve, the four with both formations erring at step `2` ending
-it there; the bound is fifteen. -/
+/-- A witness, each value weighing one: of the sixteen courses of four values, the pair of windows
+still gives at step `2` under twelve, the four with both formations erring at step `2` ending it
+there; the bound is fifteen. -/
 theorem window_witness :
     total (Typicality.courses 4) (fun w => cond (stillGives windowed windowed 1 w)
         (Typicality.weight 1 1 w) 0) = 12 ∧
       total (Typicality.courses 4) (survive 1 1) = 15 := by
   decide
 
-end EL7a
+end PairChance
 end Becoming
-
-#print axioms Becoming.EL7a.window_witness
-#print axioms Becoming.EL7a.burst_absorbs
-#print axioms Becoming.EL7a.burst_absorbs_from
-#print axioms Becoming.EL7a.burst_of_not_free
-#print axioms Becoming.EL7a.still_gives_free
-#print axioms Becoming.EL7a.total_courses_split
-#print axioms Becoming.EL7a.total_blocks
-#print axioms Becoming.EL7a.block_lt
-#print axioms Becoming.EL7a.absorbed_share
-#print axioms Becoming.EL7a.not_keeps_agreeing
-#print axioms Becoming.EL7a.survive_four
-#print axioms Becoming.EL7a.shape_of_mem_four
-#print axioms Becoming.EL7a.weight_append

@@ -704,7 +704,7 @@
   "ending-laws-as-regimes-on-a-lineage": {
    "region": "life",
    "base": "old-base",
-   "note": "LineageRegimes EL2: three ending laws as regimes on a lineage, the stock their horizon; the stock decides neither fate"
+   "note": "LineageRegimes EL2, LineageDrawdown EL7: three ending laws as regimes on a lineage, the stock their horizon; the stock decides neither fate; renewal run past needs no gate"
   },
   "endpoint-loss-and-return": {
    "region": "map",
@@ -2665,6 +2665,16 @@
    "region": "life",
    "base": "general",
    "note": "SelectionLevels US: where each member gains for every unit its group keeps, groups of unequal size with the same whole spread and size-weighted spread of their means can select for keeping or against it (04 §5)"
+  },
+  "what-decides-giving-against-keeping-on-a-flow": {
+   "region": "collective",
+   "base": "old-base",
+   "note": "PairFlow EL7: a pair's run read as a balanced flow, the factors from its routes, gamma below beta exactly where giving loses less than keeping spoils with a matching; with renewal while standing mutual giving passes through; at a shortfall a gift or a draw changes the lines either way (05 §6)"
+  },
+  "errors-by-chance-end-a-pair-keeping-mutual-withholding": {
+   "region": "collective",
+   "base": "general",
+   "note": "PairChance EL7: errors only withholding, read by chance from Typicality's courses; a burst ends a pair of laws keeping mutual withholding, and the courses still giving at step 2k weigh at most ((p+q)^4 - p^4)^k of ((p+q)^4)^k (05 §5)"
   }
  },
  "modules": {
@@ -4582,6 +4592,21 @@
    "region": "collective",
    "base": "general",
    "note": "TRL: Cascade's premise at the histories reached, weaker than Cascade's (05 §8)"
+  },
+  "Becoming.LineageDrawdown": {
+   "region": "life",
+   "base": "old-base",
+   "note": "EL7: the lineage reading without its gate, the landed gated laws its cases by rfl; a line drawn past renewal from outside degenerates (04 §4)"
+  },
+  "Becoming.PairFlow": {
+   "region": "collective",
+   "base": "old-base",
+   "note": "EL7: the pair's run as a balanced flow, the factors from its routes; renewal while standing; gifts and draws at a shortfall (05 §6)"
+  },
+  "Becoming.PairChance": {
+   "region": "collective",
+   "base": "general",
+   "note": "EL7: errors by chance in a pair's run; a burst ends laws keeping mutual withholding, the share still giving bounded (05 §5)"
   }
  }
 }
