@@ -103,6 +103,7 @@ Aliases: `What comes back to the shapers, read by readers drawn from the selecte
 - 26 October 2026 (MA4b, study section 420): the readers' timing joined to the critical mass in loss-read-in-time-by-the-others; the next step, the two scope items on the readers' timing, and a related record updated. The laws are unchanged.
 - 3 November 2026, board item AJ8 (study section 503): the noise boundary narrowed: drawn one member at a time either lock is left by drift (drawn-shaping-drawn-one-at-a-time), and the long-run state under noise is not the risk-dominant one in general; the laws are unchanged.
 - 5 November 2026, board item CMT: the critical mass's correspondence to adoption frozen before any study's choice data is read (experiments/critical-mass-located/DESIGN.md): laboratory stag hunts whose payoffs the experimenter set, a status quo paying the same whatever the partner does, screened by their design documents first; the mass located at the shapers' share (c - lo)/(hi - lo) (critical_iff) in the regime lo < c < hi (critical_mass_iff); exact sign tests of the share's change by start, a readout of each game's own inner bin; verdicts on the correspondence, never on the law; not run. The law is unchanged; next_delta's steps now include the frozen test's run, whose downloads and coding wait on Ren's yes.
+- 6 November 2026, board item RUN6: next_delta's zh said noise and long-term states where its en says mutation with drift and the time to leave the lock; the zh brought to the en. The law is unchanged.
 
 </details>
 
