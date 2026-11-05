@@ -1,14 +1,14 @@
 """T1R's run (DESIGN.md, section 10): on the recorders' tables in FOLDER, the folder T1N's downloads fill, with R8
-where it could be had: T1N's need, then V1 and its readings, the reports, and the lakes T1N also reads; the result
-kept whatever it is, and never overwritten.
+where it could be had: T1N's need, then V1 and its readings, the reports, the years read with more than one fall
+survey, and the lakes T1N also reads; the result kept whatever it is, and never overwritten.
 
     python3 -B experiments/stocked-above-the-need/run.py FOLDER     # writes results/run.json
 
 It refuses unless T1N's freeze checks and T1R's does, by T1N's own check (its run.py's `frozen`, here on T1R's
 folder): each link committed once and never changed, the newest link's files the bytes it names and committed,
 and the dry run's record passed on that code. It refuses unless T1N's downloads.json is committed once and its
-files are in the folder with their sha-256, by T1N's own `inputs`; unless R8, where it is in the folder, is
-recorded with its sha-256 in T1R's downloads.json, committed once; and where results/run.json exists.
+files are in the folder with their sha-256, by T1N's own `inputs`; where R8 is in the folder and T1R's
+downloads.json, committed once, does not record it with its sha-256; and where results/run.json exists.
 Standard library only; no model is called.
 """
 
@@ -37,10 +37,12 @@ def frozen():
 
 
 def inputs(folder):
-    """T1N's downloads by T1N's own check, and R8 by T1R's downloads.json where the file is in the folder."""
+    """T1N's downloads by T1N's own check, and T1R's by its downloads.json: R8, where it is in the folder, must be
+    recorded there."""
     T1N_RUN.once(t1r.T1N_DIR.parents[1], str(T1N_RUN.DOWNLOADS.relative_to(t1r.T1N_DIR.parents[1])))
     out = {"T1N's": T1N_RUN.inputs(folder)}
     r8 = Path(folder) / additions.MARKS["file"]
+    recorded = {}
     if DOWNLOADS.exists():
         T1N_RUN.once(HERE.parents[1], str(DOWNLOADS.relative_to(HERE.parents[1])))
         recorded = {d["file"]: d["sha256"] for d in json.loads(DOWNLOADS.read_text())["files"]}
@@ -48,7 +50,7 @@ def inputs(folder):
             if not (Path(folder) / name).exists() or T1N_RUN.sha(Path(folder) / name) != h:
                 raise SystemExit(f"{name} is not the file T1R's downloads.json records, or is missing")
         out["T1R's"] = recorded
-    elif r8.exists():
+    if r8.exists() and r8.name not in recorded:
         raise SystemExit(f"{r8.name} is in the folder and T1R's downloads.json does not record it")
     return out
 
@@ -59,19 +61,25 @@ def run(folder, check_frozen=True, check_inputs=True):
     lakes, meta = reader.read_all(folder)
     lakes = list(lakes.values())
     labels = meta["labels per year"]
-    dated, _ = additions.dated(folder)
+    dated, undated, _ = additions.dated(folder)
     marks, marks_read = additions.marks(folder)
     out = {"frozen": stamp, "inputs": hashes, "layout facts": {"T1N's": reader.layout_facts(folder),
                                                                 "T1R's": additions.facts(folder)},
-           "reading": {**meta, "R8": marks_read, "stocking dates read": dated is not None}, "lakes read": len(lakes)}
+           "reading": {**meta, "R8": marks_read, "stocking dates read": dated is not None,
+                       "lakes undated": len(undated)}, "lakes read": len(lakes)}
     nd = t1n.need(lakes, floor=t1n.FLOOR, labels=labels)
     out["need"] = nd
     if nd["need"] is None:
         out["V1"] = {"verdict": "not decided: no need, " + nd.get("reason", "")}
     else:
-        res = t1r.read(lakes, nd, dated, marks=marks)
+        res = t1r.read(lakes, nd, dated, marks=marks, undated=undated)
         out.update(res)
-        mine = {r["id"] for r in res["rows"] if "out" not in r}
+        inn = [r for r in res["rows"] if "out" not in r]
+        twice = additions.repeated_fall(folder)
+        out["years with more than one fall survey, read at the largest catch (reported)"] = {
+            "years read": sum((r["id"], r["year read"]) in twice for r in inn),
+            "years below the need": sum((r["id"], r["year below"]) in twice for r in inn if r["year below"] is not None)}
+        mine = {r["id"] for r in inn}
         last = max(t for lk in lakes for t in lk["adults"]) - t1n.GAP_MIN
         theirs = {r["id"] for r in t1n.read(lakes, nd["need"], t1n.FIRST_REF, last, t1n.FLOOR, labels)["rows"] if "out" not in r}
         out["lakes T1R reads that T1N also reads (reported)"] = {"T1R's lakes read": len(mine), "of them read by T1N": len(mine & theirs)}
@@ -80,7 +88,8 @@ def run(folder, check_frozen=True, check_inputs=True):
             {"lakes": None, "V1": "not computed: no lake's name was read"} if ids is None else
             {"lakes": [], "V1": "not computed: no lake in the county matches the names (T1N's DESIGN.md, section 9)"}
             if not ids else
-            {"lakes": ids, "V1": t1r.read([lk for lk in lakes if lk["id"] not in ids], nd, dated)["V1"]["verdict"]})
+            {"lakes": ids, "V1": t1r.read([lk for lk in lakes if lk["id"] not in ids], nd, dated,
+                                          undated=undated)["V1"]["verdict"]})
     return out
 
 
