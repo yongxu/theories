@@ -1,0 +1,7 @@
+082926e9adf0c799a20fe20d3425a844b8c0e79357505559641f61da3a37c470  experiments/stocked-above-the-need/additions.py
+bb3d3d43c3e7b3077aa9c0d630af69f6ba92422688be16caf14155f9753ceb38  experiments/stocked-above-the-need/dry_run.py
+d0ef9f7f941fbe72e847f75321b118991ab270565c9891c577798b2197743ce2  experiments/stocked-above-the-need/layout.json
+3115feeee83b8c6b7df1f1a267a2139bab40b0081159e854a913c05e41a063c1  experiments/stocked-above-the-need/results/dry-run.json
+ded4fddda1724d379ca59170ae4749f07d0a6540221cb14b0e4efd90f31fb348  experiments/stocked-above-the-need/run.py
+c7f87e62ab4f2031666d42a6396c82b5856182657e88466ad4b3e4362cac3958  experiments/stocked-above-the-need/t1r.py
+9c3c2b8c14674d305b4fdb53e2f394b1aebcea9ae508a5e17f10d9f6a26640e3  experiments/stocked-above-the-need/write_frozen.py
