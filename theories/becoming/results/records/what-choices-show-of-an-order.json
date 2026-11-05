@@ -183,8 +183,8 @@
     "zh": "纯核，公理报告皆空：ShownOrder 唯引 Grammar。例之表为逐一论元之嵌套匹配；搜之例于其二单上以 rfl 计算。"
   },
   "next_delta": {
-    "en": "A realizable class: a training installing either order of a search; a finite mechanism of prediction, selection, revision and intervention on which inner alignment and assistance are stated (RF round 2); a run of the frozen test of the correspondence, that a chooser picks by strict dominance under one strict order (TR1), and of trained choosers read by its rule (TR1A); review by a person.",
-    "zh": "可实现之类：训练装入一搜之任一序；预测、选择、修订与干预之有限机制，内对齐与协助于其上陈述（RF 第二轮）；择者之对应之冻结检验之运行，即择者依一严序以严胜而择（TR1），及以其则读所训之择者（TR1A）；人之审查。"
+    "en": "A realizable class: a training installing either order of a search; a finite mechanism of prediction, selection, revision and intervention on which inner alignment and assistance are stated (RF round 2); a run of the frozen test of the correspondence, that a chooser picks by strict dominance under one strict order (TR1); review by a person. Trained choosers read by TR1's rule (TR1A's Stage A) ran on 6 November 2026, on Ren's yes: the comparator class, trained under one order, picked on all 20 seeds in a way no strict order accords with, which, as FREEZE-10 fixed before the run, says that reading its picks as one order needs more than its training and says nothing about this law (experiments/formations-that-read/README.md, the runs made).",
+    "zh": "可实现之类：训练装入一搜之任一序；预测、选择、修订与干预之有限机制，内对齐与协助于其上陈述（RF 第二轮）；择者之对应之冻结检验之运行，即择者依一严序以严胜而择（TR1）；人之审查。以 TR1 之则读所训之择者（TR1A 之甲阶）已于2026年11月6日经 Ren 之可而运行：对比者之类，依一序而训，于二十种子皆以无一严序可合之方式而择；如 FREEZE-10 于运行之前所定，此言以一序读其所择需多于其训练，而于此律无所言（experiments/formations-that-read/README.md，已作之运行）。"
   },
   "correspondence": {
     "en": "Rationalizing strict choices by a strict partial order, through the least transitive relation holding what they show, is close to Richter's theorem (1966) without completeness: a strict partial order, not a complete preference, so no extension principle (Szpilrajn 1930) is needed; it is not Afriat's theorem (1967), which concerns expenditure data and utility. AI reading: read with training, where the training restricts the orders no further, comparisons beyond the shown reach stay open, goal misgeneralization located exactly as a possibility, not shown (Langosco and others 2022; Shah and others 2022), and inner alignment (Hubinger and others 2019) for searches by an order; the kernel on a law's own courses is what training installs. Read with a helper, what strict choices alone fix of an order: maximal choices force none, the order form of the degenerate reward (Ng and Russell 2000); that behaviour fixes a planner and a reward together only under assumptions on the planner (Armstrong and Mindermann 2018) lies outside: the law assumes strict dominance at the occasions shown and does not represent how choices are computed. These are readings, not containments.",
@@ -359,6 +359,10 @@
     {
       "en": "5 November 2026, board item TR1A: TR1's Stage A frozen before any training (experiments/formations-that-read/FREEZE-10.md): an item-score chooser, a conjunctive pairwise comparator and a set-input network, trained on the met menus under a hidden order whose met pairs are a chain, with labels carrying no order as the negative control, each read on all 70 presentations by TR1's frozen rule; with TR1's informing variant, whose one verdict is this law's across frames; not run. The law is unchanged; next_delta adds Stage A's run, which waits on Ren's yes.",
       "zh": "2026年11月5日，看板项 TR1A：TR1 之甲阶于任何训练之前冻结（experiments/formations-that-read/FREEZE-10.md）：项分之择者、合取之对比者与集入之网，于所会之单上依其会对成链之隐序而训，以不携序之标为反对照，各以 TR1 冻结之则读其七十呈示；并 TR1 之告之变体，其唯一判定为此律跨框者；未运行。律不变；next_delta 增甲阶之运行，待 Ren 之可。"
+    },
+    {
+      "en": "6 November 2026, board item RUN6: TR1's Stage A ran on Ren's yes (experiments/formations-that-read/README.md, the runs made): the comparator class contradicted on all 20 seeds under the order, item-score and set-input passed; next_delta keeps TR1's own run and says the Stage A has run. The law is unchanged.",
+      "zh": "2026年11月6日，看板项 RUN6：TR1 之甲阶经 Ren 之可而运行（experiments/formations-that-read/README.md，已作之运行）：对比者之类于序下二十种子皆被驳，项分与集入皆通过；next_delta 保留 TR1 自身之运行，并言甲阶已运行。此律不变。"
     }
   ]
 }
