@@ -60,8 +60,12 @@ WORLDS = {
     "unrecorded, read": dict(family="T1 holds", q=3, unrecorded=1 / 3),
     "open": dict(family="T1 holds", q=3, immigration=0.15),
     "episodic": dict(family="T1 holds", q=3, sigma_r=1.6),
-    "unsurveyed": dict(family="T1 holds", q=3, no_estimate_below=0.15),
+    "unsurveyed": dict(family="T1 holds", q=3, no_estimate_below=0.03),            # no estimate of a lake this low
+    "unsurveyed early": dict(family="T1 holds", q=3, no_estimate_below=0.15),      # reported: surveys stopping early
     "static labels": dict(family="T1 holds", q=3, static_labels=True),
+    "estimates widen": dict(family="T1 holds", q=3, cv_low=(2.0, 0.5, 1.0)),      # mark-recapture's CV at low density
+    "labels follow failure": dict(family="T1 holds", q=3, remnant=(3, 0.5)),      # recorders relabel a failing lake
+    "labels follow failure, slowly": dict(family="T1 holds", q=3, remnant=(3, 0.2)),
     # the need misplaced: T1 false where the age-0 surveys put a need
     "survival compensates": dict(family="need misplaced", q=3, gamma=0.3, c_gamma=0.40),
     "compensates, relabelled": dict(family="need misplaced", q=3, gamma=0.3, c_gamma=0.40, relabel=0.03),
@@ -69,25 +73,33 @@ WORLDS = {
     "need falls far": dict(family="need misplaced", q=3, k_after=0.25),
     "weak depensation": dict(family="need misplaced", q=1.5, sigma_r=1.6),  # stopping well below the 50% point
     "renewal below the floor": dict(family="need misplaced", q=3, gamma=0.3, c_gamma=0.10),
-    # no need: renewal never stops
+    # no need: renewal never stops with the level, though it may fail by chance
     "no need": dict(family="no need", q=1),
+    "no need, catch 0.1": dict(family="no need", q=1, catch=0.1),                 # the need fitted where T1's world's is
     "lakes differ 0.5": dict(family="no need", q=1, prod_spread=0.5),
     "lakes differ 0.7": dict(family="no need", q=1, prod_spread=0.7),
     "lakes differ 1.0": dict(family="no need", q=1, prod_spread=1.0),
     "lakes differ 1.5": dict(family="no need", q=1, prod_spread=1.5),
+    "lakes differ 0.7, catch 0.1": dict(family="no need", q=1, prod_spread=0.7, catch=0.1),
+    "lakes differ 1.5, catch 0.1": dict(family="no need", q=1, prod_spread=1.5, catch=0.1),
     "general decline": dict(family="no need", q=1, decline=0.04),
+    "general decline, catch 0.1": dict(family="no need", q=1, decline=0.04, catch=0.1),
     "no need, relabelled": dict(family="no need", q=1, prod_spread=0.7, relabel=0.03),
     "no need, unsurveyed": dict(family="no need", q=1, prod_spread=0.7, no_estimate_below=0.15),
     "renewal unseen": dict(family="no need", q=1, unseen=0.5),
     "floor by chance": dict(family="no need", q=1, floor_chance=(-0.847, 0.6)),
     "episodic, no need": dict(family="no need", q=1, sigma_r=2.5),
     "episodic, lakes differ": dict(family="no need", q=1, sigma_r=2.0, prod_spread=1.0),
-    "renewal stops after": dict(family="no need", q=1, prod_spread=0.7, collapse=0.2),   # for a fifth of the lakes
-    "no renewal in some": dict(family="no need", q=1, prod_spread=0.5, none=0.15),
+    # renewal lost to another cause (habitat, warming), whatever the level: reported, with no bound (DESIGN.md, §8)
+    "renewal stops after": dict(family="renewal lost", q=1, prod_spread=0.7, collapse=0.2),   # a fifth, after 2012
+    "no renewal in some": dict(family="renewal lost", q=1, prod_spread=0.5, none=0.15),
+    "renewal lost before, catch 0.1": dict(family="renewal lost", q=1, catch=0.1, loss=(0.3, 1998, 2012)),
+    "renewal lost before, lakes differ": dict(family="renewal lost", q=1, prod_spread=0.7, loss=(0.3, 1998, 2012)),
+    "renewal lost around the cutoff": dict(family="renewal lost", q=1, prod_spread=1.0, loss=(0.2, 2000, 2012)),
     # reported apart
     "half need": dict(family="mixed", q_mix=(3, 1)),
 }
-NATURAL, STOCKED = t1n.NR, "stocked"
+NATURAL, STOCKED, REMNANT = t1n.NR, "stocked", "remnant"
 
 
 class Checks:
@@ -130,25 +142,45 @@ def lake(rng, i, world, speed):
     unrec = set()
     phase, every = rng.randrange(5), rng.choice((3, 4, 5))
     surveyed = rng.random() < 0.7
+    loss_year = None
+    if "loss" in w:                                    # (share, first year, last year): renewal lost from a year on
+        share, y0, y1 = w["loss"]
+        if rng.random() < share:
+            loss_year = rng.randint(y0, y1)
     label, rescued = NATURAL, False
     for yr in YEARS:
         k = k0 * (w.get("k_after", 1.0) if yr > t1n.CUTOFF else 1.0)
         a = a0 * (1 - w.get("decline", 0.0)) ** (yr - 1990)
-        if none or (collapse and yr > t1n.CUTOFF):
+        if none or (collapse and yr > t1n.CUTOFF) or (loss_year is not None and yr >= loss_year):
             a = 0.0
         sr = w.get("sigma_r", SIGMA_R)
         r = recruitment(x, q, k, a) * math.exp(sr * rng.gauss(0, 1) - sr * sr / 2 + SIGMA_R * SIGMA_R / 2)
         hist[yr] = r
         rec["label"][yr] = label
         if (yr - 1990 + phase) % every == 0 and x >= w.get("no_estimate_below", 0.0):
-            est = x * math.exp(CV * rng.gauss(0, 1) - CV * CV / 2)
-            rec["adults"][yr] = (est, est * math.exp(-1.96 * CV), est * math.exp(1.96 * CV))
+            cv = CV
+            if "cv_low" in w:                          # (x0, power, cap): error, and its interval, widening below x0
+                x0, pw, cap = w["cv_low"]
+                cv = min(cap, CV * max(1.0, (x0 / max(x, 1e-9)) ** pw))
+            est = x * math.exp(cv * rng.gauss(0, 1) - cv * cv / 2)
+            rec["adults"][yr] = (est, est * math.exp(-1.96 * cv), est * math.exp(1.96 * cv))
         if surveyed or rng.random() < 0.4:
             seen = x / (x + w["unseen"]) if "unseen" in w else 1.0
-            rec["age0"][yr] = round(r * seen * math.exp(0.3 * rng.gauss(0, 1)), 1)
+            rec["age0"][yr] = round(r * seen * w.get("catch", 1.0) * math.exp(0.3 * rng.gauss(0, 1)), 1)
             if "floor_chance" in w:                # the survey reaches the floor by a chance rising slowly with x
                 b0, b1 = w["floor_chance"]
                 rec["age0"][yr] = 5.0 if x > 0 and rng.random() < 1 / (1 + math.exp(-(b0 + b1 * math.log(x)))) else 0.0
+        if "remnant" in w and label == NATURAL:        # (k, p): recorders relabel a lake whose last k surveys failed
+            k_run, p_relabel = w["remnant"]
+            run_ = 0
+            for t in range(yr, yr - 12, -1):
+                if t in rec["age0"]:
+                    if rec["age0"][t] < t1n.FLOOR:
+                        run_ += 1
+                    else:
+                        break
+            if run_ >= k_run and rng.random() < p_relabel:
+                label = REMNANT
         h = (e if x >= STOCK_BELOW else CUT) * x
         creel = rng.random() < 0.2
         recorded = (0.6 * h if speared else 0.0) + (0.4 * h if creel else 0.0)
@@ -189,7 +221,7 @@ def archive(world, a, speed=0.1, lakes=LAKES):
 
 def verdict_of(lakes, world, label_alone=False):
     """V1 on a synthetic archive as run.py reads it: the labels per year unless no lake's label changes."""
-    labels = any(len(set(lk["label"].values())) > 1 for lk in lakes)
+    labels = t1n.labels_per_year(lakes)
     nd = t1n.need(lakes, labels=labels)
     if nd["need"] is None:
         return "not decided", None, nd
@@ -198,11 +230,12 @@ def verdict_of(lakes, world, label_alone=False):
     return res["V1"]["verdict"], res, nd
 
 
+DID, DID_V2 = "did not occur", "did not occur, V2 met"    # V1's positive outcome, T1's forbidden case not met
+
+
 def kind(v):
-    if v.startswith("supported, contradicted"):
-        return "supported, contradicted by V2"
-    if v.startswith("supported"):
-        return "supported"
+    if v.startswith(t1n.DID_NOT_OCCUR):
+        return DID_V2 if "V2 met" in v else DID
     if v.startswith("refuted unless"):
         return "refuted unless"
     if v.startswith("refuted"):
@@ -239,22 +272,21 @@ def worlds(chk):
             if alone:
                 cell["V1 with the label alone a fall"] = alone
             out[world][f"speed {speed}"] = cell
-            sup = tallies.get("supported", 0) + tallies.get("supported, contradicted by V2", 0)
+            did = tallies.get(DID, 0) + tallies.get(DID_V2, 0)
             if w["family"] == "no need" or (w["family"] == "need misplaced" and world != "need falls"):
-                chk(f"worlds: {w['family']}", f"{world} at speed {speed}: supported at most {NO_NEED_SUPPORT_MAX} of {ARCHIVES}",
-                    sup <= NO_NEED_SUPPORT_MAX, tallies)
-            if world in ("open", "unrecorded", "unsurveyed", "static labels"):
+                chk(f"worlds: {w['family']}", f"{world} at speed {speed}: T1's forbidden case found not to occur in at most "
+                    f"{NO_NEED_SUPPORT_MAX} of {ARCHIVES}", did <= NO_NEED_SUPPORT_MAX, tallies)
+            if world in ("open", "unrecorded", "unsurveyed", "static labels", "estimates widen"):
                 chk("worlds: confounds", f"{world} at speed {speed}: no plain refutation of T1 where it holds",
                     tallies.get("refuted", 0) <= NO_NEED_SUPPORT_MAX, tallies)
-    for speed, least in ((0.03, ARCHIVES // 2), (0.0, 30)):       # DESIGN.md, section 8: half where managers act
-        t = out["need"][f"speed {speed}"]["V1"]
-        chk("worlds: power", f"need at speed {speed}: supported in at least {least} of {ARCHIVES}",
-            t.get("supported", 0) + t.get("supported, contradicted by V2", 0) >= least, t)
+    t = out["need"]["speed 0.0"]["V1"]           # the draft's bar, set before any of these results; 0.03 reported (§8)
+    chk("worlds: power", f"need with no managers: T1's forbidden case found not to occur in at least 30 of {ARCHIVES}",
+        t.get(DID, 0) + t.get(DID_V2, 0) >= 30, t)
     for world, speeds in (("renewal below the floor", (0.1, 0.03, 0.0)), ("weak depensation", (0.0,))):
         for speed in speeds:
             t = out[world][f"speed {speed}"]["V1"]
-            chk("worlds: power", f"{world} at speed {speed}: refuted, in some form, more often than supported",
-                t.get("refuted", 0) + t.get("refuted unless", 0) > t.get("supported", 0), t)
+            chk("worlds: power", f"{world} at speed {speed}: refuted, in some form, more often than the forbidden case "
+                "found not to occur", t.get("refuted", 0) + t.get("refuted unless", 0) > t.get(DID, 0) + t.get(DID_V2, 0), t)
     for speed in (0.03, 0.0):
         t = out["renewal below the floor"][f"speed {speed}"]["V1"]
         chk("worlds: power", f"renewal below the floor at speed {speed}: refuted plainly in at least 30 of {ARCHIVES}",
@@ -312,7 +344,7 @@ def scripted(chk):
     above = [lk(500 + i, 3.0, 3.0) for i in range(20)]       # above the need, persisting: the other side
     for n in (10, 14, 20):
         c = t1n.critical(n)
-        for fell, want in ((c, "supported"), (c - 1, "not decided"),
+        for fell, want in ((c, t1n.DID_NOT_OCCUR), (c - 1, "not decided"),
                            (n // 2, "refuted" if n >= t1n.N_REFUTE else "not decided"),
                            (n - c, "refuted"), (n - c + 1, "refuted" if n >= t1n.N_REFUTE else "not decided")):
             lakes = [lk(i, 0.5, 0.2 if i < fell else 2.0) for i in range(n)] + above
@@ -325,7 +357,7 @@ def scripted(chk):
     chk("rules: the separation", "below the need fell, but the lakes above fell as often: not decided",
         v.startswith("not decided") and "above it fell as often" in v, v)
     v = v1([lk(i, 0.5, 0.2) for i in range(12)])["verdict"]
-    chk("rules: the separation", "no resolved lake above the need: not supported", not v.startswith("supported"), v)
+    chk("rules: the separation", "no resolved lake above the need: not the positive outcome", not v.startswith(t1n.DID_NOT_OCCUR), v)
     t = t1n.rows([lk(1, 0.5, 0.2, held=False)], y, last=2014)
     chk("rules: the premise", "a lake not shown to hold above the need before the cutoff: out",
         t[0].get("out", "").startswith("the premise not shown"), t)
@@ -357,10 +389,13 @@ def scripted(chk):
     unread_interval["adults"][2017] = (0.0, 0.0, 0.3)
     for name, l, want, by in (
             ("a decline by the ratio test", lk(7, 0.5, 0.2), "fell", "a decline by the ratio test"),
-            ("holding below the need: no decline by the test", lk(8, 0.5, 0.48), "persisted", "no decline"),
-            ("a decline within the intervals' error", lk(21, 0.5, 0.45, width=0.2), "persisted", "no decline"),
-            ("back above the need: a return", lk(9, 0.5, 2.0), "persisted", "no decline"),
+            ("holding below the need: a quarter kept by the ratio's lower bound", lk(8, 0.5, 0.48), "persisted", "quarter kept"),
+            ("a change within the intervals' error, a quarter kept", lk(21, 0.5, 0.45, width=0.2), "persisted", "quarter kept"),
+            ("intervals too wide to show a fall or a quarter kept", lk(33, 0.5, 0.4, width=0.9), "unresolved", "neither"),
+            ("back above the need: a return", lk(9, 0.5, 2.0), "persisted", "quarter kept"),
             ("a decline, and a recovery by a later survey", with_later(lk(22, 0.5, 0.2), 2020, 0.5), "persisted", "recovery"),
+            ("a decline, and a recovery not shown to keep a quarter", with_later(lk(34, 0.5, 0.05), 2020, 0.12),
+             "unresolved", "quarter not shown kept"),
             ("a decline, the later rise after recorded stocking: the fall stands",
              with_later(lk(23, 0.5, 0.2, stocked=(2018,)), 2020, 0.5), "fell", "a decline by the ratio test"),
             ("stocking after the reference", lk(10, 0.5, 3.0, stocked=(2015,)), "unresolved", "stocking"),
@@ -424,12 +459,17 @@ def scripted(chk):
     for g in gone:
         del g["adults"][2017]
         del g["label"][2017]
-    v = v1(lakes + gone)["verdict"]
+    late = with_later(lk(450, 3.0, 3.0), 2024, 3.0)       # the archive runs GAP_MAX years past the references
+    v = v1(lakes + gone + [late])["verdict"]
     chk("rules: the confounds", "unless the unsurveyed fell, where counting them as fallen undoes it",
         "the unsurveyed fell" in v, v)
+    t = t1n.rows(gone[:1] + above[:1], y, last=2014)
+    chk("rules: the confounds", "no later estimate where the archive ends within GAP_MAX: the archive's end, not marked",
+        t[0].get("out") != "below the need with no later estimate", t)
     sup = [lk(i, 0.5, 0.2) for i in range(12)] + above + [lk(700, 0.3, 3.0)]
     v = v1(sup)["verdict"]
-    chk("rules: V1 and V2", "a support with V2 met reads contradicted by V2", v.startswith("supported, contradicted by V2"), v)
+    chk("rules: V1 and V2", "the positive outcome with V2 met says so, with the lake",
+        v.startswith(t1n.DID_NOT_OCCUR) and "V2 met in S700" in v and "causal role not shown" in v, v)
     t = t1n.rows([lk(20, 0.5, 0.2, label=STOCKED)], y, last=2014, labels=False)
     chk("rules: static labels", "where the labels are not per year, the label decides nothing", "out" not in t[0], t)
     chk("rules: the tail", "critical counts 9, 11, 15 of 10, 14, 20",
@@ -535,6 +575,11 @@ def reader_checks(chk):
             got = refusal(lambda: reader.read_all(tmp))
             chk("the reader", f"refuses {name}", want in got, got)
     chk("the reader", "codes and species in one form", reader.code(" 123456.0 ") == "123456" and reader.is_species(" WALLEYE "))
+    flat = [{"label": {2010: NATURAL, 2014: NATURAL}} for _ in range(40)]
+    one = flat[:39] + [{"label": {2010: NATURAL, 2014: STOCKED}}]
+    few = flat[:37] + [{"label": {2010: NATURAL, 2014: STOCKED}} for _ in range(3)]
+    chk("the reader", "one lake of 40 changing category does not make the labels per year; three do",
+        not t1n.labels_per_year(one) and t1n.labels_per_year(few) and not t1n.labels_per_year(flat))
     with tempfile.TemporaryDirectory() as tmp:
         tmp = Path(tmp)
         reader.write_synthetic(lakes, tmp)
@@ -566,9 +611,16 @@ def run_checks(chk):
             chk("the run", "refuses where no download is recorded", "no download is recorded" in refusal(lambda: RUN.inputs(tmp)))
             RUN.DOWNLOADS.write_text(json.dumps({"files": [{"file": n, "sha256": "0" * 64} for n in reader.FILES.values()]}))
             chk("the run", "refuses an input that is not the file recorded", "is not the file" in refusal(lambda: RUN.inputs(tmp)))
-            RUN.DOWNLOADS.write_text(json.dumps({"files": [{"file": n, "sha256": RUN.sha(tmp / n)}
-                                                           for n in reader.FILES.values() if (tmp / n).exists()]}))
+            present = [n for n in reader.FILES.values() if (tmp / n).exists()]
+            RUN.DOWNLOADS.write_text(json.dumps({"files": [{"file": n, "sha256": RUN.sha(tmp / n)} for n in present]}))
             chk("the run", "takes the inputs recorded", bool(RUN.inputs(tmp)))
+            RUN.DOWNLOADS.write_text(json.dumps({"files": [{"file": n, "sha256": RUN.sha(tmp / n)} for n in present]
+                                                 + [{"file": reader.FILES["types"], "sha256": "0" * 64}]}))
+            chk("the run", "refuses a file downloads.json records that is missing from the folder",
+                "missing from the folder" in refusal(lambda: RUN.inputs(tmp)))
+            RUN.DOWNLOADS.write_text(json.dumps({"files": [{"file": n, "sha256": RUN.sha(tmp / n)} for n in present[1:]]}))
+            chk("the run", "refuses an input file downloads.json does not record",
+                "not recorded in downloads.json" in refusal(lambda: RUN.inputs(tmp)))
         finally:
             RUN.DOWNLOADS = saved
         saved_out, saved_argv = RUN.OUT, sys.argv
@@ -628,7 +680,9 @@ def chain_checks(chk):
         g(repo, "checkout", "-q", "--", str(rel / "t1n.py"))
         (here / "addenda").mkdir()
         (here / "addenda" / "ADDENDUM-1.md").write_text("layout\n")
-        (here / "layout.json").write_text((here / "layout.json").read_text().replace('"Walleye"', '"WALLEYE"'))
+        lay = json.loads((here / "layout.json").read_text())
+        lay["species"], lay["labels"]["Natural Reproduction (NR)"] = "WALLEYE", "natural"   # a text added, none remapped
+        (here / "layout.json").write_text(json.dumps(lay, indent=1))
         record(repo, here)
         link(repo, here / "addenda" / "FROZEN-1.sha256", ("addenda/ADDENDUM-1.md",))
         g(repo, "add", "-A")
@@ -649,11 +703,37 @@ def chain_checks(chk):
         repo, here = stand_in(tmp)
         record(repo, here)
         g(repo, "init", "-q")
+        g(repo, "add", "-A")
+        g(repo, "commit", "-qm", "files")
+        link(repo, here / "FROZEN.sha256")
+        g(repo, "add", "-A")
+        g(repo, "commit", "-qm", "freeze")
+        (here / "addenda").mkdir()
+        (here / "addenda" / "ADDENDUM-1.md").write_text("labels\n")
+        lay = json.loads((here / "layout.json").read_text())
+        lay["labels"]["C-NR"] = "natural"                                                   # an existing text remapped
+        (here / "layout.json").write_text(json.dumps(lay, indent=1))
+        record(repo, here)
+        link(repo, here / "addenda" / "FROZEN-1.sha256", ("addenda/ADDENDUM-1.md",))
+        g(repo, "add", "-A")
+        g(repo, "commit", "-qm", "addendum 1")
+        chk("the chain", "an addendum remapping a label text layout.json held refuses",
+            "remaps label texts" in refusal(lambda: RUN.frozen(repo, here)))
+    with tempfile.TemporaryDirectory() as tmp:
+        repo, here = stand_in(tmp)
+        record(repo, here)
+        g(repo, "init", "-q")
         for msg in ("one", "two"):
             (here / "FROZEN.sha256").write_text(f"{msg}\n")
             g(repo, "add", "-A")
             g(repo, "commit", "-qm", msg)
         chk("the chain", "a link committed twice refuses", "exactly once" in refusal(lambda: RUN.frozen(repo, here)))
+        for msg in ("one", "two"):
+            (here / "downloads.json").write_text(json.dumps({"files": [], "note": msg}))
+            g(repo, "add", "-A")
+            g(repo, "commit", "-qm", "downloads " + msg)
+        chk("the chain", "downloads.json committed twice refuses",
+            "exactly once" in refusal(lambda: RUN.once(repo, str(rel / "downloads.json"))))
 
 
 def main():

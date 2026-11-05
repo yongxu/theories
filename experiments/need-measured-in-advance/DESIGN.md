@@ -2,7 +2,7 @@
 
 Board item T1N, 5 November 2026, at the coordinator's offer. AI-written (a Claude Code session), not yet reviewed by a person. The rules ([`t1n.py`](t1n.py)), the reader ([`reader.py`](reader.py)) with the layout it assumes ([`layout.json`](layout.json)), the run ([`run.py`](run.py)) and the dry run ([`dry_run.py`](dry_run.py), its record [`results/dry-run.json`](results/dry-run.json)) are frozen together before any value of the data is read. Their hashes are in `FROZEN.sha256`, which [`write_frozen.py`](write_frozen.py) writes last; this file is frozen by the commit that adds it (§14). Nothing has been downloaded. The downloads and the run are Ren's decision (§12).
 
-*About 80 to 105 minutes to read, at 100 to 130 words a minute; §1 and §11 in eleven to fourteen.*
+*About 95 to 125 minutes to read, at 100 to 130 words a minute, the tables quicker; §1 and §11 in eleven to fifteen.*
 
 ## 1. What is tested, and the answer expected
 
@@ -11,21 +11,21 @@ Board item T1N, 5 November 2026, at the coordinator's offer. AI-written (a Claud
 **The field.** Walleye lakes of Wisconsin's Ceded Territory, read through the records of the Wisconsin Department of Natural Resources (WDNR) and the Great Lakes Indian Fish and Wildlife Commission (GLIFWC). A lake's adult walleye are the condition. Their renewal is the fall's age-0 fish, which join the adults about three years later. The draw is the harvest, tribal and angling. Giving from beyond is stocking, since a lake takes fish from nowhere else, connected waters aside (§5).
 
 **The verdict (V1, primary): the separation**, T1's *Refuted by* in its second form. The need is fitted on the years up to 2012, before any later year is read (§4). A lake's fate is a measured change, read alike on both sides of the need: a decline of its adults by a ratio test on the recorders' own intervals, not undone by a recovery (§6). Below the need renewal is rarer and the draw goes on, so T1 predicts a fall. A lake with a year class recorded in the three falls before is not read as below the need, since that renewal is part of its condition. The null, fixed in advance, predicts no fall anywhere. Among the lakes below the need with resolved fates:
-- **supported** where at least the critical count of an exact one-sided sign test at 0.05 fell, and they fell more often than the lakes above the need by Fisher's exact test at 0.05: the fates separated across the predicted point;
+- **T1's forbidden case did not occur** where at least the critical count of an exact one-sided sign test at 0.05 fell, and they fell more often than the lakes above the need by Fisher's exact test at 0.05: the fates separated across the predicted point. The verdict line adds "the need's causal role not shown", since renewal lost to another cause gives the same (below);
 - **refuted** where so few fell that the same sign test puts them on the null's side, or, at twenty lakes or more, where at most half fell;
 - **not decided** otherwise, or where fewer than ten are resolved (§7).
 
 Three confounds could make a refutation on their own: fish from connected waters, stocking the database misses (fry, and fish from tribal or private hatcheries), and lakes below the need never surveyed again. Decided now, a refutation one of them could make reads **refuted unless** that confound, not plainly *refuted* (§7).
 
-**Reported beside it**, deciding nothing:
-- **V2, the single-lake form**, T1's *Refuted by* in its first form: a lake below its need, its lag surveyed with no renewal at the floor, back above the need with nothing recorded given from beyond. Its lakes are listed, and a support with V2 met reads **supported, contradicted by V2**.
-- **Renewal below the need**, T1's second *Forbids*: the lake-years after 2012 below the need whose renewal reached the floor, against what the need's fit expects. A need that moved after the fit shows here (§7).
+**Reported beside it**, deciding nothing: **V2**, the *Refuted by*'s first form, a lake below its need returning with nothing recorded given, its lakes listed; and **renewal below the need** after 2012 against the fit's expectation, T1's second *Forbids*, where a need that moved shows (§7).
 
 **Who decides.** Every value the verdict reads is recorded by WDNR or GLIFWC, families that neither wrote nor read the theory. Their fields decide the scope and much of the fate; code and a layout file frozen here decide the rest. After the freeze nobody of the theory's family chooses anything, and no model is called.
 
-**The answer expected.** The likeliest is *not decided*. Managers stock and relabel a falling lake, and where they act fast few lakes stand below the need unstocked: in the dry runs, a stocking chance of 0.3 a year for a falling lake left V1 undecided in every archive of every world (§8). If decided, *supported* is expected, from Sass, Feiner and Shaw's finding of depensatory recruitment in about half of 82 Ceded Territory lakes (§13). A plain *refuted* would mean the need is misplaced: the adults' renewal does not stop where the age-0 surveys say. §11 says what each outcome means, and §8 how often each came in worlds where the answer is known.
+**The answer expected.** The likeliest is *not decided*: managers stock and relabel a falling lake, and at a stocking chance of 0.3 a year V1 was undecided in every dry-run archive (§8). If decided, the positive outcome is expected, from Sass, Feiner and Shaw's finding of depensatory recruitment in about half of 82 Ceded Territory lakes (§13). A plain *refuted* would mean the need is misplaced. §11 says what each outcome means.
 
-**What it cannot decide.** One T1-false world is out of reach: fish surviving from a fall below the floor return a lake within a year or two (*survival compensates*). In these records such a return cannot be told from one carried by a year class recorded at or above the floor. So those surveys are set aside, and V1 is not decided there in any of 160 dry-run archives, refuting nothing and supporting nothing. This limit holds so far (5 November 2026), for that reason. It lapses with a record tying the returning adults to their year class, such as the spring estimates' age composition or yearling surveys: a return carried by a year class below the floor is compensation, which T1 forbids. Two other T1-false worlds are within reach, and V1 refutes them (§8).
+**What it cannot decide.** Two limits hold so far (5 November 2026), each for a reason in these records:
+- **Why lakes fell.** The positive outcome cannot show that the lakes' renewal stopped because of their level. Lakes that lose all renewal to another cause (habitat, warming) before 2013 stand below the need with nothing pending and keep falling: V1 came out positive there in up to 40 of 40 dry-run archives (§7). Hence the outcome's narrow name. The limit lapses with lakes stocked back above the need, whose renewal returns under a need in the level and not otherwise (§13).
+- **One T1-false world.** Where fish surviving from a fall below the floor return a lake within a year or two (*survival compensates*), the return cannot be told from one carried by a recorded year class, so V1 is not decided (160 of 160 archives). The limit lapses with a record tying the returning adults to their year class, such as the spring estimates' age composition or yearling surveys. Two other T1-false worlds V1 does refute (§8).
 
 ## 2. Why this field, and the alternatives considered
 
@@ -108,7 +108,7 @@ A lake enters the test at a reference survey only where both of these hold (`in_
 - the recorders' label of its primary recruitment source that year says natural recruitment. `layout.json` maps the label's texts; a text the map does not hold refuses the run, so no label is read as natural by default;
 - no walleye stocking is recorded in that year or the five before it (`STOCK_BEFORE`), in WDNR's database or, where read, in the other stocking records (R5b). So the level read is not one that stocked fish make.
 
-**Labels that never change.** The label may be the lake's classification when the report was made, not that year's. Where no lake's label changes across years, the rules read the label as deciding nothing, and the stocking records alone decide the scope and the fate (`labels`). The reader records which it found.
+**Labels that never change.** The label may be the lake's classification when the report was made, not that year's. Where fewer than 5% of the lakes with two or more estimates change label category across them (`labels_per_year`), the rules read the label as deciding nothing, and the stocking records alone decide the scope and the fate. One lake's change may be a correction, so a share decides, not a single lake (round 2's N-37). The reader records which it found.
 
 **The two confounds of giving, decided now.**
 - **Connected waters.** A lake is *closed* where its recorded type is seepage, with no inlet or outlet. That type comes from R1's lake characteristics, or else from WDNR's lake records (R7), and is read by `reader.closed_of`. Any other named type (drainage, drained, spring, impoundment, flowage, reservoir, river) counts as open, and a lake with no recorded type is unknown. Walleye can reach an open lake from other waters.
@@ -141,53 +141,59 @@ Why this test, and not the draft's two readings:
 
 Walleye join the adults about three years after their fall. A year class already in the water is renewal made, part of the lake's condition, and it can lift the adults within the fate's horizon, so a lake with one recorded is not shown below its need. In the dry runs, such cohorts carried lakes in T1's own world back above the need after a winterkill, and kept cycling lakes up between their strong years (§8). A survey set aside this way is reported with its fate by the same reading. A year of the lag that was not surveyed does not set the survey aside, since a cohort the surveys missed can only lift the lake, against T1.
 
-**The reference** is the lake's first survey in time, in the window, that is in scope and readable: read as below the need, where T1 predicts a fall, or with its interval wholly above the need, where T1 predicts persistence (`rows`). A survey whose interval holds the need, one set aside for renewal pending, and one with no later estimate are passed over. The choice reads only each survey's own interval, the need and the renewal recorded before it, never a later value.
+**The reference** is the lake's first survey in time, in the window, that is in scope and readable: read as below the need, where T1 predicts a fall, or with its interval wholly above the need, where T1 predicts persistence (`rows`). A survey whose interval holds the need and one set aside for renewal pending are passed over, as is one above the need with no later estimate; a lake whose first readable survey is below the need with no later estimate is marked unsurveyed (below). The choice reads only each survey's own interval, the need and the renewal recorded before it, never a later value.
 
-Taking the first readable survey in time, and not the first below the need wherever it falls, keeps a lake's side from being chosen by whether it later went below. A lake that falls from above the need, for whatever reason, then counts on the side where it stood. The draft took the first survey below the need, and failing that the first above it. Under that choice a world with no need, where a fifth of lakes lose their renewal after 2012 to a cause other than the stock, was supported in 9 of 40 archives with no managers. Every lake that fell for that cause was read from below the need, and the lakes left above it were those that did not fall (§8).
+Taking the first readable survey in time, and not the first below the need wherever it falls, keeps a lake's side from being chosen by whether it later went below. A lake that falls from above the need, for whatever reason, then counts on the side where it stood. The draft took the first survey below the need, and failing that the first above it. Under that choice a world where a fifth of lakes lose their renewal after 2012 to a cause other than the stock came out positive in 9 of 40 archives with no managers. Every lake that fell for that cause was read from below the need, and the lakes left above it were those that did not fall (§8).
 
 **The fate**, between the reference and the first later estimate (`fate_of`), read the same way on either side of the need, so the separation compares like with like:
 - **Unresolved** where the recorders' label leaves natural recruitment at a survey after the reference, up to the fate's, or stocking is recorded after the reference, in WDNR's database or in R5b: giving from beyond, or a programme's relabelling, either way. A relabelling counts no fall by itself. §8 gives the reading set aside, the label alone counted as a fall, and which side it favours.
-- **Fell** where the fate's survey lies below the reference's by the ratio test, and no later survey within ten years of the reference, before any recorded giving, rises from the fate's by the test. A rise after a decline is a recovery, a return T1 forbids below the need.
-- **Persisted** otherwise: the level kept, a rise, or a return.
-- **Unresolved** where an interval cannot be read on the log scale.
+- **Fell** where the fate's survey lies below the reference's by the ratio test, and no later survey within ten years of the reference, before any recorded giving, rises from the fate's by the test. A rise after a decline is a recovery, a return T1 forbids below the need, and the lake is then read at the recovering survey.
+- **Persisted** where the later estimate keeps at least a quarter of the reference's at the ratio's one-sided lower bound at 0.05 (`ratio_lower`, `KEPT`): the level kept, a rise, or a return.
+- **Unresolved** where the intervals show neither a decline nor a quarter kept, or where an interval cannot be read on the log scale.
+
+Why persistence is shown, not read by default (round 2's N-29). Mark-and-recapture's precision falls with density, so below the need the same test has less power. With persistence the default, a T1 world whose estimates' CV widens at low density, as mark-and-recapture's does, was refuted in some form in 32 to 37 of 40 archives. Why a quarter, not the half round 2's reader suggested. At the surveys' usual error (each CV up to about 0.3), every change short of a decline by the test keeps a quarter at the lower bound, so the rule reads there as before, and only wide intervals go unresolved. At a half, the band of unresolved changes reached the usual error. Lakes declining slowly below the need, which T1, renewal rarer and the draw going on, does not predict, then went unresolved instead of counting against it, and a no-need world of widely differing lakes came out positive in 7 of 40 archives.
 
 Why the recovery: renewal can fail by chance three years running in a world with no need. The stock then dips for three years whatever the law, and recovers once renewal comes back. T1 forbids that recovery below the need, and a law without a need predicts it. The episodic worlds of §8 are that case.
 
-**The unsurveyed.** A lake whose first readable survey is below the need with no later estimate three to ten years on is marked (`below the need with no later estimate`). Recorders may stop surveying a lake once it has fallen, so such lakes are counted in §7's third confound.
+**The unsurveyed.** A lake whose first readable survey is below the need with no later estimate three to ten years on is marked (`below the need with no later estimate`), where the archive runs at least ten years past that survey. Recorders may stop surveying a lake once it has fallen, so such lakes are counted in §7's third confound. Where the archive ends sooner, the missing estimate is the archive's end, not a survey stopped, and the lake is not marked (round 2's N-30).
 
 ## 7. The verdicts
 
 **V1** (`v1`, `decide`). Every lake in the test has a row. T1 predicts a fall at a reference read as below the need, and the null predicts none, so the two classifiers differ on exactly those lakes. Let n be the ones with resolved fates and k the ones that fell, and let c be the critical count of an exact one-sided sign test at 0.05, which is McNemar's test on the discordant lakes: 9 of 10, 11 of 14 and 15 of 20. Let n_a and k_a be the same counts above the need. The rule, in this order:
 1. Not decided where n < 10 (`N_MIN`).
-2. Supported where k ≥ c and, by Fisher's exact test at 0.05, the share fallen below the need exceeds the share fallen above it. Where k ≥ c but the lakes above fell as often, or none above is resolved, not decided.
+2. **T1's forbidden case did not occur** (the positive outcome) where k ≥ c and, by Fisher's exact test at 0.05, the share fallen below the need exceeds the share fallen above it. The verdict line reads in full: "T1's forbidden case did not occur: lakes below the need fell and did not return, the need's causal role not shown". Where k ≥ c but the lakes above fell as often, or none above is resolved, not decided.
 3. Refuted, the fates separated no better than by the null, by either of two routes:
    - k ≤ n − c: so few fell that the same test at 0.05 puts the fates on the null's side. That is at most 1 of 10, 3 of 14 or 5 of 20.
    - by the home's letter, 2k ≤ n, where n ≥ 20 (`N_REFUTE`).
 4. Not decided otherwise.
 
-**What a support allows.** It allows n − c lakes below the need that did not fall: 1 of 10, 3 of 14, 5 of 20. MQ3's frozen test asked a fall share of 80%, and MQ2's 90% on each side; a support here can carry a share near 75% at twenty lakes. So V1 reports the share fallen below the need with its exact lower bound at 0.95 (Clopper and Pearson's) beside the verdict, and §11 reads a support with it.
+**What the positive outcome allows.** It allows n − c lakes below the need that did not fall: 1 of 10, 3 of 14, 5 of 20. MQ3's frozen test asked a fall share of 80%, and MQ2's 90% on each side; the positive outcome here can carry a share near 75% at twenty lakes. So V1 reports the share fallen below the need with its exact lower bound at 0.95 (Clopper and Pearson's) beside the verdict, and §11 reads the outcome with it.
 
-**Why the separation as well as the sign test.** The sign test asks whether the lakes below the need fell more often than not. Fisher's test asks whether they fell more often than the lakes above it. A world with no need can make lakes fall on both sides: where renewal fails by chance for years, or where some lakes cannot persist at any level. There the lakes above the need fall too, and the separation keeps a support from resting on falls that come whatever the side (§8).
+**Why the positive outcome is named so narrowly** (round 2's N-28, the coordinator's decision). It shows that lakes below the need fell and did not return, as T1 forbids a return. It cannot show that their renewal stopped because of their level. Round 2's reader built a world where 20 to 30% of lakes lose all renewal to another cause, from a year between 1998 and 2012. Those lakes pass the premise on their earlier estimates, stand below the need at their first readable survey with nothing pending, and keep falling, while the lakes above persist. V1 came out positive there in up to 40 of 40 archives. Four guards, tried in memory, did not separate that world from T1's without losing T1's own: the premise read at the cutoff, no renewal failing while above the need, the order of failure, and a report of renewal failing above the need. So the outcome's name says what it shows. §8's bound holds for worlds where renewal never stops with the level, not for renewal lost to another cause, and §13 names the record that would tell the two apart.
+
+**Why the separation as well as the sign test.** The sign test asks whether the lakes below the need fell more often than not. Fisher's test asks whether they fell more often than the lakes above it. A world with no need can make lakes fall on both sides: where renewal fails by chance for years, or where some lakes cannot persist at any level. There the lakes above the need fall too, and the separation keeps the positive outcome from resting on falls that come whatever the side (§8).
 
 **A refutation, read against the three confounds**, decided before any value is read:
-- **Connected waters.** Where a lake counted as persisting is not a recorded seepage lake, V1 is decided again on the closed lakes alone. Where that is not also a refutation, the verdict reads *refuted unless connected waters*.
+- **Connected waters.** Where a lake counted as persisting is not a recorded seepage lake, V1 is decided again on the closed lakes alone. Where that is not also a refutation, the verdict reads *refuted unless connected waters*, with its reason: "the seepage lakes alone too few to decide", or "the seepage lakes alone not refuting". At three hundred lakes the first is usual, whether or not fish arrive from other waters (round 2's N-31). So the reports also give the persisting share below the need among closed and open lakes, and Fisher's chance that the open lakes persisted more often.
 - **Unrecorded stocking.** Where R5b was not read for a lake counted as persisting, the verdict reads *refuted unless unrecorded stocking*.
 - **The unsurveyed.** Where the lakes marked unsurveyed (§6), counted as fallen, would undo the refutation, it reads *refuted unless the unsurveyed fell*.
 - Two or three of these read together, joined by "or".
 
-None qualifies a support: each can only make a lake below the need persist or drop out, so each works against support.
+None qualifies the positive outcome: each can only make a lake below the need persist or drop out, so each works against it.
 
-**Why the letter needs twenty lakes.** The letter, no better than the null, is the one T1-STANDING read as met at equal accuracy after the salt shock, and it is kept. As a point estimate it is weak evidence at few lakes. Suppose a lake below the need falls with chance 0.7. Then at least half of 10 lakes survive with chance 0.15, and at least half of 20 with 0.048. So the letter is read at twenty lakes or more. At fewer, a refutation needs the fates on the null's side at 0.05, which a fall chance of 0.7 gives among 10 lakes with chance 0.00014. Support at ten needs 9 of 10, which a fair split between falling and not gives with chance 0.011.
+**Why the letter needs twenty lakes.** The letter, no better than the null, is the one T1-STANDING read as met at equal accuracy after the salt shock, and it is kept. As a point estimate it is weak evidence at few lakes. Suppose a lake below the need falls with chance 0.7. Then at least half of 10 lakes survive with chance 0.15, and at least half of 20 with 0.048. So the letter is read at twenty lakes or more. At fewer, a refutation needs the fates on the null's side at 0.05, which a fall chance of 0.7 gives among 10 lakes with chance 0.00014. The positive outcome at ten needs 9 of 10, which a fair split between falling and not gives with chance 0.011.
 
 **Why the need alone, not the point with the draw.** T1's point of no return is the need with a standing draw. Here the draw does not stand: safe harvests are set from each lake's estimates, so the harvest is cut as a lake falls. A lake whose draw would end it can then persist because the draw changed. That is a breach of T1's standing-draw premise, not evidence against T1. Below the need, T1 predicts a fall under any draw, so V1 reads the need alone. The rows also give each reference's point with the recorded draw, and the reports give the fates of lakes above the need and below that point.
 
-**V2** (`v2`), reported. It counts the lakes read as below the need at the reference with every year of the lag surveyed and none at the floor, whose fate's interval lies at or above the need, with the natural-recruitment label at every survey between and no stocking recorded after the reference. It is *met* where at least one such lake exists, and each is listed. A support with V2 met reads *supported, contradicted by V2*.
+**V2** (`v2`), reported. It counts the lakes read as below the need at the reference with every year of the lag surveyed and none at the floor, whose fate's interval lies at or above the need, with the natural-recruitment label at every survey between and no stocking recorded after the reference. It is *met* where at least one such lake exists, and each is listed. The positive outcome with V2 met says so: "…; V2 met in" the lakes.
 
 **Renewal below the need** (`renewal_below`), reported. Among the lake-years after 2012 with a spring estimate wholly below the need and a fall survey that year, the label natural and no stocking recorded in it or the five years before, it counts those whose renewal reached the floor, and sets against them the number the need's fit expects there: the sum of the fit's chances at their estimates. It gives the exact chance, under the fit, of so many or more. This reads T1's second *Forbids* as far as a need at the 50% point can: below the need some renewal is expected, and more than the fit allows means the need moved after 2012. Such a move hides from V1, because the lakes that would show it renew and are set aside (§6).
 
 **Reports**, ruling on nothing (`reports`):
 - the lakes out, by reason;
-- the fates below the need by route, by reference year (fates in one year can share a region-wide cause, so V1's p is optimistic where the years cluster) and by whether every year of the lag was surveyed;
+- the fates below the need by route (the years taken out), by reference year (fates in one year can share a region-wide cause, so V1's p is optimistic where the years cluster) and by whether every year of the lag was surveyed;
+- the recorded draw at the reference, per adult, below the need and above it: T1's lakes are driven below the need by the draw, and renewal lost to another cause needs none;
+- the persisting share below the need among closed and open lakes;
 - the surveys set aside with renewal pending, by their fate;
 - the fates of the lakes above the need but below the point with the recorded draw;
 - the references with a creel survey;
@@ -197,7 +203,7 @@ None qualifies a support: each can only make a lake below the need persist or dr
 
 ## 8. Dry runs
 
-[`dry_run.py`](dry_run.py) builds synthetic archives of 300 lakes, 1990 to 2025, and reads each with the frozen rules. Its record is [`results/dry-run.json`](results/dry-run.json): 198 checks, none failed, 168 CPU seconds.
+[`dry_run.py`](dry_run.py) builds synthetic archives of 300 lakes, 1990 to 2025, and reads each with the frozen rules. Its record is [`results/dry-run.json`](results/dry-run.json): 217 checks, none failed, 218 CPU seconds.
 
 **The model.** Each year, spring adults per acre x renew by fall age-0 r = R(x)·e^(σz), with R(x) = 60 x^q / (1.5^q + x^q) and σ = 0.8. Next spring's adults are 0.7x − h plus 0.03 times the age-0 of three years before. The exploitation e is drawn per lake from 0.05 to 0.6, and above 0.3 a lake keeps no level. The draw is h = e·x, cut to 0.05·x below one adult per acre, as safe harvests are; lakes exploited hard then cycle, a strong year class every few years carrying them between lean ones. In a year, a lake loses nine tenths of its adults with chance 0.02 (a winterkill). A lake is a recorded seepage lake with chance 0.4.
 
@@ -208,7 +214,7 @@ None qualifies a support: each can only make a lake below the need persist or dr
 - Below one adult per acre, managers stock a lake with a chance a year (the speed) and relabel it.
 - The other stocking records (R5b) are read, and empty, in every world but the two named below.
 
-**The worlds**, in three families and one reported apart:
+**The worlds**, in four families and one reported apart:
 - **T1 holds**, renewal stopping below a need:
   - *need*: q = 3;
   - *needs vary*: each lake's 1.5 scaled by a factor of about 2;
@@ -217,14 +223,16 @@ None qualifies a support: each can only make a lake below the need persist or dr
   - *unrecorded*: a third of stocked lakes stocked outside WDNR's database with the label kept, and R5b not read; *unrecorded, read*: the same, with R5b read and holding those stockings;
   - *open*: 0.15 adults per acre a year arriving from connected waters, in the lakes not recorded as seepage;
   - *episodic*: q = 3 with σ = 1.6;
-  - *unsurveyed*: no estimate made of a lake below 0.15 adults per acre;
-  - *static labels*: each lake's label its last, in every year.
+  - *unsurveyed*: no estimate made of a lake below 0.03 adults per acre; *unsurveyed early*, reported: below 0.15;
+  - *static labels*: each lake's label its last, in every year;
+  - *estimates widen*: the estimates' CV 0.25·(2/x)^0.5 below 2 adults per acre, up to 1.0, their intervals as wide, as mark-and-recapture's widen at low density (round 2's N-29);
+  - *labels follow failure*, reported: recorders relabelling a lake whose last three surveyed falls fell below the floor, with chance 0.5 a year; *slowly*, with 0.2 (round 2's N-33).
 - **The need misplaced**, where the surveys put a need and T1 is false, or holds only within the intervals' margin:
   - *survival compensates*: age-0 depensatory, but the adults they make rise as age-0^0.3 (with 0.4 for 0.03), so a lake below the need returns within a year or two; and *compensates, relabelled*;
   - *renewal below the floor*: the same with 0.10, so a lake below the need, renewal under the floor, holds there for years;
   - *weak depensation*: q = 1.5 with σ = 1.6, renewal stopping well below the 50% point, so lakes just below the need recover;
   - *need falls* and *need falls far*: 1.5 halved, or quartered, after 2012.
-- **No need**, renewal never stopping with the level, though it may fail by chance or stop for another reason:
+- **No need**, renewal never stopping with the level, though it may fail by chance:
   - *no need*: q = 1;
   - *lakes differ*: q = 1, each lake's 60 and 0.03 scaled by independent log-normal factors of log-sd 0.5, 0.7, 1.0 or 1.5, so that some lakes cannot persist at any level;
   - *general decline*: renewal falling 4% a year everywhere;
@@ -232,102 +240,130 @@ None qualifies a support: each can only make a lake below the need persist or dr
   - *renewal unseen*: surveys catching age-0 in proportion to x/(x + 0.5);
   - *floor by chance*: a survey reaching the floor with a chance rising slowly with x, whatever the lake renews;
   - *episodic, no need*: σ = 2.5, so renewal fails by chance for years at any level; and *episodic, lakes differ*: σ = 2.0 at log-sd 1.0;
-  - *renewal stops after*: at log-sd 0.7, a fifth of lakes losing all renewal after 2012, as a habitat lost would;
-  - *no renewal in some*: at log-sd 0.5, 15% of lakes with no renewal ever.
+  - *catch 0.1*: *no need*, *lakes differ 0.7*, *lakes differ 1.5* and *general decline* with the surveys' age-0 catch at a tenth, so that the need is fitted where T1's world fits it, near 0.35 adults per acre, and not near zero (round 2's N-32).
+- **Renewal lost to another cause**, as a habitat lost or warming would take it, whatever the level; reported, with no bound:
+  - *renewal stops after*: at log-sd 0.7, a fifth of lakes losing all renewal after 2012;
+  - *no renewal in some*: at log-sd 0.5, 15% of lakes with no renewal ever;
+  - *renewal lost before*: 30% of lakes losing all renewal from a year between 1998 and 2012, with the catch at a tenth, or at log-sd 0.7; *around the cutoff*: 20% from a year between 2000 and 2012, at log-sd 1.0 (round 2's N-28).
 - **Reported apart**: *half need*, half the lakes at q = 3 and half at q = 1.
 
-V1's verdicts in 40 archives a cell, by the managers' stocking chance a year for a falling lake. S is supported, S* supported but contradicted by V2, R refuted, R? refuted unless a confound, and N not decided. V2 met, in archives, is after the slash:
+**The families, changed after a finding.** Round 2's brief to its reader defined the no-need family as renewal that "never stops with the level, though it may fail by chance or stop for another reason". After round 2's N-28 the coordinator narrowed it to renewal that never stops with the level, chance failures included. Renewal lost to another cause became a family of its own, whose rates are reported with no bound. The narrowing came after the reader's worlds showed V1 positive there in up to 40 of 40 archives, and after four guards tried in memory failed to separate them from T1's world (§7). The bound of 5 in 40 does not hold for renewal lost to another cause. The answer is the positive outcome's narrow name, "the need's causal role not shown", not a bound.
+
+V1's verdicts in 40 archives a cell, by the managers' stocking chance a year for a falling lake. D is T1's forbidden case found not to occur (the positive outcome), D* the same with V2 met, R refuted, R? refuted unless a confound, and N not decided. V2 met, in archives, is after the slash:
 
 | World | 0.3 | 0.1 | 0.03 | 0 |
 |---|---|---|---|---|
 | **T1 holds** | | | | |
-| need | N 40 / 0 | N 40 / 0 | S 29, N 11 / 0 | S 40 / 0 |
-| needs vary | N 40 / 0 | S 3, N 37 / 0 | S 40 / 0 | S 40 / 0 |
-| need rises | N 40 / 0 | N 40 / 0 | S 40 / 0 | S 40 / 0 |
-| relabelled | N 40 / 0 | N 40 / 0 | S 21, N 19 / 0 | S 38, N 2 / 0 |
-| unrecorded | N 40 / 1 | N 40 / 4 | S 23, S* 3, N 14 / 6 | S 40 / 0 |
-| unrecorded, read | N 40 / 0 | N 40 / 0 | S 29, N 11 / 0 | S 40 / 0 |
-| open | N 40 / 0 | N 40 / 0 | S 2, N 38 / 0 | S 15, N 25 / 0 |
-| episodic | N 40 / 0 | S 37, N 3 / 0 | S 40 / 0 | S 40 / 0 |
-| unsurveyed | N 40 / 0 | N 40 / 0 | N 40 / 0 | N 40 / 0 |
-| static labels | N 40 / 0 | S 1, N 39 / 0 | S 34, N 6 / 0 | S 40 / 0 |
+| need | N 40 / 0 | N 40 / 0 | D 29, N 11 / 0 | D 40 / 0 |
+| needs vary | N 40 / 0 | D 3, N 37 / 0 | D 40 / 0 | D 40 / 0 |
+| need rises | N 40 / 0 | N 40 / 0 | D 40 / 0 | D 40 / 0 |
+| relabelled | N 40 / 0 | N 40 / 0 | D 21, N 19 / 0 | D 38, N 2 / 0 |
+| unrecorded | N 40 / 1 | N 40 / 4 | D 23, D* 3, N 14 / 6 | D 40 / 0 |
+| unrecorded, read | N 40 / 0 | N 40 / 0 | D 29, N 11 / 0 | D 40 / 0 |
+| open | N 40 / 0 | N 40 / 0 | D 2, N 38 / 0 | D 15, N 25 / 0 |
+| episodic | N 40 / 0 | D 37, N 3 / 0 | D 40 / 0 | D 40 / 0 |
+| unsurveyed | N 40 / 0 | N 40 / 0 | N 40 / 0 | D 9, N 31 / 0 |
+| unsurveyed early | N 40 / 0 | N 40 / 0 | N 40 / 0 | N 40 / 0 |
+| static labels | N 40 / 0 | D 1, N 39 / 0 | D 34, N 6 / 0 | D 40 / 0 |
+| estimates widen | N 40 / 0 | N 40 / 0 | N 40 / 0 | N 40 / 0 |
+| labels follow failure | N 40 / 0 | N 40 / 0 | N 40 / 0 | N 40 / 0 |
+| labels follow failure, slowly | N 40 / 0 | N 40 / 0 | N 40 / 0 | D 7, N 33 / 0 |
 | **The need misplaced** | | | | |
 | survival compensates | N 40 / 0 | N 40 / 0 | N 40 / 0 | N 40 / 0 |
 | compensates, relabelled | N 40 / 0 | N 40 / 0 | N 40 / 0 | N 40 / 0 |
-| need falls | N 40 / 0 | N 40 / 0 | S 4, N 36 / 0 | S 26, N 14 / 0 |
-| need falls far | N 40 / 0 | N 40 / 0 | N 40 / 0 | S 1, N 39 / 0 |
-| weak depensation | N 40 / 0 | N 40 / 0 | N 40 / 1 | R? 5, N 35 / 2 |
+| need falls | N 40 / 0 | N 40 / 0 | D 4, N 36 / 0 | D 26, N 14 / 0 |
+| need falls far | N 40 / 0 | N 40 / 0 | N 40 / 0 | D 1, N 39 / 0 |
+| weak depensation | N 40 / 0 | N 40 / 0 | N 40 / 1 | R? 4, N 36 / 2 |
 | renewal below the floor | N 40 / 0 | R? 4, N 36 / 0 | R 40 / 1 | R 40 / 0 |
 | **No need** | | | | |
 | no need | N 40 / 0 | N 40 / 0 | N 40 / 0 | N 40 / 0 |
+| no need, catch 0.1 | N 40 / 0 | N 40 / 0 | N 40 / 0 | N 40 / 0 |
 | lakes differ 0.5 | N 40 / 0 | N 40 / 0 | N 40 / 0 | N 40 / 0 |
 | lakes differ 0.7 | N 40 / 0 | N 40 / 0 | N 40 / 0 | N 40 / 0 |
 | lakes differ 1.0 | N 40 / 0 | N 40 / 0 | N 40 / 0 | R? 5, N 35 / 0 |
-| lakes differ 1.5 | N 40 / 0 | N 40 / 0 | N 40 / 0 | R? 10, N 30 / 0 |
+| lakes differ 1.5 | N 40 / 0 | N 40 / 0 | N 40 / 0 | R? 8, N 32 / 0 |
+| lakes differ 0.7, catch 0.1 | N 40 / 0 | N 40 / 0 | N 40 / 1 | N 40 / 0 |
+| lakes differ 1.5, catch 0.1 | N 40 / 0 | N 40 / 1 | N 40 / 1 | N 40 / 0 |
 | general decline | N 40 / 0 | N 40 / 0 | N 40 / 0 | N 40 / 0 |
+| general decline, catch 0.1 | N 40 / 0 | N 40 / 2 | R? 20, N 20 / 2 | R 11, R? 29 / 3 |
 | no need, relabelled | N 40 / 0 | N 40 / 0 | N 40 / 0 | N 40 / 0 |
 | no need, unsurveyed | N 40 / 0 | N 40 / 0 | N 40 / 0 | N 40 / 0 |
 | renewal unseen | N 40 / 0 | N 40 / 0 | N 40 / 0 | N 40 / 0 |
 | floor by chance | N 40 / 0 | N 40 / 2 | N 40 / 1 | N 40 / 2 |
-| episodic, no need | N 40 / 0 | R? 1, N 39 / 2 | R 4, R? 29, N 7 / 8 | R 16, R? 21, N 3 / 14 |
+| episodic, no need | N 40 / 0 | R? 1, N 39 / 2 | R 4, R? 27, N 9 / 8 | R 16, R? 21, N 3 / 14 |
 | episodic, lakes differ | N 40 / 0 | N 40 / 0 | R? 3, N 37 / 3 | R 2, R? 28, N 10 / 7 |
+| **Renewal lost to another cause** | | | | |
 | renewal stops after | N 40 / 0 | N 40 / 0 | N 40 / 0 | N 40 / 0 |
 | no renewal in some | N 40 / 0 | N 40 / 0 | N 40 / 0 | N 40 / 0 |
+| renewal lost before, catch 0.1 | N 40 / 0 | D 39, N 1 / 0 | D 40 / 0 | D 38, D* 2 / 2 |
+| renewal lost before, lakes differ | N 40 / 0 | D 4, N 36 / 0 | D 38, N 2 / 0 | D 39, N 1 / 0 |
+| renewal lost around the cutoff | N 40 / 0 | N 40 / 0 | D 32, N 8 / 0 | D 40 / 0 |
 | **Reported apart** | | | | |
-| half need | N 40 / 0 | N 40 / 0 | S 2, N 38 / 0 | S 22, N 18 / 0 |
+| half need | N 40 / 0 | N 40 / 0 | D 2, N 38 / 0 | D 22, N 18 / 0 |
 
 **The checks on the worlds**, each failing the dry run if not met:
-- in every world with no need, and every world with the need misplaced but *need falls*, at every speed: supported in at most 5 of 40 archives. A test at 0.05 exceeds 5 of 40 with chance 0.014;
-- in *need*: supported in at least 30 of 40 with no managers, and in at least half at 0.03. The draft asked 30 at 0.03, where it was supported in 36; the rework is supported in 29 there, for the reasons below;
-- in *renewal below the floor*, at 0.1, 0.03 and with no managers, and in *weak depensation* with no managers: refuted, in some form, more often than supported; in *renewal below the floor* at 0.03 and with no managers, refuted plainly in at least 30 of 40;
+- in every no-need world, and every world with the need misplaced but *need falls*, at every speed: the positive outcome in at most 5 of 40 archives. A test at 0.05 exceeds 5 of 40 with chance 0.014;
+- in *need* with no managers: the positive outcome in at least 30 of 40, the draft's bar, set before any of these results. At 0.03 the result is reported, with no bar: round 2's reader showed that a bar set after seeing a result cannot inform (N-36);
+- in *renewal below the floor*, at 0.1, 0.03 and with no managers, and in *weak depensation* with no managers: refuted, in some form, more often than the positive outcome; in *renewal below the floor* at 0.03 and with no managers, refuted plainly in at least 30 of 40;
 - in *weak depensation* at 900 lakes an archive: a plain refutation reached;
-- in *open*, *unrecorded*, *unsurveyed* and *static labels*: at most 5 plain refutations of 40;
+- in *open*, *unrecorded*, *unsurveyed*, *static labels* and *estimates widen*: at most 5 plain refutations of 40;
 - the renewal report beyond the fit at 0.05 in at least 30 of 40 archives of *need falls far* with no managers, and in at most 5 of 40 of *need* at 0.03 and with no managers.
 
 **Which side the label's reading favours.** The frozen reading counts a label leaving natural recruitment as no fall by itself (§6). The reading set aside, the label alone counted as a fall, is run beside it in the three relabelled worlds:
 
 | World | 0.3 | 0.1 | 0.03 | 0 |
 |---|---|---|---|---|
-| relabelled, frozen | N 40 | N 40 | S 21, N 19 | S 38, N 2 |
-| relabelled, label alone | N 40 | N 40 | S 21, S* 7, N 12 | S 30, S* 10 |
+| relabelled, frozen | N 40 | N 40 | D 21, N 19 | D 38, N 2 |
+| relabelled, label alone | N 40 | N 40 | D 21, D* 7, N 12 | D 30, D* 10 |
 | compensates, relabelled, frozen | N 40 | N 40 | N 40 | N 40 |
 | compensates, relabelled, label alone | N 40 | N 40 | N 40 | N 40 |
 | no need, relabelled, frozen | N 40 | N 40 | N 40 | N 40 |
 | no need, relabelled, label alone | N 40 | N 40 | N 40 | N 40 |
 
-The label alone counted as a fall favours support. With T1 true and lakes relabelled it supported 28 archives at 0.03 where the frozen reading supported 21, and it was contradicted by V2 in 17 archives where the frozen reading never was. Where T1 is false or there is no need, neither reading decided any relabelled archive, so these worlds cannot show which side it favours there.
-
 **What the dry runs show:**
-- **Where there is no need, V1 was never supported**: in none of the 2,240 archives of the fourteen no-need worlds. Where lakes differ in productivity, or renewal fails by chance for years, V1 was instead refuted in some form with slow managers, since lakes below the need recover there: in up to 10 of 40 archives where lakes differ, and in 37 of 40 in *episodic, no need* with no managers.
-- **Where T1 holds, V1 was supported once managers are slower than 0.1 a year, and never refuted.** *need* was supported in 29 of 40 at 0.03 and 40 of 40 with no managers. *needs vary*, *need rises* and *episodic* were supported in 40 of 40 at both. *relabelled*, *unrecorded*, *unrecorded, read* and *static labels* were supported in 21 to 34 of 40 at 0.03 and in 38 to 40 with no managers.
-- **What the rework cost.** At 0.03 the draft supported *need* in 36 of 40 archives, but its reading of a fall supported a no-need world with varying lakes in 40 of 40 (round 1's N-03). The rework supports none. Of the eleven undecided archives at 0.03:
+- **Where there is no need, V1 never came out positive**: in none of the 2,560 archives of the sixteen no-need worlds. A need was fitted in 1,108 of them, in the catch-scaled worlds near T1's world's level. Where lakes differ in productivity, or renewal fails by chance for years, V1 was instead refuted in some form with slow managers, since lakes below the need recover there: in up to 8 of 40 where lakes differ, 37 of 40 in *episodic, no need*, and 40 of 40 in *general decline, catch 0.1*, with no managers.
+- **Where renewal is lost to another cause before 2013, V1 came out positive**: in 39 to 40 of 40 archives at 0.1, 0.03 and with no managers in *renewal lost before, catch 0.1*; in 38 and 39 at 0.03 and with no managers where lakes differ; in 32 and 40 where the loss falls around the cutoff. Where renewal is lost after 2012 (*renewal stops after*) or never existed (*no renewal in some*), V1 never came out positive. This is §7's limit, and the reason the outcome's name says the need's causal role is not shown.
+- **Where T1 holds, V1 came out positive once managers are slower than 0.1 a year, and was never refuted.**
+  - *need*: 29 of 40 at 0.03 and 40 of 40 with no managers.
+  - *needs vary*, *need rises* and *episodic*: 40 of 40 at both.
+  - *relabelled*, *unrecorded*, *unrecorded, read* and *static labels*: 21 to 34 of 40 at 0.03, and 38 to 40 with no managers.
+  - Three T1 worlds were rarely or never decided, since lakes below the need there drop out before their fate or come back from connected waters: *open* (2 of 40 at 0.03, 15 with no managers), *unsurveyed* (9 of 40 with no managers) and *unsurveyed early* (never).
+- **Where precision falls at low density (*estimates widen*), V1 was not decided in any of 160 archives, and never refuted**, since persistence must be shown (§6).
+- **Where recorders relabel a failing lake**, the fates T1 predicts become unresolved (§13). At 0.5 a year (*labels follow failure*), V1 was not decided in any archive; at 0.2 (*slowly*), it came out positive in 7 of 40 with no managers.
+- **What the rework cost.** At 0.03 *need* came out positive in 29 of 40 archives, where the draft supported it in 36. The draft's reading of a fall also supported a no-need world with varying lakes in 40 of 40 (round 1's N-03); V1 now comes out positive in no no-need world. Of the eleven undecided archives at 0.03:
   - six had fewer than ten resolved lakes below the need, nearly all of which fell;
-  - five fell short of the critical count by one;
+  - four fell short of the critical count by one, and one by two;
   - the lakes that did not decline were mostly ones whose lag years went unsurveyed, so a year class the surveys missed lifted them. That is the cost of not setting aside a survey whose lag was unread, which §6 accepts because a missed cohort works only against T1.
-- **Where the need is misplaced, V1 was refuted where the lakes below it hold there.** *renewal below the floor* was refuted plainly in 40 of 40 at 0.03 and with no managers. Where renewal stops well below the 50% point (*weak depensation*), V1 was refuted in 5 of 40 with no managers, each read *unless*, and plainly in 7 of the 80 archives of 900 lakes.
-- **Where lakes below the need return within a year or two (*survival compensates*), V1 was not decided in all 160 archives.** Their surveys below the need come with renewal pending and are set aside, so the test cannot refute T1 there, and does not support it. This is a limit of the test, holding so far (§1, §13). The two worlds where the need is misplaced and V1 does refute stand beside it, not in its place.
-- **Where the need fell after the fit within the intervals' margin (*need falls*), V1 was supported in 26 of 40 with no managers.** The lakes read as below the old need are below the new one too. The renewal report was beyond the fit in 39 or 40 of 40 at 0.03 and with no managers. Where the need fell further (*need falls far*), V1 was not decided in 159 of 160 archives and supported in one, and the renewal report flagged 40 of 40 at slow managers.
-- **The confounds never produced a refutation of any kind where T1 holds**, in *open*, *unrecorded*, *unsurveyed* or *static labels*.
-- **Power rests on the managers' speed,** which no record gives before the data. At 0.3 a year V1 was not decided in any archive of any world. At 0.1 it was supported only in *episodic* (37), *needs vary* (3) and *static labels* (1).
-- **V2 was met mostly where giving from beyond went unrecorded or renewal failed by chance**: up to 6 of 40 in *unrecorded*, 14 in *episodic, no need* and 7 in *episodic, lakes differ*. Elsewhere it was met at most twice in a cell, and never in *need*.
-- **The renewal report** was beyond the fit in at most 2 of 40 archives of *need* at any speed, and in 39 or 40 of *need falls* and *need falls far* at slow managers.
-  - It was beyond the fit in up to 17 of 40 in *needs vary*, where lakes whose own need lies below the common one renew below it.
-  - It was beyond the fit in up to 19 of 40 in the no-need worlds where lakes differ widely (*lakes differ 1.5*, *no renewal in some*). There the need is an artefact of lakes of different productivity, and the lakes below it renew.
+- **Where the need is misplaced, V1 was refuted where the lakes below it hold there.** *renewal below the floor* was refuted plainly in 40 of 40 at 0.03 and with no managers. Where renewal stops well below the 50% point (*weak depensation*), V1 was refuted in 4 of 40 with no managers, each read *unless*. At 900 lakes it was refuted plainly in 7 of 80 archives and came out positive in 3.
+- **Where lakes below the need return within a year or two (*survival compensates*), V1 was not decided in all 160 archives.** Their surveys below the need come with renewal pending and are set aside, so the test cannot refute T1 there, and gives no positive outcome. This is a limit of the test, holding so far (§1, §13). The two worlds where the need is misplaced and V1 does refute stand beside it, not in its place.
+- **Where the need fell after the fit within the intervals' margin (*need falls*), V1 came out positive in 26 of 40 with no managers.** The lakes read as below the old need are below the new one too. The renewal report was beyond the fit in 40 and 39 of 40 at 0.03 and with no managers. Where the need fell further (*need falls far*), V1 was not decided in 159 of 160 archives and came out positive in one, and the renewal report flagged 40 of 40 at slow managers.
+- **The confounds never produced a refutation of any kind where T1 holds**, in *open*, *unrecorded*, *unsurveyed*, *static labels* or *estimates widen*.
+- **Power rests on the managers' speed,** which no record gives before the data. At 0.3 a year V1 was not decided in any archive of any world. At 0.1 it came out positive in *episodic* (37), *needs vary* (3) and *static labels* (1), and in two of the renewal-lost worlds (39 and 4).
+- **V2 was met mostly where giving from beyond went unrecorded or renewal failed by chance**: up to 6 of 40 in *unrecorded*, 14 in *episodic, no need* and 7 in *episodic, lakes differ*. Elsewhere it was met at most three times in a cell, and never in *need*.
+- **The renewal report** was beyond the fit in at most 2 of 40 archives of *need* at any speed, and in 39 or 40 of *need falls* and *need falls far* at slow managers. It was also beyond the fit:
+  - in up to 17 of 40 in *needs vary*, where lakes whose own need lies below the common one renew below it;
+  - in up to 19 of 40 in worlds where lakes differ widely (*lakes differ 1.5*, *no renewal in some*), where the need is an artefact of lakes of different productivity and the lakes below it renew.
 
 **The other checks.**
 - **On scripted lakes, each rule at its thresholds:**
   - V1's verdicts at the critical counts of 10, 14 and 20 lakes;
   - the separation, the premise and the scope;
   - the ratio test, against a value worked by hand;
-  - the fate and its recovery, renewal pending and the surveys set aside;
+  - the fate: a decline, a quarter kept, neither shown, a recovery, and the recovery's survey read;
+  - renewal pending and the surveys set aside;
   - the reference as the first readable survey;
-  - V2, the three confounds and the static labels;
+  - V2, the three confounds, the archive's end, and the static labels;
   - the exact tail, the exact lower bound and Fisher's test, each against a case by hand;
   - the renewal report, against a case by hand.
 - **The need's fit** recovers a known need within 25%. It gives none where renewal does not rise with the level, or rises too shallowly for the data to reach the need.
-- **The reader** rebuilds the synthetic lakes from files in the assumed layout. It refuses each layout failure round 1 named, and gives the same structural facts with every value column overwritten.
-- **The run**, end to end on those files, reproduces the rules' verdict and reports every floor. It refuses an unrecorded input and a second run.
-- **The freeze's chain**, in stand-in git repositories, passes when whole. It refuses a changed file, a forbidden addendum, a cut chain, a link committed twice, and a run before the freeze.
+- **The reader** rebuilds the synthetic lakes from files in the assumed layout. It refuses each layout failure round 1 named, and gives the same structural facts with every value column overwritten. One lake changing its label in forty does not make the labels per year.
+- **The run**, end to end on those files, reproduces the rules' verdict and reports every floor. It refuses an unrecorded input, a recorded file missing, and a second run.
+- **The freeze's chain**, in stand-in git repositories, passes when whole. It refuses:
+  - a changed file;
+  - a forbidden addendum, and one that remaps a label text;
+  - a cut chain;
+  - a link, or `downloads.json`, committed twice;
+  - a run before the freeze.
 
 ## 9. Data and what has been seen
 
@@ -345,11 +381,11 @@ The label alone counted as a fall favours support. With T1 true and lakes relabe
 
 **What is assumed of the layout** ([`layout.json`](layout.json)), **and checked at the layout step:**
 - the files' names, and the columns the reader takes from each;
-- the label's texts and the rules' category for each (natural, combination, stocked, remnant);
+- the label's texts and the rules' category for each (natural, combination, stocked, remnant). "REM" is mapped by its name to remnant, not natural recruitment. Its definition in the recorders' documentation was not found before this design, and the layout step records it. Whatever it says, a label other than natural recruitment makes the fate unresolved, so the map matters only where it reads a text as natural;
 - the species' text in the stocking files ("Walleye", read without regard to case or spaces);
 - that R1 gives per lake and year the estimate, both interval bounds and the lake's acres, so the reader divides by the acres; R2 age-0 per mile; R3 and R4 numbers of walleye; R5 the species and the number stocked.
 
-Where any differs, an addendum changes `layout.json` alone (§14). Where a quantity the rules need is missing, both interval bounds or the age-0 survey's unit, the reader refuses, and the layout record says so.
+Where any differs, an addendum changes `layout.json` alone (§14): files, columns and the species' text as found, and label texts added. It never remaps a text the map already holds, which would change the scope and the fates, and `run.py` refuses an addendum that does (round 2's N-39). Where a quantity the rules need is missing, both interval bounds or the age-0 survey's unit, the reader refuses, and the layout record says so.
 
 ## 10. The run's order
 
@@ -357,7 +393,7 @@ Each step is committed before the next.
 
 1. **The downloads**, on Ren's yes (§12): each record as a CSV file in one folder outside the repository, its source, date, size and sha-256 recorded in `downloads.json`.
 2. **The layout, with no value read.** `python3 -B reader.py layout FOLDER` gives each file's header and row count, and nothing else. `python3 -B reader.py facts FOLDER` gives what is recorded beside it, read from the structural columns alone (the lake, the year, the label, the characteristics, the species and the type), never an estimate, an interval, a count or a number stocked:
-   - the label's distinct texts, and the number of lakes whose label changes across years;
+   - the label's distinct texts, those the map does not hold, and the lakes whose label category changes across years, of the lakes with two or more estimates;
    - the water body types named, and the lakes recorded closed, open or of no type;
    - the species' texts in the stocking files, and the rows of each file whose lake code matches R1's;
    - whether R5b and R7 could be had;
@@ -366,11 +402,11 @@ Each step is committed before the next.
    - the lakes with a candidate reference, and those of them recorded closed.
 
    Where the layout differs from the one assumed, an addendum changes `layout.json` alone, and the dry run's reader checks run again on synthetic files in the new layout.
-3. **The run** (`python3 -B experiments/need-measured-in-advance/run.py FOLDER`, writing `results/run.json`): the need, then V1, V2, the renewal report, the rows and the reports, at each floor, kept whatever they are. `run.py` refuses unless the freeze checks (§14), unless every input is the file `downloads.json` records, and where `results/run.json` already exists.
+3. **The run** (`python3 -B experiments/need-measured-in-advance/run.py FOLDER`, writing `results/run.json`): the need, then V1, V2, the renewal report, the rows and the reports, at each floor, kept whatever they are. `run.py` refuses unless the freeze checks (§14); unless `downloads.json` is committed once and never changed, every file it records is in the folder with its sha-256, and no other input file is (round 2's N-38); and where `results/run.json` already exists.
 
 **Why the layout is read after the freeze** (round 1's N-15). UE31's lesson is to check, before freezing, that the inputs can meet every rule's minimum. Here the headers cannot be read without the downloads, which wait on Ren, while the freeze does not wait: AGENTS.md has designs prepared fully, freezing designs included. What the lesson guards against is a freeze that the data cannot meet, and three things keep that from deciding anything:
 - the layout step reads structure only, and the dry run checks that its facts are the same with every value column overwritten;
-- an addendum can remap columns and texts, not rules;
+- an addendum can remap files and columns and add label texts, never change a rule or remap a label text;
 - a minimum the data cannot meet leaves V1 not decided, with the reason recorded, never decided some other way.
 
 ## 11. What each outcome means
@@ -379,10 +415,10 @@ Fixed before the run.
 
 | V1 | What it means |
 |---|---|
-| supported | Lakes read as below a need measured in advance declined, by the recorders' own intervals and without recovering, more often than an exact sign test allows by chance, and more often than the lakes above the need. T1's *Refuted by* in its second form could have been met and was not, in the field, for the first time: a prediction that could fail and did not. It is read with the share fallen and its lower bound (§7): a support at 75% says less than one at 95%. It says nothing of the stocking the records miss, or of the lakes with renewal pending, which it set aside. |
-| supported, contradicted by V2 | The same, but at least one lake below the need, its lag surveyed with no renewal, came back above it with nothing recorded given: the separation held, and the first form's letter was met somewhere. The lakes are listed. |
+| T1's forbidden case did not occur: lakes below the need fell and did not return, the need's causal role not shown | Lakes read as below a need measured in advance declined, by the recorders' own intervals and without recovering, more often than chance allows and more often than the lakes above the need. T1's *Refuted by* in its second form could have been met and was not, in the field, for the first time. It does not show that the lakes' renewal stopped because of their level, since renewal lost to another cause gives the same (§7), so it is not to be reported as T1 supported. It is read with the share fallen and its lower bound: 75% says less than 95%. It says nothing of the stocking the records miss, or of the lakes with renewal pending, which it set aside. |
+| the same, with V2 met | The same, but at least one lake below the need, its lag surveyed with no renewal, came back above it with nothing recorded given: the separation held, and the first form's letter was met somewhere. The lakes are listed. |
 | refuted | Lakes read as below the need persisted at least as often as they fell, the three confounds set aside: T1's *Refuted by* in its second form, met. The need is then misplaced: the adults' renewal does not stop where the age-0 surveys say. T1's standing records a frozen field test failed, as its *Evidence* records MQ3. |
-| refuted unless connected waters | The same among all lakes, but not among the seepage lakes alone, or too few of them to decide: fish from connected waters could have kept the lakes up. T1's standing records a refutation the test could not separate from immigration. |
+| refuted unless connected waters | The same among all lakes, but not among the seepage lakes alone, or too few of them to decide, as the verdict says: fish from connected waters could have kept the lakes up. Where the open lakes did not persist more often than the closed (reported), immigration is not shown either. T1's standing records a refutation the test could not separate from immigration. |
 | refuted unless unrecorded stocking | The same, but the other stocking records were not read for a lake that persisted. Reading them, where they can be had, settles it. |
 | refuted unless the unsurveyed fell | The same, but the lakes below the need never surveyed again would, counted as fallen, undo it. |
 | not decided | Too few lakes stood below the need unstocked with no renewal pending, or no need was found. With no need the lakes lie outside T1's scope, as most assessed fish stocks do; otherwise the test could not reach what T1 forbids, as the salt shock could not (T1-STANDING). The renewal report then says whether the need moved after 2012. |
@@ -417,19 +453,22 @@ Freezing waits on no one; AGENTS.md has designs "prepared fully, freezing design
 
 ## 13. Limits and literature
 
-- **The need is read at the age-0 stage.** T1's need is where the condition's renewal stops. The surveys read the fall's age-0; the adults' renewal also passes through survival from age 0 to age 3, which can compensate (Sass and others 2022 found age-0 to age-1 mortality density-dependent). Where compensation holds a lake below the need for years (*renewal below the floor*), V1 refutes. Where it returns a lake within a year or two (*survival compensates*), the lake's surveys below the need come with renewal pending and are set aside, and V1 is not decided: the test cannot refute T1 there, and does not support it (§8). This holds so far (5 November 2026). Its reason is that these records cannot tell a return carried by a recorded year class from one carried by fish that survived from below the floor. It lapses with the spring estimates' age composition or yearling surveys, which tie the returning adults to their year class (§1).
+- **The need is read at the age-0 stage.** T1's need is where the condition's renewal stops. The surveys read the fall's age-0; the adults' renewal also passes through survival from age 0 to age 3, which can compensate (Sass and others 2022 found age-0 to age-1 mortality density-dependent). Where compensation holds a lake below the need for years (*renewal below the floor*), V1 refutes. Where it returns a lake within a year or two (*survival compensates*), the lake's surveys below the need come with renewal pending and are set aside, and V1 is not decided: the test cannot refute T1 there, and gives no positive outcome (§8). This holds so far (5 November 2026). Its reason is that these records cannot tell a return carried by a recorded year class from one carried by fish that survived from below the floor. It lapses with the spring estimates' age composition or yearling surveys, which tie the returning adults to their year class (§1).
 - **The need at the 50% point.** Below it renewal is rarer, not stopped. Where renewal truly stops well below that point (*weak depensation*), lakes just below the need recover, and V1 refutes, plainly only with more lakes than 300.
-- **A need misplaced within the intervals' margin.** A survey is read as below the need only where its whole interval is, so at the surveys' error an estimate below about three fifths of the need. A need that fell after the fit by less than that margin (*need falls*) leaves the lakes read below it below the true need too, and V1 can support; the renewal report shows the move. A need that fell further (*need falls far*) leaves the lakes below it renewing, set aside, and V1 not decided, with the renewal report beyond the fit.
+- **A need misplaced within the intervals' margin.** A survey is read as below the need only where its whole interval is, so at the surveys' error an estimate below about three fifths of the need. A need that fell after the fit by less than that margin (*need falls*) leaves the lakes read below it below the true need too, and V1 can come out positive; the renewal report shows the move. A need that fell further (*need falls far*) leaves the lakes below it renewing, set aside, and V1 not decided, with the renewal report beyond the fit.
+- **Why lakes fell** (§1, §7). The positive outcome cannot tell renewal stopping with the level from renewal lost to another cause before 2013. This holds so far (5 November 2026), for that reason. It lapses with a test of lakes stocked back above the need: does their natural renewal return? Under a need in the level it should, and under renewal lost to another cause it should not. WDNR marks stocked fish, so a fall survey can tell the stocked year class from the lake's own. That test is a design of its own, offered on the board after this one lands.
+- **Recorders who relabel a failing lake.** Where the recorders move a lake off natural recruitment after its surveys fail, as "REM" may record, the fates T1 predicts become unresolved. In the dry run, recorders who did so after three failed falls left V1 not decided in every archive at half a chance a year (§8). The test's power then rests on how the recorders label, which the layout step shows but cannot change.
+- **A lag longer than three years.** Females mature later than males, so part of a year class may join the adults at five years, after the pending window has closed. Round 2's reader ran T1's own world with half of each class joining at five, under the rules that round read: V1 was not decided in 31 of 40 archives with no managers, where at three it decided all 40. This is a power cost, not a false outcome, and holds so far.
 - **A common need.** One need for every lake reads T1's need as a property of the lakes' common renewal law. The *needs vary* world shows V1 holding where needs differ by a factor of about two.
 - **The lag.** T1's regime has no lag; walleye join the adults about three years after spawning, so the state at a reference is more than the level (T2's own claim: the level, the recent giving and one lag). The rules read renewal pending as part of the condition (§6).
-- **The ratio test** reads each interval as log-normal, which a mark-and-recapture interval is only roughly; an interval read wrongly as narrow makes declines and rises easier to call on both sides of the need alike.
+- **The ratio test** reads each interval as log-normal, which a mark-and-recapture interval is only roughly. An interval read wrongly as narrow makes declines and rises easier to call on both sides of the need alike. One read wrongly as wide leaves more fates unresolved, since persistence must be shown (§6).
 - **Lakes are read as independent.** Region-wide years correlate fates, so V1's p is optimistic; the fates by reference year are reported.
 - **Labels.** The recruitment-source label is the recorders' classification and its criteria are theirs. Where it leaves natural recruitment the fate is unresolved, and the reading set aside, the label alone a fall, is reported beside (§8).
 - **Literature.** Critical depensation and its rarity in assessed stocks: Myers, Barrowman, Hutchings and Rosenberg (1995, *Science*); the q of depensation: Liermann and Hilborn (1997); Allee effects: Courchamp, Berec and Gascoigne (2008). Walleye: Sass, Feiner and Shaw (2021, *Fisheries*); Dassow and others (2023, *Fisheries Research*); Mrnak and others (2024, *Canadian Journal of Fisheries and Aquatic Sciences*); Rypel and others (2018, the same journal); Sass (2025, *FACETS*). Thresholds of harvest: Clark (1976); Beddington and May (1977). Exact bounds: Clopper and Pearson (1934). These are cited from their abstracts and summaries, not checked against the full texts.
 
 ## 14. Provenance and the freeze
 
-- Written for board item T1N on 5 November 2026, at the coordinator's offer. The coordinator chose the walleye lakes, the separation as the primary verdict, the scope by the recorders' fields, the run's order, the confounds decided before any value, the label read with a recorded fall, the no-need family's bound and its checks, and agreed to drop the published need (§4).
+- Written for board item T1N on 5 November 2026, at the coordinator's offer. The coordinator chose the walleye lakes, the separation as the primary verdict, the scope by the recorders' fields, the run's order, the confounds decided before any value, the label read with a recorded fall, the no-need family's bound and its checks, and agreed to drop the published need (§4). After round 2's N-28 the coordinator named V1's positive outcome narrowly, narrowed the no-need family to renewal that never stops with the level, recorded as made after that finding (§8), and asked that the stocked-lakes test be offered as its own item (§13).
 - No data was downloaded, no value read, and no model called. The only computation was the dry run's, on synthetic lakes.
 - **Readers.** An independent reader reads the frozen files before the freeze lands: a full read, then the same reader on the diff of each round's fixes, until a round finds nothing of high or medium severity, at most five. The findings, and how each was taken, are in [`REVIEW-FREEZE.md`](REVIEW-FREEZE.md).
 - **What is frozen.** `FROZEN.sha256` lists:
@@ -441,7 +480,7 @@ Freezing waits on no one; AGENTS.md has designs "prepared fully, freezing design
   - each link is committed once and never changed, one blob across the full history, as freeze 1's chain reads it;
   - each link comes after the one before, and no link once committed is gone;
   - each lists the files before it and its own text;
-  - each changes no file but `layout.json` and the dry run's record;
+  - each changes no file but `layout.json` and the dry run's record, and remaps no label text `layout.json` held;
   - the newest link's files are the bytes it names, committed;
   - the dry run's record passed every check on the code the newest link names.
 - **How this file is frozen.** By the commit that adds `FROZEN.sha256`: its text there is the frozen one. It is not hashed, so that a link can be repaired without touching the code's hashes. A later edit may only repair a link or a typo, is listed in a dated note at the end, and changes no rule, threshold or reading.

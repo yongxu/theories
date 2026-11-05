@@ -1,6 +1,7 @@
 """T1N's reader (DESIGN.md, section 10): the recorders' tables, as CSV files in one folder, into the lakes t1n.py
 reads. The layout assumed before any file was seen is layout.json, which alone an addendum may change (with
-the dry run's record), once the layout is read with no value.
+the dry run's record), once the layout is read with no value: files and columns as found, and label texts
+added, never an existing text remapped (run.py checks it).
 
     python3 -B reader.py layout FOLDER     # each file's header and row count; no value is printed
     python3 -B reader.py facts FOLDER      # what the layout step records, from structural columns alone
@@ -157,7 +158,7 @@ def read_all(folder):
             rs = table(folder, kind, {"species"})
             if rs and not any(is_species(r["species"]) for r in rs):
                 raise SystemExit(f"no row of {FILES[kind]} names {SPECIES!r}: the species' text differs")
-    labels = any(len(set(lk["label"].values())) > 1 for lk in lakes.values())
+    labels = t1n.labels_per_year(lakes.values())
     return lakes, {"labels per year": labels, "rows matched by lake code, of rows": matched, "rows skipped": skipped}
 
 
@@ -212,8 +213,12 @@ def layout_facts(folder, cutoff=t1n.CUTOFF):
             rs = rows_of(kind)
             match[kind] = None if rs is None else [sum(1 for r in rs if code(r["lake"]) in est), len(rs)]
     species = {kind: sorted({r["species"].strip() for r in rows_of(kind) or []}) for kind in ("stocking", "other")}
+    cats = {l: {LABELS.get(t, "unmapped") for t in s} for l, s in labs.items()}
+    multi = [l for l in est if len(est[l]) > 1]
     return {"label texts": sorted({t for s in labs.values() for t in s}),
-            "lakes whose label changes across years": sum(1 for s in labs.values() if len(s) > 1),
+            "label texts layout.json does not map": sorted({t for s in labs.values() for t in s} - set(LABELS)),
+            "lakes whose label category changes across years, of lakes with two or more estimates":
+                [sum(1 for l in multi if len(cats[l]) > 1), len(multi)],
             "water body types named": sorted(({t for s in chars.values() for t in s} | set(types.values())) - {""})[:60],
             "lakes recorded closed / open / unknown": [sum(1 for v in closed.values() if v is s) for s in (True, False, None)],
             "species texts": species, "rows naming a lake of the estimates, of rows": match,

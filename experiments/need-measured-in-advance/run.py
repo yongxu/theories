@@ -6,9 +6,10 @@ tables in FOLDER; the result kept whatever it is, and never overwritten.
 It refuses unless the freeze checks (frozen): FROZEN.sha256, and each addendum's link after it, committed once
 and never changed (one blob across the full history), each after the one before, none committed and then
 removed, each listing the files before it and its own text and changing none but layout.json and the dry run's
-record; the newest link's files the bytes it names and committed; and the dry run's record passed, every
-check, on the code that link names. It refuses unless every input file is the one downloads.json records, by
-its sha-256, and where results/run.json exists. Standard library only; no model is called.
+record, and none remapping a label text layout.json already held; the newest link's files the bytes it names
+and committed; and the dry run's record passed, every check, on the code that link names. It refuses unless
+downloads.json is committed once and never changed, every file it records is in the folder with its sha-256,
+and no other input file is; and where results/run.json exists. Standard library only; no model is called.
 """
 
 import hashlib
@@ -50,6 +51,16 @@ def blobs(repo, rel):
     return out
 
 
+def once(repo, rel):
+    """rel committed exactly once and never changed, by its blobs across the full history, and unchanged in the
+    worktree; refuses otherwise. Returns the commit that added it."""
+    history = blobs(repo, rel)
+    if not history or len({b for _, b in history}) != 1 or history[0][1] is None \
+            or git(repo, "status", "--porcelain", "--", rel).strip():
+        raise SystemExit(f"{rel} must be committed exactly once and never changed")
+    return history[-1][0]
+
+
 def frozen(repo=None, here=HERE):
     """The freeze's chain, checked; returns the newest link's name and its commit, or refuses."""
     repo = Path(repo) if repo else here.parents[1]
@@ -67,14 +78,11 @@ def frozen(repo=None, here=HERE):
     nxt = str(folder / "addenda" / f"FROZEN-{len(links)}.sha256")
     if git(repo, "rev-list", "--full-history", "HEAD", "--", nxt).split():
         raise SystemExit(f"{nxt} was committed and is gone: the chain was cut")
+    layout = str(folder / "layout.json")
     prev, prev_commit = None, None
     for k, link in enumerate(links):
         rel = str(link.relative_to(repo))
-        history = blobs(repo, rel)
-        if not history or len({b for _, b in history}) != 1 or history[0][1] is None \
-                or git(repo, "status", "--porcelain", "--", rel).strip():
-            raise SystemExit(f"{rel} must be committed exactly once and never changed")
-        commit = history[-1][0]
+        commit = once(repo, rel)
         if prev_commit and subprocess.run(["git", "-C", str(repo), "merge-base", "--is-ancestor", prev_commit,
                                            commit]).returncode != 0:
             raise SystemExit(f"{rel} was not committed after the link before it")
@@ -86,6 +94,12 @@ def frozen(repo=None, here=HERE):
             changed = {p for p in prev if prev[p] != hashes[p]}
             if changed - may_change:
                 raise SystemExit(f"{rel} changes files an addendum may not: {sorted(changed - may_change)}")
+            if layout in changed:
+                old = json.loads(git(repo, "show", f"{prev_commit}:{layout}"))["labels"]
+                new = json.loads(git(repo, "show", f"{commit}:{layout}"))["labels"]
+                remapped = sorted(t for t in old if new.get(t) != old[t])
+                if remapped:
+                    raise SystemExit(f"{rel} remaps label texts layout.json held, which an addendum may only add to: {remapped}")
         prev, prev_commit = hashes, commit
     bad = [p for p, h in prev.items() if sha(repo / p) != h]
     if bad:
@@ -100,22 +114,29 @@ def frozen(repo=None, here=HERE):
 
 
 def inputs(folder):
-    """The input files' sha-256, each checked against downloads.json; refuses where one is not recorded."""
+    """The input files' sha-256, each checked against downloads.json: every file it records present with its
+    hash, and no other input file present. Refuses otherwise."""
     if not DOWNLOADS.exists():
         raise SystemExit("downloads.json is not written: no download is recorded")
     recorded = {d["file"]: d["sha256"] for d in json.loads(DOWNLOADS.read_text())["files"]}
     out = {}
-    for name in reader.FILES.values():
+    for name, h in recorded.items():
         p = Path(folder) / name
-        if p.exists():
-            out[name] = sha(p)
-            if recorded.get(name) != out[name]:
-                raise SystemExit(f"{name} is not the file downloads.json records")
+        if not p.exists():
+            raise SystemExit(f"{name} is recorded in downloads.json and missing from the folder")
+        out[name] = sha(p)
+        if out[name] != h:
+            raise SystemExit(f"{name} is not the file downloads.json records")
+    for name in reader.FILES.values():
+        if (Path(folder) / name).exists() and name not in recorded:
+            raise SystemExit(f"{name} is in the folder and not recorded in downloads.json")
     return out
 
 
 def run(folder, check_frozen=True, check_inputs=True):
     stamp = frozen() if check_frozen else {"link": None, "note": "the dry run's: the freeze not checked"}
+    if check_inputs:
+        once(HERE.parents[1], str(DOWNLOADS.relative_to(HERE.parents[1])))
     hashes = inputs(folder) if check_inputs else None
     facts = reader.layout_facts(folder)
     lakes, meta = reader.read_all(folder)
