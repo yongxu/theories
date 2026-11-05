@@ -41,7 +41,8 @@ Z95 = 1.96                    # the slope's lower 95% bound is b - Z95 se(b); a 
 Z_ONE = 1.645                 # a decline or a rise by the ratio test on the recorders' intervals, one-sided at 0.05
 KEPT = 0.25                   # persisted: the later estimate's ratio to the reference's, at its lower bound, keeps a quarter
 LABELS_SHARE = 0.05           # labels read per year where at least this share of lakes change category across surveys
-DID_NOT_OCCUR = "T1's forbidden case did not occur"   # V1's positive outcome (DESIGN.md, section 7)
+SEPARATED = "Refuted by's second form not met: the fates separated across the need"   # V1's positive outcome (§7)
+LOW_LEVEL, WIDEN = 2.0, 2.0   # the reading a refutation is checked against: intervals below LOW_LEVEL WIDEN as wide
 SIDE_MIN = 20                 # the need must have at least this many of the fit's lake-years on each side
 
 
@@ -408,7 +409,8 @@ def decide(below, above):
         p = fisher_greater(k, n, ka, na) if na else None
         nums["separation p"] = float(p) if p is not None else None
         if p is not None and p <= ALPHA:
-            return DID_NOT_OCCUR + ": lakes below the need fell and did not return, the need's causal role not shown", nums
+            return (f"{SEPARATED}, below it {k} of {n} falling, more than chance allows and more often than above it "
+                    f"({ka} of {na})"), nums
         return "not decided: below the need more fell than the null allows, but the lakes above it fell as often", nums
     if k <= n - c:
         return "refuted: the fates separated no better than by the null, on the null's side at 0.05", nums
@@ -419,14 +421,15 @@ def decide(below, above):
     return "not decided", nums
 
 
-def v1(table, v2_=None):
+def v1(table, v2_=None, widened=None):
     """The separation (primary): lakes below the need against the null with no need (y = 0), which predicts no
-    fall; T1 predicts a fall below the need under any draw. T1's forbidden case did not occur where among the
+    fall; T1 predicts a fall below the need under any draw. The second form of Refuted by is not met where among the
     resolved lakes below the need at least the critical count of an exact one-sided sign test at 0.05 fell
     (McNemar's on the discordant lakes) and, by Fisher's exact test at 0.05, they fell more often than the
-    resolved lakes above the need, both sides in scope: the separation across the need. That outcome says the
-    need's causal role is not shown: renewal lost to another cause before the window gives it too (DESIGN.md,
-    section 7). Refuted, the fates separated no better than
+    resolved lakes above the need, both sides in scope: the separation across the need. The outcome's line says
+    how many lakes below the need came back above it, of them how many with every year of the lag surveyed
+    (V2), and that the need's causal role is not shown: renewal lost for years to another cause gives it too
+    (DESIGN.md, section 7). Refuted, the fates separated no better than
     by the null, where at most n - c fell (the null's side at 0.05) or, by the home's letter, at most half
     with at least N_REFUTE resolved. Not decided otherwise, or where fewer than N_MIN are resolved.
 
@@ -434,8 +437,9 @@ def v1(table, v2_=None):
     make on its own reads "refuted unless ...": fish from connected waters (a lake that persisted is not a
     recorded seepage lake, and the closed lakes alone do not refute), unrecorded stocking (the other stocking
     records were not read for a lake that persisted), and the unsurveyed (counted as fallen, the lakes below
-    the need with no later estimate undo the refutation). The positive outcome with V2 met says so, with the
-    lakes."""
+    the need with no later estimate undo the refutation); and the intervals understating the error at low
+    density (`widened`, the same reading with every interval below LOW_LEVEL adults per acre WIDEN as wide on
+    the log scale, does not refute)."""
     inn = [r for r in table if "out" not in r]
     below = [r for r in inn if r["T1 predicts"] == "falls" and r["fate"] != "unresolved"]
     above = [r for r in inn if r["T1 predicts"] == "persists" and r["fate"] != "unresolved"]
@@ -452,10 +456,12 @@ def v1(table, v2_=None):
     out["below: persisted / resolved, by type"] = persisted
     (ko, no), (kc, nc) = persisted["open or of no type"], persisted["closed"]
     out["below: open lakes persisting more often than closed, p"] = float(fisher_greater(ko, no, kc, nc)) if no and nc else None
-    if verdict.startswith(DID_NOT_OCCUR):
+    if verdict.startswith(SEPARATED):
         out["p"] = float(tail_half(nums["below: resolved"], nums["below: fell"]))
-        if v2_ and v2_["met"]:
-            verdict += "; V2 met in " + ", ".join(m["id"] for m in v2_["lakes"])
+        back = sum(1 for r in below if r["fate estimate"][1] >= r["need"])
+        met = [m["id"] for m in v2_["lakes"]] if v2_ else []
+        verdict += (f"; {back} came back above the need, {len(met)} of them with every year of the lag surveyed (V2"
+                    + (": " + ", ".join(met) if met else "") + "); the need's causal role not shown")
     if verdict.startswith("refuted"):
         unless, kept = [], [r for r in below if r["fate"] == "persisted"]
         if any(r["closed"] is not True for r in kept):
@@ -472,6 +478,13 @@ def v1(table, v2_=None):
             fell = [dict(r, fate="fell") for r in table if r.get("out") == "below the need with no later estimate"]
             if not decide(below + fell, above)[0].startswith("refuted"):
                 unless.append("the unsurveyed fell")
+        if widened is not None:
+            inn_w = [r for r in widened if "out" not in r]
+            wide = decide([r for r in inn_w if r["T1 predicts"] == "falls" and r["fate"] != "unresolved"],
+                          [r for r in inn_w if r["T1 predicts"] == "persists" and r["fate"] != "unresolved"])[0]
+            out["with the intervals widened at low density"] = wide
+            if not wide.startswith("refuted"):
+                unless.append("the intervals understating the error at low density")
         if unless:
             verdict = "refuted unless " + " or ".join(unless) + ": " + verdict.split(": ", 1)[1]
     out["verdict"] = verdict
@@ -556,7 +569,20 @@ def renewal_below(lakes, nd, first=CUTOFF + 1, floor=FLOOR, labels=True):
             "chance of so many or more under the fit": round(sum(dist[k:]), 6)}
 
 
+def widen(lakes):
+    """The lakes with every spring estimate below LOW_LEVEL adults per acre given an interval WIDEN as wide on the
+    log scale about its estimate: the reading a refutation is checked against, for intervals that understate the
+    error where mark-and-recapture counts few fish (DESIGN.md, section 7)."""
+    def wide(e):
+        est, lo, hi = e
+        if est >= LOW_LEVEL or min(est, lo, hi) <= 0:
+            return e
+        return est, est * (lo / est) ** WIDEN, est * (hi / est) ** WIDEN
+    return [dict(lk, adults={t: wide(e) for t, e in lk["adults"].items()}) for lk in lakes]
+
+
 def read(lakes, need_, first=FIRST_REF, last=None, floor=FLOOR, labels=True, label_alone=False):
     table = rows(lakes, need_, first, last, floor, labels, label_alone)
     second = v2(table)
-    return {"V1": v1(table, second), "V2": second, "reports": reports(table), "rows": table}
+    widened = rows(widen(lakes), need_, first, last, floor, labels, label_alone)
+    return {"V1": v1(table, second, widened), "V2": second, "reports": reports(table), "rows": table}

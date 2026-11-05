@@ -24,6 +24,9 @@ import t1n                       # noqa: E402
 import reader                    # noqa: E402
 
 OUT = HERE / "results" / "run.json"
+# Lakes whose fall-survey values a web search summary quoted to round 3's reader before the freeze (DESIGN.md,
+# section 9): Worcester Lake, and Crane and Chase Lakes, in Price County. The run reads V1 without them too.
+SEEN = {"county": "price", "names": ("worcester", "crane", "chase")}
 DOWNLOADS = HERE / "downloads.json"
 
 
@@ -133,6 +136,15 @@ def inputs(folder):
     return out
 
 
+def seen(lakes):
+    """The lakes SEEN names, by county and a word of the lake's name, case aside; None where no lake has a name
+    (the records' name column not read)."""
+    if not any(lk.get("name") for lk in lakes):
+        return None
+    return sorted(lk["id"] for lk in lakes if SEEN["county"] in lk.get("county", "").lower()
+                  and any(w in lk.get("name", "").lower() for w in SEEN["names"]))
+
+
 def run(folder, check_frozen=True, check_inputs=True):
     stamp = frozen() if check_frozen else {"link": None, "note": "the dry run's: the freeze not checked"}
     if check_inputs:
@@ -161,6 +173,11 @@ def run(folder, check_frozen=True, check_inputs=True):
                 if closed:
                     cell["recorded seepage lakes alone (reported)"] = t1n.read(
                         closed, nd["need"], t1n.FIRST_REF, last, floor, labels)["V1"]
+                ids = seen(lakes)
+                cell["without the lakes a search summary showed (reported)"] = (
+                    {"lakes": None, "V1": "not computed: no lake's name was read"} if ids is None else
+                    {"lakes": ids, "V1": t1n.read([lk for lk in lakes if lk["id"] not in ids], nd["need"], t1n.FIRST_REF,
+                                                  last, floor, labels)["V1"]["verdict"]})
         by_floor[f"floor {floor}"] = cell
     out["by floor"] = by_floor
     decided = by_floor[f"floor {t1n.FLOOR}"]

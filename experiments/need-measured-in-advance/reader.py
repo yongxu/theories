@@ -24,7 +24,7 @@ FILES, COLUMNS, LABELS, SPECIES = LAYOUT["files"], LAYOUT["columns"], LAYOUT["la
 OPTIONAL = set(LAYOUT["optional files"])
 OPTIONAL_COLUMNS = {tuple(x) for x in LAYOUT["optional columns"]}
 OPEN_TYPES = ("drainage", "drained", "spring", "impoundment", "flowage", "reservoir", "river")
-STRUCTURE = {"lake", "year", "label", "characteristics", "species", "type"}   # what the layout step reads
+STRUCTURE = {"lake", "year", "label", "characteristics", "species", "type", "name", "county"}   # the layout step's
 
 
 def code(s):
@@ -93,7 +93,8 @@ def read_all(folder):
             continue
         lk = lakes.setdefault(lid, {"id": lid, "acres": acres, "label": {}, "adults": {}, "age0": {}, "harvest": {},
                                     "creel": set(), "stocked": set(), "other": None,
-                                    "closed": closed_of(row.get("characteristics"))})
+                                    "closed": closed_of(row.get("characteristics")),
+                                    "name": (row.get("name") or "").strip(), "county": (row.get("county") or "").strip()})
         est, lo, hi = num(row["estimate"]), num(row["lower"]), num(row["upper"])
         if None in (est, lo, hi):
             skipped["no estimate or interval"] += 1
@@ -243,7 +244,8 @@ def write_synthetic(lakes, folder):
             rows["adults"].append({"lake": lk["id"], "year": yr, "acres": lk["acres"],
                                    "label": back[lk["label"].get(yr, t1n.NR)], "estimate": est * lk["acres"],
                                    "lower": lo * lk["acres"], "upper": hi * lk["acres"],
-                                   "characteristics": {True: "Seepage", False: "Drainage", None: ""}[lk.get("closed")]})
+                                   "characteristics": {True: "Seepage", False: "Drainage", None: ""}[lk.get("closed")],
+                                   "name": lk.get("name", f"Lake {lk['id']}"), "county": lk.get("county", "")})
         for yr, v in sorted(lk["age0"].items()):
             rows["age0"].append({"lake": lk["id"], "year": yr, "per mile": v})
         for yr, v in sorted(lk["harvest"].items()):
