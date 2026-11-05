@@ -43,7 +43,7 @@
 ## Does not show
 
 - That giving, a window or any law of giving is better: that is asked under the ethics' two premises, the continuation condition for scope and C for order.
-- Probabilities, and so not generous tit-for-tat's forgiveness with a probability; the window is a deterministic relative of it.
+- Forgiveness with a probability, and errors turning withholding into giving; with one-way errors by chance the window delays total withholding and does not prevent it (the chance record).
 - That the agreeing Prop law of the bridge can always be the normal form: the disjunctive normal form of answering keeps inclusion only under excluded middle. Witness: `Becoming.WindowedWaiting.Pair.all_agreeing_keeps_em`.
 - How waiting forms or how a pairing comes about; amounts of giving.
 - That the readings as tit-for-tat, tit-for-two-tats, win-stay lose-shift or grim trigger carry the literature's results on stability or noise.
@@ -62,14 +62,14 @@ Canonical source: [WindowedWaiting.lean](../../../../experiments/integrated-corr
 <a id="next--下一步"></a>
 ## Next
 
-Errors with a probability, so that the window meets generous tit-for-tat's forgiveness; laws of giving with amounts; how a pairing and its waiting form.
+Forgiveness with a probability, so that generous tit-for-tat is represented; laws of giving with amounts; how a pairing and its waiting form.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-Evolutionary game theory of reciprocity, as readings (AI reading, not formal names): answers is tit-for-tat, the window of two tit-for-two-tats (Axelrod and Hamilton 1981; Axelrod 1984), agreement win-stay lose-shift (Kraines and Kraines 1989, Pavlov; Nowak and Sigmund 1993), waitsAll grim trigger, giving whatever comes unconditional cooperation. The window is a deterministic relative of generous tit-for-tat (Molander 1985; Nowak and Sigmund 1992), whose forgiveness with a probability is not represented; errors as a supplied pattern stand where that literature has noise (Wu and Axelrod 1995). The split by keeping inclusion is near-definitional, the monotone Boolean functions of two inputs. That agreement is the one law, among those giving after mutual giving, restoring and answering corresponds to win-stay lose-shift being the only memory-one strategy of the prisoner's dilemma, stochastic ones included, that is mutually cooperative, corrects errors and retaliates (Hilbe, Martinez-Vaquero, Chatterjee and Nowak 2017, Fig. 1B); the Lean covers the eight deterministic laws only, and the definitions are not yet compared clause by clause.
+Evolutionary game theory of reciprocity, as readings (AI reading, not formal names): answers is tit-for-tat, the window of two tit-for-two-tats (Axelrod and Hamilton 1981; Axelrod 1984), agreement win-stay lose-shift (Kraines and Kraines 1989, Pavlov; Nowak and Sigmund 1993), waitsAll grim trigger, giving whatever comes unconditional cooperation. The window is a relative of forgiveness for errors spaced within it; generous tit-for-tat (Molander 1985; Nowak and Sigmund 1992) forgives with a probability, which is not represented, and where errors come by chance and only withhold the window ends in total withholding while it does not (the chance record, by hand); errors as a supplied pattern stand where that literature has noise (Wu and Axelrod 1995). The split by keeping inclusion is near-definitional, the monotone Boolean functions of two inputs. That agreement is the one law, among those giving after mutual giving, restoring and answering corresponds to win-stay lose-shift being the only memory-one strategy of the prisoner's dilemma, stochastic ones included, that is mutually cooperative, corrects errors and retaliates (Hilbe, Martinez-Vaquero, Chatterjee and Nowak 2017, Fig. 1B); the Lean covers the eight deterministic laws only, and the definitions are not yet compared clause by clause.
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
@@ -78,8 +78,9 @@ Evolutionary game theory of reciprocity, as readings (AI reading, not formal nam
 - **formal-reuse**: [restoring-giving-from-the-worst-start](restoring-giving-from-the-worst-start.md). Reuses Tolerance's KeepsInclusion, worst_start, restored_stays and withheld_kept: the windowed laws keep inclusion, so these apply to them as they stand.
 - **interpretive**: [thresholds-of-waiting](thresholds-of-waiting.md). In a pair a tolerance of one is giving whatever comes (Tolerance.AllBut.of_length_le), so a pair passes a withholding out only through time; the window is that passing in time.
 - **interpretive**: [tolerance-monotone-across-laws](tolerance-monotone-across-laws.md). A wider window gives no less, as more tolerance gives no less; window_mono is proved directly on the carrier.
+- related, not a proved adapter: [errors-by-chance-in-a-pair-keeping-mutual-withholding](errors-by-chance-in-a-pair-keeping-mutual-withholding.md). There errors come by chance and only withhold, and the window delays total withholding.
 
-**Used by:** [offspring-read-from-giving-that-waits](offspring-read-from-giving-that-waits.md)
+**Used by:** [errors-by-chance-in-a-pair-keeping-mutual-withholding](errors-by-chance-in-a-pair-keeping-mutual-withholding.md) · [offspring-read-from-giving-that-waits](offspring-read-from-giving-that-waits.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -96,7 +97,8 @@ Aliases: `a pair tolerates only within a window`, `Becoming.WindowedWaiting.keep
 
 - 1 November 2026, board item EL (EL4a/b/c): added from EL's design of giving that waits on giving under selection, asked whether the account explains tit-for-tat with forgiveness; the windowed law on the whole-history carrier with errors as a clock, the one-step split, the echo and the alternator; the lemmas of runs, the local unfoldings and the restatements are listed in references only.
 - 5 November 2026, board item EL7: the correspondence names Hilbe et al. 2017, whose uniqueness of win-stay lose-shift among memory-one strategies is close to the one law restoring and answering; nothing the record proves changes.
+- 6 November 2026, board item EL7, correction: the window was read as a deterministic relative of forgiveness without saying that under chance errors it ends in total withholding; that is now said, and the next step narrowed.
 
 </details>
 
-Documentary review UTC: `2026-10-31T23:52:00+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-05T20:42:24+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

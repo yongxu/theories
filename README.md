@@ -14,7 +14,7 @@
 
 **Start with** [the one page](theories/becoming/ONE-PAGE.md) (11–15 minutes). [The opening](#truth-exists) is a first-person conviction (21–28 minutes).
 
-**Lean receipts** credit 502 of [533 registered results](RESULTS.md), showing each Lean statement follows from its premises, not that they hold. [Empirical theses](theories/becoming/chapters/08-METHOD.md#theses) face tests frozen before scoring: some passed, some failed. No human review yet.
+**Lean receipts** credit 504 of [535 registered results](RESULTS.md), showing each Lean statement follows from its premises, not that they hold. [Empirical theses](theories/becoming/chapters/08-METHOD.md#theses) face tests frozen before scoring: some passed, some failed. No human review yet.
 
 ---
 

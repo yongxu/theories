@@ -288,6 +288,7 @@ import Becoming.KeepingWidening
 import Becoming.SelectionShift
 import Becoming.LineageRegions
 import Becoming.LineageRegimes
+import Becoming.LineageDrawdown
 import Becoming.WideningOnTheMap
 import Becoming.Gluing
 import Becoming.Runs
@@ -341,6 +342,8 @@ import Becoming.UnreadStandings
 import Becoming.DrawnBeyond
 import Becoming.WindowedWaiting
 import Becoming.PairSelection
+import Becoming.PairFlow
+import Becoming.PairChance
 import Becoming.JointDraw
 import Becoming.Optimum
 import Becoming.OptimumSeason
@@ -962,8 +965,24 @@ tagged instance or application.
   `LineageRegimes.multiplying_takers_stop`). The stock decides neither fate: from every positive
   stock a handover relay generates and a run-down degenerates (`LineageRegimes.Handover.both_fates`,
   `LineageRegimes.stock_forces_neither`); under renewal from outside no gated premise holds
-  (`LineageRegimes.FromOutside.not_gated`). A leaf; that every decider of a lineage's region is one
-  of the three is not shown.
+  (`LineageRegimes.FromOutside.not_gated`). Imported by `Becoming.LineageDrawdown` (board item EL7),
+  where the gated reading holds without its gate and `Acting`; that every decider of a lineage's
+  region is one of the three is not shown.
+* `Becoming.LineageDrawdown` (L2, through `Becoming.LineageRegimes`): the lineage reading without its
+  gate, EL7 (no ethical predicate). The gated lineage reading and the map's horizon law hold with the
+  coupled gate and `Acting` dropped, each landed statement a case with the same type
+  (`LineageDrawdown.degeneration_of_excess`, `LineageDrawdown.landed_of_excess_eq`,
+  `LineageDrawdown.gone_of_excess`, `LineageDrawdown.horizon_of_excess`): restatements of landed
+  lemmas, not further results. Under balance a family's stock is below a need after `n` steps exactly
+  where its stock before, with everything given, is below the need with everything taken
+  (`LineageDrawdown.below_iff`, a restatement of `Flow.Balances.accumulates`); where activity needs
+  support, a line ends on every branch where everything it reaches at one step requires a member of a
+  family below its need there (`LineageDrawdown.degeneration_of_unmet`), and on the census the
+  generations of descent end there with the selection term (`LineageDrawdown.ends_of_drawdown`,
+  near-definitional). The gate makes the formations' end last; these laws judge the line from before
+  that step. In a witness, a line drawn past a renewal given from no condition, from too small a
+  stock, degenerates, the coupled gate failing (`LineageDrawdown.Drain.outside_ends`,
+  `LineageDrawdown.Drain.not_gated`). A leaf.
 * `Becoming.GroupEnding` (L1): selection among groups through conditions of their own. Where
   every group with less of an amount than another leaves no offspring, nothing is discordant
   among the groups, so the whole selects for the amount exactly where k times the within-group
@@ -2782,8 +2801,32 @@ tagged instance or application.
   `PairSelection.Needs.symmetric_breaks`), a gift may be carried by an inflow
   (`PairSelection.Renewed.renewal_carried`), and a factor read as a line's rise is bounded by the
   slack beyond and the inflow (`PairSelection.Place.received_factor_le`, a bound under a supplied
-  reading). A leaf; a model of the pair's run as a flow on a web, from which the factors would
-  follow, is not shown.
+  reading). Imported by `Becoming.PairFlow`, which reads the pair's run as a flow on a web from which
+  the factors follow, and by `Becoming.PairChance` (board item EL7).
+* `Becoming.PairFlow` (L1): the pair's run as a flow, EL7 (no ethical predicate). Two balanced flows
+  from the same levels whose takes and gives differ, where the levels agree, only by amounts that
+  cancel keep the same levels, so no reading through the levels tells them apart
+  (`PairFlow.levels_agree_until`, `PairFlow.factors_equal`). Read as a balanced flow with constant
+  routes, the same for both formations, a pair's run gives each place's offspring as
+  `a + β · received + γ · withheld` for any laws and errors (`PairFlow.Routes.line_offspring`), with
+  `γ < β` exactly where giving loses less than keeping spoils with a matching
+  (`PairFlow.Routes.gap_iff`) and `β = γ` with neither loss nor matching (`PairFlow.Routes.plain`).
+  With renewal only while a formation stands (the renewer requiring nothing, so not a gated
+  renewal), mutual giving at every step leaves the levels as no giving does while both stand
+  (`PairFlow.WhileStanding.runs_agree_until`), a formation fallen below its need and given nothing
+  never stands again (`PairFlow.WhileStanding.stays_fallen`), and at a shortfall a gift or a draw
+  changes the lines either way (`PairFlow.FailedRenewal.lines_gain`, `PairFlow.GiverAtNeed.gift_lost`,
+  `PairFlow.DrawnBelowNeed.fallen`); in a family gaining nothing the needs met stay within its
+  starting stock (`PairFlow.met_needs_within_start`). Close to definitional once the parts are fixed.
+  A leaf.
+* `Becoming.PairChance` (L1): errors by chance in a pair's run, EL7 (no ethical predicate). With
+  errors only withholding, a pair of laws withholding after mutual withholding (answering, the window
+  of two, waiting on both) withholds at every step from the first of two consecutive steps at which
+  both err (`PairChance.burst_absorbs`); with errors read from a course of `Becoming.Typicality`, each error
+  weighing `p` and each step without one `q`, the courses of `4 k` values under which the pair still
+  gives at step `2 k` weigh at most `((p + q) ^ 4 - p ^ 4) ^ k` of `((p + q) ^ 4) ^ k`
+  (`PairChance.absorbed_share`, through `PairChance.block_total`). A leaf; forgiveness with a
+  probability is not represented.
 * `Becoming.Revision` (L1): Selection when the lumping itself changes.
 * `Becoming.Undecided` (L1): the third value and revision, with no premise. With values true,
   undecided and false, undecided below the decided ones in information, a term with no constant

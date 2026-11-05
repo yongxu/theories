@@ -2120,6 +2120,18 @@
    "page": "theories/becoming/results/records/equal-totals-can-hide-what-a-capacity-carries.md"
   },
   {
+   "id": "record:errors-by-chance-in-a-pair-keeping-mutual-withholding",
+   "type": "result",
+   "record": "errors-by-chance-in-a-pair-keeping-mutual-withholding",
+   "title": "Errors by chance in a pair keeping mutual withholding",
+   "title_zh": "保持相互扣留的一对中的随机差错",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "collective",
+   "base": "general",
+   "page": "theories/becoming/results/records/errors-by-chance-in-a-pair-keeping-mutual-withholding.md"
+  },
+  {
    "id": "record:eventual-widening",
    "type": "result",
    "record": "eventual-widening",
@@ -6224,6 +6236,18 @@
    "page": "theories/becoming/results/records/what-choices-show-of-an-order.md"
   },
   {
+   "id": "record:what-decides-giving-against-keeping-on-a-flow",
+   "type": "result",
+   "record": "what-decides-giving-against-keeping-on-a-flow",
+   "title": "What decides giving against keeping on a flow",
+   "title_zh": "流上决定给出与保留之别者",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "collective",
+   "base": "old-base",
+   "page": "theories/becoming/results/records/what-decides-giving-against-keeping-on-a-flow.md"
+  },
+  {
    "id": "record:what-dependence-alone-carries-of-a-level",
    "type": "result",
    "record": "what-dependence-alone-carries-of-a-level",
@@ -9930,6 +9954,17 @@
    "reaches_grammar": true
   },
   {
+   "id": "module:Becoming.LineageDrawdown",
+   "type": "module",
+   "name": "Becoming.LineageDrawdown",
+   "level": "L2",
+   "theorems": 57,
+   "region": "life",
+   "base": "old-base",
+   "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
    "id": "module:Becoming.WideningOnTheMap",
    "type": "module",
    "name": "Becoming.WideningOnTheMap",
@@ -10507,6 +10542,28 @@
    "name": "Becoming.PairSelection",
    "level": "L1",
    "theorems": 151,
+   "region": "collective",
+   "base": "general",
+   "on_grammar": false,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.PairFlow",
+   "type": "module",
+   "name": "Becoming.PairFlow",
+   "level": "L1",
+   "theorems": 80,
+   "region": "collective",
+   "base": "old-base",
+   "on_grammar": false,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.PairChance",
+   "type": "module",
+   "name": "Becoming.PairChance",
+   "level": "L1",
+   "theorems": 28,
    "region": "collective",
    "base": "general",
    "on_grammar": false,
@@ -30324,6 +30381,12 @@
    "anchor": "r-a-pair-tolerates-only-within-a-window"
   },
   {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-errors-by-chance-in-a-pair-keeping-mutual-withholding",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-errors-by-chance-in-a-pair-keeping-mutual-withholding"
+  },
+  {
    "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-offspring-read-from-giving-that-waits",
    "type": "section",
    "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
@@ -30352,6 +30415,12 @@
    "type": "section",
    "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
    "anchor": "r-what-giving-that-waits-draws-on"
+  },
+  {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-what-decides-giving-against-keeping-on-a-flow",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-what-decides-giving-against-keeping-on-a-flow"
   },
   {
    "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-what-an-optimum-does-beyond-what-couples-in",
@@ -33445,6 +33514,11 @@
    "type": "imports"
   },
   {
+   "from": "module:Becoming.LineageDrawdown",
+   "to": "module:Becoming.LineageRegimes",
+   "type": "imports"
+  },
+  {
    "from": "module:Becoming.LineageRegimes",
    "to": "module:Becoming.Continuation",
    "type": "imports"
@@ -33937,6 +34011,21 @@
   {
    "from": "module:Becoming.Pace",
    "to": "module:Becoming.SeekingRuns",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.PairChance",
+   "to": "module:Becoming.PairSelection",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.PairChance",
+   "to": "module:Becoming.Typicality",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.PairFlow",
+   "to": "module:Becoming.PairSelection",
    "type": "imports"
   },
   {
@@ -36158,6 +36247,11 @@
    "from": "record:a-pair-tolerates-only-within-a-window",
    "to": "module:Becoming.WindowedWaiting",
    "type": "proved-in"
+  },
+  {
+   "from": "record:a-pair-tolerates-only-within-a-window",
+   "to": "record:errors-by-chance-in-a-pair-keeping-mutual-withholding",
+   "type": "related"
   },
   {
    "from": "record:a-pair-tolerates-only-within-a-window",
@@ -41831,7 +41925,17 @@
   },
   {
    "from": "record:ending-laws-as-regimes-on-a-lineage",
+   "to": "module:Becoming.LineageDrawdown",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:ending-laws-as-regimes-on-a-lineage",
    "to": "module:Becoming.LineageRegimes",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:ending-laws-as-regimes-on-a-lineage",
+   "to": "module:Becoming.RelativePosition",
    "type": "proved-in"
   },
   {
@@ -41978,6 +42082,21 @@
    "from": "record:equal-totals-can-hide-what-a-capacity-carries",
    "to": "record:learned-procedure-transmission",
    "type": "related"
+  },
+  {
+   "from": "record:errors-by-chance-in-a-pair-keeping-mutual-withholding",
+   "to": "module:Becoming.PairChance",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:errors-by-chance-in-a-pair-keeping-mutual-withholding",
+   "to": "record:a-pair-tolerates-only-within-a-window",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:errors-by-chance-in-a-pair-keeping-mutual-withholding",
+   "to": "record:offspring-read-from-giving-that-waits",
+   "type": "formal-reuse"
   },
   {
    "from": "record:eventual-widening",
@@ -57145,6 +57264,26 @@
    "type": "related"
   },
   {
+   "from": "record:what-decides-giving-against-keeping-on-a-flow",
+   "to": "module:Becoming.PairFlow",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-decides-giving-against-keeping-on-a-flow",
+   "to": "record:offspring-read-from-giving-that-waits",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-decides-giving-against-keeping-on-a-flow",
+   "to": "record:what-a-rise-draws-from-beyond",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-decides-giving-against-keeping-on-a-flow",
+   "to": "record:what-giving-that-waits-draws-on",
+   "type": "formal-reuse"
+  },
+  {
    "from": "record:what-dependence-alone-carries-of-a-level",
    "to": "module:Becoming.Admission",
    "type": "proved-in"
@@ -57263,6 +57402,11 @@
    "from": "record:what-giving-that-waits-draws-on",
    "to": "record:what-a-rise-draws-from-beyond",
    "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-giving-that-waits-draws-on",
+   "to": "record:what-decides-giving-against-keeping-on-a-flow",
+   "type": "related"
   },
   {
    "from": "record:what-holding-for-a-reading-is-worth",
@@ -61390,6 +61534,11 @@
    "type": "states"
   },
   {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-errors-by-chance-in-a-pair-keeping-mutual-withholding",
+   "to": "record:errors-by-chance-in-a-pair-keeping-mutual-withholding",
+   "type": "states"
+  },
+  {
    "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-formed-software-continuation",
    "to": "record:formed-software-continuation",
    "type": "states"
@@ -61627,6 +61776,11 @@
   {
    "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-what-an-optimum-does-beyond-what-couples-in",
    "to": "record:what-an-optimum-does-beyond-what-couples-in",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-what-decides-giving-against-keeping-on-a-flow",
+   "to": "record:what-decides-giving-against-keeping-on-a-flow",
    "type": "states"
   },
   {

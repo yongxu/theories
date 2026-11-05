@@ -324,7 +324,7 @@
     {
       "path": "theories/becoming/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "35b390bc934edea03bda98ed3dc09e29114ad0c8a5a4dbfb647735a0f413c186"
+      "sha256": "6339cfd06b7b44018e83a9553a7641da0430946d7ab02297aa54a96674a052f5"
     },
     {
       "path": "theories/meta-attractor/README.md",
@@ -344,7 +344,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json",
       "role": "receipt",
-      "sha256": "8ca34319826e1b2cecf99e0b8548d34cb82fe4e3680d8e7444a3a652d6b73f89",
+      "sha256": "82d20bfa86c867883b091edd8471f908e3c5402881dbc9a77677f7053548f08b",
       "declarations": []
     }
   ],

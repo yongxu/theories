@@ -8,10 +8,10 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-31T23:52:00+00:00",
+  "reviewed_at_utc": "2026-11-05T20:42:24+00:00",
   "statement": {
-    "en": "Single witnesses on balanced webs show a gift bringing support beyond what it draws, through need asymmetry in the pair (its slack bound across family and beyond) or renewal from outside; read as a line's rise with no dependence beyond broken, a factor is within the slack beyond and the inflow.",
-    "zh": "平衡网上的单一见证表明，给出带来超出其所汲取的支持：或经由一对之内的需求不对称（其在家族与其外之间的余量之界），或经由从外部带入的补给；读作其外无依存被打断时一条线之上升的因子，受其外余量与流入约束。"
+    "en": "Single witnesses on balanced webs show two ways a gift can bring support beyond what it draws on the giver: need asymmetry in the pair (the slack bound, pair split) or renewal from outside. Read as a line's rise with no dependence beyond broken, a factor is within the slack beyond and the inflow.",
+    "zh": "平衡网上的单一见证表明，给出可带来超出其从给者所汲取之支持的两条路：一对之内的需求不对称（其在家族与其外之间的余量之界），或从外部带入的补给；读作其外无依存被打断时一条线之上升的因子，受其外余量与流入约束。"
   },
   "laws": [
     {
@@ -96,13 +96,13 @@
   ],
   "does_not_show": [
     {
-      "en": "The join of the witnesses to the formula's β and γ: no statement makes the pair's run a flow on a web or derives the offspring from one, so neither factor is bounded for the formula itself.",
-      "zh": "见证与公式中 β、γ 的连接：没有陈述把一对的运行作为网上的流，或由之导出后代，故两因子在公式本身上皆未受约束。",
+      "en": "The join of these witnesses to the formula's factors: on a flow the factors follow from the routes, read on places supported in every run compared, which does not reach a receiver that would otherwise fall below its need.",
+      "zh": "这些见证与公式因子的连接：流上的因子由路径得出，读于所比诸运行中皆受支持的位置，不及于否则会低于需求的收者。",
       "kind": "scope"
     },
     {
-      "en": "Any comparison of β with γ from a web: both bounds have the same form, so the sign that decides selection among pairs is not reached from the webs.",
-      "zh": "由网对 β 与 γ 的任何比较：两界形式相同，故决定对间选择的符号无法从网得到。",
+      "en": "Any comparison of β with γ from these bounds: both have the same form; on the flow the sign follows from the routes, the matching among them, not from these bounds.",
+      "zh": "由这些界对 β 与 γ 的任何比较：两界形式相同；流上的符号由路径得出（匹配在内），不由这些界得出。",
       "kind": "non-implication"
     },
     {
@@ -145,8 +145,8 @@
     "zh": "由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.PairSelection，回执 20261101T024359.312453Z，223 个声明（151 条定理），本记录引其中 42 个，公理报告均为空；唯一生成的引理 Place.mk.injEq 依赖 propext，检查器的审计允许之；经独立 AI 验证者四轮审查重新编译，所见皆采纳。"
   },
   "next_delta": {
-    "en": "A model of the pair's run as a flow on a web, with offspring derived from it, support over the run and a constant rise per step, so that β and γ follow from the flow and can be compared.",
-    "zh": "把一对的运行作为网上之流的模型：由之导出后代、运行中的支持与每步恒定的上升，使 β 与 γ 由流得出并可比较。"
+    "en": "Renewal reaching the giver only, read through support, so that the two witnesses meet the formula's factors.",
+    "zh": "更新只及给者，经由支持读出，使两个见证与公式的因子相接。"
   },
   "correspondence": {
     "en": "Food sharing among vampire bats (Wilkinson 1984) is the classical case of need asymmetry within a pair: a gift of little to a giver with slack keeps a receiver below its need alive. The renewal witness reads a gift carried by an inflow from outside the pair.",
@@ -204,7 +204,15 @@
       }
     }
   ],
-  "related": [],
+  "related": [
+    {
+      "id": "what-decides-giving-against-keeping-on-a-flow",
+      "detail": {
+        "en": "There the factors follow from a flow where renewal reaches both formations alike; here renewal reaches the giver only.",
+        "zh": "那里因子由更新同等及于两个形成的流得出；此处更新只及给者。"
+      }
+    }
+  ],
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PairSelection.lean",
@@ -275,6 +283,10 @@
     {
       "en": "1 November 2026, board item EL (EL4a/b/c): added from EL's design, the parts of Becoming.PairSelection on need asymmetry, renewal from outside and a factor read on a web; whether need asymmetry counts as a third source or as the slack bound read inside the pair is settled as the latter.",
       "zh": "2026年11月1日，工作板条目 EL（EL4a/b/c）：据 EL 的设计新增，即 Becoming.PairSelection 中关于需求不对称、来自外部的补给与网上所读因子的部分；需求不对称算作第三来源还是一对之内所读的余量之界，定为后者。"
+    },
+    {
+      "en": "6 November 2026, board item EL7, correction: the opening said giving that waits does bring support beyond what it draws; it now says a gift can. Renewal from outside can be free to the giver's level; what it costs the giver's line is a further part. The join is scoped by the flow record, which meets the earlier next step for renewal reaching both alike.",
+      "zh": "2026年11月6日，工作板条目 EL7，更正：开头曾谓等待之给出确实带来超出所汲取的支持；现谓给出可以如此。来自外部的更新对给者的水平可无代价；对其线的代价是另一份额。连接之范围由流之记录划定，该记录在更新同等及于两者时满足了原先的下一步。"
     }
   ]
 }

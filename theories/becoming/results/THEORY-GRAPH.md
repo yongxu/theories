@@ -2,15 +2,15 @@
 
 # The theory graph
 
-One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3211 nodes, 6198 edges.
+One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3218 nodes, 6215 edges.
 
 | Region | Concepts | Results | Modules | Texts |
 |---|---:|---:|---:|---:|
 | The root: relation, condition, class, continuation, core | 31 | 86 | 74 | 0 |
 | The map: generation, keeping, degeneration, orders | 5 | 94 | 76 | 0 |
 | Knowing and testing | 0 | 110 | 88 | 0 |
-| Life and evolution | 0 | 46 | 22 | 0 |
-| Collectives and selection | 0 | 72 | 26 | 0 |
+| Life and evolution | 0 | 46 | 23 | 0 |
+| Collectives and selection | 0 | 74 | 28 | 0 |
 | The classical texts | 5 | 16 | 10 | 1724 |
 | Significance and alignment | 0 | 81 | 61 | 0 |
 | Method and the formal core | 0 | 21 | 25 | 0 |
@@ -413,12 +413,12 @@ Results (46):
 - [Transmission as inheritance with a bounded need](records/transmission-is-inheritance-and-need.md) (recorded-checked)
 - [What bounds offspring numbers, and selection on offspring number itself](records/what-bounds-offspring-numbers.md) (recorded-checked)
 
-Modules (22, 7 stated on the grammar): `ContinuingRevision`, `ConveyanceBoundaries`, `CopyCourses`, `Copying`, `Descent`, `Drift`, `Evolution`, `Founding`, `GroupEnding`, `LineageRegimes`, `LineageRegions`, `PatternPassing`, `Population`, `ReaderRebuilding`, `Reproduction`, `SelectionLevels`, `SelectionPace`, `SelectionRuns`, `SelectionShift`, `SelectionTerm`, `Transmission`, `Units`
+Modules (23, 8 stated on the grammar): `ContinuingRevision`, `ConveyanceBoundaries`, `CopyCourses`, `Copying`, `Descent`, `Drift`, `Evolution`, `Founding`, `GroupEnding`, `LineageDrawdown`, `LineageRegimes`, `LineageRegions`, `PatternPassing`, `Population`, `ReaderRebuilding`, `Reproduction`, `SelectionLevels`, `SelectionPace`, `SelectionRuns`, `SelectionShift`, `SelectionTerm`, `Transmission`, `Units`
 
 
 ## Collectives and selection
 
-Results (72):
+Results (74):
 
 - [A cascade at the histories reached](records/a-cascade-at-the-histories-reached.md) (recorded-checked)
 - [A code formed between formations](records/a-code-formed-between-formations.md) (recorded-checked)
@@ -444,6 +444,7 @@ Results (72):
 - [Division by exclusive footprints](records/division-by-exclusive-footprints.md) (recorded-checked)
 - [Drawers in turn](records/drawers-in-turn.md) (recorded-checked)
 - [Draws on one shared stock](records/draws-on-a-shared-stock.md) (recorded-checked)
+- [Errors by chance in a pair keeping mutual withholding](records/errors-by-chance-in-a-pair-keeping-mutual-withholding.md) (recorded-checked)
 - [Every optimum rebuilds a depleted base](records/optima-rebuild-a-depleted-base.md) (recorded-checked)
 - [Exact arrival boundary under partial correction](records/market-partial-correction-boundary.md) (recorded-checked)
 - [Giving that waits on giving](records/giving-that-waits-on-giving.md) (recorded-checked)
@@ -488,12 +489,13 @@ Results (72):
 - [What a rise draws from beyond](records/what-a-rise-draws-from-beyond.md) (recorded-checked)
 - [What a set-point optimum does beyond what couples in](records/what-a-set-point-optimum-does-beyond.md) (recorded-checked)
 - [What an optimum does beyond what couples in](records/what-an-optimum-does-beyond-what-couples-in.md) (recorded-checked)
+- [What decides giving against keeping on a flow](records/what-decides-giving-against-keeping-on-a-flow.md) (recorded-checked)
 - [What giving that waits draws on](records/what-giving-that-waits-draws-on.md) (recorded-checked)
 - [What pooled coupling reaches](records/what-pooled-coupling-reaches.md) (recorded-checked)
 - [What position reads](records/what-position-reads.md) (recorded-checked)
 - [What taking all that is given excludes](records/what-taking-all-excludes.md) (recorded-checked)
 
-Modules (26, 3 stated on the grammar): `Cascade`, `Centers`, `CountedCodes`, `CoupledDrawers`, `Exclusion`, `FreeEnergyGuarantees`, `Joint`, `JointDraw`, `JointPlans`, `ListFootprints`, `Optimum`, `OptimumSeason`, `PairSelection`, `PoolCourse`, `PoolResponse`, `ReachedCascade`, `RelativePosition`, `RuleHandoff`, `RuleRebuilding`, `SelectionPool`, `SetPointOptimum`, `SharedCodes`, `Tolerance`, `WeightedCommuting`, `WindowedWaiting`, `Withholding`
+Modules (28, 3 stated on the grammar): `Cascade`, `Centers`, `CountedCodes`, `CoupledDrawers`, `Exclusion`, `FreeEnergyGuarantees`, `Joint`, `JointDraw`, `JointPlans`, `ListFootprints`, `Optimum`, `OptimumSeason`, `PairChance`, `PairFlow`, `PairSelection`, `PoolCourse`, `PoolResponse`, `ReachedCascade`, `RelativePosition`, `RuleHandoff`, `RuleRebuilding`, `SelectionPool`, `SetPointOptimum`, `SharedCodes`, `Tolerance`, `WeightedCommuting`, `WindowedWaiting`, `Withholding`
 
 
 ## The classical texts
@@ -653,4 +655,4 @@ Results (7):
 
 ## Not yet on the root
 
-303 of 382 core modules do not yet state their laws on the grammar (they neither are a grammar module nor import one); lifting them, as the continuation family was lifted, is the restructure's remaining formal work. A result marked · is not yet stated by a section of a live chapter.
+305 of 385 core modules do not yet state their laws on the grammar (they neither are a grammar module nor import one); lifting them, as the continuation family was lifted, is the restructure's remaining formal work. A result marked · is not yet stated by a section of a live chapter.

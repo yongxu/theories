@@ -1,0 +1,298 @@
+{
+  "schema_version": 2,
+  "id": "what-decides-giving-against-keeping-on-a-flow",
+  "title": {
+    "en": "What decides giving against keeping on a flow",
+    "zh": "流上决定给出与保留之别者"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-11-05T20:42:24+00:00",
+  "statement": {
+    "en": "A pair's run read as a balanced flow, offspring as a line's level, gives the pair formula, γ < β exactly where giving loses less than keeping spoils with a matching, each sign met. With renewal while standing, mutual giving keeps no giving's levels while both stand; at a shortfall the runs part.",
+    "zh": "把一对的运行读作平衡之流、后代读作线之水平，即得一对之式，γ < β 恰在给出所失少于保留所坏加匹配之处，两种符号皆可。站立时更新下，双方站立时相互给出与全不给出水平相同；到短缺处两者分开。"
+  },
+  "laws": [
+    {
+      "en": "What passes through changes no level. Two balanced flows from the same levels whose takes and gives on each condition, at each step at which the levels agree, differ only by amounts that cancel keep the same levels; so a reading of offspring through the levels gives both the same, and where it reads a + β·n on one and a + γ·n on the other, β = γ.",
+      "zh": "所经过者不改变水平。自相同水平起的两个平衡之流，其在水平一致之每步、每个条件上的取与给只差相消之量，则水平保持相同；故经由水平读出的后代两者相同，一处读作 a + β·n、另一处读作 a + γ·n 时，β = γ。",
+      "declarations": [
+        "Becoming.PairFlow.levels_agree_until",
+        "Becoming.PairFlow.levels_agree",
+        "Becoming.PairFlow.factors_equal"
+      ]
+    },
+    {
+      "en": "The needs met at a step, each formation read on a condition of its own, none shared, total at most those conditions' stock; over a stretch at every step of which that family gains nothing, at most its stock at the start. The need-asymmetry witness meets the bound with equality.",
+      "zh": "一步所满足的需求（每个形成读于其自身的、不共用的条件）合计至多为这些条件的存量；在该族每步皆无所得的一段上，至多为其起始存量。需求不对称的见证以等号达到此界。",
+      "declarations": [
+        "Becoming.PairFlow.metNeed",
+        "Becoming.PairFlow.metNeed_le",
+        "Becoming.PairFlow.metNeed_of_supported",
+        "Becoming.PairFlow.met_needs_le_stock",
+        "Becoming.PairFlow.met_needs_within_start",
+        "Becoming.PairFlow.NeedsAtCapacity.at_capacity"
+      ]
+    },
+    {
+      "en": "The run with routes. A renewer gives each standing a constant amount, with a matching at each step its partner gives, and each formation passes on what it holds, the parts the same for both and the standings constant; the flow balances, only active formations give, activity needs support and both are supported at every step. Read as the level of its line, a place's offspring is the pair formula, for any laws and errors.",
+      "zh": "带路径的运行。更新者给每个存立恒定之量，并在对方给出之步加以匹配，每个形成传递所持，诸份额对两者相同，存立恒定；流平衡，只有活跃形成给出，活动需要支持，两者每步皆受支持。读作其线之水平，一个位置的后代即一对之式，对任何律与差错皆然。",
+      "declarations": [
+        "Becoming.PairFlow.Routes.Parts",
+        "Becoming.PairFlow.Routes.flow",
+        "Becoming.PairFlow.Routes.web",
+        "Becoming.PairFlow.Routes.balances",
+        "Becoming.PairFlow.Routes.acting",
+        "Becoming.PairFlow.Routes.dependent",
+        "Becoming.PairFlow.Routes.supported",
+        "Becoming.PairFlow.Routes.lineAt_eq",
+        "Becoming.PairFlow.Routes.line_offspring"
+      ]
+    },
+    {
+      "en": "Where what is kept is the gift's amount, β with what giving loses is γ with what keeping spoils and the matching, so γ < β exactly where giving loses less than keeping spoils with the matching; with no loss and no matching β = γ; each sign is met.",
+      "zh": "所留之量等于给出之量时，β 加给出所失等于 γ 加保留所坏与匹配，故 γ < β 恰在给出所失少于保留所坏加匹配之处；无失无匹配时 β = γ；两种符号皆可达到。",
+      "declarations": [
+        "Becoming.PairFlow.Routes.factor_gap",
+        "Becoming.PairFlow.Routes.gap_iff",
+        "Becoming.PairFlow.Routes.plain",
+        "Becoming.PairFlow.Routes.perishing",
+        "Becoming.PairFlow.Routes.carried",
+        "Becoming.PairFlow.Routes.matching",
+        "Becoming.PairFlow.Routes.signs"
+      ]
+    },
+    {
+      "en": "Renewal while standing. A renewer gives a standing only while its formation is active, requiring nothing, and a taker beyond may draw. From the same standings, with the same renewal and draws and a gift of one amount arriving whole, mutual giving at every step leaves the levels as no giving does while both stand, so no reading through the levels tells those two runs apart. A formation below its need, its partner giving it nothing, never stands again.",
+      "zh": "站立时的更新。更新者只在形成活跃时给其存立，无所依存；其外的取者可以汲取。自相同存立起，更新与汲取相同、给出同量且全数到达时，双方站立时每步相互给出与全不给出留下相同水平，故经由水平的读法分不开这两个运行。低于需求且对方不给的形成不再站立。",
+      "declarations": [
+        "Becoming.PairFlow.WhileStanding.Parts",
+        "Becoming.PairFlow.WhileStanding.Setting",
+        "Becoming.PairFlow.WhileStanding.balances",
+        "Becoming.PairFlow.WhileStanding.acting",
+        "Becoming.PairFlow.WhileStanding.dependent",
+        "Becoming.PairFlow.WhileStanding.runs_agree_until",
+        "Becoming.PairFlow.WhileStanding.factors_equal_while_supported",
+        "Becoming.PairFlow.WhileStanding.stays_fallen"
+      ]
+    },
+    {
+      "en": "Read by support, a formation active at every step of a run leaves own · n in its line, by construction, and two runs in which it stands at the same steps leave it the same. One-sided giving is not covered by the level law, and changes the standings.",
+      "zh": "按支持读，一个每步皆活跃的形成在其线上留下 own · n（依构造），在相同各步站立的两个运行留下相同之量。水平之律不涵盖单方给出，单方给出改变存立。",
+      "declarations": [
+        "Becoming.PairFlow.WhileStanding.lineAt_of_active",
+        "Becoming.PairFlow.WhileStanding.lines_agree_while_active",
+        "Becoming.PairFlow.GiverAtNeed.standings_differ"
+      ]
+    },
+    {
+      "en": "Witness, a failed renewal. One failed renewal takes the second formation below its need. Keeping, it never stands again; sharing, the first's two units of slack lift it, its renewal resumes, and the pair's lines over m + 4 steps exceed the keeping pair's by m, carried by the resumed renewal, an inflow from beyond the pair. Up to the shortfall the two runs keep the same levels.",
+      "zh": "见证，一次失败的更新。一次失败的更新使第二个形成低于其需求。保留时它不再站立；分享时第一个的两单位余量将其抬起，其更新恢复，这一对的线在 m + 4 步上比保留的一对多 m，由恢复的更新（来自一对之外的流入）所带。短缺之前两个运行水平相同。",
+      "declarations": [
+        "Becoming.PairFlow.FailedRenewal.sharing",
+        "Becoming.PairFlow.FailedRenewal.keeping",
+        "Becoming.PairFlow.FailedRenewal.agree_to_shortfall",
+        "Becoming.PairFlow.FailedRenewal.keeping_fallen",
+        "Becoming.PairFlow.FailedRenewal.lines_gain",
+        "Becoming.PairFlow.FailedRenewal.gifts_sharing"
+      ]
+    },
+    {
+      "en": "Witnesses, a gift and a draw at a need. From standings at their needs, a formation giving to one that never gives falls below its need and never stands again; over m + 1 steps its line is m short of what keeping leaves it, while the receiver leaves the same. In a pair that keeps, a taker beyond drawing two units once from a standing at its need ends the renewal for good.",
+      "zh": "见证，需求处的给出与汲取。自恰在需求的存立起，一个形成给予从不给出者，便低于其需求且不再站立；在 m + 1 步上其线比保留少 m，而收者所留相同。在保留的一对中，其外的取者自恰在需求的存立汲取两单位一次，更新即永远停止。",
+      "declarations": [
+        "Becoming.PairFlow.GiverAtNeed.giverAlone",
+        "Becoming.PairFlow.GiverAtNeed.alone_fallen",
+        "Becoming.PairFlow.GiverAtNeed.gift_lost",
+        "Becoming.PairFlow.GiverAtNeed.withholder_same",
+        "Becoming.PairFlow.DrawnBelowNeed.keeping",
+        "Becoming.PairFlow.DrawnBelowNeed.drawn",
+        "Becoming.PairFlow.DrawnBelowNeed.fallen"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "Discrete steps; natural-number amounts; decided Bools for giving; needs as thresholds on a formation's own standing; offspring read as the level of a line, what a formation has given its descendants.",
+      "zh": "离散步；自然数之量；给出为可判定的布尔值；需求是形成自身存立上的阈值；后代读作线之水平，即形成给其后裔之量。"
+    },
+    {
+      "en": "For the routes: standings constant, every part a constant amount per step, the same for both formations.",
+      "zh": "对路径：存立恒定，每一份额每步恒定，且对两个形成相同。"
+    },
+    {
+      "en": "For renewal while standing: the intended giving, the renewal offered and the draws supplied as patterns; each need covering upkeep, the line's part and a gift, one gift amount arriving whole; a line gaining its part exactly at the steps its formation stands, by construction; a draw taken within what the standing holds.",
+      "zh": "对站立时的更新：所欲之给出、所提供之更新与汲取皆作为模式给定；每个需求涵盖维持、线之份与一次给出，给出同量且全数到达；线恰在其形成站立之步得其份（依构造）；汲取不超过存立所持。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That giving or keeping is better: the laws count levels and lines, and a ranking is asked under the ethics' two premises, the continuation condition for scope and C for order.",
+      "zh": "给出或保留更好：诸律计数水平与线，排序要在伦理的两个前提下才问及，延续条件定范围，C 定次序。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Which routes any pair has, or a measured β or γ: the parts are supplied, so the sign is where the routes put it.",
+      "zh": "任何一对有何路径，或测得的 β、γ：诸份额是给定的，故符号在路径所置之处。",
+      "kind": "correspondence"
+    },
+    {
+      "en": "Renewal reaching one formation only: the routes do not represent it, and the formula, read on places supported in every run compared, does not reach a receiver that would otherwise fall below its need.",
+      "zh": "更新只及一个形成：路径不表示之；此式读于所比诸运行中皆受支持的位置，不及于否则会低于需求的收者。",
+      "kind": "scope"
+    },
+    {
+      "en": "That offspring are a line's level beyond this reading, or the share laws' premise: the pair formula follows here only for a pair's run so read.",
+      "zh": "此读法之外后代即线之水平，或份额之律的前提：一对之式在此只对如此读的一对之运行成立。",
+      "kind": "scope"
+    },
+    {
+      "en": "One-sided giving through the level law: it changes the standings.",
+      "zh": "经由水平之律的单方给出：它改变存立。",
+      "kind": "scope",
+      "witness": "Becoming.PairFlow.GiverAtNeed.standings_differ"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "discrete-steps",
+    "no-evaluation",
+    "no-ethical-premise",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.PairFlow at receipt 20261105T210745.530949Z, each cited declaration with an empty axiom report; the generated lemmas mk.injEq and injEq depend on propext, which the checker's audit admits. An earlier scratch form was compiled by one independent AI skeptic. Near-definitional once the parts are fixed.",
+    "zh": "由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.PairFlow，回执 20261105T210745.530949Z，所引声明公理报告均为空；生成的 mk.injEq 与 injEq 引理依赖 propext，检查器的审计允许之。较早的草稿形式由一位独立 AI 怀疑者编译。诸份额既定后近乎定义。"
+  },
+  "next_delta": {
+    "en": "Renewal reaching one formation only, read through support, so that a gift to a receiver otherwise below its need has a factor; routes measured in a named system, independently of the outcome.",
+    "zh": "更新只及一个形成，经由支持读出，使给予否则会低于需求之收者的给出有其因子；在具名系统中独立于结果地测量路径。"
+  },
+  "correspondence": {
+    "en": "Reading (the AI's): β and γ read from the routes are the benefit and cost of the repeated donation game, so γ < β is that game's b > c with its parts named, not a finding about which parts exist. The failed-renewal witness has the shape of food sharing among vampire bats (Wilkinson 1984); no quantity is compared.",
+    "zh": "读法（AI 的）：由路径读出的 β 与 γ 即重复捐赠博弈的收益与代价，故 γ < β 是该博弈的 b > c，并标明其份额，不是关于存在何种份额的发现。失败更新的见证形同吸血蝠的食物分享（Wilkinson 1984）；未比较任何数量。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PairFlow.lean",
+  "aliases": [
+    "what decides giving against keeping on a flow",
+    "Becoming.PairFlow.Routes.gap_iff",
+    "Becoming.PairFlow.Routes.line_offspring",
+    "Becoming.PairFlow.levels_agree",
+    "Becoming.PairFlow.WhileStanding.runs_agree_until",
+    "Becoming.PairFlow.FailedRenewal.lines_gain"
+  ],
+  "dependencies": [
+    {
+      "id": "offspring-read-from-giving-that-waits",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses the pair's run, Place and Place.offspring: Routes.line_offspring states the formula as the level of a line.",
+        "zh": "复用一对的运行、Place 与 Place.offspring：Routes.line_offspring 把此式表为线之水平。"
+      }
+    },
+    {
+      "id": "what-giving-that-waits-draws-on",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses the need-asymmetry web: NeedsAtCapacity.at_capacity reads it at the bound on needs met.",
+        "zh": "复用需求不对称之网：NeedsAtCapacity.at_capacity 在所满足需求之界上读它。"
+      }
+    },
+    {
+      "id": "what-a-rise-draws-from-beyond",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses Flow.Balances.stock_not_rises_over: met_needs_within_start composes it with the bound at a step.",
+        "zh": "复用 Flow.Balances.stock_not_rises_over：met_needs_within_start 将其与一步之界复合。"
+      }
+    }
+  ],
+  "related": [],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PairFlow.lean",
+      "role": "proof",
+      "sha256": "c4f9db3077643955baf204aba4c1847dbaa66956c1e149d6247d171c5eacecca",
+      "declarations": [
+        "Becoming.PairFlow.DrawnBelowNeed.drawn",
+        "Becoming.PairFlow.DrawnBelowNeed.fallen",
+        "Becoming.PairFlow.DrawnBelowNeed.keeping",
+        "Becoming.PairFlow.FailedRenewal.agree_to_shortfall",
+        "Becoming.PairFlow.FailedRenewal.gifts_sharing",
+        "Becoming.PairFlow.FailedRenewal.keeping",
+        "Becoming.PairFlow.FailedRenewal.keeping_fallen",
+        "Becoming.PairFlow.FailedRenewal.lines_gain",
+        "Becoming.PairFlow.FailedRenewal.sharing",
+        "Becoming.PairFlow.GiverAtNeed.alone_fallen",
+        "Becoming.PairFlow.GiverAtNeed.gift_lost",
+        "Becoming.PairFlow.GiverAtNeed.giverAlone",
+        "Becoming.PairFlow.GiverAtNeed.standings_differ",
+        "Becoming.PairFlow.GiverAtNeed.withholder_same",
+        "Becoming.PairFlow.NeedsAtCapacity.at_capacity",
+        "Becoming.PairFlow.Routes.Parts",
+        "Becoming.PairFlow.Routes.acting",
+        "Becoming.PairFlow.Routes.balances",
+        "Becoming.PairFlow.Routes.carried",
+        "Becoming.PairFlow.Routes.dependent",
+        "Becoming.PairFlow.Routes.factor_gap",
+        "Becoming.PairFlow.Routes.flow",
+        "Becoming.PairFlow.Routes.gap_iff",
+        "Becoming.PairFlow.Routes.lineAt_eq",
+        "Becoming.PairFlow.Routes.line_offspring",
+        "Becoming.PairFlow.Routes.matching",
+        "Becoming.PairFlow.Routes.perishing",
+        "Becoming.PairFlow.Routes.plain",
+        "Becoming.PairFlow.Routes.signs",
+        "Becoming.PairFlow.Routes.supported",
+        "Becoming.PairFlow.Routes.web",
+        "Becoming.PairFlow.WhileStanding.Parts",
+        "Becoming.PairFlow.WhileStanding.Setting",
+        "Becoming.PairFlow.WhileStanding.acting",
+        "Becoming.PairFlow.WhileStanding.balances",
+        "Becoming.PairFlow.WhileStanding.dependent",
+        "Becoming.PairFlow.WhileStanding.factors_equal_while_supported",
+        "Becoming.PairFlow.WhileStanding.lineAt_of_active",
+        "Becoming.PairFlow.WhileStanding.lines_agree_while_active",
+        "Becoming.PairFlow.WhileStanding.runs_agree_until",
+        "Becoming.PairFlow.WhileStanding.stays_fallen",
+        "Becoming.PairFlow.factors_equal",
+        "Becoming.PairFlow.levels_agree",
+        "Becoming.PairFlow.levels_agree_until",
+        "Becoming.PairFlow.metNeed",
+        "Becoming.PairFlow.metNeed_le",
+        "Becoming.PairFlow.metNeed_of_supported",
+        "Becoming.PairFlow.met_needs_le_stock",
+        "Becoming.PairFlow.met_needs_within_start"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261105T122637.488502Z/verification.json",
+      "role": "receipt",
+      "sha256": "99e0a9304bd881892020e074b261147c683652ba5816e24004d4515a06f609fd"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261105T210745.530949Z/verification.json",
+      "role": "receipt",
+      "sha256": "82d20bfa86c867883b091edd8471f908e3c5402881dbc9a77677f7053548f08b",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PairFlow.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261105T210745.530949Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.PairFlow",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "6 November 2026, board item EL7: added from EL7's investigation of the factors (el7/b), its scratch Lean moved to the core; a skeptic's reading narrowed it to a near-definitional derivation with single witnesses at the shortfall.",
+      "zh": "2026年11月6日，工作板条目 EL7：据 EL7 对因子的调查（el7/b）新增，其草稿 Lean 移入核心；怀疑者的读法把它收窄为近乎定义的推导，短缺处只有单一见证。"
+    }
+  ]
+}

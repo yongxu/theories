@@ -1,0 +1,577 @@
+[
+ {
+  "part": "a",
+  "skeptic": {
+   "lean_checked": [
+    {
+     "file": "/Users/ren/tmp/el7/a/Becoming/EL7aChance.lean",
+     "theorem": "Becoming.EL7a.absorbed_share",
+     "compiled": true,
+     "axioms": "none (does not depend on any axioms)",
+     "statement_matches_claim": false,
+     "vacuous_or_unmet_premises": false,
+     "note": "Compiled with Lean 4.29.1 under gate.py hold in 0.5 s, against main's PairSelection (sha a2caedfc) and a Typicality olean whose source is byte-identical to main's (sha 8410090e). The premises KeepsWithheld f and g are met by answering, windowed, waitingBoth and withholding (rfl), and by the mixed `example` windowed and answering. The statement proves three things: the still-giving weight is at most S^k with S = total over 4-courses of `survive`; T^k = (p+q)^{4k}; and S < T when p > 0. It does NOT prove S = (p+q)^4 - p^4, which the proposed home sentence states, nor the share (1 - r^4)^k. Both are true by inspection (all-true is the only 4-block that is not burst-free), but they are not in the Lean. One line would close the gap: total courses4 (survive p q) + p^4 = (p+q)^4. The errors are one-way: e only turns an intended giving into withholding (err_withholds)."
+    },
+    {
+     "file": "/Users/ren/tmp/el7/a/Becoming/EL7aChance.lean",
+     "theorem": "Becoming.EL7a.burst_absorbs / burst_absorbs_from / still_gives_free",
+     "compiled": true,
+     "axioms": "none",
+     "statement_matches_claim": true,
+     "vacuous_or_unmet_premises": false,
+     "note": "These hold as stated. Two consecutive steps at which both formations err give total withholding from then on, for laws with f (false,false) (false,false) = false. #print shows windowed = windowTwo on the partner's lags, waitingBoth = own.fst && partner.fst and agreeing = own.fst == partner.fst, so the KeepsWithheld instances and non-instances are right."
+    },
+    {
+     "file": "/Users/ren/tmp/el7/a/Becoming/EL7aChance.lean",
+     "theorem": "Becoming.EL7a.window_witness",
+     "compiled": true,
+     "axioms": "none",
+     "statement_matches_claim": true,
+     "vacuous_or_unmet_premises": false,
+     "note": "It is a case of the law: at k = 1 and p = q = 1, 12 <= 15. I also ran #eval at k = 2 in a scratch copy: the window pair gives 143 of 256 against a bound of 225, and the answering pair 31 of 256. An injected `example : False := by decide` failed as expected, so the compile really checks."
+    },
+    {
+     "file": "/Users/ren/tmp/el7/a/Becoming/EL7aCohorts.lean",
+     "theorem": "Becoming.EL7a.kind_rises_iff_withheld",
+     "compiled": true,
+     "axioms": "none",
+     "statement_matches_claim": true,
+     "vacuous_or_unmet_premises": false,
+     "note": "Compiled in 3.2 s. The statement matches the report, but the proof is kind_rises_iff composed with sum_balance, i.e. received = n - partner's withholding substituted. The report admits it is close to a wrapper. It is the mean law in other variables, so it does not give an exact condition 'beyond the mean law', which is what the record's Does-not-show line asks for."
+    },
+    {
+     "file": "/Users/ren/tmp/el7/a/Becoming/EL7aCohorts.lean",
+     "theorem": "Becoming.EL7a.within_pairs, means_of_le, means_of_ge",
+     "compiled": true,
+     "axioms": "none",
+     "statement_matches_claim": true,
+     "vacuous_or_unmet_premises": false,
+     "note": "The premise `paired` is real and is met by cohort_paired. The within-pair terms are (β+γ) times own withholding's. The among-pair terms are d times withholding's, exchanged where β = γ + d. These are the classical within/among decomposition of the donation game in pairs, now proved on the spine."
+    },
+    {
+     "file": "/Users/ren/tmp/el7/a/Becoming/EL7aCohorts.lean",
+     "theorem": "Becoming.EL7a.pairs_rises_iff_withheld_le / _ge",
+     "compiled": true,
+     "axioms": "none",
+     "statement_matches_claim": true,
+     "vacuous_or_unmet_premises": false,
+     "note": "These are rewrites of pairs_rises_iff with the three laws above. The `example` only instantiates the premise on cohort x y z. The closed forms in x, y, z, d (the window and answering conditions) are by hand: I reran cohort_check.py and cohort_terms_check.py and both give 0 mismatches, but those forms are not proved in Lean."
+    },
+    {
+     "file": "/Users/ren/tmp/el7/a/Becoming/EL7aCohorts.lean",
+     "theorem": "Becoming.EL7a.offspring_balance, pair_balance, pair_total",
+     "compiled": true,
+     "axioms": "none",
+     "statement_matches_claim": true,
+     "vacuous_or_unmet_premises": false,
+     "note": "These are identities from received_add_withheld. They are true for any laws and errors."
+    }
+   ],
+   "reader_corrections": [
+    {
+     "live_text": "theories/becoming/chapters/05-COLLECTIVES.md:133 (main 86cad9299): \"The window is a deterministic relative of forgiveness; generous tit-for-tat forgives with a probability, which is not represented.\"",
+     "claim": "A reader would take the window to share forgiveness's robustness; under one-way errors drawn by chance it only delays total withholding.",
+     "holds": true,
+     "evidence": "The theorem paragraph above it already says 'errors a supplied pattern' and gives the spacing condition. The record's Does-not-show disclaims 'stability or noise'. So a careful reader is not told anything false, and the misreading is mild. Still, 'relative of forgiveness' invites a reader who knows GTFT to infer robustness under noise. absorbed_share (Lean, one-way errors) and the chain numbers, which I reran (window of two: mean 3.29e4 steps to total withholding at r = 1/20), show that inference fails for one-way chance errors. The proposed replacement has three problems. (1) It drops the one-way qualifier. The report itself says the law 'must always be stated with it', and under the field's two-way noise nothing absorbs. (2) It states GTFT 'never ends in it' as a reading with no 'by hand' label. (3) It leaves out the horizon fact the report found: over 2,000 steps the window pair gives 0.919 of the time, more than GTFT at f = 1/3 (0.864). So 'delays, does not prevent, while GTFT never ends' would mislead in the opposite direction, toward GTFT sustaining more cooperation at realistic horizons.",
+     "better_fix": "\"The window is a relative of forgiveness for errors spaced within it. Where errors only withhold and come by chance, a pair whose laws both withhold after mutual withholding, the window among them, ends in total withholding with certainty, though late: at an error chance of 1/20 the window of two takes about 3×10⁴ steps on average and gives more often over 2,000 steps than generous tit-for-tat (design numbers). Forgiveness with a probability, not represented, never ends in it (by hand).\" Land this only together with the chance law and an S = (p+q)⁴ − p⁴ lemma."
+    },
+    {
+     "live_text": "theories/becoming/chapters/05-COLLECTIVES.md:138 (main): \"Tolerance lets cooperation survive scattered withholding, not rebuild it where it is lost everywhere\"",
+     "claim": "D48's sentence holds only for spaced errors or short horizons; rewrite it as 'withholding spaced wider than its window ... only delays total withholding where withholding comes by chance'.",
+     "holds": false,
+     "evidence": "The report misreads what the sentence is about. In 05 §5 'Tolerance' is the tolerating law (r-thresholds-of-waiting: a thin withholding, each formation waiting on at most its tolerance inside it, passes out in one step; Tolerance.kept_set, thin_absorbed). 'Scattered' there means spread across formations, not spaced in time, and the window is a different law (WindowedWaiting). In a pair, a tolerance of one is sparing ('giving whatever comes', per the window record's dependency), and (a)'s own numbers say sparing never ends. So nothing in (a) shows the D48 sentence false for pairs. On webs without a sparer, chance errors would eventually reach total withholding, which stays (total_stays). But (a) proved no web law, and the proposed text writes 'window' where the sentence says tolerance.",
+     "better_fix": "Leave the D48 sentence as it is. If a web chance law is later proved, add a clause like this one: \"where withholding comes by chance and no formation spares all it waits on, a coincidence of errors reaches total withholding, which stays\", citing that law. Do not insert window language."
+    },
+    {
+     "live_text": "theories/becoming/results/records/a-pair-tolerates-only-within-a-window.md, Correspondence (main): \"agreement win-stay lose-shift (Kraines and Kraines 1989, Pavlov; Nowak and Sigmund 1993)\", with no prior result for law 3",
+     "claim": "The correspondence lacks Hilbe et al. 2017, whose uniqueness of WSLS among memory-1 strategies matches restores_and_answers_iff.",
+     "holds": true,
+     "evidence": "I checked it in the PMC full text (PMC5422766). Fig. 1 caption: 'WSLS is the only strategy that satisfies the three properties (MC1), (EC1), and (RE1)'. Main text: 'WSLS is the only memory-1 strategy with these properties'. RE1 is defecting after own C against the partner's D, which is close to 'answers a constant withholder at step 1'. EC1 is close to 'restores'. Law 3 is therefore, up to a clause-by-clause comparison that was not done, a known result. A reader of the record would otherwise take it for the account's own finding.",
+     "better_fix": "Add to Correspondence: \"Law 3 corresponds to the uniqueness of win-stay lose-shift among memory-1 strategies that are mutually cooperative, error-correcting and retaliating (Hilbe, Martinez-Vaquero, Chatterjee and Nowak 2017, Fig. 1); the definitions not yet compared clause by clause.\" This needs no Lean and can land on its own."
+    },
+    {
+     "live_text": "theories/becoming/results/records/a-pair-tolerates-only-within-a-window.md, Does not show: \"Probabilities, and so not generous tit-for-tat's forgiveness with a probability; the window is a deterministic relative of it.\" and Next: \"Errors with a probability, so that the window meets generous tit-for-tat's forgiveness\"",
+     "claim": "Once the chance law lands, narrow this line to forgiveness with a probability, and answer the Next clause (the window does not meet GTFT: it delays absorption, while GTFT does not absorb).",
+     "holds": true,
+     "evidence": "This is right as a consequence of absorbed_share, if that lands. Every rewritten sentence must keep 'errors only withhold'.",
+     "better_fix": "\"Forgiveness with a probability, and errors that turn withholding into giving; with one-way errors by chance the window delays total withholding and does not prevent it (record of the chance law).\""
+    },
+    {
+     "live_text": "theories/becoming/results/records/offspring-read-from-giving-that-waits.md, Does not show: \"The exact condition for a mixed cohort of windows, answerers, withholders and alternators under a supplied error pattern beyond the mean law, or the four terms of the pair law in closed form on the cohort.\"",
+     "claim": "Both halves become laws, so the line can go.",
+     "holds": false,
+     "evidence": "kind_rises_iff_withheld is the mean law with received = n − partner's withholding substituted (the report calls it 'close to a wrapper'). It reads the condition from six withholding totals that the runs give in closed form only for the counted pairings. It is not a condition 'beyond the mean law'. within_pairs and means_of_le/ge do give the four terms in closed form in withholding counts, for any cohort listed as pairs. The closed forms on the record's cohort x y z are by hand, checked numerically, not proved in Lean.",
+     "better_fix": "Keep a narrowed line: \"The exact condition for a mixed cohort under a supplied error pattern in closed form: it is read from the six withholding totals (kind_rises_iff_withheld), which are counted only for the listed pairings; the four terms on the record's cohort in x, y, z are by hand.\" Move the four-term law in withholding counts to Laws."
+    }
+   ],
+   "claims_refuted_or_overstated": [
+    {
+     "claim": "Proposed home Theorem: the courses still giving at step 2k weigh at most S^k of (p+q)^{4k}, 'with S = (p+q)⁴ − p⁴', so the share is at most (1 − r⁴)^k.",
+     "problem": "S = (p+q)⁴ − p⁴ is not in the Lean statement. absorbed_share proves only S < (p+q)⁴ for p > 0, with S defined as a total of `survive`.",
+     "evidence": "The statement of absorbed_share and the proof of block_lt in /Users/ren/tmp/el7/a/Becoming/EL7aChance.lean. A proof claim must say exactly what the Lean proves (AGENTS.md). One lemma would close the gap."
+    },
+    {
+     "claim": "(a) 'closes the offspring record's mixed-cohort and four-term lines'.",
+     "problem": "Overstated. The mixed-cohort half is the mean law re-expressed. The closed forms on cohort x y z are by hand.",
+     "evidence": "The proof of kind_rises_iff_withheld is (kind_rises_iff ...).trans (lt_iff_shift ...). The `example` only instantiates the premise."
+    },
+    {
+     "claim": "D48's 'Tolerance lets cooperation survive scattered withholding' holds only for spaced errors or short horizons.",
+     "problem": "The report misreads the object. D48's tolerance is the tolerating law over webs, and in a pair it is sparing, which never absorbs.",
+     "evidence": "05 §5 r-thresholds-of-waiting (thin_absorbed, total_stays). The window record's dependency text: 'In a pair a tolerance of one is giving whatever comes'. (a)'s own chain numbers: sparing gives 0.950 with total withholding never reached."
+    },
+    {
+     "claim": "KeepsWithheld is the pair's case of Tolerance.total_stays.",
+     "problem": "This is an analogy, not an instance. The windowed law reads two lags and is not a tolerating law, and total_stays is never invoked.",
+     "evidence": "EL7aChance.lean imports no Tolerance law. KeepsWithheld is defined directly on PairLaw."
+    },
+    {
+     "claim": "The proposed 05:133 rewrite: the window 'with errors by chance ... delays total withholding and does not prevent it, while generous tit-for-tat ... never ends in it'.",
+     "problem": "It omits 'errors only withhold', which the report says must always be stated, and under two-way noise the claim is false. It presents GTFT's non-absorption, which is by hand, without a label. It hides the horizon comparison, so it may mislead readers into thinking GTFT keeps more cooperation.",
+     "evidence": "I reran chainf.py: window2 gives 0.9192 over 2,000 steps with 0.0589 absorbed; GTFT at q = 1/3 gives 0.8638; mean time for window2 is 3.29e4 steps."
+    },
+    {
+     "claim": "The cohort iff is 'Hamilton's rule in Queller's form' (Queller 1985).",
+     "problem": "Possible misattribution, unverified by the report as well. Queller 1985 is the synergism paper. The covariance/regression form the iff matches is usually cited to Queller 1992. Fletcher and Doebeli 2009, and van Veelen et al. 2012 for repeated games with assortment, are closer statements.",
+     "evidence": "The report lists Queller 1985 and 1992 as 'from memory, unverified'. Each must be read before a record cites it."
+    }
+   ],
+   "novelty_assessment": "The report's own verdict of no new mathematics holds. I agree with it, and it is if anything generous.\n\n**Each result against the field:**\n- **Offspring formula.** The offspring are exactly the donation game's payoffs plus a + γn (b = β, c = γ); I checked this by algebra.\n- **Cohort iff.** It is the covariance form of Hamilton's rule.\n- **Within/among terms.** β+γ within pairs and |β−γ| among them is the textbook two-level Price partition for pairwise donation (Price 1972, Hamilton 1975, Okasha 2006, Kerr and Godfrey-Smith 2002).\n- **Chance law.** It is absorption in a finite chain with a reachable absorbing state, given one-way errors. TFT's and TF2T's breakdown under one-way implementation errors is classical: Selten and Hammerstein 1984, Molander 1985, Boyd 1989 (not read, and the most directly relevant source for one-way errors), Bendor, Kramer and Stout 1991, Wu and Axelrod 1995.\n- **Thresholds.** The WSLS against ALLD thresholds match Imhof, Fudenberg and Nowak 2007, which I checked in PMC2460568: b/c > 3 under weak selection, and b/c > 2 for the coordination game. The report's matrix ((β−γ, −γ/2), (β/2, 0)) matches its legible entries.\n- **Generosity bound.** The GTFT generosity bound min{1−(T−R)/(R−S), (R−P)/(T−P)} = 1 − c/b is correct for the donation game (Nowak and Sigmund 1992; Hilbe et al. 2018 partner condition).\n\n**Prior work missed:**\n- van Veelen, García, Rand and Nowak 2012, PNAS: direct reciprocity in structured populations, i.e. repeated games with assortment read as Hamilton's rule.\n- Taylor and Nowak 2007, 'Transforming the dilemma'.\n- Kerr and Godfrey-Smith 2002, for the within/among split.\n- Selten and Hammerstein 1984, and Bendor et al. 1991, for noise.\n\n**One real gain for readers.** Hilbe et al. 2017's uniqueness of WSLS (verified quote) is essentially the already-landed restores_and_answers_iff. The window record should cite it.\n\n**What 'forbids' amounts to:**\n- The cohort iff is an identity. It forbids nothing observable, and a violation refutes only the additive reading.\n- The chance law is a real prohibition inside the model, but near-definitional once one-way errors and KeepsWithheld are assumed. Its bound is loose, and no observation is designed.\n\n**Literature I spot-checked at the claimed level:** Hilbe 2017 (the quote and the definitions match), and Imhof 2007 (the thresholds match; error symmetry is not stated in the extracted text). I did not verify the other six 'read in full' sources.",
+   "verdict_holds": true,
+   "summary": "I compiled both scratch modules myself, under gate.py hold, with Lean 4.29.1 against sources byte-identical to main 86cad9299 (PairSelection, WindowedWaiting and Typicality hashes match main). Every #print axioms report is empty. absorbed_share's premises are met by the four named laws, and window_witness is a true case of the law. I extended it by #eval at k = 2: 143 of 256 against a bound of 225. I reran chainf.py, cohort_check.py and cohort_terms_check.py, and all numbers reproduce (0 mismatches, mean 3.29e4 steps, 0.919 against 0.864).\n\n**The verdict stands:** stop (a) as research, since nothing is new and nothing could fail. The small item survives only after these corrections:\n1. Add a Lean lemma S + p⁴ = (p+q)⁴, or drop 'S = (p+q)⁴ − p⁴' and '(1 − r⁴)^k' from the home sentence. The Lean proves only S < T.\n2. Every new sentence must state that errors only withhold.\n3. The 05:133 rewrite must carry the horizon fact, that over 2,000 steps the window gives more often than GTFT, and label GTFT's non-absorption as by hand. Otherwise it misleads in the opposite direction.\n4. Drop the D48 rewrite. It misreads 'Tolerance' (the tolerating law over webs, sparing in a pair, which never ends) as the window. No proved law shows D48 false.\n5. Narrow the offspring record's mixed-cohort Does-not-show line rather than deleting it. kind_rises_iff_withheld is the mean law re-expressed, and the closed forms on cohort x y z are by hand.\n\nOne reader correction is independent of the Lean and can land on its own: the window record's Correspondence should cite Hilbe et al. 2017. I verified the quote 'WSLS is the only memory-1 strategy with these properties', which essentially foresees the landed restores_and_answers_iff.\n\nMissed prior work: Boyd 1989 (not read, and central for one-way errors), Selten and Hammerstein 1984, van Veelen et al. 2012, and Taylor and Nowak 2007. The Queller 1985 attribution is probably Queller 1992.\n\nNothing in /Users/ren/theories or /Users/ren/tmp/el7/a was edited. My build script, log and probe are in /private/tmp/claude-501/-Users-ren-theories/6e883b66-baef-49e6-bd45-0e63629106ab/scratchpad/el7a/. I deliberately did not run the full suite or make gate."
+  }
+ },
+ {
+  "part": "b",
+  "skeptic": {
+   "lean_checked": [
+    {
+     "file": "/Users/ren/tmp/el7/b/Becoming/PairFlow.lean (sha256 c231b525…e5e0, 1,093 lines; copied unchanged to my scratchpad and compiled once there)",
+     "theorem": "Becoming.PairFlow.Routes.line_offspring (with Routes.lineAt_eq, balances, acting, dependent, supported)",
+     "compiled": true,
+     "axioms": "empty. I compiled with Lean 4.29.1 under gate.py hold, against /Users/ren/tmp/el7/olean through my own overlay that leaves out other investigators' modules. 134 of the 138 closure sources match main 86cad9299 byte for byte. The other 4 are the three foundation modules, which match main at their own paths, and LineageDrawdown, which is investigator (c)'s scratch and not in the closure. Rerunning PairFlowAudit gives output identical to the investigator's: 283 constants, 278 with empty reports, and 5 generated injEq lemmas on propext. There are 80 source theorems, and direct references reach only Init and Becoming.",
+     "statement_matches_claim": true,
+     "vacuous_or_unmet_premises": false,
+     "note": "It has no premises. It holds for every Place, any laws and any errors, with a = start + own·n. It is close to definitional: toLine is defined as own + (reach+matched)·[partner gave] + kept·[withheld], so the closed form restates the construction. Support is built in, because the standing is held constant: the renewer replaces every draw, including the gift's amount whether given or kept. The Parts are symmetric, and Routes cannot represent asymmetric renewal like the landed Renewed witness."
+    },
+    {
+     "file": "/Users/ren/tmp/el7/b/Becoming/PairFlow.lean",
+     "theorem": "Routes.factor_gap, Routes.gap_iff, Routes.plain, Routes.signs",
+     "compiled": true,
+     "axioms": "empty",
+     "statement_matches_claim": true,
+     "vacuous_or_unmet_premises": false,
+     "note": "The premise kept + spoiled = reach + spill is met in all three witnesses, which `decide` checks. The witnesses are cases of the laws: perishing has γ=0<β=1, matching has γ=1<β=2, and carried has β=1<γ=2. plain is near-definitional: when a unit is worth the same in either line and nothing is lost or matched, moving it creates nothing. This is Whitlock et al. 2007's resource-heterogeneity point."
+    },
+    {
+     "file": "/Users/ren/tmp/el7/b/Becoming/PairFlow.lean",
+     "theorem": "Gated.runs_agree_until, Gated.factors_equal_while_supported (and the general levels_agree_until, levels_agree, factors_equal)",
+     "compiled": true,
+     "axioms": "empty",
+     "statement_matches_claim": true,
+     "vacuous_or_unmet_premises": false,
+     "note": "These compare only two settings: both give at every step against neither does, with equal gifts. The activity premise needs to hold only in the giving run, and FailedRenewal.agree_to_shortfall and read_to_shortfall(_met) meet it up to step 2. The content is that equal mutual gifts cancel. levels_agree_until is induction on the balance equation, which is definitional, and the report says so. Nothing here covers one-sided giving."
+    },
+    {
+     "file": "/Users/ren/tmp/el7/b/Becoming/PairFlow.lean",
+     "theorem": "Gated.lineAt_of_active, Gated.lines_agree_while_active",
+     "compiled": true,
+     "axioms": "empty",
+     "statement_matches_claim": true,
+     "vacuous_or_unmet_premises": false,
+     "note": "Both are true by construction: lineAt adds own exactly at the steps where the formation is active. So 1.3 (1) restates the modelling choice, and 'never fall' must also cover the withholding counterfactual."
+    },
+    {
+     "file": "/Users/ren/tmp/el7/b/Becoming/PairFlow.lean",
+     "theorem": "Gated.stays_fallen; DrawnBelowNeed.fallen; GiverAtNeed.gift_lost, withholder_same, alone_fallen; FailedRenewal.lines_gain, gifts_sharing, levels_sharing, levels_keeping",
+     "compiled": true,
+     "axioms": "empty",
+     "statement_matches_claim": true,
+     "vacuous_or_unmet_premises": false,
+     "note": "The witnesses are genuine Gated settings, and stays_fallen is instantiated in keeping_fallen, alone_fallen and fallen. stays_fallen is near-definitional: no renewal while inactive and no gift means no inflow. In lines_gain the m extra comes from the renewer resuming 2 a step, not from the 2 units given. The report classes this correctly as an inflow from beyond."
+    },
+    {
+     "file": "/Users/ren/tmp/el7/b/Becoming/PairFlow.lean",
+     "theorem": "met_needs_within_start, met_needs_le_stock, NeedsAtCapacity.at_capacity",
+     "compiled": true,
+     "axioms": "empty",
+     "statement_matches_claim": true,
+     "vacuous_or_unmet_premises": false,
+     "note": "It is two lines, from metNeed_le (definitional) and the landed stock_not_rises_over. The witness is the landed Needs web over step 0, with the bound met at equality, 3 ≤ 3. It is near-definitional, as the report says."
+    },
+    {
+     "file": "my probe, scratchpad/probe/Asym.lean (imports the investigator's Becoming.PairFlow; not part of the report)",
+     "theorem": "#eval of a Gated run with FailedRenewal.parts. The renewer offers the first 3 a step and the second 1 a step in both runs. The first always intends to give and the second never does, compared with neither giving, both from (3,3).",
+     "compiled": true,
+     "axioms": "n/a (evaluation only)",
+     "statement_matches_claim": false,
+     "vacuous_or_unmet_premises": false,
+     "note": "One-sided giving keeps the levels at (3,3) at every step, so both formations are active throughout the giving run. Lines over n steps: giver n in both runs; receiver n when given and 1 when not, because it falls to 2 and stays there. Renewal does not depend on the giving, nothing is lost, and nothing is matched, yet the gift brings the pair n−1 at no cost to the giver's line. This is the shape of the landed Renewed witness. It refutes the unscoped wording 'renewal from outside that does not depend on the giving leaves β = γ where the routes lose nothing', and the AI reading's 'under support over the run … only by loss saved or matching', unless support is required of every run compared."
+    }
+   ],
+   "reader_corrections": [
+    {
+     "live_text": "main (86cad9299, unchanged since the report) theories/becoming/chapters/05-COLLECTIVES.md:157: \"Where giving that waits on giving brings support beyond what it draws ([§5](#r-offspring-read-from-giving-that-waits)), the webs show two ways. … *Renewal from outside*: a renewer whose giving does not require its own level lets the giver give one unit at every step without its level falling … Both bounds have one form, so no web statement compares `β` with `γ`, and the join of the witnesses to the formula's factors is not shown\". Also line 136 (§5): \"where the surplus can come from is in [§6]\".",
+     "claim": "A reader takes renewal from outside as a source, on its own, of β exceeding γ. On the derived flow, renewal that does not depend on the giving leaves β = γ where the routes lose nothing, and need asymmetry acts only at a shortfall, outside the formula's premise.",
+     "holds": true,
+     "evidence": "The diagnosis holds. §5 sends the reader to §6 for where the surplus comes from, and §6 lists renewal from outside as one of two ways. Yet in the landed Renewed witness the gift counts only because the receiver, which has no renewal of its own, would fall below its need without it. Renewal makes the gift free to the giver's level, not by itself β > γ. The proposed wording overreaches, though. Routes has symmetric Parts and cannot represent Renewed's asymmetric renewal. Under the module's own Gated semantics with unequal renewal (my probe), renewal not depending on giving, with no loss and no matching, gives the pair n−1 more while every formation is supported at every step of the giving run. So the first clause is false as a general statement about renewal from outside. 'Need asymmetry acts only below a need' is true only when the shortfall is read in the run compared (the withholding one). The draft also uses 'gated renewal' outside the glossary's sense, and it leaves unchanged the record's statement line, which says the same as §6, against AGENTS' rule that a change goes to record and home both.",
+     "better_fix": "Opening: 'The webs show two ways a gift can bring support beyond what it draws on the giver (§5).' Closing: 'Renewal from outside makes a gift free to the giver's level, not to its line. Where renewal reaches both formations alike, does not depend on the giving, and nothing is lost or matched, β = γ (PairFlow.Routes.plain). Where only the giver is renewed, as here, the gift counts through a receiver that would otherwise fall below its need, which is need asymmetry carried by an inflow. The formula, read only on places supported in every run compared, does not reach that case (below).' Make the same scoping in the record's statement line, with a history note."
+    },
+    {
+     "live_text": "Proposed, not live: REPORT 1.5's record statement 'with renewal gated on support, giving changes nothing while both stand …', law 3 'Renewal is gated on support', the namespace `Gated`, and the docstring 'Renewal gated on what it renews'. Checked against main:GLOSSARY.md:56.",
+     "claim": "(My finding.) The landing text would mislead a reader on two terms.",
+     "holds": true,
+     "evidence": "GLOSSARY.md:56 defines 'the gate (of a renewal), gated renewal' as every formation giving to a condition depending on it at a need ≥ m (05 §1's commons gate). In `Gated` the renewer depends on nothing (ownStanding renewer _ = False), so by the account's terms it is renewal from outside whose giving reads the receiver's activity (compare 04's FromOutside). Separately, 'giving changes nothing while both stand' is broader than runs_agree_until, which compares mutual giving at every step with none. One-sided giving while both stand changes the standings: GiverAtNeed.standings_differ, and my probe.",
+     "better_fix": "Rename the namespace and phrase to something like 'renewal while standing' (`WhileStanding`). In the statement, write 'mutual giving at every step leaves the levels as no giving does while both stand'."
+    }
+   ],
+   "claims_refuted_or_overstated": [
+    {
+     "claim": "2.3's AI reading: 'Under the reading's premise of support over the run, giving brings more than keeping only by what it saves from loss or what a renewer adds for it'. Q2: 'What it forbids, inside the model: β > γ under support over the run, unless giving avoids a loss or a third party matches.'",
+     "problem": "This is overstated unless 'support over the run' means every place supported in every run compared, the withholding counterfactual included.",
+     "evidence": "My Gated probe: with unequal renewal, levels stay (3,3) at every step when the first gives, and the receiver's line is n against 1 when neither gives. There is no loss, no matching, and the renewal is the same in both runs."
+    },
+    {
+     "claim": "1.3, items (1) and (3), presented as prohibitions an observation could show; only (4) is labelled near-definitional.",
+     "problem": "(1) and (3) are near-definitional: lineAt reads only activity, and with no renewal while inactive and no gift there is no inflow. (2) rests on the choice that a kept unit reaches the keeper's line at the rate a received one reaches the receiver's, and on no shortfall in any run compared. Its falsifiability is weak.",
+     "evidence": "Definitions Gated.lineAt, Gated.renewal and Gated.next_le_of_idle; Routes.toLine."
+    },
+    {
+     "claim": "1.5's record statement: 'with renewal gated on support, giving changes nothing while both stand'.",
+     "problem": "It is broader than the Lean, and it uses the glossary's 'gated renewal' in another sense.",
+     "evidence": "runs_agree_until compares all-give with none-give only. GiverAtNeed.standings_differ shows (2,4) against (3,3). GLOSSARY.md:56."
+    },
+    {
+     "claim": "1.1: the result 'corrects what 05-COLLECTIVES §6 tells a reader: renewal from outside that does not depend on the giving leaves β = γ where the routes lose nothing'.",
+     "problem": "The correction is right in substance but scoped too widely. It carries Routes.plain, proved for symmetric renewal, over to the landed Renewed witness, where only the giver is renewed. It also leaves the old record's statement line unchanged.",
+     "evidence": "The statement of main:theories/becoming/results/records/what-giving-that-waits-draws-on.md; PairSelection.Renewed renews the giver only."
+    }
+   ],
+   "novelty_assessment": "The report claims no novelty, and that is right. The derivation is close to definitional. I checked Birch 2014 (BJPS 65(2):381–411, accepted manuscript, HRS/HRG used correctly) and Peters & Adamou (arXiv:1506.03414, pooling and time-average growth used correctly) at the stated level. The other citations are bibliographically correct, with their reading levels declared. Prior work it missed, all of which strengthens 'nobody sees farther by it': Trivers 1971 (need asymmetry is reciprocal altruism's original condition); Winterhalder 1986 and Kaplan & Hill 1985 (sharing as risk reduction under concave value); Stephens 1981 and Caraco's energy-budget rule (a starvation threshold read as fitness); Aktipis, Cronk & de Aguiar 2011 (the Maasai survival-threshold model, closer to FailedRenewal and GiverAtNeed than the 2016 paper); Taylor & Frank 1996 and Rousset 2004 (deriving b and c from a mechanistic model is standard); eco-evolutionary feedback models (Hauert, Holmes & Doebeli 2006; Lion, Jansen & Day 2011). The 'forbids': (i)/(ii) at the level of balance is definitional. 1.3 (1), (3) and (4) are near-definitional. (2) is a conditional resource-value claim with weak observational purchase.",
+   "verdict_holds": true,
+   "summary": "I compiled /Users/ren/tmp/el7/b/Becoming/PairFlow.lean once (Lean 4.29.1, under gate.py hold, against the shared oleans, whose closure sources match main 86cad9299). It compiles cleanly, and my axiom audit is byte-identical to the investigator's: every theorem the landing rests on has an empty report, its premises met by real witnesses. The verdict survives with amendments: land a small item, stop the hunt, no novelty. (1) The §6 correction holds in substance, but its wording carries Routes.plain, proved for symmetric renewal, over to the asymmetric Renewed witness. My Gated probe shows the gift's gain under unequal renewal while both stand in the giving run. So the fix should require support in every run compared, name need asymmetry carried by an inflow, and go to the old record's statement line too. (2) Rename 'gated renewal' (it clashes with GLOSSARY.md:56) and narrow 'giving changes nothing while both stand'. (3) 1.3 items (1) and (3) are near-definitional. (4) The missed prior work strengthens the no-novelty verdict. I edited and committed nothing, kept scratch only in my session scratchpad, and ran only the module compile, the axiom audit and one probe evaluation."
+  }
+ },
+ {
+  "part": "c",
+  "skeptic": {
+   "lean_checked": [
+    {
+     "file": "/Users/ren/tmp/el7/c/Becoming/LineageDrawdown.lean (sha256 5de9760f…e429, = history v4); recompiled by me into /private/tmp/claude-501/-Users-ren-theories/6e883b66-baef-49e6-bd45-0e63629106ab/scratchpad/olean against /Users/ren/tmp/el7/olean (its LineageRegimes, Continuation, MapInstances, SelectionShift, LineageRegions sources byte-equal to main 86cad9299), under gate.py hold, Lean 4.29.1, 2.3 s; checks in .../scratchpad/Skeptic.lean, log .../scratchpad/build.log",
+     "theorem": "Becoming.LineageDrawdown.degeneration_of_excess",
+     "compiled": true,
+     "axioms": "none",
+     "statement_matches_claim": true,
+     "vacuous_or_unmet_premises": false,
+     "note": "Its #check is the landed LineageRegimes.degeneration_of_family_excess with the Acting and gated arguments removed, and nothing else changed. The landed proof uses Flow.family_excess_ends only at k = 0, and family_excess_ends_at with k = 0 never uses the gate or the givers' support, so the claim that both premises are idle holds. It is a restatement with the idle premises dropped, a composition of landed lemmas (below_of_excess, which is Flow.family_excess_bounded, then Flow.family_ends_below_at, then Web.kind_every_branch_ends_of_gone). Under RESULT-WORKFLOW it should be labelled a wrapper, not a result."
+    },
+    {
+     "file": "same; my Skeptic.lean",
+     "theorem": "landed_of_excess = LineageRegimes.degeneration_of_family_excess, landed_gone = Web.family_excess_gone, landed_horizon = Web.family_excess_degenerates (rfl)",
+     "compiled": true,
+     "axioms": "none",
+     "statement_matches_claim": true,
+     "vacuous_or_unmet_premises": false,
+     "note": "I reran the rfl checks myself. An equality between @-terms only typechecks when the types are identical, and proof irrelevance then gives rfl, so this does check that the statements are identical. The landed statements are cases of gate-free ones, as claimed."
+    },
+    {
+     "file": "same",
+     "theorem": "Drain.outside_ends (with my added gate_fails, acting false, and from_outside at step 9)",
+     "compiled": true,
+     "axioms": "none",
+     "statement_matches_claim": true,
+     "vacuous_or_unmet_premises": false,
+     "note": "Non-vacuous: the start (0,4) is active (rfl), and courseP false meets balance, Acting and Dependent, with eight steps of excess from stock 8 < 8+1. I proved separately that the coupled gate fails in the outside course (gate_fails, no axioms). I also checked that at the horizon step T+n = 9 the outside renewer still gives 3 units, so that 'nothing gives again' fails even at that step without the gate. The witness is a real case of 'every premise but the gate'."
+    },
+    {
+     "file": "same",
+     "theorem": "Drain.landed_met",
+     "compiled": true,
+     "axioms": "none",
+     "statement_matches_claim": true,
+     "vacuous_or_unmet_premises": false,
+     "note": "This applies the landed gated law itself, with every premise discharged and generation 9 = [5,6] nonempty and each member requiring the pool. Non-vacuous."
+    },
+    {
+     "file": "same",
+     "theorem": "stock_ledger / below_iff / below_of_excess",
+     "compiled": true,
+     "axioms": "none",
+     "statement_matches_claim": true,
+     "vacuous_or_unmet_premises": false,
+     "note": "Correct, but stock_ledger is the landed Prelude balance_over_stretch (Prelude.lean:951) read at q = W.stock ds through balances.over. The same ledger, read as a bound on a descendant's need, is already landed for one condition (Evolution.transmitted_within, record evolution-on-descent). The report presents it as 'the exact condition (Lean)' without saying that it is a restatement."
+    },
+    {
+     "file": "same",
+     "theorem": "ends_of_drawdown / next_empty_of_unmet / no_term_of_drawdown",
+     "compiled": true,
+     "axioms": "none",
+     "statement_matches_claim": true,
+     "vacuous_or_unmet_premises": false,
+     "note": "Met in ends_S and ends_P. The content follows from Dependent (active implies supported), Acting and Descended (only active parents give), so it is near-definitional, as the report says."
+    },
+    {
+     "file": "same",
+     "theorem": "Drain.renewer_degenerates_S, renewal_ends_S, renewal_goes_on_S, renewer_goes_on_outside",
+     "compiled": true,
+     "axioms": "none",
+     "statement_matches_claim": true,
+     "vacuous_or_unmet_premises": false,
+     "note": "Each is a witness only. The line stays ended in courseS false because in Drain each organism stands at one step and the census is closed, which is a modelling choice. The proposed 04 §4 sentence 'without it the renewal and the level return while the line stays ended' states these witnesses in general form."
+    },
+    {
+     "file": "same",
+     "theorem": "Drain.selection_S, every_active_degenerates_S, generates_N, count_short_S, ends_P, descended_S, descended_P, balances_P",
+     "compiled": true,
+     "axioms": "none",
+     "statement_matches_claim": true,
+     "vacuous_or_unmet_premises": false,
+     "note": "Sampled. The numbers hold: concordance 1, 2, 4, 0; ledger 8+9 < 1+17, not at two steps; the count form misses step 3. Offspring numbers are supplied by hand in the kids field, as the report says."
+    }
+   ],
+   "reader_corrections": [
+    {
+     "live_text": "theories/becoming/chapters/04-LIFE.md:161 (main 86cad9299): \"Renewal from outside, a renewer giving from no listed condition and requiring none, meets none of the three premises, every formation active and supported at every step (`FromOutside.from_outside`): it lies beyond the boundary of the region where the regimes' verdicts hold\"",
+     "claim": "A reader would believe that a lineage drawing past a renewal from outside (a sun) is beyond the ending verdict, but the lineage reading needs neither the gate nor Acting.",
+     "holds": true,
+     "evidence": "degeneration_of_excess compiles without the gate or Acting. The landed law is its case (rfl). outside_ends is a case with the gate shown to fail (my gate_fails). FromOutside escapes because it has no excess, not because of where its renewal comes from.",
+     "better_fix": "The direction is right, but the proposed replacement is neither minimal nor fully safe. (1) Edit the paragraph's own gated-regime sentence, which still lists 'the coupled gate at need m, only active formations giving' as premises of the lineage reading: say they are not used. Then shorten the outside sentence to: the boundary is no excess, not the renewal's source; a renewer giving from no condition, with n steps of excess from a stock below n + m, ends the line too (Drain.outside_ends). (2) Say that the gate is what makes the formations' end last (Flow.family_excess_ends), and that without it a formation inactive at that step can be active again (landed Restored.returns; the relative-position record says 'Gated renewal is needed for the end to last'). Otherwise 'the line stays ended' reads as 'nothing returns' and appears to contradict that record. The verdict is about the line from before, at the activity/kind grain. (3) Write 'without it the renewal can go on' (that is only a witness), not 'return'. (4) Leave out the below_iff sentence or label it a restatement of balance_over_stretch. (5) courseS and courseN are not needed for this correction."
+    },
+    {
+     "live_text": "theories/becoming/chapters/05-COLLECTIVES.md:25: \"The gated conclusions hold only for renewal depending on what it renews, not renewal from outside, such as a sun; a taker not so depending can continue (read on a lineage, renewal from outside lies beyond the boundary of the region where the regimes' verdicts hold, [04 §4](...))\"",
+     "claim": "The first clause is inexact at the step the excess reaches, and the parenthetical misleads.",
+     "holds": true,
+     "evidence": "05 §1 lists two conclusions: the level below m for good, and every dependent formation ended. At T+n both hold for any renewal (landed Flow.excess_leaves_below and Flow.ends_at_race_end, which already say 'no renewal need be gated'). Only the 'for good' part needs the gate. The parenthetical is false on a lineage, as above.",
+     "better_fix": "Changing 'The gated conclusions' to 'The gated conclusions after the step the excess reaches' is right and minimal for the conclusions 05 §1 lists. The new parenthetical should not say flatly that on a lineage 'it lasts'. Suggested: '(at that step the end holds for any renewal, Flow.ends_at_race_end, and a formation renewed from outside can be active again, Restored.returns; read on a lineage at a class within activity the line from before cannot pass that step, so a lineage drawn past a sun's renewal from too small a stock degenerates without any gate, 04 §4)'."
+    },
+    {
+     "live_text": "theories/becoming/results/records/ending-laws-as-regimes-on-a-lineage.json: statement \"…renewal from outside meets none.\"; hypotheses \"For the gated regime: balance, the coupled gate…, only active formations giving…\"; correspondence \"Renewal from outside answers the scope limit of the gated conclusions, which do not reach renewal given from an outside source such as a sun.\"",
+     "claim": "The record lists idle premises and places the boundary at the renewal's source.",
+     "holds": true,
+     "evidence": "The same Lean evidence as for 04 §4. The record's own does_not_show already concedes 'That a regime is needed for an end' (Handover.none_active), so the decider point is partly anticipated. What is new is only that the gate is idle in the regime law itself.",
+     "better_fix": "The proposed record amendments are sound in substance (the statement is 285 characters, within the 300 limit). Add three things. The new gate-free law is a restatement or wrapper of landed lemmas, not a result. stock_ledger is balance_over_stretch at the stock. The does_not_show entry on outside renewal should name Restored.returns (a formation does return at the formation level), not only 'at a grain coarser than activity'."
+    },
+    {
+     "live_text": "theories/becoming/THE-THEORY-OF-BECOMING.md:109 \"…end every formation depending on the condition at such a need; a taker not so depending can continue, and renewal from outside, such as a sun, is not covered.\" and THE-THEORY-OF-BECOMING.zh.md:109 \"而来自外部的更新（如太阳）不在此列\"",
+     "claim": "The report did not check this. It is the overview's restatement of 05 §1.",
+     "holds": false,
+     "evidence": "Read at the formation level, 'end' means the lasting end, and that does need the gate (Restored.returns), so the sentence is defensible. It does not mention lineages. It is mildly inexact at the step T+n (ends_at_race_end), but a reader would not come away with a materially false belief.",
+     "better_fix": "No change is needed for this correction. If 05 §1 changes, re-read this sentence against it, as AGENTS asks for restatements. Optionally write 'is not covered beyond the step the excess reaches', in both editions."
+    },
+    {
+     "live_text": "theories/becoming/ONE-PAGE.md:17 \"where the renewal depends on what it renews, enough such steps in a row from a low enough level end it and what depends on the condition as much\"",
+     "claim": "Checked for the same issue.",
+     "holds": false,
+     "evidence": "It states only the gated case and says nothing about renewal from outside. It is accurate.",
+     "better_fix": "None."
+    },
+    {
+     "live_text": "theories/becoming/chapters/04-LIFE.md §3 (record the-selection-term-and-a-lineages-fate, next_delta: \"the suicide witness joined to an amount that draws past the family's gated renewal\")",
+     "claim": "Proposed addition: Drain answers the open item (this is not a correction of misleading text).",
+     "holds": true,
+     "evidence": "selection_S, every_active_degenerates_S (gate true and false) and generates_N compile with no axioms, with every premise met. It is a witness with offspring numbers supplied by hand.",
+     "better_fix": "This is acceptable as a separate small amendment, but it is not part of the correction and changes no belief. Land it after the correction, or batch it."
+    }
+   ],
+   "claims_refuted_or_overstated": [
+    {
+     "claim": "'The exact condition (Lean)': stock_ledger and below_iff are presented as the ledger the account lacked.",
+     "problem": "Overstated: this is a restatement of landed identities.",
+     "evidence": "Prelude.balance_over_stretch(_on) is the same telescoped balance. Evolution.transmitted_within already reads 'need + everything taken ≤ level + everything given (+δ)' for a supported descendant at one condition (records evolution-on-descent, census-balance)."
+    },
+    {
+     "claim": "degeneration_of_excess, gone_of_excess and horizon_of_excess are listed among the laws to land, with only landed_* labelled 'not a result'.",
+     "problem": "They are the landed proofs with unused arguments deleted, so they are wrappers as well.",
+     "evidence": "The proof term is degeneration_of_unmet ∘ below_of_excess, which is the k = 0 path of the landed proof."
+    },
+    {
+     "claim": "Proposed 04 §4 wording: 'The gate decides the renewal's fate: with it the renewal ends with the line, without it the renewal and the level return while the line stays ended.'",
+     "problem": "It generalizes witnesses and omits a landed counter-reading.",
+     "evidence": "That the renewal returns without the gate is shown only in a witness (renewal_goes_on_S). That the line stays ended rests on Drain's choice that each organism stands one step in a closed census. Landed Restored.returns shows a formation inactive at the race's end active again under outside renewal, and the relative-position record says 'Gated renewal is needed for the end to last'."
+    },
+    {
+     "claim": "Gyllenberg, Parvinen and Dieckmann 2002, J. Math. Biol. 45: 79–105, read in part to Theorem 3 and §5.1.",
+     "problem": "Cited at a version other than the one read.",
+     "evidence": "lit/gpd02/f.txt is IIASA Interim Report IR-00-056 (November 2000). Its Theorem 3 and its 'necessary, not sufficient' sentence match what the report says, but the report should cite the preprint it read, or check the journal's numbering."
+    },
+    {
+     "claim": "Literature coverage: suicide 'already known' from the papers listed.",
+     "problem": "Prior work most directly on selection for exploitation driving a population extinct was missed.",
+     "evidence": "Matsuda and Abrams 1994 (Evolution 48: 1764–1772; DOI 10.1111/j.1558-5646.1994.tb02212.x is in the investigator's own dois.txt but goes undiscussed; GPD also cite it as prior); Matsuda and Abrams 1994, Theor. Popul. Biol. 45: 76–91 ('timid consumers'); Gilpin 1975 on prudent predation; Kerr et al. 2006, Nature 442 (DOI in dois.txt, undiscussed), a host–pathogen tragedy of the commons. These strengthen the stop verdict rather than defeat it."
+    },
+    {
+     "claim": "Gate-free ending under renewal from outside (a sun).",
+     "problem": "This is sensitive to a modelling choice the reader texts should keep.",
+     "evidence": "The ending needs n steps of excess from a stock below n + m under outside renewal. In Drain this comes from discrete generations whose offspring numbers are supplied before the resource is checked. In continuous consumer–resource models with constant inflow (chemostat-type), overshoot does not drive consumers extinct. The law is conditional and correct, but any front sentence should keep 'drawn past … from too small a stock' and the World's discrete-steps label."
+    }
+   ],
+   "novelty_assessment": "There is no new mathematics. The gate-free lineage law is a two-line composition of landed lemmas (below_of_excess, family_ends_below_at, kind_every_branch_ends_of_gone). Its single-condition, formation-level form is already landed as Flow.ends_at_race_end ('no renewal need be gated'). The ledger is Prelude.balance_over_stretch at the stock. The Drain witnesses are evolutionary suicide or overshoot in discrete form with offspring numbers supplied, and they test nothing in that literature: there is no invasion fitness and no trait dynamics. Matsuda and Abrams 1994, Gilpin 1975 and Kerr et al. 2006 are further prior work the report missed. What the drawdown 'forbids' (no offspring and no selection term at or after a step where the ledger is below the need) follows from Dependent, Acting and Descended, so it is near-definitional, as the report itself says. The only real value is correcting a scope statement: the live texts place the boundary at where the renewal comes from, when the real boundary is whether there is excess.",
+   "verdict_holds": true,
+   "summary": "I compiled /Users/ren/tmp/el7/c/Becoming/LineageDrawdown.lean myself into a private olean tree (sources of the closure byte-equal to main 86cad9299; under gate.py hold; 2.3 s). I reran #print axioms on 30 declarations, every one the report's landing item or corrections rest on plus a sample of the rest, and all are empty. I reran the three rfl identity checks and added my own: the coupled gate fails in the outside course, Acting holds there, and the outside renewer still gives at the horizon step. Files: /private/tmp/claude-501/-Users-ren-theories/6e883b66-baef-49e6-bd45-0e63629106ab/scratchpad/Skeptic.lean and build.log in the same folder.\n\nThe core finding holds. The landed lineage law LineageRegimes.degeneration_of_family_excess, and the map's Web.family_excess_gone and family_excess_degenerates, never use their gate or Acting: the landed proof goes through family_excess_ends at k = 0. Drain.outside_ends is a genuine, non-vacuous case of the law with renewal from outside.\n\nTwo live texts mislead a reader and should be corrected: 04 §4's 'it lies beyond the boundary of the region where the regimes' verdicts hold' and 05 §1's parenthetical. The record ending-laws-as-regimes-on-a-lineage also lists idle premises and places the boundary at the renewal's source. 05 §1's first clause is right only after the step the excess reaches, and the report's 'after the step' edit is correct and minimal. The overview (en and zh, line 109) and ONE-PAGE do not mislead materially. The report did not check the overview, which should be re-read if 05 §1 changes.\n\nThe proposed fixes need amending in five ways:\n1. Say that a formation renewed from outside can be active again (landed Restored.returns, and the relative-position record's 'Gated renewal is needed for the end to last'). Otherwise 'the line stays ended' or 'on a lineage it lasts' plants a new false belief and seems to contradict that record.\n2. Write 'can go on' for renewal without the gate (a witness), not 'return' as a general statement.\n3. Edit the gated-regime sentence in 04 §4 itself so it no longer lists the idle premises, rather than appending a long sentence.\n4. Label stock_ledger and below_iff as a restatement of Prelude.balance_over_stretch (the ledger is also already landed in Evolution.transmitted_within), and label degeneration_of_excess, gone_of_excess and horizon_of_excess as wrappers.\n5. Keep courseS and courseN, the selection-record amendment, out of the correction.\n\nOn the literature: the cited sources check out where the saved texts exist. GPD was read in its 2000 IIASA preprint, not the cited journal version. Matsuda and Abrams 1994, Gilpin 1975 and Kerr et al. 2006 were missed; two of their DOIs are in the investigator's own list. The verdict survives: land only the small correction, as amended; stop the rest; nothing here is frontier work."
+  }
+ },
+ {
+  "part": "d",
+  "skeptic": {
+   "lean_checked": [
+    {
+     "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineageRegimes.lean (main 86cad9299, compiled from a copy with lean v4.29.1 against /Users/ren/tmp/el7/olean, under gate.py hold)",
+     "theorem": "Becoming.LineageRegimes.stock_forces_neither",
+     "compiled": true,
+     "axioms": "none ('does not depend on any axioms')",
+     "statement_matches_claim": true,
+     "vacuous_or_unmet_premises": false,
+     "note": "For every s ≥ 1, not every GatedPairCourse s degenerates and not every one generates. The proof meets the premises with Handover.relay and Handover.runDown, so neither premise is vacuous. It quantifies over all flows at a fixed starting stock. So it says the stock alone does not decide the fate. It does not say the level never decides it in a system whose flows follow from its levels, which is the report's point. The rebuilt olean is byte-identical to the shared one."
+    },
+    {
+     "file": "Becoming/LineageRegimes.lean (same build)",
+     "theorem": "Becoming.LineageRegimes.Handover.both_fates",
+     "compiled": true,
+     "axioms": "none",
+     "statement_matches_claim": true,
+     "vacuous_or_unmet_premises": false,
+     "note": "Same starting stock s. In the relay the stock stays at s, there is never excess and the line generates. In the run-down there is excess at each of its s steps and the line degenerates. What tells them apart is the flow (whether there is excess), not the level. This fits the report's reading that whether a regime's premise holds is a fact about the course, and the laws take it as given."
+    },
+    {
+     "file": "Becoming/LineageRegimes.lean (same build)",
+     "theorem": "Becoming.LineageRegimes.degeneration_at_stock_horizon",
+     "compiled": true,
+     "axioms": "none",
+     "statement_matches_claim": true,
+     "vacuous_or_unmet_premises": false,
+     "note": "Premises: balance, acting, dependent, gated at need one, stock-many steps of excess, and every point reached at T + stock depends at need ≥ 1. The report calls this a balance plus a premise on reach that is read from the same course unless the need is measured in advance. That is accurate. W.stock ds T is the total level of a family of conditions, not a population size. In the Handover witness it reads as the members' own level only because every relatum is embodied."
+    },
+    {
+     "file": "Becoming/LineageRegimes.lean (same build)",
+     "theorem": "Becoming.LineageRegimes.FromOutside.not_gated / multiplying_takers_stop",
+     "compiled": true,
+     "axioms": "none for both",
+     "statement_matches_claim": true,
+     "vacuous_or_unmet_premises": false,
+     "note": "Sampled. not_gated: the renewer gives without requiring the condition, so the gated premise fails at every need. The takers' law matches the report's 'at most log₂(level + 1) cohorts'."
+    },
+    {
+     "file": "experiments/.../Becoming/PairSelection.lean (main, compiled from a copy with v4.29.1)",
+     "theorem": "Becoming.PairSelection.never_rises_in_pairs, assorted_favours_iff",
+     "compiled": true,
+     "axioms": "none for both",
+     "statement_matches_claim": true,
+     "vacuous_or_unmet_premises": false,
+     "note": "β ≤ γ is a supplied hypothesis on natural factors of a supplied offspring formula, as the report says (β and γ are read from offspring, not derived from flows; WS §7 lists that join as not shown). So the report's 'forbids only once β, γ are measured apart from who rises' holds."
+    },
+    {
+     "file": "Becoming/WindowedWaiting.lean (loaded from the shared olean; its source is byte-identical to main; not recompiled by me)",
+     "theorem": "Becoming.WindowedWaiting.Pair.not_absorbs_and_answers_spaced",
+     "compiled": false,
+     "axioms": "none",
+     "statement_matches_claim": true,
+     "vacuous_or_unmet_premises": false,
+     "note": "For every width w, the clocked window rule cannot both leave the other formation giving at step 1 after one error at step 0 and answer every error pattern spaced at two. It is a statement about rules of the window form. So the report's 'theorem of the construction; a run only checks an implementation' is a fair reading."
+    },
+    {
+     "file": "Becoming/SelectionShift.lean (loaded from the shared olean; not recompiled)",
+     "theorem": "Becoming.SelectionShift.Generations.last_term_zero",
+     "compiled": false,
+     "axioms": "none",
+     "statement_matches_claim": true,
+     "vacuous_or_unmet_premises": false,
+     "note": "Sampled. An empty next generation forces concordance and discordance to zero. This is a counting identity, as the report says. never_empties_of_unbounded needs a positive term at unboundedly many steps, and goes_on needs exact transmission at every step from t. Both are read correctly."
+    }
+   ],
+   "reader_corrections": [
+    {
+     "live_text": "theories/becoming/results/records/ending-laws-as-regimes-on-a-lineage.json, correspondence.en (rendered at .md:78): \"the stock sets when the regime ends the line, not whether a lineage can go on\"",
+     "claim": "A reader would take this to mean that, in the account, the stock never decides whether a lineage persists. Under fixed conditions the level does decide it (Allee-type collapse).",
+     "holds": true,
+     "evidence": "The Lean (stock_forces_neither) only says the starting stock alone, over all gated flows, fixes neither fate. The record's statement and does_not_show[1] say this exactly. The correspondence sentence drops 'alone'. The empirical case is confirmed: Sanchez and Gore 2013, full text through Europe PMC, show small populations collapsing and large ones spiralling to coexistence at one fixed 667× daily dilution. The report's open check on 'under the same conditions' therefore resolves in its favour. The misreading is a weak one: the same record states the precise form two fields earlier.",
+     "better_fix": "Make the minimal scope fix in the record only: 'the stock sets when the regime ends the line; it does not by itself set whether a lineage can go on: at each positive stock both fates occur'. The zh would read 「存量设定态何时终结线；单凭存量不设定世系能否延续：在每一正存量下两种命运皆出现」. If a correspondence sentence is wanted, label it a correspondence and keep it two-sided. Where a system's flows follow from its levels, the level can settle the premise either way: small populations collapse under an Allee effect (Sanchez and Gore 2013), and dense ones die by ecological suicide (Ratzke, Denk and Gore 2018). Leave out Bell and Gonzalez, and add no new does_not_show entry."
+    },
+    {
+     "live_text": "same record, correspondence.en AI reading: \"among these laws, what ends a lineage is a regime, not a level\" (zh 「是态，不是水平」)",
+     "claim": "This drops 'alone'.",
+     "holds": true,
+     "evidence": "It is scoped by 'among these laws', so the misreading is weak. Still, 'not a level' reads as denying any role to the level.",
+     "better_fix": "'a regime, not the level alone' / 「是态，而非单凭水平」. This one word is the report's own fix, and it is minimal."
+    },
+    {
+     "live_text": "theories/becoming/chapters/04-LIFE.md:161 (home r-ending-laws-as-regimes-on-a-lineage): \"The stock alone decides neither fate: in a handover between two relata, from the same stock s ≥ 1, a relay with no excess generates and a run-down degenerates\"",
+     "claim": "The report proposes inserting a sentence after this that cites Sanchez and Gore, Bell and Gonzalez, and T1's gate.",
+     "holds": false,
+     "evidence": "The report itself finds 04 §4 accurate, and so does the current main text. The overview (THE-THEORY-OF-BECOMING.md:103 and .zh.md:103) also says 'The stock alone decides neither…'. The insertion would bring empirical correspondences, plus a link 'as at the gate's need (T1)', into a World-theorem home where nothing proved joins EL2 to T1, and T1 is conjectured beyond the model. That changes what a reader is told for the worse.",
+     "better_fix": "No change to 04 §4 or the overview."
+    },
+    {
+     "live_text": "_process/.../el-evolution-on-the-root/NOTE.md:29: \"Under each, the stock sets only the horizon, not the fate, and at every stock s ≥ 1 the stock alone decides neither fate\"",
+     "claim": "The report says NOTE §2 carries the unscoped 'not whether' gloss and proposes adding 'once a regime's premise holds'.",
+     "holds": false,
+     "evidence": "'Under each' already scopes the sentence to a regime's premise, and the same sentence says 'alone'.",
+     "better_fix": "No change."
+    },
+    {
+     "live_text": "_process/.../el-evolution-on-the-root/NOTE.md:260: \"Among the three laws read as deciders, what ends a lineage is a regime; the stock sets when, not whether.\"",
+     "claim": "This is unscoped.",
+     "holds": false,
+     "evidence": "It is scoped by 'Among the three laws read as deciders'. It is a process note, not a reader front. A reader could still clip it, but no false belief follows in context.",
+     "better_fix": "Optional: 'the stock alone sets when, not whether'. This is not needed for the release."
+    },
+    {
+     "live_text": "theories/becoming/results/data/regions.json:707 and :3639: \"the stock decides neither fate\"",
+     "claim": "These drop 'alone'.",
+     "holds": false,
+     "evidence": "The words restate the theorem name stock_forces_neither literally, inside a curated data note. The file is hand-kept: tools/research/theory_graph.py:17 says 'curated by RA', which settles the report's 'if hand-kept'. These lines are not reader prose.",
+     "better_fix": "Optional 'alone' at the next curation, not a correction."
+    }
+   ],
+   "claims_refuted_or_overstated": [
+    {
+     "claim": "Proposed WS.md §5 text: 'Item 4 is a non-implication.'",
+     "problem": "This mislabels an item's standing. Item 4 (EL4c over a horizon) is open, not a proved non-implication.",
+     "evidence": "WS.md:257 on main: '4. A fate of the pairs read off their selection, within any horizon (EL4c, over a horizon). **Open.**' WS.md:246 says the target pair of courses is open, and no PairSelection law is about a course of generations. The text should say 'Item 4 is an open non-implication: if proved it forbids nothing either'."
+    },
+    {
+     "claim": "Bell and Gonzalez 2009 shows that 'the level can decide whether [a regime's] premise holds'.",
+     "problem": "The citation fits poorly. In their salt-stress experiment, the threshold in starting population size comes from stochastic extinction and from whether resistant mutants are present at all. Neither is one of EL2's regime premises (excess of uptake over replenishment, dissipation, or an unfed doubling draw).",
+     "evidence": "The Europe PMC abstract: 'the ancestral population size must be sufficiently large to counter stochastic extinction and contain resistant individuals'. Sanchez and Gore 2013 alone carries the point."
+    },
+    {
+     "claim": "The proposed does_not_show entry: 'where renewal turns on the level, as at the gate's need or an Allee threshold, the level decides it'.",
+     "problem": "This is nearly a tautology (where renewal turns on the level, the level decides it), and it puts an empirical assertion into a non-claim field.",
+     "evidence": "The report's §5.2 entry text."
+    },
+    {
+     "claim": "The scope sentence 'joins EL2 to T1's gate'.",
+     "problem": "No proved join exists. T1 is conjectured beyond the model, and the report proposes no Lean. Saying 'as at the gate's need (T1)' in the home would read as a join the account has.",
+     "evidence": "The report says 'No Lean was written'. LineageRegimes imports LineageRegions, Continuation, MutualDependence and Population, and none of its laws reads T1's need."
+    },
+    {
+     "claim": "The yeast population size is 'the stock' or 'the level' of EL2.",
+     "problem": "The mapping is not argued. In LineageRegimes the stock is W.stock ds T, the total level of a family of conditions. It equals something like the population's own level only because the Handover relata are embodied. In the yeast system the drawn condition is glucose freed from sucrose that is supplied fresh each day, a partly outside renewal, which is the case FromOutside.not_gated puts beyond the gated regimes.",
+     "evidence": "LineageRegimes.lean, GatedPairCourse (W.stock Handover.family 0 = s; every relatum embodied). Sanchez and Gore full text: daily growth-dilution in fresh sucrose medium."
+    },
+    {
+     "claim": "The report's examples ('small populations … collapse while large ones persist'; rescue above a size threshold) show how the level decides.",
+     "problem": "The examples run one way only. A home or correspondence sentence built only on Allee-type cases suggests 'more stock, more persistence', which the literature also contradicts.",
+     "evidence": "Ratzke, Denk and Gore 2018, Nat Ecol Evol, doi 10.1038/s41559-018-0535-1 (abstract read): 'ecological suicide is more likely to occur with increasing bacterial density'. The report did not cite it."
+    },
+    {
+     "claim": "On main the 'not whether' gloss appears in the record and in NOTE §2 and §4.",
+     "problem": "Partly wrong. NOTE:29 (§2) reads 'Under each, the stock sets only the horizon, not the fate … the stock alone decides neither fate', which is already scoped. NOTE:260 is scoped by 'Among the three laws read as deciders'.",
+     "evidence": "git show main:…/el-evolution-on-the-root/NOTE.md, lines 29 and 260."
+    },
+    {
+     "claim": "The proposed WS text: 'Items 1 to 3 forbid a pair of behaviours to a rule of a stated form'.",
+     "problem": "This is a small overstatement. Item 2 (withheld_kept / window_withheld_kept) forbids one behaviour, restoring from total withholding, not a pair.",
+     "evidence": "WS.md:251."
+    },
+    {
+     "claim": "The report's header line says '/Users/ren/tmp/el7/d/REPORT.md does not exist'.",
+     "problem": "This contradicts itself: the file exists and holds the report. It is harmless, but it should not be carried into anything that lands.",
+     "evidence": "ls /Users/ren/tmp/el7/d shows REPORT.md (19,824 bytes)."
+    }
+   ],
+   "novelty_assessment": "I agree that EL adds no prediction, and the report's classification holds for every law I sampled.\n- **EL1:** counting identities. last_term_zero and next_of_selection follow from an empty next generation having zero offspring numbers.\n- **EL2:** balances, with stock_forces_neither as an existence claim over flows.\n- **EL4a:** theorems about a fixed rule form.\n- **EL4b:** conditional on β and γ, which are supplied.\n\nSo each 'forbids' is near-definitional, or holds only once a hypothesis is measured from the outcome. It is not a prohibition an observation could meet, apart from T1's need measured in advance.\n\nCited sources, checked at the level the report claims:\n- Bell and Gonzalez 2009, Sanchez and Gore 2013 and Gyllenberg and Parvinen 2001: abstracts confirmed through Europe PMC.\n- Gyllenberg and Parvinen 2001 does say that a discontinuous transition is necessary (under its assumptions) and that suicide cannot occur in Gurtin–MacCamy models.\n- Sanchez and Gore 2013: I read the full text. 'Small populations collapse despite continual evolution towards increased cooperative allele frequencies', and the phase space was mapped at a fixed 667× dilution. That resolves the report's own pre-citation check.\n\nPrior work the report missed that bears on EL1 and EL2:\n- Ratzke, Denk and Gore 2018, 'Ecological suicide in microbes' (abstract read). A density-driven self-made change of the environment ends the whole population, more likely at higher density. It is the closest empirical counterpart of a lineage ended by its own draw, and it cuts against the one-sided correction.\n- Kerr, Neuhauser, Bohannan and Dean 2006, Nature (abstract read): an experimental 'tragedy of the commons' with migration pattern deciding restraint.\n- Rankin, Bargum and Kokko 2007, TREE (abstract read): a review of the tragedy of the commons and self-extinction.\n- From memory, not checked: Courchamp, Clutton-Brock and Grenfell 1999 on Allee effects; Chuang, Rivoire and Leibler 2009 (Simpson's paradox in a synthetic microbial system), relevant to a share rising while groups fall; for EL4a under noise, Boyd 1989 and Wu and Axelrod 1995.\n\nNone of these changes the verdict. Each shows the field again forbids or explains at least as much.",
+   "verdict_holds": true,
+   "summary": "The verdict to stop and design no test survives. I compiled LineageRegimes and PairSelection from main with v4.29.1 under gate.py hold, and sampled WindowedWaiting and SelectionShift from the shared oleans (byte-identical sources, not recompiled). Every theorem I checked has empty axiom reports. Their statements match the report's readings: counting identities, balances, existence over flows, and rule-form theorems with supplied β and γ. None has a vacuous premise.\n\nThe one proposed item, EL2's scope, holds only in a much smaller form than proposed. The record's correspondence gloss 'not whether a lineage can go on' and its AI reading 'a regime, not a level' drop the 'alone' that stock_forces_neither and the record's own does_not_show carry. A one-word scope fix in en and zh is right.\n\nSeveral parts of the proposal are wrong or not minimal:\n- 04 §4 and the overview already say 'The stock alone decides neither fate', so no home insertion is needed. The proposed one would bring a T1 join with no Lean behind it into a World-theorem home.\n- NOTE:29 is already scoped ('Under each'), and the regions.json lines restate the theorem name.\n- Bell and Gonzalez 2009 is a weak fit: their threshold comes from stochastic extinction and mutant supply, not from a regime premise.\n- The new does_not_show entry is near-tautological.\n- The examples run one way only. Ratzke, Denk and Gore 2018 show ecological suicide becoming more likely at higher density.\n- The stock-to-population-size mapping is not argued, and the yeast medium is partly renewal from outside.\n\nThe proposed WS §5 text calls item 4 'a non-implication', but WS.md:257 marks it Open. The report's pre-citation check (fixed dilution in Sanchez and Gore) resolves in its favour: 667× daily, read in the full text.\n\nNothing was edited or committed. My scratch Lean and logs are under /private/tmp/claude-501/-Users-ren-theories/6e883b66-baef-49e6-bd45-0e63629106ab/scratchpad/src and …/scratchpad/ol. I read the code and ran no test suite."
+  }
+ }
+]

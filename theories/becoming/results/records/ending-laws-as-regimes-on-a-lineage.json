@@ -8,10 +8,10 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-11-01T11:06:48+00:00",
+  "reviewed_at_utc": "2026-11-05T20:42:24+00:00",
   "statement": {
-    "en": "Three ending laws, read as deciding a lineage's region under a premise on the line's reach, are regimes whose horizon the stock sets: gated renewal run past, dissipation within the family, a draw on a condition given nothing. At each positive stock both fates occur; renewal from outside meets none.",
-    "zh": "世界的三条终结之律，各在关于线之所及的前提下读作世系之域的判定者，皆是其视界由存量设定的态：门控更新被越过、族内耗散、对无所给予之条件的汲取。在每一正存量下两种命运皆出现；来自外部的更新不满足其中任何一态。"
+    "en": "Three ending laws, read as deciding a lineage's region under a premise on the line's reach, are regimes whose horizon the stock sets: renewal run past, dissipation within the family, a draw on a condition given nothing. At each positive stock both fates occur; the first needs no gate.",
+    "zh": "世界的三条终结之律，各在关于线之所及的前提下读作世系之域的判定者，皆是其视界由存量设定的态：更新被越过、族内耗散、对无所给予之条件的汲取。在每一正存量下两种命运皆出现；第一态无需门控。"
   },
   "laws": [
     {
@@ -36,6 +36,36 @@
       "declarations": [
         "Becoming.LineageRegimes.degeneration_of_family_excess_listed",
         "Becoming.LineageRegimes.degeneration_at_stock_horizon"
+      ]
+    },
+    {
+      "en": "Restatement, no gate. Under balance and with activity needing support, n steps of a family's uptake above its replenishment from a stock below n + m make the line from an active occurrence, at a step not after T + n, degenerate at the kind grain wherever everything it reaches at T + n requires a member at a need of at least m, whatever renews the family; the gated reading above is its case.",
+      "zh": "重述，无门控。在平衡且活动需要支持时，自低于 n + m 的存量起一族之摄取超过补充 n 步，使自不晚于 T + n 之步的活跃之事起的线，在其于 T + n 所及者皆以至少 m 的所需依存于某成员之处，在种类粒度上退化，无论何者更新该族；上面的门控读法是其情形。",
+      "declarations": [
+        "Becoming.LineageDrawdown.degeneration_of_excess",
+        "Becoming.LineageDrawdown.landed_of_excess",
+        "Becoming.LineageDrawdown.landed_of_excess_eq",
+        "Becoming.LineageDrawdown.below_iff",
+        "Becoming.LineageDrawdown.below_of_excess",
+        "Becoming.LineageDrawdown.degeneration_of_unmet",
+        "Becoming.LineageDrawdown.degeneration_of_unmet_listed",
+        "Becoming.LineageDrawdown.degeneration_of_drawdown"
+      ]
+    },
+    {
+      "en": "Restatements on the map and the census: the map's horizon laws hold without their gate and only active giving; in generations of descent, where only active formations give and activity needs support, a generation every member of which requires a member of a family below such a need has an empty next generation, and the selection term proper is zero from that step on.",
+      "zh": "地图与普查上的重述：地图的视界之律无需门控与只有活跃给予；在世系各代中，只有活跃形成给予且活动需要支持时，每个成员都依存于低于此所需之族成员的一代，其下一代为空，选择项本身自该步起为零。",
+      "declarations": [
+        "Becoming.LineageDrawdown.gone_of_excess",
+        "Becoming.LineageDrawdown.horizon_of_excess",
+        "Becoming.LineageDrawdown.landed_gone",
+        "Becoming.LineageDrawdown.landed_horizon",
+        "Becoming.LineageDrawdown.landed_gone_eq",
+        "Becoming.LineageDrawdown.landed_horizon_eq",
+        "Becoming.LineageDrawdown.next_empty_of_unmet",
+        "Becoming.LineageDrawdown.ends_of_unmet",
+        "Becoming.LineageDrawdown.ends_of_drawdown",
+        "Becoming.LineageDrawdown.no_term_of_drawdown"
       ]
     },
     {
@@ -179,8 +209,8 @@
       ]
     },
     {
-      "en": "Renewal from outside, beyond the boundary of the region where the regimes' verdicts hold: a renewer gives two units at every step and does not require the condition; two takers each take one; nothing is in excess, the condition is not dissipated on, and every formation is active and supported at every step. The gated premise fails at every need, so none of the three regimes binds.",
-      "zh": "来自外部的更新，在诸态之判决成立之域的边界之外：一个更新者每步给出两单位，且不依存于该条件；两个取者各取一；无物过度，条件不被耗散，每个形成每步皆活跃且受支持。门控前提在每一所需上都不成立，故三种态无一约束它。",
+      "en": "Renewal from outside with nothing in excess: a renewer gives two units at every step and does not require the condition; two takers each take one; nothing is in excess, the condition is not dissipated on, and every formation is active and supported at every step. The gated premise fails at every need and no excess runs, so none of the three regimes binds.",
+      "zh": "无所过度的来自外部之更新：一个更新者每步给出两单位，且不依存于该条件；两个取者各取一；无物过度，条件不被耗散，每个形成每步皆活跃且受支持。门控前提在每一所需上都不成立，也没有过度，故三种态无一约束它。",
       "declarations": [
         "Becoming.LineageRegimes.FromOutside.flow",
         "Becoming.LineageRegimes.FromOutside.web",
@@ -190,6 +220,18 @@
         "Becoming.LineageRegimes.FromOutside.dependent",
         "Becoming.LineageRegimes.FromOutside.not_gated",
         "Becoming.LineageRegimes.FromOutside.from_outside"
+      ]
+    },
+    {
+      "en": "Witness, a line drawn past renewal from outside, offspring numbers supplied. On one law of a pool, its renewer and organisms, with the renewer requiring the pool at need one the course meets the gated law; with the renewer giving from no condition the coupled gate fails at every need, every other premise holds and the line degenerates the same, while the renewer's own line goes on.",
+      "zh": "见证，被越过来自外部之更新的线，后代数给定。在一池、其更新者与诸有机体的同一律上，更新者以所需一依存于池时，该进程满足门控之律；更新者不出自任何条件而给予时，耦合门控在每一所需上都不成立，其余前提皆成立，线同样退化，而更新者自身的线继续。",
+      "declarations": [
+        "Becoming.LineageDrawdown.Drain.flow",
+        "Becoming.LineageDrawdown.Drain.web",
+        "Becoming.LineageDrawdown.Drain.landed_met",
+        "Becoming.LineageDrawdown.Drain.not_gated",
+        "Becoming.LineageDrawdown.Drain.outside_ends",
+        "Becoming.LineageDrawdown.Drain.renewer_goes_on_outside"
       ]
     }
   ],
@@ -207,8 +249,8 @@
       "zh": "世系即在 Flow X X 上给予成立者；各代被列出，故取者的规模是普查的规模，每代不重复列出成员；种类给定，见证中只有一个种类。"
     },
     {
-      "en": "For the gated regime: balance, the coupled gate on members of the family at a need of at least m, only active formations giving, activity needing support, n steps of excess from a stock below n + m, and the premise on the line's reach: everything it reaches at T + n requires a member at such a need.",
-      "zh": "对门控之态：平衡、族中成员上所需至少为 m 的耦合门控、只有活跃形成给予、活动需要支持、自低于 n + m 的存量起 n 步过度，以及关于线之所及的前提：其于 T + n 所及者皆以此所需依存于某成员。"
+      "en": "For renewal run past: balance, activity needing support, n steps of excess from a stock below n + m, and the premise on the line's reach: everything it reaches at T + n requires a member at a need of at least m. The gated regime adds the coupled gate and only active formations giving, and uses neither.",
+      "zh": "对更新被越过：平衡、活动需要支持、自低于 n + m 的存量起 n 步过度，以及关于线之所及的前提：其于 T + n 所及者皆以至少 m 的所需依存于某成员。门控之态另加耦合门控与只有活跃形成给予，两者皆未用到。"
     },
     {
       "en": "For dissipation: balance and dissipation on the family across each step up to its stock, with the census holding every continuation. For the draw: balance and nothing given to the condition across the steps.",
@@ -252,6 +294,12 @@
       "en": "That any actual flow meets the premises.",
       "zh": "任何实际的流满足这些前提。",
       "kind": "correspondence"
+    },
+    {
+      "en": "That formations drawn past renewal from outside stay ended: without the gate one inactive at the step the excess reaches can be active again; the verdict is on the line from before that step.",
+      "zh": "被越过来自外部之更新的形成保持终结：无门控时，于过度所及之步不活跃者可再活跃；判决只及该步之前起的线。",
+      "kind": "scope",
+      "witness": "Becoming.Restored.returns"
     }
   ],
   "counterexamples": [
@@ -285,16 +333,16 @@
     "names-provisional"
   ],
   "validation_scope": {
-    "en": "Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.LineageRegimes at receipt 20261101T024359.312453Z, 112 declarations (91 theorems), each with an empty axiom report; the module recompiled by independent AI verifiers in four review rounds, every finding taken.",
-    "zh": "由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.LineageRegimes，回执 20261101T024359.312453Z，112 个声明（91 条定理），公理报告均为空；该模块经独立 AI 验证者在四轮审查中重新编译，所见皆采纳。"
+    "en": "Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.LineageRegimes at receipt 20261101T024359.312453Z, 112 declarations (91 theorems), each with an empty axiom report; the module recompiled by independent AI verifiers in four review rounds, every finding taken. Becoming.LineageDrawdown at receipt 20261105T210745.530949Z, each cited declaration with an empty axiom report, its generated mk.injEq lemmas depending on propext, which the checker's audit admits.",
+    "zh": "由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.LineageRegimes，回执 20261101T024359.312453Z，112 个声明（91 条定理），公理报告均为空；该模块经独立 AI 验证者在四轮审查中重新编译，所见皆采纳。Becoming.LineageDrawdown，回执 20261105T210745.530949Z，所引声明公理报告均为空，其生成的 mk.injEq 引理依赖 propext，检查器的审计允许之。"
   },
   "next_delta": {
     "en": "Whether every decider of a lineage's region is one of the three regimes, or a further regime with its own horizon; a lineage reading of joint excess ending a renewal; and multiplying takers read on the map beyond the witness.",
     "zh": "世系之域的每个判定者是否都是三种态之一，或另有一种有其自身视界的态；共同过度终结更新的世系读法；以及在见证之外于地图上读倍增的取者。"
   },
   "correspondence": {
-    "en": "The stock as a horizon is the Malthusian bound of a finite closed resource read on a lineage's region: the stock sets when the regime ends the line; it does not by itself set whether a lineage can go on, both fates occurring at each positive stock. The draw on a condition given nothing is growth that at least doubles against a finite pool, lasting at most log₂ of the level plus one. Renewal from outside answers the scope limit of the gated conclusions, which do not reach renewal given from an outside source such as a sun. Readings (the AI's): among these laws, what ends a lineage is a regime, not the level alone.",
-    "zh": "作为视界的存量，是有限封闭资源的马尔萨斯界在世系之域上的读法：存量设定态何时终结线；单凭存量不设定世系能否延续，在每一正存量下两种命运皆出现。对无所给予之条件的汲取，是面对有限之池至少倍增的增长，至多延续水平加一的 log₂。来自外部的更新回应门控结论的范围之限：它们不及于来自外部来源（如太阳）的更新。读法（AI 的）：在这些律中，使世系终结的是态，而非单凭水平。"
+    "en": "The stock as a horizon is the Malthusian bound of a finite closed resource read on a lineage's region: the stock sets when the regime ends the line; it does not by itself set whether a lineage can go on, both fates occurring at each positive stock. The draw on a condition given nothing is growth that at least doubles against a finite pool, lasting at most log₂ of the level plus one. The gate answers only how long the formations' end lasts: a line from before the step the excess reaches, where its reach so depends, does not continue past it whatever renews it, a sun among them, and a formation so renewed can be active again. Readings (the AI's): among these laws, what ends a lineage is a regime, not the level alone.",
+    "zh": "作为视界的存量，是有限封闭资源的马尔萨斯界在世系之域上的读法：存量设定态何时终结线；单凭存量不设定世系能否延续，在每一正存量下两种命运皆出现。对无所给予之条件的汲取，是面对有限之池至少倍增的增长，至多延续水平加一的 log₂。门控只决定形成之终结持续多久：过度所及之步以前起的线，在其所及如此依存之处，无论何者（太阳在内）更新它都不越过该步，而如此更新的形成可再活跃。读法（AI 的）：在这些律中，使世系终结的是态，而非单凭水平。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineageRegimes.lean",
   "aliases": [
@@ -323,8 +371,8 @@
       "id": "own-count-misses-joint-excess",
       "relation": "formal-reuse",
       "detail": {
-        "en": "Flow.excess_bounded, and Alone as the gated neighbour of renewal from outside; FromOutside answers this record's scope limit that the gated conclusions do not reach renewal given from an outside source.",
-        "zh": "复用 Flow.excess_bounded，以 Alone 为来自外部之更新的门控近邻；FromOutside 回应此记录的范围之限：门控结论不及于来自外部来源的更新。"
+        "en": "Flow.excess_bounded, and Alone as the gated neighbour of renewal from outside; FromOutside is the case with nothing in excess, where the first regime's premise fails.",
+        "zh": "复用 Flow.excess_bounded，以 Alone 为来自外部之更新的门控近邻；FromOutside 是无所过度之情形，第一态的前提于此不成立。"
       }
     },
     {
@@ -502,6 +550,56 @@
       "role": "receipt",
       "sha256": "6cb4a68370172fd4c176044750899c0aa5164987d57c7f7061255145c2213b1c",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineageDrawdown.lean",
+      "role": "proof",
+      "sha256": "64472b9de56688da43e5f6c533fe0803c03f12ce1ad9da233520841a9803c77f",
+      "declarations": [
+        "Becoming.LineageDrawdown.Drain.flow",
+        "Becoming.LineageDrawdown.Drain.landed_met",
+        "Becoming.LineageDrawdown.Drain.not_gated",
+        "Becoming.LineageDrawdown.Drain.outside_ends",
+        "Becoming.LineageDrawdown.Drain.renewer_goes_on_outside",
+        "Becoming.LineageDrawdown.Drain.web",
+        "Becoming.LineageDrawdown.below_iff",
+        "Becoming.LineageDrawdown.below_of_excess",
+        "Becoming.LineageDrawdown.degeneration_of_drawdown",
+        "Becoming.LineageDrawdown.degeneration_of_excess",
+        "Becoming.LineageDrawdown.degeneration_of_unmet",
+        "Becoming.LineageDrawdown.degeneration_of_unmet_listed",
+        "Becoming.LineageDrawdown.ends_of_drawdown",
+        "Becoming.LineageDrawdown.ends_of_unmet",
+        "Becoming.LineageDrawdown.gone_of_excess",
+        "Becoming.LineageDrawdown.horizon_of_excess",
+        "Becoming.LineageDrawdown.landed_gone",
+        "Becoming.LineageDrawdown.landed_gone_eq",
+        "Becoming.LineageDrawdown.landed_horizon",
+        "Becoming.LineageDrawdown.landed_horizon_eq",
+        "Becoming.LineageDrawdown.landed_of_excess",
+        "Becoming.LineageDrawdown.landed_of_excess_eq",
+        "Becoming.LineageDrawdown.next_empty_of_unmet",
+        "Becoming.LineageDrawdown.no_term_of_drawdown"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RelativePosition.lean",
+      "role": "proof",
+      "sha256": "e81542b402d13537801a820ae58251b8ef43852aaa993bbec39282fd6c9363c3",
+      "declarations": [
+        "Becoming.Restored.returns"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261105T122637.488502Z/verification.json",
+      "role": "receipt",
+      "sha256": "99e0a9304bd881892020e074b261147c683652ba5816e24004d4515a06f609fd"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261105T210745.530949Z/verification.json",
+      "role": "receipt",
+      "sha256": "82d20bfa86c867883b091edd8471f908e3c5402881dbc9a77677f7053548f08b",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -509,6 +607,20 @@
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineageRegimes.lean",
       "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T024359.312453Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.LineageRegimes",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineageDrawdown.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261105T210745.530949Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.LineageDrawdown",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RelativePosition.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261105T122637.488502Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.RelativePosition",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -525,6 +637,10 @@
     {
       "en": "5 November 2026, board item EL7, correction: the correspondence said the stock sets \"not whether a lineage can go on\", dropping the scope that stock_forces_neither (at each positive stock some gated course on a pair generates and some degenerates) and the record's Does not show carry; a reading (the AI's): where a system's flows follow from its levels, the level can settle a regime's premise. The laws are unchanged.",
       "zh": "2026年11月5日，工作板条目 EL7，更正：对应之说曾谓存量“不设定世系能否延续”，漏去 stock_forces_neither（在每一正存量下，对上的某一门控进程生成、某一退化）与本记录“未表明”所带的范围；读法（AI 的）：系统之流由其水平而定之处，水平可决定一态之前提。诸律不变。"
+    },
+    {
+      "en": "6 November 2026, board item EL7, correction: the statement and 04 §4 said renewal from outside lies beyond the boundary of the first regime, though its Lean never uses the gate or only active giving. The law without them is stated, a restatement with the landed law its case by rfl; the verdict turns on the ledger, not renewal's source. The landed declarations are unchanged.",
+      "zh": "2026年11月6日，工作板条目 EL7，更正：陈述与 04 §4 曾谓来自外部的更新在第一态的边界之外，而其 Lean 从未用到门控或只有活跃给予。现陈述无此二者之律，是一条重述，已落地之律依 rfl 为其情形；判决取决于账目，而非更新之来源。已落地的声明不变。"
     }
   ]
 }
