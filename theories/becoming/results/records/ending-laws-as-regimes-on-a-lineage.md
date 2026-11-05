@@ -75,7 +75,7 @@ Whether every decider of a lineage's region is one of the three regimes, or a fu
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-The stock as a horizon is the Malthusian bound of a finite closed resource read on a lineage's region: the stock sets when the regime ends the line, not whether a lineage can go on. The draw on a condition given nothing is growth that at least doubles against a finite pool, lasting at most log₂ of the level plus one. Renewal from outside answers the scope limit of the gated conclusions, which do not reach renewal given from an outside source such as a sun. Readings (the AI's): among these laws, what ends a lineage is a regime, not a level.
+The stock as a horizon is the Malthusian bound of a finite closed resource read on a lineage's region: the stock sets when the regime ends the line; it does not by itself set whether a lineage can go on, both fates occurring at each positive stock. The draw on a condition given nothing is growth that at least doubles against a finite pool, lasting at most log₂ of the level plus one. Renewal from outside answers the scope limit of the gated conclusions, which do not reach renewal given from an outside source such as a sun. Readings (the AI's): among these laws, what ends a lineage is a regime, not the level alone.
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
@@ -104,6 +104,7 @@ Aliases: `Becoming.LineageRegimes.degeneration_of_family_excess`, `Becoming.Line
 
 - 1 November 2026, board item EL (evolution read on the root, its part EL2): added as a record of its own rather than an amendment of what-bounds-offspring-numbers and whole-drawing-beyond-renewal-ends: the lineage reading of the gated regime with its new premise on the line's reach, both fates at every stock, the takers' law for the draw and the renewal-from-outside witness.
 - 1 November 2026, board item EL6: the reused laws named in the modules where they now lie, Becoming.LineDegeneration having been placed in its owners' modules (GrammarMap, MapInstances and KeepingWidening) and retired; nothing the record says changes.
+- 5 November 2026, board item EL7, correction: the correspondence said the stock sets "not whether a lineage can go on", dropping the "alone" that stock_forces_neither and the record's own Does not show carry; where a system's flows follow from its levels, the level can settle a regime's premise. The laws are unchanged.
 
 </details>
 

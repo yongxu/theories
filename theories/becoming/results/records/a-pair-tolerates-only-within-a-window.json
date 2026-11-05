@@ -318,8 +318,8 @@
     "zh": "带概率的差错，使窗口与慷慨以牙还牙的宽恕相接；带数量的给出之律；一对及其等待如何形成。"
   },
   "correspondence": {
-    "en": "Evolutionary game theory of reciprocity, as readings (AI reading, not formal names): answers is tit-for-tat, the window of two tit-for-two-tats (Axelrod and Hamilton 1981; Axelrod 1984), agreement win-stay lose-shift (Kraines and Kraines 1989, Pavlov; Nowak and Sigmund 1993), waitsAll grim trigger, giving whatever comes unconditional cooperation. The window is a deterministic relative of generous tit-for-tat (Molander 1985; Nowak and Sigmund 1992), whose forgiveness with a probability is not represented; errors as a supplied pattern stand where that literature has noise (Wu and Axelrod 1995). The split by keeping inclusion is near-definitional, the monotone Boolean functions of two inputs.",
-    "zh": "互惠的演化博弈论，作为读法（AI 读法，非形式名称）：answers 即以牙还牙，两步窗口即两报还一报（Axelrod 与 Hamilton 1981；Axelrod 1984），一致律即赢留输变（Kraines 与 Kraines 1989，Pavlov；Nowak 与 Sigmund 1993），waitsAll 即冷酷触发，不论如何都给出即无条件合作。窗口是慷慨以牙还牙（Molander 1985；Nowak 与 Sigmund 1992）的确定性亲属，其以概率的宽恕未被表示；给定的差错模式处在该文献的噪声之位（Wu 与 Axelrod 1995）。按保持包含的划分近乎定义：二输入的单调布尔函数。"
+    "en": "Evolutionary game theory of reciprocity, as readings (AI reading, not formal names): answers is tit-for-tat, the window of two tit-for-two-tats (Axelrod and Hamilton 1981; Axelrod 1984), agreement win-stay lose-shift (Kraines and Kraines 1989, Pavlov; Nowak and Sigmund 1993), waitsAll grim trigger, giving whatever comes unconditional cooperation. The window is a deterministic relative of generous tit-for-tat (Molander 1985; Nowak and Sigmund 1992), whose forgiveness with a probability is not represented; errors as a supplied pattern stand where that literature has noise (Wu and Axelrod 1995). The split by keeping inclusion is near-definitional, the monotone Boolean functions of two inputs. That agreement is the one law restoring and answering corresponds to win-stay lose-shift being the only memory-one strategy that is mutually cooperative, corrects errors and retaliates (Hilbe, Martinez-Vaquero, Chatterjee and Nowak 2017, Fig. 1), the definitions not yet compared clause by clause.",
+    "zh": "互惠的演化博弈论，作为读法（AI 读法，非形式名称）：answers 即以牙还牙，两步窗口即两报还一报（Axelrod 与 Hamilton 1981；Axelrod 1984），一致律即赢留输变（Kraines 与 Kraines 1989，Pavlov；Nowak 与 Sigmund 1993），waitsAll 即冷酷触发，不论如何都给出即无条件合作。窗口是慷慨以牙还牙（Molander 1985；Nowak 与 Sigmund 1992）的确定性亲属，其以概率的宽恕未被表示；给定的差错模式处在该文献的噪声之位（Wu 与 Axelrod 1995）。按保持包含的划分近乎定义：二输入的单调布尔函数。一致律是唯一既恢复又回应之律，对应于赢留输变是唯一相互合作、纠正差错且报复的一记忆策略（Hilbe、Martinez-Vaquero、Chatterjee 与 Nowak 2017，图 1），定义尚未逐条比较。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WindowedWaiting.lean",
   "aliases": [
@@ -581,6 +581,10 @@
     {
       "en": "1 November 2026, board item EL (EL4a/b/c): added from EL's design of giving that waits on giving under selection, asked whether the account explains tit-for-tat with forgiveness; the windowed law on the whole-history carrier with errors as a clock, the one-step split, the echo and the alternator; the lemmas of runs, the local unfoldings and the restatements are listed in references only.",
       "zh": "2026年11月1日，工作板条目 EL（EL4a/b/c）：据 EL 关于选择下等待给出之给出的设计新增，起于“本理论能否解释带宽恕的以牙还牙”之问；整段历史载体上的窗口律、以时钟表示的差错、一步划分、回声与交替者；运行的引理、局部展开与重述只列在 references 中。"
+    },
+    {
+      "en": "5 November 2026, board item EL7: the correspondence names Hilbe et al. 2017, whose uniqueness of win-stay lose-shift among memory-one strategies is close to the one law restoring and answering; nothing the record proves changes.",
+      "zh": "2026年11月5日，工作板条目 EL7：对应之说加上 Hilbe 等 2017，其一记忆策略中赢留输变的唯一性接近唯一既恢复又回应之律；本记录所证不变。"
     }
   ]
 }
