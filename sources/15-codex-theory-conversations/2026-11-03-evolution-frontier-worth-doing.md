@@ -1,4 +1,4 @@
-# Ren: investigate evolution's frontier, wherever it improves the account
+# Ren: "as long as it improves unification, coherence, expand the scope, or push the frontier"
 
 3 November 2026 and 5 November 2026. Ren's words in a Claude Code desktop session in `/Users/ren/theories` ("Evolution theory with limited resources and agents"). AI-authored context is labelled separately.
 
@@ -18,7 +18,7 @@ After the four investigations and their checks (5 November 2026):
 
 ## What was done (AI-authored)
 
-Board item EL7: four investigations, each checked by an independent skeptic ([kit](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/el-evolution-on-the-root/WS.md#11-el7-what-the-investigations-found-and-what-stops)). They found no theorem a specialist would not foresee and no test that could fail, and five places where the texts told a reader more than is proved. "Them" is read as those five corrections with the Lean they need.
+Board item EL7: four investigations, each checked by an independent skeptic ([WS.md §11](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/el-evolution-on-the-root/WS.md#11-el7-what-the-investigations-found-and-what-stops)). They found no theorem a specialist would not foresee and no test that could fail, and five corrections to what readers are told. "Them" is read as those five corrections with the Lean they need.
 
 ## How the AI reads it (AI-authored)
 

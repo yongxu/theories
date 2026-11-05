@@ -104,7 +104,7 @@ Aliases: `Becoming.LineageRegimes.degeneration_of_family_excess`, `Becoming.Line
 
 - 1 November 2026, board item EL (evolution read on the root, its part EL2): added as a record of its own rather than an amendment of what-bounds-offspring-numbers and whole-drawing-beyond-renewal-ends: the lineage reading of the gated regime with its new premise on the line's reach, both fates at every stock, the takers' law for the draw and the renewal-from-outside witness.
 - 1 November 2026, board item EL6: the reused laws named in the modules where they now lie, Becoming.LineDegeneration having been placed in its owners' modules (GrammarMap, MapInstances and KeepingWidening) and retired; nothing the record says changes.
-- 5 November 2026, board item EL7, correction: the correspondence said the stock sets "not whether a lineage can go on", dropping the "alone" that stock_forces_neither and the record's own Does not show carry; where a system's flows follow from its levels, the level can settle a regime's premise. The laws are unchanged.
+- 5 November 2026, board item EL7, correction: the correspondence said the stock sets "not whether a lineage can go on", dropping the scope that stock_forces_neither (at each positive stock some gated course on a pair generates and some degenerates) and the record's Does not show carry; a reading (the AI's): where a system's flows follow from its levels, the level can settle a regime's premise. The laws are unchanged.
 
 </details>
 
