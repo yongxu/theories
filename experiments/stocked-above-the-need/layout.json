@@ -1,0 +1,6 @@
+{
+  "note": "T1R's layout beyond T1N's (T1N's layout.json maps the files T1R reads through T1N's reader). The date columns of T1N's two stocking files, where they give one; and R8, the marked shares of stocked years' fall catches. T1R maps no label text, so its labels are empty; T1N's frozen check, which T1R's freeze runs, refuses an addendum remapping one.",
+  "dates": {"stocking": "Date Stocked", "other": "Date Stocked"},
+  "marks": {"file": "marked_age0.csv", "columns": {"lake": "WBIC", "year": "Survey Year", "unmarked share": "Unmarked Share"}},
+  "labels": {}
+}
