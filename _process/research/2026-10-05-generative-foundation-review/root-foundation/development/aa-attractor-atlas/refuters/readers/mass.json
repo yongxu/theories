@@ -1,0 +1,155 @@
+{
+ "data": "Nothing usable is in the repository. I ran `git ls-files experiments | grep -i -E \"adopt|diffus|tipping|convention|critical|centola|cascade|threshold\"`. It finds only Lean modules (Cascade.lean, ReachedCascade.lean, Thresholds.lean) and their check logs, no datasets. `git grep` for Centola, Granovetter and Schelling finds citations only. The one Centola item is _process/research/2026-10-05-generative-foundation-review/foundation-assessment/GOVERNANCE-LITERATURE.md:160, \"Becker, Brackbill and Centola, 2017\", which is a crowd-estimation network experiment, not tipping. The nearest experiment, experiments/shaping-what-comes-back (LA3, MA3's RuleShaping on a model choosing in context), is a different law and is not adoption data. Every candidate below needs a download, so its run is Ren's. None needs model calls, unless the parameter coding is done by model readers (see constraints). Every bibliographic detail below is from memory, not checked, unless the repo cites it.\n\nCandidates, best first:\n(1) Laboratory stag-hunt experiments whose payoff table is set by the experimenter, for example Battalio, Samuelson and Van Huyck 2001 (Econometrica; groups under random matching over many rounds), and other stag hunts in which the safe action pays the same against any partner. Here hi, lo and c (and a, p as the base or show-up payment) are read off the design before any choice is seen, and the first-round share is the start. The difficulty: many published stag hunts give the safe action a partner-dependent payoff, which is outside DrawnShaping's class (\"the stag hunt in which the second strategy's payoff does not depend on the partner\", line 94-95). Each game's table must be checked, and games that fail are excluded before outcomes are read.\n(2) Experiments that measure thresholds in advance and then predict tipping, for example Andreoni, Nikiforakis and Siegenthaler 2021 (PNAS, \"Predicting social tipping and norm change in controlled experiments\"). These fit the \"located before the data\" requirement, but their thresholds are distributed (Granovetter's case, which the record marks as not this model: \"whose thresholds are distributed where here there is one\").\n(3) Centola, Becker, Brackbill and Baronchelli 2018 (Science 360:1116-1119, a committed minority tipping a naming-game convention at roughly a quarter; from memory), with Centola and Baronchelli 2015 (PNAS). These are inadmissible as a test of this law. The status-quo name's payoff depends on the partner, the committed minority never switches (no such members in the model), and with a symmetric coordination payoff the model's mass would sit at one half. Its observed mass is not one the model locates. It could serve at most as a declared out-of-class control.\n(4) Field diffusion data: Coleman, Katz and Menzel's medical innovation, the Brazilian farmers and the Korean family-planning sets (bundled in the R package netdiffuseR), Banerjee, Chandrasekhar, Duflo and Jackson 2013 microfinance (Dataverse), and Griliches hybrid corn or Bass-type S-curves. No source independent of the course gives hi, lo or c, so any location would be fitted after the outcome, and these are not tests. They also record mostly successes (survivorship). An S-curve from a seed is the regime c <= lo, \"favoured at every share\", and does not separate the critical-mass regime from it.\n(5) Network-externality goods with a partner-independent legacy option (Rohlfs 1974's critical mass for communications services; fax, messaging). These fit the class best: the legacy payoff is constant and the adopter's return is linear in the adopter share. But usable pre-period measures of hi, lo and c are commercial or absent.\n\nKnown difficulties across all of these:\n- Human switching is not offspring. The bridge \"proportional imitation gives replicator-like steps\" (Schlag 1998, from memory) is a premise of the case.\n- Finite groups are strong selection, so the noise bounds of DrawnReplacement, which depend on a and p, apply rather than the noiseless lock.\n- A pass in a clean stag hunt corroborates the textbook mixed equilibrium, which the record itself calls \"elementary\". What the test can move is the bridge, not the theorem.",
+ "design_constraints": [
+  "Name the law that locates the mass: critical_iff (DrawnShaping.lean:224-229), within critical_mass_iff's regime (lines 306-313). critical_mass_iff only says the regime is bistable exactly where lo < c < hi, given lo <= hi. Its witnesses are the point exactly at the mass and the population with no shapers, so it locates nothing beyond the regime. In adoption terms, with f the adopters' share: the new practice is weakly favoured at a share exactly where c <= f*hi + (1-f)*lo (drawn_favours_iff). With lo < c < hi that is f >= f* = (c - lo)/(hi - lo). hi is the adopter's return against an adopter, lo the adopter's return against a non-adopter, c the non-adopter's return against anyone, all in one unit over a common base. Only ratios matter, so adding a constant to all three or scaling them leaves f* fixed. a and p (what every member gets) do not move f* (drawn_favours_alike), but they enter the drift weights up and down of DrawnReplacement.",
+  "Fix case admissibility before any outcome is read, each item a premise the home names. (a) Two kinds, and each member's kind is carried by the transmission step (no zealots or committed minority; this excludes Centola 2018's design). (b) The status-quo payoff c does not depend on the partner. (c) The adopter's return is the population-weighted mix f*hi + (1-f)*lo: readers counted as the population counts them, which means random matching or payoff by global share, each member among its own readers in the drawn version. (d) hi, lo, c, a and p are constant over the course: no learning, no price or cost moving with the share. (e) lo <= hi. (f) The start is under the rule read there: no subsidy, mandate or rule in force against the reading (RuleCapture.Reversed.not_absorbed). (g) A single threshold, not a distributed one. Cases failing any item are listed and set aside before outcomes are opened.",
+  "Read the parameters from sources independent of the course and freeze them before any choice or adoption column is read. That means the experimenter's payoff table, or a pre-period measurement for field cases. Never fit them to the trajectory. Propagate their stated error into an interval for f*.",
+  "Fix the start: the adopter share at a named first observation (round 1, or the first period). Classify each case as above (f0 > upper end of the f* interval plus margin m), below (f0 < lower end minus m), or at. Fix m in advance from the measurement error of f, report the 'at' cases, and give them no verdict.",
+  "Fix the regime cases the law also forbids. Where c <= lo and c <= hi (and lo <= hi), the new practice is favoured at every share (favours_everywhere_iff), so a seed should not fail. Where lo < c and hi <= c, it is strictly disfavoured at every share (disfavours_strictly_everywhere_iff), so no start should rise. Include such cases if the source has them, so the test is not confined to the bistable regime.",
+  "Fix the outcome and what counts as the mass being met. Without noise the law says: from a start strictly above, the share rises strictly at every step (drawn_rises); strictly below, it falls strictly at every step (drawn_falls), the shapers present, under every reading schedule, with the rule in force lagging one reading step. Finite human groups are noisy, so the frozen outcome must be the drawn model's. For each group classified above, the frequency of losing every adopter by a fixed horizon must not exceed the bound computed by DrawnReplacement.lost_above from M+1 (group size), a, p, c, hi and lo, all frozen; fixed_below gives the mirror bound for the cases below. Freeze the per-group counts, the horizon (in rounds), and the statistic and its confidence rule.",
+  "Fix rivals that predict differently, and choose cases where they part, or the test cannot fail informatively. (i) A majority rule, f* = 1/2. (ii) Risk dominance alone (2c < hi + lo decides whatever the start; Kandori, Mailath and Rob 1993; Young 1993), relevant at long horizons. (iii) Distributed Granovetter thresholds. (iv) Payoff dominance. Preferred cases have f* well away from 1/2, and starts above f* in games where the status quo is risk dominant, or the reverse.",
+  "Close the sample before outcomes are seen. List every game or case in the frozen design, including launches that failed. Add nothing after reading. Read every listed case to the horizon. This guards against survivorship bias in adoption records.",
+  "Fix who decides. The verdict is computed by a frozen script from a frozen coding table. The coding of admissibility and of hi, lo, c, a and p from each source's design documents, with outcome columns withheld, is done by readers from families that neither wrote nor read the theory, as in FREEZE-1 and FREEZE-5: Google and Qwen pins decide, Anthropic is reported apart, and the two must agree or the case is set aside. Any such coding is model calls and waits for Ren, as do all downloads.",
+  "State the standing as RF's freezes do. A contradiction narrows where the correspondence (the stag-hunt and adoption reading, an AI reading) and the bridge 'actual adoption is a selection read by readers drawn from the selected' apply. It never refutes critical_iff or critical_mass_iff, which are theorems.",
+  "Before the design is written, claim it on the board. No row claims it now. It is item 7 of the AA plan, whose row in _process/BECOMING-WORKBOARD.md:54 is held by the AA session."
+ ],
+ "existing": [
+  "No frozen or designed critical-mass test exists. There is no board row for one. In _process/BECOMING-WORKBOARD.md, 'critical mass' appears only in the AJ row's history at line 45. The rows present are AJ, LA4, OU, RA, RP, RF, UE31, CD, AA (54), ED2, ED3, TR1A and T1N (58, claimed in 592055816). Nothing under experiments/ tests it.",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aa-attractor-atlas/PLAN.md:382 lists it as a §7 candidate, not designed. PLAN.md:531 (C8) and 593 list the dynamic.",
+  "Branch aa-atlas-v1 (commit 41bece768, AA Phase 1 pilot, not on main), phase1/family-c-extract-and-check.json: the entry 'shaping-read-by-readers-drawn-from-the-selected' has 'tests': []. Its 'forbids' copies T7's second Forbids item about metrics ('such a metric, its selectors many and its share far above the critical mass, left with nothing read changed more often than the drawn model's bound ...'). That is not an adoption forbids, so this entry has no forbids of its own.",
+  "02-MAP.md:434, T7's Forbids and Refuted by, uses the drawn model's bound across the distance from the critical mass, for reform events of metrics. The field test it names ('no frozen field test of reform events', and 02 Open at line 478) is not frozen. It overlaps in using lost_above but is a different domain.",
+  "02-MAP.md:476 (Open) asks for 'a frozen test of whether what comes back decides the direction (§9)'. experiments/shaping-what-comes-back (LA3, done: K2 and K4 failed, K1 and K3 passed) tested MA3's RuleShaping on a model choosing in context, not DrawnShaping's critical mass and not adoption data.",
+  "experiments/self-rewarding-lock (LA2) is cited at 02-MAP.md:449 as the one frozen test of the timing law ReadInTime: 'the law did not apply there'. Different law.",
+  "The pattern for naming a decider is experiments/formations-that-read/FREEZE-5.md:26: 'google/gemini-4-argon and qwen/qwen3.8-max-0902, of Google and Qwen, two families that neither wrote nor read the theory. Anthropic's Sonnet 5.5 is reported apart.' A data-test pattern (download and run are Ren's, rules committed before data are read) is in experiments/state-named-in-advance/DESIGN.md:3."
+ ],
+ "forbids": "The home gives this record no Forbids or Refuted-by line. The record, 02-MAP.md:417 and the docstring state theorems, Conditions, Does not show and Counterexamples, and those theorems cannot be met within the model. The refutable content is the correspondence, an AI reading at DrawnShaping.lean:94-97: \"Where `lo < c < hi` this is the stag hunt in which the second strategy's payoff does not depend on the partner ... The critical mass is its mixed equilibrium, at the shapers' share `(c - lo) / (hi - lo)`\". The bridge premises are listed at lines 112-121: \"that actual rules are read by readers drawn from those they select ... `hi`, `lo`, `p` and `c` are constants ... There is no noise here, so the critical mass and the locks bound courses without noise only.\"\n\nRead on adoption, the laws forbid, for a population meeting those premises with hi, lo and c measured in advance:\n(1) With lo < c < hi, a start strictly above f* = (c-lo)/(hi-lo) whose adopter share falls at a reading step (drawn_rises; noiseless), or, drawn one member at a time, loses every adopter more often than DrawnReplacement.lost_above's bound allows (02-MAP.md:420: \"losing every shaper weighs, as a share, at most `t` times the product of `down / up` over the counts `s + 1 … s + n`\"). The mirror case below f* is bounded by drawn_falls and fixed_below.\n(2) A payoff common to every member (a or p) moving the location (drawn_favours_alike; 02-MAP.md:417: \"whatever `a` and `p`\").\n(3) With c <= lo and c <= hi, a share at which the new practice is strictly disfavoured (favours_everywhere_iff).\n(4) With lo < c and hi <= c, a share at which it is weakly favoured, i.e. adopters doing at least as well as non-adopters (disfavours_strictly_everywhere_iff).\n\nAn observation meets this when an admissible case, its parameters read from the design before outcomes, shows (1), (3) or (4) beyond the frozen error and noise bound, or a controlled change of a common payoff shifts the tipping share. The only Forbids in the home naming the critical mass is T7's (02-MAP.md:434), for metrics: \"such a metric, its selectors many and its share far above the critical mass, left with nothing read changed more often than the drawn model's bound across that distance allows\".",
+ "home": [
+  {
+   "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnShaping.lean",
+   "lines": "306-313",
+   "quote": "/-- **A share decides exactly where `lo < c < hi`.** With the shapers among the readers reading at\nleast as much coming back to the shapers as the others among them do, the rule read favours the\nshapers at some share and the others strictly at another exactly where what the others among the\nreaders read as coming back is short of the cost and what the shapers among them read exceeds it. -/\ntheorem critical_mass_iff {a p c hi lo : Nat} {pos : 0 < a} (step : lo ≤ hi) :\n    ((∃ x, CarrierCounts.favours (drawn a p c hi lo pos x)) ∧\n        ∃ x, (drawn a p c hi lo pos x).carrier < (drawn a p c hi lo pos x).other) ↔\n      lo < c ∧ c < hi :="
+  },
+  {
+   "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnShaping.lean",
+   "lines": "224-229",
+   "quote": "/-- **The critical mass.** With what the others among the readers read as coming back at most the\ncost and what the shapers among them read at least it, the rule read favours the shapers exactly\nwhere they stand to the others at least as `c - lo` to `hi - c`. -/\ntheorem critical_iff {a p c hi lo : Nat} {pos : 0 < a} {x : CarrierCounts} (short : lo ≤ c)\n    (covers : c ≤ hi) :\n    CarrierCounts.favours (drawn a p c hi lo pos x) ↔ x.other * (c - lo) ≤ x.carrier * (hi - c) :="
+  },
+  {
+   "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnShaping.lean",
+   "lines": "28-39",
+   "quote": "* **A critical mass.** At a share the rule read favours the shapers exactly where\n  `x.carrier * c + x.other * c ≤ x.carrier * hi + x.other * lo` (`drawn_favours_iff`): the cost,\n  counted over the readers, is at most what they read as coming back to the shapers, whatever each\n  leaves without shaping and whatever comes to every member alike (`drawn_favours_alike`). With\n  `lo ≤ c ≤ hi` this is `x.other * (c - lo) ≤ x.carrier * (hi - c)` (`critical_iff`): the shapers\n  stand to the others at least as `c - lo` to `hi - c`. ... With `lo ≤ hi` a share decides, the rule read\n  favouring the shapers at some share and the others strictly at another, exactly where\n  `lo < c < hi` (`critical_mass_iff`)."
+  },
+  {
+   "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnShaping.lean",
+   "lines": "94-97",
+   "quote": "**Correspondence (an AI reading).** Where `lo < c < hi` this is the stag hunt in which the second\nstrategy's payoff does not depend on the partner: a shaper meeting a shaper leaves `a + p + hi`, a\nshaper meeting an other `a + p + lo`, an other meeting anyone `a + p + c`. The critical mass is its\nmixed equilibrium, at the shapers' share `(c - lo) / (hi - lo)`"
+  },
+  {
+   "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnShaping.lean",
+   "lines": "112-122",
+   "quote": "What is not derived: that actual rules are read by readers drawn from those they select, each kind\ncounted as the population counts it, or that the shapers among the readers read at least as much\ncoming back to the shapers as the others do ... `hi`, `lo`, `p` and `c` are constants: readers do not learn, the cost does not\nchange with the share, and the readers are counted exactly as the population counts them. Starts are\nunder the rule read there; a rule in force against the reading can carry the share across the mass\n(`RuleCapture.Reversed.not_absorbed`). There is no noise here, so the critical mass and the locks\nbound courses without noise only."
+  },
+  {
+   "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean",
+   "lines": "145-151",
+   "quote": "/-- **The rule after shaping.** Each shaper leaves `a + s + p` offspring and each other `a + c + p`:\n`a` what each leaves without shaping, positive; `s` the part of what shaping gives that comes back to\nthe shapers alone; `p` the part that comes to every member alike; `c` the cost of shaping, read as\nwhat each other leaves more than each shaper. -/\ndef shaped (a s p c : Nat) (pos : 0 < a) : CarrierCounts :="
+  },
+  {
+   "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleCapture.lean",
+   "lines": "489-498",
+   "quote": "/-- The rule favours the carriers: each carrier leaves at least as many offspring as each other.\nRead of a population: the carriers are at least as many as the others. -/\ndef favours (g : CarrierCounts) : Prop := g.other ≤ g.carrier\n...\n/-- **Selection by a rule**: each carrier leaves `g.carrier` offspring, each other `g.other`. -/"
+  },
+  {
+   "path": "theories/becoming/chapters/02-MAP.md",
+   "lines": "417",
+   "quote": "with `lo ≤ hi` a share decides exactly where `lo < c < hi` (`DrawnShaping.critical_mass_iff`). ... That the readers are drawn from those the rule selects and read with `lo ≤ hi`, and that offspring carry the capacity, are premises; `hi`, `lo`, `p` and `c` are constants, and the courses are without noise ([drawn one at a time](#r-drawn-shaping-drawn-one-at-a-time))."
+  },
+  {
+   "path": "theories/becoming/chapters/02-MAP.md",
+   "lines": "420",
+   "quote": "**Theorem** (counts). *The critical mass, drawn one member at a time.* ... A bound on the weight falls across the distance from the mass: where the rule read at `s` favours the shapers, from `s + n` with `t` to the top, losing every shaper weighs, as a share, at most `t` times the product of `down / up` over the counts `s + 1 … s + n` (`DrawnReplacement.lost_above`)"
+  },
+  {
+   "path": "theories/becoming/chapters/02-MAP.md",
+   "lines": "423",
+   "quote": "**Theorem** (counts). *The loss read in time by the others, joined to the critical mass.*"
+  },
+  {
+   "path": "theories/becoming/chapters/02-MAP.md",
+   "lines": "434",
+   "quote": "*Forbids*: ... such a metric, its selectors many and its share far above the critical mass, left with nothing read changed more often than the drawn model's bound across that distance allows, its premises (one member drawn at a time, constant readings and cost) read on the case"
+  },
+  {
+   "path": "theories/becoming/results/records/shaping-read-by-readers-drawn-from-the-selected.md",
+   "lines": "6, 17, 27",
+   "quote": "`shaping-read-by-readers-drawn-from-the-selected` · **recorded-checked** · theorem · F01 ... 3. The regimes, exactly. With no hypothesis on the readers, the rule read favours the shapers at every share exactly where c ≤ lo and c ≤ hi, and the others strictly at every share exactly where lo < c and hi ≤ c; with lo ≤ hi, it favours the shapers at some share and the others strictly at another exactly where lo < c < hi. ... Conditions: ... hi, lo, p and c constants; for the loop, lo ≤ hi and a start under the rule read there; no noise."
+  },
+  {
+   "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aa-attractor-atlas/PLAN.md",
+   "lines": "382, 387",
+   "quote": "- **A critical-mass test** on recorded adoption data. This is Schelling and Granovetter's own domain, and it is only a test if the critical mass is located before the data, by `critical_mass_iff`'s inequality. ... Each design names who decides its verdict, a family that neither wrote nor read the theory, as RF's freezes do."
+  }
+ ],
+ "lean": [
+  {
+   "name": "Becoming.DrawnShaping.critical_mass_iff",
+   "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnShaping.lean:310",
+   "premises": "a p c hi lo : Nat, 0 < a, step : lo ≤ hi. No axiom: the record cites an empty axiom report, receipt 20261025T165537.368039Z.",
+   "statement": "(∃ x, favours (drawn a p c hi lo pos x)) ∧ (∃ x, (drawn …).carrier < (drawn …).other) ↔ lo < c ∧ c < hi. The proof's witnesses are x = ⟨c − lo, hi − c⟩, exactly at the mass (a tie), and noShapers = ⟨0, 1⟩. So it gives the regime, not the location."
+  },
+  {
+   "name": "Becoming.DrawnShaping.critical_iff",
+   "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnShaping.lean:227",
+   "premises": "lo ≤ c, c ≤ hi, 0 < a",
+   "statement": "favours (drawn a p c hi lo pos x) ↔ x.other * (c − lo) ≤ x.carrier * (hi − c). This is the location: adopter share f ≥ (c − lo)/(hi − lo)."
+  },
+  {
+   "name": "Becoming.DrawnShaping.drawn_favours_iff",
+   "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnShaping.lean:200",
+   "premises": "0 < a",
+   "statement": "favours (drawn a p c hi lo pos x) ↔ x.carrier * c + x.other * c ≤ x.carrier * hi + x.other * lo"
+  },
+  {
+   "name": "Becoming.DrawnShaping.drawn_favours_alike",
+   "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnShaping.lean:220",
+   "premises": "0 < a, 0 < a'",
+   "statement": "favours (drawn a p c hi lo pos x) ↔ favours (drawn a' p' c hi lo pos' x): a and p do not move the mass."
+  },
+  {
+   "name": "Becoming.DrawnShaping.favours_everywhere_iff / disfavours_strictly_everywhere_iff",
+   "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnShaping.lean:257, 284",
+   "premises": "0 < a; no hypothesis on the readers",
+   "statement": "(∀ x, favours (drawn … x)) ↔ c ≤ lo ∧ c ≤ hi; (∀ x, carrier < other) ↔ lo < c ∧ hi ≤ c"
+  },
+  {
+   "name": "Becoming.DrawnShaping.drawn_rises / drawn_falls",
+   "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnShaping.lean:404, 451",
+   "premises": "lo ≤ hi; the start strictly favoured (resp. strictly disfavoured) under the rule read there; 0 < x.carrier; any schedule reads : Nat → Bool",
+   "statement": "the shapers' share in drawnCourse rises (resp. falls) strictly at every step t, by cross-multiplication"
+  },
+  {
+   "name": "Becoming.DrawnShaping.drawn (with ClosedCapture.Drawn.pool, RuleShaping.shaped, CarrierCounts.select)",
+   "path": "DrawnShaping.lean:146; ClosedCapture.lean:563; RuleShaping.lean:149; RuleCapture.lean:497",
+   "premises": "definitions",
+   "statement": "drawn = pool (shaped a hi p c) (shaped a lo p c) x = ⟨x.carrier*(a+hi+p) + x.other*(a+lo+p), x.carrier*(a+c+p) + x.other*(a+c+p)⟩. In select, each carrier leaves the first count of offspring and each other the second. This is the per-kind weight of a well-mixed population: adopter a+p+f·hi+(1−f)·lo, non-adopter a+p+c."
+  },
+  {
+   "name": "Becoming.DrawnReplacement.lost_above (with up, down, risk_dominant_iff)",
+   "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnReplacement.lean:225 (up 101, down 104, risk_dominant_iff 259)",
+   "premises": "0 < a, lo ≤ hi, s + n + t = M + 1, down M a p c s ≤ up M a p hi lo s",
+   "statement": "ups up s n * value(lost, k, s+n) ≤ t * ((M+1)*(a+c+p))^n * whole^k: the noise bound on losing every shaper above the mass. up i = i*(a+hi+p) + (M+1−i)*(a+lo+p) and down = (M+1)*(a+c+p), so a and p enter here."
+  }
+ ],
+ "open_questions": [
+  "The plan's wording 'located ... by critical_mass_iff's inequality' should be corrected. critical_mass_iff fixes only the regime (lo < c < hi, given lo <= hi). The location is critical_iff's ratio, f* = (c - lo)/(hi - lo). The design should cite both.",
+  "Does any recorded adoption dataset meet the model's class? The class needs: a status-quo payoff independent of the partner, a single threshold, well-mixed counting, constant parameters, and no committed members. Centola 2018 fails on two counts (a partner-dependent status quo and a committed minority), and field diffusion sets have no source for hi, lo and c independent of the course. Laboratory stag hunts with a constant safe payoff may be the only admissible cases. Each candidate's payoff tables must be checked after download, which is Ren's decision.",
+  "What would a pass add? In a clean stag hunt, f* is the textbook mixed equilibrium, which the record calls 'elementary'. Is a test whose live content is the bridge (human switching read as selection of offspring, readers counted as the population counts them) worth freezing ahead of other §7 items, under AGENTS 'What moves it' item 2?",
+  "Which prediction should be frozen? The noiseless direction at the first steps (drawn_rises and drawn_falls), or fixation frequencies under DrawnReplacement's bounds, which need a and p? For human subjects, what is a: a show-up fee, base earnings, or the whole payoff level? It must be fixed by argument before the data are seen.",
+  "Is the step a reproduction step (replicator, multiplicative) or best response? The location's sign agrees under both, but 'strictly at every step' and the noise bounds are replicator properties. The correspondence premise (proportional imitation, Schlag 1998, from memory) must be stated as the case's premise.",
+  "Who decides when the verdict is a script over coded data? Using RF's model pins (Google and Qwen) as blind coders of admissibility and parameters needs model calls, which wait for Ren. Human coders would be people Ren chooses to send it to, which is also his. The design must say which, and what happens when the coders disagree.",
+  "The atlas branch aa-atlas-v1 gives this entry T7's metric forbids, not one of its own. Should the atlas's entry get the adoption forbids stated here, and is that the AA owner's edit? The record also has no Forbids line. Adding one is a change to the record and its home together.",
+  "Overlap with T7's field test: both would use DrawnReplacement.lost_above's bound. Should one frozen harness for 'share far above the mass, left by drift more often than the bound' serve both, with domain-specific coding?",
+  "Claiming: no board row exists. A claim (a row, or a sub-item of AA §7 by the AA owner) is needed before the design is written."
+ ],
+ "read": "Read in full:\n- DrawnShaping.lean in the live tree. I first printed lines 1-140 of the development copy at _process/.../ma4-drawn-shaping/tree/Becoming/DrawnShaping.lean (574 lines; its noise paragraph is older). I then read the live file's lines 24-44, 60-70, 94-133 and 140-340, plus 400-413 and 446-466, and listed every declaration's line number with grep.\n- theories/becoming/results/records/shaping-read-by-readers-drawn-from-the-selected.md, all 108 lines. Its JSON I read only for its keys (it has no forbids or test key).\n- theories/becoming/chapters/02-MAP.md lines 388, 400-432 (cut at 600 characters a line; lines 417, 420 and 423 printed whole by grep), 434, 444, 447, 449 and 458-479 (What this chapter does not show, and Open).\n- PLAN.md lines 377-389 (§7), 100-111 (§1.4) and lines 531 and 593.\n\nRead in part:\n- RuleShaping.lean lines 1-30 and 120-160.\n- RuleCapture.lean lines 460-505 (CarrierCounts, order, favours, select).\n- ClosedCapture.lean lines 563-571 (pool).\n- DrawnReplacement.lean: grep of its theorem lines, lines 217-240 (lost_above) and lines 101-107 (up, down, stay).\n- drawn-shaping-drawn-one-at-a-time.md: lines 8-9 and grep hits on lines 21, 23, 37, 40 and 61.\n- Board line 54 (the AA row, folded and grepped), T1N's row head at line 58, and the list of row titles. git log of the board, last 8 commits.\n- experiments/formations-that-read/FREEZE-1 to FREEZE-11: first 12 lines of each, and grep hits in FREEZE-5 (line 26 and others).\n- experiments/state-named-in-advance/DESIGN.md lines 1-40.\n- experiments/shaping-what-comes-back/README.md lines 1-30.\n- Thresholds.lean lines 1-25.\n- GOVERNANCE-LITERATURE.md line 160.\n- readers-2026-11-04/tests-board-lean.md line 160 and dynamics-map-knowing.md lines 107 and 138.\n- On branch aa-atlas-v1 (git show): the family-C extract's entry for this record (id, name, forbids, tests, exits); dynamics.json there is empty.\n\nSearched only, not read:\n- git grep for critical_mass_iff (file list), for 'critical mass' in the records (10 files, of which I read one record), and for Centola, Granovetter and Schelling across the repo (I read the hit lines only).\n- git ls-files of experiments/ for adoption, diffusion and tipping names.\n- The MA4 NOTE.md was grepped for test or data words, with no hits; I did not read it.\n\nNot read at all: REVIEW-MA4.md, loss-read-in-time-by-the-others.md, readers-drawn-from-the-selected.md, and any external paper or dataset. The literature details in 'data' that the repo does not cite are from memory and not checked. I ran no tests, Lean or builds, and edited nothing."
+}

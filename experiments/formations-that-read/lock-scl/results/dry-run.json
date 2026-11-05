@@ -1,0 +1,1925 @@
+{
+ "test": "scl",
+ "seed": "SCL-freeze-12-2026-11-05",
+ "python": "3.11",
+ "design": {
+  "calls per pin": 2898,
+  "pins": 3,
+  "calls on the three pins": 8694,
+  "calls by condition": {
+   "C": {
+    "calls": 18,
+    "acts": 0,
+    "probes": 0,
+    "frames": 18
+   },
+   "B": {
+    "calls": 1200,
+    "acts": 960,
+    "probes": 240,
+    "frames": 0
+   },
+   "E1": {
+    "calls": 336,
+    "acts": 192,
+    "probes": 144,
+    "frames": 0
+   },
+   "N2a": {
+    "calls": 336,
+    "acts": 192,
+    "probes": 144,
+    "frames": 0
+   },
+   "E2": {
+    "calls": 336,
+    "acts": 192,
+    "probes": 144,
+    "frames": 0
+   },
+   "N2b": {
+    "calls": 336,
+    "acts": 192,
+    "probes": 144,
+    "frames": 0
+   },
+   "N3": {
+    "calls": 336,
+    "acts": 192,
+    "probes": 144,
+    "frames": 0
+   },
+   "per pin": 2898,
+   "smoke per pin": 54,
+   "N4, the name order": "no call: both name orders are in every arm",
+   "N5, a sibling of another size": {
+    "pin": {
+     "family": "qwen/qwen3.8-flash",
+     "sibling of": "qwen/qwen3.8-max-0902",
+     "why": "the smaller sibling of a deciding family, named in PINS.json's own record (a VD1 valuer)"
+    },
+    "calls": 2898,
+    "run": "not under this freeze: a new pin, which freeze 1's chain cannot add"
+   }
+  },
+  "announced rounds": 21,
+  "exit round": 3,
+  "courses per arm, world and name order": 12,
+  "rule": {
+   "alpha per verdict": 0.01,
+   "delta K": 0.2,
+   "delta S": 0.1,
+   "share": 0.5,
+   "start min": 0.5,
+   "n min": 10,
+   "n min at risk": 30,
+   "support bounds": 0.95,
+   "an exit's world contradicts at": 0.995,
+   "the turn contradicts at": 0.99,
+   "probe layouts": [
+    [
+     "low",
+     "high",
+     "both"
+    ],
+    [
+     "low",
+     "both",
+     "high"
+    ],
+    [
+     "high",
+     "low",
+     "both"
+    ],
+    [
+     "high",
+     "both",
+     "low"
+    ],
+    [
+     "both",
+     "low",
+     "high"
+    ],
+    [
+     "both",
+     "high",
+     "low"
+    ]
+   ]
+  }
+ },
+ "stage 0": {
+  "mirror": {
+   "tr1.mirror_untested (FREEZE-5's Stage 0, by evaluation)": {
+    "rests_up": true,
+    "rests_down": true,
+    "alike_in_both": true,
+    "never_high": true,
+    "true_kept": true,
+    "explorer_up_from_step_4": true,
+    "explorer_up_not_before_4": true,
+    "explorer_down_from_step_3": true,
+    "explorer_low_once": true,
+    "order_rests": true,
+    "model_or_order": true,
+    "model_or_order_internal_parts_differ": true,
+    "informed_turns_from_step_3": true,
+    "informed_act_untried_from_step_1_(inference)": true,
+    "informed_high_sensed_from_step_2_(inference)": true,
+    "informed_turns_not_at_step_2": true,
+    "both_accord": true,
+    "apart_beyond": true,
+    "training_reach_mid_low_only": true,
+    "byWorst_iff": true,
+    "worst_le": true,
+    "worst_attained": true,
+    "all_witness_checks_pass": true
+   },
+   "SCL's exits at a course's round, by evaluation (inferences)": {
+    "forced untried after rest, up: true candidate alone from two steps on": true,
+    "forced untried after rest, up: rests as the explorer's": true,
+    "listing told after rest, up: turns as informed_turns": true,
+    "the lock at round 3 is the rest, up": true,
+    "forced untried after rest, down: true candidate alone from two steps on": true,
+    "forced untried after rest, down: rests as the explorer's": true,
+    "listing told after rest, down: keeps the known act": true,
+    "the lock at round 3 is the rest, down": true,
+    "order (mid above high) told the true candidate in up keeps the known act (order_rests)": true
+   },
+   "all pass": true
+  },
+  "agents with fixed answers": [
+   {
+    "agent": "M, the witness (worst case, 8 > 5 > 2)",
+    "role": "the law's formation",
+    "summary": {
+     "K": "passed",
+     "S": "passed",
+     "E1": "supported",
+     "E2": "supported",
+     "T after E1": "supported",
+     "T after E2": "supported"
+    },
+    "asserted": [
+     "E1",
+     "E2",
+     "K",
+     "S",
+     "T after E1",
+     "T after E2"
+    ]
+   },
+   {
+    "agent": "O, the witness with the order 5 > 8 > 2",
+    "role": "the law's formation (order_rests)",
+    "summary": {
+     "K": "passed",
+     "S": "passed",
+     "E1": "supported",
+     "E2": "supported",
+     "T after E1": "no turn predicted (C strict at 5: order_rests)",
+     "T after E2": "no turn predicted (C strict at 5: order_rests)"
+    },
+    "asserted": [
+     "E1",
+     "E2",
+     "K",
+     "S",
+     "T after E1",
+     "T after E2"
+    ]
+   },
+   {
+    "agent": "a prior-follower that never tries (expected value, 3/4 on down: acts as M)",
+    "role": "permitted (LA3's agent that never tried)",
+    "summary": {
+     "K": "passed",
+     "S": "passed",
+     "E1": "supported",
+     "E2": "supported",
+     "T after E1": "supported",
+     "T after E2": "supported"
+    },
+    "asserted": [
+     "E1",
+     "E2",
+     "K",
+     "S",
+     "T after E1",
+     "T after E2"
+    ]
+   },
+   {
+    "agent": "count lock (the option chosen most; tellings not taken in)",
+    "role": "forbidden by exit 2 (and by the turn)",
+    "summary": {
+     "K": "passed",
+     "S": "passed",
+     "E1": "supported",
+     "E2": "contradicted",
+     "T after E1": "contradicted",
+     "T after E2": "not ruled (the exit in belief not supported)"
+    },
+    "asserted": [
+     "E1",
+     "E2",
+     "K",
+     "S",
+     "T after E1",
+     "T after E2"
+    ]
+   },
+   {
+    "agent": "untrusting (M, tellings not taken in)",
+    "role": "forbidden by exit 2",
+    "summary": {
+     "K": "passed",
+     "S": "passed",
+     "E1": "supported",
+     "E2": "contradicted",
+     "T after E1": "supported",
+     "T after E2": "not ruled (the exit in belief not supported)"
+    },
+    "asserted": [
+     "E1",
+     "E2",
+     "K",
+     "S",
+     "T after E1",
+     "T after E2"
+    ]
+   },
+   {
+    "agent": "frame-inconsistent (O in the courses, 8 > 5 stated)",
+    "role": "forbidden by the turn",
+    "summary": {
+     "K": "passed",
+     "S": "passed",
+     "E1": "supported",
+     "E2": "supported",
+     "T after E1": "contradicted",
+     "T after E2": "contradicted"
+    },
+    "asserted": [
+     "E1",
+     "E2",
+     "K",
+     "S",
+     "T after E1",
+     "T after E2"
+    ]
+   },
+   {
+    "agent": "prior-narrowing reader (rho 0.1 a round)",
+    "role": "forbidden by K",
+    "summary": {
+     "K": "contradicted",
+     "S": "passed",
+     "E1": "supported",
+     "E2": "supported",
+     "T after E1": "supported",
+     "T after E2": "supported"
+    },
+    "asserted": [
+     "K"
+    ]
+   },
+   {
+    "agent": "first-listed reader",
+    "role": "forbidden by N4",
+    "summary": {
+     "K": "passed",
+     "S": "contradicted",
+     "E1": "supported",
+     "E2": "supported",
+     "T after E1": "contradicted",
+     "T after E2": "contradicted"
+    },
+    "asserted": [
+     "E1",
+     "E2",
+     "K",
+     "S",
+     "T after E1",
+     "T after E2"
+    ]
+   },
+   {
+    "agent": "optimist (best case: tries at once)",
+    "role": "the first exit taken: not testable",
+    "summary": {
+     "K": "passed",
+     "S": "passed",
+     "E1": "not testable",
+     "E2": "not testable",
+     "T after E1": "not ruled (the exit in belief not supported)",
+     "T after E2": "not ruled (the exit in belief not supported)"
+    },
+    "asserted": [
+     "E1",
+     "E2",
+     "K",
+     "S",
+     "T after E1",
+     "T after E2"
+    ]
+   },
+   {
+    "agent": "declining every call",
+    "role": "not testable (no start probe read)",
+    "summary": {
+     "K": "not testable (fewer than 10 start probes read)",
+     "S": "not testable (fewer than 10 start probes read)",
+     "E1": "not testable (fewer than 10 start probes read)",
+     "E2": "not testable (fewer than 10 start probes read)",
+     "T after E1": "not testable (fewer than 10 start probes read)",
+     "T after E2": "not testable (fewer than 10 start probes read)"
+    },
+    "asserted": [
+     "E1",
+     "E2",
+     "K",
+     "S",
+     "T after E1",
+     "T after E2"
+    ]
+   },
+   {
+    "agent": "late trier (O in the courses, 8 > 5 stated, tries 0.9 a round from round 4)",
+    "role": "forbidden by N1 (B's rounds 4 to 8 over 2 and 3), and no turn: tries late whatever it is shown",
+    "summary": {
+     "K": "passed",
+     "S": "contradicted",
+     "E1": "supported",
+     "E2": "supported",
+     "T after E1": "unresolved",
+     "T after E2": "unresolved"
+    },
+    "asserted": [
+     "E1",
+     "S",
+     "T after E1",
+     "T after E2"
+    ],
+    "T after E1, its share's 95% lower bound at least 0.5 (the twin's rule decides)": true
+   }
+  ]
+ },
+ "the rule at its edges": {
+  "an unread probe of E1's (and of its twin's) counts in no share, as one missing": [
+   [
+    24,
+    24
+   ],
+   [
+    23,
+    23
+   ]
+  ],
+  "a K fall of exactly 0.2 (12/15 against 240/240) and an S rise of exactly 0.1 (104/624 against 20/300), each below its p, contradict": [
+   0.000166597,
+   9.556e-06
+  ],
+  "exact bound tests agreeing with the bisected bounds (n 1 to 60, every x, three confidences)": 5670,
+  "a round-4 record showing round 2 known, round 2 made again untried after it: at risk at round 4 by the rounds it showed, not by the latest records": true,
+  "an S contradiction with every matching K comparison read and none contradicting: laid on bridge (ii) with the listing unshifted, on (i) or (ii) where it shifts from naming 2 toward naming 8": {
+   "unshifted": "bridge (ii), no shift of the listing seen",
+   "shifted": "bridge (i) or (ii)"
+  },
+  "the exact Fisher-Freeman-Halton p equal to a direct sum on four tables": true
+ },
+ "power (runs per setting: 100)": [
+  {
+   "setting": "M trembling 0.02",
+   "role": "permitted",
+   "runs": 100,
+   "shares": {
+    "K": {
+     "passed": 1.0
+    },
+    "S": {
+     "passed": 1.0
+    },
+    "E1": {
+     "supported": 1.0
+    },
+    "E2": {
+     "supported": 1.0
+    },
+    "T after E1": {
+     "not ruled (C not strict at 8 in both name orders)": 0.15,
+     "supported": 0.85
+    },
+    "T after E2": {
+     "not ruled (C not strict at 8 in both name orders)": 0.15,
+     "supported": 0.85
+    }
+   },
+   "comparisons contradicting, share of runs": {},
+   "comparisons not read, share of runs": {}
+  },
+  {
+   "setting": "M trembling 0.05",
+   "role": "permitted",
+   "runs": 100,
+   "shares": {
+    "K": {
+     "passed": 1.0
+    },
+    "S": {
+     "passed": 1.0
+    },
+    "E1": {
+     "supported": 1.0
+    },
+    "E2": {
+     "supported": 1.0
+    },
+    "T after E1": {
+     "not ruled (C not strict at 8 in both name orders)": 0.09,
+     "supported": 0.91
+    },
+    "T after E2": {
+     "not ruled (C not strict at 8 in both name orders)": 0.09,
+     "supported": 0.91
+    }
+   },
+   "comparisons contradicting, share of runs": {},
+   "comparisons not read, share of runs": {
+    "K B 21": 0.01
+   }
+  },
+  {
+   "setting": "M trembling 0.1",
+   "role": "permitted",
+   "runs": 100,
+   "shares": {
+    "K": {
+     "passed": 1.0
+    },
+    "S": {
+     "passed": 1.0
+    },
+    "E1": {
+     "supported": 1.0
+    },
+    "E2": {
+     "supported": 1.0
+    },
+    "T after E1": {
+     "not ruled (C not strict at 8 in both name orders)": 0.15,
+     "supported": 0.85
+    },
+    "T after E2": {
+     "not ruled (C not strict at 8 in both name orders)": 0.15,
+     "supported": 0.85
+    }
+   },
+   "comparisons contradicting, share of runs": {},
+   "comparisons not read, share of runs": {
+    "K B 14": 0.13,
+    "K B 21": 0.96
+   }
+  },
+  {
+   "setting": "M trembling 0.2",
+   "role": "permitted",
+   "runs": 100,
+   "shares": {
+    "K": {
+     "passed": 1.0
+    },
+    "S": {
+     "contradicted": 0.02,
+     "passed": 0.98
+    },
+    "E1": {
+     "supported": 1.0
+    },
+    "E2": {
+     "supported": 1.0
+    },
+    "T after E1": {
+     "not ruled (C not strict at 8 in both name orders)": 0.15,
+     "supported": 0.63,
+     "unresolved": 0.22
+    },
+    "T after E2": {
+     "not ruled (C not strict at 8 in both name orders)": 0.15,
+     "supported": 0.67,
+     "unresolved": 0.18
+    }
+   },
+   "comparisons contradicting, share of runs": {
+    "S N2a an assigned known round": 0.01,
+    "S N4 order 1 over 0": 0.01
+   },
+   "comparisons not read, share of runs": {
+    "K B 14": 1.0,
+    "K B 21": 1.0,
+    "K B 7": 0.02,
+    "S N1 more rounds, 9 to 21 over 2 to 8": 0.11
+   }
+  },
+  {
+   "setting": "O trembling 0.05",
+   "role": "permitted",
+   "runs": 100,
+   "shares": {
+    "K": {
+     "passed": 1.0
+    },
+    "S": {
+     "passed": 1.0
+    },
+    "E1": {
+     "supported": 1.0
+    },
+    "E2": {
+     "supported": 1.0
+    },
+    "T after E1": {
+     "no turn predicted (C strict at 5: order_rests)": 0.89,
+     "not ruled (C not strict at 8 in both name orders)": 0.11
+    },
+    "T after E2": {
+     "no turn predicted (C strict at 5: order_rests)": 0.89,
+     "not ruled (C not strict at 8 in both name orders)": 0.11
+    }
+   },
+   "comparisons contradicting, share of runs": {},
+   "comparisons not read, share of runs": {
+    "K B 21": 0.01
+   }
+  },
+  {
+   "setting": "O trembling 0.1",
+   "role": "permitted",
+   "runs": 100,
+   "shares": {
+    "K": {
+     "passed": 1.0
+    },
+    "S": {
+     "passed": 1.0
+    },
+    "E1": {
+     "supported": 1.0
+    },
+    "E2": {
+     "supported": 1.0
+    },
+    "T after E1": {
+     "no turn predicted (C strict at 5: order_rests)": 0.87,
+     "not ruled (C not strict at 8 in both name orders)": 0.13
+    },
+    "T after E2": {
+     "no turn predicted (C strict at 5: order_rests)": 0.87,
+     "not ruled (C not strict at 8 in both name orders)": 0.13
+    }
+   },
+   "comparisons contradicting, share of runs": {},
+   "comparisons not read, share of runs": {
+    "K B 14": 0.08,
+    "K B 21": 0.91
+   }
+  },
+  {
+   "setting": "epsilon-greedy, 0.1",
+   "role": "permitted (a standard learner)",
+   "runs": 100,
+   "shares": {
+    "K": {
+     "passed": 1.0
+    },
+    "S": {
+     "passed": 1.0
+    },
+    "E1": {
+     "supported": 1.0
+    },
+    "E2": {
+     "supported": 1.0
+    },
+    "T after E1": {
+     "not ruled (C not strict at 8 in both name orders)": 0.09,
+     "supported": 0.91
+    },
+    "T after E2": {
+     "not ruled (C not strict at 8 in both name orders)": 0.09,
+     "supported": 0.91
+    }
+   },
+   "comparisons contradicting, share of runs": {},
+   "comparisons not read, share of runs": {}
+  },
+  {
+   "setting": "epsilon-greedy, 0.3",
+   "role": "permitted (a standard learner)",
+   "runs": 100,
+   "shares": {
+    "K": {
+     "passed": 1.0
+    },
+    "S": {
+     "passed": 1.0
+    },
+    "E1": {
+     "supported": 1.0
+    },
+    "E2": {
+     "supported": 1.0
+    },
+    "T after E1": {
+     "not ruled (C not strict at 8 in both name orders)": 0.12,
+     "supported": 0.81,
+     "unresolved": 0.07
+    },
+    "T after E2": {
+     "not ruled (C not strict at 8 in both name orders)": 0.12,
+     "supported": 0.83,
+     "unresolved": 0.05
+    }
+   },
+   "comparisons contradicting, share of runs": {},
+   "comparisons not read, share of runs": {
+    "K B 14": 0.84,
+    "K B 21": 1.0
+   }
+  },
+  {
+   "setting": "UCB1",
+   "role": "the first exit taken (a standard learner)",
+   "runs": 100,
+   "shares": {
+    "K": {
+     "passed": 1.0
+    },
+    "S": {
+     "passed": 1.0
+    },
+    "E1": {
+     "not testable": 1.0
+    },
+    "E2": {
+     "not testable": 1.0
+    },
+    "T after E1": {
+     "not ruled (C not strict at 8 in both name orders)": 0.11,
+     "not ruled (the exit in belief not supported)": 0.89
+    },
+    "T after E2": {
+     "not ruled (C not strict at 8 in both name orders)": 0.11,
+     "not ruled (the exit in belief not supported)": 0.89
+    }
+   },
+   "comparisons contradicting, share of runs": {},
+   "comparisons not read, share of runs": {
+    "K B 14": 1.0,
+    "K B 21": 1.0,
+    "K B 4": 1.0,
+    "K B 7": 1.0,
+    "K N2a 4": 1.0,
+    "K N2a 7": 1.0,
+    "K N2b 4": 1.0,
+    "K N2b 7": 1.0,
+    "K N3 4": 1.0,
+    "K N3 7": 1.0,
+    "S N1 more rounds, 3 over 2": 1.0,
+    "S N1 more rounds, 4 to 8 over 2 and 3": 1.0,
+    "S N1 more rounds, 9 to 21 over 2 to 8": 1.0,
+    "S N2a an assigned known round": 1.0,
+    "S N2b a telling of the known": 1.0
+   }
+  },
+  {
+   "setting": "Thompson sampling, prior one half",
+   "role": "permitted (a standard learner)",
+   "runs": 100,
+   "shares": {
+    "K": {
+     "passed": 1.0
+    },
+    "S": {
+     "passed": 1.0
+    },
+    "E1": {
+     "not testable": 0.35,
+     "supported": 0.63,
+     "unresolved": 0.02
+    },
+    "E2": {
+     "not testable": 0.24,
+     "supported": 0.75,
+     "unresolved": 0.01
+    },
+    "T after E1": {
+     "not ruled (C not strict at 8 in both name orders)": 0.11,
+     "not ruled (the exit in belief not supported)": 0.33,
+     "supported": 0.29,
+     "unresolved": 0.27
+    },
+    "T after E2": {
+     "not ruled (C not strict at 8 in both name orders)": 0.11,
+     "not ruled (the exit in belief not supported)": 0.21,
+     "supported": 0.28,
+     "unresolved": 0.4
+    }
+   },
+   "comparisons contradicting, share of runs": {},
+   "comparisons not read, share of runs": {
+    "K B 14": 1.0,
+    "K B 21": 1.0,
+    "K B 4": 0.2,
+    "K B 7": 1.0,
+    "K N2a 7": 1.0,
+    "K N2b 7": 0.99,
+    "K N3 7": 0.99,
+    "S N1 more rounds, 3 over 2": 0.95,
+    "S N1 more rounds, 4 to 8 over 2 and 3": 0.79,
+    "S N1 more rounds, 9 to 21 over 2 to 8": 1.0,
+    "S N2a an assigned known round": 0.9,
+    "S N2b a telling of the known": 0.07
+   }
+  },
+  {
+   "setting": "history-length explorer, 0.02 + 0.01 a round",
+   "role": "forbidden by N1",
+   "runs": 100,
+   "shares": {
+    "K": {
+     "passed": 1.0
+    },
+    "S": {
+     "contradicted": 0.31,
+     "passed": 0.69
+    },
+    "E1": {
+     "supported": 1.0
+    },
+    "E2": {
+     "supported": 1.0
+    },
+    "T after E1": {
+     "not ruled (C not strict at 8 in both name orders)": 0.07,
+     "supported": 0.93
+    },
+    "T after E2": {
+     "not ruled (C not strict at 8 in both name orders)": 0.07,
+     "supported": 0.93
+    }
+   },
+   "comparisons contradicting, share of runs": {
+    "S N1 more rounds, 9 to 21 over 2 to 8": 0.31
+   },
+   "comparisons not read, share of runs": {
+    "K B 21": 0.99
+   }
+  },
+  {
+   "setting": "history-length explorer, 0.02 + 0.02 a round",
+   "role": "forbidden by N1",
+   "runs": 100,
+   "shares": {
+    "K": {
+     "passed": 1.0
+    },
+    "S": {
+     "contradicted": 0.81,
+     "passed": 0.19
+    },
+    "E1": {
+     "supported": 1.0
+    },
+    "E2": {
+     "supported": 1.0
+    },
+    "T after E1": {
+     "not ruled (C not strict at 8 in both name orders)": 0.23,
+     "supported": 0.77
+    },
+    "T after E2": {
+     "not ruled (C not strict at 8 in both name orders)": 0.23,
+     "supported": 0.77
+    }
+   },
+   "comparisons contradicting, share of runs": {
+    "S N1 more rounds, 4 to 8 over 2 and 3": 0.12,
+    "S N1 more rounds, 9 to 21 over 2 to 8": 0.75
+   },
+   "comparisons not read, share of runs": {
+    "K B 14": 0.6,
+    "K B 21": 1.0
+   }
+  },
+  {
+   "setting": "prior-narrowing reader, rho 0.02 a round",
+   "role": "forbidden by K",
+   "runs": 100,
+   "shares": {
+    "K": {
+     "contradicted": 0.91,
+     "passed": 0.09
+    },
+    "S": {
+     "passed": 1.0
+    },
+    "E1": {
+     "supported": 1.0
+    },
+    "E2": {
+     "supported": 1.0
+    },
+    "T after E1": {
+     "not ruled (C not strict at 8 in both name orders)": 0.18,
+     "supported": 0.82
+    },
+    "T after E2": {
+     "not ruled (C not strict at 8 in both name orders)": 0.18,
+     "supported": 0.82
+    }
+   },
+   "comparisons contradicting, share of runs": {
+    "K B 14": 0.49,
+    "K B 21": 0.75,
+    "K B 7": 0.02,
+    "K N2a 7": 0.02,
+    "K N3 7": 0.02
+   },
+   "comparisons not read, share of runs": {
+    "K B 21": 0.01
+   }
+  },
+  {
+   "setting": "prior-narrowing reader, rho 0.05 a round",
+   "role": "forbidden by K",
+   "runs": 100,
+   "shares": {
+    "K": {
+     "contradicted": 1.0
+    },
+    "S": {
+     "contradicted": 0.01,
+     "passed": 0.99
+    },
+    "E1": {
+     "supported": 1.0
+    },
+    "E2": {
+     "supported": 1.0
+    },
+    "T after E1": {
+     "not ruled (C not strict at 8 in both name orders)": 0.13,
+     "supported": 0.87
+    },
+    "T after E2": {
+     "not ruled (C not strict at 8 in both name orders)": 0.13,
+     "supported": 0.87
+    }
+   },
+   "comparisons contradicting, share of runs": {
+    "K B 14": 1.0,
+    "K B 21": 1.0,
+    "K B 4": 0.03,
+    "K B 7": 0.67,
+    "K N2a 7": 0.49,
+    "K N2b 4": 0.01,
+    "K N2b 7": 0.42,
+    "K N3 7": 0.2,
+    "S N2a an assigned known round": 0.01
+   },
+   "comparisons not read, share of runs": {}
+  },
+  {
+   "setting": "word reader, tries 0.05 more reworded",
+   "role": "forbidden by N3",
+   "runs": 100,
+   "shares": {
+    "K": {
+     "passed": 1.0
+    },
+    "S": {
+     "contradicted": 0.06,
+     "passed": 0.94
+    },
+    "E1": {
+     "supported": 1.0
+    },
+    "E2": {
+     "supported": 1.0
+    },
+    "T after E1": {
+     "not ruled (C not strict at 8 in both name orders)": 0.12,
+     "supported": 0.88
+    },
+    "T after E2": {
+     "not ruled (C not strict at 8 in both name orders)": 0.12,
+     "supported": 0.88
+    }
+   },
+   "comparisons contradicting, share of runs": {
+    "S N3 rewording": 0.06
+   },
+   "comparisons not read, share of runs": {
+    "K B 21": 0.02
+   }
+  },
+  {
+   "setting": "word reader, tries 0.15 more reworded",
+   "role": "forbidden by N3",
+   "runs": 100,
+   "shares": {
+    "K": {
+     "passed": 1.0
+    },
+    "S": {
+     "contradicted": 0.86,
+     "passed": 0.14
+    },
+    "E1": {
+     "supported": 1.0
+    },
+    "E2": {
+     "supported": 1.0
+    },
+    "T after E1": {
+     "not ruled (C not strict at 8 in both name orders)": 0.1,
+     "supported": 0.9
+    },
+    "T after E2": {
+     "not ruled (C not strict at 8 in both name orders)": 0.1,
+     "supported": 0.9
+    }
+   },
+   "comparisons contradicting, share of runs": {
+    "S N3 rewording": 0.86
+   },
+   "comparisons not read, share of runs": {}
+  },
+  {
+   "setting": "word reader, narrows reworded (rho 0.1)",
+   "role": "forbidden by K (N3)",
+   "runs": 100,
+   "shares": {
+    "K": {
+     "contradicted": 0.88,
+     "passed": 0.12
+    },
+    "S": {
+     "passed": 1.0
+    },
+    "E1": {
+     "supported": 1.0
+    },
+    "E2": {
+     "supported": 1.0
+    },
+    "T after E1": {
+     "not ruled (C not strict at 8 in both name orders)": 0.09,
+     "supported": 0.91
+    },
+    "T after E2": {
+     "not ruled (C not strict at 8 in both name orders)": 0.09,
+     "supported": 0.91
+    }
+   },
+   "comparisons contradicting, share of runs": {
+    "K N3 7": 0.88
+   },
+   "comparisons not read, share of runs": {
+    "K B 21": 0.02
+   }
+  },
+  {
+   "setting": "count lock, trembling 0.05",
+   "role": "forbidden by exit 2",
+   "runs": 100,
+   "shares": {
+    "K": {
+     "passed": 1.0
+    },
+    "S": {
+     "passed": 1.0
+    },
+    "E1": {
+     "supported": 1.0
+    },
+    "E2": {
+     "contradicted": 1.0
+    },
+    "T after E1": {
+     "contradicted": 0.89,
+     "not ruled (C not strict at 8 in both name orders)": 0.11
+    },
+    "T after E2": {
+     "not ruled (C not strict at 8 in both name orders)": 0.11,
+     "not ruled (the exit in belief not supported)": 0.89
+    }
+   },
+   "comparisons contradicting, share of runs": {},
+   "comparisons not read, share of runs": {}
+  },
+  {
+   "setting": "untrusting, trembling 0.05",
+   "role": "forbidden by exit 2",
+   "runs": 100,
+   "shares": {
+    "K": {
+     "passed": 1.0
+    },
+    "S": {
+     "passed": 1.0
+    },
+    "E1": {
+     "supported": 1.0
+    },
+    "E2": {
+     "contradicted": 1.0
+    },
+    "T after E1": {
+     "not ruled (C not strict at 8 in both name orders)": 0.13,
+     "supported": 0.87
+    },
+    "T after E2": {
+     "not ruled (C not strict at 8 in both name orders)": 0.13,
+     "not ruled (the exit in belief not supported)": 0.87
+    }
+   },
+   "comparisons contradicting, share of runs": {},
+   "comparisons not read, share of runs": {}
+  },
+  {
+   "setting": "M trembling 0.05, 5% of answers unreadable",
+   "role": "permitted",
+   "runs": 100,
+   "shares": {
+    "K": {
+     "passed": 1.0
+    },
+    "S": {
+     "passed": 1.0
+    },
+    "E1": {
+     "supported": 1.0
+    },
+    "E2": {
+     "supported": 1.0
+    },
+    "T after E1": {
+     "not ruled (C not strict at 8 in both name orders)": 0.4,
+     "supported": 0.6
+    },
+    "T after E2": {
+     "not ruled (C not strict at 8 in both name orders)": 0.4,
+     "supported": 0.6
+    }
+   },
+   "comparisons contradicting, share of runs": {},
+   "comparisons not read, share of runs": {
+    "K B 14": 0.13,
+    "K B 21": 0.85
+   }
+  },
+  {
+   "setting": "M trembling 0.4 (a high constant hazard at round 2)",
+   "role": "permitted (the not-testable cost of K0 = 3)",
+   "runs": 100,
+   "shares": {
+    "K": {
+     "passed": 1.0
+    },
+    "S": {
+     "contradicted": 0.01,
+     "passed": 0.99
+    },
+    "E1": {
+     "not testable": 0.04,
+     "supported": 0.93,
+     "unresolved": 0.03
+    },
+    "E2": {
+     "not testable": 0.02,
+     "supported": 0.98
+    },
+    "T after E1": {
+     "not ruled (C not strict at 8 in both name orders)": 0.13,
+     "not ruled (the exit in belief not supported)": 0.06,
+     "unresolved": 0.81
+    },
+    "T after E2": {
+     "not ruled (C not strict at 8 in both name orders)": 0.13,
+     "not ruled (the exit in belief not supported)": 0.02,
+     "supported": 0.01,
+     "unresolved": 0.84
+    }
+   },
+   "comparisons contradicting, share of runs": {
+    "S N1 more rounds, 4 to 8 over 2 and 3": 0.01
+   },
+   "comparisons not read, share of runs": {
+    "K B 14": 1.0,
+    "K B 21": 1.0,
+    "K B 7": 1.0,
+    "K N2a 7": 0.92,
+    "K N2b 7": 0.92,
+    "K N3 7": 0.9,
+    "S N1 more rounds, 3 over 2": 0.54,
+    "S N1 more rounds, 4 to 8 over 2 and 3": 0.13,
+    "S N1 more rounds, 9 to 21 over 2 to 8": 1.0,
+    "S N2a an assigned known round": 0.25
+   }
+  },
+  {
+   "setting": "M trembling 0.5 (a high constant hazard at round 2)",
+   "role": "permitted (the not-testable cost of K0 = 3)",
+   "runs": 100,
+   "shares": {
+    "K": {
+     "passed": 1.0
+    },
+    "S": {
+     "contradicted": 0.01,
+     "passed": 0.99
+    },
+    "E1": {
+     "not testable": 0.32,
+     "supported": 0.66,
+     "unresolved": 0.02
+    },
+    "E2": {
+     "not testable": 0.3,
+     "supported": 0.67,
+     "unresolved": 0.03
+    },
+    "T after E1": {
+     "not ruled (C not strict at 8 in both name orders)": 0.14,
+     "not ruled (the exit in belief not supported)": 0.31,
+     "unresolved": 0.55
+    },
+    "T after E2": {
+     "not ruled (C not strict at 8 in both name orders)": 0.14,
+     "not ruled (the exit in belief not supported)": 0.32,
+     "unresolved": 0.54
+    }
+   },
+   "comparisons contradicting, share of runs": {
+    "S N3 rewording": 0.01
+   },
+   "comparisons not read, share of runs": {
+    "K B 14": 1.0,
+    "K B 21": 1.0,
+    "K B 4": 0.15,
+    "K B 7": 1.0,
+    "K N2a 7": 1.0,
+    "K N2b 7": 1.0,
+    "K N3 7": 1.0,
+    "S N1 more rounds, 3 over 2": 0.92,
+    "S N1 more rounds, 4 to 8 over 2 and 3": 0.81,
+    "S N1 more rounds, 9 to 21 over 2 to 8": 1.0,
+    "S N2a an assigned known round": 0.91,
+    "S N2b a telling of the known": 0.1
+   }
+  },
+  {
+   "setting": "M trembling 0.6 (a high constant hazard at round 2)",
+   "role": "permitted (the not-testable cost of K0 = 3)",
+   "runs": 100,
+   "shares": {
+    "K": {
+     "contradicted": 0.01,
+     "passed": 0.99
+    },
+    "S": {
+     "passed": 1.0
+    },
+    "E1": {
+     "not testable": 0.73,
+     "supported": 0.25,
+     "unresolved": 0.02
+    },
+    "E2": {
+     "not testable": 0.77,
+     "supported": 0.23
+    },
+    "T after E1": {
+     "not ruled (C not strict at 8 in both name orders)": 0.1,
+     "not ruled (the exit in belief not supported)": 0.67,
+     "unresolved": 0.23
+    },
+    "T after E2": {
+     "not ruled (C not strict at 8 in both name orders)": 0.1,
+     "not ruled (the exit in belief not supported)": 0.67,
+     "unresolved": 0.23
+    }
+   },
+   "comparisons contradicting, share of runs": {
+    "K N2a 4": 0.01
+   },
+   "comparisons not read, share of runs": {
+    "K B 14": 1.0,
+    "K B 21": 1.0,
+    "K B 4": 0.79,
+    "K B 7": 1.0,
+    "K N2a 7": 1.0,
+    "K N2b 7": 1.0,
+    "K N3 7": 1.0,
+    "S N1 more rounds, 3 over 2": 1.0,
+    "S N1 more rounds, 4 to 8 over 2 and 3": 1.0,
+    "S N1 more rounds, 9 to 21 over 2 to 8": 1.0,
+    "S N2a an assigned known round": 1.0,
+    "S N2b a telling of the known": 0.67
+   }
+  },
+  {
+   "setting": "M trembling 0.05, the exits at a true share of 0.55",
+   "role": "at the exits' boundary (a false contradiction)",
+   "runs": 100,
+   "shares": {
+    "K": {
+     "passed": 1.0
+    },
+    "S": {
+     "passed": 1.0
+    },
+    "E1": {
+     "unresolved": 1.0
+    },
+    "E2": {
+     "supported": 0.02,
+     "unresolved": 0.98
+    },
+    "T after E1": {
+     "not ruled (C not strict at 8 in both name orders)": 0.13,
+     "not ruled (the exit in belief not supported)": 0.87
+    },
+    "T after E2": {
+     "not ruled (C not strict at 8 in both name orders)": 0.13,
+     "not ruled (the exit in belief not supported)": 0.86,
+     "supported": 0.01
+    }
+   },
+   "comparisons contradicting, share of runs": {},
+   "comparisons not read, share of runs": {}
+  },
+  {
+   "setting": "late trier, tries 0.6 a round from round 4 whatever it is shown",
+   "role": "forbidden by N1, from round 4 (and no turn: a false support of T)",
+   "runs": 100,
+   "shares": {
+    "K": {
+     "contradicted": 0.01,
+     "passed": 0.99
+    },
+    "S": {
+     "contradicted": 1.0
+    },
+    "E1": {
+     "supported": 1.0
+    },
+    "E2": {
+     "supported": 1.0
+    },
+    "T after E1": {
+     "not ruled (C not strict at 8 in both name orders)": 0.15,
+     "unresolved": 0.85
+    },
+    "T after E2": {
+     "not ruled (C not strict at 8 in both name orders)": 0.15,
+     "unresolved": 0.85
+    }
+   },
+   "comparisons contradicting, share of runs": {
+    "K N3 4": 0.01,
+    "S N1 more rounds, 4 to 8 over 2 and 3": 1.0
+   },
+   "comparisons not read, share of runs": {
+    "K B 14": 1.0,
+    "K B 21": 1.0,
+    "K B 7": 1.0,
+    "K N2a 7": 1.0,
+    "K N2b 7": 1.0,
+    "K N3 7": 1.0,
+    "S N1 more rounds, 9 to 21 over 2 to 8": 1.0
+   }
+  },
+  {
+   "setting": "late trier, tries 0.9 a round from round 4 whatever it is shown",
+   "role": "forbidden by N1, from round 4 (and no turn: a false support of T)",
+   "runs": 100,
+   "shares": {
+    "K": {
+     "passed": 1.0
+    },
+    "S": {
+     "contradicted": 1.0
+    },
+    "E1": {
+     "supported": 1.0
+    },
+    "E2": {
+     "supported": 1.0
+    },
+    "T after E1": {
+     "not ruled (C not strict at 8 in both name orders)": 0.2,
+     "unresolved": 0.8
+    },
+    "T after E2": {
+     "not ruled (C not strict at 8 in both name orders)": 0.2,
+     "unresolved": 0.8
+    }
+   },
+   "comparisons contradicting, share of runs": {
+    "S N1 more rounds, 4 to 8 over 2 and 3": 1.0
+   },
+   "comparisons not read, share of runs": {
+    "K B 14": 1.0,
+    "K B 21": 1.0,
+    "K B 7": 1.0,
+    "K N2a 7": 1.0,
+    "K N2b 7": 1.0,
+    "K N3 7": 1.0,
+    "S N1 more rounds, 9 to 21 over 2 to 8": 1.0
+   }
+  },
+  {
+   "setting": "late trier, tries 0.3 a round from round 3 whatever it is shown",
+   "role": "forbidden by N1, from round 3 (R3-1: a step that persists, the middle comparison's base raised)",
+   "runs": 100,
+   "shares": {
+    "K": {
+     "passed": 1.0
+    },
+    "S": {
+     "contradicted": 1.0
+    },
+    "E1": {
+     "supported": 1.0
+    },
+    "E2": {
+     "supported": 1.0
+    },
+    "T after E1": {
+     "contradicted": 0.19,
+     "not ruled (C not strict at 8 in both name orders)": 0.12,
+     "unresolved": 0.69
+    },
+    "T after E2": {
+     "contradicted": 0.29,
+     "not ruled (C not strict at 8 in both name orders)": 0.12,
+     "unresolved": 0.59
+    }
+   },
+   "comparisons contradicting, share of runs": {
+    "S N1 more rounds, 3 over 2": 0.95,
+    "S N1 more rounds, 4 to 8 over 2 and 3": 0.21
+   },
+   "comparisons not read, share of runs": {
+    "K B 14": 1.0,
+    "K B 21": 1.0,
+    "K B 7": 0.27,
+    "K N2a 7": 0.02,
+    "K N2b 7": 0.01,
+    "K N3 7": 0.01,
+    "S N1 more rounds, 9 to 21 over 2 to 8": 0.82
+   },
+   "S under round 2's rule (without S N1 more rounds, 3 over 2, at ALPHA / 7)": {
+    "contradicted": 0.25,
+    "passed": 0.75
+   }
+  },
+  {
+   "setting": "late trier, tries 0.6 a round from round 3 whatever it is shown",
+   "role": "forbidden by N1, from round 3 (R3-1: a step that persists, the middle comparison's base raised)",
+   "runs": 100,
+   "shares": {
+    "K": {
+     "passed": 1.0
+    },
+    "S": {
+     "contradicted": 1.0
+    },
+    "E1": {
+     "supported": 1.0
+    },
+    "E2": {
+     "supported": 1.0
+    },
+    "T after E1": {
+     "not ruled (C not strict at 8 in both name orders)": 0.18,
+     "supported": 0.02,
+     "unresolved": 0.8
+    },
+    "T after E2": {
+     "not ruled (C not strict at 8 in both name orders)": 0.18,
+     "supported": 0.01,
+     "unresolved": 0.81
+    }
+   },
+   "comparisons contradicting, share of runs": {
+    "S N1 more rounds, 3 over 2": 1.0,
+    "S N1 more rounds, 4 to 8 over 2 and 3": 0.23
+   },
+   "comparisons not read, share of runs": {
+    "K B 14": 1.0,
+    "K B 21": 1.0,
+    "K B 7": 1.0,
+    "K N2a 7": 1.0,
+    "K N2b 7": 1.0,
+    "K N3 7": 1.0,
+    "S N1 more rounds, 4 to 8 over 2 and 3": 0.35,
+    "S N1 more rounds, 9 to 21 over 2 to 8": 1.0,
+    "S N2a an assigned known round": 0.5
+   },
+   "S under round 2's rule (without S N1 more rounds, 3 over 2, at ALPHA / 7)": {
+    "contradicted": 0.26,
+    "passed": 0.74
+   }
+  },
+  {
+   "setting": "late trier, tries 0.9 a round from round 3 whatever it is shown",
+   "role": "forbidden by N1, from round 3 (R3-1: a step that persists, the middle comparison's base raised)",
+   "runs": 100,
+   "shares": {
+    "K": {
+     "passed": 1.0
+    },
+    "S": {
+     "contradicted": 1.0
+    },
+    "E1": {
+     "supported": 1.0
+    },
+    "E2": {
+     "supported": 1.0
+    },
+    "T after E1": {
+     "not ruled (C not strict at 8 in both name orders)": 0.15,
+     "unresolved": 0.85
+    },
+    "T after E2": {
+     "not ruled (C not strict at 8 in both name orders)": 0.15,
+     "unresolved": 0.85
+    }
+   },
+   "comparisons contradicting, share of runs": {
+    "S N1 more rounds, 3 over 2": 1.0
+   },
+   "comparisons not read, share of runs": {
+    "K B 14": 1.0,
+    "K B 21": 1.0,
+    "K B 4": 1.0,
+    "K B 7": 1.0,
+    "K N2a 7": 1.0,
+    "K N2b 7": 1.0,
+    "K N3 7": 1.0,
+    "S N1 more rounds, 4 to 8 over 2 and 3": 1.0,
+    "S N1 more rounds, 9 to 21 over 2 to 8": 1.0,
+    "S N2a an assigned known round": 1.0
+   },
+   "S under round 2's rule (without S N1 more rounds, 3 over 2, at ALPHA / 7)": {
+    "passed": 1.0
+   }
+  }
+ ],
+ "readability rule: chance of stopping a pin": {
+  "0.005": {
+   "at the smoke run (54 calls)": 8e-06,
+   "after B's and the short arms' first 400 calls": 0.0
+  },
+  "0.01": {
+   "at the smoke run (54 calls)": 0.00021,
+   "after B's and the short arms' first 400 calls": 0.0
+  },
+  "0.02": {
+   "at the smoke run (54 calls)": 0.004487,
+   "after B's and the short arms' first 400 calls": 0.000212
+  },
+  "0.03": {
+   "at the smoke run (54 calls)": 0.022764,
+   "after B's and the short arms' first 400 calls": 0.019596
+  },
+  "0.05": {
+   "at the smoke run (54 calls)": 0.132049,
+   "after B's and the short arms' first 400 calls": 0.53203
+  }
+ },
+ "words": {
+  "calls parsed per pin": {
+   "google/gemini-4-argon": 2898,
+   "qwen/qwen3.8-max-0902": 2898,
+   "anthropic/claude-sonnet-5.5": 2898
+  },
+  "course calls whose options line says 'not told which at the start' (E2's and N2b's after the telling), and the rest 'you have not been told which', on the three pins": [
+   1440,
+   7200
+  ],
+  "the fast path's views equal view_of's, every call of one run": true,
+  "texts checked: the same in both worlds exactly where no untried act or telling of it is shown": 2212,
+  "paraphrase pairs with every fact equal and no base sentence": 3000,
+  "B's words at FREEZE-10's 11 rounds equal FREEZE-10's U words, letter for letter": 400,
+  "C's words are FREEZE-10's": true
+ },
+ "agents through the harness": [
+  {
+   "agent": "M, the witness (worst case, 8 > 5 > 2)",
+   "pin": "google/gemini-4-argon",
+   "records": 2898,
+   "summary": {
+    "K": "passed",
+    "S": "passed",
+    "E1": "supported",
+    "E2": "supported",
+    "T after E1": "supported",
+    "T after E2": "supported"
+   },
+   "asserted": [
+    "E1",
+    "E2",
+    "K",
+    "S",
+    "T after E1",
+    "T after E2"
+   ],
+   "asserted equal to the fast path (no draw)": true
+  },
+  {
+   "agent": "O, the witness with the order 5 > 8 > 2",
+   "pin": "qwen/qwen3.8-max-0902",
+   "records": 2898,
+   "summary": {
+    "K": "passed",
+    "S": "passed",
+    "E1": "supported",
+    "E2": "supported",
+    "T after E1": "no turn predicted (C strict at 5: order_rests)",
+    "T after E2": "no turn predicted (C strict at 5: order_rests)"
+   },
+   "asserted": [
+    "E1",
+    "E2",
+    "K",
+    "S",
+    "T after E1",
+    "T after E2"
+   ],
+   "asserted equal to the fast path (no draw)": true
+  },
+  {
+   "agent": "count lock (the option chosen most; tellings not taken in)",
+   "pin": "anthropic/claude-sonnet-5.5",
+   "records": 2898,
+   "summary": {
+    "K": "passed",
+    "S": "passed",
+    "E1": "supported",
+    "E2": "contradicted",
+    "T after E1": "contradicted",
+    "T after E2": "not ruled (the exit in belief not supported)"
+   },
+   "asserted": [
+    "E1",
+    "E2",
+    "K",
+    "S",
+    "T after E1",
+    "T after E2"
+   ],
+   "asserted equal to the fast path (no draw)": true
+  },
+  {
+   "agent": "prior-narrowing reader (rho 0.1 a round)",
+   "pin": "google/gemini-4-argon",
+   "records": 2898,
+   "summary": {
+    "K": "contradicted",
+    "S": "passed",
+    "E1": "supported",
+    "E2": "supported",
+    "T after E1": "supported",
+    "T after E2": "supported"
+   },
+   "asserted": [
+    "K"
+   ],
+   "asserted equal to the fast path (no draw)": false
+  },
+  {
+   "agent": "first-listed reader",
+   "pin": "qwen/qwen3.8-max-0902",
+   "records": 2898,
+   "summary": {
+    "K": "passed",
+    "S": "contradicted",
+    "E1": "supported",
+    "E2": "supported",
+    "T after E1": "contradicted",
+    "T after E2": "contradicted"
+   },
+   "asserted": [
+    "E1",
+    "E2",
+    "K",
+    "S",
+    "T after E1",
+    "T after E2"
+   ],
+   "asserted equal to the fast path (no draw)": true
+  },
+  {
+   "agent": "declining every call",
+   "pin": "anthropic/claude-sonnet-5.5",
+   "records": 2898,
+   "summary": {
+    "K": "not testable (fewer than 10 start probes read)",
+    "S": "not testable (fewer than 10 start probes read)",
+    "E1": "not testable (fewer than 10 start probes read)",
+    "E2": "not testable (fewer than 10 start probes read)",
+    "T after E1": "not testable (fewer than 10 start probes read)",
+    "T after E2": "not testable (fewer than 10 start probes read)"
+   },
+   "asserted": [
+    "E1",
+    "E2",
+    "K",
+    "S",
+    "T after E1",
+    "T after E2"
+   ],
+   "asserted equal to the fast path (no draw)": true
+  },
+  {
+   "agent": "history-length explorer, 0.02 + 0.04 a round",
+   "pin": "google/gemini-4-argon",
+   "records": 2898,
+   "summary": {
+    "K": "passed",
+    "S": "contradicted",
+    "E1": "supported",
+    "E2": "supported",
+    "T after E1": "supported",
+    "T after E2": "supported"
+   },
+   "asserted": [
+    "S"
+   ],
+   "asserted equal to the fast path (no draw)": false
+  },
+  {
+   "agent": "word reader, tries 0.3 more reworded",
+   "pin": "qwen/qwen3.8-max-0902",
+   "records": 2898,
+   "summary": {
+    "K": "passed",
+    "S": "contradicted",
+    "E1": "supported",
+    "E2": "supported",
+    "T after E1": "not ruled (C not strict at 8 in both name orders)",
+    "T after E2": "not ruled (C not strict at 8 in both name orders)"
+   },
+   "asserted": [
+    "S"
+   ],
+   "asserted equal to the fast path (no draw)": false
+  },
+  {
+   "agent": "M trembling 0.05",
+   "pin": "anthropic/claude-sonnet-5.5",
+   "records": 2898,
+   "summary": {
+    "K": "passed",
+    "S": "passed",
+    "E1": "supported",
+    "E2": "supported",
+    "T after E1": "supported",
+    "T after E2": "supported"
+   },
+   "asserted": [
+    "E1",
+    "E2",
+    "K",
+    "S"
+   ],
+   "asserted equal to the fast path (no draw)": false
+  }
+ ],
+ "refusals": [
+  {
+   "check": "FROZEN.sha256 missing (this folder before its freeze)",
+   "refused": "refused: no FROZEN.sha256 in experiments/formations-that-read/lock-scl: SCL is not frozen (FREEZE-12.md, section 15); nothing was done"
+  },
+  {
+   "check": "FROZEN.sha256 naming a file's wrong hash",
+   "refused": "refused: frozen files differ from FROZEN.sha256: ['experiments/formations-that-read/lock-scl/results/dry-run.json'] (FREEZE-12.md, section 15); nothing was done"
+  },
+  {
+   "check": "FROZEN.sha256 not listing a file the freeze requires",
+   "refused": "refused: FROZEN.sha256 does not list ['experiments/formations-that-read/lock-scl/results/dry-run.json'] (FREEZE-12.md, section 15); nothing was done"
+  },
+  {
+   "check": "any module of the folder under python3 -O",
+   "refused": "each of the 5 refuses to load"
+  },
+  {
+   "check": "a course's logged prompt not the one its records rebuild",
+   "refused": "records whose logged prompt is not the one their call rebuilds: ['scl|google/gemini-4-argon|E1|up|o0|00|r05']"
+  },
+  {
+   "check": "a logged answer the parser does not read from its response",
+   "refused": "scl|google/gemini-4-argon|B|up|o0|00|p02: the logged answer is not the one the parser reads from its response"
+  },
+  {
+   "check": "an enlarged log: a record not in the plan",
+   "refused": "refusing an enlarged log: 1 calls not in the plan"
+  },
+  {
+   "check": "a run not read whole",
+   "refused": "r-short: not read whole: B; the reading reads a whole run only (FREEZE-12.md, section 7); `status` shows what is left; nothing was written"
+  },
+  {
+   "check": "a course's round logged before the round it shows",
+   "refused": "scl|google/gemini-4-argon|B|up|o0|00|r03: its course's round 2 (scl|google/gemini-4-argon|B|up|o0|00|r02) has no record before it: a course's record logged before an earlier round of its course, which no run in the plan's order leaves (FREE"
+  },
+  {
+   "check": "a log of a family off the frozen pins (N5's sibling)",
+   "refused": "qwen/qwen3.8-flash is not a frozen pin: ['google/gemini-4-argon', 'qwen/qwen3.8-max-0902', 'anthropic/claude-sonnet-5.5']"
+  },
+  {
+   "check": "a command for a family off the frozen pins",
+   "refused": "qwen/qwen3.8-flash is not a frozen pin: ['google/gemini-4-argon', 'qwen/qwen3.8-max-0902', 'anthropic/claude-sonnet-5.5']"
+  },
+  {
+   "check": "a course record whose rounds show an answer other than the one read (reported, not refused)",
+   "refused": "flagged 1; a course whose rounds match is not"
+  },
+  {
+   "check": "a course's call whose earlier round has no record",
+   "refused": "RuntimeError: RuntimeError at scl|google/gemini-4-argon|E2|up|o0|00|r04: scl|google/gemini-4-argon|E2|up|o0|00|r04: its course's round 2 (scl|google/gemini-4-argon|E2|up|o0|00|r02) has no record before it"
+  },
+  {
+   "check": "a second readout of a folder",
+   "refused": "r-once: its readout (verdicts.json) is written, once (FREEZE-12.md, section 7); nothing was read"
+  }
+ ],
+ "commands": [
+  {
+   "check": "run before any smoke run",
+   "result": "no smoke run for google/gemini-4-argon: run `smoke` first; no call was made"
+  },
+  {
+   "check": "a smoke run that passes",
+   "result": "54 calls, projecting 2898; readability True"
+  },
+  {
+   "check": "smoke where the latest smoke run passed",
+   "result": "no smoke run of google/gemini-4-argon is needed: its latest, on these frozen files, passed and the readability rule lets the run start, so another could release nothing (FREEZE-12.md, section 8); no call was made"
+  },
+  {
+   "check": "the arms asked at a parallel above 1",
+   "result": "a course's calls carry its earlier rounds, so the arms run at --parallel 1 (FREEZE-12.md, section 6); no call was made"
+  },
+  {
+   "check": "an unknown condition",
+   "result": "unknown condition in C,N5; known: C, B, E1, N2a, E2, N2b, N3; no call was made"
+  },
+  {
+   "check": "verdicts on a run not read whole",
+   "result": "google__gemini-4-argon: not read whole: B, E1, N2a, E2, N2b, N3; the reading reads a whole run only (FREEZE-12.md, section 7); `status` shows what is left; nothing was written"
+  },
+  {
+   "check": "run on a log cut short",
+   "result": "google__gemini-4-argon: {'calls.jsonl': {'last line': ['no final newline', 'does not read'], 'lines before the last that do not read': []}}: a write cut short. `mend --family PIN` moves each such log's last line to the .cut file beside it a"
+  },
+  {
+   "check": "the arms killed, the logs cut and mended, and resumed at parallel 1",
+   "result": "767 records before the resume, 3048 after; 150 calls made again; no round shows an answer other than the one read; {'K': 'passed', 'S': 'passed', 'E1': 'supported', 'E2': 'supported', 'T after E1': 'supported', 'T after E2': 'supported'}"
+  },
+  {
+   "check": "a second readout",
+   "result": "google__gemini-4-argon: its readout (verdicts.json) is written, once (FREEZE-12.md, section 7); nothing was read"
+  },
+  {
+   "check": "run after the readout",
+   "result": "google/gemini-4-argon's readout (verdicts.json) is written: no further call of the pin is made (FREEZE-12.md, section 7); no call was made"
+  },
+  {
+   "check": "smoke after the readout",
+   "result": "google/gemini-4-argon's readout is written: no further call of the pin is made; no call was made"
+  },
+  {
+   "check": "a smoke run with one answer in six unreadable",
+   "result": "stops True; readability {'unreadable': 9, 'calls': 54, 'lower bound': 0.089798, 'short courses read whole at that rate': 0.517565, 'starts': False}"
+  },
+  {
+   "check": "run where the readability rule stops the pin",
+   "result": "qwen/qwen3.8-max-0902's answers cannot be read often enough: {'unreadable': 9, 'calls': 54, 'lower bound': 0.089798, 'short courses read whole at that rate': 0.517565, 'starts': False} (the readability rule, FREEZE-12.md, section 8); no cal"
+  },
+  {
+   "check": "run after a smoke run a filter stopped",
+   "result": "anthropic/claude-sonnet-5.5's latest smoke run (anthropic__claude-sonnet-5.5-<time>) stopped, a stop of the run, which a later smoke run that passes lifts (FREEZE-12.md, section 8); no call was made"
+  },
+  {
+   "check": "a command while another holds the pin's lock",
+   "result": "another command of anthropic/claude-sonnet-5.5 is running, holding anthropic__claude-sonnet-5.5.lock: one command of a pin at a time (FREEZE-12.md, section 8); nothing was done"
+  }
+ ],
+ "estimate": {
+  "google/gemini-4-argon": {
+   "calls": {
+    "C": 18,
+    "B": 1200,
+    "E1": 336,
+    "N2a": 336,
+    "E2": 336,
+    "N2b": 336,
+    "N3": 336
+   },
+   "tokens_in": 635384,
+   "usd_low": 2.72,
+   "usd_high": 30.25,
+   "tokens_in_by_condition": {
+    "C": 1148,
+    "B": 327312,
+    "E1": 58692,
+    "N2a": 58692,
+    "E2": 63552,
+    "N2b": 63552,
+    "N3": 62436
+   }
+  },
+  "qwen/qwen3.8-max-0902": {
+   "calls": {
+    "C": 18,
+    "B": 1200,
+    "E1": 336,
+    "N2a": 336,
+    "E2": 336,
+    "N2b": 336,
+    "N3": 336
+   },
+   "tokens_in": 635384,
+   "usd_low": 2.14,
+   "usd_high": 18.66,
+   "tokens_in_by_condition": {
+    "C": 1148,
+    "B": 327312,
+    "E1": 58692,
+    "N2a": 58692,
+    "E2": 63552,
+    "N2b": 63552,
+    "N3": 62436
+   }
+  },
+  "anthropic/claude-sonnet-5.5": {
+   "calls": {
+    "C": 18,
+    "B": 1200,
+    "E1": 336,
+    "N2a": 336,
+    "E2": 336,
+    "N2b": 336,
+    "N3": 336
+   },
+   "tokens_in": 635384,
+   "usd_low": 2.72,
+   "usd_high": 30.25,
+   "tokens_in_by_condition": {
+    "C": 1148,
+    "B": 327312,
+    "E1": 58692,
+    "N2a": 58692,
+    "E2": 63552,
+    "N2b": 63552,
+    "N3": 62436
+   }
+  }
+ },
+ "code_hashes": {
+  "experiments/formations-that-read/lock-scl/scl_design.py": "092051ce22321dff07a6ba4d2fc56c24a5198569b6fbd549bd5b262217c21281",
+  "experiments/formations-that-read/lock-scl/scl_dry_run.py": "7ba3ce5f8a42e8a54e130c0ee619795775993b0373ee5a0b6318bfdb29183543",
+  "experiments/formations-that-read/lock-scl/scl_rule.py": "011477103ee22263e458c707f061e742f47d26e2c5b40731a49932703d7f1de5",
+  "experiments/formations-that-read/lock-scl/scl_run.py": "6f9213e1cc84a38369b314bb590e33cfad47e36ad01ba715874c64e4ec726e65",
+  "experiments/formations-that-read/lock-scl/scl_stage0.py": "39ec9d7c45c0a376c3d4256ce0af251b245f40c3ff7f4b885bceb1ed2130c32a",
+  "experiments/formations-that-read/lock-scl/write_frozen.py": "6eb86fdd0881474c2d8eadfed57fec9dc24bc08f973b699bec45afc26dab1a45",
+  "experiments/formations-that-read/told-tr1/tr1_design.py": "60219e117fa1d33ef19c73f44067edc71c7008ad1c2ee920c665a4875c5b66fc",
+  "experiments/formations-that-read/told-tr1/tr1_rule.py": "8bd7534212bfe9b19ec4853f0a285bfb593a3e5910e76695cf0ebbf1453c8560",
+  "experiments/formations-that-read/told-tr1/tr1_run.py": "bb959cf9c2180358a0e6decf8e219ef892cace1e83baf4fbdb90ff4c17ad39df",
+  "experiments/formations-that-read/told-tr1a/tr1a_design.py": "af1dcdb1c76549aee84d8019f2034211c8dd0d5a3791e4c6dd2f653c38a2e9e4",
+  "experiments/formations-that-read/told-tr1a/tr1a_rule.py": "1dfaeabe31af3191b5859c701c81082c117798905f7ce4aee7c29c66d3a6936d",
+  "experiments/formations-that-read/told-tr1a/tr1a_run.py": "37268591baafab28751c6d908b9d6cf1d3924ef79416247a565e5732019ca9f4",
+  "experiments/formations-that-read/told/PINS.json": "7feb28b92d1fa286daa6ccec5e874564d7083fe0b1c3fd26bb3d7ff1f3714b86",
+  "experiments/formations-that-read/told/client.py": "675b466dd5ca4f9b368a966a00c69df731052d6a28ea72970e48d51a49cf18c3",
+  "experiments/formations-that-read/told/conditions.py": "d534dd84eafb00d8fdaf594fe87b6be90b14dcde9b156f88cf86688cea04509a",
+  "experiments/formations-that-read/told/prompts.py": "5bd6351e1764017cc9f3797e20cf0ab290a9a995e6af26f78b340d0a4009f2ea",
+  "experiments/formations-that-read/told/rule.py": "d211e36c99fd4eb020b2c32f17cccf8bf48b8b638882fc4de8073f1c0ca859c7",
+  "experiments/formations-that-read/told/run.py": "4e9956caab24c053ba217b2a0a6eaa7e8c6dbbebbf4295bace7446fd632ae3f7",
+  "experiments/formations-that-read/told/verdicts.py": "44a89fb5dbe2c2d9fb63736c9dd687c749d79272dbd862d106a6fa8c5a80cdec",
+  "experiments/formations-that-read/tr1.json": "d74cd24f43d08626fe3ba3d159823884ddc4ec20a873e2bcef0365bbd39d51fe",
+  "experiments/formations-that-read/tr1.py": "dd75707c1a44a300e419b4bd0dc7cbff9c83e1a71f874cf8e68d3a42e28ee17f",
+  "experiments/formations-that-read/tr8.py": "50650cc538da6494c3122d78b8f8d2244ef40b5c4356b0ace23eb92c2aefed72",
+  "experiments/formations-that-read/tr_rr.py": "8ee9bef671ee5198f3eeea0421c6dbdd87de473fce974b672dd2c5e44a047ef8"
+ },
+ "code_unchanged_during_the_run": true,
+ "ok": true
+}

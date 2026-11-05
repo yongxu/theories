@@ -378,11 +378,11 @@ That a tradition "is" the account, or the account a tradition's; that agreement 
 
 Each dynamic's `forbids` field is checked for reach. Where a forbidden case could be met but no test is designed, a design is drafted and frozen. Freezing is not Ren's; any run with model calls or downloads is. Candidates the readers point to:
 
-- **T7's field test** of reform events. Its Forbids names one, and 02 Open asks for it.
-- **A critical-mass test** on recorded adoption data. This is Schelling and Granovetter's own domain, and it is only a test if the critical mass is located before the data, by `critical_mass_iff`'s inequality.
-- **A hysteresis test** on existing yeast or fish data, after CY. The threshold must be fixed before the series is read.
-- **A self-confirming-lock test on agents**, from `rests_of_unrefuted`'s witness: an untried act or a reading from outside should leave the lock, and nothing else should.
-- **T1 with a need measured in advance** (02 Open).
+- **T7's field test** of reform events. Its Forbids names one, and 02 Open asks for it. Claimed as T7F (5 November 2026).
+- **A critical-mass test** on recorded adoption data. This is Schelling and Granovetter's own domain, and it is only a test if the critical mass is located before the data: at the shapers' share `(c − lo)/(hi − lo)` (`critical_iff`), in the regime `lo < c < hi` that `critical_mass_iff` fixes. (Corrected 5 November 2026: this line named `critical_mass_iff`'s inequality as the location, which gives only the regime.) Claimed as CMT.
+- **A hysteresis test** on existing yeast or fish data, after CY. The threshold must be fixed before the series is read. No row, holding so far (5 November 2026) until CY lands: until CY states a band with distinct collapse and recovery thresholds, there is no law for it to refute. The limit lapses when CY lands.
+- **A self-confirming-lock test on agents**, from `rests_of_unrefuted`'s witness: an untried act or a reading from outside should leave the lock, and nothing else should. Claimed as SCL; FREEZE-10 (TR1A) is built to the same witness and does not test its exits.
+- **T1 with a need measured in advance** (02 Open). Offered by the coordinator to the owner of ED2 and ED3 as T1N, and not this plan's.
 
 Each design names who decides its verdict, a family that neither wrote nor read the theory, as RF's freezes do.
 
