@@ -153,7 +153,7 @@
   },
   "next_delta": {
     "en": "Readers who learn; a cost changing with the share; mutation with drift and the time to leave the lock; the generic lock at a start read there, upper_strictly and present_along_course lifted into RuleCapture (rule 9, its owner's call); a run of CMT's frozen test of the critical mass on laboratory stag hunts (experiments/critical-mass-located); an independent review by a person.",
-    "zh": "会学之读者；随份额而变之成本；带漂移之变异与离锁之时；彼处所读起点之一般锁定、upper_strictly 与 present_along_course 提入 RuleCapture（规则 9，由其所有者定）；CMT 所冻结之临界质量之验于实验室猎鹿博弈之运行（experiments/critical-mass-located）；人之独立审查。"
+    "zh": "会学之读者；随份额而变之成本；带漂变之变异与离开锁定之时；彼处所读起点之一般锁定、upper_strictly 与 present_along_course 提入 RuleCapture（规则 9，由其所有者定）；CMT 所冻结之临界质量之验于实验室猎鹿博弈之运行（experiments/critical-mass-located）；人之独立审查。"
   },
   "correspondence": {
     "en": "Where lo < c < hi the model is the stag hunt in which the second strategy's payoff does not depend on the partner: a shaper meeting a shaper leaves a + p + hi, a shaper meeting an other a + p + lo, an other meeting anyone a + p + c. The critical mass is its mixed equilibrium, at the shapers' share (c − lo)/(hi − lo), and risk dominance compares hi + lo with 2c (Harsanyi and Selten 1988; Skyrms 2004). Both readings give each other a + c + p, so the rule read is the frequency-weighted mean of the two readings up to a common factor, and reading at every step is discrete-time replicator selection up to a lag of one step (Hofbauer and Sigmund 1998). The threshold is the critical mass of binary choices with externalities (Schelling 1973; Schelling 1978, chapters 3 and 7; Granovetter 1978, whose thresholds are distributed where here there is one; Oliver, Marwell and Teixeira 1985, for the term), and the lock is the lock-in of increasing returns (Arthur 1989), here decided by the start rather than by random arrivals; in the limit of rare mutation against a deterministic dynamic the risk-dominant state is selected (Kandori, Mailath and Rob 1993; Young 1993), and drawn one member at a time the Moran criterion parts from it under strong selection (drawn-shaping-drawn-one-at-a-time). A biological comparator for readers favouring their own kind is the greenbeard (Gardner and West 2010; only the bibliographic record verified). Read on the meta-attractor (theories/meta-attractor), this joins its second order, selection for control over selection, to its closed loop. The lock half is near-definitional (RuleCapture's locked_stays and locked_not_below at a start read there), and drawn_reads_iff is a two-step composition (ClosedCapture.Drawn.pool_reads_iff, then shaped_le_iff); what is new on the spine is the critical-mass computation, which is elementary.",
@@ -376,7 +376,7 @@
     },
     {
       "en": "6 November 2026, board item RUN6: next_delta's zh said noise and long-term states where its en says mutation with drift and the time to leave the lock; the zh brought to the en. The law is unchanged.",
-      "zh": "2026年11月6日，看板项 RUN6：next_delta 之中文作噪声与长期状态，而其英文作带漂移之变异与离锁之时；中文从英文。此律不变。"
+      "zh": "2026年11月6日，看板项 RUN6：next_delta 之中文作噪声与长期状态，而其英文作带漂变之变异与离开锁定之时；中文从英文。此律不变。"
     }
   ]
 }
