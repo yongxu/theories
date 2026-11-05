@@ -42,7 +42,7 @@ import run as RUN                # noqa: E402
 
 SEED = "T1N-dry-run-2026-11-05"
 ARCHIVES = 40                   # synthetic archives a world and speed
-LAKES, BIG = 300, 900           # lakes an archive; and in the report of a plain refutation's reach
+LAKES, BIG = 300, 900           # lakes an archive; and in the report of the strongest refutation's reach
 YEARS = range(1990, 2026)
 A, K, S, C = 60.0, 1.5, 0.70, 0.03     # with these, a lake exploited above 0.3 a year keeps no level
 SIGMA_R, CV, KNOCK = 0.8, 0.25, 0.02
@@ -294,14 +294,14 @@ def worlds(chk):
             out[world][f"speed {speed}"] = cell
             did = tallies.get(DID, 0) + tallies.get(DID_V2, 0)
             if w["family"] == "no need" or (w["family"] == "need misplaced" and world != "need falls"):
-                chk(f"worlds: {w['family']}", f"{world} at speed {speed}: T1's forbidden case found not to occur in at most "
+                chk(f"worlds: {w['family']}", f"{world} at speed {speed}: the positive outcome in at most "
                     f"{NO_NEED_POSITIVE_MAX} of {ARCHIVES}", did <= NO_NEED_POSITIVE_MAX, tallies)
             if world in ("open", "unrecorded", "unsurveyed", "static labels", "estimates widen",
                          "estimates inflate at low density", "intervals understate the error", "inflated and understated"):
                 chk("worlds: confounds", f"{world} at speed {speed}: no refutation in its strongest form where T1 holds",
                     tallies.get("refuted", 0) <= NO_NEED_POSITIVE_MAX, tallies)
     t = out["need"]["speed 0.0"]["V1"]           # the draft's bar, set before any of these results; 0.03 reported (§8)
-    chk("worlds: power", f"need with no managers: T1's forbidden case found not to occur in at least 30 of {ARCHIVES}",
+    chk("worlds: power", f"need with no managers: the positive outcome in at least 30 of {ARCHIVES}",
         t.get(DID, 0) + t.get(DID_V2, 0) >= 30, t)
     for world, speeds in (("renewal below the floor", (0.1, 0.03, 0.0)), ("weak depensation", (0.0,))):
         for speed in speeds:
@@ -374,9 +374,10 @@ def scripted(chk):
     falling_above = [lk(600 + i, 3.0, 0.3) for i in range(20)]
     v = v1([lk(i, 0.5, 0.2) for i in range(12)] + falling_above)["verdict"]
     chk("rules: the separation", "below the need fell, but the lakes above fell as often: not decided",
-        v.startswith("not decided") and "above it fell as often" in v, v)
+        v.startswith("not decided") and "not more often than the lakes above it by Fisher's test (20 of 20)" in v, v)
     v = v1([lk(i, 0.5, 0.2) for i in range(12)])["verdict"]
-    chk("rules: the separation", "no resolved lake above the need: not the positive outcome", not v.startswith(t1n.SEPARATED), v)
+    chk("rules: the separation", "no resolved lake above the need: not decided, and said so",
+        not v.startswith(t1n.SEPARATED) and "no lake above it is resolved" in v, v)
     t = t1n.rows([lk(1, 0.5, 0.2, held=False)], y, last=2014)
     chk("rules: the premise", "a lake not shown to hold above the need before the cutoff: out",
         t[0].get("out", "").startswith("the premise not shown"), t)
@@ -490,11 +491,16 @@ def scripted(chk):
         l["adults"][2013], l["adults"][2017] = (0.5, 0.45, 0.55), (0.35, 0.14, 0.56)
     v = v1(held_wide + above)["verdict"]
     chk("rules: the confounds", "unless the intervals understate the error, where widening them below LOW_LEVEL undoes it",
-        v.startswith("refuted unless the intervals understating the error at low density"), v)
+        v.startswith("refuted unless the intervals understate the error at low density (the widened reading"), v)
+    late_back = with_later(lk(701, 0.5, 0.48), 2020, 3.0)       # held below at the fate's survey, back above later
+    v = v1([lk(i, 0.5, 0.2) for i in range(12)] + above + [late_back])["verdict"]
+    chk("rules: V1 and V2", "a lake back above the need at a later survey within ten years is counted as come back",
+        v.startswith(t1n.SEPARATED) and "; 1 came back above the need within ten years" in v and "0 of them at the fate's survey" in v, v)
     sup = [lk(i, 0.5, 0.2) for i in range(12)] + above + [lk(700, 0.3, 3.0)]
     v = v1(sup)["verdict"]
     chk("rules: V1 and V2", "the positive outcome counts the lakes that came back, and V2's with its lake",
-        v.startswith(t1n.SEPARATED) and "1 came back above the need, 1 of them with every year of the lag surveyed (V2: S700)" in v
+        v.startswith(t1n.SEPARATED) and "1 came back above the need within ten years, before any recorded giving, 1 of them at "
+        "the fate's survey with every year of the lag surveyed (V2: S700)" in v
         and "causal role not shown" in v, v)
     t = t1n.rows([lk(20, 0.5, 0.2, label=STOCKED)], y, last=2014, labels=False)
     chk("rules: static labels", "where the labels are not per year, the label decides nothing", "out" not in t[0], t)
@@ -601,6 +607,28 @@ def reader_checks(chk):
             got = refusal(lambda: reader.read_all(tmp))
             chk("the reader", f"refuses {name}", want in got, got)
     chk("the reader", "codes and species in one form", reader.code(" 123456.0 ") == "123456" and reader.is_species(" WALLEYE "))
+    named = [{"id": "1", "name": "Worcester Lake", "county": "Price"}, {"id": "2", "name": "Purchase Lake", "county": "Price"},
+             {"id": "3", "name": "Crane Lake", "county": "Vilas"}, {"id": "4", "name": "CHASE LAKE", "county": " price "}]
+    chk("the reader", "the disclosure's lakes matched by county and whole words: not Purchase Lake, not another county's Crane",
+        reader.seen(named) == ["1", "4"] and reader.seen([{"id": "5"}]) is None, reader.seen(named))
+    with tempfile.TemporaryDirectory() as tmp:
+        tmp = Path(tmp)
+        reader.write_synthetic(lakes[:3], tmp)
+        p = tmp / reader.FILES["adults"]
+        rows = list(csv.DictReader(p.open()))
+        wide = dict(rows[0])
+        e = float(wide[reader.COLUMNS["adults"]["estimate"]])
+        wide[reader.COLUMNS["adults"]["lower"]], wide[reader.COLUMNS["adults"]["upper"]] = str(e * 0.1), str(e * 10)
+        with p.open("w", newline="") as f:
+            w = csv.DictWriter(f, fieldnames=list(rows[0]))
+            w.writeheader()
+            w.writerows([wide] + rows)
+        back, meta = reader.read_all(tmp)
+        lid, yr = reader.code(rows[0][reader.COLUMNS["adults"]["lake"]]), reader.year_of(rows[0][reader.COLUMNS["adults"]["year"]])
+        kept = back[lid]["adults"][yr]
+        chk("the reader", "a lake-year with two estimates is read from the more precise, and counted, in the reading and the facts",
+            meta["lake-years with more than one estimate, read from the most precise"] == 1 and kept[2] / kept[1] < 9
+            and reader.layout_facts(tmp)["lake-years with more than one estimate row"] == 1, (meta, kept))
     flat = [{"label": {2010: NATURAL, 2014: NATURAL}} for _ in range(40)]
     one = flat[:39] + [{"label": {2010: NATURAL, 2014: STOCKED}}]
     few = flat[:37] + [{"label": {2010: NATURAL, 2014: STOCKED}} for _ in range(3)]
@@ -619,6 +647,7 @@ def run_checks(chk):
     """run.py end to end on synthetic files, and its refusals on the inputs and on a second run."""
     lakes = archive("need", 0, 0.03)
     lakes[3] = dict(lakes[3], name="Worcester Lake", county="Price")
+    lakes[4] = dict(lakes[4], name="Purchase Lake", county="Price")
     with tempfile.TemporaryDirectory() as tmp:
         tmp = Path(tmp)
         reader.write_synthetic(lakes, tmp)

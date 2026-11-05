@@ -94,3 +94,28 @@
 ## Round 4: the same reader on round 3's fixes
 
 Reading 4f45e647e. Added while it read, at the coordinator's request, as a high by the coordinator's own rule: the combined distortion, a T1-true world, was refuted with no named confound at 900 lakes, about the field's size, in 32 of 40 archives, and no reading these records allow separates it. A plain "refuted" would then be a false sentence there. So every refutation now carries the residual clause "unless the estimates distorted at low density beyond what the doubled intervals cover (§13)". No plain *refuted* comes from this archive, and its strongest refutation carries that clause alone (§1, §7, §11, §13; `t1n.RESIDUAL`, `t1n.STRONGEST`). The dry run's counts are unchanged: what it counted as a plain refutation is now that strongest form. The limit lapses with each estimate's mark-and-recapture counts, or the agency's precision by lake and year, where they show the distortion absent.
+
+The reader read 4f45e647e and 1111a40bf, and reproduced both dry runs exactly. It found:
+- no verdict line that still reads as a plain refutation;
+- the strongest form worded truthfully in every world it tried;
+- no T1-true world refuted with no named confound at 300 lakes, in its tries with cohorts joining at four or five years, sparse surveys, frequent winterkills, and all of these together;
+- at most 3 positive outcomes in 40 from estimates deflated at low density.
+
+It reported 3 high, 3 medium, 1 low and 1 very low, by the coordinator's rule for this round.
+
+| id | sev | finding | how it was taken |
+|---|---|---|---|
+| N-51 | high | The positive line's "r came back above the need" counted only a lake's first later survey. It missed lakes the rule reads as recovered, and lakes back above the need at a later survey within ten years: the count was short in 77 of the dry run's 941 positive archives. | r now counts the lakes below the need with a survey wholly above it at any time from the reference to ten years after, before any recorded giving (`rows`' "back above the need"). The line says so: "r came back above the need within ten years, before any recorded giving, v of them at the fate's survey with every year of the lag surveyed (V2)" (§7). A scripted check holds a lake back above the need at a later survey. |
+| N-52 | high (latent) | "…but the lakes above it fell as often" was printed wherever Fisher's test failed or none above was resolved, and is false where the lakes above fell less often. | "…but not more often than the lakes above it by Fisher's test (k_a of n_a)", and "…but no lake above it is resolved" (§7, §11). Scripted checks hold both. |
+| N-53 | high (conditional) | Two rows for one lake and year were read without refusal, the last kept, and the layout step did not count them. | Decided now, since an addendum may not change a rule: the most precise estimate, the narrowest interval on the log scale, is read and the others counted, in the reading's record and in the layout facts (§9, §10). A reader check holds it. |
+| N-54 | medium | V1's fields "closed lakes alone" and "with the intervals widened at low density" kept a raw "refuted: …", which run.json would carry as if a verdict. | Both are named as readings before the clauses (§7). |
+| N-55 | medium | The low-density qualifier was mostly set by count, as connected waters' was before round 2's N-31. | It says its reason: "the widened reading too few to decide" or "not refuting" (§7, §11). |
+| N-56 | medium | `run.seen` failed silently where names but no county were read, and matched "chase" in "Purchase Lake". | `reader.seen` matches the county exactly and the names as whole words, case aside. Where no name is read, or no lake in the county matches, the run says so and computes nothing. The layout step lists the lakes it finds (§9, §10). A reader check holds the whole-word match. |
+| N-57 | low | "A clause this archive cannot remove" is false if R1's columns give the mark-and-recapture counts. | "These rules cannot remove" (§1, §7, §11), and the layout step records R1's columns that may give such counts (§10, §13). |
+| N-58 | very low | Two check labels and a comment kept the old outcome's name and "plain refutation", "the intervals understating the error" was not a clause, and the reading times had grown. | Reworded: "the intervals understate the error", and "the estimates are distorted". The reading times are restated: DESIGN 110 to 150 minutes, with §1 and §11 in thirteen to eighteen; README 4 to 6. |
+
+**Noted, not a finding.** *renewal lost in spells, lakes differ* uses ten-year spells. The reader's twenty-year version gave positive outcomes in 3, 17 and 26 of 40. The family is reported with no bound, so §8's rates stand as they are.
+
+## Round 5: the same reader on round 4's fixes
+
+Reading.

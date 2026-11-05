@@ -24,6 +24,9 @@ FILES, COLUMNS, LABELS, SPECIES = LAYOUT["files"], LAYOUT["columns"], LAYOUT["la
 OPTIONAL = set(LAYOUT["optional files"])
 OPTIONAL_COLUMNS = {tuple(x) for x in LAYOUT["optional columns"]}
 OPEN_TYPES = ("drainage", "drained", "spring", "impoundment", "flowage", "reservoir", "river")
+# Lakes whose fall-survey values a web search summary quoted to round 3's reader before the freeze (DESIGN.md,
+# section 9): Worcester Lake, and Crane and Chase Lakes, in Price County, matched by whole words, case aside.
+SEEN = {"county": "price", "names": ("worcester", "crane", "chase")}
 STRUCTURE = {"lake", "year", "label", "characteristics", "species", "type", "name", "county"}   # the layout step's
 
 
@@ -80,9 +83,11 @@ def read_all(folder):
     """Every lake the adult estimates name, with the other tables joined by the lake's code. Refuses a label
     layout.json does not map (so no label is read as natural by default), a missing required file, a present
     file whose rows name no lake of the estimates (the codes differ), and a stocking file with no row of the
-    species. Returns (lakes, meta): meta says whether the labels are read per year (some lake's label changes
-    across years) and how many rows each file matched."""
+    species. A lake and year with more than one estimate is read from the most precise, the narrowest interval
+    on the log scale, and counted. Returns (lakes, meta): meta says whether the labels are read per year (a share
+    of lakes changes category across years), how many rows each file matched, and the lake-years repeated."""
     lakes, skipped = {}, {"a blank year or acres": 0, "no estimate or interval": 0}
+    repeated = 0
     for row in table(folder, "adults"):
         label = row["label"].strip()
         if label not in LABELS:
@@ -99,6 +104,11 @@ def read_all(folder):
         if None in (est, lo, hi):
             skipped["no estimate or interval"] += 1
             continue
+        if yr in lk["adults"]:
+            repeated += 1
+            old = lk["adults"][yr]
+            if not (lo > 0 and old[1] > 0 and hi / lo < old[2] / old[1]):
+                continue                           # the more precise estimate kept; ties keep the first row
         lk["adults"][yr] = (est / acres, lo / acres, hi / acres)
         lk["label"][yr] = LABELS[label]
     matched = {}
@@ -160,7 +170,18 @@ def read_all(folder):
             if rs and not any(is_species(r["species"]) for r in rs):
                 raise SystemExit(f"no row of {FILES[kind]} names {SPECIES!r}: the species' text differs")
     labels = t1n.labels_per_year(lakes.values())
-    return lakes, {"labels per year": labels, "rows matched by lake code, of rows": matched, "rows skipped": skipped}
+    return lakes, {"labels per year": labels, "rows matched by lake code, of rows": matched, "rows skipped": skipped,
+                   "lake-years with more than one estimate, read from the most precise": repeated}
+
+
+def seen(lakes):
+    """The lakes SEEN names: in its county, with one of its words as a whole word of the lake's name, case aside.
+    None where no lake has a name, as where the records' name column was not read."""
+    if not any(lk.get("name") for lk in lakes):
+        return None
+    words = re.compile(r"\b(" + "|".join(SEEN["names"]) + r")\b")
+    return sorted(lk["id"] for lk in lakes if lk.get("county", "").strip().lower() == SEEN["county"]
+                  and words.search(lk.get("name", "").lower()))
 
 
 def layout(folder):
@@ -189,11 +210,14 @@ def layout_facts(folder, cutoff=t1n.CUTOFF):
             keep = {k: c for k, c in COLUMNS[kind].items() if k in STRUCTURE and c in (rd.fieldnames or [])}
             return [{k: row[c] for k, c in keep.items()} for row in rd]
     adults = rows_of("adults") or []
-    est, labs, chars = {}, {}, {}
+    est, labs, chars, names, pairs_seen, repeated = {}, {}, {}, {}, set(), 0
     for r in adults:
         lid, yr = code(r["lake"]), year_of(r["year"])
         if yr is None:
             continue
+        repeated += (lid, yr) in pairs_seen
+        pairs_seen.add((lid, yr))
+        names.setdefault(lid, {"id": lid, "name": (r.get("name") or "").strip(), "county": (r.get("county") or "").strip()})
         est.setdefault(lid, set()).add(yr)
         labs.setdefault(lid, set()).add(r["label"].strip())
         chars.setdefault(lid, set()).add((r.get("characteristics") or "").strip())
@@ -223,6 +247,13 @@ def layout_facts(folder, cutoff=t1n.CUTOFF):
             "water body types named": sorted(({t for s in chars.values() for t in s} | set(types.values())) - {""})[:60],
             "lakes recorded closed / open / unknown": [sum(1 for v in closed.values() if v is s) for s in (True, False, None)],
             "species texts": species, "rows naming a lake of the estimates, of rows": match,
+            "lake-years with more than one estimate row": repeated,
+            "the lakes of the disclosure (DESIGN.md, section 9), found by county and name":
+                (lambda ids: "not found: no lake's name was read" if ids is None else
+                 [[i, names[i]["name"], names[i]["county"]] for i in ids] or "not found: no lake matches")(seen(list(names.values()))),
+            "adult estimate columns that may give mark-and-recapture counts": [
+                c for c in (layout(folder).get("adults", {}).get("columns") or [])
+                if any(w in c.lower() for w in ("mark", "recap", "captur"))],
             "other stocking records (R5b) had": (Path(folder) / FILES["other"]).exists(),
             "lake types (R7) had": (Path(folder) / FILES["types"]).exists(),
             "last estimate year": last, "reference window": [t1n.FIRST_REF, end],

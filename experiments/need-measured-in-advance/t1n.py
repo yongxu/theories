@@ -43,8 +43,8 @@ KEPT = 0.25                   # persisted: the later estimate's ratio to the ref
 LABELS_SHARE = 0.05           # labels read per year where at least this share of lakes change category across surveys
 SEPARATED = "Refuted by's second form not met: the fates separated across the need"   # V1's positive outcome (§7)
 LOW_LEVEL, WIDEN = 2.0, 2.0   # the reading a refutation is checked against: intervals below LOW_LEVEL WIDEN as wide
-RESIDUAL = "the estimates distorted at low density beyond what the doubled intervals cover (DESIGN.md, section 13)"
-STRONGEST = "refuted unless " + RESIDUAL   # every refutation carries it: no reading these records allow rules it out
+RESIDUAL = "the estimates are distorted at low density beyond what the doubled intervals cover (DESIGN.md, section 13)"
+STRONGEST = "refuted unless " + RESIDUAL   # every refutation carries it: no reading these rules make rules it out
 SIDE_MIN = 20                 # the need must have at least this many of the fit's lake-years on each side
 
 
@@ -384,13 +384,21 @@ def rows(lakes, need_, first=FIRST_REF, last=None, floor=FLOOR, labels=True, lab
         x, lo, hi = lk["adults"][r]
         h = lk["harvest"].get(r, 0.0)
         below = below_read(lk, r, need_, floor)
+        back = None
+        if below:                                 # back above the need at a survey within GAP_MAX, before any giving
+            for t in sorted(u for u in years if r < u <= r + GAP_MAX):
+                if managed(lk, r, t, labels):
+                    break
+                if lk["adults"][t][1] >= need_:
+                    back = t
+                    break
         row.update({"ref": r, "fate year": f, "x": x, "x interval": [lo, hi], "h": h, "need": need_,
                     "premise shown by": list(held), "creel at the reference": r in lk["creel"],
                     "T1 predicts": "falls" if below else "persists",
                     "null predicts": "persists",
                     "below the point with the recorded draw": x < need_ + h,
                     "fate estimate": list(lk["adults"][f]), "below the need at the reference": below,
-                    "pending at the reference": pending(lk, r, floor),
+                    "pending at the reference": pending(lk, r, floor), "back above the need": back,
                     "closed": lk.get("closed"), "other stocking read": lk.get("other") is not None})
         row["fate"], row["fate by"] = fate_of(lk, r, f, need_, labels, label_alone)
         out.append(row)
@@ -413,7 +421,10 @@ def decide(below, above):
         if p is not None and p <= ALPHA:
             return (f"{SEPARATED}, below it {k} of {n} falling, more than chance allows and more often than above it "
                     f"({ka} of {na})"), nums
-        return "not decided: below the need more fell than the null allows, but the lakes above it fell as often", nums
+        if not na:
+            return "not decided: below the need more fell than the null allows, but no lake above it is resolved", nums
+        return (f"not decided: below the need more fell than the null allows, but not more often than the lakes above it "
+                f"by Fisher's test ({ka} of {na})"), nums
     if k <= n - c:
         return "refuted: the fates separated no better than by the null, on the null's side at 0.05", nums
     if 2 * k <= n and n >= N_REFUTE:
@@ -439,12 +450,13 @@ def v1(table, v2_=None, widened=None):
     make on its own reads "refuted unless ...": fish from connected waters (a lake that persisted is not a
     recorded seepage lake, and the closed lakes alone do not refute), unrecorded stocking (the other stocking
     records were not read for a lake that persisted), and the unsurveyed (counted as fallen, the lakes below
-    the need with no later estimate undo the refutation); and the intervals understating the error at low
-    density (`widened`, the same reading with every interval below LOW_LEVEL adults per acre WIDEN as wide on
-    the log scale, does not refute). Every refutation also carries RESIDUAL: estimates both inflated and too
-    narrow at low density refute T1's own world at the field's size, and no reading these records allow rules that
-    out, so the strongest refutation the archive can give is STRONGEST, with no named confound (DESIGN.md,
-    section 13)."""
+    the need with no later estimate undo the refutation); and the intervals understate the error at low density
+    (`widened`, the same reading with every interval below LOW_LEVEL adults per acre WIDEN as wide on the log
+    scale, does not refute, too few or not refuting). Every refutation also carries RESIDUAL: estimates both
+    inflated and too narrow at low density refute T1's own world at the field's size, and no reading these rules
+    make rules that out, so the strongest refutation these rules can give is STRONGEST, with no named confound (DESIGN.md,
+    section 13). The positive outcome's line counts the lakes below the need back above it at any survey within
+    GAP_MAX years, before any recorded giving."""
     inn = [r for r in table if "out" not in r]
     below = [r for r in inn if r["T1 predicts"] == "falls" and r["fate"] != "unresolved"]
     above = [r for r in inn if r["T1 predicts"] == "persists" and r["fate"] != "unresolved"]
@@ -463,15 +475,16 @@ def v1(table, v2_=None, widened=None):
     out["below: open lakes persisting more often than closed, p"] = float(fisher_greater(ko, no, kc, nc)) if no and nc else None
     if verdict.startswith(SEPARATED):
         out["p"] = float(tail_half(nums["below: resolved"], nums["below: fell"]))
-        back = sum(1 for r in below if r["fate estimate"][1] >= r["need"])
+        back = sum(1 for r in below if r["back above the need"] is not None)
         met = [m["id"] for m in v2_["lakes"]] if v2_ else []
-        verdict += (f"; {back} came back above the need, {len(met)} of them with every year of the lag surveyed (V2"
-                    + (": " + ", ".join(met) if met else "") + "); the need's causal role not shown")
+        verdict += (f"; {back} came back above the need within ten years, before any recorded giving, {len(met)} of them "
+                    f"at the fate's survey with every year of the lag surveyed (V2" + (": " + ", ".join(met) if met else "")
+                    + "); the need's causal role not shown")
     if verdict.startswith("refuted"):
         unless, kept = [], [r for r in below if r["fate"] == "persisted"]
         if any(r["closed"] is not True for r in kept):
             closed = decide([r for r in below if r["closed"] is True], [r for r in above if r["closed"] is True])[0]
-            out["closed lakes alone"] = closed
+            out["the closed lakes alone, read before the clauses"] = closed
             if not closed.startswith("refuted"):
                 few = closed.startswith("not decided: ") and f"fewer than {N_MIN}" in closed
                 unless.append("connected waters (the seepage lakes alone " + ("too few to decide)" if few else "not refuting)"))
@@ -487,9 +500,11 @@ def v1(table, v2_=None, widened=None):
             inn_w = [r for r in widened if "out" not in r]
             wide = decide([r for r in inn_w if r["T1 predicts"] == "falls" and r["fate"] != "unresolved"],
                           [r for r in inn_w if r["T1 predicts"] == "persists" and r["fate"] != "unresolved"])[0]
-            out["with the intervals widened at low density"] = wide
+            out["with the intervals widened at low density, read before the clauses"] = wide
             if not wide.startswith("refuted"):
-                unless.append("the intervals understating the error at low density")
+                few = wide.startswith("not decided: ") and f"fewer than {N_MIN}" in wide
+                unless.append("the intervals understate the error at low density (the widened reading "
+                              + ("too few to decide)" if few else "not refuting)"))
         reason = verdict.split(": ", 1)[1]
         verdict = (f"{STRONGEST}: {reason}" if not unless else
                    "refuted unless " + " or ".join(unless) + ", or " + RESIDUAL + ": " + reason)

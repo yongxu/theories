@@ -215,9 +215,8 @@
     "no need fitted": 0,
     "resolved lakes below the need, median": 10,
     "V1 with the label alone a fall": {
-     "second form not met": 21,
-     "not decided": 12,
-     "second form not met, V2 met": 7
+     "second form not met": 28,
+     "not decided": 12
     }
    },
    "speed 0.0": {
@@ -234,8 +233,7 @@
     "no need fitted": 0,
     "resolved lakes below the need, median": 20,
     "V1 with the label alone a fall": {
-     "second form not met": 30,
-     "second form not met, V2 met": 10
+     "second form not met": 40
     }
    }
   },
@@ -269,8 +267,7 @@
    },
    "speed 0.03": {
     "V1": {
-     "second form not met": 23,
-     "second form not met, V2 met": 3,
+     "second form not met": 26,
      "not decided": 14
     },
     "V2 met": 6,
@@ -2339,8 +2336,7 @@
    },
    "speed 0.0": {
     "V1": {
-     "second form not met": 38,
-     "second form not met, V2 met": 2
+     "second form not met": 40
     },
     "V2 met": 2,
     "renewal below the need beyond the fit at 0.05 (reported)": 0,
@@ -2506,9 +2502,8 @@
    },
    "speed 0.0": {
     "V1": {
-     "second form not met": 32,
-     "not decided": 7,
-     "second form not met, V2 met": 1
+     "second form not met": 33,
+     "not decided": 7
     },
     "V2 met": 2,
     "renewal below the need beyond the fit at 0.05 (reported)": 38,
@@ -2666,7 +2661,7 @@
    }
   }
  },
- "checks": 229,
+ "checks": 232,
  "checks by kind": {
   "rules: V1": 16,
   "rules: the separation": 2,
@@ -2678,12 +2673,12 @@
   "rules: the reference": 2,
   "rules: V2": 4,
   "rules: the confounds": 6,
-  "rules: V1 and V2": 1,
+  "rules: V1 and V2": 2,
   "rules: static labels": 1,
   "rules: the tail": 3,
   "rules: the renewal report": 1,
   "the need": 7,
-  "the reader": 12,
+  "the reader": 14,
   "the run": 10,
   "the chain": 9,
   "worlds: confounds": 32,
@@ -2693,12 +2688,12 @@
   "worlds: the renewal report": 3
  },
  "failed": [],
- "CPU seconds": 361.7,
+ "CPU seconds": 310.0,
  "code hashes": {
-  "experiments/need-measured-in-advance/t1n.py": "f27adfac7a2e0b3e6a390bc50032f7ba48b1a2a5ae8c801636344e69a76c4a87",
-  "experiments/need-measured-in-advance/reader.py": "5fb80d956fa87a5ef2a7b1e940bb2dde36b2066fe468f445813d166759b9e0af",
-  "experiments/need-measured-in-advance/run.py": "c5dd48536f9c7df2bf34cf566fc7dd6be0d40bda62ff52d938003c92c41429f0",
-  "experiments/need-measured-in-advance/dry_run.py": "e6e10105b6cc3bb4d573bf6159786bc0f6c955e5843fffd58c198c7337a0587c",
+  "experiments/need-measured-in-advance/t1n.py": "a832033b0a8c81751ff90ee363c18568b2edd192d5b3b81815861d400d4ef926",
+  "experiments/need-measured-in-advance/reader.py": "1d96f2a2d52849349e39b6e4fe249ed3ace2fea06389224e61b6e92f896d936b",
+  "experiments/need-measured-in-advance/run.py": "d4765585c7d34c9beb20a028e9d129ade7f107108cbaa00aa90146d459ecb0c9",
+  "experiments/need-measured-in-advance/dry_run.py": "61defc089b8520832c129ffc8367cd31c03a30941c3f5745d12bb9495739c585",
   "experiments/need-measured-in-advance/layout.json": "5cf8f04439f12c3493b2be6abcd75853a37c85ddb092f5abb0ec45e7077f7e7f"
  },
  "code unchanged during the run": true
