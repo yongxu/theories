@@ -142,4 +142,16 @@ It reported 2 high (one conditional), 2 medium, 3 low and 1 very low, by the coo
 
 ## Round 6: the same reader on round 5's fixes alone
 
-Reading.
+Reading c36ff4baf. The reader reproduced the dry run exactly in a gate slot (237 checks, none failed), matched all 216 cells of §8's two tables to the record, and found round 5's eight rows done as they say. In the three relabelled worlds at all four speeds, V2 was the same under both readings and met in neither. In the frozen reading, at 0.03 and with no managers, it read:
+- 941 positive lines in §7's form, with r equal to the rows' count, v at most r, and every named V2 lake meeting V2's definition against its own records;
+- 348 refutations, each *refuted unless* with the residual clause;
+- every qualifier's reason matching its reading, none of the "not refuting" ones resting on the count.
+
+It found nothing of high or medium severity, so by the rule the rounds stop here. It reported 1 low and 1 very low, taken after it and not read again.
+
+| id | sev | finding | how it was taken |
+|---|---|---|---|
+| N-67 | low | Read at its largest catch, a lake-year surveyed twice reaches the floor more often than one surveyed once. Where repeats are more common on one side of 2012, the renewal report can come out beyond the fit with no move in the need, and the layout facts gave one total. | The layout step counts the repeated fall-survey lake-years up to 2012 and after it, from the lake and year columns alone, and §9 says how the report can lean (§9, §10). A reader check holds the split. The dry run after both: 238 checks, none failed, every world's cell as before. |
+| N-68 | very low | The repeat counts said "lake-years" but counted extra rows, and the facts counted rows with a blank year. | Each lake-year is counted once, in the reading's record and the layout facts, and a blank year not at all. The facts count by lake and year alone, so a row with a blank catch counts there though the reading skips it, as §10 says. A reader check holds it. |
+
+**Noted, not a finding.** The message of commit 151cec279 says "five cells restored"; three were, as c36ff4baf's message and round 5's N-60 row say.

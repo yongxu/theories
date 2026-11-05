@@ -205,7 +205,7 @@ None qualifies the positive outcome: each can only make a lake below the need pe
 
 ## 8. Dry runs
 
-[`dry_run.py`](dry_run.py) builds synthetic archives of 300 lakes, 1990 to 2025, and reads each with the frozen rules. Its record is [`results/dry-run.json`](results/dry-run.json): 237 checks, none failed, 316 CPU seconds.
+[`dry_run.py`](dry_run.py) builds synthetic archives of 300 lakes, 1990 to 2025, and reads each with the frozen rules. Its record is [`results/dry-run.json`](results/dry-run.json): 238 checks, none failed, 319 CPU seconds.
 
 **The model.** Each year, spring adults per acre x renew by fall age-0 r = R(x)·e^(σz), with R(x) = 60 x^q / (1.5^q + x^q) and σ = 0.8. Next spring's adults are 0.7x − h plus 0.03 times the age-0 of three years before. The exploitation e is drawn per lake from 0.05 to 0.6, and above 0.3 a lake keeps no level. The draw is h = e·x, cut to 0.05·x below one adult per acre, as safe harvests are; lakes exploited hard then cycle, a strong year class every few years carrying them between lean ones. In a year, a lake loses nine tenths of its adults with chance 0.02 (a winterkill). A lake is a recorded seepage lake with chance 0.4.
 
@@ -414,7 +414,7 @@ The label alone counted as a fall favours the positive outcome. With T1 true and
 - the species' text in the stocking files ("Walleye", read without regard to case or spaces);
 - that R1 gives per lake and year the estimate, both interval bounds and the lake's acres, so the reader divides by the acres; R2 age-0 per mile; R3 and R4 numbers of walleye; R5 the species and the number stocked;
 - that R1 gives one estimate per lake and year. Where it gives more than one, the most precise, the narrowest interval on the log scale, is read and the others counted (round 4's N-53), an interval reaching zero counting as the widest (round 5's N-63);
-- that R2 gives one fall survey per lake and year. Where it gives more than one, as two agencies' or two runs' surveys would, the largest catch per mile is read, since renewal any survey of the year caught was made, and the repeats are counted (round 5's N-62). A year class one survey recorded then sets a survey below the need aside (§6) and keeps its lake from V2, and in the need's fit the year counts as renewing where either survey's catch reaches the floor.
+- that R2 gives one fall survey per lake and year. Where it gives more than one, as two agencies' or two runs' surveys would, the largest catch per mile is read, since renewal any survey of the year caught was made, and the repeats are counted (round 5's N-62). A year class one survey recorded then sets a survey below the need aside (§6) and keeps its lake from V2, and in the need's fit the year counts as renewing where either survey's catch reaches the floor. A lake-year surveyed twice reaches the floor more often than one surveyed once, so where repeats are more common on one side of 2012 than the other, the renewal report (§7) can come out beyond the fit with no move in the need; the layout step counts them on each side (round 6's N-67).
 
 Both are decided now, since an addendum may not change a rule.
 
@@ -433,7 +433,7 @@ Each step is committed before the next.
    - the archive's last estimate year, which settles the reference window;
    - the lake-years up to 2012 with both an adult estimate and a fall survey, and their lakes, against the fit's 200 pairs from 30 lakes;
    - the lakes with a candidate reference, and those of them recorded closed;
-   - the lake-years R1 gives more than one estimate for, and those R2 gives more than one fall survey for;
+   - the lake-years R1 gives more than one estimate for, and those R2 gives more than one fall survey for, these up to 2012 and after it, each lake-year counted once (round 6's N-67 and N-68). The fall surveys are counted by lake and year alone, so a row with a blank catch counts here though the reading skips it;
    - the lakes of §9's disclosure it finds, by name and county;
    - R1's columns that may give mark-and-recapture counts, the record that would lift §13's residual.
 

@@ -2664,7 +2664,7 @@
    }
   }
  },
- "checks": 237,
+ "checks": 238,
  "checks by kind": {
   "rules: V1": 16,
   "rules: the separation": 2,
@@ -2681,7 +2681,7 @@
   "rules: the tail": 3,
   "rules: the renewal report": 1,
   "the need": 7,
-  "the reader": 17,
+  "the reader": 18,
   "the run": 10,
   "the chain": 9,
   "worlds: confounds": 32,
@@ -2691,12 +2691,12 @@
   "worlds: the renewal report": 3
  },
  "failed": [],
- "CPU seconds": 315.7,
+ "CPU seconds": 318.8,
  "code hashes": {
   "experiments/need-measured-in-advance/t1n.py": "3a2503115c40b3dd605cba6507784f37eb2fa037665f9693e92c9de0fea250c9",
-  "experiments/need-measured-in-advance/reader.py": "c9b8bd3d20ae1de38dbce3821633bd4d96ea11162ac19cd4b89a8e661552d89a",
+  "experiments/need-measured-in-advance/reader.py": "191a2c68edb4131cd181c40b81cd1cd24221b287ca358fed8157955466e98cac",
   "experiments/need-measured-in-advance/run.py": "775ecb519db8a0f4634b343188540ed507deb3ab068003d8c8b98b217df02e4a",
-  "experiments/need-measured-in-advance/dry_run.py": "3bf0c65ba8cd7355f2f95474ea81008cbfe04429b0a8e6180d5c8a48837ec69f",
+  "experiments/need-measured-in-advance/dry_run.py": "30f46ba5d93b6af01915eeb11e7326dca902a4e72a09270bc6a1cc27c30aec74",
   "experiments/need-measured-in-advance/layout.json": "5cf8f04439f12c3493b2be6abcd75853a37c85ddb092f5abb0ec45e7077f7e7f"
  },
  "code unchanged during the run": true

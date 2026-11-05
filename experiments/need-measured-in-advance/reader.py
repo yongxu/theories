@@ -9,6 +9,7 @@ added, never an existing text remapped (run.py checks it).
 Standard library only.
 """
 
+import collections
 import csv
 import json
 import re
@@ -87,8 +88,7 @@ def read_all(folder):
     on the log scale, and counted. Returns (lakes, meta): meta says whether the labels are read per year (a share
     of lakes changes category across years), how many rows each file matched, and the lake-years repeated."""
     lakes, skipped = {}, {"a blank year or acres": 0, "no estimate or interval": 0}
-    repeated = 0
-    counts = {"fall surveys repeated for a lake-year, read at the largest catch": 0}
+    repeated, repeated_age0 = set(), set()                # the lake-years read from more than one row
     for row in table(folder, "adults"):
         label = row["label"].strip()
         if label not in LABELS:
@@ -106,7 +106,7 @@ def read_all(folder):
             skipped["no estimate or interval"] += 1
             continue
         if yr in lk["adults"]:
-            repeated += 1
+            repeated.add((lid, yr))
             old = lk["adults"][yr]
             if not (lo > 0 and (old[1] <= 0 or hi / lo < old[2] / old[1])):
                 continue                           # the more precise estimate kept, a readable one over one reaching zero
@@ -134,7 +134,7 @@ def read_all(folder):
         yr, v = year_of(row["year"]), num(row["per mile"])
         if yr is not None and v is not None:
             if yr in lk["age0"]:
-                counts["fall surveys repeated for a lake-year, read at the largest catch"] += 1
+                repeated_age0.add((lk["id"], yr))
                 v = max(v, lk["age0"][yr])        # renewal any survey of the year caught was made
             lk["age0"][yr] = v
 
@@ -175,7 +175,8 @@ def read_all(folder):
                 raise SystemExit(f"no row of {FILES[kind]} names {SPECIES!r}: the species' text differs")
     labels = t1n.labels_per_year(lakes.values())
     return lakes, {"labels per year": labels, "rows matched by lake code, of rows": matched, "rows skipped": skipped,
-                   "lake-years with more than one estimate, read from the most precise": repeated, **counts}
+                   "lake-years with more than one estimate, read from the most precise": len(repeated),
+                   "lake-years with more than one fall survey, read at the largest catch": len(repeated_age0)}
 
 
 def seen(lakes):
@@ -216,12 +217,13 @@ def layout_facts(folder, cutoff=t1n.CUTOFF):
             keep = {k: c for k, c in COLUMNS[kind].items() if k in STRUCTURE and c in (rd.fieldnames or [])}
             return [{k: row[c] for k, c in keep.items()} for row in rd]
     adults = rows_of("adults") or []
-    est, labs, chars, names, pairs_seen, repeated = {}, {}, {}, {}, set(), 0
+    est, labs, chars, names, pairs_seen, repeated = {}, {}, {}, {}, set(), set()
     for r in adults:
         lid, yr = code(r["lake"]), year_of(r["year"])
         if yr is None:
             continue
-        repeated += (lid, yr) in pairs_seen
+        if (lid, yr) in pairs_seen:
+            repeated.add((lid, yr))
         pairs_seen.add((lid, yr))
         names.setdefault(lid, {"id": lid, "name": (r.get("name") or "").strip(), "county": (r.get("county") or "").strip()})
         est.setdefault(lid, set()).add(yr)
@@ -229,6 +231,7 @@ def layout_facts(folder, cutoff=t1n.CUTOFF):
         chars.setdefault(lid, set()).add((r.get("characteristics") or "").strip())
     age0_rows = [(code(r["lake"]), year_of(r["year"])) for r in rows_of("age0") or []]
     age0 = set(age0_rows)
+    twice = {p for p, k in collections.Counter(age0_rows).items() if p[1] is not None and k > 1}
     last = max((y for ys in est.values() for y in ys), default=None)
     pairs = [(l, y) for l, ys in est.items() for y in ys if y <= cutoff and (l, y) in age0]
     end = last - t1n.GAP_MIN if last else None
@@ -254,8 +257,9 @@ def layout_facts(folder, cutoff=t1n.CUTOFF):
             "water body types named": sorted(({t for s in chars.values() for t in s} | set(types.values())) - {""})[:60],
             "lakes recorded closed / open / unknown": [sum(1 for v in closed.values() if v is s) for s in (True, False, None)],
             "species texts": species, "rows naming a lake of the estimates, of rows": match,
-            "lake-years with more than one estimate row": repeated,
-            "lake-years with more than one fall survey row": len(age0_rows) - len(age0),
+            "lake-years with more than one estimate row": len(repeated),
+            "lake-years with more than one fall survey row, by lake and year alone, up to the cutoff and after it":
+                [sum(1 for p in twice if p[1] <= cutoff), sum(1 for p in twice if p[1] > cutoff)],
             "the lakes of the disclosure (DESIGN.md, section 9), found by county and name":
                 (lambda ids: "not found: no lake's name was read" if ids is None else
                  [[i, names[i]["name"], names[i]["county"]] for i in ids] or "not found: no lake matches")(seen(list(names.values()))),

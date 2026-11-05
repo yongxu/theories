@@ -668,8 +668,28 @@ def reader_checks(chk):
         back, meta = reader.read_all(tmp)
         lid, yr = reader.code(rows[0][reader.COLUMNS["age0"]["lake"]]), reader.year_of(rows[0][reader.COLUMNS["age0"]["year"]])
         chk("the reader", "a lake-year with two fall surveys is read at the larger catch, and counted, in the reading and the facts",
-            back[lid]["age0"][yr] == 5.0 and meta["fall surveys repeated for a lake-year, read at the largest catch"] == 1
-            and reader.layout_facts(tmp)["lake-years with more than one fall survey row"] == 1, (back[lid]["age0"], meta))
+            back[lid]["age0"][yr] == 5.0 and meta["lake-years with more than one fall survey, read at the largest catch"] == 1
+            and reader.layout_facts(tmp)["lake-years with more than one fall survey row, by lake and year alone, up to the "
+                                         "cutoff and after it"] == [1 if yr <= t1n.CUTOFF else 0, 0 if yr <= t1n.CUTOFF else 1],
+            (back[lid]["age0"], meta))
+    with tempfile.TemporaryDirectory() as tmp:
+        tmp = Path(tmp)
+        reader.write_synthetic(lakes[:3], tmp)
+        p = tmp / reader.FILES["age0"]
+        rows = list(csv.DictReader(p.open()))
+        ycol = reader.COLUMNS["age0"]["year"]
+        early = next(r for r in rows if reader.year_of(r[ycol]) <= t1n.CUTOFF)
+        late = next(r for r in rows if reader.year_of(r[ycol]) > t1n.CUTOFF)
+        blank = dict(early, **{ycol: ""})
+        with p.open("w", newline="") as f:
+            w = csv.DictWriter(f, fieldnames=list(rows[0]))
+            w.writeheader()
+            w.writerows(rows + [dict(early), dict(early), dict(late), blank, dict(blank)])
+        back, meta = reader.read_all(tmp)
+        chk("the reader", "repeats counted as lake-years, a third row adding none and a blank year none, either side of the cutoff",
+            meta["lake-years with more than one fall survey, read at the largest catch"] == 2
+            and reader.layout_facts(tmp)["lake-years with more than one fall survey row, by lake and year alone, up to the "
+                                         "cutoff and after it"] == [1, 1], meta)
     flat = [{"label": {2010: NATURAL, 2014: NATURAL}} for _ in range(40)]
     one = flat[:39] + [{"label": {2010: NATURAL, 2014: STOCKED}}]
     few = flat[:37] + [{"label": {2010: NATURAL, 2014: STOCKED}} for _ in range(3)]
