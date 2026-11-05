@@ -2383,6 +2383,24 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Unread.lean"
       ]
     },
+    "experiments/formations-that-read/FREEZE-12.md": {
+      "title": "The self-confirming lock on agents, frozen",
+      "local_links": [
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aa-attractor-atlas/PLAN.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aa-attractor-atlas/refuters/readers/lock.json",
+        "experiments/formations-that-read/FREEZE-10.md",
+        "experiments/formations-that-read/lock-scl/REVIEW-FREEZE.md",
+        "experiments/formations-that-read/lock-scl/results/dry-run.json",
+        "experiments/formations-that-read/lock-scl/scl_design.py",
+        "experiments/formations-that-read/lock-scl/scl_dry_run.py",
+        "experiments/formations-that-read/lock-scl/scl_rule.py",
+        "experiments/formations-that-read/lock-scl/scl_run.py",
+        "experiments/formations-that-read/lock-scl/scl_stage0.py",
+        "experiments/formations-that-read/lock-scl/write_frozen.py",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingLoop.lean",
+        "theories/becoming/chapters/03-KNOWING.md"
+      ]
+    },
     "experiments/formations-that-read/FREEZE-3.md": {
       "title": "TR3, frozen",
       "local_links": [
@@ -2459,6 +2477,7 @@
         "experiments/README.md",
         "experiments/formations-that-read/DESIGN.md",
         "experiments/formations-that-read/FREEZE-10.md",
+        "experiments/formations-that-read/FREEZE-12.md",
         "experiments/formations-that-read/FREEZE-5.md",
         "experiments/formations-that-read/tr1.json",
         "experiments/formations-that-read/tr1.py",
