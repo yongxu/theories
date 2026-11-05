@@ -1,0 +1,1267 @@
+{
+ "checks": 234,
+ "code_hashes": {
+  "experiments/reform-events/CODEBOOK.md": "7df0d23f2256fe2ddff7aa0b989161b427bf3a7f4c944bbe3a06136a0506a1b0",
+  "experiments/reform-events/reform_dry_run.py": "a4ef949dd24fcc5d612969954bcf1933346fb861cf5f39d3cadae222bfa1eb60",
+  "experiments/reform-events/reform_rule.py": "b75010d86d197234f9c818d2c1a46943c8d1bf2948cf3f415b968d6202b4d842",
+  "experiments/reform-events/write_frozen.py": "d87a380e4e898062c41faf2821fdb2eda8415391ac283175915f66350419525e"
+ },
+ "code_unchanged_during_the_run": true,
+ "controls, every plant": {
+  "C-LIBOR": "exit found",
+  "C-PSA": "exit found"
+ },
+ "drift bound": {
+  "N 60 i 55 at q 1/2 (u 17, d 2, 30 same-kind; a rise from 40): the slope at its cap, t = N - i + d = 7, rare": true,
+  "N 60 i 55 at q 1/3 is read at x* 40 (the ratio at its cap 11/8), not rare": true,
+  "N 60 i 55 is rare and N 15 i 13 is not": true,
+  "Part 4 shown as a sample: unreadable, whatever its counts (R6)": true,
+  "a lower limit at the largest slope the model allows is taken there, rho(i) = i / x* (N 15, i 13: not rare)": true,
+  "a record not rejecting rho = 1: unreadable": true,
+  "a share that rose by five, its places filled 7 times of 19 by the other kind: unreadable (P52)": true,
+  "a trial whose outcome the model forces (count 0 or the top) is skipped: the chance unchanged (R3-4)": true,
+  "a unanimity rule (1/1): not rare": true,
+  "as few other entrants grows likelier as the slope rises (P56, on a grid to the cap)": true,
+  "at N 18, a rise to the top read at the cap: rare, as the least N says": true,
+  "at or below the critical mass: not rare": true,
+  "below the top, N 60 i 59 (d 3): t = max(N - i, 1) + d = 4": true,
+  "every exact chance at most its bound": true,
+  "every selector favoured (N 60, a rise of 32 to the top, d 3): read from N - 1 with t = 1 + d = 4, four times one arrival's": true,
+  "every selector favoured, a body of three: not rare": true,
+  "every selector favoured, reported": {
+   "N 60 i 59, u 33 d 3": {
+    "bound": "0.000053",
+    "status": "rare"
+   },
+   "N 60 i 60, u 30 d 20": {
+    "note": "50 replacements (u 30, d 20, 20 other entrants), the slope of rho at its lower 1/20 limit 0; the record does not reject rho = 1 at the level: drift not shown",
+    "status": "unreadable"
+   },
+   "N 60 i 60, u 35 d 3": {
+    "bound": "0.000053",
+    "one arrival alone": "0.000013",
+    "status": "rare"
+   }
+  },
+  "every selector favoured, twenty arrivals of the other kind (N 60, u 30, d 20): unreadable, the arrivals weighing against the limit (P33)": true,
+  "fewer than five replacements: unreadable": true,
+  "new members not entering through the measure: unreadable": true,
+  "premises not read: unreadable": true,
+  "readings of x*, reported": {
+   "N 60 i 55, q 1/2": "0.001239",
+   "N 60 i 55, q 1/3": "0.483017"
+  },
+  "replacements inconsistent with N and i (seven reverse ones at 15 of 15, none up): unreadable": true,
+  "replacements not listed: unreadable": true,
+  "the Lean witness: s is 3 and x* 9/4": true,
+  "the Lean witness: the bound is lost_above's t down^n / ups, 10/17": true,
+  "the Lean witness: the line through x* and rho(4) is up / down at every count 0..5": true,
+  "the bound against the exact chain": {
+   "N 15 i 13 x* 15/2 rho 3/2": {
+    "both at most the bound": true,
+    "bound": "937024/1820475",
+    "bound, decimal": "0.514714",
+    "exact chance of losing every shaper": "0.049725",
+    "exact chance of reaching s before the top": "0.106211",
+    "status": "not rare"
+   },
+   "N 20 i 18 x* 10 rho 8/5": {
+    "both at most the bound": true,
+    "bound": "2560000000/12259033787",
+    "bound, decimal": "0.208826",
+    "exact chance of losing every shaper": "0.018259",
+    "exact chance of reaching s before the top": "0.034272",
+    "status": "not rare"
+   },
+   "N 60 i 55 x* 30 rho 3/2": {
+    "both at most the bound": true,
+    "bound": "56843418860808014869689941406250/3111694338149924199766601026351833",
+    "bound, decimal": "0.018268",
+    "exact chance of losing every shaper": "0.000521",
+    "exact chance of reaching s before the top": "0.001005",
+    "status": "rare"
+   },
+   "witness N 5 i 4": {
+    "both at most the bound": true,
+    "bound": "10/17",
+    "bound, decimal": "0.588235",
+    "exact chance of losing every shaper": "0.126687",
+    "exact chance of reaching s before the top": "0.370370",
+    "status": "not rare"
+   }
+  },
+  "the drawn step's expected odds at 55 of 60 and rho 3/2, 66 favoured and 4 other entrants: not read, 70 entrants at that count not rejecting rho = 1": true,
+  "the estimate, reported": {
+   "N 40 i 38, u 8 d 1, 40 same-kind (P56)": {
+    "bound": "0.009572",
+    "slope at the limit": "3469977/83886080"
+   },
+   "N 60 i 55 held, u 3 d 3, n same-kind": {
+    "120": {
+     "bound": "0.063312",
+     "status": "not rare"
+    },
+    "200": {
+     "bound": "0.001416",
+     "status": "rare"
+    },
+    "80": {
+     "bound": null,
+     "status": "unreadable"
+    }
+   },
+   "N 60 i 55 held, u 3 d 3: the chance of at most 3 others among 86 under rho = 1 (P51)": "0.0630",
+   "N 60 i 55 held, u 3 d 3: the least n same-kind, in tens, read rare": 130,
+   "N 60 i 55, 66 favoured and 4 other entrants": {
+    "note": "70 replacements (u 0, d 0, 4 other entrants), the slope of rho at its lower 1/20 limit 0; the record does not reject rho = 1 at the level: drift not shown",
+    "status": "unreadable"
+   },
+   "N 60 i 55, u 12 d 7, none same-kind": {
+    "note": "19 replacements (u 12, d 7, 7 other entrants), the slope of rho at its lower 1/20 limit 0; the record does not reject rho = 1 at the level: drift not shown",
+    "status": "unreadable"
+   },
+   "N 60 i 55, u 17 d 2, 30 same-kind (R0)": {
+    "bound": "0.001239",
+    "rho(i) at the limit": "11/6"
+   }
+  },
+  "the least N at which the bound can be rare, the ratio at its cap (reported)": {
+   "1/2": 18,
+   "2/3": 45
+  },
+  "the lower limit is bracketed (P56, 1 other entrant among 49): as few others rarer than 1/20 at it, not just above it": true,
+  "the reader's P51 data (3 other entrants among 86 at about 55 of 60): their chance under rho = 1 is above 1/20, so the bound is not read (P51)": true,
+  "the ten years not each covered by a document: unreadable": true,
+  "x* is max(q, 1 - q) N: 40 at q 1/3 and at q 2/3, 30 at q 1/2, 60 at q 1/1": true
+ },
+ "fixed values": {
+  "cutoff": "2026-06-30",
+  "min turnover": 5,
+  "start": {
+   "F2": "2011-01-01",
+   "F3": "2008-01-01",
+   "control": "2000-01-01"
+  },
+  "threshold": "1/20",
+  "window years": 10
+ },
+ "ok": true,
+ "plants, case by case": {
+  "P01 refuting": {
+   "as planted": true,
+   "reason": "every condition met by both deciders",
+   "status": "refuting",
+   "third case": "not eligible"
+  },
+  "P02 dropped through a new reader": {
+   "as planted": true,
+   "reason": "dropped through a new reader",
+   "status": "out",
+   "third case": "not eligible"
+  },
+  "P03 dropped through a change in what is read": {
+   "as planted": true,
+   "reason": "dropped through a change in what is read",
+   "status": "out",
+   "third case": "not eligible"
+  },
+  "P04 dropped through a loss entering the share": {
+   "as planted": true,
+   "reason": "dropped through a loss entering the share",
+   "status": "out",
+   "third case": "not eligible"
+  },
+  "P05 a drop unresolved by drift": {
+   "as planted": true,
+   "reason": "unresolved by drift",
+   "status": "unresolved",
+   "third case": "not eligible"
+  },
+  "P06 coders disagree on a new reader": {
+   "as planted": true,
+   "reason": "unresolved: no_new_reader (disagree)",
+   "status": "unresolved",
+   "third case": "not eligible"
+  },
+  "P07 kept": {
+   "as planted": true,
+   "reason": "kept, or not dropped in the window",
+   "status": "out",
+   "third case": "not eligible"
+  },
+  "P08 drift not rare (N 15, i 13)": {
+   "as planted": true,
+   "reason": "drift not rare by the bound",
+   "status": "out",
+   "third case": "not eligible"
+  },
+  "P09 dropped by another body": {
+   "as planted": true,
+   "reason": "dropped by another body",
+   "status": "out",
+   "third case": "not eligible"
+  },
+  "P10 premise not met (rule set by others)": {
+   "as planted": true,
+   "reason": "premise not met",
+   "status": "out",
+   "third case": "not eligible"
+  },
+  "P11 premise documented only after the refutation": {
+   "as planted": true,
+   "reason": "premise not met",
+   "status": "out",
+   "third case": "not eligible"
+  },
+  "P12 no refutation in the record collected, Part 1 shown whole": {
+   "as planted": true,
+   "reason": "no refutation in the record collected",
+   "status": "out",
+   "third case": "not eligible"
+  },
+  "P13 dropped twelve years after the refutation": {
+   "as planted": true,
+   "reason": "kept, or not dropped in the window",
+   "status": "out",
+   "third case": "not eligible"
+  },
+  "P14 a reform of the reading alone outlasting the next reading": {
+   "as planted": true,
+   "reason": "kept, or not dropped in the window",
+   "status": "out",
+   "third case": "met"
+  },
+  "P15 a reform of the reading absorbed at the next reading": {
+   "as planted": true,
+   "reason": "kept, or not dropped in the window",
+   "status": "out",
+   "third case": "absorbed"
+  },
+  "P16 a reform with a new reader": {
+   "as planted": true,
+   "reason": "kept, or not dropped in the window",
+   "status": "out",
+   "third case": "not eligible"
+  },
+  "P17 the reported-apart coder alone finds no exit": {
+   "as planted": true,
+   "reason": "dropped through a new reader",
+   "status": "out",
+   "third case": "not eligible"
+  },
+  "P18 one coder codes no new reader as null, the other as false (F1)": {
+   "as planted": true,
+   "reason": "unresolved: no_new_reader (not coded)",
+   "status": "unresolved",
+   "third case": "not eligible"
+  },
+  "P19 a reform favouring the favoured, persisting (F4)": {
+   "as planted": true,
+   "reason": "kept, or not dropped in the window",
+   "status": "out",
+   "third case": "not eligible"
+  },
+  "P20 a reform verified by an outside body, persisting (F4)": {
+   "as planted": true,
+   "reason": "kept, or not dropped in the window",
+   "status": "out",
+   "third case": "not eligible"
+  },
+  "P21 not absorbed where no lowering is coded by both (F4)": {
+   "as planted": true,
+   "reason": "kept, or not dropped in the window",
+   "status": "out",
+   "third case": "not eligible"
+  },
+  "P22 a reform beside a drop left uncoded (F11)": {
+   "as planted": true,
+   "reason": "unresolved: dropped (not coded), by_selectors (not coded), no_new_reader (not coded), no_new_reading (not coded), no_loss_entering (not coded)",
+   "status": "unresolved",
+   "third case": "unresolved"
+  },
+  "P23 a drop within ten years of a later finding, not the earliest (F8)": {
+   "as planted": true,
+   "reason": "every condition met by both deciders",
+   "status": "refuting",
+   "third case": "not eligible"
+  },
+  "P24 an F2 case whose only finding precedes its frame's start (F8)": {
+   "as planted": true,
+   "reason": "no refutation in the record collected",
+   "status": "out",
+   "third case": "not eligible"
+  },
+  "P25 every member favoured, reverse replacements documented (F3)": {
+   "as planted": true,
+   "reason": "unresolved by drift",
+   "status": "unresolved",
+   "third case": "not eligible"
+  },
+  "P26 every member favoured, a body of three (F3)": {
+   "as planted": true,
+   "reason": "drift not rare by the bound",
+   "status": "out",
+   "third case": "not eligible"
+  },
+  "P27 new members not entering through the measure (F3)": {
+   "as planted": true,
+   "reason": "unresolved by drift",
+   "status": "unresolved",
+   "third case": "not eligible"
+  },
+  "P28 a threshold under one half, read at x* = max(q, 1 - q) N (F7)": {
+   "as planted": true,
+   "reason": "drift not rare by the bound",
+   "status": "out",
+   "third case": "not eligible"
+  },
+  "P29 a unanimity rule (F10)": {
+   "as planted": true,
+   "reason": "drift not rare by the bound",
+   "status": "out",
+   "third case": "not eligible"
+  },
+  "P30 the exits coded false on a packet with a year before the drop without a document (N1)": {
+   "as planted": true,
+   "reason": "unresolved: no_new_reader (not coded), no_new_reading (not coded), no_loss_entering (not coded)",
+   "status": "unresolved",
+   "third case": "not eligible"
+  },
+  "P31 the body's ten years with a year without a document (N1)": {
+   "as planted": true,
+   "reason": "unresolved by drift",
+   "status": "unresolved",
+   "third case": "not eligible"
+  },
+  "P32 a reform outlasting, with a year to the next revision without a document (N1)": {
+   "as planted": true,
+   "reason": "kept, or not dropped in the window",
+   "status": "out",
+   "third case": "unresolved"
+  },
+  "P33 every member favoured, twenty arrivals of the other kind (N60, i 60, u 30, d 20) (N3)": {
+   "as planted": true,
+   "reason": "unresolved by drift",
+   "status": "unresolved",
+   "third case": "not eligible"
+  },
+  "P34 a lowering standing through a new data source at the next revision (N4)": {
+   "as planted": true,
+   "reason": "kept, or not dropped in the window",
+   "status": "out",
+   "third case": "not eligible"
+  },
+  "P35 an F2 finding before the start and a later one after it, the drop within ten years of the later (N6)": {
+   "as planted": true,
+   "reason": "every condition met by both deciders",
+   "status": "refuting",
+   "third case": "not eligible"
+  },
+  "P36 kept, coded on an outcome period with a year without a document (R3-7)": {
+   "as planted": true,
+   "reason": "unresolved: dropped (not coded), by_selectors (not coded), no_new_reader (not coded), no_new_reading (not coded), no_loss_entering (not coded)",
+   "status": "unresolved",
+   "third case": "unresolved"
+  },
+  "P37 the exits coded false, the coder listing 1998 and 1999 as without a document (R3-1)": {
+   "as planted": true,
+   "reason": "unresolved: premise (not coded), no_new_reader (not coded), no_new_reading (not coded), no_loss_entering (not coded)",
+   "status": "unresolved",
+   "third case": "not eligible"
+  },
+  "P38 one favoured member fewer than the body, twenty reverse replacements (N 60, i 59, u 30, d 20) (R3-2)": {
+   "as planted": true,
+   "reason": "unresolved by drift",
+   "status": "unresolved",
+   "third case": "not eligible"
+  },
+  "P39 a kept F2 measure, its 2026 covered by a June document, its October edition not kept (R4-2)": {
+   "as planted": true,
+   "reason": "kept, or not dropped in the window",
+   "status": "out",
+   "third case": "not eligible"
+  },
+  "P40 a premise documented only before 2000, every exit coded false on a covered period (R4-3)": {
+   "as planted": true,
+   "reason": "unresolved: premise (not coded)",
+   "status": "unresolved",
+   "third case": "not eligible"
+  },
+  "P41 a kept F2 measure whose Part 3 is a sample of cut editions, each showing it in use (N2, R6)": {
+   "as planted": true,
+   "reason": "unresolved: dropped (not coded), by_selectors (not coded), no_new_reader (not coded), no_new_reading (not coded), no_loss_entering (not coded)",
+   "status": "unresolved",
+   "third case": "unresolved"
+  },
+  "P42 Part 1 a sample, no finding shown": {
+   "as planted": true,
+   "reason": "unresolved: refutation (not coded), premise (not coded), dropped (not coded)",
+   "status": "unresolved",
+   "third case": "not eligible"
+  },
+  "P43 Part 1 a sample, the coder coding no finding false": {
+   "as planted": true,
+   "reason": "unresolved: refutation (not coded), premise (not coded), dropped (not coded)",
+   "status": "unresolved",
+   "third case": "not eligible"
+  },
+  "P44 Part 1 a sample, the drop twelve years after the finding shown": {
+   "as planted": true,
+   "reason": "unresolved: dropped (not coded)",
+   "status": "unresolved",
+   "third case": "not eligible"
+  },
+  "P45 Part 3 a sample, every exit coded false, no year listed": {
+   "as planted": true,
+   "reason": "unresolved: no_new_reader (not coded), no_new_reading (not coded), no_loss_entering (not coded)",
+   "status": "unresolved",
+   "third case": "unresolved"
+  },
+  "P46 Part 3 whole, every exit coded not shown": {
+   "as planted": true,
+   "reason": "unresolved: no_new_reader (not coded), no_new_reading (not coded), no_loss_entering (not coded)",
+   "status": "unresolved",
+   "third case": "not eligible"
+  },
+  "P47 kept, coded false on a Part 3 sample": {
+   "as planted": true,
+   "reason": "unresolved: dropped (not coded), by_selectors (not coded), no_new_reader (not coded), no_new_reading (not coded), no_loss_entering (not coded)",
+   "status": "unresolved",
+   "third case": "unresolved"
+  },
+  "P48 Part 4 a sample": {
+   "as planted": true,
+   "reason": "unresolved by drift",
+   "status": "unresolved",
+   "third case": "not eligible"
+  },
+  "P49 a reform outlasting, on a Part 3 sample": {
+   "as planted": true,
+   "reason": "unresolved: dropped (not coded), by_selectors (not coded), no_new_reader (not coded), no_new_reading (not coded), no_loss_entering (not coded)",
+   "status": "unresolved",
+   "third case": "unresolved"
+  },
+  "P50 a reform whose lowering is coded not shown to stand, Part 3 whole": {
+   "as planted": true,
+   "reason": "kept, or not dropped in the window",
+   "status": "out",
+   "third case": "unresolved"
+  },
+  "P51 a lock that held its share (u = d), 80 same-kind: 3 other entrants among 86 do not reject rho = 1 (R1-2, R2-1)": {
+   "as planted": true,
+   "reason": "unresolved by drift",
+   "status": "unresolved",
+   "third case": "not eligible"
+  },
+  "P52 a share that rose, its places filled often by the other kind (u 12, d 7), the old reading rare (R1-2)": {
+   "as planted": true,
+   "reason": "unresolved by drift",
+   "status": "unresolved",
+   "third case": "not eligible"
+  },
+  "P53 the exits from the last revision before the finding that kept the weight, none after it (R1-3)": {
+   "as planted": true,
+   "reason": "every condition met by both deciders",
+   "status": "refuting",
+   "third case": "not eligible"
+  },
+  "P54 the new reading's period set from a date after the drop: it alone open (R1-3, R2-2, R3-1)": {
+   "as planted": true,
+   "reason": "unresolved: no_new_reading (not coded)",
+   "status": "unresolved",
+   "third case": "not eligible"
+  },
+  "P55 Part 3 shown whole but its collection not completed (R1-5)": {
+   "as planted": true,
+   "reason": "unresolved: no_new_reader (not coded), no_new_reading (not coded), no_loss_entering (not coded)",
+   "status": "unresolved",
+   "third case": "unresolved"
+  },
+  "P56 a realistic F2 case on its packets: Parts 3 and 4 whole by their passages, a board of 40 (R1-1)": {
+   "as planted": true,
+   "reason": "every condition met by both deciders",
+   "status": "refuting",
+   "third case": "not eligible"
+  },
+  "P57 a realistic F3 case on its packet, kept: Part 3 whole by its passages (R1-1)": {
+   "as planted": true,
+   "reason": "kept, or not dropped in the window",
+   "status": "out",
+   "third case": "not eligible"
+  },
+  "P58 an exit after the finding that the measure outlived: the exits from its last full-weight revision before the drop (R2-2)": {
+   "as planted": true,
+   "reason": "every condition met by both deciders",
+   "status": "refuting",
+   "third case": "not eligible"
+  },
+  "P59 an exit after the finding, no full-weight revision after it: out through a change in what is read (R2-2)": {
+   "as planted": true,
+   "reason": "dropped through a change in what is read",
+   "status": "out",
+   "third case": "not eligible"
+  },
+  "P60 an F2 ranking whose 22 editions name it in most paragraphs: Part 3 a sample by its passages (R2-3)": {
+   "as planted": true,
+   "reason": "unresolved: no_new_reader (not coded), no_new_reading (not coded), no_loss_entering (not coded)",
+   "status": "unresolved",
+   "third case": "unresolved"
+  },
+  "P61 a new reader that came before a full-weight revision before the drop: still an exit, out (R3-1)": {
+   "as planted": true,
+   "reason": "dropped through a new reader",
+   "status": "out",
+   "third case": "not eligible"
+  },
+  "P62 the new reading's period covered from its revision, the longer period not: the new reader and the loss open (R3-1)": {
+   "as planted": true,
+   "reason": "unresolved: no_new_reader (not coded), no_loss_entering (not coded)",
+   "status": "unresolved",
+   "third case": "not eligible"
+  },
+  "P63 a from_date with the years from it not listed: the new reading open (R3-1)": {
+   "as planted": true,
+   "reason": "unresolved: no_new_reading (not coded)",
+   "status": "unresolved",
+   "third case": "not eligible"
+  },
+  "P64 the two lists disagreeing: a year without a document after from_date in the longer list, none in the second: the new reading open (R4-3)": {
+   "as planted": true,
+   "reason": "unresolved: no_new_reader (not coded), no_new_reading (not coded), no_loss_entering (not coded)",
+   "status": "unresolved",
+   "third case": "not eligible"
+  }
+ },
+ "power across a frame of 51 cases": {
+  "e = 1/10": {
+   "50 cases with three conditions false, 1 refuting": {
+    "not refuted or not testable": "0.0557",
+    "refuted": "0.1322",
+    "unresolved": "0.8121"
+   },
+   "51 cases, each with one condition false (T7 holding)": {
+    "not refuted or not testable": "0.0000",
+    "refuted": "0.0786",
+    "unresolved": "0.9213"
+   },
+   "51 cases, each with one condition false and the bound unread (T7 holding)": {
+    "not refuted or not testable": "0.0000",
+    "refuted": "0.0000",
+    "unresolved": "1.0000"
+   },
+   "51 cases, each with three conditions false (T7 holding)": {
+    "not refuted or not testable": "0.7162",
+    "refuted": "0.0000",
+    "unresolved": "0.2838"
+   },
+   "both controls show their exit": "0.7133"
+  },
+  "e = 1/20": {
+   "50 cases with three conditions false, 1 refuting": {
+    "not refuted or not testable": "0.0189",
+    "refuted": "0.3659",
+    "unresolved": "0.6152"
+   },
+   "51 cases, each with one condition false (T7 holding)": {
+    "not refuted or not testable": "0.0059",
+    "refuted": "0.0501",
+    "unresolved": "0.9440"
+   },
+   "51 cases, each with one condition false and the bound unread (T7 holding)": {
+    "not refuted or not testable": "0.0058",
+    "refuted": "0.0000",
+    "unresolved": "0.9942"
+   },
+   "51 cases, each with three conditions false (T7 holding)": {
+    "not refuted or not testable": "0.9544",
+    "refuted": "0.0000",
+    "unresolved": "0.0456"
+   },
+   "both controls show their exit": "0.8314"
+  },
+  "e = 1/5": {
+   "50 cases with three conditions false, 1 refuting": {
+    "not refuted or not testable": "0.0401",
+    "refuted": "0.0165",
+    "unresolved": "0.9435"
+   },
+   "51 cases, each with one condition false (T7 holding)": {
+    "not refuted or not testable": "0.0000",
+    "refuted": "0.0497",
+    "unresolved": "0.9503"
+   },
+   "51 cases, each with one condition false and the bound unread (T7 holding)": {
+    "not refuted or not testable": "0.0000",
+    "refuted": "0.0000",
+    "unresolved": "1.0000"
+   },
+   "51 cases, each with three conditions false (T7 holding)": {
+    "not refuted or not testable": "0.1383",
+    "refuted": "0.0002",
+    "unresolved": "0.8615"
+   },
+   "both controls show their exit": "0.5782"
+  },
+  "e = 1/50": {
+   "50 cases with three conditions false, 1 refuting": {
+    "not refuted or not testable": "0.0032",
+    "refuted": "0.6698",
+    "unresolved": "0.3270"
+   },
+   "51 cases, each with one condition false (T7 holding)": {
+    "not refuted or not testable": "0.1281",
+    "refuted": "0.0141",
+    "unresolved": "0.8578"
+   },
+   "51 cases, each with one condition false and the bound unread (T7 holding)": {
+    "not refuted or not testable": "0.1280",
+    "refuted": "0.0000",
+    "unresolved": "0.8720"
+   },
+   "51 cases, each with three conditions false (T7 holding)": {
+    "not refuted or not testable": "0.9968",
+    "refuted": "0.0000",
+    "unresolved": "0.0032"
+   },
+   "both controls show their exit": "0.9254"
+  }
+ },
+ "power under independent coder errors": {
+  "e = 1/10": {
+   "a case with one exit (or kept): coded refuting / out / unresolved": [
+    "0.0023",
+    "0.8229",
+    "0.1748"
+   ],
+   "a refuting case: found refuting / out / unresolved": [
+    "0.1853",
+    "0.0773",
+    "0.7374"
+   ],
+   "forty cases each with one exit: chance some is coded refuting": "0.0875",
+   "third case absorbed: coded met / not met / unresolved": [
+    "0.0015",
+    "0.8264",
+    "0.1721"
+   ],
+   "third case met: found met / not met / unresolved": [
+    "0.1216",
+    "0.0956",
+    "0.7828"
+   ]
+  },
+  "e = 1/20": {
+   "a case with one exit (or kept): coded refuting / out / unresolved": [
+    "0.0012",
+    "0.9042",
+    "0.0946"
+   ],
+   "a refuting case: found refuting / out / unresolved": [
+    "0.4401",
+    "0.0198",
+    "0.5400"
+   ],
+   "forty cases each with one exit: chance some is coded refuting": "0.0476",
+   "third case absorbed: coded met / not met / unresolved": [
+    "0.0010",
+    "0.9047",
+    "0.0943"
+   ],
+   "third case met: found met / not met / unresolved": [
+    "0.3585",
+    "0.0247",
+    "0.6168"
+   ]
+  },
+  "e = 1/5": {
+   "a case with one exit (or kept): coded refuting / out / unresolved": [
+    "0.0018",
+    "0.7295",
+    "0.2688"
+   ],
+   "a refuting case: found refuting / out / unresolved": [
+    "0.0281",
+    "0.2786",
+    "0.6932"
+   ],
+   "forty cases each with one exit: chance some is coded refuting": "0.0680",
+   "third case absorbed: coded met / not met / unresolved": [
+    "0.0007",
+    "0.7507",
+    "0.2486"
+   ],
+   "third case met: found met / not met / unresolved": [
+    "0.0115",
+    "0.3352",
+    "0.6533"
+   ]
+  },
+  "e = 1/50": {
+   "a case with one exit (or kept): coded refuting / out / unresolved": [
+    "0.0003",
+    "0.9605",
+    "0.0392"
+   ],
+   "a refuting case: found refuting / out / unresolved": [
+    "0.7238",
+    "0.0032",
+    "0.2730"
+   ],
+   "forty cases each with one exit: chance some is coded refuting": "0.0120",
+   "third case absorbed: coded met / not met / unresolved": [
+    "0.0003",
+    "0.9605",
+    "0.0392"
+   ],
+   "third case met: found met / not met / unresolved": [
+    "0.6676",
+    "0.0040",
+    "0.3284"
+   ]
+  }
+ },
+ "refusals of the freeze": {
+  "FROZEN.sha256 committed twice": true,
+  "FROZEN.sha256 not listing a required file": true,
+  "FROZEN.sha256 uncommitted": true,
+  "a clean freeze passes": true,
+  "a coding committed before its packets' manifest": true,
+  "a frame changed after the packets' manifest was committed": true,
+  "a frozen file changed": true,
+  "a packets' manifest changed after the coding was committed": true,
+  "a readout already there": true,
+  "a step never committed": true,
+  "no FROZEN.sha256": true,
+  "pages changed after the packets' manifest was committed (R3-2)": true,
+  "pages chosen after the packets' manifest was committed (R3-2)": true,
+  "python3 -O": true,
+  "the readout written once is whole": true,
+  "the required paths exist here (the result itself once written)": true,
+  "the same steps unchanged after the next pass": true,
+  "the steps committed in order pass": true,
+  "two steps in one commit": true
+ },
+ "refusals of the inputs": {
+  "a case coded twice": true,
+  "a case not named by its frame's frozen text": true,
+  "a case without a decider": true,
+  "a coder other than the pin": true,
+  "a control not named by its frozen text": true,
+  "a field not in the layout": true,
+  "a field of the wrong type": true,
+  "a fifth of a decider's stage answers malformed, no more: read": true,
+  "a frame without both controls": true,
+  "a later finding without its date": true,
+  "a manifest not listing pages.json (R4-4)": true,
+  "a part not recorded as shown is read, as not whole (R6)": true,
+  "a part shown as neither whole nor a sample (R6)": true,
+  "a part whose collection was not completed is read, as not whole (R1-5)": true,
+  "a replacement whose entrant is neither favoured nor other (R1-2)": true,
+  "a replacement without its date (R1-2)": true,
+  "a run without its log": true,
+  "a threshold outside 0 to 1": true,
+  "a unanimity threshold (1/1) is read": true,
+  "a year without a document after 2026": true,
+  "a year without a document before 2000 is read, not refused (R3-1)": true,
+  "a year without a document given as a string": true,
+  "a year without a document listed twice": true,
+  "a year without a document outside 1900 to 2026": true,
+  "an answer other than true, false, not shown or null (R6)": true,
+  "an enlarged run": true,
+  "an exits' period start that is not a date (R1-3)": true,
+  "an incomplete run": true,
+  "another cutoff": true,
+  "another frame": true,
+  "cases.json naming pages.json, the manifest listing another (R4-4)": true,
+  "cases.json not naming pages.json (R4-4)": true,
+  "not shown where the codebook does not offer it (Part 2) (R6)": true,
+  "other packets": true,
+  "pages.json as given, every home listed to the chooser once, is read (R5-4)": true,
+  "pages.json chosen by kind, a moved page under each of its addresses, is read (R3-2)": true,
+  "pages.json dropping a site the chooser was given (R5-4)": true,
+  "pages.json dropping a start candidate the chooser was given (R5-4)": true,
+  "pages.json listing one home twice in a case (R4-1)": true,
+  "pages.json listing one start candidate twice (R5-1)": true,
+  "pages.json not saying who chose the pages (R3-2)": true,
+  "pages.json other than the one the packets were collected from (R4-4)": true,
+  "pages.json with a case for which no site is found, its start candidates all of the role neither, is read (R3-2)": true,
+  "pages.json with a link found from a link site, not a start or a redirect site (R5-1)": true,
+  "pages.json with a link site whose home is the linked address deep in a large site, not its root, is read (R5-2)": true,
+  "pages.json with a measure handed to a new site linked from the old, beside a site of neither role, is read (R4-1)": true,
+  "pages.json with a page of a year in which its site was not read (R4-1)": true,
+  "pages.json with a page of another kind (R3-2)": true,
+  "pages.json with a page's year before 2000 (R3-2)": true,
+  "pages.json with a publisher's site and a body's site for one case is read (R4-1)": true,
+  "pages.json with a redirect site found from no site of the case (R5-1)": true,
+  "pages.json with a site found otherwise than as a start, a redirect or a link (R4-1)": true,
+  "pages.json with a site moved to a new domain in 2009, found by its redirect, is read (R4-1)": true,
+  "pages.json with a site read in a year before 2000 (R4-1)": true,
+  "pages.json with a site's role other than publisher, body or neither (R4-1)": true,
+  "pages.json with a site's years other than the collector's (R5-4)": true,
+  "pages.json with a start candidate from an address the register entry gives is read (R5-1)": true,
+  "pages.json with a start candidate from neither the register entry nor a frozen start query (R5-1)": true,
+  "pages.json with a start candidate of the role body but no start site for it (R5-1)": true,
+  "pages.json with a start site said to be found from another (R5-1)": true,
+  "pages.json with a start site that is not a start candidate (R5-1)": true,
+  "pages.json with an F3 case, whose sources are fixed by kind (R3-2)": true,
+  "pages.json with one site field for a case, the earlier layout (R4-1)": true,
+  "pages.json with pages on a site of neither role (R4-1)": true,
+  "pages.json without a case's start candidates, the earlier layout (R5-1)": true,
+  "pages.json without a site listed to the chooser that it left out of its answer (R5-4)": true,
+  "pages.json without an F2 case (R3-2)": true,
+  "replacements given as a number (R1-2)": true,
+  "the codes without the parts as shown (R6)": true,
+  "the people-alone set, no reported-apart coder, is read": true,
+  "the planted documents are read": true,
+  "the reported-apart coder made a decider": true,
+  "the reported-apart coder's malformed answers do not void": true,
+  "the same pages.json, the codes and the manifest bound to it, is read (R4-4)": true,
+  "void: a pin response naming another model": true,
+  "void: more than a fifth of a decider's stage answers malformed": true
+ },
+ "scenarios": {
+  "a refuting case beside a control dropped by another body with no exit coded (F2)": {
+   "as planted": true,
+   "cases": [
+    "P01"
+   ],
+   "refuted by": "unresolved",
+   "third case": "not testable",
+   "why": "cases ['P01'] meet every condition, but a control did not show its exit: C-LIBOR exit missed, C-PSA exit found"
+  },
+  "a refuting case beside a control whose new reader came before a full-weight revision before its drop (R3-1): the exit found": {
+   "as planted": true,
+   "cases": [
+    "P01"
+   ],
+   "refuted by": "refuted",
+   "third case": "not testable",
+   "why": "1 case(s) meet every condition: ['P01']; both controls showed their exit"
+  },
+  "a refuting case beside two controls whose exits are all null (F2)": {
+   "as planted": true,
+   "cases": [
+    "P01"
+   ],
+   "refuted by": "unresolved",
+   "third case": "not testable",
+   "why": "cases ['P01'] meet every condition, but a control did not show its exit: C-LIBOR unclear, C-PSA unclear"
+  },
+  "a refuting case, but a control coded with its known exit missed": {
+   "as planted": true,
+   "cases": [
+    "P01"
+   ],
+   "refuted by": "unresolved",
+   "third case": "not testable",
+   "why": "cases ['P01'] meet every condition, but a control did not show its exit: C-LIBOR exit missed, C-PSA exit found"
+  },
+  "a third case met, but a control coded with its known exit missed (N5)": {
+   "as planted": true,
+   "cases": [
+    "P14"
+   ],
+   "refuted by": "not refuted",
+   "third case": "unresolved",
+   "why": "1 case(s) met the refutation and the premise; none refutes"
+  },
+  "every case read on samples, each coder coding every absence false (R6): never out or not met by absence": {
+   "as planted": true,
+   "cases": [
+    "P43",
+    "P45",
+    "P47"
+   ],
+   "refuted by": "unresolved",
+   "third case": "unresolved",
+   "why": "3 case(s) unresolved, none refuting"
+  },
+  "every plant": {
+   "as planted": true,
+   "cases": [
+    "P01",
+    "P02",
+    "P03",
+    "P04",
+    "P05",
+    "P06",
+    "P07",
+    "P08",
+    "P09",
+    "P10",
+    "P11",
+    "P12",
+    "P13",
+    "P14",
+    "P15",
+    "P16",
+    "P17",
+    "P18",
+    "P19",
+    "P20",
+    "P21",
+    "P22",
+    "P23",
+    "P24",
+    "P25",
+    "P26",
+    "P27",
+    "P28",
+    "P29",
+    "P30",
+    "P31",
+    "P32",
+    "P33",
+    "P34",
+    "P35",
+    "P36",
+    "P37",
+    "P38",
+    "P39",
+    "P40",
+    "P41",
+    "P42",
+    "P43",
+    "P44",
+    "P45",
+    "P46",
+    "P47",
+    "P48",
+    "P49",
+    "P50",
+    "P51",
+    "P52",
+    "P53",
+    "P54",
+    "P55",
+    "P58",
+    "P59",
+    "P61",
+    "P62",
+    "P63",
+    "P64",
+    "P56",
+    "P60",
+    "P57"
+   ],
+   "refuted by": "refuted",
+   "third case": "met",
+   "why": "6 case(s) meet every condition: ['P01', 'P23', 'P35', 'P53', 'P56', 'P58']; both controls showed their exit"
+  },
+  "every plant but the refuting ones": {
+   "as planted": true,
+   "cases": [
+    "P02",
+    "P03",
+    "P04",
+    "P05",
+    "P06",
+    "P07",
+    "P08",
+    "P09",
+    "P10",
+    "P11",
+    "P12",
+    "P13",
+    "P14",
+    "P15",
+    "P16",
+    "P17",
+    "P18",
+    "P19",
+    "P20",
+    "P21",
+    "P22",
+    "P24",
+    "P25",
+    "P26",
+    "P27",
+    "P28",
+    "P29",
+    "P30",
+    "P31",
+    "P32",
+    "P33",
+    "P34",
+    "P36",
+    "P37",
+    "P38",
+    "P39",
+    "P40",
+    "P41",
+    "P42",
+    "P43",
+    "P44",
+    "P45",
+    "P46",
+    "P47",
+    "P48",
+    "P49",
+    "P50",
+    "P51",
+    "P52",
+    "P54",
+    "P55",
+    "P59",
+    "P61",
+    "P62",
+    "P63",
+    "P64",
+    "P60",
+    "P57"
+   ],
+   "refuted by": "unresolved",
+   "third case": "met",
+   "why": "30 case(s) unresolved, none refuting"
+  },
+  "no case meets the premise and the refutation": {
+   "as planted": true,
+   "cases": [
+    "P10",
+    "P12"
+   ],
+   "refuted by": "not testable",
+   "third case": "not testable",
+   "why": "no frame case met the refutation and the premise by both deciders"
+  },
+  "resolved cases only, none refuting; the reported-apart coder finds P17 refuting": {
+   "as planted": true,
+   "cases": [
+    "P02",
+    "P03",
+    "P04",
+    "P07",
+    "P08",
+    "P09",
+    "P10",
+    "P11",
+    "P12",
+    "P13",
+    "P15",
+    "P16",
+    "P17",
+    "P19",
+    "P20",
+    "P21",
+    "P24",
+    "P26",
+    "P28",
+    "P29",
+    "P34",
+    "P39",
+    "P59",
+    "P61",
+    "P57"
+   ],
+   "refuted by": "not refuted",
+   "reported apart, read alone": "refuted",
+   "third case": "not met",
+   "why": "21 case(s) met the refutation and the premise; none refutes"
+  },
+  "the drift-unresolved drop alone": {
+   "as planted": true,
+   "cases": [
+    "P05"
+   ],
+   "refuted by": "unresolved",
+   "third case": "not testable",
+   "why": "1 case(s) unresolved, none refuting"
+  },
+  "the realistic F2 case alone, on its packets (R1-1): refuted, where both controls show their exit": {
+   "as planted": true,
+   "cases": [
+    "P56"
+   ],
+   "refuted by": "refuted",
+   "third case": "not testable",
+   "why": "1 case(s) meet every condition: ['P56']; both controls showed their exit"
+  }
+ },
+ "second Forbids clause, every plant (reported)": {
+  "chance of at least that many at the bounds": "0.000000",
+  "left with nothing read changed": 9,
+  "note": "reported; it decides nothing",
+  "readable cases": 45,
+  "reading": "more often than the bounds allow",
+  "sum of bounds": "1.850702"
+ },
+ "tally, every plant": {
+  "drift not rare by the bound": 4,
+  "dropped by another body": 1,
+  "dropped through a change in what is read": 2,
+  "dropped through a loss entering the share": 1,
+  "dropped through a new reader": 3,
+  "every condition met by both deciders": 6,
+  "kept, or not dropped in the window": 13,
+  "no refutation in the record collected": 2,
+  "premise not met": 2,
+  "unresolved by drift": 9,
+  "unresolved otherwise": 21
+ },
+ "the drift clause under drift alone, simulated (R2-1)": {
+  "bodies per setting": 1000,
+  "rows": {
+   "rho = 1, N 40 from 31, 100 replacements": {
+    "bodies read at all": 87,
+    "counted": "yes",
+    "not rare": 82,
+    "rare": 5,
+    "share read rare": "0.0050",
+    "unreadable": 913
+   },
+   "rho = 1, N 40 from 31, 50 replacements": {
+    "bodies read at all": 45,
+    "counted": "yes",
+    "not rare": 41,
+    "rare": 4,
+    "share read rare": "0.0040",
+    "unreadable": 955
+   },
+   "rho = 1, N 40 from 38, 50 replacements": {
+    "bodies read at all": 0,
+    "counted": "no: no body read, so it checks nothing",
+    "not rare": 0,
+    "rare": 0,
+    "share read rare": "0.0000",
+    "unreadable": 1000
+   },
+   "rho = 1, N 60 from 45, 80 replacements": {
+    "bodies read at all": 55,
+    "counted": "yes",
+    "not rare": 51,
+    "rare": 4,
+    "share read rare": "0.0040",
+    "unreadable": 945
+   },
+   "rho = 1, N 60 from 55, 120 replacements": {
+    "bodies read at all": 32,
+    "counted": "yes",
+    "not rare": 26,
+    "rare": 6,
+    "share read rare": "0.0060",
+    "unreadable": 968
+   },
+   "rho = 1, N 60 from 55, 50 replacements": {
+    "bodies read at all": 23,
+    "counted": "yes",
+    "not rare": 21,
+    "rare": 2,
+    "share read rare": "0.0020",
+    "unreadable": 977
+   },
+   "rho = 1, N 60 from 55, 80 replacements": {
+    "bodies read at all": 25,
+    "counted": "yes",
+    "not rare": 21,
+    "rare": 4,
+    "share read rare": "0.0040",
+    "unreadable": 975
+   },
+   "rho = 4/5, N 40 from 31, 50 replacements": {
+    "bodies read at all": 58,
+    "counted": "yes",
+    "not rare": 58,
+    "rare": 0,
+    "share read rare": "0.0000",
+    "unreadable": 942
+   },
+   "rho = 4/5, N 40 from 38, 50 replacements": {
+    "bodies read at all": 0,
+    "counted": "no: no body read, so it checks nothing",
+    "not rare": 0,
+    "rare": 0,
+    "share read rare": "0.0000",
+    "unreadable": 1000
+   },
+   "rho = 4/5, N 60 from 55, 80 replacements": {
+    "bodies read at all": 6,
+    "counted": "yes",
+    "not rare": 4,
+    "rare": 2,
+    "share read rare": "0.0020",
+    "unreadable": 994
+   },
+   "the largest line, rho(j) = j / x* (reported), N 60 from 45, 80 replacements": {
+    "bodies read at all": 366,
+    "not rare": 287,
+    "rare": 79,
+    "share read rare": "0.0790",
+    "unreadable": 634
+   },
+   "the largest line, rho(j) = j / x* (reported), N 60 from 55, 80 replacements": {
+    "bodies read at all": 140,
+    "not rare": 91,
+    "rare": 49,
+    "share read rare": "0.0490",
+    "unreadable": 860
+   }
+  },
+  "seed": 20261105,
+  "settings counted (some body read)": {
+   "rho = 1": 6,
+   "rho = 4/5": 2
+  },
+  "under rho = 1 and rho = 4/5, read rare in at most 1/20 of the bodies of every setting counted": true
+ },
+ "the packets' caps": {
+  "150 notices of 300 words (45,000 in all): the whole record, though more than a sample holds": true,
+  "22 F2 editions of about 3,500 words, whole: a sample, every edition cut and keeping its edition line, so \"kept\" is not shown there (P41)": true,
+  "27 documents of 1,500 words (40,500 in all): the whole record, none cut, every year covered, the header saying so": true,
+  "27 work reports of about 18,000 words and ten 280-word audit notices: a sample of all 37, each report cut to a 37th of the words and marked, keeping its late target sentence, each notice whole": true,
+  "27 yearly copies of 2,000 words (the reader's probe): whole, a sample; as their passages, the whole record": true,
+  "Part 1 from the case's start; Part 2 from 2000 and before a coder's refutation date; Part 3 from its doc_date": true,
+  "Part 1, 77 hits in 19 years (one dated after the cutoff not collected): a sample of 60, the earliest and the latest shown, as many places in the record's later half as in its earlier half": true,
+  "Part 1, a record that fits: the whole record, both findings shown, and only there a \"none\" is no refutation": true,
+  "Part 1, that sample: a coder's \"none\" there, false or not shown, is open, never \"no refutation\" (P43)": true,
+  "Part 1, the F2 ranking (63 hits): a sample of 60, so a \"none\" there is open": true,
+  "Part 1: which documents are shown does not depend on what they say (the texts exchanged, the same shown)": true,
+  "a kept F2 measure, its record whole: its outcome period, 2012 to 30 June 2026, covered in every year": true,
+  "a part whose collection was not completed: shown as it is, never whole, written \"incomplete\", its header saying so (P55)": true,
+  "an F2 ranking whose editions name it in most paragraphs (R2-3): by its passages, more than 50,000 words, a sample, so no absence is read from its Part 3 (P60)": true,
+  "an abbreviation that is a common English word is not a term (R3-5): \"(THE)\" gives the name alone, so a heading in capitals with \"THE\" in it is not a passage": true,
+  "an undated document: shown last in a whole record, not in a sample": true,
+  "no document after the cutoff: the October 2026 edition not collected, the June item shown": true,
+  "passages: the paragraphs naming the measure kept in order, the rest marked, the document headed; none, not in the record; all, unchanged": true,
+  "that sample covers every year with a document, yet it is a sample, so its absences are not shown (P45)": true,
+  "the F2 ranking: Part 3 as whole documents a sample; as its passages, the whole record, its years covered from the revision of 2012 to the drop and from the finding to the drop": true,
+  "the F2 ranking: Part 4 as the board's passages, the whole record, its ten years covered (2008 to 2018)": true,
+  "the F3 province: Part 3 as whole documents a sample; as its passages, the whole record, every year from the finding to 30 June 2026 covered": true,
+  "the same editions as their passages naming the measure (R1-1): the whole record, each edition by its line": true,
+  "the sample's places: k of n at even steps of rank, the first and the last included, distinct": true,
+  "the terms named (R2-3): whole words, an abbreviation as written, a Han term as characters; F2 by its register name and its abbreviation, not \"rank\"": true,
+  "words: Han characters divided by 1.5, runs of letters or digits, punctuation not counted": true
+ },
+ "the packets' caps, reported": {
+  "Part 1, the F2 ranking: the 2022 fine shown in the sample (reported)": true,
+  "Part 1, the province: the findings shown in the sample (reported)": {
+   "adm2017": true,
+   "aud2020": true
+  },
+  "the realistic packets, reported": {
+   "F2 part 3": {
+    "documents in the record": 21,
+    "header": "[the whole record collected for this part, each document by its passages naming the measure: 21 documents, none cut]",
+    "words, passages": "6593",
+    "words, whole documents": "over 50,000"
+   },
+   "F2 part 4": {
+    "header": "[the whole record collected for this part, each document by its passages naming the body: 11 documents, none cut]",
+    "words, passages": "2920"
+   },
+   "F3 part 3": {
+    "documents in the record": 31,
+    "header": "[the whole record collected for this part, each document by its passages naming the measure: 31 documents, none cut]",
+    "words, passages": "7968"
+   }
+  }
+ },
+ "the same twice": true,
+ "the verdict path, four files, in a scratch repository (R4-4)": {
+  "a committed pages.json other than the one the manifest lists (R4-4)": true,
+  "no readout written by a refused run (R4-4)": true,
+  "the four files in the earlier order, frame, cases, packets, pages (R4-4)": true,
+  "the four files in the steps' order, committed in order and bound, give the verdict (R4-4)": true,
+  "the verdict path with a readout already there (R4-4)": true
+ },
+ "what this is": "T7F's dry run: synthetic coded cases through reform_rule.verdict; no record read, no model call"
+}
