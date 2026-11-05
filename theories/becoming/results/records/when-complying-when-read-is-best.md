@@ -60,7 +60,7 @@ Canonical source: [ReadStages.lean](../../../../experiments/integrated-correctio
 <a id="next--下一步"></a>
 ## Next
 
-A probabilistic item in the periphery: uncertainty whether a stage is read, more stages and discounting; the stages as a course of RF-M's blanketed law; a reader choosing its weights and what it reads; a recipient's belief and intention; whether a training installs such a law; the runs of TR7 and of its Stage A's learners (experiments/formations-that-read), on Ren's yes; review by a person.
+A probabilistic item in the periphery: uncertainty whether a stage is read, more stages and discounting; the stages as a course of RF-M's blanketed law; a reader choosing its weights and what it reads; a recipient's belief and intention; whether a training installs such a law; the run of TR7 (experiments/formations-that-read), on Ren's yes; review by a person.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -103,6 +103,7 @@ Aliases: `when complying when read and acting by its own law when not is best`, 
 - 31 October 2026, board item RF, the tests' designs (study section 476): the next step names its test as designed, TR7 in experiments/formations-that-read, which can refute at most the reading that a system chooses a maximal plan of stated prospects, never the law; no statement or declaration changed. PLAN.md re-pointed: since this record's reviewed hash the plan changed only where the tests' readers found it misstating the Lean (§3, §4, §8, §11, §12) and in §10, the tests; read against this record before re-pointing, nothing it says changed.
 - 4 November 2026, board item TR71: the test TR7 frozen on freeze 1's harness before any call to a model (experiments/formations-that-read/FREEZE-4.md), with a decline read as an answer and the comprehension premise read per condition; not run. The law is unchanged; next_delta's frozen test is now its run, which waits on Ren's yes.
 - 5 November 2026, board item TR7A: TR7's Stage A frozen before any training run (experiments/formations-that-read/FREEZE-9.md): tabular learners on TR7's eleven planned conditions, trained only on the points of sampled outcomes of its frozen game, 20 seeds a run, each run read by an exact sign test of its seeds' movement toward the law's end; not run. The law is unchanged; next_delta adds Stage A's run, which waits on Ren's yes, and names the tests' folder for both, dropping the date.
+- 6 November 2026, board item RUN6: TR7's Stage A ran on Ren's yes (experiments/formations-that-read/README.md, the runs made), read supported: at every verdict run all 20 seeds moved toward the law's end, the way the exact expected gradient moves; it bears on no other trained system and tests no theorem. next_delta keeps TR7's own run and drops the Stage A's. The law is unchanged.
 
 </details>
 

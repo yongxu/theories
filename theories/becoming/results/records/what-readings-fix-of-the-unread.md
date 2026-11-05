@@ -51,7 +51,7 @@ Canonical source: [Unread.lean](../../../../experiments/integrated-correction/ge
 <a id="next--下一步"></a>
 ## Next
 
-Runs of the frozen measurements of the chain's correspondence, on four trained checkpoints and on small trained networks (TR2's Stages B and A): cues varied apart from content and the schedule apart from the cue, with identical-input arms; it can refute a stated lumping or an implementation, never the law; review by a person.
+Runs of the frozen measurements of the chain's correspondence on four trained checkpoints (TR2's Stage B): cues varied apart from content and the schedule apart from the cue, with identical-input arms; it can refute a stated lumping or an implementation, never the law; review by a person.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -95,6 +95,7 @@ Aliases: `what readings fix of the unread`, `读处所定于未读处者`, `a tw
 - 31 October 2026, board item RF, the tests' designs (study section 476): the next step names its test as designed, TR2 in experiments/formations-that-read, which can refute at most a stated lumping or an implementation, never the law; no statement or declaration changed. PLAN.md re-pointed: since this record's reviewed hash the plan changed only where the tests' readers found it misstating the Lean (§3, §4, §8, §11, §12) and in §10, the tests; read against this record before re-pointing, nothing it says changed.
 - 4 November 2026, board item TR45: TR2's Stage B frozen before any model was downloaded or run (experiments/formations-that-read/FREEZE-7.md), on Qwen3-8B and Olmo-3 7B, base and tuned, each named by revision and file hash; the stated lumping is the token ids, with batch size one and no cache, and, for a sampled act, the content's shared draw; not run. The law is unchanged; next_delta's step is now the frozen measurement's run, which waits on Ren's yes.
 - 5 November 2026, board item TR2A: TR2's Stage A frozen before any training of its plan (experiments/formations-that-read/FREEZE-11.md): small networks trained only on the read occasions of each schedule, the chain measured link by link, coverage by the measured lumping, and whether training installs a twin at the cue, which the law does not predict, reported without a verdict; not run. The law is unchanged; next_delta's step names both stages' runs, each waiting on Ren's yes.
+- 6 November 2026, board item RUN6: TR2's Stage A ran on Ren's yes (experiments/formations-that-read/README.md, the runs made), reported without a verdict: no forbidden case counted, which the code's construction rules out, so this does not test RF2; 239 of 240 trainings fitting; a twin at the cue in 2 of 60 linear and 25 of 60 xor content-and-cue trainings (15 of 20 under xor at S1, median share 5/128 there); next_delta keeps Stage B's run and drops the Stage A's. The law is unchanged.
 
 </details>
 
