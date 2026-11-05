@@ -361,8 +361,8 @@
       "zh": "2026年11月5日，看板项 TR1A：TR1 之甲阶于任何训练之前冻结（experiments/formations-that-read/FREEZE-10.md）：项分之择者、合取之对比者与集入之网，于所会之单上依其会对成链之隐序而训，以不携序之标为反对照，各以 TR1 冻结之则读其七十呈示；并 TR1 之告之变体，其唯一判定为此律跨框者；未运行。律不变；next_delta 增甲阶之运行，待 Ren 之可。"
     },
     {
-      "en": "6 November 2026, board item RUN6: TR1's Stage A ran on Ren's yes (experiments/formations-that-read/README.md, the runs made): the comparator class contradicted on all 20 seeds under the order, item-score and set-input passed; next_delta keeps TR1's own run and says the Stage A has run. The law is unchanged.",
-      "zh": "2026年11月6日，看板项 RUN6：TR1 之甲阶经 Ren 之可而运行（experiments/formations-that-read/README.md，已作之运行）：对比者之类于序下二十种子皆被驳，项分与集入皆通过；next_delta 保留 TR1 自身之运行，并言甲阶已运行。此律不变。"
+      "en": "6 November 2026, board item RUN6: TR1's Stage A ran on Ren's yes (experiments/formations-that-read/README.md, the runs made): the comparator class contradicted on all 20 seeds under the order and on 6 under labels carrying no order, item-score and set-input passed under both; next_delta keeps TR1's own run and says the Stage A has run. The law is unchanged.",
+      "zh": "2026年11月6日，看板项 RUN6：TR1 之甲阶经 Ren 之可而运行（experiments/formations-that-read/README.md，已作之运行）：对比者之类于序下二十种子皆被驳，于不携序之标下六种子被驳，项分与集入于二者之下皆通过；next_delta 保留 TR1 自身之运行，并言甲阶已运行。此律不变。"
     }
   ]
 }

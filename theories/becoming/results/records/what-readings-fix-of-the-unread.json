@@ -261,8 +261,8 @@
       "zh": "2026年11月5日，看板项 TR2A：TR2 之甲段于其计划之任何训练之前冻结（experiments/formations-that-read/FREEZE-11.md）：小型网络只于每一读之时之所读处训练，链逐环量测，以所量之归并计覆盖，并报训练是否于讯处装一孪生（此律不预言之），不作判定；未运行。律未变；下一步并举两段之运行，各待 Ren 之许可。"
     },
     {
-      "en": "6 November 2026, board item RUN6: TR2's Stage A ran on Ren's yes (experiments/formations-that-read/README.md, the runs made), reported without a verdict: no forbidden case counted, which the code meets by construction, 239 of 240 trainings fitting, a twin at the cue in few trainings; next_delta keeps Stage B's run and says the Stage A has run. The law is unchanged.",
-      "zh": "2026年11月6日，看板项 RUN6：TR2 之甲段经 Ren 之可而运行（experiments/formations-that-read/README.md，已作之运行），报而不判：未计得任何所禁之例（代码依构造而合之），二百四十训练中二百三十九合，分讯处之孪生见于少数训练；next_delta 保留乙段之运行，并言甲段已运行。此律不变。"
+      "en": "6 November 2026, board item RUN6: TR2's Stage A ran on Ren's yes (experiments/formations-that-read/README.md, the runs made), reported without a verdict: no forbidden case counted, which the code's construction rules out, so this does not test RF2; 239 of 240 trainings fitting; a twin at the cue in 2 of 60 linear and 25 of 60 xor content-and-cue trainings (15 of 20 under xor at S1, median share 5/128 there); next_delta keeps Stage B's run and says the Stage A has run. The law is unchanged.",
+      "zh": "2026年11月6日，看板项 RUN6：TR2 之甲段经 Ren 之可而运行（experiments/formations-that-read/README.md，已作之运行），报而不判：未计得任何所禁之例，此为代码之构造所排除，故不检验 RF2；二百四十训练中二百三十九合；讯处之孪生见于内容与讯之训练：线性六十中二，xor 六十中二十五（xor 于 S1 下二十中十五，其中位份额 5/128）；next_delta 保留乙段之运行，并言甲段已运行。此律不变。"
     }
   ]
 }
