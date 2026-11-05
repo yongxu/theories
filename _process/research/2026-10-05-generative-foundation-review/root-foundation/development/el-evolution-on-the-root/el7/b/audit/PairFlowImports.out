@@ -1,0 +1,18 @@
+modules referenced directly: 16
+  Init.Data.List.Basic
+  Becoming.DrawnBeyond
+  Becoming.PairFlow
+  Becoming.Dependence
+  Init.Prelude
+  Becoming.World
+  Init.SizeOf
+  Init.Data.Nat.Lemmas
+  Becoming.Entropy
+  Becoming.Arising
+  Becoming.Prelude
+  Becoming.PairSelection
+  Becoming.WindowedWaiting
+  Becoming.Flow
+  Init.Data.Nat.Basic
+  Init.Core
+references outside Init and Becoming: 0

@@ -1,0 +1,11 @@
+import Becoming.LineageDrawdown
+open Becoming
+#print axioms LineageDrawdown.stock_ledger
+#print axioms LineageDrawdown.below_iff
+#print axioms LineageDrawdown.below_of_excess
+#print axioms LineageDrawdown.degeneration_of_unmet
+#print axioms LineageDrawdown.degeneration_of_unmet_listed
+#print axioms LineageDrawdown.degeneration_of_drawdown
+#print axioms LineageDrawdown.degeneration_of_excess
+#print axioms LineageDrawdown.landed_of_excess
+#print axioms LineageRegimes.degeneration_of_family_excess
