@@ -284,7 +284,7 @@ def fate_of(lk, ref, fate, need_, labels=True, label_alone=False):
     - Unresolved where the label leaves natural recruitment at a survey after the reference, up to the fate's,
       or stocking is recorded after the reference (managed): giving from beyond, or a programme's relabelling,
       either way. (label_alone reads the label leaving natural recruitment as a fall by itself: the reading
-      set aside, which the dry run and the run report beside.)
+      set aside, which the dry run reports beside the frozen one and the run does not; DESIGN.md, section 13.)
     - Fell where the fate's survey lies below the reference's by the ratio test (change), and no later survey
       within GAP_MAX years of the reference, before any recorded giving, rises from the fate's by the test (a
       recovery, a return T1 forbids below the need); after a recovery the lake is read at that survey.
@@ -399,6 +399,7 @@ def rows(lakes, need_, first=FIRST_REF, last=None, floor=FLOOR, labels=True, lab
                     "below the point with the recorded draw": x < need_ + h,
                     "fate estimate": list(lk["adults"][f]), "below the need at the reference": below,
                     "pending at the reference": pending(lk, r, floor), "back above the need": back,
+                    "giving or relabelling recorded by the fate's survey": managed(lk, r, f, labels),
                     "closed": lk.get("closed"), "other stocking read": lk.get("other") is not None})
         row["fate"], row["fate by"] = fate_of(lk, r, f, need_, labels, label_alone)
         out.append(row)
@@ -432,6 +433,22 @@ def decide(below, above):
     if 2 * k <= n:
         return f"not decided: at most half fell, but {n} resolved lakes are fewer than {N_REFUTE}", nums
     return "not decided", nums
+
+
+def why_not(reading):
+    """Why a reading a refutation is checked against does not refute: too few lakes to decide (fewer than N_MIN
+    resolved), too few to refute by the letter (at most half fell, but fewer than N_REFUTE resolved), or not
+    refuting (the fates on the other side)."""
+    if reading.startswith("not decided: ") and f"fewer than {N_MIN}" in reading:
+        return "too few to decide"
+    if reading.startswith("not decided: at most half fell"):
+        return "too few to refute by the letter"
+    return "not refuting"
+
+
+def caveat(reading):
+    """A reading's line with the positive outcome's caveat where it is that outcome (DESIGN.md, section 7)."""
+    return reading + "; the need's causal role not shown" if reading.startswith(SEPARATED) else reading
 
 
 def v1(table, v2_=None, widened=None):
@@ -484,10 +501,9 @@ def v1(table, v2_=None, widened=None):
         unless, kept = [], [r for r in below if r["fate"] == "persisted"]
         if any(r["closed"] is not True for r in kept):
             closed = decide([r for r in below if r["closed"] is True], [r for r in above if r["closed"] is True])[0]
-            out["the closed lakes alone, read before the clauses"] = closed
+            out["the closed lakes alone, read before the clauses"] = caveat(closed)
             if not closed.startswith("refuted"):
-                few = closed.startswith("not decided: ") and f"fewer than {N_MIN}" in closed
-                unless.append("connected waters (the seepage lakes alone " + ("too few to decide)" if few else "not refuting)"))
+                unless.append("connected waters (the seepage lakes alone " + why_not(closed) + ")")
         if any(not r["other stocking read"] for r in kept):
             unless.append("unrecorded stocking")
         unsurveyed = sum(1 for r in table if r.get("out") == "below the need with no later estimate")
@@ -500,11 +516,9 @@ def v1(table, v2_=None, widened=None):
             inn_w = [r for r in widened if "out" not in r]
             wide = decide([r for r in inn_w if r["T1 predicts"] == "falls" and r["fate"] != "unresolved"],
                           [r for r in inn_w if r["T1 predicts"] == "persists" and r["fate"] != "unresolved"])[0]
-            out["with the intervals widened at low density, read before the clauses"] = wide
+            out["with the intervals widened at low density, read before the clauses"] = caveat(wide)
             if not wide.startswith("refuted"):
-                few = wide.startswith("not decided: ") and f"fewer than {N_MIN}" in wide
-                unless.append("the intervals understate the error at low density (the widened reading "
-                              + ("too few to decide)" if few else "not refuting)"))
+                unless.append("the intervals understate the error at low density (the widened reading " + why_not(wide) + ")")
         reason = verdict.split(": ", 1)[1]
         verdict = (f"{STRONGEST}: {reason}" if not unless else
                    "refuted unless " + " or ".join(unless) + ", or " + RESIDUAL + ": " + reason)
@@ -517,7 +531,8 @@ def v2(table):
     year of the lag surveyed and none at or above the floor, and back above the need at the fate (the later
     interval's lower bound at or above it), with no stocking recorded after the reference and the label kept."""
     cand = [r for r in table if "out" not in r and r["T1 predicts"] == "falls" and r["pending at the reference"] is None]
-    met = [r for r in cand if r["fate"] != "unresolved" and r["fate estimate"][1] >= r["need"]]
+    met = [r for r in cand if r["giving or relabelling recorded by the fate's survey"] is None
+           and r["fate"] != "unresolved" and r["fate estimate"][1] >= r["need"]]
     return {"below the need at the reference, nothing pending": len(cand), "returned": len(met), "met": bool(met),
             "lakes": [{"id": r["id"], "closed": r["closed"], "other stocking read": r["other stocking read"]}
                       for r in met]}

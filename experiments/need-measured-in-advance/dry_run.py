@@ -254,7 +254,7 @@ DID, DID_V2 = "second form not met", "second form not met, V2 met"    # V1's pos
 
 def kind(v):
     if v.startswith(t1n.SEPARATED):
-        m = re.search(r"(\d+) of them with every year of the lag surveyed", v)
+        m = re.search(r"(\d+) of them at the fate's survey with every year of the lag surveyed", v)
         return DID_V2 if m and int(m.group(1)) else DID
     if v.startswith(t1n.STRONGEST):
         return "refuted"                       # the strongest form: the residual clause alone (DESIGN.md, §7)
@@ -428,6 +428,10 @@ def scripted(chk):
         chk("rules: the fate", f"{name}: {want}", t[0].get("fate") == want and by in t[0].get("fate by", ""), t)
     t = t1n.rows([lk(14, 0.5, 3.0, label_fate=STOCKED, stocked=(2015,))], y, last=2014, label_alone=True)
     chk("rules: the fate", "the reading set aside: the label alone a fall", t[0]["fate"] == "fell", t)
+    t = t1n.rows([lk(16, 0.5, 3.0, label_fate=STOCKED)], y, last=2014, label_alone=True)
+    kept = t1n.rows([lk(17, 0.5, 3.0)], y, last=2014, label_alone=True)
+    chk("rules: V1 and V2", "V2 names no relabelled lake under the label alone, so it is the same under both readings",
+        t[0]["fate"] == "fell" and not t1n.v2(t)["met"] and t1n.v2(kept)["met"], (t, t1n.v2(t), t1n.v2(kept)))
     l = lk(15, 0.5, 3.0)
     l["other"] = {2015}
     t = t1n.rows([l], y, last=2014)
@@ -498,6 +502,8 @@ def scripted(chk):
         v.startswith(t1n.SEPARATED) and "; 1 came back above the need within ten years" in v and "0 of them at the fate's survey" in v, v)
     sup = [lk(i, 0.5, 0.2) for i in range(12)] + above + [lk(700, 0.3, 3.0)]
     v = v1(sup)["verdict"]
+    chk("rules: V1 and V2", "the dry run tallies the positive outcome with V2 met as such", kind(v1(sup)["verdict"]) == DID_V2,
+        kind(v1(sup)["verdict"]))
     chk("rules: V1 and V2", "the positive outcome counts the lakes that came back, and V2's with its lake",
         v.startswith(t1n.SEPARATED) and "1 came back above the need within ten years, before any recorded giving, 1 of them at "
         "the fate's survey with every year of the lag surveyed (V2: S700)" in v
@@ -608,9 +614,11 @@ def reader_checks(chk):
             chk("the reader", f"refuses {name}", want in got, got)
     chk("the reader", "codes and species in one form", reader.code(" 123456.0 ") == "123456" and reader.is_species(" WALLEYE "))
     named = [{"id": "1", "name": "Worcester Lake", "county": "Price"}, {"id": "2", "name": "Purchase Lake", "county": "Price"},
-             {"id": "3", "name": "Crane Lake", "county": "Vilas"}, {"id": "4", "name": "CHASE LAKE", "county": " price "}]
-    chk("the reader", "the disclosure's lakes matched by county and whole words: not Purchase Lake, not another county's Crane",
-        reader.seen(named) == ["1", "4"] and reader.seen([{"id": "5"}]) is None, reader.seen(named))
+             {"id": "3", "name": "Crane Lake", "county": "Vilas"}, {"id": "4", "name": "CHASE LAKE", "county": " price "},
+             {"id": "6", "name": "Crane Lake", "county": "Price County"}, {"id": "7", "name": "Chase Lake", "county": "PRICE CO."}]
+    chk("the reader", "the disclosure's lakes matched by whole words of county and name: Price County and PRICE CO. too, "
+        "not Purchase Lake, not another county's Crane",
+        reader.seen(named) == ["1", "4", "6", "7"] and reader.seen([{"id": "5"}]) is None, reader.seen(named))
     with tempfile.TemporaryDirectory() as tmp:
         tmp = Path(tmp)
         reader.write_synthetic(lakes[:3], tmp)
@@ -629,6 +637,39 @@ def reader_checks(chk):
         chk("the reader", "a lake-year with two estimates is read from the more precise, and counted, in the reading and the facts",
             meta["lake-years with more than one estimate, read from the most precise"] == 1 and kept[2] / kept[1] < 9
             and reader.layout_facts(tmp)["lake-years with more than one estimate row"] == 1, (meta, kept))
+    for zero_first in (True, False):
+        with tempfile.TemporaryDirectory() as tmp:
+            tmp = Path(tmp)
+            reader.write_synthetic(lakes[:3], tmp)
+            p = tmp / reader.FILES["adults"]
+            rows = list(csv.DictReader(p.open()))
+            zero = dict(rows[0])
+            zero[reader.COLUMNS["adults"]["lower"]] = "0"
+            with p.open("w", newline="") as f:
+                w = csv.DictWriter(f, fieldnames=list(rows[0]))
+                w.writeheader()
+                w.writerows([zero] + rows if zero_first else rows[:1] + [zero] + rows[1:])
+            back, meta = reader.read_all(tmp)
+            lid, yr = reader.code(rows[0][reader.COLUMNS["adults"]["lake"]]), reader.year_of(rows[0][reader.COLUMNS["adults"]["year"]])
+            chk("the reader", "a readable estimate is read over one whose interval reaches zero, "
+                + ("the zero row first" if zero_first else "the readable row first"), back[lid]["adults"][yr][1] > 0,
+                back[lid]["adults"][yr])
+    with tempfile.TemporaryDirectory() as tmp:
+        tmp = Path(tmp)
+        reader.write_synthetic(lakes[:3], tmp)
+        p = tmp / reader.FILES["age0"]
+        rows = list(csv.DictReader(p.open()))
+        caught, none_ = dict(rows[0]), dict(rows[0])
+        caught[reader.COLUMNS["age0"]["per mile"]], none_[reader.COLUMNS["age0"]["per mile"]] = "5.0", "0.0"
+        with p.open("w", newline="") as f:
+            w = csv.DictWriter(f, fieldnames=list(rows[0]))
+            w.writeheader()
+            w.writerows([caught, none_] + rows[1:])
+        back, meta = reader.read_all(tmp)
+        lid, yr = reader.code(rows[0][reader.COLUMNS["age0"]["lake"]]), reader.year_of(rows[0][reader.COLUMNS["age0"]["year"]])
+        chk("the reader", "a lake-year with two fall surveys is read at the larger catch, and counted, in the reading and the facts",
+            back[lid]["age0"][yr] == 5.0 and meta["fall surveys repeated for a lake-year, read at the largest catch"] == 1
+            and reader.layout_facts(tmp)["lake-years with more than one fall survey row"] == 1, (back[lid]["age0"], meta))
     flat = [{"label": {2010: NATURAL, 2014: NATURAL}} for _ in range(40)]
     one = flat[:39] + [{"label": {2010: NATURAL, 2014: STOCKED}}]
     few = flat[:37] + [{"label": {2010: NATURAL, 2014: STOCKED}} for _ in range(3)]
@@ -661,8 +702,8 @@ def run_checks(chk):
         chk("the run", "V1 is also read without the lakes a search summary showed, found by county and name",
             cell.get("without the lakes a search summary showed (reported)", {}).get("lakes") == [lakes[3]["id"]],
             cell.get("without the lakes a search summary showed (reported)"))
-        chk("the run", "the seepage lakes alone, the reading set aside and renewal below the need are reported",
-            "recorded seepage lakes alone (reported)" in cell and "V1 with the label alone a fall (the reading set aside)" in cell
+        chk("the run", "the seepage lakes alone and renewal below the need are reported, the reading set aside not",
+            "recorded seepage lakes alone (reported)" in cell and not any("label alone" in k for k in cell)
             and cell.get("renewal below the need (reported)", {}).get("lake-years") is not None, sorted(cell))
         saved = RUN.DOWNLOADS
         try:

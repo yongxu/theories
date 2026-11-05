@@ -156,8 +156,6 @@ def run(folder, check_frozen=True, check_inputs=True):
                          "renewal below the need (reported)": t1n.renewal_below(lakes, nd, floor=floor, labels=labels)})
             if floor == t1n.FLOOR:
                 out["rows"] = res["rows"]
-                alone = t1n.read(lakes, nd["need"], t1n.FIRST_REF, last, floor, labels, label_alone=True)
-                cell["V1 with the label alone a fall (the reading set aside)"] = alone["V1"]["verdict"]
                 closed = [lk for lk in lakes if lk.get("closed") is True]
                 if closed:
                     cell["recorded seepage lakes alone (reported)"] = t1n.read(

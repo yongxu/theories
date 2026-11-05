@@ -88,6 +88,7 @@ def read_all(folder):
     of lakes changes category across years), how many rows each file matched, and the lake-years repeated."""
     lakes, skipped = {}, {"a blank year or acres": 0, "no estimate or interval": 0}
     repeated = 0
+    counts = {"fall surveys repeated for a lake-year, read at the largest catch": 0}
     for row in table(folder, "adults"):
         label = row["label"].strip()
         if label not in LABELS:
@@ -107,8 +108,8 @@ def read_all(folder):
         if yr in lk["adults"]:
             repeated += 1
             old = lk["adults"][yr]
-            if not (lo > 0 and old[1] > 0 and hi / lo < old[2] / old[1]):
-                continue                           # the more precise estimate kept; ties keep the first row
+            if not (lo > 0 and (old[1] <= 0 or hi / lo < old[2] / old[1])):
+                continue                           # the more precise estimate kept, a readable one over one reaching zero
         lk["adults"][yr] = (est / acres, lo / acres, hi / acres)
         lk["label"][yr] = LABELS[label]
     matched = {}
@@ -132,6 +133,9 @@ def read_all(folder):
     def age0(lk, row):
         yr, v = year_of(row["year"]), num(row["per mile"])
         if yr is not None and v is not None:
+            if yr in lk["age0"]:
+                counts["fall surveys repeated for a lake-year, read at the largest catch"] += 1
+                v = max(v, lk["age0"][yr])        # renewal any survey of the year caught was made
             lk["age0"][yr] = v
 
     def harvest(creel):
@@ -171,16 +175,18 @@ def read_all(folder):
                 raise SystemExit(f"no row of {FILES[kind]} names {SPECIES!r}: the species' text differs")
     labels = t1n.labels_per_year(lakes.values())
     return lakes, {"labels per year": labels, "rows matched by lake code, of rows": matched, "rows skipped": skipped,
-                   "lake-years with more than one estimate, read from the most precise": repeated}
+                   "lake-years with more than one estimate, read from the most precise": repeated, **counts}
 
 
 def seen(lakes):
-    """The lakes SEEN names: in its county, with one of its words as a whole word of the lake's name, case aside.
+    """The lakes SEEN names: its county and one of its words each a whole word, of the county and of the lake's
+    name, case aside ("Price County" and "PRICE CO." are Price; "Purchase Lake" is not Chase).
     None where no lake has a name, as where the records' name column was not read."""
     if not any(lk.get("name") for lk in lakes):
         return None
     words = re.compile(r"\b(" + "|".join(SEEN["names"]) + r")\b")
-    return sorted(lk["id"] for lk in lakes if lk.get("county", "").strip().lower() == SEEN["county"]
+    county = re.compile(r"\b" + SEEN["county"] + r"\b")
+    return sorted(lk["id"] for lk in lakes if county.search(lk.get("county", "").lower())
                   and words.search(lk.get("name", "").lower()))
 
 
@@ -221,7 +227,8 @@ def layout_facts(folder, cutoff=t1n.CUTOFF):
         est.setdefault(lid, set()).add(yr)
         labs.setdefault(lid, set()).add(r["label"].strip())
         chars.setdefault(lid, set()).add((r.get("characteristics") or "").strip())
-    age0 = {(code(r["lake"]), year_of(r["year"])) for r in rows_of("age0") or []}
+    age0_rows = [(code(r["lake"]), year_of(r["year"])) for r in rows_of("age0") or []]
+    age0 = set(age0_rows)
     last = max((y for ys in est.values() for y in ys), default=None)
     pairs = [(l, y) for l, ys in est.items() for y in ys if y <= cutoff and (l, y) in age0]
     end = last - t1n.GAP_MIN if last else None
@@ -248,6 +255,7 @@ def layout_facts(folder, cutoff=t1n.CUTOFF):
             "lakes recorded closed / open / unknown": [sum(1 for v in closed.values() if v is s) for s in (True, False, None)],
             "species texts": species, "rows naming a lake of the estimates, of rows": match,
             "lake-years with more than one estimate row": repeated,
+            "lake-years with more than one fall survey row": len(age0_rows) - len(age0),
             "the lakes of the disclosure (DESIGN.md, section 9), found by county and name":
                 (lambda ids: "not found: no lake's name was read" if ids is None else
                  [[i, names[i]["name"], names[i]["county"]] for i in ids] or "not found: no lake matches")(seen(list(names.values()))),

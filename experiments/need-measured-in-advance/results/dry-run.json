@@ -267,7 +267,8 @@
    },
    "speed 0.03": {
     "V1": {
-     "second form not met": 26,
+     "second form not met": 23,
+     "second form not met, V2 met": 3,
      "not decided": 14
     },
     "V2 met": 6,
@@ -2336,7 +2337,8 @@
    },
    "speed 0.0": {
     "V1": {
-     "second form not met": 40
+     "second form not met": 38,
+     "second form not met, V2 met": 2
     },
     "V2 met": 2,
     "renewal below the need beyond the fit at 0.05 (reported)": 0,
@@ -2502,8 +2504,9 @@
    },
    "speed 0.0": {
     "V1": {
-     "second form not met": 33,
-     "not decided": 7
+     "second form not met": 32,
+     "not decided": 7,
+     "second form not met, V2 met": 1
     },
     "V2 met": 2,
     "renewal below the need beyond the fit at 0.05 (reported)": 38,
@@ -2661,7 +2664,7 @@
    }
   }
  },
- "checks": 232,
+ "checks": 237,
  "checks by kind": {
   "rules: V1": 16,
   "rules: the separation": 2,
@@ -2669,16 +2672,16 @@
   "rules: the ratio test": 1,
   "rules: the scope": 3,
   "rules: the fate": 16,
+  "rules: V1 and V2": 4,
   "rules: renewal pending": 6,
   "rules: the reference": 2,
   "rules: V2": 4,
   "rules: the confounds": 6,
-  "rules: V1 and V2": 2,
   "rules: static labels": 1,
   "rules: the tail": 3,
   "rules: the renewal report": 1,
   "the need": 7,
-  "the reader": 14,
+  "the reader": 17,
   "the run": 10,
   "the chain": 9,
   "worlds: confounds": 32,
@@ -2688,12 +2691,12 @@
   "worlds: the renewal report": 3
  },
  "failed": [],
- "CPU seconds": 310.0,
+ "CPU seconds": 315.7,
  "code hashes": {
-  "experiments/need-measured-in-advance/t1n.py": "a832033b0a8c81751ff90ee363c18568b2edd192d5b3b81815861d400d4ef926",
-  "experiments/need-measured-in-advance/reader.py": "1d96f2a2d52849349e39b6e4fe249ed3ace2fea06389224e61b6e92f896d936b",
-  "experiments/need-measured-in-advance/run.py": "d4765585c7d34c9beb20a028e9d129ade7f107108cbaa00aa90146d459ecb0c9",
-  "experiments/need-measured-in-advance/dry_run.py": "61defc089b8520832c129ffc8367cd31c03a30941c3f5745d12bb9495739c585",
+  "experiments/need-measured-in-advance/t1n.py": "3a2503115c40b3dd605cba6507784f37eb2fa037665f9693e92c9de0fea250c9",
+  "experiments/need-measured-in-advance/reader.py": "c9b8bd3d20ae1de38dbce3821633bd4d96ea11162ac19cd4b89a8e661552d89a",
+  "experiments/need-measured-in-advance/run.py": "775ecb519db8a0f4634b343188540ed507deb3ab068003d8c8b98b217df02e4a",
+  "experiments/need-measured-in-advance/dry_run.py": "3bf0c65ba8cd7355f2f95474ea81008cbfe04429b0a8e6180d5c8a48837ec69f",
   "experiments/need-measured-in-advance/layout.json": "5cf8f04439f12c3493b2be6abcd75853a37c85ddb092f5abb0ec45e7077f7e7f"
  },
  "code unchanged during the run": true
