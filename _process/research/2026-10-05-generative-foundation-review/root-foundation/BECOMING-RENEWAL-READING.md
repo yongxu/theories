@@ -24703,3 +24703,53 @@ Review: two independent AI readers of the result and the changed texts against t
        field's bound as well as past it, though within it short of 0.05, so the fronts keep the embedding's loss with
        longer history and the recount stands in full in the README and above; five errors in all, every one taken.
 ```
+
+## 509. T2 in the flour beetle's cultures by cell, and its wording narrowed (UE31b's run)
+
+Board item RUN6, run on 6 November 2026 on Ren's yes ([his words](../../../../sources/15-codex-theory-conversations/2026-11-06-go-ahead-with-everything.md)) by UE31b's script, frozen on 3 November before any of the cultures' values was read ([DESIGN](../../../../experiments/state-named-in-advance/cells/DESIGN.md), [result](../../../../experiments/state-named-in-advance/README.md#ue31bs-result)). AI-written (a Claude Code session); no person has checked it.
+
+```text
+Result(s): none reused and none new in the register; thesis T2 (home 02 §5, 08's thesis table), unmigrated.
+Delta: T2's first frozen test outside fisheries to decide anything. The Beetle Team archive's 40 adult-loss
+       cultures, which UE31's rules found too short, read as ten cells (one strain at one set loss, four replicates
+       under one law) by UE31's rules at that unit. The reading is the one expected before the run: "separated on the
+       next step: the rival's state; three numbers suffice on the course", the sign not separated. W, the pupae and
+       the adults beyond T2's three numbers: excess 0.831 (per-loss medians 0.362, 0.537, 0.831, 0.832, 0.913),
+       detected in 8 of 10 cells: T2's wording "as far as anything measured does" fails. V2, T2's numbers beyond the
+       pupae and the adults: excess 0.004, detected in none: the rival holds. H1, a further lag beyond T2's three
+       numbers with the lag at the delay: excess 0.052, under the bound 0.10 (per-loss medians -0.006, 0.179, 0.076,
+       -0.003, 0.052), detected in one cell: three numbers suffice on the course. Sign: not separated, the two rules
+       differing in 4 cells, 6 needed, each right in 2. V5: not testable, 3 cells detected, 6 needed. V4: not decided,
+       T2 better in 5, worse in 5, median error 0.269, the level alone's 0.230. Reported: V3, the rival's squared
+       error over T2's out of sample, median 0.058, the rival better in all 10 (p = 0.002); residuals over the
+       measured floor 54.3 for T2's law, 7.8 for the rival's; ONEH, the lag one census back, 0.101.
+Evidence: the frozen run (experiments/state-named-in-advance/cells/results/run-cells.json and run-cells.out): Python
+       3.11.2, seconds of CPU; the workbook's sha-256 checked by the script (5ce9ae436bf2...), the file UE31's run
+       read, downloaded by hand on Ren's yes of 3 November and kept outside the repository; the recording check
+       passed, 8 of 360 rows with recruits above the pupae against the 12.5% that would stop the reading; week 12's
+       entry read by the frozen rule in all 40 cultures.
+Forbidden items as now read: the first as worded (W) is met in this domain, and on the level's own history (H1) it is
+       not; the second (V4) and third (V5, the sign) are not decided.
+Decision on the wording: T2-PROPOSALS' proposal 3 said to keep the clause until a frozen test's run fails it, then
+       record the failure and narrow the clause, with the failure kept beside it. This is that run, so the clause
+       becomes "as far as the level's own history does" and the first forbidden item "a fourth variable from the level's
+       own history". It forbids less: a measured variable outside that history, such as a stage before recruitment,
+       may now carry more without counting against T2. It is a narrowing after a failure, recorded as a loss of the
+       broader claim, and it does not count as T2 passing on what remains.
+Against 08's verdict on what is new (08 §8): this does not change it. The course's "three numbers suffice" is a
+       prediction that could fail and did not (it fails in the dry runs where the life cycle is longer), but the
+       field's model makes the same prediction; T2's three numbers did far worse than the field's state on the next
+       giving, and the one prediction on which they differ was not decided.
+Kept: every completed verdict; UE31's run, which decided nothing, as it stands; the answer expected, as written; the
+       frozen rules, read unchanged at this unit. W reports the old wording's fate, as UE31b §8 said it would.
+Limits: UE31 §12's and UE31b §10's, among them that four replicates share one law a cell, that the rival's constants
+       come from other analyses, that ten units leave V5 mostly untestable, and that the model that wrote the design
+       may have met these cultures' published series in its training text. A laboratory culture under a set loss is a
+       renewable condition under a draw but is not on T2's Refuted by list, which names field series and yeast; the
+       failure counts against the clause for every one and does not reach the fisheries or the reading 08 §9 names.
+Integration: 02 §5 (T2's statement, Forbids, Standing, the beetle's account), 08's thesis row, the overview's T2 row
+       (EN, ZH), the sciences dossier's front row and S-15, UE31's README (UE31b's result), T2-PROPOSALS' note, the
+       experiments index.
+Review: see the board's RUN6 row; an independent AI reader read the result and the changed texts against the output
+       and the design.
+```

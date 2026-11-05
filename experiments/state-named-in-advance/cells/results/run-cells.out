@@ -1,0 +1,17 @@
+{'cells': 10, 'too_short_cells': 0, 'testable': True, 'protocol': "the reading's form and the stage counts agree with the protocol", 'W': 'the wording fails', 'V2': 'the rival holds', 'H1': 'T2 holds', 'V5': 'not testable', 'sign': "not separated on the sign: the rival's turning point does not split the cultures", 'V4': 'not decided', 'reading': "separated on the next step: the rival's state; three numbers suffice on the course"}
+  W_excess 0.8312608925236505
+  V2_excess 0.003951571226526326
+  H1_excess 0.05161560937453773
+  W_detected 8
+  V2_detected 0
+  H1_detected 1
+  V5_signs [1, 2]
+  sign_counts {'cultures': 10, 'positive': 8, 'unpredicted': 2, 'rival_predicts_negative': 4, 'rules_differ': 4, 'rival_right': 2, 'T2_right': 2, 'p': 1.0}
+  V4_errors {'T2': 0.26904288286775707, 'level_alone': 0.23020781953095085, 'T2_better': 5, 'T2_worse': 5, 'p': 1.0}
+  reported_V3 {'median_ratio': 0.0580765454668903, 'rival_better': 10, 'rival_worse': 0, 'p': 0.001953125}
+  reported_resid_over_floor {'T2': 54.342257285467824, 'RB': 7.761478852033996}
+  reported_rows_recruits_above_pupae 8
+  protocol_rows [8, 360]
+  week12 {'cultures': 40, 'with two entries': 40, 'the earlier read': 0, 'the later read': 40, 'from 0.27 on: the later holds fewer adults, the earlier holds fewer, the same': [32, 0, 0], 'at 0.04 by strain: the position read, and in how many of its cultures the entry read holds fewer adults than the other': {1: ['later', 4, 4], 2: ['later', 4, 4]}, 'same larvae and pupae in both': 40}
+  left_out {'W': 0, 'H1': 0, 'V2': 0}
+  zero_columns_dropped 0
