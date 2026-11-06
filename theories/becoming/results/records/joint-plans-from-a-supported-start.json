@@ -32,8 +32,8 @@
       ]
     },
     {
-      "en": "In a shared renewal whose two sides each pass their activity to the other at every step, joint activity at any step is exactly joint activity at the start: an empty start stays empty, one side alone never becomes jointly active, a stored reserve ignites a start active at every step, and ignition needs the reserve and uses it up.",
-      "zh": "两侧每步互把活动传给对方之共同更新中，任一步之共同活跃恰为起点之共同活跃：空之起点仍空，单侧永不成为共同活跃，所储之储备点燃一个每步皆活跃之起点，点燃需要储备并用尽之。",
+      "en": "In a shared renewal whose two sides each pass their activity to the other at every step, joint activity at any step is exactly joint activity at the start: an empty start stays empty, one side alone never becomes jointly active, a stored reserve ignites a start active at every step, and ignition, defined as spending a reserve, needs the reserve and uses it up (near-definitional).",
+      "zh": "两侧每步互把活动传给对方之共同更新中，任一步之共同活跃恰为起点之共同活跃：空之起点仍空，单侧永不成为共同活跃，所储之储备点燃一个每步皆活跃之起点；点燃按定义即用去储备，故需要储备并用尽之（近于定义）。",
       "declarations": [
         "SeededContinuation.Config",
         "SeededContinuation.tick",
@@ -99,8 +99,8 @@
     "zh": "受支持之起点如何在运行中形成；以及于脊柱上自种子得出之配对方案：mutual_history 是两性质之合取之不变之律，合成即 Viability.Plan.zip_keeps。"
   },
   "correspondence": {
-    "en": "Concurrency: the one-step obligations are an inductive invariant for two properties, in the style of rely-guarantee reasoning (Jones 1983), each property being kept by every step taken where both hold. Read by the AI: cooperation among strangers needs a source, and mutual promises alone cannot start a loop.",
-    "zh": "并发：一步之义务是两性质之归纳不变式，属依赖—保证推理之式（Jones 1983），每一性质在两者皆成立处为每一步所保。依 AI 之读：陌生者之合作需要一个源头，单凭相互承诺不能启动一环。"
+    "en": "Concurrency: the one-step obligations are an inductive invariant for two properties, in the style of rely-guarantee reasoning (Jones 1983), each property being kept by every step taken where both hold. Read by the AI: cooperation among strangers needs a source, and mutual promises alone force no start of a loop.",
+    "zh": "并发：一步之义务是两性质之归纳不变式，属依赖—保证推理之式（Jones 1983），每一性质在两者皆成立处为每一步所保。依 AI 之读：陌生者之合作需要一个源头，单凭相互承诺不迫使一环启动。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/SeededContinuation.lean",
   "aliases": [
@@ -164,7 +164,7 @@
     {
       "path": "theories/becoming/chapters/05-COLLECTIVES.md",
       "role": "statement",
-      "sha256": "cd378089030fd50971e459ccca8c7aa92dd1c07214efb13441ad58c0860d29d5"
+      "sha256": "659472a74d25b001790c7d8f0fce704831e66e19f7ff7061a26a7322cd7e0bd8"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/SEEDED-CONTINUATION-INTEGRATION.md",
@@ -185,6 +185,10 @@
     {
       "en": "27 October 2026: added (DF2), paired local plans are jointly valid from a supported start under one-step joint availability and mutual preservation, mutual eventual promises force nothing, and in a witness ignition needs a stored reserve; from DEFECTS-FOUND (triage row 195); study section 426.",
       "zh": "2026年10月27日：新增（DF2），在一步之共同可实施与相互保持下，配对之局部方案自受支持之起点共同有效，相互之终将承诺不迫使任何事，见证中点燃需要所储之储备；出自 DEFECTS-FOUND（分诊第 195 行）；研究第 426 节。"
+    },
+    {
+      "en": "7 November 2026, board item AA: the atlas's readers found a clause true by the move's definition and not labelled so, and a reading saying promises cannot start a loop where the law says they force nothing; corrected against the Lean and the later records.",
+      "zh": "2026年11月7日，工作板条目 AA：图谱读者发现一个按动作定义即真的子句未被如此标明，一则读法说承诺不能启动一环而其律只说不迫使任何事；已对照 Lean 与后来的记录改正。"
     }
   ]
 }

@@ -637,7 +637,7 @@
      "record": "joint-plans-from-a-supported-start",
      "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start",
      "says": {
-      "en": "Any process, periphery module: “Promises do not: “if the other eventually does, I eventually do” holds on both sides where neither ever happens”; “ignition needs a reserve already present”."
+      "en": "Any process, periphery module: “Promises do not: “if the other eventually does, I eventually do” holds on both sides where neither ever happens”; in the exchange witness “ignition, which the move defines as spending a reserve, needs one already present” (near-definitional)."
      },
      "role": "neighbour"
     },
@@ -1470,7 +1470,7 @@
      "record": "joint-plans-from-a-supported-start",
      "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start",
      "says": {
-      "en": "Any process, periphery module: “With faithful joint-to-local projections and valid local plans”, two properties holding on the covered start, and every pair of locally authorized moves jointly allowed and keeping both, “the paired finite plan is valid”; “ignition needs a reserve already present”."
+      "en": "Any process, periphery module: “With faithful joint-to-local projections and valid local plans”, two properties holding on the covered start, every pair of locally authorized moves jointly allowed with a successor wherever both hold, and every admitted joint successor keeping both, “the paired finite plan is valid”; in the exchange witness “ignition, which the move defines as spending a reserve, needs one already present” (near-definitional)."
      },
      "role": "carries"
     },
@@ -2015,7 +2015,7 @@
     {
      "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions",
      "says": {
-      "en": "“a pool recruiting only through itself couples into a loss only as its course without the loss would”, “unless a reader is admitted from outside” (witness)."
+      "en": "“a pool recruiting only through itself couples into a loss only as its course without the loss would”; “a pool comes to couple into what it does not yet couple into only through an admission not made through it” (witness) or “through members its course would hold anyway” (witness)."
      },
      "role": "carries",
      "part": "Pool couplings"
@@ -2164,6 +2164,11 @@
  ],
  "changes": [
   {
+   "id": "cx-hsm-value-or-tool-alone",
+   "what": "changed",
+   "why": "main changed theories/becoming/chapters/05-COLLECTIVES.md (LM1 or AA, 7 November 2026): targets[1].says states what it says now"
+  },
+  {
    "id": "cx-hsm-no-nobler-first",
    "what": "changed",
    "why": "second critic (fails): The only carrier, 05's D48 'the law changes, not the state alone', sets an act law against a configuration, while the source sets offering options against making people nobler, and a nobler disposition would change the law too: a shared 'not X but Y' shape stands in for a mechanism, as the reading half-concedes ('not about human nature'). My search of the live account found no statement of it, so not-carried, the proposal kept in reading."
@@ -2172,6 +2177,16 @@
    "id": "cx-hsm-research-question",
    "what": "changed",
    "why": "second critic (label): The labels stand: claims 2-3, 'The gap between the two collections' and 'What was lost' item 1 say what the sense says, and the account's exits under hypotheses, 'none shown to hold of an actual collective', carry part while diverging from a collection of actual exceptions. But the limit target quotes 'No institution is modelled on the spine', which COLLECTIVE-DIRECTION §5 no longer says since 95a7008a9 (so its note that the live texts differ is stale too), and the reading's 'what keeps a mechanism from capture is assumed there' overstates D48, whose table states exits from capture and whose limit supplies only regulation and passing."
+  },
+  {
+   "id": "cx-hsm-coordination-protocols",
+   "what": "changed",
+   "why": "main changed theories/becoming/chapters/05-COLLECTIVES.md (LM1 or AA, 7 November 2026): targets[0].says states what it says now"
+  },
+  {
+   "id": "cx-hsm-threshold-review",
+   "what": "changed",
+   "why": "main changed theories/becoming/COLLECTIVE-DIRECTION.md (LM1 or AA, 7 November 2026): targets[4].says states what it says now"
   }
  ],
  "live_flags": [

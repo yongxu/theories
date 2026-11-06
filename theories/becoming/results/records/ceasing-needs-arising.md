@@ -31,7 +31,7 @@
 ## Conditions
 
 - Listing: the members holding at each step are listed, each once, so finitely many hold at each step; there may be infinitely many members in all. The census and the census of what stands are this read of activity and of standing.
-- Decidability: finding what comes to be in the pure core needs the determination decided; read of activity this is decided activity, read of standing it holds automatically (comparison of natural numbers is decidable). It is a logical commitment of the representation and classically always holds.
+- Decidability: finding what comes to be in the pure core needs the determination decided; read of activity this is decided activity, read of standing it holds automatically (comparison of natural numbers is decidable). It is the law's own condition, not a commitment of the representation, and classically always holds.
 - census_one_way is a statement about two particular worlds, with no premise.
 
 <a id="does-not-show--未表明"></a>
@@ -170,6 +170,7 @@ Aliases: `Becoming.Listed.coming_of_ceasing`, `Becoming.Web.StandingCensus.comin
 - 25 October 2026, board item DF (study section 418): in the correspondence "the author's reading (an AI argument)" now reads "a reading (the AI's argument)", keeping its AI label; the laws are unchanged.
 - 1 November 2026, U4c (study section 492): law 2 restated: Listed.coming_of_ceasing is re-proved through the root's census of a run, no longer through Listed.over_stretch and Listed.coming_iff_excess; its statement is unchanged, and law 2's declarations follow the proof, with the references that hold them. The census balance leaves the dependencies, its related note saying until when it was the proof, and the root's census joins related. Declarations moved with their full names: recurring_accumulates to Becoming.Prelude, with the list and stretch lemmas the root's census laws use. The cited Lean source and its proof binding follow them; gaining_of_losing_from, which law 2 now declares, is cited there too; the claim is unchanged.
 - 1 November 2026, U4d (study section 498): law 2 restated for the routes: the root's census of a run no longer asks the occurrences listed once, and the covering law (law 6), through which the world and standing readings go, now reaches the root through the root's covering law at a member's occurrences (Covers.coming_from_of_ceasing re-proved, statement unchanged); the census of a run is itself a case of the root's count of ends on lines. Law 2's declarations gain the two root laws and lose gaining_of_losing_from, which the proof no longer uses. What the record states is unchanged.
+- 7 November 2026, board item AA: the atlas's readers found a contradiction on decidedness; corrected against the Lean and the later records.
 - 8 rebinding entries (2026-10-13 to 2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](ceasing-needs-arising.json).
 
 <a id="earlier-text--早期文本"></a>

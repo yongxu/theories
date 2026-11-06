@@ -453,7 +453,7 @@
     {
      "anchor": "theories/becoming/chapters/02-MAP.md#not-shown",
      "says": {
-      "en": "Not shown: that generation is better than keeping or degeneration: order needs C, whose losses count needs the continuation condition."
+      "en": "Not shown: that generation is better than keeping or degeneration: order needs C or a premise in its place, whose losses count needs the continuation condition."
      },
      "role": "limit"
     }
@@ -2253,7 +2253,7 @@
     {
      "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#6-what-enough-situationality-would-have-to-mean",
      "says": {
-      "en": "Reading [AI reading, D45]: observation is the first condition, necessary and not sufficient. All six together still rank nothing: calling the widening course better needs C, and counting the losses that return to no one needs the continuation condition."
+      "en": "Reading [AI reading, D45]: observation is the first condition, necessary and not sufficient. All six together still rank nothing: calling the widening course better needs C or a premise in its place, and counting the losses that return to no one needs the continuation condition."
      },
      "role": "carries",
      "part": "D45"
@@ -2937,7 +2937,7 @@
     {
      "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-what-pooled-coupling-reaches",
      "says": {
-      "en": "Theorem (World), as COLLECTIVE-DIRECTION §2 lists it under pool couplings: where a list holds exactly the members and each member's coupling of two histories is decided, a pool separates exactly what some member separates (World). Edge: a pool recruiting only through itself couples into a loss only as its course without the loss would, unless a reader is admitted from outside (witness)."
+      "en": "Theorem (World), as COLLECTIVE-DIRECTION §2 lists it under pool couplings: where a list holds exactly the members and each member's coupling of two histories is decided, a pool separates exactly what some member separates (World). Edge: a pool recruiting only through itself couples into a loss only as its course without the loss would, and a pool comes to couple into what it does not yet couple into only through an admission not made through it (witness) or through members its course would hold anyway (witness)."
      },
      "role": "carries",
      "record": "what-pooled-coupling-reaches"
@@ -3475,7 +3475,7 @@
    "carried": "fresh-reading",
    "relation": "scope",
    "reading": {
-    "en": "The account has no statement of trust; this scope is proposed here, on its model of waiting. Restoring needs a formation sparing all it waits on, which gives from step 1 whatever the start; without one, total withholding stays. And mutual promises alone cannot start a loop with no source, which limits 'begin with contact'. Verification has a limit of its own: behaviour at an unread occasion can differ while every reading agrees, where no read occasion shares its lump; intention and another's false belief are not stated. Tolerance is not shown good. [AI reading]"
+    "en": "The account has no statement of trust; this scope is proposed here, on its model of waiting. Restoring needs a formation sparing all it waits on, which gives from step 1 whatever the start; without one, total withholding stays. And mutual promises alone force no start of a loop with no source, which limits 'begin with contact'. Verification has a limit of its own: behaviour at an unread occasion can differ while every reading agrees, where no read occasion shares its lump; intention and another's false belief are not stated. Tolerance is not shown good. [AI reading]"
    },
    "targets": [
     {
@@ -3489,7 +3489,7 @@
     {
      "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-offspring-read-from-giving-that-waits",
      "says": {
-      "en": "Reading [AI reading, D48]: tolerance lets cooperation survive scattered withholding, not rebuild it where it is lost everywhere; mutual promises alone cannot start a loop with no source."
+      "en": "Reading [AI reading, D48]: tolerance lets cooperation survive scattered withholding, and rebuilds it where it is lost everywhere only where some formation spares all it waits on; mutual promises alone force no start of a loop with no source."
      },
      "role": "carries",
      "part": "D48"
@@ -3541,7 +3541,7 @@
     {
      "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions",
      "says": {
-      "en": "Exits, each with law, model, hypotheses and edge: read what lies beyond the share, read the loss in time, restraint within the joint slack, give first with a reserve, and others. Once the late reading would favour the shapers, every later reading keeps the lock."
+      "en": "Exits, each with law, model, hypotheses and edge: read what lies beyond the share, read the loss in time, restraint within the joint slack, spare all one waits on, and others. Once the late reading would favour the shapers, every later reading keeps the lock."
      },
      "role": "carries"
     },
@@ -4068,6 +4068,32 @@
    "same_as": null
   }
  ],
- "changes": [],
+ "changes": [
+  {
+   "id": "cx-kpso-stabilize-and-keep-going",
+   "what": "changed",
+   "why": "main changed theories/becoming/chapters/02-MAP.md (LM1 or AA, 7 November 2026): targets[2].says states what it says now"
+  },
+  {
+   "id": "cx-kpso-understanding-aligned-first",
+   "what": "changed",
+   "why": "main changed theories/becoming/COLLECTIVE-DIRECTION.md (LM1 or AA, 7 November 2026): targets[1].says states what it says now"
+  },
+  {
+   "id": "cx-kpso-shared-sensing",
+   "what": "changed",
+   "why": "main changed theories/becoming/COLLECTIVE-DIRECTION.md (LM1 or AA, 7 November 2026): targets[0].says states what it says now"
+  },
+  {
+   "id": "cx-kpso-trust-before-verification",
+   "what": "changed",
+   "why": "main changed theories/becoming/chapters/05-COLLECTIVES.md (LM1 or AA, 7 November 2026): targets[1].says states what it says now / main changed theories/becoming/COLLECTIVE-DIRECTION.md (LM1 or AA, 7 November 2026): reading states what it says now"
+  },
+  {
+   "id": "cx-kpso-the-transition",
+   "what": "changed",
+   "why": "COLLECTIVE-DIRECTION's exit 'Give first, with a reserve' is 'Spare all one waits on' since AA's errata (7 November 2026): the law has no reserve in it"
+  }
+ ],
  "live_flags": []
 }

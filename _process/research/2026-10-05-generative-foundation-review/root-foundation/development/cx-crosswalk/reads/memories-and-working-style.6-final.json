@@ -477,7 +477,7 @@
      "record": "readings-within-what-they-read",
      "anchor": "theories/becoming/chapters/03-KNOWING.md#r-readings-within-what-they-read",
      "says": {
-      "en": "Theorem (any type). Where a map moves every value, no member of a family of readings indexed by what it reads says the diagonal gap; completing it step by step is an unfolding incomplete at every step that never returns. Coding and provability are not stated."
+      "en": "Theorem (any type). Where a map moves every value, no member of a family of readings indexed by what it reads says the diagonal gap; there, completing it step by step is an unfolding incomplete at every step that never returns. Coding and provability are not stated."
      },
      "role": "neighbour"
     }
@@ -581,7 +581,7 @@
      "record": "returning-novelty-forgetting-on-levels",
      "anchor": "theories/becoming/chapters/02-MAP.md#r-returning-novelty-forgetting-on-levels",
      "says": {
-      "en": "On the levels alone: a bounded family exchanged with arbitrarily late carries neither the count of its exchanges nor a finite whole (`World.forgets_of_bounded`)."
+      "en": "On the levels alone: a family whose stock stays within a bound, exchanged with at arbitrarily late steps, does not carry the count of its exchanges (`Flow.uncarried_of_bounded`), and a finite whole within a bound that keeps exchanging does not carry its history (`World.forgets_of_bounded`)."
      },
      "role": "neighbour"
     },
@@ -2410,7 +2410,7 @@
     {
      "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#6-what-enough-situationality-would-have-to-mean",
      "says": {
-      "en": "Reading [AI reading, D45]. Among six conditions: Time, before the regime's point of no return; Pace, a slow rule reading the fast level over a long enough stretch. All six rank nothing: calling the widening course better needs C, and counting the losses that return to no one needs the continuation condition."
+      "en": "Reading [AI reading, D45]. Among six conditions: Time, before the regime's point of no return; Pace, a slow rule reading the fast level over a long enough stretch. All six rank nothing: calling the widening course better needs C or a premise in its place, and counting the losses that return to no one needs the continuation condition."
      },
      "role": "neighbour"
     },
@@ -2897,7 +2897,7 @@
    "relation": "divergence",
    "agreement_of": null,
    "reading": {
-    "en": "The account recasts likewise: what a course admits, and widening, defined with no premise. It denies the transfer: that the wider is better needs C, whose losses count needs the continuation condition, neither asserted, warrant open, and the definition carries no warrant. On witnesses a widening stands below what it widens by a net weighting or a game's payoffs. So recasting gains exactness and no ought, and 'consequences, not tastes' is what the account withholds. [AI reading]"
+    "en": "The account recasts likewise: what a course admits, and widening, defined with no premise. It denies the transfer: that the wider is better needs C or a premise in its place, whose losses count needs the continuation condition, neither asserted, warrant open, and the definition carries no warrant. On witnesses a widening stands below what it widens by a net weighting or a game's payoffs. So recasting gains exactness and no ought, and 'consequences, not tastes' is what the account withholds. [AI reading]"
    },
    "targets": [
     {
@@ -2945,9 +2945,29 @@
  ],
  "changes": [
   {
+   "id": "cx-memories-one-model-smaller",
+   "what": "changed",
+   "why": "main changed theories/becoming/results/records/readings-within-what-they-read.json (LM1 or AA, 7 November 2026): targets[4].says states what it says now"
+  },
+  {
+   "id": "cx-memories-lossy-consolidation",
+   "what": "changed",
+   "why": "main changed theories/becoming/chapters/02-MAP.md (LM1 or AA, 7 November 2026): targets[1].says states what it says now"
+  },
+  {
    "id": "cx-memories-verification-instrumental",
    "what": "changed",
    "why": "a correction this crosswalk made at the home: the entry quotes what the home says now, or says what it said until 7 November 2026"
+  },
+  {
+   "id": "cx-memories-grammar-of-the-opponent",
+   "what": "changed",
+   "why": "main changed theories/becoming/COLLECTIVE-DIRECTION.md (LM1 or AA, 7 November 2026): targets[2].says states what it says now"
+  },
+  {
+   "id": "cx-memories-value-words-recast",
+   "what": "changed",
+   "why": "main changed theories/becoming/chapters/02-MAP.md (LM1 or AA, 7 November 2026): reading states what it says now"
   }
  ],
  "live_flags": []

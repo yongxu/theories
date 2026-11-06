@@ -29,7 +29,7 @@
 ## Does not show
 
 - Which law the rest follows, or that it reads through coupling; balance and feasibility; how large an act's consequences beyond the closure are; which acts are taken, or that any is wrong.
-- The general form of favouring what reaches beyond (when a part raising what couples in must reach beyond the closure), and the rising share of what reaches beyond with transmission, descent and openness, remain open.
+- That more offspring go to raisers, or descent in the flow. The general form of favouring what reaches beyond is in record raising-what-couples-in-draws-from-beyond (Flow.favours_reaching_beyond); the share of what reaches beyond over generations is in record what-a-rise-draws-from-beyond, on that premise.
 
 **Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
 
@@ -43,7 +43,7 @@ Canonical source: [SelectionGap.lean](../../../../experiments/integrated-correct
 <a id="next--下一步"></a>
 ## Next
 
-The general form of favouring what reaches beyond; with transmission, descent and openness, the rising share of what reaches beyond; an independent review.
+Deriving from the flow that more offspring go to raisers; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -104,6 +104,7 @@ Aliases: `gap for one's own act`, `自身动作的缺口`, `act unselected`, `�
 - 20 October 2026, R32 (forwarders, copies and reading modules: pure forwarders removed, statements stated once, reading modules folded into the module they read): Proof bindings (Counterfactual.lean) rebound to core receipt 20261019T231053.882924Z. Re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 223 added; Counterfactual.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; THE-THEORY-OF-BECOMING.md, §9 (receipt, counts, connectivity under the measure that no longer counts restatement) follows R32. The claim is unchanged.
 - 22 October 2026, PL1 landing (with CK1, CR1, EM1): THE-THEORY-OF-BECOMING.md re-pointed. Since this record's reviewed hash, the cited text changed only by additions in sections 5, 7.4, 7.5, 7.7, 8.1 item 3 and 8.7 (pools along a run, what a center can know by a step, the deployed pipelines, learners that generalize). Read before re-pointing. The claim is unchanged.
 - 25 October 2026, board item DF (study section 418): the premise names the record by its current id, selection-through-couplings, for its former id; nothing else changed.
+- 7 November 2026, board item AA: the atlas's readers found a line gone stale against records raising-what-couples-in-draws-from-beyond and what-a-rise-draws-from-beyond; corrected against the Lean and the later records.
 - 1 rebinding entry (2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](the-gap-for-ones-own-act.json).
 
 <a id="earlier-text--早期文本"></a>

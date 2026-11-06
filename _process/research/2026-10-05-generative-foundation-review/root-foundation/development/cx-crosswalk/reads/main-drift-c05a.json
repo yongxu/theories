@@ -1,0 +1,461 @@
+{
+ "cluster": "c05a",
+ "items": [
+  {
+   "id": "cx-archearth-security-and-cooperation",
+   "field": "targets[3].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "withholding, not rebuild it where it is lost everywhere; mutual promises alone cannot start a loop with no source.",
+     "new": "withholding, and rebuilds it where it is lost everywhere only where some formation spares all it waits on; mutual promises alone force no start of a loop with no source."
+    }
+   ],
+   "labels": null,
+   "why": "Main corrected D48: tolerance rebuilds giving lost everywhere only where some formation spares all it waits on, and mutual promises force no start rather than cannot start; the field now quotes it.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+    "theories/becoming/chapters/05-COLLECTIVES.md#grounded-start"
+   ]
+  },
+  {
+   "id": "cx-fork-transition-assurance",
+   "field": "targets[0].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "withholding, not rebuild it where it is lost everywhere; mutual promises alone cannot start a loop with no source.",
+     "new": "withholding, and rebuilds it where it is lost everywhere only where some formation spares all it waits on; mutual promises alone force no start of a loop with no source."
+    }
+   ],
+   "labels": null,
+   "why": "Main corrected D48: tolerance rebuilds giving lost everywhere only where some formation spares all it waits on, and mutual promises force no start rather than cannot start; the field now quotes it.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+    "theories/becoming/chapters/05-COLLECTIVES.md#grounded-start"
+   ]
+  },
+  {
+   "id": "cx-abr-prozbul-reset-read-ahead",
+   "field": "targets[1].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "withholding, not rebuild it where it is lost everywhere.",
+     "new": "withholding, and rebuilds it where it is lost everywhere only where some formation spares all it waits on."
+    }
+   ],
+   "labels": null,
+   "why": "Main corrected D48's tolerance clause: it rebuilds giving lost everywhere only where some formation spares all it waits on. The field quotes the clause as it now stands.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+    "theories/becoming/chapters/05-COLLECTIVES.md#grounded-start"
+   ]
+  },
+  {
+   "id": "cx-econ-olson-collective-action",
+   "field": "targets[3].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "withholding, not rebuild it where it is lost everywhere'",
+     "new": "withholding, and rebuilds it where it is lost everywhere only where some formation spares all it waits on'"
+    }
+   ],
+   "labels": null,
+   "why": "A direct quotation of D48's tolerance clause, which main corrected; it now quotes the home's words.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+    "theories/becoming/chapters/05-COLLECTIVES.md#grounded-start"
+   ]
+  },
+  {
+   "id": "cx-econ-ostrom-commons",
+   "field": "targets[3].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "withholding, not rebuild it where it is lost everywhere'",
+     "new": "withholding, and rebuilds it where it is lost everywhere only where some formation spares all it waits on'"
+    }
+   ],
+   "labels": null,
+   "why": "A direct quotation of D48's tolerance clause, which main corrected; it now quotes the home's words.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+    "theories/becoming/chapters/05-COLLECTIVES.md#grounded-start"
+   ]
+  },
+  {
+   "id": "cx-fork-transition-assurance",
+   "field": "reading",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "'mutual promises alone cannot start a loop with no source': reciprocal promises can be empty and ignition needs an actual reserve, so common knowledge alone does not walk through.",
+     "new": "'mutual promises alone force no start of a loop with no source': reciprocal promises can be empty and in a witness ignition, defined as spending a reserve, needs one already present (near-definitional), so common knowledge alone does not suffice to walk through."
+    }
+   ],
+   "labels": null,
+   "why": "The reading quotes D48 and leans on the ignition witness; main weakened 'cannot start' to 'force no start' and marked ignition near-definitional. The reader's point survives as insufficiency, not impossibility.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+    "theories/becoming/chapters/05-COLLECTIVES.md#grounded-start",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start",
+    "theories/becoming/results/records/joint-plans-from-a-supported-start.md"
+   ]
+  },
+  {
+   "id": "cx-fork-good-enough-tree",
+   "field": "targets[2].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "a gated condition, end it however small each loss.",
+     "new": "a condition gated at `m` at each of `n` steps from a level below `n + m`, end it however small each one's loss."
+    }
+   ],
+   "labels": null,
+   "why": "Main wrote the gate's hypotheses into the joint-ending clause (gated at m at each of n steps, from a level below n + m), as the record's law 17 states; the field carries them.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-what-a-set-point-optimum-does-beyond",
+    "theories/becoming/results/records/what-a-set-point-optimum-does-beyond.md"
+   ]
+  },
+  {
+   "id": "cx-fork-productive-recursion",
+   "field": "targets[2].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "In a witness a doubling source",
+     "new": "In a witness, under weights `w (t + 1) ≤ w t < 2 w (t + 1)`, a doubling source"
+    }
+   ],
+   "labels": null,
+   "why": "Main added the witness's weight condition, which the record's item 5 states; the field carries it.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-others-drawing-first-end-the-base",
+    "theories/becoming/results/records/others-drawing-first-end-the-base.md"
+   ]
+  },
+  {
+   "id": "cx-archearth-provision-apart-from-membership",
+   "field": "targets[4].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "No entry from unsafe states, no compliance",
+     "new": "No entry mechanism from unsafe states and no formation of the intervention (entry under a supplied intervention is at r-market-partial-correction-boundary), no compliance"
+    }
+   ],
+   "labels": null,
+   "why": "Main's scope now says no entry mechanism and no formation of the intervention, and points to where entry under a supplied intervention is; the field states that scope.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-market-protected-continuation",
+    "theories/becoming/results/records/market-protected-continuation.md"
+   ]
+  },
+  {
+   "id": "cx-dpc-viability",
+   "field": "targets[0].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "no entry from unsafe states, no compliance",
+     "new": "no entry mechanism from unsafe states and no formation of the intervention (entry under a supplied intervention is at r-market-partial-correction-boundary), no compliance"
+    }
+   ],
+   "labels": null,
+   "why": "Main's scope now says no entry mechanism and no formation of the intervention, and points to where entry under a supplied intervention is; the field states that scope.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-market-protected-continuation",
+    "theories/becoming/results/records/market-protected-continuation.md"
+   ]
+  },
+  {
+   "id": "cx-archearth-recursive-capacity",
+   "field": "targets[4].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "ignition needs a reserve already present",
+     "new": "ignition, which the move defines as spending a reserve, needs one already present (near-definitional)"
+    }
+   ],
+   "labels": null,
+   "why": "Main now states ignition as defined by the move as spending a reserve, and marks the law near-definitional; the field carries that standing.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start",
+    "theories/becoming/results/records/joint-plans-from-a-supported-start.md"
+   ]
+  },
+  {
+   "id": "cx-archearth-security-and-cooperation",
+   "field": "targets[1].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "ignition needs a reserve already present",
+     "new": "ignition, which the move defines as spending a reserve, needs one already present (near-definitional)"
+    }
+   ],
+   "labels": null,
+   "why": "Main now states ignition as defined by the move as spending a reserve, and marks the law near-definitional; the field carries that standing.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start",
+    "theories/becoming/results/records/joint-plans-from-a-supported-start.md"
+   ]
+  },
+  {
+   "id": "cx-fork-commons-no-subject",
+   "field": "targets[1].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "ignition needs a reserve already present",
+     "new": "ignition, which the move defines as spending a reserve, needs one already present (near-definitional)"
+    }
+   ],
+   "labels": null,
+   "why": "Main now states ignition as defined by the move as spending a reserve, and marks the law near-definitional; the field carries that standing.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start",
+    "theories/becoming/results/records/joint-plans-from-a-supported-start.md"
+   ]
+  },
+  {
+   "id": "cx-abr-covenant-given-first",
+   "field": "targets[0].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "ignition needs a reserve already present",
+     "new": "ignition, which the move defines as spending a reserve, needs one already present (near-definitional)"
+    }
+   ],
+   "labels": null,
+   "why": "Main now states ignition as defined by the move as spending a reserve, and marks the law near-definitional; the field carries that standing.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start",
+    "theories/becoming/results/records/joint-plans-from-a-supported-start.md"
+   ]
+  },
+  {
+   "id": "cx-asc-founding-restraint-armored",
+   "field": "targets[2].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "ignition needs a reserve already present",
+     "new": "ignition, which the move defines as spending a reserve, needs one already present (near-definitional)"
+    }
+   ],
+   "labels": null,
+   "why": "Main now states ignition as defined by the move as spending a reserve, and marks the law near-definitional; the field carries that standing.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start",
+    "theories/becoming/results/records/joint-plans-from-a-supported-start.md"
+   ]
+  },
+  {
+   "id": "cx-asc-founding-restraint-armored",
+   "field": "reading",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "reciprocal promises can be empty and ignition needs a reserve already present.",
+     "new": "reciprocal promises can be empty and in a witness ignition, defined as spending a reserve, needs one already present (near-definitional)."
+    }
+   ],
+   "labels": null,
+   "why": "The reading restates the ignition law, which main now marks near-definitional; it also restores the home's 'in a witness'. The reading's point, the form of giving and not AI, stands.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start",
+    "theories/becoming/results/records/joint-plans-from-a-supported-start.md"
+   ]
+  },
+  {
+   "id": "cx-archearth-security-and-cooperation",
+   "field": "reading",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "in one witness ignition needs a reserve already present.",
+     "new": "in one witness ignition, defined as spending a reserve, needs one already present (near-definitional)."
+    }
+   ],
+   "labels": null,
+   "why": "The reading's thin form rests partly on the ignition witness, which main now marks near-definitional; the field carries that standing, and the proposal stays labelled as not stated.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start",
+    "theories/becoming/results/records/joint-plans-from-a-supported-start.md"
+   ]
+  },
+  {
+   "id": "cx-ctxrt-cells-no-coordination",
+   "field": "account_adds",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "that ignition needs a reserve already present.",
+     "new": "that in a witness ignition, defined as spending a reserve, needs one already present (near-definitional)."
+    }
+   ],
+   "labels": null,
+   "why": "What the account adds includes the ignition law, which main now marks near-definitional in a witness; the field says so.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start",
+    "theories/becoming/results/records/joint-plans-from-a-supported-start.md"
+   ]
+  },
+  {
+   "id": "cx-fork-commons-no-subject",
+   "field": "reading",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "in a witness ignition needs a reserve already present;",
+     "new": "in a witness ignition, defined as spending a reserve, needs one already present (near-definitional);"
+    }
+   ],
+   "labels": null,
+   "why": "The reading cites the ignition witness as a form of the objection; main now marks it near-definitional, and the field carries that standing.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start",
+    "theories/becoming/results/records/joint-plans-from-a-supported-start.md"
+   ]
+  },
+  {
+   "id": "cx-fork-seeing-insufficient-living-proof",
+   "field": "targets[1].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "ignition needs a reserve already present",
+     "new": "ignition, which the move defines as spending a reserve, needs one already present (near-definitional)"
+    }
+   ],
+   "labels": null,
+   "why": "Main now states ignition as defined by the move as spending a reserve, and marks the law near-definitional; the field carries that standing.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start",
+    "theories/becoming/results/records/joint-plans-from-a-supported-start.md"
+   ]
+  },
+  {
+   "id": "cx-fork-seeing-insufficient-living-proof",
+   "field": "reading",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "ignition needs a reserve already present, and a public plan",
+     "new": "in a witness ignition, defined as spending a reserve, needs one already present (near-definitional), and a public plan"
+    }
+   ],
+   "labels": null,
+   "why": "The reading names the ignition witness as the nearest law on starts; main now marks it near-definitional, and the field carries that and the home's 'in a witness'.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start",
+    "theories/becoming/results/records/joint-plans-from-a-supported-start.md"
+   ]
+  },
+  {
+   "id": "cx-abr-covenant-given-first",
+   "field": "targets[1].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "in a ring of three, with memory all withhold from step 2,",
+     "new": "in a ring of three, from one withholding, with memory all withhold from step 2,"
+    }
+   ],
+   "labels": null,
+   "why": "Not in the input (main added words here, and the search finds only removed ones): main now says the ring of three starts from one withholding, and without it the field reads as if all withhold from step 2 from any start.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-giving-that-waits-on-giving"
+   ]
+  },
+  {
+   "id": "cx-abr-covenant-given-first",
+   "field": "reading",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "05's form: promises alone start nothing, since",
+     "new": "05's form: promises alone force no start, since"
+    }
+   ],
+   "labels": null,
+   "why": "Not in the input: a paraphrase of D48's 'mutual promises alone cannot start', which main weakened to 'force no start'; the reading's argument, that each side's waiting holds where neither acts, gives only that.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+    "theories/becoming/chapters/05-COLLECTIVES.md#grounded-start",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start",
+    "theories/becoming/results/records/joint-plans-from-a-supported-start.md"
+   ]
+  },
+  {
+   "id": "cx-archearth-recursive-capacity",
+   "field": "reading",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "A closed circular dependence needs a reserve to start.",
+     "new": "In a witness a closed circular dependence needs a reserve to start, ignition being defined as spending one (near-definitional)."
+    }
+   ],
+   "labels": null,
+   "why": "Not in the input: a paraphrase of the ignition law, stated as a law without its witness, which main now marks near-definitional; the field carries both.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start",
+    "theories/becoming/results/records/joint-plans-from-a-supported-start.md"
+   ]
+  },
+  {
+   "id": "cx-archearth-recursive-capacity",
+   "field": "account_adds",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "that a circular dependence needs a reserve to start.",
+     "new": "that in a witness a circular dependence needs a reserve to start, ignition being defined as spending one (near-definitional)."
+    },
+    {
+     "old": "ranking them needs C, with the continuation condition for scope, neither asserted.",
+     "new": "ranking them needs C or a premise in its place, with the continuation condition for scope, neither asserted and their warrant open."
+    }
+   ],
+   "labels": null,
+   "why": "Not in the input: the same ignition paraphrase, which main now marks near-definitional in a witness. The field's ethics clause also takes LM1: a ranking of courses needs C or a premise in its place.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start",
+    "theories/becoming/results/records/joint-plans-from-a-supported-start.md",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#does-not-show"
+   ]
+  },
+  {
+   "id": "cx-fork-seeing-insufficient-living-proof",
+   "field": "targets[0].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "that needs C, and",
+     "new": "calling the widening course better needs C or a premise in its place, and"
+    }
+   ],
+   "labels": null,
+   "why": "Not in the input (the search missed it by one word): the field quotes COLLECTIVE-DIRECTION 6, where main (LM1) now says calling the widening course better needs C or a premise in its place.",
+   "read": [
+    "theories/becoming/COLLECTIVE-DIRECTION.md#6-what-enough-situationality-would-have-to-mean"
+   ]
+  }
+ ]
+}

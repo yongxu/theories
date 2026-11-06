@@ -541,7 +541,7 @@ def render_views(records):
                           'The theory does not assert this condition; ' + link(CHAPTERS + '/07-SIGNIFICANCE.md#condition', path, 'chapter 7, section 3')
                           + ' states what follows from it. The condition gives the continuation of everything significance from every standpoint, so the results under it '
                           'are the case of a significance that covers everything; the rules of comparison are derived without it, and the condition adds none. '
-                          'The ethics rests on two premises with two roles: the condition fixes scope, whose losses count, and C, calling widening better, gives order, in general alone; '
+                          'The ethics rests on two premises with two roles: the condition fixes scope, whose losses count, and C, calling widening better, gives order, and a ranking of courses needs C or a premise in its place; '
                           'C\'s no-loss extension on level paths is widening by definition. '
                           'Open: the warrant of the condition, of C, and of the step of invariance from what one\'s own continuation needs to the continuation of anything.', '']
                 lines += result_block(first, path, '####')

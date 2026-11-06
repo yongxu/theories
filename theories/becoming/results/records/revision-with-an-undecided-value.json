@@ -65,8 +65,8 @@
       ]
     },
     {
-      "en": "The liar rests undecided, and a run of its revision rests exactly where it is undecided; the truth-teller keeps its start and rests undecided from all undecided.",
-      "zh": "说谎者停于未定，其修正之运行恰在它未定处停住；诚实者保持其起点，从全未定起停于未定。",
+      "en": "From all undecided the liar rests undecided, and a run of its revision from any start rests exactly where it is undecided; the truth-teller keeps its start and rests undecided from all undecided.",
+      "zh": "从全未定起说谎者停于未定，其修正之运行从任一起点恰在它未定处停住；诚实者保持其起点，从全未定起停于未定。",
       "declarations": [
         "Becoming.Undecided.liar_rests",
         "Becoming.Undecided.liar_rests_iff",
@@ -75,8 +75,8 @@
       ]
     },
     {
-      "en": "Where two-valued revision of a closed system has no fixed point, every fixed point and every resting run leaves a sentence undecided; the liar never rests with two values and rests undecided with three.",
-      "zh": "封闭系统的二值修正没有不动点时，每个不动点、每条停住的运行都留下一个未定句子；说谎者二值时从不停息，三值时停于未定。",
+      "en": "Where two-valued revision of a closed system has no fixed point, every fixed point and every resting run leaves a sentence undecided; the liar never rests with two values and, from all undecided, rests undecided with three.",
+      "zh": "封闭系统的二值修正没有不动点时，每个不动点、每条停住的运行都留下一个未定句子；说谎者二值时从不停息，三值时从全未定起停于未定。",
       "declarations": [
         "Becoming.Undecided.undecided_of_moves",
         "Becoming.Undecided.least_undecided",
@@ -414,6 +414,10 @@
     {
       "en": "20 October 2026, R37 (lens B of the twentieth review: the witness models as instances of one library, one bisimulation theory for a family of relations, the definition twins and copies stated once): Moved with their full names: from Undecided.lean to Prelude.lean, Undecided.mem_upto, Undecided.upto. Proof bindings (Undecided.lean) rebound to core receipt 20261020T051144.879480Z. Re-pointed after reading the change: Undecided.lean: twin definitions, witness models or copies replaced by the definition stated once, the instance of Witnesses or the kept name; kept statements unchanged. The claim is unchanged.",
       "zh": "2026年10月20日，R37（第二十次评审的 B 视角：见证模型为一个库的实例，为一族关系的一个互模拟理论，孪生定义与副本只陈述一次）：连同完整名称移动：从 Undecided.lean 到 Prelude.lean：Undecided.mem_upto、Undecided.upto。证明绑定（Undecided.lean）改到核心回执 20261020T051144.879480Z。读过改动后重新指向：Undecided.lean：孪生定义、见证模型或副本由只陈述一次的定义、Witnesses 的实例或保留的名称取代；保留的陈述不变。论断不变。"
+    },
+    {
+      "en": "7 November 2026, board item AA: the atlas's readers found a clause without its start; corrected against the Lean and the later records.",
+      "zh": "2026年11月7日，工作板条目 AA：图谱读者发现一个子句缺其起点；已对照 Lean 与后来的记录改正。"
     }
   ],
   "text_versions": [

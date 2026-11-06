@@ -109,8 +109,8 @@
       "kind": "scope"
     },
     {
-      "en": "An order valuing what is left at the horizon at a worth whose most left is not regrown in one step; rebuilding from below; several optimizers ranking courses; SG5's laws re-derived as the case of every weight one.",
-      "zh": "以最多所留不能一步再生的价值对视野末所留赋值之序；自下重建；多个对过程排序的优化者；把 SG5 的律作为权重皆为一的情形重新导出。",
+      "en": "An order valuing what is left at the horizon at a worth whose most left is not regrown in one step; several optimizers ranking courses; SG5's laws re-derived as the case of every weight one. Rebuilding from below is in record optima-rebuild-a-depleted-base.",
+      "zh": "以最多所留不能一步再生的价值对视野末所留赋值之序；多个对过程排序的优化者；把 SG5 的律作为权重皆为一的情形重新导出。自下重建见记录 optima-rebuild-a-depleted-base。",
       "kind": "scope"
     },
     {
@@ -133,8 +133,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261021T063915.104780Z）：Becoming.Optimum 新增的 35 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 295 节；未经人的独立审查。"
   },
   "next_delta": {
-    "en": "The optimum where no reference course is open; ending after the first step; an order valuing what is left at the horizon at a worth whose most left is not regrown in one step; rebuilding from below; several optimizers ranking courses; an independent review.",
-    "zh": "没有开放参照进程时的最优；第一步之后的终结；以最多所留不能一步再生的价值对视野末所留赋值之序；自下重建；多个对过程排序的优化者；独立审查。"
+    "en": "The optimum where no reference course is open; ending after the first step; an order valuing what is left at the horizon at a worth whose most left is not regrown in one step; several optimizers ranking courses; an independent review.",
+    "zh": "没有开放参照进程时的最优；第一步之后的终结；以最多所留不能一步再生的价值对视野末所留赋值之序；多个对过程排序的优化者；独立审查。"
   },
   "correspondence": {
     "en": "Discounting (Ramsey 1928; Koopmans 1960); at a constant rate δ a level's weighted gain is w (t + 1) (R z − δ z), so the level held is the modified golden rule's, where the marginal renewal equals the rate (Clark and Munro 1975); a sole owner finding extinction optimal where the rate exceeds the greatest rate of renewal (Clark 1973); the discount factor of reinforcement learning (Sutton and Barto 1998); a rate changing with delay (Ainslie 1975). On the spine the laws cover every order rising with the weighted draw and any weighting, through a reference course whose level gains the most at each step; the threshold is exact, the tie admitting both ending and holding; the break is a law of the dependence web. Reading (the AI's): far-sight keeps the optimizer's own base only where its weighting falls slower than the base renews.",
@@ -635,6 +635,10 @@
     {
       "en": "6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.",
       "zh": "2026年11月6日，工作板条目 LM：此记录所列辅助引理现只陈述一次，在 Prelude、Flow、Change 或 Laws，或即 Lean 自有者而从列表除去；改其名，诸律不变。"
+    },
+    {
+      "en": "7 November 2026, board item AA: the atlas's readers found a line gone stale against record optima-rebuild-a-depleted-base; corrected against the Lean and the later records.",
+      "zh": "2026年11月7日，工作板条目 AA：图谱读者发现一行已落后于记录 optima-rebuild-a-depleted-base；已对照 Lean 与后来的记录改正。"
     }
   ]
 }

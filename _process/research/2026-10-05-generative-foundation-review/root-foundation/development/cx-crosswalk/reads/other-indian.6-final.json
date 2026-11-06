@@ -1432,7 +1432,7 @@
      "record": "readings-within-what-they-read",
      "anchor": "theories/becoming/chapters/03-KNOWING.md#r-readings-within-what-they-read",
      "says": {
-      "en": "Theorem (any type): where a map moves every value, no family of claims says every reading; a family indexed by what it reads, over inhabited types with equality of values decided, is complete exactly where nothing differs."
+      "en": "Theorem (any type): where a map moves every value, no family of claims says every reading; some family indexed by what it reads, over inhabited types with equality of values decided, is complete exactly where nothing differs."
      },
      "role": "neighbour"
     },
@@ -2080,6 +2080,11 @@
    "id": "cx-oi-karma-across-carriers",
    "what": "changed",
    "why": "a correction this crosswalk made at the home: the entry quotes what the home says now, or says what it said until 7 November 2026"
+  },
+  {
+   "id": "cx-oi-kevala",
+   "what": "changed",
+   "why": "main changed theories/becoming/results/records/readings-within-what-they-read.json (LM1 or AA, 7 November 2026): targets[1].says states what it says now"
   }
  ],
  "live_flags": [

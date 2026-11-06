@@ -1219,14 +1219,14 @@
    "relation": "scope",
    "agreement_of": null,
    "reading": {
-    "en": "Ignition needs a reserve already present, and formed conditions carried the next stretch in selected software histories: capacity prior to use, as specific conditions, not an interchangeable amount. But how a supported start forms is not shown, and that is what the source claims to do; ignition uses the reserve up. One periphery law closes a connection from enacted practice to further participation, not the arrival of people. [AI reading]"
+    "en": "In a witness, ignition, which the move defines as spending a reserve, needs one already present (near-definitional), and formed conditions carried the next stretch in selected software histories: capacity prior to use, as specific conditions, not an interchangeable amount. But how a supported start forms is not shown, and that is what the source claims to do; so defined, ignition uses the reserve up. One periphery law closes a connection from enacted practice to further participation, not the arrival of people. [AI reading]"
    },
    "targets": [
     {
      "record": "joint-plans-from-a-supported-start",
      "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start",
      "says": {
-      "en": "In the exchange witness ignition needs a reserve already present: one circular dependence can be maintenance running or a wait no one can begin; promises do not suffice. Not shown: \"How a supported start forms\"; ignition needs the reserve and uses it up."
+      "en": "In the exchange witness ignition, which the move defines as spending a reserve, needs one already present (near-definitional): one circular dependence can be maintenance running or a wait no one can begin; promises do not suffice. Not shown: \"How a supported start forms\". So defined, ignition needs the reserve and uses it up."
      },
      "role": "carries"
     },
@@ -1287,7 +1287,7 @@
    "relation": "scope",
    "agreement_of": null,
    "reading": {
-    "en": "The seed has an exact form: restoring needs a formation sparing all it waits on, without which total withholding stays; mutual promises alone cannot start a loop with no source. That has the form of 无用之礼, on laws with no amounts. The return is scoped: whether giving rises depends on what it brings back and on assortment, and a gift brings support beyond its draw only by need asymmetry or renewal from outside. [AI reading]"
+    "en": "The seed has an exact form: restoring needs a formation sparing all it waits on, without which total withholding stays; mutual promises alone force no start of a loop with no source. That has the form of 无用之礼, on laws with no amounts. The return is scoped: whether giving rises depends on what it brings back and on assortment, and a gift brings support beyond its draw only by need asymmetry or renewal from outside. [AI reading]"
    },
    "targets": [
     {
@@ -2342,7 +2342,7 @@
     {
      "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-offspring-read-from-giving-that-waits",
      "says": {
-      "en": "Reading following this law [AI reading, D48]: 'Others will deceive me, so I deceive first' is withholding with memory, which absorbs. Kept promises and enforced contracts are laws giving first: the law changes, not the state alone. Mutual promises alone cannot start a loop with no source."
+      "en": "Reading following this law [AI reading, D48]: 'Others will deceive me, so I deceive first' is withholding with memory, which absorbs. Kept promises and enforced contracts are laws giving first: the law changes, not the state alone. Mutual promises alone force no start of a loop with no source."
      },
      "role": "carries",
      "part": "D48"
@@ -3422,6 +3422,21 @@
    "id": "cx-wamo-coordination-bottleneck",
    "what": "changed",
    "why": "second critic (label): The fork paragraph and claims 11-12 match, and COLLECTIVE-DIRECTION's answer and D45 carry changed/scope; 08's sentence states the work's own purpose, not what decides a collective's fork, so its role is neighbour, not carries. The limit's quote 'No institution is modelled on the spine' is no longer in the live §5, which now has one minimal institution model on the root; the fix copies the live sentence."
+  },
+  {
+   "id": "cx-wamo-capacity-before-action",
+   "what": "changed",
+   "why": "main changed theories/becoming/chapters/05-COLLECTIVES.md (LM1 or AA, 7 November 2026): targets[0].says states what it says now (as its checker amended) / main changed theories/becoming/chapters/05-COLLECTIVES.md (LM1 or AA, 7 November 2026): reading states what it says now"
+  },
+  {
+   "id": "cx-wamo-abundance-loop",
+   "what": "changed",
+   "why": "main changed theories/becoming/chapters/05-COLLECTIVES.md (LM1 or AA, 7 November 2026): reading states what it says now"
+  },
+  {
+   "id": "cx-wamo-self-made-trap",
+   "what": "changed",
+   "why": "main changed theories/becoming/chapters/05-COLLECTIVES.md (LM1 or AA, 7 November 2026): targets[0].says states what it says now"
   },
   {
    "id": "cx-wamo-we-are-not-them",

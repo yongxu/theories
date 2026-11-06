@@ -5,7 +5,7 @@
 
 `the-run-classes-and-widening` · **recorded-checked** · theorem · F01 · [record](the-run-classes-and-widening.json) · [register](../../../../RESULTS.md)
 
-> Where only active formations take, a part drawing only on conditions the run renews does not narrow, and a consumed dependence met without a part makes a part opening nothing narrow; if only active ones give too, a part inactive at the start that never arises changes nothing. No class decides alone.
+> Where only active formations take, a part drawing only on conditions the run renews does not narrow, and a consumed dependence met without a part makes a part opening nothing narrow; if only active ones give too, a part inactive at the start that never arises changes nothing. Each decides only that.
 
 <a id="laws--规律"></a>
 ## Laws
@@ -101,6 +101,7 @@ Aliases: `the run classes and widening`, `整段的类与扩大`, `Becoming.Flow
 - 20 October 2026, R45 (study section 246): two laws added, the class of arising over a run (no member active at the start and none arising: nothing that can form changes; Flow.Balances.keeps_of_not_arising) and its boundary (ArisingDrawer, ArisingGiver: arising decides nothing); the does_not_show item on arising replaced and next updated. Receipt 20261020T093308.742793Z.
 - 25 October 2026, board item DF (study section 418): the statement said a part that never arises changes nothing; the Lean also takes that only active formations give and that the part is inactive at the start, as the law states, and the statement now says so.
 - 3 November 2026, CD (board item CD): laws 5 and 6, the dependency's output, a related line and the correspondence speak of how a part changes what can form, not of its place in an order, as the home section in 07 §2 now says. Under the glossary's one sense, ranking and order (the ethics' role word) say which course is better, and widening says which admits more, with no premise. The claim is unchanged.
+- 7 November 2026, board item AA: the atlas's readers found a closing sentence reading loosely on its own table; corrected against the Lean and the later records.
 - 1 rebinding entry (2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](the-run-classes-and-widening.json).
 
 <a id="earlier-text--早期文本"></a>

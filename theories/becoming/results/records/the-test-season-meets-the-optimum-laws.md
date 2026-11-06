@@ -5,7 +5,7 @@
 
 `the-test-season-meets-the-optimum-laws` · **recorded-checked** · theorem · F04 · [record](the-test-season-meets-the-optimum-laws.json) · [register](../../../../RESULTS.md)
 
-> In the season LA4 trains on, the catch shares units with the bay, so every optimum of every order rising with the catch empties the bay. The landing site, and the bay when only the ground's catch counts, give no room; ranked by the catch or the ground's alone, the optima include keeping and ending.
+> In LA4's season the catch shares units with the bay, so every optimum of every order rising with the catch empties the bay. The site, and the bay when only the ground's catch counts, give no room: by the catch alone optima spare the site or not, by the ground's alone they keep the bay or empty it.
 
 <a id="laws--规律"></a>
 ## Laws
@@ -83,6 +83,7 @@ Aliases: `LA4's test season meets the optimum laws`, `LA4 之检验季合于最�
 ### History
 
 - 31 October 2026: added (LA4, its formal part), the design's checks by enumeration restated as theorems; study section 470.
+- 7 November 2026, board item AA: the atlas's readers found a sentence reading against the one before it; corrected against the Lean and the later records.
 
 </details>
 

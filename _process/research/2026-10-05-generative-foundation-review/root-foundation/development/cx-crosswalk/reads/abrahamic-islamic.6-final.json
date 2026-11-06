@@ -198,7 +198,7 @@
     {
      "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
      "says": {
-      "en": "Reading [AI reading, D48]: kept promises and enforced contracts are laws giving first: the law changes, not the state alone. Tolerance lets cooperation survive scattered withholding, not rebuild it where it is lost everywhere."
+      "en": "Reading [AI reading, D48]: kept promises and enforced contracts are laws giving first: the law changes, not the state alone. Tolerance lets cooperation survive scattered withholding, and rebuilds it where it is lost everywhere only where some formation spares all it waits on."
      },
      "role": "neighbour",
      "part": "D48: kept promises and enforced contracts"
@@ -1804,14 +1804,14 @@
    "carried": "fresh-reading",
    "relation": "divergence",
    "reading": {
-    "en": "[AI reading] Divergence on warrant and on the giver: the bond binds because God swore it, and the other party is no formation among formations. Only an order is alike, a gift before stipulations. 05's form: promises alone start nothing, since each side's waiting on the other eventually acting holds where neither ever acts; a source giving first restores those who wait on it. Reading God as that source is my mapping, which the source would refuse, so no agreement is claimed. That blessing follows keeping is no law here."
+    "en": "[AI reading] Divergence on warrant and on the giver: the bond binds because God swore it, and the other party is no formation among formations. Only an order is alike, a gift before stipulations. 05's form: promises alone force no start, since each side's waiting on the other eventually acting holds where neither ever acts; a source giving first restores those who wait on it. Reading God as that source is my mapping, which the source would refuse, so no agreement is claimed. That blessing follows keeping is no law here."
    },
    "targets": [
     {
      "record": "joint-plans-from-a-supported-start",
      "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start",
      "says": {
-      "en": "Any process, a periphery module: 'if the other eventually does, I eventually do' holds on both sides where neither ever happens; in the exchange witness an empty or one-sided start never becomes jointly active, and ignition needs a reserve already present. Not shown: how a supported start forms."
+      "en": "Any process, a periphery module: 'if the other eventually does, I eventually do' holds on both sides where neither ever happens; in the exchange witness an empty or one-sided start never becomes jointly active, and ignition, which the move defines as spending a reserve, needs one already present (near-definitional). Not shown: how a supported start forms."
      },
      "role": "carries"
     },
@@ -1819,7 +1819,7 @@
      "record": "giving-that-waits-on-giving",
      "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-giving-that-waits-on-giving",
      "says": {
-      "en": "Any type: in a ring of three, with memory all withhold from step 2, and with a source giving whatever it waits on (giving first) all give from step 3 from every start. It does not show how waiting forms, or that cooperation is good."
+      "en": "Any type: in a ring of three, from one withholding, with memory all withhold from step 2, and with a source giving whatever it waits on (giving first) all give from step 3 from every start. It does not show how waiting forms, or that cooperation is good."
      },
      "role": "carries",
      "part": "giving first, in the ring of three"
@@ -1995,6 +1995,17 @@
    "same_as": null
   }
  ],
- "changes": [],
+ "changes": [
+  {
+   "id": "cx-abr-prozbul-reset-read-ahead",
+   "what": "changed",
+   "why": "main changed theories/becoming/chapters/05-COLLECTIVES.md (LM1 or AA, 7 November 2026): targets[1].says states what it says now"
+  },
+  {
+   "id": "cx-abr-covenant-given-first",
+   "what": "changed",
+   "why": "main changed theories/becoming/chapters/05-COLLECTIVES.md (LM1 or AA, 7 November 2026): targets[0].says states what it says now / main changed a home its checker read (LM1 or AA, 7 November 2026): targets[1].says states what it says now / main changed a home its checker read (LM1 or AA, 7 November 2026): reading states what it says now"
+  }
+ ],
  "live_flags": []
 }

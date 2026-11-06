@@ -1578,7 +1578,7 @@
      "record": "coupled-regimes",
      "anchor": "theories/becoming/chapters/02-MAP.md#r-coupled-regimes",
      "says": {
-      "en": "Record counterexample `Relay.cycles`: mutual support without a band gives no rest; a pair each of which ends alone cycles for ever between two unordered states. Correspondence field: planar cooperative maps are eventually monotone only under regularity conditions (Smith 1998)."
+      "en": "Record counterexample `Relay.cycles`: mutual support without a band need not give rest; a pair each of which ends alone cycles for ever between two unordered states. Correspondence field: planar cooperative maps are eventually monotone only under regularity conditions (Smith 1998)."
      },
      "role": "carries"
     },
@@ -1630,7 +1630,7 @@
      "record": "market-protected-continuation",
      "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-market-protected-continuation",
      "says": {
-      "en": "Never leaving. For every process and guard, no course from a configuration leaves the guard exactly when some certificate contains it (a set within the guard that every step keeps; the invariance kernel is the largest). Scope: no entry from unsafe states, no compliance by actual markets."
+      "en": "Never leaving. For every process and guard, no course from a configuration leaves the guard exactly when some certificate contains it (a set within the guard that every step keeps; the invariance kernel is the largest). Scope: no entry mechanism from unsafe states and no formation of the intervention (entry under a supplied intervention is stated beside it, under Reaching), no compliance by actual markets."
      },
      "role": "carries"
     },
@@ -2037,7 +2037,7 @@
     {
      "anchor": "theories/becoming/chapters/02-MAP.md#not-shown",
      "says": {
-      "en": "Not shown: that generation is better than keeping or degeneration: order needs C, whose losses count needs the continuation condition. Nor that the regions are decided at a point, or that renewal is generation."
+      "en": "Not shown: that generation is better than keeping or degeneration: order needs C or a premise in its place, whose losses count needs the continuation condition. Nor that the regions are decided at a point, or that renewal is generation."
      },
      "role": "carries"
     },
@@ -2081,6 +2081,16 @@
  ],
  "changes": [
   {
+   "id": "cx-dpc-monotone-systems",
+   "what": "changed",
+   "why": "main changed theories/becoming/results/records/coupled-regimes.json (LM1 or AA, 7 November 2026): targets[1].says states what it says now"
+  },
+  {
+   "id": "cx-dpc-viability",
+   "what": "changed",
+   "why": "main changed theories/becoming/chapters/05-COLLECTIVES.md (LM1 or AA, 7 November 2026): targets[0].says states what it says now (as its checker amended)"
+  },
+  {
    "id": "cx-dpc-phase-transition",
    "what": "changed",
    "why": "a correction this crosswalk made at the home: the entry quotes what the home says now, or says what it said until 7 November 2026"
@@ -2089,6 +2099,11 @@
    "id": "cx-dpc-entropy-arrow",
    "what": "changed",
    "why": "a correction this crosswalk made at the home: the entry quotes what the home says now, or says what it said until 7 November 2026"
+  },
+  {
+   "id": "cx-dpc-direction-of-complexity",
+   "what": "changed",
+   "why": "main changed theories/becoming/chapters/02-MAP.md (LM1 or AA, 7 November 2026): targets[0].says states what it says now"
   }
  ],
  "live_flags": [

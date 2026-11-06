@@ -1,0 +1,478 @@
+{
+ "cluster": "cd",
+ "items": [
+  {
+   "id": "cx-sspiral-unilateral-restraint",
+   "field": "targets[4].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "where the rest outruns a renewal no weighting selects one member's restraint",
+     "new": "where the rest outruns a renewal at a need of one, no weight on a reading of the condition from the rest's end on selects one member's restraint"
+    }
+   ],
+   "labels": null,
+   "why": "The answer in brief now says no weight on a reading of the condition from the rest's end on selects one member's restraint, at a need of one, as 05's outrun law states; the field said no weighting at all does. Copied from the home.",
+   "read": [
+    "theories/becoming/COLLECTIVE-DIRECTION.md#the-answer-in-brief",
+    "theories/becoming/COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions",
+    "theories/becoming/COLLECTIVE-DIRECTION.md#3-what-the-theorys-own-laws-rule-out",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-the-rest-outruns-the-renewal"
+   ]
+  },
+  {
+   "id": "cx-kpso-shared-sensing",
+   "field": "targets[0].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": ", unless a reader is admitted from outside (witness).",
+     "new": ", and a pool comes to couple into what it does not yet couple into only through an admission not made through it (witness) or through members its course would hold anyway (witness)."
+    }
+   ],
+   "labels": null,
+   "why": "COLLECTIVE-DIRECTION's Pool couplings row, which the field follows, no longer says 'unless a reader is admitted from outside': the scheduled witness admits its reader at step 2 in every history, a member its course without the loss holds too, so the row now names two routes, each a witness (`PoolCourse.called_apart`, `PoolCourse.scheduled_apart`). Copied from the row, Lean names dropped as the field does.",
+   "read": [
+    "theories/becoming/COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-what-pooled-coupling-reaches",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-a-pool-that-recruits-through-itself",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PoolCourse.lean#scheduled_apart"
+   ]
+  },
+  {
+   "id": "cx-hsm-threshold-review",
+   "field": "targets[4].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": ", “unless a reader is admitted from outside” (witness).",
+     "new": "; “a pool comes to couple into what it does not yet couple into only through an admission not made through it” (witness) or “through members its course would hold anyway” (witness)."
+    }
+   ],
+   "labels": null,
+   "why": "The quoted words 'unless a reader is admitted from outside' are gone from the Pool couplings row: its scheduled witness admits the reader in every history, so the row now names an admission not made through the pool or members its course would hold anyway. Both new quotations are exact substrings of the row.",
+   "read": [
+    "theories/becoming/COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-what-pooled-coupling-reaches",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-a-pool-that-recruits-through-itself",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PoolCourse.lean#scheduled_apart"
+   ]
+  },
+  {
+   "id": "cx-asc-founding-restraint-armored",
+   "field": "targets[3].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "where the rest outruns the renewal no weighting selects a member's restraint",
+     "new": "where the rest outruns the renewal at a need of one, no weight on a reading of the condition from the rest's end on selects a member's restraint"
+    }
+   ],
+   "labels": null,
+   "why": "The Restraint within the joint slack row's edge now reads 'at a need of one, no weight on a reading of the condition from the rest's end on selects a member's restraint'; the field said no weighting does. The Spare all one waits on sentence already matches the row.",
+   "read": [
+    "theories/becoming/COLLECTIVE-DIRECTION.md#the-answer-in-brief",
+    "theories/becoming/COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions",
+    "theories/becoming/COLLECTIVE-DIRECTION.md#3-what-the-theorys-own-laws-rule-out",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-the-rest-outruns-the-renewal",
+    "theories/becoming/COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions"
+   ]
+  },
+  {
+   "id": "cx-ma-slack",
+   "field": "reading",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "where the rest outruns the renewal no weighting selects a member's restraint",
+     "new": "where the rest outruns the renewal at a need of one, no weight on a reading of the condition from the rest's end on selects a member's restraint"
+    }
+   ],
+   "labels": null,
+   "why": "The reading restates restraint's edge as COLLECTIVE-DIRECTION's exit row gave it; the row, after 05's outrun law, now limits it to a need of one and to weights on a reading of the condition from the rest's end on. The [AI reading] label stays.",
+   "read": [
+    "theories/becoming/COLLECTIVE-DIRECTION.md#the-answer-in-brief",
+    "theories/becoming/COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions",
+    "theories/becoming/COLLECTIVE-DIRECTION.md#3-what-the-theorys-own-laws-rule-out",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-the-rest-outruns-the-renewal",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-what-a-rise-draws-from-beyond"
+   ]
+  },
+  {
+   "id": "cx-asc-founding-restraint-armored",
+   "field": "targets[0].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "05's home at the anchor is unchanged on main and says this ('Restoring needs a formation that spares all it waits on, which gives from step 1 whatever the start: without one, total withholding stays'), the restoring frame making 'stays' read from total withholding, as `Tolerance.total_stays` has it. Main corrected only COLLECTIVE-DIRECTION's exit row, which had lost that frame; the field keeps it.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+    "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+    "theories/becoming/COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Tolerance.lean#total_stays"
+   ]
+  },
+  {
+   "id": "cx-archearth-security-and-cooperation",
+   "field": "targets[2].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "05's home at the anchor is unchanged on main and says this ('Restoring needs a formation that spares all it waits on, which gives from step 1 whatever the start: without one, total withholding stays'), the restoring frame making 'stays' read from total withholding, as `Tolerance.total_stays` has it. Main corrected only COLLECTIVE-DIRECTION's exit row, which had lost that frame; the field keeps it.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+    "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+    "theories/becoming/COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Tolerance.lean#total_stays"
+   ]
+  },
+  {
+   "id": "cx-kpso-trust-before-verification",
+   "field": "targets[0].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "05's home at the anchor is unchanged on main and says this ('Restoring needs a formation that spares all it waits on, which gives from step 1 whatever the start: without one, total withholding stays'), the restoring frame making 'stays' read from total withholding, as `Tolerance.total_stays` has it. Main corrected only COLLECTIVE-DIRECTION's exit row, which had lost that frame; the field keeps it.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+    "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+    "theories/becoming/COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Tolerance.lean#total_stays"
+   ]
+  },
+  {
+   "id": "cx-kpso-trust-before-verification",
+   "field": "reading",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "mutual promises alone cannot start a loop with no source",
+     "new": "mutual promises alone force no start of a loop with no source"
+    }
+   ],
+   "labels": null,
+   "why": "05's Reading [D48] now says mutual promises alone 'force no start of a loop with no source', not that they cannot start one (the grounded start's promises can be empty, not must be); the field's point that this limits 'begin with contact' still holds. Its restoring sentence matches 05's theorem, unchanged.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+    "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+    "theories/becoming/COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Tolerance.lean#total_stays",
+    "theories/becoming/chapters/05-COLLECTIVES.md#grounded-start"
+   ]
+  },
+  {
+   "id": "cx-kpso-the-transition",
+   "field": "targets[2].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "05's home at the anchor is unchanged on main and says this ('Restoring needs a formation that spares all it waits on, which gives from step 1 whatever the start: without one, total withholding stays'), the restoring frame making 'stays' read from total withholding, as `Tolerance.total_stays` has it. Main corrected only COLLECTIVE-DIRECTION's exit row, which had lost that frame; the field keeps it.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+    "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+    "theories/becoming/COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Tolerance.lean#total_stays"
+   ]
+  },
+  {
+   "id": "cx-ma-positive-recursion",
+   "field": "targets[0].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "05's home at the anchor is unchanged on main and says this ('Restoring needs a formation that spares all it waits on, which gives from step 1 whatever the start: without one, total withholding stays'), the restoring frame making 'stays' read from total withholding, as `Tolerance.total_stays` has it. Main corrected only COLLECTIVE-DIRECTION's exit row, which had lost that frame; the field keeps it.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+    "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+    "theories/becoming/COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Tolerance.lean#total_stays"
+   ]
+  },
+  {
+   "id": "cx-ma-selfishness-prophecy",
+   "field": "targets[0].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "05's home at the anchor is unchanged on main and says this ('Restoring needs a formation that spares all it waits on, which gives from step 1 whatever the start: without one, total withholding stays'), the restoring frame making 'stays' read from total withholding, as `Tolerance.total_stays` has it. Main corrected only COLLECTIVE-DIRECTION's exit row, which had lost that frame; the field keeps it.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+    "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+    "theories/becoming/COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Tolerance.lean#total_stays"
+   ]
+  },
+  {
+   "id": "cx-rsd-two-modes",
+   "field": "targets[1].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "05's home at the anchor is unchanged on main and says this ('Restoring needs a formation that spares all it waits on, which gives from step 1 whatever the start: without one, total withholding stays'), the restoring frame making 'stays' read from total withholding, as `Tolerance.total_stays` has it. Main corrected only COLLECTIVE-DIRECTION's exit row, which had lost that frame; the field keeps it.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+    "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+    "theories/becoming/COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Tolerance.lean#total_stays"
+   ]
+  },
+  {
+   "id": "cx-sspiral-belief-makes-trap",
+   "field": "targets[3].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "05's home at the anchor is unchanged on main and says this ('Restoring needs a formation that spares all it waits on, which gives from step 1 whatever the start: without one, total withholding stays'), the restoring frame making 'stays' read from total withholding, as `Tolerance.total_stays` has it. Main corrected only COLLECTIVE-DIRECTION's exit row, which had lost that frame; the field keeps it.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+    "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+    "theories/becoming/COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Tolerance.lean#total_stays"
+   ]
+  },
+  {
+   "id": "cx-sspiral-trust-output",
+   "field": "targets[0].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "05's home at the anchor is unchanged on main and says this ('Restoring needs a formation that spares all it waits on, which gives from step 1 whatever the start: without one, total withholding stays'), the restoring frame making 'stays' read from total withholding, as `Tolerance.total_stays` has it. Main corrected only COLLECTIVE-DIRECTION's exit row, which had lost that frame; the field keeps it.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+    "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+    "theories/becoming/COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Tolerance.lean#total_stays"
+   ]
+  },
+  {
+   "id": "cx-fork-transition-assurance",
+   "field": "targets[1].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "05's home at the anchor is unchanged on main and says this ('Restoring needs a formation that spares all it waits on, which gives from step 1 whatever the start: without one, total withholding stays'), the restoring frame making 'stays' read from total withholding, as `Tolerance.total_stays` has it. Main corrected only COLLECTIVE-DIRECTION's exit row, which had lost that frame; the field keeps it.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+    "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+    "theories/becoming/COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Tolerance.lean#total_stays"
+   ]
+  },
+  {
+   "id": "cx-wamo-abundance-loop",
+   "field": "targets[0].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "05's home at the anchor is unchanged on main and says this ('Restoring needs a formation that spares all it waits on, which gives from step 1 whatever the start: without one, total withholding stays'), the restoring frame making 'stays' read from total withholding, as `Tolerance.total_stays` has it. Main corrected only COLLECTIVE-DIRECTION's exit row, which had lost that frame; the field keeps it.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+    "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+    "theories/becoming/COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Tolerance.lean#total_stays"
+   ]
+  },
+  {
+   "id": "cx-zhishan-belief-manufactures-trap",
+   "field": "targets[1].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "A formation that spares all it waits on gives from step 1 whatever the start; without one, total withholding stays.",
+     "new": "Restoring needs a formation that spares all it waits on, which gives from step 1 whatever the start: without one, total withholding stays."
+    }
+   ],
+   "labels": null,
+   "why": "The field dropped 05's 'Restoring needs' frame, leaving 'without one, total withholding stays' in the shape main corrected at COLLECTIVE-DIRECTION's row (`total_stays` holds only where no formation spares all it waits on and total withholding is reached). It now copies 05's sentence, which is unchanged.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+    "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+    "theories/becoming/COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Tolerance.lean#total_stays"
+   ]
+  },
+  {
+   "id": "cx-abr-talion-and-pardon",
+   "field": "targets[3].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "05's home at the anchor is unchanged on main and says this ('Restoring needs a formation that spares all it waits on, which gives from step 1 whatever the start: without one, total withholding stays'), the restoring frame making 'stays' read from total withholding, as `Tolerance.total_stays` has it. Main corrected only COLLECTIVE-DIRECTION's exit row, which had lost that frame; the field keeps it.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+    "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+    "theories/becoming/COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Tolerance.lean#total_stays"
+   ]
+  },
+  {
+   "id": "cx-indaf-relational-tipping",
+   "field": "targets[2].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "05's home at the anchor is unchanged on main and says this ('Restoring needs a formation that spares all it waits on, which gives from step 1 whatever the start: without one, total withholding stays'), the restoring frame making 'stays' read from total withholding, as `Tolerance.total_stays` has it. Main corrected only COLLECTIVE-DIRECTION's exit row, which had lost that frame; the field keeps it.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+    "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+    "theories/becoming/COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Tolerance.lean#total_stays"
+   ]
+  },
+  {
+   "id": "cx-syscyb-trap-escalation",
+   "field": "targets[7].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "05's home at the anchor is unchanged on main and says this ('Restoring needs a formation that spares all it waits on, which gives from step 1 whatever the start: without one, total withholding stays'), the restoring frame making 'stays' read from total withholding, as `Tolerance.total_stays` has it. Main corrected only COLLECTIVE-DIRECTION's exit row, which had lost that frame; the field keeps it.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+    "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+    "theories/becoming/COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Tolerance.lean#total_stays"
+   ]
+  },
+  {
+   "id": "cx-syscyb-double-contingency",
+   "field": "targets[3].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "05's home at the anchor is unchanged on main and says this ('Restoring needs a formation that spares all it waits on, which gives from step 1 whatever the start: without one, total withholding stays'), the restoring frame making 'stays' read from total withholding, as `Tolerance.total_stays` has it. Main corrected only COLLECTIVE-DIRECTION's exit row, which had lost that frame; the field keeps it.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+    "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+    "theories/becoming/COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Tolerance.lean#total_stays"
+   ]
+  },
+  {
+   "id": "cx-econ-granovetter-distribution",
+   "field": "targets[0].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "a formation sparing all it waits on 'gives from step 1 whatever the start'; 'without one, total withholding stays'",
+     "new": "'Restoring needs a formation that spares all it waits on, which gives from step 1 whatever the start'; 'without one, total withholding stays'"
+    }
+   ],
+   "labels": null,
+   "why": "Quoted without 05's 'Restoring needs' frame, 'without one, total withholding stays' read in the shape main corrected at COLLECTIVE-DIRECTION's row, which matters here since Granovetter's case turns on the start. Both quotations are now exact substrings of 05's unchanged sentence.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+    "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+    "theories/becoming/COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Tolerance.lean#total_stays"
+   ]
+  },
+  {
+   "id": "cx-asc-tempo-measurement-replaces-values",
+   "field": "targets[0].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "better needs C, and",
+     "new": "better needs C or a premise in its place, and"
+    }
+   ],
+   "labels": null,
+   "why": "COLLECTIVE-DIRECTION §6's closing sentence now reads 'needs C or a premise in its place' (LM1: a ranking of courses needs C or a premise in its place); the field quoted it before that. Only the inserted words change; both premises stay named.",
+   "read": [
+    "theories/becoming/COLLECTIVE-DIRECTION.md#6-what-enough-situationality-would-have-to-mean",
+    "theories/becoming/COLLECTIVE-DIRECTION.md#4-what-needs-a-premise",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order"
+   ]
+  },
+  {
+   "id": "cx-archearth-outcomes-built-into-the-system",
+   "field": "targets[1].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "better needs C, and",
+     "new": "better needs C or a premise in its place, and"
+    }
+   ],
+   "labels": null,
+   "why": "COLLECTIVE-DIRECTION §6's closing sentence now reads 'needs C or a premise in its place' (LM1: a ranking of courses needs C or a premise in its place); the field quoted it before that. Only the inserted words change; both premises stay named.",
+   "read": [
+    "theories/becoming/COLLECTIVE-DIRECTION.md#6-what-enough-situationality-would-have-to-mean",
+    "theories/becoming/COLLECTIVE-DIRECTION.md#4-what-needs-a-premise",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order"
+   ]
+  },
+  {
+   "id": "cx-kpso-understanding-aligned-first",
+   "field": "targets[1].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "better needs C, and",
+     "new": "better needs C or a premise in its place, and"
+    }
+   ],
+   "labels": null,
+   "why": "COLLECTIVE-DIRECTION §6's closing sentence now reads 'needs C or a premise in its place' (LM1: a ranking of courses needs C or a premise in its place); the field quoted it before that. Only the inserted words change; both premises stay named.",
+   "read": [
+    "theories/becoming/COLLECTIVE-DIRECTION.md#6-what-enough-situationality-would-have-to-mean",
+    "theories/becoming/COLLECTIVE-DIRECTION.md#4-what-needs-a-premise",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order"
+   ]
+  },
+  {
+   "id": "cx-memories-grammar-of-the-opponent",
+   "field": "targets[2].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "better needs C, and",
+     "new": "better needs C or a premise in its place, and"
+    }
+   ],
+   "labels": null,
+   "why": "COLLECTIVE-DIRECTION §6's closing sentence now reads 'needs C or a premise in its place' (LM1: a ranking of courses needs C or a premise in its place); the field quoted it before that. Only the inserted words change; both premises stay named.",
+   "read": [
+    "theories/becoming/COLLECTIVE-DIRECTION.md#6-what-enough-situationality-would-have-to-mean",
+    "theories/becoming/COLLECTIVE-DIRECTION.md#4-what-needs-a-premise",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order"
+   ]
+  },
+  {
+   "id": "cx-zhishan-warning-shot",
+   "field": "targets[0].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "better needs C, and",
+     "new": "better needs C or a premise in its place, and"
+    }
+   ],
+   "labels": null,
+   "why": "COLLECTIVE-DIRECTION §6's closing sentence now reads 'needs C or a premise in its place' (LM1: a ranking of courses needs C or a premise in its place); the field quoted it before that. Only the inserted words change; both premises stay named.",
+   "read": [
+    "theories/becoming/COLLECTIVE-DIRECTION.md#6-what-enough-situationality-would-have-to-mean",
+    "theories/becoming/COLLECTIVE-DIRECTION.md#4-what-needs-a-premise",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order"
+   ]
+  },
+  {
+   "id": "cx-indaf-relational-tipping",
+   "field": "targets[4].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "better needs C, and",
+     "new": "better needs C or a premise in its place, and"
+    }
+   ],
+   "labels": null,
+   "why": "COLLECTIVE-DIRECTION §6's closing sentence now reads 'needs C or a premise in its place' (LM1: a ranking of courses needs C or a premise in its place); the field quoted it before that. Only the inserted words change; both premises stay named.",
+   "read": [
+    "theories/becoming/COLLECTIVE-DIRECTION.md#6-what-enough-situationality-would-have-to-mean",
+    "theories/becoming/COLLECTIVE-DIRECTION.md#4-what-needs-a-premise",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order"
+   ]
+  }
+ ]
+}

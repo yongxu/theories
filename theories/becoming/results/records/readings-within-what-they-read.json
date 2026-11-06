@@ -10,8 +10,8 @@
   "family": "F01",
   "reviewed_at_utc": "2026-10-28T12:01:33+00:00",
   "statement": {
-    "en": "A family of readings indexed by what it reads, over inhabited types with equality of values decided, is complete exactly where nothing differs; completing it is an unfolding incomplete at every step that never returns and that no finite stock holds; the liar is a rhythm with no still value.",
-    "zh": "以所读者为索引的读法族，在类型非空、值的相等可判定时，恰在没有差别处完备；补全它是每一步都不完备、从不返回、不被有限储存持有的展开；说谎者是没有静值的节律。"
+    "en": "Over inhabited types with values' equality decided, some family of readings indexed by what it reads is complete exactly where nothing differs; where a map moves every value, completing it is an unfolding incomplete at every step, not returning, held by no finite stock; the liar has no still value.",
+    "zh": "在类型非空、值的相等可判定时，某个以所读者为索引的读法族恰在没有差别处完备；映射移动每个值时，补全它是每一步都不完备、从不返回、不被有限储存持有的展开；说谎者没有静值。"
   },
   "laws": [
     {
@@ -509,6 +509,10 @@
     {
       "en": "6 November 2026, board item LM: declarations this record lists moved with the helpers stated once; its references follow them, and no law changed.",
       "zh": "2026年11月6日，工作板条目 LM：此记录所列之声明随只陈述一次之辅助引理而移；其引用从之，诸律不变。"
+    },
+    {
+      "en": "7 November 2026, board item AA: the atlas's readers found a statement read as of any family and without the map moving every value; corrected against the Lean and the later records.",
+      "zh": "2026年11月7日，工作板条目 AA：图谱读者发现一个陈述被读作关于任一族且不需映射移动每个值；已对照 Lean 与后来的记录改正。"
     }
   ],
   "text_versions": [

@@ -1607,7 +1607,7 @@
      "record": "readings-within-what-they-read",
      "anchor": "theories/becoming/chapters/03-KNOWING.md#r-readings-within-what-they-read",
      "says": {
-      "en": "Theorem (any type). With equality of values decided and both types inhabited, a family is complete exactly where all values are equal. Completing it step by step is an unfolding incomplete at every step that never returns."
+      "en": "Theorem (any type). With equality of values decided and both types inhabited, some family is complete exactly where all values are equal. Where a map moves every value, completing it step by step is an unfolding incomplete at every step that never returns."
      },
      "role": "carries"
     },
@@ -2549,7 +2549,7 @@
      "record": "readings-within-what-they-read",
      "anchor": "theories/becoming/chapters/03-KNOWING.md#r-readings-within-what-they-read",
      "says": {
-      "en": "Completing it step by step, each revision keeping every earlier reading and saying the last gap, is an unfolding incomplete at every step that never returns."
+      "en": "Where a map moves every value, completing it step by step, each revision keeping every earlier reading and saying the last gap, is an unfolding incomplete at every step that never returns."
      },
      "role": "carries"
     }
@@ -3894,6 +3894,16 @@
    "id": "cx-jianwen-v4-orbit-count",
    "what": "changed",
    "why": "second critic (label): The count is right (Burnside (64 + 0 + 8 + 8)/4 = 20, the eight fixed by 綜 and the eight fixed by 錯綜 pairing into eight classes of two) and the 06 row and record say it, but the law is not independent of the source: H4 of SSBX-REPOSITORY-REVIEW.md carried it from the 生生不息 repository, whose later copy of this very V4 note reports 20. Agreement with a law that descends from a sibling is agreement of reading, by descent."
+  },
+  {
+   "id": "cx-jianwen-self-articulation",
+   "what": "changed",
+   "why": "main changed theories/becoming/chapters/03-KNOWING.md (LM1 or AA, 7 November 2026): targets[1].says states what it says now"
+  },
+  {
+   "id": "cx-jianwen-map-territory-mutual",
+   "what": "changed",
+   "why": "main changed theories/becoming/results/records/readings-within-what-they-read.json (LM1 or AA, 7 November 2026): targets[2].says states what it says now"
   }
  ],
  "live_flags": []

@@ -1081,7 +1081,7 @@
      "record": "where-novelty-gain-comes-from",
      "anchor": "theories/becoming/chapters/02-MAP.md#r-where-novelty-gain-comes-from",
      "says": {
-      "en": "With the rest of the whole counted, every rise is given net by some relatum; 'Novelty, and formations first supported without end, need gain; gain is not openness.'"
+      "en": "With the rest of the whole counted, every rise is given net by some relatum; 'Novelty, and formations first supported without end where what each requires stays fixed within the family, need gain; gain is not openness.'"
      },
      "role": "neighbour"
     }
@@ -1264,7 +1264,7 @@
     }
    ],
    "account_adds": {
-    "en": "Which invariant survives reordering; presence defined from precedence on causal-set growth; that reciprocal promises can be empty, and that ignition needs a reserve already present."
+    "en": "Which invariant survives reordering; presence defined from precedence on causal-set growth; that reciprocal promises can be empty, and that in a witness ignition, defined as spending a reserve, needs one already present (near-definitional)."
    },
    "source_adds": {
     "en": "The scaling thesis, the derivation from biology, and the accepted prices."
@@ -2260,7 +2260,7 @@
      "record": "readings-within-what-they-read",
      "anchor": "theories/becoming/chapters/03-KNOWING.md#r-readings-within-what-they-read",
      "says": {
-      "en": "Theorem (any type): where a map moves every value, 'no frame realizes with its own configurations every pattern of claims about them'. Completing step by step 'is an unfolding incomplete at every step that never returns'. Lawvere's fixed point as an unfolding; coding and provability are not stated."
+      "en": "Theorem (any type): where a map moves every value, 'no frame realizes with its own configurations every pattern of claims about them'. Where the map moves every value, completing step by step 'is an unfolding incomplete at every step that never returns'. Lawvere's fixed point as an unfolding; coding and provability are not stated."
      },
      "role": "carries"
     },
@@ -3272,6 +3272,22 @@
    ]
   }
  ],
- "changes": [],
+ "changes": [
+  {
+   "id": "cx-ctxrt-not-a-fixed-point-bet",
+   "what": "changed",
+   "why": "main changed theories/becoming/chapters/02-MAP.md (LM1 or AA, 7 November 2026): targets[4].says states what it says now"
+  },
+  {
+   "id": "cx-ctxrt-cells-no-coordination",
+   "what": "changed",
+   "why": "main changed theories/becoming/chapters/05-COLLECTIVES.md (LM1 or AA, 7 November 2026): account_adds states what it says now"
+  },
+  {
+   "id": "cx-ctxrt-recursion-self-reading",
+   "what": "changed",
+   "why": "main changed theories/becoming/results/records/readings-within-what-they-read.json (LM1 or AA, 7 November 2026): targets[0].says states what it says now"
+  }
+ ],
  "live_flags": []
 }

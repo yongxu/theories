@@ -1,0 +1,332 @@
+{
+ "base": "16c55965c1f67d0d7d6c773d35bc52c479d6bd6e",
+ "items": [
+  {
+   "id": "cx-memories-lossy-consolidation",
+   "field": "targets[1].says",
+   "anchor": "theories/becoming/chapters/02-MAP.md#r-returning-novelty-forgetting-on-levels",
+   "text": "On the levels alone: a bounded family exchanged with arbitrarily late carries neither the count of its exchanges nor a finite whole (`World.forgets_of_bounded`).",
+   "home": "theories/becoming/chapters/02-MAP.md",
+   "matched": [
+    "rbitrarily late carries ",
+    "arily late carries neith",
+    " late carries neither th",
+    " carries neither the cou",
+    "ies neither the count of",
+    "f its exchanges nor a fi",
+    " exchanges nor a finite ",
+    "anges nor a finite whole"
+   ],
+   "home_old": [
+    "| <a id=\"r-returning-novelty-forgetting-on-levels\"></a>[revisiting, novelty, forgetting](../results/records/returning-novelty-forgetting-on-levels.md) | On the levels alone, a family whose stock stays within a bound from `T` on takes one configuration at two steps from every step on (`Web.revisits_of_bounded`; no flow, balance or decision); changing without end as well, it cannot be that it never revisits after a change (`Web.returns_of_bounded`). What is new at every step exceeds every bound; abounded family  exchanged with  arbitrarily late carries neither the count of its exchanges nor a finite whole  (`World.forgets_of_bounded`). |"
+   ],
+   "home_new": [
+    "| <a id=\"r-returning-novelty-forgetting-on-levels\"></a>[revisiting, novelty, forgetting](../results/records/returning-novelty-forgetting-on-levels.md) | On the levels alone, a family whose stock stays within a bound from `T` on takes one configuration at two steps from every step on (`Web.revisits_of_bounded`; no flow, balance or decision); changing without end as well, it cannot be that it never revisits after a change (`Web.returns_of_bounded`). What is new at every step exceeds every bound; a family whose stock stays within a bound, exchanged with at arbitrarily late steps, does not carry the count of its exchanges (`Flow.uncarried_of_bounded`), and a finite whole within a bound that keeps exchanging does not carry its history (`World.forgets_of_bounded`). |"
+   ]
+  },
+  {
+   "id": "cx-ctxrt-not-a-fixed-point-bet",
+   "field": "targets[4].says",
+   "anchor": "theories/becoming/chapters/02-MAP.md#r-where-novelty-gain-comes-from",
+   "text": "With the rest of the whole counted, every rise is given net by some relatum; 'Novelty, and formations first supported without end, need gain; gain is not openness.'",
+   "home": "theories/becoming/chapters/02-MAP.md",
+   "matched": [
+    "pported without end, nee",
+    "ed without end, need gai",
+    "thout end, need gain; ga"
+   ],
+   "home_old": [
+    "| <a id=\"r-where-novelty-gain-comes-from\"></a>[where novelty's gain comes from](../results/records/where-novelty-gain-comes-from.md) | With the rest of the whole counted, every rise is given net by some relatum; under the first law a family without repetition that rises is given by the rest or is open (`Flow.rise_from_rest_or_open`);  alisted whole  the rest gives nothing net is not new at every step. Novelty, and formations first supported without end, need gain; gain is not openness. |"
+   ],
+   "home_new": [
+    "| <a id=\"r-where-novelty-gain-comes-from\"></a>[where novelty's gain comes from](../results/records/where-novelty-gain-comes-from.md) | With the rest of the whole counted, every rise is given net by some relatum; under the first law a family without repetition that rises is given by the rest or is open (`Flow.rise_from_rest_or_open`); under the first law a whole listed without repetition that the rest gives nothing net is not new at every step (`Flow.whole_not_new_of_rest_idle`). Novelty, and formations first supported without end where what each requires stays fixed within the family, need gain; gain is not openness. |"
+   ]
+  },
+  {
+   "id": "cx-modphil-whitehead-creativity",
+   "field": "targets[0].says",
+   "anchor": "theories/becoming/chapters/02-MAP.md#r-where-novelty-gain-comes-from",
+   "text": "With the rest of the whole counted, every rise is given net by some relatum; a listed whole the rest gives nothing net is not new at every step. 'Novelty, and formations first supported without end, need gain; gain is not openness.'",
+   "home": "theories/becoming/chapters/02-MAP.md",
+   "matched": [
+    "pported without end, nee",
+    "ed without end, need gai",
+    "thout end, need gain; ga"
+   ],
+   "home_old": [
+    "| <a id=\"r-where-novelty-gain-comes-from\"></a>[where novelty's gain comes from](../results/records/where-novelty-gain-comes-from.md) | With the rest of the whole counted, every rise is given net by some relatum; under the first law a family without repetition that rises is given by the rest or is open (`Flow.rise_from_rest_or_open`);  alisted whole  the rest gives nothing net is not new at every step. Novelty, and formations first supported without end, need gain; gain is not openness. |"
+   ],
+   "home_new": [
+    "| <a id=\"r-where-novelty-gain-comes-from\"></a>[where novelty's gain comes from](../results/records/where-novelty-gain-comes-from.md) | With the rest of the whole counted, every rise is given net by some relatum; under the first law a family without repetition that rises is given by the rest or is open (`Flow.rise_from_rest_or_open`); under the first law a whole listed without repetition that the rest gives nothing net is not new at every step (`Flow.whole_not_new_of_rest_idle`). Novelty, and formations first supported without end where what each requires stays fixed within the family, need gain; gain is not openness. |"
+   ]
+  },
+  {
+   "id": "cx-kpso-stabilize-and-keep-going",
+   "field": "targets[2].says",
+   "anchor": "theories/becoming/chapters/02-MAP.md#not-shown",
+   "text": "Not shown: that generation is better than keeping or degeneration: order needs C, whose losses count needs the continuation condition.",
+   "home": "theories/becoming/chapters/02-MAP.md",
+   "matched": [
+    "on: order needs C, whose",
+    "rder needs C, whose loss",
+    "needs C, whose losses co"
+   ],
+   "home_old": [
+    "- That generation is better than keeping or degeneration: order needs C, whose losses count needs the continuation condition ([07](07-SIGNIFICANCE.md))."
+   ],
+   "home_new": [
+    "- That generation is better than keeping or degeneration: order needs C or a premise in its place, whose losses count needs the continuation condition ([07](07-SIGNIFICANCE.md))."
+   ]
+  },
+  {
+   "id": "cx-syscyb-ashby-self-organizing",
+   "field": "targets[3].says",
+   "anchor": "theories/becoming/chapters/02-MAP.md#not-shown",
+   "text": "Not shown: that generation is better than keeping or degeneration: order needs C, whose losses count needs the continuation condition. That passing, a reserve or a regulated level is good.",
+   "home": "theories/becoming/chapters/02-MAP.md",
+   "matched": [
+    "on: order needs C, whose",
+    "rder needs C, whose loss",
+    "needs C, whose losses co"
+   ],
+   "home_old": [
+    "- That generation is better than keeping or degeneration: order needs C, whose losses count needs the continuation condition ([07](07-SIGNIFICANCE.md))."
+   ],
+   "home_new": [
+    "- That generation is better than keeping or degeneration: order needs C or a premise in its place, whose losses count needs the continuation condition ([07](07-SIGNIFICANCE.md))."
+   ]
+  },
+  {
+   "id": "cx-dpc-direction-of-complexity",
+   "field": "targets[0].says",
+   "anchor": "theories/becoming/chapters/02-MAP.md#not-shown",
+   "text": "Not shown: that generation is better than keeping or degeneration: order needs C, whose losses count needs the continuation condition. Nor that the regions are decided at a point, or that renewal is generation.",
+   "home": "theories/becoming/chapters/02-MAP.md",
+   "matched": [
+    "on: order needs C, whose",
+    "rder needs C, whose loss",
+    "needs C, whose losses co"
+   ],
+   "home_old": [
+    "- That generation is better than keeping or degeneration: order needs C, whose losses count needs the continuation condition ([07](07-SIGNIFICANCE.md))."
+   ],
+   "home_new": [
+    "- That generation is better than keeping or degeneration: order needs C or a premise in its place, whose losses count needs the continuation condition ([07](07-SIGNIFICANCE.md))."
+   ]
+  },
+  {
+   "id": "cx-fork-generative-criterion",
+   "field": "targets[0].says",
+   "anchor": "theories/becoming/chapters/02-MAP.md#r-generation-and-degeneration-at-two-grains",
+   "text": "Theorem (root). Going on along some branch and ending on every branch exclude each other; generation and keeping each exclude degeneration, at a pair of classes. No premise on what the pattern is or whether its going on is good. Not shown: that generation is better than keeping or degeneration; order needs C, whose losses count needs the continuation condition.",
+   "home": "theories/becoming/chapters/02-MAP.md",
+   "matched": [
+    "rder needs C, whose loss",
+    "needs C, whose losses co"
+   ],
+   "home_old": [
+    "- That generation is better than keeping or degeneration: order needs C, whose losses count needs the continuation condition ([07](07-SIGNIFICANCE.md))."
+   ],
+   "home_new": [
+    "- That generation is better than keeping or degeneration: order needs C or a premise in its place, whose losses count needs the continuation condition ([07](07-SIGNIFICANCE.md))."
+   ]
+  },
+  {
+   "id": "cx-memories-value-words-recast",
+   "field": "reading",
+   "anchor": null,
+   "text": "The account recasts likewise: what a course admits, and widening, defined with no premise. It denies the transfer: that the wider is better needs C, whose losses count needs the continuation condition, neither asserted, warrant open, and the definition carries no warrant. On witnesses a widening stands below what it widens by a net weighting or a game's payoffs. So recasting gains exactness and no ought, and 'consequences, not tastes' is what the account withholds. [AI reading]",
+   "home": "theories/becoming/chapters/02-MAP.md",
+   "matched": [
+    "needs C, whose losses co"
+   ],
+   "home_old": [
+    "- That generation is better than keeping or degeneration: order needs C, whose losses count needs the continuation condition ([07](07-SIGNIFICANCE.md))."
+   ],
+   "home_new": [
+    "- That generation is better than keeping or degeneration: order needs C or a premise in its place, whose losses count needs the continuation condition ([07](07-SIGNIFICANCE.md))."
+   ]
+  },
+  {
+   "id": "cx-jianwen-self-articulation",
+   "field": "targets[1].says",
+   "anchor": "theories/becoming/chapters/03-KNOWING.md#r-readings-within-what-they-read",
+   "text": "Theorem (any type). With equality of values decided and both types inhabited, a family is complete exactly where all values are equal. Completing it step by step is an unfolding incomplete at every step that never returns.",
+   "home": "theories/becoming/chapters/03-KNOWING.md",
+   "matched": [
+    "ypes inhabited, a family",
+    "inhabited, a family is c",
+    "lues are equal. Completi",
+    "are equal. Completing it",
+    "qual. Completing it step",
+    " Completing it step by s",
+    "mplete at every step tha",
+    "e at every step that nev",
+    "every step that never re",
+    " step that never returns"
+   ],
+   "home_old": [
+    "**Theorem** (any type). Where a map moves every value, no member of a family of readings indexed by what it reads says the diagonal gap; so no family of claims says every reading, and no frame realizes with its own configurations every pattern of claims about them. With equality of values decided and both types inhabited, a family is complete, saying every function on the indexed domain, exactly where all values are equal. Completing it step by step, each revision keeping every earlier reading and saying the last gap, is an unfolding incomplete at every step that never returns (not everything a later step says was said at an earlier one); with likeness transitive no two gaps are alike, and with it symmetric too no finite stock holds them. The liar is a rhythm with no still value. Lean: `Diagonal.gap_unsaid`, `Diagonal.complete_iff_alike`, `Diagonal.Unfolds.never_returns`; [record](../results/records/readings-within-what-they-read.md). Lawvere's fixed point as an unfolding; coding and provability are not stated.",
+    "    \"en\": \"A family of readings indexed by what it reads, over inhabited types with equality of values decided, is complete exactly where nothing differs;  completing it is an unfolding incomplete at every step that never returns and that no finite stock holds; the liar is a rhythm with no still value.\","
+   ],
+   "home_new": [
+    "**Theorem** (any type). Where a map moves every value, no member of a family of readings indexed by what it reads says the diagonal gap; so no family of claims says every reading, and no frame realizes with its own configurations every pattern of claims about them. With equality of values decided and both types inhabited, some family is complete, saying every function on the indexed domain, exactly where all values are equal. Where the map moves every value, completing it step by step, each revision keeping every earlier reading and saying the last gap, is an unfolding incomplete at every step that never returns (not everything a later step says was said at an earlier one); with likeness transitive no two gaps are alike, and with it symmetric too no finite stock holds them. The liar is a rhythm with no still value. Lean: `Diagonal.gap_unsaid`, `Diagonal.complete_iff_alike`, `Diagonal.Unfolds.never_returns`; [record](../results/records/readings-within-what-they-read.md). Lawvere's fixed point as an unfolding; coding and provability are not stated.",
+    "    \"en\": \"Over inhabited types with values' equality decided, some family of readings indexed by what it reads is complete exactly where nothing differs; where a map moves every value, completing it is an unfolding incomplete at every step, not returning, held by no finite stock; the liar has no still value.\","
+   ]
+  },
+  {
+   "id": "cx-kpso-correction-keystone",
+   "field": "targets[1].says",
+   "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#route-b",
+   "text": "Reading [AI reading, D65]: a fault in organized relations (suppressed feedback, blocked exit), kept apart from an omission of the representation and from informed harm.",
+   "home": "theories/becoming/results/records/bounded-census-keeps-pace.json",
+   "matched": [
+    "f the representation and"
+   ],
+   "home_old": [
+    "      \"en\": \"Decidability: read of activity this is decided activity, read of standing it holds automatically; it is  alogical commitment of the representation and classically always holds.\"",
+    "      \"en\": \"Decidability: finding what comes to be in the pure core needs the determination decided; read of activity this is decided activity, read of standing it holds automatically (comparison of natural numbers is decidable). It is  alogical commitment of the representation and classically always holds.\""
+   ],
+   "home_new": [
+    "      \"en\": \"Decidability: read of activity this is decided activity, read of standing it holds automatically; it is the law's own condition, not a commitment of the representation, and classically always holds.\"",
+    "      \"en\": \"Decidability: finding what comes to be in the pure core needs the determination decided; read of activity this is decided activity, read of standing it holds automatically (comparison of natural numbers is decidable). It is the law's own condition, not a commitment of the representation, and classically always holds.\""
+   ]
+  },
+  {
+   "id": "cx-rsd-rebuild-feedbacks",
+   "field": "targets[4].says",
+   "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#route-b",
+   "text": "Reading [AI reading, D65]: kept apart from an omission of the representation and from informed harm is a fault in organized relations (suppressed feedback, blocked exit).",
+   "home": "theories/becoming/results/records/bounded-census-keeps-pace.json",
+   "matched": [
+    "f the representation and"
+   ],
+   "home_old": [
+    "      \"en\": \"Decidability: read of activity this is decided activity, read of standing it holds automatically; it is  alogical commitment of the representation and classically always holds.\"",
+    "      \"en\": \"Decidability: finding what comes to be in the pure core needs the determination decided; read of activity this is decided activity, read of standing it holds automatically (comparison of natural numbers is decidable). It is  alogical commitment of the representation and classically always holds.\""
+   ],
+   "home_new": [
+    "      \"en\": \"Decidability: read of activity this is decided activity, read of standing it holds automatically; it is the law's own condition, not a commitment of the representation, and classically always holds.\"",
+    "      \"en\": \"Decidability: finding what comes to be in the pure core needs the determination decided; read of activity this is decided activity, read of standing it holds automatically (comparison of natural numbers is decidable). It is the law's own condition, not a commitment of the representation, and classically always holds.\""
+   ]
+  },
+  {
+   "id": "cx-dpc-monotone-systems",
+   "field": "targets[1].says",
+   "anchor": "theories/becoming/chapters/02-MAP.md#r-coupled-regimes",
+   "text": "Record counterexample `Relay.cycles`: mutual support without a band gives no rest; a pair each of which ends alone cycles for ever between two unordered states. Correspondence field: planar cooperative maps are eventually monotone only under regularity conditions (Smith 1998).",
+   "home": "theories/becoming/results/records/coupled-regimes.json",
+   "matched": [
+    " without a band gives no",
+    "out a band gives no rest",
+    " band gives no rest; a p",
+    " gives no rest; a pair e"
+   ],
+   "home_old": [
+    "        \"en\": \"Relay.cycles: mutual support without a band gives no rest; a pair each of which ends alone cycles for ever between two unordered states.\","
+   ],
+   "home_new": [
+    "        \"en\": \"Relay.cycles: mutual support without a band need not give rest; a pair each of which ends alone cycles for ever between two unordered states.\","
+   ]
+  },
+  {
+   "id": "cx-oi-kevala",
+   "field": "targets[1].says",
+   "anchor": "theories/becoming/chapters/03-KNOWING.md#r-readings-within-what-they-read",
+   "text": "Theorem (any type): where a map moves every value, no family of claims says every reading; a family indexed by what it reads, over inhabited types with equality of values decided, is complete exactly where nothing differs.",
+   "home": "theories/becoming/results/records/readings-within-what-they-read.json",
+   "matched": [
+    "exed by what it reads, o",
+    "by what it reads, over i",
+    "at it reads, over inhabi",
+    " reads, over inhabited t",
+    "s, over inhabited types ",
+    "ty of values decided, is",
+    " values decided, is comp",
+    "es decided, is complete "
+   ],
+   "home_old": [
+    "    \"en\": \"A family of readings indexed by what it reads, over inhabited types with equality of values decided, is complete exactly where nothing differs;  completing it is an unfolding incomplete at every step that never returns and that no finite stock holds; the liar is a rhythm with no still value.\","
+   ],
+   "home_new": [
+    "    \"en\": \"Over inhabited types with values' equality decided, some family of readings indexed by what it reads is complete exactly where nothing differs; where a map moves every value, completing it is an unfolding incomplete at every step, not returning, held by no finite stock; the liar has no still value.\","
+   ]
+  },
+  {
+   "id": "cx-ctxrt-recursion-self-reading",
+   "field": "targets[0].says",
+   "anchor": "theories/becoming/chapters/03-KNOWING.md#r-readings-within-what-they-read",
+   "text": "Theorem (any type): where a map moves every value, 'no frame realizes with its own configurations every pattern of claims about them'. Completing step by step 'is an unfolding incomplete at every step that never returns'. Lawvere's fixed point as an unfolding; coding and provability are not stated.",
+   "home": "theories/becoming/results/records/readings-within-what-they-read.json",
+   "matched": [
+    "mplete at every step tha",
+    "e at every step that nev",
+    "every step that never re",
+    " step that never returns"
+   ],
+   "home_old": [
+    "    \"en\": \"A family of readings indexed by what it reads, over inhabited types with equality of values decided, is complete exactly where nothing differs;  completing it is an unfolding incomplete at every step that never returns and that no finite stock holds; the liar is a rhythm with no still value.\","
+   ],
+   "home_new": [
+    "    \"en\": \"Over inhabited types with values' equality decided, some family of readings indexed by what it reads is complete exactly where nothing differs; where a map moves every value, completing it is an unfolding incomplete at every step, not returning, held by no finite stock; the liar has no still value.\","
+   ]
+  },
+  {
+   "id": "cx-jianwen-map-territory-mutual",
+   "field": "targets[2].says",
+   "anchor": "theories/becoming/chapters/03-KNOWING.md#r-readings-within-what-they-read",
+   "text": "Completing it step by step, each revision keeping every earlier reading and saying the last gap, is an unfolding incomplete at every step that never returns.",
+   "home": "theories/becoming/results/records/readings-within-what-they-read.json",
+   "matched": [
+    "mplete at every step tha",
+    "e at every step that nev",
+    "every step that never re",
+    " step that never returns"
+   ],
+   "home_old": [
+    "    \"en\": \"A family of readings indexed by what it reads, over inhabited types with equality of values decided, is complete exactly where nothing differs;  completing it is an unfolding incomplete at every step that never returns and that no finite stock holds; the liar is a rhythm with no still value.\","
+   ],
+   "home_new": [
+    "    \"en\": \"Over inhabited types with values' equality decided, some family of readings indexed by what it reads is complete exactly where nothing differs; where a map moves every value, completing it is an unfolding incomplete at every step, not returning, held by no finite stock; the liar has no still value.\","
+   ]
+  },
+  {
+   "id": "cx-memories-one-model-smaller",
+   "field": "targets[4].says",
+   "anchor": "theories/becoming/chapters/03-KNOWING.md#r-readings-within-what-they-read",
+   "text": "Theorem (any type). Where a map moves every value, no member of a family of readings indexed by what it reads says the diagonal gap; completing it step by step is an unfolding incomplete at every step that never returns. Coding and provability are not stated.",
+   "home": "theories/becoming/results/records/readings-within-what-they-read.json",
+   "matched": [
+    "mplete at every step tha",
+    "e at every step that nev",
+    "every step that never re",
+    " step that never returns"
+   ],
+   "home_old": [
+    "    \"en\": \"A family of readings indexed by what it reads, over inhabited types with equality of values decided, is complete exactly where nothing differs;  completing it is an unfolding incomplete at every step that never returns and that no finite stock holds; the liar is a rhythm with no still value.\","
+   ],
+   "home_new": [
+    "    \"en\": \"Over inhabited types with values' equality decided, some family of readings indexed by what it reads is complete exactly where nothing differs; where a map moves every value, completing it is an unfolding incomplete at every step, not returning, held by no finite stock; the liar has no still value.\","
+   ]
+  },
+  {
+   "id": "cx-pal-lawvere-diagonal",
+   "field": "targets[0].says",
+   "anchor": "theories/becoming/chapters/03-KNOWING.md#r-readings-within-what-they-read",
+   "text": "Theorem (any type). Where a map moves every value, no member of a family of readings indexed by what it reads says the diagonal gap. Completing step by step is an unfolding incomplete at every step that never returns. Lawvere's fixed point as an unfolding; coding and provability are not stated. The record: the rhythm is shown periodic for two-valued negation only.",
+   "home": "theories/becoming/results/records/readings-within-what-they-read.json",
+   "matched": [
+    "mplete at every step tha",
+    "e at every step that nev",
+    "every step that never re",
+    " step that never returns"
+   ],
+   "home_old": [
+    "    \"en\": \"A family of readings indexed by what it reads, over inhabited types with equality of values decided, is complete exactly where nothing differs;  completing it is an unfolding incomplete at every step that never returns and that no finite stock holds; the liar is a rhythm with no still value.\","
+   ],
+   "home_new": [
+    "    \"en\": \"Over inhabited types with values' equality decided, some family of readings indexed by what it reads is complete exactly where nothing differs; where a map moves every value, completing it is an unfolding incomplete at every step, not returning, held by no finite stock; the liar has no still value.\","
+   ]
+  }
+ ]
+}

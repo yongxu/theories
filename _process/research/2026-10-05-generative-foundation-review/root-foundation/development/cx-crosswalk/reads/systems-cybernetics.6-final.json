@@ -705,7 +705,7 @@
     "en": "That a target above all others has no rest for two; that a best response for position keeps nothing; the exact closing condition of a loop; that position does not protect, the greatest part ending with the rest where it depends on the condition."
    },
    "source_adds": {
-    "en": "A law in which each raises its stock by reading the other's: PLAN §4.4 lists escalation among gaps, and no live chapter or front uses the word; the one witness named so in a record is a single reply. Unilateral disarmament has a form only on waiting (giving first, with a reserve); on a position ranking the race law cuts against it."
+    "en": "A law in which each raises its stock by reading the other's: PLAN §4.4 lists escalation among gaps, and no live chapter or front uses the word; the one witness named so in a record is a single reply. Unilateral disarmament has a form only on waiting (sparing all one waits on, which gives from step 1); on a position ranking the race law cuts against it."
    },
    "absence": null,
    "labels": [
@@ -2520,7 +2520,7 @@
      "record": "what-a-set-point-optimum-does-beyond",
      "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-what-a-set-point-optimum-does-beyond",
      "says": {
-      "en": "Formations each holding a set point, their losses together above what the rest gives a gated condition, end it however small each one's loss. What protects what lies beyond at the set point is the choice among equal optima, which no law here models."
+      "en": "Formations each alone with its family, holding the family's stock, their losses together above what the rest gives a condition gated at `m` at each of `n` steps from a level below `n + m`, end it however small each one's loss. What protects what lies beyond at the set point is the choice among equal optima, which no law here models."
      },
      "role": "carries"
     }
@@ -2587,7 +2587,7 @@
     {
      "anchor": "theories/becoming/chapters/02-MAP.md#not-shown",
      "says": {
-      "en": "Not shown: that generation is better than keeping or degeneration: order needs C, whose losses count needs the continuation condition. That passing, a reserve or a regulated level is good."
+      "en": "Not shown: that generation is better than keeping or degeneration: order needs C or a premise in its place, whose losses count needs the continuation condition. That passing, a reserve or a regulated level is good."
      },
      "role": "carries"
     }
@@ -2742,7 +2742,23 @@
    "same_as": null
   }
  ],
- "changes": [],
+ "changes": [
+  {
+   "id": "cx-syscyb-trap-escalation",
+   "what": "changed",
+   "why": "COLLECTIVE-DIRECTION's exit 'Give first, with a reserve' is 'Spare all one waits on' since AA's errata (7 November 2026): the law has no reserve in it"
+  },
+  {
+   "id": "cx-syscyb-feedback-as-purpose",
+   "what": "changed",
+   "why": "main changed theories/becoming/chapters/05-COLLECTIVES.md (LM1 or AA, 7 November 2026): targets[3].says states what it says now"
+  },
+  {
+   "id": "cx-syscyb-ashby-self-organizing",
+   "what": "changed",
+   "why": "main changed theories/becoming/chapters/02-MAP.md (LM1 or AA, 7 November 2026): targets[3].says states what it says now"
+  }
+ ],
  "live_flags": [
   {
    "where": "theories/becoming/COLLECTIVE-DIRECTION.md:87",

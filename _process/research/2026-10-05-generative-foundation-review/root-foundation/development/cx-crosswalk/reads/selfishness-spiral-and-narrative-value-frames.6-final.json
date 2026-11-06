@@ -1559,7 +1559,7 @@
      "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#the-answer-in-brief",
      "role": "carries",
      "says": {
-      "en": "No guarantee: among the laws, where the rest outruns a renewal no weighting selects one member's restraint. Named exits hold under stated conditions, none shown to hold of an actual collective."
+      "en": "No guarantee: among the laws, where the rest outruns a renewal at a need of one, no weight on a reading of the condition from the rest's end on selects one member's restraint. Named exits hold under stated conditions, none shown to hold of an actual collective."
      }
     }
    ],
@@ -2910,7 +2910,7 @@
      "role": "carries",
      "part": "Reading D48, promises and tolerance",
      "says": {
-      "en": "Reading [AI, D48]: kept promises and enforced contracts are laws giving first: the law changes, not the state alone. Tolerance lets cooperation survive scattered withholding, not rebuild it where it is lost everywhere; mutual promises alone cannot start a loop with no source."
+      "en": "Reading [AI, D48]: kept promises and enforced contracts are laws giving first: the law changes, not the state alone. Tolerance lets cooperation survive scattered withholding, and rebuilds it where it is lost everywhere only where some formation spares all it waits on; mutual promises alone force no start of a loop with no source."
      }
     }
    ],
@@ -3512,9 +3512,19 @@
    "why": "a correction this crosswalk made at the home: the entry quotes what the home says now, or says what it said until 7 November 2026"
   },
   {
+   "id": "cx-sspiral-unilateral-restraint",
+   "what": "changed",
+   "why": "main changed theories/becoming/COLLECTIVE-DIRECTION.md (LM1 or AA, 7 November 2026): targets[4].says states what it says now"
+  },
+  {
    "id": "cx-sspiral-winner-justifies-all",
    "what": "changed",
    "why": "a correction this crosswalk made at the home: the entry quotes what the home says now, or says what it said until 7 November 2026"
+  },
+  {
+   "id": "cx-sspiral-trust-output",
+   "what": "changed",
+   "why": "main changed theories/becoming/chapters/05-COLLECTIVES.md (LM1 or AA, 7 November 2026): targets[6].says states what it says now"
   }
  ],
  "live_flags": [

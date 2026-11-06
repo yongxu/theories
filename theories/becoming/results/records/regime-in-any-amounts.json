@@ -54,8 +54,8 @@
       ]
     },
     {
-      "en": "A run from a state within a band the step keeps stays within it, and a run is still from a step exactly where its state there is the regime's point or a state within the draw with level and recent giving equal.",
-      "zh": "自步所保持之带内状态出发的运行留在带内；运行恰在其状态为体制之点、或为汲取之内且水平与近来所给相等的状态处，自该步起静止。",
+      "en": "A run from a state within a band the step keeps stays within it, and a run is still from a step exactly where its state there is the regime's point, with the adjustment giving the draw again, or a state within the draw with level and recent giving equal that the adjustment from nothing left gives again.",
+      "zh": "自步所保持之带内状态出发的运行留在带内；运行恰在其状态为体制之点（调整再给出汲取）、或为汲取之内且水平与近来所给相等、自无所剩的调整再给出的状态处，自该步起静止。",
       "declarations": [
         "Becoming.RegimeMargin.Drawn.Band",
         "Becoming.RegimeMargin.Drawn.run_within",
@@ -123,8 +123,8 @@
       "kind": "scope"
     },
     {
-      "en": "Continuous time; a state with a further lag; coupled conditions with a recent giving (record coupled-regimes states two under the regime's step); that measured adjustments rise in both over their band.",
-      "zh": "连续时间；带再一个滞后的状态；带近来所给的相互耦合条件（记录 coupled-regimes 陈述体制之步下的两个）；所测的调整在其带上于两者皆升。",
+      "en": "Continuous time; a state with a further lag; rest within a band on a web with a recent giving (record webs-with-a-recent-giving states such webs, this rest excepted); that measured adjustments rise in both over their band.",
+      "zh": "连续时间；带再一个滞后的状态；带近来所给之网在带内的静止（记录 webs-with-a-recent-giving 陈述这样的网，此静止除外）；所测的调整在其带上于两者皆升。",
       "kind": "scope"
     }
   ],
@@ -150,8 +150,8 @@
     "zh": "机器检查：核心 Becoming.RegimeMargin 新增的 25 项声明由 Lean 4.29.1 合并检查器实查（回执 20261021T102032.314972Z），公理报告为空；外围模块 RegimeReals 的 17 项声明由其自身检查器以 Lean 4.30.0-rc2 与固定的 Mathlib 实查（回执 20261031T134231.224593Z），只用 Lean 标准公理，核心模块与已通过回执相符。一个会话中构建并审查，无另设审查者；作者审查见研究第 302 节；未经人的独立审查。"
   },
   "next_delta": {
-    "en": "A computed threshold and the regime's case H + y over the reals; continuous time; a state with a further lag; coupled conditions with a recent giving; the order of fates above the level law's peak, where measured giving falls as the level rises; an independent review.",
-    "zh": "实数上计算出的阈值与体制情形 H + y；连续时间；带再一个滞后的状态；带近来所给的相互耦合条件；水平规律峰值之上的命运之序，那里所测的所给随水平上升而下降；独立审查。"
+    "en": "A computed threshold and the regime's case H + y over the reals; continuous time; a state with a further lag; rest within a band on a web with a recent giving; the order of fates above the level law's peak, where measured giving falls as the level rises; an independent review.",
+    "zh": "实数上计算出的阈值与体制情形 H + y；连续时间；带再一个滞后的状态；带近来所给之网在带内的静止；水平规律峰值之上的命运之序，那里所测的所给随水平上升而下降；独立审查。"
   },
   "correspondence": {
     "en": "Orbits of planar cooperative (order-preserving) maps are eventually componentwise monotone under regularity conditions, so bounded orbits converge (Smith 1998; Hirsch and Smith 2005); convergence of a bounded monotone sequence is not constructive (Bridges and Richman 1987); partial adjustment and delay-difference models of renewal (Deriso 1980; Schnute 1985). On the spine the shape needs no regularity condition: the level moves by the new giving less the draw, so every step neither up nor down moves the recent giving toward the draw, whatever the adjustment; the core states it constructively in any amounts, the periphery the convergence over the reals.",
@@ -528,6 +528,10 @@
     {
       "en": "21 October 2026, RM7: more than two coupled conditions are stated as a web under the regime's step (record coupled-webs, study section 311); its next delta no longer lists them. Its laws are unchanged.",
       "zh": "2026年10月21日，RM7：多于两个的耦合条件已作为体制之步下的网陈述（记录 coupled-webs，研究第 311 节）；其下一步不再列出。其规律不变。"
+    },
+    {
+      "en": "7 November 2026, board item AA: the atlas's readers found a clause dropping what its law needs and a line gone stale against record webs-with-a-recent-giving; corrected against the Lean and the later records.",
+      "zh": "2026年11月7日，工作板条目 AA：图谱读者发现一个子句略去其律所需，一行已落后于记录 webs-with-a-recent-giving；已对照 Lean 与后来的记录改正。"
     }
   ]
 }

@@ -38,12 +38,12 @@
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
-- Thresholds beyond a band: within one, mutual support gives within each draw; beyond it only the cycle is stated, and no bound on a run decides ending.
-- Coupled conditions with a recent giving (the adjusted step); the reals and continuous time; record coupled-webs states webs of any number.
+- Beyond a band this record states only the cycle; thresholds there, with a bound on the run in the band's place, are in record thresholds-beyond-a-band.
+- The reals and continuous time. Stated elsewhere: webs of any number (record coupled-webs) and webs with a recent giving (record webs-with-a-recent-giving), rest within a band excepted.
 - That measured conditions are coupled by mutual support, or how strongly: a partner's level would be a fourth variable in T2's state; how strong coupling is in the field is untested.
 - **Counterexample:** MutualInhibition.breaks_order: where each gives only where nothing is left of the other, within a band the first ends from two and two yet holds from two and nothing, below it: no down-closure without mutual support, and the threshold rises with the partner. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean)
-- **Counterexample:** Coupled.alternation_never_rests: a band without mutual support gives no rest. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean)
-- **Counterexample:** Relay.cycles: mutual support without a band gives no rest; a pair each of which ends alone cycles for ever between two unordered states. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean)
+- **Counterexample:** Coupled.alternation_never_rests: a band without mutual support need not give rest: this run never rests. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean)
+- **Counterexample:** Relay.cycles: mutual support without a band need not give rest; a pair each of which ends alone cycles for ever between two unordered states. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean)
 
 **Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
 
@@ -57,7 +57,7 @@ Canonical source: [RegimeMargin.lean](../../../../experiments/integrated-correct
 <a id="next--下一步"></a>
 ## Next
 
-Thresholds beyond a band, with a bound on the run in its place; coupled conditions with a recent giving; over the reals; a frozen field test of whether a partner's level adds to T2's state for coupled conditions; an independent review.
+Over the reals; rest within a band on a web with a recent giving; a frozen field test of whether a partner's level adds to T2's state for coupled conditions; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -81,7 +81,7 @@ Cooperative (monotone) dynamical systems keep the order of states and their exti
   - Output: leading, leading_le, leading_true and leading_false.
   - Input: A least level for each partner's level, below which exactly the first condition ends.
   - Preserved conditions: Ending decided at a fixed step. [RegimeMargin.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean)
-- **formal-reuse**: [where-a-run-of-a-regime-comes-to-rest](where-a-run-of-a-regime-comes-to-rest.md). The strict fall of a sum of two whole numbers below an ordered pair, and Alternation's giving as a witness that a band without support gives no rest.
+- **formal-reuse**: [where-a-run-of-a-regime-comes-to-rest](where-a-run-of-a-regime-comes-to-rest.md). The strict fall of a sum of two whole numbers below an ordered pair, and Alternation's giving as a witness that a band without support need not give rest.
   - Output: Adjusted.sum_lt_of_below, Alternation.giving, Alternation.keeps and Alternation.alternates.
   - Input: Rest within 2 hi + 1 steps; the band without mutual support.
   - Preserved conditions: Whole-number amounts. [RegimeMargin.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean)
@@ -133,6 +133,7 @@ Aliases: `coupled regimes`, `a margin that is not its own`, `the point of no ret
 - 21 October 2026: added (RM6), coupled regimes: two conditions under draws, each giving from what is left of both; under mutual support the order of states is kept and ending is down-closed; within a band in whole numbers runs rest within 2 hi + 1 steps and the first condition ends exactly below a least level that does not rise as its partner rises; a dependent drains by its draw once its partner has nothing left; study section 306.
 - 21 October 2026, RM7: more than two coupled conditions are stated as a web (record coupled-webs, study section 311); this record's laws of order, ending, draining, ending after and ending together keep their statements and are now proved from the web's; what it does not show and its next delta say so.
 - 22 October 2026, RM8: the pair's rest and thresholds derived from the web's (record rest-on-coupled-webs, study section 325); within_draw, run_within, left_falls and still_of_left now cited in their web form, step_of_left as Coupled.Indexed.step_alike under mutual support; the statements of its laws are unchanged.
+- 7 November 2026, board item AA: the atlas's readers found lines gone stale against later records, and a witness read as never; corrected against the Lean and the later records.
 
 </details>
 

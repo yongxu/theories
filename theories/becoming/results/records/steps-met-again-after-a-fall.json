@@ -10,8 +10,8 @@
   "family": "F01",
   "reviewed_at_utc": "2026-10-21T18:32:45+00:00",
   "statement": {
-    "en": "Counted at every step met, wherever, a coupling a step keeps a need under every optimum exactly where r + e < q + c + m and e < c, strictly above the count from the start: a fall met again loses the coupling only at the steps below.",
-    "zh": "按每个被满足的步计数（不论位置）时，每步的耦合恰在 r + e < q + c + m 且 e < c 时使每个最优保持所需，严格高于自起点计数的门槛：跌落后再被满足只在其下各步失去耦合。"
+    "en": "Counted at every step met, wherever, a coupling a step keeps a need under every optimum where r + e < q + c + m and e < c, strictly above the count from the start: a fall met again loses the coupling only at the steps below.",
+    "zh": "按每个被满足的步计数（不论位置）时，每步的耦合在 r + e < q + c + m 且 e < c 时使每个最优保持所需，严格高于自起点计数的门槛：跌落后再被满足只在其下各步失去耦合。"
   },
   "laws": [
     {
@@ -349,6 +349,10 @@
     {
       "en": "22 October 2026: added (SG13), steps met again after a fall: counted at every step met, a coupling a step keeps the need under every optimum where r + e < q + c + m and e < c, strictly above the count from the start; study section 323.",
       "zh": "2026年10月22日：新增（SG13），跌落后再被满足的步：按每个被满足的步计数时，每步的耦合在 r + e < q + c + m 且 e < c 时使每个最优保持所需，严格高于自起点计数的门槛；研究第 323 节。"
+    },
+    {
+      "en": "7 November 2026, board item AA: the atlas's readers found a statement saying exactly where its law gives one direction; corrected against the Lean and the later records.",
+      "zh": "2026年11月7日，工作板条目 AA：图谱读者发现一个陈述说恰当而其律只给一个方向；已对照 Lean 与后来的记录改正。"
     }
   ]
 }

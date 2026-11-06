@@ -27,7 +27,7 @@
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
-- When the runs of a process settle: the part of assured enough that does not mention the target is not characterized.
+- When the runs of a process settle, the part of assured enough that does not mention the target: Enough.assured_iff takes it as its second part and does not characterize it. Records when-the-runs-of-a-process-settle and the-last-change-of-a-run state it in a world a list holds, where settling wherever no reachable change can be undone is exactly LPO; worlds no list holds stay open.
 - Targets met along a course rather than at a configuration (more than now), choices divided between the seeker and others, and probabilistic enough.
 - **Counterexample:** Two configurations, every step allowed, the target met everywhere: every configuration can stay, some run rests, and the alternating run never settles (Free.stays_meet_not_assured). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Enough.lean)
 
@@ -43,7 +43,7 @@ Canonical source: [Enough.lean](../../../../experiments/integrated-correction/ge
 <a id="next--下一步"></a>
 ## Next
 
-When the runs of a process settle; enough where the choices are divided between the seeker and others; an independent review.
+When the runs of a process settle in a world no list holds; enough where the choices are divided between the seeker and others; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -88,6 +88,7 @@ Aliases: `boundary of enough under undetermined laws`, `不确定之律下够的
 - 19 October 2026, A4 (Ren 19 October: "integrate all, the theory is a whole, not stitched pieces, go ahead"): The rest family's Chinese term in the live Chinese fields is now 停息 (6 uses), as in the chapter (DELEGATED-CHOICES D45 (4)); the English is unchanged. The claim is unchanged.
 - 20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Re-pointed after reading the change: THE-THEORY-OF-BECOMING.md, names follow the R30 rename table; the retired Lean names of 20 October are in the glossary; §9 (receipt) follows R30. Also re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.
 - 20 October 2026, R32 (forwarders, copies and reading modules: pure forwarders removed, statements stated once, reading modules folded into the module they read): Proof bindings (Enough.lean, Prelude.lean) rebound to core receipt 20261019T231053.882924Z. Re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 223 added; Enough.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; Prelude.lean, twelve statements stated in two or more modules each, stated here once under the name kept; THE-THEORY-OF-BECOMING.md, §9 (receipt, counts, connectivity under the measure that no longer counts restatement) follows R32. The claim is unchanged.
+- 7 November 2026, board item AA: the atlas's readers found a line gone stale against records when-the-runs-of-a-process-settle and the-last-change-of-a-run, which settle it in a world a list holds; corrected against the Lean and the later records.
 - 1 rebinding entry (2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](the-boundary-of-enough-under-undetermined-laws.json).
 
 <a id="earlier-text--早期文本"></a>

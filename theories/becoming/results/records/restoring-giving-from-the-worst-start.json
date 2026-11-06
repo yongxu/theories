@@ -27,8 +27,8 @@
       ]
     },
     {
-      "en": "The worst start is total withholding: a formation gives at step n from every start exactly where it gives at n from the start at which nothing gives; from that start giving only grows, so restoring by n is restoring at every later step; where no formation gives at the step after total withholding, none gives at any step.",
-      "zh": "最坏的开始是全部扣留：一个形成从每个开始在第 n 步给出，恰当它从无一给出的开始在第 n 步给出；从该开始给出只增不减，故恢复到第 n 步即此后每一步都恢复；全部扣留后的下一步无一给出时，任何一步都无一给出。",
+      "en": "The worst start is total withholding: a formation gives at step n from every start exactly where it gives at n from the start at which nothing gives; from that start giving only grows, so restoring by n is restoring at every later step; where no formation gives at the step after total withholding, none gives at any step of the course from it.",
+      "zh": "最坏的开始是全部扣留：一个形成从每个开始在第 n 步给出，恰当它从无一给出的开始在第 n 步给出；从该开始给出只增不减，故恢复到第 n 步即此后每一步都恢复；全部扣留后的下一步无一给出时，自它的进程任何一步都无一给出。",
       "declarations": [
         "Becoming.Tolerance.allWithheld",
         "Becoming.Tolerance.worst_start",
@@ -343,6 +343,10 @@
     {
       "en": "2026-10-20: 20 bookkeeping notes condensed from 19 October 2026 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/d115ebe0386b8669/restoring-giving-from-the-worst-start.json and in git.",
       "zh": "2026-10-20：20 条记账性说明合并（19 October 2026 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/d115ebe0386b8669/restoring-giving-from-the-worst-start.json 和 git 中。"
+    },
+    {
+      "en": "7 November 2026, board item AA: the atlas's readers found a clause without its course; corrected against the Lean and the later records.",
+      "zh": "2026年11月7日，工作板条目 AA：图谱读者发现一个子句缺其进程；已对照 Lean 与后来的记录改正。"
     }
   ],
   "text_versions": [

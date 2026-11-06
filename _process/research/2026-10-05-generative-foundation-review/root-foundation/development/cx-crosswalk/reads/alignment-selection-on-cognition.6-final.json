@@ -1392,7 +1392,7 @@
     {
      "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#6-what-enough-situationality-would-have-to-mean",
      "says": {
-      "en": "Reading [AI reading, D45]: 'all six together still rank nothing: calling the widening course better needs C, and counting the losses that return to no one needs the continuation condition.'"
+      "en": "Reading [AI reading, D45]: 'all six together still rank nothing: calling the widening course better needs C or a premise in its place, and counting the losses that return to no one needs the continuation condition.'"
      },
      "role": "carries",
      "part": "D45, §6's closing sentence"
@@ -2612,7 +2612,7 @@
    "relation": "agreement",
    "agreement_of": "law",
    "reading": {
-    "en": "The form is present in laws of waiting: restoring giving needs a formation that spares all it waits on; in a pair the one-step laws split between restoring and answering a constant withholder; reciprocal promises can be empty and ignition needs a reserve already present. That is 'giving', not slowing a technology, and its application to AI is not made live. [AI reading]"
+    "en": "The form is present in laws of waiting: restoring giving needs a formation that spares all it waits on; in a pair the one-step laws split between restoring and answering a constant withholder; reciprocal promises can be empty and in a witness ignition, defined as spending a reserve, needs one already present (near-definitional). That is 'giving', not slowing a technology, and its application to AI is not made live. [AI reading]"
    },
    "targets": [
     {
@@ -2635,21 +2635,21 @@
      "record": "joint-plans-from-a-supported-start",
      "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start",
      "says": {
-      "en": "Theorem (any process; periphery module): 'if the other eventually does, I eventually do' holds on both sides where neither ever happens; in the exchange witness ignition needs a reserve already present."
+      "en": "Theorem (any process; periphery module): 'if the other eventually does, I eventually do' holds on both sides where neither ever happens; in the exchange witness ignition, which the move defines as spending a reserve, needs one already present (near-definitional)."
      },
      "role": "carries"
     },
     {
      "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions",
      "says": {
-      "en": "Exits: restraint within the joint slack keeps a need met; its edge: where the rest outruns the renewal no weighting selects a member's restraint. Give first, with a reserve; without one, total withholding stays."
+      "en": "Exits: restraint within the joint slack keeps a need met; its edge: where the rest outruns the renewal at a need of one, no weight on a reading of the condition from the rest's end on selects a member's restraint. Spare all one waits on: a formation that does gives from step 1 whatever the start; where none does, total withholding, once reached, stays."
      },
      "role": "carries",
-     "part": "Restraint within the joint slack; Give first, with a reserve"
+     "part": "Restraint within the joint slack; Spare all one waits on"
     }
    ],
    "account_adds": {
-    "en": "The exact trade-off inside a pair, and that a first giver needs a reserve."
+    "en": "The exact trade-off inside a pair, and that one sparing all it waits on gives from step 1 whatever the start."
    },
    "source_adds": {
     "en": "Restraint on a technology as the first institutional bone. Verification against a physical substrate, historical precedents (Berg, test moratoria), and restraint as a legible signal."
@@ -3932,9 +3932,19 @@
    "why": "a correction this crosswalk made at the home: the entry quotes what the home says now, or says what it said until 7 November 2026"
   },
   {
+   "id": "cx-asc-tempo-measurement-replaces-values",
+   "what": "changed",
+   "why": "main changed theories/becoming/COLLECTIVE-DIRECTION.md (LM1 or AA, 7 November 2026): targets[0].says states what it says now"
+  },
+  {
    "id": "cx-asc-training-ground",
    "what": "changed",
    "why": "COLLECTIVE-DIRECTION §5 corrected by this crosswalk: the entry quotes what it says now"
+  },
+  {
+   "id": "cx-asc-founding-restraint-armored",
+   "what": "changed",
+   "why": "COLLECTIVE-DIRECTION's exit 'Give first, with a reserve' is 'Spare all one waits on' since AA's errata (7 November 2026): the law has no reserve in it / main changed theories/becoming/chapters/05-COLLECTIVES.md (LM1 or AA, 7 November 2026): targets[2].says states what it says now / main changed theories/becoming/chapters/05-COLLECTIVES.md (LM1 or AA, 7 November 2026): reading states what it says now / main changed theories/becoming/COLLECTIVE-DIRECTION.md (LM1 or AA, 7 November 2026): targets[3].says states what it says now"
   },
   {
    "id": "cx-asc-four-layer-loop",

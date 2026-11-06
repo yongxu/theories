@@ -4,13 +4,16 @@
 usage: python3 -B apply_late.py [--dry-run]
 
 Reads reads/<item>.5-compare.json, applies every `fix` in reads/critic2-share-*.json (the second critic read both sides of
-each), then replaces in entries what the live account no longer says since this crosswalk's corrections (LIVE_NOW and LIVE_LATER below),
-and writes reads/<item>.6-final.json, each with a `changes` list naming why. Stops on a fix to an unknown entry or field,
+each), then replaces in entries what the live account no longer says since this crosswalk's corrections (LIVE_NOW and
+LIVE_LATER below), what AA's errata renamed (LIVE_AA) and what main changed since (main_drift, from
+reads/main-drift-*.json as their checks amend them), and writes reads/<item>.6-final.json, each with a `changes` list
+naming why. Stops on a fix to an unknown entry or field,
 on a replacement that matches nothing, and writes nothing then. Validation is check_entries.py's.
 """
 import argparse
 import glob
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -98,13 +101,84 @@ LIVE_LATER = {
     'cx-pal-constructive-calibrations': [("08's gloss of the double-negation row, 'reach without a path', misdescribes the law: its conclusion is reach, which carries a path; what needs the principle is the step from the absence of an invariant separation to such a path.",
         "08's gloss of the double-negation row read 'reach without a path' until 7 November 2026, which misdescribed the law: its conclusion is reach, which carries a path; what needs the principle is the step from the absence of an invariant separation to such a path. 08 now says so.")],
 }
+# AA's errata, landed on main on 7 November 2026, renamed COLLECTIVE-DIRECTION's exit "Give first, with a reserve" to "Spare all
+# one waits on": `Tolerance.sparing_gives` has no reserve in it. Entries that named the old row name the new one.
+WHY_AA = "COLLECTIVE-DIRECTION's exit 'Give first, with a reserve' is 'Spare all one waits on' since AA's errata (7 November 2026): the law has no reserve in it"
+LIVE_AA = {
+    'cx-asc-founding-restraint-armored': [
+        ('Give first, with a reserve; without one, total withholding stays.',
+         'Spare all one waits on: a formation that does gives from step 1 whatever the start; where none does, total withholding, once reached, stays.'),
+        ('Restraint within the joint slack; Give first, with a reserve', 'Restraint within the joint slack; Spare all one waits on'),
+        ('that a first giver needs a reserve.', 'that one sparing all it waits on gives from step 1 whatever the start.')],
+    'cx-archearth-security-and-cooperation': [('lists this as the exit Give first, with a reserve.', 'lists this as the exit Spare all one waits on.')],
+    'cx-kpso-the-transition': [('give first with a reserve, and others.', 'spare all one waits on, and others.')],
+    'cx-ma-exit-sequence': [('stepwise reward, give first, independent causes', 'stepwise reward, spare all one waits on, independent causes')],
+    'cx-zhishan-prohibition-needs-mechanism': [('give first with a reserve, count reviewers by causes.', 'spare all one waits on, count reviewers by causes.')],
+    'cx-syscyb-trap-escalation': [('has a form only on waiting (giving first, with a reserve);', 'has a form only on waiting (sparing all one waits on, which gives from step 1);')],
+}
 # Words the corrections removed at home; no entry may still state them as what the home says.
 GONE = ['keeps its standing after it stops measuring. T7', 'account of power is the closed loop', 'that sense is wider',
         'working definition is wider', 'imperial examination is this case', 'imperial examination is read', 'supported in simulation (MQ1;',
         'conjectured (T3), supported in simulation', 'says a measure made a target stops measuring', 'two earlier phase results',
         'supplies is the beginning of the kept history', 'Correspondence: hysteresis of collapse', "Jonas (1979): the existence of the whole",
-        'labelled any type, on finitely many', "refutation\\\" is `lock_outlives_loss`", "refutation' is lock_outlives_loss"]
+        'labelled any type, on finitely many', 'Give first, with a reserve', 'give first with a reserve', 'giving first, with a reserve', 'a first giver needs a reserve', 'give first, independent', "refutation\\\" is `lock_outlives_loss`", "refutation' is lock_outlives_loss"]
 
+
+
+def _field(entry, path):
+    """The holder and key of a field named like 'reading' or 'targets[2].says'; English text sits under 'en'."""
+    m = re.fullmatch(r'targets\[(\d+)\]\.(says|part|role)', path)
+    holder, key = (entry['targets'][int(m.group(1))], m.group(2)) if m else (entry, path)
+    if isinstance(holder.get(key), dict):
+        holder, key = holder[key], 'en'
+    return holder, key
+
+
+def main_drift(entries, why, problems):
+    """Apply reads/main-drift-<cluster>.json, as its checker's .check.json amends it: each entry field that quoted what main
+    changed at its home (LM1, AA's errata) states what the home says now. The checker's edits replace the author's where it
+    says fix. Stops on an edit that does not match exactly once, or on a label it cannot set."""
+    for path in sorted(READS.glob('main-drift-*.json')):
+        if path.name.endswith(('.in.json', '.check.json')):
+            continue
+        author = json.loads(path.read_text(encoding='utf-8'))
+        checks = {(i['id'], i['field']): i for i in json.loads(path.with_suffix('.check.json').read_text(encoding='utf-8'))['items']}
+        listed = {(i['id'], i['field']) for i in author['items']}
+        # A checker's fix to a field the author did not list stands as an item of its own, with no author edits.
+        author['items'] += [{'id': i['id'], 'field': i['field'], 'verdict': 'leave', 'edits': [], 'labels': None}
+                            for k, i in checks.items() if k not in listed and i['verdict'] == 'fix']
+        for item in author['items']:
+            check = checks.get((item['id'], item['field']))
+            if check is None:
+                problems.append(f'{path.name}: {item["id"]} {item["field"]} has no check')
+                continue
+            fixed = check['verdict'] == 'fix'
+            edits = check.get('edits') or [] if fixed else (item.get('edits') or [] if item['verdict'] != 'leave' else [])
+            labels = (check.get('labels') if fixed else None) or item.get('labels') or {}
+            if not edits and not labels:
+                continue
+            entry = entries.get(item['id'])
+            if entry is None:
+                problems.append(f'{path.name}: no entry {item["id"]}')
+                continue
+            holder, key = _field(entry, item['field'])
+            for e in edits:
+                if holder[key].count(e['old']) != 1:
+                    problems.append(f'{path.name}: {item["id"]} {item["field"]}: {e["old"][:60]!r} occurs {holder[key].count(e["old"])} times')
+                    continue
+                holder[key] = holder[key].replace(e['old'], e['new'])
+            for k, v in labels.items():
+                m = re.fullmatch(r'targets\[(\d+)\]\.role', k)
+                if m:
+                    entry['targets'][int(m.group(1))]['role'] = v
+                elif k in ('carried', 'relation', 'agreement_of'):
+                    entry[k] = v
+                else:
+                    problems.append(f'{path.name}: {item["id"]}: cannot set {k}')
+            home = json.loads(path.with_name(path.name.replace('.json', '.in.json')).read_text(encoding='utf-8'))
+            src = next((i['home'] for i in home['items'] if (i['id'], i['field']) == (item['id'], item['field'])), 'a home its checker read')
+            why.setdefault(item['id'], []).append(f'main changed {src} (LM1 or AA, 7 November 2026): {item["field"]} states what it says now'
+                                                  + (' (as its checker amended)' if fixed else '') + (f'; labels {labels}' if labels else ''))
 
 def main(argv=None):
     parser = argparse.ArgumentParser()
@@ -146,6 +220,17 @@ def main(argv=None):
         entries[id_].clear()
         entries[id_].update(json.loads(text))
         why.setdefault(id_, []).append(WHY_LATER)
+    for id_, pairs in LIVE_AA.items():
+        text = json.dumps(entries[id_], ensure_ascii=False)
+        for old, new in pairs:
+            if old not in text:
+                problems.append(f'{id_}: {old[:60]!r} not found')
+                continue
+            text = text.replace(old, json.dumps(new, ensure_ascii=False)[1:-1])
+        entries[id_].clear()
+        entries[id_].update(json.loads(text))
+        why.setdefault(id_, []).append(WHY_AA)
+    main_drift(entries, why, problems)
     stale = [i for i, e in entries.items() if 'institution is modelled' in json.dumps(e, ensure_ascii=False)]
     problems += [f'{i}: still states {g!r}' for i, e in entries.items() for g in GONE if g in json.dumps(e, ensure_ascii=False)]
     problems += [f'{i}: still quotes the old CD §5 sentence' for i in stale]

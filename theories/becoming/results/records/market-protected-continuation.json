@@ -92,8 +92,8 @@
   ],
   "does_not_show": [
     {
-      "en": "No law gives entry from unsafe states: the certificate says where histories never fail, not how a state outside every certificate comes into one.",
-      "zh": "没有一条规律给出从不安全状态的进入：证书说明历史在何处永不失败，而不说明一切证书之外的状态怎样进入证书。",
+      "en": "No entry mechanism from unsafe states, and no formation of the intervention: the certificate says where histories never fail, not how a state outside every certificate comes into one. Entry under a supplied intervention is in records market-supported-finite-transition and market-partial-correction-boundary.",
+      "zh": "没有从不安全状态进入的机制，也没有干预的形成：证书说明历史在何处永不失败，而不说明一切证书之外的状态怎样进入证书。在给定干预下的进入见记录 market-supported-finite-transition、market-partial-correction-boundary。",
       "kind": "non-implication"
     },
     {
@@ -342,6 +342,10 @@
     {
       "en": "1 November 2026: \"viability kernel\" corrected to \"invariance kernel\" in laws 1 and 6, the scope and the next step: Viability.Kernel holds where every course stays in the guard, Aubin's invariance kernel; the viability kernel asks only that some course stays (the two coincide for a determined law). A name stating a wrong meaning; no law, declaration or scope changed (with SJ's landing, which re-proves the kernel laws).",
       "zh": "2026年11月1日：「生存核」更正为「不变核」：Viability.Kernel 成立于每一进程皆留在守卫之内处，即 Aubin 之不变核；生存核只要求某一进程留于其中（于确定之律二者重合）。此为名称所陈之义有误；法、声明与范围皆未改（随 SJ 之落地，其重证该核之律）。"
+    },
+    {
+      "en": "7 November 2026, board item AA: the atlas's readers found a line reading false beside the supported transitions; corrected against the Lean and the later records.",
+      "zh": "2026年11月7日，工作板条目 AA：图谱读者发现一行在受支持的转变旁读来为假；已对照 Lean 与后来的记录改正。"
     }
   ],
   "text_versions": [

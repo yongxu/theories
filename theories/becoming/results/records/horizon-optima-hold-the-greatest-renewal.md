@@ -35,8 +35,8 @@
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
-- An order valuing what is left at the horizon at a worth whose most left is not regrown in one step, or discounting later draws; with a discount the optimum may hold below the levels of greatest renewal.
-- The optimum where no level of greatest renewal lies within the start with what is given there (rebuilding from below), or where the capacity cannot draw down to one in a step or draw everything at the last.
+- An order valuing what is left at the horizon at a worth whose most left is not regrown in one step. Discounting later draws is in record a-weighting-faster-than-renewal-ends-the-base: with a discount the optimum may hold below the levels of greatest renewal.
+- The optimum where the capacity cannot draw down to a level of greatest renewal in a step or draw everything at the last. Where no such level lies within the start with what is given there, rebuilding from below is in record optima-rebuild-a-depleted-base, under its premises.
 - Several optimizers ranking courses (equilibria of the course) and how optimizers come to them.
 - That the loss is a harm, or that a longer horizon or a coupling is better: no evaluation enters; the order ranks only what the optimizer draws.
 - **Counterexample:** gated_alike: under a gate renewing one unit at every level from one, holding the source at the dweller's need and holding it below are both optima and take the same, one keeping the dweller to the horizon and the other breaking it at the first step; so where some level of greatest renewal meets a need and some do not, the order by the draw takes in nothing of the dependence (Optimum.Holding.gated_alike). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean)
@@ -53,7 +53,7 @@ Canonical source: [Optimum.lean](../../../../experiments/integrated-correction/g
 <a id="next--下一步"></a>
 ## Next
 
-An order with a terminal value whose most left is not regrown in one step, or a discount; the optimum rebuilding from below; several optimizers ranking courses; existence of a mutual best response; an independent review.
+An order with a terminal value whose most left is not regrown in one step; several optimizers ranking courses; existence of a mutual best response; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -140,6 +140,7 @@ Aliases: `horizon optima hold the greatest renewal`, `courses ranked over a hori
 - 25 October 2026, board item DF (study section 418): 'registers' in the counterexample and the correspondence replaced by 'takes in' (zh 耦合入), the glossary's word for what reaches through couplings. No law changed.
 - 3 November 2026, CD (board item CD): "ranked" dropped from the statement's first clause, an identity of amounts with no order in it; the orders enter in the next clause, which names them. The claim is unchanged.
 - 6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.
+- 7 November 2026, board item AA: the atlas's readers found a line gone stale against records a-weighting-faster-than-renewal-ends-the-base and optima-rebuild-a-depleted-base; corrected against the Lean and the later records.
 
 </details>
 

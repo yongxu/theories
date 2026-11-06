@@ -333,8 +333,8 @@
   ],
   "hypotheses": [
     {
-      "zh": "列出与可判定：同 whole-law-of-counting；读于世界时是活动可判定。这是表示的逻辑承诺。",
-      "en": "Listing and decidability: as in whole-law-of-counting; read of worlds, decided activity. It is a logical commitment of the representation."
+      "zh": "列出与可判定：同 whole-law-of-counting；读于世界时是活动可判定。这是此律自身的条件，不是表示的承诺。",
+      "en": "Listing and decidability: as in whole-law-of-counting; read of worlds, decided activity. It is the law's own condition, not a commitment of the representation."
     },
     {
       "zh": "逐点（Pointwise）：同 whole-law-of-counting，代替函数外延性，是定理的假设。",
@@ -1430,6 +1430,10 @@
     {
       "en": "6 November 2026, board item LM: declarations this record lists moved with the helpers stated once; its references follow them, and no law changed.",
       "zh": "2026年11月6日，工作板条目 LM：此记录所列之声明随只陈述一次之辅助引理而移；其引用从之，诸律不变。"
+    },
+    {
+      "en": "7 November 2026, board item AA: the atlas's readers found a hypothesis calling decidedness a commitment of the representation, where since Becoming.Decidedness each law states it as its own condition (08, the logical commitment); corrected against the Lean and the later records.",
+      "zh": "2026年11月7日，工作板条目 AA：图谱读者发现一条假设称可判定为表示的承诺，而自 Becoming.Decidedness 起每条律把它作为自身的条件陈述（08，逻辑承诺一节）；已对照 Lean 与后来的记录改正。"
     }
   ],
   "text_versions": [

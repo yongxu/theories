@@ -40,7 +40,7 @@
     - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 15. Merging none, change never stops and under the first law revisits; never revisiting, under an arrow or under dissipation, it is not the case that it merges none. (`Becoming.Web.changes_persist`, `Becoming.Flow.Balances.revisits_of_apart`, `Becoming.Flow.Balances.merges_of_never_revisits`, `Becoming.Flow.Balances.merges_of_arrow`, `Becoming.Flow.Balances.merges_of_dissipates`)
     - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
-16. Holding the history: where the configuration carries the history, its reading is an arrow, exchange stops within the configurations under the first law, and a finite world that keeps exchanging forgets. (`Becoming.Flow.CarriesHistory`, `Becoming.Flow.Balances.arrow_of_carries`, `Becoming.Flow.Balances.exchange_stops_of_carries`, `Becoming.World.forgets`)
+16. Holding the history: where the configuration carries the history, its reading is an arrow, exchange stops within the configurations under the first law, and a finite world under the first law, balanced and listed without repetition, that keeps exchanging forgets. (`Becoming.Flow.CarriesHistory`, `Becoming.Flow.Balances.arrow_of_carries`, `Becoming.Flow.Balances.exchange_stops_of_carries`, `Becoming.World.forgets`)
     - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 17. Gathering: under exact conservation, every step enclosed, a record's level rises without end, gaining from beyond, in a world that is not finite. (`Becoming.Gathering.gathers`)
     - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
@@ -188,6 +188,7 @@ Aliases: `Becoming.Flow.Gainless`, `Becoming.Flow.Conserving`, `Becoming.Flow.Re
 - 21 October 2026, EC3 (study section 319): declarations moved with their full names: World.Finite, World.Embodied, World.Balanced, World.Dissipative to Becoming.InAmounts. The cited Lean sources and their proof bindings follow them; the claim is unchanged.
 - 25 October 2026, board item DF (study section 418): in a premise "the author's reading" now reads "a reading (the AI's)", keeping its AI label; the laws are unchanged.
 - 6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.
+- 7 November 2026, board item AA: the atlas's readers found a clause dropping what its law takes; corrected against the Lean and the later records.
 - 7 rebinding entries (2026-10-13 to 2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](entropy-history-and-record.json).
 
 <a id="earlier-text--早期文本"></a>

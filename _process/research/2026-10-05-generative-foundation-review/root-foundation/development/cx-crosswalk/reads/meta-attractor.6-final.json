@@ -1596,7 +1596,7 @@
    "relation": "agreement",
    "agreement_of": "law",
    "reading": {
-    "en": "The account has slack as a term of a law and restraint's edge. A rise past the slack breaks a dependence; restraint within the joint slack keeps the need; where the rest outruns the renewal no weighting selects a member's restraint. A hypothetical reading gives the deferred-maintenance case. A growth-rate claim conditional on slack is not stated. [AI reading]"
+    "en": "The account has slack as a term of a law and restraint's edge. A rise past the slack breaks a dependence; restraint within the joint slack keeps the need; where the rest outruns the renewal at a need of one, no weight on a reading of the condition from the rest's end on selects a member's restraint. A hypothetical reading gives the deferred-maintenance case. A growth-rate claim conditional on slack is not stated. [AI reading]"
    },
    "targets": [
     {
@@ -2191,7 +2191,7 @@
      "record": null,
      "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions",
      "says": {
-      "en": "A table of exits (read beyond the share, read in time, nothing back, pool couplings, restraint, footprints, stepwise reward, give first, independent causes), each with its law, model and edge."
+      "en": "A table of exits (read beyond the share, read in time, nothing back, pool couplings, restraint, footprints, stepwise reward, spare all one waits on, independent causes), each with its law, model and edge."
      },
      "role": "carries"
     },
@@ -2244,7 +2244,7 @@
      "record": null,
      "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-market-protected-continuation",
      "says": {
-      "en": "Never leaving: for every process and guard, no course leaves the guard exactly when some certificate contains it (pure core). Market instance on periphery: no entry from unsafe states, no compliance by actual markets."
+      "en": "Never leaving: for every process and guard, no course leaves the guard exactly when some certificate contains it (pure core). Market instance on periphery: no entry mechanism from unsafe states and no formation of the intervention (entry under a supplied intervention is the Reaching row's), no compliance by actual markets."
      },
      "role": "carries"
     },
@@ -2980,7 +2980,7 @@
     }
    ],
    "account_adds": {
-    "en": "What can and cannot restore giving, and that mutual promises alone cannot start a loop with no source."
+    "en": "What can and cannot restore giving, and that mutual promises alone force no start of a loop with no source."
    },
    "source_adds": {
     "en": "That assuming selfishness validates itself, justifies systems rewarding it, and comes to be called human nature."
@@ -4260,14 +4260,34 @@
    "why": "a correction this crosswalk made at the home: the entry quotes what the home says now, or says what it said until 7 November 2026"
   },
   {
+   "id": "cx-ma-slack",
+   "what": "changed",
+   "why": "main changed theories/becoming/COLLECTIVE-DIRECTION.md (LM1 or AA, 7 November 2026): reading states what it says now"
+  },
+  {
    "id": "cx-ma-diagnosis-limit",
    "what": "changed",
    "why": "second critic (label): Both carrying theorems have the source's form (alike under the old channel, told apart by a probe or the window), but on other models, and no live sentence states the claim about diagnosing a slide: a law of like form read onto the source is fresh-reading, not carried-in-part. agreement_of law and the source_adds stand."
   },
   {
+   "id": "cx-ma-exit-sequence",
+   "what": "changed",
+   "why": "COLLECTIVE-DIRECTION's exit 'Give first, with a reserve' is 'Spare all one waits on' since AA's errata (7 November 2026): the law has no reserve in it"
+  },
+  {
+   "id": "cx-ma-engineered-rules",
+   "what": "changed",
+   "why": "main changed theories/becoming/chapters/05-COLLECTIVES.md (LM1 or AA, 7 November 2026): targets[0].says states what it says now"
+  },
+  {
    "id": "cx-ma-vs-goodhart-and-lock-in",
    "what": "changed",
    "why": "a correction this crosswalk made at the home: the entry quotes what the home says now, or says what it said until 7 November 2026"
+  },
+  {
+   "id": "cx-ma-selfishness-prophecy",
+   "what": "changed",
+   "why": "main changed theories/becoming/chapters/05-COLLECTIVES.md (LM1 or AA, 7 November 2026): account_adds states what it says now"
   }
  ],
  "live_flags": [

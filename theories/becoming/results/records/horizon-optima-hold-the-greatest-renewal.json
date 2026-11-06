@@ -116,13 +116,13 @@
   ],
   "does_not_show": [
     {
-      "en": "An order valuing what is left at the horizon at a worth whose most left is not regrown in one step, or discounting later draws; with a discount the optimum may hold below the levels of greatest renewal.",
-      "zh": "以最多所留不能一步再生的价值对视野末所留赋值或对后来汲取折现之序；有折现时最优可能保持在最大更新的水平之下。",
+      "en": "An order valuing what is left at the horizon at a worth whose most left is not regrown in one step. Discounting later draws is in record a-weighting-faster-than-renewal-ends-the-base: with a discount the optimum may hold below the levels of greatest renewal.",
+      "zh": "以最多所留不能一步再生的价值对视野末所留赋值之序。对后来汲取折现见记录 a-weighting-faster-than-renewal-ends-the-base：有折现时最优可能保持在最大更新的水平之下。",
       "kind": "scope"
     },
     {
-      "en": "The optimum where no level of greatest renewal lies within the start with what is given there (rebuilding from below), or where the capacity cannot draw down to one in a step or draw everything at the last.",
-      "zh": "没有最大更新的水平在起始加所给之内时的最优（自下重建），或容量不能一步降到它、不能在最后一步汲取全部时的最优。",
+      "en": "The optimum where the capacity cannot draw down to a level of greatest renewal in a step or draw everything at the last. Where no such level lies within the start with what is given there, rebuilding from below is in record optima-rebuild-a-depleted-base, under its premises.",
+      "zh": "容量不能一步降到最大更新的水平、不能在最后一步汲取全部时的最优。没有这样的水平在起始加所给之内时，自下重建见记录 optima-rebuild-a-depleted-base，在其前提之下。",
       "kind": "scope"
     },
     {
@@ -158,8 +158,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261021T043313.566491Z）：Becoming.Optimum 新增的 48 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 292 节；未经人的独立审查。"
   },
   "next_delta": {
-    "en": "An order with a terminal value whose most left is not regrown in one step, or a discount; the optimum rebuilding from below; several optimizers ranking courses; existence of a mutual best response; an independent review.",
-    "zh": "带最多所留不能一步再生的终值或折现的序；自下重建的最优；多个对过程排序的优化者；相互最优回应的存在；独立审查。"
+    "en": "An order with a terminal value whose most left is not regrown in one step; several optimizers ranking courses; existence of a mutual best response; an independent review.",
+    "zh": "带最多所留不能一步再生的终值的序；多个对过程排序的优化者；相互最优回应的存在；独立审查。"
   },
   "correspondence": {
     "en": "The maximum sustainable yield at the level of greatest renewal, half of room in the logistic law (Schaefer 1954); the sole owner ranking the whole course keeps the stock (Scott 1955); a finite horizon with no value on what is left ends in depletion (Clark, Mathematical Bioeconomics, 1976); single-species management of a forage stock for its own yield leaves its predators' needs uncounted (Pikitch and others 2012); instrumental convergence, that a long-horizon agent keeps its resources (Omohundro 2008; Turner and others 2021). On the spine the identity is conservation over the horizon, for every course and every renewal bounded by r, and the optimum covers every order rising with the draw. Reading (the AI's): what a course draws takes in its levels only through what is renewed there; keeping one's resource base is real, and it is not alignment with what else depends on the condition.",
@@ -668,6 +668,10 @@
     {
       "en": "6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.",
       "zh": "2026年11月6日，工作板条目 LM：此记录所列辅助引理现只陈述一次，在 Prelude、Flow、Change 或 Laws，或即 Lean 自有者而从列表除去；改其名，诸律不变。"
+    },
+    {
+      "en": "7 November 2026, board item AA: the atlas's readers found a line gone stale against records a-weighting-faster-than-renewal-ends-the-base and optima-rebuild-a-depleted-base; corrected against the Lean and the later records.",
+      "zh": "2026年11月7日，工作板条目 AA：图谱读者发现一行已落后于记录 a-weighting-faster-than-renewal-ends-the-base 与 optima-rebuild-a-depleted-base；已对照 Lean 与后来的记录改正。"
     }
   ]
 }

@@ -145,8 +145,8 @@
   ],
   "hypotheses": [
     {
-      "zh": "列出与可判定：同 whole-law-of-counting；读于水平时水平为正可判定（自然数的比较），读于依存时要求可判定。这是表示的逻辑承诺。普查每步列出有限多立着者与有限多依存。",
-      "en": "Listing and decidability: as in whole-law-of-counting; read of standing, a positive level is decided (a comparison of natural numbers), read of dependence, requiring is decided. It is a logical commitment of the representation. A census lists finitely many standing and finitely many dependences at each step."
+      "zh": "列出与可判定：同 whole-law-of-counting；读于水平时水平为正可判定（自然数的比较），读于依存时要求可判定。这是此律自身的条件，不是表示的承诺。普查每步列出有限多立着者与有限多依存。",
+      "en": "Listing and decidability: as in whole-law-of-counting; read of standing, a positive level is decided (a comparison of natural numbers), read of dependence, requiring is decided. It is the law's own condition, not a commitment of the representation. A census lists finitely many standing and finitely many dependences at each step."
     },
     {
       "zh": "逐点（Pointwise）：同 whole-law-of-counting，代替函数外延性，是定理的假设。",
@@ -842,6 +842,10 @@
     {
       "en": "1 November 2026, board item ND (study section 492): a case of a law is said to satisfy it, not to obey it, as the home section now reads: a law states what holds of its cases and commands nothing (08 §10). What the record states is unchanged.",
       "zh": "2026年11月1日，工作板条目 ND（研究第 492 节）：律之例称“满足”其律，不称“服从”，如本节今文：律言其例所成立者，不命令什么（08 §10）。记录所言不变。"
+    },
+    {
+      "en": "7 November 2026, board item AA: the atlas's readers found a hypothesis calling decidedness a commitment of the representation, where since Becoming.Decidedness each law states it as its own condition (08, the logical commitment); corrected against the Lean and the later records.",
+      "zh": "2026年11月7日，工作板条目 AA：图谱读者发现一条假设称可判定为表示的承诺，而自 Becoming.Decidedness 起每条律把它作为自身的条件陈述（08，逻辑承诺一节）；已对照 Lean 与后来的记录改正。"
     }
   ],
   "text_versions": [

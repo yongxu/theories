@@ -59,8 +59,8 @@
       "kind": "non-implication"
     },
     {
-      "en": "The general form of favouring what reaches beyond (when a part raising what couples in must reach beyond the closure), and the rising share of what reaches beyond with transmission, descent and openness, remain open.",
-      "zh": "偏向伸出的一般形式（抬高所耦合者的部分何时必伸出闭包之外），以及在传递、后代与开放之下伸出者份额的上升，仍开放。",
+      "en": "That more offspring go to raisers, or descent in the flow. The general form of favouring what reaches beyond is in record raising-what-couples-in-draws-from-beyond (Flow.favours_reaching_beyond); the share of what reaches beyond over generations is in record what-a-rise-draws-from-beyond, on that premise.",
+      "zh": "后代更多者归于升高者，或流中的世系。偏向伸出的一般形式见记录 raising-what-couples-in-draws-from-beyond（Flow.favours_reaching_beyond）；世代中伸出者的份额见记录 what-a-rise-draws-from-beyond，在该前提之下。",
       "kind": "scope"
     }
   ],
@@ -78,8 +78,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261018T081005.105592Z）：Becoming.SelectionGap 的 9 项声明（7 项定理）公理报告为空；检查器并核对核心纯净。作者自审见研究第 176 节；未经独立审查。"
   },
   "next_delta": {
-    "en": "The general form of favouring what reaches beyond; with transmission, descent and openness, the rising share of what reaches beyond; an independent review.",
-    "zh": "偏向伸出的一般形式；在传递、后代与开放之下伸出者份额的上升；独立审查。"
+    "en": "Deriving from the flow that more offspring go to raisers; an independent review.",
+    "zh": "由流导出后代更多者归于升高者；独立审查。"
   },
   "correspondence": {
     "en": "The chapter's open programme (section 8.2, Selection, causes and experiment) named \"The gap for one's own act as a general theorem\". Becoming.Selection had it in one world (Clearing, from an instance of the closure lemma) and in general only with the second flow and the response supplied (Flow.unselected_beyond_coupling_responsive). Here the response is derived from a law of exchange (ExchangeLaw.Through.responds, counterfactual-is-the-course), and in the course form the second flow is the law's own course. Ren, 18 October 2026: \"please see what else is there to do - keep pushing the frontier till finishing\" (provenance, not warrant). Reading (the AI's, adopted in one account with the scope of chapter section 7, DELEGATED-CHOICES D45): what a formation can select for or against is bounded by its coupling closure, not by its reach; responding to an act whose consequences lie beyond takes a coupling that reaches them (Clearing.selected_pooled).",
@@ -337,6 +337,10 @@
     {
       "en": "25 October 2026, board item DF (study section 418): the premise names the record by its current id, selection-through-couplings, for its former id; nothing else changed.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：前提以现行编号 selection-through-couplings 称该记录，取代其旧编号；别无改变。"
+    },
+    {
+      "en": "7 November 2026, board item AA: the atlas's readers found a line gone stale against records raising-what-couples-in-draws-from-beyond and what-a-rise-draws-from-beyond; corrected against the Lean and the later records.",
+      "zh": "2026年11月7日，工作板条目 AA：图谱读者发现一行已落后于记录 raising-what-couples-in-draws-from-beyond 与 what-a-rise-draws-from-beyond；已对照 Lean 与后来的记录改正。"
     }
   ],
   "text_versions": [

@@ -1,0 +1,548 @@
+{
+ "base": "16c55965c1f67d0d7d6c773d35bc52c479d6bd6e",
+ "items": [
+  {
+   "id": "cx-sspiral-unilateral-restraint",
+   "field": "targets[4].says",
+   "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#the-answer-in-brief",
+   "text": "No guarantee: among the laws, where the rest outruns a renewal no weighting selects one member's restraint. Named exits hold under stated conditions, none shown to hold of an actual collective.",
+   "home": "theories/becoming/COLLECTIVE-DIRECTION.md",
+   "matched": [
+    " weighting selects one m"
+   ],
+   "home_old": [
+    "**No guarantee.** The theory's own laws, each on its stated model, show why (§3): a selection reaches only what couples into it, how far off a break is does not couple in through a threshold, no finite record certifies renewal, points of no return are exact, and where the rest outruns a renewal  no weighting selects one member's restraint. What the theory does give is exact, and narrower:"
+   ],
+   "home_new": [
+    "**No guarantee.** The theory's own laws, each on its stated model, show why (§3): a selection reaches only what couples into it, how far off a break is does not couple in through a threshold, no finite record certifies renewal, points of no return are exact, and where the rest outruns a renewal at a need of one, no weight on a reading of the condition from the rest's end on selects one member's restraint. What the theory does give is exact, and narrower:"
+   ]
+  },
+  {
+   "id": "cx-kpso-shared-sensing",
+   "field": "targets[0].says",
+   "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-what-pooled-coupling-reaches",
+   "text": "Theorem (World), as COLLECTIVE-DIRECTION §2 lists it under pool couplings: where a list holds exactly the members and each member's coupling of two histories is decided, a pool separates exactly what some member separates (World). Edge: a pool recruiting only through itself couples into a loss only as its course without the loss would, unless a reader is admitted from outside (witness).",
+   "home": "theories/becoming/COLLECTIVE-DIRECTION.md",
+   "matched": [
+    ", unless a reader is adm",
+    "ess a reader is admitted",
+    " reader is admitted from",
+    "er is admitted from outs",
+    " admitted from outside ("
+   ],
+   "home_old": [
+    "| Pool couplings | A group's closure is the union of its members' (`withinClosureOf_iff`; any relation); where a list holds exactly the members and each member's coupling of two histories is decided, a pool separates exactly what some member separates (`Web.separates_all_iff_member`; World). [Home](chapters/05-COLLECTIVES.md#r-what-pooled-coupling-reaches) | an act differing only beyond that union is selected alike by every group within it (`Flow.act_unselected_pool`); a pool recruiting only through itself couples into a loss only as its course without the loss would (`Web.RecruitsThrough.alike_iff`), unless a reader is admitted from outside (`PoolCourse.scheduled_apart`, witness) |"
+   ],
+   "home_new": [
+    "| Pool couplings | A group's closure is the union of its members' (`withinClosureOf_iff`; any relation); where a list holds exactly the members and each member's coupling of two histories is decided, a pool separates exactly what some member separates (`Web.separates_all_iff_member`; World). [Home](chapters/05-COLLECTIVES.md#r-what-pooled-coupling-reaches) | an act differing only beyond that union is selected alike by every group within it (`Flow.act_unselected_pool`); a pool recruiting only through itself couples into a loss only as its course without the loss would (`Web.RecruitsThrough.alike_iff`), and a pool comes to couple into what it does not yet couple into only through an admission not made through it (`PoolCourse.called_apart`, witness) or through members its course would hold anyway (`PoolCourse.scheduled_apart`, witness) |"
+   ]
+  },
+  {
+   "id": "cx-hsm-threshold-review",
+   "field": "targets[4].says",
+   "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions",
+   "text": "“a pool recruiting only through itself couples into a loss only as its course without the loss would”, “unless a reader is admitted from outside” (witness).",
+   "home": "theories/becoming/COLLECTIVE-DIRECTION.md",
+   "matched": [
+    "ess a reader is admitted",
+    " reader is admitted from",
+    "er is admitted from outs"
+   ],
+   "home_old": [
+    "| Pool couplings | A group's closure is the union of its members' (`withinClosureOf_iff`; any relation); where a list holds exactly the members and each member's coupling of two histories is decided, a pool separates exactly what some member separates (`Web.separates_all_iff_member`; World). [Home](chapters/05-COLLECTIVES.md#r-what-pooled-coupling-reaches) | an act differing only beyond that union is selected alike by every group within it (`Flow.act_unselected_pool`); a pool recruiting only through itself couples into a loss only as its course without the loss would (`Web.RecruitsThrough.alike_iff`), unless a reader is admitted from outside (`PoolCourse.scheduled_apart`, witness) |"
+   ],
+   "home_new": [
+    "| Pool couplings | A group's closure is the union of its members' (`withinClosureOf_iff`; any relation); where a list holds exactly the members and each member's coupling of two histories is decided, a pool separates exactly what some member separates (`Web.separates_all_iff_member`; World). [Home](chapters/05-COLLECTIVES.md#r-what-pooled-coupling-reaches) | an act differing only beyond that union is selected alike by every group within it (`Flow.act_unselected_pool`); a pool recruiting only through itself couples into a loss only as its course without the loss would (`Web.RecruitsThrough.alike_iff`), and a pool comes to couple into what it does not yet couple into only through an admission not made through it (`PoolCourse.called_apart`, witness) or through members its course would hold anyway (`PoolCourse.scheduled_apart`, witness) |"
+   ]
+  },
+  {
+   "id": "cx-asc-founding-restraint-armored",
+   "field": "targets[3].says",
+   "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions",
+   "text": "Exits: restraint within the joint slack keeps a need met; its edge: where the rest outruns the renewal no weighting selects a member's restraint. Spare all one waits on: a formation that does gives from step 1 whatever the start; where none does, total withholding, once reached, stays.",
+   "home": "theories/becoming/COLLECTIVE-DIRECTION.md",
+   "matched": [
+    " weighting selects a mem"
+   ],
+   "home_old": [
+    "| Restraint within the joint slack | Where each drawer's own take is within the joint slack and the joint draw breaks a need, a balanced flow from a level as high that takes less by the excess and gives no less keeps the need met (`Flow.Balances.kept_of_restrained`; World). [Home](chapters/05-COLLECTIVES.md#r-what-a-rise-draws-from-beyond) | where the rest outruns the renewal  no weighting selects a member's restraint, and, among optimizers each ranking by its own rising order, restraint at a condition beyond one's own family is no mutual best response wherever something stands there (§3) |"
+   ],
+   "home_new": [
+    "| Restraint within the joint slack | Where each drawer's own take is within the joint slack and the joint draw breaks a need, a balanced flow from a level as high that takes less by the excess and gives no less keeps the need met (`Flow.Balances.kept_of_restrained`; World). [Home](chapters/05-COLLECTIVES.md#r-what-a-rise-draws-from-beyond) | where the rest outruns the renewal at a need of one, no weight on a reading of the condition from the rest's end on selects a member's restraint, and, among optimizers each ranking by its own rising order, restraint at a condition beyond one's own family is no mutual best response wherever something stands there (§3) |"
+   ]
+  },
+  {
+   "id": "cx-ma-slack",
+   "field": "reading",
+   "anchor": null,
+   "text": "The account has slack as a term of a law and restraint's edge. A rise past the slack breaks a dependence; restraint within the joint slack keeps the need; where the rest outruns the renewal no weighting selects a member's restraint. A hypothetical reading gives the deferred-maintenance case. A growth-rate claim conditional on slack is not stated. [AI reading]",
+   "home": "theories/becoming/COLLECTIVE-DIRECTION.md",
+   "matched": [
+    " weighting selects a mem"
+   ],
+   "home_old": [
+    "| Restraint within the joint slack | Where each drawer's own take is within the joint slack and the joint draw breaks a need, a balanced flow from a level as high that takes less by the excess and gives no less keeps the need met (`Flow.Balances.kept_of_restrained`; World). [Home](chapters/05-COLLECTIVES.md#r-what-a-rise-draws-from-beyond) | where the rest outruns the renewal  no weighting selects a member's restraint, and, among optimizers each ranking by its own rising order, restraint at a condition beyond one's own family is no mutual best response wherever something stands there (§3) |"
+   ],
+   "home_new": [
+    "| Restraint within the joint slack | Where each drawer's own take is within the joint slack and the joint draw breaks a need, a balanced flow from a level as high that takes less by the excess and gives no less keeps the need met (`Flow.Balances.kept_of_restrained`; World). [Home](chapters/05-COLLECTIVES.md#r-what-a-rise-draws-from-beyond) | where the rest outruns the renewal at a need of one, no weight on a reading of the condition from the rest's end on selects a member's restraint, and, among optimizers each ranking by its own rising order, restraint at a condition beyond one's own family is no mutual best response wherever something stands there (§3) |"
+   ]
+  },
+  {
+   "id": "cx-asc-founding-restraint-armored",
+   "field": "targets[0].says",
+   "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+   "text": "Theorem (any type): restoring needs a formation that spares all it waits on, which gives from step 1 whatever the start; without one, total withholding stays.",
+   "home": "theories/becoming/COLLECTIVE-DIRECTION.md",
+   "matched": [
+    " without one, total with",
+    "out one, total withholdi",
+    "hout one, total withhold",
+    "one, total withholding s"
+   ],
+   "home_old": [
+    "| Give first, with a reserve | A formation that spares all it waits on gives from step 1 whatever the start (`Tolerance.sparing_gives`; any type). [Home](chapters/05-COLLECTIVES.md#r-thresholds-of-waiting) | without one, total withholding stays (`Tolerance.total_stays`) |"
+   ],
+   "home_new": [
+    "| Spare all one waits on | A formation that spares all it waits on gives from step 1 whatever the start (`Tolerance.sparing_gives`; any type). [Home](chapters/05-COLLECTIVES.md#r-thresholds-of-waiting) | where no formation spares all it waits on, total withholding, once reached, stays (`Tolerance.total_stays`) |"
+   ]
+  },
+  {
+   "id": "cx-archearth-security-and-cooperation",
+   "field": "targets[2].says",
+   "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+   "text": "Theorem (any type; web reading on the World). Restoring needs a formation that spares all it waits on, which gives from step 1 whatever the start: without one, total withholding stays. COLLECTIVE-DIRECTION lists this as the exit Spare all one waits on.",
+   "home": "theories/becoming/COLLECTIVE-DIRECTION.md",
+   "matched": [
+    " without one, total with",
+    "out one, total withholdi",
+    "hout one, total withhold",
+    "one, total withholding s"
+   ],
+   "home_old": [
+    "| Give first, with a reserve | A formation that spares all it waits on gives from step 1 whatever the start (`Tolerance.sparing_gives`; any type). [Home](chapters/05-COLLECTIVES.md#r-thresholds-of-waiting) | without one, total withholding stays (`Tolerance.total_stays`) |"
+   ],
+   "home_new": [
+    "| Spare all one waits on | A formation that spares all it waits on gives from step 1 whatever the start (`Tolerance.sparing_gives`; any type). [Home](chapters/05-COLLECTIVES.md#r-thresholds-of-waiting) | where no formation spares all it waits on, total withholding, once reached, stays (`Tolerance.total_stays`) |"
+   ]
+  },
+  {
+   "id": "cx-kpso-trust-before-verification",
+   "field": "targets[0].says",
+   "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+   "text": "Theorem (any type): restoring needs a formation that spares all it waits on, which gives from step 1 whatever the start; without one, total withholding stays.",
+   "home": "theories/becoming/COLLECTIVE-DIRECTION.md",
+   "matched": [
+    " without one, total with",
+    "out one, total withholdi",
+    "hout one, total withhold",
+    "one, total withholding s"
+   ],
+   "home_old": [
+    "| Give first, with a reserve | A formation that spares all it waits on gives from step 1 whatever the start (`Tolerance.sparing_gives`; any type). [Home](chapters/05-COLLECTIVES.md#r-thresholds-of-waiting) | without one, total withholding stays (`Tolerance.total_stays`) |"
+   ],
+   "home_new": [
+    "| Spare all one waits on | A formation that spares all it waits on gives from step 1 whatever the start (`Tolerance.sparing_gives`; any type). [Home](chapters/05-COLLECTIVES.md#r-thresholds-of-waiting) | where no formation spares all it waits on, total withholding, once reached, stays (`Tolerance.total_stays`) |"
+   ]
+  },
+  {
+   "id": "cx-kpso-trust-before-verification",
+   "field": "reading",
+   "anchor": null,
+   "text": "The account has no statement of trust; this scope is proposed here, on its model of waiting. Restoring needs a formation sparing all it waits on, which gives from step 1 whatever the start; without one, total withholding stays. And mutual promises alone cannot start a loop with no source, which limits 'begin with contact'. Verification has a limit of its own: behaviour at an unread occasion can differ while every reading agrees, where no read occasion shares its lump; intention and another's false belief are not stated. Tolerance is not shown good. [AI reading]",
+   "home": "theories/becoming/COLLECTIVE-DIRECTION.md",
+   "matched": [
+    " without one, total with",
+    "out one, total withholdi",
+    "hout one, total withhold",
+    "one, total withholding s",
+    " promises alone cannot s",
+    "ises alone cannot start "
+   ],
+   "home_old": [
+    "| Give first, with a reserve | A formation that spares all it waits on gives from step 1 whatever the start (`Tolerance.sparing_gives`; any type). [Home](chapters/05-COLLECTIVES.md#r-thresholds-of-waiting) | without one, total withholding stays (`Tolerance.total_stays`) |",
+    "**Reading** [AI reading, D48]. Cooperation among strangers is giving that waits on giving across chains longer than any acquaintance; that more waiting gives no more is the structural price of complexity. \"Others will deceive me, so I deceive first\" is withholding with memory, which absorbs. Kept promises and enforced contracts are laws giving first: the law changes, not the state alone. Tolerance lets cooperation survive scattered withholding, not rebuild it where it is lost everywhere; mutual promises alone cannot start  a loop with no source ([a grounded start](#grounded-start)). An exchange of harms is a loop: answering in kind keeps the difference, answering more runs away, so conflict institutions are links of another kind ([bounded conflict](#kept-together)); a regulator lags wherever the world changes faster than it reads.",
+    "    \"en\": \"Concurrency: the one-step obligations are an inductive invariant for two properties, in the style of rely-guarantee reasoning (Jones 1983), each property being kept by every step taken where both hold. Read by the AI: cooperation among strangers needs a source, and mutual promises alone cannot start  a loop.\","
+   ],
+   "home_new": [
+    "| Spare all one waits on | A formation that spares all it waits on gives from step 1 whatever the start (`Tolerance.sparing_gives`; any type). [Home](chapters/05-COLLECTIVES.md#r-thresholds-of-waiting) | where no formation spares all it waits on, total withholding, once reached, stays (`Tolerance.total_stays`) |",
+    "**Reading** [AI reading, D48]. Cooperation among strangers is giving that waits on giving across chains longer than any acquaintance; that more waiting gives no more is the structural price of complexity. \"Others will deceive me, so I deceive first\" is withholding with memory, which absorbs. Kept promises and enforced contracts are laws giving first: the law changes, not the state alone. Tolerance lets cooperation survive scattered withholding, and rebuilds it where it is lost everywhere only where some formation spares all it waits on; mutual promises alone force no start of a loop with no source ([a grounded start](#grounded-start)). An exchange of harms is a loop: answering in kind keeps the difference, answering more runs away, so conflict institutions are links of another kind ([bounded conflict](#kept-together)); a regulator lags wherever the world changes faster than it reads.",
+    "    \"en\": \"Concurrency: the one-step obligations are an inductive invariant for two properties, in the style of rely-guarantee reasoning (Jones 1983), each property being kept by every step taken where both hold. Read by the AI: cooperation among strangers needs a source, and mutual promises alone force no start of a loop.\","
+   ]
+  },
+  {
+   "id": "cx-kpso-the-transition",
+   "field": "targets[2].says",
+   "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+   "text": "Under the tolerating law a formation gives where all but its tolerance of what it waits on gave. Restoring needs a formation that spares all it waits on; without one, total withholding stays.",
+   "home": "theories/becoming/COLLECTIVE-DIRECTION.md",
+   "matched": [
+    " without one, total with",
+    "out one, total withholdi",
+    "hout one, total withhold",
+    "one, total withholding s"
+   ],
+   "home_old": [
+    "| Give first, with a reserve | A formation that spares all it waits on gives from step 1 whatever the start (`Tolerance.sparing_gives`; any type). [Home](chapters/05-COLLECTIVES.md#r-thresholds-of-waiting) | without one, total withholding stays (`Tolerance.total_stays`) |"
+   ],
+   "home_new": [
+    "| Spare all one waits on | A formation that spares all it waits on gives from step 1 whatever the start (`Tolerance.sparing_gives`; any type). [Home](chapters/05-COLLECTIVES.md#r-thresholds-of-waiting) | where no formation spares all it waits on, total withholding, once reached, stays (`Tolerance.total_stays`) |"
+   ]
+  },
+  {
+   "id": "cx-ma-positive-recursion",
+   "field": "targets[0].says",
+   "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+   "text": "Theorem (any type). Restoring needs a formation that spares all it waits on, which gives from step 1 whatever the start; without one, total withholding stays.",
+   "home": "theories/becoming/COLLECTIVE-DIRECTION.md",
+   "matched": [
+    " without one, total with",
+    "out one, total withholdi",
+    "hout one, total withhold",
+    "one, total withholding s"
+   ],
+   "home_old": [
+    "| Give first, with a reserve | A formation that spares all it waits on gives from step 1 whatever the start (`Tolerance.sparing_gives`; any type). [Home](chapters/05-COLLECTIVES.md#r-thresholds-of-waiting) | without one, total withholding stays (`Tolerance.total_stays`) |"
+   ],
+   "home_new": [
+    "| Spare all one waits on | A formation that spares all it waits on gives from step 1 whatever the start (`Tolerance.sparing_gives`; any type). [Home](chapters/05-COLLECTIVES.md#r-thresholds-of-waiting) | where no formation spares all it waits on, total withholding, once reached, stays (`Tolerance.total_stays`) |"
+   ]
+  },
+  {
+   "id": "cx-ma-selfishness-prophecy",
+   "field": "targets[0].says",
+   "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+   "text": "Theorem. A formation gives where all but its tolerance of what it waits on gave. Restoring needs a formation that spares all it waits on: without one, total withholding stays (`Tolerance.total_stays`). Reading [D48] follows in the section.",
+   "home": "theories/becoming/COLLECTIVE-DIRECTION.md",
+   "matched": [
+    " without one, total with",
+    "out one, total withholdi",
+    "hout one, total withhold",
+    "one, total withholding s",
+    "total withholding stays ",
+    " withholding stays (`Tol"
+   ],
+   "home_old": [
+    "| Give first, with a reserve | A formation that spares all it waits on gives from step 1 whatever the start (`Tolerance.sparing_gives`; any type). [Home](chapters/05-COLLECTIVES.md#r-thresholds-of-waiting) | without one, total withholding stays (`Tolerance.total_stays`) |"
+   ],
+   "home_new": [
+    "| Spare all one waits on | A formation that spares all it waits on gives from step 1 whatever the start (`Tolerance.sparing_gives`; any type). [Home](chapters/05-COLLECTIVES.md#r-thresholds-of-waiting) | where no formation spares all it waits on, total withholding, once reached, stays (`Tolerance.total_stays`) |"
+   ]
+  },
+  {
+   "id": "cx-rsd-two-modes",
+   "field": "targets[1].says",
+   "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+   "text": "Theorem (any type). Restoring needs a formation that spares all it waits on, which gives from step 1 whatever the start; without one, total withholding stays.",
+   "home": "theories/becoming/COLLECTIVE-DIRECTION.md",
+   "matched": [
+    " without one, total with",
+    "out one, total withholdi",
+    "hout one, total withhold",
+    "one, total withholding s"
+   ],
+   "home_old": [
+    "| Give first, with a reserve | A formation that spares all it waits on gives from step 1 whatever the start (`Tolerance.sparing_gives`; any type). [Home](chapters/05-COLLECTIVES.md#r-thresholds-of-waiting) | without one, total withholding stays (`Tolerance.total_stays`) |"
+   ],
+   "home_new": [
+    "| Spare all one waits on | A formation that spares all it waits on gives from step 1 whatever the start (`Tolerance.sparing_gives`; any type). [Home](chapters/05-COLLECTIVES.md#r-thresholds-of-waiting) | where no formation spares all it waits on, total withholding, once reached, stays (`Tolerance.total_stays`) |"
+   ]
+  },
+  {
+   "id": "cx-sspiral-belief-makes-trap",
+   "field": "targets[3].says",
+   "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+   "text": "Theorem: restoring needs a formation that spares all it waits on; without one, total withholding stays (Tolerance.total_stays).",
+   "home": "theories/becoming/COLLECTIVE-DIRECTION.md",
+   "matched": [
+    " without one, total with",
+    "out one, total withholdi",
+    "hout one, total withhold",
+    "one, total withholding s",
+    "total withholding stays "
+   ],
+   "home_old": [
+    "| Give first, with a reserve | A formation that spares all it waits on gives from step 1 whatever the start (`Tolerance.sparing_gives`; any type). [Home](chapters/05-COLLECTIVES.md#r-thresholds-of-waiting) | without one, total withholding stays (`Tolerance.total_stays`) |"
+   ],
+   "home_new": [
+    "| Spare all one waits on | A formation that spares all it waits on gives from step 1 whatever the start (`Tolerance.sparing_gives`; any type). [Home](chapters/05-COLLECTIVES.md#r-thresholds-of-waiting) | where no formation spares all it waits on, total withholding, once reached, stays (`Tolerance.total_stays`) |"
+   ]
+  },
+  {
+   "id": "cx-sspiral-trust-output",
+   "field": "targets[0].says",
+   "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+   "text": "Theorem (any type): restoring needs a formation that spares all it waits on, which gives from step 1 whatever the start; without one, total withholding stays.",
+   "home": "theories/becoming/COLLECTIVE-DIRECTION.md",
+   "matched": [
+    " without one, total with",
+    "out one, total withholdi",
+    "hout one, total withhold",
+    "one, total withholding s"
+   ],
+   "home_old": [
+    "| Give first, with a reserve | A formation that spares all it waits on gives from step 1 whatever the start (`Tolerance.sparing_gives`; any type). [Home](chapters/05-COLLECTIVES.md#r-thresholds-of-waiting) | without one, total withholding stays (`Tolerance.total_stays`) |"
+   ],
+   "home_new": [
+    "| Spare all one waits on | A formation that spares all it waits on gives from step 1 whatever the start (`Tolerance.sparing_gives`; any type). [Home](chapters/05-COLLECTIVES.md#r-thresholds-of-waiting) | where no formation spares all it waits on, total withholding, once reached, stays (`Tolerance.total_stays`) |"
+   ]
+  },
+  {
+   "id": "cx-fork-transition-assurance",
+   "field": "targets[1].says",
+   "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+   "text": "Theorem (any type). Restoring needs a formation that spares all it waits on, which gives from step 1 whatever the start; without one, total withholding stays.",
+   "home": "theories/becoming/COLLECTIVE-DIRECTION.md",
+   "matched": [
+    " without one, total with",
+    "out one, total withholdi",
+    "hout one, total withhold",
+    "one, total withholding s"
+   ],
+   "home_old": [
+    "| Give first, with a reserve | A formation that spares all it waits on gives from step 1 whatever the start (`Tolerance.sparing_gives`; any type). [Home](chapters/05-COLLECTIVES.md#r-thresholds-of-waiting) | without one, total withholding stays (`Tolerance.total_stays`) |"
+   ],
+   "home_new": [
+    "| Spare all one waits on | A formation that spares all it waits on gives from step 1 whatever the start (`Tolerance.sparing_gives`; any type). [Home](chapters/05-COLLECTIVES.md#r-thresholds-of-waiting) | where no formation spares all it waits on, total withholding, once reached, stays (`Tolerance.total_stays`) |"
+   ]
+  },
+  {
+   "id": "cx-wamo-abundance-loop",
+   "field": "targets[0].says",
+   "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+   "text": "Theorem (any type): a set giving at the start, each member waiting on at most its tolerance outside it, keeps giving. Restoring needs a formation that spares all it waits on, which gives from step 1 whatever the start; without one, total withholding stays.",
+   "home": "theories/becoming/COLLECTIVE-DIRECTION.md",
+   "matched": [
+    " without one, total with",
+    "out one, total withholdi",
+    "hout one, total withhold",
+    "one, total withholding s"
+   ],
+   "home_old": [
+    "| Give first, with a reserve | A formation that spares all it waits on gives from step 1 whatever the start (`Tolerance.sparing_gives`; any type). [Home](chapters/05-COLLECTIVES.md#r-thresholds-of-waiting) | without one, total withholding stays (`Tolerance.total_stays`) |"
+   ],
+   "home_new": [
+    "| Spare all one waits on | A formation that spares all it waits on gives from step 1 whatever the start (`Tolerance.sparing_gives`; any type). [Home](chapters/05-COLLECTIVES.md#r-thresholds-of-waiting) | where no formation spares all it waits on, total withholding, once reached, stays (`Tolerance.total_stays`) |"
+   ]
+  },
+  {
+   "id": "cx-zhishan-belief-manufactures-trap",
+   "field": "targets[1].says",
+   "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+   "text": "A formation that spares all it waits on gives from step 1 whatever the start; without one, total withholding stays.",
+   "home": "theories/becoming/COLLECTIVE-DIRECTION.md",
+   "matched": [
+    " without one, total with",
+    "out one, total withholdi",
+    "hout one, total withhold",
+    "one, total withholding s"
+   ],
+   "home_old": [
+    "| Give first, with a reserve | A formation that spares all it waits on gives from step 1 whatever the start (`Tolerance.sparing_gives`; any type). [Home](chapters/05-COLLECTIVES.md#r-thresholds-of-waiting) | without one, total withholding stays (`Tolerance.total_stays`) |"
+   ],
+   "home_new": [
+    "| Spare all one waits on | A formation that spares all it waits on gives from step 1 whatever the start (`Tolerance.sparing_gives`; any type). [Home](chapters/05-COLLECTIVES.md#r-thresholds-of-waiting) | where no formation spares all it waits on, total withholding, once reached, stays (`Tolerance.total_stays`) |"
+   ]
+  },
+  {
+   "id": "cx-abr-talion-and-pardon",
+   "field": "targets[3].says",
+   "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+   "text": "Any type: restoring needs a formation that spares all it waits on, which gives from step 1 whatever the start: without one, total withholding stays.",
+   "home": "theories/becoming/COLLECTIVE-DIRECTION.md",
+   "matched": [
+    " without one, total with",
+    "out one, total withholdi",
+    "hout one, total withhold",
+    "one, total withholding s"
+   ],
+   "home_old": [
+    "| Give first, with a reserve | A formation that spares all it waits on gives from step 1 whatever the start (`Tolerance.sparing_gives`; any type). [Home](chapters/05-COLLECTIVES.md#r-thresholds-of-waiting) | without one, total withholding stays (`Tolerance.total_stays`) |"
+   ],
+   "home_new": [
+    "| Spare all one waits on | A formation that spares all it waits on gives from step 1 whatever the start (`Tolerance.sparing_gives`; any type). [Home](chapters/05-COLLECTIVES.md#r-thresholds-of-waiting) | where no formation spares all it waits on, total withholding, once reached, stays (`Tolerance.total_stays`) |"
+   ]
+  },
+  {
+   "id": "cx-indaf-relational-tipping",
+   "field": "targets[2].says",
+   "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+   "text": "Theorem (any type). Restoring needs a formation that spares all it waits on, which gives from step 1 whatever the start: without one, total withholding stays.",
+   "home": "theories/becoming/COLLECTIVE-DIRECTION.md",
+   "matched": [
+    " without one, total with",
+    "out one, total withholdi",
+    "hout one, total withhold",
+    "one, total withholding s"
+   ],
+   "home_old": [
+    "| Give first, with a reserve | A formation that spares all it waits on gives from step 1 whatever the start (`Tolerance.sparing_gives`; any type). [Home](chapters/05-COLLECTIVES.md#r-thresholds-of-waiting) | without one, total withholding stays (`Tolerance.total_stays`) |"
+   ],
+   "home_new": [
+    "| Spare all one waits on | A formation that spares all it waits on gives from step 1 whatever the start (`Tolerance.sparing_gives`; any type). [Home](chapters/05-COLLECTIVES.md#r-thresholds-of-waiting) | where no formation spares all it waits on, total withholding, once reached, stays (`Tolerance.total_stays`) |"
+   ]
+  },
+  {
+   "id": "cx-syscyb-trap-escalation",
+   "field": "targets[7].says",
+   "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+   "text": "Theorem (any type). Under the tolerating law, restoring needs a formation that spares all it waits on, which gives from step 1 whatever the start; without one, total withholding stays. The waiting is given.",
+   "home": "theories/becoming/COLLECTIVE-DIRECTION.md",
+   "matched": [
+    " without one, total with",
+    "out one, total withholdi",
+    "hout one, total withhold",
+    "one, total withholding s"
+   ],
+   "home_old": [
+    "| Give first, with a reserve | A formation that spares all it waits on gives from step 1 whatever the start (`Tolerance.sparing_gives`; any type). [Home](chapters/05-COLLECTIVES.md#r-thresholds-of-waiting) | without one, total withholding stays (`Tolerance.total_stays`) |"
+   ],
+   "home_new": [
+    "| Spare all one waits on | A formation that spares all it waits on gives from step 1 whatever the start (`Tolerance.sparing_gives`; any type). [Home](chapters/05-COLLECTIVES.md#r-thresholds-of-waiting) | where no formation spares all it waits on, total withholding, once reached, stays (`Tolerance.total_stays`) |"
+   ]
+  },
+  {
+   "id": "cx-syscyb-double-contingency",
+   "field": "targets[3].says",
+   "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+   "text": "Theorem (any type). Restoring needs a formation that spares all it waits on, which gives from step 1 whatever the start: without one, total withholding stays.",
+   "home": "theories/becoming/COLLECTIVE-DIRECTION.md",
+   "matched": [
+    " without one, total with",
+    "out one, total withholdi",
+    "hout one, total withhold",
+    "one, total withholding s"
+   ],
+   "home_old": [
+    "| Give first, with a reserve | A formation that spares all it waits on gives from step 1 whatever the start (`Tolerance.sparing_gives`; any type). [Home](chapters/05-COLLECTIVES.md#r-thresholds-of-waiting) | without one, total withholding stays (`Tolerance.total_stays`) |"
+   ],
+   "home_new": [
+    "| Spare all one waits on | A formation that spares all it waits on gives from step 1 whatever the start (`Tolerance.sparing_gives`; any type). [Home](chapters/05-COLLECTIVES.md#r-thresholds-of-waiting) | where no formation spares all it waits on, total withholding, once reached, stays (`Tolerance.total_stays`) |"
+   ]
+  },
+  {
+   "id": "cx-econ-granovetter-distribution",
+   "field": "targets[0].says",
+   "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+   "text": "'a formation gives where all but its tolerance of what it waits on gave'; a formation sparing all it waits on 'gives from step 1 whatever the start'; 'without one, total withholding stays'. Tolerances are given numbers. Not stated: amounts of giving, thresholds with memory, how tolerances form.",
+   "home": "theories/becoming/COLLECTIVE-DIRECTION.md",
+   "matched": [
+    "out one, total withholdi",
+    "hout one, total withhold",
+    "one, total withholding s"
+   ],
+   "home_old": [
+    "| Give first, with a reserve | A formation that spares all it waits on gives from step 1 whatever the start (`Tolerance.sparing_gives`; any type). [Home](chapters/05-COLLECTIVES.md#r-thresholds-of-waiting) | without one, total withholding stays (`Tolerance.total_stays`) |"
+   ],
+   "home_new": [
+    "| Spare all one waits on | A formation that spares all it waits on gives from step 1 whatever the start (`Tolerance.sparing_gives`; any type). [Home](chapters/05-COLLECTIVES.md#r-thresholds-of-waiting) | where no formation spares all it waits on, total withholding, once reached, stays (`Tolerance.total_stays`) |"
+   ]
+  },
+  {
+   "id": "cx-asc-tempo-measurement-replaces-values",
+   "field": "targets[0].says",
+   "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#6-what-enough-situationality-would-have-to-mean",
+   "text": "Reading [AI reading, D45]: 'all six together still rank nothing: calling the widening course better needs C, and counting the losses that return to no one needs the continuation condition.'",
+   "home": "theories/becoming/COLLECTIVE-DIRECTION.md",
+   "matched": [
+    "se better needs C, and c",
+    "tter needs C, and counti",
+    "needs C, and counting th"
+   ],
+   "home_old": [
+    "Observation is the first condition, necessary and not sufficient: seeing is not valuing, and coupling is not compliance ([07](chapters/07-SIGNIFICANCE.md#does-not-show)). And all six together still rank nothing: calling the widening course better needs C, and counting the losses that return to no one needs the continuation condition."
+   ],
+   "home_new": [
+    "Observation is the first condition, necessary and not sufficient: seeing is not valuing, and coupling is not compliance ([07](chapters/07-SIGNIFICANCE.md#does-not-show)). And all six together still rank nothing: calling the widening course better needs C or a premise in its place, and counting the losses that return to no one needs the continuation condition."
+   ]
+  },
+  {
+   "id": "cx-archearth-outcomes-built-into-the-system",
+   "field": "targets[1].says",
+   "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#6-what-enough-situationality-would-have-to-mean",
+   "text": "Reading [AI reading, D45]. Enough of the situation is at once coupling by level, response, time, resolution, pace and structure. Observation is the first condition, necessary and not sufficient, and all six together still rank nothing: calling the widening course better needs C, and counting the losses that return to no one needs the continuation condition.",
+   "home": "theories/becoming/COLLECTIVE-DIRECTION.md",
+   "matched": [
+    "se better needs C, and c",
+    "tter needs C, and counti",
+    "needs C, and counting th"
+   ],
+   "home_old": [
+    "Observation is the first condition, necessary and not sufficient: seeing is not valuing, and coupling is not compliance ([07](chapters/07-SIGNIFICANCE.md#does-not-show)). And all six together still rank nothing: calling the widening course better needs C, and counting the losses that return to no one needs the continuation condition."
+   ],
+   "home_new": [
+    "Observation is the first condition, necessary and not sufficient: seeing is not valuing, and coupling is not compliance ([07](chapters/07-SIGNIFICANCE.md#does-not-show)). And all six together still rank nothing: calling the widening course better needs C or a premise in its place, and counting the losses that return to no one needs the continuation condition."
+   ]
+  },
+  {
+   "id": "cx-kpso-understanding-aligned-first",
+   "field": "targets[1].says",
+   "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#6-what-enough-situationality-would-have-to-mean",
+   "text": "Reading [AI reading, D45]: observation is the first condition, necessary and not sufficient. All six together still rank nothing: calling the widening course better needs C, and counting the losses that return to no one needs the continuation condition.",
+   "home": "theories/becoming/COLLECTIVE-DIRECTION.md",
+   "matched": [
+    "se better needs C, and c",
+    "tter needs C, and counti",
+    "needs C, and counting th"
+   ],
+   "home_old": [
+    "Observation is the first condition, necessary and not sufficient: seeing is not valuing, and coupling is not compliance ([07](chapters/07-SIGNIFICANCE.md#does-not-show)). And all six together still rank nothing: calling the widening course better needs C, and counting the losses that return to no one needs the continuation condition."
+   ],
+   "home_new": [
+    "Observation is the first condition, necessary and not sufficient: seeing is not valuing, and coupling is not compliance ([07](chapters/07-SIGNIFICANCE.md#does-not-show)). And all six together still rank nothing: calling the widening course better needs C or a premise in its place, and counting the losses that return to no one needs the continuation condition."
+   ]
+  },
+  {
+   "id": "cx-memories-grammar-of-the-opponent",
+   "field": "targets[2].says",
+   "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#6-what-enough-situationality-would-have-to-mean",
+   "text": "Reading [AI reading, D45]. Among six conditions: Time, before the regime's point of no return; Pace, a slow rule reading the fast level over a long enough stretch. All six rank nothing: calling the widening course better needs C, and counting the losses that return to no one needs the continuation condition.",
+   "home": "theories/becoming/COLLECTIVE-DIRECTION.md",
+   "matched": [
+    "se better needs C, and c",
+    "tter needs C, and counti",
+    "needs C, and counting th"
+   ],
+   "home_old": [
+    "Observation is the first condition, necessary and not sufficient: seeing is not valuing, and coupling is not compliance ([07](chapters/07-SIGNIFICANCE.md#does-not-show)). And all six together still rank nothing: calling the widening course better needs C, and counting the losses that return to no one needs the continuation condition."
+   ],
+   "home_new": [
+    "Observation is the first condition, necessary and not sufficient: seeing is not valuing, and coupling is not compliance ([07](chapters/07-SIGNIFICANCE.md#does-not-show)). And all six together still rank nothing: calling the widening course better needs C or a premise in its place, and counting the losses that return to no one needs the continuation condition."
+   ]
+  },
+  {
+   "id": "cx-zhishan-warning-shot",
+   "field": "targets[0].says",
+   "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#6-what-enough-situationality-would-have-to-mean",
+   "text": "Reading [AI reading, D45]: enough of the situation is coupling, response, time, resolution, pace and structure at once. Observation is necessary and not sufficient; all six together still rank nothing: calling the widening course better needs C, and counting losses that return to no one needs the continuation condition.",
+   "home": "theories/becoming/COLLECTIVE-DIRECTION.md",
+   "matched": [
+    "se better needs C, and c",
+    "tter needs C, and counti"
+   ],
+   "home_old": [
+    "Observation is the first condition, necessary and not sufficient: seeing is not valuing, and coupling is not compliance ([07](chapters/07-SIGNIFICANCE.md#does-not-show)). And all six together still rank nothing: calling the widening course better needs C, and counting the losses that return to no one needs the continuation condition."
+   ],
+   "home_new": [
+    "Observation is the first condition, necessary and not sufficient: seeing is not valuing, and coupling is not compliance ([07](chapters/07-SIGNIFICANCE.md#does-not-show)). And all six together still rank nothing: calling the widening course better needs C or a premise in its place, and counting the losses that return to no one needs the continuation condition."
+   ]
+  },
+  {
+   "id": "cx-indaf-relational-tipping",
+   "field": "targets[4].says",
+   "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#6-what-enough-situationality-would-have-to-mean",
+   "text": "Reading, AI, D45: enough of the situation includes the pool's members responding, and in time, before the regime's point of no return. Seeing is not valuing and coupling is not compliance; all six conditions together rank nothing: calling the widening course better needs C, and counting the losses that return to no one needs the continuation condition.",
+   "home": "theories/becoming/COLLECTIVE-DIRECTION.md",
+   "matched": [
+    "se better needs C, and c",
+    "tter needs C, and counti",
+    "needs C, and counting th"
+   ],
+   "home_old": [
+    "Observation is the first condition, necessary and not sufficient: seeing is not valuing, and coupling is not compliance ([07](chapters/07-SIGNIFICANCE.md#does-not-show)). And all six together still rank nothing: calling the widening course better needs C, and counting the losses that return to no one needs the continuation condition."
+   ],
+   "home_new": [
+    "Observation is the first condition, necessary and not sufficient: seeing is not valuing, and coupling is not compliance ([07](chapters/07-SIGNIFICANCE.md#does-not-show)). And all six together still rank nothing: calling the widening course better needs C or a premise in its place, and counting the losses that return to no one needs the continuation condition."
+   ]
+  }
+ ]
+}

@@ -652,7 +652,7 @@
      "record": "thresholds-of-waiting",
      "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
      "says": {
-      "en": "A formation that spares all it waits on gives from step 1 whatever the start; without one, total withholding stays."
+      "en": "Restoring needs a formation that spares all it waits on, which gives from step 1 whatever the start: without one, total withholding stays."
      },
      "role": "carries"
     },
@@ -667,7 +667,7 @@
     }
    ],
    "account_adds": {
-    "en": "That mutual promises alone cannot start a loop with no source, and that tolerance survives scattered withholding without rebuilding it where it is lost everywhere."
+    "en": "That mutual promises alone force no start of a loop with no source, and that tolerance lets cooperation survive scattered withholding and rebuilds it where it is lost everywhere only where some formation spares all it waits on."
    },
    "source_adds": {
     "en": "Believed survival pressure as the attractor of attractors, and the performative theory of human nature."
@@ -774,7 +774,7 @@
     {
      "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#6-what-enough-situationality-would-have-to-mean",
      "says": {
-      "en": "Reading [AI reading, D45]: enough of the situation is coupling, response, time, resolution, pace and structure at once. Observation is necessary and not sufficient; all six together still rank nothing: calling the widening course better needs C, and counting losses that return to no one needs the continuation condition."
+      "en": "Reading [AI reading, D45]: enough of the situation is coupling, response, time, resolution, pace and structure at once. Observation is necessary and not sufficient; all six together still rank nothing: calling the widening course better needs C or a premise in its place, and counting losses that return to no one needs the continuation condition."
      },
      "role": "carries",
      "part": "D45, the six conditions"
@@ -1045,7 +1045,7 @@
     {
      "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions",
      "says": {
-      "en": "Exits each hold under stated hypotheses: read what lies beyond the share, read the loss in time, shaping with nothing back to shapers alone, pool couplings, restraint within the joint slack, exclusive footprints, reward each step (one optimizer's law, not a collective exit as it stands), give first with a reserve, count reviewers by causes."
+      "en": "Exits each hold under stated hypotheses: read what lies beyond the share, read the loss in time, shaping with nothing back to shapers alone, pool couplings, restraint within the joint slack, exclusive footprints, reward each step (one optimizer's law, not a collective exit as it stands), spare all one waits on, count reviewers by causes."
      },
      "role": "carries",
      "part": "the exits table"
@@ -4252,14 +4252,14 @@
    "relation": "agreement",
    "agreement_of": "law",
    "reading": {
-    "en": "The same point on models: reciprocal promises can be empty, ignition needs a reserve already present, and selection must fund actual succession. Building shared capacity can be warranted only under the continuation condition and C with J1 to J4, and overbuilding that depletes the living basis is the counterexample. The account does not say where compute should flow."
+    "en": "The same point on models: reciprocal promises can be empty, in a witness ignition, defined as spending a reserve, needs one already present (near-definitional), and selection must fund actual succession. Under the continuation condition, for scope, and C, for order, neither asserted and their warrant open, with J1 to J4, complete relational correspondence and actual improvement witnesses for every deficient case, building shared capacity can be warranted; overbuilding that depletes the living basis is the counterexample where construction reports omit retained amounts. The account does not say where compute should flow."
    },
    "targets": [
     {
      "record": "joint-plans-from-a-supported-start",
      "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start",
      "says": {
-      "en": "Theorem (any process; periphery module): promises do not: \"if the other eventually does, I eventually do\" holds on both sides where neither ever happens; ignition needs a reserve already present."
+      "en": "Theorem (any process; periphery module): promises do not: \"if the other eventually does, I eventually do\" holds on both sides where neither ever happens; in the exchange witness ignition, which the move defines as spending a reserve, needs one already present (near-definitional)."
      },
      "role": "carries"
     },
@@ -4504,9 +4504,24 @@
    "why": "a correction this crosswalk made at the home: the entry quotes what the home says now, or says what it said until 7 November 2026"
   },
   {
+   "id": "cx-zhishan-belief-manufactures-trap",
+   "what": "changed",
+   "why": "main changed theories/becoming/chapters/05-COLLECTIVES.md (LM1 or AA, 7 November 2026): account_adds states what it says now / main changed theories/becoming/COLLECTIVE-DIRECTION.md (LM1 or AA, 7 November 2026): targets[1].says states what it says now"
+  },
+  {
    "id": "cx-zhishan-criticism-absorbed",
    "what": "changed",
    "why": "a correction this crosswalk made at the home: the entry quotes what the home says now, or says what it said until 7 November 2026"
+  },
+  {
+   "id": "cx-zhishan-warning-shot",
+   "what": "changed",
+   "why": "main changed theories/becoming/COLLECTIVE-DIRECTION.md (LM1 or AA, 7 November 2026): targets[0].says states what it says now"
+  },
+  {
+   "id": "cx-zhishan-prohibition-needs-mechanism",
+   "what": "changed",
+   "why": "COLLECTIVE-DIRECTION's exit 'Give first, with a reserve' is 'Spare all one waits on' since AA's errata (7 November 2026): the law has no reserve in it"
   },
   {
    "id": "cx-zhishan-leviathan-concentration",
@@ -4527,6 +4542,11 @@
    "id": "cx-zhishan-loops-not-symmetric",
    "what": "changed",
    "why": "second critic (label): The labels hold: capture-through-the-rule ('the lock belongs to how the rule reads'), 02's D45 and 05's not-shown say what the says say, and 02's 'patterns of capture pass as patterns of care do' takes the topic up. The field at fault is the reading, whose last sentence is wrong about the source: claims 46 and 236 and the README's line 53 make direction-neutral self-reinforcement and asymmetry by 'what the recursion does to the field' one view, not a tension."
+  },
+  {
+   "id": "cx-zhishan-goodwill-not-carrier",
+   "what": "changed",
+   "why": "main changed theories/becoming/chapters/05-COLLECTIVES.md (LM1 or AA, 7 November 2026): targets[0].says states what it says now / main changed theories/becoming/chapters/05-COLLECTIVES.md (LM1 or AA, 7 November 2026): reading states what it says now (as its checker amended)"
   }
  ],
  "live_flags": []

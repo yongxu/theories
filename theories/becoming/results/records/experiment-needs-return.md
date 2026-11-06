@@ -50,7 +50,7 @@
 - The formal bridge to the couplings of Becoming.Testing is not stated.
 - The general form of which correlation between moves and what is hidden leaves a model never excluded is not stated.
 - Restates the fundamental problem of causal inference (Holland 1986): a record shows one side of the with-and-without comparison; the kept history is Bennett's (1973).
-- **Counterexample:** A wrong projection misattributes and is never excluded: in Confound the move makes no difference, yet read through the outcome the record fixes left to false and right to true, and with the moves in step with the hidden bit the determined model in which the move decides the outcome is admitted at every step (Confound.misattributes, Confound.confounded). Only moves varied against the hidden bit exclude it (Confound.varied_refutes). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Experiment.lean)
+- **Counterexample:** A wrong projection misattributes and is never excluded: in Confound the move makes no difference, yet read through the outcome the record fixes left to false and right to true, and with the moves in step with the hidden bit the determined model in which the move decides the outcome is admitted at every step (Confound.misattributes, Confound.confounded). In this witness one run of moves varied against the hidden bit excludes it (Confound.varied_refutes). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Experiment.lean)
 
 **Standard boundaries:** Contains no ethical predicate and evaluates neither arising nor ceasing. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · No ethical premise and no Lean axiom is used.
 
@@ -159,6 +159,7 @@ Aliases: `Becoming.Run.Fixes`, `Becoming.Run.fixes_of_takes`, `Becoming.Run.not_
 - 20 October 2026, LK1 (study section 237): the closest prior result named against the significance review's verdicts (study SA1), so that the record is not led with as a new finding; one does_not_show item added (this record is not in SA1's table; the match is LK1's judgment). The claim and its premises are unchanged.
 - 25 October 2026, board item DF (study section 418): the correspondence names the record by its current id, testing-within-couplings, for its former id; nothing else changed.
 - 30 October 2026 (U2, study section 461): a law at the model added, stating `Becoming.Run.not_fixes_of_untaken` where its terms are the grammar's, through the row (F5's statements_at_model, reviewed in RECHECK-U2); the row's statement, proof and every other law unchanged.
+- 7 November 2026, board item AA: the atlas's readers found a witness read as a necessary condition; corrected against the Lean and the later records.
 - 7 rebinding entries (2026-10-13 to 2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](experiment-needs-return.json).
 
 <a id="earlier-text--早期文本"></a>

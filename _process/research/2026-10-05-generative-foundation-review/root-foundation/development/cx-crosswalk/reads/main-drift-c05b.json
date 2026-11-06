@@ -1,0 +1,431 @@
+{
+ "cluster": "c05b",
+ "items": [
+  {
+   "id": "cx-kpso-trust-before-verification",
+   "field": "targets[1].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "not rebuild it where it is lost everywhere; mutual promises alone cannot start a loop with no source",
+     "new": "and rebuilds it where it is lost everywhere only where some formation spares all it waits on; mutual promises alone force no start of a loop with no source"
+    }
+   ],
+   "labels": null,
+   "why": "Main's AA errata rewrote the D48 reading: tolerance rebuilds giving lost everywhere only where some formation spares all it waits on, and mutual promises force no start (they hold where neither acts) rather than cannot start one; the field now states that.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-offspring-read-from-giving-that-waits",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+    "theories/becoming/chapters/05-COLLECTIVES.md#grounded-start",
+    "theories/becoming/results/records/joint-plans-from-a-supported-start.md#correspondence--对应"
+   ]
+  },
+  {
+   "id": "cx-sspiral-trust-output",
+   "field": "targets[6].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "not rebuild it where it is lost everywhere; mutual promises alone cannot start a loop with no source",
+     "new": "and rebuilds it where it is lost everywhere only where some formation spares all it waits on; mutual promises alone force no start of a loop with no source"
+    }
+   ],
+   "labels": null,
+   "why": "Main's AA errata rewrote the D48 reading: tolerance rebuilds giving lost everywhere only where some formation spares all it waits on, and mutual promises force no start (they hold where neither acts) rather than cannot start one; the field now states that.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-offspring-read-from-giving-that-waits",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+    "theories/becoming/chapters/05-COLLECTIVES.md#grounded-start",
+    "theories/becoming/results/records/joint-plans-from-a-supported-start.md#correspondence--对应"
+   ]
+  },
+  {
+   "id": "cx-indaf-gift-circulates",
+   "field": "targets[3].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "not rebuild it where it is lost everywhere; mutual promises alone cannot start a loop with no source",
+     "new": "and rebuilds it where it is lost everywhere only where some formation spares all it waits on; mutual promises alone force no start of a loop with no source"
+    }
+   ],
+   "labels": null,
+   "why": "Main's AA errata rewrote the D48 reading: tolerance rebuilds giving lost everywhere only where some formation spares all it waits on, and mutual promises force no start (they hold where neither acts) rather than cannot start one; the field now states that.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-offspring-read-from-giving-that-waits",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+    "theories/becoming/chapters/05-COLLECTIVES.md#grounded-start",
+    "theories/becoming/results/records/joint-plans-from-a-supported-start.md#correspondence--对应"
+   ]
+  },
+  {
+   "id": "cx-ma-selfishness-prophecy",
+   "field": "account_adds",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "mutual promises alone cannot start a loop with no source",
+     "new": "mutual promises alone force no start of a loop with no source"
+    }
+   ],
+   "labels": null,
+   "why": "The D48 reading and the record now say mutual promises alone force no start of a loop with no source, not that they cannot start one: the law has them hold where neither ever acts, which forbids no start.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-offspring-read-from-giving-that-waits",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+    "theories/becoming/chapters/05-COLLECTIVES.md#grounded-start",
+    "theories/becoming/results/records/joint-plans-from-a-supported-start.md#correspondence--对应"
+   ]
+  },
+  {
+   "id": "cx-fork-trust-from-shared-understanding",
+   "field": "targets[2].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "Mutual promises alone cannot start a loop with no source.",
+     "new": "Mutual promises alone force no start of a loop with no source."
+    }
+   ],
+   "labels": null,
+   "why": "The D48 reading and the record now say mutual promises alone force no start of a loop with no source, not that they cannot start one: the law has them hold where neither ever acts, which forbids no start.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-offspring-read-from-giving-that-waits",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+    "theories/becoming/chapters/05-COLLECTIVES.md#grounded-start",
+    "theories/becoming/results/records/joint-plans-from-a-supported-start.md#correspondence--对应"
+   ]
+  },
+  {
+   "id": "cx-wamo-abundance-loop",
+   "field": "reading",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "mutual promises alone cannot start a loop with no source",
+     "new": "mutual promises alone force no start of a loop with no source"
+    }
+   ],
+   "labels": null,
+   "why": "The D48 reading and the record now say mutual promises alone force no start of a loop with no source, not that they cannot start one: the law has them hold where neither ever acts, which forbids no start. The seed's form, a formation sparing all it waits on, still matches the thresholds law.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-offspring-read-from-giving-that-waits",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+    "theories/becoming/chapters/05-COLLECTIVES.md#grounded-start",
+    "theories/becoming/results/records/joint-plans-from-a-supported-start.md#correspondence--对应"
+   ]
+  },
+  {
+   "id": "cx-wamo-self-made-trap",
+   "field": "targets[0].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "Mutual promises alone cannot start a loop with no source.",
+     "new": "Mutual promises alone force no start of a loop with no source."
+    }
+   ],
+   "labels": null,
+   "why": "The D48 reading and the record now say mutual promises alone force no start of a loop with no source, not that they cannot start one: the law has them hold where neither ever acts, which forbids no start.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-offspring-read-from-giving-that-waits",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+    "theories/becoming/chapters/05-COLLECTIVES.md#grounded-start",
+    "theories/becoming/results/records/joint-plans-from-a-supported-start.md#correspondence--对应"
+   ]
+  },
+  {
+   "id": "cx-zhishan-belief-manufactures-trap",
+   "field": "account_adds",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "mutual promises alone cannot start a loop with no source",
+     "new": "mutual promises alone force no start of a loop with no source"
+    },
+    {
+     "old": "tolerance survives scattered withholding without rebuilding it where it is lost everywhere",
+     "new": "tolerance lets cooperation survive scattered withholding and rebuilds it where it is lost everywhere only where some formation spares all it waits on"
+    }
+   ],
+   "labels": null,
+   "why": "Main's AA errata rewrote the D48 reading: tolerance rebuilds giving lost everywhere only where some formation spares all it waits on, and mutual promises force no start (they hold where neither acts) rather than cannot start one; the field now states that. The tolerance half is a paraphrase the window search matched only through the promise words.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-offspring-read-from-giving-that-waits",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+    "theories/becoming/chapters/05-COLLECTIVES.md#grounded-start",
+    "theories/becoming/results/records/joint-plans-from-a-supported-start.md#correspondence--对应"
+   ]
+  },
+  {
+   "id": "cx-syscyb-feedback-as-purpose",
+   "field": "targets[3].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "Formations each holding a set point,",
+     "new": "Formations each alone with its family, holding the family's stock,"
+    },
+    {
+     "old": "a gated condition, end it",
+     "new": "a condition gated at `m` at each of `n` steps from a level below `n + m`, end it"
+    }
+   ],
+   "labels": null,
+   "why": "05 now states the joint ending for a condition gated at m at each of n steps from a level below n + m; the field also takes the home's premise that each formation is alone with its family, holding the family's stock (which a set point held implies), which it had dropped.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-what-a-set-point-optimum-does-beyond",
+    "theories/becoming/chapters/05-COLLECTIVES.md#rise-from-beyond",
+    "theories/becoming/results/records/what-a-set-point-optimum-does-beyond.md#laws--规律"
+   ]
+  },
+  {
+   "id": "cx-ma-engineered-rules",
+   "field": "targets[0].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "no entry from unsafe states, no compliance by actual markets.",
+     "new": "no entry mechanism from unsafe states and no formation of the intervention (entry under a supplied intervention is the Reaching row's), no compliance by actual markets."
+    }
+   ],
+   "labels": null,
+   "why": "05's scope cell now says no entry mechanism from unsafe states and no formation of the intervention, entry under a supplied intervention being the Reaching row's; the old 'no entry' read false beside the supported transitions.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-market-protected-continuation",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-market-partial-correction-boundary",
+    "theories/becoming/results/records/market-protected-continuation.md#does-not-show--未表明"
+   ]
+  },
+  {
+   "id": "cx-indaf-relational-tipping",
+   "field": "targets[3].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "and ignition needs a reserve already present.",
+     "new": "and ignition, which the move defines as spending a reserve, needs one already present (near-definitional)."
+    }
+   ],
+   "labels": null,
+   "why": "05 now says ignition, which the move defines as spending a reserve, needs one already present, near-definitional, in the exchange witness; the field now carries the definition and the standing.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start",
+    "theories/becoming/chapters/05-COLLECTIVES.md#joint-plans",
+    "theories/becoming/results/records/joint-plans-from-a-supported-start.md#laws--规律",
+    "theories/becoming/results/records/joint-plans-from-a-supported-start.md#does-not-show--未表明"
+   ]
+  },
+  {
+   "id": "cx-indaf-relational-tipping",
+   "field": "reading",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "promises start nothing, and ignition needs a reserve already there.",
+     "new": "promises force no start, and ignition, defined as spending a reserve, needs one already there (near-definitional)."
+    }
+   ],
+   "labels": null,
+   "why": "The reading restated 05: promises now force no start rather than start nothing, and ignition needs a reserve by the move's definition, near-definitional; the reader's point, that the relational race itself is not stated, still holds.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start",
+    "theories/becoming/chapters/05-COLLECTIVES.md#joint-plans",
+    "theories/becoming/results/records/joint-plans-from-a-supported-start.md#laws--规律",
+    "theories/becoming/results/records/joint-plans-from-a-supported-start.md#does-not-show--未表明",
+    "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-offspring-read-from-giving-that-waits"
+   ]
+  },
+  {
+   "id": "cx-wamo-capacity-before-action",
+   "field": "targets[0].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "In the exchange witness ignition needs a reserve already present:",
+     "new": "In the exchange witness ignition, which the move defines as spending a reserve, needs one already present (near-definitional):"
+    },
+    {
+     "old": "; ignition needs the reserve and uses it up.",
+     "new": "; so defined, ignition needs the reserve and uses it up."
+    }
+   ],
+   "labels": null,
+   "why": "05 now says ignition, which the move defines as spending a reserve, needs one already present, near-definitional, in the exchange witness; the field now carries the definition and the standing. The record's law now reads 'ignition, defined as spending a reserve, needs the reserve and uses it up (near-definitional)'.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start",
+    "theories/becoming/chapters/05-COLLECTIVES.md#joint-plans",
+    "theories/becoming/results/records/joint-plans-from-a-supported-start.md#laws--规律",
+    "theories/becoming/results/records/joint-plans-from-a-supported-start.md#does-not-show--未表明"
+   ]
+  },
+  {
+   "id": "cx-zhishan-goodwill-not-carrier",
+   "field": "targets[0].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "; ignition needs a reserve already present.",
+     "new": "; in the exchange witness ignition, which the move defines as spending a reserve, needs one already present (near-definitional)."
+    }
+   ],
+   "labels": null,
+   "why": "05 now says ignition, which the move defines as spending a reserve, needs one already present, near-definitional, in the exchange witness; the field now carries the definition and the standing. The witness qualifier, dropped before, is restored.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start",
+    "theories/becoming/chapters/05-COLLECTIVES.md#joint-plans",
+    "theories/becoming/results/records/joint-plans-from-a-supported-start.md#laws--规律",
+    "theories/becoming/results/records/joint-plans-from-a-supported-start.md#does-not-show--未表明"
+   ]
+  },
+  {
+   "id": "cx-zhishan-goodwill-not-carrier",
+   "field": "reading",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "ignition needs a reserve already present,",
+     "new": "in a witness ignition, defined as spending a reserve, needs one already present (near-definitional),"
+    },
+    {
+     "old": "Building shared capacity can be warranted only under the continuation condition and C with J1 to J4, and overbuilding that depletes the living basis is the counterexample.",
+     "new": "Under the continuation condition, for scope, and C, for order, neither asserted and their warrant open, with J1 to J4, complete relational correspondence and actual improvement witnesses, building shared capacity can be warranted; overbuilding that depletes the living basis is the counterexample where construction reports omit retained amounts."
+    }
+   ],
+   "labels": null,
+   "why": "Ignition now carries its definition and standing. The ethics sentence said 'only under' the condition and C, wider than the Conditional (sufficient premises, not necessary ones, and a ranking needs C or a premise in its place); it now names both premises, unasserted, warrant open, and the Conditional's other premises and qualifier.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start",
+    "theories/becoming/chapters/05-COLLECTIVES.md#joint-plans",
+    "theories/becoming/results/records/joint-plans-from-a-supported-start.md#laws--规律",
+    "theories/becoming/results/records/joint-plans-from-a-supported-start.md#does-not-show--未表明",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-organizational-formation-from-generative-comparison",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-succession-on-a-funded-carrier"
+   ]
+  },
+  {
+   "id": "cx-hsm-value-or-tool-alone",
+   "field": "targets[1].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "; “ignition needs a reserve already present”.",
+     "new": "; in the exchange witness “ignition, which the move defines as spending a reserve, needs one already present” (near-definitional)."
+    }
+   ],
+   "labels": null,
+   "why": "05 now says ignition, which the move defines as spending a reserve, needs one already present, near-definitional, in the exchange witness; the field now carries the definition and the standing. The quotation now matches 05's words.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start",
+    "theories/becoming/chapters/05-COLLECTIVES.md#joint-plans",
+    "theories/becoming/results/records/joint-plans-from-a-supported-start.md#laws--规律",
+    "theories/becoming/results/records/joint-plans-from-a-supported-start.md#does-not-show--未表明"
+   ]
+  },
+  {
+   "id": "cx-hsm-coordination-protocols",
+   "field": "targets[0].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "and every pair of locally authorized moves jointly allowed and keeping both,",
+     "new": "every pair of locally authorized moves jointly allowed with a successor wherever both hold, and every admitted joint successor keeping both,"
+    },
+    {
+     "old": "; “ignition needs a reserve already present”.",
+     "new": "; in the exchange witness “ignition, which the move defines as spending a reserve, needs one already present” (near-definitional)."
+    }
+   ],
+   "labels": null,
+   "why": "05 now says ignition, which the move defines as spending a reserve, needs one already present, near-definitional, in the exchange witness; the field now carries the definition and the standing. The joint-availability premise, which the field had merged into keeping, is restored in 05's words (availability is what preservation does not give).",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start",
+    "theories/becoming/chapters/05-COLLECTIVES.md#joint-plans",
+    "theories/becoming/results/records/joint-plans-from-a-supported-start.md#laws--规律",
+    "theories/becoming/results/records/joint-plans-from-a-supported-start.md#does-not-show--未表明"
+   ]
+  },
+  {
+   "id": "cx-wamo-capacity-before-action",
+   "field": "reading",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "Ignition needs a reserve already present, and formed",
+     "new": "In a witness, ignition, which the move defines as spending a reserve, needs one already present (near-definitional), and formed"
+    },
+    {
+     "old": "; ignition uses the reserve up.",
+     "new": "; so defined, ignition uses the reserve up."
+    }
+   ],
+   "labels": null,
+   "why": "The reading restated 05's ignition clause, which now carries the definition and its near-definitional standing; the reader's point, that how a supported start forms is not shown, still holds, and the witness's reserve is now prior to use by definition.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start",
+    "theories/becoming/chapters/05-COLLECTIVES.md#joint-plans",
+    "theories/becoming/results/records/joint-plans-from-a-supported-start.md#laws--规律",
+    "theories/becoming/results/records/joint-plans-from-a-supported-start.md#does-not-show--未表明"
+   ]
+  }
+ ],
+ "unlisted": [
+  {
+   "id": "cx-sspiral-trust-output",
+   "field": "reading",
+   "says": "giving lost everywhere is restored only by a law giving first; promises start no loop",
+   "note": "paraphrase of the removed D48 wording; 05 now: rebuilt only where some formation spares all it waits on; promises force no start"
+  },
+  {
+   "id": "cx-sty-intersubjective-infrastructure",
+   "field": "account_adds",
+   "says": "that mutual promises cannot start a loop with no source",
+   "note": "missed by the window (no 'alone'); 05 now: force no start of a loop with no source"
+  },
+  {
+   "id": "cx-abr-covenant-given-first",
+   "field": "reading",
+   "says": "05's form: promises alone start nothing",
+   "note": "05 now: force no start"
+  },
+  {
+   "id": "cx-hsm-value-or-tool-alone",
+   "field": "reading",
+   "says": "promises alone start nothing where neither side moves",
+   "note": "05 now: force no start"
+  },
+  {
+   "id": "cx-indaf-relational-tipping",
+   "field": "account_adds",
+   "says": "what a promise cannot start",
+   "note": "05 now: what a promise does not force to start"
+  },
+  {
+   "id": "cx-archearth-part-failure-kept-local",
+   "field": "targets[0].says",
+   "says": "No entry from unsafe states.",
+   "note": "05's scope cell now: no entry mechanism from unsafe states and no formation of the intervention (entry under a supplied intervention is the Reaching row's)"
+  },
+  {
+   "id": "cx-fork-infrastructure-upstream",
+   "field": "reading",
+   "says": "ignition needs an actual reserve",
+   "note": "now defined as spending a reserve, near-definitional, in a witness"
+  },
+  {
+   "id": "cx-wamo-dali-feasibility",
+   "field": "reading",
+   "says": "since ignition needs one",
+   "note": "now defined as spending a reserve, near-definitional, in a witness"
+  }
+ ]
+}

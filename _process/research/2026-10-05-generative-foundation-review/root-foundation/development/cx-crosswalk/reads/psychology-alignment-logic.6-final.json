@@ -1254,7 +1254,7 @@
      "record": "readings-within-what-they-read",
      "anchor": "theories/becoming/chapters/03-KNOWING.md#r-readings-within-what-they-read",
      "says": {
-      "en": "Theorem (any type). Where a map moves every value, no member of a family of readings indexed by what it reads says the diagonal gap. Completing step by step is an unfolding incomplete at every step that never returns. Lawvere's fixed point as an unfolding; coding and provability are not stated. The record: the rhythm is shown periodic for two-valued negation only."
+      "en": "Theorem (any type). Where a map moves every value, no member of a family of readings indexed by what it reads says the diagonal gap. Where the map moves every value, completing step by step is an unfolding incomplete at every step that never returns. Lawvere's fixed point as an unfolding; coding and provability are not stated. The record: the rhythm is shown periodic for two-valued negation only."
      },
      "role": "carries"
     },
@@ -1495,7 +1495,7 @@
   {
    "id": "cx-pal-lawvere-diagonal",
    "what": "changed",
-   "why": "a correction this crosswalk made at the home: the entry quotes what the home says now, or says what it said until 7 November 2026"
+   "why": "a correction this crosswalk made at the home: the entry quotes what the home says now, or says what it said until 7 November 2026 / main changed theories/becoming/results/records/readings-within-what-they-read.json (LM1 or AA, 7 November 2026): targets[0].says states what it says now"
   },
   {
    "id": "cx-pal-constructive-calibrations",

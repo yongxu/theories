@@ -39,9 +39,9 @@
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
-- A coupling added step by step, which gives a course breaking late part of the coupling.
+- A course breaking late part of the coupling: a coupling added step by step gives one, and is in record a-step-coupling-keeps-at-every-horizon.
 - Which optima stand at the tie w + q n = r n + m, or between the thresholds where the ends e reached widen the gap: neither threshold law applies there.
-- An order with a terminal value whose most left is not regrown in one step, or a discount; the optimum rebuilding from below; several optimizers ranking courses.
+- An order with a terminal value whose most left is not regrown in one step; several optimizers ranking courses; this coupling under a discount. A discount without the coupling, and rebuilding from below, are in records a-weighting-faster-than-renewal-ends-the-base and optima-rebuild-a-depleted-base.
 - That the dependence ought to be kept or a coupling set: no evaluation enters; the laws say which optima a coupling leaves.
 
 **Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
@@ -56,7 +56,7 @@ Canonical source: [Optimum.lean](../../../../experiments/integrated-correction/g
 <a id="next--下一步"></a>
 ## Next
 
-A coupling added step by step; an order with a terminal value whose most left is not regrown in one step, or a discount; the optimum rebuilding from below; several optimizers ranking courses; an independent review.
+An order with a terminal value whose most left is not regrown in one step; several optimizers ranking courses; this coupling under a discount; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -139,6 +139,7 @@ Aliases: `keeping forgoes the renewal at the need`, `what keeping a dependence f
 - 22 October 2026, SG12: a worth on what is left other than one for one is answered where the most a course can leave is regrown in one step (record valuing-what-is-left-at-any-worth, study section 322); the open item now names the rest. Its laws are unchanged.
 - 25 October 2026, board item DF (study section 418): the scope item no longer says both kinds of optimum stand at the tie: both threshold laws are strict, so the tie and the gap the reached ends leave between the thresholds are stated as not shown; no law changes.
 - 6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.
+- 7 November 2026, board item AA: the atlas's readers found lines gone stale against records a-step-coupling-keeps-at-every-horizon, a-weighting-faster-than-renewal-ends-the-base and optima-rebuild-a-depleted-base, the coupling under a discount kept open; corrected against the Lean and the later records.
 
 </details>
 

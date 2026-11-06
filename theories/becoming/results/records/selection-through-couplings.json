@@ -233,8 +233,8 @@
     "en": "Machine-checked by the consolidated Lean 4.29.1 checker: the theorems of Becoming.Selection have empty axiom reports (receipt 20261013T094743.528770Z; the current bytes of Selection and Capture bound by 20261013T204910.042715Z, of Testing by 20261014T091930.724493Z), and the checker verifies core purity. Author counterreview in the integration note; no independent review yet."
   },
   "next_delta": {
-    "en": "With transmission, descent and openness (Capture's descent_needs_unrun), the rising share of what reaches beyond.",
-    "zh": "与传递、后代和开放（Capture 的 descent_needs_unrun）组合，陈述伸出者份额的上升。"
+    "en": "Deriving from the flow, with transmission, descent and openness (Capture's descent_needs_unrun), what record what-a-rise-draws-from-beyond takes as a premise: that more offspring go to raisers.",
+    "zh": "结合传递、后代和开放（Capture 的 descent_needs_unrun），由流导出记录 what-a-rise-draws-from-beyond 作为前提者：后代更多者归于升高者。"
   },
   "correspondence": {
     "zh": "2026-10-12，Ren 问“hows cause–effect system comparing to our theory?”，并贴入一段作者未注明的因果系统说明（不是 Ren 的话，也不是前提）；AI 作比较并提出五项可学之处后，Ren 写“Great, let's finish all of them, you can spawn sub agents in a wise order if needed”。本记录是其中第一项，五项提议是 AI 的。读法（AI 的，依 Ren 的交托采用）：任何由耦合入选择者者决定的选择（保留、奖励、繁殖、训练）恰及耦合入选择者的，对候选者的部分在选择者耦合闭包之外所做的不见，无论其所及闭包延伸多远；缺口是所及闭包减去耦合闭包，只经依存、经水平的耦合或他者的耦合合起来才合上；伸出而抬高耦合入者之处，选择偏向它，连同 share_rises，伸出者的份额在世界开放时上升；以 AI 训练读，奖励过程是选择者，训练只及耦合入奖励的。AI 把这与 Ren 一篇论文的标题 “When Capability Outruns Correction” 相接；这是 AI 的联系。见整合文档 §86。",
@@ -827,6 +827,10 @@
     {
       "en": "29 October 2026, board item UE18 (study section 452): related to the-markov-blanket-as-a-coupling-structure; no statement, next step or declaration changed.",
       "zh": "2026年10月29日，工作板条目 UE18（研究第 452 节）：与 the-markov-blanket-as-a-coupling-structure 相关联；无一陈述、下一步或声明改变。"
+    },
+    {
+      "en": "7 November 2026, board item AA: the atlas's readers found a next step gone stale against record what-a-rise-draws-from-beyond; corrected against the Lean and the later records.",
+      "zh": "2026年11月7日，工作板条目 AA：图谱读者发现下一步已落后于记录 what-a-rise-draws-from-beyond；已对照 Lean 与后来的记录改正。"
     },
     {
       "en": "7 November 2026, CX: the correspondence corrected where a reader of the crosswalk found it wider than its source or its home (the crosswalk's live flags, checked at home); no law, premise or scope of this record changed.",

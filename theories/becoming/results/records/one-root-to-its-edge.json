@@ -268,7 +268,7 @@
     {
       "path": "theories/becoming/chapters/08-METHOD.md",
       "role": "statement",
-      "sha256": "0cc7e6172708551bcf7eff0e3ddb044edfdf1162ee80cf40cb12c0544d1ad095",
+      "sha256": "2d1834003434826775bdec3408cd5fc34c11fec7e3b410479278234e41b040c9",
       "declarations": []
     },
     {
@@ -377,6 +377,10 @@
     {
       "en": "2 November 2026, board item PF3: a basis corrected to say what ranks lies in C in general alone, since 07 §4.4's theorem has an order rising with one's own continuation rank one case with no C; no law, premise or proof changes.",
       "zh": "2026年11月2日，看板条目 PF3：更正一条依据，说排序一般而言唯在 C，因为 07 §4.4 的定理表明，一个随自身延续上升的次序不靠 C 也排出一种情形；没有定律、前提或证明改变。"
+    },
+    {
+      "en": "7 November 2026, board item LM1: a reader of LM found this said C orders alone, where a ranking of courses needs C or a premise in its place (07 §4.4); corrected. No law, premise or proof changed.",
+      "zh": "2026年11月7日，工作板条目 LM1：LM 之读者指出此处谓唯 C 定序，而对进程的排序需要 C 或一个代替它的前提（07 §4.4）；已更正。诸律、前提与证明皆不变。"
     }
   ],
   "boundary": {
@@ -888,7 +892,7 @@
         "premise": "Becoming.Comparison",
         "not_entailed": "Becoming.ReadsNoOrder.not_entails",
         "basis": {
-          "en": "What ranks lies in C, in general alone: the condition by itself orders nothing. Where a frame has an extension, no statement reading no order and holding at some order entails C; this is immediate, since \"better\" is free. A reason for C is open apart from the condition."
+          "en": "What ranks lies in C or a premise in its place: the condition by itself orders nothing. Where a frame has an extension, no statement reading no order and holding at some order entails C; this is immediate, since \"better\" is free. A reason for C is open apart from the condition."
         },
         "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-PREMISE-C.md"
       }

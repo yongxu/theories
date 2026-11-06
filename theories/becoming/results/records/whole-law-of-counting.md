@@ -75,7 +75,7 @@
 <a id="conditions--条件"></a>
 ## Conditions
 
-- Listing and decidability: as in census-balance; read of worlds, decided activity. It is a logical commitment of the representation.
+- Listing and decidability: as in census-balance; read of worlds, decided activity. It is the law's own condition, not a commitment of the representation.
 - Pointwise: the property respects the counts' values at each step. With function extensionality every property does; the pure core does not assume it, so it is a hypothesis of the theorems; tally_iff_counted states the characterization without it.
 
 <a id="does-not-show--未表明"></a>
@@ -242,6 +242,7 @@ Aliases: `Becoming.Tally`, `Becoming.Listed.keeps`, `Becoming.Listed.tally`, `Be
 - 25 October 2026, board item DF (study section 418): a subset of the eight premises is now called a choice of premises, not a selection ('chooses', 'chosen'), in every live field: selection is the word for what goes through couplings; and 'the author's reading' in the correspondence reads 'a reading (the AI's argument)'. The laws and their scope are unchanged.
 - 1 November 2026, U4c (study section 492): declarations moved with their full names: steps_last, steps_mem, total_pos to Becoming.Prelude, with the list and stretch lemmas the root's census laws use. The cited Lean source and its proof binding follow them; the claim is unchanged.
 - 1 November 2026, board item ND (study section 492): declarations renamed so that each name states what it means, not a command, a value or an ownership: CountsObey → CensusMarksHold. The statements are kept but for the names; the claim is unchanged.
+- 7 November 2026, board item AA: the atlas's readers found a hypothesis calling decidedness a commitment of the representation, where since Becoming.Decidedness each law states it as its own condition (08, the logical commitment); corrected against the Lean and the later records.
 - 11 rebinding entries (2026-10-10 to 2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](whole-law-of-counting.json).
 
 <a id="earlier-text--早期文本"></a>

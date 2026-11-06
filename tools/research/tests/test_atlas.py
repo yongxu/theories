@@ -46,7 +46,7 @@ VOCABULARY = {
     'families': [{'id': 'C', 'en': 'Capture of the selection'}, {'id': 'G', 'en': 'Closure and stagnation'}],
     'bases': [{'en': 'root', 'zh': '根'}, {'en': 'any type'}, {'en': 'World'}],
     'transition_kinds': [{'en': 'window or deadline'}, {'en': 'exact threshold'}],
-    'exit_strengths': [{'en': 'sufficient'}, {'en': 'necessary'}, {'en': 'exact'}],
+    'exit_strengths': [{'en': 'sufficient'}, {'en': 'necessary'}, {'en': 'exact'}, {'en': 'witness'}],
     'standings_without_record': [{'en': 'argued'}, {'en': 'conjectured'}, {'en': 'reading', 'zh': '读法'}, {'en': 'open', 'zh': '未决'}],
     'test_states': [{'en': 'designed'}, {'en': 'frozen'}, {'en': 'run'}],
     'domains': [{'en': 'earlier-folders'}, {'en': 'greek-roman'}],
@@ -216,6 +216,7 @@ class ValidationTests(AtlasCase):
         self.assertEqual(self.errors(capture(exits=[exit_(strength='exact')])), [])
         self.assertOne(self.errors(capture(exits=[exit_(edge=None)])), 'exits[0].edge: every exit names its edge')
         self.assertOne(self.errors(capture(exits=[exit_(strength='exact', law=None)])), 'exits[0].law: an exact exit names its law')
+        self.assertOne(self.errors(capture(exits=[exit_(strength='witness', law=None)])), 'exits[0].law: a witness exit names its law')
         self.assertOne(self.errors(capture(tests=[{'path': 'experiments/tests/t9', 'thesis': 'T9', 'state': 'designed'}])),
                        'tests[0].path: no experiments/tests/t9')
 
@@ -261,8 +262,7 @@ class RenderTests(AtlasCase):
         self.assertEqual(errors, [])
         page = pages[atlas.PAGE]
         self.assertTrue(page.startswith(atlas.GENERATED + '\n'))
-        self.assertIn('| [Closed capture (元吸引子)](#closed-capture) | A rule read from the share it selects, nothing in the loop '
-                      'reading beyond the share. | [closed-capture](../records/closed-capture.md), [loss-read-in-time]'
+        self.assertIn('| [Closed capture (元吸引子)](#closed-capture) | [closed-capture](../records/closed-capture.md), [loss-read-in-time]'
                       '(../records/loss-read-in-time.md) | any type | recorded-checked (theorem); reviewed-scoped (assessment) | 1 | 1 |', page)
         self.assertIn('| [Self-reproducing selection across carriers](#self-reproducing-selection) |', page)
         self.assertIn('| [C. Capture of the selection](#family-c) | 2 |', page)

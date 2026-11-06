@@ -321,8 +321,8 @@
       "kind": "scope"
     },
     {
-      "en": "That a set point protects what lies beyond: where a step can lose what it takes, the order by distance has the draining step among its optima beside the keeping one; what protects is the choice among equal optima.",
-      "zh": "设定点保护之外：一步可失其所取时，距离之序的最优中既有抽取的一步，也有保持的一步；保护者是同等最优中的选择。",
+      "en": "That a set point protects what lies beyond: in a witness where a step can lose what it takes, the order by distance has the draining step among its optima beside the keeping one; what protects is the choice among equal optima.",
+      "zh": "设定点保护之外：在一步可失其所取的见证中，距离之序的最优中既有抽取的一步，也有保持的一步；保护者是同等最优中的选择。",
       "kind": "non-implication",
       "witness": "Becoming.Optimum.Topped.nearing_either"
     },
@@ -347,8 +347,8 @@
       "kind": "scope"
     },
     {
-      "en": "That the beyond's fall is a harm, or that keeping is better: no evaluation enters; ranking courses needs C.",
-      "zh": "之外的降低是伤害、保持更好：没有评价进入；排序进程须 C。",
+      "en": "That the beyond's fall is a harm, or that keeping is better: no evaluation enters; ranking courses needs C or a premise in its place.",
+      "zh": "之外的降低是伤害、保持更好：没有评价进入；排序进程须 C 或代替它的前提。",
       "kind": "non-implication"
     }
   ],
@@ -664,7 +664,7 @@
     {
       "path": "theories/becoming/chapters/05-COLLECTIVES.md",
       "role": "statement",
-      "sha256": "cd378089030fd50971e459ccca8c7aa92dd1c07214efb13441ad58c0860d29d5"
+      "sha256": "659472a74d25b001790c7d8f0fce704831e66e19f7ff7061a26a7322cd7e0bd8"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json",
@@ -709,6 +709,10 @@
     {
       "en": "29 October 2026, board item UE16 (study section 449): related to risk-minimization-on-a-shared-renewal; no statement, next step or declaration changed.",
       "zh": "2026年10月29日，工作板条目 UE16（研究第 449 节）：与 risk-minimization-on-a-shared-renewal 相关联；无一陈述、下一步或声明改变。"
+    },
+    {
+      "en": "7 November 2026, board item AA: the atlas's readers found a witness stated generally, and a ranking of courses said to need C alone, where it needs C or a premise in its place (07 §4); corrected against the Lean and the later records.",
+      "zh": "2026年11月7日，工作板条目 AA：图谱读者发现一个见证被一般地陈述，一处说进程之排序只须 C，而它须 C 或代替它的前提（07 §4）；已对照 Lean 与后来的记录改正。"
     }
   ]
 }

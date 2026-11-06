@@ -34,7 +34,7 @@
 ## Conditions
 
 - Listing: the members holding at each step are listed, each once; there may be infinitely many members in all.
-- Decidability: counting needs it decided whether each member holds at adjacent steps; read of standing this holds automatically, read of activity it is decided activity, read of dependence decided dependence. It is a logical commitment of the representation.
+- Decidability: counting needs it decided whether each member holds at adjacent steps; read of standing this holds automatically, read of activity it is decided activity, read of dependence decided dependence. It is the law's own condition, not a commitment of the representation.
 
 <a id="does-not-show--未表明"></a>
 ## Does not show
@@ -159,6 +159,7 @@ Aliases: `Becoming.Listed.across`, `Becoming.Listed.over_stretch`, `Becoming.Lis
 - 25 October 2026, board item DF (study section 418): in the correspondence 'the author's reading (an AI argument)' reads 'a reading (the AI's)'; the claim is unchanged.
 - 28 October 2026, EC6d (EC6's audit): a law added, the census read of activity on a web, counted with no decidedness (CensusWebs.keep_pace, CountsAcross.keep_pace, Counts.over_stretch), so that COVERAGE's dissolution row cites a declaration this record states; Counts.over_stretch now follows from the prelude's stretch balance (EC6b). The statement is unchanged.
 - 1 November 2026, U4c (study section 492): Listed.across_at is re-proved as a case of the root's census of a step, its statement unchanged, and the root's census joins related. Law 1 says Listed.across is that case and declares Listed.keeps, whose counting of the members kept the text names, in place of marks_le_of_sub, which Listed.across no longer goes through; law 5 and the related note on ceasing-needs-arising say the census law was proved from the balance until U4c and still follows from it; law 8 declares total_mark_eq_count, by which Listed.across_at reads marks as the root's count. Declarations moved with their full names: steps_last, steps_mem, pos_of_exceeds, total_pos to Becoming.Prelude, with the list and stretch lemmas the root's census laws use. The cited Lean source and its proof binding follow them; the claim is unchanged.
+- 7 November 2026, board item AA: the atlas's readers found a hypothesis calling decidedness a commitment of the representation, where since Becoming.Decidedness each law states it as its own condition (08, the logical commitment); corrected against the Lean and the later records.
 - 8 rebinding entries (2026-10-13 to 2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](census-balance.json).
 
 <a id="earlier-text--早期文本"></a>

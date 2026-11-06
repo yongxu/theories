@@ -38,7 +38,7 @@
 ## Does not show
 
 - Steps met again after a fall, which this coupling does not count (counted, see steps-met-again-after-a-fall); the keeping course as an optimum at c = m, where it ties with the course ending at nothing.
-- An order with a terminal value whose most left is not regrown in one step, or a discount; the optimum rebuilding from below; several optimizers ranking courses.
+- An order with a terminal value whose most left is not regrown in one step; several optimizers ranking courses; this coupling under a discount. A discount without the coupling, and rebuilding from below, are in records a-weighting-faster-than-renewal-ends-the-base and optima-rebuild-a-depleted-base.
 - That the dependence ought to be kept or a coupling set: no evaluation enters; the laws say which optima a coupling leaves.
 
 **Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
@@ -53,7 +53,7 @@ Canonical source: [Optimum.lean](../../../../experiments/integrated-correction/g
 <a id="next--下一步"></a>
 ## Next
 
-an order with a terminal value whose most left is not regrown in one step, or a discount; the optimum rebuilding from below; several optimizers ranking courses; an independent review.
+an order with a terminal value whose most left is not regrown in one step; several optimizers ranking courses; this coupling under a discount; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -140,6 +140,7 @@ Aliases: `a coupling a step keeps a dependence at every horizon`, `a coupling ad
 - 22 October 2026, SG13: steps met again after a fall are answered (record steps-met-again-after-a-fall, study section 323); its open item says so. Its laws are unchanged.
 - 3 November 2026, board item CDR: related to coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it, the case of several drawers in turn and at once this record's does-not-show leaves out; no law, hypothesis or declaration changed.
 - 6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.
+- 7 November 2026, board item AA: the atlas's readers found a line gone stale against records a-weighting-faster-than-renewal-ends-the-base and optima-rebuild-a-depleted-base, the coupling under a discount kept open; corrected against the Lean and the later records.
 
 </details>
 

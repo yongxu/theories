@@ -339,7 +339,7 @@
      "record": "where-novelty-gain-comes-from",
      "anchor": "theories/becoming/chapters/02-MAP.md#r-where-novelty-gain-comes-from",
      "says": {
-      "en": "With the rest of the whole counted, every rise is given net by some relatum; a listed whole the rest gives nothing net is not new at every step. 'Novelty, and formations first supported without end, need gain; gain is not openness.'"
+      "en": "With the rest of the whole counted, every rise is given net by some relatum; under the first law a whole listed without repetition that the rest gives nothing net is not new at every step. 'Novelty, and formations first supported without end where what each requires stays fixed within the family, need gain; gain is not openness.'"
      },
      "role": "carries"
     },
@@ -3744,6 +3744,11 @@
    "id": "cx-modphil-whitehead-immanent-law",
    "what": "changed",
    "why": "second critic (label): Memory against memory, the sense matches Adventures of Ideas ch. VII, the two 08 homes are copied faithfully, and fresh-reading and agreement of thesis-or-method hold. But 'agrees against imposition only' misses 01's reading D65, where three World premises hold 'by what their terms are', the form of his immanence on one model, and 08 §12's limit that calling an input immanent does not discharge it; both are added and the reading and source_adds amended."
+  },
+  {
+   "id": "cx-modphil-whitehead-creativity",
+   "what": "changed",
+   "why": "main changed theories/becoming/chapters/02-MAP.md (LM1 or AA, 7 November 2026): targets[0].says states what it says now"
   },
   {
    "id": "cx-modphil-whitehead-misplaced-concreteness",

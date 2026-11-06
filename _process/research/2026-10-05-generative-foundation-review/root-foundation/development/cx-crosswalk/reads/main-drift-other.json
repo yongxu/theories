@@ -1,0 +1,289 @@
+{
+ "cluster": "other",
+ "items": [
+  {
+   "id": "cx-memories-lossy-consolidation",
+   "field": "targets[1].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "a bounded family exchanged with arbitrarily late carries neither the count of its exchanges nor a finite whole (`World.forgets_of_bounded`).",
+     "new": "a family whose stock stays within a bound, exchanged with at arbitrarily late steps, does not carry the count of its exchanges (`Flow.uncarried_of_bounded`), and a finite whole within a bound that keeps exchanging does not carry its history (`World.forgets_of_bounded`)."
+    }
+   ],
+   "labels": null,
+   "why": "The row now gives the count law its own declaration and says the bounded finite whole does not carry its history, where the field's 'carries neither the count nor a finite whole' quoted the garbled old clause. Copied from the row; 'On the levels alone' still opens the row and the record's statement.",
+   "read": [
+    "theories/becoming/chapters/02-MAP.md#r-returning-novelty-forgetting-on-levels",
+    "theories/becoming/results/records/returning-novelty-forgetting-on-levels.json"
+   ]
+  },
+  {
+   "id": "cx-ctxrt-not-a-fixed-point-bet",
+   "field": "targets[4].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "formations first supported without end, need gain",
+     "new": "formations first supported without end where what each requires stays fixed within the family, need gain"
+    }
+   ],
+   "labels": null,
+   "why": "The quoted sentence now carries the record's premise (Web.RequiresWithin): new formation needs gain where what each requires stays fixed within the family. The quotation takes the row's words; novelty's need of gain is unqualified, so the entry's 'novelty needs gain' stands.",
+   "read": [
+    "theories/becoming/chapters/02-MAP.md#r-where-novelty-gain-comes-from",
+    "theories/becoming/results/records/where-novelty-gain-comes-from.json"
+   ]
+  },
+  {
+   "id": "cx-modphil-whitehead-creativity",
+   "field": "targets[0].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "a listed whole the rest gives nothing net is not new at every step.",
+     "new": "under the first law a whole listed without repetition that the rest gives nothing net is not new at every step."
+    },
+    {
+     "old": "formations first supported without end, need gain",
+     "new": "formations first supported without end where what each requires stays fixed within the family, need gain"
+    }
+   ],
+   "labels": null,
+   "why": "The row now states the whole's law under the first law and listed without repetition (`Flow.whole_not_new_of_rest_idle`), and the quoted sentence carries the premise that what each formation requires stays fixed within the family. Both taken from the row; the reading's 'novelty without end needs gain' is the unqualified half and stands.",
+   "read": [
+    "theories/becoming/chapters/02-MAP.md#r-where-novelty-gain-comes-from",
+    "theories/becoming/results/records/where-novelty-gain-comes-from.json"
+   ]
+  },
+  {
+   "id": "cx-kpso-stabilize-and-keep-going",
+   "field": "targets[2].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "order needs C, whose",
+     "new": "order needs C or a premise in its place, whose"
+    }
+   ],
+   "labels": null,
+   "why": "02's line now reads 'order needs C or a premise in its place' (LM1: an order rising with one's own continuation ranks one case with no C); the field quotes the old line, so it takes the new words.",
+   "read": [
+    "theories/becoming/chapters/02-MAP.md#not-shown",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-would-give-c"
+   ]
+  },
+  {
+   "id": "cx-syscyb-ashby-self-organizing",
+   "field": "targets[3].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "order needs C, whose",
+     "new": "order needs C or a premise in its place, whose"
+    }
+   ],
+   "labels": null,
+   "why": "02's line now reads 'order needs C or a premise in its place' (LM1: an order rising with one's own continuation ranks one case with no C); the field quotes the old line, so it takes the new words. The second sentence still matches the list.",
+   "read": [
+    "theories/becoming/chapters/02-MAP.md#not-shown"
+   ]
+  },
+  {
+   "id": "cx-dpc-direction-of-complexity",
+   "field": "targets[0].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "order needs C, whose",
+     "new": "order needs C or a premise in its place, whose"
+    }
+   ],
+   "labels": null,
+   "why": "02's line now reads 'order needs C or a premise in its place' (LM1: an order rising with one's own continuation ranks one case with no C); the field quotes the old line, so it takes the new words. The second sentence still matches the list.",
+   "read": [
+    "theories/becoming/chapters/02-MAP.md#not-shown"
+   ]
+  },
+  {
+   "id": "cx-fork-generative-criterion",
+   "field": "targets[0].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "order needs C, whose",
+     "new": "order needs C or a premise in its place, whose"
+    }
+   ],
+   "labels": null,
+   "why": "02's line now reads 'order needs C or a premise in its place' (LM1: an order rising with one's own continuation ranks one case with no C); the field quotes the old line, so it takes the new words. The theorem half still matches 02 §1.",
+   "read": [
+    "theories/becoming/chapters/02-MAP.md#r-generation-and-degeneration-at-two-grains",
+    "theories/becoming/chapters/02-MAP.md#not-shown"
+   ]
+  },
+  {
+   "id": "cx-memories-value-words-recast",
+   "field": "reading",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "that the wider is better needs C, whose losses count",
+     "new": "that the wider is better needs C or a premise in its place, whose losses count"
+    }
+   ],
+   "labels": null,
+   "why": "The reading states the account's position in 02's old words; since LM1 a ranking of courses needs C or a premise in its place, self-concern ranking one case with no C. The point holds: neither premise is asserted, warrant open, and the definition carries none, so recasting still gives no ought.",
+   "read": [
+    "theories/becoming/chapters/02-MAP.md#not-shown",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-would-give-c",
+    "theories/becoming/ONE-PAGE.md"
+   ]
+  },
+  {
+   "id": "cx-jianwen-self-articulation",
+   "field": "targets[1].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "a family is complete exactly",
+     "new": "some family is complete exactly"
+    },
+    {
+     "old": "Completing it step by step is",
+     "new": "Where a map moves every value, completing it step by step is"
+    }
+   ],
+   "labels": null,
+   "why": "03 now says 'some family is complete' (complete_iff_alike asserts a family exists) and puts the unfolding under 'Where the map moves every value'; the field had neither. Both taken from 03's paragraph.",
+   "read": [
+    "theories/becoming/chapters/03-KNOWING.md#r-readings-within-what-they-read",
+    "theories/becoming/results/records/readings-within-what-they-read.json"
+   ]
+  },
+  {
+   "id": "cx-kpso-correction-keystone",
+   "field": "targets[1].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "A coincidence: the window matched bounded-census-keeps-pace.json's 'a commitment of the representation and'; the field paraphrases 07's D65 reading, which main did not change and which still keeps apart an omission of the representation, a fault in organized relations and informed harm.",
+   "read": [
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#route-b"
+   ]
+  },
+  {
+   "id": "cx-rsd-rebuild-feedbacks",
+   "field": "targets[4].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "A coincidence: the window matched bounded-census-keeps-pace.json's decidability line; the field paraphrases 07's D65 reading at route-b, unchanged on main and still saying what the field says.",
+   "read": [
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#route-b"
+   ]
+  },
+  {
+   "id": "cx-dpc-monotone-systems",
+   "field": "targets[1].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "mutual support without a band gives no rest;",
+     "new": "mutual support without a band need not give rest;"
+    }
+   ],
+   "labels": null,
+   "why": "AA's erratum: Relay.cycles is a witness, and the record now says mutual support without a band 'need not give rest'. The relation and agreement_of stay: the witness still shows the band needed, as the record's correspondence says.",
+   "read": [
+    "theories/becoming/chapters/02-MAP.md#r-coupled-regimes",
+    "theories/becoming/results/records/coupled-regimes.json"
+   ]
+  },
+  {
+   "id": "cx-oi-kevala",
+   "field": "targets[1].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "a family indexed by what it reads",
+     "new": "some family indexed by what it reads"
+    }
+   ],
+   "labels": null,
+   "why": "The record's statement and 03 now say 'some family' is complete exactly where nothing differs; the rest of the clause still matches. The first clause, conditioned on a map moving every value, is not false for claims, which negation always moves.",
+   "read": [
+    "theories/becoming/chapters/03-KNOWING.md#r-readings-within-what-they-read",
+    "theories/becoming/results/records/readings-within-what-they-read.json"
+   ]
+  },
+  {
+   "id": "cx-ctxrt-recursion-self-reading",
+   "field": "targets[0].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "Completing step by step 'is",
+     "new": "Where the map moves every value, completing step by step 'is"
+    }
+   ],
+   "labels": null,
+   "why": "The quoted words still stand in 03, but 03 now puts the unfolding under 'Where the map moves every value', and the field's sentence had no condition. The condition is added outside the quotation.",
+   "read": [
+    "theories/becoming/chapters/03-KNOWING.md#r-readings-within-what-they-read",
+    "theories/becoming/results/records/readings-within-what-they-read.json"
+   ]
+  },
+  {
+   "id": "cx-jianwen-map-territory-mutual",
+   "field": "targets[2].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "Completing it step by step,",
+     "new": "Where a map moves every value, completing it step by step,"
+    }
+   ],
+   "labels": null,
+   "why": "03's sentence now opens 'Where the map moves every value, completing it step by step'; the field quoted it without the condition.",
+   "read": [
+    "theories/becoming/chapters/03-KNOWING.md#r-readings-within-what-they-read",
+    "theories/becoming/results/records/readings-within-what-they-read.json"
+   ]
+  },
+  {
+   "id": "cx-memories-one-model-smaller",
+   "field": "targets[4].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "; completing it step by step is",
+     "new": "; there, completing it step by step is"
+    }
+   ],
+   "labels": null,
+   "why": "03 now states the condition on the unfolding in its own sentence; after the semicolon the field's one 'Where' could be read as covering only the first clause. 'there' ties the unfolding to a map moving every value, as 03 does.",
+   "read": [
+    "theories/becoming/chapters/03-KNOWING.md#r-readings-within-what-they-read",
+    "theories/becoming/results/records/readings-within-what-they-read.json"
+   ]
+  },
+  {
+   "id": "cx-pal-lawvere-diagonal",
+   "field": "targets[0].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "Completing step by step is",
+     "new": "Where the map moves every value, completing step by step is"
+    }
+   ],
+   "labels": null,
+   "why": "03 now puts the unfolding under 'Where the map moves every value'; the field's separate sentence had no condition. The record's scope line on the rhythm still stands.",
+   "read": [
+    "theories/becoming/chapters/03-KNOWING.md#r-readings-within-what-they-read",
+    "theories/becoming/results/records/readings-within-what-they-read.json"
+   ]
+  }
+ ]
+}

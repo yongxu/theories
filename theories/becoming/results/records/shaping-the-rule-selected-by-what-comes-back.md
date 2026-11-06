@@ -36,7 +36,7 @@
 ## Does not show
 
 - That actual practices, institutions or trained systems carry a capacity to shape their rule from parent to offspring, or that what comes back to them is read from their share: these are premises, and their calibration to the present world is not established.
-- That capture damages or supports 生生, or that open rule-making is better than capture: no evaluation enters, and ranking courses needs C.
+- That capture damages or supports 生生, or that open rule-making is better than capture: no evaluation enters, and ranking courses needs C or a premise in its place.
 - Graded capacities, returns growing with the domains captured or passing between them, real-valued shares; readers drawn from the selected are in shaping-read-by-readers-drawn-from-the-selected, drawing in drawn-shaping-drawn-one-at-a-time.
 - That the shared part leaves a stretch unchanged: it is part of the base (shaped_shift) and can turn the verdict (SharedFlips).
 - That the direction holds where the shared part goes to those near the shapers: listed in groups it is a return to them through assortment, and the whole selects for shaping exactly where c < s + m q ρ (shaping-selected-among-groups).
@@ -109,6 +109,7 @@ Aliases: `The capacity to shape the rule, selected by what comes back to it`, `�
 - 30 October 2026, board item RF, RF7 (study section 463): related to when-complying-when-read-is-best; no statement, next step or declaration changed.
 - 3 November 2026, board item AJ8 (study section 503): the step's direction scoped to a shared part coming to every member alike, the gain divided among the shapers' groups now stated in shaping-selected-among-groups, and noise in drawn-shaping-drawn-one-at-a-time; the laws are otherwise unchanged.
 - 6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.
+- 7 November 2026, board item LM1: this said ranking needs C, where a ranking of courses needs C or a premise in its place (07 §4); corrected. No law, premise or proof changed.
 
 </details>
 

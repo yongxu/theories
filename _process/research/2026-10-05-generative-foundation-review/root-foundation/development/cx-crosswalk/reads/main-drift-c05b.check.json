@@ -1,0 +1,157 @@
+{
+ "cluster": "c05b",
+ "items": [
+  {
+   "id": "cx-kpso-trust-before-verification",
+   "field": "targets[1].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Copies 05's D48 reading as it now stands in the worktree, word for word for both clauses, with the [AI reading] label kept; the role 'carries' still holds."
+  },
+  {
+   "id": "cx-sspiral-trust-output",
+   "field": "targets[6].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Same D48 sentence as in 05 now, verbatim; the label 'Reading [AI, D48]' is kept and the role 'carries' still holds."
+  },
+  {
+   "id": "cx-indaf-gift-circulates",
+   "field": "targets[3].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Same D48 sentence as in 05 now, verbatim; the neighbour role and the agreement of reading are unaffected."
+  },
+  {
+   "id": "cx-ma-selfishness-prophecy",
+   "field": "account_adds",
+   "verdict": "ok",
+   "labels": null,
+   "why": "The account_adds now states D48's and the record's correspondence wording, 'force no start'; the scope relation still holds."
+  },
+  {
+   "id": "cx-fork-trust-from-shared-understanding",
+   "field": "targets[2].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Matches 05's D48 'mutual promises alone force no start of a loop with no source'; the neighbour role holds."
+  },
+  {
+   "id": "cx-wamo-abundance-loop",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Matches D48 and the record's correspondence; the seed's form still matches the thresholds law (Tolerance.sparing_gives, Tolerance.total_stays), and the [AI reading] label stays."
+  },
+  {
+   "id": "cx-wamo-self-made-trap",
+   "field": "targets[0].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Matches D48 now; the role 'carries' holds."
+  },
+  {
+   "id": "cx-zhishan-belief-manufactures-trap",
+   "field": "account_adds",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Both halves now follow 05's D48 words ('lets cooperation survive... and rebuilds it... only where some formation spares all it waits on'; 'force no start'); the edit to the tolerance paraphrase is needed, since its 'without rebuilding' was the corrected claim."
+  },
+  {
+   "id": "cx-syscyb-feedback-as-purpose",
+   "field": "targets[3].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Copies 05's premise ('alone with its family, holding the family's stock', which the record's law 17 states) and the new gate ('gated at m at each of n steps from a level below n + m'); the second sentence matches 05 unchanged."
+  },
+  {
+   "id": "cx-ma-engineered-rules",
+   "field": "targets[0].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Matches 05's Scope cell now; the Reaching row is the entry's targets[1], so 'the Reaching row's' stands in for the home's link to it."
+  },
+  {
+   "id": "cx-indaf-relational-tipping",
+   "field": "targets[3].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Copies 05's ignition clause with the exchange witness, the definition and 'near-definitional'; the periphery standing and 'not shown' are kept."
+  },
+  {
+   "id": "cx-indaf-relational-tipping",
+   "field": "reading",
+   "verdict": "fix",
+   "edits": [
+    {
+     "old": "promises start nothing, and ignition needs a reserve already there.",
+     "new": "promises alone force no start, and in the exchange witness ignition, defined as spending a reserve, needs one already there (near-definitional)."
+    }
+   ],
+   "labels": null,
+   "why": "The author's edit drops two qualifiers the home keeps: D48 says mutual promises alone force no start, and 05 states ignition in the exchange witness only; without them the reading states ignition as a general law. The reader's point, that the relational race is not stated, still holds."
+  },
+  {
+   "id": "cx-wamo-capacity-before-action",
+   "field": "targets[0].says",
+   "verdict": "fix",
+   "edits": [
+    {
+     "old": "In the exchange witness ignition needs a reserve already present:",
+     "new": "In the exchange witness ignition, which the move defines as spending a reserve, needs one already present (near-definitional):"
+    },
+    {
+     "old": "; ignition needs the reserve and uses it up.",
+     "new": ". So defined, ignition needs the reserve and uses it up."
+    }
+   ],
+   "labels": null,
+   "why": "The first edit is the author's. In the second, after the semicolon the record's law 3 reads as part of 'Not shown:', yet the record shows it, defined as spending a reserve and near-definitional; a full stop keeps it a statement."
+  },
+  {
+   "id": "cx-zhishan-goodwill-not-carrier",
+   "field": "targets[0].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Copies 05's ignition clause and restores the exchange-witness qualifier; the periphery standing is kept."
+  },
+  {
+   "id": "cx-zhishan-goodwill-not-carrier",
+   "field": "reading",
+   "verdict": "fix",
+   "edits": [
+    {
+     "old": "ignition needs a reserve already present,",
+     "new": "in a witness ignition, defined as spending a reserve, needs one already present (near-definitional),"
+    },
+    {
+     "old": "Building shared capacity can be warranted only under the continuation condition and C with J1 to J4, and overbuilding that depletes the living basis is the counterexample.",
+     "new": "Under the continuation condition, for scope, and C, for order, neither asserted and their warrant open, with J1 to J4, complete relational correspondence and actual improvement witnesses for every deficient case, building shared capacity can be warranted; overbuilding that depletes the living basis is the counterexample where construction reports omit retained amounts."
+    }
+   ],
+   "labels": null,
+   "why": "The author rightly drops 'only under' (the Conditional gives sufficient premises, and a ranking needs C or a premise in its place) and names both premises, but drops 05's qualifier on the witnesses: 'actual improvement witnesses for every deficient case'. It is restored; the first edit is the author's."
+  },
+  {
+   "id": "cx-hsm-value-or-tool-alone",
+   "field": "targets[1].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "The quotation is now an exact substring of 05 ('ignition, which the move defines as spending a reserve, needs one already present'), with the witness and the standing outside the quotation marks."
+  },
+  {
+   "id": "cx-hsm-coordination-protocols",
+   "field": "targets[0].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Both edits copy 05: the joint-availability premise ('jointly allowed with a successor wherever both hold, and every admitted joint successor keeping both') and the ignition clause with the witness and the standing."
+  },
+  {
+   "id": "cx-wamo-capacity-before-action",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "The definition and 'near-definitional' match 05 and the record's law 3; 'in a witness' follows the record's summary; the reader's point, that how a supported start forms is not shown, still holds."
+  }
+ ]
+}

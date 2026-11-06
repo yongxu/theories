@@ -129,8 +129,8 @@
       "en": "Holding: every living claim lies in some standpoint's own region, a correspondence premise. Reading ‘anything that wants its continuation’ as holding and self-significance as wanting is an AI reading (D11)."
     },
     {
-      "zh": "significant_iff_reached 需要持有可判定，是表示的逻辑承诺，同可判定相等。",
-      "en": "significant_iff_reached needs holding to be decided, a logical commitment of the representation, as decided equality is."
+      "zh": "significant_iff_reached 需要持有可判定，是此律自身的条件，不是表示的承诺，同可判定相等。",
+      "en": "significant_iff_reached needs holding to be decided, the law's own condition, not a commitment of the representation, as decided equality is."
     },
     {
       "zh": "significant_of_transmits 需要连通，并需要每个立场都持有某个活的主张。",
@@ -591,6 +591,10 @@
     {
       "en": "30 October 2026 (U2, study section 461): a law on its own carrier added, stating `Becoming.Valuation.significant_iff_held` where its terms are the grammar's, through the row (F5's statements_at_model, reviewed in RECHECK-U2); the row's statement, proof and every other law unchanged.",
       "zh": "2026年10月30日（U2，研究第 461 节）：增于其自身之载体上之律，于其项为文法之处陈述 `Becoming.Valuation.significant_iff_held`，经其本行（F5 之 statements_at_model，经 RECHECK-U2 复核）；本行之陈述、证明与他律皆不改。"
+    },
+    {
+      "en": "7 November 2026, board item AA: the atlas's readers found a hypothesis calling decidedness a commitment of the representation, where since Becoming.Decidedness each law states it as its own condition (08, the logical commitment); corrected against the Lean and the later records.",
+      "zh": "2026年11月7日，工作板条目 AA：图谱读者发现一条假设称可判定为表示的承诺，而自 Becoming.Decidedness 起每条律把它作为自身的条件陈述（08，逻辑承诺一节）；已对照 Lean 与后来的记录改正。"
     }
   ],
   "text_versions": [

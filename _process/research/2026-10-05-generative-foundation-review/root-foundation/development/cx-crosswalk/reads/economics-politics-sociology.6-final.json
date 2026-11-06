@@ -769,7 +769,7 @@
     {
      "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
      "says": {
-      "en": "Reading, AI, D48, neighbour of coercion: 'Kept promises and enforced contracts are laws giving first: the law changes, not the state alone.' 'Tolerance lets cooperation survive scattered withholding, not rebuild it where it is lost everywhere'."
+      "en": "Reading, AI, D48, neighbour of coercion: 'Kept promises and enforced contracts are laws giving first: the law changes, not the state alone.' 'Tolerance lets cooperation survive scattered withholding, and rebuilds it where it is lost everywhere only where some formation spares all it waits on'."
      },
      "role": "neighbour",
      "part": "Reading D48"
@@ -1169,7 +1169,7 @@
      "record": "thresholds-of-waiting",
      "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
      "says": {
-      "en": "'a formation gives where all but its tolerance of what it waits on gave'; a formation sparing all it waits on 'gives from step 1 whatever the start'; 'without one, total withholding stays'. Tolerances are given numbers. Not stated: amounts of giving, thresholds with memory, how tolerances form."
+      "en": "'a formation gives where all but its tolerance of what it waits on gave'; 'Restoring needs a formation that spares all it waits on, which gives from step 1 whatever the start'; 'without one, total withholding stays'. Tolerances are given numbers. Not stated: amounts of giving, thresholds with memory, how tolerances form."
      },
      "role": "carries"
     },
@@ -1534,7 +1534,7 @@
     {
      "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
      "says": {
-      "en": "Reading, AI, D48: 'Tolerance lets cooperation survive scattered withholding, not rebuild it where it is lost everywhere'. Neighbour of contingent commitment, the link mine. 08 names as not stated 'restraint kept by punishing strategies' (folk theorems); here every horizon is finite."
+      "en": "Reading, AI, D48: 'Tolerance lets cooperation survive scattered withholding, and rebuilds it where it is lost everywhere only where some formation spares all it waits on'. Neighbour of contingent commitment, the link mine. 08 names as not stated 'restraint kept by punishing strategies' (folk theorems); here every horizon is finite."
      },
      "role": "neighbour",
      "part": "Reading D48"
@@ -1831,9 +1831,24 @@
    "why": "a correction this crosswalk made at the home: the entry quotes what the home says now, or says what it said until 7 November 2026"
   },
   {
+   "id": "cx-econ-olson-collective-action",
+   "what": "changed",
+   "why": "main changed theories/becoming/chapters/05-COLLECTIVES.md (LM1 or AA, 7 November 2026): targets[3].says states what it says now"
+  },
+  {
    "id": "cx-econ-olson-rise-and-decline",
    "what": "changed",
    "why": "second critic (label): 02 §9's shaping law, its record citing Olson (1965), rent-seeking and regulatory capture, gives the share-seeking part a checked form: shaping is selected exactly where what comes back to the shapers alone covers its cost, whatever comes to every member alike. Accumulation, the drag and the shock have no form and stand in 02's Open, so a fresh reading with scope, not not-carried."
+  },
+  {
+   "id": "cx-econ-granovetter-distribution",
+   "what": "changed",
+   "why": "main changed theories/becoming/COLLECTIVE-DIRECTION.md (LM1 or AA, 7 November 2026): targets[0].says states what it says now"
+  },
+  {
+   "id": "cx-econ-ostrom-commons",
+   "what": "changed",
+   "why": "main changed theories/becoming/chapters/05-COLLECTIVES.md (LM1 or AA, 7 November 2026): targets[3].says states what it says now"
   }
  ],
  "live_flags": [

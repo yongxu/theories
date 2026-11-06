@@ -2,7 +2,7 @@
 
 *AI-written, 4 November 2026, for Ren's review. Nothing here is claimed on the board, landed or run. About fifty minutes to read; §0 takes ten. It rests on seven read-only reports written today ([readers-2026-11-04/](readers-2026-11-04/)), of which four findings were checked against the sources by hand (§1.3). It adds no result.*
 
-*Status, 6 November 2026. Phase 0's errata landed (`cb58b403c`). §7's tests went as far as they could before Ren's hold of that day on new test designs: SCL and CMT are frozen and not run, T7F did not freeze, and the hysteresis test waits on CY. Phase 1's tool and family C have landed ([ATLAS.md](../../../../../../theories/becoming/results/atlas/ATLAS.md)): the dynamics only, of the eight kinds in §3.2. The other seven families and the other kinds are next, their agent counts proposed first. §2 to §12 stand as written on 4 November unless a line says otherwise.*
+*Status, 6 November 2026. Phase 0's errata landed (`cb58b403c`). §7's tests went as far as they could before Ren's hold of that day on new test designs: SCL and CMT are frozen and not run, T7F did not freeze, and the hysteresis test waits on CY. Phase 1's tool and family C have landed ([ATLAS.md](../../../../../../theories/becoming/results/atlas/ATLAS.md)): the dynamics only, of the eight kinds in §3.2. The other seven families were extracted and checked on 6 and 7 November ([the note](phase1/FAMILIES.md)): 177 dynamics. §4.1, §4.4 and Appendix A and B below are the first pass, unchecked when written; where they differ from the atlas, the atlas stands. The other kinds are next, their agent counts proposed first. §2 to §12 stand as written on 4 November unless a line says otherwise.*
 
 The request (4 November 2026, in chat; verbatim in [the source record](../../../../../../sources/15-codex-theory-conversations/2026-11-04-the-atlas.md)): finish what the map does not yet do, and "map out all attractors, phase transitions, what maps onto existing wisdoms, systems thinking, philosophy, cultures and scientific/logic understanding", as "a full, very detailed, structured, well thought, data collection, that can be visualized in all different ways, and server as our progress map, and make the theory complete" (sic: serve). Later the same day, on the order: "lean "unification of the root" needs to be done - we just need to make them run fast, but our order should be finishing the objectives of plan direction first, and improve overtime" (§5, RU; the gate change GT is drafted separately).
 
@@ -23,7 +23,7 @@ The request (4 November 2026, in chat; verbatim in [the source record](../../../
 
 - **No catalogue of dynamics.** Locks, drains, absorptions, cycles and thresholds are spread over 02, 03, 04, 05 and 07. No catalogue names them, joins each to its exits, and says what would refute it.
 - **Correspondence beyond China is thin.** Outside Chinese thought and Chinese Buddhism, no wisdom tradition is mapped on the spine. Classical systems thinking (Meadows's traps, Senge, Beer, Holling) is absent. Correspondences are prose, not data.
-- **Seven gaps have no law.** The fourth combination of control and lock; noise over the long run; how pools resist capture; the second-order direction of 生生; a premise weaker than C; the corpus's wide sense of the meta-attractor; and cycles and hysteresis.
+- **Seven gaps have no law.** The fourth combination of control and lock; noise over the long run; how pools resist capture; the second-order direction of 生生; a premise weaker than C; the corpus's wide sense of the meta-attractor; and, of cycles, when a regime cycles and with which period, with hysteresis.
 
 **What the plan does, in order:**
 
@@ -149,7 +149,7 @@ The rest are the readers' findings and are verified in Phase 0 before anyone act
 |---|---|
 | **dynamic** (an attractor, lock, drain, absorption, cycle, closure or kept region) | `family` (§4.1); `mechanism`, saying what reads what in the account's terms; `records[]`; `declarations[]`; `base` (one of the seven); `hypotheses[]`, copied from the record; derived standing; `forbids`; `exits[]`; `transitions[]`; `tests[]`; `correspondences[]`; `open[]`; `valence: none asserted`; `beyond`, what it does to what lies beyond its couplings |
 | **transition** | `kind` (§4.2); control parameter; order parameter, where one exists; the exact condition (the iff, copied); `between` (dynamics); derived standing; `phase_diagram` (§8, where the condition is decidable) |
-| **exit** | law; its edge; window or deadline; which of the six situationality conditions it needs (CD §6); `sufficient` / `necessary` / `exact`, as proved |
+| **exit** | law; its edge; window or deadline; which of the six situationality conditions it needs (CD §6); `sufficient` / `necessary` / `exact`, as proved, or `witness`, 08 §2's constructed example |
 | **premise** | from 08 §4's card and COVERAGE's premises; Lean; the models where it is met and failed (K3's witnesses); the laws that use it (from `shared-laws.json` and the records' hypotheses); standing ("stated, not asserted", "application obligation" …) |
 | **thesis / test** | T1–T8, the unifications and the two philosophical theses; each test's folder, freeze file and hash, run date, verdicts, what it forbade, and whether its run waits on Ren |
 | **correspondence** | `domain` (§6.3); work and locator; the source's own sense, first (06's rule: 原文义 before the structural reading); the structural reading; `relation` (§3.3); what the account adds; what the source states that the account does not yet; reads done (mapper, reviser, checker); a quote only where verified by script, otherwise a paraphrase with citation; `[AI reading]` |
@@ -219,7 +219,7 @@ Appendix A lists about 95 dynamics with record ids and Lean names. In brief:
 | **C. Capture of the selection** (元吸引子 in the glossary's sense among them) | a rule read from the share it selects | `capture-through-the-rule`, `closed-capture`, `shaping-the-rule-selected-by-what-comes-back`, `shaping-read-by-readers-drawn-from-the-selected`, `loss-read-in-time-by-the-others`, `capture-by-counted-choices`, `a-cascade-at-the-histories-reached` | 16 |
 | **D. Locks of knowing** | a reading kept by what it does not test | `seeking-boundary` (无明, reading), `what-a-course-chosen-through-its-model-does-not-test`, `a-prediction-read-by-what-it-predicts`, `the-markov-blanket-as-a-coupling-structure` | 8 |
 | **E. Waiting and reciprocity** | giving that waits on giving | `giving-that-waits-on-giving`, `thresholds-of-waiting`, `a-pair-tolerates-only-within-a-window` | 4 |
-| **F. Cycles and alternation** | a course that returns without resting; every one a witness, with no law of when or with what period | `regime-point-under-adjusting-giving`, `rooms-tested-by-a-window`, `RuleCapture.Alternating.never_locked`, `Negating.alternates` | 8 |
+| **F. Cycles and alternation** | a course that returns without resting. Many are stated at witnesses; general laws say that a course within a list returns, that a period exists within a bound under function laws, when a run can keep changing, when a relay from a held start crosses both ends and when a cycle can repeat. Absent as a law is when a regime cycles, and with which period | `where-a-run-of-a-regime-comes-to-rest`, `rooms-tested-by-a-window`, `RuleCapture.Alternating.never_locked`, `Negating.alternates` | 8 |
 | **G. Closure and stagnation** | what can form stops widening | `where-the-possible-grows` (`Run.not_keepsWidening_of_within`), `what-keeping-widening-needs`, `continued-change-needs-openness` | 5 |
 | **H. Kept regions, renewal, generation** (none assumed good) | regions that renew, keep or generate | `generation-and-degeneration-at-two-grains`, `supported-renewal-recovery`, `a-pattern-lasts-through-passing`, `division-by-exclusive-footprints`, `a-rule-rebuilt-from-the-members-it-limits` (its band), `RaisedEveryOther` | 19 |
 
@@ -249,7 +249,7 @@ CD §2's nine exits and §6's six conditions of situationality go in as written 
 
 From 02 and 03:
 
-- cycles in general;
+- when a regime cycles, and with which period (general laws of return stand: family F of the atlas);
 - hysteresis;
 - basins of branching processes;
 - noise-driven exit from a regulated regime;
@@ -487,7 +487,7 @@ All views are generated from `data/atlas.json` and `atlas-graph.json`. Nothing i
 
 ## Appendix A. First pass of the dynamics
 
-These come from the readers' reports, unchecked against every home; Phase 1 checks each. Base key: AT any type, AP any process, W World, C counts, R root, P periphery.
+These come from the readers' reports, unchecked against every home. Phase 1 checked them, and [the atlas](../../../../../../theories/becoming/results/atlas/ATLAS.md) holds the result; this table stays as written, with its errors, some of them named in [the note](phase1/FAMILIES.md). Base key: AT any type, AP any process, W World, C counts, R root, P periphery.
 
 | # | Dynamic | Record | Key Lean | Base |
 |---|---|---|---|---|

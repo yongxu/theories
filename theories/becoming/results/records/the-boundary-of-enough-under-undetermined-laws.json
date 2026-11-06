@@ -67,8 +67,8 @@
   ],
   "does_not_show": [
     {
-      "en": "When the runs of a process settle: the part of assured enough that does not mention the target is not characterized.",
-      "zh": "过程的运行何时安定：确保之够中不提及目标的部分未被刻画。",
+      "en": "When the runs of a process settle, the part of assured enough that does not mention the target: Enough.assured_iff takes it as its second part and does not characterize it. Records when-the-runs-of-a-process-settle and the-last-change-of-a-run state it in a world a list holds, where settling wherever no reachable change can be undone is exactly LPO; worlds no list holds stay open.",
+      "zh": "过程的运行何时安定，即确保之够中不提及目标的部分：Enough.assured_iff 以之为第二部分而不刻画它。记录 when-the-runs-of-a-process-settle 与 the-last-change-of-a-run 在列表所持的世界中陈述它：在那里，没有可达变化可被撤销处皆安定恰为 LPO；列表不持的世界仍开放。",
       "kind": "scope"
     },
     {
@@ -99,8 +99,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261018T073050.517313Z）：Becoming.Enough 的 20 项声明（9 项定理）公理报告为空；检查器并核对核心纯净。作者自审见研究第 174 节；未经独立审查。"
   },
   "next_delta": {
-    "en": "When the runs of a process settle; enough where the choices are divided between the seeker and others; an independent review.",
-    "zh": "过程的运行何时安定；选择在寻求者与他者之间分配时之够；独立审查。"
+    "en": "When the runs of a process settle in a world no list holds; enough where the choices are divided between the seeker and others; an independent review.",
+    "zh": "列表不持的世界中过程的运行何时安定；选择在寻求者与他者之间分配时之够；独立审查。"
   },
   "correspondence": {
     "en": "The chapter's open programme (section 8.2, Seeking, capture and runaway) named \"the boundary of enough under undetermined laws\". Ren, 18 October 2026: \"Wait for N5's renames to land, then start the learning and seeking line on the renamed head.\" (provenance, not warrant). Law.rests_iff is the determined instance: its condition is possible enough for the law as a process (law_possibly_iff).",
@@ -268,6 +268,10 @@
     {
       "en": "2026-10-20: 24 bookkeeping notes condensed from 18 October 2026 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/94250284056fbd13/the-boundary-of-enough-under-undetermined-laws.json and in git.",
       "zh": "2026-10-20：24 条记账性说明合并（18 October 2026 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/94250284056fbd13/the-boundary-of-enough-under-undetermined-laws.json 和 git 中。"
+    },
+    {
+      "en": "7 November 2026, board item AA: the atlas's readers found a line gone stale against records when-the-runs-of-a-process-settle and the-last-change-of-a-run, which settle it in a world a list holds; corrected against the Lean and the later records.",
+      "zh": "2026年11月7日，工作板条目 AA：图谱读者发现一行已落后于记录 when-the-runs-of-a-process-settle 与 the-last-change-of-a-run，二者在列表所持的世界中定之；已对照 Lean 与后来的记录改正。"
     }
   ],
   "text_versions": [
