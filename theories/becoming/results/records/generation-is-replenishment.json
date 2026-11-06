@@ -2,8 +2,8 @@
   "schema_version": 2,
   "id": "generation-is-replenishment",
   "title": {
-    "zh": "生起即补充",
-    "en": "Arising replenishes"
+    "zh": "体现的生起即补充",
+    "en": "Embodied arising replenishes"
   },
   "kind": "theorem",
   "status": "recorded-checked",
@@ -71,7 +71,7 @@
     },
     {
       "zh": "每个前提都必要：两方来回传递一份水平，在两个关系项的封闭世界中体现地、不息地生起，而不耗散（Shuttle）；一个活动不是其水平的关系项，在一个关系项的耗散世界中不息地生起（Flicker）；只给予不取用的世代不耗散（Brood）。",
-      "en": "Each premise is needed: two sides handing one standing back and forth generate, embodied and without end, in a closed world of two relata that is not dissipative (Shuttle); a relatum whose activity is not its standing arises without end in a dissipative world of one relatum (Flicker); and generations giving without taking are not dissipative (Brood).",
+      "en": "Each premise is needed: two sides handing one standing back and forth arise, embodied and without end, in a closed world of two relata that is not dissipative (Shuttle); a relatum whose activity is not its standing arises without end in a dissipative world of one relatum (Flicker); and generations giving without taking are not dissipative (Brood).",
       "declarations": [
         "Becoming.Shuttle.shuttle",
         "Becoming.Flicker.flicker",
@@ -336,8 +336,8 @@
       "id": "life-as-condition-of-life",
       "relation": "formal-reuse",
       "detail": {
-        "zh": "复用一类关系项的读法、Embodied、SelfBearing 与 Brood；把体现的关系项经由给予而生起推进为“生起即补充”。",
-        "en": "Reuses the one-kind reading, Embodied, SelfBearing and Brood; carries embodied arising through giving on to “arising replenishes”."
+        "zh": "复用一类关系项的读法、Embodied、SelfBearing 与 Brood；把体现的关系项经由给予而生起推进为“体现的生起即补充”。",
+        "en": "Reuses the one-kind reading, Embodied, SelfBearing and Brood; carries embodied arising through giving on to “embodied arising replenishes”."
       },
       "interface": {
         "output": {
@@ -459,7 +459,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Roles.lean",
       "role": "proof",
-      "sha256": "ce8c8bc33d32b52008e6862a5f22e23c7267b48612966a979c1368c5c57b4a96",
+      "sha256": "be8934ab1302ff354c8c274709f4c333c5e9cadb109f53d0edb9c479dd151245",
       "declarations": [
         "Becoming.Web.Embodied.comesToStand",
         "Becoming.Web.Embodied.coming",
@@ -849,12 +849,18 @@
       "role": "receipt",
       "sha256": "8f1d2bed589ebd558ab122d2b21ff3e27c19916c91a47d94b4b0829f76d45192",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T222126.093376Z/verification.json",
+      "role": "receipt",
+      "sha256": "11422fd264299898dfa6aa9422b851a75f6e879d80ed400f6ca0ec2bcc11ff7d",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Roles.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T222126.093376Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Roles",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -1014,6 +1020,10 @@
     {
       "en": "7 November 2026, board item LM2 (its reader's findings): \"generation\" for embodied arising or for arising is replaced, since the glossary's generation never means arising. No law, premise or proof changed.",
       "zh": "2026年11月7日，工作板条目 LM2（其读者之所见）：以“生成”称体现之生起或生起处已改，因词汇表之生成从不指生起。诸律、前提与证明皆不变。"
+    },
+    {
+      "en": "7 November 2026, board item LM2 (its reader's second round): arising said as generation corrected, and the title made exact: embodied arising replenishes, while Flicker arises with nothing given. No law, premise or proof changed.",
+      "zh": "2026年11月7日，工作板条目 LM2（其读者第二轮）：以生成称生起处已改，标题改为确切：体现的生起即补充，而 Flicker 无所予而生起。诸律、前提与证明皆不变。"
     }
   ],
   "text_versions": [

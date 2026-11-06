@@ -1,0 +1,217 @@
+@Becoming.ExchangeLaw.Through.responds : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {L L' : Becoming.Flow F C}
+  {W W' : Becoming.Web F C} {obs : F → C → Prop} {part : F → Bool},
+  law.Through W obs part →
+    L.Follows law part W.level → L'.Follows law part W'.level → L.RespondsThroughCoupling L' W W' obs part
+@Becoming.ExchangeLaw.Nonanticipating.through_all : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C},
+  law.Nonanticipating → ∀ (W : Becoming.Web F C) (part : F → Bool), law.Through W (fun x x_1 => True) part
+@Becoming.Flow.totals_alike_of_each : ∀ {F C : Type} {L L' : Becoming.Flow F C} {t : Nat},
+  L.present t = L'.present t →
+    (∀ (h : F) (c : C), L.take t h c = L'.take t h c ∧ L.give t h c = L'.give t h c) →
+      ∀ (c : C), L.taken t c = L'.taken t c ∧ L.given t c = L'.given t c
+@Becoming.exchange_alike_of_agree : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {L L' : Becoming.Flow F C}
+  {W W' : Becoming.Web F C} {part : F → Bool},
+  law.Nonanticipating →
+    L.ActsAlike L' part →
+      L.Follows law part W.level →
+        L'.Follows law part W'.level →
+          ∀ {t : Nat},
+            Becoming.AgreeUpTo W.level W'.level t →
+              ∀ (h : F) (c : C), L.take t h c = L'.take t h c ∧ L.give t h c = L'.give t h c
+@Becoming.levels_fixed : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {L L' : Becoming.Flow F C}
+  {W W' : Becoming.Web F C} {part : F → Bool},
+  law.Nonanticipating →
+    L.Balances W →
+      L'.Balances W' →
+        (∀ (t : Nat), L.present t = L'.present t) →
+          L.ActsAlike L' part →
+            L.Follows law part W.level →
+              L'.Follows law part W'.level →
+                (∀ (c : C), W.level 0 c = W'.level 0 c) → ∀ (t : Nat), Becoming.AgreeUpTo W.level W'.level t
+@Becoming.counterfactual_fixed : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {L L' : Becoming.Flow F C}
+  {W W' : Becoming.Web F C} {part : F → Bool},
+  law.Nonanticipating →
+    L.Balances W →
+      L'.Balances W' →
+        (∀ (t : Nat), L.present t = L'.present t) →
+          L.ActsAlike L' part →
+            L.Follows law part W.level →
+              L'.Follows law part W'.level →
+                (∀ (c : C), W.level 0 c = W'.level 0 c) →
+                  (∀ (t : Nat) (c : C), W.level t c = W'.level t c) ∧
+                    ∀ (t : Nat) (h : F) (c : C), L.take t h c = L'.take t h c ∧ L.give t h c = L'.give t h c
+@Becoming.ExchangeLaw.history_succ_of_le : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {present : Nat → List F}
+  {start : C → Nat} {n s : Nat},
+  s ≤ n → ∀ (c : C), law.history present start (n + 1) s c = law.history present start n s c
+@Becoming.ExchangeLaw.history_stable : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {present : Nat → List F}
+  {start : C → Nat} {n s : Nat},
+  s ≤ n → ∀ (c : C) (d : Nat), law.history present start (n + d) s c = law.history present start n s c
+@Becoming.ExchangeLaw.history_agree : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {present : Nat → List F}
+  {start : C → Nat} (n : Nat), Becoming.AgreeUpTo (law.history present start n) (law.levels present start) n
+@Becoming.ExchangeLaw.levels_zero : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {present : Nat → List F}
+  {start : C → Nat} (c : C), law.levels present start 0 c = start c
+@Becoming.ExchangeLaw.levels_succ : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {present : Nat → List F}
+  {start : C → Nat} (n : Nat) (c : C),
+  law.levels present start (n + 1) c =
+    law.levels present start n c + law.givenUnder present (law.history present start n) n c -
+      law.takenUnder present (law.history present start n) n c
+@Becoming.ExchangeLaw.course_follows : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {present : Nat → List F}
+  {start : C → Nat} (part : F → Bool), (law.course present start).Follows law part (law.levels present start)
+@Becoming.ExchangeLaw.totals_under : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {present : Nat → List F}
+  {start : C → Nat},
+  law.Nonanticipating →
+    ∀ (n : Nat) (c : C),
+      law.takenUnder present (law.history present start n) n c = (law.course present start).taken n c ∧
+        law.givenUnder present (law.history present start n) n c = (law.course present start).given n c
+@Becoming.ExchangeLaw.sub_add_back_iff : ∀ {m k : Nat}, m - k + k = m ↔ k ≤ m
+@Becoming.ExchangeLaw.course_balances_iff : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {present : Nat → List F}
+  {start : C → Nat},
+  law.Nonanticipating →
+    ∀ (W : Becoming.Web F C),
+      (law.course present start).Balances (W.withLevel (law.levels present start)) ↔ law.Feasible present start
+@Becoming.ExchangeLaw.history_orbit : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {present : Nat → List F}
+  (start : C → Nat) (n : Nat),
+  Becoming.Law.orbit (law.next present) (0, fun x => start) n = (n, law.history present start n)
+@Becoming.nat_eq_of_not_not : ∀ {a b : Nat}, ¬¬a = b → a = b
+@Becoming.ExchangeLaw.Through.couples_of_sensitive : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C}
+  {W : Becoming.Web F C} {obs : F → C → Prop} {part : F → Bool},
+  law.Through W obs part → ∀ {h : F}, part h = false → ∀ {c : C}, law.Sensitive h c → ¬¬W.CoupledInto obs h c
+@Becoming.mixIn_either : ∀ {C : Type} [inst : DecidableEq C] (l l' : Nat → C → Nat) (ds : List C) (s : Nat) (e : C),
+  Becoming.mixIn l l' ds s e = l s e ∨ Becoming.mixIn l l' ds s e = l' s e
+@Becoming.mixIn_listed : ∀ {C : Type} [inst : DecidableEq C] (l l' : Nat → C → Nat) {ds : List C} {e : C},
+  e ∈ ds → ∀ (s : Nat), Becoming.mixIn l l' ds s e = l' s e
+@Becoming.swap_alike : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} [inst : DecidableEq C],
+  law.Nonanticipating →
+    ∀ {t : Nat} {h : F} {c : C} {X l l' : Nat → C → Nat},
+      (∀ (s : Nat), s ≤ t → X s c = l s c ∨ X s c = l' s c) →
+        (law.Sensitive h c → ∀ (s : Nat), s ≤ t → l s c = l' s c) → law.GivesAlike t h X (Becoming.mixIn X l' [c])
+@Becoming.mixIn_alike : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} [inst : DecidableEq C],
+  law.Nonanticipating →
+    ∀ {t : Nat} {h : F} {l l' : Nat → C → Nat},
+      (∀ (c : C), law.Sensitive h c → ∀ (s : Nat), s ≤ t → l s c = l' s c) →
+        ∀ (ds : List C), law.GivesAlike t h l (Becoming.mixIn l l' ds)
+@Becoming.alike_of_sensitive_agree : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} [DecidableEq C],
+  law.Nonanticipating →
+    ∀ {cs : List C},
+      (∀ (c : C), c ∈ cs) →
+        ∀ {t : Nat} {h : F} {l l' : Nat → C → Nat},
+          (∀ (c : C), law.Sensitive h c → ∀ (s : Nat), s ≤ t → l s c = l' s c) → law.GivesAlike t h l l'
+@Becoming.ExchangeLaw.Nonanticipating.through_of_observed : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C}
+  [DecidableEq C],
+  law.Nonanticipating →
+    ∀ {cs : List C},
+      (∀ (c : C), c ∈ cs) →
+        ∀ {W : Becoming.Web F C} {obs : F → C → Prop} {part : F → Bool},
+          (∀ (h : F), part h = false → ∀ (c : C), law.Sensitive h c → ¬¬obs h c) → law.Through W obs part
+@Becoming.ExchangeLaw.Nonanticipating.through_sensitive : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C}
+  [DecidableEq C],
+  law.Nonanticipating →
+    ∀ {cs : List C}, (∀ (c : C), c ∈ cs) → ∀ (W : Becoming.Web F C) (part : F → Bool), law.Through W law.Sensitive part
+@Becoming.comparison_of_courses : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {L L' : Becoming.Flow F C}
+  {W W' : Becoming.Web F C} {obs : F → C → Prop} {part : F → Bool} {Pos : Type},
+  law.Through W obs part →
+    L.Balances W →
+      L'.Balances W' →
+        (∀ (t : Nat), L.present t = L'.present t) →
+          (∀ (c : C), W.level 0 c = W'.level 0 c) →
+            L.Follows law part W.level →
+              L'.Follows law part W'.level →
+                ∀ {sig : Pos → Nat → F → Prop} {p : Pos},
+                  (∀ (t : Nat) (g : F), ¬¬L.WithinResponse L' W obs part g → sig p t g) →
+                    (W.Retains sig p W.level W'.level ↔ W.Includes W.level W'.level) ∧
+                      (W.Retains sig p W'.level W.level ↔ W.Includes W'.level W.level) ∧
+                        (¬W.Adds sig p W.level W'.level ↔ ¬W.Exceeds W.level W'.level) ∧
+                          (¬W.Adds sig p W'.level W.level ↔ ¬W.Exceeds W'.level W.level)
+@Becoming.comparison_through_sensitivity : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {L L' : Becoming.Flow F C}
+  {W W' : Becoming.Web F C} {part : F → Bool} [DecidableEq C] {Pos : Type},
+  law.Nonanticipating →
+    ∀ {cs : List C},
+      (∀ (c : C), c ∈ cs) →
+        L.Balances W →
+          L'.Balances W' →
+            (∀ (t : Nat), L.present t = L'.present t) →
+              (∀ (c : C), W.level 0 c = W'.level 0 c) →
+                L.Follows law part W.level →
+                  L'.Follows law part W'.level →
+                    ∀ {sig : Pos → Nat → F → Prop} {p : Pos},
+                      (∀ (t : Nat) (g : F), ¬¬L.WithinResponse L' W law.Sensitive part g → sig p t g) →
+                        (W.Retains sig p W.level W'.level ↔ W.Includes W.level W'.level) ∧
+                          (W.Retains sig p W'.level W.level ↔ W.Includes W'.level W.level) ∧
+                            (¬W.Adds sig p W.level W'.level ↔ ¬W.Exceeds W.level W'.level) ∧
+                              (¬W.Adds sig p W'.level W.level ↔ ¬W.Exceeds W'.level W.level)
+@Becoming.ExchangeLaw.withAct_follows : ∀ {F C : Type} {law act : Becoming.ExchangeLaw F C} {part : F → Bool}
+  (present : Nat → List F) (start : C → Nat),
+  ((law.withAct part act).course present start).Follows law part ((law.withAct part act).levels present start)
+@Becoming.ExchangeLaw.withAct_nonanticipating : ∀ {F C : Type} {law act : Becoming.ExchangeLaw F C} {part : F → Bool},
+  law.Nonanticipating → act.Nonanticipating → (law.withAct part act).Nonanticipating
+@Becoming.comparison_with_act : ∀ {F C : Type} {law act : Becoming.ExchangeLaw F C} {L : Becoming.Flow F C}
+  {W : Becoming.Web F C} {obs : F → C → Prop} {part : F → Bool} {Pos : Type},
+  law.Nonanticipating →
+    act.Nonanticipating →
+      law.Through W obs part →
+        L.Balances W →
+          L.Follows law part W.level →
+            (law.withAct part act).Feasible L.present (W.level 0) →
+              ∀ {sig : Pos → Nat → F → Prop} {p : Pos},
+                (∀ (t : Nat) (g : F),
+                    ¬¬L.WithinResponse ((law.withAct part act).course L.present (W.level 0)) W obs part g → sig p t g) →
+                  (W.Retains sig p W.level ((law.withAct part act).levels L.present (W.level 0)) ↔
+                      W.Includes W.level ((law.withAct part act).levels L.present (W.level 0))) ∧
+                    (W.Retains sig p ((law.withAct part act).levels L.present (W.level 0)) W.level ↔
+                        W.Includes ((law.withAct part act).levels L.present (W.level 0)) W.level) ∧
+                      (¬W.Adds sig p W.level ((law.withAct part act).levels L.present (W.level 0)) ↔
+                          ¬W.Exceeds W.level ((law.withAct part act).levels L.present (W.level 0))) ∧
+                        (¬W.Adds sig p ((law.withAct part act).levels L.present (W.level 0)) W.level ↔
+                          ¬W.Exceeds ((law.withAct part act).levels L.present (W.level 0)) W.level)
+@Becoming.counterfactual_is_course : ∀ {F C : Type} {law act : Becoming.ExchangeLaw F C} {L : Becoming.Flow F C}
+  {W : Becoming.Web F C} {part : F → Bool},
+  law.Nonanticipating →
+    act.Nonanticipating →
+      ∀ {present : Nat → List F} {start : C → Nat},
+        L.Balances W →
+          (∀ (t : Nat), L.present t = present t) →
+            L.ActsAlike ((law.withAct part act).course present start) part →
+              L.Follows law part W.level →
+                (∀ (c : C), W.level 0 c = start c) →
+                  (law.withAct part act).Feasible present start →
+                    (∀ (t : Nat) (c : C), W.level t c = (law.withAct part act).levels present start t c) ∧
+                      ∀ (t : Nat) (h : F) (c : C),
+                        L.take t h c = ((law.withAct part act).course present start).take t h c ∧
+                          L.give t h c = ((law.withAct part act).course present start).give t h c
+@Becoming.ExchangeLaw.course_unique : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C},
+  law.Nonanticipating →
+    ∀ {L : Becoming.Flow F C} {W : Becoming.Web F C} {present : Nat → List F} {start : C → Nat},
+      L.Balances W →
+        (∀ (t : Nat), L.present t = present t) →
+          L.Follows law (fun x => false) W.level →
+            (∀ (c : C), W.level 0 c = start c) →
+              law.Feasible present start →
+                (∀ (t : Nat) (c : C), W.level t c = law.levels present start t c) ∧
+                  ∀ (t : Nat) (h : F) (c : C),
+                    L.take t h c = (law.course present start).take t h c ∧
+                      L.give t h c = (law.course present start).give t h c
+@Becoming.ExchangeLaw.course_trajectory : ∀ {F C : Type} (law : Becoming.ExchangeLaw F C) (present : Nat → List F)
+  (part : F → Bool) (start : C → Nat) (u : Nat → F → C → Nat × Nat) (n : Nat),
+  Becoming.trajectory (law.stepBy present part) (0, fun x => start) u (fun x => ()) n =
+    (n, (law.withAct part (Becoming.ExchangeLaw.ofMoves u)).history present start n)
+Becoming.Loop.replyLaw_nonanticipating : Becoming.Loop.replyLaw.Nonanticipating
+Becoming.Loop.replyLaw_through : Becoming.Loop.replyLaw.Through Becoming.Loop.web Becoming.Loop.paired
+  Becoming.Loop.firstPart
+Becoming.Loop.escalation_follows : Becoming.Loop.escalation.Follows Becoming.Loop.replyLaw Becoming.Loop.firstPart
+  Becoming.Loop.web.level
+Becoming.Loop.quiet_follows : Becoming.Loop.quiet.Follows Becoming.Loop.replyLaw Becoming.Loop.firstPart
+  Becoming.Loop.quietWeb.level
+@Becoming.Loop.courses_fixed : ∀ {L : Becoming.Flow Becoming.Loop.Formation Becoming.Loop.Place}
+  {W : Becoming.Web Becoming.Loop.Formation Becoming.Loop.Place},
+  L.Balances W →
+    (∀ (t : Nat), L.present t = Becoming.Loop.members) →
+      L.Follows Becoming.Loop.replyLaw Becoming.Loop.firstPart W.level →
+        (∀ (c : Becoming.Loop.Place), W.level 0 c = 2) →
+          (L.ActsAlike Becoming.Loop.escalation Becoming.Loop.firstPart →
+              (∀ (t : Nat) (c : Becoming.Loop.Place), W.level t c = Becoming.Loop.web.level t c) ∧
+                ∀ (t : Nat) (h : Becoming.Loop.Formation) (c : Becoming.Loop.Place),
+                  L.take t h c = Becoming.Loop.escalation.take t h c ∧
+                    L.give t h c = Becoming.Loop.escalation.give t h c) ∧
+            (L.ActsAlike Becoming.Loop.quiet Becoming.Loop.firstPart →
+              (∀ (t : Nat) (c : Becoming.Loop.Place), W.level t c = Becoming.Loop.quietWeb.level t c) ∧
+                ∀ (t : Nat) (h : Becoming.Loop.Formation) (c : Becoming.Loop.Place),
+                  L.take t h c = Becoming.Loop.quiet.take t h c ∧ L.give t h c = Becoming.Loop.quiet.give t h c)

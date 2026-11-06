@@ -242,8 +242,8 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Arising.lean",
       "detail": {
-        "zh": "逐步读法与生成分离（Oscillation.readings）：一个不息地再生起的形成（振荡者），在工作候选的逐步读法下没有一个活的生起事件；两步周期的读法记入它。",
-        "en": "The stepwise reading and generation come apart (Oscillation.readings): a formation arising again and again (the oscillator) has no living arising under the stepwise working candidate; the reading over cycles of two includes it."
+        "zh": "逐步读法与生起分离（Oscillation.readings）：一个不息地再生起的形成（振荡者），在工作候选的逐步读法下没有一个活的生起事件；两步周期的读法记入它。",
+        "en": "The stepwise reading and arising come apart (Oscillation.readings): a formation arising again and again (the oscillator) has no living arising under the stepwise working candidate; the reading over cycles of two includes it."
       }
     },
     {
@@ -339,8 +339,8 @@
           "en": "Webs, Dependent, Dissolves, Forms, ConsumingIn."
         },
         "input": {
-          "zh": "生成的定义、定理与见证。",
-          "en": "The definitions, theorems and witnesses of generation."
+          "zh": "生起的定义、定理与见证。",
+          "en": "The definitions, theorems and witnesses of arising."
         },
         "conditions": {
           "zh": "无附加条件。",
@@ -889,6 +889,10 @@
     {
       "en": "7 November 2026, board item LM2 (its reader's findings): \"generation\" for embodied arising or for arising is replaced, since the glossary's generation never means arising. No law, premise or proof changed.",
       "zh": "2026年11月7日，工作板条目 LM2（其读者之所见）：以“生成”称体现之生起或生起处已改，因词汇表之生成从不指生起。诸律、前提与证明皆不变。"
+    },
+    {
+      "en": "7 November 2026, board item LM2 (its reader's second round): arising said as generation corrected, and the title made exact: embodied arising replenishes, while Flicker arises with nothing given. No law, premise or proof changed.",
+      "zh": "2026年11月7日，工作板条目 LM2（其读者第二轮）：以生成称生起处已改，标题改为确切：体现的生起即补充，而 Flicker 无所予而生起。诸律、前提与证明皆不变。"
     }
   ],
   "text_versions": [

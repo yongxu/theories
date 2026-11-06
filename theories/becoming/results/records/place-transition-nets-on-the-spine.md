@@ -112,6 +112,7 @@ An outside critique of the opening said the theory proves the rules of its own i
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T222126.093376Z/verification.json) | — |
 
 Aliases: `place/transition nets on the spine`, `Petri nets on the spine`, `脊柱上的库所/变迁网`, `siphon law`, `Becoming.Net.balances_iff`, `Becoming.Net.dissipative_iff`, `Becoming.Net.rests_unrefuted`, `Becoming.Net.siphon_empty`
 

@@ -109,7 +109,7 @@ The condition by itself orders nothing, and a theorem taking it as a hypothesis 
 |---|---|---|
 | 无明 (wúmíng) | seeking locked onto a target that cannot be met at rest; the position every formation selects from grounds it and is not it (D25, D26, D45); home [03](03-KNOWING.md) | what lies beyond what couples in (that is the reach of a selection) |
 | 明 (míng) | coupling joined to a selection, so it reaches what support does not mark (D26, D45) | |
-| generation | 02's 生成: a pattern going on through carrying renewal | arising (records titled with "generation" for arising are stated as laws of arising); 生生 (07), which generation at two orders of grain does not give, and whose English gloss in 01 §6 and 07 §2 ("continuing generation", "generation generating generation") says 生发, not this sense |
+| generation | 02's 生成: a pattern going on through carrying renewal | arising (records whose ids keep "generation" for arising are stated as laws of arising); 生生 (07), which generation at two orders of grain does not give, and whose English gloss in 01 §6 and 07 §2 ("continuing generation", "generation generating generation") says 生发, not this sense |
 | 生 (shēng) | the mark "begins" ([01](01-ROOT.md)) | what lives and arises |
 | the core | 核, the greatest symmetric relation within a class that the relation never tells apart ([01](01-ROOT.md)) | the Lean package, which is "the pure core" |
 | base | the base of a label (root, the steps, any process, any type, World, periphery, a named model) | "the old base", which is "the World model"; a drawn stock |

@@ -1,0 +1,29 @@
+@Becoming.FrontierWorlds.Served.successor : ∀ {w : Becoming.World} {f c old next : w.Relatum},
+  Becoming.FrontierWorlds.Served w f c old next →
+    ∀ {t : Nat}, w.web.requires t f c → ¬0 < w.flow.give t old c → 0 < w.flow.give t next c
+@Becoming.FrontierWorlds.served_of_handover : ∀ {w : Becoming.World} {f c old next : w.Relatum} (handover : Nat),
+  (∀ (t : Nat), t < handover → w.web.requires t f c → 0 < w.flow.give t old c) →
+    (∀ (t : Nat), handover ≤ t → w.web.requires t f c → 0 < w.flow.give t next c) →
+      Becoming.FrontierWorlds.Served w f c old next
+@Becoming.FrontierWorlds.Served.not_of_gap : ∀ {w : Becoming.World} {f c old next : w.Relatum} {t : Nat},
+  w.web.requires t f c →
+    ¬0 < w.flow.give t old c → ¬0 < w.flow.give t next c → ¬Becoming.FrontierWorlds.Served w f c old next
+@Becoming.FrontierWorlds.sole_giver_required : ∀ {w : Becoming.World} {f c a : w.Relatum},
+  (∃ t, w.web.requires t f c) →
+    (∀ (t : Nat), w.web.requires t f c → ∃ b, Becoming.FrontierWorlds.Gives w t b c) →
+      (∀ (t : Nat) (b : w.Relatum), w.web.requires t f c → Becoming.FrontierWorlds.Gives w t b c → b = a) →
+        Becoming.Requirement.Required (fun t => w.web.requires t f c) fun t => Becoming.FrontierWorlds.Gives w t a c
+@Becoming.FrontierWorlds.giver_active : ∀ {w : Becoming.World} {f c : w.Relatum},
+  w.flow.Acting w.web →
+    ∀ {t : Nat} {a : w.Relatum}, w.web.requires t f c → Becoming.FrontierWorlds.Gives w t a c → w.web.active t a
+@Becoming.FrontierWorlds.sole_giver_active : ∀ {w : Becoming.World} {f c : w.Relatum},
+  w.flow.Acting w.web →
+    ∀ {a : w.Relatum},
+      (∃ t, w.web.requires t f c) →
+        (∀ (t : Nat), w.web.requires t f c → ∃ b, Becoming.FrontierWorlds.Gives w t b c) →
+          (∀ (t : Nat) (b : w.Relatum), w.web.requires t f c → Becoming.FrontierWorlds.Gives w t b c → b = a) →
+            ∀ (t : Nat), w.web.requires t f c → w.web.active t a
+@Becoming.FrontierWorlds.Discharged.no_residual : ∀ {w : Becoming.World} {f c g : w.Relatum},
+  Becoming.FrontierWorlds.Discharged w f c g → ∀ (t : Nat), ¬Becoming.FrontierWorlds.Residual w f c g t
+@Becoming.FrontierWorlds.residual_of_unfulfilled : ∀ {w : Becoming.World} {f c g : w.Relatum} {t : Nat},
+  w.web.requires t f c → ¬0 < w.flow.give t g c → w.web.active t f → Becoming.FrontierWorlds.Residual w f c g t

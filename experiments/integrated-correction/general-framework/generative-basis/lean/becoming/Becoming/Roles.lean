@@ -86,7 +86,7 @@ Results:
   finitely many relata are all there is, embodied relata do not arise at arbitrarily
   late steps (`embodiedArising_not_recurring`). What these use of embodiment is that arising is a
   coming to stand; where activity and standing are out of step, as in dormancy,
-  `Becoming.Reserve` states what embodied arising then bears.
+  `Becoming.Reserve` states what arising then bears.
 * Witnesses. A bee and a flower, each depending on itself and on the other and drawing
   on the other, renew each other with no third condition, and every event is living
   (`Mutualism`); in `Mutualism.apart` each depends only on the other, and neither bears
@@ -113,7 +113,7 @@ itself does not enter either valuation (`Mutualism.apart_embodied`).
 
 Which relata are embodied, and whether a formation bears on itself, are
 representational choices: remains stand after activity ends, and a condition such as
-water stands without being active. Embodied arising carries a requirement of its own where
+water stands without being active. Arising carries a requirement of its own where
 the arising relatum is embodied, and need not where it is not (`Flicker`), so that is
 where the choice has consequences. `ending_breaks` counts drawing on a relatum that
 bears on itself, at the step at which it ends, against living, whatever ends it;

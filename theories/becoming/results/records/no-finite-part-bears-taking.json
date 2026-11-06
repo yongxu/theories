@@ -271,7 +271,7 @@
     "en": "Relate dissipation to possibility, diversity and complexity; give a version with rational amounts; settle whether arising that is not embodied has its own form of dissipation (embodied arising is in generation-is-replenishment); find the empirical correspondence of dissipation and openness in actual unfoldings."
   },
   "correspondence": {
-    "zh": "第四次独立审查指出，“任何有限部分都不能独自不息”与“没有一个有限的部分独自承担”需要耗散前提。本结果陈述这一前提，并在流中的取用上证明它。Ren 的原话是“生生不息 - 一种整体的，不断创造更多生的方向”。AI 把结果读作原话中“整体”的一种形式内容：在耗散之下，复现的取用，无论来自不止的更多、生成还是维持（Lone），使它复现的有限条件家族不从任何一步起一直封闭，家族被围住时也不从任何一步起一直向内（taking_draws_in）（AI 的诠释）；它不替代 Ren 的原话，也不推出它是好的。用自由能读耗散：物质可以在有限家族中循环（Cycle），驱动循环的来源须越出每个有限家族（AI 论证）。实际的量是否耗散、实际的展开是否在这一意义上有限，是经验问题。新名称按 Ren 的命名规则采用（DELEGATED-CHOICES D36）。",
+    "zh": "第四次独立审查指出，“任何有限部分都不能独自不息”与“没有一个有限的部分独自承担”需要耗散前提。本结果陈述这一前提，并在流中的取用上证明它。Ren 的原话是“生生不息 - 一种整体的，不断创造更多生的方向”。AI 把结果读作原话中“整体”的一种形式内容：在耗散之下，复现的取用，无论来自不止的更多、生起还是维持（Lone），使它复现的有限条件家族不从任何一步起一直封闭，家族被围住时也不从任何一步起一直向内（taking_draws_in）（AI 的诠释）；它不替代 Ren 的原话，也不推出它是好的。用自由能读耗散：物质可以在有限家族中循环（Cycle），驱动循环的来源须越出每个有限家族（AI 论证）。实际的量是否耗散、实际的展开是否在这一意义上有限，是经验问题。新名称按 Ren 的命名规则采用（DELEGATED-CHOICES D36）。",
     "en": "The fourth independent review found that “no finite part is unceasing on its own” and “no finite part bears it alone” need a dissipation premise. This result states that premise and proves the claim for taking in flows. Ren's words are “生生不息 - 一种整体的，不断创造更多生的方向” (a whole direction of unceasingly creating more 生). The AI reads the result as one formal content of “whole” in those words: under dissipation, recurring taking, whether of more, of arising or of maintenance (Lone), leaves the finite family of conditions on which it recurs closed from no step on, and a family enclosed around inward from no step on (taking_draws_in) (the AI's interpretation); it does not replace Ren's words and does not show that it is good. Reading dissipation on free energy, matter can cycle within a finite family (Cycle) while the source driving the cycling must reach beyond every finite family (an AI argument). Whether actual quantities dissipate, and whether actual unfoldings are finite in this sense, are empirical questions. The new names are adopted under Ren's naming rule (DELEGATED-CHOICES D36)."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dissipation.lean",
@@ -546,7 +546,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Roles.lean",
       "role": "counterexample",
-      "sha256": "ce8c8bc33d32b52008e6862a5f22e23c7267b48612966a979c1368c5c57b4a96",
+      "sha256": "be8934ab1302ff354c8c274709f4c333c5e9cadb109f53d0edb9c479dd151245",
       "declarations": []
     },
     {
@@ -874,6 +874,10 @@
     {
       "en": "7 November 2026, board item LM2 (its reader's findings): \"generation\" for embodied arising or for arising is replaced, since the glossary's generation never means arising. No law, premise or proof changed.",
       "zh": "2026年11月7日，工作板条目 LM2（其读者之所见）：以“生成”称体现之生起或生起处已改，因词汇表之生成从不指生起。诸律、前提与证明皆不变。"
+    },
+    {
+      "en": "7 November 2026, board item LM2 (its reader's second round): arising said as generation corrected, and the title made exact: embodied arising replenishes, while Flicker arises with nothing given. No law, premise or proof changed.",
+      "zh": "2026年11月7日，工作板条目 LM2（其读者第二轮）：以生成称生起处已改，标题改为确切：体现的生起即补充，而 Flicker 无所予而生起。诸律、前提与证明皆不变。"
     }
   ],
   "text_versions": [

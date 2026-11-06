@@ -1,0 +1,97 @@
+@Becoming.UnreadStandings.pos_scaled : ∀ {k : Nat}, 0 < k → ∀ (a : Nat), 0 < k * a ↔ 0 < a
+@Becoming.UnreadStandings.le_scaled : ∀ {k : Nat}, 0 < k → ∀ (a b : Nat), k * a ≤ k * b ↔ a ≤ b
+@Becoming.UnreadStandings.lt_scaled : ∀ {k : Nat}, 0 < k → ∀ (a b : Nat), k * a < k * b ↔ a < b
+@Becoming.UnreadStandings.sum_eq_scaled : ∀ {k : Nat},
+  0 < k → ∀ (a b c d : Nat), k * a + k * b = k * c + k * d ↔ a + b = c + d
+@Becoming.UnreadStandings.eq_relabelled : ∀ {σ : Nat → Nat},
+  (∀ (a b : Nat), σ a ≤ σ b ↔ a ≤ b) → ∀ (a b : Nat), σ a = σ b ↔ a = b
+@Becoming.UnreadStandings.lt_relabelled : ∀ {σ : Nat → Nat},
+  (∀ (a b : Nat), σ a ≤ σ b ↔ a ≤ b) → ∀ (a b : Nat), σ a < σ b ↔ a < b
+Becoming.UnreadStandings.pos_squared : ∀ (a : Nat), 0 < a * a ↔ 0 < a
+Becoming.UnreadStandings.le_squared : ∀ (a b : Nat), a * a ≤ b * b ↔ a ≤ b
+@Becoming.UnreadStandings.factor_of_one : ∀ {k p : Nat}, 1 = k * p → k = 1
+@Becoming.World.atFinerUnit_level : ∀ {w : Becoming.World} {k : Nat} (t : Nat) (x : w.Relatum),
+  (Becoming.World.atFinerUnit k w).web.level t x = k * w.web.level t x
+@Becoming.World.atFinerUnit_taken : ∀ {w : Becoming.World} {k : Nat} (t : Nat) (c : w.Relatum),
+  (Becoming.World.atFinerUnit k w).flow.taken t c = k * w.flow.taken t c
+@Becoming.World.atFinerUnit_given : ∀ {w : Becoming.World} {k : Nat} (t : Nat) (c : w.Relatum),
+  (Becoming.World.atFinerUnit k w).flow.given t c = k * w.flow.given t c
+@Becoming.World.atFinerUnit_conserves : ∀ {w : Becoming.World} {k : Nat},
+  0 < k → ∀ (t : Nat) (g f : w.Relatum), (Becoming.World.atFinerUnit k w).Conserves t g f ↔ w.Conserves t g f
+@Becoming.World.atFinerUnit_balanced_iff : ∀ {w : Becoming.World} {k : Nat},
+  0 < k → ((Becoming.World.atFinerUnit k w).Balanced ↔ w.Balanced)
+@Becoming.World.atFinerUnit_agree : ∀ {w : Becoming.World} {k : Nat},
+  0 < k → (Becoming.World.atFinerUnit k w).modelRelations.Agree w.modelRelations
+@Becoming.World.carried_of_same : ∀ {R : Type} {S S' : Becoming.«际» (Nat × R)},
+  Becoming.«谓» S S' → Becoming.«谓» (Becoming.«像» (Becoming.World.identityOnOccurrences R).to S) S'
+@Becoming.World.atFinerUnit_carried : ∀ {w : Becoming.World} {k : Nat},
+  0 < k →
+    have a := (Becoming.World.atFinerUnit k w).modelRelations;
+    have b := w.modelRelations;
+    have e := (Becoming.World.identityOnOccurrences w.Relatum).to;
+    Becoming.«谓» (Becoming.«像» e a.conservation) b.conservation ∧
+      Becoming.«谓» (Becoming.«像» e a.active) b.active ∧
+        Becoming.«谓» (Becoming.«像» e a.standing) b.standing ∧
+          Becoming.«谓» (Becoming.«像» e a.present) b.present ∧
+            Becoming.«谓» (Becoming.«像» e a.requires) b.requires ∧
+              Becoming.«谓» (Becoming.«像» e a.draws) b.draws ∧
+                Becoming.«谓» (Becoming.«像» e a.needMet) b.needMet ∧
+                  Becoming.«谓» (Becoming.«像» e a.gives) b.gives ∧
+                    Becoming.«谓» (Becoming.«像» e a.takes) b.takes ∧
+                      Becoming.«谓» (Becoming.«像» e a.falls) b.falls ∧ Becoming.«谓» (Becoming.«像» e a.order) b.order
+@Becoming.World.atFinerUnit_activityClass : ∀ {w : Becoming.World} {k : Nat},
+  Becoming.«谓»
+    (Becoming.«像» (Becoming.World.identityOnOccurrences w.Relatum).to
+      (Becoming.World.atFinerUnit k w).web.activityClass)
+    w.web.activityClass
+@Becoming.World.atFinerUnit_family : ∀ {w : Becoming.World} {k : Nat},
+  0 < k →
+    ∀ (x y : Nat × w.Relatum),
+      Becoming.«同族» (Becoming.World.atFinerUnit k w).conservationStep (Becoming.World.atFinerUnit k w).web.activityClass
+          x y ↔
+        Becoming.«同族» w.conservationStep w.web.activityClass x y
+@Becoming.World.atFinerUnit_begins : ∀ {w : Becoming.World} {k : Nat},
+  0 < k →
+    ∀ (y : Nat × w.Relatum),
+      Becoming.«生» (Becoming.World.atFinerUnit k w).conservationStep (Becoming.World.atFinerUnit k w).web.activityClass
+          y ↔
+        Becoming.«生» w.conservationStep w.web.activityClass y
+@Becoming.World.atFinerUnit_ends : ∀ {w : Becoming.World} {k : Nat},
+  0 < k →
+    ∀ (x : Nat × w.Relatum),
+      Becoming.«亡» (Becoming.World.atFinerUnit k w).conservationStep (Becoming.World.atFinerUnit k w).web.activityClass
+          x ↔
+        Becoming.«亡» w.conservationStep w.web.activityClass x
+@Becoming.World.standing_not_read : ∀ {Ψ : (R : Type) → Becoming.World.ModelRelations R → Nat × R → Nat},
+  (∀ (R : Type) (a b : Becoming.World.ModelRelations R), a.Agree b → ∀ (x : Nat × R), Ψ R a x = Ψ R b x) →
+    ∀ (w : Becoming.World) {k : Nat},
+      0 < k →
+        k ≠ 1 →
+          ∀ (x : Nat × w.Relatum),
+            0 < w.web.level x.fst x.snd →
+              ¬(Ψ w.Relatum w.modelRelations x = w.web.level x.fst x.snd ∧
+                  Ψ w.Relatum (Becoming.World.atFinerUnit k w).modelRelations x =
+                    (Becoming.World.atFinerUnit k w).web.level x.fst x.snd)
+Becoming.World.standingAt_eq_stillAt : ∀ (k : Nat),
+  Becoming.World.standingAt k = Becoming.World.stillAt Unit fun x x_1 => k
+@Becoming.World.stillAt_conserves : ∀ {R : Type} (s : Nat → R → Nat) (t : Nat) (g f : R),
+  (Becoming.World.stillAt R s).Conserves t g f ↔ s (t + 1) f = s t g
+@Becoming.World.stillAt_relabel_agree : ∀ {R : Type} (s : Nat → R → Nat) {σ : Nat → Nat},
+  (∀ (a : Nat), 0 < σ a ↔ 0 < a) →
+    (∀ (a b : Nat), σ a ≤ σ b ↔ a ≤ b) →
+      (Becoming.World.stillAt R fun t x => σ (s t x)).modelRelations.Agree (Becoming.World.stillAt R s).modelRelations
+@Becoming.World.stillAt_squared_agree : ∀ {R : Type} (s : Nat → R → Nat),
+  (Becoming.World.stillAt R fun t x => s t x * s t x).modelRelations.Agree (Becoming.World.stillAt R s).modelRelations
+Becoming.World.oneTwo_not_scaled : (Becoming.World.stillAt Bool fun t x =>
+          Becoming.World.oneTwo t x * Becoming.World.oneTwo t x).modelRelations.Agree
+    (Becoming.World.stillAt Bool Becoming.World.oneTwo).modelRelations ∧
+  ¬∃ k,
+      ∀ (t : Nat) (x : Bool),
+        (Becoming.World.stillAt Bool fun t x => Becoming.World.oneTwo t x * Becoming.World.oneTwo t x).web.level t x =
+          k * (Becoming.World.stillAt Bool Becoming.World.oneTwo).web.level t x
+@Becoming.World.ratio_apart : ∀ {p q p' q' a b : Nat},
+  0 < p → 0 < q' → q * 1 = p * a → q * 2 = p * b → q' * 1 = p' * a → q' * 4 = p' * b → False
+Becoming.World.standing_not_read_up_to_unit : ¬∃ Ψ,
+    (∀ (R : Type) (a b : Becoming.World.ModelRelations R), a.Agree b → ∀ (x : Nat × R), Ψ R a x = Ψ R b x) ∧
+      ∀ (w : Becoming.World),
+        ∃ p q, 0 < p ∧ 0 < q ∧ ∀ (x : Nat × w.Relatum), q * w.web.level x.fst x.snd = p * Ψ w.Relatum w.modelRelations x

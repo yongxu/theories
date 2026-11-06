@@ -170,6 +170,7 @@ Aliases: `Becoming.Flow.Dissipative`, `Becoming.Flow.Balances.runs_down`, `Becom
 - 6 November 2026, board item LM: declarations this record lists moved with the helpers stated once; its references follow them, and no law changed.
 - 7 November 2026, board item LM2: "generation" for arising (Unceasing) and for a flow more without end (More) is replaced, since the glossary's generation never means arising; the Lean's docstrings changed with it. No law, premise or proof changed.
 - 7 November 2026, board item LM2 (its reader's findings): "generation" for embodied arising or for arising is replaced, since the glossary's generation never means arising. No law, premise or proof changed.
+- 7 November 2026, board item LM2 (its reader's second round): arising said as generation corrected, and the title made exact: embodied arising replenishes, while Flicker arises with nothing given. No law, premise or proof changed.
 - 2 rebinding entries (2026-10-13 to 2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](no-finite-part-bears-taking.json).
 
 <a id="earlier-text--早期文本"></a>
