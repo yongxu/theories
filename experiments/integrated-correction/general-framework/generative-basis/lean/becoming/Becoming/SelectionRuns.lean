@@ -105,12 +105,6 @@ theorem values_right_of_reads {W : Type x} {reg : S → V} {r : Run P} {f : S �
 
 end Moments
 
-section Share
-
-variable {α : Type} {C : Type} {A : Type v} {P : Process (C → Nat) A}
-
-end Share
-
 end SelectionRuns
 
 end Becoming

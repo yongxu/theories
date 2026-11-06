@@ -1077,18 +1077,6 @@ end Becoming
 
 /-! ## Lists joined in either grouping (moved from `Becoming.Joining`) -/
 
-namespace Becoming
-
-universe u v w u' v'
-
-namespace Joining
-
-variable {F : Type u} {G : Type v} {K : Type u'} {K' : Type v'}
-
-end Joining
-
-end Becoming
-
 /-! ## Membership kept under reordering (moved from `Becoming.Coverage`) -/
 
 namespace Becoming

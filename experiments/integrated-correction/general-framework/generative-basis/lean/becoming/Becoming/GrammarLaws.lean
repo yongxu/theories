@@ -369,8 +369,8 @@ end Closure
 
 /-! ## Lists (helpers, stated without `simp` so that no axiom enters)
 
-Lemmas on numbers and lists, not statements of the grammar: pigeonhole (`revisits_within`), the
-list surgery that pairings need, the filters and searches the census of a step needs (`keep`,
+Lemmas on numbers and lists, not statements of the grammar (pigeonhole is `revisits_within`, in
+`Becoming.Prelude`): the list surgery that pairings need, the filters and searches the census of a step needs (`keep`,
 `any_split`, `distinct_removed`), and the words that `«迭»` reads as cases of `«历»` (copies joined,
 `replicate_add_append`; a word read backward, `reverse_cons_append`, proved here by induction because
 the core's `List.reverse_cons` reports `propext`). `le_dest`, `ListTests.length_append`,

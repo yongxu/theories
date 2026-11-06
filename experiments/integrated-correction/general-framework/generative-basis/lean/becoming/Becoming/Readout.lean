@@ -249,11 +249,6 @@ theorem lumpedOn_of_judges {family : List S} {π : S → K} {f : S → V} {judge
     (judges : Judges family π f judge) : LumpedOn family π f :=
   fun s s' mem mem' same => (judges s mem).symm.trans ((congrArg judge same).trans (judges s' mem'))
 
-/-- A member of a listed family is its first member or a member of the rest. -/
-theorem member_cons_cases {x s : S} {rest : List S} : s ∈ x :: rest → s = x ∨ s ∈ rest
-  | .head _ => .inl rfl
-  | .tail _ later => .inr later
-
 variable [DecidableEq K]
 
 /-- The judge answering with `f` at the first listed member of the reduced value, and `d` where
@@ -268,7 +263,7 @@ theorem firstJudge_judges (π : S → K) (f : S → V) (d : V) :
   | x :: rest, lumped => fun s mem =>
     match decEq (π x) (π s) with
     | .isTrue same => (if_pos same).trans (lumped x s (.head rest) mem same)
-    | .isFalse differ => (if_neg differ).trans (match member_cons_cases mem with
+    | .isFalse differ => (if_neg differ).trans (match mem_cons_cases mem with
       | .inl at_x => absurd (congrArg π at_x).symm differ
       | .inr later => firstJudge_judges π f d rest
           (fun a b ma mb => lumped a b (.tail x ma) (.tail x mb)) s later)

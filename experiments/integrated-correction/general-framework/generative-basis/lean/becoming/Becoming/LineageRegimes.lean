@@ -7,7 +7,7 @@ import Becoming.Population
 # Regime, not level: what decides a lineage's region, and what the stock sets
 
 `Becoming.Continuation`, `Becoming.Reproduction` and `Becoming.MutualDependence` state three laws
-that end what depends on a flow: renewal gated on what it renews, run past what it gives
+that end what depends on a flow: renewal run past what it gives
 (`Flow.excess_bounded`, `Flow.family_excess_bounded`, `Flow.joint_excess_ends`,
 `Flow.family_excess_ends`); a lineage within a family dissipated on
 (`Reproduction.Flow.lineage_ends`); and a draw on a condition given nothing
@@ -20,7 +20,7 @@ The grains: the coarse class is a kind (`Web.kindClass`), the fine class the car
 (`Web.carrierClass`, read as the organism); `«退化»` is stated at the kind grain, `«生成»` at
 (kind, carrier).
 
-* **Renewal gated on what it renews, run past what it gives (horizon wrappers).** Under balance,
+* **Renewal run past what it gives (horizon wrappers).** Under balance,
   `n` steps of joint excess at a condition need its level to be at least `n`
   (`excess_within_level`), and `n` steps of excess of a family's uptake over its replenishment need
   its stock to be at least `n` (`family_excess_within_stock`), so no course has `stock + 1` such
@@ -79,9 +79,9 @@ The grains: the coarse class is a kind (`Web.kindClass`), the fine class the car
   (`Handover.relay_generates`). At stock one its flow and levels are those of
   `Reproduction.Relay`; its web differs (`Handover.relay_one_flow`). With the amount `s - t`, the
   run-down (`Handover.runDown`): `s` steps of excess of the pair's uptake over its replenishment,
-  dissipation at every step, and the line degenerates (`«退化»`), derived through the gated regime
+  dissipation at every step, and the line degenerates (`«退化»`), derived through the regime of excess
   at its horizon (`Handover.runDown_degenerates`); the census holds every continuation
-  (`Handover.runDown_listed`), so the census reading of the gated regime and the dissipation
+  (`Handover.runDown_listed`), so the census reading of the regime of excess and the dissipation
   corollary apply too, generation `s` is empty and `lineage_ends` holds, while no handover meets
   the draw regime's premise over two or more steps (no condition is drawn on at least once and
   then at least twice at the next step, `Handover.draw_not_doubling`) (`Handover.runDown_every_regime`). These witnesses show that the
@@ -91,12 +91,12 @@ The grains: the coarse class is a kind (`Web.kindClass`), the fine class the car
   same stock `s` (`Handover.both_fates`), so no verdict on the region follows from the stock alone
   (`stock_forces_neither`, under `GatedPairCourse`, which lists the premises both courses meet;
   a restatement of the pair with `«生成退化不并»`).
-* **Renewal from outside: where no gated regime binds (boundary).** In `FromOutside` a renewer
+* **Renewal from outside: where none of the regimes binds (boundary).** In `FromOutside` a renewer
   gives two units at every step and does not require the condition; two takers each take one, each
   within what is given and together within it; nothing is in excess, the condition is fed and not
   dissipated on, and every formation is active and supported at every step
-  (`FromOutside.from_outside`). The gated premise fails at every need (`FromOutside.not_gated`), so
-  none of the three regimes' premises holds. In the model a formation's giving is not drawn from
+  (`FromOutside.from_outside`), so none of the three regimes' premises holds; a gate on the renewal
+  fails too, at every need (`FromOutside.not_gated`). In the model a formation's giving is not drawn from
   its own level unless it takes, so "from outside" means from no listed condition.
   `Alone` (`Becoming.Continuation`) is the gated neighbour: its renewer requires the condition,
   which is never run past.
@@ -129,7 +129,7 @@ namespace LineageRegimes
 
 open LineageRegions
 
-/-! ## Renewal gated on what it renews: the horizon -/
+/-! ## Renewal run past what it gives: the horizon -/
 
 section Horizon
 
@@ -158,7 +158,7 @@ end Horizon
 
 /-! ## Renewal run past what it gives, on a lineage -/
 
-section Gated
+section Excess
 
 variable {X : Type} {L : Flow X X} {W : Web X X} {Q : X → X → Prop}
 
@@ -221,7 +221,7 @@ theorem degeneration_at_stock_horizon (balances : L.Balances W)
   degeneration_of_family_excess balances dependent excess (Nat.lt_succ_self _) active
     le depends
 
-end Gated
+end Excess
 
 /-! ## Dissipation within the family -/
 
@@ -986,7 +986,7 @@ theorem runDown_listed (s : Nat) (Q : Bool → Bool → Prop) :
         ((congrArg (fun g => pick (!holder t) g (s - (t + 1))) hq).trans
           (pick_back (holder t) _)))))
 
-/-- **The run-down degenerates**, derived through the gated regime at its horizon: from stock
+/-- **The run-down degenerates**, derived through the regime of excess at its horizon: from stock
 `s ≥ 1`, `s` steps of excess of the pair's uptake over its replenishment at need one end the line
 from the first member on every branch at the kind grain (`degeneration_at_stock_horizon`). A
 witness that the regime's premises hold together, not that the regime is needed: the same
@@ -1132,7 +1132,7 @@ theorem supported (t : Nat) (f : Member) : web.Supported t f :=
 
 theorem dependent : web.Dependent := fun t f _ => supported t f
 
-/-- **No gated regime binds it**: at every need, the gated premise fails, since the renewer gives
+/-- **No gate binds it**: at every need, a gate on the renewal fails, since the renewer gives
 without requiring the condition. -/
 theorem not_gated (m : Nat) : ¬ ∀ t f, f ∈ flow.present t → 0 < flow.give t f () →
     web.requires t f () ∧ m ≤ web.need t f () :=

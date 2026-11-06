@@ -75,10 +75,6 @@ namespace Becoming
 
 variable {F C : Type}
 
-namespace Closing
-
-end Closing
-
 /-! ## Loops formed by a step -/
 
 section Formed

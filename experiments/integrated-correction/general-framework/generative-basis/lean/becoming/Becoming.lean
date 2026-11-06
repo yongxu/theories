@@ -381,6 +381,7 @@ import Becoming.GrammarScope
 import Becoming.GrammarCases
 import Becoming.GrammarCrossing
 import Becoming.PremiseWitnesses
+import Becoming.PremisesTogether
 import Becoming.GrammarPath
 import Becoming.SignificanceStatements
 
@@ -955,8 +956,8 @@ tagged instance or application.
   `Becoming.KeepingWidening` arrive; imported by `Becoming.LineageRegimes`.
 * `Becoming.LineageRegimes` (L2, through `Becoming.LineageRegions`): regime, not level, EL2 (no
   ethical predicate). Each of three landed ending laws, read as a decider of a lineage's region
-  under a premise on the line's reach, is a regime whose horizon the stock sets: renewal gated on
-  what it renews, run past what it gives (`LineageRegimes.degeneration_of_family_excess`; at need
+  under a premise on the line's reach, is a regime whose horizon the stock sets: renewal run past
+  what it gives (`LineageRegimes.degeneration_of_family_excess`; at need
   one the horizon is the stock, `LineageRegimes.degeneration_at_stock_horizon`), dissipation within
   the family (`LineageRegimes.dissipation_degenerates_every_member`), and a draw on a condition
   given nothing (`LineageRegimes.draw_doubling_needs`, of which `Flow.Balances.doubling_needs` is a
@@ -965,15 +966,11 @@ tagged instance or application.
   `LineageRegimes.multiplying_takers_stop`). The stock decides neither fate: from every positive
   stock a handover relay generates and a run-down degenerates (`LineageRegimes.Handover.both_fates`,
   `LineageRegimes.stock_forces_neither`); under renewal from outside no gated premise holds
-  (`LineageRegimes.FromOutside.not_gated`). Imported by `Becoming.LineageDrawdown` (board item EL7),
-  where the gated reading holds without its gate and `Acting`; that every decider of a lineage's
+  (`LineageRegimes.FromOutside.not_gated`). Imported by `Becoming.LineageDrawdown` (board item EL7);
+  that every decider of a lineage's
   region is one of the three is not shown.
-* `Becoming.LineageDrawdown` (L2, through `Becoming.LineageRegimes`): the lineage reading without its
-  gate, EL7 (no ethical predicate). The gated lineage reading and the map's horizon law hold with the
-  coupled gate and `Acting` dropped, each landed statement a case with the same type
-  (`LineageDrawdown.degeneration_of_excess`, `LineageDrawdown.landed_of_excess_eq`,
-  `LineageDrawdown.gone_of_excess`, `LineageDrawdown.horizon_of_excess`): restatements of landed
-  lemmas, not further results. Under balance a family's stock is below a need after `n` steps exactly
+* `Becoming.LineageDrawdown` (L2, through `Becoming.LineageRegimes`): a lineage drawn below its need,
+  EL7 (no ethical predicate; restatements of landed lemmas, not further results). Under balance a family's stock is below a need after `n` steps exactly
   where its stock before, with everything given, is below the need with everything taken
   (`LineageDrawdown.below_iff`, a restatement of `Flow.Balances.accumulates`); where activity needs
   support, a line ends on every branch where everything it reaches at one step requires a member of a
@@ -2843,7 +2840,7 @@ tagged instance or application.
 * `Becoming.UnitMatchings` (L1): amounts, the root's second sort, by their interface: balance is
   represented by selected matchings of units, not derived from the unfolding. A selected matching of
   a frame (`UnitMatchings.FrameMatch`), a bijection of its in-positions with its out-positions given
-  as data, forces equal counts by pigeonhole through `GrammarLaws.revisits_within`, with no
+  as data, forces equal counts by pigeonhole through `revisits_within`, with no
   decidability (`UnitMatchings.FrameMatch.eq`), and each out-position has one in-position sent to it
   (`UnitMatchings.FrameMatch.predecessor_unique`); a flow over a web has one at every step and
   condition exactly where it balances, the converse pairing by position with no choice
@@ -3011,7 +3008,7 @@ tagged instance or application.
   count kept on each closure (`Continuity.pairing_iff_closure_counts`), a case of
   `«类之对当且仅当类类等数»`; along the listed adjacency, on the closure of each relatum, listed or
   not (`Continuity.pairing_iff_closures`). So, the levels read as units on their relata, each
-  listed relatum repeated as often as its level (`Continuity.unitsOn`), the transfers exist exactly
+  listed relatum repeated as often as its level (`unitsOn`), the transfers exist exactly
   where the units before pair one to one with the units after under the closure
   (`Continuity.balancing_iff_units_paired`), though not always along one step of the adjacency
   (`Continuity.PathOfThree.counts_kept_not_along_step`). A leaf.
@@ -3566,7 +3563,7 @@ tagged instance or application.
   definitional laws state families exactly (`«亡者异当且仅当有后»`, `«无异当且仅当不分续»`,
   `«皆不生当且仅当皆非无缘»`); what ends under a class passes through under another only by altering
   (`«亡而通则异»`), and alters exactly where it passes through under a class constant both ways
-  (`«亡而两向有常则异当且仅当通»`); and 30 witnesses (`…之例`) give the nets the other modules do not. Which unit
+  (`«亡而两向有常则异当且仅当通»`); and 31 witnesses (`…之例`) give the nets the other modules do not. Which unit
   states which law is an AI reconstruction (the OU7 study's `data/groups.tsv`). A leaf.
 * `Becoming.CommonResponse` (L1): a response common over a reading (共应), on the grammar, for every
   carrier, reading and requirement, with no premise. The occurrences at which a region holds
@@ -4684,6 +4681,15 @@ tagged instance or application.
   no list holds what every level path admits once there is a formation
   (`Web.not_listsAdmitted_every`). It does not derive C. A leaf importing `Becoming.GrammarCases`,
   `Becoming.Lifting` and `Becoming.EventualWideningInstances`.
+* `Becoming.PremisesTogether` (L2, through `Becoming.PremiseWitnesses`): premises no proof had
+  established, met together with their laws' other premises in small models, and where it costs a
+  line failed in another (board item LM): the link to C between listed level paths, with self-concern
+  as well (`ListedPaths.premises_hold`, `ListedPaths.premises_hold_de_se`); removing idle steps
+  (`IdleStep.premises_hold`); mutual feeding (`TwoFeeding.mutuallyFed`); joining
+  (`Joining.Once.finiteOutcomes`, `Joining.Once.locallyFinite`, `Joining.Once.connectedFrom`); a
+  reconfiguration's bound (`Reconfiguration.covered_and_not`); readings of matched courses
+  (`MatchedCourses.readings_hold_together`); portions returning less than one for one
+  (`Optimum.AtOnce.returnsLess_met`). A leaf.
 * `Becoming.GrammarPath` (L1): what a line under a class must hold, and what a regularity takes in
   (board item PF), for every carrier, relation and class. Where a region is left under a class only
   into a set, a line under the class from inside to outside holds a member of that set alike to its

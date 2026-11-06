@@ -25,6 +25,10 @@ or a law: the module imports only Init, and every module of the core reaches it 
   for each member gives a list of pairs over it (`exists_pairs_over`); a positive total has a
   positive member (`total_pos`, from Flow); a list paired with a step (`mem_map_prodMk`,
   `prodMk_mem_map`) and a negated decision (`not_decide_iff`).
+* **Stated once** (LM, each stated more than once before): products, cancellation and order in
+  `Naturals`, truth values in `ListTests`, and in the root namespace the totals over a list
+  (`total_congr`, `total_eq_zero`), the first gap below a bound (`gap_of_lt`), a list with one
+  member skipped (`skipAt`) and the pigeonhole on a list of positions (`revisits_within`).
 * **Stretches of steps and recurrence** (U4c, moved from Change and Population): the members and
   totals of a stretch (`steps_mem`, `steps_last`, `steps_mono`), totals of a recurring quantity
   exceeding every bound (`recurring_accumulates`, `pos_of_exceeds`), and the counting steps from

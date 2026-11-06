@@ -161,10 +161,6 @@ theorem shares_not_mutual : flow.SharesThroughout web ∧ ¬ flow.MutuallyDepend
 
 end Clearing
 
-namespace Overshoot
-
-end Overshoot
-
 /-! ### Drawing on what the other depends on
 
 Two formations, each requiring its own condition. Across the first step each takes one unit from the
