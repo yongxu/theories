@@ -1,0 +1,37 @@
+{
+ "adults": {
+  "columns": [
+   "County",
+   "Waterbody Name",
+   "WBIC",
+   "Lake Characteristics",
+   "Survey Year",
+   "Primary Recruitment Source",
+   "Population Estimate",
+   "Lower 95 C.I.",
+   "Number/Acre",
+   "No. Adults < 12 Inches/Acre",
+   "No. Adults 12-15 Inches/Acre",
+   "No. Adults 15-20 Inches/Acre",
+   "No. Adults > 20 Inches/Acre",
+   "Notes"
+  ],
+  "rows": 1051
+ },
+ "stocking": {
+  "columns": [
+   "WBIC",
+   "Year",
+   "Species",
+   "Number Stocked",
+   "SOURCE_TYPE",
+   "STOCKED_COUNTY_NAME",
+   "STOCKED_WB_NAME",
+   "LOCAL_WB_NAME",
+   "STOCK_NAME",
+   "AGE_CLASS",
+   "AVERAGE_FISH_LENGTH_INCHES"
+  ],
+  "rows": 13813
+ }
+}
