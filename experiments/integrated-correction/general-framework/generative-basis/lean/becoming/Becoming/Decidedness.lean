@@ -1,5 +1,4 @@
 import Becoming.Space
-import Becoming.Recurrence
 
 /-!
 # Decidedness: what a count needs, and where

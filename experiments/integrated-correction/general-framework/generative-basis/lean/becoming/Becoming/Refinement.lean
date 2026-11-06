@@ -1,5 +1,4 @@
 import Becoming.Decidedness
-import Becoming.Recurrence
 
 /-!
 # Refinement: a chain of equivalences stops within its classes

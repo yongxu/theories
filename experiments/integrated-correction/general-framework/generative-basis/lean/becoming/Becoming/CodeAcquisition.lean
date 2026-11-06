@@ -1,5 +1,4 @@
 import Becoming.PartialReadout
-import Becoming.Assurance
 
 /-!
 # Code acquisition: reading a compositional code off three probes
