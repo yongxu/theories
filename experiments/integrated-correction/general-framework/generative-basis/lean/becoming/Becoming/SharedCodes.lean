@@ -671,7 +671,7 @@ theorem follow_state (p : I → I) (X : I → M → F) :
 /-- **Following brings every start to agreement exactly where the pointer's paths have met.**
 Where two forms differ, the run from every start agrees at `m` at step `n` exactly where any two
 formations lead, `n` steps along `p`, to one formation. -/
-theorem follow_agrees_iff [DecidableEq I] [DecidableEq M] {a b : F} (apart : a ≠ b) (p : I → I)
+theorem follow_agrees_iff [DecidableEq I] {a b : F} (apart : a ≠ b) (p : I → I)
     (n : Nat) (m : M) :
     (∀ (X : I → M → F) i j,
         (Law.run (follow p) X).state n i m = (Law.run (follow p) X).state n j m) ↔

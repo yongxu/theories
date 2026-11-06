@@ -332,7 +332,7 @@ end Web
 
 namespace Flow
 
-/-- **In a finite balanced world under the first law nothing keeps widening.** Where a list without
+/-- **In a finite balanced world under the first law nothing keeps widening by name.** Where a list without
 repetition holds every condition, the flow balances on it from `T₀` on and nothing comes from
 nothing, no course keeps widening by name on the actual levels with what its formations require
 fixed: the whole has no boundary to be given across. -/

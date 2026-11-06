@@ -1854,16 +1854,28 @@ theorem «尽则不屡» {Q F : «际» α} {g : Nat → α} {T : Nat}
     ¬ «屡» F g :=
   fun recurs => «尽则不或屡» (fun t later no => no (still t later)) ends («屡则或屡» recurs T)
 
-/-- **At rest and not drawn in**: on one occurrence that conditions itself, with no `F` step, the
-constant line is at rest (its falls end and do not recur) and its place is not drawn in. A fixed
-point is at rest without being drawn, so rest is not a case of `«入»`. -/
-theorem «止而不入之例» : ∃ (Q F : «际» Unit) (g : Nat → Unit),
-    (∀ t, Q (g t) (g (t + 1))) ∧ «尽» («而» («所闭» Q) F) «一» (g 0) ∧ ¬ «屡» F g ∧ ¬ «入» Q (g 0) :=
-  have ends : «尽» («而» («所闭» («静» : «际» Unit)) (fun _ _ => False)) «一» () :=
-    .mk fun _ ⟨⟨_, _, fall⟩, _⟩ => fall.elim
-  ⟨«静», fun _ _ => False, fun _ => (), fun _ => rfl, ends,
-   «尽则不屡» (T := 0) (fun _ _ => rfl) ends,
-   «定后则返者不入» (fun _ _ ⟨_, e₁, e₂⟩ => e₁.symm.trans e₂) (.one rfl)⟩
+/-- **At rest and not drawn in**: on two occurrences, a line falls once and then stays at a fixed
+point. Its falls end and do not recur, and the place it rests at is not drawn in, since that place
+reaches itself. A fixed point is at rest without being drawn, so rest is not a case of `«入»`. -/
+theorem «止而不入之例» : ∃ (Q F : «际» Bool) (g : Nat → Bool),
+    (∀ t, Q (g t) (g (t + 1))) ∧ (∃ t, F (g t) (g (t + 1))) ∧
+      «尽» («而» («所闭» Q) F) «一» (g 0) ∧ ¬ «屡» F g ∧ ¬ «入» Q (g 1) := by
+  let Q : «际» Bool := fun _ b => b = true
+  let F : «际» Bool := fun a b => a = false ∧ b = true
+  let g : Nat → Bool := fun t => match t with
+    | 0 => false
+    | _ + 1 => true
+  have toTrue : ∀ {b : Bool}, «所闭» Q true b → b = true :=
+    fun h => h (fun z => z = true) (fun _ _ _ e => e) rfl
+  have trueEnds : «尽» («而» («所闭» Q) F) «一» true :=
+    .mk fun _ ⟨⟨_, closed, fall⟩, _⟩ =>
+      absurd (toTrue closed) (fun e => Bool.noConfusion (fall.1.symm.trans e))
+  have ends : «尽» («而» («所闭» Q) F) «一» false :=
+    .mk fun y ⟨⟨_, _, fall⟩, _⟩ =>
+      Eq.subst (motive := fun z => «尽» («而» («所闭» Q) F) «一» z) fall.2.symm trueEnds
+  exact ⟨Q, F, g, fun _ => rfl, ⟨0, rfl, rfl⟩, ends,
+    «尽则不屡» (T := 0) (fun _ _ => rfl) ends,
+    «定后则返者不入» (fun _ _ ⟨_, e₁, e₂⟩ => e₁.trans e₂.symm) (.one rfl)⟩
 
 /-- **Drawn in and not at rest**: along the successor on the whole numbers every step is an `F`
 step, so the `F` steps recur, and `0` is drawn in, since what it reaches never reaches back. Being

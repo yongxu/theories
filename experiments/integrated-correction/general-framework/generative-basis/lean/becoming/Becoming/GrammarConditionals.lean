@@ -132,11 +132,21 @@ theorem «异而两向有常则通» {R E F : «际» α} {x y : α} (hF : «类
 (亡而两向有常则异当且仅当通).** The two laws above joined: what ends under `E`, under `F` constant both
 ways, alters exactly where it passes through. So the two steps of 「易窮則變，變則通」 hold in the grammar as
 implications under that premise [AI reading], the first also needing a successor under `F`, since what ends
-can cease (`«亡而息之例»`). The grammar gives them no direction and no order in time: under these premises
-having a successor, altering, passing through and never ending going are one. -/
+can cease (`«亡而息之例»`). Under these premises having a successor, altering, passing through and never
+ending going are one, so there the grammar gives them no direction among them, and it gives no order in
+time; what alters need not have ended at all (`«异而未亡之例»`). -/
 theorem «亡而两向有常则异当且仅当通» {R E F : «际» α} {x : α} (hF : «类» F) (hc : «有常» R F)
     (hc' : «有常» («逆» R) F) (ends : «亡» R E x) : (∃ y, «异» R F E x y) ↔ «通» R F x :=
   ⟨fun ⟨_, h⟩ => «异而两向有常则通» hF hc hc' h, «亡而通则异» ends⟩
+
+/-- **Altering and not ended (异而未亡之例).** One occurrence with a step to itself and a step to another:
+it alters into the other under the one, identity parting them, and it has not ended under identity,
+since it also continues itself. So altering does not need ending, though with passing through ending
+gives altering (`«亡而通则异»`). -/
+theorem «异而未亡之例» :
+    ∃ (R : «际» Bool), «异» R «一» «静» false true ∧ ¬ «亡» R «静» false :=
+  ⟨fun a _ => a = false, ⟨⟨rfl, trivial⟩, fun e => Bool.noConfusion e⟩,
+   fun ends => ends ⟨false, rfl, rfl⟩⟩
 
 /-- **Altering and not passing through (异而不通之例).** One step with nothing after it: the first
 occurrence ends under identity and alters under the one into the second, whose line ends, so the first

@@ -289,14 +289,25 @@ theorem «生住不并» {R E : «际» α} {x : α} : ¬ («生» R E x ∧ «�
 theorem «住亡不并» {R E : «际» α} {x : α} : ¬ («住» R E x ∧ «亡» R E x) :=
   fun ⟨⟨_, hs⟩, he⟩ => he hs
 
+/-- **The four positions at once (四相俱時而有，皆無自立, QXL-JS-049; 從縷有布、從麻有縷, ZL-07-164).** An
+occurrence with a condition and a consequence, not its own condition, begins and ends under identity,
+abides under the one, and alters into its consequence under the one while identity tells them apart
+[AI reading]. -/
+theorem «四相俱时» {R : «际» α} {x y z : α} (nr : ¬ R y y) (hxy : R x y) (hyz : R y z) :
+    «生» R «静» y ∧ «亡» R «静» y ∧ «住» R «一» y ∧ «异» R «一» «静» y z :=
+  ⟨fun ⟨w, hw, he⟩ => by cases he; exact nr hw,
+   fun ⟨w, hw, he⟩ => by cases he; exact nr hw,
+   ⟨⟨x, hxy, trivial⟩, ⟨z, hyz, trivial⟩⟩,
+   ⟨hyz, trivial⟩, fun same => by cases same; exact nr hyz⟩
+
 /-- **No position stands by itself (四相无自立).** In a net without self-conditioning, an occurrence
 with a condition and a consequence abides under the one, and under identity it both begins and
-ends: the same occurrence holds different positions at once, each relative to a class. -/
+ends: the same occurrence holds different positions at once, each relative to a class. Three of the
+four of `«四相俱时»`, which needs only that this occurrence is not its own condition. -/
 theorem «四相无自立» {R : «际» α} (irr : ∀ z, ¬ R z z) {x y z : α} (hxy : R x y) (hyz : R y z) :
     «住» R «一» y ∧ «生» R «静» y ∧ «亡» R «静» y :=
-  ⟨⟨⟨x, hxy, trivial⟩, ⟨z, hyz, trivial⟩⟩,
-   fun ⟨w, hw, he⟩ => by cases he; exact irr _ hw,
-   fun ⟨w, hw, he⟩ => by cases he; exact irr _ hw⟩
+  match «四相俱时» (irr y) hxy hyz with
+  | ⟨begins, ends, abides, _⟩ => ⟨abides, begins, ends⟩
 
 /-- Continuation contained in 缘 is a necessary condition only: every single 缘 is a continuation
 under the class that puts its two ends together and everything else apart. -/
@@ -659,7 +670,8 @@ theorem «自不复生则息» {R E : «际» α} {x : α} (h : ¬ «复生» R 
     | .more c _ => ⟨_, c⟩⟩ h
 
 /-- Where nothing on the line from `x` renews, `x` ceases: the old reading of ceasing (no renewal
-anywhere on the line) implies the new one. -/
+anywhere on the line) implies the new one. Only the instance at `x` itself is used: the law is
+`«自不复生则息»`, kept here as the statement that the old reading implies the new. -/
 theorem «不复生则息» {R E : «际» α} {x : α} (none : ∀ y, (x = y ∨ «相续» R E x y) → ¬ «复生» R E y) :
     «息» R E x :=
   «自不复生则息» (none x (.inl rfl))
@@ -813,7 +825,8 @@ end Flame
 /-- **Fire and fuel need each other (火薪相须).** In the four-moment flame, "flame or not" and "the
 same fuel left" each suffice for the other's regularity, and neither is constant (a line under each
 ends): they need each other through the core. The leaning goes both ways; the witness fixes no
-direction. -/
+direction. On these four moments the joint class is identity, so what each suffices for is identity's
+core; `«两火火薪相须»` is the case where the joint class relates two distinct occurrences. -/
 theorem «火薪相须» : «相须核» Flame.step Flame.alike Flame.sameFuel := by
   refine ⟨fun x y h => ?_, fun x y h => ?_, ?_, ?_⟩
   · have e : x = y := Flame.joint_eq h
@@ -887,5 +900,30 @@ theorem «两火同火不足以定理» : ¬ «足以定核» TwoFlames.step Two
         exact ⟨m, hm, hw⟩
     exact Flame.not_core_f₀ (S := fun a b => S (true, a) (true, b))
       (fun a b q => hSE (true, a) (true, b) q) (fun a b q => hs (true, a) (true, b) q) hc' hS
+
+/-- **Fire and fuel need each other in two flames, where their joint class is no identity
+(两火火薪相须).** On two flames the joint class of "flame or not" and "the same fuel left" relates the
+same moment of the two flames, which are distinct occurrences, and each still suffices for the
+other's regularity, neither being constant. So `«火薪相须»` does not rest on the joint class's being
+identity. -/
+theorem «两火火薪相须» :
+    «相须核» TwoFlames.step TwoFlames.alike TwoFlames.sameFuel ∧
+      «合» TwoFlames.alike TwoFlames.sameFuel (true, Flame.f₀) (false, Flame.f₀) ∧
+      (true, Flame.f₀) ≠ ((false, Flame.f₀) : TwoFlames) := by
+  have hc : «有常» TwoFlames.step («合» TwoFlames.alike TwoFlames.sameFuel) := by
+    apply («有常之逐点» TwoFlames.step _).mpr
+    intro u u' q v hr
+    have e : u.2 = u'.2 := Flame.joint_eq (x := u.2) (y := u'.2) q
+    exact ⟨(u'.1, v.2), ⟨rfl, e ▸ hr.2⟩, ⟨rfl, rfl⟩⟩
+  have h₁ : «类» TwoFlames.alike := ⟨fun _ => rfl, Eq.symm, Eq.trans⟩
+  have h₂ : «类» TwoFlames.sameFuel := ⟨fun _ => rfl, Eq.symm, Eq.trans⟩
+  match «合有常则足以定核» TwoFlames.step h₁ h₂ hc with
+  | ⟨a, b⟩ =>
+    refine ⟨⟨a, b, ?_, ?_⟩, ⟨rfl, rfl⟩, fun e => Bool.noConfusion (congrArg Prod.fst e)⟩
+    · exact «有亡之续则不有常» (x := (true, Flame.f₁)) (y := (true, Flame.f₂)) ⟨⟨rfl, trivial⟩, rfl⟩
+        (fun ⟨⟨c, z⟩, ⟨_, hr⟩, same⟩ => by
+          cases z <;> first | exact False.elim hr | exact Bool.noConfusion same)
+    · exact «有亡之续则不有常» (x := (true, Flame.f₂)) (y := (true, Flame.ash)) ⟨⟨rfl, trivial⟩, rfl⟩
+        (fun ⟨⟨c, z⟩, ⟨_, hr⟩, _⟩ => by cases z <;> exact False.elim hr)
 
 end Becoming
