@@ -9173,7 +9173,7 @@ Definitions and types:
 <a id="module-a4c1ca9cdf38"></a>
 
 <details>
-<summary>GrammarConditionals.lean — 41 explicit declarations</summary>
+<summary>GrammarConditionals.lean — 49 explicit declarations</summary>
 
 [Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean) · [Theory](../../chapters/06-CLASSICAL-TEXTS.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
 
@@ -9183,50 +9183,58 @@ Imports: `Becoming.GrammarCandidates`, `Becoming.GrammarLaws`
 
 | Theorem or lemma | Line |
 |---|---:|
-| [Becoming.«亡者异当且仅当有后»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L42) | 42 |
-| [Becoming.«亡而息之例»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L48) | 48 |
-| [Becoming.«两向有常而无前不通之例»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L56) | 56 |
-| [Becoming.«不有常而通之例»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L66) | 66 |
-| [Becoming.«皆有后而步皆分则全生成»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L111) | 111 |
-| [Becoming.«昼夜全生成»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L118) | 118 |
-| [Becoming.«有亡而不全生成之例»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L125) | 125 |
-| [Becoming.«步不分而不全生成之例»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L130) | 130 |
-| [Becoming.«线不返则短于所列»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L149) | 149 |
-| [Becoming.«不返而有限则非不穷»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L172) | 172 |
-| [Becoming.counting_reach_lt](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L186) | 186 |
-| [Becoming.«无环而不穷之例»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L193) | 193 |
-| [Becoming.«返而不穷之例»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L200) | 200 |
-| [Becoming.«有限遍后而不返之例»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L210) | 210 |
-| [Becoming.«遍后定前而无环之例»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L227) | 227 |
-| [Becoming.«无异当且仅当不分续»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L246) | 246 |
-| [Becoming.«静分续而有异之例»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L252) | 252 |
-| [Becoming.«非有常之类不含于核之例»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L258) | 258 |
-| [Becoming.«皆不生当且仅当皆非无缘»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L279) | 279 |
-| [Becoming.«所依无则依者无»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L292) | 292 |
-| [Becoming.«依之传»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L299) | 299 |
-| [Becoming.«不依之例»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L307) | 307 |
-| [Becoming.«无环则无俱有»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L315) | 315 |
-| [Becoming.«生亡并之例»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L329) | 329 |
-| [Becoming.«亡于静而住于一之例»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L336) | 336 |
-| [Becoming.«无缘不住而他有后之例»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L346) | 346 |
-| [Becoming.«自缘而不生之例»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L355) | 355 |
-| [Becoming.«有前不有常而亡之例»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L361) | 361 |
-| [Becoming.«不有常而不穷之例»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L369) | 369 |
-| [Becoming.«无相而非亦无相之例»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L396) | 396 |
-| [Becoming.«无能无所之例»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L401) | 401 |
-| [Becoming.«像不保之例»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L406) | 406 |
-| [Becoming.«类内有常则线相随»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L424) | 424 |
-| [Becoming.«核同则同不穷»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L445) | 445 |
-| [Becoming.«生于核下可变之例»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L462) | 462 |
-| [Becoming.«不穷与亡不同核之例»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L480) | 480 |
-| [Becoming.«逆核不含于核之例»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L504) | 504 |
-| [Becoming.«无始而有终之例»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L521) | 521 |
-| [Becoming.«依于无始而有始之例»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L530) | 530 |
-| [Becoming.«相须之例»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L556) | 556 |
+| [Becoming.«亡者异当且仅当有后»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L43) | 43 |
+| [Becoming.«亡而息之例»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L49) | 49 |
+| [Becoming.«两向有常而无前不通之例»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L57) | 57 |
+| [Becoming.«不有常而通之例»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L67) | 67 |
+| [Becoming.«亡而通则异»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L108) | 108 |
+| [Becoming.«有后而两向有常则通»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L115) | 115 |
+| [Becoming.«异而两向有常则通»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L127) | 127 |
+| [Becoming.«亡而两向有常则异当且仅当通»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L137) | 137 |
+| [Becoming.«异而不通之例»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L144) | 144 |
+| [Becoming.«通而不异之例»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L155) | 155 |
+| [Becoming.«步皆分则皆亡»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L164) | 164 |
+| [Becoming.«不有常而异且通之例»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L171) | 171 |
+| [Becoming.«皆有后而步皆分则全生成»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L216) | 216 |
+| [Becoming.«昼夜全生成»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L223) | 223 |
+| [Becoming.«有亡而不全生成之例»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L230) | 230 |
+| [Becoming.«步不分而不全生成之例»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L235) | 235 |
+| [Becoming.«线不返则短于所列»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L254) | 254 |
+| [Becoming.«不返而有限则非不穷»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L277) | 277 |
+| [Becoming.counting_reach_lt](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L291) | 291 |
+| [Becoming.«无环而不穷之例»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L298) | 298 |
+| [Becoming.«返而不穷之例»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L305) | 305 |
+| [Becoming.«有限遍后而不返之例»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L315) | 315 |
+| [Becoming.«遍后定前而无环之例»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L332) | 332 |
+| [Becoming.«无异当且仅当不分续»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L351) | 351 |
+| [Becoming.«静分续而有异之例»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L357) | 357 |
+| [Becoming.«非有常之类不含于核之例»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L363) | 363 |
+| [Becoming.«皆不生当且仅当皆非无缘»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L384) | 384 |
+| [Becoming.«所依无则依者无»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L397) | 397 |
+| [Becoming.«依之传»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L404) | 404 |
+| [Becoming.«不依之例»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L412) | 412 |
+| [Becoming.«无环则无俱有»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L420) | 420 |
+| [Becoming.«生亡并之例»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L434) | 434 |
+| [Becoming.«亡于静而住于一之例»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L441) | 441 |
+| [Becoming.«无缘不住而他有后之例»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L451) | 451 |
+| [Becoming.«自缘而不生之例»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L460) | 460 |
+| [Becoming.«有前不有常而亡之例»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L466) | 466 |
+| [Becoming.«不有常而不穷之例»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L474) | 474 |
+| [Becoming.«无相而非亦无相之例»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L501) | 501 |
+| [Becoming.«无能无所之例»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L506) | 506 |
+| [Becoming.«像不保之例»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L511) | 511 |
+| [Becoming.«类内有常则线相随»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L529) | 529 |
+| [Becoming.«核同则同不穷»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L550) | 550 |
+| [Becoming.«生于核下可变之例»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L567) | 567 |
+| [Becoming.«不穷与亡不同核之例»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L585) | 585 |
+| [Becoming.«逆核不含于核之例»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L609) | 609 |
+| [Becoming.«无始而有终之例»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L626) | 626 |
+| [Becoming.«依于无始而有始之例»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L635) | 635 |
+| [Becoming.«相须之例»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L661) | 661 |
 
 Definitions and types:
 
-- `def` [Becoming.«依»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L286) (L286)
+- `def` [Becoming.«依»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean#L391) (L391)
 
 </details>
 

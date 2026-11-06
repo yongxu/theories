@@ -136,7 +136,7 @@ QXL-JS-293	qixinlun	中	G09	law	[AI reading] 離 X 則無 Y: nothing of the kind
 QXL-JS-304	qixinlun	中	G09	law	[AI reading] 離 X 則無 Y: nothing of the kind X, none of Y; the dependence the text states elsewhere (依 X 故有 Y) is Z
 QXL-JS-313	qixinlun	低	G17	law	[AI reading] 分齊、差別 relative to a class taken; under the one nothing is told apart
 QXL-JS-324	qixinlun	中	G15	false	[AI reading] 無前際 carried by 故 read as dependence: false as read («依于无始而有始之例»); the text has no 相應, and with 如來藏 what accords never ends while 無明 ends, so JS-326's reading does not carry over whether or not 無明 is among JS-318's 染法, which the text does not settle (RAE3, 5 November 2026; JS-176 calls it 無明染法); its conclusion is a premise of the model
-QXL-JS-326	qixinlun	中	G15	law	[AI reading] 無後際 transfers to what lies in one core class with it, 相應 read as the core (the technical 相應, association, read as never told apart)
+QXL-JS-326	qixinlun	中	G15	law	[AI reading] 無後際 transfers to what lies in one core class with it, 相應 read as the core: accord with 如來藏, 真如 and 佛體用 read as one class of the forward core, by fit, the text not choosing between the core and sameness of substance; not every 相應 in the text, its self-defined 相應, knowing and condition the same at a time, being no core class (§四, 5 November 2026)
 QXL-JS-406	qixinlun	中	G17	law	[AI reading] 分齊、差別 relative to a class taken; under the one nothing is told apart
 QXL-JS-414	qixinlun	低	G09	law	[AI reading] 法身現 read as depending on the mind without 垢; with 垢, no 法身現
 XCS-01-003	xici	中	G07	law	[AI reading] 動靜有常 as the class constant; 剛柔斷 as the class lying within its core; the corpus gives no commentary for this unit
@@ -147,7 +147,7 @@ XCS-06-005	xici	低	—	NE	[AI reading] 是以大生、廣生: 生 as to produce
 XCS-10-006	xici	低	G06	law	[AI reading] 感 as a predecessor reaching it under the class; 遂通 as «通»; 寂然不動 as no predecessor
 XCS-12-012	xici	高	G05	law	[AI reading] 乾坤 as the two classes of one distinction; 毀 as the distinction becoming the one, under which no step is parted (無以見易); 易不可見 as the distinction parting no continuation's ends; 息 read so, not as the grammar's «息»
 XCX-01-003	xici	中	G02	law	[AI reading] 剛柔相推: each step passes from one phase to the other; 變 (化) is the alteration at each such step, by definition
-XCX-02-008	xici	高	G01	law	[AI reading] 窮 as ending under a class; 變 as the step a second class continues and the first parts («亡而续于他类则异», one unfolding of the definitions); 通 as «通», 久 as its «不穷» half (by definition). On 變 as one alteration, 變 does not enter 通; on the text's own 一闔一闢 (XCS-11-009), 通 is 變 at every place, both ways
+XCX-02-008	xici	高	G01	law	[AI reading] 窮 as ending under a class; 變 as the step a second class continues and the first parts («亡者异当且仅当有后»); 通 as «通», 久 as its «不穷» half (by definition). What ends passes through under the second class only by altering («亡而通则异»), and under that class constant both ways alters exactly where it passes through («亡而两向有常则异当且仅当通»), a premise the text does not state; the received text states the order with 則 (one recension lacks 變則通). On 變 as alternation at every step (一闔一闢, XCS-11-009), every place has ended under the parting class («步皆分则皆亡»), so 窮 selects no place, and 通 is 變 at every place, both ways; the text does not say whether 窮 lies at the limit or at every step, the glosses on it or using it near the limit, and 上十二 defines 變 a second way, 化而裁之 (§四, 5 to 6 November 2026)
 XCX-04-004	xici	高	G02	law	[AI reading] 日往則月來…: each step leaves the phase class and everything goes on; 明生, 歲成 as 全生成 of the coarse pattern (sufficient, not necessary)
 XCX-04-005	xici	高	G02	law	[AI reading] 日往則月來…: each step leaves the phase class and everything goes on; 明生, 歲成 as 全生成 of the coarse pattern (sufficient, not necessary)
 XCX-04-050	xici	低	—	NE	[AI reading] production from two joined conditions (化醇, 化生): sufficiency, as production
@@ -161,8 +161,8 @@ XZ-ZM-044	xunzi-zhengming	中	G21	law	[AI reading] 征知 only where the senses 
 XZ-ZM-143	xunzi-zhengming	低	—	NE	[AI reading] desire and belief moving to seeking: an agent's psychology
 XZ-ZM-144	xunzi-zhengming	低	—	丁	[AI reading] 可 as approval: acting follows what is approved
 XZ-ZM-152	xunzi-zhengming	低	—	丁	[AI reading] 可 as approval: acting follows what is approved
-XZ-ZM-164	xunzi-zhengming	中	G22	law	"[AI reading] 衡正 as a map keeping ""heavier than"" within ""hangs lower than"" («保之像»); whether 衡不正 reverses or only fails to keep is unsettled (no commentary in the corpus)"
-XZ-ZM-165	xunzi-zhengming	中	G22	law	"[AI reading] 衡正 as a map keeping ""heavier than"" within ""hangs lower than"" («保之像»); whether 衡不正 reverses or only fails to keep is unsettled (no commentary in the corpus)"
+XZ-ZM-164	xunzi-zhengming	中	G22	law	"[AI reading] 衡正 as a map keeping ""heavier than"" within ""hangs lower than"" («保之像»); by the text's own 則, 衡不正 is the pair weighed reversed, not only a failure to keep, and 重縣於仰 is its stated consequence; whether every pair reverses the text does not say; 杨倞's gloss, outside the corpus, reads otherwise (§四, 5 November 2026)"
+XZ-ZM-165	xunzi-zhengming	中	G22	law	"[AI reading] 衡正 as a map keeping ""heavier than"" within ""hangs lower than"" («保之像»); by the text's own 則, 衡不正 is the pair weighed reversed, not only a failure to keep, and 重縣於仰 is its stated consequence; whether every pair reverses the text does not say; 杨倞's gloss, outside the corpus, reads otherwise (§四, 5 November 2026)"
 XZ-ZM-179	xunzi-zhengming	低	—	丁	[AI reading] 重物、輕理、危、憂恐: valuing and danger
 XZ-ZM-180	xunzi-zhengming	低	—	丁	[AI reading] 重物、輕理、危、憂恐: valuing and danger
 XZ-ZM-181	xunzi-zhengming	低	—	丁	[AI reading] 重物、輕理、危、憂恐: valuing and danger

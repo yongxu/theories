@@ -1,7 +1,7 @@
 {
  "about": "MV: the shared laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/shared_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261105T210745.530949Z",
- "core_sources_sha256": "d1cab910f4255da0861b49aa06e9185be1022a6959a41ecc316b4fedc788ac0a",
+ "core_receipt": "20261106T032257.782389Z",
+ "core_sources_sha256": "7e264b10eefdb824fb1572ba168abe88a6ae2d214c77ff4cfd70fc6fce47225a",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "438b65fe8bc281ab9796cfbff00af7db8441123a5aba8f3779f7c08586b443c7",
@@ -58,10 +58,10 @@
   ]
  },
  "counts": {
-  "laws": 4158,
+  "laws": 4159,
   "no_declarations": 9,
   "outside": 391,
-  "grammar": 899,
+  "grammar": 900,
   "balance, represented": 633,
   "anchor, not reached": 131,
   "no shared law": 2095,
@@ -10351,7 +10351,8 @@
     "law": 5,
     "declarations": [
      "Becoming.«不有常而通之例»",
-     "Becoming.«两向有常而无前不通之例»"
+     "Becoming.«两向有常而无前不通之例»",
+     "Becoming.«不有常而异且通之例»"
     ],
     "shared_laws": [],
     "grammar": true,
@@ -10359,6 +10360,22 @@
    },
    {
     "law": 6,
+    "declarations": [
+     "Becoming.«亡而通则异»",
+     "Becoming.«异而两向有常则通»",
+     "Becoming.«亡而两向有常则异当且仅当通»",
+     "Becoming.«异而不通之例»",
+     "Becoming.«通而不异之例»",
+     "Becoming.«有后而两向有常则通»",
+     "Becoming.«步皆分则皆亡»",
+     "Becoming.«不有常而异且通之例»"
+    ],
+    "shared_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 7,
     "declarations": [
      "Becoming.«亡者异当且仅当有后»",
      "Becoming.«亡而息之例»",
@@ -10371,7 +10388,7 @@
     "dependence": "grammar"
    },
    {
-    "law": 7,
+    "law": 8,
     "declarations": [
      "Becoming.«生亡并之例»",
      "Becoming.«亡于静而住于一之例»",
@@ -64104,7 +64121,7 @@
   ],
   "lean_check": {
    "toolchain": "leanprover/lean4:v4.29.1",
-   "modules_sha256": "9a8667c8454b517e42832f5685fe13e1ca0e40a10b4cf4aa64f4db942dda75d8",
+   "modules_sha256": "f3a73ee9b9583e4399d5c3938b7f8f61c5260cc0df94a8cb4ad62011493543b4",
    "check_sha256": "e5ef1c274e3e3f81aa13dbe78732d1f6883a207a5685f736102ee4a2d5b1fc34",
    "ran": true
   },
