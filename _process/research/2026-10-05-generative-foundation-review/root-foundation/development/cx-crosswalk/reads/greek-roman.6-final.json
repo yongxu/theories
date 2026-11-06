@@ -320,7 +320,7 @@
     }
    ],
    "account_adds": {
-    "en": "An exact point of no return, that draws add superadditively up to one, that two draws each held alone can end a condition together, and what would refute T1."
+    "en": "An exact point of no return, that draws' rises at the point are superadditive up to one, that two draws each held alone can end a condition together, and what would refute T1."
    },
    "source_adds": {
     "en": "A single ever-living fire as what all is, all exchanged through one medium, an unmade eternal cosmos, and a measure that is guarded. The account has no arche and no eternity, and in it a margin can be crossed with nothing pursuing."
@@ -3023,7 +3023,7 @@
      "record": "giving-that-waits-on-giving",
      "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
      "says": {
-      "en": "Theorem (any type: any formations and any relation of waiting): with memory, 'a withholding stays and spreads downstream along every chain of waits'; 'more waiting gives no more at any step'; with a source giving first all give again. 'It does not show how waiting forms, or that cooperation is good'."
+      "en": "Theorem (any type: any formations and any relation of waiting): with memory, 'a withholding stays and spreads downstream along every chain of waits'; 'more waiting gives no more at any step'; in a ring of three, with a source giving whatever it waits on (giving first), all give from step 3 from every start. 'It does not show how waiting forms, or that cooperation is good'."
      },
      "role": "neighbour"
     },
@@ -3170,6 +3170,17 @@
    "same_as": null
   }
  ],
- "changes": [],
+ "changes": [
+  {
+   "id": "cx-greek-heraclitus-measure",
+   "what": "changed",
+   "why": "main changed the edges claims (LM1 or AA, 7 November 2026): account_adds states what it says now"
+  },
+  {
+   "id": "cx-greek-polybius-mixed-constitution",
+   "what": "changed",
+   "why": "main changed the waiting claims (LM1 or AA, 7 November 2026): targets[3].says states what it says now"
+  }
+ ],
  "live_flags": []
 }

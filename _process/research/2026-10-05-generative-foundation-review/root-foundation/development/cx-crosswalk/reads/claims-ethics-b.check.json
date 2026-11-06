@@ -1,0 +1,309 @@
+{
+ "cluster": "claims-ethics-b",
+ "round": "claims",
+ "items": [
+  {
+   "id": "cx-asc-tempo-measurement-replaces-values",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Old exact and unique; the field now says order needs C or a premise in its place, as 07 §4 does, and its 'all six together rank nothing' and 'neither can come from the dynamics alone' match COLLECTIVE-DIRECTION §6 and §4 as they stand. Nothing in it restates claims 2-5."
+  },
+  {
+   "id": "cx-archearth-material-identity",
+   "field": "account_adds",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Old exact and unique; the ranking clause takes 07 §4's words and the added open warrant is right where both premises are named. The slack clause matches 05 §6's opening ('past the slack there, a dependence breaks unseen by every selection rewarding the rise')."
+  },
+  {
+   "id": "cx-archearth-worthwhile-chain",
+   "field": "targets[1].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Old exact and unique; the record's does-not-show line reads 'That growth relative to what is held is better or is the direction of 生生: ranking needs C or a premise in its place', and the field now copies it; the D45 reading before it matches 07 as it stands and keeps its label."
+  },
+  {
+   "id": "cx-ecs-shared-decision-not-local",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Old exact and unique; 'a frame fixes no order' and C silent on mixed cases match 07 §4, and ordering now takes 'C or a premise in its place'. Standings stay."
+  },
+  {
+   "id": "cx-ecs-community-continuity",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Old exact and unique; the field's own target already says 'a ranking needs C or a premise in its place', and the reading now agrees with it and with 07 §4."
+  },
+  {
+   "id": "cx-ecs-ledger-whose-losses",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Old exact and unique; the reading now matches 07 §4 and its own target. Both premises named, unasserted, warrant open."
+  },
+  {
+   "id": "cx-hsm-exception-hunting",
+   "field": "targets[1].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Old exact and unique; both quotations match 07 §3.4 as it stands ('are mixed [AI reading, D65]', 'No ending is licensed'), and the gloss now takes LM1's 'or a premise in its place'. A says field, so not adding the open warrant is consistent with the author's other target fields."
+  },
+  {
+   "id": "cx-hsm-exception-hunting",
+   "field": "account_adds",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Old exact and unique; the witness and the Germline clause match 04's confined-rise section, and the ranking clause now matches 07 §4 with standings kept."
+  },
+  {
+   "id": "cx-hsm-value-systems-regulate",
+   "field": "targets[2].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Old exact and unique; 02's D45 reading under T7 now ends 'nothing here ranks open rule-making above capture: that needs C or a premise in its place', and the three count quotations match 02 r-shaping-the-rule-selected-by-what-comes-back."
+  },
+  {
+   "id": "cx-jianwen-gongfu-and-liangzhi",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Old exact and unique; the parenthesis now matches 07 §4, and 06's D54 reading still records the divergence of standing (本然良知 stated as fact, held by the theory under an unasserted condition)."
+  },
+  {
+   "id": "cx-kpso-one-chosen-premise",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Old exact and unique; two premises with two roles, unasserted, warrant open, match 07 §4, and rankings now take 'C or a premise in its place'."
+  },
+  {
+   "id": "cx-ma-totalization",
+   "field": "account_adds",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Old exact and unique; the ranking clause matches 07 §4, both premises named with their standings."
+  },
+  {
+   "id": "cx-ma-local-alignment",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Old exact and unique; the join clauses match 05 (own count misses joint excess; several optimizers at a mutual best response) and do not restate the gated commons law of claim 4. The ranking clause now matches 07 §4."
+  },
+  {
+   "id": "cx-ma-cancer-levels",
+   "field": "targets[2].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Leave is right: the field copies 07's Conditional (J1/J2) verbatim, the stepwise and relation-level readings kept, and 'where C alone leaves them unranked' is the home's own scoped clause, not a claim that C alone orders."
+  },
+  {
+   "id": "cx-ma-cancer-levels",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Old exact and unique; 'under C, whole-run, ... ranks higher' matches 07's table (whole-run: ranked), 'J1/J2 rank stepwise where C alone does not' matches the Conditional, and 07 §3.4 reads ending a cancer as mixed. Adding the open warrant to the closing premises clause is right."
+  },
+  {
+   "id": "cx-ma-response-capacity",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Old exact and unique; the clause now matches 07 §4 and names both premises with their standings."
+  },
+  {
+   "id": "cx-rsd-datong-basin",
+   "field": "account_adds",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Old exact and unique; matches 07 §4, standings already present."
+  },
+  {
+   "id": "cx-rsd-we-are-the-collective",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Old exact and unique; matches 07 §4, standings already present, nothing derived from nonduality."
+  },
+  {
+   "id": "cx-sspiral-externality-ledger",
+   "field": "targets[3].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Old exact and unique; the theorem and 'Mixed is not ordered' match 07 r-own-widening-within-the-margin, and the record's does-not-show line agrees that neither premise orders a mixed comparison. 'That widening is better needs C or a premise in its place' is right: 07 §4's self-concern order ranks extensions with no C where the de se condition holds."
+  },
+  {
+   "id": "cx-sspiral-interconnection",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Old exact and unique; the ranking clause now matches 07 §4, the scope half and standings kept."
+  },
+  {
+   "id": "cx-sspiral-unilateral-restraint",
+   "field": "targets[3].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Old exact and unique; the field now copies COLLECTIVE-DIRECTION §6's last sentence exactly ('all six together still rank nothing: calling the widening course better needs C or a premise in its place, and counting the losses that return to no one needs the continuation condition'). The first and sixth conditions match the list."
+  },
+  {
+   "id": "cx-sspiral-endgames",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Old exact and unique; the D48 clause ('answering more runs away') matches 05 §5's reading as it stands, the fixed-process law matches COLLECTIVE-DIRECTION §7, and the ranking clause now matches 07 §4."
+  },
+  {
+   "id": "cx-sty-rules-governing-themselves",
+   "field": "targets[1].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Old exact and unique; both quotations match 02's D45 reading as it stands, the second now ending 'that needs C or a premise in its place'."
+  },
+  {
+   "id": "cx-fork-plurality-many-societies",
+   "field": "targets[3].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Old exact and unique; the theorem matches 07 §4.4 and 'weaker than C' matches the record's 'a premise, weaker than C's'. 'Any fuller ranking needs C or a premise in its place' is right in form."
+  },
+  {
+   "id": "cx-fork-commons-or-collar",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Old exact and unique; the ranking clause now matches 07 §4 with standings; the capture readings it reports are not among the changed claims."
+  },
+  {
+   "id": "cx-wamo-floor-and-exit",
+   "field": "targets[0].says",
+   "verdict": "fix",
+   "edits": [
+    {
+     "old": "above its occurrence where C alone leaves them unranked.",
+     "new": "above its occurrence under the stepwise and relation-level readings, where C alone leaves them unranked."
+    }
+   ],
+   "labels": null,
+   "why": "Not a leave: the field drops the home's 'under the stepwise and relation-level readings', so 'where C alone leaves them unranked' reads unscoped, while 07's table has C ranking the absence of the overdrawer above its occurrence under the whole-run and possibility readings. That restates what C alone ranks more widely than 07 r-basic-priority-step-by-step; the omission predates LM1, and the edit copies the home's words."
+  },
+  {
+   "id": "cx-wamo-signal-not-price",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Old exact and unique; the coupling, pooling and cascade clauses match 07's does-not-show and 05 §8 as they stand, and the ranking clause now matches 07 §4."
+  },
+  {
+   "id": "cx-zhishan-carriers-of-restraint",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Old exact and unique; the rest-outruns gloss matches 05 ('whatever a member outside the rest takes'), and the ranking clause now matches 07 §4."
+  },
+  {
+   "id": "cx-zhishan-pacing-invariant",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Old exact and unique; the re-reading that restores nothing matches 05's re-optimizing row ('where nothing is given below the need ... a later re-reading restores nothing'), a law other than 05 §5's sparing, and the ranking clause now matches 07 §4."
+  },
+  {
+   "id": "cx-zhishan-irreversible-closure-priority",
+   "field": "targets[0].says",
+   "verdict": "fix",
+   "edits": [
+    {
+     "old": "above its occurrence, where C alone leaves them unranked.",
+     "new": "above its occurrence under the stepwise and relation-level readings, where C alone leaves them unranked."
+    },
+    {
+     "old": "A rival preferring enough secondary gains is not shown inconsistent.",
+     "new": "Reading [AI reading, D65]: a rival preferring enough secondary gains to one basic restoration is not shown inconsistent."
+    }
+   ],
+   "labels": null,
+   "why": "Not a leave: as in cx-wamo-floor-and-exit, the field drops 'under the stepwise and relation-level readings', so its 'where C alone leaves them unranked' is wider than the home, since under the whole-run reading C ranks the absence above the occurrence. The rival sentence is 07's D65 reading, not the Conditional: the edit restores its label and 'to one basic restoration' from the home."
+  },
+  {
+   "id": "cx-zhishan-trust-dissent",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Old exact and unique; the pool clause matches 05 r-a-pool-read-by-its-majority (not the Pool witness of claim 3), and the ranking clause now matches 07 §4 with standings."
+  },
+  {
+   "id": "cx-zhishan-moral-status-of-made-minds",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Old exact and unique; matches 07 §4, both premises named with standings."
+  },
+  {
+   "id": "cx-syscyb-meadows-leverage-points",
+   "field": "account_adds",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Old exact and unique; matches 07 §4 and COLLECTIVE-DIRECTION §6 (six conditions, none ranking)."
+  },
+  {
+   "id": "cx-dpc-direction-of-complexity",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Old exact and unique; matches 07 §4 and the field's own target from 02 ('order needs C or a premise in its place'); standings kept."
+  },
+  {
+   "id": "cx-ecoevo-red-queen-relative-race",
+   "field": "targets[3].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Old exact and unique; the theorem and the loop reading match 07 r-comparison-where-the-rest-responds and its record ('Responding only through the couplings is supplied'), and the gloss now takes LM1's words."
+  },
+  {
+   "id": "cx-ecoevo-germ-line-and-cancer",
+   "field": "account_adds",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Old exact and unique; the field's own clause now matches 07 §4. The record's line still reads 'ranking goes through the comparison C', which the field reports only for what is not shown; the author is right that the record's wording is the record's to correct."
+  },
+  {
+   "id": "cx-econ-stigler-capture",
+   "field": "targets[3].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Old exact and unique; 02's reading after the join now ends 'nothing here ranks a course: that needs C or a premise in its place', and 'is not established' matches."
+  },
+  {
+   "id": "cx-econ-acemoglu-extractive",
+   "field": "targets[1].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Old exact and unique; the record's does-not-show line now reads '... no evaluation enters, and ranking courses needs C or a premise in its place'."
+  },
+  {
+   "id": "cx-econ-acemoglu-extractive",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Old exact and unique; the ranking clause now matches 07 §4 with standings."
+  },
+  {
+   "id": "cx-pal-addiction",
+   "field": "account_adds",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Old exact and unique; matches 07 §4, standings kept."
+  },
+  {
+   "id": "cx-pal-natural-selection-among-ais",
+   "field": "targets[1].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Old exact and unique; the record shaping-selected-among-groups now reads 'ranking courses needs C or a premise in its place', and the theorem matches 02's group form."
+  }
+ ]
+}

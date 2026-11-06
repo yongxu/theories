@@ -537,7 +537,7 @@
    "relation": "scope",
    "agreement_of": null,
    "reading": {
-    "en": "02's D45 reads the corpus's second order as this law with its conditions (by descent; the law stands apart), in counts: at a step, what comes back to the shapers alone against cost decides the direction; shaped groups add assortment; offspring carrying the capacity is a premise. The source's lever, shared returns flipping the sign, holds in a witness; where something comes back, shared rule-making is not shown to remove the selection. Ranking open rule-making above capture needs C, and whose losses count the condition; neither is asserted. [AI reading, D45, D68]"
+    "en": "02's D45 reads the corpus's second order as this law with its conditions (by descent; the law stands apart), in counts: at a step, what comes back to the shapers alone against cost decides the direction; shaped groups add assortment; offspring carrying the capacity is a premise. The source's lever, shared returns flipping the sign, holds in a witness; where something comes back, shared rule-making is not shown to remove the selection. Ranking open rule-making above capture needs C or a premise in its place, and whose losses count the condition; neither is asserted, warrant open. [AI reading, D45, D68]"
    },
    "targets": [
     {
@@ -577,7 +577,7 @@
      "record": null,
      "anchor": "theories/becoming/chapters/02-MAP.md#capture",
      "says": {
-      "en": "Reading [AI reading, D45]: the corpus's second order is the law of the capacity to shape the rule with its conditions. Whether actual institutions or trained systems meet these premises is not established, and nothing here ranks open rule-making above capture: that needs C."
+      "en": "Reading [AI reading, D45]: the corpus's second order is the law of the capacity to shape the rule with its conditions. Whether actual institutions or trained systems meet these premises is not established, and nothing here ranks open rule-making above capture: that needs C or a premise in its place."
      },
      "role": "carries",
      "part": "D45, the corpus's second order"
@@ -810,14 +810,14 @@
      "record": null,
      "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#joint-plans",
      "says": {
-      "en": "Reading [AI reading, D65; any ranking is C's, under the two premises of 07]: a condition indispensable to one way of organization is not thereby basic: living may continue, and improve, after the way of coordination changes."
+      "en": "Reading [AI reading, D65; a ranking needs C or a premise in its place, under 07's premises]: a condition indispensable to one way of organization is not thereby basic: living may continue, and improve, after the way of coordination changes."
      },
      "role": "carries",
      "part": "D65"
     }
    ],
    "account_adds": {
-    "en": "Exact laws for each part, and none ranks the loss: that needs C, and whose losses count needs the continuation condition, both unasserted. A caution the source lacks: what is indispensable to one way of organization is not thereby basic, and a contribution is indispensable only where every admissible allocation requires it."
+    "en": "Exact laws for each part, and none ranks the loss: that needs C or a premise in its place, and whose losses count needs the continuation condition, both unasserted, their warrant open. A caution the source lacks: what is indispensable to one way of organization is not thereby basic, and a contribution is indispensable only where every admissible allocation requires it."
    },
    "source_adds": {
     "en": "The definition; these capacities (sense, refuse, correct, exit, maintain alternatives, produce successors) taken together and called non-compensable; the sequence from language to practice to intelligibility; refusal and exit as named capacities."
@@ -1657,14 +1657,14 @@
    "relation": "agreement",
    "agreement_of": "law",
    "reading": {
-    "en": "The account states the join: formations each within what is given can jointly exceed it; two locally successful plans on one reserve fail at the second joint step; at a mutual best response an optimizer takes its capacity beyond its family. Funding has neighbours, both periphery. The source's population boundary and the witness where capability changes basin membership are not in the chapters. \"Good\" is the source's word: any ranking needs C, and whose losses count the condition. [AI reading]"
+    "en": "The account states the join: formations each within what is given can jointly exceed it; two locally successful plans on one reserve fail at the second joint step; at a mutual best response an optimizer takes its capacity beyond its family. Funding has neighbours, both periphery. The source's population boundary and the witness where capability changes basin membership are not in the chapters. \"Good\" is the source's word: any ranking needs C or a premise in its place, and whose losses count the condition, neither asserted, warrant open. [AI reading]"
    },
    "targets": [
     {
      "record": "own-count-misses-joint-excess",
      "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-own-count-misses-joint-excess",
      "says": {
-      "en": "Proved on models; restates the commons. Formations each taking within what is given can together exceed it; where renewers depend on what they renew, this ends renewal and those depending at such a need."
+      "en": "Proved on models; restates the commons. Formations each taking within what is given can together exceed it; where renewers depend on what they renew at a need of at least `m`, `n` consecutive steps of this from a level below `n + m` end renewal and those depending at such a need."
      },
      "role": "carries"
     },
@@ -1932,7 +1932,7 @@
    "relation": "scope",
    "agreement_of": null,
    "reading": {
-    "en": "02 reads one horn of Collingridge's dilemma here as a theorem, the other as a premise. Timing laws: in a two-kind count model, a reading turns the course for good only where the late reading still favours the others a step on; on any giving law, a level up to the top ends exactly where it starts below the point of no return; in a market instance the support cover grows with the transition. Neighbouring forms, not the source's budget rising within one basin. That actual rules are read so is not established. [AI reading, D45]"
+    "en": "02 reads one horn of Collingridge's dilemma here as a theorem, the other as a premise. Timing laws: in a two-kind count model, a reading turns the course for good only where the late reading still favours the others a step on; on the regime, under its premises on giving, a level up to the top ends exactly where it starts below the point of no return; in a market instance the support cover grows with the transition. Neighbouring forms, not the source's budget rising within one basin. That actual rules are read so is not established. [AI reading, D45]"
    },
    "targets": [
     {
@@ -1947,7 +1947,7 @@
      "record": "margin-of-a-regime",
      "anchor": "theories/becoming/chapters/02-MAP.md#r-margin-of-a-regime",
      "says": {
-      "en": "Theorem (the regime; any giving law, whole numbers). A level up to `hi` ends exactly where it starts below `H + y`: the point of no return is exact."
+      "en": "Theorem (the regime; any giving law, whole numbers). Under its premises on giving, a level up to `hi` ends exactly where it starts below `H + y`: the point of no return is exact."
      },
      "role": "neighbour"
     },
@@ -1963,7 +1963,7 @@
      "record": null,
      "anchor": "theories/becoming/chapters/02-MAP.md#capture",
      "says": {
-      "en": "Reading [AI reading, D45]: the others' late reading gives one horn of Collingridge's dilemma (1980) as a theorem and the other as a premise; the point of no return belongs to the share's course. Whether actual rules are read so is not established. Nothing here ranks a course: that needs C."
+      "en": "Reading [AI reading, D45]: the others' late reading gives one horn of Collingridge's dilemma (1980) as a theorem and the other as a premise; the point of no return belongs to the share's course. Whether actual rules are read so is not established. Nothing here ranks a course: that needs C or a premise in its place."
      },
      "role": "carries",
      "part": "D45, Collingridge"
@@ -2176,7 +2176,7 @@
    "relation": "divergence",
    "agreement_of": null,
    "reading": {
-    "en": "The source asserts an order and a must. Its cardinal rule, reshape the feasible set rather than optimize inside it, has a live form: where the rest outruns the renewal no weight selects restraint, and only a change of the exchange helps. The order has none: named exits under hypotheses, in no sequence, none shown of an actual collective. Ranking any path needs C, and scope the condition; neither is asserted. [AI reading]"
+    "en": "The source asserts an order and a must. Its cardinal rule, reshape the feasible set rather than optimize inside it, has a live form: where the rest outruns the renewal, at need one no weight on a reading of the condition only from the rest's end on selects a member's restraint, and only a change of the rest's exchange helps. The order has none: named exits under hypotheses, in no sequence, none shown of an actual collective. Ranking any path needs C or a premise in its place, and scope the condition; neither is asserted, warrant open. [AI reading]"
    },
    "targets": [
     {
@@ -2382,7 +2382,7 @@
      "record": null,
      "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#joint-plans",
      "says": {
-      "en": "Reading [AI reading, D65; any ranking is C's, under the two premises of 07]: capture and drain give institutions no prior duty to contract and no prior licence to grow."
+      "en": "Reading [AI reading, D65; a ranking needs C or a premise in its place, under 07's premises]: capture and drain give institutions no prior duty to contract and no prior licence to grow."
      },
      "role": "carries",
      "part": "D65"
@@ -2498,7 +2498,7 @@
    "relation": "agreement",
    "agreement_of": "reading",
    "reading": {
-    "en": "Parts stand separately: a formation sparing what it waits on gives first; building shared capacity can be warranted in a comparison without fixing one carrier, where the record's premises hold. Nothing in the account states this loop or its carriers. Calling it better is C's, and whose losses count the condition's. The link is proposed here. [AI reading]"
+    "en": "Parts stand separately: a formation sparing all it waits on gives from step 1 whatever the start; building shared capacity can be warranted in a comparison without fixing one carrier, where the record's premises hold. Nothing in the account states this loop or its carriers. Calling it better needs C or a premise in its place, and whose losses count is the condition's; neither is asserted, their warrant open. The link is proposed here. [AI reading]"
    },
    "targets": [
     {
@@ -2965,7 +2965,7 @@
      "record": "thresholds-of-waiting",
      "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
      "says": {
-      "en": "Theorem. A formation gives where all but its tolerance of what it waits on gave. Restoring needs a formation that spares all it waits on: without one, total withholding stays (`Tolerance.total_stays`). Reading [D48] follows in the section."
+      "en": "Theorem. Under the tolerating law a formation gives where all but its tolerance of what it waits on gave. Restoring needs a formation that spares all it waits on: without one, total withholding stays (`Tolerance.total_stays`). Reading [D48] follows in the section."
      },
      "role": "carries",
      "part": "theorem; D48"
@@ -3063,7 +3063,7 @@
      "record": null,
      "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#6-what-enough-situationality-would-have-to-mean",
      "says": {
-      "en": "Reading [AI reading, D45]: six conditions at once. Observation is the first, necessary and not sufficient: seeing is not valuing, and coupling is not compliance. All six still rank nothing: that needs C, and counting losses that return to no one needs the continuation condition."
+      "en": "Reading [AI reading, D45]: six conditions at once. Observation is the first, necessary and not sufficient: seeing is not valuing, and coupling is not compliance. All six still rank nothing: calling the widening course better needs C or a premise in its place, and counting losses that return to no one needs the continuation condition."
      },
      "role": "carries",
      "part": "D45"
@@ -3330,7 +3330,7 @@
    "relation": "agreement",
    "agreement_of": "law",
    "reading": {
-    "en": "The confined rise has the form: a lineage raised by selection within a whole, taking from what the whole depends on, has no member after the end. It restates known results; that a tumour meets the clauses is empirical. The law ranks nothing. Under the condition alone 07 reads ending a cancer as mixed; under C, whole-run, the course without an overdrawing formation ranks higher, and J1/J2 rank stepwise where C alone does not. Whose losses count is the condition's; neither it nor C is asserted. [AI reading]"
+    "en": "The confined rise has the form: a lineage raised by selection within a whole, taking from what the whole depends on, has no member after the end. It restates known results; that a tumour meets the clauses is empirical. The law ranks nothing. Under the condition alone 07 reads ending a cancer as mixed; under C, whole-run, the course without an overdrawing formation ranks higher, and J1/J2 rank stepwise where C alone does not. Whose losses count is the condition's; neither it nor C is asserted, and their warrant is open. [AI reading]"
    },
    "targets": [
     {
@@ -3974,7 +3974,7 @@
    "relation": "agreement",
    "agreement_of": "reading",
    "reading": {
-    "en": "The account has the form of drawing a condition beyond what couples in, and a pace reading, but response capacity is not among its named conditions; reading it as such is mine. Its periphery has exact covers for a market floor. Preservation being better needs C; scope, the continuation condition. [AI reading]"
+    "en": "The account has the form of drawing a condition beyond what couples in, and a pace reading, but response capacity is not among its named conditions; reading it as such is mine. Its periphery has exact covers for a market floor. Preservation being better needs C or a premise in its place; scope, the continuation condition; neither asserted, warrant open. [AI reading]"
    },
    "targets": [
     {
@@ -4250,6 +4250,16 @@
    "why": "a correction this crosswalk made at the home: the entry quotes what the home says now, or says what it said until 7 November 2026"
   },
   {
+   "id": "cx-ma-selection-for-control",
+   "what": "changed",
+   "why": "main changed the ethics claims (LM1 or AA, 7 November 2026): targets[4].says states what it says now / main changed the ethics claims (LM1 or AA, 7 November 2026): reading states what it says now"
+  },
+  {
+   "id": "cx-ma-totalization",
+   "what": "changed",
+   "why": "main changed the ethics claims (LM1 or AA, 7 November 2026): account_adds states what it says now / 05's D65 label and eight records gave ranking to C alone; corrected at home (apply_ranking.py, 7 November 2026): the entry quotes what it says now"
+  },
+  {
    "id": "cx-ma-endings",
    "what": "changed",
    "why": "second critic (label): 05 §1's checked `Flow.full_taking_ends` and `Flow.continuing_excludes` state the source's terminal collapse (alternatives excluded, the substrate exhausted, the full taker ending too) and are named only in account_adds, so 'the account's nearest list is a conjecture' understates, and the sibling cx-zhishan-totalization-by-loss reads the same three endings as scope with lock-in and collapse live. The locator's open question 49 is 'rank or boundary', not the endings."
@@ -4265,19 +4275,39 @@
    "why": "main changed theories/becoming/COLLECTIVE-DIRECTION.md (LM1 or AA, 7 November 2026): reading states what it says now"
   },
   {
+   "id": "cx-ma-local-alignment",
+   "what": "changed",
+   "why": "main changed the edges claims (LM1 or AA, 7 November 2026): targets[0].says states what it says now / main changed the ethics claims (LM1 or AA, 7 November 2026): reading states what it says now"
+  },
+  {
    "id": "cx-ma-diagnosis-limit",
    "what": "changed",
    "why": "second critic (label): Both carrying theorems have the source's form (alike under the old channel, told apart by a probe or the window), but on other models, and no live sentence states the claim about diagnosing a slide: a law of like form read onto the source is fresh-reading, not carried-in-part. agreement_of law and the source_adds stand."
   },
   {
+   "id": "cx-ma-waiting-not-neutral",
+   "what": "changed",
+   "why": "main changed the edges claims (LM1 or AA, 7 November 2026): targets[1].says states what it says now (as its checker amended) / main changed the edges claims (LM1 or AA, 7 November 2026): targets[3].says states what it says now / main changed the edges claims (LM1 or AA, 7 November 2026): reading states what it says now (as its checker amended)"
+  },
+  {
    "id": "cx-ma-exit-sequence",
    "what": "changed",
-   "why": "COLLECTIVE-DIRECTION's exit 'Give first, with a reserve' is 'Spare all one waits on' since AA's errata (7 November 2026): the law has no reserve in it"
+   "why": "COLLECTIVE-DIRECTION's exit 'Give first, with a reserve' is 'Spare all one waits on' since AA's errata (7 November 2026): the law has no reserve in it / main changed the ethics claims (LM1 or AA, 7 November 2026): reading states what it says now"
   },
   {
    "id": "cx-ma-engineered-rules",
    "what": "changed",
    "why": "main changed theories/becoming/chapters/05-COLLECTIVES.md (LM1 or AA, 7 November 2026): targets[0].says states what it says now"
+  },
+  {
+   "id": "cx-ma-shengsheng-ethics",
+   "what": "changed",
+   "why": "05's D65 label and eight records gave ranking to C alone; corrected at home (apply_ranking.py, 7 November 2026): the entry quotes what it says now"
+  },
+  {
+   "id": "cx-ma-positive-recursion",
+   "what": "changed",
+   "why": "main changed the waiting claims (LM1 or AA, 7 November 2026): reading states what it says now"
   },
   {
    "id": "cx-ma-vs-goodhart-and-lock-in",
@@ -4287,7 +4317,22 @@
   {
    "id": "cx-ma-selfishness-prophecy",
    "what": "changed",
-   "why": "main changed theories/becoming/chapters/05-COLLECTIVES.md (LM1 or AA, 7 November 2026): account_adds states what it says now"
+   "why": "main changed theories/becoming/chapters/05-COLLECTIVES.md (LM1 or AA, 7 November 2026): account_adds states what it says now / main changed the waiting claims (LM1 or AA, 7 November 2026): targets[0].says states what it says now"
+  },
+  {
+   "id": "cx-ma-political-will",
+   "what": "changed",
+   "why": "main changed the ethics claims (LM1 or AA, 7 November 2026): targets[0].says states what it says now"
+  },
+  {
+   "id": "cx-ma-cancer-levels",
+   "what": "changed",
+   "why": "main changed the ethics claims (LM1 or AA, 7 November 2026): reading states what it says now"
+  },
+  {
+   "id": "cx-ma-response-capacity",
+   "what": "changed",
+   "why": "main changed the ethics claims (LM1 or AA, 7 November 2026): reading states what it says now"
   }
  ],
  "live_flags": [

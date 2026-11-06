@@ -1,0 +1,673 @@
+{
+ "cluster": "claims-edges",
+ "items": [
+  {
+   "id": "cx-asc-rationality-of-participation",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "05 §1 has takers each within what a step gives together taking more (`Pair.own_not_joint`), and the field claims no ending, so the gate is not at issue; 'drain as one of their joint capacity would' is 05 §7's own shorthand, and targets 1 and 3 carry the mutual best response and the two-unit witness."
+  },
+  {
+   "id": "cx-asc-latency-window",
+   "field": "targets[0].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "COLLECTIVE-DIRECTION §6's third condition verbatim; the regime's point of no return there is unchanged."
+  },
+  {
+   "id": "cx-asc-latency-window",
+   "field": "targets[2].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "02's margin law with one condition under a standing draw and a top; the yeast clause is COLLECTIVE-DIRECTION §5's. It does not claim the law for any giving law."
+  },
+  {
+   "id": "cx-asc-latency-window",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "The Collingridge horns and 'the point of no return belongs to the share's course' are 02 §9's reading; the deadline T (k − r) is 05's re-reading law and the log₂ bound 05 §2's doubling draw. Nothing is ranked."
+  },
+  {
+   "id": "cx-asc-two-constraints-metabolic-rate",
+   "field": "reading",
+   "verdict": "fix",
+   "edits": [
+    {
+     "old": "In the field T1 passed on some held-out regimes and failed in four settings",
+     "new": "T1, conjectured, passed in two simulations and on held-out yeast regimes the analyst had seen, and failed in four settings"
+    }
+   ],
+   "labels": null,
+   "why": "Outside the round's listed claims, found in reading the home: T1 says no field test of a need measured in advance has run (T1N and T1R were refused at the table's header), and its one pass on real data is yeast regimes held out from the fit, not from the analyst. 'In the field ... passed' tells a reader T1 passed a field test; the edit takes ONE-PAGE's words for T1's standing."
+  },
+  {
+   "id": "cx-asc-theorist-inside-the-selection",
+   "field": "reading",
+   "verdict": "fix",
+   "edits": [
+    {
+     "old": ", unless a reader comes from outside.",
+     "new": "; a pool comes to couple into what it does not yet couple into only through an admission not made through it or through members its course would hold anyway (each a witness)."
+    }
+   ],
+   "labels": null,
+   "why": "The author's change is right, but its 'it' makes the pool recruiting only through itself the subject of 'an admission not made through it', a route such a pool cannot take by hypothesis. COLLECTIVE-DIRECTION's row switches subject: 'a pool comes to couple into what it does not yet couple into only through an admission not made through it ... or through members its course would hold anyway'; the edit copies that."
+  },
+  {
+   "id": "cx-asc-independent-examiner",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "It names a form, not an exception to the recruitment law: an admission not made through the pool is the called witness's route (`PoolCourse.called_apart`), and 'the nearer form' claims no exclusivity. The reviewers' law keeps its qualifiers."
+  },
+  {
+   "id": "cx-archearth-no-single-score",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "05 §1's own-count law with no ending claimed; the weights' bound is 07's 'weights within a ratio agree past it', named as a weights ratio."
+  },
+  {
+   "id": "cx-archearth-points-game-revised",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "'An outside reader is admitted' reads T7's stated way out ('a reader outside the share, a loss entering it, a new reading'), unchanged; not the pool edge."
+  },
+  {
+   "id": "cx-ctxrt-digital-life-standing-test",
+   "field": "targets[1].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "04's reading verbatim; 'a reader made from outside' is the thermostat contrast, not the pool edge."
+  },
+  {
+   "id": "cx-ctxrt-digital-life-standing-test",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "The thermostat contrast again; scope is the condition's and T8's P2 and P4 are unasserted, as 07 has them."
+  },
+  {
+   "id": "cx-drives-xin-as-root",
+   "field": "targets[3].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "03's theorem as it stands, its condition kept."
+  },
+  {
+   "id": "cx-drives-xin-as-root",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "03 now has some family complete exactly where all values are equal, so 'no family of readings says every reading' without condition is wider than the home; 'no family of claims says every reading' is 03's own sentence. The old occurs once."
+  },
+  {
+   "id": "cx-drives-generative-field",
+   "field": "targets[3].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "The gate at `m` and the `n` consecutive steps from a level below `n + m` are 05 §1's; 'it' is the joint excess of the clause before. The old occurs once."
+  },
+  {
+   "id": "cx-drives-generative-field",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "LM1: a criterion for a course is a ranking, which needs C or a premise in its place; both premises named, unasserted, now with their warrant open. Nothing derives C from the condition. Both olds occur once."
+  },
+  {
+   "id": "cx-ecs-sealed-adjudication",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "T7 reads 'drift aside, is dropped only through a change in what the loop reads'; drawn one member at a time the locks are left by drift alone, so the qualifier is needed. The old occurs once."
+  },
+  {
+   "id": "cx-hsm-threshold-review",
+   "field": "reading",
+   "verdict": "fix",
+   "edits": [
+    {
+     "old": "reads a loss only if a reader comes from outside.",
+     "new": "couples into a loss only as its course without the loss would, and a pool comes to couple into what it does not yet couple into only through an admission not made through it or through members its course would hold anyway (each a witness)."
+    }
+   ],
+   "labels": null,
+   "why": "The author's edit gives the row's edge, but with 'and comes to couple into' the self-recruiting pool becomes the subject of 'an admission not made through it'. The row (and this entry's own target 4) says 'a pool comes to couple into ...'; the edit copies that subject."
+  },
+  {
+   "id": "cx-jianwen-unclassified-space",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "It keeps 03's condition 'where a map moves every value' before 'no family of readings ... says every reading', so it is not wider than 03; the liar's rhythm is 03's."
+  },
+  {
+   "id": "cx-kpso-pseudo-open",
+   "field": "targets[1].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "05 §1's own-count clause with no ending claimed, as ONE-PAGE has it."
+  },
+  {
+   "id": "cx-kpso-pseudo-open",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "05 §1 ends a renewal only under the gate at `m`, at each of `n` steps from a level below `n + m`; the edit copies 05's set-point wording. The field quotes 06's 伪开一 row, which itself still reads ungated ('合起来可超取而终结更新'): a matter for 06's home, not this field."
+  },
+  {
+   "id": "cx-kpso-three-shapes-of-collapse",
+   "field": "targets[1].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "02's exactness with COLLECTIVE-DIRECTION §3's model words; not the margin experiment's claim."
+  },
+  {
+   "id": "cx-kpso-three-shapes-of-collapse",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "The gate at `m` and the level below `n + m` restore what 05 needs ('n steps from a level' fixes the run as 05's set-point reading does); T1's standing matches 02 and ONE-PAGE."
+  },
+  {
+   "id": "cx-kpso-three-shapes-of-collapse",
+   "field": "account_adds",
+   "verdict": "ok",
+   "labels": null,
+   "why": "COLLECTIVE-DIRECTION §3's row: rises at the point superadditive up to one unit, ruling out judging joint draws one by one."
+  },
+  {
+   "id": "cx-kpso-shared-sensing",
+   "field": "targets[1].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "§6's conditions 1 and 3 as they stand."
+  },
+  {
+   "id": "cx-kpso-shared-sensing",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "COLLECTIVE-DIRECTION §5 now says one kind of institution has one minimal model on the root [AI reading] and no actual institution is shown to meet its hypotheses; 'Institutions are not modelled' was false. The pool clause already has the row's edge without 'unless'."
+  },
+  {
+   "id": "cx-kpso-individual-solutions",
+   "field": "targets[1].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "05 §6's joint-slack law verbatim; 'each drawer' is that law's word, not the Pool witness's."
+  },
+  {
+   "id": "cx-kpso-individual-solutions",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "05's outrun law ends the dependents under the gate after `n` steps from a level below `n + m`, and its reading result is at need one (`Flow.outrun_reading_alike`); the edit copies both. The old occurs once."
+  },
+  {
+   "id": "cx-memories-grammar-of-the-opponent",
+   "field": "targets[2].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "§6's closing sentence as it now stands, with 'C or a premise in its place'."
+  },
+  {
+   "id": "cx-memories-force-of-diagnosis",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Both premises named with their roles, unasserted, warrant open; no derivation from the condition; no ending claimed for the takers."
+  },
+  {
+   "id": "cx-ma-local-alignment",
+   "field": "targets[0].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "As item 13: 05 §1's gate and `n` consecutive steps from a level below `n + m`; 'this' is the joint excess. The old occurs once."
+  },
+  {
+   "id": "cx-ma-waiting-not-neutral",
+   "field": "targets[1].says",
+   "verdict": "fix",
+   "edits": [
+    {
+     "old": "A level up to `hi` ends exactly where it starts below `H + y`",
+     "new": "Under its premises on giving, a level up to `hi` ends exactly where it starts below `H + y`"
+    }
+   ],
+   "labels": null,
+   "why": "Outside the round's listed claims, found in reading the home: 02's label 'any giving law' is followed by premises on giving (short of the draw below `y`, nothing from nothing, meeting it from `y` up to a top the step keeps), and the field kept the label and dropped them, leaving `y` undefined. Without them the exactness is not stated: levels above such a top can end under overcompensating giving (SCIENCES on T1's row), and adjusting giving not rising with what is left has no separating level (`Notch`)."
+  },
+  {
+   "id": "cx-ma-waiting-not-neutral",
+   "field": "targets[3].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "02 §9's Collingridge reading now ends 'that needs C or a premise in its place' (LM1). The old occurs once."
+  },
+  {
+   "id": "cx-ma-waiting-not-neutral",
+   "field": "reading",
+   "verdict": "fix",
+   "edits": [
+    {
+     "old": "on any giving law, a level up to the top ends",
+     "new": "on the regime, under its premises on giving, a level up to the top ends"
+    }
+   ],
+   "labels": null,
+   "why": "'Only where' is within 02's 'exactly where'. But 'on any giving law' states the margin law for every giving law, which 02 does not: its exactness rests on premises on giving, levels above a top can end under overcompensating giving, and adjusting giving not rising with what is left has no separating level (outside the round's listed claims, found in reading the home)."
+  },
+  {
+   "id": "cx-ma-waiting-not-neutral",
+   "field": "account_adds",
+   "verdict": "ok",
+   "labels": null,
+   "why": "02's Collingridge reading as it stands; it ranks nothing."
+  },
+  {
+   "id": "cx-rsd-individual-solutions",
+   "field": "targets[2].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "§6's Time and Structure conditions as they stand; 'rank nothing' is §6's."
+  },
+  {
+   "id": "cx-rsd-individual-solutions",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "05's reading result is at need one (`Flow.outrun_reading_alike`), as COLLECTIVE-DIRECTION's restraint row now has it. The old occurs once."
+  },
+  {
+   "id": "cx-rsd-datong-direction",
+   "field": "account_adds",
+   "verdict": "ok",
+   "labels": null,
+   "why": "COLLECTIVE-DIRECTION's 'always' row: a widening move 'need not exist past a point of no return, after a window closes, or where the rest outruns the renewal'. The old occurs once."
+  },
+  {
+   "id": "cx-sspiral-values-upper-structure",
+   "field": "targets[3].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "05 §7: each drawer leaves 'exactly the need of an amount meeting it and nothing of a smaller one'. The old occurs once."
+  },
+  {
+   "id": "cx-sspiral-consensus-lag",
+   "field": "targets[4].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "§6's time and pace; each is a conjunct of 'enough', so necessary and not sufficient alone; nothing ranked."
+  },
+  {
+   "id": "cx-sspiral-point-of-no-return",
+   "field": "targets[1].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "02's margin law with its point; it does not claim any giving law."
+  },
+  {
+   "id": "cx-sspiral-point-of-no-return",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "The window is 02's `turned_early_iff` and `kept_once_favoured`; the re-reading keeps 05's 'where nothing is given below a need'; drift scopes 'impossible' as 02 §9 does."
+  },
+  {
+   "id": "cx-sspiral-foundation-erosion",
+   "field": "targets[1].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "05's witness copied: the scheduled pool, recruiting through itself and admitting a reader at step 2 in every history. The old occurs once."
+  },
+  {
+   "id": "cx-sspiral-foundation-erosion",
+   "field": "account_adds",
+   "verdict": "ok",
+   "labels": null,
+   "why": "The row's two routes replace one; 'needs' fits the row's 'only through'. The old occurs once."
+  },
+  {
+   "id": "cx-sspiral-competition-intensifier",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "05 §7's coupled drawers (two or more in turn drain where `c < m`, from every amount; one drawer over two steps keeps it); 'each drawer' is not the Pool witness's."
+  },
+  {
+   "id": "cx-fork-good-enough-tree",
+   "field": "targets[2].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "05's set-point theorem with the gate and `n` steps from below `n + m`, and its next sentence verbatim."
+  },
+  {
+   "id": "cx-fork-good-enough-tree",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "05's set-point reading as it now stands, gated; it claims nothing of which optimum is taken."
+  },
+  {
+   "id": "cx-wamo-memetic-capture",
+   "field": "account_adds",
+   "verdict": "ok",
+   "labels": null,
+   "why": "The row's two routes for a pool and the reading's standing, 'a sufficient way out, not shown necessary', are COLLECTIVE-DIRECTION §2's. The old occurs once."
+  },
+  {
+   "id": "cx-wamo-emergence-and-window",
+   "field": "targets[0].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "§6's time and pace as they stand."
+  },
+  {
+   "id": "cx-wamo-emergence-and-window",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "§6's conditions and 05 §2's pace around loops; nothing ranked."
+  },
+  {
+   "id": "cx-wamo-entry-by-resonance",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "'What parts them' now names both routes of the row; the reader's resonance point stands. The old occurs once."
+  },
+  {
+   "id": "cx-zhishan-pacing-invariant",
+   "field": "targets[2].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "§6's time and pace, and 'rank nothing'."
+  },
+  {
+   "id": "cx-zhishan-guardian-test",
+   "field": "reading",
+   "verdict": "fix",
+   "edits": [
+    {
+     "old": "stays blind unless a reader comes from outside.",
+     "new": "couples into a loss only as its course without the loss would, and a pool comes to couple into what it does not yet couple into only through an admission not made through it or through members its course would hold anyway (each a witness)."
+    }
+   ],
+   "labels": null,
+   "why": "'Stays blind unless a reader comes from outside' is the edge main narrowed, and the author's replacement is the row's, but as in items 5 and 16 its 'and comes to couple' makes the self-recruiting pool the subject of an admission not made through it; the row's subject is 'a pool'."
+  },
+  {
+   "id": "cx-cc-huang-xuexiao",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "It describes Huang's staffing as self-recruiting save where a reader enters from outside (his 布衣 heads), the called witness's route; it states no exception to the pool law, and reading the loss keeps 'sufficient, not shown necessary'."
+  },
+  {
+   "id": "cx-cc-congshan-rudeng",
+   "field": "targets[1].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "02's margin law with its premises on giving named."
+  },
+  {
+   "id": "cx-buddhist-tiantai-neither-produces-nor-contains",
+   "field": "targets[0].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "03's theorem with its condition."
+  },
+  {
+   "id": "cx-oi-anekanta",
+   "field": "targets[2].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "03's theorem; coding and provability not stated, as 03 says."
+  },
+  {
+   "id": "cx-oi-kevala",
+   "field": "targets[1].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "'Some family', and 'exactly where nothing differs' is 03's 'exactly where all values are equal', with its decided equality and inhabited types."
+  },
+  {
+   "id": "cx-greek-heraclitus-measure",
+   "field": "targets[2].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Quotes 02 under its hypotheses."
+  },
+  {
+   "id": "cx-greek-heraclitus-measure",
+   "field": "account_adds",
+   "verdict": "ok",
+   "labels": null,
+   "why": "02: 'Draws add, and their rises at the point are superadditive up to one'; the field made the draws superadditive. The old occurs once."
+  },
+  {
+   "id": "cx-greek-self-sufficiency",
+   "field": "targets[1].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Quotes `World.arising_opens` under its premises. 'Each premise needed, by a witness without it' is 02's sentence of the rest theorem, which `arising_opens` reads the other way; not a changed claim, and THE-THEORY §2's renewal clause is not restated."
+  },
+  {
+   "id": "cx-greek-aristotle-mean",
+   "field": "targets[2].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "02's row; SCIENCES still reports T1's home owner showing, with overcompensating giving, levels above the top that end though the point does not."
+  },
+  {
+   "id": "cx-indaf-relational-tipping",
+   "field": "targets[4].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "§6's sentences as they stand, 'C or a premise in its place' and the condition both named."
+  },
+  {
+   "id": "cx-indaf-relational-tipping",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "05 says a later re-reading restores nothing 'where nothing is given below the need'. The giving clauses match 05 §5 and §11 (promises alone force no start; ignition in the exchange witness, defined as spending a reserve, near-definitional). The old occurs once."
+  },
+  {
+   "id": "cx-modphil-marx-coercive-competition",
+   "field": "account_adds",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Names what the account adds; the point is the regime's and the inflow law 05 §6's."
+  },
+  {
+   "id": "cx-modphil-simondon-metastability-seed",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Quotes 05 §11's last clause verbatim; no waiting law restated."
+  },
+  {
+   "id": "cx-modphil-parfit-self-defeating",
+   "field": "account_adds",
+   "verdict": "ok",
+   "labels": null,
+   "why": "T1's 'whatever each drawer's own draw' with the gate; under the gate a level below `m` stays so, a point of no return in that sense; 'each drawer' is not the Pool witness's."
+  },
+  {
+   "id": "cx-syscyb-meadows-leverage-points",
+   "field": "targets[5].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "02's margin law and its reading."
+  },
+  {
+   "id": "cx-syscyb-observing-blind-spot",
+   "field": "targets[4].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "05's witness copied. The old occurs once."
+  },
+  {
+   "id": "cx-syscyb-feedback-as-purpose",
+   "field": "targets[2].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "04's reading verbatim."
+  },
+  {
+   "id": "cx-syscyb-feedback-as-purpose",
+   "field": "targets[3].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "05's set-point theorem, gated, and its next sentence."
+  },
+  {
+   "id": "cx-dpc-circuit-rules",
+   "field": "targets[0].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "02's coupled regimes: 'does not rise as the partner rises'; the old 'falls' is not used."
+  },
+  {
+   "id": "cx-dpc-noise-tipping",
+   "field": "targets[0].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "02's exit from a margin and its reading."
+  },
+  {
+   "id": "cx-dpc-prigogine-open",
+   "field": "targets[2].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Quotes 02 (`World.openness_contingent`, `World.holding_world`)."
+  },
+  {
+   "id": "cx-dpc-prigogine-open",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "The fed-from-beyond law and the inflow bound are 02's and 05's; 'openness does not suffice for arising without end' is 02's. Its 'in amounts' is glossed by target 0 and account_adds (a fixed unit of natural-number amounts); THE-THEORY §2's renewal clause is not restated."
+  },
+  {
+   "id": "cx-dpc-bistability",
+   "field": "targets[2].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "'Does not rise', as 02's row."
+  },
+  {
+   "id": "cx-dpc-monotone-systems",
+   "field": "targets[0].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "02's rest on webs as it stands."
+  },
+  {
+   "id": "cx-ecoevo-coextinction-and-cascades",
+   "field": "targets[0].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "02's coupled regimes as they stand."
+  },
+  {
+   "id": "cx-ecoevo-coextinction-and-cascades",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "'Does not rise' and the cascade are 02's coupled regimes and webs."
+  },
+  {
+   "id": "cx-econ-tainter-complexity",
+   "field": "account_adds",
+   "verdict": "ok",
+   "labels": null,
+   "why": "An exact point under a standing draw and a reserve, as 02 has them, with no claim about societies."
+  },
+  {
+   "id": "cx-econ-hardin-commons",
+   "field": "targets[1].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "05 §7(c)'s drawing at once and the record's witness; 'each drawer' is that law's word."
+  },
+  {
+   "id": "cx-econ-hardin-commons",
+   "field": "account_adds",
+   "verdict": "ok",
+   "labels": null,
+   "why": "05 §7's laws, no verdict; 'each drawer' is not the Pool witness's."
+  },
+  {
+   "id": "cx-asc-theorist-inside-the-selection",
+   "field": "account_adds",
+   "verdict": "fix",
+   "edits": [
+    {
+     "old": "An external reader as a stated condition, on a witness,",
+     "new": "Two stated routes, each on a witness, by which a pool comes to couple into what it does not yet couple into (an admission not made through it, or members its course would hold anyway),"
+    }
+   ],
+   "labels": null,
+   "why": "A field the author did not list, in the same entry as item 5: 'an external reader as a stated condition' keeps the edge main narrowed. COLLECTIVE-DIRECTION's pool row names two routes, each a witness (`PoolCourse.called_apart`, `PoolCourse.scheduled_apart`), and the scheduled one admits a member the course without the loss holds too."
+  },
+  {
+   "id": "cx-zhishan-leviathan-concentration",
+   "field": "reading",
+   "verdict": "fix",
+   "edits": [
+    {
+     "old": "a pool recruiting only through itself stays blind too",
+     "new": "a pool recruiting only through itself couples into a loss only as its course without the loss would"
+    }
+   ],
+   "labels": null,
+   "why": "A field no group listed: 'stays blind' is wider than 05's law (`Web.RecruitsThrough.alike_iff`), since the scheduled witness recruits through itself and couples the loss apart at step 2. The edit copies COLLECTIVE-DIRECTION's row."
+  },
+  {
+   "id": "cx-zhishan-bounded-competition",
+   "field": "reading",
+   "verdict": "fix",
+   "edits": [
+    {
+     "old": "joint excess ends a shared stock with no purchase of the rule",
+     "new": "`n` consecutive steps of joint excess from a level below `n + m` end a shared stock gated at `m`, and what depends on it at such a need, with no purchase of the rule"
+    }
+   ],
+   "labels": null,
+   "why": "A field no group listed: 'joint excess ends a shared stock' is the ungated ending AA corrected; 05 §1 ends it only under the gate at `m`, after `n` consecutive steps from a level below `n + m`, and a taker renewed from outside can continue. The reader's point, that no purchase of the rule is needed, stands."
+  },
+  {
+   "id": "cx-asc-horizon-and-slack",
+   "field": "targets[1].says",
+   "verdict": "fix",
+   "edits": [
+    {
+     "old": "Witness: 'a doubling source",
+     "new": "Witness, under weights `w (t + 1) ≤ w t < 2 w (t + 1)`: 'a doubling source"
+    }
+   ],
+   "labels": null,
+   "why": "A field no group listed, on claim 5: 05 §7(b) states the witness 'under weights `w (t + 1) ≤ w t < 2 w (t + 1)`', and the quotation began after that condition, so it read as holding for every weighting."
+  },
+  {
+   "id": "cx-dpc-bistability",
+   "field": "reading",
+   "verdict": "fix",
+   "edits": [
+    {
+     "old": "a falling curve; a partner's threshold not rising as the partner rises",
+     "new": "a curve not rising as the recent giving rises; a condition's threshold not rising as its partner rises"
+    }
+   ],
+   "labels": null,
+   "why": "A field no group listed, on claim 5's 'falls' corrected to 'does not rise': 02's state-plane least level 'does not rise as the recent giving rises' (target 0 says so), so 'a falling curve' is wider; and 02's coupled regimes say a condition's point does not rise as its partner rises, not the partner's own."
+  }
+ ]
+}

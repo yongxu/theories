@@ -341,7 +341,7 @@
     }
    ],
    "account_adds": {
-    "en": "A lock's exact threshold, which locks noise leaves, and the exact rate at which a weighting ends a base. And a refusal of the source's frame: that what lies beyond is a loss is a significance's to say, and a ranking of courses needs C, with the continuation condition for scope, neither asserted, their warrant open."
+    "en": "A lock's exact threshold, which locks noise leaves, and the exact rate at which a weighting ends a base. And a refusal of the source's frame: that what lies beyond is a loss is a significance's to say, and a ranking of courses needs C or a premise in its place, with the continuation condition for scope, neither asserted, their warrant open."
    },
    "source_adds": {
     "en": "The dissociation of wanting from liking; tolerance and withdrawal, of which 'more than now' states no cause; relapse after long abstinence and cue reinstatement; natural recovery, which sits badly beside a lock that never leaves; dopamine's role; harm as part of what addiction is. None is stated, and the first is central to the field."
@@ -912,7 +912,7 @@
     }
    ],
    "account_adds": {
-    "en": "Exact conditions: where a coupling keeps a need among drawers in turn. Not every winner loses: a part ends through dependence, not position. A reading against one remedy: capability is a reason to pool, not to govern. Ranking the end needs C for order, with the continuation condition for scope, neither asserted, their warrant open."
+    "en": "Exact conditions: where a coupling keeps a need among drawers in turn. Not every winner loses: a part ends through dependence, not position. A reading against one remedy: capability is a reason to pool, not to govern. Ranking the end needs C, or a premise in its place, for order, with the continuation condition for scope, neither asserted, their warrant open."
    },
    "source_adds": {
     "en": "The engine: refusers outcompeted, so the trap runs by elimination as well as by best response. That no one wants the end. Slack as what holds it off, where the account's room is what lets a drain run. Alexander's hope of a single gardener, as I recall it. Critch's agent-agnostic processes, which one record lists with no reading."
@@ -957,7 +957,7 @@
     {
      "anchor": "theories/becoming/chapters/02-MAP.md#r-shaping-selected-among-groups",
      "says": {
-      "en": "Theorem (counts; any type for the members). In groups of m whose shapers give the shared part, the whole selects for shaping exactly where the cost falls short of what comes back alone with the group's part weighted by assortment: over the rationals c < s + m q ρ. How groups form enters as given. No evaluation enters; ranking courses needs C."
+      "en": "Theorem (counts; any type for the members). In groups of m whose shapers give the shared part, the whole selects for shaping exactly where the cost falls short of what comes back alone with the group's part weighted by assortment: over the rationals c < s + m q ρ. How groups form enters as given. No evaluation enters; ranking courses needs C or a premise in its place."
      },
      "role": "carries",
      "record": "shaping-selected-among-groups"
@@ -1216,7 +1216,7 @@
     }
    ],
    "account_adds": {
-    "en": "Exits with exact windows, and that a lock is not thereby bad: none of this says whether a locked loop supports or damages 生生, and ranking a course needs C, with the continuation condition for scope; neither is asserted, and their warrant is open."
+    "en": "Exits with exact windows, and that a lock is not thereby bad: none of this says whether a locked loop supports or damages 生生, and ranking a course needs C or a premise in its place, with the continuation condition for scope; neither is asserted, and their warrant is open."
    },
    "source_adds": {
     "en": "The engineering argument, goal stability under copying and error correction; a dominant actor's strategy; the long reflection; the claim that lock-in may happen soon. Calling lock-in a loss is the source's premise, not something any law here gives. Keeping exploration open has a neighbour in C, but MacAskill's reason is moral uncertainty, and C reads what can form, and is unasserted."
@@ -1488,9 +1488,29 @@
  ],
  "changes": [
   {
+   "id": "cx-pal-addiction",
+   "what": "changed",
+   "why": "main changed the ethics claims (LM1 or AA, 7 November 2026): account_adds states what it says now"
+  },
+  {
    "id": "cx-pal-goodhart-taxonomy",
    "what": "changed",
    "why": "a correction this crosswalk made at the home: the entry quotes what the home says now, or says what it said until 7 November 2026"
+  },
+  {
+   "id": "cx-pal-multipolar-traps",
+   "what": "changed",
+   "why": "main changed the ethics claims (LM1 or AA, 7 November 2026): account_adds states what it says now"
+  },
+  {
+   "id": "cx-pal-natural-selection-among-ais",
+   "what": "changed",
+   "why": "main changed the ethics claims (LM1 or AA, 7 November 2026): targets[1].says states what it says now"
+  },
+  {
+   "id": "cx-pal-value-lock-in",
+   "what": "changed",
+   "why": "main changed the ethics claims (LM1 or AA, 7 November 2026): account_adds states what it says now"
   },
   {
    "id": "cx-pal-lawvere-diagonal",

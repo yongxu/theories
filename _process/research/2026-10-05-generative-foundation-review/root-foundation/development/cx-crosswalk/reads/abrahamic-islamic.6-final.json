@@ -1804,7 +1804,7 @@
    "carried": "fresh-reading",
    "relation": "divergence",
    "reading": {
-    "en": "[AI reading] Divergence on warrant and on the giver: the bond binds because God swore it, and the other party is no formation among formations. Only an order is alike, a gift before stipulations. 05's form: promises alone force no start, since each side's waiting on the other eventually acting holds where neither ever acts; a source giving first restores those who wait on it. Reading God as that source is my mapping, which the source would refuse, so no agreement is claimed. That blessing follows keeping is no law here."
+    "en": "[AI reading] Divergence on warrant and on the giver: the bond binds because God swore it, and the other party is no formation among formations. Only an order is alike, a gift before stipulations. 05's form: promises alone force no start, since each side's waiting on the other eventually acting holds where neither ever acts; a source giving first restores those who wait on it alone, and a loop with no source is never restored. Reading God as that source is my mapping, which the source would refuse, so no agreement is claimed. That blessing follows keeping is no law here."
    },
    "targets": [
     {
@@ -2004,7 +2004,7 @@
   {
    "id": "cx-abr-covenant-given-first",
    "what": "changed",
-   "why": "main changed theories/becoming/chapters/05-COLLECTIVES.md (LM1 or AA, 7 November 2026): targets[0].says states what it says now / main changed a home its checker read (LM1 or AA, 7 November 2026): targets[1].says states what it says now / main changed a home its checker read (LM1 or AA, 7 November 2026): reading states what it says now"
+   "why": "main changed theories/becoming/chapters/05-COLLECTIVES.md (LM1 or AA, 7 November 2026): targets[0].says states what it says now / main changed a home its checker read (LM1 or AA, 7 November 2026): targets[1].says states what it says now / main changed a home its checker read (LM1 or AA, 7 November 2026): reading states what it says now / main changed the waiting claims (LM1 or AA, 7 November 2026): reading states what it says now"
   }
  ],
  "live_flags": []

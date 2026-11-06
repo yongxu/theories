@@ -1148,7 +1148,7 @@
      "record": "giving-that-waits-on-giving",
      "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-giving-that-waits-on-giving",
      "says": {
-      "en": "Theorem: with memory, a formation gives at step n exactly where every formation within n waits of it gave at the start, so a withholding stays and spreads downstream; one withholding, every formation within d waits of it, ends all giving from step d on. Reading [D48]: kept promises and enforced contracts are laws giving first: the law changes, not the state alone. Not that cooperation is good."
+      "en": "Theorem: with memory, a formation gives at step n exactly where every formation within n waits of it gave at the start, so a withholding stays and spreads downstream; one withholding, every formation within d waits of it, ends all giving from step d on. Reading [AI reading, D48]: kept promises and enforced contracts are laws giving first: the law changes, not the state alone. Not that cooperation is good."
      },
      "role": "carries",
      "part": "D48"
@@ -2006,7 +2006,7 @@
    "relation": "scope",
    "agreement_of": null,
    "reading": {
-    "en": "The account finds both sides. Each counting its own draw misses joint excess, the source's fear with its premises. Yet an order rising in its own continuation ranks a coupled ending below with no C: a premise weaker than C, not none. So \"regardless of content\" is scoped: it depends on what one's own continuation holds, and where a course keeps something beyond, some such order reverses. Other rankings still need C for order, with the continuation condition for scope, neither asserted. [AI reading]"
+    "en": "The account finds both sides. Each counting its own draw misses joint excess, the source's fear with its premises. Yet an order rising in its own continuation ranks a coupled ending below with no C: a premise weaker than C, not none. So \"regardless of content\" is scoped: it depends on what one's own continuation holds, and where a course keeps something beyond, some such order reverses. Other rankings still need C, or a premise in its place, for order, with the continuation condition for scope, neither asserted, warrant open. [AI reading]"
    },
    "targets": [
     {
@@ -2529,7 +2529,7 @@
    "relation": "divergence",
    "agreement_of": null,
    "reading": {
-    "en": "The account has one root and no separate subject: a formation is one law, and what stands as \"self\" a closure. 06 says one early scheme with a primitive 間 was replaced by the root's grammar; 法则 17 and a first-person root are not discussed live. A limit exists on other terms: no family of readings says every reading, of self-description in general, granting no root. 08 keeps \"what an experience is like is not how it relates\" as a live defeater. So the source stands as a test; Ren's own note (own words 59) calls all one. [AI reading]"
+    "en": "The account has one root and no separate subject: a formation is one law, and what stands as \"self\" a closure. 06 says one early scheme with a primitive 間 was replaced by the root's grammar; 法则 17 and a first-person root are not discussed live. A limit exists on other terms: no family of claims says every reading, of self-description in general, granting no root. 08 keeps \"what an experience is like is not how it relates\" as a live defeater. So the source stands as a test; Ren's own note (own words 59) calls all one. [AI reading]"
    },
    "targets": [
     {
@@ -2891,7 +2891,7 @@
    "relation": "divergence",
    "agreement_of": null,
    "reading": {
-    "en": "生生 is the live direction, compared by widening under the continuation condition for scope and C for order, argued and unasserted, where the source says common sense. Provision has laws, though not against the source's phrase, which asks no sacrifice of the recipient: a continuing finite family cannot go unfed from beyond, and reasons each within what is given can together exceed it. A floor above trades does not follow from C. \"Fix it\" has no criterion without C and a commitment. [AI reading]"
+    "en": "生生 is the live direction, compared by widening under the continuation condition for scope and C for order, argued and unasserted, their warrant open, where the source says common sense. Provision has laws, though not against the source's phrase, which asks no sacrifice of the recipient: a continuing finite family cannot go unfed from beyond, and reasons each within what is given can together exceed it. A floor above trades does not follow from C. \"Fix it\" has no criterion without C, or a premise in its place, and a commitment. [AI reading]"
    },
    "targets": [
     {
@@ -2922,7 +2922,7 @@
      "record": "own-count-misses-joint-excess",
      "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-own-count-misses-joint-excess",
      "says": {
-      "en": "Theorem on the World: formations each taking within what is given can together exceed it; with natural-number amounts joint excess cannot outlast what was held; where renewers depend on what they renew it ends the renewal and those depending at such a need."
+      "en": "Theorem on the World: formations each taking within what is given can together exceed it; with natural-number amounts joint excess cannot outlast what was held; where renewers depend on what they renew at a need of at least `m`, `n` consecutive steps of it from a level below `n + m` end the renewal and those depending at such a need."
      },
      "role": "neighbour"
     }
@@ -3353,9 +3353,29 @@
    "why": "a correction this crosswalk made at the home: the entry quotes what the home says now, or says what it said until 7 November 2026"
   },
   {
+   "id": "cx-drives-belief-makes-dynamic",
+   "what": "changed",
+   "why": "main changed the waiting claims (LM1 or AA, 7 November 2026): targets[2].says states what it says now (as its checker amended)"
+  },
+  {
    "id": "cx-drives-virtue-does-not-self-install",
    "what": "changed",
    "why": "a correction this crosswalk made at the home: the entry quotes what the home says now, or says what it said until 7 November 2026"
+  },
+  {
+   "id": "cx-drives-self-interest-axiom",
+   "what": "changed",
+   "why": "main changed the ethics claims (LM1 or AA, 7 November 2026): reading states what it says now"
+  },
+  {
+   "id": "cx-drives-xin-as-root",
+   "what": "changed",
+   "why": "main changed the edges claims (LM1 or AA, 7 November 2026): reading states what it says now"
+  },
+  {
+   "id": "cx-drives-generative-field",
+   "what": "changed",
+   "why": "main changed the edges claims (LM1 or AA, 7 November 2026): targets[3].says states what it says now / main changed the edges claims (LM1 or AA, 7 November 2026): reading states what it says now"
   },
   {
    "id": "cx-drives-confucian-engineering",

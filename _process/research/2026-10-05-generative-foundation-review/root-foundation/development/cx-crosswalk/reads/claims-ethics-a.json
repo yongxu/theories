@@ -1,0 +1,766 @@
+{
+ "cluster": "ethics-a",
+ "items": [
+  {
+   "id": "cx-asc-unsurvivable-no-safe-win",
+   "field": "reading",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "a course keeping an independent copy reverses that.",
+     "new": "where a course keeps an independent copy, some self-concerned order reverses that."
+    },
+    {
+     "old": "needs the condition for scope and C for order, neither asserted.",
+     "new": "needs the condition for scope and C, or a premise in its place, for order, neither asserted, warrant open."
+    }
+   ],
+   "labels": null,
+   "why": "07 §4 and its does-not-show now say a ranking of courses needs C or a premise in its place (LM1), an order rising with one's own continuation ranking one case with no C; the field said it needs C alone. The home also has only 'some such order' rank the course keeping a copy higher, so the reversal is stated as the home and CD §1 state it.",
+   "read": [
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-self-concern-alone-ranks",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#does-not-show",
+    "theories/becoming/COLLECTIVE-DIRECTION.md#1-a-direction-as-a-criterion"
+   ]
+  },
+  {
+   "id": "cx-asc-frozen-model-renewal",
+   "field": "reading",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "Calling that better needs C, with",
+     "new": "Calling that better needs C or a premise in its place, with"
+    }
+   ],
+   "labels": null,
+   "why": "07 §4 and its does-not-show now say a ranking of courses needs C or a premise in its place (LM1), an order rising with one's own continuation ranking one case with no C; the field said it needs C alone. The rest matches CD §7's reading; 'only moves of one fixed process' is narrower than its 'from some step on', not wider.",
+   "read": [
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#does-not-show",
+    "theories/becoming/COLLECTIVE-DIRECTION.md#7-keeping-the-future-open"
+   ]
+  },
+  {
+   "id": "cx-archearth-provision-apart-from-membership",
+   "field": "targets[0].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "The field is 07's basic-priority row word for word, readings qualifier and 'The tier assignment is a reading' kept; 'C alone leaves them unranked' says what C does not rank, which LM1 left standing, not that C alone orders.",
+   "read": [
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#r-basic-priority-step-by-step",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#r-ranking-under-readings",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order"
+   ]
+  },
+  {
+   "id": "cx-drives-self-interest-axiom",
+   "field": "reading",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "Other rankings still need C for order, with the continuation condition for scope, neither asserted.",
+     "new": "Other rankings still need C, or a premise in its place, for order, with the continuation condition for scope, neither asserted, warrant open."
+    }
+   ],
+   "labels": null,
+   "why": "07 §4 and its does-not-show now say a ranking of courses needs C or a premise in its place (LM1), an order rising with one's own continuation ranking one case with no C; the field said it needs C alone. The self-concern half already follows the home (a premise weaker than C, some such order reversing).",
+   "read": [
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-self-concern-alone-ranks",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#does-not-show",
+    "theories/becoming/COLLECTIVE-DIRECTION.md#1-a-direction-as-a-criterion"
+   ]
+  },
+  {
+   "id": "cx-ecs-options-before-obligations",
+   "field": "reading",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "The field already says the ranking 'needs C (order) or a premise in its place', names the condition's scope, neither asserted, warrant open; the margin test matches 07's row ('Mixed is not ordered').",
+   "read": [
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#does-not-show",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#r-own-widening-within-the-margin"
+   ]
+  },
+  {
+   "id": "cx-ecs-everyone-happily",
+   "field": "reading",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "a ranking needs C, the continuation condition fixing scope, neither asserted.",
+     "new": "a ranking needs C or a premise in its place, the continuation condition fixing scope, neither asserted, warrant open."
+    }
+   ],
+   "labels": null,
+   "why": "07 §4 and its does-not-show now say a ranking of courses needs C or a premise in its place (LM1), an order rising with one's own continuation ranking one case with no C; the field said it needs C alone. The widening and rivalry halves match 07 §2 and CD §8.",
+   "read": [
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#does-not-show",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-keeping-widening-needs",
+    "theories/becoming/COLLECTIVE-DIRECTION.md#8-zero-sum-competition"
+   ]
+  },
+  {
+   "id": "cx-hsm-real-problem-solved",
+   "field": "targets[4].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "order needs C; neither is asserted.",
+     "new": "C gives order, and a ranking of courses needs C or a premise in its place; neither is asserted."
+    }
+   ],
+   "labels": null,
+   "why": "The three quotations are §3.4's words; the closing gloss said 'order needs C', where 07's does-not-show now reads 'the condition fixes scope and orders nothing; C gives order, and a ranking of courses needs C or a premise in its place'. Copied from there.",
+   "read": [
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#does-not-settle",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#does-not-show"
+   ]
+  },
+  {
+   "id": "cx-hsm-real-problem-solved",
+   "field": "reading",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "ranking it needs C, for order;",
+     "new": "ranking it needs C, for order, or a premise in its place;"
+    }
+   ],
+   "labels": null,
+   "why": "07 §4 and its does-not-show now say a ranking of courses needs C or a premise in its place (LM1), an order rising with one's own continuation ranking one case with no C; the field said it needs C alone. Both premises stay named, unasserted, warrant open.",
+   "read": [
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#does-not-show"
+   ]
+  },
+  {
+   "id": "cx-kpso-protective-closure",
+   "field": "targets[4].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "This is 07's basic-priority row, the stepwise and relation-level readings kept and the tier assignment a reading; 'C alone leaves them unranked' is what C does not rank, which still stands.",
+   "read": [
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#r-basic-priority-step-by-step",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#r-ranking-under-readings"
+   ]
+  },
+  {
+   "id": "cx-kpso-death-as-feature",
+   "field": "reading",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "'Only C or further premises order anything' matches 07 now (a ranking needs C or a premise in its place) and is not the old 'C alone'; the condition is used conditionally, for scope, and the mixed reading of apoptosis and 'no ending is licensed' are §3.4's.",
+   "read": [
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#does-not-settle",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#does-not-show"
+   ]
+  },
+  {
+   "id": "cx-memories-one-owned-premise",
+   "field": "targets[2].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "It restates 07's first two does-not-show lines rightly: neither the condition, C nor the step is shown warranted, nor does the ethics derive from the condition; it says nothing of C's order.",
+   "read": [
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#does-not-show"
+   ]
+  },
+  {
+   "id": "cx-ma-selection-for-control",
+   "field": "targets[4].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "capture: that needs C.",
+     "new": "capture: that needs C or a premise in its place."
+    }
+   ],
+   "labels": null,
+   "why": "02 §9's D45 reading now ends 'nothing here ranks open rule-making above capture: that needs C or a premise in its place' (LM1); the field quoted the old end.",
+   "read": [
+    "theories/becoming/chapters/02-MAP.md#capture",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order"
+   ]
+  },
+  {
+   "id": "cx-ma-selection-for-control",
+   "field": "reading",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "Ranking open rule-making above capture needs C, and whose losses count the condition; neither is asserted.",
+     "new": "Ranking open rule-making above capture needs C or a premise in its place, and whose losses count the condition; neither is asserted, warrant open."
+    }
+   ],
+   "labels": null,
+   "why": "02 §9's D45 reading now says that ranking 'needs C or a premise in its place' (LM1). The lever and assortment halves still match the reading.",
+   "read": [
+    "theories/becoming/chapters/02-MAP.md#capture",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#does-not-show"
+   ]
+  },
+  {
+   "id": "cx-ma-exit-sequence",
+   "field": "reading",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "where the rest outruns the renewal no weight selects restraint, and only a change of the exchange helps.",
+     "new": "where the rest outruns the renewal, at need one no weight on a reading of the condition only from the rest's end on selects a member's restraint, and only a change of the rest's exchange helps."
+    },
+    {
+     "old": "Ranking any path needs C, and scope the condition; neither is asserted.",
+     "new": "Ranking any path needs C or a premise in its place, and scope the condition; neither is asserted, warrant open."
+    }
+   ],
+   "labels": null,
+   "why": "The outrun paraphrase dropped what AA's errata put into CD and 05 state: need one, and no weight on a reading of the condition only from the rest's end on (05's outrun law, CD §3 and §6). The ranking clause takes LM1's 'C or a premise in its place'.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-the-rest-outruns-the-renewal",
+    "theories/becoming/COLLECTIVE-DIRECTION.md#the-answer-in-brief",
+    "theories/becoming/COLLECTIVE-DIRECTION.md#3-what-the-theorys-own-laws-rule-out",
+    "theories/becoming/COLLECTIVE-DIRECTION.md#6-what-enough-situationality-would-have-to-mean",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order"
+   ]
+  },
+  {
+   "id": "cx-ma-political-will",
+   "field": "targets[0].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "that needs C, and",
+     "new": "calling the widening course better needs C or a premise in its place, and"
+    }
+   ],
+   "labels": null,
+   "why": "CD §6's closing sentence now reads 'calling the widening course better needs C or a premise in its place' (LM1); the field quoted the old wording. The rest is §6's.",
+   "read": [
+    "theories/becoming/COLLECTIVE-DIRECTION.md#6-what-enough-situationality-would-have-to-mean",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order"
+   ]
+  },
+  {
+   "id": "cx-rsd-he-not-tong",
+   "field": "reading",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "calling that better needs C, with the condition for scope",
+     "new": "calling that better needs C or a premise in its place, with the condition for scope"
+    }
+   ],
+   "labels": null,
+   "why": "07 §4 and its does-not-show now say a ranking of courses needs C or a premise in its place (LM1), an order rising with one's own continuation ranking one case with no C; the field said it needs C alone.",
+   "read": [
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#does-not-show",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#r-own-widening-within-the-margin"
+   ]
+  },
+  {
+   "id": "cx-sspiral-regenerative-interdependence",
+   "field": "reading",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "That restoring is better needs C for order,",
+     "new": "That restoring is better needs C, or a premise in its place, for order,"
+    }
+   ],
+   "labels": null,
+   "why": "07 §4 and its does-not-show now say a ranking of courses needs C or a premise in its place (LM1), an order rising with one's own continuation ranking one case with no C; the field said it needs C alone. 'Restores' here is 02's level recovery, not 05's restoring of giving, so the sparing correction does not bear on it.",
+   "read": [
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-self-concern-alone-ranks",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#does-not-show",
+    "theories/becoming/chapters/02-MAP.md#r-supported-renewal-recovery"
+   ]
+  },
+  {
+   "id": "cx-sspiral-external-competition",
+   "field": "reading",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "ranking them needs C, neither asserted",
+     "new": "ranking them needs C or a premise in its place, neither asserted"
+    }
+   ],
+   "labels": null,
+   "why": "07 §4 and its does-not-show now say a ranking of courses needs C or a premise in its place (LM1), an order rising with one's own continuation ranking one case with no C; the field said it needs C alone.",
+   "read": [
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#does-not-show"
+   ]
+  },
+  {
+   "id": "cx-sspiral-direction-setting",
+   "field": "reading",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "Ranking these courses needs C for order",
+     "new": "Ranking these courses needs C, or a premise in its place, for order"
+    }
+   ],
+   "labels": null,
+   "why": "07 §4 and its does-not-show now say a ranking of courses needs C or a premise in its place (LM1), an order rising with one's own continuation ranking one case with no C; the field said it needs C alone.",
+   "read": [
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#does-not-show"
+   ]
+  },
+  {
+   "id": "cx-sspiral-goodness-rational",
+   "field": "reading",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "above capture without C.",
+     "new": "above capture without C or a premise in its place."
+    },
+    {
+     "old": "with no C, and reverses where a copy is kept.",
+     "new": "with no C, and some self-concerned order reverses where a copy is kept."
+    }
+   ],
+   "labels": null,
+   "why": "02 §9's D45 reading now says ranking open rule-making above capture needs C or a premise in its place (LM1). The home has only some self-concerned order rank the course keeping a copy higher, not self-concern as such; the premises' summary already stands.",
+   "read": [
+    "theories/becoming/chapters/02-MAP.md#capture",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-self-concern-alone-ranks",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#does-not-show"
+   ]
+  },
+  {
+   "id": "cx-sty-endings-as-transitions",
+   "field": "targets[2].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "No order without C.",
+     "new": "The condition orders nothing; a ranking of courses needs C or a premise in its place."
+    }
+   ],
+   "labels": null,
+   "why": "The quotations are the row's words; the gloss 'No order without C' is false since LM1, an order rising with one's own continuation ranking one case with no C. Taken from 07's does-not-show.",
+   "read": [
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#r-feeding-from-a-step",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#does-not-show"
+   ]
+  },
+  {
+   "id": "cx-fork-two-fates",
+   "field": "account_adds",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "that needs C for order",
+     "new": "that needs C, or a premise in its place, for order"
+    }
+   ],
+   "labels": null,
+   "why": "07 §4 and its does-not-show now say a ranking of courses needs C or a premise in its place (LM1), an order rising with one's own continuation ranking one case with no C; the field said it needs C alone. The drift clause matches 02 §9.",
+   "read": [
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#does-not-show",
+    "theories/becoming/chapters/02-MAP.md#capture"
+   ]
+  },
+  {
+   "id": "cx-fork-only-stable-equilibrium",
+   "field": "account_adds",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "A full ranking of courses needs C for order,",
+     "new": "A full ranking of courses needs C, or a premise in its place, for order,"
+    },
+    {
+     "old": "and an independent copy reverses it.",
+     "new": "and where the other course keeps an independent copy, some self-concerned order reverses it."
+    }
+   ],
+   "labels": null,
+   "why": "07 §4 and its does-not-show now say a ranking of courses needs C or a premise in its place (LM1), an order rising with one's own continuation ranking one case with no C; the field said it needs C alone. The reversal is stated as the home does: some self-concerned order ranks the course keeping a copy higher.",
+   "read": [
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-self-concern-alone-ranks",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#does-not-show",
+    "theories/becoming/COLLECTIVE-DIRECTION.md#1-a-direction-as-a-criterion"
+   ]
+  },
+  {
+   "id": "cx-fork-autonomous-no-stewards",
+   "field": "reading",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "Calling this worse needs C for order, with scope from the continuation condition, neither asserted.",
+     "new": "Calling this worse needs C, or a premise in its place, for order, with scope from the continuation condition, neither asserted, warrant open."
+    }
+   ],
+   "labels": null,
+   "why": "07 §4 and its does-not-show now say a ranking of courses needs C or a premise in its place (LM1), an order rising with one's own continuation ranking one case with no C; the field said it needs C alone. The fixed-rule and finite-record clauses match CD §7 and §3.",
+   "read": [
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#does-not-show",
+    "theories/becoming/COLLECTIVE-DIRECTION.md#7-keeping-the-future-open"
+   ]
+  },
+  {
+   "id": "cx-wamo-coordination-bottleneck",
+   "field": "targets[0].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "Calling widening better needs C, counting returnless losses needs the continuation condition, neither asserted.",
+     "new": "Whose losses count is the continuation condition's (scope); that widening is better is C's (order); the theory asserts neither."
+    }
+   ],
+   "labels": null,
+   "why": "The target is the answer in brief, which says 'whose losses count is the continuation condition's (scope); that widening is better is C's (order); the theory asserts neither'; the field's 'needs C', with no alternative, is wider than LM1 allows. The home's words replace it.",
+   "read": [
+    "theories/becoming/COLLECTIVE-DIRECTION.md#the-answer-in-brief",
+    "theories/becoming/COLLECTIVE-DIRECTION.md#4-what-needs-a-premise",
+    "theories/becoming/COLLECTIVE-DIRECTION.md#6-what-enough-situationality-would-have-to-mean",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order"
+   ]
+  },
+  {
+   "id": "cx-wamo-coordination-bottleneck",
+   "field": "account_adds",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "Calling widening better needs C and counting",
+     "new": "Calling widening better needs C or a premise in its place, and counting"
+    }
+   ],
+   "labels": null,
+   "why": "CD §6 now says calling the widening course better needs C or a premise in its place (LM1). The fork's limits match CD's answer in brief.",
+   "read": [
+    "theories/becoming/COLLECTIVE-DIRECTION.md#6-what-enough-situationality-would-have-to-mean",
+    "theories/becoming/COLLECTIVE-DIRECTION.md#the-answer-in-brief",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order"
+   ]
+  },
+  {
+   "id": "cx-wamo-more-alive",
+   "field": "account_adds",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "Ranking any of it needs C for order and the condition for scope, neither asserted.",
+     "new": "Ranking any of it needs C, or a premise in its place, for order and the condition for scope, neither asserted, warrant open."
+    }
+   ],
+   "labels": null,
+   "why": "07 §4 and its does-not-show now say a ranking of courses needs C or a premise in its place (LM1), an order rising with one's own continuation ranking one case with no C; the field said it needs C alone. 07 §9 even ranks one such ending with no C: an ending needed by everything is ranked below by every order rising with a standpoint's own continuation.",
+   "read": [
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#does-not-show",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#objections"
+   ]
+  },
+  {
+   "id": "cx-wamo-survival-incentive",
+   "field": "account_adds",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "needs C, neither asserted",
+     "new": "needs C or a premise in its place, neither asserted"
+    }
+   ],
+   "labels": null,
+   "why": "07 §4 and its does-not-show now say a ranking of courses needs C or a premise in its place (LM1), an order rising with one's own continuation ranking one case with no C; the field said it needs C alone. The self-concern case is still read as the one ranked with no C.",
+   "read": [
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-self-concern-alone-ranks",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#does-not-show"
+   ]
+  },
+  {
+   "id": "cx-zhishan-recursion-direction-neutral",
+   "field": "account_adds",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "that needs C.",
+     "new": "that needs C or a premise in its place."
+    }
+   ],
+   "labels": null,
+   "why": "02 §9's D45 reading now ends 'nothing here ranks open rule-making above capture: that needs C or a premise in its place' (LM1).",
+   "read": [
+    "theories/becoming/chapters/02-MAP.md#capture"
+   ]
+  },
+  {
+   "id": "cx-zhishan-good-as-continuing-generation",
+   "field": "account_adds",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "It says what 07 §4 and its does-not-show say: scope and order apart, and the ethics not derived from the condition; it states no order needing C alone.",
+   "read": [
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#does-not-show"
+   ]
+  },
+  {
+   "id": "cx-zhishan-not-a-master-good",
+   "field": "targets[5].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "above its occurrence, where C alone",
+     "new": "above its occurrence under the stepwise and relation-level readings, where C alone"
+    }
+   ],
+   "labels": null,
+   "why": "Not a change on main: the restatement dropped the row's readings qualifier, which makes 'C alone leaves them unranked' wider than the home, since under the whole-run and possibility readings every comparison satisfying C ranks the absence above. The row's words restore it.",
+   "read": [
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#r-basic-priority-step-by-step",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#r-ranking-under-readings"
+   ]
+  },
+  {
+   "id": "cx-zhishan-not-a-master-good",
+   "field": "reading",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "a comparison satisfying C prefers the overdraw",
+     "new": "an irreflexive, transitive comparison satisfying C prefers the overdraw"
+    },
+    {
+     "old": "Only J1/J2 ranks it, and C's order and the continuation condition's scope are unasserted.",
+     "new": "Under the stepwise and relation-level readings J1/J2 ranks it, and C's order and the continuation condition's scope are unasserted, their warrant open."
+    }
+   ],
+   "labels": null,
+   "why": "'Only J1/J2 ranks it' says more than the basic-priority row, which has J1/J2 rank it where C alone leaves it unranked and excludes no other premise in C's place (LM1). The event-by-event clause takes 07's qualifier 'an irreflexive, transitive comparison'.",
+   "read": [
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#r-basic-priority-step-by-step",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#r-relational-reading-comparison",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#r-ranking-under-readings",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#does-not-show"
+   ]
+  },
+  {
+   "id": "cx-zhishan-loops-not-symmetric",
+   "field": "targets[1].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "capture: that needs C.",
+     "new": "capture: that needs C or a premise in its place."
+    }
+   ],
+   "labels": null,
+   "why": "02 §9's D45 reading now ends 'nothing here ranks open rule-making above capture: that needs C or a premise in its place' (LM1).",
+   "read": [
+    "theories/becoming/chapters/02-MAP.md#capture"
+   ]
+  },
+  {
+   "id": "cx-zhishan-loops-not-symmetric",
+   "field": "reading",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "above capture without C.",
+     "new": "above capture without C or a premise in its place."
+    },
+    {
+     "old": "neither asserted. A rule",
+     "new": "neither asserted, warrant open. A rule"
+    }
+   ],
+   "labels": null,
+   "why": "02 §9's D45 reading now says that ranking needs C or a premise in its place (LM1). 'Calling the wider better is C's' stands as 07 §4.4 says it.",
+   "read": [
+    "theories/becoming/chapters/02-MAP.md#capture",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#does-not-show"
+   ]
+  },
+  {
+   "id": "cx-zhishan-variety-not-dying-alike",
+   "field": "reading",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "that needs C, with scope from the continuation condition.",
+     "new": "that needs C or a premise in its place, with scope from the continuation condition, neither asserted, warrant open."
+    }
+   ],
+   "labels": null,
+   "why": "07 §4 and its does-not-show now say a ranking of courses needs C or a premise in its place (LM1), an order rising with one's own continuation ranking one case with no C; the field said it needs C alone. The reviewers and joint-excess clauses match 05.",
+   "read": [
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#does-not-show",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-reviewers-count-by-independent-causes",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-own-count-misses-joint-excess"
+   ]
+  },
+  {
+   "id": "cx-abr-maqasid-tiers",
+   "field": "targets[0].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "The basic-priority row word for word with its readings qualifier and the D65 reading after it; 'C alone leaves them unranked' is what C does not rank, still standing.",
+   "read": [
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#r-basic-priority-step-by-step"
+   ]
+  },
+  {
+   "id": "cx-indaf-place-before-time",
+   "field": "account_adds",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "A coincidence: 'derived from the condition relation' is the root's time, the reach of the grammar's condition relation (01 §1), not the ethics or C.",
+   "read": [
+    "theories/becoming/chapters/01-ROOT.md#one-kind-of-symbol"
+   ]
+  },
+  {
+   "id": "cx-syscyb-foerster-imperative",
+   "field": "reading",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "It names C and the condition, each unasserted, with their roles, and says the ethics does not derive from the condition, as 07 does; the menu clause is 07 §4.4's, and nothing says a ranking needs C alone.",
+   "read": [
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-would-give-c",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#does-not-show"
+   ]
+  },
+  {
+   "id": "cx-ecoevo-msy-and-open-access",
+   "field": "account_adds",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "would need C for order and the continuation condition for scope, neither asserted.",
+     "new": "would need C, or a premise in its place, for order and the continuation condition for scope, neither asserted, warrant open."
+    }
+   ],
+   "labels": null,
+   "why": "07 §4 and its does-not-show now say a ranking of courses needs C or a premise in its place (LM1), an order rising with one's own continuation ranking one case with no C; the field said it needs C alone.",
+   "read": [
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#does-not-show"
+   ]
+  },
+  {
+   "id": "cx-ecoevo-trophic-cascades",
+   "field": "account_adds",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "would need C for order and the continuation condition for scope, neither asserted.",
+     "new": "would need C, or a premise in its place, for order and the continuation condition for scope, neither asserted, warrant open."
+    }
+   ],
+   "labels": null,
+   "why": "07 §4 and its does-not-show now say a ranking of courses needs C or a premise in its place (LM1), an order rising with one's own continuation ranking one case with no C; the field said it needs C alone.",
+   "read": [
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#does-not-show"
+   ]
+  },
+  {
+   "id": "cx-econ-michels-oligarchy",
+   "field": "account_adds",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "that needs C for order and the continuation condition for scope, neither asserted.",
+     "new": "that needs C, or a premise in its place, for order and the continuation condition for scope, neither asserted, warrant open."
+    }
+   ],
+   "labels": null,
+   "why": "07 §4 and its does-not-show now say a ranking of courses needs C or a premise in its place (LM1), an order rising with one's own continuation ranking one case with no C; the field said it needs C alone. The readers' premise clause matches 02 §9's D45 reading.",
+   "read": [
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#does-not-show",
+    "theories/becoming/chapters/02-MAP.md#capture"
+   ]
+  },
+  {
+   "id": "cx-econ-tainter-complexity",
+   "field": "reading",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "any ranking needs C for order",
+     "new": "any ranking needs C, or a premise in its place, for order"
+    }
+   ],
+   "labels": null,
+   "why": "07 §4 and its does-not-show now say a ranking of courses needs C or a premise in its place (LM1), an order rising with one's own continuation ranking one case with no C; the field said it needs C alone. D48's 'more waiting gives no more' still stands in 05 §5.",
+   "read": [
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#does-not-show",
+    "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits"
+   ]
+  },
+  {
+   "id": "cx-pal-multipolar-traps",
+   "field": "account_adds",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "Ranking the end needs C for order,",
+     "new": "Ranking the end needs C, or a premise in its place, for order,"
+    }
+   ],
+   "labels": null,
+   "why": "07 §4 and its does-not-show now say a ranking of courses needs C or a premise in its place (LM1), an order rising with one's own continuation ranking one case with no C; the field said it needs C alone.",
+   "read": [
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#does-not-show"
+   ]
+  },
+  {
+   "id": "cx-pal-value-lock-in",
+   "field": "account_adds",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "ranking a course needs C, with",
+     "new": "ranking a course needs C or a premise in its place, with"
+    }
+   ],
+   "labels": null,
+   "why": "07 §4 and its does-not-show now say a ranking of courses needs C or a premise in its place (LM1), an order rising with one's own continuation ranking one case with no C; the field said it needs C alone.",
+   "read": [
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#does-not-show"
+   ]
+  }
+ ]
+}

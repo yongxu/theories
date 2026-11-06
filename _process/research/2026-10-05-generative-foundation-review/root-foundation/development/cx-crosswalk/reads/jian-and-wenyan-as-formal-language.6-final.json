@@ -3361,7 +3361,7 @@
    "relation": "divergence",
    "agreement_of": null,
    "reading": {
-    "en": "On 良知 the account records a divergence of standing: 阳明 states as a recognised fact what the theory holds under an unasserted condition (an order of courses would need C too, neither asserted). It warns the source's marker of a risk: discounting each failed outcome as not real knowledge leaves nothing testable. Nearest forms for the counterfeit trap, none carrying it: self-reference does not certify itself; selection is blind beyond its couplings; each revision says its last gap. 工夫, 自欺 are absent. [AI reading]"
+    "en": "On 良知 the account records a divergence of standing: 阳明 states as a recognised fact what the theory holds under an unasserted condition (an order of courses would need C or a premise in its place too, neither asserted, warrant open). It warns the source's marker of a risk: discounting each failed outcome as not real knowledge leaves nothing testable. Nearest forms for the counterfeit trap, none carrying it: self-reference does not certify itself; selection is blind beyond its couplings; each revision says its last gap. 工夫, 自欺 are absent. [AI reading]"
    },
    "targets": [
     {
@@ -3904,6 +3904,11 @@
    "id": "cx-jianwen-map-territory-mutual",
    "what": "changed",
    "why": "main changed theories/becoming/results/records/readings-within-what-they-read.json (LM1 or AA, 7 November 2026): targets[2].says states what it says now"
+  },
+  {
+   "id": "cx-jianwen-gongfu-and-liangzhi",
+   "what": "changed",
+   "why": "main changed the ethics claims (LM1 or AA, 7 November 2026): reading states what it says now"
   }
  ],
  "live_flags": []

@@ -1,0 +1,1079 @@
+{
+ "cluster": "edges",
+ "items": [
+  {
+   "id": "cx-asc-rationality-of-participation",
+   "field": "reading",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "It says only that takers each within what a step gives can together exceed it, which 05 §1 states (`Pair.own_not_joint`); it claims no ending, so the gate and the `n` steps from below `n + m` that AA restated are not at issue. The rest matches its homes and speaks of no other changed claim.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-own-count-misses-joint-excess",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-several-optimizers-drain-by-their-joint-capacity"
+   ]
+  },
+  {
+   "id": "cx-asc-latency-window",
+   "field": "targets[0].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "An exact quotation of §6's third condition as it stands; the point of no return there is the regime's, unchanged.",
+   "read": [
+    "theories/becoming/COLLECTIVE-DIRECTION.md#6-what-enough-situationality-would-have-to-mean"
+   ]
+  },
+  {
+   "id": "cx-asc-latency-window",
+   "field": "targets[2].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "02's margin law as it stands: one condition under a standing draw, a level up to the top ending exactly where it starts below `H + y`; the yeast clause matches COLLECTIVE-DIRECTION §5. No changed claim is stated.",
+   "read": [
+    "theories/becoming/chapters/02-MAP.md#r-margin-of-a-regime",
+    "theories/becoming/COLLECTIVE-DIRECTION.md#5-what-is-empirical"
+   ]
+  },
+  {
+   "id": "cx-asc-latency-window",
+   "field": "reading",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "The Collingridge horns, the re-reading deadline and the doubling bound match their homes, and 'the point of no return belongs to the share's course' is 02's own capture reading. It ranks nothing and states no changed claim.",
+   "read": [
+    "theories/becoming/chapters/02-MAP.md#capture",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-re-optimizing-above-a-renewal-ends-it",
+    "theories/becoming/chapters/05-COLLECTIVES.md#mutual-dependence"
+   ]
+  },
+  {
+   "id": "cx-asc-two-constraints-metabolic-rate",
+   "field": "reading",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "Six conditions as a reading, an exact point in the model, T1's standing and the yeast clause all match their homes; the margin experiment's 'falls' is not stated here.",
+   "read": [
+    "theories/becoming/COLLECTIVE-DIRECTION.md#6-what-enough-situationality-would-have-to-mean",
+    "theories/becoming/chapters/02-MAP.md#r-margin-of-a-regime",
+    "theories/becoming/chapters/02-MAP.md#t1"
+   ]
+  },
+  {
+   "id": "cx-asc-theorist-inside-the-selection",
+   "field": "reading",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": ", unless a reader comes from outside.",
+     "new": "; it comes to couple into what it does not yet couple into only through an admission not made through it or through members its course would hold anyway (each a witness)."
+    }
+   ],
+   "labels": null,
+   "why": "COLLECTIVE-DIRECTION's pool row no longer has 'unless a reader is admitted from outside': its scheduled witness admits the reader at step 2 in every history, a member the course without the loss holds too, so the row names two routes. The field now copies the row's edge.",
+   "read": [
+    "theories/becoming/COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-a-pool-that-recruits-through-itself",
+    "theories/becoming/results/records/a-pool-that-recruits-through-itself.md"
+   ]
+  },
+  {
+   "id": "cx-asc-independent-examiner",
+   "field": "reading",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "It names a form, not an exception to the recruitment law: a reader admitted from outside a self-recruiting pool is the called witness's route, an admission not made through the pool (`PoolCourse.called_apart`), and the field claims no exclusivity. The reviewers' law is quoted with its qualifiers.",
+   "read": [
+    "theories/becoming/COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-a-pool-that-recruits-through-itself",
+    "theories/becoming/results/records/a-pool-that-recruits-through-itself.md",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-reviewers-count-by-independent-causes"
+   ]
+  },
+  {
+   "id": "cx-archearth-no-single-score",
+   "field": "reading",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "Takers each within what is given can together exceed it is 05 §1's law, with no ending claimed; the weighting clauses do not touch the changed claims.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-own-count-misses-joint-excess",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#r-widening-as-what-every-positive-weighting-ranks"
+   ]
+  },
+  {
+   "id": "cx-archearth-points-game-revised",
+   "field": "reading",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "'An outside reader is admitted' reads T7's stated way out ('a reader outside the share, a loss entering it, a new reading'), which is unchanged; it is not the pool law's edge.",
+   "read": [
+    "theories/becoming/chapters/02-MAP.md#t7"
+   ]
+  },
+  {
+   "id": "cx-ctxrt-digital-life-standing-test",
+   "field": "targets[1].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "An exact quotation of 04's reading; 'a reader made from outside' is the thermostat contrast, not the pool edge main narrowed.",
+   "read": [
+    "theories/becoming/chapters/04-LIFE.md#r-the-stock-buys-time-where-the-rebuild-draws-on-it"
+   ]
+  },
+  {
+   "id": "cx-ctxrt-digital-life-standing-test",
+   "field": "reading",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "'A reader made from outside' is 04's thermostat contrast, a coincidence with the pool edge; scope is stated as the condition's, and T8's premises as unasserted.",
+   "read": [
+    "theories/becoming/chapters/04-LIFE.md#r-the-stock-buys-time-where-the-rebuild-draws-on-it"
+   ]
+  },
+  {
+   "id": "cx-drives-xin-as-root",
+   "field": "targets[3].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "03's theorem as it stands: under a map moving every value, no family of claims says every reading.",
+   "read": [
+    "theories/becoming/chapters/03-KNOWING.md#r-readings-within-what-they-read"
+   ]
+  },
+  {
+   "id": "cx-drives-xin-as-root",
+   "field": "reading",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "no family of readings says every reading",
+     "new": "no family of claims says every reading"
+    }
+   ],
+   "labels": null,
+   "why": "03 now says some family is complete, saying every reading, exactly where all values are equal, so 'no family of readings says every reading' is wider than the home; what 03 states without that case is 'no family of claims says every reading' (on claims negation moves every value). The field takes 03's words.",
+   "read": [
+    "theories/becoming/chapters/03-KNOWING.md#r-readings-within-what-they-read"
+   ]
+  },
+  {
+   "id": "cx-drives-generative-field",
+   "field": "targets[3].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "where renewers depend on what they renew it ends the renewal and those depending at such a need.",
+     "new": "where renewers depend on what they renew at a need of at least `m`, `n` consecutive steps of it from a level below `n + m` end the renewal and those depending at such a need."
+    }
+   ],
+   "labels": null,
+   "why": "05 §1 ends the renewal only after `n` consecutive steps of joint excess from a level below `n + m`, under the gate at `m`; the field had joint excess end it with no such condition, the widening AA corrected in the set-point reading. Copied from the home.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-own-count-misses-joint-excess",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-what-a-set-point-optimum-does-beyond"
+   ]
+  },
+  {
+   "id": "cx-drives-generative-field",
+   "field": "reading",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "argued and unasserted, where",
+     "new": "argued and unasserted, their warrant open, where"
+    },
+    {
+     "old": "no criterion without C and a commitment",
+     "new": "no criterion without C, or a premise in its place, and a commitment"
+    }
+   ],
+   "labels": null,
+   "why": "A criterion for fixing a course is a ranking of courses, which 07 §4 now says needs C or a premise in its place (LM1); the field said it needs C. Where it summarizes the ethics it names both premises and now says their warrant is open; the commons clause claims no ending.",
+   "read": [
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#does-not-show",
+    "theories/becoming/chapters/02-MAP.md#r-continuing-self-fed-from-beyond",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-own-count-misses-joint-excess"
+   ]
+  },
+  {
+   "id": "cx-ecs-sealed-adjudication",
+   "field": "reading",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "is dropped only through a change in what the loop reads",
+     "new": "is, drift aside, dropped only through a change in what the loop reads"
+    }
+   ],
+   "labels": null,
+   "why": "T7 says the metric is, 'drift aside', dropped only through a change in what the loop reads; drawn one member at a time the locks are left by drift alone, so without the qualifier the field is wider than T7 (outside the round's listed claims, found in reading the home). 'An outside reader' here is T7's, not the pool edge.",
+   "read": [
+    "theories/becoming/chapters/02-MAP.md#t7"
+   ]
+  },
+  {
+   "id": "cx-hsm-threshold-review",
+   "field": "reading",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "reads a loss only if a reader comes from outside.",
+     "new": "couples into a loss only as its course without the loss would, and comes to couple into what it does not yet couple into only through an admission not made through it or through members its course would hold anyway (each a witness)."
+    }
+   ],
+   "labels": null,
+   "why": "The round-one checker's finding: the pool row's scheduled witness admits its reader in every history, a member the course without the loss holds too, so 'only if a reader comes from outside' is wider than the row. The field now copies the row's edge.",
+   "read": [
+    "theories/becoming/COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-a-pool-that-recruits-through-itself",
+    "theories/becoming/results/records/a-pool-that-recruits-through-itself.md"
+   ]
+  },
+  {
+   "id": "cx-jianwen-unclassified-space",
+   "field": "reading",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "It keeps 03's condition, 'where a map moves every value', before 'no family of readings within what it reads says every reading', so it is not wider than 03; the liar's rhythm is 03's.",
+   "read": [
+    "theories/becoming/chapters/03-KNOWING.md#r-readings-within-what-they-read"
+   ]
+  },
+  {
+   "id": "cx-kpso-pseudo-open",
+   "field": "targets[1].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "Takers each within what a renewal gives can together exceed it, with no ending claimed, as 05 §1 states.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-own-count-misses-joint-excess"
+   ]
+  },
+  {
+   "id": "cx-kpso-pseudo-open",
+   "field": "reading",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "can together exceed it and end the renewal.",
+     "new": "can together exceed it and, at each of `n` steps from a level below `n + m`, end a renewal gated at `m`."
+    }
+   ],
+   "labels": null,
+   "why": "05 §1 ends a renewal only under the gate at `m` and after `n` steps of joint excess from a level below `n + m`; 'end the renewal' with neither is the ungated widening AA corrected in the set-point reading. The other two shapes match their homes.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-own-count-misses-joint-excess",
+    "theories/becoming/chapters/02-MAP.md#r-becoming-finite-horizon",
+    "theories/becoming/chapters/02-MAP.md#r-runaway-distance-uncoupled"
+   ]
+  },
+  {
+   "id": "cx-kpso-three-shapes-of-collapse",
+   "field": "targets[1].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "It states the point's exactness with COLLECTIVE-DIRECTION §3's model words (one condition, a positive standing draw, whole numbers); the margin experiment's change is not at issue.",
+   "read": [
+    "theories/becoming/COLLECTIVE-DIRECTION.md#3-what-the-theorys-own-laws-rule-out",
+    "theories/becoming/chapters/02-MAP.md#r-margin-of-a-regime"
+   ]
+  },
+  {
+   "id": "cx-kpso-three-shapes-of-collapse",
+   "field": "reading",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "steps of joint excess from a low enough level end the renewal and what depends on it",
+     "new": "`n` steps of joint excess from a level below `n + m` end a renewal gated at `m` and what depends on it at such a need"
+    }
+   ],
+   "labels": null,
+   "why": "'From a low enough level' is 05 §1's level below `n + m`, but 'end the renewal' drops the gate at `m`, which 05 needs (renewal from outside can continue); AA corrected the same ungated wording at the set point. Copied from 05; T1's standing matches 02.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-own-count-misses-joint-excess",
+    "theories/becoming/chapters/02-MAP.md#r-margin-of-a-regime",
+    "theories/becoming/chapters/02-MAP.md#t1"
+   ]
+  },
+  {
+   "id": "cx-kpso-three-shapes-of-collapse",
+   "field": "account_adds",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "The rises' superadditivity and 'judging joint draws one by one' are COLLECTIVE-DIRECTION §3's row as it stands.",
+   "read": [
+    "theories/becoming/COLLECTIVE-DIRECTION.md#3-what-the-theorys-own-laws-rule-out",
+    "theories/becoming/chapters/02-MAP.md#r-margin-of-a-regime"
+   ]
+  },
+  {
+   "id": "cx-kpso-shared-sensing",
+   "field": "targets[1].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "Conditions 1 and 3 of §6 as they stand.",
+   "read": [
+    "theories/becoming/COLLECTIVE-DIRECTION.md#6-what-enough-situationality-would-have-to-mean"
+   ]
+  },
+  {
+   "id": "cx-kpso-shared-sensing",
+   "field": "reading",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "Institutions are not modelled;",
+     "new": "One kind of institution has one minimal model on the root, as a reading, and no actual institution is shown to meet its hypotheses;"
+    }
+   ],
+   "labels": null,
+   "why": "Its pool clause matches the row and its time clause §6. But COLLECTIVE-DIRECTION §5, corrected by this crosswalk, now says one kind of institution has one minimal model on the root [AI reading] (05 §12), so 'Institutions are not modelled' is false (outside the round's listed claims, found in reading the home); copied from §5.",
+   "read": [
+    "theories/becoming/COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions",
+    "theories/becoming/COLLECTIVE-DIRECTION.md#5-what-is-empirical",
+    "theories/becoming/COLLECTIVE-DIRECTION.md#6-what-enough-situationality-would-have-to-mean",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-a-rule-rebuilt-from-the-members-it-limits"
+   ]
+  },
+  {
+   "id": "cx-kpso-individual-solutions",
+   "field": "targets[1].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "05 §6's law as it stands; 'each drawer' is that law's word, not the Pool witness's.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-what-a-rise-draws-from-beyond"
+   ]
+  },
+  {
+   "id": "cx-kpso-individual-solutions",
+   "field": "reading",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "Where the rest alone outruns the renewal, every dependent formation ends whatever a member takes, and no weight on such a reading selects the member's restraint.",
+     "new": "Where the rest alone takes more than a step gives at each of `n` steps from a level below `n + m`, under the gate, every formation depending on the condition at a need of at least `m` ends whatever a member takes, and at a need of one no weight on a reading of the condition from the rest's end on selects the member's restraint."
+    }
+   ],
+   "labels": null,
+   "why": "05's outrun law ends the dependents only under the gate after `n` steps from a level below `n + m`, and its reading result holds at need one; the field had neither, the joint-ending widening AA corrected and the need of one main put in COLLECTIVE-DIRECTION's restraint row. Copied from 05; 'each drawer' is §6's word, not the Pool witness's.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-the-rest-outruns-the-renewal",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-what-a-rise-draws-from-beyond",
+    "theories/becoming/COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions"
+   ]
+  },
+  {
+   "id": "cx-memories-grammar-of-the-opponent",
+   "field": "targets[2].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "§6's closing sentence as it now stands, round one's LM1 edit included.",
+   "read": [
+    "theories/becoming/COLLECTIVE-DIRECTION.md#6-what-enough-situationality-would-have-to-mean"
+   ]
+  },
+  {
+   "id": "cx-memories-force-of-diagnosis",
+   "field": "reading",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "No ending is claimed for the takers, and it names both premises with their roles, unasserted, warrant open; it does not derive the ethics from the condition.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-own-count-misses-joint-excess",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order"
+   ]
+  },
+  {
+   "id": "cx-ma-local-alignment",
+   "field": "targets[0].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "where renewers depend on what they renew, this ends renewal and those depending at such a need.",
+     "new": "where renewers depend on what they renew at a need of at least `m`, `n` consecutive steps of this from a level below `n + m` end renewal and those depending at such a need."
+    }
+   ],
+   "labels": null,
+   "why": "05 §1 ends the renewal only after `n` consecutive steps of joint excess from a level below `n + m`, under the gate at `m`; the field had joint excess end it with no such condition, the widening AA corrected at the set point. Copied from the home.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-own-count-misses-joint-excess"
+   ]
+  },
+  {
+   "id": "cx-ma-waiting-not-neutral",
+   "field": "targets[1].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "02's margin law as it stands (any giving law, whole numbers); its premises are dropped, not widened into a changed claim.",
+   "read": [
+    "theories/becoming/chapters/02-MAP.md#r-margin-of-a-regime"
+   ]
+  },
+  {
+   "id": "cx-ma-waiting-not-neutral",
+   "field": "targets[3].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "that needs C.",
+     "new": "that needs C or a premise in its place."
+    }
+   ],
+   "labels": null,
+   "why": "02 §9's Collingridge reading now ends 'Nothing here ranks a course: that needs C or a premise in its place' (LM1); the field ended at 'needs C'. The rest quotes the reading as it stands.",
+   "read": [
+    "theories/becoming/chapters/02-MAP.md#capture",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order"
+   ]
+  },
+  {
+   "id": "cx-ma-waiting-not-neutral",
+   "field": "reading",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "The timing laws match 02 and 05 ('only where' is weaker than 02's 'exactly where', not wider), and it ranks nothing.",
+   "read": [
+    "theories/becoming/chapters/02-MAP.md#capture",
+    "theories/becoming/chapters/02-MAP.md#r-margin-of-a-regime",
+    "theories/becoming/chapters/05-COLLECTIVES.md#markets"
+   ]
+  },
+  {
+   "id": "cx-ma-waiting-not-neutral",
+   "field": "account_adds",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "02's Collingridge reading as it stands; it ranks nothing.",
+   "read": [
+    "theories/becoming/chapters/02-MAP.md#capture"
+   ]
+  },
+  {
+   "id": "cx-rsd-individual-solutions",
+   "field": "targets[2].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "Conditions 3 and 6 of §6 as they stand, and 'rank nothing' says what §6 says; §6's Structure condition carries the need of one only through its pointer to §3, a matter for the home, not the field.",
+   "read": [
+    "theories/becoming/COLLECTIVE-DIRECTION.md#6-what-enough-situationality-would-have-to-mean",
+    "theories/becoming/COLLECTIVE-DIRECTION.md#3-what-the-theorys-own-laws-rule-out"
+   ]
+  },
+  {
+   "id": "cx-rsd-individual-solutions",
+   "field": "reading",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "where the others alone outrun a renewal, a member's act",
+     "new": "where the others alone outrun a renewal at a need of one, a member's act"
+    }
+   ],
+   "labels": null,
+   "why": "05's outrun law scores a member's acts alike only with need one (`Flow.outrun_reading_alike`), which main put into COLLECTIVE-DIRECTION's restraint row; without it the reading is wider than 05 (outside the round's listed claims, found in reading the home). The window and joint-slack clauses match their homes.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-the-rest-outruns-the-renewal",
+    "theories/becoming/COLLECTIVE-DIRECTION.md#6-what-enough-situationality-would-have-to-mean",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-what-a-rise-draws-from-beyond"
+   ]
+  },
+  {
+   "id": "cx-rsd-datong-direction",
+   "field": "account_adds",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "Where no widening move exists:",
+     "new": "Where a widening move need not exist:"
+    }
+   ],
+   "labels": null,
+   "why": "COLLECTIVE-DIRECTION's answer says a widening move 'need not exist past a point of no return, after a window closes, or where the rest outruns the renewal'; the field said none exists there (outside the round's listed claims, found in reading the home).",
+   "read": [
+    "theories/becoming/COLLECTIVE-DIRECTION.md#the-answer-in-brief"
+   ]
+  },
+  {
+   "id": "cx-sspiral-values-upper-structure",
+   "field": "targets[3].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "leaves exactly the need.",
+     "new": "leaves exactly the need of an amount meeting it and nothing of a smaller one."
+    }
+   ],
+   "labels": null,
+   "why": "05 §7 says each drawer leaves 'exactly the need of an amount meeting it and nothing of a smaller one'; the field dropped the second case, which reads as keeping from below the need (outside the round's listed claims, found in reading the home). 'Each drawer' is the coupled drawers' word, not the Pool witness's.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it"
+   ]
+  },
+  {
+   "id": "cx-sspiral-consensus-lag",
+   "field": "targets[4].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "§6's time and pace as they stand; 'necessary and not sufficient' fits each conjunct of the reading, and it ranks nothing.",
+   "read": [
+    "theories/becoming/COLLECTIVE-DIRECTION.md#6-what-enough-situationality-would-have-to-mean"
+   ]
+  },
+  {
+   "id": "cx-sspiral-point-of-no-return",
+   "field": "targets[1].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "02's margin law as it stands.",
+   "read": [
+    "theories/becoming/chapters/02-MAP.md#r-margin-of-a-regime"
+   ]
+  },
+  {
+   "id": "cx-sspiral-point-of-no-return",
+   "field": "reading",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "The window, the regime's exact point, the re-reading where nothing is given below a need, the uncoupled distance and the drift scope all match their homes.",
+   "read": [
+    "theories/becoming/chapters/02-MAP.md#capture",
+    "theories/becoming/chapters/02-MAP.md#r-margin-of-a-regime",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-re-optimizing-above-a-renewal-ends-it",
+    "theories/becoming/chapters/02-MAP.md#r-drawn-shaping-drawn-one-at-a-time"
+   ]
+  },
+  {
+   "id": "cx-sspiral-foundation-erosion",
+   "field": "targets[1].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "a reader admitted from outside couples it apart in the witness.",
+     "new": "in the witness, the scheduled pool, recruiting through itself and admitting a reader at step 2 in every history, couples the loss apart there."
+    }
+   ],
+   "labels": null,
+   "why": "05's witness is the scheduled pool, recruiting through itself and admitting a reader at step 2 in every history, a member the course without the loss holds too; 'a reader admitted from outside' is the reading main removed from COLLECTIVE-DIRECTION's row. Copied from 05.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-a-pool-that-recruits-through-itself",
+    "theories/becoming/results/records/a-pool-that-recruits-through-itself.md",
+    "theories/becoming/COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions"
+   ]
+  },
+  {
+   "id": "cx-sspiral-foundation-erosion",
+   "field": "account_adds",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "a reader admitted from outside.",
+     "new": "an admission not made through the pool, or members its course would hold anyway (each a witness)."
+    }
+   ],
+   "labels": null,
+   "why": "COLLECTIVE-DIRECTION's pool row now names two routes by which a self-recruiting pool comes to couple into what it does not yet couple into, an admission not made through it or members its course would hold anyway; 'needs a reader admitted from outside' names one. Copied from the row.",
+   "read": [
+    "theories/becoming/COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-a-pool-that-recruits-through-itself",
+    "theories/becoming/chapters/05-COLLECTIVES.md#open"
+   ]
+  },
+  {
+   "id": "cx-sspiral-competition-intensifier",
+   "field": "reading",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "'Each drawer' is the race's and coupled drawers' word; the draw on the number of drawers and the coupling, and one drawer over two steps, match 05 §7.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-a-race-for-position-draws-everything"
+   ]
+  },
+  {
+   "id": "cx-fork-good-enough-tree",
+   "field": "targets[2].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "05's set-point theorem as it now stands, round one's gate edit included; 'the choice among equal optima, which no law here models' is 05's own sentence.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-what-a-set-point-optimum-does-beyond"
+   ]
+  },
+  {
+   "id": "cx-fork-good-enough-tree",
+   "field": "reading",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "Round one's edit gives the joint ending with its gate and `n` steps from below `n + m`, as 05 and its reading now say; it claims nothing of which optimum is taken.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-what-a-set-point-optimum-does-beyond"
+   ]
+  },
+  {
+   "id": "cx-wamo-memetic-capture",
+   "field": "account_adds",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "are a member admitted from outside and a reading of what lies beyond, one sufficient and not shown necessary.",
+     "new": "are, for a pool, an admission not made through it or members its course would hold anyway (each a witness), and a reading of what lies beyond, a sufficient way out not shown necessary."
+    }
+   ],
+   "labels": null,
+   "why": "As 'the account's named routes' it named only a member admitted from outside; COLLECTIVE-DIRECTION's pool row now names two, and 'a sufficient way out, not shown necessary' is the reading's standing in the row above. Copied from the rows.",
+   "read": [
+    "theories/becoming/COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions",
+    "theories/becoming/chapters/05-COLLECTIVES.md#open",
+    "theories/becoming/chapters/02-MAP.md#r-closed-capture"
+   ]
+  },
+  {
+   "id": "cx-wamo-emergence-and-window",
+   "field": "targets[0].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "§6's time and pace as they stand.",
+   "read": [
+    "theories/becoming/COLLECTIVE-DIRECTION.md#6-what-enough-situationality-would-have-to-mean"
+   ]
+  },
+  {
+   "id": "cx-wamo-emergence-and-window",
+   "field": "reading",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "§6's conditions and the pace around loops match their homes; nothing is ranked.",
+   "read": [
+    "theories/becoming/COLLECTIVE-DIRECTION.md#6-what-enough-situationality-would-have-to-mean",
+    "theories/becoming/chapters/05-COLLECTIVES.md#mutual-dependence"
+   ]
+  },
+  {
+   "id": "cx-wamo-entry-by-resonance",
+   "field": "reading",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "A reader admitted from outside is what parts them.",
+     "new": "What parts them is an admission not made through the pool, or members its course would hold anyway (each a witness)."
+    }
+   ],
+   "labels": null,
+   "why": "'Is what parts them' made one route the only one; COLLECTIVE-DIRECTION's pool row now names two, the scheduled witness's reader being a member the course without the loss holds too. The reader's point about resonance stands.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-a-pool-that-recruits-through-itself",
+    "theories/becoming/results/records/a-pool-that-recruits-through-itself.md",
+    "theories/becoming/COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions"
+   ]
+  },
+  {
+   "id": "cx-zhishan-pacing-invariant",
+   "field": "targets[2].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "§6's time and pace, and 'rank nothing', as they stand.",
+   "read": [
+    "theories/becoming/COLLECTIVE-DIRECTION.md#6-what-enough-situationality-would-have-to-mean"
+   ]
+  },
+  {
+   "id": "cx-zhishan-guardian-test",
+   "field": "reading",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "stays blind unless a reader comes from outside.",
+     "new": "couples into a loss only as its course without the loss would, and comes to couple into what it does not yet couple into only through an admission not made through it or through members its course would hold anyway (each a witness)."
+    }
+   ],
+   "labels": null,
+   "why": "'Stays blind unless a reader comes from outside' is the edge main narrowed: the row now says such a pool couples into a loss only as its course without the loss would, and comes to couple into it only through either of two routes. The test's point for counter-rules still holds.",
+   "read": [
+    "theories/becoming/COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-a-pool-that-recruits-through-itself",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#alignment-without-premise"
+   ]
+  },
+  {
+   "id": "cx-cc-huang-xuexiao",
+   "field": "reading",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "It describes Huang's staffing as a self-recruiting pool except where a reader enters from outside, his 布衣 heads, which is the called witness's route (an admission not made through the pool); it does not state the pool law with an exception.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-a-pool-that-recruits-through-itself",
+    "theories/becoming/results/records/a-pool-that-recruits-through-itself.md",
+    "theories/becoming/COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions"
+   ]
+  },
+  {
+   "id": "cx-cc-congshan-rudeng",
+   "field": "targets[1].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "02's margin law as it stands, with its premises named.",
+   "read": [
+    "theories/becoming/chapters/02-MAP.md#r-margin-of-a-regime"
+   ]
+  },
+  {
+   "id": "cx-buddhist-tiantai-neither-produces-nor-contains",
+   "field": "targets[0].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "03's theorem as it stands, with its condition.",
+   "read": [
+    "theories/becoming/chapters/03-KNOWING.md#r-readings-within-what-they-read"
+   ]
+  },
+  {
+   "id": "cx-oi-anekanta",
+   "field": "targets[2].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "03's theorem as it stands; coding and provability are not stated there.",
+   "read": [
+    "theories/becoming/chapters/03-KNOWING.md#r-readings-within-what-they-read"
+   ]
+  },
+  {
+   "id": "cx-oi-kevala",
+   "field": "targets[1].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "Round one's edit gives 'some family', and 'exactly where nothing differs' is 03's 'exactly where all values are equal'.",
+   "read": [
+    "theories/becoming/chapters/03-KNOWING.md#r-readings-within-what-they-read"
+   ]
+  },
+  {
+   "id": "cx-greek-heraclitus-measure",
+   "field": "targets[2].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "Quotes 02 as it stands.",
+   "read": [
+    "theories/becoming/chapters/02-MAP.md#r-margin-of-a-regime"
+   ]
+  },
+  {
+   "id": "cx-greek-heraclitus-measure",
+   "field": "account_adds",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "that draws add superadditively up to one",
+     "new": "that draws' rises at the point are superadditive up to one"
+    }
+   ],
+   "labels": null,
+   "why": "02 says 'Draws add, and their rises at the point are superadditive up to one'; the field made the draws themselves superadditive (outside the round's listed claims, found in reading the home).",
+   "read": [
+    "theories/becoming/chapters/02-MAP.md#r-margin-of-a-regime"
+   ]
+  },
+  {
+   "id": "cx-greek-self-sufficiency",
+   "field": "targets[1].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "Quotes 02's `World.arising_opens` under its premises; THE-THEORY §2's narrowed renewal clause is a different sentence.",
+   "read": [
+    "theories/becoming/chapters/02-MAP.md#r-continued-change-needs-openness",
+    "theories/becoming/THE-THEORY-OF-BECOMING.md#2-generation-keeping-and-degeneration"
+   ]
+  },
+  {
+   "id": "cx-greek-aristotle-mean",
+   "field": "targets[2].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "02's row as it stands, and SCIENCES still reports the overcompensating levels above a top that end; not a changed claim.",
+   "read": [
+    "theories/becoming/chapters/02-MAP.md#r-where-a-run-of-a-regime-comes-to-rest",
+    "theories/becoming/review/SCIENCES.md"
+   ]
+  },
+  {
+   "id": "cx-indaf-relational-tipping",
+   "field": "targets[4].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "§6's sentences as they now stand, round one's LM1 edit included.",
+   "read": [
+    "theories/becoming/COLLECTIVE-DIRECTION.md#6-what-enough-situationality-would-have-to-mean"
+   ]
+  },
+  {
+   "id": "cx-indaf-relational-tipping",
+   "field": "reading",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "On a level, a later re-reading restores nothing once it falls below a need.",
+     "new": "Where nothing is given below a need, a later re-reading restores nothing once the level falls below it."
+    }
+   ],
+   "labels": null,
+   "why": "05 says a later re-reading restores nothing 'where nothing is given below the need', a premise the field dropped (outside the round's listed claims, found in reading the home); the giving clauses round one corrected match 05 and are not touched.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-re-optimizing-above-a-renewal-ends-it",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-restoring-giving-from-the-worst-start",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start"
+   ]
+  },
+  {
+   "id": "cx-modphil-marx-coercive-competition",
+   "field": "account_adds",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "Names what the account adds; the point of no return is the regime's, and the inflow law is 05 §6's.",
+   "read": [
+    "theories/becoming/chapters/02-MAP.md#r-margin-of-a-regime",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-a-rise-past-the-inflow-is-drawn-from-beyond"
+   ]
+  },
+  {
+   "id": "cx-modphil-simondon-metastability-seed",
+   "field": "reading",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "05 §11's sentence is quoted exactly ('one circular dependence can be maintenance running or a wait no one can begin'); no waiting law is restated.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start"
+   ]
+  },
+  {
+   "id": "cx-modphil-parfit-self-defeating",
+   "field": "account_adds",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "Names the gated ending 'whatever each drawer's own draw', T1's words, with its gate; it states no ending wider than 05, and 'each drawer' is not the Pool witness's.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-own-count-misses-joint-excess",
+    "theories/becoming/chapters/02-MAP.md#t1"
+   ]
+  },
+  {
+   "id": "cx-syscyb-meadows-leverage-points",
+   "field": "targets[5].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "02's margin law and its reading as they stand.",
+   "read": [
+    "theories/becoming/chapters/02-MAP.md#r-margin-of-a-regime"
+   ]
+  },
+  {
+   "id": "cx-syscyb-observing-blind-spot",
+   "field": "targets[4].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "a reader from outside is the witness's exit.",
+     "new": "in the witness, the scheduled pool, recruiting through itself and admitting a reader at step 2 in every history, couples the loss apart there."
+    }
+   ],
+   "labels": null,
+   "why": "05's witness is the scheduled pool, recruiting through itself and admitting a reader at step 2 in every history, a member the course without the loss holds too, not a reader from outside. Copied from 05.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-a-pool-that-recruits-through-itself",
+    "theories/becoming/results/records/a-pool-that-recruits-through-itself.md"
+   ]
+  },
+  {
+   "id": "cx-syscyb-feedback-as-purpose",
+   "field": "targets[2].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "An exact quotation of 04's reading; 'a reader made from outside' is not the pool edge.",
+   "read": [
+    "theories/becoming/chapters/04-LIFE.md#r-the-stock-buys-time-where-the-rebuild-draws-on-it"
+   ]
+  },
+  {
+   "id": "cx-syscyb-feedback-as-purpose",
+   "field": "targets[3].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "05's set-point theorem and its next sentence as they now stand, round one's edit included.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-what-a-set-point-optimum-does-beyond"
+   ]
+  },
+  {
+   "id": "cx-dpc-circuit-rules",
+   "field": "targets[0].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "02's coupled regimes say the point does not rise as the partner rises, as here; the margin experiment's old 'falls' is not used.",
+   "read": [
+    "theories/becoming/chapters/02-MAP.md#r-coupled-regimes"
+   ]
+  },
+  {
+   "id": "cx-dpc-noise-tipping",
+   "field": "targets[0].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "02's exit from a margin and its reading as they stand.",
+   "read": [
+    "theories/becoming/chapters/02-MAP.md#r-exit-from-a-margin"
+   ]
+  },
+  {
+   "id": "cx-dpc-prigogine-open",
+   "field": "targets[2].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "Quotes 02 as it stands.",
+   "read": [
+    "theories/becoming/chapters/02-MAP.md#r-continued-change-needs-openness"
+   ]
+  },
+  {
+   "id": "cx-dpc-prigogine-open",
+   "field": "reading",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "The fed-from-beyond law it glosses is unchanged, and 'openness does not suffice for arising without end' is 02's; THE-THEORY §2's narrowed renewal clause is not restated.",
+   "read": [
+    "theories/becoming/chapters/02-MAP.md#r-continuing-self-fed-from-beyond",
+    "theories/becoming/chapters/02-MAP.md#r-continued-change-needs-openness",
+    "theories/becoming/THE-THEORY-OF-BECOMING.md#2-generation-keeping-and-degeneration"
+   ]
+  },
+  {
+   "id": "cx-dpc-bistability",
+   "field": "targets[2].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "'Does not rise', as 02 says.",
+   "read": [
+    "theories/becoming/chapters/02-MAP.md#r-coupled-regimes"
+   ]
+  },
+  {
+   "id": "cx-dpc-monotone-systems",
+   "field": "targets[0].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "02's rest on webs as it stands.",
+   "read": [
+    "theories/becoming/chapters/02-MAP.md#r-rest-on-coupled-webs"
+   ]
+  },
+  {
+   "id": "cx-ecoevo-coextinction-and-cascades",
+   "field": "targets[0].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "02's coupled regimes as they stand.",
+   "read": [
+    "theories/becoming/chapters/02-MAP.md#r-coupled-regimes"
+   ]
+  },
+  {
+   "id": "cx-ecoevo-coextinction-and-cascades",
+   "field": "reading",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "'Does not rise' and the cascade match 02's coupled regimes and webs.",
+   "read": [
+    "theories/becoming/chapters/02-MAP.md#r-coupled-regimes",
+    "theories/becoming/chapters/02-MAP.md#r-coupled-webs"
+   ]
+  },
+  {
+   "id": "cx-econ-tainter-complexity",
+   "field": "account_adds",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "Names an exact point under a standing draw and a reserve, as 02 has them.",
+   "read": [
+    "theories/becoming/chapters/02-MAP.md#r-margin-of-a-regime"
+   ]
+  },
+  {
+   "id": "cx-econ-hardin-commons",
+   "field": "targets[1].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "05's drawing at once and the record's witness; 'each drawer' is that law's word, not the Pool witness's.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-drawers-in-turn"
+   ]
+  },
+  {
+   "id": "cx-econ-hardin-commons",
+   "field": "account_adds",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "Names 05 §7's laws with no verdict; 'each drawer' is not the Pool witness's.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-drawers-in-turn"
+   ]
+  }
+ ]
+}

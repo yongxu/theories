@@ -518,7 +518,7 @@
    "carried": "carried-in-part",
    "relation": "scope",
    "reading": {
-    "en": "The account gives where it holds, under hypotheses: where the others alone outrun a renewal, a member's act changes no score reading the condition from then on; each staying within a step's giving does not keep the joint take within it. Urgency has only a window's form: before the regime's point of no return. The laws bear on kinds of case, evaluate nothing and date nothing, and a restraint within the joint slack can keep a need. [AI reading]"
+    "en": "The account gives where it holds, under hypotheses: where the others alone outrun a renewal at a need of one, a member's act changes no score reading the condition from then on; each staying within a step's giving does not keep the joint take within it. Urgency has only a window's form: before the regime's point of no return. The laws bear on kinds of case, evaluate nothing and date nothing, and a restraint within the joint slack can keep a need. [AI reading]"
    },
    "targets": [
     {
@@ -1065,7 +1065,7 @@
     }
    ],
    "account_adds": {
-    "en": "Where no widening move exists: past a point of no return, after a window closes, where the rest outruns the renewal."
+    "en": "Where a widening move need not exist: past a point of no return, after a window closes, where the rest outruns the renewal."
    },
    "source_adds": {
     "en": "大同's own content, the word being absent from the live account; the grammatical argument from 行, and the pole star as practical orientation; and that a direction therefore cannot totalise. The account does not state that last: a rule read from its share locks whatever it favours."
@@ -1149,7 +1149,7 @@
     }
    ],
    "account_adds": {
-    "en": "Exact laws of return, and that keeping a course open is not more options. Calling any basin better needs C, with the condition for scope, neither asserted, warrant open."
+    "en": "Exact laws of return, and that keeping a course open is not more options. Calling any basin better needs C or a premise in its place, with the condition for scope, neither asserted, warrant open."
    },
    "source_adds": {
     "en": "A named good basin and capacity to return as what 大同 is."
@@ -1180,7 +1180,7 @@
    "carried": "carried-in-part",
    "relation": "scope",
    "reading": {
-    "en": "Narrower than the source. 06 reads 和而不同 as what a pool adds: exactly the difference, and pooling the same adds nothing. Nearby, and joined by no live text: an imposed code makes all agree and each loses the distinctions it merges; 并育不相害 has the form of a part's draw within others' margins, and calling that better needs C, with the condition for scope, neither asserted, warrant open. No law gives sameness ending generation. 和而不同 itself is an evaluation of conduct. [AI reading]"
+    "en": "Narrower than the source. 06 reads 和而不同 as what a pool adds: exactly the difference, and pooling the same adds nothing. Nearby, and joined by no live text: an imposed code makes all agree and each loses the distinctions it merges; 并育不相害 has the form of a part's draw within others' margins, and calling that better needs C or a premise in its place, with the condition for scope, neither asserted, warrant open. No law gives sameness ending generation. 和而不同 itself is an evaluation of conduct. [AI reading]"
    },
    "targets": [
     {
@@ -1970,7 +1970,7 @@
    "carried": "changed",
    "relation": "divergence",
    "reading": {
-    "en": "The account refuses this form where it would matter: a shared process implies no cosmic subject and no aggregate interest, a collective is no unit with an interest, and part-whole is three relations, with no fixed ladder of scales. Nonduality is a requirement of method and proves no ethical necessity, so from 'we are the system' no 'should' follows; a ranking needs C, the condition fixing scope, neither asserted, warrant open. [AI reading]"
+    "en": "The account refuses this form where it would matter: a shared process implies no cosmic subject and no aggregate interest, a collective is no unit with an interest, and part-whole is three relations, with no fixed ladder of scales. Nonduality is a requirement of method and proves no ethical necessity, so from 'we are the system' no 'should' follows; a ranking needs C or a premise in its place, the condition fixing scope, neither asserted, warrant open. [AI reading]"
    },
    "targets": [
     {
@@ -3978,7 +3978,33 @@
    "same_as": null
   }
  ],
- "changes": [],
+ "changes": [
+  {
+   "id": "cx-rsd-individual-solutions",
+   "what": "changed",
+   "why": "main changed the edges claims (LM1 or AA, 7 November 2026): reading states what it says now"
+  },
+  {
+   "id": "cx-rsd-datong-direction",
+   "what": "changed",
+   "why": "main changed the edges claims (LM1 or AA, 7 November 2026): account_adds states what it says now"
+  },
+  {
+   "id": "cx-rsd-datong-basin",
+   "what": "changed",
+   "why": "main changed the ethics claims (LM1 or AA, 7 November 2026): account_adds states what it says now"
+  },
+  {
+   "id": "cx-rsd-he-not-tong",
+   "what": "changed",
+   "why": "main changed the ethics claims (LM1 or AA, 7 November 2026): reading states what it says now"
+  },
+  {
+   "id": "cx-rsd-we-are-the-collective",
+   "what": "changed",
+   "why": "main changed the ethics claims (LM1 or AA, 7 November 2026): reading states what it says now"
+  }
+ ],
  "live_flags": [
   {
    "where": "theories/becoming/results/records/runaway-distance-uncoupled.md:64",

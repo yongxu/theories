@@ -1,0 +1,418 @@
+{
+ "cluster": "ethics-a",
+ "items": [
+  {
+   "id": "cx-asc-unsurvivable-no-safe-win",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "07 §4 and its does-not-show read 'a ranking of courses needs C or a premise in its place'; both edits copy it and 07 §4.4's 'some such order ranks it higher' where the other course keeps an independent copy. Both olds are exact and occur once."
+  },
+  {
+   "id": "cx-asc-frozen-model-renewal",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "07 §4 and its does-not-show read 'a ranking of courses needs C or a premise in its place'; the edit takes it, and 'only moves of one fixed process' is within 07 §2's 'every step from some step on'. The old is exact and occurs once."
+  },
+  {
+   "id": "cx-archearth-provision-apart-from-membership",
+   "field": "targets[0].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "The field is 07 §5's basic-priority row with its readings qualifier and 'The tier assignment is a reading'; 'C alone leaves them unranked' is what C does not do there, untouched by LM1."
+  },
+  {
+   "id": "cx-drives-self-interest-axiom",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "07 §4 and its does-not-show read 'a ranking of courses needs C or a premise in its place'; 'other rankings' after the self-concern case now says so, and the self-concern half already follows 07 §4.4. The old is exact and occurs once."
+  },
+  {
+   "id": "cx-ecs-options-before-obligations",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "It already says 'needs C (order) or a premise in its place', names the condition's scope, unasserted with warrant open, and the margin test is 07 §6's row ('Mixed is not ordered'). Nothing to change."
+  },
+  {
+   "id": "cx-ecs-everyone-happily",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "07 §4 and its does-not-show read 'a ranking of courses needs C or a premise in its place'; the edit takes it; the keeping-widening half matches 07 §2's row and its D45 reading. The old is exact and occurs once."
+  },
+  {
+   "id": "cx-hsm-real-problem-solved",
+   "field": "targets[4].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "The quotations are §3.4's words as they stand; 'order needs C' was the stale gloss, and the new words are 07's does-not-show line ('C gives order, and a ranking of courses needs C or a premise in its place'). The old is exact and occurs once."
+  },
+  {
+   "id": "cx-hsm-real-problem-solved",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "07 §4 and its does-not-show read 'a ranking of courses needs C or a premise in its place'; the edit takes it, both premises still named, unasserted, warrant open. The old is exact and occurs once."
+  },
+  {
+   "id": "cx-kpso-protective-closure",
+   "field": "targets[4].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "07 §5's basic-priority row with its readings qualifier and the tier assignment a reading; nothing changed there."
+  },
+  {
+   "id": "cx-kpso-death-as-feature",
+   "field": "reading",
+   "verdict": "fix",
+   "edits": [
+    {
+     "old": "and only C or further premises order anything.",
+     "new": "and only C or further premises order anything; neither the condition nor C is asserted, their warrant open."
+    }
+   ],
+   "labels": null,
+   "why": "'Only C or further premises order anything' agrees with LM1, but the field summarizes the ethics (the condition for scope, C or further premises for order) without saying either is unasserted, which the round's first claim asks. The edit adds the standing and changes nothing else; the old is exact and occurs once."
+  },
+  {
+   "id": "cx-memories-one-owned-premise",
+   "field": "targets[2].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "It restates 07's first two does-not-show lines rightly: not shown that the condition, C or the step is warranted, nor that the ethics derives from the condition."
+  },
+  {
+   "id": "cx-ma-selection-for-control",
+   "field": "targets[4].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "02 §9's D45 reading now ends 'that needs C or a premise in its place', and the edit copies it. The old is exact and occurs once."
+  },
+  {
+   "id": "cx-ma-selection-for-control",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "02 §9's D45 reading now says that ranking needs C or a premise in its place; the lever, assortment and premise clauses still match the reading. The old is exact and occurs once."
+  },
+  {
+   "id": "cx-ma-exit-sequence",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "The outrun clause now has what AA's errata put into COLLECTIVE-DIRECTION and 05 (need one, no weight on a reading of the condition only from the rest's end on, a member's restraint), and §6's 'only a change of the rest's exchange helps'; the ranking clause takes LM1. Both olds are exact and occur once."
+  },
+  {
+   "id": "cx-ma-political-will",
+   "field": "targets[0].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "COLLECTIVE-DIRECTION §6 now ends 'calling the widening course better needs C or a premise in its place, and counting the losses that return to no one needs the continuation condition'; the edit copies it. The old is exact and occurs once."
+  },
+  {
+   "id": "cx-rsd-he-not-tong",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "07 §4 and its does-not-show read 'a ranking of courses needs C or a premise in its place'; the edit takes it; 06's pooled-difference reading of 和而不同 stands as quoted. The old is exact and occurs once."
+  },
+  {
+   "id": "cx-sspiral-regenerative-interdependence",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "07 §4 and its does-not-show read 'a ranking of courses needs C or a premise in its place'; the edit takes it. 'Restores' is 02's level recovery (Flow.restores), not 05's restoring of giving, so the sparing correction does not bear on it; the old is exact and occurs once."
+  },
+  {
+   "id": "cx-sspiral-external-competition",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "07 §4 and its does-not-show read 'a ranking of courses needs C or a premise in its place'; the edit takes it. The old is exact and occurs once."
+  },
+  {
+   "id": "cx-sspiral-direction-setting",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "07 §4 and its does-not-show read 'a ranking of courses needs C or a premise in its place'; the edit takes it. The old is exact and occurs once."
+  },
+  {
+   "id": "cx-sspiral-goodness-rational",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "02 §9's D45 reading now has 'C or a premise in its place', and 07 §4.4 has some self-concerned order, not self-concern as such, rank the course keeping a copy higher. Both olds are exact and occur once."
+  },
+  {
+   "id": "cx-sty-endings-as-transitions",
+   "field": "targets[2].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "The quotations are the row's words; 'No order without C' was false after LM1, and the new sentence is 07's does-not-show line. The old is exact and occurs once."
+  },
+  {
+   "id": "cx-fork-two-fates",
+   "field": "account_adds",
+   "verdict": "ok",
+   "labels": null,
+   "why": "07 §4 and its does-not-show read 'a ranking of courses needs C or a premise in its place'; the edit takes it; the drift clause is COLLECTIVE-DIRECTION §2's and 02 §9's. The old is exact and occurs once."
+  },
+  {
+   "id": "cx-fork-only-stable-equilibrium",
+   "field": "account_adds",
+   "verdict": "ok",
+   "labels": null,
+   "why": "07 §4 and its does-not-show read 'a ranking of courses needs C or a premise in its place'; the edit takes it, and the reversal is 07 §4.4's 'some such order'. Both olds are exact and occur once."
+  },
+  {
+   "id": "cx-fork-autonomous-no-stewards",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "07 §4 and its does-not-show read 'a ranking of courses needs C or a premise in its place'; the edit takes it; the fixed-rule and finite-record clauses match COLLECTIVE-DIRECTION §7 and §3. The old is exact and occurs once."
+  },
+  {
+   "id": "cx-wamo-coordination-bottleneck",
+   "field": "targets[0].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "The new sentence is the answer in brief's own ('Whose losses count is the continuation condition's (scope); that widening is better is C's (order); the theory asserts neither'), which LM1's claim list counts as right. The old is exact and occurs once."
+  },
+  {
+   "id": "cx-wamo-coordination-bottleneck",
+   "field": "account_adds",
+   "verdict": "ok",
+   "labels": null,
+   "why": "COLLECTIVE-DIRECTION §6 now says calling the widening course better needs C or a premise in its place; the edit takes it. The old is exact and occurs once."
+  },
+  {
+   "id": "cx-wamo-more-alive",
+   "field": "account_adds",
+   "verdict": "ok",
+   "labels": null,
+   "why": "07 §4 and its does-not-show read 'a ranking of courses needs C or a premise in its place'; the edit takes it. The old is exact and occurs once."
+  },
+  {
+   "id": "cx-wamo-survival-incentive",
+   "field": "account_adds",
+   "verdict": "ok",
+   "labels": null,
+   "why": "07 §4 and its does-not-show read 'a ranking of courses needs C or a premise in its place'; the edit takes it, 'beyond this case' still pointing at the self-concern case. The old is exact and occurs once."
+  },
+  {
+   "id": "cx-zhishan-recursion-direction-neutral",
+   "field": "account_adds",
+   "verdict": "ok",
+   "labels": null,
+   "why": "02 §9's D45 reading now ends 'that needs C or a premise in its place'; the edit copies it. The old is exact and occurs once."
+  },
+  {
+   "id": "cx-zhishan-good-as-continuing-generation",
+   "field": "account_adds",
+   "verdict": "ok",
+   "labels": null,
+   "why": "It says what 07 §4 and its does-not-show say, scope and order apart and the ethics not derived from the condition, and states no ranking needing C alone; the entry's targets name both premises unasserted."
+  },
+  {
+   "id": "cx-zhishan-not-a-master-good",
+   "field": "targets[5].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Not a main change but a dropped qualifier: under the whole-run and possibility readings every comparison satisfying C ranks the absence above (07 §5's table), so the row's 'under the stepwise and relation-level readings' is needed. The old is exact and occurs once."
+  },
+  {
+   "id": "cx-zhishan-not-a-master-good",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "'Only J1/J2 ranks it' excluded what the row does not exclude, and the edit restores the row's readings and 07's 'an irreflexive, transitive comparison'. Both olds are exact and occur once."
+  },
+  {
+   "id": "cx-zhishan-loops-not-symmetric",
+   "field": "targets[1].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "02 §9's D45 reading now ends 'that needs C or a premise in its place'; the edit copies it. The old is exact and occurs once."
+  },
+  {
+   "id": "cx-zhishan-loops-not-symmetric",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "02 §9's reading now has 'C or a premise in its place'; 'calling the wider better is C's' stands as 07 §4.4 says it. Both olds are exact and occur once."
+  },
+  {
+   "id": "cx-zhishan-variety-not-dying-alike",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "07 §4 and its does-not-show read 'a ranking of courses needs C or a premise in its place'; the edit takes it. The old is exact and occurs once."
+  },
+  {
+   "id": "cx-abr-maqasid-tiers",
+   "field": "targets[0].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "07 §5's basic-priority row with its readings qualifier, and the D65 reading after it; 'C alone leaves them unranked' still stands there."
+  },
+  {
+   "id": "cx-indaf-place-before-time",
+   "field": "account_adds",
+   "verdict": "ok",
+   "labels": null,
+   "why": "A coincidence: 'derived from the condition relation' is the root's order of time, the reach of the grammar's condition relation (01 §1), not the ethics or C."
+  },
+  {
+   "id": "cx-syscyb-foerster-imperative",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "It names C and the condition, each unasserted, with their roles, and says the ethics does not derive from the condition; the menu clause is 07 §4.4's. No ranking is said to need C alone."
+  },
+  {
+   "id": "cx-ecoevo-msy-and-open-access",
+   "field": "account_adds",
+   "verdict": "ok",
+   "labels": null,
+   "why": "07 §4 and its does-not-show read 'a ranking of courses needs C or a premise in its place'; the edit takes it; the mutual-best-response clause matches 05 §7. The old is exact and occurs once."
+  },
+  {
+   "id": "cx-ecoevo-trophic-cascades",
+   "field": "account_adds",
+   "verdict": "ok",
+   "labels": null,
+   "why": "07 §4 and its does-not-show read 'a ranking of courses needs C or a premise in its place'; the edit takes it. The old is exact and occurs once."
+  },
+  {
+   "id": "cx-econ-michels-oligarchy",
+   "field": "account_adds",
+   "verdict": "ok",
+   "labels": null,
+   "why": "07 §4 and its does-not-show read 'a ranking of courses needs C or a premise in its place'; the edit takes it; 'who holds the places from which the rule is read' is 02 §9's D45 reading. The old is exact and occurs once."
+  },
+  {
+   "id": "cx-econ-tainter-complexity",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "07 §4 and its does-not-show read 'a ranking of courses needs C or a premise in its place'; the edit takes it; D48's 'more waiting gives no more' still stands in 05 §5. The old is exact and occurs once."
+  },
+  {
+   "id": "cx-pal-multipolar-traps",
+   "field": "account_adds",
+   "verdict": "ok",
+   "labels": null,
+   "why": "07 §4 and its does-not-show read 'a ranking of courses needs C or a premise in its place'; the edit takes it. The old is exact and occurs once."
+  },
+  {
+   "id": "cx-pal-value-lock-in",
+   "field": "account_adds",
+   "verdict": "ok",
+   "labels": null,
+   "why": "07 §4 and its does-not-show read 'a ranking of courses needs C or a premise in its place'; the edit takes it. The old is exact and occurs once."
+  },
+  {
+   "id": "cx-sty-endings-as-transitions",
+   "field": "reading",
+   "verdict": "fix",
+   "edits": [
+    {
+     "old": "any order needing C, neither asserted.",
+     "new": "a ranking of courses needing C or a premise in its place, neither asserted, warrant open."
+    }
+   ],
+   "labels": null,
+   "why": "Not listed: 'any order needing C' is what LM1 corrected, since an order rising with one's own continuation ranks one case with no C (07 §4); the edit takes 07's does-not-show words. The old is exact and occurs once."
+  },
+  {
+   "id": "cx-fork-only-stable-equilibrium",
+   "field": "reading",
+   "verdict": "fix",
+   "edits": [
+    {
+     "old": "Beyond one's family restraint is no mutual best response, its existence not shown; where the rest outruns the renewal no weight selects a member's restraint.",
+     "new": "Beyond one's family, wherever something stands there, restraint is no mutual best response, its existence not shown; where the rest outruns the renewal at a need of one, no weight on a reading of the condition only from the rest's end on selects a member's restraint."
+    },
+    {
+     "old": "above the need, drawers in turn keep it;",
+     "new": "above the need and under the gate, drawers in turn keep it from a start meeting it;"
+    },
+    {
+     "old": "at once and unpivotal they drain at every coupling.",
+     "new": "at once and unpivotal, draining is perfect at every coupling, not shown to be the only perfect profile."
+    }
+   ],
+   "labels": null,
+   "why": "Not listed: the outrun clause has the wording AA's errata replaced in COLLECTIVE-DIRECTION (need one, a reading only from the rest's end on), and the optimum clauses drop 05's 'wherever something stands', the gate and 'Not shown: that the drain is the only perfect profile there', which matters for an entry on uniqueness. All three olds are exact and occur once."
+  },
+  {
+   "id": "cx-wamo-survival-incentive",
+   "field": "reading",
+   "verdict": "fix",
+   "edits": [
+    {
+     "old": "an independent copy reverses it, and it does not select one member's restraint where the rest outruns the renewal,",
+     "new": "where the other course keeps an independent copy, some self-concerned order reverses it, and where the rest outruns the renewal at a need of one, no weight on a reading of the condition only from the rest's end on selects one member's restraint,"
+    }
+   ],
+   "labels": null,
+   "why": "Not listed: 07 §4.4 has some such order, not self-concern as such, rank the course keeping a copy higher, and 05's outrun law (the entry's T1) reaches only need one and a reading only from the rest's end on. The old is exact and occurs once."
+  },
+  {
+   "id": "cx-zhishan-not-a-master-good",
+   "field": "account_adds",
+   "verdict": "fix",
+   "edits": [
+    {
+     "old": "That malignancy is ranked only by a premise beyond C.",
+     "new": "That, under the stepwise and relation-level readings, malignancy is ranked only by a premise beyond C."
+    }
+   ],
+   "labels": null,
+   "why": "Not listed: under the whole-run and possibility readings every comparison satisfying C ranks the absence of the overdrawer above its occurrence (07 §5's table, the entry's own T4), so 'only by a premise beyond C' holds only under the row's two readings. The old is exact and occurs once."
+  },
+  {
+   "id": "cx-kpso-protective-closure",
+   "field": "reading",
+   "verdict": "fix",
+   "edits": [
+    {
+     "old": "ranked only by reading or J1/J2.",
+     "new": "ranked by C only under the whole-run and possibility readings, and under the stepwise and relation-level readings by a further premise such as J1/J2."
+    }
+   ],
+   "labels": null,
+   "why": "Not listed: 'only by reading or J1/J2' excludes premises the home does not exclude, where LM1 has a ranking need C or a premise in its place; the edit states 07 §5's table and basic-priority row. The old is exact and occurs once."
+  },
+  {
+   "id": "cx-zhishan-recursion-direction-neutral",
+   "field": "reading",
+   "verdict": "fix",
+   "edits": [
+    {
+     "old": "with scope from the continuation condition.",
+     "new": "with scope from the continuation condition, neither asserted, warrant open."
+    }
+   ],
+   "labels": null,
+   "why": "Not listed: the closing sentence summarizes the ethics' comparison (widening under C, scope from the condition) without saying neither premise is asserted, which the round's first claim asks. The old is exact and occurs once."
+  },
+  {
+   "id": "cx-wamo-more-alive",
+   "field": "reading",
+   "verdict": "fix",
+   "edits": [
+    {
+     "old": "with the condition fixing scope.",
+     "new": "with the condition, also unasserted, fixing scope."
+    }
+   ],
+   "labels": null,
+   "why": "Not listed: the field says C is unasserted but not the condition, where the ethics is summarized; the entry's T0 says neither is asserted. The old is exact and occurs once."
+  }
+ ]
+}

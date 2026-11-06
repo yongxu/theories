@@ -1,0 +1,712 @@
+{
+ "cluster": "claims-waiting-b",
+ "items": [
+  {
+   "id": "cx-asc-founding-restraint-armored",
+   "field": "targets[0].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "It quotes 05 §5's thresholds theorem as it now stands: restoring needs a formation that spares all it waits on, which gives from step 1 whatever the start, and without one total withholding stays. No other changed claim is restated.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+    "theories/becoming/COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions"
+   ]
+  },
+  {
+   "id": "cx-asc-founding-restraint-armored",
+   "field": "targets[2].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "It quotes 05 §11's corrected wording: promises hold on both sides where neither happens, and in the exchange witness ignition, defined as spending a reserve, needs one already present (near-definitional). No other changed claim is restated.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#joint-plans",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start"
+   ]
+  },
+  {
+   "id": "cx-asc-founding-restraint-armored",
+   "field": "reading",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "Each clause matches what the home now says: restoring needs a formation that spares all it waits on; reciprocal promises can be empty; and in a witness ignition, defined as spending a reserve, needs one already present (near-definitional). No ranking or ethics is summarized.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start",
+    "theories/becoming/COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions"
+   ]
+  },
+  {
+   "id": "cx-archearth-recursive-capacity",
+   "field": "targets[4].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "It quotes 05 §11 as it now stands, the exchange witness, ignition defined as spending a reserve, near-definitional, with the clause on circular dependence. No other changed claim is restated.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#joint-plans",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start"
+   ]
+  },
+  {
+   "id": "cx-archearth-recursive-capacity",
+   "field": "reading",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "Its ignition clause keeps the home's standing: in a witness, ignition defined as spending a reserve, near-definitional, with a closed circular dependence needing a reserve to start. It does not restate C's order or a waiting law.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start",
+    "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits"
+   ]
+  },
+  {
+   "id": "cx-archearth-recursive-capacity",
+   "field": "account_adds",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "Its ignition clause keeps 05 §11's standing, and its ethics clause already reads 'ranking them needs C or a premise in its place' with the condition for scope, neither asserted and their warrant open, as 07 §4 says.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#does-not-show"
+   ]
+  },
+  {
+   "id": "cx-ctxrt-bounded-local-context",
+   "field": "targets[1].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "It quotes 05 §11's composition theorem and 'Promises do not', which main did not change; the promise clause is the home's 'holds on both sides where neither ever happens'. No changed claim is restated more widely.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#joint-plans",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start"
+   ]
+  },
+  {
+   "id": "cx-ctxrt-bounded-local-context",
+   "field": "reading",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "reciprocal promises can be empty, so a contract is not a start.",
+     "new": "reciprocal promises can be empty, so a contract alone forces no start."
+    }
+   ],
+   "labels": null,
+   "why": "'A contract is not a start' restates promises as unable to start, the wording AA's errata narrowed: 05 now says mutual promises alone force no start, and D48 reads enforced contracts as laws giving first. The edit scopes it to a contract alone.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#joint-plans",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start",
+    "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits"
+   ]
+  },
+  {
+   "id": "cx-drives-belief-makes-dynamic",
+   "field": "targets[2].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "It quotes 05 §5's memory law and D48's 'kept promises and enforced contracts are laws giving first: the law changes, not the state alone', both as they stand; 'not that cooperation is good' is the home's own disclaimer.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-offspring-read-from-giving-that-waits"
+   ]
+  },
+  {
+   "id": "cx-ecs-replaceable-behind-promises",
+   "field": "reading",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "'Promise' here is a contract's promise within which behaviour may differ, a coincidence with D48's wording; the field reads 03's substitution law and no changed claim.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits"
+   ]
+  },
+  {
+   "id": "cx-ecs-local-promises-fail-jointly",
+   "field": "targets[1].part",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "A part label naming two of 05 §11's clauses, 'reciprocal promises can be empty; preservation without availability', both still in the home; it restates no claim more widely.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#joint-plans",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start"
+   ]
+  },
+  {
+   "id": "cx-ecs-local-promises-fail-jointly",
+   "field": "targets[2].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "It quotes 05 §5's memory law and the ring of three, a source giving first bringing all to give from step 3, as the home states them; a source gives whatever it waits on, so it agrees with the sparing condition.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting"
+   ]
+  },
+  {
+   "id": "cx-ecs-local-promises-fail-jointly",
+   "field": "reading",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "Each clause matches 05 §11 as it stands: reciprocal promises can be empty, preservation without availability, and one circular dependence can be a wait no one can begin; 'waiting relations have exact laws' fits §5.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#joint-plans",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start",
+    "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits"
+   ]
+  },
+  {
+   "id": "cx-ecs-local-promises-fail-jointly",
+   "field": "account_adds",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "The exact conditions are §5's (`Tolerance.restores_iff` under giving first, and restoring needing a formation that spares all it waits on), and a source giving first gives whatever it waits on, so the field agrees with the corrected claim.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting"
+   ]
+  },
+  {
+   "id": "cx-hsm-value-or-tool-alone",
+   "field": "targets[1].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "It quotes 05 §11's 'Promises do not' sentence and the corrected ignition clause, exchange witness and near-definitional kept.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#joint-plans",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start"
+   ]
+  },
+  {
+   "id": "cx-hsm-value-or-tool-alone",
+   "field": "reading",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "promises alone start nothing where neither side moves",
+     "new": "promises alone force no start, holding on both sides where neither ever moves"
+    }
+   ],
+   "labels": null,
+   "why": "'Promises alone start nothing' restates the wording AA's errata narrowed; 05 now says mutual promises alone force no start, and 05 §11 that 'if the other eventually does, I eventually do' holds on both sides where neither ever happens. The edit takes both.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#joint-plans",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start",
+    "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits"
+   ]
+  },
+  {
+   "id": "cx-hsm-value-or-tool-alone",
+   "field": "account_adds",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "It quotes D48's 'Kept promises and enforced contracts are laws giving first: the law changes, not the state alone' as it stands in 05 §5; no changed claim is restated.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits"
+   ]
+  },
+  {
+   "id": "cx-hsm-coordination-protocols",
+   "field": "targets[0].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "It quotes 05 §11's composition theorem, with a successor wherever both hold, and the corrected ignition clause, exchange witness and near-definitional kept.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#joint-plans",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start"
+   ]
+  },
+  {
+   "id": "cx-kpso-protective-closure",
+   "field": "targets[0].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "'Promise' is one of 06's 成生之限 (允诺、训练、制止侵害), a coincidence with D48; the row and D52 say what the field says, and no changed claim is restated.",
+   "read": [
+    "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#closing-and-opening"
+   ]
+  },
+  {
+   "id": "cx-kpso-means-not-ends",
+   "field": "targets[0].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "It renders 06's 成生之限 row (允诺、训练、制止侵害 ... 所约束者仍可得，是护闭之结构；依它对可复得者做了什么，不依其名) as it stands; 'promises' is a coincidence.",
+   "read": [
+    "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#closing-and-opening"
+   ]
+  },
+  {
+   "id": "cx-kpso-trust-before-verification",
+   "field": "targets[0].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "It quotes 05 §5's thresholds theorem as it now stands, sparing all it waits on, from step 1, total withholding staying without one.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting"
+   ]
+  },
+  {
+   "id": "cx-kpso-trust-before-verification",
+   "field": "targets[1].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "It quotes D48 as corrected, word for word: tolerance rebuilds cooperation lost everywhere only where some formation spares all it waits on, and mutual promises alone force no start of a loop with no source.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-offspring-read-from-giving-that-waits"
+   ]
+  },
+  {
+   "id": "cx-kpso-trust-before-verification",
+   "field": "reading",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "Its waiting clauses copy 05 §5 as corrected (a formation sparing all it waits on, from step 1; mutual promises alone force no start), and it says no more of them than the home.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-offspring-read-from-giving-that-waits"
+   ]
+  },
+  {
+   "id": "cx-ma-positive-recursion",
+   "field": "targets[0].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "It quotes 05 §5's thresholds theorem as it now stands.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting"
+   ]
+  },
+  {
+   "id": "cx-ma-positive-recursion",
+   "field": "reading",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "a formation sparing what it waits on gives first;",
+     "new": "a formation sparing all it waits on gives from step 1 whatever the start;"
+    },
+    {
+     "old": "Calling it better is C's, and whose losses count the condition's.",
+     "new": "Calling it better needs C or a premise in its place, and whose losses count is the condition's; neither is asserted, their warrant open."
+    }
+   ],
+   "labels": null,
+   "why": "The waiting clause dropped 'all', the qualifier AA's errata stress, and the home says the sparing formation gives from step 1 whatever the start. The ethics clause gave calling a course better to C alone, where 07 §4 now says a ranking of courses needs C or a premise in its place, both premises unasserted with their warrant open.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-organizational-formation-from-generative-comparison",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#does-not-show"
+   ]
+  },
+  {
+   "id": "cx-rsd-rebuild-feedbacks",
+   "field": "reading",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "'Without promise' means without a guarantee, a coincidence; its account of the exits (each under hypotheses, none shown of an actual collective, several with a closing window) matches COLLECTIVE-DIRECTION as it stands, and it restates no edge that main narrowed.",
+   "read": [
+    "theories/becoming/COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions"
+   ]
+  },
+  {
+   "id": "cx-sspiral-belief-makes-trap",
+   "field": "targets[3].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "It quotes 05 §5's thresholds theorem as it now stands.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting"
+   ]
+  },
+  {
+   "id": "cx-sty-enforcement-by-construction",
+   "field": "account_adds",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "It quotes D48's 'kept promises and enforced contracts are laws giving first: the law changes, not the state alone' as it stands.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits"
+   ]
+  },
+  {
+   "id": "cx-fork-commons-no-subject",
+   "field": "targets[1].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "Each clause matches 05 §11 as it stands, including the corrected ignition clause with exchange witness and near-definitional.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#joint-plans",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start"
+   ]
+  },
+  {
+   "id": "cx-fork-commons-no-subject",
+   "field": "reading",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "Its ignition clause keeps the corrected standing, and 'a design without a source is a law with no start', said of a supply at zero, is `Tolerance.total_stays`: without a formation sparing all it waits on, total withholding stays.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start",
+    "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting"
+   ]
+  },
+  {
+   "id": "cx-fork-strong-guardians",
+   "field": "targets[0].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "It renders 06's 成生之限／绝生之限 row as it stands; 'promises' is a coincidence and no changed claim is restated.",
+   "read": [
+    "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#closing-and-opening"
+   ]
+  },
+  {
+   "id": "cx-fork-infrastructure-upstream",
+   "field": "reading",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "and ignition needs an actual reserve.",
+     "new": "and in the exchange witness ignition, defined as spending a reserve, needs one already present (near-definitional)."
+    },
+    {
+     "old": "neither asserted, with J1–J4,",
+     "new": "neither asserted and their warrant open, with J1–J4,"
+    }
+   ],
+   "labels": null,
+   "why": "'Ignition needs an actual reserve' drops what 05 §11 now says: it holds in the exchange witness, ignition being defined as spending a reserve, near-definitional. The ethics clause names both premises unasserted and gains 'their warrant open'.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#joint-plans",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-organizational-formation-from-generative-comparison",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order"
+   ]
+  },
+  {
+   "id": "cx-fork-trust-from-shared-understanding",
+   "field": "targets[2].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "It quotes D48 as it stands, with the corrected 'mutual promises alone force no start of a loop with no source'.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-offspring-read-from-giving-that-waits"
+   ]
+  },
+  {
+   "id": "cx-fork-trust-from-shared-understanding",
+   "field": "reading",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "'Giving that waits starts from a source giving first' agrees with 05 §5: a source gives whatever it waits on, and restoring needs a formation that spares all it waits on. No changed claim is restated more widely.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting"
+   ]
+  },
+  {
+   "id": "cx-wamo-capacity-before-action",
+   "field": "targets[0].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "It quotes the corrected ignition clause with exchange witness and near-definitional; 'promises do not suffice' is 05 §11's 'Promises do not', and 'How a supported start forms' is the record's not-shown line.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#joint-plans",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start",
+    "theories/becoming/results/records/joint-plans-from-a-supported-start.md"
+   ]
+  },
+  {
+   "id": "cx-wamo-capacity-before-action",
+   "field": "reading",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "Its ignition clause keeps the corrected standing (a witness, defined as spending a reserve, near-definitional); no other changed claim is restated.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start",
+    "theories/becoming/results/records/joint-plans-from-a-supported-start.md"
+   ]
+  },
+  {
+   "id": "cx-wamo-capacity-before-action",
+   "field": "account_adds",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "Warrant to build shared capacity stands only under the condition for scope and C for order, neither asserted, warrant open.",
+     "new": "Warrant to build shared capacity can stand under the condition for scope and C for order, neither asserted, warrant open; a ranking of courses needs C or a premise in its place."
+    }
+   ],
+   "labels": null,
+   "why": "'Stands only under ... C for order' rules out a premise in C's place, where 07 §4 now says a ranking of courses needs C or a premise in its place; 05 §11 says that under its premises it can warrant building shared capacity. The 'loop of mutual promise that never starts' is 05 §11's witness and stays.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-organizational-formation-from-generative-comparison",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#does-not-show",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start"
+   ]
+  },
+  {
+   "id": "cx-wamo-abundance-loop",
+   "field": "targets[0].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "It quotes 05 §5's thresholds theorem as it now stands, the kept set and the sparing condition.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting"
+   ]
+  },
+  {
+   "id": "cx-wamo-abundance-loop",
+   "field": "reading",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "Its waiting clauses copy 05 §5 as corrected (sparing all it waits on; mutual promises alone force no start of a loop with no source).",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-what-giving-that-waits-draws-on",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-offspring-read-from-giving-that-waits"
+   ]
+  },
+  {
+   "id": "cx-wamo-abundance-loop",
+   "field": "account_adds",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "'Why a gift and not a promise' agrees with the corrected claims: mutual promises alone force no start, and a source giving first does; nothing is restated more widely.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting"
+   ]
+  },
+  {
+   "id": "cx-wamo-self-made-trap",
+   "field": "targets[0].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "It quotes D48 as it stands, with the corrected 'mutual promises alone force no start of a loop with no source'.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-offspring-read-from-giving-that-waits"
+   ]
+  },
+  {
+   "id": "cx-zhishan-prohibition-needs-mechanism",
+   "field": "targets[0].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "It lists COLLECTIVE-DIRECTION §2's exits by name as they stand, 'Spare all one waits on' among them; it restates no edge.",
+   "read": [
+    "theories/becoming/COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions"
+   ]
+  },
+  {
+   "id": "cx-zhishan-not-a-master-good",
+   "field": "targets[2].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "It renders 06's 成生之限 row and its '开非更多' row as they stand; 'promises' is a coincidence.",
+   "read": [
+    "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#closing-and-opening"
+   ]
+  },
+  {
+   "id": "cx-zhishan-goodwill-not-carrier",
+   "field": "targets[0].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "It quotes 05 §11 as it stands, 'Promises do not' and the corrected ignition clause.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#joint-plans",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start"
+   ]
+  },
+  {
+   "id": "cx-zhishan-goodwill-not-carrier",
+   "field": "reading",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "Its promise and ignition clauses keep the corrected standing, and its ethics clause names the condition for scope and C for order, neither asserted and their warrant open, as the conditional's premises in 05 §11.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-organizational-formation-from-generative-comparison",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order"
+   ]
+  },
+  {
+   "id": "cx-abr-prozbul-reset-read-ahead",
+   "field": "targets[1].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "It quotes D48 as corrected, the tolerance clause with 'only where some formation spares all it waits on'.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-offspring-read-from-giving-that-waits"
+   ]
+  },
+  {
+   "id": "cx-abr-prozbul-reset-read-ahead",
+   "field": "targets[1].part",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "A part label naming D48's clause, still in the home.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits"
+   ]
+  },
+  {
+   "id": "cx-abr-ijma-consensus",
+   "field": "reading",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "'With a promise behind it' is the tradition's report, a coincidence; the pool clauses quote 05 §8's D45 as it stands.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#pools"
+   ]
+  },
+  {
+   "id": "cx-indaf-relational-tipping",
+   "field": "targets[1].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "It quotes 05 §5's worst-start theorem as it stands; main did not change it.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits"
+   ]
+  },
+  {
+   "id": "cx-indaf-relational-tipping",
+   "field": "targets[2].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "It quotes 05 §5's thresholds theorem as it now stands.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting"
+   ]
+  },
+  {
+   "id": "cx-indaf-relational-tipping",
+   "field": "targets[3].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "It quotes 05 §11 as it stands, the corrected ignition clause included, and the record's 'How a supported start forms' is not shown.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#joint-plans",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start",
+    "theories/becoming/results/records/joint-plans-from-a-supported-start.md"
+   ]
+  },
+  {
+   "id": "cx-indaf-relational-tipping",
+   "field": "account_adds",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "and what a promise cannot start.",
+     "new": "and that mutual promises alone force no start."
+    }
+   ],
+   "labels": null,
+   "why": "'What a promise cannot start' restates the wording AA's errata narrowed: 05 now says mutual promises alone force no start. Its ethics clause, the condition for scope and C for order, neither asserted, warrant open, stands.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order"
+   ]
+  },
+  {
+   "id": "cx-syscyb-double-contingency",
+   "field": "targets[3].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "It quotes 05 §5's thresholds theorem as it now stands.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting"
+   ]
+  },
+  {
+   "id": "cx-econ-granovetter-distribution",
+   "field": "targets[0].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "It quotes 05 §5's tolerating law and sparing theorem as they now stand.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting"
+   ]
+  },
+  {
+   "id": "cx-econ-ostrom-commons",
+   "field": "targets[3].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "It quotes D48's corrected tolerance clause word for word; the folk-theorem line is 08's and unchanged.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits"
+   ]
+  }
+ ]
+}

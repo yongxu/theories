@@ -1258,7 +1258,7 @@
      "record": "joint-plans-from-a-supported-start",
      "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start",
      "says": {
-      "en": "Theorem (any process; periphery module): 'With faithful joint-to-local projections and valid local plans', two properties holding on the covered start, every pair of locally authorized moves jointly allowed and every admitted joint successor keeping both, 'the paired finite plan is valid'. 'Promises do not': reciprocal eventual promises hold where neither ever happens. Its record: that an actual joint activity meets these is supplied."
+      "en": "Theorem (any process; periphery module): 'With faithful joint-to-local projections and valid local plans', two properties holding on the covered start, every pair of locally authorized moves jointly allowed with a successor wherever both hold, and every admitted joint successor keeping both, 'the paired finite plan is valid'. 'Promises do not': reciprocal eventual promises hold where neither ever happens. Its record: that an actual joint activity meets these is supplied."
      },
      "role": "carries"
     }
@@ -2867,7 +2867,7 @@
    "relation": "scope",
    "agreement_of": null,
    "reading": {
-    "en": "The account says where such composition holds: deliveries compose where they hold or restore what the others use, and one changing what its task does not list can make a regular pair of tasks impossible. Faithful projections and valid local plans pair into a valid joint plan under stated supports; reciprocal promises can be empty, so a contract is not a start. Exclusive footprints have the child workspace's form. Local views glue exactly where they agree where they meet. [AI reading]"
+    "en": "The account says where such composition holds: deliveries compose where they hold or restore what the others use, and one changing what its task does not list can make a regular pair of tasks impossible. Faithful projections and valid local plans pair into a valid joint plan under stated supports; reciprocal promises can be empty, so a contract alone forces no start. Exclusive footprints have the child workspace's form. Local views glue exactly where they agree where they meet. [AI reading]"
    },
    "targets": [
     {
@@ -2883,7 +2883,7 @@
      "record": "joint-plans-from-a-supported-start",
      "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start",
      "says": {
-      "en": "Theorem (any process; periphery module): 'With faithful joint-to-local projections and valid local plans', two properties holding on the covered start, every pair of locally authorized moves jointly allowed and every admitted joint successor keeping both, 'the paired finite plan is valid'. 'Promises do not': reciprocal eventual promises hold where neither ever happens. Its record: that an actual joint activity meets these is supplied."
+      "en": "Theorem (any process; periphery module): 'With faithful joint-to-local projections and valid local plans', two properties holding on the covered start, every pair of locally authorized moves jointly allowed with a successor wherever both hold, and every admitted joint successor keeping both, 'the paired finite plan is valid'. 'Promises do not': reciprocal eventual promises hold where neither ever happens. Its record: that an actual joint activity meets these is supplied."
      },
      "role": "carries"
     },
@@ -3281,12 +3281,17 @@
   {
    "id": "cx-ctxrt-cells-no-coordination",
    "what": "changed",
-   "why": "main changed theories/becoming/chapters/05-COLLECTIVES.md (LM1 or AA, 7 November 2026): account_adds states what it says now"
+   "why": "main changed theories/becoming/chapters/05-COLLECTIVES.md (LM1 or AA, 7 November 2026): account_adds states what it says now / main changed the waiting claims (LM1 or AA, 7 November 2026): targets[2].says states what it says now"
   },
   {
    "id": "cx-ctxrt-recursion-self-reading",
    "what": "changed",
    "why": "main changed theories/becoming/results/records/readings-within-what-they-read.json (LM1 or AA, 7 November 2026): targets[0].says states what it says now"
+  },
+  {
+   "id": "cx-ctxrt-bounded-local-context",
+   "what": "changed",
+   "why": "main changed the waiting claims (LM1 or AA, 7 November 2026): targets[1].says states what it says now (as its checker amended) / main changed the waiting claims (LM1 or AA, 7 November 2026): reading states what it says now"
   }
  ],
  "live_flags": []

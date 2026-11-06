@@ -35,7 +35,7 @@
 
 - Returns with synergy (depending on the product of own and groupmates' amounts) are not stated, nor which sharing actual groups have: a member gaining for every unit its group holds, or a share of what is given divided, is a premise, and other readings of the group are stated only through the general law.
 - How the groups are founded, and how the share of the spread among them changes over generations, enter as given: the rule reads them at the step.
-- That keeping is better where it is selected for: the rule reads the counts; ranking goes through the comparison C.
+- That keeping is better where it is selected for: the rule reads the counts; ranking goes through the comparison C or a premise in its place.
 - **Counterexample:** Returns that meet the rule at assortment one need not win: with two thirds of the spread among pairs, b = 3 and c = 2 the whole selects against keeping (Partly.below_one), and with the keepers apart the same returns that select for keeping with them together select against it (Founding.either_verdict). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionLevels.lean)
 - **Counterexample:** With unequal sizes the whole's spread and the size-weighted spread of the means do not decide the verdict where each member gains for every unit its group holds: the same spreads, and either verdict (unequal-groups-not-decided-by-the-spread-among-groups). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionLevels.lean)
 
@@ -117,6 +117,7 @@ Aliases: `returns to groupmates`, `Hamilton's rule`, `assortment below one`, `gr
 - 3 November 2026, board item KS (found by KD's readers): the does-not-show and next delta said groups of unequal size are not stated, though law 1 (rises_iff_reading) gives the whole's verdict through a reading's covariation on any list, and the split weighted by size is another record's law; narrowed to the returns' among-group part and the verdict through the spread among groups; its laws and their statements are unchanged.
 - 4 November 2026, board item US (study section 506): the returns stated in groups of any sizes through a reading of the group (rises_iff_shared_sized), with the kept and divided readings and a witness either way; the open item on the among-group part for unequal sizes answered.
 - 6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.
+- 7 November 2026, CX: this said ranking goes through the comparison C, where a ranking of courses needs C or a premise in its place (07 §4), the correction LM1 made in other records; corrected. No law, premise or proof changed.
 
 </details>
 

@@ -91,7 +91,7 @@
    "carried": "changed",
    "relation": "divergence",
    "reading": {
-    "en": "The account keeps the move (an aim is a premise, not read off dynamics) and changes the rest. One chosen premise becomes two with two roles, neither asserted, warrant open: the continuation condition (scope) and C (order). Same word, not same reference: the condition says anything's continuation has significance and ranks nothing, not that anything go on. T8 starts from what acting presupposes. Rankings need C, choices J1-J4. [AI reading]"
+    "en": "The account keeps the move (an aim is a premise, not read off dynamics) and changes the rest. One chosen premise becomes two with two roles, neither asserted, warrant open: the continuation condition (scope) and C (order). Same word, not same reference: the condition says anything's continuation has significance and ranks nothing, not that anything go on. T8 starts from what acting presupposes. Rankings need C or a premise in its place, choices J1-J4. [AI reading]"
    },
    "targets": [
     {
@@ -1090,13 +1090,13 @@
    "carried": "carried-in-part",
    "relation": "scope",
    "reading": {
-    "en": "The spine gives structures and no verdict. 成闭 is the lock: what is drawn in does not come back. 护闭 is removing at a branch the step that makes a configuration unobtainable (AI reading, D52); limits constraining steps leave what they constrain obtainable, so only 'larger opening' goes unmodelled. Ending a cancer is read as mixed, ranked only by reading or J1/J2. Under the condition (scope) and C (order), neither asserted, a pure closing argued good would meet T8's refuter; a net weighting ranks it above only where the item weighs below zero. [AI reading]"
+    "en": "The spine gives structures and no verdict. 成闭 is the lock: what is drawn in does not come back. 护闭 is removing at a branch the step that makes a configuration unobtainable (AI reading, D52); limits constraining steps leave what they constrain obtainable, so only 'larger opening' goes unmodelled. Ending a cancer is read as mixed, ranked by C only under the whole-run and possibility readings, and under the stepwise and relation-level readings by a further premise such as J1/J2. Under the condition (scope) and C (order), neither asserted, a pure closing argued good would meet T8's refuter; a net weighting ranks it above only where the item weighs below zero. [AI reading]"
    },
    "targets": [
     {
      "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#closing-and-opening",
      "says": {
-      "en": "护闭: removing at a fork the step making a configuration unobtainable [AI reading, D52]. Limits that promise, train or stop harm constrain some steps while what they constrain can still be had, 护闭's structure; those monopolizing entry or removing alternatives are 成闭. Which kind depends on what it does to the obtainable, not its name."
+      "en": "护闭: removing at a fork the step making a configuration unobtainable [AI reading, D52]. Limits that promise, train or stop harm constrain some steps while what they constrain can still be had, 护闭's structure; those monopolizing entry or removing alternatives are 成闭. Which kind depends on what it does to what can be had again, not its name."
      },
      "role": "carries",
      "part": "the 护闭, 成闭 and 限 rows; D52"
@@ -1173,7 +1173,7 @@
    "carried": "carried-in-part",
    "relation": "agreement",
    "reading": {
-    "en": "06 gives three spine structures and drops the charge of deceit. Local open, whole closed: takers each within what is given can together exceed it and end the renewal. Short open, long closed: a reading fixed by finite steps that includes every renewing run includes a consuming one, and distance to a break does not couple in by threshold. Surface open, meta closed: 元闭 seen from the state's side. Each law holds on its model. 06's rows read the early texts' own word, so the mapping comes by descent; the laws stand apart from it. [AI reading]"
+    "en": "06 gives three spine structures and drops the charge of deceit. Local open, whole closed: takers each within what is given can together exceed it and, at each of `n` steps from a level below `n + m`, end a renewal gated at `m`. Short open, long closed: a reading fixed by finite steps that includes every renewing run includes a consuming one, and distance to a break does not couple in by threshold. Surface open, meta closed: 元闭 seen from the state's side. Each law holds on its model. 06's rows read the early texts' own word, so the mapping comes by descent; the laws stand apart from it. [AI reading]"
    },
    "targets": [
     {
@@ -1458,7 +1458,7 @@
    "carried": "carried-in-part",
    "relation": "agreement",
    "reading": {
-    "en": "Each shape has a law form, on models. Exhaustion: steps of joint excess from a low enough level end the renewal and what depends on it; a regime's point of no return is exact. Lock-in: the capture laws. Monoculture: groups on one coupled family end together; that is not monoculture of value. The list as one pattern is not stated. T1, that persistence certifies the joint draw, is conjectured: passed in two simulations and on yeast regimes the analyst had seen, failed in four settings. [AI reading]"
+    "en": "Each shape has a law form, on models. Exhaustion: `n` steps of joint excess from a level below `n + m` end a renewal gated at `m` and what depends on it at such a need; a regime's point of no return is exact. Lock-in: the capture laws. Monoculture: groups on one coupled family end together; that is not monoculture of value. The list as one pattern is not stated. T1, that persistence certifies the joint draw, is conjectured: passed in two simulations and on yeast regimes the analyst had seen, failed in four settings. [AI reading]"
    },
    "targets": [
     {
@@ -1667,7 +1667,7 @@
    "carried": "carried-in-part",
    "relation": "divergence",
    "reading": {
-    "en": "The account has the mechanism and refuses the verdict. Generation goes on through carrying renewal, and with brief parts a whole persists only as parts arise. Closing in its form is no loss. But 'feature' is no dynamic's word here: with the continuation condition for scope every narrowing loses something with significance, and only C or further premises order anything. Apoptosis is read as mixed; no ending is licensed. Ending is one response under J1-J4, with residual losses. [AI reading]"
+    "en": "The account has the mechanism and refuses the verdict. Generation goes on through carrying renewal, and with brief parts a whole persists only as parts arise. Closing in its form is no loss. But 'feature' is no dynamic's word here: with the continuation condition for scope every narrowing loses something with significance, and only C or further premises order anything; neither the condition nor C is asserted, their warrant open. Apoptosis is read as mixed; no ending is licensed. Ending is one response under J1-J4, with residual losses. [AI reading]"
    },
    "targets": [
     {
@@ -2931,7 +2931,7 @@
    "carried": "carried-in-part",
    "relation": "agreement",
    "reading": {
-    "en": "The functional half has laws. A pool separates exactly what some member separates, so what a harm's sensing needs can be read as who is in the pool; a reading requires the drawn level to couple in by level, before the point of no return. It has edges: a pool recruiting only through itself couples into a loss only as its course without the loss would. Institutions are not modelled; pools' forming and resisting capture is not shown. [AI reading]"
+    "en": "The functional half has laws. A pool separates exactly what some member separates, so what a harm's sensing needs can be read as who is in the pool; a reading requires the drawn level to couple in by level, before the point of no return. It has edges: a pool recruiting only through itself couples into a loss only as its course without the loss would. One kind of institution has one minimal model on the root, as a reading, and no actual institution is shown to meet its hypotheses; pools' forming and resisting capture is not shown. [AI reading]"
    },
    "targets": [
     {
@@ -3870,7 +3870,7 @@
    "carried": "carried-in-part",
    "relation": "divergence",
    "reading": {
-    "en": "T8's for life is nearest to the first: argued, with the condition for scope and C for order, neither asserted; for life says whose way it is, not whose losses count. The floor's nearest form is J2's priority of basic conditions, a premise whose rival is not shown inconsistent, and basic there means what a form of living needs to go on, not freedom or dignity. Plurality is no value here: ending selecting between families is a law with no verdict. [AI reading]"
+    "en": "T8's for life is nearest to the first: argued, with the condition for scope and C for order, neither asserted, their warrant open; for life says whose way it is, not whose losses count. The floor's nearest form is J2's priority of basic conditions, a premise whose rival is not shown inconsistent, and basic there means what a form of living needs to go on, not freedom or dignity. Plurality is no value here: ending selecting between families is a law with no verdict. [AI reading]"
    },
    "targets": [
     {
@@ -3921,7 +3921,7 @@
    "carried": "carried-in-part",
    "relation": "scope",
    "reading": {
-    "en": "The account gives where this holds. Where the rest alone outruns the renewal, every dependent formation ends whatever a member takes, and no weight on such a reading selects the member's restraint. Where each drawer's own take is within the joint slack, a flow taking less by the excess keeps the need met. So an individual's restraint fails on one side of an exact line and is enough on the other, on the World model. 'Disease' is no dynamic's word here. [AI reading]"
+    "en": "The account gives where this holds. Where the rest alone takes more than a step gives at each of `n` steps from a level below `n + m`, under the gate, every formation depending on the condition at a need of at least `m` ends whatever a member takes, and at a need of one no weight on a reading of the condition from the rest's end on selects the member's restraint. Where each drawer's own take is within the joint slack, a flow taking less by the excess keeps the need met. So an individual's restraint fails on one side of an exact line and is enough on the other, on the World model. 'Disease' is no dynamic's word here. [AI reading]"
    },
    "targets": [
     {
@@ -4070,9 +4070,34 @@
  ],
  "changes": [
   {
+   "id": "cx-kpso-one-chosen-premise",
+   "what": "changed",
+   "why": "main changed the ethics claims (LM1 or AA, 7 November 2026): reading states what it says now"
+  },
+  {
    "id": "cx-kpso-stabilize-and-keep-going",
    "what": "changed",
    "why": "main changed theories/becoming/chapters/02-MAP.md (LM1 or AA, 7 November 2026): targets[2].says states what it says now"
+  },
+  {
+   "id": "cx-kpso-protective-closure",
+   "what": "changed",
+   "why": "main changed a home its checker read (LM1 or AA, 7 November 2026): reading states what it says now (as its checker amended) / main changed the waiting claims (LM1 or AA, 7 November 2026): targets[0].says states what it says now (as its checker amended)"
+  },
+  {
+   "id": "cx-kpso-pseudo-open",
+   "what": "changed",
+   "why": "main changed the edges claims (LM1 or AA, 7 November 2026): reading states what it says now"
+  },
+  {
+   "id": "cx-kpso-three-shapes-of-collapse",
+   "what": "changed",
+   "why": "main changed the edges claims (LM1 or AA, 7 November 2026): reading states what it says now"
+  },
+  {
+   "id": "cx-kpso-death-as-feature",
+   "what": "changed",
+   "why": "main changed the ethics claims (LM1 or AA, 7 November 2026): reading states what it says now (as its checker amended)"
   },
   {
    "id": "cx-kpso-understanding-aligned-first",
@@ -4082,7 +4107,7 @@
   {
    "id": "cx-kpso-shared-sensing",
    "what": "changed",
-   "why": "main changed theories/becoming/COLLECTIVE-DIRECTION.md (LM1 or AA, 7 November 2026): targets[0].says states what it says now"
+   "why": "main changed theories/becoming/COLLECTIVE-DIRECTION.md (LM1 or AA, 7 November 2026): targets[0].says states what it says now / main changed the edges claims (LM1 or AA, 7 November 2026): reading states what it says now"
   },
   {
    "id": "cx-kpso-trust-before-verification",
@@ -4093,6 +4118,16 @@
    "id": "cx-kpso-the-transition",
    "what": "changed",
    "why": "COLLECTIVE-DIRECTION's exit 'Give first, with a reserve' is 'Spare all one waits on' since AA's errata (7 November 2026): the law has no reserve in it"
+  },
+  {
+   "id": "cx-kpso-named-values",
+   "what": "changed",
+   "why": "main changed the waiting claims (LM1 or AA, 7 November 2026): reading states what it says now (as its checker amended)"
+  },
+  {
+   "id": "cx-kpso-individual-solutions",
+   "what": "changed",
+   "why": "main changed the edges claims (LM1 or AA, 7 November 2026): reading states what it says now"
   }
  ],
  "live_flags": []

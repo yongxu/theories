@@ -456,7 +456,7 @@
      "record": "margin-of-a-regime",
      "anchor": "theories/becoming/chapters/02-MAP.md#r-margin-of-a-regime",
      "says": {
-      "en": "Theorem: for any giving law short of the draw below y, with nothing from nothing, a level up to a top ends exactly below H + y. Where giving stops below a need and the draw is positive and met at y, the point lies at least the draw above the need. Its correspondence names Allee effects under harvest; how giving depends on the draw is a premise, not a theorem."
+      "en": "Theorem: for any giving law short of the draw below y, with nothing from nothing, meeting it from y up to a top the step keeps, a level up to that top ends exactly where it starts below H + y. Where giving stops below a need and the draw is positive and met at y, the point lies at least the draw above the need. Its correspondence names Allee effects under harvest; how giving depends on the draw is a premise, not a theorem."
      },
      "role": "carries"
     },
@@ -913,7 +913,7 @@
      "record": "comparison-where-the-rest-responds",
      "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-comparison-where-the-rest-responds",
      "says": {
-      "en": "Theorem: where every formation outside a part responds through its couplings, two flows compare within its responsive reach. Responding so is supplied. The record's reading, the AI's: an escalation loop is the case where each party responds through its couplings and the difference returns to the part. No ranking of the flows is stated: order would need C and scope the continuation condition, neither asserted."
+      "en": "Theorem: where every formation outside a part responds through its couplings, two flows compare within its responsive reach. Responding so is supplied. The record's reading, the AI's: an escalation loop is the case where each party responds through its couplings and the difference returns to the part. No ranking of the flows is stated: order would need C or a premise in its place, and scope the continuation condition, neither asserted."
      },
      "role": "neighbour"
     },
@@ -1216,7 +1216,7 @@
     }
    ],
    "account_adds": {
-    "en": "The transmission and ending laws joined on one flow. Not a ranking: the record says that a lineage ending with its whole is worse, or sequestration better, is not shown; ranking would need C for order, with the continuation condition for scope, neither asserted."
+    "en": "The transmission and ending laws joined on one flow. Not a ranking: the record says that a lineage ending with its whole is worse, or sequestration better, is not shown; ranking would need C or a premise in its place for order, with the continuation condition for scope, neither asserted, their warrant open."
    },
    "source_adds": {
     "en": "How a germ line is sequestered and how far it varies, removal of parts by a whole's rule (policing), wholes founded by several parts, transmissible cancers beyond one generation's witness, and every measured rate."
@@ -1396,7 +1396,7 @@
      "record": "selection-with-returns-to-groupmates",
      "anchor": "theories/becoming/chapters/04-LIFE.md#r-selection-with-returns-to-groupmates",
      "says": {
-      "en": "The rule reads the counts; that keeping is better where it is selected for is not shown, and ranking goes through the comparison C. Correspondence: 'the equivalence of multilevel and inclusive-fitness accounts for additive returns (Queller 1992; Okasha 2006)'."
+      "en": "The rule reads the counts; that keeping is better where it is selected for is not shown, and ranking goes through the comparison C or a premise in its place. Correspondence: 'the equivalence of multilevel and inclusive-fitness accounts for additive returns (Queller 1992; Okasha 2006)'."
      },
      "role": "neighbour"
     },
@@ -2048,7 +2048,7 @@
     }
    ],
    "account_adds": {
-    "en": "The laws read every order rising with what couples in, not one objective, and at a mutual best response several optimizers stand as one of joint capacity. No law says which course to take: a ranking would need C for order and the continuation condition for scope, neither asserted."
+    "en": "The laws read every order rising with what couples in, not one objective, and at a mutual best response several optimizers stand as one of joint capacity. No law says which course to take: a ranking would need C, or a premise in its place, for order and the continuation condition for scope, neither asserted, warrant open."
    },
    "source_adds": {
     "en": "Effort, price and cost, with the positive stock open access settles at; logistic and interior yields in the re-optimizing law; discounted optima holding below the level of greatest renewal; every measured fishery. Ending at nothing, read as open access or optimal extinction, comes with zero cost in these laws."
@@ -2108,7 +2108,7 @@
     }
    ],
    "account_adds": {
-    "en": "The kind of counterfactual decides what shows, and a bound on where a difference can arrive. Neither says which formations it reaches, nor how much. Any ranking of the two flows would need C for order and the continuation condition for scope, neither asserted."
+    "en": "The kind of counterfactual decides what shows, and a bound on where a difference can arrive. Neither says which formations it reaches, nor how much. Any ranking of the two flows would need C, or a premise in its place, for order and the continuation condition for scope, neither asserted, warrant open."
    },
    "source_adds": {
     "en": "Strengths and what sets them, top-down against bottom-up control, keystone species, measured cases and their disputes. Nothing here predicts that a given web cascades, since the flows are supplied."
@@ -2281,9 +2281,39 @@
    "why": "a correction this crosswalk made at the home: the entry quotes what the home says now, or says what it said until 7 November 2026"
   },
   {
+   "id": "cx-ecoevo-allee-effects",
+   "what": "changed",
+   "why": "02's margin of a regime is exact under its premises on giving, which the entry dropped (round two's checker, 7 November 2026)"
+  },
+  {
+   "id": "cx-ecoevo-red-queen-relative-race",
+   "what": "changed",
+   "why": "main changed the ethics claims (LM1 or AA, 7 November 2026): targets[3].says states what it says now"
+  },
+  {
+   "id": "cx-ecoevo-germ-line-and-cancer",
+   "what": "changed",
+   "why": "main changed the ethics claims (LM1 or AA, 7 November 2026): account_adds states what it says now"
+  },
+  {
+   "id": "cx-ecoevo-fitness-as-a-maximand",
+   "what": "changed",
+   "why": "05's D65 label and eight records gave ranking to C alone; corrected at home (apply_ranking.py, 7 November 2026): the entry quotes what it says now"
+  },
+  {
    "id": "cx-ecoevo-metapopulations",
    "what": "changed",
    "why": "a correction this crosswalk made at the home: the entry quotes what the home says now, or says what it said until 7 November 2026"
+  },
+  {
+   "id": "cx-ecoevo-msy-and-open-access",
+   "what": "changed",
+   "why": "main changed the ethics claims (LM1 or AA, 7 November 2026): account_adds states what it says now"
+  },
+  {
+   "id": "cx-ecoevo-trophic-cascades",
+   "what": "changed",
+   "why": "main changed the ethics claims (LM1 or AA, 7 November 2026): account_adds states what it says now"
   }
  ],
  "live_flags": [

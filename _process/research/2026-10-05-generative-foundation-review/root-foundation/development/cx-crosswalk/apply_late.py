@@ -116,12 +116,27 @@ LIVE_AA = {
     'cx-zhishan-prohibition-needs-mechanism': [('give first with a reserve, count reviewers by causes.', 'spare all one waits on, count reviewers by causes.')],
     'cx-syscyb-trap-escalation': [('has a form only on waiting (giving first, with a reserve);', 'has a form only on waiting (sparing all one waits on, which gives from step 1);')],
 }
+# Round two found two more wordings that give ranking to C alone, at their homes (apply_ranking.py): 05's D65 label and
+# eight records' "ranking goes through the comparison C". Every entry quoting them quotes the corrected home.
+WHY_RANKING = "05's D65 label and eight records gave ranking to C alone; corrected at home (apply_ranking.py, 7 November 2026): the entry quotes what it says now"
+LIVE_RANKING = [("any ranking is C's, under the two premises of 07", "a ranking needs C or a premise in its place, under 07's premises"),
+                ('ranking goes through the comparison C.', 'ranking goes through the comparison C or a premise in its place.')]
+# Three entries round two's checker named and no group listed: they keep 02's label "any giving law" and drop its premises.
+WHY_GIVING = "02's margin of a regime is exact under its premises on giving, which the entry dropped (round two's checker, 7 November 2026)"
+PREMISES = 'short of the draw below y, nothing from nothing, meeting it from y up to a top the step keeps'
+LIVE_GIVING = {
+    'cx-syscyb-holling-resilience-stability': [('For one condition under a standing draw, a level up to the top ends exactly',
+        f'For one condition under a standing draw, under its premises on giving ({PREMISES}), a level up to the top ends exactly')],
+    'cx-dpc-fold': [('Exactness for any giving law in whole numbers;', f"Exactness in whole numbers under the regime's premises on giving ({PREMISES});")],
+    'cx-ecoevo-allee-effects': [('for any giving law short of the draw below y, with nothing from nothing, a level up to a top ends exactly below H + y.',
+        'for any giving law short of the draw below y, with nothing from nothing, meeting it from y up to a top the step keeps, a level up to that top ends exactly where it starts below H + y.')],
+}
 # Words the corrections removed at home; no entry may still state them as what the home says.
 GONE = ['keeps its standing after it stops measuring. T7', 'account of power is the closed loop', 'that sense is wider',
         'working definition is wider', 'imperial examination is this case', 'imperial examination is read', 'supported in simulation (MQ1;',
         'conjectured (T3), supported in simulation', 'says a measure made a target stops measuring', 'two earlier phase results',
         'supplies is the beginning of the kept history', 'Correspondence: hysteresis of collapse', "Jonas (1979): the existence of the whole",
-        'labelled any type, on finitely many', 'Give first, with a reserve', 'give first with a reserve', 'giving first, with a reserve', 'a first giver needs a reserve', 'give first, independent', "refutation\\\" is `lock_outlives_loss`", "refutation' is lock_outlives_loss"]
+        'labelled any type, on finitely many', "any ranking is C's", 'goes through the comparison C.', 'Give first, with a reserve', 'give first with a reserve', 'giving first, with a reserve', 'a first giver needs a reserve', 'give first, independent', "refutation\\\" is `lock_outlives_loss`", "refutation' is lock_outlives_loss"]
 
 
 
@@ -135,10 +150,12 @@ def _field(entry, path):
 
 
 def main_drift(entries, why, problems):
-    """Apply reads/main-drift-<cluster>.json, as its checker's .check.json amends it: each entry field that quoted what main
-    changed at its home (LM1, AA's errata) states what the home says now. The checker's edits replace the author's where it
+    """Apply reads/main-drift-<cluster>.json and reads/claims-<group>.json (the second round, searched by claim), as their
+    checkers' .check.json amend them: each entry field that stated what main changed at its home (LM1, AA's errata and
+    restatements) states what the home says now. The checker's edits replace the author's where it
     says fix. Stops on an edit that does not match exactly once, or on a label it cannot set."""
-    for path in sorted(READS.glob('main-drift-*.json')):
+    # Round one (by words) before round two (by claim): the second was read against the text the first left.
+    for path in [*sorted(READS.glob('main-drift-*.json')), *sorted(READS.glob('claims-*.json'))]:
         if path.name.endswith(('.in.json', '.check.json')):
             continue
         author = json.loads(path.read_text(encoding='utf-8'))
@@ -176,7 +193,8 @@ def main_drift(entries, why, problems):
                 else:
                     problems.append(f'{path.name}: {item["id"]}: cannot set {k}')
             home = json.loads(path.with_name(path.name.replace('.json', '.in.json')).read_text(encoding='utf-8'))
-            src = next((i['home'] for i in home['items'] if (i['id'], i['field']) == (item['id'], item['field'])), 'a home its checker read')
+            given = next((i for i in home['items'] if (i['id'], i['field']) == (item['id'], item['field'])), {})
+            src = given.get('home') or (f"the {given['family']} claims" if given.get('family') else 'a home its checker read')
             why.setdefault(item['id'], []).append(f'main changed {src} (LM1 or AA, 7 November 2026): {item["field"]} states what it says now'
                                                   + (' (as its checker amended)' if fixed else '') + (f'; labels {labels}' if labels else ''))
 
@@ -231,6 +249,24 @@ def main(argv=None):
         entries[id_].update(json.loads(text))
         why.setdefault(id_, []).append(WHY_AA)
     main_drift(entries, why, problems)
+    for id_, e in entries.items():
+        text = json.dumps(e, ensure_ascii=False)
+        if any(old in text for old, _ in LIVE_RANKING):
+            for old, new in LIVE_RANKING:
+                text = text.replace(old, json.dumps(new, ensure_ascii=False)[1:-1])
+            e.clear()
+            e.update(json.loads(text))
+            why.setdefault(id_, []).append(WHY_RANKING)
+    for id_, pairs in LIVE_GIVING.items():
+        text = json.dumps(entries[id_], ensure_ascii=False)
+        for old, new in pairs:
+            if old not in text:
+                problems.append(f'{id_}: {old[:60]!r} not found')
+                continue
+            text = text.replace(old, json.dumps(new, ensure_ascii=False)[1:-1])
+        entries[id_].clear()
+        entries[id_].update(json.loads(text))
+        why.setdefault(id_, []).append(WHY_GIVING)
     stale = [i for i, e in entries.items() if 'institution is modelled' in json.dumps(e, ensure_ascii=False)]
     problems += [f'{i}: still states {g!r}' for i, e in entries.items() for g in GONE if g in json.dumps(e, ensure_ascii=False)]
     problems += [f'{i}: still quotes the old CD §5 sentence' for i in stale]

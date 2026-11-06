@@ -643,7 +643,7 @@
     {
      "anchor": "theories/becoming/chapters/02-MAP.md#r-shaping-read-by-readers-drawn-from-the-selected",
      "says": {
-      "en": "Reading, AI: joins the lock to control's selection, on counts, the start deciding without noise. Whether actual rules are read so 'is not established', and 'nothing here ranks a course: that needs C', with the continuation condition for scope, neither asserted."
+      "en": "Reading, AI: joins the lock to control's selection, on counts, the start deciding without noise. Whether actual rules are read so 'is not established', and 'nothing here ranks a course: that needs C or a premise in its place', with the continuation condition for scope, neither asserted."
      },
      "role": "limit"
     }
@@ -708,7 +708,7 @@
     }
    ],
    "account_adds": {
-    "en": "A reading names 'who holds the places from which the rule is read' as what could keep the readers' premise (02 section 9). Whether a course of few rulers is better or worse is not said: that needs C for order and the continuation condition for scope, neither asserted."
+    "en": "A reading names 'who holds the places from which the rule is read' as what could keep the readers' premise (02 section 9). Whether a course of few rulers is better or worse is not said: that needs C, or a premise in its place, for order and the continuation condition for scope, neither asserted, warrant open."
    },
    "source_adds": {
     "en": "How the few arise from the many: size, specialization, expertise, control of communication, deference, goal displacement. Every model here takes the kinds or pool as given, 'who decides a revision' is not modelled, and 'no field test of reform events is frozen' (COLLECTIVE-DIRECTION section 5). No theory folder names Michels; sources/ hits are a Popper compilation and a biology article, unopened."
@@ -931,7 +931,7 @@
    "carried": "fresh-reading",
    "relation": "divergence",
    "reading": {
-    "en": "Forms exist for parts: two rules read from one share lock together, their circle; a reversal past a threshold, a juncture in their sense. The central divergence: they claim, causally and empirically, that institutions make prosperity and extractive growth does not last. The account has no comparison on growth and asserts neither. Ranking inclusive above extractive reads prosperity, and here needs C for order and the continuation condition for scope, neither asserted, warrant open. Proposed here. [AI reading]"
+    "en": "Forms exist for parts: two rules read from one share lock together, their circle; a reversal past a threshold, a juncture in their sense. The central divergence: they claim, causally and empirically, that institutions make prosperity and extractive growth does not last. The account has no comparison on growth and asserts neither. Ranking inclusive above extractive reads prosperity, and here needs C or a premise in its place for order, and the continuation condition for scope, neither asserted, warrant open. Proposed here. [AI reading]"
    },
    "targets": [
     {
@@ -946,7 +946,7 @@
      "record": "shaping-the-rule-selected-by-what-comes-back",
      "anchor": "theories/becoming/chapters/02-MAP.md#r-shaping-the-rule-selected-by-what-comes-back",
      "says": {
-      "en": "Does not show 'That capture damages or supports 生生, or that open rule-making is better than capture: no evaluation enters, and ranking courses needs C.'"
+      "en": "Does not show 'That capture damages or supports 生生, or that open rule-making is better than capture: no evaluation enters, and ranking courses needs C or a premise in its place.'"
      },
      "role": "limit"
     },
@@ -969,7 +969,7 @@
     {
      "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-organizational-formation-from-generative-comparison",
      "says": {
-      "en": "Reading, AI, D65: 'The laws of capture and drain give institutions no prior duty to contract and no prior licence to grow'; any ranking is C's, under the two premises of 07."
+      "en": "Reading, AI, D65: 'The laws of capture and drain give institutions no prior duty to contract and no prior licence to grow'; a ranking needs C or a premise in its place, under 07's premises."
      },
      "role": "limit",
      "part": "Reading D65, of contraction and growth"
@@ -1318,7 +1318,7 @@
    "carried": "not-carried",
    "relation": null,
    "reading": {
-    "en": "His central claim, that returns on added organization decline, the account neither asserts nor has a form for, so nothing is mapped. Proposal only: neighbours are more takers needing renewers without bound, which 08 calls maintenance scaling, and D48's 'more waiting gives no more', a bound on dependence, not declining returns. D65 leaves contraction unranked, near his refusal of a verdict; any ranking needs C for order and the continuation condition for scope, neither asserted, warrant open. [AI reading]"
+    "en": "His central claim, that returns on added organization decline, the account neither asserts nor has a form for, so nothing is mapped. Proposal only: neighbours are more takers needing renewers without bound, which 08 calls maintenance scaling, and D48's 'more waiting gives no more', a bound on dependence, not declining returns. D65 leaves contraction unranked, near his refusal of a verdict; any ranking needs C, or a premise in its place, for order and the continuation condition for scope, neither asserted, warrant open. [AI reading]"
    },
    "targets": [],
    "account_adds": {
@@ -1831,6 +1831,16 @@
    "why": "a correction this crosswalk made at the home: the entry quotes what the home says now, or says what it said until 7 November 2026"
   },
   {
+   "id": "cx-econ-stigler-capture",
+   "what": "changed",
+   "why": "main changed the ethics claims (LM1 or AA, 7 November 2026): targets[3].says states what it says now"
+  },
+  {
+   "id": "cx-econ-michels-oligarchy",
+   "what": "changed",
+   "why": "main changed the ethics claims (LM1 or AA, 7 November 2026): account_adds states what it says now"
+  },
+  {
    "id": "cx-econ-olson-collective-action",
    "what": "changed",
    "why": "main changed theories/becoming/chapters/05-COLLECTIVES.md (LM1 or AA, 7 November 2026): targets[3].says states what it says now"
@@ -1841,9 +1851,19 @@
    "why": "second critic (label): 02 §9's shaping law, its record citing Olson (1965), rent-seeking and regulatory capture, gives the share-seeking part a checked form: shaping is selected exactly where what comes back to the shapers alone covers its cost, whatever comes to every member alike. Accumulation, the drag and the shock have no form and stand in 02's Open, so a fresh reading with scope, not not-carried."
   },
   {
+   "id": "cx-econ-acemoglu-extractive",
+   "what": "changed",
+   "why": "main changed the ethics claims (LM1 or AA, 7 November 2026): targets[1].says states what it says now / main changed the ethics claims (LM1 or AA, 7 November 2026): reading states what it says now / 05's D65 label and eight records gave ranking to C alone; corrected at home (apply_ranking.py, 7 November 2026): the entry quotes what it says now"
+  },
+  {
    "id": "cx-econ-granovetter-distribution",
    "what": "changed",
    "why": "main changed theories/becoming/COLLECTIVE-DIRECTION.md (LM1 or AA, 7 November 2026): targets[0].says states what it says now"
+  },
+  {
+   "id": "cx-econ-tainter-complexity",
+   "what": "changed",
+   "why": "main changed the ethics claims (LM1 or AA, 7 November 2026): reading states what it says now"
   },
   {
    "id": "cx-econ-ostrom-commons",

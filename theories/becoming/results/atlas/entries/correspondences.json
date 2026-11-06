@@ -1378,7 +1378,7 @@
   "relation": "scope",
   "agreement_of": null,
   "reading": {
-   "en": "Pace, time and structure appear among six conditions for 'enough situationality', as a reading with no ratio law. The regeneration ratio has a law, a net draw within the margin, and an exact point of no return in the model. In the field T1 passed on some held-out regimes and failed in four settings; in yeast the margin timed neither break. 03 reads an institution's link as its rule of reading reports. [AI reading]"
+   "en": "Pace, time and structure appear among six conditions for 'enough situationality', as a reading with no ratio law. The regeneration ratio has a law, a net draw within the margin, and an exact point of no return in the model. T1, conjectured, passed in two simulations and on held-out yeast regimes the analyst had seen, and failed in four settings; in yeast the margin timed neither break. 03 reads an institution's link as its rule of reading reports. [AI reading]"
   },
   "targets": [
    {
@@ -1451,7 +1451,7 @@
   "relation": "divergence",
   "agreement_of": null,
   "reading": {
-   "en": "The account refuses this step. Nothing read from the dynamics ranks: all six conditions together rank nothing; order needs C and scope the continuation condition, neither asserted, warrant open; and neither can come from the dynamics alone. Mixed comparisons stay unranked, and the hard cases are mixed. So a tempo gap, if measured, would locate something and order nothing. [AI reading]"
+   "en": "The account refuses this step. Nothing read from the dynamics ranks: all six conditions together rank nothing; order needs C or a premise in its place, and scope the continuation condition, neither asserted, warrant open; and neither can come from the dynamics alone. Mixed comparisons stay unranked, and the hard cases are mixed. So a tempo gap, if measured, would locate something and order nothing. [AI reading]"
   },
   "targets": [
    {
@@ -1724,7 +1724,7 @@
   "relation": "scope",
   "agreement_of": null,
   "reading": {
-   "en": "The account corrects the universal form. A race ends those who depend on what it draws; a greatest part not depending on it continues in a witness. So winners die only under dependence, and the shared interest holds only where the ending is coupled: there self-concern ranks it below, without C; a course keeping an independent copy reverses that. Calling a loss beyond self-concern bad needs the condition for scope and C for order, neither asserted. [AI reading]"
+   "en": "The account corrects the universal form. A race ends those who depend on what it draws; a greatest part not depending on it continues in a witness. So winners die only under dependence, and the shared interest holds only where the ending is coupled: there self-concern ranks it below, without C; where a course keeps an independent copy, some self-concerned order reverses that. Calling a loss beyond self-concern bad needs the condition for scope and C, or a premise in its place, for order, neither asserted, warrant open. [AI reading]"
   },
   "targets": [
    {
@@ -1886,7 +1886,7 @@
    {
     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-organizational-formation-from-generative-comparison",
     "says": {
-     "en": "A reading just after this anchor [AI reading, D65; any ranking is C's, under the two premises of 07]: 'The laws of capture and drain give institutions no prior duty to contract and no prior licence to grow'."
+     "en": "A reading just after this anchor [AI reading, D65; a ranking needs C or a premise in its place, under 07's premises]: 'The laws of capture and drain give institutions no prior duty to contract and no prior licence to grow'."
     },
     "role": "carries"
    }
@@ -2439,7 +2439,7 @@
   "relation": "scope",
   "agreement_of": null,
   "reading": {
-   "en": "The account generalizes the position and removes its accusation: every formation selects from a position, not a defect. A self-reading gap has a law; a pool recruiting only through itself reaches a loss only as it would without it, unless a reader comes from outside. 'Closed' used without substantive disagreement shields the theory. It gives no probability of escape. [AI reading]"
+   "en": "The account generalizes the position and removes its accusation: every formation selects from a position, not a defect. A self-reading gap has a law; a pool recruiting only through itself reaches a loss only as it would without it; a pool comes to couple into what it does not yet couple into only through an admission not made through it or through members its course would hold anyway (each a witness). 'Closed' used without substantive disagreement shields the theory. It gives no probability of escape. [AI reading]"
   },
   "targets": [
    {
@@ -2476,7 +2476,7 @@
    }
   ],
   "account_adds": {
-   "en": "An external reader as a stated condition, on a witness, and a named guard against using capture as an immunity: 'so the label cannot immunize'."
+   "en": "Two stated routes, each on a witness, by which a pool comes to couple into what it does not yet couple into (an admission not made through it, or members its course would hold anyway), and a named guard against using capture as an immunity: 'so the label cannot immunize'."
   },
   "source_adds": {
    "en": "The question about subjecthood itself, its probability, and its force against the theorist's own project."
@@ -2817,7 +2817,7 @@
   "relation": "agreement",
   "agreement_of": "law",
   "reading": {
-   "en": "The form is present in laws of waiting: restoring giving needs a formation that spares all it waits on; in a pair the one-step laws split between restoring and answering a constant withholder; reciprocal promises can be empty and in a witness ignition, defined as spending a reserve, needs one already present (near-definitional). That is 'giving', not slowing a technology, and its application to AI is not made live. [AI reading]"
+   "en": "The form is present in laws of waiting: restoring giving needs a formation that spares all it waits on; in a pair the one-step laws that keep inclusion split between restoring and answering a constant withholder; reciprocal promises can be empty and in a witness ignition, defined as spending a reserve, needs one already present (near-definitional). That is 'giving', not slowing a technology, and its application to AI is not made live. [AI reading]"
   },
   "targets": [
    {
@@ -3290,7 +3290,7 @@
     "record": "others-drawing-first-end-the-base",
     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-others-drawing-first-end-the-base",
     "says": {
-     "en": "Theorem: where others first draw from what an optimizer leaves, its renewal at most the level, with capacity bounds, over a horizon of at least two steps every optimum of every order whose weighting falls at every step, however slightly, ends the stock at once. Witness: 'a doubling source is rebuilt by every optimum alone and ended at once with others first drawing all but a quarter: the discrete form of open access dissipating what a sole owner would keep'."
+     "en": "Theorem: where others first draw from what an optimizer leaves, its renewal at most the level, with capacity bounds, over a horizon of at least two steps every optimum of every order whose weighting falls at every step, however slightly, ends the stock at once. Witness, under weights `w (t + 1) ≤ w t < 2 w (t + 1)`: 'a doubling source is rebuilt by every optimum alone and ended at once with others first drawing all but a quarter: the discrete form of open access dissipating what a sole owner would keep'."
     },
     "role": "carries"
    }
@@ -3796,7 +3796,7 @@
   "relation": "agreement",
   "agreement_of": "law",
   "reading": {
-   "en": "The general form is a law on a process's possible: a course making only moves of one fixed process does not keep widening under it, and a reading names 'AI policy' among the fixed rules. It says nothing of decay, and its changing without end is not enough. Calling that better needs C, with the continuation condition for scope, neither asserted, warrant open. [AI reading]"
+   "en": "The general form is a law on a process's possible: a course making only moves of one fixed process does not keep widening under it, and a reading names 'AI policy' among the fixed rules. It says nothing of decay, and its changing without end is not enough. Calling that better needs C or a premise in its place, with the continuation condition for scope, neither asserted, warrant open. [AI reading]"
   },
   "targets": [
    {
@@ -4816,7 +4816,7 @@
    }
   ],
   "account_adds": {
-   "en": "What the rise does beyond: past the slack there a named dependence breaks, unseen by every selection rewarding the rise. All in whole-number amounts and discrete steps. No law here compares two courses: ranking them needs C, with the continuation condition for scope, neither asserted."
+   "en": "What the rise does beyond: past the slack there a named dependence breaks, unseen by every selection rewarding the rise. All in whole-number amounts and discrete steps. No law here compares two courses: ranking them needs C or a premise in its place, with the continuation condition for scope, neither asserted and their warrant open."
   },
   "source_adds": {
    "en": "The conclusion the folder draws: more buildings and robots in service must be fed from outside their own future dismantling. And the identity as an equality for physical matter in a defined system, stocks including useful inventories and leaving including exports and unrecovered losses."
@@ -5553,7 +5553,7 @@
     "record": "where-the-possible-grows",
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-where-the-possible-grows",
     "says": {
-     "en": "Reading [AI reading, D45]: 生生不息, read at the whole as 生生 going on with more still able to form, and not as growth, needs no growth of the whole possible. That this is the direction of 生生 or better is not shown: ranking needs C."
+     "en": "Reading [AI reading, D45]: 生生不息, read at the whole as 生生 going on with more still able to form, and not as growth, needs no growth of the whole possible. Not shown (record): that growth relative to what is held is better or is the direction of 生生: ranking needs C or a premise in its place."
     },
     "role": "carries"
    },
@@ -5763,7 +5763,7 @@
   "relation": "divergence",
   "agreement_of": null,
   "reading": {
-   "en": "05 takes up cooperation and places what restores it elsewhere: kept promises and enforced contracts are laws giving first, the law changes, not the state alone, so security would have to change someone's law of giving. Whether people cooperate more when secure is not stated. One thin form is proposed here, not stated: read security as slack or reserve. A gift within the giver's slack leaves both supported, renewal from outside lets a giver give without its level falling, and in one witness ignition, defined as spending a reserve, needs one already present (near-definitional). [AI reading]"
+   "en": "05 takes up cooperation and places what restores it elsewhere: kept promises and enforced contracts are laws giving first, the law changes, not the state alone, so security would have to change someone's law of giving. Whether people cooperate more when secure is not stated. One thin form is proposed here, not stated: read security as slack or reserve. In single witnesses, a gift within the giver's slack leaves both supported, renewal from outside lets a giver give without its level falling, and ignition, defined as spending a reserve, needs one already present (near-definitional). [AI reading]"
   },
   "targets": [
    {
@@ -7693,7 +7693,7 @@
     "record": "joint-plans-from-a-supported-start",
     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start",
     "says": {
-     "en": "Theorem (any process; periphery module): 'With faithful joint-to-local projections and valid local plans', two properties holding on the covered start, every pair of locally authorized moves jointly allowed and every admitted joint successor keeping both, 'the paired finite plan is valid'. 'Promises do not': reciprocal eventual promises hold where neither ever happens. Its record: that an actual joint activity meets these is supplied."
+     "en": "Theorem (any process; periphery module): 'With faithful joint-to-local projections and valid local plans', two properties holding on the covered start, every pair of locally authorized moves jointly allowed with a successor wherever both hold, and every admitted joint successor keeping both, 'the paired finite plan is valid'. 'Promises do not': reciprocal eventual promises hold where neither ever happens. Its record: that an actual joint activity meets these is supplied."
     },
     "role": "carries"
    }
@@ -9491,7 +9491,7 @@
   "relation": "scope",
   "agreement_of": null,
   "reading": {
-   "en": "The account says where such composition holds: deliveries compose where they hold or restore what the others use, and one changing what its task does not list can make a regular pair of tasks impossible. Faithful projections and valid local plans pair into a valid joint plan under stated supports; reciprocal promises can be empty, so a contract is not a start. Exclusive footprints have the child workspace's form. Local views glue exactly where they agree where they meet. [AI reading]"
+   "en": "The account says where such composition holds: deliveries compose where they hold or restore what the others use, and one changing what its task does not list can make a regular pair of tasks impossible. Faithful projections and valid local plans pair into a valid joint plan under stated supports; reciprocal promises can be empty, so a contract alone forces no start. Exclusive footprints have the child workspace's form. Local views glue exactly where they agree where they meet. [AI reading]"
   },
   "targets": [
    {
@@ -9507,7 +9507,7 @@
     "record": "joint-plans-from-a-supported-start",
     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start",
     "says": {
-     "en": "Theorem (any process; periphery module): 'With faithful joint-to-local projections and valid local plans', two properties holding on the covered start, every pair of locally authorized moves jointly allowed and every admitted joint successor keeping both, 'the paired finite plan is valid'. 'Promises do not': reciprocal eventual promises hold where neither ever happens. Its record: that an actual joint activity meets these is supplied."
+     "en": "Theorem (any process; periphery module): 'With faithful joint-to-local projections and valid local plans', two properties holding on the covered start, every pair of locally authorized moves jointly allowed with a successor wherever both hold, and every admitted joint successor keeping both, 'the paired finite plan is valid'. 'Promises do not': reciprocal eventual promises hold where neither ever happens. Its record: that an actual joint activity meets these is supplied."
     },
     "role": "carries"
    },
@@ -11140,7 +11140,7 @@
     "record": "giving-that-waits-on-giving",
     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-giving-that-waits-on-giving",
     "says": {
-     "en": "Theorem: with memory, a formation gives at step n exactly where every formation within n waits of it gave at the start, so a withholding stays and spreads downstream; one withholding, every formation within d waits of it, ends all giving from step d on. Reading [D48]: kept promises and enforced contracts are laws giving first: the law changes, not the state alone. Not that cooperation is good."
+     "en": "Theorem: with memory, a formation gives at step n exactly where every formation within n waits of it gave at the start, so a withholding stays and spreads downstream; one withholding, every formation within d waits of it, ends all giving from step d on. Reading [AI reading, D48]: kept promises and enforced contracts are laws giving first: the law changes, not the state alone. Not that cooperation is good."
     },
     "role": "carries",
     "part": "D48"
@@ -12089,7 +12089,7 @@
   "relation": "scope",
   "agreement_of": null,
   "reading": {
-   "en": "The account finds both sides. Each counting its own draw misses joint excess, the source's fear with its premises. Yet an order rising in its own continuation ranks a coupled ending below with no C: a premise weaker than C, not none. So \"regardless of content\" is scoped: it depends on what one's own continuation holds, and where a course keeps something beyond, some such order reverses. Other rankings still need C for order, with the continuation condition for scope, neither asserted. [AI reading]"
+   "en": "The account finds both sides. Each counting its own draw misses joint excess, the source's fear with its premises. Yet an order rising in its own continuation ranks a coupled ending below with no C: a premise weaker than C, not none. So \"regardless of content\" is scoped: it depends on what one's own continuation holds, and where a course keeps something beyond, some such order reverses. Other rankings still need C, or a premise in its place, for order, with the continuation condition for scope, neither asserted, warrant open. [AI reading]"
   },
   "targets": [
    {
@@ -12668,7 +12668,7 @@
   "relation": "divergence",
   "agreement_of": null,
   "reading": {
-   "en": "The account has one root and no separate subject: a formation is one law, and what stands as \"self\" a closure. 06 says one early scheme with a primitive 間 was replaced by the root's grammar; 法则 17 and a first-person root are not discussed live. A limit exists on other terms: no family of readings says every reading, of self-description in general, granting no root. 08 keeps \"what an experience is like is not how it relates\" as a live defeater. So the source stands as a test; Ren's own note (own words 59) calls all one. [AI reading]"
+   "en": "The account has one root and no separate subject: a formation is one law, and what stands as \"self\" a closure. 06 says one early scheme with a primitive 間 was replaced by the root's grammar; 法则 17 and a first-person root are not discussed live. A limit exists on other terms: no family of claims says every reading, of self-description in general, granting no root. 08 keeps \"what an experience is like is not how it relates\" as a live defeater. So the source stands as a test; Ren's own note (own words 59) calls all one. [AI reading]"
   },
   "targets": [
    {
@@ -13072,7 +13072,7 @@
   "relation": "divergence",
   "agreement_of": null,
   "reading": {
-   "en": "生生 is the live direction, compared by widening under the continuation condition for scope and C for order, argued and unasserted, where the source says common sense. Provision has laws, though not against the source's phrase, which asks no sacrifice of the recipient: a continuing finite family cannot go unfed from beyond, and reasons each within what is given can together exceed it. A floor above trades does not follow from C. \"Fix it\" has no criterion without C and a commitment. [AI reading]"
+   "en": "生生 is the live direction, compared by widening under the continuation condition for scope and C for order, argued and unasserted, their warrant open, where the source says common sense. Provision has laws, though not against the source's phrase, which asks no sacrifice of the recipient: a continuing finite family cannot go unfed from beyond, and reasons each within what is given can together exceed it. A floor above trades does not follow from C. \"Fix it\" has no criterion without C, or a premise in its place, and a commitment. [AI reading]"
   },
   "targets": [
    {
@@ -13103,7 +13103,7 @@
     "record": "own-count-misses-joint-excess",
     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-own-count-misses-joint-excess",
     "says": {
-     "en": "Theorem on the World: formations each taking within what is given can together exceed it; with natural-number amounts joint excess cannot outlast what was held; where renewers depend on what they renew it ends the renewal and those depending at such a need."
+     "en": "Theorem on the World: formations each taking within what is given can together exceed it; with natural-number amounts joint excess cannot outlast what was held; where renewers depend on what they renew at a need of at least `m`, `n` consecutive steps of it from a level below `n + m` end the renewal and those depending at such a need."
     },
     "role": "neighbour"
    }
@@ -14587,7 +14587,7 @@
   "carried": "carried-in-part",
   "relation": "agreement",
   "reading": {
-   "en": "Three forms. Locality: a part's change stays its own only within others' margins. Derivation: a mixed comparison is decided both ways by positive weightings, and a frame fixes no order; ordering needs C, the continuation condition fixes scope only; neither asserted, warrant open, and C is silent on mixed cases. Resolution: a law privileging neither side never brings agreement on a code, and among symmetric roles only an asymmetry or a procedure differentiates. Reading spent rewards so is my step. [AI reading]"
+   "en": "Three forms. Locality: a part's change stays its own only within others' margins. Derivation: a mixed comparison is decided both ways by positive weightings, and a frame fixes no order; ordering needs C or a premise in its place, the continuation condition fixes scope only; neither asserted, warrant open, and C is silent on mixed cases. Resolution: a law privileging neither side never brings agreement on a code, and among symmetric roles only an asymmetry or a procedure differentiates. Reading spent rewards so is my step. [AI reading]"
   },
   "targets": [
    {
@@ -14979,7 +14979,7 @@
   "carried": "changed",
   "relation": "divergence",
   "reading": {
-   "en": "The source holds as a value what the account gives only under premises: that these losses count is the continuation condition's scope, a ranking needs C; neither asserted, warrant open, and no law says a loss of records is a harm. Its judgment makes preservation defeasible: for actual continuation, not an institution's survival. Same word, other reference: continuity here is records surviving an upgrade; continuation is relative to a class the law does not warrant. [AI reading]"
+   "en": "The source holds as a value what the account gives only under premises: that these losses count is the continuation condition's scope, a ranking needs C or a premise in its place; neither asserted, warrant open, and no law says a loss of records is a harm. Its judgment makes preservation defeasible: for actual continuation, not an institution's survival. Same word, other reference: continuity here is records surviving an upgrade; continuation is relative to a class the law does not warrant. [AI reading]"
   },
   "targets": [
    {
@@ -15017,7 +15017,7 @@
     "record": "organizational-formation-from-generative-comparison",
     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-organizational-formation-from-generative-comparison",
     "says": {
-     "en": "Reading [AI, D65; any ranking is C's, under the two premises of 07]: a condition indispensable to one way of organization is not thereby basic: living may continue, and improve, after the way of coordination changes."
+     "en": "Reading [AI, D65; a ranking needs C or a premise in its place, under 07's premises]: a condition indispensable to one way of organization is not thereby basic: living may continue, and improve, after the way of coordination changes."
     },
     "role": "neighbour",
     "part": "Reading D65"
@@ -15321,7 +15321,7 @@
     "record": "organizational-formation-from-generative-comparison",
     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-organizational-formation-from-generative-comparison",
     "says": {
-     "en": "Reading [AI, D65; any ranking is C's, under the two premises of 07]: whether a development calls for expanding, maintaining, reorganizing or contracting is asked of the whole continuation it forms. A condition indispensable to one way of organization is not thereby basic."
+     "en": "Reading [AI, D65; a ranking needs C or a premise in its place, under 07's premises]: whether a development calls for expanding, maintaining, reorganizing or contracting is asked of the whole continuation it forms. A condition indispensable to one way of organization is not thereby basic."
     },
     "role": "neighbour",
     "part": "Reading D65"
@@ -15768,7 +15768,7 @@
     "record": "organizational-formation-from-generative-comparison",
     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-organizational-formation-from-generative-comparison",
     "says": {
-     "en": "Reading [AI, any ranking is C's, under the two premises of 07]: the laws of capture and drain give institutions no prior duty to contract and no prior licence to grow; whether a development calls for expanding, maintaining, reorganizing or contracting is asked of the whole continuation it forms."
+     "en": "Reading [AI, a ranking needs C or a premise in its place, under 07's premises]: the laws of capture and drain give institutions no prior duty to contract and no prior licence to grow; whether a development calls for expanding, maintaining, reorganizing or contracting is asked of the whole continuation it forms."
     },
     "role": "carries",
     "part": "Reading D65"
@@ -15822,7 +15822,7 @@
   "carried": "fresh-reading",
   "relation": "agreement",
   "reading": {
-   "en": "Thesis T7 has this form: a measure whose rule and reading are formed from the share it selects is dropped only through a change in what the loop reads, such as a reader outside the share, not on evidence alone; proved only in part. In frozen test LA2 one note of the loss turned one trained judge of its own answers, counting against T7's fourth forbidden case. An outside reader reaches only what couples in. That a self-improver so reads is a premise. Proposed here; T7 comes down from the corpus's meta-attractor line (02's D26), so by descent as far as it goes. [AI reading]"
+   "en": "Thesis T7 has this form: a measure whose rule and reading are formed from the share it selects is, drift aside, dropped only through a change in what the loop reads, such as a reader outside the share, not on evidence alone; proved only in part. In frozen test LA2 one note of the loss turned one trained judge of its own answers, counting against T7's fourth forbidden case. An outside reader reaches only what couples in. That a self-improver so reads is a premise. Proposed here; T7 comes down from the corpus's meta-attractor line (02's D26), so by descent as far as it goes. [AI reading]"
   },
   "targets": [
    {
@@ -15897,7 +15897,7 @@
   "carried": "fresh-reading",
   "relation": "divergence",
   "reading": {
-   "en": "The account keeps what the picture leaves out. A course that keeps widening on a finite family has to be fed from beyond and, under upkeep, has ever more takers; starting from relations removes a fixed sum but not rivalry. Reading a shared space as such a course is mine, and untested. The divergence is with the picture, not the folder's hedged design. No law here says a loss is a harm; a ranking needs C, the continuation condition fixing scope, neither asserted. [AI reading]"
+   "en": "The account keeps what the picture leaves out. A course that keeps widening on a finite family has to be fed from beyond and, under upkeep, has ever more takers; starting from relations removes a fixed sum but not rivalry. Reading a shared space as such a course is mine, and untested. The divergence is with the picture, not the folder's hedged design. No law here says a loss is a harm; a ranking needs C or a premise in its place, the continuation condition fixing scope, neither asserted, warrant open. [AI reading]"
   },
   "targets": [
    {
@@ -16144,7 +16144,7 @@
   "carried": "fresh-reading",
   "relation": "divergence",
   "reading": {
-   "en": "The rate table normalizes actual prices, which the account's wording keeps for economic relations, and human time stays a separate line, so no single unit is claimed. What the account would ask is whose losses have no line: under the continuation condition (scope) every continuation's count; a ranking needs C (order); neither asserted, warrant open, no law says a loss is a harm. Whether an actual AI system counts is not shown. A report can omit what was depleted; the frame stays the source's. Proposed here: the account has no ledger. [AI reading]"
+   "en": "The rate table normalizes actual prices, which the account's wording keeps for economic relations, and human time stays a separate line, so no single unit is claimed. What the account would ask is whose losses have no line: under the continuation condition (scope) every continuation's count; a ranking needs C (order) or a premise in its place; neither asserted, warrant open, no law says a loss is a harm. Whether an actual AI system counts is not shown. A report can omit what was depleted; the frame stays the source's. Proposed here: the account has no ledger. [AI reading]"
   },
   "targets": [
    {
@@ -16371,7 +16371,7 @@
   "relation": "divergence",
   "agreement_of": null,
   "reading": {
-   "en": "The account begins from relations with no solver presupposed. 'Solved' has the form of a standard met or a task delivered, read against something supplied: meeting it says nothing of significance, and widening follows deliveries in neither direction. 'Developed when facing' claims an origin, and 04 reads of dispositions that a present benefit does not establish one. Under the continuation condition, for scope, what a solution ends counts too; ranking it needs C, for order; neither asserted, warrant open. The claim concerns humans and is not refuted here. [AI reading]"
+   "en": "The account begins from relations with no solver presupposed. 'Solved' has the form of a standard met or a task delivered, read against something supplied: meeting it says nothing of significance, and widening follows deliveries in neither direction. 'Developed when facing' claims an origin, and 04 reads of dispositions that a present benefit does not establish one. Under the continuation condition, for scope, what a solution ends counts too; ranking it needs C, for order, or a premise in its place; neither asserted, warrant open. The claim concerns humans and is not refuted here. [AI reading]"
   },
   "targets": [
    {
@@ -16409,7 +16409,7 @@
    {
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#does-not-settle",
     "says": {
-     "en": "“Under the condition every narrowing loses something with significance.” “Predation, apoptosis and ending a cancer, read as losing and opening something, are mixed [AI reading, D65]”; “telling harm from non-harm among them needs a measure.” The condition fixes scope and ranks nothing; order needs C; neither is asserted."
+     "en": "“Under the condition every narrowing loses something with significance.” “Predation, apoptosis and ending a cancer, read as losing and opening something, are mixed [AI reading, D65]”; “telling harm from non-harm among them needs a measure.” The condition fixes scope and ranks nothing; C gives order, and a ranking of courses needs C or a premise in its place; neither is asserted."
     },
     "role": "carries"
    },
@@ -16811,7 +16811,7 @@
   "relation": "divergence",
   "agreement_of": null,
   "reading": {
-   "en": "Proposed here; no live text draws either link. Value alone has neighbours, none about value claims: in a task protocol, relabelling without rewriting the encoding fails; promises alone start nothing where neither side moves; in language models an instruction kept no dependent untold. Tool alone has a form: a distinction matters where histories the evidence leaves open need incompatible responses. Apart: the source says such tools fail; the account's centre says a selection can succeed while what it cannot read is lost, so success shows no understanding. [AI reading]"
+   "en": "Proposed here; no live text draws either link. Value alone has neighbours, none about value claims: in a task protocol, relabelling without rewriting the encoding fails; promises alone force no start, holding on both sides where neither ever moves; in language models an instruction kept no dependent untold. Tool alone has a form: a distinction matters where histories the evidence leaves open need incompatible responses. Apart: the source says such tools fail; the account's centre says a selection can succeed while what it cannot read is lost, so success shows no understanding. [AI reading]"
   },
   "targets": [
    {
@@ -17256,7 +17256,7 @@
   "relation": null,
   "agreement_of": null,
   "reading": {
-   "en": "A proposal, with no form in the account: the nearest live sentence, kept promises and enforced contracts as 'laws giving first: the law changes, not the state alone', sets an act law against a configuration, not institutions against character, and a nobler disposition would change the law too. Where the rest outruns the renewal one member's restraint decides nothing, but that is one member against the rest, not people at large. 'Good' and 'better' need C, with the condition for scope, neither asserted. [AI reading]"
+   "en": "A proposal, with no form in the account: the nearest live sentence, kept promises and enforced contracts as 'laws giving first: the law changes, not the state alone', sets an act law against a configuration, not institutions against character, and a nobler disposition would change the law too. Where the rest outruns the renewal one member's restraint decides nothing, but that is one member against the rest, not people at large. 'Good' and 'better' need C or a premise in its place, with the condition for scope, neither asserted, their warrant open. [AI reading]"
   },
   "targets": [],
   "account_adds": {
@@ -17403,13 +17403,13 @@
    {
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#does-not-settle",
     "says": {
-     "en": "“Predation, apoptosis and ending a cancer, read as losing and opening something, are mixed [AI reading, D65]”; “No ending is licensed”. Under the continuation condition for scope, which ranks nothing; order needs C; neither asserted."
+     "en": "“Predation, apoptosis and ending a cancer, read as losing and opening something, are mixed [AI reading, D65]”; “No ending is licensed”. Under the continuation condition for scope, which ranks nothing; order needs C or a premise in its place; neither asserted."
     },
     "role": "neighbour"
    }
   ],
   "account_adds": {
-   "en": "In a witness a lineage depending on a condition outside the body still has a member a cohort after the end; without sequestering, a variant selected within lowers the founding value. Neither is called better: a ranking needs C, with the continuation condition for scope, both unasserted."
+   "en": "In a witness a lineage depending on a condition outside the body still has a member a cohort after the end; without sequestering, a variant selected within lowers the founding value. Neither is called better: a ranking needs C or a premise in its place, with the continuation condition for scope, both unasserted, their warrant open."
   },
   "source_adds": {
    "en": "That the organism eliminated the pattern, as a success, and the explanation why and how, including the policing the account leaves unstated: apoptosis appears only as a mixed case."
@@ -17546,7 +17546,7 @@
     "record": "shaping-the-rule-selected-by-what-comes-back",
     "anchor": "theories/becoming/chapters/02-MAP.md#r-shaping-the-rule-selected-by-what-comes-back",
     "says": {
-     "en": "Counts: “At a step the rule favours the shapers (weakly) exactly where `c ≤ s`, whatever `p` comes to every member alike”; “a larger `p` pulls the rule toward even”; “With nothing coming back and a cost, the shapers' share falls strictly at every step”. Reading: “nothing here ranks open rule-making above capture: that needs C.”"
+     "en": "Counts: “At a step the rule favours the shapers (weakly) exactly where `c ≤ s`, whatever `p` comes to every member alike”; “a larger `p` pulls the rule toward even”; “With nothing coming back and a cost, the shapers' share falls strictly at every step”. Reading: “nothing here ranks open rule-making above capture: that needs C or a premise in its place.”"
     },
     "role": "carries"
    },
@@ -18314,7 +18314,7 @@
   "relation": "scope",
   "agreement_of": null,
   "reading": {
-   "en": "Proposed here: two sources counted by type can share a cause. In the account reviewers count by independent causes: two moved under one cause fail while every name is kept, with faithful reviewers assumed; a copied witness adds nothing, and whether mere agreement does is not shown. Readers drawn from the selected can lock a rule, and a pool recruiting only through itself reads a loss only if a reader comes from outside. These laws locate the README's gap on curators; they do not speak of museums. [AI reading]"
+   "en": "Proposed here: two sources counted by type can share a cause. In the account reviewers count by independent causes: two moved under one cause fail while every name is kept, with faithful reviewers assumed; a copied witness adds nothing, and whether mere agreement does is not shown. Readers drawn from the selected can lock a rule, and a pool recruiting only through itself couples into a loss only as its course without the loss would, and a pool comes to couple into what it does not yet couple into only through an admission not made through it or through members its course would hold anyway (each a witness). These laws locate the README's gap on curators; they do not speak of museums. [AI reading]"
   },
   "targets": [
    {
@@ -22180,7 +22180,7 @@
   "relation": "divergence",
   "agreement_of": null,
   "reading": {
-   "en": "On 良知 the account records a divergence of standing: 阳明 states as a recognised fact what the theory holds under an unasserted condition (an order of courses would need C too, neither asserted). It warns the source's marker of a risk: discounting each failed outcome as not real knowledge leaves nothing testable. Nearest forms for the counterfeit trap, none carrying it: self-reference does not certify itself; selection is blind beyond its couplings; each revision says its last gap. 工夫, 自欺 are absent. [AI reading]"
+   "en": "On 良知 the account records a divergence of standing: 阳明 states as a recognised fact what the theory holds under an unasserted condition (an order of courses would need C or a premise in its place too, neither asserted, warrant open). It warns the source's marker of a risk: discounting each failed outcome as not real knowledge leaves nothing testable. Nearest forms for the counterfeit trap, none carrying it: self-reference does not certify itself; selection is blind beyond its couplings; each revision says its last gap. 工夫, 自欺 are absent. [AI reading]"
   },
   "targets": [
    {
@@ -22784,7 +22784,7 @@
   "carried": "changed",
   "relation": "divergence",
   "reading": {
-   "en": "The account keeps the move (an aim is a premise, not read off dynamics) and changes the rest. One chosen premise becomes two with two roles, neither asserted, warrant open: the continuation condition (scope) and C (order). Same word, not same reference: the condition says anything's continuation has significance and ranks nothing, not that anything go on. T8 starts from what acting presupposes. Rankings need C, choices J1-J4. [AI reading]"
+   "en": "The account keeps the move (an aim is a premise, not read off dynamics) and changes the rest. One chosen premise becomes two with two roles, neither asserted, warrant open: the continuation condition (scope) and C (order). Same word, not same reference: the condition says anything's continuation has significance and ranks nothing, not that anything go on. T8 starts from what acting presupposes. Rankings need C or a premise in its place, choices J1-J4. [AI reading]"
   },
   "targets": [
    {
@@ -23888,13 +23888,13 @@
   "carried": "carried-in-part",
   "relation": "scope",
   "reading": {
-   "en": "The spine gives structures and no verdict. 成闭 is the lock: what is drawn in does not come back. 护闭 is removing at a branch the step that makes a configuration unobtainable (AI reading, D52); limits constraining steps leave what they constrain obtainable, so only 'larger opening' goes unmodelled. Ending a cancer is read as mixed, ranked only by reading or J1/J2. Under the condition (scope) and C (order), neither asserted, a pure closing argued good would meet T8's refuter; a net weighting ranks it above only where the item weighs below zero. [AI reading]"
+   "en": "The spine gives structures and no verdict. 成闭 is the lock: what is drawn in does not come back. 护闭 is removing at a branch the step that makes a configuration unobtainable (AI reading, D52); limits constraining steps leave what they constrain obtainable, so only 'larger opening' goes unmodelled. Ending a cancer is read as mixed, ranked by C only under the whole-run and possibility readings, and under the stepwise and relation-level readings by a further premise such as J1/J2. Under the condition (scope) and C (order), neither asserted, a pure closing argued good would meet T8's refuter; a net weighting ranks it above only where the item weighs below zero. [AI reading]"
   },
   "targets": [
    {
     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#closing-and-opening",
     "says": {
-     "en": "护闭: removing at a fork the step making a configuration unobtainable [AI reading, D52]. Limits that promise, train or stop harm constrain some steps while what they constrain can still be had, 护闭's structure; those monopolizing entry or removing alternatives are 成闭. Which kind depends on what it does to the obtainable, not its name."
+     "en": "护闭: removing at a fork the step making a configuration unobtainable [AI reading, D52]. Limits that promise, train or stop harm constrain some steps while what they constrain can still be had, 护闭's structure; those monopolizing entry or removing alternatives are 成闭. Which kind depends on what it does to what can be had again, not its name."
     },
     "role": "carries",
     "part": "the 护闭, 成闭 and 限 rows; D52"
@@ -23978,7 +23978,7 @@
   "carried": "carried-in-part",
   "relation": "agreement",
   "reading": {
-   "en": "06 gives three spine structures and drops the charge of deceit. Local open, whole closed: takers each within what is given can together exceed it and end the renewal. Short open, long closed: a reading fixed by finite steps that includes every renewing run includes a consuming one, and distance to a break does not couple in by threshold. Surface open, meta closed: 元闭 seen from the state's side. Each law holds on its model. 06's rows read the early texts' own word, so the mapping comes by descent; the laws stand apart from it. [AI reading]"
+   "en": "06 gives three spine structures and drops the charge of deceit. Local open, whole closed: takers each within what is given can together exceed it and, at each of `n` steps from a level below `n + m`, end a renewal gated at `m`. Short open, long closed: a reading fixed by finite steps that includes every renewing run includes a consuming one, and distance to a break does not couple in by threshold. Surface open, meta closed: 元闭 seen from the state's side. Each law holds on its model. 06's rows read the early texts' own word, so the mapping comes by descent; the laws stand apart from it. [AI reading]"
   },
   "targets": [
    {
@@ -24291,7 +24291,7 @@
   "carried": "carried-in-part",
   "relation": "agreement",
   "reading": {
-   "en": "Each shape has a law form, on models. Exhaustion: steps of joint excess from a low enough level end the renewal and what depends on it; a regime's point of no return is exact. Lock-in: the capture laws. Monoculture: groups on one coupled family end together; that is not monoculture of value. The list as one pattern is not stated. T1, that persistence certifies the joint draw, is conjectured: passed in two simulations and on yeast regimes the analyst had seen, failed in four settings. [AI reading]"
+   "en": "Each shape has a law form, on models. Exhaustion: `n` steps of joint excess from a level below `n + m` end a renewal gated at `m` and what depends on it at such a need; a regime's point of no return is exact. Lock-in: the capture laws. Monoculture: groups on one coupled family end together; that is not monoculture of value. The list as one pattern is not stated. T1, that persistence certifies the joint draw, is conjectured: passed in two simulations and on yeast regimes the analyst had seen, failed in four settings. [AI reading]"
   },
   "targets": [
    {
@@ -24521,7 +24521,7 @@
   "carried": "carried-in-part",
   "relation": "divergence",
   "reading": {
-   "en": "The account has the mechanism and refuses the verdict. Generation goes on through carrying renewal, and with brief parts a whole persists only as parts arise. Closing in its form is no loss. But 'feature' is no dynamic's word here: with the continuation condition for scope every narrowing loses something with significance, and only C or further premises order anything. Apoptosis is read as mixed; no ending is licensed. Ending is one response under J1-J4, with residual losses. [AI reading]"
+   "en": "The account has the mechanism and refuses the verdict. Generation goes on through carrying renewal, and with brief parts a whole persists only as parts arise. Closing in its form is no loss. But 'feature' is no dynamic's word here: with the continuation condition for scope every narrowing loses something with significance, and only C or further premises order anything; neither the condition nor C is asserted, their warrant open. Apoptosis is read as mixed; no ending is licensed. Ending is one response under J1-J4, with residual losses. [AI reading]"
   },
   "targets": [
    {
@@ -25932,7 +25932,7 @@
   "carried": "carried-in-part",
   "relation": "agreement",
   "reading": {
-   "en": "The functional half has laws. A pool separates exactly what some member separates, so what a harm's sensing needs can be read as who is in the pool; a reading requires the drawn level to couple in by level, before the point of no return. It has edges: a pool recruiting only through itself couples into a loss only as its course without the loss would. Institutions are not modelled; pools' forming and resisting capture is not shown. [AI reading]"
+   "en": "The functional half has laws. A pool separates exactly what some member separates, so what a harm's sensing needs can be read as who is in the pool; a reading requires the drawn level to couple in by level, before the point of no return. It has edges: a pool recruiting only through itself couples into a loss only as its course without the loss would. One kind of institution has one minimal model on the root, as a reading, and no actual institution is shown to meet its hypotheses; pools' forming and resisting capture is not shown. [AI reading]"
   },
   "targets": [
    {
@@ -26983,7 +26983,7 @@
   "carried": "carried-in-part",
   "relation": "divergence",
   "reading": {
-   "en": "T8's for life is nearest to the first: argued, with the condition for scope and C for order, neither asserted; for life says whose way it is, not whose losses count. The floor's nearest form is J2's priority of basic conditions, a premise whose rival is not shown inconsistent, and basic there means what a form of living needs to go on, not freedom or dignity. Plurality is no value here: ending selecting between families is a law with no verdict. [AI reading]"
+   "en": "T8's for life is nearest to the first: argued, with the condition for scope and C for order, neither asserted, their warrant open; for life says whose way it is, not whose losses count. The floor's nearest form is J2's priority of basic conditions, a premise whose rival is not shown inconsistent, and basic there means what a form of living needs to go on, not freedom or dignity. Plurality is no value here: ending selecting between families is a law with no verdict. [AI reading]"
   },
   "targets": [
    {
@@ -27041,7 +27041,7 @@
   "carried": "carried-in-part",
   "relation": "scope",
   "reading": {
-   "en": "The account gives where this holds. Where the rest alone outruns the renewal, every dependent formation ends whatever a member takes, and no weight on such a reading selects the member's restraint. Where each drawer's own take is within the joint slack, a flow taking less by the excess keeps the need met. So an individual's restraint fails on one side of an exact line and is enough on the other, on the World model. 'Disease' is no dynamic's word here. [AI reading]"
+   "en": "The account gives where this holds. Where the rest alone takes more than a step gives at each of `n` steps from a level below `n + m`, under the gate, every formation depending on the condition at a need of at least `m` ends whatever a member takes, and at a need of one no weight on a reading of the condition from the rest's end on selects the member's restraint. Where each drawer's own take is within the joint slack, a flow taking less by the excess keeps the need met. So an individual's restraint fails on one side of an exact line and is enough on the other, on the World model. 'Disease' is no dynamic's word here. [AI reading]"
   },
   "targets": [
    {
@@ -30940,7 +30940,7 @@
   "relation": "scope",
   "agreement_of": null,
   "reading": {
-   "en": "02's D45 reads the corpus's second order as this law with its conditions (by descent; the law stands apart), in counts: at a step, what comes back to the shapers alone against cost decides the direction; shaped groups add assortment; offspring carrying the capacity is a premise. The source's lever, shared returns flipping the sign, holds in a witness; where something comes back, shared rule-making is not shown to remove the selection. Ranking open rule-making above capture needs C, and whose losses count the condition; neither is asserted. [AI reading, D45, D68]"
+   "en": "02's D45 reads the corpus's second order as this law with its conditions (by descent; the law stands apart), in counts: at a step, what comes back to the shapers alone against cost decides the direction; shaped groups add assortment; offspring carrying the capacity is a premise. The source's lever, shared returns flipping the sign, holds in a witness; where something comes back, shared rule-making is not shown to remove the selection. Ranking open rule-making above capture needs C or a premise in its place, and whose losses count the condition; neither is asserted, warrant open. [AI reading, D45, D68]"
   },
   "targets": [
    {
@@ -30980,7 +30980,7 @@
     "record": null,
     "anchor": "theories/becoming/chapters/02-MAP.md#capture",
     "says": {
-     "en": "Reading [AI reading, D45]: the corpus's second order is the law of the capacity to shape the rule with its conditions. Whether actual institutions or trained systems meet these premises is not established, and nothing here ranks open rule-making above capture: that needs C."
+     "en": "Reading [AI reading, D45]: the corpus's second order is the law of the capacity to shape the rule with its conditions. Whether actual institutions or trained systems meet these premises is not established, and nothing here ranks open rule-making above capture: that needs C or a premise in its place."
     },
     "role": "carries",
     "part": "D45, the corpus's second order"
@@ -31241,14 +31241,14 @@
     "record": null,
     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#joint-plans",
     "says": {
-     "en": "Reading [AI reading, D65; any ranking is C's, under the two premises of 07]: a condition indispensable to one way of organization is not thereby basic: living may continue, and improve, after the way of coordination changes."
+     "en": "Reading [AI reading, D65; a ranking needs C or a premise in its place, under 07's premises]: a condition indispensable to one way of organization is not thereby basic: living may continue, and improve, after the way of coordination changes."
     },
     "role": "carries",
     "part": "D65"
    }
   ],
   "account_adds": {
-   "en": "Exact laws for each part, and none ranks the loss: that needs C, and whose losses count needs the continuation condition, both unasserted. A caution the source lacks: what is indispensable to one way of organization is not thereby basic, and a contribution is indispensable only where every admissible allocation requires it."
+   "en": "Exact laws for each part, and none ranks the loss: that needs C or a premise in its place, and whose losses count needs the continuation condition, both unasserted, their warrant open. A caution the source lacks: what is indispensable to one way of organization is not thereby basic, and a contribution is indispensable only where every admissible allocation requires it."
   },
   "source_adds": {
    "en": "The definition; these capacities (sense, refuse, correct, exit, maintain alternatives, produce successors) taken together and called non-compensable; the sequence from language to practice to intelligibility; refusal and exit as named capacities."
@@ -32186,14 +32186,14 @@
   "relation": "agreement",
   "agreement_of": "law",
   "reading": {
-   "en": "The account states the join: formations each within what is given can jointly exceed it; two locally successful plans on one reserve fail at the second joint step; at a mutual best response an optimizer takes its capacity beyond its family. Funding has neighbours, both periphery. The source's population boundary and the witness where capability changes basin membership are not in the chapters. \"Good\" is the source's word: any ranking needs C, and whose losses count the condition. [AI reading]"
+   "en": "The account states the join: formations each within what is given can jointly exceed it; two locally successful plans on one reserve fail at the second joint step; at a mutual best response an optimizer takes its capacity beyond its family. Funding has neighbours, both periphery. The source's population boundary and the witness where capability changes basin membership are not in the chapters. \"Good\" is the source's word: any ranking needs C or a premise in its place, and whose losses count the condition, neither asserted, warrant open. [AI reading]"
   },
   "targets": [
    {
     "record": "own-count-misses-joint-excess",
     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-own-count-misses-joint-excess",
     "says": {
-     "en": "Proved on models; restates the commons. Formations each taking within what is given can together exceed it; where renewers depend on what they renew, this ends renewal and those depending at such a need."
+     "en": "Proved on models; restates the commons. Formations each taking within what is given can together exceed it; where renewers depend on what they renew at a need of at least `m`, `n` consecutive steps of this from a level below `n + m` end renewal and those depending at such a need."
     },
     "role": "carries"
    },
@@ -32489,7 +32489,7 @@
   "relation": "scope",
   "agreement_of": null,
   "reading": {
-   "en": "02 reads one horn of Collingridge's dilemma here as a theorem, the other as a premise. Timing laws: in a two-kind count model, a reading turns the course for good only where the late reading still favours the others a step on; on any giving law, a level up to the top ends exactly where it starts below the point of no return; in a market instance the support cover grows with the transition. Neighbouring forms, not the source's budget rising within one basin. That actual rules are read so is not established. [AI reading, D45]"
+   "en": "02 reads one horn of Collingridge's dilemma here as a theorem, the other as a premise. Timing laws: in a two-kind count model, a reading turns the course for good only where the late reading still favours the others a step on; on the regime, under its premises on giving, a level up to the top ends exactly where it starts below the point of no return; in a market instance the support cover grows with the transition. Neighbouring forms, not the source's budget rising within one basin. That actual rules are read so is not established. [AI reading, D45]"
   },
   "targets": [
    {
@@ -32504,7 +32504,7 @@
     "record": "margin-of-a-regime",
     "anchor": "theories/becoming/chapters/02-MAP.md#r-margin-of-a-regime",
     "says": {
-     "en": "Theorem (the regime; any giving law, whole numbers). A level up to `hi` ends exactly where it starts below `H + y`: the point of no return is exact."
+     "en": "Theorem (the regime; any giving law, whole numbers). Under its premises on giving, a level up to `hi` ends exactly where it starts below `H + y`: the point of no return is exact."
     },
     "role": "neighbour"
    },
@@ -32520,7 +32520,7 @@
     "record": null,
     "anchor": "theories/becoming/chapters/02-MAP.md#capture",
     "says": {
-     "en": "Reading [AI reading, D45]: the others' late reading gives one horn of Collingridge's dilemma (1980) as a theorem and the other as a premise; the point of no return belongs to the share's course. Whether actual rules are read so is not established. Nothing here ranks a course: that needs C."
+     "en": "Reading [AI reading, D45]: the others' late reading gives one horn of Collingridge's dilemma (1980) as a theorem and the other as a premise; the point of no return belongs to the share's course. Whether actual rules are read so is not established. Nothing here ranks a course: that needs C or a premise in its place."
     },
     "role": "carries",
     "part": "D45, Collingridge"
@@ -32761,7 +32761,7 @@
   "relation": "divergence",
   "agreement_of": null,
   "reading": {
-   "en": "The source asserts an order and a must. Its cardinal rule, reshape the feasible set rather than optimize inside it, has a live form: where the rest outruns the renewal no weight selects restraint, and only a change of the exchange helps. The order has none: named exits under hypotheses, in no sequence, none shown of an actual collective. Ranking any path needs C, and scope the condition; neither is asserted. [AI reading]"
+   "en": "The source asserts an order and a must. Its cardinal rule, reshape the feasible set rather than optimize inside it, has a live form: where the rest outruns the renewal, at need one no weight on a reading of the condition only from the rest's end on selects a member's restraint, and only a change of the rest's exchange helps. The order has none: named exits under hypotheses, in no sequence, none shown of an actual collective. Ranking any path needs C or a premise in its place, and scope the condition; neither is asserted, warrant open. [AI reading]"
   },
   "targets": [
    {
@@ -32988,7 +32988,7 @@
     "record": null,
     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#joint-plans",
     "says": {
-     "en": "Reading [AI reading, D65; any ranking is C's, under the two premises of 07]: capture and drain give institutions no prior duty to contract and no prior licence to grow."
+     "en": "Reading [AI reading, D65; a ranking needs C or a premise in its place, under 07's premises]: capture and drain give institutions no prior duty to contract and no prior licence to grow."
     },
     "role": "carries",
     "part": "D65"
@@ -33118,7 +33118,7 @@
   "relation": "agreement",
   "agreement_of": "reading",
   "reading": {
-   "en": "Parts stand separately: a formation sparing what it waits on gives first; building shared capacity can be warranted in a comparison without fixing one carrier, where the record's premises hold. Nothing in the account states this loop or its carriers. Calling it better is C's, and whose losses count the condition's. The link is proposed here. [AI reading]"
+   "en": "Parts stand separately: a formation sparing all it waits on gives from step 1 whatever the start; building shared capacity can be warranted in a comparison without fixing one carrier, where the record's premises hold. Nothing in the account states this loop or its carriers. Calling it better needs C or a premise in its place, and whose losses count is the condition's; neither is asserted, their warrant open. The link is proposed here. [AI reading]"
   },
   "targets": [
    {
@@ -33641,7 +33641,7 @@
     "record": "thresholds-of-waiting",
     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
     "says": {
-     "en": "Theorem. A formation gives where all but its tolerance of what it waits on gave. Restoring needs a formation that spares all it waits on: without one, total withholding stays (`Tolerance.total_stays`). Reading [D48] follows in the section."
+     "en": "Theorem. Under the tolerating law a formation gives where all but its tolerance of what it waits on gave. Restoring needs a formation that spares all it waits on: without one, total withholding stays (`Tolerance.total_stays`). Reading [D48] follows in the section."
     },
     "role": "carries",
     "part": "theorem; D48"
@@ -33753,7 +33753,7 @@
     "record": null,
     "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#6-what-enough-situationality-would-have-to-mean",
     "says": {
-     "en": "Reading [AI reading, D45]: six conditions at once. Observation is the first, necessary and not sufficient: seeing is not valuing, and coupling is not compliance. All six still rank nothing: that needs C, and counting losses that return to no one needs the continuation condition."
+     "en": "Reading [AI reading, D45]: six conditions at once. Observation is the first, necessary and not sufficient: seeing is not valuing, and coupling is not compliance. All six still rank nothing: calling the widening course better needs C or a premise in its place, and counting losses that return to no one needs the continuation condition."
     },
     "role": "carries",
     "part": "D45"
@@ -34055,7 +34055,7 @@
   "relation": "agreement",
   "agreement_of": "law",
   "reading": {
-   "en": "The confined rise has the form: a lineage raised by selection within a whole, taking from what the whole depends on, has no member after the end. It restates known results; that a tumour meets the clauses is empirical. The law ranks nothing. Under the condition alone 07 reads ending a cancer as mixed; under C, whole-run, the course without an overdrawing formation ranks higher, and J1/J2 rank stepwise where C alone does not. Whose losses count is the condition's; neither it nor C is asserted. [AI reading]"
+   "en": "The confined rise has the form: a lineage raised by selection within a whole, taking from what the whole depends on, has no member after the end. It restates known results; that a tumour meets the clauses is empirical. The law ranks nothing. Under the condition alone 07 reads ending a cancer as mixed; under C, whole-run, the course without an overdrawing formation ranks higher, and J1/J2 rank stepwise where C alone does not. Whose losses count is the condition's; neither it nor C is asserted, and their warrant is open. [AI reading]"
   },
   "targets": [
    {
@@ -34776,7 +34776,7 @@
   "relation": "agreement",
   "agreement_of": "reading",
   "reading": {
-   "en": "The account has the form of drawing a condition beyond what couples in, and a pace reading, but response capacity is not among its named conditions; reading it as such is mine. Its periphery has exact covers for a market floor. Preservation being better needs C; scope, the continuation condition. [AI reading]"
+   "en": "The account has the form of drawing a condition beyond what couples in, and a pace reading, but response capacity is not among its named conditions; reading it as such is mine. Its periphery has exact covers for a market floor. Preservation being better needs C or a premise in its place; scope, the continuation condition; neither asserted, warrant open. [AI reading]"
   },
   "targets": [
    {
@@ -35556,7 +35556,7 @@
   "carried": "carried-in-part",
   "relation": "scope",
   "reading": {
-   "en": "The account gives where it holds, under hypotheses: where the others alone outrun a renewal, a member's act changes no score reading the condition from then on; each staying within a step's giving does not keep the joint take within it. Urgency has only a window's form: before the regime's point of no return. The laws bear on kinds of case, evaluate nothing and date nothing, and a restraint within the joint slack can keep a need. [AI reading]"
+   "en": "The account gives where it holds, under hypotheses: where the others alone outrun a renewal at a need of one, a member's act changes no score reading the condition from then on; each staying within a step's giving does not keep the joint take within it. Urgency has only a window's form: before the regime's point of no return. The laws bear on kinds of case, evaluate nothing and date nothing, and a restraint within the joint slack can keep a need. [AI reading]"
   },
   "targets": [
    {
@@ -36152,7 +36152,7 @@
    }
   ],
   "account_adds": {
-   "en": "Where no widening move exists: past a point of no return, after a window closes, where the rest outruns the renewal."
+   "en": "Where a widening move need not exist: past a point of no return, after a window closes, where the rest outruns the renewal."
   },
   "source_adds": {
    "en": "大同's own content, the word being absent from the live account; the grammatical argument from 行, and the pole star as practical orientation; and that a direction therefore cannot totalise. The account does not state that last: a rule read from its share locks whatever it favours."
@@ -36243,7 +36243,7 @@
    }
   ],
   "account_adds": {
-   "en": "Exact laws of return, and that keeping a course open is not more options. Calling any basin better needs C, with the condition for scope, neither asserted, warrant open."
+   "en": "Exact laws of return, and that keeping a course open is not more options. Calling any basin better needs C or a premise in its place, with the condition for scope, neither asserted, warrant open."
   },
   "source_adds": {
    "en": "A named good basin and capacity to return as what 大同 is."
@@ -36281,7 +36281,7 @@
   "carried": "carried-in-part",
   "relation": "scope",
   "reading": {
-   "en": "Narrower than the source. 06 reads 和而不同 as what a pool adds: exactly the difference, and pooling the same adds nothing. Nearby, and joined by no live text: an imposed code makes all agree and each loses the distinctions it merges; 并育不相害 has the form of a part's draw within others' margins, and calling that better needs C, with the condition for scope, neither asserted, warrant open. No law gives sameness ending generation. 和而不同 itself is an evaluation of conduct. [AI reading]"
+   "en": "Narrower than the source. 06 reads 和而不同 as what a pool adds: exactly the difference, and pooling the same adds nothing. Nearby, and joined by no live text: an imposed code makes all agree and each loses the distinctions it merges; 并育不相害 has the form of a part's draw within others' margins, and calling that better needs C or a premise in its place, with the condition for scope, neither asserted, warrant open. No law gives sameness ending generation. 和而不同 itself is an evaluation of conduct. [AI reading]"
   },
   "targets": [
    {
@@ -37148,7 +37148,7 @@
   "carried": "changed",
   "relation": "divergence",
   "reading": {
-   "en": "The account refuses this form where it would matter: a shared process implies no cosmic subject and no aggregate interest, a collective is no unit with an interest, and part-whole is three relations, with no fixed ladder of scales. Nonduality is a requirement of method and proves no ethical necessity, so from 'we are the system' no 'should' follows; a ranking needs C, the condition fixing scope, neither asserted, warrant open. [AI reading]"
+   "en": "The account refuses this form where it would matter: a shared process implies no cosmic subject and no aggregate interest, a collective is no unit with an interest, and part-whole is three relations, with no fixed ladder of scales. Nonduality is a requirement of method and proves no ethical necessity, so from 'we are the system' no 'should' follows; a ranking needs C or a premise in its place, the condition fixing scope, neither asserted, warrant open. [AI reading]"
   },
   "targets": [
    {
@@ -39602,7 +39602,7 @@
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-own-widening-within-the-margin",
     "role": "neighbour",
     "says": {
-     "en": "Theorem (World; balance; part and region decided): where a part's activity widens what can form within its own region, the whole widens exactly when its net draw stays within the margin for every formation outside the region, and is mixed exactly when it goes beyond for one. Mixed is not ordered; that widening is better needs C."
+     "en": "Theorem (World; balance; part and region decided): where a part's activity widens what can form within its own region, the whole widens exactly when its net draw stays within the margin for every formation outside the region, and is mixed exactly when it goes beyond for one. Mixed is not ordered; that widening is better needs C or a premise in its place."
     }
    },
    {
@@ -39816,7 +39816,7 @@
     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it",
     "role": "carries",
     "says": {
-     "en": "Theorem (natural amounts; the gate for keeping): each drawer counts c for each step what all leave meets a positive need m. In turn, two or more, no floor, where c < m every perfect profile leaves nothing before the horizon; under the gate, where m < c every perfect profile leaves exactly the need."
+     "en": "Theorem (natural amounts; the gate for keeping): each drawer counts c for each step what all leave meets a positive need m. In turn, two or more, no floor, where c < m every perfect profile leaves nothing before the horizon; under the gate, where m < c every perfect profile leaves exactly the need of an amount meeting it and nothing of a smaller one."
     }
    }
   ],
@@ -40249,7 +40249,7 @@
   "relation": "scope",
   "agreement_of": null,
   "reading": {
-   "en": "Mutual dependence is not mutual benefit, and that the Earth is mutually dependent is not shown. 'Value it would itself have wanted' has an exact form: a want outlasting the condition must count the joint draw. Held de se along one class, self-concern reaches those a condition it affects later feeds. An enlarged 'us' of members alone reaches nothing: the class must hold the condition with them. The source rests on this route, which a dossier names enlightened self-interest; a loss returning to no one lies outside it and needs the condition for scope; ranking it needs C, neither asserted, warrant open. [AI reading]"
+   "en": "Mutual dependence is not mutual benefit, and that the Earth is mutually dependent is not shown. 'Value it would itself have wanted' has an exact form: a want outlasting the condition must count the joint draw. Held de se along one class, self-concern reaches those a condition it affects later feeds. An enlarged 'us' of members alone reaches nothing: the class must hold the condition with them. The source rests on this route, which a dossier names enlightened self-interest; a loss returning to no one lies outside it and needs the condition for scope; ranking it needs C or a premise in its place, neither asserted, warrant open. [AI reading]"
   },
   "targets": [
    {
@@ -40340,7 +40340,7 @@
   "relation": "scope",
   "agreement_of": null,
   "reading": {
-   "en": "The form is mutual feeding: every feeding closure the whole. Taking jointly within what is given keeps the level, and giving jointly above taking restores it, the source's restored rather than spared, though recovery does not guarantee maintenance. But mutual feeding is no warrant: mutual dependence is not mutual benefit, and in a mutually fed flow C's premise is self-concern's monotonicity, placed more narrowly, not warranted. That restoring is better needs C for order, scope the continuation condition, neither asserted, warrant open. Whether any actual system is so fed is not shown. No live text names this pattern; the join is proposed here. [AI reading]"
+   "en": "The form is mutual feeding: every feeding closure the whole. Taking jointly within what is given keeps the level, and giving jointly above taking restores it, the source's restored rather than spared, though recovery does not guarantee maintenance. But mutual feeding is no warrant: mutual dependence is not mutual benefit, and in a mutually fed flow C's premise is self-concern's monotonicity, placed more narrowly, not warranted. That restoring is better needs C, or a premise in its place, for order, scope the continuation condition, neither asserted, warrant open. Whether any actual system is so fed is not shown. No live text names this pattern; the join is proposed here. [AI reading]"
   },
   "targets": [
    {
@@ -40999,7 +40999,7 @@
     "role": "neighbour",
     "part": "Reading D45, the six conditions",
     "says": {
-     "en": "Reading [AI, D45]: observation is the first of six conditions, necessary and not sufficient: seeing is not valuing, and coupling is not compliance. The sixth: the rest does not outrun the renewal. All six together rank nothing: that needs C, and counting losses that return to no one needs the continuation condition."
+     "en": "Reading [AI, D45]: observation is the first of six conditions, necessary and not sufficient: seeing is not valuing, and coupling is not compliance. The sixth: the rest does not outrun the renewal. All six together still rank nothing: calling the widening course better needs C or a premise in its place, and counting the losses that return to no one needs the continuation condition."
     }
    },
    {
@@ -42084,7 +42084,7 @@
     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-pool-that-recruits-through-itself",
     "role": "neighbour",
     "says": {
-     "en": "Theorem (World): a pool recruiting through itself comes to couple into a loss only as its course without the loss would; a reader admitted from outside couples it apart in the witness. Whether an actual pool recruits so is empirical."
+     "en": "Theorem (World): a pool recruiting through itself comes to couple into a loss only as its course without the loss would; in the witness, the scheduled pool, recruiting through itself and admitting a reader at step 2 in every history, couples the loss apart there. Whether an actual pool recruits so is empirical."
     }
    },
    {
@@ -42122,7 +42122,7 @@
    }
   ],
   "account_adds": {
-   "en": "What a route of correction needs structurally: a reader admitted from outside. And both outcomes, each under its own hypotheses."
+   "en": "What a route of correction needs structurally: an admission not made through the pool, or members its course would hold anyway (each a witness). And both outcomes, each under its own hypotheses."
   },
   "source_adds": {
    "en": "That erosion makes collapse rather than tyranny the terminal state."
@@ -42210,7 +42210,7 @@
   "relation": "divergence",
   "agreement_of": null,
   "reading": {
-   "en": "Taken up by name as an open conjecture in 05, 'from an earlier account; not formalized'; which ends the laws admit is asked, not answered. Near the first branch, not its freeze: D48 reads an exchange of harms as a loop, answering more running away. The third is a reading the thesis on collectives does not refuse. The verdict comes only under premises: on a fixed process the possible does not keep widening; calling that a loss, or the third better, needs C for order and the condition for scope, neither asserted, warrant open. 'Absorbing' is scoped by drift. [AI reading]"
+   "en": "Taken up by name as an open conjecture in 05, 'from an earlier account; not formalized'; which ends the laws admit is asked, not answered. Near the first branch, not its freeze: D48 reads an exchange of harms as a loop, answering more running away. The third is a reading the thesis on collectives does not refuse. The verdict comes only under premises: on a fixed process the possible does not keep widening; calling that a loss, or the third better, needs C or a premise in its place for order, and the condition for scope, neither asserted, warrant open. 'Absorbing' is scoped by drift. [AI reading]"
   },
   "targets": [
    {
@@ -42363,7 +42363,7 @@
   "relation": "agreement",
   "agreement_of": "reading",
   "reading": {
-   "en": "The account also says persistence does not select widening: a part can go on while closing what lies beyond its dependence. The clearing witness has this form: a greatest part continues, the dweller ends. Selection among groups by ending reads any amount, so whatever lets a group outlast neighbours rises by it, cooperative or not; which level wins is read off the counts. Nor does the account solve the problem; 'hostile', 'expansionist' and contact between societies are unread. Such losses count under the continuation condition; ranking them needs C, neither asserted, warrant open. The join to frames among societies is proposed here. [AI reading]"
+   "en": "The account also says persistence does not select widening: a part can go on while closing what lies beyond its dependence. The clearing witness has this form: a greatest part continues, the dweller ends. Selection among groups by ending reads any amount, so whatever lets a group outlast neighbours rises by it, cooperative or not; which level wins is read off the counts. Nor does the account solve the problem; 'hostile', 'expansionist' and contact between societies are unread. Such losses count under the continuation condition; ranking them needs C or a premise in its place, neither asserted, warrant open. The join to frames among societies is proposed here. [AI reading]"
   },
   "targets": [
    {
@@ -42439,7 +42439,7 @@
   "relation": "divergence",
   "agreement_of": null,
   "reading": {
-   "en": "Both refuse trust as an input; 'trust' as a term is absent from the chapters beyond 'antitrust'. The account's stated purpose runs the source's way: 08 reads the work as for a truth anyone can check, 'and through it shared understanding and coordination', and says no check shows it does. Its laws part: giving lost everywhere is restored only by a law giving first; promises start no loop; knowing another's law is no coupling; seeing is not valuing; where the valuation differs, informing can lower the worth. Seeing-then-trust is unproved, not refuted. [AI reading]"
+   "en": "Both refuse trust as an input; 'trust' as a term is absent from the chapters beyond 'antitrust'. The account's stated purpose runs the source's way: 08 reads the work as for a truth anyone can check, 'and through it shared understanding and coordination', and says no check shows it does. Its laws part: giving lost everywhere is restored only by a law giving first; mutual promises alone force no start of a loop; knowing another's law is no coupling; seeing is not valuing; where the valuation differs, informing can lower the worth. Seeing-then-trust is unproved, not refuted. [AI reading]"
   },
   "targets": [
    {
@@ -42617,7 +42617,7 @@
   "relation": "divergence",
   "agreement_of": null,
   "reading": {
-   "en": "The account makes no exception and does not supply the criterion the folder asks for: 'no criterion of legitimate, desired or autonomous change is supplied here'. It cannot yet tell the two by what shaping changes; capture and accountable revision part at a reader of the loss beyond the share, and a reform is judged by who decides admission, comparison and correction next round. 'Most legitimacy' does not appear; legitimate procedure is J4, a further premise. Ranking these courses needs C for order and the continuation condition for scope, neither asserted, warrant open. [AI reading]"
+   "en": "The account makes no exception and does not supply the criterion the folder asks for: 'no criterion of legitimate, desired or autonomous change is supplied here'. It cannot yet tell the two by what shaping changes; capture and accountable revision part at a reader of the loss beyond the share, and a reform is judged by who decides admission, comparison and correction next round. 'Most legitimacy' does not appear; legitimate procedure is J4, a further premise. Ranking these courses needs C, or a premise in its place, for order and the continuation condition for scope, neither asserted, warrant open. [AI reading]"
   },
   "targets": [
    {
@@ -42685,7 +42685,7 @@
   "relation": "divergence",
   "agreement_of": null,
   "reading": {
-   "en": "Sharpest difference. No dynamic is good or bad here, and nothing ranks open rule-making above capture without C. Scope is the continuation condition, order is C, both unasserted with warrant open; C is not derived from the condition. The nearest form of 'rational' is narrower: self-concern ranks one coupled ending below, with no C, and reverses where a copy is kept. Goodness as rationally forced on any mind is what the account declines to claim. [AI reading]"
+   "en": "Sharpest difference. No dynamic is good or bad here, and nothing ranks open rule-making above capture without C or a premise in its place. Scope is the continuation condition, order is C, both unasserted with warrant open; C is not derived from the condition. The nearest form of 'rational' is narrower: self-concern ranks one coupled ending below, with no C, and some self-concerned order reverses where a copy is kept. Goodness as rationally forced on any mind is what the account declines to claim. [AI reading]"
   },
   "targets": [
    {
@@ -43957,7 +43957,7 @@
    {
     "anchor": "theories/becoming/chapters/02-MAP.md#t7",
     "says": {
-     "en": "Reading [AI reading, D45], under T7: the corpus's second order, 'that recursive selection favours mechanisms which increase control over future selection', 'is the law of the capacity to shape the rule with its conditions'. 'Whether actual institutions or trained systems meet these premises is not established, and nothing here ranks open rule-making above capture: that needs C.'"
+     "en": "Reading [AI reading, D45], under T7: the corpus's second order, 'that recursive selection favours mechanisms which increase control over future selection', 'is the law of the capacity to shape the rule with its conditions'. 'Whether actual institutions or trained systems meet these premises is not established, and nothing here ranks open rule-making above capture: that needs C or a premise in its place.'"
     },
     "role": "carries",
     "part": "Reading D45, the corpus's second order"
@@ -44571,7 +44571,7 @@
   "relation": "scope",
   "agreement_of": null,
   "reading": {
-   "en": "Near the practical table: 'end' has its grounds, and deleted records change the judgment, conditional on living significance and J1–J4, scope from the continuation condition, any order needing C, neither asserted. But 'endings are generative' the account will not say: ending is not renamed generation, and ending what feeds no more counts as a loss under the condition. A pattern lasts through its carriers' passing only while carriers keep beginning. So where it holds is named, not general. [AI reading]"
+   "en": "Near the practical table: 'end' has its grounds, and deleted records change the judgment, conditional on living significance and J1–J4, scope from the continuation condition, a ranking of courses needing C or a premise in its place, neither asserted, warrant open. But 'endings are generative' the account will not say: ending is not renamed generation, and ending what feeds no more counts as a loss under the condition. A pattern lasts through its carriers' passing only while carriers keep beginning. So where it holds is named, not general. [AI reading]"
   },
   "targets": [
    {
@@ -44593,7 +44593,7 @@
     "record": "feeding-from-a-step",
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-feeding-from-a-step",
     "says": {
-     "en": "Theorem (World) and Conditional (the continuation condition): 'Care bounded by feeding from each step permits ending what feeds no more', 'which under the condition counts as a loss'. No order without C."
+     "en": "Theorem (World) and Conditional (the continuation condition): 'Care bounded by feeding from each step permits ending what feeds no more', 'which under the condition counts as a loss'. The condition orders nothing; a ranking of courses needs C or a premise in its place."
     },
     "role": "carries"
    },
@@ -44720,7 +44720,7 @@
   },
   "targets": [],
   "account_adds": {
-   "en": "Failure conditions; that symmetry must be broken for agreement; that mutual promises cannot start a loop with no source."
+   "en": "Failure conditions; that symmetry must be broken for agreement; that mutual promises alone force no start of a loop with no source."
   },
   "source_adds": {
    "en": "A built substrate for it, and culture as something held on shared digital state."
@@ -46405,7 +46405,7 @@
    }
   ],
   "account_adds": {
-   "en": "Where a two-sided form holds exactly, and that drawn one member at a time either lock is left by drift, at a weight whose bound shrinks across the distance from the critical mass. Neither side is called better: that needs C for order and the continuation condition for scope, neither asserted, warrant open."
+   "en": "Where a two-sided form holds exactly, and that drawn one member at a time either lock is left by drift, at a weight whose bound shrinks across the distance from the critical mass. Neither side is called better: that needs C, or a premise in its place, for order and the continuation condition for scope, neither asserted, warrant open."
   },
   "source_adds": {
    "en": "The two named scenarios, institutional design as the deciding variable, and the reason for retiring them: the space runs far wider than two, and automated feudalism is nearly the optimistic branch. That reason stands in this folder and in sources/13-claude-memories (the 2026-05-28 correction). 'Retaining multiple possible futures' stands only in the dated theory map (results/data/theory-map.json, history/THEORY-MAP-2026-10-08.md)."
@@ -46734,7 +46734,7 @@
   "carried": "changed",
   "relation": "divergence",
   "reading": {
-   "en": "No uniqueness, and the answer turns on what each counts. Beyond one's family restraint is no mutual best response, its existence not shown; where the rest outruns the renewal no weight selects a member's restraint. Where each counts a step the need stays met, above the need, drawers in turn keep it; at once and unpivotal they drain at every coupling. Read as a stag hunt two locks stand and the start decides. Sharing above winning is ranked under C, not by game theory. [AI reading]"
+   "en": "No uniqueness, and the answer turns on what each counts. Beyond one's family, wherever something stands there, restraint is no mutual best response, its existence not shown; where the rest outruns the renewal at a need of one, no weight on a reading of the condition only from the rest's end on selects a member's restraint. Where each counts a step the need stays met, above the need and under the gate, drawers in turn keep it from a start meeting it; at once and unpivotal, draining is perfect at every coupling, not shown to be the only perfect profile. Read as a stag hunt two locks stand and the start decides. Sharing above winning is ranked under C, not by game theory. [AI reading]"
   },
   "targets": [
    {
@@ -46787,7 +46787,7 @@
    }
   ],
   "account_adds": {
-   "en": "A full ranking of courses needs C for order, and counting losses that return to no one needs the continuation condition for scope; neither is asserted, warrant open. Self-concern's nearest case is the one thing reaching 'not sentimental', and an independent copy reverses it. No change raises every part's position, which the source's exception of the final winner respects."
+   "en": "A full ranking of courses needs C, or a premise in its place, for order, and counting losses that return to no one needs the continuation condition for scope; neither is asserted, warrant open. Self-concern's nearest case is the one thing reaching 'not sentimental', and where the other course keeps an independent copy, some self-concerned order reverses it. No change raises every part's position, which the source's exception of the final winner respects."
   },
   "source_adds": {
    "en": "That the equilibrium exists, is unique and binds at sufficient power, and that consensus is thereby available to rational actors. 'Better off' is the source's comparison, reading nothing named."
@@ -47325,7 +47325,7 @@
     "record": "what-self-concern-alone-ranks",
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-self-concern-alone-ranks",
     "says": {
-     "en": "Theorem (any type; World). Where the other course keeps an item beyond, as an independent copy does, some order increasing in its own continuation ranks it higher, against the ranking of a coupled ending below. The premise is weaker than C; any fuller ranking needs C for order and the continuation condition for scope."
+     "en": "Theorem (any type; World). Where the other course keeps an item beyond, as an independent copy does, some order increasing in its own continuation ranks it higher, against the ranking of a coupled ending below. The premise is weaker than C; any fuller ranking needs C or a premise in its place for order, and the continuation condition for scope."
     },
     "role": "neighbour"
    }
@@ -47556,7 +47556,7 @@
   "carried": "not-carried",
   "relation": null,
   "reading": {
-   "en": "The account has no such either/or and no abundance layer, and ownership is no variable in the capture laws. Neighbours, proposed here: what comes back to the shapers alone, against the cost, signs the selection for control; where something comes back, shared rule-making is not shown to remove it (D68). Closest to 'governance is the game' is a reading: controlling a shared interface is a route of capture, and a reform is judged by who decides next round (D65). A sole owner can keep what open access ends. Ranking either side needs C for order and the continuation condition for scope, neither asserted. [AI reading]"
+   "en": "The account has no such either/or and no abundance layer, and ownership is no variable in the capture laws. Neighbours, proposed here: what comes back to the shapers alone, against the cost, signs the selection for control; where something comes back, shared rule-making is not shown to remove it (D68). Closest to 'governance is the game' is a reading: controlling a shared interface is a route of capture, and a reform is judged by who decides next round (D65). A sole owner can keep what open access ends. Ranking either side needs C or a premise in its place for order, and the continuation condition for scope, neither asserted, warrant open. [AI reading]"
   },
   "targets": [],
   "account_adds": null,
@@ -47784,7 +47784,7 @@
    {
     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#joint-plans",
     "says": {
-     "en": "Reading [AI reading, D65; any ranking is C's, under the two premises of 07]. Capture and drain give institutions no prior duty to contract and no prior licence to grow: whether a development calls for expanding, maintaining, reorganizing or contracting is asked of the whole continuation it forms."
+     "en": "Reading [AI reading, D65; a ranking needs C or a premise in its place, under 07's premises]. Capture and drain give institutions no prior duty to contract and no prior licence to grow: whether a development calls for expanding, maintaining, reorganizing or contracting is asked of the whole continuation it forms."
     },
     "role": "carries",
     "part": "D65, the whole continuation"
@@ -48056,7 +48056,7 @@
   "carried": "carried-in-part",
   "relation": "agreement",
   "reading": {
-   "en": "The form 'necessary, not sufficient' is stated, for other reasons: seeing is not valuing, coupling is not compliance, and where the rest outruns the renewal only a change of the rest's exchange helps, the nearest to concrete. For living proofs the nearest law is about starts, not persuasion: in a witness ignition, defined as spending a reserve, needs one already present (near-definitional), and a public plan is no executable assurance. That belief becomes territory, or that demonstration persuades, is not said. [AI reading]"
+   "en": "The form 'necessary, not sufficient' is stated, for other reasons: seeing is not valuing, coupling is not compliance, and where the rest outruns the renewal only a change of the rest's exchange helps, the nearest to concrete. For living proofs the nearest law is about starts, not persuasion: in a witness ignition, defined as spending a reserve, needs one already present (near-definitional), and a public plan is not automatically an executable assurance. That belief becomes territory, or that demonstration persuades, is not said. [AI reading]"
   },
   "targets": [
    {
@@ -48635,7 +48635,7 @@
   "carried": "changed",
   "relation": "divergence",
   "reading": {
-   "en": "The worry is carried, the remedy is not. Corruption taking over routes of correction is read beside capture. But a rule a course keeps moving under does not keep the possible widening, read for institutions and AI policy; in the renewable process no reading fixed by a finite record and including every renewing run excludes consumption, which bears on 'infallible' only by this reading; a carrier needs funded succession. Calling this worse needs C for order, with scope from the continuation condition, neither asserted. [AI reading]"
+   "en": "The worry is carried, the remedy is not. Corruption taking over routes of correction is read beside capture. But a rule a course keeps moving under does not keep the possible widening, read for institutions and AI policy; in the renewable process no reading fixed by a finite record and including every renewing run excludes consumption, which bears on 'infallible' only by this reading; a carrier needs funded succession. Calling this worse needs C, or a premise in its place, for order, with scope from the continuation condition, neither asserted, warrant open. [AI reading]"
   },
   "targets": [
    {
@@ -48710,7 +48710,7 @@
   "carried": "fresh-reading",
   "relation": "agreement",
   "reading": {
-   "en": "Proposed here; the general bound is not stated. Its form is near joint plans: two locally successful plans on one reserve fail at a joint step, paired plans hold only with availability and faithful projection, and ignition needs an actual reserve. Selected histories show formed conditions carrying joint work, an assessment and no law. Under the continuation condition for scope and C for order, neither asserted, with J1–J4, shared capacity can be warranted, and its overbuilding is the counterexample. [AI reading]"
+   "en": "Proposed here; the general bound is not stated. Its form is near joint plans: two locally successful plans on one reserve fail at a joint step, paired plans hold only with availability and faithful projection, and in the exchange witness ignition, defined as spending a reserve, needs one already present (near-definitional). Selected histories show formed conditions carrying joint work, an assessment and no law. Under the continuation condition for scope and C for order, neither asserted and their warrant open, with J1–J4, complete relational correspondence and actual improvement witnesses for every deficient case, shared capacity can be warranted, and overbuilding that depletes the living basis is its counterexample where construction reports omit retained amounts. [AI reading]"
   },
   "targets": [
    {
@@ -48741,7 +48741,7 @@
     "record": "organizational-formation-from-generative-comparison",
     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-organizational-formation-from-generative-comparison",
     "says": {
-     "en": "Conditional (the condition for scope; C for order, with J1–J4). It can warrant building shared capacity without fixing one carrier; overbuilding that depletes the living basis is its counterexample where construction reports omit retained amounts."
+     "en": "Conditional (the condition for scope; C for order, with J1–J4; complete relational correspondence; actual improvement witnesses for every deficient case). It can warrant building shared capacity without fixing one carrier; overbuilding that depletes the living basis is its counterexample where construction reports omit retained amounts."
     },
     "role": "neighbour"
    }
@@ -49847,7 +49847,7 @@
    {
     "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#the-answer-in-brief",
     "says": {
-     "en": "No guarantee. What the theory gives is narrower: a criterion, widening; exits each under stated hypotheses, none shown to hold of an actual collective; six conditions for enough situationality. Calling widening better needs C, counting returnless losses needs the continuation condition, neither asserted."
+     "en": "No guarantee. What the theory gives is narrower: a criterion, widening; exits each under stated hypotheses, none shown to hold of an actual collective; six conditions for enough situationality. Whose losses count is the continuation condition's (scope); that widening is better is C's (order); the theory asserts neither."
     },
     "role": "carries"
    },
@@ -49875,7 +49875,7 @@
    }
   ],
   "account_adds": {
-   "en": "Limits on the fork itself: how far off a break is does not couple in by threshold, no finite record certifies renewal, points of no return are exact. Calling widening better needs C and counting returnless losses the condition, neither asserted, warrant open."
+   "en": "Limits on the fork itself: how far off a break is does not couple in by threshold, no finite record certifies renewal, points of no return are exact. Calling widening better needs C or a premise in its place, and counting returnless losses the condition, neither asserted, warrant open."
   },
   "source_adds": {
    "en": "The claims that capacity is in hand and that coordination is the single bottleneck, and with them the licence for a festival as an intervention. 05 lists Wamo as an application, correspondence not established."
@@ -49968,7 +49968,7 @@
     "record": "basic-priority-step-by-step",
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-basic-priority-step-by-step",
     "says": {
-     "en": "Conditional (J1/J2): read in two tiers, every comparison meeting the priority of basic conditions ranks the absence of a malignant formation above its occurrence where C alone leaves them unranked. The tier assignment is a reading."
+     "en": "Conditional (J1/J2): read in two tiers, every comparison meeting the priority of basic conditions ranks the absence of a malignant formation above its occurrence under the stepwise and relation-level readings, where C alone leaves them unranked. The tier assignment is a reading."
     },
     "role": "carries"
    },
@@ -50268,7 +50268,7 @@
     "record": "organizational-formation-from-generative-comparison",
     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-organizational-formation-from-generative-comparison",
     "says": {
-     "en": "Conditional (the condition for scope, C for order, neither asserted, with J1–J4): it can warrant building shared capacity without fixing one carrier; overbuilding that depletes the living basis is its counterexample where construction reports omit retained amounts; eligibility and basic classifications need substantive warrant."
+     "en": "Conditional (the condition for scope, C for order, neither asserted, with J1–J4, complete relational correspondence and actual improvement witnesses for every deficient case): it can warrant building shared capacity without fixing one carrier; overbuilding that depletes the living basis is its counterexample where construction reports omit retained amounts; eligibility and basic classifications need substantive warrant."
     },
     "role": "carries"
    },
@@ -50282,7 +50282,7 @@
    }
   ],
   "account_adds": {
-   "en": "The failure case: a loop of mutual promise that never starts, and overbuilding as a counterexample; that the start's forming is unexplained. Warrant to build shared capacity stands only under the condition for scope and C for order, neither asserted, warrant open."
+   "en": "The failure case: a loop of mutual promise that never starts, and overbuilding as a counterexample; that the start's forming is unexplained. Warrant to build shared capacity can stand under the condition for scope and C for order, neither asserted, warrant open, with J1–J4, complete relational correspondence and actual improvement witnesses; a ranking of courses needs C or a premise in its place."
   },
   "source_adds": {
    "en": "That togetherness in itself is this capacity. The account's capacity is specific conditions; togetherness is not tested as one."
@@ -50357,7 +50357,7 @@
    }
   ],
   "account_adds": {
-   "en": "Why a gift and not a promise; that a law of giving must change, not only a state; and where a surplus can come from. Laws of giving with amounts are open. The README's own critique, reciprocity asserted without mechanism, stands."
+   "en": "Why a gift and not mutual promises alone; that a law of giving must change, not only a state; and where a surplus can come from. Laws of giving with amounts are open. The README's own critique, reciprocity asserted without mechanism, stands."
   },
   "source_adds": {
    "en": "That the protocol returns support to givers, and nourishment against extraction as a practical test. No mechanism of return is given in the source, or stated of any protocol in the account."
@@ -50462,7 +50462,7 @@
   "relation": "divergence",
   "agreement_of": null,
   "reading": {
-   "en": "\"More possible\" is close to C's widening; the source makes it an imperative and a description, where the account leaves C unasserted, ranking a course only above courses it widens, with the condition fixing scope. The universal per-step form is then scoped: a finite balanced world with requirements within its list has no such course by name, though a witness keeps widening within kinds, and many actions are mixed, which C does not rank. \"Alive\" and \"connected\" are not read. [AI reading]"
+   "en": "\"More possible\" is close to C's widening; the source makes it an imperative and a description, where the account leaves C unasserted, ranking a course only above courses it widens, with the condition, also unasserted, fixing scope. The universal per-step form is then scoped: a finite balanced world with requirements within its list has no such course by name, though a witness keeps widening within kinds, and many actions are mixed, which C does not rank. \"Alive\" and \"connected\" are not read. [AI reading]"
   },
   "targets": [
    {
@@ -50497,7 +50497,7 @@
    }
   ],
   "account_adds": {
-   "en": "Per-step growth, direction and continuing capacity kept apart; \"an expansion producing ever more novelty\" is not 生生. Ranking any of it needs C for order and the condition for scope, neither asserted."
+   "en": "Per-step growth, direction and continuing capacity kept apart; \"an expansion producing ever more novelty\" is not 生生. Ranking any of it needs C, or a premise in its place, for order and the condition for scope, neither asserted, warrant open."
   },
   "source_adds": {
    "en": "The aspiration as a description of how life under the protocol goes and as an imperative, with no premise named and no measure proposed."
@@ -50748,7 +50748,7 @@
   "relation": "scope",
   "agreement_of": null,
   "reading": {
-   "en": "Self-concern, a premise weaker than C, ranks a coupled ending below a course that continues: the source's move, with no morality. Its scope is exact: an independent copy reverses it, and it does not select one member's restraint where the rest outruns the renewal, which is the free-rider gap the README names. Survival aligns the order over wholes, not the member's act. [AI reading]"
+   "en": "Self-concern, a premise weaker than C, ranks a coupled ending below a course that continues: the source's move, with no morality. Its scope is exact: where the other course keeps an independent copy, some self-concerned order reverses it, and where the rest outruns the renewal at a need of one, no weight on a reading of the condition only from the rest's end on selects one member's restraint, which is the free-rider gap the README names. Survival aligns the order over wholes, not the member's act. [AI reading]"
   },
   "targets": [
    {
@@ -50769,7 +50769,7 @@
    }
   ],
   "account_adds": {
-   "en": "That the argument reaches only what returns to the self: losses returning to no one need the continuation condition, and any ranking beyond this case needs C, neither asserted, their warrant open."
+   "en": "That the argument reaches only what returns to the self: losses returning to no one need the continuation condition, and any ranking beyond this case needs C or a premise in its place, neither asserted, their warrant open."
   },
   "source_adds": {
    "en": "'The only viable strategy', and the empirical premise that AI in vital games ends us. The account claims neither, and a law of the dynamics gives no such necessity."
@@ -50999,7 +50999,7 @@
   "relation": "scope",
   "agreement_of": null,
   "reading": {
-   "en": "Legibility has the form of adding couplings. But coupling bounds response and fixes nothing within the bound, members reading one channel add agreement, not reach, a cascade carries no more than its first readers, and 'guide toward better' needs C for order and the condition for scope, neither asserted. The shared map is a shared interface, whose control is a route of capture in a D65 reading, as the README suspects. The hopeful sentence is what No guarantee declines. [AI reading]"
+   "en": "Legibility has the form of adding couplings. But coupling bounds response and fixes nothing within the bound, members reading one channel add agreement, not reach, a cascade carries no more than its first readers, and 'guide toward better' needs C or a premise in its place for order, and the condition for scope, neither asserted, warrant open. The shared map is a shared interface, whose control is a route of capture in a D65 reading, as the README suspects. The hopeful sentence is what No guarantee declines. [AI reading]"
   },
   "targets": [
    {
@@ -51586,7 +51586,7 @@
    }
   ],
   "account_adds": {
-   "en": "A stated vision is not by itself a reader beyond the share; the account's named routes are a member admitted from outside and a reading of what lies beyond, one sufficient and not shown necessary."
+   "en": "A stated vision is not by itself a reader beyond the share; the account's named routes are, for a pool, an admission not made through it or members its course would hold anyway (each a witness), and a reading of what lies beyond, a sufficient way out not shown necessary."
   },
   "source_adds": {
    "en": "The installed-pattern mechanism, its timescale of years, and the Social Layer as the single dependency in a decentralization story."
@@ -51749,7 +51749,7 @@
     "record": "organizational-formation-from-generative-comparison",
     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-organizational-formation-from-generative-comparison",
     "says": {
-     "en": "Reading [AI reading, D65; any ranking is C's, under the two premises of 07]: whether a development calls for expanding, maintaining, reorganizing or contracting is asked of the whole continuation it forms."
+     "en": "Reading [AI reading, D65; a ranking needs C or a premise in its place, under 07's premises]: whether a development calls for expanding, maintaining, reorganizing or contracting is asked of the whole continuation it forms."
     },
     "role": "carries",
     "part": "D65"
@@ -51917,7 +51917,7 @@
   "relation": null,
   "agreement_of": null,
   "reading": {
-   "en": "The account takes up no such event: no test has human participants, no institution is on the spine, and 05 lists Wamo as correspondence not established. A feasibility claim needs one case, so one event bears that much; \"controlled\" is what it cannot bear. The account would ask what reserve was already present (cafés, a gathered milieu, a shared prior name), since ignition needs one, and 05's software histories show formed conditions carrying activity past lost organizations. [AI reading]"
+   "en": "The account takes up no such event: no test has human participants, no institution is on the spine beyond 05 §12's minimal model of one kind, an entry rule on a shared stock, and 05 lists Wamo as correspondence not established. A feasibility claim needs one case, so one event bears that much; \"controlled\" is what it cannot bear. The account would ask what reserve was already present (cafés, a gathered milieu, a shared prior name), since in 05's exchange witness ignition, defined as spending a reserve, needs one already present (near-definitional), and 05's selected software histories show formed conditions carrying activity under partial reorganization before a lasting organization formed. [AI reading]"
   },
   "targets": [],
   "account_adds": null,
@@ -52382,7 +52382,7 @@
   "relation": "divergence",
   "agreement_of": null,
   "reading": {
-   "en": "The source offers resonance as openness. If those who resonate are those the pool already reads alike, this has the form of a pool recruiting through itself, which comes to couple into a loss only as its course without the loss would. A reader admitted from outside is what parts them. That resonance recruits so is my reading and empirical; the README's self-selected sample points the same way. [AI reading]"
+   "en": "The source offers resonance as openness. If those who resonate are those the pool already reads alike, this has the form of a pool recruiting through itself, which comes to couple into a loss only as its course without the loss would. What parts them is an admission not made through the pool, or members its course would hold anyway (each a witness). That resonance recruits so is my reading and empirical; the README's self-selected sample points the same way. [AI reading]"
   },
   "targets": [
    {
@@ -52975,7 +52975,7 @@
   "relation": "agreement",
   "agreement_of": "thesis-or-method",
   "reading": {
-   "en": "Only the market reading has this form, as a hypothetical case: unread reliability lets a provider deferring maintenance outgrow one maintaining and training successors. No law states it. The rest-outruns law is a neighbour with a different relation: a member's restraint makes no difference to the ending, not that restraint's carriers lose share. Nothing says rationality's name is taken; ranking the lost carrier above the winner needs C, with scope from the continuation condition, neither asserted."
+   "en": "Only the market reading has this form, as a hypothetical case: unread reliability lets a provider deferring maintenance outgrow one maintaining and training successors. No law states it. The rest-outruns law is a neighbour with a different relation: a member's restraint makes no difference to the ending, not that restraint's carriers lose share. Nothing says rationality's name is taken; ranking the lost carrier above the winner needs C or a premise in its place, with scope from the continuation condition, neither asserted, warrant open."
   },
   "targets": [
    {
@@ -53603,7 +53603,7 @@
   "relation": "agreement",
   "agreement_of": "law",
   "reading": {
-   "en": "The account says the lock belongs to how the rule reads, not what it favours, and that capture and care pass alike. It goes one step further than the source: 'what the recursion does to the field' does not by itself say better or worse. Calling a course better reads widening, under C, with scope from the continuation condition."
+   "en": "The account says the lock belongs to how the rule reads, not what it favours, and that capture and care pass alike. It goes one step further than the source: 'what the recursion does to the field' does not by itself say better or worse. Calling a course better reads widening, under C, with scope from the continuation condition, neither asserted, warrant open."
   },
   "targets": [
    {
@@ -53633,7 +53633,7 @@
    }
   ],
   "account_adds": {
-   "en": "That nothing here ranks open rule-making above capture: that needs C."
+   "en": "That nothing here ranks open rule-making above capture: that needs C or a premise in its place."
   },
   "source_adds": {
    "en": "The cases named (care forming people capable of care, shared knowledge, open standards) and the question of what the recursion does to the field. This sits against the same folder's claim 236; see cx-zhishan-loops-not-symmetric."
@@ -54837,7 +54837,7 @@
   "relation": "scope",
   "agreement_of": null,
   "reading": {
-   "en": "The account keeps rivalry and states one such line: what selects control is what comes back to shapers alone, so a contest giving nothing back loses shapers at any positive cost. 'Only when' is too strong by its laws: joint excess ends a shared stock with no purchase of the rule. Domination and legitimacy of measures are not modelled."
+   "en": "The account keeps rivalry and states one such line: what selects control is what comes back to shapers alone, so a contest giving nothing back loses shapers at any positive cost. 'Only when' is too strong by its laws: `n` consecutive steps of joint excess from a level below `n + m` end a shared stock gated at `m`, and what depends on it at such a need, with no purchase of the rule. Domination and legitimacy of measures are not modelled."
   },
   "targets": [
    {
@@ -54896,7 +54896,7 @@
   "relation": "agreement",
   "agreement_of": "reading",
   "reading": {
-   "en": "A word match on verification if read through D45 alone. The source says no one can check the controller; D45 says the controller is blind beyond its own closure, a different direction. The nearer forms: reading a system reaches no further than pooling with it, and reviewers count by independent causes. Capability is a reason to pool, 'a route, not the whole of it', and a pool recruiting only through itself stays blind too. Ranking a political form needs C or a premise in its place."
+   "en": "A word match on verification if read through D45 alone. The source says no one can check the controller; D45 says the controller is blind beyond its own closure, a different direction. The nearer forms: reading a system reaches no further than pooling with it, and reviewers count by independent causes. Capability is a reason to pool, 'a route, not the whole of it', and a pool recruiting only through itself couples into a loss only as its course without the loss would. Ranking a political form needs C or a premise in its place."
   },
   "targets": [
    {
@@ -55028,7 +55028,7 @@
   "relation": "scope",
   "agreement_of": null,
   "reading": {
-   "en": "Timing carries, on models: a reading of the loss turns the course only before the late reading would favour shapers; distance to a break does not couple in by threshold; and 'late correction is none' has a form, where nothing is given below a need, as a premise, a re-reading after the level falls below it restores nothing. 'Must' and the burden of proof do not: ranking a course needs C, with scope from the continuation condition, and 'burden of proof' has no live hit."
+   "en": "Timing carries, on models: a reading of the loss turns the course only before the late reading would favour shapers; distance to a break does not couple in by threshold; and 'late correction is none' has a form, where nothing is given below a need, as a premise, a re-reading after the level falls below it restores nothing. 'Must' and the burden of proof do not: ranking a course needs C or a premise in its place, with scope from the continuation condition, neither asserted, warrant open; and 'burden of proof' has no live hit."
   },
   "targets": [
    {
@@ -55110,7 +55110,7 @@
     "record": null,
     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#joint-plans",
     "says": {
-     "en": "Reading [AI reading, D65; any ranking is C's, under the two premises of 07]: the laws of capture and drain give institutions no prior duty to contract and no prior licence to grow: whether a development calls for expanding, maintaining, reorganizing or contracting is asked of the whole continuation it forms."
+     "en": "Reading [AI reading, D65; a ranking needs C or a premise in its place, under 07's premises]: the laws of capture and drain give institutions no prior duty to contract and no prior licence to grow: whether a development calls for expanding, maintaining, reorganizing or contracting is asked of the whole continuation it forms."
     },
     "role": "carries",
     "part": "D65"
@@ -55438,7 +55438,7 @@
   "relation": "agreement",
   "agreement_of": "thesis-or-method",
   "reading": {
-   "en": "Agreement in form on most: generation allows loss and is not 生生; the direction is a criterion, not a quantity to maximize; a limit's kind depends on what it does to what can be regained. But cancer is a harder case than the source's list: under C alone the absence of a malignant formation is not ranked stepwise, and read event by event a comparison satisfying C prefers the overdraw. Only J1/J2 ranks it, and C's order and the continuation condition's scope are unasserted. 'Should be closed' is not said."
+   "en": "Agreement in form on most: generation allows loss and is not 生生; the direction is a criterion, not a quantity to maximize; a limit's kind depends on what it does to what can be regained. But cancer is a harder case than the source's list: under C alone the absence of a malignant formation is not ranked stepwise, and read event by event an irreflexive, transitive comparison satisfying C prefers the overdraw. Under the stepwise and relation-level readings J1/J2 ranks it, and C's order and the continuation condition's scope are unasserted, their warrant open. 'Should be closed' is not said."
   },
   "targets": [
    {
@@ -55482,13 +55482,13 @@
     "record": "basic-priority-step-by-step",
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-basic-priority-step-by-step",
     "says": {
-     "en": "Conditional (J1/J2): every comparison meeting the priority of basic conditions ranks the absence of a malignant formation above its occurrence, where C alone leaves them unranked."
+     "en": "Conditional (J1/J2): every comparison meeting the priority of basic conditions ranks the absence of a malignant formation above its occurrence under the stepwise and relation-level readings, where C alone leaves them unranked."
     },
     "role": "limit"
    }
   ],
   "account_adds": {
-   "en": "No course keeps widening by name in a finite balanced world, and a fixed rule's moves do not keep the possible widening; which changes do is not said. That malignancy is ranked only by a premise beyond C."
+   "en": "No course keeps widening by name in a finite balanced world, and a fixed rule's moves do not keep the possible widening; which changes do is not said. That, under the stepwise and relation-level readings, malignancy is ranked only by a premise beyond C."
   },
   "source_adds": {
    "en": "That some things should be closed, and that it works only alongside judgments of suffering, dignity, 义 and fairness; the account leaves constraints on acts unanswered."
@@ -55659,7 +55659,7 @@
     "record": "basic-priority-step-by-step",
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-basic-priority-step-by-step",
     "says": {
-     "en": "Conditional (J1/J2): every comparison meeting the priority of basic conditions ranks the absence of a malignant formation above its occurrence, where C alone leaves them unranked. The tier assignment is a reading. A rival preferring enough secondary gains is not shown inconsistent."
+     "en": "Conditional (J1/J2): every comparison meeting the priority of basic conditions ranks the absence of a malignant formation above its occurrence under the stepwise and relation-level readings, where C alone leaves them unranked. The tier assignment is a reading. Reading [AI reading, D65]: a rival preferring enough secondary gains to one basic restoration is not shown inconsistent."
     },
     "role": "carries"
    },
@@ -56366,7 +56366,7 @@
   "relation": "scope",
   "agreement_of": null,
   "reading": {
-   "en": "A counter-rule read from its own share locks as the rule it replaced did, and the dossier uses this as a check on proposed remedies; D68 reads the examination as in the meta-attractor line, so by descent. A pool recruiting only through itself stays blind unless a reader comes from outside. Shared rule-making is not shown to remove the selection for control however large its shared part. That is the test's form for those cases, not every remedy: a reading that can favour the others need not lock. How pools resist capture is open."
+   "en": "A counter-rule read from its own share locks as the rule it replaced did, and the dossier uses this as a check on proposed remedies; D68 reads the examination as in the meta-attractor line, so by descent. A pool recruiting only through itself couples into a loss only as its course without the loss would, and a pool comes to couple into what it does not yet couple into only through an admission not made through it or through members its course would hold anyway (each a witness). Shared rule-making is not shown to remove the selection for control however large its shared part. That is the test's form for those cases, not every remedy: a reading that can favour the others need not lock. How pools resist capture is open."
   },
   "targets": [
    {
@@ -56442,7 +56442,7 @@
   "relation": "scope",
   "agreement_of": null,
   "reading": {
-   "en": "The account says no law makes cooperation good. Consensus suppressing dissent has forms: a pool read by its majority goes alike though the fewer left may tell the histories apart, and a merged distinction returns only from a form held outside. A lock is left by a reading of what the share does not carry. \"Source\" is too strong: a change of the law, and drift, also leave. \"Dissent\" has no live hit, so these joins are this read's. Whether a course is better needs C, with scope from the continuation condition."
+   "en": "The account says no law makes cooperation good. Consensus suppressing dissent has forms: a pool read by its majority goes alike though the fewer left may tell the histories apart, and a merged distinction returns only from a form held outside. A lock is left by a reading of what the share does not carry. \"Source\" is too strong: a change of the law, and drift, also leave. \"Dissent\" has no live hit, so these joins are this read's. Whether a course is better needs C or a premise in its place, with scope from the continuation condition, neither asserted, warrant open."
   },
   "targets": [
    {
@@ -56586,7 +56586,7 @@
   "relation": "divergence",
   "agreement_of": null,
   "reading": {
-   "en": "The account has no asymmetry between loops by what they favour: the lock belongs to how a rule reads, and nothing ranks open rule-making above capture without C. What tells courses apart is widening, and calling the wider better is C's, with scope from the condition, neither asserted. A rule can be kept and be the wrong rule. The folder's direction-neutral meta-attraction fits its asymmetry: both loops self-reinforce, and they differ by what the recursion does to the field."
+   "en": "The account has no asymmetry between loops by what they favour: the lock belongs to how a rule reads, and nothing ranks open rule-making above capture without C or a premise in its place. What tells courses apart is widening, and calling the wider better is C's, with scope from the condition, neither asserted, warrant open. A rule can be kept and be the wrong rule. The folder's direction-neutral meta-attraction fits its asymmetry: both loops self-reinforce, and they differ by what the recursion does to the field."
   },
   "targets": [
    {
@@ -56601,7 +56601,7 @@
     "record": null,
     "anchor": "theories/becoming/chapters/02-MAP.md#capture",
     "says": {
-     "en": "Reading [AI reading, D45]: whether actual institutions or trained systems meet these premises is not established, and nothing here ranks open rule-making above capture: that needs C."
+     "en": "Reading [AI reading, D45]: whether actual institutions or trained systems meet these premises is not established, and nothing here ranks open rule-making above capture: that needs C or a premise in its place."
     },
     "role": "carries",
     "part": "D45"
@@ -56765,7 +56765,7 @@
   "relation": "divergence",
   "agreement_of": null,
   "reading": {
-   "en": "The account shares the uncertainty and leaves the stance. Whether an actual AI system counts is not shown, and which formations count differs by the relation discerned, not by rank. Under the continuation condition any continuation has significance; which formations are centers is open; any order among courses needs C; neither is asserted. \"Not a licence\" constrains acts, and no duty or constraint on acts is shown. 'Co-participants' has a conditional neighbour: ends and evaluations enter the same appraisal."
+   "en": "The account shares the uncertainty and leaves the stance. Whether an actual AI system counts is not shown, and which formations count differs by the relation discerned, not by rank. Under the continuation condition any continuation has significance; which formations are centers is open; any order among courses needs C or a premise in its place; neither is asserted, and their warrant is open. \"Not a licence\" constrains acts, and no duty or constraint on acts is shown. 'Co-participants' has a conditional neighbour: ends and evaluations enter the same appraisal."
   },
   "targets": [
    {
@@ -57410,7 +57410,7 @@
     "record": "organizational-formation-from-generative-comparison",
     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-organizational-formation-from-generative-comparison",
     "says": {
-     "en": "Conditional (the condition; C with J1–J4; correspondence): it can warrant building shared capacity without fixing one carrier; it does not establish compliance or derive institutional authority."
+     "en": "Conditional (the condition, for scope; C, for order, with J1–J4; complete relational correspondence; actual improvement witnesses for every deficient case): it can warrant building shared capacity without fixing one carrier; it does not establish compliance or derive institutional authority."
     },
     "role": "neighbour"
    }
@@ -57621,7 +57621,7 @@
   "relation": "agreement",
   "agreement_of": "reading",
   "reading": {
-   "en": "Correlated failure has checked forms, on narrower objects. Reviewers moved under one cause fail together with all names kept, and a cause in no bound fails every reviewer, which is the source's 'foreseeable or not'. Copies add nothing. An ending reaches only what depends on the condition at the need, so unlike dependence escapes it. This read's join from reviewers to systems. No law ranks variety: that needs C, with scope from the continuation condition."
+   "en": "Correlated failure has checked forms, on narrower objects. Reviewers moved under one cause fail together with all names kept, and a cause in no bound fails every reviewer, which is the source's 'foreseeable or not'. Copies add nothing. An ending reaches only what depends on the condition at the need, so unlike dependence escapes it. This read's join from reviewers to systems. No law ranks variety: that needs C or a premise in its place, with scope from the continuation condition, neither asserted, warrant open."
   },
   "targets": [
    {
@@ -61413,7 +61413,7 @@
    }
   ],
   "account_adds": {
-   "en": "An exact point of no return, that draws add superadditively up to one, that two draws each held alone can end a condition together, and what would refute T1."
+   "en": "An exact point of no return, that draws' rises at the point are superadditive up to one, that two draws each held alone can end a condition together, and what would refute T1."
   },
   "source_adds": {
    "en": "A single ever-living fire as what all is, all exchanged through one medium, an unmade eternal cosmos, and a measure that is guarded. The account has no arche and no eternity, and in it a margin can be crossed with nothing pursuing."
@@ -64424,7 +64424,7 @@
     "record": "giving-that-waits-on-giving",
     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
     "says": {
-     "en": "Theorem (any type: any formations and any relation of waiting): with memory, 'a withholding stays and spreads downstream along every chain of waits'; 'more waiting gives no more at any step'; with a source giving first all give again. 'It does not show how waiting forms, or that cooperation is good'."
+     "en": "Theorem (any type: any formations and any relation of waiting): with memory, 'a withholding stays and spreads downstream along every chain of waits'; 'more waiting gives no more at any step'; in a ring of three, with a source giving whatever it waits on (giving first), all give from step 3 from every start. 'It does not show how waiting forms, or that cooperation is good'."
     },
     "role": "neighbour"
    },
@@ -66470,7 +66470,7 @@
   "carried": "fresh-reading",
   "relation": "divergence",
   "reading": {
-   "en": "[AI reading] Divergence on warrant and on the giver: the bond binds because God swore it, and the other party is no formation among formations. Only an order is alike, a gift before stipulations. 05's form: promises alone force no start, since each side's waiting on the other eventually acting holds where neither ever acts; a source giving first restores those who wait on it. Reading God as that source is my mapping, which the source would refuse, so no agreement is claimed. That blessing follows keeping is no law here."
+   "en": "[AI reading] Divergence on warrant and on the giver: the bond binds because God swore it, and the other party is no formation among formations. Only an order is alike, a gift before stipulations. 05's form: promises alone force no start, since each side's waiting on the other eventually acting holds where neither ever acts; a source giving first restores those who wait on it alone, and a loop with no source is never restored. Reading God as that source is my mapping, which the source would refuse, so no agreement is claimed. That blessing follows keeping is no law here."
   },
   "targets": [
    {
@@ -67455,7 +67455,7 @@
   "relation": "divergence",
   "agreement_of": null,
   "reading": {
-   "en": "Parts have checked forms. On a level, a later re-reading restores nothing once it falls below a need. In giving, a clear loop is never restored, without a source total withholding stays, promises alone force no start, and in the exchange witness ignition, defined as spending a reserve, needs one already there (near-definitional). A collective's response must come before the point of no return, as a reading. But waits and pools are given: no law takes consent or trust as what forms slowly, or races that forming against a harm. So the claim itself is not stated. [AI reading]"
+   "en": "Parts have checked forms. Where nothing is given below a need, a later re-reading restores nothing once the level falls below it. In giving, a clear loop is never restored, without a source total withholding stays, promises alone force no start, and in the exchange witness ignition, defined as spending a reserve, needs one already there (near-definitional). A collective's response must come before the point of no return, as a reading. But waits and pools are given: no law takes consent or trust as what forms slowly, or races that forming against a harm. So the claim itself is not stated. [AI reading]"
   },
   "targets": [
    {
@@ -67517,7 +67517,7 @@
    }
   ],
   "account_adds": {
-   "en": "Exact forms of no return, the deadline on a level, and what a promise cannot start. One mechanism read for accountability. No law evaluates: whether a lost relation is a loss is 07's, under the condition for scope and C for order, neither asserted, warrant open."
+   "en": "Exact forms of no return, the deadline on a level, and that mutual promises alone force no start. One mechanism read for accountability. No law evaluates: whether a lost relation is a loss is 07's, under the condition for scope and C for order, neither asserted, warrant open."
   },
   "source_adds": {
    "en": "The join, as new work that could be tested: a relation needed for coordinated response has a point past which it cannot form in the time left, and speed without it repeats the damage. Consent and trust as the relations in question, with reciprocity as more than giving on or off. Colonial history as what damaged them, on which see the entry on losses already taken."
@@ -72455,7 +72455,7 @@
    }
   ],
   "account_adds": {
-   "en": "Exact conditions, in models, for when a parameter decides and when a change is absorbed; six conditions read in CD §6, none ranked. Calling one intervention better would need C for order and the continuation condition for scope, neither asserted."
+   "en": "Exact conditions, in models, for when a parameter decides and when a change is absorbed; six conditions read in CD §6, none ranked. Calling one intervention better would need C or a premise in its place for order, and the continuation condition for scope, neither asserted, their warrant open."
   },
   "source_adds": {
    "en": "The ranking itself, its reach across systems as judged from practice, and goals, paradigms and transcending them, for which no law here stands. Whether the ranking is right is not tested by anything in the account. The \"leverage-point argument\" in target-capture's record is the meta-attractor's, of decisive nodes, not this list."
@@ -73058,7 +73058,7 @@
     "record": "margin-of-a-regime",
     "anchor": "theories/becoming/chapters/02-MAP.md#r-margin-of-a-regime",
     "says": {
-     "en": "Theorem (the regime; any giving law, whole numbers). For one condition under a standing draw, a level up to the top ends exactly where it starts below H + y. Under the same draw, giving lowered leaves the least level meeting the draw no lower, and raises it exactly where the lowered giving falls short at the old least level. Locates an end, ordering nothing. CD §5: in yeast driven past its fold, the regime's margin timed neither of the two breaks."
+     "en": "Theorem (the regime; any giving law, whole numbers). For one condition under a standing draw, under its premises on giving (short of the draw below y, nothing from nothing, meeting it from y up to a top the step keeps), a level up to the top ends exactly where it starts below H + y. Under the same draw, giving lowered leaves the least level meeting the draw no lower, and raises it exactly where the lowered giving falls short at the old least level. Locates an end, ordering nothing. CD §5: in yeast driven past its fold, the regime's margin timed neither of the two breaks."
     },
     "role": "carries"
    },
@@ -73790,7 +73790,7 @@
     "record": "a-pool-that-recruits-through-itself",
     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-pool-that-recruits-through-itself",
     "says": {
-     "en": "A pool admitting its next members through its own pooled coupling comes to couple into a loss only as its course without the loss would; a reader from outside is the witness's exit."
+     "en": "A pool admitting its next members through its own pooled coupling comes to couple into a loss only as its course without the loss would; in the witness, the scheduled pool, recruiting through itself and admitting a reader at step 2 in every history, couples the loss apart there."
     },
     "role": "neighbour"
    },
@@ -74495,7 +74495,7 @@
    }
   ],
   "account_adds": {
-   "en": "Exactness for any giving law in whole numbers; rises of joint draws superadditive up to one; and `Notch`, a witness that without giving rising with what is left no level separates the fates. S-12 asks whether this adds anything to the continuous analysis; it is unanswered."
+   "en": "Exactness in whole numbers under the regime's premises on giving (short of the draw below y, nothing from nothing, meeting it from y up to a top the step keeps); rises of joint draws superadditive up to one; and `Notch`, a witness that without giving rising with what is left no level separates the fates. S-12 asks whether this adds anything to the continuous analysis; it is unanswered."
   },
   "source_adds": {
    "en": "Continuous theory states that the local form is generic, with its unfolding, and the bottleneck's inverse-square-root time. Here a level falls below b within any n with x < b + (H − Y)n: a bound inverse in the draw less the most given, not a passage law. The form is a model taken, not joined to the whole-number point. The record says the fold over the reals and the other order of a step are not stated, and yeast past its fold broke days before the constant-regime curve said."
@@ -75846,7 +75846,7 @@
   "relation": "agreement",
   "agreement_of": "law",
   "reading": {
-   "en": "The account states the boundary exactly where the order holds: a least level for each recent giving, a falling curve; a partner's threshold not rising as the partner rises. The stag hunt's critical mass is the same shape in shares, where without noise the start decides, and the market has two attracting ends at one parameter. Basin sizes it does not state. A shared shape, read across models; the account does not join them. [AI reading]"
+   "en": "The account states the boundary exactly where the order holds: a least level for each recent giving, a curve not rising as the recent giving rises; a condition's threshold not rising as its partner rises. The stag hunt's critical mass is the same shape in shares, where without noise the start decides, and the market has two attracting ends at one parameter. Basin sizes it does not state. A shared shape, read across models; the account does not join them. [AI reading]"
   },
   "targets": [
    {
@@ -76446,7 +76446,7 @@
   "relation": "divergence",
   "agreement_of": null,
   "reading": {
-   "en": "The account finds no direction in the dynamics. A part can go on while closing what lies beyond its dependence, so persistence does not select widening, and that reality generally develops more shared and more responsive renewal forbids nothing measurable as stated. No dynamic is good or bad here. Ranking courses needs C for order, and whose losses count the continuation condition for scope; neither is asserted and their warrant is open. Kauffman's law, read on the pasts, loses all precedence at its widest course. [AI reading]"
+   "en": "The account finds no direction in the dynamics. A part can go on while closing what lies beyond its dependence, so persistence does not select widening, and that reality generally develops more shared and more responsive renewal forbids nothing measurable as stated. No dynamic is good or bad here. Ranking courses needs C or a premise in its place for order, and whose losses count the continuation condition for scope; neither is asserted and their warrant is open. Kauffman's law, read on the pasts, loses all precedence at its widest course. [AI reading]"
   },
   "targets": [
    {
@@ -76721,7 +76721,7 @@
     "record": "margin-of-a-regime",
     "anchor": "theories/becoming/chapters/02-MAP.md#r-margin-of-a-regime",
     "says": {
-     "en": "Theorem: for any giving law short of the draw below y, with nothing from nothing, a level up to a top ends exactly below H + y. Where giving stops below a need and the draw is positive and met at y, the point lies at least the draw above the need. Its correspondence names Allee effects under harvest; how giving depends on the draw is a premise, not a theorem."
+     "en": "Theorem: for any giving law short of the draw below y, with nothing from nothing, meeting it from y up to a top the step keeps, a level up to that top ends exactly where it starts below H + y. Where giving stops below a need and the draw is positive and met at y, the point lies at least the draw above the need. Its correspondence names Allee effects under harvest; how giving depends on the draw is a premise, not a theorem."
     },
     "role": "carries"
    },
@@ -77227,7 +77227,7 @@
     "record": "comparison-where-the-rest-responds",
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-comparison-where-the-rest-responds",
     "says": {
-     "en": "Theorem: where every formation outside a part responds through its couplings, two flows compare within its responsive reach. Responding so is supplied. The record's reading, the AI's: an escalation loop is the case where each party responds through its couplings and the difference returns to the part. No ranking of the flows is stated: order would need C and scope the continuation condition, neither asserted."
+     "en": "Theorem: where every formation outside a part responds through its couplings, two flows compare within its responsive reach. Responding so is supplied. The record's reading, the AI's: an escalation loop is the case where each party responds through its couplings and the difference returns to the part. No ranking of the flows is stated: order would need C or a premise in its place, and scope the continuation condition, neither asserted."
     },
     "role": "neighbour"
    },
@@ -77565,7 +77565,7 @@
    }
   ],
   "account_adds": {
-   "en": "The transmission and ending laws joined on one flow. Not a ranking: the record says that a lineage ending with its whole is worse, or sequestration better, is not shown; ranking would need C for order, with the continuation condition for scope, neither asserted."
+   "en": "The transmission and ending laws joined on one flow. Not a ranking: the record says that a lineage ending with its whole is worse, or sequestration better, is not shown; ranking would need C or a premise in its place for order, with the continuation condition for scope, neither asserted, their warrant open."
   },
   "source_adds": {
    "en": "How a germ line is sequestered and how far it varies, removal of parts by a whole's rule (policing), wholes founded by several parts, transmissible cancers beyond one generation's witness, and every measured rate."
@@ -77766,7 +77766,7 @@
     "record": "selection-with-returns-to-groupmates",
     "anchor": "theories/becoming/chapters/04-LIFE.md#r-selection-with-returns-to-groupmates",
     "says": {
-     "en": "The rule reads the counts; that keeping is better where it is selected for is not shown, and ranking goes through the comparison C. Correspondence: 'the equivalence of multilevel and inclusive-fitness accounts for additive returns (Queller 1992; Okasha 2006)'."
+     "en": "The rule reads the counts; that keeping is better where it is selected for is not shown, and ranking goes through the comparison C or a premise in its place. Correspondence: 'the equivalence of multilevel and inclusive-fitness accounts for additive returns (Queller 1992; Okasha 2006)'."
     },
     "role": "neighbour"
    },
@@ -78488,7 +78488,7 @@
    }
   ],
   "account_adds": {
-   "en": "The laws read every order rising with what couples in, not one objective, and at a mutual best response several optimizers stand as one of joint capacity. No law says which course to take: a ranking would need C for order and the continuation condition for scope, neither asserted."
+   "en": "The laws read every order rising with what couples in, not one objective, and at a mutual best response several optimizers stand as one of joint capacity. No law says which course to take: a ranking would need C, or a premise in its place, for order and the continuation condition for scope, neither asserted, warrant open."
   },
   "source_adds": {
    "en": "Effort, price and cost, with the positive stock open access settles at; logistic and interior yields in the re-optimizing law; discounted optima holding below the level of greatest renewal; every measured fishery. Ending at nothing, read as open access or optimal extinction, comes with zero cost in these laws."
@@ -78555,7 +78555,7 @@
    }
   ],
   "account_adds": {
-   "en": "The kind of counterfactual decides what shows, and a bound on where a difference can arrive. Neither says which formations it reaches, nor how much. Any ranking of the two flows would need C for order and the continuation condition for scope, neither asserted."
+   "en": "The kind of counterfactual decides what shows, and a bound on where a difference can arrive. Neither says which formations it reaches, nor how much. Any ranking of the two flows would need C, or a premise in its place, for order and the continuation condition for scope, neither asserted, warrant open."
   },
   "source_adds": {
    "en": "Strengths and what sets them, top-down against bottom-up control, keystone species, measured cases and their disputes. Nothing here predicts that a given web cascades, since the flows are supplied."
@@ -79210,7 +79210,7 @@
    {
     "anchor": "theories/becoming/chapters/02-MAP.md#r-shaping-read-by-readers-drawn-from-the-selected",
     "says": {
-     "en": "Reading, AI: joins the lock to control's selection, on counts, the start deciding without noise. Whether actual rules are read so 'is not established', and 'nothing here ranks a course: that needs C', with the continuation condition for scope, neither asserted."
+     "en": "Reading, AI: joins the lock to control's selection, on counts, the start deciding without noise. Whether actual rules are read so 'is not established', and 'nothing here ranks a course: that needs C or a premise in its place', with the continuation condition for scope, neither asserted."
     },
     "role": "limit"
    }
@@ -79282,7 +79282,7 @@
    }
   ],
   "account_adds": {
-   "en": "A reading names 'who holds the places from which the rule is read' as what could keep the readers' premise (02 section 9). Whether a course of few rulers is better or worse is not said: that needs C for order and the continuation condition for scope, neither asserted."
+   "en": "A reading names 'who holds the places from which the rule is read' as what could keep the readers' premise (02 section 9). Whether a course of few rulers is better or worse is not said: that needs C, or a premise in its place, for order and the continuation condition for scope, neither asserted, warrant open."
   },
   "source_adds": {
    "en": "How the few arise from the many: size, specialization, expertise, control of communication, deference, goal displacement. Every model here takes the kinds or pool as given, 'who decides a revision' is not modelled, and 'no field test of reform events is frozen' (COLLECTIVE-DIRECTION section 5). No theory folder names Michels; sources/ hits are a Popper compilation and a biology article, unopened."
@@ -79533,7 +79533,7 @@
   "carried": "fresh-reading",
   "relation": "divergence",
   "reading": {
-   "en": "Forms exist for parts: two rules read from one share lock together, their circle; a reversal past a threshold, a juncture in their sense. The central divergence: they claim, causally and empirically, that institutions make prosperity and extractive growth does not last. The account has no comparison on growth and asserts neither. Ranking inclusive above extractive reads prosperity, and here needs C for order and the continuation condition for scope, neither asserted, warrant open. Proposed here. [AI reading]"
+   "en": "Forms exist for parts: two rules read from one share lock together, their circle; a reversal past a threshold, a juncture in their sense. The central divergence: they claim, causally and empirically, that institutions make prosperity and extractive growth does not last. The account has no comparison on growth and asserts neither. Ranking inclusive above extractive reads prosperity, and here needs C or a premise in its place for order, and the continuation condition for scope, neither asserted, warrant open. Proposed here. [AI reading]"
   },
   "targets": [
    {
@@ -79548,7 +79548,7 @@
     "record": "shaping-the-rule-selected-by-what-comes-back",
     "anchor": "theories/becoming/chapters/02-MAP.md#r-shaping-the-rule-selected-by-what-comes-back",
     "says": {
-     "en": "Does not show 'That capture damages or supports 生生, or that open rule-making is better than capture: no evaluation enters, and ranking courses needs C.'"
+     "en": "Does not show 'That capture damages or supports 生生, or that open rule-making is better than capture: no evaluation enters, and ranking courses needs C or a premise in its place.'"
     },
     "role": "limit"
    },
@@ -79571,7 +79571,7 @@
    {
     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-organizational-formation-from-generative-comparison",
     "says": {
-     "en": "Reading, AI, D65: 'The laws of capture and drain give institutions no prior duty to contract and no prior licence to grow'; any ranking is C's, under the two premises of 07."
+     "en": "Reading, AI, D65: 'The laws of capture and drain give institutions no prior duty to contract and no prior licence to grow'; a ranking needs C or a premise in its place, under 07's premises."
     },
     "role": "limit",
     "part": "Reading D65, of contraction and growth"
@@ -79969,7 +79969,7 @@
   "carried": "not-carried",
   "relation": null,
   "reading": {
-   "en": "His central claim, that returns on added organization decline, the account neither asserts nor has a form for, so nothing is mapped. Proposal only: neighbours are more takers needing renewers without bound, which 08 calls maintenance scaling, and D48's 'more waiting gives no more', a bound on dependence, not declining returns. D65 leaves contraction unranked, near his refusal of a verdict; any ranking needs C for order and the continuation condition for scope, neither asserted, warrant open. [AI reading]"
+   "en": "His central claim, that returns on added organization decline, the account neither asserts nor has a form for, so nothing is mapped. Proposal only: neighbours are more takers needing renewers without bound, which 08 calls maintenance scaling, and D48's 'more waiting gives no more', a bound on dependence, not declining returns. D65 leaves contraction unranked, near his refusal of a verdict; any ranking needs C, or a premise in its place, for order and the continuation condition for scope, neither asserted, warrant open. [AI reading]"
   },
   "targets": [],
   "account_adds": {
@@ -80671,7 +80671,7 @@
    }
   ],
   "account_adds": {
-   "en": "A lock's exact threshold, which locks noise leaves, and the exact rate at which a weighting ends a base. And a refusal of the source's frame: that what lies beyond is a loss is a significance's to say, and a ranking of courses needs C, with the continuation condition for scope, neither asserted, their warrant open."
+   "en": "A lock's exact threshold, which locks noise leaves, and the exact rate at which a weighting ends a base. And a refusal of the source's frame: that what lies beyond is a loss is a significance's to say, and a ranking of courses needs C or a premise in its place, with the continuation condition for scope, neither asserted, their warrant open."
   },
   "source_adds": {
    "en": "The dissociation of wanting from liking; tolerance and withdrawal, of which 'more than now' states no cause; relapse after long abstinence and cue reinstatement; natural recovery, which sits badly beside a lock that never leaves; dopamine's role; harm as part of what addiction is. None is stated, and the first is central to the field."
@@ -81298,7 +81298,7 @@
    }
   ],
   "account_adds": {
-   "en": "Exact conditions: where a coupling keeps a need among drawers in turn. Not every winner loses: a part ends through dependence, not position. A reading against one remedy: capability is a reason to pool, not to govern. Ranking the end needs C for order, with the continuation condition for scope, neither asserted, their warrant open."
+   "en": "Exact conditions: where a coupling keeps a need among drawers in turn. Not every winner loses: a part ends through dependence, not position. A reading against one remedy: capability is a reason to pool, not to govern. Ranking the end needs C, or a premise in its place, for order, with the continuation condition for scope, neither asserted, their warrant open."
   },
   "source_adds": {
    "en": "The engine: refusers outcompeted, so the trap runs by elimination as well as by best response. That no one wants the end. Slack as what holds it off, where the account's room is what lets a drain run. Alexander's hope of a single gardener, as I recall it. Critch's agent-agnostic processes, which one record lists with no reading."
@@ -81350,7 +81350,7 @@
    {
     "anchor": "theories/becoming/chapters/02-MAP.md#r-shaping-selected-among-groups",
     "says": {
-     "en": "Theorem (counts; any type for the members). In groups of m whose shapers give the shared part, the whole selects for shaping exactly where the cost falls short of what comes back alone with the group's part weighted by assortment: over the rationals c < s + m q ρ. How groups form enters as given. No evaluation enters; ranking courses needs C."
+     "en": "Theorem (counts; any type for the members). In groups of m whose shapers give the shared part, the whole selects for shaping exactly where the cost falls short of what comes back alone with the group's part weighted by assortment: over the rationals c < s + m q ρ. How groups form enters as given. No evaluation enters; ranking courses needs C or a premise in its place."
     },
     "role": "carries",
     "record": "shaping-selected-among-groups"
@@ -81630,7 +81630,7 @@
    }
   ],
   "account_adds": {
-   "en": "Exits with exact windows, and that a lock is not thereby bad: none of this says whether a locked loop supports or damages 生生, and ranking a course needs C, with the continuation condition for scope; neither is asserted, and their warrant is open."
+   "en": "Exits with exact windows, and that a lock is not thereby bad: none of this says whether a locked loop supports or damages 生生, and ranking a course needs C or a premise in its place, with the continuation condition for scope; neither is asserted, and their warrant is open."
   },
   "source_adds": {
    "en": "The engineering argument, goal stability under copying and error correction; a dominant actor's strategy; the long reflection; the claim that lock-in may happen soon. Calling lock-in a loss is the source's premise, not something any law here gives. Keeping exploration open has a neighbour in C, but MacAskill's reason is moral uncertainty, and C reads what can form, and is unasserted."

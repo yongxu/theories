@@ -771,7 +771,7 @@
     {
      "anchor": "theories/becoming/chapters/02-MAP.md#t7",
      "says": {
-      "en": "Reading [AI reading, D45], under T7: the corpus's second order, 'that recursive selection favours mechanisms which increase control over future selection', 'is the law of the capacity to shape the rule with its conditions'. 'Whether actual institutions or trained systems meet these premises is not established, and nothing here ranks open rule-making above capture: that needs C.'"
+      "en": "Reading [AI reading, D45], under T7: the corpus's second order, 'that recursive selection favours mechanisms which increase control over future selection', 'is the law of the capacity to shape the rule with its conditions'. 'Whether actual institutions or trained systems meet these premises is not established, and nothing here ranks open rule-making above capture: that needs C or a premise in its place.'"
      },
      "role": "carries",
      "part": "Reading D45, the corpus's second order"
@@ -1322,7 +1322,7 @@
    "relation": "scope",
    "agreement_of": null,
    "reading": {
-    "en": "Near the practical table: 'end' has its grounds, and deleted records change the judgment, conditional on living significance and J1–J4, scope from the continuation condition, any order needing C, neither asserted. But 'endings are generative' the account will not say: ending is not renamed generation, and ending what feeds no more counts as a loss under the condition. A pattern lasts through its carriers' passing only while carriers keep beginning. So where it holds is named, not general. [AI reading]"
+    "en": "Near the practical table: 'end' has its grounds, and deleted records change the judgment, conditional on living significance and J1–J4, scope from the continuation condition, a ranking of courses needing C or a premise in its place, neither asserted, warrant open. But 'endings are generative' the account will not say: ending is not renamed generation, and ending what feeds no more counts as a loss under the condition. A pattern lasts through its carriers' passing only while carriers keep beginning. So where it holds is named, not general. [AI reading]"
    },
    "targets": [
     {
@@ -1344,7 +1344,7 @@
      "record": "feeding-from-a-step",
      "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-feeding-from-a-step",
      "says": {
-      "en": "Theorem (World) and Conditional (the continuation condition): 'Care bounded by feeding from each step permits ending what feeds no more', 'which under the condition counts as a loss'. No order without C."
+      "en": "Theorem (World) and Conditional (the continuation condition): 'Care bounded by feeding from each step permits ending what feeds no more', 'which under the condition counts as a loss'. The condition orders nothing; a ranking of courses needs C or a premise in its place."
      },
      "role": "carries"
     },
@@ -1457,7 +1457,7 @@
    },
    "targets": [],
    "account_adds": {
-    "en": "Failure conditions; that symmetry must be broken for agreement; that mutual promises cannot start a loop with no source."
+    "en": "Failure conditions; that symmetry must be broken for agreement; that mutual promises alone force no start of a loop with no source."
    },
    "source_adds": {
     "en": "A built substrate for it, and culture as something held on shared digital state."
@@ -2903,12 +2903,17 @@
   {
    "id": "cx-sty-rules-governing-themselves",
    "what": "changed",
-   "why": "second critic (label): The quoted D45 reading is not at 02 #r-closed-capture: it stands under #t7 and reads the shaping-the-rule law. Nor does the live account take up a rule system governing itself by its own means (no live 'amendment' but RuleHandoff's supplied procedure), so the join is this crosswalk's: fresh-reading, with scope kept and the reading unchanged."
+   "why": "second critic (label): The quoted D45 reading is not at 02 #r-closed-capture: it stands under #t7 and reads the shaping-the-rule law. Nor does the live account take up a rule system governing itself by its own means (no live 'amendment' but RuleHandoff's supplied procedure), so the join is this crosswalk's: fresh-reading, with scope kept and the reading unchanged. / main changed the ethics claims (LM1 or AA, 7 November 2026): targets[1].says states what it says now"
+  },
+  {
+   "id": "cx-sty-endings-as-transitions",
+   "what": "changed",
+   "why": "main changed the ethics claims (LM1 or AA, 7 November 2026): targets[2].says states what it says now / main changed a home its checker read (LM1 or AA, 7 November 2026): reading states what it says now (as its checker amended)"
   },
   {
    "id": "cx-sty-intersubjective-infrastructure",
    "what": "changed",
-   "why": "second critic (fails): The source states a purpose (a value stance) with no mechanism, so mapping consensus, acting together and culture onto three laws on those topics is a word match standing in for a structure; the reading itself says they are 'conditions and failures, not infrastructure'. No live text takes up the purpose, so not-carried, the proposal kept in the reading."
+   "why": "second critic (fails): The source states a purpose (a value stance) with no mechanism, so mapping consensus, acting together and culture onto three laws on those topics is a word match standing in for a structure; the reading itself says they are 'conditions and failures, not infrastructure'. No live text takes up the purpose, so not-carried, the proposal kept in the reading. / main changed the waiting claims (LM1 or AA, 7 November 2026): account_adds states what it says now"
   }
  ],
  "live_flags": []

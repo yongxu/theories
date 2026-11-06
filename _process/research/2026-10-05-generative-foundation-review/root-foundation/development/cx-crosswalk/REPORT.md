@@ -13,7 +13,7 @@ Every entry is an AI reading. No person has read any of it.
 
 ## What was built
 
-- **The crosswalk** ([page](../../../../../../theories/becoming/results/atlas/CROSSWALK.md), [entries](../../../../../../theories/becoming/results/atlas/entries/correspondences.json)) has __ENTRIES__ entries in 28 groups: 16 earlier folders and 12 domains. Each entry gives:
+- **The crosswalk** ([page](../../../../../../theories/becoming/results/atlas/CROSSWALK.md), [entries](../../../../../../theories/becoming/results/atlas/entries/correspondences.json)) has 1,183 entries in 28 groups: 16 earlier folders and 12 domains. Each entry gives:
   - one claim in its source's own sense, with a quotation where the source is stored here;
   - what became of it in the live account;
   - its relation to the account: agreement 相合, scope 定域, divergence 相分 or contrary reading 反读;
@@ -46,18 +46,18 @@ About 150 agent reads made this, plus 36 that the account's usage limit stopped 
 
 ## What it found
 
-__COUNTS__
+Of the 1,183 claims, the live account states 3 in whole and 488 in part, and takes up 189 to say otherwise. 376 it does not state, and a reader proposes the connection here. 105 it does not take up, and 22 stand only in its history.
 
-Of the claims the account states in whole or in part, or proposes here:
+By relation, over every entry that has one:
 
-- __REL_AGREEMENT__ agree;
-- __REL_SCOPE__ are scoped: the source states it universally and the account under conditions;
-- __REL_DIVERGENCE__ diverge;
-- __REL_CONTRARY__ read the other way.
+- 338 agree;
+- 371 are scoped: the source states it universally and the account under conditions;
+- 325 diverge;
+- 25 read the other way.
 
-Agreement is with a checked law in __OF_LAW__ cases, a thesis or method in __OF_THESIS__ and a reader's join in __OF_READING__. The map counts __MAP_AGREEMENT__ agreements: one more stands in an entry the account keeps only in its history, and the map leaves such entries out of its relation counts.
+Agreement is with a checked law in 130 cases, a thesis or method in 67 and a reader's join in 141. The map counts 337 agreements: one more stands in an entry the account keeps only in its history, and the map leaves such entries out of its relation counts.
 
-__KNOWLEDGE__ entries rest on the AI's knowledge of a text not stored here. They are unchecked against that text, and a critic's check of them was memory against memory.
+328 entries rest on the AI's knowledge of a text not stored here. They are unchecked against that text, and a critic's check of them was memory against memory.
 
 ## How far to trust it
 
@@ -102,6 +102,11 @@ The 26 were corrected in commit `95a7008a9` (`apply_corrections.py`), with a his
 Since then:
 
 - OPENING's note on the meta-attractor reads the refutation as 02 does. Its header says its notes are AI-written and follow the current account.
+- Round two of keeping in step (below) found two more wordings that give ranking to C alone, at their homes. LM1 had corrected thirteen records' "ranking needs C", searching by those words, and these two wordings stood:
+  - 05's D65 label, "any ranking is C's";
+  - eight records' line "ranking goes through the comparison C" (排序经由比较 C).
+
+  Each now adds what 07 §4 adds, "or a premise in its place", in LM1's words, with a history note in each record (`apply_ranking.py`). Eleven entries quoting them follow the corrected homes.
 - The edition to send, `review-packet-4`, carries most of the corrected sentences in their old wording. Whether it goes out as it is is Ren's decision.
 
 **Not changed, and listed.** A-10 and the record `shaping-the-rule-selected-by-what-comes-back` list the persistence of elites (Acemoglu and Robinson 2008) as a known form of shaping selected by what comes back. Whether their mechanism is that form turns on a reading of their paper that no source here can check.
@@ -112,18 +117,24 @@ A crosswalk entry quotes its homes, so it goes stale when a home changes, and no
 
 - **This crosswalk's own corrections:** five entries quoting COLLECTIVE-DIRECTION §5, and 30 more quoting the other corrections.
 - **AA's errata on main:** six entries named COLLECTIVE-DIRECTION's exit "Give first, with a reserve", now "Spare all one waits on", since the law has no reserve in it.
-- **Everything else main changed since this branch began,** LM1 and AA's errata among it: __DRIFT_FIELDS__ fields in __DRIFT_ENTRIES__ entries, read against their homes by one AI author per cluster and checked by another ([MAIN-DRIFT.md](MAIN-DRIFT.md), `main_drift.py`, `reads/main-drift-*.json`). Outcomes:
-  - __DRIFT_CHANGED__ fields changed;
-  - __DRIFT_LEFT__ left, because the match was a coincidence or a source's own words;
-  - __DRIFT_CHECKER__ amended by the checker;
-  - __DRIFT_LABELS__ label changes.
+- **Everything else main changed since this branch began,** LM1 and AA's errata and restatements among it, in two rounds ([MAIN-DRIFT.md](MAIN-DRIFT.md)). In each, one AI author per group read the fields against their homes as they are now, and another AI checked every verdict.
+  - **Round one, by words** (`main_drift.py`, `reads/main-drift-*.json`): every entry field quoting words that main removed.
+  - **Round two, by claim** (`reads/claims-*.json`): its checkers found that a word search misses an ending changed at a sentence's close ("needs C." became "needs C or a premise in its place.") and misses paraphrases. Round two read every field stating one of the changed claims, whatever its words: C's order, waiting and sparing, promises and ignition, CD's edges, joint ending, optima, and AA's eleven restated lines.
 
-The late pass stops if any removed wording survives. The search finds quotations, not paraphrases, so an entry that restates a changed home in other words can still be stale.
+  Together, 382 fields in 209 entries were read:
+  - 213 changed;
+  - 169 left, because they already said what the home says, the match was a coincidence, or they are a source's own words;
+  - 41 amended by their checker;
+  - 0 label changes.
+
+Three entries that round two's checker named and no group listed kept 02's label "any giving law" and dropped its premises on giving, so the margin's exactness read as holding for every giving law. They now state the premises.
+
+The late pass stops if any removed wording it names survives. Round two's patterns were chosen from the changed claims, so a restatement in words none of them matches can still be stale.
 
 ## What is not verified
 
 - No person has read the crosswalk, the map or the corrections.
-- Entries whose source is not stored here (__KNOWLEDGE__) are the AI's knowledge of the source. Several folders' own primary sources were read only in part: each group's `read`, `skimmed` and `searched` lists say how far.
+- Entries whose source is not stored here (328) are the AI's knowledge of the source. Several folders' own primary sources were read only in part: each group's `read`, `skimmed` and `searched` lists say how far.
 - The estimate rests on one random sample of 100 read by AI critics.
 - The theory graph has 1,330 classified units read against nothing yet.
 - Checks run: the focused tests (`test_atlas`, `test_connection_map`, `test_theory_graph`), the render's strict freshness check, the links, and the map in a browser at desktop and phone width, light and dark. The full suite was deliberately not run here; the landing gate runs what the change reaches.

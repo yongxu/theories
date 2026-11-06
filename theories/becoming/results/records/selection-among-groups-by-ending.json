@@ -98,8 +98,8 @@
       "kind": "scope"
     },
     {
-      "en": "How groups form, or that keeping a condition is better: ending is read in the counts; ranking goes through the comparison C.",
-      "zh": "组如何形成，或维持条件更好：终止在计数中读出；排序经由比较 C。",
+      "en": "How groups form, or that keeping a condition is better: ending is read in the counts; ranking goes through the comparison C or a premise in its place.",
+      "zh": "组如何形成，或维持条件更好：终止在计数中读出；排序经由比较 C 或代替它的前提。",
       "kind": "non-implication"
     }
   ],
@@ -339,6 +339,10 @@
     {
       "en": "20 October 2026, EV8: Becoming.Drift states that a rise by ending among groups (raises_of_inactive) is undone by a sampled generation with a weight between q^n and a share falling as 1/n (record drift-offspring-sampled, study section 276); this record's laws and their statements are unchanged.",
       "zh": "2026年10月20日，EV8：Becoming.Drift 陈述组间终止带来的上升（raises_of_inactive）被抽样的一代撤销，其权重介于 q^n 与随 1/n 下降的份额之间（记录 drift-offspring-sampled，研究第 276 节）；本记录的定律及其陈述不变。"
+    },
+    {
+      "en": "7 November 2026, CX: this said ranking goes through the comparison C, where a ranking of courses needs C or a premise in its place (07 §4), the correction LM1 made in other records; corrected. No law, premise or proof changed.",
+      "zh": "2026年11月7日，CX：此处谓排序经由比较 C，而对进程的排序需要 C 或代替它的前提（07 §4），即 LM1 在其他记录所作之更正；已更正。诸律、前提与证明皆不变。"
     }
   ]
 }

@@ -283,7 +283,7 @@
     }
    ],
    "account_adds": {
-    "en": "Exactness for any giving law in whole numbers; rises of joint draws superadditive up to one; and `Notch`, a witness that without giving rising with what is left no level separates the fates. S-12 asks whether this adds anything to the continuous analysis; it is unanswered."
+    "en": "Exactness in whole numbers under the regime's premises on giving (short of the draw below y, nothing from nothing, meeting it from y up to a top the step keeps); rises of joint draws superadditive up to one; and `Notch`, a witness that without giving rising with what is left no level separates the fates. S-12 asks whether this adds anything to the continuous analysis; it is unanswered."
    },
    "source_adds": {
     "en": "Continuous theory states that the local form is generic, with its unfolding, and the bottleneck's inverse-square-root time. Here a level falls below b within any n with x < b + (H − Y)n: a bound inverse in the draw less the most given, not a passage law. The form is a model taken, not joined to the whole-number point. The record says the fold over the reals and the other order of a step are not stated, and yeast past its fold broke days before the constant-regime curve said."
@@ -1487,7 +1487,7 @@
    "relation": "agreement",
    "agreement_of": "law",
    "reading": {
-    "en": "The account states the boundary exactly where the order holds: a least level for each recent giving, a falling curve; a partner's threshold not rising as the partner rises. The stag hunt's critical mass is the same shape in shares, where without noise the start decides, and the market has two attracting ends at one parameter. Basin sizes it does not state. A shared shape, read across models; the account does not join them. [AI reading]"
+    "en": "The account states the boundary exactly where the order holds: a least level for each recent giving, a curve not rising as the recent giving rises; a condition's threshold not rising as its partner rises. The stag hunt's critical mass is the same shape in shares, where without noise the start decides, and the market has two attracting ends at one parameter. Basin sizes it does not state. A shared shape, read across models; the account does not join them. [AI reading]"
    },
    "targets": [
     {
@@ -2031,7 +2031,7 @@
    "relation": "divergence",
    "agreement_of": null,
    "reading": {
-    "en": "The account finds no direction in the dynamics. A part can go on while closing what lies beyond its dependence, so persistence does not select widening, and that reality generally develops more shared and more responsive renewal forbids nothing measurable as stated. No dynamic is good or bad here. Ranking courses needs C for order, and whose losses count the continuation condition for scope; neither is asserted and their warrant is open. Kauffman's law, read on the pasts, loses all precedence at its widest course. [AI reading]"
+    "en": "The account finds no direction in the dynamics. A part can go on while closing what lies beyond its dependence, so persistence does not select widening, and that reality generally develops more shared and more responsive renewal forbids nothing measurable as stated. No dynamic is good or bad here. Ranking courses needs C or a premise in its place for order, and whose losses count the continuation condition for scope; neither is asserted and their warrant is open. Kauffman's law, read on the pasts, loses all precedence at its widest course. [AI reading]"
    },
    "targets": [
     {
@@ -2081,6 +2081,16 @@
  ],
  "changes": [
   {
+   "id": "cx-dpc-fold",
+   "what": "changed",
+   "why": "02's margin of a regime is exact under its premises on giving, which the entry dropped (round two's checker, 7 November 2026)"
+  },
+  {
+   "id": "cx-dpc-bistability",
+   "what": "changed",
+   "why": "main changed a home its checker read (LM1 or AA, 7 November 2026): reading states what it says now (as its checker amended)"
+  },
+  {
    "id": "cx-dpc-monotone-systems",
    "what": "changed",
    "why": "main changed theories/becoming/results/records/coupled-regimes.json (LM1 or AA, 7 November 2026): targets[1].says states what it says now"
@@ -2103,7 +2113,7 @@
   {
    "id": "cx-dpc-direction-of-complexity",
    "what": "changed",
-   "why": "main changed theories/becoming/chapters/02-MAP.md (LM1 or AA, 7 November 2026): targets[0].says states what it says now"
+   "why": "main changed theories/becoming/chapters/02-MAP.md (LM1 or AA, 7 November 2026): targets[0].says states what it says now / main changed the ethics claims (LM1 or AA, 7 November 2026): reading states what it says now"
   }
  ],
  "live_flags": [

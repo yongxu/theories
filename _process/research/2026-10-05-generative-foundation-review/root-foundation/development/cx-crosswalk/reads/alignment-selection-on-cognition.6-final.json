@@ -1320,7 +1320,7 @@
    "relation": "scope",
    "agreement_of": null,
    "reading": {
-    "en": "Pace, time and structure appear among six conditions for 'enough situationality', as a reading with no ratio law. The regeneration ratio has a law, a net draw within the margin, and an exact point of no return in the model. In the field T1 passed on some held-out regimes and failed in four settings; in yeast the margin timed neither break. 03 reads an institution's link as its rule of reading reports. [AI reading]"
+    "en": "Pace, time and structure appear among six conditions for 'enough situationality', as a reading with no ratio law. The regeneration ratio has a law, a net draw within the margin, and an exact point of no return in the model. T1, conjectured, passed in two simulations and on held-out yeast regimes the analyst had seen, and failed in four settings; in yeast the margin timed neither break. 03 reads an institution's link as its rule of reading reports. [AI reading]"
    },
    "targets": [
     {
@@ -1386,7 +1386,7 @@
    "relation": "divergence",
    "agreement_of": null,
    "reading": {
-    "en": "The account refuses this step. Nothing read from the dynamics ranks: all six conditions together rank nothing; order needs C and scope the continuation condition, neither asserted, warrant open; and neither can come from the dynamics alone. Mixed comparisons stay unranked, and the hard cases are mixed. So a tempo gap, if measured, would locate something and order nothing. [AI reading]"
+    "en": "The account refuses this step. Nothing read from the dynamics ranks: all six conditions together rank nothing; order needs C or a premise in its place, and scope the continuation condition, neither asserted, warrant open; and neither can come from the dynamics alone. Mixed comparisons stay unranked, and the hard cases are mixed. So a tempo gap, if measured, would locate something and order nothing. [AI reading]"
    },
    "targets": [
     {
@@ -1631,7 +1631,7 @@
    "relation": "scope",
    "agreement_of": null,
    "reading": {
-    "en": "The account corrects the universal form. A race ends those who depend on what it draws; a greatest part not depending on it continues in a witness. So winners die only under dependence, and the shared interest holds only where the ending is coupled: there self-concern ranks it below, without C; a course keeping an independent copy reverses that. Calling a loss beyond self-concern bad needs the condition for scope and C for order, neither asserted. [AI reading]"
+    "en": "The account corrects the universal form. A race ends those who depend on what it draws; a greatest part not depending on it continues in a witness. So winners die only under dependence, and the shared interest holds only where the ending is coupled: there self-concern ranks it below, without C; where a course keeps an independent copy, some self-concerned order reverses that. Calling a loss beyond self-concern bad needs the condition for scope and C, or a premise in its place, for order, neither asserted, warrant open. [AI reading]"
    },
    "targets": [
     {
@@ -1779,7 +1779,7 @@
     {
      "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-organizational-formation-from-generative-comparison",
      "says": {
-      "en": "A reading just after this anchor [AI reading, D65; any ranking is C's, under the two premises of 07]: 'The laws of capture and drain give institutions no prior duty to contract and no prior licence to grow'."
+      "en": "A reading just after this anchor [AI reading, D65; a ranking needs C or a premise in its place, under 07's premises]: 'The laws of capture and drain give institutions no prior duty to contract and no prior licence to grow'."
      },
      "role": "carries"
     }
@@ -2276,7 +2276,7 @@
    "relation": "scope",
    "agreement_of": null,
    "reading": {
-    "en": "The account generalizes the position and removes its accusation: every formation selects from a position, not a defect. A self-reading gap has a law; a pool recruiting only through itself reaches a loss only as it would without it, unless a reader comes from outside. 'Closed' used without substantive disagreement shields the theory. It gives no probability of escape. [AI reading]"
+    "en": "The account generalizes the position and removes its accusation: every formation selects from a position, not a defect. A self-reading gap has a law; a pool recruiting only through itself reaches a loss only as it would without it; a pool comes to couple into what it does not yet couple into only through an admission not made through it or through members its course would hold anyway (each a witness). 'Closed' used without substantive disagreement shields the theory. It gives no probability of escape. [AI reading]"
    },
    "targets": [
     {
@@ -2313,7 +2313,7 @@
     }
    ],
    "account_adds": {
-    "en": "An external reader as a stated condition, on a witness, and a named guard against using capture as an immunity: 'so the label cannot immunize'."
+    "en": "Two stated routes, each on a witness, by which a pool comes to couple into what it does not yet couple into (an admission not made through it, or members its course would hold anyway), and a named guard against using capture as an immunity: 'so the label cannot immunize'."
    },
    "source_adds": {
     "en": "The question about subjecthood itself, its probability, and its force against the theorist's own project."
@@ -2612,7 +2612,7 @@
    "relation": "agreement",
    "agreement_of": "law",
    "reading": {
-    "en": "The form is present in laws of waiting: restoring giving needs a formation that spares all it waits on; in a pair the one-step laws split between restoring and answering a constant withholder; reciprocal promises can be empty and in a witness ignition, defined as spending a reserve, needs one already present (near-definitional). That is 'giving', not slowing a technology, and its application to AI is not made live. [AI reading]"
+    "en": "The form is present in laws of waiting: restoring giving needs a formation that spares all it waits on; in a pair the one-step laws that keep inclusion split between restoring and answering a constant withholder; reciprocal promises can be empty and in a witness ignition, defined as spending a reserve, needs one already present (near-definitional). That is 'giving', not slowing a technology, and its application to AI is not made live. [AI reading]"
    },
    "targets": [
     {
@@ -3036,7 +3036,7 @@
      "record": "others-drawing-first-end-the-base",
      "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-others-drawing-first-end-the-base",
      "says": {
-      "en": "Theorem: where others first draw from what an optimizer leaves, its renewal at most the level, with capacity bounds, over a horizon of at least two steps every optimum of every order whose weighting falls at every step, however slightly, ends the stock at once. Witness: 'a doubling source is rebuilt by every optimum alone and ended at once with others first drawing all but a quarter: the discrete form of open access dissipating what a sole owner would keep'."
+      "en": "Theorem: where others first draw from what an optimizer leaves, its renewal at most the level, with capacity bounds, over a horizon of at least two steps every optimum of every order whose weighting falls at every step, however slightly, ends the stock at once. Witness, under weights `w (t + 1) ≤ w t < 2 w (t + 1)`: 'a doubling source is rebuilt by every optimum alone and ended at once with others first drawing all but a quarter: the discrete form of open access dissipating what a sole owner would keep'."
      },
      "role": "carries"
     }
@@ -3479,7 +3479,7 @@
    "relation": "agreement",
    "agreement_of": "law",
    "reading": {
-    "en": "The general form is a law on a process's possible: a course making only moves of one fixed process does not keep widening under it, and a reading names 'AI policy' among the fixed rules. It says nothing of decay, and its changing without end is not enough. Calling that better needs C, with the continuation condition for scope, neither asserted, warrant open. [AI reading]"
+    "en": "The general form is a law on a process's possible: a course making only moves of one fixed process does not keep widening under it, and a reading names 'AI policy' among the fixed rules. It says nothing of decay, and its changing without end is not enough. Calling that better needs C or a premise in its place, with the continuation condition for scope, neither asserted, warrant open. [AI reading]"
    },
    "targets": [
     {
@@ -3932,9 +3932,24 @@
    "why": "a correction this crosswalk made at the home: the entry quotes what the home says now, or says what it said until 7 November 2026"
   },
   {
+   "id": "cx-asc-two-constraints-metabolic-rate",
+   "what": "changed",
+   "why": "main changed the edges claims (LM1 or AA, 7 November 2026): reading states what it says now (as its checker amended)"
+  },
+  {
    "id": "cx-asc-tempo-measurement-replaces-values",
    "what": "changed",
-   "why": "main changed theories/becoming/COLLECTIVE-DIRECTION.md (LM1 or AA, 7 November 2026): targets[0].says states what it says now"
+   "why": "main changed theories/becoming/COLLECTIVE-DIRECTION.md (LM1 or AA, 7 November 2026): targets[0].says states what it says now / main changed the ethics claims (LM1 or AA, 7 November 2026): reading states what it says now"
+  },
+  {
+   "id": "cx-asc-unsurvivable-no-safe-win",
+   "what": "changed",
+   "why": "main changed the ethics claims (LM1 or AA, 7 November 2026): reading states what it says now"
+  },
+  {
+   "id": "cx-asc-generativity-licenses-competition",
+   "what": "changed",
+   "why": "05's D65 label and eight records gave ranking to C alone; corrected at home (apply_ranking.py, 7 November 2026): the entry quotes what it says now"
   },
   {
    "id": "cx-asc-training-ground",
@@ -3942,9 +3957,24 @@
    "why": "COLLECTIVE-DIRECTION §5 corrected by this crosswalk: the entry quotes what it says now"
   },
   {
+   "id": "cx-asc-theorist-inside-the-selection",
+   "what": "changed",
+   "why": "main changed the edges claims (LM1 or AA, 7 November 2026): reading states what it says now (as its checker amended) / main changed a home its checker read (LM1 or AA, 7 November 2026): account_adds states what it says now (as its checker amended)"
+  },
+  {
    "id": "cx-asc-founding-restraint-armored",
    "what": "changed",
-   "why": "COLLECTIVE-DIRECTION's exit 'Give first, with a reserve' is 'Spare all one waits on' since AA's errata (7 November 2026): the law has no reserve in it / main changed theories/becoming/chapters/05-COLLECTIVES.md (LM1 or AA, 7 November 2026): targets[2].says states what it says now / main changed theories/becoming/chapters/05-COLLECTIVES.md (LM1 or AA, 7 November 2026): reading states what it says now / main changed theories/becoming/COLLECTIVE-DIRECTION.md (LM1 or AA, 7 November 2026): targets[3].says states what it says now"
+   "why": "COLLECTIVE-DIRECTION's exit 'Give first, with a reserve' is 'Spare all one waits on' since AA's errata (7 November 2026): the law has no reserve in it / main changed theories/becoming/chapters/05-COLLECTIVES.md (LM1 or AA, 7 November 2026): targets[2].says states what it says now / main changed theories/becoming/chapters/05-COLLECTIVES.md (LM1 or AA, 7 November 2026): reading states what it says now / main changed theories/becoming/COLLECTIVE-DIRECTION.md (LM1 or AA, 7 November 2026): targets[3].says states what it says now / main changed the waiting claims (LM1 or AA, 7 November 2026): reading states what it says now (as its checker amended)"
+  },
+  {
+   "id": "cx-asc-horizon-and-slack",
+   "what": "changed",
+   "why": "main changed a home its checker read (LM1 or AA, 7 November 2026): targets[1].says states what it says now (as its checker amended)"
+  },
+  {
+   "id": "cx-asc-frozen-model-renewal",
+   "what": "changed",
+   "why": "main changed the ethics claims (LM1 or AA, 7 November 2026): reading states what it says now"
   },
   {
    "id": "cx-asc-four-layer-loop",

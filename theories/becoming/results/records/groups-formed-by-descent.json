@@ -84,8 +84,8 @@
       "kind": "scope"
     },
     {
-      "en": "That keeping what ending selected is better: the mean is read in the counts; ranking goes through the comparison C.",
-      "zh": "保住终止所选出的更好：均值在计数中读出；排序经由比较 C。",
+      "en": "That keeping what ending selected is better: the mean is read in the counts; ranking goes through the comparison C or a premise in its place.",
+      "zh": "保住终止所选出的更好：均值在计数中读出；排序经由比较 C 或代替它的前提。",
       "kind": "non-implication"
     }
   ],
@@ -494,6 +494,10 @@
     {
       "en": "6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.",
       "zh": "2026年11月6日，工作板条目 LM：此记录所列辅助引理现只陈述一次，在 Prelude、Flow、Change 或 Laws，或即 Lean 自有者而从列表除去；改其名，诸律不变。"
+    },
+    {
+      "en": "7 November 2026, CX: this said ranking goes through the comparison C, where a ranking of courses needs C or a premise in its place (07 §4), the correction LM1 made in other records; corrected. No law, premise or proof changed.",
+      "zh": "2026年11月7日，CX：此处谓排序经由比较 C，而对进程的排序需要 C 或代替它的前提（07 §4），即 LM1 在其他记录所作之更正；已更正。诸律、前提与证明皆不变。"
     }
   ]
 }

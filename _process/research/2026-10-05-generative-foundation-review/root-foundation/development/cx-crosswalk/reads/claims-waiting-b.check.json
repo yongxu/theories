@@ -1,0 +1,475 @@
+{
+ "cluster": "claims-waiting-b",
+ "items": [
+  {
+   "id": "cx-asc-founding-restraint-armored",
+   "field": "targets[0].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Copies 05 §5's thresholds sentence as it stands (`sparing_gives`, `total_stays`); no other changed claim and no ranking is restated."
+  },
+  {
+   "id": "cx-asc-founding-restraint-armored",
+   "field": "targets[2].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Copies 05 §11's promise sentence and the corrected ignition clause, with the exchange witness, the move's definition and near-definitional kept."
+  },
+  {
+   "id": "cx-asc-founding-restraint-armored",
+   "field": "reading",
+   "verdict": "fix",
+   "edits": [
+    {
+     "old": "in a pair the one-step laws split between restoring and answering a constant withholder",
+     "new": "in a pair the one-step laws that keep inclusion split between restoring and answering a constant withholder"
+    }
+   ],
+   "labels": null,
+   "why": "The sparing, promise and ignition clauses match 05 as it stands, as the author says; but 05 §5 splits only the five one-step laws that keep inclusion, agreement both restoring and answering (`WindowedWaiting.restores_and_answers_iff`), as the entry's own targets[1] says. The edit restores that qualifier."
+  },
+  {
+   "id": "cx-archearth-recursive-capacity",
+   "field": "targets[4].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Copies 05 §11's exchange witness and the corrected ignition clause, its definition and near-definitional standing kept, with the circular-dependence clause as the home has it."
+  },
+  {
+   "id": "cx-archearth-recursive-capacity",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Its ignition clause keeps the witness standing, and in that witness an empty or one-sided start never becomes jointly active, so 'needs a reserve to start' is the home's. No waiting, promise or ethics claim is restated more widely."
+  },
+  {
+   "id": "cx-archearth-recursive-capacity",
+   "field": "account_adds",
+   "verdict": "ok",
+   "labels": null,
+   "why": "The ignition clause keeps 05 §11's standing, and the ethics clause already says ranking needs C or a premise in its place, with the condition for scope, neither asserted and their warrant open, as 07 §4 does."
+  },
+  {
+   "id": "cx-ctxrt-bounded-local-context",
+   "field": "targets[1].says",
+   "verdict": "fix",
+   "edits": [
+    {
+     "old": "every pair of locally authorized moves jointly allowed and every admitted joint successor keeping both",
+     "new": "every pair of locally authorized moves jointly allowed with a successor wherever both hold, and every admitted joint successor keeping both"
+    }
+   ],
+   "labels": null,
+   "why": "No changed claim is restated, but the paraphrase drops a hypothesis 05 §11 states and its record lists as supplied: moves jointly allowed 'with a successor wherever both hold', the availability without which a law with no successors keeps every property vacuously. The edit puts it back in the home's words."
+  },
+  {
+   "id": "cx-ctxrt-bounded-local-context",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "'A contract is not a start' kept the wording AA narrowed; 05 §11 has the promises holding on both sides where neither happens and D48 says mutual promises alone force no start while enforced contracts are laws giving first, which 'a contract alone forces no start' fits. The other clauses are not changed claims."
+  },
+  {
+   "id": "cx-drives-belief-makes-dynamic",
+   "field": "targets[2].says",
+   "verdict": "fix",
+   "edits": [
+    {
+     "old": "Reading [D48]:",
+     "new": "Reading [AI reading, D48]:"
+    }
+   ],
+   "labels": null,
+   "why": "The memory law and D48's sentence match 05 §5 as they stand; but 05 labels the reading '[AI reading, D48]' and the field drops the AI label, which the crosswalk keeps. The edit restores it."
+  },
+  {
+   "id": "cx-ecs-replaceable-behind-promises",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "'Promise' is a contract's promise within which behaviour can differ, read beside 03's substitution law and 07's case-by-case fulfilment; no waiting, promise or ethics claim is restated."
+  },
+  {
+   "id": "cx-ecs-local-promises-fail-jointly",
+   "field": "targets[1].part",
+   "verdict": "ok",
+   "labels": null,
+   "why": "A part label naming two declarations of 05 §11 (`reciprocal_eventual_promises_can_be_empty`, `preservation_without_availability`), both still cited there."
+  },
+  {
+   "id": "cx-ecs-local-promises-fail-jointly",
+   "field": "targets[2].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Copies 05 §5's memory law, 'more waiting gives no more' and the ring of three as they stand; a source giving first gives whatever it waits on, so it agrees with the sparing condition."
+  },
+  {
+   "id": "cx-ecs-local-promises-fail-jointly",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Each clause matches 05 §11 as it stands (one reserve, promises that can be empty, preservation without availability, a wait no one can begin), 'waiting relations have exact laws' is §5's, and the latency half is labelled the reader's step."
+  },
+  {
+   "id": "cx-ecs-local-promises-fail-jointly",
+   "field": "account_adds",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Under giving first, with the sources decided, `Tolerance.restores_iff` gives exact conditions and a clear loop is never restored; a source is a formation sparing all it waits on, so the field agrees with the corrected thresholds sentence."
+  },
+  {
+   "id": "cx-hsm-value-or-tool-alone",
+   "field": "targets[1].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Quotes 05 §11's 'Promises do not' sentence and the corrected ignition clause, exchange witness and near-definitional kept."
+  },
+  {
+   "id": "cx-hsm-value-or-tool-alone",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "'Promises alone start nothing' was the wording AA narrowed; the author's edit takes D48's 'force no start' and 05 §11's holding on both sides where neither ever happens, and is exact. The other clauses are not changed claims."
+  },
+  {
+   "id": "cx-hsm-value-or-tool-alone",
+   "field": "account_adds",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Quotes D48's sentence on kept promises and enforced contracts as it stands, labelled an AI reading."
+  },
+  {
+   "id": "cx-hsm-coordination-protocols",
+   "field": "targets[0].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Quotes 05 §11's composition theorem with every hypothesis, 'with a successor wherever both hold' included, and the corrected ignition clause."
+  },
+  {
+   "id": "cx-kpso-protective-closure",
+   "field": "targets[0].says",
+   "verdict": "fix",
+   "edits": [
+    {
+     "old": "Which kind depends on what it does to the obtainable, not its name.",
+     "new": "Which kind depends on what it does to what can be had again, not its name."
+    }
+   ],
+   "labels": null,
+   "why": "No changed claim is restated, but 06's row makes a limit's kind turn on what it does to 可复得者, what can be had again, and the same section's 开非更多 row says how much is obtainable does not decide turning; 'the obtainable' blurs the two. The edit uses the words the sibling entries already use."
+  },
+  {
+   "id": "cx-kpso-means-not-ends",
+   "field": "targets[0].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Renders 06's 成生之限 row as it stands, 'what can be had again' for 可复得者; 'promises' is the row's 允诺, not D48's."
+  },
+  {
+   "id": "cx-kpso-trust-before-verification",
+   "field": "targets[0].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Copies 05 §5's thresholds sentence as it stands."
+  },
+  {
+   "id": "cx-kpso-trust-before-verification",
+   "field": "targets[1].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Copies D48's corrected sentences word for word, the AI label kept."
+  },
+  {
+   "id": "cx-kpso-trust-before-verification",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Its waiting clauses copy 05 §5 and D48 as they stand; the verification clause is 03's, unchanged, and 'Tolerance is not shown good' is the record's own line."
+  },
+  {
+   "id": "cx-ma-positive-recursion",
+   "field": "targets[0].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Copies 05 §5's thresholds sentence as it stands."
+  },
+  {
+   "id": "cx-ma-positive-recursion",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Both edits are exact and right: the field dropped 'all' and the home's 'from step 1 whatever the start', and 'Calling it better is C's' gave a ranking to C alone where 07 §4 says it needs C or a premise in its place. The result names both premises, unasserted, their warrant open."
+  },
+  {
+   "id": "cx-rsd-rebuild-feedbacks",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "'Without promise' means without a guarantee; its account of the exits matches COLLECTIVE-DIRECTION §2 as it stands, the fault in organized relations is 07's D65 reading, and no edge main narrowed is restated."
+  },
+  {
+   "id": "cx-sspiral-belief-makes-trap",
+   "field": "targets[3].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Copies 05 §5's sparing condition and `Tolerance.total_stays` as they stand."
+  },
+  {
+   "id": "cx-sty-enforcement-by-construction",
+   "field": "account_adds",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Quotes D48's kept promises and enforced contracts as laws giving first, labelled '[AI reading, D48]', as it stands."
+  },
+  {
+   "id": "cx-fork-commons-no-subject",
+   "field": "targets[1].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Each clause matches 05 §11 as it stands, the corrected ignition clause with the exchange witness and near-definitional included."
+  },
+  {
+   "id": "cx-fork-commons-no-subject",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Its ignition clause keeps the corrected standing, and 'a design without a source is a law with no start' reads `Tolerance.total_stays` and D48's loop with no source within a labelled reading. The market, transition and succession clauses are unchanged at their homes."
+  },
+  {
+   "id": "cx-fork-strong-guardians",
+   "field": "targets[0].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Renders 06's 成生之限／绝生之限 row as it stands, 'what can be had again' for 可复得者; 'promises' is the row's 允诺."
+  },
+  {
+   "id": "cx-fork-infrastructure-upstream",
+   "field": "reading",
+   "verdict": "fix",
+   "edits": [
+    {
+     "old": "and ignition needs an actual reserve.",
+     "new": "and in the exchange witness ignition, defined as spending a reserve, needs one already present (near-definitional)."
+    },
+    {
+     "old": "neither asserted, with J1–J4, shared capacity can be warranted, and its overbuilding is the counterexample.",
+     "new": "neither asserted and their warrant open, with J1–J4, complete relational correspondence and actual improvement witnesses for every deficient case, shared capacity can be warranted, and overbuilding that depletes the living basis is its counterexample where construction reports omit retained amounts."
+    }
+   ],
+   "labels": null,
+   "why": "The author's ignition edit and 'their warrant open' are right. But 05 §11's conditional also takes complete relational correspondence and improvement witnesses for every deficient case, and its counterexample is overbuilding that depletes the living basis where construction reports omit retained amounts; the field dropped both, so the second edit keeps them."
+  },
+  {
+   "id": "cx-fork-infrastructure-upstream",
+   "field": "targets[3].says",
+   "verdict": "fix",
+   "edits": [
+    {
+     "old": "Conditional (the condition for scope; C for order, with J1–J4).",
+     "new": "Conditional (the condition for scope; C for order, with J1–J4; complete relational correspondence; actual improvement witnesses for every deficient case)."
+    }
+   ],
+   "labels": null,
+   "why": "Not in the author's list: the label drops two of the premises 05 §11's conditional states, so it gives the warrant on fewer than the home does. The edit copies the home's list."
+  },
+  {
+   "id": "cx-fork-trust-from-shared-understanding",
+   "field": "targets[2].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Copies D48 as it stands, its corrected last sentence included, the AI label kept."
+  },
+  {
+   "id": "cx-fork-trust-from-shared-understanding",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "'Giving that waits starts from a source giving first' agrees with 05 §5: under giving first a clear loop is never restored, and restoring needs a formation that spares all it waits on. No changed claim is restated more widely."
+  },
+  {
+   "id": "cx-wamo-capacity-before-action",
+   "field": "targets[0].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Copies the corrected ignition clause; 'promises do not suffice' is 05 §11's 'Promises do not', and 'uses it up' and 'How a supported start forms' are the record's law 3 and does-not-show."
+  },
+  {
+   "id": "cx-wamo-capacity-before-action",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Its ignition clause keeps the corrected standing and the record's 'uses it up'; no other changed claim is restated."
+  },
+  {
+   "id": "cx-wamo-capacity-before-action",
+   "field": "account_adds",
+   "verdict": "fix",
+   "edits": [
+    {
+     "old": "Warrant to build shared capacity stands only under the condition for scope and C for order, neither asserted, warrant open.",
+     "new": "Warrant to build shared capacity can stand under the condition for scope and C for order, neither asserted, warrant open, with J1–J4, complete relational correspondence and actual improvement witnesses; a ranking of courses needs C or a premise in its place."
+    }
+   ],
+   "labels": null,
+   "why": "The author is right that 'stands only under ... C' leaves no room for a premise in C's place. But turned into 'can stand under' the two premises alone, it gives as enough what 05 §11's conditional states only with J1–J4, complete relational correspondence and improvement witnesses, so the edit keeps them."
+  },
+  {
+   "id": "cx-wamo-capacity-before-action",
+   "field": "targets[2].says",
+   "verdict": "fix",
+   "edits": [
+    {
+     "old": "Conditional (the condition for scope, C for order, neither asserted, with J1–J4):",
+     "new": "Conditional (the condition for scope, C for order, neither asserted, with J1–J4, complete relational correspondence and actual improvement witnesses for every deficient case):"
+    }
+   ],
+   "labels": null,
+   "why": "Not in the author's list: the label drops two of the premises 05 §11's conditional states, so it gives the warrant on fewer than the home does. The edit adds them in the home's words."
+  },
+  {
+   "id": "cx-wamo-abundance-loop",
+   "field": "targets[0].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Copies 05 §5's kept set and sparing sentence as they stand."
+  },
+  {
+   "id": "cx-wamo-abundance-loop",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Its waiting clauses copy 05 §5 and D48 as they stand; the return clause rests on §5's offspring law and §6's two ways and bounds, within a labelled reading."
+  },
+  {
+   "id": "cx-wamo-abundance-loop",
+   "field": "account_adds",
+   "verdict": "fix",
+   "edits": [
+    {
+     "old": "Why a gift and not a promise;",
+     "new": "Why a gift and not mutual promises alone;"
+    }
+   ],
+   "labels": null,
+   "why": "D48 reads kept promises as laws giving first and says only that mutual promises alone force no start of a loop with no source, so 'not a promise' keeps the wording AA narrowed. The edit takes D48's words; the rest stands."
+  },
+  {
+   "id": "cx-wamo-self-made-trap",
+   "field": "targets[0].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Copies D48 as it stands, its corrected last sentence included, the AI label kept."
+  },
+  {
+   "id": "cx-zhishan-prohibition-needs-mechanism",
+   "field": "targets[0].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Lists COLLECTIVE-DIRECTION §2's nine exits by name as they stand, 'Spare all one waits on' and the reward row's caveat included; no edge is restated."
+  },
+  {
+   "id": "cx-zhishan-not-a-master-good",
+   "field": "targets[2].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Renders 06's 成生之限 and 开非更多 rows as they stand; 'promises' is the row's 允诺."
+  },
+  {
+   "id": "cx-zhishan-goodwill-not-carrier",
+   "field": "targets[0].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Quotes 05 §11's 'Promises do not' sentence and the corrected ignition clause as they stand."
+  },
+  {
+   "id": "cx-zhishan-goodwill-not-carrier",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Its promise and ignition clauses keep 05 §11's standing, and its ethics clause names the condition for scope and C for order, neither asserted and their warrant open, with every premise of 05 §11's conditional and its counterexample in the home's words."
+  },
+  {
+   "id": "cx-zhishan-goodwill-not-carrier",
+   "field": "targets[2].says",
+   "verdict": "fix",
+   "edits": [
+    {
+     "old": "Conditional (the condition; C with J1–J4; correspondence):",
+     "new": "Conditional (the condition, for scope; C, for order, with J1–J4; complete relational correspondence; actual improvement witnesses for every deficient case):"
+    }
+   ],
+   "labels": null,
+   "why": "Not in the author's list: the label drops the improvement witnesses 05 §11's conditional takes and the two premises' roles, which the entry's own reading states. The edit copies the home's list."
+  },
+  {
+   "id": "cx-abr-prozbul-reset-read-ahead",
+   "field": "targets[1].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Copies D48 as corrected, the tolerance clause with 'only where some formation spares all it waits on'."
+  },
+  {
+   "id": "cx-abr-prozbul-reset-read-ahead",
+   "field": "targets[1].part",
+   "verdict": "ok",
+   "labels": null,
+   "why": "A part label naming D48's sentence, which stands."
+  },
+  {
+   "id": "cx-abr-ijma-consensus",
+   "field": "reading",
+   "verdict": "ok",
+   "labels": null,
+   "why": "'A promise behind it' is the tradition's; the pool clause is 05 §8's D45 reading, which AA did not change (its restatement touched §7's D45), and the rest is the reader's labelled comparison."
+  },
+  {
+   "id": "cx-indaf-relational-tipping",
+   "field": "targets[1].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Copies 05 §5's worst-start theorem as it stands, the sources decided in its label."
+  },
+  {
+   "id": "cx-indaf-relational-tipping",
+   "field": "targets[2].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Copies 05 §5's thresholds sentence as it stands."
+  },
+  {
+   "id": "cx-indaf-relational-tipping",
+   "field": "targets[3].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Copies 05 §11 as it stands, the corrected ignition clause included, and the record's does-not-show line."
+  },
+  {
+   "id": "cx-indaf-relational-tipping",
+   "field": "account_adds",
+   "verdict": "ok",
+   "labels": null,
+   "why": "'What a promise cannot start' kept the wording AA narrowed; the author's 'that mutual promises alone force no start' is D48's and exact, and the ethics clause already names both premises, unasserted, warrant open."
+  },
+  {
+   "id": "cx-syscyb-double-contingency",
+   "field": "targets[3].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Copies 05 §5's thresholds sentence as it stands."
+  },
+  {
+   "id": "cx-econ-granovetter-distribution",
+   "field": "targets[0].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Quotes 05 §5's tolerating law and sparing sentence as they stand, and its not-stated list is the record's does-not-show."
+  },
+  {
+   "id": "cx-econ-ostrom-commons",
+   "field": "targets[3].says",
+   "verdict": "ok",
+   "labels": null,
+   "why": "Quotes D48's corrected tolerance clause word for word; the folk-theorem line is 08's table row as it stands."
+  }
+ ]
+}

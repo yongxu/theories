@@ -1,0 +1,569 @@
+{
+ "round": "claims",
+ "items": [
+  {
+   "id": "cx-asc-founding-restraint-armored",
+   "field": "targets[0].says",
+   "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+   "text": "Theorem (any type): restoring needs a formation that spares all it waits on, which gives from step 1 whatever the start; without one, total withholding stays.",
+   "matched": [
+    "spares all"
+   ],
+   "family": "waiting"
+  },
+  {
+   "id": "cx-asc-founding-restraint-armored",
+   "field": "targets[2].says",
+   "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start",
+   "text": "Theorem (any process; periphery module): 'if the other eventually does, I eventually do' holds on both sides where neither ever happens; in the exchange witness ignition, which the move defines as spending a reserve, needs one already present (near-definitional).",
+   "matched": [
+    "ignit"
+   ],
+   "family": "waiting"
+  },
+  {
+   "id": "cx-asc-founding-restraint-armored",
+   "field": "reading",
+   "anchor": null,
+   "text": "The form is present in laws of waiting: restoring giving needs a formation that spares all it waits on; in a pair the one-step laws split between restoring and answering a constant withholder; reciprocal promises can be empty and in a witness ignition, defined as spending a reserve, needs one already present (near-definitional). That is 'giving', not slowing a technology, and its application to AI is not made live. [AI reading]",
+   "matched": [
+    "ignit",
+    "promis",
+    "spares all"
+   ],
+   "family": "waiting"
+  },
+  {
+   "id": "cx-archearth-recursive-capacity",
+   "field": "targets[4].says",
+   "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start",
+   "text": "Theorem (any process; periphery module). In the exchange witness an empty or one-sided start never becomes jointly active, and ignition, which the move defines as spending a reserve, needs one already present (near-definitional): one circular dependence can be maintenance running or a wait no one can begin.",
+   "matched": [
+    "ignit"
+   ],
+   "family": "waiting"
+  },
+  {
+   "id": "cx-archearth-recursive-capacity",
+   "field": "reading",
+   "anchor": null,
+   "text": "The limits have laws, and 08 names the economics: renewers multiplying under upkeep is maintenance scaling. Copying b-fold runs exactly where a stock covers its draws, so compounding needs that stock. In a witness a closed circular dependence needs a reserve to start, ignition being defined as spending one (near-definitional). Support passing on asks brief supports, which factories are not, so that form is not used. These read on robots building robots only by this reading. [AI reading]",
+   "matched": [
+    "ignit"
+   ],
+   "family": "waiting"
+  },
+  {
+   "id": "cx-archearth-recursive-capacity",
+   "field": "account_adds",
+   "anchor": null,
+   "text": "The stock a run of copying needs, exactly, on counts; that in a witness a circular dependence needs a reserve to start, ignition being defined as spending one (near-definitional). All on models, none about industry. The folder asks whether the chain can run; the account would also ask what selects it and what that selection cannot read. None compares two courses: ranking them needs C or a premise in its place, with the continuation condition for scope, neither asserted and their warrant open.",
+   "matched": [
+    "ignit"
+   ],
+   "family": "waiting"
+  },
+  {
+   "id": "cx-ctxrt-bounded-local-context",
+   "field": "targets[1].says",
+   "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start",
+   "text": "Theorem (any process; periphery module): 'With faithful joint-to-local projections and valid local plans', two properties holding on the covered start, every pair of locally authorized moves jointly allowed and every admitted joint successor keeping both, 'the paired finite plan is valid'. 'Promises do not': reciprocal eventual promises hold where neither ever happens. Its record: that an actual joint activity meets these is supplied.",
+   "matched": [
+    "promis"
+   ],
+   "family": "waiting"
+  },
+  {
+   "id": "cx-ctxrt-bounded-local-context",
+   "field": "reading",
+   "anchor": null,
+   "text": "The account says where such composition holds: deliveries compose where they hold or restore what the others use, and one changing what its task does not list can make a regular pair of tasks impossible. Faithful projections and valid local plans pair into a valid joint plan under stated supports; reciprocal promises can be empty, so a contract is not a start. Exclusive footprints have the child workspace's form. Local views glue exactly where they agree where they meet. [AI reading]",
+   "matched": [
+    "promis"
+   ],
+   "family": "waiting"
+  },
+  {
+   "id": "cx-drives-belief-makes-dynamic",
+   "field": "targets[2].says",
+   "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-giving-that-waits-on-giving",
+   "text": "Theorem: with memory, a formation gives at step n exactly where every formation within n waits of it gave at the start, so a withholding stays and spreads downstream; one withholding, every formation within d waits of it, ends all giving from step d on. Reading [D48]: kept promises and enforced contracts are laws giving first: the law changes, not the state alone. Not that cooperation is good.",
+   "matched": [
+    "giving first",
+    "promis"
+   ],
+   "family": "waiting"
+  },
+  {
+   "id": "cx-ecs-replaceable-behind-promises",
+   "field": "reading",
+   "anchor": null,
+   "text": "A consumer reading through parts has this form: a replacement evaluates alike under every consumer exactly where it supplies the ground at each position read. Stated for supplied readings and a typed-term language; contracts as positions is my step, and the law asks more than a contract, which lets behaviour differ within its promise. Case by case is the nearer form: equal success need not fulfil an undertaking. The root limits 'any': lifting does not substitute designated parts. [AI reading]",
+   "matched": [
+    "promis"
+   ],
+   "family": "waiting"
+  },
+  {
+   "id": "cx-ecs-local-promises-fail-jointly",
+   "field": "targets[1].part",
+   "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start",
+   "text": "reciprocal promises can be empty; preservation without availability",
+   "matched": [
+    "promis"
+   ],
+   "family": "waiting"
+  },
+  {
+   "id": "cx-ecs-local-promises-fail-jointly",
+   "field": "targets[2].says",
+   "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-giving-that-waits-on-giving",
+   "text": "Theorem (any formations, any relation of waiting): with memory, one withholding, where every formation lies within d waits of it, ends all giving from step d on; under both laws more waiting gives no more at any step. In a ring of three, with memory all withhold from step 2, and a source giving first brings all to give from step 3. It does not show how waiting forms.",
+   "matched": [
+    "giving first"
+   ],
+   "family": "waiting"
+  },
+  {
+   "id": "cx-ecs-local-promises-fail-jointly",
+   "field": "reading",
+   "anchor": null,
+   "text": "The source's closest match. Two locally fine plans fail jointly on one shared reserve; reciprocal promises can be empty; preservation does not give availability; a circular dependence can be a wait no one can begin; waiting relations have exact laws. Same mechanism, on stated models, for the deadlock half. The latency half fits only with a deadline read as a stock, my step: each within its own count can jointly exceed. [AI reading]",
+   "matched": [
+    "promis"
+   ],
+   "family": "waiting"
+  },
+  {
+   "id": "cx-ecs-local-promises-fail-jointly",
+   "field": "account_adds",
+   "anchor": null,
+   "text": "Exact conditions under which a circular wait starts or never starts, a source giving first as what breaks it, and that serializing does not repair an unrenewed shared reserve.",
+   "matched": [
+    "giving first"
+   ],
+   "family": "waiting"
+  },
+  {
+   "id": "cx-hsm-value-or-tool-alone",
+   "field": "targets[1].says",
+   "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start",
+   "text": "Any process, periphery module: “Promises do not: “if the other eventually does, I eventually do” holds on both sides where neither ever happens”; in the exchange witness “ignition, which the move defines as spending a reserve, needs one already present” (near-definitional).",
+   "matched": [
+    "ignit"
+   ],
+   "family": "waiting"
+  },
+  {
+   "id": "cx-hsm-value-or-tool-alone",
+   "field": "reading",
+   "anchor": null,
+   "text": "Proposed here; no live text draws either link. Value alone has neighbours, none about value claims: in a task protocol, relabelling without rewriting the encoding fails; promises alone start nothing where neither side moves; in language models an instruction kept no dependent untold. Tool alone has a form: a distinction matters where histories the evidence leaves open need incompatible responses. Apart: the source says such tools fail; the account's centre says a selection can succeed while what it cannot read is lost, so success shows no understanding. [AI reading]",
+   "matched": [
+    "promis"
+   ],
+   "family": "waiting"
+  },
+  {
+   "id": "cx-hsm-value-or-tool-alone",
+   "field": "account_adds",
+   "anchor": null,
+   "text": "An exact reason a tool's success is silent on the setting: differences beyond a selector's couplings stay unselected, however hard it selects. An AI reading adds “Kept promises and enforced contracts are laws giving first: the law changes, not the state alone.”",
+   "matched": [
+    "giving first",
+    "promis"
+   ],
+   "family": "waiting"
+  },
+  {
+   "id": "cx-hsm-coordination-protocols",
+   "field": "targets[0].says",
+   "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start",
+   "text": "Any process, periphery module: “With faithful joint-to-local projections and valid local plans”, two properties holding on the covered start, every pair of locally authorized moves jointly allowed with a successor wherever both hold, and every admitted joint successor keeping both, “the paired finite plan is valid”; in the exchange witness “ignition, which the move defines as spending a reserve, needs one already present” (near-definitional).",
+   "matched": [
+    "ignit"
+   ],
+   "family": "waiting"
+  },
+  {
+   "id": "cx-kpso-protective-closure",
+   "field": "targets[0].says",
+   "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#closing-and-opening",
+   "text": "护闭: removing at a fork the step making a configuration unobtainable [AI reading, D52]. Limits that promise, train or stop harm constrain some steps while what they constrain can still be had, 护闭's structure; those monopolizing entry or removing alternatives are 成闭. Which kind depends on what it does to the obtainable, not its name.",
+   "matched": [
+    "promis"
+   ],
+   "family": "waiting"
+  },
+  {
+   "id": "cx-kpso-means-not-ends",
+   "field": "targets[0].says",
+   "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#closing-and-opening",
+   "text": "A limit's kind depends on what it does to what can be had again, not its name; a limit that promises, trains or stops harm constrains steps while what it constrains can still be had: 护闭's structure.",
+   "matched": [
+    "promis"
+   ],
+   "family": "waiting"
+  },
+  {
+   "id": "cx-kpso-trust-before-verification",
+   "field": "targets[0].says",
+   "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+   "text": "Theorem (any type): restoring needs a formation that spares all it waits on, which gives from step 1 whatever the start; without one, total withholding stays.",
+   "matched": [
+    "spares all"
+   ],
+   "family": "waiting"
+  },
+  {
+   "id": "cx-kpso-trust-before-verification",
+   "field": "targets[1].says",
+   "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-offspring-read-from-giving-that-waits",
+   "text": "Reading [AI reading, D48]: tolerance lets cooperation survive scattered withholding, and rebuilds it where it is lost everywhere only where some formation spares all it waits on; mutual promises alone force no start of a loop with no source.",
+   "matched": [
+    "promis",
+    "spares all"
+   ],
+   "family": "waiting"
+  },
+  {
+   "id": "cx-kpso-trust-before-verification",
+   "field": "reading",
+   "anchor": null,
+   "text": "The account has no statement of trust; this scope is proposed here, on its model of waiting. Restoring needs a formation sparing all it waits on, which gives from step 1 whatever the start; without one, total withholding stays. And mutual promises alone force no start of a loop with no source, which limits 'begin with contact'. Verification has a limit of its own: behaviour at an unread occasion can differ while every reading agrees, where no read occasion shares its lump; intention and another's false belief are not stated. Tolerance is not shown good. [AI reading]",
+   "matched": [
+    "promis"
+   ],
+   "family": "waiting"
+  },
+  {
+   "id": "cx-ma-positive-recursion",
+   "field": "targets[0].says",
+   "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+   "text": "Theorem (any type). Restoring needs a formation that spares all it waits on, which gives from step 1 whatever the start; without one, total withholding stays.",
+   "matched": [
+    "spares all"
+   ],
+   "family": "waiting"
+  },
+  {
+   "id": "cx-ma-positive-recursion",
+   "field": "reading",
+   "anchor": null,
+   "text": "Parts stand separately: a formation sparing what it waits on gives first; building shared capacity can be warranted in a comparison without fixing one carrier, where the record's premises hold. Nothing in the account states this loop or its carriers. Calling it better is C's, and whose losses count the condition's. The link is proposed here. [AI reading]",
+   "matched": [
+    "gives first"
+   ],
+   "family": "waiting"
+  },
+  {
+   "id": "cx-rsd-rebuild-feedbacks",
+   "field": "reading",
+   "anchor": null,
+   "text": "The account's exits have this shape: carrying what acts do back into what selects the rule, reading beyond the share, pooling; suppressed feedback and blocked exit are read as a fault in organized relations. It states them narrower and without promise: no guarantee, each exit under hypotheses, none shown of an actual collective, several with a closing window, and material sufficiency is no exit in its table. 'Reachable by mechanism' becomes achievable under stated conditions. [AI reading]",
+   "matched": [
+    "promis"
+   ],
+   "family": "waiting"
+  },
+  {
+   "id": "cx-sspiral-belief-makes-trap",
+   "field": "targets[3].says",
+   "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+   "text": "Theorem: restoring needs a formation that spares all it waits on; without one, total withholding stays (Tolerance.total_stays).",
+   "matched": [
+    "spares all"
+   ],
+   "family": "waiting"
+  },
+  {
+   "id": "cx-sty-enforcement-by-construction",
+   "field": "account_adds",
+   "anchor": null,
+   "text": "That an extra write path can leave the public view identical; kept promises and enforced contracts read as laws giving first, 'the law changes, not the state alone' [AI reading, D48].",
+   "matched": [
+    "giving first",
+    "promis"
+   ],
+   "family": "waiting"
+  },
+  {
+   "id": "cx-fork-commons-no-subject",
+   "field": "targets[1].says",
+   "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start",
+   "text": "Theorem (any process; periphery module, axioms as its receipt reports). Reciprocal eventual promises can hold where neither ever happens; in the exchange witness an empty or one-sided start never becomes jointly active, and ignition, which the move defines as spending a reserve, needs one already present (near-definitional).",
+   "matched": [
+    "ignit",
+    "promis"
+   ],
+   "family": "waiting"
+  },
+  {
+   "id": "cx-fork-commons-no-subject",
+   "field": "reading",
+   "anchor": null,
+   "text": "Proposed here; no live text says this of a commons. The objection's form is in the account: in the market model selection does not create an absent practice; in a witness ignition, defined as spending a reserve, needs one already present (near-definitional); support during a transition cannot be paid for with the improvement it brings; selection must fund actual succession. A design without a source is a law with no start. None of these names who pays, or says any actor could. [AI reading]",
+   "matched": [
+    "ignit"
+   ],
+   "family": "waiting"
+  },
+  {
+   "id": "cx-fork-strong-guardians",
+   "field": "targets[0].says",
+   "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#closing-and-opening",
+   "text": "A limit that promises, trains or stops harm constrains some steps while what it constrains can still be had, the structure of protective closing; a limit monopolizing entry is closing without return. Which kind depends on what it does to what can be had again, not its name.",
+   "matched": [
+    "promis"
+   ],
+   "family": "waiting"
+  },
+  {
+   "id": "cx-fork-infrastructure-upstream",
+   "field": "reading",
+   "anchor": null,
+   "text": "Proposed here; the general bound is not stated. Its form is near joint plans: two locally successful plans on one reserve fail at a joint step, paired plans hold only with availability and faithful projection, and ignition needs an actual reserve. Selected histories show formed conditions carrying joint work, an assessment and no law. Under the continuation condition for scope and C for order, neither asserted, with J1–J4, shared capacity can be warranted, and its overbuilding is the counterexample. [AI reading]",
+   "matched": [
+    "ignit"
+   ],
+   "family": "waiting"
+  },
+  {
+   "id": "cx-fork-trust-from-shared-understanding",
+   "field": "targets[2].says",
+   "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+   "text": "Reading [AI reading, D48]. Cooperation among strangers is giving that waits on giving across chains longer than any acquaintance. 'Others will deceive me, so I deceive first' is withholding with memory, which absorbs. Mutual promises alone force no start of a loop with no source.",
+   "matched": [
+    "promis"
+   ],
+   "family": "waiting"
+  },
+  {
+   "id": "cx-fork-trust-from-shared-understanding",
+   "field": "reading",
+   "anchor": null,
+   "text": "Not in its terms: 'trust' has no live hit. What is stated is the aim and a limit: the work is for a truth anyone can check, and through it shared understanding and coordination, and no check inside it can show that it serves this. Observation comes first, necessary and not sufficient; seeing is not valuing keeps 'how to see' and 'what is good' apart. Giving that waits starts from a source giving first, not from understanding. No law has understanding produce expectation or trust. [AI reading]",
+   "matched": [
+    "giving first"
+   ],
+   "family": "waiting"
+  },
+  {
+   "id": "cx-wamo-capacity-before-action",
+   "field": "targets[0].says",
+   "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start",
+   "text": "In the exchange witness ignition, which the move defines as spending a reserve, needs one already present (near-definitional): one circular dependence can be maintenance running or a wait no one can begin; promises do not suffice. Not shown: \"How a supported start forms\". So defined, ignition needs the reserve and uses it up.",
+   "matched": [
+    "ignit",
+    "promis"
+   ],
+   "family": "waiting"
+  },
+  {
+   "id": "cx-wamo-capacity-before-action",
+   "field": "reading",
+   "anchor": null,
+   "text": "In a witness, ignition, which the move defines as spending a reserve, needs one already present (near-definitional), and formed conditions carried the next stretch in selected software histories: capacity prior to use, as specific conditions, not an interchangeable amount. But how a supported start forms is not shown, and that is what the source claims to do; so defined, ignition uses the reserve up. One periphery law closes a connection from enacted practice to further participation, not the arrival of people. [AI reading]",
+   "matched": [
+    "ignit"
+   ],
+   "family": "waiting"
+  },
+  {
+   "id": "cx-wamo-capacity-before-action",
+   "field": "account_adds",
+   "anchor": null,
+   "text": "The failure case: a loop of mutual promise that never starts, and overbuilding as a counterexample; that the start's forming is unexplained. Warrant to build shared capacity stands only under the condition for scope and C for order, neither asserted, warrant open.",
+   "matched": [
+    "promis"
+   ],
+   "family": "waiting"
+  },
+  {
+   "id": "cx-wamo-abundance-loop",
+   "field": "targets[0].says",
+   "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+   "text": "Theorem (any type): a set giving at the start, each member waiting on at most its tolerance outside it, keeps giving. Restoring needs a formation that spares all it waits on, which gives from step 1 whatever the start; without one, total withholding stays.",
+   "matched": [
+    "spares all"
+   ],
+   "family": "waiting"
+  },
+  {
+   "id": "cx-wamo-abundance-loop",
+   "field": "reading",
+   "anchor": null,
+   "text": "The seed has an exact form: restoring needs a formation sparing all it waits on, without which total withholding stays; mutual promises alone force no start of a loop with no source. That has the form of 无用之礼, on laws with no amounts. The return is scoped: whether giving rises depends on what it brings back and on assortment, and a gift brings support beyond its draw only by need asymmetry or renewal from outside. [AI reading]",
+   "matched": [
+    "promis"
+   ],
+   "family": "waiting"
+  },
+  {
+   "id": "cx-wamo-abundance-loop",
+   "field": "account_adds",
+   "anchor": null,
+   "text": "Why a gift and not a promise; that a law of giving must change, not only a state; and where a surplus can come from. Laws of giving with amounts are open. The README's own critique, reciprocity asserted without mechanism, stands.",
+   "matched": [
+    "promis"
+   ],
+   "family": "waiting"
+  },
+  {
+   "id": "cx-wamo-self-made-trap",
+   "field": "targets[0].says",
+   "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-offspring-read-from-giving-that-waits",
+   "text": "Reading following this law [AI reading, D48]: 'Others will deceive me, so I deceive first' is withholding with memory, which absorbs. Kept promises and enforced contracts are laws giving first: the law changes, not the state alone. Mutual promises alone force no start of a loop with no source.",
+   "matched": [
+    "giving first",
+    "promis"
+   ],
+   "family": "waiting"
+  },
+  {
+   "id": "cx-zhishan-prohibition-needs-mechanism",
+   "field": "targets[0].says",
+   "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions",
+   "text": "Exits each hold under stated hypotheses: read what lies beyond the share, read the loss in time, shaping with nothing back to shapers alone, pool couplings, restraint within the joint slack, exclusive footprints, reward each step (one optimizer's law, not a collective exit as it stands), spare all one waits on, count reviewers by causes.",
+   "matched": [
+    "spare all"
+   ],
+   "family": "waiting"
+  },
+  {
+   "id": "cx-zhishan-not-a-master-good",
+   "field": "targets[2].says",
+   "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#十闭之类型与开之四标",
+   "text": "[AI reading, D49] Limits that enable (promises, training, stopping harm) constrain some steps and what is constrained stays obtainable; which kind a limit is depends on what it does to what can be regained, not its name. Openness is not more: how much is obtainable does not decide turning (成生之限…依它对可复得者做了什么，不依其名).",
+   "matched": [
+    "promis"
+   ],
+   "family": "waiting"
+  },
+  {
+   "id": "cx-zhishan-goodwill-not-carrier",
+   "field": "targets[0].says",
+   "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start",
+   "text": "Theorem (any process; periphery module): promises do not: \"if the other eventually does, I eventually do\" holds on both sides where neither ever happens; in the exchange witness ignition, which the move defines as spending a reserve, needs one already present (near-definitional).",
+   "matched": [
+    "ignit",
+    "promis"
+   ],
+   "family": "waiting"
+  },
+  {
+   "id": "cx-zhishan-goodwill-not-carrier",
+   "field": "reading",
+   "anchor": null,
+   "text": "The same point on models: reciprocal promises can be empty, in a witness ignition, defined as spending a reserve, needs one already present (near-definitional), and selection must fund actual succession. Under the continuation condition, for scope, and C, for order, neither asserted and their warrant open, with J1 to J4, complete relational correspondence and actual improvement witnesses for every deficient case, building shared capacity can be warranted; overbuilding that depletes the living basis is the counterexample where construction reports omit retained amounts. The account does not say where compute should flow.",
+   "matched": [
+    "ignit",
+    "promis"
+   ],
+   "family": "waiting"
+  },
+  {
+   "id": "cx-abr-prozbul-reset-read-ahead",
+   "field": "targets[1].says",
+   "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+   "text": "Reading [AI reading, D48]: kept promises and enforced contracts are laws giving first: the law changes, not the state alone. Tolerance lets cooperation survive scattered withholding, and rebuilds it where it is lost everywhere only where some formation spares all it waits on.",
+   "matched": [
+    "giving first",
+    "promis",
+    "spares all"
+   ],
+   "family": "waiting"
+  },
+  {
+   "id": "cx-abr-prozbul-reset-read-ahead",
+   "field": "targets[1].part",
+   "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+   "text": "D48: kept promises and enforced contracts",
+   "matched": [
+    "promis"
+   ],
+   "family": "waiting"
+  },
+  {
+   "id": "cx-abr-ijma-consensus",
+   "field": "reading",
+   "anchor": null,
+   "text": "[AI reading] Divergence on what agreement does. The source gives the agreement of qualified jurists binding force, with a promise behind it; in the account members reading one channel add agreement, not reach, and warrant is not what a pool reads. The jurists' demand that each reason from the sources has the form of readers not copying, which is my reading. It stands against the Talmudic rule in the court-prophets entry, where a unanimous court is suspect: opposite verdicts on unanimity, both kept.",
+   "matched": [
+    "promis"
+   ],
+   "family": "waiting"
+  },
+  {
+   "id": "cx-indaf-relational-tipping",
+   "field": "targets[1].says",
+   "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-restoring-giving-from-the-worst-start",
+   "text": "Theorem (any type; the sources decided for the exact converse). Under giving first, a formation gives at n from every start exactly where no clear chain of n waits leads into it, and a clear loop is never restored; with memory no step restores giving.",
+   "matched": [
+    "giving first"
+   ],
+   "family": "waiting"
+  },
+  {
+   "id": "cx-indaf-relational-tipping",
+   "field": "targets[2].says",
+   "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+   "text": "Theorem (any type). Restoring needs a formation that spares all it waits on, which gives from step 1 whatever the start: without one, total withholding stays.",
+   "matched": [
+    "spares all"
+   ],
+   "family": "waiting"
+  },
+  {
+   "id": "cx-indaf-relational-tipping",
+   "field": "targets[3].says",
+   "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start",
+   "text": "Theorem (any process; periphery, axioms reported). Reciprocal eventual promises hold on both sides where neither ever happens; in the exchange witness an empty or one-sided start never becomes jointly active, and ignition, which the move defines as spending a reserve, needs one already present (near-definitional). How a supported start forms is not shown.",
+   "matched": [
+    "ignit",
+    "promis"
+   ],
+   "family": "waiting"
+  },
+  {
+   "id": "cx-indaf-relational-tipping",
+   "field": "account_adds",
+   "anchor": null,
+   "text": "Exact forms of no return, the deadline on a level, and what a promise cannot start. One mechanism read for accountability. No law evaluates: whether a lost relation is a loss is 07's, under the condition for scope and C for order, neither asserted, warrant open.",
+   "matched": [
+    "promis"
+   ],
+   "family": "waiting"
+  },
+  {
+   "id": "cx-syscyb-double-contingency",
+   "field": "targets[3].says",
+   "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+   "text": "Theorem (any type). Restoring needs a formation that spares all it waits on, which gives from step 1 whatever the start: without one, total withholding stays.",
+   "matched": [
+    "spares all"
+   ],
+   "family": "waiting"
+  },
+  {
+   "id": "cx-econ-granovetter-distribution",
+   "field": "targets[0].says",
+   "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+   "text": "'a formation gives where all but its tolerance of what it waits on gave'; 'Restoring needs a formation that spares all it waits on, which gives from step 1 whatever the start'; 'without one, total withholding stays'. Tolerances are given numbers. Not stated: amounts of giving, thresholds with memory, how tolerances form.",
+   "matched": [
+    "spares all"
+   ],
+   "family": "waiting"
+  },
+  {
+   "id": "cx-econ-ostrom-commons",
+   "field": "targets[3].says",
+   "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+   "text": "Reading, AI, D48: 'Tolerance lets cooperation survive scattered withholding, and rebuilds it where it is lost everywhere only where some formation spares all it waits on'. Neighbour of contingent commitment, the link mine. 08 names as not stated 'restraint kept by punishing strategies' (folk theorems); here every horizon is finite.",
+   "matched": [
+    "spares all"
+   ],
+   "family": "waiting"
+  }
+ ]
+}
