@@ -57,6 +57,8 @@ DEFAULT_REWRITE_JSON = [
     '_process/research-config.json',
     '_process/goals/*.json',
     'theories/becoming/results/data/*.json',
+    'theories/becoming/results/atlas/*.json',
+    'theories/becoming/results/atlas/entries/*.json',
 ]
 DEFAULT_PIN_MANIFESTS = ['**/*freeze*.json', '**/*prereg*.json']
 DEFAULT_RECEIPTS = '_process/architecture/moves'

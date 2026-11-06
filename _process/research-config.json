@@ -178,7 +178,9 @@
     "theories/becoming/results/records/*.json",
     "_process/research-config.json",
     "_process/goals/*.json",
-    "theories/becoming/results/data/*.json"
+    "theories/becoming/results/data/*.json",
+    "theories/becoming/results/atlas/*.json",
+    "theories/becoming/results/atlas/entries/*.json"
   ],
   "move_rewrite_extra": [],
   "move_rewrite_markdown_mentions": true,

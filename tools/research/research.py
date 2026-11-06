@@ -16,7 +16,7 @@ from urllib.parse import unquote, urlsplit
 ROOT = Path(__file__).resolve().parents[2]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
-from tools.research import registry, navigation, completion, lean_catalogue, reading_catalogue, style, paths, moves, indexes, session_map, history_notes, rename_ids, theory_graph
+from tools.research import registry, navigation, completion, lean_catalogue, reading_catalogue, style, paths, moves, indexes, session_map, history_notes, rename_ids, theory_graph, atlas
 
 
 @contextmanager
@@ -45,6 +45,7 @@ def input_snapshot():
     if registry.standard_boundaries_path(config):
         paths.add(ROOT / registry.standard_boundaries_path(config))
     paths.update((ROOT / config['goal_directory']).glob('*.json'))
+    paths.update(atlas.inputs())
     for directory in config['record_directories']:
         for path in (ROOT / directory).glob('*.json'):
             paths.add(path)
@@ -272,6 +273,10 @@ def check_or_render(render=False, base=None, ids=None, strict_fresh=False):
     errors += completion_errors
     # The theory graph (RA): one graph of concepts, results, modules, texts and chapter sections, and its index.
     outputs.update(theory_graph.render(records))
+    # The atlas (AA): the dynamics as a curated layer beside the records; a broken entry is an error, as a record is.
+    atlas_pages, atlas_errors = atlas.render(records)
+    outputs.update(atlas_pages)
+    errors += atlas_errors
     index_pages, index_errors, reading_drift = index_outputs(render or strict_fresh)
     stale_indexes = []
     errors += index_errors
