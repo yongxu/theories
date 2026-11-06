@@ -163,6 +163,7 @@ ROOTF = '_process/research/2026-10-05-generative-foundation-review/root-foundati
 # makes is left to the strict check, which every content change reaches. A test file with no entry here reads every
 # path until it gets one.
 TESTS = {
+    'test_atlas': (),
     'test_architecture': ('tools/research/boundary_check.lean', RECORDS, DATA + 'law-families.json', DATA + 'shared-laws.json'),
     'test_boundary': ('tools/research/boundary_check.lean', 'tools/research/tests/test_schema2.py', RECORDS, DATA + 'law-families.json',
                       DATA + 'shared-laws.json', DATA + 'standard-boundaries.json', ROOTF + '/THEOREM-CONNECTIVITY-DUMP.lean',

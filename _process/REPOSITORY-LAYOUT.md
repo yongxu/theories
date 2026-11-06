@@ -24,7 +24,7 @@ theories/becoming/            the canonical theory, in four layers: one page, ov
   README.md                   generated landing page
   chapters/                   01-ROOT.md … 08-METHOD.md, CLAIMS.md (stub), generated README index
   review/                     the review packet: cover (README, README.zh), six dossiers, recoding/
-  results/                    records/, data/, generated views
+  results/                    records/, data/, atlas/, generated views
   history/                    retired chapters (the canonical chapter among them), verification/, lineage/, lean-declarations/
 theories/<branch folders>/    September syntheses, in place, with a generated status header
 
@@ -104,6 +104,7 @@ New imports larger than 10–20 MB go to LFS or an external store with a committ
 | A new or changed result | its record in `theories/becoming/results/records/`; the argument in the canonical chapter or the live study |
 | New Lean | the Becoming spine (`lean/becoming/`), or the periphery package it extends |
 | A study step, review or landing note | the live study (`_process/research/2026-10-05-generative-foundation-review/root-foundation/`), not a new dated workspace |
+| A dynamic in the atlas | `theories/becoming/results/atlas/entries/`, its standing read from its records ([the workflow](RESULT-WORKFLOW.md)) |
 | A claim on work | [the work board](BECOMING-WORKBOARD.md) |
 | Ren's message that governs work | a source record in `sources/15-codex-theory-conversations/` (Ren's words verbatim, AI context labelled), linked from the [directive register](RESEARCH-DIRECTIVES.md) when it is a retained authorization |
 | A new or changed authorization | `_process/goals/<id>.json` (with Ren) |

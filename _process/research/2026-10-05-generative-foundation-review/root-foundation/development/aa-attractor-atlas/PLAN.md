@@ -2,6 +2,8 @@
 
 *AI-written, 4 November 2026, for Ren's review. Nothing here is claimed on the board, landed or run. About fifty minutes to read; §0 takes ten. It rests on seven read-only reports written today ([readers-2026-11-04/](readers-2026-11-04/)), of which four findings were checked against the sources by hand (§1.3). It adds no result.*
 
+*Status, 6 November 2026. Phase 0's errata landed (`cb58b403c`). §7's tests went as far as they could before Ren's hold of that day on new test designs: SCL and CMT are frozen and not run, T7F did not freeze, and the hysteresis test waits on CY. Phase 1's tool and family C have landed ([ATLAS.md](../../../../../../theories/becoming/results/atlas/ATLAS.md)): the dynamics only, of the eight kinds in §3.2. The other seven families and the other kinds are next, their agent counts proposed first. §2 to §12 stand as written on 4 November unless a line says otherwise.*
+
 The request (4 November 2026, in chat; verbatim in [the source record](../../../../../../sources/15-codex-theory-conversations/2026-11-04-the-atlas.md)): finish what the map does not yet do, and "map out all attractors, phase transitions, what maps onto existing wisdoms, systems thinking, philosophy, cultures and scientific/logic understanding", as "a full, very detailed, structured, well thought, data collection, that can be visualized in all different ways, and server as our progress map, and make the theory complete" (sic: serve). Later the same day, on the order: "lean "unification of the root" needs to be done - we just need to make them run fast, but our order should be finishing the objectives of plan direction first, and improve overtime" (§5, RU; the gate change GT is drafted separately).
 
 ---
