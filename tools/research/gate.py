@@ -210,7 +210,9 @@ TESTS = {
     'test_strict_fresh': ('theories/becoming/results/completion/**', BECOMING + '/becoming-verification.json', ROOTF + '/THEOREM-CONNECTIVITY.json',
                           'theories/becoming/chapters/08-METHOD.md', RECORDS),
     'test_style': (BECOMING + '/check_becoming.py', LEAN + '/universal-ethics/generative-capacity/check.py', DATA + 'standard-boundaries.json', RECORDS),
-    'test_theory_graph': (RECORDS, DATA + 'regions.json'),
+    'test_theory_graph': (RECORDS, DATA + 'regions.json', CORPUS + '/**', ROOTF + '/development/one-unfolding-root/classify/**',
+                          ROOTF + '/development/ou2-candidates/outcomes.tsv', ROOTF + '/development/ou7-conditional-laws/data/groups.tsv',
+                          REVIEW + '/*.md', 'theories/becoming/chapters/*.md', BECOMING + '/Becoming/**'),
 }
 TEST_DERIVED = {'test_featured_results': 'timed_paths', 'test_registry': 'registry_sources', 'test_schema2': 'draft_paths',
                 'test_review_packet': 'review_reads'}

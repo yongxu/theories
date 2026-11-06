@@ -49,6 +49,11 @@ VOCABULARY = {
     'exit_strengths': [{'en': 'sufficient'}, {'en': 'necessary'}, {'en': 'exact'}],
     'standings_without_record': [{'en': 'argued'}, {'en': 'conjectured'}, {'en': 'reading', 'zh': '读法'}, {'en': 'open', 'zh': '未决'}],
     'test_states': [{'en': 'designed'}, {'en': 'frozen'}, {'en': 'run'}],
+    'domains': [{'en': 'earlier-folders'}, {'en': 'greek-roman'}],
+    'carried': [{'en': 'carried'}, {'en': 'carried-in-part'}, {'en': 'changed'}, {'en': 'history-only'}, {'en': 'not-carried'}, {'en': 'fresh-reading'}],
+    'relations': [{'en': 'agreement', 'zh': '相合'}, {'en': 'scope', 'zh': '定域'}, {'en': 'divergence', 'zh': '相分'}, {'en': 'contrary-reading', 'zh': '反读'}],
+    'group_kinds': [{'en': 'theory'}, {'en': 'domain'}],
+    'source_bases': [{'en': 'read-in-repo'}, {'en': 'ai-knowledge'}],
 }
 
 
@@ -116,7 +121,8 @@ class AtlasCase(unittest.TestCase):
         self.addCleanup(patcher.stop)
 
     def errors(self, *entries, vocabulary=VOCABULARY, records=RECORDS):
-        return atlas.validate({'dynamics': [copy.deepcopy(e) for e in entries]}, copy.deepcopy(vocabulary), records)
+        return atlas.validate({'dynamics': [copy.deepcopy(e) for e in entries], 'correspondences': [],
+                               'correspondence_groups': []}, copy.deepcopy(vocabulary), records)
 
     def assertOne(self, errors, *words):
         """Exactly one error, containing each of `words`."""
@@ -128,6 +134,8 @@ class AtlasCase(unittest.TestCase):
         (self.root / atlas.ENTRIES).mkdir(parents=True, exist_ok=True)
         (self.root / atlas.VOCABULARY).write_text(json.dumps(VOCABULARY, ensure_ascii=False, indent=1) + '\n')
         (self.root / atlas.ENTRIES / 'dynamics.json').write_text(json.dumps(list(entries), ensure_ascii=False, indent=1) + '\n')
+        for kind in ('correspondences', 'correspondence_groups'):
+            (self.root / atlas.ENTRIES / f'{kind}.json').write_text('[]\n')
 
 
 class ValidationTests(AtlasCase):
@@ -216,7 +224,7 @@ class ValidationTests(AtlasCase):
 
 class BuildTests(AtlasCase):
     def test_standing_is_each_records_status_and_kind_never_merged(self):
-        built = atlas.build({'dynamics': [capture(), carriers()]}, VOCABULARY, RECORDS)
+        built = atlas.build({'dynamics': [capture(), carriers()], 'correspondences': [], 'correspondence_groups': []}, VOCABULARY, RECORDS)
         d, e = built['dynamics']
         self.assertEqual(d['standing'], [{'record': 'closed-capture', 'status': 'recorded-checked', 'kind': 'theorem'},
                                          {'record': 'loss-read-in-time', 'status': 'reviewed-scoped', 'kind': 'assessment'}])
@@ -233,7 +241,7 @@ class BuildTests(AtlasCase):
         self.assertIn('| reviewed-scoped (theorem); reviewed-scoped (assessment) |', pages[atlas.PAGE])
 
     def test_hypotheses_are_the_records_text_by_index(self):
-        built = atlas.build({'dynamics': [capture(hypotheses=[{'record': 'closed-capture', 'index': 1}])]}, VOCABULARY, RECORDS)
+        built = atlas.build({'dynamics': [capture(hypotheses=[{'record': 'closed-capture', 'index': 1}])], 'correspondences': [], 'correspondence_groups': []}, VOCABULARY, RECORDS)
         self.assertEqual(built['dynamics'][0]['hypotheses'],
                          [{'record': 'closed-capture', 'index': 1, 'text': {'en': 'No axiom.', 'zh': '不加公理。'}}])
 
@@ -289,7 +297,92 @@ class RenderTests(AtlasCase):
 
     def test_inputs_are_the_curated_files(self):
         self.write_atlas()
-        self.assertEqual(atlas.inputs(), [self.root / atlas.ENTRIES / 'dynamics.json', self.root / atlas.VOCABULARY])
+        self.assertEqual(atlas.inputs(), [self.root / atlas.ENTRIES / f'{k}.json' for k in ('correspondence_groups', 'correspondences', 'dynamics')]
+                         + [self.root / atlas.VOCABULARY])
+
+
+RECORD_PAGE = atlas.RECORDS + '/closed-capture.md'
+
+
+def group(**changes):
+    g = {'id': 'cxg-early', 'domain': 'earlier-folders', 'title': {'en': 'An earlier folder'}, 'kind': 'theory',
+         'summary': {'en': 'What it held.'}, 'read': ['a.md'], 'skimmed': [], 'searched': [], 'not_mapped': [], 'coverage': None,
+         'reads': ['map', 'revise', 'check'], 'source': RECORD_PAGE}
+    g.update(changes)
+    return g
+
+
+def reading(**changes):
+    e = {'id': 'cx-early-claim', 'name': {'en': 'A claim'}, 'domain': 'earlier-folders', 'group': 'cxg-early',
+         'source': {'work': RECORD_PAGE, 'locator': 'its head', 'basis': 'read-in-repo'}, 'sense': {'en': 'In its own terms.'},
+         'quote': None, 'carried': 'carried', 'relation': 'agreement', 'reading': {'en': 'Read so.'},
+         'targets': [{'record': 'closed-capture', 'says': {'en': 'It says this.'}}], 'account_adds': None, 'source_adds': None,
+         'absence': None, 'labels': ['AI reading'], 'reads': ['map', 'revise', 'check']}
+    e.update(changes)
+    return e
+
+
+class CorrespondenceTests(AtlasCase):
+    def problems(self, *entries, groups=None):
+        return atlas.validate({'dynamics': [], 'correspondences': [copy.deepcopy(e) for e in entries],
+                               'correspondence_groups': [group()] if groups is None else groups},
+                              copy.deepcopy(VOCABULARY), RECORDS)
+
+    def test_a_carried_reading_passes(self):
+        self.assertEqual(self.problems(reading()), [])
+
+    def test_an_id_is_unique_across_the_atlas_and_a_group_exists(self):
+        self.assertOne(self.problems(reading(group='cxg-none')), 'group:', 'cxg-none')
+        self.assertTrue(any('unique across the atlas' in e for e in self.problems(reading(), reading())))
+
+    def test_the_outcome_decides_what_an_entry_must_show(self):
+        self.assertOne(self.problems(reading(relation=None)), 'relation:', 'needs a relation')
+        self.assertOne(self.problems(reading(targets=[])), 'targets:', 'needs what it is read against')
+        self.assertOne(self.problems(reading(carried='carried-in-part')), 'source_adds:')
+        self.assertOne(self.problems(reading(carried='not-carried', relation=None, targets=[])), 'absence:', 'searched')
+        self.assertEqual(self.problems(reading(carried='not-carried', relation=None, targets=[], absence={'searched': ['grep x'], 'read': []})), [])
+        self.assertTrue(any('no relation and no targets' in e
+                            for e in self.problems(reading(carried='not-carried', absence={'searched': ['grep x'], 'read': []}))))
+        self.assertOne(self.problems(reading(absence={'searched': ['grep x']})), 'absence:', 'only for')
+
+    def test_a_label_and_three_reads_are_required(self):
+        self.assertOne(self.problems(reading(labels=[])), 'labels:', 'AI reading')
+        self.assertOne(self.problems(reading(reads=['map'])), 'reads:')
+
+    def test_a_target_cites_the_live_account(self):
+        self.assertOne(self.problems(reading(targets=[{'record': 'no-such', 'says': {'en': 'x'}}])), 'no record no-such')
+        self.assertOne(self.problems(reading(targets=[{'anchor': 'experiments/history/Old.lean', 'says': {'en': 'x'}}])), 'not in the live account')
+
+    def test_a_quote_is_verbatim_and_only_from_a_stored_text(self):
+        self.assertOne(self.problems(reading(quote='words not there')), 'quote:', 'verbatim')
+        self.assertOne(self.problems(reading(source={'work': 'A book', 'locator': 'ch. 1', 'basis': 'ai-knowledge'}, quote='words')),
+                       'quote:', 'paraphrase')
+        self.assertEqual(self.problems(reading(source={'work': 'A book', 'locator': 'ch. 1', 'basis': 'ai-knowledge'})), [])
+
+    def test_a_domain_says_what_is_present_and_absent(self):
+        bare = group(id='cxg-greek', domain='greek-roman', kind='domain')
+        self.assertOne(self.problems(groups=[bare]), 'coverage:')
+        self.assertEqual(self.problems(groups=[group(id='cxg-greek', domain='greek-roman', kind='domain',
+                                                     coverage={'present': [], 'absent': [{'en': 'Nothing here.', 'searched': ['x']}]})]), [])
+
+    def test_the_page_puts_the_source_first_and_counts_divergence_beside_agreement(self):
+        (self.root / atlas.ENTRIES).mkdir(parents=True, exist_ok=True)
+        (self.root / atlas.VOCABULARY).write_text(json.dumps(VOCABULARY, ensure_ascii=False) + '\n')
+        (self.root / atlas.ENTRIES / 'dynamics.json').write_text('[]\n')
+        (self.root / atlas.ENTRIES / 'correspondence_groups.json').write_text(json.dumps([group()]))
+        (self.root / atlas.ENTRIES / 'correspondences.json').write_text(json.dumps(
+            [reading(), reading(id='cx-early-other', relation='divergence'),
+             reading(id='cx-early-gone', carried='not-carried', relation=None, targets=[], absence={'searched': ['grep x'], 'read': []})]))
+        pages, errors = atlas.render(RECORDS)
+        self.assertEqual(errors, [])
+        page = pages[atlas.CROSSWALK]
+        self.assertTrue(page.startswith(atlas.GENERATED + '\n'))
+        self.assertLess(page.index('Its own sense'), page.index('Reading [AI reading]'))
+        self.assertIn('| [An earlier folder](#cxg-early) | 3 | 2 | 0 | 0 | 0 | 1 | 0 | 1 | 0 | 1 | 0 |', page)
+        self.assertIn('Searched: grep x', page)
+        data = json.loads(pages[atlas.DATA])
+        self.assertEqual(data['correspondence_groups'][0]['by_carried']['not-carried'], 1)
+        self.assertEqual(data['correspondences'][0]['targets'][0]['standing']['status'], 'recorded-checked')
 
 
 class MainTests(AtlasCase):
@@ -302,7 +395,7 @@ class MainTests(AtlasCase):
     def test_check_fails_on_a_page_that_differs_and_passes_on_a_fresh_one(self):
         self.write_atlas(capture())
         code, result = self.main('--check')
-        self.assertEqual((code, result['errors'], result['differs']), (1, [], [atlas.PAGE, atlas.DATA]))
+        self.assertEqual((code, result['errors'], result['differs']), (1, [], [atlas.PAGE, atlas.CROSSWALK, atlas.DATA]))
         pages, _ = atlas.render(RECORDS)
         for path, body in pages.items():
             (self.root / path).parent.mkdir(parents=True, exist_ok=True)
