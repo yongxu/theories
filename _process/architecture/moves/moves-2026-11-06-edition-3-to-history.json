@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "batch": "moves-2026-11-06-edition-3-to-history",
+  "date": "2026-11-06T08:58:32+00:00",
+  "base_commit": "a7c82d6036d669104e4a75f2459fb742c23f4ee8",
+  "tool": "tools/research/moves.py",
+  "files": [
+    {
+      "old_path": "output/pdf/review-packet/ALIGNMENT.pdf",
+      "new_path": "output/pdf/history/review-packet-3/ALIGNMENT.pdf",
+      "sha256": "ab51b0174e8743d08c209b1e229ff382d49ad0d560ff2c3440db17eca035ba53",
+      "blob": "09eaf28503fbaa431ab19a0dfdda21c9d559884d",
+      "reason": "edition 3 (review-packet-3, D 6d221555a) kept as history before edition 4 is built in its place (ED4)",
+      "plan_entry": "output/pdf/review-packet/ALIGNMENT.pdf"
+    },
+    {
+      "old_path": "output/pdf/review-packet/BUDDHIST-THOUGHT.pdf",
+      "new_path": "output/pdf/history/review-packet-3/BUDDHIST-THOUGHT.pdf",
+      "sha256": "5bf843dbb28c5f0dcc1097ffff24c25b4c11f85c04dd3103d628ee6b2905e420",
+      "blob": "085b98664c62e1e6565dcede4dace25d9d5873f9",
+      "reason": "edition 3 (review-packet-3, D 6d221555a) kept as history before edition 4 is built in its place (ED4)",
+      "plan_entry": "output/pdf/review-packet/BUDDHIST-THOUGHT.pdf"
+    },
+    {
+      "old_path": "output/pdf/review-packet/CLASSICAL-TEXTS.pdf",
+      "new_path": "output/pdf/history/review-packet-3/CLASSICAL-TEXTS.pdf",
+      "sha256": "245f7757250e6df0fb6858cacaad41506a39e5cea82533189e3e1e88197b6005",
+      "blob": "8babe95df46a56c2cb73733408f70a5cead642c9",
+      "reason": "edition 3 (review-packet-3, D 6d221555a) kept as history before edition 4 is built in its place (ED4)",
+      "plan_entry": "output/pdf/review-packet/CLASSICAL-TEXTS.pdf"
+    },
+    {
+      "old_path": "output/pdf/review-packet/CODEBOOK.pdf",
+      "new_path": "output/pdf/history/review-packet-3/CODEBOOK.pdf",
+      "sha256": "38a33888925f2c65ce5b5ba02057316dabd867183cd5a546d2cadf0566e1886b",
+      "blob": "14539c2c4a6e25aa6fbf3746ff8e59175909d53b",
+      "reason": "edition 3 (review-packet-3, D 6d221555a) kept as history before edition 4 is built in its place (ED4)",
+      "plan_entry": "output/pdf/review-packet/CODEBOOK.pdf"
+    },
+    {
+      "old_path": "output/pdf/review-packet/LOGIC.pdf",
+      "new_path": "output/pdf/history/review-packet-3/LOGIC.pdf",
+      "sha256": "edbea38d229e2518a802925a4d8d52fb11d69e85b258e65e8c09c6d1c8efd311",
+      "blob": "83b16c7cd7ee0645e85d9c2a83a85da7f24ac32c",
+      "reason": "edition 3 (review-packet-3, D 6d221555a) kept as history before edition 4 is built in its place (ED4)",
+      "plan_entry": "output/pdf/review-packet/LOGIC.pdf"
+    },
+    {
+      "old_path": "output/pdf/review-packet/MANIFEST.txt",
+      "new_path": "output/pdf/history/review-packet-3/MANIFEST.txt",
+      "sha256": "f8ae8f411c6f9d3cd1cb33b36bd91f1406ed6154ef65324f4f545b62298d5bfe",
+      "blob": "17faa5b87a5297c689d144da96d508abcf19bbfb",
+      "reason": "edition 3 (review-packet-3, D 6d221555a) kept as history before edition 4 is built in its place (ED4)",
+      "plan_entry": "output/pdf/review-packet/MANIFEST.txt"
+    },
+    {
+      "old_path": "output/pdf/review-packet/ONE-PAGE.pdf",
+      "new_path": "output/pdf/history/review-packet-3/ONE-PAGE.pdf",
+      "sha256": "b58cfee6c3325d3b206f49aa9932463456b2c3dd2d46bc4bc25d9eb91c4b830f",
+      "blob": "09aa0ae51a61ff42dc5a10adc062a2d61bc67874",
+      "reason": "edition 3 (review-packet-3, D 6d221555a) kept as history before edition 4 is built in its place (ED4)",
+      "plan_entry": "output/pdf/review-packet/ONE-PAGE.pdf"
+    },
+    {
+      "old_path": "output/pdf/review-packet/ONE-PAGE.zh.pdf",
+      "new_path": "output/pdf/history/review-packet-3/ONE-PAGE.zh.pdf",
+      "sha256": "f11da1d42a8801f8dadd9174161d55bf1730d8b3e9f5e1acbef52d829cc70119",
+      "blob": "96ada0975f66e084504706d11e6e3d13e7527305",
+      "reason": "edition 3 (review-packet-3, D 6d221555a) kept as history before edition 4 is built in its place (ED4)",
+      "plan_entry": "output/pdf/review-packet/ONE-PAGE.zh.pdf"
+    },
+    {
+      "old_path": "output/pdf/review-packet/PHILOSOPHY.pdf",
+      "new_path": "output/pdf/history/review-packet-3/PHILOSOPHY.pdf",
+      "sha256": "b3c476d2f18bd2b635a3a7a1ebff90ac729fd8e3c469b0ebd8a0810716bf5203",
+      "blob": "bf9a06eb4b0d16d90ae91cd26a13ec3e7c157719",
+      "reason": "edition 3 (review-packet-3, D 6d221555a) kept as history before edition 4 is built in its place (ED4)",
+      "plan_entry": "output/pdf/review-packet/PHILOSOPHY.pdf"
+    },
+    {
+      "old_path": "output/pdf/review-packet/README.pdf",
+      "new_path": "output/pdf/history/review-packet-3/README.pdf",
+      "sha256": "2e92945209eefc3383f4a4d7bf957afb8abbb6ac8e95f29177a7a07208cee4d5",
+      "blob": "7f0b91f2f8b352b6992671f229f6380f2933cdc1",
+      "reason": "edition 3 (review-packet-3, D 6d221555a) kept as history before edition 4 is built in its place (ED4)",
+      "plan_entry": "output/pdf/review-packet/README.pdf"
+    },
+    {
+      "old_path": "output/pdf/review-packet/README.zh.pdf",
+      "new_path": "output/pdf/history/review-packet-3/README.zh.pdf",
+      "sha256": "c722640f0e8d441209d75f307908f978f53e171ddd9b199217d726927aefd089",
+      "blob": "c033cd9f7db3737f37819d40f7a7f6b336b4d8a4",
+      "reason": "edition 3 (review-packet-3, D 6d221555a) kept as history before edition 4 is built in its place (ED4)",
+      "plan_entry": "output/pdf/review-packet/README.zh.pdf"
+    },
+    {
+      "old_path": "output/pdf/review-packet/SCIENCES.pdf",
+      "new_path": "output/pdf/history/review-packet-3/SCIENCES.pdf",
+      "sha256": "df710623c8f86fb415065ec1d219db12d3466e5e49c071a48e4eacb1ea0bc66b",
+      "blob": "6adb91439d93b08c2257b28cadb9148dab928bec",
+      "reason": "edition 3 (review-packet-3, D 6d221555a) kept as history before edition 4 is built in its place (ED4)",
+      "plan_entry": "output/pdf/review-packet/SCIENCES.pdf"
+    },
+    {
+      "old_path": "output/pdf/review-packet/SHEET.tsv",
+      "new_path": "output/pdf/history/review-packet-3/SHEET.tsv",
+      "sha256": "40cfa4836ea9d70150c339eb15a0313d4c1b9fabb227ad695300febb3fa38dcb",
+      "blob": "3cb284f379bc6814a0567eaab1dd8fc2c363bd91",
+      "reason": "edition 3 (review-packet-3, D 6d221555a) kept as history before edition 4 is built in its place (ED4)",
+      "plan_entry": "output/pdf/review-packet/SHEET.tsv"
+    },
+    {
+      "old_path": "output/pdf/review-packet/SHEET.xlsx",
+      "new_path": "output/pdf/history/review-packet-3/SHEET.xlsx",
+      "sha256": "434877361e86a80d494ea241bc92c499870f90dc3a2858b7e84e7819c8780081",
+      "blob": "be0419d608fd687ef755028da73d72474e941f74",
+      "reason": "edition 3 (review-packet-3, D 6d221555a) kept as history before edition 4 is built in its place (ED4)",
+      "plan_entry": "output/pdf/review-packet/SHEET.xlsx"
+    },
+    {
+      "old_path": "output/pdf/review-packet/THE-THEORY-OF-BECOMING.pdf",
+      "new_path": "output/pdf/history/review-packet-3/THE-THEORY-OF-BECOMING.pdf",
+      "sha256": "5fe6b39eb8880e52d6aa0fea399537086203d6beeb3339ac6d9468a38da6b757",
+      "blob": "1dcfb5bcafae81ae82978573a65b3056e6f2fb8d",
+      "reason": "edition 3 (review-packet-3, D 6d221555a) kept as history before edition 4 is built in its place (ED4)",
+      "plan_entry": "output/pdf/review-packet/THE-THEORY-OF-BECOMING.pdf"
+    },
+    {
+      "old_path": "output/pdf/review-packet/THE-THEORY-OF-BECOMING.zh.pdf",
+      "new_path": "output/pdf/history/review-packet-3/THE-THEORY-OF-BECOMING.zh.pdf",
+      "sha256": "03deeeb5b854014772a530c7d99519f557956ffa81a58dc6619308036d5f62e3",
+      "blob": "b43578b8c7d5fe90d06e1cd15fa1c3b94182c118",
+      "reason": "edition 3 (review-packet-3, D 6d221555a) kept as history before edition 4 is built in its place (ED4)",
+      "plan_entry": "output/pdf/review-packet/THE-THEORY-OF-BECOMING.zh.pdf"
+    }
+  ],
+  "keep_references": false,
+  "rewritten": [
+    {
+      "path": "_process/BECOMING-WORKBOARD.md",
+      "old_sha256": "c9a90633b2cd52aee59c357cd7bdf3dbad365eccc266904dda12485b1dd01cd4",
+      "new_sha256": "0b71a764685d2879abb1c650add0403c2103e340dfa2a4e223786c48d7ff7546",
+      "references": 1
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md",
+      "old_sha256": "5200929e5bad0c11d14e068f9893e0188a71fc26e6803882c90d75204fd6877b",
+      "new_sha256": "1b9a4afaf83ff7cc9052fcdf101c6d6dcf0669825b869cade6aeeb53af89b636",
+      "references": 1
+    }
+  ],
+  "history_roots": [
+    "output/pdf/history"
+  ],
+  "generated_pages_to_rerender": [],
+  "verification_errors": []
+}
