@@ -3,7 +3,7 @@
 
 usage: python3 -B import_reads.py [--dry-run]
 
-Reads reads/<item>.5-compare.json, each item's final file (map, revise, check, repair, compare), and writes
+Reads reads/<item>.6-final.json, each item's final file (map, revise, check, repair, compare, then the second critic's fixes), and writes
 theories/becoming/results/atlas/entries/correspondences.json and correspondence_groups.json, in the order of ORDER below:
 the earlier folders as MAP.md lists them, then the domains. A group id takes the prefix cxg-, since ids are unique across
 the atlas and a folder or domain may share a name with a dynamic. Stops on a missing item or a repeated id, and writes
@@ -19,7 +19,7 @@ ROOT = next(p for p in HERE.parents if (p / 'AGENTS.md').is_file())
 READS = HERE / 'reads'
 ENTRIES = ROOT / 'theories/becoming/results/atlas/entries'
 READ_BY = ['map', 'revise', 'check', 'repair', 'compare']
-STAGE = '5-compare'
+STAGE = '6-final'
 FOLDERS = ('alignment-selection-on-cognition', 'architecture-for-a-living-earth', 'context-as-existence-runtimes',
            'drives-narrative-attractors-and-mind', 'evolving-community-swarms', 'human-solutions-museum',
            'jian-and-wenyan-as-formal-language', 'keep-the-possibility-space-open', 'memories-and-working-style',

@@ -48,6 +48,8 @@ VOCABULARY = ATLAS + '/vocabulary.json'
 ENTRIES = ATLAS + '/entries'
 PAGE = ATLAS + '/ATLAS.md'
 CROSSWALK = ATLAS + '/CROSSWALK.md'
+# What the critics of the crosswalk found, written from their files by the crosswalk's sample_summary.py.
+CHECKS = ATLAS + '/crosswalk-checks.json'
 DATA = 'theories/becoming/results/data/atlas.json'
 RECORDS = 'theories/becoming/results/records'
 RECEIPT = registry.CORE_RECEIPT
@@ -650,6 +652,21 @@ def _correspondence_lines(e: dict) -> list[str]:
     return lines
 
 
+def _checks_lines(checks: dict | None) -> list[str]:
+    """What the critics found, said before the counts so that no count is read without it."""
+    if not checks:
+        return []
+    second, first = checks['second_critic'], checks['first_critic']
+    est, v = second['estimate_percent'], second['verdicts']
+    return [f'**How far to trust it.** Each item had a mapper, a reviser, a checker told to refute, a repair after a critic and a '
+            f'comparison across items. A second critic then read {second["sampled"]} entries drawn at random, up to {second["per_stratum"]} '
+            f'from each kind of verdict, against both sides: {v["holds"]} held, {v["label"]} had a label or a target\'s role wrong '
+            f'and {v["fails"]} had a wrong reading. Weighted by how many entries each kind holds, that estimates {est["holds"]}% '
+            f'holding, {est["label"]}% with a label or role wrong and {est["fails"]}% with a wrong reading over all {second["entries"]}; its fixes are '
+            f'applied, and the other entries were not read again. The first critic\'s sample ({first["sampled"]}) was aimed at '
+            f'suspects and gives no rate. Where the source is not stored here, a critic\'s check was memory against memory.', '']
+
+
 def crosswalk_page(atlas: dict) -> str:
     vocabulary, groups, entries = atlas['vocabulary'], atlas['correspondence_groups'], atlas['correspondences']
     carried = [c['en'] for c in vocabulary['carried']]
@@ -666,6 +683,7 @@ def crosswalk_page(atlas: dict) -> str:
            '[06](../../chapters/06-CLASSICAL-TEXTS.md#three-relations): ' + '; '.join(f'*{r["en"]}*' for r in vocabulary['relations'])
            + '. Agreement says what it is agreement with: a checked **law**, a **thesis or method**, or a **reading**, where the join '
            'is a reader\'s or descends from the source. Only what a target carries counts as a connection.', '',
+           *_checks_lines(atlas.get('crosswalk_checks')),
            f'{len(entries)} entries in {len(groups)} groups:', '',
            '| Group | Entries | ' + ' | '.join(carried) + ' | ' + ' | '.join(relations) + ' | ' + ' | '.join(f'agreement of {a}' for a in agreements) + ' |',
            '|---|---:|' + '---:|' * (len(carried) + len(relations) + len(agreements))]
@@ -700,7 +718,25 @@ def crosswalk_page(atlas: dict) -> str:
 def inputs() -> list[Path]:
     """The curated files a render reads, for research.py's input snapshot (the records are snapshotted already)."""
     files = {ROOT / VOCABULARY} | {ROOT / ENTRIES / f'{k}.json' for k in KINDS}
+    if (ROOT / CHECKS).is_file():
+        files.add(ROOT / CHECKS)
     return sorted(files | set((ROOT / ENTRIES).glob('*.json')))
+
+
+def _checks() -> tuple[dict | None, list[str]]:
+    """The crosswalk's checks, where written: the second critic's verdicts must count its sample, and its estimate
+    must be given for each verdict."""
+    path = ROOT / CHECKS
+    if not path.is_file():
+        return None, []
+    try:
+        checks = json.loads(path.read_text(encoding='utf-8'))
+        second = checks['second_critic']
+        if sum(second['verdicts'].values()) != second['sampled'] or set(second['estimate_percent']) != set(second['verdicts']):
+            return None, [f'{CHECKS}: the verdicts do not count the sample, or the estimate leaves one out']
+        return checks, []
+    except (ValueError, KeyError, TypeError, AttributeError) as exc:
+        return None, [f'{CHECKS}: {exc!r}']
 
 
 def load() -> tuple[dict, dict, list[str]]:
@@ -726,7 +762,11 @@ def render(records: list) -> tuple[dict, list[str]]:
     errors = errors or validate(entries, vocabulary, records)
     if errors:
         return {}, ['atlas: ' + e for e in errors]
+    checks, errors = _checks()
+    if errors:
+        return {}, ['atlas: ' + e for e in errors]
     atlas = build(entries, vocabulary, records)
+    atlas['crosswalk_checks'] = checks
     return {PAGE: page(atlas), CROSSWALK: crosswalk_page(atlas),
             DATA: json.dumps(atlas, ensure_ascii=False, indent=1) + '\n'}, []
 

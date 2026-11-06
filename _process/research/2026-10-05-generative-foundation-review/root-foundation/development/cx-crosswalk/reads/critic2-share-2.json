@@ -1,0 +1,134 @@
+{
+ "share": "share-2",
+ "verdicts": [
+  {
+   "id": "cx-ecoevo-price-equation",
+   "verdict": "holds",
+   "fix": null,
+   "why": "Both 04 homes state Price's equation in counts with no premise and the covariance with its denominators cleared (`Becoming.price`, `SelectionTerm.covariation`), and the record says it is checked 'without improving it', so carried-in-part, agreement of law, with the real-valued form in source_adds, is right. Source side is memory against memory (Price 1970, 1972): the sense matches."
+  },
+  {
+   "id": "cx-kpso-belief-by-game-type",
+   "verdict": "holds",
+   "fix": null,
+   "why": "The README's 'Belief is part of the material' and claim 68 say what the sense says; 02's D45 stag-hunt sentence, 05's D48 promises-and-contracts sentence and 03's threshold witness each state a part, and the join to the source's rule is the reader's, as agreement_of reading says. The says copy their homes with 'not a model of coordination' kept."
+  },
+  {
+   "id": "cx-zhishan-selection-gradient-alignment",
+   "verdict": "holds",
+   "fix": null,
+   "why": "The Terms row and claim 134 match the sense, and 07's assessment states the part about output-coupled methods, its scope clause conditional on the condition; thesis-or-method fits an assessment. Not a label fault: review/ALIGNMENT.md's question ('the unit is that joint selection') is a nearer live carrier than the one listed, and claim 134's 'always reabsorbed' is missing from source_adds."
+  },
+  {
+   "id": "cx-kpso-named-values",
+   "verdict": "holds",
+   "fix": null,
+   "why": "Claim 98 is the sense; T8 states the life part as argued, with the condition for scope and C for order, neither asserted, and J2's basic priority is copied with its cost and its rival not shown inconsistent. Divergence fits: the source chooses values with teeth, the account asserts none."
+  },
+  {
+   "id": "cx-wamo-training-encodes",
+   "verdict": "label",
+   "fix": {
+    "carried": "fresh-reading",
+    "reading": {
+     "en": "Proposed here; no live text reads profit or a mindset in training. The account has exact laws of what training installs: along the learner's courses, and off them exactly where its lumping cannot tell a history from a course; which lumping a system has is read empirically. So a mindset installed everywhere is not given by the laws alone. T3's 'against the locus' concerns where a drain lies, not this law. What is installed is read through the reward's couplings, not the funder's motive. [AI reading]"
+    }
+   },
+   "why": "No live sentence states any part of this claim: A-05 says where training leaves a learner free, 'not what it learns there', and the record says which lumping a system has is read empirically, so the scope join is the reader's: carried to fresh-reading. The reading also takes T3's 'against the locus' (where a drain lies, by shared units) as evidence against what-training-installs, a theorem that broad generalization through a coarse lumping does not contradict."
+  },
+  {
+   "id": "cx-zhishan-loops-not-symmetric",
+   "verdict": "label",
+   "fix": {
+    "reading": {
+     "en": "The account has no asymmetry between loops by what they favour: the lock belongs to how a rule reads, and nothing ranks open rule-making above capture without C. What tells courses apart is widening, and calling the wider better is C's, with scope from the condition, neither asserted. A rule can be kept and be the wrong rule. The folder's direction-neutral meta-attraction fits its asymmetry: both loops self-reinforce, and they differ by what the recursion does to the field."
+    }
+   },
+   "why": "The labels hold: capture-through-the-rule ('the lock belongs to how the rule reads'), 02's D45 and 05's not-shown say what the says say, and 02's 'patterns of capture pass as patterns of care do' takes the topic up. The field at fault is the reading, whose last sentence is wrong about the source: claims 46 and 236 and the README's line 53 make direction-neutral self-reinforcement and asymmetry by 'what the recursion does to the field' one view, not a tension."
+  },
+  {
+   "id": "cx-greek-epicurus-limit-of-desire",
+   "verdict": "holds",
+   "fix": null,
+   "why": "Memory against memory: Principal Doctrines 15 and 29 and Menoeceus 127-130 say natural wealth is bounded and empty desire runs to infinity, and the seeking law's 'more than now is met only by change' has that form, near-definitional as the reading says. 03's 无明 Reading supplies '知足 is a target met at a state the law leaves unchanged' as quoted, and no live text names Epicurus."
+  },
+  {
+   "id": "cx-hsm-no-nobler-first",
+   "verdict": "fails",
+   "fix": {
+    "carried": "not-carried",
+    "relation": null,
+    "agreement_of": null,
+    "targets": [],
+    "absence": {
+     "searched": [
+      "human nature, 人性, virtue, nobler, moral improvement, perfectionis, 'as they are' over ONE-PAGE, THE-THEORY-OF-BECOMING, chapters, COLLECTIVE-DIRECTION, ONE-ARGUMENT, GLOSSARY and review (this read); ideal self (the earlier read)"
+     ],
+     "read": [
+      "05 §5, the D48 Reading after #r-offspring-read-from-giving-that-waits",
+      "05 #r-the-rest-outruns-the-renewal",
+      "COLLECTIVE-DIRECTION §2 Exits and §3 What the laws rule out"
+     ]
+    },
+    "reading": {
+     "en": "A proposal, with no form in the account: the nearest live sentence, kept promises and enforced contracts as 'laws giving first: the law changes, not the state alone', sets an act law against a configuration, not institutions against character, and a nobler disposition would change the law too. Where the rest outruns the renewal one member's restraint decides nothing, but that is one member against the rest, not people at large. 'Good' and 'better' need C, with the condition for scope, neither asserted. [AI reading]"
+    }
+   },
+   "why": "The only carrier, 05's D48 'the law changes, not the state alone', sets an act law against a configuration, while the source sets offering options against making people nobler, and a nobler disposition would change the law too: a shared 'not X but Y' shape stands in for a mechanism, as the reading half-concedes ('not about human nature'). My search of the live account found no statement of it, so not-carried, the proposal kept in reading."
+  },
+  {
+   "id": "cx-sty-meaning-declared-not-inferred",
+   "verdict": "holds",
+   "fix": null,
+   "why": "Claims 151, 178, 236 and 244 and the pivot section match the sense, and 08's premise rule and names rule ('a renaming after landing needs a name that states a wrong meaning') are copied faithfully: a likeness of method, which the reading bounds by where meaning comes from. thesis-or-method is right, and no live text applies it to a runtime."
+  },
+  {
+   "id": "cx-greek-aristotle-voluntary",
+   "verdict": "holds",
+   "fix": null,
+   "why": "Memory against memory: NE III.1 and III.5 say what the sense says; 07 §4.7 asks of scope 'not of what one answers for', and its foresight and agent-regret sentences and ONE-PAGE's 'responsibility is not shown to differentiate' are copied faithfully. No live text names Aristotle, and divergence on the agent as origin fits."
+  },
+  {
+   "id": "cx-greek-aristotle-growth-form",
+   "verdict": "holds",
+   "fix": null,
+   "why": "Memory against memory: GC I.4-5 and Physics I.7 say what the sense says; 01's four marks make altering and beginning relative to a class and 02's generation is a pattern going on through carrying renewal, so scope fits his universal subject of change. Form as cause stays in source_adds, and no live text names him."
+  },
+  {
+   "id": "cx-rsd-golden-rule",
+   "verdict": "holds",
+   "fix": null,
+   "why": "Claim 55 and own words 71 are as stated; the 恕 rows stand only in history/CHINESE-SOURCES-AND-BECOMING.md, citing selects_right_through, and the live account has no 己所不欲, 恕 or golden-rule reading, so history-only holds. The reading's 'the source's premise is the rule's scope' matches those rows and 03's live law."
+  },
+  {
+   "id": "cx-kpso-human-substrate",
+   "verdict": "holds",
+   "fix": null,
+   "why": "Claim 143 and the objection 'A system, not a civilization' are as stated, quote verbatim. My search (care, mortal, childhood, grief, ritual, embodi, well-being) found embodiment as a model premise, 04's assessment of care evidence and 07's 'well-being beyond admitted continuation' as not shown, none this claim, so not-carried stands."
+  }
+ ],
+ "read": [
+  "CRITIC2.md, BRIEF.md (in full)",
+  "theories/keep-the-possibility-space-open/README.md: Belief is part of the material; claims 62-74, 98, 143, 229; strongest objections (A system, not a civilization)",
+  "theories/zhishan-intelligence-must-be-good/README.md: line 53; claims 46, 134, 235-237; Terms rows Selection-gradient and Subject-formation alignment",
+  "theories/wamotopia-and-the-wamo-protocol/README.md: Why AI changes the stakes, twice; claim 19",
+  "theories/human-solutions-museum/README.md: The eighth module is not history (line 41); claim 48; own words 27; Found by reading 15",
+  "theories/spirit-space-token-and-yi-substrate/README.md: Why the pivot was necessary (line 67); claims 151, 178, 236, 244",
+  "theories/relational-self-and-datong/README.md: claim 55; own words 71",
+  "theories/becoming/chapters/04-LIFE.md: §3 Descent, #r-evolution-on-descent, #r-selection-term-over-generations, §8 line 241 (what the spine adds), line 305 assessment",
+  "theories/becoming/results/records/evolution-on-descent.md (grep: 'without improving it')",
+  "theories/becoming/chapters/02-MAP.md: §9 #capture, #r-target-capture, #r-capture-through-the-rule, #t7 with its Readings D26, D67, D45 (lines 433-446); generation definition (line 17), #r-generation-and-degeneration-at-two-grains, #r-whole-persists-through-generation, line 175",
+  "theories/becoming/chapters/03-KNOWING.md: #r-a-prediction-read-by-what-it-predicts and its Reading; #r-seeking-boundary; the 无明 Reading (line 351); #r-selection-through-a-model-of-the-options",
+  "theories/becoming/chapters/05-COLLECTIVES.md: §5 #giving-waits, tit-for-tat Reading, #r-offspring-read-from-giving-that-waits and D48; #t3 (standing, against the locus); #not-shown; #r-the-rest-outruns-the-renewal",
+  "theories/becoming/chapters/07-SIGNIFICANCE.md: §6 #alignment-without-premise through the D68 Readings, #r-what-training-installs, #r-alignment-approaches-under-the-selection-laws; §4.7 #crux; #theses T8; #r-basic-priority-step-by-step",
+  "theories/becoming/chapters/08-METHOD.md: opening (#method-and-the-formal-core); §10 #names",
+  "theories/becoming/chapters/01-ROOT.md: §3 #four-marks; line 577 (labels carry nothing)",
+  "theories/becoming/ONE-PAGE.md: The root paragraph",
+  "GLOSSARY.md: 无明, 明",
+  "theories/becoming/review/ALIGNMENT.md: The question; What is not claimed; A-05",
+  "theories/becoming/review/SCIENCES.md: S-08 heading; line 211",
+  "theories/becoming/COLLECTIVE-DIRECTION.md: §2 Exits, §3 What the laws rule out, §5 Institutions and people",
+  "theories/becoming/history/CHINESE-SOURCES-AND-BECOMING.md: rows p-ru-lunyu-shu, p-lunyu-shu-ji-suo-bu-yu"
+ ],
+ "live_flags": []
+}

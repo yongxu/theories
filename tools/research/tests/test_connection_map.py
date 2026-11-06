@@ -81,6 +81,12 @@ class PayloadTests(unittest.TestCase):
         d = self.data(entry('cx-a', 'cxg-early', same_as=['cx-b']), entry('cx-b', 'cxg-greek', same_as=['cx-a']), entry('cx-c', 'cxg-greek'))
         self.assertEqual((d['totals']['entries'], d['totals']['distinct']), (3, 2))
 
+    def test_the_checks_reach_the_page(self):
+        a = atlas()
+        a['crosswalk_checks'] = {'second_critic': {'sampled': 10, 'estimate_percent': {'holds': 80.0, 'label': 12.5, 'fails': 7.5}}}
+        self.assertEqual(cm.payload(a, GRAPH, SHARED)['checks']['second_critic']['sampled'], 10)
+        self.assertIsNone(self.data()['checks'])
+
     def test_the_standings_are_read_from_the_data_and_a_zero_is_left_out(self):
         d = self.data()
         self.assertEqual(d['declarations'], 6)

@@ -410,6 +410,33 @@ class CorrespondenceTests(AtlasCase):
         self.assertEqual(data['correspondences'][0]['targets'][0]['standing']['status'], 'recorded-checked')
 
 
+class CheckTests(AtlasCase):
+    CHECKS = {'first_critic': {'sampled': 59, 'held': 32, 'partly': 12, 'failed': 15, 'aimed': True},
+              'second_critic': {'sampled': 10, 'per_stratum': 5, 'entries': 40, 'verdicts': {'holds': 8, 'label': 1, 'fails': 1},
+                                'estimate_percent': {'holds': 80.0, 'label': 12.5, 'fails': 7.5}}}
+
+    def test_the_page_says_how_far_to_trust_it_before_any_count(self):
+        self.write_atlas(capture())
+        (self.root / atlas.CHECKS).write_text(json.dumps(self.CHECKS))
+        pages, errors = atlas.render(RECORDS)
+        self.assertEqual(errors, [])
+        page = pages[atlas.CROSSWALK]
+        self.assertLess(page.index('How far to trust it'), page.index('entries in 0 groups'))
+        self.assertIn('7.5% with a wrong reading over all 40', page)
+        self.assertIn('gives no rate', page)
+        self.assertEqual(json.loads(pages[atlas.DATA])['crosswalk_checks']['second_critic']['sampled'], 10)
+        self.assertIn(self.root / atlas.CHECKS, atlas.inputs())
+
+    def test_verdicts_that_do_not_count_the_sample_render_nothing(self):
+        self.write_atlas(capture())
+        bad = copy.deepcopy(self.CHECKS)
+        bad['second_critic']['verdicts']['holds'] = 9
+        (self.root / atlas.CHECKS).write_text(json.dumps(bad))
+        pages, errors = atlas.render(RECORDS)
+        self.assertEqual(pages, {})
+        self.assertTrue(any('do not count the sample' in e for e in errors))
+
+
 class MainTests(AtlasCase):
     def main(self, *argv):
         out = io.StringIO()

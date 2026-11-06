@@ -1,0 +1,132 @@
+{
+ "share": "share-1",
+ "verdicts": [
+  {
+   "id": "cx-archearth-recursive-capacity",
+   "verdict": "holds",
+   "fix": null,
+   "why": "The README's abundance section and agenda section 3 say what the sense says, and copying-b-fold, 07's upkeep clause and 08's line naming break-even investment are copied with their qualifiers. 08's sentence ties the law to capital maintenance in the account's own words, so carried-in-part stands, and copying-b-fold, a checked theorem of compounding under a draw, carries the agreement of law."
+  },
+  {
+   "id": "cx-fork-cooperation-not-good",
+   "verdict": "holds",
+   "fix": null,
+   "why": "Claim 44 and the 2026-04-16 quotation match, and 05's not-shown bullet states the part ('no law says ... cooperation good'), asked under both premises. The pooled-coupling join is a reader's, as agreement_of reading says; same_as with the kpso entry is the same quotation of the same day."
+  },
+  {
+   "id": "cx-rsd-self-action-centre",
+   "verdict": "holds",
+   "fix": null,
+   "why": "The quote is verbatim from the one-paragraph theory and claim 1, and 08's thesis forbids 'a self with a nature of its own', a live sentence stating part, argued not proved, its defeaters copied. The carrying targets are a thesis and readings, so thesis-or-method holds, and the inventory of what forms a person is rightly in source_adds."
+  },
+  {
+   "id": "cx-jianwen-time-inside-the-primitive",
+   "verdict": "holds",
+   "fix": null,
+   "why": "Claim 70 and the argument's paragraph make time a designated process inside 系, and 01 §1 states 'Nor is a time: its order is the reach of the condition relation'. Part carried and the mechanism different, so carried-in-part with divergence fits; I found no live text making a clock what time is."
+  },
+  {
+   "id": "cx-wamo-emergence-and-window",
+   "verdict": "holds",
+   "fix": null,
+   "why": "Kabir's and Em's objections stand in the objections section as the sense gives them, and COLLECTIVE-DIRECTION §6's Time and Pace, 05's pace sentence and its 'How long agreement takes is not stated' are copied faithfully. Scope is defensible because the pace law gives exactly when a slow rule reads enough, in models only, as account_adds says; agreement would be defensible too."
+  },
+  {
+   "id": "cx-sty-agents-operators-human-root",
+   "verdict": "holds",
+   "fix": null,
+   "why": "Claims 137, 138 and 193 and the consent-door paragraph match the sense, and D68, D45 and D65 are copied faithfully and give no party a root, so changed with divergence holds. Two small slips: the 'Also' quotation stands in §6 (07 line 710), not under #direction, and the direction's conditional names J1-J4 and E besides the two premises."
+  },
+  {
+   "id": "cx-zhishan-li-is-increasing",
+   "verdict": "holds",
+   "fix": null,
+   "why": "Claim 249's 'at every moment' and claim 250's limit are as sensed, and what-can-be-born-next, where-the-possible-grows and COLLECTIVE-DIRECTION §3 give where widening holds and fails. 07's reading that 生生不息 needs no growth of the whole possible is the account saying something else, so changed with scope fits."
+  },
+  {
+   "id": "cx-fork-good-enough-tree",
+   "verdict": "holds",
+   "fix": null,
+   "why": "Claims 47-48 and the 2026-10-02 passage match, and no live text speaks of provision, so fresh-reading. seeking-boundary and the set-point theorem are copied with 05's own sentence that what protects at the set point is unmodelled; the reading adds that caution without denying the source's form, so agreement of reading stands."
+  },
+  {
+   "id": "cx-modphil-whitehead-misplaced-concreteness",
+   "verdict": "label",
+   "fix": {
+    "carried": "carried-in-part"
+   },
+   "why": "Memory against memory, the sense matches Science and the Modern World ch. III and V. 08 §1 itself states the part, every split drawn 'together with what they leave out' and a separate type asserting no fundamental separation, with 08's head putting the real assumptions in the modelling: content the account states, not a law read onto him, so carried-in-part, source_adds as it is."
+  },
+  {
+   "id": "cx-modphil-simondon-individual-as-phase",
+   "verdict": "holds",
+   "fix": null,
+   "why": "Memory against memory, the sense matches his introduction against substantialism and hylomorphism. 01 §1 and 08's defeater paragraph make equality on the carrier a commitment of the model whose reading is not shown, the form he argues against; no live text names him, so fresh-reading with contrary-reading holds."
+  },
+  {
+   "id": "cx-fork-top-of-leverage-hierarchy",
+   "verdict": "holds",
+   "fix": null,
+   "why": "The sixth paragraph and claim 38 match, and no live text has a leverage ladder or Meadows's points. closed-capture and T7 are copied with their standings and condition when a change of the reading unlocks or is absorbed, so scope on a fresh reading fits."
+  },
+  {
+   "id": "cx-ma-caoc",
+   "verdict": "holds",
+   "fix": null,
+   "why": "Claims 38-48 and the covariance section are as sensed; CAOC, eigenvector and proxy covariance have no live hit beyond Perron-Frobenius and 02's Price-style shaping law, another mechanism. The reconciliation's lines in source_adds stand there verbatim (row 33), so history-only holds."
+  },
+  {
+   "id": "cx-econ-olson-rise-and-decline",
+   "verdict": "label",
+   "fix": {
+    "carried": "fresh-reading",
+    "relation": "scope",
+    "agreement_of": null,
+    "absence": null,
+    "reading": {
+     "en": "Proposed here; no live text draws the link. One part has a form: in 02 §9 shaping the rule is selected at a step exactly where what comes back to the shapers alone covers its cost, whatever comes to every member alike, and with nothing back and a cost their share falls: a narrow gain selects, a shared one does not. Many coalitions accumulating, a drag on growth and sweeping by shock have no form; groups that form and gains across domains are Open. [AI reading]"
+    },
+    "targets": [
+     {
+      "record": "shaping-the-rule-selected-by-what-comes-back",
+      "anchor": "theories/becoming/chapters/02-MAP.md#r-shaping-the-rule-selected-by-what-comes-back",
+      "role": "carries",
+      "says": {
+       "en": "Theorem (counts). Shaping gives s to the shapers alone and p to every member alike and costs each shaper c; at a step the rule favours the shapers exactly where c ≤ s, whatever p; with nothing coming back and a cost their share falls strictly. That actual institutions carry such a capacity is a premise; the record names Olson (1965), rent-seeking and regulatory capture as neighbours."
+      }
+     },
+     {
+      "anchor": "theories/becoming/chapters/02-MAP.md#open",
+      "role": "limit",
+      "says": {
+       "en": "Open: graded capacities to shape the rule, groups that form or assort by the share, a gain growing with the number of domains captured, gains passing between domains."
+      }
+     }
+    ]
+   },
+   "why": "02 §9's shaping law, its record citing Olson (1965), rent-seeking and regulatory capture, gives the share-seeking part a checked form: shaping is selected exactly where what comes back to the shapers alone covers its cost, whatever comes to every member alike. Accumulation, the drag and the shock have no form and stand in 02's Open, so a fresh reading with scope, not not-carried."
+  }
+ ],
+ "read": [
+  "theories/architecture-for-a-living-earth/README.md (Abundance, automation, and ordinary life); RESEARCH-AGENDA.md §3",
+  "theories/the-fork-and-cooperative-infrastructure/README.md (Keeping shared capacity available, all paragraphs; claims 36-49; the 2026-10-02 update)",
+  "theories/relational-self-and-datong/README.md (the one paragraph, the argument's opening, claims 1-2)",
+  "theories/jian-and-wenyan-as-formal-language/README.md (the time paragraph of the argument; claims 66-71)",
+  "theories/wamotopia-and-the-wamo-protocol/README.md (the objections on record; open questions raised inside the corpus)",
+  "theories/spirit-space-token-and-yi-substrate/README.md (the social layer; claims 14, 121-129, 137-138, 193)",
+  "theories/zhishan-intelligence-must-be-good/README.md (claims 249-250)",
+  "theories/meta-attractor/README.md (the covariance argument and CAOC; claims 38-50; the header's integration lines)",
+  "_process/.../root-foundation/META-ATTRACTOR-RECONCILIATION.md rows on the Price law and the CAOC block",
+  "04-LIFE #r-copying-b-fold; 07 #r-what-keeping-widening-needs and its reading; 08 #beyond-the-table, the line on what keeping widening needs, and line 514 on set points",
+  "05 #not-shown; 05 #r-what-pooled-coupling-reaches; 05 #r-mutual-dependence-and-its-pace and line 50; 05 #r-a-code-formed-between-formations (head and line 308); 05 #r-what-a-set-point-optimum-does-beyond with its D45 reading",
+  "07 §1 #evaluation; 07 §3.4 line 219; 07 §6 #alignment-without-premise opening, D45 and D68 paragraphs, line 710; 07 §7 #direction, the conditional and D65; 07 #r-what-can-be-born-next and #r-where-the-possible-grows with their readings",
+  "08 head (#method-and-the-formal-core) and §1; 08 #one-relational-unfolding in full, with #what-would-defeat-the-reading",
+  "01 §1 #one-kind-of-symbol; 01 #boundaries; 01 #r-identity-across-steps",
+  "02 §9 #r-closed-capture, #r-shaping-the-rule-selected-by-what-comes-back, #t7 with its frozen test and readings; 02 #open",
+  "03 #r-seeking-boundary",
+  "COLLECTIVE-DIRECTION §3 table and §6",
+  "records JSON does_not_show: what-keeping-widening-needs, copying-b-fold, what-pooled-coupling-reaches, what-a-set-point-optimum-does-beyond, shaping-the-rule-selected-by-what-comes-back; identity-across-steps correspondence lines",
+  "searched, not read: the live account for clock and the reading's unit, provision, Meadows, leverage and paradigm, Whitehead, Simondon, CAOC, eigenvector, covariance, terminal ends, Olson, rent-seeking, lobby, special interest, distributional coalition, encompassing"
+ ],
+ "live_flags": []
+}

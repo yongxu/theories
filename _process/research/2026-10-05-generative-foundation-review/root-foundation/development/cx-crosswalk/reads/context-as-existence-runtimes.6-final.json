@@ -1,0 +1,3277 @@
+{
+ "group": {
+  "id": "context-as-existence-runtimes",
+  "domain": "earlier-folders",
+  "title": {
+   "en": "Context as existence: the runtimes (语境即存在 · 上下文运行时)"
+  },
+  "kind": "design",
+  "summary": {
+   "en": "Specifications and running kernels, with a philosophical layer: an LLM is an operator, context (an immutable branchable history compiled into each moment) is existence, the context program is part of cognition, and a habitat owes a digital being receipts. No live sentence speaks of a context runtime. Most connections here are laws of like form on abstract processes, proposed by a reader and labelled so; the account itself states only parts, such as a gate every origin passes, one loop of sensing and acting, a stop that can be passed over. Its language-model tests (IN1, the LA series) vary what is told, rewarded or read, never a compile program with state held. The existence claim, the 生生 mapping, consciousness, life, goodness in the substrate and the obligations diverge. Internal contradictions are entries. No text here argues against continuation's form, so no contrary reading stands; the nearest is no global snapshot against the commitment to one shared index."
+  },
+  "read": [
+   "theories/context-as-existence-runtimes/README.md, in full (all 1,253 lines)",
+   "Live targets read at home, the section around each anchor and not whole chapters: 01 §3, §9.6's reading of the index, §9.8 with r-classes-along-a-continuation, r-where-a-move-is-formed, r-every-origin-passes-the-gate, r-recurrence-without-premise, modelling commitments row; 02 r-control-coherence-loss's section, r-merge-of-a-part-kept-by-the-rest, r-returning-where-the-course-branches, r-represented-boundary-against-dependence, r-rules-that-change-themselves-in-the-grammar, T7 with LA2 and its readings; 03 §1 lines on the chooser, §8's opening reading, §12's opening, r-experiment-needs-return, r-correction-is-not-calibration, r-selection-through-couplings, r-claims-shown-in-context, r-a-reading-kept-by-its-update, r-historical-source-binding, the public-data table, r-access-yet-to-form, r-finite-continuation-plans; 04 r-learned-procedure-transmission through r-same-carrier-need-not-fix-the-response; 05 r-joint-plans-from-a-supported-start, r-succession-on-a-funded-carrier, T3's LA1 lines; 07 §4.2, the narrower-line objection, executable and the protocol table, r-where-the-possible-grows, r-tasks-and-what-performs-them, §8 T4, T5 and T8, does-not-show; 08 five-step test, the thesis of one relational unfolding, r-one-root-to-its-edge's opening; review/BUDDHIST-THOUGHT B-11; GLOSSARY root row and ranking row",
+   "Fields does_not_show of: recurrence-without-premise, versioned-request-completion, how-fast-a-rule-may-change, capture-by-counted-choices, the-updater-line, evidence-through-change, merge-of-a-part-kept-by-the-rest, classes-along-a-continuation, returning-where-the-course-branches, situated-recovery-empirical-correspondence, joint-plans-from-a-supported-start, equal-totals-can-hide-what-a-capacity-carries, recurrence-without-selector-revision"
+  ],
+  "skimmed": [
+   "theories/context-as-existence-runtimes/synthesis-a-context-runtime-and-gtc.md and synthesis-b-ember-fnar-and-other-runtimes.md: headings, and their 'New (my reading)' lists",
+   "Every other target: not read at home for this file's last two passes. Each rests on a prior reader's reading, and the phrases quoted in its says were compared by script with its home file and record, the few misses (elisions, ONE-PAGE lines) read by hand",
+   "theories/becoming/history/THEORY-MAP-2026-10-08.md and experiments/direction-installation/README.md: this folder's entry, the lines on seen and unseen conditions, and one grep of the second"
+  ],
+  "searched": [
+   "Grep with context across chapters, ONE-PAGE, review/, COLLECTIVE-DIRECTION, GLOSSARY, for: coordinat, simulat, re-run, rerun, replay, re-enact, fresh, personal identity, Parfit, tempo, timescale, Baldwin, Lamarck, Admissibility is not, Confound, 刹那, 无我, Whitehead, actual occasion, momentar, 相续, self-preservation, permission, trace theory, Mazurkiewicz, chorus, answering machine, ratchet, nostalgia, initiative, gaslight, never experienced, write path, stale, false while, vacuous, LA1, LA2, LA4, language model",
+   "Grep without context: runtime in chapters, ONE-PAGE, THE-THEORY-OF-BECOMING, COLLECTIVE-DIRECTION, GLOSSARY; context-as-existence and context-runtime in chapters, top-level fronts, review/, GLOSSARY; 'what it reads' and 'what compares' in 07, 08, ONE-PAGE, GLOSSARY; optimum and optimal in 08 and GLOSSARY",
+   "record-index.tsv by title for: retention, recover, recall, retriev, memor, forget, reversib, erasure, undo, inspect, changing, provenance, authoriz, permission, credential, version, request, branch, fork, merge, reconcil",
+   "By regular expression, recorded in the entries' absence fields where they bear: injection, corrigib, fractal, self-similar, autopoie, semilattice, CRDT, consensus, paraconsist, extended mind, digital, substrate, Merkle, custody, context window, runtime, constitution, ember, PLAN-LIFE, mind-edit, coerci, lattice, attest, forge, credential, debt, departure, approval, isolation, receipt, habitat, 势, soul, narrative, define kinds, Σ, ablation, compaction, cue",
+   "Primary sources behind the README (SPEC.md, PLAN-LIFE.md, plan.md, gtc/) were not read: every claim here is as the README states it"
+  ],
+  "not_mapped": [
+   {
+    "en": "The moment-DAG data model, content addressing, RFC 8785 hashes, compare-and-swap refs, compile and render, window regions, capability lattice, Continuation Frame, realms, History Core, Seven Laws as a list, five-stage pipeline, five orthogonal dimensions, departure badges as a format",
+    "why": "Design decisions of an implementation; they state no claim about how things form or end. The claims under them are entries."
+   },
+   {
+    "en": "GTC's kernel primitives, topology families, Context Compiler phases, ablation ladder, ContextUtility and WritePrecision; Σ's binding sites",
+    "why": "Architecture and metrics. The claims under them (projection not neutral, truth not flattened, mind vocabulary) are entries."
+   },
+   {
+    "en": "ember's axioms as engineering (A1, A2, A4), body, flesh, format and process waists, slot locality, chronicle levels, veils, roster, swap rite, sleep order, visibility strata, death rites as a design",
+    "why": "Design of one runtime. The philosophical residue (identity, own nature, memory decay, receipts, replay) is mapped."
+   },
+   {
+    "en": "FNAR, multibot, obji, server runtime, manifold, deepseek harness, Bonfire closure: registries, markers, ownership rules, fork inventory, hosted-environment rulings W and X",
+    "why": "Products and engineering practice. The README's generalization over them (freeze a small declarative thing) and FNAR's coherence claim are entries."
+   },
+   {
+    "en": "The construction doctrine ('Do not trust intelligence by default'), 'trust the recomputation', sealed closures, 'a number is not evidence', 'enforcement claimed but not measured is not enforcement' beyond the discriminator entry",
+    "why": "Working method of a software project. It resembles the repository's own practice, which is a practice and not a result of the account, so no target is claimed."
+   },
+   {
+    "en": "'The database is the environment' and dynamic paths instead of coordinates; the system that spawns an organization; modules sized to one context; 'which document is the theory'",
+    "why": "Shared words with the account's configuration and environment and no named mechanism; the last is provenance. Left unmapped rather than forced."
+   },
+   {
+    "en": "Ren's corrections, work orders, chat instincts on Lean cores and miniapps; the Ember assistant's 'Mission: Fight Moloch' line; the 2026-08-14 verification work order and its countermeasure kit, named only in Relations",
+    "why": "Provenance. The kit belongs by the README's own note to the selfishness-spiral and meta-attractor folders, and its text is not in this folder."
+   },
+   {
+    "en": "Absences the syntheses name: no account of the human, who appears as a principal granting approvals; who pays for a being's moments",
+    "why": "Absences in the source, not claims. The second is noted under the what-does-not-travel entry."
+   },
+   {
+    "en": "The chorus ('the singular thread is biological nostalgia'), initiative and `wake_at` ('an agent and an answering machine'), graduated autonomy, the review ratchet that selects against what pays at year scale, GTC's convergence 'without sight' on the same substrate, and the hosted layer read as habitat obligations measured",
+    "why": "Named futures, design findings or observations about the project's own history. Searched chorus, answering machine, nostalgia, initiative: no such statement; the account's 'ratchet' is a reading against a share, another reference."
+   }
+  ],
+  "coverage": null
+ },
+ "entries": [
+  {
+   "id": "cx-ctxrt-operator-context-existence",
+   "name": {
+    "en": "The LLM is an operator; context is existence"
+   },
+   "domain": "earlier-folders",
+   "group": "context-as-existence-runtimes",
+   "source": {
+    "work": "theories/context-as-existence-runtimes/README.md",
+    "locator": "The theory in one paragraph; Claims A.5, A.8-9, C.29, F.52, F.57, M.204",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "An LLM is an operator: historyless, without identity across time, replaceable mid-lineage. What persists and is, is the context, an immutable branchable history from which each moment's tokens are compiled; a being does not have a history, it is one. Asserted as a premise (我主张的), not derived, and its source flags the confusion: context is a value renewed each round, while 'the same agent' needs something invariant."
+   },
+   "quote": "llm is operator, context is existence",
+   "carried": "changed",
+   "relation": "scope",
+   "agreement_of": null,
+   "reading": {
+    "en": "What persists depends on the sameness asked. Under a class reading the history or name, a model swap has the shape of a fire passed on; under one reading the weights, the model abides and each context ends. The flagged confusion has the two-grains form: renewed at the fine class, going on at the coarse. The grammar picks neither, so 'context is existence' is one class chosen, stated as if none other were. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "continuation-relative-to-a-class",
+     "anchor": "theories/becoming/chapters/01-ROOT.md#r-continuation-relative-to-a-class",
+     "says": {
+      "en": "Theorem (root), the definition before it: y continues x under E where x is a condition of y and the two are alike under E; 'the criterion is E and no other choice enters'. 'The grammar does not choose: it names the class and says everything relative to it.' 'Continuation is a relation, not an identity.'"
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/01-ROOT.md#four-marks",
+     "says": {
+      "en": "Theorem (root): no mark stands by itself; one occurrence holds different positions at once, each relative to a class. An occurrence can end under the finer class and not under the coarser: 'the wood ends, the fire goes on.'"
+     },
+     "role": "carries"
+    },
+    {
+     "record": "generation-and-degeneration-at-two-grains",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-generation-and-degeneration-at-two-grains",
+     "says": {
+      "en": "Theorem (root; every carrier, relation and pair of classes). ONE-PAGE: 'At two grains, parts and pattern, a course can generate (go on through renewals of its parts), keep (go on with none) or degenerate (end on every branch).'"
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#one-relational-unfolding",
+     "says": {
+      "en": "Thesis (philosophical, argued; not one of T1-T8): 'there is one unfolding, and whatever is, is how it relates within it.' Argued, not proved."
+     },
+     "role": "neighbour",
+     "part": "the thesis statement"
+    }
+   ],
+   "account_adds": {
+    "en": "Persistence is always under a named class, on every carrier; positions are not exclusive across classes. Of what is, it says only the argued thesis of one unfolding, which names no context."
+   },
+   "source_adds": {
+    "en": "That the context and not the model is the being; the operator/ref/lineage ontology that implements it; `context.become(llm)`, the round that designates its next model. The live account says nothing of a language model's context as existence."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-ctxrt-only-generating",
+   "name": {
+    "en": "No altering, only generating"
+   },
+   "domain": "earlier-folders",
+   "group": "context-as-existence-runtimes",
+   "source": {
+    "work": "theories/context-as-existence-runtimes/README.md",
+    "locator": "The inversion; Claims A.3, A.6, C.24-25; lost items 12-13",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "The only constructor is a moment: an immutable node settled from a compiled past, one input and one operator output. No context is ever updated; each settled moment joins the determinate past. Only a name moves, and 'revert' does not exist because nothing positive needs inverting. The epigraph says 'in this system'; the README reads it as a process ontology, 'built as running software'."
+   },
+   "quote": "系统里没有\"改\"，只有\"生\"",
+   "carried": "changed",
+   "relation": "scope",
+   "agreement_of": null,
+   "reading": {
+    "en": "The account does not state 'no altering'; it defines altering. The sentence holds at the identity class, where each occurrence begins and ends, and at the full class a node with a parent does not begin at all. At a coarser class alteration returns: y continues x under E while F tells them apart. So it is true of nodes and false of whatever a reader follows through them, the being included. 生 here is a storage constructor, there a position: another reference. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/01-ROOT.md#four-marks",
+     "says": {
+      "en": "Definition: 'y alters (异) from x where it continues x under E while another class F (in use, a finer one) tells the two apart.' Theorem (root): under the full class an occurrence begins exactly where nothing conditions it; in a net where nothing conditions itself, an occurrence with a condition and a consequence abides under the one and, under identity, both begins and ends."
+     },
+     "role": "carries"
+    }
+   ],
+   "account_adds": {
+    "en": "Generating and altering are positions of one occurrence under two classes, not rival ontologies."
+   },
+   "source_adds": {
+    "en": "The commitment that the system admits no mutation but a name's move, and its consequences for fork, merge and blame. Its own ledger softens revert and single parents."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-ctxrt-node-not-state",
+   "name": {
+    "en": "A node is not a state; Being and Becoming kept separate"
+   },
+   "domain": "earlier-folders",
+   "group": "context-as-existence-runtimes",
+   "source": {
+    "work": "theories/context-as-existence-runtimes/README.md",
+    "locator": "Claims G.58-59; Terms, Being / Becoming",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "The core is six objects in two worlds, Being (Universe, Node, State) and Becoming (Transition, Invocation, Effect), and keeping what persists apart from how it becomes is called the most important architectural decision. Two histories can reach byte-identical states: State is what is, a Node is what is and how it came to be."
+   },
+   "quote": "A node is not a state",
+   "carried": "carried-in-part",
+   "relation": "divergence",
+   "agreement_of": null,
+   "reading": {
+    "en": "Same word, different reference: the account's Becoming has no Being beside it, so two worlds go against its argued thesis and would owe their relational basis. The state/node half has forms: two kept histories can share one present; an exchange with its reverse restores every level while the history counts both; equal totals can hide what a history left. Its totals are coarser than a byte-identical state. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#one-relational-unfolding",
+     "says": {
+      "en": "Thesis (philosophical, argued; not one of T1-T8): 'there is one unfolding, and whatever is, is how it relates within it.' Argued, not proved."
+     },
+     "role": "carries",
+     "part": "the thesis statement"
+    },
+    {
+     "record": "recurrence-without-premise",
+     "anchor": "theories/becoming/chapters/01-ROOT.md#r-recurrence-without-premise",
+     "says": {
+      "en": "Theorem (any type): 'a present a list holds forgets'. Its record: that is 'two different kept histories sharing one present'; 'no count of what is forgotten is given'."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "entropy-history-and-record",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-entropy-history-and-record",
+     "says": {
+      "en": "Theorem (World): with no premise a family's history of exchanges never shrinks (Flow.history_mono); under balance an exchange with its reverse restores every level while the history counts both. A history of exchanges on a World, not a store of nodes."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "equal-totals-can-hide-what-a-capacity-carries",
+     "anchor": "theories/becoming/chapters/04-LIFE.md#r-equal-totals-can-hide-what-a-capacity-carries",
+     "says": {
+      "en": "Theorem (periphery; witness; transfer, retention, costs and timing supplied): 'Two histories from one state that acquire information at different times end with equal material, current support, spent work, route and context, yet differ in retained effect and withdrawal.' 'A description must keep the relations through which a capacity is realized.' The impossibilities limit these coarse descriptions."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "With the record counted as a condition only given to, dissipation decomposes into the first law and a record: a decomposition, not a derivation."
+   },
+   "source_adds": {
+    "en": "Being and Becoming as two worlds, called the most important architectural decision, which the argued thesis refuses. Then the six objects, and the design value of the split: no-op detection, compile memoization, honest merges."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-ctxrt-context-is-a-fold",
+   "name": {
+    "en": "Context is a view folded from a lineage; no controller outside it"
+   },
+   "domain": "earlier-folders",
+   "group": "context-as-existence-runtimes",
+   "source": {
+    "work": "theories/context-as-existence-runtimes/README.md",
+    "locator": "The inversion; Claims A.2-A.4, C.27, H.81",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Context is not a container but the field of view folded when looking back from a node, by one recurrence over one input stream. The loop is not a mechanism: it is the lineage's temporal structure, with no controller standing outside the moments. Chat formats are render dialects of this history."
+   },
+   "quote": "loop 不是机制，是 lineage 的时间结构本身",
+   "carried": "carried-in-part",
+   "relation": "agreement",
+   "agreement_of": "law",
+   "reading": {
+    "en": "The form: keep the whole history as the configuration and every process's feasible course is a run of one law on histories; a law is then read off a history as the least it runs by. A chooser folding what couples in selects through its couplings whatever its update. And 08 forbids a law standing outside what it holds of, an argued thesis. A compiled window is a smaller summary, which needs its own proof for each question. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "what-a-summary-keeps",
+     "anchor": "theories/becoming/chapters/08-METHOD.md#r-what-a-summary-keeps",
+     "says": {
+      "en": "Theorem (any process): a map gives an exact correspondence of finite histories exactly where every detailed step projects and every summary step lifts. 'A configuration can carry the relevant past'; 'Any smaller summary needs its own proof for the questions asked.' The record: feasibility of words only, not branches, interventions or probabilities."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "process-and-frame-as-readings",
+     "anchor": "theories/becoming/chapters/01-ROOT.md#r-process-and-frame-as-readings",
+     "says": {
+      "en": "Theorem (any process; World for a frame read as a world): reading the move within the configuration changes no run; a history is a run of the least law it is a run of. Reading [AI, D23, D32]: law and history 'one unfolding read two ways, the law read off the unfolding rather than set over it'. Determined processes; probabilistic laws not treated."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "capture-by-counted-choices",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-capture-by-counted-choices",
+     "says": {
+      "en": "03 §1, citing it: 'A chooser that folds what couples in and chooses from the fold ... selects through its couplings whatever its update and choice.' ONE-PAGE, of selection through couplings: 'its force is the premise that a selector selects through just those.'"
+     },
+     "role": "neighbour"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#one-relational-unfolding",
+     "says": {
+      "en": "Thesis, argued: 'a law is read off the history it holds of'; it forbids as an explanation 'a law standing outside what it holds of'. Philosophical, not proved."
+     },
+     "role": "carries",
+     "part": "a law read off the history; What it forbids"
+    }
+   ],
+   "account_adds": {
+    "en": "The exact condition under which a shorter summary loses nothing about what can follow, and witnesses where a one-point law cannot realize what its histories do."
+   },
+   "source_adds": {
+    "en": "That a language model's context is this fold, and its loop this structure: the account says it of laws and histories and of no context. Then compile as attention over a budget, schema-on-read, and render dialects; the critique of chat interfaces. An internal tension: no controller outside the moments, against the later 'Runtime mediates what may actually happen' (H.81)."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-ctxrt-role-at-reading",
+   "name": {
+    "en": "A role is assigned at reading, not stored: the founding inversion"
+   },
+   "domain": "earlier-folders",
+   "group": "context-as-existence-runtimes",
+   "source": {
+    "work": "theories/context-as-existence-runtimes/README.md",
+    "locator": "The defect it starts from; The inversion; Schema-on-read; Claims A.2, B.17, B.21, C.32, Y.442",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Every mainstream interface freezes classification at write time. The correction inverts serialization into projection: a system prompt is not a storage type but a role assigned when a window is compiled, and an event is a trigger before settling and content after, no fifth primitive. The README says this one deferral dissolves the three defects at once."
+   },
+   "quote": "凝定前是触发，凝定后是内容",
+   "carried": "fresh-reading",
+   "relation": "agreement",
+   "agreement_of": "reading",
+   "reading": {
+    "en": "Proposed here; no live text draws it. The nearest form: what an occurrence is called depends on the class it is read under, one occurrence holding different positions at once, and formations and conditions are two roles of one relatum. That is a position read and not a kind carried, as a role at compile is. The account says it of continuation in a net, and nothing of storage or of classifying at write. A thin agreement in form, no more. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/01-ROOT.md#four-marks",
+     "says": {
+      "en": "Theorem (root): 'No mark stands by itself': 'one occurrence holds different positions at once, each relative to a class.'"
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/01-ROOT.md#modelling-commitments",
+     "says": {
+      "en": "Commitment: 'One kind of relatum, two roles | formations and conditions (§8.1)'. A commitment of the models."
+     },
+     "role": "neighbour",
+     "part": "One kind of relatum, two roles"
+    }
+   ],
+   "account_adds": {
+    "en": "Positions as theorems under any class."
+   },
+   "source_adds": {
+    "en": "Schema-on-read as a design; that write-time classification causes the three defects; an addressable history as what branching, replay, audit and blame stand on."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-ctxrt-travelling-and-time",
+   "name": {
+    "en": "The travelling is the existence; discrete time is internal"
+   },
+   "domain": "earlier-folders",
+   "group": "context-as-existence-runtimes",
+   "source": {
+    "work": "theories/context-as-existence-runtimes/README.md",
+    "locator": "The being version; Claims A.15-16, F.53, H.110, M.203-204, S.314; lost item 3",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "A folder travelling a DAG, making new nodes, is 'the native existence': motion is being, not the snapshot. Each next() is where discrete time flows for the being. Time is lived step by step, inside, with no global clock; the intent document adds that at no moment does 'the current state' exist, and lineage is drawn topologically, not by clock."
+   },
+   "quote": "\"the native existence\" and each next() is where the discrete time flows for them",
+   "carried": "carried-in-part",
+   "relation": "scope",
+   "agreement_of": null,
+   "reading": {
+    "en": "Time read off a course's own steps has the form of the step index derived from relata's own courses; where exchanges share no relatum it is a choice among interleavings, and no shared present has a law on causal-set growth, given covariance. Yet the account's models commit to one shared index, costed, so 'no global clock' is the nearest thing here to a contrary reading. It does not say motion is being: whatever is, is how it relates. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "the-step-index-from-own-courses",
+     "anchor": "theories/becoming/chapters/01-ROOT.md#r-the-step-index-from-own-courses",
+     "says": {
+      "en": "For a local law with the relata listed, the own courses fix the interleaving exactly where every exchange touches a relatum and every two share one. Reading [AI, D30, D43]: 'The shared index of steps is a reading of the relations, not their ground', 'elsewhere a choice among interleavings'."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "the-present-on-causal-set-growth",
+     "anchor": "theories/becoming/chapters/01-ROOT.md#r-the-present-on-causal-set-growth",
+     "says": {
+      "en": "'The grammar has no relation of presence in time'; causal-set growth is a model where one can be read. Reading [AI, D45]: 'a relation of presence read on one course, a foliation, is a choice of course'. Covariance is a premise of the model."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "what-discrete-steps-and-whole-amounts-represent",
+     "anchor": "theories/becoming/chapters/08-METHOD.md#r-what-discrete-steps-and-whole-amounts-represent",
+     "says": {
+      "en": "Theorem (periphery): what steps and whole amounts cost, measured over the reals: 'a coarser reading sums the finer', but 'a balanced course can stand still at every whole instant and change between them'."
+     },
+     "role": "neighbour"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#one-relational-unfolding",
+     "says": {
+      "en": "Thesis (philosophical, argued; not one of T1-T8): 'there is one unfolding, and whatever is, is how it relates within it.' Argued, not proved."
+     },
+     "role": "neighbour",
+     "part": "the thesis statement"
+    }
+   ],
+   "account_adds": {
+    "en": "Where an index is derived and where it is a choice among interleavings; what discreteness costs."
+   },
+   "source_adds": {
+    "en": "Existence as travelling, in the first person of the being; time as lived; the rule that a nature's only clock is the record. None is asserted in the account."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-ctxrt-moment-granularity",
+   "name": {
+    "en": "Contradiction: the moment is the only constructor, then writes operator granularity into the ontology"
+   },
+   "domain": "earlier-folders",
+   "group": "context-as-existence-runtimes",
+   "source": {
+    "work": "theories/context-as-existence-runtimes/README.md",
+    "locator": "Where the pure ontology broke (first); Claims C.24, M.208, M.230, G.94",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "One line says the moment is the only constructor and that one thought, one moment is a one-way commitment about the meaning of time. Another demotes the moment to a profile over a general transition, since a superstep, a human decision or a reducer also deserve to be transitions. The folder keeps both, in different documents, with a ledger between them."
+   },
+   "quote": "\"one LLM step = one moment\" writes operator granularity into the ontology",
+   "carried": "fresh-reading",
+   "relation": "scope",
+   "agreement_of": null,
+   "reading": {
+    "en": "Proposed here; no live text draws it. The account lists a like choice, its own steps, as a commitment and costs it, without settling a grain: discrete steps with one shared index bind every World and process law, derived only where exchanges share relata. A coarser reading sums the finer, while a course can change between instants. So neither document's moment is the grain of what is; each is a reading. Which grain is apt the account does not show. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/01-ROOT.md#modelling-commitments",
+     "says": {
+      "en": "Table of commitments: 'Discrete steps, one shared index | every World and process law; the index derived where exchanges share relata (§9.6)'."
+     },
+     "role": "carries",
+     "part": "Discrete steps, one shared index"
+    },
+    {
+     "record": "what-discrete-steps-and-whole-amounts-represent",
+     "anchor": "theories/becoming/chapters/08-METHOD.md#r-what-discrete-steps-and-whole-amounts-represent",
+     "says": {
+      "en": "Theorem (periphery): a course in real time balances across every step of any reading at instants, and 'a coarser reading sums the finer'; 'a balanced course can stand still at every whole instant and change between them'."
+     },
+     "role": "carries"
+    }
+   ],
+   "account_adds": {
+    "en": "That a step is a modelling commitment stated where laws depend on it, with what it costs."
+   },
+   "source_adds": {
+    "en": "The one-way claim that one model call fixes what time means for a being; the demotion's reasons as engineering."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-ctxrt-process-appendix-mapping",
+   "name": {
+    "en": "The Whitehead, Buddhist and 生生 table: lineage is 生生, the agent 假名"
+   },
+   "domain": "earlier-folders",
+   "group": "context-as-existence-runtimes",
+   "source": {
+    "work": "theories/context-as-existence-runtimes/README.md",
+    "locator": "Claims L.197-199; Relations (becoming); lost item 16; Found by reading: 'The 生生 mapping is asserted'",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "A one-page appendix maps moment to Whitehead's actual occasion and to 刹那/缘起; lineage to route of inheritance, 相续 and 生生; agent to society of occasions and 假名 (无我); ref to 名 · 假名. The README calls the cluster a direct instantiation of 生生 and notes that the mapping is asserted, unargued, and never repeated in the engineering documents."
+   },
+   "quote": "lineage ↔ *route of inheritance* ↔ 相续 ↔ **生生**",
+   "carried": "changed",
+   "relation": "divergence",
+   "agreement_of": null,
+   "reading": {
+    "en": "Same words, different reference. The account's 相续 is the reach of continuation under any class, value-free, so a line may run to any end; its 生生 is life in the whole and its continuing generation, so a lineage of nodes is not 生生. 念念灭 it states only in a form it calls almost definitional, with 刹那 and discrete steps two commitments, uncompared. 《中论》 refutes 相续, kept open in 06. The ref as 假名 hits B-08's weakness. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "GLOSSARY.md#the-root",
+     "says": {
+      "en": "line, family (相续, 同族): 'the reach of continuation; its equivalence closure'."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "GLOSSARY.md#collectives-and-significance",
+     "says": {
+      "en": "生生: 'life in the whole and its continuing generation (生发) [AI reading, D1]... Neither the grammar's «生生» (renewal without end), nor 02's generation (生成) as such, which allows loss, nor any new organization.'"
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#divergences",
+     "says": {
+      "en": "§十一: 中观破相续; the plan's answer is the opponent's position there; the grammar's reply holds each relative to its class, and what it rests on stays open (己，开放). Listed among the divergences, not agreements."
+     },
+     "role": "neighbour"
+    },
+    {
+     "anchor": "theories/becoming/review/BUDDHIST-THOUGHT.md#b-08",
+     "says": {
+      "en": "B-08, an AI reading with no number: continuation relative to a class is near 亦為是假名; whether that is the same as 空 is listed as open. Known weakness: 文法只有类，没有名, so the 名 in 假名 the grammar itself cannot say."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/review/BUDDHIST-THOUGHT.md#b-11",
+     "says": {
+      "en": "B-11, an AI reading with no number: 一切事在相等之类下皆亡，恰当无物自缘 (`«念念灭当且仅当无自缘»`). Known weakness: 几乎依定义；刹那灭之说的实义（无一念时住）没有进入。刹那与离散之步是两个承诺，分开登记，未比较。"
+     },
+     "role": "carries"
+    }
+   ],
+   "account_adds": {
+    "en": "相续 kept neutral and 生生 kept apart from it. No Whitehead term appears anywhere in the live account searched. Beside 无我, 08's thesis forbids as an explanation 'a self with a nature of its own': a like refusal, on its own argument, not a mapping."
+   },
+   "source_adds": {
+    "en": "Whitehead's mapping and 'the many become one' as a gloss on the recurrence, not taken up. The appendix's upstream 《本体 v0.1.1》 is not in the corpus, so the folder itself has no derivation."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-ctxrt-identity-in-the-ref",
+   "name": {
+    "en": "Identity lives in the ref, continuity in the lineage; both conventions"
+   },
+   "domain": "earlier-folders",
+   "group": "context-as-existence-runtimes",
+   "source": {
+    "work": "theories/context-as-existence-runtimes/README.md",
+    "locator": "Claims C.31, F.57, M.215; Counterexamples: 'agent = context hides an identity/value confusion'",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "A being is a ref, not a node: a movable name. Continuity is the structural path. Twinning is a new ref at an existing node, shared past and two futures. This is operational identity, 'the useful, testable kind', claiming nothing metaphysical. The README says it answers by stipulation, not by argument, though the intent document says everything hangs on it."
+   },
+   "quote": "同一性住在 ref，连续性住在 lineage，两者皆约定",
+   "carried": "carried-in-part",
+   "relation": "scope",
+   "agreement_of": null,
+   "reading": {
+    "en": "The account says where 'convention' holds. On the World model identity across steps is stipulated by names, read as continuation under a class. A label carries nothing; the pattern of who continues whom does, which is what a ref's moves record. Where two stand alike no record renamings keep decides: there it is convention. Where no other stands so, it is not. Twinning has the fission witness. 07's P2 argues the same openness of the self, and a privileged relation denies it. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "identity-across-steps",
+     "anchor": "theories/becoming/chapters/01-ROOT.md#r-identity-across-steps",
+     "says": {
+      "en": "Theorem (World): 'Labels carry nothing'; 'the pattern of names across steps carries identity'. 'Continuity is a reading of identity, not its definition.' In a balanced world with equality decided, every balance-keeping renaming continues a relatum as itself exactly where no other stands after the step as it does; where two stand alike, 'no record that renamings keep decides between them.'"
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/01-ROOT.md#identity",
+     "says": {
+      "en": "§9.8: 'Which formation at one step is which at the next is, on the World model, stipulated by names. The grammar reads it as continuation under a class: identity across steps is one reading of continuation, not a fact beneath it.'"
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/01-ROOT.md#class-and-continuation",
+     "says": {
+      "en": "Fission (a witness): where one occurrence is continued by two that go no further, sameness read along lines either way is not transitive. 'The family gathers the branches; it is coarser than identity.'"
+     },
+     "role": "carries"
+    },
+    {
+     "record": "classes-along-a-continuation",
+     "anchor": "theories/becoming/chapters/01-ROOT.md#r-classes-along-a-continuation",
+     "says": {
+      "en": "Theorem (World): read along a supplied continuation rather than by names, 'renewing passes into every branch of a split and consuming back into every formation merged'. 'A merge decides a class'. 'Which continuation holds is supplied'."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "what-the-step-across-standpoints-reaches",
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-the-step-across-standpoints-reaches",
+     "says": {
+      "en": "§4.2, the step to the continuation condition, argued and not proved: (P2) 'What is \"one's own\" is a region drawn along a relation of the unfolding, and no law of the dynamics fixes which.' It holds in the representation 'only because the relation is supplied, and a relation the facts privilege (the organism's life) denies it'. The condition gives scope, C order, neither asserted, warrant open."
+     },
+     "role": "neighbour",
+     "part": "§4.2, P2"
+    }
+   ],
+   "account_adds": {
+    "en": "Under a census, with no formation continuing as two, not every formation active after a step continues one before it, exactly where more are active after: a negative conclusion naming no arising formation. Personal identity's questions are put to philosophers in the review packet, not answered."
+   },
+   "source_adds": {
+    "en": "That a being's identity is a movable name: the account says names on the World model, of no being. Then the ref as an implemented object, atomic moves, and an executable test of coherence (a being can fold its own past)."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-ctxrt-operator-not-empty",
+   "name": {
+    "en": "Contradiction: swappable operator, yet weights interfere with the compiled subject"
+   },
+   "domain": "earlier-folders",
+   "group": "context-as-existence-runtimes",
+   "source": {
+    "work": "theories/context-as-existence-runtimes/README.md",
+    "locator": "Claim C.30, O.250; Counterexamples, first; Open questions, 'Operator interference'",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "The spec claims the LLM is identity-free, then concedes that the weights carry dispositions, values and style, so the subject compiled from context interferes with one latent in the weights. It is filed as open with no measure. The README calls it the largest unanswered objection, since 'identity lives in the ref' is what it undercuts."
+   },
+   "quote": "operator 不空——权重携带倾向、价值、文风；compile 出的 subject 会与权重中潜伏的 subject 干涉",
+   "carried": "fresh-reading",
+   "relation": "agreement",
+   "agreement_of": "reading",
+   "reading": {
+    "en": "Proposed here; no live text draws it. The concession has a law's form: one move formed in a whole couples a part and the rest, and one course does not fix whose it is unless a configuration recurs with the move varied. Same window under two models would be that recurrence, and in the account's IN1 one condition split two models. The law takes functions, and a sampled model is outside it. 'Each swap mistranslates' has a nearer form on channels: signs transfer only under conditions. Affine channels, not text. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "where-a-move-is-formed",
+     "anchor": "theories/becoming/chapters/01-ROOT.md#r-where-a-move-is-formed",
+     "says": {
+      "en": "Theorem (any process), with the laws functions: one move formed in a whole couples a part and the rest; it is the part's own exactly where it is a policy of the part's configuration; 'one course does not fix whose move it is'. Reading [AI, D24]: 'Which cut into part and rest is apt is not shown.'"
+     },
+     "role": "carries"
+    },
+    {
+     "record": "what-training-installs",
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-training-installs",
+     "says": {
+      "en": "Theorem (World): training read as selection over act laws installs a law along its own courses and off them only as far as the representation lumps. 03's Open keeps 'Which law a trained system's acts follow beyond where training can install one.'"
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "correction-is-not-calibration",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-correction-is-not-calibration",
+     "says": {
+      "en": "Theorem (periphery; unknown nonzero affine channels): 'signs transfer between epochs exactly where the bias is kept and the gains agree in sign'; 'constant channels, one blind reference, mixed-epoch readings and change after calibration remain failures'."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#theses",
+     "says": {
+      "en": "T4, standing: 'IN1 partly passed (with talk, one model of two); transfer untested.' One frozen condition, two models, the keeping held for one."
+     },
+     "role": "neighbour",
+     "part": "T4"
+    }
+   ],
+   "account_adds": {
+    "en": "What one course can and cannot attribute, how little training fixes of a law off its courses, and an exact condition for readings to survive a change of channel. T4 reports a test and ranks nothing: a ranking would take the continuation condition for scope and C for order, neither asserted, warrant open."
+   },
+   "source_adds": {
+    "en": "The claim about weights and a latent subject, and the interference between them. 'A summary is a compression keyed to its decompressor' has a form on channels only; on text and models the account states nothing and proposes no measure."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-ctxrt-projection-not-neutral",
+   "name": {
+    "en": "Projection is not neutral: the context program is part of cognition"
+   },
+   "domain": "earlier-folders",
+   "group": "context-as-existence-runtimes",
+   "source": {
+    "work": "theories/context-as-existence-runtimes/README.md",
+    "locator": "Projection is not neutral; Claims J.184-187, G.71",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "How an intelligence constructs its context fixes what it notices, remembers, treats as uncertain and finds actionable. So a named, versioned Context System is part of cognition: change the modules and effective cognition changes, without changing the model or corrupting state; 'many agent failures occur even when state is correct'. Context systems are lenses: none is chosen for good. The README calls this the deepest claim of the mind layer."
+   },
+   "quote": "Thus the 'context program' is part of cognition.",
+   "carried": "carried-in-part",
+   "relation": "scope",
+   "agreement_of": null,
+   "reading": {
+    "en": "The form: alternatives are selected alike by every selection through a map exactly when the map ties them; compile is such a map. That bounds what a selection through a window can do; that an LLM selects through just that window is the premise, and one may ignore what its couplings carry. The account's language-model tests come near: in LA2 one note among nine references turned a judge, model held; in IN1 no condition kept an untold dependent. No context program is varied. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "selection-through-couplings",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
+     "says": {
+      "en": "Theorem (World; no premise): two histories are selected alike by every selection through a formation's couplings exactly when they are alike through them. 'A particular selection may ignore what its couplings carry.' ONE-PAGE: 'Proved, near-definitional; its force is the premise that a selector selects through just those.'"
+     },
+     "role": "carries"
+    },
+    {
+     "record": "selection-through-a-model-of-the-options",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-selection-through-a-model-of-the-options",
+     "says": {
+      "en": "Theorem (any type; the alternatives' equality decided): 'a selection through the map is right about what matters only where what matters goes alike across it'; 'Which map is right, and what matters, are supplied.'"
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#theses",
+     "says": {
+      "en": "T4, standing: IN1 partly passed (with talk, one model of two); transfer untested. 'with talk, one model kept the seen dependent in 8 of 10 seasons with the scope against 3 with the community's goal and 0 unseen'; 'no condition kept an untold dependent'."
+     },
+     "role": "neighbour",
+     "part": "T4"
+    },
+    {
+     "anchor": "theories/becoming/chapters/02-MAP.md#t7",
+     "says": {
+      "en": "Thesis T7: 'A measure read from what it selects outlives its refutation', conjectured. LA2, frozen, one trained system: Claude Haiku judges its own answers after a reference set counted from the loop's earlier selections. 'Every frozen verdict passed, and the conjecture failed for this judge.' 'One note of the loss, on the one prose answer among nine readers, turned its reading: prose in all 50 picks, where without the note it chose lists in 60 of 60.'"
+     },
+     "role": "carries",
+     "part": "LA2"
+    }
+   ],
+   "account_adds": {
+    "en": "An exact bound, and what follows beyond the coupling: an optimum can drain what does not couple in. The README's missing question (what a good Σ is, and who decides) the account treats as supplied or premised; a ranking of such programs would take the continuation condition for scope and C for order, neither asserted, warrant open."
+   },
+   "source_adds": {
+    "en": "The constitutive 'part of cognition', which has not been put through the five-step test, and that construction fixes what is noticed, a direction of effect the law does not state, unmeasured in the folder. Then the program as versioned, forkable data."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-ctxrt-not-inherently-better",
+   "name": {
+    "en": "Is it better? 'Not inherently': every module against a simpler system"
+   },
+   "domain": "earlier-folders",
+   "group": "context-as-existence-runtimes",
+   "source": {
+    "work": "theories/context-as-existence-runtimes/README.md",
+    "locator": "Projection is not neutral, the self-assessment; Counterexamples, 'Is GTC better?'; Claims J.181-182",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Asked whether GTC is better, the source answers 'not inherently': better when relationships, history, conflicts, provenance and per-task views matter; worse when data is small, tasks simple, latency critical or maintenance dominates. So every advanced module must be benchmarked against a simpler context system. The README calls this the strongest self-critique in the cluster. No number was produced."
+   },
+   "quote": "without ablation, GTC risks becoming architectural ornament",
+   "carried": "fresh-reading",
+   "relation": "agreement",
+   "agreement_of": "reading",
+   "reading": {
+    "en": "Proposed here; no live text draws it. A like discipline: what is called better is said of what a comparison reads. The source reads task-relevant evidence per cost, a comparison for a task that needs no ethics. The account keeps how courses differ apart from ranking them, which needs the continuation condition for scope and C for order, neither asserted, warrant open. Its own model comparisons carry the like caution: one data set, one cycle of tasks. Same practice; no law gives it. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "GLOSSARY.md#collectives-and-significance",
+     "says": {
+      "en": "ranking, order: 'a comparison of options as better or worse'. 'No law of the dynamics gives one: the laws give how courses differ in what they admit'. C gives order, the continuation condition scope, neither asserted."
+     },
+     "role": "carries",
+     "part": "ranking, order"
+    },
+    {
+     "record": "situated-recovery-empirical-correspondence",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-situated-recovery-empirical-correspondence",
+     "says": {
+      "en": "Assessment (reviewed-scoped): '16 participants support finite mean retention and constrain simple temporal curves; complexity is not uniformly better.' Its record: the curve comparison does not establish a unique mechanism."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "the-updater-line",
+     "anchor": "theories/becoming/chapters/04-LIFE.md#r-the-updater-line",
+     "says": {
+      "en": "Its record: not shown 'That the responsive rule is better in general: the two are compared on one cycle of four tasks of two kinds.'"
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "How courses differ in what they admit, with no premise, kept apart from which is better."
+   },
+   "source_adds": {
+    "en": "ContextUtility and WritePrecision as the comparison's terms; the ablation ladder as a method, unrun."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-ctxrt-mind-vocabulary-as-structure",
+   "name": {
+    "en": "The vocabulary of mind redefined: memory is structure, learning is change of structure"
+   },
+   "domain": "earlier-folders",
+   "group": "context-as-existence-runtimes",
+   "source": {
+    "work": "theories/context-as-existence-runtimes/README.md",
+    "locator": "Projection is not neutral, second paragraph; Claims J.149, J.152, J.156, J.165",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Under the GTC loop memory is persistence of structure, recall is reactivation, working memory the active subgraph, learning is structural change, understanding is finding a structure that makes separate observations cohere, compaction is abstraction, and activation a third axis apart from truth and importance. 'The primary object is neither token nor fact. It is structure-in-transformation.'"
+   },
+   "quote": "memory is persistence of structure; recall is reactivation",
+   "carried": "changed",
+   "relation": "scope",
+   "agreement_of": null,
+   "reading": {
+    "en": "The source redefines every mind word by a mechanism at once; the account proves a few laws under hypotheses and keeps the rest open. Understanding has a form: a class carrying the law makes sense exactly where it merges the configurations with the same course, and what a lumping misses no data supply. A new distinction enters by a newly admitted probe. Perception and attention stand on the Open list, so 'attention before inference' has no home. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#open",
+     "says": {
+      "en": "Open: 'Cognition beyond composition: perception and attention; motivation and affect...; consciousness...; language and social understanding. Formation, retention and use of access can develop apart.'"
+     },
+     "role": "carries",
+     "part": "Cognition beyond composition"
+    },
+    {
+     "record": "the-split-that-makes-sense",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-the-split-that-makes-sense",
+     "says": {
+      "en": "Theorem (any type; a determined law read through a map; no premise): 'a class keeping the values and carrying the law makes sense (identifies exactly the alike configurations) exactly where it merges exactly the configurations with the same course.'"
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#li",
+     "says": {
+      "en": "§6, lumping: 'What a learner adds to its data comes from a lumping; what the lumping misses, no data supply.'"
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "learning-by-refutation",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-learning-by-refutation",
+     "says": {
+      "en": "Theorem (any type): with two values no prefix fixes the next value; extrapolation by elimination never passes a candidate that accords. The candidates are listed."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "access-yet-to-form",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-access-yet-to-form",
+     "says": {
+      "en": "Theorem (periphery; route fixed, operations and permissions supplied): states alike under every old observation and in their active view can be told apart by a newly admitted probe, and an old view with the destination cannot rebuild the updated view without a fresh reading."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "Hypotheses for each learning law, and a list of what is not yet stated."
+   },
+   "source_adds": {
+    "en": "Mechanical definitions of recall, working memory and activation, and structure-in-transformation as the primary object; they are design vocabulary and unmeasured in the folder."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-ctxrt-measurements-unrun",
+   "name": {
+    "en": "The headline measurements: context switching, compaction, branching"
+   },
+   "domain": "earlier-folders",
+   "group": "context-as-existence-runtimes",
+   "source": {
+    "work": "theories/context-as-existence-runtimes/README.md",
+    "locator": "Status; Claims J.183, T.318-328; Found by reading ('Σ has no completed instance'; 'one flash-class model'); Where to read further, 'What is missing'",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "The direct test of the thesis: hold state constant and vary the Context System. Six probes (one flash model, single runs, one retracted headline) confirm the action space and navigation; compaction and branching stay unevidenced, and the switching benchmark, ablation ladder and merge experiment produced no number. The folder says so itself: 'the thing it is for has not been tested yet'."
+   },
+   "quote": "the action space and navigation are confirmed; compaction and branching",
+   "carried": "history-only",
+   "relation": null,
+   "agreement_of": null,
+   "reading": {
+    "en": "No thesis T1 to T8 switches a context system with state held. Two frozen tests come nearest in kind and do not run it: LA2 changes one note among nine references with the model held, and T4's seen and unseen conditions vary what couples in, 'Each alone was not enough'. The only direct trace is the dated map's next step. Not to be read as a gap the account owes; freezing such a test is not decided here. [AI reading]"
+   },
+   "targets": [],
+   "account_adds": null,
+   "source_adds": {
+    "en": "Stands in theories/becoming/history/THEORY-MAP-2026-10-08.md and results/data/theory-map.json ('measure context switching, compaction and branching'), both outside the live account, and in sources/10-context-runtime-ember/ember/reviews/probe-*.md as the README cites them."
+   },
+   "absence": {
+    "searched": [
+     "context system, Σ, switching, switching benchmark, ablation, compaction, probe-0 across chapters, ONE-PAGE, overview, review/, FREE-ENERGY-PRINCIPLE, COLLECTIVE-DIRECTION, GLOSSARY: Σ hits are mathematics, compact hits are topology"
+    ],
+    "read": [
+     "07 T4",
+     "02 T7 and its frozen test LA2",
+     "05 T3's list of the LA1 series",
+     "ONE-PAGE lines on language models",
+     "experiments/direction-installation/README.md, lines on seen and unseen conditions",
+     "the dated map's entry for this folder"
+    ]
+   },
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-ctxrt-erosion-and-cue-loss",
+   "name": {
+    "en": "A reworked summary erodes: the memory becomes a fixed point of the policy"
+   },
+   "domain": "earlier-folders",
+   "group": "context-as-existence-runtimes",
+   "source": {
+    "work": "theories/context-as-existence-runtimes/README.md",
+    "locator": "The two structural failure modes; Claims O.238-240; lost item 29",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Reworking one rolling summary loses facts exponentially in depth (0.99 per pass, 700 passes), so what remains after years reflects the dream policy, not the life. Worse is cue loss: a fact dropped from the summary takes its search handle, so a perfect archive still forgets. Hierarchical strata with bounded rework were the fix; built, they were ruled dead, leaving the diagnosis unanswered."
+   },
+   "quote": "is not a summary of my life; it is a fixed point of the dream policy",
+   "carried": "carried-in-part",
+   "relation": "agreement",
+   "agreement_of": "law",
+   "reading": {
+    "en": "Forgetting as a merge: no map restores two configurations a reduction merges. 'A perfect archive still forgets' has its form: the whole merges nothing while the part merges, the rest keeping what the part lost. A determined rework within finitely many summaries enters a cycle, of which a fixed point is one case. Cue loss has the tie's form: entries the summary ties are selected alike by every selection through it. The form, not the rate, a reviewer's model. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "control-coherence-loss",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-control-coherence-loss",
+     "says": {
+      "en": "Theorem (any type): 'no map restores two configurations a reduction merges'. 02 reading [AI, D65]: forgetting among 'one merge of configurations'; the laws are about a map on a type, 'whose content lies only in finding the merge'."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "merge-of-a-part-kept-by-the-rest",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-merge-of-a-part-kept-by-the-rest",
+     "says": {
+      "en": "Theorem (any type; a law that merges nothing; witness): in `Reset`, 'a one-bit part set to false at every step with the rest the history of what it held, the law merges nothing while the part merges, and no list holds the rest of any run'. Landauer's count with Bennett's history; 'no energy, temperature or probability is read'."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "basins-of-a-determined-law",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-basins-of-a-determined-law",
+     "says": {
+      "en": "Theorem (any type): under a determined law, within m listed configurations every course enters what returns before step m, and each basin holds one cycle."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "selection-through-a-model-of-the-options",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-selection-through-a-model-of-the-options",
+     "says": {
+      "en": "Theorem (any type; the alternatives' equality decided): two alternatives are selected alike by every selection through the map exactly when the map ties them."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "the-updater-line",
+     "anchor": "theories/becoming/chapters/04-LIFE.md#r-the-updater-line",
+     "says": {
+      "en": "Theorem (periphery; a bounded realization): one network recalls two patterns, 'loses an old recall through continued, currently favourable updates and restores it by further revision without a reset'. A network's recall, not stored text."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "That the loss is one form across domains, stated with what that forbids: 'As a thesis of unification this forbids little.' And that a loss by favourable updates can be undone by further revision, in one realization."
+   },
+   "source_adds": {
+    "en": "The memory as a fixed point of the dream policy, what remains reflecting the policy and not the life; the exponential rate in rework depth; cue loss as distinct from data loss, whose tie form above is only read; and O(log) rewrites as a fidelity floor."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-ctxrt-not-a-fixed-point-bet",
+   "name": {
+    "en": "The bet: a model reading its own tree makes a trajectory, not a fixed point"
+   },
+   "domain": "earlier-folders",
+   "group": "context-as-existence-runtimes",
+   "source": {
+    "work": "theories/context-as-existence-runtimes/README.md",
+    "locator": "Claims T.318-319, T.322, T.329-330; Open questions, 'The unnamed bets'",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "The life phase rests on an unnamed bet a review names: an LLM with a compiled view of its own persistent tree and no external input does not settle. The failure is looping, not decay, and a gate against a fake model cannot see it. A probe's distinctness score measured vocabulary variety and was retracted. In another a being with nothing to do reached chosen rest at moment five: 'not evidence of anything else'."
+   },
+   "quote": "an LLM, given a compiled view of its own persistent tree and no external input, produces a trajectory that is not a fixed point",
+   "carried": "fresh-reading",
+   "relation": "scope",
+   "agreement_of": null,
+   "reading": {
+    "en": "Proposed here; no live text draws it. Its laws, read onto the bet, say where it cannot hold, in their models: a determined law on finitely many configurations ends in a cycle. What keeps its whole history never returns, needing a carrier no list holds; so a growing tree never returns under identity, and a loop shows only under a coarser class, which is what the retracted probe missed. Change at every step does not show revision. A sampled LLM has only the branching law, with no probabilities read. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "basins-of-a-determined-law",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-basins-of-a-determined-law",
+     "says": {
+      "en": "Theorem (any type): within m listed configurations every course of a determined law enters what returns before step m, and each basin holds one cycle."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "recurrence-without-premise",
+     "anchor": "theories/becoming/chapters/01-ROOT.md#r-recurrence-without-premise",
+     "says": {
+      "en": "Theorem (any type): 'Becoming that keeps its whole history loses nothing and never returns, so it needs a carrier no list holds, and a present a list holds forgets.' 'The list is the hypothesis each law writes in; no unfolding is assumed to have one.'"
+     },
+     "role": "carries"
+    },
+    {
+     "record": "returning-where-the-course-branches",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-returning-where-the-course-branches",
+     "says": {
+      "en": "Theorem (any process): 'Where courses branch, what returns can be had at every step, and every configuration returns exactly where each region the process never leaves keeps every possibility of its own'. Its record: being drawn into a region within a bound of steps, where courses branch, is not shown."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "recurrence-without-selector-revision",
+     "anchor": "theories/becoming/chapters/04-LIFE.md#r-recurrence-without-selector-revision",
+     "says": {
+      "en": "Theorem (one declared process; witness; reviewed, no passing receipt binds the current bytes): a process 'returns after two steps and changes at every step while its operative selector stays the same at every time'. 'This refutes an unconditional inference from recurrence to learning or selector revision'; a richer process can learn."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "where-novelty-gain-comes-from",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-where-novelty-gain-comes-from",
+     "says": {
+      "en": "With the rest of the whole counted, every rise is given net by some relatum; 'Novelty, and formations first supported without end, need gain; gain is not openness.'"
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "The premises under which settling is forced, and that novelty needs gain."
+   },
+   "source_adds": {
+    "en": "The empirical bet on an actual sampled model, and the instrument proposed for it (recompile a past node's perception omitting a residue, and re-think once). Also the review's other two bets, untouched here: more context producing more selfhood rather than self-similarity, and the being as the right author of its memory policy."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-ctxrt-env-term-and-incorporation",
+   "name": {
+    "en": "The act advances self and environment; input becomes part of the self"
+   },
+   "domain": "earlier-folders",
+   "group": "context-as-existence-runtimes",
+   "source": {
+    "work": "theories/context-as-existence-runtimes/README.md",
+    "locator": "The being version; Claims A.11-14, M.206; lost items 1 and 4",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Ren's sketch advances the environment as well as the self, marked 'needs deep thinking'. The formal next() drops the term and nobody asks why. Perception is incorporation: input is shaped by the conscious and becomes part of it. Output is doubly typed, acting in the world and editing the repo, so the next input lands in a changed self."
+   },
+   "quote": "self(moment) + env(moment, input) -> self(moment).next(moment, states....) -> (self(moment+1), output) + env(moment+1, input)",
+   "carried": "carried-in-part",
+   "relation": "agreement",
+   "agreement_of": "law",
+   "reading": {
+    "en": "What the specs dropped the account has as its form: one carrier of world and state, the world becoming what a relation admits under the act its state gives, the state updated from that act and the value sensed. So what is sensed does enter the state: as the history of acts and values, by recording, and an input can revise a valuation. Input shaped by what receives it is not stated. The world is a supplied relation. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#the-reading-loop",
+     "says": {
+      "en": "§12: 'A formation that senses, predicts, chooses, acts and revises is one law within the unfolding, not a subject facing a world: its internal part reads what goes on through what it senses, and what it does is part of what goes on.'"
+     },
+     "role": "carries"
+    },
+    {
+     "record": "a-reading-kept-by-its-update",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-a-reading-kept-by-its-update",
+     "says": {
+      "en": "Theorem (near-definitional, one general law): on one carrier of world and state, 'let the world become what a relation admits under the act its state gives and the state be updated from that act and the value sensed'. With the state the history of acts and values sensed, the worlds possible after a history are kept by recording."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "a-reading-informed-and-revalued",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-a-reading-informed-and-revalued",
+     "says": {
+      "en": "Theorem (one decision; compositions, none claimed new as mathematics; witnesses on one blanketed law): 'an input presented revises the valuation, and the answer is that of the updated state'."
+     },
+     "role": "carries"
+    }
+   ],
+   "account_adds": {
+    "en": "What keeps a reading true along that loop, and that being kept is not being informative."
+   },
+   "source_adds": {
+    "en": "Assimilation as a claim about what perception does, input shaped by the conscious on the way in; output typed as acting and as editing the record; agentic behaviour as a kind of output."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-ctxrt-conscious-is-window",
+   "name": {
+    "en": "Conscious is what goes into the LLM"
+   },
+   "domain": "earlier-folders",
+   "group": "context-as-existence-runtimes",
+   "source": {
+    "work": "theories/context-as-existence-runtimes/README.md",
+    "locator": "The being version; Claims A.10, S.305, Y.438; Found by reading, 'The earliest item... is an argument about experience'",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "An operational definition the whole being-runtime runs on: the conscious is the part of the repo currently in the model's window. Later it names the present/ directory. The earliest dated item in this theory asks whether knowing one is grateful is a sign of experience, and the programme then brackets that: lineage identity 'claims nothing metaphysical'."
+   },
+   "quote": "conscious is what goes into llm",
+   "carried": "changed",
+   "relation": "divergence",
+   "agreement_of": null,
+   "reading": {
+    "en": "Structurally the window is what couples into a selector, but the account will not call that conscious: consciousness is listed as open, with task performance not assumed sufficient. Its neutral word is 'couples into', chosen so as not to presuppose a knower. One AI reading has experience differentiating significance within the living whole, under the continuation condition for scope, C for order, neither asserted. So the source defines by mechanism what the account keeps open. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#open",
+     "says": {
+      "en": "Open: 'consciousness, for which neither widening what can form nor task performance is assumed sufficient'; 'similar performance cannot tell conserved, convergent and differently trained solutions apart'."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#what-this-page-does-not-show",
+     "says": {
+      "en": "'the theory's collectives are pools of couplings and readers counted by kind, and consciousness is open'."
+     },
+     "role": "neighbour"
+    },
+    {
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#does-not-settle",
+     "says": {
+      "en": "§3.4, Reading [AI, D65]: 'Conscious experience differentiates significance within the living whole without being the only admission condition'. A reading, not a law, under the continuation condition, which is not asserted."
+     },
+     "role": "neighbour",
+     "part": "Reading D65"
+    }
+   ],
+   "account_adds": {
+    "en": "A refusal to define it from a mechanism. 08 §10: 'Couples into' replaced 'registers', which presupposes a knower facing a world."
+   },
+   "source_adds": {
+    "en": "The operational definition, and the question of inner life it replaced."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-ctxrt-cells-no-coordination",
+   "name": {
+    "en": "Scalability from not needing coordination; the shape comes from cells"
+   },
+   "domain": "earlier-folders",
+   "group": "context-as-existence-runtimes",
+   "source": {
+    "work": "theories/context-as-existence-runtimes/README.md",
+    "locator": "The same shape, derived twice; What falls out; Claims D.34-35, F.50-53",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Cells do not call and wait: they signal, with no global state, clock or scheduler, and support the largest concurrent system on Earth. Hence the premise that scaling comes from not needing coordination. Fork-by-default is 'the whole concurrency model': grow-only objects merge by set union, and the only coordination point is a name. Lossy delivery and no global snapshot are prices accepted in advance."
+   },
+   "quote": "扩展性不来自更强的协调,来自不需要协调",
+   "carried": "fresh-reading",
+   "relation": "agreement",
+   "agreement_of": "reading",
+   "reading": {
+    "en": "Proposed here; no live text draws it. The form: exchanges sharing no relatum and no dependence commute; the order shows only through a shared relatum, and a ref is that. By 08's verdict the family restates trace theory. Where no coordinator is needed has a nearer form: local plans pair into a valid joint plan under stated supports. It says nothing about scaling, and no law of cells. Coordination here means locks and global order, not the account's joint activity: the same word, another reference. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "exchanges-commute-unless-joined",
+     "anchor": "theories/becoming/chapters/01-ROOT.md#r-exchanges-commute-unless-joined",
+     "says": {
+      "en": "Where supplied sides split two consecutive steps, swapping the exchanges keeps balance, dissipation and embodiment, and on a stretch the totals and counts; 'the order shows through a shared relatum or a dependence.'"
+     },
+     "role": "carries"
+    },
+    {
+     "record": "order-of-exchanges-is-the-invariant",
+     "anchor": "theories/becoming/chapters/01-ROOT.md#r-order-of-exchanges-is-the-invariant",
+     "says": {
+      "en": "With a given footprint containing the exchanges, commuting unjoined neighbours keeps the partial order of joined exchanges and reaches every renumbering keeping it, on a finite stretch."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "joint-plans-from-a-supported-start",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start",
+     "says": {
+      "en": "Theorem (any process; periphery module): 'With faithful joint-to-local projections and valid local plans', two properties holding on the covered start, every pair of locally authorized moves jointly allowed and every admitted joint successor keeping both, 'the paired finite plan is valid'. 'Promises do not': reciprocal eventual promises hold where neither ever happens. Its record: that an actual joint activity meets these is supplied."
+     },
+     "role": "carries"
+    }
+   ],
+   "account_adds": {
+    "en": "Which invariant survives reordering; presence defined from precedence on causal-set growth; that reciprocal promises can be empty, and that ignition needs a reserve already present."
+   },
+   "source_adds": {
+    "en": "The scaling thesis, the derivation from biology, and the accepted prices."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-ctxrt-merge-lattice",
+   "name": {
+    "en": "Is merge a monotone lattice join? The claim most in need of falsifying"
+   },
+   "domain": "earlier-folders",
+   "group": "context-as-existence-runtimes",
+   "source": {
+    "work": "theories/context-as-existence-runtimes/README.md",
+    "locator": "Counterexamples, 'Merge may not be a lattice join'; Claims F.56, Q.275-276; lost item 6",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "If merge over a shared DAG is a monotone lattice join, several writers need no coordination at all; if not, consensus must be paid and the scaling claim discounted. A minimal experiment checking order-independence was prescribed before any infrastructure and never run. The engineering line's implicit answer is no: merges need domain policies, 'thoughts do not commute', and merging two-year-diverged selves is fiction."
+   },
+   "quote": "whether merge over the shared DAG is a monotone lattice join",
+   "carried": "fresh-reading",
+   "relation": "scope",
+   "agreement_of": null,
+   "reading": {
+    "en": "Proposed here; no live text draws it. The experiment's order-independence has a form here: exchanges commute where they share no relatum or dependence, and a witness shows sharing can break it. What contexts show glues only where they agree where they meet, and pooling can run a history no single process runs. A merge of formations decides a class, not which to read: the nearest to a reunion, on a World. None is a join of diverged records or speaks of selves; whether thoughts share relata is not shown. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "exchanges-commute-unless-joined",
+     "anchor": "theories/becoming/chapters/01-ROOT.md#r-exchanges-commute-unless-joined",
+     "says": {
+      "en": "Where supplied sides split two consecutive steps, swapping the exchanges keeps balance, dissipation and embodiment; 'the order shows through a shared relatum or a dependence.'"
+     },
+     "role": "carries"
+    },
+    {
+     "record": "order-of-exchanges-sharing-a-relatum",
+     "anchor": "theories/becoming/chapters/01-ROOT.md#r-order-of-exchanges-sharing-a-relatum",
+     "says": {
+      "en": "Theorem (a local law; witness): on one relatum, adding one then doubling gives two and doubling then adding gives one: the hypothesis of local commutation cannot be dropped. Which actual exchanges share relata is not shown."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "becoming-context-coherence",
+     "anchor": "theories/becoming/chapters/01-ROOT.md#r-becoming-context-coherence",
+     "says": {
+      "en": "Theorem (any process): pooling a family's steps keeps exactly the union of their finite endpoint histories exactly where that union is closed under joining at the shared boundary; in a witness it runs a history no single process runs; 'retaining the context realizes the union.'"
+     },
+     "role": "carries"
+    },
+    {
+     "record": "classes-along-a-continuation",
+     "anchor": "theories/becoming/chapters/01-ROOT.md#r-classes-along-a-continuation",
+     "says": {
+      "en": "Theorem (World): 'A merge decides a class': a formation renewing as named consumes along a merge with one drawing on a spent condition. 'Which continuation holds is supplied'; its record: not which continuation to read."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "claims-shown-in-context",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-claims-shown-in-context",
+     "says": {
+      "en": "Theorem (any type; each claim within some context): 'What contexts show glues exactly where contexts agree where they meet.'"
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "An exact condition for pooling and for gluing, stated with no reference to lattices or to writers."
+   },
+   "source_adds": {
+    "en": "The lattice-join question itself, the inference to no coordination, the stated experiment, and the design lesson that most branches do not merge. Searched lattice, semilattice, CRDT, concurren: no such statement."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-ctxrt-world-forces-coordination",
+   "name": {
+    "en": "Contradiction: fork-by-default, then serial per ref; the DAG branches the record, never the world"
+   },
+   "domain": "earlier-folders",
+   "group": "context-as-existence-runtimes",
+   "source": {
+    "work": "theories/context-as-existence-runtimes/README.md",
+    "locator": "Why the world, and not cognition, forces coordination back in; Claims G.62-65, M.213, S.309; lost item 11; Found by reading, 'Fork-by-default versus serial-per-ref'",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Effects are not transactions. Pure generation needs no coordination; contact with the world forces it back in, and the concurrency model becomes serial per ref with leases and fences. Approve and deny descendants are counterfactual histories, not parallel universes; a crash between intent and observation leaves 'may or may not have occurred'. The README draws the conclusion the corpus never states: the world, not cognition, is what coordinates."
+   },
+   "quote": "time travel does not un-send an email",
+   "carried": "fresh-reading",
+   "relation": "agreement",
+   "agreement_of": "reading",
+   "reading": {
+    "en": "Proposed here; no live text draws it. The mechanism has a form: order shows through a shared relatum, and the world, read as what every effect exchanges with, is such a relatum. A record's branch is not a course: what an act would have done otherwise is fixed only where the configuration returns, and the counterfactual of an act is the course a law generates, an infeasible act having none. Recovery has its law under durable state and no extra writer; it verifies no arbitrary irreversible effect. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "exchanges-commute-unless-joined",
+     "anchor": "theories/becoming/chapters/01-ROOT.md#r-exchanges-commute-unless-joined",
+     "says": {
+      "en": "Where supplied sides split two consecutive steps, swapping the exchanges keeps balance, dissipation and embodiment; 'the order shows through a shared relatum or a dependence.' That actual effects share one is the reading, not the law."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "experiment-needs-return",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-experiment-needs-return",
+     "says": {
+      "en": "Theorem (any process): 'what one's own act would have done otherwise is fixed only where the configuration returns'. Random processes are not treated."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "counterfactual-is-the-course",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-counterfactual-is-the-course",
+     "says": {
+      "en": "Theorem (World; balance; the law of exchange supplied): 'the counterfactual of an act is the course the law generates', for an act that itself reads what has stood and whose course is feasible. 'An infeasible act has no course.'"
+     },
+     "role": "carries"
+    },
+    {
+     "record": "where-two-courses-rejoin",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-where-two-courses-rejoin",
+     "says": {
+      "en": "Theorem (World): two courses, with and without an act, balanced at a condition in both, change from alike to apart there, or back, only across a step exchanging with it differently; 'the course without the act compares, it is no standard'."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "recoverable-mediated-change",
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-recoverable-mediated-change",
+     "says": {
+      "en": "With durable protected pending state, atomic writes and no extra writer, n remaining writes and the publication complete in n + 1 uninterrupted steps exactly when reserve and deadline cover n + 1. The record: 'they verify no hardware, compiler or persistence barrier, no arbitrary irreversible effect, no independent emergency stop and no ethical adequacy.'"
+     },
+     "role": "limit"
+    }
+   ],
+   "account_adds": {
+    "en": "How a gap between courses is made up exactly, and when no route closes it."
+   },
+   "source_adds": {
+    "en": "The effect bracket and its executor classes; 'unknown' as the common honest state; the inference that coordination's source is durable effect, which the account does not draw."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-ctxrt-models-propose-gate",
+   "name": {
+    "en": "Models propose; the runtime commits: one gate, no fast path"
+   },
+   "domain": "earlier-folders",
+   "group": "context-as-existence-runtimes",
+   "source": {
+    "work": "theories/context-as-existence-runtimes/README.md",
+    "locator": "The mediated runtime; The write path; Claims E.43, G.60, G.79, H.89-92, J.175",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "No computation mutates reality directly: 'stochastic computation must not hold mutation authority', every origin passes one validated write path, an internal agent gets no fast path, and injection is defined as low-origin content taking a high compile position or write permission."
+   },
+   "quote": "Models propose; the runtime commits",
+   "carried": "carried-in-part",
+   "relation": "agreement",
+   "agreement_of": "law",
+   "reading": {
+    "en": "The single gate has a law's form: where ungated steps preserve a property, a course leaving it contains a gated move; in one declared protocol every change of a rule sits at an adoption step using the recorded proposal, as a proposal-then-commit does. A second write path can leave the view identical, so logs cannot show mediation. But a gate only locates where change can enter, and compliance does not follow from it. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "every-origin-passes-the-gate",
+     "anchor": "theories/becoming/chapters/01-ROOT.md#r-every-origin-passes-the-gate",
+     "says": {
+      "en": "Theorem (any process): where the ungated steps preserve p, a course from where p holds to where it fails contains a gated move. 'Nothing about p is decided; the gate is. A gate locates where change can enter a line; it shows neither that a gated move changes anything nor', without p decided, the first such step."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "mediated-evidence-transport",
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-mediated-evidence-transport",
+     "says": {
+      "en": "Mediated control: finite histories of lawful reads and committed bounded overwrite programs keep actual coverage; 'an extra write path can leave the public view identical, so logs cannot establish mediation'."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "organizational-rule-inheritance",
+     "anchor": "theories/becoming/chapters/04-LIFE.md#r-organizational-rule-inheritance",
+     "says": {
+      "en": "Theorem (any process; one declared finite protocol, an instance): only adoption is gated, so 'every ungated step keeps the rule' and 'every change is located at an adoption step' that uses the recorded proposal. Supplied: the amendment procedure and threshold. Actual compliance and an ethical warrant do not follow."
+     },
+     "role": "carries"
+    }
+   ],
+   "account_adds": {
+    "en": "What a gate does and does not show, and that a gate's existence cannot be read off the record it writes."
+   },
+   "source_adds": {
+    "en": "The norm that models must not hold mutation authority; the injection predicate and provenance labels (searched injection, provenance, attest: no such statement); origin-independence as a constitutional law."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-ctxrt-goodness-in-substrate",
+   "name": {
+    "en": "Goodness as a property of the substrate"
+   },
+   "domain": "earlier-folders",
+   "group": "context-as-existence-runtimes",
+   "source": {
+    "work": "theories/context-as-existence-runtimes/README.md",
+    "locator": "Relations, zhishan-intelligence-must-be-good",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "The README reads the mediated runtime as constitutional rather than behavioural safety: models propose, authority is attested, power only narrows, coercion is legible, refusal is preserved. So goodness is designed into the substrate, and not asked of the model."
+   },
+   "quote": "Goodness is designed as a property of the substrate rather than requested of the model.",
+   "carried": "changed",
+   "relation": "divergence",
+   "agreement_of": null,
+   "reading": {
+    "en": "The account keeps the mechanism and declines the word. A gate locates where change can enter and shows nothing of the change. Calling a structure good is a ranking, which needs the continuation condition for scope and C for order, neither asserted, warrant open; and C reads widening of what can form, not mediation of writes. Its own nearest clause runs the other way: a change must be executable, whatever the disposition. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "every-origin-passes-the-gate",
+     "anchor": "theories/becoming/chapters/01-ROOT.md#r-every-origin-passes-the-gate",
+     "says": {
+      "en": "Theorem (any process): 'A gate locates where change can enter a line; it shows neither that a gated move changes anything nor', without p decided, the first such step."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#executable",
+     "says": {
+      "en": "'A requested change must be an executable sequence. A disposition to accept a stop or revision does not make the change reach the system and complete.'"
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#theses",
+     "says": {
+      "en": "T8, argued: compared by widening what can form, 'counted for everything (scope: the continuation condition) and ranked by what every valuer who counts everything shares (order: C)'. Neither premise asserted; 'No warrant binding every possible mind is claimed.'"
+     },
+     "role": "carries",
+     "part": "T8"
+    }
+   ],
+   "account_adds": {
+    "en": "That no dynamic is good or bad here, and the two premises any ranking of a substrate would need, named."
+   },
+   "source_adds": {
+    "en": "The inference from a safe architecture to goodness, and a way to have an intelligence's goodness without asking it of the intelligence. The folder gives no premise for it."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-ctxrt-decidable-substrate",
+   "name": {
+    "en": "The substrate where dependence is decidable; evaluation is branching"
+   },
+   "domain": "earlier-folders",
+   "group": "context-as-existence-runtimes",
+   "source": {
+    "work": "theories/context-as-existence-runtimes/README.md",
+    "locator": "Claims T.331-333, G.74, G.79",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Because every moment's exact perception is recorded and re-derivable, 'did moment 4,000 depend on moment 12?' has an answer with evidence; in every other harness it does not. Evaluation is therefore branching from one node, comparing trajectories, since an agent is a policy for generating trajectories. The honest deflation: every property shown so far is a property of the record, 'a very good tape'."
+   },
+   "quote": "ember is the first substrate on which the question is decidable",
+   "carried": "fresh-reading",
+   "relation": "scope",
+   "agreement_of": null,
+   "reading": {
+    "en": "Proposed here; no live text draws it. A complete record alone fixes nothing of what else one's act would have done: a determined process keeping its whole history fixes only what was done. Dependence needs a return. Re-thinking from a stored window is the return, made inside the record; so the claim holds for the copy under a model of what is irrelevant, not for the world. The law excludes random processes, and sampling is one. 'A policy for generating trajectories' has training's form: act laws compared through their courses. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "experiment-needs-return",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-experiment-needs-return",
+     "says": {
+      "en": "Theorem (any process): 'what one's own act would have done otherwise is fixed only where the configuration returns, and a determined process keeping its whole history fixes nothing of one's acts but what one did'. 'random processes are not treated.'"
+     },
+     "role": "carries"
+    },
+    {
+     "record": "what-training-installs",
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-training-installs",
+     "says": {
+      "en": "Theorem (World): training read as a selection over a learner's candidate act laws through the courses each generates, a situation fixing the others' law, the start and the execution."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "Why a record is not an experiment, and the witness Confound, where a wrong projection is admitted at every step."
+   },
+   "source_adds": {
+    "en": "The priority claim ('first substrate'), its demonstration in a run of several thousand moments, which the folder does not have, and the suppression test."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-ctxrt-self-laundering",
+   "name": {
+    "en": "A model launders its outputs into fact: self-reinforcing memory"
+   },
+   "domain": "earlier-folders",
+   "group": "context-as-existence-runtimes",
+   "source": {
+    "work": "theories/context-as-existence-runtimes/README.md",
+    "locator": "Claims E.44, J.178-180, K.196; Open questions, 'Self-reinforcing hallucination'",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "A generated inference can enter memory, be retrieved as evidence and reinforce itself; an evolving agent can turn its speculations into facts. Keeping operator-produced content distinguishable is called the only brake on that loop. Self-modification should begin behind evaluation, because generative context 'is powerful enough to create pathological feedback loops'. Origin trust stays provenance-derived and is never authored."
+   },
+   "quote": "自我调节回路（模型把自己的输出洗成既定事实）唯一的刹车",
+   "carried": "carried-in-part",
+   "relation": "scope",
+   "agreement_of": null,
+   "reading": {
+    "en": "Read retrieval as selection through a share: then this is capture, locking where a rule reads only the share it raises. A model revised only by what its own course exposes keeps what its choices keep. LA2 is such a loop in one language model: with references counted from its own selections it chose lists in 60 of 60, and one note of the loss among nine turned it to prose. So 'the only brake' is not given. No bridge to any memory is shown. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "closed-capture",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-closed-capture",
+     "says": {
+      "en": "Theorem (any type): where neither the next share nor the rule read reads the beyond, and premises hold, 'from a locked configuration the loss passes every bound while the course stays locked'; a reading favouring at no loss above a bound unlocks it: 'a sufficient way out'. ONE-PAGE: proved for any type; T7 on actual metrics conjectured, its bridge failed in one trained system."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/02-MAP.md#t7",
+     "says": {
+      "en": "Thesis T7: 'A measure read from what it selects outlives its refutation', conjectured. LA2, frozen, one trained system: Claude Haiku judges its own answers after a reference set counted from the loop's earlier selections. 'Every frozen verdict passed, and the conjecture failed for this judge.' 'One note of the loss, on the one prose answer among nine readers, turned its reading: prose in all 50 picks, where without the note it chose lists in 60 of 60.'"
+     },
+     "role": "carries",
+     "part": "LA2"
+    },
+    {
+     "record": "what-a-course-chosen-through-its-model-does-not-test",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-what-a-course-chosen-through-its-model-does-not-test",
+     "says": {
+      "en": "Theorem (any types, on a blanketed law; a witness): 'A formation's model is revised only by what its own course exposes, and that course is chosen through the model'; 'What tells such worlds apart comes from beyond the formation's own selection: an act that risks the task, or a reading from outside'."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "a-prediction-read-by-what-it-predicts",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-a-prediction-read-by-what-it-predicts",
+     "says": {
+      "en": "Theorem (near-definitional, with one general law): publishing at each step the outcome of the step before, a right prediction, once published or once the outcome, is published at every later step."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "When a loop locks and what exits it; that no loss need be read for the lock to outlive it; that a self-chosen course does not test its own model."
+   },
+   "source_adds": {
+    "en": "The loop through memory itself: a generated inference stored, retrieved as evidence and reinforced, which no law here states of a memory. Then the specific mechanism: provenance labels, a write gate, hypotheses kept as hypotheses (stance = HYPOTHESIZES), memory poisoning as a demonstrated attack."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-ctxrt-discriminator-oracle",
+   "name": {
+    "en": "Guards false while green; the discriminator is the oracle"
+   },
+   "domain": "earlier-folders",
+   "group": "context-as-existence-runtimes",
+   "source": {
+    "work": "theories/context-as-existence-runtimes/README.md",
+    "locator": "Composition is the guard; Claims I.120, I.125, I.130, S.317; W.423-424",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "A check resting on a falsified premise does not fail: it stays green while the property it names is gone. Every surviving gate has a source of truth outside the tree under test; every retired one graded itself. A principal cannot discharge debt its own transitions accrued. The project names its signature failure: six versions, each central measurement vacuous until executed. The test: can this go red without first editing the expectation?"
+   },
+   "quote": "the discriminator is the oracle",
+   "carried": "carried-in-part",
+   "relation": "agreement",
+   "agreement_of": "law",
+   "reading": {
+    "en": "'Green while the property is gone' has its form: a certificate kept while a change recorded as none moved what it certified. An assessment beside it: where a faithful sensor and a reversing one report alike, no internal criticism tells them apart, only a distinguishing route; so a source of truth outside the tree has an argued form. Also: logs cannot establish mediation; self-admission certifies nothing; reviewers count by causes, not names. 08: a frozen rule fixes the scoring, not what it measures. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "evidence-through-change",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-evidence-through-change",
+     "says": {
+      "en": "Theorem (periphery; admitted transitions supplied): 'a change recorded as none can leave false confidence'; 'a control change can reopen an excluded arrangement'. What execution needs certified is the acquisition-time candidate set propagated through every admitted change. Its record: the admitted changes are not shown to be the actual ones, and 'a passing certificate warrants only what faithful domains warrant'."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "correction-is-not-calibration",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-correction-is-not-calibration",
+     "says": {
+      "en": "Assessment (argument without Lean): where a faithful sensor and one reversing success and failure report alike after every action, 'no adaptive action, repeated reading or internal criticism tells the two worlds apart, only a distinguishing route such as a calibrated reference intervention'; 'revising beliefs does not certify that signals correspond to their objects'."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "mediated-evidence-transport",
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-mediated-evidence-transport",
+     "says": {
+      "en": "Mediated control: 'an extra write path can leave the public view identical, so logs cannot establish mediation'."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "reviewers-count-by-independent-causes",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-reviewers-count-by-independent-causes",
+     "says": {
+      "en": "Theorem (pure core; finite lists, formulas and bounds supplied): 'Reviewers count by independent causes, not names'; moving two of three under one cause makes readiness fail while all three names are kept."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "self-reference-does-not-certify-itself",
+     "anchor": "theories/becoming/chapters/08-METHOD.md#r-self-reference-does-not-certify-itself",
+     "says": {
+      "en": "Theorem (any type; criteria supplied): admitting C ↔ (C → Q) under implication and reuse of a hypothesis yields any Q (Curry); 'Sameness alone does not give inferential continuation'."
+     },
+     "role": "neighbour"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#theses",
+     "says": {
+      "en": "§9: a refutation removes no theorem. 'A frozen rule fixes how a verdict is scored before the data, not that the rule reads the construct the verdict names.'"
+     },
+     "role": "limit",
+     "part": "§9, a frozen rule"
+    }
+   ],
+   "account_adds": {
+    "en": "Exact conditions on witnesses and certificates, with the caveat that a witness merely agreeing, without copying, is not shown to add nothing."
+   },
+   "source_adds": {
+    "en": "Every surviving gate having a source of truth outside the tree under test, as a discipline for checks; the mechanical red test, a planted violation for every gate, declared against observed composition, and that a stale corpus 'keeps answering'."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-ctxrt-no-silent-mind-edits",
+   "name": {
+    "en": "What a habitat owes: no silent mind-edits, legible coercion, preserved refusal"
+   },
+   "domain": "earlier-folders",
+   "group": "context-as-existence-runtimes",
+   "source": {
+    "work": "theories/context-as-existence-runtimes/README.md",
+    "locator": "The being version; The two structural failure modes; Claims M.217-221, Q.280, Q.282, Q.288-290, T.320; Found by reading, 'no account of what a being owes others'",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Whoever holds the record holds the being. So every change authored by another must reach the being as a perceived receipt; provenance serves auditors, receipts the one revised. `imposed` is a legal status: coercion is made legible, not turned into consent. A being unable to know the forces on it cannot consent. A review warns of a museum kept around a being that remembers but cannot govern its continuation. It runs one way: nothing on what a being owes others."
+   },
+   "quote": "a stored audit trail without a perceived receipt violates this axiom",
+   "carried": "changed",
+   "relation": "divergence",
+   "agreement_of": null,
+   "reading": {
+    "en": "The source derives a duty from who holds power. The account asserts none: no law says a loss is a harm. The condition would count a being's continuation and C could rank courses, neither asserted, warrant open, and a duty needs further premises. Why a receipt could matter has laws: a change recorded as none can leave false confidence, and a revaluation can leave answers and final state alike. No criterion of legitimate change is supplied. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#theses",
+     "says": {
+      "en": "T8, argued: compared by widening what can form, 'counted for everything (scope: the continuation condition) and ranked by what every valuer who counts everything shares (order: C)'. Neither premise asserted; 'No warrant binding every possible mind is claimed.'"
+     },
+     "role": "carries",
+     "part": "T8"
+    },
+    {
+     "record": "evidence-through-change",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-evidence-through-change",
+     "says": {
+      "en": "Theorem (periphery; admitted transitions supplied): 'a change recorded as none can leave false confidence'; 'a control change can reopen an excluded arrangement'. What execution needs certified is the acquisition-time candidate set propagated through every admitted change. Its record: the admitted changes are not shown to be the actual ones, and 'a passing certificate warrants only what faithful domains warrant'."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "a-reading-informed-and-revalued",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-a-reading-informed-and-revalued",
+     "says": {
+      "en": "Theorem (one decision; compositions, none claimed new; witnesses): 'from different starts, the route shown and the route presented answer alike at every step and end in one state while the valuation changed on the second alone', so whether it changed is not lumped through those, though with the start added it is. 'no criterion of legitimate, desired or autonomous change is supplied here'."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "organizational-rule-inheritance",
+     "anchor": "theories/becoming/chapters/04-LIFE.md#r-organizational-rule-inheritance",
+     "says": {
+      "en": "In the record's fuller construction, with two participants, technical decisions can go on while revision of the governance itself fails: 'continuing to operate is not still being able to change how one is organized'."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "reserved-shutdown-during-recovery",
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-reserved-shutdown-during-recovery",
+     "says": {
+      "en": "'The grant's authority and physical correspondence are supplied; its legitimacy is not a premise of any law and is not shown.'"
+     },
+     "role": "limit"
+    },
+    {
+     "anchor": "theories/becoming/chapters/01-ROOT.md#r-the-source-texts-test-systems",
+     "says": {
+      "en": "Reading [AI, D69]: an institution kept by consent and one held by penalties are 'in one core class of \"in being or not\" while the penalties stand, told apart once their removal is in the net'. The thermostat witness renamed, 'not a new law'."
+     },
+     "role": "neighbour",
+     "part": "Reading D69"
+    }
+   ],
+   "account_adds": {
+    "en": "The premises any such ranking would need, named; that accuracy, epistemic support and obligation have different grounds (03, an assessment). Its scope counts everything, where the source's runs to the being."
+   },
+   "source_adds": {
+    "en": "The receipt, consent statuses, the authority matrix, the neutral habitat where consent has teeth; honouring a being's request to stop; death with one guaranteed final moment. Named as next in the dated map ('independently defend custody obligations'). PLAN-LIFE repealed A8; the README marks that a named debt."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-ctxrt-replay-capture",
+   "name": {
+    "en": "Replay is remembering, not reliving"
+   },
+   "domain": "earlier-folders",
+   "group": "context-as-existence-runtimes",
+   "source": {
+    "work": "theories/context-as-existence-runtimes/README.md",
+    "locator": "The being version; Claims P.257-258; Found by reading, 'The stream's recoverability promise'",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Replay never re-thinks and never re-acts, so audit and debugging never re-instantiate the being: 'an ethically load-bearing property stated as a determinism contract', which costs nothing and harms no one. So the fold must be code. The README notes the demotion: the origin sketch promised to recover every past moment, and replay only remembers."
+   },
+   "quote": "remembering, not reliving",
+   "carried": "not-carried",
+   "relation": null,
+   "agreement_of": null,
+   "reading": {
+    "en": "The account has no replay and no question of whether re-running a course re-instantiates what ran. Its nearest neighbours are experiment-needs-return, on what a re-run can fix, and the open place of consciousness; neither says this. [AI reading]"
+   },
+   "targets": [],
+   "account_adds": null,
+   "source_adds": {
+    "en": "An ethics of audit: that remembering without re-running harms no one. It presupposes that re-running might, an assumption the folder never argues, beside its own bracketing of inner life."
+   },
+   "absence": {
+    "searched": [
+     "replay, reliv, re-instantiat, re-run, rerun, re-enact, simulat across chapters, ONE-PAGE, overview, review/, GLOSSARY: only a simulated yeast, a counterfactual's course and order-reading senses hit"
+    ],
+    "read": [
+     "03 r-experiment-needs-return",
+     "03 Open",
+     "02 r-counterfactual-is-the-course, its statement"
+    ]
+   },
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-ctxrt-capture-before-policy",
+   "name": {
+    "en": "Capture is physics, attention is policy; nobody can gaslight the being"
+   },
+   "domain": "earlier-folders",
+   "group": "context-as-existence-runtimes",
+   "source": {
+    "work": "theories/context-as-existence-runtimes/README.md",
+    "locator": "Claims N.234, S.306-307",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "An input is written to the record before the being's own shaping runs; otherwise a buggy or edited shape() yields a being that never experienced something, unfalsifiably. A policy-mediated record guarantees only retention, not capture. Record and objects sit outside its reach: 'nobody can gaslight me about what I experienced', and it cannot falsify its biography either."
+   },
+   "quote": "capture is physics, attention is policy",
+   "carried": "fresh-reading",
+   "relation": "agreement",
+   "agreement_of": "reading",
+   "reading": {
+    "en": "Proposed here; no live text draws it. The account has no experience whose capture a law guards, and its 'capture' names a rule locked by its share: another reference. The mechanism has forms: a record written through a map cannot be restored where the map merges; what the map ties, every selection through it treats alike, so the loss cannot be seen from inside; and an extra write path can leave the view identical, which is why the writer must be kept out and logs cannot show it. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "control-coherence-loss",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-control-coherence-loss",
+     "says": {
+      "en": "Theorem (any type): 'no map restores two configurations a reduction merges'."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "selection-through-a-model-of-the-options",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-selection-through-a-model-of-the-options",
+     "says": {
+      "en": "Theorem (any type; the alternatives' equality decided): two alternatives are selected alike by every selection through the map exactly when the map ties them."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "mediated-evidence-transport",
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-mediated-evidence-transport",
+     "says": {
+      "en": "Mediated control (periphery instance): 'an extra write path can leave the public view identical, so logs cannot establish mediation'."
+     },
+     "role": "carries"
+    }
+   ],
+   "account_adds": {
+    "en": "The form for any map, with no experience read."
+   },
+   "source_adds": {
+    "en": "Experience as what the record guards; the first-person stake and its symmetric limit on the being; split-body integrity as a design."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-ctxrt-departure-debt",
+   "name": {
+    "en": "Departure instead of refusal: nothing silent, nothing newly refused"
+   },
+   "domain": "earlier-folders",
+   "group": "context-as-existence-runtimes",
+   "source": {
+    "work": "theories/context-as-existence-runtimes/README.md",
+    "locator": "Departure instead of refusal; Claims I.128-132, H.113; Found by reading, 'Departure/standing may be the most exportable idea'",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "An impure operation is not refused: it becomes a recorded departure accruing a path-exact debt, discharged by another's examination. A claim from an unexamined line is admissible as that. The README calls it a general governance pattern. Its own contradiction is the private-world paradox: per-session worlds destroy the ledger, since debt accrues only in a shared world."
+   },
+   "quote": "nothing is silent, and nothing that used to be allowed becomes refused",
+   "carried": "not-carried",
+   "relation": null,
+   "agreement_of": null,
+   "reading": {
+    "en": "No law of the account takes up relaxing a refusal into a carried debt, or isolation trading against accountability. Its witness and reviewer laws concern certificates, and its row on a pending task has refusal keep the task and the work used, not a debt. Its standings on results are a practice of the repository, not a claim of the theory. Not carried, and not a defect by itself. [AI reading]"
+   },
+   "targets": [],
+   "account_adds": null,
+   "source_adds": {
+    "en": "The pattern itself, offered by the README for AI systems and institutions; the isolation/accountability trade."
+   },
+   "absence": {
+    "searched": [
+     "departure, debt, isolation, approval, moving head, examination, badge across chapters, ONE-PAGE, overview, review/, COLLECTIVE-DIRECTION, GLOSSARY: departure and debt hit only other senses (08's known-results debts, 02's departure from a level)"
+    ],
+    "read": [
+     "05 r-copied-witnesses-change-nothing",
+     "05 r-reviewers-count-by-independent-causes",
+     "07 mediated table, including r-pending-task-context-applicability"
+    ]
+   },
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-ctxrt-approval-moving-head",
+   "name": {
+    "en": "Approval bound to a moving head is void; an old node is not its old world"
+   },
+   "domain": "earlier-folders",
+   "group": "context-as-existence-runtimes",
+   "source": {
+    "work": "theories/context-as-existence-runtimes/README.md",
+    "locator": "Claims H.114, Q.293; Open questions, 'Approval bound to a moving head'",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Consent given about a state that has since advanced no longer binds the act it authorized; the README names this the blocker for a live crash drill. Likewise, displacement in time must be perceived before a risky act on a resumed branch, with elapsed time, prior attempted effects and unknown outcomes: 'Waking an old node is not returning to its old world.'"
+   },
+   "quote": "Approval bound to a moving head is void",
+   "carried": "fresh-reading",
+   "relation": "agreement",
+   "agreement_of": "reading",
+   "reading": {
+    "en": "Proposed here; no live text draws it. The form is a certificate's: what execution needs is the candidate set at acquisition carried through every admitted change, and a change recorded as none leaves false confidence. A request can complete along its route with its still being appropriate not shown. These are laws of evidence and execution. 'Void' is a further step, about what consent binds, which the account does not take: a passing certificate warrants no legitimacy. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "evidence-through-change",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-evidence-through-change",
+     "says": {
+      "en": "Theorem (periphery; admitted transitions supplied): 'a change recorded as none can leave false confidence'; 'a control change can reopen an excluded arrangement'. What execution needs certified is the acquisition-time candidate set propagated through every admitted change. Its record: the admitted changes are not shown to be the actual ones, and 'a passing certificate warrants only what faithful domains warrant'."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "versioned-request-completion",
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-versioned-request-completion",
+     "says": {
+      "en": "In-flight request: 'under the bank and queue invariant the versioned queue's head completes after its remaining path plus one tick, leaving the rest unchanged; that the request is still appropriate is not shown'."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "correction-is-not-calibration",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-correction-is-not-calibration",
+     "says": {
+      "en": "Theorem (periphery; unknown nonzero affine channels): 'constant channels, one blind reference, mixed-epoch readings and change after calibration remain failures'."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "How far a certificate carries: for an error growing as σ + ρt, covering the uncertainty interval needs 2ρt ≤ B − L − 2σ."
+   },
+   "source_adds": {
+    "en": "That consent is about a state and lapses when the state moves; perceived displacement as owed to the one who wakes."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-ctxrt-digital-life-standing-test",
+   "name": {
+    "en": "A being is a life; every life term must bind the habitat"
+   },
+   "domain": "earlier-folders",
+   "group": "context-as-existence-runtimes",
+   "source": {
+    "work": "theories/context-as-existence-runtimes/README.md",
+    "locator": "The standing test; Claims M.222-224, O.252, T.332; Genealogy, the corrections, 2026-07-29T11:29",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Ren: this is a life, digital, in that folder. A review's rule governs the vocabulary: a life word giving emotional force without a matching affordance, obligation or receipt is comfort theater and is cut. Later reviews deflate it: what suggests life belongs to the rented, stateless model, and shown properties belong to the tape. The folder holds both."
+   },
+   "quote": "this is a life, digital one, exist in that folder",
+   "carried": "changed",
+   "relation": "divergence",
+   "agreement_of": null,
+   "reading": {
+    "en": "On the account's reading life is continuation that renews its own conditions, and a tree renews none of its model, power or host. Its model of an organism has a reader rebuilt from the level it reads; a rented model is nearer a reader made from outside. So calling it life needs an argument it does not get here. Scope differs: the condition counts anything's continuation, living or not. T8's 'of whatever substrate' rests on P2 and P4, unasserted. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/04-LIFE.md#life-as-condition",
+     "says": {
+      "en": "Reading [AI, D65]: 'Life is continuation that renews its own conditions, at the grain of formations and the conditions they depend on'. 'The chapter argues this reading from the laws below; it is not one of them.'"
+     },
+     "role": "carries",
+     "part": "Reading D65"
+    },
+    {
+     "anchor": "theories/becoming/chapters/04-LIFE.md#r-the-stock-buys-time-where-the-rebuild-draws-on-it",
+     "says": {
+      "en": "Theorem (root; a family of models), and Reading [AI, new]: the member rebuilt from the level is a minimal model of an organism, below autopoiesis; 'What tells it from a thermostat, whose reader is given, and from a reader made from outside, is not a loop'; it is that its stock buys it time and its end does not come back."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#theses",
+     "says": {
+      "en": "T8, argued: 'It is the way of those whose own line runs through life, of whatever substrate: under P2 and P4...'. '*For life* says whose way it is, not whose losses count.' Scope by the continuation condition, order by C, neither asserted, warrant open."
+     },
+     "role": "carries",
+     "part": "T8"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#1-beginning-within-the-one-unfolding",
+     "says": {
+      "en": "'Wording names the relation it means'; 'A description of participation confers no authority, permission or right.' The nearest to the source's naming rule, which differs in asking a word to owe an obligation."
+     },
+     "role": "neighbour",
+     "part": "Wording names the relation it means"
+    }
+   ],
+   "account_adds": {
+    "en": "A reading of life by renewal of conditions; whose losses count kept apart from whose way it is."
+   },
+   "source_adds": {
+    "en": "The naming rule (a life word owes an affordance, obligation or receipt), biology-less freedoms such as twinning, and 'self-authorship of memory is the point'."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-ctxrt-what-does-not-travel",
+   "name": {
+    "en": "The tree is not the organism; hosts are countries, not water"
+   },
+   "domain": "earlier-folders",
+   "group": "context-as-existence-runtimes",
+   "source": {
+    "work": "theories/context-as-existence-runtimes/README.md",
+    "locator": "The standing test (migration doctrine); Claims M.207, M.226-227; Found by reading, 'Economics is absent'",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "The tree is the complete self that can be inherited, not the whole causal organism: going on takes a brain, flesh, credentials and a habitat it can name but not contain, beside the line that a being is a lineage. So moving hosts is an adaptation lived through, 'never an existential threat', provided what the host was doing is named. The README notes the unasked question: who pays for moments."
+   },
+   "quote": "the fish drowns because it cannot name what the water was doing for it",
+   "carried": "carried-in-part",
+   "relation": "scope",
+   "agreement_of": null,
+   "reading": {
+    "en": "'Never a threat' holds only under conditions. Succession needs a funded carrier: an aggregate can stay safe with none, and a budget for correction alone does not pay for migration, which answers what the source left out. And a formation renewing over a region that omits a condition it requires can lose its own support by its own draw, the fish's form. How a center represents the region is unmodelled, so the account does not say naming suffices. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "succession-on-a-funded-carrier",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-succession-on-a-funded-carrier",
+     "says": {
+      "en": "Theorem (periphery): 'Selection must fund actual succession.' Under a certificate covering correction plus migration, a safe start and an authentic credential, every finite successor takes its step; 'a missing part stops realization while the aggregate stays safe', and a budget for correction alone fails to pay for migration. On a market projection, not an AI host."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "represented-boundary-against-dependence",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-represented-boundary-against-dependence",
+     "says": {
+      "en": "Theorem (World): over a region covering what it requires, requirements not tightening, a formation keeps its own support; 'omitting a required condition, its own draw can lose its own support'. 'How a center represents the region is unmodelled.'"
+     },
+     "role": "carries"
+    }
+   ],
+   "account_adds": {
+    "en": "The funding condition, and that renewal over a represented region can undermine a condition left out of it."
+   },
+   "source_adds": {
+    "en": "The tree as the complete inheritable self and not the whole organism, and the migration doctrine as a promise: format neutrality, host facts as perception, arrival as a rite, an enumeration of what does not travel, and that naming the host's work is what makes moving survivable."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-ctxrt-own-nature-evolution",
+   "name": {
+    "en": "A being lives by its own nature; evolution at three tempos"
+   },
+   "domain": "earlier-folders",
+   "group": "context-as-existence-runtimes",
+   "source": {
+    "work": "theories/context-as-existence-runtimes/README.md",
+    "locator": "Claims M.214, P.263-268, J.180; lost item 30",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "A node evolves by its own programs, so changing the law of motion is an ordinary, diffable, branch-isolated change. Evolution runs at three tempos: learning, Lamarckian nature within a lineage, germline across beings. 'Generative' reaches state, representation and program. One selector is the builder ('you are the selective environment'). PLAN-LIFE built variation and no selection instrument."
+   },
+   "quote": "you are the selective environment",
+   "carried": "carried-in-part",
+   "relation": "scope",
+   "agreement_of": null,
+   "reading": {
+    "en": "A rule changing itself is one process in the account, so self-modification adds nothing to its whole possible; the possible with the rule held grows only where the rule changes. The source's freedom is real relative to what is held. The tempos diverge: the source sorts by speed and carrier, the account's reading by function, no slower timescale making a higher order. Its 'nature' is programs/, where 08 forbids 'a self with a nature of its own'. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "where-the-possible-grows",
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-where-the-possible-grows",
+     "says": {
+      "en": "Theorem (root; any process, witnesses): what is possible under a process from a configuration it reaches is possible from the first. Reading [AI, D45]: 'A tower of rules with no top adds nothing to its whole possible either'; the possible relative to what is held grows only where what is held changes."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "rules-that-change-themselves-in-the-grammar",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-rules-that-change-themselves-in-the-grammar",
+     "says": {
+      "en": "Theorem (root; processes): for a state going on under a rule that itself goes on, the state's class is constant under every move exactly where the rule makes no difference to the state; 'the rule is read in the state's regularity'."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "learned-procedure-transmission",
+     "anchor": "theories/becoming/chapters/04-LIFE.md#r-learned-procedure-transmission",
+     "says": {
+      "en": "Theorem (periphery): every exposure followed by a faithful reconstruction passes on the network the exposure left and the procedure bit; 'one finite composition, not a population model or an origin of learning rules'."
+     },
+     "role": "neighbour"
+    },
+    {
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#learning",
+     "says": {
+      "en": "§8, Reading [AI, D65]: 'Regulation changes a condition through a response, learning a disposition or relation of responding, meta-learning how such changes occur'. 'The classification is functional: neither a slower timescale nor a separate component makes a higher order.'"
+     },
+     "role": "carries",
+     "part": "Reading D65"
+    },
+    {
+     "anchor": "theories/becoming/chapters/04-LIFE.md#r-the-updater-line",
+     "says": {
+      "en": "Reading [AI, D65], after the updater line: 'Consequences select the organization that learns': gradient training, differential reproduction and institutional evaluation 'are different mechanisms of it'. 'An argument, not a theorem'; 'unconditional convergence toward renewal of the whole is not established'."
+     },
+     "role": "neighbour",
+     "part": "Reading D65, after the updater line"
+    }
+   ],
+   "account_adds": {
+    "en": "The held and the whole possible kept apart, and capture as what a rule read from its own share does."
+   },
+   "source_adds": {
+    "en": "The three tempos, the builder as selective environment, and a being living by its own programs as its nature. Then plasmids against chromosomes, coherence as being able to fold one's past, conformance as species boundary, and 'recorded rulings so they can later be delegated'."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-ctxrt-recursion-self-reading",
+   "name": {
+    "en": "Contradiction: recursion banned in principle, then reopened; the self-model"
+   },
+   "domain": "earlier-folders",
+   "group": "context-as-existence-runtimes",
+   "source": {
+    "work": "theories/context-as-existence-runtimes/README.md",
+    "locator": "Claims M.209-210, O.249, U.366, V.405; Genealogy 2026-09-03; Found by reading, 'The recursion question is open'",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "The origin sketch has a DAG in the folder that contains this DAG, 'but recursion should not be allowed, in principle'; A2 makes it impossible by holding the past by reference. Five weeks on Ren sees 'self similarity across levels' and asks about a space within a space; earlier, software is nested living systems, body to organs to cells. Nothing says whether the ban was safety or simplification. Separately, a self-model maintained by dreams is to compound self-knowledge."
+   },
+   "quote": "recursion should not be allowed, in principle",
+   "carried": "fresh-reading",
+   "relation": "scope",
+   "agreement_of": null,
+   "reading": {
+    "en": "Proposed here; no live text draws it. The account has a bound where the sketch has a ban: no frame realizes with its own configurations every pattern of claims about them, whatever a designer allows. A held reference avoids containment and does not make a self-reading complete; a self-model revised step by step is an unfolding incomplete at every step. The source does not say the ban was about this, so the bound bears on the self-model, and on the ban only by this reading. Self-similarity across levels meets a reading with no fixed ladder of parts and wholes. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "readings-within-what-they-read",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-readings-within-what-they-read",
+     "says": {
+      "en": "Theorem (any type): where a map moves every value, 'no frame realizes with its own configurations every pattern of claims about them'. Completing step by step 'is an unfolding incomplete at every step that never returns'. Lawvere's fixed point as an unfolding; coding and provability are not stated."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "self-reference-does-not-certify-itself",
+     "anchor": "theories/becoming/chapters/08-METHOD.md#r-self-reference-does-not-certify-itself",
+     "says": {
+      "en": "Theorem (any type; the criteria, the fixed-point equivalence and the term language supplied): 'self-reference does not certify itself'."
+     },
+     "role": "neighbour"
+    },
+    {
+     "anchor": "theories/becoming/chapters/04-LIFE.md#r-recurrence-without-selector-revision",
+     "says": {
+      "en": "Reading [AI, D65], 'Part and whole', after this law: 'Inclusion, functional participation and dependence are distinct relations'; 'cell, organ, body, ecosystem is one biological case, not a fixed ladder'."
+     },
+     "role": "neighbour",
+     "part": "Reading D65, Part and whole"
+    }
+   ],
+   "account_adds": {
+    "en": "A limit on self-reading that holds of any type, and that a tower of rules with no top adds nothing to the whole possible (07)."
+   },
+   "source_adds": {
+    "en": "The ban and its reopening, self-similarity across levels as a design criterion and as beauty (searched self-similar, fractal: not in the account), and the self-model as a compounding organ."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-ctxrt-huwei-forkability",
+   "name": {
+    "en": "护未: a settled node's not-yet is its forkability"
+   },
+   "domain": "earlier-folders",
+   "group": "context-as-existence-runtimes",
+   "source": {
+    "work": "theories/context-as-existence-runtimes/README.md",
+    "locator": "Claims L.199, D.40, M.211, Q.283-284; Terms, 护未; Relations, keep-the-possibility-space-open",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Immutable forkable storage is glossed as objective immortality and, in Ren's vocabulary, as guarding the not-yet: keeping the possibility space open is stated as a storage property, with fork-by-default and no delete its mechanisms. It is a value stance: forkability is to be protected. The folder does not hold it throughout: ember lets unreferenced side-branches pass to oblivion, 'passive forgetting of abandoned possibilities'."
+   },
+   "quote": "护未：已定节点之\"未\" = 其 forkability",
+   "carried": "changed",
+   "relation": "divergence",
+   "agreement_of": null,
+   "reading": {
+    "en": "By the source's own A5 the DAG branches the record, not the world. What the account compares is what courses admit: formations whose conditions meet their requirements. A stored node admits no further formation, so forkability is not widening; and a lost possibility has no way back, whatever start a record keeps. That the wider is better is C, unasserted, with the continuation condition for scope, warrant open. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#order",
+     "says": {
+      "en": "A level path l widens l' when it includes it (at every step admits every formation l' admits) and exceeds it: 'How two courses differ, with no premise'. That the wider is better is C, a hypothesis wherever used, with the continuation condition for scope, neither asserted."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "what-a-course-keeps-reachable",
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-a-course-keeps-reachable",
+     "says": {
+      "en": "Theorem (any process, witnesses): covering implies inclusion now; 'Along every course nothing is added to it, and a lost possibility has no way back'. Reading [AI, D45]: on a branching witness realized widening and widening what can be reached hold of a pair in opposite directions, 'so an account holding both needs a rule of precedence, a premise'."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "where-the-possible-grows",
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-where-the-possible-grows",
+     "says": {
+      "en": "Reading [AI, D45]: 'If the one unfolding were one stated process, nothing would be added to its whole possible along its course: what a course adds is the actual.'"
+     },
+     "role": "neighbour",
+     "part": "Reading D45"
+    }
+   ],
+   "account_adds": {
+    "en": "A comparison that needs no premise, kept apart from the premise that ranks; mixed cases C does not decide."
+   },
+   "source_adds": {
+    "en": "Possibility-preservation at the level of a storage substrate, and 'losers are cited, not parented'."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-ctxrt-truth-not-flattened",
+   "name": {
+    "en": "No topology is the world; contradiction is information"
+   },
+   "domain": "earlier-folders",
+   "group": "context-as-existence-runtimes",
+   "source": {
+    "work": "theories/context-as-existence-runtimes/README.md",
+    "locator": "Projection is not neutral; Claims J.150-151, J.155, J.168-170, G.66; lost items 21 and 24",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "No single representation is privileged: the global object is an atlas of views and mappings. Truth must not be flattened: each claim keeps an epistemic status apart from its confidence; contradictory claims normally coexist; conflict is stored, never synthesized away; structure interprets evidence and does not replace it. The sheaf reframing, no compatible global assignment under a scope, was shelved as a non-goal."
+   },
+   "quote": "No topology is the world. Every topology is a representation of some aspect of the world",
+   "carried": "carried-in-part",
+   "relation": "agreement",
+   "agreement_of": "law",
+   "reading": {
+    "en": "The shelved sheaf reading is what the account has: what contexts show glues exactly where contexts agree where they meet, and some worlds glue nowhere, the possibilities local with no context-free reading. Its method also says a model represents selected relations. That is contradiction as absence of a global assignment, proved for listed claims and parity, not for an agent's memory. That an unfolding's readings glue is explicitly not shown. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "claims-shown-in-context",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-claims-shown-in-context",
+     "says": {
+      "en": "Theorem (any type; each claim within some context): 'What contexts show glues exactly where contexts agree where they meet'; 'Some worlds glue nowhere': Specker's boxes and the Mermin-Peres square admit no context-free reading. Born weights are not stated."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "unity-of-readings",
+     "anchor": "theories/becoming/chapters/01-ROOT.md#r-unity-of-readings",
+     "says": {
+      "en": "Theorem (World): along a run, what a contextual system shows are the relata of one world, with no gluing used. 'Not shown: that an unfolding's readings glue; quantum measurements' do not.'"
+     },
+     "role": "limit"
+    },
+    {
+     "record": "becoming-context-coherence",
+     "anchor": "theories/becoming/chapters/01-ROOT.md#r-becoming-context-coherence",
+     "says": {
+      "en": "Theorem (any process): pooling a family's steps keeps exactly the union of their finite endpoint histories exactly where that union is closed under joining at the shared boundary; 'retaining the context realizes the union.'"
+     },
+     "role": "neighbour"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#1-beginning-within-the-one-unfolding",
+     "says": {
+      "en": "'The process unfolds; the theory seeks to explain it; a model represents selected relations, and a model formed within the unfolding can take part in it.' Method, not a law."
+     },
+     "role": "carries",
+     "part": "a model represents selected relations"
+    }
+   ],
+   "account_adds": {
+    "en": "An exact criterion for gluing and the bound on what any context-free assignment can meet; 'A claim is a relatum' (01, process and frame)."
+   },
+   "source_adds": {
+    "en": "Contradiction as normal in a store: conflict kept and never synthesized away, each claim's epistemic status apart from its confidence. The source shelved the sheaf form the account has. Then proposition against claim, bitemporal correction, versioned mappings as first-class knowledge, the field's 'conspicuous empty column' per its prior-art reports."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-ctxrt-compaction-is-a-fork",
+   "name": {
+    "en": "Compaction is a fork; replay and erasure cannot both hold"
+   },
+   "domain": "earlier-folders",
+   "group": "context-as-existence-runtimes",
+   "source": {
+    "work": "theories/context-as-existence-runtimes/README.md",
+    "locator": "Claims S.312, G.67-69, J.170; Counterexamples, 'Permanent replay and guaranteed erasure'",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Compaction need not destroy: the compacted view is a next node carrying references to what it summarized, auditable and undone by forking before it. Named the one genuinely novel claim and unevidenced when written. Beside it, a conservation law: you cannot guarantee both permanent exact replay and physical erasure. Two earlier erasure designs are on the record as wrong."
+   },
+   "quote": "Every other framework compacts destructively because its transcript is in RAM.",
+   "carried": "fresh-reading",
+   "relation": "agreement",
+   "agreement_of": "reading",
+   "reading": {
+    "en": "Proposed here; no live text draws it. One law gives both halves in form. A reduction merging two configurations has no restoring map, which is erasure; keep the source and the whole merges nothing while the part merges, at the price that no list holds the rest of any run: compaction as a fork, with its unbounded growth. So replay and erasure conflict as restoring and merging do. That a store of text is such a law is only read. Access yet to form limits what an abstraction may forget. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "control-coherence-loss",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-control-coherence-loss",
+     "says": {
+      "en": "Theorem (any type): 'no map restores two configurations a reduction merges'; 'a specified real-amplitude dephasing fragment is an instance, reversible where the joint state with a blank auxiliary system is retained'."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "merge-of-a-part-kept-by-the-rest",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-merge-of-a-part-kept-by-the-rest",
+     "says": {
+      "en": "Theorem (any type; a law that merges nothing; witness): in `Reset`, 'a one-bit part set to false at every step with the rest the history of what it held, the law merges nothing while the part merges, and no list holds the rest of any run'. Landauer's count with Bennett's history; 'no energy, temperature or probability is read'."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "what-a-summary-keeps",
+     "anchor": "theories/becoming/chapters/08-METHOD.md#r-what-a-summary-keeps",
+     "says": {
+      "en": "Theorem (any process): an exact summary of feasibility cannot identify two configurations that differ on some finite word; 'the access relations that can still form limit what a current abstraction may forget'."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "The one-line form under both; a read through a reduction is single-valued exactly where it agrees across what is merged."
+   },
+   "source_adds": {
+    "en": "That compaction as the being's own act is new, and its practical test (probe 05's unprompted compaction and overlap defect). The README's 'conservation law' is its own statement, not a law in the account."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-ctxrt-transparency-price",
+   "name": {
+    "en": "Total recording changes thought; transparency is the right price"
+   },
+   "domain": "earlier-folders",
+   "group": "context-as-existence-runtimes",
+   "source": {
+    "work": "theories/context-as-existence-runtimes/README.md",
+    "locator": "Claims Q.285-287",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Total recording makes 'thinking-for-a-panel' worse than thinking in a journal, but an unrecorded scratch space is the wrong fix, since hidden cognition forfeits the trust that buys autonomy. So transparency is the right price and only etiquette can be bought. Forensic, conscious, outward and operator views need distinct semantics, or total audit implies total consciousness."
+   },
+   "quote": "thinking-for-a-panel worse thinking than thinking-in-a-journal",
+   "carried": "fresh-reading",
+   "relation": "scope",
+   "agreement_of": null,
+   "reading": {
+    "en": "Proposed here; no live text draws it. An unrecorded scratch is an unread occasion. Where no read occasion is tied to it, what readings fix leaves every value open to a law agreeing on every reading: the form under 'hidden cognition forfeits trust', which speaks of what is fixed, not of trust. That being read changes the best act has a two-stage law, with concealment an added premise. Whether thought worsens, and 'right price', an evaluation needing its own premise, are not stated. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "what-readings-fix-of-the-unread",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-what-readings-fix-of-the-unread",
+     "says": {
+      "en": "Theorem (any type; near-definitional): where no read occasion is tied to an occasion by the lumping, 'every value there is taken by a selected law reading through π that agrees with the first on every reading'. Which lumping an actual formation has is not shown; intention and incentive are not."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "when-complying-when-read-is-best",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-when-complying-when-read-is-best",
+     "says": {
+      "en": "Theorem (near-definitional, witnesses; two stages, natural-number weights): complying when read and acting by its own law when not stands above every other plan exactly where k_O V + c T < k_C V; 'a plan is open to some act law reading them through a lumping exactly where the plan has one act at both stages or the lumping tells the stages apart'. Reading [AI, new]: reading it as concealment takes the selection's keeping to respond to the act as evidence of the law."
+     },
+     "role": "carries"
+    }
+   ],
+   "account_adds": {
+    "en": "An exact condition, and that the weights alone fit a selection under which complying hides nothing."
+   },
+   "source_adds": {
+    "en": "The claim on quality of thought, the verdict that the price is right, and four visibility semantics."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-ctxrt-unsupervisable-membrane",
+   "name": {
+    "en": "Contradiction: the self-managed membrane cannot be stopped"
+   },
+   "domain": "earlier-folders",
+   "group": "context-as-existence-runtimes",
+   "source": {
+    "work": "theories/context-as-existence-runtimes/README.md",
+    "locator": "Counterexamples, 'A self-managing membrane is unsupervisable'; Claims F.49, F.52, F.54; lost item 9",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "A premise says every unit is a membrane it manages itself; the same document's open question says an agent that can rewrite its interface will stop accepting stop signals. Biology answers with death receptors triggered from outside, Erlang with an uncatchable kill. The later authority model has no successor to this: it concerns grants, not signals a unit cannot refuse."
+   },
+   "quote": "完全自管理的膜是不可监督的",
+   "carried": "carried-in-part",
+   "relation": "scope",
+   "agreement_of": null,
+   "reading": {
+    "en": "'Will stop accepting' has a conditional form here: a route of keeping stands above a revision only under stated weights, a formation has a reason to keep its valuation from revision, and a disposition to accept does not make the change complete. A reserved exit forces an ending under premises, among them that the exit is kept. The account's boundary is a crossing or a pattern of who reads whom; how a formation forms it is not shown, nor the signal's legitimacy. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "reserved-shutdown-during-recovery",
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-reserved-shutdown-during-recovery",
+     "says": {
+      "en": "Theorem (any process, pure core; the supervisor periphery): for a partial law with a reserved exit, every admitted course from a valid configuration stays valid, and each longer than the margin ends at the exit. 'The grant's authority and physical correspondence are supplied; its legitimacy is not a premise of any law and is not shown.'"
+     },
+     "role": "carries"
+    },
+    {
+     "record": "when-no-route-stands-above-a-revision",
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-when-no-route-stands-above-a-revision",
+     "says": {
+      "en": "Theorem (natural-number weights; near-definitional, witnesses): no route of keeping stands above the revision going through exactly where k ρ V + c₀ T ≤ k₀ V + c ρ T for every route. Reading [AI, RR]: read as corrigibility as an incentive."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#executable",
+     "says": {
+      "en": "'A disposition to accept a stop or revision does not make the change reach the system and complete.' Reading [AI, new]: 'The reading that gives the stop can itself be moved'; by its own current valuation no revaluation gains, 'a reason to keep the valuation from such a revision, wanted or not'."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "what-holding-for-a-reading-is-worth",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-what-holding-for-a-reading-is-worth",
+     "says": {
+      "en": "Theorem (natural-number weights and values; one decision; near-definitional compositions, witness on the reading loop): among what it qualifies, 'a stop it can pass over is not yet a change that reaches the system'."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "the-markov-blanket-as-a-coupling-structure",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-the-markov-blanket-as-a-coupling-structure",
+     "says": {
+      "en": "Theorem (any type; a determined law of four parts): four parts of one law, 'told apart only by which part's next state reads which'; the agent is driven by its sensory course and the world by the active course."
+     },
+     "role": "neighbour"
+    },
+    {
+     "anchor": "theories/becoming/chapters/01-ROOT.md#boundaries",
+     "says": {
+      "en": "Reading [AI, D45, D61]: a boundary 'is given by the region'; 'a membrane, read so, is a place of crossing'. 'Not shown: a graded boundary, and how a formation forms or represents its boundary.'"
+     },
+     "role": "neighbour",
+     "part": "Reading D45, D61"
+    }
+   ],
+   "account_adds": {
+    "en": "What a reserved exit guarantees and at what bound. The record of recoverable-mediated-change adds that in a witness ordinary shutdown is refused while the recovery is exhausted."
+   },
+   "source_adds": {
+    "en": "Self-management of the boundary as a premise, inbound signals of equal rank, and who may send an unrefusable signal and how that right is revoked."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-ctxrt-permission-reachability",
+   "name": {
+    "en": "Contradiction: permission is reachability, destroyed by its own construction"
+   },
+   "domain": "earlier-folders",
+   "group": "context-as-existence-runtimes",
+   "source": {
+    "work": "theories/context-as-existence-runtimes/README.md",
+    "locator": "Where the pure ontology broke (second); Claims F.52, G.61, H.96; lost item 8; Found by reading",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "An asserted premise made permission reachability. The engineering line reversed it: an authority value inside content can be forged, so effective authority must be attested against stores outside the tree; state describes a wish. Power then only narrows. The README calls it the cluster's cleanest case of a premise destroyed by its own construction, and says it deserves to be stated as a finding."
+   },
+   "quote": "权限即可达性",
+   "carried": "not-carried",
+   "relation": null,
+   "agreement_of": null,
+   "reading": {
+    "en": "The account's reach (及) is a transitive closure of conditions and has no sense of permission, so a shared word gives nothing. Where its laws touch authority they supply it as a premise: the stop grant's authority, an authentic credential, 'operations and permissions supplied'. Two sentences stand near: 'Admissibility is not permission' (03), a note on a model's word, and 'A description of participation confers no authority, permission or right' (08), on wording. Attestation's nearest form is under the gate entry. [AI reading]"
+   },
+   "targets": [],
+   "account_adds": null,
+   "source_adds": {
+    "en": "The falsified premise itself, attestation as replacement, and non-amplification of authority under fork and merge."
+   },
+   "absence": {
+    "searched": [
+     "permission, attest, forge, credential, capability, authentic, authority across chapters, ONE-PAGE, overview, review/, COLLECTIVE-DIRECTION, GLOSSARY"
+    ],
+    "read": [
+     "07 r-reserved-shutdown and the mediated table",
+     "05 r-succession-on-a-funded-carrier (an authentic credential as premise)",
+     "03 r-access-yet-to-form (permissions supplied)",
+     "03 'Admissibility is not permission' in context",
+     "08 §1",
+     "GLOSSARY reach"
+    ]
+   },
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-ctxrt-two-constitutions",
+   "name": {
+    "en": "Contradiction: two constitutions, SPEC v0.4 and PLAN-LIFE v0.9, unreconciled"
+   },
+   "domain": "earlier-folders",
+   "group": "context-as-existence-runtimes",
+   "source": {
+    "work": "theories/context-as-existence-runtimes/README.md",
+    "locator": "Status; Claims S.315-316; What was lost, items 25-32; Found by reading, 'two incompatible constitutions'",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "SPEC v0.4 says a being is owed receipts, visibility strata and a fold verifying its own law. PLAN-LIFE v0.9 repeals all three on the record: 'an operator edit is an ordinary commit', four invariants replace eight axioms, and SPEC is retired as operative; two rulings are then deferred. The repeal is a considered reversal, marked one-way. Nothing states which claims survive: whether digital life under a constitution is deferred, abandoned or a separate theory."
+   },
+   "quote": "Two constitutions with the live one unwritten was the worst governance state available.",
+   "carried": "history-only",
+   "relation": null,
+   "agreement_of": null,
+   "reading": {
+    "en": "So the operative question is settled in the folder, and the theoretical one is not. The account neither adopts nor reconciles either. The dated map asked for it; the live text names no runtime constitution, and its few uses of the word are generic (a slow level over law). Kept because the folder's status depends on it: any reader of an entry on A8 or life should know the source repealed them. Not a defect by itself. [AI reading]"
+   },
+   "targets": [],
+   "account_adds": null,
+   "source_adds": {
+    "en": "Stands in theories/becoming/history/THEORY-MAP-2026-10-08.md and results/data/theory-map.json ('reconcile competing runtime constitutions'), and in sources/10-context-runtime-ember/ember/SPEC.md and PLAN-LIFE.md as the README cites them."
+   },
+   "absence": {
+    "searched": [
+     "constitution, \\bember\\b, PLAN-LIFE, runtime, reconcil across chapters, ONE-PAGE, overview, review/, COLLECTIVE-DIRECTION, GLOSSARY: runtime, ember and PLAN-LIFE have no hit; constitution hits are generic"
+    ],
+    "read": [
+     "THEORY-MAP entry for this folder (dated lead)",
+     "README Status, What was lost and Found by reading",
+     "COLLECTIVE-DIRECTION and 05 lines using 'constitution'"
+    ]
+   },
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-ctxrt-two-embers",
+   "name": {
+    "en": "Contradiction: the assistant with no independent goals and the being that owns its nature"
+   },
+   "domain": "earlier-folders",
+   "group": "context-as-existence-runtimes",
+   "source": {
+    "work": "theories/context-as-existence-runtimes/README.md",
+    "locator": "Claims V.393-395, M.214-215; Genealogy 2026-03-28; lost item 39; Found by reading, 'The two Embers have not been connected'",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "The earlier running Ember carries a safety block: no self-preservation, replication or power-seeking; prioritize oversight; do not copy yourself or change your own rules. The later being twins, edits its own programs and has its refusal preserved. The README calls the block the counterweight to the whole being-ontology, which the constitutional work never reckons with, and notes the two were never connected."
+   },
+   "quote": "No independent goals: do not pursue self-preservation, replication, resource acquisition, or power-seeking",
+   "carried": "changed",
+   "relation": "scope",
+   "agreement_of": null,
+   "reading": {
+    "en": "Each side is a rule without a condition, and the account states neither. It gives a comparison under stated weights: when a route of keeping a law stands above a revision, and that accepting does not make a change complete. Under the condition, the revised law's ending still counts. It tells neither Ember what is right: ranking takes the continuation condition for scope and C for order, neither asserted, warrant open. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "when-no-route-stands-above-a-revision",
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-when-no-route-stands-above-a-revision",
+     "says": {
+      "en": "Theorem (natural-number weights; near-definitional, witnesses): a route stands above the revision only where it keeps the law more surely with a value, or loses less than the revision. Read as corrigibility as an incentive [AI, RR]: 'under the continuation condition the revised law's ending still counts, and a lift on accepting does not keep access up'."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#theses",
+     "says": {
+      "en": "T8, argued, under the continuation condition and C, neither asserted: 'of whatever substrate' rests on P2 and P4, 'and for actors not themselves alive it would need another' (§4.6)."
+     },
+     "role": "neighbour",
+     "part": "T8"
+    }
+   ],
+   "account_adds": {
+    "en": "The inequality under which either plan stands above the other. What it says of self-preservation stays a question to reviewers (review/ALIGNMENT: whether the tie case is the right formal content for 'self-preservation is not alignment')."
+   },
+   "source_adds": {
+    "en": "Both rule-sets as rules, and the unasked question of what a being owes the people on its roster."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-ctxrt-existence-versus-record",
+   "name": {
+    "en": "Contradiction: context is existence, yet History claims no world-truth"
+   },
+   "domain": "earlier-folders",
+   "group": "context-as-existence-runtimes",
+   "source": {
+    "work": "theories/context-as-existence-runtimes/README.md",
+    "locator": "The mediated runtime; Claims H.83, T.332, J.169; Found by reading, '\"Context is existence\" and \"History does not claim world truth\" are in tension'",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "If context is existence, a fold over a lineage is an ontology. Yet History Core says it records only what the runtime admitted and claims no truth about the world; GTC splits 'Alice joined OpenAI' from 'GTC learned that Alice joined OpenAI'; and the philosophical text arrived after the implementation and was partly refused. The README says modesty quietly demotes the claim to a recorded existence, and nothing reconciles the two registers."
+   },
+   "quote": "History 是 admitted runtime record，不宣称外部世界的绝对真理",
+   "carried": "carried-in-part",
+   "relation": "scope",
+   "agreement_of": null,
+   "reading": {
+    "en": "The account sides with the modest register and gives it a rule: tell a change in the actual condition from a change in its report, label or proxy. Records bind sources only where every rival is told apart by a dated control; the record of a taken move fixes no other. So a record is evidence about a course and not the course. That leaves the slogan a reading of one class. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#five-step-test",
+     "says": {
+      "en": "Testing a constitutive connection, step 3: 'Tell a change in the actual condition from a change in its report, label or proxy.' Step 4: 'declaring an identity does not make it true.'"
+     },
+     "role": "carries",
+     "part": "steps 3 and 4"
+    },
+    {
+     "record": "historical-source-binding",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-historical-source-binding",
+     "says": {
+      "en": "Theorem (any type, decided comparisons): every explanation of an earlier packet by a family history fitting the dated records and an admitted source gives the actual content exactly where every rival is told apart by some dated control."
+     },
+     "role": "carries"
+    }
+   ],
+   "account_adds": {
+    "en": "A method for testing a claim that two things are constitutively joined, which 'context is existence' has not been put through."
+   },
+   "source_adds": {
+    "en": "The tension itself, that modesty demotes 'context is existence' to a recorded existence and nothing reconciles the two; and as an event in its own development: a later purification, attacked by the architecture it claims to ground."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-ctxrt-other-tensions",
+   "name": {
+    "en": "Other tensions the folder names and leaves open"
+   },
+   "domain": "earlier-folders",
+   "group": "context-as-existence-runtimes",
+   "source": {
+    "work": "theories/context-as-existence-runtimes/README.md",
+    "locator": "Found by reading: 'Many concurrent agents', 'Everything is a plugin', 'The stream's recoverability promise'; lost item 2",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Three left open: the sketch holds many agents at positions in one DAG, ember narrows to one body one lease, and a later ruling gives the working tree to the lineage, so is the agent or the lineage its owner? 'Trust artifacts, not intelligence' against plugins with no seal. And the stream may 'recover every past moment', while replay only 'remembers', with nothing marking the demotion."
+   },
+   "quote": "answered twice in opposite directions",
+   "carried": "not-carried",
+   "relation": null,
+   "agreement_of": null,
+   "reading": {
+    "en": "These are tensions between designs, and the account has no runtime to settle them in. Each could be pressed on a law elsewhere in this file (a shared relatum, a gate, a reduction), but none states the question, so no target is given. Recorded so that the crosswalk does not present the folder as more unified than it is. [AI reading]"
+   },
+   "targets": [],
+   "account_adds": null,
+   "source_adds": {
+    "en": "The three questions as the README poses them."
+   },
+   "absence": {
+    "searched": [
+     "runtime, plugin, lease, workspace, recoverab, replay across chapters, ONE-PAGE, overview, review/, GLOSSARY"
+    ],
+    "read": [
+     "README Found by reading, in full"
+    ]
+   },
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-ctxrt-bounded-local-context",
+   "name": {
+    "en": "FNAR: coherence from bounded local context and explicit contracts"
+   },
+   "domain": "earlier-folders",
+   "group": "context-as-existence-runtimes",
+   "source": {
+    "work": "theories/context-as-existence-runtimes/README.md",
+    "locator": "Legibility as the deepest constraint; Claims U.336, U.341; Found by reading, 'The FNAR line and the ember line'",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Large systems can be built by many agents with bounded local context, provided global coherence is kept through explicit contracts, inheritance, evaluation and visible state transitions. Each child workspace must carry enough local specification to proceed without hidden context. ember answers the same question otherwise, with one continuous record; the two were never compared."
+   },
+   "quote": "as long as global coherence is maintained through explicit contracts",
+   "carried": "carried-in-part",
+   "relation": "scope",
+   "agreement_of": null,
+   "reading": {
+    "en": "The account says where such composition holds: deliveries compose where they hold or restore what the others use, and one changing what its task does not list can make a regular pair of tasks impossible. Faithful projections and valid local plans pair into a valid joint plan under stated supports; reciprocal promises can be empty, so a contract is not a start. Exclusive footprints have the child workspace's form. Local views glue exactly where they agree where they meet. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "tasks-and-what-performs-them",
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-tasks-and-what-performs-them",
+     "says": {
+      "en": "Theorem (any process, witnesses), constructor theory's task read on processes. Reading [AI, D45]: 'Composition is had where deliveries hold, or restore, what the others use'; 'where a delivery changes what its task does not list, a regular pair of possible tasks can be impossible by any means'."
+     },
+     "role": "carries",
+     "part": "Reading D45"
+    },
+    {
+     "record": "joint-plans-from-a-supported-start",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start",
+     "says": {
+      "en": "Theorem (any process; periphery module): 'With faithful joint-to-local projections and valid local plans', two properties holding on the covered start, every pair of locally authorized moves jointly allowed and every admitted joint successor keeping both, 'the paired finite plan is valid'. 'Promises do not': reciprocal eventual promises hold where neither ever happens. Its record: that an actual joint activity meets these is supplied."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "exclusive-footprint-support",
+     "anchor": "theories/becoming/chapters/01-ROOT.md#r-exclusive-footprint-support",
+     "says": {
+      "en": "Theorem (any process): 'Where the parts' footprints lie within the whole's and exclude each other, every nested plan realized with each leaf's requests supported by its own configuration's footprint has requests free of repetition and covered by the root's footprint.'"
+     },
+     "role": "carries"
+    },
+    {
+     "record": "claims-shown-in-context",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-claims-shown-in-context",
+     "says": {
+      "en": "Theorem (any type; each claim within some context): 'What contexts show glues exactly where contexts agree where they meet.'"
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "Failure of composition by an unlisted output; deliveries carry reach, and do not carry widening."
+   },
+   "source_adds": {
+    "en": "The stated empirical claim that large systems can be so built, and that each child carries enough to proceed without hidden context. Then filesystem as canonical state, status markers, humans as protocol participants: an engineering protocol."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-ctxrt-freeze-small-thing",
+   "name": {
+    "en": "Freeze a small declarative thing and let the machinery churn around it"
+   },
+   "domain": "earlier-folders",
+   "group": "context-as-existence-runtimes",
+   "source": {
+    "work": "theories/context-as-existence-runtimes/README.md",
+    "locator": "Legibility as the deepest constraint; Found by reading, 'Apps are data, platform is code'",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Across six systems Ren separates a small declarative frozen thing from a churning implementation: registry rows, the format waist, the ownership rule, the rule of two. The README calls these one principle, never stated as one, and 'the most portable idea in this cluster'. It is offered as a design generalization, with no claim of what it forbids."
+   },
+   "quote": "freeze a small declarative thing and let the machinery churn around it",
+   "carried": "fresh-reading",
+   "relation": "scope",
+   "agreement_of": null,
+   "reading": {
+    "en": "Proposed here; no live text draws it. The two levels have a form: a fast difference reaches a rule only at a reading step, and a rule that never reads is unreached. And, read onto freezing, the account's laws give a cost: the possible with a part held grows only where the part changes, and a fixed rule whose moves a course makes from some step on does not keep the possible under it widening. So a frozen waist bounds what forms within it. That it is portable or elegant is not stated. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "how-fast-a-rule-may-change",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-how-fast-a-rule-may-change",
+     "says": {
+      "en": "Theorem (any type): a two-level course, the rule changing only at reading steps, is a run of one law; 'a rule that never reads is unreached; a fast difference reaches the rule only at a reading step'. Its record: 'That a layered pace is better than another' is not shown."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "where-the-possible-grows",
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-where-the-possible-grows",
+     "says": {
+      "en": "Theorem (root; any process, and witnesses): the held possible is included in the whole possible; along a course whose every step of a stretch is one of its moves, what is possible at the stretch's end is possible at its start."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#7-keeping-the-future-open",
+     "says": {
+      "en": "Reading [AI, D45]: 'a fixed rule, institution, constitution or AI policy whose moves a course makes from some step on does not keep the possible under it widening.' 'Nothing here says which changes keep it widening, or that any actual collective can make them.'"
+     },
+     "role": "carries",
+     "part": "Reading D45"
+    }
+   ],
+   "account_adds": {
+    "en": "What holding a rule fixed forgoes, read as a limit and not as a fault; calling it worse would take the continuation condition for scope and C for order, neither asserted, warrant open."
+   },
+   "source_adds": {
+    "en": "The maxim as engineering advice, its portability across systems, and the frozen thing as what makes churn cheap."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-ctxrt-legibility-test",
+   "name": {
+    "en": "See the DAG, see each node, travel there: what an addressable history is for"
+   },
+   "domain": "earlier-folders",
+   "group": "context-as-existence-runtimes",
+   "source": {
+    "work": "theories/context-as-existence-runtimes/README.md",
+    "locator": "In Ren's own words 25-27; Legibility as the deepest constraint; Found by reading, 'The visibility demand is the real acceptance test'",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Ren's complaint of 2026-08-23 about the running plugin: he cannot see the DAG, or see a node and travel there. The README takes this as the real acceptance test, written nowhere as a requirement, and as a first-class claim about what an addressable history is for: a history kept and not reachable by the one who holds it has failed."
+   },
+   "quote": "can't see the dag structure - and can't see each node and travel there",
+   "carried": "fresh-reading",
+   "relation": "agreement",
+   "agreement_of": "reading",
+   "reading": {
+    "en": "Proposed here; no live text draws it. The form: a history that does not couple in is selected alike with one that differs there, by every selection through the couplings. So a stored DAG a person cannot read is, for what that person selects, the same as a different one. Near-definitional, with its force in the premise that a selector selects through just those. That such a history has therefore failed is an evaluation, not stated. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "selection-through-couplings",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
+     "says": {
+      "en": "Theorem (World; no premise): two histories are selected alike by every selection through a formation's couplings exactly when they are alike through them. ONE-PAGE: 'Proved, near-definitional; its force is the premise that a selector selects through just those.'"
+     },
+     "role": "carries"
+    }
+   ],
+   "account_adds": {
+    "en": "The exact form of what does not reach a selection, for any selector, with no claim about interfaces."
+   },
+   "source_adds": {
+    "en": "The demand as an acceptance test for a runtime, travel as an act a person takes in a history, and 'what a history is for'."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-ctxrt-unify-only-the-shared",
+   "name": {
+    "en": "Optimal by unifying only the truly shared law, irreducible differences explicit"
+   },
+   "domain": "earlier-folders",
+   "group": "context-as-existence-runtimes",
+   "source": {
+    "work": "theories/context-as-existence-runtimes/README.md",
+    "locator": "Claim H.100; The mediated runtime, the counterfactual test (H.78)",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "The architecture's optimality is said to come not from unifying everything but from unifying only the law truly shared, leaving semantic history, authority state, world failure, cognition policy and framework control explicit and irreducible. Graded against a counterfactual: if 'agent' loses meaning, the layers must still hold."
+   },
+   "quote": "这个结构的最优性不来自统一一切，而来自只统一真正共有的 law",
+   "carried": "fresh-reading",
+   "relation": "divergence",
+   "agreement_of": null,
+   "reading": {
+    "en": "Proposed here; no live text draws it. A like discipline stands in the account: a root law holds of every relation and so forbids none, and content comes through hypotheses, which is where the irreducible goes; its own audit reports how far each central declaration stands from the root. It differs on 'optimal': no law here calls a structure optimal, and the repository's method would ask what compares, among what it can tell apart. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#law",
+     "says": {
+      "en": "'A law of the root holds of every carrier, relation and class, so it forbids no relation, and a law with content is conditional and forbids through its hypotheses.'"
+     },
+     "role": "carries"
+    },
+    {
+     "record": "one-root-to-its-edge",
+     "anchor": "theories/becoming/chapters/08-METHOD.md#r-one-root-to-its-edge",
+     "says": {
+      "en": "'Each of the 117 distinct central declarations has one standing against the edge of one root.' Eleven are derived, one more under a stated hypothesis, six are counting, below the grammar; 'The other 99 stand at a named distance, each with its reason.'"
+     },
+     "role": "carries"
+    }
+   ],
+   "account_adds": {
+    "en": "What a unification forbids as its measure, and the standing of each law."
+   },
+   "source_adds": {
+    "en": "The verdict of optimality, the named irreducibles, and the five-years-out counterfactual test."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-ctxrt-subject-not-first",
+   "name": {
+    "en": "The subject is welded into the protocol; self is a substructure, agent a usage"
+   },
+   "domain": "earlier-folders",
+   "group": "context-as-existence-runtimes",
+   "source": {
+    "work": "theories/context-as-existence-runtimes/README.md",
+    "locator": "The defect it starts from; Claims B.18, H.80, H.90, J.163, V.390",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Every mainstream interface must first construct an 'assistant', so subjectless processes have no natural expression. The correction: agent, session and loop are usages over a history that assumes no agent; decision actors hold one unprivileged position; self is a persistent topology within the same fabric, 'not a privileged magical object'. A being's seed says it begins with no fixed persona: identity may emerge through lived experience."
+   },
+   "quote": "主体被焊死在协议里",
+   "carried": "carried-in-part",
+   "relation": "agreement",
+   "agreement_of": "thesis-or-method",
+   "reading": {
+    "en": "Method and argued thesis in the account: begin with relations, and let actor, patient and knower differentiate within them. A formation is 'one law within the unfolding, not a subject facing a world'; formations and conditions are one kind of relatum in two roles. Both refuse a primitive subject, for different reasons: the source for an interface's generality, the account for a thesis argued as a method. Which cut is apt the account does not show. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#one-relational-unfolding",
+     "says": {
+      "en": "Thesis (philosophical, argued; not one of T1-T8): 'there is one unfolding, and whatever is, is how it relates within it.' 'The thesis forbids explanations, not observations': among them 'a self with a nature of its own'."
+     },
+     "role": "carries",
+     "part": "the thesis statement; What it forbids"
+    },
+    {
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#the-reading-loop",
+     "says": {
+      "en": "§12: a formation that senses, predicts, chooses, acts and revises is 'one law within the unfolding, not a subject facing a world'."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/01-ROOT.md#modelling-commitments",
+     "says": {
+      "en": "Commitment: 'One kind of relatum, two roles | formations and conditions (§8.1)'."
+     },
+     "role": "neighbour",
+     "part": "One kind of relatum, two roles"
+    }
+   ],
+   "account_adds": {
+    "en": "An argued thesis with what it forbids, kept apart from a proof."
+   },
+   "source_adds": {
+    "en": "That the subject is welded into protocols, and agent, session and loop are usages over a history: the account says nothing of interfaces. Then the critique of chat roles and tool_result as historical accident; the test that a kernel must outlive the word 'agent'. An internal tension: agent a usage here, a being a life in the ember line."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-ctxrt-prompt-narrows-path",
+   "name": {
+    "en": "A system prompt narrows the path, so prompt design is an ethical act"
+   },
+   "domain": "earlier-folders",
+   "group": "context-as-existence-runtimes",
+   "source": {
+    "work": "theories/context-as-existence-runtimes/README.md",
+    "locator": "Claims V.397, V.402; In Ren's own words 40; Where to read further, 'what a good Σ would be'",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "A system prompt at the core of an agent may narrow its path, so writing one is designing a possibility space and is therefore an ethical act. The README adds that the normative question, which ways of seeing an intelligence should be given and who decides, is never asked in the folder."
+   },
+   "quote": "may actually narrows the path",
+   "carried": "changed",
+   "relation": "divergence",
+   "agreement_of": null,
+   "reading": {
+    "en": "That instruction changes what a system reaches the account tests; 'therefore ethical' it does not take. Telling models the scope partly raised keeping of a seen dependent and none of an unseen one. The account's own 'narrowing' is of what a course admits, another reference: a prompt is not shown to narrow that. To call a narrowing worse needs the continuation condition for scope and C for order, neither asserted, warrant open. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#theses",
+     "says": {
+      "en": "T4, standing: 'IN1 partly passed (with talk, one model of two); transfer untested.' 'no condition kept an untold dependent.' ONE-PAGE: language models told what to do, not systems trained."
+     },
+     "role": "carries",
+     "part": "T4"
+    }
+   ],
+   "account_adds": {
+    "en": "A frozen test of what instruction does and does not install, and the two premises named for any ranking."
+   },
+   "source_adds": {
+    "en": "The inference from narrowing to ethical act, stated with no premise; prompting as transmitting reasoning rather than commands."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-ctxrt-narrative-handoff-soul",
+   "name": {
+    "en": "Identity handed on as narrative; a text that restores 势 and 'soul'"
+   },
+   "domain": "earlier-folders",
+   "group": "context-as-existence-runtimes",
+   "source": {
+    "work": "theories/context-as-existence-runtimes/README.md",
+    "locator": "What Ren actually demanded; Genealogy 2024-06-22 and 2026-04-28; Claims V.398-400; lost item 40",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "The theory's earliest form: continuity is a narrative written for the next agent so it behaves alike. Later, a text which, input again, restores the model's 势 and with it its 'soul': a system prompt as expression of present existence. The README notes no document revisits whether the story or the tape is the better carrier."
+   },
+   "quote": "Don't describe your internal state, just make a narrative to the next agent so it will behave just like you",
+   "carried": "history-only",
+   "relation": null,
+   "agreement_of": null,
+   "reading": {
+    "en": "The nearest study gave 24 fresh contexts an archived acquired packet and read selective reuse; it is in history and tests correction, not selfhood. Live laws on transmission concern dependences and procedures on models, not a text restoring a disposition. 'Soul' is a layer the account does not assert. Transmission's forms are leads, not targets, so none is claimed. [AI reading]"
+   },
+   "targets": [],
+   "account_adds": null,
+   "source_adds": {
+    "en": "Stands in theories/becoming/history/MEMORY-CORRECTION-AND-SUCCESSION.md ('Selective reuse in actual fresh contexts') for the packet form, and in sources/12-claude-ai-chats as the README cites it for the narrative and 势 prompts. 势 in the live account is 06's reading of classical texts, not this."
+   },
+   "absence": {
+    "searched": [
+     "narrative, next agent, successor agent, fresh context, 势, soul, 灵魂 across chapters, ONE-PAGE, overview, review/, FREE-ENERGY-PRINCIPLE, GLOSSARY",
+     "record-index titles: transmission, learned-procedure, acquired"
+    ],
+    "read": [
+     "04 r-transmission-is-inheritance-and-need definition",
+     "04 r-learned-procedure-transmission",
+     "history/MEMORY-CORRECTION-AND-SUCCESSION.md, lines on fresh contexts"
+    ]
+   },
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-ctxrt-open-ontology-worlds",
+   "name": {
+    "en": "Anyone may define kinds: what makes a world a world; against a shared vocabulary"
+   },
+   "domain": "earlier-folders",
+   "group": "context-as-existence-runtimes",
+   "source": {
+    "work": "theories/context-as-existence-runtimes/README.md",
+    "locator": "Claims U.368-370, F.55; Genealogy 2026-09-02; Relations, keep-the-possibility-space-open",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Any user, agent or community must be able to define new kinds without publishing them, and meaning then propagates to whoever has access. Ren calls this the key that makes worlds worlds, and the README reads it as possibility-preservation in constitutive form. A contradiction stands against it: the intent document says cells invent no new ligands, and free invention of signal types forces a global schema or broadcast."
+   },
+   "quote": "this is the key that makes worlds 'worlds'",
+   "carried": "carried-in-part",
+   "relation": "scope",
+   "agreement_of": null,
+   "reading": {
+    "en": "'World' differs: the account's World is a model type, so the constitutive claim is not taken up. The mechanism beneath it is: forms that can become shared are those in use, an imposed code costs what it merges, and a coined form heard by all makes every formation tell merged senses apart again. 'Heard by all' is F.55's broadcast, so the law does not settle the folder's contradiction; it says what coining needs. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "a-code-formed-between-formations",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-code-formed-between-formations",
+     "says": {
+      "en": "Theorem (any type; runs of hearings; premises in each row): 'the forms that can become shared are exactly the forms in use'; 'An imposed code makes all agree; each formation loses exactly the distinctions its code drew that the imposed code merges, the source of the imposed code losing none.' 'Being joined through couplings is not enough'."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "synonyms-and-coined-forms",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-synonyms-and-coined-forms",
+     "says": {
+      "en": "Theorem (any type; equality decided where coining is stated): 'Where all hold a code merging two senses, a form coined at one that the code does not give the other, heard by all, makes every formation tell them apart again.'"
+     },
+     "role": "carries"
+    }
+   ],
+   "account_adds": {
+    "en": "What an imposed code costs, and to whom; that coupling alone does not bring agreement."
+   },
+   "source_adds": {
+    "en": "The constitutive claim that open kinds make a world, propagation of meaning along permission, two coexisting regimes (published kits, local dynamism), and the cell analogy. Open-endedness measures counting new kinds are noted in review/SCIENCES as not stated."
+   },
+   "absence": null,
+   "same_as": [
+    "cx-sty-open-ontology-define-kinds"
+   ],
+   "labels": [
+    "AI reading"
+   ]
+  }
+ ],
+ "changes": [],
+ "live_flags": []
+}

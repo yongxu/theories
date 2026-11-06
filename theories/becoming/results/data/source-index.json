@@ -5648,7 +5648,8 @@
         "theories/becoming/chapters/08-METHOD.md",
         "theories/becoming/history/GENERATED-LOGIC.md",
         "theories/becoming/history/RELATIONS-ACROSS-SCALES.md",
-        "theories/becoming/history/SCIENTIFIC-PHILOSOPHY.md"
+        "theories/becoming/history/SCIENTIFIC-PHILOSOPHY.md",
+        "theories/becoming/review/BUDDHIST-THOUGHT.md"
       ]
     },
     "theories/becoming/chapters/05-COLLECTIVES.md": {
@@ -5694,6 +5695,7 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/CorrectionReconfiguration.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/PracticalPriorityIdentification.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/alignment-continuity-verification.json",
+        "experiments/margin-measured/README.md",
         "experiments/market-generativity/formal/MarketInstances.lean",
         "experiments/market-generativity/formal/README.md",
         "experiments/market-generativity/formal/attraction-verification.json",

@@ -2,7 +2,7 @@
 
 # The theory graph
 
-One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3222 nodes, 6299 edges.
+One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts, the chapter sections that state results and the review dossiers, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3220 nodes, 6892 edges. An edge records a dependence, a citation or a registered reading, not an agreement in meaning.
 
 | Region | Concepts | Results | Modules | Texts |
 |---|---:|---:|---:|---:|
@@ -15,6 +15,19 @@ One graph of the theory: the grammar's concepts, the results, the Lean modules, 
 | Significance and alignment | 0 | 82 | 62 | 0 |
 | Method and the formal core | 0 | 21 | 26 | 0 |
 | To retire | 0 | 7 | 0 | 0 |
+
+## How far the corpus has been read
+
+4116 corpus units are classified, 1724 of them in the classes that state something, which are the texts here. Of those:
+
+| Reading so far | Units |
+|---|---:|
+| Read against a law: a candidate theorem or a conditional law, whatever its outcome | 184 |
+| Read, and no law came of it: not expressible, an evaluation, a definition, misclassified | 94 |
+| Named by a grammar concept or cited by a module, record, section or dossier, and not read as above | 116 |
+| Classified, and read against nothing yet | 1330 |
+
+The last row has no edge in this graph. Its units are not shown to agree or disagree with anything.
 
 ## The grammar's concepts
 

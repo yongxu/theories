@@ -53,7 +53,7 @@ Conditions within some optimizer's family, where each bears a share; existence o
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-The tragedy of the commons (Hardin 1968), open access (Gordon 1954) and the overappropriation of common-pool resource games (Ostrom, Gardner and Walker 1994), in the limit where the condition couples into no optimizer: the drain is the whole joint capacity. Reading (the AI's): a commons none of its users couples into is drained by the sum of their capacities, whether they act each alone or together; what keeps it is a coupling into it or a lowered capacity, the means Ostrom (1990) found communities use; over a horizon a coupling for each step met keeps it, among drawers in turn, only where it reaches the need, and drawing at once with no pivotal drawer the drain stays perfect at every coupling.
+The tragedy of the commons (Hardin 1968), open access (Gordon 1954) and the overappropriation of common-pool resource games (Ostrom, Gardner and Walker 1994), in the limit where the condition couples into no optimizer: the drain is the whole joint capacity. Reading (the AI's): a commons none of its users couples into is drained by the sum of their capacities, whether they act each alone or together; what keeps it is a coupling into it or a lowered capacity, which the rules, monitoring and graduated sanctions Ostrom (1990) found communities use can supply, those means themselves not modelled here; over a horizon a coupling for each step met keeps it, among drawers in turn, only where it reaches the need, and drawing at once with no pivotal drawer the drain stays perfect at every coupling.
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
@@ -133,6 +133,7 @@ Aliases: `several optimizers drain by their joint capacity`, `a mutual best resp
 - 22 October 2026, SG14: with two drawers in turn, each ranking courses, every perfect profile draws everything (record drawers-in-turn-draw-everything, study section 324). Its laws are unchanged.
 - 25 October 2026, board item DF (study section 418): 'registers' replaced by 'couples into' in the boundary and the correspondence (the glossary's word); the superseded record drawers-in-turn-draw-everything replaced by drawers-in-turn among the related results.
 - 3 November 2026, board item CDR: related to coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it; the reading's clause on what keeps a commons qualified by it (over a horizon a coupling for each step met keeps the need, among drawers in turn, only where it reaches the need, and drawing at once with no pivotal drawer the drain stays perfect at every coupling); no law, hypothesis or declaration changed.
+- 7 November 2026, CX: the correspondence corrected where a reader of the crosswalk found it wider than its source or its home (the crosswalk's live flags, checked at home); no law, premise or scope of this record changed.
 
 </details>
 

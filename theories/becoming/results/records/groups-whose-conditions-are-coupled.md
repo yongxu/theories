@@ -57,7 +57,7 @@ Mixing between groups; how groups and their couplings form; a tighter family law
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-Metapopulation dynamics (Levins 1969; Hanski 1998): patches linked by recolonization persist or go extinct together, and a patch read alone can look sustained while the network is in deficit; group selection requires groups that differ in their fate (Wilson and Sober 1994), which coupled groups do not. Readings (the AI's): coupling, not sharing one condition, is what makes groups end together; a commons is a family, not a single pool.
+Metapopulation dynamics (Levins 1969; Hanski 1998): patches go extinct apart and are recolonized, so persistence is the network's, and a patch read alone can look sustained while the network is in deficit; group selection requires groups that differ in their fate (Wilson and Sober 1994), which coupled groups do not. Readings (the AI's): coupling, not sharing one condition, is what makes groups end together; a commons is a family, not a single pool.
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
@@ -99,6 +99,7 @@ Aliases: `groups whose conditions are coupled`, `条件相互耦合的组`, `cou
 
 - 20 October 2026: added (EV6), the joint count and gated ending over a family of conditions read as one, and groups whose conditions are coupled; study section 265.
 - 22 October 2026, CA1: related to confined-rise-within-a-whole (study section 366); this record's laws and statements are unchanged.
+- 7 November 2026, CX: the correspondence corrected where a reader of the crosswalk found it wider than its source or its home (the crosswalk's live flags, checked at home); no law, premise or scope of this record changed.
 
 </details>
 

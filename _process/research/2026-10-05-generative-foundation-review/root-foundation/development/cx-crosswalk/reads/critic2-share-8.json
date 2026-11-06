@@ -1,0 +1,166 @@
+{
+  "share": "share-8",
+  "verdicts": [
+    {
+      "id": "cx-fork-common-by-function",
+      "verdict": "holds",
+      "fix": null,
+      "why": "Principle 7 (README line 39) and claim 30 say what the sense says, and 06's row on 成生之限／绝生之限 states in the account's own column that a limit's kind goes by what it does to what can be had again, 不依其名, with monopolized entry and lasting dependence on one controller as closing, so carried-in-part stands. That row is a mapping [AI reading, D49] of the early texts' 限, so agreement of reading by descent is right, and 07's table is copied faithfully (only 'with checked consequences' dropped, which understates)."
+    },
+    {
+      "id": "cx-memories-sort-by-status",
+      "verdict": "holds",
+      "fix": null,
+      "why": "README line 75 says what the sense says, and 08 §2, the four layers and 'where the ethics sits' state in the account's words one label on every result and evaluation entering only through the two named premises, neither asserted, which is part of the source's discipline. These are method sections, so agreement of thesis-or-method holds, and the reading rightly says a label marks standing, not mechanism."
+    },
+    {
+      "id": "cx-hsm-research-question",
+      "verdict": "label",
+      "fix": {
+        "targets": [
+          {
+            "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#the-answer-in-brief",
+            "says": {"en": "“**No guarantee.**” “**exits** from the loops that lock a collective, each holding under stated hypotheses”; achievable “Yes, for named exits”, “none shown to hold of an actual collective”."},
+            "role": "carries"
+          },
+          {
+            "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#kept-together",
+            "says": {"en": "Reading [AI reading, D48]: “The constraints an account of social viability lists are read as laws of what a course does under stated hypotheses”; nine rows. Limits: “regulation and passing are supplied”. “The constraints are not survival axioms.” “Term limits, audits, courts and antitrust carry what an actor's acts do back into what selects the rule”."},
+            "role": "carries",
+            "part": "Reading D48"
+          },
+          {
+            "anchor": "theories/becoming/chapters/02-MAP.md#t7",
+            "says": {"en": "Reading [AI reading, D26 as revised]: “A second order, corruption taking over courts, press, statistics and audit, is a loop whose rule-reading reaches the routes of 明 themselves”. “That readers are minds is a reading; none of this says whether a locked loop supports or damages 生生.”"},
+            "role": "carries",
+            "part": "Reading D26"
+          },
+          {
+            "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#5-what-is-empirical",
+            "says": {"en": "“**Institutions and people.** One kind of institution has one minimal model on the root [AI reading], a rule rebuilt from the members it limits”; “no actual institution is shown to meet its hypotheses”; “no test has human participants.”"},
+            "role": "limit",
+            "part": "Institutions and people"
+          }
+        ],
+        "reading": {"en": "The account takes up the regulation side the museum dropped: loops that lock, named exits, routes of correction taken over. Its nearest answer to 'what they share' is an AI reading of nine constraints of social viability as laws, 'not survival axioms', with 'regulation and passing are supplied'. It gets them from models, not exceptions, says 'No guarantee', and shows none of an actual collective. 'Worked' and 'resisted' read nothing until a comparison is named. [AI reading]"}
+      },
+      "why": "The labels stand: claims 2-3, 'The gap between the two collections' and 'What was lost' item 1 say what the sense says, and the account's exits under hypotheses, 'none shown to hold of an actual collective', carry part while diverging from a collection of actual exceptions. But the limit target quotes 'No institution is modelled on the spine', which COLLECTIVE-DIRECTION §5 no longer says since 95a7008a9 (so its note that the live texts differ is stale too), and the reading's 'what keeps a mechanism from capture is assumed there' overstates D48, whose table states exits from capture and whose limit supplies only regulation and passing."
+    },
+    {
+      "id": "cx-sspiral-point-of-no-return",
+      "verdict": "holds",
+      "fix": null,
+      "why": "Claims 88, 112 and 118 say what the sense says, and 02's homes state exactly a step from which a reading keeps the lock, an exact point of no return for a condition under a standing draw, and that drawn one at a time neither lock holds for good, which 02's own D45 reading joins to the window. The source's 'impossible' and 'collapses' are unconditional and the homes condition them on counts models with constant readings, so carried-in-part and scope hold."
+    },
+    {
+      "id": "cx-sspiral-trust-output",
+      "verdict": "holds",
+      "fix": null,
+      "why": "Claim 121 and the responses section say what the sense says, 'trust' as a term is absent from the live chapters, and the account takes up the topic in 05 §5 and COLLECTIVE-DIRECTION §6: observation is necessary and not sufficient, and only a law giving first restores giving lost everywhere. That is a different mechanism stated without refuting the source's chain, so changed and divergence hold."
+    },
+    {
+      "id": "cx-wamo-narrative-consensus-action",
+      "verdict": "holds",
+      "fix": null,
+      "why": "Claim 108 and the Wamotopia section say what the sense says, with claim 117 rightly noted as running the other way. The homes condition both steps (agreement needs a broken symmetry; the live text's only use of narrative, the FEP row, forbids shared narratives giving shared goals as a guarantee for own-store preferences; coupling is not compliance), so changed and scope hold."
+    },
+    {
+      "id": "cx-ecs-scoped-adoption",
+      "verdict": "holds",
+      "fix": null,
+      "why": "Claim 5, the adoption flow and agenda question 5 say what the sense says, and the three homes are copied with their supplied premises; the rule-inheritance record's correspondence is Valkey and TDF, not this folder, so no descent is hidden. The join of audiences to gated adoption, closed hearings and gluing contexts is the reader's, as fresh-reading and agreement of reading say."
+    },
+    {
+      "id": "cx-modphil-whitehead-immanent-law",
+      "verdict": "label",
+      "fix": {
+        "targets": [
+          {
+            "record": null,
+            "anchor": "theories/becoming/chapters/08-METHOD.md#law",
+            "says": {"en": "'The word has three senses, kept apart.' `Law`, 'the spine's name for a determined step, is one relation, `next x = y`, among the others: its configurations are related by it, not ruled by it.' A law of the theory 'is read off what it holds of and does not stand over it'. 'The account states no science's law of its own yet.'"},
+            "role": "carries",
+            "part": "the second sense, `Law` as one relation"
+          },
+          {
+            "record": null,
+            "anchor": "theories/becoming/chapters/08-METHOD.md#one-relational-unfolding",
+            "says": {"en": "A thesis, argued: a law is read off the history it holds of (`shown_le_iff`); it forbids an explanation needing 'a law standing outside what it holds of'."},
+            "role": "carries",
+            "part": "What it forbids"
+          },
+          {
+            "record": null,
+            "anchor": "theories/becoming/chapters/01-ROOT.md#what-internal-means",
+            "says": {"en": "Reading [AI reading, D65]: 'A relation is internal where it holds by what its terms are'; read off one exchange, 'balance, only active giving and taking, and activity needing support are internal so'. 'This reaches no necessity beyond the World model read off one exchange'."},
+            "role": "carries",
+            "part": "Reading D65"
+          },
+          {
+            "record": null,
+            "anchor": "theories/becoming/chapters/08-METHOD.md#open-programme",
+            "says": {"en": "'Calling an input immanent, or moving it into a definition, does not discharge it.' The target requires 'warranting whatever universal content the theory asserts'."},
+            "role": "limit",
+            "part": "The target"
+          }
+        ],
+        "reading": {"en": "08 keeps three senses of law apart; his laws of nature are the third, a science's law, and the account 'states no science's law of its own yet'. Nearest is the second: `Law` is one relation, its configurations 'related by it, not ruled by it'. 01's reading D65 gives his immanence a form for three World premises, which hold 'by what their terms are', on one model and without epochs; and 08 holds that calling an input immanent does not discharge it. [AI reading]"},
+        "source_adds": {"en": "His immanent law as a statistical habit of an epoch's dominant societies, changing as they do, and immanence as the nature of law in general, beyond three premises of one model. A tower of changing rules adds nothing to the whole possible (07 §2's reading)."}
+      },
+      "why": "Memory against memory, the sense matches Adventures of Ideas ch. VII, the two 08 homes are copied faithfully, and fresh-reading and agreement of thesis-or-method hold. But 'agrees against imposition only' misses 01's reading D65, where three World premises hold 'by what their terms are', the form of his immanence on one model, and 08 §12's limit that calling an input immanent does not discharge it; both are added and the reading and source_adds amended."
+    },
+    {
+      "id": "cx-econ-lucas-against-constants",
+      "verdict": "holds",
+      "fix": null,
+      "why": "Memory against memory, the sense is the 1976 critique's general form, and the homes state the constants it presses on: 'hi, lo, p and c are constants', readers who learn not shown, the law of exchange supplied and the premise moved onto the law, the response a function of the prediction alone. Lucas is absent from the live text, and his argument is against applying fixed-parameter laws to a changed rule, so fresh-reading and contrary-reading hold."
+    },
+    {
+      "id": "cx-abr-khaldun-ruler-replaces-kin",
+      "verdict": "holds",
+      "fix": null,
+      "why": "Memory against memory, the sense matches Muqaddimah ch. 3 on the ruler claiming glory and relying on clients, marked unverified. The position law (a rise needs a fall; position does not protect a part depending on what is drawn down; a greatest part not depending continues) and the pool reading through who reads are copied with their premises, and they condition his regular fall on a remaining dependence, so fresh-reading and scope hold."
+    },
+    {
+      "id": "cx-econ-arrow-sen-impossibility",
+      "verdict": "holds",
+      "fix": null,
+      "why": "Memory against memory, the sense states both theorems with their scope, GOVERNANCE-LITERATURE §6 holds them, and the live text's Arrow is Arrow and Fisher 1974, its social choice (May 1952, Askell 2018, Chichilnisky, Sen's intersection approach) never meeting either theorem or the Paretian liberal. The absence's 'social choice ... one record' undercounts (a-swap-symmetric, comparing-two-courses and eventual-widening mention it), but none meets the theorems, so history-only stands."
+    },
+    {
+      "id": "cx-drives-two-mechanisms",
+      "verdict": "holds",
+      "fix": null,
+      "why": "Claims 24-26 and open questions 1 and 18 say what the sense says, and 03's Open lists 'motivation and affect' as not shown. My own searches (affect, emotion, mood, feeling, valence, interoceptive, 逍遥, 情绪, narrative of feeling) find no live statement of how affect is regulated, and 03's seeking boundary says of a target 'how it forms is not modelled', so not-carried holds."
+    }
+  ],
+  "read": [
+    "CRITIC2.md and BRIEF.md in full",
+    "theories/the-fork-and-cooperative-infrastructure/README.md: Keeping shared capacity available (line 39), claims 12 and 30, open question 12",
+    "theories/memories-and-working-style/README.md: On thinking (line 75) and the speculative-future paragraph (line 19)",
+    "theories/human-solutions-museum/README.md: Status, The older question underneath, The gap between the two collections, Claims 1-8, What was lost items 1-4",
+    "theories/selfishness-spiral-and-narrative-value-frames/README.md: The responses, Said aloud, claims 88, 112, 118, 121-125, 166-174",
+    "theories/wamotopia-and-the-wamo-protocol/README.md: Wamotopia and what it claims to demonstrate, the objections, claims 108 and 117",
+    "theories/evolving-community-swarms/README.md: Core claims, Change and adoption; RESEARCH-AGENDA.md question 5",
+    "theories/drives-narrative-attractors-and-mind/README.md: the affect paragraph of The argument, claims 22-27, open questions 1 and 18",
+    "_process/research/2026-10-05-generative-foundation-review/foundation-assessment/GOVERNANCE-LITERATURE.md section 6",
+    "06-CLASSICAL-TEXTS.md §十 closing-and-opening (both tables and the D49 reading), row G08 and line 158",
+    "07-SIGNIFICANCE.md #r-practical-judgment-under-living-significance, #does-not-show, lines 345 and 383",
+    "08-METHOD.md #standings-and-bases, #four-layers, #where-the-ethics-sits, #known-results lines 517-518, #one-relational-unfolding, #law, #open-programme (the target), #the-work-by-its-own-laws",
+    "COLLECTIVE-DIRECTION.md: The answer in brief, §5, §6; its git log (95a7008a9)",
+    "05-COLLECTIVES.md #kept-together, §5 giving-waits with D48, #r-thresholds-of-waiting, #position and #r-relative-position-is-zero-sum, #r-a-pool-that-recruits-through-itself, #r-reading-anothers-couplings-is-pooling, #r-joint-plans-from-a-supported-start, §9 shared-codes and #r-a-code-formed-between-formations, #r-risk-minimization-on-a-shared-renewal with its D45 reading, #r-re-optimizing-above-a-renewal-ends-it, #r-joint-practice-forms-continuation, line 407",
+    "02-MAP.md #r-loss-read-in-time-by-the-others, line 449 (D45), #r-margin-of-a-regime, #r-drawn-shaping-drawn-one-at-a-time, #r-runaway-distance-uncoupled, #r-shaping-read-by-readers-drawn-from-the-selected, #r-readers-drawn-from-the-selected, line 442, #r-counterfactual-is-the-course, #t7 (D26, D67, LA2), #open",
+    "03-KNOWING.md #r-claims-shown-in-context, #r-a-reading-informed-and-revalued with its reading, #r-a-prediction-read-by-what-it-predicts with its reading, #r-seeking-boundary, Open (line 579)",
+    "04-LIFE.md #r-organizational-rule-inheritance",
+    "01-ROOT.md #what-internal-means",
+    "FREE-ENERGY-PRINCIPLE.md: claim-by-claim table, What forbids nothing",
+    "records: organizational-rule-inheritance (md lines on supplied premises, history; json correspondence), shaping-read-by-readers-drawn-from-the-selected (not shown), counterfactual-is-the-course (does not show), a-prediction-read-by-what-it-predicts (hypotheses, history), a-rule-rebuilt-from-the-members-it-limits line 47, comparing-two-courses-on-what-they-admit line 98, a-swap-symmetric-assignment-singles-out-none line 48, continuation-relative-to-a-class (Whitehead line)",
+    "searched only: trust, narrative, Arrow, social choice, Paretian, impossibility, Lucas, Goodhart, Whitehead, immanent, affect, emotion, mood, valence, 逍遥, 情绪, 'No institution is modelled' across the live account, records and the atlas"
+  ],
+  "live_flags": [
+    {
+      "where": "theories/becoming/results/atlas/CROSSWALK.md:2462",
+      "what": "The atlas page (and results/data/atlas.json, results/atlas/entries/correspondences.json; also CROSSWALK.md lines 344, 600, 6933, 7776-7778) quotes COLLECTIVE-DIRECTION §5 as 'No institution is modelled on the spine', which the live page no longer says since 95a7008a9: it now gives one kind of institution one minimal model. The stale quote comes from seven crosswalk entries (cx-asc-selection-on-cognition, cx-asc-training-ground, cx-asc-four-layer-loop, cx-hsm-research-question, cx-fork-two-fates, cx-wamo-coordination-bottleneck, cx-zhishan-present-diagnosis); correcting them and regenerating would clear it."
+    }
+  ]
+}

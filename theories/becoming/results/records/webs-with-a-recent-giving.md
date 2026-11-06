@@ -52,7 +52,7 @@ Rest within a band for webs with a recent giving; a field web whose couplings ar
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-State augmentation gives a system memory and keeps it monotone where output rises with state and past (Smith 1995, on monotone systems with delay); history-dependent response is hysteresis (Mayergoyz 2003).
+State augmentation gives a system memory and keeps it monotone where output rises with state and past (Smith 1995, on monotone systems with delay); history-dependent response is studied as hysteresis (Mayergoyz 2003), whose distinct thresholds on the way up and on the way down are not stated here.
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
@@ -88,6 +88,7 @@ Aliases: `webs with a recent giving`, `coupled webs with memory`, `带近来所�
 ### History
 
 - 22 October 2026: added (RM10), webs with a recent giving; RM9's bounded laws stated for any law read condition by condition; study section 331.
+- 7 November 2026, CX: the correspondence corrected where a reader of the crosswalk found it wider than its source or its home (the crosswalk's live flags, checked at home); no law, premise or scope of this record changed.
 
 </details>
 

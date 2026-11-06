@@ -1,0 +1,129 @@
+{
+ "share": "share-3",
+ "verdicts": [
+  {
+   "id": "cx-ecs-boundary-sufficiency-composition",
+   "verdict": "holds",
+   "fix": null,
+   "why": "Claim 2 and the contracts section read as the sense says; zip_keeps with its converse, the supported-start theorem and tree lifting are checked theorems of conditional, recursive composition, and the says keep 'applications must establish' and 'supplied, not shown'. 05 §11 itself lists the folder among applications with correspondence not established, so carried-in-part with agreement of law stands, and source_adds says the condition reads usability, not information."
+  },
+  {
+   "id": "cx-modphil-sen-maximal-and-comparative",
+   "verdict": "holds",
+   "fix": null,
+   "why": "Memory against memory, the sense matches Sen 1997 and The Idea of Justice (maximal choice, comparative justice, assertive incompleteness). 07 §5's 'decides no other pair' and the calibration's undefeated option under a weakly decided irreflexive transitive comparison are quoted exactly, the join to Sen is the reader's as agreement of reading says, and the premises are named."
+  },
+  {
+   "id": "cx-drives-framework-as-basin",
+   "verdict": "holds",
+   "fix": null,
+   "why": "The quote and open question 2 are as read, and 08's law and thesis sections, D66 and 07's D65 are quoted faithfully and concede the premise the charge needs, so carried-in-part with contrary-reading stands. One slip in wording: 'as a language nothing defeats it' is said of the explanatory reading (#what-would-defeat-the-reading), not of the thesis of one unfolding, and the neighbour's says merges the two theses."
+  },
+  {
+   "id": "cx-ma-endings",
+   "verdict": "label",
+   "fix": {
+    "relation": "scope",
+    "targets": [
+     {"record": null, "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#open", "says": {"en": "[Conjecture, from an earlier account; not formalized.] The ends a selection for position can reach: a frozen mutual destruction, a deadlocked structure of power, the parts coming to read themselves as one whole, collapse, and winner takes all; which the laws admit is open."}, "role": "carries"},
+     {"record": "what-taking-all-excludes", "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-what-taking-all-excludes", "says": {"en": "Theorem (World: balance, only active giving, activity needing support, the gate at the need): full taking alongside another taker at each of n steps from a level below n + m ends every formation depending on the condition at a need of at least m, the full taker included; a formation taking all that is given and active at every step leaves no named other present and taking at every one of the level + 1 steps from T. The excluding and sharing courses are not ranked."}, "role": "carries"},
+     {"record": null, "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#markets", "says": {"en": "Reading [AI reading, D65]: four routes of transition are distinct, none a proved phase transition: a parameter change, a shock, a failure stopping correction, and change too fast for correction."}, "role": "neighbour", "part": "D65, four routes of transition"},
+     {"record": "generation-and-degeneration-at-two-grains", "anchor": "theories/becoming/chapters/02-MAP.md#r-generation-and-degeneration-at-two-grains", "says": {"en": "Theorem (root). For every carrier, relation and pair of classes, going on along some branch and ending on every branch exclude each other, and generation and keeping each exclude degeneration. No premise on what the pattern is or whether its going on is good."}, "role": "neighbour"}
+    ],
+    "reading": {"en": "Terminal collapse has a checked form on the World premises: full taking alongside another taker ends every formation depending at the need, the full taker included, and a full taker that goes on leaves no named other taking through a window one step longer than the level. So the account gives where that ending holds. The three endings as distinct kinds are not stated: 05's list of ends is an unformalized conjecture, and failed totalization has no home. [AI reading]"}
+   },
+   "why": "05 §1's checked `Flow.full_taking_ends` and `Flow.continuing_excludes` state the source's terminal collapse (alternatives excluded, the substrate exhausted, the full taker ending too) and are named only in account_adds, so 'the account's nearest list is a conjecture' understates, and the sibling cx-zhishan-totalization-by-loss reads the same three endings as scope with lock-in and collapse live. The locator's open question 49 is 'rank or boundary', not the endings."
+  },
+  {
+   "id": "cx-jianwen-v4-orbit-count",
+   "verdict": "label",
+   "fix": {
+    "agreement_of": "reading",
+    "reading": {"en": "The account answers the folder's open question, though it does not say so: twenty classes, eight of two and twelve of four, so not 16 (`class_census`). By descent, not independently: the classes entered the account as H4 of the SSBX repository review, and the 生生不息 repository's v0.3 of the same V4 note already gives the Burnside count 20 (sources/07-shengsheng-buxi/ssbx-repo/docs-next/v4-foundation.md, §10.4), which the folder's 'no later document reports the number' misses. Nothing live cites the question. [AI reading]"}
+   },
+   "why": "The count is right (Burnside (64 + 0 + 8 + 8)/4 = 20, the eight fixed by 綜 and the eight fixed by 錯綜 pairing into eight classes of two) and the 06 row and record say it, but the law is not independent of the source: H4 of SSBX-REPOSITORY-REVIEW.md carried it from the 生生不息 repository, whose later copy of this very V4 note reports 20. Agreement with a law that descends from a sibling is agreement of reading, by descent."
+  },
+  {
+   "id": "cx-zhishan-v8-stop-ruling",
+   "verdict": "holds",
+   "fix": null,
+   "why": "The section and claims 205 to 213 read as the sense says, and 05 §11's D65 reading (no prior duty to contract, no prior licence to grow) and the handover sentence of alignment-direction-under-widening are quoted with their premises. The account takes up the default and leaves it to the whole continuation while the source reverses it on four conditions, with no live hit for burden or moratorium, so changed with divergence stands, as the first critic ruled for this cluster."
+  },
+  {
+   "id": "cx-greek-heraclitus-river",
+   "verdict": "holds",
+   "fix": null,
+   "why": "Memory against memory, B12 and the doubtful standing of B49a and B91 are as sensed. 02 §1 defines carrying renewal as the pattern going on under the coarse class while a fine line begins (火传) and proves it an alteration at the root, which is the river's form exactly, and nothing live names Heraclitus, so fresh-reading with agreement of law stands, with the root law's forbidding nothing said."
+  },
+  {
+   "id": "cx-modphil-hegel-lord-bondsman-certifies-nothing",
+   "verdict": "holds",
+   "fix": null,
+   "why": "Memory against memory, the sense matches Phenomenology §§191 to 192, where the lord's truth turns out to be the dependent consciousness. 07 §1's 'Later endorsement cannot authorize the formation that produced it' and readers-drawn-from-the-selected are quoted faithfully, the witness law is kept as a limit with its 'not shown', and nothing live names Hegel, so fresh-reading with agreement of reading stands."
+  },
+  {
+   "id": "cx-sty-negative-space-norms",
+   "verdict": "holds",
+   "fix": null,
+   "why": "The negative space, claim 32, claims 300 and 301 and open question 28 read as the sense says. The join is a habit of method, stating what a formalism does not reach, which 05's not-shown and 08's law do, and the reading itself says the normative half (a norm should stay uncoded) is not stated, so agreement of thesis-or-method is not a word match standing in for a law."
+  },
+  {
+   "id": "cx-greek-hierocles-circles",
+   "verdict": "holds",
+   "fix": null,
+   "why": "Memory against memory, the concentric circles and drawing them toward the centre are Hierocles as Stobaeus keeps him, and 4.84.23 is the usual citation as far as I recall. 07's partiality row and graded-significance-and-priority say grades are supplied and C leaves partial choices mixed, so the source asserts what the account does not (nearness should weigh, practice moves it), and divergence stands with both premises named."
+  },
+  {
+   "id": "cx-greek-sextus-induction",
+   "verdict": "holds",
+   "fix": null,
+   "why": "Memory against memory, PH II.204 is the induction dilemma as sensed, and identification-where-bounded is quoted exactly: given the bound induction is deduction, so the account conditions his universal denial and scope is right. The reading leaves out that, not given the bound, the least-bound extrapolation is still right from 2N − 1, but the says keeps 'the bound buys silence, not speed', so the target is not overstated."
+  },
+  {
+   "id": "cx-zhishan-self-binding-clauses",
+   "verdict": "label",
+   "fix": {
+    "carried": "carried-in-part",
+    "relation": "agreement",
+    "agreement_of": "thesis-or-method",
+    "absence": null,
+    "targets": [
+     {"record": null, "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#alignment-without-premise", "says": {"en": "Reading [AI reading, D65], in §6: diagnosing closure first tells apart factual error, lack of capacity, evaluative or practical closure (objections excluded before assessment, standards selectively exempted), real conflict with warranted limits, and substantive disagreement with no closure; without the last, \"closed\" shields the theory from counterexamples."}, "role": "carries", "part": "D65: diagnosing closure"},
+     {"record": "seeking-boundary", "anchor": "theories/becoming/chapters/03-KNOWING.md#r-seeking-boundary", "says": {"en": "Reading [AI reading, D65]: locked seeking is diagnosed only from what is actually excluded before assessment, not from a firm judgment, a stable goal or a disagreement, so the label cannot immunize."}, "role": "carries", "part": "D65"},
+     {"record": null, "anchor": "theories/becoming/chapters/08-METHOD.md#the-work-by-its-own-laws", "says": {"en": "The work read by its own laws [AI reading, D66]: 'The laws apply to the work that states them, and they say what the criterion cannot'; no check run inside the work can show that the work serves what it is for."}, "role": "carries", "part": "D66"}
+    ],
+    "reading": {"en": "The account takes no position on nations, makes no self-binding clauses for an organization and reads no state's slogans. Part of the symmetric blade is stated, as readings and not obligations: 07 counts standards selectively exempted as evaluative closure, 03 diagnoses closure from what is excluded and not from a firm judgment, and 08 applies the laws to the work that states them. The credibility mechanism, a proposal read as evidence of its author's frame, has no law here. [AI reading]"},
+    "source_adds": {"en": "善不姓国 and the other clauses as an organization's obligations (no single-nation funding, a public archive and dissent intake before publication, non-combatancy, dissolution as succession); symmetry as a condition of being believed; one state's slogans read as a direction. These stand in sources/06-zhishan/ and earlier folders, not in the live account."}
+   },
+   "why": "Claim 253, in the locator, is the symmetric blade judging acts not motives, hypocrisy as rules for others and exceptions for oneself, and 07's D65 ('standards selectively exempted' as evaluative closure), 03's D65 and 08's D66 ('The laws apply to the work that states them') state that part, so 'no copy found in the live account' fails for it; the absence searched words only. Claim 283, also in the locator, is carried-in-part in the sibling cx-zhishan-guardian-test, a second inconsistency."
+  },
+  {
+   "id": "cx-sty-searle-goffman-grounding",
+   "verdict": "holds",
+   "fix": null,
+   "why": "Claims 37 to 41, the three-primitives paragraph and lost item 4 read as the sense says. Searching by words (Searle, Goffman, North, institutional fact, status function, collective acceptance, rules of the game, deontic) and by mechanism (confer, credential, membership, authority, the record index) found nothing; 05 §12's holder merges recognition, compliance and implementation into one count and §9's code is agreement on a form, so not-carried stands."
+  }
+ ],
+ "read": [
+  "CRITIC2.md; BRIEF.md; apply_rulings.py (settable fields); reads/sample.json; the 5-compare entries and their compare rulings",
+  "theories/evolving-community-swarms/README.md: Core claims, Responsibilities and contracts, Counterexamples and limits, Relationship to existing work, Current state",
+  "theories/drives-narrative-attractors-and-mind/README.md: The argument ('A third'), Open questions 1 and 2",
+  "theories/meta-attractor/README.md: claims 76, 303, the two endgames, open questions 44 to 50",
+  "theories/jian-and-wenyan-as-formal-language/README.md: lost item 39, open question 32 and the V4 lines by grep",
+  "sources/08-jian-wen-language/downloads-2026-05/v4-foundation (1).md §10.4; sources/07-shengsheng-buxi/ssbx-repo/docs-next/v4-foundation.md changelog and §10.4",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/SSBX-REPOSITORY-REVIEW.md §3.1 (H1 to H5); BECOMING-RENEWAL-READING.md, the hexagram laws passage",
+  "theories/zhishan-intelligence-must-be-good/README.md: From prohibition to mechanism, The blade turns inward, Symmetry as a condition, claims 173, 201 to 223, 253 to 256, 283, 291, 292",
+  "theories/spirit-space-token-and-yi-substrate/README.md: Three primitives, What the whole thing is for, claims 32, 37 to 47, 300, 301, What was lost 1 to 8, open question 28",
+  "theories/becoming/chapters/01-ROOT.md: definition of continuation, r-continuation-relative-to-a-class, the joining table with r-finite-joining-tree-lifting",
+  "theories/becoming/chapters/02-MAP.md: the thesis, §1 definitions, r-generation-and-degeneration-at-two-grains, r-readers-drawn-from-the-selected",
+  "theories/becoming/chapters/03-KNOWING.md: r-identification-where-bounded, r-seeking-boundary's D65 reading",
+  "theories/becoming/chapters/05-COLLECTIVES.md: r-what-taking-all-excludes, #markets D65 reading, §11 #joint-plans with both theorems, the D65 reading and the applications line, §12, #not-shown, #open, r-copied-witnesses-change-nothing",
+  "theories/becoming/chapters/06-CLASSICAL-TEXTS.md: r-hexagram-world-laws, 表达不了者五十三",
+  "theories/becoming/chapters/07-SIGNIFICANCE.md: §1 #evaluation, #step (strongest case), r-graded-significance-and-priority, #crux line, §5 #practical-judgment through the calibration, r-alignment-direction-under-widening, #alignment-without-premise readings D26, D45, D65, #objections partiality row",
+  "theories/becoming/chapters/08-METHOD.md: #known-results learning row, #one-relational-unfolding, #what-would-defeat-the-reading, #law, #the-work-by-its-own-laws",
+  "records (JSON): joint-plan-composition, joint-plans-from-a-supported-start, finite-joining-tree-lifting, continuation-relative-to-a-class, generation-and-degeneration-at-two-grains, hexagram-world-laws, what-taking-all-excludes",
+  "sibling entries by digest: cx-zhishan-totalization-by-loss, cx-zhishan-failure-conditions-reflexivity, cx-zhishan-guardian-test, the entries citing the-work-by-its-own-laws and what-taking-all-excludes",
+  "searched only: the live account for Sen, Hegel, Heraclitus and river, Sextus and sceptic, V4 and Klein, burden, moratorium and pause, lock-in and new carrier, self-application and symmetry wording, Searle-style institutional terms"
+ ],
+ "live_flags": []
+}

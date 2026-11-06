@@ -1,0 +1,143 @@
+{
+ "share": "share-4",
+ "verdicts": [
+  {
+   "id": "cx-kpso-correlated-collapse",
+   "verdict": "holds",
+   "fix": null,
+   "why": "The source (README 'The reframe that does the most work', claims 47, 109) says parts sharing one dependency stop failing independently; 04's coupled-family law and 05's reviewer law state that form as checked theorems, scoped to the World and pure core. The selection-among-groups says omits its World standing, which the reading restores."
+  },
+  {
+   "id": "cx-zhishan-leviathan-concentration",
+   "verdict": "label",
+   "fix": {
+    "targets": [
+     {
+      "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#alignment-without-premise",
+      "says": {
+       "en": "Reading [AI reading, D45]: capability is a reason to pool, not to govern: read as reach, it extends what one's acts do and not thereby what couples into one, and a governing member's selection stays blind beyond its own closure, which the pool's union contains."
+      },
+      "role": "carries",
+      "part": "D45: pooling across intelligences"
+     },
+     {
+      "record": "what-pooled-coupling-reaches",
+      "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-what-pooled-coupling-reaches",
+      "says": {
+       "en": "A group's closure is the union of its members' closures; differences beyond the union stay unselected. World; balance for the gap."
+      },
+      "role": "neighbour"
+     },
+     {
+      "record": "alignment-approaches-under-the-selection-laws",
+      "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-alignment-approaches-under-the-selection-laws",
+      "says": {
+       "en": "Reading a system reaches no further than pooling with it (`Flow.withinCoupling_reads_iff`). Reviewed and scoped; a reading of alignment approaches on the selection laws."
+      },
+      "role": "carries"
+     },
+     {
+      "record": "reviewers-count-by-independent-causes",
+      "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-reviewers-count-by-independent-causes",
+      "says": {
+       "en": "Theorem (pure core; fault formulas and bounds supplied): reviewers count by independent causes, not names; moving two under one cause makes readiness fail while all names are kept."
+      },
+      "role": "carries"
+     }
+    ]
+   },
+   "why": "D45 at 07#alignment-without-premise should carry, not neighbour: 'capability is a reason to pool, not to govern ... a governing member's selection stays blind beyond its own closure' is the account's own sentence for claim 124's concentration foreclosing correction, and without it carried-in-part rests only on a reader's join of the reviewer and pooling laws. It is a different direction only from claim 168's verification, as the reading says."
+  },
+  {
+   "id": "cx-econ-schelling-commitment",
+   "verdict": "holds",
+   "fix": null,
+   "why": "08's known-results line and the what-would-give-c record's correspondence both credit Schelling (1960) for gaining by binding oneself toward another, and the record's does-not-show keeps the menu witness against reading C as more options better, open on courses. Memory against memory, the sense fits The Strategy of Conflict; the unwitnessed unilateral commitment is correctly left in source_adds."
+  },
+  {
+   "id": "cx-sspiral-frame-as-unit",
+   "verdict": "holds",
+   "fix": null,
+   "why": "The README's unit section and claims 18-24 make the frame one ranked, carried, mutating unit; GLOSSARY's ranking row states a ranking formed within the unfolding, and 03's informed-and-revalued reading keeps apart what the frame bundles, so carried-in-part with divergence stands. 'Narrative' is live only in FREE-ENERGY-PRINCIPLE.md row 60, as the reading says."
+  },
+  {
+   "id": "cx-ma-applicable-grounds",
+   "verdict": "holds",
+   "fix": null,
+   "why": "The source section says feasibility, adding no listed loss and the comparative reason are different judgments; the pending-task record states this at the same scope, its law 9 witness (safe_change_can_remove_comparative_warrant) separating protection from comparison. The record formalizes this very section, so the law descends from the source rather than standing apart from it."
+  },
+  {
+   "id": "cx-ctxrt-only-generating",
+   "verdict": "holds",
+   "fix": null,
+   "why": "Claims A.3, A.6 and C.24-25 make every moment a new immutable node, and the README glosses the epigraph as process ontology; 01's four marks make beginning and altering class-relative ('no mark stands by itself'), so the claim holds under identity and fails under the lineage class the source itself uses. The reading names the shift of reference in 生."
+  },
+  {
+   "id": "cx-modphil-marx-metabolic-rift",
+   "verdict": "holds",
+   "fix": null,
+   "why": "Memory against memory, the sense fits Capital I ch. 15 §10 and III ch. 47, with Foster's term marked as his. 02's Omitted.loses_own witness (World) has the form, a formation renewing over a region that omits a required condition losing its own support by its own draw, and the home's 'how a center represents the region is unmodelled' is kept."
+  },
+  {
+   "id": "cx-modphil-whitehead-objective-immortality",
+   "verdict": "holds",
+   "fix": null,
+   "why": "Memory against memory, perishing as subject and going on as datum is Process and Reality's; 07's «过亡而续» has the shape of ending under a finer class while continuing under a coarser one. The reading states where the form is thin (only some effects, ending no condition of efficacy, no universal prehension), so agreement of reading, not law, is right."
+  },
+  {
+   "id": "cx-abr-aquinas-mixed-relation",
+   "verdict": "holds",
+   "fix": null,
+   "why": "Memory against memory, ST I q.13 a.7 and q.28 a.1 ad 3 hold creation real in the creature and only of reason in God, an argument that being is not exhausted by relating. 08's thesis names two live defeaters and no Aquinas, so fresh-reading and contrary-reading hold, with the one-way renewer rightly a neighbour."
+  },
+  {
+   "id": "cx-greek-plato-forms",
+   "verdict": "holds",
+   "fix": null,
+   "why": "Memory against memory, Timaeus 27d-28a and Republic VI 509b give being without becoming and the Good beyond being, a non-relational layer; 01's core, 08's 'what it forbids' and 08's law read sameness and law off the net, quoted faithfully with 'argued, not proved'. Divergence is the BRIEF's own case for a non-relational layer."
+  },
+  {
+   "id": "cx-jianwen-frames-cross-applicable",
+   "verdict": "holds",
+   "fix": null,
+   "why": "Claim 118 and own words 44 state all articulations cross-applicable universally; 06 §5.7's lumping law and table (錯綜 carry 互, not 消息) and 01's shared laws proved per model give transfer only along a carrying map, which is scope. No live text joins frames-as-articulations to these, so fresh-reading stands."
+  },
+  {
+   "id": "cx-greek-socrates-knowing-scope",
+   "verdict": "holds",
+   "fix": null,
+   "why": "The Apology reading stands only in the study CORE-CONSTRAINT-AND-WISDOM.md (line 223), and Socrates is not named live; the 03 明 reading's 'situational awareness is 明 of one's own reach' came from D45 in DELEGATED-CHOICES, not from that study, and concerns what one's acts reach. So history-only with neighbour targets and a declared structural reading is right."
+  },
+  {
+   "id": "cx-syscyb-holling-adaptive-cycle",
+   "verdict": "holds",
+   "fix": null,
+   "why": "Searching the live account for adaptive cycle, Holling, panarchy, resilience, connectedness, brittle, rigidity, creative destruction, stored potential, regime shift, tipping, shock and succession found no phase sequence, no connectedness-resilience trade and no release enabling reorganization. 02's basins and 'no universal phase threshold' and 05's four routes stand as the reading says."
+  }
+ ],
+ "read": [
+  "theories/keep-the-possibility-space-open/README.md: The argument (compounding axis, the reframe), claims C.34-62, G.109-145, 229-230",
+  "theories/zhishan-intelligence-must-be-good/README.md: Why the position is planetary technology, claims 124-126, 168, 187",
+  "theories/selfishness-spiral-and-narrative-value-frames/README.md: the one-paragraph theory, The unit, claims C.18-36",
+  "theories/meta-attractor/COLLECTIVE-DESTRUCTIVE-ATTRACTORS.md: Revising a task already in progress; Applicable grounds and supported continuation",
+  "theories/context-as-existence-runtimes/README.md: The inversion, claims A.1-16, C.24-33, lost items 12-13, the becoming relation",
+  "theories/jian-and-wenyan-as-formal-language/README.md: claims 117-120, own words 44",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/CORE-CONSTRAINT-AND-WISDOM.md lines 1-22, 220-226",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/DELEGATED-CHOICES.md line 306 (D45, situational awareness)",
+  "theories/becoming/chapters/04-LIFE.md#r-selection-among-groups-by-ending, #r-groups-whose-conditions-are-coupled and the note after",
+  "theories/becoming/chapters/05-COLLECTIVES.md#r-reviewers-count-by-independent-causes, line 442 (ends conjecture), line 360 (four routes)",
+  "theories/becoming/chapters/07-SIGNIFICANCE.md#alignment-without-premise (whole §6 to the D68 readings), #r-alignment-approaches-under-the-selection-laws, #evaluation, #what-forms-and-what-is-supplied, #r-reach-past-ones-own-end, the protocol table with #r-pending-task-context-applicability",
+  "theories/becoming/chapters/08-METHOD.md#beyond-the-table, #one-relational-unfolding, #law, §1 the start",
+  "theories/becoming/chapters/03-KNOWING.md#r-a-reading-informed-and-revalued, #r-selection-through-couplings, the 明 reading at line 99, #r-claims-shown-in-context",
+  "theories/becoming/chapters/01-ROOT.md opening thesis, #four-marks, #constancy-and-core, #r-shared-laws-on-the-grammar, #open",
+  "theories/becoming/chapters/02-MAP.md#r-represented-boundary-against-dependence, line 70 (basins), line 357, line 465",
+  "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#yi-readings with its table",
+  "theories/becoming/results/records/what-would-give-c.md (laws, conditions, does not show, evidence, correspondence)",
+  "theories/becoming/results/records/pending-task-context-applicability.md (laws, conditions, does not show)",
+  "theories/becoming/results/records/represented-boundary-against-dependence.md laws 1-6",
+  "GLOSSARY.md ranking, order row",
+  "theories/becoming/FREE-ENERGY-PRINCIPLE.md row 60; theories/becoming/history/PLURAL-SYSTEMS-AND-CORRECTION.md lines 44-50 (searched hits)",
+  "Searched the live account for: correlated, Leviathan, Hobbes, concentrat, narrative, Socrat, Aquinas, Whitehead, perishing, Marx, Plato, adaptive cycle, Holling, panarch, resilien, reorgani, connectedness, brittle, rigidity, creative destruction, stored potential, regime shift, tipping, critical slowing, succession, freed, shock"
+ ],
+ "live_flags": []
+}

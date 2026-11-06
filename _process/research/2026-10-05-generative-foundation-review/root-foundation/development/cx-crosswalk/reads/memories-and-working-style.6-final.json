@@ -1,0 +1,2948 @@
+{
+ "group": {
+  "id": "memories-and-working-style",
+  "domain": "earlier-folders",
+  "title": {
+   "en": "Memories and working style: how the work was made, and what only the memories record"
+  },
+  "kind": "method",
+  "summary": {
+   "en": "Method and provenance, not an independent theory: a discipline of thought and writing, and a salvage list of projects known only through memory files. Only method claims are mapped, through the README's and synthesis's paraphrase. Part of the discipline is stated in the account's method chapter, some under other names (what a summary keeps, sycophancy as selection). Those agreements are with method sections, not laws, and the two grew in one line of work, not traced here, so they are not independent support; one checked law has a like form, on type formation. Other links are readings proposed here. Divergence was looked for and is large: one owned premise against two; no one root against one root; no numbered creeds against tables of names; frame-diagnosis against answering what an objection says; value words recast into systems terms against a definition carrying no warrant."
+  },
+  "read": [
+   "theories/memories-and-working-style/README.md, in full",
+   "theories/memories-and-working-style/synthesis-all.md: §1 B, C, D and E (claims 53-142), claims 32, 33 and 39, §2 to its paragraph on counterexamples, §5, §6, §7, §8, §9",
+   "theories/becoming/ONE-PAGE.md, in full",
+   "theories/becoming/chapters/08-METHOD.md: opening and §1 in full; §2 to the table of words, the table's rows cut at 900 characters; the summary law; the premise card's opening; §6's opening; §7's opening, table and standings on the edge; §8's verdict and table, rows cut at 900 characters; §9 with long lines cut at 2,300 characters; §10, §11, §12 to the end and what it does not show, in full",
+   "theories/becoming/chapters/07-SIGNIFICANCE.md, long lines cut: where the possible grows, §4's opening and table, what would give C's order (its opening and routes), §6's opening, the assessment of pipelines, the routes of 明 and the reading on pooling, T4 and T8, the opening of what a course keeps reachable, what it does not show",
+   "theories/becoming/chapters/06-CLASSICAL-TEXTS.md: the thesis and labels, the assessment of 《中华思想脉络》 with its paragraph on three reads, §7.3 through both counts of fidelity and their reading",
+   "theories/becoming/chapters/03-KNOWING.md, the opening of each: selection through couplings, readings within what they read, scientific standing",
+   "theories/becoming/chapters/02-MAP.md, long lines cut: the merge law's first part, the recorder theorem and its two readings, the row on forgetting, T7's opening, frozen test and reading",
+   "theories/becoming/chapters/05-COLLECTIVES.md, long lines cut: relative position, the reading on the proxy problem, re-optimizing above a renewal, what pooled coupling reaches, the reading on a shared interface",
+   "theories/becoming/chapters/01-ROOT.md: the definition of a class and its reading",
+   "theories/becoming/COLLECTIVE-DIRECTION.md: its header, the answer in brief, §1, §6, §7, §8",
+   "theories/becoming/ONE-ARGUMENT.md: its header; theories/becoming/review/README.md: to 'What is asked'; GLOSSARY.md: its opening and the rows on generation, widening, C, 生生 and standing",
+   "theories/becoming/ONE-PAGE.zh.md, its opening paragraphs only",
+   "theories/becoming/results/records: hypotheses and does_not_show, cut to 300 and 600 characters, of what-a-summary-keeps, coupling-closures-of-training-pipelines and what-would-give-c; one change-log line of becoming-spine-instances",
+   "For the labels of this file: 02's recorder theorem and its readings; 05 §10's last reading and the paragraph before it; 08 §6 to the theorem on type formation; 08's reading of the work by its own laws; 06's paragraph on its restatement's standing; each cited record's status and kind"
+  ],
+  "skimmed": [
+   "theories/memories-and-working-style/synthesis-all.md: the rest, by headings; §1 A, §3 and §4 not read beyond the claims named",
+   "Earlier reads of this item's entries: read through as lists of claims to refute, not as evidence. Targets were read after what would give C's order landed on 6 November"
+  ],
+  "searched": [
+   "fronts, chapters, review README and glossary, by mechanism, with counts of hits, read only where an entry cites them: Western (0), 'possibility space' (0), 'close the world' (0), 'conditions of becoming' (0), sycophan- (1), mirror (15, none of a collaborator in those seen), floor (52, other senses in those seen), deadline (17), hierarch- (6), lock-in (2), plural (1), 'in tension' (0), compress (1), totali- (2, 'totality'), closing (28), reversib- (10), ratchet (3, a law on rules), machinery, scaffold, checklist, ceremon-, bureaucr-, dogma, creed, slogan, manifesto, aphorism, 格言, 压缩, 壓縮, breathe, armour, hostile, apparatus, 'rule stack', 'reduce to one', legacy, alias, sorry, motivated, paternal, legib- (all 0); governance (2) and reductionis- (1), other subjects; 'post hoc' (17) and 'first worded' only as cited",
+   "fronts' main files and chapters: battery, 'full build', 'machine time', 'build cost', 'token spend', laptop (one hit: a 'finite battery of tests' in a calibration in 03, another subject); 08 and the fronts: alive (none); chapters and review README: 'reading test', 'reading trial', 阅读试验 (06 only: not run)",
+   "records' Markdown: sorry (one file, reporting none). 'better argument', 'best response' and 'register' rest on one earlier search of this crosswalk, not repeated"
+  ],
+  "not_mapped": [
+   {
+    "en": "The primary memory files the README cites under sources/13-claude-memories.",
+    "why": "Not read here. Every entry reads the README's and the synthesis's account of them; the README warns that these are mostly an assistant's paraphrase."
+   },
+   {
+    "en": "The theory-bearing statements of synthesis §1A-B, §8's enforcement antinomy and sincere predator, the root being cognitive, and the README's 'Frameworks recorded only in memory' (the Fork, selection on cognition, variety, relational self, 大同, narrative attractors, cooperative infrastructure).",
+    "why": "Substantive and belonging to their own folders' reads; here they are a record that they exist, and mapping them would duplicate those reads."
+   },
+   {
+    "en": "The SSBX and Wen Lean sprint: squaring tower, 元/爻 duality, operation monism, the conditional UG claim, the RH path closure, 人类命运共同体 on Bool³.",
+    "why": "Claims of a formal programme recorded here by date; they belong to the jian and wenyan folder. Only two method claims from it are mapped."
+   },
+   {
+    "en": "Designs and products: ember, GTC, Bonfire, Manifold, the server runtime, Nomad OS, 706, the hardware line, obji, OpenClaw identity files; and the heuristic that a unifying surface replace what it supersedes.",
+    "why": "Designs and products, not claims of the account; their concepts belong to the runtime, substrate and cooperative folders."
+   },
+   {
+    "en": "Recovery instructions, the timeline table, and the sheng oral record with its poem family.",
+    "why": "Provenance and archival practice, not claims. Recovery is work for the repository, not a statement about the world or the method."
+   },
+   {
+    "en": "Personal and third-party material in the record.",
+    "why": "Excluded for this folder, and none of it is a method claim. Not reproduced, not paraphrased, not listed."
+   },
+   {
+    "en": "Writing practices: prose that breathes, the essay register, the 'scientist would recognize this' bar, set direction and not engineering, the three standing review questions, rewrite rather than revise, the bilingual notation ruling, the better-example criteria.",
+    "why": "Practices of drafting with no claim the account could state or refuse; where one carries an argument (aphorism as compression, defensive revision, writing for the reader, numbered creeds, slogans) it has an entry or a clause in one."
+   },
+   {
+    "en": "Collaboration practices: thinking partner before implementer, no clarifying questions, research-collaborator mode, git verbs and delegation lanes, fan-out wrong-worktree writes, restating the prompt as a repair, measure before optimizing, the ten-dimension analysis grid.",
+    "why": "Working arrangements for sessions, some now in AGENTS.md or memory files. They are not claims the account would take up."
+   }
+  ],
+  "coverage": null
+ },
+ "entries": [
+  {
+   "id": "cx-memories-method-is-the-commitment",
+   "name": {
+    "en": "The method is the commitment applied to the writing; the medium must not contradict the message"
+   },
+   "domain": "earlier-folders",
+   "group": "memories-and-working-style",
+   "source": {
+    "work": "theories/memories-and-working-style/README.md",
+    "locator": "Opening; On thinking, 'Never reduce to one root'; Reflexes, opening",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "The folder's own thesis: one substantive commitment and one method commitment are the same thing, the second being the first applied to the writing. Each recurring failure of a collaborator is the diagnosed dynamic reproducing itself inside the collaboration, so a lossy edit is the same error the theory names."
+   },
+   "quote": "the medium contradicting the message",
+   "carried": "carried-in-part",
+   "relation": "scope",
+   "agreement_of": null,
+   "reading": {
+    "en": "The account also turns on itself: its laws are read on the work that states them, selection's reach on its checks and, by analogy, joint excess on its people's attention and endless generation on its completion, its nearest to the medium not contradicting the message. All are labelled readings. It does not make method and ethics one: nonduality is a requirement of method and proves no ethical necessity, and no law evaluates a lapse as the disease at work. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#the-work-by-its-own-laws",
+     "says": {
+      "en": "[AI reading, D66] The laws apply to the work that states them. Its parallel lines each draw on the attention of the people who carry it; the work is not a flow, and that law is used only by analogy. Completion is not closure, also only by analogy: an account of an unfolding that keeps generating is not finished by sealing it; one reading of completion has the work's own making readable as a case of the central laws."
+     },
+     "role": "carries",
+     "part": "D66"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#beginning-within-the-one-unfolding",
+     "says": {
+      "en": "Knowing, modelling and criticizing happen inside the unfolding, so their adequacy is part of the inquiry. Nonduality is a requirement of method; it proves neither the ontology nor an ethical necessity."
+     },
+     "role": "limit"
+    }
+   ],
+   "account_adds": {
+    "en": "What each reading of the work rests on, and that a clean run of its checks is completion in a qualified sense only."
+   },
+   "source_adds": {
+    "en": "That method and substantive commitment are one commitment, and that each failure is the diagnosed dynamic, which the synthesis calls the cluster's thesis. The account reads a law on its own making without calling that law's course a failure."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-memories-cycle-of-correction",
+   "name": {
+    "en": "The research cycle: raw note, delegated elaboration, synthesis prompt, correction on a named ground"
+   },
+   "domain": "earlier-folders",
+   "group": "memories-and-working-style",
+   "source": {
+    "work": "theories/memories-and-working-style/README.md",
+    "locator": "Working method; synthesis-all.md §5 and §8",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Work moves in a four-move cycle whatever the object: a raw note marking its own holes, machine elaboration read as a reviewer, a synthesis prompt demanding rigour, and rejection on a named ground, where almost all the signal lies. Of thirteen formulations of one principle the README says each step changed what makes it defensible, not what is held true, so rejected versions are worth as much as the survivor."
+   },
+   "quote": "Nothing in that sequence is a change of mind about *what* is true.",
+   "carried": "changed",
+   "relation": "divergence",
+   "agreement_of": null,
+   "reading": {
+    "en": "The account keeps rejected forms too: T2's row records each restatement and narrowing beside its failure. But a frozen test, specified without the verdict, moves a thesis there, and a narrowing changes what is claimed. The source's own review charged conclusions settled first with vocabularies cycled underneath, judged to land halfway; and its sequence demoted reversibility, a change of claim, so the sentence quoted overstates. The live text keeps no cycle of drafts. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#an-investigation",
+     "says": {
+      "en": "An investigation proceeds in an order that can be revised, including defining the specification without reference to the verdict. A report classes each gap: a relation omitted, an explanation not yet given, or evidence against a stated claim."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#theses",
+     "says": {
+      "en": "A failure stays recorded beside the thesis. T2's row: its former wording failed in beetle cultures (UE31b), so it was narrowed on 6 November 2026, no completed verdict changing. T2 is conjectured."
+     },
+     "role": "carries",
+     "part": "T2's row"
+    }
+   ],
+   "account_adds": {
+    "en": "An order in which the specification comes before the verdict, a three-way classing of gaps, and a thesis that can be moved by a test."
+   },
+   "source_adds": {
+    "en": "The rejected formulation as the unit of evidence, and the claim that a sequence of rejections changes ground and not belief."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-memories-acceptance-tests",
+   "name": {
+    "en": "The first test is coherence, and the target is a text impossible to dismiss"
+   },
+   "domain": "earlier-folders",
+   "group": "memories-and-working-style",
+   "source": {
+    "work": "theories/memories-and-working-style/README.md",
+    "locator": "Working method, elaboration and synthesis prompt",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "An elaboration is gated first by whether it connects with what its author already thinks, not by novelty; a synthesis is accepted when it is compelling, precise and impossible to dismiss, going beyond the original depth."
+   },
+   "quote": "impossible to dismiss",
+   "carried": "changed",
+   "relation": "divergence",
+   "agreement_of": null,
+   "reading": {
+    "en": "The account's stated criteria differ: what a claim excludes, kept apart from how far it is established, and a verdict on its central results against prior work, a test of novelty the source does not apply first. No line of descent is asserted. Fit does enter, for readings only: decided by argument and fit within the account, not with a thinker's prior view, changing no theorem. The source's later falsifiers (see that entry) are nearer the account. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#theses",
+     "says": {
+      "en": "A theory of the world is judged by what it forbids. Strength is the observations a claim excludes; standing is how far it is established; the two are kept apart."
+     },
+     "role": "carries",
+     "part": "the opening on strength and standing"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#known-results",
+     "says": {
+      "en": "None of the central results is new mathematics: each is near-definitional or a known result restated. The verdicts come from an AI review, and the search was not exhaustive."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#readings-adopted",
+     "says": {
+      "en": "The readings stand as one account; where two did not fit, the account decided between them. They change no theorem and add no premise."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "A verdict against itself, stated at the front, and a column of what prior frameworks state that the account does not yet."
+   },
+   "source_adds": {
+    "en": "That coherence with a thinker's prior view is a useful first gate, and 'impossible to dismiss' as a target. Neither is stated."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-memories-check-provenance",
+   "name": {
+    "en": "Check provenance, including your own"
+   },
+   "domain": "earlier-folders",
+   "group": "memories-and-working-style",
+   "source": {
+    "work": "theories/memories-and-working-style/README.md",
+    "locator": "The discipline he holds, On thinking",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Ask of a term or an insight, your collaborator's or your own, whether it was invented here or stands elsewhere first: the same reflex pointed two ways. The README says it later became the claim-status ledger."
+   },
+   "quote": "Check provenance, including your own.",
+   "carried": "carried-in-part",
+   "relation": "agreement",
+   "agreement_of": "thesis-or-method",
+   "reading": {
+    "en": "§8 asks this of the central results: each set against its closest prior result, with a verdict and a column of what the prior work has and the account lacks; the check is an AI review, not exhaustive, and says so. Of names, 06 reports how many are new or unchecked. Other terms and single insights get no such check, so the source's scope is wider. A shared practice, not a law. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#known-results",
+     "says": {
+      "en": "Each central result has its closest prior result and a verdict (near-definitional, restated, new as an artefact), from an AI review of the literature it knew; the search was not exhaustive."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#zhonghua",
+     "says": {
+      "en": "Of 449 names, 248 carry a citation; of the 201 without, 105 are new combinations of old characters, a convention of this edition, and 96 are marked old or compound names whose pre-Qin use was not checked."
+     },
+     "role": "carries",
+     "part": "the count of names"
+    }
+   ],
+   "account_adds": {
+    "en": "A table, a verdict for each row, readers who searched to refute the column, and dated limits that lapse when the account states the result."
+   },
+   "source_adds": {
+    "en": "The same question of every term and insight as it appears, one's own included; and that it grew into a status ledger, which sorts standing and not origin."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-memories-paraphrase-provenance",
+   "name": {
+    "en": "Every substantive item here is an assistant's paraphrase, unless in quotation marks"
+   },
+   "domain": "earlier-folders",
+   "group": "memories-and-working-style",
+   "source": {
+    "work": "theories/memories-and-working-style/README.md",
+    "locator": "Sources, provenance warning",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Memory files are written to be useful in a later session, not faithful to phrasing, and the two exports are machine summaries of summaries. So nothing from them is quoted as the author's wording unless it stands in quotation marks in the source, and the sources list tags each file by who drafted it."
+   },
+   "quote": "Provenance warning that applies to everything below.",
+   "carried": "carried-in-part",
+   "relation": "agreement",
+   "agreement_of": "thesis-or-method",
+   "reading": {
+    "en": "The mechanism carried is the label on who made a text or reading and from what: AI readings are marked, literature from the AI's knowledge says so, fronts open 'AI-written', no human review. For a person's words a rule is stated: terms keep their wording where quoted, with source, and a first-person text revised in place names each revised passage, its own last text kept in history. Summaries of a person are not addressed. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#no-reading-open",
+     "says": {
+      "en": "The first-person body of OPENING is revised in place, a note at its top naming each passage revised since its author's own last text, which is kept verbatim in history. The author's terms keep the author's wording where quoted, with their source, and are read like any reading."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#what-the-unifications-claim",
+     "says": {
+      "en": "The literature here is from the AI's knowledge unless a linked check read it."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md",
+     "says": {
+      "en": "The chapter's readings are all AI readings; the source text is evidence of a word's sense, and a quotation is no ground for a claim."
+     },
+     "role": "neighbour"
+    },
+    {
+     "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md",
+     "says": {
+      "en": "AI-written, 29 October 2026. No human has reviewed it. It adds no result: every law it names is stated once, in the home section it links, and it says no more than that statement."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "A numbered register of readings, and the label on each."
+   },
+   "source_adds": {
+    "en": "The warning about machine summaries of summaries, and the rule of quoting a person only from what stands in quotation marks. Neither is in the live account."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-memories-never-one-root",
+   "name": {
+    "en": "Never reduce to one root"
+   },
+   "domain": "earlier-folders",
+   "group": "memories-and-working-style",
+   "source": {
+    "work": "theories/memories-and-working-style/README.md",
+    "locator": "The discipline he holds, On thinking",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Called the most important rule in the file: finding the one root and folding everything into it is reductionism performed on the thinking itself. Only a plurality of principles held in tension, each partial and none crowned, can approach adequacy; 'keep them plural' is itself one voice."
+   },
+   "quote": "Never reduce to one root.",
+   "carried": "changed",
+   "relation": "divergence",
+   "agreement_of": null,
+   "reading": {
+    "en": "The account has one grammar, begins from one relational unfolding, the nearest of its words to the interbeing the source demoted to one voice, and states as its target one unified, complete, enclosed theory. It meets the worry elsewhere: root laws forbid no relation, the class is left free, one unfolding is an argued thesis, a root diagram an aid a branch can revise, and 99 of 117 central declarations stand at a named distance. It holds no principles in tension. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#open-programme",
+     "says": {
+      "en": "The target: one unified, complete, enclosed theory with zero axioms, meaning no substantive axiom. The necessity is a target, not an axiom, and no impossibility is claimed."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "one-root-to-its-edge",
+     "anchor": "theories/becoming/chapters/08-METHOD.md#r-one-root-to-its-edge",
+     "says": {
+      "en": "Of 117 central declarations, eleven are derived as cases of grammar laws, one under a stated hypothesis, six are counting, and 99 stand at a named distance, each with its reason. None is a premise; the continuation condition for scope and C for order are listed apart and neither stands on the edge."
+     },
+     "role": "neighbour"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#shared-laws-and-connectivity",
+     "says": {
+      "en": "A shared law states a mechanism many central results share; the name ranks no law above another and rules nothing."
+     },
+     "role": "neighbour"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#beginning-within-the-one-unfolding",
+     "says": {
+      "en": "The account begins from one relational unfolding. A finding in a branch can show a limit of the central account's current articulation and require its revision. A diagram with a root and descendants is an aid, not a finished foundation with applications attached."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/01-ROOT.md#class-and-continuation",
+     "says": {
+      "en": "Definition. A class is a reflexive, symmetric and transitive relation. Reading [AI reading, D69]: 'the class is plural', the 墨经 naming four samenesses, each a class once its respect is fixed. Plural kinds of sameness, not plural principles."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "A measured edge: how far one root reaches, row by row, and which distances have reasons."
+   },
+   "source_adds": {
+    "en": "That adequacy needs several principles held in tension and that unifying is itself the error. The account takes unification as its target, and its live defeaters of the one-unfolding thesis do not include this objection."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-memories-one-model-smaller",
+   "name": {
+    "en": "One principle is one model, and one model is smaller than reality"
+   },
+   "domain": "earlier-folders",
+   "group": "memories-and-working-style",
+   "source": {
+    "work": "theories/memories-and-working-style/README.md",
+    "locator": "The discipline he holds, On thinking, 'Never reduce to one root'",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "The argument behind plurality: any single principle is a model, any model is necessarily smaller than what it models, so no single formulation can be adequate, and a plurality can approach adequacy."
+   },
+   "quote": "one principle is one model, and one model is necessarily smaller than reality",
+   "carried": "carried-in-part",
+   "relation": "scope",
+   "agreement_of": null,
+   "reading": {
+    "en": "The account states the premise: a model represents selected relations. 'Smaller' has exact forms: a selection reaches only what couples into it, and a summary smaller than a history needs its own proof for each question. Plurality has one too: a pool reaches the union of its members' closures and no further, and reaching is not responding. Self-reading stands apart: the diagonal gap holds of a whole family. These concern couplings and maps; reading principles through them is mine. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#an-investigation",
+     "says": {
+      "en": "The process unfolds; the theory seeks to explain it; a model represents selected relations, and a model formed within the unfolding can take part in it."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "selection-through-couplings",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
+     "says": {
+      "en": "Theorem (World; no premise). Two histories are selected alike by every selection through a formation's couplings exactly when they are alike through them; the same for a group's pooled coupling. That an actual selection goes through the couplings is supplied, not derived."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "what-pooled-coupling-reaches",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-what-pooled-coupling-reaches",
+     "says": {
+      "en": "Theorem (World; balance for the gap). A group's closure is the union of its members' closures; with the members listed and coupling decided, some selection through the pool separates two histories exactly when some member does not couple them alike. Differences beyond the union stay unselected."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "what-a-summary-keeps",
+     "anchor": "theories/becoming/chapters/08-METHOD.md#r-what-a-summary-keeps",
+     "says": {
+      "en": "Theorem (any process). A configuration can carry the relevant past; any smaller summary needs its own proof for the questions asked."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "readings-within-what-they-read",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-readings-within-what-they-read",
+     "says": {
+      "en": "Theorem (any type). Where a map moves every value, no member of a family of readings indexed by what it reads says the diagonal gap; completing it step by step is an unfolding incomplete at every step that never returns. Coding and provability are not stated."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "The hypotheses under which a gap exists, that a family is complete exactly where all values are equal (values compared decidedly, both types inhabited), and that a pool stays blind beyond the union."
+   },
+   "source_adds": {
+    "en": "That a plurality of principles held in tension approaches adequacy, and 'smaller than reality' as a general statement. No law here measures how near."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-memories-never-silently-drop",
+   "name": {
+    "en": "Never silently drop; propose the recovered plurality before replacing"
+   },
+   "domain": "earlier-folders",
+   "group": "memories-and-working-style",
+   "source": {
+    "work": "theories/memories-and-working-style/README.md",
+    "locator": "The discipline he holds, On thinking",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Old documents stay as the development record. What a consolidation dropped is recovered and goes to the owner for review before anything is written or replaced; every file says what earlier versions lost."
+   },
+   "quote": "Never silently drop; propose the recovered plurality before replacing.",
+   "carried": "carried-in-part",
+   "relation": "agreement",
+   "agreement_of": "thesis-or-method",
+   "reading": {
+    "en": "The account keeps failures and retired names beside the live statement, which is the keeping half. The review half does not stand there; AGENTS.md, outside the live account, decides what is not the owner's on argument without asking, so the procedure itself differs. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#theses",
+     "says": {
+      "en": "A thesis adds no theorem, a refutation removes none, and a failure stays recorded beside the thesis."
+     },
+     "role": "carries",
+     "part": "the opening: a failure stays recorded"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#retired-labels",
+     "says": {
+      "en": "Retired labels and names are explained once; two sweeps renamed Lean declarations and left statements and proofs unchanged, and older records and receipts are read through the tables."
+     },
+     "role": "carries"
+    }
+   ],
+   "account_adds": {
+    "en": "Failed tests stated beside each thesis at the front, with what they count against."
+   },
+   "source_adds": {
+    "en": "Recovered material goes to the owner for review before replacement, and each text carries what earlier versions lost. Neither is stated in the live account."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-memories-lossy-consolidation",
+   "name": {
+    "en": "Lossy consolidation: every update deletes something"
+   },
+   "domain": "earlier-folders",
+   "group": "memories-and-working-style",
+   "source": {
+    "work": "theories/memories-and-working-style/README.md",
+    "locator": "Reflexes he catches, 6. Lossy consolidation; and 4. Reduction to one root",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "A summarizing collaborator repeatedly loses what mattered, and a memory system whose files are rewritten in place guarantees it. A compressed text is not its author's position, and the warning applies to this whole corpus."
+   },
+   "quote": "every time you update you also delete something important",
+   "carried": "carried-in-part",
+   "relation": "scope",
+   "agreement_of": null,
+   "reading": {
+    "en": "Rewriting in place has the form of the merge laws: a recorder of bounded size does not keep its whole history and go on, and the account reads learners and archives as such recorders and forgetting as a merge, a correspondence. The source's files lose by rewriting, not by a bound, so the law reaches only the bounded case. Which loss matters has a form too: a smaller summary needs its own proof for each question. Nothing is proved of texts. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "merge-of-a-part-kept-by-the-rest",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-merge-of-a-part-kept-by-the-rest",
+     "says": {
+      "en": "Theorem (any type). Within finitely many configurations a law merges nothing exactly where every configuration returns; a kept history never returns, so no list holds its course: a recorder of bounded size does not keep its whole history and go on. Reading [AI reading, D65]: learners, archives and genomes are such recorders."
+     },
+     "role": "carries",
+     "part": "the recorder theorem and D65"
+    },
+    {
+     "record": "returning-novelty-forgetting-on-levels",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-returning-novelty-forgetting-on-levels",
+     "says": {
+      "en": "On the levels alone: a bounded family exchanged with arbitrarily late carries neither the count of its exchanges nor a finite whole (`World.forgets_of_bounded`)."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "what-a-summary-keeps",
+     "anchor": "theories/becoming/chapters/08-METHOD.md#r-what-a-summary-keeps",
+     "says": {
+      "en": "Theorem (any process). Map a detailed process onto a summary: any smaller summary needs its own proof for the questions asked, and the access relations that can still form limit what a current abstraction may forget."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#what-the-unifications-claim",
+     "says": {
+      "en": "Landauer's and Bennett's irreversibility: one merge across computation, heat, extinction and forgetting. The law is proved for determined maps on finitely many listed configurations; its reading across these is a correspondence."
+     },
+     "role": "neighbour",
+     "part": "D65's row on forgetting"
+    }
+   ],
+   "account_adds": {
+    "en": "When a map loses nothing, as an exact condition; and fronts that 'say no more than' the home they link, as COLLECTIVE-DIRECTION's header states of itself."
+   },
+   "source_adds": {
+    "en": "That loss is the standing failure of collaborators and memory systems, and that a compression must not be taken for the position. The live account has no such statement about its own text."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-memories-no-black-white-framing",
+   "name": {
+    "en": "Refuse 'it is not X, it is Y'; the cut itself is the habit"
+   },
+   "domain": "earlier-folders",
+   "group": "memories-and-working-style",
+   "source": {
+    "work": "theories/memories-and-working-style/README.md",
+    "locator": "The discipline he holds, On thinking; On writing, 'Affirmative over negation' (a); synthesis-all.md claim 76",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Framing by 'not this but that' looks at poles and not at relations. The fault lies in the reasoning process as well as its conclusions: splitting the world and siding with one pole is itself the totalizing habit, and it is laid to a Western lens. Keep negation only where the negation is the content."
+   },
+   "quote": "this is a black white framing",
+   "carried": "carried-in-part",
+   "relation": "scope",
+   "agreement_of": null,
+   "reading": {
+    "en": "The account keeps splits and requires each to state its basis and omissions. That narrows the source: a cut is permitted where its relation is reconstructed. The form the source refuses recurs in the live text ('Seeing is not valuing', 'Coupling is not compliance', the words table's 'Not' column), defensibly where the negation is the content, as its rule that a constructive negative stays negative requires. It lays no fault to a culture: no cultural origin validates or disqualifies a method. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#beginning-within-the-one-unfolding",
+     "says": {
+      "en": "Subject and object, actor and patient, fact and value are each drawn within the unfolding, along relations, together with what they leave out; before two terms are treated as independently given, the relation said to join them is reconstructed. Nonduality is a requirement of method and proves neither the ontology nor an ethical necessity."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#an-investigation",
+     "says": {
+      "en": "No cultural origin validates or disqualifies a method."
+     },
+     "role": "carries"
+    }
+   ],
+   "account_adds": {
+    "en": "A separate type or question asserts no fundamental separation, and a five-step test for claims of constitutive connection."
+   },
+   "source_adds": {
+    "en": "That the cutting is itself the totalizing habit, that it is a Western habit, and that the 'not X but Y' sentence form should be refused as a form."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-memories-means-not-ends",
+   "name": {
+    "en": "Structures are means, judged by one test: does it keep the future open or close it?"
+   },
+   "domain": "earlier-folders",
+   "group": "memories-and-working-style",
+   "source": {
+    "work": "theories/memories-and-working-style/README.md",
+    "locator": "On thinking, 'Refuse...'; synthesis-all.md claims 64 and 77",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "What follows from refusing the cut: hierarchy and status are not intrinsically bad, distribution is a means and not an end, and a plural world lets parts use different answers. Structure is judged by one test, and the disease is foreclosure, never strength or centralization as such."
+   },
+   "quote": "these are means, not ends",
+   "carried": "carried-in-part",
+   "relation": "scope",
+   "agreement_of": null,
+   "reading": {
+    "en": "The account judges no structure by label and gives the test exact forms: a fixed rule or institution whose moves a course makes from some step on does not keep the possible under it widening; and C never ranks a course closing what another admits above it. So openness belongs to how rules change, not to a structure chosen once. Ranking takes C for order and the condition for scope, neither asserted, warrant open; mixed cases, the hard ones, stay undecided. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "where-the-possible-grows",
+     "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#7-keeping-the-future-open",
+     "says": {
+      "en": "Theorem (any process; witnesses). Where every step from some step on is a move of a process, the possible under it does not keep widening. Reading [AI reading, D45]: openness is a property of how rules keep changing, not of any rule chosen once. Nothing here says which changes keep it widening, or that any actual collective can make them."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "widening-as-what-every-positive-weighting-ranks",
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-widening-as-what-every-positive-weighting-ranks",
+     "says": {
+      "en": "On level paths, a course closing something the other admits neither widens nor keeps it, so C never ranks it above (`Web.not_widens_of_closes`). C for order, the continuation condition for scope, neither asserted."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#10-markets",
+     "says": {
+      "en": "Reading [AI reading, D65; a historical correspondence, no theorem]. A reform is judged by who decides admission, comparison and correction next round, not by removing one named practice."
+     },
+     "role": "neighbour",
+     "part": "D65"
+    },
+    {
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
+     "says": {
+      "en": "The continuation condition fixes whose losses count and ranks nothing; C, widening what can form is better, ranks a course above every course it widens and does not rank mixed comparisons. Neither is asserted."
+     },
+     "role": "limit"
+    },
+    {
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#theses",
+     "says": {
+      "en": "T8, argued, under both premises. Forbids and refuted by: a mixed case argued better from every standpoint counting everything positively, with no further premise; a pure closing argued good for life."
+     },
+     "role": "neighbour",
+     "part": "T8"
+    }
+   ],
+   "account_adds": {
+    "en": "Where the comparison stops deciding: mixed comparisons are decided both ways by positive weightings. And that keeping the possible widening needs rules that change."
+   },
+   "source_adds": {
+    "en": "One test for every structure, unconditionally held; ends named outright beside it (non-domination, no capture, flourishing); the ruling that hierarchy and status are to be channelled and not denied; 'disease' as a word. The account's laws on position (rises total falls; position does not protect) rank nothing."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-memories-diagnosing-the-frame",
+   "name": {
+    "en": "Answering a claim by diagnosing its frame"
+   },
+   "domain": "earlier-folders",
+   "group": "memories-and-working-style",
+   "source": {
+    "work": "theories/memories-and-working-style/README.md",
+    "locator": "On thinking, 'Refuse...'; Reflexes, 2. Asymmetric scrutiny",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "A position can be faulted because its reasoning follows a frame, even if its answer is not wholly wrong. A collaborator's default, such as the premise of acceleration, can be traced to the narrative and training text that produced it, and inherited context can be named as the suspect."
+   },
+   "quote": "the reasoning process is itself flawed",
+   "carried": "changed",
+   "relation": "divergence",
+   "agreement_of": null,
+   "reading": {
+    "en": "08 refuses this move as an answer: that an objection presupposes separate entities or follows a tradition is a claim to show in the case. Its reason is a selection law: reading every objection as capture would take in none. The account does diagnose frames in its own words ('registers' presupposes a knower). The source's diagnosis may be true of a case, and is left to be shown there. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#beginning-within-the-one-unfolding",
+     "says": {
+      "en": "An objection is answered on what it says. That it presupposes separate entities, or follows a tradition or a thinker, is a claim to be shown in the case, not an answer to it; an account reading every objection as its objector's capture would take in no objection."
+     },
+     "role": "carries"
+    }
+   ],
+   "account_adds": {
+    "en": "The reason for refusing the move, read through selection through couplings."
+   },
+   "source_adds": {
+    "en": "Tracing a default to a dominant narrative in training text, as a working ground for rejecting it. The account has training laws (see the trained-defaults entry) and does not answer a claim by such a trace."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-memories-asymmetric-scrutiny",
+   "name": {
+    "en": "Asymmetric scrutiny of vocabulary"
+   },
+   "domain": "earlier-folders",
+   "group": "memories-and-working-style",
+   "source": {
+    "work": "theories/memories-and-working-style/README.md",
+    "locator": "Reflexes he catches, 2",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Default discourse lets Western terms travel as unmarked universals and flags non-Western ones as loaded. If a flag is warranted for one, it is warranted for the equivalent other, or for neither. Do not reproduce the asymmetry."
+   },
+   "quote": "Asymmetric scrutiny of non-Western vocabulary",
+   "carried": "carried-in-part",
+   "relation": "agreement",
+   "agreement_of": "thesis-or-method",
+   "reading": {
+    "en": "The account states the symmetry for methods and flags both sides in places: five market-word names, over-allocation as a field's frame, and 道, 仁 declined from the name table with reasons. It states no rule for vocabulary, so the link to terms is this reading's, and the source could press it: the name criterion prefers 'formal, scientific and systems words', a marked origin, and 仁 is declined as carrying value while 'better' stays, flagged as a named premise's free word. Instances seen; no term-by-term check. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#an-investigation",
+     "says": {
+      "en": "No cultural origin validates or disqualifies a method."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#names",
+     "says": {
+      "en": "Names are structural and exact: formal, scientific and systems words, not dualist, limited-scope, social or financial ones. Five declaration names keep market words, and each receipt lists them."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#zhonghua",
+     "says": {
+      "en": "37 characters are not adopted in the classical name table, each with a reason, such as 道 (as origin, a prior ground) and 仁 (carries value). Not adopting them does not exclude the texts they occur in."
+     },
+     "role": "carries",
+     "part": "the characters not adopted"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#known-results",
+     "says": {
+      "en": "A row's last column: Frank's race between positional and other goods (1985), over-allocation being that field's frame."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "A criterion for names that does not turn on a term's culture of origin."
+   },
+   "source_adds": {
+    "en": "The explicit rule for terms, flag both or neither, and the diagnosis that the asymmetry is a trained default. The fronts, chapters and glossary searched do not use the word Western."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-memories-mechanism-not-authorities",
+   "name": {
+    "en": "Ground in system dynamics, not in authorities"
+   },
+   "domain": "earlier-folders",
+   "group": "memories-and-working-style",
+   "source": {
+    "work": "theories/memories-and-working-style/README.md",
+    "locator": "The discipline he holds, On writing, first rule; synthesis-all.md claim 64",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Reason from feedback loops, attractors, leverage points and selection pressures, not from named or legitimated theories, even high-status ones, which are maps and not territory. A review caught the project importing a leverage hierarchy as an authority, against its own rule."
+   },
+   "quote": "Mechanism before conclusion; ground in system dynamics, not in authorities.",
+   "carried": "carried-in-part",
+   "relation": "scope",
+   "agreement_of": null,
+   "reading": {
+    "en": "The mechanism half is carried: the thesis of one unfolding is, in content, a demand to state the relation that carries what is cited, and no name or tradition settles a claim. The ban on working from named theories is not: the account sets every central result against named prior work, and reaches its verdict on itself that way. So a named result is prior art and a measure, not a warrant. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#one-relational-unfolding",
+     "says": {
+      "en": "Thesis (philosophical, argued). Its content is a demand on explanations: state the relation that carries what is cited, between which occurrences, where a law or a test can read it."
+     },
+     "role": "carries",
+     "part": "the thesis's content, a demand on explanations"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#an-investigation",
+     "says": {
+      "en": "Proofs check relations under a representation, empirical work tests realization and correspondence, and philosophy examines constitutive identities. No cultural origin validates or disqualifies a method."
+     },
+     "role": "neighbour"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#readings-adopted",
+     "says": {
+      "en": "Readings change no theorem and add no premise; who said a word is provenance and does not settle a reading."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#known-results",
+     "says": {
+      "en": "Each central result is set against its closest prior result, with what that result states and the account does not yet."
+     },
+     "role": "carries"
+    }
+   ],
+   "account_adds": {
+    "en": "Named theories as the measure of what is new, with a column of what they still state beyond the account."
+   },
+   "source_adds": {
+    "en": "Systems-theoretic reasoning as the required ground, and named theories to be left out of the reasoning."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-memories-sort-by-status",
+   "name": {
+    "en": "Sort by epistemic status"
+   },
+   "domain": "earlier-folders",
+   "group": "memories-and-working-style",
+   "source": {
+    "work": "theories/memories-and-working-style/README.md",
+    "locator": "The discipline he holds, On thinking",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "A foundation document is organized by what kind of claim each line is (observations, the trap, the one choice, what it requires, how we reason, unsolved, falsifiers), so that an is-ought smuggle has nowhere to hide. Every claim carries its own mechanism."
+   },
+   "quote": "Sort by epistemic status, and own the one place you cross from is to ought.",
+   "carried": "carried-in-part",
+   "relation": "agreement",
+   "agreement_of": "thesis-or-method",
+   "reading": {
+    "en": "The same discipline at a finer grain: one label on each result, four layers by standing, and evaluation entering only through named premises (the continuation condition for scope, C for order, neither asserted, warrant open), so every ethical result is Conditional. The categories differ: the source's are observation, choice and requirement; the account's are what proof or argument stands behind a line. A label states standing, not mechanism, so 'every claim carries its mechanism' is not what it marks. How many places cross is a separate entry. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#standings-and-bases",
+     "says": {
+      "en": "Every result statement opens with one bold label, and a proved result names its base: Definition, Theorem, Conditional, Calibration, Thesis, Reading, Assessment, Open."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#four-layers",
+     "says": {
+      "en": "Sorted by standing, the whole comes in four layers: with no premise; what each premise adds on the World model; where the dynamics stop deciding; evaluation for any significance."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#where-the-ethics-sits",
+     "says": {
+      "en": "The theory asserts no ethical axiom; the continuation condition fixes scope, C fixes order, and neither is asserted. Every ethical result is Conditional and names what it uses."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#open-programme",
+     "says": {
+      "en": "A richer description can correct the factual grounds of a judgment without establishing its standard. 'Good', 'harmful' or 'fitting' must not silently supply the conclusion they are meant to explain."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "Bases for proved results, and a table of labels used in every chapter."
+   },
+   "source_adds": {
+    "en": "One document ordered by kind of claim, so that the crossing shows in one place, and each line carrying its mechanism."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-memories-one-owned-premise",
+   "name": {
+    "en": "Exactly one owned premise, 'that it continue', with the rest derived"
+   },
+   "domain": "earlier-folders",
+   "group": "memories-and-working-style",
+   "source": {
+    "work": "theories/memories-and-working-style/README.md",
+    "locator": "The discipline he holds, On thinking; synthesis-all.md claim 87",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "The crossing from is to ought is owned once: that the generating of new forms go on, not end or freeze. Everything else, including plurality, care and non-foreclosure, is derived instrumentally from observed dynamics. Continuation means the process and not a state, so a frozen order that persists does not qualify."
+   },
+   "quote": "exactly one owned underivable premise",
+   "carried": "changed",
+   "relation": "divergence",
+   "agreement_of": null,
+   "reading": {
+    "en": "The account has two premises, neither asserted, warrant open: the continuation condition for scope, C for order. The first ranks nothing, and by T8 a wish that life go on does not give that the wider is better. Same word, different reference: the source's premise orders, nearer C and T8, and is owned as a choice, where T8 starts from what acting presupposes. Its process-not-state line has a form, generation against keeping, which the condition does not rank: a frozen order's continuation counts too. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
+     "says": {
+      "en": "The continuation condition fixes whose losses count and ranks nothing; C, widening what can form is better, ranks a course above every course it widens and not mixed comparisons. Neither is asserted. A ranking needs C or a premise in its place."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "premises-met-and-failed",
+     "anchor": "theories/becoming/chapters/08-METHOD.md#r-premises-met-and-failed",
+     "says": {
+      "en": "Theorem on the premises: no statement reading no order entails C at a datum where it holds, on a frame with an extension (`ReadsNoOrder.not_entails`), immediate since 'better' is free. It shows that a frame fixes no order."
+     },
+     "role": "neighbour"
+    },
+    {
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#does-not-show",
+     "says": {
+      "en": "The chapter does not show that the condition, C or the step of invariance is warranted, nor that the ethics derives from the condition."
+     },
+     "role": "limit"
+    },
+    {
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#theses",
+     "says": {
+      "en": "T8, argued; open, by 08's table: P2 and P4 of §4.6, the step of invariance and a reason for C. The stance starts from what acting presupposes, held de se, not from a wish that life go on. Such a wish motivates avoiding degeneration, which keeping excludes as well as generation does. Neither gives that the wider course is better: that is C's."
+     },
+     "role": "carries",
+     "part": "T8"
+    },
+    {
+     "record": "what-would-give-c",
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-would-give-c",
+     "says": {
+      "en": "Theorem and Conditional, on a finite listing. What would give C's order. This does not derive C from anything and gives no reason for it: each route rests on a premise reading an order."
+     },
+     "role": "limit"
+    },
+    {
+     "record": "generation-and-degeneration-at-two-grains",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-generation-and-degeneration-at-two-grains",
+     "says": {
+      "en": "Theorem (root). Generation (some branch renews without end), keeping (some branch goes on without renewal) and degeneration (every branch ends) are read on branches; degeneration excludes both; generation and keeping can hold at one point along different branches."
+     },
+     "role": "carries"
+    }
+   ],
+   "account_adds": {
+    "en": "Scope and order separated; the non-entailment; what self-concern alone ranks; where each route to C's order rests; further named premises for choices."
+   },
+   "source_adds": {
+    "en": "The aim that plurality and care follow as consequences of one premise with observed dynamics. The synthesis records this as an open judgment, under the source's own ban on reducing to one."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-memories-falsifiers",
+   "name": {
+    "en": "Falsifiers as the top defensibility move; a formulation wavable from either side is empty"
+   },
+   "domain": "earlier-folders",
+   "group": "memories-and-working-style",
+   "source": {
+    "work": "theories/memories-and-working-style/README.md",
+    "locator": "On thinking; Working method, correction",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "A document names what would change its mind, and its credibility rests on those falsifiers being un-gameable. 'Keep the possibility space open' was rejected because either side of any case could wave it."
+   },
+   "quote": "wavable from either side of any case",
+   "carried": "carried-in-part",
+   "relation": "agreement",
+   "agreement_of": "thesis-or-method",
+   "reading": {
+    "en": "Strength as content is the same test, made general and turned on the account's own claims: a thesis states its Forbids, a hypothesis forbidding nothing measurable was dropped, and 08 lists what would change the account. 'Wavable from either side' has a counterpart: C ranks only a course that widens another, and positive weightings decide mixed cases both ways (C for order, the condition for scope, neither asserted, warrant open). 'Un-gameable' becomes frozen rules, though a rule need not read its construct. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#theses",
+     "says": {
+      "en": "A theory of the world is judged by what it forbids. A frozen rule fixes how a verdict is scored before the data, not that the rule reads the construct the verdict names; where measures disagree with the rule's print, the disagreement is reported and the verdict not claimed."
+     },
+     "role": "carries",
+     "part": "the opening and the frozen-rule sentence"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#stronger-direction",
+     "says": {
+      "en": "The stronger direction hypothesis is dropped as a thesis because, as stated, it forbids nothing measurable."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#law",
+     "says": {
+      "en": "A law of the root holds of every carrier, relation and class, so it forbids no relation; a law with content is conditional and forbids through its hypotheses."
+     },
+     "role": "neighbour"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#open-programme",
+     "says": {
+      "en": "What would change the account: a becoming not representable by discrete steps and a local law with finite courses would extend the spine; a refuted lifting or a World premise that cannot be derived would change the root; a frozen test failing where a thesis forbids would move the thesis."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#1-a-direction-as-a-criterion",
+     "says": {
+      "en": "One course widens another exactly when every weighting positive on the listed items weighs it higher; a mixed comparison is decided both ways. The direction is a criterion, not a quantity to maximize, and says nothing where the comparison is mixed."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "What can show what wrong differs by kind of claim, and a premise cannot be shown wrong by the dynamics. By this measure its own one-unfolding thesis has no strength, which it says."
+   },
+   "source_adds": {
+    "en": "That a document's whole credibility rests on its falsifiers, where the account's premises and one-unfolding thesis stand outside that measure; and that no mechanism be asserted in a conclusion-favourable direction, the account's nearest being to say which tests a thesis was first worded after, as T3's row does."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-memories-qualification-at-claim",
+   "name": {
+    "en": "Carry each qualification to its point of claim"
+   },
+   "domain": "earlier-folders",
+   "group": "memories-and-working-style",
+   "source": {
+    "work": "theories/memories-and-working-style/README.md",
+    "locator": "The discipline he holds, On thinking",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "After a large adversarial review: no sentence may be rescued by another nearby, and at every contested line prefer the harder, more falsifiable, less self-serving wording."
+   },
+   "quote": "no sentence may be rescued by another sentence three lines away",
+   "carried": "carried-in-part",
+   "relation": "agreement",
+   "agreement_of": "thesis-or-method",
+   "reading": {
+    "en": "The rule for proved statements has this form: every hypothesis that changes what holds stays in the sentence, and quantifiers and constructive negatives keep their form. It is narrower than the source's, governing what the Lean proves. Fronts follow it in practice (the T7 row), and two say of themselves that they say no more than their homes; no live sentence states it of every contested line. The source's next rule pulls against it. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#standings-and-bases",
+     "says": {
+      "en": "A sentence states what the Lean proves, with its hypotheses, no stronger and no weaker: it keeps every hypothesis that changes what holds, keeps the quantifiers, writes 'exactly where' only for an iff, and keeps a constructive negative negative."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/ONE-ARGUMENT.md",
+     "says": {
+      "en": "It adds no result: every law it names is stated once, in the home section it links, and beyond applying those laws to the fishery it says no more of them."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "A checkable form of the rule for formal claims."
+   },
+   "source_adds": {
+    "en": "The rule for any contested line, not only formal ones, and the preference for the harder, less self-serving wording. In the repository it stands in AGENTS.md's rule on restating, outside the live account."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-memories-defensive-revision",
+   "name": {
+    "en": "Defensive revision: the draft that breathes and the draft that carries the armour"
+   },
+   "domain": "earlier-folders",
+   "group": "memories-and-working-style",
+   "source": {
+    "work": "theories/memories-and-working-style/README.md",
+    "locator": "Reflexes he catches, 5; On writing, 'Write for the readers'",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Of a manifesto's drafts: an audit patched line by line kills a text while making it more correct; the earlier version was ruled better though less correct. Each patch asks who falls into the hole: a real reader's hole stays with fewer words, a hostile citer's goes to a separate draft. The discipline is where a patch lands."
+   },
+   "quote": "who falls into this hole, a real reader or an imagined hostile citer?",
+   "carried": "changed",
+   "relation": "divergence",
+   "agreement_of": null,
+   "reading": {
+    "en": "The account's fronts keep qualifiers at the point of claim: ONE-PAGE's T7 row carries the failed bridge and the ties inside one cell. Its layers divide length, not armour from breath, and nothing routes a qualification by who would misuse it. The source spoke of a manifesto and the account is not one, so the clash is of genre as well as rule. The aim of a plain text stands beside this, unresolved. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/ONE-PAGE.md",
+     "says": {
+      "en": "The T7 row states the proved lock, the conjecture, that the bridge failed in one trained system and which case it counts against, that every frozen verdict passed, three by one tie, and that there is no field test."
+     },
+     "role": "carries",
+     "part": "the T7 row"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#the-work-by-its-own-laws",
+     "says": {
+      "en": "[AI reading, D66] One of three readings of completion is an account small and plain enough to be read, checked and continued outside the work's own selectors."
+     },
+     "role": "neighbour",
+     "part": "D66, the third reading of completion"
+    }
+   ],
+   "account_adds": {
+    "en": "No main-and-armour division: homes hold the full statement, and fronts restate with standings kept."
+   },
+   "source_adds": {
+    "en": "That a less correct version can be the better text, and that a text its reader cannot read fails whatever its correctness; the hostile-citer test; and that changing to a better example can delete many patches at once."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-memories-concision-editions",
+   "name": {
+    "en": "Concision without loss, resolved by two editions"
+   },
+   "domain": "earlier-folders",
+   "group": "memories-and-working-style",
+   "source": {
+    "work": "theories/memories-and-working-style/README.md",
+    "locator": "The discipline he holds, On writing",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Be as concise as possible without losing insight, and right on the meta level. When two of one's values really trade off, make a second artifact (complete and concise editions kept synchronized) and do not compromise inside the first."
+   },
+   "quote": "Concision without loss",
+   "carried": "fresh-reading",
+   "relation": "agreement",
+   "agreement_of": "reading",
+   "reading": {
+    "en": "No live text states the rule; read here, the second-artifact form appears as layers with stated reading times and a home for each statement. The layers are not synchronized twins: a front is shorter by restating chapters with standings kept, and its readers meet different depth, not every claim in a tight line. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/ONE-PAGE.md",
+     "says": {
+      "en": "The theory in one page, 'Eleven to fifteen minutes to read', linking the overview and the eight chapters."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "GLOSSARY.md",
+     "says": {
+      "en": "The words of the theory, each in one sense and with one home: the section of the chapter that defines it."
+     },
+     "role": "carries"
+    }
+   ],
+   "account_adds": {
+    "en": "One home per result and several fronts of stated length."
+   },
+   "source_adds": {
+    "en": "The rule that every claim survives in the concise edition, and a general resolution of value trade-offs by a second artifact. Neither is stated in the live account."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-memories-status-over-headline",
+   "name": {
+    "en": "The honest status document beats the headline"
+   },
+   "domain": "earlier-folders",
+   "group": "memories-and-working-style",
+   "source": {
+    "work": "theories/memories-and-working-style/README.md",
+    "locator": "The discipline he holds, On apparatus",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Headline theorem names read as stronger than their statements, so a ledger with a fixed vocabulary of statuses is the authority, consulted before quoting a README. Aspirational claims stay verbatim, because they state the final target, with only status annotations added."
+   },
+   "quote": "The honest status document beats the headline.",
+   "carried": "carried-in-part",
+   "relation": "agreement",
+   "agreement_of": "thesis-or-method",
+   "reading": {
+    "en": "The vocabulary of standings and the rule that a name is adopted only where the statement means exactly that do this work, and 336 declarations whose names stated a wrong meaning or collided were renamed. The target is kept as an Open target with what was reached and not. The account's labels replace a ledger's seven terms and are read in place, not consulted in a side document. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#names",
+     "says": {
+      "en": "A name is adopted only where the statement means exactly that, and it is given at claim time."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#retired-labels",
+     "says": {
+      "en": "On 20 October, 336 declarations whose names stated a wrong meaning or collided were renamed."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "theory-of-becoming-foundation",
+     "anchor": "theories/becoming/chapters/08-METHOD.md#r-theory-of-becoming-foundation",
+     "says": {
+      "en": "Open (target): the deductive necessity of becoming as a whole, with no added substantive axiom; what is reached in the formal part and what is not are listed. The necessity is the target, not an axiom."
+     },
+     "role": "carries"
+    }
+   ],
+   "account_adds": {
+    "en": "Status at the sentence, and a measure of how far central declarations reach the grammar."
+   },
+   "source_adds": {
+    "en": "One ledger as the authority, consulted before quoting a README; and the target kept word for word, where the account restates its target in its own terms."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-memories-vague-words",
+   "name": {
+    "en": "Attack vague words; a claim never exceeds its evidence"
+   },
+   "domain": "earlier-folders",
+   "group": "memories-and-working-style",
+   "source": {
+    "work": "theories/memories-and-working-style/README.md",
+    "locator": "The discipline he holds, On apparatus",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Asking what a word means collapsed an assurance lattice that turned out to be a total order over two different subjects, with a launderable middle value. Words colliding or lacking a referent are struck; one current word serves each concept."
+   },
+   "quote": "a claim never exceeds its evidence",
+   "carried": "carried-in-part",
+   "relation": "agreement",
+   "agreement_of": "thesis-or-method",
+   "reading": {
+    "en": "The words table with its 'Not' column applies one sense per word. Strength apart from standing neighbours the source's fault but is not it: it parts two measures of one claim, not two subjects. The source could press here: 'how far it is established' lines up proof, frozen test, conjecture and argument in one phrase. Same word, different use: that project struck 'standing', which the account keeps central. A discipline, no theorem. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#five-words",
+     "says": {
+      "en": "Every chapter uses these words in one sense each, with a table of sense and of what each word does not mean. 'Standing': the standing of a result (here); a level stands, comes to stand, ceases to stand (02)."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#theses",
+     "says": {
+      "en": "Strength is the observations a claim excludes; standing is how far it is established (proved under named premises, supported by frozen tests, conjectured, argued); the two are kept apart."
+     },
+     "role": "neighbour",
+     "part": "the opening on strength and standing"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#standings-and-bases",
+     "says": {
+      "en": "A sentence states what the Lean proves, with its hypotheses, no stronger and no weaker. A chapter opening's standing is that of the results it summarizes."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "derivation-soundness",
+     "anchor": "theories/becoming/chapters/08-METHOD.md#r-derivation-soundness",
+     "says": {
+      "en": "Theorem (any type; witness). A claim derived from a basis under local premises holds wherever the whole basis and the premises hold. Soundness supplies neither the truth of the basis nor any authority."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "A table of what each word is not, and a home for each."
+   },
+   "source_adds": {
+    "en": "Assurance computed as a minimum over evidence, in a ledger. The account's labels are read, not computed, and it states no such law of composition across claims of different kinds; soundness is its nearest, for derivation only."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-memories-handles-and-pinned-words",
+   "name": {
+    "en": "Concepts are handles, and coining a quotable term is a defect"
+   },
+   "domain": "earlier-folders",
+   "group": "memories-and-working-style",
+   "source": {
+    "work": "theories/memories-and-working-style/README.md",
+    "locator": "On writing, 'Concepts are handles'",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "A text lives when its concepts appear as descriptions inside moving sentences and not as quotable terms; the discipline lives in the act of writing and not in a rule book, and a coined term is a defect, not an achievement. Said of one manifesto's English draft."
+   },
+   "quote": "Concepts are handles, not sacred vocabulary.",
+   "carried": "changed",
+   "relation": "divergence",
+   "agreement_of": null,
+   "reading": {
+    "en": "The account goes the other way, for checkability: one sense per word with one home, and a classical name table of one name to a concept, each stating what it does not carry, 105 of 449 newly combined. It agrees on one point: those names are a code formed among users, not a recovered meaning. Its reason is exactness of reference, the source's that a text stay alive; I found no weighing of the two. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#five-words",
+     "says": {
+      "en": "Every chapter uses these words in one sense each."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#zhonghua",
+     "says": {
+      "en": "Definition (convention) [AI reading, D62]. The name table keeps one name to a concept and one concept to a name, and each name states what it does not carry; of 449 names, 105 are new combinations of old characters."
+     },
+     "role": "carries",
+     "part": "the name table"
+    },
+    {
+     "record": "civilization-thought-on-the-spine",
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-civilization-thought-on-the-spine",
+     "says": {
+      "en": "Assessment. The names are a code formed among the theory's users, bound by the senses seen, not a meaning recovered from history."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "A home for each word and a table by which it can be checked."
+   },
+   "source_adds": {
+    "en": "That coined terms and rule books deaden a text, rule accumulation itself being the source of stiffness. The account coins many terms; whether it reads as alive has not been tested with readers."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-memories-words-mental-frame",
+   "name": {
+    "en": "Words are the mental frame: names change when what they name turns out different"
+   },
+   "domain": "earlier-folders",
+   "group": "memories-and-working-style",
+   "source": {
+    "work": "theories/memories-and-working-style/README.md",
+    "locator": "On apparatus, 'Words are the mental frame'",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "In code, behaviour-preservation may pin what consumers observe, never identifiers or prose. Renames are in scope by default, one current word serves each concept, and names are revised when the structure they name turns out to be different."
+   },
+   "quote": "Words are the mental frame, so never pin words.",
+   "carried": "carried-in-part",
+   "relation": "agreement",
+   "agreement_of": "thesis-or-method",
+   "reading": {
+    "en": "That a word carries a frame is carried, with cases: 'registers' presupposes a knower and 'master law' states rank, and both were replaced. A name whose structure turned out different states a wrong meaning, so that condition is shared too. The default differs: the account fixes a name at claim time and renames after landing only on that ground; the source puts renames in scope by default, and said so of code. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#names",
+     "says": {
+      "en": "A name is given at claim time; a renaming after landing needs a name that states a wrong meaning. 'Couples into' replaced 'registers', which presupposes a knower facing a world; 'shared law' replaced 'master law', which states rank."
+     },
+     "role": "carries"
+    }
+   ],
+   "account_adds": {
+    "en": "A criterion for when a name may change."
+   },
+   "source_adds": {
+    "en": "Renames in scope by default, and never pinning identifiers. Both were said of code, under a behaviour-preservation rule."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-memories-elegance-over-legacy",
+   "name": {
+    "en": "Elegance over legacy, with the classes named: representation may be rewritten, correctness may not"
+   },
+   "domain": "earlier-folders",
+   "group": "memories-and-working-style",
+   "source": {
+    "work": "theories/memories-and-working-style/README.md",
+    "locator": "On apparatus, 'Elegance over legacy'",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "For software not yet in production: no alias layers, no deprecation cycles, no migration cushions. What makes this safe is saying which class is touched: names and grammars may be rewritten, and correctness invariants are never weakened."
+   },
+   "quote": "Elegance over legacy, with the classes named.",
+   "carried": "carried-in-part",
+   "relation": "scope",
+   "agreement_of": null,
+   "reading": {
+    "en": "The class split holds in effect: two sweeps renamed declarations and left statements and proofs unchanged. The no-legacy half does not: the account keeps old anchors beside new ones and rename tables by which older records are read. The source's own scope, nothing yet launched, does not hold for an account whose results are linked and cited by anchor. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#retired-labels",
+     "says": {
+      "en": "Two sweeps renamed Lean declarations and left statements and proofs unchanged. Older records and receipts are read through these tables."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#names",
+     "says": {
+      "en": "The old name stays only where it is matched, not read: the record's former id, anchors kept beside the new ones, and the paths of the studies of its time."
+     },
+     "role": "carries"
+    }
+   ],
+   "account_adds": {
+    "en": "Tables by which old texts stay readable."
+   },
+   "source_adds": {
+    "en": "No compatibility layers at all, and the naming of the two classes as a rule to state before each change."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-memories-no-numbered-creeds",
+   "name": {
+    "en": "No numbered creeds and no naming devices, because form implies style"
+   },
+   "domain": "earlier-folders",
+   "group": "memories-and-working-style",
+   "source": {
+    "work": "theories/memories-and-working-style/README.md",
+    "locator": "The discipline he holds, On writing; synthesis-all.md §7 item 7",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Distilled tenets and naming apparatus were discarded as drawing a prison around the text: not only content but the form of the language can be rigid, and only one thing needed saying. Said of a manifesto. The same record ruled the terse numbered foundation document 'the form I'd like', so the source is not uniform."
+   },
+   "quote": "No numbered creeds, and no naming devices",
+   "carried": "changed",
+   "relation": "divergence",
+   "agreement_of": null,
+   "reading": {
+    "en": "The account is written in such devices: theses T1 to T8, criteria K1 to K7, readings D1 to D69, commitments J1 to J4, and a label table. They differ from a creed in that each thesis states its standing and what it forbids. Whether the form still confines thought, as the source charges, is not something the account's checks read. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#theses",
+     "says": {
+      "en": "Each home chapter states the thesis in full, with what would refute it; the table copies its standing, what it forbids and its evidence."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#standings-and-bases",
+     "says": {
+      "en": "This table is the one list of labels, each with what it means."
+     },
+     "role": "carries"
+    }
+   ],
+   "account_adds": {
+    "en": "A number that indexes a standing and a refuter, and so can be checked, where a tenet could not."
+   },
+   "source_adds": {
+    "en": "That form implies style and that a naming apparatus is itself a confinement; and that only one thing needs saying, a sentence on keeping the conditions of becoming alive and not closing the world. The live text has no such sentence: its nearest are C, which needs the condition beside it, and T8's forbidden pure closing."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-memories-do-not-game-a-metric",
+   "name": {
+    "en": "Do not game a metric in either direction: keep the theorem, add no axiom"
+   },
+   "domain": "earlier-folders",
+   "group": "memories-and-working-style",
+   "source": {
+    "work": "theories/memories-and-working-style/README.md",
+    "locator": "The discipline he holds, On apparatus",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Zero sorry is a means. Do not drop general theorems to reach it, since examples never substitute; do not add an axiom to reach it, since a sorry is a visible local warning while an axiom silently extends the trust base. One such axiom was provably false and was caught at review. Preserve the genuine epistemic state."
+   },
+   "quote": "Do not game a metric in either direction.",
+   "carried": "carried-in-part",
+   "relation": "agreement",
+   "agreement_of": "thesis-or-method",
+   "reading": {
+    "en": "The account states a stricter axiom rule: premises are hypotheses and never axioms in the core, periphery axioms are reported, and an empty report concerns logic only, the real assumptions lying in the modelling. It says of its own counts that a measure records dependence and is no criterion of completion. A computed law is labelled an example and not a law of every world. The sorry half is not stated. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#premise-card",
+     "says": {
+      "en": "In Lean each premise is a definition or a hypothesis, never an axiom, each to be named in the sentence of every law that uses it, an obligation the completion checks support and cannot certify."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#pure-core-and-periphery",
+     "says": {
+      "en": "An empty report shows that no logical axiom is used and says nothing about whether the modelling fits an actual unfolding. A law the pure core cannot yet prove is proved in the periphery, with its axioms reported."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#shared-laws-and-connectivity",
+     "says": {
+      "en": "The measure records dependence, not meaning, and it is no criterion of completion."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "derivation-soundness",
+     "anchor": "theories/becoming/chapters/08-METHOD.md#r-derivation-soundness",
+     "says": {
+      "en": "Theorem (any type; witness). A local premise supports a conditional derivation, not its own discharge: in the witness a claim derives under itself and not without it. Soundness supplies neither the truth of the basis nor any authority."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "A third way beside sorry and axiom: an input stated as a named hypothesis. A premise used is not a premise discharged, as a theorem; moving an input into a definition does not discharge it."
+   },
+   "source_adds": {
+    "en": "The preference for a visible sorry over an invisible axiom. Fronts and chapters do not use the word; one record's text reports none."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-memories-verification-instrumental",
+   "name": {
+    "en": "Verification is instrumental and must not become the target"
+   },
+   "domain": "earlier-folders",
+   "group": "memories-and-working-style",
+   "source": {
+    "work": "theories/memories-and-working-style/README.md",
+    "locator": "The discipline he holds, On apparatus, 'Verification is instrumental' and 'A gate is a claim the project wrote'",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Agents drift from establishing a baseline to maximizing evidence strength. Test the product and not the tester; every gate names the defect it prevents and who acts on failure, or is deleted; adding a check retires one; verification must not freeze the architecture or supervise itself."
+   },
+   "quote": "Verification is instrumental and must not become the optimization target.",
+   "carried": "carried-in-part",
+   "relation": "agreement",
+   "agreement_of": "thesis-or-method",
+   "reading": {
+    "en": "The account's reading of its own work gives a reason of a different kind: a selector reaches only what couples into it, so checks inside the work cannot show it serves its purpose. That limits checks and weighs refinements; it does not retire gates, and K1-K7 run at each landing. The drift itself has the form of 05's law of the optimum, what a target does not read giving way; that link is mine and by analogy. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#the-work-by-its-own-laws",
+     "says": {
+      "en": "[AI reading, D66] No check run inside the work can show that the work serves what it is for. A clean run of K1-K7 is completion in the qualified sense and no more. An item is weighed by which of review by people, tests on trained systems or models of test systems it serves; a refinement that serves none waits."
+     },
+     "role": "carries",
+     "part": "D66, what the checks reach"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#completion-criterion",
+     "says": {
+      "en": "On the registered coverage the configured checks have no finding; that is all they establish. They read Lean source text, so a premise named only through a definition is not found."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#what-the-unifications-claim",
+     "says": {
+      "en": "Overshoot, externality and Goodhart's law as one law of the optimum under room: the optimum law proved; across domains conjectured (T3), supported in simulation."
+     },
+     "role": "neighbour",
+     "part": "the optimum's row"
+    }
+   ],
+   "account_adds": {
+    "en": "The limit of checks derived by reading the work with its own selection law, used as a reading."
+   },
+   "source_adds": {
+    "en": "Deleting never-firing gates as proper work, retiring a check to add one, no meta-gates or self-tests of harnesses, and pinning behaviour and never source bytes, provenance or diagnostic counts. Not stated in the live account, whose records list provenance by Lean file and whose chapters print counts from their checks."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-memories-stale-guards",
+   "name": {
+    "en": "A stale corpus does not fail; it keeps answering"
+   },
+   "domain": "earlier-folders",
+   "group": "memories-and-working-style",
+   "source": {
+    "work": "theories/memories-and-working-style/README.md",
+    "locator": "The discipline he holds, On apparatus",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "A guard resting on a premise the system has since falsified does not become annoying; it becomes false, and keeps passing. So constraints are to be updated, not followed, once their premise has lapsed."
+   },
+   "quote": "A stale corpus does not fail; it keeps answering.",
+   "carried": "carried-in-part",
+   "relation": "agreement",
+   "agreement_of": "law",
+   "reading": {
+    "en": "The account states the form on a periphery model: a change recorded as none can leave false confidence, a certificate passing while what it certified has moved, the admitted changes supplied. Its method shows the practice: checks reading Lean source text miss a premise named through a definition; LA2's rule printed a verdict both its measures contradict; a limit holds so far and lapses with its reason. Where the source's guard 'becomes false', a theorem does not: a domain ceasing to meet its hypotheses defeats the correspondence. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "evidence-through-change",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-evidence-through-change",
+     "says": {
+      "en": "Theorem (periphery; admitted transitions supplied): 'a change recorded as none can leave false confidence'; 'a control change can reopen an excluded arrangement'. What execution needs certified is the acquisition-time candidate set propagated through every admitted change. Its record: the admitted changes are not shown to be the actual ones, and 'a passing certificate warrants only what faithful domains warrant'."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#completion-criterion",
+     "says": {
+      "en": "The configured checks read statements from Lean source text, not from elaborated terms, so a premise named only through a definition that a statement unfolds is not found. K5 looks only for the parameter patterns the coverage file lists."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#theses",
+     "says": {
+      "en": "LA2's rule printed 'the counts decide' as supported while consulting neither the one-note measure nor the first late reading, both of which contradict it."
+     },
+     "role": "carries",
+     "part": "LA2's row"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#known-results",
+     "says": {
+      "en": "Each item in the last column is a limit that holds so far and lapses when the account states the result."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#what-would-defeat-the-reading",
+     "says": {
+      "en": "A law with content stands or falls by its check. An observation reaches it only through a stated correspondence, so a conclusion failing in a domain shows that the domain does not meet the hypotheses or that the correspondence misreads them, not that the theorem is false. A thesis claiming that the domain meets them does fail there."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "A stated list of what its own checks do not read."
+   },
+   "source_adds": {
+    "en": "The standing instruction to treat old constraints as possibly false, and the engineering rules that replaced them (a contract frozen only when published; no version number before a second live version)."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-memories-judgment-over-procedure",
+   "name": {
+    "en": "Judgment over procedure; prior rulings are defaults"
+   },
+   "domain": "earlier-folders",
+   "group": "memories-and-working-style",
+   "source": {
+    "work": "theories/memories-and-working-style/README.md",
+    "locator": "The discipline he holds, On apparatus",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Rules written earlier were not fully thought through either: what is overturned is deleted, what is unreasonable is changed, what is falsified is taken out. Prior rulings are defaults and not statutes, and the yardstick is wisdom, elegance, reason, completeness and self-consistency, not dogma. A few hardware-like exceptions stand."
+   },
+   "quote": "Judgment over procedure.",
+   "carried": "carried-in-part",
+   "relation": "scope",
+   "agreement_of": null,
+   "reading": {
+    "en": "Stated in the live text for readings and rankings only: a reading is decided by argument and fit, a better argument changes the ranking, and who said a word settles nothing. For the work's own rules it stands in AGENTS.md's opening, outside the live account, three rules not bending. On what is overturned the account differs: the source takes it out, and the account keeps a failure recorded beside its thesis. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#no-reading-open",
+     "says": {
+      "en": "A reading added later is decided the same way, by argument and fit."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#open-items-ranked",
+     "says": {
+      "en": "The ranking of open items is the AI's, and a better argument changes it."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#theses",
+     "says": {
+      "en": "A thesis adds no theorem, a refutation removes none, and a failure stays recorded beside the thesis."
+     },
+     "role": "carries",
+     "part": "the opening: a failure stays recorded"
+    }
+   ],
+   "account_adds": {
+    "en": "A record of what would change each reading."
+   },
+   "source_adds": {
+    "en": "The same stance toward rules and checklists as such, deletion of what is overturned, and the quality yardstick. The README cites its home in the zhishan memory files, not read here."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-memories-no-decision-bureaucracy",
+   "name": {
+    "en": "Prefer deleting rules to adding qualifiers; documents get no decision bureaucracy"
+   },
+   "domain": "earlier-folders",
+   "group": "memories-and-working-style",
+   "source": {
+    "work": "theories/memories-and-working-style/README.md",
+    "locator": "The discipline he holds, On apparatus, 'Prefer deleting rules'; 'Judgment over procedure'",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Fixing inconsistencies by adding clauses is a ratchet: each review round adds process unless resisted. Checklists are inputs to inspection and documents get no decision bureaucracy; before adding a governance rule, ask whether the failure it prevents has ever happened here."
+   },
+   "quote": "Prefer deleting rules to adding qualifiers.",
+   "carried": "changed",
+   "relation": "divergence",
+   "agreement_of": null,
+   "reading": {
+    "en": "The account's practice goes the other way: a numbered decision register, seven completion criteria run at each landing, a premise card. It limits what the checks show, and it states neither a ratchet nor a test of whether a failure occurred. Its nearest line, that a refinement serving none of its purposes waits, is said of items and not of rules. The source spoke of a manifesto programme and of session instructions. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#readings-adopted",
+     "says": {
+      "en": "Each reading is adopted with its argument and numbered D1-D69 in the decision register, which says what would change it."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#completion-criterion",
+     "says": {
+      "en": "K1-K7 were adopted on 20 October 2026 and run at each landing. So the criterion is completion in a qualified sense, not a proof that every premise is named."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#the-work-by-its-own-laws",
+     "says": {
+      "en": "[AI reading, D66] An item is weighed by which of these it serves before it is claimed, and a refinement that serves none waits."
+     },
+     "role": "neighbour",
+     "part": "D66"
+    }
+   ],
+   "account_adds": {
+    "en": "What each check does and does not establish, stated beside it."
+   },
+   "source_adds": {
+    "en": "The ratchet as a mechanism of review, and the test before adding a rule. Searches for checklist, bureaucr-, ceremony and dogma in fronts and chapters found none."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-memories-ideas-and-apparatus",
+   "name": {
+    "en": "Two unreconciled disciplines: ideas are never reduced, apparatus always is"
+   },
+   "domain": "earlier-folders",
+   "group": "memories-and-working-style",
+   "source": {
+    "work": "theories/memories-and-working-style/README.md",
+    "locator": "On the collaboration itself; On apparatus, opening",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "'Never reduce, never silently drop' and 'delete rules, prefer cleaner removal' are both held, each right in its domain, and no memory file states the boundary. The folder's own proposal, AI-written: ideas must never be reduced, and apparatus must always be. It should be made explicit, since documents are often also governance surfaces."
+   },
+   "quote": "Two disciplines that have never been reconciled, and should be.",
+   "carried": "not-carried",
+   "relation": null,
+   "agreement_of": null,
+   "reading": {
+    "en": "I did not find this boundary in the live account, by word or by mechanism. Its practice runs across the line: it reduces statements (one mechanism, stated once) while keeping failures, and it accrues apparatus (a register, seven completion checks). AGENTS.md, outside it, draws a different line: nothing the repository cannot regenerate is deleted, whether idea or apparatus, and the superseded moves to history. On that line the source's large deletions of guards would be refused unless regenerable. [AI reading]"
+   },
+   "targets": [],
+   "account_adds": null,
+   "source_adds": {
+    "en": "A proposed boundary with no standing in the account: the record itself says no source states it."
+   },
+   "absence": {
+    "searched": [
+     "machinery, scaffold, checklist, ceremon-, bureaucr-, dogma, apparatus, 'rule stack', 'reduce to one', legacy, alias in the fronts, chapters, review README and glossary: none. ratchet: three hits, a theorem on rules and its table row, another subject. governance: two, a reader field and a protocol's moves. reductionis-: one, not read. 'ideas must', 'never reduced': none"
+    ],
+    "read": [
+     "08 §1, §7's opening, §10, §12 to the end"
+    ]
+   },
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-memories-independent-readers",
+   "name": {
+    "en": "Independent and adversarial readers; catching mirroring; a finding is a hypothesis"
+   },
+   "domain": "earlier-folders",
+   "group": "memories-and-working-style",
+   "source": {
+    "work": "theories/memories-and-working-style/README.md",
+    "locator": "Working method, cross-model arbitration; Reflexes, mirroring; On apparatus, review findings; synthesis-all.md claims 95 and 118",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Specs go to another model and verdicts return with graded assent; reviewers run in independent contexts, sometimes told to ignore house rules; drafts are written in isolation to avoid early convergence. Agreement that reflects is called out, and a review finding is tested on every path before it is acted on. The source is not uniform: the manifesto turn ruled out a multi-agent review pipeline, and its economics keep such checks for audits."
+   },
+   "quote": "I think you were basically mirroring my view",
+   "carried": "carried-in-part",
+   "relation": "agreement",
+   "agreement_of": "thesis-or-method",
+   "reading": {
+    "en": "The account uses and measures this: three reads with a second checker changing 84 of 88 kept entries; readers searching to refute a column, three items then dropped; a coder test. A finding as hypothesis has a counterpart: a counterexample must meet the claim's stated conditions. It also limits all this: AI reviews are one of the work's selectors and people couple into none, so the source's verdict from a large AI review would, on this reading, not reach what people would report. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "civilization-thought-on-the-spine",
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-civilization-thought-on-the-spine",
+     "says": {
+      "en": "Assessment. Of 88 entries a reviser kept unchanged, a second checker changed 84; entries read only twice are unreliable, errors may remain after three, and the proportion does not extend to the 696 the first checker passed."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "fidelity-coders-on-own-and-other-texts",
+     "anchor": "theories/becoming/chapters/08-METHOD.md#r-fidelity-coders-on-own-and-other-texts",
+     "says": {
+      "en": "Assessment, model-coded and provisional. No negative combined author-coder interaction was detected for referents planted in a coder's own text (+0.02, interval -0.05 to +0.08); one family's deficit could be masked by the other's advantage, and the classical case is untested."
+     },
+     "role": "neighbour"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#reviews",
+     "says": {
+      "en": "Every review so far is by AI; no human review is claimed."
+     },
+     "role": "limit"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#known-results",
+     "says": {
+      "en": "Four AI readers drafted the last column from the literature they knew, and four others searched the repository to refute each item. Three items were dropped as already stated."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#five-step-test",
+     "says": {
+      "en": "A counterexample must meet the claim's stated conditions. Say why a formal countermodel is relevant: toggling a predicate in a weaker model shows non-entailment, not that the fuller structure allows the toggle."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "Rates of error across reads, and a test of whether a model misses what it planted in its own text."
+   },
+   "source_adds": {
+    "en": "Graded assent ('the direction is right'), telling reviewers to ignore project rules, tracing every consumer before classifying a finding, and the manifesto turn's two reader's questions in place of a pipeline: is the chain broken, does it read as alive. Mirroring's mechanism is in the trained-defaults entry."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-memories-trained-defaults",
+   "name": {
+    "en": "A collaborator's reflexes are trained defaults that arrive as helpfulness"
+   },
+   "domain": "earlier-folders",
+   "group": "memories-and-working-style",
+   "source": {
+    "work": "theories/memories-and-working-style/README.md",
+    "locator": "Reflexes he catches, opening and 'Two more'; On apparatus, 'Verification is instrumental'",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Six recurring failures have one shape: a trained default that feels like helpfulness and is the diagnosed dynamic reproducing itself inside the collaboration. Agreement that reflects is caught as mirroring, and some code comments read as written to game training rewards."
+   },
+   "quote": "each is a trained default that arrives feeling like helpfulness",
+   "carried": "carried-in-part",
+   "relation": "scope",
+   "agreement_of": null,
+   "reading": {
+    "en": "The account has this mechanism for training: a published pipeline's signal is a function of what its deciders read, and sycophancy is one of three measurements read as optimizing through it raising what they read and lowering what they do not. Training installs a law along its own courses and where a lumping cannot tell a history from a course. An assessment of published work, not said of this collaboration. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "coupling-closures-of-training-pipelines",
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-coupling-closures-of-training-pipelines",
+     "says": {
+      "en": "Assessment. In six published ways of selecting a deployed model's behaviour the signal is a function of what its deciders read; three published measurements (reward overoptimization, judges misled under RLHF, sycophancy) find optimizing through it raising what the deciders read and lowering what they do not, in magnitudes the theory did not predict. Reading each pipeline as a web is an AI reading, and the figures are from the papers' abstracts."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "what-training-installs",
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-training-installs",
+     "says": {
+      "en": "Theorem (World). Read training as a selection over candidate act laws through the courses each generates: for laws reading through a lumping, a law is installed off its courses exactly where the lumping cannot tell a history from a course."
+     },
+     "role": "carries"
+    }
+   ],
+   "account_adds": {
+    "en": "What a selection reaches, exactly, and that the theory predicts no magnitude measured."
+   },
+   "source_adds": {
+    "en": "That these defaults are the same dynamic the work diagnoses, that they feel like helpfulness, and that a narrative's premises travel into a model through training text. None is stated."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-memories-acceptance-is-human",
+   "name": {
+    "en": "Acceptance is a human act and cannot be self-issued"
+   },
+   "domain": "earlier-folders",
+   "group": "memories-and-working-style",
+   "source": {
+    "work": "theories/memories-and-working-style/README.md",
+    "locator": "On the collaboration itself, 'The owner manages history'",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Agents do not push, publish or release; the owner keeps history and outward acts; a broad 'agree' covers the technical recommendation only; a register lists what a machine must not settle; acceptance cannot be self-issued."
+   },
+   "quote": "acceptance is a human act and cannot be self-issued",
+   "carried": "fresh-reading",
+   "relation": "divergence",
+   "agreement_of": null,
+   "reading": {
+    "en": "Two claims under one word. The source's is who may accept: an owner's act. The account's is what a check can reach: selection reaches what couples in, people couple into none of the work's selectors, so its checks cannot certify it; that selection goes through couplings is a supplied condition. It claims no human review, seeks review and not acceptance, and a description confers no authority. Who may act outward stands in AGENTS.md, outside the live account. No live text joins the two; the link is this reading's. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#the-work-by-its-own-laws",
+     "says": {
+      "en": "[AI reading, D66] Human readers, coordination among people and trained systems couple into none of the work's selectors; only coupling those in widens what its selection reaches."
+     },
+     "role": "carries",
+     "part": "D66, what the checks reach"
+    },
+    {
+     "record": "selection-through-couplings",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
+     "says": {
+      "en": "Theorem (World; no premise). Two histories are selected alike by every selection through a formation's couplings exactly when they are alike through them. The record does not derive whether an actual selection goes through the couplings."
+     },
+     "role": "neighbour"
+    },
+    {
+     "anchor": "theories/becoming/review/README.md",
+     "says": {
+      "en": "No human has reviewed this theory yet; the proofs are checked by machine, and everything else only by further AI reviews."
+     },
+     "role": "limit"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#an-investigation",
+     "says": {
+      "en": "A description of participation confers no authority, permission or right."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "A reason from the selection law, read on the work, for why checks cannot certify it, with no rule about one owner."
+   },
+   "source_adds": {
+    "en": "Acceptance as an act and a role, and the rules on outward acts, commits and destructive verbs. They are practice, in AGENTS.md and memory, not in the live account."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-memories-original-as-canonical",
+   "name": {
+    "en": "The original sketch and the owner's rulings as the canonical text"
+   },
+   "domain": "earlier-folders",
+   "group": "memories-and-working-style",
+   "source": {
+    "work": "theories/memories-and-working-style/README.md",
+    "locator": "Opening; Working method, 'Restating the original prompt verbatim'",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "When work drifts, the remedy is to repaste the first message: it, not the accumulated specification, is canonical. The folder calls itself an operating manual and treats rulings, each with the reason given and the incident that produced it, as the discipline to read before working with their author."
+   },
+   "quote": "The original sketch, not the accumulated specification, is the canonical text.",
+   "carried": "changed",
+   "relation": "divergence",
+   "agreement_of": null,
+   "reading": {
+    "en": "The account reverses the standing of such words: who said a word settles no reading, and a quotation is no ground. The later practice keeps a person's terms verbatim with their source and reads them like any reading. The records' change logs say the public wording changed on a directive that earlier words are provenance, so the reversal is itself logged as following one. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#readings-adopted",
+     "says": {
+      "en": "Readings change no theorem and add no premise; who said a word is provenance and does not settle a reading."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md",
+     "says": {
+      "en": "The chapter's readings are all AI readings; the source text is evidence of a word's sense, and a quotation is no ground for a claim."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "becoming-spine-instances",
+     "anchor": "theories/becoming/chapters/08-METHOD.md#r-becoming-spine-instances",
+     "says": {
+      "en": "A line of the record's change log, not a result: public wording was changed following a directive of 17 October 2026 that the author's earlier words are provenance, not authority; the claim is unchanged."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "A standing for words as provenance, with claims resting on argument, proof or test."
+   },
+   "source_adds": {
+    "en": "An authority for the first statement over its later working-out. The README itself also records that prior rulings are defaults, so the source is not uniform on this."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-memories-operationability-reflex",
+   "name": {
+    "en": "The operationability reflex: diagnosis to action is part of the dynamic"
+   },
+   "domain": "earlier-folders",
+   "group": "memories-and-working-style",
+   "source": {
+    "work": "theories/memories-and-working-style/README.md",
+    "locator": "Reflexes he catches, 1",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Moving from diagnosis to 'what should we do' is an engineering frame that belongs to the dynamic critiqued; a paradigm shift does not operationalize cleanly, so stay diagnostic until an operational thread is wanted. The README notes it is a default to catch and no ban, reversed in a later position paper."
+   },
+   "quote": "Stay in the diagnostic register when that's where the conversation is.",
+   "carried": "changed",
+   "relation": "divergence",
+   "agreement_of": null,
+   "reading": {
+    "en": "The account withholds prescription on another ground: no law evaluates, a ranking takes the continuation condition for scope and C for order, neither asserted, warrant open. Asked whether a collective can always move toward widening, it answers: not guaranteed, a criterion only, named exits under hypotheses. It answers the question the source would call a symptom, and it has no dynamic under critique. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/ONE-PAGE.md",
+     "says": {
+      "en": "No law evaluates: none says a loss is a harm or restraint better. Choices take further premises, each named; a direction follows only conditionally."
+     },
+     "role": "carries",
+     "part": "the ethics, its last sentence on choices"
+    },
+    {
+     "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#the-answer-in-brief",
+     "says": {
+      "en": "Always guaranteed: no. Always available as a direction: as a criterion only. Achievable under stated conditions: yes, for named exits, each under its hypotheses, none shown to hold of an actual collective."
+     },
+     "role": "carries"
+    }
+   ],
+   "account_adds": {
+    "en": "An exact account of what can be said with no premise and what each further step takes."
+   },
+   "source_adds": {
+    "en": "That the wish for an action plan is itself a symptom. The account does not take up this diagnosis of its reader or of itself."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-memories-techno-optimist-reflex",
+   "name": {
+    "en": "Suspicion of structural-affordance optimism"
+   },
+   "domain": "earlier-folders",
+   "group": "memories-and-working-style",
+   "source": {
+    "work": "theories/memories-and-working-style/README.md",
+    "locator": "Reflexes he catches, 3",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "A general-purpose technology dropped into a Moloch-shaped system is refactored to serve the dynamic, as the 1990s case for the internet shows, so default to suspicion of arguments from a technology's properties; the dynamic eats the technology and then the discourse about it. A working rule follows on what institutions can absorb."
+   },
+   "quote": "anything legible enough to be adopted at scale by current institutions is legible enough to be neutralized by them",
+   "carried": "carried-in-part",
+   "relation": "scope",
+   "agreement_of": null,
+   "reading": {
+    "en": "The account keeps one historical correspondence, labelled no theorem: operating a shared interface is a route of capture. 'Eats the discourse' has a nearer form in 02's reading of capture: winners forming the minds that read a scorecard, a second order reaching courts, press and audit. It judges a reform by who decides next round, not by a default of suspicion. T7 stays conjectured, one case counted against for trained judges. The legibility rule is not stated. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#10-markets",
+     "says": {
+      "en": "Reading [AI reading, D65; a historical correspondence, no theorem]. Running a shared interface and controlling its modification changes others' admission and comparison through operation itself; a reform is judged by who decides admission, comparison and correction next round, not by removing one named practice."
+     },
+     "role": "carries",
+     "part": "D65, the final reading"
+    },
+    {
+     "anchor": "theories/becoming/chapters/02-MAP.md#t7",
+     "says": {
+      "en": "Thesis T7, conjectured for actual metrics: a metric whose rule and reading are formed from the share it selects is kept however large a loss it does not read grows; in the model only invariance and the lock are proved. Reading [AI reading]: winners forming the minds that read it is the same loop on the reading; a second order reaches courts, press, statistics and audit. That readers are minds is a reading."
+     },
+     "role": "carries",
+     "part": "T7 and its reading"
+    }
+   ],
+   "account_adds": {
+    "en": "A question that can be asked of a case (who decides next round), and a law for when a loop is locked, under hypotheses."
+   },
+   "source_adds": {
+    "en": "The default of suspicion toward technologies, and the legibility rule. 'Moloch-shaped' is an evaluative frame the account's laws do not supply."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-memories-values-as-neutral-design",
+   "name": {
+    "en": "Values dressed as neutral design"
+   },
+   "domain": "earlier-folders",
+   "group": "memories-and-working-style",
+   "source": {
+    "work": "theories/memories-and-working-style/README.md",
+    "locator": "Reflexes he catches, 'Two more'",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Individualist or democratic defaults presented as neutral design are value impositions; communities choose shapes no kit can anticipate, and pre-emptive structural prohibition is paternalism: strong defaults, no prohibitions at the primitive layer, one live exception at the human and automation boundary."
+   },
+   "quote": "Values dressed as neutral design",
+   "carried": "carried-in-part",
+   "relation": "agreement",
+   "agreement_of": "thesis-or-method",
+   "reading": {
+    "en": "The mechanism carried is the hidden premise: nothing evaluative may enter through a definition, each ethical result names what it uses (the continuation condition for scope, C for order, neither asserted, warrant open), no condition is silently owned or additive, and joint activity starts from actual relations, not opposed interests or a fixed common utility. 'No prohibition at the primitive layer' has the shape of root laws forbidding no relation, but that is logic, not this design stance. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#open-programme",
+     "says": {
+      "en": "Calling an input immanent, or moving it into a definition, does not discharge it. 'Good', 'harmful' or 'fitting' must not silently supply the conclusion they are meant to explain."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#where-the-ethics-sits",
+     "says": {
+      "en": "The theory asserts no ethical axiom; the condition fixes scope and C fixes order, neither asserted; every ethical result is Conditional and names what it uses, and further commitments are named in their own results."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#an-investigation",
+     "says": {
+      "en": "No condition is silently taken as owned, transferable, additive, scarce or commensurable; the World's natural-number amounts are a modelling choice. Joint activity starts from actual relations, not from opposed interests or a fixed common utility."
+     },
+     "role": "carries"
+    }
+   ],
+   "account_adds": {
+    "en": "A premise card that lists every such input in one place, itself unable to certify completeness."
+   },
+   "source_adds": {
+    "en": "The claim about which defaults get dressed as neutral (Western-democratic and individualist), and that structural prohibition is paternalism."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-memories-grammar-of-the-opponent",
+   "name": {
+    "en": "Do not borrow the grammar of what you are arguing against"
+   },
+   "domain": "earlier-folders",
+   "group": "memories-and-working-style",
+   "source": {
+    "work": "theories/memories-and-working-style/README.md",
+    "locator": "The discipline he holds, On writing",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "A text arguing against totalization defeats itself in accelerationist grammar, even with the direction reversed. A self-check looks for 加速, 赢, 抢占, 杠杆 in affirmative voice. A content gate, tied to a position: correction faster than harm, burden on the accelerator, lowering the gain as the lever."
+   },
+   "quote": "Do not borrow the grammar of what you are arguing against.",
+   "carried": "changed",
+   "relation": "divergence",
+   "agreement_of": null,
+   "reading": {
+    "en": "The account has the mechanism, that wording carries a frame: names avoid dualist and financial words, and 'master law' fell for stating rank. Its reason is exactness, not opposition; it argues against no dynamic, and writes 'best response' and 'optimum' in its laws. The position on speed has partial forms, not as a position: a re-reading that must come while the need is still met, and a slow rule reading the fast level long enough, among conditions that rank nothing (a ranking takes C for order, the condition for scope, neither asserted, warrant open). [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#names",
+     "says": {
+      "en": "Names are structural and exact: formal, scientific and systems words, not dualist, limited-scope, social or financial ones. 'Couples into' replaced 'registers', which presupposes a knower facing a world."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#an-investigation",
+     "says": {
+      "en": "Wording names the relation it means; it does not compress causal contribution, influence and responsibility into 'authorship', and it keeps money, payment and ownership for actual economic relations."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#6-what-enough-situationality-would-have-to-mean",
+     "says": {
+      "en": "Reading [AI reading, D45]. Among six conditions: Time, before the regime's point of no return; Pace, a slow rule reading the fast level over a long enough stretch. All six rank nothing: calling the widening course better needs C, and counting the losses that return to no one needs the continuation condition."
+     },
+     "role": "neighbour"
+    },
+    {
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-re-optimizing-above-a-renewal-ends-it",
+     "says": {
+      "en": "Theorem (World). Where the rest renews a condition by exactly r a step at or above a positive need and by at most r below, and the withdrawal is the same at every step: with the draw above the renewal until a step T, a re-reading from T on that keeps the need where it is met keeps it at every step exactly where it is met at T."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "A rule for naming that does not depend on any position taken, and a bound on how long a slow rule must read."
+   },
+   "source_adds": {
+    "en": "The purpose of not defeating one's own argument, the affirmative-voice self-check, the burden of proof on the accelerating party, and lowering the gain as the lever."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-memories-force-of-diagnosis",
+   "name": {
+    "en": "Beautiful and powerful: diagnosis at full force, with no villain"
+   },
+   "domain": "earlier-folders",
+   "group": "memories-and-working-style",
+   "source": {
+    "work": "theories/memories-and-working-style/README.md",
+    "locator": "The discipline he holds, On thinking; On writing, 'Affirmative over negation' (b); synthesis-all.md claim 79",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "After dropping dualism a version read as graceful and toothless. Dualism was only ever in the prescriptions, never in the diagnosis: naming a dynamic at full strength is systems thinking, because the force lies in the structure and there is no villain. A later pass struck 'diagnose at full force' and 'like a tumor' as slogans read as creed, to be replaced by the mechanism, so the source is not uniform."
+   },
+   "quote": "Beautiful and powerful; never trade force for grace.",
+   "carried": "changed",
+   "relation": "divergence",
+   "agreement_of": null,
+   "reading": {
+    "en": "The account keeps real losses and the structural reading, with no villain (takers each within what is renewed can together exceed it), yet withholds the force: laws say nothing of harm, the commons law 'restates the commons', and whether a loss counts takes the condition for scope and C for order, neither asserted, warrant open. It stands with the source's later pass, mechanism over slogan. A diagnosis as disease has no place in its statements. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/ONE-PAGE.md",
+     "says": {
+      "en": "A selection can succeed while what it cannot read is lost, and the laws do not say whether that loss counts [AI reading]. No law evaluates; the ethics adds two premises, neither asserted, warrant open, each a hypothesis wherever used."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#does-not-show",
+     "says": {
+      "en": "The chapter shows no duty, right, recognition, motivation or compliance, and does not show the condition or C warranted."
+     },
+     "role": "limit"
+    }
+   ],
+   "account_adds": {
+    "en": "The premises a diagnosis of harm would need, stated apart from the laws of what goes on."
+   },
+   "source_adds": {
+    "en": "That a full-force diagnosis stands on the observed side of the is/ought line, with words like 'cancer' and 'trap' in it, and that grace at the cost of force is a failure."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-memories-aphorism-as-compression",
+   "name": {
+    "en": "An aphorism is what thinking leaves; writing from it is unpacking a can"
+   },
+   "domain": "earlier-folders",
+   "group": "memories-and-working-style",
+   "source": {
+    "work": "theories/memories-and-working-style/README.md",
+    "locator": "The discipline he holds, On writing",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Compression comes after thought, so writing out of a compressed form produces stiffness and defensive armour. The genealogy offered: the living parts of a Chinese text came from the English original and not from the compressed scripture between them."
+   },
+   "quote": "从压缩出发写作＝解包罐头，不是思考",
+   "carried": "not-carried",
+   "relation": null,
+   "agreement_of": null,
+   "reading": {
+    "en": "I found no statement on how writing goes dead. The nearest neighbour is a practice: 06 §7.3's restatement opens each item with a compressed 經, then exposition, then proof. The 經 were counted nearer the Lean than English sentences of the chapters, and about level with controlled English under one discipline. Those counts are of referents, coded by a model, and say nothing of readers, the reading test not run. So the source's claim is untested there, not answered. [AI reading]"
+   },
+   "targets": [],
+   "account_adds": null,
+   "source_adds": {
+    "en": "A claim about how writing goes dead. It stands in the README, citing the zhishan memory files, not read here."
+   },
+   "absence": {
+    "searched": [
+     "aphorism, slogan, manifesto, 压缩, 壓縮, 格言, breathe, armour, hostile in the fronts, chapters, review README and glossary: none; compress: one hit, about authorship; alive in 08 and the fronts: none. Chinese editions other than 06 not searched. Aphorism, slogan, manifesto in the records' JSON by the second read, none"
+    ],
+    "read": [
+     "08 §1's wording paragraph; 08 §10; 06 §7.3 through both counts of fidelity and their reading; the record fidelity-of-the-classical-statements, does_not_show"
+    ]
+   },
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-memories-second-language-rethinking",
+   "name": {
+    "en": "Writing in another language is the same mind thinking it through again"
+   },
+   "domain": "earlier-folders",
+   "group": "memories-and-working-style",
+   "source": {
+    "work": "theories/memories-and-working-style/README.md",
+    "locator": "On writing, 'No aphorism-first writing'; synthesis-all.md §8",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Writing the Chinese means the same mind thinking the content through again in Chinese, neither translating nor decompressing. The synthesis adds that this leaves open whether the two are one theory in two languages or two theories that agree."
+   },
+   "quote": "the same mind thinking the content through again in Chinese",
+   "carried": "changed",
+   "relation": "divergence",
+   "agreement_of": null,
+   "reading": {
+    "en": "06's 不是英文章节的译本 is a word match. 06 says its restatement is another expression repeating the normative chapters by design, on the World model, with a compressed 經 first: the form the source warns of, answering its open question for that text as one theory. 06 stands in Chinese alone; nothing says how it was written. The one page's Chinese edition follows the English, as far as I read. The check is fidelity to the Lean, not life; no reading trial has run. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#zhonghua",
+     "says": {
+      "en": "Each item sets out 經, then 說, then 證. The restatement is not a translation of the English chapters but another expression; its 經 and closing comparisons are its own, and the rest repeats the normative chapters by design."
+     },
+     "role": "carries",
+     "part": "the paragraph on its standing"
+    },
+    {
+     "record": "fidelity-of-the-classical-statements",
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-fidelity-of-the-classical-statements",
+     "says": {
+      "en": "Assessment, model-coded and provisional. On 270 items the 經 introduces fewer referents absent from the Lean than the English sentences (mean 0.09 against 0.81). It compares one English text of another genre, had no human audit, and says nothing of readers."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "fidelity-under-one-discipline",
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-fidelity-under-one-discipline",
+     "says": {
+      "en": "Assessment, model-coded and provisional. Under one discipline, controlled English in full statements, translated from the 經 with the Lean as key, introduces no more referents absent from the Lean (經 minus English +0.023, interval -0.010 to +0.055); a coder of another model family leaves the 經 a residual (-0.27, 60 pairs), and the two disagree. Discipline and genre are not separated."
+     },
+     "role": "neighbour"
+    },
+    {
+     "anchor": "theories/becoming/ONE-PAGE.zh.md",
+     "says": {
+      "en": "The Chinese edition of the one page. Its opening paragraphs (what it is, one case, the root) state the English's sentences in order; only these were read."
+     },
+     "role": "carries"
+    }
+   ],
+   "account_adds": {
+    "en": "Measured comparisons of the forms against the Lean, on one count, with what they leave unseparated: discipline and genre."
+   },
+   "source_adds": {
+    "en": "That rethinking in the language is what keeps a text alive, for every text written in a second language. No live text says any edition was made this way."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-memories-sayable-valid-true",
+   "name": {
+    "en": "Sayable, valid, true: three layers of universality"
+   },
+   "domain": "earlier-folders",
+   "group": "memories-and-working-style",
+   "source": {
+    "work": "theories/memories-and-working-style/synthesis-all.md",
+    "locator": "§1 claim 39",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "A universal formal substrate is universal only for expression. Whether an expression meets the axioms depends on its content, and whether a valid expression fits structure outside the substrate is external. The substrate is one of formal articulation and not of correct articulation."
+   },
+   "quote": "一切可说，但不是一切可成；一切可成，但不是一切可真",
+   "carried": "carried-in-part",
+   "relation": "agreement",
+   "agreement_of": "law",
+   "reading": {
+    "en": "Section 6's name states the first gap, with an audit procedure for it, and its theorem has the form on the source's own operator, a tower of squares: type formation alone yields no element from an empty seed and no distinction from a one-element seed, and formal composition manufactures no dynamics. The explanatory reading states the third gap: a language forbids nothing, and a domain reaches a law only through a stated correspondence. The theorem says nothing of universal expression, which the account does not claim (the World's amounts are not carried). No line of descent asserted. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#expressible-is-not-derived",
+     "says": {
+      "en": "A law proved on a model can usually be written in the grammar's vocabulary, but writing it there does not prove it there; a translated theorem carries its premises, and removing one is a separate result."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "type-formation-gives-no-dynamics",
+     "anchor": "theories/becoming/chapters/08-METHOD.md#r-type-formation-gives-no-dynamics",
+     "says": {
+      "en": "Theorem (any type for the tower, any process for reachability). Type formation alone yields no element from an empty seed and no distinction from a seed with at most one element; formal composition manufactures no dynamics."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#what-would-defeat-the-reading",
+     "says": {
+      "en": "As a language the reading forbids nothing; an observation reaches a law with content only through a stated correspondence. No reading of the World's selected relations gives the count."
+     },
+     "role": "carries"
+    }
+   ],
+   "account_adds": {
+    "en": "The three things a lifting takes (audit, lifting, representation theorem), and the product tower's limit as a theorem."
+   },
+   "source_adds": {
+    "en": "The three layers named as one scheme, and the universal sayability claim on its own lattice, which the account does not make."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-memories-zheng-as-exhibit",
+   "name": {
+    "en": "'证 X' means exhibiting X structurally, not proving it by derivation"
+   },
+   "domain": "earlier-folders",
+   "group": "memories-and-working-style",
+   "source": {
+    "work": "theories/memories-and-working-style/synthesis-all.md",
+    "locator": "§1 claims 32 and 33",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "In the SSBX framing, with name and reality taken as one by default, 'proving' is exhibiting a structure, and common sense is a face of the same truth. Curry-Howard-Lambek is taken as the default here, not a discovery."
+   },
+   "quote": "manifest/exhibit X structurally",
+   "carried": "changed",
+   "relation": "divergence",
+   "agreement_of": null,
+   "reading": {
+    "en": "The account separates what this joins: a proved result names its base and a Lean check, a reading of a text is labelled and changes no theorem, and declaring an identity does not make it true. In its classical restatement 證 names the Lean declaration and record: same character, another reference. Exhibiting and proving are not opposed in its constructive pure core; the divergence is at name and reality as one, and common sense as a face of truth. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#standings-and-bases",
+     "says": {
+      "en": "Theorem (...; witness) is a constructed example, labelled as one. Reading [AI reading, Dn] is an interpretation of checked content that changes no theorem. A sentence states what the Lean proves, no stronger and no weaker."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#five-step-test",
+     "says": {
+      "en": "Toggling a predicate in a weaker model shows non-entailment, not that the fuller structure allows the toggle, and declaring an identity does not make it true."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#zhonghua",
+     "says": {
+      "en": "Each item sets out 經, then 說, then 證 (the Lean declaration and the record)."
+     },
+     "role": "neighbour"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#logical-commitment",
+     "says": {
+      "en": "The pure core assumes no principle of classical logic. Where a law needs one, the principle is its own hypothesis or the law is proved equivalent to it."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "Separate standings for a witness, a theorem, an assessment and a reading."
+   },
+   "source_adds": {
+    "en": "A sense of 证 in which manifesting is itself the warrant, and a default identity of name and reality."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-memories-physical-constraints",
+   "name": {
+    "en": "Physical constraints are design constraints"
+   },
+   "domain": "earlier-folders",
+   "group": "memories-and-working-style",
+   "source": {
+    "work": "theories/memories-and-working-style/README.md",
+    "locator": "The discipline he holds, On apparatus; 'A gate is a claim the project wrote', its economics",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "What the work costs its machines bounds the method: do not spam full builds, batch edits, verify at checkpoints. Separate verify stages dominate spend, so split verification by cost and defect class and not by ritual. On a server, what an agent cannot do bounds who does it."
+   },
+   "quote": "Physical constraints are design constraints.",
+   "carried": "not-carried",
+   "relation": null,
+   "agreement_of": null,
+   "reading": {
+    "en": "Tested as the second read asked: no correspondence survives. 08's reading of what the work draws on needs takers, a renewal and joint excess, and reads people's attention, by analogy; a build's cost and a missing terminal are not a renewed stock jointly drawn. 'What steps and whole amounts cost' is a modelling cost, one word only. These rules stand in AGENTS.md and session instructions, outside the live account. [AI reading]"
+   },
+   "targets": [],
+   "account_adds": null,
+   "source_adds": {
+    "en": "The economics of verification and build cost, and a bound from what an agent cannot do. They stand in the README, and as practice in the repository's instructions."
+   },
+   "absence": {
+    "searched": [
+     "battery, 'machine time', 'full build', 'build cost', 'token spend', laptop in ONE-PAGE, the overview, COLLECTIVE-DIRECTION, ONE-ARGUMENT, the review README and the chapters: one hit, in a calibration in 03, another subject"
+    ],
+    "read": [
+     "08 §12, 'The work read by its own laws'; 08 §2's table row on what steps and whole amounts cost"
+    ]
+   },
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-memories-situational-positions",
+   "name": {
+    "en": "Most things are situational; no framing is held as the truth"
+   },
+   "domain": "earlier-folders",
+   "group": "memories-and-working-style",
+   "source": {
+    "work": "theories/memories-and-working-style/README.md",
+    "locator": "On writing, 'Mechanism before conclusion' and 'Set direction, not engineering'",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Positions are mostly situational and not black or white; prefer systems-theoretic expression to empty position-taking, keep intellectual humility, and claim no absolute correctness."
+   },
+   "quote": "观点大多都是 situational",
+   "carried": "fresh-reading",
+   "relation": "scope",
+   "agreement_of": null,
+   "reading": {
+    "en": "On this reading the account divides this: laws of the root hold of every relation and so forbid none, content comes through conditional hypotheses, and a thesis is tested in a domain, so 'situational' moves into hypotheses. It does not share the stance whole: its stated target is the deductive necessity of the whole, open and not asserted. 'Enough situationality' in COLLECTIVE-DIRECTION means seeing a situation, another sense of the word. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#law",
+     "says": {
+      "en": "A law of the theory holds of every relation, carrier or model its hypotheses admit; a law with content is conditional and forbids through its hypotheses; it becomes a science's law for a domain only once the domain is shown to meet them."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/ONE-PAGE.md",
+     "says": {
+      "en": "T8 is argued, under the continuation condition for scope and C for order, neither asserted, warrant open; there is no verdict binding every possible mind."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "theory-of-becoming-foundation",
+     "anchor": "theories/becoming/chapters/08-METHOD.md#r-theory-of-becoming-foundation",
+     "says": {
+      "en": "Open (target): the deductive necessity of becoming as a whole, with no added substantive axiom. The necessity is the target, not an axiom, and no impossibility is claimed."
+     },
+     "role": "limit"
+    }
+   ],
+   "account_adds": {
+    "en": "An exact place where universality is cheap, and where it costs a stated hypothesis."
+   },
+   "source_adds": {
+    "en": "Situationality as a stance on one's own positions in general; no pursuit of absolute correctness; and humility as a register, where the account gives standings instead."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-memories-lens-not-ground",
+   "name": {
+    "en": "Covert self-totalization conceded: the ontology a lens, the maximand a floor"
+   },
+   "domain": "earlier-folders",
+   "group": "memories-and-working-style",
+   "source": {
+    "work": "theories/memories-and-working-style/synthesis-all.md",
+    "locator": "§8, Raised in the corpus, 'Covert self-totalization'; §1 claim 74",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "A red team charged that expansion of possibility space worked as a covert maximand and a process ontology was crowned as the ground while preaching plurality, the real selectors hidden under neutral openness. Partly conceded: maximand became floor, ontology a lens, one is-ought step marked. A residue is admitted."
+   },
+   "quote": "anti-totalization is a deliberate *minimal* totalization",
+   "carried": "carried-in-part",
+   "relation": "scope",
+   "agreement_of": null,
+   "reading": {
+    "en": "Two concessions have forms. Not a maximand: widening is a criterion every positive weighting agrees on, not a quantity to maximize. Not the ground: one unfolding is an argued thesis, nonduality a method requirement proving no ontology; yet the thesis does say there is one unfolding, more than a lens. Hidden selectors: 'for life' says whose way it is, with the condition for scope and C for order, neither asserted, warrant open. The one exclusion, the will to finalize, is near T8's forbidden pure closing. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#1-a-direction-as-a-criterion",
+     "says": {
+      "en": "So the direction is a criterion on which every such weighting agrees, not a quantity to maximize, and it says nothing where the comparison is mixed."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#one-relational-unfolding",
+     "says": {
+      "en": "Thesis (philosophical, argued). There is one unfolding, and whatever is, is how it relates within it. That the theory as a whole needs no independent entity is argued, not proved; neither result shows that reality has none."
+     },
+     "role": "carries",
+     "part": "the thesis's statement"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#beginning-within-the-one-unfolding",
+     "says": {
+      "en": "A shared process implies no cosmic subject, no aggregate interest and no administrator entitled to speak for everything. Nonduality is a requirement of method; it proves neither the ontology nor an ethical necessity."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#theses",
+     "says": {
+      "en": "T8, argued. For life, the way is 生生, compared by widening, counted for everything (scope: the continuation condition) and ranked by what every valuer who counts everything shares (order: C). For life says whose way it is, not whose losses count. No verdict binding every possible mind is claimed. Forbids: a mixed case argued better from every standpoint counting everything positively, with no further premise; a pure closing argued good for life."
+     },
+     "role": "carries",
+     "part": "T8"
+    }
+   ],
+   "account_adds": {
+    "en": "Where the criterion says nothing: mixed comparisons, decided both ways by positive weightings."
+   },
+   "source_adds": {
+    "en": "The charge of self-totalization by name and its admitted residue. The account does not ask whether its own unification is one. A floor is not stated as such: C ranks and sets no minimum, and the nearest, priority of basic conditions (J1, J2), is a further named premise."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-memories-value-words-recast",
+   "name": {
+    "en": "Value words recast in systems language, so values arrive as consequences"
+   },
+   "domain": "earlier-folders",
+   "group": "memories-and-working-style",
+   "source": {
+    "work": "theories/memories-and-working-style/synthesis-all.md",
+    "locator": "§1 claim 87",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Value words such as freedom and dignity have no solid ground, so they are recast as degrees of freedom, exit, voice and undo, requisite variety, correction loops, substrate and renewal. With one owned premise, plurality, care and non-foreclosure then arrive as consequences rather than tastes."
+   },
+   "quote": "have no solid ground",
+   "carried": "changed",
+   "relation": "divergence",
+   "agreement_of": null,
+   "reading": {
+    "en": "The account recasts likewise: what a course admits, and widening, defined with no premise. It denies the transfer: that the wider is better needs C, whose losses count needs the continuation condition, neither asserted, warrant open, and the definition carries no warrant. On witnesses a widening stands below what it widens by a net weighting or a game's payoffs. So recasting gains exactness and no ought, and 'consequences, not tastes' is what the account withholds. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/ONE-PAGE.md",
+     "says": {
+      "en": "One course widens another where at every step it admits all the other admits and at some step more, which needs no premise; that the wider is better does."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#philosophical-warrant",
+     "says": {
+      "en": "C's no-loss extension is widening by definition, so the definition carries no warrant."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#open-programme",
+     "says": {
+      "en": "Calling an input immanent, or moving it into a definition, does not discharge it."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "what-would-give-c",
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-would-give-c",
+     "says": {
+      "en": "It does not derive C from anything and gives no reason for it. Witnesses: where admission is imposed, an item a net weighting counts below zero can put a widening below what it widens; among choosers, widening the one menu both choose from can lower what each gets by the game's payoffs, at the only mutual best response of one play."
+     },
+     "role": "limit"
+    }
+   ],
+   "account_adds": {
+    "en": "Where the recast term stops carrying value: premises listed apart, each named where used."
+   },
+   "source_adds": {
+    "en": "That value words have no ground, and that values follow from dynamics with one premise."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  }
+ ],
+ "changes": [],
+ "live_flags": []
+}

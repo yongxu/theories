@@ -1,0 +1,127 @@
+{
+  "share": "share-6",
+  "verdicts": [
+    {
+      "id": "cx-sspiral-sample-size-hedge",
+      "verdict": "holds",
+      "fix": null,
+      "why": "The README states the hedge verbatim (claims 96, 97), and 04's coupled-groups and confined-rise theorems state that groups on one family end together and later cohorts descend only from members independent of it. Their records' correspondences (metapopulations; 'with one copy there is no average over copies') make carried-in-part and agreement of law stand, with the deliberate split as source_adds."
+    },
+    {
+      "id": "cx-fork-defection-correction",
+      "verdict": "holds",
+      "fix": null,
+      "why": "Claim 42 and open questions 4 and 5 say what the sense says. 07's D65 reading (informed harm, the hard rival) and 'seeing is not valuing' state the determined-adversary part as a Reading and a limit line, so the agreement is with a thesis or method; the withholding laws are rightly neighbours, and correction and standing down are kept as source_adds."
+    },
+    {
+      "id": "cx-sty-metaphysical-compression",
+      "verdict": "holds",
+      "fix": null,
+      "why": "The anti-pattern, 'relocates the zoo' and 'closure, not renaming' are in the README as the sense says. The account does concede part, as the entry quotes it: 01's one symbol, 08's 'as a language, nothing', ONE-PAGE's 'most use none', and 01's supply_not_carried for dependence alone. So carried-in-part with contrary-reading stands as a test kept."
+    },
+    {
+      "id": "cx-ma-conceptual-capture",
+      "verdict": "holds",
+      "fix": null,
+      "why": "The section and claims 86, 107, 129 say what the sense says. Closed capture's absorbed reading under its premise, target-capture's correspondence ('the rule reaching the standard of reason itself') and 03's D65 reading state part of the claim under conditions, so carried-in-part / scope stands; 02's T7 reading ('winners forming the minds that read it is ReadsShare on the reading') could also be cited as carrying."
+    },
+    {
+      "id": "cx-jianwen-every-character-definite",
+      "verdict": "label",
+      "fix": {
+        "reading": {
+          "en": "The script is relational as a reading system, the account says, and form does not encode a relational ontology: most characters are phono-semantic, and the heaviest cosmological graph-readings centre on one controller. A sense stands where every relevant record supplies it, so the theory's own single-character terms are conventions. [AI reading]"
+        }
+      },
+      "why": "Changed / divergence and the 06 #hanzi quotation stand. But the reading drops the home's qualifier ('理论中的单字术语是约定', the theory's own single-character terms), so it seems to say the account calls 文言's characters conventions, which overstates the divergence."
+    },
+    {
+      "id": "cx-sty-rules-governing-themselves",
+      "verdict": "label",
+      "fix": {
+        "carried": "fresh-reading",
+        "targets": [
+          {
+            "record": "shaping-read-by-readers-drawn-from-the-selected",
+            "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#alignment-without-premise",
+            "says": {"en": "Theorem (counts): 'above that critical mass the capacity to shape the rule rises at every step and the course is locked for it; below it the capacity falls at every step and the course is locked the other way'."},
+            "role": "carries",
+            "part": "r-shaping-read-by-readers-drawn-from-the-selected, as 'The two joined'"
+          },
+          {
+            "anchor": "theories/becoming/chapters/02-MAP.md#t7",
+            "says": {"en": "Reading [AI reading, D45], under T7: the corpus's second order, 'that recursive selection favours mechanisms which increase control over future selection', 'is the law of the capacity to shape the rule with its conditions'. 'Whether actual institutions or trained systems meet these premises is not established, and nothing here ranks open rule-making above capture: that needs C.'"},
+            "role": "carries",
+            "part": "Reading D45, the corpus's second order"
+          },
+          {
+            "record": "organizational-rule-inheritance",
+            "anchor": "theories/becoming/chapters/04-LIFE.md#r-organizational-rule-inheritance",
+            "says": {"en": "Supplied: 'a fixed amendment procedure and the adoption threshold'. Record: 'the origin of the highest authority' does not follow from the protocol. 'how procedures are themselves kept or dropped' is a distinct question."},
+            "role": "carries"
+          }
+        ]
+      },
+      "why": "The quoted D45 reading is not at 02 #r-closed-capture: it stands under #t7 and reads the shaping-the-rule law. Nor does the live account take up a rule system governing itself by its own means (no live 'amendment' but RuleHandoff's supplied procedure), so the join is this crosswalk's: fresh-reading, with scope kept and the reading unchanged."
+    },
+    {
+      "id": "cx-modphil-parfit-self-defeating",
+      "verdict": "holds",
+      "fix": null,
+      "why": "Memory against memory: Reasons and Persons ch. 4 defines direct collective self-defeat and says common-sense morality should be revised in many-person cases. The account cites Parfit only for other claims, and `Weighting.Restraint` (the prisoner's dilemma read as a menu, a checked theorem) and own_not_joint have that each-we form. So fresh-reading / agreement of law stands, and the ethics names C and the condition as unasserted."
+    },
+    {
+      "id": "cx-greek-plato-sophist-power",
+      "verdict": "holds",
+      "fix": null,
+      "why": "Memory against memory: Sophist 247d-e offers power to act or be acted on, however slightly, as a provisional mark of being, addressed to the materialists. 08's 'What it forbids' is a thesis, argued, and the entry quotes it with its 'no strength' standing and marks no descent, so fresh-reading / agreement of thesis-or-method stands."
+    },
+    {
+      "id": "cx-buddhist-mmk-24-18-designation-and-views",
+      "verdict": "holds",
+      "fix": null,
+      "why": "The 13 verse and 青目's medicine image, and the 24 verse (無, prose 空, 空亦復空), are in FO1-S-MMK.txt as quoted, and the Sanskrit as recalled matches mine. B-08 is quoted faithfully with its open question and limit (no names), and no live page takes 13's leaving of views, so the contrary against 08's thesis is this crosswalk's: fresh-reading / contrary-reading stands, the 24 agreement being already the 248 passages'."
+    },
+    {
+      "id": "cx-oi-kevala",
+      "verdict": "holds",
+      "fix": null,
+      "why": "Memory against memory: TS 1.29/30 and 10.1 and Mīmāṃsā's denial of an omniscient person agree with the sense. 03's step law bounds answers given through couplings on the World, there is no live kevala or Jain line ('omniscience' there is the constructive principle), and the reading says the model gives it no form without denying it. So fresh-reading / divergence stands."
+    },
+    {
+      "id": "cx-abr-ritual-without-justice",
+      "verdict": "holds",
+      "fix": null,
+      "why": "Memory against memory: Isaiah 1, Amos 5, Hosea 6:6 and Micah 6 say what the sense says, including the dispute over ritual as such. My own search of chapters, fronts, review, GLOSSARY and records found no prophet, ritual, sacrifice, widow, orphan, piety or 祭祀 bearing on it, and the claim's only standing is meta-attractor claim 143, so history-only with no relation stands."
+    },
+    {
+      "id": "cx-buddhist-mmk26-chain-and-stopping",
+      "verdict": "holds",
+      "fix": null,
+      "why": "The quote and every 青目 phrase are verbatim in FO1-S-MMK.txt chapters 26 and 13. Chapter 26 is read only in the study zhonghua/passages.json (zhonglun-wu-ming-mie, scope); the live account mentions the twelve links only as context (03 D26, B-32's 已知之弱, the appendix saying 26 is outside the corpus). So history-only with a stated structural scope reading and only neighbours stands."
+    }
+  ],
+  "read": [
+    "CRITIC2.md, BRIEF.md, apply_rulings.py (SETTABLE and the set/roles logic), check_entries.py (target and carried rules)",
+    "theories/selfishness-spiral-and-narrative-value-frames/README.md: The endgames, claims 95-97",
+    "theories/the-fork-and-cooperative-infrastructure/README.md: claim 42, open questions 1-8",
+    "theories/spirit-space-token-and-yi-substrate/README.md: The counterexamples, line 97, claims 36, 238, 243, 315, open questions 7 and 46",
+    "theories/meta-attractor/README.md: Conceptual capture and its positioning, claims 86, 107, 112, 129, 143, 281",
+    "theories/jian-and-wenyan-as-formal-language/README.md: Where it starts, claims 28-30",
+    "sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt: 觀行品第十三 (以世諦, 畢竟滅, 大聖說空法), 觀四諦品 (眾因緣生法, 空亦復空), 觀十二因緣品第二十六 whole",
+    "_process/.../zhonghua/passages.json: entry zhonglun-wu-ming-mie, and shengman-wu-ming-zhu-di beside it",
+    "04-LIFE.md: r-selection-among-groups-by-ending, r-groups-whose-conditions-are-coupled, r-confined-rise-within-a-whole, co-ending (line 29), r-life-as-condition-of-life head, r-organizational-rule-inheritance",
+    "records JSON correspondence: groups-whose-conditions-are-coupled, confined-rise-within-a-whole, selection-among-groups-by-ending, what-self-concern-alone-ranks; target-capture.md correspondence; closed-capture.md does-not-show; organizational-rule-inheritance does-not-show",
+    "07-SIGNIFICANCE.md: route-b (3.3) whole with D65, does-not-show, r-what-self-concern-alone-ranks, r-what-would-give-c and its route rows on the menu witness, The two joined and Read in time, D45 pooling paragraph, r-where-the-possible-grows head",
+    "05-COLLECTIVES.md: r-own-count-misses-joint-excess, r-thresholds-of-waiting, r-errors-by-chance-in-a-pair-keeping-mutual-withholding, the new AI reading at line 420 (a rule kept and the wrong rule), r-what-a-pools-acts-respond-to head",
+    "01-ROOT.md: one-kind-of-symbol; line 312 (dependence alone, supply_not_carried)",
+    "08-METHOD.md: one-relational-unfolding with What it forbids and What would defeat it, what-would-defeat-the-reading, law",
+    "ONE-PAGE.md: the root paragraph and the Join row",
+    "02-MAP.md: r-target-capture, r-closed-capture, r-readers-drawn-from-the-selected, r-shaping-read-by-readers-drawn-from-the-selected head, r-rules-that-change-themselves-in-the-grammar, t7 thesis and its D26/D45 readings (lines 434-442)",
+    "03-KNOWING.md: r-what-a-center-can-know-by-a-step, r-readings-within-what-they-read, r-seeking-boundary and its D26/D41/D45 reading, the D65 obscuration reading",
+    "06-CLASSICAL-TEXTS.md: hanzi, zhi-ge, pre-qin; G09 row and its line 163",
+    "review/BUDDHIST-THOUGHT.md: B-01, B-08, line 448, line 601",
+    "Searched (grep, live account): independent copy, sample size, city-state; amendment, dogfood, govern itself; conceptual capture, name of rationality; Parfit; omniscien, kevala, Jain; Isaiah, Amos, Hosea, Micah, prophet, sacrific, ritual, widow, orphan, piety, Hebrew, Bible, 先知, 祭祀, justice; 十二因, 十二缘, 十二支, twelve link, 無明滅, 以是事滅, 畢竟滅, 正滅, 第二十六"
+  ],
+  "live_flags": []
+}

@@ -46,7 +46,7 @@ An independent review.
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-Seed viability and dormancy; hysteresis of collapse.
+Seed viability and dormancy; a collapse that support's return does not undo, one-sided only: hysteresis's distinct collapse and recovery thresholds are not stated.
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
@@ -75,6 +75,7 @@ Aliases: `Dormancy over a stretch, and final ending`, `一段上之休眠与终�
 ### History
 
 - 22 October 2026: added (ZG), for the gap the ZH reading raised; study section 340.
+- 7 November 2026, CX: the correspondence corrected where a reader of the crosswalk found it wider than its source or its home (the crosswalk's live flags, checked at home); no law, premise or scope of this record changed.
 
 </details>
 

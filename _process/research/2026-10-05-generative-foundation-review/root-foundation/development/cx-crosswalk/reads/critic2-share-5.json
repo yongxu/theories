@@ -1,0 +1,118 @@
+{
+  "share": "share-5",
+  "verdicts": [
+    {
+      "id": "cx-ma-diagnosis-limit",
+      "verdict": "label",
+      "fix": {
+        "carried": "fresh-reading",
+        "reading": {"en": "Proposed here; the account does not read the slide's diagnosis this way. Two laws have the source's pair as their form: states alike under every old observation and the active view are told apart by a newly admitted probe; the balanced and thermostat rooms are one core class while no window opens, told apart once its opening is in the net, on stipulated branches. A reading sets consent and penalties as such a pair. A probe that spends recovery was not found. [AI reading, D69]"}
+      },
+      "why": "Both carrying theorems have the source's form (alike under the old channel, told apart by a probe or the window), but on other models, and no live sentence states the claim about diagnosing a slide: a law of like form read onto the source is fresh-reading, not carried-in-part. agreement_of law and the source_adds stand."
+    },
+    {
+      "id": "cx-ecoevo-adaptationist-inference",
+      "verdict": "holds",
+      "fix": null,
+      "why": "04's D65 reading states the four linked questions and that a present benefit does not establish origin, with constraint and byproduct as live alternatives: Tinbergen's scheme and the spandrels caution in content, naming neither, and a Reading gives thesis-or-method. The sources are judged memory against memory, and the sense matches them as I recall them."
+    },
+    {
+      "id": "cx-modphil-parfit-extreme-claim",
+      "verdict": "holds",
+      "fix": null,
+      "why": "07 §4.7's reading 'the word may not survive' names Parfit's Extreme Claim as an objection to the widened line, and P-10 records it with the study's reply as the standard objection to the step, so part is carried and it argues against the account's form. The says are verbatim; Parfit ch. 14 and Wolf 1986 judged memory against memory."
+    },
+    {
+      "id": "cx-drives-value-is-formed",
+      "verdict": "holds",
+      "fix": null,
+      "why": "07 §1 states, on the argued thesis, that standards form within the unfolding and none outside owns value, and splits influence, recognition, warrant and being followed, which scopes the source's universal construction claim (construction paragraph, A.1-2 and Ren's words 2 say what the sense says). Only the reading's 'formed, so changeable is kept' has no target sentence behind it, a small overstatement."
+    },
+    {
+      "id": "cx-ma-task-revision",
+      "verdict": "holds",
+      "fix": null,
+      "why": "The live record states every part of the source's English scope, including the old route faithfully delivering the outdated request and changed conditions defeating the revised practice (its law 8), and 03 states the rewrite and the failure of relabelling: carried at the same scope. The Lean comes from the folder's own construction, but laws in Lean do not descend, so law stands."
+    },
+    {
+      "id": "cx-sty-emergent-institutions",
+      "verdict": "holds",
+      "fix": null,
+      "why": "The account takes up emergence read as a guarantee (05 §9 and D45: from a symmetric start something must break the symmetry; conventions are equilibria symmetry does not select; symmetric roles single out none), which conditions claim 43's bet for norms and leadership, so changed/scope is defensible. The compositional roles of claim 28 have no live statement, as the reading itself says, and open question 35 is in the sense."
+    },
+    {
+      "id": "cx-modphil-parfit-fission",
+      "verdict": "label",
+      "fix": {
+        "carried": "carried-in-part",
+        "targets": [
+          {"record": "continuation-relative-to-a-class", "anchor": "theories/becoming/chapters/01-ROOT.md#r-continuation-relative-to-a-class", "says": {"en": "'Continuation is a relation, not an identity.' Witness: 'where one occurrence is continued by two that go no further, sameness read along lines either way is not transitive (`«分叉»`). The family gathers the branches; it is coarser than identity.'"}, "role": "carries"},
+          {"record": null, "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#step", "says": {"en": "The strongest argument for the step, argued, not proved: '(P4) What acting presupposes is that continuation has significance, not continuation under a description of its own drawing'; soundness is not shown, and 'P4, Parfit's thesis that identity is not what matters, is coherently denied'."}, "role": "carries", "part": "P4"},
+          {"record": "own-good-to-reachable-living-significance", "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-own-good-to-reachable-living-significance", "says": {"en": "Differentiation is 'a correspondence premise in scope for fission, copying, forking and AI successors'."}, "role": "neighbour"}
+        ],
+        "reading": {"en": "The root has the first half as a witness, with Parfit uncredited there: continuation splits, and sameness read along lines is not transitive. The second half, that identity is not what matters, belongs to no law: 07 §4.2 names it as Parfit's thesis, P4 of the strongest argument for the step, argued, coherently denied and not shown. The record on own good puts fission in scope of a correspondence premise. [AI reading]"},
+        "source_adds": {"en": "The fission case as the argument for the second half, and the claim that the branching relation is all that matters in survival, which 07 holds only as P4, argued and not shown."}
+      },
+      "why": "07 §4.2 states the source's conclusion in words, 'P4, Parfit's thesis that identity is not what matters', as a premise of the step, argued, coherently denied and not shown; the entry omits it and calls the whole a fresh reading. The first half's agreement with «分叉» as law stands, so carried-in-part with 07#step as a second carrier."
+    },
+    {
+      "id": "cx-sty-intersubjective-infrastructure",
+      "verdict": "fails",
+      "fix": {
+        "carried": "not-carried",
+        "relation": null,
+        "agreement_of": null,
+        "targets": [],
+        "absence": {
+          "searched": ["consensus, coordinat, shared understanding, intersubjectiv, infrastructure, culture, 共识, 主体间 in ONE-PAGE, THE-THEORY-OF-BECOMING, ONE-ARGUMENT, COLLECTIVE-DIRECTION, FREE-ENERGY-PRINCIPLE, chapters/, review/ and GLOSSARY.md", "05's list of applications elsewhere, for this folder"],
+          "read": ["05-COLLECTIVES.md §9 Shared codes", "05-COLLECTIVES.md r-joint-plan-composition, r-joint-plans-from-a-supported-start, r-joint-practice-forms-continuation", "05-COLLECTIVES.md §12 head and the applications line"]
+        },
+        "reading": {"en": "A proposal, not a correspondence: the source states a purpose, and the account does not take it up. It has laws on the three topics, each on its own model: agreement as a code shared through hearings; joint action as compatible plans, which locally successful plans can fail; a practice kept as a rule passed through members. They are conditions and failures, not infrastructure, and say nothing of whether any of it supports 生生. [AI reading]"}
+      },
+      "why": "The source states a purpose (a value stance) with no mechanism, so mapping consensus, acting together and culture onto three laws on those topics is a word match standing in for a structure; the reading itself says they are 'conditions and failures, not infrastructure'. No live text takes up the purpose, so not-carried, the proposal kept in the reading."
+    },
+    {
+      "id": "cx-buddhist-candrakirti-no-own-thesis",
+      "verdict": "holds",
+      "fix": null,
+      "why": "Memory against memory: the prasaṅga refusal of autonomous inference, VV 29 and the conventional taken as the world takes it are as I recall them, and Tsongkhapa's other reading is rightly flagged; 06's «因灭而续» row says what the target says, with the chapter's own 'no recovery of the text' and open 同在. Live text names Candrakīrti only to say his commentary is missing, so fresh-reading/contrary-reading holds."
+    },
+    {
+      "id": "cx-modphil-sen-capability",
+      "verdict": "holds",
+      "fix": null,
+      "why": "07's chooser route says what the target quotes (Foster's effective freedom with every preference admitted; a merely possible chooser counts), and Sen's reading of freedom by what a person has reason to value parts there, as in his 1991 reply to Pattanaik and Xu: divergence, memory against memory for Sen. 08 names Sen only as near the two-tier order, not the capability set, so fresh-reading is right."
+    },
+    {
+      "id": "cx-sty-explainable-authority",
+      "verdict": "holds",
+      "fix": null,
+      "why": "Claims 195, 196, 199, 249 and 308 and 'Agency is a trait' say what the sense says, and no live text speaks of authority explaining a refusal to a member. 07's conditional direction asks effective opportunities to understand and challenge only under both premises, so a reader's join conditioning an unconditional requirement is fresh-reading/scope; the other quotes are verbatim and rightly neighbours or a limit."
+    },
+    {
+      "id": "cx-greek-epicurus-death",
+      "verdict": "holds",
+      "fix": null,
+      "why": "Only the crux study names Epicurus (PHILOSOPHY-ROUND-1 §3, as the narrow position), and no live text does, so history-only with a structural reading said to be proposed and neighbours only. The reading is fair to 07, which counts losses returning to no one and reads a loss by comparing courses, against his requirement of a subject; the Letter, PD 2 and Lucretius III judged memory against memory."
+    }
+  ],
+  "read": [
+    "CRITIC2.md, BRIEF.md; REPAIR.md and COMPARE.md for the descent and carried-in-part rules; apply_rulings.py and check_entries.py for the fields",
+    "theories/meta-attractor/GENERATIVE-REGIMES.md, Recognizing approach and entrenchment through Expanding inquiry",
+    "theories/meta-attractor/COLLECTIVE-DESTRUCTIVE-ATTRACTORS.md, Revising a task already in progress",
+    "theories/spirit-space-token-and-yi-substrate/README.md: The problem, Three primitives, Why possession rather than permission, Agency is a trait, claims A, D, E, 28, 35, 195-199, 249, 304-308, Ren's words 17, open question 35",
+    "theories/drives-narrative-attractors-and-mind/README.md: the argument's opening, claims A and L, the 2025 genealogy paragraph, Ren's words 2",
+    "03-KNOWING.md §3 Testing within the net; the access-yet-to-form row; r-formed-goal-revision-continuation, r-acquired-revision-of-pending-task, scientific-standing, a-reading-informed-and-revalued",
+    "results/records/access-yet-to-form.md and acquired-revision-of-pending-task.md in full; what-the-step-across-standpoints-reaches.md correspondence; own-good-to-reachable-living-significance.md correspondence line",
+    "02-MAP.md r-how-loops-form, the meta-attractor definition and D65 reading; COLLECTIVE-DIRECTION.md §3 row",
+    "05-COLLECTIVES.md §9 Shared codes, r-a-code-held-as-counts and D45, r-a-swap-symmetric-assignment-singles-out-none, r-market-model-share-margin-and-ends, joint plans and joint practice theorems, §12 head and applications line",
+    "07-SIGNIFICANCE.md §1 evaluation and r-what-the-dynamics-leave-open, r-rivals-bounded-in-time, §4.2 step, r-what-would-give-c and the chooser route, r-reach-past-ones-own-end, §4.7 crux, r-alignment-direction-under-widening, r-versioned-request-completion row, does-not-show line, line 212 under r-whole-and-regions-and-bounded-centers",
+    "04-LIFE.md D65 'Development: four linked questions'",
+    "06-CLASSICAL-TEXTS.md §三 head and its 「滅更不生故」 row, the note on 中观破相续",
+    "08-METHOD.md what-would-defeat-the-reading head, five-step-test item 3, derivation-soundness line, known-results row on opportunity sets, beyond-the-table paragraph naming Sen 1985",
+    "01-ROOT.md continuation relative to a class, the fission witness",
+    "review/PHILOSOPHY.md P-10; review/BUDDHIST-THOUGHT.md B-07 and the missing-texts note",
+    "_process/.../pf-path-and-crux/PHILOSOPHY-ROUND-1.md §3 head"
+  ],
+  "live_flags": []
+}

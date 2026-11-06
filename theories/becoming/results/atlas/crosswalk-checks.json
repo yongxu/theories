@@ -1,0 +1,195 @@
+{
+ "about": "Checks of the crosswalk: AI critics, no person. Written by _process/research/2026-10-05-generative-foundation-review/root-foundation/development/cx-crosswalk/sample_summary.py; do not edit.",
+ "first_critic": {
+  "date": "2026-11-07",
+  "sampled": 59,
+  "held": 32,
+  "partly": 12,
+  "failed": 15,
+  "aimed": true,
+  "report": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/cx-crosswalk/reads/CRITIC.md",
+  "note": "aimed at suspects, so not an error rate; its findings led to the repair and the comparison across items"
+ },
+ "second_critic": {
+  "date": "2026-11-07",
+  "seed": 20261107,
+  "per_stratum": 6,
+  "stage": "5-compare",
+  "entries": 1183,
+  "sampled": 100,
+  "verdicts": {
+   "holds": 83,
+   "label": 15,
+   "fails": 2
+  },
+  "estimate_percent": {
+   "holds": 82.6,
+   "label": 14.2,
+   "fails": 3.2
+  },
+  "strata": [
+   {
+    "stratum": "carried-in-part/agreement/law",
+    "size": 115,
+    "drawn": 6,
+    "holds": 5,
+    "label": 1,
+    "fails": 0
+   },
+   {
+    "stratum": "carried-in-part/agreement/reading",
+    "size": 26,
+    "drawn": 6,
+    "holds": 5,
+    "label": 1,
+    "fails": 0
+   },
+   {
+    "stratum": "carried-in-part/agreement/thesis-or-method",
+    "size": 59,
+    "drawn": 6,
+    "holds": 6,
+    "label": 0,
+    "fails": 0
+   },
+   {
+    "stratum": "carried-in-part/contrary-reading",
+    "size": 4,
+    "drawn": 4,
+    "holds": 4,
+    "label": 0,
+    "fails": 0
+   },
+   {
+    "stratum": "carried-in-part/divergence",
+    "size": 47,
+    "drawn": 6,
+    "holds": 4,
+    "label": 2,
+    "fails": 0
+   },
+   {
+    "stratum": "carried-in-part/scope",
+    "size": 236,
+    "drawn": 6,
+    "holds": 5,
+    "label": 1,
+    "fails": 0
+   },
+   {
+    "stratum": "carried/agreement/law",
+    "size": 3,
+    "drawn": 3,
+    "holds": 2,
+    "label": 1,
+    "fails": 0
+   },
+   {
+    "stratum": "changed/divergence",
+    "size": 168,
+    "drawn": 6,
+    "holds": 4,
+    "label": 2,
+    "fails": 0
+   },
+   {
+    "stratum": "changed/scope",
+    "size": 22,
+    "drawn": 6,
+    "holds": 4,
+    "label": 2,
+    "fails": 0
+   },
+   {
+    "stratum": "fresh-reading/agreement/law",
+    "size": 13,
+    "drawn": 6,
+    "holds": 5,
+    "label": 1,
+    "fails": 0
+   },
+   {
+    "stratum": "fresh-reading/agreement/reading",
+    "size": 115,
+    "drawn": 6,
+    "holds": 4,
+    "label": 0,
+    "fails": 2
+   },
+   {
+    "stratum": "fresh-reading/agreement/thesis-or-method",
+    "size": 7,
+    "drawn": 6,
+    "holds": 4,
+    "label": 2,
+    "fails": 0
+   },
+   {
+    "stratum": "fresh-reading/contrary-reading",
+    "size": 20,
+    "drawn": 6,
+    "holds": 6,
+    "label": 0,
+    "fails": 0
+   },
+   {
+    "stratum": "fresh-reading/divergence",
+    "size": 111,
+    "drawn": 6,
+    "holds": 6,
+    "label": 0,
+    "fails": 0
+   },
+   {
+    "stratum": "fresh-reading/scope",
+    "size": 110,
+    "drawn": 6,
+    "holds": 6,
+    "label": 0,
+    "fails": 0
+   },
+   {
+    "stratum": "history-only",
+    "size": 20,
+    "drawn": 6,
+    "holds": 5,
+    "label": 1,
+    "fails": 0
+   },
+   {
+    "stratum": "history-only/agreement/reading",
+    "size": 1,
+    "drawn": 1,
+    "holds": 1,
+    "label": 0,
+    "fails": 0
+   },
+   {
+    "stratum": "history-only/contrary-reading",
+    "size": 1,
+    "drawn": 1,
+    "holds": 1,
+    "label": 0,
+    "fails": 0
+   },
+   {
+    "stratum": "history-only/scope",
+    "size": 1,
+    "drawn": 1,
+    "holds": 1,
+    "label": 0,
+    "fails": 0
+   },
+   {
+    "stratum": "not-carried",
+    "size": 104,
+    "drawn": 6,
+    "holds": 5,
+    "label": 1,
+    "fails": 0
+   }
+  ],
+  "fixed": "every fix the critic gave was applied; the rest of the entries were not re-read",
+  "source": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/cx-crosswalk/reads"
+ }
+}

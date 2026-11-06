@@ -1,0 +1,120 @@
+{
+  "share": "share-7",
+  "verdicts": [
+    {
+      "id": "cx-ecoevo-major-transitions",
+      "verdict": "holds",
+      "fix": null,
+      "why": "Memory against memory, the sense fits Maynard Smith and Szathmary's common features and Michod's transfer of fitness between levels. 04's founding law is copied with Sequestered as 'a hypothesis stating an outcome, not a mechanism', and the record itself names Michod 1999 and lists 'the major transitions themselves' as not shown, its correspondence marked the AI's, so carried-in-part with agreement_of reading holds."
+    },
+    {
+      "id": "cx-jianwen-zhi-ge-caution",
+      "verdict": "holds",
+      "fix": null,
+      "why": "The told-aloud paragraph and open question 63 say what the sense says, and the quote is verbatim; 06 #zhi-ge states the paleographic half in its own words (止为足形，武是持戈而行; 理论不说武的本义是止戈), so carried-in-part stands. The target is a Reading (D54, which its study grounds in the 說文, not shown to descend from this folder), so thesis-or-method fits, and the 和 half is fairly set against the speech's frame of power."
+    },
+    {
+      "id": "cx-hsm-anti-laundering",
+      "verdict": "holds",
+      "fix": null,
+      "why": "The four-refusals paragraph and claims 87-91 match, and the quote is own words 39 verbatim; 08 §2's rule that a sentence states what the Lean proves 'no stronger and no weaker', with ONE-PAGE's 'no person has yet reviewed it', states the labelling part. The museum's public build that fails on unreviewed content, where the account labels and publishes, is a real parting, so divergence holds."
+    },
+    {
+      "id": "cx-sspiral-adopt-or-die",
+      "verdict": "holds",
+      "fix": null,
+      "why": "Loop 2, the paradigm-convergence paragraph and claims 45-51 and 89 match, the quote verbatim; 05's row states 'restraint is no mutual best response' with its existence qualifier, a live sentence for the 'only rational' part. The cascade, code and drawn-shaping laws are a reader's assembly, as the reading says, and they condition 'all agents become one kind' to a rest under copying that drift leaves, so scope holds."
+    },
+    {
+      "id": "cx-jianwen-few-operators-many-atoms",
+      "verdict": "holds",
+      "fix": null,
+      "why": "Claims 31-32 and 46 and own words 19 and 63 match, the quote is verbatim, and 06's replacement, 01's operations on relations, the review's 'names do not mean the operations came from the texts' and the counts of shared characters all check, so changed/divergence holds. One fault in text, not labels: the 06 says stops before '所提“小而可检的文言内核”仍是一项检验', so 'retires' overstates; the account keeps a kernel test not yet run, and the says and the reading's first sentence should carry that clause."
+    },
+    {
+      "id": "cx-wamo-coordination-bottleneck",
+      "verdict": "label",
+      "fix": {
+        "targets": [
+          {"anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#the-answer-in-brief", "says": {"en": "No guarantee. What the theory gives is narrower: a criterion, widening; exits each under stated hypotheses, none shown to hold of an actual collective; six conditions for enough situationality. Calling widening better needs C, counting returnless losses needs the continuation condition, neither asserted."}, "role": "carries"},
+          {"anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#6-what-enough-situationality-would-have-to-mean", "says": {"en": "Reading [AI reading, D45]: coupling, response, time, resolution, pace, structure, all at once. Observation is necessary and not sufficient: seeing is not valuing, and coupling is not compliance. All six together still rank nothing."}, "role": "carries", "part": "D45"},
+          {"anchor": "theories/becoming/chapters/08-METHOD.md#the-work-by-its-own-laws", "says": {"en": "\"Human readers, coordination among people and trained systems couple into none of them. So no check run inside the work can show that the work serves what it is for: a truth anyone can check, and through it shared understanding and coordination.\" A statement of the work's purpose, not a law, and not about what decides a collective's course."}, "role": "neighbour"},
+          {"anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#5-what-is-empirical", "says": {"en": "\"One kind of institution has one minimal model on the root [AI reading], a rule rebuilt from the members it limits (05 §12), and no actual institution is shown to meet its hypotheses; no field test of reform events is frozen …; no test has human participants.\""}, "role": "limit"}
+        ]
+      },
+      "why": "The fork paragraph and claims 11-12 match, and COLLECTIVE-DIRECTION's answer and D45 carry changed/scope; 08's sentence states the work's own purpose, not what decides a collective's fork, so its role is neighbour, not carries. The limit's quote 'No institution is modelled on the spine' is no longer in the live §5, which now has one minimal institution model on the root; the fix copies the live sentence."
+    },
+    {
+      "id": "cx-modphil-sen-rational-fools",
+      "verdict": "holds",
+      "fix": null,
+      "why": "Memory against memory, the sense matches the 1973 and 1977 papers; 03's law gives what strict choices show and no more, near-definitional as the says states, and 07's AnotherReads witness has the wedge's two-order form, so law agreement stands as BRIEF defines it, with commitment as a kind rightly in source_adds. 08's 'Sen (1977)' is named there as 'On Weights and Measures', so the reading's hedge can be firm: it is another paper."
+    },
+    {
+      "id": "cx-modphil-spinoza-good-from-desire",
+      "verdict": "holds",
+      "fix": null,
+      "why": "Memory against memory, III p9 scholium, the IV Preface and IV def. 1 say what the sense says. 07 §1 (on the thesis, standards form within the unfolding and none owns value) and ONE-PAGE's 'better' left free are a thesis and a front, so thesis-or-method holds, and the reading keeps both distances (a standard can be wrong; Spinoza's own standard of utility against C unasserted)."
+    },
+    {
+      "id": "cx-buddhist-mmk-no-arising-from-other",
+      "verdict": "holds",
+      "fix": null,
+      "why": "The verse and the 觀成壞品 and 觀苦品 sentences are verbatim in FO1-S-MMK.txt, and the coder's note on ZL-01-090 does call 01's gloss near a reading of 他生 and 'a tension'; 01's main reading and the record's 'production ... not expressible' are what horn two is read against, and no live text names that horn, so fresh-reading/contrary-reading holds. B-02, where the dossier says its 续 stands on the side the 中论 refutes, is a live neighbour the entry could cite."
+    },
+    {
+      "id": "cx-oi-moksha",
+      "verdict": "holds",
+      "fix": null,
+      "why": "Memory against memory, NS 1.1.22, SK 68, YS 4.34, TS 10 and Gita 3.20 fit, with the devotional Vedanta caveat kept; release ranked highest unconditionally, against T8 offered for life under two unasserted premises, is divergence, consistent with B-34's 相分. The T8 says omits its refuter, 'a pure closing argued good for life', which is the line a moksa argument would have to meet, and source_adds' 'no live argument meets it' should name it."
+    },
+    {
+      "id": "cx-drives-qing-as-weighting",
+      "verdict": "holds",
+      "fix": null,
+      "why": "J.69 is verbatim and marked [AI-doc], from the SSBX synthesis in history. Searching 情, affect, feeling, salience, valence and urgency over the live files I found no carrying: 07 gives significance 'no valence', 03's Open lists motivation and affect (salience) unreached, and 06's 同类同情 is a perception premise of another sense, so history-only holds."
+    },
+    {
+      "id": "cx-dpc-prigogine-structures",
+      "verdict": "holds",
+      "fix": null,
+      "why": "Memory against memory, the sense is the standard pair, and 08's known-results row lists 'least entropy production near equilibrium and dissipative structures formed by bifurcation (Prigogine)' as not yet stated, so not-carried stands. The absence missed two neighbours, 05 §9's identical cells that do not part without asymmetry (glossed on the FEP page with Turing 1952) and fed-from-beyond, which 08 reads as restating Schrodinger and Prigogine (1977); neither states the extremum or the instability, but 'All of it' in source_adds should leave out the need of a throughput."
+    }
+  ],
+  "read": [
+    "_process/.../cx-crosswalk/CRITIC2.md and BRIEF.md in full; REPAIR.md rules 1-6; COMPARE.md (searched for agreement and live_flags); apply_rulings.py header",
+    "theories/jian-and-wenyan-as-formal-language/README.md: the theory paragraph; the told-aloud paragraphs (145-149); claims 19, 31, 32, 44-48; open questions 63-64; own words 19, 31, 32, 63",
+    "theories/human-solutions-museum/README.md: Four refusals; claims 85-92; own words 39",
+    "theories/selfishness-spiral-and-narrative-value-frames/README.md: Loop 2; The intensifiers; claims 45-51, 89",
+    "theories/wamotopia-and-the-wamo-protocol/README.md: The fork, and why the bottleneck is coordination; claims 10-13",
+    "theories/drives-narrative-attractors-and-mind/README.md: claim J.69, its terms row and relations line",
+    "sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt: the 不自生 verse with its commentary; 觀成壞品's 法不從自生 passage; 觀苦品第十二's 此五陰/彼五陰 passage",
+    "_process/.../one-unfolding-root/classify/zhonglun.tsv rows ZL-01-090 and ZL-21-101",
+    "theories/becoming/chapters/04-LIFE.md §5 (groups, bonds, confined rise), §8 (incl. D65 Part and whole), #does-not-show, #open",
+    "theories/becoming/results/records/confined-rise-within-a-whole.json (hypotheses, does_not_show, correspondence)",
+    "theories/becoming/chapters/06-CLASSICAL-TEXTS.md #zhi-ge, #pre-qin, #zhonghua, #conditional-laws (不自缘), #r-conditional-laws-of-the-corpus head and 表达不了者 line",
+    "theories/becoming/results/records/conditional-laws-of-the-corpus.json does_not_show",
+    "theories/becoming/chapters/01-ROOT.md §1 #one-kind-of-symbol (definition, main reading, first theorem)",
+    "theories/becoming/review/CLASSICAL-TEXTS.md line 9",
+    "theories/becoming/review/BUDDHIST-THOUGHT.md B-01, B-02, B-03, B-09, B-12, B-16, B-34",
+    "theories/becoming/chapters/08-METHOD.md #standings-and-bases; #the-work-by-its-own-laws; §8 known-results head and rows (incl. Fed from beyond, Significance); the equality-on-the-carrier sentence of #one-relational-unfolding",
+    "theories/becoming/ONE-PAGE.md lines 7-30",
+    "theories/becoming/chapters/05-COLLECTIVES.md race for position, optimum cases (several optimizers), #r-reading-anothers-couplings-is-pooling, #r-a-cascade-at-the-histories-reached, #r-a-code-formed-between-formations table",
+    "theories/becoming/results/records/a-code-formed-between-formations.json does_not_show",
+    "theories/becoming/chapters/02-MAP.md #r-drawn-shaping-drawn-one-at-a-time; #r-more-needs-renewers to #r-far-conveying-runs-the-family-down; #r-least-loss-from-entropy-production; #r-entropy-history-and-record",
+    "theories/becoming/COLLECTIVE-DIRECTION.md: answer in brief, §5, §6, §8",
+    "theories/becoming/chapters/03-KNOWING.md #r-what-choices-show-of-an-order and its Reading",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md §1 #evaluation; §3 #condition; #r-what-would-give-c (lines 362-387); §8 #theses (T4, T5, the narrowing theorem, T8)",
+    "theories/becoming/results/records/a-narrowing-above-its-widening.json does_not_show",
+    "theories/becoming/FREE-ENERGY-PRINCIPLE.md §3 item 1",
+    "GLOSSARY.md rows for generation and 生生",
+    "_process/.../root-foundation/DELEGATED-CHOICES.md D54 row; BECOMING-RENEWAL-READING.md the 武 and 止戈 bullet of section 207",
+    "searched only, over ONE-PAGE, THE-THEORY-OF-BECOMING, chapters, COLLECTIVE-DIRECTION, ONE-ARGUMENT, FREE-ENERGY-PRINCIPLE, review and GLOSSARY: bottleneck, coordinat; salien, valence, affect, feeling, 情, 入心, 轻重; moksa, kaivalya, apavarga, samsara, 解脱, 涅槃, liberation; Spinoza; Sen; bifurcat, instabilit, self-organiz, far from equilibrium, steady state; 他生, 他作, 无生"
+  ],
+  "live_flags": [
+    {
+      "where": "theories/becoming/chapters/01-ROOT.md#one-kind-of-symbol",
+      "what": "The main reading glosses `R x y` as 'x is a condition of y, among what y's coming about comes from', which reads as the 他生 that 中论 1.1 and 21.13 deny, while 06's 表达不了者 says production (生产与充足) is not expressible because 缘 is a necessary relation between places of the net. The coder's note on ZL-01-090 (_process/.../one-unfolding-root/classify/zhonglun.tsv) calls this a tension; no live text says so, and B-03 is the nearest place to say it."
+    }
+  ]
+}

@@ -53,7 +53,7 @@ Graded orders, how much a standpoint's own continuation weighs, under which comp
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-Monotonicity in the opportunity-set literature, relocated to one's own continuation. Jonas (1979): the existence of the whole is never to be staked; here a condition everyone needs, with no second copy, has its ending ranked below by every standpoint's self-concern, with no impartial premise. Ergodicity (Peters 2019) and systemic ruin (Taleb and others 2014): with one copy there is no average over copies; not formalized here. Reading (the AI's, D64): an order increasing in its own continuation is the monotonicity of a self-concerned standpoint.
+Monotonicity in the opportunity-set literature, relocated to one's own continuation. Jonas (1979): the existence of humanity as a whole is never to be staked; here a condition everyone needs, with no second copy, has its ending ranked below by every standpoint's self-concern, with no impartial premise. Ergodicity (Peters 2019) and systemic ruin (Taleb and others 2014): with one copy there is no average over copies; not formalized here. Reading (the AI's, D64): an order increasing in its own continuation is the monotonicity of a self-concerned standpoint.
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
@@ -106,6 +106,7 @@ Aliases: `what self-concern alone ranks`, `单凭自我关切排出什么`, `Bec
 
 - 23 October 2026: added (IV3): what an order increasing only in its own continuation ranks, the ending of what everything needs below from every standpoint, an independent copy making the comparison mixed, and C's premise where its own continuation is everything; after a literature check (significance review, dependence check); study section 373.
 - 23 October 2026: extended (IV3b): the ranking of the ending joined with coupled ending in one theorem, replacing the joining by argument; groups-whose-conditions-are-coupled moved from related to a formal-reuse dependency; study section 378.
+- 7 November 2026, CX: the correspondence corrected where a reader of the crosswalk found it wider than its source or its home (the crosswalk's live flags, checked at home); no law, premise or scope of this record changed.
 
 </details>
 
