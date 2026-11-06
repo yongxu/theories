@@ -47,13 +47,14 @@
       ]
     },
     {
-      "en": "Along the net, self-concern and being increasing in admission coincide on the endless line of descent and part on two family lines with no condition between them, whose first birth reaches exactly its own family; along the net's converse they coincide in descent that ends and part on the endless line from every center.",
-      "zh": "沿网，自关切与于接纳上递增于无尽传承之线相合，于其间无条件之二族线相分，其初生所及恰为己族；沿网之逆，于有终之传承相合，于无尽之线自每一中心相分。",
+      "en": "Along the net, self-concern and being increasing in admission coincide on the endless line of descent from its first birth, every later member failing the condition, and part on two family lines with no condition between them, whose first birth reaches exactly its own family; along the net's converse they coincide in descent that ends, from its last occurrence, and part on the endless line from every center.",
+      "zh": "沿网，自关切与于接纳上递增于无尽传承之线自其初生相合，每一后来之员不满足条件；于其间无条件之二族线相分，其初生所及恰为己族；沿网之逆，于有终之传承自其末出现相合，于无尽之线自每一中心相分。",
       "declarations": [
         "Becoming.TwoLines.first_line_reaches_both",
         "Becoming.TwoLines.first_line_reach_iff",
         "Becoming.increasingInOwn_with_net",
-        "Becoming.increasingInOwn_with_net_converse"
+        "Becoming.increasingInOwn_with_net_converse",
+        "Becoming.LineOfDescent.Endless.later_outside"
       ]
     }
   ],
@@ -71,8 +72,8 @@
       "zh": "就网上之排序：接纳由所予之二值读法判定，二层径所接纳者列为（步，构成）之项，每一主张计为活，每项以其构成之标记标之。"
     },
     {
-      "en": "The ethics rests on two premises with two roles: the continuation condition for scope and C (Comparison) for order. C still alone orders in general; this result locates where self-concern gives what C asks, one way: between two listed level paths, courses whose admissions end, where the de se condition holds and admission is decided.",
-      "zh": "伦理依二前提，各有其职：延续条件定范围，C（Comparison）定序。一般而言仍唯 C 定序；此结果指出自关切单向给出 C 之所求之处：于自承之条件成立、接纳可判定之处，二所列且接纳有终之层径之间。"
+      "en": "The ethics rests on two premises with two roles: the continuation condition for scope and C (Comparison) for order. A ranking of courses still needs C or a premise in its place; this result locates where self-concern gives what C asks, one way: between two listed level paths, courses whose admissions end, where the de se condition holds and admission is decided.",
+      "zh": "伦理依二前提，各有其职：延续条件定范围，C（Comparison）定序。对进程的排序仍需要 C 或一个代替它的前提；此结果指出自关切单向给出 C 之所求之处：于自承之条件成立、接纳可判定之处，二所列且接纳有终之层径之间。"
     }
   ],
   "does_not_show": [
@@ -112,8 +113,8 @@
     "names-provisional"
   ],
   "validation_scope": {
-    "en": "Pure core, every axiom report empty: the laws are in Becoming.PremiseWitnesses, a leaf importing GrammarCases, Lifting and EventualWideningInstances. The joins to the root compose withinClosure_iff_reached and ownClosure_unrestricted_iff_noOutside; the ranking composes Web.paths_extension_iff_widens and Web.widens_iff_every_weighting. Two AI reviews and a third look, every finding taken. The record's 18 declarations (18 theorems) compile with the whole package in the core run whose receipt the record binds.",
-    "zh": "纯核，公理报告皆空：诸律在 Becoming.PremiseWitnesses，引 GrammarCases、Lifting 与 EventualWideningInstances 之叶。与根之相接合成 withinClosure_iff_reached 与 ownClosure_unrestricted_iff_noOutside；排序经 paths_extension_iff_widens 等。此记录 18 声明（定理 18）与全包同编译于记录所系收据之核心运行。"
+    "en": "Pure core, every axiom report empty: the laws are in Becoming.PremiseWitnesses, a leaf importing GrammarCases, Lifting and EventualWideningInstances. The joins to the root compose withinClosure_iff_reached and ownClosure_unrestricted_iff_noOutside; the ranking composes Web.paths_extension_iff_widens and Web.widens_iff_every_weighting. Two AI reviews and a third look, every finding taken. The record's 19 declarations (19 theorems) compile with the whole package in the core run whose receipt the record binds.",
+    "zh": "纯核，公理报告皆空：诸律在 Becoming.PremiseWitnesses，引 GrammarCases、Lifting 与 EventualWideningInstances 之叶。与根之相接合成 withinClosure_iff_reached 与 ownClosure_unrestricted_iff_noOutside；排序经 paths_extension_iff_widens 等。此记录 19 声明（定理 19）与全包同编译于记录所系收据之核心运行。"
   },
   "next_delta": {
     "en": "The other half on webs, where level paths admit the witness's courses; a bridge at a finite horizon for courses that admit something at every step; review by a person.",
@@ -204,7 +205,8 @@
         "Becoming.TwoLines.first_line_reaches_both",
         "Becoming.TwoLines.first_line_reach_iff",
         "Becoming.increasingInOwn_with_net",
-        "Becoming.increasingInOwn_with_net_converse"
+        "Becoming.increasingInOwn_with_net_converse",
+        "Becoming.LineOfDescent.Endless.later_outside"
       ],
       "sha256": "2ac4685adeceb50476aa1c8f9002c3d3c6e407bbc89471fcde99f4da0f3ba514"
     },
@@ -264,6 +266,10 @@
     {
       "en": "1 November 2026, board item DU (study section 489): added. Self-concern joined to the condition on the root and held de se, and one way to C between listed level paths, from Becoming.PremiseWitnesses; the vacuous form on every level path replaced at the third look by the pairwise one, its vacuity proved; every finding of the leaf's reviews taken.",
       "zh": "2026年11月1日，工作板条目 DU（研究第 489 节）：增。自关切与根上之条件及自承之条件相接，并单向接于所列层径间之 C，出自 Becoming.PremiseWitnesses；于全部层径上之空真形于第三次复读时代以成对之形，其空真已证；此叶审阅所见皆取。"
+    },
+    {
+      "en": "7 November 2026, board item LM1: a reader of LM found the law on the nets named no center, and that this said C orders alone. The law now says the endless line coincides along the net from its first birth, every later member failing the condition, and descent that ends along the converse from its last occurrence, as the Lean states; a ranking of courses needs C or a premise in its place (07 §4.4). No proof changed.",
+      "zh": "2026年11月7日，工作板条目 LM1：LM 之读者指出网上之律未言中心，且此处谓唯 C 定序。今言无尽之线沿网自其初生相合，每一后来之员不满足条件；有终之传承沿其逆自其末出现相合，如 Lean 所述；对进程的排序需要 C 或一个代替它的前提（07 §4.4）。证明不变。"
     }
   ]
 }

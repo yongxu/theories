@@ -446,8 +446,8 @@
       "kind": "scope"
     },
     {
-      "en": "That widening, or reach, is better: ranking needs C, and the reading here is an AI reading.",
-      "zh": "扩大或可达更好：排序需要 C，此处之读为 AI 之读。",
+      "en": "That widening, or reach, is better: ranking needs C or a premise in its place, and the reading here is an AI reading.",
+      "zh": "扩大或可达更好：排序需要 C 或一个代替它的前提，此处之读为 AI 之读。",
       "kind": "non-implication"
     },
     {
@@ -863,6 +863,10 @@
     {
       "en": "3 November 2026, CD (board item CD): laws 32 and 35 to 37, two counterexamples and a related line say that widening and UE10's lagged order put a delivered output above its input, or its input above it, or hold of no pair, not that they rank them, as the home section in 07 §2 says. Under the glossary's one sense, ranking and order (the ethics' role word) say which course is better, and widening says which admits more, with no premise; an order defined with no premise, the lagged, tail or lexical order among them, puts one course above another, and ranks only where it is read as a ranking, in C's slot or as a premise. The claim is unchanged.",
       "zh": "2026年11月3日，工作板条目 CD：律 32 与 35 至 37、两个反例与一条相关说明改说扩大与 UE10 之滞后之序把交付之输出置于其输入之上、或把输入置于其上、或于任何一对皆不成立，而非对之排序，与 07 §2 的本节相同。按词汇表的单一词义，排序与次序（伦理的角色词）说哪个进程更好，扩大说哪个所纳更多，不需前提；无前提而定义之序（滞后之序、尾序或字典序等）把一进程置于另一进程之上，唯作为排序读时（于 C 之位或作为前提）才排序。主张不变。"
+    },
+    {
+      "en": "7 November 2026, board item LM1: this said ranking needs C, where a ranking of courses needs C or a premise in its place (07 §4); corrected. No law, premise or proof changed.",
+      "zh": "2026年11月7日，工作板条目 LM1：此处谓排序须 C，而对进程的排序需要 C 或一个代替它的前提（07 §4）；已更正。诸律、前提与证明皆不变。"
     }
   ]
 }

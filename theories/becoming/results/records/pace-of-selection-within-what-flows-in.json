@@ -442,8 +442,8 @@
       "kind": "correspondence"
     },
     {
-      "en": "That any pace, amount or lineage is better: no evaluation enters, and ranking needs C.",
-      "zh": "任何速度、量或谱系为更好：不入评价，排序须 C。",
+      "en": "That any pace, amount or lineage is better: no evaluation enters, and ranking needs C or a premise in its place.",
+      "zh": "任何速度、量或谱系为更好：不入评价，排序须 C 或代替它的前提。",
       "kind": "non-implication"
     }
   ],
@@ -882,6 +882,10 @@
     {
       "en": "26 October 2026, board item DF1b (study section 422): Nei (1971) and Felsenstein (1971) cited as the two works they are, as the correspondence does.",
       "zh": "2026年10月26日，工作板条目 DF1b（研究第 422 节）：Nei（1971）与 Felsenstein（1971）作为两篇著作引用，与对应一致。"
+    },
+    {
+      "en": "7 November 2026, board item LM1: this said ranking needs C, where a ranking of courses needs C or a premise in its place (07 §4); corrected. No law, premise or proof changed.",
+      "zh": "2026年11月7日，工作板条目 LM1：此处谓排序须 C，而对进程的排序需要 C 或一个代替它的前提（07 §4）；已更正。诸律、前提与证明皆不变。"
     }
   ]
 }

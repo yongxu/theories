@@ -98,7 +98,7 @@ Each law below is a theorem on its stated model. Together they rule out a guaran
 5. **Pace.** A slow rule reads the fast level over a long enough stretch: given two values, a stretch of `L` steps fixes every pair of held-rule courses with at most `N` states exactly when `L ≥ 2N − 1` (`Pace.pace_law`, [home](chapters/02-MAP.md#r-how-fast-a-rule-may-change)).
 6. **Structure.** The rest does not outrun the renewal. Where it does, a score reading the condition only from the rest's end scores every act of a member alike, so no weight on it selects restraint, and only a change of the rest's exchange helps (§3).
 
-Observation is the first condition, necessary and not sufficient: seeing is not valuing, and coupling is not compliance ([07](chapters/07-SIGNIFICANCE.md#does-not-show)). And all six together still rank nothing: calling the widening course better needs C, and counting the losses that return to no one needs the continuation condition.
+Observation is the first condition, necessary and not sufficient: seeing is not valuing, and coupling is not compliance ([07](chapters/07-SIGNIFICANCE.md#does-not-show)). And all six together still rank nothing: calling the widening course better needs C or a premise in its place, and counting the losses that return to no one needs the continuation condition.
 
 ## 7. Keeping the future open
 

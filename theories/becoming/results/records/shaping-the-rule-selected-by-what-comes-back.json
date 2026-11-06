@@ -131,8 +131,8 @@
       "kind": "correspondence"
     },
     {
-      "en": "That capture damages or supports 生生, or that open rule-making is better than capture: no evaluation enters, and ranking courses needs C.",
-      "zh": "捕获损害或支持生生，或开放之立规优于捕获：不入评价，排序进程须 C。",
+      "en": "That capture damages or supports 生生, or that open rule-making is better than capture: no evaluation enters, and ranking courses needs C or a premise in its place.",
+      "zh": "捕获损害或支持生生，或开放之立规优于捕获：不入评价，排序进程须 C 或代替它的前提。",
       "kind": "non-implication"
     },
     {
@@ -425,6 +425,10 @@
     {
       "en": "6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.",
       "zh": "2026年11月6日，工作板条目 LM：此记录所列辅助引理现只陈述一次，在 Prelude、Flow、Change 或 Laws，或即 Lean 自有者而从列表除去；改其名，诸律不变。"
+    },
+    {
+      "en": "7 November 2026, board item LM1: this said ranking needs C, where a ranking of courses needs C or a premise in its place (07 §4); corrected. No law, premise or proof changed.",
+      "zh": "2026年11月7日，工作板条目 LM1：此处谓排序须 C，而对进程的排序需要 C 或一个代替它的前提（07 §4）；已更正。诸律、前提与证明皆不变。"
     }
   ]
 }

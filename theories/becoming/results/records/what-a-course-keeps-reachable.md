@@ -66,7 +66,7 @@
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
-- That the lagged order, the lexical order or any order here is the second-order direction of 生生 or ranks a course better: ranking needs C, and the lag's verdict, which C leaves open, or a rule of precedence is a further premise.
+- That the lagged order, the lexical order or any order here is the second-order direction of 生生 or ranks a course better: ranking needs C or a premise in its place, and the lag's verdict, which C leaves open, or a rule of precedence is a further premise.
 - That read with a lag covering decides every pair of a range that keeps widening and one wider now that starts a course: it decides one witness's pair, and on another, each course exceeding the other, it is silent both ways.
 - That the lagged order is UE9's: it is built as UE9's is, on families of courses, and UE9's laws on its order (names read across steps, the conflict with eventual widening) are not proved of it.
 - A branching witness for keeping the possible within a horizon widening: Rise, Climb and WiderNow are determined, so on them every notion here is a property of single courses.
@@ -170,6 +170,7 @@ Aliases: `What a course keeps reachable`, `进程保持可达者`, `covering`, `
 - 28 October 2026, board item UE13 (study section 431): related to what-can-be-born-next; no statement, next step or declaration changed.
 - 3 November 2026, CD (board item CD): the statement says that only the lagged order puts a range that keeps widening above one wider now that starts a course, and that realized and reachable widening relate a pair oppositely, not that they rank it; laws 3, 6 to 9, 18 and 19, two counterexamples and a related line say likewise what widening what can be reached, widening with a lag, the lagged order and the lexical order do with a pair, as its home section in 07 §2 does. Under the glossary's one sense, ranking and order (the ethics' role word) say which course is better, and widening says which admits more, with no premise; an order defined with no premise, the lagged, tail or lexical order among them, puts one course above another, and ranks only where it is read as a ranking, in C's slot or as a premise. The claim is unchanged.
 - 6 November 2026, board item CW: Foster's effective freedom added to the correspondence, the named result a literature check found omitted; no law changed.
+- 7 November 2026, board item LM1: this said ranking needs C, where a ranking of courses needs C or a premise in its place (07 §4); corrected. No law, premise or proof changed.
 
 </details>
 
