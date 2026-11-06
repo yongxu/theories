@@ -244,8 +244,8 @@
     "theories/becoming/results/records/two-act-worlds-carry-the-difference.md": "2990ff22e01aac6c7e959677a38bb834c5501502fa3897d889d078bda2161af2",
     "theories/becoming/results/records/worlds-are-runs.md": "bd3764698851c0eb76b515e8f7db81b4a67a5a131280bfc883a94773525a032f",
     "theories/becoming/chapters/README.md": "364166501aa6ae4dc508896cd91bbf906c6c5ae6cd867c4f4452312021a108e2",
-    "_process/research/README.md": "f3b9f5f57252130fd3e485f0708cc41e6bd6e176a848bc11bc977415a5a50064",
-    "_process/research/2026-10-05-generative-foundation-review/root-foundation/INDEX.md": "47aef24b014f73fad641c70d46ef633480646fcb61bac2fbe013337738627768",
+    "_process/research/README.md": "dd052449566c69ddd81411e6083fe138667e810163bbe196c09fb6f5979f63e9",
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/INDEX.md": "d0f580acdae8701c1a40d6d89b438b40973994268228b1a3a78a76282b4a8429",
     "_process/research/2026-10-05-generative-foundation-review/root-foundation/REVIEWS.md": "0ccef05c0f94ed738029b8aa50c19901bcddb80807925beeb2dca83cb56dc687",
     "sources/README.md": "38153cfb2ad02574111910bc958f6f42075a7f14dcbce26cfe4e32c56878e855",
     "_process/DIRECTIVE-INDEX.md": "1ae65999ea7d0e04956eff6ba48b14b8385f2cc3e7b7f436818ab15617d5b6e2",
@@ -599,6 +599,8 @@
     "theories/becoming/results/records/a-cascade-at-the-histories-reached.md": "ea38a133a8dbf15ca6d719e16d3ef59bb3f114bd8369e5bc1f5c2dbb21347566",
     "theories/becoming/results/records/errors-by-chance-end-a-pair-keeping-mutual-withholding.md": "234d0a2a53df3619fea570bb4ddebae9a54890badccb6144bfef6be84b3e77ef",
     "theories/becoming/results/records/what-decides-giving-against-keeping-on-a-flow.md": "482fa61313d46f4de1c0ff7a0485c7c1edc9f6b18b977624f204abbf3c4f4ed8",
-    "theories/becoming/results/records/errors-by-chance-in-a-pair-keeping-mutual-withholding.md": "728c258b2c545073bc8159e8e3d0f328d4f4d18b79a2c8b1f0ee42e526fae579"
+    "theories/becoming/results/records/errors-by-chance-in-a-pair-keeping-mutual-withholding.md": "728c258b2c545073bc8159e8e3d0f328d4f4d18b79a2c8b1f0ee42e526fae579",
+    "theories/becoming/results/atlas/ATLAS.md": "a240137ab9f51bc0ddebc8008bebf11757467adb7da99da44e00362db6462b41",
+    "theories/becoming/results/data/atlas.json": "49ec896011cd7c01f9a2947c42707fc3e4ce6f29964095c10bfad74d5f760f2b"
   }
 }
