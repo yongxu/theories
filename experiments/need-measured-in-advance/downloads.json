@@ -1,0 +1,32 @@
+{
+ "note": "T1N's downloads (DESIGN.md, section 10, step 1), as they stood when R1's header settled that the frozen reader refuses (LAYOUT.md). Kept outside the repository; WDNR's public reports, no account.",
+ "files": [
+  {
+   "file": "adult_estimates.csv",
+   "record": "R1",
+   "recorder": "WDNR",
+   "source": "https://apps.dnr.wi.gov/fisheriesmanagement/Reports/WDNRTreatyWalleye/AdultPopulationEstimateStatewide",
+   "how": "the report's own CSV export, POST to AdultPopulationEstimateStatewide_Export with export_type=CSV; its bytes unchanged",
+   "date": "2026-11-06",
+   "size": 90059,
+   "sha256": "d987556b6d96bafdd9ee3f334ced3df6315cee8a4c43ca76fd7a41ea8389bec2"
+  },
+  {
+   "file": "stocking.csv",
+   "record": "R5",
+   "recorder": "WDNR",
+   "source": "https://apps.dnr.wi.gov/fisheriesmanagement/Public/Summary/Index",
+   "how": "the Fish Stocking Summary's query, POST to LoadResults with SPECIES_NAME=WALLEYE, year by year (68 years, 13,813 rows, as many as the replies' totals, all distinct); written to CSV from the replies, which carry field names and no headers, so the four columns T1N's layout names take its names and the others the database's",
+   "date": "2026-11-06",
+   "size": 1252614,
+   "sha256": "a705bd03e0d26c7a1dce7739d321aa16b079541fccffa17b17c313fafc8a9bd7"
+  }
+ ],
+ "not in the folder": {
+  "R2": "no table offered: the fall surveys are published only inside annual report PDFs (LAYOUT.md); where R2 cannot be had, the need cannot be computed",
+  "R3": "no download: the tribal harvest page is text, with no table",
+  "R4": "not fetched: optional, V1 does not read it, and R1's header decides the refusal first; FMIS offers it as a CSV export by year",
+  "R5b": "not fetched: optional; R5 as published includes fry and other sources' rows (LAYOUT.md)",
+  "R7": "not fetched: optional; R1's Lake Characteristics gives the acres as text and no type"
+ }
+}
