@@ -1,0 +1,8 @@
+T1N's run, once, 6 November 2026, after the freeze's checks and the downloads' passed (the reader refuses at R1's header, before any value).
+
+python3 -I -B experiments/need-measured-in-advance/run.py FOLDER
+
+adult_estimates.csv lacks ['Acres', 'Upper 95 C.I.']: the layout differs from the one assumed (an addendum may change layout.json alone)
+exit 1
+
+No results/run.json was written. DESIGN.md's section 9 of T1N: where a quantity the rules need is missing, both interval bounds or the age-0 survey's unit, the reader refuses, and the layout record says so. See LAYOUT.md in experiments/need-measured-in-advance.

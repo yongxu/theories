@@ -1,0 +1,126 @@
+{
+ "label texts": [
+  "NATURAL",
+  "NONE",
+  "REMNANT",
+  "STOCKED"
+ ],
+ "label texts layout.json does not map": [
+  "NATURAL",
+  "NONE",
+  "REMNANT",
+  "STOCKED"
+ ],
+ "lakes whose label category changes across years, of lakes with two or more estimates": [
+  0,
+  269
+ ],
+ "water body types named": [
+  "LAKE ACRES:",
+  "LAKE ACRES: 100",
+  "LAKE ACRES: 1001",
+  "LAKE ACRES: 1006",
+  "LAKE ACRES: 1010",
+  "LAKE ACRES: 1012",
+  "LAKE ACRES: 1015",
+  "LAKE ACRES: 1018",
+  "LAKE ACRES: 102",
+  "LAKE ACRES: 1023",
+  "LAKE ACRES: 1026",
+  "LAKE ACRES: 103",
+  "LAKE ACRES: 1030",
+  "LAKE ACRES: 1033",
+  "LAKE ACRES: 1049",
+  "LAKE ACRES: 1052",
+  "LAKE ACRES: 106",
+  "LAKE ACRES: 107",
+  "LAKE ACRES: 108",
+  "LAKE ACRES: 109",
+  "LAKE ACRES: 1090",
+  "LAKE ACRES: 110",
+  "LAKE ACRES: 1100",
+  "LAKE ACRES: 111",
+  "LAKE ACRES: 1112",
+  "LAKE ACRES: 112",
+  "LAKE ACRES: 113",
+  "LAKE ACRES: 115",
+  "LAKE ACRES: 117",
+  "LAKE ACRES: 118",
+  "LAKE ACRES: 1185",
+  "LAKE ACRES: 1186",
+  "LAKE ACRES: 119",
+  "LAKE ACRES: 1206",
+  "LAKE ACRES: 122",
+  "LAKE ACRES: 123",
+  "LAKE ACRES: 125",
+  "LAKE ACRES: 1256",
+  "LAKE ACRES: 126",
+  "LAKE ACRES: 129",
+  "LAKE ACRES: 1292",
+  "LAKE ACRES: 1293",
+  "LAKE ACRES: 130",
+  "LAKE ACRES: 1304",
+  "LAKE ACRES: 132",
+  "LAKE ACRES: 1323",
+  "LAKE ACRES: 133",
+  "LAKE ACRES: 134",
+  "LAKE ACRES: 13545",
+  "LAKE ACRES: 1358",
+  "LAKE ACRES: 1360",
+  "LAKE ACRES: 1369",
+  "LAKE ACRES: 139",
+  "LAKE ACRES: 1400",
+  "LAKE ACRES: 1408",
+  "LAKE ACRES: 141",
+  "LAKE ACRES: 142",
+  "LAKE ACRES: 144",
+  "LAKE ACRES: 1454",
+  "LAKE ACRES: 146"
+ ],
+ "lakes recorded closed / open / unknown": [
+  0,
+  0,
+  399
+ ],
+ "species texts": {
+  "stocking": [
+   "WALLEYE"
+  ],
+  "other": []
+ },
+ "rows naming a lake of the estimates, of rows": {
+  "age0": null,
+  "tribal": null,
+  "creel": null,
+  "stocking": [
+   5946,
+   13813
+  ],
+  "other": null,
+  "types": null
+ },
+ "lake-years with more than one estimate row": 3,
+ "lake-years with more than one fall survey row, by lake and year alone, up to the cutoff and after it": [
+  0,
+  0
+ ],
+ "the lakes of the disclosure (DESIGN.md, section 9), found by county and name": [
+  [
+   "2237500",
+   "CRANE AND CHASE LAKE",
+   "Price"
+  ]
+ ],
+ "adult estimate columns that may give mark-and-recapture counts": [],
+ "other stocking records (R5b) had": false,
+ "lake types (R7) had": false,
+ "last estimate year": 2023,
+ "reference window": [
+  2013,
+  2020
+ ],
+ "lake-years up to the cutoff with an estimate and a fall survey": 0,
+ "lakes in them": 0,
+ "lakes with a candidate reference": 60,
+ "lakes with a candidate reference, recorded closed": 0
+}

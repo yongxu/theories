@@ -1,0 +1,8 @@
+{
+ "stocking dates": {
+  "stocking.csv": "no date column ('Date Stocked')",
+  "other_stocking.csv": "not in the folder"
+ },
+ "fall surveys: lake-years with more than one row": 0,
+ "R8": "not in the folder"
+}

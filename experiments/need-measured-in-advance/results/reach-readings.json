@@ -1,0 +1,444 @@
+{
+ "inputs": {
+  "adult_estimates.csv": "d987556b6d96bafdd9ee3f334ced3df6315cee8a4c43ca76fd7a41ea8389bec2",
+  "stocking.csv": "a705bd03e0d26c7a1dce7739d321aa16b079541fccffa17b17c313fafc8a9bd7",
+  "fall-listed.csv": "ccf9c258cc06ea74ecc39fb5c9b8a473b2f042780bb07a4da5a4c42b7edda393",
+  "fall-generous.csv": "c67f0fea9165b93258a20ca91477a8f46faf527097d734231af483228ed55f9e",
+  "fall-with-glifwc.csv": "fa234e0cba572ee778fac0086b5409a7c6f052920cd35e745df686143d009af8",
+  "glifwc-spring.json": "e6af86cae685bbe03c91e0f3d2780e281ef275cdd50b1643bfcc5daf2f513df1"
+ },
+ "R1": {
+  "rows": 1051,
+  "lakes": 399,
+  "lake-years": 1048,
+  "years": [
+   1990,
+   2023
+  ],
+  "lakes with one row": 130,
+  "mean rows a lake": 2.63,
+  "rows with the acres text missing or empty": 135,
+  "lakes with it in no row": 17,
+  "rows whose lower bound is below zero": 9,
+  "repeated lake-years": 3,
+  "label texts": {
+   "REMNANT": 91,
+   "NATURAL": 611,
+   "STOCKED": 346,
+   "NONE": 3
+  }
+ },
+ "R5": {
+  "walleye rows": 13813,
+  "with a number stocked above zero": 13738,
+  "by source": {
+   "PRIVATE STOCKING": 2105,
+   "DNR": 10470,
+   "Non-DNR Governmental": 844,
+   "blank": 394
+  },
+  "by age class": {
+   "LARGE FINGERLING": 4575,
+   "FINGERLING": 4144,
+   "FRY": 1160,
+   "YEARLING": 408,
+   "ADULT": 108,
+   "SMALL FINGERLING": 3316,
+   "EGG": 6,
+   "blank": 9,
+   "ADULT (FIELD TRANSFER)": 16,
+   "ADULT (BROODSTOCK)": 17,
+   "UNSPECIFIED": 3,
+   "FALL YEARLING": 50,
+   "UNKNOWN": 1
+  }
+ },
+ "GLIFWC's Wisconsin spring rows": {
+  "rows": 433,
+  "with a lake code": 429,
+  "lake-years they give": 424,
+  "of them, not in R1": 422
+ },
+ "GLIFWC's spring lakes against R1": {
+  "lake-years also in R1": 2,
+  "by year": {
+   "1997": {
+    "GLIFWC's Wisconsin spring lakes with a code": 15,
+    "in R1 in that year": 0,
+    "in R1 in some year": 12
+   },
+   "1998": {
+    "GLIFWC's Wisconsin spring lakes with a code": 14,
+    "in R1 in that year": 0,
+    "in R1 in some year": 12
+   },
+   "1999": {
+    "GLIFWC's Wisconsin spring lakes with a code": 13,
+    "in R1 in that year": 0,
+    "in R1 in some year": 10
+   },
+   "2000": {
+    "GLIFWC's Wisconsin spring lakes with a code": 17,
+    "in R1 in that year": 0,
+    "in R1 in some year": 15
+   },
+   "2001": {
+    "GLIFWC's Wisconsin spring lakes with a code": 17,
+    "in R1 in that year": 0,
+    "in R1 in some year": 15
+   },
+   "2002": {
+    "GLIFWC's Wisconsin spring lakes with a code": 14,
+    "in R1 in that year": 0,
+    "in R1 in some year": 11
+   },
+   "2003": {
+    "GLIFWC's Wisconsin spring lakes with a code": 14,
+    "in R1 in that year": 0,
+    "in R1 in some year": 11
+   },
+   "2004": {
+    "GLIFWC's Wisconsin spring lakes with a code": 11,
+    "in R1 in that year": 0,
+    "in R1 in some year": 9
+   },
+   "2005": {
+    "GLIFWC's Wisconsin spring lakes with a code": 16,
+    "in R1 in that year": 0,
+    "in R1 in some year": 13
+   },
+   "2006": {
+    "GLIFWC's Wisconsin spring lakes with a code": 14,
+    "in R1 in that year": 0,
+    "in R1 in some year": 13
+   },
+   "2007": {
+    "GLIFWC's Wisconsin spring lakes with a code": 11,
+    "in R1 in that year": 0,
+    "in R1 in some year": 8
+   },
+   "2008": {
+    "GLIFWC's Wisconsin spring lakes with a code": 10,
+    "in R1 in that year": 0,
+    "in R1 in some year": 8
+   },
+   "2009": {
+    "GLIFWC's Wisconsin spring lakes with a code": 16,
+    "in R1 in that year": 0,
+    "in R1 in some year": 13
+   },
+   "2010": {
+    "GLIFWC's Wisconsin spring lakes with a code": 15,
+    "in R1 in that year": 1,
+    "in R1 in some year": 13
+   },
+   "2011": {
+    "GLIFWC's Wisconsin spring lakes with a code": 16,
+    "in R1 in that year": 0,
+    "in R1 in some year": 13
+   },
+   "2012": {
+    "GLIFWC's Wisconsin spring lakes with a code": 22,
+    "in R1 in that year": 0,
+    "in R1 in some year": 20
+   },
+   "2013": {
+    "GLIFWC's Wisconsin spring lakes with a code": 18,
+    "in R1 in that year": 1,
+    "in R1 in some year": 15
+   },
+   "2014": {
+    "GLIFWC's Wisconsin spring lakes with a code": 15,
+    "in R1 in that year": 0,
+    "in R1 in some year": 13
+   },
+   "2015": {
+    "GLIFWC's Wisconsin spring lakes with a code": 17,
+    "in R1 in that year": 0,
+    "in R1 in some year": 13
+   },
+   "2016": {
+    "GLIFWC's Wisconsin spring lakes with a code": 20,
+    "in R1 in that year": 0,
+    "in R1 in some year": 18
+   },
+   "2017": {
+    "GLIFWC's Wisconsin spring lakes with a code": 18,
+    "in R1 in that year": 0,
+    "in R1 in some year": 15
+   },
+   "2018": {
+    "GLIFWC's Wisconsin spring lakes with a code": 15,
+    "in R1 in that year": 0,
+    "in R1 in some year": 13
+   },
+   "2019": {
+    "GLIFWC's Wisconsin spring lakes with a code": 15,
+    "in R1 in that year": 0,
+    "in R1 in some year": 12
+   },
+   "2020": {
+    "GLIFWC's Wisconsin spring lakes with a code": 4,
+    "in R1 in that year": 0,
+    "in R1 in some year": 4
+   },
+   "2021": {
+    "GLIFWC's Wisconsin spring lakes with a code": 12,
+    "in R1 in that year": 0,
+    "in R1 in some year": 11
+   },
+   "2022": {
+    "GLIFWC's Wisconsin spring lakes with a code": 12,
+    "in R1 in that year": 0,
+    "in R1 in some year": 9
+   },
+   "2023": {
+    "GLIFWC's Wisconsin spring lakes with a code": 13,
+    "in R1 in that year": 0,
+    "in R1 in some year": 10
+   }
+  }
+ },
+ "the ceiling by cut": {
+  "the estimates' years alone": 35,
+  "with the labels": 16,
+  "with stocking": 10,
+  "with both, as reach.py": [
+   "1018500",
+   "1545600",
+   "1592400",
+   "2306300",
+   "2339900",
+   "2615100",
+   "2692900",
+   "2949200",
+   "653700"
+  ]
+ },
+ "the ceiling by R5's rows, labels read": {
+  "R5 whole": 9,
+  "R5 without fry": [
+   "1018500",
+   "1545600",
+   "1592400",
+   "2306300",
+   "2339900",
+   "2391200",
+   "2615100",
+   "2692900",
+   "2949200",
+   "653700"
+  ],
+  "R5's DNR rows": [
+   "1018500",
+   "1545600",
+   "1592400",
+   "2112800",
+   "2152800",
+   "2306300",
+   "2339900",
+   "2391200",
+   "2615100",
+   "2692900",
+   "2742100",
+   "2949200",
+   "653700"
+  ],
+  "R5's DNR rows without fry, the database as DESIGN.md section 3 describes it": [
+   "1018500",
+   "1545600",
+   "1592400",
+   "2112800",
+   "2152800",
+   "2306300",
+   "2339900",
+   "2391200",
+   "2615100",
+   "2692900",
+   "2742100",
+   "2949200",
+   "653700"
+  ],
+  "no R5": [
+   "1018500",
+   "1545600",
+   "1588200",
+   "1592400",
+   "2112800",
+   "2152800",
+   "2306300",
+   "2339900",
+   "2351400",
+   "2391200",
+   "2615100",
+   "2692900",
+   "2742100",
+   "2742500",
+   "2949200",
+   "653700"
+  ]
+ },
+ "lakes one stocking year away from being read": {
+  "2742100": [
+   2013
+  ],
+  "2391200": [
+   2000,
+   2005
+  ],
+  "2112800": [
+   2005
+  ]
+ },
+ "the ceiling by what is read as natural": {
+  "NATURAL": 9,
+  "NATURAL and REMNANT": [
+   "1018500",
+   "1545600",
+   "1592400",
+   "2109800",
+   "2306300",
+   "2339900",
+   "2615100",
+   "2692900",
+   "2949200",
+   "653700"
+  ],
+  "NATURAL and NONE": 9,
+  "NATURAL, REMNANT and NONE": 10
+ },
+ "the fit (200 lake-years, 30 lakes), by fall list and R5": {
+  "every lake-year": {
+   "R5 whole": [
+    311,
+    155
+   ],
+   "R5's DNR rows without fry": [
+    338,
+    164
+   ],
+   "no R5": [
+    441,
+    203
+   ]
+  },
+  "fall-listed.csv": {
+   "R5 whole": [
+    96,
+    69
+   ],
+   "R5's DNR rows without fry": [
+    110,
+    78
+   ],
+   "no R5": [
+    141,
+    100
+   ]
+  },
+  "fall-generous.csv": {
+   "R5 whole": [
+    162,
+    101
+   ],
+   "R5's DNR rows without fry": [
+    180,
+    111
+   ],
+   "no R5": [
+    222,
+    141
+   ]
+  },
+  "fall-generous.csv with fall-with-glifwc.csv": {
+   "R5 whole": [
+    164,
+    102
+   ],
+   "R5's DNR rows without fry": [
+    182,
+    112
+   ],
+   "no R5": [
+    225,
+    142
+   ]
+  },
+  "every lake-year from 2002 with fall-generous.csv before": {
+   "R5 whole": [
+    177,
+    108
+   ],
+   "R5's DNR rows without fry": [
+    195,
+    118
+   ],
+   "no R5": [
+    242,
+    151
+   ]
+  }
+ },
+ "the fit on fall-generous.csv, by reading": {
+  "as reach.py": [
+   162,
+   101
+  ],
+  "R5 without fry": [
+   170,
+   104
+  ],
+  "R5's DNR rows": [
+   172,
+   108
+  ],
+  "R5's DNR rows without fry": [
+   180,
+   111
+  ],
+  "no R5": [
+   222,
+   141
+  ],
+  "NATURAL and REMNANT": [
+   176,
+   114
+  ],
+  "NATURAL and NONE": [
+   162,
+   101
+  ]
+ },
+ "the fit from 1997 on every lake-year": {
+  "R5 whole": [
+   204,
+   121
+  ],
+  "R5's DNR rows without fry": [
+   225,
+   130
+  ],
+  "no R5": [
+   287,
+   163
+  ]
+ },
+ "R1's lake-years to 2012 on the fall lists, before the label and stocking cuts": {
+  "fall-listed.csv": {
+   "1997 to 2001": 4,
+   "2002 to 2012": 231
+  },
+  "fall-generous.csv": {
+   "1997 to 2001": 71,
+   "2002 to 2012": 299
+  },
+  "fall-generous.csv with fall-with-glifwc.csv": {
+   "1997 to 2001": 71,
+   "2002 to 2012": 311
+  },
+  "every lake-year from 2002 with fall-generous.csv before": {
+   "1997 to 2001": 71,
+   "2002 to 2012": 348
+  }
+ }
+}

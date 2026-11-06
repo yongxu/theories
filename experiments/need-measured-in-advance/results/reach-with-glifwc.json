@@ -1,0 +1,1489 @@
+{
+ "what": "T1N's and T1R's frozen rules on R1 with GLIFWC's spring lake-years added (grid-with-glifwc.csv: lake, year and label, read by OCR and not checked against the pages; GLIFWC's NR, C-NR and C- and a code not read as natural; a repeated lake-year natural if any row is), with no value of any record",
+ "inputs": {
+  "grid-with-glifwc.csv": "a394cb0e1bfc585504db0772e47f23a070580860b3696b52fda311a597b19b54",
+  "stocking.csv": "a705bd03e0d26c7a1dce7739d321aa16b079541fccffa17b17c313fafc8a9bd7",
+  "fall-with-glifwc.csv": "fa234e0cba572ee778fac0086b5409a7c6f052920cd35e745df686143d009af8",
+  "fall-generous.csv": "c67f0fea9165b93258a20ca91477a8f46faf527097d734231af483228ed55f9e",
+  "fall-with-glifwc-granted.csv": "034ed7ee26c6115faa0cbfc425caa835f5934a9dbc0acc200d01d23a53641101"
+ },
+ "ceilings (reach.py)": {
+  "a fall survey in every year of every lake": {
+   "lakes": 405,
+   "labels read per year": true,
+   "lakes changing label category, of lakes with two or more estimates": [
+    82,
+    284
+   ],
+   "the fit": {
+    "pairs needed": 200,
+    "lakes needed": 30,
+    "pairs at most, and their lakes": [
+     475,
+     163
+    ],
+    "pairs at most, and their lakes, from each first year": {
+     "1990": [
+      475,
+      163
+     ],
+     "1996": [
+      379,
+      139
+     ],
+     "1997": [
+      368,
+      136
+     ],
+     "1998": [
+      344,
+      131
+     ],
+     "1999": [
+      325,
+      129
+     ],
+     "2001": [
+      274,
+      119
+     ],
+     "2005": [
+      195,
+      100
+     ]
+    }
+   },
+   "T1N's V1": {
+    "lakes needed below the need, resolved": 10,
+    "lakes that can be read so at most, whatever the values": 31,
+    "lakes": [
+     "1018500",
+     "1523600",
+     "1536300",
+     "1545600",
+     "1579700",
+     "1592400",
+     "1593100",
+     "1629500",
+     "1835300",
+     "1880700",
+     "2271600",
+     "2306300",
+     "2334700",
+     "2338300",
+     "2339900",
+     "2395600",
+     "2451900",
+     "2615100",
+     "2692900",
+     "2694000",
+     "2762200",
+     "2882300",
+     "2949200",
+     "2953800",
+     "2958500",
+     "2962400",
+     "2963800",
+     "2964100",
+     "376900",
+     "653700",
+     "692400"
+    ],
+    "on the way": {
+     "lakes with two estimates to the cutoff, ten years apart at most, the label natural at both and no stocking from five years before the first to the second": 86,
+     "of them, with a survey in the reference window with the label natural and no stocking in five years": 56,
+     "of them, with a later estimate three to ten years after such a survey": 42
+    }
+   },
+   "T1R's V1": {
+    "lakes needed": 10,
+    "lakes that can be read at most, whatever the values": 53
+   }
+  },
+  "fall surveys where fall-with-glifwc.csv lists them": {
+   "lakes": 405,
+   "labels read per year": true,
+   "lakes changing label category, of lakes with two or more estimates": [
+    82,
+    284
+   ],
+   "the fit": {
+    "pairs needed": 200,
+    "lakes needed": 30,
+    "pairs at most, and their lakes": [
+     211,
+     95
+    ],
+    "pairs at most, and their lakes, from each first year": {
+     "1990": [
+      211,
+      95
+     ],
+     "1996": [
+      211,
+      95
+     ],
+     "1997": [
+      211,
+      95
+     ],
+     "1998": [
+      207,
+      94
+     ],
+     "1999": [
+      202,
+      94
+     ],
+     "2001": [
+      193,
+      93
+     ],
+     "2005": [
+      151,
+      83
+     ]
+    }
+   },
+   "T1N's V1": {
+    "lakes needed below the need, resolved": 10,
+    "lakes that can be read so at most, whatever the values": 31,
+    "lakes": [
+     "1018500",
+     "1523600",
+     "1536300",
+     "1545600",
+     "1579700",
+     "1592400",
+     "1593100",
+     "1629500",
+     "1835300",
+     "1880700",
+     "2271600",
+     "2306300",
+     "2334700",
+     "2338300",
+     "2339900",
+     "2395600",
+     "2451900",
+     "2615100",
+     "2692900",
+     "2694000",
+     "2762200",
+     "2882300",
+     "2949200",
+     "2953800",
+     "2958500",
+     "2962400",
+     "2963800",
+     "2964100",
+     "376900",
+     "653700",
+     "692400"
+    ],
+    "on the way": {
+     "lakes with two estimates to the cutoff, ten years apart at most, the label natural at both and no stocking from five years before the first to the second": 86,
+     "of them, with a survey in the reference window with the label natural and no stocking in five years": 56,
+     "of them, with a later estimate three to ten years after such a survey": 42
+    }
+   },
+   "T1R's V1": {
+    "lakes needed": 10,
+    "lakes that can be read at most, whatever the values": 35
+   }
+  }
+ },
+ "the fit where fall-with-glifwc.csv or fall-generous.csv lists them": [
+  287,
+  121
+ ],
+ "by how GLIFWC's labels are read, on fall-with-glifwc.csv": {
+  "NR, C-NR and C- natural, a code not read natural (the grid above)": {
+   "the fit by exact match: lake-years, lakes": [
+    211,
+    95
+   ],
+   "the fit with fall-generous.csv added: lake-years, lakes": [
+    287,
+    121
+   ],
+   "V1's lakes at most": 31
+  },
+  "NR, C-NR and C- natural, a code not read not natural": {
+   "the fit by exact match: lake-years, lakes": [
+    202,
+    92
+   ],
+   "the fit with fall-generous.csv added: lake-years, lakes": [
+    278,
+    119
+   ],
+   "V1's lakes at most": 31
+  },
+  "NR alone, T1N's own map, a code not read natural": {
+   "the fit by exact match: lake-years, lakes": [
+    195,
+    90
+   ],
+   "the fit with fall-generous.csv added: lake-years, lakes": [
+    271,
+    116
+   ],
+   "V1's lakes at most": 30
+  },
+  "NR alone, T1N's own map, a code not read not natural": {
+   "the fit by exact match: lake-years, lakes": [
+    186,
+    87
+   ],
+   "the fit with fall-generous.csv added: lake-years, lakes": [
+    262,
+    114
+   ],
+   "V1's lakes at most": 30
+  }
+ },
+ "T1N's worlds on the grid, fall surveys as fall-with-glifwc.csv lists them": {
+  "archives a world": 40,
+  "lakes": 405,
+  "worlds in dry_run.py": 48,
+  "not carried here": [
+   "relabelled",
+   "unrecorded",
+   "unrecorded, read",
+   "unsurveyed",
+   "unsurveyed early",
+   "static labels",
+   "estimates widen",
+   "labels follow failure",
+   "labels follow failure, slowly",
+   "estimates inflate at low density",
+   "intervals understate the error",
+   "inflated and understated",
+   "compensates, relabelled",
+   "no need, relabelled",
+   "no need, unsurveyed",
+   "floor by chance",
+   "renewal lost in spells",
+   "renewal lost in spells, lakes differ"
+  ],
+  "worlds": {
+   "need": {
+    "family": "T1 holds",
+    "pairs": [
+     211,
+     211
+    ],
+    "below resolved, median": 1,
+    "range": [
+     0,
+     3
+    ],
+    "tally": {
+     "no need fitted": 24,
+     "need fitted, V1 not decided: fewer than 10 resolved": 16
+    },
+    "median rows in, below, premise not shown": [
+     30,
+     1,
+     339
+    ],
+    "need median": 0.37
+   },
+   "needs vary": {
+    "family": "T1 holds",
+    "pairs": [
+     211,
+     211
+    ],
+    "below resolved, median": 2,
+    "range": [
+     0,
+     6
+    ],
+    "tally": {
+     "need fitted, V1 not decided: fewer than 10 resolved": 40
+    },
+    "median rows in, below, premise not shown": [
+     25,
+     2,
+     353
+    ],
+    "need median": 0.45
+   },
+   "need rises": {
+    "family": "T1 holds",
+    "pairs": [
+     211,
+     211
+    ],
+    "below resolved, median": 1,
+    "range": [
+     0,
+     4
+    ],
+    "tally": {
+     "no need fitted": 20,
+     "need fitted, V1 not decided: fewer than 10 resolved": 20
+    },
+    "median rows in, below, premise not shown": [
+     30,
+     2,
+     341
+    ],
+    "need median": 0.37
+   },
+   "open": {
+    "family": "T1 holds",
+    "pairs": [
+     211,
+     211
+    ],
+    "below resolved, median": 1,
+    "range": [
+     1,
+     1
+    ],
+    "tally": {
+     "no need fitted": 38,
+     "need fitted, V1 not decided: fewer than 10 resolved": 2
+    },
+    "median rows in, below, premise not shown": [
+     31,
+     1,
+     341
+    ],
+    "need median": 0.36
+   },
+   "episodic": {
+    "family": "T1 holds",
+    "pairs": [
+     211,
+     211
+    ],
+    "below resolved, median": 4,
+    "range": [
+     1,
+     8
+    ],
+    "tally": {
+     "need fitted, V1 not decided: fewer than 10 resolved": 40
+    },
+    "median rows in, below, premise not shown": [
+     15,
+     6,
+     368
+    ],
+    "need median": 0.54
+   },
+   "survival compensates": {
+    "family": "need misplaced",
+    "pairs": [
+     211,
+     211
+    ],
+    "below resolved, median": null,
+    "range": null,
+    "tally": {
+     "no need fitted": 40
+    },
+    "median rows in, below, premise not shown": null,
+    "need median": null
+   },
+   "need falls": {
+    "family": "need misplaced",
+    "pairs": [
+     211,
+     211
+    ],
+    "below resolved, median": 1,
+    "range": [
+     0,
+     2
+    ],
+    "tally": {
+     "no need fitted": 27,
+     "need fitted, V1 not decided: fewer than 10 resolved": 13
+    },
+    "median rows in, below, premise not shown": [
+     31,
+     1,
+     340
+    ],
+    "need median": 0.35
+   },
+   "need falls far": {
+    "family": "need misplaced",
+    "pairs": [
+     211,
+     211
+    ],
+    "below resolved, median": 1,
+    "range": [
+     0,
+     3
+    ],
+    "tally": {
+     "need fitted, V1 not decided: fewer than 10 resolved": 16,
+     "no need fitted": 24
+    },
+    "median rows in, below, premise not shown": [
+     32,
+     1,
+     340
+    ],
+    "need median": 0.36
+   },
+   "weak depensation": {
+    "family": "need misplaced",
+    "pairs": [
+     211,
+     211
+    ],
+    "below resolved, median": 1,
+    "range": [
+     0,
+     2
+    ],
+    "tally": {
+     "no need fitted": 28,
+     "need fitted, V1 not decided: fewer than 10 resolved": 12
+    },
+    "median rows in, below, premise not shown": [
+     27,
+     2,
+     348
+    ],
+    "need median": 0.21
+   },
+   "renewal below the floor": {
+    "family": "need misplaced",
+    "pairs": [
+     211,
+     211
+    ],
+    "below resolved, median": 4,
+    "range": [
+     0,
+     10
+    ],
+    "tally": {
+     "need fitted, V1 not decided: fewer than 10 resolved": 39,
+     "need fitted, V1 refuted unless connected waters (the seepage lakes alone too": 1
+    },
+    "median rows in, below, premise not shown": [
+     5,
+     5,
+     387
+    ],
+    "need median": 0.37
+   },
+   "no need": {
+    "family": "no need",
+    "pairs": [
+     211,
+     211
+    ],
+    "below resolved, median": null,
+    "range": null,
+    "tally": {
+     "no need fitted": 40
+    },
+    "median rows in, below, premise not shown": null,
+    "need median": null
+   },
+   "no need, catch 0.1": {
+    "family": "no need",
+    "pairs": [
+     211,
+     211
+    ],
+    "below resolved, median": null,
+    "range": null,
+    "tally": {
+     "no need fitted": 40
+    },
+    "median rows in, below, premise not shown": null,
+    "need median": null
+   },
+   "lakes differ 0.5": {
+    "family": "no need",
+    "pairs": [
+     211,
+     211
+    ],
+    "below resolved, median": null,
+    "range": null,
+    "tally": {
+     "no need fitted": 40
+    },
+    "median rows in, below, premise not shown": null,
+    "need median": null
+   },
+   "lakes differ 0.7": {
+    "family": "no need",
+    "pairs": [
+     211,
+     211
+    ],
+    "below resolved, median": null,
+    "range": null,
+    "tally": {
+     "no need fitted": 40
+    },
+    "median rows in, below, premise not shown": null,
+    "need median": null
+   },
+   "lakes differ 1.0": {
+    "family": "no need",
+    "pairs": [
+     211,
+     211
+    ],
+    "below resolved, median": 1,
+    "range": [
+     0,
+     1
+    ],
+    "tally": {
+     "no need fitted": 34,
+     "need fitted, V1 not decided: fewer than 10 resolved": 6
+    },
+    "median rows in, below, premise not shown": [
+     34,
+     1,
+     335
+    ],
+    "need median": 0.1
+   },
+   "lakes differ 1.5": {
+    "family": "no need",
+    "pairs": [
+     211,
+     211
+    ],
+    "below resolved, median": 1,
+    "range": [
+     0,
+     4
+    ],
+    "tally": {
+     "need fitted, V1 not decided: fewer than 10 resolved": 38,
+     "no need fitted": 2
+    },
+    "median rows in, below, premise not shown": [
+     31,
+     2,
+     343
+    ],
+    "need median": 0.09
+   },
+   "lakes differ 0.7, catch 0.1": {
+    "family": "no need",
+    "pairs": [
+     211,
+     211
+    ],
+    "below resolved, median": 0,
+    "range": [
+     0,
+     2
+    ],
+    "tally": {
+     "need fitted, V1 not decided: fewer than 10 resolved": 35,
+     "no need fitted": 5
+    },
+    "median rows in, below, premise not shown": [
+     28,
+     0,
+     349
+    ],
+    "need median": 0.48
+   },
+   "lakes differ 1.5, catch 0.1": {
+    "family": "no need",
+    "pairs": [
+     211,
+     211
+    ],
+    "below resolved, median": 0,
+    "range": [
+     0,
+     1
+    ],
+    "tally": {
+     "need fitted, V1 not decided: fewer than 10 resolved": 40
+    },
+    "median rows in, below, premise not shown": [
+     24,
+     0,
+     357
+    ],
+    "need median": 0.6
+   },
+   "general decline": {
+    "family": "no need",
+    "pairs": [
+     211,
+     211
+    ],
+    "below resolved, median": null,
+    "range": null,
+    "tally": {
+     "no need fitted": 40
+    },
+    "median rows in, below, premise not shown": null,
+    "need median": null
+   },
+   "general decline, catch 0.1": {
+    "family": "no need",
+    "pairs": [
+     211,
+     211
+    ],
+    "below resolved, median": 2,
+    "range": [
+     0,
+     6
+    ],
+    "tally": {
+     "need fitted, V1 not decided: fewer than 10 resolved": 39,
+     "no need fitted": 1
+    },
+    "median rows in, below, premise not shown": [
+     15,
+     2,
+     358
+    ],
+    "need median": 0.67
+   },
+   "renewal unseen": {
+    "family": "no need",
+    "pairs": [
+     211,
+     211
+    ],
+    "below resolved, median": null,
+    "range": null,
+    "tally": {
+     "no need fitted": 40
+    },
+    "median rows in, below, premise not shown": null,
+    "need median": null
+   },
+   "episodic, no need": {
+    "family": "no need",
+    "pairs": [
+     211,
+     211
+    ],
+    "below resolved, median": 2,
+    "range": [
+     0,
+     4
+    ],
+    "tally": {
+     "need fitted, V1 not decided: fewer than 10 resolved": 40
+    },
+    "median rows in, below, premise not shown": [
+     5,
+     2,
+     390
+    ],
+    "need median": 0.69
+   },
+   "episodic, lakes differ": {
+    "family": "no need",
+    "pairs": [
+     211,
+     211
+    ],
+    "below resolved, median": 1,
+    "range": [
+     0,
+     3
+    ],
+    "tally": {
+     "need fitted, V1 not decided: fewer than 10 resolved": 40
+    },
+    "median rows in, below, premise not shown": [
+     21,
+     1,
+     359
+    ],
+    "need median": 0.2
+   },
+   "renewal stops after": {
+    "family": "renewal lost",
+    "pairs": [
+     211,
+     211
+    ],
+    "below resolved, median": null,
+    "range": null,
+    "tally": {
+     "no need fitted": 40
+    },
+    "median rows in, below, premise not shown": null,
+    "need median": null
+   },
+   "renewal stops after, lakes differ widely": {
+    "family": "renewal lost",
+    "pairs": [
+     211,
+     211
+    ],
+    "below resolved, median": 1,
+    "range": [
+     0,
+     5
+    ],
+    "tally": {
+     "need fitted, V1 not decided: fewer than 10 resolved": 31,
+     "no need fitted": 9
+    },
+    "median rows in, below, premise not shown": [
+     31,
+     1,
+     341
+    ],
+    "need median": 0.08
+   },
+   "no renewal in some": {
+    "family": "renewal lost",
+    "pairs": [
+     211,
+     211
+    ],
+    "below resolved, median": 0,
+    "range": [
+     0,
+     2
+    ],
+    "tally": {
+     "need fitted, V1 not decided: fewer than 10 resolved": 17,
+     "no need fitted": 23
+    },
+    "median rows in, below, premise not shown": [
+     31,
+     0,
+     343
+    ],
+    "need median": 0.09
+   },
+   "renewal lost before, catch 0.1": {
+    "family": "renewal lost",
+    "pairs": [
+     211,
+     211
+    ],
+    "below resolved, median": 5,
+    "range": [
+     2,
+     9
+    ],
+    "tally": {
+     "need fitted, V1 not decided: fewer than 10 resolved": 36,
+     "no need fitted": 4
+    },
+    "median rows in, below, premise not shown": [
+     29,
+     7,
+     346
+    ],
+    "need median": 0.59
+   },
+   "renewal lost before, lakes differ": {
+    "family": "renewal lost",
+    "pairs": [
+     211,
+     211
+    ],
+    "below resolved, median": 4,
+    "range": [
+     2,
+     10
+    ],
+    "tally": {
+     "no need fitted": 14,
+     "need fitted, V1 not decided: fewer than 10 resolved": 25,
+     "need fitted, V1 not decided": 1
+    },
+    "median rows in, below, premise not shown": [
+     31,
+     6,
+     339
+    ],
+    "need median": 0.18
+   },
+   "renewal lost across the cutoff": {
+    "family": "renewal lost",
+    "pairs": [
+     211,
+     211
+    ],
+    "below resolved, median": 2,
+    "range": [
+     0,
+     3
+    ],
+    "tally": {
+     "no need fitted": 29,
+     "need fitted, V1 not decided: fewer than 10 resolved": 11
+    },
+    "median rows in, below, premise not shown": [
+     33,
+     2,
+     338
+    ],
+    "need median": 0.1
+   },
+   "half need": {
+    "family": "mixed",
+    "pairs": [
+     211,
+     211
+    ],
+    "below resolved, median": 2,
+    "range": [
+     2,
+     2
+    ],
+    "tally": {
+     "no need fitted": 39,
+     "need fitted, V1 not decided: fewer than 10 resolved": 1
+    },
+    "median rows in, below, premise not shown": [
+     26,
+     2,
+     340
+    ],
+    "need median": 0.32
+   }
+  }
+ },
+ "T1N's worlds on the grid, with fall-with-glifwc-granted.csv": {
+  "archives a world": 40,
+  "lakes": 405,
+  "worlds in dry_run.py": 48,
+  "not carried here": [
+   "relabelled",
+   "unrecorded",
+   "unrecorded, read",
+   "unsurveyed",
+   "unsurveyed early",
+   "static labels",
+   "estimates widen",
+   "labels follow failure",
+   "labels follow failure, slowly",
+   "estimates inflate at low density",
+   "intervals understate the error",
+   "inflated and understated",
+   "compensates, relabelled",
+   "no need, relabelled",
+   "no need, unsurveyed",
+   "floor by chance",
+   "renewal lost in spells",
+   "renewal lost in spells, lakes differ"
+  ],
+  "worlds": {
+   "need": {
+    "family": "T1 holds",
+    "pairs": [
+     368,
+     368
+    ],
+    "below resolved, median": 1,
+    "range": [
+     0,
+     4
+    ],
+    "tally": {
+     "no need fitted": 10,
+     "need fitted, V1 not decided: fewer than 10 resolved": 30
+    },
+    "median rows in, below, premise not shown": [
+     30,
+     1,
+     339
+    ],
+    "need median": 0.36
+   },
+   "needs vary": {
+    "family": "T1 holds",
+    "pairs": [
+     368,
+     368
+    ],
+    "below resolved, median": 2,
+    "range": [
+     0,
+     6
+    ],
+    "tally": {
+     "need fitted, V1 not decided: fewer than 10 resolved": 40
+    },
+    "median rows in, below, premise not shown": [
+     26,
+     2,
+     351
+    ],
+    "need median": 0.47
+   },
+   "need rises": {
+    "family": "T1 holds",
+    "pairs": [
+     368,
+     368
+    ],
+    "below resolved, median": 1,
+    "range": [
+     0,
+     4
+    ],
+    "tally": {
+     "need fitted, V1 not decided: fewer than 10 resolved": 31,
+     "no need fitted": 9
+    },
+    "median rows in, below, premise not shown": [
+     31,
+     1,
+     339
+    ],
+    "need median": 0.34
+   },
+   "open": {
+    "family": "T1 holds",
+    "pairs": [
+     368,
+     368
+    ],
+    "below resolved, median": 0,
+    "range": [
+     0,
+     2
+    ],
+    "tally": {
+     "no need fitted": 31,
+     "need fitted, V1 not decided: fewer than 10 resolved": 9
+    },
+    "median rows in, below, premise not shown": [
+     31,
+     0,
+     338
+    ],
+    "need median": 0.37
+   },
+   "episodic": {
+    "family": "T1 holds",
+    "pairs": [
+     368,
+     368
+    ],
+    "below resolved, median": 4,
+    "range": [
+     0,
+     6
+    ],
+    "tally": {
+     "need fitted, V1 not decided: fewer than 10 resolved": 40
+    },
+    "median rows in, below, premise not shown": [
+     16,
+     5,
+     369
+    ],
+    "need median": 0.53
+   },
+   "survival compensates": {
+    "family": "need misplaced",
+    "pairs": [
+     368,
+     368
+    ],
+    "below resolved, median": null,
+    "range": null,
+    "tally": {
+     "no need fitted": 40
+    },
+    "median rows in, below, premise not shown": null,
+    "need median": null
+   },
+   "need falls": {
+    "family": "need misplaced",
+    "pairs": [
+     368,
+     368
+    ],
+    "below resolved, median": 0,
+    "range": [
+     0,
+     2
+    ],
+    "tally": {
+     "no need fitted": 8,
+     "need fitted, V1 not decided: fewer than 10 resolved": 32
+    },
+    "median rows in, below, premise not shown": [
+     31,
+     1,
+     339
+    ],
+    "need median": 0.34
+   },
+   "need falls far": {
+    "family": "need misplaced",
+    "pairs": [
+     368,
+     368
+    ],
+    "below resolved, median": 0,
+    "range": [
+     0,
+     3
+    ],
+    "tally": {
+     "need fitted, V1 not decided: fewer than 10 resolved": 31,
+     "no need fitted": 9
+    },
+    "median rows in, below, premise not shown": [
+     30,
+     0,
+     337
+    ],
+    "need median": 0.35
+   },
+   "weak depensation": {
+    "family": "need misplaced",
+    "pairs": [
+     368,
+     368
+    ],
+    "below resolved, median": 1,
+    "range": [
+     0,
+     3
+    ],
+    "tally": {
+     "no need fitted": 20,
+     "need fitted, V1 not decided: fewer than 10 resolved": 20
+    },
+    "median rows in, below, premise not shown": [
+     27,
+     1,
+     349
+    ],
+    "need median": 0.18
+   },
+   "renewal below the floor": {
+    "family": "need misplaced",
+    "pairs": [
+     368,
+     368
+    ],
+    "below resolved, median": 5,
+    "range": [
+     1,
+     7
+    ],
+    "tally": {
+     "need fitted, V1 not decided: fewer than 10 resolved": 40
+    },
+    "median rows in, below, premise not shown": [
+     6,
+     5,
+     384
+    ],
+    "need median": 0.35
+   },
+   "no need": {
+    "family": "no need",
+    "pairs": [
+     368,
+     368
+    ],
+    "below resolved, median": null,
+    "range": null,
+    "tally": {
+     "no need fitted": 40
+    },
+    "median rows in, below, premise not shown": null,
+    "need median": null
+   },
+   "no need, catch 0.1": {
+    "family": "no need",
+    "pairs": [
+     368,
+     368
+    ],
+    "below resolved, median": null,
+    "range": null,
+    "tally": {
+     "no need fitted": 40
+    },
+    "median rows in, below, premise not shown": null,
+    "need median": null
+   },
+   "lakes differ 0.5": {
+    "family": "no need",
+    "pairs": [
+     368,
+     368
+    ],
+    "below resolved, median": null,
+    "range": null,
+    "tally": {
+     "no need fitted": 40
+    },
+    "median rows in, below, premise not shown": null,
+    "need median": null
+   },
+   "lakes differ 0.7": {
+    "family": "no need",
+    "pairs": [
+     368,
+     368
+    ],
+    "below resolved, median": 1,
+    "range": [
+     0,
+     1
+    ],
+    "tally": {
+     "no need fitted": 38,
+     "need fitted, V1 not decided: fewer than 10 resolved": 2
+    },
+    "median rows in, below, premise not shown": [
+     38,
+     1,
+     336
+    ],
+    "need median": 0.1
+   },
+   "lakes differ 1.0": {
+    "family": "no need",
+    "pairs": [
+     368,
+     368
+    ],
+    "below resolved, median": 0,
+    "range": [
+     0,
+     3
+    ],
+    "tally": {
+     "no need fitted": 22,
+     "need fitted, V1 not decided: fewer than 10 resolved": 18
+    },
+    "median rows in, below, premise not shown": [
+     34,
+     1,
+     338
+    ],
+    "need median": 0.08
+   },
+   "lakes differ 1.5": {
+    "family": "no need",
+    "pairs": [
+     368,
+     368
+    ],
+    "below resolved, median": 1,
+    "range": [
+     0,
+     2
+    ],
+    "tally": {
+     "need fitted, V1 not decided: fewer than 10 resolved": 40
+    },
+    "median rows in, below, premise not shown": [
+     30,
+     1,
+     342
+    ],
+    "need median": 0.07
+   },
+   "lakes differ 0.7, catch 0.1": {
+    "family": "no need",
+    "pairs": [
+     368,
+     368
+    ],
+    "below resolved, median": 0,
+    "range": [
+     0,
+     2
+    ],
+    "tally": {
+     "need fitted, V1 not decided: fewer than 10 resolved": 38,
+     "no need fitted": 2
+    },
+    "median rows in, below, premise not shown": [
+     28,
+     0,
+     346
+    ],
+    "need median": 0.45
+   },
+   "lakes differ 1.5, catch 0.1": {
+    "family": "no need",
+    "pairs": [
+     368,
+     368
+    ],
+    "below resolved, median": 0,
+    "range": [
+     0,
+     2
+    ],
+    "tally": {
+     "need fitted, V1 not decided: fewer than 10 resolved": 40
+    },
+    "median rows in, below, premise not shown": [
+     22,
+     0,
+     357
+    ],
+    "need median": 0.58
+   },
+   "general decline": {
+    "family": "no need",
+    "pairs": [
+     368,
+     368
+    ],
+    "below resolved, median": null,
+    "range": null,
+    "tally": {
+     "no need fitted": 40
+    },
+    "median rows in, below, premise not shown": null,
+    "need median": null
+   },
+   "general decline, catch 0.1": {
+    "family": "no need",
+    "pairs": [
+     368,
+     368
+    ],
+    "below resolved, median": 1,
+    "range": [
+     0,
+     5
+    ],
+    "tally": {
+     "need fitted, V1 not decided: fewer than 10 resolved": 38,
+     "no need fitted": 2
+    },
+    "median rows in, below, premise not shown": [
+     15,
+     2,
+     356
+    ],
+    "need median": 0.61
+   },
+   "renewal unseen": {
+    "family": "no need",
+    "pairs": [
+     368,
+     368
+    ],
+    "below resolved, median": null,
+    "range": null,
+    "tally": {
+     "no need fitted": 40
+    },
+    "median rows in, below, premise not shown": null,
+    "need median": null
+   },
+   "episodic, no need": {
+    "family": "no need",
+    "pairs": [
+     368,
+     368
+    ],
+    "below resolved, median": 2,
+    "range": [
+     0,
+     6
+    ],
+    "tally": {
+     "need fitted, V1 not decided: fewer than 10 resolved": 40
+    },
+    "median rows in, below, premise not shown": [
+     5,
+     2,
+     390
+    ],
+    "need median": 0.67
+   },
+   "episodic, lakes differ": {
+    "family": "no need",
+    "pairs": [
+     368,
+     368
+    ],
+    "below resolved, median": 1,
+    "range": [
+     0,
+     3
+    ],
+    "tally": {
+     "need fitted, V1 not decided: fewer than 10 resolved": 40
+    },
+    "median rows in, below, premise not shown": [
+     20,
+     2,
+     361
+    ],
+    "need median": 0.22
+   },
+   "renewal stops after": {
+    "family": "renewal lost",
+    "pairs": [
+     368,
+     368
+    ],
+    "below resolved, median": null,
+    "range": null,
+    "tally": {
+     "no need fitted": 40
+    },
+    "median rows in, below, premise not shown": null,
+    "need median": null
+   },
+   "renewal stops after, lakes differ widely": {
+    "family": "renewal lost",
+    "pairs": [
+     368,
+     368
+    ],
+    "below resolved, median": 1,
+    "range": [
+     0,
+     2
+    ],
+    "tally": {
+     "need fitted, V1 not decided: fewer than 10 resolved": 39,
+     "no need fitted": 1
+    },
+    "median rows in, below, premise not shown": [
+     30,
+     1,
+     344
+    ],
+    "need median": 0.08
+   },
+   "no renewal in some": {
+    "family": "renewal lost",
+    "pairs": [
+     368,
+     368
+    ],
+    "below resolved, median": 0,
+    "range": [
+     0,
+     1
+    ],
+    "tally": {
+     "need fitted, V1 not decided: fewer than 10 resolved": 34,
+     "no need fitted": 6
+    },
+    "median rows in, below, premise not shown": [
+     31,
+     0,
+     341
+    ],
+    "need median": 0.1
+   },
+   "renewal lost before, catch 0.1": {
+    "family": "renewal lost",
+    "pairs": [
+     368,
+     368
+    ],
+    "below resolved, median": 5,
+    "range": [
+     2,
+     9
+    ],
+    "tally": {
+     "need fitted, V1 not decided: fewer than 10 resolved": 36,
+     "no need fitted": 4
+    },
+    "median rows in, below, premise not shown": [
+     30,
+     6,
+     341
+    ],
+    "need median": 0.46
+   },
+   "renewal lost before, lakes differ": {
+    "family": "renewal lost",
+    "pairs": [
+     368,
+     368
+    ],
+    "below resolved, median": 3,
+    "range": [
+     1,
+     7
+    ],
+    "tally": {
+     "no need fitted": 21,
+     "need fitted, V1 not decided: fewer than 10 resolved": 19
+    },
+    "median rows in, below, premise not shown": [
+     33,
+     4,
+     338
+    ],
+    "need median": 0.13
+   },
+   "renewal lost across the cutoff": {
+    "family": "renewal lost",
+    "pairs": [
+     368,
+     368
+    ],
+    "below resolved, median": 2,
+    "range": [
+     0,
+     4
+    ],
+    "tally": {
+     "no need fitted": 30,
+     "need fitted, V1 not decided: fewer than 10 resolved": 10
+    },
+    "median rows in, below, premise not shown": [
+     33,
+     3,
+     339
+    ],
+    "need median": 0.07
+   },
+   "half need": {
+    "family": "mixed",
+    "pairs": [
+     368,
+     368
+    ],
+    "below resolved, median": 1,
+    "range": [
+     0,
+     1
+    ],
+    "tally": {
+     "no need fitted": 36,
+     "need fitted, V1 not decided: fewer than 10 resolved": 4
+    },
+    "median rows in, below, premise not shown": [
+     33,
+     1,
+     336
+    ],
+    "need median": 0.27
+   }
+  }
+ }
+}

@@ -1,0 +1,218 @@
+{
+ "inputs": {
+  "adult_estimates.csv": "d987556b6d96bafdd9ee3f334ced3df6315cee8a4c43ca76fd7a41ea8389bec2",
+  "stocking.csv": "a705bd03e0d26c7a1dce7739d321aa16b079541fccffa17b17c313fafc8a9bd7",
+  "fall-listed.csv": "ccf9c258cc06ea74ecc39fb5c9b8a473b2f042780bb07a4da5a4c42b7edda393",
+  "fall-generous.csv": "c67f0fea9165b93258a20ca91477a8f46faf527097d734231af483228ed55f9e"
+ },
+ "a fall survey in every year of every lake": {
+  "lakes": 399,
+  "labels read per year": true,
+  "lakes changing label category, of lakes with two or more estimates": [
+   74,
+   269
+  ],
+  "the fit": {
+   "pairs needed": 200,
+   "lakes needed": 30,
+   "pairs at most, and their lakes": [
+    311,
+    155
+   ],
+   "pairs at most, and their lakes, from each first year": {
+    "1990": [
+     311,
+     155
+    ],
+    "1996": [
+     215,
+     125
+    ],
+    "1997": [
+     204,
+     121
+    ],
+    "1998": [
+     188,
+     112
+    ],
+    "1999": [
+     178,
+     109
+    ],
+    "2001": [
+     142,
+     95
+    ],
+    "2005": [
+     102,
+     73
+    ]
+   }
+  },
+  "T1N's V1": {
+   "lakes needed below the need, resolved": 10,
+   "lakes that can be read so at most, whatever the values": 9,
+   "lakes": [
+    "1018500",
+    "1545600",
+    "1592400",
+    "2306300",
+    "2339900",
+    "2615100",
+    "2692900",
+    "2949200",
+    "653700"
+   ],
+   "on the way": {
+    "lakes with two estimates to the cutoff, ten years apart at most, the label natural at both and no stocking from five years before the first to the second": 56,
+    "of them, with a survey in the reference window with the label natural and no stocking in five years": 22,
+    "of them, with a later estimate three to ten years after such a survey": 11
+   }
+  },
+  "T1R's V1": {
+   "lakes needed": 10,
+   "lakes that can be read at most, whatever the values": 40
+  }
+ },
+ "fall surveys where fall-listed.csv lists them": {
+  "lakes": 399,
+  "labels read per year": true,
+  "lakes changing label category, of lakes with two or more estimates": [
+   74,
+   269
+  ],
+  "the fit": {
+   "pairs needed": 200,
+   "lakes needed": 30,
+   "pairs at most, and their lakes": [
+    96,
+    69
+   ],
+   "pairs at most, and their lakes, from each first year": {
+    "1990": [
+     96,
+     69
+    ],
+    "1996": [
+     96,
+     69
+    ],
+    "1997": [
+     96,
+     69
+    ],
+    "1998": [
+     95,
+     68
+    ],
+    "1999": [
+     95,
+     68
+    ],
+    "2001": [
+     93,
+     67
+    ],
+    "2005": [
+     68,
+     54
+    ]
+   }
+  },
+  "T1N's V1": {
+   "lakes needed below the need, resolved": 10,
+   "lakes that can be read so at most, whatever the values": 9,
+   "lakes": [
+    "1018500",
+    "1545600",
+    "1592400",
+    "2306300",
+    "2339900",
+    "2615100",
+    "2692900",
+    "2949200",
+    "653700"
+   ],
+   "on the way": {
+    "lakes with two estimates to the cutoff, ten years apart at most, the label natural at both and no stocking from five years before the first to the second": 56,
+    "of them, with a survey in the reference window with the label natural and no stocking in five years": 22,
+    "of them, with a later estimate three to ten years after such a survey": 11
+   }
+  },
+  "T1R's V1": {
+   "lakes needed": 10,
+   "lakes that can be read at most, whatever the values": 25
+  }
+ },
+ "fall surveys where fall-generous.csv lists them": {
+  "lakes": 399,
+  "labels read per year": true,
+  "lakes changing label category, of lakes with two or more estimates": [
+   74,
+   269
+  ],
+  "the fit": {
+   "pairs needed": 200,
+   "lakes needed": 30,
+   "pairs at most, and their lakes": [
+    162,
+    101
+   ],
+   "pairs at most, and their lakes, from each first year": {
+    "1990": [
+     162,
+     101
+    ],
+    "1996": [
+     162,
+     101
+    ],
+    "1997": [
+     162,
+     101
+    ],
+    "1998": [
+     155,
+     95
+    ],
+    "1999": [
+     149,
+     94
+    ],
+    "2001": [
+     123,
+     85
+    ],
+    "2005": [
+     94,
+     68
+    ]
+   }
+  },
+  "T1N's V1": {
+   "lakes needed below the need, resolved": 10,
+   "lakes that can be read so at most, whatever the values": 9,
+   "lakes": [
+    "1018500",
+    "1545600",
+    "1592400",
+    "2306300",
+    "2339900",
+    "2615100",
+    "2692900",
+    "2949200",
+    "653700"
+   ],
+   "on the way": {
+    "lakes with two estimates to the cutoff, ten years apart at most, the label natural at both and no stocking from five years before the first to the second": 56,
+    "of them, with a survey in the reference window with the label natural and no stocking in five years": 22,
+    "of them, with a later estimate three to ten years after such a survey": 11
+   }
+  },
+  "T1R's V1": {
+   "lakes needed": 10,
+   "lakes that can be read at most, whatever the values": 35
+  }
+ }
+}
