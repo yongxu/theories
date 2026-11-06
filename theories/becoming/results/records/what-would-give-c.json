@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-11-06T13:40:22+00:00",
+  "reviewed_at_utc": "2026-11-06T14:04:13+00:00",
   "statement": {
     "en": "Beside what reads no order and holds, a premise giving C implies it. On a listing, widening is what no chooser, over every valuation, does worse from and some better from; where every item is someone's own, what every self-concerned profile not ranking it below ranks by Pareto. Each reads an order.",
     "zh": "在不读次序且成立者旁，给出 C 的前提蕴含 C。在列举上，扩大是遍及每个赋值时无选择者更差且有选择者更好之处；每项都为某立场所有时，也是每个不把扩大排在下面的自我关切剖面以帕累托关系所排者。每条路仍读次序。"
@@ -538,7 +538,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/cw-what-would-give-c/READER.md",
       "role": "review",
-      "sha256": "13f33eeec74b39dcc20ac5b6e14f5ebb12e65aa7f1016a355d9a5125682e530d"
+      "sha256": "cdb395a1ef54787f81d63339a1170543b82e9958ea8548f8de3d2d8c74795169"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aa-attractor-atlas/PLAN.md",
@@ -548,12 +548,12 @@
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "8ed4a28fc489308a4539ef6b9eda4e5806656111ca2cd7b30c061c6c86e77142"
+      "sha256": "051f6da954447f78141e02476d2b35e12afa2ac76cc5869d0c82a212ecc39e39"
     },
     {
       "path": "theories/becoming/chapters/08-METHOD.md",
       "role": "statement",
-      "sha256": "c3fea4d1f82ea8cf62456443415c85b1407d7b12710997966d49d072f78c3b0b"
+      "sha256": "d43b1e8f884d4b97d3a5aebb31aaece5c875e5b78ccb980392ccd63da7d3413c"
     }
   ],
   "proof_bindings": [

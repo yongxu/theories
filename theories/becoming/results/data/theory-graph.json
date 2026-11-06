@@ -6471,8 +6471,8 @@
    "title_zh": "什么会给出列举上 C 的次序",
    "status": "recorded-checked",
    "kind": "theorem",
-   "region": "unassigned",
-   "base": "",
+   "region": "significance",
+   "base": "general",
    "page": "theories/becoming/results/records/what-would-give-c.md"
   },
   {
@@ -11005,8 +11005,8 @@
    "name": "Becoming.RoutesToC",
    "level": "L2",
    "theorems": 74,
-   "region": "unassigned",
-   "base": "",
+   "region": "significance",
+   "base": "general",
    "on_grammar": true,
    "reaches_grammar": true
   },

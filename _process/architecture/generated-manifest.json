@@ -476,8 +476,8 @@
     "theories/becoming/results/records/candidate-theorems-of-the-corpus.md": "c13f27da97b1462448e67078c6a1f2c496289bc43ffefa4a59ec834c28125676",
     "theories/becoming/results/records/generation-and-degeneration-at-two-grains.md": "993ded6d9669414de621aa3f52114d5984be5fac0db3a61f232e9c7f164a6a6e",
     "theories/becoming/results/records/testing-within-the-net.md": "f0b0d1332a15e5e3bfe12d44bb668a12d925d98322c144b63517f3a2ee7cedeb",
-    "theories/becoming/results/data/theory-graph.json": "052a5e2f5a6258c51d6e96b0dd4e6273d1b43a6b8a420ed2376d7e33ca2a41a0",
-    "theories/becoming/results/THEORY-GRAPH.md": "51d7dcff17e2c90cc1ed361c39689a0db702a3e540bc56fd2cff57fdab1d2b54",
+    "theories/becoming/results/data/theory-graph.json": "c9b5ec700021ab6b9cf2634174eb31df1e6b414759f249063d4e70e2f55e8faa",
+    "theories/becoming/results/THEORY-GRAPH.md": "fad01d1e863bc8f5171bd414286c768e189d870fb9ee3947e4726cea8360c323",
     "theories/becoming/results/records/a-regularity-kept-and-changed.md": "cbcad0091e92d2678194df5105befd68331c999d827a9e96a5c8c64b905f9130",
     "theories/becoming/results/records/rules-that-change-themselves-in-the-grammar.md": "66f9a838d9c59fddde4e63c17b0c1b22ce9c6865d5a0e15abbec3374d7a80b2b",
     "theories/becoming/results/records/reach-past-ones-own-end.md": "af8838517fb8baf71507ad56136027b9d84a274ebf1cbefda26bd675eeb40f31",
@@ -602,6 +602,6 @@
     "theories/becoming/results/records/errors-by-chance-in-a-pair-keeping-mutual-withholding.md": "728c258b2c545073bc8159e8e3d0f328d4f4d18b79a2c8b1f0ee42e526fae579",
     "theories/becoming/results/atlas/ATLAS.md": "a240137ab9f51bc0ddebc8008bebf11757467adb7da99da44e00362db6462b41",
     "theories/becoming/results/data/atlas.json": "49ec896011cd7c01f9a2947c42707fc3e4ce6f29964095c10bfad74d5f760f2b",
-    "theories/becoming/results/records/what-would-give-c.md": "349479708d498402a51b95a3f7ac99d0a61009a232d8e9b3d77e54b2842ecd90"
+    "theories/becoming/results/records/what-would-give-c.md": "fbb52efeaeed2c9a430820d0c949dbe53ea12bb7bb1ab715ab69938e15a6e3b5"
   }
 }

@@ -548,7 +548,7 @@ A cell says "none found" only where a search of the record's rows by input found
 - the ethics with scope and order apart (the universalization step is Gewirth's, and C is the monotonicity of opportunity sets);
 - one vocabulary for conservation, selection limited by observation, and comparison of opportunity sets.
 
-A theorem a specialist would not foresee, a prediction that could fail and does not, or a premise derived from something weaker would change these verdicts. Beside what reads no order and holds, a premise that gives C implies it, so no order meets it and fails C there; it can be weaker at other data or in scope, and beside what reads an order it can be weaker at one datum ([07 §4.4](07-SIGNIFICANCE.md#r-what-would-give-c)).
+A theorem a specialist would not foresee, a prediction that could fail and does not, or a premise derived from something weaker would change these verdicts. Beside what reads no order and holds, a premise that gives C implies it, so no order meets it and fails C there; it can, where it reads the data, be weaker at other data, or be weaker in scope, and beside what reads an order it can be weaker at one datum ([07 §4.4](07-SIGNIFICANCE.md#r-what-would-give-c)).
 
 <a id="third-parts"></a>
 **Third parts** (an AI audit of the rows above and of §9's unifications, against the literature it knew; [audit](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue0-third-parts/AUDIT.md)). A containment of a framework has a third part where the theory forbids something the framework leaves open. Of the 21 rows the audit read, four have one, three of them distinct:

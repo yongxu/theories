@@ -1,6 +1,6 @@
 # CW: what its readers reported
 
-*AI-written reviews of [`Becoming.RoutesToC`](../../../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoutesToC.lean), its home section, its record and [its note](NOTE.md), 6 November 2026. They are kept as reported, with what was done about them. The module was named `Becoming.PremiseLattice` when the first round read it, and the names below are of that draft.*
+*AI-written reviews of [`Becoming.RoutesToC`](../../../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoutesToC.lean), its home section, its record and [its note](NOTE.md), 6 November 2026. They are kept as reported, with what was done about them. The module was named `Becoming.PremiseLattice` when the first round read it, and the names below are of that draft. Links in proposed replacements are printed as code, because they resolve in the chapter and not here; that is the only change to the reports as received.*
 
 ## Round 1: the reader, on the whole draft
 
@@ -173,7 +173,7 @@ No proposed Lean or new sentence below has been compiled or checked.
 
 **19. Weaker left unreconciled.**
 - **Where:** 07 L345, "Monotonicity at the standpoint is C's premise relocated: weaker, still a premise", a few lines above the new home. The plan says CW "settles what 'weaker' means" there, and the kit does not touch it.
-- **Replacement, 07 L345:** "Monotonicity at the standpoint is C's premise relocated, still a premise; in what sense it can be called weaker is [below](#r-what-would-give-c)."
+- **Replacement, 07 L345:** "Monotonicity at the standpoint is C's premise relocated, still a premise; in what sense it can be called weaker is `[below](#r-what-would-give-c)`."
 - **Also:** list this under NOTE's "What differs".
 
 **20. Note against record and plan.**
@@ -233,7 +233,7 @@ No proposed Lean or new sentence below has been compiled or checked.
 
 **38.** RECORD L89: `no-evaluation` ("Contains no ethical predicate") does not fit a first law whose statement contains `Comparison`. `premises-met-and-failed`, which holds `not_entails`, omits it. Replacement: drop that key.
 
-**39.** RECORD L147 gives `CH08` role `statement`, and HOME L16 links 08 §8, but the kit has no 08 text, and §8 lists its results by name. Replacement: add a bullet there: "What would give C ([07 §4.4](07-SIGNIFICANCE.md#r-what-would-give-c)) restates known forms: the unanimous form of a preference for flexibility (Kreps 1979), strict Pareto, and the prisoner's dilemma read as a menu. Each law is near-definitional or a witness." Otherwise remove the reference.
+**39.** RECORD L147 gives `CH08` role `statement`, and HOME L16 links 08 §8, but the kit has no 08 text, and §8 lists its results by name. Replacement: add a bullet there: "What would give C (`[07 §4.4](07-SIGNIFICANCE.md#r-what-would-give-c)`) restates known forms: the unanimous form of a preference for flexibility (Kreps 1979), strict Pareto, and the prisoner's dilemma read as a menu. Each law is near-definitional or a witness." Otherwise remove the reference.
 
 **40.** LEAN L434: `WidensOn.not_reversed` duplicates `Weighting.WidensOn.not_reverse`. Replacement: delete it and use the existing one at L462.
 
@@ -335,7 +335,7 @@ The line numbers refer to these files:
   - The added act must count as living; where it does not, there is no extension and C does not rank it.
   - The nearest law, own widening within the margin, has a part's widening leave the whole mixed, where C is silent.
 - **Lapse:** "the witness stands until it is" means until it is shown whether, but showing that a wider course *can* have this shape would not lapse it. AGENTS says it stands until the full account is shown to remove it.
-- **Replacement, HOME L13 from "The witness relates":** "The witness relates the menus by the same widening, so on the frame above, with the menus read as its courses and every claim counted, every order meeting C ranks the wider menu above the narrower, while each reaches less at that solution (`Weighting.Restraint.comparison_ranks_wide`, `Weighting.Restraint.each_falls`). [AI reading, new] That is no inconsistency: C's order does not read what each reaches, and orders meeting C exist there. It is a conflict between what C ranks and what each reaches. A menu of acts is neither shown to be nor shown not to be a course of what can form, and whether a wider course can have this shape, with the added act counted as living, is open. If one can, C ranks it above a course where each reaches more, a loss that stands. The nearest law here, [own widening within the margin](#r-own-widening-within-the-margin), has a part's widening leave the whole mixed, where C is silent; whether the menu's shape falls under it is not shown. The witness stands against this route and against reading C as "more options are better" unless the full account is shown to remove it, and what it costs C is open."
+- **Replacement, HOME L13 from "The witness relates":** "The witness relates the menus by the same widening, so on the frame above, with the menus read as its courses and every claim counted, every order meeting C ranks the wider menu above the narrower, while each reaches less at that solution (`Weighting.Restraint.comparison_ranks_wide`, `Weighting.Restraint.each_falls`). [AI reading, new] That is no inconsistency: C's order does not read what each reaches, and orders meeting C exist there. It is a conflict between what C ranks and what each reaches. A menu of acts is neither shown to be nor shown not to be a course of what can form, and whether a wider course can have this shape, with the added act counted as living, is open. If one can, C ranks it above a course where each reaches more, a loss that stands. The nearest law here, `[own widening within the margin](#r-own-widening-within-the-margin)`, has a part's widening leave the whole mixed, where C is silent; whether the menu's shape falls under it is not shown. The witness stands against this route and against reading C as "more options are better" unless the full account is shown to remove it, and what it costs C is open."
 - **Replacement, LEAN L50 and RECORD L40 ending:** "is not shown; the witness stands unless the full account is shown to remove it."
 - **Replacement, RECORD L41 ending:** "皆未表明；除非表明全部理论能消除它，此见证成立。"
 - **Replacement, NOTE L36:** "So the witness stands unless the full account is shown to remove it, as AGENTS asks of a counterexample found in a weaker model."
@@ -356,7 +356,7 @@ The line numbers refer to these files:
 - **What is wrong:**
   - The home never names it, and NOTE L42 leaves the plan's first candidate unmapped.
   - With the bridge the line can say the answer: on the listing's frame it is not weaker at all. My round 1 text was written before the bridge existed.
-- **Replacement, APPLY L78:** "Monotonicity at the standpoint is C's premise relocated, still a premise: on a listing's frame, every claim counted, an order is increasing in admission exactly when it meets C, so it is weaker only in scope, a listing and not all of what can form ([below](#r-what-would-give-c))."
+- **Replacement, APPLY L78:** "Monotonicity at the standpoint is C's premise relocated, still a premise: on a listing's frame, every claim counted, an order is increasing in admission exactly when it meets C, so it is weaker only in scope, a listing and not all of what can form (`[below](#r-what-would-give-c)`)."
 - **Add to NOTE L42 after its first sentence:** "Monotonicity at each standpoint is `Increasing` at that standpoint's order, on the listing's frame exactly C (`comparison_listingFrame_iff`), and standpoint-Pareto is `ParetoAmong`."
 - **Replacement, NOTE L46 middle:** "the sentence on monotonicity at the standpoint now says which sense holds of it, scope".
 
@@ -382,7 +382,7 @@ The line numbers refer to these files:
 ## Low
 
 **52.** APPLY L85 and NOTE L46: 08's sentence states only two of the four senses, while NOTE says 08 "states them".
-- **Replacement, 08:** "… only at other data or on a wider class; beside what reads an order a premise can be weaker at one datum ([07 §4.4](07-SIGNIFICANCE.md#r-what-would-give-c))."
+- **Replacement, 08:** "… only at other data or on a wider class; beside what reads an order a premise can be weaker at one datum (`[07 §4.4](07-SIGNIFICANCE.md#r-what-would-give-c)`)."
 - **Replacement, NOTE:** "and 08 §8 states the first three".
 
 **53.** APPLY L62–63: "so a premise can be weaker" drops the scope the BULLET keeps.
@@ -461,7 +461,7 @@ Two further AI readers, each without the others' reports. They read while round 
 **C1 (high).** home-07.md line 2 (title, opening) and the table's last column
 
 - **Problem:** After the first read I believed each route reaches C itself, the C that ranks courses of what can form, and stops only where the last column says. The Lean does not support this. All four routes end in `Weighting.Increasing items`, which is C only on `listingFrame`, where any `X -> Bool` is a course and the process is free. The chapter says a course on a listing need not be what any level path admits, and that listed paths admit nothing from some step on (07 lines 244, 252-253). The draft says this only in the last route ('This is an order on a listing'), so the choosers, standpoints and one-step rows read as having no such limit.
-- **Replacement:** Title: '*What would give C's order on a listing.*' After 'puts its weight' add: 'Every route below ends in an order increasing in admission on a finite listing. That is what C asks only on a frame reading a course by what it admits on that listing. A course on a listing need not be what any level path admits, and a listed level path admits nothing from some step on ([above](#r-self-concern-and-c-under-the-condition)). So between level paths a route gives what C asks only with admission decided and both paths' admissions listed, one way, and no route gives C on all of a web's level paths.' Table header: 'Where it stops (each also at the edge of the listing)'.
+- **Replacement:** Title: '*What would give C's order on a listing.*' After 'puts its weight' add: 'Every route below ends in an order increasing in admission on a finite listing. That is what C asks only on a frame reading a course by what it admits on that listing. A course on a listing need not be what any level path admits, and a listed level path admits nothing from some step on (`[above](#r-self-concern-and-c-under-the-condition)`). So between level paths a route gives what C asks only with admission decided and both paths' admissions listed, one way, and no route gives C on all of a web's level paths.' Table header: 'Where it stops (each also at the edge of the listing)'.
 - **What was done:** Taken. The title is now "What would give C's order on a listing", a paragraph after the first says every route ends on a listing and what that gives between level paths, and the table's last column says each also stops at the edge of the listing. The record keeps its id; "here" added to "no route gives C on all of a web's level paths", which is what 07 lists as not shown.
 
 **C2 (high).** line 13, last sentence ('Until that is shown ...')
@@ -479,7 +479,7 @@ Two further AI readers, each without the others' reports. They read while round 
 **C4 (medium).** line 2, 'Let help read no order ... on a wider class ... Self-concern is the case'
 
 - **Problem:** I could not follow this on first reading. 'Help' and 'datum' are never introduced, and 'reads no order' is defined about 90 lines earlier with no link. 'Weaker' is the word being fixed but is never defined; the Lean's sense is that C implies it and some order meets it and fails C. 'At other data, or on a wider class' reads as exhaustive and is not: one verdict on every step is strictly weaker than C at the same datum and simply does not give C with order-free help, which is the draft's own later example. 'On a wider class' has no referent I could find in the Lean, and 'class' is a glossary term meaning an equivalence relation, used in that sense in the last route of this same item. 'Self-concern is the case' does not say what it is a case of. 'It fixes the sense of the word' credits the lemma with what only a definition does.
-- **Replacement:** Call a premise on orders strictly weaker than C at a datum where C implies it and some order meets it and fails C. Let a further statement, the help, read no order ([§4](#scope-and-order)) and hold at a datum, the facts it is about. A premise that with that help gives C at that datum implies C there, so no order meets it and fails C, and if C also implies it, it is C there (`ReadsNoOrder.implies_comparison`, `ReadsNoOrder.not_strictly_weaker`, `ReadsNoOrder.iff_of_weaker`). So no premise is both strictly weaker than C at a datum and, with such help holding there, enough for C at that datum. It can give C at one datum and be strictly weaker at another, or be strictly weaker at that datum and not give C with that help. Where the help itself reads an order, a premise can be strictly weaker at one datum and still give C with it, as one verdict on every one-item widening does below; there the help supplies the order the premise lacks. This much is near-definitional. Self-concern shows the first of these.
+- **Replacement:** Call a premise on orders strictly weaker than C at a datum where C implies it and some order meets it and fails C. Let a further statement, the help, read no order (`[§4](#scope-and-order)`) and hold at a datum, the facts it is about. A premise that with that help gives C at that datum implies C there, so no order meets it and fails C, and if C also implies it, it is C there (`ReadsNoOrder.implies_comparison`, `ReadsNoOrder.not_strictly_weaker`, `ReadsNoOrder.iff_of_weaker`). So no premise is both strictly weaker than C at a datum and, with such help holding there, enough for C at that datum. It can give C at one datum and be strictly weaker at another, or be strictly weaker at that datum and not give C with that help. Where the help itself reads an order, a premise can be strictly weaker at one datum and still give C with it, as one verdict on every one-item widening does below; there the help supplies the order the premise lacks. This much is near-definitional. Self-concern shows the first of these.
 - **What was done:** Taken, with "strictly weaker", "help" and "datum" defined. "On a wider class" became "in scope" throughout, because class has a glossary sense. "It fixes the sense" had already gone in round 2.
 
 **C5 (medium).** line 2, 'every claim counted, C is being increasing in admission'; 'no order meets it and fails C'
@@ -497,13 +497,13 @@ Two further AI readers, each without the others' reports. They read while round 
 **C7 (medium).** line 13, the witness named `Weighting.Restraint`, against 07 §5 (lines 536-541) and ONE-PAGE's lake
 
 - **Problem:** This looks like a contradiction with neighbouring text and the draft does not address it. §5 says every comparison satisfying C ranks restraint above overdraw (`Ranking.restraint_ranks_over_drawers`), and ONE-PAGE has thirty a month ranked over fifty. Here, under the name Restraint, every order meeting C ranks the menu that adds taking above the menu of restraint alone. The two differ in frame: acts in one, courses in the other. That difference is the best evidence the account has on the menu question, and the draft leaves it out. It must not be overread as removing the witness.
-- **Replacement:** Insert after 'need not be what any level path admits.': 'The one case the account compares as courses runs the other way: a restrained course extends overdraw where it includes an event overdraw withholds, and every comparison satisfying C then ranks it higher ([§5](#r-ranking-under-readings)). There fewer acts gave the course ranked above, so a wider menu is not as such a wider course. That does not show that no wider course has this shape.'
+- **Replacement:** Insert after 'need not be what any level path admits.': 'The one case the account compares as courses runs the other way: a restrained course extends overdraw where it includes an event overdraw withholds, and every comparison satisfying C then ranks it higher (`[§5](#r-ranking-under-readings)`). There fewer acts gave the course ranked above, so a wider menu is not as such a wider course. That does not show that no wider course has this shape.'
 - **What was done:** Taken, reworded: what the §5 case compares is what each course admits and not what is open to act, so a wider menu of acts is not as such a wider course. The reader's "fewer acts" was not carried, because §5 compares courses of one law and states no menu. (Both this rewording and its reason were themselves wrong about §5: finding 66 in round 3 below.)
 
 **C8 (medium).** line 13, 'what it does to C itself is open'
 
 - **Problem:** The chapter already says what this would be, and the draft does not connect it. T8 is 'refuted by ... a pure closing argued good for life', and the table in this same subsection has `Web.not_widens_of_closes` (a closing is never ranked above by C). Lifted to courses, the narrow menu is a closing from which each gets more. Saying only 'open' hides that the witness has the shape of the account's own stated refuter, which is the thing AGENTS item 2 asks a reader to be able to see.
-- **Replacement:** Append after 'If one has, the witness stands against C there too.': 'The narrower course is then a closing from which each gets more. C never ranks such a closing above (`Web.not_widens_of_closes`), and T8 names a pure closing argued good for life as what refutes it ([§8](#theses)): the witness would have that refuter's shape, wanting only the argument that what each gets there is good for life.'
+- **Replacement:** Append after 'If one has, the witness stands against C there too.': 'The narrower course is then a closing from which each gets more. C never ranks such a closing above (`Web.not_widens_of_closes`), and T8 names a pure closing argued good for life as what refutes it (`[§8](#theses)`): the witness would have that refuter's shape, wanting only the argument that what each gets there is good for life.'
 - **What was done:** Taken, conditional on a wider course having the shape, under the [AI reading, new] label.
 
 **C9 (medium).** line 13, the first two witnesses (`Weighting.Refusing`, `Weighting.AnotherReads`)
@@ -521,7 +521,7 @@ Two further AI readers, each without the others' reports. They read while round 
 **C11 (medium).** line 14, '[AI reading, new] A future beyond every present line would be such an item, so this route does not do the step's work.'
 
 - **Problem:** Stated flatly, this holds only if the profile holds present standpoints alone. `every_pareto_iff` ranges over any `P`, the glossary has a center as 'a formation as a standpoint', and 07's Open list leaves 'which formations hold standpoints' open. With later formations among the standpoints, the covering hypothesis can be met and all the cost falls on the ban on ranking a widening below. A philosopher will raise future generations at once. 'The step' is also not named as the step of invariance, and the next bullet uses 'step' in another sense.
-- **Replacement:** [AI reading, new] With standpoints read as present ones, a future beyond every present line would be such an item, and so read this route does not do the work of the step of invariance. With later formations among the standpoints it would be someone's own; which formations hold standpoints is [open](#open).
+- **Replacement:** [AI reading, new] With standpoints read as present ones, a future beyond every present line would be such an item, and so read this route does not do the work of the step of invariance. With later formations among the standpoints it would be someone's own; which formations hold standpoints is `[open](#open)`.
 - **What was done:** Taken. `#open` does list which formations hold standpoints (07 line 784 at the time).
 
 **C12 (medium).** table row 'one step'; line 15; line 18 ('an order's steps are alike')
@@ -539,7 +539,7 @@ Two further AI readers, each without the others' reports. They read while round 
 **C14 (medium).** line 16, 'between listed level paths it gives C one way', 'P1 ...', 'Whether P2 and P4 hold is the crux.'
 
 - **Problem:** The gloss drops qualifiers its home keeps (07 lines 244, 249, 252): admission decided, every admission of both paths listed, and courses whose admissions end. On this listing those admissions must also all lie downstream. I came away thinking self-concern with P2 and P4 gives C between level paths generally. 'One way' is not explained. P1 to P4 are forward references to §4.6, a chapter which also has a different P1 to P4 in §4.2, and neither P2 nor P4 is stated here, so 'P1 presupposes significance and ranks nothing' cannot be followed in sequence. 'The crux' has no link.
-- **Replacement:** Replace the P2/P4 clause: '[§4.6](#future-path)'s P2, that one's class is constant up to the net's end at oneself, and P4, that it holds one's effects, give that the class holds it (`Weighting.increasing_on_downstream_of_regularity`).' Replace the level-paths sentence: 'This is an order on a listing. Between level paths with admission decided whose admissions are all listed, so all downstream and so courses whose admissions end, it ranks every extension as C asks there; the converse is not shown ([above](#r-self-concern-and-c-under-the-condition)). It says nothing of what lies beyond the listing.' End: 'Whether P2 and P4 hold is [the crux](#crux).'
+- **Replacement:** Replace the P2/P4 clause: '`[§4.6](#future-path)`'s P2, that one's class is constant up to the net's end at oneself, and P4, that it holds one's effects, give that the class holds it (`Weighting.increasing_on_downstream_of_regularity`).' Replace the level-paths sentence: 'This is an order on a listing. Between level paths with admission decided whose admissions are all listed, so all downstream and so courses whose admissions end, it ranks every extension as C asks there; the converse is not shown (`[above](#r-self-concern-and-c-under-the-condition)`). It says nothing of what lies beyond the listing.' End: 'Whether P2 and P4 hold is `[the crux](#crux)`.'
 - **What was done:** Taken. P2 and P4 stated in place, checked against §4.6; the level-path qualifiers restored and the crux linked.
 
 **C15 (medium).** line 2, the label
@@ -587,13 +587,13 @@ Two further AI readers, each without the others' reports. They read while round 
 **C22 (low).** fit: 07 lines 233 and 249, line 512, glossary row C ('C gives order, in general alone')
 
 - **Problem:** This phrase now sits beside an item giving premises that stand in C's place across a whole listing. It is not contradicted if 'in general' means level paths, but nothing says that, and §4 line 233 is also the natural place for a pointer here, since `ReadsNoOrder.not_entails` is stated there and this item's first paragraph is its companion. The rest of the fit is fine: self-concern and the coincidence law are repeated (lines 242, 360) but each repeat adds the frame step, and the kit already rewrites line 345's unqualified 'weaker'.
-- **Replacement:** Line 233: 'A ranking of courses needs C or a premise in its place: C gives order, on courses in general alone, an order rising with one's own continuation ranks one case with no C ([§4.4](#r-what-self-concern-alone-ranks)), and what could stand in C's place on a listing, each reading an order, is set out [there](#r-what-would-give-c).'
+- **Replacement:** Line 233: 'A ranking of courses needs C or a premise in its place: C gives order, on courses in general alone, an order rising with one's own continuation ranks one case with no C (`[§4.4](#r-what-self-concern-alone-ranks)`), and what could stand in C's place on a listing, each reading an order, is set out `[there](#r-what-would-give-c)`.'
 - **What was done:** Taken as a pointer at 07 §4's sentence, keeping "in general alone", which the glossary and the ethics summary use.
 
 **C23 (low).** line 18, closing paragraph
 
 - **Problem:** 'None is new' is backed only by a link, while neighbours name their antecedents in place (Sen, Pareto, Pigou-Dalton). The chooser route is the idea 08 already attaches to §2's covering, and neither is linked to the other. The closing list of order-reading premises also omits the bare self-concern of the last route.
-- **Replacement:** Every law here is short and none is new as mathematics ([08 §8](08-METHOD.md#known-results)): the chooser route is the unanimous form of a preference for flexibility (Kreps 1979), on a list with refusal as a default, as [covering](#r-what-a-course-keeps-reachable) is; `Weighting.AnotherReads` is changing tastes (Strotz 1955-56); `Weighting.Restraint` is the prisoner's dilemma read as a menu. That what no chooser does worse from should be called better, that an order is self-concerned, that standpoints' orders rank no widening below, and that an order gives every one-item widening one verdict are each a premise reading an order.
+- **Replacement:** Every law here is short and none is new as mathematics (`[08 §8](08-METHOD.md#known-results)`): the chooser route is the unanimous form of a preference for flexibility (Kreps 1979), on a list with refusal as a default, as `[covering](#r-what-a-course-keeps-reachable)` is; `Weighting.AnotherReads` is changing tastes (Strotz 1955-56); `Weighting.Restraint` is the prisoner's dilemma read as a menu. That what no chooser does worse from should be called better, that an order is self-concerned, that standpoints' orders rank no widening below, and that an order gives every one-item widening one verdict are each a premise reading an order.
 - **What was done:** Taken, with L2's attribution in place of Kreps.
 
 *What this reader checked:* Read in the order asked, and tested every Lean name the draft cites against RoutesToC.lean by reading its statements, without running anything; the formal sentences hold apart from the findings above. I grepped apply_cw.py only to avoid reporting what the kit already patches (line 345, 08's named antecedents), and I took §4.6 and the Web laws from the chapter's text, not their proofs; the record and the zh text were not read. Clean categories: it does not read as new mathematics, each route's table row names a premise reading an order, and nothing proves why C is true, which is what I believed on first read; the only slips against 'does not derive' are the ambiguous 'derives C from nothing' and the title's scope. The menu counterexample is neither settled in either direction nor dismissed, though the lapse condition and burden depart from AGENTS' rule; game theory's solution is labelled as that field's; and the hidden weights and unbased comparisons are those listed: the range over possible choosers, silence as no objection, every claim counted, 'lighter' and 'each reaches less'.
@@ -729,7 +729,7 @@ All the other "What was done" entries match the files.
 
 Replacement, HOME L21:
 
-> The case the account compares as courses in [§5](#r-ranking-under-readings) runs the other way. Under the whole-run reading, with the hypotheses stated there, a restrained course extends overdraw exactly when it includes an event overdraw withholds, and every comparison satisfying C then ranks it higher; the two-part family is ranked so under all three readings, and with a third formation sharing the stepwise reading leaves it unranked. There what is compared is the events a reading includes (active and not consuming under the whole-run reading; admitted, active or not, under the possibility reading) and not what is open to act, and no menu is stated, so that case does not say what a wider menu of acts is as a course. It does not show that no wider course has this shape.
+> The case the account compares as courses in `[§5](#r-ranking-under-readings)` runs the other way. Under the whole-run reading, with the hypotheses stated there, a restrained course extends overdraw exactly when it includes an event overdraw withholds, and every comparison satisfying C then ranks it higher; the two-part family is ranked so under all three readings, and with a third formation sharing the stepwise reading leaves it unranked. There what is compared is the events a reading includes (active and not consuming under the whole-run reading; admitted, active or not, under the possibility reading) and not what is open to act, and no menu is stated, so that case does not say what a wider menu of acts is as a course. It does not show that no wider course has this shape.
 
 Replacement, NOTE L42:
 
@@ -756,7 +756,7 @@ The zh terms 整段读法, 节制 and 扣下 come from the `ranking-under-readin
 
 Replacement, HOME L21:
 
-> If one has, the witness stands against C there too, and the narrower course is a closing from which each gets more. Such a closing neither widens the other nor keeps it (`Web.not_widens_of_closes`, on level paths), so C does not ask that it be ranked above, and an asymmetric order meeting C ranks it below. T8 names a pure closing argued good for life as what refutes T8 ([§8](#theses)): the witness would have that refuter's shape. What it would still want is the argument that the closing is good for life, what it closes counted; that each gets more by the game's payoffs is not yet that argument.
+> If one has, the witness stands against C there too, and the narrower course is a closing from which each gets more. Such a closing neither widens the other nor keeps it (`Web.not_widens_of_closes`, on level paths), so C does not ask that it be ranked above, and an asymmetric order meeting C ranks it below. T8 names a pure closing argued good for life as what refutes T8 (`[§8](#theses)`): the witness would have that refuter's shape. What it would still want is the argument that the closing is good for life, what it closes counted; that each gets more by the game's payoffs is not yet that argument.
 
 Replacement, NOTE L42:
 
@@ -766,7 +766,7 @@ Replacement, NOTE L42:
 
 (a) APPLY L89, 08: `"weaker" can mean there only at other data or in scope`. "Only" holds for implication among orders, not for premises of other types or for being easier to warrant. Replacement:
 
-> Beside what reads no order and holds, a premise that gives C implies it, so no order meets it and fails C there; it can be weaker at other data or in scope, and beside what reads an order it can be weaker at one datum ([07 §4.4](07-SIGNIFICANCE.md#r-what-would-give-c)).
+> Beside what reads no order and holds, a premise that gives C implies it, so no order meets it and fails C there; it can be weaker at other data or in scope, and beside what reads an order it can be weaker at one datum (`[07 §4.4](07-SIGNIFICANCE.md#r-what-would-give-c)`).
 
 (b) NOTE L17: "has to say which it means" followed by four senses, leaving out HOME's third. Replacement:
 
@@ -800,7 +800,7 @@ Replacement for the reading clause:
 
 Replacement, HOME L21's last sentence:
 
-> The nearest laws here are two. On a flow, at [a mutual best response of several optimizers](05-COLLECTIVES.md#r-several-optimizers-drain-by-their-joint-capacity), each optimizing alone by its own rising order takes its whole capacity wherever something stands beyond its family, so restraint is no mutual best response (`Optimum.MutualBest.full`); that law compares no courses by C and does not show what each gets falling. [Own widening within the margin](#r-own-widening-within-the-margin) has a part's widening leave the whole mixed, where C is silent. Whether the menu's shape falls under either is not shown.
+> The nearest laws here are two. On a flow, at `[a mutual best response of several optimizers](05-COLLECTIVES.md#r-several-optimizers-drain-by-their-joint-capacity)`, each optimizing alone by its own rising order takes its whole capacity wherever something stands beyond its family, so restraint is no mutual best response (`Optimum.MutualBest.full`); that law compares no courses by C and does not show what each gets falling. `[Own widening within the margin](#r-own-widening-within-the-margin)` has a part's widening leave the whole mixed, where C is silent. Whether the menu's shape falls under either is not shown.
 
 Replacement, NOTE L56 and RECORD L115:
 
@@ -846,7 +846,7 @@ Add to RECORD's related list:
 
 **83. README rows lack "over every valuation".** APPLY L64–65. Add it after "exactly when", and in zh "遍及每个赋值时".
 
-**84. "The first witness stands with the third" has no link to T5.** Location: HOME L19. `imposed_below` is the negative valuation T5 already names. Add: "(the negative valuation [T5](#theses) names; [a narrowing above its widening](#r-a-narrowing-above-its-widening))".
+**84. "The first witness stands with the third" has no link to T5.** Location: HOME L19. `imposed_below` is the negative valuation T5 already names. Add: "(the negative valuation `[T5](#theses)` names; `[a narrowing above its widening](#r-a-narrowing-above-its-widening)`)".
 
 ## 4. Your five questions
 
@@ -1029,11 +1029,11 @@ The later "has this shape:" stays, since that is where the shape is defined.
 
 **91. The flow law's qualifiers are dropped.** Location: HOME L21. 05 L215 and 07 L673 keep them. Replacement:
 
-> On a flow, with balance at the step, at [a mutual best response of several optimizers](05-COLLECTIVES.md#r-several-optimizers-drain-by-their-joint-capacity) (its existence not shown in general), each optimizing alone…
+> On a flow, with balance at the step, at `[a mutual best response of several optimizers](05-COLLECTIVES.md#r-several-optimizers-drain-by-their-joint-capacity)` (its existence not shown in general), each optimizing alone…
 
 **92. The Open bullet drops a label and a qualifier.** Location: APPLY L85–86. Its first sentence is exact and matches HOME. Its second sentence is a reading that HOME labels and qualifies, and 08's Open label asks what would show it. Replacement:
 
-> - **The menu's shape on courses** ([§4.4](#r-what-would-give-c)): whether a course of what can form can widen another while, at the pure Nash equilibrium of one play among those choosing within it, what each gets falls. [AI reading, new] If one can, the menu witness stands against C there, with the shape of T8's refuter, still wanting the argument that the closing is good for life; if none can, that removes its bearing on courses.
+> - **The menu's shape on courses** (`[§4.4](#r-what-would-give-c)`): whether a course of what can form can widen another while, at the pure Nash equilibrium of one play among those choosing within it, what each gets falls. [AI reading, new] If one can, the menu witness stands against C there, with the shape of T8's refuter, still wanting the argument that the closing is good for life; if none can, that removes its bearing on courses.
 
 **93. "Covering" in the label has no referent in the home.** Location: HOME L2. §2 of the chapter uses the word in another sense. Replacement:
 
@@ -1069,3 +1069,39 @@ Cosmetic: LEAN L23, L99 and L666 are long unwrapped lines from this diff, longer
 ### What was done about round 4
 
 No high or medium remained, so the readings ended here; the changes below were not read again by this reader. 85-93 taken as given, 91 and 92 worded as replaced. The long Lean lines were rewrapped. The Lean was rebuilt and bound at the core run, which is the evidence for it.
+
+## A last check: the same reader, on the lines the gate listed
+
+The landing's gate failed on three things: links in these reports, read as live; the review packet's dossiers quoting two 07 sentences the applier had reworded; and no region for the new record. The links are printed as code, each of the two sentences is restored word for word with the new matter after it, and the record and module have regions. The reader then read the lines that restate the new section.
+
+None: no high or medium in the five lines. Lines 233 and 345 say what the home says, and each restored sentence appears word for word with the new matter after it.
+
+**Two lows, neither blocking:**
+
+1. **07 line 345, second "it".** With the sentences split, "it meets C, so it is weaker" uses "it" for two things, and the second reads as the order. Only the first sentence is quoted elsewhere, so the second can change. Replacement:
+
+   > On a listing's frame, every claim counted, an order is increasing in admission exactly when it meets C, so monotonicity at the standpoint is weaker only in scope, a listing and not all of what can form (`[below](#r-what-would-give-c)`).
+
+2. **08 line 551, "at other data".** It drops the home's "where it reads the datum". It is still true as a "can", so this one is optional. Replacement:
+
+   > it can, where it reads the data, be weaker at other data, or be weaker in scope, and beside what reads an order it can be weaker at one datum
+
+**Each line against the home in the worktree:**
+- **07 line 233:** "each route reading an order" matches the route table, and the link and "there" both land in §4.4 at line 362.
+- **07 line 345:** "weaker only in scope" holds in the home's sense of scope.
+- **07 line 811:** the question matches the shape in line 382, and the "[AI reading, new]" label is kept. "Still wanting the argument" and "removes its bearing on courses" both match line 382.
+- **08 line 517:** matches line 387 and the home's reading of each witness.
+- **08 line 551:** apart from low 2, matches the first paragraph of the home.
+
+**What I read:**
+- In `/Users/ren/tmp/cw/land/theories/becoming/chapters/07-SIGNIFICANCE.md`: lines 233, 345, 362–364, 382 from "It does not show" to its end, 387 and 809–812. The 26 lines from the anchor at 362 are identical to `/Users/ren/tmp/cw/kit/home-07.md`.
+- In `/Users/ren/tmp/cw/land/theories/becoming/chapters/08-METHOD.md`: lines 517 and 551.
+
+**What I did not read or run:**
+- I ran no build or gate.
+- I did not open the dossiers. I only searched for which files carry the two sentences, so "word for word" rests on your wording and the live lines, not on comparing them with the quotes.
+- The rest of 07 and 08 was not read for this check.
+
+### What was done
+
+Both lows taken as given.

@@ -133,4 +133,4 @@ Aliases: `what would give C`, `what would give C's order on a listing`, `什么�
 
 </details>
 
-Documentary review UTC: `2026-11-06T13:40:22+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-06T14:04:13+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
