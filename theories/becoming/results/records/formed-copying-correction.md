@@ -99,6 +99,7 @@ Materials and connections retained from one copying history form the editing rel
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/copying-instances-checks/20261020T161910.956874Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/copying-instances-checks/20261031T131950.855717Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `CopyingCorrection.formed_route_edits_actual_product`, `Becoming.Copying.inspect_le_iff`, `Becoming.CopyingInstances.inspect_le_iff_instance`, `Becoming.Courses.inspection_le_iff`, `Becoming.Courses.inspection_course_le`
 

@@ -657,20 +657,20 @@ others. `Tie`: MA4's critical mass. -/
 
 namespace Window
 
-open DrawnShaping.CriticalMass (one_pos even)
+open DrawnShaping.CriticalMass (even)
 
 /-- The course in which the others read the loss from step `N`. -/
 abbrev readFrom (N t : Nat) : (CarrierCounts × Nat) × CarrierCounts :=
-  lossCourse 1 0 3 5 2 0 N one_pos (fun _ => true) even t
+  lossCourse 1 0 3 5 2 0 N Nat.one_pos (fun _ => true) even t
 
 /-- **Read in time.** Read from step 2, the course is locked the other way at every step from step
 4: the late reading favours the others at the shares of steps 2 and 3, 550 to 580 and 42260 to
 42680. -/
 theorem in_time (k : Nat) :
-    Locked (reverse CarrierCounts.order) CarrierCounts.disfavours (DrawnShaping.drawnRead 1 0 3 5 0 one_pos)
+    Locked (reverse CarrierCounts.order) CarrierCounts.disfavours (DrawnShaping.drawnRead 1 0 3 5 0 Nat.one_pos)
       ((readFrom 2 (2 + 1 + (1 + k))).1.1, (readFrom 2 (2 + 1 + (1 + k))).2) :=
   (turned_iff (fB := Beyond.lossStep) (a := 1) (p := 0) (c := 3) (hi := 5) (lo := 2) (lo' := 0) (N := 2)
-      (pos := one_pos) (reads := fun _ => true) (s := ((even, 0), DrawnShaping.drawn 1 0 3 5 2 one_pos even))
+      (pos := Nat.one_pos) (reads := fun _ => true) (s := ((even, 0), DrawnShaping.drawn 1 0 3 5 2 Nat.one_pos even))
       (r := 2) Thinned.lossStep_accrues (Nat.zero_le 5) rfl rfl
       (show 2 ≤ 2 from Nat.le_refl 2) (show 550 ≤ 580 by decide)).mpr
     (show 42260 ≤ 42680 by decide) k
@@ -679,14 +679,14 @@ theorem in_time (k : Nat) :
 step 3 of MA4's course (42260 to 42680) and the shapers strictly at that of step 4 (28225784 to
 27231056), and no other step does both. -/
 theorem between :
-    (¬ CarrierCounts.favours (DrawnShaping.drawn 1 0 3 5 0 one_pos
-        (DrawnShaping.drawnCourse 1 0 3 5 2 one_pos (fun _ => true) even 3).1) ∧
-      ¬ CarrierCounts.disfavours (DrawnShaping.drawn 1 0 3 5 0 one_pos
-        (DrawnShaping.drawnCourse 1 0 3 5 2 one_pos (fun _ => true) even (3 + 1)).1)) ∧
-    ∀ M, (¬ CarrierCounts.favours (DrawnShaping.drawn 1 0 3 5 0 one_pos
-        (DrawnShaping.drawnCourse 1 0 3 5 2 one_pos (fun _ => true) even M).1) ∧
-      ¬ CarrierCounts.disfavours (DrawnShaping.drawn 1 0 3 5 0 one_pos
-        (DrawnShaping.drawnCourse 1 0 3 5 2 one_pos (fun _ => true) even (M + 1)).1)) → M = 3 :=
+    (¬ CarrierCounts.favours (DrawnShaping.drawn 1 0 3 5 0 Nat.one_pos
+        (DrawnShaping.drawnCourse 1 0 3 5 2 Nat.one_pos (fun _ => true) even 3).1) ∧
+      ¬ CarrierCounts.disfavours (DrawnShaping.drawn 1 0 3 5 0 Nat.one_pos
+        (DrawnShaping.drawnCourse 1 0 3 5 2 Nat.one_pos (fun _ => true) even (3 + 1)).1)) ∧
+    ∀ M, (¬ CarrierCounts.favours (DrawnShaping.drawn 1 0 3 5 0 Nat.one_pos
+        (DrawnShaping.drawnCourse 1 0 3 5 2 Nat.one_pos (fun _ => true) even M).1) ∧
+      ¬ CarrierCounts.disfavours (DrawnShaping.drawn 1 0 3 5 0 Nat.one_pos
+        (DrawnShaping.drawnCourse 1 0 3 5 2 Nat.one_pos (fun _ => true) even (M + 1)).1)) → M = 3 :=
   ⟨⟨show ¬ 42680 ≤ 42260 by decide, show ¬ 28225784 ≤ 27231056 by decide⟩,
    fun _ atM => at_most_one_between (show 2 ≤ 5 by decide) atM
      ⟨show ¬ 42680 ≤ 42260 by decide, show ¬ 28225784 ≤ 27231056 by decide⟩⟩
@@ -697,23 +697,23 @@ step 4 favours them, the course is not locked the other way from step 5 on, the 
 favouring the shapers at the share of step 4; and from step 6 it is locked in the shapers' favour for
 good. -/
 theorem too_late :
-    CarrierCounts.disfavours (DrawnShaping.drawn 1 0 3 5 0 one_pos (readFrom 3 3).1.1) ∧
+    CarrierCounts.disfavours (DrawnShaping.drawn 1 0 3 5 0 Nat.one_pos (readFrom 3 3).1.1) ∧
       CarrierCounts.disfavours (readFrom 3 4).2 ∧
       (¬ ∀ k, Locked (reverse CarrierCounts.order) CarrierCounts.disfavours
-          (DrawnShaping.drawnRead 1 0 3 5 0 one_pos)
+          (DrawnShaping.drawnRead 1 0 3 5 0 Nat.one_pos)
           ((readFrom 3 (3 + 1 + (1 + k))).1.1, (readFrom 3 (3 + 1 + (1 + k))).2)) ∧
-      ∀ k, Locked CarrierCounts.order CarrierCounts.favours (DrawnShaping.drawnRead 1 0 3 5 0 one_pos)
+      ∀ k, Locked CarrierCounts.order CarrierCounts.favours (DrawnShaping.drawnRead 1 0 3 5 0 Nat.one_pos)
         ((readFrom 3 (5 + (1 + k))).1.1, (readFrom 3 (5 + (1 + k))).2) :=
   ⟨show 42260 ≤ 42680 by decide, show 42260 ≤ 42680 by decide,
    fun turned => absurd
      ((turned_iff (fB := Beyond.lossStep) (a := 1) (p := 0) (c := 3) (hi := 5) (lo := 2) (lo' := 0) (N := 3)
-        (pos := one_pos) (reads := fun _ => true) (s := ((even, 0), DrawnShaping.drawn 1 0 3 5 2 one_pos even))
+        (pos := Nat.one_pos) (reads := fun _ => true) (s := ((even, 0), DrawnShaping.drawn 1 0 3 5 2 Nat.one_pos even))
         (r := 3) Thinned.lossStep_accrues (Nat.zero_le 5) rfl rfl
         (show 3 ≤ 3 from Nat.le_refl 3) (show 42260 ≤ 42680 by decide)).mp turned)
      (show ¬ 28225784 ≤ 27231056 by decide),
    fun k => ((kept_iff (fB := Beyond.lossStep) (a := 1) (p := 0) (c := 3) (hi := 5) (lo := 2) (lo' := 0)
-      (N := 3) (pos := one_pos) (reads := fun _ => true)
-      (s := ((even, 0), DrawnShaping.drawn 1 0 3 5 2 one_pos even)) (r := 5) Thinned.lossStep_accrues
+      (N := 3) (pos := Nat.one_pos) (reads := fun _ => true)
+      (s := ((even, 0), DrawnShaping.drawn 1 0 3 5 2 Nat.one_pos even)) (r := 5) Thinned.lossStep_accrues
       (Nat.zero_le 5) rfl (show 3 ≤ 5 by decide) (show 27231056 ≤ 28225784 by decide)).mpr
       (show 543075315120 + 323193446400 ≤ 905125525200 + 0 by decide)) k⟩
 
@@ -721,20 +721,20 @@ theorem too_late :
 so the others reading the loss from step `4 + d` with any `lo' ≤ 5` leave the course locked in the
 shapers' favour at every step from `4 + d + 1`. -/
 theorem late_kept (lo' : Nat) (readers : lo' ≤ 5) (d k : Nat) :
-    Locked CarrierCounts.order CarrierCounts.favours (DrawnShaping.drawnRead 1 0 3 5 lo' one_pos)
-      ((lossCourse 1 0 3 5 2 lo' (4 + d) one_pos (fun _ => true) even (4 + d + (1 + k))).1.1,
-        (lossCourse 1 0 3 5 2 lo' (4 + d) one_pos (fun _ => true) even (4 + d + (1 + k))).2) :=
-  kept_past_least (a := 1) (p := 0) (c := 3) (hi := 5) (lo := 2) (lo' := lo') (pos := one_pos)
+    Locked CarrierCounts.order CarrierCounts.favours (DrawnShaping.drawnRead 1 0 3 5 lo' Nat.one_pos)
+      ((lossCourse 1 0 3 5 2 lo' (4 + d) Nat.one_pos (fun _ => true) even (4 + d + (1 + k))).1.1,
+        (lossCourse 1 0 3 5 2 lo' (4 + d) Nat.one_pos (fun _ => true) even (4 + d + (1 + k))).2) :=
+  kept_past_least (a := 1) (p := 0) (c := 3) (hi := 5) (lo := 2) (lo' := lo') (pos := Nat.one_pos)
     (reads := fun _ => true) (x := even) (s := 4) (show 2 ≤ 5 by decide) readers
     (show 27231056 ≤ 28225784 by decide) d rfl k
 
 /-- **The deadline, in the witness.** The rule read at the start is 9 to 8, so the deadline is
 `8 * 3 * 1 = 24`, well after step 4, from which the window is closed. -/
 theorem by_deadline (lo' : Nat) (readers : lo' ≤ 5) (d k : Nat) :
-    Locked CarrierCounts.order CarrierCounts.favours (DrawnShaping.drawnRead 1 0 3 5 lo' one_pos)
-      ((lossCourse 1 0 3 5 2 lo' (24 + d) one_pos (fun _ => true) even (24 + d + (1 + k))).1.1,
-        (lossCourse 1 0 3 5 2 lo' (24 + d) one_pos (fun _ => true) even (24 + d + (1 + k))).2) :=
-  deadline (a := 1) (p := 0) (c := 3) (hi := 5) (lo := 2) (lo' := lo') (pos := one_pos)
+    Locked CarrierCounts.order CarrierCounts.favours (DrawnShaping.drawnRead 1 0 3 5 lo' Nat.one_pos)
+      ((lossCourse 1 0 3 5 2 lo' (24 + d) Nat.one_pos (fun _ => true) even (24 + d + (1 + k))).1.1,
+        (lossCourse 1 0 3 5 2 lo' (24 + d) Nat.one_pos (fun _ => true) even (24 + d + (1 + k))).2) :=
+  deadline (a := 1) (p := 0) (c := 3) (hi := 5) (lo := 2) (lo' := lo') (pos := Nat.one_pos)
     (reads := fun _ => true) (x := even) (show 2 ≤ 5 by decide) readers
     (show 0 < 1 by decide) (show 8 < 9 by decide) (show 24 ≤ 24 + d from Nat.le_add_right 24 d) rfl k
 
@@ -745,23 +745,23 @@ def twoToTwo : CarrierCounts := ⟨2, 2, Nat.zero_lt_succ 1⟩
 reading favours the others at the share of step 3 (1352320 to 1365760), and every reading of this
 form with `lo' ≤ 5` from step 4 on keeps the lock; yet the deadline is 96, four times 24. -/
 theorem scaled :
-    (DrawnShaping.drawn 1 0 3 5 2 one_pos twoToTwo).other * 3 * twoToTwo.other = 96 ∧
-      ¬ CarrierCounts.favours (DrawnShaping.drawn 1 0 3 5 0 one_pos
-        (DrawnShaping.drawnCourse 1 0 3 5 2 one_pos (fun _ => true) twoToTwo 3).1) ∧
+    (DrawnShaping.drawn 1 0 3 5 2 Nat.one_pos twoToTwo).other * 3 * twoToTwo.other = 96 ∧
+      ¬ CarrierCounts.favours (DrawnShaping.drawn 1 0 3 5 0 Nat.one_pos
+        (DrawnShaping.drawnCourse 1 0 3 5 2 Nat.one_pos (fun _ => true) twoToTwo 3).1) ∧
       ∀ (lo' : Nat), lo' ≤ 5 → ∀ d k, Locked CarrierCounts.order CarrierCounts.favours
-        (DrawnShaping.drawnRead 1 0 3 5 lo' one_pos)
-        ((lossCourse 1 0 3 5 2 lo' (4 + d) one_pos (fun _ => true) twoToTwo (4 + d + (1 + k))).1.1,
-          (lossCourse 1 0 3 5 2 lo' (4 + d) one_pos (fun _ => true) twoToTwo (4 + d + (1 + k))).2) :=
+        (DrawnShaping.drawnRead 1 0 3 5 lo' Nat.one_pos)
+        ((lossCourse 1 0 3 5 2 lo' (4 + d) Nat.one_pos (fun _ => true) twoToTwo (4 + d + (1 + k))).1.1,
+          (lossCourse 1 0 3 5 2 lo' (4 + d) Nat.one_pos (fun _ => true) twoToTwo (4 + d + (1 + k))).2) :=
   ⟨rfl, show ¬ 1365760 ≤ 1352320 by decide,
    fun lo' readers d k => kept_past_least (a := 1) (p := 0) (c := 3) (hi := 5) (lo := 2) (lo' := lo')
-      (pos := one_pos) (reads := fun _ => true) (x := twoToTwo) (s := 4) (show 2 ≤ 5 by decide) readers
+      (pos := Nat.one_pos) (reads := fun _ => true) (x := twoToTwo) (s := 4) (show 2 ≤ 5 by decide) readers
       (show 6971150336 ≤ 7225800704 by decide) d rfl k⟩
 
 end Window
 
 namespace Between
 
-open DrawnShaping.CriticalMass (one_pos oneToThree)
+open DrawnShaping.CriticalMass (oneToThree)
 
 /-- **Read from the step between, the course can be turned.** `a = 1`, nothing shared, a cost of
 one, three read as coming back where a shaper reads, two where another does and nothing once the
@@ -771,19 +771,19 @@ strictly at the start (7 to 8) and the shapers strictly at MA4's share of step 1
 from step 0 the course is locked the other way at every step from step 4, the late reading favouring
 the others at its shares of steps 2 and 3 (556 to 566, 41872 to 42248). -/
 theorem turned :
-    CarrierCounts.favours (DrawnShaping.drawn 1 0 1 3 2 one_pos oneToThree) ∧
-      ¬ CarrierCounts.favours (DrawnShaping.drawn 1 0 1 3 0 one_pos
-        (DrawnShaping.drawnCourse 1 0 1 3 2 one_pos (fun _ => true) oneToThree 0).1) ∧
-      ¬ CarrierCounts.disfavours (DrawnShaping.drawn 1 0 1 3 0 one_pos
-        (DrawnShaping.drawnCourse 1 0 1 3 2 one_pos (fun _ => true) oneToThree 1).1) ∧
+    CarrierCounts.favours (DrawnShaping.drawn 1 0 1 3 2 Nat.one_pos oneToThree) ∧
+      ¬ CarrierCounts.favours (DrawnShaping.drawn 1 0 1 3 0 Nat.one_pos
+        (DrawnShaping.drawnCourse 1 0 1 3 2 Nat.one_pos (fun _ => true) oneToThree 0).1) ∧
+      ¬ CarrierCounts.disfavours (DrawnShaping.drawn 1 0 1 3 0 Nat.one_pos
+        (DrawnShaping.drawnCourse 1 0 1 3 2 Nat.one_pos (fun _ => true) oneToThree 1).1) ∧
       ∀ k, Locked (reverse CarrierCounts.order) CarrierCounts.disfavours
-        (DrawnShaping.drawnRead 1 0 1 3 0 one_pos)
-        ((lossCourse 1 0 1 3 2 0 0 one_pos (fun _ => true) oneToThree (2 + 1 + (1 + k))).1.1,
-          (lossCourse 1 0 1 3 2 0 0 one_pos (fun _ => true) oneToThree (2 + 1 + (1 + k))).2) :=
+        (DrawnShaping.drawnRead 1 0 1 3 0 Nat.one_pos)
+        ((lossCourse 1 0 1 3 2 0 0 Nat.one_pos (fun _ => true) oneToThree (2 + 1 + (1 + k))).1.1,
+          (lossCourse 1 0 1 3 2 0 0 Nat.one_pos (fun _ => true) oneToThree (2 + 1 + (1 + k))).2) :=
   ⟨show 8 ≤ 13 by decide, show ¬ 8 ≤ 7 by decide, show ¬ 76 ≤ 74 by decide,
    (turned_iff (fB := Beyond.lossStep) (a := 1) (p := 0) (c := 1) (hi := 3) (lo := 2) (lo' := 0) (N := 0)
-      (pos := one_pos) (reads := fun _ => true)
-      (s := ((oneToThree, 0), DrawnShaping.drawn 1 0 1 3 2 one_pos oneToThree))
+      (pos := Nat.one_pos) (reads := fun _ => true)
+      (s := ((oneToThree, 0), DrawnShaping.drawn 1 0 1 3 2 Nat.one_pos oneToThree))
       (r := 2) Thinned.lossStep_accrues (Nat.zero_le 3) rfl rfl
       (Nat.zero_le _) (show 556 ≤ 566 by decide)).mpr (show 41872 ≤ 42248 by decide)⟩
 
@@ -791,7 +791,7 @@ end Between
 
 namespace Tie
 
-open DrawnShaping.CriticalMass (one_pos oneToTwo)
+open DrawnShaping.CriticalMass (oneToTwo)
 
 /-- **At a tie a reading both keeps and turns.** At MA4's critical mass (`a = 1`, nothing shared, a
 cost of one, three read as coming back where a shaper reads and nothing where another does, before
@@ -800,20 +800,20 @@ the late reading is 6 to 6 at the start and 36 to 36 at the share of step 1, and
 step 0 is locked in the shapers' favour at every step from step 1 and the other way at every step
 from step 2. -/
 theorem both :
-    CarrierCounts.favours (DrawnShaping.drawn 1 0 1 3 0 one_pos
-        (DrawnShaping.drawnCourse 1 0 1 3 0 one_pos (fun _ => true) oneToTwo 0).1) ∧
-      (∀ k, Locked CarrierCounts.order CarrierCounts.favours (DrawnShaping.drawnRead 1 0 1 3 0 one_pos)
-        ((lossCourse 1 0 1 3 0 0 0 one_pos (fun _ => true) oneToTwo (0 + (1 + k))).1.1,
-          (lossCourse 1 0 1 3 0 0 0 one_pos (fun _ => true) oneToTwo (0 + (1 + k))).2)) ∧
+    CarrierCounts.favours (DrawnShaping.drawn 1 0 1 3 0 Nat.one_pos
+        (DrawnShaping.drawnCourse 1 0 1 3 0 Nat.one_pos (fun _ => true) oneToTwo 0).1) ∧
+      (∀ k, Locked CarrierCounts.order CarrierCounts.favours (DrawnShaping.drawnRead 1 0 1 3 0 Nat.one_pos)
+        ((lossCourse 1 0 1 3 0 0 0 Nat.one_pos (fun _ => true) oneToTwo (0 + (1 + k))).1.1,
+          (lossCourse 1 0 1 3 0 0 0 Nat.one_pos (fun _ => true) oneToTwo (0 + (1 + k))).2)) ∧
       (∀ k, Locked (reverse CarrierCounts.order) CarrierCounts.disfavours
-        (DrawnShaping.drawnRead 1 0 1 3 0 one_pos)
-        ((lossCourse 1 0 1 3 0 0 0 one_pos (fun _ => true) oneToTwo (0 + 1 + (1 + k))).1.1,
-          (lossCourse 1 0 1 3 0 0 0 one_pos (fun _ => true) oneToTwo (0 + 1 + (1 + k))).2)) :=
+        (DrawnShaping.drawnRead 1 0 1 3 0 Nat.one_pos)
+        ((lossCourse 1 0 1 3 0 0 0 Nat.one_pos (fun _ => true) oneToTwo (0 + 1 + (1 + k))).1.1,
+          (lossCourse 1 0 1 3 0 0 0 Nat.one_pos (fun _ => true) oneToTwo (0 + 1 + (1 + k))).2)) :=
   ⟨show 6 ≤ 6 by decide,
-   (kept_early_iff (a := 1) (p := 0) (c := 1) (hi := 3) (lo := 0) (lo' := 0) (N := 0) (pos := one_pos)
+   (kept_early_iff (a := 1) (p := 0) (c := 1) (hi := 3) (lo := 0) (lo' := 0) (N := 0) (pos := Nat.one_pos)
       (reads := fun _ => true) (x := oneToTwo) (Nat.zero_le 3) (Nat.zero_le 3) (show 6 ≤ 6 by decide) rfl).mpr
      (show 6 ≤ 6 by decide),
-   (turned_early_iff (a := 1) (p := 0) (c := 1) (hi := 3) (lo := 0) (lo' := 0) (N := 0) (pos := one_pos)
+   (turned_early_iff (a := 1) (p := 0) (c := 1) (hi := 3) (lo := 0) (lo' := 0) (N := 0) (pos := Nat.one_pos)
       (reads := fun _ => true) (x := oneToTwo) (Nat.zero_le 3) (Nat.zero_le 3) (show 6 ≤ 6 by decide) rfl
       rfl).mpr
      (show 36 ≤ 36 by decide)⟩

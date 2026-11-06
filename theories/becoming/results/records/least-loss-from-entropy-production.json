@@ -300,7 +300,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Entropy.lean",
       "role": "statement",
-      "sha256": "7f904219b72a7fed350869a9001fac70f96542dcf164b8536d85dba474fe1a1f",
+      "sha256": "9810b77792507396e7b036666e2bd0edbefb3502a25229687ab73d5c025e95da",
       "declarations": [
         "Becoming.Flow.residue",
         "Becoming.Flow.Gainless",
@@ -312,7 +312,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dissipation.lean",
       "role": "statement",
-      "sha256": "35c020f18f9cfd067faebc7711ecbe6fdfeb0bae019a356308dc0c59464cf381",
+      "sha256": "773bd26350a6a0c4d8712e9f56c9b884143a53cd560b00ef877d3e494270ad4f",
       "declarations": [
         "Becoming.Flow.Dissipative",
         "Becoming.Flow.ClosedAt",
@@ -322,7 +322,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Resolution.lean",
       "role": "statement",
-      "sha256": "61a9fbb7c3624f887afd09df8c43b59a5ec08209811b3e1b9f20e7efa1e20fbb",
+      "sha256": "683fc3406a4803da63e87011909d012a301a48918d877dca3ae685cc1bee3fde",
       "declarations": [
         "Becoming.Flow.DissipativeBy",
         "Becoming.Flow.DissipatesBy.of_each"

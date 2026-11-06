@@ -81,7 +81,7 @@
         "Becoming.Blanket.ThresholdDrain.sensory_is_admission",
         "Becoming.Blanket.ThresholdDrain.external_course",
         "Becoming.Blanket.ThresholdDrain.sensory_succ",
-        "Becoming.Blanket.ThresholdDrain.bool_eq_of_iff",
+        "Becoming.bool_eq_of_iff",
         "Becoming.Blanket.ThresholdDrain.blanket_iff_through"
       ]
     },
@@ -249,7 +249,6 @@
         "Becoming.Blanket.ThresholdDrain.any_model",
         "Becoming.Blanket.ThresholdDrain.blanket_alike",
         "Becoming.Blanket.ThresholdDrain.blanket_iff_through",
-        "Becoming.Blanket.ThresholdDrain.bool_eq_of_iff",
         "Becoming.Blanket.ThresholdDrain.ended",
         "Becoming.Blanket.ThresholdDrain.ended_rests",
         "Becoming.Blanket.ThresholdDrain.external_course",
@@ -268,7 +267,7 @@
         "Becoming.Blanket.ThresholdDrain.web",
         "Becoming.Blanket.congr3"
       ],
-      "sha256": "517d21ed20f59fce954e4f007eee54a9342bb1908a487ce9bd1b2d307d390677"
+      "sha256": "772cdae63f20f6ec5c42f84f090ebc4978083d4e00159e6aa9421d7b8a335458"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean",
@@ -283,7 +282,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Learning.lean",
       "role": "proof",
-      "sha256": "3f65e832ea3a9fb9359d3a6d77a45ac039ea86bfb93ac5207fbc857fac1adf74"
+      "sha256": "9a13040de7a80fe16f30c471a6e03fea5db9a60852b33eda881293f6e8d0029b"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T164943.729811Z/verification.json",
@@ -309,13 +308,34 @@
       "path": "theories/becoming/chapters/03-KNOWING.md",
       "role": "statement",
       "sha256": "4d31fc275e668e5be333efa04aec448a02d0dba2affb35e395ef3f66fb298852"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "role": "proof",
+      "sha256": "cb2c9c8ba8e16916b41a36e1c392f3cd4840a7436b2817c12796c866908020a7",
+      "declarations": [
+        "Becoming.bool_eq_of_iff"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "role": "receipt",
+      "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Blanket.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T164943.729811Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Blanket",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Prelude",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -336,6 +356,10 @@
     {
       "en": "1 November 2026, board item UE28 (study section 491): a formation's own record as the internal part, not shown, narrowed to its records other than its level and its level across a family of runs, its level along one run being the internal part of a law determined part by part exactly where its next level and act agree wherever its level, what couples in and its act agree (a-formations-couplings-as-its-blanket); next step brought to it; no statement, law or declaration changed.",
       "zh": "2026年11月1日，工作板条目 UE28（研究第 491 节）：形成自身之记录为内部部分（未示）收窄为其层级以外之记录及其层级于一族运行，其层级沿一运行为某逐部分确定之律之内部部分，恰当其层级、耦合入者与作为相合之处，其次层级与次作为皆相合（a-formations-couplings-as-its-blanket）；下一步随之；无一陈述、律或声明改变。"
+    },
+    {
+      "en": "6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.",
+      "zh": "2026年11月6日，工作板条目 LM：此记录所列辅助引理现只陈述一次，在 Prelude、Flow、Change 或 Laws，或即 Lean 自有者而从列表除去；改其名，诸律不变。"
     }
   ]
 }

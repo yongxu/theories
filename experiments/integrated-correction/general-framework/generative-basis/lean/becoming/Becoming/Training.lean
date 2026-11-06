@@ -740,7 +740,7 @@ theorem trained_alike_beyond_closure {θ θ' : Θ} (na : ∀ e, (law e).Nonantic
 every candidate, a reward adding it at any weight settles exactly where `own` settles. -/
 theorem settles_weighted_iff {own read : Θ → Nat} (same : ∀ θ θ', read θ = read θ') (w : Nat)
     {θ : Θ} : Settles (fun θ' => own θ' + w * read θ') θ ↔ Settles own θ :=
-  ⟨fun settles θ' => Naturals.le_of_add_le_add_right
+  ⟨fun settles θ' => le_of_add_le_add_right _
       (Nat.le_trans (settles θ') (Nat.le_of_eq (congrArg (fun x => own θ + w * x) (same θ θ')))),
    fun settles θ' => Nat.le_trans (Nat.add_le_add_right (settles θ') _)
       (Nat.le_of_eq (congrArg (fun x => own θ + w * x) (same θ' θ)))⟩

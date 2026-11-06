@@ -90,7 +90,7 @@ theorem mem_encode {α : Type u} {β : Type v} {g : β → List α} {a : α} :
       | .inr rest => match (mem_encode (l := l)).mp rest with
         | ⟨c, inside, at_c⟩ => ⟨c, .tail b inside, at_c⟩,
      fun ⟨c, inside, at_c⟩ => show a ∈ g b ++ Segmentation.encode g l from
-      match mem_cons_split inside with
+      match mem_cons_cases inside with
       | .inl same => mem_appended_left (Segmentation.encode g l)
           (Eq.subst (motive := fun d => a ∈ g d) same at_c)
       | .inr inside => mem_joined_right (g b) ((mem_encode (l := l)).mpr ⟨c, inside, at_c⟩)⟩
@@ -103,7 +103,7 @@ theorem listed_through {X : Type u} {Y : Type u'} {R : X → Y → Prop}
   | [] => ⟨[], fun _ => ⟨fun ⟨_, mem, _⟩ => (nomatch mem), fun mem => (nomatch mem)⟩⟩
   | x :: xs => match listed x, listed_through listed xs with
     | ⟨l, here⟩, ⟨L, rest⟩ => ⟨l ++ L, fun y =>
-      ⟨fun ⟨z, mem, related⟩ => match mem_cons_split mem with
+      ⟨fun ⟨z, mem, related⟩ => match mem_cons_cases mem with
         | .inl same => mem_appended_left L
             ((here y).mp (Eq.subst (motive := fun w => R w y) same related))
         | .inr mem => mem_joined_right l ((rest y).mp ⟨z, mem, related⟩),

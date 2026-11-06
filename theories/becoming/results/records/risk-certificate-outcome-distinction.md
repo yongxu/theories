@@ -95,6 +95,7 @@ Inherited assured_route_iff connects counted failures with failed arrival. A pro
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/judging-correspondence-checks/20261020T161948.968917Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/judging-correspondence-checks/20261031T133748.088094Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `Generative.WisdomFallibleJudgment.no_endpoint_only_prior_certificate`, `Becoming.Readout.judges_iff_lumpedOn`, `Becoming.Readout.no_judge_of_merged`, `Becoming.Courses.run_judges_iff`, `Becoming.Courses.no_run_judge_of_merged`
 

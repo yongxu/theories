@@ -476,11 +476,6 @@ theorem weight_zero : ∀ items : List (X × Nat), total items (fun i => 2 ^ (0 
     show 2 ^ (0 - k) + total rest _ = rest.length + 1
     rw [Nat.zero_sub, weight_zero rest, Nat.add_comm]
 
-theorem two_pow_pos : ∀ n : Nat, 0 < 2 ^ n
-  | 0 => Nat.zero_lt_one
-  | n + 1 => Nat.lt_of_lt_of_le (two_pow_pos n) (Nat.le_trans (Nat.le_of_eq (Nat.mul_one _).symm)
-      (Nat.mul_le_mul_left _ (Nat.le_succ 1)))
-
 theorem two_pow_le {k' k : Nat} (le : k' ≤ k) : 2 ^ k' ≤ 2 ^ k := by
   induction le with
   | refl => exact Nat.le_refl _
@@ -543,19 +538,13 @@ theorem first_of_short : ∀ {L : List (Code X)}, L.length < 2 → ∀ {t : Code
 /-- The code for items at depth budget `D`. -/
 def ofItems (items : List (X × Nat)) (D : Nat) : Code X := first (build items D)
 
-/-- As `Nat.lt_of_mul_lt_mul_right`, with an empty axiom report. -/
-theorem lt_of_mul_lt_mul {a b c : Nat} (lt : a * c < b * c) : a < b :=
-  match Nat.lt_or_ge a b with
-  | .inl less => less
-  | .inr ge => absurd (Nat.lt_of_lt_of_le lt (Nat.mul_le_mul_right c ge)) (Nat.lt_irrefl _)
-
 /-- **Kraft's inequality as a reading schedule.** For items of depth at most `D` whose weights
 `2 ^ (D - k)` total at most `2 ^ D` (in rates, `∑ 2 ^ (-k) ≤ 1`), one code reads each item's
 condition within every `2 ^ k` steps, its depth's window. -/
 theorem kraft_reads {items : List (X × Nat)} {D : Nat} (deep : ∀ i, i ∈ items → i.2 ≤ D)
     (kraft : total items (fun i => 2 ^ (D - i.2)) ≤ 2 ^ D) :
     ∀ x k, (x, k) ∈ items → Within (ofItems items D).reader (some x) (2 ^ k) := fun _ _ mem =>
-  have short : (build items D).length < 2 := lt_of_mul_lt_mul (c := 2 ^ D)
+  have short : (build items D).length < 2 := Naturals.lt_of_mul_lt_mul_right (v := 2 ^ D)
     (Nat.lt_of_lt_of_le (build_length D items)
       (Nat.le_trans (Nat.add_le_add_right kraft _) (Nat.le_of_eq (Nat.two_mul _).symm)))
   match build_holds D mem (deep _ mem) with
@@ -584,16 +573,11 @@ theorem climb_spec (a : Nat) : ∀ f k, 2 ^ k ≤ a → a < 2 ^ (k + f + 1) →
     · rw [if_neg up]
       exact ⟨low, Nat.lt_of_not_le up⟩
 
-theorem lt_two_pow : ∀ n : Nat, n < 2 ^ n
-  | 0 => Nat.zero_lt_one
-  | n + 1 => Nat.lt_of_lt_of_le (Nat.add_lt_add_of_lt_of_le (lt_two_pow n) (two_pow_pos n))
-      (Nat.le_of_eq (Nat.mul_two _).symm)
-
 theorem lg_spec {a : Nat} (pos : 0 < a) : 2 ^ lg a ≤ a ∧ a < 2 ^ (lg a + 1) :=
   climb_spec a a 0 pos (by
     rw [Nat.zero_add]
-    exact Nat.lt_trans (lt_two_pow a) (Nat.lt_of_lt_of_le
-      (Nat.lt_add_of_pos_right (two_pow_pos a)) (Nat.le_of_eq (Nat.mul_two _).symm)))
+    exact Nat.lt_trans (Naturals.lt_two_pow a) (Nat.lt_of_lt_of_le
+      (Nat.lt_add_of_pos_right (Naturals.two_pow_pos a)) (Nat.le_of_eq (Nat.mul_two _).symm)))
 
 /-- `L`, kept at most `D`. -/
 def cap (D L : Nat) : Nat := if L ≤ D then L else D
@@ -615,13 +599,13 @@ theorem weight_le {a q D : Nat} (pos : 0 < a) (weight : 2 ^ (D + 1) ≤ q * a) :
   by_cases h : lg a ≤ D
   · rw [cap, if_pos h]
     apply Nat.le_of_lt
-    apply lt_of_mul_lt_mul (c := a)
+    apply Naturals.lt_of_mul_lt_mul_right (v := a)
     refine Nat.lt_of_lt_of_le ?_ weight
-    refine Nat.lt_of_lt_of_le (mul_lt_mul_left' (lg_spec pos).2 (two_pow_pos _)) (Nat.le_of_eq ?_)
+    refine Nat.lt_of_lt_of_le (mul_lt_mul_left' (lg_spec pos).2 (Naturals.two_pow_pos _)) (Nat.le_of_eq ?_)
     rw [← Naturals.pow_add, ← Nat.add_assoc, Naturals.sub_add_cancel h]
   · rw [cap, if_neg h, Nat.sub_self]
     match q, weight with
-    | 0, w => exact absurd (Nat.lt_of_lt_of_le (two_pow_pos _) (Nat.le_trans w
+    | 0, w => exact absurd (Nat.lt_of_lt_of_le (Naturals.two_pow_pos _) (Nat.le_trans w
         (Nat.le_of_eq (Nat.zero_mul a)))) (Nat.lt_irrefl 0)
     | _ + 1, _ => exact Nat.succ_le_succ (Nat.zero_le _)
 

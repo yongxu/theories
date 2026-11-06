@@ -1,0 +1,117 @@
+@Becoming.«能所相待» : ∀ {α : Type u_1} (R : Becoming.«际» α), (∃ x, Becoming.«能» R x) ↔ ∃ y, Becoming.«所» R y
+@Becoming.«因果互即» : ∀ {α : Type u_1} (R : Becoming.«际» α) (x y : α),
+  (Becoming.«所» R y ↔ Becoming.«能» (Becoming.«逆» R) y) ∧ (R x y ↔ Becoming.«逆» R y x)
+Becoming.«二际可偏举» : ∃ β B H, (∃ x, Becoming.«能» B x) ∧ ¬∃ x, Becoming.«能» H x
+@Becoming.«同根则不可偏举» : ∀ {α : Type u_1} {B H : Becoming.«际» α},
+  Becoming.«谓» H (Becoming.«逆» B) → (∃ x, Becoming.«能» B x) → ∃ y, Becoming.«能» H y
+@Becoming.«前后相随» : ∀ {α : Type u_1} (R E : Becoming.«际» α) (x : α),
+  Becoming.«有后» R E x ↔ Becoming.«有前» (Becoming.«逆» R) (Becoming.«逆» E) x
+@Becoming.«互之对称» : ∀ {α : Type u_1} (R : Becoming.«际» α), Becoming.«则» (Becoming.«互» R) (Becoming.«逆» (Becoming.«互» R))
+@Becoming.«生亡对偶» : ∀ {α : Type u_1} (R E : Becoming.«际» α) (y : α),
+  Becoming.«生» R E y ↔ Becoming.«亡» (Becoming.«逆» R) (Becoming.«逆» E) y
+Becoming.«有生不必有亡» : ∃ β R, (∃ x, Becoming.«生» R Becoming.«一» x) ∧ ∀ (x : β), ¬Becoming.«亡» R Becoming.«一» x
+@Becoming.«三法相因待» : ∀ {α : Type u_1} (A B : Becoming.«际» α),
+  ((∃ x, Becoming.«作者» A B x) ↔ ∃ g, Becoming.«作业» A B g) ∧ ((∃ g, Becoming.«作业» A B g) ↔ ∃ p, Becoming.«处所» A B p)
+@Becoming.«无果则缘非缘皆无» : ∀ {α : Type u_1} (R : Becoming.«际» α),
+  (¬∃ y, Becoming.«所» R y) → (¬∃ x, Becoming.«能» R x) ∧ ¬∃ x y, Becoming.«非缘» R x y
+@Becoming.«无果则皆非能» : ∀ {α : Type u_1} (R : Becoming.«际» α), (¬∃ y, Becoming.«所» R y) → ∀ (x : α), ¬Becoming.«能» R x
+@Becoming.«及之两端» : ∀ {α : Type u_1} {R : Becoming.«际» α} {x y : α},
+  Becoming.«及» R x y → Becoming.«能» R x ∧ Becoming.«所» R y
+@Becoming.«住因于续» : ∀ {α : Type u_1} {R E : Becoming.«际» α} {x : α},
+  (Becoming.«住» R E x → Becoming.«有前» R E x ∧ Becoming.«有后» R E x) ∧
+    (Becoming.«有前» R E x ∧ Becoming.«亡» R E x → ∃ w, Becoming.«续» R E w x)
+@Becoming.«知相则有其非» : ∀ {α : Type u_1} {P : α → Prop}, Becoming.«有相» P → ∃ y, ¬P y
+@Becoming.«离非无相» : ∀ {α : Type u_1} {P : α → Prop}, (¬∃ y, ¬P y) → ¬Becoming.«有相» P
+@Becoming.«无色则无虚空之相» : ∀ {α : Type u_1} {P : α → Prop}, (¬∃ x, P x) → ¬Becoming.«有相» fun x => ¬P x
+@Becoming.«有相则非亦有相» : ∀ {α : Type u_1} {P : α → Prop}, Becoming.«有相» P → Becoming.«有相» fun x => ¬P x
+@Becoming.«非真则假» : ∀ {b : Bool}, ¬b = true → b = false
+@Becoming.«非假则真» : ∀ {b : Bool}, ¬b = false → b = true
+@Becoming.«二值之相待» : ∀ {α : Type u_1} (f : α → Bool),
+  (Becoming.«有相» fun x => f x = true) ↔ Becoming.«有相» fun x => f x = false
+Becoming.«相待之还当且仅当双非可还» : (∀ (β : Type) (P : β → Prop), (Becoming.«有相» fun x => ¬P x) → Becoming.«有相» P) ↔
+  ∀ (Q : Prop), ¬¬Q → Q
+@Becoming.«遍而无相» : ∀ {α : Type u_1} {P : α → Prop}, (∀ (x : α), P x) → ¬Becoming.«有相» P
+@Becoming.«离方无迷» : ∀ {α : Type u_1} (E : Becoming.«际» α) (x y : α), ¬Becoming.«成坏» E Becoming.«一» x y
+@Becoming.«离觉则皆不觉» : ∀ {α : Type u_1} {A : α → Prop}, (¬∃ x, A x) → ∀ (x : α), ¬A x
+@Becoming.«始觉依不觉» : ∀ {α : Type u_1} {R : Becoming.«际» α} {A : α → Prop} {y : α},
+  Becoming.«始觉» R A y → ∃ x, ¬A x ∧ R x y
+@Becoming.«静之为类» : ∀ {α : Type u_1}, Becoming.«类» Becoming.«静»
+@Becoming.«定性之判» : ∀ {α : Type u_1} {R : Becoming.«际» α} {x : α}, Becoming.«无定性» R x ↔ (¬¬∃ w, R w x) ∧ ¬R x x
+@Becoming.«缘生而不自生则无定性» : ∀ {α : Type u_1} {R : Becoming.«际» α} {x : α}, (∃ w, R w x) → ¬R x x → Becoming.«无定性» R x
+@Becoming.«自缘则常» : ∀ {α : Type u_1} {R : Becoming.«际» α} {x : α},
+  R x x → ∀ {E : Becoming.«际» α}, Becoming.«类» E → Becoming.«住» R E x
+@Becoming.«念念灭当且仅当无自缘» : ∀ {α : Type u_1} (R : Becoming.«际» α),
+  (∀ (x : α), Becoming.«亡» R Becoming.«静» x) ↔ ∀ (x : α), ¬R x x
+@Becoming.«有成坏当且仅当不自缘» : ∀ {α : Type u_1} (R : Becoming.«际» α) (x : α),
+  ((∃ E, Becoming.«类» E ∧ Becoming.«生» R E x) ↔ ¬R x x) ∧ ((∃ E, Becoming.«类» E ∧ Becoming.«亡» R E x) ↔ ¬R x x)
+@Becoming.«无为无别相» : ∀ {α : Type u_1} (R E : Becoming.«际» α) (x : α),
+  ¬(¬Becoming.«生» R E x ∧ ¬Becoming.«住» R E x ∧ ¬Becoming.«亡» R E x)
+Becoming.«从缘生非文法之律» : (∃ β R x, ∀ (w : β), ¬R w x) ∧ ∃ β R x, R x x
+@Becoming.«断则无相续» : ∀ {α : Type u_1} {R E : Becoming.«际» α} {x : α},
+  Becoming.«亡» R E x → ∀ (y : α), ¬Becoming.«相续» R E x y
+@Becoming.«缘先果后当且仅当无环» : ∀ {α : Type u_1} (R : Becoming.«际» α),
+  (∀ (x y : α), R x y → ¬Becoming.«及» R y x) ↔ Becoming.«无环» R
+@Becoming.«相由则俱有» : ∀ {α : Type u_1} {R : Becoming.«际» α} {x y : α},
+  R x y → R y x → Becoming.«俱有» R x y ∧ ¬Becoming.«无环» R
+@Becoming.«俱有为一念» : ∀ {α : Type u_1} (R : Becoming.«际» α),
+  (∀ {x y : α}, Becoming.«俱有» R x y → Becoming.«俱有» R y x) ∧
+    (∀ {x y z : α}, Becoming.«俱有» R x y → Becoming.«俱有» R y z → Becoming.«俱有» R x z) ∧
+      ∀ {x y : α}, Becoming.«俱有» R x y → Becoming.«俱有» R x x
+@Becoming.«自他随位» : ∀ {α : Type u_1} {E : Becoming.«际» α}, Becoming.«类» E → ∀ {x y : α}, ¬E x y → ¬E y x ∧ E y y ∧ E x x
+@Becoming.«他依于自» : ∀ {α : Type u_1} {E : Becoming.«际» α},
+  Becoming.«类» E → ((∃ x y, ¬E x y) → ∃ x, E x x) ∧ ((¬∃ x, E x x) → ¬∃ x y, ¬E x y)
+Becoming.«有自不必有他» : ∃ β E, Becoming.«类» E ∧ (∃ x, E x x) ∧ ¬∃ x y, ¬E x y
+@Becoming.«同异交得» : ∀ {α : Type u_1} {F : Becoming.«际» α} {x y : α}, ¬F x y → Becoming.«成坏» Becoming.«一» F x y
+@Becoming.«至于无共然后止» : ∀ {α : Type u_1},
+  Becoming.«类» Becoming.«一» ∧
+    (∀ (E : Becoming.«际» α), Becoming.«则» E Becoming.«一») ∧
+      ∀ (E : Becoming.«际» α), Becoming.«则» Becoming.«一» E → Becoming.«谓» E Becoming.«一»
+@Becoming.«至于无别然后至» : ∀ {α : Type u_1},
+  (∀ (E : Becoming.«际» α), Becoming.«类» E → Becoming.«则» Becoming.«静» E) ∧
+    ∀ (F : Becoming.«际» α), Becoming.«类» F → Becoming.«则» F Becoming.«静» → Becoming.«谓» F Becoming.«静»
+@Becoming.«状所可别» : ∀ {α : Type u_1} {S P : Becoming.«际» α} {x y : α},
+  S x y ∧ ¬P x y ∨ ¬S x y ∧ P x y → ¬Becoming.«合» S P x y
+@Becoming.«门摄一切» : ∀ {α : Type u_1} {E : Becoming.«际» α}, Becoming.«类» E → ∀ (x : α), E x x ∧ Becoming.«一» x x
+@Becoming.«平等无异» : ∀ {α : Type u_1} (R E : Becoming.«际» α) (x y : α), ¬Becoming.«异» R E Becoming.«一» x y
+Becoming.«薪尽火传» : ∀ (n : Nat), Becoming.«亡» Becoming.«薪火» Becoming.«静» n ∧ Becoming.«不穷» Becoming.«薪火» Becoming.«一» n
+@Becoming.«端与端俱尽» : ∀ {α : Type u_1} {P : Becoming.«际» α} {A B : α},
+  Becoming.«端» P A → Becoming.«端» P B → Becoming.«攖» P A B → Becoming.«遍于» P A B ∧ Becoming.«遍于» P B A
+@Becoming.«尺与端或尽或不尽» : ∀ {α : Type u_1} {P : Becoming.«际» α} {A B : α},
+  Becoming.«端» P A → Becoming.«有厚» P B → Becoming.«攖» P A B → Becoming.«遍于» P A B ∧ ¬Becoming.«遍于» P B A
+Becoming.«尺与尺可相尽» : ∃ β P A B,
+  A ≠ B ∧ Becoming.«有厚» P A ∧ Becoming.«有厚» P B ∧ Becoming.«攖» P A B ∧ Becoming.«遍于» P A B ∧ Becoming.«遍于» P B A
+@Becoming.«相尽则不相外» : ∀ {α : Type u_1} {P : Becoming.«际» α} {A B : α}, Becoming.«相尽» P A B → Becoming.«不相外» P A B
+Becoming.«不相外则相尽当且仅当双非可还» : (∀ (β : Type) (P : Becoming.«际» β) (A B : β), Becoming.«不相外» P A B → Becoming.«相尽» P A B) ↔
+  ∀ (Q : Prop), ¬¬Q → Q
+@Becoming.«是不俱当» : ∀ {β : Type u_1} (P : β → Prop) (x : β), ¬(P x ∧ ¬P x)
+Becoming.«必或不当当且仅当弱排中» : (∀ (β : Type) (P : β → Prop) (x : β), ¬P x ∨ ¬¬P x) ↔ ∀ (Q : Prop), ¬Q ∨ ¬¬Q
+@Becoming.«对称有常则不可诘» : ∀ {α : Type u_1} {R E S : Becoming.«际» α},
+  Becoming.«则» S E →
+    Becoming.«则» S (Becoming.«逆» S) → Becoming.«有常» R S → ∀ (k : Nat) (u u' : α), S u u' → Becoming.«诘» R E k u u'
+@Becoming.«核则不可致诘» : ∀ {α : Type u_1} {R E : Becoming.«际» α} {u u' : α},
+  Becoming.«核» R E u u' → ∀ (k : Nat), Becoming.«诘» R E k u u'
+@Becoming.«诘之对称» : ∀ {α : Type u_1} {R E : Becoming.«际» α},
+  Becoming.«则» E (Becoming.«逆» E) → ∀ (k : Nat) (u u' : α), Becoming.«诘» R E k u u' → Becoming.«诘» R E k u' u
+@Becoming.«诘之降» : ∀ {α : Type u_1} {R E : Becoming.«际» α} (k : Nat) (u u' : α),
+  Becoming.«诘» R E (k + 1) u u' → Becoming.«诘» R E k u u'
+@Becoming.«层在类内» : ∀ {α : Type u_1} {R E : Becoming.«际» α} (k : Nat) (x y : α), Becoming.«层» R E k x y → E x y
+@Becoming.«层即诘» : ∀ {α : Type u_1} {R E : Becoming.«际» α} (k : Nat) (x y : α),
+  Becoming.«层» R E k x y ↔ Becoming.«诘» R E k x y
+@Becoming.«层之对称» : ∀ {α : Type u_1} {R E : Becoming.«际» α},
+  Becoming.«则» E (Becoming.«逆» E) → ∀ (k : Nat) (x y : α), Becoming.«层» R E k x y → Becoming.«层» R E k y x
+@Becoming.«不可致诘而有常则混而为一» : ∀ {α : Type u_1} {R E : Becoming.«际» α},
+  Becoming.«则» E (Becoming.«逆» E) →
+    (Becoming.«有常» R fun u u' => ∀ (k : Nat), Becoming.«诘» R E k u u') →
+      ∀ {u u' : α}, (∀ (k : Nat), Becoming.«诘» R E k u u') → Becoming.«核» R E u u'
+@Becoming.«每层不分而有常则核当且仅当每层不分» : ∀ {α : Type u_1} {R E : Becoming.«际» α},
+  Becoming.«则» E (Becoming.«逆» E) →
+    (Becoming.«有常» R fun u u' => ∀ (k : Nat), Becoming.«层» R E k u u') →
+      ∀ {x y : α}, Becoming.«核» R E x y ↔ ∀ (k : Nat), Becoming.«层» R E k x y
+Becoming.«歧网之自反» : ∀ (k : Nat) (x : Becoming.«歧网»), Becoming.«诘» Becoming.«歧网之步» Becoming.«一» k x x
+Becoming.«链与无尽不可诘» : ∀ (k n i j : Nat),
+  i + k ≤ n → Becoming.«诘» Becoming.«歧网之步» Becoming.«一» k (Becoming.«歧网».«链» n i) (Becoming.«歧网».«无尽» j)
+Becoming.«甲乙不可诘» : ∀ (k : Nat), Becoming.«诘» Becoming.«歧网之步» Becoming.«一» k Becoming.«歧网».«甲» Becoming.«歧网».«乙»
+@Becoming.«无尽与链不同核» : ∀ {S : Becoming.«际» Becoming.«歧网»},
+  Becoming.«有常» Becoming.«歧网之步» S → ∀ (d j n i : Nat), i + d = n → ¬S (Becoming.«歧网».«无尽» j) (Becoming.«歧网».«链» n i)
+Becoming.«甲乙不同核» : ¬Becoming.«核» Becoming.«歧网之步» Becoming.«一» Becoming.«歧网».«甲» Becoming.«歧网».«乙»
+Becoming.«致诘不尽» : ∃ β R u u', (∀ (k : Nat), Becoming.«诘» R Becoming.«一» k u u') ∧ ¬Becoming.«核» R Becoming.«一» u u'

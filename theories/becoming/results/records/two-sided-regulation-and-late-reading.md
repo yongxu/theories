@@ -111,6 +111,7 @@ The map of Chinese sources onto the spine found no law for a level held from bot
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `two-sided regulation`, `regulation that reads late`, `late reading`, `late relay`, `双向调节`, `迟读的调节`, `Becoming.Flow.withinGap_iff_between`, `Becoming.Flow.settles`, `Becoming.Regulation.no_narrower_band`, `Becoming.Regulation.lateReturn_band`, `Becoming.Regulation.relay_threshold`
 

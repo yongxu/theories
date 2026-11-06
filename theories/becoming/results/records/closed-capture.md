@@ -98,6 +98,7 @@ The meta-attractor (theories/meta-attractor): its 2025-08 formalisation separate
 | statement | [OPENING.md](../../OPENING.md) | — |
 | proof | [IdentificationRuns.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/IdentificationRuns.lean) | — |
 | integration | [BECOMING-SIGNIFICANCE-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `closed capture`, `闭合的捕获`, `the loop closed in its readings`, `the metric outlives its refutation`, `the meta-attractor loop`, `元吸引子回路`, `Becoming.ClosedCapture.lock_outlives_loss`, `Becoming.ClosedCapture.reading_absorbed`, `Becoming.ClosedCapture.turned_by_loss`, `Becoming.ClosedCapture.unread_course`, `the part that makes sense alone`, `Becoming.ClosedCapture.identifiesAlike_iff_unread`
 

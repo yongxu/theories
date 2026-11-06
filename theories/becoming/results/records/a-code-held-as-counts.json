@@ -118,8 +118,8 @@
       "en": "Witness, a tie: two agents and two words, the exchange swapping the agents and the renaming the words, each an involution moving everything; opposite counts 2, 1 and 1, 2, related to themselves, each hold a uniquely greatest word, the two words different; one step of adding the speaker's counts gives both 3, 3, one model with no uniquely greatest word.",
       "zh": "见证（平局）：二主体二词，对换交换主体，改名交换诸词，皆为对合且移一切；相反之数 2, 1 与 1, 2 自相关，各有唯一最大词而二词相异；加说者之数一步，二者皆得 3, 3，一模型无唯一最大词。",
       "declarations": [
-        "Becoming.CountedCodes.Witness.swap_involution",
-        "Becoming.CountedCodes.Witness.swap_moves",
+        "Becoming.ListTests.not_not",
+        "Becoming.ListTests.not_ne_self",
         "Becoming.CountedCodes.Witness.opposite",
         "Becoming.CountedCodes.Witness.opposite_symmetric",
         "Becoming.CountedCodes.Witness.added_tie"
@@ -322,8 +322,6 @@
         "Becoming.CountedCodes.Witness.sayFirst",
         "Becoming.CountedCodes.Witness.sayFirst_not_alike",
         "Becoming.CountedCodes.Witness.sayFirst_shared",
-        "Becoming.CountedCodes.Witness.swap_involution",
-        "Becoming.CountedCodes.Witness.swap_moves",
         "Becoming.CountedCodes.Witness.zero",
         "Becoming.CountedCodes.Witness.zero_symmetric",
         "Becoming.CountedCodes.addHeard",
@@ -357,7 +355,7 @@
         "Becoming.CountedCodes.unique_greatest_not_two",
         "Becoming.CountedCodes.unique_greatest_rename"
       ],
-      "sha256": "36de62602659279fea98fdeb975c47675876e1a505b7dc987141f107e654c68c"
+      "sha256": "e46507a25de0d76a3bf29b3f69e5266d2e907203ef92577505895aec4c1509fb"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261030T232750.486801Z/verification.json",
@@ -398,13 +396,35 @@
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue1-fep-bridge/THIRD-PART-SEARCH.md",
       "role": "integration",
       "sha256": "82d51a3db813232aae61608ede888c1f7c0161e7c85e86de6bcc13ec94653aa7"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "role": "proof",
+      "sha256": "cb2c9c8ba8e16916b41a36e1c392f3cd4840a7436b2817c12796c866908020a7",
+      "declarations": [
+        "Becoming.ListTests.not_not",
+        "Becoming.ListTests.not_ne_self"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "role": "receipt",
+      "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CountedCodes.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261030T232750.486801Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.CountedCodes",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Prelude",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -413,6 +433,10 @@
     {
       "en": "31 October 2026: added (UE25), the code law for beliefs held as counts and learned from what is heard, joined to the free-energy bound in counts; the fifth statement the principle's page counts; after an independent adversarial review and a recheck, every finding taken; study section 471.",
       "zh": "2026年10月31日：新增（UE25），以计数持之、由所闻而学之信念之码律，接于计数之自由能界；原理一页所计之第五陈述；经独立对抗审查与复核，凡所见皆取；研究第 471 节。"
+    },
+    {
+      "en": "6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.",
+      "zh": "2026年11月6日，工作板条目 LM：此记录所列辅助引理现只陈述一次，在 Prelude、Flow、Change 或 Laws，或即 Lean 自有者而从列表除去；改其名，诸律不变。"
     }
   ]
 }

@@ -105,17 +105,6 @@ namespace Hexagram
 
 /-! ## Lists told member by member -/
 
-theorem all_sound {α : Type} (p : α → Bool) : ∀ {l : List α}, l.all p = true → ∀ x, x ∈ l → p x = true
-  | [], _, _, mem => nomatch mem
-  | _ :: _, h, _, .head _ => (bool_of_and_true h).1
-  | _ :: _, h, x, .tail _ mem => all_sound p (bool_of_and_true h).2 x mem
-
-theorem all_complete {α : Type} (p : α → Bool) :
-    ∀ {l : List α}, (∀ x, x ∈ l → p x = true) → l.all p = true
-  | [], _ => rfl
-  | a :: l, h => (congrArg (fun b => b && l.all p) (h a (List.Mem.head _))).trans
-      (all_complete p fun x mem => h x (List.Mem.tail _ mem))
-
 theorem all_congr {α : Type} {p q : α → Bool} (h : ∀ x, p x = q x) : ∀ l : List α, l.all p = l.all q
   | [] => rfl
   | a :: l => (congrArg (fun b => b && l.all p) (h a)).trans (congrArg (fun b => q a && b) (all_congr h l))
@@ -260,7 +249,7 @@ theorem centre_fixes_parity (par : Place → Bool)
 /-- **Every statement of place of the 小象 is of a place between the ends** (《象》無初上得位失位之文):
 需上六 is left out of the list (`xu_top_inPhase`). -/
 theorem placeStatements_between : ∀ q, q ∈ placeStatements → betweenEnds q.2.1 = true :=
-  all_sound (fun (q : Nat × Place × Bool) => betweenEnds q.2.1) rfl
+  ListTests.all_sound (fun (q : Nat × Place × Bool) => betweenEnds q.2.1) rfl
 
 /-- The statements of place at the top: 乾上九 (文言, 「貴而无位」) and 需上六 (小象, 「雖不當位」),
 each saying the line does not hold its place. -/
@@ -270,7 +259,7 @@ def topStatements : List (Nat × Place × Bool) := [(1, .p6, false), (5, .p6, fa
 so does 乾上九's 「无位」.** -/
 theorem placeStatements_hold :
     ∀ q, q ∈ placeStatements ++ topStatements → holdsPlace (number q.1) q.2.1 = q.2.2 :=
-  fun q mem => same_eq (all_sound (fun (q : Nat × Place × Bool) => same (holdsPlace (number q.1) q.2.1) q.2.2) rfl q mem)
+  fun q mem => same_eq (ListTests.all_sound (fun (q : Nat × Place × Bool) => same (holdsPlace (number q.1) q.2.1) q.2.2) rfl q mem)
 
 /-- **需's top line holds no place under the second relation, as its 小象 says, though it is in phase
 under the first.** -/
@@ -296,7 +285,7 @@ its line's phase under both relations.** -/
 theorem tuanPlaceStatements_agree : ∀ q, q ∈ tuanPlaceStatements →
     betweenEnds q.2.1 = true ∧ inPhase (number q.1) q.2.1 = q.2.2 ∧ holdsPlace (number q.1) q.2.1 = q.2.2 :=
   fun q mem =>
-    have h := bool_of_and_true (all_sound (fun (q : Nat × Place × Bool) => betweenEnds q.2.1 &&
+    have h := bool_of_and_true (ListTests.all_sound (fun (q : Nat × Place × Bool) => betweenEnds q.2.1 &&
       (same (inPhase (number q.1) q.2.1) q.2.2 && same (holdsPlace (number q.1) q.2.1) q.2.2)) rfl q mem)
     ⟨h.1, same_eq (bool_of_and_true h.2).1, same_eq (bool_of_and_true h.2).2⟩
 
@@ -324,7 +313,7 @@ def tuanWholeStatements : List (Nat × Bool) := [(39, true), (53, true), (54, fa
 
 /-- **Every statement of place of a whole configuration in the 彖 holds under the second relation.** -/
 theorem tuanWhole_between : ∀ q, q ∈ tuanWholeStatements → wholeBetween (number q.1) q.2 = true :=
-  all_sound (fun (q : Nat × Bool) => wholeBetween (number q.1) q.2) rfl
+  ListTests.all_sound (fun (q : Nat × Bool) => wholeBetween (number q.1) q.2) rfl
 
 /-- 蹇 (39). -/
 def jian3 : Hexagram := number 39
@@ -679,7 +668,7 @@ def sole (s : Hexagram) (k : Place) : Bool := (others k).all (answers s k)
 /-- **A sole line is answered by every other line.** -/
 theorem sole_answered {s : Hexagram} {k : Place} (h : sole s k = true) {k' : Place} (ne : k' ≠ k) :
     answers s k k' = true :=
-  all_sound (answers s k) h k' (mem_others ne)
+  ListTests.all_sound (answers s k) h k' (mem_others ne)
 
 theorem not_mem_others_self : ∀ k : Place, ¬ k ∈ others k
   | .p1, .tail _ (.tail _ (.tail _ (.tail _ (.tail _ h)))) => nomatch h
@@ -692,7 +681,7 @@ theorem not_mem_others_self : ∀ k : Place, ¬ k ∈ others k
 /-- **And a line answered by every other is sole.** -/
 theorem sole_of_answered {s : Hexagram} {k : Place} (all : ∀ k', k' ≠ k → answers s k k' = true) :
     sole s k = true :=
-  all_complete (answers s k) fun k' mem => all k' fun e => not_mem_others_self k (e ▸ mem)
+  ListTests.all_complete (answers s k) fun k' mem => all k' fun e => not_mem_others_self k (e ▸ mem)
 
 /-- **A line is sole exactly where its value is held by one line, so where the configuration has one
 unbroken line or five** (至少之地: 五陽而一陰，則一陰為之主). -/
@@ -938,7 +927,7 @@ def answeredStatements : List (Nat × Place) := [(8, .p5), (9, .p4), (14, .p5)]
 
 /-- **Every configuration the 彖 says 上下應 of has a sole line, the line it names.** -/
 theorem answeredStatements_sole : ∀ q, q ∈ answeredStatements → sole (number q.1) q.2 = true :=
-  all_sound (fun (q : Nat × Place) => sole (number q.1) q.2) rfl
+  ListTests.all_sound (fun (q : Nat × Place) => sole (number q.1) q.2) rfl
 
 /-- 履 (10). -/
 def lv : Hexagram := number 10
@@ -977,7 +966,7 @@ theorem lineTextMiddle_places :
     (∀ q, q ∈ lineTextMiddle → betweenEnds q.2 = true) ∧
       (lineTextMiddle.filter fun q => middle q.2).length = 5 ∧
       (middleCourseLines.filter fun q => middle q.2).length = 2 :=
-  ⟨all_sound (fun (q : Nat × Place) => betweenEnds q.2) rfl, rfl, rfl⟩
+  ⟨ListTests.all_sound (fun (q : Nat × Place) => betweenEnds q.2) rfl, rfl, rfl⟩
 
 /-- The line texts that say 位: 萃九五 「萃有位」. -/
 def lineTextPlace : List (Nat × Place) := [(45, .p5)]
@@ -986,7 +975,7 @@ def lineTextPlace : List (Nat × Place) := [(45, .p5)]
 theorem lineTextPlace_holds : ∀ q, q ∈ lineTextPlace →
     middle q.2 = true ∧ inPhase (number q.1) q.2 = true ∧ holdsPlace (number q.1) q.2 = true :=
   fun q mem =>
-    have h := bool_of_and_true (all_sound (fun (q : Nat × Place) => middle q.2 && (inPhase (number q.1) q.2 && holdsPlace (number q.1) q.2))
+    have h := bool_of_and_true (ListTests.all_sound (fun (q : Nat × Place) => middle q.2 && (inPhase (number q.1) q.2 && holdsPlace (number q.1) q.2))
       rfl q mem)
     ⟨h.1, (bool_of_and_true h.2).1, (bool_of_and_true h.2).2⟩
 

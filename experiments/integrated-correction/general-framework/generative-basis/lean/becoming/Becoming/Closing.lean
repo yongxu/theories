@@ -75,10 +75,6 @@ namespace Becoming
 
 variable {F C : Type}
 
-namespace Closing
-
-end Closing
-
 /-! ## Loops formed by a step -/
 
 section Formed
@@ -231,7 +227,7 @@ theorem Coupled.append {v w : Nat → C} {i j : Nat} (cv : Coupled cs part k pre
     subst split
     rw [Closing.join_from meet r,
       show i + r + 1 = i + (r + 1) from rfl, Closing.join_from meet (r + 1)]
-    exact cw r (Remainder.le_of_add_le_add_left_nat i lt)
+    exact cw r (Naturals.le_of_add_le_add_left (k := i) lt)
 
 /-- A chain of one coupling. -/
 theorem Coupled.one {d c : C} (couples : Couples cs part k present d c) :

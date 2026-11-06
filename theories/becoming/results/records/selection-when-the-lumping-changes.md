@@ -127,6 +127,7 @@ This connects the existing common-organization study to the spine. Lumping, sele
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T160413.543456Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T194851.524223Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `Becoming.Learning.Training.keeps_through_iff`, `Becoming.Learning.Training.lost_choice`, `Becoming.Registration.web_keeps_iff`, `Becoming.Revising.controlled_revision`, `registration revision`, `登记关系修订`, `Becoming.Revising.feasible_iff`
 

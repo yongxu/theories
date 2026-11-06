@@ -35,7 +35,7 @@
       "en": "Each formation weakly opposing departure from m on its condition, some strictly on each side, makes the joint exchange oppose; shares of the gap bounding each formation's departure, totalling at most the gap, keep the joint exchange within it.",
       "zh": "各形成在其条件上弱相反、两侧皆有其一严格相反，则联合交换相反；以份额为界、份额之和不过间距，则联合交换在界内。",
       "declarations": [
-        "Becoming.Flow.total_lt_of_le_of_mem",
+        "Becoming.total_lt_of_mem",
         "Becoming.Flow.opposes_of_each",
         "Becoming.Flow.withinGap_of_shares"
       ]
@@ -129,10 +129,9 @@
         "Becoming.Flow.not_at_of_beyond",
         "Becoming.Flow.opposes_of_each",
         "Becoming.Flow.stock_settles",
-        "Becoming.Flow.total_lt_of_le_of_mem",
         "Becoming.Flow.withinGap_of_shares"
       ],
-      "sha256": "05a308a0dfd56e9be23e40a7a649dd78aa14b0a75aefd9bebedb0a932452419f"
+      "sha256": "50b891a9e3918e9b54f15144d01c9cd16aca4d7688abe93423f855e466cd0d1c"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuation.lean",
@@ -142,7 +141,7 @@
         "Becoming.Flow.held_below",
         "Becoming.Flow.never_returns_below"
       ],
-      "sha256": "3100cfdb5668db77d208d34986472af7511b880439132be7a45e56e42e7ba439"
+      "sha256": "1dd6689be3bbb140edbece6ca8fa0a86049c260c9643c6ea7422fbd30e43d204"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json",
@@ -173,20 +172,41 @@
       "path": "theories/becoming/history/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
       "sha256": "e9c7cf980a8ec9c0e6cbf83a838853a8deac0225d2dfaa9fabe286ba4399ee39"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+      "role": "proof",
+      "sha256": "94e9be0baad1667d0d06acdfa757543c292c054c3a7eeaefccbe10b43bd321b5",
+      "declarations": [
+        "Becoming.total_lt_of_mem"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "role": "receipt",
+      "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Regulation.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Regulation",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuation.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Continuation",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Flow",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -195,6 +215,10 @@
     {
       "en": "22 October 2026: added (ZG), for the gap the ZH reading raised; study section 339.",
       "zh": "2026年10月22日：新增（ZG），补中华思想脉络之读所提出的缺口；研究第 339 节。"
+    },
+    {
+      "en": "6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.",
+      "zh": "2026年11月6日，工作板条目 LM：此记录所列辅助引理现只陈述一次，在 Prelude、Flow、Change 或 Laws，或即 Lean 自有者而从列表除去；改其名，诸律不变。"
     }
   ]
 }

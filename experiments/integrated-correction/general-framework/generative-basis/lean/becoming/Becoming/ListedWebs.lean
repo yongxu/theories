@@ -54,19 +54,7 @@ variable {F C : Type}
 
 /-! ## The census balance -/
 
-section Census
-
-variable {W : Web F C} [∀ t f, Decidable (W.active t f)] {alive : Nat → List F}
-
-end Census
-
 /-! ## A finite family of formations -/
-
-section Family
-
-variable (W : Web F C) [∀ t f, Decidable (W.active t f)]
-
-end Family
 
 /-! ## One stretch, from one listing -/
 

@@ -280,8 +280,8 @@ moved from their founder within its whole. -/
 theorem raised_carried {C : Nested α} (founded : C.Founded) (t : Nat) :
     C.wholes.raisedAt t = total (C.wholes.family t) fun f => total (C.wholes.kids t f) fun k =>
       excess ((C.soma t f).amount (C.span t f) k) ((C.soma t f).amount 0 f) :=
-  total_eq_of_mem fun f mf => match founded t f mf with
-  | ⟨_, start, next⟩ => total_eq_of_mem fun k mk =>
+  total_congr_on fun f mf => match founded t f mf with
+  | ⟨_, start, next⟩ => total_congr_on fun k mk =>
     (congrArg (excess · (C.wholes.amount t f)) (next k mk).2).trans
       (congrArg (excess _ ·) start.symm)
 
@@ -289,8 +289,8 @@ theorem raised_carried {C : Nested α} (founded : C.Founded) (t : Nat) :
 theorem lowered_carried {C : Nested α} (founded : C.Founded) (t : Nat) :
     C.wholes.loweredAt t = total (C.wholes.family t) fun f => total (C.wholes.kids t f) fun k =>
       excess ((C.soma t f).amount 0 f) ((C.soma t f).amount (C.span t f) k) :=
-  total_eq_of_mem fun f mf => match founded t f mf with
-  | ⟨_, start, next⟩ => total_eq_of_mem fun k mk =>
+  total_congr_on fun f mf => match founded t f mf with
+  | ⟨_, start, next⟩ => total_congr_on fun k mk =>
     (congrArg (excess (C.wholes.amount t f) ·) (next k mk).2).trans
       (congrArg (excess · _) start.symm)
 

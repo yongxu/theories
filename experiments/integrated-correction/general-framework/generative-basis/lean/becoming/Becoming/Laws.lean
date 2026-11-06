@@ -48,6 +48,14 @@ successor. -/
 def Determined (P : Process S A) : Prop :=
   ∀ s a t t', P.step s a t → P.step s a t' → t = t'
 
+/-- **Under a determined process, two traces of one plan from one configuration end alike.** -/
+theorem Trace.determined_end {P : Process S A} (determined : Determined P) :
+    ∀ {s t r : S} {plan : List A}, Trace P s plan t → Trace P s plan r → t = r
+  | _, _, _, [], .nil _, .nil _ => rfl
+  | _, _, _, _ :: _, .cons step rest, .cons step' rest' =>
+    match determined _ _ _ _ step step' with
+    | rfl => Trace.determined_end determined rest rest'
+
 /-! ## Laws of change and partial laws -/
 
 namespace Assurance

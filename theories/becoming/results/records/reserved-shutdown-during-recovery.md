@@ -114,6 +114,7 @@ Change, recovery grounds, authority, capacity and time differentiate within one 
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/protocol-instances-checks/20261020T161923.157515Z/verification.json) | — |
 | receipt | [recoverable-control-verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/recoverable-control-verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/protocol-instances-checks/20261031T132145.271099Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `ReservedShutdown.every_supported_schedule_finishes`, `ReservedShutdown.cycle_keeps_access_or_stops`, `ReservedShutdown.stop_executes_current_authorized_command`, `Becoming.Countdown.runs_valid`, `Becoming.Countdown.exits`, `Becoming.ProtocolInstances.schedule_stops`, `Becoming.ProtocolInstances.supported_schedule_instance`, `Becoming.Courses.runs_valid_completes`, `Becoming.Courses.exits_completes`
 

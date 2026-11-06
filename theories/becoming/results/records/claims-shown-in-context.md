@@ -120,6 +120,7 @@ Following Ren's “push the frontier, as far as possible” of 12 October 2026, 
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `Becoming.Contextual`, `Becoming.Contextual.glues_iff_agree`, `Becoming.Contextual.fitsFree_iff`, `Becoming.Contextual.indexed_fits`, `Becoming.Contextual.no_free_frame`, `Becoming.PartsDetermine`, `Becoming.no_whole`, `Becoming.Specker.noGlobal`, `Becoming.Square.noGlobal`, `Becoming.Square.no_whole`, `Becoming.Square.no_context_free_values`, `contextuality`, `语境性`, `Kochen–Specker`, `Mermin–Peres square`, `Mermin–Peres 方阵`, `context-free claims`, `不依语境的主张`
 

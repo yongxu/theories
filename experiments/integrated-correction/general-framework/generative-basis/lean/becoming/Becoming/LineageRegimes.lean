@@ -7,7 +7,7 @@ import Becoming.Population
 # Regime, not level: what decides a lineage's region, and what the stock sets
 
 `Becoming.Continuation`, `Becoming.Reproduction` and `Becoming.MutualDependence` state three laws
-that end what depends on a flow: renewal gated on what it renews, run past what it gives
+that end what depends on a flow: renewal run past what it gives
 (`Flow.excess_bounded`, `Flow.family_excess_bounded`, `Flow.joint_excess_ends`,
 `Flow.family_excess_ends`); a lineage within a family dissipated on
 (`Reproduction.Flow.lineage_ends`); and a draw on a condition given nothing
@@ -20,26 +20,25 @@ The grains: the coarse class is a kind (`Web.kindClass`), the fine class the car
 (`Web.carrierClass`, read as the organism); `«退化»` is stated at the kind grain, `«生成»` at
 (kind, carrier).
 
-* **Renewal gated on what it renews, run past what it gives (horizon wrappers).** Under balance,
+* **Renewal run past what it gives (horizon wrappers).** Under balance,
   `n` steps of joint excess at a condition need its level to be at least `n`
   (`excess_within_level`), and `n` steps of excess of a family's uptake over its replenishment need
   its stock to be at least `n` (`family_excess_within_stock`), so no course has `stock + 1` such
   steps (`family_excess_not_past_stock`). These read `Flow.excess_bounded` and
   `Flow.family_excess_bounded` and are restatements, not results.
-* **The gated regime on a lineage (new premise: the line's reach).** Where the flow balances,
-  whatever gives to a member of a family `ds` requires some member of `ds` at a need of at least
-  `m` (the coupled gate), only active formations give and activity needs support, `n` steps of
-  excess from a stock below `n + m` end every formation requiring a member at such a need from step
-  `T + n` on (`Flow.family_excess_ends`). Read on a lineage, the line from an active occurrence at a
-  step not after `T + n` degenerates (`«退化»`, at the kind grain) where everything it reaches at
-  `T + n` requires a member of `ds` at such a need (`degeneration_of_family_excess`, the lineage
-  reading at the kind grain of EL3's `Web.family_excess_degenerates` with
-  `Flow.family_excess_ends`, not a further result); where the census holds every continuation
+* **Renewal run past what it gives, on a lineage (new premise: the line's reach).** Where the flow
+  balances and activity needs support, `n` steps of excess from a stock below `n + m` leave the
+  family's stock below `m` at `T + n` (`Flow.below_of_excess`), whatever renews it. Read on a lineage,
+  the line from an active occurrence at a step not after `T + n` degenerates (`«退化»`, at the kind
+  grain) where everything it reaches at `T + n` requires a member of `ds` at a need of at least `m`
+  (`degeneration_of_family_excess`, the lineage reading at the kind grain of EL3's
+  `Web.family_excess_degenerates`, not a further result); where the census holds every continuation
   (`LineageRegions.ContinuationsListed`), it is enough that every member of generation `T + n` so
   depends (`degeneration_of_family_excess_listed`). At need one the horizon is the stock itself:
-  `stock` steps of excess suffice (`degeneration_at_stock_horizon`), and no course has more.
-  The gated laws end formations, not lines: the premise on the line's reach is what the lineage
-  reading adds.
+  `stock` steps of excess suffice (`degeneration_at_stock_horizon`), and no course has more. A gate on
+  the renewal, with only active formations giving, makes the formations' end last
+  (`Flow.family_excess_ends`); these laws do not use it. The premise on the line's reach is what the
+  lineage reading adds.
 * **Dissipation within the family (a corollary).** In `Descended` generations whose offspring
   stand within a family balanced and dissipated on across each step up to its stock, where the
   census holds every continuation, the line from every member of every generation degenerates
@@ -80,9 +79,9 @@ The grains: the coarse class is a kind (`Web.kindClass`), the fine class the car
   (`Handover.relay_generates`). At stock one its flow and levels are those of
   `Reproduction.Relay`; its web differs (`Handover.relay_one_flow`). With the amount `s - t`, the
   run-down (`Handover.runDown`): `s` steps of excess of the pair's uptake over its replenishment,
-  dissipation at every step, and the line degenerates (`«退化»`), derived through the gated regime
+  dissipation at every step, and the line degenerates (`«退化»`), derived through the regime of excess
   at its horizon (`Handover.runDown_degenerates`); the census holds every continuation
-  (`Handover.runDown_listed`), so the census reading of the gated regime and the dissipation
+  (`Handover.runDown_listed`), so the census reading of the regime of excess and the dissipation
   corollary apply too, generation `s` is empty and `lineage_ends` holds, while no handover meets
   the draw regime's premise over two or more steps (no condition is drawn on at least once and
   then at least twice at the next step, `Handover.draw_not_doubling`) (`Handover.runDown_every_regime`). These witnesses show that the
@@ -92,19 +91,19 @@ The grains: the coarse class is a kind (`Web.kindClass`), the fine class the car
   same stock `s` (`Handover.both_fates`), so no verdict on the region follows from the stock alone
   (`stock_forces_neither`, under `GatedPairCourse`, which lists the premises both courses meet;
   a restatement of the pair with `«生成退化不并»`).
-* **Renewal from outside: where no gated regime binds (boundary).** In `FromOutside` a renewer
+* **Renewal from outside: where none of the regimes binds (boundary).** In `FromOutside` a renewer
   gives two units at every step and does not require the condition; two takers each take one, each
   within what is given and together within it; nothing is in excess, the condition is fed and not
   dissipated on, and every formation is active and supported at every step
-  (`FromOutside.from_outside`). The gated premise fails at every need (`FromOutside.not_gated`), so
-  none of the three regimes' premises holds. In the model a formation's giving is not drawn from
+  (`FromOutside.from_outside`), so none of the three regimes' premises holds; a gate on the renewal
+  fails too, at every need (`FromOutside.not_gated`). In the model a formation's giving is not drawn from
   its own level unless it takes, so "from outside" means from no listed condition.
   `Alone` (`Becoming.Continuation`) is the gated neighbour: its renewer requires the condition,
   which is never run past.
 
 What the three regimes share, and what the module claims: each of the three landed ending laws,
-read as a decider of a lineage's region under the premise on the line's reach, is a regime (gating
-with excess, dissipation, a draw on a condition given nothing), and the stock enters each only as
+read as a decider of a lineage's region under the premise on the line's reach, is a regime (excess,
+dissipation, a draw on a condition given nothing), and the stock enters each only as
 the horizon: `stock` steps of excess at most, `stock + 1` generations under dissipation,
 `log₂ (level + 1)` steps of a doubling draw (the level of the condition drawn on). The
 classification is of these three laws.
@@ -130,7 +129,7 @@ namespace LineageRegimes
 
 open LineageRegions
 
-/-! ## Renewal gated on what it renews: the horizon -/
+/-! ## Renewal run past what it gives: the horizon -/
 
 section Horizon
 
@@ -157,24 +156,22 @@ theorem family_excess_not_past_stock (balances : L.Balances W) {ds : List C} {T 
 
 end Horizon
 
-/-! ## The gated regime on a lineage -/
+/-! ## Renewal run past what it gives, on a lineage -/
 
-section Gated
+section Excess
 
 variable {X : Type} {L : Flow X X} {W : Web X X} {Q : X → X → Prop}
 
-/-- **Gated renewal run past what it gives ends a lineage on every branch** (a lineage reading,
-not a further result: the kind-grain counterpart of EL3's `Web.family_excess_degenerates`, composing
-`Flow.family_excess_ends` with EL3's `Web.kind_every_branch_ends_of_gone`). Where the flow
-balances, whatever gives to a member of `ds` requires some member of `ds` at a need of at least
-`m`, only active formations give and activity needs support, `n` steps of excess of the family's
-uptake over its replenishment from `T`, starting from a stock below `n + m`, end the line from an
-active occurrence at a step not after `T + n` on every branch at the kind grain, where everything
-the line reaches at `T + n` requires a member of `ds` at a need of at least `m`. -/
-theorem degeneration_of_family_excess (balances : L.Balances W) (acting : L.Acting W)
+/-- **Renewal run past what it gives ends a lineage on every branch** (a lineage reading, not a
+further result: the kind-grain counterpart of EL3's `Web.family_excess_degenerates`, composing
+`Flow.below_of_excess` and `Flow.family_ends_below_at` with EL3's
+`Web.kind_every_branch_ends_of_gone`). Where the flow balances and activity needs support, `n` steps
+of excess of the family's uptake over its replenishment from `T`, starting from a stock below
+`n + m`, end the line from an active occurrence at a step not after `T + n` on every branch at the
+kind grain, where everything the line reaches at `T + n` requires a member of `ds` at a need of at
+least `m`, whatever renews the family. -/
+theorem degeneration_of_family_excess (balances : L.Balances W)
     (dependent : W.Dependent) {ds : List X} {m : Nat}
-    (gated : ∀ t f, f ∈ L.present t → ∀ d, d ∈ ds → 0 < L.give t f d →
-      ∃ e, e ∈ ds ∧ W.requires t f e ∧ m ≤ W.need t f e)
     {T n : Nat} (excess : ∀ k, k < n → L.replenishment ds (T + k) < L.uptake ds (T + k))
     (start : W.stock ds T < n + m) {x : Nat × X} (active : W.active x.1 x.2) (le : x.1 ≤ T + n)
     (depends : ∀ y, «所及» (lineStep L W Q) (W.kindClass Q) x y → y.1 = T + n →
@@ -185,7 +182,8 @@ theorem degeneration_of_family_excess (balances : L.Balances W) (acting : L.Acti
     | ⟨e, inside, req, high⟩ =>
       have ends : W.requires (T + n) y.2 e → m ≤ W.need (T + n) y.2 e →
           ¬ W.active (T + n) y.2 :=
-        Flow.family_excess_ends balances acting dependent gated excess start 0 y.2 e inside
+        Flow.family_ends_below_at (dependent (T + n) y.2) (Flow.below_of_excess balances excess start)
+          inside
       Eq.subst (motive := fun s => W.requires s y.2 e → m ≤ W.need s y.2 e → ¬ W.active s y.2)
         at_.symm ends req high
 
@@ -193,10 +191,8 @@ theorem degeneration_of_family_excess (balances : L.Balances W) (acting : L.Acti
 `LineageRegions.reached_listed`): where the census holds every continuation at the kind grain and
 every member of generation `T + n` requires a member of `ds` at a need of at least `m`, the line
 from every active member of a generation not after `T + n` degenerates. -/
-theorem degeneration_of_family_excess_listed (balances : L.Balances W) (acting : L.Acting W)
+theorem degeneration_of_family_excess_listed (balances : L.Balances W)
     (dependent : W.Dependent) {ds : List X} {m : Nat}
-    (gated : ∀ t f, f ∈ L.present t → ∀ d, d ∈ ds → 0 < L.give t f d →
-      ∃ e, e ∈ ds ∧ W.requires t f e ∧ m ≤ W.need t f e)
     {T n : Nat} (excess : ∀ k, k < n → L.replenishment ds (T + k) < L.uptake ds (T + k))
     (start : W.stock ds T < n + m) {G : SelectionTerm.Generations X}
     (listed : ContinuationsListed (lineStep L W Q) (W.kindClass Q) G)
@@ -204,7 +200,7 @@ theorem degeneration_of_family_excess_listed (balances : L.Balances W) (acting :
       ∃ e, e ∈ ds ∧ W.requires (T + n) q e ∧ m ≤ W.need (T + n) q e)
     {t : Nat} {p : X} (mp : p ∈ G.family t) (active : W.active t p) (le : t ≤ T + n) :
     «退化» (lineStep L W Q) (W.kindClass Q) (t, p) :=
-  degeneration_of_family_excess balances acting dependent gated excess start (x := (t, p)) active
+  degeneration_of_family_excess balances dependent excess start (x := (t, p)) active
     le fun y hy at_ =>
       Eq.subst (motive := fun s => ∃ e, e ∈ ds ∧ W.requires s y.2 e ∧ m ≤ W.need s y.2 e)
         at_.symm (members y.2 (Eq.subst (motive := fun s => y.2 ∈ G.family s) at_
@@ -214,20 +210,18 @@ theorem degeneration_of_family_excess_listed (balances : L.Balances W) (acting :
 `m = 1`, `n = stock`): `stock` steps of excess from `T` end the line from an active occurrence at a
 step not after `T + stock`, where everything it reaches then requires a member at need at least
 one. No course has more such steps (`family_excess_not_past_stock`). -/
-theorem degeneration_at_stock_horizon (balances : L.Balances W) (acting : L.Acting W)
+theorem degeneration_at_stock_horizon (balances : L.Balances W)
     (dependent : W.Dependent) {ds : List X}
-    (gated : ∀ t f, f ∈ L.present t → ∀ d, d ∈ ds → 0 < L.give t f d →
-      ∃ e, e ∈ ds ∧ W.requires t f e ∧ 1 ≤ W.need t f e)
     {T : Nat}
     (excess : ∀ k, k < W.stock ds T → L.replenishment ds (T + k) < L.uptake ds (T + k))
     {x : Nat × X} (active : W.active x.1 x.2) (le : x.1 ≤ T + W.stock ds T)
     (depends : ∀ y, «所及» (lineStep L W Q) (W.kindClass Q) x y → y.1 = T + W.stock ds T →
       ∃ e, e ∈ ds ∧ W.requires y.1 y.2 e ∧ 1 ≤ W.need y.1 y.2 e) :
     «退化» (lineStep L W Q) (W.kindClass Q) x :=
-  degeneration_of_family_excess balances acting dependent gated excess (Nat.lt_succ_self _) active
+  degeneration_of_family_excess balances dependent excess (Nat.lt_succ_self _) active
     le depends
 
-end Gated
+end Excess
 
 /-! ## Dissipation within the family -/
 
@@ -255,7 +249,7 @@ theorem dissipation_degenerates_every_member {G : SelectionTerm.Generations X} {
         (Reproduction.Generations.empty_from
           (Reproduction.Flow.lineage_ends descended within balances dissipates) d)
       nomatch (Eq.subst (motive := fun l => p ∈ l)
-        (SelectionTerm.Generations.nil_of_length_zero (ps := G.family t) empty) mp)
+        (nil_of_length_zero (g := G.family t) empty) mp)
 
 end Dissipation
 
@@ -992,7 +986,7 @@ theorem runDown_listed (s : Nat) (Q : Bool → Bool → Prop) :
         ((congrArg (fun g => pick (!holder t) g (s - (t + 1))) hq).trans
           (pick_back (holder t) _)))))
 
-/-- **The run-down degenerates**, derived through the gated regime at its horizon: from stock
+/-- **The run-down degenerates**, derived through the regime of excess at its horizon: from stock
 `s ≥ 1`, `s` steps of excess of the pair's uptake over its replenishment at need one end the line
 from the first member on every branch at the kind grain (`degeneration_at_stock_horizon`). A
 witness that the regime's premises hold together, not that the regime is needed: the same
@@ -1001,15 +995,15 @@ EL3's `Web.kind_every_branch_ends_of_gone`). -/
 theorem runDown_degenerates {s : Nat} (pos : 0 < s) :
     «退化» (lineStep (flow (runDown s)) (web (runDown s)) (oneKind Bool))
       ((web (runDown s)).kindClass (oneKind Bool)) (0, true) :=
-  degeneration_at_stock_horizon (balances (runDown s)) (acting (runDown s) (runDown_falls s))
-    (dependent (runDown s)) (gated (runDown s)) (T := 0)
+  degeneration_at_stock_horizon (balances (runDown s))
+    (dependent (runDown s)) (T := 0)
     (fun k lt => runDown_excess s k (Eq.subst (motive := fun n => k < n) (stock_eq (runDown s) 0)
       lt))
     (x := (0, true)) pos (Nat.zero_le _)
     fun y _ _ => ⟨y.2, mem_family y.2, rfl, Nat.le_refl 1⟩
 
 /-- **The run-down read under each regime.** Two regimes' premises hold and the third's fails. Its
-line from the first member degenerates through the gated regime read on the census
+line from the first member degenerates through renewal run past what it gives, read on the census
 (`degeneration_of_family_excess_listed`), whose premise on generation `s` holds vacuously, that
 generation being empty; the line from every member of every generation degenerates through
 dissipation (`dissipation_degenerates_every_member`); generation `s` is empty and generation
@@ -1025,7 +1019,7 @@ theorem runDown_every_regime {s : Nat} (pos : 0 < s) :
     (runGenerations s).size s = 0 ∧ (runGenerations s).size (s + 1) = 0 ∧
     (∀ T c, ¬ ∀ j, j < 2 → 2 ^ j ≤ (flow (runDown s)).taken (T + j) c) :=
   ⟨degeneration_of_family_excess_listed (balances (runDown s))
-      (acting (runDown s) (runDown_falls s)) (dependent (runDown s)) (gated (runDown s)) (T := 0)
+      (dependent (runDown s)) (m := 1) (T := 0)
       (n := s) (runDown_excess s)
       (Nat.lt_of_le_of_lt (Nat.le_of_eq (stock_eq (runDown s) 0)) (Nat.lt_succ_self s))
       (runDown_listed s (oneKind Bool))
@@ -1138,7 +1132,7 @@ theorem supported (t : Nat) (f : Member) : web.Supported t f :=
 
 theorem dependent : web.Dependent := fun t f _ => supported t f
 
-/-- **No gated regime binds it**: at every need, the gated premise fails, since the renewer gives
+/-- **No gate binds it**: at every need, a gate on the renewal fails, since the renewer gives
 without requiring the condition. -/
 theorem not_gated (m : Nat) : ¬ ∀ t f, f ∈ flow.present t → 0 < flow.give t f () →
     web.requires t f () ∧ m ≤ web.need t f () :=

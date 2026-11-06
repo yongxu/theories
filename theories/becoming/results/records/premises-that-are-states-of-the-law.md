@@ -92,6 +92,7 @@ The first open target of chapter §8.1, the deductive necessity of the whole, ha
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T165640.090482Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `states of the law of exchange`, `交换之律的状态`, `Becoming.ExchangeLaw.contingent`, `Becoming.World.withRest_embodied_iff`, `Becoming.ExchangeLaw.sprouting_not_transmitting`
 

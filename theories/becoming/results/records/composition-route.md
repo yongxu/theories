@@ -73,6 +73,7 @@ That training on primitives does not fix how they compose, so that systematic co
 | provenance | [CompositionalFormation.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/CompositionalFormation.lean) | `Generative.CompositionalFormation.old_record_can_admit_wrong_constructed_operation`, `Generative.CompositionalFormation.fresh_record_changes_actual_reconstruction`, `Generative.CompositionalFormation.discrepancy_alone_does_not_supply_repair_parts` |
 | statement | [03-KNOWING.md](../../chapters/03-KNOWING.md) | — |
 | integration | [DEFECTS-FOUND.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/DEFECTS-FOUND.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `composition route`, `组合路线`, `Becoming.CodeAcquisition.primitives_no_exact`, `Becoming.RouteFormation.repair_course_no_parts`, `Generative.CompositionalAcquisition.primitive_readings_do_not_resolve_order (periphery module)`, `Generative.CompositionalAcquisition.changed_order_invalidates_transfer (periphery module)`, `Generative.CompositionalFormation.old_record_can_admit_wrong_constructed_operation (periphery module)`, `Generative.CompositionalFormation.fresh_record_changes_actual_reconstruction (periphery module)`, `Generative.CompositionalFormation.discrepancy_alone_does_not_supply_repair_parts (periphery module)`
 

@@ -1,0 +1,38 @@
+@Becoming.IntegerOrder.nonneg_add : ∀ {x y : Int}, x.NonNeg → y.NonNeg → (x + y).NonNeg
+Becoming.IntegerOrder.nonneg_zero : Int.NonNeg 0
+Becoming.IntegerOrder.nonneg_one : Int.NonNeg 1
+Becoming.IntegerOrder.nonneg_or_neg : ∀ (x : Int), x.NonNeg ∨ (-x).NonNeg
+Becoming.IntegerOrder.nonneg_pred_or : ∀ (x : Int), (-x).NonNeg ∨ (x + -1).NonNeg
+@Becoming.IntegerOrder.eq_zero_of_nonneg_neg : ∀ {x : Int}, x.NonNeg → (-x).NonNeg → x = 0
+Becoming.IntegerOrder.not_nonneg_neg_one : ¬(-1).NonNeg
+@Becoming.IntegerOrder.le_iff : ∀ {a b : Int}, a ≤ b ↔ (b + -a).NonNeg
+@Becoming.IntegerOrder.lt_iff : ∀ {a b : Int}, a < b ↔ a + 1 ≤ b
+Becoming.IntegerOrder.sub_add_sub : ∀ (a b c : Int), c + -b + (b + -a) = c + -a
+Becoming.IntegerOrder.sub_add_add : ∀ (a b c d : Int), b + d + -(a + c) = b + -a + (d + -c)
+Becoming.IntegerOrder.add_sub_add_left : ∀ (a b c : Int), a + c + -(a + b) = c + -b
+Becoming.IntegerOrder.neg_sub : ∀ (a b : Int), a + -b = -(b + -a)
+Becoming.IntegerOrder.sub_succ : ∀ (a b : Int), b + -(a + 1) = b + -a + -1
+Becoming.IntegerOrder.add_sub_cancel_right : ∀ (a b : Int), a + b + -b = a
+Becoming.IntegerOrder.sub_add_cancel : ∀ (a b : Int), a + -b + b = a
+Becoming.IntegerOrder.le_refl : ∀ (a : Int), a ≤ a
+@Becoming.IntegerOrder.le_trans : ∀ {a b c : Int}, a ≤ b → b ≤ c → a ≤ c
+@Becoming.IntegerOrder.le_antisymm : ∀ {a b : Int}, a ≤ b → b ≤ a → a = b
+Becoming.IntegerOrder.lt_irrefl : ∀ (a : Int), ¬a < a
+Becoming.IntegerOrder.lt_add_one : ∀ (a : Int), a < a + 1
+@Becoming.IntegerOrder.le_of_lt : ∀ {a b : Int}, a < b → a ≤ b
+@Becoming.IntegerOrder.lt_of_lt_of_le : ∀ {a b c : Int}, a < b → b ≤ c → a < c
+@Becoming.IntegerOrder.lt_of_le_of_lt : ∀ {a b c : Int}, a ≤ b → b < c → a < c
+Becoming.IntegerOrder.lt_or_le : ∀ (a b : Int), a < b ∨ b ≤ a
+@Becoming.IntegerOrder.le_of_not_lt : ∀ {a b : Int}, ¬a < b → b ≤ a
+@Becoming.IntegerOrder.not_lt_of_le : ∀ {a b : Int}, b ≤ a → ¬a < b
+Becoming.IntegerOrder.le_total : ∀ (a b : Int), a ≤ b ∨ b ≤ a
+@Becoming.IntegerOrder.add_le_add : ∀ {a b c d : Int}, a ≤ b → c ≤ d → a + c ≤ b + d
+@Becoming.IntegerOrder.add_le_add_left : ∀ {a b : Int}, a ≤ b → ∀ (c : Int), c + a ≤ c + b
+@Becoming.IntegerOrder.add_le_add_right : ∀ {a b : Int}, a ≤ b → ∀ (c : Int), a + c ≤ b + c
+@Becoming.IntegerOrder.le_of_add_le_add_left : ∀ {a b c : Int}, a + b ≤ a + c → b ≤ c
+@Becoming.IntegerOrder.le_of_add_le_add_right : ∀ {a b c : Int}, a + c ≤ b + c → a ≤ b
+@Becoming.IntegerOrder.add_lt_add_left : ∀ {a b : Int}, a < b → ∀ (c : Int), c + a < c + b
+@Becoming.IntegerOrder.sub_nonneg_of_le : ∀ {a b : Int}, a ≤ b → 0 ≤ b + -a
+@Becoming.IntegerOrder.sub_le_sub_left : ∀ {a b : Int}, a ≤ b → ∀ (c : Int), c + -b ≤ c + -a
+@Becoming.IntegerOrder.neg_nonpos_of_nonneg : ∀ {e : Int}, 0 ≤ e → -e ≤ 0
+@Becoming.IntegerOrder.le_add_of_nonneg_right : ∀ {a e : Int}, 0 ≤ e → a ≤ a + e

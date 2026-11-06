@@ -152,27 +152,6 @@ theorem all_map {α β : Type} (f : α → β) (p : β → Bool) : ∀ l : List 
   | [] => rfl
   | a :: l => congrArg (fun c => p (f a) && c) (all_map f p l)
 
-theorem all_true {α : Type} (p : α → Bool) :
-    ∀ l : List α, l.all p = true → ∀ x, x ∈ l → p x = true
-  | [], _, _, m => nomatch m
-  | a :: l, all, x, m =>
-    match hp : p a with
-    | false => Bool.noConfusion
-        ((congrArg (fun c => c && l.all p) hp : (a :: l).all p = false).symm.trans all)
-    | true =>
-      have rest : l.all p = true :=
-        (congrArg (fun c => c && l.all p) hp : (a :: l).all p = l.all p).symm.trans all
-      match m with
-      | .head _ => hp
-      | .tail _ m => all_true p l rest x m
-
-theorem all_of {α : Type} (p : α → Bool) :
-    ∀ l : List α, (∀ x, x ∈ l → p x = true) → l.all p = true
-  | [], _ => rfl
-  | a :: l, every =>
-    (congrArg (fun c => c && l.all p) (every a (.head _))).trans
-      (all_of p l (fun x m => every x (.tail _ m)))
-
 /-! ## Narrowing as `After` on a pure observation -/
 
 /-- The pure observation: the configuration stays as it is. -/
@@ -322,7 +301,7 @@ theorem answer_some : ∀ {hs : List (Rule Q)} {q : Q} {b : Bool},
         Option.some.inj ((congrArg (onCons h q) hc).symm.trans ans : some (h q) = some b)
       ⟨⟨h, .head _⟩, fun g m => match m with
         | .head _ => same
-        | .tail _ m => ((beq_true_iff _ _).mp (all_true _ tail hc g m)).trans same⟩
+        | .tail _ m => ((beq_true_iff _ _).mp (ListTests.all_sound _ hc g m)).trans same⟩
     | false => absurd ((congrArg (onCons h q) hc).symm.trans ans : none = some b) (fun e => nomatch e)
 
 /-- **Where the answer procedure abstains, the list's belief settles nothing.** -/
@@ -331,7 +310,7 @@ theorem answer_none : ∀ {hs : List (Rule Q)} {q : Q} {b : Bool},
   | [], _, _, _, ⟨⟨_, m⟩, _⟩ => nomatch m
   | h :: tail, q, _, ans, ⟨_, every⟩ =>
     have all : tail.all (fun g => g q == h q) = true :=
-      all_of _ tail (fun g m => (beq_true_iff _ _).mpr
+      ListTests.all_complete _ (fun g m => (beq_true_iff _ _).mpr
         ((every g (.tail _ m)).trans (every h (.head _)).symm))
     absurd ((congrArg (onCons h q) all).symm.trans ans : some (h q) = none) (fun e => nomatch e)
 
@@ -341,7 +320,7 @@ theorem answer_of_settles : ∀ {hs : List (Rule Q)} {q : Q} {b : Bool},
   | [], _, _, ⟨⟨_, m⟩, _⟩ => nomatch m
   | h :: tail, q, _, ⟨_, every⟩ =>
     have all : tail.all (fun g => g q == h q) = true :=
-      all_of _ tail (fun g m => (beq_true_iff _ _).mpr
+      ListTests.all_complete _ (fun g m => (beq_true_iff _ _).mpr
         ((every g (.tail _ m)).trans (every h (.head _)).symm))
     ((congrArg (onCons h q) all).trans (congrArg some (every h (.head _))) :
       onCons h q (tail.all (fun g => g q == h q)) = some _)

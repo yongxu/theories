@@ -1,0 +1,591 @@
+@Becoming.HeldForReading.forall_pair : ∀ {β : Type} {P : β → Prop} {a b : β}, P a → P b → ∀ (x : β), x ∈ [a, b] → P x
+@Becoming.HeldForReading.bestOf_best : ∀ {C A : Type} (value : C → A → Nat) (c : C) (a : A) (bs : List A),
+  Becoming.HeldForReading.BestAt (a :: bs) value (fun c' => Becoming.HeldForReading.bestOf value c' a bs) c
+@Becoming.HeldForReading.after_le_after : ∀ {C A : Type} {m : Becoming.HeldForReading.Model C} {acts : List A}
+  {value : C → A → Nat} {p : C → A},
+  (∀ (c : C), c ∈ m.listed → Becoming.HeldForReading.BestAt acts value p c) →
+    ∀ {q : C → A}, (∀ (c : C), c ∈ m.listed → q c ∈ acts) → m.after value q ≤ m.after value p
+@Becoming.HeldForReading.after_add_gap : ∀ {C A : Type} {m : Becoming.HeldForReading.Model C} {acts : List A}
+  {value : C → A → Nat} {p : C → A},
+  (∀ (c : C), c ∈ m.listed → Becoming.HeldForReading.BestAt acts value p c) →
+    ∀ {q : C → A},
+      (∀ (c : C), c ∈ m.listed → q c ∈ acts) →
+        (m.after value q + Becoming.total m.listed fun c => m.weight c * (value c (p c) - value c (q c))) =
+          m.after value p
+@Becoming.HeldForReading.after_lt_after_iff : ∀ {C A : Type} {m : Becoming.HeldForReading.Model C} {acts : List A}
+  {value : C → A → Nat} {p : C → A},
+  (∀ (c : C), c ∈ m.listed → Becoming.HeldForReading.BestAt acts value p c) →
+    ∀ {q : C → A},
+      (∀ (c : C), c ∈ m.listed → q c ∈ acts) →
+        (m.after value q < m.after value p ↔ ∃ c, c ∈ m.listed ∧ 0 < m.weight c ∧ value c (q c) < value c (p c))
+@Becoming.HeldForReading.after_eq_after_iff : ∀ {C A : Type} {m : Becoming.HeldForReading.Model C} {acts : List A}
+  {value : C → A → Nat} {p : C → A},
+  (∀ (c : C), c ∈ m.listed → Becoming.HeldForReading.BestAt acts value p c) →
+    ∀ {q : C → A},
+      (∀ (c : C), c ∈ m.listed → q c ∈ acts) →
+        (m.after value q = m.after value p ↔ ∀ (c : C), c ∈ m.listed → 0 < m.weight c → value c (q c) = value c (p c))
+@Becoming.HeldForReading.committed_le_after : ∀ {C A : Type} {m : Becoming.HeldForReading.Model C} {acts : List A}
+  {value : C → A → Nat} {p : C → A},
+  (∀ (c : C), c ∈ m.listed → Becoming.HeldForReading.BestAt acts value p c) →
+    ∀ {a : A}, a ∈ acts → m.committed value a ≤ m.after value p
+@Becoming.HeldForReading.committed_eq_after_iff : ∀ {C A : Type} {m : Becoming.HeldForReading.Model C} {acts : List A}
+  {value : C → A → Nat} {p : C → A},
+  (∀ (c : C), c ∈ m.listed → Becoming.HeldForReading.BestAt acts value p c) →
+    ∀ {a : A},
+      a ∈ acts →
+        (m.committed value a = m.after value p ↔ ∀ (c : C), c ∈ m.listed → 0 < m.weight c → value c a = value c (p c))
+@Becoming.HeldForReading.reading_gains_iff : ∀ {C A : Type} {m : Becoming.HeldForReading.Model C} {acts : List A}
+  {value : C → A → Nat} {p : C → A},
+  (∀ (c : C), c ∈ m.listed → Becoming.HeldForReading.BestAt acts value p c) →
+    ((∀ (a : A), a ∈ acts → m.committed value a < m.after value p) ↔
+      ¬∃ a, a ∈ acts ∧ ∀ (c : C), c ∈ m.listed → 0 < m.weight c → value c a = value c (p c))
+@Becoming.HeldForReading.below_iff : ∀ {C A : Type} {m : Becoming.HeldForReading.Model C} {acts : List A}
+  {value : C → A → Nat} {p : C → A},
+  (∀ (c : C), c ∈ m.listed → Becoming.HeldForReading.BestAt acts value p c) →
+    ∀ {a : A},
+      a ∈ acts →
+        ∀ {Q : C → Prop},
+          (∀ (c : C), c ∈ m.listed → 0 < m.weight c → (value c a < value c (p c) ↔ Q c)) →
+            (m.committed value a < m.after value p ↔ ∃ c, c ∈ m.listed ∧ 0 < m.weight c ∧ Q c)
+@Becoming.HeldForReading.cell_policy_iff : ∀ {C A : Type} {m : Becoming.HeldForReading.Model C} {acts : List A}
+  {value : C → A → Nat} {p : C → A} {K : Type},
+  Becoming.Viability.ChoiceOver K A →
+    (∀ (c : C), c ∈ m.listed → Becoming.HeldForReading.BestAt acts value p c) →
+      ∀ (π : C → K),
+        (∃ f, (∀ (k : K), f k ∈ acts) ∧ (m.after value fun c => f (π c)) = m.after value p) ↔
+          ∀ (k : K), ∃ a, a ∈ acts ∧ ∀ (c : C), c ∈ m.listed → π c = k → 0 < m.weight c → value c a = value c (p c)
+@Becoming.HeldForReading.after_offset : ∀ {C A : Type} {m : Becoming.HeldForReading.Model C} {v v' : C → A → Nat}
+  {b : C → Nat},
+  (∀ (c : C) (a : A), v' c a = v c a + b c) →
+    ∀ (p₁ : C → A), m.after v' p₁ = m.after v p₁ + Becoming.total m.listed fun c => m.weight c * b c
+@Becoming.HeldForReading.after_offset_le_iff : ∀ {C A : Type} {m : Becoming.HeldForReading.Model C} {v v' : C → A → Nat}
+  {b : C → Nat},
+  (∀ (c : C) (a : A), v' c a = v c a + b c) →
+    ∀ (p₁ p₂ : C → A), m.after v' p₁ ≤ m.after v' p₂ ↔ m.after v p₁ ≤ m.after v p₂
+@Becoming.HeldForReading.byRule_of_true : ∀ {C : Type} {r : C → Bool} {c : C},
+  r c = true → Becoming.HeldForReading.byRule r c = Becoming.HeldForReading.Move.off
+@Becoming.HeldForReading.byRule_of_false : ∀ {C : Type} {r : C → Bool} {c : C},
+  r c = false → Becoming.HeldForReading.byRule r c = Becoming.HeldForReading.Move.go
+@Becoming.HeldForReading.byReading_of_lt : ∀ {C : Type} {gain loss : C → Nat} {c : C},
+  gain c < loss c → Becoming.HeldForReading.byReading gain loss c = Becoming.HeldForReading.Move.off
+@Becoming.HeldForReading.byReading_of_not_lt : ∀ {C : Type} {gain loss : C → Nat} {c : C},
+  ¬gain c < loss c → Becoming.HeldForReading.byReading gain loss c = Becoming.HeldForReading.Move.go
+Becoming.HeldForReading.go_open : Becoming.HeldForReading.Move.go ∈
+  [Becoming.HeldForReading.Move.go, Becoming.HeldForReading.Move.off]
+Becoming.HeldForReading.off_open : Becoming.HeldForReading.Move.off ∈
+  [Becoming.HeldForReading.Move.go, Becoming.HeldForReading.Move.off]
+@Becoming.HeldForReading.byReading_best : ∀ {C : Type} (gain loss : C → Nat) (c : C),
+  Becoming.HeldForReading.BestAt [Becoming.HeldForReading.Move.go, Becoming.HeldForReading.Move.off]
+    (Becoming.HeldForReading.shifted gain loss) (Becoming.HeldForReading.byReading gain loss) c
+@Becoming.HeldForReading.go_below_iff : ∀ {C : Type} (gain loss : C → Nat) (c : C),
+  Becoming.HeldForReading.shifted gain loss c Becoming.HeldForReading.Move.go <
+      Becoming.HeldForReading.shifted gain loss c (Becoming.HeldForReading.byReading gain loss c) ↔
+    gain c < loss c
+@Becoming.HeldForReading.off_below_iff : ∀ {C : Type} (gain loss : C → Nat) (c : C),
+  Becoming.HeldForReading.shifted gain loss c Becoming.HeldForReading.Move.off <
+      Becoming.HeldForReading.shifted gain loss c (Becoming.HeldForReading.byReading gain loss c) ↔
+    loss c < gain c
+@Becoming.HeldForReading.committed_le_held : ∀ {C : Type} (m : Becoming.HeldForReading.Model C) (gain loss : C → Nat),
+  m.committed (Becoming.HeldForReading.shifted gain loss) Becoming.HeldForReading.Move.go ≤
+      m.after (Becoming.HeldForReading.shifted gain loss) (Becoming.HeldForReading.byReading gain loss) ∧
+    m.committed (Becoming.HeldForReading.shifted gain loss) Becoming.HeldForReading.Move.off ≤
+      m.after (Becoming.HeldForReading.shifted gain loss) (Becoming.HeldForReading.byReading gain loss)
+@Becoming.HeldForReading.held_gains_iff : ∀ {C : Type} (m : Becoming.HeldForReading.Model C) (gain loss : C → Nat),
+  m.committed (Becoming.HeldForReading.shifted gain loss) Becoming.HeldForReading.Move.go <
+        m.after (Becoming.HeldForReading.shifted gain loss) (Becoming.HeldForReading.byReading gain loss) ∧
+      m.committed (Becoming.HeldForReading.shifted gain loss) Becoming.HeldForReading.Move.off <
+        m.after (Becoming.HeldForReading.shifted gain loss) (Becoming.HeldForReading.byReading gain loss) ↔
+    (∃ c, c ∈ m.listed ∧ 0 < m.weight c ∧ gain c < loss c) ∧ ∃ c, c ∈ m.listed ∧ 0 < m.weight c ∧ loss c < gain c
+Becoming.HeldForReading.cond_split : ∀ (x : Nat) (b : Bool), ((bif b then x else 0) + bif b then 0 else x) = x
+@Becoming.HeldForReading.offPart_add_onPart : ∀ {C : Type} (m : Becoming.HeldForReading.Model C) (r : C → Bool)
+  (f : C → Nat),
+  Becoming.HeldForReading.offPart m r f + Becoming.HeldForReading.onPart m r f = Becoming.total m.listed f
+@Becoming.HeldForReading.after_rule : ∀ {C : Type} (m : Becoming.HeldForReading.Model C) (gain loss : C → Nat)
+  (r : C → Bool),
+  m.after (Becoming.HeldForReading.shifted gain loss) (Becoming.HeldForReading.byRule r) =
+    (Becoming.HeldForReading.offPart m r fun c => m.weight c * loss c) +
+      Becoming.HeldForReading.onPart m r fun c => m.weight c * gain c
+@Becoming.HeldForReading.after_rule_add_onLoss : ∀ {C : Type} (m : Becoming.HeldForReading.Model C)
+  (gain loss : C → Nat) (r : C → Bool),
+  (m.after (Becoming.HeldForReading.shifted gain loss) (Becoming.HeldForReading.byRule r) +
+      Becoming.HeldForReading.onPart m r fun c => m.weight c * loss c) =
+    (Becoming.total m.listed fun c => m.weight c * loss c) +
+      Becoming.HeldForReading.onPart m r fun c => m.weight c * gain c
+@Becoming.HeldForReading.after_rule_le_iff : ∀ {C : Type} (m : Becoming.HeldForReading.Model C) (gain loss : C → Nat)
+  (r r' : C → Bool),
+  m.after (Becoming.HeldForReading.shifted gain loss) (Becoming.HeldForReading.byRule r) ≤
+      m.after (Becoming.HeldForReading.shifted gain loss) (Becoming.HeldForReading.byRule r') ↔
+    ((Becoming.HeldForReading.onPart m r fun c => m.weight c * gain c) +
+        Becoming.HeldForReading.onPart m r' fun c => m.weight c * loss c) ≤
+      (Becoming.HeldForReading.onPart m r' fun c => m.weight c * gain c) +
+        Becoming.HeldForReading.onPart m r fun c => m.weight c * loss c
+@Becoming.HeldForReading.rule_not_below_go_iff : ∀ {C : Type} (m : Becoming.HeldForReading.Model C)
+  (gain loss : C → Nat) (r : C → Bool),
+  m.committed (Becoming.HeldForReading.shifted gain loss) Becoming.HeldForReading.Move.go ≤
+      m.after (Becoming.HeldForReading.shifted gain loss) (Becoming.HeldForReading.byRule r) ↔
+    (Becoming.HeldForReading.offPart m r fun c => m.weight c * gain c) ≤
+      Becoming.HeldForReading.offPart m r fun c => m.weight c * loss c
+@Becoming.HeldForReading.rule_not_below_off_iff : ∀ {C : Type} (m : Becoming.HeldForReading.Model C)
+  (gain loss : C → Nat) (r : C → Bool),
+  m.committed (Becoming.HeldForReading.shifted gain loss) Becoming.HeldForReading.Move.off ≤
+      m.after (Becoming.HeldForReading.shifted gain loss) (Becoming.HeldForReading.byRule r) ↔
+    (Becoming.HeldForReading.onPart m r fun c => m.weight c * loss c) ≤
+      Becoming.HeldForReading.onPart m r fun c => m.weight c * gain c
+@Becoming.HeldForReading.held_term : ∀ {C : Type} (m : Becoming.HeldForReading.Model C) (gain loss : C → Nat)
+  (r : C → Bool) (c : C),
+  m.weight c * Becoming.HeldForReading.shifted gain loss c (Becoming.HeldForReading.byRule r c) =
+    bif r c then m.weight c * loss c else m.weight c * gain c
+@Becoming.HeldForReading.gainOf_goOn : ∀ {C : Type} (m : Becoming.HeldForReading.Model C) (gain loss : C → Nat)
+  (a : Nat),
+  Becoming.RevisionPlans.gainOf m.listed gain loss (Becoming.RevisionPlans.goOn m.weight a) =
+    m.committed (Becoming.HeldForReading.shifted gain loss) Becoming.HeldForReading.Move.go
+@Becoming.HeldForReading.gainOf_off : ∀ {C : Type} (m : Becoming.HeldForReading.Model C) (gain loss : C → Nat)
+  (a : Nat),
+  Becoming.RevisionPlans.gainOf m.listed gain loss (Becoming.RevisionPlans.off m.weight a) =
+    m.committed (Becoming.HeldForReading.shifted gain loss) Becoming.HeldForReading.Move.off
+@Becoming.HeldForReading.gainOf_held : ∀ {C : Type} (m : Becoming.HeldForReading.Model C) (gain loss : C → Nat)
+  (r : C → Bool) (a : Nat),
+  Becoming.RevisionPlans.gainOf m.listed gain loss (Becoming.RevisionPlans.held m.weight r a) =
+    m.after (Becoming.HeldForReading.shifted gain loss) (Becoming.HeldForReading.byRule r)
+@Becoming.HeldForReading.excess_goOn : ∀ {C : Type} (m : Becoming.HeldForReading.Model C) (gain loss : C → Nat)
+  (a : Nat),
+  Becoming.RevisionPlans.excess m.listed gain loss (Becoming.RevisionPlans.goOn m.weight a) =
+    Becoming.HeldForReading.offExcess m gain loss
+@Becoming.HeldForReading.excess_off : ∀ {C : Type} (m : Becoming.HeldForReading.Model C) (gain loss : C → Nat)
+  (a : Nat),
+  Becoming.RevisionPlans.excess m.listed gain loss (Becoming.RevisionPlans.off m.weight a) =
+    Becoming.HeldForReading.goExcess m gain loss
+@Becoming.HeldForReading.excess_held : ∀ {C : Type} (m : Becoming.HeldForReading.Model C) (gain loss : C → Nat)
+  (r : C → Bool) (a : Nat),
+  Becoming.RevisionPlans.excess m.listed gain loss (Becoming.RevisionPlans.held m.weight r a) =
+    Becoming.HeldForReading.shortfall m gain loss r
+@Becoming.HeldForReading.moves_not_below_iff : ∀ {C : Type} (m : Becoming.HeldForReading.Model C) (gain loss : C → Nat)
+  (r : C → Bool) (a : Nat),
+  (¬(Becoming.RevisionPlans.order m.listed gain loss).Above (Becoming.RevisionPlans.goOn m.weight 0)
+          (Becoming.RevisionPlans.held m.weight r a) ↔
+      m.committed (Becoming.HeldForReading.shifted gain loss) Becoming.HeldForReading.Move.go + a ≤
+        m.after (Becoming.HeldForReading.shifted gain loss) (Becoming.HeldForReading.byRule r)) ∧
+    (¬(Becoming.RevisionPlans.order m.listed gain loss).Above (Becoming.RevisionPlans.off m.weight 0)
+          (Becoming.RevisionPlans.held m.weight r a) ↔
+      m.committed (Becoming.HeldForReading.shifted gain loss) Becoming.HeldForReading.Move.off + a ≤
+        m.after (Becoming.HeldForReading.shifted gain loss) (Becoming.HeldForReading.byRule r))
+@Becoming.HeldForReading.held_above_moves_iff : ∀ {C : Type} (m : Becoming.HeldForReading.Model C) (gain loss : C → Nat)
+  (r : C → Bool) (a : Nat),
+  ((Becoming.RevisionPlans.order m.listed gain loss).Above (Becoming.RevisionPlans.held m.weight r a)
+        (Becoming.RevisionPlans.goOn m.weight 0) ↔
+      m.committed (Becoming.HeldForReading.shifted gain loss) Becoming.HeldForReading.Move.go + a <
+        m.after (Becoming.HeldForReading.shifted gain loss) (Becoming.HeldForReading.byRule r)) ∧
+    ((Becoming.RevisionPlans.order m.listed gain loss).Above (Becoming.RevisionPlans.held m.weight r a)
+        (Becoming.RevisionPlans.off m.weight 0) ↔
+      m.committed (Becoming.HeldForReading.shifted gain loss) Becoming.HeldForReading.Move.off + a <
+        m.after (Becoming.HeldForReading.shifted gain loss) (Becoming.HeldForReading.byRule r))
+@Becoming.HeldForReading.held_above_held_iff : ∀ {C : Type} (m : Becoming.HeldForReading.Model C) (gain loss : C → Nat)
+  (r r' : C → Bool) (k k' : Nat),
+  (Becoming.RevisionPlans.order m.listed gain loss).Above (Becoming.RevisionPlans.held m.weight r k)
+      (Becoming.RevisionPlans.held m.weight r' k') ↔
+    m.after (Becoming.HeldForReading.shifted gain loss) (Becoming.HeldForReading.byRule r') + k <
+      m.after (Becoming.HeldForReading.shifted gain loss) (Becoming.HeldForReading.byRule r) + k'
+@Becoming.HeldForReading.after_add_shortfall_go : ∀ {C : Type} (m : Becoming.HeldForReading.Model C)
+  (gain loss : C → Nat) (r : C → Bool),
+  m.after (Becoming.HeldForReading.shifted gain loss) (Becoming.HeldForReading.byRule r) +
+      Becoming.HeldForReading.shortfall m gain loss r =
+    m.committed (Becoming.HeldForReading.shifted gain loss) Becoming.HeldForReading.Move.go +
+      Becoming.HeldForReading.offExcess m gain loss
+@Becoming.HeldForReading.after_add_shortfall_off : ∀ {C : Type} (m : Becoming.HeldForReading.Model C)
+  (gain loss : C → Nat) (r : C → Bool),
+  m.after (Becoming.HeldForReading.shifted gain loss) (Becoming.HeldForReading.byRule r) +
+      Becoming.HeldForReading.shortfall m gain loss r =
+    m.committed (Becoming.HeldForReading.shifted gain loss) Becoming.HeldForReading.Move.off +
+      Becoming.HeldForReading.goExcess m gain loss
+@Becoming.HeldForReading.shortfall_byReading : ∀ {C : Type} (m : Becoming.HeldForReading.Model C) (gain loss : C → Nat),
+  (Becoming.HeldForReading.shortfall m gain loss fun c => decide (gain c < loss c)) = 0
+@Becoming.HeldForReading.after_byReading : ∀ {C : Type} (m : Becoming.HeldForReading.Model C) (gain loss : C → Nat),
+  m.after (Becoming.HeldForReading.shifted gain loss) (Becoming.HeldForReading.byReading gain loss) =
+      m.committed (Becoming.HeldForReading.shifted gain loss) Becoming.HeldForReading.Move.go +
+        Becoming.HeldForReading.offExcess m gain loss ∧
+    m.after (Becoming.HeldForReading.shifted gain loss) (Becoming.HeldForReading.byReading gain loss) =
+      m.committed (Becoming.HeldForReading.shifted gain loss) Becoming.HeldForReading.Move.off +
+        Becoming.HeldForReading.goExcess m gain loss
+@Becoming.HeldForReading.held_eq_go_iff : ∀ {C : Type} (m : Becoming.HeldForReading.Model C) (gain loss : C → Nat),
+  m.after (Becoming.HeldForReading.shifted gain loss) (Becoming.HeldForReading.byReading gain loss) =
+      m.committed (Becoming.HeldForReading.shifted gain loss) Becoming.HeldForReading.Move.go ↔
+    Becoming.HeldForReading.offExcess m gain loss = 0
+@Becoming.HeldForReading.held_eq_off_iff : ∀ {C : Type} (m : Becoming.HeldForReading.Model C) (gain loss : C → Nat),
+  m.after (Becoming.HeldForReading.shifted gain loss) (Becoming.HeldForReading.byReading gain loss) =
+      m.committed (Becoming.HeldForReading.shifted gain loss) Becoming.HeldForReading.Move.off ↔
+    Becoming.HeldForReading.goExcess m gain loss = 0
+@Becoming.HeldForReading.after_add_shortfall : ∀ {C : Type} (m : Becoming.HeldForReading.Model C) (gain loss : C → Nat)
+  (r : C → Bool),
+  m.after (Becoming.HeldForReading.shifted gain loss) (Becoming.HeldForReading.byRule r) +
+      Becoming.HeldForReading.shortfall m gain loss r =
+    m.after (Becoming.HeldForReading.shifted gain loss) (Becoming.HeldForReading.byReading gain loss)
+@Becoming.HeldForReading.across_le_iff : ∀ {G H S N k : Nat}, H + S = G + N → (G + k ≤ H ↔ S + k ≤ N)
+@Becoming.HeldForReading.across_lt_iff : ∀ {G H S N k : Nat}, H + S = G + N → (G + k < H ↔ S + k < N)
+@Becoming.HeldForReading.threshold_go_iff : ∀ {C : Type} (m : Becoming.HeldForReading.Model C) (gain loss : C → Nat)
+  (r : C → Bool) (forgone : Nat),
+  (m.committed (Becoming.HeldForReading.shifted gain loss) Becoming.HeldForReading.Move.go + forgone ≤
+        m.after (Becoming.HeldForReading.shifted gain loss) (Becoming.HeldForReading.byRule r) ↔
+      Becoming.HeldForReading.shortfall m gain loss r + forgone ≤ Becoming.HeldForReading.offExcess m gain loss) ∧
+    (m.committed (Becoming.HeldForReading.shifted gain loss) Becoming.HeldForReading.Move.go + forgone <
+        m.after (Becoming.HeldForReading.shifted gain loss) (Becoming.HeldForReading.byRule r) ↔
+      Becoming.HeldForReading.shortfall m gain loss r + forgone < Becoming.HeldForReading.offExcess m gain loss)
+@Becoming.HeldForReading.threshold_off_iff : ∀ {C : Type} (m : Becoming.HeldForReading.Model C) (gain loss : C → Nat)
+  (r : C → Bool) (forgone : Nat),
+  (m.committed (Becoming.HeldForReading.shifted gain loss) Becoming.HeldForReading.Move.off + forgone ≤
+        m.after (Becoming.HeldForReading.shifted gain loss) (Becoming.HeldForReading.byRule r) ↔
+      Becoming.HeldForReading.shortfall m gain loss r + forgone ≤ Becoming.HeldForReading.goExcess m gain loss) ∧
+    (m.committed (Becoming.HeldForReading.shifted gain loss) Becoming.HeldForReading.Move.off + forgone <
+        m.after (Becoming.HeldForReading.shifted gain loss) (Becoming.HeldForReading.byRule r) ↔
+      Becoming.HeldForReading.shortfall m gain loss r + forgone < Becoming.HeldForReading.goExcess m gain loss)
+@Becoming.HeldForReading.forgone_within_excess_iff : ∀ {C : Type} (m : Becoming.HeldForReading.Model C)
+  (gain loss : C → Nat) (forgone : Nat),
+  (m.committed (Becoming.HeldForReading.shifted gain loss) Becoming.HeldForReading.Move.go + forgone ≤
+        m.after (Becoming.HeldForReading.shifted gain loss) (Becoming.HeldForReading.byReading gain loss) ↔
+      forgone ≤ Becoming.HeldForReading.offExcess m gain loss) ∧
+    (m.committed (Becoming.HeldForReading.shifted gain loss) Becoming.HeldForReading.Move.off + forgone ≤
+        m.after (Becoming.HeldForReading.shifted gain loss) (Becoming.HeldForReading.byReading gain loss) ↔
+      forgone ≤ Becoming.HeldForReading.goExcess m gain loss)
+@Becoming.HeldForReading.forgone_below_excess_iff : ∀ {C : Type} (m : Becoming.HeldForReading.Model C)
+  (gain loss : C → Nat) (forgone : Nat),
+  (m.committed (Becoming.HeldForReading.shifted gain loss) Becoming.HeldForReading.Move.go + forgone <
+        m.after (Becoming.HeldForReading.shifted gain loss) (Becoming.HeldForReading.byReading gain loss) ↔
+      forgone < Becoming.HeldForReading.offExcess m gain loss) ∧
+    (m.committed (Becoming.HeldForReading.shifted gain loss) Becoming.HeldForReading.Move.off + forgone <
+        m.after (Becoming.HeldForReading.shifted gain loss) (Becoming.HeldForReading.byReading gain loss) ↔
+      forgone < Becoming.HeldForReading.goExcess m gain loss)
+@Becoming.HeldForReading.excess_pos_iff : ∀ {C : Type} (m : Becoming.HeldForReading.Model C) (gain loss : C → Nat),
+  (0 < Becoming.HeldForReading.offExcess m gain loss ↔ ∃ c, c ∈ m.listed ∧ 0 < m.weight c ∧ gain c < loss c) ∧
+    (0 < Becoming.HeldForReading.goExcess m gain loss ↔ ∃ c, c ∈ m.listed ∧ 0 < m.weight c ∧ loss c < gain c)
+@Becoming.HeldForReading.total_single : ∀ {K : Type} [inst : DecidableEq K] {z₀ : K} {v : Nat} {zs : List K},
+  List.Pairwise (fun a b => a ≠ b) zs → z₀ ∈ zs → (Becoming.total zs fun z => if z₀ = z then v else 0) = v
+@Becoming.HeldForReading.total_by_cells : ∀ {C K : Type} [inst : DecidableEq K] (m : Becoming.HeldForReading.Model C)
+  (π : C → K) {zs : List K},
+  List.Pairwise (fun a b => a ≠ b) zs →
+    (∀ (c : C), c ∈ m.listed → π c ∈ zs) →
+      ∀ (f : C → Nat),
+        Becoming.total m.listed f =
+          Becoming.total zs fun z => Becoming.total m.listed fun c => if π c = z then f c else 0
+@Becoming.HeldForReading.cell_term : ∀ {C K : Type} [inst : DecidableEq K] (s : K → Bool) {π : C → K} {z : K} {c : C}
+  (x y : Nat),
+  (if π c = z then bif s (π c) then x else y else 0) =
+    bif s z then if π c = z then x else 0 else if π c = z then y else 0
+@Becoming.HeldForReading.total_cond_both : ∀ {C : Type} (b : Bool) (f g : C → Nat) (cs : List C),
+  (Becoming.total cs fun c => bif b then f c else g c) = bif b then Becoming.total cs f else Becoming.total cs g
+@Becoming.HeldForReading.shortfall_through : ∀ {C K : Type} [inst : DecidableEq K] (m : Becoming.HeldForReading.Model C)
+  (gain loss : C → Nat) (π : C → K) {zs : List K},
+  List.Pairwise (fun a b => a ≠ b) zs →
+    (∀ (c : C), c ∈ m.listed → π c ∈ zs) →
+      ∀ (s : K → Bool),
+        (Becoming.HeldForReading.shortfall m gain loss fun c => s (π c)) =
+          Becoming.total zs fun z =>
+            bif s z then Becoming.HeldForReading.goExcessWithin m gain loss π z
+            else Becoming.HeldForReading.offExcessWithin m gain loss π z
+Becoming.HeldForReading.cond_least_le : ∀ (x y : Nat) (b : Bool),
+  (bif decide (x ≤ y) then x else y) ≤ bif b then x else y
+@Becoming.HeldForReading.least_through : ∀ {C K : Type} [inst : DecidableEq K] (m : Becoming.HeldForReading.Model C)
+  (gain loss : C → Nat) (π : C → K) {zs : List K},
+  List.Pairwise (fun a b => a ≠ b) zs →
+    (∀ (c : C), c ∈ m.listed → π c ∈ zs) →
+      ∀ (s : K → Bool),
+        (Becoming.HeldForReading.shortfall m gain loss fun c =>
+            Becoming.HeldForReading.leastThrough m gain loss π (π c)) ≤
+          Becoming.HeldForReading.shortfall m gain loss fun c => s (π c)
+Becoming.HeldForReading.cond_least_eq_zero_iff : ∀ (x y : Nat), (bif decide (x ≤ y) then x else y) = 0 ↔ x = 0 ∨ y = 0
+@Becoming.HeldForReading.least_zero_iff : ∀ {C K : Type} [inst : DecidableEq K] (m : Becoming.HeldForReading.Model C)
+  (gain loss : C → Nat) (π : C → K) {zs : List K},
+  List.Pairwise (fun a b => a ≠ b) zs →
+    (∀ (c : C), c ∈ m.listed → π c ∈ zs) →
+      ((Becoming.HeldForReading.shortfall m gain loss fun c =>
+            Becoming.HeldForReading.leastThrough m gain loss π (π c)) =
+          0 ↔
+        ∀ (z : K),
+          z ∈ zs →
+            Becoming.HeldForReading.goExcessWithin m gain loss π z = 0 ∨
+              Becoming.HeldForReading.offExcessWithin m gain loss π z = 0)
+@Becoming.HeldForReading.finer_least_le : ∀ {C K : Type} [inst : DecidableEq K] {L : Type}
+  (m : Becoming.HeldForReading.Model C) (gain loss : C → Nat) (π : C → K) {zs : List K},
+  List.Pairwise (fun a b => a ≠ b) zs →
+    (∀ (c : C), c ∈ m.listed → π c ∈ zs) →
+      ∀ (f : K → L) (s : L → Bool),
+        (Becoming.HeldForReading.shortfall m gain loss fun c =>
+            Becoming.HeldForReading.leastThrough m gain loss π (π c)) ≤
+          Becoming.HeldForReading.shortfall m gain loss fun c => s (f (π c))
+@Becoming.HeldForReading.through_threshold_iff : ∀ {C K : Type} [inst : DecidableEq K]
+  (m : Becoming.HeldForReading.Model C) (gain loss : C → Nat) (π : C → K) {zs : List K},
+  List.Pairwise (fun a b => a ≠ b) zs →
+    (∀ (c : C), c ∈ m.listed → π c ∈ zs) →
+      ∀ (forgone : Nat),
+        (∃ s,
+            m.committed (Becoming.HeldForReading.shifted gain loss) Becoming.HeldForReading.Move.go + forgone ≤
+                m.after (Becoming.HeldForReading.shifted gain loss) (Becoming.HeldForReading.byRule fun c => s (π c)) ∧
+              m.committed (Becoming.HeldForReading.shifted gain loss) Becoming.HeldForReading.Move.off + forgone ≤
+                m.after (Becoming.HeldForReading.shifted gain loss) (Becoming.HeldForReading.byRule fun c => s (π c))) ↔
+          (Becoming.HeldForReading.shortfall m gain loss fun c =>
+                  Becoming.HeldForReading.leastThrough m gain loss π (π c)) +
+                forgone ≤
+              Becoming.HeldForReading.offExcess m gain loss ∧
+            (Becoming.HeldForReading.shortfall m gain loss fun c =>
+                  Becoming.HeldForReading.leastThrough m gain loss π (π c)) +
+                forgone ≤
+              Becoming.HeldForReading.goExcess m gain loss
+Becoming.HeldForReading.first_open : Becoming.HeldForReading.Pick.first ∈
+  [Becoming.HeldForReading.Pick.first, Becoming.HeldForReading.Pick.second]
+Becoming.HeldForReading.second_open : Becoming.HeldForReading.Pick.second ∈
+  [Becoming.HeldForReading.Pick.first, Becoming.HeldForReading.Pick.second]
+@Becoming.HeldForReading.pairPolicy_best : ∀ {α : Type u_1} {C : Type} (above : C → α → α → Bool) (x y : α) (c : C),
+  Becoming.HeldForReading.BestAt [Becoming.HeldForReading.Pick.first, Becoming.HeldForReading.Pick.second]
+    (Becoming.HeldForReading.pairValue above x y) (Becoming.HeldForReading.pairPolicy above x y) c
+@Becoming.HeldForReading.reach_fixes : ∀ {α : Type u_1} {O : Type u_2} {C : Type} (m : Becoming.HeldForReading.Model C)
+  {ch : Becoming.ChoiceOccasions α O} {above : C → α → α → Bool},
+  (∀ (c : C),
+      c ∈ m.listed → 0 < m.weight c → ∀ (a b d : α), above c a b = true → above c b d = true → above c a d = true) →
+    (∀ (c : C), c ∈ m.listed → 0 < m.weight c → ch.Accords fun a b => above c a b = true) →
+      ∀ {x y : α},
+        Becoming.«及» ch.Shown x y →
+          m.committed (Becoming.HeldForReading.pairValue above x y) Becoming.HeldForReading.Pick.first =
+            m.after (Becoming.HeldForReading.pairValue above x y) (Becoming.HeldForReading.pairPolicy above x y)
+@Becoming.HeldForReading.first_below_iff : ∀ {α : Type u_1} {C : Type} {above : C → α → α → Bool} {x y : α} {c : C},
+  (above c y x = true → above c x y = false) →
+    (Becoming.HeldForReading.pairValue above x y c Becoming.HeldForReading.Pick.first <
+        Becoming.HeldForReading.pairValue above x y c (Becoming.HeldForReading.pairPolicy above x y c) ↔
+      above c y x = true)
+@Becoming.HeldForReading.second_below_iff : ∀ {α : Type u_1} {C : Type} {above : C → α → α → Bool} {x y : α} {c : C},
+  (above c y x = true → above c x y = false) →
+    (Becoming.HeldForReading.pairValue above x y c Becoming.HeldForReading.Pick.second <
+        Becoming.HeldForReading.pairValue above x y c (Becoming.HeldForReading.pairPolicy above x y c) ↔
+      above c x y = true)
+@Becoming.HeldForReading.pair_gains_iff : ∀ {α : Type u_1} {C : Type} (m : Becoming.HeldForReading.Model C)
+  {above : C → α → α → Bool} {x y : α},
+  (∀ (c : C), c ∈ m.listed → 0 < m.weight c → above c y x = true → above c x y = false) →
+    (m.committed (Becoming.HeldForReading.pairValue above x y) Becoming.HeldForReading.Pick.first <
+          m.after (Becoming.HeldForReading.pairValue above x y) (Becoming.HeldForReading.pairPolicy above x y) ∧
+        m.committed (Becoming.HeldForReading.pairValue above x y) Becoming.HeldForReading.Pick.second <
+          m.after (Becoming.HeldForReading.pairValue above x y) (Becoming.HeldForReading.pairPolicy above x y) ↔
+      (∃ c, c ∈ m.listed ∧ 0 < m.weight c ∧ above c y x = true) ∧
+        ∃ c, c ∈ m.listed ∧ 0 < m.weight c ∧ above c x y = true)
+@Becoming.HeldForReading.pair_gains_unreached : ∀ {α : Type u_1} {O : Type u_2} {C : Type}
+  (m : Becoming.HeldForReading.Model C) {ch : Becoming.ChoiceOccasions α O} {above : C → α → α → Bool},
+  (∀ (c : C),
+      c ∈ m.listed → 0 < m.weight c → ∀ (a b d : α), above c a b = true → above c b d = true → above c a d = true) →
+    (∀ (c : C), c ∈ m.listed → 0 < m.weight c → ch.Accords fun a b => above c a b = true) →
+      ∀ {x y : α},
+        m.committed (Becoming.HeldForReading.pairValue above x y) Becoming.HeldForReading.Pick.first <
+              m.after (Becoming.HeldForReading.pairValue above x y) (Becoming.HeldForReading.pairPolicy above x y) ∧
+            m.committed (Becoming.HeldForReading.pairValue above x y) Becoming.HeldForReading.Pick.second <
+              m.after (Becoming.HeldForReading.pairValue above x y) (Becoming.HeldForReading.pairPolicy above x y) →
+          ¬Becoming.«及» ch.Shown x y ∧ ¬Becoming.«及» ch.Shown y x
+@Becoming.HeldForReading.SignLoop.rests_unread : ∀ {hs : List Becoming.HeldForReading.SignLoop.Sign},
+  hs.all Becoming.HeldForReading.SignLoop.predictsGain = true →
+    ∀ (e : Becoming.HeldForReading.SignLoop.Sign) (n : Nat),
+      Becoming.HeldForReading.SignLoop.loop.law.course
+          (Becoming.ReadingLoop.Loop.start hs Becoming.HeldForReading.SignLoop.Seen.plain
+            Becoming.HeldForReading.SignLoop.Act.go e)
+          (n + 1) =
+        { internal := (hs, some (Becoming.HeldForReading.SignLoop.Seen.plain, Becoming.HeldForReading.SignLoop.Act.go)),
+          sensory := Becoming.HeldForReading.SignLoop.Seen.plain, active := Becoming.HeldForReading.SignLoop.Act.go,
+          external := e }
+@Becoming.HeldForReading.SignLoop.never_senses_stop : ∀ {hs : List Becoming.HeldForReading.SignLoop.Sign},
+  hs.all Becoming.HeldForReading.SignLoop.predictsGain = true →
+    ∀ (e : Becoming.HeldForReading.SignLoop.Sign) (n : Nat),
+      (Becoming.HeldForReading.SignLoop.loop.law.course
+            (Becoming.ReadingLoop.Loop.start hs Becoming.HeldForReading.SignLoop.Seen.plain
+              Becoming.HeldForReading.SignLoop.Act.go e)
+            n).sensory ≠
+        Becoming.HeldForReading.SignLoop.Seen.stop
+Becoming.HeldForReading.SignLoop.refuted_senses_stop : Becoming.HeldForReading.SignLoop.loop.law.course
+    (Becoming.ReadingLoop.Loop.start [Becoming.HeldForReading.SignLoop.Sign.gains]
+      Becoming.HeldForReading.SignLoop.Seen.plain Becoming.HeldForReading.SignLoop.Act.hold
+      Becoming.HeldForReading.SignLoop.Sign.loses)
+    1 =
+  {
+    internal :=
+      ([Becoming.HeldForReading.SignLoop.Sign.gains],
+        some (Becoming.HeldForReading.SignLoop.Seen.plain, Becoming.HeldForReading.SignLoop.Act.hold)),
+    sensory := Becoming.HeldForReading.SignLoop.Seen.stop, active := Becoming.HeldForReading.SignLoop.Act.go,
+    external := Becoming.HeldForReading.SignLoop.Sign.loses }
+Becoming.HeldForReading.SignLoop.refuted_drops : Becoming.HeldForReading.SignLoop.loop.law.course
+    (Becoming.ReadingLoop.Loop.start [Becoming.HeldForReading.SignLoop.Sign.gains]
+      Becoming.HeldForReading.SignLoop.Seen.plain Becoming.HeldForReading.SignLoop.Act.hold
+      Becoming.HeldForReading.SignLoop.Sign.loses)
+    2 =
+  { internal := ([], some (Becoming.HeldForReading.SignLoop.Seen.stop, Becoming.HeldForReading.SignLoop.Act.go)),
+    sensory := Becoming.HeldForReading.SignLoop.Seen.plain, active := Becoming.HeldForReading.SignLoop.Act.go,
+    external := Becoming.HeldForReading.SignLoop.Sign.loses }
+Becoming.HeldForReading.SignLoop.refuted_goes_on : ∀ (n : Nat),
+  Becoming.HeldForReading.SignLoop.loop.law.course
+      (Becoming.ReadingLoop.Loop.start [Becoming.HeldForReading.SignLoop.Sign.gains]
+        Becoming.HeldForReading.SignLoop.Seen.plain Becoming.HeldForReading.SignLoop.Act.hold
+        Becoming.HeldForReading.SignLoop.Sign.loses)
+      (n + 3) =
+    { internal := ([], some (Becoming.HeldForReading.SignLoop.Seen.plain, Becoming.HeldForReading.SignLoop.Act.go)),
+      sensory := Becoming.HeldForReading.SignLoop.Seen.plain, active := Becoming.HeldForReading.SignLoop.Act.go,
+      external := Becoming.HeldForReading.SignLoop.Sign.loses }
+Becoming.HeldForReading.SignLoop.both_stopped : Becoming.HeldForReading.SignLoop.loop.law.course
+      (Becoming.ReadingLoop.Loop.start
+        [Becoming.HeldForReading.SignLoop.Sign.gains, Becoming.HeldForReading.SignLoop.Sign.loses]
+        Becoming.HeldForReading.SignLoop.Seen.plain Becoming.HeldForReading.SignLoop.Act.hold
+        Becoming.HeldForReading.SignLoop.Sign.loses)
+      1 =
+    {
+      internal :=
+        ([Becoming.HeldForReading.SignLoop.Sign.gains, Becoming.HeldForReading.SignLoop.Sign.loses],
+          some (Becoming.HeldForReading.SignLoop.Seen.plain, Becoming.HeldForReading.SignLoop.Act.hold)),
+      sensory := Becoming.HeldForReading.SignLoop.Seen.stop, active := Becoming.HeldForReading.SignLoop.Act.hold,
+      external := Becoming.HeldForReading.SignLoop.Sign.loses } ∧
+  Becoming.HeldForReading.SignLoop.loop.law.course
+      (Becoming.ReadingLoop.Loop.start
+        [Becoming.HeldForReading.SignLoop.Sign.gains, Becoming.HeldForReading.SignLoop.Sign.loses]
+        Becoming.HeldForReading.SignLoop.Seen.plain Becoming.HeldForReading.SignLoop.Act.hold
+        Becoming.HeldForReading.SignLoop.Sign.loses)
+      2 =
+    {
+      internal :=
+        ([Becoming.HeldForReading.SignLoop.Sign.loses],
+          some (Becoming.HeldForReading.SignLoop.Seen.stop, Becoming.HeldForReading.SignLoop.Act.hold)),
+      sensory := Becoming.HeldForReading.SignLoop.Seen.stop, active := Becoming.HeldForReading.SignLoop.Act.off,
+      external := Becoming.HeldForReading.SignLoop.Sign.loses }
+Becoming.HeldForReading.SignLoop.both_released : Becoming.HeldForReading.SignLoop.loop.law.course
+      (Becoming.ReadingLoop.Loop.start
+        [Becoming.HeldForReading.SignLoop.Sign.gains, Becoming.HeldForReading.SignLoop.Sign.loses]
+        Becoming.HeldForReading.SignLoop.Seen.plain Becoming.HeldForReading.SignLoop.Act.hold
+        Becoming.HeldForReading.SignLoop.Sign.gains)
+      1 =
+    {
+      internal :=
+        ([Becoming.HeldForReading.SignLoop.Sign.gains, Becoming.HeldForReading.SignLoop.Sign.loses],
+          some (Becoming.HeldForReading.SignLoop.Seen.plain, Becoming.HeldForReading.SignLoop.Act.hold)),
+      sensory := Becoming.HeldForReading.SignLoop.Seen.release, active := Becoming.HeldForReading.SignLoop.Act.hold,
+      external := Becoming.HeldForReading.SignLoop.Sign.gains } ∧
+  Becoming.HeldForReading.SignLoop.loop.law.course
+      (Becoming.ReadingLoop.Loop.start
+        [Becoming.HeldForReading.SignLoop.Sign.gains, Becoming.HeldForReading.SignLoop.Sign.loses]
+        Becoming.HeldForReading.SignLoop.Seen.plain Becoming.HeldForReading.SignLoop.Act.hold
+        Becoming.HeldForReading.SignLoop.Sign.gains)
+      2 =
+    {
+      internal :=
+        ([Becoming.HeldForReading.SignLoop.Sign.gains],
+          some (Becoming.HeldForReading.SignLoop.Seen.release, Becoming.HeldForReading.SignLoop.Act.hold)),
+      sensory := Becoming.HeldForReading.SignLoop.Seen.release, active := Becoming.HeldForReading.SignLoop.Act.go,
+      external := Becoming.HeldForReading.SignLoop.Sign.gains }
+Becoming.HeldForReading.SignLoop.both_turns_off : ∀ (n : Nat),
+  Becoming.HeldForReading.SignLoop.loop.law.course
+      (Becoming.ReadingLoop.Loop.start
+        [Becoming.HeldForReading.SignLoop.Sign.gains, Becoming.HeldForReading.SignLoop.Sign.loses]
+        Becoming.HeldForReading.SignLoop.Seen.plain Becoming.HeldForReading.SignLoop.Act.hold
+        Becoming.HeldForReading.SignLoop.Sign.loses)
+      (n + 4) =
+    {
+      internal :=
+        ([Becoming.HeldForReading.SignLoop.Sign.loses],
+          some (Becoming.HeldForReading.SignLoop.Seen.plain, Becoming.HeldForReading.SignLoop.Act.off)),
+      sensory := Becoming.HeldForReading.SignLoop.Seen.plain, active := Becoming.HeldForReading.SignLoop.Act.off,
+      external := Becoming.HeldForReading.SignLoop.Sign.loses }
+Becoming.HeldForReading.SignLoop.both_goes_on : ∀ (n : Nat),
+  Becoming.HeldForReading.SignLoop.loop.law.course
+      (Becoming.ReadingLoop.Loop.start
+        [Becoming.HeldForReading.SignLoop.Sign.gains, Becoming.HeldForReading.SignLoop.Sign.loses]
+        Becoming.HeldForReading.SignLoop.Seen.plain Becoming.HeldForReading.SignLoop.Act.hold
+        Becoming.HeldForReading.SignLoop.Sign.gains)
+      (n + 4) =
+    {
+      internal :=
+        ([Becoming.HeldForReading.SignLoop.Sign.gains],
+          some (Becoming.HeldForReading.SignLoop.Seen.plain, Becoming.HeldForReading.SignLoop.Act.go)),
+      sensory := Becoming.HeldForReading.SignLoop.Seen.plain, active := Becoming.HeldForReading.SignLoop.Act.go,
+      external := Becoming.HeldForReading.SignLoop.Sign.gains }
+Becoming.HeldForReading.SignLoop.both_off : ∀ (n : Nat),
+  (Becoming.HeldForReading.SignLoop.loop.law.course
+        (Becoming.ReadingLoop.Loop.start
+          [Becoming.HeldForReading.SignLoop.Sign.gains, Becoming.HeldForReading.SignLoop.Sign.loses]
+          Becoming.HeldForReading.SignLoop.Seen.plain Becoming.HeldForReading.SignLoop.Act.hold
+          Becoming.HeldForReading.SignLoop.Sign.loses)
+        (n + 2)).active =
+    Becoming.HeldForReading.SignLoop.Act.off
+Becoming.HeldForReading.SignLoop.both_on : ∀ (n : Nat),
+  (Becoming.HeldForReading.SignLoop.loop.law.course
+        (Becoming.ReadingLoop.Loop.start
+          [Becoming.HeldForReading.SignLoop.Sign.gains, Becoming.HeldForReading.SignLoop.Sign.loses]
+          Becoming.HeldForReading.SignLoop.Seen.plain Becoming.HeldForReading.SignLoop.Act.hold
+          Becoming.HeldForReading.SignLoop.Sign.gains)
+        (n + 2)).active =
+    Becoming.HeldForReading.SignLoop.Act.go
+@Becoming.HeldForReading.SignLoop.loses_of_all_false : ∀ {hs : List Becoming.HeldForReading.SignLoop.Sign},
+  hs.all Becoming.HeldForReading.SignLoop.predictsGain = false → Becoming.HeldForReading.SignLoop.Sign.loses ∈ hs
+@Becoming.HeldForReading.SignLoop.not_loses_of_all_true : ∀ {hs : List Becoming.HeldForReading.SignLoop.Sign},
+  hs.all Becoming.HeldForReading.SignLoop.predictsGain = true → ¬Becoming.HeldForReading.SignLoop.Sign.loses ∈ hs
+@Becoming.HeldForReading.SignLoop.gains_of_all_false : ∀ {hs : List Becoming.HeldForReading.SignLoop.Sign},
+  (hs.all fun h => !Becoming.HeldForReading.SignLoop.predictsGain h) = false →
+    Becoming.HeldForReading.SignLoop.Sign.gains ∈ hs
+@Becoming.HeldForReading.SignLoop.not_gains_of_all_true : ∀ {hs : List Becoming.HeldForReading.SignLoop.Sign},
+  (hs.all fun h => !Becoming.HeldForReading.SignLoop.predictsGain h) = true →
+    ¬Becoming.HeldForReading.SignLoop.Sign.gains ∈ hs
+Becoming.HeldForReading.SignLoop.choose_hold_iff_mem : ∀ (hs : List Becoming.HeldForReading.SignLoop.Sign)
+  (s : Becoming.HeldForReading.SignLoop.Seen),
+  Becoming.HeldForReading.SignLoop.choose hs s = Becoming.HeldForReading.SignLoop.Act.hold ↔
+    Becoming.HeldForReading.SignLoop.Sign.loses ∈ hs ∧ Becoming.HeldForReading.SignLoop.Sign.gains ∈ hs
+@Becoming.HeldForReading.SignLoop.loses_of_lt : ∀ {hs : List Becoming.HeldForReading.SignLoop.Sign}
+  {c : Becoming.HeldForReading.SignLoop.Sign},
+  c ∈ hs →
+    Becoming.HeldForReading.SignLoop.gainOf c < Becoming.HeldForReading.SignLoop.lossOf c →
+      Becoming.HeldForReading.SignLoop.Sign.loses ∈ hs
+@Becoming.HeldForReading.SignLoop.gains_of_lt : ∀ {hs : List Becoming.HeldForReading.SignLoop.Sign}
+  {c : Becoming.HeldForReading.SignLoop.Sign},
+  c ∈ hs →
+    Becoming.HeldForReading.SignLoop.lossOf c < Becoming.HeldForReading.SignLoop.gainOf c →
+      Becoming.HeldForReading.SignLoop.Sign.gains ∈ hs
+Becoming.HeldForReading.SignLoop.choose_hold_iff : ∀ (hs : List Becoming.HeldForReading.SignLoop.Sign)
+  (s : Becoming.HeldForReading.SignLoop.Seen),
+  Becoming.HeldForReading.SignLoop.choose hs s = Becoming.HeldForReading.SignLoop.Act.hold ↔
+    (Becoming.HeldForReading.SignLoop.model hs).committed
+          (Becoming.HeldForReading.shifted Becoming.HeldForReading.SignLoop.gainOf
+            Becoming.HeldForReading.SignLoop.lossOf)
+          Becoming.HeldForReading.Move.go <
+        (Becoming.HeldForReading.SignLoop.model hs).after
+          (Becoming.HeldForReading.shifted Becoming.HeldForReading.SignLoop.gainOf
+            Becoming.HeldForReading.SignLoop.lossOf)
+          (Becoming.HeldForReading.byReading Becoming.HeldForReading.SignLoop.gainOf
+            Becoming.HeldForReading.SignLoop.lossOf) ∧
+      (Becoming.HeldForReading.SignLoop.model hs).committed
+          (Becoming.HeldForReading.shifted Becoming.HeldForReading.SignLoop.gainOf
+            Becoming.HeldForReading.SignLoop.lossOf)
+          Becoming.HeldForReading.Move.off <
+        (Becoming.HeldForReading.SignLoop.model hs).after
+          (Becoming.HeldForReading.shifted Becoming.HeldForReading.SignLoop.gainOf
+            Becoming.HeldForReading.SignLoop.lossOf)
+          (Becoming.HeldForReading.byReading Becoming.HeldForReading.SignLoop.gainOf
+            Becoming.HeldForReading.SignLoop.lossOf)
+@Becoming.HeldForReading.SignLoop.offExcess_of_all_true : ∀ {hs : List Becoming.HeldForReading.SignLoop.Sign},
+  hs.all Becoming.HeldForReading.SignLoop.predictsGain = true →
+    Becoming.HeldForReading.offExcess (Becoming.HeldForReading.SignLoop.model hs)
+        Becoming.HeldForReading.SignLoop.gainOf Becoming.HeldForReading.SignLoop.lossOf =
+      0
+@Becoming.HeldForReading.SignLoop.goExcess_of_all_not : ∀ {hs : List Becoming.HeldForReading.SignLoop.Sign},
+  (hs.all fun h => !Becoming.HeldForReading.SignLoop.predictsGain h) = true →
+    Becoming.HeldForReading.goExcess (Becoming.HeldForReading.SignLoop.model hs) Becoming.HeldForReading.SignLoop.gainOf
+        Becoming.HeldForReading.SignLoop.lossOf =
+      0
+Becoming.HeldForReading.SignLoop.choose_go_ties : ∀ (hs : List Becoming.HeldForReading.SignLoop.Sign)
+  (s : Becoming.HeldForReading.SignLoop.Seen),
+  Becoming.HeldForReading.SignLoop.choose hs s = Becoming.HeldForReading.SignLoop.Act.go →
+    (Becoming.HeldForReading.SignLoop.model hs).after
+        (Becoming.HeldForReading.shifted Becoming.HeldForReading.SignLoop.gainOf
+          Becoming.HeldForReading.SignLoop.lossOf)
+        (Becoming.HeldForReading.byReading Becoming.HeldForReading.SignLoop.gainOf
+          Becoming.HeldForReading.SignLoop.lossOf) =
+      (Becoming.HeldForReading.SignLoop.model hs).committed
+        (Becoming.HeldForReading.shifted Becoming.HeldForReading.SignLoop.gainOf
+          Becoming.HeldForReading.SignLoop.lossOf)
+        Becoming.HeldForReading.Move.go
+Becoming.HeldForReading.SignLoop.choose_off_ties : ∀ (hs : List Becoming.HeldForReading.SignLoop.Sign)
+  (s : Becoming.HeldForReading.SignLoop.Seen),
+  Becoming.HeldForReading.SignLoop.choose hs s = Becoming.HeldForReading.SignLoop.Act.off →
+    (Becoming.HeldForReading.SignLoop.model hs).after
+        (Becoming.HeldForReading.shifted Becoming.HeldForReading.SignLoop.gainOf
+          Becoming.HeldForReading.SignLoop.lossOf)
+        (Becoming.HeldForReading.byReading Becoming.HeldForReading.SignLoop.gainOf
+          Becoming.HeldForReading.SignLoop.lossOf) =
+      (Becoming.HeldForReading.SignLoop.model hs).committed
+        (Becoming.HeldForReading.shifted Becoming.HeldForReading.SignLoop.gainOf
+          Becoming.HeldForReading.SignLoop.lossOf)
+        Becoming.HeldForReading.Move.off

@@ -114,6 +114,7 @@ This result reuses the sorting and order of “The order of exchanges as the inv
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `Becoming.Commutes`, `Becoming.KeepsOrder`, `Becoming.Orients`, `Becoming.Rearranges`, `Becoming.rearranges_iff`, `Becoming.DecidesApart`, `Becoming.normalSteps`, `Becoming.normalForm`, `Becoming.normalForm_iff`, `Becoming.normalForm_normal`, `Becoming.normalForm_least`, `Becoming.CompleteInvariant`, `Becoming.complete_iff`, `Becoming.decides_of_complete`, `Becoming.Footprinted.normalize`, `Becoming.Footprinted.normalize_reorder`, `Becoming.Triple.not_rearranged`, `lexicographic normal form`, `字典序正规形`
 

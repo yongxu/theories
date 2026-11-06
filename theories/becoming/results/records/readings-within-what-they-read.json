@@ -277,11 +277,10 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Recurrence.lean",
       "role": "proof",
-      "sha256": "536e2a32c187c540f3f86a69742722375bc384831fb2d3f763be1e5f15fb29d0",
+      "sha256": "a0039b199331110185dd666ce67dfc960dc6658511044568a2dd8548e4469dbe",
       "declarations": [
         "Becoming.Law.orbit",
-        "Becoming.Law.Returns",
-        "Becoming.gap_of_lt"
+        "Becoming.Law.Returns"
       ]
     },
     {
@@ -391,6 +390,20 @@
       "role": "receipt",
       "sha256": "2b986ea3e3de748b2a20f9973fbbcd4e6fd8dec8b40e9997fac3c29dd0d9cb1d",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "role": "proof",
+      "sha256": "cb2c9c8ba8e16916b41a36e1c392f3cd4840a7436b2817c12796c866908020a7",
+      "declarations": [
+        "Becoming.gap_of_lt"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "role": "receipt",
+      "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -410,8 +423,15 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Recurrence.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Recurrence",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Prelude",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -485,6 +505,10 @@
     {
       "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section 441): statement narrowed to what the Lean proves, the completeness clause to inhabited types with equality of values decided and the unfolding stated as incomplete at every step; the claim split into nine laws, each read against its declarations in Diagonal.lean, Frame.lean and Recurrence.lean (the gap, completeness and fixed values, claims, values by equality, unfolding, gaps and return, finite stocks, the Bool unfolding, and the rhythm); the limitations to three does-not-show items and the standard boundaries no-ethical-premise, no-evaluation and names-provisional; work-board, round and section markers cut from the correspondence and its readings labelled AI readings; Law.orbit and Law.Returns named in a law from Recurrence.lean's references; no premise, status or source hash changed. Every earlier sentence is mapped in [readings-within-what-they-read.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/readings-within-what-they-read.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in related entries, each read against the Lean it cites.",
       "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 441 节）：陈述按 Lean 所证收窄：完备一句限于类型非空、值的相等可判定，展开写为每一步都不完备；主张拆为九条规律，各条对照 Diagonal.lean、Frame.lean 与 Recurrence.lean 中的声明核读（缺口、完备与不动值、主张、以相等比较的值、展开、缺口与返回、有限储存、Bool 上的展开、节律）；限制改为三条“未表明”与通用边界 no-ethical-premise、no-evaluation、names-provisional；删去对应说明中的工作板、轮次与节号标记，其读法标为 AI 的读法；一条规律引用 Recurrence.lean 引用中的 Law.orbit 与 Law.Returns；前提、状态与来源哈希均未改变。每句旧文本的去向见 [readings-within-what-they-read.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/readings-within-what-they-read.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及相关条目，各条对照所引 Lean 核读。"
+    },
+    {
+      "en": "6 November 2026, board item LM: declarations this record lists moved with the helpers stated once; its references follow them, and no law changed.",
+      "zh": "2026年11月6日，工作板条目 LM：此记录所列之声明随只陈述一次之辅助引理而移；其引用从之，诸律不变。"
     }
   ],
   "text_versions": [

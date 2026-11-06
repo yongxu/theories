@@ -75,6 +75,7 @@ Keeping exactly the candidates consistent with the observations is the version s
 | provenance | [StandardsBridge.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/StandardsBridge.lean) | — |
 | statement | [03-KNOWING.md](../../chapters/03-KNOWING.md) | — |
 | integration | [DEFECTS-FOUND.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/DEFECTS-FOUND.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `learning a rule by narrowing`, `经收窄学习规则`, `Becoming.Narrowing.answer_iff`, `Becoming.Narrowing.unique_maximal_safe`
 

@@ -79,7 +79,7 @@
         "Becoming.Web.UnderminingAlong",
         "Becoming.Web.Linked.itself_held",
         "Becoming.Web.Linked.itself_onward",
-        "Becoming.Web.exists_steps_between",
+        "Becoming.le_dest",
         "Becoming.Web.metAboveAlong_itself_iff",
         "Becoming.Web.underminingAlong_itself_iff"
       ]
@@ -192,7 +192,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ContinuedClasses.lean",
       "role": "proof",
-      "sha256": "0de549e2a69e3f2ff2e71174adb5138c2eea863551eefa6d056a36e8efa83356",
+      "sha256": "07174474dff1d5a08b280076e672a1f64b404372484e9dfdef5a5bba43524409",
       "declarations": [
         "Becoming.Web.Continuing",
         "Becoming.Web.RenewingAlong",
@@ -225,7 +225,6 @@
         "Becoming.Web.UnderminingAlong",
         "Becoming.Web.Linked.itself_held",
         "Becoming.Web.Linked.itself_onward",
-        "Becoming.Web.exists_steps_between",
         "Becoming.Web.metAboveAlong_itself_iff",
         "Becoming.Web.underminingAlong_itself_iff",
         "Becoming.Web.Linked.of_carry",
@@ -268,13 +267,34 @@
       "role": "receipt",
       "sha256": "d7a12bee44f38799684738a3d1442a9802df2daad3faa6a62d501774515d152b",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "role": "proof",
+      "sha256": "cb2c9c8ba8e16916b41a36e1c392f3cd4840a7436b2817c12796c866908020a7",
+      "declarations": [
+        "Becoming.le_dest"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "role": "receipt",
+      "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ContinuedClasses.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T104256.342764Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.ContinuedClasses",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Prelude",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -287,6 +307,10 @@
     {
       "en": "20 October 2026, R50 (study section 269): laws 6 and 7 added, tenure and undermining along a continuation, their name case, invariance under re-identification, and monotonicity in the links; statement and does_not_show updated (tenure and undermining no longer open).",
       "zh": "2026 年 10 月 20 日，R50（研究第 269 节）：加第 6、7 条，沿延续关系的任期与侵蚀、名的情形、改认下不变、对链接的单调；陈述与未表明项更新（任期与侵蚀不再开放）。"
+    },
+    {
+      "en": "6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.",
+      "zh": "2026年11月6日，工作板条目 LM：此记录所列辅助引理现只陈述一次，在 Prelude、Flow、Change 或 Laws，或即 Lean 自有者而从列表除去；改其名，诸律不变。"
     }
   ]
 }

@@ -139,6 +139,7 @@ Ren's proposal (11 October 2026): “can becoming provide wisdoms to avoid run a
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T191425.159994Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `Becoming.Flow.ExchangeFollows`, `Becoming.Flow.difference_kept`, `Becoming.Flow.alike_while_supported`, `Becoming.Flow.difference_changes_after_divergence`, `Becoming.Flow.subthreshold_alike`, `Becoming.Flow.subthreshold_alike_always`, `Becoming.SupportDrawn.difference_waits`, `Becoming.JointFailure.difference_kept`, `Becoming.Gauged.gauge_changes_difference`, `Becoming.Attracting.higher_breaks_first`, `Becoming.SelfPrey.threshold_on_oneself`, `threshold blindness`, `阈下不见`, `subthreshold registration`, `阈下的差别`
 

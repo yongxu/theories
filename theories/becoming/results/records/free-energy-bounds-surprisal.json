@@ -435,7 +435,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FreeEnergyCounting.lean",
       "role": "proof",
-      "sha256": "02621f3b01f7ced5818e004f95798dbdc76cb3da1d26f224092bb3c68a74fb50"
+      "sha256": "0e73703e239e2bb2a11d256b13aefe9fc2c3eb06f3be7f3041fddc8aefcf2f77"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/free-energy-reals-checks/20261030T043328.214810Z/verification.json",
@@ -491,16 +491,21 @@
       "role": "receipt",
       "sha256": "941d449740ef5e874e7abcdb46a37f399aa846017597e26b6cae7a177276b07e",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "role": "receipt",
+      "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T135137.430317Z/verification.json",
+      "role": "receipt",
+      "sha256": "a81a117f34fdfa4d44ecee3da8ab63099a7febb99c2accbd7b6fc4ec325f2add",
+      "declarations": []
     }
   ],
   "proof_bindings": [
-    {
-      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ConditionalWeights.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T153820.435638Z/verification.json",
-      "sha256_pointer": "/source_sha256/Becoming.ConditionalWeights",
-      "success_pointer": "/status",
-      "success_value": "passed"
-    },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean",
       "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/free-energy-reals-checks/20261102T185502.239685Z/verification.json",
@@ -509,8 +514,15 @@
       "success_value": "passed"
     },
     {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ConditionalWeights.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T153820.435638Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.ConditionalWeights",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FreeEnergyCounting.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261102T185431.953044Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T135137.430317Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.FreeEnergyCounting",
       "success_pointer": "/status",
       "success_value": "passed"

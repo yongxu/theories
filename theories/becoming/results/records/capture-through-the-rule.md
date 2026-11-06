@@ -105,6 +105,7 @@ Closes the third gap of the map of the Chinese sources onto the spine (record ch
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T070053.995027Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `capture through the rule`, `经由规则的捕获`, `rule capture`, `the winner shapes the rule`, `胜者塑造规则`, `二柄`, `君反制于臣`, `据有余而制不足`, `壹赏壹刑壹教`, `Becoming.RuleCapture.locked_stays`, `Becoming.RuleCapture.perturbation_absorbed`, `Becoming.RuleCapture.uniform_locks`, `Becoming.RuleCapture.favouring_locks`, `Becoming.RuleCapture.CarrierCounts.margin_course`
 

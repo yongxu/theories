@@ -1,4 +1,3 @@
-import RelationalRenewal
 import Becoming.Amounts
 
 /-!
@@ -34,8 +33,6 @@ import the frame.
 -/
 
 namespace Becoming
-
-open RelationalRenewal
 
 universe u v
 

@@ -1,4 +1,5 @@
 import Becoming.GrammarReadings
+import Becoming.GrammarTesting
 
 /-!
 # The corpus's candidate theorems of the grammar, tested (文法之候选定理，检验)
@@ -273,22 +274,6 @@ under every class: it neither begins nor ends (「若法無成無壞，是法應
 theorem «自缘则常» {R : «际» α} {x : α} (h : R x x) {E : «际» α} (hE : «类» E) : «住» R E x :=
   ⟨⟨x, h, hE.refl x⟩, ⟨x, h, hE.refl x⟩⟩
 
-/-- **Thread from hemp, cloth from thread (從縷有布、從麻有縷, ZL-07-164).** A middle link that is not its own
-condition abides under the one and begins and ends under identity. -/
-theorem «缕之无定性» {R : «际» α} {x y z : α} (nr : ¬ R y y) (hxy : R x y) (hyz : R y z) :
-    «住» R «一» y ∧ «生» R «静» y ∧ «亡» R «静» y :=
-  ⟨⟨⟨x, hxy, trivial⟩, ⟨z, hyz, trivial⟩⟩,
-   fun ⟨w, r, e⟩ => by cases e; exact nr r,
-   fun ⟨w, r, e⟩ => by cases e; exact nr r⟩
-
-/-- **The four positions at once (四相俱時而有，皆無自立, QXL-JS-049).** An occurrence with a condition and
-a consequence, not its own condition, begins and ends under identity, abides under the one, and
-alters into its consequence under the one while identity tells them apart. -/
-theorem «四相俱时» {R : «际» α} {x y z : α} (nr : ¬ R y y) (hxy : R x y) (hyz : R y z) :
-    «生» R «静» y ∧ «亡» R «静» y ∧ «住» R «一» y ∧ «异» R «一» «静» y z :=
-  match «缕之无定性» nr hxy hyz with
-  | ⟨a, b, e⟩ => ⟨b, e, a, ⟨hyz, trivial⟩, fun q => by cases q; exact nr hyz⟩
-
 /-- **Everything ends at each moment exactly where nothing is its own condition (念念灭当且仅当无自缘).**
 「一切有為法念念滅故，無不滅法」 (ZL-07-203) and 「一切有為法常有滅相」 (ZL-01-161), read as ending under
 identity, are the premise that nothing conditions itself. -/
@@ -562,6 +547,37 @@ theorem «诘之对称» {R E : «际» α} (hE : «则» E («逆» E)) : ∀ k
      fun v' r' => match b v' r' with | ⟨v, r, s⟩ => ⟨v, r, «诘之对称» hE k v v' s⟩,
      fun v r => match f v r with | ⟨v', r', s⟩ => ⟨v', r', «诘之对称» hE k v v' s⟩⟩
 
+/-- Each stage of inquiry lies within the one before. -/
+theorem «诘之降» {R E : «际» α} : ∀ k u u', «诘» R E (k + 1) u u' → «诘» R E k u u'
+  | 0, _, _, ⟨e, _, _⟩ => e
+  | k + 1, _, _, ⟨e, f, b⟩ =>
+    ⟨e, fun v r => match f v r with | ⟨v', r', s⟩ => ⟨v', r', «诘之降» k v v' s⟩,
+     fun v' r' => match b v' r' with | ⟨v, r, s⟩ => ⟨v, r, «诘之降» k v v' s⟩⟩
+
+/-- Each stage lies within the class. -/
+theorem «层在类内» {R E : «际» α} : ∀ k x y, «层» R E k x y → E x y
+  | 0, _, _, h => h
+  | k + 1, x, y, ⟨l, _, _⟩ => «层在类内» k x y l
+
+/-- **The stages and the stages of inquiry are one relation at every stage (层即诘).** `«层»`, read in
+`Becoming.GrammarTesting` as testing within the net, keeps the stage before at each stage, and `«诘»`,
+read from 不可致詰, keeps only the class; each stage lies within the one before, so they agree. No
+premise. -/
+theorem «层即诘» {R E : «际» α} : ∀ k x y, «层» R E k x y ↔ «诘» R E k x y
+  | 0, _, _ => Iff.rfl
+  | k + 1, x, y =>
+    ⟨fun ⟨l, f, b⟩ => ⟨«层在类内» k x y l,
+       fun v r => match f v r with | ⟨v', r', s⟩ => ⟨v', r', («层即诘» k v v').mp s⟩,
+       fun v' r' => match b v' r' with | ⟨v, r, s⟩ => ⟨v, r, («层即诘» k v v').mp s⟩⟩,
+     fun ⟨e, f, b⟩ => ⟨(«层即诘» k x y).mpr («诘之降» k x y ⟨e, f, b⟩),
+       fun v r => match f v r with | ⟨v', r', s⟩ => ⟨v', r', («层即诘» k v v').mpr s⟩,
+       fun v' r' => match b v' r' with | ⟨v, r, s⟩ => ⟨v, r, («层即诘» k v v').mpr s⟩⟩⟩
+
+/-- Stages are symmetric for a symmetric `E`. -/
+theorem «层之对称» {R E : «际» α} (hE : «则» E («逆» E)) (k : Nat) (x y : α)
+    (h : «层» R E k x y) : «层» R E k y x :=
+  («层即诘» k y x).mpr («诘之对称» hE k x y ((«层即诘» k x y).mp h))
+
 /-- **此三者，不可致詰，故混而為一 (LZ-14-002), under its premise.** Where the relation of being told apart at
 no stage is itself constant (what image-finiteness gives, classically), what no stage tells apart
 lies in the core. -/
@@ -570,6 +586,18 @@ theorem «不可致诘而有常则混而为一» {R E : «际» α} (hE : «则�
     «核» R E u u' :=
   ⟨fun u u' => ∀ k, «诘» R E k u u', fun _ _ s => s 0,
    fun a b s k => «诘之对称» hE k a b (s k), hc, h⟩
+
+/-- **Testing within the net, both ways, under the premise (每层不分而有常则核当且仅当每层不分).** Where
+the relation of being alike at every stage is itself constant and `E` symmetric, the core is exactly
+what no stage tells apart: `«核在每层之内»` with its conditional converse, on the stages `«层»`. The
+premise cannot be dropped: an infinitely branching net fails the converse (`«致诘不尽»`, through
+`«层即诘»`). -/
+theorem «每层不分而有常则核当且仅当每层不分» {R E : «际» α} (hE : «则» E («逆» E))
+    (hc : «有常» R (fun u u' => ∀ k, «层» R E k u u')) {x y : α} :
+    «核» R E x y ↔ ∀ k, «层» R E k x y :=
+  ⟨fun h k => «核在每层之内» R E k x y h,
+   fun h => ⟨fun u u' => ∀ k, «层» R E k u u', fun _ _ s => s 0,
+     fun u u' s k => «层之对称» hE k u u' (s k), hc, h⟩⟩
 
 /-- An infinitely branching net (歧网): `«甲»` and `«乙»` go to every finite chain, and `«乙»` also to an
 endless one. -/
@@ -639,8 +667,8 @@ theorem «甲乙不同核» : ¬ «核» «歧网之步» «一» .«甲» .«�
     exact «无尽与链不同核» hc n 0 n 0 (Nat.zero_add n) s'
 
 /-- **What no finite inquiry separates need not be one (致诘不尽, LZ-14-002).** In an infinitely
-branching net, two occurrences are told apart at no finite stage and yet lie in no class of the
-core: 「不可致詰，故混而為一」 needs a premise. -/
+branching net, two occurrences are told apart at no finite stage and yet no one class of the core
+holds both: 「不可致詰，故混而為一」 needs a premise. -/
 theorem «致诘不尽» :
     ∃ (β : Type) (R : «际» β) (u u' : β), (∀ k, «诘» R «一» k u u') ∧ ¬ «核» R «一» u u' :=
   ⟨«歧网», «歧网之步», .«甲», .«乙», «甲乙不可诘», «甲乙不同核»⟩

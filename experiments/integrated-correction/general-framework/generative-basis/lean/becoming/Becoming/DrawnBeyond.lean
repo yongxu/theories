@@ -355,14 +355,9 @@ beyond, nothing where it does not. -/
 def reach (L : Flow F C) (rest : List C) (t : Nat) (f : F) : Nat :=
   sign (total rest (L.take t f))
 
-/-- A positive reading has sign one. -/
-theorem sign_of_pos : ∀ {x : Nat}, 0 < x → sign x = 1
-  | 0, pos => absurd pos (Nat.lt_irrefl 0)
-  | _ + 1, _ => rfl
-
 /-- A formation taking from the conditions beyond reaches beyond. -/
 theorem reach_of_pos {f : F} (pos : 0 < total rest (L.take t f)) : L.reach rest t f = 1 :=
-  sign_of_pos pos
+  sign_eq_one pos
 
 /-- **Raising past what it adds is reaching beyond.** A formation that gives the family more than
 it takes from it by more than it gives the whole beyond what it takes from the whole takes from the
@@ -388,12 +383,6 @@ theorem RaisesOn.reaches (gainless : L.GainlessOn (ds ++ rest) t) {f : F}
     (present : f ∈ L.present t) (raises : L.RaisesOn ds t f) : 0 < total rest (L.take t f) :=
   reaches_inflow (Nat.lt_of_le_of_lt (Nat.le_of_eq ((congrArg (total ds (L.take t f) + ·)
     (excess_zero_of_le (gainless f present))).trans (Nat.add_zero _))) raises)
-
-/-- A reading at least where another is positive, as signs. -/
-theorem sign_le_of_pos : ∀ {x y : Nat}, (0 < x → 0 < y) → sign x ≤ sign y
-  | 0, _, _ => Nat.zero_le _
-  | n + 1, 0, keeps => absurd (keeps (Nat.succ_pos n)) (Nat.lt_irrefl 0)
-  | _ + 1, _ + 1, _ => Nat.le_refl 1
 
 variable {G : SelectionTerm.Generations F}
 
@@ -424,8 +413,8 @@ theorem lowered_none (reading : ∀ t p, G.amount t p = L.reach rest t p)
     (keeps : ∀ p, p ∈ G.family t → 0 < total rest (L.take t p) →
       ∀ k, k ∈ G.kids t p → 0 < total rest (L.take (t + 1) k)) :
     G.loweredAt t = 0 :=
-  SelectionTerm.total_zero_of fun p mp => SelectionTerm.total_zero_of fun k mk =>
-    SelectionTerm.excess_of_le (Nat.le_trans (Nat.le_of_eq (reading t p))
+  total_eq_zero fun p mp => total_eq_zero fun k mk =>
+    Flow.excess_zero_of_le (Nat.le_trans (Nat.le_of_eq (reading t p))
       (Nat.le_trans (sign_le_of_pos fun pos => keeps p mp pos k mk)
         (Nat.le_of_eq (reading (t + 1) k).symm)))
 

@@ -1,0 +1,67 @@
+@Becoming.Stutter.moving_unique : ∀ {ρ : Nat → Nat},
+  Becoming.Stutter ρ → ∀ {n n' s : Nat}, ρ n = s → ρ (n + 1) = s + 1 → ρ n' = s → ρ (n' + 1) = s + 1 → n = n'
+@Becoming.Stutter.le_moving : ∀ {ρ σ : Nat → Nat},
+  Becoming.Stutter ρ → Becoming.Stutter.Moves ρ σ → ∀ (n : Nat), n ≤ σ (ρ n)
+@Becoming.Stutter.idle_before_moving : ∀ {ρ σ : Nat → Nat},
+  Becoming.Stutter ρ → Becoming.Stutter.Moves ρ σ → ∀ {n k : Nat}, n ≤ k → k < σ (ρ n) → ρ (k + 1) = ρ k
+@Becoming.Stutter.moving_eq : ∀ {ρ σ : Nat → Nat},
+  Becoming.Stutter ρ → Becoming.Stutter.Moves ρ σ → ∀ {n : Nat}, ρ (n + 1) = ρ n + 1 → σ (ρ n) = n
+@Becoming.Stutter.every_step : ∀ {ρ σ : Nat → Nat},
+  Becoming.Stutter ρ →
+    Becoming.Stutter.Moves ρ σ →
+      ∀ {P : Nat → Prop}, (∀ (n : Nat), ρ (n + 1) = ρ n → P n) → (∀ (s : Nat), P (σ s)) → ∀ (n : Nat), P n
+@Becoming.Web.sameAt_of_unmoved : ∀ {X : Type} {W : Becoming.Web X X} (d n : Nat),
+  (∀ (k : Nat), n ≤ k → k < n + d → ∀ (x : X), W.Unmoved k x) → ∀ (x : X), W.SameAt n W (n + d) x
+@Becoming.World.withoutIdle_sameAt : ∀ {v : Becoming.World} {ρ σ : Nat → Nat},
+  Becoming.Stutter ρ →
+    Becoming.Stutter.Moves ρ σ → v.IdleAt ρ → ∀ (n : Nat) (x : v.Relatum), v.web.SameAt n v.web (σ (ρ n)) x
+@Becoming.World.withoutIdle_after : ∀ {v : Becoming.World} {ρ σ : Nat → Nat},
+  Becoming.Stutter ρ →
+    Becoming.Stutter.Moves ρ σ → v.IdleAt ρ → ∀ (s : Nat) (x : v.Relatum), v.web.SameAt (σ s + 1) v.web (σ (s + 1)) x
+@Becoming.World.withoutIdle_premises : ∀ {v : Becoming.World} {ρ σ : Nat → Nat},
+  Becoming.Stutter ρ →
+    Becoming.Stutter.Moves ρ σ →
+      v.IdleAt ρ →
+        ((v.withoutIdle σ).Balanced ↔ v.Balanced) ∧
+          ((v.withoutIdle σ).Dissipative ↔ v.Dissipative) ∧
+            ((v.withoutIdle σ).Acting ↔ v.Acting) ∧
+              ((v.withoutIdle σ).Taking ↔ v.Taking) ∧
+                ((v.withoutIdle σ).Dependent ↔ v.Dependent) ∧ ((v.withoutIdle σ).Embodied ↔ v.Embodied)
+@Becoming.World.withoutIdle_transmits : ∀ {v : Becoming.World} {ρ σ : Nat → Nat},
+  Becoming.Stutter ρ →
+    Becoming.Stutter.Moves ρ σ →
+      v.IdleAt ρ →
+        ∀ {c : v.Relatum} {δ : Nat},
+          (v.withoutIdle σ).flow.TransmitsWithin (v.withoutIdle σ).web c δ ↔ v.flow.TransmitsWithin v.web c δ
+@Becoming.World.withoutIdle_counted : ∀ {v : Becoming.World} {ρ σ : Nat → Nat},
+  Becoming.Stutter ρ → Becoming.Stutter.Moves ρ σ → v.IdleAt ρ → ((v.withoutIdle σ).Counted ↔ v.Counted)
+@Becoming.World.withoutIdle_totals : ∀ {v : Becoming.World} {ρ σ : Nat → Nat},
+  Becoming.Stutter ρ →
+    Becoming.Stutter.Moves ρ σ →
+      v.IdleAt ρ →
+        ∀ (cs : List v.Relatum) (c : v.Relatum) (N m d : Nat),
+          ρ N + d = ρ (N + m) →
+            ((Becoming.total (Becoming.steps N m) fun n => v.flow.taken n c) =
+                Becoming.total (Becoming.steps (ρ N) d) fun s => (v.withoutIdle σ).flow.taken s c) ∧
+              ((Becoming.total (Becoming.steps N m) fun n => v.flow.given n c) =
+                  Becoming.total (Becoming.steps (ρ N) d) fun s => (v.withoutIdle σ).flow.given s c) ∧
+                Becoming.total (Becoming.steps N m) (Becoming.rise (v.web.stock cs)) =
+                    Becoming.total (Becoming.steps (ρ N) d) (Becoming.rise ((v.withoutIdle σ).web.stock cs)) ∧
+                  Becoming.total (Becoming.steps N m) (Becoming.fall (v.web.stock cs)) =
+                      Becoming.total (Becoming.steps (ρ N) d) (Becoming.fall ((v.withoutIdle σ).web.stock cs)) ∧
+                    Becoming.count (Becoming.steps N m) (Becoming.rise (v.web.stock cs)) =
+                        Becoming.count (Becoming.steps (ρ N) d) (Becoming.rise ((v.withoutIdle σ).web.stock cs)) ∧
+                      Becoming.count (Becoming.steps N m) (Becoming.fall (v.web.stock cs)) =
+                        Becoming.count (Becoming.steps (ρ N) d) (Becoming.fall ((v.withoutIdle σ).web.stock cs))
+@Becoming.World.withoutIdle_counts : ∀ {v : Becoming.World} {ρ σ : Nat → Nat},
+  Becoming.Stutter ρ →
+    Becoming.Stutter.Moves ρ σ →
+      v.IdleAt ρ →
+        ∀ [decided : (n : Nat) → (x : v.Relatum) → Decidable (v.web.active n x)] (xs : List v.Relatum) (N m d : Nat),
+          ρ N + d = ρ (N + m) →
+            Becoming.total (Becoming.steps N m) (Becoming.comings xs fun x n => v.web.active n x) =
+                Becoming.total (Becoming.steps (ρ N) d)
+                  (Becoming.comings xs fun x s => (v.withoutIdle σ).web.active s x) ∧
+              Becoming.total (Becoming.steps N m) (Becoming.ceasings xs fun x n => v.web.active n x) =
+                Becoming.total (Becoming.steps (ρ N) d)
+                  (Becoming.ceasings xs fun x s => (v.withoutIdle σ).web.active s x)

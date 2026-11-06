@@ -67,12 +67,6 @@ theorem total_zero_of_within {C : Type} {q : C → Nat} {ds es : List C}
   | _ + 1 => absurd zero
       (Nat.ne_of_gt (Flow.total_pos_of_within within (Nat.lt_of_lt_of_le (Nat.succ_pos _) (Nat.le_of_eq h.symm))))
 
-namespace Web
-
-variable {F C : Type} {W : Web F C}
-
-end Web
-
 namespace Flow
 
 variable {F C : Type} {L : Flow F C} {W : Web F C}

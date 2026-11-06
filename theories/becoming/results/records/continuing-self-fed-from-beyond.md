@@ -121,6 +121,7 @@ Ren's proposal says: “the pure "self" is an illusion, where only when outside 
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
 | proof | [Resolution.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Resolution.lean) | `Becoming.Asymptote.flow`, `Becoming.Asymptote.web`, `Becoming.Asymptote.balances`, `Becoming.Asymptote.closed`, `Becoming.Asymptote.distinct`, `Becoming.Asymptote.dissipative`, `Becoming.Asymptote.taking_recurs`, `Becoming.Asymptote.not_balanced`, `Becoming.rest_needs_quantum`, `Becoming.Flow.taking_needs_refinement`, `Becoming.refinement_feeds_witnesses` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `Becoming.Flow.Conveys`, `Becoming.Flow.FedFromBeyond`, `Becoming.Flow.inward_iff_not_fed`, `Becoming.Flow.fed_of_not_inward`, `Becoming.Flow.fed_from_beyond`, `Becoming.Flow.rising_fed_from_beyond`, `Becoming.Web.embodiedArising_fed_from_beyond`, `Becoming.Lone.fed_not_recurring`, `Becoming.Successive.relay`, `Becoming.Successive.takes_part_once`
 

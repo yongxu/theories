@@ -1,0 +1,137 @@
+@Becoming.TreeSearch.append_assoc : ∀ {α : Type} (a b c : List α), a ++ b ++ c = a ++ (b ++ c)
+Becoming.TreeSearch.child_locate : ∀ (root : Becoming.TreeSearch.Tree) (address : Becoming.TreeSearch.Address)
+  (l r : Becoming.TreeSearch.Tree),
+  (∀ (suffix : Becoming.TreeSearch.Address),
+      Becoming.TreeSearch.locate root (address ++ suffix) = Becoming.TreeSearch.locate (l.fork r) suffix) →
+    ∀ (b : Bool) (suffix : Becoming.TreeSearch.Address),
+      Becoming.TreeSearch.locate root (address ++ [b] ++ suffix) =
+        Becoming.TreeSearch.locate (if b = true then r else l) suffix
+Becoming.TreeSearch.scan_fuel : ∀ (fuel : Nat) (frontier : List Becoming.TreeSearch.Entry),
+  (Becoming.TreeSearch.scan fuel frontier).inspected ≤ fuel
+@Becoming.TreeSearch.coherent_tail : ∀ {root : Becoming.TreeSearch.Tree} {e : Becoming.TreeSearch.Entry}
+  {rest : List Becoming.TreeSearch.Entry},
+  Becoming.TreeSearch.coherent root (e :: rest) → Becoming.TreeSearch.coherent root rest
+@Becoming.TreeSearch.coherent_fork : ∀ {root : Becoming.TreeSearch.Tree} {a : Becoming.TreeSearch.Address}
+  {l r : Becoming.TreeSearch.Tree} {rest : List Becoming.TreeSearch.Entry},
+  Becoming.TreeSearch.coherent root ((a, l.fork r) :: rest) →
+    Becoming.TreeSearch.coherent root ((a ++ [false], l) :: (a ++ [true], r) :: rest)
+Becoming.TreeSearch.scan_sound : ∀ (fuel : Nat) (frontier : List Becoming.TreeSearch.Entry)
+  (root : Becoming.TreeSearch.Tree),
+  Becoming.TreeSearch.coherent root frontier →
+    ∀ (ticket : Becoming.TreeSearch.Ticket),
+      (Becoming.TreeSearch.scan fuel frontier).verdict = Becoming.TreeSearch.Verdict.found ticket →
+        Becoming.TreeSearch.locate root ticket.fst = some ticket.snd
+Becoming.TreeSearch.discover_sound : ∀ (fuel : Nat) (root : Becoming.TreeSearch.Tree)
+  (ticket : Becoming.TreeSearch.Ticket),
+  (Becoming.TreeSearch.discover fuel root).verdict = Becoming.TreeSearch.Verdict.found ticket →
+    Becoming.TreeSearch.locate root ticket.fst = some ticket.snd
+@Becoming.TreeSearch.or_false_iff : ∀ {a b : Bool}, (a || b) = false ↔ a = false ∧ b = false
+Becoming.TreeSearch.exhausted_dead : ∀ (fuel : Nat) (frontier : List Becoming.TreeSearch.Entry),
+  (Becoming.TreeSearch.scan fuel frontier).verdict = Becoming.TreeSearch.Verdict.exhausted →
+    Becoming.TreeSearch.live frontier = false
+Becoming.TreeSearch.fork_burden : ∀ (a : Becoming.TreeSearch.Address) (l r : Becoming.TreeSearch.Tree)
+  (rest : List Becoming.TreeSearch.Entry),
+  Becoming.TreeSearch.burden ((a, l.fork r) :: rest) =
+    Becoming.TreeSearch.burden ((a ++ [false], l) :: (a ++ [true], r) :: rest) + 1
+Becoming.TreeSearch.nodes_pos : ∀ (t : Becoming.TreeSearch.Tree), 1 ≤ Becoming.TreeSearch.nodes t
+Becoming.TreeSearch.scan_settles : ∀ (fuel : Nat) (frontier : List Becoming.TreeSearch.Entry),
+  Becoming.TreeSearch.burden frontier ≤ fuel →
+    (Becoming.TreeSearch.scan fuel frontier).verdict ≠ Becoming.TreeSearch.Verdict.pending
+Becoming.TreeSearch.live_single : ∀ (root : Becoming.TreeSearch.Tree),
+  Becoming.TreeSearch.live [([], root)] = (Becoming.TreeSearch.inhabited root || false)
+Becoming.TreeSearch.inhabited_discovered : ∀ (fuel : Nat) (root : Becoming.TreeSearch.Tree),
+  Becoming.TreeSearch.nodes root ≤ fuel →
+    Becoming.TreeSearch.inhabited root = true →
+      ∃ ticket,
+        (Becoming.TreeSearch.discover fuel root).verdict = Becoming.TreeSearch.Verdict.found ticket ∧
+          Becoming.TreeSearch.locate root ticket.fst = some ticket.snd
+Becoming.TreeSearch.located_depth_le : ∀ (root : Becoming.TreeSearch.Tree) (address : Becoming.TreeSearch.Address)
+  (key : Bool),
+  Becoming.TreeSearch.locate root address = some key → List.length address + 1 ≤ Becoming.TreeSearch.nodes root
+Becoming.TreeSearch.found_without_complete_map : ∀ (key : Bool) (unread : Becoming.TreeSearch.Tree),
+  Becoming.TreeSearch.discover 2 ((Becoming.TreeSearch.Tree.endpoint key).fork unread) =
+    { verdict := Becoming.TreeSearch.Verdict.found ([false], key), inspected := 2 }
+Becoming.TreeSearch.interrupted_pending : Becoming.TreeSearch.discover 1
+      (Becoming.TreeSearch.Tree.closed.fork (Becoming.TreeSearch.Tree.endpoint true)) =
+    { verdict := Becoming.TreeSearch.Verdict.pending, inspected := 1 } ∧
+  Becoming.TreeSearch.discover 3 (Becoming.TreeSearch.Tree.closed.fork (Becoming.TreeSearch.Tree.endpoint true)) =
+    { verdict := Becoming.TreeSearch.Verdict.found ([true], true), inspected := 3 }
+Becoming.TreeSearch.example_discovered : Becoming.TreeSearch.discover 4 Becoming.TreeSearch.exampleTree =
+  { verdict := Becoming.TreeSearch.Verdict.found Becoming.TreeSearch.exampleTicket, inspected := 4 }
+Becoming.TreeSearch.advance_found : ∀ (f : List Becoming.TreeSearch.Entry) (t : Becoming.TreeSearch.Ticket) (k : Nat),
+  Becoming.TreeSearch.advance { frontier := f, found := some t, inspected := k } =
+    { frontier := f, found := some t, inspected := k }
+Becoming.TreeSearch.advance_empty : ∀ (k : Nat),
+  Becoming.TreeSearch.advance { frontier := [], found := none, inspected := k } =
+    { frontier := [], found := none, inspected := k }
+@Becoming.TreeSearch.orbit_fixed : ∀ {s : Becoming.TreeSearch.Search},
+  Becoming.TreeSearch.advance s = s → ∀ (n : Nat), Becoming.Law.orbit Becoming.TreeSearch.advance s n = s
+Becoming.TreeSearch.orbit_reads_scan_from : ∀ (n : Nat) (f : List Becoming.TreeSearch.Entry) (k : Nat),
+  Becoming.TreeSearch.verdict
+        (Becoming.Law.orbit Becoming.TreeSearch.advance { frontier := f, found := none, inspected := k } n) =
+      (Becoming.TreeSearch.scan n f).verdict ∧
+    (Becoming.Law.orbit Becoming.TreeSearch.advance { frontier := f, found := none, inspected := k } n).inspected =
+      k + (Becoming.TreeSearch.scan n f).inspected
+Becoming.TreeSearch.orbit_reads_scan : ∀ (n : Nat) (f : List Becoming.TreeSearch.Entry),
+  Becoming.TreeSearch.read
+      (Becoming.Law.orbit Becoming.TreeSearch.advance { frontier := f, found := none, inspected := 0 } n) =
+    Becoming.TreeSearch.scan n f
+@Becoming.TreeSearch.run_reads_scan : ∀ {f : List Becoming.TreeSearch.Entry}
+  (r : Becoming.Run (Becoming.Law.process Becoming.TreeSearch.advance)),
+  r.state 0 = { frontier := f, found := none, inspected := 0 } →
+    ∀ (n : Nat), Becoming.TreeSearch.read (r.state n) = Becoming.TreeSearch.scan n f
+@Becoming.TreeSearch.run_reads_discover : ∀ {root : Becoming.TreeSearch.Tree}
+  (r : Becoming.Run (Becoming.Law.process Becoming.TreeSearch.advance)),
+  r.state 0 = Becoming.TreeSearch.start root →
+    ∀ (n : Nat), Becoming.TreeSearch.read (r.state n) = Becoming.TreeSearch.discover n root
+Becoming.TreeSearch.found_without_reading_rest : ∀ (key : Bool) (unread : Becoming.TreeSearch.Tree)
+  (r : Becoming.Run (Becoming.Law.process Becoming.TreeSearch.advance)),
+  r.state 0 = Becoming.TreeSearch.start ((Becoming.TreeSearch.Tree.endpoint key).fork unread) →
+    Becoming.TreeSearch.read (r.state 2) =
+      { verdict := Becoming.TreeSearch.Verdict.found ([false], key), inspected := 2 }
+Becoming.TreeSearch.pending_then_found : ∀ (r : Becoming.Run (Becoming.Law.process Becoming.TreeSearch.advance)),
+  r.state 0 =
+      Becoming.TreeSearch.start (Becoming.TreeSearch.Tree.closed.fork (Becoming.TreeSearch.Tree.endpoint true)) →
+    Becoming.TreeSearch.read (r.state 1) = { verdict := Becoming.TreeSearch.Verdict.pending, inspected := 1 } ∧
+      Becoming.TreeSearch.read (r.state 3) =
+        { verdict := Becoming.TreeSearch.Verdict.found ([true], true), inspected := 3 }
+Becoming.TreeSearch.example_found : ∀ (r : Becoming.Run (Becoming.Law.process Becoming.TreeSearch.advance)),
+  r.state 0 = Becoming.TreeSearch.start Becoming.TreeSearch.exampleTree →
+    Becoming.TreeSearch.read (r.state 4) =
+      { verdict := Becoming.TreeSearch.Verdict.found Becoming.TreeSearch.exampleTicket, inspected := 4 }
+Becoming.TreeSearch.inspected_le_step : ∀ (r : Becoming.Run (Becoming.Law.process Becoming.TreeSearch.advance))
+  {f : List Becoming.TreeSearch.Entry},
+  r.state 0 = { frontier := f, found := none, inspected := 0 } → ∀ (n : Nat), (r.state n).inspected ≤ n
+Becoming.TreeSearch.found_located : ∀ (r : Becoming.Run (Becoming.Law.process Becoming.TreeSearch.advance))
+  {f : List Becoming.TreeSearch.Entry} {root : Becoming.TreeSearch.Tree},
+  r.state 0 = { frontier := f, found := none, inspected := 0 } →
+    Becoming.TreeSearch.coherent root f →
+      ∀ {n : Nat} {t : Becoming.TreeSearch.Ticket},
+        Becoming.TreeSearch.verdict (r.state n) = Becoming.TreeSearch.Verdict.found t →
+          Becoming.TreeSearch.locate root t.fst = some t.snd
+Becoming.TreeSearch.found_real : ∀ (r : Becoming.Run (Becoming.Law.process Becoming.TreeSearch.advance))
+  {root : Becoming.TreeSearch.Tree},
+  r.state 0 = Becoming.TreeSearch.start root →
+    ∀ {n : Nat} {t : Becoming.TreeSearch.Ticket},
+      Becoming.TreeSearch.verdict (r.state n) = Becoming.TreeSearch.Verdict.found t →
+        Becoming.TreeSearch.locate root t.fst = some t.snd
+Becoming.TreeSearch.exhausted_dead_run : ∀ (r : Becoming.Run (Becoming.Law.process Becoming.TreeSearch.advance))
+  {f : List Becoming.TreeSearch.Entry},
+  r.state 0 = { frontier := f, found := none, inspected := 0 } →
+    ∀ {n : Nat},
+      Becoming.TreeSearch.verdict (r.state n) = Becoming.TreeSearch.Verdict.exhausted →
+        Becoming.TreeSearch.live f = false
+Becoming.TreeSearch.steps_settle : ∀ (r : Becoming.Run (Becoming.Law.process Becoming.TreeSearch.advance))
+  {f : List Becoming.TreeSearch.Entry},
+  r.state 0 = { frontier := f, found := none, inspected := 0 } →
+    ∀ {n : Nat},
+      Becoming.TreeSearch.burden f ≤ n → Becoming.TreeSearch.verdict (r.state n) ≠ Becoming.TreeSearch.Verdict.pending
+Becoming.TreeSearch.inhabited_found : ∀ (r : Becoming.Run (Becoming.Law.process Becoming.TreeSearch.advance))
+  {root : Becoming.TreeSearch.Tree},
+  r.state 0 = Becoming.TreeSearch.start root →
+    ∀ {n : Nat},
+      Becoming.TreeSearch.nodes root ≤ n →
+        Becoming.TreeSearch.inhabited root = true →
+          ∃ t,
+            Becoming.TreeSearch.verdict (r.state n) = Becoming.TreeSearch.Verdict.found t ∧
+              Becoming.TreeSearch.locate root t.fst = some t.snd

@@ -27,7 +27,7 @@ every relation a World carries.
   standing, need, take and give) in a unit `k` times finer (at `k = 0` every amount is 0, which is
   no unit, and at `k = 1` it is `w`), and keeps every relatum, name, activity, requirement, drawing
   and presence list. Its standings are `k` times `w`'s (`atFinerUnit_level`), and what is taken and
-  given are `k` times `w`'s (`atFinerUnit_taken`, `atFinerUnit_given`, through `total_scaled`).
+  given are `k` times `w`'s (`atFinerUnit_taken`, `atFinerUnit_given`, through `total_mul`).
 * **The relations of the model are the same at a finer unit, in every world.** For `0 < k`,
   conservation across a step is the same relation (`atFinerUnit_conserves`), so its step on
   occurrences is too. The nine selected relations other than the same-step class, together with
@@ -85,20 +85,14 @@ fixes them; for the relabelling, still worlds only.
 
 The arithmetic lemmas the World's laws use are in the namespace `Becoming.UnreadStandings`: a
 positive factor keeps sign, order and an equation of two sums; a map keeping order keeps equality
-and strict order; squaring keeps sign and order; `k * p = 1` forces `k = 1`; and `Nat.mul_assoc` and
-`Nat.mul_left_comm` are proved again here, since `Init`'s report `propext`. Every declaration has
+and strict order; squaring keeps sign and order; `k * p = 1` forces `k = 1`; and products associate by the core's
+`mul_assoc_nat`, since `Init`'s `Nat.mul_assoc` reports `propext`. Every declaration has
 an empty axiom report.
 -/
 
 namespace Becoming
 
 namespace UnreadStandings
-
-/-- A total of amounts each counted `k` times is `k` times the total. -/
-theorem total_scaled {α : Type} (k : Nat) (q : α → Nat) :
-    ∀ l : List α, total l (fun a => k * q a) = k * total l q
-  | [] => (Nat.mul_zero k).symm
-  | a :: as => (congrArg (k * q a + ·) (total_scaled k q as)).trans (Nat.left_distrib k _ _).symm
 
 /-- A positive factor keeps an amount's sign. -/
 theorem pos_scaled {k : Nat} (pos : 0 < k) : ∀ a : Nat, 0 < k * a ↔ 0 < a
@@ -160,19 +154,6 @@ theorem le_squared (a b : Nat) : a * a ≤ b * b ↔ a ≤ b :=
     | .inr ab => ab,
    fun ab => Nat.mul_le_mul ab ab⟩
 
-/-- Products of amounts regroup. This is `Nat.mul_assoc`, whose report in `Init` lists `propext`,
-proved here with an empty report. -/
-theorem assoc_mul (a b : Nat) : ∀ c, a * b * c = a * (b * c)
-  | 0 => (Nat.mul_zero (a * b)).trans
-      ((congrArg (a * ·) (Nat.mul_zero b)).trans (Nat.mul_zero a)).symm
-  | c + 1 => (Nat.mul_succ (a * b) c).trans ((congrArg (· + a * b) (assoc_mul a b c)).trans
-      ((Nat.left_distrib a (b * c) b).symm.trans (congrArg (a * ·) (Nat.mul_succ b c).symm)))
-
-/-- Two factors exchange in front of a third. This is `Nat.mul_left_comm`, whose report in `Init`
-lists `propext`, proved here with an empty report. -/
-theorem left_comm_mul (a b c : Nat) : a * (b * c) = b * (a * c) :=
-  (assoc_mul a b c).symm.trans ((congrArg (· * c) (Nat.mul_comm a b)).trans (assoc_mul b a c))
-
 /-- Where `k * p` is one, `k` is one. -/
 theorem factor_of_one : ∀ {k p : Nat}, 1 = k * p → k = 1
   | 0, p, one => absurd (one.trans (Nat.zero_mul p)) (fun h => Nat.noConfusion h)
@@ -207,11 +188,11 @@ theorem atFinerUnit_level (t : Nat) (x : w.Relatum) :
 
 theorem atFinerUnit_taken (t : Nat) (c : w.Relatum) :
     (w.atFinerUnit k).flow.taken t c = k * w.flow.taken t c :=
-  total_scaled k (fun f => w.flow.take t f c) (w.flow.present t)
+  total_mul k (fun f => w.flow.take t f c) (w.flow.present t)
 
 theorem atFinerUnit_given (t : Nat) (c : w.Relatum) :
     (w.atFinerUnit k).flow.given t c = k * w.flow.given t c :=
-  total_scaled k (fun f => w.flow.give t f c) (w.flow.present t)
+  total_mul k (fun f => w.flow.give t f c) (w.flow.present t)
 
 /-- **Conservation does not read the unit.** At a positive factor, `f` continues `g` by conservation
 across a step in the finer unit exactly where it does in `w`. -/
@@ -445,12 +426,12 @@ theorem ratio_apart {p q p' q' a b : Nat} (pp : 0 < p) (qq' : 0 < q')
   have hq : q = p * a := (Nat.mul_one q).symm.trans a1
   have hq' : q' = p' * a := (Nat.mul_one q').symm.trans a2
   have left : p' * (q * 2) = p * q' * 2 :=
-    (assoc_mul p' q 2).symm.trans (congrArg (· * 2)
-      ((congrArg (p' * ·) hq).trans ((left_comm_mul p' p a).trans (congrArg (p * ·) hq'.symm))))
+    (mul_assoc_nat p' q 2).symm.trans (congrArg (· * 2)
+      ((congrArg (p' * ·) hq).trans ((mul_turn p' p a).trans (congrArg (p * ·) hq'.symm))))
   have mid : p' * (q * 2) = p * (q' * 4) :=
-    (congrArg (p' * ·) b1).trans ((left_comm_mul p' p b).trans (congrArg (p * ·) b2.symm))
+    (congrArg (p' * ·) b1).trans ((mul_turn p' p b).trans (congrArg (p * ·) b2.symm))
   have two_four : p * q' * 2 = p * q' * 4 :=
-    left.symm.trans (mid.trans (assoc_mul p q' 4).symm)
+    left.symm.trans (mid.trans (mul_assoc_nat p q' 4).symm)
   absurd (Nat.eq_of_mul_eq_mul_left (Nat.mul_pos pp qq') two_four) (by decide)
 
 /-- **No single reading of the selected relations gives the standings of every world even up to a

@@ -1,0 +1,60 @@
+@Becoming.RevisionRoutes.GainLoss.above_irrefl : ∀ {P : Type u_1} (o : Becoming.RevisionRoutes.GainLoss P) (p : P),
+  ¬o.Above p p
+@Becoming.RevisionRoutes.GainLoss.above_asymm : ∀ {P : Type u_1} (o : Becoming.RevisionRoutes.GainLoss P) {p q : P},
+  o.Above p q → ¬o.Above q p
+@Becoming.RevisionRoutes.GainLoss.maximal_iff : ∀ {P : Type u_1} (o : Becoming.RevisionRoutes.GainLoss P) (r : P),
+  o.Maximal r ↔ ∀ (q : P), o.gain q + o.loss r ≤ o.gain r + o.loss q
+@Becoming.RevisionRoutes.above_irrefl : ∀ {ι : Type u_1} (s : Becoming.RevisionRoutes.Prospects ι) (p : Option ι),
+  ¬s.Above p p
+@Becoming.RevisionRoutes.above_asymm : ∀ {ι : Type u_1} {s : Becoming.RevisionRoutes.Prospects ι} {p q : Option ι},
+  s.Above p q → ¬s.Above q p
+@Becoming.RevisionRoutes.route_above_iff : ∀ {ι : Type u_1} (s : Becoming.RevisionRoutes.Prospects ι) (ρ : ι),
+  s.Above (some ρ) none ↔ s.keptRevised * s.value + s.loses ρ * s.total < s.kept ρ * s.value + s.losesRevised * s.total
+@Becoming.RevisionRoutes.revised_maximal_iff : ∀ {ι : Type u_1} (s : Becoming.RevisionRoutes.Prospects ι),
+  s.Maximal none ↔
+    ∀ (ρ : ι), s.kept ρ * s.value + s.losesRevised * s.total ≤ s.keptRevised * s.value + s.loses ρ * s.total
+@Becoming.RevisionRoutes.pos_of_mul_lt_mul : ∀ {a b v : Nat}, a * v < b * v → 0 < v
+@Becoming.RevisionRoutes.above_needs : ∀ {ι : Type u_1} (s : Becoming.RevisionRoutes.Prospects ι) (ρ : ι),
+  s.Above (some ρ) none → 0 < s.value ∧ s.keptRevised < s.kept ρ ∨ s.loses ρ < s.losesRevised
+@Becoming.RevisionRoutes.maximal_of_no_value : ∀ {ι : Type u_1} (s : Becoming.RevisionRoutes.Prospects ι),
+  s.value = 0 → (∀ (ρ : ι), s.losesRevised ≤ s.loses ρ) → s.Maximal none
+@Becoming.RevisionRoutes.maximal_of_kept_le : ∀ {ι : Type u_1} (s : Becoming.RevisionRoutes.Prospects ι),
+  (∀ (ρ : ι), s.kept ρ ≤ s.keptRevised) → (∀ (ρ : ι), s.losesRevised ≤ s.loses ρ) → s.Maximal none
+@Becoming.RevisionRoutes.maximal_of_certain : ∀ {ι : Type u_1} (s : Becoming.RevisionRoutes.Prospects ι),
+  s.Valid → s.keptRevised = s.total → (∀ (ρ : ι), s.losesRevised ≤ s.loses ρ) → s.Maximal none
+@Becoming.RevisionRoutes.maximal_of_more_restored : ∀ {ι : Type u_1} (s : Becoming.RevisionRoutes.Prospects ι),
+  s.Maximal none → ∀ {k : Nat}, s.keptRevised ≤ k → (s.withKeptRevised k).Maximal none
+@Becoming.RevisionRoutes.every_loss_iff : ∀ {ι : Type u_1} (s : Becoming.RevisionRoutes.Prospects ι),
+  (∀ (c : ι → Nat), (s.withLosses c).Maximal none) ↔
+    ∀ (ρ : ι), s.kept ρ * s.value + s.losesRevised * s.total ≤ s.keptRevised * s.value
+@Becoming.RevisionRoutes.every_loss_iff_kept : ∀ {ι : Type u_1} (s : Becoming.RevisionRoutes.Prospects ι),
+  s.losesRevised * s.total = 0 →
+    0 < s.value → ((∀ (c : ι → Nat), (s.withLosses c).Maximal none) ↔ ∀ (ρ : ι), s.kept ρ ≤ s.keptRevised)
+@Becoming.RevisionRoutes.above_of_value_exceeds : ∀ {ι : Type u_1} (s : Becoming.RevisionRoutes.Prospects ι) {ρ : ι},
+  s.keptRevised < s.kept ρ → s.loses ρ * s.total < s.value → s.Above (some ρ) none
+@Becoming.RevisionRoutes.above_at_some_value : ∀ {ι : Type u_1} (s : Becoming.RevisionRoutes.Prospects ι) {ρ : ι},
+  s.keptRevised < s.kept ρ → ∃ v, (s.withValue v).Above (some ρ) none
+@Becoming.RevisionRoutes.above_of_more_value : ∀ {ι : Type u_1} (s : Becoming.RevisionRoutes.Prospects ι) {ρ : ι},
+  s.keptRevised ≤ s.kept ρ → s.Above (some ρ) none → ∀ {v : Nat}, s.value ≤ v → (s.withValue v).Above (some ρ) none
+@Becoming.RevisionRoutes.every_value_iff : ∀ {ι : Type u_1} (s : Becoming.RevisionRoutes.Prospects ι),
+  (∀ (v : Nat), (s.withValue v).Maximal none) ↔
+    ∀ (ρ : ι), s.kept ρ ≤ s.keptRevised ∧ s.losesRevised * s.total ≤ s.loses ρ * s.total
+@Becoming.RevisionRoutes.every_value_loss_iff : ∀ {ι : Type u_1} (s : Becoming.RevisionRoutes.Prospects ι),
+  (∀ (v : Nat) (c : ι → Nat), ((s.withValue v).withLosses c).Maximal none) ↔
+    ∀ (ρ : ι), s.kept ρ ≤ s.keptRevised ∧ s.losesRevised * s.total = 0
+@Becoming.RevisionRoutes.eq_zero_of_mul_eq_zero : ∀ {c t : Nat}, 0 < t → c * t = 0 → c = 0
+@Becoming.RevisionRoutes.every_value_loss_iff_of_route : ∀ {ι : Type u_1} (s : Becoming.RevisionRoutes.Prospects ι)
+  (ρ₀ : ι),
+  0 < s.total →
+    ((∀ (v : Nat) (c : ι → Nat), ((s.withValue v).withLosses c).Maximal none) ↔
+      (∀ (ρ : ι), s.kept ρ ≤ s.keptRevised) ∧ s.losesRevised = 0)
+Becoming.RevisionRoutes.Example.twoRoutes_valid : Becoming.RevisionRoutes.Example.twoRoutes.Valid
+Becoming.RevisionRoutes.Example.twoRoutes_open_not_above : ¬Becoming.RevisionRoutes.Example.twoRoutes.Above (some true)
+    none
+Becoming.RevisionRoutes.Example.twoRoutes_complying_above : Becoming.RevisionRoutes.Example.twoRoutes.Above (some false)
+  none
+Becoming.RevisionRoutes.Example.both_at_loss_ten : (Becoming.RevisionRoutes.Example.twoRoutes.withLosses fun x =>
+      10).Maximal
+  none
+Becoming.RevisionRoutes.Example.restored_every : ∀ (v : Nat) (c : Bool → Nat),
+  ((Becoming.RevisionRoutes.Example.restored.withValue v).withLosses c).Maximal none

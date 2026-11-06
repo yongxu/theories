@@ -20,7 +20,7 @@
       "declarations": [
         "Becoming.gap",
         "Becoming.sub_eq_zero_of_le",
-        "Becoming.Propagation.sub_le_of_le_add",
+        "Becoming.Naturals.sub_le_of_le_add",
         "Becoming.Naturals.add_sub_cancel_left",
         "Becoming.Propagation.rearrange",
         "Becoming.Naturals.add_congr",
@@ -71,7 +71,7 @@
         "Becoming.between_of_mem_steps",
         "Becoming.Propagation.mem_steps_upto",
         "Becoming.Propagation.le_of_mem_steps_upto",
-        "Becoming.Propagation.mem_map_pair",
+        "Becoming.prodMk_mem_map",
         "Becoming.Propagation.of_mem_map_pair",
         "Becoming.mem_append_cases",
         "Becoming.cellsOf",
@@ -351,10 +351,9 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Propagation.lean",
       "role": "proof",
-      "sha256": "077b798206c9cd4c3087d24c77c6eafc264dca96013e3716ee2c44ea0c57f1d3",
+      "sha256": "63f4de5abe36b4bb7d84a22b8a7083f38eb5f15e642aa54dfb415ac689257350",
       "declarations": [
         "Becoming.gap",
-        "Becoming.Propagation.sub_le_of_le_add",
         "Becoming.Propagation.rearrange",
         "Becoming.gap_comm",
         "Becoming.gap_self",
@@ -384,7 +383,6 @@
         "Becoming.ExchangeLaw.Nonanticipating.respondsWithin_later",
         "Becoming.Propagation.mem_steps_upto",
         "Becoming.Propagation.le_of_mem_steps_upto",
-        "Becoming.Propagation.mem_map_pair",
         "Becoming.Propagation.of_mem_map_pair",
         "Becoming.cellsOf",
         "Becoming.mem_cellsOf",
@@ -449,7 +447,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
       "role": "proof",
-      "sha256": "3aadd812b74b7b0563aa3f7daa19a7d5b8da6f1bc55af5cc6bf64fb824f385d7",
+      "sha256": "cb2c9c8ba8e16916b41a36e1c392f3cd4840a7436b2817c12796c866908020a7",
       "declarations": [
         "Becoming.sub_eq_zero_of_le",
         "Becoming.Naturals.add_sub_cancel_left",
@@ -458,13 +456,15 @@
         "Becoming.between_of_mem_steps",
         "Becoming.steps",
         "Becoming.total",
-        "Becoming.Distinct"
+        "Becoming.Distinct",
+        "Becoming.Naturals.sub_le_of_le_add",
+        "Becoming.prodMk_mem_map"
       ]
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Counterfactual.lean",
       "role": "proof",
-      "sha256": "c4916cbf4ee72134c14a7573780ac76acbde0d256ca2799012253f5e23d89fd8",
+      "sha256": "a7c605911fd5cc3c64f24928022a6b3a98b457859c6618eeeb733fb154419a61",
       "declarations": [
         "Becoming.ExchangeLaw",
         "Becoming.AgreeUpTo",
@@ -494,7 +494,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
       "role": "proof",
-      "sha256": "25317ae599247630ed2e2884f7a756ab29e9d2514623ed32d6f977551cbce0f6",
+      "sha256": "94e9be0baad1667d0d06acdfa757543c292c054c3a7eeaefccbe10b43bd321b5",
       "declarations": [
         "Becoming.Flow.Balances",
         "Becoming.Flow.taken",
@@ -513,7 +513,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean",
       "role": "proof",
-      "sha256": "c64c39ac2e8d46be6599dbeab7c4f947892d7e2aeadfc305d0a84966e09f740c",
+      "sha256": "852a5491313223e5de476027cd98408c196db67ac2c263d776dd28e6d050ac3c",
       "declarations": [
         "Becoming.steps_of_within"
       ]
@@ -664,19 +664,25 @@
       "role": "receipt",
       "sha256": "36435e774abc5c046539fef86812e4ba5a89d9a18899d51a3efae6363e89064a",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "role": "receipt",
+      "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Propagation.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Propagation",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Counterfactual.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Counterfactual",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -690,14 +696,14 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Flow",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Population",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -711,7 +717,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Prelude",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -775,6 +781,10 @@
     {
       "en": "20 October 2026, R37 (lens B of the twentieth review: the witness models as instances of one library, one bisimulation theory for a family of relations, the definition twins and copies stated once): Moved with their full names: from Flow.lean to Prelude.lean, steps; from Population.lean to Prelude.lean, Distinct; from World.lean to Prelude.lean, total. Replaced by the name stating it now, the same statement or its general form, or renamed (development/r37-lens-b/RENAME-TABLE.json): Propagation.between_of_mem_steps (now between_of_mem_steps). Proof bindings (Flow.lean, Population.lean, Prelude.lean, Propagation.lean, World.lean) rebound to core receipt 20261020T051144.879480Z. Re-pointed after reading the change: Flow.lean, Population.lean, Propagation.lean, World.lean: twin definitions, witness models or copies replaced by the definition stated once, the instance of Witnesses or the kept name; kept statements unchanged; Prelude.lean: the definitions and statements stated once (Distinct, total, steps, nonzero, Copying.nth, Law.memberAt, Settling.consAct, DistinctUnder, downFrom and their laws) moved here; other statements unchanged. The claim is unchanged.",
       "zh": "2026年10月20日，R37（第二十次评审的 B 视角：见证模型为一个库的实例，为一族关系的一个互模拟理论，孪生定义与副本只陈述一次）：连同完整名称移动：从 Flow.lean 到 Prelude.lean：steps；从 Population.lean 到 Prelude.lean：Distinct；从 World.lean 到 Prelude.lean：total。以现在陈述它的名称取代（陈述相同或为其一般形式）或改名（development/r37-lens-b/RENAME-TABLE.json）：Propagation.between_of_mem_steps（现为 between_of_mem_steps）。证明绑定（Flow.lean、Population.lean、Prelude.lean、Propagation.lean、World.lean）改到核心回执 20261020T051144.879480Z。读过改动后重新指向：Flow.lean、Population.lean、Propagation.lean、World.lean：孪生定义、见证模型或副本由只陈述一次的定义、Witnesses 的实例或保留的名称取代；保留的陈述不变；Prelude.lean：只陈述一次的定义与陈述（Distinct、total、steps、nonzero、Copying.nth、Law.memberAt、Settling.consAct、DistinctUnder、downFrom 及其规律）移入；其他陈述不变。论断不变。"
+    },
+    {
+      "en": "6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.",
+      "zh": "2026年11月6日，工作板条目 LM：此记录所列辅助引理现只陈述一次，在 Prelude、Flow、Change 或 Laws，或即 Lean 自有者而从列表除去；改其名，诸律不变。"
     }
   ],
   "text_versions": [

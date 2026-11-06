@@ -261,79 +261,21 @@ abbrev Band (r : Rule) (q : Nat) : Prop :=
 
 /-! ## Arithmetic with no axiom -/
 
-theorem add_sub_cancel' (a b : Nat) : a + b - b = a := by
-  induction b with
-  | zero => rfl
-  | succ b ih =>
-    show (a + b).succ - b.succ = a
-    rw [Nat.succ_sub_succ]
-    exact ih
-
-theorem exists_of_le {a b : Nat} (h : a ≤ b) : ∃ k, b = a + k := by
-  induction h with
-  | refl => exact ⟨0, rfl⟩
-  | step _ ih =>
-    obtain ⟨k, e⟩ := ih
-    exact ⟨k + 1, congrArg Nat.succ e⟩
-
 theorem le_add_sub (a : Nat) {g t : Nat} (h : t ≤ g) : a ≤ a + g - t := by
-  obtain ⟨k, e⟩ := exists_of_le h
-  rw [e, Nat.add_comm t k, ← Nat.add_assoc, add_sub_cancel']
+  obtain ⟨k, e⟩ := le_dest h
+  rw [e, Nat.add_comm t k, ← Nat.add_assoc, Naturals.add_sub_cancel]
   exact Nat.le_add_right a k
-
-theorem le_of_add_le_add_right' {a b : Nat} (c : Nat) (h : a + c ≤ b + c) : a ≤ b := by
-  induction c with
-  | zero => exact h
-  | succ c ih => exact ih (Nat.le_of_succ_le_succ h)
-
-theorem mul_assoc' (a b c : Nat) : a * b * c = a * (b * c) := by
-  induction c with
-  | zero => rfl
-  | succ c ih =>
-    show a * b * c + a * b = a * (b * c + b)
-    rw [Nat.left_distrib, ih]
-
-theorem right_distrib' (a b c : Nat) : (a + b) * c = a * c + b * c := by
-  rw [Nat.mul_comm, Nat.left_distrib, Nat.mul_comm c a, Nat.mul_comm c b]
-
-theorem sub_le_sub_left' (a : Nat) {b c : Nat} (h : b ≤ c) : a - c ≤ a - b := by
-  induction h with
-  | refl => exact Nat.le_refl _
-  | step _ ih => exact Nat.le_trans (Nat.pred_le _) ih
-
-theorem sub_eq_zero_of_le' : ∀ {a b : Nat}, a ≤ b → a - b = 0 := by
-  intro a b h
-  obtain ⟨k, e⟩ := exists_of_le h
-  rw [e]
-  clear e h
-  induction a with
-  | zero => exact Nat.zero_sub _
-  | succ a ih =>
-    have : a + 1 + k = (a + k) + 1 := by rw [Nat.add_assoc, Nat.add_comm 1 k, ← Nat.add_assoc]
-    rw [this, Nat.succ_sub_succ]
-    exact ih
 
 /-- `q` with the leak of `t` turned away is at least the count untaught, where `t ≤ q`. -/
 theorem le_add_sub_of_le (f : Nat) {t q : Nat} (h : t ≤ q) : f ≤ q + (f - t) := by
   cases Nat.le_total t f with
   | inl htf =>
-    obtain ⟨k, e⟩ := exists_of_le htf
-    rw [e, Nat.add_comm t k, add_sub_cancel', Nat.add_comm k t]
+    obtain ⟨k, e⟩ := le_dest htf
+    rw [e, Nat.add_comm t k, Naturals.add_sub_cancel, Nat.add_comm k t]
     exact Nat.add_le_add_right h k
   | inr hft =>
-    rw [sub_eq_zero_of_le' hft]
+    rw [sub_eq_zero_of_le hft]
     exact Nat.le_trans hft h
-
-theorem succ_ne_zero' (n : Nat) : n + 1 ≠ 0 := fun h => Nat.noConfusion h
-
-theorem sub_pos' {a b : Nat} (h : a < b) : 0 < b - a := by
-  obtain ⟨k, e⟩ := exists_of_le h
-  have e' : b = k + 1 + a := by
-    rw [e]
-    show a + 1 + k = k + 1 + a
-    rw [Nat.add_comm (a + 1) k, Nat.add_comm a 1, Nat.add_assoc]
-  rw [e', add_sub_cancel']
-  exact Nat.zero_lt_succ k
 
 /-- Every number divides by a positive `d`, additively. -/
 theorem exists_div {d : Nat} (hd : 1 ≤ d) (L : Nat) : ∃ r k, L = r + k * d ∧ r < d := by
@@ -589,7 +531,7 @@ theorem «恒取逾生则减» {r : Rule} {c : Nat → Move} {F : St → Prop} {
     show (run r c i x).level + r.renewal - take (run r c i x) = r₀ + m * d
     rw [ht _ hF, hsplit, Nat.add_comm r.renewal d]
     rw [Nat.add_assoc]
-    exact add_sub_cancel' _ _
+    exact Naturals.add_sub_cancel _ _
 
 /-- **A take over the renewal ends the level (L1, third part).** A family with a constant take of
 `g + d`, closed under the course's steps: from any level, every step up to some `k` keeps the
@@ -607,7 +549,7 @@ theorem «恒取逾生则尽» {r : Rule} {c : Nat → Move} {F : St → Prop} {
     rw [hl', ht _ hF, Nat.add_comm]
     exact Nat.add_lt_add_left hr _
   · intro i hi
-    obtain ⟨m, e⟩ := exists_of_le hi
+    obtain ⟨m, e⟩ := le_dest hi
     exact («恒取逾生则减» hc ht hd hx hL i m e.symm).1
 
 /-! ## Passing: the drain, and no holder from no holder (L5, L6) -/
@@ -858,11 +800,11 @@ theorem revised_none {r : Rule} (x : St) : revised r Option.none x = x.quota := 
 theorem take_steady (r : Rule) (q L : Nat) :
     take (steady r q L) = (q + leak r q) * r.tenure := by
   show sumL (List.replicate r.tenure q) + sumL (List.replicate r.tenure (leak r q)) = _
-  rw [sumL_replicate, sumL_replicate, right_distrib', Nat.mul_comm r.tenure q,
+  rw [sumL_replicate, sumL_replicate, add_mul_split, Nat.mul_comm r.tenure q,
     Nat.mul_comm r.tenure (leak r q)]
 
 theorem teachers_mul (c q n : Nat) : c * (n * q) = c * q * n := by
-  rw [Nat.mul_comm n q, mul_assoc']
+  rw [Nat.mul_comm n q, mul_assoc_nat]
 
 theorem onward_steady {r : Rule} (hsrc : r.source = .members ∨ r.source = .outside)
     (hl : r.teachingAge < r.tenure) {q : Nat} (hq : 1 ≤ q) (L : Nat) :
@@ -871,7 +813,7 @@ theorem onward_steady {r : Rule} (hsrc : r.source = .members ∨ r.source = .out
   have hT : teachers r (steady r q L) = (r.tenure - r.teachingAge) * q := after_replicate _ _ _
   have hpos : 0 < teachers r (steady r q L) := by
     rw [hT]
-    exact Nat.mul_pos (sub_pos' hl) hq
+    exact Nat.mul_pos (SupportGated.sub_pos_of_lt hl) hq
   have hE : entrant r true (steady r q L) = q := by
     show taught r.source q (teachers r (steady r q L)) = q
     cases hsrc with
@@ -915,7 +857,7 @@ theorem held_steady {r : Rule} (hl : r.teachingAge < r.tenure) {q : Nat} (hq : 1
   exact Nat.mul_pos (Nat.lt_of_le_of_lt (Nat.zero_le _) hl) hq
 
 theorem excess {g A : Nat} (h : g < A) : ∃ d, A = g + d ∧ 1 ≤ d := by
-  obtain ⟨k, e⟩ := exists_of_le h
+  obtain ⟨k, e⟩ := le_dest h
   refine ⟨k + 1, ?_, Nat.succ_le_succ (Nat.zero_le k)⟩
   rw [e]
   show g + 1 + k = g + (k + 1)
@@ -999,12 +941,12 @@ theorem band_closed (f q t s g : Nat) :
     (q + (f - t)) * s ≤ g ↔ q * s ≤ g ∧ (f + q) * s ≤ g + t * s := by
   cases Nat.le_total t f with
   | inl htf =>
-    obtain ⟨k, e⟩ := exists_of_le htf
+    obtain ⟨k, e⟩ := le_dest htf
     have hk : f - t = k := by
       rw [e, Nat.add_comm]
-      exact add_sub_cancel' k t
+      exact Naturals.add_sub_cancel k t
     have hsum : (f + q) * s = (q + k) * s + t * s := by
-      rw [e, ← right_distrib']
+      rw [e, ← add_mul_split]
       have : t + k + q = q + k + t := by
         rw [Nat.add_comm t k, Nat.add_comm (k + t) q, Nat.add_assoc]
       rw [this]
@@ -1014,14 +956,14 @@ theorem band_closed (f q t s g : Nat) :
       exact ⟨Nat.le_trans (Nat.mul_le_mul_right s (Nat.le_add_right q k)) h,
         Nat.add_le_add_right h _⟩
     · intro h
-      exact le_of_add_le_add_right' _ h.2
+      exact le_of_add_le_add_right _ h.2
   | inr hft =>
-    rw [sub_eq_zero_of_le' hft]
+    rw [sub_eq_zero_of_le hft]
     constructor
     · intro h
       refine ⟨h, ?_⟩
       have h1 : (f + q) * s ≤ (q + 0) * s + t * s := by
-        rw [← right_distrib']
+        rw [← add_mul_split]
         apply Nat.mul_le_mul_right
         show f + q ≤ q + t
         rw [Nat.add_comm f q]
@@ -1033,7 +975,7 @@ theorem band_closed (f q t s g : Nat) :
 theorem leak_eq (r : Rule) (q : Nat) :
     leak r q = r.untaught - r.strength * (r.tenure - r.teachingAge) * q := by
   unfold leak
-  rw [mul_assoc' r.strength q, mul_assoc' r.strength (r.tenure - r.teachingAge),
+  rw [mul_assoc_nat r.strength q, mul_assoc_nat r.strength (r.tenure - r.teachingAge),
     Nat.mul_comm q]
 
 /-- **The band's take without its truncation (L3).** With `C := c · (s − l)`: `(q + e q) · s ≤ g`
@@ -1051,28 +993,28 @@ theorem add_sub_mono (f : Nat) : ∀ {a b : Nat}, a ≤ b → a + (f - a) ≤ b 
   intro a b h
   cases Nat.le_total b f with
   | inl hbf =>
-    obtain ⟨k, e⟩ := exists_of_le hbf
-    obtain ⟨j, e'⟩ := exists_of_le h
+    obtain ⟨k, e⟩ := le_dest hbf
+    obtain ⟨j, e'⟩ := le_dest h
     have h1 : f - b = k := by
       rw [e, Nat.add_comm]
-      exact add_sub_cancel' k b
+      exact Naturals.add_sub_cancel k b
     have h2 : f - a = j + k := by
       rw [e, e', Nat.add_assoc, Nat.add_comm a]
-      exact add_sub_cancel' (j + k) a
+      exact Naturals.add_sub_cancel (j + k) a
     rw [h1, h2, e', Nat.add_assoc]
     exact Nat.le_refl _
   | inr hfb =>
-    rw [sub_eq_zero_of_le' hfb]
+    rw [sub_eq_zero_of_le hfb]
     cases Nat.le_total a f with
     | inl haf =>
-      obtain ⟨k, e⟩ := exists_of_le haf
+      obtain ⟨k, e⟩ := le_dest haf
       have h1 : f - a = k := by
         rw [e, Nat.add_comm]
-        exact add_sub_cancel' k a
+        exact Naturals.add_sub_cancel k a
       rw [h1, ← e]
       exact hfb
     | inr hfa =>
-      rw [sub_eq_zero_of_le' hfa]
+      rw [sub_eq_zero_of_le hfa]
       exact h
 
 /-- **A quota can be too small only where a keeper turns away more than itself (L3).** At
@@ -1183,7 +1125,7 @@ theorem within_take {r : Rule} {P Q : Nat} {x : St} (hw : Within r P Q x) :
   have h1 : sumL x.holders ≤ r.tenure * Q :=
     sum_le_of_each (each_weaken (fun _ h => h.2) hw.2.1) (Nat.le_of_eq hw.1)
   have h2 : sumL x.others ≤ r.tenure * leak r P := sum_le_of_each hw.2.2.2.1 hw.2.2.1
-  rw [right_distrib', Nat.mul_comm Q, Nat.mul_comm (leak r P)]
+  rw [add_mul_split, Nat.mul_comm Q, Nat.mul_comm (leak r P)]
   exact Nat.add_le_add h1 h2
 
 theorem within_teachers {r : Rule} {P Q : Nat} {x : St} (hw : Within r P Q x) :
@@ -1203,12 +1145,12 @@ theorem within_entrant {r : Rule} {P Q : Nat} {x : St} (hf : Fits r P Q) (hw : W
   show taught r.source x.quota (teachers r x) = x.quota
   rw [hf.1]
   exact taught_members_pos _
-    (Nat.lt_of_lt_of_le (Nat.mul_pos (sub_pos' hf.2.1) hf.2.2.1) (within_teachers hw))
+    (Nat.lt_of_lt_of_le (Nat.mul_pos (SupportGated.sub_pos_of_lt hf.2.1) hf.2.2.1) (within_teachers hw))
 
 theorem within_door {r : Rule} {P Q : Nat} {x : St} (hw : Within r P Q x) :
     door r true x ≤ leak r P := by
   show r.untaught - r.strength * teachers r x ≤ r.untaught - r.strength * P * (r.tenure - r.teachingAge)
-  apply sub_le_sub_left'
+  apply Naturals.sub_antitone
   rw [← teachers_mul]
   exact Nat.mul_le_mul_left _ (within_teachers hw)
 
@@ -1472,14 +1414,14 @@ theorem «入过来者之式» (r : Rule) {q : Nat} (hq : 1 ≤ q) :
     | zero => exact Or.inr rfl
     | succ n =>
       refine Or.inl (Nat.lt_of_not_le fun hqf => ?_)
-      obtain ⟨k, e⟩ := exists_of_le hqf
+      obtain ⟨k, e⟩ := le_dest hqf
       have hqt : q ≤ (n + 1) * q := by
         rw [Nat.succ_mul]
         exact Nat.le_add_left _ _
-      have h1 : f - (n + 1) * q ≤ f - q := sub_le_sub_left' f hqt
+      have h1 : f - (n + 1) * q ≤ f - q := Naturals.sub_antitone f hqt
       have h2 : f - q = k := by
         rw [e, Nat.add_comm]
-        exact add_sub_cancel' k q
+        exact Naturals.add_sub_cancel k q
       rw [h2] at h1
       have h3 : q + (f - (n + 1) * q) ≤ f := by
         rw [e] at h1 ⊢
@@ -1710,9 +1652,9 @@ theorem after_map_last (h : Bool → Nat) : ∀ (l : Nat) (b : List Bool), b.len
     after l (b.map h) = h (lastOf b)
   | 0, [_], _ => Nat.add_zero _
   | l + 1, _ :: a :: t, e => after_map_last h l (a :: t) (Nat.succ.inj e)
-  | _, [], e => absurd e (succ_ne_zero' _).symm
-  | 0, _ :: _ :: _, e => absurd (Nat.succ.inj e) (succ_ne_zero' _)
-  | _ + 1, [_], e => absurd (Nat.succ.inj e) (succ_ne_zero' _).symm
+  | _, [], e => absurd e (Naturals.succ_ne_zero _).symm
+  | 0, _ :: _ :: _, e => absurd (Nat.succ.inj e) (Naturals.succ_ne_zero _)
+  | _ + 1, [_], e => absurd (Nat.succ.inj e) (Naturals.succ_ne_zero _).symm
 
 theorem countW_rot (w : Bool → Nat) : ∀ (l : Nat) (b : List Bool), b.length = l + 1 →
     countW w (lastOf b :: keep l b) = countW w b
@@ -1722,12 +1664,9 @@ theorem countW_rot (w : Bool → Nat) : ∀ (l : Nat) (b : List Bool), b.length 
     show w (lastOf (a :: t)) + (w x + countW w (keep l (a :: t))) = w x + countW w (a :: t)
     rw [Nat.add_left_comm]
     exact congrArg (fun n => w x + n) ih
-  | _, [], e => absurd e (succ_ne_zero' _).symm
-  | 0, _ :: _ :: _, e => absurd (Nat.succ.inj e) (succ_ne_zero' _)
-  | _ + 1, [_], e => absurd (Nat.succ.inj e) (succ_ne_zero' _).symm
-
-theorem add_four (a b c d : Nat) : a + b + (c + d) = a + c + (b + d) := by
-  rw [Nat.add_assoc, Nat.add_left_comm b c d, ← Nat.add_assoc]
+  | _, [], e => absurd e (Naturals.succ_ne_zero _).symm
+  | 0, _ :: _ :: _, e => absurd (Nat.succ.inj e) (Naturals.succ_ne_zero _)
+  | _ + 1, [_], e => absurd (Nat.succ.inj e) (Naturals.succ_ne_zero _).symm
 
 theorem take_strands (r : Rule) (q L : Nat) : ∀ b : List Bool,
     take (strands r q b L) =
@@ -1741,7 +1680,7 @@ theorem take_strands (r : Rule) (q L : Nat) : ∀ b : List Bool,
       take_strands r q L t
     show q + sumL (t.map (strandH q)) + ((r.untaught - r.strength * q) + sumL (t.map (strandO r q))) =
       (1 + heldCount t) * (q + (r.untaught - r.strength * q)) + (0 + emptyCount t) * r.untaught
-    rw [add_four, ih', Nat.zero_add, right_distrib', Nat.one_mul]
+    rw [Nat.add_add_add_comm, ih', Nat.zero_add, add_mul_split, Nat.one_mul]
     exact (Nat.add_assoc _ _ _).symm
   | false :: t => by
     have ih' : sumL (t.map (strandH q)) + sumL (t.map (strandO r q)) =
@@ -1749,13 +1688,13 @@ theorem take_strands (r : Rule) (q L : Nat) : ∀ b : List Bool,
       take_strands r q L t
     show 0 + sumL (t.map (strandH q)) + (r.untaught + sumL (t.map (strandO r q))) =
       (0 + heldCount t) * (q + (r.untaught - r.strength * q)) + (1 + emptyCount t) * r.untaught
-    rw [add_four, ih', Nat.zero_add, Nat.zero_add, right_distrib', Nat.one_mul, Nat.add_left_comm]
+    rw [Nat.add_add_add_comm, ih', Nat.zero_add, Nat.zero_add, add_mul_split, Nat.one_mul, Nat.add_left_comm]
 
 theorem sum_strandH (q : Nat) : ∀ b : List Bool, sumL (b.map (strandH q)) = heldCount b * q
   | [] => (Nat.zero_mul q).symm
   | true :: t => by
     show q + sumL (t.map (strandH q)) = (1 + heldCount t) * q
-    rw [sum_strandH q t, right_distrib', Nat.one_mul]
+    rw [sum_strandH q t, add_mul_split, Nat.one_mul]
   | false :: t => by
     show 0 + sumL (t.map (strandH q)) = (0 + heldCount t) * q
     rw [sum_strandH q t, Nat.zero_add, Nat.zero_add]
@@ -1873,14 +1812,6 @@ theorem count_total : ∀ b : List Bool, heldCount b + emptyCount b = b.length
     show 0 + heldCount t + (1 + emptyCount t) = t.length + 1
     rw [Nat.zero_add, Nat.add_left_comm, count_total t, Nat.add_comm]
 
-theorem mul_lt_of {z a b : Nat} (h : z * a < z * b) : a < b :=
-  Nat.lt_of_not_le fun hba => Nat.lt_irrefl _ (Nat.lt_of_lt_of_le h (Nat.mul_le_mul_left z hba))
-
-theorem split_mul (k z X : Nat) : (k + z) * X = k * X + z * X := right_distrib' k z X
-
-theorem lt_of_add_lt_add_left' {a b c : Nat} (h : a + b < a + c) : b < c :=
-  Nat.lt_of_not_le fun hcb => Nat.lt_irrefl _ (Nat.lt_of_lt_of_le h (Nat.add_le_add_left hcb a))
-
 theorem mul_lt_mul_of_pos' {k a b : Nat} (hk : 1 ≤ k) (h : a < b) : k * a < k * b := by
   cases k with
   | zero => exact absurd hk (Nat.not_succ_le_zero 0)
@@ -1896,11 +1827,11 @@ exceeds open entry's, and open entry would go on too; the door has no part in it
 theorem «隙存而稳不存之式» {f X g k z : Nat} (hk : 1 ≤ k) (h1 : k * X + z * f ≤ g)
     (h2 : g < X * (k + z)) : f < X ∧ f * (k + z) < g := by
   have h2' : g < k * X + z * X := by
-    rw [← split_mul, Nat.mul_comm]
+    rw [← add_mul_split, Nat.mul_comm]
     exact h2
-  have hfX : f < X := mul_lt_of (lt_of_add_lt_add_left' (Nat.lt_of_le_of_lt h1 h2'))
+  have hfX : f < X := Naturals.lt_of_mul_lt_mul_left (Naturals.lt_of_add_lt_add_left (Nat.lt_of_le_of_lt h1 h2'))
   refine ⟨hfX, ?_⟩
-  rw [Nat.mul_comm, split_mul]
+  rw [Nat.mul_comm, add_mul_split]
   exact Nat.lt_of_lt_of_le (Nat.add_lt_add_right (mul_lt_mul_of_pos' hk hfX) _) h1
 
 /-- **Where the steady state goes on and gaps do not (L13).** With `t` turned away at a held cohort
@@ -1911,13 +1842,13 @@ theorem «稳存而隙不存之式» {f q t g k z : Nat}
     (h1 : (q + (f - t)) * (k + z) ≤ g) (h2 : g < k * (q + (f - t)) + z * f) :
     q + (f - t) < f ∧ g < f * (k + z) ∧ q < t := by
   have h1' : k * (q + (f - t)) + z * (q + (f - t)) ≤ g := by
-    rw [← split_mul, Nat.mul_comm]
+    rw [← add_mul_split, Nat.mul_comm]
     exact h1
   have hlt : q + (f - t) < f := Nat.lt_of_not_le fun hfX =>
     Nat.lt_irrefl _ (Nat.lt_of_lt_of_le h2
       (Nat.le_trans (Nat.add_le_add_left (Nat.mul_le_mul_left z hfX) _) h1'))
   refine ⟨hlt, ?_, ?_⟩
-  · rw [Nat.mul_comm, split_mul]
+  · rw [Nat.mul_comm, add_mul_split]
     exact Nat.lt_of_lt_of_le h2
       (Nat.add_le_add_right (Nat.mul_le_mul_left k (Nat.le_of_lt hlt)) _)
   · exact Nat.lt_of_not_le fun htq =>

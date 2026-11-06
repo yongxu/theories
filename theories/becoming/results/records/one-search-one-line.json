@@ -94,7 +94,7 @@
         "Becoming.Hexagram.Trigram.soleAt",
         "Becoming.Hexagram.Trigram.sole_iff_searched"
       ],
-      "sha256": "6d6c8e5796b92ab507381ea0a937deb60f76a00c82b641ec932d5ab0a341b33f"
+      "sha256": "b4180b661ac8ee34f12ca96faf4c315f76d2ea05d4ec30afd2c663f495850a7e"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json",
@@ -131,12 +131,18 @@
       "role": "receipt",
       "sha256": "ec026b0d8ca8786dde3af5f9153ed706f784394b556afc93d189fae521c8cfae",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "role": "receipt",
+      "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HexagramSequences.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.HexagramSequences",
       "success_pointer": "/status",
       "success_value": "passed"

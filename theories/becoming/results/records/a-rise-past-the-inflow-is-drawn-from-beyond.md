@@ -10,7 +10,7 @@
 <a id="laws--规律"></a>
 ## Laws
 
-1. A family's inflow across a step is what each formation taking part gives it beyond what it takes from it, summed; it is zero exactly where the family gains nothing. In a balanced flow the stock after a step with what the family loses is the stock before with what it gains, which is at most the inflow; over a stretch the stock rises by at most the stretch's inflow. (`Becoming.Flow.inflow`, `Becoming.Flow.le_add_excess`, `Becoming.Flow.excess_le_of_le_add`, `Becoming.Flow.gainlessOn_iff_inflow`, `Becoming.Flow.replenishment_le_inflow`, `Becoming.Flow.gained_le_inflow`, `Becoming.Flow.Balances.stock_gained`, `Becoming.Flow.Balances.stock_inflow`, `Becoming.Flow.Balances.stock_over_inflow`)
+1. A family's inflow across a step is what each formation taking part gives it beyond what it takes from it, summed; it is zero exactly where the family gains nothing. In a balanced flow the stock after a step with what the family loses is the stock before with what it gains, which is at most the inflow; over a stretch the stock rises by at most the stretch's inflow. (`Becoming.Flow.inflow`, `Becoming.le_add_excess`, `Becoming.excess_le_of_le_add`, `Becoming.Flow.gainlessOn_iff_inflow`, `Becoming.Flow.replenishment_le_inflow`, `Becoming.Flow.gained_le_inflow`, `Becoming.Flow.Balances.stock_gained`, `Becoming.Flow.Balances.stock_inflow`, `Becoming.Flow.Balances.stock_over_inflow`)
    - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 2. Where a family without repetition rises across a step by more than the inflow of a family containing it, some formation taking part gives it more than it takes from it, by more than its own part of that inflow, and takes from the containing family more than from the risen one, with equality decided from a condition outside it; the stock after the step is at most the stock before, the inflow and what is taken beyond. Every selection holding only where the family rises past the inflow holds only where a formation raising it takes from a condition no member of the group couples into. (`Becoming.Flow.Balances.rise_draws_beyond_inflow`, `Becoming.Flow.Balances.rise_le_inflow_beyond`, `Becoming.Flow.Balances.rise_takes_beyond_inflow`, `Becoming.Flow.favours_reaching_beyond_inflow`)
    - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
@@ -78,12 +78,14 @@ Stock accounting over an open system: a stock rises by at most what flows in and
 
 | Role | Source | Declarations |
 |---|---|---|
-| proof | [Entropy.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Entropy.lean) | `Becoming.Flow.Balances.stock_gained`, `Becoming.Flow.Balances.stock_inflow`, `Becoming.Flow.Balances.stock_over_inflow`, `Becoming.Flow.excess_le_of_le_add`, `Becoming.Flow.gained_le_inflow`, `Becoming.Flow.gainlessOn_iff_inflow`, `Becoming.Flow.inflow`, `Becoming.Flow.le_add_excess`, `Becoming.Flow.replenishment_le_inflow` |
+| proof | [Entropy.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Entropy.lean) | `Becoming.Flow.Balances.stock_gained`, `Becoming.Flow.Balances.stock_inflow`, `Becoming.Flow.Balances.stock_over_inflow`, `Becoming.Flow.gained_le_inflow`, `Becoming.Flow.gainlessOn_iff_inflow`, `Becoming.Flow.inflow`, `Becoming.Flow.replenishment_le_inflow` |
 | proof | [SelectionReach.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionReach.lean) | `Becoming.Diversion.supplying_rises_by_inflow`, `Becoming.Flow.Balances.rise_draws_beyond_inflow`, `Becoming.Flow.Balances.rise_le_inflow_beyond`, `Becoming.Flow.Balances.rise_takes_beyond_inflow`, `Becoming.Flow.favours_reaching_beyond_inflow` |
 | proof | [DrawnBeyond.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnBeyond.lean) | `Becoming.Flow.Balances.beyond_falls_inflow`, `Becoming.Flow.Balances.breaks_beyond_inflow`, `Becoming.Flow.Balances.rise_bounded_by_beyond_inflow`, `Becoming.Flow.Balances.rise_breaks_beyond_inflow`, `Becoming.Flow.Balances.rise_lowers_beyond_inflow`, `Becoming.Flow.favours_breaking_beyond_inflow`, `Becoming.Flow.reaches_inflow` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T130149.371173Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
+| proof | [Change.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Change.lean) | `Becoming.excess_le_of_le_add`, `Becoming.le_add_excess` |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `a rise past the inflow is drawn from beyond`, `超过流入的上升取自其外`, `Becoming.Flow.inflow`, `Becoming.Flow.favours_reaching_beyond_inflow`, `Becoming.Flow.Balances.rise_draws_beyond_inflow`
 
@@ -92,6 +94,7 @@ Aliases: `a rise past the inflow is drawn from beyond`, `超过流入的上升�
 
 - 22 October 2026: added (IF1): the gainless laws of SelectionReach and DrawnBeyond graded by the containing family's inflow, the gainless laws derived as the case of no inflow; study section 355.
 - 22 October 2026, PL1 landing (with CK1, CR1, EM1): THE-THEORY-OF-BECOMING.md re-pointed. Since this record's reviewed hash, the cited text changed only by additions in sections 5, 7.4, 7.5, 7.7, 8.1 item 3 and 8.7 (pools along a run, what a center can know by a step, the deployed pipelines, learners that generalize). Read before re-pointing. The claim is unchanged.
+- 6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.
 
 </details>
 

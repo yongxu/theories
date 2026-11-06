@@ -1,5 +1,6 @@
 import Becoming.FinerTraces
 import Becoming.TypicalRuns
+import Becoming.Resolution
 
 /-!
 # Situation traces: the counts of situations are counts of the traces of one determined process

@@ -1,5 +1,4 @@
 import Becoming.Revision
-import Becoming.Counterfactual
 import Becoming.Stock
 import Becoming.Contacts
 

@@ -812,7 +812,7 @@ def visited (r : Run P) : Nat → List S
 
 theorem mem_visited (r : Run P) {s : S} : ∀ {n : Nat}, s ∈ visited r n ↔ ∃ k, k < n ∧ r.state k = s
   | 0 => ⟨fun mem => (nomatch mem), fun ⟨_, lt, _⟩ => absurd lt (Nat.not_lt_zero _)⟩
-  | n + 1 => ⟨fun mem => match member_cons_cases mem with
+  | n + 1 => ⟨fun mem => match mem_cons_cases mem with
       | .inl here => ⟨n, Nat.lt_succ_self n, here.symm⟩
       | .inr earlier => match (mem_visited r).mp earlier with
         | ⟨k, lt, at_k⟩ => ⟨k, Nat.lt_succ_of_lt lt, at_k⟩,
@@ -964,12 +964,6 @@ theorem loop_courses_double (n : Nat) :
 end Mass
 
 /-! ## Feedback: a formation's system -/
-
-section Feedback
-
-variable {F C : Type} (L : Flow F C) (W : Web F C)
-
-end Feedback
 
 /-! ## Description: relations among parts along the courses of a law -/
 

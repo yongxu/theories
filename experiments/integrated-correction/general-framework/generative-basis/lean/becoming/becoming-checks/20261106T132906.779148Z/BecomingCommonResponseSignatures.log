@@ -1,0 +1,79 @@
+@Becoming.«自反则承在内» : ∀ {α : Type u_1} {E : Becoming.«际» α},
+  (∀ (s : α), E s s) → ∀ {P : α → Prop} {s : α}, Becoming.«承» (Becoming.«逆» E) P s → P s
+@Becoming.«诸承在内当且仅当自反» : ∀ {α : Type u_1} (E : Becoming.«际» α),
+  (∀ (P : α → Prop) (s : α), Becoming.«承» (Becoming.«逆» E) P s → P s) ↔ ∀ (s : α), E s s
+@Becoming.«传递则承闭» : ∀ {α : Type u_1} {E : Becoming.«际» α},
+  (∀ (x y z : α), E x y → E y z → E x z) → ∀ (P : α → Prop), Becoming.«闭» E (Becoming.«承» (Becoming.«逆» E) P)
+@Becoming.«诸承闭当且仅当传递» : ∀ {α : Type u_1} (E : Becoming.«际» α),
+  (∀ (P : α → Prop), Becoming.«闭» E (Becoming.«承» (Becoming.«逆» E) P)) ↔ ∀ (x y z : α), E x y → E y z → E x z
+@Becoming.«闭在内则在承» : ∀ {α : Type u_1} {E : Becoming.«际» α} {P Q : α → Prop},
+  (∀ (s : α), Q s → P s) → Becoming.«闭» E Q → ∀ {s : α}, Q s → Becoming.«承» (Becoming.«逆» E) P s
+@Becoming.«所闭之承在内» : ∀ {α : Type u_1} (E : Becoming.«际» α) {P : α → Prop} {s : α},
+  Becoming.«承» (Becoming.«逆» (Becoming.«所闭» E)) P s → P s
+@Becoming.«所闭之承闭» : ∀ {α : Type u_1} (E : Becoming.«际» α) (P : α → Prop),
+  Becoming.«闭» E (Becoming.«承» (Becoming.«逆» (Becoming.«所闭» E)) P)
+@Becoming.«闭在内则在所闭之承» : ∀ {α : Type u_1} {E : Becoming.«际» α} {P Q : α → Prop},
+  (∀ (s : α), Q s → P s) → Becoming.«闭» E Q → ∀ {s : α}, Q s → Becoming.«承» (Becoming.«逆» (Becoming.«所闭» E)) P s
+@Becoming.«所闭之承最大» : ∀ {α : Type u_1} (E : Becoming.«际» α) (P : α → Prop),
+  (∀ (s : α), Becoming.«承» (Becoming.«逆» (Becoming.«所闭» E)) P s → P s) ∧
+    Becoming.«闭» E (Becoming.«承» (Becoming.«逆» (Becoming.«所闭» E)) P) ∧
+      ∀ (Q : α → Prop),
+        (∀ (s : α), Q s → P s) → Becoming.«闭» E Q → ∀ (s : α), Q s → Becoming.«承» (Becoming.«逆» (Becoming.«所闭» E)) P s
+@Becoming.«共应当且仅当所闭之承遍» : ∀ {α : Type u_1} {A : Type u_2} (E : Becoming.«际» α) (G : A → α → Prop),
+  (∃ J, Becoming.«共应» E G J) ↔ ∀ (s : α), ∃ a, Becoming.«承» (Becoming.«逆» (Becoming.«所闭» E)) (G a) s
+@Becoming.«自反传递则共应当且仅当承遍» : ∀ {α : Type u_1} {A : Type u_2} {E : Becoming.«际» α},
+  (∀ (s : α), E s s) →
+    (∀ (x y z : α), E x y → E y z → E x z) →
+      ∀ (G : A → α → Prop), (∃ J, Becoming.«共应» E G J) ↔ ∀ (s : α), ∃ a, Becoming.«承» (Becoming.«逆» E) (G a) s
+@Becoming.«共应之细» : ∀ {α : Type u_1} {A : Type u_2} {E E' : Becoming.«际» α},
+  Becoming.«则» E' E → ∀ {G J : A → α → Prop}, Becoming.«共应» E G J → Becoming.«共应» E' G J
+@Becoming.«静之共应当且仅当遍» : ∀ {α : Type u_1} {A : Type u_2} (G : A → α → Prop),
+  (∃ J, Becoming.«共应» Becoming.«静» G J) ↔ ∀ (s : α), ∃ a, G a s
+@Becoming.«一之共应当且仅当一应遍» : ∀ {α : Type u_1} {A : Type u_2} (s₀ : α) (G : A → α → Prop),
+  (∃ J, Becoming.«共应» Becoming.«一» G J) ↔ ∃ a, ∀ (s : α), G a s
+@Becoming.«依读而应则共应» : ∀ {α : Type u_1} {A : Type u_2} {O : Type u_3} (read : α → O) (G : A → α → Prop) (rule : O → A),
+  (∀ (s : α), G (rule (read s)) s) → Becoming.«共应» (fun s s' => read s = read s') G fun a s => rule (read s) = a
+@Becoming.«应际同行当且仅当同读同应» : ∀ {S : Type u_1} {A : Type u_2} {O : Type u_3} (read : S → O) (G : A → S → Prop),
+  (Becoming.«同行» (Becoming.«应际» G) fun x y => Becoming.«读应» read x = Becoming.«读应» read y) ↔
+    ∀ (s s' : S) (a a' : A), read s = read s' → G a s → G a' s' → a = a'
+@Becoming.«遍定应共应当且仅当同读同应» : ∀ {S : Type u_1} {A : Type u_2} {O : Type u_3} (read : S → O) (G : A → S → Prop),
+  (∀ (s : S), ∃ a, G a s) →
+    (∀ (s : S) (a a' : A), G a s → G a' s → a = a') →
+      ((∃ J, Becoming.«共应» (fun s s' => read s = read s') G J) ↔
+        ∀ (s s' : S) (a a' : A), read s = read s' → G a s → G a' s' → a = a')
+@Becoming.«遍定应共应当且仅当像定后» : ∀ {S : Type u_1} {A : Type u_2} {O : Type u_3} (read : S → O) (G : A → S → Prop),
+  (∀ (s : S), ∃ a, G a s) →
+    (∀ (s : S) (a a' : A), G a s → G a' s → a = a') →
+      ((∃ J, Becoming.«共应» (fun s s' => read s = read s') G J) ↔
+        Becoming.«定后» (Becoming.«像» (Becoming.«读应» read) (Becoming.«应际» G)))
+@Becoming.«映应共应当且仅当同读同应» : ∀ {S : Type u_1} {A : Type u_2} {O : Type u_3} (read : S → O) (act : S → A),
+  (∃ J, Becoming.«共应» (fun s s' => read s = read s') (fun a s => act s = a) J) ↔
+    ∀ (s s' : S), read s = read s' → act s = act s'
+Becoming.«共应之例».NotReflexive.trans : ∀ (x y z : Unit),
+  Becoming.«共应之例».NotReflexive.E x y → Becoming.«共应之例».NotReflexive.E y z → Becoming.«共应之例».NotReflexive.E x z
+Becoming.«共应之例».NotReflexive.held_each : ∀ (s : Unit),
+  ∃ a, Becoming.«承» (Becoming.«逆» Becoming.«共应之例».NotReflexive.E) (Becoming.«共应之例».NotReflexive.G a) s
+Becoming.«共应之例».NotReflexive.none : ¬∃ J, Becoming.«共应» Becoming.«共应之例».NotReflexive.E Becoming.«共应之例».NotReflexive.G J
+Becoming.«共应之例».NotTransitive.refl : ∀ (s : Becoming.«共应之例».NotTransitive.Point), Becoming.«共应之例».NotTransitive.E s s
+Becoming.«共应之例».NotTransitive.symm : ∀ (x y : Becoming.«共应之例».NotTransitive.Point),
+  Becoming.«共应之例».NotTransitive.E x y → Becoming.«共应之例».NotTransitive.E y x
+Becoming.«共应之例».NotTransitive.held_each : ∀ (s : Becoming.«共应之例».NotTransitive.Point),
+  ∃ a, Becoming.«承» (Becoming.«逆» Becoming.«共应之例».NotTransitive.E) (Becoming.«共应之例».NotTransitive.G a) s
+Becoming.«共应之例».NotTransitive.none : ¬∃ J,
+    Becoming.«共应» Becoming.«共应之例».NotTransitive.E Becoming.«共应之例».NotTransitive.G J
+Becoming.«共应之例».EachNotCommon.each : ∀ (s : Bool), ∃ a, Becoming.«共应之例».EachNotCommon.G a s
+Becoming.«共应之例».EachNotCommon.none : ¬∃ J, Becoming.«共应» Becoming.«一» Becoming.«共应之例».EachNotCommon.G J
+Becoming.«共应之例».PairsNotCommon.pairs : ∀ (s s' : Becoming.«共应之例».PairsNotCommon.Point),
+  ∃ a, Becoming.«共应之例».PairsNotCommon.G a s ∧ Becoming.«共应之例».PairsNotCommon.G a s'
+Becoming.«共应之例».PairsNotCommon.none : ¬∃ J, Becoming.«共应» Becoming.«一» Becoming.«共应之例».PairsNotCommon.G J
+Becoming.«共应之例».NotCovering.fixed : Becoming.«定后»
+  (Becoming.«像» (Becoming.«读应» fun x => ()) (Becoming.«应际» Becoming.«共应之例».NotCovering.G))
+Becoming.«共应之例».NotCovering.none : ¬∃ J,
+    Becoming.«共应» (fun s s' => (fun x => ()) s = (fun x => ()) s') Becoming.«共应之例».NotCovering.G J
+Becoming.«共应之例».NotOne.common : ∃ J,
+  Becoming.«共应» (fun s s' => (fun x => ()) s = (fun x => ()) s') Becoming.«共应之例».NotOne.G J
+Becoming.«共应之例».NotOne.differ : ¬∀ (s s' : Unit) (a a' : Bool),
+    (fun x => ()) s = (fun x => ()) s' → Becoming.«共应之例».NotOne.G a s → Becoming.«共应之例».NotOne.G a' s' → a = a'
+Becoming.«共应之例».OneCarrier.fixed : Becoming.«定后» (Becoming.«像» (fun x => ()) Becoming.«共应之例».OneCarrier.R)
+Becoming.«共应之例».OneCarrier.none : ¬∃ J,
+    Becoming.«共应» (fun s s' => (fun x => ()) s = (fun x => ()) s') (fun a s => Becoming.«共应之例».OneCarrier.R s a) J

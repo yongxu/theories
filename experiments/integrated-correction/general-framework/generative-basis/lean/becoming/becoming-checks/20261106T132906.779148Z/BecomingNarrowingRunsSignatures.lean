@@ -1,0 +1,12 @@
+import Becoming.NarrowingRuns
+#check @Becoming.NarrowingRuns.safeFor_iff
+#check @Becoming.NarrowingRuns.inhabited_iff
+#check @Becoming.NarrowingRuns.settles_iff_answer
+#check @Becoming.NarrowingRuns.narrowed_answer_greatest
+#check @Becoming.NarrowingRuns.narrowed_answer_unique
+#check @Becoming.NarrowingRuns.narrowed_answer_unique_of_ext
+#check @Becoming.NarrowingRuns.run_constant
+#check @Becoming.NarrowingRuns.run_kept
+#check @Becoming.NarrowingRuns.run_answer_correct
+#check @Becoming.NarrowingRuns.run_answer_greatest
+#check @Becoming.NarrowingRuns.transport_settles_iff

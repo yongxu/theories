@@ -2,7 +2,7 @@
 
 # The theory graph
 
-One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3221 nodes, 6232 edges.
+One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3222 nodes, 6299 edges.
 
 | Region | Concepts | Results | Modules | Texts |
 |---|---:|---:|---:|---:|
@@ -13,7 +13,7 @@ One graph of the theory: the grammar's concepts, the results, the Lean modules, 
 | Collectives and selection | 0 | 74 | 28 | 0 |
 | The classical texts | 5 | 16 | 10 | 1724 |
 | Significance and alignment | 0 | 82 | 62 | 0 |
-| Method and the formal core | 0 | 21 | 25 | 0 |
+| Method and the formal core | 0 | 21 | 26 | 0 |
 | To retire | 0 | 7 | 0 | 0 |
 
 ## The grammar's concepts
@@ -638,7 +638,7 @@ Results (21):
 - [What one move ensures, and covering of moves](records/one-move-covering.md) (recorded-checked)
 - [When the runs of a process settle](records/when-the-runs-of-a-process-settle.md) (recorded-checked)
 
-Modules (25, 4 stated on the grammar): `CensusTable`, `Coverage`, `Decidedness`, `Derivation`, `Ideals`, `IdleRemoval`, `Imbalance`, `IntegerOrder`, `Integers`, `ListingRefutations`, `Locality`, `Prelude`, `PremiseWitnesses`, `PropositionIdentity`, `Refinement`, `Reordering`, `Resolution`, `RootForms`, `Standing`, `Stuttering`, `Tail`, `Tower`, `Undecided`, `WholeAmounts`, `Witnesses`
+Modules (26, 4 stated on the grammar): `CensusTable`, `Coverage`, `Decidedness`, `Derivation`, `Ideals`, `IdleRemoval`, `Imbalance`, `IntegerOrder`, `Integers`, `ListingRefutations`, `Locality`, `Prelude`, `PremiseWitnesses`, `PremisesTogether`, `PropositionIdentity`, `Refinement`, `Reordering`, `Resolution`, `RootForms`, `Standing`, `Stuttering`, `Tail`, `Tower`, `Undecided`, `WholeAmounts`, `Witnesses`
 
 
 ## To retire
@@ -656,4 +656,4 @@ Results (7):
 
 ## Not yet on the root
 
-305 of 386 core modules do not yet state their laws on the grammar (they neither are a grammar module nor import one); lifting them, as the continuation family was lifted, is the restructure's remaining formal work. A result marked · is not yet stated by a section of a live chapter.
+306 of 387 core modules do not yet state their laws on the grammar (they neither are a grammar module nor import one); lifting them, as the continuation family was lifted, is the restructure's remaining formal work. A result marked · is not yet stated by a section of a live chapter.

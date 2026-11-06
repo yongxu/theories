@@ -553,11 +553,6 @@ theorem rearrange_lt {A B C D : Nat} (ab : A < B) (cd : C < D) : A * D + B * C <
     rw [rearrange_eq A (p + 1) C (q + 1)]
     exact Nat.lt_add_of_pos_right (Nat.mul_pos (Nat.succ_pos p) (Nat.succ_pos q))
 
-theorem add_swap (a b c d : Nat) : a + b + (c + d) = a + d + (b + c) :=
-  (Nat.add_assoc a b (c + d)).trans
-    ((congrArg (a + ·) ((Nat.add_assoc b c d).symm.trans (Nat.add_comm (b + c) d))).trans
-      (Nat.add_assoc a d (b + c)).symm)
-
 /-- **The pool of readings**: each carrier among the readers reads the rule as `u`, each other as
 `v`, and the rule read is their sum, each kind counted as the population `x` counts it. -/
 def pool (u v x : CarrierCounts) : CarrierCounts :=
@@ -576,7 +571,7 @@ theorem cross (u v x y : CarrierCounts) :
     Naturals.mul_mul_mul_comm x.carrier u.carrier y.other v.other,
     Naturals.mul_mul_mul_comm x.other v.carrier y.carrier u.other,
     Naturals.mul_mul_mul_comm x.other v.carrier y.other v.other]
-  exact add_swap _ _ _ _
+  exact Naturals.add_regroup _ _ _ _
 
 /-- **Read through a pool, a share not lower gives a rule not lower**, where each carrier's
 reading favours the carriers at least as much as each other's. -/

@@ -94,6 +94,7 @@ Coupling, time window, coverage and validity of the undertaking need evidence; w
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `ChanceAdequacy.fulfillment_gives_chance_floor`, `ChanceAdequacy.all_weights_preserve_mass_iff`, `Becoming.all_weights_preserve_mass_iff_by_core (retired module)`, `Becoming.fulfillment_floor_by_core (retired module)`, `Becoming.Courses.claims_floor`, `Becoming.Courses.claims_every_weighting_iff`
 

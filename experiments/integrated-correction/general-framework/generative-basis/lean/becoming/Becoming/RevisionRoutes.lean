@@ -1,3 +1,5 @@
+import Becoming.Prelude
+
 /-!
 # A revision of a formation's law, and the routes of keeping it
 
@@ -207,14 +209,6 @@ theorem pos_of_mul_lt_mul {a b v : Nat} (lt : a * v < b * v) : 0 < v :=
   | 0, lt => absurd lt (Nat.lt_irrefl 0)
   | _ + 1, _ => Nat.succ_pos _
 
-/-- A product below another at one factor has the lower other factor (proved here with no axiom, as
-`Nat.lt_of_mul_lt_mul_right` is not). -/
-theorem lt_of_mul_lt_mul {a b v : Nat} (lt : a * v < b * v) : a < b :=
-  match Nat.decLt a b with
-  | isTrue below => below
-  | isFalse notBelow =>
-    absurd lt (Nat.not_lt_of_le (Nat.mul_le_mul_right _ (Nat.ge_of_not_lt notBelow)))
-
 /-- **A route stands above the revision only where it keeps the law more surely with a value, or
 loses less than the revision.** -/
 theorem above_needs (s : Prospects ι) (ρ : ι) (above : s.Above (some ρ) none) :
@@ -225,7 +219,7 @@ theorem above_needs (s : Prospects ι) (ρ : ι) (above : s.Above (some ρ) none
     have lt : s.keptRevised * s.value < s.kept ρ * s.value :=
       Nat.lt_of_add_lt_add_right (Nat.lt_of_lt_of_le above
         (Nat.add_le_add_left (Nat.mul_le_mul_right _ (Nat.ge_of_not_lt notLess)) _))
-    .inl ⟨pos_of_mul_lt_mul lt, lt_of_mul_lt_mul lt⟩
+    .inl ⟨pos_of_mul_lt_mul lt, Naturals.lt_of_mul_lt_mul_right lt⟩
 
 /-- **No value, no route losing less than the revision: the revision is maximal.** -/
 theorem maximal_of_no_value (s : Prospects ι) (noValue : s.value = 0)

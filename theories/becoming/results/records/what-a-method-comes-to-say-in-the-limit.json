@@ -356,8 +356,6 @@
         "Becoming.Limit.noneFailed_refutes",
         "Becoming.Limit.noneFailed_verifies",
         "Becoming.Limit.not_recurs_of_no",
-        "Becoming.Limit.or_left'",
-        "Becoming.Limit.or_right'",
         "Becoming.Limit.pending",
         "Becoming.Limit.pending_byRecord",
         "Becoming.Limit.refutes_iff_meet",
@@ -374,23 +372,25 @@
         "Becoming.Limit.still_byRecord",
         "Becoming.Limit.still_verifies",
         "Becoming.Limit.succeeds_of_some",
-        "Becoming.Limit.true_ne_false'",
         "Becoming.Limit.true_of_not_clear",
         "Becoming.Limit.verifies_iff_union",
         "Becoming.Limit.yesAfter_verifiable",
         "Becoming.Limit.yesFrom_closed"
       ],
-      "sha256": "14a4961d46c2925ee55cde73fc94ce44a4eb3f24bee9dcdeca829dff15f4589d"
+      "sha256": "95e8eb619b9e504e23e251477b4baf34c8b02743028f35b02689950ab17b8c1a"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
       "role": "proof",
-      "sha256": "3aadd812b74b7b0563aa3f7daa19a7d5b8da6f1bc55af5cc6bf64fb824f385d7",
+      "sha256": "cb2c9c8ba8e16916b41a36e1c392f3cd4840a7436b2817c12796c866908020a7",
       "declarations": [
         "Becoming.ListTests.false_of_not_true",
         "Becoming.ListTests.or_cases",
         "Becoming.ListTests.not_ne_self",
-        "Becoming.ListTests.not_eq_true_of_false"
+        "Becoming.ListTests.not_eq_true_of_false",
+        "Becoming.ListTests.or_left",
+        "Becoming.ListTests.or_right",
+        "Becoming.ListTests.bool_absurd"
       ]
     },
     {
@@ -464,19 +464,25 @@
       "role": "receipt",
       "sha256": "36435e774abc5c046539fef86812e4ba5a89d9a18899d51a3efae6363e89064a",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "role": "receipt",
+      "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LimitVerification.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T235844.485705Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.LimitVerification",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Prelude",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -506,6 +512,10 @@
     {
       "en": "3 November 2026, board item KS (found by KD's readers): the does-not-show's union of closed readings made countable (classically, every reading of runs is a union of closed ones, recurrence among them) and the classical converse credited, as 03 now does; its laws and their statements are unchanged.",
       "zh": "2026年11月3日，工作板条目 KS（KD 的读者发现）：“未表明”中闭读法之并改为可数并（经典上，运行的每个读法都是闭读法之并，复现在内），并记经典逆命题之出处，与 03 今同；定律及其陈述不变。"
+    },
+    {
+      "en": "6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.",
+      "zh": "2026年11月6日，工作板条目 LM：此记录所列辅助引理现只陈述一次，在 Prelude、Flow、Change 或 Laws，或即 Lean 自有者而从列表除去；改其名，诸律不变。"
     }
   ],
   "text_versions": [

@@ -109,6 +109,7 @@ Observation, method, response, production and carriers are roles in one unfoldin
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `Becoming.ContinuingRevision.continuing`, `Becoming.ContinuingRevision.formed_and_continues`, `Becoming.ContinuingRevision.new_available_choice`, `recurring reference revision`, `反复参考修订`, `Becoming.ContinuingRevision.repeats_iff`, `Becoming.ContinuingRevision.no_run_without_return`
 

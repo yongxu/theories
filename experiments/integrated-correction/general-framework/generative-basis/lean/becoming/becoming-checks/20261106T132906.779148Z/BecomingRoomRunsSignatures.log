@@ -1,0 +1,74 @@
+Becoming.Rooms.next_open : ∀ (m c x : Nat),
+  Becoming.Rooms.next m c 0 x = Becoming.RegimeMargin.step (Becoming.Rooms.heater m c) 1 x
+Becoming.Rooms.windowAt_level : ∀ (m c n : Nat),
+  (Becoming.Rooms.windowAt m c n).level = (Becoming.Rooms.windowRun m c).state n
+Becoming.Rooms.window_line : ∀ (m c n : Nat),
+  Becoming.Rooms.net m c (Becoming.Rooms.windowAt m c n) (Becoming.Rooms.windowAt m c (n + 1))
+Becoming.Rooms.Unheated.window_cold : ∀ (m k : Nat), (Becoming.Rooms.windowAt m 0 (m + k)).level = 0
+Becoming.Rooms.matched_meets : ∀ (m : Nat), Becoming.RegimeMargin.Meets (Becoming.Rooms.heater m 1) 1 0 m
+@Becoming.Rooms.matched_keeps : ∀ {m : Nat}, 1 ≤ m → Becoming.RegimeMargin.Keeps (Becoming.Rooms.heater m 1) 1 m
+@Becoming.Rooms.Matched.window_held : ∀ {m : Nat}, 1 ≤ m → ∀ (n : Nat), (Becoming.Rooms.windowAt m 1 n).level = m
+Becoming.Rooms.Overshooting.alternates : ∀ (n : Nat),
+  (Becoming.Rooms.windowRun 3 2).state n = 3 ∧ (Becoming.Rooms.windowRun 3 2).state (n + 1) = 4 ∨
+    (Becoming.Rooms.windowRun 3 2).state n = 4 ∧ (Becoming.Rooms.windowRun 3 2).state (n + 1) = 3
+@Becoming.Rooms.Overshooting.not_widening : ∀ {X : Type} (F : Nat → X → Prop),
+  ¬Becoming.Reaching.KeepsWidening fun n => F ((Becoming.Rooms.windowRun 3 2).state n)
+Becoming.Rooms.Overshooting.generation_at_moments : ∀ (N : Nat),
+  Becoming.«全生成» Becoming.Steps.next Becoming.«一»
+    (fun n m => (Becoming.Rooms.windowRun 3 2).state n = (Becoming.Rooms.windowRun 3 2).state m) N
+@Becoming.Rooms.Matched.no_generation_at_moments : ∀ {m : Nat},
+  1 ≤ m →
+    ∀ (N : Nat),
+      ¬Becoming.«全生成» Becoming.Steps.next Becoming.«一»
+          (fun n k => (Becoming.Rooms.windowRun m 1).state n = (Becoming.Rooms.windowRun m 1).state k) N
+Becoming.Rooms.Unheated.no_generation_at_moments : ∀ (m N : Nat),
+  ¬Becoming.«全生成» Becoming.Steps.next Becoming.«一»
+      (fun n k => (Becoming.Rooms.windowRun m 0).state n = (Becoming.Rooms.windowRun m 0).state k) N
+Becoming.Rooms.Overshooting.holds_one_way : (∀ (y hi : Nat),
+    1 + y ≤ 3 →
+      3 ≤ hi →
+        ¬(Becoming.RegimeMargin.Meets (Becoming.Rooms.heater 3 2) 1 y hi ∧
+            Becoming.RegimeMargin.Keeps (Becoming.Rooms.heater 3 2) 1 hi)) ∧
+  ∀ (n : Nat), 3 ≤ (Becoming.Rooms.windowRun 3 2).state n ∧ (Becoming.Rooms.windowRun 3 2).state n ≤ 4
+Becoming.Rooms.Overshooting.heater_shifted : ∀ (z : Nat),
+  Becoming.Rooms.heater 3 2 (z + 2) = Becoming.RegimeMargin.Alternation.giving z
+Becoming.Rooms.Overshooting.in_phase : ∀ (n : Nat),
+  (Becoming.Rooms.windowRun 3 2).state n = 3 ∧
+      (Becoming.Law.run (Becoming.RegimeMargin.step Becoming.RegimeMargin.Alternation.giving 1) 1).state n = 1 ∨
+    (Becoming.Rooms.windowRun 3 2).state n = 4 ∧
+      (Becoming.Law.run (Becoming.RegimeMargin.step Becoming.RegimeMargin.Alternation.giving 1) 1).state n = 2
+Becoming.Rooms.Overshooting.alternation_shifted : ∀ (n : Nat),
+  (Becoming.Rooms.windowRun 3 2).state n =
+    (Becoming.Law.run (Becoming.RegimeMargin.step Becoming.RegimeMargin.Alternation.giving 1) 1).state n + 2
+Becoming.Rooms.Unheated.not_widening : ∀ (m : Nat) {X : Type} (F : Nat → X → Prop),
+  ¬Becoming.Reaching.KeepsWidening fun n => F ((Becoming.Rooms.windowRun m 0).state n)
+@Becoming.Rooms.Matched.not_widening : ∀ {m : Nat},
+  1 ≤ m →
+    ∀ {X : Type} (F : Nat → X → Prop),
+      ¬Becoming.Reaching.KeepsWidening fun n => F ((Becoming.Rooms.windowRun m 1).state n)
+@Becoming.Rooms.steps_of_net : ∀ {m c : Nat} {s t : Becoming.Rooms.Occurrence},
+  Becoming.Rooms.net m c s t → Becoming.Steps (Becoming.Rooms.process m c) s t
+@Becoming.Rooms.net_of_steps : ∀ {m c : Nat} {s t : Becoming.Rooms.Occurrence},
+  Becoming.Steps (Becoming.Rooms.process m c) s t → Becoming.Rooms.net m c s t
+@Becoming.Rooms.line_iff_held : ∀ {m c : Nat} {x y : Becoming.Rooms.Occurrence},
+  Becoming.«所及» (Becoming.Rooms.net m c) Becoming.Rooms.alike x y ↔
+    Becoming.Reach (Becoming.Reaching.heldMoves (Becoming.Rooms.process m c) Becoming.Rooms.alike) x y
+Becoming.Rooms.Unheated.cold_not_held : Becoming.Reaching.Possible (Becoming.Rooms.process 3 0) (fun s x => s = x)
+    (Becoming.Rooms.start 3) Becoming.Rooms.Unheated.b0 ∧
+  ¬Becoming.Reaching.PossibleHeld (Becoming.Rooms.process 3 0) Becoming.Rooms.alike (fun s x => s = x)
+      (Becoming.Rooms.start 3) Becoming.Rooms.Unheated.b0
+@Becoming.Rooms.heated_held : ∀ {m c : Nat},
+  1 ≤ m →
+    1 ≤ c →
+      ∀ {x t : Becoming.Rooms.Occurrence} {as : List Bool},
+        Becoming.Rooms.warm x = true →
+          Generative.Trace (Becoming.Rooms.process m c) x as t →
+            Becoming.Reach (Becoming.Reaching.heldMoves (Becoming.Rooms.process m c) Becoming.Rooms.alike) x t
+@Becoming.Rooms.heated_possible_held : ∀ {m c : Nat},
+  1 ≤ m →
+    1 ≤ c →
+      ∀ {X : Type} {adm : Becoming.Rooms.Occurrence → X → Prop} {x : Becoming.Rooms.Occurrence},
+        Becoming.Rooms.warm x = true →
+          ∀ {y : X},
+            Becoming.Reaching.Possible (Becoming.Rooms.process m c) adm x y →
+              Becoming.Reaching.PossibleHeld (Becoming.Rooms.process m c) Becoming.Rooms.alike adm x y

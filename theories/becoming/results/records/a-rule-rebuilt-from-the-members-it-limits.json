@@ -235,7 +235,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean",
       "role": "proof",
-      "sha256": "10c77b181034e344d1b3cfd1aa2f343335a3b1ca4713df5d17b37838d0449108",
+      "sha256": "fe82de1f1377255eb7fc7b3cd42cad7245bd45882f4e58a6e82d3575e2c28709",
       "declarations": [
         "Becoming.RuleRebuilding.«三源之表»",
         "Becoming.RuleRebuilding.«不及任则持尽»",
@@ -288,12 +288,18 @@
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261103T023714.027477Z/verification.json",
       "role": "receipt",
       "sha256": "fd3ca5c2ad08049c04994e8fa082d24ae264b815bb7aa291d101309fe1ee77fe"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "role": "receipt",
+      "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261103T023714.027477Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.RuleRebuilding",
       "success_pointer": "/status",
       "success_value": "passed"

@@ -31,7 +31,7 @@
         "Becoming.«常闭则所及皆及»",
         "Becoming.«常闭则所缘同类»",
         "Becoming.«所缘同于»",
-        "Becoming.«有常则同类者有所缘»"
+        "Becoming.«有常则可续»"
       ]
     },
     {
@@ -260,7 +260,6 @@
         "Becoming.«所经不同则不及»",
         "Becoming.«所经必同»",
         "Becoming.«所缘同于»",
-        "Becoming.«有常则同类者有所缘»",
         "Becoming.«有常则至终有常»",
         "Becoming.«至终常类之闭当且仅当后皆同类»",
         "Becoming.«至终常闭则后皆续»",
@@ -268,7 +267,7 @@
         "Becoming.«至终常闭则所缘同类»",
         "Becoming.«至终有常»"
       ],
-      "sha256": "430e1887d6e5829e39efa7633bce673c997c34230ce0e6a5e731727cbd9b9493"
+      "sha256": "3b6e8b58e79b032bf124f853dfd8509d16aca264f3032894974b34e4fbee2135"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T060618.754321Z/verification.json",
@@ -325,12 +324,26 @@
       "role": "receipt",
       "sha256": "40ef6bb6514661fbb3ed7b705b45d28871fe14f6a9c1c5162c385ac7ff506117",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "role": "receipt",
+      "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
+      "role": "proof",
+      "sha256": "d45f47143ba616b665fb28f1a50e68eae3acdd54dea5cc3b068a28b31c8efba0",
+      "declarations": [
+        "Becoming.«有常则可续»"
+      ]
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarPath.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T202201.956842Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.GrammarPath",
       "success_pointer": "/status",
       "success_value": "passed"

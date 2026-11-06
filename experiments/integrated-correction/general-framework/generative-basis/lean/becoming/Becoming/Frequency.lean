@@ -148,10 +148,6 @@ theorem count_succ_off {on : Nat → Bool} {t : Nat} (no : on t = false) :
     count on (t + 1) = count on t :=
   congrArg (fun b => count on t + (bif b then 1 else 0)) no
 
-theorem bif_le (M : Nat) : ∀ b : Bool, (bif b then M else 0) ≤ M
-  | true => Nat.le_refl M
-  | false => Nat.zero_le M
-
 theorem count_le_succ (on : Nat → Bool) (t : Nat) : count on t ≤ count on (t + 1) :=
   Nat.le_add_right _ _
 
@@ -202,7 +198,7 @@ theorem step_eq (on : Nat → Bool) (M D t : Nat) :
 
 /-- One plus a number is at most two to its power. -/
 theorem succ_le_two_pow (M : Nat) : 1 + M ≤ 2 ^ M :=
-  Nat.le_trans (Nat.le_of_eq (Nat.add_comm 1 M)) (Nat.succ_le_of_lt (Loops.lt_two_pow M))
+  Nat.le_trans (Nat.le_of_eq (Nat.add_comm 1 M)) (Nat.succ_le_of_lt (Naturals.lt_two_pow M))
 
 /-- `(1 + M) ^ a` is at most `(2 ^ a) ^ M`. -/
 theorem pow_le_two_pow_pow (M a : Nat) : (1 + M) ^ a ≤ (2 ^ a) ^ M :=
@@ -327,7 +323,7 @@ theorem carried_le_of_rare {M D A n : Nat} {on : Nat → Bool} (start : ∀ c, �
   Nat.le_trans (carried_le_count start into quiet t c)
     (Nat.le_trans (Nat.mul_le_mul_left D (Nat.le_trans (Frequency.pow_le_two_pow_pow M _)
         (Loops.pow_le_pow_base (rare t) M)))
-      (Nat.le_of_eq ((congrArg (D * ·) ((Loops.mul_pow_nat A _ M).trans
+      (Nat.le_of_eq ((congrArg (D * ·) ((Naturals.mul_pow_eq A _ M).trans
         (congrArg (A ^ M * ·) (Loops.pow_mul_nat (t + 1) n M)))).trans
         (mul_assoc_nat D _ _).symm)))
 
@@ -403,7 +399,7 @@ theorem inflow_eq (on : Nat → Bool) (M t : Nat) :
 
 theorem into (on : Nat → Bool) (M : Nat) (t : Nat) (c : Unit) :
     inflow [()] (fun _ => false) (strengths on M) (fun _ => [()]) t c ≤ M :=
-  Nat.le_trans (Nat.le_of_eq (inflow_eq on M t)) (bif_le M (on t))
+  Nat.le_trans (Nat.le_of_eq (inflow_eq on M t)) (ListTests.bif_le M (on t))
 
 theorem quiet (on : Nat → Bool) (M : Nat) (t : Nat) (c : Unit) (no : on t = false) :
     inflow [()] (fun _ => false) (strengths on M) (fun _ => [()]) t c = 0 :=
@@ -844,7 +840,7 @@ theorem couplesAt_first {q : Nat → Bool} {u : Nat} (c : clear q u = true) (yes
     CouplesAt [()] (fun _ => false) (strengths q) (fun _ => [()]) u u () () :=
   ⟨(), .head _, rfl, Nat.le_refl u, .head _, Nat.lt_of_lt_of_le (Nat.succ_pos 0) (Nat.le_of_eq
     (congrArg (fun b => bif b then 1 else 0)
-      (Clear.and_both _ _ (beq_self u) (Clear.and_both _ _ yes c))).symm)⟩
+      (bool_and_true (beq_self u) (bool_and_true yes c))).symm)⟩
 
 /-- **It couples at most once.** -/
 theorem once {q : Nat → Bool} {u s u' s' : Nat}
@@ -927,7 +923,7 @@ theorem allUpTo_true {g : Nat → Bool} : ∀ {s}, allUpTo g s = true → ∀ n,
 
 theorem allUpTo_of {g : Nat → Bool} : ∀ {s}, (∀ n, n ≤ s → g n = true) → allUpTo g s = true
   | 0, all => all 0 (Nat.le_refl 0)
-  | s + 1, all => Clear.and_both _ _ (allUpTo_of fun n le => all n (Nat.le_succ_of_le le))
+  | s + 1, all => bool_and_true (allUpTo_of fun n le => all n (Nat.le_succ_of_le le))
       (all (s + 1) (Nat.le_refl _))
 
 /-- Every row up to `s` is `true` somewhere up to `u`. -/
@@ -952,7 +948,7 @@ theorem couplesAt_of_found {R : Nat → Nat → Bool} {u s : Nat} (le : s ≤ u)
     CouplesAt [()] (fun _ => false) (strengths R) (fun _ => [()]) u s () () :=
   ⟨(), .head _, rfl, le, .head _, Nat.lt_of_lt_of_le (Nat.succ_pos 0) (Nat.le_of_eq
     (congrArg (fun b => bif b then 1 else 0)
-      (Clear.and_both _ _ (Nat.ble_eq_true_of_le le) yes)).symm)⟩
+      (bool_and_true (Nat.ble_eq_true_of_le le) yes)).symm)⟩
 
 /-- Where every row up to `N` is `true` somewhere, one step bounds a place for each. -/
 theorem witnessed (R : Nat → Nat → Bool) : ∀ N, (∀ n, n ≤ N → ∃ m, R n m = true) →

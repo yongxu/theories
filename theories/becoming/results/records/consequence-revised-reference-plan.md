@@ -120,6 +120,7 @@ Activity, return, method, apparatus, support and response are differentiated rol
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T194851.524223Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `Becoming.ReferencePlan.complete_history`, `Becoming.ReferencePlan.revision_binds_plan`, `Becoming.ReferencePlan.second_installed_choice`, `consequence revised reference plan`, `后果修订参考计划`, `Becoming.ReferencePlan.frozen_misses`, `Becoming.Contacts.answers_iff`
 

@@ -400,7 +400,7 @@ def Amounts.whole : Amounts Nat where
   add_comm := Nat.add_comm
   zero_add := Nat.zero_add
   add_le_add_right := fun c le => Nat.add_le_add_right le c
-  le_of_add_le_add_right := fun _ le => Naturals.le_of_add_le_add_right le
+  le_of_add_le_add_right := fun _ le => Becoming.le_of_add_le_add_right _ le
   zero_le := Nat.zero_le
 
 namespace Amounts
@@ -494,7 +494,7 @@ theorem falls_by_stretch {q x y : Nat → Nat} (S n : Nat)
     (across : ∀ t, S ≤ t → t < S + n → q (t + 1) + x t = q t + y t)
     (loses : ∀ t, S ≤ t → t < S + n → y t + 1 ≤ x t) :
     q (S + n) + n ≤ q S :=
-  Naturals.le_of_add_le_add_right (k := total (steps S n) y)
+  Becoming.le_of_add_le_add_right (total (steps S n) y)
     (Nat.le_trans
       (Nat.le_of_eq ((Nat.add_right_comm (q (S + n)) n (total (steps S n) y)).trans
         (Nat.add_assoc (q (S + n)) (total (steps S n) y) n)))
@@ -544,7 +544,7 @@ theorem le_by_exchange {q x y q' x' y' : Nat → Nat} (S n : Nat)
       total (steps S n) y' + total (steps S n) x :=
     Nat.le_trans (Nat.le_of_eq (total_steps_add y x' S n).symm)
       (Nat.le_trans (total_steps_le S n exchange) (Nat.le_of_eq (total_steps_add y' x S n)))
-  Naturals.le_of_add_le_add_right (k := total (steps S n) x + total (steps S n) x')
+  Becoming.le_of_add_le_add_right (total (steps S n) x + total (steps S n) x')
     (calc q (S + n) + (total (steps S n) x + total (steps S n) x')
         = q S + (total (steps S n) y + total (steps S n) x') :=
           (Nat.add_assoc _ _ _).symm.trans

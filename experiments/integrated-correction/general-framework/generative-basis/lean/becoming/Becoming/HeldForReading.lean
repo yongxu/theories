@@ -616,7 +616,7 @@ theorem after_rule_le_iff (m : Model C) (gain loss : C → Nat) (r r' : C → Bo
       ((Nat.add_assoc _ _ _).symm.trans
         ((congrArg (· + onPart m r fun c => m.weight c * loss c)
           (after_rule_add_onLoss m gain loss r')).trans (Nat.add_assoc _ _ _)))
-  ⟨fun le => le_of_add_le_add_left_core (Nat.le_trans (Nat.le_of_eq left.symm)
+  ⟨fun le => Naturals.le_of_add_le_add_left (Nat.le_trans (Nat.le_of_eq left.symm)
       (Nat.le_trans (Nat.add_le_add_right le _) (Nat.le_of_eq right))),
    fun le => le_of_add_le_add_right _ (Nat.le_trans (Nat.le_of_eq left)
       (Nat.le_trans (Nat.add_le_add_left le _) (Nat.le_of_eq right.symm)))⟩
@@ -637,7 +637,7 @@ theorem rule_not_below_off_iff (m : Model C) (gain loss : C → Nat) (r : C → 
       onPart m r (fun c => m.weight c * loss c) ≤ onPart m r (fun c => m.weight c * gain c) := by
   show total m.listed (fun c => m.weight c * loss c) ≤ _ ↔ _
   rw [← offPart_add_onPart m r (fun c => m.weight c * loss c), after_rule]
-  exact ⟨le_of_add_le_add_left_core, fun le => Nat.add_le_add_left le _⟩
+  exact ⟨Naturals.le_of_add_le_add_left, fun le => Nat.add_le_add_left le _⟩
 
 /-! ### What holding forgoes, and a rule's shortfall -/
 

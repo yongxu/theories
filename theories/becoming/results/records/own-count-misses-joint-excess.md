@@ -116,6 +116,7 @@ Ren's proposal says that the self can become rigid and “has to count the dynam
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `Becoming.Flow.WithinOwn`, `Becoming.Flow.WithinJoint`, `Becoming.Flow.joint_keeps`, `Becoming.Flow.excess_lowers`, `Becoming.Flow.excess_bounded`, `Becoming.Flow.stays_below`, `Becoming.Flow.ends_below`, `Becoming.Flow.joint_excess_ends`, `Becoming.Pair.no_web`, `Becoming.Exceeding.all_end`, `Becoming.Alone.all_continue`
 

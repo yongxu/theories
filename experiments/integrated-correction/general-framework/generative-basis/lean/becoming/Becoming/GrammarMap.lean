@@ -24,7 +24,7 @@ middle as a hypothesis they cover every point (`«全三域之周»`). 全生成
 (`«全生成之所及亦全生成»`) and an end reaches back along it (`«有终之所前亦有终»`). A carrying renewal
 is an alteration (`«传则异»`). A coarse class constant under 缘 has no end from a continued point
 (`«有常则无终»`), so what reaches an end after a continued step has a coarse class that is not
-constant (`«有终则粗不有常»`): its own regularity lies in the core. Renewal does not decide the
+constant (`«有终则粗不有常»`). Renewal does not decide the
 region: a line can renew and still end (`Map.Short.renews_and_ends`). Telling a coarse line that never ends from
 one that reaches an end, at every point of every model, is exactly excluded middle
 (`«不穷有终之定当且仅当排中»`), and so is placing every point in one of the three strong forms
@@ -114,8 +114,7 @@ theorem «有常则无终» {R L : «际» α} (hc : «有常» R L) {x : α} (h
     | .inl e => by cases e; exact «有常则续不尽» hc hx
     | .inr l => «有常则相续不尽» hc l)
 
-/-- What reaches an end after a continued step has a coarse class that is not constant: its course
-lies in the core, not in the class. -/
+/-- What reaches an end after a continued step has a coarse class that is not constant. -/
 theorem «有终则粗不有常» {R L : «际» α} {x : α} (hx : «有前» R L x) (h : «有终» R L x) :
     ¬ «有常» R L :=
   fun hc => («有常则无终» hc hx) h
@@ -417,12 +416,42 @@ theorem step_reaches_of_le : ∀ {z n : Nat}, z ≤ n → «所及» step «一�
   | refl => exact .inl rfl
   | step _ ih => exact «所及之传递» ih (.inr (.one ⟨rfl, trivial⟩))
 
-/-- 全生成 is inhabited: the endless chain, under the one, renews at every step. -/
+/-- 全生成 is inhabited: the endless chain, under the one, renews at every step, since under identity
+every step leaves its kind. `Endless.generation_in_pairs` has it under a class that also goes on. -/
 theorem Endless.generation : «全生成» step «一» «静» 0 := by
   refine ⟨fun y _ => ⟨y + 1, rfl, trivial⟩, fun y _ => ⟨y, y + 1, .inl rfl, ⟨rfl, trivial⟩, ?_⟩⟩
   intro ⟨z, hz, e⟩
   cases e
   exact step_irrefl _ hz
+
+/-- Half a number, rounded down: the block of two it lies in. -/
+def half : Nat → Nat
+  | 0 => 0
+  | 1 => 0
+  | n + 2 => half n + 1
+
+/-- The class of lying in one block of two. -/
+def pairs : «际» Nat := fun a b => half a = half b
+
+/-- Beyond every number lies a step into a new block. -/
+theorem half_rises_beyond : ∀ y, ∃ u, y ≤ u ∧ half (u + 1) = half u + 1
+  | 0 => ⟨1, Nat.zero_le _, rfl⟩
+  | y + 1 => match half_rises_beyond y with
+    | ⟨u, le, e⟩ => ⟨u + 2, Nat.succ_le_succ (Nat.le_succ_of_le le), congrArg (· + 1) e⟩
+
+/-- **全生成 where a kind goes on**: under the class of lying in one block of two, the endless chain
+renews beyond every point, though the step from `0` continues its kind. So generation does not need
+identity, under which no step continues. -/
+theorem Endless.generation_in_pairs :
+    «全生成» step «一» pairs 0 ∧ «续» step pairs 0 1 := by
+  refine ⟨⟨fun y _ => ⟨y + 1, rfl, trivial⟩, fun y _ => ?_⟩, rfl, rfl⟩
+  match half_rises_beyond y with
+  | ⟨u, le, e⟩ =>
+    refine ⟨u, u + 1, step_reaches_of_le le, ⟨rfl, trivial⟩, ?_⟩
+    intro ⟨z, hz, same⟩
+    have uz : u = z := Nat.succ.inj hz
+    subst uz
+    exact Nat.succ_ne_self _ (e.symm.trans same.symm)
 
 /-- A pattern that stays as it is: one occurrence conditioning itself. -/
 def still : «际» Unit := fun _ _ => True

@@ -1,0 +1,69 @@
+@Becoming.Contextual.indexed_fits : ∀ {S : Type u_1} {K : Type u_2} {C : Type u_3} {V : Type u_4}
+  (X : Becoming.Contextual S K C V) {A : Type u_5} (P : Generative.Process S A) (s : S) (k : K) (c : C) (b : V),
+  (X.indexed P).realized s (k, c, b) ↔ X.within k c ∧ X.shows s k c = b
+@Becoming.Contextual.fitsFree_iff : ∀ {S : Type u_1} {K : Type u_2} {C : Type u_3} {V : Type u_4}
+  (X : Becoming.Contextual S K C V) {A : Type u_5} (P : Generative.Process S A) (home : C → K),
+  (∀ (c : C), X.within (home c) c) → ((∃ F, F.P = P ∧ X.FitsFree F) ↔ ∀ (s : S), X.Glues s)
+@Becoming.Contextual.no_free_frame : ∀ {S : Type u_1} {K : Type u_2} {C : Type u_3} {V : Type u_4}
+  (X : Becoming.Contextual S K C V) {A : Type u_5} {support : K → (C → V) → Prop},
+  Becoming.Local X.within support →
+    Becoming.NoGlobal support →
+      ∀ {s₀ : S},
+        X.Respects support s₀ →
+          ∀ (P : Generative.Process S A) (home : C → K), (∀ (c : C), X.within (home c) c) → ¬∃ F, F.P = P ∧ X.FitsFree F
+@Becoming.InOne.pooled : ∀ {I : Type u_1} {S : Type u_2} {A : Type u_3} {family : I → Generative.Process S A} {s t : S}
+  {word : List A}, Becoming.InOne family s word t → Generative.Trace (Becoming.pooledLaw family) s word t
+@Becoming.JoinClosed.inOne : ∀ {I : Type u_1} {S : Type u_2} {A : Type u_3} {family : I → Generative.Process S A},
+  Becoming.JoinClosed family →
+    ∀ (seed : I) {s t : S} {word : List A},
+      Generative.Trace (Becoming.pooledLaw family) s word t → Becoming.InOne family s word t
+@Becoming.pooledLaw_exact_iff_joinClosed : ∀ {I : Type u_1} {S : Type u_2} {A : Type u_3}
+  {family : I → Generative.Process S A} (seed : I),
+  (∀ (s : S) (word : List A) (t : S),
+      Generative.Trace (Becoming.pooledLaw family) s word t ↔ Becoming.InOne family s word t) ↔
+    Becoming.JoinClosed family
+@Becoming.retainedLaw_trace : ∀ {I : Type u_1} {S : Type u_2} {A : Type u_3} {family : I → Generative.Process S A}
+  {p q : I × S} {word : List A},
+  Generative.Trace (Becoming.retainedLaw family) p word q →
+    p.fst = q.fst ∧ Generative.Trace (family p.fst) p.snd word q.snd
+@Becoming.retainedLaw_trace_iff : ∀ {I : Type u_1} {S : Type u_2} {A : Type u_3} {family : I → Generative.Process S A}
+  {i j : I} {s t : S} {word : List A},
+  Generative.Trace (Becoming.retainedLaw family) (i, s) word (j, t) ↔ i = j ∧ Generative.Trace (family i) s word t
+@Becoming.retainedLaw_realizes_inOne : ∀ {I : Type u_1} {S : Type u_2} {A : Type u_3}
+  {family : I → Generative.Process S A} {s t : S} {word : List A},
+  (∃ i j, Generative.Trace (Becoming.retainedLaw family) (i, s) word (j, t)) ↔ Becoming.InOne family s word t
+@Becoming.erasedLaw_exact_iff_lifts : ∀ {I : Type u_1} {S : Type u_2} {A : Type u_3} (R : I → S → A → I → S → Prop),
+  (∀ (i : I) (s : S) (a : A) (t : S), (∃ j k, R j s a k t) → ∃ k, R i s a k t) ↔
+    ∀ (i : I) (s : S) (word : List A) (t : S),
+      Generative.Trace (Becoming.erasedLaw R) s word t ↔
+        ∃ j, Generative.Trace (Becoming.evolvingLaw R) (i, s) word (j, t)
+@Becoming.arrives_append : ∀ {I : Type u_1} {S : Type u_2} {A : Type u_3} {R : I → S → A → I → S → Prop}
+  {initial : I → Prop} {s t : S} {xs ys : List A} {k : I},
+  Becoming.Arrives R initial s (xs ++ ys) t k ↔ ∃ m, Becoming.Arrives R (Becoming.Arrives R initial s xs m) m ys t k
+@Becoming.arrives_singleton : ∀ {I : Type u_1} {S : Type u_2} {A : Type u_3} {R : I → S → A → I → S → Prop}
+  {possible : I → Prop} {s t : S} {a : A} {j : I},
+  Becoming.Arrives R possible s [a] t j ↔ Becoming.Advance R possible s a t j
+@Becoming.arrives_snoc : ∀ {I : Type u_1} {S : Type u_2} {A : Type u_3} {R : I → S → A → I → S → Prop}
+  {initial : I → Prop} {s t : S} {word : List A} {a : A} {j : I},
+  Becoming.Arrives R initial s (word ++ [a]) t j ↔ ∃ m, Becoming.Advance R (Becoming.Arrives R initial s word m) m a t j
+Becoming.CrossingContexts.pooled_crosses : Generative.Trace (Becoming.pooledLaw Becoming.CrossingContexts.family) 0
+  [(), ()] 2
+Becoming.CrossingContexts.not_inOne : ¬Becoming.InOne Becoming.CrossingContexts.family 0 [(), ()] 2
+Becoming.CrossingContexts.not_joinClosed : ¬Becoming.JoinClosed Becoming.CrossingContexts.family
+Becoming.CrossingContexts.retained_excludes : ¬∃ i j,
+    Generative.Trace (Becoming.retainedLaw Becoming.CrossingContexts.family) (i, 0) [(), ()] (j, 2)
+Becoming.ChangingContext.joins : Generative.Trace (Becoming.evolvingLaw Becoming.ChangingContext.relation) (false, 0)
+  [(), ()] (true, 2)
+Becoming.ChangingContext.arrives : Becoming.Arrives Becoming.ChangingContext.relation (fun i => i = false) 0 [(), ()] 2
+  true
+Becoming.ChangingContext.erased_not_lifted : Generative.Trace (Becoming.erasedLaw Becoming.ChangingContext.relation) 0
+    [()] 1 ∧
+  ¬∃ j, Generative.Trace (Becoming.evolvingLaw Becoming.ChangingContext.relation) (true, 0) [()] (j, 1)
+@Becoming.ContextArrivalTraces.step_arrives : ∀ {I : Type u_1} {S : Type u_2} {A : Type u_3}
+  (R : I → S → A → I → S → Prop) {possible : I → Prop} {i j : I} {s t : S} {a : A},
+  possible i → (Becoming.evolvingLaw R).step (i, s) a (j, t) → Becoming.Arrives R possible s [a] t j
+@Becoming.ContextArrivalTraces.empty_support_no_arrival : ∀ {I : Type u_1} {S : Type u_2} {A : Type u_3}
+  (R : I → S → A → I → S → Prop) (s : S) (a : A) (t : S) (j : I), ¬Becoming.Arrives R (fun x => False) s [a] t j
+Becoming.ContextArrivalTraces.changed_context_arrives : Becoming.Arrives Becoming.ChangingContext.relation
+    (fun i => i = false) 0 [()] 1 true ∧
+  true ≠ false

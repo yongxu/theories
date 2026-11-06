@@ -1313,7 +1313,7 @@ theorem redirect_balances {l o : C → Nat} (distinct : Distinct (L'.present t))
   by_cases xc : x = c
   · subst xc
     rw [if_pos rfl]
-    apply Naturals.add_right_cancel (k := 1)
+    apply add_right_cancel (1)
     rw [Nat.add_right_comm, Naturals.sub_add_cancel positive, Nat.add_assoc,
       redirect_given_at distinct mem gave]
     exact balances x
@@ -1398,7 +1398,7 @@ theorem ActsWithin.redirect (acts : L.ActsWithin part cap cs t L') (member : par
             · rw [if_pos (c := x = d) xd, if_pos (c := g = g ∧ x = d) ⟨rfl, xd⟩]
             · rw [if_neg (c := x = d) xd, if_neg (c := g = g ∧ x = d) fun same => xd same.2])
           distinct inC
-      exact Nat.le_trans (Nat.le_of_eq (Naturals.add_right_cancel (k := 1)
+      exact Nat.le_trans (Nat.le_of_eq (add_right_cancel (1)
         (lowered.symm.trans raised))) (acts.2.2.2.2 g inside)
     · exact Nat.le_trans (Nat.le_of_eq (total_congr (fun x => (redirect_give g x).trans
           ((if_neg fun same => gh same.1).trans (if_neg fun same => gh same.1))) cs))
@@ -2985,7 +2985,7 @@ theorem course_optimum (t : Nat) :
         _ = source k r s₀ t + renewed k r s₀ t + L'.give t .taker .source := by
             rw [Nat.add_comm (L'.give t .taker .source), Nat.add_assoc]
     have atMostLevel : L'.give t .taker .store ≤ source k r s₀ t + renewed k r s₀ t :=
-      Naturals.le_of_add_le_add_right (Nat.le_trans conserved toSource)
+      le_of_add_le_add_right _ (Nat.le_trans conserved toSource)
     have atMostK : L'.give t .taker .store ≤ k :=
       Nat.le_trans (Nat.le_add_right _ _) (Nat.le_trans conserved fromSource)
     have atMost : o .store ≤ store k r s₀ (t + 1) :=
@@ -3281,7 +3281,7 @@ theorem first_optimum (t : Nat) :
         _ = avail r s₀ t + L'.give t (.taker true) .source := by
             rw [Nat.add_comm (L'.give t (.taker true) .source), ← Nat.add_assoc]; rfl
     have withSecond : L'.give t (.taker true) .store + second r s₀ t ≤ avail r s₀ t :=
-      Naturals.le_of_add_le_add_right (k := L'.give t (.taker true) .source)
+      le_of_add_le_add_right (L'.give t (.taker true) .source)
         (Nat.le_trans (Nat.le_of_eq (Nat.add_right_comm _ _ _))
           (Nat.le_trans (Nat.add_le_add_right conserved _) toSource))
     have atMostFirst : L'.give t (.taker true) .store ≤ first r s₀ t :=
@@ -3341,7 +3341,7 @@ theorem second_optimum (t : Nat) :
         _ = avail r s₀ t + L'.give t (.taker false) .source := by
             rw [Nat.add_comm (L'.give t (.taker false) .source), ← Nat.add_assoc]; rfl
     have withFirst : first r s₀ t + L'.give t (.taker false) .store ≤ avail r s₀ t :=
-      Naturals.le_of_add_le_add_right (k := L'.give t (.taker false) .source)
+      le_of_add_le_add_right (L'.give t (.taker false) .source)
         (Nat.le_trans (Nat.le_of_eq (Nat.add_assoc _ _ _))
           (Nat.le_trans (Nat.add_le_add_left conserved _) toSource))
     have atMostSecond : L'.give t (.taker false) .store ≤ second r s₀ t :=
@@ -3502,35 +3502,18 @@ theorem sum_succ_first (f : Nat → Nat) :
       f 0 + (Amounts.whole.sum (fun t => f (t + 1)) 0 n + f (0 + n + 1))
     rw [sum_succ_first f n, Nat.add_assoc, Nat.zero_add, Nat.zero_add]
 
-/-- Two amounts added and two more: the middle two exchanged. -/
-theorem add_four (a b c d : Nat) : a + b + (c + d) = a + c + (b + d) := by
-  rw [Nat.add_assoc, Nat.add_left_comm b c d, ← Nat.add_assoc]
-
 /-- Nothing from two amounts added is nothing from each. -/
 theorem eq_zero_of_add {a : Nat} : ∀ {b : Nat}, a + b = 0 → a = 0 ∧ b = 0
   | 0, zero => ⟨zero, rfl⟩
   | _ + 1, zero => absurd zero (Naturals.succ_ne_zero _)
-
-/-- Adding the same amount first keeps two amounts apart. -/
-theorem add_left_cancel_of {k a b : Nat} (same : k + a = k + b) : a = b :=
-  Nat.le_antisymm (Naturals.le_of_add_le_add_left (k := k) (Nat.le_of_eq same))
-    (Naturals.le_of_add_le_add_left (k := k) (Nat.le_of_eq same.symm))
 
 /-- Of two equal sums of two amounts, the first amount of one is at most the first of the other
 exactly where the second of the other is at most the second of the one. -/
 theorem le_iff_of_add_eq {a b a' b' : Nat} (same : a + b = a' + b') : a ≤ a' ↔ b' ≤ b :=
   ⟨fun le => Naturals.le_of_add_le_add_left (k := a')
       (Nat.le_trans (Nat.le_of_eq same.symm) (Nat.add_le_add_right le b)),
-   fun le => Naturals.le_of_add_le_add_right (k := b)
+   fun le => le_of_add_le_add_right (b)
       (Nat.le_trans (Nat.le_of_eq same) (Nat.add_le_add_left le a'))⟩
-
-/-- Nothing left of `n` less `m` is `n` at most `m`. -/
-theorem le_of_sub_zero {n m : Nat} (zero : n - m = 0) : n ≤ m :=
-  match Nat.lt_or_ge m n with
-  | .inl lt => absurd (Nat.lt_of_lt_of_le lt (Nat.le_of_eq
-      ((Naturals.sub_add_cancel (Nat.le_of_lt lt)).symm.trans
-        ((congrArg (· + m) zero).trans (Nat.zero_add m))))) (Nat.lt_irrefl m)
-  | .inr ge => ge
 
 /-- A sum over `n` steps is nothing exactly where each step is nothing. -/
 theorem sum_eq_zero_iff {f : Nat → Nat} :
@@ -3556,7 +3539,7 @@ theorem sum_add_shortfall (renews : ∀ t, g t ≤ r) :
   | n + 1 => by
     show Amounts.whole.sum g 0 n + g (0 + n) +
         (Amounts.whole.sum (fun t => r - g t) 0 n + (r - g (0 + n))) = r * (n + 1)
-    rw [Nat.zero_add, add_four, sum_add_shortfall renews n, Naturals.add_sub_of_le (renews n),
+    rw [Nat.zero_add, Nat.add_add_add_comm, sum_add_shortfall renews n, Naturals.add_sub_of_le (renews n),
       Nat.mul_succ]
 
 /-- **What is given and what it falls short of, at the steps counted.** Where at most `r` is given at
@@ -3640,11 +3623,11 @@ theorem most_iff (within : ∀ t, x (t + 1) ≤ x t + g t) (renews : ∀ t, g t 
   have whole := drawn_add_shortfall_after within renews n
   ⟨fun most =>
     have rest : x (n + 1) + Amounts.whole.sum (fun t => r - g (t + 1)) 0 n = 0 :=
-      add_left_cancel_of ((Nat.add_assoc _ _ _).symm.trans
+      Naturals.add_left_cancel ((Nat.add_assoc _ _ _).symm.trans
         (whole.trans (most.symm.trans (Nat.add_zero _).symm)))
     have both := eq_zero_of_add rest
     ⟨both.1, fun t lt => Nat.le_antisymm (renews (t + 1))
-        (le_of_sub_zero (sum_eq_zero_iff.mp both.2 t lt))⟩,
+        (le_of_sub_eq_zero (sum_eq_zero_iff.mp both.2 t lt))⟩,
    fun ⟨left, renewed⟩ => by
     have none : Amounts.whole.sum (fun t => r - g (t + 1)) 0 n = 0 :=
       sum_eq_zero_iff.mpr fun t lt => (congrArg (r - ·) (renewed t lt)).trans (Nat.sub_self r)
@@ -3670,8 +3653,8 @@ theorem most_left_iff (within : ∀ t, x (t + 1) ≤ x t + g t) (renews : ∀ t,
   have whole := drawn_add_shortfall_after within renews n
   ⟨fun most =>
     have none : Amounts.whole.sum (fun t => r - g (t + 1)) 0 n = 0 :=
-      add_left_cancel_of (whole.trans (most.symm.trans (Nat.add_zero _).symm))
-    fun t lt => Nat.le_antisymm (renews (t + 1)) (le_of_sub_zero (sum_eq_zero_iff.mp none t lt)),
+      Naturals.add_left_cancel (whole.trans (most.symm.trans (Nat.add_zero _).symm))
+    fun t lt => Nat.le_antisymm (renews (t + 1)) (le_of_sub_eq_zero (sum_eq_zero_iff.mp none t lt)),
    fun renewed => by
     have none : Amounts.whole.sum (fun t => r - g (t + 1)) 0 n = 0 :=
       sum_eq_zero_iff.mpr fun t lt => (congrArg (r - ·) (renewed t lt)).trans (Nat.sub_self r)
@@ -4034,7 +4017,7 @@ theorem Balances.taken_eq_of_alike (balances : L.Balances W) (balances' : L'.Bal
     (given : ∀ t, t < n → L'.given t c = L.given t c)
     (left : W'.level n c = W.level n c) :
     Amounts.whole.sum (fun t => L'.taken t c) 0 n = Amounts.whole.sum (fun t => L.taken t c) 0 n :=
-  add_left_cancel_of (k := W.level n c)
+  Naturals.add_left_cancel (k := W.level n c)
     (calc W.level n c + Amounts.whole.sum (fun t => L'.taken t c) 0 n
         = W'.level n c + Amounts.whole.sum (drawnAt (fun t => W'.level t c)
             fun t => L'.given t c) 0 n := by rw [left, balances'.sum_taken c n]
@@ -4324,12 +4307,6 @@ namespace Optimum
 /-- A course keeps its level at `m` or above through the `n + 1` steps of a horizon. -/
 def Keeps (m n : Nat) (x : Nat → Nat) : Prop := ∀ t, t ≤ n + 1 → m ≤ x t
 
-/-- A step at most one past `n` is at most `n` or one past it. -/
-theorem le_or_eq_succ {t n : Nat} (le : t ≤ n + 1) : t ≤ n ∨ t = n + 1 :=
-  match Nat.lt_or_ge t (n + 1) with
-  | .inl lt => .inl (Nat.le_of_lt_succ lt)
-  | .inr ge => .inr (Nat.le_antisymm le ge)
-
 variable {R : Nat → Nat} {k q r s y m n : Nat}
 
 /-- **What a course keeping a need draws and leaves.** Where each step leaves at most the level with
@@ -4491,7 +4468,7 @@ theorem frontier_keeps {better : (Nat → Nat) → (Nat → Nat) → Prop}
       (Nat.zero_le _)
   exact ⟨Nat.le_antisymm (Nat.le_trans (Nat.le_add_right _ _) rest) stands, fun t lt =>
     Nat.le_antisymm (above _ (front.1.2 (t + 1) (Nat.succ_le_succ (Nat.le_of_lt lt))))
-      (le_of_sub_zero (sum_eq_zero_iff.mp none t lt))⟩
+      (le_of_sub_eq_zero (sum_eq_zero_iff.mp none t lt))⟩
 
 /-- **A course keeps a need or falls after meeting it.** A course from a start meeting `m` either
 keeps its level at `m` or above through the `n + 1` steps of a horizon or falls below `m`, at some
@@ -4501,7 +4478,7 @@ theorem keeps_or_falls {x : Nat → Nat} (start : m ≤ x 0) :
   | 0 => match Nat.lt_or_ge (x 1) m with
     | .inl lt => .inr ⟨0, Nat.le_refl 0, fun u le => Eq.subst (motive := fun z => m ≤ x z)
         (Nat.le_antisymm le (Nat.zero_le u)).symm start, lt⟩
-    | .inr ge => .inl fun t le => match le_or_eq_succ le with
+    | .inr ge => .inl fun t le => match le_succ_cases le with
       | .inl first => Eq.subst (motive := fun z => m ≤ x z)
           (Nat.le_antisymm first (Nat.zero_le t)).symm start
       | .inr second => Eq.subst (motive := fun z => m ≤ x z) second.symm ge
@@ -4509,7 +4486,7 @@ theorem keeps_or_falls {x : Nat → Nat} (start : m ≤ x 0) :
     | .inr ⟨t, le, met, lt⟩ => .inr ⟨t, Nat.le_succ_of_le le, met, lt⟩
     | .inl keeps => match Nat.lt_or_ge (x (n + 1 + 1)) m with
       | .inl lt => .inr ⟨n + 1, Nat.le_refl _, keeps, lt⟩
-      | .inr ge => .inl fun t le => match le_or_eq_succ le with
+      | .inr ge => .inl fun t le => match le_succ_cases le with
         | .inl earlier => keeps t earlier
         | .inr last => Eq.subst (motive := fun z => m ≤ x z) last.symm ge
 
@@ -4556,7 +4533,7 @@ theorem continued_keeping_frontier (above : ∀ z, m ≤ z → R z ≤ q)
     have kept := keeping_drawn_le above (fun t => (opens.2 t).1) keeps
     rw [opens.1] at kept
     exact Nat.not_le_of_gt more
-      (Naturals.le_of_add_le_add_right (Nat.le_trans kept (Nat.le_of_eq most.symm)))⟩
+      (le_of_add_le_add_right _ (Nat.le_trans kept (Nat.le_of_eq most.symm)))⟩
 
 /-- **What keeping forgoes grows with the horizon.** Where `q < r`, every coupling `w` that with an
 end `e` is below the horizon with the need is below what keeping forgoes against the course leaving
@@ -4711,7 +4688,7 @@ theorem valued_eq {d l : Nat} : ∀ {v : Nat}, 0 < v → d + v * l = d + l + (v 
 /-- Two sums each at most another, the sums equal, are each equal. -/
 theorem eq_of_add_eq_of_le {a b c d : Nat} (ab : a ≤ b) (cd : c ≤ d) (same : a + c = b + d) :
     a = b ∧ c = d :=
-  have first : a = b := Nat.le_antisymm ab (Naturals.le_of_add_le_add_right
+  have first : a = b := Nat.le_antisymm ab (le_of_add_le_add_right _
     (Nat.le_trans (Nat.le_of_eq same.symm) (Nat.add_le_add_left cd a)))
   ⟨first, Naturals.add_left_cancel (same.trans (congrArg (· + d) first.symm))⟩
 
@@ -4721,7 +4698,7 @@ theorem mul_left_cancel_of_pos {k : Nat} (pos : 0 < k) : ∀ {a b : Nat}, k * a 
   | 0, b + 1, same => absurd same (Nat.ne_of_lt (Nat.lt_of_lt_of_le pos (Nat.le_add_left k (k * b))))
   | a + 1, 0, same => absurd same.symm
       (Nat.ne_of_lt (Nat.lt_of_lt_of_le pos (Nat.le_add_left k (k * a))))
-  | _ + 1, _ + 1, same => congrArg Nat.succ (mul_left_cancel_of_pos pos (Naturals.add_right_cancel same))
+  | _ + 1, _ + 1, same => congrArg Nat.succ (mul_left_cancel_of_pos pos (add_right_cancel _ same))
 
 /-- **What a course draws with `v` for each unit it leaves, at most.** Where `R` gives at most `r`,
 an open course leaving at most `e` after `n + 1` steps draws across them, with `v` of at least one
@@ -5058,7 +5035,7 @@ theorem metThrough_of_below {m : Nat} {x : Nat → Nat} :
       if_neg (Nat.not_le_of_gt (Eq.subst (motive := fun z => x z < m)
         (Nat.le_antisymm le (Nat.zero_le t)) lt))
   | T + 1, _, le, lt => show (if m ≤ x (T + 1) then metThrough m x T else 0) = 0 from
-    match le_or_eq_succ le with
+    match le_succ_cases le with
     | .inl earlier => match Nat.lt_or_ge (x (T + 1)) m with
       | .inl below => if_neg (Nat.not_le_of_gt below)
       | .inr meets => (if_pos meets).trans (metThrough_of_below earlier lt)
@@ -5336,7 +5313,7 @@ theorem countUpTo_lt {p : Nat → Bool} {t : Nat} (fails : p t = false) :
 /-- The steps before `j` among the first `n`, `j ≤ n`, number `j`. -/
 theorem countUpTo_below {j : Nat} : ∀ {n : Nat}, j ≤ n → countUpTo (fun t => decide (t < j)) n = j
   | 0, le => (Nat.le_antisymm le (Nat.zero_le j)).symm
-  | n + 1, le => match le_or_eq_succ le with
+  | n + 1, le => match le_succ_cases le with
     | .inl earlier => by
       show countUpTo (fun t => decide (t < j)) n + (if decide (n < j) = true then 1 else 0) = j
       rw [countUpTo_below earlier, if_neg fun holds =>
@@ -5356,7 +5333,7 @@ theorem counted_step (b : Bool) {J S δ : Nat} (earlier : J * r ≤ S + J * q)
   match b, met with
   | true, met => Nat.le_trans (Nat.le_of_eq (Nat.succ_mul J r))
       (Nat.le_trans (Nat.add_le_add earlier (met rfl))
-        (Nat.le_of_eq ((add_four S (J * q) δ q).trans
+        (Nat.le_of_eq ((Nat.add_add_add_comm S (J * q) δ q).trans
           (congrArg (S + δ + ·) (Nat.succ_mul J q).symm))))
   | false, _ => Nat.le_trans earlier (Nat.add_le_add_right (Nat.le_add_right S δ) _)
 
@@ -5600,7 +5577,7 @@ theorem le_of_stepwise_end {A D Da Wa S j : Nat} (coupledAt : A ≤ D + c * j)
         _ ≤ S + (q * (j + i) + c * (j + i) + j * r) := Nat.add_le_add_left (stepwise_arith_le rate) _
         _ = Da + c * (j + i) + j * r := by rw [most, Nat.add_assoc S, Nat.add_assoc S]
         _ ≤ Wa + j * r := Nat.add_le_add_right coupledTo _
-    exact Naturals.le_of_add_le_add_right sum
+    exact le_of_add_le_add_right _ sum
 
 /-- **Between the renewal forgone and the need, the optimum keeps the need to the horizon's last step
 and draws everything there.** Where `R` gives at most `r` at every level, at most `q` at every level
@@ -5643,7 +5620,7 @@ theorem continued_ending_stepwise_frontier {worth : (Nat → Nat) → Nat}
           _ = drawnOver R (continued R (holdingTo s y 0 n) n) (n + 1) + c * n + c := by
               rw [most, Nat.mul_succ c n, Nat.add_assoc (s + R s + q * n) (c * n) c]
           _ ≤ worth (continued R (holdingTo s y 0 n) n) + m := Nat.add_le_add least low
-      exact Naturals.le_of_add_le_add_right sum
+      exact le_of_add_le_add_right _ sum
     | .inr ⟨j, le, met, lt⟩ => by
       have drawn := met_drawn_le renews above (fun t => (openB.2 t).1) met le
       rw [openB.1] at drawn
@@ -5763,7 +5740,7 @@ theorem continued_holding_stepwise_frontier {worth : (Nat → Nat) → Nat}
               rw [Nat.mul_succ c n, ← Nat.add_assoc (s + R s + q * n) (c * n) c,
                 Nat.add_assoc (s + R s) (q * n) (c * n)]
           _ ≤ s + R s + r * n + m := Nat.add_le_add (Nat.add_le_add_left per _) low
-      exact Naturals.le_of_add_le_add_right sum
+      exact le_of_add_le_add_right _ sum
     | .inr ⟨j, le, met, lt⟩ => by
       have drawn := met_drawn_le renews above (fun t => (opens.2 t).1) met le
       rw [opens.1] at drawn
@@ -5777,7 +5754,7 @@ theorem continued_holding_stepwise_frontier {worth : (Nat → Nat) → Nat}
           _ ≤ s + R s + r * n + j * q + c * j := Nat.add_le_add_right drawn _
           _ = s + R s + r * n + (j * q + c * j) := Nat.add_assoc _ _ _
           _ ≤ s + R s + r * n + j * r := Nat.add_le_add_left perStep _
-      exact Naturals.le_of_add_le_add_right sum) least)⟩
+      exact le_of_add_le_add_right _ sum) least)⟩
 
 /-- **A coupling a step below the renewal forgone is outweighed by a long horizon.** Where
 `q + c < r`, every end `e` with `c + e < n + m` has `c (n + 1) + q n + e < r n + m`: a coupling of at
@@ -5841,7 +5818,7 @@ theorem le_of_met_count {A D Da Wa S e J u M l d : Nat} (split : n = J + u)
   have short : D + l ≤ S + r * u + q * J := by
     rw [Nat.add_comm (r * J) (r * u), ← Nat.add_assoc S (r * u) (r * J),
       Nat.add_right_comm (S + r * u) (r * J) (q * J)] at drawn
-    exact Naturals.le_of_add_le_add_right drawn
+    exact le_of_add_le_add_right _ drawn
   have kept : Da + (c * J + c * u + c) + (l + e) =
       S + q * J + c * J + (q * u + (c * u + c) + l) :=
     calc Da + (c * J + c * u + c) + (l + e) = Da + e + (c * J + c * u + c) + l := by
@@ -5850,18 +5827,18 @@ theorem le_of_met_count {A D Da Wa S e J u M l d : Nat} (split : n = J + u)
       _ = S + (q * J + q * u) + (c * J + c * u + c) + l := by rw [most]
       _ = S + q * J + c * J + (q * u + (c * u + c) + l) := by
           rw [← Nat.add_assoc S (q * J) (q * u), Nat.add_assoc (c * J) (c * u) c,
-            add_four (S + q * J) (q * u) (c * J) (c * u + c),
+            Nat.add_add_add_comm (S + q * J) (q * u) (c * J) (c * u + c),
             Nat.add_assoc (S + q * J + c * J) (q * u + (c * u + c)) l]
-  apply Naturals.le_of_add_le_add_right (k := l + e)
+  apply le_of_add_le_add_right (l + e)
   calc A + d + (l + e) ≤ D + (c * J + c * M) + d + (l + e) :=
         Nat.add_le_add_right (Nat.add_le_add_right coupledAt d) _
     _ = D + l + (c * J + c * M + (d + e)) := by
-        rw [add_four (D + (c * J + c * M)) d l e, Nat.add_right_comm D (c * J + c * M) l,
+        rw [Nat.add_add_add_comm (D + (c * J + c * M)) d l e, Nat.add_right_comm D (c * J + c * M) l,
           Nat.add_assoc (D + l) (c * J + c * M) (d + e)]
     _ ≤ S + r * u + q * J + (c * J + c * M + (d + e)) := Nat.add_le_add_right short _
     _ = S + q * J + c * J + (r * u + (c * M + (d + e))) := by
         rw [Nat.add_right_comm S (r * u) (q * J), Nat.add_assoc (c * J) (c * M) (d + e),
-          add_four (S + q * J) (r * u) (c * J) (c * M + (d + e))]
+          Nat.add_add_add_comm (S + q * J) (r * u) (c * J) (c * M + (d + e))]
     _ ≤ S + q * J + c * J + (q * u + (c * u + c) + l) := Nat.add_le_add_left key _
     _ = Da + (c * J + c * u + c) + (l + e) := kept.symm
     _ ≤ Wa + (l + e) := Nat.add_le_add_right coupled _
@@ -5884,7 +5861,7 @@ theorem met_key_end {v e d : Nat} (rate : r ≤ q + c) (atEnd : r + e + d ≤ q 
     _ = q * (v + 1) + (c * (v + 1) + c) + m := by
         rw [Nat.mul_add q v 1, Nat.mul_one q, Nat.mul_add c v 1, Nat.mul_one c,
           Nat.add_assoc (q * v + c * v) (q + c + m) c, Nat.add_right_comm (q + c) m c,
-          Nat.add_assoc q c c, Nat.add_assoc (c * v) c c, add_four (q * v) q (c * v) (c + c),
+          Nat.add_assoc q c c, Nat.add_assoc (c * v) c c, Nat.add_add_add_comm (q * v) q (c * v) (c + c),
           Nat.add_assoc (q * v + c * v) (q + (c + c)) m]
 
 /-- The renewal forgone at steps met short of the horizon, against a course below the need at its
@@ -5979,7 +5956,7 @@ theorem frontier_keeps_met {better : (Nat → Nat) → (Nat → Nat) → Prop}
         (holdingTo_steps greatest reach settles drawsDown holds long)
     have most : drawnOver R (continued R (holdingTo s y e n) n) (n + 1) + e = s + R s + q * n :=
       (congrArg (· + e) continued_drawn).trans (holdingTo_most greatest reach settles n)
-    have rate : r ≤ q + c := Nat.le_of_lt (Naturals.le_of_add_le_add_right (k := m)
+    have rate : r ≤ q + c := Nat.le_of_lt (le_of_add_le_add_right (m)
       (Nat.le_trans (Nat.le_of_eq (Nat.add_right_comm r 1 m))
         (Nat.lt_of_le_of_lt (Nat.add_le_add_left ends r) atEnd)))
     absurd (rising x _ (falls_met_le (d := 1) renews above front.1 (counted x front.1) most
@@ -6431,7 +6408,7 @@ theorem burst_met (n : Nat) :
       ((holdingTo_most (R := burst) (r := 0) (s := 2) (y := 2) rfl (Nat.le_refl 2) (Nat.le_refl 2)
         (n + 1)).trans (congrArg (2 + burst 2 + ·) (Nat.zero_mul (n + 1))))
   have drawnK : drawnOver burst (continued burst (holdingTo 2 2 2 (n + 1)) (n + 1)) (n + 1 + 1) = 0 :=
-    Naturals.add_right_cancel twice
+    add_right_cancel _ twice
   have alike : metDraw burst 2 4 (n + 1) (continued burst (holdingTo 2 2 2 (n + 1)) (n + 1)) =
       metDraw burst 2 4 (n + 1) fallOnce :=
     (metDraw_of_keeps keepK).trans (by
@@ -7677,7 +7654,7 @@ theorem doubling_gain_le {a b z z' : Nat} (gentle : a ≤ 2 * b) (le : z ≤ z')
     b * (z + z) + a * z' ≤ b * (z' + z') + a * z :=
   match le_dest le with
   | ⟨d, split⟩ => by
-    rw [split, add_four, Nat.mul_add b (z + z) (d + d), Nat.mul_add a z d, Nat.add_assoc,
+    rw [split, Nat.add_add_add_comm, Nat.mul_add b (z + z) (d + d), Nat.mul_add a z d, Nat.add_assoc,
       Nat.add_comm (b * (d + d)) (a * z)]
     exact Nat.add_le_add_left (Nat.add_le_add_left (Nat.le_trans (Nat.mul_le_mul_right d gentle)
       (Nat.le_of_eq (twice_mul b d))) (a * z)) (b * (z + z))
@@ -7690,7 +7667,7 @@ theorem doubling_gain_lt {a b z z' : Nat} (gentle : a < 2 * b) (lt : z < z') :
     have scaled : a * (e + 1) < 2 * b * (e + 1) := by
       rw [Nat.mul_succ, Nat.mul_succ]
       exact Nat.add_lt_add_of_le_of_lt (Nat.mul_le_mul_right e (Nat.le_of_lt gentle)) gentle
-    rw [split, Nat.add_assoc z 1 e, Nat.add_comm 1 e, add_four, Nat.mul_add b (z + z),
+    rw [split, Nat.add_assoc z 1 e, Nat.add_comm 1 e, Nat.add_add_add_comm, Nat.mul_add b (z + z),
       Nat.mul_add a z, Nat.add_assoc, Nat.add_comm (b * ((e + 1) + (e + 1))) (a * z)]
     exact Nat.add_lt_add_left (Nat.add_lt_add_left (Nat.lt_of_lt_of_le scaled
       (Nat.le_of_eq (twice_mul b (e + 1)))) (a * z)) (b * (z + z))
@@ -8238,7 +8215,7 @@ theorem kept_returns {C : Nat → Nat} {a low r : Nat} (floor : low ≤ r) (le :
     rw [Nat.add_assoc low e d, Naturals.add_sub_cancel_left low (e + d),
       ← Nat.add_assoc low e d, Naturals.add_sub_cancel_left (low + e) d] at best
     rw [Nat.add_comm (C low) e]
-    exact Naturals.le_of_add_le_add_right (Nat.le_trans
+    exact le_of_add_le_add_right _ (Nat.le_trans
       (Nat.le_of_eq (Nat.add_right_comm e (C low) d))
       (Nat.le_trans best (Nat.le_of_eq (Nat.add_comm d (C (low + e))))))
 
@@ -8447,12 +8424,12 @@ theorem bestUpTo_max (f : Nat → Nat) : ∀ z a, a ≤ z → f a ≤ f (bestUpT
     show f a ≤ f (if f (bestUpTo f z) < f (z + 1) then z + 1 else bestUpTo f z)
     exact if h : f (bestUpTo f z) < f (z + 1) then by
         rw [if_pos h]
-        exact match le_or_eq_succ le with
+        exact match le_succ_cases le with
           | .inl earlier => Nat.le_of_lt (Nat.lt_of_le_of_lt (bestUpTo_max f z a earlier) h)
           | .inr last => Nat.le_of_eq (congrArg f last)
       else by
         rw [if_neg h]
-        exact match le_or_eq_succ le with
+        exact match le_succ_cases le with
           | .inl earlier => bestUpTo_max f z a earlier
           | .inr last => Nat.le_trans (Nat.le_of_eq (congrArg f last)) (Nat.ge_of_not_lt h)
 
@@ -9064,7 +9041,7 @@ theorem drain_perfect_iff :
       by
         rw [Nat.add_right_comm (portion d t z - b), Naturals.sub_add_cancel le, Nat.add_assoc (portion d t z),
           Nat.add_right_comm (portion d (t + 1) (G t 0))] at added
-        exact Naturals.le_of_add_le_add_right (Naturals.le_of_add_le_add_left added),
+        exact le_of_add_le_add_right _ (Naturals.le_of_add_le_add_left added),
    fun returns => ⟨fun _ _ _ => ⟨Nat.le_refl 0, Nat.zero_le _⟩, fun t j at_ d dk z b _ le =>
     match j, at_ with
     | 0, _ => Nat.add_le_add_right (Nat.sub_le _ b) 0

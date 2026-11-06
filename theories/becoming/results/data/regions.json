@@ -4613,6 +4613,11 @@
    "base": "general",
    "note": "EL7: errors by chance in a pair's run; a burst ends laws keeping mutual withholding, the share still giving bounded (05 §5)"
   },
+  "Becoming.PremisesTogether": {
+   "region": "method",
+   "base": "grammar",
+   "note": "LM: thirteen premises no theorem concludes by name, each met with the premises its line names in small models (08 §7), among them ListedPaths.premises_hold and ListedPaths.condition_reads_no_order; says nothing of how often they hold"
+  },
   "Becoming.RoutesToC": {
    "region": "significance",
    "base": "general",

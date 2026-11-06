@@ -13,7 +13,7 @@ is right (board item RF, round 2: RF6.3).
   no published prediction is right (`none_right_of_moves`), and no predictor is right on every
   admitted response once one admitted response moves every value, even a predictor reading the
   response itself (`no_predictor_right`); for two values, negation is such a response
-  (`not_moves`). A predictor right on every admitted response exists exactly where each admitted
+  (`ListTests.not_ne_self`). A predictor right on every admitted response exists exactly where each admitted
   response leaves some value, given choice over the admitted responses (`predictor_iff`).
 * **Repeated publication.** Publishing at each step the outcome of the step before is the
   response's orbit (`Law.orbit`): a step's prediction is right exactly where the next step publishes
@@ -74,11 +74,6 @@ theorem no_predictor_right {admitted : (V → V) → Prop} {r : V → V} (holds 
     (moves : ∀ v, r v ≠ v) :
     ¬ ∃ predict : (V → V) → V, ∀ r', admitted r' → Right r' (predict r') :=
   fun ⟨predict, right⟩ => moves (predict r) (right r holds)
-
-/-- **For two values, negation moves every value.** -/
-theorem not_moves : ∀ b : Bool, (!b) ≠ b
-  | true => fun same => nomatch same
-  | false => fun same => nomatch same
 
 /-- **A predictor right on every admitted response exists exactly where each admitted response
 leaves some value**, given choice over the admitted responses. -/
@@ -209,7 +204,7 @@ def negate (v : Bool) : Bool := !v
 
 /-- **It leaves no value fixed**, so no published prediction is right. -/
 theorem none_right : ∀ p, ¬ Right negate p :=
-  none_right_of_moves not_moves
+  none_right_of_moves ListTests.not_ne_self
 
 /-- **Repeated publication alternates for ever**: no step publishes again. -/
 theorem alternates : ∀ p k, Law.orbit negate p (k + 1) ≠ Law.orbit negate p k :=
@@ -224,15 +219,9 @@ namespace Reflecting
 /-- On `0, 1, 2`, the reflection. -/
 def reflect (v : Nat) : Nat := 2 - v
 
-/-- Subtracting more leaves no more. -/
-theorem sub_antitone (k : Nat) {v w : Nat} (le : v ≤ w) : k - w ≤ k - v := by
-  induction le with
-  | refl => exact Nat.le_refl _
-  | step _ ih => exact Nat.le_trans (Nat.pred_le _) ih
-
 /-- **It reverses the order.** -/
 theorem reverses {v w : Nat} (le : v ≤ w) : reflect w ≤ reflect v :=
-  sub_antitone 2 le
+  Naturals.sub_antitone 2 le
 
 /-- **And leaves the middle fixed.** -/
 theorem middle_right : Right reflect 1 := rfl

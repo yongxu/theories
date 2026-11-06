@@ -169,10 +169,6 @@ theorem and_assoc : ∀ a b c : Bool, ((a && b) && c) = (a && (b && c))
   | true, _, _ => rfl
   | false, _, _ => rfl
 
-theorem and_true_right : ∀ a : Bool, (a && true) = a
-  | true => rfl
-  | false => rfl
-
 /-- `m` stands for the form read by `bears`: every record bearing on the form offers it. -/
 def stands (bears : R → Bool) (offers : R → M → Bool) (rs : List R) (m : M) : Bool :=
   rs.all fun r => !bears r || offers r m
@@ -289,7 +285,7 @@ theorem candidates_append (rep : List M) (rs more : List R) :
 
 theorem stands_single (r : R) (m : M) :
     stands bears offers [r] m = (!bears r || offers r m) :=
-  and_true_right _
+  Bool.and_true _
 
 /-- **A record bearing on the form keeps exactly the candidates it offers.** -/
 theorem candidates_snoc_bearing (rep : List M) (rs : List R) {r : R} (bearing : bears r = true) :

@@ -359,7 +359,7 @@ theorem marked_rises {c c' : X → Bool} : ∀ {l : List X},
     have up' : ∀ z, z ∈ l → c z = true → c' z = true := fun z m => up z (.tail x m)
     show (match c x with | true => marked c l + 1 | false => marked c l) + 1 ≤
       (match c' x with | true => marked c' l + 1 | false => marked c' l)
-    cases mem_cons_split m with
+    cases mem_cons_cases m with
     | inl at_x =>
       subst at_x
       rw [off, on]
@@ -384,7 +384,7 @@ theorem each_or_some {A B : X → Prop} : ∀ {l : List X}, (∀ x, x ∈ l → 
   | x :: l, each => match each x (.head l), each_or_some (fun y m => each y (.tail x m)) with
     | .inr b, _ => .inr ⟨x, .head l, b⟩
     | _, .inr ⟨y, m, b⟩ => .inr ⟨y, .tail x m, b⟩
-    | .inl a, .inl rest => .inl fun y m => match mem_cons_split m with
+    | .inl a, .inl rest => .inl fun y m => match mem_cons_cases m with
       | .inl at_x => at_x ▸ a
       | .inr m' => rest y m'
 

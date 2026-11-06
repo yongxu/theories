@@ -144,14 +144,6 @@ theorem rest_falls_of_rises {pre post : List P} {p : P} {a b : P → Nat}
     (Nat.lt_of_le_of_lt (Nat.le_of_eq (change_opposed pre p post a b))
       (Nat.add_lt_add_right rises _))
 
-/-- One member strictly below and none above make the total strictly below. -/
-theorem total_lt_of_mem {f g : P → Nat} {p : P} :
-    ∀ {ps : List P}, p ∈ ps → f p < g p → (∀ q, q ∈ ps → f q ≤ g q) → total ps f < total ps g
-  | _ :: qs, .head _, lt, le => Nat.lt_of_lt_of_le (Nat.add_lt_add_right lt _)
-      (Nat.add_le_add_left (total_le qs fun r mem => le r (.tail _ mem)) _)
-  | q :: _, .tail _ mem, lt, le => Nat.lt_of_le_of_lt (Nat.add_le_add_right (le q (.head _)) _)
-      (Nat.add_lt_add_left (total_lt_of_mem mem lt fun r mem' => le r (.tail q mem')) _)
-
 /-- No change raises every part's position. -/
 theorem not_all_rise {ps : List P} {p : P} (mem : p ∈ ps) (a b : P → Nat) :
     ¬ ∀ q, q ∈ ps → fallCount ps a b q < riseCount ps a b q :=
@@ -277,14 +269,6 @@ under `b`. -/
 def Keeps (ps : List P) (a b : P → Nat) : Prop :=
   ∀ p, p ∈ ps → riseCount ps a b p = fallCount ps a b p
 
-/-- A family with a member has a part. -/
-theorem length_pos_of_mem {p : P} : ∀ {ps : List P}, p ∈ ps → 0 < ps.length
-  | _ :: _, _ => Nat.succ_pos _
-
-/-- Four terms regrouped. -/
-theorem regroup (x y u v : Nat) : (x + y) + (u + v) = (x + v) + (y + u) :=
-  (congrArg ((x + y) + ·) (Nat.add_comm u v)).trans (Nat.add_add_add_comm x y v u)
-
 /-- **Position reads amounts up to a common amount.** A change keeps every part's position
 exactly where every part's amount changes by one amount common to all: for any two parts, what
 one had before with what the other has after is what the other had before with what the one has
@@ -298,7 +282,7 @@ theorem keeps_iff_common {ps : List P} {a b : P → Nat} :
         ps.length * (a q + b p) + (total ps a + total ps b) :=
       calc ps.length * (a p + b q) + (total ps a + total ps b)
           = (ps.length * a p + total ps b) + (ps.length * b q + total ps a) := by
-            rw [Nat.left_distrib]; exact regroup _ _ _ _
+            rw [Nat.left_distrib]; exact Naturals.add_regroup _ _ _ _
         _ = (ps.length * b p + total ps a) + (ps.length * a q + total ps b) := by
             rw [← hp, hq]
         _ = ps.length * (a q + b p) + (total ps a + total ps b) := by

@@ -100,6 +100,7 @@ Introduction, position, use and substitution are analytical roles within one der
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/substitution-correspondence-checks/20261020T161957.579185Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/substitution-correspondence-checks/20261031T133836.069337Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `Generative.InferentialSubstitution.all_terms_agree_iff_positions`, `Becoming.Readout.agree_iff_parts`, `Becoming.Readout.supplied_agree_iff_parts`
 

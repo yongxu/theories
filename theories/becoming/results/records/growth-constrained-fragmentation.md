@@ -108,6 +108,7 @@ Successors derive from actual remaining connections; Lean compares the old chain
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T123201.760905Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/preparation-correspondence-checks/20261031T133608.754102Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `GrownFragmentation.certificate_exact_split`, `Becoming.closure_iff_certified`, `Becoming.not_within_of_closed`, `Becoming.PreparationCorrespondence.bond_cut_separates`, `Becoming.PreparationCorrespondence.aggregate_cut_unchanged_iff`, `GrownFragmentation.every_tree_cut_certified`, `GrownFragmentation.only_equal_tree_cuts`, `GrownFragmentation.fragmentation_changes_prepared_return`, `GrownFragmentation.oldest_cut_reverses_ranking`, `GrownFragmentation.no_parent_summary_predictor`, `GrownFragmentation.bypass_survives_cut`, `GrownFragmentation.cut_spends_without_fragmenting`
 

@@ -529,7 +529,7 @@ theorem stops_decreasing {X : Type u} :
     match decided (l.length + 1) y with
     | .inl lasting =>
       match stops_decreasing l P down decided with
-      | ⟨k, within, steady⟩ => ⟨k, Nat.le_succ_of_le within, fun x mem => match mem_cons_split mem with
+      | ⟨k, within, steady⟩ => ⟨k, Nat.le_succ_of_le within, fun x mem => match mem_cons_cases mem with
           | .inl same => fun _ => Eq.subst (motive := fun z => P (k + 1) z) same.symm
               (holds_below down (Nat.succ_le_succ within) lasting)
           | .inr mem => steady x mem⟩
@@ -538,7 +538,7 @@ theorem stops_decreasing {X : Type u} :
       | .inr never =>
         match stops_decreasing l P down decided with
         | ⟨k, within, steady⟩ => ⟨k, Nat.le_succ_of_le within, fun x mem =>
-            match mem_cons_split mem with
+            match mem_cons_cases mem with
             | .inl same => fun holds => absurd (holds_below down (Nat.zero_le k)
                 (Eq.subst (motive := fun z => P k z) same holds)) never
             | .inr mem => steady x mem⟩
@@ -552,7 +552,7 @@ theorem stops_decreasing {X : Type u} :
               (fun j x => decided (skipAt m j) x) with
           | ⟨k, within, steady⟩ =>
             ⟨skipAt m k, Nat.le_trans (skipAt_le m k) (Nat.succ_le_succ within), fun x mem =>
-              match mem_cons_split mem with
+              match mem_cons_cases mem with
               | .inl same => match skip_side m k with
                 | .inl below => fun _ => Eq.subst (motive := fun z => P (skipAt m k + 1) z)
                     same.symm (holds_below down below last)
@@ -992,12 +992,12 @@ theorem BranchingTest.apart_from_listed {S : Type u} {S' : Type u'} (F : Frame S
       | .inl here => match apart y here with
         | ⟨χ, holds', fails'⟩ =>
           ⟨.both χ ψ, ⟨holds', holds⟩, fun z mem at_z both =>
-            match mem_cons_split mem with
+            match mem_cons_cases mem with
             | .inl same => fails' (Eq.subst (motive := fun w => BranchingTest.Holds G w χ) same
                 (show BranchingTest.Holds G z χ ∧ BranchingTest.Holds G z ψ from both).1)
             | .inr mem => fails z mem at_z
                 (show BranchingTest.Holds G z χ ∧ BranchingTest.Holds G z ψ from both).2⟩
-      | .inr absent => ⟨ψ, holds, fun z mem at_z => match mem_cons_split mem with
+      | .inr absent => ⟨ψ, holds, fun z mem at_z => match mem_cons_cases mem with
           | .inl same => absurd (Eq.subst (motive := q) same at_z) absent
           | .inr mem => fails z mem at_z⟩
 
@@ -1242,7 +1242,7 @@ theorem length_bothOf {β : Type u} {γ : Type u'} (l' : List γ) :
 theorem mem_rightsOf {β : Type u} {γ : Type u'} {c : γ} :
     ∀ {l' : List γ}, c ∈ l' → (Sum.inr c : Sum β γ) ∈ rightsOf l'
   | [], mem => nomatch mem
-  | d :: l', mem => match mem_cons_split mem with
+  | d :: l', mem => match mem_cons_cases mem with
     | .inl here => Eq.subst (motive := fun w => (Sum.inr w : Sum β γ) ∈ rightsOf (d :: l'))
         here.symm (List.Mem.head _)
     | .inr later => List.Mem.tail _ (mem_rightsOf later)
@@ -1255,7 +1255,7 @@ theorem mem_bothOf_right {β : Type u} {γ : Type u'} {c : γ} {l' : List γ} (m
 theorem mem_bothOf_left {β : Type u} {γ : Type u'} {l' : List γ} {b : β} :
     ∀ {l : List β}, b ∈ l → (Sum.inl b : Sum β γ) ∈ bothOf l' l
   | [], mem => nomatch mem
-  | d :: l, mem => match mem_cons_split mem with
+  | d :: l, mem => match mem_cons_cases mem with
     | .inl here => Eq.subst (motive := fun w => (Sum.inl w : Sum β γ) ∈ bothOf l' (d :: l))
         here.symm (List.Mem.head _)
     | .inr later => List.Mem.tail _ (mem_bothOf_left later)
@@ -1767,7 +1767,7 @@ theorem EitherThroughout.list (either : EitherThroughout) {β : Type u} {P : Nat
         (fun k => Decided.exists_listed fun c _ => decided k c) (fun k => down k b)
         (fun k ⟨c, mem, holds⟩ => ⟨c, mem, down k c holds⟩)
         (fun k => match each k with
-          | ⟨c, mem, holds⟩ => match mem_cons_split mem with
+          | ⟨c, mem, holds⟩ => match mem_cons_cases mem with
             | .inl same => .inl (Eq.subst (motive := P k) same holds)
             | .inr mem => .inr ⟨c, mem, holds⟩) with
     | .inl first => ⟨b, .head l, first⟩
@@ -1860,7 +1860,7 @@ theorem BranchingTest.apart_from_list {S : Type u} {S' : Type u'} (F : Frame S A
         apart y (.head l) with
     | ⟨ψ, holds, fails⟩, ⟨χ, holds', fails'⟩ =>
       ⟨.both χ ψ, ⟨holds', holds⟩, fun z mem both =>
-        match mem_cons_split mem with
+        match mem_cons_cases mem with
         | .inl same => fails' (Eq.subst (motive := fun w => BranchingTest.Holds G w χ) same
             (show BranchingTest.Holds G z χ ∧ BranchingTest.Holds G z ψ from both).1)
         | .inr mem => fails z mem
@@ -2370,20 +2370,20 @@ theorem outcomes (decided : ∀ k, Decided (α k)) (decided' : ∀ k, Decided (�
         | .threeOn true => .head _
         | .threeOn false => .tail _ (.head _)
         | .threeEndless => .tail _ (.tail _ (.head _)),
-       fun mem => match mem_cons_split mem with
+       fun mem => match mem_cons_cases mem with
         | .inl same => Eq.subst (motive := Step α β .three) same.symm (.threeOn true)
-        | .inr mem => match mem_cons_split mem with
+        | .inr mem => match mem_cons_cases mem with
           | .inl same => Eq.subst (motive := Step α β .three) same.symm (.threeOn false)
-          | .inr mem => match mem_cons_split mem with
+          | .inr mem => match mem_cons_cases mem with
             | .inl same => Eq.subst (motive := Step α β .three) same.symm .threeEndless
             | .inr mem => nomatch mem⟩⟩
   | .two => ⟨[.on true 0, .on false 0], fun _ =>
       ⟨fun step => match step with
         | .twoOn true => .head _
         | .twoOn false => .tail _ (.head _),
-       fun mem => match mem_cons_split mem with
+       fun mem => match mem_cons_cases mem with
         | .inl same => Eq.subst (motive := Step α β .two) same.symm (.twoOn true)
-        | .inr mem => match mem_cons_split mem with
+        | .inr mem => match mem_cons_cases mem with
           | .inl same => Eq.subst (motive := Step α β .two) same.symm (.twoOn false)
           | .inr mem => nomatch mem⟩⟩
   | .on b n =>
@@ -2393,7 +2393,7 @@ theorem outcomes (decided : ∀ k, Decided (α k)) (decided' : ∀ k, Decided (�
     | .inl goes => ⟨[.on b (n + 1)], fun _ =>
         ⟨fun step => match step with
           | .onward _ _ _ => .head _,
-         fun mem => match mem_cons_split mem with
+         fun mem => match mem_cons_cases mem with
           | .inl same => Eq.subst (motive := Step α β (.on b n)) same.symm (.onward b n goes)
           | .inr mem => nomatch mem⟩⟩
     | .inr stops => ⟨[], fun _ =>
@@ -2403,7 +2403,7 @@ theorem outcomes (decided : ∀ k, Decided (α k)) (decided' : ∀ k, Decided (�
   | .endless n => ⟨[.endless (n + 1)], fun _ =>
       ⟨fun step => match step with
         | .endlessOnward _ => .head _,
-       fun mem => match mem_cons_split mem with
+       fun mem => match mem_cons_cases mem with
         | .inl same => Eq.subst (motive := Step α β (.endless n)) same.symm (.endlessOnward n)
         | .inr mem => nomatch mem⟩⟩
 

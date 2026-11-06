@@ -118,7 +118,7 @@
         "Becoming.Continuity.balancesOn_iff_closures",
         "Becoming.Continuity.pairing_iff_closure_counts",
         "Becoming.Continuity.pairing_iff_closures",
-        "Becoming.Continuity.unitsOn",
+        "Becoming.unitsOn",
         "Becoming.Continuity.count_unitsOn",
         "Becoming.Continuity.conservedOn_iff_units_paired",
         "Becoming.Continuity.balancing_iff_units_paired",
@@ -260,12 +260,12 @@
     "Becoming.Continuity.balancesOn_iff_closures",
     "Becoming.Continuity.pairing_iff_closure_counts",
     "Becoming.Continuity.pairing_iff_closures",
-    "Becoming.Continuity.unitsOn",
+    "Becoming.unitsOn",
     "Becoming.Continuity.count_unitsOn",
     "Becoming.Continuity.conservedOn_iff_units_paired",
     "Becoming.Continuity.balancing_iff_units_paired",
     "Becoming.Continuity.balancesOn_iff_units_paired",
-    "Becoming.Continuity.paired_single",
+    "Becoming.GrammarLaws.paired_single",
     "Becoming.Continuity.PathOfThree.rel",
     "Becoming.Continuity.PathOfThree.paired_within",
     "Becoming.Continuity.PathOfThree.not_paired_along_step",
@@ -318,7 +318,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuity.lean",
       "role": "proof",
-      "sha256": "bb7753b154a8f30d1cbc720575b55fa13cc5f33b63a94064115ec92a9c018331",
+      "sha256": "dee6b943a980b47ff2db107c8c3898755f9fcb6019971b213c66d6e6f51bdca8",
       "declarations": [
         "Becoming.Continuity.Balancing",
         "Becoming.Continuity.Closes",
@@ -335,7 +335,6 @@
         "Becoming.Continuity.Teleport.swap",
         "Becoming.Continuity.Teleport.together",
         "Becoming.Continuity.Teleport.unit",
-        "Becoming.Continuity.add_pos_cases",
         "Becoming.Continuity.adj",
         "Becoming.Continuity.adj_symm",
         "Becoming.Continuity.balancesOn_iff_conserved",
@@ -394,7 +393,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
       "role": "statement",
-      "sha256": "25317ae599247630ed2e2884f7a756ab29e9d2514623ed32d6f977551cbce0f6",
+      "sha256": "94e9be0baad1667d0d06acdfa757543c292c054c3a7eeaefccbe10b43bd321b5",
       "declarations": [
         "Becoming.Flow.Balances",
         "Becoming.Flow.BalancesOn",
@@ -405,7 +404,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BalanceRegions.lean",
       "role": "proof",
-      "sha256": "ed947079d26bfdb6fd2a6117d393ea1fcd921d300fff49dab77cf47722efd1e5",
+      "sha256": "01756135e2befa4225a59aa4cd05ccd4ecc9e03a2c66c0e3d582bd1e46f3fa83",
       "declarations": [
         "Becoming.Continuity.adjacentListed",
         "Becoming.Continuity.adjacentListed_symm",
@@ -419,9 +418,6 @@
         "Becoming.Continuity.count_lt_count",
         "Becoming.Continuity.count_true",
         "Becoming.Continuity.counted_of_count",
-        "Becoming.Continuity.count_append",
-        "Becoming.Continuity.count_replicate_true",
-        "Becoming.Continuity.count_replicate_false",
         "Becoming.Continuity.closes_and_not",
         "Becoming.Continuity.within_split",
         "Becoming.Continuity.conserved_of_absent",
@@ -444,13 +440,11 @@
         "Becoming.Continuity.balancesOn_iff_closures",
         "Becoming.Continuity.pairing_iff_closure_counts",
         "Becoming.Continuity.pairing_iff_closures",
-        "Becoming.Continuity.unitsOn",
         "Becoming.Continuity.count_unitsOn",
         "Becoming.Continuity.closures_iff_unit_counts",
         "Becoming.Continuity.conservedOn_iff_units_paired",
         "Becoming.Continuity.balancing_iff_units_paired",
         "Becoming.Continuity.balancesOn_iff_units_paired",
-        "Becoming.Continuity.paired_single",
         "Becoming.Continuity.PathOfThree.rel",
         "Becoming.Continuity.PathOfThree.paired_within",
         "Becoming.Continuity.PathOfThree.not_paired_along_step",
@@ -474,20 +468,60 @@
       "role": "receipt",
       "sha256": "1a9451b892ce1e899d36fa636b55ca7ea796d191447c3c8cf660501deadc8e5d",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "role": "proof",
+      "sha256": "cb2c9c8ba8e16916b41a36e1c392f3cd4840a7436b2817c12796c866908020a7",
+      "declarations": [
+        "Becoming.Naturals.pos_or_of_add_pos"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
+      "role": "proof",
+      "sha256": "d45f47143ba616b665fb28f1a50e68eae3acdd54dea5cc3b068a28b31c8efba0",
+      "declarations": [
+        "Becoming.GrammarLaws.count_append",
+        "Becoming.GrammarLaws.count_replicate_true",
+        "Becoming.GrammarLaws.count_replicate_false",
+        "Becoming.unitsOn",
+        "Becoming.GrammarLaws.paired_single"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "role": "receipt",
+      "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuity.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T124646.497747Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Continuity",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BalanceRegions.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T105110.951913Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.BalanceRegions",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.GrammarLaws",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Prelude",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -512,6 +546,10 @@
     {
       "en": "1 November 2026, board item BD4: an eighth law reads the record on the grammar's «所闭» (Becoming.BalanceRegions): each closure under the listed adjacency is decided as a test and is the least family the relation closes holding it, so transfers balancing a step exist exactly where the total is conserved on each listed relatum's closure, equivalently where the levels read as units on their relata pair one to one, before with after, under the closure. The sixth item on what is not shown, the «所闭» form, is replaced by two: capacities, and pairing along one step, with a witness on the path 0 — 1 — 2. Gale and Hoffman, and the join as the closure-local reading of Flow.balances_iff_units, named in the correspondence, with a link to amounts-by-unit-matchings; the first hypothesis names decided equality a modelling hypothesis, and the transfers and the closures computable. No earlier statement, law or declaration changed.",
       "zh": "2026年11月1日，工作板条目 BD4：第八律于文法之 «所闭» 上读本记录（Becoming.BalanceRegions）：所列相邻下每个闭包可判定为一检验，且为关系所封闭、含此项之最小家族，故使一步平衡之转移恰在总量于每个所列关系项之闭包上守恒时存在，亦即恰在各水平读作其关系项上之单位、前后于闭包下一一成对时存在。所不示者第六项（«所闭» 形式）代之以二项：容量，与沿一步之配对（以路径 0 — 1 — 2 为证）。对应中写出 Gale 与 Hoffman，并称此合为 Flow.balances_iff_units 之闭包局部读法，链至 amounts-by-unit-matchings；第一条假设注明可判定相等为建模假设、转移与闭包可计算。先前之陈述、规律与声明皆未变。"
+    },
+    {
+      "en": "6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.",
+      "zh": "2026年11月6日，工作板条目 LM：此记录所列辅助引理现只陈述一次，在 Prelude、Flow、Change 或 Laws，或即 Lean 自有者而从列表除去；改其名，诸律不变。"
     }
   ]
 }

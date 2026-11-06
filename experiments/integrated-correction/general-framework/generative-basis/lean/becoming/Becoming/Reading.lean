@@ -178,16 +178,11 @@ theorem adopt_dependent_iff :
      | none => fun _ _ required => False.elim required
      | some g => fun exchanging => supported t g (exchanging_some_iff.mp exchanging)⟩
 
-/-- The rest is not among the formations of the flow. -/
-theorem none_not_mem_some {α : Type} : ∀ {l : List α}, ¬ (none : Option α) ∈ l.map some
-  | [], no => nomatch no
-  | _ :: _, .tail _ mem => none_not_mem_some mem
-
 /-- With the rest counted, the formations taking part are listed once where those of the flow
 are. -/
 theorem present_distinct {t : Nat} (distinct : Distinct (L.present t)) :
     Distinct ((L.withImbalance W).present t) :=
-  ⟨none_not_mem_some, distinct_map (fun _ _ same => Option.some.inj same) distinct⟩
+  ⟨ListTests.none_not_mem_map_some, distinct_map (fun _ _ same => Option.some.inj same) distinct⟩
 
 /-- With the rest counted, the formations of the flow listed once and exchanging decided, the
 relata active at each step are listed. -/

@@ -162,7 +162,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Blanket.lean",
       "role": "proof",
-      "sha256": "517d21ed20f59fce954e4f007eee54a9342bb1908a487ce9bd1b2d307d390677"
+      "sha256": "772cdae63f20f6ec5c42f84f090ebc4978083d4e00159e6aa9421d7b8a335458"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T191748.070149Z/verification.json",

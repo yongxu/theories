@@ -84,6 +84,7 @@ In graph terms a region nothing goes out of has no edge leaving it, and a closed
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T062217.665179Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `not going out of a region`, `不出一域`, `不出`, `nothing comes in where nothing goes out of the outside`, `Becoming.«不出»`, `Becoming.«不出当且仅当不外者闭»`, `Becoming.«不出皆闭当且仅当排中»`, `Becoming.«内至外之线有出步»`
 

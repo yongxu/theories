@@ -101,6 +101,7 @@ Residual recipe and native conditions are analytical coordinates of one semantic
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `Generative.ExplanatoryResiduals.partial_history_matches`, `Generative.ExplanatoryResiduals.execution_iff_completed_cut`, `Generative.ExplanatoryResumptionCases.exact_paused_accounts_retain_remaining_program`, `Becoming.Recipe.leads_iff_leaves`, `Becoming.SameBranchingTests.leads_iff`, `Becoming.Midway.remainder_codes_apart`
 

@@ -1,5 +1,4 @@
 import Becoming.Contacts
-import Becoming.Assurance
 
 /-!
 # Contact courses: revision rules as processes, and encodings along a run of channels

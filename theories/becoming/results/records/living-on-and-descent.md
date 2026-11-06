@@ -145,6 +145,7 @@ Becoming.Metaethics reads related as formed relation: conditioning, dependence, 
 | integration | [DESIGN.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/DESIGN.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T213154.508889Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `Becoming.Web.LivesOn`, `Becoming.Web.sustenance`, `Becoming.Web.LivesOn.active`, `Becoming.Web.living_on_reaches`, `Becoming.Web.lived_on_reaches`, `Becoming.Flow.Descends`, `Becoming.Flow.descent`, `Becoming.Flow.descent_reaches`, `Becoming.Flow.ancestry_reaches`, `Becoming.Web.Embodied.descends`, `Becoming.Web.arisen_reached`, `Becoming.Brood.descended`, `Becoming.Mutualism.apart_sustenance_connected`, `Becoming.Mutualism.relabel_sustenance`
 

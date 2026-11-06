@@ -215,10 +215,6 @@ end Web
 
 /-! ## Renewal does not imply generation -/
 
-namespace Renewable
-
-end Renewable
-
 /-! ## Depletion need not involve the arising formation, and renewal recurs without
 arising -/
 

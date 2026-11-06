@@ -1,6 +1,5 @@
 import Becoming.Keeping
 import Becoming.Labelled
-import Becoming.Onward
 
 /-!
 # JointKeeping: conditions kept together, and a part kept under every course

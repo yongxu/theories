@@ -116,6 +116,7 @@ Differentiation (Diff) is a correspondence premise in scope for fission, copying
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T005554.047169Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `EvaluatorGrounding.self_good_reaches_at_least_as_connected`, `EvaluatorGrounding.strict_indexed_rival_inconsistent`, `EvaluatorGrounding.chain_preserves`, `EvaluatorGrounding.tolerant_chain_reaches`, `EvaluatorGrounding.reach_is_g0`, `EvaluatorGrounding.self_good_derives_reachable_g0`, `EvaluatorGrounding.formed_other_has_significance`, `EvaluatorGrounding.threshold_rival_is_consistent_without_tolerance`, `EvaluatorGrounding.tolerant_standpoint_reaches_stranger`, `EvaluatorGrounding.present_aim_evaluator_escapes`, `EvaluatorGrounding.closed_self_blocks_reach`, `EvaluatorGrounding.persistence_rival_escapes_self_transcendence`, `Becoming.tolerant_chain_reaches_by_core (retired module)`
 

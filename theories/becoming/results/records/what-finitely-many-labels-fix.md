@@ -80,6 +80,7 @@ The chapter's open programme (section 8.2, Learning) named "learning a target fr
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `what finitely many labels fix`, `有限多个标签所确定者`, `table of labelled names`, `带标签名字之表`, `learnable from finitely many labels`, `从有限多个标签可学`, `labels along the course`, `沿进程的标签`
 

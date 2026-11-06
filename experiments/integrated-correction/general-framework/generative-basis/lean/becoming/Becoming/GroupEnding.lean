@@ -243,7 +243,7 @@ theorem group_childless (acting : L.Acting W) {G : Generations X}
     (descended : SelectionTerm.Flow.Descended L W G) {t : Nat} {h : List X}
     (within : ∀ p, p ∈ h → p ∈ G.family t) (inactive : ∀ p, p ∈ h → ¬ W.active t p) :
     total h (G.offspringNumber t) = 0 :=
-  total_zero_of fun p mp => offspring_zero acting descended (within p mp) (inactive p mp)
+  total_eq_zero fun p mp => offspring_zero acting descended (within p mp) (inactive p mp)
 
 /-- Where every group with less of the amount than another has its members not active, the
 groups with less leave nothing. -/
@@ -377,7 +377,7 @@ condition shared by every group, once it ends them, leaves no group to select am
 theorem all_end (acting : L.Acting W) {G : Generations X}
     (descended : SelectionTerm.Flow.Descended L W G) {t : Nat}
     (inactive : ∀ p, p ∈ G.family t → ¬ W.active t p) : G.size (t + 1) = 0 :=
-  (G.born_eq t).symm.trans (total_zero_of fun p mp =>
+  (G.born_eq t).symm.trans (total_eq_zero fun p mp =>
     offspring_zero acting descended mp (inactive p mp))
 
 /-- Groups formed by descent: a generation listed as groups each founded at a value `v` of the

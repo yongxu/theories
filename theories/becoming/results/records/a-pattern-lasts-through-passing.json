@@ -322,6 +322,13 @@
       "sha256_pointer": "/source_sha256/Becoming.PatternPassing",
       "success_pointer": "/status",
       "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Wholes.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T062217.665179Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Wholes",
+      "success_pointer": "/status",
+      "success_value": "passed"
     }
   ],
   "history": [

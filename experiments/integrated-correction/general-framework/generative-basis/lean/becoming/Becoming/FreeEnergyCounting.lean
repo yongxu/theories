@@ -1,4 +1,5 @@
 import Becoming.ConditionalWeights
+import Becoming.Flow
 
 /-!
 # The free-energy bound in counting form
@@ -70,14 +71,11 @@ open ConditionalWeights
 
 The prelude's `Nat.mul_pow` and `Nat.pow_lt_pow_left` use `propext`, and
 `Nat.lt_of_mul_lt_mul_left` also `Classical.choice` and `Quot.sound`, in this version of Lean, so
-those laws are proved here; the rest of the arithmetic uses axiom-free laws of the prelude
+those laws are proved without them, the first and third in the core (`Naturals.mul_pow_eq`,
+`Naturals.lt_of_mul_lt_mul_left`), the second here (`pow_succ_lt_pow_succ`); the rest of the arithmetic uses axiom-free laws of the prelude
 (`Nat.eq_of_mul_eq_mul_left`, `Nat.eq_of_mul_eq_mul_right`, `Nat.mul_lt_mul_of_pos_left`,
 `Nat.mul_lt_mul_of_pos_right`, `Nat.lt_of_add_lt_add_left`, `Nat.mul_eq_zero`) and of the core
 (`Naturals.pow_add`, `Naturals.mul_right_comm`, the cancellations, `total_zero`). -/
-
-theorem mul_pow_eq (x y : Nat) : ∀ n : Nat, (x * y) ^ n = x ^ n * y ^ n
-  | 0 => rfl
-  | n + 1 => (congrArg (· * (x * y)) (mul_pow_eq x y n)).trans (Naturals.mul_mul_mul_comm _ _ _ _)
 
 /-- A count to its own power is positive (`0 ^ 0 = 1`). -/
 theorem self_pow_pos : ∀ n : Nat, 0 < n ^ n
@@ -88,10 +86,6 @@ theorem lt_cancel_mul_left {a b c : Nat} (lt : c * a < c * b) : a < b :=
   match Nat.lt_or_ge a b with
   | .inl ab => ab
   | .inr ba => absurd lt (Nat.not_lt_of_le (Nat.mul_le_mul_left c ba))
-
-theorem lt_cancel_mul_right {a b c : Nat} (lt : a * c < b * c) : a < b :=
-  lt_cancel_mul_left (c := c) (Nat.lt_of_le_of_lt (Nat.le_of_eq (Nat.mul_comm c a))
-    (Nat.lt_of_lt_of_le lt (Nat.le_of_eq (Nat.mul_comm b c))))
 
 theorem base_zero_of_pow_zero {p c : Nat} (zero : p ^ c = 0) : p = 0 :=
   match p, zero with
@@ -203,7 +197,7 @@ theorem bernoulli_strict (x y : Nat) (ne : x ≠ y) :
 /-- The product identity behind `mean_step`. -/
 theorem mean_step_identity (k S y : Nat) :
     (k + 1) * (k * (S + y)) * ((k + 1) * S) ^ k = k * ((k + 1) ^ (k + 1) * S ^ k) * (S + y) := by
-  rw [mul_pow_eq (k + 1) S k]
+  rw [Naturals.mul_pow_eq (k + 1) S k]
   calc (k + 1) * (k * (S + y)) * ((k + 1) ^ k * S ^ k)
       = k * ((k + 1) * (S + y)) * ((k + 1) ^ k * S ^ k) :=
         congrArg (· * ((k + 1) ^ k * S ^ k)) (mul_turn _ _ _)
@@ -227,10 +221,10 @@ theorem mean_step_rhs (S y k : Nat) :
       (k + 1) * ((k + 1 + 1) ^ (k + 1 + 1) * S ^ (k + 1)) * S +
         (k + 1) * ((k + 1) ^ (k + 1) * (S + y) ^ (k + 1 + 1)) :=
   (Nat.add_comm _ _).trans (congr (congrArg (· + ·)
-    ((congrArg ((k + 1) * ·) ((mul_pow_eq (k + 1 + 1) S (k + 1 + 1)).trans
+    ((congrArg ((k + 1) * ·) ((Naturals.mul_pow_eq (k + 1 + 1) S (k + 1 + 1)).trans
       (mul_assoc_nat ((k + 1 + 1) ^ (k + 1 + 1)) (S ^ (k + 1)) S).symm)).trans
       (mul_assoc_nat (k + 1) ((k + 1 + 1) ^ (k + 1 + 1) * S ^ (k + 1)) S).symm))
-    ((mul_pow_eq (k + 1) (S + y) (k + 1 + 1)).trans
+    ((Naturals.mul_pow_eq (k + 1) (S + y) (k + 1 + 1)).trans
       ((Naturals.mul_right_comm ((k + 1) ^ (k + 1)) (k + 1) ((S + y) ^ (k + 1 + 1))).trans
         (Nat.mul_comm _ _))))
 
@@ -273,7 +267,7 @@ theorem mean_two_ident (K A X Y y : Nat) : K * (A * (X * (Y * y))) = A * (K * (X
 `m` copies of `y` have `(n + m) ^ (n + m) * (x ^ n * y ^ m) ≤ (n * x + m * y) ^ (n + m)`. -/
 theorem mean_two (n x y : Nat) :
     ∀ m : Nat, (n + m) ^ (n + m) * (x ^ n * y ^ m) ≤ (n * x + m * y) ^ (n + m)
-  | 0 => Nat.le_of_eq (((congrArg (n ^ n * ·) (Nat.mul_one (x ^ n))).trans (mul_pow_eq n x n).symm).trans
+  | 0 => Nat.le_of_eq (((congrArg (n ^ n * ·) (Nat.mul_one (x ^ n))).trans (Naturals.mul_pow_eq n x n).symm).trans
       ((congrArg (· ^ n) (Nat.add_zero (n * x)).symm).trans
         (congrArg (fun z => (n * x + z) ^ n) (Nat.zero_mul y).symm)))
   | m + 1 =>
@@ -290,7 +284,7 @@ keep the mean inequality strict. -/
 theorem mean_two_strict (n x y : Nat) (npos : 0 < n) (ne : x ≠ y) (m : Nat) :
     (n + (m + 1)) ^ (n + (m + 1)) * (x ^ n * y ^ (m + 1)) < (n * x + (m + 1) * y) ^ (n + (m + 1)) :=
   have apart : (n + m) * y ≠ n * x + m * y := fun eq => ne (Nat.eq_of_mul_eq_mul_left npos
-    (Naturals.add_right_cancel ((add_mul_split n m y).symm.trans eq))).symm
+    (add_right_cancel _ ((add_mul_split n m y).symm.trans eq))).symm
   lt_cancel_mul_left (c := (n + m) ^ (n + m))
     (Nat.lt_of_le_of_lt (Nat.le_of_eq (mean_two_ident _ _ (x ^ n) (y ^ m) y))
       (Nat.lt_of_le_of_lt (Nat.mul_le_mul_right y (Nat.mul_le_mul_left _ (mean_two n x y m)))
@@ -305,7 +299,7 @@ theorem two_parts_lhs (a b n m : Nat) :
     (n + m) ^ (n + m) * ((a * m) ^ n * (b * n) ^ m) =
       (n + m) ^ (n + m) * (a ^ n * b ^ m) * (m ^ n * n ^ m) :=
   (congrArg ((n + m) ^ (n + m) * ·)
-    ((congr (congrArg (· * ·) (mul_pow_eq a m n)) (mul_pow_eq b n m)).trans
+    ((congr (congrArg (· * ·) (Naturals.mul_pow_eq a m n)) (Naturals.mul_pow_eq b n m)).trans
       (Naturals.mul_mul_mul_comm (a ^ n) (m ^ n) (b ^ m) (n ^ m)))).trans
     (mul_assoc_nat _ _ _).symm
 
@@ -322,9 +316,9 @@ theorem two_parts_rhs (a b n m : Nat) :
       ((Naturals.mul_mul_mul_comm _ _ _ _).trans
         (congrArg (n ^ n * m ^ m * ·) (Nat.mul_comm (n ^ m) (m ^ n))))
   (congrArg (· ^ (n + m)) sum).trans
-    ((mul_pow_eq (n * m) (a + b) (n + m)).trans
+    ((Naturals.mul_pow_eq (n * m) (a + b) (n + m)).trans
       ((congrArg (· * (a + b) ^ (n + m))
-        ((mul_pow_eq n m (n + m)).trans
+        ((Naturals.mul_pow_eq n m (n + m)).trans
           ((congr (congrArg (· * ·) (Naturals.pow_add n n m)) (Naturals.pow_add m n m)).trans four))).trans
         ((Nat.mul_comm _ _).trans (mul_assoc_nat _ _ _).symm)))
 
@@ -353,7 +347,7 @@ theorem two_parts (a b : Nat) :
 theorem two_parts_strict (a b : Nat) (n m : Nat) (ne : a * (m + 1) ≠ b * (n + 1)) :
     (n + 1 + (m + 1)) ^ (n + 1 + (m + 1)) * (a ^ (n + 1) * b ^ (m + 1)) <
       (a + b) ^ (n + 1 + (m + 1)) * ((n + 1) ^ (n + 1) * (m + 1) ^ (m + 1)) :=
-  lt_cancel_mul_right (c := (m + 1) ^ (n + 1) * (n + 1) ^ (m + 1))
+  Naturals.lt_of_mul_lt_mul_right (v := (m + 1) ^ (n + 1) * (n + 1) ^ (m + 1))
     (Nat.lt_of_le_of_lt (Nat.le_of_eq (two_parts_lhs a b (n + 1) (m + 1)).symm)
       (Nat.lt_of_lt_of_le (mean_two_strict (n + 1) (a * (m + 1)) (b * (n + 1)) (Nat.succ_pos n) ne m)
         (Nat.le_of_eq (two_parts_rhs a b (n + 1) (m + 1)))))
@@ -442,8 +436,8 @@ theorem powerProduct_scaled {α : Type} (n a : α → Nat) (A N : Nat) :
   | [], _ => rfl
   | h :: hs, prop =>
     have here : a h ^ n h * N ^ n h = n h ^ n h * A ^ n h :=
-      (mul_pow_eq (a h) N (n h)).symm.trans ((congrArg (· ^ n h) (prop h (.head _)).symm).trans
-        (mul_pow_eq (n h) A (n h)))
+      (Naturals.mul_pow_eq (a h) N (n h)).symm.trans ((congrArg (· ^ n h) (prop h (.head _)).symm).trans
+        (Naturals.mul_pow_eq (n h) A (n h)))
     ((congrArg (· * (a h ^ n h * powerProduct a n hs)) (Naturals.pow_add N (n h) (total hs n))).trans
       ((Naturals.mul_mul_mul_comm _ _ _ _).trans
         (congrArg (· * (N ^ total hs n * powerProduct a n hs)) (Nat.mul_comm _ _)))).trans

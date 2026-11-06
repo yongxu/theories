@@ -110,6 +110,7 @@ Roles differentiate through docking, reading, transfers and retention in common 
 | proof | [Gated.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Gated.lean) | `Becoming.Gated.KeptBy`, `Becoming.Gated.kept_along_iff`, `Becoming.Gated.change_passes_gate` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/copying-instances-checks/20261031T131950.855717Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `CopyingRegistration.registered_inheritance`, `Becoming.Copying.reading_iff`, `Becoming.CopyingInstances.operate_copies_iff`, `Becoming.CopyingInstances.path_shaped_along`, `Becoming.CopyingInstances.registered_copy_iff`, `Becoming.Courses.reading_completes_iff`, `Becoming.Courses.copy_grows`
 

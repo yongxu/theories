@@ -52,7 +52,6 @@
       "en": "Witness: two groups of two, a = s = q = 1 and a cost of two, so that at a step the rule after shaping does not favour the shapers; with the shapers together each leaves four and each other three and the whole selects for shaping, and with each shaper beside an other the counts turn and it selects against.",
       "zh": "见证：二群各二人，a = s = q = 1，成本为二，故一步之内塑规后之规则不偏向塑规者；塑规者同群时各留四、他者各留三，整体选塑规；每塑规者与一他者同群时计数相反，整体不选。",
       "declarations": [
-        "Becoming.RuleShaping.Assorting.one_pos",
         "Becoming.RuleShaping.Assorting.assortedOffspring",
         "Becoming.RuleShaping.Assorting.mixedOffspring",
         "Becoming.RuleShaping.Assorting.assorted_grouped",
@@ -119,6 +118,10 @@
     {
       "en": "4 November 2026, board item US (study section 506): shaping in groups of any sizes stated (grouped_rises_iff_sized), the case of returns kept in groups of any sizes, with a witness either way at unequal sizes (Sized.either_verdict); the equal-size limit narrowed to the spread form.",
       "zh": "2026年11月4日，工作板条目 US（研究第 506 节）：群之大小任意时之塑规陈述（grouped_rises_iff_sized），乃各组大小任意之自留所返之一例，附大小不等时两可之见证（Sized.either_verdict）；等大之限收窄至离散之形。"
+    },
+    {
+      "en": "6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.",
+      "zh": "2026年11月6日，工作板条目 LM：此记录所列辅助引理现只陈述一次，在 Prelude、Flow、Change 或 Laws，或即 Lean 自有者而从列表除去；改其名，诸律不变。"
     }
   ],
   "aliases": [
@@ -167,14 +170,13 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean",
       "role": "proof",
-      "sha256": "8f0d8630a48b24088e17f50af7c95619f85191d2ce96f0e7837a38c506a7a74f",
+      "sha256": "64ef0f80da3be8166cf87c62b5dec33716d55f781cce43fd784698972fcca23c",
       "declarations": [
         "Becoming.RuleShaping.Assorting.assortedOffspring",
         "Becoming.RuleShaping.Assorting.assorted_grouped",
         "Becoming.RuleShaping.Assorting.either_verdict",
         "Becoming.RuleShaping.Assorting.mixedOffspring",
         "Becoming.RuleShaping.Assorting.mixed_grouped",
-        "Becoming.RuleShaping.Assorting.one_pos",
         "Becoming.RuleShaping.Grouped",
         "Becoming.RuleShaping.Sized.apart_grouped",
         "Becoming.RuleShaping.Sized.either_verdict",
@@ -191,7 +193,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionLevels.lean",
       "role": "proof",
-      "sha256": "63330f2fc76504fe103090b7e773d44b7149fd09373086e3ab4c800b61fa62a5",
+      "sha256": "ea9d8944a79dbde1b94b75921b88716f0a39c5f181af873617a7d4b9e3a57fb8",
       "declarations": [
         "Becoming.SelectionLevels.Founding.assorted",
         "Becoming.SelectionLevels.Founding.keeps",
@@ -233,7 +235,7 @@
     {
       "path": "theories/becoming/chapters/04-LIFE.md",
       "role": "statement",
-      "sha256": "fc2550d4ff5e9837a4949777baff288e4036c2598e4d5449f7abcdcb0850a1a7"
+      "sha256": "24906576b69bd0d0771587b9246ba5ab2195465ec7cfb75cf97181e83883e0dc"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261103T203838.375122Z/verification.json",
@@ -244,19 +246,25 @@
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/us-unequal-sizes/NOTE.md",
       "role": "integration",
       "sha256": "c8f2fc6ed39edcf9759012205c72665f7dc5d623423d99911569483a65cbe6e9"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "role": "receipt",
+      "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261103T203838.375122Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.RuleShaping",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionLevels.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261103T203838.375122Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.SelectionLevels",
       "success_pointer": "/status",
       "success_value": "passed"

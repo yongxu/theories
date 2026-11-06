@@ -106,6 +106,7 @@ Ren, 16 October 2026, chose “Closest gaps first” on the I4 classification ta
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T061626.538602Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/acquisition/feedback/remaining-dependency/formal/selection-relabel-correspondence-checks/20261031T133952.181485Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `Becoming.Relabel.selected_alike_iff`, `Becoming.Relabel.singled_iff_untied`, `Becoming.Relabel.Equivariant`, `Becoming.Relabel.EquivariantValue.tied`, `Becoming.Relabel.EquivariantChoice.withholds_of_full_tie`, `selection by the record alone`, `只读记录的选择`, `exchange-invariant selection`, `equivariant selection`, `selection-by-the-record-alone`, `selection through a model of the options`, `经选项模型的选择`, `Becoming.Learning.selects_right_through`, `Becoming.Learning.selects_not_right_of_parted`
 

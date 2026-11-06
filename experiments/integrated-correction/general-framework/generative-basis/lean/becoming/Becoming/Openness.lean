@@ -785,7 +785,7 @@ theorem mem_pick (t a : Nat) : ∀ b : Bool, (clear s t && s t) = b →
         | .inl earlier => earlier
         | .inr ge => (Clear.not_both notFirst
             (Eq.subst (motive := fun x => (clear s x && s x) = true)
-              (Nat.le_antisymm (Nat.le_of_lt_succ lt) ge) (Clear.and_both _ _ c yes))).elim,
+              (Nat.le_antisymm (Nat.le_of_lt_succ lt) ge) (bool_and_true c yes))).elim,
         c, yes⟩,
      fun mem => match before.mpr mem with
       | ⟨lt, c, yes⟩ => ⟨Nat.lt_succ_of_lt lt, c, yes⟩⟩

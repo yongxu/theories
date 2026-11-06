@@ -1,0 +1,99 @@
+@Becoming.StrengthFlows.course_eq_flowUnder : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} (present : Nat → List F)
+  (start : C → Nat), law.course present start = Becoming.StrengthFlows.flowUnder law present (law.levels present start)
+@Becoming.StrengthFlows.flowUnder_follows : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {part : F → Bool}
+  (present : Nat → List F) (l : Nat → C → Nat), (Becoming.StrengthFlows.flowUnder law present l).Follows law part l
+@Becoming.StrengthFlows.exchangeGap_follows : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {part : F → Bool}
+  {L L' : Becoming.Flow F C} {W W' : Becoming.Web F C},
+  L.Follows law part W.level →
+    L'.Follows law part W'.level →
+      ∀ {h : F}, part h = false → ∀ (t : Nat) (c : C), L.exchangeGap L' t h c = law.exchangeGap t h c W.level W'.level
+@Becoming.StrengthFlows.exchange_alike_later : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {part : F → Bool}
+  {L L' : Becoming.Flow F C} {W W' : Becoming.Web F C},
+  law.Nonanticipating →
+    L.Follows law part W.level →
+      L'.Follows law part W'.level →
+        ∀ {h : F},
+          part h = false →
+            ∀ {t s : Nat},
+              t < s →
+                ∀ {d : C},
+                  (∀ (s' : Nat) (e : C), ¬(s' = s ∧ e = d) → W.level s' e = W'.level s' e) →
+                    ∀ (c : C), L.exchangeGap L' t h c = 0
+@Becoming.StrengthFlows.exchangeGap_le_shares_flows : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {part : F → Bool}
+  {L L' : Becoming.Flow F C} {W W' : Becoming.Web F C} [DecidableEq C],
+  law.Nonanticipating →
+    L.Follows law part W.level →
+      L'.Follows law part W'.level →
+        ∀ {h : F},
+          part h = false →
+            ∀ {t : Nat} {c : C} {ps rs : List C},
+              (∀ (e : C), e ∈ ps ∨ e ∈ rs) →
+                ∀ (k : Nat → C → Nat),
+                  (∀ (s : Nat) (d : C), s ≤ t → law.RespondsWithin t h c s d (k s d)) →
+                    L.exchangeGap L' t h c ≤
+                      (Becoming.total (Becoming.steps 0 (t + 1)) fun s =>
+                          Becoming.total ps fun d => k s d * Becoming.gap (W.level s d) (W'.level s d)) +
+                        Becoming.total (Becoming.steps 0 (t + 1)) fun s =>
+                          Becoming.total rs fun d => k s d * Becoming.gap (W.level s d) (W'.level s d)
+@Becoming.StrengthFlows.alike_of_readsAt_all : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {part : F → Bool}
+  {L L' : Becoming.Flow F C} {W W' : Becoming.Web F C},
+  law.Nonanticipating →
+    L.Follows law part W.level →
+      L'.Follows law part W'.level →
+        ∀ {h : F},
+          part h = false →
+            ∀ {t : Nat},
+              (∀ (s : Nat), s ≤ t → ∀ (d : C), W.level s d = W'.level s d) →
+                ∀ (c : C), L.take t h c = L'.take t h c ∧ L.give t h c = L'.give t h c
+@Becoming.StrengthFlows.respondsWithin_zero_iff_flows : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C}
+  (present : Nat → List F) {t : Nat} {h : F} {c : C} {s : Nat} {d : C},
+  law.RespondsWithin t h c s d 0 ↔
+    ∀ (l l' : Nat → C → Nat),
+      (∀ (s' : Nat) (e : C), ¬(s' = s ∧ e = d) → l s' e = l' s' e) →
+        (Becoming.StrengthFlows.flowUnder law present l).exchangeGap (Becoming.StrengthFlows.flowUnder law present l') t
+            h c =
+          0
+@Becoming.StrengthFlows.sensitive_iff_flows : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} [DecidableEq C],
+  law.Nonanticipating →
+    ∀ (present : Nat → List F) {h : F} {d : C},
+      law.Sensitive h d ↔
+        ∃ t,
+          ¬∀ (c : C) (s : Nat),
+              s ≤ t →
+                ∀ (l l' : Nat → C → Nat),
+                  (∀ (s' : Nat) (e : C), ¬(s' = s ∧ e = d) → l s' e = l' s' e) →
+                    (Becoming.StrengthFlows.flowUnder law present l).exchangeGap
+                        (Becoming.StrengthFlows.flowUnder law present l') t h c =
+                      0
+@Becoming.StrengthFlows.measure_alike_read : ∀ {T N : Nat} {L L' : Becoming.Flow Unit Bool}
+  {W W' : Becoming.Web Unit Bool},
+  L.Follows (Becoming.Observation.Measure.law T N) (fun x => false) W.level →
+    L'.Follows (Becoming.Observation.Measure.law T N) (fun x => false) W'.level →
+      ∀ {t : Nat} {c : Bool},
+        (∀ (s : Nat) (d : Bool),
+            s ≤ t → Becoming.Observation.Measure.reads T t () c s d = true → W.level s d = W'.level s d) →
+          L.take t () c = L'.take t () c ∧ L.give t () c = L'.give t () c
+@Becoming.StrengthFlows.gap_le_carried_mono_worlds : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {part : F → Bool}
+  [DecidableEq C] {cs : List C} {σ : Nat → F → C → Nat} {k k' : Nat → F → C → Nat → C → Nat} {present : Nat → List F}
+  {δ : C → Nat} {act act' : Becoming.ExchangeLaw F C} {start start' : C → Nat},
+  (∀ (c : C), c ∈ cs) →
+    Becoming.TwoActs part σ k present δ law act act' start start' →
+      (∀ (t : Nat) (h : F) (c : C) (s : Nat) (d : C), k t h c s d ≤ k' t h c s d) →
+        ∀ (W W' : Becoming.Web F C) (t : Nat) (c : C),
+          Becoming.gap ((law.actWorld act part present start W).web.level t (Sum.inr c))
+              ((law.actWorld act' part present start' W').web.level t (Sum.inr c)) ≤
+            Becoming.carried cs part σ k' present δ t c
+@Becoming.StrengthFlows.gap_le_carried_into_worlds : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {part : F → Bool}
+  [DecidableEq C] {cs : List C} {σ : Nat → F → C → Nat} {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F}
+  {δ : C → Nat} {act act' : Becoming.ExchangeLaw F C} {start start' : C → Nat},
+  (∀ (c : C), c ∈ cs) →
+    ∀ {reads : Nat → F → C → Nat → C → Bool},
+      law.ReadsInto part reads →
+        Becoming.TwoActs part σ k present δ law act act' start start' →
+          ∀ (W W' : Becoming.Web F C) (t : Nat) (c : C),
+            Becoming.gap ((law.actWorld act part present start W).web.level t (Sum.inr c))
+                ((law.actWorld act' part present start' W').web.level t (Sum.inr c)) ≤
+              Becoming.carried cs part σ (Becoming.restrictInto reads k) present δ t c
+@Becoming.StrengthFlows.carriedWorld_start : ∀ {F C : Type} {part : F → Bool} {cs : List C} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} (c : C),
+  (Becoming.carriedWorld cs part σ k present δ).web.level 0 (Sum.inr c) = δ c

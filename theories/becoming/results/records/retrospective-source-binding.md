@@ -111,6 +111,7 @@ Record contents persist while their current evidential role can change. bindingV
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261020T161859.257200Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261031T131812.213702Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `Generative.RetrospectiveBinding.retrospective_evidence_enters_compositional_use`, `Becoming.MachineInstances.retrospective_interprets_every`, `Becoming.CrossSituational.resolves_explained_iff`, `Becoming.MachineInstances.retrospective_resolves_iff`, `Becoming.Courses.run_resolves_explained_iff`
 

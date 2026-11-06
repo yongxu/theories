@@ -87,6 +87,7 @@ The pigeonhole principle, and termination of a ranking function on a finite stat
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T124304.830826Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T165640.090482Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `rest from a finite reading`, `由有限的读取而停息`, `rest with no least loss`, `没有最小损失的停息`, `finite distinguishability gives rest`, `Becoming.Amounts.rests_of_finite_reading`, `Becoming.Amounts.falls_within_reading`, `Becoming.Halving.stock_unlisted`
 

@@ -1,0 +1,80 @@
+@Becoming.Retrodiction.actual_candidate : ∀ {H : Type u_1} {D : Type u_2} {R : Type u_3} {Q : Type u_4} {O : Type u_5}
+  (routeAt : H → D → R) (emit : R → Q → O) (h : H) (ps : List (D × Q)),
+  Becoming.Retrodiction.Fits routeAt emit h (Becoming.Retrodiction.acquire routeAt emit h ps)
+@Becoming.Retrodiction.fits_iff_same : ∀ {H : Type u_1} {D : Type u_2} {R : Type u_3} {Q : Type u_4} {O : Type u_5}
+  (routeAt : H → D → R) (emit : R → Q → O) (g h : H) (ps : List (D × Q)),
+  Becoming.Retrodiction.Fits routeAt emit g (Becoming.Retrodiction.acquire routeAt emit h ps) ↔
+    Becoming.Retrodiction.acquire routeAt emit g ps = Becoming.Retrodiction.acquire routeAt emit h ps
+@Becoming.Retrodiction.not_fits_of_separated : ∀ {H : Type u_1} {D : Type u_2} {R : Type u_3} {Q : Type u_4}
+  {O : Type u_5} (routeAt : H → D → R) (emit : R → Q → O) {g h : H} {ps : List (D × Q)},
+  Becoming.Retrodiction.Separated routeAt emit g h ps →
+    ¬Becoming.Retrodiction.Fits routeAt emit g (Becoming.Retrodiction.acquire routeAt emit h ps)
+@Becoming.Retrodiction.fits_or_separated : ∀ {H : Type u_1} {D : Type u_2} {R : Type u_3} {Q : Type u_4} {O : Type u_5}
+  (routeAt : H → D → R) (emit : R → Q → O) [DecidableEq O] (g h : H) (ps : List (D × Q)),
+  Becoming.Retrodiction.Fits routeAt emit g (Becoming.Retrodiction.acquire routeAt emit h ps) ∨
+    Becoming.Retrodiction.Separated routeAt emit g h ps
+@Becoming.Retrodiction.reading_right_iff : ∀ {H : Type u_1} {D : Type u_2} {R : Type u_3} {Q : Type u_4} {O : Type u_5}
+  (routeAt : H → D → R) (emit : R → Q → O) {X : Type u_6} {P : Type u_7} {V : Type u_8} [DecidableEq O] [DecidableEq V]
+  (packet : R → X → P) (content : X → V) (F : H → Prop) (Admitted : X → Prop) (d : D) (h : H) (s : X)
+  (ps : List (D × Q)),
+  (∀ (g : H) (t : X),
+      F g →
+        Becoming.Retrodiction.Fits routeAt emit g (Becoming.Retrodiction.acquire routeAt emit h ps) →
+          Admitted t → packet (routeAt g d) t = packet (routeAt h d) s → content t = content s) ↔
+    ∀ (g : H) (t : X),
+      F g →
+        Admitted t →
+          packet (routeAt g d) t = packet (routeAt h d) s →
+            content t ≠ content s → Becoming.Retrodiction.Separated routeAt emit g h ps
+@Becoming.Retrodiction.agreed_reading_actual : ∀ {H : Type u_1} {D : Type u_2} {R : Type u_3} {Q : Type u_4}
+  {O : Type u_5} (routeAt : H → D → R) (emit : R → Q → O) {X : Type u_6} {P : Type u_7} {V : Type u_8}
+  (packet : R → X → P) (content : X → V) (F : H → Prop) (Admitted : X → Prop) (d : D) (h : H) (s : X)
+  (ps : List (D × Q)) (v : V),
+  F h →
+    Admitted s →
+      (∀ (g : H) (t : X),
+          F g →
+            Becoming.Retrodiction.Fits routeAt emit g (Becoming.Retrodiction.acquire routeAt emit h ps) →
+              Admitted t → packet (routeAt g d) t = packet (routeAt h d) s → content t = v) →
+        content s = v
+@Becoming.Retrodiction.look_right_iff : ∀ {H : Type u_1} {D : Type u_2} {R : Type u_3} {Q : Type u_4} {O : Type u_5}
+  (routeAt : H → D → R) (emit : R → Q → O) {V : Type u_6} [DecidableEq O] [DecidableEq V] (look : R → V) (F : H → Prop)
+  (d : D) (h : H) (ps : List (D × Q)),
+  (∀ (g : H),
+      F g →
+        Becoming.Retrodiction.Fits routeAt emit g (Becoming.Retrodiction.acquire routeAt emit h ps) →
+          look (routeAt g d) = look (routeAt h d)) ↔
+    ∀ (g : H), F g → look (routeAt g d) ≠ look (routeAt h d) → Becoming.Retrodiction.Separated routeAt emit g h ps
+@Becoming.Retrodiction.changes_split : ∀ {R : Type u_1} [inst : DecidableEq R] (c : Nat → R) (a j k : Nat),
+  Becoming.Retrodiction.changes c a (j + k) =
+    Becoming.Retrodiction.changes c a j + Becoming.Retrodiction.changes c (a + j) k
+@Becoming.Retrodiction.changes_le : ∀ {R : Type u_1} [inst : DecidableEq R] (c : Nat → R) (a n : Nat),
+  Becoming.Retrodiction.changes c a n ≤ n
+@Becoming.Retrodiction.moved_changes : ∀ {R : Type u_1} [inst : DecidableEq R] (c : Nat → R) (a n : Nat),
+  c (a + n) ≠ c a → 1 ≤ Becoming.Retrodiction.changes c a n
+@Becoming.Retrodiction.changes_const : ∀ {R : Type u_1} [inst : DecidableEq R] (c : Nat → R) (a : Nat) (v : R)
+  (n : Nat), (∀ (i : Nat), i ≤ n → c (a + i) = v) → Becoming.Retrodiction.changes c a n = 0
+@Becoming.Retrodiction.bracket : ∀ {R : Type u_1} [inst : DecidableEq R] (c : Nat → R) (a j k : Nat),
+  c (a + (j + k)) = c a → c (a + j) ≠ c a → 2 ≤ Becoming.Retrodiction.changes c a (j + k)
+@Becoming.Retrodiction.excursion_changes : ∀ {R : Type u_1} [inst : DecidableEq R] {r r' : R},
+  r ≠ r' → ∀ (a m : Nat), Becoming.Retrodiction.changes (Becoming.Retrodiction.excursion r r' a) a (m + 2) = 2
+@Becoming.Retrodiction.bracket_settles_iff : ∀ {R : Type u_1} [inst : DecidableEq R] {r r' : R},
+  r ≠ r' →
+    ∀ (a n k : Nat),
+      (∀ (c : Nat → R),
+          Becoming.Retrodiction.changes c a n ≤ k → c (a + n) = c a → ∀ (j : Nat), j ≤ n → c (a + j) = c a) ↔
+        k < 2 ∨ n < 2
+@Becoming.Retrodiction.step_changes : ∀ {R : Type u_1} [inst : DecidableEq R] {r r' : R},
+  r ≠ r' →
+    ∀ (a j m : Nat), Becoming.Retrodiction.changes (Becoming.Retrodiction.stepAt r r' (a + j + 1)) a (j + 1 + m) = 1
+@Becoming.Retrodiction.change_unlocated : ∀ {R : Type u_1} [inst : DecidableEq R] {r r' : R},
+  r ≠ r' →
+    ∀ (a j m : Nat),
+      Becoming.Retrodiction.changes (Becoming.Retrodiction.stepAt r r' (a + j + 1)) a (j + 1 + (m + 1)) = 1 ∧
+        Becoming.Retrodiction.changes (Becoming.Retrodiction.stepAt r r' (a + (j + 1) + 1)) a (j + 1 + 1 + m) = 1 ∧
+          Becoming.Retrodiction.stepAt r r' (a + j + 1) a = r ∧
+            Becoming.Retrodiction.stepAt r r' (a + (j + 1) + 1) a = r ∧
+              Becoming.Retrodiction.stepAt r r' (a + j + 1) (a + (j + 1 + (m + 1))) = r' ∧
+                Becoming.Retrodiction.stepAt r r' (a + (j + 1) + 1) (a + (j + 1 + 1 + m)) = r' ∧
+                  Becoming.Retrodiction.stepAt r r' (a + j + 1) (a + j + 1) = r' ∧
+                    Becoming.Retrodiction.stepAt r r' (a + (j + 1) + 1) (a + j + 1) = r

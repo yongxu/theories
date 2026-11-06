@@ -316,10 +316,6 @@ end Slowing
 
 /-! ## Readings over cycles include a dip and withhold an escalation -/
 
-namespace Renewable
-
-end Renewable
-
 namespace Dip
 
 /-- Over cycles of two the dependent renews in the run, though it does not renew step by

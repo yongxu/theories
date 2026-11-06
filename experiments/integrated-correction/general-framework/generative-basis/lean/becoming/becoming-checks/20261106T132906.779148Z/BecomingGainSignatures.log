@@ -1,0 +1,116 @@
+@Becoming.le_of_increasing : ∀ {at_ : Nat → Nat}, (∀ (i j : Nat), i < j → at_ i < at_ j) → ∀ (k : Nat), k ≤ at_ k
+@Becoming.map_eq_at : ∀ {α : Type} {f g : α → Nat} {a : α} {l : List α}, List.map f l = List.map g l → a ∈ l → f a = g a
+@Becoming.map_eq_on : ∀ {α : Type} {f g : α → Nat} {l : List α},
+  (∀ (a : α), a ∈ l → f a = g a) → List.map f l = List.map g l
+@Becoming.some_mem_tail : ∀ {α : Type} {a : α} {l : List (Option α)}, some a ∈ none :: l → some a ∈ l
+@Becoming.Web.rises_within_of_new : ∀ {F C : Type} {W : Becoming.Web F C} {cs : List C} {T : Nat},
+  (∀ (i j : Nat),
+      i < j →
+        j ≤ (Becoming.configurationsWithin cs.length (W.stock cs T)).length →
+          W.config cs (T + i) ≠ W.config cs (T + j)) →
+    ∃ t,
+      T ≤ t ∧
+        t < T + (Becoming.configurationsWithin cs.length (W.stock cs T)).length ∧ W.stock cs t < W.stock cs (t + 1)
+@Becoming.Web.rises_late_of_new : ∀ {F C : Type} {W : Becoming.Web F C} {cs : List C} {T : Nat},
+  (∀ (i j : Nat), i < j → W.config cs (T + i) ≠ W.config cs (T + j)) →
+    ∀ (M : Nat), ∃ t, M ≤ t ∧ W.stock cs t < W.stock cs (t + 1)
+@Becoming.Web.config_eq_of_sub : ∀ {F C : Type} {W : Becoming.Web F C} {cs ds : List C},
+  (∀ (c : C), c ∈ cs → c ∈ ds) → ∀ {s t : Nat}, W.config ds s = W.config ds t → W.config cs s = W.config cs t
+@Becoming.Web.new_of_sub : ∀ {F C : Type} {W : Becoming.Web F C} {cs ds : List C},
+  (∀ (c : C), c ∈ cs → c ∈ ds) →
+    ∀ {T : Nat},
+      (∀ (i j : Nat), i < j → W.config cs (T + i) ≠ W.config cs (T + j)) →
+        ∀ (i j : Nat), i < j → W.config ds (T + i) ≠ W.config ds (T + j)
+@Becoming.Web.exceeds_of_firsts : ∀ {F C : Type} {W : Becoming.Web F C} {cs : List C} {T K : Nat} {at_ : Nat → Nat},
+  (∀ (i j : Nat), i < j → at_ i < at_ j) →
+    (∀ (n : Nat), T ≤ at_ n) →
+      (∀ (n : Nat), W.NewAt cs T (at_ n)) →
+        ∃ n, n ≤ (Becoming.configurationsWithin cs.length K).length ∧ K < W.stock cs (at_ n)
+@Becoming.Web.rises_late_of_firsts : ∀ {F C : Type} {W : Becoming.Web F C} {cs : List C} {T : Nat} {at_ : Nat → Nat},
+  (∀ (i j : Nat), i < j → at_ i < at_ j) →
+    (∀ (n : Nat), T ≤ at_ n) →
+      (∀ (n : Nat), W.NewAt cs T (at_ n)) → ∀ (M : Nat), ∃ t, M ≤ t ∧ W.stock cs t < W.stock cs (t + 1)
+@Becoming.Web.supported_of_config : ∀ {F C : Type} {W : Becoming.Web F C} {cs : List C} {f : F} {s t : Nat},
+  W.RequiresWithin cs f → W.config cs s = W.config cs t → W.Supported t f → W.Supported s f
+@Becoming.Web.newAt_of_first : ∀ {F C : Type} {W : Becoming.Web F C} {cs : List C} {f : F} {T t : Nat},
+  W.RequiresWithin cs f → W.FirstSupported T t f → W.NewAt cs T t
+@Becoming.Web.rises_late_of_newly_supported : ∀ {F C : Type} {W : Becoming.Web F C} {cs : List C} {T : Nat}
+  {at_ : Nat → Nat} {f : Nat → F},
+  (∀ (i j : Nat), i < j → at_ i < at_ j) →
+    (∀ (n : Nat), T ≤ at_ n) →
+      (∀ (n : Nat), W.RequiresWithin cs (f n)) →
+        (∀ (n : Nat), W.FirstSupported T (at_ n) (f n)) → ∀ (M : Nat), ∃ t, M ≤ t ∧ W.stock cs t < W.stock cs (t + 1)
+@Becoming.Flow.rise_netGiver : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C} {t : Nat},
+  W.stock cs t < W.stock cs (t + 1) → ∃ f, (L.withImbalance W).NetGiver cs t f
+@Becoming.Flow.netGiver_cases : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C} {t : Nat}
+  {f : Option F}, (L.withImbalance W).NetGiver cs t f → (L.withImbalance W).NetGiver cs t none ∨ ∃ g, L.NetGiver cs t g
+@Becoming.Flow.rest_netGiver_iff : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C}
+  {t : Nat},
+  (L.withImbalance W).NetGiver cs t none ↔
+    (Becoming.total cs fun c => W.level t c + L.given t c - (W.level (t + 1) c + L.taken t c)) <
+      Becoming.total cs fun c => W.level (t + 1) c + L.taken t c - (W.level t c + L.given t c)
+@Becoming.Flow.BalancesOn.rest_not_netGiver : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {cs : List C} {t : Nat}, L.BalancesOn W cs t → ¬(L.withImbalance W).NetGiver cs t none
+@Becoming.Flow.rise_given : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C} {t : Nat},
+  W.stock cs t < W.stock cs (t + 1) → (L.withImbalance W).NetGiver cs t none ∨ ∃ g, L.NetGiver cs t g
+@Becoming.Flow.rise_given_between : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C}
+  {T u : Nat}, T ≤ u → W.stock cs T < W.stock cs u → ∃ t f, T ≤ t ∧ t < u ∧ (L.withImbalance W).NetGiver cs t f
+@Becoming.Flow.rise_from_rest_or_open : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C},
+  L.Gainless →
+    Becoming.Distinct cs →
+      ∀ {t : Nat}, W.stock cs t < W.stock cs (t + 1) → (L.withImbalance W).NetGiver cs t none ∨ ¬L.ClosedAt cs t
+@Becoming.Flow.whole_rise_from_rest : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {all : List C},
+  (∀ (c : C), c ∈ all) →
+    Becoming.Distinct all →
+      L.Gainless → ∀ {t : Nat}, W.stock all t < W.stock all (t + 1) → (L.withImbalance W).NetGiver all t none
+@Becoming.Flow.whole_bounded_of_rest_idle : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {all : List C},
+  (∀ (c : C), c ∈ all) →
+    Becoming.Distinct all →
+      L.Gainless →
+        ∀ {T : Nat},
+          (∀ (t : Nat), T ≤ t → ¬(L.withImbalance W).NetGiver all t none) →
+            ∀ (t : Nat), T ≤ t → W.stock all t ≤ W.stock all T
+@Becoming.Flow.whole_recurs_of_rest_idle : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {all : List C},
+  (∀ (c : C), c ∈ all) →
+    Becoming.Distinct all →
+      L.Gainless →
+        ∀ {T : Nat},
+          (∀ (t : Nat), T ≤ t → ¬(L.withImbalance W).NetGiver all t none) →
+            (∀ (M : Nat), ∃ i j, M ≤ i ∧ i < j ∧ W.config all (T + i) = W.config all (T + j)) ∧
+              ((∀ (M : Nat), ∃ t, M ≤ t ∧ 0 < L.exchanges all t) → ¬L.CarriesHistory W all T)
+@Becoming.Flow.whole_not_new_of_rest_idle : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {all : List C},
+  (∀ (c : C), c ∈ all) →
+    Becoming.Distinct all →
+      L.Gainless →
+        ∀ {T : Nat},
+          (∀ (t : Nat), T ≤ t → ¬(L.withImbalance W).NetGiver all t none) →
+            ¬∀ (i j : Nat), i < j → W.config all (T + i) ≠ W.config all (T + j)
+@Becoming.Flow.new_from_rest_or_open : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C},
+  L.Gainless →
+    Becoming.Distinct cs →
+      ∀ {T : Nat},
+        (∀ (i j : Nat), i < j → W.config cs (T + i) ≠ W.config cs (T + j)) →
+          ∀ (M : Nat), ∃ t, M ≤ t ∧ ((L.withImbalance W).NetGiver cs t none ∨ ¬L.ClosedAt cs t)
+@Becoming.Flow.new_beyond_every : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C},
+  L.Gainless →
+    ∀ {T : Nat},
+      (∀ (i j : Nat), i < j → W.config cs (T + i) ≠ W.config cs (T + j)) →
+        ∀ (ds : List C),
+          Becoming.Distinct ds →
+            (∀ (c : C), c ∈ cs → c ∈ ds) →
+              ∀ (M : Nat), ∃ t, M ≤ t ∧ ((L.withImbalance W).NetGiver ds t none ∨ ¬L.ClosedAt ds t)
+@Becoming.Flow.newly_supported_from_rest_or_open : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {cs : List C},
+  L.Gainless →
+    Becoming.Distinct cs →
+      ∀ {T : Nat} {at_ : Nat → Nat} {f : Nat → F},
+        (∀ (i j : Nat), i < j → at_ i < at_ j) →
+          (∀ (n : Nat), T ≤ at_ n) →
+            (∀ (n : Nat), W.RequiresWithin cs (f n)) →
+              (∀ (n : Nat), W.FirstSupported T (at_ n) (f n)) →
+                ∀ (M : Nat), ∃ t, M ≤ t ∧ ((L.withImbalance W).NetGiver cs t none ∨ ¬L.ClosedAt cs t)
+@Becoming.Flow.empty_gainless : ∀ {F C : Type}, Becoming.Flow.empty.Gainless
+Becoming.Flow.counting_given_by_rest : ∀ (t : Nat),
+  (Becoming.Flow.empty.withImbalance Becoming.Web.counting).NetGiver [()] t none

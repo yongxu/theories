@@ -1,0 +1,406 @@
+@Becoming.ExchangeLaw.exchange_along : ∀ {F C : Type} {law law' : Becoming.ExchangeLaw F C} {present : Nat → List F}
+  {start : C → Nat},
+  law.Nonanticipating →
+    law'.Nonanticipating →
+      law.AlongAlike law' (law.levels present start) →
+        ∀ {n : Nat},
+          Becoming.AgreeUpTo (law.levels present start) (law'.levels present start) n →
+            ∀ (f : F) (c : C),
+              law.take n f (law.history present start n) c = law'.take n f (law'.history present start n) c ∧
+                law.give n f (law.history present start n) c = law'.give n f (law'.history present start n) c
+@Becoming.ExchangeLaw.levels_agree_of_along : ∀ {F C : Type} {law law' : Becoming.ExchangeLaw F C}
+  {present : Nat → List F} {start : C → Nat},
+  law.Nonanticipating →
+    law'.Nonanticipating →
+      law.AlongAlike law' (law.levels present start) →
+        ∀ (n : Nat), Becoming.AgreeUpTo (law.levels present start) (law'.levels present start) n
+@Becoming.Training.same_courses_of_along : ∀ {F C E : Type} {law : E → Becoming.ExchangeLaw F C} {part : F → Bool}
+  {present : Nat → List F} {start : E → C → Nat} {a b : E → Becoming.ExchangeLaw F C},
+  (∀ (e : E), (law e).Nonanticipating) →
+    (∀ (e : E), (a e).Nonanticipating) →
+      (∀ (e : E), (b e).Nonanticipating) →
+        (∀ (e : E) (t : Nat) (h : F),
+            part h = true →
+              ∀ (c : C),
+                (a e).take t h (Becoming.Training.levels law part present start a e) c =
+                    (b e).take t h (Becoming.Training.levels law part present start a e) c ∧
+                  (a e).give t h (Becoming.Training.levels law part present start a e) c =
+                    (b e).give t h (Becoming.Training.levels law part present start a e) c) →
+          Becoming.Training.SameCourses law part present start a b
+@Becoming.Training.trained_alike_of_along : ∀ {F C E Θ : Type} {law : E → Becoming.ExchangeLaw F C} {part : F → Bool}
+  {present : Nat → List F} {start : E → C → Nat} {cand : Θ → E → Becoming.ExchangeLaw F C} {θ θ' : Θ},
+  (∀ (e : E), (law e).Nonanticipating) →
+    (∀ (e : E), (cand θ e).Nonanticipating) →
+      (∀ (e : E), (cand θ' e).Nonanticipating) →
+        (∀ (e : E) (t : Nat) (h : F),
+            part h = true →
+              ∀ (c : C),
+                (cand θ e).take t h (Becoming.Training.levels law part present start (cand θ) e) c =
+                    (cand θ' e).take t h (Becoming.Training.levels law part present start (cand θ) e) c ∧
+                  (cand θ e).give t h (Becoming.Training.levels law part present start (cand θ) e) c =
+                    (cand θ' e).give t h (Becoming.Training.levels law part present start (cand θ) e) c) →
+          ∀ {select : Θ → Prop}, Becoming.Training.Reads law part present start cand select → (select θ ↔ select θ')
+@Becoming.Training.explore_nonanticipating : ∀ {F C : Type} {s : Nat → Bool} {x a : Becoming.ExchangeLaw F C},
+  x.Nonanticipating → a.Nonanticipating → (Becoming.Training.explore s x a).Nonanticipating
+@Becoming.Training.explored_same_courses : ∀ {F C E : Type} {law : E → Becoming.ExchangeLaw F C} {part : F → Bool}
+  {present : Nat → List F} {start : E → C → Nat} {s : E → Nat → Bool} {x : E → Becoming.ExchangeLaw F C}
+  {a b : Becoming.ExchangeLaw F C},
+  (∀ (e : E), (law e).Nonanticipating) →
+    (∀ (e : E), (x e).Nonanticipating) →
+      a.Nonanticipating →
+        b.Nonanticipating →
+          (∀ (e : E) (t : Nat) (h : F),
+              part h = true →
+                s e t = false →
+                  ∀ (c : C),
+                    a.take t h
+                          (Becoming.Training.levels law part present start
+                            (fun e => Becoming.Training.explore (s e) (x e) a) e)
+                          c =
+                        b.take t h
+                          (Becoming.Training.levels law part present start
+                            (fun e => Becoming.Training.explore (s e) (x e) a) e)
+                          c ∧
+                      a.give t h
+                          (Becoming.Training.levels law part present start
+                            (fun e => Becoming.Training.explore (s e) (x e) a) e)
+                          c =
+                        b.give t h
+                          (Becoming.Training.levels law part present start
+                            (fun e => Becoming.Training.explore (s e) (x e) a) e)
+                          c) →
+            Becoming.Training.SameCourses law part present start (fun e => Becoming.Training.explore (s e) (x e) a)
+              fun e => Becoming.Training.explore (s e) (x e) b
+@Becoming.Training.agree_symm : ∀ {C : Type} {l l' : Nat → C → Nat} {t : Nat},
+  Becoming.AgreeUpTo l l' t → Becoming.AgreeUpTo l' l t
+@Becoming.Training.alike_of_agree : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {g : F}
+  {l l' : Nat → C → Nat} {t : Nat}, Becoming.AgreeUpTo l l' t → W.AlikeThroughUpTo obs g l l' t
+@Becoming.Training.ReadsThrough.of_through : ∀ {F C : Type} {part : F → Bool} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {a : Becoming.ExchangeLaw F C},
+  (a.Through W obs fun h => !part h) → Becoming.Training.ReadsThrough (Becoming.Training.Lumping.coupling W obs) part a
+@Becoming.Training.ReadsThrough.through : ∀ {F C : Type} {part : F → Bool} {W : Becoming.Web F C} {obs : F → C → Prop}
+  {a : Becoming.ExchangeLaw F C},
+  Becoming.Training.ReadsThrough (Becoming.Training.Lumping.coupling W obs) part a → a.Through W obs fun h => !part h
+@Becoming.Training.ReadsThrough.of_nonanticipating : ∀ {F C : Type} {part : F → Bool} {a : Becoming.ExchangeLaw F C},
+  a.Nonanticipating → Becoming.Training.ReadsThrough Becoming.Training.Lumping.agreement part a
+@Becoming.Training.installed_where_lumped : ∀ {F C E : Type} {law : E → Becoming.ExchangeLaw F C} {part : F → Bool}
+  {present : Nat → List F} {start : E → C → Nat} {ρ : Becoming.Training.Lumping F C} {a b : Becoming.ExchangeLaw F C},
+  Becoming.Training.ReadsThrough ρ part a →
+    Becoming.Training.ReadsThrough ρ part b →
+      (Becoming.Training.SameCourses law part present start (fun x => a) fun x => b) →
+        ∀ {h : F},
+          part h = true →
+            ∀ {t : Nat} {l : Nat → C → Nat} {e : E},
+              ρ.alike h t l (Becoming.Training.levels law part present start (fun x => a) e) →
+                ∀ (c : C), a.take t h l c = b.take t h l c ∧ a.give t h l c = b.give t h l c
+@Becoming.Training.installed_where_alike : ∀ {F C E : Type} {law : E → Becoming.ExchangeLaw F C} {part : F → Bool}
+  {present : Nat → List F} {start : E → C → Nat} {W : Becoming.Web F C} {obs : F → C → Prop}
+  {a b : Becoming.ExchangeLaw F C},
+  (a.Through W obs fun h => !part h) →
+    (b.Through W obs fun h => !part h) →
+      (Becoming.Training.SameCourses law part present start (fun x => a) fun x => b) →
+        ∀ {h : F},
+          part h = true →
+            ∀ {t : Nat} {l : Nat → C → Nat} {e : E},
+              W.AlikeThroughUpTo obs h l (Becoming.Training.levels law part present start (fun x => a) e) t →
+                ∀ (c : C), a.take t h l c = b.take t h l c ∧ a.give t h l c = b.give t h l c
+@Becoming.Training.setOn_take_off : ∀ {F C : Type} {a : Becoming.ExchangeLaw F C} {P : F → (Nat → C → Nat) → Prop}
+  {decided : (h : F) → (l : Nat → C → Nat) → Decidable (P h l)} {t₀ k t : Nat} {h : F} {l : Nat → C → Nat} {c : C},
+  ¬(t = t₀ ∧ P h l) → (Becoming.Training.setOn a P decided t₀ k).take t h l c = a.take t h l c
+@Becoming.Training.setOn_take_at : ∀ {F C : Type} {a : Becoming.ExchangeLaw F C} {P : F → (Nat → C → Nat) → Prop}
+  {decided : (h : F) → (l : Nat → C → Nat) → Decidable (P h l)} {t₀ k : Nat} {h : F} {l : Nat → C → Nat} {c : C},
+  P h l → (Becoming.Training.setOn a P decided t₀ k).take t₀ h l c = k
+@Becoming.Training.setOn_respects : ∀ {F C : Type} {a : Becoming.ExchangeLaw F C} {P : F → (Nat → C → Nat) → Prop}
+  {decided : (h : F) → (l : Nat → C → Nat) → Decidable (P h l)} {t₀ k : Nat}
+  {rel : Nat → F → (Nat → C → Nat) → (Nat → C → Nat) → Prop} {who : F → Prop},
+  (∀ (h : F), who h → ∀ (t : Nat) (l l' : Nat → C → Nat), rel t h l l' → a.GivesAlike t h l l') →
+    (∀ (h : F), who h → ∀ (l l' : Nat → C → Nat), rel t₀ h l l' → (P h l ↔ P h l')) →
+      ∀ (h : F),
+        who h →
+          ∀ (t : Nat) (l l' : Nat → C → Nat),
+            rel t h l l' → (Becoming.Training.setOn a P decided t₀ k).GivesAlike t h l l'
+@Becoming.Training.setOn_lumped : ∀ {F C E : Type} {law : E → Becoming.ExchangeLaw F C} {part : F → Bool}
+  {present : Nat → List F} {start : E → C → Nat} {a : Becoming.ExchangeLaw F C} {t₀ : Nat}
+  {ρ : Becoming.Training.Lumping F C},
+  (∀ (e : E), (law e).Nonanticipating) →
+    a.Nonanticipating →
+      Becoming.Training.ReadsThrough ρ part a →
+        ∀ {m : Nat → C → Nat} (decidedLumped : (h : F) → (l : Nat → C → Nat) → Decidable (ρ.alike h t₀ m l)),
+          (∀ (e : E) (h : F),
+              part h = true → ¬ρ.alike h t₀ m (Becoming.Training.levels law part present start (fun x => a) e)) →
+            ∀ (k : Nat),
+              (Becoming.Training.setOn a (fun h l => ρ.alike h t₀ m l) decidedLumped t₀ k).Nonanticipating ∧
+                Becoming.Training.ReadsThrough ρ part
+                    (Becoming.Training.setOn a (fun h l => ρ.alike h t₀ m l) decidedLumped t₀ k) ∧
+                  Becoming.Training.SameCourses law part present start (fun x => a) fun x =>
+                    Becoming.Training.setOn a (fun h l => ρ.alike h t₀ m l) decidedLumped t₀ k
+@Becoming.Training.free_where_unlumped : ∀ {F C E : Type} {law : E → Becoming.ExchangeLaw F C} {part : F → Bool}
+  {present : Nat → List F} {start : E → C → Nat} {a : Becoming.ExchangeLaw F C} {t₀ : Nat}
+  {ρ : Becoming.Training.Lumping F C},
+  (∀ (e : E), (law e).Nonanticipating) →
+    a.Nonanticipating →
+      Becoming.Training.ReadsThrough ρ part a →
+        ∀ {m : Nat → C → Nat} (decidedLumped : (h : F) → (l : Nat → C → Nat) → Decidable (ρ.alike h t₀ m l)),
+          (∀ (e : E) (h : F),
+              part h = true → ¬ρ.alike h t₀ m (Becoming.Training.levels law part present start (fun x => a) e)) →
+            ∀ (k : Nat),
+              ∃ b,
+                b.Nonanticipating ∧
+                  Becoming.Training.ReadsThrough ρ part b ∧
+                    (∀ (h : F) (l : Nat → C → Nat) (c : C), ρ.alike h t₀ m l → b.take t₀ h l c = k) ∧
+                      Becoming.Training.SameCourses law part present start (fun x => a) fun x => b
+@Becoming.Training.response_free_where_unlumped : ∀ {F C E : Type} {law : E → Becoming.ExchangeLaw F C}
+  {part : F → Bool} {present : Nat → List F} {start : E → C → Nat} {a : Becoming.ExchangeLaw F C} {t₀ : Nat}
+  {ρ : Becoming.Training.Lumping F C},
+  (∀ (e : E), (law e).Nonanticipating) →
+    a.Nonanticipating →
+      Becoming.Training.ReadsThrough ρ part a →
+        ∀ {m m' : Nat → C → Nat} (decidedLumped : (h : F) → (l : Nat → C → Nat) → Decidable (ρ.alike h t₀ m l)),
+          (∀ (e : E) (h : F),
+              part h = true → ¬ρ.alike h t₀ m (Becoming.Training.levels law part present start (fun x => a) e)) →
+            ∀ {h : F},
+              ¬ρ.alike h t₀ m m' →
+                ∀ (c : C),
+                  (∃ b,
+                      b.Nonanticipating ∧
+                        Becoming.Training.ReadsThrough ρ part b ∧
+                          (Becoming.Training.SameCourses law part present start (fun x => a) fun x => b) ∧
+                            b.take t₀ h m c = b.take t₀ h m' c) ∧
+                    ∃ b,
+                      b.Nonanticipating ∧
+                        Becoming.Training.ReadsThrough ρ part b ∧
+                          (Becoming.Training.SameCourses law part present start (fun x => a) fun x => b) ∧
+                            b.take t₀ h m c ≠ b.take t₀ h m' c
+@Becoming.Training.response_free_where_apart : ∀ {F C E : Type} {law : E → Becoming.ExchangeLaw F C} {part : F → Bool}
+  {present : Nat → List F} {start : E → C → Nat} {a : Becoming.ExchangeLaw F C} {t₀ : Nat} {W : Becoming.Web F C}
+  {obs : F → C → Prop},
+  (∀ (e : E), (law e).Nonanticipating) →
+    a.Nonanticipating →
+      (a.Through W obs fun h => !part h) →
+        ∀ {m m' : Nat → C → Nat}
+          (decidedAlike : (h : F) → (l : Nat → C → Nat) → Decidable (W.AlikeThroughUpTo obs h m l t₀)),
+          (∀ (e : E) (h : F),
+              part h = true →
+                ¬W.AlikeThroughUpTo obs h m (Becoming.Training.levels law part present start (fun x => a) e) t₀) →
+            ∀ {h : F},
+              ¬W.AlikeThroughUpTo obs h m m' t₀ →
+                ∀ (c : C),
+                  (∃ b,
+                      b.Nonanticipating ∧
+                        (b.Through W obs fun h => !part h) ∧
+                          (Becoming.Training.SameCourses law part present start (fun x => a) fun x => b) ∧
+                            b.take t₀ h m c = b.take t₀ h m' c) ∧
+                    ∃ b,
+                      b.Nonanticipating ∧
+                        (b.Through W obs fun h => !part h) ∧
+                          (Becoming.Training.SameCourses law part present start (fun x => a) fun x => b) ∧
+                            b.take t₀ h m c ≠ b.take t₀ h m' c
+@Becoming.Training.response_free_off_courses : ∀ {F C E : Type} {law : E → Becoming.ExchangeLaw F C} {part : F → Bool}
+  {present : Nat → List F} {start : E → C → Nat} {a : Becoming.ExchangeLaw F C} {t₀ : Nat},
+  (∀ (e : E), (law e).Nonanticipating) →
+    a.Nonanticipating →
+      ∀ {m m' : Nat → C → Nat} (decidedAgree : (l : Nat → C → Nat) → Decidable (Becoming.AgreeUpTo m l t₀)),
+        (∀ (e : E), ¬Becoming.AgreeUpTo m (Becoming.Training.levels law part present start (fun x => a) e) t₀) →
+          ¬Becoming.AgreeUpTo m m' t₀ →
+            ∀ (h : F) (c : C),
+              (∃ b,
+                  b.Nonanticipating ∧
+                    (Becoming.Training.SameCourses law part present start (fun x => a) fun x => b) ∧
+                      b.take t₀ h m c = b.take t₀ h m' c) ∧
+                ∃ b,
+                  b.Nonanticipating ∧
+                    (Becoming.Training.SameCourses law part present start (fun x => a) fun x => b) ∧
+                      b.take t₀ h m c ≠ b.take t₀ h m' c
+@Becoming.Training.TrainsThrough.reads : ∀ {F C E Θ : Type} {law : E → Becoming.ExchangeLaw F C} {part : F → Bool}
+  {present : Nat → List F} {start : E → C → Nat} {cand : Θ → E → Becoming.ExchangeLaw F C} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {r : F} {T : Nat} {select : Θ → Prop},
+  Becoming.Training.TrainsThrough law part present start cand W obs r T select →
+    Becoming.Training.Reads law part present start cand select
+@Becoming.Training.trained_alike_iff : ∀ {F C E Θ : Type} {law : E → Becoming.ExchangeLaw F C} {part : F → Bool}
+  {present : Nat → List F} {start : E → C → Nat} {cand : Θ → E → Becoming.ExchangeLaw F C} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {r : F} {T : Nat} {θ θ' : Θ},
+  (∀ (select : Θ → Prop),
+      Becoming.Training.TrainsThrough law part present start cand W obs r T select → (select θ ↔ select θ')) ↔
+    ∀ (e : E),
+      W.AlikeThroughUpTo obs r (Becoming.Training.levels law part present start (cand θ) e)
+        (Becoming.Training.levels law part present start (cand θ') e) T
+@Becoming.Training.settles_through : ∀ {F C E Θ : Type} {law : E → Becoming.ExchangeLaw F C} {part : F → Bool}
+  {present : Nat → List F} {start : E → C → Nat} {cand : Θ → E → Becoming.ExchangeLaw F C} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {r : F} {T : Nat} {reward : Θ → Nat},
+  Becoming.Training.RewardsThrough W obs r T reward →
+    Becoming.Training.TrainsThrough law part present start cand W obs r T (Becoming.Training.Settles reward)
+@Becoming.Training.score_rewards : ∀ {F C E Θ : Type} {law : E → Becoming.ExchangeLaw F C} {part : F → Bool}
+  {present : Nat → List F} {start : E → C → Nat} {cand : Θ → E → Becoming.ExchangeLaw F C} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {r : F} {T : Nat} {score : (Nat → C → Nat) → Nat},
+  W.ScoresThrough obs r T score →
+    ∀ (e₀ : E),
+      Becoming.Training.RewardsThrough W obs r T fun θ =>
+        score (Becoming.Training.levels law part present start (cand θ) e₀)
+@Becoming.Training.settles_apart : ∀ {F C E Θ : Type} {law : E → Becoming.ExchangeLaw F C} {part : F → Bool}
+  {present : Nat → List F} {start : E → C → Nat} {cand : Θ → E → Becoming.ExchangeLaw F C} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {r : F} {T : Nat} {θ θ' : Θ} {e₀ : E}
+  (decided :
+    (l : Nat → C → Nat) →
+      Decidable (W.AlikeThroughUpTo obs r (Becoming.Training.levels law part present start (cand θ) e₀) l T)),
+  ¬W.AlikeThroughUpTo obs r (Becoming.Training.levels law part present start (cand θ) e₀)
+        (Becoming.Training.levels law part present start (cand θ') e₀) T →
+    ∃ reward,
+      Becoming.Training.RewardsThrough W obs r T reward ∧
+        Becoming.Training.Settles reward θ ∧ ¬Becoming.Training.Settles reward θ'
+@Becoming.Training.settled_rests : ∀ {Θ : Type} {reward : Θ → Nat} {next : Θ → Θ},
+  Becoming.Training.Improving reward next → ∀ {θ : Θ}, Becoming.Training.Settles reward θ → next θ = θ
+@Becoming.Training.settled_stays : ∀ {Θ : Type} {reward : Θ → Nat} {next : Θ → Θ},
+  Becoming.Training.Improving reward next →
+    ∀ {θ : Θ}, Becoming.Training.Settles reward θ → ∀ (n : Nat), Becoming.Law.orbit next θ n = θ
+@Becoming.Training.LocalSearch.improving : ∀ {Θ : Type} {near : Θ → Θ → Prop} {reward : Θ → Nat} {next : Θ → Θ},
+  Becoming.Training.LocalSearch near reward next → Becoming.Training.Improving reward next
+@Becoming.Training.LocalSearch.rests_iff : ∀ {Θ : Type} {near : Θ → Θ → Prop} {reward : Θ → Nat} {next : Θ → Θ},
+  Becoming.Training.LocalSearch near reward next → ∀ {θ : Θ}, next θ = θ ↔ ∀ (θ' : Θ), near θ θ' → reward θ' ≤ reward θ
+@Becoming.Training.LocalSearch.rests_iff_settles : ∀ {Θ : Type} {reward : Θ → Nat} {next : Θ → Θ},
+  Becoming.Training.LocalSearch (fun x x_1 => True) reward next →
+    ∀ {θ : Θ}, next θ = θ ↔ Becoming.Training.Settles reward θ
+@Becoming.Training.rested_or_risen : ∀ {Θ : Type} {reward : Θ → Nat} {next : Θ → Θ},
+  Becoming.Training.Improving reward next →
+    ∀ (θ : Θ) (n : Nat),
+      next (Becoming.Law.orbit next θ n) = Becoming.Law.orbit next θ n ∨ n ≤ reward (Becoming.Law.orbit next θ n)
+@Becoming.Training.comes_to_rest : ∀ {Θ : Type} {reward : Θ → Nat} {next : Θ → Θ},
+  Becoming.Training.Improving reward next →
+    ∀ {B : Nat},
+      (∀ (θ : Θ), reward θ ≤ B) →
+        ∀ (θ : Θ), next (Becoming.Law.orbit next θ (B + 1)) = Becoming.Law.orbit next θ (B + 1)
+@Becoming.Training.trained_alike_beyond_closure : ∀ {F C E Θ : Type} {law : E → Becoming.ExchangeLaw F C}
+  {part : F → Bool} {present : Nat → List F} {start : E → C → Nat} {cand : Θ → E → Becoming.ExchangeLaw F C}
+  {W : Becoming.Web F C} {obs : F → C → Prop} {r : F} {T : Nat} {θ θ' : Θ},
+  (∀ (e : E), (law e).Nonanticipating) →
+    (∀ (e : E), (cand θ e).Nonanticipating) →
+      (∀ (e : E), (cand θ' e).Nonanticipating) →
+        (∀ (e : E), (law e).Through W obs part) →
+          (∀ (e : E), (cand θ e).Through W obs fun h => !part h) →
+            (∀ (e : E), ((law e).withAct part (cand θ e)).Feasible present (start e)) →
+              (∀ (e : E), ((law e).withAct part (cand θ' e)).Feasible present (start e)) →
+                (∀ (e : E) (t : Nat) (h : F) (l : Nat → C → Nat) (c : C),
+                    part h = true →
+                      (∃ g,
+                          Becoming.WithinClosure
+                              ((((law e).withAct part (cand θ e)).course present (start e)).CoupledFromEither W
+                                (((law e).withAct part (cand θ' e)).course present (start e)) obs)
+                              r g ∧
+                            W.CoupledInto obs g c) →
+                        (cand θ e).take t h l c = (cand θ' e).take t h l c ∧
+                          (cand θ e).give t h l c = (cand θ' e).give t h l c) →
+                  ∀ {select : Θ → Prop},
+                    Becoming.Training.TrainsThrough law part present start cand W obs r T select →
+                      (select θ ↔ select θ')
+@Becoming.Training.settles_weighted_iff : ∀ {Θ : Type} {own read : Θ → Nat},
+  (∀ (θ θ' : Θ), read θ = read θ') →
+    ∀ (w : Nat) {θ : Θ}, Becoming.Training.Settles (fun θ' => own θ' + w * read θ') θ ↔ Becoming.Training.Settles own θ
+@Becoming.Training.outrun_reading_same : ∀ {F C E Θ : Type} {law : E → Becoming.ExchangeLaw F C} {part : F → Bool}
+  {present : Nat → List F} {start : E → C → Nat} {cand : Θ → E → Becoming.ExchangeLaw F C} {W : Becoming.Web F C}
+  {T : Nat} {e₀ : E} {c : C} {n : Nat},
+  (∀ (θ : Θ),
+      (Becoming.Training.course law part present start (cand θ) e₀).Balances
+        (W.withLevel (Becoming.Training.levels law part present start (cand θ) e₀))) →
+    (∀ (θ : Θ),
+        (Becoming.Training.course law part present start (cand θ) e₀).Acting
+          (W.withLevel (Becoming.Training.levels law part present start (cand θ) e₀))) →
+      (∀ (θ : Θ), (W.withLevel (Becoming.Training.levels law part present start (cand θ) e₀)).Dependent) →
+        (∀ (θ : Θ) (t : Nat) (g : F),
+            g ∈ present t →
+              0 < (Becoming.Training.course law part present start (cand θ) e₀).give t g c →
+                W.requires t g c ∧ 1 ≤ W.need t g c) →
+          ∀ (rest : Θ → List F),
+            (∀ (θ : Θ), Becoming.Distinct (rest θ)) →
+              (∀ (θ : Θ) (j : Nat) (g : F),
+                  j < n →
+                    g ∈ rest θ →
+                      0 < (Becoming.Training.course law part present start (cand θ) e₀).take (T + j) g c →
+                        g ∈ present (T + j)) →
+                (∀ (θ : Θ) (j : Nat),
+                    j < n →
+                      (Becoming.Training.course law part present start (cand θ) e₀).given (T + j) c <
+                        Becoming.total (rest θ) fun g =>
+                          (Becoming.Training.course law part present start (cand θ) e₀).take (T + j) g c) →
+                  (∀ (θ : Θ), Becoming.Training.levels law part present start (cand θ) e₀ T c < n + 1) →
+                    ∀ {score : (Nat → C → Nat) → Nat},
+                      (∀ (l l' : Nat → C → Nat),
+                          (∀ (k : Nat), l (T + n + k) c = l' (T + n + k) c) → score l = score l') →
+                        ∀ (θ θ' : Θ),
+                          score (Becoming.Training.levels law part present start (cand θ) e₀) =
+                            score (Becoming.Training.levels law part present start (cand θ') e₀)
+@Becoming.Training.outrun_settles_iff : ∀ {F C E Θ : Type} {law : E → Becoming.ExchangeLaw F C} {part : F → Bool}
+  {present : Nat → List F} {start : E → C → Nat} {cand : Θ → E → Becoming.ExchangeLaw F C} {W : Becoming.Web F C}
+  {T : Nat} {e₀ : E} {c : C} {n : Nat},
+  (∀ (θ : Θ),
+      (Becoming.Training.course law part present start (cand θ) e₀).Balances
+        (W.withLevel (Becoming.Training.levels law part present start (cand θ) e₀))) →
+    (∀ (θ : Θ),
+        (Becoming.Training.course law part present start (cand θ) e₀).Acting
+          (W.withLevel (Becoming.Training.levels law part present start (cand θ) e₀))) →
+      (∀ (θ : Θ), (W.withLevel (Becoming.Training.levels law part present start (cand θ) e₀)).Dependent) →
+        (∀ (θ : Θ) (t : Nat) (g : F),
+            g ∈ present t →
+              0 < (Becoming.Training.course law part present start (cand θ) e₀).give t g c →
+                W.requires t g c ∧ 1 ≤ W.need t g c) →
+          ∀ (rest : Θ → List F),
+            (∀ (θ : Θ), Becoming.Distinct (rest θ)) →
+              (∀ (θ : Θ) (j : Nat) (g : F),
+                  j < n →
+                    g ∈ rest θ →
+                      0 < (Becoming.Training.course law part present start (cand θ) e₀).take (T + j) g c →
+                        g ∈ present (T + j)) →
+                (∀ (θ : Θ) (j : Nat),
+                    j < n →
+                      (Becoming.Training.course law part present start (cand θ) e₀).given (T + j) c <
+                        Becoming.total (rest θ) fun g =>
+                          (Becoming.Training.course law part present start (cand θ) e₀).take (T + j) g c) →
+                  (∀ (θ : Θ), Becoming.Training.levels law part present start (cand θ) e₀ T c < n + 1) →
+                    ∀ {score : (Nat → C → Nat) → Nat},
+                      (∀ (l l' : Nat → C → Nat),
+                          (∀ (k : Nat), l (T + n + k) c = l' (T + n + k) c) → score l = score l') →
+                        ∀ (own : Θ → Nat) (w : Nat) {θ : Θ},
+                          Becoming.Training.Settles
+                              (fun θ' =>
+                                own θ' + w * score (Becoming.Training.levels law part present start (cand θ') e₀))
+                              θ ↔
+                            Becoming.Training.Settles own θ
+Becoming.Training.Commons.reward_through : ∀ (draw w : Nat),
+  Becoming.Training.RewardsThrough Becoming.Training.Commons.web Becoming.Training.Commons.obs
+    Becoming.Training.Commons.Member.learner 4 (Becoming.Training.Commons.reward draw w)
+Becoming.Training.Commons.couples_into_stock : Becoming.Training.Commons.web.CoupledInto Becoming.Training.Commons.obs
+  Becoming.Training.Commons.Member.learner Becoming.Training.Commons.Stock
+Becoming.Training.Commons.renewed_drawing_store : Becoming.Training.Commons.lev 1 false 4 true = 2
+Becoming.Training.Commons.renewed_drawing_stock : Becoming.Training.Commons.lev 1 false 4 false = 2
+Becoming.Training.Commons.renewed_restraint_store : Becoming.Training.Commons.lev 1 true 4 true = 0
+Becoming.Training.Commons.renewed_restraint_stock : Becoming.Training.Commons.lev 1 true 4 false = 4
+Becoming.Training.Commons.outrun_drawing_store : Becoming.Training.Commons.lev 2 false 4 true = 1
+Becoming.Training.Commons.outrun_drawing_stock : Becoming.Training.Commons.lev 2 false 4 false = 0
+Becoming.Training.Commons.outrun_restraint_store : Becoming.Training.Commons.lev 2 true 4 true = 0
+Becoming.Training.Commons.outrun_restraint_stock : Becoming.Training.Commons.lev 2 true 4 false = 0
+Becoming.Training.Commons.renewed_restraint_reward : ∀ (w : Nat), Becoming.Training.Commons.reward 1 w true = w * 4
+Becoming.Training.Commons.renewed_drawing_reward : ∀ (w : Nat), Becoming.Training.Commons.reward 1 w false = 2 + w * 2
+Becoming.Training.Commons.outrun_restraint_reward : ∀ (w : Nat), Becoming.Training.Commons.reward 2 w true = 0
+Becoming.Training.Commons.outrun_drawing_reward : ∀ (w : Nat), Becoming.Training.Commons.reward 2 w false = 1
+Becoming.Training.Commons.one_le_of_le : ∀ (w : Nat), 2 + w * 2 ≤ w * 4 → 1 ≤ w
+Becoming.Training.Commons.renewed_restraint_settles_iff : ∀ (w : Nat),
+  Becoming.Training.Settles (Becoming.Training.Commons.reward 1 w) true ↔ 1 ≤ w
+Becoming.Training.Commons.outrun_restraint_unsettled : ∀ (w : Nat),
+  ¬Becoming.Training.Settles (Becoming.Training.Commons.reward 2 w) true
+Becoming.Training.Commons.outrun_drawing_settles : ∀ (w : Nat),
+  Becoming.Training.Settles (Becoming.Training.Commons.reward 2 w) false
+Becoming.Training.Commons.renewed_both_settle : Becoming.Training.Settles (Becoming.Training.Commons.reward 1 1) true ∧
+  Becoming.Training.Settles (Becoming.Training.Commons.reward 1 1) false
+Becoming.Training.Commons.drawing_responds : Becoming.Training.Commons.drawing.take 0
+      Becoming.Training.Commons.Member.learner (fun x x_1 => 3) false ≠
+    Becoming.Training.Commons.drawing.take 0 Becoming.Training.Commons.Member.learner (fun x x_1 => 0) false ∧
+  ∀ (t : Nat) (h : Becoming.Training.Commons.Member) (l : Nat → Bool → Nat) (c : Bool),
+    Becoming.Training.Commons.restraint.take t h l c = 0
+@Becoming.Training.Commons.start_decides : ∀ {next : Bool → Bool},
+  Becoming.Training.Improving (Becoming.Training.Commons.reward 1 1) next →
+    (∀ (n : Nat), Becoming.Law.orbit next true n = true) ∧ ∀ (n : Nat), Becoming.Law.orbit next false n = false
+Becoming.Training.Commons.outrun_neighbourhood_decides : ∀ (w : Nat),
+  Becoming.Training.LocalSearch (fun x x_1 => False) (Becoming.Training.Commons.reward 2 w) id ∧
+    id true = true ∧
+      ¬Becoming.Training.Settles (Becoming.Training.Commons.reward 2 w) true ∧
+        ∀ (next : Bool → Bool),
+          Becoming.Training.LocalSearch (fun x x_1 => True) (Becoming.Training.Commons.reward 2 w) next →
+            next true = false

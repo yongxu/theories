@@ -90,7 +90,7 @@ theorem mem_finerSteps {weight : S → A → S → Nat} {moves : List A} {all : 
     {x : A × S × Nat} (move : x.1 ∈ moves) (reached : x.2.1 ∈ all)
     (within : x.2.2 < weight s x.1 x.2.1) : x ∈ finerSteps weight moves all s :=
   mem_joinMap (fun p => (Undecided.upto (weight s p.1 p.2)).map fun k => (p.1, p.2, k))
-    (mem_mapped (fun k => (x.1, x.2.1, k)) (Undecided.mem_upto within)) (mem_openSteps move reached)
+    (ListTests.mem_map_of (f := fun k => (x.1, x.2.1, k)) (Undecided.mem_upto within)) (mem_openSteps move reached)
 
 /-- **The finer courses are the finer law's traces.** A list of situations is a finer course of
 `n` steps from `s` exactly where it has `n` steps, is a trace of the finer law from `s`, and takes
@@ -134,7 +134,7 @@ theorem mem_finer_iff (weight : S → A → S → Nat) (moves : List A) (all : L
              ⟨t, Eq.subst (motive := fun w => Trace (finerLaw weight) w h t) step.1 rest⟩,
              fun z mem => listed z (.tail x mem)⟩
         mem_joinMap (fun y => (finer weight moves all n y.2.1).map fun h => y :: h)
-          (mem_mapped (fun h => x :: h) inside)
+          (ListTests.mem_map_of (f := fun h => x :: h) inside)
           (mem_finerSteps (listed x (.head h)).1 (listed x (.head h)).2 step.2)⟩
 
 /-- The law of the steps of positive weight. -/

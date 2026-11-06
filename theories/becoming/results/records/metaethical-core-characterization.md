@@ -122,6 +122,7 @@ An independent review of A's externalist defence and of the neutralities' philos
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261027T195912.152773Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `Becoming.Valuation.significant_iff`, `Becoming.Valuation.significant_of_grounds`, `Becoming.Valuation.transmits_invariant`, `Becoming.Valuation.reaches`, `Becoming.Valuation.seed_of_selfSignificance`, `Becoming.Valuation.livingSignificance`, `Becoming.positioned_articulation_of_articulates`, `Becoming.universal_reason`, `Becoming.LiftBetter.trans`, `Becoming.LiftBetter.irrefl`, `Becoming.LiftBetter.some`, `Becoming.Model.seed_is_needed`, `Becoming.Model.relational_neutrality_is_needed`, `Becoming.Model.standpoint_neutrality_is_needed`, `Becoming.Model.connection_is_needed`, `Becoming.Model.articulation_neutrality_is_needed`, `Becoming.Scope.secures`
 

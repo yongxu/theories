@@ -1,36 +1,26 @@
 import Becoming.LineageRegimes
 
 /-!
-# A lineage drawn below its need: the lineage reading without its gate
+# A lineage drawn below its need
 
-`Becoming.LineageRegimes` reads renewal gated on what it renews, run past what it gives, on a
-lineage (`LineageRegimes.degeneration_of_family_excess`), and `Becoming.MapInstances` reads it on
-the map (`Web.family_excess_gone`, `Web.family_excess_degenerates`). Their proofs use
-`Flow.family_excess_ends` only at the step the excess reaches, where neither the coupled gate nor
-the premise that only active formations give (`Acting`) is used. This module states those laws
-without the two premises and shows each landed statement to be a case. Every law here composes
-landed lemmas with premises dropped: a restatement, not a further result.
+`Becoming.LineageRegimes` reads renewal run past what it gives on a lineage
+(`LineageRegimes.degeneration_of_family_excess`), and `Becoming.MapInstances` reads it on the map
+(`Web.family_excess_gone`, `Web.family_excess_degenerates`). This module states the ledger under
+those laws, the one decider through conditions, the census, and what a gate adds. Every law here
+composes landed lemmas: a restatement, not a further result.
 
 * **The ledger (restatements).** Under balance, a family's stock at `T + n` is below a need `m`
   exactly where its stock at `T`, with everything given to it across the `n` steps, is below `m`
   with everything taken from it (`below_iff`, read from `Flow.Balances.accumulates`, the landed
   `balance_over_stretch` at the stock); `n` steps of excess of the family's uptake over its
-  replenishment from a stock below `n + m` leave it below `m` (`below_of_excess`,
-  `Flow.family_excess_bounded` read at the need).
+  replenishment from a stock below `n + m` leave it below `m` (`Flow.below_of_excess`).
 * **One decider through conditions.** Where activity needs support, the line from an active
   occurrence at a step not after `N` ends on every branch at the kind grain where everything it
   reaches at `N` requires, at a need of at least `m`, a member of a family whose stock at `N` is
   below `m` (`degeneration_of_unmet`, composing `Flow.family_ends_below_at` with
   `Web.kind_every_branch_ends_of_gone`); no flow premise enters. Read through the ledger
-  (`degeneration_of_drawdown`), and through `n` steps of excess from a stock below `n + m`
-  (`degeneration_of_excess`): the landed gated reading with its gate and `Acting` dropped. The landed
-  statement is its case (`landed_of_excess`), its type that of
-  `LineageRegimes.degeneration_of_family_excess` (`landed_of_excess_eq`, by `rfl`); where the census
-  holds every continuation, every member of generation `N` so depending suffices
-  (`degeneration_of_unmet_listed`).
-* **The map's horizon law, likewise.** `Web.family_excess_gone` and `Web.family_excess_degenerates`
-  hold without their gate and `Acting` (`gone_of_excess`, `horizon_of_excess`) and are their cases
-  (`landed_gone`, `landed_horizon`; `landed_gone_eq`, `landed_horizon_eq`, by `rfl`).
+  (`degeneration_of_drawdown`). Where the census holds every continuation, every member of generation
+  `N` so depending suffices (`degeneration_of_unmet_listed`).
 * **On the census (near-definitional).** In generations of descent, where only active formations give
   and activity needs support, a generation every member of which requires, at a need of at least
   `m`, a member of a family whose stock at its step is below `m` has an empty next generation, every
@@ -48,9 +38,9 @@ landed lemmas with premises dropped: a restatement, not a further result.
   requires the pool at need one (the gate) or gives three units a step from no condition and requires
   none (from outside). The restrained member leaves no offspring and the drawer two, which then relay:
   selection at the first step only, and no growth. With the gate, eight steps of excess from a stock
-  of eight meet the landed gated law with a nonempty generation at its horizon (`Drain.landed_met`).
-  From outside the coupled gate fails at every need (`Drain.not_gated`), every other premise holds,
-  and the line degenerates the same (`Drain.outside_ends`), while the renewer's own line goes on
+  of eight meet the law with a nonempty generation at its horizon (`Drain.gated_ends`).
+  From outside the coupled gate fails at every need (`Drain.not_gated`), and the line degenerates the
+  same (`Drain.outside_ends`), while the renewer's own line goes on
   (`Drain.renewer_goes_on_outside`, a witness).
 
 Modelling choices: discrete steps; natural-number levels, needs, gifts, takes and offspring numbers;
@@ -88,17 +78,6 @@ theorem below_iff (balances : L.Balances W) (ds : List C) (T n m : Nat) :
   have ledger := balances.accumulates ds T n
   ⟨fun below => Nat.lt_of_le_of_lt (Nat.le_of_eq ledger.symm) (Nat.add_lt_add_right below _),
    fun draws => Nat.lt_of_add_lt_add_right (Nat.lt_of_le_of_lt (Nat.le_of_eq ledger) draws)⟩
-
-/-- `n` steps of excess of the family's uptake over its replenishment from a stock below `n + m`
-leave the stock below `m` (`Flow.family_excess_bounded`, read at the need). -/
-theorem below_of_excess (balances : L.Balances W) {ds : List C} {m T n : Nat}
-    (excess : ∀ k, k < n → L.replenishment ds (T + k) < L.uptake ds (T + k))
-    (start : W.stock ds T < n + m) : W.stock ds (T + n) < m :=
-  Nat.lt_of_add_lt_add_left (n := n)
-    (Nat.lt_of_le_of_lt
-      (Nat.le_trans (Nat.le_of_eq (Nat.add_comm n _))
-        (Flow.family_excess_bounded balances n excess))
-      start)
 
 end Ledger
 
@@ -152,103 +131,7 @@ theorem degeneration_of_drawdown (balances : L.Balances W) (dependent : W.Depend
     «退化» (lineStep L W Q) (W.kindClass Q) x :=
   degeneration_of_unmet dependent ((below_iff balances ds T n m).mpr draws) active le depends
 
-/-- **Excess past the stock less the need, with no gate**: `LineageRegimes.degeneration_of_family_excess`
-with its gate and `Acting` dropped, whatever renews the family. -/
-theorem degeneration_of_excess (balances : L.Balances W) (dependent : W.Dependent)
-    {ds : List X} {m T n : Nat}
-    (excess : ∀ k, k < n → L.replenishment ds (T + k) < L.uptake ds (T + k))
-    (start : W.stock ds T < n + m) {x : Nat × X} (active : W.active x.1 x.2) (le : x.1 ≤ T + n)
-    (depends : ∀ y, «所及» (lineStep L W Q) (W.kindClass Q) x y → y.1 = T + n →
-      ∃ e, e ∈ ds ∧ W.requires y.1 y.2 e ∧ m ≤ W.need y.1 y.2 e) :
-    «退化» (lineStep L W Q) (W.kindClass Q) x :=
-  degeneration_of_unmet dependent (below_of_excess balances excess start) active le depends
-
-/-- The landed gated reading as the case of `degeneration_of_excess`: its gate and `Acting` are not
-used. -/
-theorem landed_of_excess (balances : L.Balances W) (_acting : L.Acting W)
-    (dependent : W.Dependent) {ds : List X} {m : Nat}
-    (_gated : ∀ t f, f ∈ L.present t → ∀ d, d ∈ ds → 0 < L.give t f d →
-      ∃ e, e ∈ ds ∧ W.requires t f e ∧ m ≤ W.need t f e)
-    {T n : Nat} (excess : ∀ k, k < n → L.replenishment ds (T + k) < L.uptake ds (T + k))
-    (start : W.stock ds T < n + m) {x : Nat × X} (active : W.active x.1 x.2) (le : x.1 ≤ T + n)
-    (depends : ∀ y, «所及» (lineStep L W Q) (W.kindClass Q) x y → y.1 = T + n →
-      ∃ e, e ∈ ds ∧ W.requires y.1 y.2 e ∧ m ≤ W.need y.1 y.2 e) :
-    «退化» (lineStep L W Q) (W.kindClass Q) x :=
-  degeneration_of_excess balances dependent excess start active le depends
-
-/-- `landed_of_excess` states exactly `LineageRegimes.degeneration_of_family_excess`: an equality
-of the two that type-checks only where their statements are the same. -/
-theorem landed_of_excess_eq :
-    @landed_of_excess = @LineageRegimes.degeneration_of_family_excess := rfl
-
 end Decider
-
-/-! ## The map's horizon law, without its gate -/
-
-section Horizon
-
-variable {F C : Type}
-
-/-- **Drawn beyond renewal, gated or not, an occurrence at the horizon is inactive**: under balance
-and where activity needs support, `n` steps of excess of a family's uptake over its replenishment
-from a stock below `n + m` leave inactive at `T + n` an occurrence depending there on a member at a
-need of at least `m`. No gate and no `Acting`. -/
-theorem gone_of_excess {W : Web F C} {L : Flow F C} (balances : L.Balances W)
-    (dependent : W.Dependent) {ds : List C} {m T n : Nat}
-    (excess : ∀ k, k < n → L.replenishment ds (T + k) < L.uptake ds (T + k))
-    (stock : W.stock ds T < n + m) {y : Nat × F} (at_ : y.1 = T + n)
-    (held : ∃ e, e ∈ ds ∧ W.requires (T + n) y.2 e ∧ m ≤ W.need (T + n) y.2 e) :
-    ¬ W.active y.1 y.2 :=
-  match held with
-  | ⟨_, inside, depends, high⟩ =>
-    Eq.subst (motive := fun s => ¬ W.active s y.2) at_.symm
-      (Flow.family_ends_below_at (dependent (T + n) y.2) (below_of_excess balances excess stock)
-        inside depends high)
-
-/-- **The same on the map**: the line from an active occurrence at a step not after `T + n`
-degenerates at the activity grain where everything it reaches at `T + n` so depends. -/
-theorem horizon_of_excess {W : Web F C} {R : Nat → F → F → Prop} {L : Flow F C}
-    (balances : L.Balances W) (dependent : W.Dependent) {ds : List C} {m T n : Nat}
-    (excess : ∀ k, k < n → L.replenishment ds (T + k) < L.uptake ds (T + k))
-    (stock : W.stock ds T < n + m) {x : Nat × F} (start : W.active x.1 x.2) (le : x.1 ≤ T + n)
-    (held : ∀ y, «所及» (Web.continuationStep R) W.activityClass x y → y.1 = T + n →
-      ∃ e, e ∈ ds ∧ W.requires (T + n) y.2 e ∧ m ≤ W.need (T + n) y.2 e) :
-    «退化» (Web.continuationStep R) W.activityClass x :=
-  Web.activity_every_branch_ends_of_gone start le fun y hy at_ =>
-    gone_of_excess balances dependent excess stock at_ (held y hy at_)
-
-/-- `Web.family_excess_gone` as the case of `gone_of_excess`: its gate and `Acting` are not used. -/
-theorem landed_gone {W : Web F C} {L : Flow F C} (balances : L.Balances W)
-    (_acting : L.Acting W) (dependent : W.Dependent) {ds : List C} {m : Nat}
-    (_gated : ∀ t f, f ∈ L.present t → ∀ d, d ∈ ds → 0 < L.give t f d →
-      ∃ e, e ∈ ds ∧ W.requires t f e ∧ m ≤ W.need t f e)
-    {T n : Nat} (excess : ∀ k, k < n → L.replenishment ds (T + k) < L.uptake ds (T + k))
-    (stock : W.stock ds T < n + m) {y : Nat × F} (at_ : y.1 = T + n)
-    (held : ∃ e, e ∈ ds ∧ W.requires (T + n) y.2 e ∧ m ≤ W.need (T + n) y.2 e) :
-    ¬ W.active y.1 y.2 :=
-  gone_of_excess balances dependent excess stock at_ held
-
-/-- `Web.family_excess_degenerates` as the case of `horizon_of_excess`: its gate and `Acting` are
-not used. -/
-theorem landed_horizon {W : Web F C} {R : Nat → F → F → Prop} {L : Flow F C}
-    (balances : L.Balances W) (_acting : L.Acting W) (dependent : W.Dependent) {ds : List C}
-    {m : Nat}
-    (_gated : ∀ t f, f ∈ L.present t → ∀ d, d ∈ ds → 0 < L.give t f d →
-      ∃ e, e ∈ ds ∧ W.requires t f e ∧ m ≤ W.need t f e)
-    {T n : Nat} (excess : ∀ k, k < n → L.replenishment ds (T + k) < L.uptake ds (T + k))
-    (stock : W.stock ds T < n + m) {x : Nat × F} (start : W.active x.1 x.2) (le : x.1 ≤ T + n)
-    (held : ∀ y, «所及» (Web.continuationStep R) W.activityClass x y → y.1 = T + n →
-      ∃ e, e ∈ ds ∧ W.requires (T + n) y.2 e ∧ m ≤ W.need (T + n) y.2 e) :
-    «退化» (Web.continuationStep R) W.activityClass x :=
-  horizon_of_excess balances dependent excess stock start le held
-
-/-- `landed_gone` states exactly `Web.family_excess_gone`. -/
-theorem landed_gone_eq : @landed_gone = @Web.family_excess_gone := rfl
-
-/-- `landed_horizon` states exactly `Web.family_excess_degenerates`. -/
-theorem landed_horizon_eq : @landed_horizon = @Web.family_excess_degenerates := rfl
-
-end Horizon
 
 /-! ## What the drawdown forbids, on the census (near-definitional) -/
 
@@ -448,22 +331,6 @@ def courseP (gate : Bool) : Course where
 
 /-! ### Small facts on Booleans -/
 
-theorem pos_of_bif {b : Bool} {x : Nat} : 0 < (bif b then x else 0) → b = true :=
-  match b with
-  | true => fun _ => rfl
-  | false => fun h => absurd h (Nat.lt_irrefl 0)
-
-theorem left_of_and {a b : Bool} : (a && b) = true → a = true :=
-  match a with
-  | true => fun _ => rfl
-  | false => fun h => nomatch h
-
-theorem right_of_and {a b : Bool} : (a && b) = true → b = true :=
-  match a, b with
-  | _, true => fun _ => rfl
-  | true, false => fun h => nomatch h
-  | false, false => fun h => nomatch h
-
 theorem right_of_gate {g b : Bool} : (!g || b) = true → g = true → b = true :=
   match g with
   | true => fun h _ => h
@@ -474,11 +341,11 @@ theorem right_of_gate {g b : Bool} : (!g || b) = true → g = true → b = true 
 theorem active_of_give {gate : Bool} {φ : Phase} {kids : Nat → List Nat} :
     ∀ f c, 0 < giveOf gate φ kids f c → activeOf gate φ f = true
   | 0, _, h => absurd h (Nat.lt_irrefl 0)
-  | 1, 0, h => pos_of_bif h
+  | 1, 0, h => ListTests.true_of_cond_pos h
   | 1, _ + 1, h => absurd h (Nat.lt_irrefl 0)
   | _ + 2, 0, h => absurd h (Nat.lt_irrefl 0)
   | _ + 2, 1, h => absurd h (Nat.lt_irrefl 0)
-  | _ + 2, _ + 2, h => left_of_and (pos_of_bif h)
+  | _ + 2, _ + 2, h => ListTests.and_left (ListTests.true_of_cond_pos h)
 
 /-- **Only active formations give.** -/
 theorem acting (gate : Bool) (κ : Course) : (flow gate κ).Acting (web gate κ) :=
@@ -492,7 +359,7 @@ theorem dependent (gate : Bool) (κ : Course) : (web gate κ).Dependent := by
   | 1, 0, ⟨gated, _⟩ =>
     exact of_decide_eq_true (right_of_gate (g := gate) active gated)
   | _ + 2, 0, rfl =>
-    exact of_decide_eq_true (right_of_and active)
+    exact of_decide_eq_true (ListTests.and_right active)
 
 /-- **The renewer is gated where there is a gate**: whatever gives to the pool requires it at
 need one. -/
@@ -739,24 +606,26 @@ theorem draws_past_P (gate : Bool) :
       1 + total (steps 1 8) ((flow gate (courseP gate)).uptake [0]) := by
   cases gate <;> decide
 
-/-- **The landed gated law, met with a nonempty generation at its horizon**: every premise of
-`LineageRegimes.degeneration_of_family_excess` holds with the gate, at `T = 1`, `n = 8`, `m = 1`,
-and generation nine has two members, each requiring the pool. -/
-theorem landed_met :
+/-- **With the gate, the law met with a nonempty generation at its horizon**: where the renewer is
+gated on the pool (`gated`), every premise of `LineageRegimes.degeneration_of_family_excess` holds at
+`T = 1`, `n = 8`, `m = 1`, so the line degenerates; the gate is not among those premises. Generation
+nine has two members (`sizes_P`), each requiring the pool (`depends_pool`). -/
+theorem gated_ends :
     «退化» (lineStep (flow true (courseP true)) (web true (courseP true)) (oneKind Nat))
       ((web true (courseP true)).kindClass (oneKind Nat)) (0, 4) :=
-  LineageRegimes.degeneration_of_family_excess (balances_P true) (acting true _)
-    (dependent true _) (gated _) (excess_P true) (start_P true) (x := (0, 4)) rfl
+  LineageRegimes.degeneration_of_family_excess (balances_P true)
+    (dependent true _) (excess_P true) (start_P true) (x := (0, 4)) rfl
     (Nat.zero_le _) (depends_pool (by decide) _)
 
 /-- **Renewal from outside, the same excess, the same end**: without the gate the renewer gives
 three units at every step and requires nothing (`from_outside`), the coupled gate fails
-(`not_gated`), every other premise of the landed law holds, and the line degenerates
-(`degeneration_of_excess`). -/
+(`not_gated`), and the line degenerates all the same
+(`LineageRegimes.degeneration_of_family_excess`). -/
 theorem outside_ends :
     «退化» (lineStep (flow false (courseP false)) (web false (courseP false)) (oneKind Nat))
       ((web false (courseP false)).kindClass (oneKind Nat)) (0, 4) :=
-  degeneration_of_excess (balances_P false) (dependent false _) (excess_P false) (start_P false)
+  LineageRegimes.degeneration_of_family_excess (balances_P false) (dependent false _) (excess_P false)
+    (start_P false)
     (x := (0, 4)) rfl (Nat.zero_le _) (depends_pool (by decide) _)
 
 /-- **Every active organism's line up to step nine degenerates**, with the gate or without it. -/

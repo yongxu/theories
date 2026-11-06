@@ -131,6 +131,7 @@ New content forms through prior activity, a productive relation and the common r
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T005554.047169Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `PositiveGroundUncertainty.positive_integral_has_positive_occurrence`, `PositiveGroundUncertainty.contingent_generation_has_positive_ground`, `PositiveGroundUncertainty.certified_integral_supplies_contributory_reason`, `PositiveGroundUncertainty.same_response_secures_generation_without_fixed_form`, `PositiveGroundUncertainty.positive_occurrence_has_actual_generative_correspondence`, `PositiveGroundUncertainty.positive_integral_and_adverse_full_change`, `PositiveGroundUncertainty.response_preserves_joint_openness_and_query_access`, `PositiveGroundUncertainty.acquired_evidence_secures_good_and_leaves_both_opennesses`, `PositiveGroundUncertainty.wider_scope_can_require_certificate_retraction`
 

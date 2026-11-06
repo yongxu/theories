@@ -76,6 +76,7 @@ The open programme of the chapter left open "deriving the shared index of steps 
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T070914.793352Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T101723.692082Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `the step index from own courses`, `步指标读自自身进程`, `interleaving of own courses`, `自身进程的交错`, `equal own courses equal configurations`, `自身进程同则构形同`, `the index is built`, `指标是构造出来的`, `where the courses fix the index`, `进程定下指标之处`, `shared index as commitment`, `共同指标作为承诺`
 

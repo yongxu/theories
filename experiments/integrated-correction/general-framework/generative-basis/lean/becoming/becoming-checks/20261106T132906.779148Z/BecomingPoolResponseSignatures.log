@@ -1,0 +1,184 @@
+@Becoming.ExchangeLaw.Through.acts_alike_all : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {part : F → Bool} {group : F → Prop} {l l' : Nat → C → Nat} {t : Nat},
+  law.Through W obs part →
+    (∀ (h : F), group h → part h = false) →
+      W.AlikeThroughAll obs group l l' t → ∀ (s : Nat), s ≤ t → ∀ (h : F), group h → law.GivesAlike s h l l'
+@Becoming.ExchangeLaw.Through.selectsThroughAll : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {part : F → Bool} {group : F → Prop} {t : Nat} {select : (Nat → C → Nat) → Prop},
+  law.Through W obs part →
+    (∀ (h : F), group h → part h = false) →
+      law.SelectsThroughActs group t select → W.SelectsThroughAll obs group t select
+@Becoming.ExchangeLaw.Through.apart_of_acts : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {part : F → Bool} {l l' : Nat → C → Nat},
+  law.Through W obs part →
+    ∀ {h : F}, part h = false → ∀ {s : Nat}, ¬law.GivesAlike s h l l' → ¬W.AlikeThroughUpTo obs h l l' s
+@Becoming.ExchangeLaw.Through.acts_separate : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {part : F → Bool} {group : F → Prop} {l l' : Nat → C → Nat} {t : Nat},
+  law.Through W obs part →
+    (∀ (h : F), group h → part h = false) →
+      (∃ select, law.SelectsThroughActs group t select ∧ select l ∧ ¬select l') → ¬W.AlikeThroughAll obs group l l' t
+@Becoming.ExchangeLaw.Through.acts_separate_member : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C}
+  {W : Becoming.Web F C} {obs : F → C → Prop} {part : F → Bool} {group : F → Prop} {l l' : Nat → C → Nat} {t : Nat},
+  law.Through W obs part →
+    (∀ (h : F), group h → part h = false) →
+      ∀ {members : List F},
+        (∀ (g : F), group g ↔ g ∈ members) →
+          (∀ (g : F), g ∈ members → Becoming.Decided (W.AlikeThroughUpTo obs g l l' t)) →
+            (∃ select, law.SelectsThroughActs group t select ∧ select l ∧ ¬select l') →
+              ∃ g, group g ∧ ¬W.AlikeThroughUpTo obs g l l' t
+@Becoming.ExchangeLaw.ofClass_through : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {part : F → Bool}
+  {l : Nat → C → Nat}
+  {decided : (h : F) → (t : Nat) → (m : Nat → C → Nat) → Decidable (W.AlikeThroughUpTo obs h l m t)},
+  (Becoming.ExchangeLaw.ofClass W obs l decided).Through W obs part
+@Becoming.ExchangeLaw.ofClass_take_iff : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop}
+  {l l' : Nat → C → Nat} {t : Nat}
+  {decided : (h : F) → (t : Nat) → (m : Nat → C → Nat) → Decidable (W.AlikeThroughUpTo obs h l m t)} {h : F} {c : C},
+  (Becoming.ExchangeLaw.ofClass W obs l decided).take t h l c =
+      (Becoming.ExchangeLaw.ofClass W obs l decided).take t h l' c ↔
+    W.AlikeThroughUpTo obs h l l' t
+@Becoming.ExchangeLaw.acts_alike_all_iff : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {part : F → Bool}
+  {group : F → Prop} {l l' : Nat → C → Nat} {t : Nat}
+  (decided : (h : F) → (t : Nat) → (m : Nat → C → Nat) → Decidable (W.AlikeThroughUpTo obs h l m t)) (c : C),
+  (∀ (h : F), group h → part h = false) →
+    ((∀ (law : Becoming.ExchangeLaw F C), law.Through W obs part → ∀ (h : F), group h → law.GivesAlike t h l l') ↔
+      W.AlikeThroughAll obs group l l' t)
+@Becoming.ExchangeLaw.zero_through : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {part : F → Bool},
+  Becoming.ExchangeLaw.zero.Through W obs part
+@Becoming.ExchangeLaw.response_not_fixed_by_coupling : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop}
+  {l l' : Nat → C → Nat} {t : Nat}
+  (decided : (h : F) → (t : Nat) → (m : Nat → C → Nat) → Decidable (W.AlikeThroughUpTo obs h l m t)) {g : F} (c : C),
+  ¬W.AlikeThroughUpTo obs g l l' t →
+    (∃ law, (law.Through W obs fun x => false) ∧ law.take t g l c ≠ law.take t g l' c) ∧
+      ∃ law, (law.Through W obs fun x => false) ∧ ∀ (s : Nat) (h : F) (m m' : Nat → C → Nat), law.GivesAlike s h m m'
+@Becoming.Flow.response_alike_pool : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {L L' : Becoming.Flow F C}
+  {W W' : Becoming.Web F C} {obs : F → C → Prop} {part : F → Bool} {group : F → Prop},
+  law.Through W obs part →
+    L.Follows law part W.level →
+      L'.Follows law part W'.level →
+        L.Balances W →
+          L'.Balances W' →
+            (∀ (t : Nat), L.present t = L'.present t) →
+              (∀ (c : C), W.level 0 c = W'.level 0 c) →
+                (∀ (f : F), group f → L.ActsAlikeWithin L' W W' obs part f) →
+                  ∀ (h : F),
+                    part h = false →
+                      Becoming.WithinClosureOf (L.CoupledFromEither W L' obs) group h →
+                        ∀ (t : Nat) (c : C), L.take t h c = L'.take t h c ∧ L.give t h c = L'.give t h c
+@Becoming.Flow.act_unselected_by_acts_pool : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {L L' : Becoming.Flow F C}
+  {W W' : Becoming.Web F C} {obs : F → C → Prop} {part : F → Bool} {group : F → Prop} {select : (Nat → C → Nat) → Prop},
+  law.Through W obs part →
+    L.Follows law part W.level →
+      L'.Follows law part W'.level →
+        L.Balances W →
+          L'.Balances W' →
+            (∀ (t : Nat), L.present t = L'.present t) →
+              (∀ (c : C), W.level 0 c = W'.level 0 c) →
+                (∀ (f : F), group f → L.ActsAlikeWithin L' W W' obs part f) →
+                  ∀ {pool : F → Prop},
+                    (∀ (g : F), pool g → Becoming.WithinClosureOf (L.CoupledFromEither W L' obs) group g) →
+                      (∀ (g : F), pool g → part g = false) →
+                        ∀ {t : Nat}, law.SelectsThroughActs pool t select → (select W.level ↔ select W'.level)
+@Becoming.act_courses_response_alike_pool : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {part : F → Bool} {group : F → Prop} {act act' : Becoming.ExchangeLaw F C}
+  {present : Nat → List F} {start : C → Nat},
+  law.Nonanticipating →
+    act.Nonanticipating →
+      act'.Nonanticipating →
+        law.Through W obs part →
+          (act.Through W obs fun h => !part h) →
+            (law.withAct part act).Feasible present start →
+              (law.withAct part act').Feasible present start →
+                (∀ (t : Nat) (h : F) (l : Nat → C → Nat) (c : C),
+                    part h = true →
+                      (∃ g,
+                          Becoming.WithinClosureOf
+                              (((law.withAct part act).course present start).CoupledFromEither W
+                                ((law.withAct part act').course present start) obs)
+                              group g ∧
+                            W.CoupledInto obs g c) →
+                        act.take t h l c = act'.take t h l c ∧ act.give t h l c = act'.give t h l c) →
+                  (∀ (h : F),
+                      part h = true →
+                        Becoming.WithinClosureOf
+                            (((law.withAct part act).course present start).CoupledFromEither W
+                              ((law.withAct part act').course present start) obs)
+                            group h →
+                          ∀ (t : Nat),
+                            act.GivesAlike t h ((law.withAct part act).levels present start)
+                              ((law.withAct part act').levels present start)) ∧
+                    ∀ (h : F),
+                      part h = false →
+                        Becoming.WithinClosureOf
+                            (((law.withAct part act).course present start).CoupledFromEither W
+                              ((law.withAct part act').course present start) obs)
+                            group h →
+                          ∀ (t : Nat) (c : C),
+                            ((law.withAct part act).course present start).take t h c =
+                                ((law.withAct part act').course present start).take t h c ∧
+                              ((law.withAct part act).course present start).give t h c =
+                                ((law.withAct part act').course present start).give t h c
+@Becoming.Flow.pool_within_response_iff : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {part : F → Bool} {group : F → Prop},
+  (∃ g, group g ∧ L.WithinResponse L' W obs part g) ↔
+    ∃ h, part h = true ∧ Becoming.WithinClosureOf (L.CoupledFromEither W L' obs) group h
+@Becoming.Flow.pool_alike_beyond_response : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W W' : Becoming.Web F C}
+  {obs : F → C → Prop} {part : F → Bool} {group : F → Prop},
+  (∀ (t : Nat) (g : F) (c : C), ¬L.WithinResponse L' W obs part g → W.CoupledInto obs g c → L.BalancesOn W [c] t) →
+    (∀ (t : Nat) (g : F) (c : C), ¬L.WithinResponse L' W obs part g → W.CoupledInto obs g c → L'.BalancesOn W' [c] t) →
+      (∀ (t : Nat), L.present t = L'.present t) →
+        (∀ (g : F), ¬L.WithinResponse L' W obs part g → ∀ (c : C), W.CoupledInto obs g c → W.level 0 c = W'.level 0 c) →
+          L.RespondsThroughCoupling L' W W' obs part →
+            (∀ (g : F), group g → ¬L.WithinResponse L' W obs part g) →
+              (∀ (t : Nat), W.AlikeThroughAll obs group W.level W'.level t) ∧
+                (∀ (t : Nat) (select : (Nat → C → Nat) → Prop),
+                    W.SelectsThroughAll obs group t select → (select W.level ↔ select W'.level)) ∧
+                  ∀ (t : Nat) (h : F), group h → ∀ (c : C), L.take t h c = L'.take t h c ∧ L.give t h c = L'.give t h c
+@Becoming.TimedResponse.pool_alike_before : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W W' : Becoming.Web F C}
+  {obs : F → C → Prop} {source : Nat → F → Prop} {group : F → Prop} {D : Nat},
+  (∀ (t : Nat), t < D → ∀ (c : C), W.level (t + 1) c + L.taken t c = W.level t c + L.given t c) →
+    (∀ (t : Nat), t < D → ∀ (c : C), W'.level (t + 1) c + L'.taken t c = W'.level t c + L'.given t c) →
+      (∀ (t : Nat), t < D → L.present t = L'.present t) →
+        (∀ (c : C), W.level 0 c = W'.level 0 c) →
+          (∀ (t : Nat),
+              t < D →
+                ∀ (h : F),
+                  ¬source t h →
+                    W.AlikeThroughUpTo obs h W.level W'.level t →
+                      ∀ (c : C), L.take t h c = L'.take t h c ∧ L.give t h c = L'.give t h c) →
+            (∀ (g : F), group g → ¬Becoming.TimedResponse.ReachedBy L L' W obs source g D) →
+              W.AlikeThroughAll obs group W.level W'.level D ∧
+                (∀ (select : (Nat → C → Nat) → Prop),
+                    W.SelectsThroughAll obs group D select → (select W.level ↔ select W'.level)) ∧
+                  ∀ (t : Nat),
+                    t < D →
+                      ∀ (h : F),
+                        group h → ¬source t h → ∀ (c : C), L.take t h c = L'.take t h c ∧ L.give t h c = L'.give t h c
+Becoming.Clearing.separated_unresponded : (∀ (pool : Becoming.Clearing.Formation → Prop),
+    pool Becoming.Clearing.Formation.dweller →
+      ∀ (t : Nat),
+        2 ≤ t →
+          (Becoming.Clearing.web.SelectsThroughAll Becoming.thresholdOnly pool t fun l =>
+              Becoming.Clearing.web.Admits (l 2) 2 Becoming.Clearing.Formation.dweller) ∧
+            ¬Becoming.Clearing.web.AlikeThroughAll Becoming.thresholdOnly pool Becoming.Clearing.web.level
+                Becoming.Clearing.sparedWeb.level t) ∧
+  (Becoming.Clearing.restLaw.Through Becoming.Clearing.web Becoming.thresholdOnly fun x => false) ∧
+    ∀ (h : Becoming.Clearing.Formation),
+      Becoming.Clearing.clearerPart h = false →
+        ∀ (t : Nat) (c : Becoming.Clearing.Place),
+          Becoming.Clearing.flow.take t h c = Becoming.Clearing.sparedFlow.take t h c ∧
+            Becoming.Clearing.flow.give t h c = Becoming.Clearing.sparedFlow.give t h c
+Becoming.Loop.response_returns : Becoming.Loop.replyLaw.Through Becoming.Loop.web Becoming.Loop.paired
+    Becoming.Loop.firstPart ∧
+  Becoming.Loop.escalation.Follows Becoming.Loop.replyLaw Becoming.Loop.firstPart Becoming.Loop.web.level ∧
+    Becoming.Loop.quiet.Follows Becoming.Loop.replyLaw Becoming.Loop.firstPart Becoming.Loop.quietWeb.level ∧
+      ¬Becoming.Loop.web.AlikeThroughUpTo Becoming.Loop.paired Becoming.Loop.Formation.second Becoming.Loop.web.level
+            Becoming.Loop.quietWeb.level 1 ∧
+        Becoming.Loop.escalation.take 1 Becoming.Loop.Formation.second Becoming.Loop.Place.ofFirst ≠
+            Becoming.Loop.quiet.take 1 Becoming.Loop.Formation.second Becoming.Loop.Place.ofFirst ∧
+          Becoming.WithinClosure
+              (Becoming.Loop.escalation.CoupledFromEither Becoming.Loop.web Becoming.Loop.quiet Becoming.Loop.paired)
+              Becoming.Loop.Formation.first Becoming.Loop.Formation.second ∧
+            ¬Becoming.Loop.web.AlikeThroughUpTo Becoming.Loop.paired Becoming.Loop.Formation.first
+                  Becoming.Loop.web.level Becoming.Loop.quietWeb.level 2 ∧
+              ¬Becoming.Loop.web.Supported 2 Becoming.Loop.Formation.first ∧
+                Becoming.Loop.quietWeb.Supported 2 Becoming.Loop.Formation.first

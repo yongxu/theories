@@ -111,6 +111,7 @@ The earlier 义理·拓扑 (§四, §九) argues that a fixed-point-free symmetr
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T045544.667431Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `what a commuting law keeps apart`, `交换之律保持什么分开`, `to merge what a symmetry tells apart, a law must break it`, `Becoming.Law.Commutes.apart`, `Becoming.Law.Commutes.breaks`, `Becoming.Hexagram.wane_breaks`
 

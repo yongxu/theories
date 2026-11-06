@@ -54,14 +54,6 @@ variable {S : Type u} {A : Type v}
 
 /-! ## Endpoints of one plan -/
 
-/-- **Under a determined process, two traces of one plan from one configuration end alike.** -/
-theorem Trace.determined_end {P : Process S A} (determined : Determined P) :
-    ∀ {s t r : S} {plan : List A}, Trace P s plan t → Trace P s plan r → t = r
-  | _, _, _, [], .nil _, .nil _ => rfl
-  | _, _, _, _ :: _, .cons step rest, .cons step' rest' =>
-    match determined _ _ _ _ step step' with
-    | rfl => Trace.determined_end determined rest rest'
-
 /-- **Under a determined process, one endpoint of a plan in the goal puts every endpoint in it.** -/
 theorem every_end_of_some_end {P : Process S A} (determined : Determined P) {s : S}
     {plan : List A} {goal : S → Prop} (some_end : ∃ t, Trace P s plan t ∧ goal t) :

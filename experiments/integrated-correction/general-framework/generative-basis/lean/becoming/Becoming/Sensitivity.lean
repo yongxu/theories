@@ -398,10 +398,6 @@ theorem WLPO.of_lpo (lpo : LPO) : WLPO :=
     | .inl ⟨n, yes⟩ => .inr fun all => Bool.noConfusion ((all n).symm.trans yes)
     | .inr all => .inl all
 
-namespace Sensitivity
-
-end Sensitivity
-
 /-- Whether `s` has a `true` at some position up to `m`. -/
 def seenBy (s : Nat → Bool) : Nat → Bool
   | 0 => s 0

@@ -15,9 +15,7 @@ leaves out (how many offspring there are, which decides whether a family goes on
 they differ, which is all the term reads) and where the term does decide.
 
 * **Shift invariance, an arithmetic identity with no premise.** A common number added to two
-  numbers leaves the excess of one over the other unchanged (`excess_shift`, a restatement of
-  `Becoming.excess_add_right` of `Becoming.Stuttering`, which lies outside this module's
-  imports; not a new law). So where every
+  numbers leaves the excess of one over the other unchanged (`excess_add_right`, not a new law). So where every
   member's weight is shifted by a common `k`, concordance and discordance with any amount are
   unchanged (`concord_shifted`, `discord_shifted`; with the shift read as a function,
   `concord_shift`, `discord_shift`), and alike where the amount is shifted
@@ -146,9 +144,6 @@ theorem mem_flatMap_of {f : α → List α} {p k : α} :
   | _ :: ps, .head _, mk => mem_append_of_left (ps.flatMap f) mk
   | q :: _, .tail _ mp, mk => mem_append_of_right (f q) (mem_flatMap_of mp mk)
 
-theorem length_pos_of_mem {a : α} : ∀ {l : List α}, a ∈ l → 0 < l.length
-  | _ :: _, _ => Nat.succ_pos _
-
 /-- Each member leaving one like itself leaves the list as it is. -/
 theorem flatMap_singleton : ∀ l : List α, l.flatMap (fun p => [p]) = l
   | [] => rfl
@@ -160,13 +155,6 @@ theorem flatMap_empty : ∀ l : List α, l.flatMap (fun _ => ([] : List α)) = [
   | _ :: l => flatMap_empty l
 
 /-! ## A common shift -/
-
-/-- A common number added to both leaves the excess of one over the other unchanged. A
-restatement of the arithmetic identity `Becoming.excess_add_right` (module
-`Becoming.Stuttering`, outside this module's imports), not a new law. -/
-theorem excess_shift (x y : Nat) : ∀ k : Nat, excess (x + k) (y + k) = excess x y
-  | 0 => rfl
-  | k + 1 => excess_shift x y k
 
 theorem mul_excess_congr {c x x' y y' : Nat} (first : x' = x) (second : y' = y) :
     c * excess x' y' = c * excess x y :=
@@ -180,7 +168,7 @@ theorem concord_shifted {ps : List α} {w w' a a' : α → Nat} {k : Nat}
   total_congr_on fun p mp => total_congr_on fun q mq =>
     (congr (congrArg (fun x y => excess x y * excess (a' p) (a' q)) (shift p mp))
         (shift q mq)).trans
-      ((congrArg (· * excess (a' p) (a' q)) (excess_shift (w p) (w q) k)).trans
+      ((congrArg (· * excess (a' p) (a' q)) (excess_add_right (w p) (w q) k)).trans
         (mul_excess_congr (same p mp) (same q mq)))
 
 /-- And discordance. -/
@@ -190,7 +178,7 @@ theorem discord_shifted {ps : List α} {w w' a a' : α → Nat} {k : Nat}
   total_congr_on fun p mp => total_congr_on fun q mq =>
     (congr (congrArg (fun x y => excess x y * excess (a' q) (a' p)) (shift p mp))
         (shift q mq)).trans
-      ((congrArg (· * excess (a' q) (a' p)) (excess_shift (w p) (w q) k)).trans
+      ((congrArg (· * excess (a' q) (a' p)) (excess_add_right (w p) (w q) k)).trans
         (mul_excess_congr (same q mq) (same p mp)))
 
 /-- **Shift invariance.** Adding a common number to every weight leaves concordance with any
@@ -207,12 +195,12 @@ theorem discord_shift (ps : List α) (w a : α → Nat) (k : Nat) :
 theorem concord_shift_amount (ps : List α) (w a : α → Nat) (k : Nat) :
     concord ps w (fun p => a p + k) = concord ps w a :=
   total_congr (fun p => total_congr (fun q =>
-    congrArg (excess (w p) (w q) * ·) (excess_shift (a p) (a q) k)) ps) ps
+    congrArg (excess (w p) (w q) * ·) (excess_add_right (a p) (a q) k)) ps) ps
 
 theorem discord_shift_amount (ps : List α) (w a : α → Nat) (k : Nat) :
     discord ps w (fun p => a p + k) = discord ps w a :=
   total_congr (fun p => total_congr (fun q =>
-    congrArg (excess (w p) (w q) * ·) (excess_shift (a q) (a p) k)) ps) ps
+    congrArg (excess (w p) (w q) * ·) (excess_add_right (a q) (a p) k)) ps) ps
 
 /-- The total weight is not invariant: shifted by `k` at every member, it moves by `k` for each
 member. -/
@@ -1128,12 +1116,6 @@ theorem course_concord (t m : Nat) : 0 < (course (m + 1 + t)).concordAt t := by
         (List.Mem.tail _ (List.Mem.head _))
         (Nat.mul_pos (Nat.succ_pos _) (Nat.succ_pos 0)))
 
-theorem split_le : ∀ {t N : Nat}, t ≤ N → ∃ m, N = m + t
-  | 0, N, _ => ⟨N, rfl⟩
-  | _ + 1, 0, le => absurd le (Nat.not_succ_le_zero _)
-  | _ + 1, _ + 1, le => match split_le (Nat.le_of_succ_le_succ le) with
-    | ⟨m, same⟩ => ⟨m, congrArg (· + 1) same⟩
-
 /-- **Positive while it lasts, but for the last generation, and then empty.** For every `N`:
 `course N` has positive concordance of offspring number with the mark at every step before `N`;
 its family is nonempty at every step through `N`, with a mark total of one; at `N` both terms
@@ -1149,11 +1131,11 @@ theorem positive_then_empty (N : Nat) :
   have last : (course N).family (N + 1) = [] :=
     show ((course N).family N).flatMap kids = [] from
     (congrArg (fun l => l.flatMap kids) at_N).trans rfl
-  ⟨fun t lt => match split_le (t := t + 1) lt with
+  ⟨fun t lt => match exists_add_of_le (c := t + 1) lt with
     | ⟨m, same⟩ =>
       have shifted : N = m + 1 + t := same.trans (Nat.succ_add m t).symm
       shifted ▸ course_concord t m,
-    fun t le => match split_le le with
+    fun t le => match exists_add_of_le le with
     | ⟨m, same⟩ => same ▸ ⟨Nat.lt_of_lt_of_le (Nat.succ_pos m)
         (Nat.le_of_eq (course_size t m).symm), course_sum t m⟩,
     Generations.last_term_zero (congrArg List.length last),

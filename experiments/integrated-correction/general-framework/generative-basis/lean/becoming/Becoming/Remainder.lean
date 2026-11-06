@@ -120,21 +120,7 @@ namespace Remainder
 
 /-- A product of positive numbers is positive. -/
 theorem mul_pos_nat {a b : Nat} (pa : 0 < a) (pb : 0 < b) : 0 < a * b :=
-  Nat.lt_of_le_of_lt (Nat.le_of_eq (Nat.mul_zero a).symm) (Loops.mul_lt_mul_of_pos pa pb)
-
-/-- The same added on the left cancels, with no extensionality. -/
-theorem add_left_cancel_nat : ∀ (a : Nat) {b c : Nat}, a + b = a + c → b = c
-  | 0, _, _, eq => (Nat.zero_add _).symm.trans (eq.trans (Nat.zero_add _))
-  | a + 1, _, _, eq => add_left_cancel_nat a
-      (Nat.succ.inj ((Nat.succ_add a _).symm.trans (eq.trans (Nat.succ_add a _))))
-
-/-- Order with the same added on the left cancels, with no extensionality. -/
-theorem le_of_add_le_add_left_nat : ∀ (a : Nat) {b c : Nat}, a + b ≤ a + c → b ≤ c
-  | 0, _, _, le => Nat.le_trans (Nat.le_of_eq (Nat.zero_add _).symm)
-      (Nat.le_trans le (Nat.le_of_eq (Nat.zero_add _)))
-  | a + 1, _, _, le => le_of_add_le_add_left_nat a (Nat.le_of_succ_le_succ
-      (Nat.le_trans (Nat.le_of_eq (Nat.succ_add a _).symm)
-        (Nat.le_trans le (Nat.le_of_eq (Nat.succ_add a _)))))
+  Nat.lt_of_le_of_lt (Nat.le_of_eq (Nat.mul_zero a).symm) (Naturals.mul_lt_mul_of_pos pa pb)
 
 end Remainder
 
@@ -227,7 +213,7 @@ at most what `j` carry, wherever `j ≤ j'`. -/
 theorem responses_antitone {j j' : Nat} (le : j ≤ j') (t : Nat) (c : C) :
     responses cs part k present (carried cs part σ k present δ) j' t c ≤
       responses cs part k present (carried cs part σ k present δ) j t c :=
-  Remainder.le_of_add_le_add_left_nat _ (Nat.le_trans (Nat.le_of_eq (carried_eq_orderBelow_add j' t c).symm)
+  Naturals.le_of_add_le_add_left (Nat.le_trans (Nat.le_of_eq (carried_eq_orderBelow_add j' t c).symm)
     (Nat.le_trans (Nat.le_of_eq (carried_eq_orderBelow_add j t c))
       (Nat.add_le_add_right (orderBelow_mono le t c) _)))
 
@@ -238,7 +224,7 @@ theorem responses_le_missBound {M D : Nat} (start : ∀ c, δ c ≤ D)
     (into : ∀ t c, inflow cs part k present t c ≤ M) (j t : Nat) (c : C) :
     responses cs part k present (carried cs part (fun _ _ _ => 0) k present δ) (j + 1) t c ≤
       Loops.missBound M D j t :=
-  Remainder.le_of_add_le_add_left_nat _ (Nat.le_trans (Nat.le_of_eq (carried_eq_carriedWithin_add j t c).symm)
+  Naturals.le_of_add_le_add_left (Nat.le_trans (Nat.le_of_eq (carried_eq_carriedWithin_add j t c).symm)
     (carried_le_carriedWithin_add start into j t c))
 
 /-- **What a cut loses, read on the world the carrying law generates.** In the carried world with the
@@ -261,7 +247,7 @@ theorem Loops.SelfLoop.responses_eq (M D j t : Nat) :
         (carried [()] (fun _ => false) (fun _ _ _ => 0) (Loops.SelfLoop.strengths M) (fun _ => [()])
           (fun _ => D)) (j + 1) t () =
       Loops.missBound M D j t :=
-  Remainder.add_left_cancel_nat _ ((carried_eq_carriedWithin_add j t ()).symm.trans
+  Naturals.add_left_cancel ((carried_eq_carriedWithin_add j t ()).symm.trans
     (Loops.SelfLoop.attained M D j t))
 
 /-! ## Where a cut loses -/

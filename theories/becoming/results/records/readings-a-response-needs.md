@@ -71,6 +71,7 @@ That a regulator must tell apart the disturbances needing different responses is
 | provenance | [ContextualWisdom.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ContextualWisdom.lean) | `Generative.ContextualWisdom.success_changes_next_response` |
 | statement | [03-KNOWING.md](../../chapters/03-KNOWING.md) | — |
 | integration | [DEFECTS-FOUND.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/DEFECTS-FOUND.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `readings a response needs`, `回应所需的读法`, `Becoming.AssurancePlans.Routes.no_coarsest_adequate`, `Becoming.AssurancePlans.Regulation.next_move_changes`, `Generative.WisdomResponseStructure.no_coarsest_adequate_description (periphery module)`, `Generative.ContextualWisdom.success_changes_next_response (periphery module)`
 
