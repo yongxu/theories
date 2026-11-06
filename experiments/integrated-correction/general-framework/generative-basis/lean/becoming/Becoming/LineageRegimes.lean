@@ -102,8 +102,8 @@ The grains: the coarse class is a kind (`Web.kindClass`), the fine class the car
   which is never run past.
 
 What the three regimes share, and what the module claims: each of the three landed ending laws,
-read as a decider of a lineage's region under the premise on the line's reach, is a regime (gating
-with excess, dissipation, a draw on a condition given nothing), and the stock enters each only as
+read as a decider of a lineage's region under the premise on the line's reach, is a regime (excess,
+dissipation, a draw on a condition given nothing), and the stock enters each only as
 the horizon: `stock` steps of excess at most, `stock + 1` generations under dissipation,
 `log₂ (level + 1)` steps of a doubling draw (the level of the condition drawn on). The
 classification is of these three laws.

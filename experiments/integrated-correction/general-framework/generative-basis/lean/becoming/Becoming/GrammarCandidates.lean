@@ -667,8 +667,8 @@ theorem «甲乙不同核» : ¬ «核» «歧网之步» «一» .«甲» .«�
     exact «无尽与链不同核» hc n 0 n 0 (Nat.zero_add n) s'
 
 /-- **What no finite inquiry separates need not be one (致诘不尽, LZ-14-002).** In an infinitely
-branching net, two occurrences are told apart at no finite stage and yet lie in no class of the
-core: 「不可致詰，故混而為一」 needs a premise. -/
+branching net, two occurrences are told apart at no finite stage and yet no one class of the core
+holds both: 「不可致詰，故混而為一」 needs a premise. -/
 theorem «致诘不尽» :
     ∃ (β : Type) (R : «际» β) (u u' : β), (∀ k, «诘» R «一» k u u') ∧ ¬ «核» R «一» u u' :=
   ⟨«歧网», «歧网之步», .«甲», .«乙», «甲乙不可诘», «甲乙不同核»⟩

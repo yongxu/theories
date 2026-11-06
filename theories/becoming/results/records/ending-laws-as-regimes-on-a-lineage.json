@@ -216,11 +216,12 @@
       ]
     },
     {
-      "en": "Witness, a line drawn past renewal from outside, offspring numbers supplied. On one law of a pool, its renewer and organisms, with the renewer requiring the pool at need one the course meets the law with a gate; with the renewer giving from no condition the coupled gate fails at every need, every other premise holds and the line degenerates the same, while the renewer's own line goes on.",
-      "zh": "见证，被越过来自外部之更新的线，后代数给定。在一池、其更新者与诸有机体的同一律上，更新者以所需一依存于池时，该进程满足带门控之律；更新者不出自任何条件而给予时，耦合门控在每一所需上都不成立，其余前提皆成立，线同样退化，而更新者自身的线继续。",
+      "en": "Witness, a line drawn past renewal from outside, offspring numbers supplied. On one law of a pool, its renewer and organisms, with the renewer requiring the pool at need one the course meets the law, its renewal gated (Drain.gated); with the renewer giving from no condition the coupled gate fails at every need, every other premise holds and the line degenerates the same, while the renewer's own line goes on.",
+      "zh": "见证，被越过来自外部之更新的线，后代数给定。在一池、其更新者与诸有机体的同一律上，更新者以所需一依存于池时，该进程满足此律，其更新受门控（Drain.gated）；更新者不出自任何条件而给予时，耦合门控在每一所需上都不成立，其余前提皆成立，线同样退化，而更新者自身的线继续。",
       "declarations": [
         "Becoming.LineageDrawdown.Drain.flow",
         "Becoming.LineageDrawdown.Drain.web",
+        "Becoming.LineageDrawdown.Drain.gated",
         "Becoming.LineageDrawdown.Drain.gated_ends",
         "Becoming.LineageDrawdown.Drain.not_gated",
         "Becoming.LineageDrawdown.Drain.outside_ends",
@@ -326,8 +327,8 @@
     "names-provisional"
   ],
   "validation_scope": {
-    "en": "Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.LineageRegimes at receipt 20261101T024359.312453Z, 112 declarations (91 theorems), each with an empty axiom report; the module recompiled by independent AI verifiers in four review rounds, every finding taken. Becoming.LineageDrawdown at receipt 20261105T210745.530949Z, each cited declaration with an empty axiom report, its generated mk.injEq lemmas depending on propext, which the checker's audit admits.",
-    "zh": "由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.LineageRegimes，回执 20261101T024359.312453Z，112 个声明（91 条定理），公理报告均为空；该模块经独立 AI 验证者在四轮审查中重新编译，所见皆采纳。Becoming.LineageDrawdown，回执 20261105T210745.530949Z，所引声明公理报告均为空，其生成的 mk.injEq 引理依赖 propext，检查器的审计允许之。"
+    "en": "Checked by the core checker with Lean 4.29.1 from the prelude, each cited declaration with an empty axiom report: Becoming.LineageRegimes at receipt 20261101T024359.312453Z, 112 declarations (91 theorems), recompiled by independent AI verifiers in four rounds, every finding taken; Becoming.LineageDrawdown at receipt 20261105T210745.530949Z, its generated mk.injEq lemmas depending on propext, which the audit admits. The statements with fewer premises (LM): core receipt 20261106T174854.382527Z, one independent AI reader; the rounds read the earlier ones.",
+    "zh": "核心检查器以 Lean 4.29.1 从前奏检查，所引声明公理报告皆空：LineageRegimes，回执 20261101T024359.312453Z，112 声明（91 定理），独立 AI 验证者四轮重编译，所见皆采纳；LineageDrawdown，回执 20261105T210745.530949Z，生成之 mk.injEq 依赖 propext，审计允许。前提较少之陈述（LM）：核心回执 20261106T174854.382527Z，一位独立 AI 读者；诸轮读此前者。"
   },
   "next_delta": {
     "en": "Whether every decider of a lineage's region is one of the three regimes, or a further regime with its own horizon; a lineage reading of joint excess ending a renewal; and multiplying takers read on the map beyond the witness.",
@@ -422,7 +423,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineageRegimes.lean",
       "role": "proof",
-      "sha256": "c14068d8980ec9a2e0968a1eed8d812c931ea909d3d11f378131fa82b43f5dc3",
+      "sha256": "cbb50b89dd6df3846f46959ff6382d71760ed1df6467726b87bf277f67429f97",
       "declarations": [
         "Becoming.LineageRegimes.FromOutside.acting",
         "Becoming.LineageRegimes.FromOutside.balances",
@@ -547,7 +548,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineageDrawdown.lean",
       "role": "proof",
-      "sha256": "448957d23b6a3b3b4afd9a37ac3364c91abd8f7383927bce1d729972a1894e30",
+      "sha256": "b18c783e4adaf06ade453590f0cb8900b1bbbf9748af5d99bf971b9ae9b400b6",
       "declarations": [
         "Becoming.LineageDrawdown.Drain.flow",
         "Becoming.LineageDrawdown.Drain.gated_ends",
@@ -562,7 +563,8 @@
         "Becoming.LineageDrawdown.ends_of_drawdown",
         "Becoming.LineageDrawdown.ends_of_unmet",
         "Becoming.LineageDrawdown.next_empty_of_unmet",
-        "Becoming.LineageDrawdown.no_term_of_drawdown"
+        "Becoming.LineageDrawdown.no_term_of_drawdown",
+        "Becoming.LineageDrawdown.Drain.gated"
       ]
     },
     {
@@ -606,19 +608,25 @@
       "role": "receipt",
       "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T174854.382527Z/verification.json",
+      "role": "receipt",
+      "sha256": "d47dc3cb4e2dae4149217a173b1e6e6d89598115dcd75979054a58c2b670ed3f",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineageRegimes.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T174854.382527Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.LineageRegimes",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineageDrawdown.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T174854.382527Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.LineageDrawdown",
       "success_pointer": "/status",
       "success_value": "passed"

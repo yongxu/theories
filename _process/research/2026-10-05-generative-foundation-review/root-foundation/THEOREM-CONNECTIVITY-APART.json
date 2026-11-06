@@ -4262,11 +4262,6 @@
    "category": "general-structure",
    "reason": "what lies ahead of a configuration under a determined law is absorbing: a law of every map on any type; since OU3b being drawn is proved from the grammar's law (Law.drawn_iff_not_returns), so nothing on the base uses it"
   },
-  "Becoming.Weighting.WidensOn.not_reverse": {
-   "module": "Becoming.Weightings",
-   "category": "general-structure",
-   "reason": "widening over a listing goes one way, from the grammar's «广不可逆»: a law of any finite listing, with no world (OU3b)"
-  },
   "Becoming.Weighting.mixedOn_iff": {
    "module": "Becoming.Weightings",
    "category": "support",
@@ -6397,11 +6392,6 @@
    "category": "general-structure",
    "reason": "where the condition held de se holds the two coincide on any listing: a law of every relation on any carrier"
   },
-  "Becoming.Weighting.increasing_iff_by_one": {
-   "module": "Becoming.PremiseWitnesses",
-   "category": "general-structure",
-   "reason": "an order transitive on courses is increasing in admission exactly when it ranks every one-item widening higher: a law of any finite listing and order, with no world"
-  },
   "Becoming.increasingInOwn_with_net": {
    "module": "Becoming.PremiseWitnesses",
    "category": "model-witness",
@@ -7826,6 +7816,196 @@
    "module": "Becoming.GrammarConditionals",
    "category": "model-witness",
    "reason": "Passing through without altering (通而不异之例): a fact about one constructed model (board item LM)"
+  },
+  "Becoming.ListedPaths.concerned_counted": {
+   "module": "Becoming.PremisesTogether",
+   "category": "model-witness",
+   "reason": "The counting order is self-concerned on this web: an order increasing in admission is increasing in its own continuation: a fact about one constructed model (board item LM)"
+  },
+  "Becoming.Relabel.GreaterOfTwo.premises_hold": {
+   "module": "Becoming.PremisesTogether",
+   "category": "model-witness",
+   "reason": "The premise holds of a rule that chooses where the entries differ and withholds at a tie, and a rule fixing its choice fails it: a fact about one constructed model (board item LM)"
+  },
+  "Becoming.Weighting.AboveNothing.not_alike": {
+   "module": "Becoming.RoutesToC",
+   "category": "model-witness",
+   "reason": "a fact about one constructed model (board item CW)"
+  },
+  "Becoming.Weighting.AboveNothing.not_increasing": {
+   "module": "Becoming.RoutesToC",
+   "category": "model-witness",
+   "reason": "a fact about one constructed model (board item CW)"
+  },
+  "Becoming.Weighting.AboveNothing.transitive": {
+   "module": "Becoming.RoutesToC",
+   "category": "model-witness",
+   "reason": "a fact about one constructed model (board item CW)"
+  },
+  "Becoming.Weighting.AnotherReads.chooser_gains": {
+   "module": "Becoming.RoutesToC",
+   "category": "model-witness",
+   "reason": "a fact about one constructed model (board item CW)"
+  },
+  "Becoming.Weighting.AnotherReads.reading_falls": {
+   "module": "Becoming.RoutesToC",
+   "category": "model-witness",
+   "reason": "a fact about one constructed model (board item CW)"
+  },
+  "Becoming.Weighting.AnotherReads.takes_narrow": {
+   "module": "Becoming.RoutesToC",
+   "category": "model-witness",
+   "reason": "a fact about one constructed model (board item CW)"
+  },
+  "Becoming.Weighting.AnotherReads.takes_wide": {
+   "module": "Becoming.RoutesToC",
+   "category": "model-witness",
+   "reason": "a fact about one constructed model (board item CW)"
+  },
+  "Becoming.Weighting.EachItsOwn.covers": {
+   "module": "Becoming.RoutesToC",
+   "category": "model-witness",
+   "reason": "a fact about one constructed model (board item CW)"
+  },
+  "Becoming.Weighting.EachItsOwn.not_increasing": {
+   "module": "Becoming.RoutesToC",
+   "category": "model-witness",
+   "reason": "a fact about one constructed model (board item CW)"
+  },
+  "Becoming.Weighting.EachItsOwn.not_total": {
+   "module": "Becoming.RoutesToC",
+   "category": "model-witness",
+   "reason": "a fact about one constructed model (board item CW)"
+  },
+  "Becoming.Weighting.OnlyMany.not_increasing": {
+   "module": "Becoming.RoutesToC",
+   "category": "model-witness",
+   "reason": "a fact about one constructed model (board item CW)"
+  },
+  "Becoming.Weighting.OnlyMany.ranked": {
+   "module": "Becoming.RoutesToC",
+   "category": "model-witness",
+   "reason": "A widening ranked does not give a one-item widening ranked: a fact about one constructed model (board item CW)"
+  },
+  "Becoming.Weighting.Refusing.imposed_below": {
+   "module": "Becoming.RoutesToC",
+   "category": "model-witness",
+   "reason": "a fact about one constructed model (board item CW)"
+  },
+  "Becoming.Weighting.Refusing.refused_unchanged": {
+   "module": "Becoming.RoutesToC",
+   "category": "model-witness",
+   "reason": "a fact about one constructed model (board item CW)"
+  },
+  "Becoming.Weighting.Restraint.each_falls": {
+   "module": "Becoming.RoutesToC",
+   "category": "model-witness",
+   "reason": "a fact about one constructed model (board item CW)"
+  },
+  "Becoming.Weighting.Restraint.narrow_best": {
+   "module": "Becoming.RoutesToC",
+   "category": "model-witness",
+   "reason": "a fact about one constructed model (board item CW)"
+  },
+  "Becoming.Weighting.Restraint.wide_best_iff": {
+   "module": "Becoming.RoutesToC",
+   "category": "model-witness",
+   "reason": "a fact about one constructed model (board item CW)"
+  },
+  "Becoming.Weighting.ZeroWeight.not_alike": {
+   "module": "Becoming.RoutesToC",
+   "category": "model-witness",
+   "reason": "a fact about one constructed model (board item CW)"
+  },
+  "Becoming.Weighting.ZeroWeight.not_increasing": {
+   "module": "Becoming.RoutesToC",
+   "category": "model-witness",
+   "reason": "a fact about one constructed model (board item CW)"
+  },
+  "Becoming.Weighting.byOne_not_increasing": {
+   "module": "Becoming.RoutesToC",
+   "category": "general-structure",
+   "reason": "Ranking every one-item widening does not give every widening without transitivity: the order that ranks exactly the widenings by one item is not increasing on two listed items: a law of every valuation or rule on a listing, read on no model (board item CW)"
+  },
+  "Becoming.Weighting.choosers_mixed": {
+   "module": "Becoming.RoutesToC",
+   "category": "general-structure",
+   "reason": "On a mixed pair each course is better for some chooser: a law of every valuation or rule on a listing, read on no model (board item CW)"
+  },
+  "Becoming.Weighting.gains_every_widening_iff": {
+   "module": "Becoming.RoutesToC",
+   "category": "general-structure",
+   "reason": "What a range of choosers has to hold: a law of every valuation or rule on a listing, read on no model (board item CW)"
+  },
+  "Becoming.Weighting.increasing_iff_one_step": {
+   "module": "Becoming.RoutesToC",
+   "category": "general-structure",
+   "reason": "Given a widening by one item, a transitive order is increasing in admission exactly when every such widening gets one verdict and the given one is ranked: a law of every valuation or rule on a listing, read on no model (board item CW)"
+  },
+  "Becoming.Weighting.increasing_iff_ranks_noneWorseSomeBetter": {
+   "module": "Becoming.RoutesToC",
+   "category": "general-structure",
+   "reason": "An order is increasing in admission exactly when it ranks above whatever no chooser does worse from and some does better from: a law of every valuation or rule on a listing, read on no model (board item CW)"
+  },
+  "Becoming.Weighting.increasing_on_downstream_of_regularity": {
+   "module": "Becoming.RoutesToC",
+   "category": "general-structure",
+   "reason": "§4.6's P2 and P4 give that the class holds it: a law of every valuation or rule on a listing, read on no model (board item CW)"
+  },
+  "Becoming.Weighting.notOwnBelow_stops": {
+   "module": "Becoming.RoutesToC",
+   "category": "general-structure",
+   "reason": "Such an order stops the Pareto relation: a law of every valuation or rule on a listing, read on no model (board item CW)"
+  },
+  "Becoming.Weighting.not_lowered_of_no_bearing": {
+   "module": "Becoming.RoutesToC",
+   "category": "general-structure",
+   "reason": "Where no choice bears on what the other gets, a wider menu lowers nothing: a law of every valuation or rule on a listing, read on no model (board item CW)"
+  },
+  "Becoming.Weighting.pareto_increasing_iff_covers": {
+   "module": "Becoming.RoutesToC",
+   "category": "general-structure",
+   "reason": "That relation is increasing in admission exactly where every listed item is someone's own: a law of every valuation or rule on a listing, read on no model (board item CW)"
+  },
+  "Becoming.Weighting.ranksLighter_alike": {
+   "module": "Becoming.RoutesToC",
+   "category": "general-structure",
+   "reason": "That order gives every one-item widening one verdict: not ranked above: a law of every valuation or rule on a listing, read on no model (board item CW)"
+  },
+  "Becoming.Weighting.ranksLighter_reverses": {
+   "module": "Becoming.RoutesToC",
+   "category": "general-structure",
+   "reason": "That order reverses every widening: whether a widening is ranked above what it widens rests on the given comparison: a law of every valuation or rule on a listing, read on no model (board item CW)"
+  },
+  "Becoming.Weighting.ranksLighter_transitive": {
+   "module": "Becoming.RoutesToC",
+   "category": "general-structure",
+   "reason": "a law of every valuation or rule on a listing, read on no model (board item CW)"
+  },
+  "Becoming.Weighting.ranksNotOwnBelow_selfConcerned": {
+   "module": "Becoming.RoutesToC",
+   "category": "general-structure",
+   "reason": "a law of every valuation or rule on a listing, read on no model (board item CW)"
+  },
+  "Becoming.Weighting.ranksOnlyMany_alike": {
+   "module": "Becoming.RoutesToC",
+   "category": "general-structure",
+   "reason": "a law of every valuation or rule on a listing, read on no model (board item CW)"
+  },
+  "Becoming.Weighting.ranksOnlyMany_transitive": {
+   "module": "Becoming.RoutesToC",
+   "category": "general-structure",
+   "reason": "a law of every valuation or rule on a listing, read on no model (board item CW)"
+  },
+  "Becoming.Weighting.reach_eq_of_refused": {
+   "module": "Becoming.RoutesToC",
+   "category": "general-structure",
+   "reason": "Added items a chooser would each leave change nothing for it: a law of every valuation or rule on a listing, read on no model (board item CW)"
+  },
+  "Becoming.Weighting.widening_is_no_weighting": {
+   "module": "Becoming.RoutesToC",
+   "category": "general-structure",
+   "reason": "On three listed items no positive weighting's order is exactly widening: a law of every valuation or rule on a listing, read on no model (board item CW)"
   }
  },
  "instances": {

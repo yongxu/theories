@@ -93,8 +93,8 @@
     "formal-not-empirical"
   ],
   "validation_scope": {
-    "en": "Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.GrammarCandidates, 66 theorems in 90 declarations, each with an empty axiom report. Written by an Opus coder from the first-batch classification; no human audit of the readings.",
-    "zh": "由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.GrammarCandidates，90 个声明中 66 条定理，公理报告皆空。由一位 Opus 编者据第一批分类写成；读法无人审。"
+    "en": "Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.GrammarCandidates, 69 theorems in 93 declarations, each with an empty axiom report. Written by an Opus coder from the first-batch classification; no human audit of the readings.",
+    "zh": "由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.GrammarCandidates，93 个声明中 69 条定理，公理报告皆空。由一位 Opus 编者据第一批分类写成；读法无人审。"
   },
   "next_delta": {
     "en": "Test the second round's candidates (中论 chapters 10, 17, 19, 24, 成唯识论, 五教章), and decide with the classical review whether 不自生 is a premise of the texts or a reading of them.",
@@ -152,7 +152,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean",
       "role": "proof",
-      "sha256": "ec0bb976dac31e034023139e0d5ef15e0c801cc7b498cd16f8055ff3010b2f84",
+      "sha256": "d3abca975408d6e01c26174d5ca68376acd2a9c6888b400afda8853dca7d037b",
       "declarations": [
         "Becoming.«三法相因待»",
         "Becoming.«不可致诘而有常则混而为一»",
@@ -273,12 +273,18 @@
       "role": "receipt",
       "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T170123.418765Z/verification.json",
+      "role": "receipt",
+      "sha256": "65ea4a1e6b35020a27ade1d94dbbdc614477054b423f6d85ce73396c37494c44",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T170123.418765Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.GrammarCandidates",
       "success_pointer": "/status",
       "success_value": "passed"

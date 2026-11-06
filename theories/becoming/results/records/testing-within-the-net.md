@@ -20,12 +20,12 @@
 <a id="conditions--条件"></a>
 ## Conditions
 
-- None beyond the grammar.
+- None beyond the grammar, except for the converse on the stages: the class symmetric, and being told apart at no stage constant under the step.
 
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
-- That what no finite stage tells apart is in the core, with no premise: in an infinitely branching net it is not. Under the premise that being told apart at no stage is constant under the step it is. The Hennessy-Milner direction, from finitely many successors, implies LLPO in its limit form. Witness: `Becoming.«致诘不尽»`.
+- That what no finite stage tells apart is in the core, with no premise: in an infinitely branching net it is not. Where the class is symmetric and being told apart at no stage is constant under the step, it is. That the Hennessy-Milner direction, from finitely many successors, gives LLPO in its limit form is checked only in an unreceipted script (03, Open). Witness: `Becoming.«致诘不尽»`.
 - That the open window happens: the wider net is a net of possibilities, and the comparison is counterfactual.
 - **Counterexample:** The balanced and the held room: one core class under the closed net, told apart under the opened net («恒温与平衡»). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarTesting.lean)
 
@@ -34,7 +34,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.GrammarTesting, 6 theorems in 13 declarations, each with an empty axiom report. No independent review.
+Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.GrammarTesting, 6 theorems in 13 declarations, each with an empty axiom report, and the laws on the stages in Becoming.GrammarCandidates (board item LM), read against the Lean by one independent AI reader. No other independent review.
 
 Canonical source: [GrammarTesting.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarTesting.lean)
 
@@ -70,6 +70,7 @@ Stages of bisimulation and the Hennessy-Milner theorem (Hennessy and Milner 1985
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
 | proof | [GrammarCandidates.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean) | `Becoming.«层即诘»`, `Becoming.«诘之降»`, `Becoming.«层在类内»`, `Becoming.«层之对称»`, `Becoming.«每层不分而有常则核当且仅当每层不分»`, `Becoming.«致诘不尽»` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T170123.418765Z/verification.json) | — |
 
 Aliases: `Becoming.Room`, `Becoming.Room.alike`, `Becoming.Room.closed`, `Becoming.Room.opened`, `Becoming.Room.same`, `Becoming.Room.same_alike`, `Becoming.Room.same_constant`, `Becoming.Room.same_symm`, `Becoming.Room.warm`, `Becoming.«可分则不在核»`, `Becoming.«层»`, `Becoming.«恒温与平衡»`, `Becoming.«核在每层之内»`
 

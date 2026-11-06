@@ -1,0 +1,278 @@
+@Becoming.LineageDrawdown.below_iff : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    ∀ (ds : List C) (T n m : Nat),
+      W.stock ds (T + n) < m ↔
+        W.stock ds T + Becoming.total (Becoming.steps T n) (L.replenishment ds) <
+          m + Becoming.total (Becoming.steps T n) (L.uptake ds)
+@Becoming.LineageDrawdown.degeneration_of_unmet : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {Q : X → X → Prop},
+  W.Dependent →
+    ∀ {ds : List X} {m N : Nat},
+      W.stock ds N < m →
+        ∀ {x : Nat × X},
+          W.active x.fst x.snd →
+            x.fst ≤ N →
+              (∀ (y : Nat × X),
+                  Becoming.«所及» (Becoming.LineageRegions.lineStep L W Q) (W.kindClass Q) x y →
+                    y.fst = N → ∃ e, e ∈ ds ∧ W.requires y.fst y.snd e ∧ m ≤ W.need y.fst y.snd e) →
+                Becoming.«退化» (Becoming.LineageRegions.lineStep L W Q) (W.kindClass Q) x
+@Becoming.LineageDrawdown.degeneration_of_unmet_listed : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {Q : X → X → Prop},
+  W.Dependent →
+    ∀ {ds : List X} {m N : Nat},
+      W.stock ds N < m →
+        ∀ {G : Becoming.SelectionTerm.Generations X},
+          Becoming.LineageRegions.ContinuationsListed (Becoming.LineageRegions.lineStep L W Q) (W.kindClass Q) G →
+            (∀ (q : X), q ∈ G.family N → ∃ e, e ∈ ds ∧ W.requires N q e ∧ m ≤ W.need N q e) →
+              ∀ {t : Nat} {p : X},
+                p ∈ G.family t →
+                  W.active t p → t ≤ N → Becoming.«退化» (Becoming.LineageRegions.lineStep L W Q) (W.kindClass Q) (t, p)
+@Becoming.LineageDrawdown.degeneration_of_drawdown : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {Q : X → X → Prop},
+  L.Balances W →
+    W.Dependent →
+      ∀ {ds : List X} {m T n : Nat},
+        W.stock ds T + Becoming.total (Becoming.steps T n) (L.replenishment ds) <
+            m + Becoming.total (Becoming.steps T n) (L.uptake ds) →
+          ∀ {x : Nat × X},
+            W.active x.fst x.snd →
+              x.fst ≤ T + n →
+                (∀ (y : Nat × X),
+                    Becoming.«所及» (Becoming.LineageRegions.lineStep L W Q) (W.kindClass Q) x y →
+                      y.fst = T + n → ∃ e, e ∈ ds ∧ W.requires y.fst y.snd e ∧ m ≤ W.need y.fst y.snd e) →
+                  Becoming.«退化» (Becoming.LineageRegions.lineStep L W Q) (W.kindClass Q) x
+@Becoming.LineageDrawdown.next_empty_of_unmet : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X},
+  L.Acting W →
+    W.Dependent →
+      ∀ {G : Becoming.SelectionTerm.Generations X},
+        Becoming.SelectionTerm.Flow.Descended L W G →
+          ∀ {ds : List X} {m N : Nat},
+            W.stock ds N < m →
+              (∀ (q : X), q ∈ G.family N → ∃ e, e ∈ ds ∧ W.requires N q e ∧ m ≤ W.need N q e) → G.size (N + 1) = 0
+@Becoming.LineageDrawdown.ends_of_unmet : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X},
+  L.Acting W →
+    W.Dependent →
+      ∀ {G : Becoming.SelectionTerm.Generations X},
+        Becoming.SelectionTerm.Flow.Descended L W G →
+          ∀ {ds : List X} {m N : Nat},
+            W.stock ds N < m →
+              (∀ (q : X), q ∈ G.family N → ∃ e, e ∈ ds ∧ W.requires N q e ∧ m ≤ W.need N q e) →
+                ∀ (s : Nat), G.size (N + 1 + s) = 0 ∧ G.concordAt (N + s) = 0 ∧ G.discordAt (N + s) = 0
+@Becoming.LineageDrawdown.ends_of_drawdown : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X},
+  L.Balances W →
+    L.Acting W →
+      W.Dependent →
+        ∀ {G : Becoming.SelectionTerm.Generations X},
+          Becoming.SelectionTerm.Flow.Descended L W G →
+            ∀ {ds : List X} {m T n : Nat},
+              W.stock ds T + Becoming.total (Becoming.steps T n) (L.replenishment ds) <
+                  m + Becoming.total (Becoming.steps T n) (L.uptake ds) →
+                (∀ (q : X), q ∈ G.family (T + n) → ∃ e, e ∈ ds ∧ W.requires (T + n) q e ∧ m ≤ W.need (T + n) q e) →
+                  ∀ (s : Nat), G.size (T + n + 1 + s) = 0 ∧ G.concordAt (T + n + s) = 0 ∧ G.discordAt (T + n + s) = 0
+@Becoming.LineageDrawdown.no_term_of_drawdown : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X},
+  L.Balances W →
+    L.Acting W →
+      W.Dependent →
+        ∀ {G : Becoming.SelectionTerm.Generations X},
+          Becoming.SelectionTerm.Flow.Descended L W G →
+            ∀ {ds : List X} {m T n : Nat},
+              W.stock ds T + Becoming.total (Becoming.steps T n) (L.replenishment ds) <
+                  m + Becoming.total (Becoming.steps T n) (L.uptake ds) →
+                (∀ (q : X), q ∈ G.family (T + n) → ∃ e, e ∈ ds ∧ W.requires (T + n) q e ∧ m ≤ W.need (T + n) q e) →
+                  0 < G.concordAt (T + n) ∨ 0 < G.discordAt (T + n) → False
+@Becoming.LineageDrawdown.Drain.right_of_gate : ∀ {g b : Bool}, (!g || b) = true → g = true → b = true
+@Becoming.LineageDrawdown.Drain.active_of_give : ∀ {gate : Bool} {φ : Becoming.LineageDrawdown.Drain.Phase}
+  {kids : Nat → List Nat} (f c : Nat),
+  0 < Becoming.LineageDrawdown.Drain.giveOf gate φ kids f c → Becoming.LineageDrawdown.Drain.activeOf gate φ f = true
+Becoming.LineageDrawdown.Drain.acting : ∀ (gate : Bool) (κ : Becoming.LineageDrawdown.Drain.Course),
+  (Becoming.LineageDrawdown.Drain.flow gate κ).Acting (Becoming.LineageDrawdown.Drain.web gate κ)
+Becoming.LineageDrawdown.Drain.dependent : ∀ (gate : Bool) (κ : Becoming.LineageDrawdown.Drain.Course),
+  (Becoming.LineageDrawdown.Drain.web gate κ).Dependent
+Becoming.LineageDrawdown.Drain.gated : ∀ (κ : Becoming.LineageDrawdown.Drain.Course) (t f : Nat),
+  f ∈ (Becoming.LineageDrawdown.Drain.flow true κ).present t →
+    ∀ (d : Nat),
+      d ∈ [0] →
+        0 < (Becoming.LineageDrawdown.Drain.flow true κ).give t f d →
+          ∃ e,
+            e ∈ [0] ∧
+              (Becoming.LineageDrawdown.Drain.web true κ).requires t f e ∧
+                1 ≤ (Becoming.LineageDrawdown.Drain.web true κ).need t f e
+Becoming.LineageDrawdown.Drain.from_outside : ∀ (κ : Becoming.LineageDrawdown.Drain.Course) (t : Nat),
+  0 < (Becoming.LineageDrawdown.Drain.flow false κ).give t 1 0 ∧
+    ∀ (c : Nat), ¬(Becoming.LineageDrawdown.Drain.web false κ).requires t 1 c
+Becoming.LineageDrawdown.Drain.not_gated : ∀ (κ : Becoming.LineageDrawdown.Drain.Course) (m : Nat),
+  ¬∀ (t f : Nat),
+      f ∈ (Becoming.LineageDrawdown.Drain.flow false κ).present t →
+        ∀ (d : Nat),
+          d ∈ [0] →
+            0 < (Becoming.LineageDrawdown.Drain.flow false κ).give t f d →
+              ∃ e,
+                e ∈ [0] ∧
+                  (Becoming.LineageDrawdown.Drain.web false κ).requires t f e ∧
+                    m ≤ (Becoming.LineageDrawdown.Drain.web false κ).need t f e
+@Becoming.LineageDrawdown.Drain.org_of_give : ∀ {gate : Bool} {φ : Becoming.LineageDrawdown.Drain.Phase}
+  {kids : Nat → List Nat} (f c : Nat), 2 ≤ f → 0 < Becoming.LineageDrawdown.Drain.giveOf gate φ kids f c → 2 ≤ c
+@Becoming.LineageDrawdown.Drain.step_org : ∀ {gate : Bool} {κ : Becoming.LineageDrawdown.Drain.Course}
+  {y z : Nat × Nat},
+  Becoming.«续»
+      (Becoming.LineageRegions.lineStep (Becoming.LineageDrawdown.Drain.flow gate κ)
+        (Becoming.LineageDrawdown.Drain.web gate κ) (Becoming.LineageRegions.oneKind Nat))
+      ((Becoming.LineageDrawdown.Drain.web gate κ).kindClass (Becoming.LineageRegions.oneKind Nat)) y z →
+    2 ≤ y.snd → 2 ≤ z.snd
+@Becoming.LineageDrawdown.Drain.line_org : ∀ {gate : Bool} {κ : Becoming.LineageDrawdown.Drain.Course}
+  {y z : Nat × Nat},
+  Becoming.«及»
+      (Becoming.«续»
+        (Becoming.LineageRegions.lineStep (Becoming.LineageDrawdown.Drain.flow gate κ)
+          (Becoming.LineageDrawdown.Drain.web gate κ) (Becoming.LineageRegions.oneKind Nat))
+        ((Becoming.LineageDrawdown.Drain.web gate κ).kindClass (Becoming.LineageRegions.oneKind Nat)))
+      y z →
+    2 ≤ y.snd → 2 ≤ z.snd
+@Becoming.LineageDrawdown.Drain.reach_org : ∀ {gate : Bool} {κ : Becoming.LineageDrawdown.Drain.Course}
+  {x y : Nat × Nat},
+  Becoming.«所及»
+      (Becoming.LineageRegions.lineStep (Becoming.LineageDrawdown.Drain.flow gate κ)
+        (Becoming.LineageDrawdown.Drain.web gate κ) (Becoming.LineageRegions.oneKind Nat))
+      ((Becoming.LineageDrawdown.Drain.web gate κ).kindClass (Becoming.LineageRegions.oneKind Nat)) x y →
+    2 ≤ x.snd → 2 ≤ y.snd
+@Becoming.LineageDrawdown.Drain.depends_pool : ∀ {gate : Bool} {κ : Becoming.LineageDrawdown.Drain.Course}
+  {x : Nat × Nat},
+  2 ≤ x.snd →
+    ∀ (N : Nat) (y : Nat × Nat),
+      Becoming.«所及»
+          (Becoming.LineageRegions.lineStep (Becoming.LineageDrawdown.Drain.flow gate κ)
+            (Becoming.LineageDrawdown.Drain.web gate κ) (Becoming.LineageRegions.oneKind Nat))
+          ((Becoming.LineageDrawdown.Drain.web gate κ).kindClass (Becoming.LineageRegions.oneKind Nat)) x y →
+        y.fst = N →
+          ∃ e,
+            e ∈ [0] ∧
+              (Becoming.LineageDrawdown.Drain.web gate κ).requires y.fst y.snd e ∧
+                1 ≤ (Becoming.LineageDrawdown.Drain.web gate κ).need y.fst y.snd e
+Becoming.LineageDrawdown.Drain.renewer_goes_on_outside : ∀ (κ : Becoming.LineageDrawdown.Drain.Course),
+  Becoming.«延»
+    (Becoming.LineageRegions.lineStep (Becoming.LineageDrawdown.Drain.flow false κ)
+      (Becoming.LineageDrawdown.Drain.web false κ) (Becoming.LineageRegions.oneKind Nat))
+    ((Becoming.LineageDrawdown.Drain.web false κ).kindClass (Becoming.LineageRegions.oneKind Nat)) (0, 1)
+Becoming.LineageDrawdown.Drain.familyP_step : ∀ (t : Nat),
+  List.flatMap (Becoming.LineageDrawdown.Drain.kidsP t) (Becoming.LineageDrawdown.Drain.familyP t) =
+    Becoming.LineageDrawdown.Drain.familyP (t + 1)
+Becoming.LineageDrawdown.Drain.familyP_eq : ∀ (gate : Bool) (t : Nat),
+  (Becoming.LineageDrawdown.Drain.generations (Becoming.LineageDrawdown.Drain.courseP gate)).family t =
+    Becoming.LineageDrawdown.Drain.familyP t
+Becoming.LineageDrawdown.Drain.stepP : ∀ (gate : Bool) (t c : Nat),
+  (Becoming.LineageDrawdown.Drain.levelOf (Becoming.LineageDrawdown.Drain.phaseP gate (t + 1)) c +
+      Becoming.total (1 :: Becoming.LineageDrawdown.Drain.familyP t) fun f =>
+        Becoming.LineageDrawdown.Drain.takeOf gate (Becoming.LineageDrawdown.Drain.phaseP gate t) f c) =
+    Becoming.LineageDrawdown.Drain.levelOf (Becoming.LineageDrawdown.Drain.phaseP gate t) c +
+      Becoming.total (1 :: Becoming.LineageDrawdown.Drain.familyP t) fun f =>
+        Becoming.LineageDrawdown.Drain.giveOf gate (Becoming.LineageDrawdown.Drain.phaseP gate t)
+          (Becoming.LineageDrawdown.Drain.kidsP t) f c
+Becoming.LineageDrawdown.Drain.balances_P : ∀ (gate : Bool),
+  (Becoming.LineageDrawdown.Drain.flow gate (Becoming.LineageDrawdown.Drain.courseP gate)).Balances
+    (Becoming.LineageDrawdown.Drain.web gate (Becoming.LineageDrawdown.Drain.courseP gate))
+Becoming.LineageDrawdown.Drain.descendsP : ∀ (gate : Bool) (t : Nat),
+  t < 10 →
+    ∀ (p : Nat),
+      p ∈ Becoming.LineageDrawdown.Drain.familyP t →
+        ∀ (k : Nat),
+          k ∈ Becoming.LineageDrawdown.Drain.kidsP t p →
+            0 <
+                Becoming.LineageDrawdown.Drain.giveOf gate (Becoming.LineageDrawdown.Drain.phaseP gate t)
+                  (Becoming.LineageDrawdown.Drain.kidsP t) p k ∧
+              ¬0 < Becoming.LineageDrawdown.Drain.levelOf (Becoming.LineageDrawdown.Drain.phaseP gate t) k ∧
+                0 < Becoming.LineageDrawdown.Drain.levelOf (Becoming.LineageDrawdown.Drain.phaseP gate (t + 1)) k
+Becoming.LineageDrawdown.Drain.descends_atP : ∀ (gate : Bool) (t p : Nat),
+  p ∈ Becoming.LineageDrawdown.Drain.familyP t →
+    ∀ (k : Nat),
+      k ∈ Becoming.LineageDrawdown.Drain.kidsP t p →
+        (Becoming.LineageDrawdown.Drain.flow gate (Becoming.LineageDrawdown.Drain.courseP gate)).DescendsAt
+          (Becoming.LineageDrawdown.Drain.web gate (Becoming.LineageDrawdown.Drain.courseP gate)) t k p
+Becoming.LineageDrawdown.Drain.descended_P : ∀ (gate : Bool),
+  Becoming.SelectionTerm.Flow.Descended
+    (Becoming.LineageDrawdown.Drain.flow gate (Becoming.LineageDrawdown.Drain.courseP gate))
+    (Becoming.LineageDrawdown.Drain.web gate (Becoming.LineageDrawdown.Drain.courseP gate))
+    (Becoming.LineageDrawdown.Drain.generations (Becoming.LineageDrawdown.Drain.courseP gate))
+Becoming.LineageDrawdown.Drain.selection_P : ∀ (gate : Bool),
+  (Becoming.LineageDrawdown.Drain.generations (Becoming.LineageDrawdown.Drain.courseP gate)).concordAt 0 = 2 ∧
+    (Becoming.LineageDrawdown.Drain.generations (Becoming.LineageDrawdown.Drain.courseP gate)).discordAt 0 = 0 ∧
+      (Becoming.LineageDrawdown.Drain.generations (Becoming.LineageDrawdown.Drain.courseP gate)).size 0 = 2 ∧
+        (Becoming.LineageDrawdown.Drain.generations (Becoming.LineageDrawdown.Drain.courseP gate)).size 1 = 2
+Becoming.LineageDrawdown.Drain.length_two_P : ∀ (t : Nat),
+  t < 10 → (Becoming.LineageDrawdown.Drain.familyP t).length = 2
+Becoming.LineageDrawdown.Drain.sizes_P : ∀ (gate : Bool) (t : Nat),
+  t < 10 → (Becoming.LineageDrawdown.Drain.generations (Becoming.LineageDrawdown.Drain.courseP gate)).size t = 2
+Becoming.LineageDrawdown.Drain.kids_one_P : ∀ (t : Nat),
+  t < 8 →
+    ∀ (p : Nat),
+      p ∈ Becoming.LineageDrawdown.Drain.familyP (t + 1) → (Becoming.LineageDrawdown.Drain.kidsP (t + 1) p).length = 1
+Becoming.LineageDrawdown.Drain.uniform_P : ∀ (gate : Bool) (t : Nat),
+  t < 8 →
+    (Becoming.LineageDrawdown.Drain.generations (Becoming.LineageDrawdown.Drain.courseP gate)).concordAt (t + 1) = 0 ∧
+      (Becoming.LineageDrawdown.Drain.generations (Becoming.LineageDrawdown.Drain.courseP gate)).discordAt (t + 1) = 0
+Becoming.LineageDrawdown.Drain.share_P : ∀ (gate : Bool),
+  (Becoming.total ((Becoming.LineageDrawdown.Drain.generations (Becoming.LineageDrawdown.Drain.courseP gate)).family 0)
+        fun p => Becoming.LineageDrawdown.Drain.draw p - 1) =
+      1 ∧
+    (Becoming.total
+        ((Becoming.LineageDrawdown.Drain.generations (Becoming.LineageDrawdown.Drain.courseP gate)).family 1) fun p =>
+        Becoming.LineageDrawdown.Drain.draw p - 1) =
+      2
+Becoming.LineageDrawdown.Drain.excess_P : ∀ (gate : Bool) (k : Nat),
+  k < 8 →
+    (Becoming.LineageDrawdown.Drain.flow gate (Becoming.LineageDrawdown.Drain.courseP gate)).replenishment [0] (1 + k) <
+      (Becoming.LineageDrawdown.Drain.flow gate (Becoming.LineageDrawdown.Drain.courseP gate)).uptake [0] (1 + k)
+Becoming.LineageDrawdown.Drain.no_excess_first_P : ∀ (gate : Bool),
+  (Becoming.LineageDrawdown.Drain.flow gate (Becoming.LineageDrawdown.Drain.courseP gate)).uptake [0] 0 = 3 ∧
+    (Becoming.LineageDrawdown.Drain.flow gate (Becoming.LineageDrawdown.Drain.courseP gate)).replenishment [0] 0 = 3
+Becoming.LineageDrawdown.Drain.start_P : ∀ (gate : Bool),
+  (Becoming.LineageDrawdown.Drain.web gate (Becoming.LineageDrawdown.Drain.courseP gate)).stock [0] 1 < 8 + 1
+Becoming.LineageDrawdown.Drain.draws_past_P : ∀ (gate : Bool),
+  (Becoming.LineageDrawdown.Drain.web gate (Becoming.LineageDrawdown.Drain.courseP gate)).stock [0] 1 +
+      Becoming.total (Becoming.steps 1 8)
+        ((Becoming.LineageDrawdown.Drain.flow gate (Becoming.LineageDrawdown.Drain.courseP gate)).replenishment [0]) <
+    1 +
+      Becoming.total (Becoming.steps 1 8)
+        ((Becoming.LineageDrawdown.Drain.flow gate (Becoming.LineageDrawdown.Drain.courseP gate)).uptake [0])
+Becoming.LineageDrawdown.Drain.gated_ends : Becoming.«退化»
+  (Becoming.LineageRegions.lineStep
+    (Becoming.LineageDrawdown.Drain.flow true (Becoming.LineageDrawdown.Drain.courseP true))
+    (Becoming.LineageDrawdown.Drain.web true (Becoming.LineageDrawdown.Drain.courseP true))
+    (Becoming.LineageRegions.oneKind Nat))
+  ((Becoming.LineageDrawdown.Drain.web true (Becoming.LineageDrawdown.Drain.courseP true)).kindClass
+    (Becoming.LineageRegions.oneKind Nat))
+  (0, 4)
+Becoming.LineageDrawdown.Drain.outside_ends : Becoming.«退化»
+  (Becoming.LineageRegions.lineStep
+    (Becoming.LineageDrawdown.Drain.flow false (Becoming.LineageDrawdown.Drain.courseP false))
+    (Becoming.LineageDrawdown.Drain.web false (Becoming.LineageDrawdown.Drain.courseP false))
+    (Becoming.LineageRegions.oneKind Nat))
+  ((Becoming.LineageDrawdown.Drain.web false (Becoming.LineageDrawdown.Drain.courseP false)).kindClass
+    (Becoming.LineageRegions.oneKind Nat))
+  (0, 4)
+Becoming.LineageDrawdown.Drain.every_active_degenerates_P : ∀ (gate : Bool) {x : Nat × Nat},
+  2 ≤ x.snd →
+    (Becoming.LineageDrawdown.Drain.web gate (Becoming.LineageDrawdown.Drain.courseP gate)).active x.fst x.snd →
+      x.fst ≤ 9 →
+        Becoming.«退化»
+          (Becoming.LineageRegions.lineStep
+            (Becoming.LineageDrawdown.Drain.flow gate (Becoming.LineageDrawdown.Drain.courseP gate))
+            (Becoming.LineageDrawdown.Drain.web gate (Becoming.LineageDrawdown.Drain.courseP gate))
+            (Becoming.LineageRegions.oneKind Nat))
+          ((Becoming.LineageDrawdown.Drain.web gate (Becoming.LineageDrawdown.Drain.courseP gate)).kindClass
+            (Becoming.LineageRegions.oneKind Nat))
+          x
+Becoming.LineageDrawdown.Drain.members_need_P : ∀ (gate : Bool) (q : Nat),
+  q ∈ (Becoming.LineageDrawdown.Drain.generations (Becoming.LineageDrawdown.Drain.courseP gate)).family 9 →
+    ∃ e,
+      e ∈ [0] ∧
+        (Becoming.LineageDrawdown.Drain.web gate (Becoming.LineageDrawdown.Drain.courseP gate)).requires 9 q e ∧
+          1 ≤ (Becoming.LineageDrawdown.Drain.web gate (Becoming.LineageDrawdown.Drain.courseP gate)).need 9 q e
+Becoming.LineageDrawdown.Drain.ends_P : ∀ (gate : Bool) (s : Nat),
+  (Becoming.LineageDrawdown.Drain.generations (Becoming.LineageDrawdown.Drain.courseP gate)).size (1 + 8 + 1 + s) = 0 ∧
+    (Becoming.LineageDrawdown.Drain.generations (Becoming.LineageDrawdown.Drain.courseP gate)).concordAt (1 + 8 + s) =
+        0 ∧
+      (Becoming.LineageDrawdown.Drain.generations (Becoming.LineageDrawdown.Drain.courseP gate)).discordAt (1 + 8 + s) =
+        0
+Becoming.LineageDrawdown.Drain.selection_after_P : ∀ (gate : Bool) (t : Nat),
+  (Becoming.LineageDrawdown.Drain.generations (Becoming.LineageDrawdown.Drain.courseP gate)).concordAt (t + 1) = 0 ∧
+    (Becoming.LineageDrawdown.Drain.generations (Becoming.LineageDrawdown.Drain.courseP gate)).discordAt (t + 1) = 0

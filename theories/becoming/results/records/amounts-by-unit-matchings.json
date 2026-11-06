@@ -127,8 +127,8 @@
       "id": "shared-laws-on-the-grammar",
       "relation": "formal-reuse",
       "detail": {
-        "en": "«对», «对之逆», «对之取», «对之长», «聚之长», GrammarLaws.revisits_within, mem_middle, split_append and total_congr; the rest is arithmetic (excess_balance, excess_pos, Flow.excess_zero_of_le).",
-        "zh": "«对»、«对之逆»、«对之取»、«对之长»、«聚之长»、GrammarLaws.revisits_within、mem_middle、split_append 与 total_congr；余为算术（excess_balance、excess_pos、Flow.excess_zero_of_le）。"
+        "en": "«对», «对之逆», «对之取», «对之长», «聚之长», revisits_within, mem_middle, split_append and total_congr; the rest is arithmetic (excess_balance, excess_pos, Flow.excess_zero_of_le).",
+        "zh": "«对»、«对之逆»、«对之取»、«对之长»、«聚之长»、revisits_within、mem_middle、split_append 与 total_congr；余为算术（excess_balance、excess_pos、Flow.excess_zero_of_le）。"
       }
     },
     {

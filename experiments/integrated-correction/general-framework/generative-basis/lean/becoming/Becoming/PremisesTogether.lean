@@ -9,20 +9,32 @@ import Becoming.Reconfiguration
 /-!
 # Premises that hold together
 
-Board item LM. A conditional law says nothing where its premises cannot hold together. For these
-laws nothing in the package had established the premise: each is met here, jointly with the law's
-other premises, in a small model, and, where it costs a line, failed in another. No law is stated
-beyond them, and none of these models is a claim about any world.
+Board item LM. A conditional law says nothing where its premises cannot hold together. An audit of
+the compiled terms found these premises concluded by no theorem under their own names, a measure that
+misses a proof of the unfolded form (`Overshoot.closure_whole` already shows mutual feeding). Each is
+met here by name, with the premises named on its line, in a small model, and, where it costs a line,
+failed in another. Laws that ask more of these models are not met here: excluded middle
+(`Joining.FiniteOutcomes.alike_iff_sameBranchingTests`), a transaction's response and faithfulness
+(`Reconfiguration.induced_completes`), sufficiency and adequacy of matching
+(`MatchedCourses.conditional_lower_anchor`), a perfect profile (`Web.at_once_broken`). No law is
+stated beyond them, and none of these models is a claim about any world.
 
 * **The link to C between listed level paths** (`ListedPaths.premises_hold`): one formation needing
   one unit at every step, one level path admitting it at the first step alone and one at no step.
-  Admission is decided, what the two admit is listed, the second extends the first, and an order
-  counting what is admitted is increasing in admission and ranks it so. With self-concern in the place
-  of that order the continuation condition held de se holds on this web as well
-  (`ListedPaths.premises_hold_de_se`). So `Web.extension_ranked_of_increasing` and
+  Admission is decided, what the two admit is listed, the first extends the second, and an order
+  counting what is admitted is increasing in admission and ranks it so. With a self-concerned order in
+  the place of that order the continuation condition held de se holds on this web as well
+  (`ListedPaths.premises_hold_de_se`), and the counting order is one (`ListedPaths.concerned_counted`).
+  So `Web.extension_ranked_of_increasing` and
   `Web.extension_ranked_of_increasingInOwn` are not vacuous, where the same listing asked of every level
   path would leave no extension (`Web.no_extension_of_listsAdmitted_every`). One formation is the
   smallest case: it shows the premises can hold together, and says nothing of how often they do.
+* **What reads no order** (`ListedPaths.condition_reads_no_order`): the condition held de se on that
+  web reads no order and holds, and it does not give C there. `ReadsNoOrder.not_entails` applies to the
+  condition: its premise that the statement reads no order is met by the condition itself, and since the
+  condition holds, the entailment is what fails.
+* **A choice through the map** (`Relabel.GreaterOfTwo.premises_hold`): of two alternatives the one with
+  the greater entry, nothing at a tie; a rule fixing its choice whatever the entries fails the premise.
 * **Removing idle steps** (`IdleStep.premises_hold`): a stuttering with one idle step, the moving
   steps it reads, and a world idle at that step, with something taking part at the next. Read as idle
   at a later step the same world fails it (`IdleStep.not_idle_later`).
@@ -38,7 +50,7 @@ beyond them, and none of these models is a claim about any world.
 * **Portions returning less than one for one** (`Optimum.AtOnce.returnsLess_met`,
   `Optimum.AtOnce.returnsLess_fails`): met where nothing left stands next, failed where the whole
   stands as it was left. In whole amounts the premise asks that a portion never rise with what is left
-  (`Optimum.AtOnce.portion_falls`), so what is met here is that case and no rate between.
+  (`Optimum.AtOnce.portion_falls`), so what is met here is one case of that, and no rate between.
 -/
 
 namespace Becoming
@@ -94,8 +106,14 @@ theorem premises_hold :
   ⟨decides, once_listed, never_listed, extension, increasing,
    Web.extension_ranked_of_increasing decides increasing once_listed never_listed extension⟩
 
-/-- **With self-concern in the place of the increasing order**, the continuation condition held de
-se on this web, marking the one formation. -/
+/-- The counting order is self-concerned on this web: an order increasing in admission is increasing in
+its own continuation. -/
+theorem concerned_counted : Weighting.IncreasingInOwn items (fun _ => true) counted :=
+  Weighting.increasingInOwn_of_increasing increasing
+
+/-- **With a self-concerned order in the place of the increasing order**, the continuation condition
+held de se on this web, marking the one formation, and that order ranks the extension. `concerned_counted`
+is one such order. -/
 theorem premises_hold_de_se {O : (Nat × Unit → Bool) → (Nat × Unit → Bool) → Prop}
     (concerned : Weighting.IncreasingInOwn items (fun _ => true) O) :
     Unrestricted (selfAscribed (ownClosure (fun (_ _ : Unit) => True)) (fun (_ : Unit) => ())) ∧
@@ -109,7 +127,97 @@ theorem premises_hold_de_se {O : (Nat × Unit → Bool) → (Nat × Unit → Boo
 theorem not_listed : ¬ web.ListsAdmitted [] once :=
   fun listed => nomatch listed 0 () fun _ _ => Nat.le_refl 1
 
+/-- The condition held de se on this web, as a statement about an order: it mentions none. -/
+def condition (_ : Unit) (_ : (Nat → Unit → Nat) → (Nat → Unit → Nat) → Prop) : Prop :=
+  Unrestricted (selfAscribed (ownClosure (fun (_ _ : Unit) => True)) (fun (_ : Unit) => ()))
+
+/-- **The condition reads no order, holds here, and does not give C here.** `ReadsNoOrder.not_entails`
+applied to the condition, on a frame with an extension: the reading premise is met, the condition holds
+on this web whatever order is read, and so the entailment fails, since the order relating nothing fails C
+at the extension. One web: it says nothing of other statements. -/
+theorem condition_reads_no_order :
+    ReadsNoOrder condition ∧ (∀ better, condition () better) ∧
+      ¬ ∀ better, condition () better → Comparison web.paths (fun _ => True) better :=
+  have reads : ReadsNoOrder condition := fun _ _ _ holds => holds
+  have holds : ∀ better, condition () better := fun _ =>
+    ownClosure_unrestricted_iff.mpr fun _ _ => WithinClosure.refl ()
+  ⟨reads, holds, fun entails =>
+    ReadsNoOrder.not_entails reads entails extension (better := fun _ _ => True) (holds _)⟩
+
 end ListedPaths
+
+/-! ## A choice through the map -/
+
+namespace Relabel.GreaterOfTwo
+
+/-- The first if its entry is greater, the second if the second's is, nothing at a tie. -/
+def pick (x y : Nat) : Option Bool :=
+  if y < x then some true else if x < y then some false else none
+
+/-- Of two alternatives, the one with the greater entry, and nothing at a tie. -/
+def rule (r : Bool → Nat) : Option Bool := pick (r true) (r false)
+
+theorem pick_gt {x y : Nat} (gt : y < x) : pick x y = some true := if_pos gt
+
+theorem pick_lt {x y : Nat} (lt : x < y) (not_gt : ¬ y < x) : pick x y = some false :=
+  (if_neg not_gt).trans (if_pos lt)
+
+theorem pick_tie {x y : Nat} (not_gt : ¬ y < x) (not_lt : ¬ x < y) : pick x y = none :=
+  (if_neg not_gt).trans (if_neg not_lt)
+
+/-- Exchanging the entries exchanges what is picked. -/
+theorem pick_exchange (x y : Nat) : pick y x = (pick x y).map (!·) :=
+  match Nat.decLt y x with
+  | isTrue gt => (pick_lt gt (Nat.lt_asymm gt)).trans
+      (congrArg (Option.map (!·)) (pick_gt gt)).symm
+  | isFalse not_gt => match Nat.decLt x y with
+    | isTrue lt => (pick_gt lt).trans (congrArg (Option.map (!·)) (pick_lt lt not_gt)).symm
+    | isFalse not_lt => (pick_tie not_lt not_gt).trans
+        (congrArg (Option.map (!·)) (pick_tie not_gt not_lt)).symm
+
+/-- Exchanging an alternative with itself moves nothing. -/
+theorem map_same (a : Bool) : ∀ c : Option Bool, c = c.map (swap a a)
+  | none => rfl
+  | some true => match a with
+    | true => rfl
+    | false => rfl
+  | some false => match a with
+    | true => rfl
+    | false => rfl
+
+/-- Exchanging the two alternatives is negation. -/
+theorem map_not (a : Bool) : ∀ c : Option Bool, c.map (!·) = c.map (swap a (!a))
+  | none => rfl
+  | some true => match a with
+    | true => rfl
+    | false => rfl
+  | some false => match a with
+    | true => rfl
+    | false => rfl
+
+/-- **A choice through the map that does choose**: exchanging two alternatives' entries exchanges the
+choice. -/
+theorem equivariant : EquivariantChoice rule := fun _ _ a b relabel =>
+  have same : ∀ {x x' y y' : Nat}, x' = x → y' = y → pick x' y' = pick x y :=
+    fun e e' => e ▸ e' ▸ rfl
+  match a, b, relabel with
+  | false, false, relabel => (same (relabel true) (relabel false)).trans (map_same false _)
+  | true, true, relabel => (same (relabel true) (relabel false)).trans (map_same true _)
+  | false, true, relabel =>
+    (same (relabel true) (relabel false)).trans ((pick_exchange _ _).trans (map_not false _))
+  | true, false, relabel =>
+    (same (relabel true) (relabel false)).trans ((pick_exchange _ _).trans (map_not true _))
+
+/-- **The premise holds of a rule that chooses where the entries differ and withholds at a tie**; a rule
+fixing its choice whatever the entries fails it. -/
+theorem premises_hold :
+    EquivariantChoice rule ∧ rule (fun b => cond b 1 0) = some true ∧ rule (fun _ => 0) = none ∧
+      ¬ EquivariantChoice (K := Bool) (V := Nat) (fun _ => some true) :=
+  ⟨equivariant, pick_gt (Nat.lt_succ_self 0), pick_tie (Nat.lt_irrefl 0) (Nat.lt_irrefl 0),
+   fun fixed => Bool.noConfusion
+     (Option.some.inj (fixed (fun _ => 0) (fun _ => 0) false true (fun _ => rfl)) : true = false)⟩
+
+end Relabel.GreaterOfTwo
 
 /-! ## Removing idle steps -/
 
@@ -148,7 +256,7 @@ theorem idle : world.IdleAt reading
   | n + 1, same => absurd same (Nat.succ_ne_self n)
 
 /-- **Removing idle steps has a case with an idle step in it**: the stuttering, its moving steps and
-the world idle at them hold together, and something takes part at a moving step. -/
+the world idle at its idle steps hold together, and something takes part at a moving step. -/
 theorem premises_hold :
     Stutter reading ∧ Stutter.Moves reading moving ∧ world.IdleAt reading ∧ reading 1 = reading 0 ∧
       world.flow.present 1 ≠ [] :=
@@ -316,8 +424,9 @@ namespace Reconfiguration
 /-- Two members, each failing by its own cause; the bound allows the first's. -/
 def twoCauses : Arrangement := ⟨[0, 1], fun d => .cause d, [[0]]⟩
 
-/-- **A bound covers what it allows, on an arrangement ready for it.** So the laws asking a covered
-cause on a ready arrangement have a case, and a cause outside the bound fails the premise. -/
+/-- **A bound covers what it allows, on an arrangement ready for it.** So readiness and covering hold
+together, and a cause outside the bound fails covering; the laws that read them ask more
+(`Reconfiguration.induced_completes`). -/
 theorem covered_and_not : ready twoCauses = true ∧ Covered twoCauses [0] ∧ ¬ Covered twoCauses [1] :=
   ⟨rfl, ⟨[0], List.Mem.head _, fun _ m => m⟩, fun ⟨b, (member : b ∈ [[0]]), sub⟩ => match b, member, sub with
     | _, .head _, sub => match sub 1 (.head _) with
@@ -348,7 +457,8 @@ end MatchedCourses
 namespace Optimum.AtOnce
 
 /-- **What is left may return nothing.** Where nothing left stands next, every portion returns less
-than one for one. In whole amounts that is what the premise asks (`Optimum.AtOnce.portion_falls`). -/
+than one for one. In whole amounts the premise asks that a portion never rise with what is left
+(`Optimum.AtOnce.portion_falls`), and this is one case of that. -/
 theorem returnsLess_met (portion : Nat → Nat → Nat → Nat) (k N : Nat) :
     ReturnsLess (fun _ _ => 0) portion k N :=
   fun _ _ _ _ _ _ pos => Nat.lt_add_of_pos_right pos

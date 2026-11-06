@@ -53,14 +53,14 @@
   ],
   "hypotheses": [
     {
-      "en": "None beyond the grammar.",
-      "zh": "除文法外无前提。"
+      "en": "None beyond the grammar, except for the converse on the stages: the class symmetric, and being told apart at no stage constant under the step.",
+      "zh": "除文法外无前提；唯层上之逆须：类对称，且“无一层能分”于缘有常。"
     }
   ],
   "does_not_show": [
     {
-      "en": "That what no finite stage tells apart is in the core, with no premise: in an infinitely branching net it is not. Under the premise that being told apart at no stage is constant under the step it is. The Hennessy-Milner direction, from finitely many successors, implies LLPO in its limit form.",
-      "zh": "无有穷之层所分者在核中，不带前提：无穷分叉之网中不然。“无一层能分”于缘有常之前提下则然。Hennessy-Milner 之向由有穷多后继而来，其极限形式蕴涵 LLPO。",
+      "en": "That what no finite stage tells apart is in the core, with no premise: in an infinitely branching net it is not. Where the class is symmetric and being told apart at no stage is constant under the step, it is. That the Hennessy-Milner direction, from finitely many successors, gives LLPO in its limit form is checked only in an unreceipted script (03, Open).",
+      "zh": "无有穷之层所分者在核中，不带前提：无穷分叉之网中不然。类对称且“无一层能分”于缘有常之处则然。Hennessy-Milner 之向由有穷多后继而来，其极限形式给出 LLPO，此事仅于未具回执之脚本中核过（03，Open）。",
       "kind": "converse",
       "witness": "Becoming.«致诘不尽»"
     },
@@ -84,8 +84,8 @@
     "formal-not-empirical"
   ],
   "validation_scope": {
-    "en": "Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.GrammarTesting, 6 theorems in 13 declarations, each with an empty axiom report. No independent review.",
-    "zh": "由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.GrammarTesting，13 个声明中 6 条定理，公理报告皆空。无独立审查。"
+    "en": "Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.GrammarTesting, 6 theorems in 13 declarations, each with an empty axiom report, and the laws on the stages in Becoming.GrammarCandidates (board item LM), read against the Lean by one independent AI reader. No other independent review.",
+    "zh": "由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.GrammarTesting，13 个声明中 6 条定理，公理报告皆空；层上之律在 Becoming.GrammarCandidates（工作板条目 LM），经一位独立 AI 读者对照 Lean 读过。此外无独立审查。"
   },
   "next_delta": {
     "en": "State the converse for nets with finitely many successors as a calibration in the core, and testing equivalence relative to a stated family of observation relations within the net.",
@@ -171,7 +171,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean",
       "role": "proof",
-      "sha256": "ec0bb976dac31e034023139e0d5ef15e0c801cc7b498cd16f8055ff3010b2f84",
+      "sha256": "d3abca975408d6e01c26174d5ca68376acd2a9c6888b400afda8853dca7d037b",
       "declarations": [
         "Becoming.«层即诘»",
         "Becoming.«诘之降»",
@@ -186,6 +186,12 @@
       "role": "receipt",
       "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T170123.418765Z/verification.json",
+      "role": "receipt",
+      "sha256": "65ea4a1e6b35020a27ade1d94dbbdc614477054b423f6d85ce73396c37494c44",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -198,7 +204,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T170123.418765Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.GrammarCandidates",
       "success_pointer": "/status",
       "success_value": "passed"

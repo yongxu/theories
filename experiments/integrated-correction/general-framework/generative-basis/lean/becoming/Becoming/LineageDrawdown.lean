@@ -606,9 +606,10 @@ theorem draws_past_P (gate : Bool) :
       1 + total (steps 1 8) ((flow gate (courseP gate)).uptake [0]) := by
   cases gate <;> decide
 
-/-- **With the gate, the law met with a nonempty generation at its horizon**: the renewer is gated on
-the pool (`gated`), every premise of `LineageRegimes.degeneration_of_family_excess` holds at `T = 1`,
-`n = 8`, `m = 1`, and generation nine has two members, each requiring the pool. -/
+/-- **With the gate, the law met with a nonempty generation at its horizon**: where the renewer is
+gated on the pool (`gated`), every premise of `LineageRegimes.degeneration_of_family_excess` holds at
+`T = 1`, `n = 8`, `m = 1`, so the line degenerates; the gate is not among those premises. Generation
+nine has two members (`sizes_P`), each requiring the pool (`depends_pool`). -/
 theorem gated_ends :
     «退化» (lineStep (flow true (courseP true)) (web true (courseP true)) (oneKind Nat))
       ((web true (courseP true)).kindClass (oneKind Nat)) (0, 4) :=

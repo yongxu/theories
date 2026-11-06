@@ -28,7 +28,7 @@
 
 - A uniform horizon: one step N, not before the start, at which nothing the line reaches is active, on every branch; an active start; the class read included in activity («则» E W.activityClass).
 - A continuation advances the step by one; formations are a fixed index type; activity is Prop-valued; continuations and kinds are Prop-valued relations, kinds supplied as a relation Q.
-- For the regimes, each regime law's own premises: natural-number levels and needs, activity needing support (consumption); a family's natural-number stock, uptake and replenishment, and balance (a family drawn); passing with brief carriers that stops (the stopped relay).
+- For the regimes, each regime law's own premises: natural-number levels and needs, activity needing support (consumption); a family's natural-number stock, uptake and replenishment, balance, and activity needing support (a family drawn); passing with brief carriers that stops (the stopped relay).
 - For reaching an end: going on decided at the points of the line, a logical commitment. The calibrations compare with excluded middle; they do not assume it.
 
 <a id="does-not-show--未表明"></a>
@@ -47,7 +47,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Checked by the core checker with Lean 4.29.1 from the prelude at receipt 20261101T134343.981701Z, in Becoming.GrammarMap, Becoming.MapInstances and Becoming.KeepingWidening, every declaration with an empty axiom report; first checked as the leaf Becoming.LineDegeneration at receipt 20261101T024359.312453Z (45 declarations, 40 theorems), recompiled by independent AI verifiers in four review rounds.
+Checked by the core checker with Lean 4.29.1 from the prelude at receipt 20261101T134343.981701Z, in Becoming.GrammarMap, Becoming.MapInstances and Becoming.KeepingWidening, every declaration with an empty axiom report; first checked as the leaf Becoming.LineDegeneration at receipt 20261101T024359.312453Z (45 declarations, 40 theorems), recompiled by independent AI verifiers in four review rounds. The laws of a family drawn, with fewer premises (LM): core receipt 20261106T174854.382527Z, one independent AI reader; the rounds read the earlier ones.
 
 Canonical source: [MapInstances.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean)
 
@@ -91,7 +91,7 @@ Aliases: `Becoming.Web.ends_of_ends_at`, `Becoming.Web.every_branch_ends_of_gone
 
 - 1 November 2026, board item EL (evolution read on the root, its part EL3): added. The base's laws that a line is not without end are read as degeneration, constructively, at every class within activity; the three regimes degenerate; the decision behind reaching an end is calibrated against excluded middle on the base and on the grammar. Landed as a core leaf; the proposed placement in GrammarMap, MapInstances and KeepingWidening, and the rename of Web.degenerates_of_gone, wait on their owners.
 - 1 November 2026, board item EL6: placed in its owners' modules, each on its owner's yes. The grammar part is in Becoming.GrammarMap, its laws named «尽则非无终», «尽而续可定则有终» and «尽则有终当且仅当排中» (formerly Map.not_not_end_of_ends, Map.end_of_ends_decided and Map.end_of_ends_iff_excluded_middle), with Map.StepWhere stated as Map.short gated by P; the kind instance is in Becoming.KeepingWidening; the rest is in Becoming.MapInstances, where the landed laws that a line is not without end, and the law concluding an end (renamed Web.end_of_gone), are proved from degeneration in place, so the restatements (Web.Restated) and their law here are dropped. Becoming.LineDegeneration is retired to the Lean history folder. No theorem's statement changed; the restated Map.StepWhere.relation is equivalent to the old one, not definitionally equal.
-- 6 November 2026, board item LM: Web.family_excess_degenerates and Web.family_excess_not_endless no longer take a gate on the renewal or only active giving, which their proofs did not use; the regime of a family drawn is stated so here.
+- 6 November 2026, board item LM: Web.family_excess_degenerates and Web.family_excess_not_endless no longer take a gate on the renewal or only active giving, which the step the excess reaches does not need; the regime of a family drawn is stated so here.
 
 </details>
 

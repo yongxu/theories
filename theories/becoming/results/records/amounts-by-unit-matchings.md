@@ -58,7 +58,7 @@ That a bijection of finite sets forces equal size is the pigeonhole principle, h
 <a id="dependencies--依赖"></a>
 ### Dependencies
 
-- **formal-reuse**: [shared-laws-on-the-grammar](shared-laws-on-the-grammar.md). «对», «对之逆», «对之取», «对之长», «聚之长», GrammarLaws.revisits_within, mem_middle, split_append and total_congr; the rest is arithmetic (excess_balance, excess_pos, Flow.excess_zero_of_le).
+- **formal-reuse**: [shared-laws-on-the-grammar](shared-laws-on-the-grammar.md). «对», «对之逆», «对之取», «对之长», «聚之长», revisits_within, mem_middle, split_append and total_congr; the rest is arithmetic (excess_balance, excess_pos, Flow.excess_zero_of_le).
 - **formal-reuse**: [a-rise-past-the-inflow-is-drawn-from-beyond](a-rise-past-the-inflow-is-drawn-from-beyond.md). Flow.Balances.rise_draws_beyond_inflow gives the formation of both crossing laws.
 - related, not a proved adapter: [the-world-represented-both-ways](the-world-represented-both-ways.md). The World is represented in the grammar both ways and its amounts are not; this record states what amounts have instead: an interface by selected unit matchings.
 

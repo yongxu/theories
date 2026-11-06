@@ -4682,15 +4682,19 @@ tagged instance or application.
   no list holds what every level path admits once there is a formation
   (`Web.not_listsAdmitted_every`). It does not derive C. A leaf importing `Becoming.GrammarCases`,
   `Becoming.Lifting` and `Becoming.EventualWideningInstances`.
-* `Becoming.PremisesTogether` (L2, through `Becoming.PremiseWitnesses`): premises no proof had
-  established, met together with their laws' other premises in small models, and where it costs a
-  line failed in another (board item LM): the link to C between listed level paths, with self-concern
-  as well (`ListedPaths.premises_hold`, `ListedPaths.premises_hold_de_se`); removing idle steps
-  (`IdleStep.premises_hold`); mutual feeding (`TwoFeeding.mutuallyFed`); joining
+* `Becoming.PremisesTogether` (L2, through `Becoming.PremiseWitnesses`): thirteen premises no theorem
+  concludes by name, chosen by reading, each met with the premises named on its line in small models, and where it costs a line
+  failed in another (board item LM): the link to C between listed level paths, with self-concern as
+  well (`ListedPaths.premises_hold`, `ListedPaths.premises_hold_de_se`,
+  `ListedPaths.concerned_counted`); the condition reading no order and not giving C there
+  (`ListedPaths.condition_reads_no_order`); a choice through the map
+  (`Relabel.GreaterOfTwo.premises_hold`); removing idle steps
+  (`IdleStep.premises_hold`); mutual feeding, already shown unfolded in `Overshoot.closure_whole`
+  (`TwoFeeding.mutuallyFed`); joining
   (`Joining.Once.finiteOutcomes`, `Joining.Once.locallyFinite`, `Joining.Once.connectedFrom`); a
   reconfiguration's bound (`Reconfiguration.covered_and_not`); readings of matched courses
   (`MatchedCourses.readings_hold_together`); portions returning less than one for one
-  (`Optimum.AtOnce.returnsLess_met`). A leaf.
+  (`Optimum.AtOnce.returnsLess_met`). Laws asking more of these models are not met here. A leaf.
 * `Becoming.RoutesToC` (L2, through `Becoming.PremiseWitnesses`): what would give C's order on a listing
   (board item CW). It does not derive C from anything. Let help read no order and hold at a datum: a premise
   giving C there with it implies C there, and such a premise that C also implies is C there

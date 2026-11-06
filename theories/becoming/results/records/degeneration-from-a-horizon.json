@@ -101,8 +101,8 @@
       "zh": "一个续使步数加一；形成是固定的指标类型；活动取命题值；续与种类是命题值关系，种类以关系 Q 给出。"
     },
     {
-      "en": "For the regimes, each regime law's own premises: natural-number levels and needs, activity needing support (consumption); a family's natural-number stock, uptake and replenishment, and balance (a family drawn); passing with brief carriers that stops (the stopped relay).",
-      "zh": "对诸态，各态之律自身的前提：自然数的水平与所需、活动需要支持（消耗）；一族的自然数存量、摄取与补充，平衡（一族被汲取）；承载者短暂而停止的传递（停止的接力）。"
+      "en": "For the regimes, each regime law's own premises: natural-number levels and needs, activity needing support (consumption); a family's natural-number stock, uptake and replenishment, balance, and activity needing support (a family drawn); passing with brief carriers that stops (the stopped relay).",
+      "zh": "对诸态，各态之律自身的前提：自然数的水平与所需、活动需要支持（消耗）；一族的自然数存量、摄取与补充，平衡，活动需要支持（一族被汲取）；承载者短暂而停止的传递（停止的接力）。"
     },
     {
       "en": "For reaching an end: going on decided at the points of the line, a logical commitment. The calibrations compare with excluded middle; they do not assume it.",
@@ -162,8 +162,8 @@
     "names-provisional"
   ],
   "validation_scope": {
-    "en": "Checked by the core checker with Lean 4.29.1 from the prelude at receipt 20261101T134343.981701Z, in Becoming.GrammarMap, Becoming.MapInstances and Becoming.KeepingWidening, every declaration with an empty axiom report; first checked as the leaf Becoming.LineDegeneration at receipt 20261101T024359.312453Z (45 declarations, 40 theorems), recompiled by independent AI verifiers in four review rounds.",
-    "zh": "由核心检查器以 Lean 4.29.1 从前奏检查，回执 20261101T134343.981701Z，在 Becoming.GrammarMap、Becoming.MapInstances 与 Becoming.KeepingWidening 中，每个声明的公理报告均为空；最初作为叶 Becoming.LineDegeneration 于回执 20261101T024359.312453Z 检查（45 个声明，40 条定理），经独立 AI 验证者四轮审查重新编译。"
+    "en": "Checked by the core checker with Lean 4.29.1 from the prelude at receipt 20261101T134343.981701Z, in Becoming.GrammarMap, Becoming.MapInstances and Becoming.KeepingWidening, every declaration with an empty axiom report; first checked as the leaf Becoming.LineDegeneration at receipt 20261101T024359.312453Z (45 declarations, 40 theorems), recompiled by independent AI verifiers in four review rounds. The laws of a family drawn, with fewer premises (LM): core receipt 20261106T174854.382527Z, one independent AI reader; the rounds read the earlier ones.",
+    "zh": "核心检查器以 Lean 4.29.1 从前奏检查，回执 20261101T134343.981701Z，在 GrammarMap、MapInstances 与 KeepingWidening 中，公理报告皆空；最初作为叶 LineDegeneration 于回执 20261101T024359.312453Z 检查（45 声明，40 定理），独立 AI 验证者四轮重编译。一族被汲取之律，前提较少（LM）：核心回执 20261106T174854.382527Z，一位独立 AI 读者；诸轮读此前者。"
   },
   "next_delta": {
     "en": "Degeneration where no one step bounds every branch, and the some-branch regions (生成, 后守) on the World.",
@@ -330,8 +330,8 @@
       "zh": "2026年11月1日，工作板条目 EL6：各部分经其所属者同意放入其模块。文法部分在 Becoming.GrammarMap，其律名为 «尽则非无终»、«尽而续可定则有终» 与 «尽则有终当且仅当排中»（原名 Map.not_not_end_of_ends、Map.end_of_ends_decided、Map.end_of_ends_iff_excluded_middle），Map.StepWhere 陈述为以 P 为门的 Map.short；种类实例在 Becoming.KeepingWidening；其余在 Becoming.MapInstances，在那里已落地的\"线非不穷\"诸律与推出有终之律（改名为 Web.end_of_gone）就地由退化证明，故重述（Web.Restated）及其在此的律一并去除。Becoming.LineDegeneration 移入 Lean 历史文件夹。无定理之陈述改变；重述的 Map.StepWhere.relation 与旧者等价，但非定义相等。"
     },
     {
-      "en": "6 November 2026, board item LM: Web.family_excess_degenerates and Web.family_excess_not_endless no longer take a gate on the renewal or only active giving, which their proofs did not use; the regime of a family drawn is stated so here.",
-      "zh": "2026年11月6日，工作板条目 LM：Web.family_excess_degenerates 与 Web.family_excess_not_endless 不再带更新上的门控与只有活跃给予，其证明本不用之；此处一族被汲取之态如是陈述。"
+      "en": "6 November 2026, board item LM: Web.family_excess_degenerates and Web.family_excess_not_endless no longer take a gate on the renewal or only active giving, which the step the excess reaches does not need; the regime of a family drawn is stated so here.",
+      "zh": "2026年11月6日，工作板条目 LM：Web.family_excess_degenerates 与 Web.family_excess_not_endless 不再带更新上的门控与只有活跃给予，超额所及之步本不需之；此处一族被汲取之态如是陈述。"
     }
   ]
 }
