@@ -6856,7 +6856,7 @@
    "type": "module",
    "name": "Becoming.GrammarConditionals",
    "level": "L1",
-   "theorems": 45,
+   "theorems": 48,
    "region": "classical",
    "base": "grammar",
    "on_grammar": true,

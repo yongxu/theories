@@ -3566,7 +3566,7 @@ tagged instance or application.
   definitional laws state families exactly (`«亡者异当且仅当有后»`, `«无异当且仅当不分续»`,
   `«皆不生当且仅当皆非无缘»`); what ends under a class passes through under another only by altering
   (`«亡而通则异»`), and alters exactly where it passes through under a class constant both ways
-  (`«亡而两向有常则异当且仅当通»`); and 29 witnesses (`…之例`) give the nets the other modules do not. Which unit
+  (`«亡而两向有常则异当且仅当通»`); and 30 witnesses (`…之例`) give the nets the other modules do not. Which unit
   states which law is an AI reconstruction (the OU7 study's `data/groups.tsv`). A leaf.
 * `Becoming.CommonResponse` (L1): a response common over a reading (共应), on the grammar, for every
   carrier, reading and requirement, with no premise. The occurrences at which a region holds
