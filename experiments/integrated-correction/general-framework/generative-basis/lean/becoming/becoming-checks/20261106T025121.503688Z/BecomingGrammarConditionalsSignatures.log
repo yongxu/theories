@@ -1,0 +1,89 @@
+@Becoming.«亡者异当且仅当有后» : ∀ {α : Type u_1} {R E F : Becoming.«际» α} {x : α},
+  Becoming.«亡» R E x → ((∃ y, Becoming.«异» R F E x y) ↔ Becoming.«有后» R F x)
+Becoming.«亡而息之例» : ∃ R E F, Becoming.«亡» R E () ∧ Becoming.«息» R F () ∧ ¬∃ y, Becoming.«异» R F E () y
+Becoming.«两向有常而无前不通之例» : ∃ R E,
+  Becoming.«有常» R E ∧ Becoming.«有常» (Becoming.«逆» R) E ∧ ¬Becoming.«有前» R E () ∧ ¬Becoming.«通» R E ()
+Becoming.«不有常而通之例» : ∃ R,
+  ¬Becoming.«有常» R Becoming.«一» ∧
+    Becoming.«亡» R Becoming.«静» (some false) ∧
+      Becoming.«异» R Becoming.«一» Becoming.«静» (some false) (some true) ∧ Becoming.«通» R Becoming.«一» (some true)
+@Becoming.«亡而通则异» : ∀ {α : Type u_1} {R E F : Becoming.«际» α} {x : α},
+  Becoming.«亡» R E x → Becoming.«通» R F x → ∃ y, Becoming.«异» R F E x y
+@Becoming.«异而两向有常则通» : ∀ {α : Type u_1} {R E F : Becoming.«际» α} {x y : α},
+  Becoming.«类» F → Becoming.«有常» R F → Becoming.«有常» (Becoming.«逆» R) F → Becoming.«异» R F E x y → Becoming.«通» R F x
+@Becoming.«亡而两向有常则异当且仅当通» : ∀ {α : Type u_1} {R E F : Becoming.«际» α} {x : α},
+  Becoming.«类» F →
+    Becoming.«有常» R F →
+      Becoming.«有常» (Becoming.«逆» R) F → Becoming.«亡» R E x → ((∃ y, Becoming.«异» R F E x y) ↔ Becoming.«通» R F x)
+Becoming.«异而不通之例» : ∃ R,
+  Becoming.«亡» R Becoming.«静» false ∧
+    Becoming.«异» R Becoming.«一» Becoming.«静» false true ∧ ¬Becoming.«通» R Becoming.«一» false
+Becoming.«通而不异之例» : ∃ R, Becoming.«通» R Becoming.«一» () ∧ ¬∃ y, Becoming.«异» R Becoming.«一» Becoming.«一» () y
+@Becoming.«皆有后而步皆分则全生成» : ∀ {α : Type u_1} {R L E : Becoming.«际» α},
+  (∀ (y : α), Becoming.«有后» R L y) → (∀ (a b : α), R a b → ¬E a b) → ∀ (x : α), Becoming.«全生成» R L E x
+Becoming.«昼夜全生成» : ∀ (x : Bool), Becoming.«全生成» (fun a b => b = !a) Becoming.«一» Becoming.«静» x
+Becoming.«有亡而不全生成之例» : Becoming.«亡» Becoming.Map.short Becoming.«一» true ∧
+  ¬Becoming.«全生成» Becoming.Map.short Becoming.«一» Becoming.«静» false
+Becoming.«步不分而不全生成之例» : Becoming.Map.still () () ∧
+  Becoming.«一» () () ∧ ¬Becoming.«全生成» Becoming.Map.still Becoming.«一» Becoming.«一» ()
+@Becoming.«线不返则短于所列» : ∀ {α : Type u_1} {R E : Becoming.«际» α} {l : List α} {g : Nat → α} {n : Nat},
+  (∀ (i : Nat), i ≤ n → ¬Becoming.«相续» R E (g i) (g i)) →
+    (∀ (i : Nat), i < n → Becoming.«续» R E (g i) (g (i + 1))) → (∀ (i : Nat), i ≤ n → g i ∈ l) → n < l.length
+@Becoming.«不返而有限则非不穷» : ∀ {α : Type u_1} {R E : Becoming.«际» α} {x : α} {l : List α},
+  (∀ (y : α), x = y ∨ Becoming.«相续» R E x y → ¬Becoming.«相续» R E y y) →
+    (∀ (y : α), x = y ∨ Becoming.«相续» R E x y → y ∈ l) → ¬Becoming.«不穷» R E x
+@Becoming.counting_reach_lt : ∀ {x y : Nat}, Becoming.«及» (fun m n => n = m + 1) x y → x < y
+Becoming.«无环而不穷之例» : ∃ R, Becoming.«无环» R ∧ Becoming.«不穷» R Becoming.«一» 0
+Becoming.«返而不穷之例» : ∃ R,
+  (∀ (y : Bool), y ∈ [false, true]) ∧ Becoming.«不穷» R Becoming.«一» false ∧ Becoming.«相续» R Becoming.«一» false false
+Becoming.«有限遍后而不返之例» : ∃ R,
+  (∀ (y : Bool), y ∈ [false, true]) ∧ (∀ (x : Bool), ∃ y, R x y) ∧ ¬Becoming.«定前» R ∧ ¬Becoming.«及» R false false
+Becoming.«遍后定前而无环之例» : ∃ R, (∀ (x : Nat), ∃ y, R x y) ∧ Becoming.«定前» R ∧ Becoming.«无环» R
+@Becoming.«无异当且仅当不分续» : ∀ {α : Type u_1} {R E F : Becoming.«际» α},
+  (∀ (x y : α), ¬Becoming.«异» R E F x y) ↔ ∀ (x y : α), Becoming.«续» R E x y → ¬¬F x y
+Becoming.«静分续而有异之例» : Becoming.«异» (fun a b => b = !a) Becoming.«一» Becoming.«静» false true
+Becoming.«非有常之类不含于核之例» : ∃ R, ¬Becoming.«有常» R Becoming.«一» ∧ ¬Becoming.«核» R Becoming.«一» false true
+@Becoming.«皆不生当且仅当皆非无缘» : ∀ {α : Type u_1} (R : Becoming.«际» α),
+  (∀ (y : α), ¬Becoming.«生» R Becoming.«一» y) ↔ ∀ (y : α), ¬¬∃ x, R x y
+@Becoming.«所依无则依者无» : ∀ {α : Type u_1} {R : Becoming.«际» α} {P Q : α → Prop},
+  Becoming.«依» R P Q → (¬∃ x, P x) → ¬∃ y, Q y
+@Becoming.«依之传» : ∀ {α : Type u_1} {R R' : Becoming.«际» α} {P Q S : α → Prop},
+  Becoming.«依» R P Q → Becoming.«依» R' Q S → Becoming.«依» (Becoming.«而» R R') P S
+Becoming.«不依之例» : ∃ R P Q, ¬Becoming.«依» R P Q ∧ (¬∃ x, P x) ∧ ∃ y, Q y
+@Becoming.«无环则无俱有» : ∀ {α : Type u_1} {R : Becoming.«际» α}, Becoming.«无环» R → ∀ {x y : α}, ¬Becoming.«俱有» R x y
+Becoming.«生亡并之例» : ∃ R, Becoming.«生» R Becoming.«一» () ∧ Becoming.«亡» R Becoming.«一» ()
+Becoming.«亡于静而住于一之例» : ∃ R x, Becoming.«亡» R Becoming.«静» x ∧ Becoming.«住» R Becoming.«一» x
+Becoming.«无缘不住而他有后之例» : ∃ R,
+  (∀ (x : Nat), ¬R x 2) ∧ (∀ (E : Becoming.«际» Nat), ¬Becoming.«住» R E 2) ∧ Becoming.«有后» R Becoming.«一» 0
+Becoming.«自缘而不生之例» : ∃ R, R () () ∧ ∀ (E : Becoming.«际» Unit), Becoming.«类» E → ¬Becoming.«生» R E ()
+Becoming.«有前不有常而亡之例» : Becoming.«有前» Becoming.Map.short Becoming.«一» true ∧
+  ¬Becoming.«有常» Becoming.Map.short Becoming.«一» ∧ Becoming.«亡» Becoming.Map.short Becoming.«一» true
+Becoming.«不有常而不穷之例» : ∃ R,
+  ¬Becoming.«有常» R Becoming.«一» ∧ Becoming.«有前» R Becoming.«一» (some 1) ∧ Becoming.«不穷» R Becoming.«一» (some 1)
+Becoming.«无相而非亦无相之例» : ∃ P, ¬Becoming.«有相» P ∧ ¬Becoming.«有相» fun x => ¬P x
+Becoming.«无能无所之例» : ∃ R, (¬∃ x, Becoming.«能» R x) ∧ ¬∃ y, Becoming.«所» R y
+Becoming.«像不保之例» : ¬Becoming.«则» (Becoming.«像» (fun b => !b) fun a b => a = true ∧ b = false) fun p q =>
+    p = true ∧ q = false
+@Becoming.«类内有常则线相随» : ∀ {α : Type u_1} {R E S : Becoming.«际» α},
+  Becoming.«类» E →
+    Becoming.«则» S E →
+      Becoming.«有常» R S →
+        ∀ {u' z' : α}, Becoming.«相续» R E u' z' → ∀ {u : α}, S u' u → ∃ z, Becoming.«相续» R E u z ∧ S z' z
+@Becoming.«核同则同不穷» : ∀ {α : Type u_1} {R E : Becoming.«际» α},
+  Becoming.«类» E → ∀ {y y' : α}, Becoming.«核» R E y y' → Becoming.«不穷» R E y → Becoming.«不穷» R E y'
+Becoming.«生于核下可变之例» : ∃ β R a b,
+  Becoming.«核» R Becoming.«一» a b ∧ Becoming.«生» R Becoming.«一» a ∧ ¬Becoming.«生» R Becoming.«一» b
+Becoming.«不穷与亡不同核之例» : ∃ R,
+  Becoming.«不穷» R Becoming.«一» (some ()) ∧
+    Becoming.«亡» R Becoming.«一» none ∧ ¬Becoming.«核» R Becoming.«一» (some ()) none
+Becoming.«逆核不含于核之例» : ∃ R, Becoming.«核» (Becoming.«逆» R) Becoming.«一» 0 1 ∧ ¬Becoming.«核» R Becoming.«一» 0 1
+Becoming.«无始而有终之例» : ∃ R, Becoming.«不穷» (Becoming.«逆» R) Becoming.«一» 0 ∧ Becoming.«亡» R Becoming.«一» 0
+Becoming.«依于无始而有始之例» : ∃ R E,
+  Becoming.«类» E ∧
+    (Becoming.«依» R (fun x => x.fst = true) fun y => y = (false, 0)) ∧
+      Becoming.«不穷» (Becoming.«逆» R) E (true, 0) ∧ Becoming.«生» R E (false, 0)
+Becoming.«相须之例» : (Becoming.«相须» (fun u v => u.fst = u.snd.fst ∧ v.fst = u.fst ∧ v.snd.fst = u.snd.fst)
+    (fun u v => u.fst = v.fst) fun u v => u.snd.fst = v.snd.fst) ∧
+  Becoming.«合» (fun u v => u.fst = v.fst) (fun u v => u.snd.fst = v.snd.fst) (false, false, false)
+      (false, false, true) ∧
+    (false, false, false) ≠ (false, false, true)
