@@ -261,8 +261,8 @@ def _dynamic(e, at: str, closed: dict, by_id: dict, repo: Repository, known: set
         if not _text(x['edge']):
             fail(where + '.edge', 'every exit names its edge, a text {en, zh}')
         closed_in(where + '.strength', x['strength'], 'exit_strengths')
-        if x['strength'] == 'exact' and x['law'] is None:
-            fail(where + '.law', 'an exact exit names its law')
+        if x['strength'] in ('exact', 'witness') and x['law'] is None:
+            fail(where + '.law', ('an exact' if x['strength'] == 'exact' else 'a witness') + ' exit names its law')
         recorded(where + '.records', x['records'])
         anchored(where + '.source', x['source'])
     for where, t in parts('transitions'):
@@ -404,7 +404,8 @@ def page(atlas: dict) -> str:
            'one scale, and an entry with no record says whether it is argued, conjectured, a reading or open, and cites '
            "where. Hypotheses are quoted from the records by their place in the record's list, counted from 1. No entry "
            'marks a dynamic good or bad; what one does to what lies beyond its couplings is under *Beyond its couplings*.', '',
-           f'{len(atlas["dynamics"])} dynamics, by family:', '', '| Family | Dynamics |', '|---|---:|']
+           f'{len(atlas["dynamics"])} dynamics, by family. It is a catalogue to look things up in, not to read through: each '
+           "family opens with an index, and an entry's section holds the rest.", '', '| Family | Dynamics |', '|---|---:|']
     out += [f'| [{f["id"]}. {f["en"]}](#family-{f["id"].lower()}) | {atlas["counts"][f["id"]]} |' for f in families]
     for f in families:
         listed = [d for d in atlas['dynamics'] if d['family'] == f['id']]
@@ -412,10 +413,10 @@ def page(atlas: dict) -> str:
         if not listed:
             out.append('No dynamic listed yet.')
             continue
-        out += ['| Dynamic | Mechanism | Records | Base | Standing | Exits | Open |', '|---|---|---|---|---|---:|---:|']
+        out += ['| Dynamic | Records | Base | Standing | Exits | Open |', '|---|---|---|---|---:|---:|']
         for d in listed:
             standing = '; '.join(f'{s["status"]} ({s["kind"]})' for s in d['standing']) or f'{d["standing_without_record"]}, no record'
-            out.append(f'| [{_cell(_name(d))}](#{d["id"]}) | {_cell(_line(d["mechanism"]))} | '
+            out.append(f'| [{_cell(_name(d))}](#{d["id"]}) | '
                        + (', '.join(_record(r) for r in d['records']) or '—')
                        + f' | {d["base"] or "—"} | {standing} | {len(d["exits"])} | {len(d["open"])} |')
         out.append('')

@@ -1,0 +1,1590 @@
+{
+ "pass": [
+  {
+   "key": "A",
+   "report": {
+    "file": "/Users/ren/tmp/aa-families/pass2/A.out.json",
+    "entries_written": 28,
+    "corrections": [
+     {
+      "id": "attraction-is-not-returning",
+      "verdict": "kept",
+      "why": ""
+     },
+     {
+      "id": "every-loss-passes-a-juncture",
+      "verdict": "changed",
+      "why": "Both findings are right. The premises the correction added are 02 r-a-source-before-a-juncture's words, and removing reach_within_listed as a deadline is right (the record's does_not_show disclaims a bound; Lean gives a trace of bounded length). Two changes. The World clause, premises included word for word, moved into the turned_at_juncture transition, which keeps every qualifier and brings the mechanism to 1131 characters. reach_within_listed was left declared with no clause, so its clause returns to the mechanism in 02 r-reaching-before-and-after-a-juncture's words, not as a window."
+     },
+     {
+      "id": "loss-of-renewal-for-good",
+      "verdict": "kept",
+      "why": ""
+     },
+     {
+      "id": "margin-of-a-regime",
+      "verdict": "kept",
+      "why": ""
+     },
+     {
+      "id": "threshold-in-the-state-plane",
+      "verdict": "kept",
+      "why": ""
+     },
+     {
+      "id": "consumption-ends-with-feeders",
+      "verdict": "kept",
+      "why": ""
+     },
+     {
+      "id": "a-cascade-along-total-dependence",
+      "verdict": "changed",
+      "why": "The HIGH fix is right: Coupled.Relay.cycles stays within 3 and `∀ N, ¬ LastChange.StillFrom`, and Indexed.ends_iff_within gives a finite check of ending and needs ReadsPointwise. 'Under mutual support' on the band clause and 'read condition by condition' are both needed. I kept all of them. Only the form changed: the correction said 'exact and does not rise' twice, and these are now one sentence for the band and the bound (02 rows r-rest-on-coupled-webs and r-thresholds-beyond-a-band). The webs-with-a-recent-giving clause is added separately."
+     },
+     {
+      "id": "a-whole-of-every-part",
+      "verdict": "changed",
+      "why": "The added open item (no witness drops the gate or the listing) is true to whole-drawing-beyond-renewal-ends' does_not_show, but that record leaves this entry by assignment. The item and its neighbours stay in family B's entry of that id, whose open already holds all four. The other three open items, from a-whole-of-every-part, are unchanged."
+     },
+     {
+      "id": "confined-rise-within-a-whole",
+      "verdict": "kept",
+      "why": ""
+     },
+     {
+      "id": "ending-laws-as-regimes-on-a-lineage",
+      "verdict": "changed",
+      "why": "The restored qualifiers are 04's words and right. 'Where each active member takes from the condition and no cohort lists a member twice' (Lean: multiplying_takers_stop's hypotheses) moved whole into the takers' transition, with multiplying_takers_stop declared there. 'Where its reach so depends; it does not say that nothing of the kind stands later' stays in the mechanism. Nothing is dropped; the mechanism goes from 1385 to 1232 characters with the new lineage clause."
+     },
+     {
+      "id": "a-rule-with-no-holder-does-not-return",
+      "verdict": "kept",
+      "why": ""
+     },
+     {
+      "id": "a-reader-rebuilt-from-its-stock-ends-with-it",
+      "verdict": "kept",
+      "why": ""
+     },
+     {
+      "id": "selection-among-groups-by-ending",
+      "verdict": "kept",
+      "why": ""
+     },
+     {
+      "id": "market-finite-support-obstruction",
+      "verdict": "changed",
+      "why": "The exit is right, in 05 r-market-supported-finite-transition's words, so I kept it and gave it `to` never-leaving-a-guard (H holds that record and its end state, the original protection). I added Lasting.lasts_iff_ladder as an exact exit, as the first checker asked, but did not take its phrase that this law's draining is 'the necessary side' of it. Lasting.Drains.leaves says no admissible history stays; Lasts says every admissible step stays (the necessary side is lasts_iff_necessary). They are not two sides of one iff, so the edge states the ladder law alone."
+     },
+     {
+      "id": "market-protected-continuation",
+      "verdict": "changed",
+      "why": "Not in this family: merged into H's never-leaving-a-guard and not re-added. The clause the checker named, 'its two laws proved on the grammar in 03 §12' (05 r-market-protected-continuation), is still absent from H's mechanism in H.in.json; that is for H."
+     }
+    ],
+    "assigned": [
+     {
+      "item": "reserve-defers-ending is now A's",
+      "done": "Kept, family A, exits empty: no law gives a way out, and the record's L6 says a reserve defers and does not escape. The record's L6, L7, L8, L9, L10 and L12 were read against the mechanism. Added 02 r-dormancy-over-a-stretch to sources, since a reserve bridging to returning support is that entry's witness.",
+      "read": true
+     },
+     {
+      "item": "dormancy-over-a-stretch, a new entry",
+      "done": "Added, base World. It states ended_for_good and late_return_finds_none with finality as a separate premise that exhaustion alone does not give (02's words). decays_by_on and ends_within_on form the window transition, read from Reserve.lean's premises. Bridged.bridged is a witness exit, to null. Open is that ending is final for actual dependents.",
+      "read": true
+     },
+     {
+      "item": "becoming-dependence-dynamics",
+      "done": "Its own entry, three-outcomes-of-a-loss. Reason: loss-of-renewal-for-good already holds two records at about 1000 characters, its laws are on balanced flows, and these are single-step Web laws under Dependent with their own step convention (hypothesis 3), so a record there would bury them. continuing_restores and consumed_continues_transformed are necessary exits (Lean: contrapositives of Dependent); Crossing.loss_does_not_decide is a witness. 'Constrained, not exhaustive or exclusive' is in the mechanism. loss-of-renewal-for-good gains a necessary exit `to` it, and its source.",
+      "read": true
+     },
+     {
+      "item": "webs-with-a-recent-giving on a-cascade-along-total-dependence",
+      "done": "Record, hypothesis 1, declarations, a clause in 02's row words, an exact-threshold transition and a Momentum witness exit are added. The transition also cites thresholds-beyond-a-band, whose laws it uses. Removed 'webs with a recent giving' from the coupled-webs open line and 'coupled conditions with a recent giving' from threshold-in-the-state-plane's open line. Only 'Rest within a band for webs with a recent giving' (02 #open) stays. threshold-in-the-state-plane also gains 02 r-webs-with-a-recent-giving as a source. Separately, its open now gives README §3's measured reach of the rising premise, because I removed the mechanism's 'not shown' sentence.",
+      "read": true
+     },
+     {
+      "item": "a-whole-of-every-part: remove whole-drawing-beyond-renewal-ends",
+      "done": "Removed the record, its hypotheses, its four declarations, the Listed and family-excess clauses, the transition, the three witness exits and the three open items. Renamed the entry's name (id unchanged), since its second half was that record's. It now has an exact exit (AllWhole.persists_iff, record law 1) and a witness exit (Generations.allWhole_never, record law 6) `to` whole-drawing-beyond-renewal-ends, plus a mechanism sentence and a source pointing there.",
+      "read": true
+     },
+     {
+      "item": "substitution-preserves-consumption",
+      "done": "Its own entry. Reason: its main law is an exact law of every web about the class under a change of dependence, and its instance has a formation that does not end, whereas consumption-ends-with-feeders bounds activity, so as a record there it would read against that entry's mechanism. Exact exit consumingIn_kept_iff, witness Lone.own_witness_lost. consumption-ends-with-feeders gains a sufficient exit (Substitution.persists_consuming, a law over every Law of the family, not a witness) `to` it, carrying the modelling premise; three-outcomes-of-a-loss's transformed exit also points to it.",
+      "read": true
+     },
+     {
+      "item": "05's four routes of transition (D65)",
+      "done": "Added four-routes-of-transition: standing reading, no record, base null, the paragraph at 05 line 360 quoted whole as the mechanism, and four transitions of kind 'route (reading)' with no declarations. Sources are 05 r-market-model-share-margin-and-ends, the anchor directly above the paragraph, and 05 #markets. B's market-model-share-margin-and-ends also carries this reading as a transition; see elsewhere.",
+      "read": true
+     },
+     {
+      "item": "what-bounds-offspring-numbers",
+      "done": "Record on ending-laws-as-regimes-on-a-lineage. Its law is used: that record's evidence names Reproduction.Flow.lineage_ends as 'the dissipation regime, read on every member of every cohort'. Added reproducing_within, lineage_ends and closed_lineage_lowered as a window transition, Relay.relay as a witness exit, the record's second does_not_show, hypothesis 1 and the 04 source. Its identities and Fisher's exact case are not entered: no end or return is stated by them, and they fit selection, not this family.",
+      "read": true
+     },
+     {
+      "item": "market-protected-continuation and the-last-change-of-a-run",
+      "done": "Not re-added.",
+      "read": false
+     }
+    ],
+    "elsewhere": "Beyond run/elsewhere.txt, none fixed.\n\n1. market-partial-correction-boundary is in no family. I searched by record id in records and exits across pass2/?.in.json and in entries/dynamics.json. The first checker flagged this and it was not on my list, so I did not enter it. I read it whole: Lasting.avoids_iff_closed is an exact region-not-left law and MarketInstances.lands_iff_margin an exact tipping in the model, with 'not a complete basin or a measured threshold' to travel with them. It needs a decision at the join; A's market-finite-support-obstruction or H's never-leaving-a-guard are the neighbours.\n\n2. G.in.json, where-a-run-of-a-regime-comes-to-rest, open: it still carries 'coupled conditions with a recent giving' from the stale line of where-a-run-of-a-regime-comes-to-rest.json. The same removal done here is needed there.\n\n3. Two entries carry D65's routes. B.in.json market-model-share-margin-and-ends has a 'route (reading)' transition whose records field is ['market-model-share-margin-and-ends'], which shows a reading under a theorem record's standing. The join should keep one, or point B's at four-routes-of-transition.\n\n4. theories/becoming/results/records/threshold-in-the-state-plane.json does_not_show 3, 'The threshold beyond the band, where the search stops at hi + 1': kept in the entry because it holds of resting below the draw. For ending, one condition with a recent giving is the adjusted regime (Coupled.Indexed.Recent.adjusted), and the bounded laws take any KeepsBelow law, so ending beyond the band on a bounded run is stated by composition, though no named theorem does this. The line reads wider than it is. Low.\n\n5. theories/becoming/results/records/relational-renewal-classification.json law 2 lists Flow.stays_below_at and Flow.ends_below_at, but not Flow.ends_below, which its home (02 line 111) cites. The name is bound only in groups-whose-conditions-are-coupled and own-count-misses-joint-excess. The entry keeps it from the home. Low.\n\n6. Near the corrected text: first_checker's sentence that Lasting.lasts_iff_ladder is 'the exact condition of which market-finite-support-obstruction's law is the necessary side' is wrong in the same way as a home line would be. Drains.leaves says no admissible history stays, and the necessary side of lasts_iff_ladder is lasts_iff_necessary. It is not in the repository, so nothing there needs changing. It should not be repeated in the board.\n\n7. Mechanism length, still over about 1000 characters: a-cascade-along-total-dependence (about 1500, holding five records), ending-laws-as-regimes-on-a-lineage, fixation-by-drift, selection-among-groups-by-ending, confined-rise-within-a-whole, a-rule-with-no-holder-does-not-return, threshold-in-the-state-plane, what-a-gate-keeps, every-loss-passes-a-juncture, necessarily-drawn-is-not-returning, substitution-preserves-consumption. I shortened only where a clause already stood in open or a transition, because an earlier high error came from a shortening here. Further cuts would drop qualifiers from the mechanism, and the pilot's largest is 851, so this is for the renderer or the join to judge.\n\n8. T1N and T1R stay 'frozen' in tests, since the closed list has no 'refused'. The refusal is stated in the open line copied from 02 #open.\n\n9. The worktree /Users/ren/tmp/aa-families/land shows four tracked files modified (dynamics.json, vocabulary.json, atlas.py, test_atlas.py). They were not changed by this step. I edited nothing there.",
+    "validator": "{\n \"errors\": [],\n \"waiting\": [\n  \"dynamics: a-whole-of-every-part: exits[1].to: whole-drawing-beyond-renewal-ends is not another entry of the atlas\",\n  \"dynamics: market-finite-support-obstruction: exits[0].to: never-leaving-a-guard is not another entry of the atlas\",\n  \"dynamics: market-finite-support-obstruction: exits[1].to: never-leaving-a-guard is not another entry of the atlas\"\n ],\n \"entries\": 28\n}",
+    "read": "Read in the worktree through a helper printing statement, laws with declarations, hypotheses, does_not_show, counterexamples and next_delta, or the home section by id.\n\nRecords read that way: attraction-is-not-returning, every-loss-passes-a-juncture, reaching-before-and-after-a-juncture, a-source-before-a-juncture, relational-renewal-classification, regulation-from-one-side-and-locally, becoming-dependence-dynamics, margin-of-a-regime, threshold-in-the-state-plane, where-a-run-of-a-regime-comes-to-rest, coupled-webs, coupled-regimes, rest-on-coupled-webs, thresholds-beyond-a-band, webs-with-a-recent-giving, consumption-ends-with-feeders, a-whole-of-every-part, whole-drawing-beyond-renewal-ends, substitution-preserves-consumption, what-bounds-offspring-numbers, dormancy-over-a-stretch, reserve-defers-ending, ending-laws-as-regimes-on-a-lineage, confined-rise-within-a-whole, a-rule-rebuilt-from-the-members-it-limits, the-stock-buys-time-where-the-rebuild-draws-on-it, selection-among-groups-by-ending, groups-whose-conditions-are-coupled, market-finite-support-obstruction, market-supported-finite-transition, market-partial-correction-boundary.\n\nHomes read: each of those records' home section, 02 section 3 and T1's and T2's leading text, 05's markets paragraphs and table, 04 line 201 and the 04 hypotheses line at 220.\n\nLean statements read: Flow.ends_below, ends_below_at, stays_below_at, never_returns_below; Web.continuing_restores, consumed_continues_transformed, consumed_ends_when_fixed; Crossing.loss_does_not_decide; RegimeMargin ends_iff_below, rises_superadditive, ends_beyond_giving, rises_by_draw, not_before, falls_within, leading_exact, Adjusted.fates, falls_iff_below, comes_to_rest, Notch.no_threshold, Crossing.crosses; Coupled ends_iff_within, ends_iff_below_within, comes_to_rest, Relay.cycles, alternation_never_rests; Recent.step, keepsBelow, adjusted, Momentum.threshold_falls_with_recent; Web.consumingIn_kept_iff, consuming_survives_iff; Substitution.persists_consuming, Lone.own_witness_lost, stepwise_includes_substitution; Generations.allWhole_never; AllWhole.persists_iff, ends_of_part; Web.decays_by_on, ends_within_on, ended_for_good, late_return_finds_none; Bridged.bridged; Carries.lasts, chain_ends, ends_within; Web.lpo_of_ending; Restored.returns; Reproduction.Flow.lineage_ends, reproducing_within, closed_lineage_lowered, Relay.relay; dissipation_degenerates_every_member; 三源之表, 恒取逾生则尽, 以储买时当且仅当取于储, 取于供者复.\n\nREADMEs read in part: experiments/margin-measured (lines 70-77), need-measured-in-advance and stocked-above-the-need (heads and Status), commons-gated-renewal (searched, lines 28, 33, 46, 50, 60 printed).\n\nRead only as entries, without rereading their records, since they had no correction: basins-of-a-determined-law, necessarily-drawn-is-not-returning, not-going-out-of-a-region, degeneration-from-a-horizon, exit-from-a-margin, co-ending-along-dependence, fixation-by-drift, what-a-gate-keeps, slowing-down-before-an-own-end.\n\nOnly searched: verdict words over name, mechanism and beyond; whether other families hold given record ids; whether each test folder's tie holds beyond the above (the first checker's result is taken for those). Nothing run but grep, sed, python3 reads and the validator."
+   }
+  },
+  {
+   "key": "B",
+   "report": {
+    "file": "/Users/ren/tmp/aa-families/pass2/B.out.json",
+    "entries_written": 25,
+    "corrections": [
+     {
+      "id": "the-rest-outruns-the-renewal",
+      "verdict": "changed",
+      "why": "The dropped open item stays dropped and the score clause is right (Flow.outrun_reading_alike, Exclusion.lean:173). But the corrected `beyond` opened 'Whatever a member outside the rest takes, the level stays below m', with no premise. 05 #r-the-rest-outruns-the-renewal and Flow.outrun_below need the rest's excess, the gate and a level below n + m, so I prefixed them."
+     },
+     {
+      "id": "what-taking-all-excludes",
+      "verdict": "kept",
+      "why": ""
+     },
+     {
+      "id": "what-an-optimum-does-beyond-what-couples-in",
+      "verdict": "changed",
+      "why": "Mechanism and transition kept: they match 05's home and Web.optimum_broken_iff_capacity (Optimum.lean:1692). In `forbids`, the replacement 'the clause on trained systems conjectured' dropped T3's Standing qualifier 'with partial support' (05 #t3), so I restored it. The assigned commuting-learner additions were made here too."
+     },
+     {
+      "id": "what-a-set-point-optimum-does-beyond",
+      "verdict": "changed",
+      "why": "The mechanism's n steps and n + m start are right (Flow.held_excess_ends, SetPointOptimum.lean:759), and the beyond's 'among the outcomes open to a part' is right (Optimum.nearing_beyond). One further fix in the same field: 'where a step can lose what it takes ...' rests only on Topped.nearing_either, a witness (SetPointOptimum.lean:966), so it now reads 'in a witness'."
+     },
+     {
+      "id": "others-drawing-first-end-the-base",
+      "verdict": "changed",
+      "why": "Exits 1 and 3 kept (Next.frontier_leaves, Holding.doubling_drawn_first read). The corrected `beyond` still dropped the premise its own issue named: K t z + R (K t z) at most the level, plus capacity and at least two steps (Next.frontier_ends_drawn_first, Optimum.lean:7920). Without it the sentence is false, so I replaced it with the home's words. Exit 2 claims the restoring, which only Web.Next.frontier_rebuilds states, so its law moved there and its capacity premise was added."
+     },
+     {
+      "id": "coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it",
+      "verdict": "changed",
+      "why": "The beyond's 'leaves nothing' is right (Coupled.drains_below), a true fix of 'drained'. In the transition, 'every perfect profile keeps it' is now Coupled.gated_threshold's words: keeps exactly the need, and from a start meeting it, it is met at every step."
+     },
+     {
+      "id": "several-optimizers-drain-by-their-joint-capacity",
+      "verdict": "changed",
+      "why": "The iff is right (Optimum.mutual_lowers_iff, Web.mutual_broken_iff_capacity). 'The condition' had no referent in a standalone transition, so it now reads 'a condition beyond every optimizer's family', the Lean premise. Dropped open item and #not-shown source kept: the sentence is at 05 lines 422-431 under #not-shown."
+     },
+     {
+      "id": "re-optimizing-above-a-renewal-ends-it",
+      "verdict": "changed",
+      "why": "Exit 3's 'at renewal one' is right (Renewing.restraint_holds_more, Optimum.lean:3451). The corrected `beyond` still dropped a balanced course of mutual best responses, what those outside give (at most r), a positive need throughout and a start meeting it (Web.mutual_course_lost, Optimum.lean:2815); I restored them. Beyond the correction: exit 1 and the transition said 'stays at the need' where Web.course_kept_iff has m ≤ level, now 'at or above'; the mechanism's ungated clause gets 'at most r' and 'for a positive a' from the record."
+     },
+     {
+      "id": "a-weighting-faster-than-renewal-ends-the-base",
+      "verdict": "changed",
+      "why": "The open fix is right: 'rebuilding from below' removed as stale. The corrected `beyond` still lacked capacity and two steps (Optimum.frontier_exhausts, Optimum.lean:7299, long and drawsDown), so I added them there and the two steps to the mechanism. Exit 2 now points to H's optima-rebuild-a-depleted-base."
+     },
+     {
+      "id": "what-a-rise-draws-from-beyond",
+      "verdict": "kept",
+      "why": ""
+     },
+     {
+      "id": "risk-minimization-on-a-shared-renewal",
+      "verdict": "kept",
+      "why": ""
+     },
+     {
+      "id": "market-model-share-margin-and-ends",
+      "verdict": "changed",
+      "why": "Family A and the transition's 'with correction paid and no error in q' kept (05 #r-market-model-share-margin-and-ends). The corrected `beyond` restores the home's words, but they carry 'failure' unquoted, against the verdict-word rule, so the phrase is now quoted as the home's."
+     },
+     {
+      "id": "where-a-rising-take-ends",
+      "verdict": "kept",
+      "why": ""
+     },
+     {
+      "id": "no-finite-part-bears-taking",
+      "verdict": "kept",
+      "why": ""
+     },
+     {
+      "id": "loss-beyond-a-region",
+      "verdict": "kept",
+      "why": ""
+     },
+     {
+      "id": "keeping-forgoes-the-renewal-at-the-need",
+      "verdict": "changed",
+      "why": "The removal of stale and duplicate open items was right. The assigned split took the step coupling and steps-met out, so the open items from those records went too. 'It is one optimizer's law' is CD §2's sentence on the step-coupling row, not on this one, so it moved to the exit pointing to H."
+     },
+     {
+      "id": "horizon-optima-hold-the-greatest-renewal",
+      "verdict": "changed",
+      "why": "'In a witness under a gate' is right (Holding.gated_alike, Optimum.lean:4268). I added 'met at the start' to the second clause (Web.frontier_broken_left, Web.frontier_rebuilt_valued). The checker left the stale open phrases ('or discounting later draws', 'rebuilding from below'); run/elsewhere.txt lists them, so they are removed. Exit 2's `to` was wrong after the split: it now names H's a-step-coupling-keeps-at-every-horizon."
+     },
+     {
+      "id": "position-does-not-protect",
+      "verdict": "kept",
+      "why": ""
+     },
+     {
+      "id": "unselected-beyond-the-coupling-closure",
+      "verdict": "changed",
+      "why": "The correction's exit 1 keeps 'unless a reader is admitted from outside (a witness)'. That is the CD line 48 clause listed in run/elsewhere.txt and it is wrong: PoolCourse.scheduled_through has the scheduled pool recruiting through itself, and scheduled_apart couples the loss apart through a member its course without the loss holds too (PoolCourse.lean:46-51, 246-253). I removed it and made it a separate witness exit to D's a-pool-that-recruits-through-itself saying what the Lean says, sourced to the home. Exit 2's 'the clearer's closure' kept."
+     },
+     {
+      "id": "the-test-season-meets-the-optimum-laws",
+      "verdict": "changed",
+      "why": "The mechanism wording is right and kept (Season.site_optima, OptimumSeason.lean:503; Season.unshared_optima:552). The clause on the catch alone rests on Season.site_optima, which the declarations lacked, so I added it; it is in the record's laws."
+     }
+    ],
+    "assigned": [
+     {
+      "item": "unselected-beyond-the-coupling-closure: add selection-through-couplings",
+      "done": "Added with hypotheses 1, 2, 3, 6, 7 and laws Web.selects_alike_iff, Web.separates, Web.selects_alike_all_iff, Flow.uncoupled_beyond_coupling, Flow.unselected_beyond_coupling(_responsive), Clearing.unselected, Diversion.favours, Diversion.blind_to_source. The mechanism now opens with the law, 'near-definitional' from the record, and Clearing and Diversion are labelled witnesses in `beyond`. Its does_not_show is copied. Name changed to 'Selection blind beyond the coupling closure'; id kept.",
+      "read": true
+     },
+     {
+      "item": "what-a-pools-acts-respond-to (decide)",
+      "done": "Added. Flow.response_alike_pool and Flow.act_unselected_by_acts_pool state the same closure law at every step of two flows. ExchangeLaw.response_not_fixed_by_coupling and Clearing.separated_unresponded replace the old clause 'not shown to respond' with what is proved: coupling bounds response and does not fix it; separated, not responded.",
+      "read": true
+     },
+     {
+      "item": "testing-within-couplings (decide)",
+      "done": "No record here. Its own content (exclusion of a claim at a step, Web.tail_unexcluded, exclusion relative to a model, judgments) says what a formation can rule out and states no course. Its one course-level law, Flow.uncoupled_beyond_coupling, is also in selection-through-couplings' laws and is declared through that. The corollary relation is copied in `open`. No family's input holds this record (grepped in the .in.json files); whether D should is for the join.",
+      "read": true
+     },
+     {
+      "item": "where-two-courses-rejoin (decide)",
+      "done": "Added. Flow.stays_beyond_response is in `beyond` with its premises. Flow.closes_through_coupling_apart is an exit marked necessary (read: closing yields such a formation). Replenishing.closes_through is a witness exit. Flow.exchange_apart_of_change and Flow.gap_made_up are declared. The comparison-not-a-standard hypothesis and does_not_show are kept.",
+      "read": true
+     },
+     {
+      "item": "joint-difference-making: read whole, enter or give a reason",
+      "done": "Entered as new entry joint-difference-making, base any process. The run-level statements do state a course: Renewable.levels is a law of levels, Renewable.overdraw_consumes covers any start, and depletion_is_joint and no_finite_segment_makes_difference say the tail fixes the outcome. Pool and depleting are labelled witnesses. The disclaimer is in the mechanism and `open`: no causal theory, responsibility, duty or ranking. own-count-misses-joint-excess' `beyond` cross-refers to it.",
+      "read": true
+     },
+     {
+      "item": "what-an-optimum-does-beyond-what-couples-in: add a-commuting-learner-drives-no-unread-choice",
+      "done": "Record, hypothesis 1, eight declarations and the home source added; `forbids` names Weighted.Commutes.start_expect. The counterexample is kept in `forbids` in the Standing's words (first wording fails for the separable family's exact expected update; the bay rises) and in `open` from does_not_show, along with the mirror test, single-run and prior-restraint items.",
+      "read": true
+     },
+     {
+      "item": "keeping-forgoes-the-renewal-at-the-need: give the step coupling to H",
+      "done": "Removed a-step-coupling-keeps-at-every-horizon and steps-met-again-after-a-fall from records, with their declarations, hypotheses, clauses, transition, open items and sources. Kept what keeping forgoes and the fixed w, with 'against the course ending at nothing' from the record. An exit with `to` a-step-coupling-keeps-at-every-horizon points to H; its law and exit-level record name H's result, which is the pointer. The H .in.json does not yet hold steps-met, which I took as the H pass's work.",
+      "read": true
+     },
+     {
+      "item": "horizon-optima-hold-the-greatest-renewal: absorb H's copy",
+      "done": "Took only Optimum.drawn_add_shortfall and Optimum.holding_most (both in the record's laws) and the link to the fixed coupling, as an exit to keeping-forgoes. H's mechanism, Web.frontier_broken clause and open items are already held here or in keeping-forgoes. Mechanism length unchanged at 1095.",
+      "read": true
+     },
+     {
+      "item": "no-finite-part-bears-taking stays here; coupling-closures-of-training-pipelines and neighbours left",
+      "done": "no-finite-part kept in B with its correction read against 02's home, the record and Spray.spray and Cycle.closed_more. Correspondences not entered.",
+      "read": true
+     }
+    ],
+    "elsewhere": "Not fixed. Beyond run/elsewhere.txt:\n\n1. theories/becoming/results/records/the-gap-for-ones-own-act.json line 62 (does_not_show) and line 81 (next_delta) say the general form of favouring what reaches beyond, and the rising share, remain open. That is stale: Flow.favours_reaching_beyond (SelectionReach.lean:254) is the general form, and Flow.share_not_lower with Flow.share_moved_rises (what-a-rise-draws-from-beyond) state the share. selection-through-couplings.json line 236 (next_delta) is stale likewise on the share. I left this item out of the entry's open.\n\n2. theories/becoming/COLLECTIVE-DIRECTION.md line 49: 'where the rest outruns the renewal no weighting selects a member's restraint' overstates. Flow.outrun_reading_alike (Exclusion.lean:173) is at need one and only for a score reading the condition from the rest's end on; 05's home says 'no weight on such a reading'. I corrected what-a-rise's exit 1. H's restraint-within-the-joint-slack mechanism copies the same words, for H's pass.\n\n3. theories/becoming/chapters/05-COLLECTIVES.md, r-joint-difference-making: the record's Renewable laws (depletion_is_joint, no_finite_segment_makes_difference, breaking_event_makes_step_difference) appear in no chapter. I searched theories/ for depletion_is_joint: only the record and generated indexes hit. This is against AGENTS' 'a result is stated in its record and its home section'. The new entry sources them to the record's laws.\n\n4. theories/becoming/chapters/05-COLLECTIVES.md line 187 and what-a-set-point-optimum-does-beyond.json line 324: 'where a step can lose what it takes, the order by distance has the draining step among its optima' is stated generally, while Topped.nearing_either is one witness.\n\n5. theories/becoming/results/records/keeping-forgoes-the-renewal-at-the-need.json lines 133 and 167: 'A coupling added step by step' is listed as not shown; a-step-coupling-keeps-at-every-horizon states it. This is the same kind as elsewhere.txt B6 but a different line.\n\n6. theories/becoming/results/records/loss-beyond-a-region.json: Clearing.undermines_within_renewal, which the checker added to the entry's declarations, is in the record's counterexamples, not its laws. 'drawing is not dependence' rests on it, so I kept it; a strict reading of 'names from the record's laws' would drop it.\n\n7. H.in.json a-step-coupling-keeps-at-every-horizon still carries the stale open line 'or a discount; the optimum rebuilding from below' (elsewhere.txt B6), and the H input does not yet include steps-met.\n\n8. Join questions left as found: market-model is in this file with family A; whole-drawing-beyond-renewal-ends is also held by A's a-whole-of-every-part. Mechanisms above 1100 characters: unselected 1255 (it now carries five records), what-a-rise 1242, what-an-optimum 1236, set-point 1184, joint-difference-making 1155, re-optimizing 1153, position 1151, risk-minimization 1111, others-drawing-first 1101. I kept the qualifiers rather than trim them.\n\n9. git status in /Users/ren/tmp/aa-families/land shows atlas files already modified (dynamics.json, vocabulary.json, atlas.py, test_atlas.py). I did not write there.",
+    "validator": "{\n \"errors\": [],\n \"waiting\": [\n  \"dynamics: own-count-misses-joint-excess: exits[1].to: division-by-exclusive-footprints is not another entry of the atlas\",\n  \"dynamics: a-weighting-faster-than-renewal-ends-the-base: exits[1].to: optima-rebuild-a-depleted-base is not another entry of the atlas\",\n  \"dynamics: horizon-optima-hold-the-greatest-renewal: exits[1].to: a-step-coupling-keeps-at-every-horizon is not another entry of the atlas\",\n  \"dynamics: keeping-forgoes-the-renewal-at-the-need: exits[1].to: a-step-coupling-keeps-at-every-horizon is not another entry of the atlas\",\n  \"dynamics: unselected-beyond-the-coupling-closure: exits[2].to: a-pool-that-recruits-through-itself is not another entry of the atlas\"\n ],\n \"entries\": 25\n}",
+    "read": "Read in full: B.in.json entries and B.notes.json for every correction, absorb, first_checker and extractor_not_entered; run/elsewhere.txt. Read in full or in the sections used: 05-COLLECTIVES §1, §3, §6, §7, §8 up to the recruitment law, and #not-shown and #open; 02-MAP #r-no-finite-part-bears-taking, #r-far-conveying, #r-where-two-courses-rejoin; 03-KNOWING #r-selection-through-couplings and #r-testing-within-couplings; 07-SIGNIFICANCE #r-loss-beyond-a-region and the gap section. Records read whole (statement, hypotheses, laws, does_not_show, next_delta, related, counterexamples with long fields cut at display width): selection-through-couplings, what-a-pools-acts-respond-to, where-two-courses-rejoin, testing-within-couplings, joint-difference-making, a-commuting-learner-drives-no-unread-choice. Read in part: horizon-optima-hold-the-greatest-renewal and keeping-forgoes-the-renewal-at-the-need (statement, hypotheses, laws, does_not_show); re-optimizing, no-finite-part, a-weighting, the-gap and loss-beyond (laws or hypotheses used). Lean statements and docstrings read, proofs not read: about 60 theorems named in the corrections and additions, including Flow.outrun_*, held_excess_ends, race_ends_greatest, seeking_*, optimum_broken_iff_capacity, mutual_*, Next.frontier_* , doubling_drawn_first, Coupled.*, Renewing.*, gated_alike, frontier_broken_left, frontier_rebuilt_valued, frontier_exhausts, frontier_keeps*, Season.*, Cycle.closed_more, Spray.spray, favours_breaking_beyond, Weighted.Commutes.*, Renewable.* with Joint.lean lines 655-775, PoolCourse.lean header and scheduled_apart, Flow.response_alike_pool, stays_beyond_response, closes_through_coupling_apart. Only searched: the other families' .in.json for who holds which record; theories/ for depletion_is_joint; COLLECTIVE-DIRECTION rows by grep; PLAN.md for 'superadditive'; commons-gated-renewal README by grep. Not re-read against sources, beyond a verdict-word and duplicate-id scan: drawers-in-turn, a-race-for-position, whole-drawing-beyond-renewal-ends and own-count's mechanism, which had no correction to read. No Lean, make, gate, test suite or check_becoming.py was run; the only check run is the validator above, so this is reading evidence."
+   }
+  },
+  {
+   "key": "D",
+   "report": {
+    "file": "/Users/ren/tmp/aa-families/pass2/D.out.json",
+    "entries_written": 27,
+    "corrections": [
+     {
+      "id": "seeking-boundary",
+      "verdict": "changed",
+      "why": "Every replaced field checks: mechanism and beyond are 03#r-the-boundary-of-enough's words, and the open line is 08 line 335's. One change: Flow.unselected_beyond_coupling is not in either listed record's laws. It is selection-through-couplings law 6, the record 03 points to as 'blindness', so I added that record with its hypothesis 2 and its source."
+     },
+     {
+      "id": "locked-seeking",
+      "verdict": "changed",
+      "why": "The positive replacing the false negative is right against 03 line 99, but that reading has its own label [AI reading, D20, D26, D45], which the mechanism's lead label does not cover. I added the label and the anchor r-where-a-formations-acts-return. beyond now uses the home's antecedent, not 'such seeking'. The open line matches 02 line 438."
+     },
+     {
+      "id": "obscuration-and-reopening",
+      "verdict": "changed",
+      "why": "Dropping the negative is right. The replacement open line had three faults. It read 'the judgment' where the record law 4 has the changed history's. It dropped 'using up the inspection available' and 'nor does reopening with no inspection left'. And its 'Of reopening' tied the periphery's reopen to the reading's 复通, a tie no home makes. It now says 'beside them, not cited by them'. The negative is widened and rests on reading 03 line 353 and 07 line 672; a grep of chapters and records for 复通 and 偏蔽 finds only those readings and 06."
+     },
+     {
+      "id": "what-a-course-chosen-through-its-model-does-not-test",
+      "verdict": "changed",
+      "why": "The floor clause is 03 line 530's, but it stopped before 'and, where the shared start does not sense high, never senses high in the first' (floor_never_high, declared); restored. The exit's 'there' was ambiguous, now 'a formation sensing the two apart does not keep the task at every step in the second', Lean's contrapositive of alike_of_kept, kept negative. The informed_turns exit now points to a-reading-informed-and-revalued, as 03's reading does. I removed the mechanism's last sentence, which open already holds."
+     },
+     {
+      "id": "what-seeking-cannot-separate",
+      "verdict": "changed",
+      "why": "The declaration is right, but efe_seeking_keeps_order is expected-free-energy-and-its-terms law 10, not this record's, so I added that record with its hypothesis 4. Separately, the D45 reading is moved out of the witness exit's edge, because seeking_turns_tails is a second experiment, not a new likelihood. It is now a route (reading) transition naming selection-when-the-lumping-changes."
+     },
+     {
+      "id": "a-stop-passed-by-a-listing-that-fixes-the-sign",
+      "verdict": "kept",
+      "why": ""
+     },
+     {
+      "id": "a-prediction-read-by-what-it-predicts",
+      "verdict": "changed",
+      "why": "The added sentence is 03's reading word for word and stays. In the same condition, 'no general law of the basin is stated' became what was read: beyond the pace bound's course from the bottom, the record's laws state none of which start reaches which."
+     },
+     {
+      "id": "a-break-read-only-by-threshold",
+      "verdict": "kept",
+      "why": ""
+     },
+     {
+      "id": "a-reading-kept-by-its-update",
+      "verdict": "changed",
+      "why": "Base any type stays, with the mechanism keeping the split: 03's label starts 'root for closure', and elsewhere.txt lists root as holding only for that clause. The restored clauses are 03 line 524's. Shortened only by merging 'are kept by recording and are the least reading so kept'. Dropping the open item on a common response is right."
+     },
+     {
+      "id": "habit-lock-in-active-inference",
+      "verdict": "kept",
+      "why": ""
+     },
+     {
+      "id": "what-training-installs",
+      "verdict": "changed",
+      "why": "Both restorations are 07's table words and stay. To shorten, I removed the mechanism's last sentence, since open holds it, and reworded 'Among laws a reward settles on', keeping the optimum's frame label."
+     },
+     {
+      "id": "what-a-commuting-law-keeps-apart",
+      "verdict": "kept",
+      "why": ""
+     },
+     {
+      "id": "readings-within-what-they-read",
+      "verdict": "changed",
+      "why": "'Under such a map' is right against the record's law 5. The checker's open line states gap_new rightly, but it stood under 'No exit is stated' with a home source that does not say so; the law now sits in the mechanism and the line is gone. Also 'a family is complete exactly where' became 'some family says every reading', since Lean's complete_iff_alike is an existential."
+     },
+     {
+      "id": "learning-by-refutation",
+      "verdict": "kept",
+      "why": ""
+     },
+     {
+      "id": "a-counter-rule-read-from-its-own-share",
+      "verdict": "kept",
+      "why": ""
+     },
+     {
+      "id": "a-cascade-at-the-histories-reached",
+      "verdict": "kept",
+      "why": ""
+     },
+     {
+      "id": "a-pool-that-recruits-through-itself",
+      "verdict": "kept",
+      "why": ""
+     },
+     {
+      "id": "a-code-formed-between-formations",
+      "verdict": "kept",
+      "why": ""
+     },
+     {
+      "id": "a-code-held-as-counts",
+      "verdict": "changed",
+      "why": "The forbids correction is 05 line 318 word for word and stays. I also applied the checker's low note: the reading clause gains 'for a renaming the same for every meaning' from that line."
+     }
+    ],
+    "assigned": [
+     {
+      "item": "selection-when-the-lumping-changes",
+      "done": "Entered with that id, family D, base any process, Revising marked as a named model. Exits: exact keeps_through_iff and product_feasible_iff; witnesses opens_with_correction (naming opens_without_correction) and closes_choice; witness controlled_revision to a-revision-that-opens-a-correction (H). One exact-threshold transition. All does_not_show items copied. No test: no README or home ties a test folder to it.",
+      "read": true
+     },
+     {
+      "item": "experiment-needs-return",
+      "done": "Entered as a-wrong-projection-admitted-at-every-step, base a named model (Confound), holding misattributes and confounded, with varied_refutes as a witness exit. No 'only' on that exit (see elsewhere). The static fixing and history laws are left out as told. No test folder ties to Confound: the grep of experiment READMEs found the record only in lean and correspondence READMEs that do not test Confound.",
+      "read": true
+     },
+     {
+      "item": "evidence-through-change",
+      "done": "Entered with that id, base periphery: lawful_history_preserves_known and the certificate in the mechanism; understated_change, predicting_change and new_change as witness exits; error_growth_budget as a window-or-deadline transition, labelled necessary as its docstring has it.",
+      "read": true
+     },
+     {
+      "item": "encounter-selection-and-revision",
+      "done": "Entered with that id, base any type. Courses: narrowing along a run, run_stays_iff as exact exit, chosen visits, the wrong stop, a stale report, reobservation as witness exit. Left out as static or restating: resolve_iff and interprets_every_iff_separated, which say when a lexicon interprets, not a course; the naming_narrows laws, narrowing again on the periphery's lexicon; the acquired_* lemmas other than acquired_interprets_every. Test: contingent-learning, state run, since its README says it tests the selection-to-later-use correspondence. naming-attention is not listed: its README calls it a measurement assessment that does not falsify the theorem.",
+      "read": true
+     },
+     {
+      "item": "a-reading-informed-and-revalued",
+      "done": "Entered with that id, base a named model, from the carrier laws 28-37: through_sensed, inputs_alike_before, updates_commute against orders_apart, routes_alike, not_lumped, lumped_with_start; shown_course and presented_course as witness exits. Left out: laws 1-27 and undemonstrated_worth, one-decision comparisons by a supplied reference. Hypothesis 7 says that worth is counted on the answer as a rule, not along the courses, and does_not_show excludes a multistep incentive. Test: none, since REST-TR8-TR9 line 332 names the TwoWorlds routes and turns as getting no test, and TR9 concerns the worth counts.",
+      "read": true
+     },
+     {
+      "item": "basin of a self-confirming lock",
+      "done": "Not added, as told.",
+      "read": false
+     },
+     {
+      "item": "The four lines opening 'No exit is stated' (a-prediction-read-by-what-it-predicts, a-reading-kept-by-its-update, readings-within-what-they-read, a-cascade-at-the-histories-reached)",
+      "done": "Removed: none was copied from its source, and the atlas already shows Exits: None. What each held true stands in its mechanism; a-reading-kept-by-its-update's open gains the record's does_not_show item on the history form in its place.",
+      "read": true
+     },
+     {
+      "item": "Declarations and lengths",
+      "done": "habit-lock-in-active-inference now declares its two exit laws. Length: seven mechanisms stand above 1200 characters (what-training-installs 1466, a-reading-kept-by-its-update 1451, what-a-course 1369, a-reading-informed 1338, encounter 1334, a-code-held-as-counts stays under at 1119, selection-when-the-lumping-changes 1274), above the 'about 1000', because the homes' premises are the content; I did not cut qualifiers to reach it.",
+      "read": true
+     }
+    ],
+    "elsewhere": "Not fixed; both are beyond run/elsewhere.txt.\n1. theories/becoming/results/records/experiment-needs-return.json line 191 and .md line 53: 'Only moves varied against the hidden bit exclude it (Confound.varied_refutes)'. Lean shows one varied run excluded and one aligned run not excluded (Experiment.lean, varied_refutes and confounded). 'Only' is not proved, and the record's own does_not_show says the general form is not stated. A reader would take a witness for a necessary condition.\n2. theories/becoming/chapters/03-KNOWING.md line 283, and theories/becoming/results/records/readings-within-what-they-read.json line 13: 'a family is complete ... exactly where all values are equal' reads as of any family. Lean Diagonal.complete_iff_alike (Diagonal.lean line 133) is 'some family says every reading' iff all values are equal; only the forward direction holds of every family. The record's law 4 has it right. Low.\nNoticed, not false: the worktree /Users/ren/tmp/aa-families/land shows uncommitted changes to dynamics.json, vocabulary.json, tools/research/atlas.py and its test. They are not mine; I wrote nothing there. The validator ran against that state.",
+    "validator": "{\n \"errors\": [],\n \"waiting\": [\n  \"dynamics: selection-when-the-lumping-changes: exits[4].to: a-revision-that-opens-a-correction is not another entry of the atlas\"\n ],\n \"entries\": 27\n}",
+    "read": "Read whole, with their homes: the records selection-when-the-lumping-changes, experiment-needs-return, evidence-through-change, encounter-selection-and-revision, a-reading-informed-and-revalued (all 37 laws, its home theorem and reading), seeking-boundary, the-boundary-of-enough-under-undetermined-laws, what-a-course-chosen-through-its-model-does-not-test, acts-alike-from-a-model-or-from-an-order, a-prediction-read-by-what-it-predicts, runaway-distance-uncoupled, a-reading-kept-by-its-update, readings-within-what-they-read and learning-by-refutation.\n\nRead in part: what-holding-for-a-reading-is-worth (laws, conditions, does_not_show whole; home to the first 2600 characters of each paragraph); what-seeking-cannot-separate (laws and home, truncated); capture-by-counted-choices (does_not_show and counterexamples, plus 02's reading); adaptive-closure-cannot-resolve (whole, home row); a-response-common-over-a-reading, selection-through-couplings and expected-free-energy-and-its-terms (only the laws or hypotheses the entries use); 07's table and lines for what-training-installs; 02 lines 405, 438, 447, 451; 05 line 318 and the code row's tail; 08 line 335.\n\nLean statements read: Experiment.lean's Confound; ListingValuation's TwoWorlds laws and inputs_alike_before; Courses.run_narrows and run_stays_iff; TemporalInspection's five theorems; ChangingDependency.error_growth_budget; Revision.lean's opens and closes laws; Training.free_where_unlumped, response_free and the start of outrun_settles_iff; ReadingLoop.alike_of_kept and the floor laws; ClosedCapture.turned_by_loss; SharedCodes.outside_needed; Diagonal.complete_iff_alike; Enough's docstring.\n\nSearched only: 复通 and 偏蔽 across chapters and records; test ties by grep of experiment READMEs for these record ids; REST-TR8-TR9 lines 68, 332, 443; 'reopen' across chapters.\n\nNot re-read against homes, because no correction touched them: the mechanisms of correction-is-not-calibration, adaptive-closure-cannot-resolve and a-reading-against-the-share-does-not-ratchet, nor the uncorrected fields of the other entries, beyond a script comparing open items to does_not_show and a word scan.\n\nNo Lean, gate or test run; the validator is the only check run, as this step's scale says."
+   }
+  },
+  {
+   "key": "E",
+   "report": {
+    "file": "/Users/ren/tmp/aa-families/pass2/E.out.json",
+    "entries_written": 10,
+    "corrections": [
+     {
+      "id": "giving-that-waits-on-giving",
+      "verdict": "kept",
+      "why": ""
+     },
+     {
+      "id": "restoring-giving-from-the-worst-start",
+      "verdict": "changed",
+      "why": "The correction is right on all its points: `withheld_kept` (Tolerance.lean:281) has 'of the course from it', and the exact law matches 05 #r-restoring-giving-from-the-worst-start. One gloss was short. It defined giving first by the source alone, but `Withholding.givesFirst` is `src a ∨ answers up s a`, so the mechanism now says 'a source giving whatever it waits on and the others answering'. Renaming to 'total withholding' is kept; the home's law uses those words."
+     },
+     {
+      "id": "thresholds-of-waiting",
+      "verdict": "kept",
+      "why": ""
+     },
+     {
+      "id": "a-pair-tolerates-only-within-a-window",
+      "verdict": "kept",
+      "why": ""
+     },
+     {
+      "id": "errors-by-chance-in-a-pair-keeping-mutual-withholding",
+      "verdict": "kept",
+      "why": ""
+     },
+     {
+      "id": "offspring-read-from-giving-that-waits",
+      "verdict": "kept",
+      "why": ""
+     },
+     {
+      "id": "what-decides-giving-against-keeping-on-a-flow",
+      "verdict": "changed",
+      "why": "The correction's scope and additions are right against 05 #r-what-decides-giving-against-keeping-on-a-flow and PairFlow.lean, with three changes. (1) 'standing either way ... although its standing differs' used one word in two senses and read as a contradiction, and it left out that `GiverAtNeed.standings_differ` is stated only at step 1 ((2,4) against (3,3)). It now reads 'standing in both runs, leaves the same, although what it holds at step 1 differs'. (2) 'Under that renewal' pointed to a renewal the mechanism never described, so I added the home's 'given only while its formation is active', which is what makes `stays_fallen` near-definitional. (3) 'a draw of two' is now 'one draw of two', as `DrawnBelowNeed.fallen`'s doc and the home have it."
+     },
+     {
+      "id": "a-circular-wait-needs-a-reserve-present",
+      "verdict": "changed",
+      "why": "The correction is right that ignition's need for a reserve is definitional: `def ignite x y := x.reserve=true ∧ y=⟨true,true,false⟩`. Its gloss 'taking a reserve' dropped that the move leaves both sides active, so it now says 'going from a configuration holding a reserve to one with both sides active and the reserve used up'. 'Promises force nothing' is the record's wording, kept. I added that this is a separate witness, because `reciprocal_eventual_promises_can_be_empty` is an existential over two Nat → Prop events and not a statement about the Boolean exchange the sentence's paragraph opens with. The exit's edge still said 'ignition needs the reserve', a line listed in elsewhere.txt item 5, so it now says what the Lean says."
+     }
+    ],
+    "assigned": [
+     {
+      "item": "Add an entry for 05's Reading [AI reading, D48] under #giving-waits",
+      "done": "Added cooperation-read-as-giving-that-waits: standing reading, no record, base null, the same shape as family C's readings, and each clause says 'read as'. 'Mutual promises alone cannot start a loop with no source' is replaced by what the Lean and the record show: mutual eventual promises force nothing, since the conditional holds on both sides where neither ever happens. A second sentence of that Reading also says more than the Lean: 'Tolerance lets cooperation survive scattered withholding, not rebuild it where it is lost everywhere'. `Tolerance.total_stays` needs that no formation spares all it waits on, and `sparing_gives` gives from step 1 otherwise, so the entry keeps that qualifier. 'The structural price of complexity' is quoted as the home's. The regulator sentence is kept only as a reading; I tied it to no law, and it is not checked against one.",
+      "read": true
+     },
+     {
+      "item": "thresholds-of-waiting: absorb H's a-sparing-formation-gives-from-step-one",
+      "done": "Read the dropped entry against this one. Its declarations, hypothesis, open items and sources were all already here. The mechanism lacked three things: the sparing formation gives at every step after the start whatever the start (only an exit had it), the thin withholding (only an exit had it), and what it waits on being a given list. All three are now in the mechanism; the list was already there in other words. I left 'no premise about the formations' to the hypothesis field to keep the length down. No exit changed.",
+      "read": true
+     },
+     {
+      "item": "thresholds-of-waiting: add the open item on tolerance on a general web",
+      "done": "Added: thresholds of tolerance on a general web, whose conditions depend on others than themselves, are not stated; the web reading holds only where each formation depends on its own condition alone. Source: thresholds-of-waiting.md#next--下一步, the record's next step. Searched before stating the negative: every web law in Tolerance.lean (`web_tolerating`, `web_activity_tolerating`, `giftWeb_tolerating`) has `requires t a c ↔ c = a` or its construction; 'tolerating' occurs in four Becoming Lean modules and in four records (thresholds, restoring, monotone, chinese-sources-on-the-spine, the last only citing them). I read webs-with-a-recent-giving whole: its thresholds are a regime's under draws, not tolerance. PLAN §4.2 and Appendix B list the same absence.",
+      "read": true
+     },
+     {
+      "item": "whether-a-loop-closes-a-difference stays in F",
+      "done": "Left in F and not entered here. The new reading's sentence on an exchange of harms cites its home in 02 as a source, and I read the record against that sentence.",
+      "read": true
+     },
+     {
+      "item": "Second-read change: a-pair transition kind and exit law",
+      "done": "Settled what the first checker left to the join. The transition's kind goes from 'window or deadline' to 'tipping in a parameter'. PLAN §4.2 and Appendix B use window and deadline for a timing window on a reading or a source (`turned_early_iff`, a source before D). Here the window is a law's memory span set against the length of a run of errors, which is a comparison of parameters. The exit's law changes from `windowTwo_restores` to `windowTwo_restored_stays`, because the edge says 'every step from step 1' and `windowTwo_restores` shows only steps 0 and 1; `windowTwo_answers_stays` is now cited in the edge. In one open item, the 'delays and does not prevent' clause is marked by hand, as the home has it.",
+      "read": true
+     },
+     {
+      "item": "Second-read change: giving-that-waits-on-giving and the open items",
+      "done": "Ring sentence: added 'from one withholding', since `Ring.waitsAll_absorbs_exact` and `answers_circulates` start from `oneWithheld` and the unqualified sentence is false from all giving. Open items reworded, not copied, in giving, restoring and thresholds, because copied they contradict the family's own laws: (a) 'which laws giving first restore a general family' now says 'past the law of sources', because `Tolerance.restores_iff` gives the exact condition for `givesFirst` over any type, sources decided; (b) giving's 'thresholds of waiting' item now says they are stated in thresholds-of-waiting. Exit 1 of thresholds keeps CD §2 as its source, because the pilot and family B cite CD's nine exits that way and its edge no longer copies the label.",
+      "read": true
+     },
+     {
+      "item": "Length",
+      "done": "thresholds-of-waiting (1390 characters, two records merged) and what-decides (1441) stay over the roughly 1000 asked; the others are 962 to 1199. I judged the qualifiers kept in those two to change what holds. In what-decides, the needs-met bound's declarations (`met_needs_le_stock`, `met_needs_within_start`, `NeedsAtCapacity.at_capacity`) stay in the entry with no clause in the mechanism, to avoid more length.",
+      "read": true
+     }
+    ],
+    "elsewhere": "Not fixed; beyond run/elsewhere.txt.\n\n1. theories/becoming/chapters/05-COLLECTIVES.md:143 (Reading D48): 'Tolerance lets cooperation survive scattered withholding, not rebuild it where it is lost everywhere' drops the condition. `Tolerance.total_stays` needs that no formation spares all it waits on; a sparing formation gives from step 1 from total withholding (`sparing_gives`). This is a second false sentence in the line elsewhere.txt item 4 already lists.\n\n2. theories/becoming/chapters/05-COLLECTIVES.md:431 on, Open: 'which laws giving first restore a general family', and the same in theories/becoming/results/records/giving-that-waits-on-giving.json does_not_show, reads as stale against `Tolerance.restores_iff`, which gives the exact condition for `givesFirst` over any type with the sources decided. At most other laws giving first stay open.\n\n3. theories/becoming/results/records/giving-that-waits-on-giving.json does_not_show ('thresholds of waiting') and next_delta ('Thresholds and amounts; restoring laws in general families') are stale against thresholds-of-waiting and restoring-giving-from-the-worst-start.\n\n4. theories/becoming/chapters/05-COLLECTIVES.md, r-giving-that-waits-on-giving (line 118): 'In a ring of three, with memory all withhold from step 2' omits the start, one withholding (`Ring.waitsAll_absorbs_exact`). The record's law 5 omits it too.\n\n5. theories/becoming/chapters/05-COLLECTIVES.md, Reading D48: 'a regulator lags wherever the world changes faster than it reads' has no law cited there. I searched the chapters for 'regulator' and 'faster than' and found no law stating it, and I did not read the Regulation module, so this is a pointer and not a finding that none exists.\n\n6. The name 'worst start' in the title and law 2 of restoring-giving-from-the-worst-start, and in `Tolerance.worst_start`, is a comparison that reads only the inclusion order on what gives. The home's prose is careful but its anchor keeps the word. No rename proposed, since it is only unlabelled.",
+    "validator": "{\n \"errors\": [],\n \"waiting\": [],\n \"entries\": 10\n}",
+    "read": "Read whole: E.in.json, E.notes.json, kit/validate_family.py and the E section of run/elsewhere.txt (the rest only grepped). 05-COLLECTIVES.md read for §5, §6's r-what-giving-that-waits-draws-on and r-what-decides-giving-against-keeping-on-a-flow, #grounded-start and Open. Records read: all ten JSON records' statement, hypotheses, laws and does_not_show (giving, restoring, thresholds, tolerance-monotone, a-pair, errors-by-chance, offspring, what-decides, what-giving, joint-plans), plus next_delta. Also read whole by statement, laws, hypotheses and does_not_show: webs-with-a-recent-giving; laws (truncated) of whether-a-loop-closes-a-difference. Lean statements read: the laws the replaced clauses rest on in Withholding.lean, Tolerance.lean, WindowedWaiting.lean, PairChance.lean, PairFlow.lean, PairSelection.lean and systems-complexity/analysis/SeededContinuation.lean; for `answering_rises_iff` only the opening of the statement. PLAN.md §4.2, §4.4 and Appendix B read; CD §2's rows read; pilot entries read for reading-entry shape and for how exits cite CD; F.in.json's loop entries read for their first 900 characters. Only searched: 'tolerating' across the Lean and records; 'regulator', 'faster than' and 'lags' across the chapters; chinese-sources-on-the-spine at its one matching line. Not read: the Regulation module; what-giving's Lean beyond the home and record, since it had no correction. No Lean, make, gate or tests were run; the only check run was the validator."
+   }
+  },
+  {
+   "key": "F",
+   "report": {
+    "file": "/Users/ren/tmp/aa-families/pass2/F.out.json",
+    "entries_written": 24,
+    "corrections": [
+     {
+      "id": "overshoot-beyond-the-gap",
+      "verdict": "changed",
+      "why": "The false negative's replacement is right and stays: Flow.never_at_of_beyond (Regulation.lean:285) and not_at_of_beyond are laws, no opposition asked; record regulation-from-one-side-and-locally L2. Two rewordings fixed. 'overcorrecting at every step never comes to rest at m' goes back to the record's statement, 'overcorrecting never rests at m'. The new negative 'stated of this witness only' had no home, so it now says what the four laws conclude: they name no value and no period. Records, declarations, hypotheses and sources kept."
+     },
+     {
+      "id": "closed-cycle-without-dissipation",
+      "verdict": "changed",
+      "why": "The point stands: Cycle.web has level 1 and an active set that only grows (Flow.lean:975, closed_more), and only Recycle returned. 'nothing returns' tightened to 'does not return', since its level does stand. Extended by the assignment. Rest theorem sentence moved to an exit with World.comes_to_rest_unrefuted (Openness.lean:599). Hypotheses kept and extended."
+     },
+     {
+      "id": "recurrence-without-premise",
+      "verdict": "changed",
+      "why": "The correction is right: 'So there a period exists' is scoped, and Parting.free_unbounded (Parting.lean:714, record identification-where-runs-part DNS1) stands. Kept. For length I cut the rise clause and the successor sentence, with Law.rise_not_lossless, Law.succ_open and the open line the correction added for the rise clause. The pointers to A and H were added."
+     },
+     {
+      "id": "support-beyond-a-band-can-cycle",
+      "verdict": "changed",
+      "why": "'need not rest' is kept. 'So such a run has a period within that bound; it is not said whether the run cycles or rests, nor which period' re-glossed: repeats gives state(i+m)=state(j+m) from step i (RegimeMargin.lean:2891, 2904), and a period of one is a rest. Now: from that earlier step it has a period within the bound; which one, and so whether it cycles or rests, is not said. Each law marked as a law. Open line 1 adds 'read condition by condition', which repeats needs."
+     },
+     {
+      "id": "late-relay-oscillates",
+      "verdict": "kept",
+      "why": ""
+     },
+     {
+      "id": "how-loops-form",
+      "verdict": "changed",
+      "why": "The correction's clauses stand against Closing.lean:403 (D, M and no gap after the start) and Thresholds.lean:612 and 02-MAP l.339 (the draw is the witness), and the transitions are kept. Only length changed: cut 'so a loop that forms passes through...' (forms_by_closing stays declared) and 'What doubles...', which the open lines say."
+     },
+     {
+      "id": "whether-a-loop-closes-a-difference",
+      "verdict": "changed",
+      "why": "'from a positive start' is right (whole_factors, LoopReturn.lean:520). 'none is shown to return without resting' scoped to what I read, this record's nine laws. Added a qualifier the home's wording also drops: the ring has every condition starting at the same positive gap (Ring.bound_strict, record CE1)."
+     },
+     {
+      "id": "becoming-return-grades",
+      "verdict": "changed",
+      "why": "The sense of return is right (Recurrence.lean:212-215). 'a dependence's return need have no period' replaced by the record's CE1, 'not being consumed does not bound the time to recover'; Slowing.slowing_recovery states no bound, not periods."
+     },
+     {
+      "id": "withholding-returns-around-a-loop",
+      "verdict": "changed",
+      "why": "The exit's law (givesFirst_restores, Withholding.lean:468) and the anchor are right and stay. `to` now names E's restoring-giving-from-the-worst-start, as E's own exit does. The checker kept 'p is a period of that return' as a gloss; removed: withholding_returns (Withholding.lean:276) states withholding at multiples of p only, and run/elsewhere.txt lists the same overstatement."
+     },
+     {
+      "id": "overshooting-thermostat-alternates",
+      "verdict": "kept",
+      "why": ""
+     },
+     {
+      "id": "overcompensating-giving-cycles",
+      "verdict": "changed",
+      "why": "Mechanism kept. The open lines are right, and the reals line is copied from record DNS1. Open line 1's gloss made exact: 'read condition by condition', and 'comes back at some step at most (B + 1)^n and repeats from there', per thresholds-beyond-a-band L3. It cites PLAN l.242, which does say 'when a regime cycles, and with what period'."
+     },
+     {
+      "id": "threshold-reading-read-late-alternates",
+      "verdict": "changed",
+      "why": "The open lines are right against README l.13-16 and l.75-76. The sentence the checker left, 'The account states no law of which readings alternate or with what period', is removed: no home states it and I can cite no line. Searched the records citing RuleCapture by grep and read a-reading-against-the-share-does-not-ratchet; that is a search, not a finding of absence."
+     },
+     {
+      "id": "publication-under-negation-alternates",
+      "verdict": "changed",
+      "why": "Removal of the 'no exit' line is right. 'laws the home labels near-definitional' dropped the rest of the label, 03-KNOWING l.539 'near-definitional, with one general law'; the entry now says that law, on the chain, is in family D's entry. Pointers to the new entries added."
+     },
+     {
+      "id": "when-the-runs-of-a-process-settle",
+      "verdict": "changed",
+      "why": "Applies to the renamed copy a-run-round-a-loop-keeps-changing. The shortened 08 open line was right as a copy. It is removed with the other settling open lines, because the assignment leaves those to G. The first open line stays."
+     }
+    ],
+    "assigned": [
+     {
+      "item": "Each entry says rightly which statement is a law and which a witness; what may stand as absent",
+      "done": "Checked all 24. Marked law against witness in support-beyond-a-band, overshoot, late-relay, withholding, a-run-round and the new entries. Removed threshold-reading's unsourced negative and F9's 'No period is stated'. The only absence stated about the family is 'When a regime cycles, and with what period', in the open lines of overcompensating-giving-cycles and support-beyond-a-band-can-cycle, cited to PLAN §4.2 l.242. The false family line is copied nowhere.",
+      "read": true
+     },
+     {
+      "item": "a-run-round-a-loop-keeps-changing: name, scope, pointer to G",
+      "done": "Named 'A run round a loop keeps changing'. Kept keeps_changing_iff, recurs_of_loop, not_settles_of_recurs, Enough.Free and law_possibly_iff_assured. Removed every LastChange and OneWay clause and declaration, the-last-change-of-a-run as a record, and Enough.assured_iff, which was declared but not stated. Text points at G's when-the-runs-of-a-process-settle and the-last-change-of-a-run.",
+      "read": true
+     },
+     {
+      "item": "Lossless-exchange entry from entropy-history-and-record",
+      "done": "Added lossless-exchange-continues-and-returns, base World: Passing.passes and history_without_arrow, Flow.Balances.unending_change_revisits as a double negation naming no step, World.arising_revisits. Also Flow.Balances.returns_of_conserving, a law of return I found in the record beyond the assignment. Exit Flow.Balances.never_revisits, sufficient. Route to rest left to G by text, with no id, since G's new id is not visible to me.",
+      "read": true
+     },
+     {
+      "item": "revision-with-an-undecided-value",
+      "done": "Added, base a named model (fixed values and sentences; mechanism says which), with exits liar_rests (witness) and liar_rests_iff (exact). A qualifier the assignment's wording did not carry: rest with three values is from all undecided, and liar_rests_iff says a run from any start rests exactly where undecided, not that a decided start gets there. 'the one stated case' written as 'a stated case': I did not search all records for others.",
+      "read": true
+     },
+     {
+      "item": "General law behind publication-under-negation",
+      "done": "Own entry a-map-moving-every-value-never-rests, base any type, with Law.Commutes.self_apart and the record's sentence 'The rhythm is shown periodic for the two-valued negation only...' in mechanism and open. Exit to revision-with-an-undecided-value by Undecided.monotone_run_rests, sufficient. publication-under-negation-alternates points at it. D keeps both records' other laws.",
+      "read": true
+     },
+     {
+      "item": "place-transition-nets-on-the-spine",
+      "done": "Added a-token-moved-back-and-forth-on-a-net, base a named model: Net.cycle, cycle_premises, cycle_not_dissipative, cycle_flips, cycle_changes, cycle_never_rests. Exit Net.rests_unrefuted, sufficient, to continued-change-needs-openness.",
+      "read": true
+     },
+     {
+      "item": "closed-cycle-without-dissipation: ClosedCycle, KindRelay",
+      "done": "Added ClosedCycle (levels back every second step by its definition; no return theorem is named, and the entry says so) and the closed KindRelay (KindRelay.returns, period two). Kept the point that Cycle.web does not return. Carried the qualifier that the relay's levels keep widening within kinds while it returns, pointing at H's kind-relay-keeps-widening-within-kinds. Read these two records through a filter on closed, cycle and return lines, plus the homes' opening.",
+      "read": false
+     },
+     {
+      "item": "withholding-returns-around-a-loop: family witnesses",
+      "done": "Cites Ring.answers_circulates, WindowedWaiting.Pair.echo, echo_returns and the alternator (alternator_received_within, alternator_gives_odd_within), pointing to E's giving-that-waits-on-giving and a-pair-tolerates-only-within-a-window. Removed the waitsAll clause and declaration, which are E's.",
+      "read": true
+     },
+     {
+      "item": "laws-at-coarser-steps (Strobe)",
+      "done": "Read record and home row. Entered in recurring-at-fine-steps-quiet-at-coarser: the one-way law Web.sample_unceasing and sample_ceasing with Strobe.converse_fails as the witness that the converse fails. Reason: a course that does not rest reads as quiet at a coarser grain, which bears on what a reading at steps can show.",
+      "read": true
+     },
+     {
+      "item": "what-discrete-steps-and-whole-amounts-represent",
+      "done": "Read record and home. Entered in the same entry for Representation.Oscillation.still_reading only, marked periphery; base a named model. The record's other laws are not about cycles and are not entered here.",
+      "read": true
+     },
+     {
+      "item": "recurring-reference-revision: point at H",
+      "done": "Pointer in recurrence-without-premise's mechanism. No declarations taken. Read record and home to place it.",
+      "read": true
+     },
+     {
+      "item": "basins-of-a-determined-law: point at A from recurrence-without-premise",
+      "done": "Pointer in recurrence-without-premise's mechanism, and also from a-map-moving-every-value-never-rests. No declarations taken. Read Law.basin_one_cycle, Law.enters_returning_within and A's entry, not the record.",
+      "read": false
+     }
+    ],
+    "elsewhere": "Not fixed; none of these is in run/elsewhere.txt.\n(1) theories/becoming/results/records/revision-with-an-undecided-value.json l.68 and l.78, and theories/becoming/chapters/03-KNOWING.md l.286: 'the liar rests undecided' omits 'from all undecided'. liar_rests is about `stage`, and liar_rests_iff says a run from any start rests exactly where undecided (Undecided.lean:565, 577). A reader may take three values to bring every run to rest.\n(2) 03-KNOWING.md l.286, label 'any type': the core laws fix Value and index sentences by Nat. Only a later section has a type variable (Undecided.lean:319).\n(3) theories/becoming/results/records/coupled-regimes.json l.161 and l.168: 'gives no rest' reads as never of a witness. The Lean shows these runs do not rest, so without the band or support the condition need not give rest.\n(4) _process/research/2026-10-05-generative-foundation-review/root-foundation/development/aa-attractor-atlas/PLAN.md l.26: 'cycles and hysteresis' among 'Seven gaps have no law'. Same falsity as l.252, which elsewhere.txt lists; the narrower l.242 stands.",
+    "validator": "{\n \"errors\": [],\n \"waiting\": [\n  \"dynamics: withholding-returns-around-a-loop: exits[0].to: restoring-giving-from-the-worst-start is not another entry of the atlas\",\n  \"dynamics: closed-cycle-without-dissipation: exits[0].to: continued-change-needs-openness is not another entry of the atlas\",\n  \"dynamics: a-token-moved-back-and-forth-on-a-net: exits[0].to: continued-change-needs-openness is not another entry of the atlas\"\n ],\n \"entries\": 24\n}",
+    "read": "Read in full: F.in.json, F.notes.json (corrections, first_checker, extractor_not_entered). Read through a compact printer (statement, laws, hypotheses, does_not_show, counterexamples, next, each line cut at 800 to 1300 characters) with home sections: entropy-history-and-record, revision-with-an-undecided-value, what-a-commuting-law-keeps-apart, readings-within-what-they-read, place-transition-nets-on-the-spine, laws-at-coarser-steps, what-discrete-steps-and-whole-amounts-represent, recurring-reference-revision, where-a-run-of-a-regime-comes-to-rest, coupled-regimes, thresholds-beyond-a-band, two-sided-regulation-and-late-reading, regulation-from-one-side-and-locally, rooms-tested-by-a-window, a-prediction-read-by-what-it-predicts, a-reading-against-the-share-does-not-ratchet, when-the-runs-of-a-process-settle, the-boundary-of-enough-under-undetermined-laws, how-loops-form, loops-within-what-a-law-reads, how-a-carried-difference-grows, whether-a-loop-closes-a-difference, becoming-return-grades. Read through a line filter only, with the home: recurrence-without-premise, where-a-move-is-formed, identification-where-bounded, identification-where-runs-part, recurrence-without-decidedness and returning-where-the-course-branches (laws and hypotheses, cut at 420 characters), giving-that-waits-on-giving, a-pair-tolerates-only-within-a-window, eventual-widening, what-keeping-widening-needs, unceasing-generation-needs-renewal, continued-change-needs-openness, no-finite-part-bears-taking. capture-through-the-rule: grep of its Alternating lines and its home; not otherwise read. Read in Lean: the statements and doc comments of the laws cited in the corrections and new entries, in Regulation, RegimeMargin, Withholding, WindowedWaiting, Settling, Enough, Recurrence, Identification, MoveFormation, Parting, Entropy, Undecided, Commuting, Diagonal, PlaceTransitionNets, Sampling, Representation, Arising, Flow, Openness, EventualWideningInstances, KeepingWidening, Closing, Thresholds, LoopReturn, Restoration, RoomRuns, RuleCapture, ReflexivePrediction, Attraction, Stock, ContinuingRevision; proofs only where short. Read in part: README of self-rewarding-lock l.13-16 and l.70-78; PLAN l.236-243, with grep hits for cycle and CY; other families' .in.json for the neighbouring entries named in my pointers. run/elsewhere.txt was searched with grep plus the F section, not read whole. Only searched: the records citing RuleCapture or Alternating (grep by name). Entries recurrence-without-selector-revision, a-course-that-only-returns and waxing-and-waning-returns: no correction to read, and I reviewed their text only, with their records not re-read beyond the first checker's. No Lean, make, gate or tests were run; the validator was run on the output only."
+   }
+  },
+  {
+   "key": "G",
+   "report": {
+    "file": "/Users/ren/tmp/aa-families/pass2/G.out.json",
+    "entries_written": 18,
+    "corrections": [
+     {
+      "id": "where-the-possible-grows",
+      "verdict": "kept",
+      "why": ""
+     },
+     {
+      "id": "what-keeping-widening-needs",
+      "verdict": "changed",
+      "why": "The checker's qualifiers are right and stay: up to double negation (KeepingWidening.lean:1015, 1028), a continuation containing carrying on of the supported, entries counted with repetition (07 #r-what-keeping-widening-needs), the sentence on which laws restate what, and the kind relay's construction. The correction ran to 1610 characters, so I cut its descends_or_begun clause and put its definition of a beginning on the keeping-opening law. The law stays in declarations. I also put the dissipation clause under the World premises and the carrying-on continuation, which Flow.not_keepsWidening_of_dissipated_requirements takes (KeepingWidening.lean:1170) and the correction left outside. Still 1445 characters, the longest in the family."
+     },
+     {
+      "id": "returning-novelty-forgetting-on-levels",
+      "verdict": "kept",
+      "why": ""
+     },
+     {
+      "id": "continued-change-needs-openness",
+      "verdict": "changed",
+      "why": "The quantifier correction said 'every such finite world', where 'such' reads back to the rest theorem's censuses and enclosure. World.lpo_of_finite_ends (Counting.lean:1559) takes every world with decided activity that is Premised and Finite. It now reads 'every finite world meeting the eight premises with activity decided'. The added open items (counting-under-enclosure N3 and N4) are verbatim and stay."
+     },
+     {
+      "id": "rest-at-every-resolution",
+      "verdict": "kept",
+      "why": ""
+     },
+     {
+      "id": "least-loss-rest",
+      "verdict": "kept",
+      "why": ""
+     },
+     {
+      "id": "where-a-run-of-a-regime-comes-to-rest",
+      "verdict": "changed",
+      "why": "The high correction is right: experiments/margin-measured/README.md lines 75-77 report 65 of 69, 41% and 4 of 69, and it stays, as do 'from the band' (RegimeMargin.lean:2606) and the new `to`, which F.in.json holds. It had dropped the README's conclusion, so I added it: the order laws reach the field's state on the low side of its level law, below the peak, and rests at or above the draw are the regime's on either side. Separately, the open line 'coupled conditions with a recent giving' is listed as stale in elsewhere.txt (A, item 3). It now says they are stated in webs-with-a-recent-giving (02 line 275) and that rest within a band for them is not."
+     },
+     {
+      "id": "when-the-runs-of-a-process-settle",
+      "verdict": "changed",
+      "why": "The cut removed the premise-free gloss, and that was right, but the checker's reason is partly wrong: the sentence 'settling is deciding whether the run changes again' is in this home's Calibration (08 line 338). I restored that paragraph's own premise-carrying form: a run changes once, at the first true of a sequence, so settling decides whether such a true comes. I labelled the dependent-choice clause a Calibration, as 01 line 503 does, and pointed the exact exit at F's a-run-round-a-loop-keeps-changing."
+     },
+     {
+      "id": "unceasing-generation-needs-renewal",
+      "verdict": "kept",
+      "why": ""
+     },
+     {
+      "id": "merged-distinctions-stay-merged",
+      "verdict": "kept",
+      "why": ""
+     }
+    ],
+    "assigned": [
+     {
+      "item": "the-last-change-of-a-run (moved from A, checked beside when-the-runs-of-a-process-settle)",
+      "done": "Kept in G. Read against 08 and every law's Lean. Added 'of decidable configurations' to the assured law, stated not_not_rests, which was declared but not stated, and declared decided_within. The two entries do not overlap: one is the bounded count and LPO, the other keeps-changing, runs starting, and dependent choice. F's a-run-round-a-loop-keeps-changing has the display name 'When the runs of a process settle', the same as mine; see elsewhere.",
+      "read": true
+     },
+     {
+      "item": "laws-with-noise",
+      "done": "New entry laws-with-noise, base World (the home's first word), the periphery named in the mechanism. Representation.RandomEnd.rest_not_in_expectation is a witness exit. The closing clause is the Lean docstring's.",
+      "read": true
+     },
+     {
+      "item": "entropy-history-and-record (route to rest)",
+      "done": "Its own entry, an-arrow-leaves-change-not-recurring, because its premises (first law, arrow) differ from the rest theorem's and it is a route without dissipation. It carries World.forgets with the first law, which the home drops. Gathering.gathers and Passing.passes are witness exits. F's lossless returning entry is not yet in F.in.json (no Passing declaration there), so `to` is null and the edge names family F.",
+      "read": true
+     },
+     {
+      "item": "closing-needs-net-draw, with the-run-classes-and-widening and four-cases-of-a-part",
+      "done": "New entry closing-needs-net-draw with all three records; my reading supported four-cases, whose margin law is the exact boundary and whose witnesses are the widen, narrow and mixed cases. The mechanism opens by saying it is near-definitional and a comparison of two level paths, not a course closing. Exits: one exact (Flow.widens_iff_within_margin_at) and seven witnesses, namely Inflow, Clearing, Transfer, Preemption, Untaken, ArisingDrawer and ArisingGiver. One open line drops a quoted person's name from closing-needs-net-draw's does_not_show 1, so it is not verbatim.",
+      "read": true
+     },
+     {
+      "item": "ceasing-needs-arising joined with bounded-census-keeps-pace and space-and-its-parts",
+      "done": "Joined and renamed 'Ceasing needs arising; under a bounded list the two keep pace'; id kept. States the returning-list law, the slow witness, the finite case, and decidedness as its own condition (World.law_iff_em). Exits: CountedBy.arising_iff_ceasing and World.arising_iff_ceasing are exact, arising_iff_ceasing_decided is exact and points to F's recurrence-without-decidedness, and census_one_way, slow_world and procession_world are witnesses. Removed the open line pointing at bounded-census, now stated. Mechanism 1225 characters.",
+      "read": true
+     },
+     {
+      "item": "a-coupling-saturated-by-what-it-has-carried",
+      "done": "New entry, base World. Saturation.stops_iff is an exact exit. Saturation.floored is sufficient, since it is a general condition, not a witness. The LPO limit is stated as the home states it, unstated in Lean.",
+      "read": true
+     },
+     {
+      "item": "the grammar's law of rest",
+      "done": "A root form stands: «尽则不或屡» and «尽则不屡» (GrammarLaws.lean:1833, 1852), with Amounts.rests_unrefuted proved from it (Amounts.lean:208-213). Entered as falls-that-end-do-not-recur, base root, record shared-laws-on-the-grammar, hypotheses 1 and 2. It says the ending is sufficient and no converse is established, and that rest is not being drawn either way, with «入而屡之例» as a witness exit. least-loss-rest now names it in one clause.",
+      "read": true
+     },
+     {
+      "item": "unceasing-generation-needs-renewal naming",
+      "done": "Id kept, name 'Unceasing arising needs renewal'. 02 line 148 itself says these records keep 'generation' only in their names. Checked the Recycle edge's 'arising' against Arising.lean:488, and declared Tide.unrelated_depletion, the witness behind the premise's qualifier. Two copied open lines keep 'generation' in the record's words.",
+      "read": true
+     }
+    ],
+    "elsewhere": "Not fixed. Nothing here repeats run/elsewhere.txt.\n(1) Medium-low, a contradiction a reader of the joined entry will see. Space.lean:255 (the docstring of arising_iff_ceasing) and space-and-its-parts hypothesis 1 say decidedness is 'not a commitment of the representation'. Space.lean:972 (law_decides) says it 'is a logical commitment of the representation'. So do ceasing-needs-arising hypothesis 2 and bounded-census-keeps-pace hypothesis 3. The atlas copies hypothesis text, so the two wordings now sit in one entry.\n(2) theories/becoming/chapters/02-MAP.md line 225 (home of entropy-history-and-record): 'a finite world that keeps exchanging forgets' drops the first law, balance and the distinct list that World.forgets takes (Entropy.lean:1713). The form without the first law is World.forgets_of_bounded, which needs a bound (Novelty.lean:350). This is the same drop as elsewhere.txt G(3) and G(4), in a different home.\n(3) Lean docstrings say 'generation' for arising, against GLOSSARY: Arising.lean:190, 208, 488 and Gain.lean:322. elsewhere.txt G(2) names only the record.\n(4) where-the-possible-grows: the home's label starts 'root; any process, and witnesses', so the first-word rule gives root. I kept any process, because only one clause and the sequence law are on the root and the main laws are on processes. The join may want to settle this; the first checker also kept any process.\n(5) Display names collide: F's a-run-round-a-loop-keeps-changing and my when-the-runs-of-a-process-settle are both named 'When the runs of a process settle'. Reported for F's pass or the join.\n(6) F's overcompensating-giving-cycles and recurrence-without-decidedness are the `to` targets I rely on, read in F.in.json only; F's second pass may change them. The validator lists all three of my cross-family `to` values as waiting.",
+    "validator": "{\n \"errors\": [],\n \"waiting\": [\n  \"dynamics: when-the-runs-of-a-process-settle: exits[0].to: a-run-round-a-loop-keeps-changing is not another entry of the atlas\",\n  \"dynamics: where-a-run-of-a-regime-comes-to-rest: exits[0].to: overcompensating-giving-cycles is not another entry of the atlas\",\n  \"dynamics: ceasing-needs-arising: exits[2].to: recurrence-without-decidedness is not another entry of the atlas\"\n ],\n \"entries\": 18\n}",
+    "read": "Read whole: G.in.json, the G.notes.json corrections and first_checker, run/elsewhere.txt.\n\nRecords read as parsed statement, hypotheses, does_not_show, counterexamples and laws: laws-with-noise, entropy-history-and-record, closing-needs-net-draw, the-run-classes-and-widening, four-cases-of-a-part, bounded-census-keeps-pace, space-and-its-parts, a-coupling-saturated-by-what-it-has-carried, ceasing-needs-arising, recurrence-without-decidedness, the-last-change-of-a-run, where-the-possible-grows, what-keeping-widening-needs. Law lines were cut at 700-900 characters, so the tails of long declaration lists in what-keeping-widening-needs were not seen.\nRead only in part:\n- shared-laws-on-the-grammar: statement, hypotheses, does_not_show, and laws 13, 14 and 20.\n- unceasing-generation-needs-renewal: hypotheses and does_not_show 1-4.\n- rest-at-every-resolution, a-code-formed-between-formations, synonyms-and-coined-forms, least-loss-rest, rest-by-balance, rest-from-a-finite-reading, rest-on-coupled-webs: hypotheses, plus law 3 of rest-on-coupled-webs. Their other open lines were only compared by script.\n\nHomes read: 07 #r-closing-needs-net-draw, #r-four-cases-of-a-part, #r-the-run-classes-and-widening, #r-what-keeping-widening-needs, #r-where-the-possible-grows; 01 #r-laws-with-noise, #r-shared-laws-on-the-grammar, #r-bounded-census-keeps-pace, #r-where-a-run-goes-on; 02 #r-entropy-history-and-record and its table, #r-a-coupling-saturated-by-what-it-has-carried, #r-unceasing-generation-needs-renewal, the start of #which-locks-noise-leaves; 08 #r-when-the-runs-of-a-process-settle, #r-the-last-change-of-a-run, the label table. 01 #r-space-and-its-parts: only the anchor was located and resolved; the law was read in its record and Lean. experiments/margin-measured/README.md lines 70-80.\n\nLean statements and docstrings read by name for the laws each correction or new entry rests on: Entropy, Representation, OverExchange, Frequency (Saturation), GrammarLaws rest section, Amounts rest laws, LastChange, Settling, Onward, KeepingWidening, Novelty, Gain, Counting.lpo_of_finite_ends, Resolution.rest_needs_quantum, LeastLoss, RegimeMargin.rests_by, Arising, SharedCodes (outside_returns' docstring and start of its signature), Space, Openness, Population, Decidedness, Admission, Retaining. Of the Retaining witnesses, Preemption's docstring was read in part, and Untaken, ArisingDrawer, ArisingGiver, Transfer, Clearing and Inflow were read through their record laws and home rows, because my output limit cut their Lean.\n\nSearched only:\n- A script compared every open line whose source is a record's does_not_show with the record's text; all matched before my edits.\n- Grep for which families cite the assigned records, for Passing in F.in.json, and for verdict words in name, mechanism and edges (none; 'better' and 'direction' only in copied open lines).\n\nNot re-read this pass, carried from the first checker where no correction touched them: rest-exactly-where-falls-stop's mechanism and the rest of continued-change-needs-openness's and rest-at-every-resolution's mechanisms and witness edges. The hypothesis changes for rest-at-every-resolution were checked against hypotheses 5 and 7; Flow.exchange_bound's own premises were not read in Lean.\n\nRan no Lean, make, gate, tests or check_becoming.py; the only tool run was the validator. Wrote only G.out.json in the family directory, plus helper scripts in my scratchpad. The land worktree shows modified atlas files from others; I did not edit it."
+   }
+  },
+  {
+   "key": "H",
+   "report": {
+    "file": "/Users/ren/tmp/aa-families/pass2/H.out.json",
+    "entries_written": 35,
+    "corrections": [
+     {
+      "id": "support-passed-on",
+      "verdict": "kept",
+      "why": ""
+     },
+     {
+      "id": "a-pattern-lasts-through-passing",
+      "verdict": "kept",
+      "why": ""
+     },
+     {
+      "id": "two-sided-regulation-and-late-reading",
+      "verdict": "kept",
+      "why": ""
+     },
+     {
+      "id": "restraint-within-the-joint-slack",
+      "verdict": "kept",
+      "why": ""
+     },
+     {
+      "id": "a-sparing-formation-gives-from-step-one",
+      "verdict": "kept",
+      "why": ""
+     },
+     {
+      "id": "a-step-coupling-keeps-at-every-horizon",
+      "verdict": "changed",
+      "why": "The clause it added is right (Optimum.frontier_keeps_stepwise has holds : y + q ≤ e + k), but as worded 'reach with y', y' + q ≤ e + k' names y' and k nowhere. 05-COLLECTIVES.md 'The cases' defines them: y' a level at or above m renewing by q, k the capacity, reach y' ≤ s + R s ≤ y' + k, m ≤ e ≤ y'. Lean's reach, drawsDown, settles and ends match, so the mechanism now states them."
+     },
+     {
+      "id": "a-rule-rebuilt-from-the-members-it-limits",
+      "verdict": "changed",
+      "why": "The correction is right in its home's words (05 r-a-rule-rebuilt, Passing and the constant-take lemma), but it left out the level hypothesis the first checker itself named. «恒取不逾生则存» has hL : 1 ≤ x.level, and the record says 'from a level of at least one'. Added 'from a level of at least one'."
+     },
+     {
+      "id": "the-stock-buys-time-where-the-rebuild-draws-on-it",
+      "verdict": "kept",
+      "why": ""
+     },
+     {
+      "id": "mutation-and-the-balance-it-sets",
+      "verdict": "kept",
+      "why": ""
+     },
+     {
+      "id": "continuing-self-fed-from-beyond",
+      "verdict": "kept",
+      "why": ""
+     },
+     {
+      "id": "never-leaving-a-guard",
+      "verdict": "kept",
+      "why": ""
+     },
+     {
+      "id": "regime-in-any-amounts",
+      "verdict": "kept",
+      "why": ""
+     },
+     {
+      "id": "recoverable-mediated-change",
+      "verdict": "changed",
+      "why": "Of the two open lines it added, 'The harm done...' stays. 'This protocol reserves no stop...' is removed as assigned, because reserved-shutdown-during-recovery answers it (07 r-reserved-shutdown-during-recovery; Countdown.exits, ProtocolInstances.schedule_stops). The counterexample itself stands: the exit edge now says this protocol reserves no stop, and the mechanism says entry with nine units is refused without rescuing that witness."
+     },
+     {
+      "id": "optima-rebuild-a-depleted-base",
+      "verdict": "kept",
+      "why": ""
+     },
+     {
+      "id": "the-selection-term-and-a-lineages-fate",
+      "verdict": "kept",
+      "why": ""
+     }
+    ],
+    "assigned": [
+     {
+      "item": "Corrections read as kept",
+      "done": "Read against record, home and, where a clause rests on one, the Lean. support-passed-on: Adapting.restores and Inflow.restores are the witnesses named. a-pattern: PatternRelay.shifts attains the bound. Open lines in two-sided, restraint, mutation and optima-rebuild match the records verbatim. stock: 'at least one unit wanted' matches hn : 1 ≤ r.count, and the members match 04. continuing: mechanism matches 04 line 40; Throughput as the finiteness witness is 04's own; both added hypotheses are right. never-leaving: all five replaced fields are right. regime: base any type matches 02's '(any type) only for the Drawn laws'. selection-term: matches 04 line 143 and not_all_degenerate_while. a-sparing: right, and E's thresholds-of-waiting carries the line.",
+      "read": true
+     },
+     {
+      "item": "never-leaving-a-guard: absorb market-protected-continuation",
+      "done": "Took kernel_step_iff, guarded_never_fails_iff, Leaves.within_not_kernel and needs_admissible, the witness clause, the market floors iff and the open line 'Apart from the numerical example...'. Reworded the first open line, because 'No law gives entry from unsafe states' reads false beside this entry's own landing and transition laws. It now says the certificate does not say how a state comes in, and that those laws assume their intervention.",
+      "read": true
+     },
+     {
+      "item": "never-leaving-a-guard: add market-partial-correction-boundary",
+      "done": "Added with hypotheses 1 to 4. Exits: avoids_iff_closed (exact), lands_iff_margin (exact), arbitrarily_small_error_blocks_universal_landing (witness). Transitions: exact threshold β ≤ 5/12 and the supported window. Its limits (not a complete basin, the model's threshold, the intervention assumed) are open items. No test added: experiments/market-generativity stays out, as an executable counterpart under supplied laws.",
+      "read": true
+     },
+     {
+      "item": "a-step-coupling-keeps-at-every-horizon: take steps-met-again-after-a-fall",
+      "done": "Added with its laws, hypothesis, a transition and the burst_met witness exit. The entry says one direction: frontier_keeps_met concludes Keeps with no converse, so 'where', not the record's 'exactly where'. Also added the continued_*_frontier laws behind 'an optimum exists' and the DNS 'That the dependence ought to be kept...'. Dropped 'or a discount; the optimum rebuilding from below' from open, since elsewhere.txt lists it as stale; the shown laws are in a-weighting-faster and optima-rebuild. B's keeping-forgoes still lists this record in its .in file, for the join to remove.",
+      "read": true
+     },
+     {
+      "item": "optima-hold-the-greatest-renewal, a-sparing-formation-gives-from-step-one, reserve-defers-ending",
+      "done": "Not re-added, as told.",
+      "read": false
+     },
+     {
+      "item": "recurring-reference-revision: Stock.repeat_covered_iff and ContinuingRevision.repeats_iff",
+      "done": "Added repeat_covered_iff to the mechanism and declarations, with its condition as an exact threshold. repeats_iff was already present as a transition, and its condition matches the Lean.",
+      "read": true
+     },
+     {
+      "item": "recoverable-mediated-change: add reserved-shutdown-during-recovery",
+      "done": "Added with hypotheses 1 to 3. Exits: schedule_stops (sufficient, R − 2 cycles, from reserve − 3 < length) and Countdown.exits (sufficient), plus a witness for an interruption beyond the bound. Pace-bound transition with Slow.misses. Open: removed the no-stop line and added the grant, hardware, interruption and ordinary-commands lines.",
+      "read": true
+     },
+     {
+      "item": "copying-from-a-stock: add copying-b-fold",
+      "done": "Read and added. The mechanism now leads with the b-fold law, doubling as b = 2, on counts per 04 line 98. Added an exact threshold on copying_iff and the DNS on a fixed factor.",
+      "read": true
+     },
+     {
+      "item": "formed-goal-revision-continuation",
+      "done": "Entered as its own entry in H, base periphery, with three exact thresholds (cycles_iff, completed_isSome_iff, revision_continues) and witness exits. The comparison is labelled as the construction's under the practical commitments. The record's label 'the harmful condition' is not used; the entry says access loss with kept transition maintenance. D is a defensible neighbour for the witnesses.",
+      "read": true
+     },
+     {
+      "item": "what-a-line-holds-and-a-regularity-takes-in and constancy-read-at-a-members-class",
+      "done": "Entered together as new entry what-a-regularity-takes-in, base root: what a line must pass its class must hold, and what a kept class takes in downstream. The argued path (P1 to P4) is not entered as a result; its readings are open items.",
+      "read": true
+     },
+     {
+      "item": "transmission-is-inheritance-and-need",
+      "done": "Entered into what-a-lineage-carries, not as its own entry: same lineage, and it supplies the premise that entry's need-drift law uses. Added transmits_at_iff, no_new_dependence, TransmitsFromSome and the TwoGivers witness. The name is widened.",
+      "read": true
+     },
+     {
+      "item": "living-on-and-descent",
+      "done": "Not entered. Its laws define two readings of related (living on, descent), say which events they connect (Mutualism, Brood, relabelling) and what relational neutrality reaches along them. They state no course. Its one step law, that embodied arising descends from an active formation, is a one-step fact beside Flow.descends_of_comes in transmission. A definition or representation does not enter.",
+      "read": true
+     },
+     {
+      "item": "growth-constrained-fragmentation",
+      "done": "Entered as a new entry, base periphery per 02's label. The core Cuts laws and Flow.GrownBy.condition_needed are labelled inline. Exact threshold on joined_cut_unchanged_iff, retaining-edge witness. The ranking is labelled as the mean of certified cut returns.",
+      "read": true
+     },
+     {
+      "item": "becoming-renewal-reading",
+      "done": "Entered as a new entry, base any process. The class belongs to the run; falls_not_recurring and its three cases; the Renewable witness. Only hypothesis 1 is used, since hypothesis 2 is about `living`, which the entry does not state.",
+      "read": true
+     },
+     {
+      "item": "merge-of-a-part-kept-by-the-rest",
+      "done": "Read. No region is kept: what is kept is that possibilities stay no two alike, a count, while the part merges at every step. Family set to A, and the entry stays in this file under its id.",
+      "read": true
+     },
+     {
+      "item": "First checker's doubts with no correction set",
+      "done": "two-sided: held_oscillates edge now has balance and 'held for its first ℓ + 1 steps'. The band transition keeps kind exact threshold because the bound is attained, but its condition now says it is not an iff and gives the room premise (Lean: no_narrower_band, lateReturn_band). rule-rebuilt: DNS2 added; exit 1 removed as a repeat of the transition. regime: still_iff clause stated. selection-term: positive_but_last witness exit added. stock: span DNS added. mutation: extractor's 'and that alone' removed.",
+      "read": true
+     },
+     {
+      "item": "Further changes outside the assigned list",
+      "done": "more-needs-renewers: opening clause rewritten because elsewhere.txt G(5) lists the home's causal gloss; it now says what Web.Depletes says, that one falls at such a step, and that the premise does not involve the arising formation. mutation base set to a named model: the home row has no label and the laws are bare counts; the first checker had any type. support-passed-on: dropped the record's label 'A direction:' from one open line, to keep the word away from C; the sentence is otherwise copied.",
+      "read": true
+     },
+     {
+      "item": "Mechanism length",
+      "done": "Eleven mechanisms exceed about 1000 characters, most by about 10 to 30 percent; the longest are recoverable-mediated-change (about 1440), never-leaving-a-guard (about 1350), continuing-self-fed (1309) and what-a-lineage-carries (1260). Qualifiers were kept over length; exact laws are also in transitions and exits, so these can be shortened at the join if wanted.",
+      "read": false
+     }
+    ],
+    "elsewhere": "1. theories/becoming/results/records/market-protected-continuation.json does_not_show 1 ('No law gives entry from unsafe states') and theories/becoming/chapters/05-COLLECTIVES.md line 366, scope column ('no entry from unsafe states'): these read false beside RegimeTransition.supported_finite_transition and PartialRegimeTransition.supported_partial_transition (market-supported-finite-transition, market-partial-correction-boundary), which give entry into the protection under a supplied intervention. The narrower statement is that of market-partial's DNS 4, that no entry mechanism and no formation of the intervention follow.\n2. theories/becoming/results/records/a-rule-rebuilt-from-the-members-it-limits.json: «带不定改后» is cited by its home and counterexamples but is in none of the record's laws. theories/becoming/results/records/continuing-self-fed-from-beyond.json: Becoming.rest_needs_quantum is bound (line 493) and named in its hypothesis and home, but is in no law; the law is in rest-at-every-resolution. Both stay in the entries' declarations against the 'from the record's laws' rule, because the mechanism rests on them. The join can decide.\n3. theories/becoming/results/records/support-passed-on.json does_not_show 1: 'A direction: a chain of support is not yet 生生' uses direction as a label beside the account's separate terms. Possibly worth rewording; I did not read GLOSSARY.md's entry for the word, because my search of it produced no output I could read.\n4. theories/becoming/chapters/04-LIFE.md line 232 and the rest of §6's law table: the rows and section carry no base label (only 'Theorem' elsewhere), so an entry's base has to be inferred. mutation-and-the-balance-it-sets is set to a named model on that inference.\n5. Beyond elsewhere.txt's B(5): steps-met-again-after-a-fall's law text ('keeps the need through the horizon where') is right, and only its statement.en says 'exactly where'; 05's row says 'where'.\nNot read, only searched by the first checker and not assigned here: feeding-closure, substitution-preserves-consumption, bounded-census-keeps-pace, coming-and-ceasing-keep-pace. They may hold further entries.",
+    "validator": "{\n \"errors\": [],\n \"waiting\": [],\n \"entries\": 35\n}",
+    "read": "Read whole, record JSON (statement, hypotheses, laws, does_not_show, counterexamples, next_delta) and home section: a-step-coupling-keeps-at-every-horizon, steps-met-again-after-a-fall, a-rule-rebuilt-from-the-members-it-limits, the-stock-buys-time-where-the-rebuild-draws-on-it, continuing-self-fed-from-beyond, generation-is-replenishment, no-finite-part-bears-taking, the-selection-term-and-a-lineages-fate, regime-in-any-amounts, recoverable-mediated-change, reserved-shutdown-during-recovery, merge-of-a-part-kept-by-the-rest, recurring-reference-revision, market-protected-continuation, market-partial-correction-boundary, market-supported-finite-transition, conditions-kept-together, copying-b-fold, formed-goal-revision-continuation, what-a-line-holds-and-a-regularity-takes-in, constancy-read-at-a-members-class, transmission-is-inheritance-and-need, living-on-and-descent, growth-constrained-fragmentation, becoming-renewal-reading, unceasing-generation-needs-renewal, more-needs-renewers, mutation-and-the-balance-it-sets. These printouts were cut at 1,200 to 1,500 characters a line, so the longest law and declaration lines and some home paragraphs (07's Argument, 05's market rows) were seen only in part.\n\nLean statements read: repeat_covered_iff, repeats_iff, avoids_iff_closed, lands_iff_margin, Countdown.exits, schedule_stops, Slow.misses, copying_iff, frontier_keeps_met, frontier_keeps_stepwise, burst_met, no_narrower_band, lateReturn_band, held_oscillates, relay_threshold, falls_of_outrun, «不及任则持尽», «额零则持尽», «恒取不逾生则存», «恒取逾生则尽», «以储买时当且仅当取于储», not_all_degenerate_while, Unceasing.rises and Depletes, closed_unceasing, Adapting.restores, Inflow.restores, PatternRelay.shifts, attached_link_separates, joined_cut_unchanged_iff, condition_needed, class_belongs_to_the_run, falls_not_recurring, revision_continues, cycles_iff, transmits_at_iff, no_new_dependence, twofold, inherited_within, fromSome_supported, «本类常闭则后皆续», «后皆续当且仅当后皆同类», «亡而网续则后不皆续», not_taken_in, not_all_follow, reach_without_condition, kernel_iff_lasts, needs_admissible, guarded_never_fails_iff, failed_interrupt_retains_elapsed_time. The Lean of Run.renewal_recurs, Conditions.drawdown_not_recurring and Run.not_of_depletion was not found by my search, so those clauses rest on the record's law text.\n\nRead in part: support-from-the-supported, a-regularity-kept-and-changed and rest-at-every-resolution (statement and hypotheses only, or law names); COLLECTIVE-DIRECTION line 51; 05's 'The cases' header; 02's regime table header.\n\nOnly searched: which records name rest_needs_quantum and «带不定改后»; the other families' .in.json for overlapping records and the tolerance line.\n\nOther entries of the family with no correction and no assignment were not re-read against their homes, beyond a script comparing open lines and declarations with the records, a word scan and a read of the input file. No Lean, make, gate or test suite was run, by this step's scale; the full suite and gates are deliberately left to the phase's end. The validator's zero errors is not a full pass."
+   }
+  }
+ ],
+ "readers": [
+  {
+   "families": [
+    "A",
+    "B",
+    "H"
+   ],
+   "report": {
+    "summary": "Read all 12 + 15 + 15 changed entries and 4 + 1 + 4 added entries in families A, B and H. No high findings. Three medium: (1) H regime-in-any-amounts states an \"exactly where\" for a run being still that drops a premise of Drawn.still_iff, so it is false as worded; (2) H recoverable-mediated-change calls the reserved-stop law \"the exit from the refused shutdown\", while its record says the stranded state is not rescued; (3) A threshold-in-the-state-plane's new field line drops the README's next sentence, that the order laws still reach the field on the low side where the point of no return lies. The rest are low: a transition lost in the A-to-B merge, one declaration lost in the B-to-H merge, a witness exit with a misleading `to`, a comparison that does not say what it reads, two open items not carried over, and two doubtful filings. Otherwise the checks held: exit strengths, bases, hypotheses, the merges' laws and every negative I looked at agree with the Lean and the homes, and no verdict word or use of \"direction\" for C was found in new names, mechanisms or beyonds. Not a finding I corrected: several mechanisms run past the \"about 1000 characters\" (a-cascade 1537, recoverable 1443, never-leaving 1354); nothing false follows from their length. Only reading was done; nothing was run or edited in the land worktree.",
+    "read": "Read in full: the output of diffpass.py for A, B and H (every added entry; every changed field, before and after); run/elsewhere.txt; vocabulary.json.\n\nRecords read (statement, laws, hypotheses, does_not_show, counterexamples, next): becoming-dependence-dynamics, substitution-preserves-consumption, dormancy-over-a-stretch, webs-with-a-recent-giving, what-bounds-offspring-numbers, a-whole-of-every-part, joint-difference-making, a-commuting-learner-drives-no-unread-choice, selection-through-couplings, what-a-pools-acts-respond-to, where-two-courses-rejoin, keeping-forgoes-the-renewal-at-the-need, formed-goal-revision-continuation, becoming-renewal-reading, growth-constrained-fragmentation, what-a-line-holds-and-a-regularity-takes-in, constancy-read-at-a-members-class (laws 1-8), reserved-shutdown-during-recovery, market-partial-correction-boundary. Partly read: every-loss-passes-a-juncture, market-supported-finite-transition, others-drawing-first-end-the-base, re-optimizing-above-a-renewal-ends-it, transmission-is-inheritance-and-need (laws and hypotheses), recurring-reference-revision (one law), the-gap-for-ones-own-act, optima-rebuild-a-depleted-base and recoverable-mediated-change (does_not_show), raising-what-couples-in-draws-from-beyond (its correspondence field only).\n\nHomes read: anchors for most of the above in 02, 03, 04, 05, 07; 05 line 360 (the four routes) against its quotation; T3's standing and reading in 05; experiments/margin-measured/README.md lines 75-87.\n\nLean statements read (docstring and signature, not proofs): the Crossing, Web, Substitution, Lone and Bridged laws; RegimeMargin Indexed and Recent, Drawn.still_iff; Reproduction.Flow and Relay; AllWhole, Whole.ceases_part, Generations.allWhole_never; Joint.lean's MakesDifference, Overdetermined, DifferenceOnlyTogether, Pool and Renewable laws; Commutes.start_expect and fixed_expect; TimedResponse; Lasting.lasts_iff_ladder and avoids_iff_closed; Viability's new laws; Optimum.frontier_keeps_above, frontier_keeps, frontier_keeps_stepwise, frontier_keeps_met, burst_met, Next.frontier_rebuilds, Next.frontier_ends_drawn_first, course_kept_iff, course_lost_iff, mutual_course_lost, mutual_lowers_iff, drawn_bounded_iff, drawn_unbounded, drawn_add_shortfall, holding_most; Coupled.gated_threshold; Regulation laws; Stock.repeat_covered_iff; Copying.copying_iff; Countdown; ProtocolInstances.schedule_stops; ReservedShutdown.failed_interrupt_retains_elapsed_time (statement); MachineInstances cycles, completed, revision_continues, better_iff; Labelled.lean's renewal laws; Cuts; Transmission; GrammarPath's named laws; PoolCourse; LineageRegions.Courses.positive_but_last; Season.site_optima.\n\nOnly searched, or checked by script and not read: the Lean of GoalFormationRevision witnesses, GrownFragmentation and PartialRegimeTransition (names and record laws only, the last's statements not opened); homes of a-rule, more-needs-renewers and the-stock (record text only); a scripted cross-check of each entry's declarations, hypotheses, exit laws and `to` against the records' JSON; a scripted scan for verdict words in new names, mechanisms and beyonds. Kit files join2.py and validate_family.py: grep only.",
+    "findings": [
+     {
+      "family": "H",
+      "id": "regime-in-any-amounts",
+      "severity": "medium",
+      "issue": "The new clause says a run is still from a step exactly where its state there is 'the regime's point or a state within the draw with level and recent giving equal'. Lean `Drawn.still_iff` (RegimeMargin.lean:2053) has more in both arms: the second needs `A zero r = r`, 'that the adjustment from nothing left gives again', and the first is any state with recent giving H, level at least H and `A (x - H) H = H`, not one point. As worded the iff is false: a state within the draw with level and recent giving equal, whose adjustment from nothing left gives another amount, is not still. The clause copies the record's law text (regime-in-any-amounts.json:57), which has the same drop. threshold-in-the-state-plane words the same fact correctly ('any such fixed point, not only the point of no return').",
+      "corrected": {
+       "mechanism": {
+        "en": "The regime: one condition, the draw taken first, the state the level and one recent giving. (Any type, linearly ordered amounts with a draw.) Where the adjustment rises with what is left and with the recent giving, the step keeps the order of states; from the first step on a step that neither raises nor lowers both climbs or sinks, whatever the adjustment, and the next such step is of the same kind; a run from a state within a band the step keeps stays within it, and a run is still from a step exactly where its state there is at or above the draw with recent giving the draw and the adjustment giving the draw again, or within the draw with level and recent giving equal and the adjustment from nothing left giving that amount again. (Periphery; `propext`, `Quot.sound`, `Classical.choice`.) Over the non-negative reals, with the adjustment rising in what is left and in the recent giving and keeping a band up to hi, every run starting with both within hi converges, to a rest where the adjustment is continuous, and need not rest: giving moving halfway toward a draw of one converges and is still from no step (a witness). Convergence is not stated in the core: it is an omniscience principle."
+       }
+      }
+     },
+     {
+      "family": "H",
+      "id": "recoverable-mediated-change",
+      "severity": "medium",
+      "issue": "The new exit on `ProtocolInstances.schedule_stops` ends 'the exit from the refused shutdown'. The law holds only from a device armed for a stop grant (`Armed g d`). The record's counterexample says the old nine-unit case is refused at entry 'without retroactively rescuing a stranded state', and the entry's own mechanism says so too. A reader of the exit alone believes a device whose shutdown was refused has a way out. It has none: the law is about a different protocol entered with the margin in place. The strength (sufficient) and the rest of the edge are right.",
+      "corrected": {
+       "exits": [
+        {
+         "to": null,
+         "law": "RecoverableControl.exhausted_recovery_blocks_shutdown",
+         "edge": {
+          "en": "This protocol reserves no stop: with nine units, recovery is exhausted after the first actual write: nothing is published, no tick follows, the shutdown command is refused and the activity still runs."
+         },
+         "strength": "witness",
+         "records": [
+          "recoverable-mediated-change"
+         ],
+         "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-recoverable-mediated-change"
+        },
+        {
+         "to": null,
+         "law": "RecoverableControl.losing_pending_marker_exposes_false_certificate",
+         "edge": {
+          "en": "Deleting the pending marker of a partly changed device publishes old bookkeeping whose candidates exclude the actual configuration, while a certificate over them accepts."
+         },
+         "strength": "witness",
+         "records": [
+          "recoverable-mediated-change"
+         ],
+         "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-recoverable-mediated-change"
+        },
+        {
+         "to": null,
+         "law": "Becoming.ProtocolInstances.schedule_stops",
+         "edge": {
+          "en": "With a reserved stop: from an armed device every admissible schedule longer than the units of reserve above the three reserved, so from R units of at least R − 2 cycles, stops the supervisor, safe and stopped, given the grant, entry margin and bound on interruptions. This is a protocol entered with the margin in place: entry with nine units is refused, and the earlier witness's stranded state is not rescued."
+         },
+         "strength": "sufficient",
+         "records": [
+          "reserved-shutdown-during-recovery"
+         ],
+         "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-reserved-shutdown-during-recovery"
+        },
+        {
+         "to": null,
+         "law": "Becoming.Countdown.exits",
+         "edge": {
+          "en": "For a partial law with a reserved exit, every admitted course longer than the margin from a valid configuration ends at the exit, valid."
+         },
+         "strength": "sufficient",
+         "records": [
+          "reserved-shutdown-during-recovery"
+         ],
+         "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-reserved-shutdown-during-recovery"
+        },
+        {
+         "to": null,
+         "law": "ReservedShutdown.failed_interrupt_retains_elapsed_time",
+         "edge": {
+          "en": "Beyond the admitted bound: with interruption bound one and deadline fifteen, an interruption of ten breaks completion; the retained run is active at time eighteen with eight units used, still running, with no stop left executable."
+         },
+         "strength": "witness",
+         "records": [
+          "reserved-shutdown-during-recovery"
+         ],
+         "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-reserved-shutdown-during-recovery"
+        }
+       ]
+      }
+     },
+     {
+      "family": "A",
+      "id": "threshold-in-the-state-plane",
+      "severity": "medium",
+      "issue": "The new open item copies experiments/margin-measured/README.md's finding that the field's giving does not rise in what is left over the whole band, and stops before the README's own conclusion: 'So the order laws reach the field's state on the low side of its level law, below the peak, where the point of no return lies.' The mechanism says of this premise that 'rising with what is left cannot be dropped' and that without it no level separates the fates. Read together, the entry leads a reader to think the threshold law misses the field altogether, which the README does not say. Its adjacent clause 'each stock's fitted level law humped' is what the conclusion turns on.",
+      "corrected": {
+       "open": [
+        {
+         "en": "The threshold over the reals as a computed level: there a run converges, and record regime-in-any-amounts states the fates as down-closed and falling with the recent giving, not the level.",
+         "source": "theories/becoming/results/records/threshold-in-the-state-plane.md#does-not-show--未表明"
+        },
+        {
+         "en": "Read through the balance as an adjustment, the field's giving meets the rising premise only partly (post hoc, MQ5 stocks): it rises in the recent giving in 65 of 69 stocks; it does not rise in what is left over the whole band, each stock's fitted level law humped, rising over the whole band in only 4 of 69. So the order laws reach the field's state on the low side of its level law, below the peak, where the point of no return lies.",
+         "source": "experiments/margin-measured/README.md#3-the-state-the-level-in-the-laboratory-level-recent-giving-and-one-lag-in-the-field"
+        },
+        {
+         "en": "That measured adjustments rise in both arguments over their band, or how often below-point episodes with recent giving short of the catch fall in the field: the curve's direction is proved under the premises; its field frequency was tested once (MQ7), the frozen bound was not met, so the frequency is not established.",
+         "source": "theories/becoming/results/records/threshold-in-the-state-plane.md#does-not-show--未表明"
+        },
+        {
+         "en": "The threshold beyond the band, where the search stops at hi + 1; a state with a further lag.",
+         "source": "theories/becoming/results/records/threshold-in-the-state-plane.md#does-not-show--未表明"
+        },
+        {
+         "en": "Rest in finitely many steps over the reals: in whole numbers each change moves an amount by at least one; over the reals a run converges and need not rest (record regime-in-any-amounts).",
+         "source": "theories/becoming/results/records/where-a-run-of-a-regime-comes-to-rest.md#does-not-show--未表明"
+        }
+       ]
+      }
+     },
+     {
+      "family": "B",
+      "id": "whole-drawing-beyond-renewal-ends",
+      "severity": "low",
+      "issue": "The merge with A's a-whole-of-every-part removed that entry's window transition ('n steps of the family's uptake exceeding its replenishment from a stock below n + m...', on `Web.Whole.family_excess_ends`), but this entry, which holds the law now, has `transitions: []`. The law and the clause survive in its declarations and mechanism; the transition itself is gone from the atlas. The other removed items (the three exits, the four open items, the declarations) all reached this entry.",
+      "corrected": {
+       "transitions": [
+        {
+         "kind": "window or deadline",
+         "condition": {
+          "en": "n steps of the family's uptake exceeding its replenishment from a stock below n + m: no part arises after them, and the whole ends once the parts active then have ended."
+         },
+         "declarations": [
+          "Becoming.Web.Whole.family_excess_ends"
+         ],
+         "records": [
+          "whole-drawing-beyond-renewal-ends"
+         ]
+        }
+       ]
+      }
+     },
+     {
+      "family": "H",
+      "id": "a-step-coupling-keeps-at-every-horizon",
+      "severity": "low",
+      "issue": "The move from B's keeping-forgoes-the-renewal-at-the-need removed 13 declarations there. Twelve are here; `Becoming.Optimum.frontier_breaks_at_end` is on neither entry. Only the Web form, `Web.frontier_breaks_at_end`, remains here, though the moved clause 'where c + e < m, every optimum breaks it within the horizon' rests on the Optimum form too. Everything else in this merge, including the 'one direction' wording for `frontier_keeps_met`, agrees with the Lean.",
+      "corrected": {
+       "declarations": [
+        "Becoming.Optimum.frontier_keeps_stepwise",
+        "Becoming.Web.frontier_keeps_stepwise",
+        "Becoming.Optimum.frontier_met_before_end",
+        "Becoming.Optimum.frontier_breaks_at_end",
+        "Becoming.Web.frontier_breaks_at_end",
+        "Becoming.Web.frontier_breaks_last",
+        "Becoming.Optimum.outweighed_stepwise",
+        "Becoming.Web.frontier_breaks_stepwise_long",
+        "Becoming.Optimum.Holding.logistic_stepwise",
+        "Becoming.Optimum.continued_stepwise_frontier",
+        "Becoming.Optimum.continued_ending_stepwise_frontier",
+        "Becoming.Optimum.continued_holding_stepwise_frontier",
+        "Becoming.Optimum.shortfall_count_ge",
+        "Becoming.Optimum.falls_met_le",
+        "Becoming.Optimum.frontier_keeps_met",
+        "Becoming.Optimum.continued_met_frontier",
+        "Becoming.Web.frontier_met_kept",
+        "Becoming.Optimum.Holding.burst_met"
+       ]
+      }
+     },
+     {
+      "family": "A",
+      "id": "a-whole-of-every-part",
+      "severity": "low",
+      "issue": "The exit on `Generations.allWhole_never` is a witness that the whole of every member is active at no step while the lineage is active at every step, yet its `to` is whole-drawing-beyond-renewal-ends. Nothing in that law passes from this dynamic into that one: it compares two wholes of the same parts. A reader following the edge would take it for a course leading there. The pointer belongs in the words, which already give it.",
+      "corrected": {
+       "exits": [
+        {
+         "to": null,
+         "law": "Becoming.Web.AllWhole.persists_iff",
+         "edge": {
+          "en": "A whole of every part is active at every step from T on exactly where every part is: it persists with no arising, but only while no part ceases."
+         },
+         "strength": "exact",
+         "records": [
+          "a-whole-of-every-part"
+         ],
+         "source": "theories/becoming/results/records/a-whole-of-every-part.md#laws--规律"
+        },
+        {
+         "to": null,
+         "law": "Becoming.Generations.allWhole_never",
+         "edge": {
+          "en": "The same parts, the two wholes: in Generations a formation that is the whole of every member is active at no step, while the lineage, the whole of some member, is active at every step (a witness). Where a whole of some part has its parts arising only through a family drawn beyond its renewal, whole-drawing-beyond-renewal-ends' law ends it."
+         },
+         "strength": "witness",
+         "records": [
+          "a-whole-of-every-part"
+         ],
+         "source": "theories/becoming/results/records/a-whole-of-every-part.md#laws--规律"
+        }
+       ]
+      }
+     },
+     {
+      "family": "H",
+      "id": "formed-goal-revision-continuation",
+      "severity": "low",
+      "issue": "The mechanism says the construction's comparison 'ranks learning above attendance' and rightly places the warrant in the construction under the practical commitments, but does not say what the comparison reads. AGENTS asks that a comparison say what it reads. Record law 6 states it: strictly more of the protected claims (access, maintenance), or the same with strictly more gains.",
+      "corrected": {
+       "mechanism": {
+        "en": "Periphery (`propext`, `Quot.sound`, `Classical.choice`), the two-practice construction supplied: two practices, their feedback and calibration laws, responsiveness, authority, initial work and reserve, and the scheduled sequence. A cycle needs 2 ≤ w and uses two units, of the reserve where the selector feeds the practice back and 2 ≤ q, else of the work; a practice runs n cycles from work w and reserve q exactly where n = 0, or 2 ≤ w and the work covers the cycles the reserve does not (natural subtraction and division). Acquisition, revision and reform complete for a condition exactly under access loss with kept transition maintenance, and afterwards n operations run exactly where n ≤ 5 (n ≤ 2 without reform), the earlier loss kept. Under the practical commitments the construction's comparison, which ranks one practice above another where it protects strictly more of the protected claims (access, maintenance) or the same with strictly more gains, ranks learning above attendance exactly under that condition: the warrant is the construction's under those commitments, not the counting law's. In witnesses a false reference leaves the goal in place despite a real loss, grounds gone stale leave a new loss unaddressed, and without response the goal is not revised though the grounds are the same. Not open discovery of ends."
+       }
+      }
+     },
+     {
+      "family": "H",
+      "id": "never-leaving-a-guard",
+      "severity": "low",
+      "issue": "The merge adds market-partial-correction-boundary and an 'exact threshold' at β = 5/12, and copies three of its does_not_show lines, but leaves out the one that limits how that threshold can be read: 'No bifurcation over all parameters and no recovery range with quality error follow'. The exit on arbitrarily small error states the second half; nothing states the first.",
+      "corrected": {
+       "open": [
+        {
+         "en": "The certificate says where histories never fail, not how a state outside every certificate comes into one; the landing and transition laws here assume their intervention.",
+         "source": "theories/becoming/results/records/market-protected-continuation.md#does-not-show--未表明"
+        },
+        {
+         "en": "The safe rectangle is one certificate within the kernel; the market's kernel itself, the complete region of nonfailure, is not computed.",
+         "source": "theories/becoming/results/records/market-protected-continuation.md#does-not-show--未表明"
+        },
+        {
+         "en": "Apart from the numerical example, no law says that given parameters and bounds satisfy the protection certificate, or that some certificate holds a given start; the protection certificate is a supplied condition.",
+         "source": "theories/becoming/results/records/market-protected-continuation.md#does-not-show--未表明"
+        },
+        {
+         "en": "Nothing in the model makes actual markets satisfy its laws or comply with its certificate.",
+         "source": "theories/becoming/results/records/market-protected-continuation.md#does-not-show--未表明"
+        },
+        {
+         "en": "Which choices an actual collective's continuation goes through, or a measure of joint keeping.",
+         "source": "theories/becoming/results/records/conditions-kept-together.md#does-not-show--未表明"
+        },
+        {
+         "en": "That a kept collective is better than another, or that renewing is better than consuming.",
+         "source": "theories/becoming/results/records/conditions-kept-together.md#does-not-show--未表明"
+        },
+        {
+         "en": "Away from the worst share the cover is shown sufficient, not least; no complete recovery region is computed.",
+         "source": "theories/becoming/results/records/market-supported-finite-transition.md#does-not-show--未表明"
+        },
+        {
+         "en": "The exact boundary is for the property that every physical positive state lands with zero extra quality error; it is not a complete basin of landing.",
+         "source": "theories/becoming/results/records/market-partial-correction-boundary.md#does-not-show--未表明"
+        },
+        {
+         "en": "No bifurcation over all parameters and no recovery range with quality error follow; at the boundary arbitrarily small constant adverse error leaves a positive seed that never lands.",
+         "source": "theories/becoming/results/records/market-partial-correction-boundary.md#does-not-show--未表明"
+        },
+        {
+         "en": "The threshold 5/12 is the model's, not a threshold measured in any market.",
+         "source": "theories/becoming/results/records/market-partial-correction-boundary.md#does-not-show--未表明"
+        },
+        {
+         "en": "The intervention, with β held fixed and the support supplied, is assumed: no entry mechanism and no formation of the intervention follow from the laws.",
+         "source": "theories/becoming/results/records/market-partial-correction-boundary.md#does-not-show--未表明"
+        }
+       ]
+      }
+     },
+     {
+      "family": "B",
+      "id": "horizon-optima-hold-the-greatest-renewal",
+      "severity": "low",
+      "issue": "The new open list drops 'The optimum where no level of greatest renewal lies within the start with what is given there (rebuilding from below)' as answered by optima-rebuild-a-depleted-base. That law answers it only where the next level and the weighted gain rise with the level below y; its record's does_not_show keeps the rest open, and this entry's other exits do not point there. A reader of this entry would take the below-reach case as closed. The rewritten lines are also not the source record's words, whose does_not_show is stale (already listed in run/elsewhere.txt).",
+      "corrected": {
+       "open": [
+        {
+         "en": "An order valuing what is left at the horizon at a worth whose most left is not regrown in one step.",
+         "source": "theories/becoming/results/records/horizon-optima-hold-the-greatest-renewal.md#does-not-show--未表明"
+        },
+        {
+         "en": "The optimum where the capacity cannot draw down to a level of greatest renewal in a step or draw everything at the last.",
+         "source": "theories/becoming/results/records/horizon-optima-hold-the-greatest-renewal.md#does-not-show--未表明"
+        },
+        {
+         "en": "Below a level out of one step's reach: the optimum where the next level does not rise with the level below y (an overcompensating renewal) or the gain has several peaks; that the rising course is then not an optimum.",
+         "source": "theories/becoming/results/records/optima-rebuild-a-depleted-base.md#does-not-show--未表明"
+        },
+        {
+         "en": "Several optimizers ranking courses (equilibria of the course) and how optimizers come to them.",
+         "source": "theories/becoming/results/records/horizon-optima-hold-the-greatest-renewal.md#does-not-show--未表明"
+        },
+        {
+         "en": "That the loss is a harm, or that a longer horizon or a coupling is better: no evaluation enters; the order ranks only what the optimizer draws.",
+         "source": "theories/becoming/results/records/horizon-optima-hold-the-greatest-renewal.md#does-not-show--未表明"
+        },
+        {
+         "en": "That valuing what is left keeps what depends on the levels passed through: a dependence above every level of greatest renewal is still broken at the first step.",
+         "source": "theories/becoming/results/records/valuing-what-is-left-at-the-horizon.md#does-not-show--未表明"
+        },
+        {
+         "en": "Which optimum is taken: the last step's draw is left free, keeping and draining both optima.",
+         "source": "theories/becoming/results/records/valuing-what-is-left-at-the-horizon.md#does-not-show--未表明"
+        },
+        {
+         "en": "That any terminal value keeps what depends on the levels passed through: a dependence above every level of greatest renewal is broken at the first step at every worth.",
+         "source": "theories/becoming/results/records/valuing-what-is-left-at-any-worth.md#does-not-show--未表明"
+        },
+        {
+         "en": "Valuing what is left where the most left is not regrown in one step; several optimizers ranking whole courses.",
+         "source": "theories/becoming/chapters/05-COLLECTIVES.md#open"
+        }
+       ]
+      }
+     },
+     {
+      "family": "H",
+      "id": "merge-of-a-part-kept-by-the-rest",
+      "severity": "low",
+      "issue": "Family changed to A, with no argument in the diff, but the entry stays in H's out file and is absent from A's list, so A's readers do not see it as theirs; I did not establish how the join treats this. A's title, absorption and ending, also fits poorly: nothing in the mechanism ends, and the only thing absorbed is one bit of the Reset witness, while the rest grows. With no exits or transitions, the entry is mostly a counting bound holding at every step, so it is doubtful as a dynamic in any family. Unsure of the better filing, so no correction.",
+      "corrected": {}
+     },
+     {
+      "family": "B",
+      "id": "joint-difference-making",
+      "severity": "low",
+      "issue": "Every clause agrees with the home and Lean, and the base is right. The doubt is whether it is a dynamic: it is a test of who makes the difference at one step, with `transitions: []`, and its exits are counterfactual witnesses, not ways out of a course. Only the renewable witness has a run. Its title family, drains beyond what couples in, is not what it states either. It may stay as the attribution companion to own-count-misses-joint-excess, which now points to it. Unsure, so no correction.",
+      "corrected": {}
+     },
+     {
+      "family": "A",
+      "id": "loss-of-renewal-for-good",
+      "severity": "low",
+      "issue": "An unchanged field of a changed entry. Ten declarations are not in the laws of this entry's records under those names: `Becoming.RelationalRenewal.Law.*` and two others, where relational-renewal-classification lists `RelationalRenewal.Law.*` with no `Becoming.` prefix, and `Becoming.Flow.ends_below`, which is in other records (own-count-misses-joint-excess, groups-whose-conditions-are-coupled). The schema asks for exact names from the record's laws. market-finite-support-obstruction's four `Becoming.FiniteSupportObstruction.*` names failed the same scripted check. I did not resolve which spelling the Lean exports, so no correction.",
+      "corrected": {}
+     }
+    ],
+    "elsewhere": "Not already in run/elsewhere.txt, and not fixed:\n\n1. theories/becoming/results/records/regime-in-any-amounts.json line 57: the law text 'a run is still from a step exactly where its state there is the regime's point or a state within the draw with level and recent giving equal' drops what Lean `Drawn.still_iff` (RegimeMargin.lean:2053) has: 'that the adjustment from nothing left gives again', and the condition that the adjustment gives the draw again in the first arm. False as worded. The entry's clause came from here.\n\n2. theories/becoming/results/records/the-gap-for-ones-own-act.json lines 62 and 81: 'The general form of favouring what reaches beyond ... remain open' looks stale against raising-what-couples-in-draws-from-beyond, whose correspondence field presents itself as that item of the open programme in one step. The second-pass writer dropped the line from unselected-beyond-the-coupling-closure on this ground. I read only that correspondence field and what-a-rise-draws-from-beyond's mechanism, so I am unsure how much of the line stands, especially its 'rising share' half.\n\n3. theories/becoming/results/records/support-passed-on.json does_not_show: 'A direction: a chain of support is not yet 生生'. The entry now omits the two words, so it no longer copies the record exactly. Worth a look against the glossary's sense of direction; wording only.\n\n4. The first-pass PLAN rows and the other stale lines I met are already listed there."
+   }
+  },
+  {
+   "families": [
+    "D",
+    "E",
+    "F",
+    "G"
+   ],
+   "report": {
+    "summary": "Read D, E, F and G's second-pass additions, merges and changed fields against records, homes and Lean. No high findings. 5 medium, 9 low, with no false strength or transition kind among the exits read. Medium: (1) what-keeping-widening-needs lost \"nothing keeps opening\"; (2) closing-needs-net-draw says \"no class decides alone\", which keeps_of_not_arising refutes; (3) the name of revision-with-an-undecided-value drops \"from all undecided\"; (4) withholding-returns-around-a-loop keeps two open items that the E pass corrected on the same text; (5) recurring-at-fine-steps-quiet-at-coarser files a World law under a named model. Low includes one law the merge left in no entry (Law.rise_not_lossless), one open item lost in the split (08's settling and the tail) and one loosely bounded negative in a-prediction. No Lean, make, gate or tests were run; this is reading evidence only. Nothing in the worktree was edited. Corrected mechanisms keep the existing length apart from the restored clauses, so three stand well over about 1000 characters: what-keeping-widening-needs 1533 (before my edit about 1450), closing-needs-net-draw 1516, recurrence-without-premise 1268.",
+    "read": "READ IN FULL: the output of kit/diffpass.py for D, E, F, G (added entries whole; changed fields before and after). The whole out-file entry for each changed D and F entry, and for G's when-the-runs-of-a-process-settle, the-last-change-of-a-run, continued-change-needs-openness (declarations and open only), unceasing-generation-needs-renewal (declarations and open only) and ceasing-needs-arising (declarations and open only). E's what-decides and a-circular-wait: non-mechanism fields, plus the mechanisms in the diff. run/elsewhere.txt whole. vocabulary.json. PLAN §4.2. Validator rules in tools/research/atlas.py around transitions and build().\n\nRECORDS (JSON): printed statement, laws (each capped at 900 characters, so long declaration lists are cut), hypotheses, does_not_show, counterexamples, next_delta for selection-when-the-lumping-changes, experiment-needs-return, evidence-through-change, encounter-selection-and-revision, a-reading-informed-and-revalued, bounded-census-keeps-pace. Parts only: thresholds-of-waiting (does_not_show, next_delta), selection-through-couplings (hypotheses, laws naming unselected_*), a-reading-kept-by-its-update (does_not_show), adaptive-closure-cannot-resolve (reopen laws), whether-a-loop-closes-a-difference (laws, each capped at 320 characters), laws-at-coarser-steps (statement, hypotheses, does_not_show), what-discrete-steps (hypotheses, the still_reading law), recurrence-without-premise (the rise law and its does_not_show), space-and-its-parts (first hypothesis; presence of law_iff_em and law_decides), unceasing-generation (presence of Tide.unrelated_depletion).\n\nHOMES READ, some cut at a character limit: 03 anchors r-experiment-needs-return, r-selection-when-the-lumping-changes, r-a-revision-that-opens-a-correction, r-encounter-selection-and-revision, r-evidence-through-change, r-a-reading-informed-and-revalued, r-selection-through-couplings, r-where-a-formations-acts-return, r-what-seeking-cannot-separate and its reading, r-a-reading-kept-by-its-update, r-adaptive-closure-cannot-resolve, r-revision-with-an-undecided-value, line 349; r-expected-free-energy-and-its-terms (first 3500 characters). 05: r-thresholds-of-waiting, r-tolerance-monotone, r-a-pair-tolerates, D48 reading, r-a-code-held-as-counts (first 2800 and its reading), r-joint-plans, r-what-decides (to about 3700 characters). 02: r-entropy-history-and-record, r-coupling-saturated, r-becoming-return-grades. 01: r-what-a-commuting-law-keeps-apart, r-place-transition-nets, r-laws-at-coarser-steps row and table lead, r-laws-with-noise, r-ceasing-needs-arising, r-bounded-census-keeps-pace, r-recurrence-without-premise; r-shared-laws-on-the-grammar (first paragraph only). 07: r-closing-needs-net-draw, r-four-cases-of-a-part, r-the-run-classes-and-widening with its table, line 97 (to about 4600 characters). 08: r-when-the-runs-of-a-process-settle, r-the-last-change-of-a-run. experiments/margin-measured/README.md lines 70-80; contingent-learning README opening.\n\nLEAN STATEMENTS READ: Revising controlled_revision, opens_with/without_correction, closes_choice; Confound misattributes, confounded, varied_refutes; ChangingDependency error_growth_budget, uncertainty_requires_tolerance; TemporalInspection understated, predicting_change, new_change (the first truncated at its let); Courses.run_stays_iff; EncounterChoice reobservation, removing_coverage, acquired_binding, poor_catalogue; Stock.product_feasible_iff; ReadingLoop alike_of_kept, Untested.alike_in_both, never_high, floor_forgoes, floor_never_high; ListingValuation TwoWorlds orders_apart, shown_course, presented_course; Flow.unselected_beyond_coupling; ChoiceCountCapture moved_locks_down, Stale.devalued_read_at_once_locks_down; Diagonal Unfolds.gap_new, complete_iff_alike, negation_never_rests; Training settled_stays, comes_to_rest; ReflexivePrediction right_rests, reached_rests, reached_by_start; Tolerance docstring and def block, thin_absorbed, restores_iff; WindowedWaiting windowTwo_restored_stays, gives_unless_errs, errs_answered, Pair.echo, echo_returns, alternator_received_within, alternator_gives_odd_within; SeededContinuation ignite, stored_seed, ignition_requires, absent_reserve, reciprocal_promises; PairFlow GiverAtNeed withholder_same, standings_differ; Commutes.self_apart; Undecided liar_rests, liar_rests_iff, liar_both_sides, undecided_of_moves, rest_undecided, monotone_not_moves, monotone_run_rests, never_rests_not_monotone, Value.neg; Sampling sample_unceasing, sample_ceasing, Strobe converse_fails, coarse_quiet; Representation Oscillation.still_reading, RandomEnd.rest_not_in_expectation; Entropy unending_change_revisits, never_revisits, arising_revisits, returns_of_conserving, Passing passes, history_without_arrow, Gathering.gathers, Settling.settles, rests_of_never_revisits, rests_of_arrow, exchange_stops_of_carries, World.forgets, no_arrow; Net rests_unrefuted, cycle_premises, cycle_changes, cycle_never_rests, Loses; Regulation never_at_of_beyond, Overshooting.oscillates and its defs; Withholding.withholding_returns; Settling keeps_changing_iff, not_settles_of_recurs, recurs_of_loop, OneWay.lpo_of_settles; Enough.law_possibly_iff_assured; LastChange decided_within, assured_iff_of_lpo, not_not_rests; KeepingWidening ClosedCycle block (lines 1495-1590), KindRelay closed relay (2470-2535), not_keepsOpening/not_keepsWidening_along_supportedPassing, begins_late_of_keepsOpening, not_keepsWidening_of_dissipated_requirements; RegimeMargin Coupled.comes_to_rest, Indexed.returns_within, repeats; LoopReturn Ring.bound_strict, replenishing_no_return (cut_reopened by docstring line only); Identification.statesBelow_iff_lasso; Run.moves_lasso_of_whole_held; Recurrence rise_not_lossless; Web.dissipation_arising_not_recurring; Closing.carried_le_polynomial_before; Retaining not_narrows_of_renewed, narrows_of_consumed, keeps_of_not_arising, Preemption, Untaken; Admission supported_iff_within_margin, Restoring Inflow widens; Clearing.narrows (statement only); Population ceasing_of_returning, coming_iff_ceasing; Openness CountedBy and CountedWithin arising_iff_ceasing, slow_world, procession_world, census_one_way; Space arising_iff_ceasing, law_iff_em; Decidedness arising_iff_ceasing_decided; Counting lpo_of_finite_ends; Frequency Saturation stops, stops_by, stops_iff, floored, floored_inexact; GrammarLaws «尽则不或屡», «尽则不屡», «入而屡之例», «止而不入之例»; InAmounts fallsStop_iff; Amounts.rests_unrefuted; Arising Tide.unrelated_depletion.\n\nNOT READ (each clause there rests on the record's or home's words only): the other ListingValuation declarations; Transfer.mixed, ArisingDrawer, ArisingGiver (my name search did not reach them); NoisyLaw.readOffExchange; Amounts.falls_end; 01's r-space-and-its-parts and r-recurrence-without-decidedness; 03's r-acts-alike and r-a-response-common beyond one paragraph; the rest of chapters and records.\n\nONLY SEARCHED, NOT READ: 'tolerance' and 'general web' across records, chapters and Lean (for the open item on webs); 'do not return' across chapters; 'randomi' in 03 (reading line then read); theorem names with cycle, period, oscill or altern in RegimeMargin.lean (for the CY negative: names only, so that negative is checked by name search alone); rise_not_lossless across pass2/*.out.json and dynamics.json (no hits); 'tail beyond lists' in F and G; 'implicit bias', 'with a gain' (grep lines only); verdict words, 'attractor', 'phase transition' and 'direction' by regex over added and changed name, mechanism and beyond (hits only: 'an optimum of that reward', labelled; 'exchange of harms' in a reading of 05; 'not better' as the home's negation; 'for good' as an idiom; none is a verdict of the entry's own). All `to` ids resolve and no id is duplicated across pass2 files (script). Valence is 'none asserted' on every entry in D, E, F, G (script).",
+    "findings": [
+     {
+      "family": "G",
+      "id": "what-keeping-widening-needs",
+      "severity": "medium",
+      "issue": "The second pass rewrote the last law so that it loses the stronger half. Before: 'Along every continuation containing carrying on while supported or passing support nothing keeps opening or keeps widening'. After: 'nothing keeps widening; nor does anything along a continuation containing carrying on while supported or passing support'. Lean Flow.not_keepsOpening_along_supportedPassing (KeepingWidening.lean:1087) and 07's home (line 97: 'nothing keeps opening or keeps widening') state both. Without it the reader sees 'keeping opening needs a beginning after every step' and cannot learn that along these continuations keeping opening is itself refuted. The new order also lets 'nor does anything' read as falling under the dissipated-list condition, which that law does not take. Flow.not_keepsWidening_of_dissipated_requirements also takes a continuation containing carrying on (`carries`), not stated in the sentence. The length stays well above 1000 characters, as before this edit.",
+      "corrected": {
+       "mechanism": {
+        "en": "Take a course keeping widening by name on the actual levels, what every formation supported from a step on requires fixed within a finite family of conditions. The family's stock passes every bound and rises at arbitrarily late steps (natural-number amounts); under the first law, the family without repetition, at arbitrarily late steps the rest gives it net or it is not closed; and a finite world under the first law, balanced on all its conditions from a step, has no such course. Under upkeep it has ever more takers; with the family balanced on from a step its replenishment, and with bounded giving per entry its renewers, are bounded from no step on, entries of the present list counted with repetition. Under the World premises and requirements never loosening, along a continuation containing carrying on of the supported, keeping opening needs, up to double negation, a beginning after every step (a passing of support into a formation nothing supported continues into along it), by name a passing of support, not conversely. Along every continuation containing carrying on while supported or passing support nothing keeps opening or keeps widening; where a list holding every condition any formation requires is dissipated on from a step, along a continuation containing carrying on of the supported nothing keeps widening. The first two laws restate open-systems thermodynamics and maintenance scaling, the others are near-definitional, and none compares two courses; which actual courses meet the premises is not shown."
+       }
+      }
+     },
+     {
+      "family": "G",
+      "id": "closing-needs-net-draw",
+      "severity": "medium",
+      "issue": "'Run classes, read over a whole run, do not alone decide which: no class decides alone' is false against the entry's own declarations and the home's table (07 r-the-run-classes-and-widening, 'What it decides' column). Flow.Balances.keeps_of_not_arising (Retaining.lean:416): a part inactive at the start and never arising keeps what can form the same, which decides the case. not_narrows_of_renewed rules out narrowing; narrows_of_consumed gives narrowing under its conditions. Only 'within renewal at a step' decides nothing. The added 'no class decides alone' goes beyond the home's lead, and it drops the premises of the home's label (only active formations taking and only from what they draw on; the last row also only active formations giving). Also 'a part widens, narrows, keeps the same or is mixed' is stated flat where 07 r-four-cases-of-a-part says one holds wherever inclusion or exceeding is decided both ways and that every comparison falling under one is classical.",
+      "corrected": {
+       "mechanism": {
+        "en": "Near-definitional, and a comparison of two level paths, not a course closing: withhold a part (a decided family of formations), keep the rest of the exchange as it was, and compare the formations admitted at each step; no significance or standpoint enters. Where the rest would overdraw there are no withheld levels and nothing to compare; where they exist they are unique, and in a balanced flow, at each step, each level with what the part has so far taken equals the level without it with what the part has so far given. So a part closes what can form only by a net draw on a required condition, and opens it only by a net give: a formation is supported exactly where, on each condition it requires, the part's net draw stays within the margin; naming the condition overdrawn needs excluded middle. By inclusion of what is admitted a part widens, narrows, keeps the same or is mixed, one of them wherever inclusion or exceeding is decided both ways, and ordering a mixed part needs a measure. With only active formations taking and only from what they draw on, run classes read over a whole run decide part of it: drawing only on conditions renewed over the run does not narrow; giving no more than it takes, where a dependence is consumed and met without it, narrows; inactive at the start and never arising, only active formations giving, changes nothing; within renewal at a step decides nothing. Consuming over the run, or having arisen, does not alone decide. Discrete steps, natural-number levels and needs."
+       }
+      }
+     },
+     {
+      "family": "F",
+      "id": "revision-with-an-undecided-value",
+      "severity": "medium",
+      "issue": "The name says the liar's revision 'rests undecided with three' values, and the mechanism calls this 'a stated case of an alternation left by a change of the values read'. Both drop 'from all undecided'. Undecided.liar_rests is about `stage`, the course from all undecided. liar_rests_iff says a run from any start rests at a step exactly where the liar is undecided there, and Value.neg (Undecided.lean:89) exchanges t and f. So on my reading of those two statements (no named theorem says it), a run from a decided value under three values keeps moving and never rests. Changing the values read is not alone what leaves the alternation; the start matters. The mechanism's 'not that a run from a decided value comes there' is true but does not reach the name. The home's 'the liar rests undecided' carries the same drop (see elsewhere).",
+      "corrected": {
+       "name": {
+        "en": "The liar's revision never rests with two values; with three, from all undecided, it rests undecided"
+       },
+       "mechanism": {
+        "en": "A witness and a law, on N sentences speaking only of one another, with an undecided value below true and false and the strong three-valued tables. The liar is one sentence saying its own negation: read with two values its revision never rests, from every start. Read with three, it rests undecided at every stage from all undecided, and a run of it from every start rests at a step exactly where the liar is undecided at that step: the law says where a run rests, not that a run from a decided value comes there. From all undecided, this is a stated case of an alternation left by a change of the values read. The law: where two-valued revision of a closed system has no fixed point, every fixed point and every resting run leaves a sentence undecided. No map monotone in information moves every value, three-valued negation keeping the undecided value, and the run of a monotone map from the undecided value rests from its first step, so a run from it that never rests needs a map that is not monotone. Undecided is what revision has not decided, not a third truth."
+       }
+      }
+     },
+     {
+      "family": "F",
+      "id": "withholding-returns-around-a-loop",
+      "severity": "medium",
+      "issue": "The entry was changed (mechanism, records, exits), and its exit now points to restoring-giving-from-the-worst-start, yet its open list still tells the reader that 'thresholds of waiting (giving where at least k of what one waits on gave)' and 'Which laws that give first restore giving in a general family' are not shown. Both are copied from a stale does_not_show. Thresholds are stated in thresholds-of-waiting, and Tolerance.restores_iff (Tolerance.lean:434) states the exact condition under the law of sources. The E pass corrected these very sentences on giving-that-waits-on-giving and restoring-giving-from-the-worst-start, so the atlas now contradicts itself across families.",
+      "corrected": {
+       "open": [
+        {
+         "en": "How the relation of waiting forms, or amounts of giving. Thresholds of waiting, which this record leaves out, are stated in thresholds-of-waiting.",
+         "source": "theories/becoming/results/records/giving-that-waits-on-giving.md#does-not-show--未表明"
+        },
+        {
+         "en": "That cooperation is good, or which giving supports 生生.",
+         "source": "theories/becoming/results/records/giving-that-waits-on-giving.md#does-not-show--未表明"
+        },
+        {
+         "en": "Which laws giving first restore a general family, past the law of sources, for which the exact condition is stated (Tolerance.restores_iff).",
+         "source": "theories/becoming/chapters/05-COLLECTIVES.md#open"
+        }
+       ]
+      }
+     },
+     {
+      "family": "F",
+      "id": "recurring-at-fine-steps-quiet-at-coarser",
+      "severity": "medium",
+      "issue": "Base 'a named model' is wrong. The mechanism opens 'A one-way law', and Web.sample_unceasing and Web.sample_ceasing (Sampling.lean:207, 215) hold for every web, with activity decided and strict sampling. Strobe is the witness, not the carrier of the law. The home's table (01 line 555) labels the row 'All Theorem (World) unless marked', and laws-at-coarser-steps is unmarked. lossless-exchange-continues-and-returns, also 'a witness and a law', is rightly filed under World.",
+      "corrected": {
+       "base": "World"
+      }
+     },
+     {
+      "family": "F",
+      "id": "publication-under-negation-alternates",
+      "severity": "low",
+      "issue": "The sentence added in this pass, 'rests undecided with a third value', drops 'from all undecided', as in revision-with-an-undecided-value.",
+      "corrected": {
+       "mechanism": {
+        "en": "A witness on two values, beside laws the home labels near-definitional; its one general law, on the chain, is in family D's a-prediction-read-by-what-it-predicts. A published prediction read by the response before the outcome is right exactly where the response to it is itself. Publishing at each step the outcome of the step before, publication stays at a step exactly where that step's prediction is right (any type). Where the response moves every value no published prediction is right (any type); on two values negation is such a response, and repeated publication alternates for ever: no step publishes again. The law behind the never resting is a-map-moving-every-value-never-rests; the rhythm is shown periodic for the two-valued negation only. The liar's two-valued revision likewise never rests, and with a third value, from all undecided, rests undecided (revision-with-an-undecided-value). The response is a function of the prediction alone, read before the outcome."
+       }
+      }
+     },
+     {
+      "family": "F",
+      "id": "withholding-returns-around-a-loop",
+      "severity": "low",
+      "issue": "The added 'the windowed alternator ... gives at every odd step' drops 'under every window of at least two', which WindowedWaiting.Pair.alternator_gives_odd_within takes as `two : 2 ≤ w`. It also weakens the iff: the alternator gives exactly at the odd steps.",
+      "corrected": {
+       "mechanism": {
+        "en": "A law over any formations and any relation of waiting, not a witness, and with no finiteness or decision asked. Without memory a formation gives at the next step exactly where all it waits on gave, so it gives at n exactly where every formation with a chain of exactly n waits to it gave at the start. On a loop of p waits, a formation withholding at the start withholds at every multiple of p: the law does not say the formation or the course has period p, does not show p least, and says nothing of the steps between. Where no chain of L waits exists every formation gives from L on, whatever the start, exact in Line. The family's witnesses, whose mechanisms are family E's: in Ring, three formations each waiting on the one before, one withholding circulates (giving-that-waits-on-giving); in a pair, one withholding echoes, the law at a loop of two (Pair.echo); and the windowed alternator, its withholdings a supplied pattern of errors, under every window of at least two gives exactly at the odd steps (both a-pair-tolerates-only-within-a-window)."
+       }
+      }
+     },
+     {
+      "family": "F",
+      "id": "recurrence-without-premise",
+      "severity": "low",
+      "issue": "The second pass removed the clause on Law.rise_not_lossless ('a quantity that never falls along an orbit and rises at some step of it rules out a law that merges nothing'), the declaration and its open item. The clause is in the home (01 r-recurrence-without-premise) and in the record. A search of pass2/*.out.json and dynamics.json finds the name nowhere, so the merge leaves this law in no entry. Law.succ_open, removed at the same time, is kept in lossless-exchange-continues-and-returns.",
+      "corrected": {
+       "mechanism": {
+        "en": "No premise on the unfolding: the list is the hypothesis each law writes in. A sequence a list holds revisits from every step on, and so does every run of every process whose configurations a list holds. Within finitely many configurations, a list holding every one, a determined law merges nothing exactly where every configuration returns, exactly where it keeps every possibility; a quantity that never falls along an orbit and rises at some step of it rules out a law that merges nothing. A course has at most N states exactly where it repeats from some step i with some period q + 1, i + q + 1 <= N; where the laws are functions, moves formed by a whole, a rest or a part held by a list repeat from some step with some period, start and period within the list's length. There a period exists within the list; which, is not said. Where runs part a bound on configurations bounds no course (free branching on two values, a witness). Becoming that keeps its whole history merges nothing and never returns, so it needs a carrier no list holds, and a present a list holds forgets. Beside these: each basin of a determined law holds one cycle (basins-of-a-determined-law, family A); when a cycle repeats without end from a stock (recurring-reference-revision, family H)."
+       },
+       "declarations": [
+        "Becoming.revisits_from",
+        "Becoming.Run.revisits_from",
+        "Becoming.unheld_of_new",
+        "Becoming.Run.change_not_recurring",
+        "Becoming.Law.Returns",
+        "Becoming.Law.lossless_iff_returns",
+        "Becoming.Law.returns_iff_keeps",
+        "Becoming.Law.rise_not_lossless",
+        "Becoming.Law.withHistory_never_returns",
+        "Becoming.Law.present_forgets",
+        "Becoming.Run.moves_lasso_of_whole_held",
+        "Becoming.Run.moves_lasso_of_rest_held",
+        "Becoming.Run.moves_lasso_of_part_held",
+        "Becoming.Run.whole_unheld_of_never_cycles",
+        "Becoming.Identification.statesBelow_iff_lasso",
+        "Becoming.Parting.free_unbounded"
+       ],
+       "open": [
+        {
+         "en": "Finitely many configurations means that a list holds them, not a cardinality, and no decision of equality comes with it.",
+         "source": "theories/becoming/results/records/recurrence-without-premise.md#does-not-show--未表明"
+        },
+        {
+         "en": "The equivalence of merging nothing, returning and keeping every possibility is shown for determined laws only, not for processes whose course branches.",
+         "source": "theories/becoming/results/records/recurrence-without-premise.md#does-not-show--未表明"
+        },
+        {
+         "en": "That change does not recur is a negated recurrence, not a step named after which nothing changes.",
+         "source": "theories/becoming/results/records/recurrence-without-premise.md#does-not-show--未表明"
+        },
+        {
+         "en": "That a rise rules out merging nothing does not exhibit two configurations that merge.",
+         "source": "theories/becoming/results/records/recurrence-without-premise.md#does-not-show--未表明"
+        }
+       ]
+      }
+     },
+     {
+      "family": "F",
+      "id": "closed-cycle-without-dissipation",
+      "severity": "low",
+      "issue": "The new opening 'Witnesses on the World, without dissipation: where a quantity never rises and every arising lowers it, arising is not unceasing' reads as if that law held without dissipation. Web.dissipation_arising_not_recurring (doc: 'Dissipation ends generation') is the law these witnesses escape because they lack its premise. The before-text 'Each lacks dissipation:' was clearer.",
+      "corrected": {
+       "mechanism": {
+        "en": "Witnesses on the World, each lacking dissipation: with it, where a quantity never rises and every arising lowers it, arising is not unceasing. In Recycle one unit cycles between two pools, the total stays one, every premise of the law of renewal holds and arising is unceasing; this course returns, the consumer arising at every odd step. In ClosedCycle two formations pass one unit around, the unit standing at the condition of the step's parity, so by its definition its levels come back every second step; it balances, is opened by the opened with a gain at every step, and keeps widening neither along that passing nor by name. The closed KindRelay conserves and returns with period two; by name and along supported passings it keeps widening from no step, while within kinds its levels keep widening (kind-relay-keeps-widening-within-kinds, family H). The cycle of Becoming.Flow does not return: its one condition stands at one throughout, formation n arises across step n and stays active, the flow balances, every step is enclosed around the condition, the exchange recurs and generation is unceasing and more without end. A source-renewed Oscillation meets the depletion premise only vacuously. 'Unceasing' reads only that arising recurs at arbitrarily late steps."
+       }
+      }
+     },
+     {
+      "family": "G",
+      "id": "when-the-runs-of-a-process-settle",
+      "severity": "low",
+      "issue": "The split of a-run-round-a-loop-keeps-changing removed the open item 'Settling and the tail beyond lists and numbered conditions' (source 08-METHOD.md#open; 08 line 802 still lists it). A search of F's and G's output finds it in neither family, so the split lost it. This is its natural home.",
+      "corrected": {
+       "open": [
+        {
+         "en": "Settling without the limited principle of omniscience: with no reachable undoable change, every run settling is exactly LPO for every process of decidable configurations in a world a list holds (the-last-change-of-a-run).",
+         "source": "theories/becoming/results/records/when-the-runs-of-a-process-settle.md#does-not-show--未表明"
+        },
+        {
+         "en": "Worlds no list holds, where change can recur without a loop (how many times a run changes within a list is in the-last-change-of-a-run).",
+         "source": "theories/becoming/results/records/when-the-runs-of-a-process-settle.md#does-not-show--未表明"
+        },
+        {
+         "en": "Whether the core gives dependent choice: a statement about the theory, needing a model outside it.",
+         "source": "theories/becoming/results/records/where-a-run-goes-on.md#does-not-show--未表明"
+        },
+        {
+         "en": "That courses of every length give a run beyond finitely many configurations: the root of the fan has courses of every length and no run.",
+         "source": "theories/becoming/results/records/where-a-run-goes-on.md#does-not-show--未表明"
+        },
+        {
+         "en": "Runs along unbounded configurations where branching is finite and nothing is searched (given in Lasting through EitherThroughout and a selection); the laws along runs where nothing lists the configurations.",
+         "source": "theories/becoming/results/records/where-a-run-goes-on.md#does-not-show--未表明"
+        },
+        {
+         "en": "Settling and the tail beyond lists and numbered conditions.",
+         "source": "theories/becoming/chapters/08-METHOD.md#open"
+        }
+       ]
+      }
+     },
+     {
+      "family": "D",
+      "id": "a-prediction-read-by-what-it-predicts",
+      "severity": "low",
+      "issue": "The new negative in the critical-mass transition, 'beyond the pace bound's course from the bottom, the record's laws state none of which start reaches which', is too wide. ReflexivePrediction.right_rests and reached_rests are general laws of which start reaches which: a start that is right stays, and a start whose outcome is right reaches that value at the next step. The entry's own mechanism says so ('once published or once the outcome').",
+      "corrected": {
+       "transitions": [
+        {
+         "kind": "critical mass",
+         "condition": {
+          "en": "In a witness, a threshold response on 0, 1, 2, two where anything is predicted and zero where nothing is: zero and two are both right, publication from zero stays zero, and from one it reaches two after one step and stays there. Where publication starts decides; beyond a start that is right or whose outcome is right, and the pace bound's course from the bottom, the record's laws state none of which start reaches which. The witness is a threshold response, not a model of coordination."
+         },
+         "declarations": [
+          "Becoming.ReflexivePrediction.ThresholdResponse.reached_by_start"
+         ],
+         "records": [
+          "a-prediction-read-by-what-it-predicts"
+         ]
+        },
+        {
+         "kind": "pace bound",
+         "condition": {
+          "en": "On the values 0 to n, under a response keeping them and their order, repeated publication from the bottom is right by step n."
+         },
+         "declarations": [
+          "Becoming.ReflexivePrediction.bottom_rests"
+         ],
+         "records": [
+          "a-prediction-read-by-what-it-predicts"
+         ]
+        }
+       ]
+      }
+     },
+     {
+      "family": "D",
+      "id": "what-seeking-cannot-separate",
+      "severity": "low",
+      "issue": "The new transition is an AI reading (03, reading after r-what-seeking-cannot-separate) but cites records ['selection-when-the-lumping-changes']. atlas.py build() attaches each cited record's status and kind to the transition, so a reading would render with a theorem's standing, and that record does not state 'what changes a tie'. The condition can keep its in-text link. Four transitions already have records [], so that form is in use. Separately, §4.2 of the plan keeps 'route (reading)' for 05's four routes and this is not one of them; a closed-list stretch that I would leave, no better kind being available.",
+      "corrected": {
+       "transitions": [
+        {
+         "kind": "route (reading)",
+         "condition": {
+          "en": "Reading [AI reading, D45]: what changes a tie couples in from beyond the model, a new likelihood or a new hypothesis (selection-when-the-lumping-changes). Novelty and structure learning are both conditioning in a larger model, whose ties the law covers too."
+         },
+         "declarations": [],
+         "records": []
+        }
+       ]
+      }
+     },
+     {
+      "family": "E",
+      "id": "thresholds-of-waiting",
+      "severity": "low",
+      "issue": "The new open item says 'the web reading holds only where each formation depends on its own condition alone'. Tolerance.web_tolerating gives that as sufficient hypotheses, as the statement's record and module read them; nothing shows the reading fails elsewhere. The first half of the item ('are not stated') matches the record's next_delta and my search, which found no such law.",
+      "corrected": {
+       "open": [
+        {
+         "en": "Amounts of giving; thresholds with memory; how tolerances form.",
+         "source": "theories/becoming/results/records/thresholds-of-waiting.md#does-not-show--未表明"
+        },
+        {
+         "en": "That tolerance is good, or how much a collective should tolerate.",
+         "source": "theories/becoming/results/records/thresholds-of-waiting.md#does-not-show--未表明"
+        },
+        {
+         "en": "That more tolerance is better: only that it gives no less.",
+         "source": "theories/becoming/results/records/tolerance-monotone-across-laws.md#does-not-show--未表明"
+        },
+        {
+         "en": "Laws of giving with amounts and thresholds with memory.",
+         "source": "theories/becoming/chapters/05-COLLECTIVES.md#open"
+        },
+        {
+         "en": "Thresholds of tolerance on a general web, whose conditions depend on others than themselves, are not stated: the web reading is stated only where each formation depends on its own condition alone.",
+         "source": "theories/becoming/results/records/thresholds-of-waiting.md#next--下一步"
+        }
+       ]
+      }
+     },
+     {
+      "family": "G",
+      "id": "closing-needs-net-draw",
+      "severity": "low",
+      "issue": "The entry says itself that it is 'a comparison of two level paths, not a course closing', and its seven witness exits are cases of the comparison, not exits from a course. It is honest as written but static in a list of dynamics, and it may belong with the comparison's own home rather than in family G. I am unsure which, so no correction.",
+      "corrected": {}
+     }
+    ],
+    "elsewhere": "Not fixed; none of these is in run/elsewhere.txt.\n\n1. theories/becoming/chapters/03-KNOWING.md line 349: 'where such seeking draws on what stands, its losses beyond its coupling closure do not return through its own feedback (§1, blindness)'. The cited law, Flow.unselected_beyond_coupling, says that with a part withheld, the rest of the exchange fixed and balance on what couples in, every selection through the couplings treats the levels with and without the part alike. It has no seeking and no premise of drawing, and the sentence drops the fixed rest and the balance (selection-through-couplings hypothesis 2). seeking-boundary.beyond and locked-seeking.beyond copy the line, so I did not fault them as entries; they would follow any change here.\n\n2. theories/becoming/chapters/03-KNOWING.md line 286 (r-revision-with-an-undecided-value): 'the liar rests undecided' drops 'from all undecided'; Undecided.lean:744's docstring likewise. Unsure: the same home's label says 'any type', while Undecided's values and sentences look fixed (Value, Nat-indexed), which is why the entry's 'a named model' seems defensible against the first-word rule. I did not read the whole module.\n\n3. theories/becoming/chapters/07-SIGNIFICANCE.md line 69 (r-the-run-classes-and-widening): the lead 'do not alone decide' sits loosely on its own table, whose last row decides 'changes nothing' (Flow.Balances.keeps_of_not_arising) and whose first decides 'does not narrow'. The table is right; the lead invited the entry's false 'no class decides alone'.\n\n4. theories/becoming/results/records/giving-that-waits-on-giving.json does_not_show: 'amounts of giving and thresholds of waiting' and 'Which laws that give first restore giving in a general family' are stale against thresholds-of-waiting and Tolerance.restores_iff. Field checked; line numbers not taken. 05-COLLECTIVES.md #open's matching line was seen only as the entries quote it."
+   }
+  }
+ ]
+}
