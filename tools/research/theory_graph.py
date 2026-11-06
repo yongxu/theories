@@ -5,14 +5,22 @@ Nodes:
 - results (the records);
 - Lean modules of the core package;
 - texts: classified corpus units of the classes that state something (定义, 文法之定理, 有条件之律, 相分, 反读);
-- sections of the live chapters that state a result, marked by an anchor `<a id="r-<record id>"></a>`.
+- sections of the live chapters that state a result, marked by an anchor `<a id="r-<record id>"></a>`;
+- the review dossiers, which cite corpus units.
 
 Edges:
+- concept → module (defined in);
 - record → record (the record's dependencies by relation, and related);
 - record → module (proved in);
 - module → module (imports);
-- text → record (read as, through the declarations a reading cites);
+- text → record (read as: the record that registers the reading, with the reading's `outcome`, and its `family` for a
+  conditional law; an outcome can be that no law was read, such as not expressible);
+- text → concept (names: a concept's binding row cites the unit);
+- text → module, record, section or dossier (cited in: that source cites the unit by its id);
 - section → record (states).
+
+A text with no edge has been classified and read against nothing yet. Edges are never inferred from shared words, so
+most of the corpus has none, and the page says how many.
 
 Regions and bases come from `theories/becoming/results/data/regions.json`, curated by RA.
 `make research-render` writes `theories/becoming/results/data/theory-graph.json` and
@@ -35,6 +43,14 @@ CHAPTERS = 'theories/becoming/chapters'
 CLASSIFY = '_process/research/2026-10-05-generative-foundation-review/root-foundation/development/one-unfolding-root/classify'
 CORPUS = '_process/research/2026-10-05-generative-foundation-review/root-foundation/development/one-unfolding-root/corpus'
 OUTCOMES = '_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou2-candidates/outcomes.tsv'
+CONDITIONALS = '_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou7-conditional-laws/data/groups.tsv'
+CANDIDATES_RECORD = 'candidate-theorems-of-the-corpus'
+CONDITIONALS_RECORD = 'conditional-laws-of-the-corpus'
+DOSSIERS = 'theories/becoming/review'
+# An outcome where a law was read, against one where the unit was read and no law came of it.
+LAW_OUTCOMES = {'proved', 'conditional', 'refuted', 'law', 'premise', 'false as read'}
+DISPOSITIONS = {'law': 'law', 'premise': 'premise', 'false': 'false as read', 'NE': 'not expressible',
+                '丁': 'evaluation', '甲': 'definition'}
 GRAMMAR_MODULES = ['Grammar', 'GrammarReadings', 'GrammarMap', 'GrammarTesting', 'GrammarCandidates']
 TEXT_CLASSES = {'甲': 'definition', '乙': 'grammar-theorem', '丙一': 'conditional-law', '戊': 'split', '己': 'counter-reading'}
 WORKS = {'xici': '系辞', 'laozi': '老子', 'mojing': '墨经', 'xunzi-zhengming': '荀子·正名', 'zhuangzi-yangshengzhu': '庄子·养生主',
@@ -129,7 +145,7 @@ def modules(region_of):
         # grammar's names (written «…»), typically in an instance section; reaches it: through what it imports.
         nodes[n]['on_grammar'] = n in grammar or any(m in grammar for m in imports.get(n, [])) or '«' in sources[n]
         nodes[n]['reaches_grammar'] = on_grammar(n)
-    return nodes, imports
+    return nodes, imports, sources
 
 
 def texts():
@@ -146,16 +162,47 @@ def texts():
     return rows
 
 
+def classified_total():
+    """Every classified unit of the corpus, stating something or not."""
+    total = 0
+    for f in sorted((ROOT / CLASSIFY).glob('*.tsv')) if (ROOT / CLASSIFY).is_dir() else []:
+        with open(f, encoding='utf-8') as fh:
+            total += sum(1 for _ in csv.DictReader(fh, delimiter='\t'))
+    return total
+
+
 def outcomes():
-    """Unit id → declarations named in the candidates' outcomes."""
+    """Unit id → (outcome, declarations named) of the candidates read as root statements."""
     text = _read(OUTCOMES)
     out = {}
     if text:
         for r in csv.DictReader(text.splitlines(), delimiter='\t'):
-            decls = re.findall(r'«[^»]+»', r.get('declaration', ''))
-            if decls:
-                out[r['id']] = ['Becoming.' + d for d in decls]
+            out[r['id']] = (r.get('outcome', '').replace('-', ' '),
+                            ['Becoming.' + d for d in re.findall(r'«[^»]+»', r.get('declaration', ''))])
     return out
+
+
+def conditionals():
+    """Unit id → (outcome, family) of the sentences read as conditional laws; a family is None where the unit has none."""
+    text = _read(CONDITIONALS)
+    out = {}
+    if text:
+        for r in csv.DictReader(text.splitlines(), delimiter='\t'):
+            disposition = r.get('disposition', '')
+            family = r.get('group', '')
+            out[r['id']] = (DISPOSITIONS.get(disposition, disposition), family if family.startswith('G') else None)
+    return out
+
+
+def unit_pattern(units):
+    """Matches a unit's id as the repository writes it, by the prefixes the corpus uses."""
+    prefixes = sorted({u.split('-', 1)[0] for u in units})
+    return re.compile(r'(?<![\w-])(?:' + '|'.join(map(re.escape, prefixes)) + r')-[A-Za-z0-9+.\-]*[0-9](?![\w-])') if prefixes else None
+
+
+def cited(pattern, text, units):
+    """The corpus units `text` cites by id."""
+    return {m for m in pattern.findall(text) if m in units} if pattern and text else set()
 
 
 def sections():
@@ -176,10 +223,13 @@ def build(records):
     for r in records:
         for a in r.get('aliases', []):
             alias.setdefault(a, r['id'])
-    mods, imports = modules(module_region)
+    mods, imports, module_sources = modules(module_region)
     path_to_module = {f'{PKG}/Becoming/{n.split(".", 1)[1].replace(".", "/")}.lean': n for n in mods}
-    for c in concepts():
+    grammar_concepts = concepts()
+    for c in grammar_concepts:
         nodes.append(c)
+        if c['module'] in mods:
+            edges.append({'from': c['id'], 'to': 'module:' + c['module'], 'type': 'defined-in'})
     for r in records:
         info = record_region.get(r['id'], {})
         t = r.get('title', {})
@@ -204,17 +254,52 @@ def build(records):
         for m in imports.get(n, []):
             if m in mods:
                 edges.append({'from': 'module:' + n, 'to': 'module:' + m, 'type': 'imports'})
-    out = outcomes()
-    for t in texts():
+    out, cond = outcomes(), conditionals()
+    corpus = texts()
+    units = {t['unit'] for t in corpus}
+    pattern = unit_pattern(units)
+    for t in corpus:
         nodes.append(t)
-        for decl in out.get(t['unit'], []):
-            rid = alias.get(decl)
-            if rid:
-                edges.append({'from': t['id'], 'to': 'record:' + rid, 'type': 'read-as'})
+        if t['unit'] in out:
+            outcome, decls = out[t['unit']]
+            target = next((alias[d] for d in decls if d in alias), CANDIDATES_RECORD)
+            if target in ids:
+                edges.append({'from': t['id'], 'to': 'record:' + target, 'type': 'read-as', 'outcome': outcome})
+        if t['unit'] in cond and CONDITIONALS_RECORD in ids:
+            outcome, family = cond[t['unit']]
+            edge = {'from': t['id'], 'to': 'record:' + CONDITIONALS_RECORD, 'type': 'read-as', 'outcome': outcome}
+            if family:
+                edge['family'] = family
+            edges.append(edge)
+    for c in grammar_concepts:
+        for u in cited(pattern, c['gloss'], units):
+            edges.append({'from': 'text:' + u, 'to': c['id'], 'type': 'names'})
+    for n, source in module_sources.items():
+        for u in cited(pattern, source, units):
+            edges.append({'from': 'text:' + u, 'to': 'module:' + n, 'type': 'cited-in'})
+    for r in records:
+        for u in cited(pattern, json.dumps(r, ensure_ascii=False), units):
+            edges.append({'from': 'text:' + u, 'to': 'record:' + r['id'], 'type': 'cited-in'})
+    for f in sorted((ROOT / DOSSIERS).glob('*.md')) if (ROOT / DOSSIERS).is_dir() else []:
+        found = cited(pattern, f.read_text(encoding='utf-8'), units)
+        if found:
+            did = 'dossier:' + f.stem
+            nodes.append({'id': did, 'type': 'dossier', 'name': f.stem, 'page': str(f.relative_to(ROOT))})
+            for u in found:
+                edges.append({'from': 'text:' + u, 'to': did, 'type': 'cited-in'})
+    for f in sorted((ROOT / CHAPTERS).glob('*.md')):
+        # A chapter's citation goes to the result section it falls under; one before any such section joins nothing.
+        rel, text = str(f.relative_to(ROOT)), f.read_text(encoding='utf-8')
+        marks = [(m.start(), m.group(1)) for m in re.finditer(r'<a id="r-([a-z0-9-]+)"></a>', text)]
+        for m in pattern.finditer(text) if pattern else ():
+            under = [rid for start, rid in marks if start < m.start() and rid in ids]
+            if m.group(0) in units and under:
+                edges.append({'from': 'text:' + m.group(0), 'to': f'section:{rel}#r-{under[-1]}', 'type': 'cited-in'})
     for path, rid in sections():
-        sid = f'section:{path}#r-{rid}'
-        nodes.append({'id': sid, 'type': 'section', 'chapter': path, 'anchor': 'r-' + rid})
+        # An anchor naming no record is an old name kept for links, not a section stating a result.
         if rid in ids:
+            sid = f'section:{path}#r-{rid}'
+            nodes.append({'id': sid, 'type': 'section', 'chapter': path, 'anchor': 'r-' + rid})
             edges.append({'from': sid, 'to': 'record:' + rid, 'type': 'states'})
     seen, unique = set(), []
     for e in edges:
@@ -224,11 +309,42 @@ def build(records):
             unique.append(e)
     edges = sorted(unique, key=lambda e: (e['from'], e['to'], e['type']))
     return {'schema_version': 1,
-            'about': 'The theory graph: concepts of the grammar, results, Lean modules, corpus texts and chapter '
-                     'sections, with their edges. Generated by tools/research/theory_graph.py; regions curated in '
-                     + REGIONS + '.',
+            'about': 'The theory graph: concepts of the grammar, results, Lean modules, corpus texts, chapter '
+                     'sections and review dossiers, with their edges. Generated by tools/research/theory_graph.py; '
+                     'regions curated in ' + REGIONS + '.',
+            'classified_total': classified_total(),
             'regions': {k: REGION_TITLES[k] for k in REGION_ORDER},
             'nodes': nodes, 'edges': edges}
+
+
+def corpus_section(graph, by):
+    """How far the corpus has been read, from the edges, and what in the graph has no edge."""
+    outcomes_of, others, touched = {}, set(), set()
+    for e in graph['edges']:
+        touched.update((e['from'], e['to']))
+        if e['from'].startswith('text:'):
+            if e['type'] == 'read-as':
+                outcomes_of.setdefault(e['from'], set()).add(e.get('outcome', ''))
+            else:
+                others.add(e['from'])
+    corpus = by.get('text', [])
+    law = sum(1 for t in corpus if outcomes_of.get(t['id'], set()) & LAW_OUTCOMES)
+    no_law = sum(1 for t in corpus if t['id'] in outcomes_of and not outcomes_of[t['id']] & LAW_OUTCOMES)
+    cite = sum(1 for t in corpus if t['id'] in others and t['id'] not in outcomes_of)
+    only = len(corpus) - law - no_law - cite
+    apart = sorted(n['id'] for n in graph['nodes'] if n['id'] not in touched and n['type'] != 'text')
+    lines = ['', '## How far the corpus has been read', '',
+             f'{graph.get("classified_total", len(corpus))} corpus units are classified, {len(corpus)} of them in the '
+             'classes that state something, which are the texts here. Of those:', '',
+             '| Reading so far | Units |', '|---|---:|',
+             f'| Read against a law: a candidate theorem or a conditional law, whatever its outcome | {law} |',
+             f'| Read, and no law came of it: not expressible, an evaluation, a definition, misclassified | {no_law} |',
+             f'| Named by a grammar concept or cited by a module, record, section or dossier, and not read as above | {cite} |',
+             f'| Classified, and read against nothing yet | {only} |', '',
+             'The last row has no edge in this graph. Its units are not shown to agree or disagree with anything.']
+    if apart:
+        lines += ['', 'Other nodes with no edge: ' + ', '.join(f'`{a}`' for a in apart) + '.']
+    return lines
 
 
 def page(graph):
@@ -242,15 +358,17 @@ def page(graph):
             counts[reg][n['type']] += 1
     states = {e['to'] for e in graph['edges'] if e['type'] == 'states'}
     lines = [HEADER, '', '# The theory graph', '',
-             'One graph of the theory: the grammar\'s concepts, the results, the Lean modules, the corpus texts and the '
-             'chapter sections that state results, with the edges between them '
+             'One graph of the theory: the grammar\'s concepts, the results, the Lean modules, the corpus texts, the '
+             'chapter sections that state results and the review dossiers, with the edges between them '
              f'([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). '
-             f'{len(graph["nodes"])} nodes, {len(graph["edges"])} edges.', '',
+             f'{len(graph["nodes"])} nodes, {len(graph["edges"])} edges. An edge records a dependence, a citation or a '
+             'registered reading, not an agreement in meaning.', '',
              '| Region | Concepts | Results | Modules | Texts |', '|---|---:|---:|---:|---:|']
     for k in REGION_ORDER:
         c = counts[k]
         if sum(c.values()):
             lines.append(f'| {REGION_TITLES[k]} | {c["concept"]} | {c["result"]} | {c["module"]} | {c["text"]} |')
+    lines += corpus_section(graph, by)
     lines += ['', '## The grammar\'s concepts', '', '| Name | Gloss | Module |', '|---|---|---|']
     rows = {}
     for c in by.get('concept', []):  # one row of a header table may bind several names to one gloss
