@@ -349,7 +349,7 @@
         "Becoming.«依于无始而有始之例»",
         "Becoming.«相须之例»"
       ],
-      "sha256": "5421cba74bb67c9895b5d72780166765f65306ef11936733e90484fd58d31da5"
+      "sha256": "6f3fb7d89978019c8e9a346fc10006f98999673b7298de63f80557ea58ac0860"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
@@ -360,7 +360,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou7-conditional-laws/data/groups.tsv",
       "role": "statement",
-      "sha256": "8439277c73243b0f7aa2b7b0681ab1b8b37a008abcaa9f1c3ca68bcec421b07d",
+      "sha256": "2379beb144fcf5be675db1cf0b052af06cdff64591b366856e09cb8796b40770",
       "declarations": []
     },
     {
@@ -372,26 +372,26 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou7-conditional-laws/DESIGN.md",
       "role": "integration",
-      "sha256": "6ab93a8b5e5131dbbe74a545c23565f309b612e15d90c4a51d5ace57243dc0f5",
+      "sha256": "528a4c928b5bc5482c561ffeafd48f79a0ca62245ac27328e9472b172a3e09f2",
       "declarations": []
     },
     {
       "path": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md",
       "role": "statement",
-      "sha256": "444fef0285dfa9f987f02e7ef001ca3b919e6a42af9426ace64fe93995cb41d5",
+      "sha256": "3997fd514e00552f7527ed49de318b33ce227fa6701816edc11a095da23dc944",
       "declarations": []
     },
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T134343.981701Z/verification.json",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T025121.503688Z/verification.json",
       "role": "receipt",
-      "sha256": "a9499481f7571698b29d38f6745d66018cfd2b16ba69f997b1758743dd9e0aba",
+      "sha256": "47ba871654e370191544c65919486b8d713590cab80dc12de6e76efae02f79af",
       "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T134343.981701Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T025121.503688Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.GrammarConditionals",
       "success_pointer": "/status",
       "success_value": "passed"
