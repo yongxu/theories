@@ -119,24 +119,41 @@ LIVE_AA = {
 # Round two found two more wordings that give ranking to C alone, at their homes (apply_ranking.py): 05's D65 label and
 # eight records' "ranking goes through the comparison C". Every entry quoting them quotes the corrected home.
 WHY_RANKING = "05's D65 label and eight records gave ranking to C alone; corrected at home (apply_ranking.py, 7 November 2026): the entry quotes what it says now"
-LIVE_RANKING = [("any ranking is C's, under the two premises of 07", "a ranking needs C or a premise in its place, under 07's premises"),
+LIVE_RANKING = [("any ranking is C's, under the two premises of 07", "scope by the continuation condition, and a ranking needs C or a premise in its place (07 §4)"),
                 ('ranking goes through the comparison C.', 'ranking goes through the comparison C or a premise in its place.')]
 # Three entries round two's checker named and no group listed: they keep 02's label "any giving law" and drop its premises.
 WHY_GIVING = "02's margin of a regime is exact under its premises on giving, which the entry dropped (round two's checker, 7 November 2026)"
-PREMISES = 'short of the draw below y, nothing from nothing, meeting it from y up to a top the step keeps'
+PREMISES = 'short of the draw below y, nothing from nothing, meeting it at every z from y with z + H at most a top the step keeps, and 0 < H + y'
 LIVE_GIVING = {
     'cx-syscyb-holling-resilience-stability': [('For one condition under a standing draw, a level up to the top ends exactly',
-        f'For one condition under a standing draw, under its premises on giving ({PREMISES}), a level up to the top ends exactly')],
-    'cx-dpc-fold': [('Exactness for any giving law in whole numbers;', f"Exactness in whole numbers under the regime's premises on giving ({PREMISES});")],
+        f'For one condition under a standing draw H, under its premises ({PREMISES}), a level up to the top ends exactly')],
+    'cx-dpc-fold': [('Exactness for any giving law in whole numbers;', f"Exactness in whole numbers under the regime's premises ({PREMISES});")],
     'cx-ecoevo-allee-effects': [('for any giving law short of the draw below y, with nothing from nothing, a level up to a top ends exactly below H + y.',
-        'for any giving law short of the draw below y, with nothing from nothing, meeting it from y up to a top the step keeps, a level up to that top ends exactly where it starts below H + y.')],
+        'for any giving law short of a standing draw H below y, with nothing from nothing, meeting it at every z from y with z + H at most a top the step keeps, and 0 < H + y, a level up to that top ends exactly where it starts below H + y.')],
 }
+# Its checker found six more entry fields, and one group summary, giving ranking to C alone in other words.
+LIVE_RANKING_MORE = {
+    'cx-ecs-organization-as-object-of-learning': [("any ranking there is C's, with the continuation condition for scope, neither asserted.",
+        'any ranking there needs C, or a premise in its place, for order, with the continuation condition for scope, neither asserted.')],
+    'cx-sspiral-multicellular-question': [('or that sequestration is better, which goes through C.', 'or that sequestration is better, which goes through C or a premise in its place.')],
+    'cx-sty-rules-revised-like-software': [("Any 'better' is C's, the condition for scope, neither asserted.", "Any 'better' needs C or a premise in its place, the condition for scope, neither asserted.")],
+    'cx-fork-landscape-deformation': [('a preference among courses needs C for order,', 'a preference among courses needs C, or a premise in its place, for order,')],
+    'cx-abr-talion-and-pardon': [('Ranking closing above keeping would need C for order,', 'Ranking closing above keeping would need C, or a premise in its place, for order,')],
+    'cx-pal-natural-selection-among-ais': [('a ranking would need C with the continuation condition,', 'a ranking would need C, or a premise in its place, with the continuation condition for scope,')],
+}
+GROUP_RANKING = {'systems-cybernetics': ('where any order needs C and scope the continuation condition', 'where any order needs C or a premise in its place and scope the continuation condition')}
+
+# LM2, landed on main on 7 November 2026, wrote "arising" for "generation" where the Lean meant arising; 04 now says the
+# record's id keeps the older word, not its title. main_drift.py's third run found one entry quoting the old parenthesis.
+WHY_LM2 = "LM2 (7 November 2026): 04 says the record's id, not its title, keeps the older word 'generation'"
+LIVE_LM2 = {'cx-sty-generators': [("the record's title 'uses \\\"generation\\\" in the older sense of arising'",
+                                   "the record's id, `generation-is-replenishment`, 'keeps the older word'")]}
 # Words the corrections removed at home; no entry may still state them as what the home says.
 GONE = ['keeps its standing after it stops measuring. T7', 'account of power is the closed loop', 'that sense is wider',
         'working definition is wider', 'imperial examination is this case', 'imperial examination is read', 'supported in simulation (MQ1;',
         'conjectured (T3), supported in simulation', 'says a measure made a target stops measuring', 'two earlier phase results',
         'supplies is the beginning of the kept history', 'Correspondence: hysteresis of collapse', "Jonas (1979): the existence of the whole",
-        'labelled any type, on finitely many', "any ranking is C's", 'goes through the comparison C.', 'Give first, with a reserve', 'give first with a reserve', 'giving first, with a reserve', 'a first giver needs a reserve', 'give first, independent', "refutation\\\" is `lock_outlives_loss`", "refutation' is lock_outlives_loss"]
+        'labelled any type, on finitely many', "any ranking is C's", "ranking there is C's", 'which goes through C.', "Any 'better' is C's", 'needs C for order,', 'need C for order,', 'need C with the continuation condition', 'any order needs C and scope', 'goes through the comparison C.', 'Give first, with a reserve', 'give first with a reserve', 'giving first, with a reserve', 'a first giver needs a reserve', 'give first, independent', "refutation\\\" is `lock_outlives_loss`", "refutation' is lock_outlives_loss"]
 
 
 
@@ -257,6 +274,32 @@ def main(argv=None):
             e.clear()
             e.update(json.loads(text))
             why.setdefault(id_, []).append(WHY_RANKING)
+    for id_, pairs in LIVE_RANKING_MORE.items():
+        text = json.dumps(entries[id_], ensure_ascii=False)
+        for old, new in pairs:
+            if old not in text:
+                problems.append(f'{id_}: {old[:60]!r} not found')
+                continue
+            text = text.replace(old, json.dumps(new, ensure_ascii=False)[1:-1])
+        entries[id_].clear()
+        entries[id_].update(json.loads(text))
+        why.setdefault(id_, []).append(WHY_RANKING)
+    for item, (old, new) in GROUP_RANKING.items():
+        group = files[item]['group']
+        if group['summary']['en'].count(old) != 1:
+            problems.append(f'{item}: group summary: {old[:60]!r} not found once')
+        else:
+            group['summary']['en'] = group['summary']['en'].replace(old, new)
+    for id_, pairs in LIVE_LM2.items():
+        text = json.dumps(entries[id_], ensure_ascii=False)
+        for old, new in pairs:
+            if old not in text:
+                problems.append(f'{id_}: {old[:60]!r} not found')
+                continue
+            text = text.replace(old, json.dumps(new, ensure_ascii=False)[1:-1])
+        entries[id_].clear()
+        entries[id_].update(json.loads(text))
+        why.setdefault(id_, []).append(WHY_LM2)
     for id_, pairs in LIVE_GIVING.items():
         text = json.dumps(entries[id_], ensure_ascii=False)
         for old, new in pairs:

@@ -1,0 +1,183 @@
+Becoming.Pairing.alike : Becoming.Alike Becoming.Pairing.frame.toFrame Becoming.Pairing.frame.toFrame true false
+Becoming.Pairing.apart : Becoming.JointTest.Holds Becoming.Pairing.frame true
+    (Becoming.TestWith.together () Becoming.TestWith.top Becoming.TestWith.top) ∧
+  ¬Becoming.JointTest.Holds Becoming.Pairing.frame false
+      (Becoming.TestWith.together () Becoming.TestWith.top Becoming.TestWith.top)
+Becoming.Pairing.not_jointAlike : ¬Becoming.JointAlike Becoming.Pairing.frame Becoming.Pairing.frame true false
+@Becoming.JointFrame.TestsStable.of_em : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3},
+  (∀ (p : Prop), Becoming.Decided p) → ∀ (F : Becoming.JointFrame S A C), F.TestsStable
+@Becoming.JointTest.holds_all : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {F : Becoming.JointFrame S A C} {s : S}
+  (φs : List (Becoming.JointTest A C)),
+  Becoming.JointTest.Holds F s (Becoming.JointTest.all φs) ↔
+    ∀ (φ : Becoming.JointTest A C), φ ∈ φs → Becoming.JointTest.Holds F s φ
+@Becoming.JointTest.holds_firsts : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {F : Becoming.JointFrame S A C}
+  {s : S} (qs : List (Becoming.JointTest A C × Becoming.JointTest A C)),
+  Becoming.JointTest.Holds F s (Becoming.JointTest.firsts qs) ↔
+    ∀ (q : Becoming.JointTest A C × Becoming.JointTest A C), q ∈ qs → Becoming.JointTest.Holds F s q.fst
+@Becoming.JointTest.holds_seconds : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {F : Becoming.JointFrame S A C}
+  {s : S} (qs : List (Becoming.JointTest A C × Becoming.JointTest A C)),
+  Becoming.JointTest.Holds F s (Becoming.JointTest.seconds qs) ↔
+    ∀ (q : Becoming.JointTest A C × Becoming.JointTest A C), q ∈ qs → Becoming.JointTest.Holds F s q.snd
+@Becoming.SameJointTests.of_passes : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3}
+  {F : Becoming.JointFrame S A C} {G : Becoming.JointFrame S' A C} {s : S} {s' : S'},
+  (∀ (φ : Becoming.JointTest A C), ¬¬Becoming.JointTest.Holds F s φ → Becoming.JointTest.Holds F s φ) →
+    (∀ (φ : Becoming.JointTest A C), Becoming.JointTest.Holds F s φ → Becoming.JointTest.Holds G s' φ) →
+      Becoming.SameJointTests F G s s'
+@Becoming.SameJointTests.step_passing : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3}
+  {F : Becoming.JointFrame S A C} {G : Becoming.JointFrame S' A C},
+  G.StepCompact →
+    ∀ {s : S} {s' : S'},
+      Becoming.SameJointTests F G s s' →
+        ∀ {a : A} {t : S},
+          F.P.step s a t →
+            ∃ t',
+              G.P.step s' a t' ∧
+                ∀ (φ : Becoming.JointTest A C), Becoming.JointTest.Holds F t φ → Becoming.JointTest.Holds G t' φ
+@Becoming.SameJointTests.step : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3}
+  {F : Becoming.JointFrame S A C} {G : Becoming.JointFrame S' A C},
+  G.StepCompact →
+    ∀ {s : S} {s' : S'},
+      Becoming.SameJointTests F G s s' →
+        ∀ {a : A} {t : S},
+          F.P.step s a t →
+            (∀ (φ : Becoming.JointTest A C), ¬¬Becoming.JointTest.Holds F t φ → Becoming.JointTest.Holds F t φ) →
+              ∃ t', G.P.step s' a t' ∧ Becoming.SameJointTests F G t t'
+@Becoming.SameJointTests.parts_passing : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3}
+  {F : Becoming.JointFrame S A C} {G : Becoming.JointFrame S' A C},
+  G.JointCompact →
+    ∀ {s : S} {s' : S'},
+      Becoming.SameJointTests F G s s' →
+        ∀ {l r : S},
+          F.joint s l r →
+            ∃ l' r',
+              G.joint s' l' r' ∧
+                (∀ (φ : Becoming.JointTest A C), Becoming.JointTest.Holds F l φ → Becoming.JointTest.Holds G l' φ) ∧
+                  ∀ (φ : Becoming.JointTest A C), Becoming.JointTest.Holds F r φ → Becoming.JointTest.Holds G r' φ
+@Becoming.SameJointTests.parts : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3}
+  {F : Becoming.JointFrame S A C} {G : Becoming.JointFrame S' A C},
+  G.JointCompact →
+    ∀ {s : S} {s' : S'},
+      Becoming.SameJointTests F G s s' →
+        ∀ {l r : S},
+          F.joint s l r →
+            (∀ (φ : Becoming.JointTest A C), ¬¬Becoming.JointTest.Holds F l φ → Becoming.JointTest.Holds F l φ) →
+              (∀ (φ : Becoming.JointTest A C), ¬¬Becoming.JointTest.Holds F r φ → Becoming.JointTest.Holds F r φ) →
+                ∃ l' r', G.joint s' l' r' ∧ Becoming.SameJointTests F G l l' ∧ Becoming.SameJointTests F G r r'
+@Becoming.SameJointTests.matchesParts : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {F : Becoming.JointFrame S A C},
+  F.JointCompact → F.TestsStable → Becoming.MatchesParts F.joint F.joint (Becoming.SameJointTests F F)
+@Becoming.sameJointTests_bisimulation : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3}
+  {F : Becoming.JointFrame S A C} {G : Becoming.JointFrame S' A C},
+  F.StepCompact →
+    G.StepCompact →
+      F.JointCompact →
+        G.JointCompact → F.TestsStable → G.TestsStable → Becoming.JointBisimulation F G (Becoming.SameJointTests F G)
+@Becoming.jointAlike_iff_sameJointTests : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3}
+  {F : Becoming.JointFrame S A C} {G : Becoming.JointFrame S' A C},
+  F.StepCompact →
+    G.StepCompact →
+      F.JointCompact →
+        G.JointCompact →
+          F.TestsStable →
+            G.TestsStable → ∀ {s : S} {s' : S'}, Becoming.JointAlike F G s s' ↔ Becoming.SameJointTests F G s s'
+@Becoming.Compact.exclusions : ∀ {X : Type u_1} {Q : Type u_2} {truth : X → Q → Prop} {Γ : Q → Prop} (xs : List X),
+  (∀ (x : X), x ∈ xs → ∃ q, Γ q ∧ ¬truth x q) →
+    ∃ qs, (∀ (q : Q), q ∈ qs → Γ q) ∧ ∀ (x : X), x ∈ xs → ∃ q, q ∈ qs ∧ ¬truth x q
+Becoming.Compact.of_listed : (∀ (p : Prop), Becoming.Decided p) →
+  ∀ {X : Type u_1} {Q : Type u_2} {domain : X → Prop} {truth : X → Q → Prop} {xs : List X},
+    (∀ (x : X), domain x ↔ x ∈ xs) → Becoming.Compact domain truth
+@Becoming.jointAlike_iff_sameJointTests_of_listed : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3},
+  (∀ (p : Prop), Becoming.Decided p) →
+    ∀ {F : Becoming.JointFrame S A C} {G : Becoming.JointFrame S' A C},
+      (∀ (s : S) (a : A), ∃ l, ∀ (t : S), F.P.step s a t ↔ t ∈ l) →
+        (∀ (s : S') (a : A), ∃ l, ∀ (t : S'), G.P.step s a t ↔ t ∈ l) →
+          (∀ (s : S), ∃ l, ∀ (p : S × S), F.joint s p.fst p.snd ↔ p ∈ l) →
+            (∀ (s : S'), ∃ l, ∀ (p : S' × S'), G.joint s p.fst p.snd ↔ p ∈ l) →
+              ∀ {s : S} {s' : S'}, Becoming.JointAlike F G s s' ↔ Becoming.SameJointTests F G s s'
+@Becoming.Compact.of_empty : ∀ {X : Type u_1} {Q : Type u_2} {domain : X → Prop} {truth : X → Q → Prop},
+  (∀ (x : X), ¬domain x) → Becoming.Compact domain truth
+@Becoming.Compact.of_greatest : ∀ {X : Type u_1} {Q : Type u_2} {domain : X → Prop} {truth : X → Q → Prop} {d : X},
+  domain d → (∀ (x : X), domain x → ∀ (q : Q), truth x q → truth d q) → Becoming.Compact domain truth
+Becoming.DoubleNegation.plain_doubled : ∀ (p : Prop) (φ : Becoming.JointTest Unit Unit),
+  (Becoming.JointTest.Holds (Becoming.DoubleNegation.frame p) Becoming.DoubleNegation.Pos.plain φ →
+      Becoming.JointTest.Holds (Becoming.DoubleNegation.frame p) Becoming.DoubleNegation.Pos.doubled φ) ∧
+    (Becoming.JointTest.Holds (Becoming.DoubleNegation.frame p) Becoming.DoubleNegation.Pos.doubled φ →
+      ¬¬Becoming.JointTest.Holds (Becoming.DoubleNegation.frame p) Becoming.DoubleNegation.Pos.plain φ)
+Becoming.DoubleNegation.sameJointTests : ∀ (p : Prop),
+  Becoming.SameJointTests (Becoming.DoubleNegation.frame p) (Becoming.DoubleNegation.frame p)
+    Becoming.DoubleNegation.Pos.two Becoming.DoubleNegation.Pos.one
+Becoming.DoubleNegation.stepCompact : ∀ (p : Prop), (Becoming.DoubleNegation.frame p).StepCompact
+Becoming.DoubleNegation.jointCompact : ∀ (p : Prop), (Becoming.DoubleNegation.frame p).JointCompact
+@Becoming.DoubleNegation.stable_of_parts : ∀ {p : Prop} {l r : Becoming.DoubleNegation.Pos},
+  Becoming.DoubleNegation.Joint Becoming.DoubleNegation.Pos.one l r →
+    Becoming.SameJointTests (Becoming.DoubleNegation.frame p) (Becoming.DoubleNegation.frame p)
+        Becoming.DoubleNegation.Pos.plain l →
+      ¬¬p → p
+Becoming.matchesParts_of_compact_iff_em : (∀ (S : Type) (F : Becoming.JointFrame S Unit Unit),
+    F.JointCompact → Becoming.MatchesParts F.joint F.joint (Becoming.SameJointTests F F)) ↔
+  ∀ (p : Prop), Becoming.Decided p
+Becoming.jointAlike_of_sameJointTests_iff_em : (∀ (S : Type) (F : Becoming.JointFrame S Unit Unit),
+    F.StepCompact → F.JointCompact → ∀ (s s' : S), Becoming.SameJointTests F F s s' → Becoming.JointAlike F F s s') ↔
+  ∀ (p : Prop), Becoming.Decided p
+@Becoming.liftsFromEach_iff : ∀ {S : Type u_1} {K : Type u_2} {J : S → S → S → Prop} {π : S → K},
+  Becoming.LiftsFromEach J π ↔ Becoming.MatchesParts J J fun s s' => π s = π s'
+@Becoming.liftsFromEach_iff_of_kernel : ∀ {S : Type u_1} {K : Type u_2} {J : S → S → S → Prop} {π : S → K}
+  {R : S → S → Prop}, (∀ (s s' : S), π s = π s' ↔ R s s') → (Becoming.LiftsFromEach J π ↔ Becoming.MatchesParts J J R)
+@Becoming.IdentifiesJointAlike.lifts : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {K : Type u_4}
+  {F : Becoming.JointFrame S A C} {π : S → K}, Becoming.IdentifiesJointAlike F π → Becoming.LiftsFromEach F.joint π
+@Becoming.liftsFromEach_of_sameJointTests : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {K : Type u_4}
+  {F : Becoming.JointFrame S A C} {π : S → K},
+  (∀ (s s' : S), π s = π s' ↔ Becoming.SameJointTests F F s s') →
+    F.JointCompact → F.TestsStable → Becoming.LiftsFromEach F.joint π
+@Becoming.JointPlan.realizes_image_iff : ∀ {S : Type u_1} {K : Type u_3} {Q : Type u_2} {J : S → S → S → Prop}
+  {π : S → K},
+  (Becoming.MatchesParts J J fun s s' => π s = π s') →
+    ∀ {leaf : S → Q → Prop} {read : K → Q → Prop},
+      (∀ (s : S) (q : Q), read (π s) q ↔ leaf s q) →
+        ∀ (plan : Becoming.JointPlan Q) (s : S),
+          Becoming.JointPlan.Realizes (Becoming.jointImage J π) read (π s) plan ↔
+            Becoming.JointPlan.Realizes J leaf s plan
+@Becoming.JointPlan.matchesParts_of_lifts : ∀ {S : Type u_1} {K : Type u_2} {J : S → S → S → Prop} {π : S → K},
+  (∀ (s : S) (plan : Becoming.JointPlan K),
+      Becoming.JointPlan.Realizes (Becoming.jointImage J π) (fun k k' => k = k') (π s) plan →
+        Becoming.JointPlan.Realizes J (fun x k => π x = k) s plan) →
+    Becoming.MatchesParts J J fun s s' => π s = π s'
+@Becoming.JointPlan.plans_lift_iff : ∀ {S : Type u_1} {K : Type u_2} {J : S → S → S → Prop} {π : S → K},
+  (∀ (s : S) (plan : Becoming.JointPlan K),
+      Becoming.JointPlan.Realizes (Becoming.jointImage J π) (fun k k' => k = k') (π s) plan ↔
+        Becoming.JointPlan.Realizes J (fun x k => π x = k) s plan) ↔
+    Becoming.MatchesParts J J fun s s' => π s = π s'
+@Becoming.nodup_iff_distinct : ∀ {α : Type} (l : List α), l.Nodup ↔ Becoming.Distinct l
+@Becoming.JointPlan.supports_of_image : ∀ {S : Type u_1} {K : Type u_2} {R : Type u_3} {footprint : S → R → Prop}
+  {J : S → S → S → Prop} {π : S → K},
+  (Becoming.MatchesParts J J fun s s' => π s = π s') →
+    Becoming.PartsWithin footprint J →
+      Becoming.PartsApart footprint J →
+        ∀ {read : K → List R → Prop},
+          (∀ (s : S) (xs : List R), read (π s) xs ↔ Becoming.Supports footprint s xs) →
+            ∀ (p : Becoming.JointPlan (List R)) (s : S),
+              Becoming.JointPlan.Realizes (Becoming.jointImage J π) read (π s) p → Becoming.Supports footprint s p.draws
+Becoming.Unjoined.supports_not_realizes : Becoming.Supports (fun x x_1 => True) ()
+    ((Becoming.JointPlan.leaf []).pair (Becoming.JointPlan.leaf [])).draws ∧
+  ¬Becoming.JointPlan.Realizes (fun x x_1 x_2 => False) (Becoming.Supports fun x x_1 => True) ()
+      ((Becoming.JointPlan.leaf []).pair (Becoming.JointPlan.leaf []))
+@Becoming.JointPlanFrames.plans_lift_iff_of_kernel : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {K : Type u_4}
+  (F : Becoming.JointFrame S A C) {π : S → K} {R : S → S → Prop},
+  (∀ (s s' : S), π s = π s' ↔ R s s') →
+    ((∀ (s : S) (plan : Becoming.JointPlan K),
+        Becoming.JointPlan.Realizes (Becoming.jointImage F.joint π) (fun k k' => k = k') (π s) plan ↔
+          Becoming.JointPlan.Realizes F.joint (fun x k => π x = k) s plan) ↔
+      Becoming.MatchesParts F.joint F.joint R)
+@Becoming.JointPlanFrames.plans_lift_of_jointAlike : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {K : Type u_4}
+  {F : Becoming.JointFrame S A C} {π : S → K},
+  Becoming.IdentifiesJointAlike F π →
+    ∀ (s : S) (plan : Becoming.JointPlan K),
+      Becoming.JointPlan.Realizes (Becoming.jointImage F.joint π) (fun k k' => k = k') (π s) plan ↔
+        Becoming.JointPlan.Realizes F.joint (fun x k => π x = k) s plan
+@Becoming.JointPlanFrames.plans_lift_of_sameJointTests : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {K : Type u_4}
+  {F : Becoming.JointFrame S A C} {π : S → K},
+  (∀ (s s' : S), π s = π s' ↔ Becoming.SameJointTests F F s s') →
+    F.JointCompact →
+      F.TestsStable →
+        ∀ (s : S) (plan : Becoming.JointPlan K),
+          Becoming.JointPlan.Realizes (Becoming.jointImage F.joint π) (fun k k' => k = k') (π s) plan ↔
+            Becoming.JointPlan.Realizes F.joint (fun x k => π x = k) s plan

@@ -104,6 +104,7 @@ The principle's statistical blanket (Friston 2019; Friston, Da Costa, Sajid, Hei
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T062217.665179Z/verification.json) | — |
 | proof | [Population.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean) | `Becoming.total_congr_on` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T214533.564191Z/verification.json) | — |
 
 Aliases: `The blanket at a steady state`, `稳态之毯`, `statistical blanket`, `conditional independence given the blanket`, `detailed balance of the internal moves`, `Becoming.BlanketWeights.crossForm_of_detailedBalance`, `Becoming.BlanketWeights.independentGiven_of_crossFormOn`
 

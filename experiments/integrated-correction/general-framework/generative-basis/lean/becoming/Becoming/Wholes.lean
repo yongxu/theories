@@ -3,7 +3,7 @@ import Becoming.Continuation
 import Becoming.Decidedness
 
 /-!
-# Wholes: a persisting whole of brief parts, or of ending listed parts, needs their generation;
+# Wholes: a persisting whole of brief parts, or of ending listed parts, needs their arising;
 a whole of every part ends with any part
 
 `Becoming.Identity` names a lineage either as one formation or as its members (`Lineage`).
@@ -29,16 +29,16 @@ parts arise through does to a whole.
   (`Listed.end_without_arising`): a part active after that step was active at it, among
   the finitely many listed there. So a whole of such parts ends where none arises from some
   step on (`Whole.ends_without_arising`).
-* A cover needs the generation of parts. If no part is active at two steps `d` apart, a
+* A cover needs the arising of parts. If no part is active at two steps `d` apart, a
   part arises within every `d` consecutive steps (`Covered.arises_within`). If each part's
   activity ends and the active parts are listed, parts arise at arbitrarily late steps
   (`Covered.needs_arising`, from `Listed.end_without_arising`), and outside every finite
   list of parts: ever new parts (`Covered.needs_new`).
   A whole active at every step from some step on is covered by its
-  parts (`Whole.covered`), so it persists only through the generation of its parts
-  (`Whole.arises_within`, `Whole.needs_arising`, `Whole.needs_new`). Under brevity that
-  generation may be the same parts arising again (`Layered`); where parts end and are
-  listed, it is ever new parts, though not more of them (`Generations` has two active at
+  parts (`Whole.covered`), so it persists only through the arising of its parts
+  (`Whole.arises_within`, `Whole.needs_arising`, `Whole.needs_new`). Under brevity the parts
+  that arise may be the same parts arising again (`Layered`); where parts end and are
+  listed, they are ever new parts, though not more of them (`Generations` has two active at
   every step).
 * Each premise is needed. With a part whose activity never ends, a whole persists while
   nothing arises (`Immortal`). With infinitely many parts active at once, each ending at
@@ -280,7 +280,7 @@ theorem Whole.persists_from {d T : Nat} (whole : W.Whole parts w)
 
 /-- A whole active at every step from some step on, made of parts each of whose activity
 ends, with its active parts listed, has parts arising at arbitrarily late steps: it
-persists only through the unceasing generation of its parts. -/
+persists only through the unceasing arising of its parts. -/
 theorem Whole.needs_arising {alive : Nat → List F} (whole : W.Whole parts w)
     (listed : W.Listed parts alive) (ends : ∀ p, parts p → W.Ends p) {T : Nat}
     (persists : ∀ t, T ≤ t → W.active t w) (N : Nat) :
@@ -910,7 +910,7 @@ theorem within (S : Nat) : ¬ ∀ j, j < 1 → ∀ p, p ≠ Level.lineage → ¬
   composed.arises_within brief (T := 0) (fun _ _ => trivial) (Nat.zero_le S)
 
 /-- Every arising is the arising of one of the two members, and neither member's activity
-ends: under brevity the generation that carries the lineage is the same two members
+ends: under brevity what arises to carry the lineage is the same two members,
 arising again, nothing new. -/
 theorem arise_again :
     (∀ t p, web.Arises t p → p ∈ [Level.first, .second]) ∧ ¬ web.Ends .first ∧

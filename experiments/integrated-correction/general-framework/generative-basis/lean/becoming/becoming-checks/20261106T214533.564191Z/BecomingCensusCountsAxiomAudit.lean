@@ -1,0 +1,21 @@
+import Becoming.CensusCounts
+#print axioms Becoming.counted_laws
+#print axioms Becoming.World.comings_exist_iff
+#print axioms Becoming.World.ceasings_exist_iff_listed
+#print axioms Becoming.World.comings_exist_iff_listed
+#print axioms Becoming.World.queue_countsOf
+#print axioms Becoming.World.embodiedQueue_countsOf
+#print axioms Becoming.World.counting_free_counted
+#print axioms Becoming.World.counting_under_counted
+#print axioms Becoming.World.premised_counting_counted
+#print axioms Becoming.World.counting_binds_iff_counted
+#print axioms Becoming.World.ring_countsOf
+#print axioms Becoming.World.embodiedRing_countsOf
+#print axioms Becoming.World.balancedRing_countsOf
+#print axioms Becoming.World.enclosed_counting_counted
+#print axioms Becoming.World.finite_counting_counted
+#print axioms Becoming.World.enclosed_counting_under_counted
+#print axioms Becoming.World.enclosed_change_bound_iff_counted
+#print axioms Becoming.World.finite_counting_under_counted
+#print axioms Becoming.World.finite_counting_binds_iff_counted
+#print axioms Becoming.World.finite_change_bound_iff_counted

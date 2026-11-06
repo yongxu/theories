@@ -5,7 +5,7 @@
 
 `joint-plans-from-a-supported-start` · **recorded-checked** · theorem · F02 · [record](joint-plans-from-a-supported-start.json) · [register](../../../../RESULTS.md)
 
-> Paired valid local plans are jointly valid where joint steps project faithfully, two properties hold on the start, locally allowed moves are jointly available where both hold and every joint step keeps both; mutual eventual promises force nothing, and in a witness ignition needs a stored reserve.
+> Paired valid local plans are jointly valid where joint steps project faithfully, two properties hold on the start, locally allowed moves are jointly available where both hold and every joint step keeps both; mutual eventual promises force nothing; a witness's ignition needs a reserve by definition.
 
 <a id="laws--规律"></a>
 ## Laws
@@ -75,6 +75,7 @@ Aliases: `Joint plans from a supported start`, `自受支持之起点的共同�
 
 - 27 October 2026: added (DF2), paired local plans are jointly valid from a supported start under one-step joint availability and mutual preservation, mutual eventual promises force nothing, and in a witness ignition needs a stored reserve; from DEFECTS-FOUND (triage row 195); study section 426.
 - 7 November 2026, board item AA: the atlas's readers found a clause true by the move's definition and not labelled so, and a reading saying promises cannot start a loop where the law says they force nothing; corrected against the Lean and the later records.
+- 7 November 2026, board item LM2: the statement says, as law 3 already did, that ignition needs a reserve by its definition (near-definitional). No law, premise or proof changed.
 
 </details>
 

@@ -590,7 +590,8 @@ theorem later_outside (c : Occ) (later : 0 < c.1) : ¬ «续无外» step «一�
 
 /-- **Along the converse of 缘, endless descent fails the condition on the root at the one, from every
 center**: a line along the converse runs back to earlier members and never reaches the next member's
-birth. Along 缘 it meets it at the first birth only (`descent_no_outside`, `later_outside`). -/
+birth. Along 缘 it meets it at the first birth (`descent_no_outside`) and fails it from every later
+member (`later_outside`). -/
 theorem converse_outside (c : Occ) : ¬ «续无外» («逆» step) «一» (fun (_ : Unit) => c) :=
   fun none => converse_later_outside c (none () (c.1 + 1, false))
 

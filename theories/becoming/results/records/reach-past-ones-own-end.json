@@ -174,7 +174,7 @@
         "Becoming.«核有续当且仅当有不穷»",
         "Becoming.«过亡而续»"
       ],
-      "sha256": "2eb49182ff70b10dfa08581049e06fac198dfef55ba1878149e57ca10405543b"
+      "sha256": "7ef638ce3bafee2559f7232ac7da3f8d09f25a07570406996f9ff8e3b81c1808"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T220231.427406Z/verification.json",
@@ -232,12 +232,18 @@
       "role": "receipt",
       "sha256": "8a71fe367f8a7ebedec0790e1f50e267422bd703a7d51b0da81d0972dff2dca6",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T214533.564191Z/verification.json",
+      "role": "receipt",
+      "sha256": "1d84754646f4039d0950bbdb24bfa8fbd78dc9f9643cf7b9f13ae4250ac24251",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T214533.564191Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.GrammarScope",
       "success_pointer": "/status",
       "success_value": "passed"

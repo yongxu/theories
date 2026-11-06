@@ -104,6 +104,8 @@ The construction counts the imbalance as a relatum and first proves it a represe
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T214533.564191Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json) | — |
 
 Aliases: `Becoming.sub_eq_zero_of_le`, `Becoming.le_of_sub_eq_zero`, `Becoming.mem_of_some_mem`, `Becoming.Flow.withImbalance`, `Becoming.Flow.withImbalance_taken`, `Becoming.Flow.withImbalance_given`, `Becoming.Flow.withImbalance_balances`, `Becoming.Flow.withImbalance_balancesOn`, `Becoming.Flow.balancesOn_iff_idle`, `Becoming.Flow.balances_iff_idle`, `Becoming.Flow.withImbalance_acting_at_iff`, `Becoming.Flow.withImbalance_taking_at_iff`, `Becoming.Flow.withImbalance_acting_taking_on_iff`, `Becoming.Flow.withImbalance_acting_iff`, `Becoming.Flow.withImbalance_taking_iff`, `Becoming.Flow.withImbalance_acting_taking_iff`
 

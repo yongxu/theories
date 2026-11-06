@@ -116,8 +116,8 @@
     "zh": "由世系（Flow.DescendsAt）导出传递而非给定；在传递中改变的样式；独立审查。"
   },
   "correspondence": {
-    "en": "An account of social viability Ren brought on 19 October 2026 lists eight constraints and a unifying ninth; the AI's mapping found this one (forming the next members) partial: the whole persists through the generation of its parts, but no law of passing a pattern. Ren's words are provenance, not warrant; the reading onto collectives is the AI's (D48).",
-    "zh": "Ren 于 2026年10月19日带来的一段社会可存续性文字列出八条约束与统一它们的第九条；AI 的对照发现此条（形成下一代成员）部分承载：整体经其部分的生成而持续，但没有样式传递的定律。Ren 的话是出处，不是依据；读到集体上是 AI 的（D48）。"
+    "en": "An account of social viability Ren brought on 19 October 2026 lists eight constraints and a unifying ninth; the AI's mapping found this one (forming the next members) partial: the whole persists through the arising of its parts, but no law of passing a pattern. Ren's words are provenance, not warrant; the reading onto collectives is the AI's (D48).",
+    "zh": "Ren 于 2026年10月19日带来的一段社会可存续性文字列出八条约束与统一它们的第九条；AI 的对照发现此条（形成下一代成员）部分承载：整体经其部分的生起而持续，但没有样式传递的定律。Ren 的话是出处，不是依据；读到集体上是 AI 的（D48）。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PatternPassing.lean",
   "aliases": [
@@ -233,7 +233,7 @@
       "declarations": [
         "Becoming.Web.Covered.arises_within"
       ],
-      "sha256": "22aa1957fd18c75c8acf58c612bf9721456c9e711862867797b68f12aa819ac9"
+      "sha256": "f02bb25d687755fd7fb88f7a405c3725eadc38fea58f06b38241d3493d183d07"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T145758.555114Z/verification.json",
@@ -313,6 +313,18 @@
       "role": "receipt",
       "sha256": "4331b95fd551f781d435b9a3ad5f05fb95cbdeb2f7ed119459297fe80639044a",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T214533.564191Z/verification.json",
+      "role": "receipt",
+      "sha256": "1d84754646f4039d0950bbdb24bfa8fbd78dc9f9643cf7b9f13ae4250ac24251",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json",
+      "role": "receipt",
+      "sha256": "8f1d2bed589ebd558ab122d2b21ff3e27c19916c91a47d94b4b0829f76d45192",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -325,7 +337,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Wholes.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T062217.665179Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Wholes",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -367,6 +379,10 @@
     {
       "en": "29 October 2026, board item GW (study section 448): what arises begins a carrier along every continuation (begins_of_arises), proved once (board rule 9); the forward half of arises_iff_sheng_carrier derived from it, statement unchanged. A declaration added to a law; no text changed.",
       "zh": "2026年10月29日，工作板条目 GW（研究第 448 节）：所生者沿每一延续皆起一载体（begins_of_arises），一次证之（工作板规则 9）；arises_iff_sheng_carrier 之前半由之推出，陈述不变。一律增一声明，文字不变。"
+    },
+    {
+      "en": "7 November 2026, board item LM2: \"generation\" for arising (Unceasing) and for a flow more without end (More) is replaced, since the glossary's generation never means arising; the Lean's docstrings changed with it. No law, premise or proof changed.",
+      "zh": "2026年11月7日，工作板条目 LM2：以“生成”称生起（Unceasing）与不止地更多之流（More）处已改，因词汇表之生成从不指生起；Lean 之说明随之而改。诸律、前提与证明皆不变。"
     }
   ],
   "text_versions": [

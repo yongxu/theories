@@ -188,7 +188,7 @@
   },
   "correspondence": {
     "zh": "identity-across-steps 表明，追随形成的读法（生起、不息）依赖谁延续谁，而计数（更多）不依赖。本结果说明普查定律在谁延续谁改变时怎样保持：止息需要生起这一半在每个没有分裂的读法下保持，生起需要止息（计数有界时）这一半在每个没有合并的读法下保持；能抹去生起的恰是分裂，能抹去止息的恰是合并（Tandem）。读法（AI 的论证）：同一个展开读出的生起与止息随读法而变，但不能任意变：在没有分裂、没有合并的读法之间，两者的差恰是活跃者数目的变化。这是活动的计数；它不是 Ren 提议中的“生成的”“退化的”（Ren 写道“generative和degenerate虽然都在一个becoming model上，但是他们不overlap吧”，以“吧”预设二者不重叠，所以这一读法不是其所指；二者读作对能形成者的扩大与缩小，DELEGATED-CHOICES D2）；萌出与合并在生物中有其例（分裂繁殖、融合），那是应用，不是定理的内容。",
-    "en": "identity-across-steps shows that readings following a formation (arising, unceasing generation) depend on who continues whom, while the count (more) does not. This result says how the census laws hold as who continues whom changes: the half in which ceasing needs arising holds under every reading without splits, and the half in which arising needs ceasing (under a bounded count) under every reading without merges; what can remove arising is exactly a split, and what can remove ceasing exactly a merge (Tandem). A reading (the AI's argument): the arising and ceasing read of one unfolding change with the reading, but not arbitrarily: between readings without splits or merges, their difference is exactly the change in the number active. This is a count of activity; it is not the proposal's generative and degenerative (Ren wrote ‘generative和degenerate虽然都在一个becoming model上，但是他们不overlap吧’, a tag question presuming that they do not overlap, so this reading is not what is meant; they read as widening and narrowing what can form, DELEGATED-CHOICES D2); budding and merging have biological cases (fission, fusion), which are applications, not the content of the theorems."
+    "en": "identity-across-steps shows that readings following a formation (arising, unceasing arising) depend on who continues whom, while the count (more) does not. This result says how the census laws hold as who continues whom changes: the half in which ceasing needs arising holds under every reading without splits, and the half in which arising needs ceasing (under a bounded count) under every reading without merges; what can remove arising is exactly a split, and what can remove ceasing exactly a merge (Tandem). A reading (the AI's argument): the arising and ceasing read of one unfolding change with the reading, but not arbitrarily: between readings without splits or merges, their difference is exactly the change in the number active. This is a count of activity; it is not the proposal's generative and degenerative (Ren wrote ‘generative和degenerate虽然都在一个becoming model上，但是他们不overlap吧’, a tag question presuming that they do not overlap, so this reading is not what is meant; they read as widening and narrowing what can form, DELEGATED-CHOICES D2); budding and merging have biological cases (fission, fusion), which are applications, not the content of the theorems."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Identity.lean",
   "aliases": [
@@ -370,7 +370,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Identity.lean",
       "role": "proof",
-      "sha256": "5a55b1d2659cf050d48b78606b449a50dd95c7b574a3fb0896f65765241c9607",
+      "sha256": "49869703e523b506b003dcb3acd9c426af8c370719b329415c492f7c11517c95",
       "declarations": [
         "Becoming.Web.Continues",
         "Becoming.Web.ArisesFrom",
@@ -419,7 +419,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean",
       "role": "proof",
-      "sha256": "852a5491313223e5de476027cd98408c196db67ac2c263d776dd28e6d050ac3c",
+      "sha256": "ff6f2ba5ddcb739270d987a8ddc145ff6075df55a987f7debddd75fe90796a2f",
       "declarations": [
         "Becoming.Web.Census",
         "Becoming.decideSome",
@@ -449,7 +449,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
       "role": "proof",
-      "sha256": "94e9be0baad1667d0d06acdfa757543c292c054c3a7eeaefccbe10b43bd321b5",
+      "sha256": "3e88ad9f714b60ef56bdec298d89aa8b843c4d225f07993ee39f022af3016e05",
       "declarations": [
         "Becoming.total_pos_of_mem"
       ]
@@ -627,26 +627,38 @@
       "role": "receipt",
       "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T214533.564191Z/verification.json",
+      "role": "receipt",
+      "sha256": "1d84754646f4039d0950bbdb24bfa8fbd78dc9f9643cf7b9f13ae4250ac24251",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json",
+      "role": "receipt",
+      "sha256": "8f1d2bed589ebd558ab122d2b21ff3e27c19916c91a47d94b4b0829f76d45192",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Identity.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Identity",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Population",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Flow",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -775,6 +787,10 @@
     {
       "en": "2 November 2026, U4e (study section 500): Web.arisingFrom_not_stopping_covered is re-proved as the root's «有覆而亡屡则生不止» at the formations' occurrences, statement unchanged, and law 4 names that root law among the covering laws' routes; the four census recurrence laws (laws 6 and 9) drop the decisions their proofs do not use, each keeping only whether a formation continues one active before (without splits) or is continued by one active after (without merges), and none of activity, so each statement is more general. The second hypotheses entry and law 12 say which decision each law takes, and the Next drops the item now done. The balance across a step (laws 3 and 9) keeps the three decisions its count uses.",
       "zh": "2026年11月2日，U4e（研究第 500 节）：Web.arisingFrom_not_stopping_covered 改作根上之 «有覆而亡屡则生不止» 取各形成之出现而证，陈述不变，第 4 条于覆盖之律之路径中列此根律；延续之下的四条普查复现律（第 6、9 条）去掉其证明不用的判定，各只留一形成是否延续前一活跃者（无分裂者）或是否为后一活跃者所延续（无合并者），不取活跃之判定，故各陈述更一般。第二条假设与第 12 条说明每条律取何判定，下一步去掉今已完成之项。跨步的平衡（第 3、9 条）仍取其计数所用的三种判定。"
+    },
+    {
+      "en": "7 November 2026, board item LM2: \"generation\" for arising (Unceasing) and for a flow more without end (More) is replaced, since the glossary's generation never means arising; the Lean's docstrings changed with it. No law, premise or proof changed.",
+      "zh": "2026年11月7日，工作板条目 LM2：以“生成”称生起（Unceasing）与不止地更多之流（More）处已改，因词汇表之生成从不指生起；Lean 之说明随之而改。诸律、前提与证明皆不变。"
     }
   ],
   "text_versions": [

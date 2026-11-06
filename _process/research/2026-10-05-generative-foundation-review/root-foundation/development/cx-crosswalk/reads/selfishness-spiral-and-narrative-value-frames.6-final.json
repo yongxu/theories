@@ -674,7 +674,7 @@
      "anchor": "theories/becoming/chapters/04-LIFE.md#r-confined-rise-within-a-whole",
      "role": "carries",
      "says": {
-      "en": "Theorem (World; any type for the founding laws): a confined rise has no member after the end. Where every next founder carries its founder's value (Sequestered, a hypothesis stating an outcome), the mean founding value rises exactly where selection among wholes goes for it; without it, a variant selected within can lower it. Restates Buss, Michod, Aktipis; not shown: the major transitions themselves, or that sequestration is better, which goes through C."
+      "en": "Theorem (World; any type for the founding laws): a confined rise has no member after the end. Where every next founder carries its founder's value (Sequestered, a hypothesis stating an outcome), the mean founding value rises exactly where selection among wholes goes for it; without it, a variant selected within can lower it. Restates Buss, Michod, Aktipis; not shown: the major transitions themselves, or that sequestration is better, which goes through C or a premise in its place."
      }
     }
    ],
@@ -3520,6 +3520,11 @@
    "id": "cx-sspiral-values-upper-structure",
    "what": "changed",
    "why": "main changed the edges claims (LM1 or AA, 7 November 2026): targets[3].says states what it says now"
+  },
+  {
+   "id": "cx-sspiral-multicellular-question",
+   "what": "changed",
+   "why": "05's D65 label and eight records gave ranking to C alone; corrected at home (apply_ranking.py, 7 November 2026): the entry quotes what it says now"
   },
   {
    "id": "cx-sspiral-interconnection",

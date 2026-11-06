@@ -15,7 +15,7 @@ Results:
 * The two-kind reading embeds in the one-kind reading as the one in which no formation
   is a condition (`Web.roles`, `Flow.roles`). Read so, a web keeps support,
   `Dependent`, renewal, consumption, the classes of formations, undermining, the living
-  events of the stepwise reading, arising, unceasing generation and a census of the
+  events of the stepwise reading, arising, unceasing arising and a census of the
   active formations. A flow keeps what is taken and given, balance, `Acting`, `Taking`,
   each formation taking part listed once, the takers and renewers of a family, more
   without end and dissipation (`Flow.roles_dissipative`). These are the readings listed
@@ -61,16 +61,16 @@ Results:
   the representation supplies, it is embodied too (`Embodied.arises_from_embodied`). A
   source standing at one exactly while active meets that premise and depends on nothing
   (`EmbodiedSource`): being embodied is a reading of standing, not of being a life.
-* Generation is replenishment. An embodied relatum comes to stand as it arises: its
+* Embodied arising is replenishment. An embodied relatum comes to stand as it arises: its
   standing rises from nothing (`Embodied.comesToStand`). So the laws of coming to stand
   in `Becoming.Flow` and `Becoming.Dissipation` apply to its arising. In a balanced flow
   it is given at least the standing it arises with (`Embodied.given_of_arises`), so its
   arising replenishes every family containing it (`Embodied.replenishes`). Where
   embodied members of a family arise at arbitrarily late steps, its replenishment recurs
-  whatever is taken (`embodiedArising_needs_replenishment`): generation carries the
+  whatever is taken (`embodiedArising_needs_replenishment`): embodied arising carries the
   requirement itself, not through the uptake it brings as in
   `Flow.uptake_needs_replenishment`.
-* Generation under dissipation. Whatever gives to a family dissipated on takes from it
+* Embodied arising under dissipation. Whatever gives to a family dissipated on takes from it
   (`Flow.DissipatesOn.takes_of_gives`), so the arising of an embodied member of a family
   dissipated on lowers the family's stock (`Embodied.arising_lowers_on`), as under
   dissipation for a family without repetition closed across the step
@@ -86,7 +86,7 @@ Results:
   finitely many relata are all there is, embodied relata do not arise at arbitrarily
   late steps (`embodiedArising_not_recurring`). What these use of embodiment is that arising is a
   coming to stand; where activity and standing are out of step, as in dormancy,
-  `Becoming.Reserve` states what generation then bears.
+  `Becoming.Reserve` states what arising then bears.
 * Witnesses. A bee and a flower, each depending on itself and on the other and drawing
   on the other, renew each other with no third condition, and every event is living
   (`Mutualism`); in `Mutualism.apart` each depends only on the other, and neither bears
@@ -97,12 +97,12 @@ Results:
   (`Brood.not_dissipative`), and each generation arises in the family of it and the one
   before, closed across the step, with nothing falling (`Brood.rise_without_fall`).
 * Each premise of `embodiedArising_not_recurring` is needed. Two sides handing one standing back and
-  forth, each embodied, bear unceasing generation in a closed world of two relata
+  forth, each embodied, bear unceasing arising in a closed world of two relata
   without dissipation (`Shuttle`). Burning a fresh fuel at every step, they bear it under
   dissipation, every finite family containing a side is open at arbitrarily late steps,
   and the family of the sides, enclosed around at every step, draws in the fuel
   (`Throughput`). With an unrelated sink exchanging with ever new relata instead, no step
-  is enclosed, dissipation holds vacuously, and generation recurs in the family of the
+  is enclosed, dissipation holds vacuously, and arising recurs in the family of the
   sides with nothing flowing in, while the sink opens it (`SprayShuttle`). A relatum
   whose activity is not its standing arises again and again in a world of one relatum
   under dissipation (`Flicker`).
@@ -113,7 +113,7 @@ itself does not enter either valuation (`Mutualism.apart_embodied`).
 
 Which relata are embodied, and whether a formation bears on itself, are
 representational choices: remains stand after activity ends, and a condition such as
-water stands without being active. Generation carries a requirement of its own where
+water stands without being active. Arising carries a requirement of its own where
 the arising relatum is embodied, and need not where it is not (`Flicker`), so that is
 where the choice has consequences. `ending_breaks` counts drawing on a relatum that
 bears on itself, at the step at which it ends, against living, whatever ends it;
@@ -577,7 +577,7 @@ theorem relabel_alive (onto : ∀ c, ∃ y, π y = c) (t : Nat) (f : X) :
 
 end Web
 
-/-! ## Generation is replenishment -/
+/-! ## Embodied arising is replenishment -/
 
 namespace Web
 
@@ -622,7 +622,7 @@ theorem Embodied.replenishes (balances : L.Balances W) {x : X} (embodied : W.Emb
     0 < L.replenishment cs t :=
   Embodied.replenishes_at (balances.on cs t) mem embodied arises
 
-/-- Generation carries the requirement itself, from a step on: where the family is balanced
+/-- Embodied arising carries the requirement itself, from a step on: where the family is balanced
 on from `T` on and embodied members of it arise at arbitrarily late steps, it is
 replenished at some step from `T` on, whatever is taken. -/
 theorem embodiedArising_needs_replenishment_from {cs : List X} {T : Nat}
@@ -631,7 +631,7 @@ theorem embodiedArising_needs_replenishment_from {cs : List X} {T : Nat}
     ¬ ∀ t, T ≤ t → L.replenishment cs t = 0 :=
   Flow.standing_needs_replenishment_from balances (Embodied.coming arising)
 
-/-- Generation carries the requirement itself: where embodied members of a family arise at
+/-- Embodied arising carries the requirement itself: where embodied members of a family arise at
 arbitrarily late steps, replenishment of the family recurs, whatever is taken. -/
 theorem embodiedArising_needs_replenishment (balances : L.Balances W) {cs : List X}
     (arising : ∀ N, ∃ t x, N ≤ t ∧ x ∈ cs ∧ W.Embodied x ∧ W.Arises t x) (T : Nat) :
@@ -698,7 +698,7 @@ theorem embodiedArising_opens (balances : L.Balances W) (dissipative : L.Dissipa
     ¬ ∀ t, T ≤ t → L.ClosedAt ds t :=
   Flow.standing_opens balances dissipative distinct (Embodied.coming arising) T
 
-/-- Generation draws in, from a step on: where embodied members of a finite family without
+/-- Embodied arising draws in, from a step on: where embodied members of a finite family without
 repetition arise at arbitrarily late steps, and from `T₀` on the family is balanced on,
 enclosed around, and every family closed across each step is dissipated on, at arbitrarily
 late steps some relatum gives to the family and takes from a relatum beyond it. -/
@@ -710,7 +710,7 @@ theorem embodiedArising_draws_in_from {ds : List X} (distinct : Distinct ds) {T�
   Flow.rising_draws_in_from distinct around balances dissipative
     (Web.rising_of_coming (Embodied.coming arising)) N
 
-/-- Generation draws in: under dissipation, where embodied members of a finite family
+/-- Embodied arising draws in: under dissipation, where embodied members of a finite family
 without repetition arise at arbitrarily late steps and the family is enclosed around from
 some step on, at arbitrarily late steps some relatum gives to the family and takes from a
 relatum beyond it. -/
@@ -1015,7 +1015,7 @@ theorem arises (t : Nat) : web.Arises t (t + 1) :=
 
 /-- Generation after generation arises, each given by the one before: the flow balances,
 only active generations give, each is embodied and bears on itself, activity needs
-support, and generation is unceasing. -/
+support, and arising is unceasing. -/
 theorem brood : flow.Balances web ∧ flow.Acting web ∧ web.Dependent ∧
     (∀ x, web.Embodied x ∧ web.SelfBearing x) ∧ web.Unceasing :=
   ⟨fun t x => grows x t,
@@ -1257,7 +1257,7 @@ theorem recurs (x : Bool) (N : Nat) : ∃ t, N ≤ t ∧ web.Arises t x :=
 
 /-- Two sides hand one standing back and forth: finitely many relata are all there is,
 the flow balances, only active sides give, each side is embodied and bears on itself,
-activity needs support, the family of both is closed at every step, and generation is
+activity needs support, the family of both is closed at every step, and arising is
 unceasing. Only dissipation fails: the holder gives back all it takes. -/
 theorem shuttle : flow.Balances web ∧ flow.Acting web ∧ web.Dependent ∧
     (∀ x, web.Embodied x ∧ web.SelfBearing x) ∧ (∀ t, flow.ClosedAt [true, false] t) ∧
@@ -1396,7 +1396,7 @@ theorem around (t : Nat) : flow.Around [.side true, .side false] t :=
             (Frontier.burning_at n t (Eq.subst (motive := fun b => 0 < b) h.symm
               (Nat.succ_pos k))).symm (.tail _ (.tail _ (.head _)))) outside, rfl⟩⟩
 
-/-- So generation in the family of the sides draws in: at arbitrarily late steps the side
+/-- So arising in the family of the sides draws in: at arbitrarily late steps the side
 that gives to the family takes from beyond it, the fuel. -/
 theorem draws_in (N : Nat) : ¬ ∀ t, N ≤ t → flow.Inward [.side true, .side false] t :=
   Web.embodiedArising_draws_in (ds := [.side true, .side false]) balances dissipative
@@ -1515,7 +1515,7 @@ embodied and bear on themselves, and the flow is dissipative, vacuously, since n
 enclosed. Each side arises at arbitrarily late steps in the finite family of the two
 sides. Yet every relatum that gives to the family takes only from it, the sink, the only
 relatum exchanging beyond it, never takes from or gives to it, and the family's stock is
-one at every step: generation recurs in a finite family into which nothing flows. -/
+one at every step: arising recurs in a finite family into which nothing flows. -/
 theorem spray_shuttle :
     flow.Balances web ∧ flow.Acting web ∧ web.Dependent ∧
     (∀ x, web.Embodied (.side x) ∧ web.SelfBearing (.side x)) ∧ flow.Dissipative ∧
@@ -1571,7 +1571,7 @@ def web : Web Unit Unit where
 def flow : Flow Unit Unit := Witnesses.emptyFlow Unit Unit
 
 /-- A relatum whose activity is not its standing arises with nothing given to it: one
-relatum is all there is, the flow balances and is dissipative, and generation is
+relatum is all there is, the flow balances and is dissipative, and arising is
 unceasing. Only embodiment fails. -/
 theorem flicker : flow.Balances web ∧ flow.Dissipative ∧ web.Unceasing ∧
     ¬ web.Embodied () :=

@@ -1366,7 +1366,7 @@
      "record": "organizational-formation-from-generative-comparison",
      "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-organizational-formation-from-generative-comparison",
      "says": {
-      "en": "Reading [AI, D65; a ranking needs C or a premise in its place, under 07's premises]: a condition indispensable to one way of organization is not thereby basic: living may continue, and improve, after the way of coordination changes."
+      "en": "Reading [AI, D65; scope by the continuation condition, and a ranking needs C or a premise in its place (07 §4)]: a condition indispensable to one way of organization is not thereby basic: living may continue, and improve, after the way of coordination changes."
      },
      "role": "neighbour",
      "part": "Reading D65"
@@ -1610,7 +1610,7 @@
    "carried": "fresh-reading",
    "relation": "agreement",
    "reading": {
-    "en": "The revision step has a form: a rule answers every failure exactly where it puts the failed address into the next plan. Neighbourhood search, which the source adopts, rests wherever no neighbour scores more. Rules revised at every step can never complete, what its cooldown guards against: my step. A condition indispensable to one way of organizing is not thereby basic; any ranking there is C's, with the continuation condition for scope, neither asserted. Learning its own boundaries, and later savings, are not stated. Proposed here. [AI reading]"
+    "en": "The revision step has a form: a rule answers every failure exactly where it puts the failed address into the next plan. Neighbourhood search, which the source adopts, rests wherever no neighbour scores more. Rules revised at every step can never complete, what its cooldown guards against: my step. A condition indispensable to one way of organizing is not thereby basic; any ranking there needs C, or a premise in its place, for order, with the continuation condition for scope, neither asserted. Learning its own boundaries, and later savings, are not stated. Proposed here. [AI reading]"
    },
    "targets": [
     {
@@ -1642,7 +1642,7 @@
      "record": "organizational-formation-from-generative-comparison",
      "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-organizational-formation-from-generative-comparison",
      "says": {
-      "en": "Reading [AI, D65; a ranking needs C or a premise in its place, under 07's premises]: whether a development calls for expanding, maintaining, reorganizing or contracting is asked of the whole continuation it forms. A condition indispensable to one way of organization is not thereby basic."
+      "en": "Reading [AI, D65; scope by the continuation condition, and a ranking needs C or a premise in its place (07 §4)]: whether a development calls for expanding, maintaining, reorganizing or contracting is asked of the whole continuation it forms. A condition indispensable to one way of organization is not thereby basic."
      },
      "role": "neighbour",
      "part": "Reading D65"
@@ -2040,7 +2040,7 @@
      "record": "organizational-formation-from-generative-comparison",
      "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-organizational-formation-from-generative-comparison",
      "says": {
-      "en": "Reading [AI, a ranking needs C or a premise in its place, under 07's premises]: the laws of capture and drain give institutions no prior duty to contract and no prior licence to grow; whether a development calls for expanding, maintaining, reorganizing or contracting is asked of the whole continuation it forms."
+      "en": "Reading [AI, scope by the continuation condition, and a ranking needs C or a premise in its place (07 §4)]: the laws of capture and drain give institutions no prior duty to contract and no prior licence to grow; whether a development calls for expanding, maintaining, reorganizing or contracting is asked of the whole continuation it forms."
      },
      "role": "carries",
      "part": "Reading D65"
@@ -2445,7 +2445,7 @@
   {
    "id": "cx-ecs-organization-as-object-of-learning",
    "what": "changed",
-   "why": "05's D65 label and eight records gave ranking to C alone; corrected at home (apply_ranking.py, 7 November 2026): the entry quotes what it says now"
+   "why": "05's D65 label and eight records gave ranking to C alone; corrected at home (apply_ranking.py, 7 November 2026): the entry quotes what it says now / 05's D65 label and eight records gave ranking to C alone; corrected at home (apply_ranking.py, 7 November 2026): the entry quotes what it says now"
   },
   {
    "id": "cx-ecs-surpass-as-goal",

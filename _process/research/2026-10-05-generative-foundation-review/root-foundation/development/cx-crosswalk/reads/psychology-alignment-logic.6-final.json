@@ -975,7 +975,7 @@
     "en": "The exact sign at a step, the count across a stretch, and, in those models, a critical mass where readers are drawn from the selected, and a loss read in time leaving the lock even where control is selected."
    },
    "source_adds": {
-    "en": "That AI agents meet selection's conditions at all, and that competition presses safety aside. Selfishness and deception as traits; the displacement of humans in the title; the remedies. That these traits are undesirable is the source's comparison: no law here gives it, and a ranking would need C with the continuation condition, neither asserted, their warrant open."
+    "en": "That AI agents meet selection's conditions at all, and that competition presses safety aside. Selfishness and deception as traits; the displacement of humans in the title; the remedies. That these traits are undesirable is the source's comparison: no law here gives it, and a ranking would need C, or a premise in its place, with the continuation condition for scope, neither asserted, their warrant open."
    },
    "absence": null,
    "same_as": null,
@@ -1505,7 +1505,7 @@
   {
    "id": "cx-pal-natural-selection-among-ais",
    "what": "changed",
-   "why": "main changed the ethics claims (LM1 or AA, 7 November 2026): targets[1].says states what it says now"
+   "why": "main changed the ethics claims (LM1 or AA, 7 November 2026): targets[1].says states what it says now / 05's D65 label and eight records gave ranking to C alone; corrected at home (apply_ranking.py, 7 November 2026): the entry quotes what it says now"
   },
   {
    "id": "cx-pal-value-lock-in",

@@ -69,7 +69,8 @@ parameter is added. No definition of an earlier module changes.
 
 What is not derived: which class a center's own line runs under, or which occurrences are centers;
 that any actual net meets the condition at any class; that any actual lineage is endless; that a
-class whose core does not carry a step is thereby chosen; C, which alone orders. The models commit to
+class whose core does not carry a step is thereby chosen; any order: a ranking of courses needs C or
+a premise in its place. The models commit to
 discrete steps and to equality on their carriers. No ethical predicate is asserted; every declaration
 has an empty axiom report.
 -/

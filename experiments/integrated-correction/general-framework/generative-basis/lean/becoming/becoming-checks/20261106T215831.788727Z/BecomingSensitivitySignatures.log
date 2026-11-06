@@ -1,0 +1,133 @@
+@Becoming.ExchangeLaw.ReadsFinitely.nonanticipating : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C},
+  law.ReadsFinitely → law.Nonanticipating
+@Becoming.ExchangeLaw.Nonanticipating.readsWithin_of_every : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C},
+  law.Nonanticipating →
+    ∀ {cs : List C}, (∀ (c : C), c ∈ cs) → ∀ (t : Nat) (h : F) (l : Nat → C → Nat), law.ReadsWithin t h l cs
+@Becoming.ExchangeLaw.Nonanticipating.readsFinitely_of_every : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C},
+  law.Nonanticipating → ∀ {cs : List C}, (∀ (c : C), c ∈ cs) → law.ReadsFinitely
+@Becoming.alike_of_sensitive_agree_within : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} [DecidableEq C],
+  law.Nonanticipating →
+    ∀ {t : Nat} {h : F} {l l' : Nat → C → Nat} {cs : List C},
+      law.ReadsWithin t h l' cs →
+        (∀ (c : C), law.Sensitive h c → ∀ (s : Nat), s ≤ t → l s c = l' s c) → law.GivesAlike t h l l'
+@Becoming.ExchangeLaw.ReadsFinitely.through_of_observed : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C}
+  [DecidableEq C],
+  law.ReadsFinitely →
+    ∀ {W : Becoming.Web F C} {obs : F → C → Prop} {part : F → Bool},
+      (∀ (h : F), part h = false → ∀ (c : C), law.Sensitive h c → ¬¬obs h c) → law.Through W obs part
+@Becoming.ExchangeLaw.ReadsFinitely.through_sensitive : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} [DecidableEq C],
+  law.ReadsFinitely → ∀ (W : Becoming.Web F C) (part : F → Bool), law.Through W law.Sensitive part
+@Becoming.ExchangeLaw.ReadsFinitely.least_coupling : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} [DecidableEq C],
+  law.ReadsFinitely →
+    ∀ (W : Becoming.Web F C) (part : F → Bool),
+      law.Through W law.Sensitive part ∧
+        ∀ (obs : F → C → Prop),
+          law.Through W obs part → ∀ (h : F), part h = false → ∀ (c : C), law.Sensitive h c → ¬¬W.CoupledInto obs h c
+@Becoming.comparison_through_sensitivity_of_readsFinitely : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C}
+  [DecidableEq C] {L L' : Becoming.Flow F C} {W W' : Becoming.Web F C} {part : F → Bool} {Pos : Type},
+  law.ReadsFinitely →
+    L.Balances W →
+      L'.Balances W' →
+        (∀ (t : Nat), L.present t = L'.present t) →
+          (∀ (c : C), W.level 0 c = W'.level 0 c) →
+            L.Follows law part W.level →
+              L'.Follows law part W'.level →
+                ∀ {sig : Pos → Nat → F → Prop} {p : Pos},
+                  (∀ (t : Nat) (g : F), ¬¬L.WithinResponse L' W law.Sensitive part g → sig p t g) →
+                    (W.Retains sig p W.level W'.level ↔ W.Includes W.level W'.level) ∧
+                      (W.Retains sig p W'.level W.level ↔ W.Includes W'.level W.level) ∧
+                        (¬W.Adds sig p W.level W'.level ↔ ¬W.Exceeds W.level W'.level) ∧
+                          (¬W.Adds sig p W'.level W.level ↔ ¬W.Exceeds W'.level W.level)
+@Becoming.mixIn_alike_of_insensitiveAt : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} [inst : DecidableEq C]
+  {t : Nat} {h : F},
+  (∀ (c : C), law.InsensitiveAt t h c) →
+    ∀ (l l' : Nat → C → Nat) (ds : List C), law.GivesAlike t h l (Becoming.mixIn l l' ds)
+@Becoming.alike_of_insensitiveAt_within : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} [DecidableEq C] {t : Nat}
+  {h : F} {l l' : Nat → C → Nat} {cs : List C},
+  (∀ (c : C), law.InsensitiveAt t h c) → law.ReadsWithin t h l' cs → law.GivesAlike t h l l'
+@Becoming.ExchangeLaw.ReadsFinitely.alike_of_insensitive : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C}
+  [DecidableEq C],
+  law.ReadsFinitely →
+    ∀ {h : F}, (∀ (c : C), ¬law.Sensitive h c) → ∀ (t : Nat) (l l' : Nat → C → Nat), law.GivesAlike t h l l'
+@Becoming.VanishFrom.of_agree : ∀ {α β : Nat → Nat} (n : Nat),
+  (∀ (m : Nat), n ≤ m → α m = β m) → Becoming.VanishFrom α → Becoming.VanishFrom β
+Becoming.vanishIndicator_eq_one : ∀ (decides : (α : Nat → Nat) → Decidable (Becoming.VanishFrom α)) {α : Nat → Nat},
+  Becoming.VanishFrom α → Becoming.vanishIndicator decides α = 1
+Becoming.vanishIndicator_eq_zero : ∀ (decides : (α : Nat → Nat) → Decidable (Becoming.VanishFrom α)) {α : Nat → Nat},
+  ¬Becoming.VanishFrom α → Becoming.vanishIndicator decides α = 0
+Becoming.vanishIndicator_eq_of_agree : ∀ (decides : (α : Nat → Nat) → Decidable (Becoming.VanishFrom α))
+  {α β : Nat → Nat} (n : Nat),
+  (∀ (m : Nat), n ≤ m → α m = β m) → Becoming.vanishIndicator decides α = Becoming.vanishIndicator decides β
+Becoming.vanishIndicator_zeros : ∀ (decides : (α : Nat → Nat) → Decidable (Becoming.VanishFrom α)),
+  (Becoming.vanishIndicator decides fun x => 0) = 1
+Becoming.vanishIndicator_ones : ∀ (decides : (α : Nat → Nat) → Decidable (Becoming.VanishFrom α)),
+  (Becoming.vanishIndicator decides fun x => 1) = 0
+Becoming.tailLaw_nonanticipating : ∀ (decides : (α : Nat → Nat) → Decidable (Becoming.VanishFrom α)),
+  (Becoming.tailLaw decides).Nonanticipating
+Becoming.tailLaw_reads_from : ∀ (decides : (α : Nat → Nat) → Decidable (Becoming.VanishFrom α)) (n : Nat) {t : Nat}
+  {l l' : Nat → Nat → Nat},
+  (∀ (s : Nat), s ≤ t → ∀ (m : Nat), n ≤ m → l s m = l' s m) → (Becoming.tailLaw decides).GivesAlike t () l l'
+Becoming.tailLaw_insensitive : ∀ (decides : (α : Nat → Nat) → Decidable (Becoming.VanishFrom α)) (t c : Nat),
+  (Becoming.tailLaw decides).InsensitiveAt t () c
+Becoming.tailLaw_not_sensitive : ∀ (decides : (α : Nat → Nat) → Decidable (Becoming.VanishFrom α)) (c : Nat),
+  ¬(Becoming.tailLaw decides).Sensitive () c
+Becoming.tailLaw_differs : ∀ (decides : (α : Nat → Nat) → Decidable (Becoming.VanishFrom α)) (t c : Nat),
+  (Becoming.tailLaw decides).take t () (fun x x_1 => 0) c ≠ (Becoming.tailLaw decides).take t () (fun x x_1 => 1) c
+Becoming.tailLaw_not_through_sensitive : ∀ (decides : (α : Nat → Nat) → Decidable (Becoming.VanishFrom α)),
+  ¬∀ (t : Nat) (l l' : Nat → Nat → Nat),
+      (∀ (c : Nat), (Becoming.tailLaw decides).Sensitive () c → ∀ (s : Nat), s ≤ t → l s c = l' s c) →
+        (Becoming.tailLaw decides).GivesAlike t () l l'
+Becoming.tailLaw_not_through : ∀ (decides : (α : Nat → Nat) → Decidable (Becoming.VanishFrom α))
+  {W : Becoming.Web Unit Nat},
+  (∀ (t c : Nat), ¬W.requires t () c) →
+    ¬(Becoming.tailLaw decides).Through W (Becoming.tailLaw decides).Sensitive fun x => false
+Becoming.tailLaw_through_from : ∀ (decides : (α : Nat → Nat) → Decidable (Becoming.VanishFrom α))
+  {W : Becoming.Web Unit Nat} (n : Nat), (Becoming.tailLaw decides).Through W (fun x c => n ≤ c) fun x => false
+Becoming.tailLaw_no_least_coupling : ∀ (decides : (α : Nat → Nat) → Decidable (Becoming.VanishFrom α))
+  {W : Becoming.Web Unit Nat},
+  (∀ (t c : Nat), ¬W.requires t () c) →
+    ¬∃ obs,
+        ((Becoming.tailLaw decides).Through W obs fun x => false) ∧
+          ∀ (obs' : Unit → Nat → Prop),
+            ((Becoming.tailLaw decides).Through W obs' fun x => false) → ∀ (c : Nat), obs () c → obs' () c
+Becoming.tailLaw_not_readsFinitely : ∀ (decides : (α : Nat → Nat) → Decidable (Becoming.VanishFrom α)),
+  ¬(Becoming.tailLaw decides).ReadsFinitely
+Becoming.WLPO.of_lpo : Becoming.LPO → Becoming.WLPO
+@Becoming.seenBy_false : ∀ {s : Nat → Bool}, (∀ (n : Nat), s n = false) → ∀ (m : Nat), Becoming.seenBy s m = false
+@Becoming.seenBy_at : ∀ {s : Nat → Bool} {k : Nat}, s k = true → Becoming.seenBy s k = true
+@Becoming.seenBy_from : ∀ {s : Nat → Bool} {k : Nat}, s k = true → ∀ (d : Nat), Becoming.seenBy s (k + d) = true
+@Becoming.seenBy_true : ∀ {s : Nat → Bool} {k m : Nat}, s k = true → k ≤ m → Becoming.seenBy s m = true
+@Becoming.alike_of_agree_from : ∀ {F : Type} {law : Becoming.ExchangeLaw F Nat} {t : Nat} {h : F},
+  (∀ (c : Nat), law.InsensitiveAt t h c) →
+    ∀ (k : Nat) {X Y : Nat → Nat → Nat},
+      (∀ (r : Nat), r ≤ t → ∀ (e : Nat), k ≤ e → X r e = Y r e) → law.GivesAlike t h X Y
+@Becoming.mixed_decides : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {t : Nat} {h : F} {l l' γ : Nat → C → Nat}
+  {c : C},
+  ¬(law.take t h l c = law.take t h l' c ∧ law.give t h l c = law.give t h l' c) →
+    ∀ {s : Nat → Bool},
+      ((∀ (n : Nat), s n = false) → law.GivesAlike t h γ l) →
+        (∀ (n : Nat), s n = true → law.GivesAlike t h γ l') → (∀ (n : Nat), s n = false) ∨ ¬∀ (n : Nat), s n = false
+@Becoming.wlpo_of_insensitive_differs : ∀ {F : Type} {law : Becoming.ExchangeLaw F Nat} {t : Nat} {h : F},
+  (∀ (c : Nat), law.InsensitiveAt t h c) →
+    ∀ {l l' : Nat → Nat → Nat} {c : Nat},
+      ¬(law.take t h l c = law.take t h l' c ∧ law.give t h l c = law.give t h l' c) → Becoming.WLPO
+Becoming.Sensitivity.cond_either : ∀ (b : Bool) (x y : Nat), (bif b then y else x) = x ∨ (bif b then y else x) = y
+@Becoming.alike_of_agree_from_sensitive : ∀ {F : Type} {law : Becoming.ExchangeLaw F Nat},
+  law.Nonanticipating →
+    ∀ {t : Nat} {h : F} {l l' : Nat → Nat → Nat},
+      (∀ (c : Nat), law.Sensitive h c → ∀ (s : Nat), s ≤ t → l s c = l' s c) →
+        ∀ (k : Nat) {X : Nat → Nat → Nat},
+          (∀ (r : Nat), r ≤ t → ∀ (e : Nat), X r e = l r e ∨ X r e = l' r e) →
+            (∀ (r : Nat), r ≤ t → ∀ (e : Nat), k ≤ e → X r e = l' r e) → law.GivesAlike t h X l'
+@Becoming.wlpo_of_not_through_sensitive : ∀ {F : Type} {law : Becoming.ExchangeLaw F Nat},
+  law.Nonanticipating →
+    ∀ {t : Nat} {h : F} {l l' : Nat → Nat → Nat},
+      (∀ (c : Nat), law.Sensitive h c → ∀ (s : Nat), s ≤ t → l s c = l' s c) →
+        ∀ {c : Nat}, ¬(law.take t h l c = law.take t h l' c ∧ law.give t h l c = law.give t h l' c) → Becoming.WLPO
+@Becoming.seenBy_exists : ∀ {s : Nat → Bool} {m : Nat}, Becoming.seenBy s m = true → ∃ k, s k = true
+Becoming.lpo_of_vanish_decided : ∀ (decides : (α : Nat → Nat) → Decidable (Becoming.VanishFrom α)), Becoming.LPO
+Becoming.Pointer.readsWithin : ∀ (t : Nat) (l : Nat → Nat → Nat), Becoming.Pointer.law.ReadsWithin t () l [0, l 0 0]
+Becoming.Pointer.readsFinitely : Becoming.Pointer.law.ReadsFinitely
+Becoming.Pointer.lt_beyond : ∀ (cs : List Nat) {c : Nat}, c ∈ cs → c < Becoming.Pointer.beyond cs
+Becoming.Pointer.beyond_ne_zero : ∀ (cs : List Nat), Becoming.Pointer.beyond cs ≠ 0
+Becoming.Pointer.no_list : ¬∃ cs, ∀ (t : Nat) (l : Nat → Nat → Nat), Becoming.Pointer.law.ReadsWithin t () l cs

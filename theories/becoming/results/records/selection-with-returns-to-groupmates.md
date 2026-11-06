@@ -105,6 +105,8 @@ Hamilton (1964) for kin and Hamilton (1975) reading the Price equation's among-g
 | proof | [Prelude.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean) | `Becoming.nil_of_length_zero` |
 | proof | [Population.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean) | `Becoming.total_congr_on` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T214533.564191Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json) | — |
 
 Aliases: `returns to groupmates`, `Hamilton's rule`, `assortment below one`, `groups founded mixed`, `组员间回报`, `Hamilton 规则`, `Becoming.SelectionLevels.rises_iff_returns`, `Becoming.SelectionLevels.returns_balance`
 

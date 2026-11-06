@@ -1,0 +1,48 @@
+@Becoming.Law.agree_bisimulation : ∀ {S : Type u_1} {S' : Type u_2} {R : Type u_3} {next : S → S} {next' : S' → S'}
+  {o : S → R} {o' : S' → R},
+  Becoming.Bisimulation (Becoming.Law.frameBy next o) (Becoming.Law.frameBy next' o') fun t t' =>
+    ∀ (n : Nat), o (Becoming.Law.orbit next t n) = o' (Becoming.Law.orbit next' t' n)
+@Becoming.Law.alike_iff_agree : ∀ {S : Type u_1} {S' : Type u_2} {R : Type u_3} {next : S → S} {next' : S' → S'}
+  {o : S → R} {o' : S' → R} {s : S} {s' : S'},
+  Becoming.Alike (Becoming.Law.frameBy next o) (Becoming.Law.frameBy next' o') s s' ↔
+    ∀ (n : Nat), o (Becoming.Law.orbit next s n) = o' (Becoming.Law.orbit next' s' n)
+@Becoming.Law.sameTests_iff_within : ∀ {S : Type u_1} {R : Type u_2} {next : S → S} {o : S → R} {l : List S},
+  (∀ (s : S), s ∈ l) →
+    ∀ {s s' : S},
+      Becoming.SameTests (Becoming.Law.frameBy next o) (Becoming.Law.frameBy next o) s s' ↔
+        ∀ (n : Nat), n < l.length - 1 → o (Becoming.Law.orbit next s n) = o (Becoming.Law.orbit next s' n)
+@Becoming.Law.sameTests_iff_below_across : ∀ {S : Type u_1} {S' : Type u_2} {R : Type u_3} {next : S → S}
+  {next' : S' → S'} {o : S → R} {o' : S' → R} {l : List S} {l' : List S'},
+  (∀ (s : S), s ∈ l) →
+    (∀ (s' : S'), s' ∈ l') →
+      ∀ {s : S} {s' : S'},
+        Becoming.SameTests (Becoming.Law.frameBy next o) (Becoming.Law.frameBy next' o') s s' ↔
+          ∀ (n : Nat),
+            n < l.length + l'.length - 1 → o (Becoming.Law.orbit next s n) = o' (Becoming.Law.orbit next' s' n)
+@Becoming.Law.alikeTo_labelled_iff : ∀ {S : Type u_1} {S' : Type u_2} {A : Type u_3} {next : S → S} {next' : S' → S'}
+  {o : S → A} {o' : S' → A} {k : Nat} {s : S} {s' : S'},
+  Becoming.AlikeTo (Becoming.Law.labelled next o) (Becoming.Law.labelled next' o') k s s' ↔
+    ∀ (n : Nat), n < k → o (Becoming.Law.orbit next s n) = o' (Becoming.Law.orbit next' s' n)
+@Becoming.Law.labelled_finite : ∀ {S : Type u_1} {A : Type u_2} [DecidableEq S] [DecidableEq A] {next : S → S}
+  {o : S → A}, (∃ l, ∀ (s : S), s ∈ l) → Becoming.FiniteDecided (Becoming.Law.labelled next o)
+@Becoming.Law.orbit_fin : ∀ {N : Nat} {f : Nat → Nat} (stays : ∀ (p : Nat), f p < N) (start : Fin N) (n : Nat),
+  ↑(Becoming.Law.orbit (fun p => ⟨f ↑p, ⋯⟩) start n) = Becoming.Law.orbit f (↑start) n
+@Becoming.Law.realized_within : ∀ {O : Type u_1} {x : Nat → O} {N : Nat},
+  Becoming.StatesBelow x N → ∃ next o s, ∀ (n : Nat), o (Becoming.Law.orbit next s n) = x n
+Becoming.labelled_across_exact : ∀ (M M' : Nat),
+  ∃ F G s s',
+    Becoming.FiniteDecided F ∧
+      Becoming.FiniteDecided G ∧
+        (Becoming.finBelow (M + 1) (M + 1) ⋯).length = M + 1 ∧
+          (Becoming.finBelow (M' + 1) (M' + 1) ⋯).length = M' + 1 ∧
+            Becoming.AlikeTo F G (M + M') s s' ∧ ¬Becoming.Alike F G s s'
+Becoming.frameBy_across_exact : ∀ (M M' : Nat),
+  ∃ next o next' o' s s',
+    (∀ (n : Nat), n < M + M' → o (Becoming.Law.orbit next s n) = o' (Becoming.Law.orbit next' s' n)) ∧
+      ¬Becoming.SameTests (Becoming.Law.frameBy next o) (Becoming.Law.frameBy next' o') s s'
+Becoming.frameBy_within_exact : ∀ (M : Nat),
+  ∃ next o s s',
+    (Becoming.finBelow (M + 2) (M + 2) ⋯).length = M + 2 ∧
+      (∀ (t : Fin (M + 2)), t ∈ Becoming.finBelow (M + 2) (M + 2) ⋯) ∧
+        (∀ (n : Nat), n < M → o (Becoming.Law.orbit next s n) = o (Becoming.Law.orbit next s' n)) ∧
+          ¬Becoming.SameTests (Becoming.Law.frameBy next o) (Becoming.Law.frameBy next o) s s'

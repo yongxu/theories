@@ -136,6 +136,8 @@ The unification plan asks for transmission, variation and selection through desc
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
 | proof | [Prelude.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean) | `Becoming.total_congr` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T214533.564191Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json) | — |
 
 Aliases: `Becoming.price`, `Becoming.offspring`, `Becoming.selected`, `Becoming.raised`, `Becoming.lowered`, `Becoming.Flow.DescendsAt`, `Becoming.Flow.DescendsAt.supported`, `Becoming.Flow.unsupported_childless`, `Becoming.Flow.never_supported_childless`, `Becoming.Flow.selected_le`, `Becoming.Flow.selection_within`, `Becoming.Flow.TransmitsWithin`, `Becoming.Flow.transmitted_supported`, `Becoming.Flow.transmitted_within`, `Becoming.Drawdown.drawdown`, `Becoming.Unchecked.unchecked`, `Becoming.selected_uniform`, `Becoming.unselected`, `Becoming.Slack.slack`
 

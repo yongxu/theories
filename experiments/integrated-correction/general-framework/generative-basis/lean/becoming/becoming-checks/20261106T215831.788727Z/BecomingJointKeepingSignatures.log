@@ -1,0 +1,131 @@
+@Becoming.Viability.kernel_and_iff : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {g₁ g₂ : S → Prop}
+  {s : S},
+  Becoming.Viability.Kernel P (fun x => g₁ x ∧ g₂ x) s ↔
+    Becoming.Viability.Kernel P g₁ s ∧ Becoming.Viability.Kernel P g₂ s
+@Becoming.Viability.kernel_allOf_iff : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {gs : List (S → Prop)} {s : S},
+  Becoming.Viability.Kernel P (Becoming.Viability.AllOf gs) s ↔
+    ∀ (g : S → Prop), g ∈ gs → Becoming.Viability.Kernel P g s
+@Becoming.Viability.Keepable.start : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {g : S → Prop}
+  {s : S}, Becoming.Viability.Keepable P g s → g s
+@Becoming.Viability.Keepable.mono : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {g g' : S → Prop},
+  (∀ (x : S), g x → g' x) → ∀ {s : S}, Becoming.Viability.Keepable P g s → Becoming.Viability.Keepable P g' s
+@Becoming.Viability.Keepable.left : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {g₁ g₂ : S → Prop}
+  {s : S}, Becoming.Viability.Keepable P (fun x => g₁ x ∧ g₂ x) s → Becoming.Viability.Keepable P g₁ s
+@Becoming.Viability.Keepable.right : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {g₁ g₂ : S → Prop}
+  {s : S}, Becoming.Viability.Keepable P (fun x => g₁ x ∧ g₂ x) s → Becoming.Viability.Keepable P g₂ s
+@Becoming.Viability.Keepable.each : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {g₁ g₂ : S → Prop}
+  {s : S},
+  Becoming.Viability.Keepable P (fun x => g₁ x ∧ g₂ x) s →
+    Becoming.Viability.Keepable P g₁ s ∧ Becoming.Viability.Keepable P g₂ s
+@Becoming.Viability.keepable_and_iff_of_kernel_left : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {g₁ g₂ : S → Prop} {s : S},
+  Becoming.Viability.Kernel P g₁ s →
+    (Becoming.Viability.Keepable P (fun x => g₁ x ∧ g₂ x) s ↔ Becoming.Viability.Keepable P g₂ s)
+@Becoming.Viability.keepable_and_iff_of_kernel_right : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {g₁ g₂ : S → Prop} {s : S},
+  Becoming.Viability.Kernel P g₂ s →
+    (Becoming.Viability.Keepable P (fun x => g₁ x ∧ g₂ x) s ↔ Becoming.Viability.Keepable P g₁ s)
+@Becoming.Viability.KeptFor.guard_mono : ∀ {S : Type u_1} {A : Type u_2} {O : Type u_3} {P : Generative.Process S A}
+  {sense : S → A → S → O} {allowed : S → A → Prop} {g g' : S → Prop},
+  (∀ (x : S), g x → g' x) →
+    ∀ {n : Nat} {B : S → Prop},
+      Becoming.Viability.KeptFor P sense g allowed n B → Becoming.Viability.KeptFor P sense g' allowed n B
+@Becoming.Viability.KeptFor.each : ∀ {S : Type u_1} {A : Type u_2} {O : Type u_3} {P : Generative.Process S A}
+  {sense : S → A → S → O} {allowed : S → A → Prop} {g₁ g₂ : S → Prop} {n : Nat} {B : S → Prop},
+  Becoming.Viability.KeptFor P sense (fun x => g₁ x ∧ g₂ x) allowed n B →
+    Becoming.Viability.KeptFor P sense g₁ allowed n B ∧ Becoming.Viability.KeptFor P sense g₂ allowed n B
+Becoming.Viability.ChoicePoint.split_leaves : ∀ (a : Bool) (t : Becoming.Viability.ChoicePoint.Config),
+  Becoming.Viability.ChoicePoint.process.step Becoming.Viability.ChoicePoint.Config.split a t →
+    ¬Becoming.Viability.ChoicePoint.both t
+Becoming.Viability.ChoicePoint.each_not_joint : Becoming.Viability.Keepable Becoming.Viability.ChoicePoint.process
+    Becoming.Viability.ChoicePoint.first Becoming.Viability.ChoicePoint.Config.split ∧
+  Becoming.Viability.Keepable Becoming.Viability.ChoicePoint.process Becoming.Viability.ChoicePoint.second
+      Becoming.Viability.ChoicePoint.Config.split ∧
+    ¬Becoming.Viability.Keepable Becoming.Viability.ChoicePoint.process Becoming.Viability.ChoicePoint.both
+        Becoming.Viability.ChoicePoint.Config.split
+Becoming.Viability.ChoicePoint.joint_keepable : Becoming.Viability.Keepable Becoming.Viability.ChoicePoint.process
+  Becoming.Viability.ChoicePoint.both Becoming.Viability.ChoicePoint.Config.joint
+Becoming.Viability.ChoicePoint.joint_differs : Becoming.Viability.Keepable Becoming.Viability.ChoicePoint.process
+    Becoming.Viability.ChoicePoint.first Becoming.Viability.ChoicePoint.Config.split ∧
+  Becoming.Viability.Keepable Becoming.Viability.ChoicePoint.process Becoming.Viability.ChoicePoint.second
+      Becoming.Viability.ChoicePoint.Config.split ∧
+    Becoming.Viability.Keepable Becoming.Viability.ChoicePoint.process Becoming.Viability.ChoicePoint.first
+        Becoming.Viability.ChoicePoint.Config.joint ∧
+      Becoming.Viability.Keepable Becoming.Viability.ChoicePoint.process Becoming.Viability.ChoicePoint.second
+          Becoming.Viability.ChoicePoint.Config.joint ∧
+        ¬Becoming.Viability.Keepable Becoming.Viability.ChoicePoint.process Becoming.Viability.ChoicePoint.both
+              Becoming.Viability.ChoicePoint.Config.split ∧
+          Becoming.Viability.Keepable Becoming.Viability.ChoicePoint.process Becoming.Viability.ChoicePoint.both
+            Becoming.Viability.ChoicePoint.Config.joint
+Becoming.Viability.ChoicePoint.decisions_exist : ∃ k₁ k₂ kj,
+  (∀ (s : Becoming.Viability.ChoicePoint.Config),
+      k₁ s = true ↔
+        Becoming.Viability.Keepable Becoming.Viability.ChoicePoint.process Becoming.Viability.ChoicePoint.first s) ∧
+    (∀ (s : Becoming.Viability.ChoicePoint.Config),
+        k₂ s = true ↔
+          Becoming.Viability.Keepable Becoming.Viability.ChoicePoint.process Becoming.Viability.ChoicePoint.second s) ∧
+      ∀ (s : Becoming.Viability.ChoicePoint.Config),
+        kj s = true ↔
+          Becoming.Viability.Keepable Becoming.Viability.ChoicePoint.process Becoming.Viability.ChoicePoint.both s
+Becoming.Viability.ChoicePoint.no_rule_decides_joint : ∀ (F : Bool → Bool → Bool)
+  (k₁ k₂ kj : Becoming.Viability.ChoicePoint.Config → Bool),
+  (∀ (s : Becoming.Viability.ChoicePoint.Config),
+      k₁ s = true ↔
+        Becoming.Viability.Keepable Becoming.Viability.ChoicePoint.process Becoming.Viability.ChoicePoint.first s) →
+    (∀ (s : Becoming.Viability.ChoicePoint.Config),
+        k₂ s = true ↔
+          Becoming.Viability.Keepable Becoming.Viability.ChoicePoint.process Becoming.Viability.ChoicePoint.second s) →
+      (∀ (s : Becoming.Viability.ChoicePoint.Config),
+          kj s = true ↔
+            Becoming.Viability.Keepable Becoming.Viability.ChoicePoint.process Becoming.Viability.ChoicePoint.both s) →
+        ¬∀ (s : Becoming.Viability.ChoicePoint.Config), kj s = F (k₁ s) (k₂ s)
+Becoming.Viability.ChoicePoint.no_respecting_rule_decides_joint : ∀ (F : Prop → Prop → Prop),
+  (∀ {p p' q q' : Prop}, (p ↔ p') → (q ↔ q') → (F p q ↔ F p' q')) →
+    ¬∀ (s : Becoming.Viability.ChoicePoint.Config),
+        Becoming.Viability.Keepable Becoming.Viability.ChoicePoint.process Becoming.Viability.ChoicePoint.both s ↔
+          F (Becoming.Viability.Keepable Becoming.Viability.ChoicePoint.process Becoming.Viability.ChoicePoint.first s)
+            (Becoming.Viability.Keepable Becoming.Viability.ChoicePoint.process Becoming.Viability.ChoicePoint.second s)
+@Becoming.Viability.ChoicePoint.first_closed : ∀ {O : Type u_1}
+  (sense : Becoming.Viability.ChoicePoint.Config → Bool → Becoming.Viability.ChoicePoint.Config → O) (n : Nat)
+  {B : Becoming.Viability.ChoicePoint.Config → Prop},
+  (∀ (s : Becoming.Viability.ChoicePoint.Config),
+      B s → s = Becoming.Viability.ChoicePoint.Config.split ∨ s = Becoming.Viability.ChoicePoint.Config.left) →
+    Becoming.Viability.KeptFor Becoming.Viability.ChoicePoint.process sense Becoming.Viability.ChoicePoint.first
+      (fun x x_1 => True) n B
+@Becoming.Viability.ChoicePoint.second_closed : ∀ {O : Type u_1}
+  (sense : Becoming.Viability.ChoicePoint.Config → Bool → Becoming.Viability.ChoicePoint.Config → O) (n : Nat)
+  {B : Becoming.Viability.ChoicePoint.Config → Prop},
+  (∀ (s : Becoming.Viability.ChoicePoint.Config),
+      B s → s = Becoming.Viability.ChoicePoint.Config.split ∨ s = Becoming.Viability.ChoicePoint.Config.right) →
+    Becoming.Viability.KeptFor Becoming.Viability.ChoicePoint.process sense Becoming.Viability.ChoicePoint.second
+      (fun x x_1 => True) n B
+@Becoming.Viability.ChoicePoint.keptFor_each_not_joint : ∀ {O : Type u_1}
+  (sense : Becoming.Viability.ChoicePoint.Config → Bool → Becoming.Viability.ChoicePoint.Config → O),
+  (∀ (n : Nat),
+      Becoming.Viability.KeptFor Becoming.Viability.ChoicePoint.process sense Becoming.Viability.ChoicePoint.first
+        (fun x x_1 => True) n fun x => x = Becoming.Viability.ChoicePoint.Config.split) ∧
+    (∀ (n : Nat),
+        Becoming.Viability.KeptFor Becoming.Viability.ChoicePoint.process sense Becoming.Viability.ChoicePoint.second
+          (fun x x_1 => True) n fun x => x = Becoming.Viability.ChoicePoint.Config.split) ∧
+      ∀ (allowed : Becoming.Viability.ChoicePoint.Config → Bool → Prop),
+        ¬Becoming.Viability.KeptFor Becoming.Viability.ChoicePoint.process sense Becoming.Viability.ChoicePoint.both
+            allowed 1 fun x => x = Becoming.Viability.ChoicePoint.Config.split
+Becoming.Renewable.kept_part_not_renewal : Becoming.Viability.Kernel Becoming.Renewable.process
+    (fun s => Becoming.Renewable.conditions.active s Becoming.Renewable.Formation.focal)
+    (Becoming.Renewable.withinRenewal.state 0) ∧
+  Becoming.Renewable.withinRenewal.state 0 = Becoming.Renewable.beyondRenewal.state 0 ∧
+    RelationalRenewal.RenewingIn (Becoming.Renewable.conditions.along Becoming.Renewable.withinRenewal)
+        Becoming.Renewable.Formation.focal ∧
+      RelationalRenewal.ConsumingIn (Becoming.Renewable.conditions.along Becoming.Renewable.beyondRenewal)
+          Becoming.Renewable.Formation.focal ∧
+        (∀ (t : Nat),
+            1 ≤ t →
+              ¬Becoming.Renewable.conditions.active (Becoming.Renewable.beyondRenewal.state t)
+                  Becoming.Renewable.Formation.sustaining) ∧
+          Becoming.Viability.Keepable Becoming.Renewable.process
+              (fun s => Becoming.Renewable.conditions.active s Becoming.Renewable.Formation.sustaining)
+              (Becoming.Renewable.withinRenewal.state 0) ∧
+            ¬Becoming.Viability.Kernel Becoming.Renewable.process
+                (fun s => Becoming.Renewable.conditions.active s Becoming.Renewable.Formation.sustaining)
+                (Becoming.Renewable.withinRenewal.state 0)

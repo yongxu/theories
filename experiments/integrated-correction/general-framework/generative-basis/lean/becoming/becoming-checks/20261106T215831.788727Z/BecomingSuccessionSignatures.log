@@ -1,0 +1,17 @@
+Becoming.Successive.balances : Becoming.Successive.flow.Balances Becoming.Successive.web
+Becoming.Successive.dissipative : Becoming.Successive.flow.Dissipative
+Becoming.Successive.acting : Becoming.Successive.flow.Acting Becoming.Successive.web
+Becoming.Successive.fed : ∀ (t : Nat), Becoming.Successive.flow.FedFromBeyond [Becoming.Frontier.Condition.pool] t
+@Becoming.Successive.takes_part_once : ∀ {m t : Nat},
+  Becoming.Successive.Formation.source m ∈ Becoming.Successive.flow.present t → m = t
+Becoming.Successive.relay : Becoming.Successive.flow.Balances Becoming.Successive.web ∧
+  Becoming.Successive.flow.Dissipative ∧
+    Becoming.Successive.flow.Acting Becoming.Successive.web ∧
+      (∀ (t : Nat), Becoming.Successive.flow.takers [Becoming.Frontier.Condition.pool] t = 1) ∧
+        (∀ (t : Nat), Becoming.Successive.flow.FedFromBeyond [Becoming.Frontier.Condition.pool] t) ∧
+          (∀ (m t t' : Nat),
+              Becoming.Successive.Formation.source m ∈ Becoming.Successive.flow.present t →
+                Becoming.Successive.Formation.source m ∈ Becoming.Successive.flow.present t' → t = t') ∧
+            ∀ (m t t' : Nat),
+              Becoming.Successive.web.active t (Becoming.Successive.Formation.source m) →
+                Becoming.Successive.web.active t' (Becoming.Successive.Formation.source m) → t = t'

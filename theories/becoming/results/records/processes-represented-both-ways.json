@@ -546,7 +546,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean",
       "role": "proof",
-      "sha256": "a6fef844c6464152369b1c1117c602f1e6d0ec6c7645fda7d6f60c8930c52def"
+      "sha256": "ced01e53d0dc9c9cc8141c1a020f154cd5599feadbafb2d26826d48dedefe2d7"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Onward.lean",
@@ -581,7 +581,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Arising.lean",
       "role": "proof",
-      "sha256": "986cd16faa229bd218c860f97dde734fd06bd100ee119d7a13484260f907258e"
+      "sha256": "77e62221c4556f61fd75c45ca7f9e1cd8528f08c9e14f7bbbc86867e2f6d4c71"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T142634.455566Z/verification.json",

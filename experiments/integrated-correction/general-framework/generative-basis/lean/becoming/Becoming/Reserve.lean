@@ -7,7 +7,7 @@ import Becoming.Witnesses
 `Dependent` lets a formation be active only where the conditions it then depends on
 support it, and `Embodied` lets a relatum stand as a condition only while it is active.
 Both exclude what is held: buffers, reserves, lag and dormancy. This module states what
-a reserve carries, and what generation bears where activity and standing are out of
+a reserve carries, and what arising bears where activity and standing are out of
 step.
 
 * **A reserve.** A reserve is an amount for each formation that does not rise across a
@@ -57,7 +57,7 @@ step.
   once before its viability is spent (`Viable`), by a fox outliving the hare by its fat
   (`Famine`), by a chain in which each relatum outlives the one it depends on by one step
   (`Cascade`) and by that chain cut to three relata (`ShortCascade`).
-* **Standing beyond activity.** Generation bears replenishment where a relatum comes to
+* **Standing beyond activity.** Arising bears replenishment where a relatum comes to
   stand (`Becoming.Flow`, `Becoming.Dissipation`); an embodied relatum comes to stand as
   it arises (`Becoming.Roles`). A relatum that stands while it is active, and did not
   stand at some earlier step, came to stand across some step in between, perhaps long
@@ -1060,7 +1060,7 @@ def flow : Flow Unit Unit := Witnesses.emptyFlow Unit Unit
 
 /-- Waking from dormancy is arising without coming to stand: the relatum stands as a
 condition throughout and while active, the flow, in which nothing takes part, balances
-and is dissipative, activity needs support, and generation is unceasing with nothing
+and is dissipative, activity needs support, and arising is unceasing with nothing
 given. The relatum is not embodied, since it stands while dormant, and never comes to
 stand. -/
 theorem sleeper : flow.Balances web ∧ flow.Dissipative ∧ web.Dependent ∧ web.Unceasing ∧

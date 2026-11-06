@@ -211,8 +211,8 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Descent.lean",
       "detail": {
-        "zh": "从休眠中醒来不从任何形成而来，而生成不息（Sleeper.no_descent）；种子从休眠时供给它的父代而来，生起时没有给予（Provisioned.descends）。",
-        "en": "Waking from dormancy descends from nothing while generation is unceasing (Sleeper.no_descent); a seed descends from the parent that provisioned it while dormant and is given nothing when it arises (Provisioned.descends)."
+        "zh": "从休眠中醒来不从任何形成而来，而生起不息（Sleeper.no_descent）；种子从休眠时供给它的父代而来，生起时没有给予（Provisioned.descends）。",
+        "en": "Waking from dormancy descends from nothing while arising is unceasing (Sleeper.no_descent); a seed descends from the parent that provisioned it while dormant and is given nothing when it arises (Provisioned.descends)."
       }
     },
     {
@@ -377,7 +377,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Descent.lean",
       "role": "proof",
-      "sha256": "cbfc20d98db0a3212176293a6f29e4d0b6804041d654e20953effbdc1f8dbec3",
+      "sha256": "1343917c1c201cade03bc91b16e8a975b54f2d0af455fc1867363e94311a5b58",
       "declarations": [
         "Becoming.Web.LivesOn",
         "Becoming.Web.sustenance",
@@ -451,7 +451,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Roles.lean",
       "role": "proof",
-      "sha256": "6e0fdea63dbd3bc1d92d6df2d8e68216436e1a916d1f36ce9872da25c3fe64eb",
+      "sha256": "be8934ab1302ff354c8c274709f4c333c5e9cadb109f53d0edb9c479dd151245",
       "declarations": [
         "Becoming.Web.Embodied",
         "Becoming.Web.Embodied.arises_given",
@@ -477,7 +477,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
       "role": "proof",
-      "sha256": "94e9be0baad1667d0d06acdfa757543c292c054c3a7eeaefccbe10b43bd321b5",
+      "sha256": "3e88ad9f714b60ef56bdec298d89aa8b843c4d225f07993ee39f022af3016e05",
       "declarations": [
         "Becoming.Web.ComesToStand",
         "Becoming.Flow.Balances",
@@ -487,7 +487,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reserve.lean",
       "role": "proof",
-      "sha256": "b5a442d02d6090e9d0fd78fe573363933d4db30657cf1bc79cfa23c15ec54a24",
+      "sha256": "ea2716bcbc0107f5c30f3151928e9f6834f3cc5b648368859b69ca84358cffb3",
       "declarations": [
         "Becoming.Provisioned.web",
         "Becoming.Provisioned.flow",
@@ -656,12 +656,30 @@
       "role": "receipt",
       "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T214533.564191Z/verification.json",
+      "role": "receipt",
+      "sha256": "1d84754646f4039d0950bbdb24bfa8fbd78dc9f9643cf7b9f13ae4250ac24251",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json",
+      "role": "receipt",
+      "sha256": "8f1d2bed589ebd558ab122d2b21ff3e27c19916c91a47d94b4b0829f76d45192",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T222126.093376Z/verification.json",
+      "role": "receipt",
+      "sha256": "11422fd264299898dfa6aa9422b851a75f6e879d80ed400f6ca0ec2bcc11ff7d",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Descent.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Descent",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -682,7 +700,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Roles.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T222126.093376Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Roles",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -703,7 +721,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Flow",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -717,7 +735,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reserve.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Reserve",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -785,6 +803,10 @@
     {
       "en": "30 October 2026 (U2, study section 461): 2 laws at the model added, stating `Becoming.Web.living_on_reaches`, `Becoming.Flow.descent_reaches` where its terms are the grammar's, through the row (F5's statements_at_model, reviewed in RECHECK-U2); the row's statement, proof and every other law unchanged.",
       "zh": "2026年10月30日（U2，研究第 461 节）：增模型上之律 2 条，于其项为文法之处陈述 `Becoming.Web.living_on_reaches`, `Becoming.Flow.descent_reaches`，经其本行（F5 之 statements_at_model，经 RECHECK-U2 复核）；本行之陈述、证明与他律皆不改。"
+    },
+    {
+      "en": "7 November 2026, board item LM2: \"generation\" for arising (Unceasing) and for a flow more without end (More) is replaced, since the glossary's generation never means arising; the Lean's docstrings changed with it. No law, premise or proof changed.",
+      "zh": "2026年11月7日，工作板条目 LM2：以“生成”称生起（Unceasing）与不止地更多之流（More）处已改，因词汇表之生成从不指生起；Lean 之说明随之而改。诸律、前提与证明皆不变。"
     }
   ],
   "text_versions": [

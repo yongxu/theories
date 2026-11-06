@@ -358,7 +358,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuation.lean",
       "role": "proof",
-      "sha256": "1dd6689be3bbb140edbece6ca8fa0a86049c260c9643c6ea7422fbd30e43d204"
+      "sha256": "942be19cc8e69be3535441a50a2a914f756145f4030b41fcf59f9d6ac5c592df"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SetPointOptimum.lean",

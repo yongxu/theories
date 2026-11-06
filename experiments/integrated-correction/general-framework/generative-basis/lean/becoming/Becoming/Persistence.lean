@@ -74,7 +74,7 @@ taken for the next, it induces a continuation (`World.Conserves`): `f` after the
 * **The boundary: two continuations both fit every relation.** In the two-kind reading as a world
   (`World.ofRoles`) formations stand at nothing, so every re-identification of formations keeps
   the world balanced exactly where it balances (`World.ofRoles_reidentify_balanced`), and arising,
-  class and unceasing generation are read as in the re-identified web
+  class and unceasing arising are read as in the re-identified web
   (`World.ofRoles_reidentify_arises`, `World.ofRoles_reidentify_renewingIn`,
   `World.ofRoles_reidentify_consumingIn`, `World.ofRoles_reidentify_unceasing`).
   `Lineage` read so balances named apart and named as one; arising recurs under the first and
@@ -1026,7 +1026,7 @@ def asOne : Reidentify Bool Bool :=
 /-- **Where relata stand as they are active and hand their standing on, conservation fixes
 arising.** In the shuttle, across every step the side coming to hold the standing arises under
 conservation: the side active before the step stands at nothing after it. So under every naming
-keeping the world balanced a side arises at every step, and generation is unceasing under each.
+keeping the world balanced a side arises at every step, and arising is unceasing under each.
 Naming the two sides as one keeps the continuing activity of the apart naming (`KeepsActive`,
 no side being active at two successive steps), and breaks the balance: the reading of
 `Lineage` that Identity's one-way continuity allows is excluded here by conservation. -/

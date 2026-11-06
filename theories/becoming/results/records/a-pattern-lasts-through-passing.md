@@ -51,7 +51,7 @@ Passing derived from descent (Flow.DescendsAt) rather than supplied; patterns th
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-An account of social viability Ren brought on 19 October 2026 lists eight constraints and a unifying ninth; the AI's mapping found this one (forming the next members) partial: the whole persists through the generation of its parts, but no law of passing a pattern. Ren's words are provenance, not warrant; the reading onto collectives is the AI's (D48).
+An account of social viability Ren brought on 19 October 2026 lists eight constraints and a unifying ninth; the AI's mapping found this one (forming the next members) partial: the whole persists through the arising of its parts, but no law of passing a pattern. Ren's words are provenance, not warrant; the reading onto collectives is the AI's (D48).
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
@@ -85,6 +85,8 @@ An account of social viability Ren brought on 19 October 2026 lists eight constr
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T054654.692180Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T033635.582311Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T062217.665179Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T214533.564191Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json) | — |
 
 Aliases: `a pattern lasts through passing`, `样式经传递而持续`, `one empty step ends it`, `Becoming.Web.ByPassing.ends_within`, `forming the next members (reading)`, `Becoming.Web.passingContinuation`, `Becoming.Web.sameFormation`, `Becoming.Web.carrierClass_class`, `Becoming.Web.carrierClass_finer`, `Becoming.Web.byPassing_iff_continues`, `Becoming.Web.arises_iff_sheng_carrier`, `Becoming.Web.ceases_iff_wang_carrier`, `Becoming.Web.ceases_of_pattern_ends`, `Becoming.Web.passesAt_of_alters`, `Becoming.Web.alters_of_passes`, `Becoming.Web.ByPassing.line_back`, `Becoming.PatternRelay.shifted_fire`
 
@@ -99,6 +101,7 @@ Aliases: `a pattern lasts through passing`, `样式经传递而持续`, `one emp
 - 25 October 2026, board item DF (study section 418): two laws added stating PatternPassing's readings on the grammar: the passing premise as a continuation and a predecessor under the pattern's class, beginning and ending under the carrier class, alteration and passing, the pattern's line, the derivations of the second law's statements from grammar laws and 火传 in the shifts; their declarations added to the module's reference and, where no other record holds them, to the aliases (four are aliases of continuation-relative-to-a-class).
 - 29 October 2026, board item OU3f (study section 443): the second law's two statements and the third law's ending are proved from grammar laws under their own names (board rule 9). ByPassing.passes_within and begins_passed take the derivations of their twins, which are retired (passes_within_by_line, begins_passed_by_grammar), and ByPassing.ends_within is proved as passes_within is, through the pattern's line and «两端分则中有标»; the law on the grammar, its declarations, the aliases and the module's reference brought to the kept names.
 - 29 October 2026, board item GW (study section 448): what arises begins a carrier along every continuation (begins_of_arises), proved once (board rule 9); the forward half of arises_iff_sheng_carrier derived from it, statement unchanged. A declaration added to a law; no text changed.
+- 7 November 2026, board item LM2: "generation" for arising (Unceasing) and for a flow more without end (More) is replaced, since the glossary's generation never means arising; the Lean's docstrings changed with it. No law, premise or proof changed.
 - 1 rebinding entry (2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](a-pattern-lasts-through-passing.json).
 
 <a id="earlier-text--早期文本"></a>

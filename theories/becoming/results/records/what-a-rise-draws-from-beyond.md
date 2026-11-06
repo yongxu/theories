@@ -111,6 +111,8 @@ The accounting is a conservation law on a closed whole, as in material-flow and 
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T130149.371173Z/verification.json) | — |
 | proof | [Flow.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean) | `Becoming.sign_le_of_pos`, `Becoming.sign_eq_one` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T214533.564191Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json) | — |
 
 Aliases: `what a rise draws from beyond`, `上升从其外汲取什么`, `a rise above the slack breaks a dependence beyond`, `the share that reaches beyond`, `Becoming.Flow.Balances.breaks_beyond`, `Becoming.Flow.favours_breaking_beyond`, `Becoming.Flow.share_not_against`
 

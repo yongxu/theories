@@ -687,7 +687,7 @@
    "relation": "scope",
    "agreement_of": null,
    "reading": {
-    "en": "The account's reading agrees that openness lies in how rules keep changing, not a rule chosen once, and gives where the claim fails. A revision takes only where a holder stands; operating does not imply being able to revise; and on its one model revisions below, above and inside the band all reach level 0. So 'safe experiments' has no support here, and which changes keep it widening is unsaid. Any 'better' is C's, the condition for scope, neither asserted. [AI reading]"
+    "en": "The account's reading agrees that openness lies in how rules keep changing, not a rule chosen once, and gives where the claim fails. A revision takes only where a holder stands; operating does not imply being able to revise; and on its one model revisions below, above and inside the band all reach level 0. So 'safe experiments' has no support here, and which changes keep it widening is unsaid. Any 'better' needs C or a premise in its place, the condition for scope, neither asserted. [AI reading]"
    },
    "targets": [
     {
@@ -2392,7 +2392,7 @@
      "record": "generation-is-replenishment",
      "anchor": "theories/becoming/chapters/04-LIFE.md#r-generation-is-replenishment",
      "says": {
-      "en": "Theorem (World): the record's title 'uses \"generation\" in the older sense of arising'; 'an embodied relatum is given at least the standing it arises with'."
+      "en": "Theorem (World): the record's id, `generation-is-replenishment`, 'keeps the older word'; 'an embodied relatum is given at least the standing it arises with'."
      },
      "role": "neighbour"
     },
@@ -2901,6 +2901,11 @@
  ],
  "changes": [
   {
+   "id": "cx-sty-rules-revised-like-software",
+   "what": "changed",
+   "why": "05's D65 label and eight records gave ranking to C alone; corrected at home (apply_ranking.py, 7 November 2026): the entry quotes what it says now"
+  },
+  {
    "id": "cx-sty-rules-governing-themselves",
    "what": "changed",
    "why": "second critic (label): The quoted D45 reading is not at 02 #r-closed-capture: it stands under #t7 and reads the shaping-the-rule law. Nor does the live account take up a rule system governing itself by its own means (no live 'amendment' but RuleHandoff's supplied procedure), so the join is this crosswalk's: fresh-reading, with scope kept and the reading unchanged. / main changed the ethics claims (LM1 or AA, 7 November 2026): targets[1].says states what it says now"
@@ -2914,6 +2919,11 @@
    "id": "cx-sty-intersubjective-infrastructure",
    "what": "changed",
    "why": "second critic (fails): The source states a purpose (a value stance) with no mechanism, so mapping consensus, acting together and culture onto three laws on those topics is a word match standing in for a structure; the reading itself says they are 'conditions and failures, not infrastructure'. No live text takes up the purpose, so not-carried, the proposal kept in the reading. / main changed the waiting claims (LM1 or AA, 7 November 2026): account_adds states what it says now"
+  },
+  {
+   "id": "cx-sty-generators",
+   "what": "changed",
+   "why": "LM2 (7 November 2026): 04 says the record's id, not its title, keeps the older word 'generation'"
   }
  ],
  "live_flags": []

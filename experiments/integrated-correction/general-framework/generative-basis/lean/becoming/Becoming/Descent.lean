@@ -324,7 +324,7 @@ end Provisioned
 
 namespace Sleeper
 
-/-- Waking from dormancy descends from nothing, though generation is unceasing. -/
+/-- Waking from dormancy descends from nothing, though arising is unceasing. -/
 theorem no_descent : web.Unceasing ∧ ∀ x g, ¬ flow.Descends web x g :=
   ⟨sleeper.2.2.2.1, fun _ _ ⟨_, present, _⟩ => nomatch present⟩
 

@@ -1776,7 +1776,7 @@
     "en": "That with whole-number factors nothing closes gradually, and how far a forgiving window reaches under chance errors, the last by hand."
    },
    "source_adds": {
-    "en": "Divergence on ground: talion answers to justice owed and pardon to reward from God, not to a difference kept or closed. Who bears the absorbed harm, and whether it may be asked of the weak, the source debates and the law does not read. Ranking closing above keeping would need C for order, with the continuation condition for scope, neither asserted, warrant open."
+    "en": "Divergence on ground: talion answers to justice owed and pardon to reward from God, not to a difference kept or closed. Who bears the absorbed harm, and whether it may be asked of the weak, the source debates and the law does not read. Ranking closing above keeping would need C, or a premise in its place, for order, with the continuation condition for scope, neither asserted, warrant open."
    },
    "absence": null,
    "labels": [
@@ -2000,6 +2000,11 @@
    "id": "cx-abr-prozbul-reset-read-ahead",
    "what": "changed",
    "why": "main changed theories/becoming/chapters/05-COLLECTIVES.md (LM1 or AA, 7 November 2026): targets[1].says states what it says now"
+  },
+  {
+   "id": "cx-abr-talion-and-pardon",
+   "what": "changed",
+   "why": "05's D65 label and eight records gave ranking to C alone; corrected at home (apply_ranking.py, 7 November 2026): the entry quotes what it says now"
   },
   {
    "id": "cx-abr-covenant-given-first",

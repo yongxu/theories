@@ -130,6 +130,8 @@ Ren on 10 October spoke of nature hijacked “by what they "got nurtured"”, an
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T214533.564191Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json) | — |
 
 Aliases: `Becoming.share_not_lower`, `Becoming.share_rises`, `Becoming.Flow.descent_needs_unrun`, `Becoming.Flow.descent_exhausted`, `Becoming.Law.perturbation_reabsorbed`, `hijacking`, `劫持`, `capture`, `捕获`, `selection of minds`, `winner rewrites the test`, `Becoming.CaptureWorlds.unsupported_leave_none`, `Becoming.CaptureWorlds.share_rises_of_unsupported`, `Becoming.CaptureWorlds.share_not_lower_of_unsupported`, `Becoming.SeekingRuns.captured_state_returns`, `Becoming.SeekingRuns.captured_rule_changes`
 

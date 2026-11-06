@@ -123,6 +123,8 @@ The rest theorem at a fixed unit (continued-change-needs-openness) is the case w
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T184601.050950Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T214533.564191Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json) | — |
 
 Aliases: `Becoming.Flow.withRefinement`, `Becoming.Web.withRefinement`, `Becoming.Flow.balancesAt_iff_withRefinement`, `Becoming.Flow.withRefinement_dissipatesOn_iff`, `Becoming.Flow.refinement_gives_nothing`, `Becoming.Flow.taking_needs_refinement`, `Becoming.World.after`, `Becoming.World.rests_unrefuted_without_refinement`, `Becoming.World.rests_unrefuted_refinement_counted`, `Becoming.World.arising_opens_refinement_counted`, `Becoming.World.arising_needs_refinement`, `Becoming.Web.CarriesIn.lasts_unrefined`, `Becoming.refinement_feeds_witnesses`
 

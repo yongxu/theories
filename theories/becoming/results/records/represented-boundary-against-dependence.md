@@ -128,6 +128,8 @@ Ren wrote on 10 October that “recognizing the formation of the center is also 
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T213154.508889Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T214533.564191Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json) | — |
 
 Aliases: `Becoming.Web.RenewingOver`, `Becoming.Web.RenewingAt.over`, `Becoming.Web.RenewingOver.at`, `Becoming.Web.renewingAt_iff_over_all`, `Becoming.Web.RenewingOver.narrow`, `Becoming.Web.RenewingOver.keeps_own`, `Becoming.Clearing.renewing_over_resource`, `Becoming.Omitted.loses_own`
 

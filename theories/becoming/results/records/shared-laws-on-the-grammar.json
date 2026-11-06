@@ -1120,7 +1120,7 @@
         "Becoming.withinClosure_iff_reached",
         "Becoming.withinClosure_of_line"
       ],
-      "sha256": "2eb49182ff70b10dfa08581049e06fac198dfef55ba1878149e57ca10405543b"
+      "sha256": "7ef638ce3bafee2559f7232ac7da3f8d09f25a07570406996f9ff8e3b81c1808"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Regions.lean",
@@ -1162,7 +1162,7 @@
         "Becoming.Flow.balances_of_matched",
         "Becoming.Flow.over_iff_units"
       ],
-      "sha256": "94e9be0baad1667d0d06acdfa757543c292c054c3a7eeaefccbe10b43bd321b5"
+      "sha256": "3e88ad9f714b60ef56bdec298d89aa8b843c4d225f07993ee39f022af3016e05"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Amounts.lean",
@@ -1239,7 +1239,7 @@
         "Becoming.Withholding.waitsAll_closed",
         "Becoming.Withholding.within_iff_withinSteps"
       ],
-      "sha256": "14f76b7521330ac7489b49ff28652a590574bbd2d0bf13405c027ccbb264c66e"
+      "sha256": "5e6df01f535099b40bd9611dfa27c5f2fac038d52816a155c5958982325181fe"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean",
@@ -1250,7 +1250,7 @@
         "Becoming.trace_steps",
         "Becoming.withinMoves_iff_withinSteps"
       ],
-      "sha256": "a6fef844c6464152369b1c1117c602f1e6d0ec6c7645fda7d6f60c8930c52def"
+      "sha256": "ced01e53d0dc9c9cc8141c1a020f154cd5599feadbafb2d26826d48dedefe2d7"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean",
@@ -1274,7 +1274,7 @@
       "declarations": [
         "Becoming.Web.active_back"
       ],
-      "sha256": "22aa1957fd18c75c8acf58c612bf9721456c9e711862867797b68f12aa819ac9"
+      "sha256": "f02bb25d687755fd7fb88f7a405c3725eadc38fea58f06b38241d3493d183d07"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Exclusion.lean",
@@ -1290,7 +1290,7 @@
       "declarations": [
         "Becoming.Web.ended_for_good"
       ],
-      "sha256": "b5a442d02d6090e9d0fd78fe573363933d4db30657cf1bc79cfa23c15ec54a24"
+      "sha256": "ea2716bcbc0107f5c30f3151928e9f6834f3cc5b648368859b69ca84358cffb3"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PatternPassing.lean",
@@ -1308,7 +1308,7 @@
       "declarations": [
         "Becoming.Web.steady_held"
       ],
-      "sha256": "9a5156a05e5fdde26c3ec70b4bae5b02a7b1ec2d7bdd742f49cb8079e3283a7a"
+      "sha256": "34fae4a50c8cac4d89fb2ba69179b499bfbe00b9c9bd79b117efc0d584984352"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Identity.lean",
@@ -1328,7 +1328,7 @@
         "Becoming.Web.Lineage.line",
         "Becoming.Web.line_lineage"
       ],
-      "sha256": "5a55b1d2659cf050d48b78606b449a50dd95c7b574a3fb0896f65765241c9607"
+      "sha256": "49869703e523b506b003dcb3acd9c426af8c370719b329415c492f7c11517c95"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Response.lean",
@@ -1345,7 +1345,7 @@
         "Becoming.WithinClosure.of_reads",
         "Becoming.WithinClosureOf.to_reads"
       ],
-      "sha256": "e37053931ccbd5f984cb8533aa7b32bd6b9cd105a8d974e3a2acd167b8ff5d93"
+      "sha256": "a6b1f802894037eeb484e08121f13f6275482b6b3ab95f867792cc6b7f249af9"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json",
@@ -1649,6 +1649,18 @@
       "role": "receipt",
       "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T214533.564191Z/verification.json",
+      "role": "receipt",
+      "sha256": "1d84754646f4039d0950bbdb24bfa8fbd78dc9f9643cf7b9f13ae4250ac24251",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json",
+      "role": "receipt",
+      "sha256": "8f1d2bed589ebd558ab122d2b21ff3e27c19916c91a47d94b4b0829f76d45192",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -1710,7 +1722,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.GrammarScope",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -1731,7 +1743,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Flow",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -1787,14 +1799,14 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Withholding.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Withholding",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Labelled",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -1815,7 +1827,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Wholes.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T184601.050950Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Wholes",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -1829,7 +1841,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reserve.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T184601.050950Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Reserve",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -1843,14 +1855,14 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261102T083959.667661Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Persistence",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Identity.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Identity",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -1864,7 +1876,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionPool.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.SelectionPool",
       "success_pointer": "/status",
       "success_value": "passed"

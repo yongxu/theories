@@ -110,8 +110,8 @@
       ]
     },
     {
-      "zh": "生长者依存于池时，同一流还满足普查与 Taking，生成不息，池的家族也由不息的生起而不从任何一步起一直封闭。",
-      "en": "With the growers depending on the pool, the same flow also meets a census and Taking, generation is unceasing, and through unceasing arising too the pool's families are closed from no step on.",
+      "zh": "生长者依存于池时，同一流还满足普查与 Taking，生起不息，池的家族也由不息的生起而不从任何一步起一直封闭。",
+      "en": "With the growers depending on the pool, the same flow also meets a census and Taking, arising is unceasing, and through unceasing arising too the pool's families are closed from no step on.",
       "declarations": [
         "Becoming.Rooted.rooted",
         "Becoming.Rooted.census",
@@ -233,7 +233,7 @@
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dissipation.lean",
       "detail": {
         "zh": "全部前提的正面见证（Rooted.rooted）：生长者依存于池时，平衡、Acting、Taking、Dependent、普查、耗散、更多与不息同时成立，池的家族由 opens_of_arising 打开；扩张、循环、脉动、恒定取用者、重复形成与振荡都不耗散（witnesses_not_dissipative）。",
-        "en": "A positive witness of every premise (Rooted.rooted): with the growers depending on the pool, balance, Acting, Taking, Dependent, a census, dissipation, more and unceasing generation hold together, and the pool's families open by opens_of_arising; the expansion, cycle, pulse, steady consumer, repeated formation and oscillation are not dissipative (witnesses_not_dissipative)."
+        "en": "A positive witness of every premise (Rooted.rooted): with the growers depending on the pool, balance, Acting, Taking, Dependent, a census, dissipation, more and unceasing arising hold together, and the pool's families open by opens_of_arising; the expansion, cycle, pulse, steady consumer, repeated formation and oscillation are not dissipative (witnesses_not_dissipative)."
       }
     },
     {
@@ -271,8 +271,8 @@
     "en": "Relate dissipation to possibility, diversity and complexity; give a version with rational amounts; settle whether arising that is not embodied has its own form of dissipation (embodied arising is in generation-is-replenishment); find the empirical correspondence of dissipation and openness in actual unfoldings."
   },
   "correspondence": {
-    "zh": "第四次独立审查指出，“任何有限部分都不能独自不息”与“没有一个有限的部分独自承担”需要耗散前提。本结果陈述这一前提，并在流中的取用上证明它。Ren 的原话是“生生不息 - 一种整体的，不断创造更多生的方向”。AI 把结果读作原话中“整体”的一种形式内容：在耗散之下，复现的取用，无论来自不止的更多、生成还是维持（Lone），使它复现的有限条件家族不从任何一步起一直封闭，家族被围住时也不从任何一步起一直向内（taking_draws_in）（AI 的诠释）；它不替代 Ren 的原话，也不推出它是好的。用自由能读耗散：物质可以在有限家族中循环（Cycle），驱动循环的来源须越出每个有限家族（AI 论证）。实际的量是否耗散、实际的展开是否在这一意义上有限，是经验问题。新名称按 Ren 的命名规则采用（DELEGATED-CHOICES D36）。",
-    "en": "The fourth independent review found that “no finite part is unceasing on its own” and “no finite part bears it alone” need a dissipation premise. This result states that premise and proves the claim for taking in flows. Ren's words are “生生不息 - 一种整体的，不断创造更多生的方向” (a whole direction of unceasingly creating more 生). The AI reads the result as one formal content of “whole” in those words: under dissipation, recurring taking, whether of more, of generation or of maintenance (Lone), leaves the finite family of conditions on which it recurs closed from no step on, and a family enclosed around inward from no step on (taking_draws_in) (the AI's interpretation); it does not replace Ren's words and does not show that it is good. Reading dissipation on free energy, matter can cycle within a finite family (Cycle) while the source driving the cycling must reach beyond every finite family (an AI argument). Whether actual quantities dissipate, and whether actual unfoldings are finite in this sense, are empirical questions. The new names are adopted under Ren's naming rule (DELEGATED-CHOICES D36)."
+    "zh": "第四次独立审查指出，“任何有限部分都不能独自不息”与“没有一个有限的部分独自承担”需要耗散前提。本结果陈述这一前提，并在流中的取用上证明它。Ren 的原话是“生生不息 - 一种整体的，不断创造更多生的方向”。AI 把结果读作原话中“整体”的一种形式内容：在耗散之下，复现的取用，无论来自不止的更多、生起还是维持（Lone），使它复现的有限条件家族不从任何一步起一直封闭，家族被围住时也不从任何一步起一直向内（taking_draws_in）（AI 的诠释）；它不替代 Ren 的原话，也不推出它是好的。用自由能读耗散：物质可以在有限家族中循环（Cycle），驱动循环的来源须越出每个有限家族（AI 论证）。实际的量是否耗散、实际的展开是否在这一意义上有限，是经验问题。新名称按 Ren 的命名规则采用（DELEGATED-CHOICES D36）。",
+    "en": "The fourth independent review found that “no finite part is unceasing on its own” and “no finite part bears it alone” need a dissipation premise. This result states that premise and proves the claim for taking in flows. Ren's words are “生生不息 - 一种整体的，不断创造更多生的方向” (a whole direction of unceasingly creating more 生). The AI reads the result as one formal content of “whole” in those words: under dissipation, recurring taking, whether of more, of arising or of maintenance (Lone), leaves the finite family of conditions on which it recurs closed from no step on, and a family enclosed around inward from no step on (taking_draws_in) (the AI's interpretation); it does not replace Ren's words and does not show that it is good. Reading dissipation on free energy, matter can cycle within a finite family (Cycle) while the source driving the cycling must reach beyond every finite family (an AI argument). Whether actual quantities dissipate, and whether actual unfoldings are finite in this sense, are empirical questions. The new names are adopted under Ren's naming rule (DELEGATED-CHOICES D36)."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dissipation.lean",
   "aliases": [
@@ -368,8 +368,8 @@
     {
       "id": "generation-is-replenishment",
       "detail": {
-        "zh": "把本结果关于取用的结论推到体现的生起：在耗散之下，体现成员的生起降低封闭家族的存量，体现的生成复现的有限家族须与其外交换，不需要生起者自己取用。",
-        "en": "Carries this result's conclusion about taking on to embodied arising: under dissipation an embodied member's arising lowers a closed family's stock, and a finite family in which embodied generation recurs must exchange beyond itself, with no taking by the arising relatum."
+        "zh": "把本结果关于取用的结论推到体现的生起：在耗散之下，体现成员的生起降低封闭家族的存量，体现的生起复现的有限家族须与其外交换，不需要生起者自己取用。",
+        "en": "Carries this result's conclusion about taking on to embodied arising: under dissipation an embodied member's arising lowers a closed family's stock, and a finite family in which embodied arising recurs must exchange beyond itself, with no taking by the arising relatum."
       }
     },
     {
@@ -384,7 +384,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dissipation.lean",
       "role": "proof",
-      "sha256": "773bd26350a6a0c4d8712e9f56c9b884143a53cd560b00ef877d3e494270ad4f",
+      "sha256": "dcb3edc1d8706b864cb7c8b2fb093171c1083b9d9b6e45d9eab5f99af0e4c8f6",
       "declarations": [
         "Becoming.pos_of_sign",
         "Becoming.sign_pos",
@@ -488,7 +488,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
       "role": "proof",
-      "sha256": "94e9be0baad1667d0d06acdfa757543c292c054c3a7eeaefccbe10b43bd321b5",
+      "sha256": "3e88ad9f714b60ef56bdec298d89aa8b843c4d225f07993ee39f022af3016e05",
       "declarations": [
         "Becoming.sign",
         "Becoming.count",
@@ -522,7 +522,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Arising.lean",
       "role": "proof",
-      "sha256": "986cd16faa229bd218c860f97dde734fd06bd100ee119d7a13484260f907258e",
+      "sha256": "77e62221c4556f61fd75c45ca7f9e1cd8528f08c9e14f7bbbc86867e2f6d4c71",
       "declarations": [
         "Becoming.Web.stock",
         "Becoming.Web.dissipation_arising_not_recurring",
@@ -546,7 +546,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Roles.lean",
       "role": "counterexample",
-      "sha256": "6e0fdea63dbd3bc1d92d6df2d8e68216436e1a916d1f36ce9872da25c3fe64eb",
+      "sha256": "be8934ab1302ff354c8c274709f4c333c5e9cadb109f53d0edb9c479dd151245",
       "declarations": []
     },
     {
@@ -699,12 +699,24 @@
       "role": "receipt",
       "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T214533.564191Z/verification.json",
+      "role": "receipt",
+      "sha256": "1d84754646f4039d0950bbdb24bfa8fbd78dc9f9643cf7b9f13ae4250ac24251",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json",
+      "role": "receipt",
+      "sha256": "8f1d2bed589ebd558ab122d2b21ff3e27c19916c91a47d94b4b0829f76d45192",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dissipation.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Dissipation",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -725,14 +737,14 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Arising.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Arising",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Flow",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -854,6 +866,18 @@
     {
       "en": "6 November 2026, board item LM: declarations this record lists moved with the helpers stated once; its references follow them, and no law changed.",
       "zh": "2026年11月6日，工作板条目 LM：此记录所列之声明随只陈述一次之辅助引理而移；其引用从之，诸律不变。"
+    },
+    {
+      "en": "7 November 2026, board item LM2: \"generation\" for arising (Unceasing) and for a flow more without end (More) is replaced, since the glossary's generation never means arising; the Lean's docstrings changed with it. No law, premise or proof changed.",
+      "zh": "2026年11月7日，工作板条目 LM2：以“生成”称生起（Unceasing）与不止地更多之流（More）处已改，因词汇表之生成从不指生起；Lean 之说明随之而改。诸律、前提与证明皆不变。"
+    },
+    {
+      "en": "7 November 2026, board item LM2 (its reader's findings): \"generation\" for embodied arising or for arising is replaced, since the glossary's generation never means arising. No law, premise or proof changed.",
+      "zh": "2026年11月7日，工作板条目 LM2（其读者之所见）：以“生成”称体现之生起或生起处已改，因词汇表之生成从不指生起。诸律、前提与证明皆不变。"
+    },
+    {
+      "en": "7 November 2026, board item LM2 (its reader's second round): arising said as generation corrected, and the title made exact: embodied arising replenishes, while Flicker arises with nothing given. No law, premise or proof changed.",
+      "zh": "2026年11月7日，工作板条目 LM2（其读者第二轮）：以生成称生起处已改，标题改为确切：体现的生起即补充，而 Flicker 无所予而生起。诸律、前提与证明皆不变。"
     }
   ],
   "text_versions": [

@@ -2,12 +2,12 @@ import Becoming.Arising
 import Becoming.Witnesses
 
 /-!
-# Flow: more generation needs more replenishment
+# Flow: more takers need more replenishment
 
-`Becoming.Arising` reads whether generation ceases. Ren's words also say *more*: a
+`Becoming.Arising` reads whether arising ceases. Ren's words also say *more*: a
 whole direction of unceasingly creating more 生. This module reads the conditions of an
 unfolding as amounts that the formations taking part in each step take and give
-(`Flow`), and states what unceasing and more generation need.
+(`Flow`), and states what unceasing arising and more takers without end need.
 
 * A flow *balances* a web when every change of a condition's level is what the
   formations taking part take from it and give to it (`Balances`). Over a finite family
@@ -51,7 +51,7 @@ unfolding as amounts that the formations taking part in each step take and give
   step without ever coming to stand (`Growing`). Where a formation is itself a condition
   standing exactly while it is active, its arising is such a coming to stand
   (`Becoming.Roles`).
-* Generation is *more without end* when, for every number, from some step on at least
+* A flow is *more without end* when, for every number, from some step on at least
   that many formations take from the family (`More`). Amounts are natural numbers, so
   a formation taking takes at least one unit: uptake has a positive minimum. Over any
   stretch of steps from which at least `K` formations take, the family is then
@@ -67,20 +67,20 @@ unfolding as amounts that the formations taking part in each step take and give
 * The premises are consistent with more without end: renewers and growers arise
   together at every step (`Expansion.more`). There the level never rises, so the net-rise
   premise of `Becoming.Arising` fails (`Expansion.undepleted`), while the flow form
-  applies. Unceasing generation does not imply more without end: the oscillator arises again
+  applies. Unceasing arising does not imply more without end: the oscillator arises again
   and again while at most one formation ever takes (`Oscillation.not_more`).
 * The renewers can be the takers themselves: in a closed cycle each formation gives
-  back what it takes, the family's total never changes, and generation is more without
+  back what it takes, the family's total never changes, and the flow is more without
   end with as many renewers as takers (`Cycle`). That recurring taking must be carried
   beyond every finite part of the unfolding needs dissipation: across a step whose
   exchange lies within finitely many conditions, a formation that gives takes more than
   it gives. `Becoming.Dissipation` states that premise and proves what it carries.
 
 So, read through balanced flows: renewal can recur with nothing arising
-(`Tide.renewal_without_arising`), unceasing generation does not imply more without end,
+(`Tide.renewal_without_arising`), unceasing arising does not imply more without end,
 and the replenishment each needs grows from recurring to unbounded. `More` counts the
 formations taking part in the flow that take; `Becoming.Population` ties them to the
-active formations of the web and states when more implies unceasing generation. A
+active formations of the web and states when more implies unceasing arising. A
 flow's `present` lists each formation taking part at a step once; that it records what
 is actually taken and given is an application duty. The family of conditions and the
 formations taking part at each step are finite. No ethical predicate, ranking or axiom
@@ -318,7 +318,7 @@ def takers (cs : List C) (t : Nat) : Nat :=
 def renewers (cs : List C) (t : Nat) : Nat :=
   count (L.present t) fun f => total cs (L.give t f)
 
-/-- Generation is more without end: for every number, from some step on at least that
+/-- The flow is more without end: for every number, from some step on at least that
 many formations take from the family. -/
 def More (cs : List C) : Prop :=
   ∀ K, ∃ T, ∀ t, T ≤ t → K ≤ L.takers cs t
@@ -591,7 +591,7 @@ theorem uptake_needs_replenishment {cs : List C} (balances : L.Balances W)
     ¬ ∀ t, T ≤ t → L.replenishment cs t = 0 :=
   uptake_needs_replenishment_from (fun t _ => balances.on cs t) uptake
 
-/-- Unceasing generation of formations that take needs replenishment, from a step on:
+/-- Unceasing arising of formations that take needs replenishment, from a step on:
 where the family is balanced on from `T` on and formations taking from it at their first
 active step arise at arbitrarily late steps, the family is replenished at some step from
 `T` on. -/
@@ -611,7 +611,7 @@ theorem renewing_recurs_from {cs : List C} {T : Nat}
   fun none => replenishment_recurs_from balances arising fun t later =>
     replenishment_zero (none t later)
 
-/-- Unceasing generation of formations that take needs replenishment: when formations
+/-- Unceasing arising of formations that take needs replenishment: when formations
 taking from the family at their first active step arise at arbitrarily late steps, the
 family is replenished at arbitrarily late steps. The arising enters only through the
 uptake it brings. -/
@@ -840,7 +840,7 @@ theorem present_active : ∀ t f, f ∈ present t → f.2 < t
   | n + 1, f, .tail _ (.tail _ mem) => Nat.lt_succ_of_lt (present_active n f mem)
 
 /-- Renewers and growers arise together at every step: the flow balances, only active
-formations give, each gives at most one unit, generation is unceasing, and more without
+formations give, each gives at most one unit, arising is unceasing, and the flow more without
 end. -/
 theorem more :
     flow.Balances web ∧ flow.Acting web ∧ flow.Capacity [()] 1 ∧ web.Dependent ∧
@@ -863,7 +863,7 @@ theorem growers_take : flow.Taking web ∧ ∀ t, flow.ArisesTaking web [()] t (
     | (.grower, _), mem, _ => ⟨present_active t _ mem, rfl, present_active t _ mem⟩,
    fun t => ⟨⟨Nat.lt_irrefl t, Nat.lt_succ_self t⟩, .tail _ (.head _), Nat.zero_lt_one⟩⟩
 
-/-- The level never rises: generation is unceasing, yet arising does not deplete the
+/-- The level never rises: arising is unceasing, yet arising does not deplete the
 family in the net sense of `Becoming.Arising`. Replenishment concurrent with drawing
 is invisible to a net rise. -/
 theorem undepleted :
@@ -901,7 +901,7 @@ def flow : Flow Bool Unit where
 
 /-- The flow balances, only active formations give and take, from what they draw on, and
 activity needs support. Uptake is positive at every step and nothing ever arises, yet
-replenishment is needed at arbitrarily late steps, as for unceasing generation of
+replenishment is needed at arbitrarily late steps, as for unceasing arising of
 takers: what needs it is the recurring uptake. -/
 theorem steady :
     flow.Balances web ∧ flow.Acting web ∧ flow.Taking web ∧ web.Dependent ∧
@@ -918,7 +918,7 @@ theorem steady :
 
 end Steady
 
-/-! ## Unceasing generation is not yet more -/
+/-! ## Unceasing arising is not yet more -/
 
 namespace Oscillation
 
@@ -961,8 +961,8 @@ theorem takers_le (t : Nat) : flow.takers [()] t ≤ 1 :=
   Nat.add_le_add (Nat.zero_le 0) (Nat.add_le_add (sign_le_one _) (Nat.zero_le 0))
 
 /-- The oscillator arises again and again (`Oscillation.unceasing`), yet the flow balances, only
-active formations give, and at most one formation ever takes: unceasing generation is
-not more without end. -/
+active formations give, and at most one formation ever takes: arising is unceasing, and the
+flow is not more without end. -/
 theorem not_more :
     flow.Balances web ∧ flow.Acting web ∧ flow.Capacity [()] 1 ∧ web.Unceasing ∧
     ¬ flow.More [()] :=
@@ -1008,8 +1008,10 @@ theorem present_lt : ∀ t n, n ∈ present t → n < t
   | m + 1, _, .head _ => Nat.lt_succ_self m
   | m + 1, n, .tail _ mem => Nat.lt_succ_of_lt (present_lt m n mem)
 
-/-- Each formation renews what it takes: the flow balances, only active formations take
-and give, generation is unceasing and more without end, the family's total never
+/-- Each formation renews what it takes. What cycles is the condition: each unit taken is given
+back across the same step, and no formation returns, since formation `n` arises once and stays
+(in `Becoming.Recycle` a formation, the consumer, arises again and again). The flow balances, only active formations take
+and give, arising is unceasing and the flow more without end, the family's total never
 changes, and as many formations give as take. -/
 theorem closed_more :
     flow.Balances web ∧ flow.Acting web ∧ flow.Taking web ∧ flow.Capacity [()] 1 ∧
@@ -1157,7 +1159,7 @@ theorem balances (t : Nat) :
       (congrArg (stored t + ·) (given_eq t).symm))
 
 /-- The flow balances, every formation is active, each gives at most one unit, and
-generation is more without end; yet at every odd step no formation gives and nothing
+the flow is more without end; yet at every odd step no formation gives and nothing
 replenishes the family. Renewers without eventual bound are not ever more renewers at
 every step. -/
 theorem pulsed :

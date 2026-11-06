@@ -1,0 +1,72 @@
+@Becoming.Settling.not_settles_of_recurs : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {r : Becoming.Run P}, Becoming.Settling.ChangeRecurs r → ¬Becoming.Enough.Settles r
+@Becoming.Settling.roundIndex_lt : ∀ {i p n : Nat},
+  Becoming.Settling.roundIndex i p n < i + p →
+    Becoming.Settling.roundIndex i p (n + 1) = Becoming.Settling.roundIndex i p n + 1
+@Becoming.Settling.roundIndex_last : ∀ {i p n : Nat},
+  ¬Becoming.Settling.roundIndex i p n < i + p → Becoming.Settling.roundIndex i p (n + 1) = i
+Becoming.Settling.roundIndex_le : ∀ (i p n : Nat), Becoming.Settling.roundIndex i p n ≤ i + p
+@Becoming.Settling.roundIndex_back : ∀ {i p : Nat} (e n : Nat),
+  Becoming.Settling.roundIndex i p n + e = i + p → Becoming.Settling.roundIndex i p (n + (e + 1)) = i
+@Becoming.Settling.roundIndex_from : ∀ {i p : Nat} (c n : Nat),
+  c ≤ p → Becoming.Settling.roundIndex i p n = i → Becoming.Settling.roundIndex i p (n + c) = i + c
+@Becoming.Settling.roundIndex_hits : ∀ {i p c : Nat},
+  c ≤ p → ∀ (T : Nat), ∃ n, T ≤ n ∧ Becoming.Settling.roundIndex i p n = i + c
+@Becoming.Settling.round_recurs : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {g : Nat → S}
+  {h : Nat → A} {i p c : Nat} (steps : ∀ (k : Nat), k ≤ i + p → P.step (g k) (h k) (g (k + 1)))
+  (back : g (i + (p + 1)) = g i),
+  c ≤ p → g (i + c + 1) ≠ g (i + c) → Becoming.Settling.ChangeRecurs (Becoming.Settling.round g h steps back)
+@Becoming.Settling.recurs_of_loop : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {r : Becoming.Run P},
+  Becoming.Settling.ChangesInLoop r → ∃ r', r'.state 0 = r.state 0 ∧ Becoming.Settling.ChangeRecurs r'
+@Becoming.Settling.extend_le : ∀ {f : Nat → Nat} {m k n : Nat}, n ≤ m → Becoming.Settling.extend f m k n = f n
+@Becoming.Settling.extend_gt : ∀ {f : Nat → Nat} {m k n : Nat}, ¬n ≤ m → Becoming.Settling.extend f m k n = k
+@Becoming.Settling.rising : ∀ {f : Nat → Nat} {m : Nat},
+  (∀ (n : Nat), n < m → f n < f (n + 1)) → ∀ (i j : Nat), i < j → j ≤ m → f i < f j
+@Becoming.Settling.changes_at : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {r : Becoming.Run P},
+  Becoming.Settling.ChangeRecurs r →
+    ∀ (m : Nat), ∃ f, (∀ (n : Nat), n < m → f n < f (n + 1)) ∧ ∀ (n : Nat), n ≤ m → r.state (f n + 1) ≠ r.state (f n)
+@Becoming.Settling.loop_of_recurs : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {r : Becoming.Run P}
+  {l : List S}, (∀ (n : Nat), r.state n ∈ l) → Becoming.Settling.ChangeRecurs r → Becoming.Settling.ChangesInLoop r
+@Becoming.Settling.undoable_of_loop : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {r : Becoming.Run P},
+  Becoming.Settling.ChangesInLoop r →
+    ∃ x a y, Becoming.Reach P (r.state 0) x ∧ P.step x a y ∧ y ≠ x ∧ Becoming.Reach P y x
+@Becoming.Settling.path_then : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {x y : S} {as : List A},
+  Generative.Trace P x as y →
+    ∀ {N : Nat} {g : Nat → S} {h : Nat → A},
+      g 0 = y →
+        (∀ (k : Nat), k < N → P.step (g k) (h k) (g (k + 1))) →
+          ∃ g' h',
+            g' 0 = x ∧
+              (∀ (k : Nat), g' (as.length + k) = g k) ∧
+                ∀ (k : Nat), k < as.length + N → P.step (g' k) (h' k) (g' (k + 1))
+@Becoming.Settling.recurs_of_undoable : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {s x y : S}
+  {a : A},
+  Becoming.Reach P s x →
+    P.step x a y → y ≠ x → Becoming.Reach P y x → ∃ r, r.state 0 = s ∧ Becoming.Settling.ChangeRecurs r
+@Becoming.Settling.keeps_changing_iff_loop : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {s : S}
+  {l : List S},
+  (∀ (x : S), x ∈ l) →
+    ((∃ r, r.state 0 = s ∧ Becoming.Settling.ChangeRecurs r) ↔ ∃ r, r.state 0 = s ∧ Becoming.Settling.ChangesInLoop r)
+@Becoming.Settling.keeps_changing_iff : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {s : S}
+  {l : List S},
+  (∀ (x : S), x ∈ l) →
+    ((∃ r, r.state 0 = s ∧ Becoming.Settling.ChangeRecurs r) ↔
+      ∃ x a y, Becoming.Reach P s x ∧ P.step x a y ∧ y ≠ x ∧ Becoming.Reach P y x)
+@Becoming.Settling.settles_no_undoable : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {s : S},
+  (∀ (r : Becoming.Run P), r.state 0 = s → Becoming.Enough.Settles r) →
+    ¬∃ x a y, Becoming.Reach P s x ∧ P.step x a y ∧ y ≠ x ∧ Becoming.Reach P y x
+@Becoming.Settling.assured_no_undoable : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {s : S}
+  {target : S → Prop},
+  (∀ (r : Becoming.Run P), r.state 0 = s → Becoming.Enough.Rests target r) →
+    ¬∃ x a y, Becoming.Reach P s x ∧ P.step x a y ∧ y ≠ x ∧ Becoming.Reach P y x
+Becoming.Settling.OneWay.seen_stays : ∀ (f : Nat → Bool) {m : Nat},
+  Becoming.Settling.OneWay.seen f m = true → ∀ (k : Nat), Becoming.Settling.OneWay.seen f (m + k) = true
+Becoming.Settling.OneWay.seen_witness : ∀ (f : Nat → Bool) (n : Nat),
+  Becoming.Settling.OneWay.seen f n = true → ∃ k, f k = true
+Becoming.Settling.OneWay.no_undoable : ¬∃ x a y,
+    Becoming.Reach Becoming.Settling.OneWay.process x x ∧
+      Becoming.Settling.OneWay.process.step x a y ∧ y ≠ x ∧ Becoming.Reach Becoming.Settling.OneWay.process y x
+Becoming.Settling.OneWay.never_keeps_changing : ∀ (s : Bool), ¬∃ r, r.state 0 = s ∧ Becoming.Settling.ChangeRecurs r
+Becoming.Settling.OneWay.lpo_of_settles : (∀ (r : Becoming.Run Becoming.Settling.OneWay.process),
+    r.state 0 = false → Becoming.Enough.Settles r) →
+  Becoming.LPO

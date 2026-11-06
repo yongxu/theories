@@ -163,6 +163,7 @@ Ren, 12 October 2026, on law and history as one unfolding read two ways: “yes,
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json) | — |
 
 Aliases: `where a move is formed`, `动作在哪里形成`, `whose move it is`, `动作是谁的`, `acting and undergoing as one move`, `行与受是同一动作的两面`, `no move from outside the whole`, `无需从整体之外供给`
 

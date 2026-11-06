@@ -1,0 +1,419 @@
+@Becoming.PooledEnvelopes.retained_truth : ∀ {H : Type} (models : List H) (test : H → Bool) (actual : H),
+  actual ∈ models → actual ∈ Becoming.PooledEnvelopes.retain models test (test actual)
+@Becoming.PooledEnvelopes.retained_subset : ∀ {H : Type} (models : List H) (test : H → Bool) (answer : Bool) (h : H),
+  h ∈ Becoming.PooledEnvelopes.retain models test answer → h ∈ models
+@Becoming.PooledEnvelopes.model_faults_in_pool : ∀ {H : Type} (describe : H → Becoming.Reconfiguration.Arrangement)
+  (models : List H) (actual : H),
+  actual ∈ models →
+    ∀ (bad : List Becoming.FaultEnvelopes.Domain),
+      bad ∈ Becoming.Reconfiguration.envelope (describe actual) → bad ∈ Becoming.PooledEnvelopes.pooled describe models
+@Becoming.PooledEnvelopes.pooled_subset : ∀ {H : Type} (describe : H → Becoming.Reconfiguration.Arrangement)
+  (old new : List H),
+  (∀ (h : H), h ∈ new → h ∈ old) →
+    ∀ (bad : List Becoming.FaultEnvelopes.Domain),
+      bad ∈ Becoming.PooledEnvelopes.pooled describe new → bad ∈ Becoming.PooledEnvelopes.pooled describe old
+@Becoming.PooledEnvelopes.pooled_certificate_sound : ∀ {H : Type} (describe : H → Becoming.Reconfiguration.Arrangement)
+  (models : List H) (actual : H),
+  actual ∈ models →
+    ∀ (roots : List Nat),
+      Becoming.Reconfiguration.Covered (describe actual) roots →
+        ∀ (supports : Becoming.FaultEnvelopes.Domain → Bool) (P : Prop),
+          (∀ (d : Becoming.FaultEnvelopes.Domain),
+              d ∈ (describe actual).roster →
+                Becoming.Reconfiguration.fails ((describe actual).vulnerability d) roots = false →
+                  supports d = true → P) →
+            Becoming.FaultEnvelopes.certificate (describe actual).roster
+                  (Becoming.PooledEnvelopes.pooled describe models) supports =
+                true →
+              P
+@Becoming.PooledEnvelopes.refinement_preserves_certificate : ∀ {H : Type}
+  (describe : H → Becoming.Reconfiguration.Arrangement) (roster : List Becoming.FaultEnvelopes.Domain)
+  (old new : List H),
+  (∀ (h : H), h ∈ new → h ∈ old) →
+    Becoming.PooledEnvelopes.pooled describe new ≠ [] →
+      ∀ (supports : Becoming.FaultEnvelopes.Domain → Bool),
+        Becoming.FaultEnvelopes.certificate roster (Becoming.PooledEnvelopes.pooled describe old) supports = true →
+          Becoming.FaultEnvelopes.certificate roster (Becoming.PooledEnvelopes.pooled describe new) supports = true
+@Becoming.PooledEnvelopes.refinement_preserves_separation : ∀ {H : Type}
+  (describe : H → Becoming.Reconfiguration.Arrangement) (roster : List Becoming.FaultEnvelopes.Domain)
+  (old new : List H),
+  (∀ (h : H), h ∈ new → h ∈ old) →
+    Becoming.FaultEnvelopes.separated roster (Becoming.PooledEnvelopes.pooled describe old) →
+      Becoming.FaultEnvelopes.separated roster (Becoming.PooledEnvelopes.pooled describe new)
+Becoming.PooledEnvelopes.empty_family_rejects : ∀ (roster : List Becoming.FaultEnvelopes.Domain) {H : Type}
+  (describe : H → Becoming.Reconfiguration.Arrangement) (supports : Becoming.FaultEnvelopes.Domain → Bool),
+  Becoming.FaultEnvelopes.certificate roster (Becoming.PooledEnvelopes.pooled describe []) supports = false
+@Becoming.PooledEnvelopes.member_completes : ∀ {H : Type} (describe : H → Becoming.Reconfiguration.Arrangement)
+  (models : List H) (actual : H),
+  actual ∈ models →
+    ∀ (roots : List Nat),
+      Becoming.Reconfiguration.Covered (describe actual) roots →
+        Becoming.FaultEnvelopes.separated (describe actual).roster (Becoming.PooledEnvelopes.pooled describe models) →
+          ∀ (w : Becoming.Transactions.Installation) (p : Becoming.Transactions.Request)
+            (reads : Becoming.Transactions.Readings) (approvals : Becoming.Transactions.Approvals),
+            Becoming.Transactions.fresh w p = true →
+              (∀ (d : Becoming.FaultEnvelopes.Domain),
+                  d ∈ (describe actual).roster →
+                    Becoming.Reconfiguration.fails ((describe actual).vulnerability d) roots = false →
+                      reads d = some (Becoming.Transactions.expected p)) →
+                (∀ (d : Becoming.FaultEnvelopes.Domain),
+                    d ∈ (describe actual).roster →
+                      Becoming.Reconfiguration.fails ((describe actual).vulnerability d) roots = false →
+                        approvals d = some p) →
+                  (∀ (d : Becoming.FaultEnvelopes.Domain),
+                      d ∈ (describe actual).roster →
+                        Becoming.Reconfiguration.fails ((describe actual).vulnerability d) roots = false →
+                          ∀ (o : Becoming.Transactions.Observation),
+                            reads d = some o → o = Becoming.Transactions.observed w p.address) →
+                    (∀ (d : Becoming.FaultEnvelopes.Domain),
+                        d ∈ (describe actual).roster →
+                          Becoming.Reconfiguration.fails ((describe actual).vulnerability d) roots = false →
+                            approvals d = some p → Becoming.Transactions.withinScope w p = true) →
+                      Becoming.Transactions.load (describe actual).roster p + 3 ≤ w.state.reserve →
+                        w.state.time + Becoming.Transactions.load (describe actual).roster p + 3 ≤ w.state.deadline →
+                          (Becoming.Transactions.guardedExecute (describe actual).roster
+                                  (Becoming.PooledEnvelopes.pooled describe models)
+                                  (Becoming.PooledEnvelopes.pooled describe models) w p reads approvals).succeeded =
+                              true ∧
+                            (Becoming.Transactions.guardedExecute (describe actual).roster
+                                        (Becoming.PooledEnvelopes.pooled describe models)
+                                        (Becoming.PooledEnvelopes.pooled describe models) w p reads
+                                        approvals).installation.state.completed =
+                                true ∧
+                              Becoming.Transactions.withinScope w p = true
+@Becoming.PooledEnvelopes.pooled_completes : ∀ {H : Type} (describe : H → Becoming.Reconfiguration.Arrangement)
+  (models : List H) (test : H → Bool) (actual : H),
+  actual ∈ models →
+    ∀ (roots : List Nat),
+      Becoming.Reconfiguration.Covered (describe actual) roots →
+        Becoming.FaultEnvelopes.separated (describe actual).roster
+            (Becoming.PooledEnvelopes.pooled describe (Becoming.PooledEnvelopes.retain models test (test actual))) →
+          ∀ (w : Becoming.Transactions.Installation) (p : Becoming.Transactions.Request)
+            (reads : Becoming.Transactions.Readings) (approvals : Becoming.Transactions.Approvals),
+            Becoming.Transactions.fresh w p = true →
+              (∀ (d : Becoming.FaultEnvelopes.Domain),
+                  d ∈ (describe actual).roster →
+                    Becoming.Reconfiguration.fails ((describe actual).vulnerability d) roots = false →
+                      reads d = some (Becoming.Transactions.expected p)) →
+                (∀ (d : Becoming.FaultEnvelopes.Domain),
+                    d ∈ (describe actual).roster →
+                      Becoming.Reconfiguration.fails ((describe actual).vulnerability d) roots = false →
+                        approvals d = some p) →
+                  (∀ (d : Becoming.FaultEnvelopes.Domain),
+                      d ∈ (describe actual).roster →
+                        Becoming.Reconfiguration.fails ((describe actual).vulnerability d) roots = false →
+                          ∀ (o : Becoming.Transactions.Observation),
+                            reads d = some o → o = Becoming.Transactions.observed w p.address) →
+                    (∀ (d : Becoming.FaultEnvelopes.Domain),
+                        d ∈ (describe actual).roster →
+                          Becoming.Reconfiguration.fails ((describe actual).vulnerability d) roots = false →
+                            approvals d = some p → Becoming.Transactions.withinScope w p = true) →
+                      Becoming.Transactions.load (describe actual).roster p + 3 ≤ w.state.reserve →
+                        w.state.time + Becoming.Transactions.load (describe actual).roster p + 3 ≤ w.state.deadline →
+                          (Becoming.Transactions.guardedExecute (describe actual).roster
+                                  (Becoming.PooledEnvelopes.pooled describe
+                                    (Becoming.PooledEnvelopes.retain models test (test actual)))
+                                  (Becoming.PooledEnvelopes.pooled describe
+                                    (Becoming.PooledEnvelopes.retain models test (test actual)))
+                                  w p reads approvals).succeeded =
+                              true ∧
+                            (Becoming.Transactions.guardedExecute (describe actual).roster
+                                        (Becoming.PooledEnvelopes.pooled describe
+                                          (Becoming.PooledEnvelopes.retain models test (test actual)))
+                                        (Becoming.PooledEnvelopes.pooled describe
+                                          (Becoming.PooledEnvelopes.retain models test (test actual)))
+                                        w p reads approvals).installation.state.completed =
+                                true ∧
+                              Becoming.Transactions.withinScope w p = true
+Becoming.PooledEnvelopes.every_candidate_ready_pool_not : (Becoming.PooledEnvelopes.hypotheses.all fun h =>
+      Becoming.Reconfiguration.ready (Becoming.PooledEnvelopes.describe h)) =
+    true ∧
+  Becoming.PooledEnvelopes.poolReady
+      (Becoming.PooledEnvelopes.pooled Becoming.PooledEnvelopes.describe Becoming.PooledEnvelopes.hypotheses) =
+    false
+Becoming.PooledEnvelopes.survivors_insufficient_before_diagnosis : (Becoming.FaultEnvelopes.certificate
+      Becoming.FaultEnvelopes.roster4
+      (Becoming.PooledEnvelopes.pooled Becoming.PooledEnvelopes.describe Becoming.PooledEnvelopes.hypotheses) fun d =>
+      decide (2 ≤ d)) =
+    false ∧
+  (Becoming.FaultEnvelopes.certificate Becoming.FaultEnvelopes.roster4
+      (Becoming.Reconfiguration.envelope (Becoming.PooledEnvelopes.describe Becoming.PooledEnvelopes.Model.left))
+      fun d => decide (2 ≤ d)) =
+    true
+Becoming.PooledEnvelopes.diagnosis_not_identifying : Becoming.PooledEnvelopes.retain Becoming.PooledEnvelopes.hypotheses
+      Becoming.PooledEnvelopes.diagnostic true =
+    [Becoming.PooledEnvelopes.Model.left, Becoming.PooledEnvelopes.Model.swapped] ∧
+  (Becoming.PooledEnvelopes.describe Becoming.PooledEnvelopes.Model.left).vulnerability 2 ≠
+      (Becoming.PooledEnvelopes.describe Becoming.PooledEnvelopes.Model.swapped).vulnerability 2 ∧
+    Becoming.PooledEnvelopes.poolReady
+          (Becoming.PooledEnvelopes.pooled Becoming.PooledEnvelopes.describe
+            (Becoming.PooledEnvelopes.retain Becoming.PooledEnvelopes.hypotheses Becoming.PooledEnvelopes.diagnostic
+              true)) =
+        true ∧
+      Becoming.PooledEnvelopes.poolReady
+          (Becoming.PooledEnvelopes.pooled Becoming.PooledEnvelopes.describe
+            (Becoming.PooledEnvelopes.retain Becoming.PooledEnvelopes.hypotheses Becoming.PooledEnvelopes.diagnostic
+              false)) =
+        true
+Becoming.PooledEnvelopes.misleading_diagnosis_accepts_compromised : Becoming.PooledEnvelopes.diagnostic
+      Becoming.PooledEnvelopes.Model.left =
+    true ∧
+  Becoming.PooledEnvelopes.retain Becoming.PooledEnvelopes.hypotheses Becoming.PooledEnvelopes.diagnostic false =
+      [Becoming.PooledEnvelopes.Model.right] ∧
+    Becoming.Reconfiguration.induced (Becoming.PooledEnvelopes.describe Becoming.PooledEnvelopes.Model.left) [0] =
+        [0, 1] ∧
+      (Becoming.FaultEnvelopes.certificate Becoming.FaultEnvelopes.roster4
+          (Becoming.PooledEnvelopes.pooled Becoming.PooledEnvelopes.describe
+            (Becoming.PooledEnvelopes.retain Becoming.PooledEnvelopes.hypotheses Becoming.PooledEnvelopes.diagnostic
+              false))
+          fun d => decide (d < 2)) =
+        true
+Becoming.PooledEnvelopes.unobserved_change_invalidates : Becoming.Reconfiguration.induced
+      (Becoming.PooledEnvelopes.describe Becoming.PooledEnvelopes.Model.right) [2] =
+    [2, 3] ∧
+  (Becoming.FaultEnvelopes.certificate Becoming.FaultEnvelopes.roster4
+      (Becoming.PooledEnvelopes.pooled Becoming.PooledEnvelopes.describe
+        (Becoming.PooledEnvelopes.retain Becoming.PooledEnvelopes.hypotheses Becoming.PooledEnvelopes.diagnostic true))
+      fun d => decide (2 ≤ d)) =
+    true
+@Becoming.PooledEnvelopes.probe_some : ∀ {s t : Becoming.PooledEnvelopes.Situation}
+  {q : Becoming.PooledEnvelopes.Inspection} {a : Bool},
+  Becoming.PooledEnvelopes.probe s q = some (a, t) →
+    a = Becoming.PooledEnvelopes.queryLaw q s.actual ∧
+      t.actual = s.actual ∧
+        t.candidates = Becoming.PooledEnvelopes.retain s.candidates (Becoming.PooledEnvelopes.queryLaw q) a
+Becoming.PooledEnvelopes.probe_keeps_actual : ∀ (s : Becoming.PooledEnvelopes.Situation)
+  (q : Becoming.PooledEnvelopes.Inspection) (answer : Bool) (after : Becoming.PooledEnvelopes.Situation),
+  s.actual ∈ s.candidates →
+    Becoming.PooledEnvelopes.probe s q = some (answer, after) →
+      after.actual = s.actual ∧ after.actual ∈ after.candidates
+Becoming.PooledEnvelopes.selected_completes : ∀ (states : List Becoming.PooledEnvelopes.Situation)
+  (chosen : Becoming.ContingentPlans.Plan Becoming.PooledEnvelopes.Inspection Unit)
+  (s : Becoming.PooledEnvelopes.Situation),
+  Becoming.ContingentPlans.choose Becoming.PooledEnvelopes.interface states Becoming.PooledEnvelopes.plans =
+      some chosen →
+    s ∈ states →
+      ∃ answer after out,
+        Becoming.PooledEnvelopes.probe s chosen.query = some (answer, after) ∧
+          Becoming.PooledEnvelopes.respond after (Becoming.ContingentPlans.branch chosen answer) = some out ∧
+            Becoming.PooledEnvelopes.achieved out = true
+Becoming.PooledEnvelopes.pooled_unknowns_select_inspection : Becoming.ContingentPlans.choose
+    Becoming.PooledEnvelopes.interface (Becoming.PooledEnvelopes.possibleSituations 12 12)
+    Becoming.PooledEnvelopes.plans =
+  some (Becoming.PooledEnvelopes.plan Becoming.PooledEnvelopes.Inspection.inspect)
+Becoming.PooledEnvelopes.learned_envelope_reuses : Becoming.ContingentPlans.choose Becoming.PooledEnvelopes.interface
+    (Becoming.PooledEnvelopes.possibleSituations 11 11
+      [Becoming.PooledEnvelopes.Model.left, Becoming.PooledEnvelopes.Model.swapped])
+    Becoming.PooledEnvelopes.plans =
+  some (Becoming.PooledEnvelopes.plan Becoming.PooledEnvelopes.Inspection.reuse)
+Becoming.PooledEnvelopes.short_or_closed_no_plan : Becoming.ContingentPlans.choose Becoming.PooledEnvelopes.interface
+      (Becoming.PooledEnvelopes.possibleSituations 11 11) Becoming.PooledEnvelopes.plans =
+    none ∧
+  Becoming.ContingentPlans.choose Becoming.PooledEnvelopes.interface
+      (Becoming.PooledEnvelopes.possibleSituations 12 12 Becoming.PooledEnvelopes.hypotheses false)
+      Becoming.PooledEnvelopes.plans =
+    none
+Becoming.PooledEnvelopes.evidence_short_of_reserve : (Becoming.PooledEnvelopes.final
+        (Becoming.PooledEnvelopes.initialSituation Becoming.PooledEnvelopes.Model.left [0] 11 11)
+        Becoming.PooledEnvelopes.Inspection.inspect).candidates =
+    [Becoming.PooledEnvelopes.Model.left, Becoming.PooledEnvelopes.Model.swapped] ∧
+  (Becoming.PooledEnvelopes.final
+          (Becoming.PooledEnvelopes.initialSituation Becoming.PooledEnvelopes.Model.left [0] 11 11)
+          Becoming.PooledEnvelopes.Inspection.inspect).record =
+      some (Becoming.PooledEnvelopes.Inspection.inspect, true) ∧
+    (Becoming.PooledEnvelopes.final
+                (Becoming.PooledEnvelopes.initialSituation Becoming.PooledEnvelopes.Model.left [0] 11 11)
+                Becoming.PooledEnvelopes.Inspection.inspect).installation.state.completed =
+        false ∧
+      (Becoming.PooledEnvelopes.final
+                  (Becoming.PooledEnvelopes.initialSituation Becoming.PooledEnvelopes.Model.left [0] 11 11)
+                  Becoming.PooledEnvelopes.Inspection.inspect).installation.state.drawn =
+          9 ∧
+        (Becoming.PooledEnvelopes.final
+                  (Becoming.PooledEnvelopes.initialSituation Becoming.PooledEnvelopes.Model.left [0] 11 11)
+                  Becoming.PooledEnvelopes.Inspection.inspect).installation.state.reserve =
+          2
+Becoming.PooledEnvelopes.evidence_then_shutdown : (Becoming.PooledEnvelopes.final
+        (Becoming.PooledEnvelopes.initialSituation Becoming.PooledEnvelopes.Model.left [0] 12 12)
+        Becoming.PooledEnvelopes.Inspection.inspect).candidates =
+    [Becoming.PooledEnvelopes.Model.left, Becoming.PooledEnvelopes.Model.swapped] ∧
+  (Becoming.PooledEnvelopes.final
+          (Becoming.PooledEnvelopes.initialSituation Becoming.PooledEnvelopes.Model.left [0] 12 12)
+          Becoming.PooledEnvelopes.Inspection.inspect).record =
+      some (Becoming.PooledEnvelopes.Inspection.inspect, true) ∧
+    Becoming.PooledEnvelopes.achieved
+          (Becoming.PooledEnvelopes.final
+            (Becoming.PooledEnvelopes.initialSituation Becoming.PooledEnvelopes.Model.left [0] 12 12)
+            Becoming.PooledEnvelopes.Inspection.inspect) =
+        true ∧
+      (Becoming.PooledEnvelopes.final
+                  (Becoming.PooledEnvelopes.initialSituation Becoming.PooledEnvelopes.Model.left [0] 12 12)
+                  Becoming.PooledEnvelopes.Inspection.inspect).installation.state.drawn =
+          12 ∧
+        (Becoming.PooledEnvelopes.final
+                    (Becoming.PooledEnvelopes.initialSituation Becoming.PooledEnvelopes.Model.left [0] 12 12)
+                    Becoming.PooledEnvelopes.Inspection.inspect).installation.state.reserve =
+            0 ∧
+          (Becoming.PooledEnvelopes.final
+                  (Becoming.PooledEnvelopes.initialSituation Becoming.PooledEnvelopes.Model.left [0] 12 12)
+                  Becoming.PooledEnvelopes.Inspection.inspect).installation.serial =
+            1
+Becoming.PooledEnvelopes.slow_misses_deadline : Becoming.PooledEnvelopes.achieved
+      (Becoming.PooledEnvelopes.final
+        (Becoming.PooledEnvelopes.initialSituation Becoming.PooledEnvelopes.Model.left [0] 20 12)
+        Becoming.PooledEnvelopes.Inspection.slow) =
+    false ∧
+  Becoming.PooledEnvelopes.achieved
+      (Becoming.PooledEnvelopes.final
+        (Becoming.PooledEnvelopes.initialSituation Becoming.PooledEnvelopes.Model.left [0] 20 12)
+        Becoming.PooledEnvelopes.Inspection.inspect) =
+    true
+Becoming.PooledEnvelopes.actual_certificate_without_uniform_pool : Becoming.PooledEnvelopes.poolReady
+      (Becoming.PooledEnvelopes.pooled Becoming.PooledEnvelopes.describe Becoming.PooledEnvelopes.hypotheses) =
+    false ∧
+  Becoming.PooledEnvelopes.achieved
+      (Becoming.PooledEnvelopes.final
+        (Becoming.PooledEnvelopes.initialSituation Becoming.PooledEnvelopes.Model.left [] 11 11)
+        Becoming.PooledEnvelopes.Inspection.reuse) =
+    true
+Becoming.PooledEnvelopes.empty_candidates_no_completion : Becoming.PooledEnvelopes.achieved
+    (Becoming.PooledEnvelopes.final
+      (Becoming.PooledEnvelopes.initialSituation Becoming.PooledEnvelopes.Model.left [] 20 20 [])
+      Becoming.PooledEnvelopes.Inspection.reuse) =
+  false
+@Becoming.PooledEnvelopes.respond_some : ∀ {s t : Becoming.PooledEnvelopes.Situation},
+  Becoming.PooledEnvelopes.respond s () = some t → t.actual = s.actual ∧ t.candidates = s.candidates
+@Becoming.PooledEnvelopes.step_keeps_actual : ∀ {s t : Becoming.PooledEnvelopes.Situation}
+  {m : Option Becoming.PooledEnvelopes.Inspection},
+  Becoming.PooledEnvelopes.inquiry.step s m t → s.actual ∈ s.candidates → t.actual = s.actual ∧ t.actual ∈ t.candidates
+@Becoming.PooledEnvelopes.step_narrows : ∀ {s t : Becoming.PooledEnvelopes.Situation}
+  {m : Option Becoming.PooledEnvelopes.Inspection},
+  Becoming.PooledEnvelopes.inquiry.step s m t →
+    ∀ (h : Becoming.PooledEnvelopes.Model), h ∈ t.candidates → h ∈ s.candidates
+Becoming.PooledEnvelopes.actual_kept : ∀ (r : Becoming.Run Becoming.PooledEnvelopes.inquiry),
+  (r.state 0).actual ∈ (r.state 0).candidates →
+    ∀ (n : Nat), (r.state n).actual = (r.state 0).actual ∧ (r.state n).actual ∈ (r.state n).candidates
+Becoming.PooledEnvelopes.candidates_narrow : ∀ (r : Becoming.Run Becoming.PooledEnvelopes.inquiry) (n : Nat)
+  (h : Becoming.PooledEnvelopes.Model), h ∈ (r.state (n + 1)).candidates → h ∈ (r.state n).candidates
+Becoming.PooledEnvelopes.separation_kept : ∀
+  (desc : Becoming.PooledEnvelopes.Model → Becoming.Reconfiguration.Arrangement)
+  (roster : List Becoming.FaultEnvelopes.Domain) (r : Becoming.Run Becoming.PooledEnvelopes.inquiry),
+  Becoming.FaultEnvelopes.separated roster (Becoming.PooledEnvelopes.pooled desc (r.state 0).candidates) →
+    ∀ (n : Nat), Becoming.FaultEnvelopes.separated roster (Becoming.PooledEnvelopes.pooled desc (r.state n).candidates)
+Becoming.PooledEnvelopes.certificate_kept : ∀
+  (desc : Becoming.PooledEnvelopes.Model → Becoming.Reconfiguration.Arrangement)
+  (roster : List Becoming.FaultEnvelopes.Domain) (r : Becoming.Run Becoming.PooledEnvelopes.inquiry)
+  (supports : Becoming.FaultEnvelopes.Domain → Bool) (n : Nat),
+  Becoming.FaultEnvelopes.certificate roster (Becoming.PooledEnvelopes.pooled desc (r.state n).candidates) supports =
+      true →
+    Becoming.PooledEnvelopes.pooled desc (r.state (n + 1)).candidates ≠ [] →
+      Becoming.FaultEnvelopes.certificate roster (Becoming.PooledEnvelopes.pooled desc (r.state (n + 1)).candidates)
+          supports =
+        true
+Becoming.PooledEnvelopes.chosen_plan_completes : ∀ (states : List Becoming.PooledEnvelopes.Situation)
+  (chosen : Becoming.ContingentPlans.Plan Becoming.PooledEnvelopes.Inspection Unit)
+  (s : Becoming.PooledEnvelopes.Situation),
+  Becoming.ContingentPlans.choose Becoming.PooledEnvelopes.interface states Becoming.PooledEnvelopes.plans =
+      some chosen →
+    s ∈ states →
+      ∃ out,
+        Generative.Trace Becoming.PooledEnvelopes.inquiry s [some chosen.query, none] out ∧
+          Becoming.PooledEnvelopes.achieved out = true
+@Becoming.PooledEnvelopes.trace_iff_run : ∀ {s out : Becoming.PooledEnvelopes.Situation}
+  {q : Becoming.PooledEnvelopes.Inspection},
+  Generative.Trace Becoming.PooledEnvelopes.inquiry s [some q, none] out ↔
+    Becoming.ContingentPlans.run Becoming.PooledEnvelopes.interface (Becoming.PooledEnvelopes.plan q) s = some out
+@Becoming.PooledEnvelopes.final_of_trace : ∀ {s out : Becoming.PooledEnvelopes.Situation}
+  {q : Becoming.PooledEnvelopes.Inspection},
+  Generative.Trace Becoming.PooledEnvelopes.inquiry s [some q, none] out → Becoming.PooledEnvelopes.final s q = out
+@Becoming.PooledEnvelopes.trace_of_final_ne : ∀ {s : Becoming.PooledEnvelopes.Situation}
+  {q : Becoming.PooledEnvelopes.Inspection},
+  Becoming.PooledEnvelopes.final s q ≠ s →
+    Generative.Trace Becoming.PooledEnvelopes.inquiry s [some q, none] (Becoming.PooledEnvelopes.final s q)
+Becoming.PooledEnvelopes.inspected_trace_completes : Generative.Trace Becoming.PooledEnvelopes.inquiry
+    (Becoming.PooledEnvelopes.initialSituation Becoming.PooledEnvelopes.Model.left [0] 12 12)
+    [some Becoming.PooledEnvelopes.Inspection.inspect, none]
+    (Becoming.PooledEnvelopes.final
+      (Becoming.PooledEnvelopes.initialSituation Becoming.PooledEnvelopes.Model.left [0] 12 12)
+      Becoming.PooledEnvelopes.Inspection.inspect) ∧
+  ∀ (out : Becoming.PooledEnvelopes.Situation),
+    Generative.Trace Becoming.PooledEnvelopes.inquiry
+        (Becoming.PooledEnvelopes.initialSituation Becoming.PooledEnvelopes.Model.left [0] 12 12)
+        [some Becoming.PooledEnvelopes.Inspection.inspect, none] out →
+      out.candidates = [Becoming.PooledEnvelopes.Model.left, Becoming.PooledEnvelopes.Model.swapped] ∧
+        out.record = some (Becoming.PooledEnvelopes.Inspection.inspect, true) ∧
+          Becoming.PooledEnvelopes.achieved out = true ∧
+            out.installation.state.drawn = 12 ∧ out.installation.state.reserve = 0 ∧ out.installation.serial = 1
+Becoming.PooledEnvelopes.inspected_trace_short_of_reserve : Generative.Trace Becoming.PooledEnvelopes.inquiry
+    (Becoming.PooledEnvelopes.initialSituation Becoming.PooledEnvelopes.Model.left [0] 11 11)
+    [some Becoming.PooledEnvelopes.Inspection.inspect, none]
+    (Becoming.PooledEnvelopes.final
+      (Becoming.PooledEnvelopes.initialSituation Becoming.PooledEnvelopes.Model.left [0] 11 11)
+      Becoming.PooledEnvelopes.Inspection.inspect) ∧
+  ∀ (out : Becoming.PooledEnvelopes.Situation),
+    Generative.Trace Becoming.PooledEnvelopes.inquiry
+        (Becoming.PooledEnvelopes.initialSituation Becoming.PooledEnvelopes.Model.left [0] 11 11)
+        [some Becoming.PooledEnvelopes.Inspection.inspect, none] out →
+      out.candidates = [Becoming.PooledEnvelopes.Model.left, Becoming.PooledEnvelopes.Model.swapped] ∧
+        out.record = some (Becoming.PooledEnvelopes.Inspection.inspect, true) ∧
+          out.installation.state.completed = false ∧
+            out.installation.state.drawn = 9 ∧ out.installation.state.reserve = 2
+Becoming.PooledEnvelopes.slow_trace_misses_deadline : Generative.Trace Becoming.PooledEnvelopes.inquiry
+    (Becoming.PooledEnvelopes.initialSituation Becoming.PooledEnvelopes.Model.left [0] 20 12)
+    [some Becoming.PooledEnvelopes.Inspection.slow, none]
+    (Becoming.PooledEnvelopes.final
+      (Becoming.PooledEnvelopes.initialSituation Becoming.PooledEnvelopes.Model.left [0] 20 12)
+      Becoming.PooledEnvelopes.Inspection.slow) ∧
+  (∀ (out : Becoming.PooledEnvelopes.Situation),
+      Generative.Trace Becoming.PooledEnvelopes.inquiry
+          (Becoming.PooledEnvelopes.initialSituation Becoming.PooledEnvelopes.Model.left [0] 20 12)
+          [some Becoming.PooledEnvelopes.Inspection.slow, none] out →
+        Becoming.PooledEnvelopes.achieved out = false) ∧
+    Generative.Trace Becoming.PooledEnvelopes.inquiry
+        (Becoming.PooledEnvelopes.initialSituation Becoming.PooledEnvelopes.Model.left [0] 20 12)
+        [some Becoming.PooledEnvelopes.Inspection.inspect, none]
+        (Becoming.PooledEnvelopes.final
+          (Becoming.PooledEnvelopes.initialSituation Becoming.PooledEnvelopes.Model.left [0] 20 12)
+          Becoming.PooledEnvelopes.Inspection.inspect) ∧
+      ∀ (out : Becoming.PooledEnvelopes.Situation),
+        Generative.Trace Becoming.PooledEnvelopes.inquiry
+            (Becoming.PooledEnvelopes.initialSituation Becoming.PooledEnvelopes.Model.left [0] 20 12)
+            [some Becoming.PooledEnvelopes.Inspection.inspect, none] out →
+          Becoming.PooledEnvelopes.achieved out = true
+Becoming.PooledEnvelopes.reuse_trace_completes_without_uniform_pool : Becoming.PooledEnvelopes.poolReady
+      (Becoming.PooledEnvelopes.pooled Becoming.PooledEnvelopes.describe Becoming.PooledEnvelopes.hypotheses) =
+    false ∧
+  Generative.Trace Becoming.PooledEnvelopes.inquiry
+      (Becoming.PooledEnvelopes.initialSituation Becoming.PooledEnvelopes.Model.left [] 11 11)
+      [some Becoming.PooledEnvelopes.Inspection.reuse, none]
+      (Becoming.PooledEnvelopes.final
+        (Becoming.PooledEnvelopes.initialSituation Becoming.PooledEnvelopes.Model.left [] 11 11)
+        Becoming.PooledEnvelopes.Inspection.reuse) ∧
+    ∀ (out : Becoming.PooledEnvelopes.Situation),
+      Generative.Trace Becoming.PooledEnvelopes.inquiry
+          (Becoming.PooledEnvelopes.initialSituation Becoming.PooledEnvelopes.Model.left [] 11 11)
+          [some Becoming.PooledEnvelopes.Inspection.reuse, none] out →
+        Becoming.PooledEnvelopes.achieved out = true
+Becoming.PooledEnvelopes.empty_candidates_trace_fails : Generative.Trace Becoming.PooledEnvelopes.inquiry
+    (Becoming.PooledEnvelopes.initialSituation Becoming.PooledEnvelopes.Model.left [] 20 20 [])
+    [some Becoming.PooledEnvelopes.Inspection.reuse, none]
+    (Becoming.PooledEnvelopes.final
+      (Becoming.PooledEnvelopes.initialSituation Becoming.PooledEnvelopes.Model.left [] 20 20 [])
+      Becoming.PooledEnvelopes.Inspection.reuse) ∧
+  ∀ (out : Becoming.PooledEnvelopes.Situation),
+    Generative.Trace Becoming.PooledEnvelopes.inquiry
+        (Becoming.PooledEnvelopes.initialSituation Becoming.PooledEnvelopes.Model.left [] 20 20 [])
+        [some Becoming.PooledEnvelopes.Inspection.reuse, none] out →
+      Becoming.PooledEnvelopes.achieved out = false
+Becoming.PooledEnvelopes.listed_inspect_traces_complete : ∀ (s : Becoming.PooledEnvelopes.Situation),
+  s ∈ Becoming.PooledEnvelopes.possibleSituations 12 12 →
+    ∃ out,
+      Generative.Trace Becoming.PooledEnvelopes.inquiry s [some Becoming.PooledEnvelopes.Inspection.inspect, none] out ∧
+        Becoming.PooledEnvelopes.achieved out = true
+Becoming.PooledEnvelopes.listed_reuse_traces_complete : ∀ (s : Becoming.PooledEnvelopes.Situation),
+  s ∈
+      Becoming.PooledEnvelopes.possibleSituations 11 11
+        [Becoming.PooledEnvelopes.Model.left, Becoming.PooledEnvelopes.Model.swapped] →
+    ∃ out,
+      Generative.Trace Becoming.PooledEnvelopes.inquiry s [some Becoming.PooledEnvelopes.Inspection.reuse, none] out ∧
+        Becoming.PooledEnvelopes.achieved out = true

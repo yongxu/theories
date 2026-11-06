@@ -35,7 +35,7 @@ Results:
   only finitely many events (`depletion_not_recurring`). This is the descent principle of
   `Becoming.Renewal` applied to the family's total level, which serves only as a
   measure of descent: the units of the conditions do not matter.
-* Where arising depletes the family, unceasing generation needs renewal: some condition
+* Where arising depletes the family, unceasing arising needs renewal: some condition
   of the family rises at arbitrarily late steps (`Unceasing.rises`), and when every rise
   is made by a formation renewing it, renewing activity recurs
   (`Unceasing.activeRenewer_recurs`). Renewal is read here as a net rise, so renewal
@@ -45,23 +45,23 @@ Results:
   active steps lowers some condition of a finite family, none of which rises any more,
   is not active at arbitrarily late steps, however it moves its dependence among them
   (`substitution_defers`, witness `Relay`).
-* Dissipation ends generation: if a quantity never rises and every arising lowers it,
-  generation is not unceasing (`dissipation_arising_not_recurring`). A family's total level is
+* Dissipation ends arising: if a quantity never rises and every arising lowers it,
+  arising is not unceasing (`dissipation_arising_not_recurring`). A family's total level is
   such a quantity only where every arising dissipates it, and adding levels across conditions
   presupposes that their units are commensurable. A material cycle dissipates nothing:
-  a closed family whose total stays constant sustains unceasing generation (`Recycle`).
+  a closed family whose total stays constant sustains unceasing arising (`Recycle`).
   For a quantity every arising dissipates, free energy for instance, the premise is
   physical; it is not a consequence of the theorem.
 * Depletion need not involve the arising formation: a flicker that neither depends nor
   draws on anything arises again and again, each arising met by the unrelated fall of a
   tide (`Tide.unrelated_depletion`).
-* Renewal does not imply generation. The tide, renewed by the moon, rises at arbitrarily
+* Renewal does not imply arising. The tide, renewed by the moon, rises at arbitrarily
   late steps while nothing arises (`Tide.renewal_without_arising`); drawing exactly what
   is renewed keeps every dependence while nothing arises
   (`Renewable.renewal_without_arising`).
 * Arising on a consumed condition ceases: formations arise while drawing an unrenewed
   condition down, consume it, and arising does not recur (`Growth.ceases`).
-* Unceasing generation is consistent with these premises: a formation arises again and
+* Unceasing arising is consistent with these premises: a formation arises again and
   again on a condition that another formation renews (`Oscillation.unceasing`). Each arising
   comes when the condition has been restored, at a rise, so the oscillator depletes the
   family only vacuously (`Oscillation.arises_on_rise`). The working stepwise reading withholds
@@ -69,13 +69,13 @@ Results:
   next renewal,
   while the reading over cycles of two includes it (`Oscillation.readings`).
 
-So, where arising depletes the family, unceasing generation is strictly stronger than
+So, where arising depletes the family, unceasing arising is strictly stronger than
 recurring renewal: it needs renewal to recur, and renewal can recur with nothing
 arising. The premises are correspondence claims about an application: that every rise
 is made by some formation within the unfolding, that arising depletes the family at
 steps without renewal, and that the conditions concerned are finitely many. No ethical
-predicate, ranking or axiom occurs. "More" generation, diversity and complexity are not
-stated here.
+predicate, ranking or axiom occurs. More takers without end (`Becoming.Flow`), diversity and
+complexity are not stated here.
 
 `total` is stated in `Becoming.World`, and the witness run
 `Renewable.renewal_without_arising` in `Becoming.Labelled`.
@@ -177,7 +177,7 @@ theorem depletion_not_recurring (cs : List C) (T : Nat) (event : Nat → Prop)
         ⟨t, Nat.le_trans (Nat.le_add_right N T) later,
           W.stock_lt cs (still t after) (depletes t happens (still t after))⟩
 
-/-- Where arising depletes a finite family of conditions, unceasing generation needs
+/-- Where arising depletes a finite family of conditions, unceasing arising needs
 renewal: some condition of the family rises at arbitrarily late steps. -/
 theorem Unceasing.rises {cs : List C} (depletes : W.Depletes cs fun t => ∃ f, W.Arises t f)
     (unceasing : W.Unceasing) (T : Nat) : ¬ ∀ t, T ≤ t → W.Still cs t :=
@@ -185,7 +185,7 @@ theorem Unceasing.rises {cs : List C} (depletes : W.Depletes cs fun t => ∃ f, 
     fun N => match unceasing N with
       | ⟨t, f, later, arises⟩ => ⟨t, later, f, arises⟩
 
-/-- When every rise is made by a formation renewing the condition, unceasing generation
+/-- When every rise is made by a formation renewing the condition, unceasing arising
 that depletes a finite family makes renewing activity recur. -/
 theorem Unceasing.activeRenewer_recurs {renews : Nat → F → C → Prop} {cs : List C}
     (made : W.RenewedBy renews) (depletes : W.Depletes cs fun t => ∃ f, W.Arises t f)
@@ -203,8 +203,8 @@ theorem substitution_defers (cs : List C) (f : F) (T : Nat)
     ¬ ∀ N, ∃ t, N ≤ t ∧ W.active t f :=
   W.depletion_not_recurring cs T _ still draws_down
 
-/-- Dissipation ends generation: if a quantity never rises and every arising lowers it,
-generation is not unceasing. -/
+/-- Dissipation ends arising: if a quantity never rises and every arising lowers it,
+arising is not unceasing. -/
 theorem dissipation_arising_not_recurring (q : Nat → Nat) (unrestored : ∀ t, q (t + 1) ≤ q t)
     (dissipates : ∀ t f, W.Arises t f → q (t + 1) < q t) : ¬ W.Unceasing :=
   fun unceasing => falls_not_recurring q 0 (fun t _ => unrestored t)
@@ -213,7 +213,7 @@ theorem dissipation_arising_not_recurring (q : Nat → Nat) (unrestored : ∀ t,
 
 end Web
 
-/-! ## Renewal does not imply generation -/
+/-! ## Renewal does not imply arising -/
 
 /-! ## Depletion need not involve the arising formation, and renewal recurs without
 arising -/
@@ -480,7 +480,7 @@ theorem passed : ∀ t, atB t < atB (t + 1) → 1 ≤ atA t
 
 /-- The family's total stays one, every premise of `Unceasing.activeRenewer_recurs`
 holds, and the consumer arises at every odd step: no arising lowers the total, and a closed
-cycle sustains unceasing generation. -/
+cycle sustains unceasing arising. -/
 theorem closed_unceasing :
     web.Dependent ∧ web.RenewedBy renews ∧
     web.Depletes [.a, .b] (fun t => ∃ f, web.Arises t f) ∧ web.Unceasing ∧
@@ -505,7 +505,7 @@ theorem closed_unceasing :
 
 end Recycle
 
-/-! ## Unceasing generation on a renewed condition -/
+/-! ## Unceasing arising on a renewed condition -/
 
 namespace Oscillation
 
@@ -561,7 +561,7 @@ theorem arises_on_rise : ∀ t f, web.Arises t f → web.Rises t ()
   | _, .oscillator, ⟨inactive, active⟩ => Nat.lt_of_lt_of_le (Nat.gt_of_not_le inactive) active
 
 /-- Every premise of `Unceasing.activeRenewer_recurs` holds, and the oscillator arises at every
-odd step: generation does not cease, and the source's renewing recurs. -/
+odd step: arising does not cease, and the source's renewing recurs. -/
 theorem unceasing :
     web.Dependent ∧ web.RenewedBy renews ∧
     web.Depletes [()] (fun t => ∃ f, web.Arises t f) ∧ web.Unceasing ∧

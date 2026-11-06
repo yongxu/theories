@@ -36,7 +36,7 @@
 - Groups of unequal size here: they are stated in record selection-within-and-among-groups-of-any-sizes, of which this division is the case of equal sizes, the among-group part read there by the groups' means.
 - What the groups are, why their members' offspring numbers differ, or how groups form, persist or mix: which level wins is read off the counts, not explained. No base reading (groups as lineages within their own families) is given.
 - Transmission that is not exact: the generational form is stated with exact transmission only.
-- That selection among groups ought to win, or that holding back is better: the division is an identity of counts; ranking goes through the comparison C or a premise in its place, not through it.
+- That selection among groups ought to win, or that holding back is better: the division is an identity of counts; ranking goes through the comparison C or a premise in its place, not through the division.
 - **Counterexample:** Selection within the groups against an amount does not decide the whole: with the same groups and the same within-group counts the whole selects for it (AmongWins.among_wins) or against it (WithinWins.within_wins), according to selection among the groups. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionLevels.lean)
 
 **Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
@@ -93,6 +93,8 @@ The multilevel form of Price's equation (Price 1972; Hamilton 1975), the law of 
 | proof | [Prelude.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean) | `Becoming.nil_of_length_zero` |
 | proof | [Population.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean) | `Becoming.total_congr_on` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T214533.564191Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json) | — |
 
 Aliases: `selection within groups and among them`, `组内选择与组间选择`, `multilevel Price equation`, `multilevel selection`, `law of total covariance`, `Becoming.SelectionLevels.levels`, `Becoming.SelectionLevels.among_for_of_rises`, `Becoming.SelectionLevels.rises_exact_iff_levels`
 

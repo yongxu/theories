@@ -214,7 +214,7 @@
         "Becoming.Withholding.withholding_returns",
         "Becoming.Withholding.withholding_spreads"
       ],
-      "sha256": "14f76b7521330ac7489b49ff28652a590574bbd2d0bf13405c027ccbb264c66e"
+      "sha256": "5e6df01f535099b40bd9611dfa27c5f2fac038d52816a155c5958982325181fe"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Recurrence.lean",
@@ -276,12 +276,18 @@
       "role": "receipt",
       "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T214533.564191Z/verification.json",
+      "role": "receipt",
+      "sha256": "1d84754646f4039d0950bbdb24bfa8fbd78dc9f9643cf7b9f13ae4250ac24251",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Withholding.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T214533.564191Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Withholding",
       "success_pointer": "/status",
       "success_value": "passed"

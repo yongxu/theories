@@ -845,7 +845,7 @@ end Renewable
 
 end Becoming
 
-/-! ## Generation along a run (moved from `Becoming.Arising`) -/
+/-! ## Arising along a run (moved from `Becoming.Arising`) -/
 
 namespace Becoming
 

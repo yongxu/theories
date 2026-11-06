@@ -1380,7 +1380,7 @@
     {
      "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#joint-plans",
      "says": {
-      "en": "Reading [AI reading, D65; a ranking needs C or a premise in its place, under 07's premises]. Capture and drain give institutions no prior duty to contract and no prior licence to grow: whether a development calls for expanding, maintaining, reorganizing or contracting is asked of the whole continuation it forms."
+      "en": "Reading [AI reading, D65; scope by the continuation condition, and a ranking needs C or a premise in its place (07 §4)]. Capture and drain give institutions no prior duty to contract and no prior licence to grow: whether a development calls for expanding, maintaining, reorganizing or contracting is asked of the whole continuation it forms."
      },
      "role": "carries",
      "part": "D65, the whole continuation"
@@ -1527,7 +1527,7 @@
     "en": "That each route also runs toward recovery, per the 02 reading on regions, and exact conditions for a shock to hold."
    },
    "source_adds": {
-    "en": "The preference for deformation, and that a shock's landing is uncontrolled; a preference among courses needs C for order, with the continuation condition for scope, neither asserted. Ren's own 2026-06-03 line that tragedy will wake people up sits against the draft's correction."
+    "en": "The preference for deformation, and that a shock's landing is uncontrolled; a preference among courses needs C, or a premise in its place, for order, with the continuation condition for scope, neither asserted. Ren's own 2026-06-03 line that tragedy will wake people up sits against the draft's correction."
    },
    "absence": null,
    "labels": [
@@ -2470,6 +2470,11 @@
   },
   {
    "id": "cx-fork-functional-invariant",
+   "what": "changed",
+   "why": "05's D65 label and eight records gave ranking to C alone; corrected at home (apply_ranking.py, 7 November 2026): the entry quotes what it says now"
+  },
+  {
+   "id": "cx-fork-landscape-deformation",
    "what": "changed",
    "why": "05's D65 label and eight records gave ranking to C alone; corrected at home (apply_ranking.py, 7 November 2026): the entry quotes what it says now"
   },

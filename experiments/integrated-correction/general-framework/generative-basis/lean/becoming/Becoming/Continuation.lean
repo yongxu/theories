@@ -586,7 +586,7 @@ end Gated
 
 end Flow
 
-/-! ## Read with one kind of relatum: generation is fed from beyond -/
+/-! ## Read with one kind of relatum: arising is fed from beyond -/
 
 namespace Web
 

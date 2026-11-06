@@ -10,6 +10,11 @@ Two other wordings of the same claim stood:
 - eight records' non-implication line, "ranking goes through the comparison C" (排序经由比较 C).
 The minimal change keeps each sentence and adds what 07 §4 adds, in LM1's words. Each record takes a history note.
 Every replacement must match exactly once, or nothing is written.
+
+Applied once on 7 November 2026. Its checker, a reader other than its author, then asked for three changes, made by hand
+the same day and recorded here: 05's label names both premises ("scope by the continuation condition, and a ranking
+needs C or a premise in its place (07 §4)"); selection-within-and-among-groups says "not through the division" (不经由此
+划分), where "it" had come to read as C; and 06's 易传 line (616) says 以广为愈定次序，对进程的排序须它或代替它的前提.
 """
 import argparse
 import json

@@ -1,0 +1,171 @@
+@Becoming.DrawnShaping.shaped_le_iff : ∀ {a s s' p c : Nat} {pos : 0 < a},
+  Becoming.RuleCapture.CarrierCounts.order.le (Becoming.RuleShaping.shaped a s p c pos)
+      (Becoming.RuleShaping.shaped a s' p c pos) ↔
+    s ≤ s'
+@Becoming.DrawnShaping.drawn_reads_iff : ∀ {a p c hi lo : Nat} {pos : 0 < a},
+  Becoming.RuleCapture.ReadsShare Becoming.RuleCapture.CarrierCounts.order Becoming.RuleCapture.CarrierCounts.order
+      (Becoming.DrawnShaping.drawnRead a p c hi lo pos) ↔
+    lo ≤ hi
+@Becoming.DrawnShaping.drawn_against : ∀ {a p c hi lo : Nat} {pos : 0 < a},
+  hi ≤ lo →
+    Becoming.RuleCapture.ReadsShare Becoming.RuleCapture.CarrierCounts.order
+      (Becoming.RuleCapture.reverse Becoming.RuleCapture.CarrierCounts.order)
+      (Becoming.DrawnShaping.drawnRead a p c hi lo pos)
+Becoming.DrawnShaping.mul_split : ∀ (x a s p : Nat), x * (a + s + p) = x * s + x * (a + p)
+Becoming.DrawnShaping.drawn_split : ∀ (x y a p s t : Nat),
+  x * (a + s + p) + y * (a + t + p) = x * s + y * t + (x * (a + p) + y * (a + p))
+@Becoming.DrawnShaping.drawn_favours_iff : ∀ {a p c hi lo : Nat} {pos : 0 < a} {x : Becoming.RuleCapture.CarrierCounts},
+  (Becoming.DrawnShaping.drawn a p c hi lo pos x).favours ↔ x.carrier * c + x.other * c ≤ x.carrier * hi + x.other * lo
+@Becoming.DrawnShaping.drawn_lt_iff : ∀ {a p c hi lo : Nat} {pos : 0 < a} {x : Becoming.RuleCapture.CarrierCounts},
+  (Becoming.DrawnShaping.drawn a p c hi lo pos x).carrier < (Becoming.DrawnShaping.drawn a p c hi lo pos x).other ↔
+    x.carrier * hi + x.other * lo < x.carrier * c + x.other * c
+@Becoming.DrawnShaping.drawn_favours_alike : ∀ {a a' p p' c hi lo : Nat} {pos : 0 < a} {pos' : 0 < a'}
+  {x : Becoming.RuleCapture.CarrierCounts},
+  (Becoming.DrawnShaping.drawn a p c hi lo pos x).favours ↔ (Becoming.DrawnShaping.drawn a' p' c hi lo pos' x).favours
+@Becoming.DrawnShaping.critical_iff : ∀ {a p c hi lo : Nat} {pos : 0 < a} {x : Becoming.RuleCapture.CarrierCounts},
+  lo ≤ c →
+    c ≤ hi → ((Becoming.DrawnShaping.drawn a p c hi lo pos x).favours ↔ x.other * (c - lo) ≤ x.carrier * (hi - c))
+@Becoming.DrawnShaping.alike_favours_iff : ∀ {a p c s : Nat} {pos : 0 < a} {x : Becoming.RuleCapture.CarrierCounts},
+  (Becoming.DrawnShaping.drawn a p c s s pos x).favours ↔ c ≤ s
+@Becoming.DrawnShaping.favours_everywhere_iff : ∀ {a p c hi lo : Nat} {pos : 0 < a},
+  (∀ (x : Becoming.RuleCapture.CarrierCounts), (Becoming.DrawnShaping.drawn a p c hi lo pos x).favours) ↔
+    c ≤ lo ∧ c ≤ hi
+@Becoming.DrawnShaping.disfavours_strictly_everywhere_iff : ∀ {a p c hi lo : Nat} {pos : 0 < a},
+  (∀ (x : Becoming.RuleCapture.CarrierCounts),
+      (Becoming.DrawnShaping.drawn a p c hi lo pos x).carrier < (Becoming.DrawnShaping.drawn a p c hi lo pos x).other) ↔
+    lo < c ∧ hi ≤ c
+@Becoming.DrawnShaping.critical_mass_iff : ∀ {a p c hi lo : Nat} {pos : 0 < a},
+  lo ≤ hi →
+    (((∃ x, (Becoming.DrawnShaping.drawn a p c hi lo pos x).favours) ∧
+        ∃ x,
+          (Becoming.DrawnShaping.drawn a p c hi lo pos x).carrier <
+            (Becoming.DrawnShaping.drawn a p c hi lo pos x).other) ↔
+      lo < c ∧ c < hi)
+@Becoming.DrawnShaping.drawn_locks : ∀ {a p c hi lo : Nat} {pos : 0 < a},
+  lo ≤ hi →
+    ∀ {reads : Nat → Bool} {x : Becoming.RuleCapture.CarrierCounts},
+      (Becoming.DrawnShaping.drawn a p c hi lo pos x).favours →
+        ∀ (k : Nat),
+          Becoming.RuleCapture.Locked Becoming.RuleCapture.CarrierCounts.order
+              Becoming.RuleCapture.CarrierCounts.favours (Becoming.DrawnShaping.drawnRead a p c hi lo pos)
+              (Becoming.DrawnShaping.drawnCourse a p c hi lo pos reads x k) ∧
+            Becoming.RuleCapture.CarrierCounts.order.le x
+                (Becoming.DrawnShaping.drawnCourse a p c hi lo pos reads x k).fst ∧
+              Becoming.RuleCapture.CarrierCounts.order.le (Becoming.DrawnShaping.drawn a p c hi lo pos x)
+                (Becoming.DrawnShaping.drawnCourse a p c hi lo pos reads x k).snd
+@Becoming.DrawnShaping.drawn_from_below : ∀ {a p c hi lo : Nat} {pos : 0 < a},
+  lo ≤ hi →
+    ∀ {reads : Nat → Bool} {x : Becoming.RuleCapture.CarrierCounts},
+      (Becoming.DrawnShaping.drawn a p c hi lo pos x).disfavours →
+        ∀ (k : Nat),
+          Becoming.RuleCapture.Locked (Becoming.RuleCapture.reverse Becoming.RuleCapture.CarrierCounts.order)
+              Becoming.RuleCapture.CarrierCounts.disfavours (Becoming.DrawnShaping.drawnRead a p c hi lo pos)
+              (Becoming.DrawnShaping.drawnCourse a p c hi lo pos reads x k) ∧
+            Becoming.RuleCapture.CarrierCounts.order.le
+                (Becoming.DrawnShaping.drawnCourse a p c hi lo pos reads x k).fst x ∧
+              Becoming.RuleCapture.CarrierCounts.order.le
+                (Becoming.DrawnShaping.drawnCourse a p c hi lo pos reads x k).snd
+                (Becoming.DrawnShaping.drawn a p c hi lo pos x)
+@Becoming.DrawnShaping.drawn_locked_either : ∀ {a p c hi lo : Nat} {pos : 0 < a},
+  lo ≤ hi →
+    ∀ (reads : Nat → Bool) (x : Becoming.RuleCapture.CarrierCounts),
+      (∀ (k : Nat),
+          Becoming.RuleCapture.Locked Becoming.RuleCapture.CarrierCounts.order
+            Becoming.RuleCapture.CarrierCounts.favours (Becoming.DrawnShaping.drawnRead a p c hi lo pos)
+            (Becoming.DrawnShaping.drawnCourse a p c hi lo pos reads x k)) ∨
+        ∀ (k : Nat),
+          Becoming.RuleCapture.Locked (Becoming.RuleCapture.reverse Becoming.RuleCapture.CarrierCounts.order)
+            Becoming.RuleCapture.CarrierCounts.disfavours (Becoming.DrawnShaping.drawnRead a p c hi lo pos)
+            (Becoming.DrawnShaping.drawnCourse a p c hi lo pos reads x k)
+@Becoming.DrawnShaping.upper_strictly : ∀ {g g' : Becoming.RuleCapture.CarrierCounts},
+  Becoming.RuleCapture.CarrierCounts.order.le g g' → g.other < g.carrier → g'.other < g'.carrier
+@Becoming.DrawnShaping.drawn_rises : ∀ {a p c hi lo : Nat} {pos : 0 < a},
+  lo ≤ hi →
+    ∀ {reads : Nat → Bool} {x : Becoming.RuleCapture.CarrierCounts},
+      (Becoming.DrawnShaping.drawn a p c hi lo pos x).other < (Becoming.DrawnShaping.drawn a p c hi lo pos x).carrier →
+        0 < x.carrier →
+          ∀ (t : Nat),
+            (Becoming.DrawnShaping.drawnCourse a p c hi lo pos reads x t).fst.carrier *
+                (Becoming.DrawnShaping.drawnCourse a p c hi lo pos reads x (t + 1)).fst.other <
+              (Becoming.DrawnShaping.drawnCourse a p c hi lo pos reads x (t + 1)).fst.carrier *
+                (Becoming.DrawnShaping.drawnCourse a p c hi lo pos reads x t).fst.other
+@Becoming.DrawnShaping.drawn_carrier_pos : ∀ {a p c hi lo : Nat} {pos : 0 < a} (x : Becoming.RuleCapture.CarrierCounts),
+  0 < (Becoming.DrawnShaping.drawn a p c hi lo pos x).carrier
+@Becoming.DrawnShaping.present_along_course : ∀
+  {h : Becoming.RuleCapture.CarrierCounts → Becoming.RuleCapture.CarrierCounts → Becoming.RuleCapture.CarrierCounts},
+  (∀ (y r : Becoming.RuleCapture.CarrierCounts), 0 < (h y r).carrier) →
+    ∀ {reads : Nat → Bool} {x g : Becoming.RuleCapture.CarrierCounts},
+      0 < g.carrier →
+        0 < x.carrier →
+          ∀ (t : Nat),
+            0 < (Becoming.Pace.paced Becoming.RuleCapture.CarrierCounts.select h reads (x, g) t).snd.carrier ∧
+              0 < (Becoming.Pace.paced Becoming.RuleCapture.CarrierCounts.select h reads (x, g) t).fst.carrier
+@Becoming.DrawnShaping.drawn_falls : ∀ {a p c hi lo : Nat} {pos : 0 < a},
+  lo ≤ hi →
+    ∀ {reads : Nat → Bool} {x : Becoming.RuleCapture.CarrierCounts},
+      (Becoming.DrawnShaping.drawn a p c hi lo pos x).carrier < (Becoming.DrawnShaping.drawn a p c hi lo pos x).other →
+        0 < x.carrier →
+          ∀ (t : Nat),
+            (Becoming.DrawnShaping.drawnCourse a p c hi lo pos reads x (t + 1)).fst.carrier *
+                (Becoming.DrawnShaping.drawnCourse a p c hi lo pos reads x t).fst.other <
+              (Becoming.DrawnShaping.drawnCourse a p c hi lo pos reads x t).fst.carrier *
+                (Becoming.DrawnShaping.drawnCourse a p c hi lo pos reads x (t + 1)).fst.other
+Becoming.DrawnShaping.CriticalMass.even_favours : (Becoming.DrawnShaping.drawn 1 0 1 3 0 Nat.one_pos
+      Becoming.DrawnShaping.CriticalMass.even).other <
+  (Becoming.DrawnShaping.drawn 1 0 1 3 0 Nat.one_pos Becoming.DrawnShaping.CriticalMass.even).carrier
+Becoming.DrawnShaping.CriticalMass.few_disfavours : (Becoming.DrawnShaping.drawn 1 0 1 3 0 Nat.one_pos
+      Becoming.DrawnShaping.CriticalMass.oneToThree).carrier <
+  (Becoming.DrawnShaping.drawn 1 0 1 3 0 Nat.one_pos Becoming.DrawnShaping.CriticalMass.oneToThree).other
+Becoming.DrawnShaping.CriticalMass.at_mass : (Becoming.DrawnShaping.drawn 1 0 1 3 0 Nat.one_pos
+      Becoming.DrawnShaping.CriticalMass.oneToTwo).carrier =
+  (Becoming.DrawnShaping.drawn 1 0 1 3 0 Nat.one_pos Becoming.DrawnShaping.CriticalMass.oneToTwo).other
+@Becoming.DrawnShaping.CriticalMass.even_locks : ∀ {reads : Nat → Bool} (k : Nat),
+  Becoming.RuleCapture.Locked Becoming.RuleCapture.CarrierCounts.order Becoming.RuleCapture.CarrierCounts.favours
+      (Becoming.DrawnShaping.drawnRead 1 0 1 3 0 Nat.one_pos)
+      (Becoming.DrawnShaping.drawnCourse 1 0 1 3 0 Nat.one_pos reads Becoming.DrawnShaping.CriticalMass.even k) ∧
+    Becoming.RuleCapture.CarrierCounts.order.le Becoming.DrawnShaping.CriticalMass.even
+      (Becoming.DrawnShaping.drawnCourse 1 0 1 3 0 Nat.one_pos reads Becoming.DrawnShaping.CriticalMass.even k).fst
+@Becoming.DrawnShaping.CriticalMass.even_rises : ∀ {reads : Nat → Bool} (t : Nat),
+  (Becoming.DrawnShaping.drawnCourse 1 0 1 3 0 Nat.one_pos reads Becoming.DrawnShaping.CriticalMass.even
+            t).fst.carrier *
+      (Becoming.DrawnShaping.drawnCourse 1 0 1 3 0 Nat.one_pos reads Becoming.DrawnShaping.CriticalMass.even
+            (t + 1)).fst.other <
+    (Becoming.DrawnShaping.drawnCourse 1 0 1 3 0 Nat.one_pos reads Becoming.DrawnShaping.CriticalMass.even
+            (t + 1)).fst.carrier *
+      (Becoming.DrawnShaping.drawnCourse 1 0 1 3 0 Nat.one_pos reads Becoming.DrawnShaping.CriticalMass.even
+            t).fst.other
+@Becoming.DrawnShaping.CriticalMass.few_locks : ∀ {reads : Nat → Bool} (k : Nat),
+  Becoming.RuleCapture.Locked (Becoming.RuleCapture.reverse Becoming.RuleCapture.CarrierCounts.order)
+      Becoming.RuleCapture.CarrierCounts.disfavours (Becoming.DrawnShaping.drawnRead 1 0 1 3 0 Nat.one_pos)
+      (Becoming.DrawnShaping.drawnCourse 1 0 1 3 0 Nat.one_pos reads Becoming.DrawnShaping.CriticalMass.oneToThree k) ∧
+    Becoming.RuleCapture.CarrierCounts.order.le
+      (Becoming.DrawnShaping.drawnCourse 1 0 1 3 0 Nat.one_pos reads Becoming.DrawnShaping.CriticalMass.oneToThree
+          k).fst
+      Becoming.DrawnShaping.CriticalMass.oneToThree
+@Becoming.DrawnShaping.CriticalMass.few_falls : ∀ {reads : Nat → Bool} (t : Nat),
+  (Becoming.DrawnShaping.drawnCourse 1 0 1 3 0 Nat.one_pos reads Becoming.DrawnShaping.CriticalMass.oneToThree
+            (t + 1)).fst.carrier *
+      (Becoming.DrawnShaping.drawnCourse 1 0 1 3 0 Nat.one_pos reads Becoming.DrawnShaping.CriticalMass.oneToThree
+            t).fst.other <
+    (Becoming.DrawnShaping.drawnCourse 1 0 1 3 0 Nat.one_pos reads Becoming.DrawnShaping.CriticalMass.oneToThree
+            t).fst.carrier *
+      (Becoming.DrawnShaping.drawnCourse 1 0 1 3 0 Nat.one_pos reads Becoming.DrawnShaping.CriticalMass.oneToThree
+            (t + 1)).fst.other
+@Becoming.DrawnShaping.CriticalMass.at_mass_stays : ∀ {reads : Nat → Bool} (k : Nat),
+  Becoming.RuleCapture.CarrierCounts.order.le Becoming.DrawnShaping.CriticalMass.oneToTwo
+      (Becoming.DrawnShaping.drawnCourse 1 0 1 3 0 Nat.one_pos reads Becoming.DrawnShaping.CriticalMass.oneToTwo
+          k).fst ∧
+    Becoming.RuleCapture.CarrierCounts.order.le
+      (Becoming.DrawnShaping.drawnCourse 1 0 1 3 0 Nat.one_pos reads Becoming.DrawnShaping.CriticalMass.oneToTwo k).fst
+      Becoming.DrawnShaping.CriticalMass.oneToTwo
+Becoming.DrawnShaping.Against.not_locked : (Becoming.DrawnShaping.drawn 1 0 1 0 3 Nat.one_pos
+        Becoming.DrawnShaping.CriticalMass.even).other <
+    (Becoming.DrawnShaping.drawn 1 0 1 0 3 Nat.one_pos Becoming.DrawnShaping.CriticalMass.even).carrier ∧
+  ¬Becoming.RuleCapture.Locked Becoming.RuleCapture.CarrierCounts.order Becoming.RuleCapture.CarrierCounts.favours
+        (Becoming.DrawnShaping.drawnRead 1 0 1 0 3 Nat.one_pos)
+        (Becoming.DrawnShaping.drawnCourse 1 0 1 0 3 Nat.one_pos (fun x => true) Becoming.DrawnShaping.CriticalMass.even
+          1) ∧
+    ¬Becoming.RuleCapture.CarrierCounts.order.le
+        (Becoming.DrawnShaping.drawn 1 0 1 0 3 Nat.one_pos Becoming.DrawnShaping.CriticalMass.even)
+        (Becoming.DrawnShaping.drawnCourse 1 0 1 0 3 Nat.one_pos (fun x => true) Becoming.DrawnShaping.CriticalMass.even
+            2).snd

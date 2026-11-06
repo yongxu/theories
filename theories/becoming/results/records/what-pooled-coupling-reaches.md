@@ -127,6 +127,7 @@ The chapter's section 7.4, restated by M1 on 18 October 2026, read "alignment fo
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T214533.564191Z/verification.json) | — |
 
 Aliases: `what pooled coupling reaches`, `合起来的耦合及于什么`, `the gap for a pool's act`, `一组之动作的缺口`, `pooling closes the gap`, `合起来合上缺口`, `difference is what a pool adds`, `差别是一组所加的`
 

@@ -1,0 +1,76 @@
+@Becoming.ActiveReading.wholeRun_withholds_consuming : ∀ {W F C : Type} (U : W → Becoming.Web F C) {w : W} {f : F},
+  (U w).ConsumingIn f → ∀ (t : Nat), ¬Becoming.Ranking.wholeRun U w (f, t)
+@Becoming.ActiveReading.livingSignificance_wholeRun_iff : ∀ {W F C : Type} (U : W → Becoming.Web F C)
+  (relevance : W → F × Nat → Prop),
+  Becoming.LivingSignificance (Becoming.Ranking.frame (Becoming.Ranking.wholeRun U)) (fun x => True) relevance ↔
+    ∀ (w : W) (f : F) (t : Nat), (U w).active t f → ¬(U w).ConsumingIn f → relevance w (f, t)
+Becoming.ActiveReading.absent_dependent : ∀ (L : RelationalRenewal.Law), (Becoming.Ranking.absent L).Dependent
+Becoming.ActiveReading.absent_not_consuming : ∀ (L : RelationalRenewal.Law) (p : RelationalRenewal.Law.Part),
+  ¬(Becoming.Ranking.absent L).ConsumingIn p
+Becoming.ActiveReading.absent_included : ∀ (L : RelationalRenewal.Law),
+  L.needG ≤ L.start →
+    ∀ (t : Nat),
+      Becoming.Ranking.wholeRun (Becoming.Ranking.course L) Becoming.Ranking.Course.absent
+        (RelationalRenewal.Law.Part.sustaining, t)
+Becoming.ActiveReading.overdraw_unranked : ∀ (L : RelationalRenewal.Law),
+  0 < L.needG →
+    L.needF ≤ L.needG →
+      L.needG ≤ L.start →
+        ∀ {T0 : Nat},
+          (∀ (t : Nat), T0 ≤ t → L.renew + L.contrib t < L.draw t) →
+            ¬Becoming.Ranking.ExtendsUnder (Becoming.ActiveReading.active (Becoming.Ranking.course L))
+                  Becoming.Ranking.Course.occurs Becoming.Ranking.Course.absent ∧
+              ¬Becoming.Ranking.ExtendsUnder (Becoming.ActiveReading.active (Becoming.Ranking.course L))
+                  Becoming.Ranking.Course.absent Becoming.Ranking.Course.occurs
+Becoming.ActiveReading.overdraw_admits_occurrence : ∀ (L : RelationalRenewal.Law),
+  0 < L.needG →
+    L.needF ≤ L.needG →
+      L.needG ≤ L.start →
+        ∀ {T0 : Nat},
+          (∀ (t : Nat), T0 ≤ t → L.renew + L.contrib t < L.draw t) →
+            Becoming.Ranking.ComparisonUnder (Becoming.ActiveReading.active (Becoming.Ranking.course L))
+                (Becoming.Ranking.preferOccurs (Becoming.ActiveReading.active (Becoming.Ranking.course L))) ∧
+              Becoming.Ranking.preferOccurs (Becoming.ActiveReading.active (Becoming.Ranking.course L))
+                  Becoming.Ranking.Course.absent Becoming.Ranking.Course.occurs ∧
+                ¬Becoming.Ranking.preferOccurs (Becoming.ActiveReading.active (Becoming.Ranking.course L))
+                      Becoming.Ranking.Course.occurs Becoming.Ranking.Course.absent ∧
+                  (∀ (w : Becoming.Ranking.Course),
+                      ¬Becoming.Ranking.preferOccurs (Becoming.ActiveReading.active (Becoming.Ranking.course L)) w w) ∧
+                    ∀ (w w' w'' : Becoming.Ranking.Course),
+                      Becoming.Ranking.preferOccurs (Becoming.ActiveReading.active (Becoming.Ranking.course L)) w w' →
+                        Becoming.Ranking.preferOccurs (Becoming.ActiveReading.active (Becoming.Ranking.course L)) w'
+                            w'' →
+                          Becoming.Ranking.preferOccurs (Becoming.ActiveReading.active (Becoming.Ranking.course L)) w
+                            w''
+Becoming.ActiveReading.malignant_readings : (∀ (Better : Becoming.Ranking.Course → Becoming.Ranking.Course → Prop),
+    Becoming.Ranking.ComparisonUnder
+        (Becoming.Ranking.wholeRun (Becoming.Ranking.course RelationalRenewal.Law.malignant)) Better →
+      Better Becoming.Ranking.Course.occurs Becoming.Ranking.Course.absent) ∧
+  Becoming.Ranking.ComparisonUnder
+      (Becoming.ActiveReading.active (Becoming.Ranking.course RelationalRenewal.Law.malignant))
+      (Becoming.Ranking.preferOccurs
+        (Becoming.ActiveReading.active (Becoming.Ranking.course RelationalRenewal.Law.malignant))) ∧
+    Becoming.Ranking.preferOccurs
+        (Becoming.ActiveReading.active (Becoming.Ranking.course RelationalRenewal.Law.malignant))
+        Becoming.Ranking.Course.absent Becoming.Ranking.Course.occurs ∧
+      ¬Becoming.Ranking.preferOccurs
+          (Becoming.ActiveReading.active (Becoming.Ranking.course RelationalRenewal.Law.malignant))
+          Becoming.Ranking.Course.occurs Becoming.Ranking.Course.absent
+Becoming.ActiveReading.contest_extends_active : Becoming.Ranking.ExtendsUnder
+  (Becoming.ActiveReading.active Becoming.Ranking.contest) Becoming.Ranking.Contest.wins Becoming.Ranking.Contest.shares
+Becoming.ActiveReading.winning_active : ∀ (t : Nat),
+  Becoming.ActiveReading.active Becoming.Ranking.contest Becoming.Ranking.Contest.wins
+    (RelationalRenewal.Law.Part.focal, t)
+Becoming.ActiveReading.winning_withheld : ∀ (t : Nat),
+  ¬Becoming.Ranking.wholeRun Becoming.Ranking.contest Becoming.Ranking.Contest.wins
+      (RelationalRenewal.Law.Part.focal, t)
+Becoming.ActiveReading.contest_readings : Becoming.Ranking.ExtendsUnder
+    (Becoming.Ranking.wholeRun Becoming.Ranking.contest) Becoming.Ranking.Contest.wins Becoming.Ranking.Contest.shares ∧
+  Becoming.Ranking.ExtendsUnder (Becoming.ActiveReading.active Becoming.Ranking.contest) Becoming.Ranking.Contest.wins
+      Becoming.Ranking.Contest.shares ∧
+    (∀ (t : Nat),
+        Becoming.ActiveReading.active Becoming.Ranking.contest Becoming.Ranking.Contest.wins
+          (RelationalRenewal.Law.Part.focal, t)) ∧
+      ∀ (t : Nat),
+        ¬Becoming.Ranking.wholeRun Becoming.Ranking.contest Becoming.Ranking.Contest.wins
+            (RelationalRenewal.Law.Part.focal, t)

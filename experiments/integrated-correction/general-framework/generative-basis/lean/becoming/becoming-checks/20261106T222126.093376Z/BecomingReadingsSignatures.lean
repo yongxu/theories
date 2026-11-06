@@ -1,0 +1,12 @@
+import Becoming.Readings
+#check @Becoming.Contextual.world_active
+#check @Becoming.sub_add_add_right
+#check @Becoming.sub_eq_of_add_eq
+#check @Becoming.add_eq_of_sub_eq
+#check @Becoming.changes_agree_iff
+#check @Becoming.Flow.changeReadings_agree_iff
+#check @Becoming.Flow.changeReadings_glue_iff
+#check @Becoming.Flow.changeReadings_glue_everywhere_iff
+#check @Becoming.Flow.changeReadings_free_iff
+#check @Becoming.Flow.changeReadings_glue_counting_rest
+#check @Becoming.World.unity

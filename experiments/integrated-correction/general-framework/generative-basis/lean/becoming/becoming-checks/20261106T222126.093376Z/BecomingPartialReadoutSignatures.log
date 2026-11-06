@@ -1,0 +1,88 @@
+@Becoming.PartialReadout.ExactWithin.sound : ∀ {S : Type u_1} {K : Type u_2} {V : Type u_3} {D : S → Prop} {π : S → K}
+  {f : S → V} {answer : K → Option V},
+  Becoming.PartialReadout.ExactWithin D π f answer → Becoming.PartialReadout.SoundWithin D π f answer
+@Becoming.PartialReadout.ExactWithin.lumped : ∀ {S : Type u_1} {K : Type u_2} {V : Type u_3} {D : S → Prop} {π : S → K}
+  {f : S → V} {answer : K → Option V},
+  Becoming.PartialReadout.ExactWithin D π f answer → Becoming.PartialReadout.LumpedWithin D π f
+@Becoming.PartialReadout.exactWithin_univ_iff : ∀ {S : Type u_1} {K : Type u_2} {V : Type u_3} {π : S → K} {f : S → V}
+  {g : K → V},
+  (Becoming.PartialReadout.ExactWithin (fun x => True) π f fun k => some (g k)) ↔ Becoming.Readout.Decodes π f g
+@Becoming.PartialReadout.lumpedWithin_univ_iff : ∀ {S : Type u_1} {K : Type u_2} {V : Type u_3} {π : S → K} {f : S → V},
+  Becoming.PartialReadout.LumpedWithin (fun x => True) π f ↔ Becoming.Learning.Lumped π f
+@Becoming.PartialReadout.ExactWithin.ofSection : ∀ {S : Type u_1} {K : Type u_2} {V : Type u_3} {D : S → Prop}
+  {π : S → K} {f : S → V} {pick : K → Option S},
+  Becoming.PartialReadout.SectionWithin D π pick →
+    Becoming.PartialReadout.LumpedWithin D π f →
+      Becoming.PartialReadout.ExactWithin D π f (Becoming.PartialReadout.throughSection pick f)
+@Becoming.PartialReadout.exact_exists_iff : ∀ {S : Type u_1} {K : Type u_2} {V : Type u_3} {D : S → Prop} {π : S → K}
+  {f : S → V} {pick : K → Option S},
+  Becoming.PartialReadout.SectionWithin D π pick →
+    ((∃ answer, Becoming.PartialReadout.ExactWithin D π f answer) ↔ Becoming.PartialReadout.LumpedWithin D π f)
+@Becoming.PartialReadout.SoundWithin.silent : ∀ {S : Type u_1} {K : Type u_2} {V : Type u_3} {D : S → Prop} {π : S → K}
+  {f : S → V} {answer : K → Option V},
+  Becoming.PartialReadout.SoundWithin D π f answer →
+    ∀ {s s' : S}, D s → D s' → π s = π s' → f s ≠ f s' → answer (π s) = none
+@Becoming.PartialReadout.SoundWithin.mono : ∀ {S : Type u_1} {K : Type u_2} {V : Type u_3} {D D' : S → Prop} {π : S → K}
+  {f : S → V} {answer : K → Option V},
+  Becoming.PartialReadout.SoundWithin D π f answer →
+    (∀ (s : S), D' s → D s) → Becoming.PartialReadout.SoundWithin D' π f answer
+@Becoming.PartialReadout.LumpedWithin.finer : ∀ {S : Type u_1} {K : Type u_2} {V : Type u_3} {K' : Type u_4}
+  {D : S → Prop} {π : S → K} {f : S → V},
+  Becoming.PartialReadout.LumpedWithin D π f →
+    ∀ (π' : S → K'), Becoming.PartialReadout.LumpedWithin D (fun s => (π s, π' s)) f
+@Becoming.PartialReadout.ExactWithin.retained : ∀ {S : Type u_1} {K : Type u_2} {V : Type u_3} {M : Type u_4}
+  {D : S → Prop} {π : S → K} {f : S → V} {answer : K → Option V},
+  Becoming.PartialReadout.ExactWithin D π f answer →
+    ∀ (retain : K → M) (read : M → K),
+      (∀ (s : S), D s → read (retain (π s)) = π s) →
+        Becoming.PartialReadout.ExactWithin D (fun s => retain (π s)) f fun m => answer (read m)
+@Becoming.PartialReadout.silent_sound : ∀ {S : Type u_1} {K : Type u_2} {V : Type u_3} (D : S → Prop) (π : S → K)
+  (f : S → V), Becoming.PartialReadout.SoundWithin D π f fun x => none
+@Becoming.PartialReadout.silent_not_exact : ∀ {S : Type u_1} {K : Type u_2} {V : Type u_3} {D : S → Prop} (π : S → K)
+  (f : S → V) {s : S}, D s → ¬Becoming.PartialReadout.ExactWithin D π f fun x => none
+@Becoming.PartialReadout.safe_of_holds : ∀ {S : Type u_1} (D asserts : S → Prop) {p : Prop},
+  p → Becoming.PartialReadout.SafeWithin D p asserts
+Becoming.PartialReadout.paired_exact : Becoming.PartialReadout.ExactWithin Becoming.PartialReadout.every
+  Becoming.PartialReadout.paired Becoming.PartialReadout.bit Becoming.PartialReadout.decodePair
+Becoming.PartialReadout.signal_not_lumped : ¬Becoming.PartialReadout.LumpedWithin Becoming.PartialReadout.every
+    Becoming.PartialReadout.signal Becoming.PartialReadout.bit
+Becoming.PartialReadout.signal_no_exact : ¬∃ answer,
+    Becoming.PartialReadout.ExactWithin Becoming.PartialReadout.every Becoming.PartialReadout.signal
+      Becoming.PartialReadout.bit answer
+Becoming.PartialReadout.signal_sound_silent : ∀ (answer : Bool → Option Bool),
+  Becoming.PartialReadout.SoundWithin Becoming.PartialReadout.every Becoming.PartialReadout.signal
+      Becoming.PartialReadout.bit answer →
+    ∀ (e : Bool), answer e = none
+Becoming.PartialReadout.direct_exact_unreversed : Becoming.PartialReadout.ExactWithin Becoming.PartialReadout.unreversed
+  Becoming.PartialReadout.signal Becoming.PartialReadout.bit Becoming.PartialReadout.direct
+Becoming.PartialReadout.direct_not_sound : ¬Becoming.PartialReadout.SoundWithin Becoming.PartialReadout.every
+    Becoming.PartialReadout.signal Becoming.PartialReadout.bit Becoming.PartialReadout.direct
+Becoming.PartialReadout.direct_right_once : Becoming.PartialReadout.direct
+    (Becoming.PartialReadout.signal { value := false, reversed := false }) =
+  some (Becoming.PartialReadout.bit { value := false, reversed := false })
+Becoming.PartialReadout.negated_exact : Becoming.PartialReadout.ExactWithin Becoming.PartialReadout.every
+  (fun h => !h.value) Becoming.PartialReadout.bit fun b => some !b
+@Becoming.PartialReadout.Runs.finer_lumped : ∀ {S : Type u_1} {A : Type u_2} {R : Type u_3} {V : Type u_4}
+  {P : Generative.Process S A} {R' : Type u_3} {D : Becoming.Run P → Prop} {g : S → R} {f : S → V} {t : Nat},
+  Becoming.PartialReadout.LumpedWithin D (Becoming.PartialReadout.Runs.prefixBefore g t)
+      (Becoming.PartialReadout.Runs.featureAt f t) →
+    ∀ (g' : S → R'),
+      Becoming.PartialReadout.LumpedWithin D
+        (fun r => (Becoming.PartialReadout.Runs.prefixBefore g t r, Becoming.PartialReadout.Runs.prefixBefore g' t r))
+        (Becoming.PartialReadout.Runs.featureAt f t)
+@Becoming.PartialReadout.Runs.silent_sound : ∀ {S : Type u_1} {A : Type u_2} {R : Type u_3} {V : Type u_4}
+  {P : Generative.Process S A} (D : Becoming.Run P → Prop) (g : S → R) (f : S → V) (t : Nat),
+  Becoming.PartialReadout.SoundWithin D (Becoming.PartialReadout.Runs.prefixBefore g t)
+    (Becoming.PartialReadout.Runs.featureAt f t) fun x => none
+@Becoming.PartialReadout.Runs.silent_not_exact : ∀ {S : Type u_1} {A : Type u_2} {R : Type u_3} {V : Type u_4}
+  {P : Generative.Process S A} {D : Becoming.Run P → Prop} (g : S → R) (f : S → V) (t : Nat) {r : Becoming.Run P},
+  D r →
+    ¬Becoming.PartialReadout.ExactWithin D (Becoming.PartialReadout.Runs.prefixBefore g t)
+        (Becoming.PartialReadout.Runs.featureAt f t) fun x => none
+@Becoming.PartialReadout.Runs.exact_iff_predictsFrom : ∀ {S : Type u_1} {R : Type u_2} {V : Type u_3} {next : S → S}
+  {g : S → R} {f : S → V} {pred : List R → Option V} {T : Nat},
+  (∀ (t : Nat),
+      T ≤ t →
+        Becoming.PartialReadout.ExactWithin (fun x => True) (Becoming.PartialReadout.Runs.prefixBefore g t)
+          (Becoming.PartialReadout.Runs.featureAt f t) pred) ↔
+    ∀ (r : Becoming.Run (Becoming.Law.process next)), Becoming.LearnableRuns.PredictsFrom g f pred r T
