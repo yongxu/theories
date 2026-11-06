@@ -75,7 +75,10 @@ The second critic read 100 entries drawn at random, stratified by verdict (seed 
 - 15 had a label or a target's role wrong;
 - 2 had a wrong reading.
 
-Weighted by stratum size, that estimates 82.6% of all entries holding, 14.2% with a label or role wrong and 3.2% with a wrong reading. Its fixes are applied. The other entries were not read again, so the estimate stands for them. The sample was drawn before the late layer, and the late layer changed only wording that the homes no longer say.
+Weighted by stratum size, that estimates 82.6% of all entries holding, 14.2% with a label or role wrong and 3.2% with a wrong reading. Its fixes are applied. The other entries were not read again, so the estimate stands for them. The sample was drawn before the late layer. Beyond the second critic's own fixes, the late layer did two things, and changed no label:
+
+- it brought wording into line with what the homes say now;
+- in nine entries, it corrected wording that gave ranking to C alone or dropped 02's premises on giving.
 
 ## What it corrected in the live account
 
@@ -106,7 +109,16 @@ Since then:
   - 05's D65 label, "any ranking is C's";
   - eight records' line "ranking goes through the comparison C" (排序经由比较 C).
 
-  Each now adds what 07 §4 adds, "or a premise in its place", in LM1's words, with a history note in each record (`apply_ranking.py`). Eleven entries quoting them follow the corrected homes.
+  Each now adds what 07 §4 adds, "or a premise in its place", in LM1's words, with a history note in each record (`apply_ranking.py`). A reader other than their author then checked these corrections and asked for three more. They were made by hand and are recorded in the script:
+  - 05's label names both premises: "scope by the continuation condition, and a ranking needs C or a premise in its place (07 §4)";
+  - selection-within-and-among-groups says "not through the division", where "it" had come to read as C;
+  - 06's 易传 line (616) says 对进程的排序须它或代替它的前提.
+
+  Eleven entries quoting these homes follow the corrected text.
+
+  The same reader found the error elsewhere, and each correction uses the reader's words:
+  - six entry fields and one group summary that gave ranking to C alone in their own words;
+  - four lines in AA's atlas (`entries/dynamics.json`) that copied the eight records' old line. AA's session was told.
 - The edition to send, `review-packet-4`, carries most of the corrected sentences in their old wording. Whether it goes out as it is is Ren's decision.
 
 **Not changed, and listed.** A-10 and the record `shaping-the-rule-selected-by-what-comes-back` list the persistence of elites (Acemoglu and Robinson 2008) as a known form of shaping selected by what comes back. Whether their mechanism is that form turns on a reading of their paper that no source here can check.
@@ -117,6 +129,7 @@ A crosswalk entry quotes its homes, so it goes stale when a home changes, and no
 
 - **This crosswalk's own corrections:** five entries quoting COLLECTIVE-DIRECTION §5, and 30 more quoting the other corrections.
 - **AA's errata on main:** six entries named COLLECTIVE-DIRECTION's exit "Give first, with a reserve", now "Spare all one waits on", since the law has no reserve in it.
+- **LM2 on main:** one entry said that the title of the record `generation-is-replenishment` keeps the older sense of "generation". 04 now says that its id keeps the older word.
 - **Everything else main changed since this branch began,** LM1 and AA's errata and restatements among it, in two rounds ([MAIN-DRIFT.md](MAIN-DRIFT.md)). In each, one AI author per group read the fields against their homes as they are now, and another AI checked every verdict.
   - **Round one, by words** (`main_drift.py`, `reads/main-drift-*.json`): every entry field quoting words that main removed.
   - **Round two, by claim** (`reads/claims-*.json`): its checkers found that a word search misses an ending changed at a sentence's close ("needs C." became "needs C or a premise in its place.") and misses paraphrases. Round two read every field stating one of the changed claims, whatever its words: C's order, waiting and sparing, promises and ignition, CD's edges, joint ending, optima, and AA's eleven restated lines.
@@ -127,7 +140,7 @@ A crosswalk entry quotes its homes, so it goes stale when a home changes, and no
   - 41 amended by their checker;
   - 0 label changes.
 
-Three entries that round two's checker named and no group listed kept 02's label "any giving law" and dropped its premises on giving, so the margin's exactness read as holding for every giving law. They now state the premises.
+Three entries that round two's checker named and no group listed kept 02's label "any giving law" and dropped its premises on giving, so the margin's exactness read as holding for every giving law. They now state the premises. The first version still fell short of them, and the ranking corrections' reader gave the words that are now used: meeting the draw at every z from y with z + H at most the top, and 0 < H + y.
 
 The late pass stops if any removed wording it names survives. Round two's patterns were chosen from the changed claims, so a restatement in words none of them matches can still be stale.
 

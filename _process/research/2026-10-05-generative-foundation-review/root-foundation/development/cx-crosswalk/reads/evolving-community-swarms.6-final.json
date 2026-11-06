@@ -2445,7 +2445,7 @@
   {
    "id": "cx-ecs-organization-as-object-of-learning",
    "what": "changed",
-   "why": "05's D65 label and eight records gave ranking to C alone; corrected at home (apply_ranking.py, 7 November 2026): the entry quotes what it says now / 05's D65 label and eight records gave ranking to C alone; corrected at home (apply_ranking.py, 7 November 2026): the entry quotes what it says now"
+   "why": "05's D65 label and eight records gave ranking to C alone; corrected at home (apply_ranking.py, 7 November 2026): the entry quotes what it says now / the entry gave ranking to C alone in its own words, where 07 §4 says a ranking of courses needs C or a premise in its place (LM1); found by the ranking corrections' checker, 7 November 2026"
   },
   {
    "id": "cx-ecs-surpass-as-goal",
