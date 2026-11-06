@@ -112,7 +112,7 @@
     "theories/becoming/results/records/substitution-preserves-consumption.md": "90a3fa2b3e63fe4a0831e990e3b8dc3f4e4647b66ec409e29a5f006a738ff175",
     "theories/becoming/results/records/ranking-under-readings.md": "b083f3902ab6cdd05cbb65eb1845d707f1786ed655be08dc123dc6fd4cc5f541",
     "theories/becoming/results/records/condition-correspondence-discipline.md": "305f6b68a3c3a7d6e3ce785b85713ee95b66cfd375311a887582be7d35396f34",
-    "theories/becoming/results/records/unceasing-generation-needs-renewal.md": "f7f0e60f4a815fa1e464986e8659e67a3efe01e5d2f1bd1b3cf75aeb682165f1",
+    "theories/becoming/results/records/unceasing-generation-needs-renewal.md": "6acd01de0b9ce7e685b050a80166f1aa5eddfa1d5cf6ed3a63871ec248eccbec",
     "theories/becoming/results/records/more-needs-renewers.md": "6418b2d5516eba9e1fcf0b88e128bc9ddb642ec528f6b5c8b721cdcba13ae8e5",
     "theories/becoming/results/records/identity-across-steps.md": "b569be72d8c38b51690348b353885eced8f5bb8e59c1ad5b6807c3066166dd9c",
     "theories/becoming/results/records/no-finite-part-bears-taking.md": "320e1e05356a71409f8e0e91e8083e7250a560e050e04fe981f7a4a193d461b1",
@@ -600,8 +600,8 @@
     "theories/becoming/results/records/errors-by-chance-end-a-pair-keeping-mutual-withholding.md": "234d0a2a53df3619fea570bb4ddebae9a54890badccb6144bfef6be84b3e77ef",
     "theories/becoming/results/records/what-decides-giving-against-keeping-on-a-flow.md": "0d2232e53ea33d30ccfb63a16f4abb64bb0b434e9ff005359cac10805dbd4716",
     "theories/becoming/results/records/errors-by-chance-in-a-pair-keeping-mutual-withholding.md": "f81971da034b1472e6cc82baffc870f739b182d5013ae1d87b6c48597ae31964",
-    "theories/becoming/results/atlas/ATLAS.md": "7e88b9a8a059e9c99a3de587e717a93698874cd9f5f2faefed501df0c0966223",
-    "theories/becoming/results/data/atlas.json": "b63686a1409289457d748ff9f8a80eb6feb783be59f9d3053ef50cde12589771",
+    "theories/becoming/results/atlas/ATLAS.md": "d7cc68e145a7d9847399c13338d15686933741ad39a70cb6581dd3662dac7b05",
+    "theories/becoming/results/data/atlas.json": "a94b355613490ff7484529aa4c812eaef7ff8a0db9a19aee26ebfc3858faebb3",
     "theories/becoming/results/records/what-would-give-c.md": "fbb52efeaeed2c9a430820d0c949dbe53ea12bb7bb1ab715ab69938e15a6e3b5"
   }
 }

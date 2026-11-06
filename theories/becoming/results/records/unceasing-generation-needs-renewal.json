@@ -166,8 +166,8 @@
       "witness": "Becoming.Steady.steady"
     },
     {
-      "zh": "Unceasing 依赖跨步的同一（identity-across-steps）：保持持续活动的命名不制造生起，要把定理读作关于生成的定理，需要这样的命名。",
-      "en": "Unceasing depends on identity across steps (identity-across-steps): a naming that keeps continuing activity makes no arising, and reading the theorems as about generation needs such a naming.",
+      "zh": "Unceasing 依赖跨步的同一（identity-across-steps）：保持持续活动的命名不制造生起；这些定理只在承载一个样式的延续之下才是关于生成的定律，沿此延续，一条生成之线的承载者不止地生起（Web.generation_arises_late）。",
+      "en": "Unceasing depends on identity across steps (identity-across-steps): a naming that keeps continuing activity makes no arising; these are laws of generation only under a continuation that carries a pattern, along which a generating line has carriers arising without end (Web.generation_arises_late).",
       "kind": "scope"
     },
     {
@@ -893,6 +893,10 @@
     {
       "en": "7 November 2026, board item LM2 (its reader's second round): arising said as generation corrected, and the title made exact: embodied arising replenishes, while Flicker arises with nothing given. No law, premise or proof changed.",
       "zh": "2026年11月7日，工作板条目 LM2（其读者第二轮）：以生成称生起处已改，标题改为确切：体现的生起即补充，而 Flicker 无所予而生起。诸律、前提与证明皆不变。"
+    },
+    {
+      "en": "7 November 2026, board item LM2 (its reader's third round): the limit on identity no longer claims that reading these laws as laws of generation needs a naming, which no Lean shows; it says they are laws of generation under a continuation that carries a pattern (Web.generation_arises_late). No law, premise or proof changed.",
+      "zh": "2026年11月7日，工作板条目 LM2（其读者第三轮）：关于同一之界限不再声称把这些定律读作生成之定律需要某种命名，此无 Lean 表明；今言其在承载样式之延续下为生成之定律（Web.generation_arises_late）。诸律、前提与证明皆不变。"
     }
   ],
   "text_versions": [

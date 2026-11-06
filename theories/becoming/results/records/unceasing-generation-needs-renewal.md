@@ -51,7 +51,7 @@
 - Does not state “more”, diversity or complexity; the generation component is not added to any reading of living.
 - The depletion premise asks only that some condition of the family change (depletes_iff) and does not screen out arisings made by naming (TideFlip). Witness: `Becoming.TideFlip.naming_meets_premises`.
 - In the flow form of the two-kind reading arising works only through uptake (Steady), while the arising of an embodied relatum is itself replenishment (generation-is-replenishment). Witness: `Becoming.Steady.steady`.
-- Unceasing depends on identity across steps (identity-across-steps): a naming that keeps continuing activity makes no arising, and reading the theorems as about generation needs such a naming.
+- Unceasing depends on identity across steps (identity-across-steps): a naming that keeps continuing activity makes no arising; these are laws of generation only under a continuation that carries a pattern, along which a generating line has carriers arising without end (Web.generation_arises_late).
 - Rises is a net rise, and concurrent replenishment is visible only in the flow form. Witness: `Becoming.Expansion.undepleted`.
 - The witnesses are minimal.
 - **Counterexample:** Renewal does not imply arising (Tide.renewal_without_arising): a tide the moon renews rises at arbitrarily late steps and the moon's renewing recurs while nothing arises; this is strictness in this result's own sense. The `Renewable` witness (Renewable.renewal_without_arising) is “dependence kept, no arising”, with no rise. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Arising.lean)
@@ -185,6 +185,7 @@ Aliases: `Becoming.Web.depletes_iff`, `Becoming.Web.depletion_not_recurring`, `B
 - 7 November 2026, board item LM2: "generation" for arising (Unceasing) and for a flow more without end (More) is replaced, since the glossary's generation never means arising; the Lean's docstrings changed with it. No law, premise or proof changed.
 - 7 November 2026, board item LM2 (its reader's findings): "generation" for embodied arising or for arising is replaced, since the glossary's generation never means arising. No law, premise or proof changed.
 - 7 November 2026, board item LM2 (its reader's second round): arising said as generation corrected, and the title made exact: embodied arising replenishes, while Flicker arises with nothing given. No law, premise or proof changed.
+- 7 November 2026, board item LM2 (its reader's third round): the limit on identity no longer claims that reading these laws as laws of generation needs a naming, which no Lean shows; it says they are laws of generation under a continuation that carries a pattern (Web.generation_arises_late). No law, premise or proof changed.
 - 3 rebinding entries (2026-10-13 to 2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](unceasing-generation-needs-renewal.json).
 
 <a id="earlier-text--早期文本"></a>
