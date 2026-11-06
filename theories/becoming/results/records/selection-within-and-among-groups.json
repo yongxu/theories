@@ -21,7 +21,7 @@
         "Becoming.SelectionLevels.whole_total",
         "Becoming.SelectionLevels.whole_weighted",
         "Becoming.SelectionLevels.whole_length",
-        "Becoming.SelectionLevels.total_eq_of_mem",
+        "Becoming.total_congr_on",
         "Becoming.SelectionLevels.whole_length_of_equal"
       ]
     },
@@ -238,7 +238,6 @@
         "Becoming.SelectionLevels.means_none_of_alike",
         "Becoming.SelectionLevels.meet",
         "Becoming.SelectionLevels.mem_of_mem_context",
-        "Becoming.SelectionLevels.nil_of_length_zero",
         "Becoming.SelectionLevels.none_iff",
         "Becoming.SelectionLevels.none_iff_sized",
         "Becoming.SelectionLevels.pairs_context",
@@ -253,7 +252,6 @@
         "Becoming.SelectionLevels.square_eq_iff",
         "Becoming.SelectionLevels.square_lt_iff",
         "Becoming.SelectionLevels.square_split",
-        "Becoming.SelectionLevels.total_eq_of_mem",
         "Becoming.SelectionLevels.whole",
         "Becoming.SelectionLevels.whole_length",
         "Becoming.SelectionLevels.whole_length_of_equal",
@@ -264,12 +262,12 @@
         "Becoming.SelectionLevels.within_for_of_rises",
         "Becoming.SelectionLevels.within_none_of_uniform"
       ],
-      "sha256": "63330f2fc76504fe103090b7e773d44b7149fd09373086e3ab4c800b61fa62a5"
+      "sha256": "ea9d8944a79dbde1b94b75921b88716f0a39c5f181af873617a7d4b9e3a57fb8"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionTerm.lean",
       "role": "proof",
-      "sha256": "d15e7af183adb0363e93f83759c0e2a9f4d1f94b40f331067e6d339d431dc8fe"
+      "sha256": "8b990ef2bdabd78168685b33930779185f54bcaf475ac8252613324b662bf628"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T094300.398321Z/verification.json",
@@ -313,7 +311,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json",
       "role": "receipt",
-      "sha256": "5db1e7a65fab3461c8eb58498262c6b938bba051e8e51d0c7f87541afaa80183",
+      "sha256": "a81a117f34fdfa4d44ecee3da8ab63099a7febb99c2accbd7b6fc4ec325f2add",
       "declarations": []
     },
     {
@@ -321,13 +319,49 @@
       "role": "receipt",
       "sha256": "a95e583c9e495140d23e2599a6ce8c2d6e710a3887421375e6e7a2ca5eb191fe",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "role": "proof",
+      "sha256": "cb2c9c8ba8e16916b41a36e1c392f3cd4840a7436b2817c12796c866908020a7",
+      "declarations": [
+        "Becoming.nil_of_length_zero"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean",
+      "role": "proof",
+      "sha256": "852a5491313223e5de476027cd98408c196db67ac2c263d776dd28e6d050ac3c",
+      "declarations": [
+        "Becoming.total_congr_on"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "role": "receipt",
+      "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionLevels.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261103T203838.375122Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.SelectionLevels",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Population",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Prelude",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -344,6 +378,10 @@
     {
       "en": "20 October 2026, EV7: the division is stated for groups of any sizes (SelectionLevels.levels_sized; record selection-within-and-among-groups-of-any-sizes, study section 273), and levels is now derived from it as the case of equal sizes, its statement unchanged; the old proof's helpers lhs_shape and rhs_shape are gone, so the law's declarations name the derivation instead. The claim is unchanged; its open item on groups of unequal size is answered there.",
       "zh": "2026年10月20日，EV7：划分陈述于大小任意的组（SelectionLevels.levels_sized；记录 selection-within-and-among-groups-of-any-sizes，研究第 273 节），levels 现作为大小相等的情形由其推出，陈述不变；旧证明的辅助引理 lhs_shape 与 rhs_shape 已删，故该定律的声明改列推导所用者。论断不变；其关于大小不等之组的开放项在那里回答。"
+    },
+    {
+      "en": "6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.",
+      "zh": "2026年11月6日，工作板条目 LM：此记录所列辅助引理现只陈述一次，在 Prelude、Flow、Change 或 Laws，或即 Lean 自有者而从列表除去；改其名，诸律不变。"
     }
   ]
 }

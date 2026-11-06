@@ -94,6 +94,7 @@ Answers Ren's question of 12 October 2026: “how how accurate can we do that uh
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `Becoming.counting_truncation_le`, `Becoming.signed`, `Becoming.Interference.cancels`, `Becoming.Interference.truncation_misses_cancellation`, `Becoming.Interference.unseen`, `Becoming.Interference.unseen_balanced`, `Becoming.Memory.not_of_steps`, `Becoming.Memory.of_kept`, `Becoming.Weighted.Loop.courses_double`, `interference`, `干涉`, `cancellation`, `抵消`, `truncation`, `截断`, `memory`, `记忆`, `signed counts`, `带符号的计数`, `Becoming.Courses.loop_courses_double`
 

@@ -92,6 +92,7 @@ The chapter's open programme (section 8.2, Selection, causes and experiment) nam
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T123201.760905Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T130149.371173Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `favouring what reaches beyond`, `偏向伸出`, `raising what couples in`, `抬高所耦合者`, `draws from beyond`, `取自其外`, `nothing from nothing`, `无中不生有`
 

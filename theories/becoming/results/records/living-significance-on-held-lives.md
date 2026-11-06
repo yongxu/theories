@@ -125,6 +125,7 @@ Ren's proposal says “it can be anything that want's its continuation to have s
 | integration | [DESIGN.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/DESIGN.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T213154.508889Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `Becoming.Valuation.Held`, `Becoming.Valuation.Unheld`, `Becoming.Valuation.significant_iff_held`, `Becoming.Valuation.significant_iff_reached`, `Becoming.Valuation.own_transmission`, `Becoming.Valuation.significant_of_transmits`, `Becoming.Web.held_by_formations`, `Becoming.Web.significant_iff_self`, `Becoming.Apart.not_enough`, `Becoming.Unclaimed.held_is_needed`, `Becoming.Relayed.transmission_is_needed`
 

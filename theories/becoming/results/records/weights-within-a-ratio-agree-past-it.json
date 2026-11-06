@@ -21,7 +21,7 @@
         "Becoming.Weighting.RatioWithin",
         "Becoming.Weighting.cond_scale",
         "Becoming.Weighting.weighed_scale",
-        "Becoming.Weighting.mul_swap_right",
+        "Becoming.Naturals.mul_right_comm",
         "Becoming.Weighting.beyond_within"
       ]
     },
@@ -187,7 +187,6 @@
         "Becoming.Weighting.cond_scale",
         "Becoming.Weighting.const_lt_iff_beyond",
         "Becoming.Weighting.every_within_iff",
-        "Becoming.Weighting.mul_swap_right",
         "Becoming.Weighting.neutral_ranks_by_number",
         "Becoming.Weighting.opposite_within_iff",
         "Becoming.Weighting.outweighs",
@@ -212,7 +211,7 @@
         "Becoming.Weighting.weighed_tilted_toward",
         "Becoming.Weighting.weighed_zero_of_size"
       ],
-      "sha256": "b26fdf41eb04ff899beb2bead6bafe5e3a6ede5e9030ba0f68a532214d4bd6e6"
+      "sha256": "fe523d3396a4e3387458b0aeda4904813b29c7c7e8785e3a33e45fab351af009"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T143810.042893Z/verification.json",
@@ -328,13 +327,34 @@
       "role": "receipt",
       "sha256": "37b752112e19d77ba717f771c6057c5516c1ec47ff247889baeb36374104db54",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "role": "proof",
+      "sha256": "cb2c9c8ba8e16916b41a36e1c392f3cd4840a7436b2817c12796c866908020a7",
+      "declarations": [
+        "Becoming.Naturals.mul_right_comm"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "role": "receipt",
+      "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261030T131028.245732Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Weightings",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Prelude",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -343,6 +363,10 @@
     {
       "en": "22 October 2026: added (VT1): the locus VD1 tested, stated as a theorem conditional on how dispersed the weights are, with the exact threshold and the tilted weighting tying at the boundary; outweighs and neutral_ranks_by_number derived as its cases; study section 367.",
       "zh": "2026年10月22日：新增（VT1）：VD1 所检验的落点，陈述为以权重分散程度为条件的定理，给出精确阈值，偏向的加权在边界上持平；outweighs 与 neutral_ranks_by_number 作为其情形导出；研究第 367 节。"
+    },
+    {
+      "en": "6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.",
+      "zh": "2026年11月6日，工作板条目 LM：此记录所列辅助引理现只陈述一次，在 Prelude、Flow、Change 或 Laws，或即 Lean 自有者而从列表除去；改其名，诸律不变。"
     }
   ]
 }

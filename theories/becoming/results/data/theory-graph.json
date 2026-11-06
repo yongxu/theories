@@ -6768,7 +6768,7 @@
    "type": "module",
    "name": "Becoming.Grammar",
    "level": "L0",
-   "theorems": 72,
+   "theorems": 74,
    "region": "root",
    "base": "grammar",
    "on_grammar": true,
@@ -6790,7 +6790,7 @@
    "type": "module",
    "name": "Becoming.GrammarMap",
    "level": "L0",
-   "theorems": 48,
+   "theorems": 50,
    "region": "map",
    "base": "grammar",
    "on_grammar": true,
@@ -6812,7 +6812,7 @@
    "type": "module",
    "name": "Becoming.GrammarCandidates",
    "level": "L1",
-   "theorems": 66,
+   "theorems": 69,
    "region": "classical",
    "base": "grammar",
    "on_grammar": true,
@@ -6845,7 +6845,7 @@
    "type": "module",
    "name": "Becoming.GrammarLaws",
    "level": "L0",
-   "theorems": 223,
+   "theorems": 217,
    "region": "root",
    "base": "grammar",
    "on_grammar": true,
@@ -6856,7 +6856,7 @@
    "type": "module",
    "name": "Becoming.GrammarConditionals",
    "level": "L1",
-   "theorems": 48,
+   "theorems": 49,
    "region": "classical",
    "base": "grammar",
    "on_grammar": true,
@@ -6933,7 +6933,7 @@
    "type": "module",
    "name": "Becoming.Laws",
    "level": "L1",
-   "theorems": 5,
+   "theorems": 6,
    "region": "root",
    "base": "frame",
    "on_grammar": true,
@@ -6999,7 +6999,7 @@
    "type": "module",
    "name": "Becoming.Recurrence",
    "level": "L1",
-   "theorems": 82,
+   "theorems": 74,
    "region": "map",
    "base": "frame",
    "on_grammar": true,
@@ -7197,7 +7197,7 @@
    "type": "module",
    "name": "Becoming.Stuttering",
    "level": "L1",
-   "theorems": 77,
+   "theorems": 75,
    "region": "method",
    "base": "old-base",
    "on_grammar": false,
@@ -7208,7 +7208,7 @@
    "type": "module",
    "name": "Becoming.Reordering",
    "level": "L1",
-   "theorems": 172,
+   "theorems": 171,
    "region": "method",
    "base": "old-base",
    "on_grammar": false,
@@ -7241,7 +7241,7 @@
    "type": "module",
    "name": "Becoming.OneStep",
    "level": "L1",
-   "theorems": 305,
+   "theorems": 301,
    "region": "root",
    "base": "old-base",
    "on_grammar": false,
@@ -7318,7 +7318,7 @@
    "type": "module",
    "name": "Becoming.Flow",
    "level": "L1",
-   "theorems": 102,
+   "theorems": 105,
    "region": "map",
    "base": "old-base",
    "on_grammar": true,
@@ -7329,7 +7329,7 @@
    "type": "module",
    "name": "Becoming.Stock",
    "level": "L1",
-   "theorems": 46,
+   "theorems": 45,
    "region": "map",
    "base": "frame",
    "on_grammar": false,
@@ -7340,7 +7340,7 @@
    "type": "module",
    "name": "Becoming.Change",
    "level": "L1",
-   "theorems": 85,
+   "theorems": 88,
    "region": "root",
    "base": "grammar",
    "on_grammar": true,
@@ -7362,7 +7362,7 @@
    "type": "module",
    "name": "Becoming.Identity",
    "level": "L1",
-   "theorems": 162,
+   "theorems": 161,
    "region": "root",
    "base": "grammar",
    "on_grammar": true,
@@ -7384,7 +7384,7 @@
    "type": "module",
    "name": "Becoming.ContinuedClasses",
    "level": "L1",
-   "theorems": 73,
+   "theorems": 72,
    "region": "root",
    "base": "grammar",
    "on_grammar": true,
@@ -7417,7 +7417,7 @@
    "type": "module",
    "name": "Becoming.Dissipation",
    "level": "L1",
-   "theorems": 111,
+   "theorems": 110,
    "region": "map",
    "base": "old-base",
    "on_grammar": false,
@@ -7505,7 +7505,7 @@
    "type": "module",
    "name": "Becoming.SelectionTerm",
    "level": "L1",
-   "theorems": 67,
+   "theorems": 62,
    "region": "life",
    "base": "old-base",
    "on_grammar": false,
@@ -7516,7 +7516,7 @@
    "type": "module",
    "name": "Becoming.Reproduction",
    "level": "L1",
-   "theorems": 114,
+   "theorems": 109,
    "region": "life",
    "base": "old-base",
    "on_grammar": false,
@@ -7527,7 +7527,7 @@
    "type": "module",
    "name": "Becoming.SelectionLevels",
    "level": "L1",
-   "theorems": 95,
+   "theorems": 93,
    "region": "life",
    "base": "general",
    "on_grammar": false,
@@ -7571,7 +7571,7 @@
    "type": "module",
    "name": "Becoming.Drift",
    "level": "L1",
-   "theorems": 129,
+   "theorems": 127,
    "region": "life",
    "base": "old-base",
    "on_grammar": false,
@@ -7692,7 +7692,7 @@
    "type": "module",
    "name": "Becoming.Resolution",
    "level": "L1",
-   "theorems": 203,
+   "theorems": 202,
    "region": "method",
    "base": "old-base",
    "on_grammar": false,
@@ -7736,7 +7736,7 @@
    "type": "module",
    "name": "Becoming.InAmounts",
    "level": "L1",
-   "theorems": 91,
+   "theorems": 89,
    "region": "map",
    "base": "old-base",
    "on_grammar": true,
@@ -7747,7 +7747,7 @@
    "type": "module",
    "name": "Becoming.Entropy",
    "level": "L1",
-   "theorems": 190,
+   "theorems": 186,
    "region": "map",
    "base": "old-base",
    "on_grammar": false,
@@ -7780,7 +7780,7 @@
    "type": "module",
    "name": "Becoming.Imbalance",
    "level": "L1",
-   "theorems": 14,
+   "theorems": 13,
    "region": "method",
    "base": "old-base",
    "on_grammar": false,
@@ -7791,7 +7791,7 @@
    "type": "module",
    "name": "Becoming.Continuity",
    "level": "L1",
-   "theorems": 43,
+   "theorems": 42,
    "region": "map",
    "base": "old-base",
    "on_grammar": false,
@@ -7802,7 +7802,7 @@
    "type": "module",
    "name": "Becoming.Continuation",
    "level": "L1",
-   "theorems": 69,
+   "theorems": 70,
    "region": "map",
    "base": "old-base",
    "on_grammar": false,
@@ -7879,7 +7879,7 @@
    "type": "module",
    "name": "Becoming.EventualWideningInstances",
    "level": "L2",
-   "theorems": 82,
+   "theorems": 81,
    "region": "significance",
    "base": "old-base",
    "on_grammar": false,
@@ -7945,7 +7945,7 @@
    "type": "module",
    "name": "Becoming.Presence",
    "level": "L1",
-   "theorems": 164,
+   "theorems": 160,
    "region": "root",
    "base": "frame",
    "on_grammar": true,
@@ -7978,7 +7978,7 @@
    "type": "module",
    "name": "Becoming.Blanket",
    "level": "L1",
-   "theorems": 33,
+   "theorems": 32,
    "region": "knowing",
    "base": "general",
    "on_grammar": false,
@@ -7989,7 +7989,7 @@
    "type": "module",
    "name": "Becoming.BlanketWeights",
    "level": "L1",
-   "theorems": 46,
+   "theorems": 45,
    "region": "knowing",
    "base": "general",
    "on_grammar": true,
@@ -8000,7 +8000,7 @@
    "type": "module",
    "name": "Becoming.BlanketCouplings",
    "level": "L1",
-   "theorems": 70,
+   "theorems": 69,
    "region": "knowing",
    "base": "general",
    "on_grammar": false,
@@ -8022,7 +8022,7 @@
    "type": "module",
    "name": "Becoming.FreeEnergyCounting",
    "level": "L1",
-   "theorems": 55,
+   "theorems": 53,
    "region": "knowing",
    "base": "general",
    "on_grammar": false,
@@ -8231,7 +8231,7 @@
    "type": "module",
    "name": "Becoming.RelativePosition",
    "level": "L2",
-   "theorems": 64,
+   "theorems": 61,
    "region": "collective",
    "base": "old-base",
    "on_grammar": false,
@@ -8352,7 +8352,7 @@
    "type": "module",
    "name": "Becoming.BalanceRegions",
    "level": "L1",
-   "theorems": 43,
+   "theorems": 39,
    "region": "root",
    "base": "old-base",
    "on_grammar": true,
@@ -8363,7 +8363,7 @@
    "type": "module",
    "name": "Becoming.Weightings",
    "level": "L2",
-   "theorems": 398,
+   "theorems": 383,
    "region": "significance",
    "base": "old-base",
    "on_grammar": true,
@@ -8528,7 +8528,7 @@
    "type": "module",
    "name": "Becoming.RevisionRoutes",
    "level": "L1",
-   "theorems": 29,
+   "theorems": 28,
    "region": "significance",
    "base": "general",
    "on_grammar": false,
@@ -8561,7 +8561,7 @@
    "type": "module",
    "name": "Becoming.Hexagrams",
    "level": "",
-   "theorems": 67,
+   "theorems": 66,
    "region": "classical",
    "base": "frame",
    "on_grammar": false,
@@ -8594,7 +8594,7 @@
    "type": "module",
    "name": "Becoming.HexagramSites",
    "level": "",
-   "theorems": 98,
+   "theorems": 96,
    "region": "classical",
    "base": "frame",
    "on_grammar": false,
@@ -8660,7 +8660,7 @@
    "type": "module",
    "name": "Becoming.ClosedCapture",
    "level": "L1",
-   "theorems": 63,
+   "theorems": 62,
    "region": "map",
    "base": "general",
    "on_grammar": false,
@@ -8671,7 +8671,7 @@
    "type": "module",
    "name": "Becoming.RuleShaping",
    "level": "L1",
-   "theorems": 66,
+   "theorems": 61,
    "region": "map",
    "base": "general",
    "on_grammar": false,
@@ -8682,7 +8682,7 @@
    "type": "module",
    "name": "Becoming.ChoiceCountCapture",
    "level": "L1",
-   "theorems": 35,
+   "theorems": 34,
    "region": "map",
    "base": "general",
    "on_grammar": false,
@@ -8693,7 +8693,7 @@
    "type": "module",
    "name": "Becoming.DrawnShaping",
    "level": "L1",
-   "theorems": 31,
+   "theorems": 30,
    "region": "map",
    "base": "general",
    "on_grammar": false,
@@ -8913,7 +8913,7 @@
    "type": "module",
    "name": "Becoming.AssurancePlans",
    "level": "L1",
-   "theorems": 23,
+   "theorems": 22,
    "region": "significance",
    "base": "frame",
    "on_grammar": false,
@@ -8924,7 +8924,7 @@
    "type": "module",
    "name": "Becoming.Integers",
    "level": "L1",
-   "theorems": 34,
+   "theorems": 33,
    "region": "method",
    "base": "general",
    "on_grammar": false,
@@ -8946,7 +8946,7 @@
    "type": "module",
    "name": "Becoming.Readout",
    "level": "L1",
-   "theorems": 22,
+   "theorems": 21,
    "region": "knowing",
    "base": "frame",
    "on_grammar": false,
@@ -9034,7 +9034,7 @@
    "type": "module",
    "name": "Becoming.ReflexivePrediction",
    "level": "L1",
-   "theorems": 22,
+   "theorems": 20,
    "region": "knowing",
    "base": "general",
    "on_grammar": false,
@@ -9045,7 +9045,7 @@
    "type": "module",
    "name": "Becoming.Prelude",
    "level": "L0",
-   "theorems": 143,
+   "theorems": 176,
    "region": "method",
    "base": "general",
    "on_grammar": false,
@@ -9276,7 +9276,7 @@
    "type": "module",
    "name": "Becoming.CrossSituational",
    "level": "L1",
-   "theorems": 34,
+   "theorems": 33,
    "region": "knowing",
    "base": "general",
    "on_grammar": false,
@@ -9485,7 +9485,7 @@
    "type": "module",
    "name": "Becoming.JoiningContexts",
    "level": "L1",
-   "theorems": 23,
+   "theorems": 22,
    "region": "root",
    "base": "frame",
    "on_grammar": false,
@@ -9540,7 +9540,7 @@
    "type": "module",
    "name": "Becoming.Reading",
    "level": "L1",
-   "theorems": 28,
+   "theorems": 27,
    "region": "root",
    "base": "old-base",
    "on_grammar": false,
@@ -9551,7 +9551,7 @@
    "type": "module",
    "name": "Becoming.PlaceTransitionNets",
    "level": "",
-   "theorems": 63,
+   "theorems": 62,
    "region": "root",
    "base": "old-base",
    "on_grammar": false,
@@ -9573,7 +9573,7 @@
    "type": "module",
    "name": "Becoming.CountedCodes",
    "level": "L1",
-   "theorems": 34,
+   "theorems": 32,
    "region": "collective",
    "base": "general",
    "on_grammar": false,
@@ -9683,7 +9683,7 @@
    "type": "module",
    "name": "Becoming.Typicality",
    "level": "L1",
-   "theorems": 52,
+   "theorems": 50,
    "region": "knowing",
    "base": "frame",
    "on_grammar": false,
@@ -9716,7 +9716,7 @@
    "type": "module",
    "name": "Becoming.Propagation",
    "level": "L1",
-   "theorems": 75,
+   "theorems": 73,
    "region": "map",
    "base": "old-base",
    "on_grammar": false,
@@ -9727,7 +9727,7 @@
    "type": "module",
    "name": "Becoming.Regulation",
    "level": "L1",
-   "theorems": 113,
+   "theorems": 112,
    "region": "map",
    "base": "old-base",
    "on_grammar": false,
@@ -9738,7 +9738,7 @@
    "type": "module",
    "name": "Becoming.ReadingSchedule",
    "level": "L1",
-   "theorems": 67,
+   "theorems": 64,
    "region": "knowing",
    "base": "old-base",
    "on_grammar": false,
@@ -9749,7 +9749,7 @@
    "type": "module",
    "name": "Becoming.RegimeMargin",
    "level": "L1",
-   "theorems": 247,
+   "theorems": 246,
    "region": "map",
    "base": "old-base",
    "on_grammar": false,
@@ -9793,7 +9793,7 @@
    "type": "module",
    "name": "Becoming.RuleRebuilding",
    "level": "",
-   "theorems": 147,
+   "theorems": 134,
    "region": "collective",
    "base": "grammar",
    "on_grammar": true,
@@ -9815,7 +9815,7 @@
    "type": "module",
    "name": "Becoming.Loops",
    "level": "L1",
-   "theorems": 106,
+   "theorems": 102,
    "region": "map",
    "base": "old-base",
    "on_grammar": false,
@@ -9826,7 +9826,7 @@
    "type": "module",
    "name": "Becoming.Remainder",
    "level": "L1",
-   "theorems": 56,
+   "theorems": 54,
    "region": "map",
    "base": "old-base",
    "on_grammar": false,
@@ -9881,7 +9881,7 @@
    "type": "module",
    "name": "Becoming.Frequency",
    "level": "L1",
-   "theorems": 109,
+   "theorems": 108,
    "region": "map",
    "base": "old-base",
    "on_grammar": false,
@@ -9925,7 +9925,7 @@
    "type": "module",
    "name": "Becoming.SelectionShift",
    "level": "L1",
-   "theorems": 83,
+   "theorems": 80,
    "region": "life",
    "base": "general",
    "on_grammar": true,
@@ -9936,7 +9936,7 @@
    "type": "module",
    "name": "Becoming.LineageRegions",
    "level": "L2",
-   "theorems": 129,
+   "theorems": 126,
    "region": "life",
    "base": "old-base",
    "on_grammar": true,
@@ -9958,7 +9958,7 @@
    "type": "module",
    "name": "Becoming.LineageDrawdown",
    "level": "L2",
-   "theorems": 57,
+   "theorems": 44,
    "region": "life",
    "base": "old-base",
    "on_grammar": true,
@@ -9980,7 +9980,7 @@
    "type": "module",
    "name": "Becoming.Gluing",
    "level": "L1",
-   "theorems": 76,
+   "theorems": 75,
    "region": "root",
    "base": "general",
    "on_grammar": false,
@@ -10376,7 +10376,7 @@
    "type": "module",
    "name": "Becoming.Interleavings",
    "level": "L1",
-   "theorems": 163,
+   "theorems": 161,
    "region": "root",
    "base": "old-base",
    "on_grammar": false,
@@ -10464,7 +10464,7 @@
    "type": "module",
    "name": "Becoming.LimitVerification",
    "level": "L1",
-   "theorems": 63,
+   "theorems": 60,
    "region": "knowing",
    "base": "frame",
    "on_grammar": false,
@@ -10508,7 +10508,7 @@
    "type": "module",
    "name": "Becoming.UnreadStandings",
    "level": "L1",
-   "theorems": 32,
+   "theorems": 29,
    "region": "root",
    "base": "grammar",
    "on_grammar": true,
@@ -10519,7 +10519,7 @@
    "type": "module",
    "name": "Becoming.DrawnBeyond",
    "level": "L1",
-   "theorems": 44,
+   "theorems": 42,
    "region": "map",
    "base": "old-base",
    "on_grammar": false,
@@ -10530,7 +10530,7 @@
    "type": "module",
    "name": "Becoming.WindowedWaiting",
    "level": "L1",
-   "theorems": 130,
+   "theorems": 128,
    "region": "collective",
    "base": "general",
    "on_grammar": false,
@@ -10541,7 +10541,7 @@
    "type": "module",
    "name": "Becoming.PairSelection",
    "level": "L1",
-   "theorems": 151,
+   "theorems": 149,
    "region": "collective",
    "base": "general",
    "on_grammar": false,
@@ -10552,7 +10552,7 @@
    "type": "module",
    "name": "Becoming.PairFlow",
    "level": "L1",
-   "theorems": 80,
+   "theorems": 77,
    "region": "collective",
    "base": "old-base",
    "on_grammar": false,
@@ -10585,7 +10585,7 @@
    "type": "module",
    "name": "Becoming.Optimum",
    "level": "L1",
-   "theorems": 513,
+   "theorems": 509,
    "region": "collective",
    "base": "old-base",
    "on_grammar": false,
@@ -10629,7 +10629,7 @@
    "type": "module",
    "name": "Becoming.SelectionPool",
    "level": "L1",
-   "theorems": 51,
+   "theorems": 49,
    "region": "collective",
    "base": "old-base",
    "on_grammar": true,
@@ -10783,7 +10783,7 @@
    "type": "module",
    "name": "Becoming.Narrowing",
    "level": "L1",
-   "theorems": 60,
+   "theorems": 58,
    "region": "knowing",
    "base": "frame",
    "on_grammar": false,
@@ -10838,7 +10838,7 @@
    "type": "module",
    "name": "Becoming.ListingValuation",
    "level": "L1",
-   "theorems": 138,
+   "theorems": 136,
    "region": "knowing",
    "base": "general",
    "on_grammar": false,
@@ -10977,11 +10977,22 @@
    "reaches_grammar": true
   },
   {
+   "id": "module:Becoming.PremisesTogether",
+   "type": "module",
+   "name": "Becoming.PremisesTogether",
+   "level": "L2",
+   "theorems": 28,
+   "region": "unassigned",
+   "base": "",
+   "on_grammar": false,
+   "reaches_grammar": true
+  },
+  {
    "id": "module:Becoming.GrammarPath",
    "type": "module",
    "name": "Becoming.GrammarPath",
    "level": "L1",
-   "theorems": 102,
+   "theorems": 101,
    "region": "significance",
    "base": "grammar",
    "on_grammar": true,
@@ -31570,11 +31581,6 @@
   },
   {
    "from": "module:Becoming.Attraction",
-   "to": "module:Becoming.Labelled",
-   "type": "imports"
-  },
-  {
-   "from": "module:Becoming.Attraction",
    "to": "module:Becoming.Recurrence",
    "type": "imports"
   },
@@ -31601,6 +31607,11 @@
   {
    "from": "module:Becoming.Blanket",
    "to": "module:Becoming.ConditionalWeights",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.Blanket",
+   "to": "module:Becoming.Description",
    "type": "imports"
   },
   {
@@ -31810,6 +31821,11 @@
   },
   {
    "from": "module:Becoming.Clearing",
+   "to": "module:Becoming.Continuation",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.Clearing",
    "to": "module:Becoming.Retaining",
    "type": "imports"
   },
@@ -31831,11 +31847,6 @@
   {
    "from": "module:Becoming.Closing",
    "to": "module:Becoming.Remainder",
-   "type": "imports"
-  },
-  {
-   "from": "module:Becoming.CodeAcquisition",
-   "to": "module:Becoming.Assurance",
    "type": "imports"
   },
   {
@@ -31881,11 +31892,6 @@
   {
    "from": "module:Becoming.ConditionalWeights",
    "to": "module:Becoming.Typicality",
-   "type": "imports"
-  },
-  {
-   "from": "module:Becoming.ContactCourses",
-   "to": "module:Becoming.Assurance",
    "type": "imports"
   },
   {
@@ -32210,11 +32216,6 @@
   },
   {
    "from": "module:Becoming.Decidedness",
-   "to": "module:Becoming.Recurrence",
-   "type": "imports"
-  },
-  {
-   "from": "module:Becoming.Decidedness",
    "to": "module:Becoming.Space",
    "type": "imports"
   },
@@ -32371,6 +32372,11 @@
   {
    "from": "module:Becoming.DrawnShaping",
    "to": "module:Becoming.RuleShaping",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.Drift",
+   "to": "module:Becoming.Decidedness",
    "type": "imports"
   },
   {
@@ -32565,11 +32571,6 @@
   },
   {
    "from": "module:Becoming.Fragments",
-   "to": "module:Becoming.Joining",
-   "type": "imports"
-  },
-  {
-   "from": "module:Becoming.Fragments",
    "to": "module:Becoming.Presentations",
    "type": "imports"
   },
@@ -32586,6 +32587,11 @@
   {
    "from": "module:Becoming.FreeEnergyCounting",
    "to": "module:Becoming.ConditionalWeights",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.FreeEnergyCounting",
+   "to": "module:Becoming.Flow",
    "type": "imports"
   },
   {
@@ -32664,6 +32670,11 @@
    "type": "imports"
   },
   {
+   "from": "module:Becoming.GrammarCandidates",
+   "to": "module:Becoming.GrammarTesting",
+   "type": "imports"
+  },
+  {
    "from": "module:Becoming.GrammarCases",
    "to": "module:Becoming.GrammarPath",
    "type": "imports"
@@ -32671,11 +32682,6 @@
   {
    "from": "module:Becoming.GrammarCases",
    "to": "module:Becoming.GrammarScope",
-   "type": "imports"
-  },
-  {
-   "from": "module:Becoming.GrammarCases",
-   "to": "module:Becoming.GrammarTesting",
    "type": "imports"
   },
   {
@@ -32696,11 +32702,6 @@
   {
    "from": "module:Becoming.GrammarCourse",
    "to": "module:Becoming.IdentificationRuns",
-   "type": "imports"
-  },
-  {
-   "from": "module:Becoming.GrammarCourse",
-   "to": "module:Becoming.Unrolling",
    "type": "imports"
   },
   {
@@ -32940,11 +32941,6 @@
   },
   {
    "from": "module:Becoming.HexagramSequences",
-   "to": "module:Becoming.HexagramSites",
-   "type": "imports"
-  },
-  {
-   "from": "module:Becoming.HexagramSequences",
    "to": "module:Becoming.Seeking",
    "type": "imports"
   },
@@ -33100,11 +33096,6 @@
   },
   {
    "from": "module:Becoming.InAmounts",
-   "to": "module:Becoming.Recurrence",
-   "type": "imports"
-  },
-  {
-   "from": "module:Becoming.InAmounts",
    "to": "module:Becoming.Roles",
    "type": "imports"
   },
@@ -33211,11 +33202,6 @@
   {
    "from": "module:Becoming.JointKeeping",
    "to": "module:Becoming.Labelled",
-   "type": "imports"
-  },
-  {
-   "from": "module:Becoming.JointKeeping",
-   "to": "module:Becoming.Onward",
    "type": "imports"
   },
   {
@@ -33454,11 +33440,6 @@
    "type": "imports"
   },
   {
-   "from": "module:Becoming.LeastLoss",
-   "to": "module:Becoming.Resolution",
-   "type": "imports"
-  },
-  {
    "from": "module:Becoming.LevelCoupling",
    "to": "module:Becoming.Observation",
    "type": "imports"
@@ -33621,6 +33602,11 @@
   {
    "from": "module:Becoming.LocalUnits",
    "to": "module:Becoming.Fragments",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.LocalUnits",
+   "to": "module:Becoming.Joining",
    "type": "imports"
   },
   {
@@ -33835,11 +33821,6 @@
   },
   {
    "from": "module:Becoming.MoveOutcomeProcesses",
-   "to": "module:Becoming.Labelled",
-   "type": "imports"
-  },
-  {
-   "from": "module:Becoming.MoveOutcomeProcesses",
    "to": "module:Becoming.Recurrence",
    "type": "imports"
   },
@@ -33891,11 +33872,6 @@
   {
    "from": "module:Becoming.Observation",
    "to": "module:Becoming.Thresholds",
-   "type": "imports"
-  },
-  {
-   "from": "module:Becoming.OneStep",
-   "to": "module:Becoming.Counting",
    "type": "imports"
   },
   {
@@ -34194,6 +34170,41 @@
    "type": "imports"
   },
   {
+   "from": "module:Becoming.PremisesTogether",
+   "to": "module:Becoming.IdleRemoval",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.PremisesTogether",
+   "to": "module:Becoming.Joining",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.PremisesTogether",
+   "to": "module:Becoming.MatchedCourses",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.PremisesTogether",
+   "to": "module:Becoming.MutualDependence",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.PremisesTogether",
+   "to": "module:Becoming.Optimum",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.PremisesTogether",
+   "to": "module:Becoming.PremiseWitnesses",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.PremisesTogether",
+   "to": "module:Becoming.Reconfiguration",
+   "type": "imports"
+  },
+  {
    "from": "module:Becoming.Presence",
    "to": "module:Becoming.CausalGrowth",
    "type": "imports"
@@ -34445,11 +34456,6 @@
   },
   {
    "from": "module:Becoming.Readout",
-   "to": "module:Becoming.Assurance",
-   "type": "imports"
-  },
-  {
-   "from": "module:Becoming.Readout",
    "to": "module:Becoming.Learning",
    "type": "imports"
   },
@@ -34475,11 +34481,6 @@
   },
   {
    "from": "module:Becoming.ReferencePlan",
-   "to": "module:Becoming.Counterfactual",
-   "type": "imports"
-  },
-  {
-   "from": "module:Becoming.ReferencePlan",
    "to": "module:Becoming.Revision",
    "type": "imports"
   },
@@ -34496,11 +34497,6 @@
   {
    "from": "module:Becoming.Refinement",
    "to": "module:Becoming.Decidedness",
-   "type": "imports"
-  },
-  {
-   "from": "module:Becoming.Refinement",
-   "to": "module:Becoming.Recurrence",
    "type": "imports"
   },
   {
@@ -34539,11 +34535,6 @@
    "type": "imports"
   },
   {
-   "from": "module:Becoming.Regions",
-   "to": "module:Becoming.Continuation",
-   "type": "imports"
-  },
-  {
    "from": "module:Becoming.Regrouping",
    "to": "module:Becoming.Counterfactual",
    "type": "imports"
@@ -34566,11 +34557,6 @@
   {
    "from": "module:Becoming.RegroupingSelection",
    "to": "module:Becoming.Revision",
-   "type": "imports"
-  },
-  {
-   "from": "module:Becoming.RegroupingSelection",
-   "to": "module:Becoming.Unfolding",
    "type": "imports"
   },
   {
@@ -34640,17 +34626,7 @@
   },
   {
    "from": "module:Becoming.RenewalBound",
-   "to": "module:Becoming.Labelled",
-   "type": "imports"
-  },
-  {
-   "from": "module:Becoming.RenewalBound",
    "to": "module:Becoming.Recurrence",
-   "type": "imports"
-  },
-  {
-   "from": "module:Becoming.RenewalBound",
-   "to": "module:Becoming.Renewal",
    "type": "imports"
   },
   {
@@ -34766,6 +34742,11 @@
   {
    "from": "module:Becoming.RevisionPlans",
    "to": "module:Becoming.RevisionRoutes",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.RevisionRoutes",
+   "to": "module:Becoming.Prelude",
    "type": "imports"
   },
   {
@@ -35185,6 +35166,11 @@
   },
   {
    "from": "module:Becoming.SituationTraces",
+   "to": "module:Becoming.Resolution",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.SituationTraces",
    "to": "module:Becoming.TypicalRuns",
    "type": "imports"
   },
@@ -35380,27 +35366,12 @@
   },
   {
    "from": "module:Becoming.TypicalRuns",
-   "to": "module:Becoming.CrossSituational",
-   "type": "imports"
-  },
-  {
-   "from": "module:Becoming.TypicalRuns",
-   "to": "module:Becoming.FinerTraces",
-   "type": "imports"
-  },
-  {
-   "from": "module:Becoming.TypicalRuns",
    "to": "module:Becoming.Parting",
    "type": "imports"
   },
   {
    "from": "module:Becoming.TypicalRuns",
    "to": "module:Becoming.Typicality",
-   "type": "imports"
-  },
-  {
-   "from": "module:Becoming.Typicality",
-   "to": "module:Becoming.Identification",
    "type": "imports"
   },
   {
@@ -35515,16 +35486,6 @@
   },
   {
    "from": "module:Becoming.Weighted",
-   "to": "module:Becoming.Capture",
-   "type": "imports"
-  },
-  {
-   "from": "module:Becoming.Weighted",
-   "to": "module:Becoming.Resolution",
-   "type": "imports"
-  },
-  {
-   "from": "module:Becoming.Weighted",
    "to": "module:Becoming.Witnesses",
    "type": "imports"
   },
@@ -35581,11 +35542,6 @@
   {
    "from": "module:Becoming.WindowedWaiting",
    "to": "module:Becoming.Tolerance",
-   "type": "imports"
-  },
-  {
-   "from": "module:Becoming.Withholding",
-   "to": "module:Becoming.Labelled",
    "type": "imports"
   },
   {
@@ -35740,6 +35696,11 @@
   },
   {
    "from": "record:a-code-held-as-counts",
+   "to": "module:Becoming.Prelude",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:a-code-held-as-counts",
    "to": "record:a-code-formed-between-formations",
    "type": "formal-reuse"
   },
@@ -35816,6 +35777,11 @@
   {
    "from": "record:a-formations-couplings-as-its-blanket",
    "to": "module:Becoming.BlanketCouplings",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:a-formations-couplings-as-its-blanket",
+   "to": "module:Becoming.LimitVerification",
    "type": "proved-in"
   },
   {
@@ -36210,6 +36176,11 @@
   },
   {
    "from": "record:a-narrowing-above-its-widening",
+   "to": "module:Becoming.Prelude",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:a-narrowing-above-its-widening",
    "to": "module:Becoming.Weightings",
    "type": "proved-in"
   },
@@ -36242,6 +36213,11 @@
    "from": "record:a-need-with-a-cap",
    "to": "record:closing-needs-net-draw",
    "type": "formal-reuse"
+  },
+  {
+   "from": "record:a-pair-tolerates-only-within-a-window",
+   "to": "module:Becoming.Prelude",
+   "type": "proved-in"
   },
   {
    "from": "record:a-pair-tolerates-only-within-a-window",
@@ -36295,6 +36271,11 @@
   },
   {
    "from": "record:a-pool-read-by-its-majority",
+   "to": "module:Becoming.Prelude",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:a-pool-read-by-its-majority",
    "to": "module:Becoming.SelectionPool",
    "type": "proved-in"
   },
@@ -36322,6 +36303,11 @@
    "from": "record:a-pool-that-recruits-through-itself",
    "to": "record:what-pooled-coupling-reaches",
    "type": "formal-reuse"
+  },
+  {
+   "from": "record:a-prediction-read-by-what-it-predicts",
+   "to": "module:Becoming.Prelude",
+   "type": "proved-in"
   },
   {
    "from": "record:a-prediction-read-by-what-it-predicts",
@@ -36577,6 +36563,11 @@
    "from": "record:a-revision-that-opens-a-correction",
    "to": "record:when-to-inquire-and-when-to-respond",
    "type": "formal-reuse"
+  },
+  {
+   "from": "record:a-rise-past-the-inflow-is-drawn-from-beyond",
+   "to": "module:Becoming.Change",
+   "type": "proved-in"
   },
   {
    "from": "record:a-rise-past-the-inflow-is-drawn-from-beyond",
@@ -36975,6 +36966,11 @@
   },
   {
    "from": "record:additive-part-of-offspring-variance",
+   "to": "module:Becoming.Prelude",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:additive-part-of-offspring-variance",
    "to": "module:Becoming.Reproduction",
    "type": "proved-in"
   },
@@ -37230,6 +37226,11 @@
   },
   {
    "from": "record:attraction-is-not-returning",
+   "to": "module:Becoming.Prelude",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:attraction-is-not-returning",
    "to": "module:Becoming.Recurrence",
    "type": "proved-in"
   },
@@ -37276,6 +37277,16 @@
   {
    "from": "record:balance-from-conservation-along-a-relation",
    "to": "module:Becoming.Continuity",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:balance-from-conservation-along-a-relation",
+   "to": "module:Becoming.GrammarLaws",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:balance-from-conservation-along-a-relation",
+   "to": "module:Becoming.Prelude",
    "type": "proved-in"
   },
   {
@@ -38002,6 +38013,11 @@
    "from": "record:branching-tests-bisimulation",
    "to": "record:tests-fix-likeness-where-determined",
    "type": "related"
+  },
+  {
+   "from": "record:candidate-theorems-of-the-corpus",
+   "to": "module:Becoming.Grammar",
+   "type": "proved-in"
   },
   {
    "from": "record:candidate-theorems-of-the-corpus",
@@ -38911,6 +38927,11 @@
   {
    "from": "record:classes-along-a-continuation",
    "to": "module:Becoming.ContinuedClasses",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:classes-along-a-continuation",
+   "to": "module:Becoming.Prelude",
    "type": "proved-in"
   },
   {
@@ -39971,6 +39992,11 @@
   {
    "from": "record:confined-rise-within-a-whole",
    "to": "module:Becoming.GroupEnding",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:confined-rise-within-a-whole",
+   "to": "module:Becoming.Population",
    "type": "proved-in"
   },
   {
@@ -41815,6 +41841,16 @@
   },
   {
    "from": "record:drift-offspring-sampled",
+   "to": "module:Becoming.Prelude",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:drift-offspring-sampled",
+   "to": "module:Becoming.Reproduction",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:drift-offspring-sampled",
    "to": "module:Becoming.SelectionTerm",
    "type": "proved-in"
   },
@@ -41925,12 +41961,22 @@
   },
   {
    "from": "record:ending-laws-as-regimes-on-a-lineage",
+   "to": "module:Becoming.Continuation",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:ending-laws-as-regimes-on-a-lineage",
    "to": "module:Becoming.LineageDrawdown",
    "type": "proved-in"
   },
   {
    "from": "record:ending-laws-as-regimes-on-a-lineage",
    "to": "module:Becoming.LineageRegimes",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:ending-laws-as-regimes-on-a-lineage",
+   "to": "module:Becoming.MapInstances",
    "type": "proved-in"
   },
   {
@@ -42125,6 +42171,11 @@
   },
   {
    "from": "record:eventual-widening",
+   "to": "module:Becoming.Prelude",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:eventual-widening",
    "to": "module:Becoming.Regions",
    "type": "proved-in"
   },
@@ -42296,6 +42347,11 @@
   {
    "from": "record:evolution-on-descent",
    "to": "module:Becoming.Flow",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:evolution-on-descent",
+   "to": "module:Becoming.Prelude",
    "type": "proved-in"
   },
   {
@@ -42930,6 +42986,11 @@
   },
   {
    "from": "record:fixation-by-drift",
+   "to": "module:Becoming.Reproduction",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:fixation-by-drift",
    "to": "module:Becoming.Typicality",
    "type": "proved-in"
   },
@@ -42961,6 +43022,11 @@
   {
    "from": "record:fixation-with-selection",
    "to": "module:Becoming.Drift",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:fixation-with-selection",
+   "to": "module:Becoming.Reproduction",
    "type": "proved-in"
   },
   {
@@ -43600,6 +43666,21 @@
   },
   {
    "from": "record:graded-significance-and-priority",
+   "to": "module:Becoming.Integers",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:graded-significance-and-priority",
+   "to": "module:Becoming.Population",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:graded-significance-and-priority",
+   "to": "module:Becoming.Prelude",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:graded-significance-and-priority",
    "to": "module:Becoming.Weightings",
    "type": "proved-in"
   },
@@ -43631,6 +43712,16 @@
   {
    "from": "record:groups-formed-by-descent",
    "to": "module:Becoming.GroupEnding",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:groups-formed-by-descent",
+   "to": "module:Becoming.Population",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:groups-formed-by-descent",
+   "to": "module:Becoming.Prelude",
    "type": "proved-in"
   },
   {
@@ -45705,6 +45796,11 @@
   },
   {
    "from": "record:laws-of-one-step-complete",
+   "to": "module:Becoming.Change",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:laws-of-one-step-complete",
    "to": "module:Becoming.Flow",
    "type": "proved-in"
   },
@@ -47390,6 +47486,16 @@
   },
   {
    "from": "record:mutation-and-the-balance-it-sets",
+   "to": "module:Becoming.Flow",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:mutation-and-the-balance-it-sets",
+   "to": "module:Becoming.Prelude",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:mutation-and-the-balance-it-sets",
    "to": "module:Becoming.Reproduction",
    "type": "proved-in"
   },
@@ -47840,6 +47946,11 @@
   },
   {
    "from": "record:offspring-read-from-giving-that-waits",
+   "to": "module:Becoming.Flow",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:offspring-read-from-giving-that-waits",
    "to": "module:Becoming.PairSelection",
    "type": "proved-in"
   },
@@ -47882,6 +47993,11 @@
    "from": "record:one-move-covering",
    "to": "record:what-a-total-keeps",
    "type": "related"
+  },
+  {
+   "from": "record:one-reader-several-conditions",
+   "to": "module:Becoming.Prelude",
+   "type": "proved-in"
   },
   {
    "from": "record:one-reader-several-conditions",
@@ -47972,6 +48088,11 @@
    "from": "record:one-step-missing-laws",
    "to": "record:laws-of-one-step-complete",
    "type": "formal-reuse"
+  },
+  {
+   "from": "record:only-the-order-of-change-shows",
+   "to": "module:Becoming.Change",
+   "type": "proved-in"
   },
   {
    "from": "record:only-the-order-of-change-shows",
@@ -48996,6 +49117,11 @@
   {
    "from": "record:premises-met-and-failed",
    "to": "module:Becoming.PremiseWitnesses",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:premises-met-and-failed",
+   "to": "module:Becoming.PremisesTogether",
    "type": "proved-in"
   },
   {
@@ -50025,6 +50151,11 @@
   },
   {
    "from": "record:readers-drawn-from-the-selected",
+   "to": "module:Becoming.Prelude",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:readers-drawn-from-the-selected",
    "to": "module:Becoming.RuleCapture",
    "type": "proved-in"
   },
@@ -50171,6 +50302,11 @@
   {
    "from": "record:readings-within-what-they-read",
    "to": "module:Becoming.Frame",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:readings-within-what-they-read",
+   "to": "module:Becoming.Prelude",
    "type": "proved-in"
   },
   {
@@ -50470,6 +50606,11 @@
   },
   {
    "from": "record:regulation-from-one-side-and-locally",
+   "to": "module:Becoming.Flow",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:regulation-from-one-side-and-locally",
    "to": "module:Becoming.Regulation",
    "type": "proved-in"
   },
@@ -50686,6 +50827,11 @@
   {
    "from": "record:relative-position-is-zero-sum",
    "to": "module:Becoming.Evolution",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:relative-position-is-zero-sum",
+   "to": "module:Becoming.Flow",
    "type": "proved-in"
   },
   {
@@ -51370,6 +51516,11 @@
   },
   {
    "from": "record:rest-on-coupled-webs",
+   "to": "module:Becoming.Prelude",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:rest-on-coupled-webs",
    "to": "module:Becoming.RegimeMargin",
    "type": "proved-in"
   },
@@ -51626,6 +51777,11 @@
   {
    "from": "record:returning-novelty-forgetting-on-levels",
    "to": "module:Becoming.Novelty",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:returning-novelty-forgetting-on-levels",
+   "to": "module:Becoming.Prelude",
    "type": "proved-in"
   },
   {
@@ -52425,6 +52581,11 @@
   },
   {
    "from": "record:selection-term-over-generations",
+   "to": "module:Becoming.Prelude",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:selection-term-over-generations",
    "to": "module:Becoming.SelectionTerm",
    "type": "proved-in"
   },
@@ -52615,6 +52776,16 @@
   },
   {
    "from": "record:selection-with-returns-to-groupmates",
+   "to": "module:Becoming.Population",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:selection-with-returns-to-groupmates",
+   "to": "module:Becoming.Prelude",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:selection-with-returns-to-groupmates",
    "to": "module:Becoming.Reproduction",
    "type": "proved-in"
   },
@@ -52670,6 +52841,16 @@
   },
   {
    "from": "record:selection-within-and-among-groups",
+   "to": "module:Becoming.Population",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:selection-within-and-among-groups",
+   "to": "module:Becoming.Prelude",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:selection-within-and-among-groups",
    "to": "module:Becoming.SelectionLevels",
    "type": "proved-in"
   },
@@ -52706,6 +52887,16 @@
   {
    "from": "record:selection-within-and-among-groups-of-any-sizes",
    "to": "module:Becoming.GroupEnding",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:selection-within-and-among-groups-of-any-sizes",
+   "to": "module:Becoming.Population",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:selection-within-and-among-groups-of-any-sizes",
+   "to": "module:Becoming.Prelude",
    "type": "proved-in"
   },
   {
@@ -52777,6 +52968,21 @@
    "from": "record:self-concern-and-c-under-the-condition",
    "to": "record:widening-as-what-every-positive-weighting-ranks",
    "type": "related"
+  },
+  {
+   "from": "record:self-concern-through-dependence",
+   "to": "module:Becoming.Change",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:self-concern-through-dependence",
+   "to": "module:Becoming.GrammarLaws",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:self-concern-through-dependence",
+   "to": "module:Becoming.Population",
+   "type": "proved-in"
   },
   {
    "from": "record:self-concern-through-dependence",
@@ -53260,6 +53466,11 @@
   },
   {
    "from": "record:shared-laws-on-the-grammar",
+   "to": "module:Becoming.Prelude",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:shared-laws-on-the-grammar",
    "to": "module:Becoming.ReachableRanges",
    "type": "proved-in"
   },
@@ -53587,6 +53798,16 @@
    "from": "record:space-and-its-parts",
    "to": "record:theory-of-becoming-foundation",
    "type": "related"
+  },
+  {
+   "from": "record:standings-not-read-off-the-occurrence-model",
+   "to": "module:Becoming.Flow",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:standings-not-read-off-the-occurrence-model",
+   "to": "module:Becoming.Prelude",
+   "type": "proved-in"
   },
   {
    "from": "record:standings-not-read-off-the-occurrence-model",
@@ -54180,6 +54401,11 @@
   },
   {
    "from": "record:testing-within-the-net",
+   "to": "module:Becoming.GrammarCandidates",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:testing-within-the-net",
    "to": "module:Becoming.GrammarTesting",
    "type": "proved-in"
   },
@@ -54270,6 +54496,11 @@
   },
   {
    "from": "record:the-blanket-at-a-steady-state",
+   "to": "module:Becoming.Population",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:the-blanket-at-a-steady-state",
    "to": "record:conditioning-by-restriction",
    "type": "formal-reuse"
   },
@@ -54325,7 +54556,17 @@
   },
   {
    "from": "record:the-breeding-value",
+   "to": "module:Becoming.Flow",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:the-breeding-value",
    "to": "module:Becoming.Integers",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:the-breeding-value",
+   "to": "module:Becoming.Prelude",
    "type": "proved-in"
   },
   {
@@ -54475,6 +54716,11 @@
   },
   {
    "from": "record:the-markov-blanket-as-a-coupling-structure",
+   "to": "module:Becoming.Prelude",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:the-markov-blanket-as-a-coupling-structure",
    "to": "module:Becoming.Testing",
    "type": "proved-in"
   },
@@ -54540,7 +54786,17 @@
   },
   {
    "from": "record:the-present-on-causal-set-growth",
+   "to": "module:Becoming.Likeness",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:the-present-on-causal-set-growth",
    "to": "module:Becoming.OrderNormal",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:the-present-on-causal-set-growth",
+   "to": "module:Becoming.Prelude",
    "type": "proved-in"
   },
   {
@@ -54645,12 +54901,27 @@
   },
   {
    "from": "record:the-selection-term-and-a-lineages-fate",
+   "to": "module:Becoming.Change",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:the-selection-term-and-a-lineages-fate",
    "to": "module:Becoming.LineageRegions",
    "type": "proved-in"
   },
   {
    "from": "record:the-selection-term-and-a-lineages-fate",
+   "to": "module:Becoming.Prelude",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:the-selection-term-and-a-lineages-fate",
    "to": "module:Becoming.SelectionShift",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:the-selection-term-and-a-lineages-fate",
+   "to": "module:Becoming.Thresholds",
    "type": "proved-in"
   },
   {
@@ -54770,6 +55041,11 @@
   },
   {
    "from": "record:the-split-that-makes-sense",
+   "to": "module:Becoming.Prelude",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:the-split-that-makes-sense",
    "to": "module:Becoming.Recurrence",
    "type": "proved-in"
   },
@@ -54871,6 +55147,11 @@
   {
    "from": "record:the-world-an-interleaving-builds",
    "to": "module:Becoming.Interleavings",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:the-world-an-interleaving-builds",
+   "to": "module:Becoming.Prelude",
    "type": "proved-in"
   },
   {
@@ -55142,6 +55423,11 @@
    "from": "record:threshold-in-the-state-plane",
    "to": "record:where-a-run-of-a-regime-comes-to-rest",
    "type": "formal-reuse"
+  },
+  {
+   "from": "record:thresholds-beyond-a-band",
+   "to": "module:Becoming.Prelude",
+   "type": "proved-in"
   },
   {
    "from": "record:thresholds-beyond-a-band",
@@ -56100,6 +56386,11 @@
   },
   {
    "from": "record:weights-within-a-ratio-agree-past-it",
+   "to": "module:Becoming.Prelude",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:weights-within-a-ratio-agree-past-it",
    "to": "module:Becoming.Weightings",
    "type": "proved-in"
   },
@@ -56685,6 +56976,11 @@
   },
   {
    "from": "record:what-a-line-holds-and-a-regularity-takes-in",
+   "to": "module:Becoming.GrammarLaws",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-a-line-holds-and-a-regularity-takes-in",
    "to": "module:Becoming.GrammarPath",
    "type": "proved-in"
   },
@@ -56881,6 +57177,11 @@
   {
    "from": "record:what-a-rise-draws-from-beyond",
    "to": "module:Becoming.Entropy",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-a-rise-draws-from-beyond",
+   "to": "module:Becoming.Flow",
    "type": "proved-in"
   },
   {
@@ -57126,6 +57427,11 @@
   {
    "from": "record:what-bounds-offspring-numbers",
    "to": "module:Becoming.Evolution",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-bounds-offspring-numbers",
+   "to": "module:Becoming.Prelude",
    "type": "proved-in"
   },
   {
@@ -57705,6 +58011,11 @@
   },
   {
    "from": "record:what-position-reads",
+   "to": "module:Becoming.Prelude",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-position-reads",
    "to": "module:Becoming.RelativePosition",
    "type": "proved-in"
   },
@@ -57890,6 +58201,21 @@
   },
   {
    "from": "record:what-the-step-across-standpoints-reaches",
+   "to": "module:Becoming.Integers",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-the-step-across-standpoints-reaches",
+   "to": "module:Becoming.Population",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-the-step-across-standpoints-reaches",
+   "to": "module:Becoming.Prelude",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-the-step-across-standpoints-reaches",
    "to": "module:Becoming.ValuationFrames",
    "type": "proved-in"
   },
@@ -58047,6 +58373,11 @@
    "from": "record:when-holding-for-a-reading-stands-above-a-route",
    "to": "record:when-no-route-stands-above-a-revision",
    "type": "related"
+  },
+  {
+   "from": "record:when-no-route-stands-above-a-revision",
+   "to": "module:Becoming.Prelude",
+   "type": "proved-in"
   },
   {
    "from": "record:when-no-route-stands-above-a-revision",
@@ -59207,6 +59538,21 @@
    "from": "record:widening-along-a-reading",
    "to": "record:which-links-a-closure-needs",
    "type": "related"
+  },
+  {
+   "from": "record:widening-as-what-every-positive-weighting-ranks",
+   "to": "module:Becoming.Integers",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:widening-as-what-every-positive-weighting-ranks",
+   "to": "module:Becoming.Population",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:widening-as-what-every-positive-weighting-ranks",
+   "to": "module:Becoming.Prelude",
+   "type": "proved-in"
   },
   {
    "from": "record:widening-as-what-every-positive-weighting-ranks",

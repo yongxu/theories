@@ -119,6 +119,7 @@ This answers attraction for processes that are not determined, a next step of at
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `Becoming.Branching.PossiblyDrawnInto`, `Becoming.Branching.NecessarilyDrawnInto`, `Becoming.Branching.necessarilyDrawn_iff_not_returns`, `Becoming.Branching.possiblyDrawn_iff`, `Becoming.Branching.Returns.run`, `Becoming.Branching.OneWay.possibly_not_necessarily`, `Becoming.Law.rule_absorbing`, `Becoming.Law.perturbation_drawnInto`, `Becoming.Captured.state_perturbation_drawn`, `possibly drawn`, `可能被吸入`, `necessarily drawn`, `必然被吸入`
 

@@ -10,7 +10,7 @@
 <a id="laws--规律"></a>
 ## Laws
 
-1. Two profiles of amounts give every part the same position exactly where, for any two parts, what one had under the first with what the other has under the second is what the other had with what the one has: every amount differs by one common amount. (`Becoming.RelativePosition.Keeps`, `Becoming.RelativePosition.keeps_iff_common`, `Becoming.RelativePosition.length_pos_of_mem`, `Becoming.RelativePosition.regroup`)
+1. Two profiles of amounts give every part the same position exactly where, for any two parts, what one had under the first with what the other has under the second is what the other had with what the one has: every amount differs by one common amount. (`Becoming.RelativePosition.Keeps`, `Becoming.RelativePosition.keeps_iff_common`, `Becoming.length_pos_of_mem`, `Becoming.Naturals.add_regroup`)
    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. Adding one amount to every part keeps every position and adds it to the total once for each part; taking the least part's amount from every part keeps every position and leaves the spread above the least part. (`Becoming.RelativePosition.keeps_add`, `Becoming.RelativePosition.keeps_least`)
    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
@@ -67,12 +67,14 @@ Competition read as position, the opening's "winning": a standing read against t
 
 | Role | Source | Declarations |
 |---|---|---|
-| proof | [RelativePosition.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RelativePosition.lean) | `Becoming.Flow.drawn`, `Becoming.Flow.excess_iff_spread`, `Becoming.Race.drawn_renewer`, `Becoming.Race.drawn_second_le`, `Becoming.Race.flow`, `Becoming.Race.greatest_ends`, `Becoming.Race.web`, `Becoming.RaceWithin.Member`, `Becoming.RaceWithin.acting`, `Becoming.RaceWithin.balances`, `Becoming.RaceWithin.dependent`, `Becoming.RaceWithin.drawn_common`, `Becoming.RaceWithin.drawn_renewer`, `Becoming.RaceWithin.drawn_second`, `Becoming.RaceWithin.first_greatest`, `Becoming.RaceWithin.flow`, `Becoming.RaceWithin.keeps`, `Becoming.RaceWithin.racers`, `Becoming.RaceWithin.same_positions_apart`, `Becoming.RaceWithin.web`, `Becoming.RelativePosition.Greatest`, `Becoming.RelativePosition.Keeps`, `Becoming.RelativePosition.Least`, `Becoming.RelativePosition.exceeds_iff_spread`, `Becoming.RelativePosition.fallCount`, `Becoming.RelativePosition.keeps_add`, `Becoming.RelativePosition.keeps_exceeds`, `Becoming.RelativePosition.keeps_iff_common`, `Becoming.RelativePosition.keeps_least`, `Becoming.RelativePosition.length_pos_of_mem`, `Becoming.RelativePosition.regroup`, `Becoming.RelativePosition.riseCount`, `Becoming.RelativePosition.spread_le` |
+| proof | [RelativePosition.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RelativePosition.lean) | `Becoming.Flow.drawn`, `Becoming.Flow.excess_iff_spread`, `Becoming.Race.drawn_renewer`, `Becoming.Race.drawn_second_le`, `Becoming.Race.flow`, `Becoming.Race.greatest_ends`, `Becoming.Race.web`, `Becoming.RaceWithin.Member`, `Becoming.RaceWithin.acting`, `Becoming.RaceWithin.balances`, `Becoming.RaceWithin.dependent`, `Becoming.RaceWithin.drawn_common`, `Becoming.RaceWithin.drawn_renewer`, `Becoming.RaceWithin.drawn_second`, `Becoming.RaceWithin.first_greatest`, `Becoming.RaceWithin.flow`, `Becoming.RaceWithin.keeps`, `Becoming.RaceWithin.racers`, `Becoming.RaceWithin.same_positions_apart`, `Becoming.RaceWithin.web`, `Becoming.RelativePosition.Greatest`, `Becoming.RelativePosition.Keeps`, `Becoming.RelativePosition.Least`, `Becoming.RelativePosition.exceeds_iff_spread`, `Becoming.RelativePosition.fallCount`, `Becoming.RelativePosition.keeps_add`, `Becoming.RelativePosition.keeps_exceeds`, `Becoming.RelativePosition.keeps_iff_common`, `Becoming.RelativePosition.keeps_least`, `Becoming.RelativePosition.riseCount`, `Becoming.RelativePosition.spread_le` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T133248.097273Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | provenance | [OPENING.md](../../OPENING.md) | — |
 | provenance | [2026-10-22-aim-frontier-not-past-understanding.md](../../../../sources/15-codex-theory-conversations/2026-10-22-aim-frontier-not-past-understanding.md) | — |
+| proof | [Prelude.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean) | `Becoming.length_pos_of_mem`, `Becoming.Naturals.add_regroup` |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `What position reads`, `位置所读`, `position reads amounts up to a common amount`, `Becoming.RelativePosition.keeps_iff_common`, `Becoming.RaceWithin.same_positions_apart`
 
@@ -80,6 +82,7 @@ Aliases: `What position reads`, `位置所读`, `position reads amounts up to a 
 ### History
 
 - 22 October 2026, NL1 (asked whether OPENING's note [^no-law] could be pushed further): created; study section 361; the note states the laws, and each of the three features, read as a law, is refuted by a constructed flow; on Ren's word the opening's body sentence was brought to the law (version 12).
+- 6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.
 
 </details>
 

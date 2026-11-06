@@ -10,7 +10,7 @@
 <a id="laws--规律"></a>
 ## Laws
 
-1. Where every two listed weights stand within n/d, what each course alone admits bounds what it weighs: d times what the second alone admits weighs, once per item the first alone admits, is at most n times the number the second alone admits, times what the first alone admits weighs. (`Becoming.Weighting.RatioWithin`, `Becoming.Weighting.cond_scale`, `Becoming.Weighting.weighed_scale`, `Becoming.Weighting.mul_swap_right`, `Becoming.Weighting.beyond_within`)
+1. Where every two listed weights stand within n/d, what each course alone admits bounds what it weighs: d times what the second alone admits weighs, once per item the first alone admits, is at most n times the number the second alone admits, times what the first alone admits weighs. (`Becoming.Weighting.RatioWithin`, `Becoming.Weighting.cond_scale`, `Becoming.Weighting.weighed_scale`, `Becoming.Naturals.mul_right_comm`, `Becoming.Weighting.beyond_within`)
    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. Every positive weighting within n/d ranks a above b where n q < d p, and weighs a at least as much where n q ≤ d p, p and q the numbers of items a and b alone admit. (`Becoming.Weighting.pos_of_lt_mul`, `Becoming.Weighting.cond_pos_of`, `Becoming.Weighting.weighed_pos_of_size`, `Becoming.Weighting.weighed_zero_of_size`, `Becoming.Weighting.ranks_past_ratio`, `Becoming.Weighting.ranks_le_past_ratio`)
    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
@@ -70,7 +70,7 @@ Equal weights and improper linear models (Einhorn and Hogarth 1975; Dawes 1979; 
 
 | Role | Source | Declarations |
 |---|---|---|
-| proof | [Weightings.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean) | `Becoming.Weighting.RatioWithin`, `Becoming.Weighting.beyond`, `Becoming.Weighting.beyond_within`, `Becoming.Weighting.cond_between`, `Becoming.Weighting.cond_pos_of`, `Becoming.Weighting.cond_scale`, `Becoming.Weighting.const_lt_iff_beyond`, `Becoming.Weighting.every_within_iff`, `Becoming.Weighting.mul_swap_right`, `Becoming.Weighting.neutral_ranks_by_number`, `Becoming.Weighting.opposite_within_iff`, `Becoming.Weighting.outweighs`, `Becoming.Weighting.pos_of_lt_mul`, `Becoming.Weighting.ranks_le_past_ratio`, `Becoming.Weighting.ranks_past_ratio`, `Becoming.Weighting.size`, `Becoming.Weighting.size_le_length`, `Becoming.Weighting.size_pos_of_exceeds`, `Becoming.Weighting.some_within_reverses_iff`, `Becoming.Weighting.tilt_beyond`, `Becoming.Weighting.tilt_toward`, `Becoming.Weighting.tilted`, `Becoming.Weighting.tilted_gt_iff`, `Becoming.Weighting.tilted_lt_iff`, `Becoming.Weighting.tilted_positive`, `Becoming.Weighting.tilted_ties`, `Becoming.Weighting.tilted_within`, `Becoming.Weighting.weighed_pos_of_size`, `Becoming.Weighting.weighed_scale`, `Becoming.Weighting.weighed_tilted_beyond`, `Becoming.Weighting.weighed_tilted_toward`, `Becoming.Weighting.weighed_zero_of_size` |
+| proof | [Weightings.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean) | `Becoming.Weighting.RatioWithin`, `Becoming.Weighting.beyond`, `Becoming.Weighting.beyond_within`, `Becoming.Weighting.cond_between`, `Becoming.Weighting.cond_pos_of`, `Becoming.Weighting.cond_scale`, `Becoming.Weighting.const_lt_iff_beyond`, `Becoming.Weighting.every_within_iff`, `Becoming.Weighting.neutral_ranks_by_number`, `Becoming.Weighting.opposite_within_iff`, `Becoming.Weighting.outweighs`, `Becoming.Weighting.pos_of_lt_mul`, `Becoming.Weighting.ranks_le_past_ratio`, `Becoming.Weighting.ranks_past_ratio`, `Becoming.Weighting.size`, `Becoming.Weighting.size_le_length`, `Becoming.Weighting.size_pos_of_exceeds`, `Becoming.Weighting.some_within_reverses_iff`, `Becoming.Weighting.tilt_beyond`, `Becoming.Weighting.tilt_toward`, `Becoming.Weighting.tilted`, `Becoming.Weighting.tilted_gt_iff`, `Becoming.Weighting.tilted_lt_iff`, `Becoming.Weighting.tilted_positive`, `Becoming.Weighting.tilted_ties`, `Becoming.Weighting.tilted_within`, `Becoming.Weighting.weighed_pos_of_size`, `Becoming.Weighting.weighed_scale`, `Becoming.Weighting.weighed_tilted_beyond`, `Becoming.Weighting.weighed_tilted_toward`, `Becoming.Weighting.weighed_zero_of_size` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T143810.042893Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | integration | [BECOMING-SIGNIFICANCE-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md) | — |
@@ -91,6 +91,8 @@ Equal weights and improper linear models (Einhorn and Hogarth 1975; Dawes 1979; 
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261030T131028.245732Z/verification.json) | — |
+| proof | [Prelude.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean) | `Becoming.Naturals.mul_right_comm` |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `weights within a ratio agree past it`, `比值之内的权重越过它即一致`, `Becoming.Weighting.every_within_iff`, `Becoming.Weighting.opposite_within_iff`, `Becoming.Weighting.tilted_ties`
 
@@ -98,6 +100,7 @@ Aliases: `weights within a ratio agree past it`, `比值之内的权重越过它
 ### History
 
 - 22 October 2026: added (VT1): the locus VD1 tested, stated as a theorem conditional on how dispersed the weights are, with the exact threshold and the tilted weighting tying at the boundary; outweighs and neutral_ranks_by_number derived as its cases; study section 367.
+- 6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.
 
 </details>
 

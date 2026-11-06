@@ -111,6 +111,7 @@ Receiving and named positions are relational roles within one local arrangement.
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261020T161859.257200Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261031T131812.213702Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `Generative.EnactedScene.enacted_access_enters_all_sequence_interpretation`, `Becoming.MachineInstances.coordinated_interprets_every`, `Becoming.CrossSituational.resolves_iff`, `Becoming.MachineInstances.scene_interprets_every_iff`, `Becoming.Courses.run_resolves_iff`, `Becoming.Courses.course_resolves_every_iff`
 

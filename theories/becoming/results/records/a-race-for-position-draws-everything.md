@@ -80,6 +80,7 @@ The ranking is the count of RelativePosition read on the draws: a game zero-sum 
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T173410.671057Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261103T044249.876816Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `a race for position draws everything`, `争位次的轮流抽取者全部抽取`, `Becoming.Optimum.InTurn.PerfectPosition`, `Becoming.Optimum.InTurn.position_perfect_ends`, `Becoming.Optimum.InTurn.position_keeps_nothing`
 

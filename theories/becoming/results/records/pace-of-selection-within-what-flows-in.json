@@ -801,22 +801,22 @@
         "Becoming.SelectionPace.unfed_rise_shrinks",
         "Becoming.SelectionPace.whole_within_power"
       ],
-      "sha256": "abf440add3b6dd9c9a94ce3f0efe7b4fb9f23f9607fd296a8a9268a96a1a72b3"
+      "sha256": "2f911974da566ac50012c10a8471e5043eeb00ffdb782135306ee34cf76ffc9d"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reproduction.lean",
       "role": "proof",
-      "sha256": "4327fef97099532b6ca8d429c04274a025ab6ea52ebe1c0c129fa4a0fa542506"
+      "sha256": "0f8d91e7d9b6292e176e88806452cc4de86365047e9f8ca11d66556c3ece1d3c"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Entropy.lean",
       "role": "proof",
-      "sha256": "7f904219b72a7fed350869a9001fac70f96542dcf164b8536d85dba474fe1a1f"
+      "sha256": "9810b77792507396e7b036666e2bd0edbefb3502a25229687ab73d5c025e95da"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionTerm.lean",
       "role": "proof",
-      "sha256": "d15e7af183adb0363e93f83759c0e2a9f4d1f94b40f331067e6d339d431dc8fe"
+      "sha256": "8b990ef2bdabd78168685b33930779185f54bcaf475ac8252613324b662bf628"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Evolution.lean",
@@ -826,12 +826,12 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
       "role": "proof",
-      "sha256": "25317ae599247630ed2e2884f7a756ab29e9d2514623ed32d6f977551cbce0f6"
+      "sha256": "94e9be0baad1667d0d06acdfa757543c292c054c3a7eeaefccbe10b43bd321b5"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean",
       "role": "proof",
-      "sha256": "1c85d21fa7ec00debcac668785b51fdd7cdc3a97a66d50c6700047956cdaf5df"
+      "sha256": "6c522be9ffb1099e2cb1a97e9aa6fed196c6552f7c224b3c75fe965e6204ef80"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T174631.939884Z/verification.json",
@@ -857,12 +857,18 @@
       "path": "theories/becoming/chapters/04-LIFE.md",
       "role": "statement",
       "sha256": "e1ae074d995eb67222a39d9fb3a9f53b916424f06e6e2f0720f99c104a552192"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "role": "receipt",
+      "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionPace.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T174631.939884Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.SelectionPace",
       "success_pointer": "/status",
       "success_value": "passed"

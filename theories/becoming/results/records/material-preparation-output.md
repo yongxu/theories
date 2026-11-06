@@ -95,6 +95,7 @@ The actual routeTrace output is the reusable material interface; it does not rec
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/preparation-correspondence-checks/20261020T161943.503298Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/preparation-correspondence-checks/20261031T133608.754102Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `MaterialMaturation.actual_preparation_iff`, `MaterialMaturation.route_sound`, `MaterialMaturation.route_complete`, `Becoming.Copying.empties_iff`, `Becoming.Courses.copy_empties_iff`, `Becoming.Courses.copy_completes_iff`
 

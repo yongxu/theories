@@ -1,0 +1,28 @@
+@Becoming.Scope.secures : ∀ {S : Type u_1} {A : Type u_2} {R : Type u_3} {k : Nat} {P : Generative.Process S A}
+  {sense : S → A → S → Fin k} {response : R → List A} {safe : S → A → S → Prop} {goal B : S → Prop}
+  {policy : Generative.InquirySufficiency.Policy A R k},
+  Generative.InquirySufficiency.Sound P safe goal sense response policy B →
+    ∀ (t : S), Becoming.Scope P sense response B policy t → goal t
+@Becoming.Scope.reached : ∀ {S : Type u_1} {A : Type u_2} {R : Type u_3} {k : Nat} {P : Generative.Process S A}
+  {sense : S → A → S → Fin k} {response : R → List A} {B : S → Prop}
+  {policy : Generative.InquirySufficiency.Policy A R k} {t : S},
+  Becoming.Scope P sense response B policy t → ∃ s, B s ∧ Becoming.Reach P s t
+@Becoming.Scope.nonempty : ∀ {S : Type u_1} {A : Type u_2} {R : Type u_3} {k : Nat} {P : Generative.Process S A}
+  {sense : S → A → S → Fin k} {response : R → List A} {safe : S → A → S → Prop} {goal B : S → Prop}
+  {policy : Generative.InquirySufficiency.Policy A R k} {s : S},
+  Generative.InquirySufficiency.Sound P safe goal sense response policy B →
+    B s → ∃ t, Becoming.Scope P sense response B policy t ∧ goal t
+@Becoming.Scope.antitone : ∀ {S : Type u_1} {A : Type u_2} {R : Type u_3} {k : Nat} {P : Generative.Process S A}
+  {sense : S → A → S → Fin k} {response : R → List A} {B B' : S → Prop}
+  {policy : Generative.InquirySufficiency.Policy A R k},
+  (∀ (s : S), B' s → B s) →
+    ∀ {t : S}, Becoming.Scope P sense response B' policy t → Becoming.Scope P sense response B policy t
+@Becoming.commonResponse_antitone : ∀ {S : Type u_1} {A : Type u_2} {R : Type u_3} {P : Generative.Process S A}
+  {response : R → List A} {safe : S → A → S → Prop} {goal B B' : S → Prop} {r : R},
+  (∀ (s : S), B' s → B s) →
+    Generative.InquirySufficiency.CommonResponse P safe goal response B r →
+      Generative.InquirySufficiency.CommonResponse P safe goal response B' r
+@Becoming.commonResponse_judge_iff : ∀ {W : Type u_1} {H : Type u_2} {admissible : W → H → Prop} {B : W → Prop} {a : H},
+  Generative.InquirySufficiency.CommonResponse (Becoming.judgeProcess admissible) (fun x x_1 x_2 => True)
+      (fun x => True) (fun a => [a]) (Becoming.sees B) a ↔
+    ∀ (w : W), B w → admissible w a

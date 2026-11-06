@@ -85,8 +85,8 @@ fixes them; for the relabelling, still worlds only.
 
 The arithmetic lemmas the World's laws use are in the namespace `Becoming.UnreadStandings`: a
 positive factor keeps sign, order and an equation of two sums; a map keeping order keeps equality
-and strict order; squaring keeps sign and order; `k * p = 1` forces `k = 1`; and `Nat.mul_assoc` and
-`Nat.mul_left_comm` are proved again here, since `Init`'s report `propext`. Every declaration has
+and strict order; squaring keeps sign and order; `k * p = 1` forces `k = 1`; and products associate by the core's
+`mul_assoc_nat`, since `Init`'s `Nat.mul_assoc` reports `propext`. Every declaration has
 an empty axiom report.
 -/
 

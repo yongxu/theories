@@ -107,6 +107,7 @@ On 12 October 2026 Ren asked how a cause–effect system compares with the theor
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T184601.050950Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `Becoming.inputs`, `Becoming.inputs_determined`, `Becoming.trajectory`, `Becoming.inputsRun`, `Becoming.inputs_intervention_unfixed`, `Becoming.inputs_model_fixes`, `Becoming.forget`, `Becoming.Run.forget`, `Becoming.forget_inputs_determined_iff`, `standard causal model`, `标准因果模型`, `cause–effect system`, `因果系统`, `intervention`, `干预`, `noise`, `噪声`
 

@@ -82,6 +82,7 @@ Habituation, a response decrement with repeated stimulation (Thompson and Spence
 | statement | [CIVILIZATION-THOUGHT-AND-BECOMING.md](../../history/CIVILIZATION-THOUGHT-AND-BECOMING.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `a coupling saturated by what it has carried`, `saturation of a coupling`, `habituation of a coupling`, `为所传之量所饱和的耦合`, `耦合之饱和`, `Becoming.Saturation.stops`, `Becoming.Saturation.stops_iff`
 

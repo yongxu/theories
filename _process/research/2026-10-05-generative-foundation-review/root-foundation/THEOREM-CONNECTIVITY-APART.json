@@ -4272,11 +4272,6 @@
    "category": "support",
    "reason": "mixed over a listing is the grammar's «杂» of the coreflexive relations admitted, both ways: the representation of order over a listing (OU3b)"
   },
-  "Becoming.split_at_head": {
-   "module": "Becoming.Recurrence",
-   "category": "support",
-   "reason": "a list lemma kept by name as an alias of GrammarLaws.split_at_head, its one proof (OU3b); the pigeonhole revisits_within no longer uses this alias"
-  },
   "Becoming.withinClosure_iff_within": {
    "module": "Becoming.Frame",
    "category": "support",
@@ -6852,11 +6847,6 @@
    "category": "model-witness",
    "reason": "«亡于静而住于一之例»: a fact about one constructed model, a net where a conditional law of the corpus has its condition fail (06 §四, the record conditional-laws-of-the-corpus)"
   },
-  "Becoming.«亡者异当且仅当有后»": {
-   "module": "Becoming.GrammarConditionals",
-   "category": "general-structure",
-   "reason": "«亡者异当且仅当有后»: a conditional law of the corpus (its family in the OU7 study's groups.tsv) proved for every relation on any carrier; the base supplies no reading of its terms"
-  },
   "Becoming.«亡而息之例»": {
    "module": "Becoming.GrammarConditionals",
    "category": "model-witness",
@@ -7646,6 +7636,196 @@
    "module": "Becoming.ReachedCascade",
    "category": "model-witness",
    "reason": "Turns.Unreached.not_from: a fact about one constructed model, where Cascade's premise from member 0 fails (TRL)"
+  },
+  "Becoming.Joining.Once.finiteOutcomes": {
+   "module": "Becoming.PremisesTogether",
+   "category": "model-witness",
+   "reason": "The one passage's joining has listed outcomes: a fact about one constructed model (board item LM)"
+  },
+  "Becoming.Joining.Once.locallyFinite": {
+   "module": "Becoming.PremisesTogether",
+   "category": "model-witness",
+   "reason": "Each piece holds each role in a listed set of joinings: a fact about one constructed model (board item LM)"
+  },
+  "Becoming.LineageDrawdown.Drain.selection_P": {
+   "module": "Becoming.LineageDrawdown",
+   "category": "model-witness",
+   "reason": "Selection at the first step: concordance two at step zero, with no discordance; the generation's size is two at steps zero and one: a fact about one constructed model (board item LM)"
+  },
+  "Becoming.LineageDrawdown.Drain.share_P": {
+   "module": "Becoming.LineageDrawdown",
+   "category": "model-witness",
+   "reason": "The drawers' share goes from one of two to all: the restrained member leaves none, the drawer two: a fact about one constructed model (board item LM)"
+  },
+  "Becoming.LineageDrawdown.Drain.sizes_P": {
+   "module": "Becoming.LineageDrawdown",
+   "category": "model-witness",
+   "reason": "No growth: the generation's size is two at every step through nine: a fact about one constructed model (board item LM)"
+  },
+  "Becoming.Map.Endless.generation_in_pairs": {
+   "module": "Becoming.GrammarMap",
+   "category": "model-witness",
+   "reason": "a fact about one constructed model (board item LM)"
+  },
+  "Becoming.MatchedCourses.readings_hold_together": {
+   "module": "Becoming.PremisesTogether",
+   "category": "model-witness",
+   "reason": "Both readings of the content relation hold together, so the conditional anchors (`MatchedCourses.conditional_lower_anchor`, `MatchedCourses.conditional_upper_anchor`) and the fragile case (`MatchedCourses.fragile_b3_not_matching`) are read on one relation: a fact about one constructed model (board item LM)"
+  },
+  "Becoming.Optimum.AtOnce.returnsLess_fails": {
+   "module": "Becoming.PremisesTogether",
+   "category": "model-witness",
+   "reason": "The whole, standing as it was left, returns one for one, so it fails the premise wherever a drawer has a step after the first: a fact about one constructed model (board item LM)"
+  },
+  "Becoming.Optimum.AtOnce.returnsLess_met": {
+   "module": "Becoming.PremisesTogether",
+   "category": "model-witness",
+   "reason": "What is left may return nothing: a fact about one constructed model (board item LM)"
+  },
+  "Becoming.PairChance.keeps_answering": {
+   "module": "Becoming.PairChance",
+   "category": "model-witness",
+   "reason": "A law keeps mutual withholding: after two steps at which both formations withheld, it withholds: a fact about one constructed model (board item LM)"
+  },
+  "Becoming.PairChance.keeps_waitingBoth": {
+   "module": "Becoming.PairChance",
+   "category": "model-witness",
+   "reason": "a fact about one constructed model (board item LM)"
+  },
+  "Becoming.PairChance.keeps_windowed": {
+   "module": "Becoming.PairChance",
+   "category": "model-witness",
+   "reason": "a fact about one constructed model (board item LM)"
+  },
+  "Becoming.PairChance.keeps_withholding": {
+   "module": "Becoming.PairChance",
+   "category": "model-witness",
+   "reason": "a fact about one constructed model (board item LM)"
+  },
+  "Becoming.PairChance.not_keeps_agreeing": {
+   "module": "Becoming.PairChance",
+   "category": "model-witness",
+   "reason": "Agreement, sparing and the alternator give after mutual withholding: a fact about one constructed model (board item LM)"
+  },
+  "Becoming.PairChance.not_keeps_alternating": {
+   "module": "Becoming.PairChance",
+   "category": "model-witness",
+   "reason": "a fact about one constructed model (board item LM)"
+  },
+  "Becoming.PairChance.not_keeps_sparing": {
+   "module": "Becoming.PairChance",
+   "category": "model-witness",
+   "reason": "Agreement, sparing and the alternator give after mutual withholding: a fact about one constructed model (board item LM)"
+  },
+  "Becoming.PairFlow.DrawnBelowNeed.drawn": {
+   "module": "Becoming.PairFlow",
+   "category": "model-witness",
+   "reason": "a fact about one constructed model (board item LM)"
+  },
+  "Becoming.PairFlow.DrawnBelowNeed.fallen": {
+   "module": "Becoming.PairFlow",
+   "category": "model-witness",
+   "reason": "The draw ends the renewal: the second stands below its need from step `2` on and is active at no later step, although the taker draws nothing after step `1` (a case of `stays_fallen`): a fact about one constructed model (board item LM)"
+  },
+  "Becoming.PairFlow.DrawnBelowNeed.levels_drawn": {
+   "module": "Becoming.PairFlow",
+   "category": "model-witness",
+   "reason": "a fact about one constructed model (board item LM)"
+  },
+  "Becoming.PairFlow.FailedRenewal.gifts_sharing": {
+   "module": "Becoming.PairFlow",
+   "category": "model-witness",
+   "reason": "What the first gave beyond what it received is two units, whatever the length of the run: a fact about one constructed model (board item LM)"
+  },
+  "Becoming.PairFlow.FailedRenewal.keeping_fallen": {
+   "module": "Becoming.PairFlow",
+   "category": "model-witness",
+   "reason": "The same, as a case of `stays_fallen`: the second is not active at step `2` and the first never gives in the keeping run: a fact about one constructed model (board item LM)"
+  },
+  "Becoming.PairFlow.FailedRenewal.lines_gain": {
+   "module": "Becoming.PairFlow",
+   "category": "model-witness",
+   "reason": "The pair's lines gain without bound: a fact about one constructed model (board item LM)"
+  },
+  "Becoming.PairFlow.FailedRenewal.shortfall": {
+   "module": "Becoming.PairFlow",
+   "category": "model-witness",
+   "reason": "a fact about one constructed model (board item LM)"
+  },
+  "Becoming.PairFlow.GiverAtNeed.alone_fallen": {
+   "module": "Becoming.PairFlow",
+   "category": "model-witness",
+   "reason": "The giver never stands again: a case of `stays_fallen`, the withholder never giving: a fact about one constructed model (board item LM)"
+  },
+  "Becoming.PairFlow.GiverAtNeed.gift_lost": {
+   "module": "Becoming.PairFlow",
+   "category": "model-witness",
+   "reason": "One gift at the giver's need ends its renewal: over `m + 1` steps the giver's line is `m` short of what keeping leaves it, from one gift of one unit: a fact about one constructed model (board item LM)"
+  },
+  "Becoming.PairFlow.GiverAtNeed.standings_differ": {
+   "module": "Becoming.PairFlow",
+   "category": "model-witness",
+   "reason": "a fact about one constructed model (board item LM)"
+  },
+  "Becoming.PairFlow.GiverAtNeed.withholder_same": {
+   "module": "Becoming.PairFlow",
+   "category": "model-witness",
+   "reason": "What the gift brought the receiver, read by support, is nothing: the withholder stands at every step of both runs, so by `lines_agree_while_active` its line is the same in both, although its standing is not (`standings_differ`): a fact about one constructed model (board item LM)"
+  },
+  "Becoming.PairFlow.Routes.gap_iff": {
+   "module": "Becoming.PairFlow",
+   "category": "model-witness",
+   "reason": "`γ < β` exactly where giving loses less than keeping spoils with what the matching brings: a fact about one constructed model (board item LM)"
+  },
+  "Becoming.PairFlow.Routes.signs": {
+   "module": "Becoming.PairFlow",
+   "category": "model-witness",
+   "reason": "Each sign is met: a fact about one constructed model (board item LM)"
+  },
+  "Becoming.Reconfiguration.covered_and_not": {
+   "module": "Becoming.PremisesTogether",
+   "category": "model-witness",
+   "reason": "A bound covers what it allows, on an arrangement ready for it: a fact about one constructed model (board item LM)"
+  },
+  "Becoming.«不有常而异且通之例»": {
+   "module": "Becoming.GrammarConditionals",
+   "category": "model-witness",
+   "reason": "Ending, altering and passing through at one occurrence, with no constancy (不有常而异且通之例): a fact about one constructed model (board item LM)"
+  },
+  "Becoming.«两火火薪相须»": {
+   "module": "Becoming.Grammar",
+   "category": "model-witness",
+   "reason": "Fire and fuel need each other in two flames, where their joint class is no identity (两火火薪相须): a fact about one constructed model (board item LM)"
+  },
+  "Becoming.«亡而两向有常则异当且仅当通»": {
+   "module": "Becoming.GrammarConditionals",
+   "category": "general-structure",
+   "reason": "For what ends, altering and passing through are one where the class is constant both ways (亡而两向有常则异当且仅当通): a law of every relation and class, read on no model (board item LM)"
+  },
+  "Becoming.«异而不通之例»": {
+   "module": "Becoming.GrammarConditionals",
+   "category": "model-witness",
+   "reason": "Altering and not passing through (异而不通之例): a fact about one constructed model (board item LM)"
+  },
+  "Becoming.«异而未亡之例»": {
+   "module": "Becoming.GrammarConditionals",
+   "category": "model-witness",
+   "reason": "Altering and not ended (异而未亡之例): a fact about one constructed model (board item LM)"
+  },
+  "Becoming.«步皆分则皆亡»": {
+   "module": "Becoming.GrammarConditionals",
+   "category": "general-structure",
+   "reason": "Where every step is parted, everything has ended (步皆分则皆亡): a law of every relation and class, read on no model (board item LM)"
+  },
+  "Becoming.«每层不分而有常则核当且仅当每层不分»": {
+   "module": "Becoming.GrammarCandidates",
+   "category": "general-structure",
+   "reason": "Testing within the net, both ways, under the premise (每层不分而有常则核当且仅当每层不分): a law of every relation and class, read on no model (board item LM)"
+  },
+  "Becoming.«通而不异之例»": {
+   "module": "Becoming.GrammarConditionals",
+   "category": "model-witness",
+   "reason": "Passing through without altering (通而不异之例): a fact about one constructed model (board item LM)"
   }
  },
  "instances": {

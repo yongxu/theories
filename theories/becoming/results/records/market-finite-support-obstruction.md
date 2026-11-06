@@ -115,6 +115,7 @@ Renewal and stock are related coordinates updated in the same activity. Time-var
 | receipt | [verification.json](../../../../experiments/market-generativity/formal/market-instances-checks/20261031T132103.724349Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T112708.430596Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/market-generativity/formal/market-instances-checks/20261101T114325.150839Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `FiniteSupportObstruction.every_finite_stock_has_obstructed_positive_seeds`, `Becoming.Lasting.Drains.leaves`, `Becoming.Lasting.exhausts`, `Becoming.MarketInstances.forces_failure_instance`, `Becoming.MarketInstances.obstructed_seeds_instance`, `Becoming.Courses.Drains.leaves_run`, `Becoming.Courses.exhausts_run`
 

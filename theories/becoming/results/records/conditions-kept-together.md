@@ -89,6 +89,7 @@ An account of social viability Ren brought on 19 October 2026 lists eight constr
 | integration | [DESIGN.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/DESIGN.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T213154.508889Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `conditions kept together`, `共同保持的条件`, `keeping a part is not renewal`, `Becoming.Viability.ChoicePoint.no_rule_decides_joint`, `Becoming.Renewable.kept_part_not_renewal`, `viability is not a product (reading)`
 

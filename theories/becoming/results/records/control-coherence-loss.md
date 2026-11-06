@@ -95,6 +95,7 @@ A restricted algebraic instantiation of standard quantum operations with the con
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `Becoming.Readout.reading_single_iff`, `Becoming.Readout.decodes_iff_of_section`, `Becoming.Readout.decoder_pair_iff`, `Becoming.Readout.no_restore`, `Becoming.Courses.runs_no_restore`, `Becoming.Dephasing.switched_density`, `Becoming.Dephasing.dephase_keeps_response_iff`, `Becoming.Dephasing.no_diagonal_response_decoder`, `Becoming.Dephasing.no_uniform_dephase_inverse`, `Becoming.Dephasing.recording_reduces_to_dephase`, `Becoming.Dephasing.joint_reversal_restores_control`, `Becoming.Dephasing.not_lossless`, `Becoming.Dephasing.no_restore_along`
 

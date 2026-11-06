@@ -94,6 +94,7 @@ Acquisition, delivery, review and effect are differentiated relations in one com
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/market-generativity/meta-attractor/versioned-task-instances-checks/20261020T161926.448088Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/market-generativity/meta-attractor/versioned-task-instances-checks/20261031T132223.713396Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `PendingTaskApplicability.revised_delivery_enters_review`, `PendingTaskApplicability.funded_covered_review`, `Becoming.Stock.feasible_iff_covered`, `Becoming.VersionedTaskInstances.review_course_covered_iff`, `Becoming.VersionedTaskInstances.review_completes_iff`, `Becoming.VersionedTaskInstances.review_losses`, `Becoming.VersionedTaskInstances.losses_kept`
 

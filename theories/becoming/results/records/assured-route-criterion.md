@@ -85,6 +85,7 @@ A supplied one-step process, not a definition of wisdom, ethical permission or s
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `Generative.WisdomResponseStructure.assured_route_iff (periphery module)`, `Becoming.Assurance.completes_iff_of_determined`, `Becoming.Assurance.completes_iff_runs`, `Becoming.Assurance.runs_of_completes`, `Becoming.Assurance.completes_ofMap_iff`, `Becoming.Assurance.completes_ofMap_single`, `Becoming.Assurance.trace_ofPartial_iff`, `Becoming.Assurance.completes_ofPartial_iff`, `Becoming.Assurance.Branch.runs_not_completes`, `Becoming.Instances.assured_iff_completes (retired module)`, `Becoming.Instances.routes_assured_iff (retired module)`, `Becoming.Instances.regulation_assured_iff (retired module)`
 

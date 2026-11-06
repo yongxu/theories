@@ -74,6 +74,7 @@ Price's partition weighted by group size (Price 1972) and the reading of group s
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261103T203838.375122Z/verification.json) | — |
 | integration | [NOTE.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/us-unequal-sizes/NOTE.md) | — |
 | statement | [04-LIFE.md](../../chapters/04-LIFE.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `Groups of unequal size not decided by the spread among groups`, `不等大之群，不由群间离散决定`, `Becoming.SelectionLevels.Sized.either_verdict`
 

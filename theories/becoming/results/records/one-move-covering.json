@@ -208,7 +208,7 @@
         "Becoming.MoveOutcomeProcesses.halted_ensures_nothing",
         "Becoming.MoveOutcomeProcesses.summary_hides_loss"
       ],
-      "sha256": "e1ed73c1333483201e73a20e4a9d082ff13772612e28f1d16d414a3e7cb8afcb"
+      "sha256": "63984e217ce0d0e84365c59fdabb24a1c35c7688d70baf1b26e1f219888acfe2"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T212948.819150Z/verification.json",
@@ -234,12 +234,18 @@
       "path": "_process/research/2026-10-05-repository-reconciliation/architecture/DEFECTS-FOUND.md",
       "role": "integration",
       "sha256": "803d652a75fbb960e4c46bd34732b68ea7ce2aaa3aa9a98ff9257bed266495bb"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "role": "receipt",
+      "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MoveOutcomeProcesses.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T212948.819150Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.MoveOutcomeProcesses",
       "success_pointer": "/status",
       "success_value": "passed"

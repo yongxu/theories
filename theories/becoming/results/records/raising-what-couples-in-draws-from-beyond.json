@@ -228,7 +228,7 @@
         "Becoming.Flow.GainlessOn",
         "Becoming.Flow.Gainless"
       ],
-      "sha256": "7f904219b72a7fed350869a9001fac70f96542dcf164b8536d85dba474fe1a1f"
+      "sha256": "9810b77792507396e7b036666e2bd0edbefb3502a25229687ab73d5c025e95da"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T091757.535800Z/verification.json",
@@ -309,6 +309,12 @@
       "role": "receipt",
       "sha256": "af1ab747ca2b901fa7399678b1cc2914e5e83cbf600e42f811c26f2bbeab3b72",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "role": "receipt",
+      "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -328,7 +334,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Entropy.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T130149.371173Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Entropy",
       "success_pointer": "/status",
       "success_value": "passed"

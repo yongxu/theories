@@ -18,7 +18,7 @@
       "en": "Shift invariance. A common number added to every member's offspring number leaves concordance and discordance with any amount unchanged, and likewise where the amount is shifted, while the total weight moves by that number for each member; over cohorts, two alike at a step whose offspring numbers differ by a common k have the same terms there, the next cohort of one larger by k per member. The excess identity restates Becoming.excess_add_right.",
       "zh": "平移不变。给每个成员的后代数加上同一个数，与任何量的一致与不一致都不变，量平移时亦然；总权重则每个成员增加该数。在世代中，某步相同、后代数相差共同的 k 的两代，在该步有相同的项，其一的下一代每个成员多 k。过度恒等式是 Becoming.excess_add_right 的重述。",
       "declarations": [
-        "Becoming.SelectionShift.excess_shift",
+        "Becoming.excess_add_right",
         "Becoming.SelectionShift.concord_shifted",
         "Becoming.SelectionShift.discord_shifted",
         "Becoming.SelectionShift.concord_shift",
@@ -158,7 +158,7 @@
         "Becoming.SelectionShift.Shrinking.course_size",
         "Becoming.SelectionShift.Shrinking.course_sum",
         "Becoming.SelectionShift.Shrinking.course_concord",
-        "Becoming.SelectionShift.Shrinking.split_le",
+        "Becoming.exists_add_of_le",
         "Becoming.SelectionShift.Shrinking.positive_then_empty"
       ]
     },
@@ -235,7 +235,7 @@
         "Becoming.LineageRegions.Chain.children_self",
         "Becoming.LineageRegions.Chain.children_other",
         "Becoming.LineageRegions.Chain.level_self",
-        "Becoming.LineageRegions.Chain.succ_ne_zero",
+        "Becoming.Naturals.succ_ne_zero",
         "Becoming.LineageRegions.Chain.level_next",
         "Becoming.LineageRegions.Chain.give_self",
         "Becoming.LineageRegions.Chain.give_other",
@@ -353,9 +353,9 @@
         "Becoming.LineageRegions.Courses.generations",
         "Becoming.LineageRegions.Courses.always",
         "Becoming.LineageRegions.Courses.upTo",
-        "Becoming.LineageRegions.Courses.cond_pos",
+        "Becoming.Thresholds.cond_pos",
         "Becoming.LineageRegions.Courses.mem_cond",
-        "Becoming.LineageRegions.Courses.and_split",
+        "Becoming.bool_of_and_true",
         "Becoming.LineageRegions.Courses.fst_of_mem",
         "Becoming.LineageRegions.Courses.mem_of_fst",
         "Becoming.LineageRegions.Courses.kids_marked",
@@ -619,8 +619,8 @@
     {
       "id": "only-the-order-of-change-shows",
       "detail": {
-        "en": "Becoming.excess_add_right, of which SelectionShift.excess_shift is a restatement outside that module's imports.",
-        "zh": "Becoming.excess_add_right；SelectionShift.excess_shift 是它在该模块导入之外的重述。"
+        "en": "Becoming.excess_add_right: the identity both rest on, stated once.",
+        "zh": "Becoming.excess_add_right：二者所据之恒等式，只陈述一次。"
       }
     }
   ],
@@ -628,7 +628,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionShift.lean",
       "role": "proof",
-      "sha256": "d33c854ee6b97abf334666d15919edbc54f8d45d0c452314ebd4078febce6c5d",
+      "sha256": "99435c8ff5728207bd58a66303b4e18e4c8fc66a988b0080348dc171ae659d91",
       "declarations": [
         "Becoming.SelectionShift.Alternating.course",
         "Becoming.SelectionShift.Alternating.course_family",
@@ -709,7 +709,6 @@
         "Becoming.SelectionShift.Shrinking.mark",
         "Becoming.SelectionShift.Shrinking.positive_then_empty",
         "Becoming.SelectionShift.Shrinking.replicate_length",
-        "Becoming.SelectionShift.Shrinking.split_le",
         "Becoming.SelectionShift.Shrinking.unmarked_flatMap",
         "Becoming.SelectionShift.Shrinking.unmarked_mark",
         "Becoming.SelectionShift.ZeroTerm.decides_nothing",
@@ -722,10 +721,8 @@
         "Becoming.SelectionShift.discord_shift",
         "Becoming.SelectionShift.discord_shift_amount",
         "Becoming.SelectionShift.discord_shifted",
-        "Becoming.SelectionShift.excess_shift",
         "Becoming.SelectionShift.flatMap_empty",
         "Becoming.SelectionShift.flatMap_singleton",
-        "Becoming.SelectionShift.length_pos_of_mem",
         "Becoming.SelectionShift.mem_flatMap_of",
         "Becoming.SelectionShift.mul_excess_congr",
         "Becoming.SelectionShift.pos_weight_of_concord",
@@ -740,7 +737,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineageRegions.lean",
       "role": "proof",
-      "sha256": "909c5d951cead58f28337037256d5c9b7e6d0ebe291fb454e96ba0e761c26c60",
+      "sha256": "43a42c3bbb6ee73e30d5062c38eb1184933da1d5b2282e168b0b4cef45789540",
       "declarations": [
         "Becoming.LineageRegions.Chain.acting",
         "Becoming.LineageRegions.Chain.chain",
@@ -770,7 +767,6 @@
         "Becoming.LineageRegions.Chain.one_le_self",
         "Becoming.LineageRegions.Chain.reproduces_from_one",
         "Becoming.LineageRegions.Chain.stands_once",
-        "Becoming.LineageRegions.Chain.succ_ne_zero",
         "Becoming.LineageRegions.Chain.web",
         "Becoming.LineageRegions.ContinuationsAreKids",
         "Becoming.LineageRegions.ContinuationsListed",
@@ -779,11 +775,9 @@
         "Becoming.LineageRegions.Courses.acting",
         "Becoming.LineageRegions.Courses.always",
         "Becoming.LineageRegions.Courses.always_down",
-        "Becoming.LineageRegions.Courses.and_split",
         "Becoming.LineageRegions.Courses.born",
         "Becoming.LineageRegions.Courses.born_off",
         "Becoming.LineageRegions.Courses.born_on",
-        "Becoming.LineageRegions.Courses.cond_pos",
         "Becoming.LineageRegions.Courses.descended",
         "Becoming.LineageRegions.Courses.descends",
         "Becoming.LineageRegions.Courses.embodied",
@@ -929,20 +923,80 @@
       "role": "receipt",
       "sha256": "a9499481f7571698b29d38f6745d66018cfd2b16ba69f997b1758743dd9e0aba",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "role": "proof",
+      "sha256": "cb2c9c8ba8e16916b41a36e1c392f3cd4840a7436b2817c12796c866908020a7",
+      "declarations": [
+        "Becoming.exists_add_of_le",
+        "Becoming.length_pos_of_mem",
+        "Becoming.Naturals.succ_ne_zero",
+        "Becoming.bool_of_and_true"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Change.lean",
+      "role": "proof",
+      "sha256": "537e5f614427fbb047400d2dc901a1ead289724ad69d7fe1e803d5522e1248a9",
+      "declarations": [
+        "Becoming.excess_add_right"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Thresholds.lean",
+      "role": "proof",
+      "sha256": "062babfffda150c6165c8bd8c120bcdd804c51960d19161109a418c6f5a4147d",
+      "declarations": [
+        "Becoming.Thresholds.cond_pos"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "role": "receipt",
+      "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T135137.430317Z/verification.json",
+      "role": "receipt",
+      "sha256": "a81a117f34fdfa4d44ecee3da8ab63099a7febb99c2accbd7b6fc4ec325f2add",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionShift.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T024359.312453Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T135137.430317Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.SelectionShift",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineageRegions.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T134343.981701Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.LineageRegions",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Change.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Change",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Prelude",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Thresholds.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T024359.312453Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Thresholds",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -955,6 +1009,10 @@
     {
       "en": "1 November 2026, board item EL6: the reused laws named in the modules where they now lie, Becoming.LineDegeneration having been placed in its owners' modules (GrammarMap, MapInstances and KeepingWidening) and retired; nothing the record says changes.",
       "zh": "2026年11月1日，工作板条目 EL6：所复用之律按其今所在的模块称名；Becoming.LineDegeneration 已放入其所属者的模块（GrammarMap、MapInstances 与 KeepingWidening）并退役；记录所说无一改变。"
+    },
+    {
+      "en": "6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.",
+      "zh": "2026年11月6日，工作板条目 LM：此记录所列辅助引理现只陈述一次，在 Prelude、Flow、Change 或 Laws，或即 Lean 自有者而从列表除去；改其名，诸律不变。"
     }
   ]
 }

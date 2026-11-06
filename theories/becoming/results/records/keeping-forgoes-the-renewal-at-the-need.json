@@ -44,7 +44,7 @@
       "zh": "过程在 n + 1 步中每步都在 m 或之上时保持需要 m。R 在不低于 m 的每个水平至多给 q 时，保持的过程所汲取加所留至多是起始加那里所给与其后每步 q；平衡时，那里所取加 m 至多是起始水平加那里所给与其后每步 q。",
       "declarations": [
         "Becoming.Optimum.Keeps",
-        "Becoming.Optimum.le_or_eq_succ",
+        "Becoming.le_succ_cases",
         "Becoming.Optimum.keeping_le_most",
         "Becoming.Optimum.keeping_drawn_le",
         "Becoming.Flow.Balances.keeping_taken_le"
@@ -289,7 +289,6 @@
         "Becoming.Optimum.Holding.onSource",
         "Becoming.Optimum.Keeps",
         "Becoming.Optimum.OpenCourse",
-        "Becoming.Optimum.add_four",
         "Becoming.Optimum.byDrawn",
         "Becoming.Optimum.continued",
         "Becoming.Optimum.continued_after",
@@ -325,8 +324,6 @@
         "Becoming.Optimum.keeping_le_most",
         "Becoming.Optimum.keeps_or_below",
         "Becoming.Optimum.keeps_or_drops",
-        "Becoming.Optimum.le_of_sub_zero",
-        "Becoming.Optimum.le_or_eq_succ",
         "Becoming.Optimum.level_add_drawn_of_within",
         "Becoming.Optimum.lt_of_forgone_below",
         "Becoming.Optimum.lt_of_forgone_beyond",
@@ -342,7 +339,7 @@
         "Becoming.Web.frontier_keeps",
         "Becoming.Web.frontier_keeps_above"
       ],
-      "sha256": "d46f2f9d46af492872aef8473e931ca5b3cff967f561ffaca641045490ddc6e5"
+      "sha256": "3a4917cc1dc7ac5b0a2787083f7dcd408fb48f722b97c19305ae70d45d0ece34"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
@@ -351,10 +348,12 @@
         "Becoming.Naturals.add_sub_cancel_left",
         "Becoming.Naturals.add_sub_of_le",
         "Becoming.Naturals.le_of_add_le_add_left",
-        "Becoming.Naturals.le_of_add_le_add_right",
-        "Becoming.le_dest"
+        "Becoming.le_of_add_le_add_right",
+        "Becoming.le_dest",
+        "Becoming.le_of_sub_eq_zero",
+        "Becoming.le_succ_cases"
       ],
-      "sha256": "3aadd812b74b7b0563aa3f7daa19a7d5b8da6f1bc55af5cc6bf64fb824f385d7"
+      "sha256": "cb2c9c8ba8e16916b41a36e1c392f3cd4840a7436b2817c12796c866908020a7"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/World.lean",
@@ -373,7 +372,7 @@
         "Becoming.Flow.given",
         "Becoming.Flow.taken"
       ],
-      "sha256": "25317ae599247630ed2e2884f7a756ab29e9d2514623ed32d6f977551cbce0f6"
+      "sha256": "94e9be0baad1667d0d06acdfa757543c292c054c3a7eeaefccbe10b43bd321b5"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Amounts.lean",
@@ -382,7 +381,7 @@
         "Becoming.Amounts.sum",
         "Becoming.Amounts.whole"
       ],
-      "sha256": "1da43605bcd91f9165076f4780aeda0b544f98b4ef0d5cabe71893bf3608c621"
+      "sha256": "f2225b617dfdcc6d80989c5796bddd0e5146cfed125cee37cb5afcb5ff426597"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean",
@@ -390,7 +389,7 @@
       "declarations": [
         "Becoming.Web.Broken"
       ],
-      "sha256": "1c85d21fa7ec00debcac668785b51fdd7cdc3a97a66d50c6700047956cdaf5df"
+      "sha256": "6c522be9ffb1099e2cb1a97e9aa6fed196c6552f7c224b3c75fe965e6204ef80"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Selection.lean",
@@ -579,19 +578,25 @@
       "role": "receipt",
       "sha256": "755d13b0acad5bce07b47560c4f923619aa0ed862e52ddd979d29d679c757c7b",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "role": "receipt",
+      "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261103T044249.876816Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Optimum",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Prelude",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -605,21 +610,21 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Flow",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Amounts.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Amounts",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T052543.695066Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Dependence",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -659,6 +664,10 @@
     {
       "en": "25 October 2026, board item DF (study section 418): the scope item no longer says both kinds of optimum stand at the tie: both threshold laws are strict, so the tie and the gap the reached ends leave between the thresholds are stated as not shown; no law changes.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：范围项不再说持平处两种最优并存：两条阈值律都是严格的，所以持平处以及所及之终在两阈值间留下的间隙被列为未表明；定律不变。"
+    },
+    {
+      "en": "6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.",
+      "zh": "2026年11月6日，工作板条目 LM：此记录所列辅助引理现只陈述一次，在 Prelude、Flow、Change 或 Laws，或即 Lean 自有者而从列表除去；改其名，诸律不变。"
     }
   ]
 }

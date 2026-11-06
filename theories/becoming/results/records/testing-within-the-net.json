@@ -38,6 +38,17 @@
         "Becoming.Room.same_constant",
         "Becoming.«恒温与平衡»"
       ]
+    },
+    {
+      "en": "The stages and the stages of inquiry are one relation at every stage. Each stage lies within the class and within the stage before, and for a symmetric class each is symmetric. So where the class is symmetric and being told apart at no stage is constant under the step, the core is exactly what no stage tells apart: what the first law gives one way holds both ways under that premise.",
+      "zh": "层与诘于每一阶段是同一关系。每层在类内，亦在前一层内；类对称时每层对称。故类对称且“无一层能分”于缘有常时，核恰是无一层能分者：首律一向所给者，在此前提下两向皆成。",
+      "declarations": [
+        "Becoming.«层即诘»",
+        "Becoming.«诘之降»",
+        "Becoming.«层在类内»",
+        "Becoming.«层之对称»",
+        "Becoming.«每层不分而有常则核当且仅当每层不分»"
+      ]
     }
   ],
   "hypotheses": [
@@ -48,9 +59,10 @@
   ],
   "does_not_show": [
     {
-      "en": "That what no finite stage tells apart is in the core: that is the Hennessy-Milner direction, which needs finitely many successors and implies LLPO in its limit form.",
-      "zh": "无有穷之层所分者在核中：那是 Hennessy-Milner 之向，要求有穷多后继，其极限形式蕴涵 LLPO。",
-      "kind": "converse"
+      "en": "That what no finite stage tells apart is in the core, with no premise: in an infinitely branching net it is not. Under the premise that being told apart at no stage is constant under the step it is. The Hennessy-Milner direction, from finitely many successors, implies LLPO in its limit form.",
+      "zh": "无有穷之层所分者在核中，不带前提：无穷分叉之网中不然。“无一层能分”于缘有常之前提下则然。Hennessy-Milner 之向由有穷多后继而来，其极限形式蕴涵 LLPO。",
+      "kind": "converse",
+      "witness": "Becoming.«致诘不尽»"
     },
     {
       "en": "That the open window happens: the wider net is a net of possibilities, and the comparison is counterfactual.",
@@ -155,6 +167,25 @@
       "role": "receipt",
       "sha256": "8a71fe367f8a7ebedec0790e1f50e267422bd703a7d51b0da81d0972dff2dca6",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean",
+      "role": "proof",
+      "sha256": "ec0bb976dac31e034023139e0d5ef15e0c801cc7b498cd16f8055ff3010b2f84",
+      "declarations": [
+        "Becoming.«层即诘»",
+        "Becoming.«诘之降»",
+        "Becoming.«层在类内»",
+        "Becoming.«层之对称»",
+        "Becoming.«每层不分而有常则核当且仅当每层不分»",
+        "Becoming.«致诘不尽»"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "role": "receipt",
+      "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -164,12 +195,23 @@
       "sha256_pointer": "/source_sha256/Becoming.GrammarTesting",
       "success_pointer": "/status",
       "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.GrammarCandidates",
+      "success_pointer": "/status",
+      "success_value": "passed"
     }
   ],
   "history": [
     {
       "en": "23 October 2026, board item OU5 (study section 380): 验 of the one-unfolding plan, the root theorem's one direction and the thermostat case read within the net.",
       "zh": "2026年10月23日，工作板条目 OU5（研究第 380 节）：一元计划之验，根定理之一向与恒温之例在网内读之。"
+    },
+    {
+      "en": "6 November 2026, board item LM: the stages 层 and the stages of inquiry 诘 are shown one relation (`«层即诘»`), closing 03's open item, and the conditional converse of testing is stated on the stages (`«每层不分而有常则核当且仅当每层不分»`). The does-not-show item on the converse now says what holds under the premise.",
+      "zh": "2026年11月6日，工作板条目 LM：层与诘示为同一关系（`«层即诘»`），03 之未决项遂了；检验之条件性逆命题于层上陈述（`«每层不分而有常则核当且仅当每层不分»`）。“未示”中关于逆之一条，今说明在前提下何者成立。"
     }
   ]
 }

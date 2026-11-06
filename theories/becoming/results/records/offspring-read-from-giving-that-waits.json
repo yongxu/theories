@@ -330,7 +330,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PairSelection.lean",
       "role": "proof",
-      "sha256": "e68225fc391381c795ee4ee0ff7a83d8f89e59f3d5c359bc65d04a59f84a9a6a",
+      "sha256": "9e6627d152b0b15e19d582b2fdf7ff0e87a0b9b6986ad0975dc4ddb7b74785db",
       "declarations": [
         "Becoming.PairSelection.ClockMatches",
         "Becoming.PairSelection.Errors",
@@ -356,7 +356,6 @@
         "Becoming.PairSelection.among_discord_witness",
         "Becoming.PairSelection.amountOf",
         "Becoming.PairSelection.and_not_true",
-        "Becoming.PairSelection.and_true_eq",
         "Becoming.PairSelection.answerErrAt",
         "Becoming.PairSelection.answerPair",
         "Becoming.PairSelection.answering",
@@ -489,7 +488,6 @@
         "Becoming.PairSelection.tally_zero",
         "Becoming.PairSelection.time",
         "Becoming.PairSelection.total_cohort",
-        "Becoming.PairSelection.total_replicate",
         "Becoming.PairSelection.waitingBoth",
         "Becoming.PairSelection.windowAlternator",
         "Becoming.PairSelection.windowErrAt",
@@ -520,13 +518,34 @@
       "role": "receipt",
       "sha256": "6cb4a68370172fd4c176044750899c0aa5164987d57c7f7061255145c2213b1c",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+      "role": "proof",
+      "sha256": "94e9be0baad1667d0d06acdfa757543c292c054c3a7eeaefccbe10b43bd321b5",
+      "declarations": [
+        "Becoming.total_replicate"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "role": "receipt",
+      "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PairSelection.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T024359.312453Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.PairSelection",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Flow",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -539,6 +558,10 @@
     {
       "en": "2 November 2026, correction: the sign does not decide every verdict, since window_never_rises_beside_alternators and neutral hold whatever the factors; the laws are unchanged.",
       "zh": "2026年11月2日，更正：此符号并不决定每个结论，因 window_never_rises_beside_alternators 与 neutral 不论因子如何皆成立；诸律不变。"
+    },
+    {
+      "en": "6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.",
+      "zh": "2026年11月6日，工作板条目 LM：此记录所列辅助引理现只陈述一次，在 Prelude、Flow、Change 或 Laws，或即 Lean 自有者而从列表除去；改其名，诸律不变。"
     }
   ]
 }

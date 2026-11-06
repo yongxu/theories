@@ -77,6 +77,7 @@ Covering, each move matched by one whose outcomes are among its own, is the one-
 | statement | [08-METHOD.md](../../chapters/08-METHOD.md) | — |
 | statement | [03-KNOWING.md](../../chapters/03-KNOWING.md) | — |
 | integration | [DEFECTS-FOUND.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/DEFECTS-FOUND.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `one-move covering`, `covering of moves`, `一步覆盖`, `Becoming.MoveOutcomeProcesses.covers_iff`, `Becoming.MoveOutcomeProcesses.covers_along`
 

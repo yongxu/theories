@@ -442,7 +442,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Presence.lean",
       "role": "proof",
-      "sha256": "e4f148e78595549e6f7f2cc3cb9ef907fbd158cac7aaca8b3eaddf2fe8603189"
+      "sha256": "eeb8408c26c071c616b4d916793247d27e732c48bd4e8de2092b5455f61047fb"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CausalGrowth.lean",
@@ -452,17 +452,17 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OrderNormal.lean",
       "role": "proof",
-      "sha256": "f233c6800d90c4554f572a85d5ce73b7e48107bfc1b9012ec4a8490d6f78f1e1"
+      "sha256": "1a6b75237782cf9eeb7522a4064f48bee38fae2c4c97cd5b536c6a3eedcc727b"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reordering.lean",
       "role": "proof",
-      "sha256": "72adbc08546ed505f267db376a96975728150ed719f941491095075bfe688f93"
+      "sha256": "cf8c20c4f4f8c9f38c095495c6423238270a428f38a42dd9c98e189275afb193"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Decidedness.lean",
       "role": "proof",
-      "sha256": "374d95c6cc5745fc01efc86814f07c6a9826aa95d20571ad80e1f9ba737e8eca"
+      "sha256": "e40baeb8f754619ce00f33a1fc47635a00e4e29b1ba9428e3a2c8a54df66c20c"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T083434.601834Z/verification.json",

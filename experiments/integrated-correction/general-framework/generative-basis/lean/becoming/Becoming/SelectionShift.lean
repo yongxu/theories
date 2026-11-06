@@ -15,9 +15,7 @@ leaves out (how many offspring there are, which decides whether a family goes on
 they differ, which is all the term reads) and where the term does decide.
 
 * **Shift invariance, an arithmetic identity with no premise.** A common number added to two
-  numbers leaves the excess of one over the other unchanged (`excess_add_right`, a restatement of
-  `excess_add_right` of `Becoming.Stuttering`, which lies outside this module's
-  imports; not a new law). So where every
+  numbers leaves the excess of one over the other unchanged (`excess_add_right`, not a new law). So where every
   member's weight is shifted by a common `k`, concordance and discordance with any amount are
   unchanged (`concord_shifted`, `discord_shifted`; with the shift read as a function,
   `concord_shift`, `discord_shift`), and alike where the amount is shifted

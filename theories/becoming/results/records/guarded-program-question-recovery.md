@@ -91,6 +91,7 @@ Every execution projects to a native path in the same process. Guards and admini
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `Generative.ExplanatoryGuardedPrograms.guarded_history_matches (retired module)`, `Generative.ExplanatoryGuardedPrograms.guard_hoisting_sound (retired module)`, `Becoming.Recipe.leads_iff_afterAny`, `Becoming.Recipe.holds_after_iff_em`, `Becoming.guarded_history_matches_of_em (retired module)`
 

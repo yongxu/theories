@@ -22,7 +22,7 @@
         "Becoming.ClosedCapture.Drawn.poolRead",
         "Becoming.ClosedCapture.Drawn.rearrange_eq",
         "Becoming.ClosedCapture.Drawn.rearrange",
-        "Becoming.ClosedCapture.Drawn.add_swap",
+        "Becoming.Naturals.add_regroup",
         "Becoming.ClosedCapture.Drawn.cross",
         "Becoming.ClosedCapture.Drawn.pool_mono",
         "Becoming.ClosedCapture.Drawn.pool_reads",
@@ -251,7 +251,6 @@
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean",
       "role": "proof",
       "declarations": [
-        "Becoming.ClosedCapture.Drawn.add_swap",
         "Becoming.ClosedCapture.Drawn.cross",
         "Becoming.ClosedCapture.Drawn.le_of_disfavours",
         "Becoming.ClosedCapture.Drawn.mirror_disfavours_iff",
@@ -294,7 +293,7 @@
         "Becoming.ClosedCapture.course_past",
         "Becoming.ClosedCapture.turn_agree"
       ],
-      "sha256": "b88590f154ad3779eaf7d6ef5f05d2e6427d2c6b2681736cf36715aa2c081130"
+      "sha256": "0d748eedc571ebcd09900b4fca837e68faa66cf5d31d7a24050e6850aee10ee7"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleCapture.lean",
@@ -345,13 +344,34 @@
       "path": "sources/15-codex-theory-conversations/2026-10-24-alignment-of-the-joint-selection.md",
       "role": "provenance",
       "sha256": "a0c9f349d08a6eeb1da4310e85ca0e0cd2ab042ee3231bfc728787896f0f4717"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "role": "proof",
+      "sha256": "cb2c9c8ba8e16916b41a36e1c392f3cd4840a7436b2817c12796c866908020a7",
+      "declarations": [
+        "Becoming.Naturals.add_regroup"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "role": "receipt",
+      "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T045617.350224Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.ClosedCapture",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Prelude",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -372,6 +392,10 @@
     {
       "en": "26 October 2026 (MA4b, study section 420): related record loss-read-in-time-by-the-others added. The laws are unchanged.",
       "zh": "2026年10月26日（MA4b，研究第 420 节）：增相关记录 loss-read-in-time-by-the-others。诸律不变。"
+    },
+    {
+      "en": "6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.",
+      "zh": "2026年11月6日，工作板条目 LM：此记录所列辅助引理现只陈述一次，在 Prelude、Flow、Change 或 Laws，或即 Lean 自有者而从列表除去；改其名，诸律不变。"
     }
   ]
 }

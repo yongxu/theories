@@ -137,6 +137,7 @@ Following Ren's “move towards 100%” of 12 October 2026: the zero-premise pla
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T184601.050950Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `Becoming.IdentityDecided`, `Becoming.ListsOnce`, `Becoming.listsOnce_iff_decided`, `Becoming.not_not_listsOnce`, `Becoming.listOnce`, `Becoming.Numbers`, `Becoming.numbers_iff_decided`, `Becoming.not_of_listsOnce`, `Becoming.World.Enumerated`, `Becoming.World.finite_iff`, `Becoming.World.Enumerated.not_recurring`, `Becoming.Flow.enclosed_iff`, `Becoming.Flow.dissipative_iff`, `Becoming.Doubled.needs_once`, `listing once`, `列出一次`, `decided identity`, `已定的同一`, `Distinct`, `不重复`, `what takes part in a step, counted`, `参与一步者计数`
 

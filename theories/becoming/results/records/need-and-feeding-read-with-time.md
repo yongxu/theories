@@ -73,6 +73,7 @@ PW note §2-§3 held that need reaches contemporaries and predecessors, never su
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261030T131028.245732Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `Need and feeding, read with time`, `带着时间来读的所需与供养`, `Becoming.Flow.needs_iff_none_of_inactive`, `Becoming.Flow.WithinFeedingUpTo`, `Becoming.Overlapping.closure_overreaches`
 

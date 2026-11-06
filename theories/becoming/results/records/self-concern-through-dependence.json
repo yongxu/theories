@@ -105,7 +105,7 @@
         "Becoming.Web.CallsForGiving",
         "Becoming.Web.decCallsForGiving",
         "Becoming.total_two",
-        "Becoming.mem_steps_of_between",
+        "Becoming.steps_of_within",
         "Becoming.Flow.given_pos_of_calls"
       ]
     },
@@ -202,13 +202,10 @@
       "en": "Where the other active members can together give each step's demand, pairing in order the units each condition is to be given with the units they can give divides the giving within their capacities: the shared flow balances on the family, gives each formation at most what it can give apart from the feeder in question, and has the consumer drawing past the stock with that feeder never giving.",
       "zh": "其余活跃成员合起来能给出每步的需求时，按顺序把每个条件应得的单位与它们能给的单位配对，就在容量之内分担了给予：分担之流对该族平衡，每个构成所给不超过它除所论供给者外能给的，消耗者汲取超出存量而该供给者从不给予。",
       "declarations": [
-        "Becoming.repeatOnto",
-        "Becoming.unitsOf",
+        "Becoming.unitsOn",
         "Becoming.pairUp",
-        "Becoming.total_repeatOnto",
-        "Becoming.mem_repeatOnto",
-        "Becoming.total_unitsOf",
-        "Becoming.mem_unitsOf",
+        "Becoming.total_unitsOn",
+        "Becoming.mem_unitsOn",
         "Becoming.total_pairUp_fst",
         "Becoming.total_pairUp_snd_le",
         "Becoming.mem_pairUp",
@@ -324,8 +321,8 @@
       "en": "A feeder's shortfall is what a step demands beyond what the other active members can give. In every possible flow in which the consumer draws past the stock the feeder gives at least the sum of its shortfalls, and wherever a flow is possible some has it give exactly that: its degree of need. Need is a positive degree. Witness Capacities: the second copy needed in degree one, the first in degree zero.",
       "zh": "供给者某步的缺额，是该步需求超出其余活跃成员合起来能给者。在消耗者汲取超出存量的每个可能的流中，供给者所给至少是其缺额之和；凡有可能的流，某个流使它恰好给出这么多：这是它被需要的程度。“所需”就是程度为正。见证 Capacities：第二个副本被需要的程度为一，第一个为零。",
       "declarations": [
-        "Becoming.covered_by_excess",
-        "Becoming.excess_le_of_covered",
+        "Becoming.le_add_excess",
+        "Becoming.excess_le_of_le_add",
         "Becoming.split_by",
         "Becoming.Web.shortfall",
         "Becoming.Web.shortCapacity",
@@ -926,35 +923,28 @@
         "Becoming.Web.storesRisen",
         "Becoming.Web.total_demandAt",
         "Becoming.Web.total_drawnUnit",
-        "Becoming.covered_by_excess",
         "Becoming.decSomeEq",
-        "Becoming.excess_le_of_covered",
         "Becoming.forced_member_iff_only",
         "Becoming.forced_needs_iff",
         "Becoming.mem_pairUp",
-        "Becoming.mem_repeatOnto",
-        "Becoming.mem_steps_of_between",
-        "Becoming.mem_unitsOf",
+        "Becoming.mem_unitsOn",
         "Becoming.needsPart_iff_only",
         "Becoming.needsPart_of_none",
         "Becoming.needs_iff_only",
         "Becoming.ownClosure_standpointInvariant_iff_centersWithin",
         "Becoming.pairUp",
-        "Becoming.repeatOnto",
         "Becoming.selfAscribed_iff_withinSome_iff_centersWithin",
         "Becoming.split_by",
         "Becoming.topTier",
         "Becoming.total_eq_at",
         "Becoming.total_pairUp_fst",
         "Becoming.total_pairUp_snd_le",
-        "Becoming.total_repeatOnto",
         "Becoming.total_two",
-        "Becoming.total_unitsOf",
-        "Becoming.unitsOf",
+        "Becoming.total_unitsOn",
         "Becoming.withinClosure_iff_of_centersWithin",
         "Becoming.withinClosure_needs_iff"
       ],
-      "sha256": "b26fdf41eb04ff899beb2bead6bafe5e3a6ede5e9030ba0f68a532214d4bd6e6"
+      "sha256": "fe523d3396a4e3387458b0aeda4904813b29c7c7e8785e3a33e45fab351af009"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T041715.335885Z/verification.json",
@@ -1008,13 +998,65 @@
       "role": "receipt",
       "sha256": "37b752112e19d77ba717f771c6057c5516c1ec47ff247889baeb36374104db54",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Change.lean",
+      "role": "proof",
+      "sha256": "537e5f614427fbb047400d2dc901a1ead289724ad69d7fe1e803d5522e1248a9",
+      "declarations": [
+        "Becoming.le_add_excess",
+        "Becoming.excess_le_of_le_add"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean",
+      "role": "proof",
+      "sha256": "852a5491313223e5de476027cd98408c196db67ac2c263d776dd28e6d050ac3c",
+      "declarations": [
+        "Becoming.steps_of_within"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
+      "role": "proof",
+      "sha256": "d45f47143ba616b665fb28f1a50e68eae3acdd54dea5cc3b068a28b31c8efba0",
+      "declarations": [
+        "Becoming.unitsOn"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "role": "receipt",
+      "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261030T131028.245732Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Weightings",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Change.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Change",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.GrammarLaws",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Population",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -1063,6 +1105,10 @@
     {
       "en": "25 October 2026: corrected (IV3l) after an independent review against the Lean: each member, not a member, in the store-degree law; the two-tier witnesses shown not vacuous (Routing.possible); next step updated; study section 399.",
       "zh": "2026年10月25日：经对照 Lean 的独立审查后修正（IV3l）：库存程度之律中为每个成员而非某成员；两层见证经证明非空真（Routing.possible）；下一步更新；研究第 399 节。"
+    },
+    {
+      "en": "6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.",
+      "zh": "2026年11月6日，工作板条目 LM：此记录所列辅助引理现只陈述一次，在 Prelude、Flow、Change 或 Laws，或即 Lean 自有者而从列表除去；改其名，诸律不变。"
     }
   ]
 }

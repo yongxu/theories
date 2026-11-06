@@ -126,6 +126,7 @@ This is an existence result: one process suffices to show that a finite prefix d
 | integration | [DESIGN.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/DESIGN.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T213154.508889Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `Becoming.Renewable.prefix_does_not_decide`, `Becoming.Renewable.finite_reading_includes_consumption`, `Becoming.Renewable.whole_run_includes_overdraw`, `Becoming.Renewable.amount_reading`, `Becoming.Renewable.cycle_reading_not_finite`, `Becoming.Feedback.prefix_does_not_decide`, `Becoming.Renewable.no_exact_finite_reading`, `Becoming.Renewable.finite_reading_withholds_renewal`
 

@@ -216,8 +216,8 @@
       "id": "identification-where-runs-part",
       "relation": "formal-reuse",
       "detail": {
-        "zh": "复用路径按位置（path_of_continues）与布尔的合取（and_both、and_of）。",
-        "en": "Reuses courses by position (path_of_continues) and Boolean conjunction (and_both, and_of)."
+        "zh": "复用路径按位置（path_of_continues）与布尔的合取（bool_and_true）。",
+        "en": "Reuses courses by position (path_of_continues) and Boolean conjunction (bool_and_true)."
       },
       "interface": {
         "output": {
@@ -341,7 +341,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Lasting.lean",
       "role": "proof",
-      "sha256": "57ab5efb7dd2f3db313eb984a6caf04618334b6d799ff8ae40d32ac9332e911b",
+      "sha256": "0ed67252387622abeb11bbbdf77cd11af2ee14a0b480113f2a907e6cf5b125dc",
       "declarations": [
         "Becoming.Lasting.Continues",
         "Becoming.Lasting.Continues.decided",
@@ -356,7 +356,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Parting.lean",
       "role": "proof",
-      "sha256": "dd9a9e2b41d072ed0b49d28598e13f4991b7fa9593a010d806fc23ab4b6a08ac",
+      "sha256": "1fd0951b045f575e818ca680d2c5d5973786accf0846c4438057855d99370c95",
       "declarations": [
         "Becoming.Parting.path_of_continues"
       ]
@@ -364,19 +364,19 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
       "role": "proof",
-      "sha256": "3aadd812b74b7b0563aa3f7daa19a7d5b8da6f1bc55af5cc6bf64fb824f385d7",
+      "sha256": "cb2c9c8ba8e16916b41a36e1c392f3cd4840a7436b2817c12796c866908020a7",
       "declarations": [
         "Becoming.bool_of_and_true",
-        "Becoming.bool_and_true"
+        "Becoming.bool_and_true",
+        "Becoming.revisits_within",
+        "Becoming.gap_of_lt"
       ]
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Recurrence.lean",
       "role": "proof",
-      "sha256": "536e2a32c187c540f3f86a69742722375bc384831fb2d3f763be1e5f15fb29d0",
+      "sha256": "a0039b199331110185dd666ce67dfc960dc6658511044568a2dd8548e4469dbe",
       "declarations": [
-        "Becoming.revisits_within",
-        "Becoming.gap_of_lt",
         "Becoming.Branching.Returns",
         "Becoming.Branching.Lossless",
         "Becoming.Branching.Lossless.returns",
@@ -407,7 +407,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Decidedness.lean",
       "role": "proof",
-      "sha256": "374d95c6cc5745fc01efc86814f07c6a9826aa95d20571ad80e1f9ba737e8eca",
+      "sha256": "e40baeb8f754619ce00f33a1fc47635a00e4e29b1ba9428e3a2c8a54df66c20c",
       "declarations": [
         "Becoming.Decided"
       ]
@@ -569,6 +569,12 @@
       "role": "receipt",
       "sha256": "36435e774abc5c046539fef86812e4ba5a89d9a18899d51a3efae6363e89064a",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "role": "receipt",
+      "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -588,21 +594,21 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Lasting.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T112708.430596Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Lasting",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Parting.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Parting",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Recurrence.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Recurrence",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -623,14 +629,14 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Decidedness.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Decidedness",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Prelude",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -684,6 +690,10 @@
     {
       "en": "2026-10-20: 28 bookkeeping notes condensed from 16 October 2026 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/047baa11f0d65a26/where-a-run-goes-on.json and in git.",
       "zh": "2026-10-20：28 条记账性说明合并（16 October 2026 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/047baa11f0d65a26/where-a-run-goes-on.json 和 git 中。"
+    },
+    {
+      "en": "6 November 2026, board item LM: declarations this record lists moved with the helpers stated once; its references follow them, and no law changed.",
+      "zh": "2026年11月6日，工作板条目 LM：此记录所列之声明随只陈述一次之辅助引理而移；其引用从之，诸律不变。"
     }
   ],
   "text_versions": [

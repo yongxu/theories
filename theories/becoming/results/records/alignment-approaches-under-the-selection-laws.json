@@ -335,7 +335,7 @@
         "Becoming.Flow.withinCoupling_reads_iff",
         "Becoming.Web.pooled_iff_member"
       ],
-      "sha256": "7bf239fcf1c4b5d03729549d1744e3180e93a0e372bac3511461eb15a44e2e0b"
+      "sha256": "e37053931ccbd5f984cb8533aa7b32bd6b9cd105a8d974e3a2acd167b8ff5d93"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
@@ -346,7 +346,7 @@
         "Becoming.Weighting.widens_iff_every_of_class",
         "Becoming.Weighting.widens_iff_every_score"
       ],
-      "sha256": "b26fdf41eb04ff899beb2bead6bafe5e3a6ede5e9030ba0f68a532214d4bd6e6"
+      "sha256": "fe523d3396a4e3387458b0aeda4904813b29c7c7e8785e3a33e45fab351af009"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T185635.903489Z/verification.json",

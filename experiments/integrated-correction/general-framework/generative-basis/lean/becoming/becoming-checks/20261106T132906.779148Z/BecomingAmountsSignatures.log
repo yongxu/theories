@@ -1,0 +1,123 @@
+@Becoming.Amounts.add_zero : ∀ {A : Type} {M : Becoming.Amounts A} (a : A), M.add a M.zero = a
+@Becoming.Amounts.le_of_eq : ∀ {A : Type} {M : Becoming.Amounts A} {a b : A}, a = b → M.le a b
+@Becoming.Amounts.add_le_add_left : ∀ {A : Type} {M : Becoming.Amounts A} {a b : A} (c : A),
+  M.le a b → M.le (M.add c a) (M.add c b)
+@Becoming.Amounts.le_add_right : ∀ {A : Type} {M : Becoming.Amounts A} (a b : A), M.le a (M.add a b)
+@Becoming.Amounts.le_add_left : ∀ {A : Type} {M : Becoming.Amounts A} (a b : A), M.le a (M.add b a)
+@Becoming.Amounts.add_swap : ∀ {A : Type} {M : Becoming.Amounts A} (x y z : A),
+  M.add x (M.add y z) = M.add (M.add x z) y
+@Becoming.Amounts.times_le : ∀ {A : Type} {M : Becoming.Amounts A} {a b : A},
+  M.le a b → ∀ (m : Nat), M.le (M.times m a) (M.times m b)
+@Becoming.Amounts.still_le : ∀ {A : Type} {M : Becoming.Amounts A} {s : Nat → A} {T : Nat},
+  (∀ (t : Nat), T ≤ t → ¬¬M.le (s (t + 1)) (s t)) → ∀ (k u : Nat), T ≤ u → ¬¬M.le (s (u + k)) (s u)
+@Becoming.Amounts.losses_within : ∀ {A : Type} {M : Becoming.Amounts A} {s d : Nat → A} {T : Nat} (n : Nat),
+  (∀ (t : Nat), T ≤ t → t < T + n → M.le (M.add (s (t + 1)) (d t)) (s t)) → M.le (M.add (s (T + n)) (M.sum d T n)) (s T)
+@Becoming.Amounts.loses_times : ∀ {A : Type} {M : Becoming.Amounts A} {s : Nat → A} {ε : A} {P : Nat → Prop} {T : Nat},
+  (∀ (t : Nat), T ≤ t → ¬¬M.le (s (t + 1)) (s t)) →
+    (∀ (t : Nat), T ≤ t → P t → ¬¬M.le (M.add (s (t + 1)) ε) (s t)) →
+      (∀ (N : Nat), T ≤ N → ¬¬∃ t, N ≤ t ∧ P t) → ∀ (m : Nat), ¬¬∃ u, T ≤ u ∧ M.le (M.add (s u) (M.times m ε)) (s T)
+@Becoming.Amounts.falls_end : ∀ {A : Type} {M : Becoming.Amounts A} {ε : A} (m : Nat) (a : A),
+  ¬M.le (M.times m ε) a →
+    Becoming.«尽» (Becoming.«而» (Becoming.«所闭» fun a b => M.le b a) fun a b => M.le (M.add b ε) a) Becoming.«一» a
+@Becoming.Amounts.rests_unrefuted : ∀ {A : Type} {M : Becoming.Amounts A} {s : Nat → A} {ε : A} {P : Nat → Prop}
+  {T m : Nat},
+  (∀ (t : Nat), T ≤ t → ¬¬M.le (s (t + 1)) (s t)) →
+    (∀ (t : Nat), T ≤ t → P t → ¬¬M.le (M.add (s (t + 1)) ε) (s t)) →
+      ¬M.le (M.times m ε) (s T) → ¬∀ (N : Nat), T ≤ N → ¬¬∃ t, N ≤ t ∧ P t
+@Becoming.Amounts.rests : ∀ {A : Type} {M : Becoming.Amounts A} {s : Nat → A} {ε : A} {P : Nat → Prop} {T m : Nat},
+  (∀ (t : Nat), T ≤ t → M.le (s (t + 1)) (s t)) →
+    (∀ (t : Nat), T ≤ t → P t → M.le (M.add (s (t + 1)) ε) (s t)) →
+      ¬M.le (M.times m ε) (s T) → ¬∀ (N : Nat), ∃ t, N ≤ t ∧ P t
+@Becoming.Amounts.rests_of_archimedean : ∀ {A : Type} {M : Becoming.Amounts A},
+  M.Archimedean →
+    ∀ {s : Nat → A} {ε : A} {P : Nat → Prop} {T : Nat},
+      ¬M.le ε M.zero →
+        (∀ (t : Nat), T ≤ t → M.le (s (t + 1)) (s t)) →
+          (∀ (t : Nat), T ≤ t → P t → M.le (M.add (s (t + 1)) ε) (s t)) → ¬∀ (N : Nat), ∃ t, N ≤ t ∧ P t
+@Becoming.Amounts.family_still : ∀ {A : Type} {M : Becoming.Amounts A} {s u r : Nat → A} {T : Nat},
+  (∀ (t : Nat), T ≤ t → M.le (M.add (s (t + 1)) (u t)) (M.add (s t) (r t))) →
+    (∀ (t : Nat), T ≤ t → M.le (r t) (u t)) → ∀ (t : Nat), T ≤ t → M.le (s (t + 1)) (s t)
+@Becoming.Amounts.family_loses : ∀ {A : Type} {M : Becoming.Amounts A} {s u r : Nat → A} {ε : A} {P : Nat → Prop}
+  {T : Nat},
+  (∀ (t : Nat), T ≤ t → M.le (M.add (s (t + 1)) (u t)) (M.add (s t) (r t))) →
+    (∀ (t : Nat), T ≤ t → P t → M.le (M.add (r t) ε) (u t)) →
+      ∀ (t : Nat), T ≤ t → P t → M.le (M.add (s (t + 1)) ε) (s t)
+@Becoming.Amounts.family_rests : ∀ {A : Type} {M : Becoming.Amounts A} {s u r : Nat → A} {ε : A} {P : Nat → Prop}
+  {T m : Nat},
+  (∀ (t : Nat), T ≤ t → M.le (M.add (s (t + 1)) (u t)) (M.add (s t) (r t))) →
+    (∀ (t : Nat), T ≤ t → M.le (r t) (u t)) →
+      (∀ (t : Nat), T ≤ t → P t → M.le (M.add (r t) ε) (u t)) →
+        ¬M.le (M.times m ε) (s T) → ¬∀ (N : Nat), ∃ t, N ≤ t ∧ P t
+@Becoming.Amounts.family_rests_of_archimedean : ∀ {A : Type} {M : Becoming.Amounts A},
+  M.Archimedean →
+    ∀ {s u r : Nat → A} {ε : A} {P : Nat → Prop} {T : Nat},
+      ¬M.le ε M.zero →
+        (∀ (t : Nat), T ≤ t → M.le (M.add (s (t + 1)) (u t)) (M.add (s t) (r t))) →
+          (∀ (t : Nat), T ≤ t → M.le (r t) (u t)) →
+            (∀ (t : Nat), T ≤ t → P t → M.le (M.add (r t) ε) (u t)) → ¬∀ (N : Nat), ∃ t, N ≤ t ∧ P t
+@Becoming.Amounts.replenishment_unbounded : ∀ {A : Type} {M : Becoming.Amounts A},
+  M.Archimedean →
+    ∀ {s u r : Nat → A} {ε : A} {T₀ : Nat},
+      ¬M.le ε M.zero →
+        (∀ (t : Nat), T₀ ≤ t → M.le (M.add (s (t + 1)) (u t)) (M.add (s t) (r t))) →
+          (∀ (m : Nat), ∃ T, ∀ (t : Nat), T ≤ t → M.le (M.times m ε) (u t)) →
+            ∀ (b : Nat), ¬∀ (t : Nat), T₀ ≤ t → M.le (r t) (M.times b ε)
+@Becoming.Amounts.still_within : ∀ {A : Type} {M : Becoming.Amounts A} {s : Nat → A} {T : Nat},
+  (∀ (t : Nat), T ≤ t → M.le (s (t + 1)) (s t)) → ∀ (k u : Nat), T ≤ u → M.le (s (u + k)) (s u)
+@Becoming.Amounts.still_of_falls : ∀ {A : Type} {M : Becoming.Amounts A} {s d : Nat → A} {T : Nat},
+  (∀ (t : Nat), T ≤ t → M.le (M.add (s (t + 1)) (d t)) (s t)) → ∀ (t : Nat), T ≤ t → M.le (s (t + 1)) (s t)
+@Becoming.Amounts.large_losses_from : ∀ {A : Type} {M : Becoming.Amounts A} {s d : Nat → A} {ε : A} {T : Nat},
+  (∀ (t : Nat), T ≤ t → M.le (M.add (s (t + 1)) (d t)) (s t)) →
+    ∀ {f : Nat → Nat},
+      T ≤ f 0 →
+        (∀ (i : Nat), f i < f (i + 1)) →
+          ∀ (k : Nat),
+            (∀ (i : Nat), i < k → M.le ε (d (f i))) → ∃ u, T ≤ u ∧ u ≤ f k ∧ M.le (M.add (s u) (M.times k ε)) (s T)
+@Becoming.Amounts.large_losses_within : ∀ {A : Type} {M : Becoming.Amounts A} {s d : Nat → A} {ε : A} {T : Nat},
+  (∀ (t : Nat), T ≤ t → M.le (M.add (s (t + 1)) (d t)) (s t)) →
+    ∀ {f : Nat → Nat},
+      T ≤ f 0 →
+        (∀ (i : Nat), f i < f (i + 1)) → ∀ (k : Nat), (∀ (i : Nat), i < k → M.le ε (d (f i))) → M.le (M.times k ε) (s T)
+@Becoming.Amounts.few_large_losses : ∀ {A : Type} {M : Becoming.Amounts A} {s d : Nat → A} {ε : A} {T m : Nat},
+  (∀ (t : Nat), T ≤ t → M.le (M.add (s (t + 1)) (d t)) (s t)) →
+    ¬M.le (M.times m ε) (s T) → ¬∃ f, T ≤ f 0 ∧ (∀ (i : Nat), f i < f (i + 1)) ∧ ∀ (i : Nat), i < m → M.le ε (d (f i))
+@Becoming.Amounts.few_large_losses_of_archimedean : ∀ {A : Type} {M : Becoming.Amounts A},
+  M.Archimedean →
+    ∀ {s d : Nat → A} {ε : A} {T : Nat},
+      (∀ (t : Nat), T ≤ t → M.le (M.add (s (t + 1)) (d t)) (s t)) →
+        ¬M.le ε M.zero → ∃ m, ¬∃ f, T ≤ f 0 ∧ (∀ (i : Nat), f i < f (i + 1)) ∧ ∀ (i : Nat), i < m → M.le ε (d (f i))
+@Becoming.Amounts.approaches_rest : ∀ {A : Type} {M : Becoming.Amounts A},
+  M.Archimedean →
+    ∀ {s d : Nat → A} {ε : A} {T : Nat},
+      (∀ (t : Nat), T ≤ t → M.le (M.add (s (t + 1)) (d t)) (s t)) →
+        ¬M.le ε M.zero → ¬∀ (N : Nat), ∃ t, N ≤ t ∧ M.le ε (d t)
+Becoming.Amounts.whole_times_one : ∀ (n : Nat), Becoming.Amounts.whole.times n 1 = n
+Becoming.Amounts.whole_within : ∀ (a : Nat), ¬Becoming.Amounts.whole.le (Becoming.Amounts.whole.times (a + 1) 1) a
+Becoming.Amounts.whole_archimedean : Becoming.Amounts.whole.Archimedean
+@Becoming.Amounts.whole_losing_steps : ∀ {s d : Nat → Nat} {T : Nat},
+  (∀ (t : Nat), T ≤ t → s (t + 1) + d t ≤ s t) →
+    ∀ {f : Nat → Nat},
+      T ≤ f 0 → (∀ (i : Nat), f i < f (i + 1)) → ∀ (k : Nat), (∀ (i : Nat), i < k → 1 ≤ d (f i)) → k ≤ s T
+@Becoming.Amounts.total_steps_lose : ∀ {x y : Nat → Nat} (S n : Nat),
+  (∀ (t : Nat), S ≤ t → t < S + n → y t + 1 ≤ x t) →
+    Becoming.total (Becoming.steps S n) y + n ≤ Becoming.total (Becoming.steps S n) x
+@Becoming.Amounts.total_steps_le : ∀ {f g : Nat → Nat} (S n : Nat),
+  (∀ (t : Nat), S ≤ t → t < S + n → f t ≤ g t) →
+    Becoming.total (Becoming.steps S n) f ≤ Becoming.total (Becoming.steps S n) g
+Becoming.Amounts.total_steps_add : ∀ (f g : Nat → Nat) (S n : Nat),
+  (Becoming.total (Becoming.steps S n) fun t => f t + g t) =
+    Becoming.total (Becoming.steps S n) f + Becoming.total (Becoming.steps S n) g
+@Becoming.Amounts.falls_by_stretch : ∀ {q x y : Nat → Nat} (S n : Nat),
+  (∀ (t : Nat), S ≤ t → t < S + n → q (t + 1) + x t = q t + y t) →
+    (∀ (t : Nat), S ≤ t → t < S + n → y t + 1 ≤ x t) → q (S + n) + n ≤ q S
+@Becoming.Amounts.unmarked_or_marked : ∀ {P : Nat → Prop},
+  (∀ (t : Nat), P t ∨ ¬P t) → ∀ (S n : Nat), (∃ N, S ≤ N ∧ N < S + n ∧ ¬P N) ∨ ∀ (t : Nat), S ≤ t → t < S + n → P t
+@Becoming.Amounts.unmarked_within : ∀ {q x y : Nat → Nat} {P : Nat → Prop},
+  (∀ (t : Nat), P t ∨ ¬P t) →
+    ∀ (S : Nat),
+      (∀ (t : Nat), S ≤ t → q (t + 1) + x t = q t + y t) →
+        (∀ (t : Nat), S ≤ t → P t → y t + 1 ≤ x t) → ∃ N, S ≤ N ∧ N ≤ S + q S ∧ ¬P N
+@Becoming.Amounts.le_by_exchange : ∀ {q x y q' x' y' : Nat → Nat} (S n : Nat),
+  (∀ (t : Nat), S ≤ t → t < S + n → q (t + 1) + x t = q t + y t) →
+    (∀ (t : Nat), S ≤ t → t < S + n → q' (t + 1) + x' t = q' t + y' t) →
+      q S ≤ q' S → (∀ (t : Nat), S ≤ t → t < S + n → y t + x' t ≤ y' t + x t) → q (S + n) ≤ q' (S + n)

@@ -67,7 +67,6 @@
       "en": "Witnesses: with a = 1, nothing shared, a cost of one, three read as coming back where a shaper reads and none where another does, one shaper to one other leaves five offspring to four, the course locked from the start and the share rising at every step; one to three leaves seven to eight, the course locked the other way and the share falling at every step; at one to two each kind leaves six and the share stays. Read against the share (hi = 0, lo = 3), a start favouring the shapers five to four is not locked at step 1, and the rule in force at step 2, twenty-one to eighteen, is below the start's.",
       "zh": "见证：a = 1、无同得、成本为一、塑规者读时所返为三而他者读时为零：一塑规者对一他者，后代五比四，进程自起点锁定，份额每步皆升；一对三，七比八，进程反向锁定，份额每步皆降；一对二，二类各留六，份额不变。逆份额而读（hi = 0、lo = 3）时，偏向塑规者五比四之起点于第一步不锁定，第二步所行之规则二十一比十八，低于起点之规则。",
       "declarations": [
-        "Becoming.DrawnShaping.CriticalMass.one_pos",
         "Becoming.DrawnShaping.CriticalMass.even",
         "Becoming.DrawnShaping.CriticalMass.oneToTwo",
         "Becoming.DrawnShaping.CriticalMass.oneToThree",
@@ -247,7 +246,6 @@
         "Becoming.DrawnShaping.CriticalMass.few_locks",
         "Becoming.DrawnShaping.CriticalMass.oneToThree",
         "Becoming.DrawnShaping.CriticalMass.oneToTwo",
-        "Becoming.DrawnShaping.CriticalMass.one_pos",
         "Becoming.DrawnShaping.alike_favours_iff",
         "Becoming.DrawnShaping.critical_iff",
         "Becoming.DrawnShaping.critical_mass_iff",
@@ -274,17 +272,17 @@
         "Becoming.DrawnShaping.shaped_le_iff",
         "Becoming.DrawnShaping.upper_strictly"
       ],
-      "sha256": "f6264373f914de09e17599b58dd6d76065e184ebeed1d1c7b6f13166372f1e55"
+      "sha256": "7ff4aed1c48ce486bd02fb994ad7ca73823cbf8faf6594153b4ae1093075e7b9"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean",
       "role": "proof",
-      "sha256": "8f0d8630a48b24088e17f50af7c95619f85191d2ce96f0e7837a38c506a7a74f"
+      "sha256": "64ef0f80da3be8166cf87c62b5dec33716d55f781cce43fd784698972fcca23c"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean",
       "role": "proof",
-      "sha256": "b88590f154ad3779eaf7d6ef5f05d2e6427d2c6b2681736cf36715aa2c081130"
+      "sha256": "0d748eedc571ebcd09900b4fca837e68faa66cf5d31d7a24050e6850aee10ee7"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleCapture.lean",
@@ -294,7 +292,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ChoiceCountCapture.lean",
       "role": "proof",
-      "sha256": "aa9e1c63199bf74aaf9585db861aecaf3c4cccc6649a39e762be2d4fb509eda6"
+      "sha256": "5189a33a8304452975af1d99478a5e2d86539bbb031882640fbcf2658ce05205"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T165537.368039Z/verification.json",
@@ -344,14 +342,20 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json",
       "role": "receipt",
-      "sha256": "5db1e7a65fab3461c8eb58498262c6b938bba051e8e51d0c7f87541afaa80183",
+      "sha256": "a81a117f34fdfa4d44ecee3da8ab63099a7febb99c2accbd7b6fc4ec325f2add",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "role": "receipt",
+      "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
       "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnShaping.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.DrawnShaping",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -377,6 +381,10 @@
     {
       "en": "6 November 2026, board item RUN6: next_delta's zh said noise and long-term states where its en says mutation with drift and the time to leave the lock; the zh brought to the en. The law is unchanged.",
       "zh": "2026年11月6日，看板项 RUN6：next_delta 之中文作噪声与长期状态，而其英文作带漂变之突变与离开锁定之时；中文从英文。此律不变。"
+    },
+    {
+      "en": "6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.",
+      "zh": "2026年11月6日，工作板条目 LM：此记录所列辅助引理现只陈述一次，在 Prelude、Flow、Change 或 Laws，或即 Lean 自有者而从列表除去；改其名，诸律不变。"
     }
   ]
 }

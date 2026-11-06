@@ -62,6 +62,7 @@ Non-commuting operations; order dependence.
 | integration | [passages.json](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json) | — |
 | statement | [CIVILIZATION-THOUGHT-AND-BECOMING.md](../../history/CIVILIZATION-THOUGHT-AND-BECOMING.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `Exchanges sharing a relatum need not commute`, `共享关系项之交换不必可交换`, `Becoming.Interleavings.Shared.law`
 

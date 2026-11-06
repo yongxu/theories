@@ -1,7 +1,7 @@
 {
  "about": "MV: the shared laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/shared_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261106T032257.782389Z",
- "core_sources_sha256": "7e264b10eefdb824fb1572ba168abe88a6ae2d214c77ff4cfd70fc6fce47225a",
+ "core_receipt": "20261106T135137.430317Z",
+ "core_sources_sha256": "5596e9ec302e31cf1639ecac4dbaf6ecc4c8190f5ac0f529f1efa55c3e308c2a",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "438b65fe8bc281ab9796cfbff00af7db8441123a5aba8f3779f7c08586b443c7",
@@ -58,19 +58,19 @@
   ]
  },
  "counts": {
-  "laws": 4159,
+  "laws": 4161,
   "no_declarations": 9,
   "outside": 391,
-  "grammar": 900,
-  "balance, represented": 633,
+  "grammar": 909,
+  "balance, represented": 626,
   "anchor, not reached": 131,
   "no shared law": 2095,
-  "vocabulary_only": 79,
-  "closure": 528,
+  "vocabulary_only": 86,
+  "closure": 529,
   "balance": 844,
-  "return": 253,
+  "return": 256,
   "lumping": 84,
-  "order": 85
+  "order": 86
  },
  "counts_at_model": {
   "laws": 23,
@@ -813,8 +813,8 @@
    {
     "law": 12,
     "declarations": [
-     "Becoming.CountedCodes.Witness.swap_involution",
-     "Becoming.CountedCodes.Witness.swap_moves",
+     "Becoming.ListTests.not_not",
+     "Becoming.ListTests.not_ne_self",
      "Becoming.CountedCodes.Witness.opposite",
      "Becoming.CountedCodes.Witness.opposite_symmetric",
      "Becoming.CountedCodes.Witness.added_tie"
@@ -1031,7 +1031,7 @@
      "Becoming.BlanketCouplings.ThresholdCase.env",
      "Becoming.BlanketCouplings.ThresholdCase.update",
      "Becoming.BlanketCouplings.ThresholdCase.policy",
-     "Becoming.BlanketCouplings.ThresholdCase.band_congr",
+     "Becoming.Limit.and_congr2",
      "Becoming.BlanketCouplings.ThresholdCase.admits_iff",
      "Becoming.BlanketCouplings.ThresholdCase.values",
      "Becoming.BlanketCouplings.ThresholdCase.corr",
@@ -2047,7 +2047,7 @@
      "Becoming.Weighting.weighed_split",
      "Becoming.Weighting.weighed_shared",
      "Becoming.Weighting.weighed_split_right",
-     "Becoming.Weighting.add_lt_add_iff",
+     "Becoming.Naturals.add_lt_add_left_iff",
      "Becoming.Weighting.add_le_add_iff",
      "Becoming.Weighting.weighed_lt_iff_beyond",
      "Becoming.Weighting.weighed_le_iff_beyond",
@@ -2055,7 +2055,7 @@
      "Becoming.Weighting.weighed_beyond_of_includes",
      "Becoming.Weighting.ranksNet",
      "Becoming.Weighting.ranksNet_iff_beyond",
-     "Becoming.Weighting.not_of_neg",
+     "Becoming.ListTests.false_of_not",
      "Becoming.Weighting.beyond_lt",
      "Becoming.Weighting.ranksNet_lt_of_widens",
      "Becoming.Weighting.cond_zero",
@@ -2490,8 +2490,8 @@
      "Becoming.Web.holdsCount_congr",
      "Becoming.Web.toNat_add_not",
      "Becoming.Web.holdsCount_add_not",
-     "Becoming.Web.and_left_true",
-     "Becoming.Web.and_right_true"
+     "Becoming.ListTests.and_left",
+     "Becoming.ListTests.and_right"
     ],
     "shared_laws": [],
     "grammar": false,
@@ -2566,7 +2566,7 @@
     "declarations": [
      "Becoming.ReflexivePrediction.none_right_of_moves",
      "Becoming.ReflexivePrediction.no_predictor_right",
-     "Becoming.ReflexivePrediction.not_moves"
+     "Becoming.ListTests.not_ne_self"
     ],
     "shared_laws": [],
     "grammar": false,
@@ -2634,7 +2634,7 @@
     "law": 8,
     "declarations": [
      "Becoming.ReflexivePrediction.Reflecting.reflect",
-     "Becoming.ReflexivePrediction.Reflecting.sub_antitone",
+     "Becoming.Naturals.sub_antitone",
      "Becoming.ReflexivePrediction.Reflecting.reverses",
      "Becoming.ReflexivePrediction.Reflecting.middle_right"
     ],
@@ -2887,7 +2887,7 @@
      "Becoming.ListingValuation.within_rule_split",
      "Becoming.ListingValuation.weightedOn_by_cells",
      "Becoming.ListingValuation.total_lt_of_mem",
-     "Becoming.ListingValuation.cond_zero_le",
+     "Becoming.ListTests.cond_zero_le",
      "Becoming.ListingValuation.split_cell_le",
      "Becoming.ListingValuation.cell_refined_le",
      "Becoming.ListingValuation.refined_le_of_splitsKeep"
@@ -2987,7 +2987,7 @@
     "declarations": [
      "Becoming.ListingValuation.refined_lt_iff",
      "Becoming.ListingValuation.add_lt_iff_sub_add_lt",
-     "Becoming.ListingValuation.add_lt_add_left_iff"
+     "Becoming.Naturals.add_lt_add_left_iff"
     ],
     "shared_laws": [],
     "grammar": false,
@@ -3547,8 +3547,8 @@
     "law": 1,
     "declarations": [
      "Becoming.Flow.inflow",
-     "Becoming.Flow.le_add_excess",
-     "Becoming.Flow.excess_le_of_le_add",
+     "Becoming.le_add_excess",
+     "Becoming.excess_le_of_le_add",
      "Becoming.Flow.gainlessOn_iff_inflow",
      "Becoming.Flow.replenishment_le_inflow",
      "Becoming.Flow.gained_le_inflow",
@@ -4542,8 +4542,8 @@
    {
     "law": 1,
     "declarations": [
-     "Becoming.Reproduction.twice_le_of_le",
-     "Becoming.Reproduction.twice_le",
+     "Becoming.Naturals.twice_le_of_le",
+     "Becoming.Naturals.twice_le",
      "Becoming.Reproduction.square_mul",
      "Becoming.Reproduction.cross_mul",
      "Becoming.Reproduction.bound_sq"
@@ -4581,7 +4581,7 @@
    {
     "law": 4,
     "declarations": [
-     "Becoming.Reproduction.sub_le_of_le_add",
+     "Becoming.Naturals.sub_le_of_le_add",
      "Becoming.Reproduction.Generations.response_sq_le"
     ],
     "shared_laws": [],
@@ -4815,7 +4815,8 @@
      "Becoming.UnitMatchings.FrameMatchings.next"
     ],
     "shared_laws": [
-     "balance"
+     "balance",
+     "return"
     ],
     "grammar": false,
     "dependence": "balance, represented"
@@ -5373,7 +5374,7 @@
      "Becoming.Continuity.balancesOn_iff_closures",
      "Becoming.Continuity.pairing_iff_closure_counts",
      "Becoming.Continuity.pairing_iff_closures",
-     "Becoming.Continuity.unitsOn",
+     "Becoming.unitsOn",
      "Becoming.Continuity.count_unitsOn",
      "Becoming.Continuity.conservedOn_iff_units_paired",
      "Becoming.Continuity.balancing_iff_units_paired",
@@ -7027,7 +7028,6 @@
    {
     "law": 7,
     "declarations": [
-     "Becoming.ChoiceCountCapture.Witness.two_pos",
      "Becoming.ChoiceCountCapture.Witness.four_pos",
      "Becoming.ChoiceCountCapture.Witness.counts",
      "Becoming.ChoiceCountCapture.Witness.counted_beats_score",
@@ -8251,7 +8251,7 @@
      "Becoming.Web.UnderminingAlong",
      "Becoming.Web.Linked.itself_held",
      "Becoming.Web.Linked.itself_onward",
-     "Becoming.Web.exists_steps_between",
+     "Becoming.le_dest",
      "Becoming.Web.metAboveAlong_itself_iff",
      "Becoming.Web.underminingAlong_itself_iff"
     ],
@@ -10317,7 +10317,9 @@
      "Becoming.«有限遍后而不返之例»",
      "Becoming.«遍后定前而无环之例»"
     ],
-    "shared_laws": [],
+    "shared_laws": [
+     "return"
+    ],
     "grammar": true,
     "dependence": "grammar"
    },
@@ -10368,7 +10370,8 @@
      "Becoming.«通而不异之例»",
      "Becoming.«有后而两向有常则通»",
      "Becoming.«步皆分则皆亡»",
-     "Becoming.«不有常而异且通之例»"
+     "Becoming.«不有常而异且通之例»",
+     "Becoming.«异而未亡之例»"
     ],
     "shared_laws": [],
     "grammar": true,
@@ -15578,7 +15581,7 @@
     "declarations": [
      "Becoming.Drift.fallsBack",
      "Becoming.Drift.gap_le",
-     "Becoming.Drift.square_mul",
+     "Becoming.Reproduction.square_mul",
      "Becoming.Drift.far_back",
      "Becoming.Drift.falls_back_le",
      "Becoming.Drift.falls_back"
@@ -15994,11 +15997,8 @@
    {
     "law": 4,
     "declarations": [
-     "Becoming.LineageDrawdown.degeneration_of_excess",
-     "Becoming.LineageDrawdown.landed_of_excess",
-     "Becoming.LineageDrawdown.landed_of_excess_eq",
      "Becoming.LineageDrawdown.below_iff",
-     "Becoming.LineageDrawdown.below_of_excess",
+     "Becoming.Flow.below_of_excess",
      "Becoming.LineageDrawdown.degeneration_of_unmet",
      "Becoming.LineageDrawdown.degeneration_of_unmet_listed",
      "Becoming.LineageDrawdown.degeneration_of_drawdown"
@@ -16012,12 +16012,8 @@
    {
     "law": 5,
     "declarations": [
-     "Becoming.LineageDrawdown.gone_of_excess",
-     "Becoming.LineageDrawdown.horizon_of_excess",
-     "Becoming.LineageDrawdown.landed_gone",
-     "Becoming.LineageDrawdown.landed_horizon",
-     "Becoming.LineageDrawdown.landed_gone_eq",
-     "Becoming.LineageDrawdown.landed_horizon_eq",
+     "Becoming.Web.family_excess_gone",
+     "Becoming.Web.family_excess_degenerates",
      "Becoming.LineageDrawdown.next_empty_of_unmet",
      "Becoming.LineageDrawdown.ends_of_unmet",
      "Becoming.LineageDrawdown.ends_of_drawdown",
@@ -16221,7 +16217,7 @@
     "declarations": [
      "Becoming.LineageDrawdown.Drain.flow",
      "Becoming.LineageDrawdown.Drain.web",
-     "Becoming.LineageDrawdown.Drain.landed_met",
+     "Becoming.LineageDrawdown.Drain.gated_ends",
      "Becoming.LineageDrawdown.Drain.not_gated",
      "Becoming.LineageDrawdown.Drain.outside_ends",
      "Becoming.LineageDrawdown.Drain.renewer_goes_on_outside"
@@ -16888,7 +16884,7 @@
      "Becoming.ClosedCycle.mark_pos_iff",
      "Becoming.ClosedCycle.mark_self",
      "Becoming.ClosedCycle.mark_not_left",
-     "Becoming.ClosedCycle.not_ne",
+     "Becoming.ListTests.not_ne_self",
      "Becoming.ClosedCycle.web",
      "Becoming.ClosedCycle.flow",
      "Becoming.ClosedCycle.supported_iff",
@@ -19484,8 +19480,8 @@
    {
     "law": 3,
     "declarations": [
-     "Becoming.Hexagram.all_sound",
-     "Becoming.Hexagram.all_complete",
+     "Becoming.ListTests.all_sound",
+     "Becoming.ListTests.all_complete",
      "Becoming.Hexagram.all_congr",
      "Becoming.Hexagram.placeStatements_between",
      "Becoming.Hexagram.topStatements",
@@ -20241,10 +20237,10 @@
    {
     "law": 1,
     "declarations": [
-     "Becoming.FreeEnergyCounting.mul_pow_eq",
+     "Becoming.Naturals.mul_pow_eq",
      "Becoming.FreeEnergyCounting.self_pow_pos",
      "Becoming.FreeEnergyCounting.lt_cancel_mul_left",
-     "Becoming.FreeEnergyCounting.lt_cancel_mul_right",
+     "Becoming.Naturals.lt_of_mul_lt_mul_right",
      "Becoming.FreeEnergyCounting.base_zero_of_pow_zero",
      "Becoming.FreeEnergyCounting.pow_succ_lt_pow_succ"
     ],
@@ -21750,7 +21746,7 @@
      "Becoming.Gluing.Cycle.returns",
      "Becoming.Gluing.Cycle.eq_of_even",
      "Becoming.beq_self",
-     "Becoming.Gluing.Cycle.beq_of_ne",
+     "Becoming.ListTests.beq_false_of_ne",
      "Becoming.Gluing.Cycle.telescope",
      "Becoming.Gluing.Cycle.counts_even",
      "Becoming.Gluing.Cycle.contradicts",
@@ -23108,7 +23104,7 @@
      "Becoming.Hexagram.bottom_turns",
      "Becoming.Hexagram.rises_between",
      "Becoming.Hexagram.not_true_of_false",
-     "Becoming.Hexagram.opposite_false",
+     "Becoming.ListTests.not_false_of_true",
      "Becoming.ListTests.not_eq_true_of_false",
      "Becoming.Hexagram.arising_recurs",
      "Becoming.Hexagram.ceasing_recurs",
@@ -23398,7 +23394,6 @@
      "Becoming.Optimum.level_add_drawn_of_within",
      "Becoming.Optimum.sum_eq_of_eq",
      "Becoming.Optimum.sum_succ_first",
-     "Becoming.Optimum.add_four",
      "Becoming.Optimum.sum_add_shortfall",
      "Becoming.Optimum.drawn_add_shortfall",
      "Becoming.Optimum.drawn_add_shortfall_after"
@@ -23413,7 +23408,7 @@
     "law": 2,
     "declarations": [
      "Becoming.Optimum.eq_zero_of_add",
-     "Becoming.Optimum.le_of_sub_zero",
+     "Becoming.le_of_sub_eq_zero",
      "Becoming.Optimum.sum_eq_zero_iff",
      "Becoming.Optimum.drawn_le_most",
      "Becoming.Optimum.most_iff"
@@ -23427,7 +23422,7 @@
    {
     "law": 3,
     "declarations": [
-     "Becoming.Optimum.add_left_cancel_of",
+     "Becoming.Naturals.add_left_cancel",
      "Becoming.Optimum.le_iff_of_add_eq",
      "Becoming.Flow.Balances.drawnAt_eq",
      "Becoming.Flow.Balances.within",
@@ -23580,7 +23575,7 @@
     "declarations": [
      "Becoming.Loops.total_lt",
      "Becoming.Loops.total_mul_const",
-     "Becoming.Loops.mul_lt_mul_of_pos",
+     "Becoming.Naturals.mul_lt_mul_of_pos",
      "Becoming.Loops.le_mul_of_pos",
      "Becoming.CouplesAlways",
      "Becoming.CoupledAlways",
@@ -23684,12 +23679,12 @@
      "Becoming.Naturals.mul_mul_mul_comm",
      "Becoming.Naturals.pow_add",
      "Becoming.Loops.pow_mul_nat",
-     "Becoming.Loops.mul_pow_nat",
+     "Becoming.Naturals.mul_pow_eq",
      "Becoming.Loops.pow_le_pow_base",
      "Becoming.Loops.pow_le_pow_exp",
-     "Becoming.Loops.two_pow_pos",
+     "Becoming.Naturals.two_pow_pos",
      "Becoming.Loops.two_pow_succ",
-     "Becoming.Loops.lt_two_pow",
+     "Becoming.Naturals.lt_two_pow",
      "Becoming.Loops.odd_lt_two_pow",
      "Becoming.Loops.sq_lt_two_pow",
      "Becoming.Loops.linear_lt_two_pow",
@@ -23965,7 +23960,7 @@
     "declarations": [
      "Becoming.gap",
      "Becoming.sub_eq_zero_of_le",
-     "Becoming.Propagation.sub_le_of_le_add",
+     "Becoming.Naturals.sub_le_of_le_add",
      "Becoming.Naturals.add_sub_cancel_left",
      "Becoming.Propagation.rearrange",
      "Becoming.Naturals.add_congr",
@@ -24022,7 +24017,7 @@
      "Becoming.between_of_mem_steps",
      "Becoming.Propagation.mem_steps_upto",
      "Becoming.Propagation.le_of_mem_steps_upto",
-     "Becoming.Propagation.mem_map_pair",
+     "Becoming.prodMk_mem_map",
      "Becoming.Propagation.of_mem_map_pair",
      "Becoming.mem_append_cases",
      "Becoming.cellsOf",
@@ -24138,7 +24133,7 @@
      "Becoming.Frequency.count_succ_on",
      "Becoming.Frequency.count_succ_off",
      "Becoming.cond_le_one",
-     "Becoming.Frequency.bif_le",
+     "Becoming.ListTests.bif_le",
      "Becoming.Frequency.count_le_succ",
      "Becoming.Frequency.count_mono",
      "Becoming.Frequency.count_le",
@@ -26680,7 +26675,7 @@
     "law": 3,
     "declarations": [
      "Becoming.Optimum.Keeps",
-     "Becoming.Optimum.le_or_eq_succ",
+     "Becoming.le_succ_cases",
      "Becoming.Optimum.keeping_le_most",
      "Becoming.Optimum.keeping_drawn_le",
      "Becoming.Flow.Balances.keeping_taken_le"
@@ -32160,7 +32155,7 @@
      "Becoming.Reproduction.Mutation.holds",
      "Becoming.Reproduction.Mutation.offspring",
      "Becoming.Reproduction.Mutation.generations",
-     "Becoming.Reproduction.Mutation.total_replicate",
+     "Becoming.total_replicate",
      "Becoming.Reproduction.Mutation.total_kinds",
      "Becoming.Reproduction.Mutation.lowered_count",
      "Becoming.Reproduction.Mutation.size_first",
@@ -36153,6 +36148,31 @@
     ],
     "grammar": true,
     "dependence": "grammar"
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "Becoming.ListedPaths.premises_hold",
+     "Becoming.ListedPaths.premises_hold_de_se",
+     "Becoming.ListedPaths.not_listed",
+     "Becoming.IdleStep.premises_hold",
+     "Becoming.IdleStep.not_idle_later",
+     "Becoming.TwoFeeding.mutuallyFed",
+     "Becoming.OneFeeding.not_mutuallyFed",
+     "Becoming.Joining.Once.finiteOutcomes",
+     "Becoming.Joining.Once.locallyFinite",
+     "Becoming.Joining.Once.connectedFrom",
+     "Becoming.Reconfiguration.covered_and_not",
+     "Becoming.MatchedCourses.readings_hold_together",
+     "Becoming.Optimum.AtOnce.returnsLess_met",
+     "Becoming.Optimum.AtOnce.returnsLess_fails"
+    ],
+    "shared_laws": [
+     "closure",
+     "order"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
    }
   ],
   "premises-read-off-the-exchange": [
@@ -36179,7 +36199,7 @@
      "Becoming.Flow.readOff_taking",
      "Becoming.Flow.some_mem_present",
      "Becoming.Flow.exchanging_some_iff",
-     "Becoming.Flow.none_not_mem_some",
+     "Becoming.ListTests.none_not_mem_map_some",
      "Becoming.Flow.present_distinct",
      "Becoming.Flow.adopt_census",
      "Becoming.Flow.rest_idle_at_iff",
@@ -37911,7 +37931,7 @@
      "Becoming.ClosedCapture.Drawn.poolRead",
      "Becoming.ClosedCapture.Drawn.rearrange_eq",
      "Becoming.ClosedCapture.Drawn.rearrange",
-     "Becoming.ClosedCapture.Drawn.add_swap",
+     "Becoming.Naturals.add_regroup",
      "Becoming.ClosedCapture.Drawn.cross",
      "Becoming.ClosedCapture.Drawn.pool_mono",
      "Becoming.ClosedCapture.Drawn.pool_reads",
@@ -39297,7 +39317,7 @@
    {
     "law": 3,
     "declarations": [
-     "Becoming.Flow.total_lt_of_le_of_mem",
+     "Becoming.total_lt_of_mem",
      "Becoming.Flow.opposes_of_each",
      "Becoming.Flow.withinGap_of_shares"
     ],
@@ -39772,7 +39792,7 @@
    {
     "law": 2,
     "declarations": [
-     "Becoming.RelativePosition.total_lt_of_mem",
+     "Becoming.total_lt_of_mem",
      "Becoming.RelativePosition.not_all_rise",
      "Becoming.RelativePosition.below_somewhere_or_not",
      "Becoming.RelativePosition.rise_needs_fall"
@@ -41419,7 +41439,7 @@
    {
     "law": 5,
     "declarations": [
-     "Becoming.RegimeMargin.Coupled.covers_pair",
+     "Becoming.ListTests.mem_bools",
      "Becoming.RegimeMargin.Coupled.pair_count",
      "Becoming.RegimeMargin.Coupled.band_web",
      "Becoming.RegimeMargin.Coupled.pair_within",
@@ -44314,7 +44334,7 @@
      "Becoming.SelectionLevels.pairs_context",
      "Becoming.SelectionLevels.within_by_one",
      "Becoming.SelectionLevels.among_by_one",
-     "Becoming.SelectionLevels.nil_of_length_zero",
+     "Becoming.nil_of_length_zero",
      "Becoming.SelectionLevels.whole_nil",
      "Becoming.SelectionLevels.levels"
     ],
@@ -44401,7 +44421,7 @@
      "Becoming.SelectionLevels.whole_total",
      "Becoming.SelectionLevels.whole_weighted",
      "Becoming.SelectionLevels.whole_length",
-     "Becoming.SelectionLevels.total_eq_of_mem",
+     "Becoming.total_congr_on",
      "Becoming.SelectionLevels.whole_length_of_equal"
     ],
     "shared_laws": [],
@@ -44661,7 +44681,7 @@
      "Becoming.Web.CallsForGiving",
      "Becoming.Web.decCallsForGiving",
      "Becoming.total_two",
-     "Becoming.mem_steps_of_between",
+     "Becoming.steps_of_within",
      "Becoming.Flow.given_pos_of_calls"
     ],
     "shared_laws": [
@@ -44782,13 +44802,10 @@
    {
     "law": 13,
     "declarations": [
-     "Becoming.repeatOnto",
-     "Becoming.unitsOf",
+     "Becoming.unitsOn",
      "Becoming.pairUp",
-     "Becoming.total_repeatOnto",
-     "Becoming.mem_repeatOnto",
-     "Becoming.total_unitsOf",
-     "Becoming.mem_unitsOf",
+     "Becoming.total_unitsOn",
+     "Becoming.mem_unitsOn",
      "Becoming.total_pairUp_fst",
      "Becoming.total_pairUp_snd_le",
      "Becoming.mem_pairUp",
@@ -44814,8 +44831,9 @@
     "shared_laws": [
      "balance"
     ],
-    "grammar": false,
-    "dependence": "balance, represented"
+    "grammar": true,
+    "grammar_vocabulary_only": true,
+    "dependence": "grammar"
    },
    {
     "law": 14,
@@ -44839,8 +44857,9 @@
     "shared_laws": [
      "balance"
     ],
-    "grammar": false,
-    "dependence": "balance, represented"
+    "grammar": true,
+    "grammar_vocabulary_only": true,
+    "dependence": "grammar"
    },
    {
     "law": 15,
@@ -44893,8 +44912,9 @@
     "shared_laws": [
      "balance"
     ],
-    "grammar": false,
-    "dependence": "balance, represented"
+    "grammar": true,
+    "grammar_vocabulary_only": true,
+    "dependence": "grammar"
    },
    {
     "law": 17,
@@ -44924,8 +44944,8 @@
    {
     "law": 18,
     "declarations": [
-     "Becoming.covered_by_excess",
-     "Becoming.excess_le_of_covered",
+     "Becoming.le_add_excess",
+     "Becoming.excess_le_of_le_add",
      "Becoming.split_by",
      "Becoming.Web.shortfall",
      "Becoming.Web.shortCapacity",
@@ -44948,8 +44968,9 @@
     "shared_laws": [
      "balance"
     ],
-    "grammar": false,
-    "dependence": "balance, represented"
+    "grammar": true,
+    "grammar_vocabulary_only": true,
+    "dependence": "grammar"
    },
    {
     "law": 19,
@@ -44970,8 +44991,9 @@
     "shared_laws": [
      "balance"
     ],
-    "grammar": false,
-    "dependence": "balance, represented"
+    "grammar": true,
+    "grammar_vocabulary_only": true,
+    "dependence": "grammar"
    },
    {
     "law": 20,
@@ -44989,8 +45011,9 @@
     "shared_laws": [
      "balance"
     ],
-    "grammar": false,
-    "dependence": "balance, represented"
+    "grammar": true,
+    "grammar_vocabulary_only": true,
+    "dependence": "grammar"
    },
    {
     "law": 21,
@@ -45021,8 +45044,9 @@
     "shared_laws": [
      "balance"
     ],
-    "grammar": false,
-    "dependence": "balance, represented"
+    "grammar": true,
+    "grammar_vocabulary_only": true,
+    "dependence": "grammar"
    }
   ],
   "self-reference-does-not-certify-itself": [
@@ -45462,7 +45486,6 @@
    {
     "law": 5,
     "declarations": [
-     "Becoming.DrawnShaping.CriticalMass.one_pos",
      "Becoming.DrawnShaping.CriticalMass.even",
      "Becoming.DrawnShaping.CriticalMass.oneToTwo",
      "Becoming.DrawnShaping.CriticalMass.oneToThree",
@@ -45529,7 +45552,6 @@
    {
     "law": 5,
     "declarations": [
-     "Becoming.RuleShaping.Assorting.one_pos",
      "Becoming.RuleShaping.Assorting.assortedOffspring",
      "Becoming.RuleShaping.Assorting.mixedOffspring",
      "Becoming.RuleShaping.Assorting.assorted_grouped",
@@ -45648,16 +45670,13 @@
    {
     "law": 8,
     "declarations": [
-     "Becoming.RuleShaping.Split.one_pos",
      "Becoming.RuleShaping.Split.even",
      "Becoming.RuleShaping.Split.favours",
      "Becoming.RuleShaping.Split.shared_disfavours",
      "Becoming.RuleShaping.Split.rises",
      "Becoming.RuleShaping.Split.falls",
-     "Becoming.RuleShaping.SharedFlips.one_pos",
      "Becoming.RuleShaping.SharedFlips.without_falls",
      "Becoming.RuleShaping.SharedFlips.with_rises",
-     "Becoming.RuleShaping.Timing.two_pos",
      "Becoming.RuleShaping.Timing.soon_rises",
      "Becoming.RuleShaping.Timing.late_falls",
      "Becoming.RuleShaping.Timing.shorter_falls",
@@ -45722,18 +45741,18 @@
     "declarations": [
      "Becoming.GrammarLaws.length_insert",
      "Becoming.GrammarLaws.length_replicate",
-     "Becoming.GrammarLaws.le_succ_cases",
-     "Becoming.GrammarLaws.gap_of_lt",
-     "Becoming.GrammarLaws.mem_cons_split",
-     "Becoming.GrammarLaws.skipAt",
-     "Becoming.GrammarLaws.skipAt_ne",
-     "Becoming.GrammarLaws.skipAt_le",
-     "Becoming.GrammarLaws.skipAt_lt",
-     "Becoming.GrammarLaws.split_at_head",
-     "Becoming.GrammarLaws.revisits_within",
+     "Becoming.le_succ_cases",
+     "Becoming.gap_of_lt",
+     "Becoming.mem_cons_cases",
+     "Becoming.skipAt",
+     "Becoming.skipAt_ne",
+     "Becoming.skipAt_le",
+     "Becoming.skipAt_lt",
+     "Becoming.split_at_head",
+     "Becoming.revisits_within",
      "Becoming.GrammarLaws.split_append",
      "Becoming.GrammarLaws.prepend",
-     "Becoming.GrammarLaws.total_congr",
+     "Becoming.total_congr",
      "Becoming.GrammarLaws.keep",
      "Becoming.GrammarLaws.keep_append",
      "Becoming.GrammarLaws.keep_congr",
@@ -45747,7 +45766,7 @@
      "Becoming.GrammarLaws.mem_middle",
      "Becoming.GrammarLaws.mem_of_removed",
      "Becoming.GrammarLaws.distinct_removed",
-     "Becoming.GrammarLaws.not_eq_true_iff",
+     "Becoming.ListTests.not_true_iff",
      "Becoming.GrammarLaws.count_insert",
      "Becoming.GrammarLaws.split_of_count_pos",
      "Becoming.GrammarLaws.count_go",
@@ -45760,9 +45779,14 @@
      "Becoming.GrammarLaws.count_pos_of_mem",
      "Becoming.GrammarLaws.eq_true_of_not_false"
     ],
-    "shared_laws": [],
+    "shared_laws": [
+     "return"
+    ],
     "grammar": true,
-    "dependence": "grammar"
+    "dependence": "grammar",
+    "defines": [
+     "Becoming.revisits_within"
+    ]
    },
    {
     "law": 4,
@@ -46252,7 +46276,7 @@
      "Becoming.goAlike_of_constant",
      "Becoming.image_determined_iff",
      "Becoming.le_succ_cases",
-     "Becoming.mem_cons_split",
+     "Becoming.mem_cons_cases",
      "Becoming.not_within_of_closed",
      "Becoming.revisits_within",
      "Becoming.skipAt",
@@ -46930,7 +46954,7 @@
    {
     "law": 1,
     "declarations": [
-     "Becoming.UnreadStandings.total_scaled",
+     "Becoming.total_mul",
      "Becoming.UnreadStandings.sum_eq_scaled",
      "Becoming.World.atFinerUnit",
      "Becoming.World.atFinerUnit_level",
@@ -46985,8 +47009,8 @@
      "Becoming.UnreadStandings.lt_relabelled",
      "Becoming.UnreadStandings.pos_squared",
      "Becoming.UnreadStandings.le_squared",
-     "Becoming.UnreadStandings.assoc_mul",
-     "Becoming.UnreadStandings.left_comm_mul",
+     "Becoming.mul_assoc_nat",
+     "Becoming.mul_turn",
      "Becoming.UnreadStandings.factor_of_one",
      "Becoming.World.stillAt",
      "Becoming.World.standingAt_eq_stillAt",
@@ -48702,6 +48726,19 @@
     "shared_laws": [],
     "grammar": true,
     "dependence": "grammar"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.«层即诘»",
+     "Becoming.«诘之降»",
+     "Becoming.«层在类内»",
+     "Becoming.«层之对称»",
+     "Becoming.«每层不分而有常则核当且仅当每层不分»"
+    ],
+    "shared_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
    }
   ],
   "tests-fix-likeness-where-determined": [
@@ -48954,7 +48991,7 @@
      "Becoming.BlanketWeights.CrossFormOn",
      "Becoming.BlanketWeights.crossFormOn_of_crossForm",
      "Becoming.BlanketWeights.crossForm_of_crossFormOn",
-     "Becoming.BlanketWeights.total_congr_mem",
+     "Becoming.total_congr_on",
      "Becoming.BlanketWeights.total_mul_total",
      "Becoming.BlanketWeights.factorsGiven_of_crossFormOn",
      "Becoming.BlanketWeights.whole_zero_entry",
@@ -49862,7 +49899,7 @@
      "Becoming.Blanket.ThresholdDrain.sensory_is_admission",
      "Becoming.Blanket.ThresholdDrain.external_course",
      "Becoming.Blanket.ThresholdDrain.sensory_succ",
-     "Becoming.Blanket.ThresholdDrain.bool_eq_of_iff",
+     "Becoming.bool_eq_of_iff",
      "Becoming.Blanket.ThresholdDrain.blanket_iff_through"
     ],
     "shared_laws": [],
@@ -49972,8 +50009,8 @@
      "Becoming.Presence.count_inj",
      "Becoming.Presence.count_reaches",
      "Becoming.Presence.count_add_not",
-     "Becoming.Presence.not_false_of_true",
-     "Becoming.Presence.bool_absurd"
+     "Becoming.ListTests.not_false_of_true",
+     "Becoming.ListTests.bool_absurd"
     ],
     "shared_laws": [],
     "grammar": false,
@@ -50016,7 +50053,7 @@
     "law": 9,
     "declarations": [
      "Becoming.Presence.Tabulates",
-     "Becoming.Presence.beq_false_of_ne",
+     "Becoming.ListTests.beq_false_of_ne",
      "Becoming.Presence.table_yes",
      "Becoming.Presence.table_no",
      "Becoming.Presence.table_not_not",
@@ -50024,7 +50061,7 @@
      "Becoming.Presence.natural_of_table",
      "Becoming.Presence.table_false",
      "Becoming.Presence.down_closed",
-     "Becoming.Presence.decided_true",
+     "Becoming.LLPO.decided_true",
      "Becoming.Presence.weakly_exists_below"
     ],
     "shared_laws": [],
@@ -50477,7 +50514,7 @@
    {
     "law": 1,
     "declarations": [
-     "Becoming.SelectionShift.excess_shift",
+     "Becoming.excess_add_right",
      "Becoming.SelectionShift.concord_shifted",
      "Becoming.SelectionShift.discord_shifted",
      "Becoming.SelectionShift.concord_shift",
@@ -50631,7 +50668,7 @@
      "Becoming.SelectionShift.Shrinking.course_size",
      "Becoming.SelectionShift.Shrinking.course_sum",
      "Becoming.SelectionShift.Shrinking.course_concord",
-     "Becoming.SelectionShift.Shrinking.split_le",
+     "Becoming.exists_add_of_le",
      "Becoming.SelectionShift.Shrinking.positive_then_empty"
     ],
     "shared_laws": [],
@@ -50718,7 +50755,7 @@
      "Becoming.LineageRegions.Chain.children_self",
      "Becoming.LineageRegions.Chain.children_other",
      "Becoming.LineageRegions.Chain.level_self",
-     "Becoming.LineageRegions.Chain.succ_ne_zero",
+     "Becoming.Naturals.succ_ne_zero",
      "Becoming.LineageRegions.Chain.level_next",
      "Becoming.LineageRegions.Chain.give_self",
      "Becoming.LineageRegions.Chain.give_other",
@@ -50851,9 +50888,9 @@
      "Becoming.LineageRegions.Courses.generations",
      "Becoming.LineageRegions.Courses.always",
      "Becoming.LineageRegions.Courses.upTo",
-     "Becoming.LineageRegions.Courses.cond_pos",
+     "Becoming.Thresholds.cond_pos",
      "Becoming.LineageRegions.Courses.mem_cond",
-     "Becoming.LineageRegions.Courses.and_split",
+     "Becoming.bool_of_and_true",
      "Becoming.LineageRegions.Courses.fst_of_mem",
      "Becoming.LineageRegions.Courses.mem_of_fst",
      "Becoming.LineageRegions.Courses.kids_marked",
@@ -51705,8 +51742,8 @@
      "Becoming.Interleavings.LocalLaw.touchAround",
      "Becoming.Interleavings.LocalLaw.bool_or_false_left",
      "Becoming.Interleavings.LocalLaw.bool_or_false_right",
-     "Becoming.Interleavings.LocalLaw.bool_or_of_left",
-     "Becoming.Interleavings.LocalLaw.bool_or_of_right",
+     "Becoming.ListTests.or_left",
+     "Becoming.ListTests.or_right",
      "Becoming.Interleavings.LocalLaw.untouched_unmoved",
      "Becoming.Interleavings.LocalLaw.touch_contains_iff",
      "Becoming.Interleavings.LocalLaw.around_contains",
@@ -53500,8 +53537,8 @@
      "Becoming.Typicality.regroup_square",
      "Becoming.Typicality.square_gap",
      "Becoming.Typicality.margin_square",
-     "Becoming.Typicality.two_mul_le_of_le",
-     "Becoming.Typicality.two_mul_le"
+     "Becoming.Naturals.twice_le_of_le",
+     "Becoming.Naturals.twice_le"
     ],
     "shared_laws": [],
     "grammar": false,
@@ -54364,7 +54401,7 @@
      "Becoming.Weighting.RatioWithin",
      "Becoming.Weighting.cond_scale",
      "Becoming.Weighting.weighed_scale",
-     "Becoming.Weighting.mul_swap_right",
+     "Becoming.Naturals.mul_right_comm",
      "Becoming.Weighting.beyond_within"
     ],
     "shared_laws": [],
@@ -55164,8 +55201,8 @@
     "law": 1,
     "declarations": [
      "Becoming.Remainder.mul_pos_nat",
-     "Becoming.Remainder.add_left_cancel_nat",
-     "Becoming.Remainder.le_of_add_le_add_left_nat",
+     "Becoming.Naturals.add_left_cancel",
+     "Becoming.Naturals.le_of_add_le_add_left",
      "Becoming.responded",
      "Becoming.responses",
      "Becoming.responded_zero",
@@ -55813,7 +55850,7 @@
      "Becoming.«常闭则所及皆及»",
      "Becoming.«常闭则所缘同类»",
      "Becoming.«所缘同于»",
-     "Becoming.«有常则同类者有所缘»"
+     "Becoming.«有常则可续»"
     ],
     "shared_laws": [],
     "grammar": true,
@@ -59331,8 +59368,8 @@
     "declarations": [
      "Becoming.RelativePosition.Keeps",
      "Becoming.RelativePosition.keeps_iff_common",
-     "Becoming.RelativePosition.length_pos_of_mem",
-     "Becoming.RelativePosition.regroup"
+     "Becoming.length_pos_of_mem",
+     "Becoming.Naturals.add_regroup"
     ],
     "shared_laws": [],
     "grammar": false,
@@ -60477,7 +60514,7 @@
      "Becoming.RevisionRoutes.revised_maximal_iff",
      "Becoming.RevisionRoutes.above_needs",
      "Becoming.RevisionRoutes.pos_of_mul_lt_mul",
-     "Becoming.RevisionRoutes.lt_of_mul_lt_mul"
+     "Becoming.Naturals.lt_of_mul_lt_mul_right"
     ],
     "shared_laws": [],
     "grammar": false,
@@ -64121,7 +64158,7 @@
   ],
   "lean_check": {
    "toolchain": "leanprover/lean4:v4.29.1",
-   "modules_sha256": "f3a73ee9b9583e4399d5c3938b7f8f61c5260cc0df94a8cb4ad62011493543b4",
+   "modules_sha256": "27fc2ab71196e9f91fd813963a4ddab0f1a6e1c6f19f9ca5e8d3e7acafaa877e",
    "check_sha256": "e5ef1c274e3e3f81aa13dbe78732d1f6883a207a5685f736102ee4a2d5b1fc34",
    "ran": true
   },

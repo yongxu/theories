@@ -12,8 +12,8 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 
 | Topic | Entries | theorem/lemma occurrences |
 |---|---:|---:|
-| [Becoming pure core](lean-declarations/becoming-core.md) | 371 | 18,450 |
-| [Becoming instances and applications](lean-declarations/becoming-ring.md) | 18 | 1,071 |
+| [Becoming pure core](lean-declarations/becoming-core.md) | 372 | 18,364 |
+| [Becoming instances and applications](lean-declarations/becoming-ring.md) | 18 | 1,054 |
 | [Normative grounding and generative direction](lean-declarations/ethics.md) | 139 | 2,533 |
 | [Valuation development and liangzhi](lean-declarations/valuation.md) | 19 | 202 |
 | [Attainable inquiry, contact and process laws](lean-declarations/inquiry.md) | 71 | 1,864 |
@@ -697,6 +697,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [PremiseNecessity.lean](lean-declarations/core.md#module-2c46d6d47a5c) | Generative core and relational structure |
 | [PremiseWitnesses.lean](lean-declarations/becoming-core.md#module-2bc8ef4675bf) | Becoming pure core |
 | [Premises.lean](lean-declarations/becoming-core.md#module-5515a55f2204) | Becoming pure core |
+| [PremisesTogether.lean](lean-declarations/becoming-core.md#module-1194c1b73544) | Becoming pure core |
 | [PreparationCorrespondence.lean](lean-declarations/ethics.md#module-eec9d88a220d) | Normative grounding and generative direction |
 | [Presence.lean](lean-declarations/becoming-core.md#module-f832ab565d73) | Becoming pure core |
 | [Presentations.lean](lean-declarations/becoming-core.md#module-d9c1534690a0) | Becoming pure core |

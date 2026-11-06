@@ -162,7 +162,7 @@
         "Becoming.CodeAcquisition.novel",
         "Becoming.CodeAcquisition.wrong_order_fails_transfer"
       ],
-      "sha256": "583321dc89d8c558097f532e83b051873f4f96e65b0f603aeb2a4e91f5ad87da"
+      "sha256": "dcb21274dcfb27f4b509a4c3e7836f33f8e518c5e93cf9fdb99d026bf29f5512"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RouteFormation.lean",
@@ -213,12 +213,18 @@
       "path": "_process/research/2026-10-05-repository-reconciliation/architecture/DEFECTS-FOUND.md",
       "role": "integration",
       "sha256": "803d652a75fbb960e4c46bd34732b68ea7ce2aaa3aa9a98ff9257bed266495bb"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "role": "receipt",
+      "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CodeAcquisition.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T212948.819150Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.CodeAcquisition",
       "success_pointer": "/status",
       "success_value": "passed"

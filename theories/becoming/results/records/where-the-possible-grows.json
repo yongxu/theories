@@ -649,7 +649,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReachableRanges.lean",
       "role": "proof",
-      "sha256": "aade1c4983cb7c819f216557b66b2be6c08420caa59443ba0f564f9ac3499d87"
+      "sha256": "3b9dc499e6ae09443c371943d4d1ccbaa02c330b42f3648c631ea7847d51e128"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Mechanism.lean",
@@ -674,27 +674,27 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Amounts.lean",
       "role": "proof",
-      "sha256": "1da43605bcd91f9165076f4780aeda0b544f98b4ef0d5cabe71893bf3608c621"
+      "sha256": "f2225b617dfdcc6d80989c5796bddd0e5146cfed125cee37cb5afcb5ff426597"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Change.lean",
       "role": "proof",
-      "sha256": "3a3b9b0150342960d89b376698984b369fc192e93a7c261db6908ca63f5a9d0d"
+      "sha256": "537e5f614427fbb047400d2dc901a1ead289724ad69d7fe1e803d5522e1248a9"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Arising.lean",
       "role": "proof",
-      "sha256": "cdd8e7eea4fbaea144620cf65b4228981c4eb7d83f5f97036504571613876b3e"
+      "sha256": "986cd16faa229bd218c860f97dde734fd06bd100ee119d7a13484260f907258e"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean",
       "role": "proof",
-      "sha256": "0052020d3cb699d79ff953af85d43535fbfa6b652e23c152cbac00723b83463c"
+      "sha256": "247dc207637fd2878b48187bad6824ceb4f795da93db91a3f971cafb796d5cf1"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
       "role": "proof",
-      "sha256": "c39bfa0baf0106432ec2a4da8cb86c9f31a3d2c089d61d54c6e26bbdb14937d9"
+      "sha256": "d45f47143ba616b665fb28f1a50e68eae3acdd54dea5cc3b068a28b31c8efba0"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frame.lean",

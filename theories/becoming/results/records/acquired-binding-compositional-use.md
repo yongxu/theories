@@ -99,6 +99,7 @@ What is acquired is a new form-to-available-operation relationship; scene lists 
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261020T161859.257200Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261031T131812.213702Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `Generative.AcquiredBinding.acquired_binding_and_grouping_compose`, `Becoming.Segmentation.reads_every_iff`, `Becoming.Segmentation.readAll_map_iff`, `Becoming.MachineInstances.interprets_every_iff`, `Becoming.MachineInstances.readForms_eq`, `Becoming.MachineInstances.segments_of_groups`, `Becoming.MachineInstances.learned_interprets_every`, `Becoming.Courses.course_reads_iff`
 

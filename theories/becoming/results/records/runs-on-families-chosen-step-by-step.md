@@ -88,6 +88,7 @@ Following Ren's ‘move towards 100%’ of 12 October 2026, answering the next_d
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `Becoming.OneStep.StepRealized`, `Becoming.OneStep.StepRunRealized`, `Becoming.OneStep.Continues`, `Becoming.OneStep.step_every_iff`, `Becoming.OneStep.step_balance_iff`, `Becoming.OneStep.step_closed_iff`, `Becoming.OneStep.step_runsDown_iff`, `Becoming.OneStep.step_runsDownClosed_iff`, `Becoming.OneStep.stepRun_runsDown_iff`, `Becoming.OneStep.stepRun_runsDownClosed_iff`, `Becoming.OneStep.stepRun_balance_iff`, `Becoming.OneStep.StepRealized.continues`, `Becoming.OneStep.Chained.continues`, `Becoming.OneStep.steps_not_run`, `Becoming.OneStep.vanishing_steps`, `families chosen step by step`, `逐步选定的家族`
 

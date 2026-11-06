@@ -150,6 +150,7 @@ Open systems (Prigogine; Schrödinger) and finite recurrence; open-ended evoluti
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T134343.981701Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `What keeping widening needs, and what carries it`, `持续扩大需要什么，以及承载它者`, `the gain bridge`, `renewers multiply`, `opened by the opened within a recency bound`, `the exclusion along passing of support`, `Becoming.Flow.OpenedByOpenedWithin`, `Becoming.Web.KeepsWidening.passes_every_bound`, `the law of beginnings`, `the kind relay`, `起始之律`, `种类接力`
 

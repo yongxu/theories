@@ -267,12 +267,12 @@
         "Becoming.ExchangeLaw.supported_of_responds",
         "Becoming.World.withRest_dependent_iff"
       ],
-      "sha256": "597a696fe502aa1fd1d667cef4788e2144612343e162d4fabd05f9fbee71ed16"
+      "sha256": "66fb887c598dcd30aff71455438930c80dc693ad2a64af9686ef2bf6c4101352"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Counterfactual.lean",
       "role": "proof",
-      "sha256": "c4916cbf4ee72134c14a7573780ac76acbde0d256ca2799012253f5e23d89fd8"
+      "sha256": "a7c605911fd5cc3c64f24928022a6b3a98b457859c6618eeeb733fb154419a61"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T100412.397267Z/verification.json",
@@ -306,6 +306,12 @@
       "role": "receipt",
       "sha256": "ec026b0d8ca8786dde3af5f9153ed706f784394b556afc93d189fae521c8cfae",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "role": "receipt",
+      "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -313,6 +319,13 @@
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ExchangePremises.lean",
       "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.ExchangePremises",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reading.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Reading",
       "success_pointer": "/status",
       "success_value": "passed"
     }

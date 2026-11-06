@@ -83,6 +83,7 @@ A specialization of pivotal provision of a discrete public good (Palfrey and Ros
 | integration | [ROUND-3-CANDIDATE-4.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue6-beyond-the-sciences/ROUND-3-CANDIDATE-4.md) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | review | [REVIEW-1.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/cdr-coupled-drawers/REVIEW-1.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `drawers coupled for each step`, `coupled drawers`, `耦合的抽取者`, `Becoming.Optimum.Coupled.gated_threshold`, `Becoming.Optimum.Coupled.drains_below`, `Becoming.Optimum.Coupled.kept_above`, `Becoming.Optimum.Coupled.AtOnce.unpivotal_drain_perfect`
 

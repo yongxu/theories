@@ -71,7 +71,8 @@ open ConditionalWeights
 
 The prelude's `Nat.mul_pow` and `Nat.pow_lt_pow_left` use `propext`, and
 `Nat.lt_of_mul_lt_mul_left` also `Classical.choice` and `Quot.sound`, in this version of Lean, so
-those laws are proved here; the rest of the arithmetic uses axiom-free laws of the prelude
+those laws are proved without them, the first and third in the core (`Naturals.mul_pow_eq`,
+`Naturals.lt_of_mul_lt_mul_left`), the second here (`pow_succ_lt_pow_succ`); the rest of the arithmetic uses axiom-free laws of the prelude
 (`Nat.eq_of_mul_eq_mul_left`, `Nat.eq_of_mul_eq_mul_right`, `Nat.mul_lt_mul_of_pos_left`,
 `Nat.mul_lt_mul_of_pos_right`, `Nat.lt_of_add_lt_add_left`, `Nat.mul_eq_zero`) and of the core
 (`Naturals.pow_add`, `Naturals.mul_right_comm`, the cancellations, `total_zero`). -/

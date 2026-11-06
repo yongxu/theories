@@ -253,7 +253,6 @@
         "Becoming.Drift.sampled_none",
         "Becoming.Drift.sampled_one",
         "Becoming.Drift.sampled_succ",
-        "Becoming.Drift.square_mul",
         "Becoming.Drift.step_expected",
         "Becoming.Drift.step_ones",
         "Becoming.Drift.step_zeros",
@@ -271,7 +270,7 @@
         "Becoming.Drift.whole_true",
         "Becoming.Drift.whole_weight"
       ],
-      "sha256": "068cdf7eb207723ea53a7be1709e74458dfcc807f81ae04ac11da5911cfbbcaf"
+      "sha256": "b7452415dcd35ae6690d2a8d3a8b01f169fcc3e171bbc960936c9fba143c1d57"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Typicality.lean",
@@ -283,7 +282,7 @@
         "Becoming.Typicality.total_weight",
         "Becoming.Typicality.total_congr_mem"
       ],
-      "sha256": "9eacd128aa74fe2651784e16421008e5f1447b9f9351be5bd2ab51cb0de6bc98"
+      "sha256": "42305f66dc2b31408accad4055bd0a764f9a221bc3b9574c505e9659c6df399f"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T164822.720919Z/verification.json",
@@ -320,22 +319,43 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json",
       "role": "receipt",
-      "sha256": "5db1e7a65fab3461c8eb58498262c6b938bba051e8e51d0c7f87541afaa80183",
+      "sha256": "a81a117f34fdfa4d44ecee3da8ab63099a7febb99c2accbd7b6fc4ec325f2add",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reproduction.lean",
+      "role": "proof",
+      "sha256": "0f8d91e7d9b6292e176e88806452cc4de86365047e9f8ca11d66556c3ece1d3c",
+      "declarations": [
+        "Becoming.Reproduction.square_mul"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "role": "receipt",
+      "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
       "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Drift.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Drift",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Typicality.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T163242.561061Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Typicality",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reproduction.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Reproduction",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -352,6 +372,10 @@
     {
       "en": "26 October 2026, board item DF1b (study section 422): The Lean gives finite two-sided bounds after k generations (Drift.fixation, Drift.varied_vanishes); the limit is read from them, as chapter 04 says. The statement gives the bounds, law 5 marks the limit as their reading, and the related note on selection gives its bound. The statement names the first kind, as Drift.fixation does, and the bound with selection falls geometrically where a is positive.",
       "zh": "2026年10月26日，工作板条目 DF1b（研究第 422 节）：Lean 给出 k 代之后有限的双侧界（Drift.fixation、Drift.varied_vanishes）；极限由之读出，如第 04 章所说。陈述给出这些界，第 5 条规律把极限标为其读法，关于选择的相关说明给出其界。陈述写明第一类，与 Drift.fixation 一致；有选择时的界在 a 为正时按几何下降。"
+    },
+    {
+      "en": "6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.",
+      "zh": "2026年11月6日，工作板条目 LM：此记录所列辅助引理现只陈述一次，在 Prelude、Flow、Change 或 Laws，或即 Lean 自有者而从列表除去；改其名，诸律不变。"
     }
   ]
 }

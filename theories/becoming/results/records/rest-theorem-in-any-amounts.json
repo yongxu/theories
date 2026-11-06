@@ -263,13 +263,13 @@
         "Becoming.Pass.levels_unlisted",
         "Becoming.Amounts.rests_unrefuted_of_finite_reading"
       ],
-      "sha256": "cb019033b8e58f42661a7584a552d646034cbe007e9c7a70545087f37cdea9cb"
+      "sha256": "638d7e4833b50439b39a3955c3f4a11f0f7b08b46acb8b5f36280c8e60ff4a57"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LeastLoss.lean",
       "role": "proof",
       "declarations": [],
-      "sha256": "d6ad7f2598fcaa3a77da932a52952ba5c2753d18ddef0b8ade69dd8c2c40ae4c"
+      "sha256": "9a3b1550dcabc6dff458eb81ee6833e6d90ff0d38175f75c39a46f394e49bd16"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Space.lean",
@@ -279,7 +279,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Amounts.lean",
       "role": "proof",
-      "sha256": "1da43605bcd91f9165076f4780aeda0b544f98b4ef0d5cabe71893bf3608c621"
+      "sha256": "f2225b617dfdcc6d80989c5796bddd0e5146cfed125cee37cb5afcb5ff426597"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T133130.717227Z/verification.json",
@@ -312,19 +312,25 @@
       "role": "receipt",
       "sha256": "2b986ea3e3de748b2a20f9973fbbcd4e6fd8dec8b40e9997fac3c29dd0d9cb1d",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "role": "receipt",
+      "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/InAmounts.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.InAmounts",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LeastLoss.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T165640.090482Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.LeastLoss",
       "success_pointer": "/status",
       "success_value": "passed"

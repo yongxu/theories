@@ -243,12 +243,12 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Typicality.lean",
       "role": "proof",
-      "sha256": "9eacd128aa74fe2651784e16421008e5f1447b9f9351be5bd2ab51cb0de6bc98"
+      "sha256": "42305f66dc2b31408accad4055bd0a764f9a221bc3b9574c505e9659c6df399f"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weighted.lean",
       "role": "proof",
-      "sha256": "0a73e620d493cadc46e730187cf7c02f948df35b1b1ef91e0b78e7d96ee9b81c"
+      "sha256": "5e682f2cd58cc360f36b8c45e04469a49e4c0309de508afdf058632d7248b497"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T163242.561061Z/verification.json",
@@ -273,7 +273,13 @@
     {
       "path": "theories/becoming/chapters/03-KNOWING.md",
       "role": "statement",
-      "sha256": "9ee06bef8367bc9302679e190530a22f457b006f0352aa21dd6991eb489afdf4"
+      "sha256": "28717135374069d3b494de1430ed53a9021ac98be95beb1563409b830a733bba"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "role": "receipt",
+      "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -286,7 +292,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Typicality.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T163242.561061Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Typicality",
       "success_pointer": "/status",
       "success_value": "passed"

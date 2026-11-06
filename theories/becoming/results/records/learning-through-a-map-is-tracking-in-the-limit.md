@@ -89,6 +89,7 @@ The twentieth review's G5 found two theories of learning in the limit, Learnable
 | integration | [DESIGN.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/DESIGN.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T213154.508889Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `learning is tracking in the limit`, `学习是极限中的跟随`, `tracking in the limit`, `极限中的跟随`, `Becoming.LearnableRuns.learnable_iff_identifies`, `Becoming.LearnableRuns.predicts_iff_tracks`
 

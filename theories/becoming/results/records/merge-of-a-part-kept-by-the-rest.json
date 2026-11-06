@@ -166,22 +166,22 @@
         "Becoming.Reset.rest_length",
         "Becoming.Reset.kept_by_rest"
       ],
-      "sha256": "d6ad7f2598fcaa3a77da932a52952ba5c2753d18ddef0b8ade69dd8c2c40ae4c"
+      "sha256": "9a3b1550dcabc6dff458eb81ee6833e6d90ff0d38175f75c39a46f394e49bd16"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Likeness.lean",
       "role": "proof",
-      "sha256": "c2ce8ed970473ced65a6addb9ef5ff6a0a994f33507d2d24316a7f79888858e1"
+      "sha256": "a96c46f67bdb2588153b738a8f8b3a8fe0eae069a68a2dbb476652b30e021020"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Recurrence.lean",
       "role": "proof",
-      "sha256": "536e2a32c187c540f3f86a69742722375bc384831fb2d3f763be1e5f15fb29d0"
+      "sha256": "a0039b199331110185dd666ce67dfc960dc6658511044568a2dd8548e4469dbe"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Amounts.lean",
       "role": "proof",
-      "sha256": "1da43605bcd91f9165076f4780aeda0b544f98b4ef0d5cabe71893bf3608c621"
+      "sha256": "f2225b617dfdcc6d80989c5796bddd0e5146cfed125cee37cb5afcb5ff426597"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T104831.571462Z/verification.json",
@@ -220,12 +220,18 @@
       "role": "receipt",
       "sha256": "276674770ba470537ab6d2f4ea06c15418b4f22b325b4a634ac7cdc8fd9b95d1",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "role": "receipt",
+      "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LeastLoss.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T165640.090482Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.LeastLoss",
       "success_pointer": "/status",
       "success_value": "passed"

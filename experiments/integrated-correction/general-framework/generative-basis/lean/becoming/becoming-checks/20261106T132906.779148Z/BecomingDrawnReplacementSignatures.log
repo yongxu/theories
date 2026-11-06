@@ -1,0 +1,117 @@
+@Becoming.DrawnReplacement.sub_split : ∀ {M i : Nat}, i ≤ M + 1 → i + (M + 1 - i) = M + 1
+@Becoming.DrawnReplacement.drawn_carrier : ∀ {a p c hi lo M i : Nat} {pos : 0 < a} (mixed : i < M + 1),
+  (Becoming.DrawnShaping.drawn a p c hi lo pos (Becoming.DrawnReplacement.at_ M i mixed)).carrier =
+    Becoming.DrawnReplacement.up M a p hi lo i
+@Becoming.DrawnReplacement.drawn_other : ∀ {a p c hi lo M i : Nat} {pos : 0 < a} (mixed : i < M + 1),
+  (Becoming.DrawnShaping.drawn a p c hi lo pos (Becoming.DrawnReplacement.at_ M i mixed)).other =
+    Becoming.DrawnReplacement.down M a p c i
+@Becoming.DrawnReplacement.favours_iff : ∀ {a p c hi lo M i : Nat} {pos : 0 < a} (mixed : i < M + 1),
+  (Becoming.DrawnShaping.drawn a p c hi lo pos (Becoming.DrawnReplacement.at_ M i mixed)).favours ↔
+    Becoming.DrawnReplacement.down M a p c i ≤ Becoming.DrawnReplacement.up M a p hi lo i
+@Becoming.DrawnReplacement.up_mono : ∀ {M a p hi lo : Nat},
+  lo ≤ hi →
+    ∀ {j k : Nat},
+      j ≤ k → k ≤ M + 1 → Becoming.DrawnReplacement.up M a p hi lo j ≤ Becoming.DrawnReplacement.up M a p hi lo k
+@Becoming.DrawnReplacement.steps : ∀ {M a p c hi lo : Nat},
+  lo ≤ hi →
+    Becoming.Drift.Replacement.Steps M (Becoming.DrawnReplacement.whole M a p c hi)
+      (Becoming.DrawnReplacement.up M a p hi lo) (Becoming.DrawnReplacement.down M a p c)
+      (Becoming.DrawnReplacement.stay M hi lo)
+@Becoming.DrawnReplacement.up_ge : ∀ {M a p hi lo i : Nat}, 0 < i → a ≤ Becoming.DrawnReplacement.up M a p hi lo i
+@Becoming.DrawnReplacement.up_pos : ∀ {M a p hi lo : Nat},
+  0 < a → ∀ (k : Nat), Becoming.Drift.Replacement.Mixed M k → 0 < Becoming.DrawnReplacement.up M a p hi lo k
+@Becoming.DrawnReplacement.a_le_whole : ∀ {M a p c hi : Nat}, a ≤ Becoming.DrawnReplacement.whole M a p c hi
+@Becoming.DrawnReplacement.fixation : ∀ {M a p c hi lo : Nat},
+  lo ≤ hi →
+    ∀ {r : Nat},
+      r + a ^ (M + 1) = Becoming.DrawnReplacement.whole M a p c hi ^ (M + 1) →
+        ∀ (m i : Nat),
+          Becoming.Drift.Replacement.potentialBy M (Becoming.DrawnReplacement.up M a p hi lo)
+                  (Becoming.DrawnReplacement.down M a p c) (M + 1) *
+                Becoming.Drift.Replacement.valueBy M (Becoming.DrawnReplacement.whole M a p c hi)
+                  (Becoming.DrawnReplacement.up M a p hi lo) (Becoming.DrawnReplacement.down M a p c)
+                  (Becoming.DrawnReplacement.stay M hi lo) (Becoming.Drift.Replacement.fixed M) ((M + 1) * m) i ≤
+              Becoming.DrawnReplacement.whole M a p c hi ^ ((M + 1) * m) *
+                Becoming.Drift.Replacement.potentialBy M (Becoming.DrawnReplacement.up M a p hi lo)
+                  (Becoming.DrawnReplacement.down M a p c) i ∧
+            Becoming.DrawnReplacement.whole M a p c hi ^ ((M + 1) * m) *
+                Becoming.Drift.Replacement.potentialBy M (Becoming.DrawnReplacement.up M a p hi lo)
+                  (Becoming.DrawnReplacement.down M a p c) i ≤
+              Becoming.Drift.Replacement.potentialBy M (Becoming.DrawnReplacement.up M a p hi lo)
+                    (Becoming.DrawnReplacement.down M a p c) (M + 1) *
+                  Becoming.Drift.Replacement.valueBy M (Becoming.DrawnReplacement.whole M a p c hi)
+                    (Becoming.DrawnReplacement.up M a p hi lo) (Becoming.DrawnReplacement.down M a p c)
+                    (Becoming.DrawnReplacement.stay M hi lo) (Becoming.Drift.Replacement.fixed M) ((M + 1) * m) i +
+                Becoming.Drift.Replacement.potentialBy M (Becoming.DrawnReplacement.up M a p hi lo)
+                    (Becoming.DrawnReplacement.down M a p c) (M + 1) *
+                  r ^ m
+@Becoming.DrawnReplacement.lost_ge : ∀ {M a p c hi lo : Nat} (k i : Nat),
+  i ≤ M →
+    ((M + 1) * (a + c + p)) ^ i * Becoming.DrawnReplacement.whole M a p c hi ^ k ≤
+      Becoming.Drift.Replacement.valueBy M (Becoming.DrawnReplacement.whole M a p c hi)
+        (Becoming.DrawnReplacement.up M a p hi lo) (Becoming.DrawnReplacement.down M a p c)
+        (Becoming.DrawnReplacement.stay M hi lo) Becoming.Drift.Replacement.lost (k + i) i
+@Becoming.DrawnReplacement.fixed_ge : ∀ {M a p c hi lo : Nat} (k i : Nat),
+  0 < i →
+    M + 1 ≤ i + k →
+      a ^ k ≤
+        Becoming.Drift.Replacement.valueBy M (Becoming.DrawnReplacement.whole M a p c hi)
+          (Becoming.DrawnReplacement.up M a p hi lo) (Becoming.DrawnReplacement.down M a p c)
+          (Becoming.DrawnReplacement.stay M hi lo) (Becoming.Drift.Replacement.fixed M) k i
+@Becoming.DrawnReplacement.lost_above : ∀ {M a p c hi lo : Nat},
+  0 < a →
+    lo ≤ hi →
+      ∀ {s n t : Nat},
+        s + n + t = M + 1 →
+          Becoming.DrawnReplacement.down M a p c s ≤ Becoming.DrawnReplacement.up M a p hi lo s →
+            ∀ (k : Nat),
+              Becoming.Drift.Replacement.ups (Becoming.DrawnReplacement.up M a p hi lo) s n *
+                  Becoming.Drift.Replacement.valueBy M (Becoming.DrawnReplacement.whole M a p c hi)
+                    (Becoming.DrawnReplacement.up M a p hi lo) (Becoming.DrawnReplacement.down M a p c)
+                    (Becoming.DrawnReplacement.stay M hi lo) Becoming.Drift.Replacement.lost k (s + n) ≤
+                t * ((M + 1) * (a + c + p)) ^ n * Becoming.DrawnReplacement.whole M a p c hi ^ k
+@Becoming.DrawnReplacement.fixed_below : ∀ {M a p c hi lo : Nat},
+  0 < a →
+    lo ≤ hi →
+      ∀ {j n : Nat},
+        j + n ≤ M →
+          Becoming.DrawnReplacement.up M a p hi lo (j + n) ≤ Becoming.DrawnReplacement.down M a p c (j + n) →
+            ∀ (k : Nat),
+              ((M + 1) * (a + c + p)) ^ n *
+                  Becoming.Drift.Replacement.valueBy M (Becoming.DrawnReplacement.whole M a p c hi)
+                    (Becoming.DrawnReplacement.up M a p hi lo) (Becoming.DrawnReplacement.down M a p c)
+                    (Becoming.DrawnReplacement.stay M hi lo) (Becoming.Drift.Replacement.fixed M) k (j + 1) ≤
+                (j + 1) * Becoming.Drift.Replacement.ups (Becoming.DrawnReplacement.up M a p hi lo) j n *
+                  Becoming.DrawnReplacement.whole M a p c hi ^ k
+@Becoming.DrawnReplacement.one_each : ∀ {M a p c hi lo : Nat},
+  Becoming.Drift.Replacement.riseBy M (Becoming.DrawnReplacement.up M a p hi lo)
+        (Becoming.DrawnReplacement.down M a p c) 0 =
+      Becoming.Drift.Replacement.ups (Becoming.DrawnReplacement.up M a p hi lo) 0 M ∧
+    Becoming.Drift.Replacement.riseBy M (Becoming.DrawnReplacement.up M a p hi lo)
+        (Becoming.DrawnReplacement.down M a p c) M =
+      ((M + 1) * (a + c + p)) ^ M
+@Becoming.DrawnReplacement.risk_dominant_iff : ∀ {a p c hi lo n : Nat} (some : 0 < n) {pos : 0 < a},
+  (Becoming.DrawnShaping.drawn a p c hi lo pos { carrier := n, other := n, other_pos := some }).other <
+      (Becoming.DrawnShaping.drawn a p c hi lo pos { carrier := n, other := n, other_pos := some }).carrier ↔
+    2 * c < hi + lo
+Becoming.DrawnReplacement.Strong.other_first : 2 * 9 < 20 + 0 ∧
+  0 < 9 ∧
+    9 < 20 ∧
+      Becoming.Drift.Replacement.riseBy 4 (Becoming.DrawnReplacement.up 4 1 0 20 0)
+            (Becoming.DrawnReplacement.down 4 1 0 9) 0 =
+          6215625 ∧
+        Becoming.Drift.Replacement.riseBy 4 (Becoming.DrawnReplacement.up 4 1 0 20 0)
+              (Becoming.DrawnReplacement.down 4 1 0 9) 4 =
+            6250000 ∧
+          Becoming.Drift.Replacement.riseBy 4 (Becoming.DrawnReplacement.up 4 1 0 20 0)
+              (Becoming.DrawnReplacement.down 4 1 0 9) 0 <
+            Becoming.Drift.Replacement.riseBy 4 (Becoming.DrawnReplacement.up 4 1 0 20 0)
+              (Becoming.DrawnReplacement.down 4 1 0 9) 4
+Becoming.DrawnReplacement.Weak.shapers_first : Becoming.Drift.Replacement.riseBy 4
+    (Becoming.DrawnReplacement.up 4 100 0 20 0) (Becoming.DrawnReplacement.down 4 100 0 9) 4 <
+  Becoming.Drift.Replacement.riseBy 4 (Becoming.DrawnReplacement.up 4 100 0 20 0)
+    (Becoming.DrawnReplacement.down 4 100 0 9) 0
+Becoming.DrawnReplacement.Weak.shared_decides : Becoming.Drift.Replacement.riseBy 4
+    (Becoming.DrawnReplacement.up 4 1 99 20 0) (Becoming.DrawnReplacement.down 4 1 99 9) 4 <
+  Becoming.Drift.Replacement.riseBy 4 (Becoming.DrawnReplacement.up 4 1 99 20 0)
+    (Becoming.DrawnReplacement.down 4 1 99 9) 0

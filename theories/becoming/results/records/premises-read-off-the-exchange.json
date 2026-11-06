@@ -36,7 +36,7 @@
         "Becoming.Flow.readOff_taking",
         "Becoming.Flow.some_mem_present",
         "Becoming.Flow.exchanging_some_iff",
-        "Becoming.Flow.none_not_mem_some",
+        "Becoming.ListTests.none_not_mem_map_some",
         "Becoming.Flow.present_distinct",
         "Becoming.Flow.adopt_census",
         "Becoming.Flow.rest_idle_at_iff",
@@ -267,7 +267,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reading.lean",
       "role": "proof",
-      "sha256": "597a696fe502aa1fd1d667cef4788e2144612343e162d4fabd05f9fbee71ed16",
+      "sha256": "66fb887c598dcd30aff71455438930c80dc693ad2a64af9686ef2bf6c4101352",
       "declarations": [
         "Becoming.Flow.Exchanging",
         "Becoming.Flow.readOff",
@@ -281,7 +281,6 @@
         "Becoming.Flow.rest_idle_at_iff",
         "Becoming.Flow.rest_idle_iff",
         "Becoming.Flow.adopt_dependent_iff",
-        "Becoming.Flow.none_not_mem_some",
         "Becoming.Flow.present_distinct",
         "Becoming.Flow.adopt_census",
         "Becoming.ExchangeLaw.ExchangesUnder",
@@ -318,15 +317,16 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
       "role": "proof",
-      "sha256": "3aadd812b74b7b0563aa3f7daa19a7d5b8da6f1bc55af5cc6bf64fb824f385d7",
+      "sha256": "cb2c9c8ba8e16916b41a36e1c392f3cd4840a7436b2817c12796c866908020a7",
       "declarations": [
-        "Becoming.Naturals.add_sub_cancel"
+        "Becoming.Naturals.add_sub_cancel",
+        "Becoming.ListTests.none_not_mem_map_some"
       ]
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Imbalance.lean",
       "role": "proof",
-      "sha256": "2528e322e1c94ec7b286e0ee1e066ac967324221593b4be562d371b1044ae660",
+      "sha256": "d1ae610cce304e1ffedeb5a6e06bdbfa50953fa8ef32d703ecad43fc7b2ba829",
       "declarations": [
         "Becoming.Flow.withImbalance",
         "Becoming.Flow.withImbalance_balances",
@@ -336,7 +336,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Resolution.lean",
       "role": "proof",
-      "sha256": "61a9fbb7c3624f887afd09df8c43b59a5ec08209811b3e1b9f20e7efa1e20fbb",
+      "sha256": "683fc3406a4803da63e87011909d012a301a48918d877dca3ae685cc1bee3fde",
       "declarations": [
         "Becoming.Web.withRefinement"
       ]
@@ -344,7 +344,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Counterfactual.lean",
       "role": "proof",
-      "sha256": "c4916cbf4ee72134c14a7573780ac76acbde0d256ca2799012253f5e23d89fd8",
+      "sha256": "a7c605911fd5cc3c64f24928022a6b3a98b457859c6618eeeb733fb154419a61",
       "declarations": [
         "Becoming.ExchangeLaw",
         "Becoming.ExchangeLaw.course",
@@ -371,7 +371,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
       "role": "proof",
-      "sha256": "25317ae599247630ed2e2884f7a756ab29e9d2514623ed32d6f977551cbce0f6",
+      "sha256": "94e9be0baad1667d0d06acdfa757543c292c054c3a7eeaefccbe10b43bd321b5",
       "declarations": [
         "Becoming.Flow.Acting",
         "Becoming.Flow.Taking"
@@ -380,7 +380,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean",
       "role": "proof",
-      "sha256": "1c85d21fa7ec00debcac668785b51fdd7cdc3a97a66d50c6700047956cdaf5df",
+      "sha256": "6c522be9ffb1099e2cb1a97e9aa6fed196c6552f7c224b3c75fe965e6204ef80",
       "declarations": [
         "Becoming.Web.Dependent",
         "Becoming.Web.Supported"
@@ -526,33 +526,39 @@
       "role": "receipt",
       "sha256": "36435e774abc5c046539fef86812e4ba5a89d9a18899d51a3efae6363e89064a",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "role": "receipt",
+      "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reading.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Reading",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Imbalance.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Imbalance",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Resolution.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Resolution",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Counterfactual.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Counterfactual",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -566,21 +572,21 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Flow",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Dependence",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Prelude",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -634,6 +640,10 @@
     {
       "en": "2026-10-20: 35 bookkeeping notes condensed from 15 October 2026 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/e18b2cd45c38a347/premises-read-off-the-exchange.json and in git.",
       "zh": "2026-10-20：35 条记账性说明合并（15 October 2026 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/e18b2cd45c38a347/premises-read-off-the-exchange.json 和 git 中。"
+    },
+    {
+      "en": "6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.",
+      "zh": "2026年11月6日，工作板条目 LM：此记录所列辅助引理现只陈述一次，在 Prelude、Flow、Change 或 Laws，或即 Lean 自有者而从列表除去；改其名，诸律不变。"
     }
   ],
   "text_versions": [

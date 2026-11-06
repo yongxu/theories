@@ -97,6 +97,7 @@ Monotonicity in the opportunity-set literature, relocated to one's own continuat
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261030T131028.245732Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `what self-concern alone ranks`, `单凭自我关切排出什么`, `Becoming.Weighting.IncreasingInOwn`, `Becoming.Weighting.every_increasingInOwn_iff_includes`, `Becoming.Weighting.ended_below`
 

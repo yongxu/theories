@@ -18,7 +18,7 @@
    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 4. Groups alike in how many shape, shaping varying, select it exactly where c < s, whatever is shared; where c < s, shaping varying, every grouping selects it; groups uniform in shaping and differing select it exactly where c < s + m q. (`Becoming.RuleShaping.grouped_alike_iff`, `Becoming.RuleShaping.grouped_kept_rises`, `Becoming.RuleShaping.grouped_uniform_iff`)
    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
-5. Witness: two groups of two, a = s = q = 1 and a cost of two, so that at a step the rule after shaping does not favour the shapers; with the shapers together each leaves four and each other three and the whole selects for shaping, and with each shaper beside an other the counts turn and it selects against. (`Becoming.RuleShaping.Assorting.one_pos`, `Becoming.RuleShaping.Assorting.assortedOffspring`, `Becoming.RuleShaping.Assorting.mixedOffspring`, `Becoming.RuleShaping.Assorting.assorted_grouped`, `Becoming.RuleShaping.Assorting.mixed_grouped`, `Becoming.RuleShaping.Assorting.either_verdict`)
+5. Witness: two groups of two, a = s = q = 1 and a cost of two, so that at a step the rule after shaping does not favour the shapers; with the shapers together each leaves four and each other three and the whole selects for shaping, and with each shaper beside an other the counts turn and it selects against. (`Becoming.RuleShaping.Assorting.assortedOffspring`, `Becoming.RuleShaping.Assorting.mixedOffspring`, `Becoming.RuleShaping.Assorting.assorted_grouped`, `Becoming.RuleShaping.Assorting.mixed_grouped`, `Becoming.RuleShaping.Assorting.either_verdict`)
    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
@@ -68,7 +68,7 @@ Hamilton's rule (Hamilton 1964) in the multilevel form of Price (1972), with wha
 
 | Role | Source | Declarations |
 |---|---|---|
-| proof | [RuleShaping.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean) | `Becoming.RuleShaping.Assorting.assortedOffspring`, `Becoming.RuleShaping.Assorting.assorted_grouped`, `Becoming.RuleShaping.Assorting.either_verdict`, `Becoming.RuleShaping.Assorting.mixedOffspring`, `Becoming.RuleShaping.Assorting.mixed_grouped`, `Becoming.RuleShaping.Assorting.one_pos`, `Becoming.RuleShaping.Grouped`, `Becoming.RuleShaping.Sized.apart_grouped`, `Becoming.RuleShaping.Sized.either_verdict`, `Becoming.RuleShaping.Sized.together_grouped`, `Becoming.RuleShaping.grouped_alike_iff`, `Becoming.RuleShaping.grouped_kept_rises`, `Becoming.RuleShaping.grouped_returns`, `Becoming.RuleShaping.grouped_rises_iff`, `Becoming.RuleShaping.grouped_rises_iff_sized`, `Becoming.RuleShaping.grouped_uniform_iff`, `Becoming.RuleShaping.shaped` |
+| proof | [RuleShaping.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean) | `Becoming.RuleShaping.Assorting.assortedOffspring`, `Becoming.RuleShaping.Assorting.assorted_grouped`, `Becoming.RuleShaping.Assorting.either_verdict`, `Becoming.RuleShaping.Assorting.mixedOffspring`, `Becoming.RuleShaping.Assorting.mixed_grouped`, `Becoming.RuleShaping.Grouped`, `Becoming.RuleShaping.Sized.apart_grouped`, `Becoming.RuleShaping.Sized.either_verdict`, `Becoming.RuleShaping.Sized.together_grouped`, `Becoming.RuleShaping.grouped_alike_iff`, `Becoming.RuleShaping.grouped_kept_rises`, `Becoming.RuleShaping.grouped_returns`, `Becoming.RuleShaping.grouped_rises_iff`, `Becoming.RuleShaping.grouped_rises_iff_sized`, `Becoming.RuleShaping.grouped_uniform_iff`, `Becoming.RuleShaping.shaped` |
 | proof | [SelectionLevels.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionLevels.lean) | `Becoming.SelectionLevels.Founding.assorted`, `Becoming.SelectionLevels.Founding.keeps`, `Becoming.SelectionLevels.Founding.mixed`, `Becoming.SelectionLevels.Sized.apart`, `Becoming.SelectionLevels.Sized.apartOffspring`, `Becoming.SelectionLevels.Sized.either_verdict`, `Becoming.SelectionLevels.Sized.factor`, `Becoming.SelectionLevels.Sized.together`, `Becoming.SelectionLevels.Sized.togetherOffspring`, `Becoming.SelectionLevels.Sized.together_common`, `Becoming.SelectionLevels.among_kept`, `Becoming.SelectionLevels.rises_iff_kept`, `Becoming.SelectionLevels.rises_iff_kept_sized`, `Becoming.SelectionLevels.spread_levels`, `Becoming.SelectionLevels.within_kept` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261103T102739.294112Z/verification.json) | — |
 | integration | [NOTE.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj8-selection-one-law/NOTE.md) | — |
@@ -77,6 +77,7 @@ Hamilton's rule (Hamilton 1964) in the multilevel form of Price (1972), with wha
 | statement | [04-LIFE.md](../../chapters/04-LIFE.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261103T203838.375122Z/verification.json) | — |
 | integration | [NOTE.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/us-unequal-sizes/NOTE.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `The capacity to shape the rule, selected among groups`, `塑规之能，于群间被选`, `Hamilton's rule for shaping the rule`, `Becoming.RuleShaping.grouped_rises_iff`
 
@@ -85,6 +86,7 @@ Aliases: `The capacity to shape the rule, selected among groups`, `塑规之能�
 
 - 3 November 2026, board item AJ8 (study section 503): added: the capacity to shape the rule stated as a case of returns kept and shared within the group, with a witness where the cost exceeds what comes back alone and shaping is selected.
 - 4 November 2026, board item US (study section 506): shaping in groups of any sizes stated (grouped_rises_iff_sized), the case of returns kept in groups of any sizes, with a witness either way at unequal sizes (Sized.either_verdict); the equal-size limit narrowed to the spread form.
+- 6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.
 
 </details>
 

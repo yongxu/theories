@@ -18,6 +18,8 @@
    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 4. With equality of items decided, one course widens another on a listing exactly when a chain of widenings, each by one listed item alone, leads from the second up to the first. So an order transitive on courses is increasing in admission exactly when it ranks every widening by one item above what it widens. (`Becoming.Weighting.WidensByOne`, `Becoming.Weighting.reach_of_beyond`, `Becoming.Weighting.widensOn_iff_reach`, `Becoming.Weighting.increasing_iff_by_one`)
    - *Shared laws, by Lean dependency:* widening; its declarations reach the grammar.
+5. Premises no proof had established hold together with their laws' other premises in small models, and where it costs a line fail in another. The link to C between listed level paths: one formation needing one unit at every step, one level path admitting it at the first step alone and one at no step, admission decided and what the two admit listed, so an order counting what is admitted ranks the extension, and with self-concern in its place the condition held de se holds as well. Removing idle steps, with one idle step in it; mutual feeding of two formations, failing where only one is fed; the one passage's joining with listed outcomes and roles and connected from its start; a reconfiguration's bound on a ready arrangement; one relation for both readings of matched courses; portions returning less than one for one, met where nothing left stands next and failed where the whole stands as it was left. These show the premises can hold together, and nothing of how often they do. (`Becoming.ListedPaths.premises_hold`, `Becoming.ListedPaths.premises_hold_de_se`, `Becoming.ListedPaths.not_listed`, `Becoming.IdleStep.premises_hold`, `Becoming.IdleStep.not_idle_later`, `Becoming.TwoFeeding.mutuallyFed`, `Becoming.OneFeeding.not_mutuallyFed`, `Becoming.Joining.Once.finiteOutcomes`, `Becoming.Joining.Once.locallyFinite`, `Becoming.Joining.Once.connectedFrom`, `Becoming.Reconfiguration.covered_and_not`, `Becoming.MatchedCourses.readings_hold_together`, `Becoming.Optimum.AtOnce.returnsLess_met`, `Becoming.Optimum.AtOnce.returnsLess_fails`)
+   - *Shared laws, by Lean dependency:* closure and widening; its declarations reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions
@@ -79,6 +81,8 @@ Meeting and failing a premise in models is the standard way to show it independe
 | statement | [08-METHOD.md](../../chapters/08-METHOD.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T033635.582311Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T062217.665179Z/verification.json) | — |
+| proof | [PremisesTogether.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PremisesTogether.lean) | `Becoming.ListedPaths.premises_hold`, `Becoming.ListedPaths.premises_hold_de_se`, `Becoming.ListedPaths.not_listed`, `Becoming.IdleStep.premises_hold`, `Becoming.IdleStep.not_idle_later`, `Becoming.TwoFeeding.mutuallyFed`, `Becoming.OneFeeding.not_mutuallyFed`, `Becoming.Joining.Once.finiteOutcomes`, `Becoming.Joining.Once.locallyFinite`, `Becoming.Joining.Once.connectedFrom`, `Becoming.Reconfiguration.covered_and_not`, `Becoming.MatchedCourses.readings_hold_together`, `Becoming.Optimum.AtOnce.returnsLess_met`, `Becoming.Optimum.AtOnce.returnsLess_fails` |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `the condition on the root varies with the net`, `根上之条件随网而变`, `C entailed by no statement reading no order where it holds`, `Becoming.«续无外随网»`, `Becoming.«族无外随网»`, `Becoming.«逆缘续无外随网»`, `Becoming.ReadsNoOrder.not_entails`, `Becoming.LiftModel.met_and_failed`, `Becoming.Weighting.widensOn_iff_reach`
 
@@ -86,6 +90,7 @@ Aliases: `the condition on the root varies with the net`, `根上之条件随网
 ### History
 
 - 1 November 2026, board item DU (study section 489): added. The premise card's pairs for the condition's root form, C and L, and the law of widening by one item, from the deeper unification review's leaf, Becoming.PremiseWitnesses; two independent AI reviews of the leaf and a third look, every finding taken.
+- 6 November 2026, board item LM: premises no proof in the package established are met together with their laws' other premises in a new leaf, `Becoming.PremisesTogether` (law added), found by an audit of the compiled terms.
 
 </details>
 

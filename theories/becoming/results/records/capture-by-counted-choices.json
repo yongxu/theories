@@ -81,7 +81,6 @@
       "en": "Witnesses: three to one keeps the first policy against a score weighing the second twice as much; from one to one the score decides for good; one count moved, three to two, locks the other way; counted from the posterior at the time of choosing, three to one falls at the first step while the weighted rule still favours the first policy, by a tie, and favours the second from the second step.",
       "zh": "见证：三对一，对予第二策二倍之权之评分仍保持第一策；自一对一起，评分永定之；移一计数为三对二，则反向锁定；于择时计后验，三对一首步份额即降，而加权之规则仍以等而偏第一策，自第二步起偏第二策。",
       "declarations": [
-        "Becoming.ChoiceCountCapture.Witness.two_pos",
         "Becoming.ChoiceCountCapture.Witness.four_pos",
         "Becoming.ChoiceCountCapture.Witness.counts",
         "Becoming.ChoiceCountCapture.Witness.counted_beats_score",
@@ -313,7 +312,6 @@
         "Becoming.ChoiceCountCapture.Witness.moved_locks_down",
         "Becoming.ChoiceCountCapture.Witness.posterior_share_falls",
         "Becoming.ChoiceCountCapture.Witness.score_decides",
-        "Becoming.ChoiceCountCapture.Witness.two_pos",
         "Becoming.ChoiceCountCapture.byScore",
         "Becoming.ChoiceCountCapture.choose",
         "Becoming.ChoiceCountCapture.choose_favoured",
@@ -342,7 +340,7 @@
         "Becoming.ChoiceCountCapture.weighted_favours_iff",
         "Becoming.ChoiceCountCapture.weighted_reads"
       ],
-      "sha256": "aa9e1c63199bf74aaf9585db861aecaf3c4cccc6649a39e762be2d4fb509eda6"
+      "sha256": "5189a33a8304452975af1d99478a5e2d86539bbb031882640fbcf2658ce05205"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleCapture.lean",
@@ -352,12 +350,12 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean",
       "role": "proof",
-      "sha256": "b88590f154ad3779eaf7d6ef5f05d2e6427d2c6b2681736cf36715aa2c081130"
+      "sha256": "0d748eedc571ebcd09900b4fca837e68faa66cf5d31d7a24050e6850aee10ee7"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean",
       "role": "proof",
-      "sha256": "8f0d8630a48b24088e17f50af7c95619f85191d2ce96f0e7837a38c506a7a74f"
+      "sha256": "64ef0f80da3be8166cf87c62b5dec33716d55f781cce43fd784698972fcca23c"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Selection.lean",
@@ -392,13 +390,19 @@
     {
       "path": "theories/becoming/chapters/03-KNOWING.md",
       "role": "statement",
-      "sha256": "9ee06bef8367bc9302679e190530a22f457b006f0352aa21dd6991eb489afdf4"
+      "sha256": "28717135374069d3b494de1430ed53a9021ac98be95beb1563409b830a733bba"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "role": "receipt",
+      "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ChoiceCountCapture.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T103820.622467Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.ChoiceCountCapture",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -428,6 +432,10 @@
     {
       "en": "31 October 2026, board item UE25 (study section 471): related to a-code-held-as-counts; the correspondence names it among the containment's third parts; no statement, next step or declaration changed.",
       "zh": "2026年10月31日，工作板条目 UE25（研究第 471 节）：与 a-code-held-as-counts 相关联；对应将其列于包含之第三部分；无一陈述、下一步或声明改变。"
+    },
+    {
+      "en": "6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.",
+      "zh": "2026年11月6日，工作板条目 LM：此记录所列辅助引理现只陈述一次，在 Prelude、Flow、Change 或 Laws，或即 Lean 自有者而从列表除去；改其名，诸律不变。"
     }
   ]
 }

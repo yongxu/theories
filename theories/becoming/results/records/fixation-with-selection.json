@@ -363,7 +363,6 @@
         "Becoming.Drift.sampled_none",
         "Becoming.Drift.sampled_one",
         "Becoming.Drift.sampled_succ",
-        "Becoming.Drift.square_mul",
         "Becoming.Drift.step_expected",
         "Becoming.Drift.step_ones",
         "Becoming.Drift.step_zeros",
@@ -381,7 +380,7 @@
         "Becoming.Drift.whole_true",
         "Becoming.Drift.whole_weight"
       ],
-      "sha256": "068cdf7eb207723ea53a7be1709e74458dfcc807f81ae04ac11da5911cfbbcaf"
+      "sha256": "b7452415dcd35ae6690d2a8d3a8b01f169fcc3e171bbc960936c9fba143c1d57"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T145016.701975Z/verification.json",
@@ -416,15 +415,36 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json",
       "role": "receipt",
-      "sha256": "5db1e7a65fab3461c8eb58498262c6b938bba051e8e51d0c7f87541afaa80183",
+      "sha256": "a81a117f34fdfa4d44ecee3da8ab63099a7febb99c2accbd7b6fc4ec325f2add",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reproduction.lean",
+      "role": "proof",
+      "sha256": "0f8d91e7d9b6292e176e88806452cc4de86365047e9f8ca11d66556c3ece1d3c",
+      "declarations": [
+        "Becoming.Reproduction.square_mul"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "role": "receipt",
+      "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
       "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Drift.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Drift",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reproduction.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Reproduction",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -441,6 +461,10 @@
     {
       "en": "3 November 2026, board item AJ8 (study section 503): the chain stated with weights read from the count and a weight of staying, every bound proved there and the constant case derived from it; bounds across a stretch where one kind's weight is at least the other's added.",
       "zh": "2026年11月3日，工作板条目 AJ8（研究第 503 节）：链以权读自计数与留之权陈述，诸界皆于彼处证之，常权之情形由之导出；增一类之权不小于他类之一段上之界。"
+    },
+    {
+      "en": "6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.",
+      "zh": "2026年11月6日，工作板条目 LM：此记录所列辅助引理现只陈述一次，在 Prelude、Flow、Change 或 Laws，或即 Lean 自有者而从列表除去；改其名，诸律不变。"
     }
   ]
 }

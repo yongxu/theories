@@ -132,6 +132,7 @@ Ren's proposal asks to explain formation, persistence, transformation, degenerat
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T055339.893510Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `Becoming.Flow.Balances.fall_taken`, `Becoming.Flow.Balances.takenBy`, `Becoming.Flow.Balances.falls_cover`, `Becoming.Flow.Balances.falls_of_taking`, `Becoming.Flow.Balances.depletes`, `Becoming.Flow.rise_with_fall`, `Becoming.Flow.standing_with_fall`, `Becoming.Flow.rise_alone_opens`, `Becoming.Flow.rise_exchange`, `Becoming.Web.Embodied.arising_with_fall`, `Becoming.Brood.rise_without_fall`
 

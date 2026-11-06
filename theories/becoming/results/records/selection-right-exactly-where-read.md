@@ -65,6 +65,7 @@ Measurability: a function factors through a map exactly where it is constant on 
 | statement | [CIVILIZATION-THOUGHT-AND-BECOMING.md](../../history/CIVILIZATION-THOUGHT-AND-BECOMING.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T061626.538602Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `Selection right exactly where what matters is read`, `择恰在要紧者由象读出处为对`, `Becoming.Learning.through_iff_reads`
 

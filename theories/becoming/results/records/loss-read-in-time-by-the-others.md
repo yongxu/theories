@@ -90,7 +90,7 @@ Collingridge's dilemma (1980) has two horns: while change is easy its need canno
 
 - **formal-reuse**: [capture-through-the-rule](capture-through-the-rule.md). CarrierCounts, its order, favours, disfavours, select, select_mono, raises, lowers, upper, lower; Locked, locked_not_below, reverse; paced_fast_succ; Pace.paced_succ and Pace.turn.
 - **formal-reuse**: [readers-drawn-from-the-selected](readers-drawn-from-the-selected.md). ClosedCapture.Thinned (lossPool, course, rule_read, read_late_kept, read_in_time_turns, lossStep_accrues), Beyond.lossStep, join, Accrues and loss_grows; Drawn.pool, pool_reads and pool_against.
-- **formal-reuse**: [shaping-read-by-readers-drawn-from-the-selected](shaping-read-by-readers-drawn-from-the-selected.md). DrawnShaping.drawn, drawnRead, drawnCourse, drawn_favours_iff, critical_iff, shaped_le_iff, drawn_reads_iff, drawn_locks and drawn_from_below; the witnesses CriticalMass.one_pos, even, oneToTwo and oneToThree.
+- **formal-reuse**: [shaping-read-by-readers-drawn-from-the-selected](shaping-read-by-readers-drawn-from-the-selected.md). DrawnShaping.drawn, drawnRead, drawnCourse, drawn_favours_iff, critical_iff, shaped_le_iff, drawn_reads_iff, drawn_locks and drawn_from_below; the witnesses CriticalMass.even, oneToTwo and oneToThree.
 - **formal-reuse**: [shaping-the-rule-selected-by-what-comes-back](shaping-the-rule-selected-by-what-comes-back.md). RuleShaping.shaped, and RuleShaping.orbit_held for Law.orbit under a rule held fixed.
 - **formal-reuse**: [rest-at-every-resolution](rest-at-every-resolution.md). powers and bernoulli_powers (Bernoulli's inequality for powers).
 - related, not a proved adapter: [closed-capture](closed-capture.md). The loop whose every level reads only the share; here a reading beyond the share, the loss read by the others, leaves its lock only before their late reading would favour the shapers.
@@ -115,6 +115,7 @@ Collingridge's dilemma (1980) has two horns: while change is easy its need canno
 | statement | [02-MAP.md](../../chapters/02-MAP.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../THE-THEORY-OF-BECOMING.md) | — |
 | statement | [README.md](../../../meta-attractor/README.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `The loss read in time by the others, joined to the critical mass`, `他者及时读损失，接于临界量`, `the window for reading the loss`, `Becoming.ReadInTime.deadline`
 

@@ -14,6 +14,8 @@
    - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar.
 2. A room in balance and a room held by a thermostat share a core class of 'warm or not' while no window opens; with the window's opening in the net, the balanced room's cooling has no warm match from the held room, and the first stage tells them apart. (`Becoming.Room`, `Becoming.Room.closed`, `Becoming.Room.opened`, `Becoming.Room.warm`, `Becoming.Room.alike`, `Becoming.Room.same`, `Becoming.Room.same_alike`, `Becoming.Room.same_symm`, `Becoming.Room.same_constant`, `Becoming.«恒温与平衡»`)
    - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar.
+3. The stages and the stages of inquiry are one relation at every stage. Each stage lies within the class and within the stage before, and for a symmetric class each is symmetric. So where the class is symmetric and being told apart at no stage is constant under the step, the core is exactly what no stage tells apart: what the first law gives one way holds both ways under that premise. (`Becoming.«层即诘»`, `Becoming.«诘之降»`, `Becoming.«层在类内»`, `Becoming.«层之对称»`, `Becoming.«每层不分而有常则核当且仅当每层不分»`)
+   - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions
@@ -23,7 +25,7 @@
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
-- That what no finite stage tells apart is in the core: that is the Hennessy-Milner direction, which needs finitely many successors and implies LLPO in its limit form.
+- That what no finite stage tells apart is in the core, with no premise: in an infinitely branching net it is not. Under the premise that being told apart at no stage is constant under the step it is. The Hennessy-Milner direction, from finitely many successors, implies LLPO in its limit form. Witness: `Becoming.«致诘不尽»`.
 - That the open window happens: the wider net is a net of possibilities, and the comparison is counterfactual.
 - **Counterexample:** The balanced and the held room: one core class under the closed net, told apart under the opened net («恒温与平衡»). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarTesting.lean)
 
@@ -66,6 +68,8 @@ Stages of bisimulation and the Hennessy-Milner theorem (Hennessy and Milner 1985
 | proof | [GrammarTesting.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarTesting.lean) | `Becoming.Room`, `Becoming.Room.alike`, `Becoming.Room.closed`, `Becoming.Room.opened`, `Becoming.Room.same`, `Becoming.Room.same_alike`, `Becoming.Room.same_constant`, `Becoming.Room.same_symm`, `Becoming.Room.warm`, `Becoming.«可分则不在核»`, `Becoming.«层»`, `Becoming.«恒温与平衡»`, `Becoming.«核在每层之内»` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T071926.635620Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
+| proof | [GrammarCandidates.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean) | `Becoming.«层即诘»`, `Becoming.«诘之降»`, `Becoming.«层在类内»`, `Becoming.«层之对称»`, `Becoming.«每层不分而有常则核当且仅当每层不分»`, `Becoming.«致诘不尽»` |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `Becoming.Room`, `Becoming.Room.alike`, `Becoming.Room.closed`, `Becoming.Room.opened`, `Becoming.Room.same`, `Becoming.Room.same_alike`, `Becoming.Room.same_constant`, `Becoming.Room.same_symm`, `Becoming.Room.warm`, `Becoming.«可分则不在核»`, `Becoming.«层»`, `Becoming.«恒温与平衡»`, `Becoming.«核在每层之内»`
 
@@ -73,6 +77,7 @@ Aliases: `Becoming.Room`, `Becoming.Room.alike`, `Becoming.Room.closed`, `Becomi
 ### History
 
 - 23 October 2026, board item OU5 (study section 380): 验 of the one-unfolding plan, the root theorem's one direction and the thermostat case read within the net.
+- 6 November 2026, board item LM: the stages 层 and the stages of inquiry 诘 are shown one relation (`«层即诘»`), closing 03's open item, and the conditional converse of testing is stated on the stages (`«每层不分而有常则核当且仅当每层不分»`). The does-not-show item on the converse now says what holds under the premise.
 
 </details>
 

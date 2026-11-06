@@ -10,7 +10,7 @@
 <a id="laws--规律"></a>
 ## Laws
 
-1. Counting the members a test holds of: counts under a weaker test are no more, alike tests count alike, and a test and its negation count every member once. (`Becoming.Web.holdsCount`, `Becoming.Web.toNat_le_of_imp`, `Becoming.Web.holdsCount_le_of_imp`, `Becoming.Web.holdsCount_congr`, `Becoming.Web.toNat_add_not`, `Becoming.Web.holdsCount_add_not`, `Becoming.Web.and_left_true`, `Becoming.Web.and_right_true`)
+1. Counting the members a test holds of: counts under a weaker test are no more, alike tests count alike, and a test and its negation count every member once. (`Becoming.Web.holdsCount`, `Becoming.Web.toNat_le_of_imp`, `Becoming.Web.holdsCount_le_of_imp`, `Becoming.Web.holdsCount_congr`, `Becoming.Web.toNat_add_not`, `Becoming.Web.holdsCount_add_not`, `Becoming.ListTests.and_left`, `Becoming.ListTests.and_right`)
    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. With each member reading through its own coupling, the majority reading selects through the pooled coupling; where more than half the members hold of both histories or fail of both, it goes alike on them. (`Becoming.Web.MajorityHolds`, `Becoming.Web.majority_through_all`, `Becoming.Web.majority_outvoted`)
    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
@@ -57,7 +57,7 @@ Majority aggregation: a minority distinction is outvoted (Condorcet-style aggreg
 
 | Role | Source | Declarations |
 |---|---|---|
-| proof | [SelectionPool.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionPool.lean) | `Becoming.Web.MajorityHolds`, `Becoming.Web.and_left_true`, `Becoming.Web.and_right_true`, `Becoming.Web.holdsCount`, `Becoming.Web.holdsCount_add_not`, `Becoming.Web.holdsCount_congr`, `Becoming.Web.holdsCount_le_of_imp`, `Becoming.Web.majority_outvoted`, `Becoming.Web.majority_through_all`, `Becoming.Web.toNat_add_not`, `Becoming.Web.toNat_le_of_imp` |
+| proof | [SelectionPool.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionPool.lean) | `Becoming.Web.MajorityHolds`, `Becoming.Web.holdsCount`, `Becoming.Web.holdsCount_add_not`, `Becoming.Web.holdsCount_congr`, `Becoming.Web.holdsCount_le_of_imp`, `Becoming.Web.majority_outvoted`, `Becoming.Web.majority_through_all`, `Becoming.Web.toNat_add_not`, `Becoming.Web.toNat_le_of_imp` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | integration | [BECOMING-SIGNIFICANCE-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md) | — |
@@ -68,6 +68,8 @@ Majority aggregation: a minority distinction is outvoted (Condorcet-style aggreg
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T054654.692180Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T033635.582311Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T062217.665179Z/verification.json) | — |
+| proof | [Prelude.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean) | `Becoming.ListTests.and_left`, `Becoming.ListTests.and_right` |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `A pool read by its majority`, `按多数读取之池`, `Becoming.Web.holdsCount`
 
@@ -76,6 +78,7 @@ Aliases: `A pool read by its majority`, `按多数读取之池`, `Becoming.Web.h
 
 - 22 October 2026: added (ZG), for the gap the ZH reading raised; study section 344.
 - 1 November 2026: the statement's "however many members tell them apart" corrected to "though the fewer than half left may tell them apart": the premise has more than half reading alike, so fewer than half can tell the histories apart (quick Lean review; the docstring of Web.majority_outvoted corrected with it). No law, declaration or scope changed.
+- 6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.
 
 <a id="earlier-text--早期文本"></a>
 ### Earlier text

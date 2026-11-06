@@ -187,7 +187,7 @@
         "Becoming.Narrowing.wrong_model_class_can_be_confidently_wrong",
         "Becoming.Narrowing.inconsistent_evidence_yields_no_answer"
       ],
-      "sha256": "d5c203f58f6d6a7dad66dac076558b00437917bc6bb8deefe3f9cb4dc676355b"
+      "sha256": "6eed4920e31ca681aefd0c1c73212be8c51e770d7edcf3364a13a2fa56bbac3f"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T212948.819150Z/verification.json",
@@ -208,12 +208,18 @@
       "path": "_process/research/2026-10-05-repository-reconciliation/architecture/DEFECTS-FOUND.md",
       "role": "integration",
       "sha256": "803d652a75fbb960e4c46bd34732b68ea7ce2aaa3aa9a98ff9257bed266495bb"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "role": "receipt",
+      "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Narrowing.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T212948.819150Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Narrowing",
       "success_pointer": "/status",
       "success_value": "passed"

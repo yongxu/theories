@@ -88,6 +88,7 @@ The proof of completeness found two laws missing from those stated of one step. 
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `Becoming.Flow.sign_uptake_le_takers`, `Becoming.Flow.RunsDownOn.taken_iff`, `Becoming.Flow.BalancesOn.taken_le`, `Becoming.OneStep.runsDownClosed_iff_stated`, `Becoming.OneStep.stated_not_realized`, `Becoming.OneStep.standing_iff`, `Becoming.OneStep.standing_bound_needed`, `a taker for what is taken`, `有所取就有取用者`
 

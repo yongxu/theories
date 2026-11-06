@@ -18,7 +18,7 @@
       "en": "For 0 < k, the world counted in a unit k times finer has k times every standing, need, take and give of the world and the same relata, activity, requirements, drawing and presence; conservation across a step is the same relation, so it balances exactly where the world does.",
       "zh": "于 0 < k，以细 k 倍之单位所计之世界，其每一立度、所需、所取与所予皆为原世界之 k 倍，关系项、活动、所要求、汲取与在场皆同；跨步之守恒为同一关系，故其恰于原世界平衡处平衡。",
       "declarations": [
-        "Becoming.UnreadStandings.total_scaled",
+        "Becoming.total_mul",
         "Becoming.UnreadStandings.sum_eq_scaled",
         "Becoming.World.atFinerUnit",
         "Becoming.World.atFinerUnit_level",
@@ -64,8 +64,8 @@
         "Becoming.UnreadStandings.lt_relabelled",
         "Becoming.UnreadStandings.pos_squared",
         "Becoming.UnreadStandings.le_squared",
-        "Becoming.UnreadStandings.assoc_mul",
-        "Becoming.UnreadStandings.left_comm_mul",
+        "Becoming.mul_assoc_nat",
+        "Becoming.mul_turn",
         "Becoming.UnreadStandings.factor_of_one",
         "Becoming.World.stillAt",
         "Becoming.World.standingAt_eq_stillAt",
@@ -166,7 +166,6 @@
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/UnreadStandings.lean",
       "role": "proof",
       "declarations": [
-        "Becoming.UnreadStandings.total_scaled",
         "Becoming.UnreadStandings.pos_scaled",
         "Becoming.UnreadStandings.le_scaled",
         "Becoming.UnreadStandings.lt_scaled",
@@ -175,8 +174,6 @@
         "Becoming.UnreadStandings.lt_relabelled",
         "Becoming.UnreadStandings.pos_squared",
         "Becoming.UnreadStandings.le_squared",
-        "Becoming.UnreadStandings.assoc_mul",
-        "Becoming.UnreadStandings.left_comm_mul",
         "Becoming.UnreadStandings.factor_of_one",
         "Becoming.World.atFinerUnit",
         "Becoming.World.atFinerUnit_level",
@@ -207,7 +204,7 @@
         "Becoming.World.ratio_apart",
         "Becoming.World.standing_not_read_up_to_unit"
       ],
-      "sha256": "1854a1083b5693accf59ff64f3a1fbd0ac6ba84d2a47f5464d23733b03202690"
+      "sha256": "9af12bed3d877a6ddca74d0cca80111798a4be20db81c5e764dd62cf9dffa888"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T000137.132110Z/verification.json",
@@ -244,13 +241,56 @@
       "role": "receipt",
       "sha256": "4331b95fd551f781d435b9a3ad5f05fb95cbdeb2f7ed119459297fe80639044a",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+      "role": "proof",
+      "sha256": "94e9be0baad1667d0d06acdfa757543c292c054c3a7eeaefccbe10b43bd321b5",
+      "declarations": [
+        "Becoming.total_mul"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "role": "proof",
+      "sha256": "cb2c9c8ba8e16916b41a36e1c392f3cd4840a7436b2817c12796c866908020a7",
+      "declarations": [
+        "Becoming.mul_assoc_nat",
+        "Becoming.mul_turn"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "role": "receipt",
+      "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T135137.430317Z/verification.json",
+      "role": "receipt",
+      "sha256": "a81a117f34fdfa4d44ecee3da8ab63099a7febb99c2accbd7b6fc4ec325f2add",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/UnreadStandings.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T062217.665179Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T135137.430317Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.UnreadStandings",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Flow",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Prelude",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -259,6 +299,10 @@
     {
       "en": "1 November 2026, board item DU (study section 489): added. What the occurrence model leaves free in the standings, the unit in every world and more in still worlds, from the review's units scratch, ported as Becoming.UnreadStandings, its helper lemmas' namespace renamed to the module's at the kit review and every other declaration unchanged; an independent AI review, every finding taken.",
       "zh": "2026年11月1日，工作板条目 DU（研究第 489 节）：增。出现模型于立度所留之自由：每一世界之单位，静止世界中更多；出自审阅之单位草稿，移为 Becoming.UnreadStandings，其辅助引理之命名空间于套件审阅时改为模块之名，余声明不变；经一独立之 AI 审阅，所见皆取。"
+    },
+    {
+      "en": "6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.",
+      "zh": "2026年11月6日，工作板条目 LM：此记录所列辅助引理现只陈述一次，在 Prelude、Flow、Change 或 Laws，或即 Lean 自有者而从列表除去；改其名，诸律不变。"
     }
   ]
 }

@@ -94,6 +94,7 @@ Interpretability-based oversight (Olah et al. 2020; Elhage et al. 2021) and elic
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T054654.692180Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T033635.582311Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T062217.665179Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `reading another's couplings`, `reading is pooling`, `reading a system`, `读取他者的耦合`, `Becoming.Flow.withinCoupling_reads_iff`, `Becoming.Flow.unselected_beyond_reads`
 

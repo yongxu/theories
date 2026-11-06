@@ -1,0 +1,19 @@
+import Becoming.GrammarReadings
+#print axioms Becoming.«化»
+#print axioms Becoming.«化之二说同形»
+#print axioms Becoming.«成坏»
+#print axioms Becoming.«化为有缘之成坏»
+#print axioms Becoming.«同于»
+#print axioms Becoming.«同于为类»
+#print axioms Becoming.«同于不必传递»
+#print axioms Becoming.«复»
+#print axioms Becoming.«相续之末有前»
+#print axioms Becoming.«复者住»
+#print axioms Becoming.«通»
+#print axioms Becoming.«有常则往不穷»
+#print axioms Becoming.«两向有常有前则通»
+#print axioms Becoming.«两向有常则通»
+#print axioms Becoming.«有常而不通»
+#print axioms Becoming.«昼夜往来不穷»
+#print axioms Becoming.«非一非异»
+#print axioms Becoming.«因灭而续»

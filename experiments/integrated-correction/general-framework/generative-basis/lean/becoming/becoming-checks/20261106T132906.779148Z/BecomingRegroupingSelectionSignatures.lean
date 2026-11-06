@@ -1,0 +1,12 @@
+import Becoming.RegroupingSelection
+#check @Becoming.Frame.regroup_same_realized_iff
+#check @Becoming.Frame.regroup_through
+#check @Becoming.Frame.respectsAt_iff_claims_through
+#check @Becoming.Frame.regroup_keeps_claim_selections_iff
+#check @Becoming.Frame.constant_content_keeps_state_selections
+#check @Becoming.Frame.literal_claims_separate_preservation
+#check @Becoming.Frame.regroup_bisimulation
+#check @Becoming.Frame.regroup_bisimulation_iff
+#check @Becoming.Frame.regroup_alike_iff
+#check @Becoming.Web.group_keeps_selections_iff_faithful
+#check @Becoming.Web.merged_requirement_loses_selection

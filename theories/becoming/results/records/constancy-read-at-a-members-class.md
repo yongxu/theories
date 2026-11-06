@@ -83,6 +83,7 @@ Read with the path's P2: a self's regularity of its own is constancy up to the n
 | review | [REVIEW-OC5.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/oc-own-class/REVIEW-OC5.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T184601.050950Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T202201.956842Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `Constancy read at a member's class`, `于员之类之至终有常`, `Becoming.«本类至终有常»`, `Becoming.«二分本类常当且仅当内外皆随»`, `Becoming.«本类常当且仅当与己相随»`, `Becoming.«后皆续当且仅当后皆同类»`, `Becoming.«后皆续当且仅当自与线皆闭»`
 

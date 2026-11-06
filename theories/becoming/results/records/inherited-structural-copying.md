@@ -120,6 +120,7 @@ The previous actual ABAB fragment meets the new structural template input; this 
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/copying-instances-checks/20261020T161910.956874Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/copying-instances-checks/20261031T131950.855717Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `StructuralCopying.exact_reproduction_budget`, `Becoming.Copying.built_iff`, `Becoming.Copying.batch_all_iff`, `Becoming.CopyingInstances.reproduce_iff`, `Becoming.Copying.lineage_all_iff`, `Becoming.CopyingInstances.lineage_released_iff`, `Becoming.CopyingInstances.lineage_used_iff`, `Becoming.Courses.copy_built_iff`, `Becoming.Courses.release_course_iff`, `Becoming.Courses.lineage_course_iff`, `Becoming.Courses.every_released_iff_course`
 

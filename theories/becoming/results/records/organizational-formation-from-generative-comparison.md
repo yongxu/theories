@@ -107,6 +107,7 @@ One support history forms links, retains a basis and bears an opportunity loss; 
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/organization-correspondence-checks/20261031T133859.385075Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `Becoming.undominated_has_iff`, `Becoming.Judgment.required_of_bettered (retired module)`, `Becoming.Courses.extension_frontier_exists`, `Becoming.Requirement.required_of_bettered`, `Becoming.Requirement.frontier_exists`, `Becoming.Requirement.frontier_iff_undominated`, `Becoming.undominated_has`, `Becoming.Undominated`, `Becoming.Undominated.not_not_has`, `Becoming.undominated_has_iff_em`, `Becoming.OrganizationCorrespondence.frontier_iff_undominated`, `Becoming.OrganizationCorrespondence.formation_required_by_core`, `Becoming.OrganizationCorrespondence.coordination_is_required_by_core`
 

@@ -47,7 +47,7 @@
         "Becoming.BlanketWeights.CrossFormOn",
         "Becoming.BlanketWeights.crossFormOn_of_crossForm",
         "Becoming.BlanketWeights.crossForm_of_crossFormOn",
-        "Becoming.BlanketWeights.total_congr_mem",
+        "Becoming.total_congr_on",
         "Becoming.BlanketWeights.total_mul_total",
         "Becoming.BlanketWeights.factorsGiven_of_crossFormOn",
         "Becoming.BlanketWeights.whole_zero_entry",
@@ -417,11 +417,10 @@
         "Becoming.BlanketWeights.ratio_of_crossForm",
         "Becoming.BlanketWeights.restrict_independent_case",
         "Becoming.BlanketWeights.scaled_of_factorsGiven",
-        "Becoming.BlanketWeights.total_congr_mem",
         "Becoming.BlanketWeights.total_mul_total",
         "Becoming.BlanketWeights.whole_zero_entry"
       ],
-      "sha256": "76fcb823127786d740e9dc665e36dc48639416368527b5d1423f28cb6e16ad22"
+      "sha256": "ed9e07da46d399da575cf3a96f3c525103477cd7198cbb52647c0f71668c9bbf"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T183655.254131Z/verification.json",
@@ -473,13 +472,34 @@
       "role": "receipt",
       "sha256": "4331b95fd551f781d435b9a3ad5f05fb95cbdeb2f7ed119459297fe80639044a",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean",
+      "role": "proof",
+      "sha256": "852a5491313223e5de476027cd98408c196db67ac2c263d776dd28e6d050ac3c",
+      "declarations": [
+        "Becoming.total_congr_on"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "role": "receipt",
+      "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketWeights.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T062217.665179Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.BlanketWeights",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Population",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -488,6 +508,10 @@
     {
       "en": "1 November 2026: added (UE26), the principle's statistical blanket on the theory's conditioning: independence given the blanket as the cross form on listings listing each state once; detailed balance of the internal moves with positive weights, within one closure of moves present at every external state, each such move's rate ratio reading no external state, gives it, Kelly's proof at the internal site; witnesses on either side, a synchronous copy among them; after a review, a literature check, a recheck and a review of the landing texts, every finding taken; study section 484.",
       "zh": "2026年11月1日：新增（UE26），依理论之条件化之原理之统计之毯：予毯之独立即于每态列一次之列之交叉形式；权皆正，内部诸移于每一外部态皆在之移之一闭包内细致平衡，每移之率比不读外部态，则予之，即 Kelly 之证于内部之位；两侧之见证，同步复制在其中；经审查、文献核对、复核与落地文本之审查，凡所见皆取；研究第 484 节。"
+    },
+    {
+      "en": "6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.",
+      "zh": "2026年11月6日，工作板条目 LM：此记录所列辅助引理现只陈述一次，在 Prelude、Flow、Change 或 Laws，或即 Lean 自有者而从列表除去；改其名，诸律不变。"
     }
   ]
 }
