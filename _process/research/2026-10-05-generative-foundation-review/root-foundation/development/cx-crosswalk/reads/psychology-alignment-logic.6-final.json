@@ -713,7 +713,7 @@
    "relation": "scope",
    "agreement_of": null,
    "reading": {
-    "en": "The source's law is general; the account says where: with room, at optima, and without room keeping can be an optimum. It credits the paper whole but states one form, nearest extremal, with shared units in place of correlation and no goal assumed. No law I found selects on a noisy proxy, and an intervention is stated only as a move not taken, so regressional and causal are not reached. A-08's gloss, a measure keeping its standing after it stops measuring, is T7's claim: as I recall them the sources state collapse and corruption, not persistence. [AI reading]"
+    "en": "The source's law is general; the account says where: with room, at optima, and without room keeping can be an optimum. It credits the paper whole but states one form, nearest extremal, with shared units in place of correlation and no goal assumed. No law I found selects on a noisy proxy, and an intervention is stated only as a move not taken, so regressional and causal are not reached. A-08 glossed them, until 7 November 2026, as a measure keeping its standing after it stops measuring, which is T7's claim: as I recall them the sources state collapse and corruption, not persistence, and A-08 now says so. [AI reading]"
    },
    "targets": [
     {
@@ -735,7 +735,7 @@
     {
      "anchor": "theories/becoming/chapters/08-METHOD.md#theses",
      "says": {
-      "en": "Row on Zhuang and Hadfield-Menell's Theorem 1: overshoot, externality and Goodhart's law as one law of the optimum under room; the optimum law proved; across domains conjectured (T3), supported in simulation (MQ1; dossier A: for exact best responses, and failed for tabular learners, 80 of 151); their continuous setting and the improvement of a principal's utility not reached."
+      "en": "Row on Zhuang and Hadfield-Menell's Theorem 1: overshoot, externality and Goodhart's law as one law of the optimum under room; the optimum law proved; across domains conjectured (T3); in simulation the draw against margin forecast an exact best response's side effects (8 of 8) and failed for tabular learners (80 of 151; MQ1); their continuous setting and the improvement of a principal's utility not reached."
      },
      "role": "limit",
      "part": "the row on Zhuang and Hadfield-Menell's Theorem 1"
@@ -751,7 +751,7 @@
     {
      "anchor": "theories/becoming/review/ALIGNMENT.md#a-08",
      "says": {
-      "en": "[this dossier, AI] Goodhart's and Campbell's laws (Manheim and Garrabrant 2018; Campbell 1979) describe informally a measure that keeps its standing after it stops measuring. T7 states that as a conjecture about a lock."
+      "en": "[this dossier, AI] Goodhart's and Campbell's laws (Goodhart 1975; Campbell 1979; Manheim and Garrabrant 2018) describe informally a measure that stops measuring once it is used as a target or for decisions; that the measure is then kept is the record's addition, and T7 states that it outlives its refutation as a conjecture about a lock."
      },
      "role": "neighbour"
     }
@@ -1270,7 +1270,7 @@
      "record": "revision-with-an-undecided-value",
      "anchor": "theories/becoming/chapters/03-KNOWING.md#r-revision-with-an-undecided-value",
      "says": {
-      "en": "Theorem (labelled any type, on finitely many sentences closed among themselves; L-27 notes no type parameter occurs). No map monotone in information moves every value, so the gap needs a map deciding the undecided, and a family within what it reads stays incomplete with three values. Undecided is what revision has not decided, not a third truth."
+      "en": "Theorem (Kleene's three-valued sentences, a named model, finitely many closed among themselves; labelled any type until 7 November 2026, as L-27 noted). No map monotone in information moves every value, so the gap needs a map deciding the undecided, and a family within what it reads stays incomplete with three values. Undecided is what revision has not decided, not a third truth."
      },
      "role": "neighbour"
     },
@@ -1468,7 +1468,7 @@
     {
      "anchor": "theories/becoming/review/LOGIC.md#l-29",
      "says": {
-      "en": "[this dossier, AI] 08's gloss of the double-negation row, 'reach without a path', misdescribes the law: its conclusion is reach, which carries a path; what needs the principle is the step from the absence of an invariant separation to such a path."
+      "en": "[this dossier, AI] 08's gloss of the double-negation row read 'reach without a path' until 7 November 2026, which misdescribed the law: its conclusion is reach, which carries a path; what needs the principle is the step from the absence of an invariant separation to such a path. 08 now says so."
      },
      "role": "limit"
     }
@@ -1486,7 +1486,23 @@
    ]
   }
  ],
- "changes": [],
+ "changes": [
+  {
+   "id": "cx-pal-goodhart-taxonomy",
+   "what": "changed",
+   "why": "a correction this crosswalk made at the home: the entry quotes what the home says now, or says what it said until 7 November 2026"
+  },
+  {
+   "id": "cx-pal-lawvere-diagonal",
+   "what": "changed",
+   "why": "a correction this crosswalk made at the home: the entry quotes what the home says now, or says what it said until 7 November 2026"
+  },
+  {
+   "id": "cx-pal-constructive-calibrations",
+   "what": "changed",
+   "why": "a correction this crosswalk made at the home: the entry quotes what the home says now, or says what it said until 7 November 2026"
+  }
+ ],
  "live_flags": [
   {
    "where": "theories/becoming/chapters/08-METHOD.md:329",

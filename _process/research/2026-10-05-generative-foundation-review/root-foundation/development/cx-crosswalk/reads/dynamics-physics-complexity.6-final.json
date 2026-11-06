@@ -1707,7 +1707,7 @@
      "record": "support-from-the-supported",
      "anchor": "theories/becoming/results/records/support-from-the-supported.md",
      "says": {
-      "en": "Correspondence: Ren said that 'not harm' is 'a phase transition with a clear boundary'; the two earlier phase results and this absorbing end are its three forms under this reading. The reading and the names are the AI's."
+      "en": "Correspondence: Ren said that 'not harm' is 'a phase transition with a clear boundary'; the two earlier boundary results and this absorbing end are its three forms under this reading, boundaries and none a proved phase transition. The reading and the names are the AI's."
      },
      "role": "neighbour"
     }
@@ -1926,7 +1926,7 @@
      "record": "recurrence-without-premise",
      "anchor": "theories/becoming/chapters/01-ROOT.md#r-recurrence-without-premise",
      "says": {
-      "en": "Theorem (any type): within finitely many configurations, a list holding every one, a determined law merges nothing exactly where every configuration returns; a quantity that never falls along an orbit and rises at some step of it rules out a law that merges nothing. Correspondence, the AI's: 'the low-entropy beginning physics supplies is the beginning of the kept history, and is derived'. 'These readings are not physical derivations.'"
+      "en": "Theorem (any type): within finitely many configurations, a list holding every one, a determined law merges nothing exactly where every configuration returns; a quantity that never falls along an orbit and rises at some step of it rules out a law that merges nothing. Correspondence, the AI's: 'the low-entropy beginning physics supplies reads as the beginning of the kept history', while a coarse-grained entropy rising from an ordered start needs a premise about the start and is not stated. 'These readings are not physical derivations.'"
      },
      "role": "carries"
     },
@@ -2079,7 +2079,18 @@
    ]
   }
  ],
- "changes": [],
+ "changes": [
+  {
+   "id": "cx-dpc-phase-transition",
+   "what": "changed",
+   "why": "a correction this crosswalk made at the home: the entry quotes what the home says now, or says what it said until 7 November 2026"
+  },
+  {
+   "id": "cx-dpc-entropy-arrow",
+   "what": "changed",
+   "why": "a correction this crosswalk made at the home: the entry quotes what the home says now, or says what it said until 7 November 2026"
+  }
+ ],
  "live_flags": [
   {
    "where": "theories/becoming/results/records/support-from-the-supported.md (correspondence)",

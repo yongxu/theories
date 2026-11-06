@@ -2524,7 +2524,7 @@
     {
      "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#alignment-without-premise",
      "says": {
-      "en": "Reading [AI reading, D68]: a counter-rule read from its share locks as the rule it replaced did, as the imperial examination is read: designed to dilute hereditary capture, it later became a proxy trap of its own."
+      "en": "Reading [AI reading, D68]: a counter-rule read from its share locks as the rule it replaced did, as the reading counts the imperial examination: designed to dilute hereditary capture, it later became a proxy trap of its own, the meta-attractor line says, and its fit to these premises is read, not tested."
      },
      "role": "carries",
      "part": "D68: the counter-rule"
@@ -3422,6 +3422,11 @@
    "id": "cx-wamo-coordination-bottleneck",
    "what": "changed",
    "why": "second critic (label): The fork paragraph and claims 11-12 match, and COLLECTIVE-DIRECTION's answer and D45 carry changed/scope; 08's sentence states the work's own purpose, not what decides a collective's fork, so its role is neighbour, not carries. The limit's quote 'No institution is modelled on the spine' is no longer in the live §5, which now has one minimal institution model on the root; the fix copies the live sentence."
+  },
+  {
+   "id": "cx-wamo-we-are-not-them",
+   "what": "changed",
+   "why": "a correction this crosswalk made at the home: the entry quotes what the home says now, or says what it said until 7 November 2026"
   }
  ],
  "live_flags": []

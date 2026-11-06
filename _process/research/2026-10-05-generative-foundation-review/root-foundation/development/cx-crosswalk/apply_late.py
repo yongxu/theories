@@ -4,7 +4,7 @@
 usage: python3 -B apply_late.py [--dry-run]
 
 Reads reads/<item>.5-compare.json, applies every `fix` in reads/critic2-share-*.json (the second critic read both sides of
-each), then replaces in entries what the live account no longer says since this crosswalk's corrections (LIVE_NOW below),
+each), then replaces in entries what the live account no longer says since this crosswalk's corrections (LIVE_NOW and LIVE_LATER below),
 and writes reads/<item>.6-final.json, each with a `changes` list naming why. Stops on a fix to an unknown entry or field,
 on a replacement that matches nothing, and writes nothing then. Validation is check_entries.py's.
 """
@@ -28,6 +28,82 @@ LIVE_NOW = {
     'cx-zhishan-present-diagnosis': [('no institution is modelled on the spine,', 'no actual institution is shown to meet the hypotheses of the one minimal model of an institution,'),
                                      ('No institution is modelled on the spine; no field test', f'{CD5}; no field test')],
 }
+# The other corrections this crosswalk made at home (apply_corrections.py), found quoted in their old wording by a search of
+# every entry for each correction's removed words; each entry now quotes what its home says, or says what it said until when.
+WHY_LATER = 'a correction this crosswalk made at the home: the entry quotes what the home says now, or says what it said until 7 November 2026'
+A08 = ("Goodhart's and Campbell's laws (Goodhart 1975; Campbell 1979; Manheim and Garrabrant 2018) describe informally a measure that "
+       "stops measuring once it is used as a target or for decisions; that the measure is then kept is the record's addition, and T7 "
+       "states that it outlives its refutation as a conjecture about a lock.")
+A08_OLD = ("Goodhart's and Campbell's laws (Manheim and Garrabrant 2018; Campbell 1979) describe informally a measure that keeps its "
+           "standing after it stops measuring. T7 states that as a conjecture about a lock.")
+POWER = ("the corpus's meta-attractor in its account of power is the closed loop:",
+         "the closed loop is one part of the corpus's meta-attractor in its account of power, which also speaks of carriers, domains and correction:")
+GLOSS = ('that sense is wider, and the formal', 'that sense is another, neither shown to contain the other: the formal')
+WORKING = ("the corpus's working definition is wider.", "the corpus's working definition is another, not shown to contain closed capture or to be contained by it.")
+IMP = 'the reading counts the imperial examination as this case, its fit to these premises read, not tested'
+MQ1 = "across domains conjectured (T3); in simulation the draw against margin forecast an exact best response's side effects (8 of 8) and failed for tabular learners (80 of 151; MQ1)"
+LIVE_LATER = {
+    'cx-econ-campbell-corruption': [(A08_OLD, A08)],
+    'cx-pal-goodhart-taxonomy': [(A08_OLD, A08),
+        ("A-08's gloss, a measure keeping its standing after it stops measuring, is T7's claim: as I recall them the sources state collapse and corruption, not persistence.",
+         "A-08 glossed them, until 7 November 2026, as a measure keeping its standing after it stops measuring, which is T7's claim: as I recall them the sources state collapse and corruption, not persistence, and A-08 now says so."),
+        ("across domains conjectured (T3), supported in simulation (MQ1; dossier A: for exact best responses, and failed for tabular learners, 80 of 151);", MQ1 + ';')],
+    'cx-ma-rule-loop': [POWER],
+    'cx-sspiral-winner-justifies-all': [POWER,
+        ("'the metric survives its own refutation' is lock_outlives_loss.",
+         "'the metric survives its own refutation' is read as lock_outlives_loss, the refutation as a loss the loop does not read.")],
+    'cx-ma-metric-survives-refutation': [
+        ('refutation\\" is `lock_outlives_loss`.', 'refutation" is read as `lock_outlives_loss`, the refutation as a loss the loop does not read (evidence and refutation are unformalized).'),
+        ("02 reads the source's phrase directly as `lock_outlives_loss`, a reading.",
+         "02 reads the source's phrase as `lock_outlives_loss`, the refutation as a loss the loop does not read, a reading.")],
+    'cx-drives-attractor-geometry': [GLOSS],
+    'cx-zhishan-totalizing-attractor': [('that sense is wider, and the formal term', 'that sense is another, neither shown to contain the other: the formal term'), WORKING],
+    'cx-oi-karma-across-carriers': [GLOSS],
+    'cx-modphil-marx-capital-self-valorizing': [GLOSS],
+    'cx-ma-wide-regime-across-carriers': [WORKING],
+    'cx-ma-the-word': [('that sense is wider, the formal', 'that sense is another, neither shown to contain the other: the formal')],
+    'cx-sspiral-attractor-no-subject': [('that sense is wider, the formal', 'that sense is another, neither shown to contain the other: the formal')],
+    'cx-modphil-marx-reproduces-the-relation': [("is not the formal term: 'that sense is wider'.", "is not the formal term: 'that sense is another, neither shown to contain the other'.")],
+    'cx-asc-token-same-shape': [('The imperial examination is read as this case.', 'The reading counts the imperial examination as this case, its fit to these premises read, not tested.')],
+    'cx-drives-virtue-does-not-self-install': [('the imperial examination is this case, as read in the meta-attractor line.', IMP + '.')],
+    'cx-drives-confucian-engineering': [('the imperial examination is this case, as read in the meta-attractor line: designed to dilute hereditary capture, it later became a proxy trap.',
+        'the reading counts the imperial examination as this case; the meta-attractor line says that, designed to dilute hereditary capture, it later became a proxy trap, and its fit to these premises is read, not tested.')],
+    'cx-ma-anti-attractor': [('The imperial examination is this case, as read in the meta-attractor line', 'The reading counts the imperial examination as this case, a counter-rule whose rule came to be read from the share it selected')],
+    'cx-wamo-we-are-not-them': [('as the imperial examination is read: designed to dilute hereditary capture, it later became a proxy trap of its own.',
+        'as the reading counts the imperial examination: designed to dilute hereditary capture, it later became a proxy trap of its own, the meta-attractor line says, and its fit to these premises is read, not tested.')],
+    'cx-zhishan-criticism-absorbed': [('the imperial examination is this case, as read in the meta-attractor line.', IMP + '.')],
+    'cx-cc-huang-xuexiao': [('The imperial examination is this case, as read in the meta-attractor line: designed to dilute hereditary capture, it later became a proxy trap of its own.',
+        'The reading counts the imperial examination as this case; the meta-attractor line says that, designed to dilute hereditary capture, it later became a proxy trap of its own, and its fit to these premises is read, not tested.')],
+    'cx-memories-verification-instrumental': [('across domains conjectured (T3), supported in simulation.', MQ1 + '.')],
+    'cx-ma-vs-goodhart-and-lock-in': [('across domains conjectured (T3), supported in simulation (MQ1);', MQ1 + ';')],
+    'cx-econ-goodhart-regularity': [
+        ('across domains conjectured (T3), supported in simulation (MQ1)', MQ1),
+        ("08's 'supported in simulation (MQ1)' omits the failure, so I add it here.",
+         "08 said 'supported in simulation (MQ1)', omitting the failure, until 7 November 2026; it now states both."),
+        ("'Goodhart (1975) says a measure made a target stops measuring; this states",
+         "'Goodhart (1975) says a statistical regularity tends to collapse once pressure is put on it for control, which Strathern (1997) put as a measure made a target ceasing to be a good measure; this states")],
+    'cx-pal-lawvere-diagonal': [('Theorem (labelled any type, on finitely many sentences closed among themselves; L-27 notes no type parameter occurs).',
+        "Theorem (Kleene's three-valued sentences, a named model, finitely many closed among themselves; labelled any type until 7 November 2026, as L-27 noted).")],
+    'cx-dpc-phase-transition': [('the two earlier phase results and this absorbing end are its three forms under this reading.',
+        'the two earlier boundary results and this absorbing end are its three forms under this reading, boundaries and none a proved phase transition.')],
+    'cx-dpc-entropy-arrow': [("'the low-entropy beginning physics supplies is the beginning of the kept history, and is derived'.",
+        "'the low-entropy beginning physics supplies reads as the beginning of the kept history', while a coarse-grained entropy rising from an ordered start needs a premise about the start and is not stated.")],
+    'cx-ecoevo-recovery-beyond-removing-the-pressure': [('Correspondence: hysteresis of collapse.',
+        "Correspondence: a collapse that support's return does not undo, one-sided only: hysteresis's distinct collapse and recovery thresholds are not stated.")],
+    'cx-ecoevo-metapopulations': [("The record's gloss, patches 'persist or go extinct together', fits this law and not Levins, whose patches end apart.",
+        "The record's gloss read patches as persisting or going extinct together, which fits this law and not Levins, whose patches end apart; since 7 November 2026 the record says they go extinct apart and are recolonized.")],
+    'cx-modphil-jonas-imperative': [("'Jonas (1979): the existence of the whole is never to be staked;", "'Jonas (1979): the existence of humanity as a whole is never to be staked;"),
+        ("The record's 'the existence of the whole' is wider than his human object.",
+         "The record said 'the existence of the whole', wider than his human object, until 7 November 2026; it now says humanity as a whole.")],
+    'cx-pal-constructive-calibrations': [("08's gloss of the double-negation row, 'reach without a path', misdescribes the law: its conclusion is reach, which carries a path; what needs the principle is the step from the absence of an invariant separation to such a path.",
+        "08's gloss of the double-negation row read 'reach without a path' until 7 November 2026, which misdescribed the law: its conclusion is reach, which carries a path; what needs the principle is the step from the absence of an invariant separation to such a path. 08 now says so.")],
+}
+# Words the corrections removed at home; no entry may still state them as what the home says.
+GONE = ['keeps its standing after it stops measuring. T7', 'account of power is the closed loop', 'that sense is wider',
+        'working definition is wider', 'imperial examination is this case', 'imperial examination is read', 'supported in simulation (MQ1;',
+        'conjectured (T3), supported in simulation', 'says a measure made a target stops measuring', 'two earlier phase results',
+        'supplies is the beginning of the kept history', 'Correspondence: hysteresis of collapse', "Jonas (1979): the existence of the whole",
+        'labelled any type, on finitely many', "refutation\\\" is `lock_outlives_loss`", "refutation' is lock_outlives_loss"]
 
 
 def main(argv=None):
@@ -60,7 +136,18 @@ def main(argv=None):
         entries[id_].clear()
         entries[id_].update(json.loads(text))
         why.setdefault(id_, []).append('COLLECTIVE-DIRECTION §5 corrected by this crosswalk: the entry quotes what it says now')
+    for id_, pairs in LIVE_LATER.items():
+        text = json.dumps(entries[id_], ensure_ascii=False)
+        for old, new in pairs:
+            if old not in text:
+                problems.append(f'{id_}: {old[:60]!r} not found')
+                continue
+            text = text.replace(old, json.dumps(new, ensure_ascii=False)[1:-1])
+        entries[id_].clear()
+        entries[id_].update(json.loads(text))
+        why.setdefault(id_, []).append(WHY_LATER)
     stale = [i for i, e in entries.items() if 'institution is modelled' in json.dumps(e, ensure_ascii=False)]
+    problems += [f'{i}: still states {g!r}' for i, e in entries.items() for g in GONE if g in json.dumps(e, ensure_ascii=False)]
     problems += [f'{i}: still quotes the old CD §5 sentence' for i in stale]
     if problems:
         print('\n'.join(problems))

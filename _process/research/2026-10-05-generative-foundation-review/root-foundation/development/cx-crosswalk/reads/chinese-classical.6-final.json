@@ -399,7 +399,7 @@
     {
      "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#alignment-without-premise",
      "says": {
-      "en": "Reading [AI reading, D68]: a counter-rule read monotonically from its share can lock as the rule it replaced did. The imperial examination is this case, as read in the meta-attractor line: designed to dilute hereditary capture, it later became a proxy trap of its own. It rests on the capture laws."
+      "en": "Reading [AI reading, D68]: a counter-rule read monotonically from its share can lock as the rule it replaced did. The reading counts the imperial examination as this case; the meta-attractor line says that, designed to dilute hereditary capture, it later became a proxy trap of its own, and its fit to these premises is read, not tested. It rests on the capture laws."
      },
      "part": "D68: the counter-rule",
      "role": "neighbour"
@@ -1022,7 +1022,13 @@
    ]
   }
  ],
- "changes": [],
+ "changes": [
+  {
+   "id": "cx-cc-huang-xuexiao",
+   "what": "changed",
+   "why": "a correction this crosswalk made at the home: the entry quotes what the home says now, or says what it said until 7 November 2026"
+  }
+ ],
  "live_flags": [
   {
    "where": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md:645",

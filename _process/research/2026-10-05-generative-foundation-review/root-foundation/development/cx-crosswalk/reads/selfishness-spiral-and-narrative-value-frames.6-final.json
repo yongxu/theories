@@ -388,7 +388,7 @@
      "anchor": "GLOSSARY.md#the-map",
      "role": "limit",
      "says": {
-      "en": "Meta-attractor: closed capture. It never means the corpus's working definition, a recurrent organization of activity reproducing the conditions selecting it across changes in its carriers: that sense is wider, the formal 元吸引子 says nothing of carriers, and whether a capture loop is 生成 at some pair of classes stays Open."
+      "en": "Meta-attractor: closed capture. It never means the corpus's working definition, a recurrent organization of activity reproducing the conditions selecting it across changes in its carriers: that sense is another, neither shown to contain the other: the formal 元吸引子 says nothing of carriers, and whether a capture loop is 生成 at some pair of classes stays Open."
      }
     },
     {
@@ -1784,7 +1784,7 @@
      "role": "carries",
      "part": "Reading D26 as revised",
      "says": {
-      "en": "Reading [AI, D26 as revised]: the corpus's meta-attractor in its account of power is the closed loop: winners writing the next scorecard is ReadsShare, winners forming the minds that read it is ReadsShare on the reading, and 'the metric survives its own refutation' is lock_outlives_loss."
+      "en": "Reading [AI, D26 as revised]: the closed loop is one part of the corpus's meta-attractor in its account of power, which also speaks of carriers, domains and correction: winners writing the next scorecard is ReadsShare, winners forming the minds that read it is ReadsShare on the reading, and 'the metric survives its own refutation' is read as lock_outlives_loss, the refutation as a loss the loop does not read."
      }
     },
     {
@@ -3505,7 +3505,18 @@
    ]
   }
  ],
- "changes": [],
+ "changes": [
+  {
+   "id": "cx-sspiral-attractor-no-subject",
+   "what": "changed",
+   "why": "a correction this crosswalk made at the home: the entry quotes what the home says now, or says what it said until 7 November 2026"
+  },
+  {
+   "id": "cx-sspiral-winner-justifies-all",
+   "what": "changed",
+   "why": "a correction this crosswalk made at the home: the entry quotes what the home says now, or says what it said until 7 November 2026"
+  }
+ ],
  "live_flags": [
   {
    "where": "theories/becoming/chapters/02-MAP.md:438",

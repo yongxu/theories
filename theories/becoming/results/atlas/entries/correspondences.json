@@ -115,7 +115,7 @@
    {
     "anchor": "theories/becoming/review/ALIGNMENT.md#a-13",
     "says": {
-     "en": "Reading [AI reading, D68], no law added: a counter-rule read monotonically from its share, where every rule it reads favours its carriers, locks as the rule it replaced did; favouring only above a threshold, a change across it leaves; from a start against its reading it may never lock. The imperial examination is read as this case."
+     "en": "Reading [AI reading, D68], no law added: a counter-rule read monotonically from its share, where every rule it reads favours its carriers, locks as the rule it replaced did; favouring only above a threshold, a change across it leaves; from a start against its reading it may never lock. The reading counts the imperial examination as this case, its fit to these premises read, not tested."
     },
     "role": "carries",
     "part": "D68"
@@ -10875,7 +10875,7 @@
    {
     "anchor": "GLOSSARY.md",
     "says": {
-     "en": "meta-attractor (元吸引子): closed capture. It never means the corpus's working definition, a recurrent organization of activity reproducing the conditions selecting it across changes in its carriers: that sense is wider, and the formal 元吸引子 says nothing of carriers."
+     "en": "meta-attractor (元吸引子): closed capture. It never means the corpus's working definition, a recurrent organization of activity reproducing the conditions selecting it across changes in its carriers: that sense is another, neither shown to contain the other: the formal 元吸引子 says nothing of carriers."
     },
     "role": "neighbour"
    }
@@ -11661,7 +11661,7 @@
    {
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#alignment-without-premise",
     "says": {
-     "en": "Reading [AI reading, D68]: a counter-rule read monotonically from the share it selects locks as the rule it replaced did, and only a change of law, such as reading what lies beyond its share, leaves the lock for long; the imperial examination is this case, as read in the meta-attractor line. From a start against its reading it may never lock. It rests on the capture laws."
+     "en": "Reading [AI reading, D68]: a counter-rule read monotonically from the share it selects locks as the rule it replaced did, and only a change of law, such as reading what lies beyond its share, leaves the lock for long; the reading counts the imperial examination as this case, its fit to these premises read, not tested. From a start against its reading it may never lock. It rests on the capture laws."
     },
     "role": "carries",
     "part": "D68: the counter-rule"
@@ -13315,7 +13315,7 @@
    {
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#alignment-without-premise",
     "says": {
-     "en": "Reading [AI reading, D68] in §6: a counter-rule read monotonically from the share it selects locks as the rule it replaced did; the imperial examination is this case, as read in the meta-attractor line: designed to dilute hereditary capture, it later became a proxy trap."
+     "en": "Reading [AI reading, D68] in §6: a counter-rule read monotonically from the share it selects locks as the rule it replaced did; the reading counts the imperial examination as this case; the meta-attractor line says that, designed to dilute hereditary capture, it later became a proxy trap, and its fit to these premises is read, not tested."
     },
     "role": "neighbour",
     "part": "D68: the counter-rule"
@@ -29039,7 +29039,7 @@
    {
     "anchor": "theories/becoming/chapters/08-METHOD.md#what-the-unifications-claim",
     "says": {
-     "en": "Overshoot, externality and Goodhart's law as one law of the optimum under room: the optimum law proved; across domains conjectured (T3), supported in simulation."
+     "en": "Overshoot, externality and Goodhart's law as one law of the optimum under room: the optimum law proved; across domains conjectured (T3); in simulation the draw against margin forecast an exact best response's side effects (8 of 8) and failed for tabular learners (80 of 151; MQ1)."
     },
     "role": "neighbour",
     "part": "the optimum's row"
@@ -30448,7 +30448,7 @@
     "record": null,
     "anchor": "GLOSSARY.md",
     "says": {
-     "en": "Meta-attractor: closed capture. \"It never means the corpus's working definition\"; that sense is wider, the formal 元吸引子 says nothing of carriers, and whether a capture loop is 生成 at some pair of classes stays Open."
+     "en": "Meta-attractor: closed capture. \"It never means the corpus's working definition\"; that sense is another, neither shown to contain the other: the formal 元吸引子 says nothing of carriers, and whether a capture loop is 生成 at some pair of classes stays Open."
     },
     "role": "carries"
    },
@@ -30548,7 +30548,7 @@
     "record": null,
     "anchor": "theories/becoming/chapters/02-MAP.md#capture",
     "says": {
-     "en": "Reading [AI reading, D65]: the corpus's working definition is wider. Continuation across carriers is the map's 传; the formal 元吸引子 says nothing of carriers, so whether a capture loop is 生成 at some pair of classes stays Open."
+     "en": "Reading [AI reading, D65]: the corpus's working definition is another, not shown to contain closed capture or to be contained by it. Continuation across carriers is the map's 传; the formal 元吸引子 says nothing of carriers, so whether a capture loop is 生成 at some pair of classes stays Open."
     },
     "role": "carries",
     "part": "D65, the corpus's working definition"
@@ -30616,7 +30616,7 @@
     "record": null,
     "anchor": "theories/becoming/chapters/02-MAP.md#capture",
     "says": {
-     "en": "Reading [AI reading, D26 as revised]: the corpus's meta-attractor in its account of power is the closed loop: winners writing the next scorecard is `ReadsShare`. That readers are minds is a reading."
+     "en": "Reading [AI reading, D26 as revised]: the closed loop is one part of the corpus's meta-attractor in its account of power, which also speaks of carriers, domains and correction: winners writing the next scorecard is `ReadsShare`. That readers are minds is a reading."
     },
     "role": "carries",
     "part": "D26"
@@ -30803,7 +30803,7 @@
   "relation": "scope",
   "agreement_of": null,
   "reading": {
-   "en": "02 reads the source's phrase directly as `lock_outlives_loss`, a reading. Proved: the lock outlives a coordinate the loop does not read, without noise. That actual metrics are so formed is thesis T7, conjectured, no field test. Noise leaves the critical mass's locks. In one trained judge the lock formed and the bridge failed: one note of the loss turned its reading. Calling the unread coordinate a loss is a reading; evidence and refutation are unformalized. [AI reading]"
+   "en": "02 reads the source's phrase as `lock_outlives_loss`, the refutation as a loss the loop does not read, a reading. Proved: the lock outlives a coordinate the loop does not read, without noise. That actual metrics are so formed is thesis T7, conjectured, no field test. Noise leaves the critical mass's locks. In one trained judge the lock formed and the bridge failed: one note of the loss turned its reading. Calling the unread coordinate a loss is a reading; evidence and refutation are unformalized. [AI reading]"
   },
   "targets": [
    {
@@ -30827,7 +30827,7 @@
     "record": null,
     "anchor": "theories/becoming/chapters/02-MAP.md#capture",
     "says": {
-     "en": "Reading [AI reading, D26 as revised]: \"the metric survives its own refutation\" is `lock_outlives_loss`."
+     "en": "Reading [AI reading, D26 as revised]: \"the metric survives its own refutation\" is read as `lock_outlives_loss`, the refutation as a loss the loop does not read (evidence and refutation are unformalized)."
     },
     "role": "carries",
     "part": "D26"
@@ -31647,7 +31647,7 @@
     "record": null,
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#alignment-without-premise",
     "says": {
-     "en": "Reading [AI reading, D68]: a counter-rule read monotonically from its share, where every rule it reads favours its carriers, locks by the step after its second reading step. \"The imperial examination is this case, as read in the meta-attractor line\". It rests on the capture laws, not the law of shaping."
+     "en": "Reading [AI reading, D68]: a counter-rule read monotonically from its share, where every rule it reads favours its carriers, locks by the step after its second reading step. \"The reading counts the imperial examination as this case, a counter-rule whose rule came to be read from the share it selected\". It rests on the capture laws, not the law of shaping."
     },
     "role": "carries",
     "part": "D68: the counter-rule"
@@ -33398,7 +33398,7 @@
     "record": null,
     "anchor": "theories/becoming/chapters/08-METHOD.md#what-the-unifications-claim",
     "says": {
-     "en": "Overshoot, externality and Goodhart's law as one law of the optimum under room: the optimum law proved, across domains conjectured (T3), supported in simulation (MQ1); a unification adds no theorem."
+     "en": "Overshoot, externality and Goodhart's law as one law of the optimum under room: the optimum law proved, across domains conjectured (T3); in simulation the draw against margin forecast an exact best response's side effects (8 of 8) and failed for tabular learners (80 of 151; MQ1); a unification adds no theorem."
     },
     "role": "carries"
    },
@@ -39724,7 +39724,7 @@
     "anchor": "GLOSSARY.md#the-map",
     "role": "limit",
     "says": {
-     "en": "Meta-attractor: closed capture. It never means the corpus's working definition, a recurrent organization of activity reproducing the conditions selecting it across changes in its carriers: that sense is wider, the formal 元吸引子 says nothing of carriers, and whether a capture loop is 生成 at some pair of classes stays Open."
+     "en": "Meta-attractor: closed capture. It never means the corpus's working definition, a recurrent organization of activity reproducing the conditions selecting it across changes in its carriers: that sense is another, neither shown to contain the other: the formal 元吸引子 says nothing of carriers, and whether a capture loop is 生成 at some pair of classes stays Open."
     }
    },
    {
@@ -41253,7 +41253,7 @@
     "role": "carries",
     "part": "Reading D26 as revised",
     "says": {
-     "en": "Reading [AI, D26 as revised]: the corpus's meta-attractor in its account of power is the closed loop: winners writing the next scorecard is ReadsShare, winners forming the minds that read it is ReadsShare on the reading, and 'the metric survives its own refutation' is lock_outlives_loss."
+     "en": "Reading [AI, D26 as revised]: the closed loop is one part of the corpus's meta-attractor in its account of power, which also speaks of carriers, domains and correction: winners writing the next scorecard is ReadsShare, winners forming the minds that read it is ReadsShare on the reading, and 'the metric survives its own refutation' is read as lock_outlives_loss, the refutation as a loss the loop does not read."
     }
    },
    {
@@ -51697,7 +51697,7 @@
    {
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#alignment-without-premise",
     "says": {
-     "en": "Reading [AI reading, D68]: a counter-rule read from its share locks as the rule it replaced did, as the imperial examination is read: designed to dilute hereditary capture, it later became a proxy trap of its own."
+     "en": "Reading [AI reading, D68]: a counter-rule read from its share locks as the rule it replaced did, as the reading counts the imperial examination: designed to dilute hereditary capture, it later became a proxy trap of its own, the meta-attractor line says, and its fit to these premises is read, not tested."
     },
     "role": "carries",
     "part": "D68: the counter-rule"
@@ -53121,7 +53121,7 @@
    {
     "anchor": "GLOSSARY.md#the-map",
     "says": {
-     "en": "Meta-attractor: closed capture. It never means the corpus's working definition, a recurrent organization of activity reproducing the conditions selecting it across changes in carriers: that sense is wider, and the formal term says nothing of carriers, so whether a capture loop is 生成 at some pair of classes stays Open."
+     "en": "Meta-attractor: closed capture. It never means the corpus's working definition, a recurrent organization of activity reproducing the conditions selecting it across changes in carriers: that sense is another, neither shown to contain the other: the formal term says nothing of carriers, so whether a capture loop is 生成 at some pair of classes stays Open."
     },
     "role": "carries"
    },
@@ -53136,7 +53136,7 @@
    {
     "anchor": "theories/becoming/chapters/02-MAP.md#capture",
     "says": {
-     "en": "Reading [AI reading, D65]: the corpus's working definition is wider. Calibration to the present world is not established."
+     "en": "Reading [AI reading, D65]: the corpus's working definition is another, not shown to contain closed capture or to be contained by it. Calibration to the present world is not established."
     },
     "role": "limit",
     "part": "D65, the working definition"
@@ -53435,7 +53435,7 @@
    {
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#alignment-without-premise",
     "says": {
-     "en": "Reading [AI reading, D68]: a counter-rule read monotonically from the share it selects locks as the rule it replaced did; the imperial examination is this case, as read in the meta-attractor line."
+     "en": "Reading [AI reading, D68]: a counter-rule read monotonically from the share it selects locks as the rule it replaced did; the reading counts the imperial examination as this case, its fit to these premises read, not tested."
     },
     "role": "neighbour",
     "part": "D68: the counter-rule"
@@ -57799,7 +57799,7 @@
    {
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#alignment-without-premise",
     "says": {
-     "en": "Reading [AI reading, D68]: a counter-rule read monotonically from its share can lock as the rule it replaced did. The imperial examination is this case, as read in the meta-attractor line: designed to dilute hereditary capture, it later became a proxy trap of its own. It rests on the capture laws."
+     "en": "Reading [AI reading, D68]: a counter-rule read monotonically from its share can lock as the rule it replaced did. The reading counts the imperial examination as this case; the meta-attractor line says that, designed to dilute hereditary capture, it later became a proxy trap of its own, and its fit to these premises is read, not tested. It rests on the capture laws."
     },
     "part": "D68: the counter-rule",
     "role": "neighbour"
@@ -59759,7 +59759,7 @@
     "record": null,
     "anchor": "GLOSSARY.md",
     "says": {
-     "en": "Meta-attractor: closed capture. It never means the corpus's working definition, a recurrent organization reproducing the conditions selecting it across changes in its carriers: that sense is wider, and the formal 元吸引子 says nothing of carriers."
+     "en": "Meta-attractor: closed capture. It never means the corpus's working definition, a recurrent organization reproducing the conditions selecting it across changes in its carriers: that sense is another, neither shown to contain the other: the formal 元吸引子 says nothing of carriers."
     },
     "role": "neighbour",
     "part": "meta-attractor"
@@ -68805,7 +68805,7 @@
    {
     "anchor": "GLOSSARY.md",
     "says": {
-     "en": "Meta-attractor: closed capture; 'It never means the corpus's working definition, a recurrent organization of activity whose consequences help reproduce the conditions selecting that organization across changes in its particular carriers: that sense is wider, and the formal 元吸引子 says nothing of carriers'."
+     "en": "Meta-attractor: closed capture; 'It never means the corpus's working definition, a recurrent organization of activity whose consequences help reproduce the conditions selecting that organization across changes in its particular carriers: that sense is another, neither shown to contain the other: the formal 元吸引子 says nothing of carriers'."
     },
     "role": "carries",
     "part": "the meta-attractor row"
@@ -68873,7 +68873,7 @@
     "record": null,
     "anchor": "GLOSSARY.md",
     "says": {
-     "en": "The working definition, 'a recurrent organization of activity whose consequences help reproduce the conditions selecting that organization across changes in its particular carriers', is not the formal term: 'that sense is wider'."
+     "en": "The working definition, 'a recurrent organization of activity whose consequences help reproduce the conditions selecting that organization across changes in its particular carriers', is not the formal term: 'that sense is another, neither shown to contain the other'."
     },
     "role": "carries",
     "part": "the meta-attractor row"
@@ -69621,14 +69621,14 @@
   "relation": "divergence",
   "agreement_of": null,
   "reading": {
-   "en": "The ranking's part is stated with neither of the ethics' premises (the condition for scope, C for order, both unasserted): an ending of what everyone needs, with no second copy, is ranked below by every order rising with its own continuation. That is under hypotheses and from a standpoint; it obliges no one, and an independent copy makes it mixed. The record's 'the existence of the whole' is wider than his human object. [AI reading]"
+   "en": "The ranking's part is stated with neither of the ethics' premises (the condition for scope, C for order, both unasserted): an ending of what everyone needs, with no second copy, is ranked below by every order rising with its own continuation. That is under hypotheses and from a standpoint; it obliges no one, and an independent copy makes it mixed. The record said 'the existence of the whole', wider than his human object, until 7 November 2026; it now says humanity as a whole. [AI reading]"
   },
   "targets": [
    {
     "record": "what-self-concern-alone-ranks",
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-self-concern-alone-ranks",
     "says": {
-     "en": "Theorem (any type; World): correspondence 'Jonas (1979): the existence of the whole is never to be staked; here a condition everyone needs, with no second copy, has its ending ranked below by every standpoint's self-concern'. Not shown: 'that a ranking obliges anyone: an order is from a standpoint'."
+     "en": "Theorem (any type; World): correspondence 'Jonas (1979): the existence of humanity as a whole is never to be staked; here a condition everyone needs, with no second copy, has its ending ranked below by every standpoint's self-concern'. Not shown: 'that a ranking obliges anyone: an order is from a standpoint'."
     },
     "role": "carries"
    },
@@ -76087,7 +76087,7 @@
     "record": "support-from-the-supported",
     "anchor": "theories/becoming/results/records/support-from-the-supported.md",
     "says": {
-     "en": "Correspondence: Ren said that 'not harm' is 'a phase transition with a clear boundary'; the two earlier phase results and this absorbing end are its three forms under this reading. The reading and the names are the AI's."
+     "en": "Correspondence: Ren said that 'not harm' is 'a phase transition with a clear boundary'; the two earlier boundary results and this absorbing end are its three forms under this reading, boundaries and none a proved phase transition. The reading and the names are the AI's."
     },
     "role": "neighbour"
    }
@@ -76327,7 +76327,7 @@
     "record": "recurrence-without-premise",
     "anchor": "theories/becoming/chapters/01-ROOT.md#r-recurrence-without-premise",
     "says": {
-     "en": "Theorem (any type): within finitely many configurations, a list holding every one, a determined law merges nothing exactly where every configuration returns; a quantity that never falls along an orbit and rises at some step of it rules out a law that merges nothing. Correspondence, the AI's: 'the low-entropy beginning physics supplies is the beginning of the kept history, and is derived'. 'These readings are not physical derivations.'"
+     "en": "Theorem (any type): within finitely many configurations, a list holding every one, a determined law merges nothing exactly where every configuration returns; a quantity that never falls along an orbit and rises at some step of it rules out a law that merges nothing. Correspondence, the AI's: 'the low-entropy beginning physics supplies reads as the beginning of the kept history', while a coarse-grained entropy rising from an ordered start needs a premise about the start and is not stated. 'These readings are not physical derivations.'"
     },
     "role": "carries"
    },
@@ -76647,7 +76647,7 @@
     "record": "dormancy-over-a-stretch",
     "anchor": "theories/becoming/chapters/02-MAP.md#r-dormancy-over-a-stretch",
     "says": {
-     "en": "Theorem: with an ending made final as a separate premise, support returning after the reserve is spent finds no dependent; 'exhaustion alone does not give it'. A reserve spanning the gap bridges it. Not shown: that ending is final for actual dependents. Correspondence: hysteresis of collapse."
+     "en": "Theorem: with an ending made final as a separate premise, support returning after the reserve is spent finds no dependent; 'exhaustion alone does not give it'. A reserve spanning the gap bridges it. Not shown: that ending is final for actual dependents. Correspondence: a collapse that support's return does not undo, one-sided only: hysteresis's distinct collapse and recovery thresholds are not stated."
     },
     "role": "neighbour"
    },
@@ -78076,7 +78076,7 @@
   "carried": "carried-in-part",
   "relation": "divergence",
   "reading": {
-   "en": "The account reads the deficit side: a patch renewed by a neighbour shows no excess alone, and under the coupled gate the pair ends as one, nothing selected among groups on it. Nearest to recolonization: a formation renewed from outside can be active again, and in one learners' commons a patch regrew after reaching nothing. Persistence through asynchronous turnover, Levins's claim, is not stated: there the mechanism parts. The record's gloss, patches 'persist or go extinct together', fits this law and not Levins, whose patches end apart. [AI reading]"
+   "en": "The account reads the deficit side: a patch renewed by a neighbour shows no excess alone, and under the coupled gate the pair ends as one, nothing selected among groups on it. Nearest to recolonization: a formation renewed from outside can be active again, and in one learners' commons a patch regrew after reaching nothing. Persistence through asynchronous turnover, Levins's claim, is not stated: there the mechanism parts. The record's gloss read patches as persisting or going extinct together, which fits this law and not Levins, whose patches end apart; since 7 November 2026 the record says they go extinct apart and are recolonized. [AI reading]"
   },
   "targets": [
    {
@@ -78796,7 +78796,7 @@
    {
     "anchor": "theories/becoming/chapters/08-METHOD.md#what-the-unifications-claim",
     "says": {
-     "en": "'overshoot, externality and Goodhart's law as one law of the optimum under room'; 'the optimum law proved ... across domains conjectured (T3), supported in simulation (MQ1)'."
+     "en": "'overshoot, externality and Goodhart's law as one law of the optimum under room'; 'the optimum law proved ... across domains conjectured (T3); in simulation the draw against margin forecast an exact best response's side effects (8 of 8) and failed for tabular learners (80 of 151; MQ1)'."
     },
     "role": "carries",
     "part": "the row on Zhuang and Hadfield-Menell's Theorem 1"
@@ -78804,7 +78804,7 @@
    {
     "anchor": "theories/becoming/ONE-ARGUMENT.md",
     "says": {
-     "en": "The draw on a condition with no measured coupling 'forecast an exact best response's side effects (8 of 8)' and failed for tabular learners (80 of 151; MQ1). 08's 'supported in simulation (MQ1)' omits the failure, so I add it here."
+     "en": "The draw on a condition with no measured coupling 'forecast an exact best response's side effects (8 of 8)' and failed for tabular learners (80 of 151; MQ1). 08 said 'supported in simulation (MQ1)', omitting the failure, until 7 November 2026; it now states both."
     },
     "role": "limit",
     "part": "the line on the draw against its margin, MQ1"
@@ -78813,7 +78813,7 @@
     "record": "closed-capture",
     "anchor": "theories/becoming/chapters/02-MAP.md#r-closed-capture",
     "says": {
-     "en": "Record's correspondence: 'Goodhart (1975) says a measure made a target stops measuring; this states why it is kept: what keeps it reads the share it gives, not what it fails to measure.'"
+     "en": "Record's correspondence: 'Goodhart (1975) says a statistical regularity tends to collapse once pressure is put on it for control, which Strathern (1997) put as a measure made a target ceasing to be a good measure; this states why it is kept: what keeps it reads the share it gives, not what it fails to measure.'"
     },
     "role": "neighbour"
    }
@@ -78888,7 +78888,7 @@
    {
     "anchor": "theories/becoming/review/ALIGNMENT.md#a-08",
     "says": {
-     "en": "'[this dossier, AI] Goodhart's and Campbell's laws (Manheim and Garrabrant 2018; Campbell 1979) describe informally a measure that keeps its standing after it stops measuring. T7 states that as a conjecture about a lock.'"
+     "en": "'[this dossier, AI] Goodhart's and Campbell's laws (Goodhart 1975; Campbell 1979; Manheim and Garrabrant 2018) describe informally a measure that stops measuring once it is used as a target or for decisions; that the measure is then kept is the record's addition, and T7 states that it outlives its refutation as a conjecture about a lock.'"
     },
     "role": "neighbour"
    },
@@ -81085,7 +81085,7 @@
   "relation": "scope",
   "agreement_of": null,
   "reading": {
-   "en": "The source's law is general; the account says where: with room, at optima, and without room keeping can be an optimum. It credits the paper whole but states one form, nearest extremal, with shared units in place of correlation and no goal assumed. No law I found selects on a noisy proxy, and an intervention is stated only as a move not taken, so regressional and causal are not reached. A-08's gloss, a measure keeping its standing after it stops measuring, is T7's claim: as I recall them the sources state collapse and corruption, not persistence. [AI reading]"
+   "en": "The source's law is general; the account says where: with room, at optima, and without room keeping can be an optimum. It credits the paper whole but states one form, nearest extremal, with shared units in place of correlation and no goal assumed. No law I found selects on a noisy proxy, and an intervention is stated only as a move not taken, so regressional and causal are not reached. A-08 glossed them, until 7 November 2026, as a measure keeping its standing after it stops measuring, which is T7's claim: as I recall them the sources state collapse and corruption, not persistence, and A-08 now says so. [AI reading]"
   },
   "targets": [
    {
@@ -81107,7 +81107,7 @@
    {
     "anchor": "theories/becoming/chapters/08-METHOD.md#theses",
     "says": {
-     "en": "Row on Zhuang and Hadfield-Menell's Theorem 1: overshoot, externality and Goodhart's law as one law of the optimum under room; the optimum law proved; across domains conjectured (T3), supported in simulation (MQ1; dossier A: for exact best responses, and failed for tabular learners, 80 of 151); their continuous setting and the improvement of a principal's utility not reached."
+     "en": "Row on Zhuang and Hadfield-Menell's Theorem 1: overshoot, externality and Goodhart's law as one law of the optimum under room; the optimum law proved; across domains conjectured (T3); in simulation the draw against margin forecast an exact best response's side effects (8 of 8) and failed for tabular learners (80 of 151; MQ1); their continuous setting and the improvement of a principal's utility not reached."
     },
     "role": "limit",
     "part": "the row on Zhuang and Hadfield-Menell's Theorem 1"
@@ -81123,7 +81123,7 @@
    {
     "anchor": "theories/becoming/review/ALIGNMENT.md#a-08",
     "says": {
-     "en": "[this dossier, AI] Goodhart's and Campbell's laws (Manheim and Garrabrant 2018; Campbell 1979) describe informally a measure that keeps its standing after it stops measuring. T7 states that as a conjecture about a lock."
+     "en": "[this dossier, AI] Goodhart's and Campbell's laws (Goodhart 1975; Campbell 1979; Manheim and Garrabrant 2018) describe informally a measure that stops measuring once it is used as a target or for decisions; that the measure is then kept is the record's addition, and T7 states that it outlives its refutation as a conjecture about a lock."
     },
     "role": "neighbour"
    }
@@ -81691,7 +81691,7 @@
     "record": "revision-with-an-undecided-value",
     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-revision-with-an-undecided-value",
     "says": {
-     "en": "Theorem (labelled any type, on finitely many sentences closed among themselves; L-27 notes no type parameter occurs). No map monotone in information moves every value, so the gap needs a map deciding the undecided, and a family within what it reads stays incomplete with three values. Undecided is what revision has not decided, not a third truth."
+     "en": "Theorem (Kleene's three-valued sentences, a named model, finitely many closed among themselves; labelled any type until 7 November 2026, as L-27 noted). No map monotone in information moves every value, so the gap needs a map deciding the undecided, and a family within what it reads stays incomplete with three values. Undecided is what revision has not decided, not a third truth."
     },
     "role": "neighbour"
    },
@@ -81910,7 +81910,7 @@
    {
     "anchor": "theories/becoming/review/LOGIC.md#l-29",
     "says": {
-     "en": "[this dossier, AI] 08's gloss of the double-negation row, 'reach without a path', misdescribes the law: its conclusion is reach, which carries a path; what needs the principle is the step from the absence of an invariant separation to such a path."
+     "en": "[this dossier, AI] 08's gloss of the double-negation row read 'reach without a path' until 7 November 2026, which misdescribed the law: its conclusion is reach, which carries a path; what needs the principle is the step from the absence of an invariant separation to such a path. 08 now says so."
     },
     "role": "limit"
    }

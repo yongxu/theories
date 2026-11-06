@@ -1203,7 +1203,7 @@
     {
      "anchor": "GLOSSARY.md",
      "says": {
-      "en": "Meta-attractor: closed capture; 'It never means the corpus's working definition, a recurrent organization of activity whose consequences help reproduce the conditions selecting that organization across changes in its particular carriers: that sense is wider, and the formal 元吸引子 says nothing of carriers'."
+      "en": "Meta-attractor: closed capture; 'It never means the corpus's working definition, a recurrent organization of activity whose consequences help reproduce the conditions selecting that organization across changes in its particular carriers: that sense is another, neither shown to contain the other: the formal 元吸引子 says nothing of carriers'."
      },
      "role": "carries",
      "part": "the meta-attractor row"
@@ -1264,7 +1264,7 @@
      "record": null,
      "anchor": "GLOSSARY.md",
      "says": {
-      "en": "The working definition, 'a recurrent organization of activity whose consequences help reproduce the conditions selecting that organization across changes in its particular carriers', is not the formal term: 'that sense is wider'."
+      "en": "The working definition, 'a recurrent organization of activity whose consequences help reproduce the conditions selecting that organization across changes in its particular carriers', is not the formal term: 'that sense is another, neither shown to contain the other'."
      },
      "role": "carries",
      "part": "the meta-attractor row"
@@ -1928,14 +1928,14 @@
    "relation": "divergence",
    "agreement_of": null,
    "reading": {
-    "en": "The ranking's part is stated with neither of the ethics' premises (the condition for scope, C for order, both unasserted): an ending of what everyone needs, with no second copy, is ranked below by every order rising with its own continuation. That is under hypotheses and from a standpoint; it obliges no one, and an independent copy makes it mixed. The record's 'the existence of the whole' is wider than his human object. [AI reading]"
+    "en": "The ranking's part is stated with neither of the ethics' premises (the condition for scope, C for order, both unasserted): an ending of what everyone needs, with no second copy, is ranked below by every order rising with its own continuation. That is under hypotheses and from a standpoint; it obliges no one, and an independent copy makes it mixed. The record said 'the existence of the whole', wider than his human object, until 7 November 2026; it now says humanity as a whole. [AI reading]"
    },
    "targets": [
     {
      "record": "what-self-concern-alone-ranks",
      "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-self-concern-alone-ranks",
      "says": {
-      "en": "Theorem (any type; World): correspondence 'Jonas (1979): the existence of the whole is never to be staked; here a condition everyone needs, with no second copy, has its ending ranked below by every standpoint's self-concern'. Not shown: 'that a ranking obliges anyone: an order is from a standpoint'."
+      "en": "Theorem (any type; World): correspondence 'Jonas (1979): the existence of humanity as a whole is never to be staked; here a condition everyone needs, with no second copy, has its ending ranked below by every standpoint's self-concern'. Not shown: 'that a ranking obliges anyone: an order is from a standpoint'."
      },
      "role": "carries"
     },
@@ -3749,6 +3749,21 @@
    "id": "cx-modphil-whitehead-misplaced-concreteness",
    "what": "changed",
    "why": "second critic (label): Memory against memory, the sense matches Science and the Modern World ch. III and V. 08 §1 itself states the part, every split drawn 'together with what they leave out' and a separate type asserting no fundamental separation, with 08's head putting the real assumptions in the modelling: content the account states, not a law read onto him, so carried-in-part, source_adds as it is."
+  },
+  {
+   "id": "cx-modphil-marx-capital-self-valorizing",
+   "what": "changed",
+   "why": "a correction this crosswalk made at the home: the entry quotes what the home says now, or says what it said until 7 November 2026"
+  },
+  {
+   "id": "cx-modphil-marx-reproduces-the-relation",
+   "what": "changed",
+   "why": "a correction this crosswalk made at the home: the entry quotes what the home says now, or says what it said until 7 November 2026"
+  },
+  {
+   "id": "cx-modphil-jonas-imperative",
+   "what": "changed",
+   "why": "a correction this crosswalk made at the home: the entry quotes what the home says now, or says what it said until 7 November 2026"
   },
   {
    "id": "cx-modphil-parfit-fission",

@@ -264,7 +264,7 @@
     {
      "anchor": "theories/becoming/chapters/08-METHOD.md#what-the-unifications-claim",
      "says": {
-      "en": "'overshoot, externality and Goodhart's law as one law of the optimum under room'; 'the optimum law proved ... across domains conjectured (T3), supported in simulation (MQ1)'."
+      "en": "'overshoot, externality and Goodhart's law as one law of the optimum under room'; 'the optimum law proved ... across domains conjectured (T3); in simulation the draw against margin forecast an exact best response's side effects (8 of 8) and failed for tabular learners (80 of 151; MQ1)'."
      },
      "role": "carries",
      "part": "the row on Zhuang and Hadfield-Menell's Theorem 1"
@@ -272,7 +272,7 @@
     {
      "anchor": "theories/becoming/ONE-ARGUMENT.md",
      "says": {
-      "en": "The draw on a condition with no measured coupling 'forecast an exact best response's side effects (8 of 8)' and failed for tabular learners (80 of 151; MQ1). 08's 'supported in simulation (MQ1)' omits the failure, so I add it here."
+      "en": "The draw on a condition with no measured coupling 'forecast an exact best response's side effects (8 of 8)' and failed for tabular learners (80 of 151; MQ1). 08 said 'supported in simulation (MQ1)', omitting the failure, until 7 November 2026; it now states both."
      },
      "role": "limit",
      "part": "the line on the draw against its margin, MQ1"
@@ -281,7 +281,7 @@
      "record": "closed-capture",
      "anchor": "theories/becoming/chapters/02-MAP.md#r-closed-capture",
      "says": {
-      "en": "Record's correspondence: 'Goodhart (1975) says a measure made a target stops measuring; this states why it is kept: what keeps it reads the share it gives, not what it fails to measure.'"
+      "en": "Record's correspondence: 'Goodhart (1975) says a statistical regularity tends to collapse once pressure is put on it for control, which Strathern (1997) put as a measure made a target ceasing to be a good measure; this states why it is kept: what keeps it reads the share it gives, not what it fails to measure.'"
      },
      "role": "neighbour"
     }
@@ -349,7 +349,7 @@
     {
      "anchor": "theories/becoming/review/ALIGNMENT.md#a-08",
      "says": {
-      "en": "'[this dossier, AI] Goodhart's and Campbell's laws (Manheim and Garrabrant 2018; Campbell 1979) describe informally a measure that keeps its standing after it stops measuring. T7 states that as a conjecture about a lock.'"
+      "en": "'[this dossier, AI] Goodhart's and Campbell's laws (Goodhart 1975; Campbell 1979; Manheim and Garrabrant 2018) describe informally a measure that stops measuring once it is used as a target or for decisions; that the measure is then kept is the record's addition, and T7 states that it outlives its refutation as a conjecture about a lock.'"
      },
      "role": "neighbour"
     },
@@ -1820,6 +1820,16 @@
   }
  ],
  "changes": [
+  {
+   "id": "cx-econ-goodhart-regularity",
+   "what": "changed",
+   "why": "a correction this crosswalk made at the home: the entry quotes what the home says now, or says what it said until 7 November 2026"
+  },
+  {
+   "id": "cx-econ-campbell-corruption",
+   "what": "changed",
+   "why": "a correction this crosswalk made at the home: the entry quotes what the home says now, or says what it said until 7 November 2026"
+  },
   {
    "id": "cx-econ-olson-rise-and-decline",
    "what": "changed",

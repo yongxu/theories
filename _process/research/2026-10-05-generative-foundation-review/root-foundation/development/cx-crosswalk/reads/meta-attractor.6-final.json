@@ -94,7 +94,7 @@
      "record": null,
      "anchor": "GLOSSARY.md",
      "says": {
-      "en": "Meta-attractor: closed capture. \"It never means the corpus's working definition\"; that sense is wider, the formal 元吸引子 says nothing of carriers, and whether a capture loop is 生成 at some pair of classes stays Open."
+      "en": "Meta-attractor: closed capture. \"It never means the corpus's working definition\"; that sense is another, neither shown to contain the other: the formal 元吸引子 says nothing of carriers, and whether a capture loop is 生成 at some pair of classes stays Open."
      },
      "role": "carries"
     },
@@ -187,7 +187,7 @@
      "record": null,
      "anchor": "theories/becoming/chapters/02-MAP.md#capture",
      "says": {
-      "en": "Reading [AI reading, D65]: the corpus's working definition is wider. Continuation across carriers is the map's 传; the formal 元吸引子 says nothing of carriers, so whether a capture loop is 生成 at some pair of classes stays Open."
+      "en": "Reading [AI reading, D65]: the corpus's working definition is another, not shown to contain closed capture or to be contained by it. Continuation across carriers is the map's 传; the formal 元吸引子 says nothing of carriers, so whether a capture loop is 生成 at some pair of classes stays Open."
      },
      "role": "carries",
      "part": "D65, the corpus's working definition"
@@ -248,7 +248,7 @@
      "record": null,
      "anchor": "theories/becoming/chapters/02-MAP.md#capture",
      "says": {
-      "en": "Reading [AI reading, D26 as revised]: the corpus's meta-attractor in its account of power is the closed loop: winners writing the next scorecard is `ReadsShare`. That readers are minds is a reading."
+      "en": "Reading [AI reading, D26 as revised]: the closed loop is one part of the corpus's meta-attractor in its account of power, which also speaks of carriers, domains and correction: winners writing the next scorecard is `ReadsShare`. That readers are minds is a reading."
      },
      "role": "carries",
      "part": "D26"
@@ -414,7 +414,7 @@
    "relation": "scope",
    "agreement_of": null,
    "reading": {
-    "en": "02 reads the source's phrase directly as `lock_outlives_loss`, a reading. Proved: the lock outlives a coordinate the loop does not read, without noise. That actual metrics are so formed is thesis T7, conjectured, no field test. Noise leaves the critical mass's locks. In one trained judge the lock formed and the bridge failed: one note of the loss turned its reading. Calling the unread coordinate a loss is a reading; evidence and refutation are unformalized. [AI reading]"
+    "en": "02 reads the source's phrase as `lock_outlives_loss`, the refutation as a loss the loop does not read, a reading. Proved: the lock outlives a coordinate the loop does not read, without noise. That actual metrics are so formed is thesis T7, conjectured, no field test. Noise leaves the critical mass's locks. In one trained judge the lock formed and the bridge failed: one note of the loss turned its reading. Calling the unread coordinate a loss is a reading; evidence and refutation are unformalized. [AI reading]"
    },
    "targets": [
     {
@@ -438,7 +438,7 @@
      "record": null,
      "anchor": "theories/becoming/chapters/02-MAP.md#capture",
      "says": {
-      "en": "Reading [AI reading, D26 as revised]: \"the metric survives its own refutation\" is `lock_outlives_loss`."
+      "en": "Reading [AI reading, D26 as revised]: \"the metric survives its own refutation\" is read as `lock_outlives_loss`, the refutation as a loss the loop does not read (evidence and refutation are unformalized)."
      },
      "role": "carries",
      "part": "D26"
@@ -1174,7 +1174,7 @@
      "record": null,
      "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#alignment-without-premise",
      "says": {
-      "en": "Reading [AI reading, D68]: a counter-rule read monotonically from its share, where every rule it reads favours its carriers, locks by the step after its second reading step. \"The imperial examination is this case, as read in the meta-attractor line\". It rests on the capture laws, not the law of shaping."
+      "en": "Reading [AI reading, D68]: a counter-rule read monotonically from its share, where every rule it reads favours its carriers, locks by the step after its second reading step. \"The reading counts the imperial examination as this case, a counter-rule whose rule came to be read from the share it selected\". It rests on the capture laws, not the law of shaping."
      },
      "role": "carries",
      "part": "D68: the counter-rule"
@@ -2750,7 +2750,7 @@
      "record": null,
      "anchor": "theories/becoming/chapters/08-METHOD.md#what-the-unifications-claim",
      "says": {
-      "en": "Overshoot, externality and Goodhart's law as one law of the optimum under room: the optimum law proved, across domains conjectured (T3), supported in simulation (MQ1); a unification adds no theorem."
+      "en": "Overshoot, externality and Goodhart's law as one law of the optimum under room: the optimum law proved, across domains conjectured (T3); in simulation the draw against margin forecast an exact best response's side effects (8 of 8) and failed for tabular learners (80 of 151; MQ1); a unification adds no theorem."
      },
      "role": "carries"
     },
@@ -4230,14 +4230,44 @@
  ],
  "changes": [
   {
+   "id": "cx-ma-the-word",
+   "what": "changed",
+   "why": "a correction this crosswalk made at the home: the entry quotes what the home says now, or says what it said until 7 November 2026"
+  },
+  {
+   "id": "cx-ma-wide-regime-across-carriers",
+   "what": "changed",
+   "why": "a correction this crosswalk made at the home: the entry quotes what the home says now, or says what it said until 7 November 2026"
+  },
+  {
+   "id": "cx-ma-rule-loop",
+   "what": "changed",
+   "why": "a correction this crosswalk made at the home: the entry quotes what the home says now, or says what it said until 7 November 2026"
+  },
+  {
+   "id": "cx-ma-metric-survives-refutation",
+   "what": "changed",
+   "why": "a correction this crosswalk made at the home: the entry quotes what the home says now, or says what it said until 7 November 2026"
+  },
+  {
    "id": "cx-ma-endings",
    "what": "changed",
    "why": "second critic (label): 05 §1's checked `Flow.full_taking_ends` and `Flow.continuing_excludes` state the source's terminal collapse (alternatives excluded, the substrate exhausted, the full taker ending too) and are named only in account_adds, so 'the account's nearest list is a conjecture' understates, and the sibling cx-zhishan-totalization-by-loss reads the same three endings as scope with lock-in and collapse live. The locator's open question 49 is 'rank or boundary', not the endings."
   },
   {
+   "id": "cx-ma-anti-attractor",
+   "what": "changed",
+   "why": "a correction this crosswalk made at the home: the entry quotes what the home says now, or says what it said until 7 November 2026"
+  },
+  {
    "id": "cx-ma-diagnosis-limit",
    "what": "changed",
    "why": "second critic (label): Both carrying theorems have the source's form (alike under the old channel, told apart by a probe or the window), but on other models, and no live sentence states the claim about diagnosing a slide: a law of like form read onto the source is fresh-reading, not carried-in-part. agreement_of law and the source_adds stand."
+  },
+  {
+   "id": "cx-ma-vs-goodhart-and-lock-in",
+   "what": "changed",
+   "why": "a correction this crosswalk made at the home: the entry quotes what the home says now, or says what it said until 7 November 2026"
   }
  ],
  "live_flags": [

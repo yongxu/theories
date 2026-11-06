@@ -686,7 +686,7 @@
      "record": null,
      "anchor": "GLOSSARY.md",
      "says": {
-      "en": "Meta-attractor: closed capture. It never means the corpus's working definition, a recurrent organization reproducing the conditions selecting it across changes in its carriers: that sense is wider, and the formal 元吸引子 says nothing of carriers."
+      "en": "Meta-attractor: closed capture. It never means the corpus's working definition, a recurrent organization reproducing the conditions selecting it across changes in its carriers: that sense is another, neither shown to contain the other: the formal 元吸引子 says nothing of carriers."
      },
      "role": "neighbour",
      "part": "meta-attractor"
@@ -2075,7 +2075,13 @@
    ]
   }
  ],
- "changes": [],
+ "changes": [
+  {
+   "id": "cx-oi-karma-across-carriers",
+   "what": "changed",
+   "why": "a correction this crosswalk made at the home: the entry quotes what the home says now, or says what it said until 7 November 2026"
+  }
+ ],
  "live_flags": [
   {
    "where": "theories/becoming/chapters/03-KNOWING.md#r-seeking-boundary",

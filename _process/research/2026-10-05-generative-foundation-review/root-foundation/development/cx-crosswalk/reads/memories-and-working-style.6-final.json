@@ -1714,7 +1714,7 @@
     {
      "anchor": "theories/becoming/chapters/08-METHOD.md#what-the-unifications-claim",
      "says": {
-      "en": "Overshoot, externality and Goodhart's law as one law of the optimum under room: the optimum law proved; across domains conjectured (T3), supported in simulation."
+      "en": "Overshoot, externality and Goodhart's law as one law of the optimum under room: the optimum law proved; across domains conjectured (T3); in simulation the draw against margin forecast an exact best response's side effects (8 of 8) and failed for tabular learners (80 of 151; MQ1)."
      },
      "role": "neighbour",
      "part": "the optimum's row"
@@ -2943,6 +2943,12 @@
    ]
   }
  ],
- "changes": [],
+ "changes": [
+  {
+   "id": "cx-memories-verification-instrumental",
+   "what": "changed",
+   "why": "a correction this crosswalk made at the home: the entry quotes what the home says now, or says what it said until 7 November 2026"
+  }
+ ],
  "live_flags": []
 }

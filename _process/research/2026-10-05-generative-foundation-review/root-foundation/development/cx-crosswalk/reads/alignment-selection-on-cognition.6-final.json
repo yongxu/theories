@@ -169,7 +169,7 @@
     {
      "anchor": "theories/becoming/review/ALIGNMENT.md#a-13",
      "says": {
-      "en": "Reading [AI reading, D68], no law added: a counter-rule read monotonically from its share, where every rule it reads favours its carriers, locks as the rule it replaced did; favouring only above a threshold, a change across it leaves; from a start against its reading it may never lock. The imperial examination is read as this case."
+      "en": "Reading [AI reading, D68], no law added: a counter-rule read monotonically from its share, where every rule it reads favours its carriers, locks as the rule it replaced did; favouring only above a threshold, a change across it leaves; from a start against its reading it may never lock. The reading counts the imperial examination as this case, its fit to these premises read, not tested."
      },
      "role": "carries",
      "part": "D68"
@@ -3925,6 +3925,11 @@
    "id": "cx-asc-selection-on-cognition",
    "what": "changed",
    "why": "COLLECTIVE-DIRECTION §5 corrected by this crosswalk: the entry quotes what it says now"
+  },
+  {
+   "id": "cx-asc-token-same-shape",
+   "what": "changed",
+   "why": "a correction this crosswalk made at the home: the entry quotes what the home says now, or says what it said until 7 November 2026"
   },
   {
    "id": "cx-asc-training-ground",

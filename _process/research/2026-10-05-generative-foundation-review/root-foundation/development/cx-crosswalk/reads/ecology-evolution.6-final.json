@@ -389,7 +389,7 @@
      "record": "dormancy-over-a-stretch",
      "anchor": "theories/becoming/chapters/02-MAP.md#r-dormancy-over-a-stretch",
      "says": {
-      "en": "Theorem: with an ending made final as a separate premise, support returning after the reserve is spent finds no dependent; 'exhaustion alone does not give it'. A reserve spanning the gap bridges it. Not shown: that ending is final for actual dependents. Correspondence: hysteresis of collapse."
+      "en": "Theorem: with an ending made final as a separate premise, support returning after the reserve is spent finds no dependent; 'exhaustion alone does not give it'. A reserve spanning the gap bridges it. Not shown: that ending is final for actual dependents. Correspondence: a collapse that support's return does not undo, one-sided only: hysteresis's distinct collapse and recovery thresholds are not stated."
      },
      "role": "neighbour"
     },
@@ -1671,7 +1671,7 @@
    "carried": "carried-in-part",
    "relation": "divergence",
    "reading": {
-    "en": "The account reads the deficit side: a patch renewed by a neighbour shows no excess alone, and under the coupled gate the pair ends as one, nothing selected among groups on it. Nearest to recolonization: a formation renewed from outside can be active again, and in one learners' commons a patch regrew after reaching nothing. Persistence through asynchronous turnover, Levins's claim, is not stated: there the mechanism parts. The record's gloss, patches 'persist or go extinct together', fits this law and not Levins, whose patches end apart. [AI reading]"
+    "en": "The account reads the deficit side: a patch renewed by a neighbour shows no excess alone, and under the coupled gate the pair ends as one, nothing selected among groups on it. Nearest to recolonization: a formation renewed from outside can be active again, and in one learners' commons a patch regrew after reaching nothing. Persistence through asynchronous turnover, Levins's claim, is not stated: there the mechanism parts. The record's gloss read patches as persisting or going extinct together, which fits this law and not Levins, whose patches end apart; since 7 November 2026 the record says they go extinct apart and are recolonized. [AI reading]"
    },
    "targets": [
     {
@@ -2274,7 +2274,18 @@
    "agreement_of": null
   }
  ],
- "changes": [],
+ "changes": [
+  {
+   "id": "cx-ecoevo-recovery-beyond-removing-the-pressure",
+   "what": "changed",
+   "why": "a correction this crosswalk made at the home: the entry quotes what the home says now, or says what it said until 7 November 2026"
+  },
+  {
+   "id": "cx-ecoevo-metapopulations",
+   "what": "changed",
+   "why": "a correction this crosswalk made at the home: the entry quotes what the home says now, or says what it said until 7 November 2026"
+  }
+ ],
  "live_flags": [
   {
    "where": "theories/becoming/results/records/groups-whose-conditions-are-coupled.md (correspondence)",

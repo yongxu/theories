@@ -434,7 +434,7 @@
     {
      "anchor": "GLOSSARY.md#the-map",
      "says": {
-      "en": "Meta-attractor: closed capture. It never means the corpus's working definition, a recurrent organization of activity reproducing the conditions selecting it across changes in carriers: that sense is wider, and the formal term says nothing of carriers, so whether a capture loop is 生成 at some pair of classes stays Open."
+      "en": "Meta-attractor: closed capture. It never means the corpus's working definition, a recurrent organization of activity reproducing the conditions selecting it across changes in carriers: that sense is another, neither shown to contain the other: the formal term says nothing of carriers, so whether a capture loop is 生成 at some pair of classes stays Open."
      },
      "role": "carries"
     },
@@ -449,7 +449,7 @@
     {
      "anchor": "theories/becoming/chapters/02-MAP.md#capture",
      "says": {
-      "en": "Reading [AI reading, D65]: the corpus's working definition is wider. Calibration to the present world is not established."
+      "en": "Reading [AI reading, D65]: the corpus's working definition is another, not shown to contain closed capture or to be contained by it. Calibration to the present world is not established."
      },
      "role": "limit",
      "part": "D65, the working definition"
@@ -720,7 +720,7 @@
     {
      "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#alignment-without-premise",
      "says": {
-      "en": "Reading [AI reading, D68]: a counter-rule read monotonically from the share it selects locks as the rule it replaced did; the imperial examination is this case, as read in the meta-attractor line."
+      "en": "Reading [AI reading, D68]: a counter-rule read monotonically from the share it selects locks as the rule it replaced did; the reading counts the imperial examination as this case, its fit to these premises read, not tested."
      },
      "role": "neighbour",
      "part": "D68: the counter-rule"
@@ -4498,6 +4498,16 @@
   }
  ],
  "changes": [
+  {
+   "id": "cx-zhishan-totalizing-attractor",
+   "what": "changed",
+   "why": "a correction this crosswalk made at the home: the entry quotes what the home says now, or says what it said until 7 November 2026"
+  },
+  {
+   "id": "cx-zhishan-criticism-absorbed",
+   "what": "changed",
+   "why": "a correction this crosswalk made at the home: the entry quotes what the home says now, or says what it said until 7 November 2026"
+  },
   {
    "id": "cx-zhishan-leviathan-concentration",
    "what": "changed",

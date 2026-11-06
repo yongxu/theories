@@ -911,7 +911,7 @@
     {
      "anchor": "GLOSSARY.md",
      "says": {
-      "en": "meta-attractor (元吸引子): closed capture. It never means the corpus's working definition, a recurrent organization of activity reproducing the conditions selecting it across changes in its carriers: that sense is wider, and the formal 元吸引子 says nothing of carriers."
+      "en": "meta-attractor (元吸引子): closed capture. It never means the corpus's working definition, a recurrent organization of activity reproducing the conditions selecting it across changes in its carriers: that sense is another, neither shown to contain the other: the formal 元吸引子 says nothing of carriers."
      },
      "role": "neighbour"
     }
@@ -1620,7 +1620,7 @@
     {
      "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#alignment-without-premise",
      "says": {
-      "en": "Reading [AI reading, D68]: a counter-rule read monotonically from the share it selects locks as the rule it replaced did, and only a change of law, such as reading what lies beyond its share, leaves the lock for long; the imperial examination is this case, as read in the meta-attractor line. From a start against its reading it may never lock. It rests on the capture laws."
+      "en": "Reading [AI reading, D68]: a counter-rule read monotonically from the share it selects locks as the rule it replaced did, and only a change of law, such as reading what lies beyond its share, leaves the lock for long; the reading counts the imperial examination as this case, its fit to these premises read, not tested. From a start against its reading it may never lock. It rests on the capture laws."
      },
      "role": "carries",
      "part": "D68: the counter-rule"
@@ -3113,7 +3113,7 @@
     {
      "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#alignment-without-premise",
      "says": {
-      "en": "Reading [AI reading, D68] in §6: a counter-rule read monotonically from the share it selects locks as the rule it replaced did; the imperial examination is this case, as read in the meta-attractor line: designed to dilute hereditary capture, it later became a proxy trap."
+      "en": "Reading [AI reading, D68] in §6: a counter-rule read monotonically from the share it selects locks as the rule it replaced did; the reading counts the imperial examination as this case; the meta-attractor line says that, designed to dilute hereditary capture, it later became a proxy trap, and its fit to these premises is read, not tested."
      },
      "role": "neighbour",
      "part": "D68: the counter-rule"
@@ -3346,6 +3346,22 @@
    ]
   }
  ],
- "changes": [],
+ "changes": [
+  {
+   "id": "cx-drives-attractor-geometry",
+   "what": "changed",
+   "why": "a correction this crosswalk made at the home: the entry quotes what the home says now, or says what it said until 7 November 2026"
+  },
+  {
+   "id": "cx-drives-virtue-does-not-self-install",
+   "what": "changed",
+   "why": "a correction this crosswalk made at the home: the entry quotes what the home says now, or says what it said until 7 November 2026"
+  },
+  {
+   "id": "cx-drives-confucian-engineering",
+   "what": "changed",
+   "why": "a correction this crosswalk made at the home: the entry quotes what the home says now, or says what it said until 7 November 2026"
+  }
+ ],
  "live_flags": []
 }
