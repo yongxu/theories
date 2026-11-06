@@ -164,6 +164,7 @@ ROOTF = '_process/research/2026-10-05-generative-foundation-review/root-foundati
 # path until it gets one.
 TESTS = {
     'test_atlas': (),
+    'test_connection_map': (DATA + 'shared-laws.json',),
     'test_architecture': ('tools/research/boundary_check.lean', RECORDS, DATA + 'law-families.json', DATA + 'shared-laws.json'),
     'test_boundary': ('tools/research/boundary_check.lean', 'tools/research/tests/test_schema2.py', RECORDS, DATA + 'law-families.json',
                       DATA + 'shared-laws.json', DATA + 'standard-boundaries.json', ROOTF + '/THEOREM-CONNECTIVITY-DUMP.lean',

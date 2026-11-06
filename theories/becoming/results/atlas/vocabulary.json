@@ -2,241 +2,92 @@
  "schema_version": 1,
  "about": "The atlas's closed lists. An entry names its family by the family's letter and every other item by its en text. The bases are 08-METHOD §2's seven, and 'reading' and 'open' its labels, with the Chinese 06 writes for them; the families and the kinds of transition are the atlas plan's §4.1 and §4.2. A Chinese name is given only where a chapter gives one.",
  "families": [
-  {
-   "id": "A",
-   "en": "Absorption and ending"
-  },
-  {
-   "id": "B",
-   "en": "Drains beyond what couples in"
-  },
-  {
-   "id": "C",
-   "en": "Capture of the selection"
-  },
-  {
-   "id": "D",
-   "en": "Locks of knowing"
-  },
-  {
-   "id": "E",
-   "en": "Waiting and reciprocity"
-  },
-  {
-   "id": "F",
-   "en": "Cycles and alternation"
-  },
-  {
-   "id": "G",
-   "en": "Closure and stagnation"
-  },
-  {
-   "id": "H",
-   "en": "Kept regions, renewal, generation"
-  }
+  {"id": "A", "en": "Absorption and ending"},
+  {"id": "B", "en": "Drains beyond what couples in"},
+  {"id": "C", "en": "Capture of the selection"},
+  {"id": "D", "en": "Locks of knowing"},
+  {"id": "E", "en": "Waiting and reciprocity"},
+  {"id": "F", "en": "Cycles and alternation"},
+  {"id": "G", "en": "Closure and stagnation"},
+  {"id": "H", "en": "Kept regions, renewal, generation"}
  ],
  "bases": [
-  {
-   "en": "root",
-   "zh": "根"
-  },
-  {
-   "en": "the steps"
-  },
-  {
-   "en": "any process"
-  },
-  {
-   "en": "any type"
-  },
-  {
-   "en": "World"
-  },
-  {
-   "en": "a named model"
-  },
-  {
-   "en": "periphery"
-  }
+  {"en": "root", "zh": "根"},
+  {"en": "the steps"},
+  {"en": "any process"},
+  {"en": "any type"},
+  {"en": "World"},
+  {"en": "a named model"},
+  {"en": "periphery"}
  ],
  "transition_kinds": [
-  {
-   "en": "exact threshold"
-  },
-  {
-   "en": "superadditive joint threshold"
-  },
-  {
-   "en": "critical mass"
-  },
-  {
-   "en": "window or deadline"
-  },
-  {
-   "en": "juncture"
-  },
-  {
-   "en": "pace bound"
-  },
-  {
-   "en": "exit by drift"
-  },
-  {
-   "en": "tipping in a parameter"
-  },
-  {
-   "en": "critical slowing down"
-  },
-  {
-   "en": "loop onset"
-  },
-  {
-   "en": "route (reading)"
-  }
+  {"en": "exact threshold"},
+  {"en": "superadditive joint threshold"},
+  {"en": "critical mass"},
+  {"en": "window or deadline"},
+  {"en": "juncture"},
+  {"en": "pace bound"},
+  {"en": "exit by drift"},
+  {"en": "tipping in a parameter"},
+  {"en": "critical slowing down"},
+  {"en": "loop onset"},
+  {"en": "route (reading)"}
  ],
  "exit_strengths": [
-  {
-   "en": "sufficient"
-  },
-  {
-   "en": "necessary"
-  },
-  {
-   "en": "exact"
-  }
+  {"en": "sufficient"},
+  {"en": "necessary"},
+  {"en": "exact"}
  ],
  "standings_without_record": [
-  {
-   "en": "argued"
-  },
-  {
-   "en": "conjectured"
-  },
-  {
-   "en": "reading",
-   "zh": "读法"
-  },
-  {
-   "en": "open",
-   "zh": "未决"
-  }
+  {"en": "argued"},
+  {"en": "conjectured"},
+  {"en": "reading", "zh": "读法"},
+  {"en": "open", "zh": "未决"}
  ],
  "test_states": [
-  {
-   "en": "designed"
-  },
-  {
-   "en": "frozen"
-  },
-  {
-   "en": "run"
-  }
+  {"en": "designed"},
+  {"en": "frozen"},
+  {"en": "run"}
  ],
  "domains": [
-  {
-   "en": "earlier-folders"
-  },
-  {
-   "en": "chinese-classical"
-  },
-  {
-   "en": "buddhist"
-  },
-  {
-   "en": "other-indian"
-  },
-  {
-   "en": "greek-roman"
-  },
-  {
-   "en": "abrahamic-islamic"
-  },
-  {
-   "en": "indigenous-african"
-  },
-  {
-   "en": "modern-philosophy"
-  },
-  {
-   "en": "systems-cybernetics"
-  },
-  {
-   "en": "dynamics-physics-complexity"
-  },
-  {
-   "en": "ecology-evolution"
-  },
-  {
-   "en": "economics-politics-sociology"
-  },
-  {
-   "en": "psychology-alignment-logic"
-  }
+  {"en": "earlier-folders"},
+  {"en": "chinese-classical"},
+  {"en": "buddhist"},
+  {"en": "other-indian"},
+  {"en": "greek-roman"},
+  {"en": "abrahamic-islamic"},
+  {"en": "indigenous-african"},
+  {"en": "modern-philosophy"},
+  {"en": "systems-cybernetics"},
+  {"en": "dynamics-physics-complexity"},
+  {"en": "ecology-evolution"},
+  {"en": "economics-politics-sociology"},
+  {"en": "psychology-alignment-logic"}
  ],
  "carried": [
-  {
-   "en": "carried"
-  },
-  {
-   "en": "carried-in-part"
-  },
-  {
-   "en": "changed"
-  },
-  {
-   "en": "history-only"
-  },
-  {
-   "en": "not-carried"
-  },
-  {
-   "en": "fresh-reading"
-  }
+  {"en": "carried"},
+  {"en": "carried-in-part"},
+  {"en": "changed"},
+  {"en": "history-only"},
+  {"en": "not-carried"},
+  {"en": "fresh-reading"}
  ],
  "relations": [
-  {
-   "en": "agreement",
-   "zh": "相合"
-  },
-  {
-   "en": "scope",
-   "zh": "定域"
-  },
-  {
-   "en": "divergence",
-   "zh": "相分"
-  },
-  {
-   "en": "contrary-reading",
-   "zh": "反读"
-  }
+  {"en": "agreement", "zh": "相合"},
+  {"en": "scope", "zh": "定域"},
+  {"en": "divergence", "zh": "相分"},
+  {"en": "contrary-reading", "zh": "反读"}
  ],
  "group_kinds": [
-  {
-   "en": "theory"
-  },
-  {
-   "en": "design"
-  },
-  {
-   "en": "method"
-  },
-  {
-   "en": "provenance"
-  },
-  {
-   "en": "exploration"
-  },
-  {
-   "en": "domain"
-  }
+  {"en": "theory"},
+  {"en": "design"},
+  {"en": "method"},
+  {"en": "provenance"},
+  {"en": "exploration"},
+  {"en": "domain"}
  ],
  "source_bases": [
-  {
-   "en": "read-in-repo"
-  },
-  {
-   "en": "ai-knowledge"
-  }
+  {"en": "read-in-repo"},
+  {"en": "ai-knowledge"}
  ]
 }

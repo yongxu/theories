@@ -317,30 +317,36 @@ def build(records):
             'nodes': nodes, 'edges': edges}
 
 
-def corpus_section(graph, by):
-    """How far the corpus has been read, from the edges, and what in the graph has no edge."""
-    outcomes_of, others, touched = {}, set(), set()
+def corpus_counts(graph):
+    """How far the corpus has been read, from the edges: the units in each class of reading."""
+    outcomes_of, others = {}, set()
     for e in graph['edges']:
-        touched.update((e['from'], e['to']))
         if e['from'].startswith('text:'):
             if e['type'] == 'read-as':
                 outcomes_of.setdefault(e['from'], set()).add(e.get('outcome', ''))
             else:
                 others.add(e['from'])
-    corpus = by.get('text', [])
+    corpus = [n for n in graph['nodes'] if n['type'] == 'text']
     law = sum(1 for t in corpus if outcomes_of.get(t['id'], set()) & LAW_OUTCOMES)
     no_law = sum(1 for t in corpus if t['id'] in outcomes_of and not outcomes_of[t['id']] & LAW_OUTCOMES)
-    cite = sum(1 for t in corpus if t['id'] in others and t['id'] not in outcomes_of)
-    only = len(corpus) - law - no_law - cite
+    cited = sum(1 for t in corpus if t['id'] in others and t['id'] not in outcomes_of)
+    return {'classified': graph.get('classified_total', len(corpus)), 'stating': len(corpus), 'law': law, 'no_law': no_law,
+            'cited': cited, 'only': len(corpus) - law - no_law - cited}
+
+
+def corpus_section(graph):
+    """How far the corpus has been read, and what in the graph has no edge."""
+    c = corpus_counts(graph)
+    touched = {end for e in graph['edges'] for end in (e['from'], e['to'])}
     apart = sorted(n['id'] for n in graph['nodes'] if n['id'] not in touched and n['type'] != 'text')
     lines = ['', '## How far the corpus has been read', '',
-             f'{graph.get("classified_total", len(corpus))} corpus units are classified, {len(corpus)} of them in the '
+             f'{c["classified"]} corpus units are classified, {c["stating"]} of them in the '
              'classes that state something, which are the texts here. Of those:', '',
              '| Reading so far | Units |', '|---|---:|',
-             f'| Read against a law: a candidate theorem or a conditional law, whatever its outcome | {law} |',
-             f'| Read, and no law came of it: not expressible, an evaluation, a definition, misclassified | {no_law} |',
-             f'| Named by a grammar concept or cited by a module, record, section or dossier, and not read as above | {cite} |',
-             f'| Classified, and read against nothing yet | {only} |', '',
+             f'| Read against a law: a candidate theorem or a conditional law, whatever its outcome | {c["law"]} |',
+             f'| Read, and no law came of it: not expressible, an evaluation, a definition, misclassified | {c["no_law"]} |',
+             f'| Named by a grammar concept or cited by a module, record, section or dossier, and not read as above | {c["cited"]} |',
+             f'| Classified, and read against nothing yet | {c["only"]} |', '',
              'The last row has no edge in this graph. Its units are not shown to agree or disagree with anything.']
     if apart:
         lines += ['', 'Other nodes with no edge: ' + ', '.join(f'`{a}`' for a in apart) + '.']
@@ -368,7 +374,7 @@ def page(graph):
         c = counts[k]
         if sum(c.values()):
             lines.append(f'| {REGION_TITLES[k]} | {c["concept"]} | {c["result"]} | {c["module"]} | {c["text"]} |')
-    lines += corpus_section(graph, by)
+    lines += corpus_section(graph)
     lines += ['', '## The grammar\'s concepts', '', '| Name | Gloss | Module |', '|---|---|---|']
     rows = {}
     for c in by.get('concept', []):  # one row of a header table may bind several names to one gloss

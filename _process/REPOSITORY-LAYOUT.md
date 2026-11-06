@@ -105,6 +105,7 @@ New imports larger than 10–20 MB go to LFS or an external store with a committ
 | New Lean | the Becoming spine (`lean/becoming/`), or the periphery package it extends |
 | A study step, review or landing note | the live study (`_process/research/2026-10-05-generative-foundation-review/root-foundation/`), not a new dated workspace |
 | A dynamic in the atlas | `theories/becoming/results/atlas/entries/`, its standing read from its records ([the workflow](RESULT-WORKFLOW.md)) |
+| A correspondence: what became of an earlier folder's or a domain's claim | the read file in `development/cx-crosswalk/reads/`, imported to `theories/becoming/results/atlas/entries/` ([the workflow](RESULT-WORKFLOW.md#the-crosswalk-and-the-connection-map-cx)) |
 | A claim on work | [the work board](BECOMING-WORKBOARD.md) |
 | Ren's message that governs work | a source record in `sources/15-codex-theory-conversations/` (Ren's words verbatim, AI context labelled), linked from the [directive register](RESEARCH-DIRECTIVES.md) when it is a retained authorization |
 | A new or changed authorization | `_process/goals/<id>.json` (with Ren) |
