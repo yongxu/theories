@@ -23,8 +23,8 @@
       ]
     },
     {
-      "zh": "这样读，依存网保持支持、Dependent、条件的更新与消耗、形成的类、侵蚀、逐步读法中活的事件、生起、不息生成与活跃形成的普查。",
-      "en": "So read, a web keeps support, Dependent, the renewal and consumption of conditions, the classes of formations, undermining, the living events of the stepwise reading, arising, unceasing generation and a census of the active formations.",
+      "zh": "这样读，依存网保持支持、Dependent、条件的更新与消耗、形成的类、侵蚀、逐步读法中活的事件、生起、不息生起与活跃形成的普查。",
+      "en": "So read, a web keeps support, Dependent, the renewal and consumption of conditions, the classes of formations, undermining, the living events of the stepwise reading, arising, unceasing arising and a census of the active formations.",
       "declarations": [
         "Becoming.Web.roles_supported",
         "Becoming.Web.roles_dependent",
@@ -305,8 +305,8 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Roles.lean",
       "detail": {
-        "zh": "前提相容并且结论可达：Brood 平衡、Acting、Dependent，每代体现并承担自身，生成不息；Predation 中狐在兔终结之步的汲取是断裂，狐随兔终结。",
-        "en": "The premises are consistent and the conclusions attained: Brood balances, is Acting and Dependent, each generation is embodied and bears on itself, and generation is unceasing; in Predation the fox's drawing across the step at which the hare ends is breaking and the fox ends with the hare."
+        "zh": "前提相容并且结论可达：Brood 平衡、Acting、Dependent，每代体现并承担自身，生起不息；Predation 中狐在兔终结之步的汲取是断裂，狐随兔终结。",
+        "en": "The premises are consistent and the conclusions attained: Brood balances, is Acting and Dependent, each generation is embodied and bears on itself, and arising is unceasing; in Predation the fox's drawing across the step at which the hare ends is breaking and the fox ends with the hare."
       }
     },
     {
@@ -481,8 +481,8 @@
     {
       "id": "unceasing-generation-needs-renewal",
       "detail": {
-        "zh": "Brood 满足体现、承担自身与 Acting，并且生成不息；生起与不息在一类读法中保持。",
-        "en": "Brood meets embodiment, self-bearing and Acting, and generation is unceasing; arising and unceasing generation are kept by the one-kind reading."
+        "zh": "Brood 满足体现、承担自身与 Acting，并且生起不息；生起与不息在一类读法中保持。",
+        "en": "Brood meets embodiment, self-bearing and Acting, and arising is unceasing; arising and unceasing arising are kept by the one-kind reading."
       }
     },
     {
@@ -509,8 +509,8 @@
     {
       "id": "generation-is-replenishment",
       "detail": {
-        "zh": "体现的关系项的生起就是补充；在耗散之下，体现的生成复现的有限家族须与其外交换。该结果把本结果的生起经由给予推进为数量与耗散的形式。",
-        "en": "The arising of an embodied relatum is replenishment; under dissipation a finite family in which embodied generation recurs must exchange beyond itself. That result carries this one's arising through giving on to amounts and dissipation."
+        "zh": "体现的关系项的生起就是补充；在耗散之下，体现的生起复现的有限家族须与其外交换。该结果把本结果的生起经由给予推进为数量与耗散的形式。",
+        "en": "The arising of an embodied relatum is replenishment; under dissipation a finite family in which embodied arising recurs must exchange beyond itself. That result carries this one's arising through giving on to amounts and dissipation."
       }
     },
     {
@@ -532,7 +532,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Roles.lean",
       "role": "proof",
-      "sha256": "6e0fdea63dbd3bc1d92d6df2d8e68216436e1a916d1f36ce9872da25c3fe64eb",
+      "sha256": "ce8c8bc33d32b52008e6862a5f22e23c7267b48612966a979c1368c5c57b4a96",
       "declarations": [
         "Becoming.Web.roles",
         "Becoming.Web.roles_supported",
@@ -715,7 +715,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Arising.lean",
       "role": "proof",
-      "sha256": "986cd16faa229bd218c860f97dde734fd06bd100ee119d7a13484260f907258e",
+      "sha256": "77e62221c4556f61fd75c45ca7f9e1cd8528f08c9e14f7bbbc86867e2f6d4c71",
       "declarations": [
         "Becoming.Web.Arises",
         "Becoming.Web.Unceasing",
@@ -725,7 +725,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
       "role": "proof",
-      "sha256": "94e9be0baad1667d0d06acdfa757543c292c054c3a7eeaefccbe10b43bd321b5",
+      "sha256": "3e88ad9f714b60ef56bdec298d89aa8b843c4d225f07993ee39f022af3016e05",
       "declarations": [
         "Becoming.Flow.Balances",
         "Becoming.Flow.Acting",
@@ -946,12 +946,24 @@
       "role": "receipt",
       "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T214533.564191Z/verification.json",
+      "role": "receipt",
+      "sha256": "1d84754646f4039d0950bbdb24bfa8fbd78dc9f9643cf7b9f13ae4250ac24251",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json",
+      "role": "receipt",
+      "sha256": "8f1d2bed589ebd558ab122d2b21ff3e27c19916c91a47d94b4b0829f76d45192",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Roles.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Roles",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -1007,7 +1019,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Arising.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Arising",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -1021,7 +1033,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Flow",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -1135,6 +1147,14 @@
     {
       "en": "6 November 2026, board item LM: declarations this record lists moved with the helpers stated once; its references follow them, and no law changed.",
       "zh": "2026年11月6日，工作板条目 LM：此记录所列之声明随只陈述一次之辅助引理而移；其引用从之，诸律不变。"
+    },
+    {
+      "en": "7 November 2026, board item LM2: \"generation\" for arising (Unceasing) and for a flow more without end (More) is replaced, since the glossary's generation never means arising; the Lean's docstrings changed with it. No law, premise or proof changed.",
+      "zh": "2026年11月7日，工作板条目 LM2：以“生成”称生起（Unceasing）与不止地更多之流（More）处已改，因词汇表之生成从不指生起；Lean 之说明随之而改。诸律、前提与证明皆不变。"
+    },
+    {
+      "en": "7 November 2026, board item LM2 (its reader's findings): \"generation\" for embodied arising or for arising is replaced, since the glossary's generation never means arising. No law, premise or proof changed.",
+      "zh": "2026年11月7日，工作板条目 LM2（其读者之所见）：以“生成”称体现之生起或生起处已改，因词汇表之生成从不指生起。诸律、前提与证明皆不变。"
     }
   ],
   "text_versions": [

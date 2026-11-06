@@ -76,6 +76,8 @@ That a selection of relations reading amounts only through sign, comparison in o
 | proof | [Prelude.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean) | `Becoming.mul_assoc_nat`, `Becoming.mul_turn` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T135137.430317Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T214533.564191Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json) | — |
 
 Aliases: `the unit is not read off the occurrence model`, `单位不由出现模型读出`, `a world at a finer unit`, `Becoming.World.atFinerUnit_agree`, `Becoming.World.standing_not_read`, `Becoming.World.standing_not_read_up_to_unit`, `Becoming.World.stillAt_relabel_agree`
 

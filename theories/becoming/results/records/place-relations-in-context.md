@@ -134,6 +134,7 @@ Continues hexagrams-on-the-spine (Y1), which listed the relations of the places 
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T184601.050950Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json) | — |
 
 Aliases: `the relations of the places`, `爻位之关系`, `應`, `应`, `比`, `中`, `正`, `當位`, `当位`, `敵應`, `承`, `乘`, `中正`, `剛中而應`, `六位時成`, `readings of the places in context`, `Becoming.Hexagram.halves_glues_iff`, `Becoming.Hexagram.opposed_iff_phase`, `Becoming.Hexagram.phaseCount_waxWane`, `Becoming.Hexagram.opposition_goAlike`, `Becoming.Hexagram.placeStatements_agree`
 

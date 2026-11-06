@@ -707,7 +707,9 @@ theorem source_within :
   WithinClosure.of_rel
     (.inl ⟨.resource, .inl ⟨0, trivial⟩, 0, .head _, .inr Nat.zero_lt_one⟩)
 
-/-- **Pooling with the dweller closes the gap.** The source and the dweller follow one law in the
+/-- **Pooling with the dweller closes the selection gap**: what the clearer's pool selects alike,
+every pool holding the dweller separates. It does not close the difference the act makes: in the
+cleared world the dweller is still not admitted. The source and the dweller follow one law in the
 cleared and the spared world, reading no level, and the clearer's act differs only beyond its
 coupling closure. So every selection through the pooled coupling of the clearer and its source
 selects the two worlds alike at every step (`Flow.act_unselected_pool`). The dweller, whose

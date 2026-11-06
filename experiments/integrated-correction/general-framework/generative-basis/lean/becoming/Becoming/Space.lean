@@ -967,8 +967,9 @@ theorem undecided_world (Q : Prop) : (undecided Q).Finite ∧ (undecided Q).Aris
 
 /-- Without decidability the finite-world law implies excluded middle: if in every finite world
 in which arising recurs ceasing also recurs, every proposition is decided. So
-`arising_iff_ceasing` needs its decidability, which classically always holds and is a
-logical commitment of the representation, not a premise about any unfolding. -/
+`arising_iff_ceasing` needs its decidability, which classically always holds; it is that law's
+own condition, stated in its signature as `Becoming.Decidedness` asks, not a premise about any
+unfolding. -/
 theorem law_decides (law : ∀ w : World, w.Finite → w.ArisingRecurs → w.CeasingRecurs)
     (Q : Prop) : Q ∨ ¬ Q :=
   match law (undecided Q) (undecided_world Q).1 (undecided_world Q).2 0 with

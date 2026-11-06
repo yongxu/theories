@@ -1,0 +1,21 @@
+@Becoming.Turns.readsOnlyActsAlong_of_from : ∀ {W : Type u_1} {O : Type u_2} {A : Type u_3} {T : Becoming.Turns W O A}
+  {k : Nat}, T.ReadsOnlyActsFrom k → ∀ (w : W), T.ReadsOnlyActsAlong k w
+@Becoming.Turns.lawAlikeAlong_of_along : ∀ {W : Type u_1} {O : Type u_2} {A : Type u_3} {T : Becoming.Turns W O A}
+  {k : Nat} {w : W}, T.ReadsOnlyActsAlong k w → ∀ (w' : W), T.LawAlikeAlong k w w'
+@Becoming.Turns.law_alike_along : ∀ {W : Type u_1} {O : Type u_2} {A : Type u_3} {T : Becoming.Turns W O A} {k : Nat}
+  {w w' : W},
+  T.LawAlikeAlong k w w' →
+    T.AlikeBefore k w w' →
+      ∀ {n : Nat},
+        T.acts w n = T.acts w' n → T.law n (T.coupling n w) (T.acts w n) = T.law n (T.coupling n w') (T.acts w' n)
+@Becoming.Turns.acts_alike_along : ∀ {W : Type u_1} {O : Type u_2} {A : Type u_3} {T : Becoming.Turns W O A} {k : Nat}
+  {w w' : W}, T.LawAlikeAlong k w w' → T.AlikeBefore k w w' → ∀ (n : Nat), T.acts w n = T.acts w' n
+@Becoming.Turns.act_alike_along : ∀ {W : Type u_1} {O : Type u_2} {A : Type u_3} {T : Becoming.Turns W O A} {k : Nat}
+  {w w' : W}, T.LawAlikeAlong k w w' → T.AlikeBefore k w w' → ∀ (n : Nat), T.act w n = T.act w' n
+@Becoming.Turns.cascade_through_along : ∀ {W : Type u_1} {O : Type u_2} {A : Type u_3} {T : Becoming.Turns W O A}
+  {k : Nat},
+  (∀ (w : W), T.ReadsOnlyActsAlong k w) →
+    ∀ (N : Nat) (select : List A → Prop),
+      Becoming.Learning.Training.Through (T.AlikeBefore k) fun w => select (T.acts w N)
+Becoming.Turns.Unreached.along : ∀ (w : Bool), Becoming.Turns.Unreached.turns.ReadsOnlyActsAlong 0 w
+Becoming.Turns.Unreached.not_from : ¬Becoming.Turns.Unreached.turns.ReadsOnlyActsFrom 0

@@ -96,7 +96,7 @@ Ren, 15 October 2026: “What's the best choices to make? please make best of yo
   - Input: New formation as being first supported.
   - Preserved conditions: None. [Dependence.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean)
 - related, not a proved adapter: [continued-change-needs-openness](continued-change-needs-openness.md). Continued change needs openness; novelty needs gain, which under the first law comes from the rest or across the boundary: the two are stated apart.
-- related, not a proved adapter: [unceasing-generation-needs-renewal](unceasing-generation-needs-renewal.md). Unceasing generation needs recurring renewal; within a bounded whole with the rest idle, unceasing generation is return, not endless novelty.
+- related, not a proved adapter: [unceasing-generation-needs-renewal](unceasing-generation-needs-renewal.md). Unceasing arising needs recurring renewal; within a bounded whole with the rest idle, unceasing arising is return, not endless novelty.
 - related, not a proved adapter: [where-a-move-is-formed](where-a-move-is-formed.md). The counterpart for moves: moves formed by a whole, rest or part a list holds repeat within the list's length, and moves that never settle into a cycle need a former no list holds.
 - related, not a proved adapter: [whole-persists-through-generation](whole-persists-through-generation.md). A persisting whole of transient parts needs parts to keep arising; here, where endless novelty comes from.
 
@@ -146,6 +146,8 @@ Ren, 15 October 2026: “What's the best choices to make? please make best of yo
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T214533.564191Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json) | — |
 
 Aliases: `where novelty's gain comes from`, `新的增益从哪里来`, `every rise is given`, `每次上升都是被给予的`, `endless novelty is exchange beyond every finite family`, `无尽的新是越出每个有限家族的交换`, `unceasing generation within a bounded whole is return`, `有界整体中的不息生成是回返`
 
@@ -165,6 +167,7 @@ Aliases: `where novelty's gain comes from`, `新的增益从哪里来`, `every r
 - 20 October 2026, R37 (lens B of the twentieth review: the witness models as instances of one library, one bisimulation theory for a family of relations, the definition twins and copies stated once): Moved with their full names: from Population.lean to Prelude.lean, Distinct; from World.lean to Prelude.lean, total. Proof bindings (Arising.lean, Dependence.lean, Entropy.lean, Flow.lean, Population.lean, Prelude.lean, World.lean) rebound to core receipt 20261020T051144.879480Z. Re-pointed after reading the change: Arising.lean, Dependence.lean, Entropy.lean, Flow.lean, Population.lean, World.lean: twin definitions, witness models or copies replaced by the definition stated once, the instance of Witnesses or the kept name; kept statements unchanged; Prelude.lean: the definitions and statements stated once (Distinct, total, steps, nonzero, Copying.nth, Law.memberAt, Settling.consAct, DistinctUnder, downFrom and their laws) moved here; other statements unchanged. The claim is unchanged.
 - 26 October 2026, board item DF1b (study section 422): The Chinese edition writes the spine's first law (Flow.Gainless) 第一律, as the account does, not 第一定律, which names thermodynamics' first law.
 - 6 November 2026, board item LM: declarations this record lists moved with the helpers stated once; its references follow them, and no law changed.
+- 7 November 2026, board item LM2: "generation" for arising (Unceasing) and for a flow more without end (More) is replaced, since the glossary's generation never means arising; the Lean's docstrings changed with it. No law, premise or proof changed.
 - 2 rebinding entries (2026-10-17 to 2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](where-novelty-gain-comes-from.json).
 
 <a id="earlier-text--早期文本"></a>

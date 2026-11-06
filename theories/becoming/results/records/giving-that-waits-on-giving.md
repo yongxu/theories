@@ -83,6 +83,7 @@ An account of social viability Ren brought on 19 October 2026 lists eight constr
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T235844.485705Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T214533.564191Z/verification.json) | — |
 
 Aliases: `giving that waits on giving`, `等待给出的给出`, `withholding absorbs`, `Becoming.Withholding.withholding_absorbs`, `Becoming.Withholding.withholding_returns`, `cooperation among strangers (reading)`
 

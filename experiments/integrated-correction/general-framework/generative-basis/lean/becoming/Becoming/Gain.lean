@@ -46,7 +46,7 @@ With the rest of the whole counted as a relatum (`Flow.withImbalance`), nothing 
 So endless novelty of a finite family, and endless new formation where what forms requires a fixed
 amount within it, is exchange beyond that family at arbitrarily late steps: through its boundary,
 or from the rest. For a finite whole there is no boundary to cross, and with the rest idle the
-whole recurs: unceasing generation within a bounded whole is return, not novelty without end.
+whole recurs: unceasing arising within a bounded whole is return, not novelty without end.
 
 **Readings (the AI's, adopted on Ren's delegation of 15 October 2026, DELEGATED-CHOICES D7, D27).**
 “Gain from beyond the part” is read as these two ways in, the boundary and the rest. The rest counts
@@ -318,7 +318,7 @@ theorem whole_recurs_of_rest_idle {all : List C} (every : ∀ c, c ∈ all) (dis
    fun exchanging => uncarried_of_bounded
      (whole_bounded_of_rest_idle every distinct gainless idle) exchanging⟩
 
-/-- So it is not new at every step: unceasing generation within a bounded whole is return. -/
+/-- So it is not new at every step: unceasing arising within a bounded whole is return. -/
 theorem whole_not_new_of_rest_idle {all : List C} (every : ∀ c, c ∈ all) (distinct : Distinct all)
     (gainless : L.Gainless) {T : Nat}
     (idle : ∀ t, T ≤ t → ¬ (L.withImbalance W).NetGiver all t none) :

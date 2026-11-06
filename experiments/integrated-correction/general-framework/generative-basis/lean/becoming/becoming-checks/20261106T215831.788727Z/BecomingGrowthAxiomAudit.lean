@@ -1,0 +1,20 @@
+import Becoming.Growth
+#print axioms Becoming.Web.IncludesAlong
+#print axioms Becoming.Web.ExceedsAlong
+#print axioms Becoming.Web.WidensAlong
+#print axioms Becoming.Web.includesAlong_id_iff
+#print axioms Becoming.Web.exceedsAlong_id_iff
+#print axioms Becoming.Web.widensAlong_id_iff
+#print axioms Becoming.Web.IncludesAlong.comp
+#print axioms Becoming.Web.IncludesAlong.widensAlong_comp
+#print axioms Becoming.Web.WidensAlong.comp
+#print axioms Becoming.Web.Growth
+#print axioms Becoming.Web.grow
+#print axioms Becoming.Web.oldLevels
+#print axioms Becoming.Web.grow_admits_old
+#print axioms Becoming.Web.grow_includesAlong_iff
+#print axioms Becoming.Web.grow_widensAlong_iff
+#print axioms Becoming.Web.grow_widensAlong_iff_new
+#print axioms Becoming.Web.grow_widens_unregistered
+#print axioms Becoming.Web.attach
+#print axioms Becoming.Web.attach_widensAlong_iff

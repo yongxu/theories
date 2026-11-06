@@ -10,7 +10,7 @@ many formations are active at each step, and ties the flow's count to the web's.
 * A *census* lists the formations active at each step, each once (`Census`).
 * If more formations are active after a step than before, some formation active after
   the step was not active before: it arises across the step (`arises_of_more`). A
-  census that grows without bound makes generation unceasing (`unceasing_of_growth`).
+  census that grows without bound makes arising unceasing (`unceasing_of_growth`).
 * The census law: where the members of which a determination holds are listed at each
   step, each once (`Listed`), the list after a step with the members that ceased to be
   is the list before it with the members that came to be (`Listed.across`), and so over
@@ -72,11 +72,11 @@ many formations are active at each step, and ties the flow's count to the web's.
 * Under a census, with each formation taking part in the flow listed once and only
   active formations taking (`Flow.Taking`, of which only the activity half is used),
   the active formations grow without bound (`Flow.More.grows`), and more without end
-  makes generation unceasing (`Flow.More.unceasing`). The premises hold together in the
+  makes arising unceasing (`Flow.More.unceasing`). The premises hold together in the
   expansion and the cycle (`Expansion.counted`, `Cycle.counted`). Not conversely: the oscillator
   meets every one of these premises, arises again and again, and is not more
   (`Oscillation.counted`). Under this correspondence, more without end is strictly stronger
-  than unceasing generation.
+  than unceasing arising.
 * Each premise does work. Without a census, every formation of an infinite family can be
   active from the start, and more without end comes with nothing arising (`Dormant`).
   Without `Taking`, the flow's takers need not be active: one formation gives to ever
@@ -1157,7 +1157,7 @@ theorem arises_of_more {t : Nat} {before after : List F}
   | .inr all => absurd more (Nat.not_lt_of_ge
       (length_le_of_sub distinct fun f mem => listed f (all f mem)))
 
-/-- A census that grows without bound makes generation unceasing. -/
+/-- A census that grows without bound makes arising unceasing. -/
 theorem unceasing_of_growth {alive : Nat → List F} (census : W.Census alive)
     (grows : ∀ N K, ∃ t, N ≤ t ∧ K < (alive t).length) : W.Unceasing :=
   fun N => match grows N (alive N).length with
@@ -1254,7 +1254,7 @@ theorem Flow.More.arising_never_stops_covering {W : Web F C} {L : Flow F C} {cs 
           (many (M + (T + S)) (Nat.le_trans (Nat.le_add_right T S) (Nat.le_add_left _ M)))
           (count_le_of_sub (distinct _ from_) fun f mem takes => all f mem takes))
 
-/-- More without end makes generation unceasing with no census, where activity is decided
+/-- More without end makes arising unceasing with no census, where activity is decided
 from some step on: where lists cover the active formations at arbitrarily late steps, and
 from that step on each formation taking part is listed once, whatever takes is active, and
 activity is decided. Some taker late enough lies beyond the covering list of an earlier
@@ -1288,7 +1288,7 @@ theorem Flow.More.unceasing_covering {W : Web F C} {L : Flow F C} {cs : List C} 
             | ⟨s, after, _, comes⟩ =>
               ⟨s, f, Nat.le_trans (Nat.le_trans (Nat.le_add_right N S) later) after, comes⟩
 
-/-- More without end makes generation unceasing when a census lists the active
+/-- More without end makes arising unceasing when a census lists the active
 formations, each formation taking part in the flow is listed once, and only active
 formations take. -/
 theorem Flow.More.unceasing {W : Web F C} [∀ t f, Decidable (W.active t f)] {L : Flow F C}
@@ -1359,7 +1359,7 @@ theorem counted :
 
 end Cycle
 
-/-! ## Under a census, unceasing generation is not yet more -/
+/-! ## Under a census, unceasing arising is not yet more -/
 
 namespace Oscillation
 
@@ -1384,7 +1384,7 @@ theorem census : web.Census alive
 
 /-- The oscillator meets every premise of `Flow.More.unceasing` except more without end: a
 census lists the active formations, the source and the oscillator take part once each, and only
-the active oscillator takes. Generation is unceasing and not more. -/
+the active oscillator takes. Arising is unceasing, and the flow is not more without end. -/
 theorem counted :
     web.Census alive ∧ (∀ t, Distinct (flow.present t)) ∧ flow.Taking web ∧
     web.Unceasing ∧ ¬ flow.More [()] :=
@@ -1401,7 +1401,7 @@ def web : Web (Expansion.Kind × Nat) Unit :=
   { Expansion.web with active := fun _ _ => True }
 
 /-- Every premise of `More.renewers_unbounded` holds, only active formations take, and
-generation is more without end, yet nothing arises: infinitely many formations are
+the flow is more without end, yet nothing arises: infinitely many formations are
 active at every step, so no census lists them. -/
 theorem more_without_arising :
     Expansion.flow.Balances web ∧ Expansion.flow.Acting web ∧ Expansion.flow.Taking web ∧
@@ -1446,7 +1446,7 @@ theorem census : web.Census fun _ => [()] :=
     fun f => ⟨fun _ => match f with | () => .head [], fun _ => trivial⟩⟩
 
 /-- A census lists the one active formation, the flow balances, only active formations
-give and take, and only from what they draw on; generation is more without end, and
+give and take, and only from what they draw on; the flow is more without end, and
 nothing ever arises. The one premise of `Flow.More.unceasing` that fails is that the
 flow lists each formation once. -/
 theorem more_without_arising :
@@ -1509,7 +1509,7 @@ theorem distinct : ∀ n, Distinct (present n)
   | n + 1 => ⟨fun mem => Nat.not_succ_le_self n (present_le n (n + 1) mem), distinct n⟩
 
 /-- The flow balances, only active formations give, a census lists the active
-formations, each formation takes part once, and generation is more without end; yet the
+formations, each formation takes part once, and the flow is more without end; yet the
 takers are never active and nothing arises. -/
 theorem more_without_arising :
     flow.Balances web ∧ flow.Acting web ∧ web.Census alive ∧
@@ -1540,7 +1540,7 @@ def flow : Flow Nat Unit := ⟨Cycle.present, fun _ _ _ => 0, fun _ _ _ => 0⟩
 
 /-- The flow balances the web, and only active formations take and give; ever more
 formations are active, depend on the condition and draw on it, yet no formation takes in
-the flow and generation is not more without end. -/
+the flow, so it is not more without end. -/
 theorem drawing_without_taking :
     flow.Balances Cycle.web ∧ flow.Acting Cycle.web ∧ flow.Taking Cycle.web ∧
     Cycle.web.Dependent ∧

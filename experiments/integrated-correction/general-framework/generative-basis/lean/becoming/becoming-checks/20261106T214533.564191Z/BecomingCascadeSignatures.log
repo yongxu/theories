@@ -1,0 +1,27 @@
+@Becoming.Turns.law_alike_of_cascade : ∀ {W : Type u_1} {O : Type u_2} {A : Type u_3} {T : Becoming.Turns W O A}
+  {k : Nat},
+  T.ReadsOnlyActsFrom k →
+    ∀ {w w' : W},
+      T.AlikeBefore k w w' →
+        ∀ {n : Nat},
+          T.acts w n = T.acts w' n → T.law n (T.coupling n w) (T.acts w n) = T.law n (T.coupling n w') (T.acts w' n)
+@Becoming.Turns.acts_alike_of_cascade : ∀ {W : Type u_1} {O : Type u_2} {A : Type u_3} {T : Becoming.Turns W O A}
+  {k : Nat}, T.ReadsOnlyActsFrom k → ∀ {w w' : W}, T.AlikeBefore k w w' → ∀ (n : Nat), T.acts w n = T.acts w' n
+@Becoming.Turns.act_alike_of_cascade : ∀ {W : Type u_1} {O : Type u_2} {A : Type u_3} {T : Becoming.Turns W O A}
+  {k : Nat}, T.ReadsOnlyActsFrom k → ∀ {w w' : W}, T.AlikeBefore k w w' → ∀ (n : Nat), T.act w n = T.act w' n
+@Becoming.Turns.cascade_through : ∀ {W : Type u_1} {O : Type u_2} {A : Type u_3} {T : Becoming.Turns W O A} {k : Nat},
+  T.ReadsOnlyActsFrom k →
+    ∀ (N : Nat) (select : List A → Prop),
+      Becoming.Learning.Training.Through (T.AlikeBefore k) fun w => select (T.acts w N)
+@Becoming.Turns.separates_at : ∀ {W : Type u_1} {O : Type u_2} {A : Type u_3} {T : Becoming.Turns W O A} {w w' : W}
+  {n : Nat},
+  T.acts w n = T.acts w' n →
+    (T.act w n ≠ T.act w' n ↔ T.law n (T.coupling n w) (T.acts w n) ≠ T.law n (T.coupling n w') (T.acts w n))
+@Becoming.Turns.Copying.readsOnlyActs : ∀ {W : Type u_1} {O : Type u_2} (coupling : Nat → W → O) (fallback : O),
+  (Becoming.Turns.Copying.turns coupling fallback).ReadsOnlyActsFrom 1
+@Becoming.Turns.Copying.reaches_first_only : ∀ {W : Type u_1} {O : Type u_2} (coupling : Nat → W → O) (fallback : O)
+  {w w' : W},
+  coupling 0 w = coupling 0 w' →
+    ∀ (n : Nat),
+      (Becoming.Turns.Copying.turns coupling fallback).act w n =
+        (Becoming.Turns.Copying.turns coupling fallback).act w' n

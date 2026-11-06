@@ -80,6 +80,7 @@ Self-concern is an order increasing in what one's own continuation marks; being 
 | statement | [07-SIGNIFICANCE.md](../../chapters/07-SIGNIFICANCE.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T033635.582311Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T062217.665179Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T214533.564191Z/verification.json) | — |
 
 Aliases: `self-concern gives what C asks between listed level paths, one way`, `自关切于所列层径间单向给出 C 之所求`, `Becoming.Weighting.increasingInOwn_iff_increasing_iff_noOutside`, `Becoming.Weighting.increasingInOwn_iff_increasing_iff_unrestricted`, `Becoming.Web.extension_ranked_of_increasingInOwn`, `Becoming.increasingInOwn_with_net`
 

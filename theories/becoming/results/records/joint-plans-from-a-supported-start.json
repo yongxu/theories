@@ -10,8 +10,8 @@
   "family": "F02",
   "reviewed_at_utc": "2026-10-26T16:50:00+00:00",
   "statement": {
-    "en": "Paired valid local plans are jointly valid where joint steps project faithfully, two properties hold on the start, locally allowed moves are jointly available where both hold and every joint step keeps both; mutual eventual promises force nothing, and in a witness ignition needs a stored reserve.",
-    "zh": "共同之步如实投影、两性质在起点成立、两者成立处局部允许之动作皆可共同实施、每一共同之步保持两者时，配对之有效局部方案共同有效；相互之终将承诺不迫使任何事；见证中点燃需要所储之储备。"
+    "en": "Paired valid local plans are jointly valid where joint steps project faithfully, two properties hold on the start, locally allowed moves are jointly available where both hold and every joint step keeps both; mutual eventual promises force nothing; a witness's ignition needs a reserve by definition.",
+    "zh": "共同之步如实投影、两性质在起点成立、两者成立处局部允许之动作皆可共同实施、每一共同之步保持两者时，配对之有效局部方案共同有效；相互之终将承诺不迫使任何事；见证之点燃按定义需要储备。"
   },
   "laws": [
     {
@@ -189,6 +189,10 @@
     {
       "en": "7 November 2026, board item AA: the atlas's readers found a clause true by the move's definition and not labelled so, and a reading saying promises cannot start a loop where the law says they force nothing; corrected against the Lean and the later records.",
       "zh": "2026年11月7日，工作板条目 AA：图谱读者发现一个按动作定义即真的子句未被如此标明，一则读法说承诺不能启动一环而其律只说不迫使任何事；已对照 Lean 与后来的记录改正。"
+    },
+    {
+      "en": "7 November 2026, board item LM2: the statement says, as law 3 already did, that ignition needs a reserve by its definition (near-definitional). No law, premise or proof changed.",
+      "zh": "2026年11月7日，工作板条目 LM2：陈述如第三律所言，点燃按其定义需要储备（近于定义）。诸律、前提与证明皆不变。"
     }
   ]
 }

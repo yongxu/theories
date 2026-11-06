@@ -134,6 +134,7 @@ The zero-premise plan lists discrete steps as a commitment of the representation
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T214533.564191Z/verification.json) | — |
 
 Aliases: `Becoming.Strict`, `Becoming.span`, `Becoming.Web.sample`, `Becoming.Flow.sample`, `Becoming.Flow.BalancesOn.sample`, `Becoming.Flow.DissipatesOn.sample`, `Becoming.Flow.sample_closedAt_iff`, `Becoming.Flow.RunsDownOn.sample`, `Becoming.Flow.RunsDownOn.sample_of_fine`, `Becoming.Flow.sample_changes_iff`, `Becoming.Flow.sample_comesToStand_iff`, `Becoming.Flow.sample_ceasesToStand_iff`, `Becoming.Web.sample_arises`, `Becoming.Web.sample_ceases`, `Becoming.World.sample_survives`, `Becoming.World.sample_rests_unrefuted`
 

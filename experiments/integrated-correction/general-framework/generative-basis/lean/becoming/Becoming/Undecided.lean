@@ -31,8 +31,8 @@ what revision does with it, with no premise.
   `k` and decided after (`chain_undecided`, `chain_decided`), so `N + 1` sentences are not steady
   at step `N` (`chain_exact`). The counting behind it is a law of its own: readings on a list that
   only rise, and once steady stay steady, are steady by the list's length (`settles_within`).
-* **The liar rests, undecided.** The sentence that denies itself is undecided at every stage
-  (`liar_rests`); a run of its revision from any start rests exactly where it is undecided
+* **The liar rests, undecided.** The sentence that denies itself is undecided at every stage of
+  the run from all undecided (`liar_rests`); a run of its revision from any start rests exactly where it is undecided
   (`liar_rests_iff`, `neg_fixed_iff`). The sentence that affirms itself keeps whatever value it
   starts with (`truthTeller_keeps`), and from all undecided it rests undecided
   (`truthTeller_rests`).
@@ -561,7 +561,7 @@ def truthTeller : Nat → Term := fun _ => .var 0
 
 theorem liar_closed : Closed liar 1 := fun _ _ => Nat.lt_succ_self 0
 
-/-- **The liar rests, undecided**, at every stage. -/
+/-- **The liar rests, undecided**, at every stage of the run from all undecided (`stage`). -/
 theorem liar_rests : ∀ n i, stage liar n i = u
   | 0, _ => rfl
   | n + 1, _ => congrArg Value.neg (liar_rests n 0)

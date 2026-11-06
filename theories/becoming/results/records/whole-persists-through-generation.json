@@ -2,8 +2,8 @@
   "schema_version": 2,
   "id": "whole-persists-through-generation",
   "title": {
-    "zh": "整体经由部分的生成而持续",
-    "en": "A whole persists through the generation of its parts"
+    "zh": "整体经由部分的生起而持续",
+    "en": "A whole persists through the arising of its parts"
   },
   "kind": "theorem",
   "status": "recorded-checked",
@@ -191,8 +191,8 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Wholes.lean",
       "detail": {
-        "zh": "在 Brief 之下，生成可以是同样的部分反复生起（Layered.brief、Layered.within、Layered.arise_again）：Layered 的两个成员都 Brief 1，arises_within 适用，没有一步无成员生起，每次生起都是两者之一，它们的活动不终结。",
-        "en": "Under Brief, generation may be the same parts arising again (Layered.brief, Layered.within, Layered.arise_again): both members of Layered are Brief 1, arises_within applies, no step passes with no member arising, every arising is of one of the two, and neither's activity ends."
+        "zh": "在 Brief 之下，生起的可以是同样的部分，反复生起（Layered.brief、Layered.within、Layered.arise_again）：Layered 的两个成员都 Brief 1，arises_within 适用，没有一步无成员生起，每次生起都是两者之一，它们的活动不终结。",
+        "en": "Under Brief, the parts that arise may be the same parts arising again (Layered.brief, Layered.within, Layered.arise_again): both members of Layered are Brief 1, arises_within applies, no step passes with no member arising, every arising is of one of the two, and neither's activity ends."
       }
     }
   ],
@@ -209,8 +209,8 @@
     "zh": "陈述整体的依存、汲取与侵蚀怎样由部分的关系构成（如一个汲取侵蚀成员而不侵蚀谱系，或反之），成员资格随步变化，并在耗散与数目增长（“更多”）之下读部分与整体。"
   },
   "correspondence": {
-    "en": "The fifth independent review found that a lineage and its members are two levels of one unfolding, the part–whole relation being what a single level of naming omits, and wrote that a representation with a part–whole relation among formations would make it a theorem, which this result gives. Ren's words (7 October 2026) are “生生不息 - 一种整体的，不断创造更多生的方向” (a whole direction of unceasingly creating more 生). Where parts are brief, or end with finitely many active at once, persistence read at the level of the whole (the lineage) needs unceasing generation at the level of its members: the two levels are not alternatives, and the whole's 不息 goes through its parts' 生生 (an AI reading and argument; the seventh independent review corrected the earlier “is” and “made of”: Whole is only coincidence of activity). Under Brief this needs only the same members arising again (Layered); under Ends and Listed it needs ever new members (needs_new); neither needs their number to grow, so “unceasingly creating more” in Ren's words does not follow from it; it neither replaces Ren's words nor shows that it is good, and reading 生生不息 at the whole's level is an AI reading.",
-    "zh": "第五次独立审查指出，谱系与成员是同一展开的两个层次，部分与整体的关系是单一命名层次所省略的关系，并写道：一个含形成之间部分与整体关系的表示，会使它成为定理。本结果给出这一表示与定理。Ren 的原话（2026年10月7日）是“生生不息 - 一种整体的，不断创造更多生的方向”。在部分短暂，或部分终结且同时活跃的部分有限的前提下，读到整体（谱系）层次的持续，需要成员层次的不息生成：两个层次不是二选一，整体的“不息”经由部分的“生生”（AI 的读法与论证；第七次独立审查更正了此前“就是”与“构成”的说法：Whole 只是活动的重合）。在 Brief 之下，这只要求同样的成员反复生起（Layered）；在 Ends 与 Listed 之下，要求不断新的成员（needs_new）；两者都不要求数目增长，原话中的“不断创造更多”没有由此推出；它不替代 Ren 的原话，也不推出它是好的；把“生生不息”读在整体的层次是 AI 的读法。"
+    "en": "The fifth independent review found that a lineage and its members are two levels of one unfolding, the part–whole relation being what a single level of naming omits, and wrote that a representation with a part–whole relation among formations would make it a theorem, which this result gives. Ren's words (7 October 2026) are “生生不息 - 一种整体的，不断创造更多生的方向” (a whole direction of unceasingly creating more 生). Where parts are brief, or end with finitely many active at once, persistence read at the level of the whole (the lineage) needs unceasing arising at the level of its members: the two levels are not alternatives, and the whole's 不息 goes through its parts' 生生 (an AI reading and argument; the seventh independent review corrected the earlier “is” and “made of”: Whole is only coincidence of activity). Under Brief this needs only the same members arising again (Layered); under Ends and Listed it needs ever new members (needs_new); neither needs their number to grow, so “unceasingly creating more” in Ren's words does not follow from it; it neither replaces Ren's words nor shows that it is good, and reading 生生不息 at the whole's level is an AI reading.",
+    "zh": "第五次独立审查指出，谱系与成员是同一展开的两个层次，部分与整体的关系是单一命名层次所省略的关系，并写道：一个含形成之间部分与整体关系的表示，会使它成为定理。本结果给出这一表示与定理。Ren 的原话（2026年10月7日）是“生生不息 - 一种整体的，不断创造更多生的方向”。在部分短暂，或部分终结且同时活跃的部分有限的前提下，读到整体（谱系）层次的持续，需要成员层次的不息生起：两个层次不是二选一，整体的“不息”经由部分的“生生”（AI 的读法与论证；第七次独立审查更正了此前“就是”与“构成”的说法：Whole 只是活动的重合）。在 Brief 之下，这只要求同样的成员反复生起（Layered）；在 Ends 与 Listed 之下，要求不断新的成员（needs_new）；两者都不要求数目增长，原话中的“不断创造更多”没有由此推出；它不替代 Ren 的原话，也不推出它是好的；把“生生不息”读在整体的层次是 AI 的读法。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Wholes.lean",
   "aliases": [
@@ -271,8 +271,8 @@
           "en": "Two levels of naming, lineage and members."
         },
         "input": {
-          "zh": "两个层次由整体关系联系，整体的持续蕴含部分的生成。",
-          "en": "The levels related as whole and parts, the whole's persistence entailing its parts' generation."
+          "zh": "两个层次由整体关系联系，整体的持续蕴含部分的生起。",
+          "en": "The levels related as whole and parts, the whole's persistence entailing its parts' arising."
         },
         "conditions": {
           "zh": "Whole。",
@@ -300,8 +300,8 @@
     {
       "id": "theory-of-becoming-foundation",
       "detail": {
-        "zh": "整体与部分：部分短暂，或部分终结且同时活跃的部分有限时，整体经由部分的生成而持续。整体的演绎仍开放。",
-        "en": "Whole and parts: where parts are brief, or end with finitely many active at once, a whole persists through the generation of its parts. The whole deduction remains open."
+        "zh": "整体与部分：部分短暂，或部分终结且同时活跃的部分有限时，整体经由部分的生起而持续。整体的演绎仍开放。",
+        "en": "Whole and parts: where parts are brief, or end with finitely many active at once, a whole persists through the arising of its parts. The whole deduction remains open."
       }
     },
     {
@@ -323,7 +323,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Wholes.lean",
       "role": "proof",
-      "sha256": "22aa1957fd18c75c8acf58c612bf9721456c9e711862867797b68f12aa819ac9",
+      "sha256": "f02bb25d687755fd7fb88f7a405c3725eadc38fea58f06b38241d3493d183d07",
       "declarations": [
         "Becoming.Web.Whole",
         "Becoming.Web.Listed",
@@ -381,7 +381,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
       "role": "proof",
-      "sha256": "94e9be0baad1667d0d06acdfa757543c292c054c3a7eeaefccbe10b43bd321b5",
+      "sha256": "3e88ad9f714b60ef56bdec298d89aa8b843c4d225f07993ee39f022af3016e05",
       "declarations": [
         "Becoming.Pulse.half"
       ]
@@ -389,7 +389,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Identity.lean",
       "role": "proof",
-      "sha256": "5a55b1d2659cf050d48b78606b449a50dd95c7b574a3fb0896f65765241c9607",
+      "sha256": "49869703e523b506b003dcb3acd9c426af8c370719b329415c492f7c11517c95",
       "declarations": [
         "Becoming.odd",
         "Becoming.Layered.Level",
@@ -400,7 +400,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Arising.lean",
       "role": "proof",
-      "sha256": "986cd16faa229bd218c860f97dde734fd06bd100ee119d7a13484260f907258e",
+      "sha256": "77e62221c4556f61fd75c45ca7f9e1cd8528f08c9e14f7bbbc86867e2f6d4c71",
       "declarations": [
         "Becoming.Web.Arises",
         "Becoming.Web.Unceasing"
@@ -580,12 +580,24 @@
       "role": "receipt",
       "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T214533.564191Z/verification.json",
+      "role": "receipt",
+      "sha256": "1d84754646f4039d0950bbdb24bfa8fbd78dc9f9643cf7b9f13ae4250ac24251",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json",
+      "role": "receipt",
+      "sha256": "8f1d2bed589ebd558ab122d2b21ff3e27c19916c91a47d94b4b0829f76d45192",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Wholes.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T184601.050950Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Wholes",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -599,21 +611,21 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Flow",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Identity.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Identity",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Arising.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Arising",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -697,6 +709,14 @@
     {
       "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section 441): statement kept; the claim split into twelve laws, each read against its declarations in Wholes.lean (the definitions, coincidence of activity, arising through a part, the two cover laws, the whole's laws, the six witnesses), the negated universals kept as the Lean has them; the limitations to six does-not-show items, the hypotheses and the standard boundaries no-ethical-premise and no-evaluation; review-item labels, a section number and a delegation label cut from the correspondence, Ren's words kept verbatim with their date and the AI label kept; the evidence paragraph names the independent review the record took; no premise, status, reference, source hash or proof binding changed. Every earlier sentence is mapped in [whole-persists-through-generation.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/whole-persists-through-generation.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in the references, the proof bindings, laws, the counterexamples, hypotheses, the correspondence, each read against the Lean it cites.",
       "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 441 节）：陈述保留；主张拆为十二条规律，各条对照 Wholes.lean 中的声明核读（定义、活动的重合、经部分生起、两条覆盖之律、整体之律、六个见证），否定全称按 Lean 保留；限制改为六条“未表明”、前提与通用边界 no-ethical-premise、no-evaluation；对应中删去审查条目编号、节号与交托编号，Ren 的原话连同日期逐字保留，AI 标签保留；证据段写明记录采纳过的独立审查；前提、状态、引用、来源哈希与证明绑定均未改变。每句旧文本的去向见 [whole-persists-through-generation.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/whole-persists-through-generation.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及引用、证明绑定、规律、反例、前提、对应，各条对照所引 Lean 核读。"
+    },
+    {
+      "en": "7 November 2026, board item LM2: \"generation\" for arising (Unceasing) and for a flow more without end (More) is replaced, since the glossary's generation never means arising; the Lean's docstrings changed with it. No law, premise or proof changed.",
+      "zh": "2026年11月7日，工作板条目 LM2：以“生成”称生起（Unceasing）与不止地更多之流（More）处已改，因词汇表之生成从不指生起；Lean 之说明随之而改。诸律、前提与证明皆不变。"
+    },
+    {
+      "en": "7 November 2026, board item LM2 (its reader's findings): \"generation\" for embodied arising or for arising is replaced, since the glossary's generation never means arising. No law, premise or proof changed.",
+      "zh": "2026年11月7日，工作板条目 LM2（其读者之所见）：以“生成”称体现之生起或生起处已改，因词汇表之生成从不指生起。诸律、前提与证明皆不变。"
     }
   ],
   "text_versions": [

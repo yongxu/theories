@@ -4,7 +4,7 @@ import Becoming.Population
 # Dissipation: recurring taking opens finite families and, enclosed around, draws in
 
 `Becoming.Flow` shows that the renewers can be the takers themselves: in a closed cycle
-each formation gives back what it takes, and generation is more without end (`Cycle`).
+each formation gives back what it takes, and the flow is more without end (`Cycle`).
 Whether continued taking must draw on more than any finite part of the unfolding turns
 on dissipation. This module states that premise on flows and proves what it carries.
 
@@ -34,7 +34,7 @@ on dissipation. This module states that premise on flows and proves what it carr
   steps is not closed from any step on, and neither is any finite family without
   repetition containing it: at arbitrarily late steps some formation taking part
   exchanges with a condition outside it (`Dissipative.opens`). Any recurring uptake is
-  such taking, whether of more, of generation or of maintenance: more without end
+  such taking, whether of more, of arising or of maintenance: more without end
   (`More.opens`), the unceasing arising of formations that take (`opens_of_arising`),
   and one eater kept up with nothing arising and no growth (`Lone`). The exchange
   beyond the family need not touch the family: where no step is enclosed, it can be an
@@ -1122,7 +1122,7 @@ theorem arises_taking (t : Nat) : Frontier.flow.ArisesTaking web [.pool] t (.gro
 
 /-- With the growers depending on the pool, the frontier meets every premise of
 `Flow.More.unceasing` together with balance, `Acting`, `Dependent` and dissipation: its
-generation is unceasing, and every finite family without repetition containing the pool
+arising is unceasing, and every finite family without repetition containing the pool
 is open at arbitrarily late steps, by `opens_of_arising` as well as by `More.opens`. -/
 theorem rooted :
     Frontier.flow.Balances web ∧ Frontier.flow.Acting web ∧ Frontier.flow.Taking web ∧
@@ -1203,7 +1203,7 @@ theorem dissipative : flow.Dissipative
             (Nat.le_trans (Nat.le_of_eq burnt.symm) (le_total_of_mem inside))))
           fun outside => Nat.noConfusion (burnt.symm.trans (closed .source mem (.fuel t) outside).1)
 
-/-- One formation takes from the pool at every step, nothing ever arises, and generation
+/-- One formation takes from the pool at every step, nothing ever arises, and the flow
 is not more without end; the flow balances and is dissipative. -/
 theorem lone :
     flow.Balances web ∧ flow.Dissipative ∧ (∀ t, flow.takers [.pool] t = 1) ∧

@@ -10,8 +10,8 @@
   "family": "F01",
   "reviewed_at_utc": "2026-11-01T09:47:31+00:00",
   "statement": {
-    "zh": "更多的生成需要更多更新者：不止地更多的生成需要没有最终界的补充，每个形成给予有限时需要没有最终界的补充者；在活跃形成的普查之下，它蕴含不息的生成。",
-    "en": "More generation needs more renewers: generation more without end needs replenishment with no eventual bound and, with bounded capacity, renewers with no eventual bound; under a census of active formations it implies unceasing generation."
+    "zh": "更多的取用者需要更多更新者：不止地更多的流需要没有最终界的补充，每个形成给予有限时需要没有最终界的补充者；在活跃形成的普查之下，它蕴含不息的生起。",
+    "en": "More takers need more renewers: a flow more without end needs replenishment with no eventual bound and, with bounded capacity, renewers with no eventual bound; under a census of active formations it implies unceasing arising."
   },
   "laws": [
     {
@@ -45,8 +45,8 @@
       ]
     },
     {
-      "zh": "生成不止地更多，当对每个数，从某步起每一步至少有那么多形成从家族取用。取用的量是自然数，所以每个取用者每步至少取用一个单位；于是在任意一段至少 K 个形成取用的步上，家族所得的补充每步至少 K，减去开始时的存量；不止地更多需要补充没有最终的界。在任何量上，同样的规律在有最小取用的阿基米德量中成立，这里是其整数实例；取用减半时不成立（least-loss-rest）。",
-      "en": "Generation is more without end when, for every number, from some step on at least that many formations take from the family at every step. Amounts are natural numbers, so each taker takes at least one unit per step; over any stretch from which at least K formations take, the family is replenished by at least K per step, less its stock at the start, and more without end needs replenishment with no eventual bound. Over any amounts the same holds with a least take in Archimedean amounts, of which this is the whole-number instance; with takes that halve it fails (least-loss-rest).",
+      "zh": "流不止地更多，当对每个数，从某步起每一步至少有那么多形成从家族取用。取用的量是自然数，所以每个取用者每步至少取用一个单位；于是在任意一段至少 K 个形成取用的步上，家族所得的补充每步至少 K，减去开始时的存量；不止地更多需要补充没有最终的界。在任何量上，同样的规律在有最小取用的阿基米德量中成立，这里是其整数实例；取用减半时不成立（least-loss-rest）。",
+      "en": "A flow is more without end when, for every number, from some step on at least that many formations take from the family at every step. Amounts are natural numbers, so each taker takes at least one unit per step; over any stretch from which at least K formations take, the family is replenished by at least K per step, less its stock at the start, and more without end needs replenishment with no eventual bound. Over any amounts the same holds with a least take in Archimedean amounts, of which this is the whole-number instance; with takes that halve it fails (least-loss-rest).",
       "declarations": [
         "Becoming.Flow.takers",
         "Becoming.Flow.More",
@@ -71,8 +71,8 @@
       ]
     },
     {
-      "zh": "在活跃形成的普查之下（每步活跃的形成列成不重复的有限表），若流的 present 每步每个形成只列一次，只有活跃的形成取用（Taking 中只用到这一半），活跃的形成没有界地增多，不止地更多蕴含不息的生成。",
-      "en": "Under a census of active formations (the active formations at each step listed once in a finite list), if the flow's present lists each formation once per step and only active formations take (only this half of Taking is used), the active formations grow without bound and more without end implies unceasing generation.",
+      "zh": "在活跃形成的普查之下（每步活跃的形成列成不重复的有限表），若流的 present 每步每个形成只列一次，只有活跃的形成取用（Taking 中只用到这一半），活跃的形成没有界地增多，不止地更多蕴含不息的生起。",
+      "en": "Under a census of active formations (the active formations at each step listed once in a finite list), if the flow's present lists each formation once per step and only active formations take (only this half of Taking is used), the active formations grow without bound and more without end implies unceasing arising.",
       "declarations": [
         "Becoming.Web.Census",
         "Becoming.Flow.Taking",
@@ -96,8 +96,8 @@
       ]
     },
     {
-      "zh": "每一步都生起一个更新者和一个生长者的流满足全部前提，并且不止地更多；在封闭循环中，每个形成归还所取，总量不变，生成不止地更多，补充者恰是取用者。",
-      "en": "A flow in which a renewer and a grower arise at every step meets every premise and is more without end; in a closed cycle each formation gives back what it takes, the total never changes, generation is more without end, and the renewers are exactly the takers.",
+      "zh": "每一步都生起一个更新者和一个生长者的流满足全部前提，并且不止地更多；在封闭循环中，每个形成归还所取，总量不变，流不止地更多，补充者恰是取用者。",
+      "en": "A flow in which a renewer and a grower arise at every step meets every premise and is more without end; in a closed cycle each formation gives back what it takes, the total never changes, the flow is more without end, and the renewers are exactly the takers.",
       "declarations": [
         "Becoming.Expansion.more",
         "Becoming.Expansion.growers_take",
@@ -124,8 +124,8 @@
       ]
     },
     {
-      "zh": "“更多导致生成不止”不需要普查：只需在任意晚的步上有覆盖活跃者的列表，并从某步起参与者各列一次、取用者活跃、活跃已判定；有普查的形式是其推论。",
-      "en": "More without end makes generation unceasing with no census, given only lists covering the active formations at arbitrarily late steps and, from some step on, each formation taking part listed once, whatever takes active, and activity decided; the census forms are its corollaries.",
+      "zh": "“更多导致生起不息”不需要普查：只需在任意晚的步上有覆盖活跃者的列表，并从某步起参与者各列一次、取用者活跃、活跃已判定；有普查的形式是其推论。",
+      "en": "More without end makes arising unceasing with no census, given only lists covering the active formations at arbitrarily late steps and, from some step on, each formation taking part listed once, whatever takes active, and activity decided; the census forms are its corollaries.",
       "declarations": [
         "Becoming.Flow.takers_le_covering",
         "Becoming.Flow.More.grows_covering",
@@ -212,29 +212,29 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
       "detail": {
-        "zh": "不息的生成不蕴含更多（Oscillation.not_more）：振荡者不息地反复生起，流平衡，至多一个形成取用；它满足普查、present 不重复与 Taking（Oscillation.counted），所以“更多蕴含不息”是严格的。",
-        "en": "Unceasing generation does not imply more (Oscillation.not_more): the oscillator arises again and again, the flow balances, and at most one formation takes; it meets the census, present without repetition and Taking (Oscillation.counted), so “more implies unceasing” is strict."
+        "zh": "不息的生起不蕴含更多（Oscillation.not_more）：振荡者不息地反复生起，流平衡，至多一个形成取用；它满足普查、present 不重复与 Taking（Oscillation.counted），所以“更多蕴含不息”是严格的。",
+        "en": "Unceasing arising does not imply more (Oscillation.not_more): the oscillator arises again and again, the flow balances, and at most one formation takes; it meets the census, present without repetition and Taking (Oscillation.counted), so “more implies unceasing” is strict."
       }
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean",
       "detail": {
         "zh": "没有普查，不止地更多不蕴含不息（Dormant.more_without_arising）：扩张的流中每个形成从开始就活跃，全部前提与 Taking 成立，不止地更多，而没有任何生起。",
-        "en": "Without a census, more without end does not imply unceasing generation (Dormant.more_without_arising): with every formation of the expansion's flow active from the start, every premise and Taking hold and generation is more without end, while nothing arises."
+        "en": "Without a census, more without end does not imply unceasing arising (Dormant.more_without_arising): with every formation of the expansion's flow active from the start, every premise and Taking hold and the flow is more without end, while nothing arises."
       }
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean",
       "detail": {
         "zh": "没有 Taking，不止地更多不蕴含不息（Inactive.more_without_arising）：一个活跃的形成补充越来越多从不活跃的取用者，普查与 present 不重复成立，而没有任何生起；More 数的是流中的取用者，不是活的或依存的形成。",
-        "en": "Without Taking, more without end does not imply unceasing generation (Inactive.more_without_arising): one active formation replenishes ever more takers that are never active, the census and present without repetition hold, and nothing arises; More counts takers in the flow, not living or dependent formations."
+        "en": "Without Taking, more without end does not imply unceasing arising (Inactive.more_without_arising): one active formation replenishes ever more takers that are never active, the census and present without repetition hold, and nothing arises; More counts takers in the flow, not living or dependent formations."
       }
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean",
       "detail": {
         "zh": "present 有重复时，不止地更多不蕴含不息（Repeated.more_without_arising）：一个始终活跃的形成在第 t 步被列 t 次，普查、平衡、Acting 与 Taking 成立，不止地更多，而没有任何生起；只缺 present 不重复。",
-        "en": "With repetition in present, more without end does not imply unceasing generation (Repeated.more_without_arising): one formation, always active, is listed t times at step t; the census, balance, Acting and Taking hold and generation is more without end, while nothing arises; only present without repetition fails."
+        "en": "With repetition in present, more without end does not imply unceasing arising (Repeated.more_without_arising): one formation, always active, is listed t times at step t; the census, balance, Acting and Taking hold and the flow is more without end, while nothing arises; only present without repetition fails."
       }
     },
     {
@@ -248,14 +248,14 @@
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
       "detail": {
         "zh": "补充者没有最终的界，不是每步越来越多（Pulse.pulsed）：每个形成至多给予一单位，不止地更多，而在每个奇数步没有补充者、没有补充；“越来越多”只在平均意义上成立（Balances.renewers_over）。",
-        "en": "Renewers with no eventual bound are not ever more renewers at every step (Pulse.pulsed): each formation gives at most one unit and generation is more without end, while at every odd step no formation gives and nothing replenishes; “ever more” holds only in the averaged sense (Balances.renewers_over)."
+        "en": "Renewers with no eventual bound are not ever more renewers at every step (Pulse.pulsed): each formation gives at most one unit and the flow is more without end, while at every odd step no formation gives and nothing replenishes; “ever more” holds only in the averaged sense (Balances.renewers_over)."
       }
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
       "detail": {
         "zh": "补充者可以就是取用者（Cycle.closed_more）：每个形成归还所取，家族的总量不变，不息并且不止地更多，补充者恰是取用者；没有耗散前提，更多的要求不必传到家族之外。",
-        "en": "The renewers can be the takers (Cycle.closed_more): each formation gives back what it takes, the family's total never changes, generation is unceasing and more without end, and the renewers are exactly the takers; without a dissipation premise the demand need not pass beyond the family."
+        "en": "The renewers can be the takers (Cycle.closed_more): each formation gives back what it takes, the family's total never changes, arising is unceasing and the flow more without end, and the renewers are exactly the takers; without a dissipation premise the demand need not pass beyond the family."
       }
     },
     {
@@ -328,7 +328,7 @@
       "interface": {
         "output": {
           "zh": "有限家族的总水平、生起、不息与更新由形成造成；Oscillation 的依存网。",
-          "en": "Finite families' total level, arising, unceasing generation and renewal made by formations; the web of Oscillation."
+          "en": "Finite families' total level, arising, unceasing arising and renewal made by formations; the web of Oscillation."
         },
         "input": {
           "zh": "消耗与补充的平衡、更多与层级。",
@@ -369,8 +369,8 @@
     {
       "id": "theory-of-becoming-foundation",
       "detail": {
-        "zh": "生成、维持、转化、退化与消失中，本结果陈述更多的生成及其与更新的关系；整体的演绎仍开放。",
-        "en": "Among generation, maintenance, transformation, degeneration and dissolution, this result states more generation and its relation to renewal; the whole deduction remains open."
+        "zh": "生成、维持、转化、退化与消失中，本结果陈述不止地更多的取用者及其与更新的关系；整体的演绎仍开放。",
+        "en": "Among generation, maintenance, transformation, degeneration and dissolution, this result states more takers without end and their relation to renewal; the whole deduction remains open."
       }
     },
     {
@@ -406,7 +406,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
       "role": "proof",
-      "sha256": "94e9be0baad1667d0d06acdfa757543c292c054c3a7eeaefccbe10b43bd321b5",
+      "sha256": "3e88ad9f714b60ef56bdec298d89aa8b843c4d225f07993ee39f022af3016e05",
       "declarations": [
         "Becoming.sign",
         "Becoming.count",
@@ -468,7 +468,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Arising.lean",
       "role": "proof",
-      "sha256": "986cd16faa229bd218c860f97dde734fd06bd100ee119d7a13484260f907258e",
+      "sha256": "77e62221c4556f61fd75c45ca7f9e1cd8528f08c9e14f7bbbc86867e2f6d4c71",
       "declarations": [
         "Becoming.Web.stock",
         "Becoming.Web.RenewedBy",
@@ -519,7 +519,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean",
       "role": "proof",
-      "sha256": "852a5491313223e5de476027cd98408c196db67ac2c263d776dd28e6d050ac3c",
+      "sha256": "ff6f2ba5ddcb739270d987a8ddc145ff6075df55a987f7debddd75fe90796a2f",
       "declarations": [
         "Becoming.length_le_of_sub",
         "Becoming.count_le_of_sub",
@@ -722,19 +722,31 @@
       "role": "receipt",
       "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T214533.564191Z/verification.json",
+      "role": "receipt",
+      "sha256": "1d84754646f4039d0950bbdb24bfa8fbd78dc9f9643cf7b9f13ae4250ac24251",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json",
+      "role": "receipt",
+      "sha256": "8f1d2bed589ebd558ab122d2b21ff3e27c19916c91a47d94b4b0829f76d45192",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Flow",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Population",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -769,7 +781,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Arising.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Arising",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -876,6 +888,14 @@
     {
       "en": "1 November 2026, U4c (study section 492): declarations moved with their full names: length_le_of_matched, mem_remove, total_pos to Becoming.Prelude, with the list and stretch lemmas the root's census laws use; mem_remove, length_le_of_matched generalized from Type to every universe, every earlier use an instance. The cited Lean source and its proof binding follow them; the claim is unchanged.",
       "zh": "2026年11月1日，U4c（研究第 492 节）：声明以完整名称移动：length_le_of_matched, mem_remove, total_pos 移至 Becoming.Prelude，与根上之清点诸律所用之列表与跨段引理同处；mem_remove、length_le_of_matched 自 Type 推至任一宇宙，此前之用皆为其例。所引 Lean 源及其证明绑定随之；论断不变。"
+    },
+    {
+      "en": "7 November 2026, board item LM2: \"generation\" for arising (Unceasing) and for a flow more without end (More) is replaced, since the glossary's generation never means arising; the Lean's docstrings changed with it. No law, premise or proof changed.",
+      "zh": "2026年11月7日，工作板条目 LM2：以“生成”称生起（Unceasing）与不止地更多之流（More）处已改，因词汇表之生成从不指生起；Lean 之说明随之而改。诸律、前提与证明皆不变。"
+    },
+    {
+      "en": "7 November 2026, board item LM2 (its reader's findings): \"generation\" for embodied arising or for arising is replaced, since the glossary's generation never means arising. No law, premise or proof changed.",
+      "zh": "2026年11月7日，工作板条目 LM2（其读者之所见）：以“生成”称体现之生起或生起处已改，因词汇表之生成从不指生起。诸律、前提与证明皆不变。"
     }
   ],
   "text_versions": [

@@ -1,0 +1,27 @@
+import Becoming.ScoreRepresentation
+#print axioms Becoming.ScoreRepresentation.Claim
+#print axioms Becoming.ScoreRepresentation.realized
+#print axioms Becoming.ScoreRepresentation.living
+#print axioms Becoming.ScoreRepresentation.frame
+#print axioms Becoming.ScoreRepresentation.protect
+#print axioms Becoming.ScoreRepresentation.gain
+#print axioms Becoming.ScoreRepresentation.extension_shape
+#print axioms Becoming.ScoreRepresentation.successor_extends
+#print axioms Becoming.ScoreRepresentation.livingSignificance_recognizes_gains
+#print axioms Becoming.ScoreRepresentation.above_iff
+#print axioms Becoming.ScoreRepresentation.above_satisfies_comparison
+#print axioms Becoming.ScoreRepresentation.never_outranked
+#print axioms Becoming.ScoreRepresentation.weighted
+#print axioms Becoming.ScoreRepresentation.weighted_satisfies_comparison
+#print axioms Becoming.ScoreRepresentation.weighted_outranks
+#print axioms Becoming.ScoreRepresentation.comparison_does_not_yield_priority
+#print axioms Becoming.ScoreRepresentation.every_nat_score_outranks
+#print axioms Becoming.ScoreRepresentation.no_nat_score_represents
+#print axioms Becoming.ScoreRepresentation.livingSignificance_leaves_ordering_open
+#print axioms Becoming.ScoreRepresentation.num
+#print axioms Becoming.ScoreRepresentation.den
+#print axioms Becoming.ScoreRepresentation.ratioBetter
+#print axioms Becoming.ScoreRepresentation.ratio_bounded
+#print axioms Becoming.ScoreRepresentation.cross_iff
+#print axioms Becoming.ScoreRepresentation.ratio_agrees
+#print axioms Becoming.ScoreRepresentation.bounded_score_represents

@@ -19,7 +19,7 @@ Results:
 * Labels carry nothing. A renaming preserves the readings, defined from the relations,
   that follow a formation through the run (checked for five): the class of a formation
   (renewing or consuming in the run), the tenure of a dependence (`MetAbove`),
-  undermining, forming and dissolving, arising and unceasing generation. A renaming keeps
+  undermining, forming and dissolving, arising and whether it ceases. A renaming keeps
   the pattern of names across steps, so it cannot show that this pattern carries nothing.
 * What each step and each condition is does not depend on identity across steps. Every
   re-identification preserves support, keeping and breaking, the class of every
@@ -28,8 +28,8 @@ Results:
   as it stood when it held, against the condition's later levels; it does not follow the
   formation. Re-identifying a flow preserves what is taken and given at each step, the
   balance of depletion and replenishment, and how many formations take and give, so
-  whether generation is more without end (`More`). A census of the active formations and
-  `Taking` carry over too, so under them more without end makes generation unceasing
+  whether the flow is more without end (`More`). A census of the active formations and
+  `Taking` carry over too, so under them more without end makes arising unceasing
   under every re-identification (`More.unceasing_reidentified`), as in the expansion
   (`Expansion.unceasing_reidentified`): under one-to-one readings of identity, the arising
   it forces is not an artefact of naming.
@@ -43,7 +43,7 @@ Results:
     step, and its need was never met in it;
   - a web in which no dependence forms or dissolves and nothing arises becomes one in
     which a formation transforms its dependence across a step and formations arise at
-    every odd step, so that generation is unceasing.
+    every odd step, so that arising is unceasing.
   The pattern of names across steps carries identity. The representation supplies it as
   a correspondence premise, and `Turnover` shows that the premise is substantive.
   Arisings made by naming alone can meet every premise of
@@ -51,7 +51,7 @@ Results:
   does not screen them out (`TideFlip`).
 * Continuity, read one way. A re-identification that keeps the name of every formation
   active before and after a step (`KeepsActive`) makes no arising: what arises under the
-  new names arose under the old, so it makes no unceasing generation. One that keeps the
+  new names arose under the old, so it makes no unceasing arising. One that keeps the
   name of every formation whose dependence on a condition continues across a step
   (`KeepsTenure`) keeps a formation's name over a tenure, keeps every dependence met
   while it held, and removes no undermining. Both conditions are read against the old
@@ -71,7 +71,7 @@ Results:
   (`Lineage.one_way`, `Succession.one_way`).
 * Continuity, read both ways. When the old naming, read back from the new
   (`Reidentify.back`), also keeps the new naming's continuing activity, arising and
-  unceasing generation are preserved exactly; for continuing dependences, undermining
+  unceasing arising are preserved exactly; for continuing dependences, undermining
   is preserved exactly. Succession at a single step is then excluded (`no_join`).
   Continuity still
   does not constrain the class of a formation over the run: joining across steps at
@@ -150,9 +150,9 @@ Continuity of activity and dependence, read one way, rules out making arising an
 removing undermining and leaves succession open; read both ways it fixes both, and it
 still leaves the class of a formation open across dormancy. Whether a lineage is one
 formation continuing, many generated, or both at two levels, and whether a successor
-inherits a loss, are further readings. Where generation is more without end under a
+inherits a loss, are further readings. Where the flow is more without end under a
 census, with each formation taking part listed once and only active formations taking,
-it is unceasing under every one-to-one reading of identity, and formations arise without
+arising is unceasing under every one-to-one reading of identity, and formations arise without
 end under every continuation without splits. Ceasing at arbitrarily late steps needs
 arising at arbitrarily late steps under every continuation without splits, and under a
 bounded census the converse holds under every continuation without merges; a reading
@@ -383,7 +383,7 @@ theorem Flow.More.arising_never_stops_reidentified_covering {W : Web F C} {L : F
     (fun t x c from_ mem takes => taking t (σ.old t x) c from_ ((σ.mem_map t).mp mem) takes)
     ((L.reidentify_more σ cs).mpr more)
 
-/-- More without end makes generation unceasing under every re-identification, with no
+/-- More without end makes arising unceasing under every re-identification, with no
 census, where activity is decided from some step on. -/
 theorem Flow.More.unceasing_reidentified_covering {W : Web F C} {L : Flow F C} {cs : List C}
     {S : Nat} (decided : ∀ s f, S ≤ s → Decidable (W.active s f))
@@ -401,7 +401,7 @@ theorem Flow.More.unceasing_reidentified_covering {W : Web F C} {L : Flow F C} {
     ((L.reidentify_more σ cs).mpr more)
 
 /-- Under a census, with each formation taking part listed once and only active formations
-taking, more without end makes generation unceasing under every re-identification. -/
+taking, more without end makes arising unceasing under every re-identification. -/
 theorem Flow.More.unceasing_reidentified {W : Web F C} [decide : ∀ t f, Decidable (W.active t f)]
     {L : Flow F C} {cs : List C} {alive : Nat → List F} (census : W.Census alive)
     (distinct : ∀ t, Distinct (L.present t)) (taking : L.Taking W) (more : L.More cs)
@@ -1595,8 +1595,8 @@ theorem arises : ∀ t, odd t = true → flipped.Arises t .moon := fun _ odd' =>
 /-- `Tide.still` has no arising. Named by `flip`, which breaks the moon's continuing
 activity, it meets every premise of `Unceasing.activeRenewer_recurs`: activity needs
 support, every rise is made by the renewing moon, the tide changes at every step at which
-a formation arises, and generation is unceasing. The conclusion, that renewal recurs, is
-true; the generation is the naming's. -/
+a formation arises, and arising is unceasing. The conclusion, that renewal recurs, is
+true; the arising is the naming's. -/
 theorem naming_meets_premises :
     (∀ t f, ¬ Tide.still.Arises t f) ∧ ¬ flip.KeepsActive Tide.still ∧
     flipped.Dependent ∧ flipped.RenewedBy renews ∧
@@ -1619,7 +1619,7 @@ theorem naming_meets_premises :
 end TideFlip
 
 /-- In the expansion every premise of `More.unceasing_reidentified` holds
-(`Expansion.counted`), so its generation is unceasing under every re-identification. -/
+(`Expansion.counted`), so its arising is unceasing under every re-identification. -/
 theorem Expansion.unceasing_reidentified (σ : Reidentify (Expansion.Kind × Nat) F') :
     (Expansion.web.reidentify σ).Unceasing :=
   have : ∀ t f, Decidable (Expansion.web.active t f) := fun t f => Nat.decLt f.2 t
@@ -1633,7 +1633,7 @@ formations bud from it. -/
 def buds (_ : Nat) (g f : Nat) : Prop := g = f ∨ g = 0
 
 /-- In the cycle, every premise of `Flow.More.unceasing` holds (`Cycle.counted`) and
-generation is unceasing. Read with budding as continuation, formation `0` continues as
+arising is unceasing. Read with budding as continuation, formation `0` continues as
 many, and nothing arises after the first step. -/
 theorem growth_without_arising :
     Cycle.web.Unceasing ∧ ¬ Cycle.web.NoSplit buds ∧
@@ -1779,7 +1779,7 @@ end Confluence
 
 /-- Without a census, no split is not enough: in `Dormant`, under each formation continuing
 only itself there is no split, only active formations take, each formation taking part is
-listed once, and generation is more without end, yet nothing arises under it. -/
+listed once, and the flow is more without end, yet nothing arises under it. -/
 theorem Dormant.no_split_without_arising :
     Dormant.web.NoSplit (fun _ g f => g = f) ∧ Expansion.flow.More [()] ∧
     Expansion.flow.Taking Dormant.web ∧ (∀ t, Distinct (Expansion.flow.present t)) ∧
@@ -1900,7 +1900,7 @@ def one : Reidentify Member Member := .exchanging odd swap swap_swap
 theorem arises : ∀ t, odd t = true → web.Arises t .first := fun _ odd' =>
   ⟨fun even => (nomatch odd'.symm.trans even), congrArg (!·) odd'⟩
 
-/-- Named apart, a member arises at every odd step and generation is unceasing. Named as
+/-- Named apart, a member arises at every odd step and arising is unceasing. Named as
 one, the lineage is always active and nothing arises. Naming it as one keeps every
 continuing activity, since no member is active at two successive steps. -/
 theorem readings :

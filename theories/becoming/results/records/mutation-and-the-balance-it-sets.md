@@ -79,6 +79,8 @@ Mutation-selection balance (Haldane 1927) and the error threshold (Eigen 1971): 
 | proof | [Flow.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean) | `Becoming.total_replicate` |
 | proof | [Prelude.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean) | `Becoming.mem_append_cases`, `Becoming.Naturals.sub_le_of_le_add`, `Becoming.Naturals.twice_le`, `Becoming.Naturals.twice_le_of_le` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T214533.564191Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json) | — |
 
 Aliases: `mutation`, `mutation-selection balance`, `error threshold`, `突变`, `突变与选择的平衡`, `误差阈值`, `Becoming.Reproduction.Mutation.balanced_iff`
 

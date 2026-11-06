@@ -89,6 +89,8 @@ Reciprocity in evolutionary game theory (Trivers 1971; Axelrod and Hamilton 1981
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T024359.312453Z/verification.json) | — |
 | proof | [Flow.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean) | `Becoming.total_replicate` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T214533.564191Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json) | — |
 
 Aliases: `offspring read from giving that waits`, `Becoming.PairSelection.never_rises_in_pairs`, `Becoming.PairSelection.pair_le`, `Becoming.PairSelection.answering_never_rises`, `Becoming.PairSelection.assorted_favours_iff`, `Becoming.PairSelection.assorted_counts`, `Becoming.PairSelection.kind_rises_iff`, `Becoming.PairSelection.windowed_course`, `Becoming.PairSelection.echo_and_window_sums`, `Becoming.PairSelection.window_echo_lt_iff`, `Becoming.PairSelection.window_never_rises_beside_alternators`, `Becoming.PairSelection.neutral`, `tit-for-tat under selection (reading)`
 

@@ -101,6 +101,8 @@ States the counting half of the opening's sentence on the game of winning (OPENI
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T133248.097273Z/verification.json) | — |
 | proof | [Flow.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean) | `Becoming.total_lt_of_mem` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T214533.564191Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json) | — |
 
 Aliases: `the game of relative position`, `相对位置的博弈`, `zero-sum game of relative position`, `relative position is zero-sum`, `相对位置是零和的`, `position does not protect`, `Becoming.RelativePosition.change_balances`, `Becoming.RelativePosition.not_all_rise`, `Becoming.Flow.race_ends_greatest`, `Becoming.Flow.ends_at_race_end`
 

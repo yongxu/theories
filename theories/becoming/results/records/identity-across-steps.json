@@ -25,7 +25,7 @@
     },
     {
       "zh": "改名保持由关系定义、追随形成的读法（检查了五种）：形成在整段上更新或消耗、依存的任期、侵蚀、依存的形成与消解、生起与不息；标签不承载任何东西，名字跨步的模式承载同一。",
-      "en": "A renaming preserves the readings, defined from the relations, that follow a formation (checked for five): renewing or consuming in the run, the tenure of a dependence, undermining, forming and dissolving of dependences, arising and unceasing generation; labels carry nothing, while the pattern of names across steps carries identity.",
+      "en": "A renaming preserves the readings, defined from the relations, that follow a formation (checked for five): renewing or consuming in the run, the tenure of a dependence, undermining, forming and dissolving of dependences, arising and unceasing arising; labels carry nothing, while the pattern of names across steps carries identity.",
       "declarations": [
         "Becoming.Web.rename_renewingIn",
         "Becoming.Web.rename_consumingIn",
@@ -59,7 +59,7 @@
     },
     {
       "zh": "活跃形成的普查与“只有活跃的形成取用”也保持，所以在它们之下，不止地更多在每个改认下蕴含不息，扩张满足全部这些前提。",
-      "en": "A census of the active formations and that only active formations take carry over too, so under them more without end makes generation unceasing under every re-identification, and the expansion meets all these premises.",
+      "en": "A census of the active formations and that only active formations take carry over too, so under them more without end makes arising unceasing under every re-identification, and the expansion meets all these premises.",
       "declarations": [
         "Becoming.Web.Census.reidentify",
         "Becoming.Flow.Taking.reidentify",
@@ -68,8 +68,8 @@
       ]
     },
     {
-      "zh": "只改动谁延续谁（每一奇数步交换名字），一个更新、一个消耗的形成变成两个消耗、没有更新；第一步之后汲取者每步侵蚀，变成没有任何事件侵蚀；没有依存形成也没有生起，变成一个形成转化依存、形成在每一奇数步生起，生成不息。",
-      "en": "Changing only who continues whom (exchanging names at every odd step), a renewing and a consuming formation become two consuming and none renewing; a drawer undermining at every step after the first becomes a web in which no event then undermines; a web in which no dependence forms and nothing arises becomes one where a formation transforms its dependence and formations arise at every odd step, generation unceasing.",
+      "zh": "只改动谁延续谁（每一奇数步交换名字），一个更新、一个消耗的形成变成两个消耗、没有更新；第一步之后汲取者每步侵蚀，变成没有任何事件侵蚀；没有依存形成也没有生起，变成一个形成转化依存、形成在每一奇数步生起，生起不息。",
+      "en": "Changing only who continues whom (exchanging names at every odd step), a renewing and a consuming formation become two consuming and none renewing; a drawer undermining at every step after the first becomes a web in which no event then undermines; a web in which no dependence forms and nothing arises becomes one where a formation transforms its dependence and formations arise at every odd step, arising unceasing.",
       "declarations": [
         "Becoming.Turnover.identified",
         "Becoming.Turnover.reidentified"
@@ -86,7 +86,7 @@
     },
     {
       "zh": "保持跨步持续活动的形成的名字，改认不制造生起，因而不制造不息。",
-      "en": "Keeping the names of formations active across a step, a re-identification makes no arising, hence no unceasing generation.",
+      "en": "Keeping the names of formations active across a step, a re-identification makes no arising, hence no unceasing arising.",
       "declarations": [
         "Becoming.Reidentify.KeepsActive",
         "Becoming.Web.arises_of_keepsActive",
@@ -136,7 +136,7 @@
     },
     {
       "zh": "新命名的连续也由旧命名保持时（双向），生起、不息与侵蚀恰被保持，同一步的接续被排除。",
-      "en": "When the old naming also keeps the new naming's continuity (both ways), arising, unceasing generation and undermining are preserved exactly and succession at a single step is excluded.",
+      "en": "When the old naming also keeps the new naming's continuity (both ways), arising, unceasing arising and undermining are preserved exactly and succession at a single step is excluded.",
       "declarations": [
         "Becoming.Reidentify.back",
         "Becoming.Web.arises_of_back_keepsActive",
@@ -389,7 +389,7 @@
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Identity.lean",
       "detail": {
         "zh": "Turnover：只改动谁延续谁，形成的类、侵蚀、转化与生起都改变，不息由改认单独制造；在 Turnover 中这些生起不降低任何条件，Depletes 不成立。",
-        "en": "Turnover: changing only who continues whom changes formation classes, undermining, transformation and arising, and unceasing generation is made by re-identification alone; in Turnover those arisings lower no condition and Depletes fails."
+        "en": "Turnover: changing only who continues whom changes formation classes, undermining, transformation and arising, and unceasing arising is made by re-identification alone; in Turnover those arisings lower no condition and Depletes fails."
       }
     },
     {
@@ -553,12 +553,12 @@
       "relation": "formal-reuse",
       "detail": {
         "zh": "复用 Arises、Unceasing、Depletes、Rises、Falls 与 Unceasing.activeRenewer_recurs；说明不息依赖同一。在 Turnover 中单由改认制造的生起不降低任何条件，Depletes 不成立；在 TideFlip 中单由命名造成的生起满足 Depletes 与全部前提，所以 Depletes 不筛掉命名的产物。",
-        "en": "Reuses Arises, Unceasing, Depletes, Rises, Falls and Unceasing.activeRenewer_recurs; shows that unceasing generation depends on identity. In Turnover the arisings made by re-identification alone lower no condition and Depletes fails; in TideFlip the arisings made by naming alone meet Depletes and every premise, so Depletes does not screen out what naming makes."
+        "en": "Reuses Arises, Unceasing, Depletes, Rises, Falls and Unceasing.activeRenewer_recurs; shows that unceasing arising depends on identity. In Turnover the arisings made by re-identification alone lower no condition and Depletes fails; in TideFlip the arisings made by naming alone meet Depletes and every premise, so Depletes does not screen out what naming makes."
       },
       "interface": {
         "output": {
           "zh": "生起、不息与消耗。",
-          "en": "Arising, unceasing generation and depletion."
+          "en": "Arising, unceasing arising and depletion."
         },
         "input": {
           "zh": "生起在改认与连续下的行为。",
@@ -581,7 +581,7 @@
       "interface": {
         "output": {
           "zh": "流、消耗与补充的平衡、计数、普查与更多蕴含不息。",
-          "en": "Flows, the balance of depletion and replenishment, counts, censuses, and more implying unceasing generation."
+          "en": "Flows, the balance of depletion and replenishment, counts, censuses, and more implying unceasing arising."
         },
         "input": {
           "zh": "改认后的流与普查。",
@@ -636,8 +636,8 @@
     {
       "id": "whole-persists-through-generation",
       "detail": {
-        "zh": "陈述本结果省略的部分与整体关系：整体恰在某个部分活跃时活跃；部分短暂，或部分终结且同时活跃的部分有限时，整体经由部分的生成而持续。",
-        "en": "States the part–whole relation this result omits: a whole is active exactly while some part is, and where parts are brief, or end with finitely many active at once, a whole persists through the generation of its parts."
+        "zh": "陈述本结果省略的部分与整体关系：整体恰在某个部分活跃时活跃；部分短暂，或部分终结且同时活跃的部分有限时，整体经由部分的生起而持续。",
+        "en": "States the part–whole relation this result omits: a whole is active exactly while some part is, and where parts are brief, or end with finitely many active at once, a whole persists through the arising of its parts."
       }
     },
     {
@@ -652,7 +652,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Identity.lean",
       "role": "proof",
-      "sha256": "5a55b1d2659cf050d48b78606b449a50dd95c7b574a3fb0896f65765241c9607",
+      "sha256": "49869703e523b506b003dcb3acd9c426af8c370719b329415c492f7c11517c95",
       "declarations": [
         "Becoming.Reidentify",
         "Becoming.Reidentify.rename",
@@ -832,7 +832,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Arising.lean",
       "role": "proof",
-      "sha256": "986cd16faa229bd218c860f97dde734fd06bd100ee119d7a13484260f907258e",
+      "sha256": "77e62221c4556f61fd75c45ca7f9e1cd8528f08c9e14f7bbbc86867e2f6d4c71",
       "declarations": [
         "Becoming.Web.Arises",
         "Becoming.Web.Unceasing",
@@ -849,7 +849,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
       "role": "proof",
-      "sha256": "94e9be0baad1667d0d06acdfa757543c292c054c3a7eeaefccbe10b43bd321b5",
+      "sha256": "3e88ad9f714b60ef56bdec298d89aa8b843c4d225f07993ee39f022af3016e05",
       "declarations": [
         "Becoming.Flow.taken",
         "Becoming.Flow.given",
@@ -867,7 +867,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean",
       "role": "proof",
-      "sha256": "852a5491313223e5de476027cd98408c196db67ac2c263d776dd28e6d050ac3c",
+      "sha256": "ff6f2ba5ddcb739270d987a8ddc145ff6075df55a987f7debddd75fe90796a2f",
       "declarations": [
         "Becoming.Web.Census",
         "Becoming.Flow.More.unceasing",
@@ -945,7 +945,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean",
       "role": "proof",
-      "sha256": "9a5156a05e5fdde26c3ec70b4bae5b02a7b1ec2d7bdd742f49cb8079e3283a7a",
+      "sha256": "34fae4a50c8cac4d89fb2ba69179b499bfbe00b9c9bd79b117efc0d584984352",
       "declarations": [
         "Becoming.Web.Holds",
         "Becoming.Web.persisting",
@@ -1041,7 +1041,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Roles.lean",
       "role": "proof",
-      "sha256": "6e0fdea63dbd3bc1d92d6df2d8e68216436e1a916d1f36ce9872da25c3fe64eb",
+      "sha256": "ce8c8bc33d32b52008e6862a5f22e23c7267b48612966a979c1368c5c57b4a96",
       "declarations": [
         "Becoming.Shuttle.next_off"
       ]
@@ -1049,7 +1049,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean",
       "role": "proof",
-      "sha256": "a6fef844c6464152369b1c1117c602f1e6d0ec6c7645fda7d6f60c8930c52def",
+      "sha256": "ced01e53d0dc9c9cc8141c1a020f154cd5599feadbafb2d26826d48dedefe2d7",
       "declarations": [
         "Becoming.Alike",
         "Becoming.exchangeFrame",
@@ -1240,19 +1240,31 @@
       "role": "receipt",
       "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T214533.564191Z/verification.json",
+      "role": "receipt",
+      "sha256": "1d84754646f4039d0950bbdb24bfa8fbd78dc9f9643cf7b9f13ae4250ac24251",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json",
+      "role": "receipt",
+      "sha256": "8f1d2bed589ebd558ab122d2b21ff3e27c19916c91a47d94b4b0829f76d45192",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Identity.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Identity",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261102T083959.667661Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Persistence",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -1266,7 +1278,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Labelled",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -1280,7 +1292,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Roles.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Roles",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -1301,7 +1313,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Arising.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Arising",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -1315,14 +1327,14 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Flow",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Population",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -1438,6 +1450,14 @@
     {
       "en": "2 November 2026, U4e (study section 500): Web.persisting_census drops the decisions its proof does not use, of holding activity and of the continuation itself, keeping whether a formation continues or is continued; the statement is more general and the law unchanged.",
       "zh": "2026年11月2日，U4e（研究第 500 节）：Web.persisting_census 去掉其证明不用的判定，即保持之活跃之判定与延续本身之判定，留一形成是否延续与是否被延续之判定；陈述更一般，规律不变。"
+    },
+    {
+      "en": "7 November 2026, board item LM2: \"generation\" for arising (Unceasing) and for a flow more without end (More) is replaced, since the glossary's generation never means arising; the Lean's docstrings changed with it. No law, premise or proof changed.",
+      "zh": "2026年11月7日，工作板条目 LM2：以“生成”称生起（Unceasing）与不止地更多之流（More）处已改，因词汇表之生成从不指生起；Lean 之说明随之而改。诸律、前提与证明皆不变。"
+    },
+    {
+      "en": "7 November 2026, board item LM2 (its reader's findings): \"generation\" for embodied arising or for arising is replaced, since the glossary's generation never means arising. No law, premise or proof changed.",
+      "zh": "2026年11月7日，工作板条目 LM2（其读者之所见）：以“生成”称体现之生起或生起处已改，因词汇表之生成从不指生起。诸律、前提与证明皆不变。"
     }
   ],
   "text_versions": [

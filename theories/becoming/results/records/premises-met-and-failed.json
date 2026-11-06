@@ -234,7 +234,7 @@
         "Becoming.LineOfDescent.Endless.converse_outside",
         "Becoming.«逆缘续无外随网»"
       ],
-      "sha256": "2ac4685adeceb50476aa1c8f9002c3d3c6e407bbc89471fcde99f4da0f3ba514"
+      "sha256": "03f60b883f89a928c7b4d2b2d8dcbf8f859ceb9f52a49a8d37f347f6d210cd45"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T000137.132110Z/verification.json",
@@ -326,12 +326,18 @@
       "role": "receipt",
       "sha256": "d47dc3cb4e2dae4149217a173b1e6e6d89598115dcd75979054a58c2b670ed3f",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T214533.564191Z/verification.json",
+      "role": "receipt",
+      "sha256": "1d84754646f4039d0950bbdb24bfa8fbd78dc9f9643cf7b9f13ae4250ac24251",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PremiseWitnesses.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T062217.665179Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T214533.564191Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.PremiseWitnesses",
       "success_pointer": "/status",
       "success_value": "passed"

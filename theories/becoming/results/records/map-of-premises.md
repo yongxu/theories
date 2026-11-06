@@ -164,6 +164,8 @@ The plan's third part of completeness asks that each dynamical premise carve a p
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T214533.564191Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json) | — |
 
 Aliases: `Becoming.World.Counted`, `Becoming.World.Transmitting`, `Becoming.World.premises`, `Becoming.World.Premised`, `Becoming.World.MeetsAllBut`, `Becoming.World.Dependent.carried`, `Becoming.World.Finite.counted`, `Becoming.World.Finite.enclosed`, `Becoming.World.acting_of_enclosed`, `Becoming.World.Finite.acting`, `Becoming.World.follows`, `Becoming.World.independent`, `Becoming.World.none_follows`, `Becoming.World.mutualism_premised`, `Becoming.World.premised_rests_unrefuted`, `Becoming.World.acting_across`, `Becoming.World.draining_but`, `Becoming.World.Binds`, `Becoming.World.hatch_binds`, `Becoming.World.hatch_idle`, `Becoming.World.counted_of_ever`
 

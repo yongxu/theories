@@ -1,0 +1,145 @@
+@Becoming.CodeAcquisition.sub_add_of_le : ∀ {n m : Nat}, n ≤ m → m - n + n = m
+Becoming.CodeAcquisition.probe_readings : ∀ (c : Becoming.CodeAcquisition.Code),
+  Becoming.CodeAcquisition.eval c Becoming.CodeAcquisition.p0 = [(Becoming.CodeAcquisition.observe c).first] ∧
+    Becoming.CodeAcquisition.eval c Becoming.CodeAcquisition.p1 = [(Becoming.CodeAcquisition.observe c).second]
+Becoming.CodeAcquisition.acquired_exact : ∀ (c : Becoming.CodeAcquisition.Code),
+  c.first ≠ c.second → Becoming.CodeAcquisition.acquire (Becoming.CodeAcquisition.observe c) = c
+Becoming.CodeAcquisition.acquired_every_expression : ∀ (c : Becoming.CodeAcquisition.Code),
+  c.first ≠ c.second →
+    ∀ (e : Becoming.CodeAcquisition.Expr),
+      Becoming.CodeAcquisition.eval (Becoming.CodeAcquisition.acquire (Becoming.CodeAcquisition.observe c)) e =
+        Becoming.CodeAcquisition.eval c e
+Becoming.CodeAcquisition.renaming_keeps_values : ∀ (c : Becoming.CodeAcquisition.Code)
+  (e : Becoming.CodeAcquisition.Expr),
+  Becoming.CodeAcquisition.eval (Becoming.CodeAcquisition.renamed c) (Becoming.CodeAcquisition.rename e) =
+    Becoming.CodeAcquisition.eval c e
+Becoming.CodeAcquisition.acquisition_draw : ∀ (c : Becoming.CodeAcquisition.Code),
+  Becoming.CodeAcquisition.acquisitionDraw c = 7
+Becoming.CodeAcquisition.records_supply_evidence : ∀ (c : Becoming.CodeAcquisition.Code),
+  Becoming.CodeAcquisition.readEvidence (Becoming.CodeAcquisition.trialRecords c) =
+    some (Becoming.CodeAcquisition.observe c)
+Becoming.CodeAcquisition.records_form_interpretation : ∀ (c : Becoming.CodeAcquisition.Code),
+  Becoming.CodeAcquisition.interpretationFromRecords (Becoming.CodeAcquisition.trialRecords c) =
+    some (Becoming.CodeAcquisition.acquire (Becoming.CodeAcquisition.observe c))
+@Becoming.CodeAcquisition.train_of_le : ∀ {c : Becoming.CodeAcquisition.Code} {s : Becoming.CodeAcquisition.Learner},
+  7 ≤ s.stock →
+    Becoming.CodeAcquisition.train c s =
+      { code := some (Becoming.CodeAcquisition.acquire (Becoming.CodeAcquisition.observe c)), stock := s.stock - 7,
+        records := s.records ++ Becoming.CodeAcquisition.trialRecords c }
+Becoming.CodeAcquisition.training_records : ∀ (c : Becoming.CodeAcquisition.Code)
+  (s : Becoming.CodeAcquisition.Learner),
+  7 ≤ s.stock → (Becoming.CodeAcquisition.train c s).records = s.records ++ Becoming.CodeAcquisition.trialRecords c
+Becoming.CodeAcquisition.training_installs : ∀ (c : Becoming.CodeAcquisition.Code)
+  (s : Becoming.CodeAcquisition.Learner),
+  7 ≤ s.stock → c.first ≠ c.second → (Becoming.CodeAcquisition.train c s).code = some c
+Becoming.CodeAcquisition.training_stock : ∀ (c : Becoming.CodeAcquisition.Code) (s : Becoming.CodeAcquisition.Learner),
+  7 ≤ s.stock → (Becoming.CodeAcquisition.train c s).stock + 7 = s.stock
+Becoming.CodeAcquisition.training_short : ∀ (c : Becoming.CodeAcquisition.Code) (s : Becoming.CodeAcquisition.Learner),
+  s.stock < 7 → Becoming.CodeAcquisition.train c s = s
+Becoming.CodeAcquisition.trained_execution : ∀ (c : Becoming.CodeAcquisition.Code)
+  (s : Becoming.CodeAcquisition.Learner) (e : Becoming.CodeAcquisition.Expr),
+  c.first ≠ c.second →
+    7 + Becoming.CodeAcquisition.operationDraw c e ≤ s.stock →
+      Becoming.CodeAcquisition.execute (Becoming.CodeAcquisition.train c s) e =
+        some (Becoming.CodeAcquisition.eval c e, s.stock - 7 - Becoming.CodeAcquisition.operationDraw c e)
+Becoming.CodeAcquisition.trained_execution_stock : ∀ (c : Becoming.CodeAcquisition.Code)
+  (s : Becoming.CodeAcquisition.Learner) (e : Becoming.CodeAcquisition.Expr),
+  7 + Becoming.CodeAcquisition.operationDraw c e ≤ s.stock →
+    s.stock - 7 - Becoming.CodeAcquisition.operationDraw c e + Becoming.CodeAcquisition.operationDraw c e + 7 = s.stock
+Becoming.CodeAcquisition.primitives_not_lumped : ¬Becoming.PartialReadout.LumpedWithin
+    Becoming.CodeAcquisition.separated Becoming.CodeAcquisition.primitiveEvidence Becoming.CodeAcquisition.Code.reversed
+Becoming.CodeAcquisition.primitives_no_exact : ¬∃ answer,
+    Becoming.PartialReadout.ExactWithin Becoming.CodeAcquisition.separated Becoming.CodeAcquisition.primitiveEvidence
+      Becoming.CodeAcquisition.Code.reversed answer
+Becoming.CodeAcquisition.novel_not_probe : Becoming.CodeAcquisition.novel ≠ Becoming.CodeAcquisition.p0 ∧
+  Becoming.CodeAcquisition.novel ≠ Becoming.CodeAcquisition.p1 ∧
+    Becoming.CodeAcquisition.novel ≠ Becoming.CodeAcquisition.orderProbe
+Becoming.CodeAcquisition.novel_execution : Becoming.CodeAcquisition.execute
+    (Becoming.CodeAcquisition.train Becoming.CodeAcquisition.usual (Becoming.CodeAcquisition.initial 11))
+    Becoming.CodeAcquisition.novel =
+  some ([false, false, true], 0)
+Becoming.CodeAcquisition.installed_not_executed : (Becoming.CodeAcquisition.train Becoming.CodeAcquisition.usual
+        (Becoming.CodeAcquisition.initial 7)).code =
+    some Becoming.CodeAcquisition.usual ∧
+  Becoming.CodeAcquisition.execute
+      (Becoming.CodeAcquisition.train Becoming.CodeAcquisition.usual (Becoming.CodeAcquisition.initial 7))
+      Becoming.CodeAcquisition.novel =
+    none
+Becoming.CodeAcquisition.missing_composite_no_code : Becoming.CodeAcquisition.interpretationFromRecords
+    [(Becoming.CodeAcquisition.p0, [false]), (Becoming.CodeAcquisition.p1, [true])] =
+  none
+Becoming.CodeAcquisition.reversed_composite_switches : Becoming.CodeAcquisition.interpretationFromRecords
+    [(Becoming.CodeAcquisition.p0, [false]), (Becoming.CodeAcquisition.p1, [true]),
+      (Becoming.CodeAcquisition.orderProbe, [true, false])] =
+  some Becoming.CodeAcquisition.switched
+Becoming.CodeAcquisition.wrong_order_fails_transfer : Becoming.CodeAcquisition.eval
+    (Becoming.CodeAcquisition.acquire (Becoming.CodeAcquisition.observe Becoming.CodeAcquisition.usual))
+    Becoming.CodeAcquisition.novel ≠
+  Becoming.CodeAcquisition.eval Becoming.CodeAcquisition.switched Becoming.CodeAcquisition.novel
+Becoming.CodeAcquisition.equal_primitives_unresolved : Becoming.CodeAcquisition.observe
+      { first := false, second := false, reversed := false } =
+    Becoming.CodeAcquisition.observe { first := false, second := false, reversed := true } ∧
+  Becoming.CodeAcquisition.eval
+      (Becoming.CodeAcquisition.acquire
+        (Becoming.CodeAcquisition.observe { first := false, second := false, reversed := true }))
+      Becoming.CodeAcquisition.novel =
+    Becoming.CodeAcquisition.eval { first := false, second := false, reversed := true } Becoming.CodeAcquisition.novel
+Becoming.CodeAcquisition.nonuniform_agrees_on_probes : Becoming.CodeAcquisition.nonuniform Becoming.CodeAcquisition.p0 =
+    Becoming.CodeAcquisition.eval Becoming.CodeAcquisition.usual Becoming.CodeAcquisition.p0 ∧
+  Becoming.CodeAcquisition.nonuniform Becoming.CodeAcquisition.p1 =
+      Becoming.CodeAcquisition.eval Becoming.CodeAcquisition.usual Becoming.CodeAcquisition.p1 ∧
+    Becoming.CodeAcquisition.nonuniform Becoming.CodeAcquisition.orderProbe =
+      Becoming.CodeAcquisition.eval Becoming.CodeAcquisition.usual Becoming.CodeAcquisition.orderProbe
+Becoming.CodeAcquisition.nonuniform_fails_transfer : Becoming.CodeAcquisition.nonuniform
+    Becoming.CodeAcquisition.novel ≠
+  Becoming.CodeAcquisition.eval Becoming.CodeAcquisition.usual Becoming.CodeAcquisition.novel
+Becoming.CodeAcquisition.choice_keeps_content : Becoming.CodeAcquisition.eval
+      (Becoming.CodeAcquisition.acquire (Becoming.CodeAcquisition.observe Becoming.CodeAcquisition.usual))
+      (Becoming.CodeAcquisition.pick false
+        (Becoming.CodeAcquisition.acquire (Becoming.CodeAcquisition.observe Becoming.CodeAcquisition.usual))) =
+    [false] ∧
+  Becoming.CodeAcquisition.eval
+      (Becoming.CodeAcquisition.acquire (Becoming.CodeAcquisition.observe Becoming.CodeAcquisition.usual))
+      (Becoming.CodeAcquisition.pick true
+        (Becoming.CodeAcquisition.acquire (Becoming.CodeAcquisition.observe Becoming.CodeAcquisition.usual))) =
+    [true]
+@Becoming.CodeAcquisition.step_iff : ∀ {s t : Becoming.CodeAcquisition.Learner} {c : Becoming.CodeAcquisition.Code},
+  Becoming.CodeAcquisition.trainProcess.step s c t ↔ t = Becoming.CodeAcquisition.train c s
+@Becoming.CodeAcquisition.step_records : ∀ {s t : Becoming.CodeAcquisition.Learner} {c : Becoming.CodeAcquisition.Code},
+  Becoming.CodeAcquisition.trainProcess.step s c t →
+    7 ≤ s.stock → t.records = s.records ++ Becoming.CodeAcquisition.trialRecords c
+@Becoming.CodeAcquisition.step_installs : ∀ {s t : Becoming.CodeAcquisition.Learner}
+  {c : Becoming.CodeAcquisition.Code},
+  Becoming.CodeAcquisition.trainProcess.step s c t → 7 ≤ s.stock → c.first ≠ c.second → t.code = some c
+@Becoming.CodeAcquisition.step_stock : ∀ {s t : Becoming.CodeAcquisition.Learner} {c : Becoming.CodeAcquisition.Code},
+  Becoming.CodeAcquisition.trainProcess.step s c t → 7 ≤ s.stock → t.stock + 7 = s.stock
+@Becoming.CodeAcquisition.step_rests_when_short : ∀ {s t : Becoming.CodeAcquisition.Learner}
+  {c : Becoming.CodeAcquisition.Code}, Becoming.CodeAcquisition.trainProcess.step s c t → s.stock < 7 → t = s
+@Becoming.CodeAcquisition.step_code_transfers : ∀ {s t : Becoming.CodeAcquisition.Learner}
+  {c : Becoming.CodeAcquisition.Code},
+  Becoming.CodeAcquisition.trainProcess.step s c t →
+    7 ≤ s.stock →
+      c.first ≠ c.second →
+        t.code = some (Becoming.CodeAcquisition.acquire (Becoming.CodeAcquisition.observe c)) ∧
+          ∀ (e : Becoming.CodeAcquisition.Expr),
+            Becoming.CodeAcquisition.eval (Becoming.CodeAcquisition.acquire (Becoming.CodeAcquisition.observe c)) e =
+              Becoming.CodeAcquisition.eval c e
+@Becoming.CodeAcquisition.step_evidence : ∀ {n : Nat} {t : Becoming.CodeAcquisition.Learner}
+  {c : Becoming.CodeAcquisition.Code},
+  Becoming.CodeAcquisition.trainProcess.step (Becoming.CodeAcquisition.initial n) c t →
+    7 ≤ n → Becoming.CodeAcquisition.readEvidence t.records = some (Becoming.CodeAcquisition.observe c)
+@Becoming.CodeAcquisition.step_then_execute : ∀ {s t : Becoming.CodeAcquisition.Learner}
+  {c : Becoming.CodeAcquisition.Code} (e : Becoming.CodeAcquisition.Expr),
+  Becoming.CodeAcquisition.trainProcess.step s c t →
+    c.first ≠ c.second →
+      7 + Becoming.CodeAcquisition.operationDraw c e ≤ s.stock →
+        ∃ left,
+          Becoming.CodeAcquisition.execute t e = some (Becoming.CodeAcquisition.eval c e, left) ∧
+            left + Becoming.CodeAcquisition.operationDraw c e + 7 = s.stock
+@Becoming.CodeAcquisition.novel_after_step : ∀ {t : Becoming.CodeAcquisition.Learner},
+  Becoming.CodeAcquisition.trainProcess.step (Becoming.CodeAcquisition.initial 11) Becoming.CodeAcquisition.usual t →
+    Becoming.CodeAcquisition.execute t Becoming.CodeAcquisition.novel = some ([false, false, true], 0)
+@Becoming.CodeAcquisition.installed_without_execution : ∀ {t : Becoming.CodeAcquisition.Learner},
+  Becoming.CodeAcquisition.trainProcess.step (Becoming.CodeAcquisition.initial 7) Becoming.CodeAcquisition.usual t →
+    t.code = some Becoming.CodeAcquisition.usual ∧
+      Becoming.CodeAcquisition.execute t Becoming.CodeAcquisition.novel = none

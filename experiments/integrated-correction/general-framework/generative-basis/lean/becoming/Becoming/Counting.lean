@@ -205,7 +205,7 @@ of what stands and of what depends. Binding here is an instance of each conditio
 binding in which each premise excludes something the representation allows would be a
 further reading. A property of the counts respects their values at each step (`Pointwise`),
 as function extensionality would give and the pure core does not assume. Activity is
-supposed decidable where a theorem needs it, a logical commitment of the representation. No
+supposed decidable where a theorem needs it, each such theorem stating it as its own condition. No
 ethical predicate, ranking or axiom occurs.
 -/
 

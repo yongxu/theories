@@ -134,6 +134,8 @@ Ren, 12 October 2026: “let's go back to main track, yes, i do agree with your 
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T214533.564191Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json) | — |
 
 Aliases: `every base read as a run`, `每个基读作运行`, `worlds are runs`, `世界是运行`, `one root`, `一个根`, `a balanced world is a run of the law of exchange`, `平衡的世界是交换之律的运行`, `course world`, `进程世界`, `law of exchange on webs`, `网上的交换之律`
 

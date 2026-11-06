@@ -1,0 +1,9 @@
+import Becoming.Enough
+#check @Becoming.Enough.trace_then_stay
+#check @Becoming.Enough.possibly_rests_iff
+#check @Becoming.Enough.assured_stays_meet
+#check @Becoming.Enough.settled_at
+#check @Becoming.Enough.assured_iff
+#check @Becoming.Enough.Free.stays_meet_not_assured
+#check @Becoming.Enough.law_possibly_iff
+#check @Becoming.Enough.law_possibly_iff_assured

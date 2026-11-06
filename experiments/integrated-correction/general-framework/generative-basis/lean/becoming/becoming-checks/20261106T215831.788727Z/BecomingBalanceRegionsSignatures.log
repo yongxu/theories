@@ -1,0 +1,184 @@
+@Becoming.Continuity.adjacentListed_symm : ∀ {R : Type} (rel : R → R → Bool) (us : List R),
+  Becoming.«则» (Becoming.Continuity.adjacentListed rel us) (Becoming.«逆» (Becoming.Continuity.adjacentListed rel us))
+@Becoming.Continuity.closes_iff_closed : ∀ {R : Type} {rel : R → R → Bool} {us : List R} {p : R → Bool},
+  Becoming.Continuity.Closes rel us p ↔ Becoming.«闭» (Becoming.Continuity.adjacentListed rel us) fun x => p x = true
+@Becoming.Continuity.closes_iff_notGoingOut : ∀ {R : Type} {rel : R → R → Bool} {us : List R} {p : R → Bool},
+  Becoming.Continuity.Closes rel us p ↔ Becoming.«不出» (Becoming.Continuity.adjacentListed rel us) fun x => p x = true
+@Becoming.Continuity.closes_iff_notComingIn : ∀ {R : Type} {rel : R → R → Bool} {us : List R} {p : R → Bool},
+  Becoming.Continuity.Closes rel us p ↔
+    Becoming.«不出» (Becoming.«逆» (Becoming.Continuity.adjacentListed rel us)) fun x => p x = true
+@Becoming.Continuity.balancing_iff_notGoingOut : ∀ {R : Type} [DecidableEq R] {rel : R → R → Bool} {us : List R}
+  {prev next : R → Nat},
+  Becoming.Distinct us →
+    ((∃ move, Becoming.Continuity.Balancing rel us prev next move) ↔
+      ∀ (p : R → Bool),
+        (Becoming.«不出» (Becoming.Continuity.adjacentListed rel us) fun x => p x = true) →
+          Becoming.total us (Becoming.Continuity.within p next) = Becoming.total us (Becoming.Continuity.within p prev))
+@Becoming.Continuity.balancesOn_iff_notGoingOut : ∀ {R : Type} [DecidableEq R] {us : List R} {rel : Nat → R → R → Bool}
+  {W : Becoming.Web R R},
+  Becoming.Distinct us →
+    ((∃ move,
+        (∀ (t : Nat) (a b : R), 0 < move t a b → Becoming.Continuity.adj (rel t) a b = true ∧ a ∈ us ∧ b ∈ us) ∧
+          ∀ (t : Nat), (Becoming.Continuity.flow us move).BalancesOn W us t) ↔
+      ∀ (t : Nat) (p : R → Bool),
+        (Becoming.«不出» (Becoming.Continuity.adjacentListed (rel t) us) fun x => p x = true) →
+          Becoming.total us (Becoming.Continuity.within p (W.level (t + 1))) =
+            Becoming.total us (Becoming.Continuity.within p (W.level t)))
+@Becoming.Continuity.cond_le_cond : ∀ {b c : Bool}, (b = true → c = true) → (bif b then 1 else 0) ≤ bif c then 1 else 0
+@Becoming.Continuity.count_le_count : ∀ {R : Type} {p q : R → Bool},
+  (∀ (x : R), p x = true → q x = true) → ∀ (l : List R), Becoming.«计» p l ≤ Becoming.«计» q l
+@Becoming.Continuity.count_lt_count : ∀ {R : Type} {p q : R → Bool},
+  (∀ (x : R), p x = true → q x = true) →
+    ∀ {a : R}, p a = false → q a = true → ∀ {l : List R}, a ∈ l → Becoming.«计» p l < Becoming.«计» q l
+@Becoming.Continuity.count_true : ∀ {R : Type} (l : List R), Becoming.«计» (fun x => true) l = l.length
+@Becoming.Continuity.counted_of_count : ∀ {R : Type} {p : R → Bool} {l : List R},
+  l.length ≤ Becoming.«计» p l → ∀ {x : R}, x ∈ l → p x = true
+@Becoming.Continuity.closes_and_not : ∀ {R : Type} {rel : R → R → Bool} {us : List R} {p q : R → Bool},
+  Becoming.Continuity.Closes rel us p →
+    Becoming.Continuity.Closes rel us q → Becoming.Continuity.Closes rel us fun y => p y && !q y
+@Becoming.Continuity.within_split : ∀ {R : Type} {p q : R → Bool},
+  (∀ (x : R), q x = true → p x = true) →
+    ∀ (f : R → Nat) (x : R),
+      Becoming.Continuity.within p f x =
+        Becoming.Continuity.within (fun y => p y && !q y) f x + Becoming.Continuity.within q f x
+@Becoming.Continuity.conserved_of_absent : ∀ {R : Type} {us : List R} {p : R → Bool} {prev next : R → Nat},
+  (∀ (x : R), x ∈ us → p x = false) →
+    Becoming.total us (Becoming.Continuity.within p next) = Becoming.total us (Becoming.Continuity.within p prev)
+@Becoming.Continuity.reachedListed_within : ∀ {R : Type} [inst : DecidableEq R] {rel : R → R → Bool} {us : List R}
+  {a : R} {n : Nat} {x : R},
+  Becoming.Continuity.reachedListed rel us a n x = true → Becoming.«所闭» (Becoming.Continuity.adjacentListed rel us) a x
+@Becoming.Continuity.reachedListed_add : ∀ {R : Type} [inst : DecidableEq R] {rel : R → R → Bool} {us : List R} {a : R}
+  {n : Nat} {x : R},
+  Becoming.Continuity.reachedListed rel us a n x = true →
+    ∀ (k : Nat), Becoming.Continuity.reachedListed rel us a (n + k) x = true
+@Becoming.Continuity.closureListed_self : ∀ {R : Type} [inst : DecidableEq R] (rel : R → R → Bool) (us : List R)
+  (a : R), Becoming.Continuity.closureListed rel us a a = true
+@Becoming.Continuity.reachedListed_stays : ∀ {R : Type} [inst : DecidableEq R] {rel : R → R → Bool} {us : List R}
+  {a : R} {k : Nat},
+  (∀ (x : R),
+      Becoming.Continuity.reachedListed rel us a (k + 1) x = true →
+        Becoming.Continuity.reachedListed rel us a k x = true) →
+    ∀ (j : Nat) (x : R),
+      Becoming.Continuity.reachedListed rel us a (k + j) x = true →
+        Becoming.Continuity.reachedListed rel us a k x = true
+@Becoming.Continuity.reachedListed_grows_or_stays : ∀ {R : Type} [inst : DecidableEq R] {rel : R → R → Bool}
+  {us : List R} {a : R} (k : Nat),
+  (∃ i j,
+      i + j = k ∧
+        ∀ (x : R),
+          Becoming.Continuity.reachedListed rel us a (i + 1) x = true →
+            Becoming.Continuity.reachedListed rel us a i x = true) ∨
+    k + Becoming.«计» (Becoming.Continuity.reachedListed rel us a 0) us ≤
+      Becoming.«计» (Becoming.Continuity.reachedListed rel us a k) us
+@Becoming.Continuity.closureListed_closed : ∀ {R : Type} [inst : DecidableEq R] {rel : R → R → Bool} {us : List R}
+  {a : R},
+  Becoming.«闭» (Becoming.Continuity.adjacentListed rel us) fun x => Becoming.Continuity.closureListed rel us a x = true
+@Becoming.Continuity.closureListed_iff : ∀ {R : Type} [inst : DecidableEq R] {rel : R → R → Bool} {us : List R}
+  {a x : R},
+  Becoming.Continuity.closureListed rel us a x = true ↔ Becoming.«所闭» (Becoming.Continuity.adjacentListed rel us) a x
+@Becoming.Continuity.closureListed_closes : ∀ {R : Type} [inst : DecidableEq R] {rel : R → R → Bool} {us : List R}
+  {a : R}, Becoming.Continuity.Closes rel us (Becoming.Continuity.closureListed rel us a)
+@Becoming.Continuity.closureListed_unlisted : ∀ {R : Type} [inst : DecidableEq R] {rel : R → R → Bool} {us : List R}
+  {z x : R}, ¬z ∈ us → Becoming.Continuity.closureListed rel us z x = true → x = z
+@Becoming.Continuity.closureListed_inside : ∀ {R : Type} [inst : DecidableEq R] {rel : R → R → Bool} {us : List R}
+  {p : R → Bool},
+  Becoming.Continuity.Closes rel us p →
+    ∀ {a : R}, p a = true → ∀ {x : R}, Becoming.Continuity.closureListed rel us a x = true → p x = true
+@Becoming.Continuity.conserved_of_fewer : ∀ {R : Type} [inst : DecidableEq R] {rel : R → R → Bool} {us : List R}
+  {prev next : R → Nat},
+  (∀ (a : R),
+      a ∈ us →
+        Becoming.total us (Becoming.Continuity.within (Becoming.Continuity.closureListed rel us a) next) =
+          Becoming.total us (Becoming.Continuity.within (Becoming.Continuity.closureListed rel us a) prev)) →
+    ∀ {p : R → Bool},
+      Becoming.Continuity.Closes rel us p →
+        (∀ (q : R → Bool),
+            Becoming.«计» q us < Becoming.«计» p us →
+              Becoming.Continuity.Closes rel us q →
+                Becoming.total us (Becoming.Continuity.within q next) =
+                  Becoming.total us (Becoming.Continuity.within q prev)) →
+          Becoming.total us (Becoming.Continuity.within p next) = Becoming.total us (Becoming.Continuity.within p prev)
+@Becoming.Continuity.conserved_of_closures : ∀ {R : Type} [inst : DecidableEq R] {rel : R → R → Bool} {us : List R}
+  {prev next : R → Nat},
+  (∀ (a : R),
+      a ∈ us →
+        Becoming.total us (Becoming.Continuity.within (Becoming.Continuity.closureListed rel us a) next) =
+          Becoming.total us (Becoming.Continuity.within (Becoming.Continuity.closureListed rel us a) prev)) →
+    ∀ (n : Nat) (p : R → Bool),
+      Becoming.«计» p us ≤ n →
+        Becoming.Continuity.Closes rel us p →
+          Becoming.total us (Becoming.Continuity.within p next) = Becoming.total us (Becoming.Continuity.within p prev)
+@Becoming.Continuity.conservedOn_iff_closures : ∀ {R : Type} [inst : DecidableEq R] {rel : R → R → Bool} {us : List R}
+  {prev next : R → Nat},
+  Becoming.Continuity.ConservedOn rel us prev next ↔
+    ∀ (a : R),
+      a ∈ us →
+        Becoming.total us (Becoming.Continuity.within (Becoming.Continuity.closureListed rel us a) next) =
+          Becoming.total us (Becoming.Continuity.within (Becoming.Continuity.closureListed rel us a) prev)
+@Becoming.Continuity.balancing_iff_closures : ∀ {R : Type} [inst : DecidableEq R] {rel : R → R → Bool} {us : List R}
+  {prev next : R → Nat},
+  Becoming.Distinct us →
+    ((∃ move, Becoming.Continuity.Balancing rel us prev next move) ↔
+      ∀ (a : R),
+        a ∈ us →
+          Becoming.total us (Becoming.Continuity.within (Becoming.Continuity.closureListed rel us a) next) =
+            Becoming.total us (Becoming.Continuity.within (Becoming.Continuity.closureListed rel us a) prev))
+@Becoming.Continuity.balancesOn_iff_closures : ∀ {R : Type} [inst : DecidableEq R] {us : List R}
+  {rel : Nat → R → R → Bool} {W : Becoming.Web R R},
+  Becoming.Distinct us →
+    ((∃ move,
+        (∀ (t : Nat) (a b : R), 0 < move t a b → Becoming.Continuity.adj (rel t) a b = true ∧ a ∈ us ∧ b ∈ us) ∧
+          ∀ (t : Nat), (Becoming.Continuity.flow us move).BalancesOn W us t) ↔
+      ∀ (t : Nat) (a : R),
+        a ∈ us →
+          Becoming.total us
+              (Becoming.Continuity.within (Becoming.Continuity.closureListed (rel t) us a) (W.level (t + 1))) =
+            Becoming.total us (Becoming.Continuity.within (Becoming.Continuity.closureListed (rel t) us a) (W.level t)))
+@Becoming.Continuity.pairing_iff_closure_counts : ∀ {α : Type} {S : Becoming.«际» α} {e : α → α → Bool},
+  Becoming.«则» S (Becoming.«逆» S) →
+    (∀ (x y : α), Becoming.«所闭» S x y ↔ e x y = true) →
+      ∀ {a b : List α}, Becoming.«对» (Becoming.«所闭» S) a b ↔ ∀ (z : α), Becoming.«计» (e z) a = Becoming.«计» (e z) b
+@Becoming.Continuity.pairing_iff_closures : ∀ {R : Type} [inst : DecidableEq R] {rel : R → R → Bool} {us a b : List R},
+  Becoming.«对» (Becoming.«所闭» (Becoming.Continuity.adjacentListed rel us)) a b ↔
+    ∀ (z : R),
+      Becoming.«计» (Becoming.Continuity.closureListed rel us z) a =
+        Becoming.«计» (Becoming.Continuity.closureListed rel us z) b
+@Becoming.Continuity.count_unitsOn : ∀ {R : Type} (p : R → Bool) (q : R → Nat) (l : List R),
+  Becoming.«计» p (Becoming.unitsOn q l) = Becoming.total l (Becoming.Continuity.within p q)
+@Becoming.Continuity.closures_iff_unit_counts : ∀ {R : Type} [inst : DecidableEq R] {rel : R → R → Bool} {us : List R}
+  {prev next : R → Nat},
+  (∀ (a : R),
+      a ∈ us →
+        Becoming.total us (Becoming.Continuity.within (Becoming.Continuity.closureListed rel us a) next) =
+          Becoming.total us (Becoming.Continuity.within (Becoming.Continuity.closureListed rel us a) prev)) ↔
+    ∀ (z : R),
+      Becoming.«计» (Becoming.Continuity.closureListed rel us z) (Becoming.unitsOn prev us) =
+        Becoming.«计» (Becoming.Continuity.closureListed rel us z) (Becoming.unitsOn next us)
+@Becoming.Continuity.conservedOn_iff_units_paired : ∀ {R : Type} [DecidableEq R] {rel : R → R → Bool} {us : List R}
+  {prev next : R → Nat},
+  Becoming.Continuity.ConservedOn rel us prev next ↔
+    Becoming.«对» (Becoming.«所闭» (Becoming.Continuity.adjacentListed rel us)) (Becoming.unitsOn prev us)
+      (Becoming.unitsOn next us)
+@Becoming.Continuity.balancing_iff_units_paired : ∀ {R : Type} [DecidableEq R] {rel : R → R → Bool} {us : List R}
+  {prev next : R → Nat},
+  Becoming.Distinct us →
+    ((∃ move, Becoming.Continuity.Balancing rel us prev next move) ↔
+      Becoming.«对» (Becoming.«所闭» (Becoming.Continuity.adjacentListed rel us)) (Becoming.unitsOn prev us)
+        (Becoming.unitsOn next us))
+@Becoming.Continuity.balancesOn_iff_units_paired : ∀ {R : Type} [DecidableEq R] {us : List R} {rel : Nat → R → R → Bool}
+  {W : Becoming.Web R R},
+  Becoming.Distinct us →
+    ((∃ move,
+        (∀ (t : Nat) (a b : R), 0 < move t a b → Becoming.Continuity.adj (rel t) a b = true ∧ a ∈ us ∧ b ∈ us) ∧
+          ∀ (t : Nat), (Becoming.Continuity.flow us move).BalancesOn W us t) ↔
+      ∀ (t : Nat),
+        Becoming.«对» (Becoming.«所闭» (Becoming.Continuity.adjacentListed (rel t) us)) (Becoming.unitsOn (W.level t) us)
+          (Becoming.unitsOn (W.level (t + 1)) us))
+Becoming.Continuity.PathOfThree.paired_within : Becoming.«对»
+  (Becoming.«所闭» (Becoming.Continuity.adjacentListed Becoming.Continuity.PathOfThree.rel [0, 1, 2])) [0] [2]
+Becoming.Continuity.PathOfThree.not_paired_along_step : ¬Becoming.«对»
+    (Becoming.Continuity.adjacentListed Becoming.Continuity.PathOfThree.rel [0, 1, 2]) [0] [2]
+Becoming.Continuity.PathOfThree.counts_kept_not_along_step : (∀ (z : Nat),
+    Becoming.«计» (Becoming.Continuity.closureListed Becoming.Continuity.PathOfThree.rel [0, 1, 2] z) [0] =
+      Becoming.«计» (Becoming.Continuity.closureListed Becoming.Continuity.PathOfThree.rel [0, 1, 2] z) [2]) ∧
+  ¬Becoming.«对» (Becoming.Continuity.adjacentListed Becoming.Continuity.PathOfThree.rel [0, 1, 2]) [0] [2]

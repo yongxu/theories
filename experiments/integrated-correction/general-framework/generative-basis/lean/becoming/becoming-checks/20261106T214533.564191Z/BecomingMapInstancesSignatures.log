@@ -1,0 +1,282 @@
+@Becoming.Map.outside_of_not_endless : ∀ {α : Type u_1} {R L E : Becoming.«际» α} {x : α},
+  ¬Becoming.«不穷» R L x → ¬Becoming.«全生成» R L E x ∧ ¬Becoming.«全守» R L E x
+@Becoming.Web.reached_later : ∀ {F : Type} {R : Nat → F → F → Prop} {E : Becoming.«际» (Nat × F)} {x y : Nat × F},
+  Becoming.«所及» (Becoming.Web.continuationStep R) E x y → x.fst ≤ y.fst
+@Becoming.Web.active_along_line : ∀ {F C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop} {x y : Nat × F},
+  W.active x.fst x.snd → Becoming.«所及» (Becoming.Web.continuationStep R) W.activityClass x y → W.active y.fst y.snd
+@Becoming.Web.reaches_onward : ∀ {F : Type} {R : Nat → F → F → Prop} {E : Becoming.«际» (Nat × F)} {x : Nat × F},
+  Becoming.«不穷» (Becoming.Web.continuationStep R) E x →
+    ∀ (k : Nat), ∃ y, Becoming.«所及» (Becoming.Web.continuationStep R) E x y ∧ y.fst = x.fst + k
+@Becoming.Web.ends_or_reaches : ∀ {F : Type} {R : Nat → F → F → Prop} {E : Becoming.«际» (Nat × F)} {x : Nat × F},
+  (∀ (y : Nat × F),
+      Becoming.«所及» (Becoming.Web.continuationStep R) E x y →
+        Becoming.«有后» (Becoming.Web.continuationStep R) E y ∨ ¬Becoming.«有后» (Becoming.Web.continuationStep R) E y) →
+    ∀ (k : Nat),
+      Becoming.«有终» (Becoming.Web.continuationStep R) E x ∨
+        ∃ y, Becoming.«所及» (Becoming.Web.continuationStep R) E x y ∧ y.fst = x.fst + k
+@Becoming.Web.carries_iff : ∀ {F C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop} {x y : Nat × F},
+  W.active x.fst x.snd →
+    (Becoming.«传» (Becoming.Web.continuationStep R) W.activityClass W.carrierClass x y ↔
+      Becoming.Web.continuationStep R x y ∧ W.active y.fst y.snd ∧ ¬(W.active x.fst y.snd ∧ R x.fst y.snd y.snd))
+@Becoming.Web.passing_carries_iff : ∀ {F C : Type} {V : Becoming.Web F C} {passes : Nat → F → F → Prop} {t : Nat}
+  {b a : F},
+  V.active t b →
+    (Becoming.«传» (Becoming.Web.continuationStep (Becoming.Web.passingContinuation passes)) V.activityClass
+        V.carrierClass (t, b) (t + 1, a) ↔
+      passes t b a ∧ V.Arises t a)
+@Becoming.Web.generation_renews_late : ∀ {F C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop} {x : Nat × F},
+  Becoming.«全生成» (Becoming.Web.continuationStep R) W.activityClass W.carrierClass x →
+    ∀ (N : Nat),
+      ∃ z w,
+        Becoming.«所及» (Becoming.Web.continuationStep R) W.activityClass x z ∧
+          N ≤ z.fst ∧ Becoming.«传» (Becoming.Web.continuationStep R) W.activityClass W.carrierClass z w
+@Becoming.Web.generation_arises_late : ∀ {F C : Type} {V : Becoming.Web F C} {passes : Nat → F → F → Prop}
+  {x : Nat × F},
+  V.active x.fst x.snd →
+    Becoming.«全生成» (Becoming.Web.continuationStep (Becoming.Web.passingContinuation passes)) V.activityClass
+        V.carrierClass x →
+      V.Unceasing
+@Becoming.Web.keeping_of_carried_on : ∀ {F C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop} {x : Nat × F}
+  {S : Nat},
+  W.active x.fst x.snd →
+    Becoming.«不穷» (Becoming.Web.continuationStep R) W.activityClass x →
+      (∀ (s : Nat) (f : F), S ≤ s → W.active (s + 1) f → W.active s f ∧ R s f f) →
+        Becoming.«全守» (Becoming.Web.continuationStep R) W.activityClass W.carrierClass x
+@Becoming.Web.not_carries_of_within_itself : ∀ {F C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop},
+  (∀ (t : Nat) (g f : F), R t g f → Becoming.Web.itself t g f) →
+    ∀ (z w : Nat × F), ¬Becoming.«传» (Becoming.Web.continuationStep R) W.activityClass W.carrierClass z w
+@Becoming.Web.not_generation_of_within_itself : ∀ {F C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop},
+  (∀ (t : Nat) (g f : F), R t g f → Becoming.Web.itself t g f) →
+    ∀ (x : Nat × F), ¬Becoming.«全生成» (Becoming.Web.continuationStep R) W.activityClass W.carrierClass x
+@Becoming.Web.itself_carries_nothing : ∀ {F C : Type} {W : Becoming.Web F C} (z w : Nat × F),
+  ¬Becoming.«传» (Becoming.Web.continuationStep Becoming.Web.itself) W.activityClass W.carrierClass z w
+@Becoming.Web.itself_not_generation : ∀ {F C : Type} {W : Becoming.Web F C} (x : Nat × F),
+  ¬Becoming.«全生成» (Becoming.Web.continuationStep Becoming.Web.itself) W.activityClass W.carrierClass x
+@Becoming.Web.itself_keeps : ∀ {F C : Type} {W : Becoming.Web F C} {x : Nat × F},
+  Becoming.«不穷» (Becoming.Web.continuationStep Becoming.Web.itself) W.activityClass x →
+    Becoming.«全守» (Becoming.Web.continuationStep Becoming.Web.itself) W.activityClass W.carrierClass x
+@Becoming.Web.always_keeps : ∀ {F C : Type} {W : Becoming.Web F C} {t : Nat} {f : F},
+  (∀ (s : Nat), t ≤ s → W.active s f) →
+    Becoming.«全守» (Becoming.Web.continuationStep Becoming.Web.itself) W.activityClass W.carrierClass (t, f)
+@Becoming.Web.ends_before : ∀ {F : Type} {R : Nat → F → F → Prop} {E : Becoming.«际» (Nat × F)} {x : Nat × F} {N : Nat},
+  (∀ (y : Nat × F),
+      Becoming.«所及» (Becoming.Web.continuationStep R) E x y →
+        y.fst = N → Becoming.«尽» (Becoming.Web.continuationStep R) E y) →
+    ∀ (d : Nat) (y : Nat × F),
+      Becoming.«所及» (Becoming.Web.continuationStep R) E x y →
+        y.fst + d = N → Becoming.«尽» (Becoming.Web.continuationStep R) E y
+@Becoming.Web.ends_of_ends_at : ∀ {F : Type} {R : Nat → F → F → Prop} {E : Becoming.«际» (Nat × F)} {x : Nat × F}
+  {N : Nat},
+  x.fst ≤ N →
+    (∀ (y : Nat × F),
+        Becoming.«所及» (Becoming.Web.continuationStep R) E x y →
+          y.fst = N → Becoming.«尽» (Becoming.Web.continuationStep R) E y) →
+      Becoming.«尽» (Becoming.Web.continuationStep R) E x
+@Becoming.Web.reached_coarser : ∀ {F : Type} {R : Nat → F → F → Prop} {E E' : Becoming.«际» (Nat × F)},
+  Becoming.«则» E E' →
+    ∀ {x y : Nat × F},
+      Becoming.«所及» (Becoming.Web.continuationStep R) E x y → Becoming.«所及» (Becoming.Web.continuationStep R) E' x y
+@Becoming.Web.active_along_finer : ∀ {F C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop}
+  {E : Becoming.«际» (Nat × F)},
+  Becoming.«则» E W.activityClass →
+    ∀ {x y : Nat × F},
+      W.active x.fst x.snd → Becoming.«所及» (Becoming.Web.continuationStep R) E x y → W.active y.fst y.snd
+@Becoming.Web.every_branch_ends_of_gone : ∀ {F C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop}
+  {E : Becoming.«际» (Nat × F)},
+  Becoming.«则» E W.activityClass →
+    ∀ {x : Nat × F} {N : Nat},
+      W.active x.fst x.snd →
+        x.fst ≤ N →
+          (∀ (y : Nat × F), Becoming.«所及» (Becoming.Web.continuationStep R) E x y → y.fst = N → ¬W.active y.fst y.snd) →
+            Becoming.«退化» (Becoming.Web.continuationStep R) E x
+@Becoming.Web.activity_every_branch_ends_of_gone : ∀ {F C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop}
+  {x : Nat × F} {N : Nat},
+  W.active x.fst x.snd →
+    x.fst ≤ N →
+      (∀ (y : Nat × F),
+          Becoming.«所及» (Becoming.Web.continuationStep R) W.activityClass x y → y.fst = N → ¬W.active y.fst y.snd) →
+        Becoming.«退化» (Becoming.Web.continuationStep R) W.activityClass x
+@Becoming.Web.not_endless_of_gone : ∀ {F C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop} {x : Nat × F}
+  {N : Nat},
+  W.active x.fst x.snd →
+    x.fst ≤ N →
+      (∀ (y : Nat × F),
+          Becoming.«所及» (Becoming.Web.continuationStep R) W.activityClass x y → y.fst = N → ¬W.active y.fst y.snd) →
+        ¬Becoming.«不穷» (Becoming.Web.continuationStep R) W.activityClass x
+@Becoming.Web.end_of_gone : ∀ {F C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop} {x : Nat × F} {N : Nat},
+  W.active x.fst x.snd →
+    x.fst ≤ N →
+      (∀ (y : Nat × F),
+          Becoming.«所及» (Becoming.Web.continuationStep R) W.activityClass x y → y.fst = N → ¬W.active y.fst y.snd) →
+        (∀ (y : Nat × F),
+            Becoming.«所及» (Becoming.Web.continuationStep R) W.activityClass x y →
+              Becoming.«有后» (Becoming.Web.continuationStep R) W.activityClass y ∨
+                ¬Becoming.«有后» (Becoming.Web.continuationStep R) W.activityClass y) →
+          Becoming.«有终» (Becoming.Web.continuationStep R) W.activityClass x
+@Becoming.Web.consumed_held_gone : ∀ {F C : Type} {W : Becoming.Web F C},
+  W.Dependent →
+    ∀ {c : C} {g : F} {T N : Nat},
+      (∀ (s : Nat), T < s → W.level s c < W.need T g c) →
+        T < N →
+          ∀ {y : Nat × F}, y.fst = N → W.requires N y.snd c ∧ W.need T g c ≤ W.need N y.snd c → ¬W.active y.fst y.snd
+@Becoming.Web.consumed_held_degenerates : ∀ {F C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop},
+  W.Dependent →
+    ∀ {c : C} {g : F} {T N : Nat},
+      (∀ (s : Nat), T < s → W.level s c < W.need T g c) →
+        T < N →
+          ∀ {x : Nat × F},
+            W.active x.fst x.snd →
+              x.fst ≤ N →
+                (∀ (y : Nat × F),
+                    Becoming.«所及» (Becoming.Web.continuationStep R) W.activityClass x y →
+                      y.fst = N → W.requires N y.snd c ∧ W.need T g c ≤ W.need N y.snd c) →
+                  Becoming.«退化» (Becoming.Web.continuationStep R) W.activityClass x
+@Becoming.Web.consumed_held_not_endless : ∀ {F C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop},
+  W.Dependent →
+    ∀ {c : C} {g : F} {T N : Nat},
+      (∀ (s : Nat), T < s → W.level s c < W.need T g c) →
+        T < N →
+          ∀ {x : Nat × F},
+            W.active x.fst x.snd →
+              x.fst ≤ N →
+                (∀ (y : Nat × F),
+                    Becoming.«所及» (Becoming.Web.continuationStep R) W.activityClass x y →
+                      y.fst = N → W.requires N y.snd c ∧ W.need T g c ≤ W.need N y.snd c) →
+                  ¬Becoming.«不穷» (Becoming.Web.continuationStep R) W.activityClass x
+@Becoming.Web.family_excess_gone : ∀ {F C : Type} {W : Becoming.Web F C} {L : Becoming.Flow F C},
+  L.Balances W →
+    W.Dependent →
+      ∀ {ds : List C} {m T n : Nat},
+        (∀ (k : Nat), k < n → L.replenishment ds (T + k) < L.uptake ds (T + k)) →
+          W.stock ds T < n + m →
+            ∀ {y : Nat × F},
+              y.fst = T + n →
+                (∃ e, e ∈ ds ∧ W.requires (T + n) y.snd e ∧ m ≤ W.need (T + n) y.snd e) → ¬W.active y.fst y.snd
+@Becoming.Web.family_excess_degenerates : ∀ {F C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop}
+  {L : Becoming.Flow F C},
+  L.Balances W →
+    W.Dependent →
+      ∀ {ds : List C} {m T n : Nat},
+        (∀ (k : Nat), k < n → L.replenishment ds (T + k) < L.uptake ds (T + k)) →
+          W.stock ds T < n + m →
+            ∀ {x : Nat × F},
+              W.active x.fst x.snd →
+                x.fst ≤ T + n →
+                  (∀ (y : Nat × F),
+                      Becoming.«所及» (Becoming.Web.continuationStep R) W.activityClass x y →
+                        y.fst = T + n → ∃ e, e ∈ ds ∧ W.requires (T + n) y.snd e ∧ m ≤ W.need (T + n) y.snd e) →
+                    Becoming.«退化» (Becoming.Web.continuationStep R) W.activityClass x
+@Becoming.Web.family_excess_not_endless : ∀ {F C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop}
+  {L : Becoming.Flow F C},
+  L.Balances W →
+    W.Dependent →
+      ∀ {ds : List C} {m T n : Nat},
+        (∀ (k : Nat), k < n → L.replenishment ds (T + k) < L.uptake ds (T + k)) →
+          W.stock ds T < n + m →
+            ∀ {x : Nat × F},
+              W.active x.fst x.snd →
+                x.fst ≤ T + n →
+                  (∀ (y : Nat × F),
+                      Becoming.«所及» (Becoming.Web.continuationStep R) W.activityClass x y →
+                        y.fst = T + n → ∃ e, e ∈ ds ∧ W.requires (T + n) y.snd e ∧ m ≤ W.need (T + n) y.snd e) →
+                    ¬Becoming.«不穷» (Becoming.Web.continuationStep R) W.activityClass x
+@Becoming.Web.stopped_gone : ∀ {F C : Type} {V : Becoming.Web F C} {passes : Nat → F → F → Prop},
+  V.ByPassing passes →
+    ∀ {d T : Nat},
+      (∀ (a : F), V.Brief d a) →
+        (∀ (t : Nat), T ≤ t → ¬V.PassesAt passes t) → ∀ {y : Nat × F}, y.fst = T + d → ¬V.active y.fst y.snd
+@Becoming.Web.stopped_degenerates : ∀ {F C : Type} {V : Becoming.Web F C} {passes : Nat → F → F → Prop},
+  V.ByPassing passes →
+    ∀ {d T : Nat},
+      (∀ (a : F), V.Brief d a) →
+        (∀ (t : Nat), T ≤ t → ¬V.PassesAt passes t) →
+          ∀ {x : Nat × F},
+            V.active x.fst x.snd →
+              x.fst ≤ T + d →
+                Becoming.«退化» (Becoming.Web.continuationStep (Becoming.Web.passingContinuation passes)) V.activityClass
+                  x
+@Becoming.Web.stopped_not_endless : ∀ {F C : Type} {V : Becoming.Web F C} {passes : Nat → F → F → Prop},
+  V.ByPassing passes →
+    ∀ {d T : Nat},
+      (∀ (a : F), V.Brief d a) →
+        (∀ (t : Nat), T ≤ t → ¬V.PassesAt passes t) →
+          ∀ {x : Nat × F},
+            V.active x.fst x.snd →
+              x.fst ≤ T + d →
+                ¬Becoming.«不穷» (Becoming.Web.continuationStep (Becoming.Web.passingContinuation passes)) V.activityClass
+                    x
+Becoming.Map.shifted_carry : ∀ (s n : Nat),
+  Becoming.Pulse.half s = n →
+    Becoming.odd s = false →
+      Becoming.«续» (Becoming.Web.continuationStep (Becoming.Web.passingContinuation Becoming.PatternRelay.passesOdd))
+        Becoming.PatternRelay.shifted.activityClass (s, n) (s + 1, n)
+Becoming.Map.shifted_pass : ∀ (s n : Nat),
+  Becoming.Pulse.half s = n →
+    Becoming.odd s = true →
+      Becoming.«传» (Becoming.Web.continuationStep (Becoming.Web.passingContinuation Becoming.PatternRelay.passesOdd))
+        Becoming.PatternRelay.shifted.activityClass Becoming.PatternRelay.shifted.carrierClass (s, n) (s + 1, n + 1)
+Becoming.Map.shifted_generates : ∀ (t : Nat),
+  Becoming.«全生成» (Becoming.Web.continuationStep (Becoming.Web.passingContinuation Becoming.PatternRelay.passesOdd))
+    Becoming.PatternRelay.shifted.activityClass Becoming.PatternRelay.shifted.carrierClass (t, Becoming.Pulse.half t)
+Becoming.Map.relay_after_two : ∀ (t : Nat), ¬(t = t + 1 ∨ t = t + 1 + 1)
+Becoming.Map.relay_renews_and_ends : ∀ (t : Nat),
+  Becoming.«新而有终» (Becoming.Web.continuationStep (Becoming.Web.passingContinuation Becoming.PatternRelay.passes))
+    Becoming.PatternRelay.web.activityClass Becoming.PatternRelay.web.carrierClass (t, t)
+Becoming.Map.renewal_undecided : ∀ (t : Nat),
+  Becoming.PatternRelay.web.RenewingAlong (Becoming.Web.passingContinuation Becoming.PatternRelay.passes) t t ∧
+    Becoming.«新而有终» (Becoming.Web.continuationStep (Becoming.Web.passingContinuation Becoming.PatternRelay.passes))
+        Becoming.PatternRelay.web.activityClass Becoming.PatternRelay.web.carrierClass (t, t) ∧
+      Becoming.PatternRelay.shifted.RenewingAlong (Becoming.Web.passingContinuation Becoming.PatternRelay.passesOdd) t
+          (Becoming.Pulse.half t) ∧
+        Becoming.«全生成»
+          (Becoming.Web.continuationStep (Becoming.Web.passingContinuation Becoming.PatternRelay.passesOdd))
+          Becoming.PatternRelay.shifted.activityClass Becoming.PatternRelay.shifted.carrierClass
+          (t, Becoming.Pulse.half t)
+Becoming.Map.Depleted.dependent : Becoming.Map.Depleted.web.Dependent
+Becoming.Map.Depleted.below : ∀ (s : Nat),
+  1 < s → Becoming.Map.Depleted.web.level s () < Becoming.Map.Depleted.web.need 1 () ()
+Becoming.Map.Depleted.continues : Becoming.«续» (Becoming.Web.continuationStep Becoming.Map.Depleted.every)
+  Becoming.Map.Depleted.web.activityClass (0, ()) (1, ())
+Becoming.Map.Depleted.degenerates : Becoming.«退化» (Becoming.Web.continuationStep Becoming.Map.Depleted.every)
+  Becoming.Map.Depleted.web.activityClass (0, ())
+Becoming.Map.coupled_degenerates : Becoming.«退化» (Becoming.Web.continuationStep fun x x_1 x_2 => True)
+  Becoming.Coupled.web.activityClass (0, Becoming.Coupled.Formation.taker)
+Becoming.Map.coupled_continues : Becoming.«续» (Becoming.Web.continuationStep fun x x_1 x_2 => True)
+  Becoming.Coupled.web.activityClass (0, Becoming.Coupled.Formation.taker) (1, Becoming.Coupled.Formation.taker)
+Becoming.Map.stopped_relay_degenerates : ∀ (T : Nat),
+  Becoming.«退化» (Becoming.Web.continuationStep (Becoming.Web.passingContinuation (Becoming.PatternRelay.passesUntil T)))
+    (Becoming.PatternRelay.stopped T).activityClass (0, 0)
+Becoming.Map.stopped_relay_continues : ∀ (T : Nat),
+  Becoming.«续» (Becoming.Web.continuationStep (Becoming.Web.passingContinuation (Becoming.PatternRelay.passesUntil T)))
+    (Becoming.PatternRelay.stopped T).activityClass (0, 0) (1, 0)
+Becoming.Map.Undecided.inactive_two : ∀ (f : Bool), ¬Becoming.Map.Undecided.web.active 2 f
+Becoming.Map.Undecided.last_ends : ∀ (P : Prop),
+  Becoming.«亡» (Becoming.Web.continuationStep (Becoming.Map.Undecided.continuation P))
+    Becoming.Map.Undecided.web.activityClass (1, true)
+@Becoming.Map.Undecided.first_continues : ∀ {P : Prop},
+  P →
+    Becoming.«续» (Becoming.Web.continuationStep (Becoming.Map.Undecided.continuation P))
+      Becoming.Map.Undecided.web.activityClass (0, false) (1, true)
+Becoming.Map.Undecided.first_has_next_iff : ∀ (P : Prop),
+  Becoming.«有后» (Becoming.Web.continuationStep (Becoming.Map.Undecided.continuation P))
+      Becoming.Map.Undecided.web.activityClass (0, false) ↔
+    P
+Becoming.Map.Undecided.degenerates : ∀ (P : Prop),
+  (∀ (y : Nat × Bool),
+      Becoming.«所及» (Becoming.Web.continuationStep (Becoming.Map.Undecided.continuation P))
+          Becoming.Map.Undecided.web.activityClass (0, false) y →
+        y.fst = 2 → ¬Becoming.Map.Undecided.web.active y.fst y.snd) ∧
+    Becoming.«退化» (Becoming.Web.continuationStep (Becoming.Map.Undecided.continuation P))
+      Becoming.Map.Undecided.web.activityClass (0, false)
+@Becoming.Map.Undecided.end_decides : ∀ {P : Prop},
+  Becoming.«有终» (Becoming.Web.continuationStep (Becoming.Map.Undecided.continuation P))
+      Becoming.Map.Undecided.web.activityClass (0, false) →
+    P ∨ ¬P
+Becoming.Map.end_of_gone_iff_excluded_middle : (∀ (F' C' : Type) (V : Becoming.Web F' C') (R : Nat → F' → F' → Prop)
+    (x : Nat × F') (N : Nat),
+    V.active x.fst x.snd →
+      x.fst ≤ N →
+        (∀ (y : Nat × F'),
+            Becoming.«所及» (Becoming.Web.continuationStep R) V.activityClass x y → y.fst = N → ¬V.active y.fst y.snd) →
+          Becoming.«有终» (Becoming.Web.continuationStep R) V.activityClass x) ↔
+  ∀ (P : Prop), P ∨ ¬P

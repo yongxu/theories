@@ -119,6 +119,7 @@ Following Ren's “move towards 100%” of 12 October 2026: the three-way equiva
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json) | — |
 
 Aliases: `Becoming.Branching.Reachable`, `Becoming.Branching.Returns`, `Becoming.Branching.Lossless`, `Becoming.Branching.returns_iff_fed_ahead`, `Becoming.Branching.returns_iff_keepsWithin`, `Becoming.Branching.keeps_iff_fed`, `Becoming.Branching.Transit.keeps_not_returns`, `Becoming.Branching.OneWay.merge_keeps`, `Becoming.Branching.Lossless.returns`, `returning under branching`, `分支下的返回`
 

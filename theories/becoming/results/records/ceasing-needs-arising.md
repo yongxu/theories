@@ -71,7 +71,7 @@ In the law of a finite family (coming-and-ceasing-keep-pace: coming_recurs_iff, 
   - Input: Finite at each step, recurring ceasing still needs recurring arising.
   - Preserved conditions: A census; decided activity. [Change.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Change.lean)
 - **formal-reuse**: [more-needs-renewers](more-needs-renewers.md). Reuses the census (Web.Census). Before P30 it also reused the length comparison of lists without repetition (length_le_of_sub) and search over a list (search).
-  - Output: The census and list tools; a census growing without bound makes generation unceasing.
+  - Output: The census and list tools; a census growing without bound makes arising unceasing.
   - Input: Under a census, recurring ceasing needs recurring arising.
   - Preserved conditions: A census; decided activity. [Population.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean)
 - **formal-reuse**: [map-of-premises](map-of-premises.md). Reuses the census of a world (World.Counted).
@@ -145,6 +145,8 @@ In the law of a finite family (coming-and-ceasing-keep-pace: coming_recurs_iff, 
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T214533.564191Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json) | — |
 
 Aliases: `Becoming.Listed.coming_of_ceasing`, `Becoming.Web.StandingCensus.coming_of_ceasing`, `Becoming.World.arising_of_ceasing`, `Becoming.World.census_one_way`, `Becoming.Accretion.census`, `Becoming.Web.DependenceCensus.forming_of_dissolving`
 
@@ -171,6 +173,7 @@ Aliases: `Becoming.Listed.coming_of_ceasing`, `Becoming.Web.StandingCensus.comin
 - 1 November 2026, U4c (study section 492): law 2 restated: Listed.coming_of_ceasing is re-proved through the root's census of a run, no longer through Listed.over_stretch and Listed.coming_iff_excess; its statement is unchanged, and law 2's declarations follow the proof, with the references that hold them. The census balance leaves the dependencies, its related note saying until when it was the proof, and the root's census joins related. Declarations moved with their full names: recurring_accumulates to Becoming.Prelude, with the list and stretch lemmas the root's census laws use. The cited Lean source and its proof binding follow them; gaining_of_losing_from, which law 2 now declares, is cited there too; the claim is unchanged.
 - 1 November 2026, U4d (study section 498): law 2 restated for the routes: the root's census of a run no longer asks the occurrences listed once, and the covering law (law 6), through which the world and standing readings go, now reaches the root through the root's covering law at a member's occurrences (Covers.coming_from_of_ceasing re-proved, statement unchanged); the census of a run is itself a case of the root's count of ends on lines. Law 2's declarations gain the two root laws and lose gaining_of_losing_from, which the proof no longer uses. What the record states is unchanged.
 - 7 November 2026, board item AA: the atlas's readers found a contradiction on decidedness; corrected against the Lean and the later records.
+- 7 November 2026, board item LM2: "generation" for arising (Unceasing) and for a flow more without end (More) is replaced, since the glossary's generation never means arising; the Lean's docstrings changed with it. No law, premise or proof changed.
 - 8 rebinding entries (2026-10-13 to 2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](ceasing-needs-arising.json).
 
 <a id="earlier-text--早期文本"></a>

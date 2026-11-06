@@ -81,7 +81,7 @@ Ren's proposal asks to explain formation, persistence, transformation, degenerat
   - Input: Embodied arising comes with another member falling across the same step; not in Brood.
   - Preserved conditions: Balance; dissipated on; embodiment. [Roles.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Roles.lean)
 - **formal-reuse**: [unceasing-generation-needs-renewal](unceasing-generation-needs-renewal.md). Reuses Depletes, Rises and Falls; Depletes here follows from the flow's premises.
-  - Output: Where arising depletes a finite family, unceasing generation needs renewal to recur; depletion is a correspondence premise.
+  - Output: Where arising depletes a finite family, unceasing arising needs renewal to recur; depletion is a correspondence premise.
   - Input: Balance, dissipation and taking at the event's steps give depletion.
   - Preserved conditions: Balance; at the event's steps the family is dissipated on and some formation takes from it. [Arising.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Arising.lean)
 - **formal-reuse**: [more-needs-renewers](more-needs-renewers.md). Reuses flows, balance, Acting, Taking, takers and the total lemmas; takenBy is the dual of renewedBy.
@@ -133,6 +133,8 @@ Ren's proposal asks to explain formation, persistence, transformation, degenerat
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T214533.564191Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json) | — |
 
 Aliases: `Becoming.Flow.Balances.fall_taken`, `Becoming.Flow.Balances.takenBy`, `Becoming.Flow.Balances.falls_cover`, `Becoming.Flow.Balances.falls_of_taking`, `Becoming.Flow.Balances.depletes`, `Becoming.Flow.rise_with_fall`, `Becoming.Flow.standing_with_fall`, `Becoming.Flow.rise_alone_opens`, `Becoming.Flow.rise_exchange`, `Becoming.Web.Embodied.arising_with_fall`, `Becoming.Brood.rise_without_fall`
 
@@ -153,6 +155,7 @@ Aliases: `Becoming.Flow.Balances.fall_taken`, `Becoming.Flow.Balances.takenBy`, 
 - 20 October 2026, R32 (forwarders, copies and reading modules: pure forwarders removed, statements stated once, reading modules folded into the module they read): Re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 223 added; Change.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged. The claim is unchanged.
 - 25 October 2026, board item DF (study section 418): 'The author' in the correspondence, meaning the AI, now says so.
 - 1 November 2026, U4c (study section 492): declarations moved with their full names: total_pos to Becoming.Prelude, with the list and stretch lemmas the root's census laws use. The cited Lean source and its proof binding follow them; the claim is unchanged.
+- 7 November 2026, board item LM2: "generation" for arising (Unceasing) and for a flow more without end (More) is replaced, since the glossary's generation never means arising; the Lean's docstrings changed with it. No law, premise or proof changed.
 - 3 rebinding entries (2026-10-09 to 2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](rising-and-falling-in-one-exchange.json).
 
 <a id="earlier-text--早期文本"></a>

@@ -93,6 +93,8 @@ The multilevel form of Price's equation (Price 1972; Hamilton 1975), the law of 
 | proof | [Prelude.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean) | `Becoming.nil_of_length_zero` |
 | proof | [Population.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean) | `Becoming.total_congr_on` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T214533.564191Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json) | — |
 
 Aliases: `selection within groups and among them`, `组内选择与组间选择`, `multilevel Price equation`, `multilevel selection`, `law of total covariance`, `Becoming.SelectionLevels.levels`, `Becoming.SelectionLevels.among_for_of_rises`, `Becoming.SelectionLevels.rises_exact_iff_levels`
 

@@ -1,0 +1,23 @@
+import Becoming.Unrolling
+#print axioms Becoming.Learning.extendBy
+#print axioms Becoming.Learning.extendBy_of
+#print axioms Becoming.Learning.unroll
+#print axioms Becoming.Learning.ahead
+#print axioms Becoming.Learning.unroll_prefix
+#print axioms Becoming.Learning.ahead_accords
+#print axioms Becoming.Learnable.ahead_fixes
+#print axioms Becoming.Learnable.ReadOff
+#print axioms Becoming.Learnable.reading
+#print axioms Becoming.Learnable.reading_predicts
+#print axioms Becoming.Learnable.given_nothing_not_every
+#print axioms Becoming.Learnable.eq_of_returns
+#print axioms Becoming.Learnable.readAt
+#print axioms Becoming.Learnable.fromWorld
+#print axioms Becoming.Learnable.fromWorld_respects
+#print axioms Becoming.Learnable.reads_of_agree
+#print axioms Becoming.Learnable.reading_predicts_from
+#print axioms Becoming.Learnable.learnable_iff_reading
+#print axioms Becoming.LearnableRuns.ahead_fixes
+#print axioms Becoming.LearnableRuns.given_nothing_not_every
+#print axioms Becoming.LearnableRuns.future_eq
+#print axioms Becoming.LearnableRuns.learnable_iff_reading

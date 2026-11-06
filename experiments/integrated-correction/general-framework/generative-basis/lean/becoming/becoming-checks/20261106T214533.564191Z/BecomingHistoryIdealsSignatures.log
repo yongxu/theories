@@ -1,0 +1,251 @@
+@Becoming.Run.stretches_le_iff : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {r r' : Becoming.Run P},
+  r.stretches.LE r'.stretches ↔ ∀ (h : Nat), Becoming.Run.AgreeUpTo h r r'
+@Becoming.Run.stretches_not_principal : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  (r : Becoming.Run P) (e : Becoming.Run P × Nat),
+  ¬r.stretches.Same (Becoming.Ideals.principal (Becoming.stretchOrder P) e)
+@Becoming.adheres_iff_hull : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {K : Becoming.Run P → Prop}
+  {r : Becoming.Run P}, Becoming.Adheres K r ↔ Becoming.Ideals.Hull (Becoming.runClass K) r.stretches
+@Becoming.closed_iff_within_lower : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {K : Becoming.Run P → Prop},
+  (∀ (r : Becoming.Run P), Becoming.Adheres K r → K r) ↔
+    ∃ Q,
+      Becoming.Ideals.Lower (Becoming.stretchOrder P) Q ∧
+        ∀ (r : Becoming.Run P), K r ↔ Becoming.Ideals.Within (Becoming.stretchOrder P) Q r.stretches
+Becoming.refutable_holds_iff : (∀ (S A : Type) (P : Generative.Process S A) (K : Becoming.Run P → Prop)
+    (r : Becoming.Run P), Becoming.Refutable K → Becoming.Adheres K r → K r) ↔
+  ∀ (φ : Prop), ¬¬φ → φ
+@Becoming.HistoryIdeals.length_le_of_le : ∀ {A : Type u_1} {v w : List A},
+  (Becoming.HistoryIdeals.prefixOrder A).le v w → v.length ≤ w.length
+@Becoming.HistoryIdeals.append_eq_self : ∀ {A : Type u_1} {v s : List A}, v ++ s = v → s = []
+@Becoming.HistoryIdeals.append_eq_nil_left : ∀ {A : Type u_1} {t t' : List A}, t ++ t' = [] → t = []
+@Becoming.HistoryIdeals.prefix_antisymm : ∀ {A : Type u_1} {v w : List A},
+  (Becoming.HistoryIdeals.prefixOrder A).le v w → (Becoming.HistoryIdeals.prefixOrder A).le w v → v = w
+@Becoming.HistoryIdeals.eq_of_le_of_length_le : ∀ {A : Type u_1} {w r : List A},
+  (Becoming.HistoryIdeals.prefixOrder A).le w r → r.length ≤ w.length → w = r
+@Becoming.HistoryIdeals.initial_append : ∀ {A : Type u_1} {v t : List A} {a : Nat → A},
+  Becoming.HistoryIdeals.Initial (v ++ t) a → Becoming.HistoryIdeals.Initial v a
+@Becoming.HistoryIdeals.initialWord_initial : ∀ {A : Type u_1} (a : Nat → A) (n : Nat),
+  Becoming.HistoryIdeals.Initial (Becoming.HistoryIdeals.initialWord a n) a
+@Becoming.HistoryIdeals.initialWord_length : ∀ {A : Type u_1} (a : Nat → A) (n : Nat),
+  (Becoming.HistoryIdeals.initialWord a n).length = n
+@Becoming.HistoryIdeals.initial_le_of_length : ∀ {A : Type u_1} {v w : List A} {a : Nat → A},
+  Becoming.HistoryIdeals.Initial v a →
+    Becoming.HistoryIdeals.Initial w a → v.length ≤ w.length → (Becoming.HistoryIdeals.prefixOrder A).le v w
+@Becoming.HistoryIdeals.initial_le_initialWord : ∀ {A : Type u_1} {w : List A} {a : Nat → A},
+  Becoming.HistoryIdeals.Initial w a →
+    (Becoming.HistoryIdeals.prefixOrder A).le w (Becoming.HistoryIdeals.initialWord a w.length)
+@Becoming.HistoryIdeals.initial_congr : ∀ {A : Type u_1} {w : List A} {a b : Nat → A},
+  (∀ (n : Nat), a n = b n) → Becoming.HistoryIdeals.Initial w a → Becoming.HistoryIdeals.Initial w b
+@Becoming.HistoryIdeals.initial_initialWord_iff : ∀ {A : Type u_1} {a b : Nat → A} {n : Nat},
+  Becoming.HistoryIdeals.Initial (Becoming.HistoryIdeals.initialWord a n) b ↔ ∀ (i : Nat), i < n → a i = b i
+@Becoming.HistoryIdeals.trace_not_le_principal : ∀ {A : Type u_1} (a : Nat → A) (w : List A),
+  ¬(Becoming.HistoryIdeals.traceIdeal a).LE (Becoming.Ideals.principal (Becoming.HistoryIdeals.prefixOrder A) w)
+@Becoming.HistoryIdeals.trace_le_trace_iff : ∀ {A : Type u_1} {a b : Nat → A},
+  (Becoming.HistoryIdeals.traceIdeal a).LE (Becoming.HistoryIdeals.traceIdeal b) ↔ ∀ (n : Nat), a n = b n
+@Becoming.HistoryIdeals.history_le_iff : ∀ {A : Type u_1} (h k : Becoming.HistoryIdeals.History A),
+  (Becoming.HistoryIdeals.historyIdeal h).LE (Becoming.HistoryIdeals.historyIdeal k) ↔
+    Becoming.HistoryIdeals.HistoryPrefix h k
+@Becoming.HistoryIdeals.historyIdeal_same_iff : ∀ {A : Type u_1} (h k : Becoming.HistoryIdeals.History A),
+  (Becoming.HistoryIdeals.historyIdeal h).Same (Becoming.HistoryIdeals.historyIdeal k) ↔
+    Becoming.HistoryIdeals.SameHistory h k
+@Becoming.HistoryIdeals.hasLongest_principal : ∀ {A : Type u_1}
+  {I : Becoming.Ideals.Ideal (Becoming.HistoryIdeals.prefixOrder A)},
+  Becoming.HistoryIdeals.HasLongest I → ∃ w, I.Same (Becoming.Ideals.principal (Becoming.HistoryIdeals.prefixOrder A) w)
+@Becoming.HistoryIdeals.letter_append : ∀ {A : Type u_1} (v t : List A) (n : Nat) (h : n < v.length)
+  (h' : n < (v ++ t).length), Becoming.HistoryIdeals.letter (v ++ t) n h' = Becoming.HistoryIdeals.letter v n h
+@Becoming.HistoryIdeals.letter_congr : ∀ {A : Type u_1} {v w : List A},
+  v = w →
+    ∀ (n : Nat) (h : n < v.length) (h' : n < w.length),
+      Becoming.HistoryIdeals.letter v n h = Becoming.HistoryIdeals.letter w n h'
+@Becoming.HistoryIdeals.initial_iff_letter : ∀ {A : Type u_1} (w : List A) (a : Nat → A),
+  Becoming.HistoryIdeals.Initial w a ↔ ∀ (n : Nat) (h : n < w.length), Becoming.HistoryIdeals.letter w n h = a n
+@Becoming.HistoryIdeals.goesOn_trace : ∀ {A : Type u_1}
+  {I : Becoming.Ideals.Ideal (Becoming.HistoryIdeals.prefixOrder A)} (pick : Nat → List A),
+  (∀ (n : Nat), I.mem (pick n)) →
+    ∀ (long : ∀ (n : Nat), n < (pick n).length),
+      I.Same (Becoming.HistoryIdeals.traceIdeal fun n => Becoming.HistoryIdeals.letter (pick n) n ⋯)
+@Becoming.HistoryIdeals.classification : ∀ {A : Type u_1}
+  {I : Becoming.Ideals.Ideal (Becoming.HistoryIdeals.prefixOrder A)},
+  (Becoming.HistoryIdeals.HasLongest I ∨ ∃ pick, (∀ (n : Nat), I.mem (pick n)) ∧ ∀ (n : Nat), n < (pick n).length) →
+    ∃ h, I.Same (Becoming.HistoryIdeals.historyIdeal h)
+@Becoming.HistoryIdeals.principal_hasLongest : ∀ {A : Type u_1} (w : List A),
+  Becoming.HistoryIdeals.HasLongest (Becoming.Ideals.principal (Becoming.HistoryIdeals.prefixOrder A) w)
+@Becoming.HistoryIdeals.trace_goesOn : ∀ {A : Type u_1} (a : Nat → A),
+  Becoming.HistoryIdeals.GoesOn (Becoming.HistoryIdeals.traceIdeal a)
+Becoming.HistoryIdeals.units_length : ∀ (n : Nat), (Becoming.HistoryIdeals.units n).length = n
+@Becoming.HistoryIdeals.unit_le_of_length : ∀ {v w : List Unit},
+  v.length ≤ w.length → (Becoming.HistoryIdeals.prefixOrder Unit).le v w
+Becoming.HistoryIdeals.least_true_or_below : ∀ (s : Nat → Bool) (n : Nat),
+  (∀ (m : Nat), m < n → s m = false) ∨ ∃ k, (∀ (m : Nat), m < k → s m = false) ∧ s k = true
+Becoming.HistoryIdeals.cut_decided_iff_lpo : (∀ (s : Nat → Bool),
+    Becoming.HistoryIdeals.HasLongest (Becoming.HistoryIdeals.cut s) ∨
+      Becoming.HistoryIdeals.GoesOn (Becoming.HistoryIdeals.cut s)) ↔
+  Becoming.LPO
+@Becoming.HistoryIdeals.prefixClosed_iff_lower : ∀ {A : Type u_1} (L : List A → Prop),
+  Becoming.HistoryLanguages.PrefixClosed L ↔ Becoming.Ideals.Lower (Becoming.HistoryIdeals.prefixOrder A) L
+@Becoming.HistoryIdeals.history_within_iff : ∀ {A : Type u_1} {L : List A → Prop},
+  Becoming.HistoryLanguages.PrefixClosed L →
+    ∀ (h : Becoming.HistoryIdeals.History A),
+      Becoming.Ideals.Within (Becoming.HistoryIdeals.prefixOrder A) L (Becoming.HistoryIdeals.historyIdeal h) ↔
+        Becoming.HistoryIdeals.WithinLanguage L h
+@Becoming.HistoryIdeals.finiteOr_hull : ∀ {A : Type u_1} (K : (Nat → A) → Prop)
+  (I : Becoming.Ideals.Ideal (Becoming.HistoryIdeals.prefixOrder A)),
+  Becoming.Ideals.Hull (Becoming.HistoryIdeals.FiniteOr K) I
+@Becoming.HistoryIdeals.finiteOr_not_refutable : ∀ {A : Type u_1} (K : (Nat → A) → Prop) (a : Nat → A),
+  (∀ (b : Nat → A), (∀ (n : Nat), a n = b n) → ¬K b) → ¬Becoming.Ideals.Refutable (Becoming.HistoryIdeals.FiniteOr K)
+Becoming.HistoryIdeals.finiteOr_recurs_not_refutable : ¬Becoming.Ideals.Refutable
+    (Becoming.HistoryIdeals.FiniteOr fun a => Becoming.Sequences.Recurs (Becoming.Sequences.run a))
+@Becoming.HistoryIdeals.sequence_stretch_iff : ∀ {A : Type u_1} (a : Nat → A)
+  (q : Becoming.Run (Becoming.Sequences.process A)) (h : Nat),
+  (Becoming.Sequences.run a).stretches.mem (q, h) ↔
+    (Becoming.HistoryIdeals.traceIdeal a).mem (Becoming.HistoryIdeals.initialWord q.act h)
+@Becoming.Stretches.refutable_of_class : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {C : Becoming.Ideals.Ideal (Becoming.stretchOrder P) → Prop},
+  Becoming.Ideals.Refutable C → Becoming.Refutable fun r => C r.stretches
+@Becoming.Stretches.adheres_iff_closed : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {K : Becoming.Run P → Prop} {r : Becoming.Run P},
+  Becoming.Adheres K r ↔
+    ∀ (C : Becoming.Ideals.Ideal (Becoming.stretchOrder P) → Prop),
+      Becoming.Ideals.ScottClosed C → (∀ (r' : Becoming.Run P), K r' → C r'.stretches) → C r.stretches
+@Becoming.Stretches.adherence_unique : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {K : Becoming.Run P → Prop} {H : Becoming.Ideals.Ideal (Becoming.stretchOrder P) → Prop},
+  Becoming.Ideals.ScottClosed H →
+    (∀ (r : Becoming.Run P), K r → H r.stretches) →
+      (∀ (E : Becoming.Ideals.Ideal (Becoming.stretchOrder P) → Prop),
+          Becoming.Ideals.ScottClosed E →
+            (∀ (r : Becoming.Run P), K r → E r.stretches) →
+              ∀ (I : Becoming.Ideals.Ideal (Becoming.stretchOrder P)), H I → E I) →
+        ∀ (r : Becoming.Run P), H r.stretches ↔ Becoming.Adheres K r
+@Becoming.Stretches.adheres_content : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {K : Becoming.Run P → Prop} {e : Becoming.Run P × Nat},
+  (∃ r, Becoming.Adheres K r ∧ r.stretches.mem e) ↔ ∃ r, K r ∧ r.stretches.mem e
+@Becoming.Stretches.adheres_joint : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {K : Becoming.Run P → Prop} {r : Becoming.Run P},
+  Becoming.Adheres K r →
+    ∀ {e e' : Becoming.Run P × Nat},
+      r.stretches.mem e →
+        r.stretches.mem e' →
+          ∃ r', K r' ∧ ∃ f, r'.stretches.mem f ∧ (Becoming.stretchOrder P).le e f ∧ (Becoming.stretchOrder P).le e' f
+@Becoming.Stretches.closed_runs : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {C : Becoming.Ideals.Ideal (Becoming.stretchOrder P) → Prop},
+  Becoming.Ideals.ScottClosed C →
+    ∀ (r : Becoming.Run P),
+      C r.stretches ↔ ∀ (e : Becoming.Run P × Nat), r.stretches.mem e → Becoming.Ideals.Content C e
+@Becoming.Stretches.within_refutable : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {Q : Becoming.Run P × Nat → Prop},
+  Becoming.Ideals.Lower (Becoming.stretchOrder P) Q →
+    (∀ (I : Becoming.Ideals.Ideal (Becoming.stretchOrder P)),
+        ¬Becoming.Ideals.Within (Becoming.stretchOrder P) Q I → ∃ e, I.mem e ∧ ¬Q e) →
+      Becoming.Refutable fun r => Becoming.Ideals.Within (Becoming.stretchOrder P) Q r.stretches
+Becoming.Stretches.unit_agree : ∀ (r r' : Becoming.Run (Becoming.Sequences.process Unit)) (h : Nat),
+  Becoming.Run.AgreeUpTo h r r'
+Becoming.Stretches.refutable_closed_iff : (∀ (S A : Type) (P : Generative.Process S A)
+    (C : Becoming.Ideals.Ideal (Becoming.stretchOrder P) → Prop),
+    Becoming.Ideals.Refutable C → Becoming.Ideals.ScottClosed C) ↔
+  ∀ (φ : Prop), ¬¬φ → φ
+Becoming.Stretches.closed_refutable_iff : (∀ (S A : Type) (P : Generative.Process S A)
+    (C : Becoming.Ideals.Ideal (Becoming.stretchOrder P) → Prop),
+    Becoming.Ideals.ScottClosed C → Becoming.Ideals.Refutable C) ↔
+  ∀ (φ : Prop), ¬¬φ → φ
+@Becoming.Stretches.avoids_adheres : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {F : Becoming.Run P × Nat → Prop} {r : Becoming.Run P},
+  Becoming.Adheres (fun r' => Becoming.Ideals.Avoids F r'.stretches) r → Becoming.Ideals.Avoids F r.stretches
+@Becoming.Stretches.avoids_runs : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {C : Becoming.Ideals.Ideal (Becoming.stretchOrder P) → Prop},
+  Becoming.Ideals.ScottClosed C →
+    ∀ {F : Becoming.Run P × Nat → Prop},
+      (∀ (e : Becoming.Run P × Nat),
+          C (Becoming.Ideals.principal (Becoming.stretchOrder P) e) ↔
+            ∀ (b : Becoming.Run P × Nat), F b → ¬(Becoming.stretchOrder P).le b e) →
+        ∀ (r : Becoming.Run P), C r.stretches ↔ Becoming.Ideals.Avoids F r.stretches
+@Becoming.Stretches.avoids_refutable : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {F : Becoming.Run P × Nat → Prop},
+  (∀ (I : Becoming.Ideals.Ideal (Becoming.stretchOrder P)), ¬Becoming.Ideals.Avoids F I → ∃ b, F b ∧ I.mem b) →
+    Becoming.Refutable fun r => Becoming.Ideals.Avoids F r.stretches
+@Becoming.Stretches.inherited_histories : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {Q : Becoming.Run P × Nat → Prop},
+  Becoming.Ideals.Lower (Becoming.stretchOrder P) Q →
+    ∀ (J : Becoming.Ideals.Ideal ((Becoming.stretchOrder P).restrict Q)), ∃ I h, (I.restrict h).Same J
+@Becoming.Stretches.within_order_iff : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {Q : Becoming.Run P × Nat → Prop},
+  Becoming.Ideals.Lower (Becoming.stretchOrder P) Q →
+    ∀ {r r' : Becoming.Run P} (h : Becoming.Ideals.Within (Becoming.stretchOrder P) Q r.stretches)
+      (h' : Becoming.Ideals.Within (Becoming.stretchOrder P) Q r'.stretches),
+      (r.stretches.restrict h).LE (r'.stretches.restrict h') ↔ ∀ (t : Nat), Becoming.Run.AgreeUpTo t r r'
+@Becoming.Stretches.run_not_compact : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} (r : Becoming.Run P),
+  ¬Becoming.Ideals.Compact (Becoming.Ideals.idealComplete (Becoming.stretchOrder P)) r.stretches
+@Becoming.Stretches.run_reading_unique : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {β : Type u_3}
+  {Q : Becoming.Ideals.Preorder β} (D : Becoming.Ideals.DirectedComplete Q) {f : Becoming.Run P × Nat → β},
+  Becoming.Ideals.Monotone (Becoming.stretchOrder P) Q f →
+    ∀ {g g' : Becoming.Ideals.Ideal (Becoming.stretchOrder P) → β},
+      Becoming.Ideals.Continuous (Becoming.Ideals.idealComplete (Becoming.stretchOrder P)) D g →
+        Becoming.Ideals.Continuous (Becoming.Ideals.idealComplete (Becoming.stretchOrder P)) D g' →
+          (∀ (e : Becoming.Run P × Nat), Q.Equiv (g (Becoming.Ideals.principal (Becoming.stretchOrder P) e)) (f e)) →
+            (∀ (e : Becoming.Run P × Nat), Q.Equiv (g' (Becoming.Ideals.principal (Becoming.stretchOrder P) e)) (f e)) →
+              ∀ (r : Becoming.Run P), Q.Equiv (g r.stretches) (g' r.stretches)
+@Becoming.Stretches.runs_told_apart : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {r r' : Becoming.Run P},
+  (∀ (e : Becoming.Run P × Nat),
+      Becoming.Ideals.extend Becoming.Ideals.implicationComplete (Becoming.Ideals.above (Becoming.stretchOrder P) e) ⋯
+          r.stretches ↔
+        Becoming.Ideals.extend Becoming.Ideals.implicationComplete (Becoming.Ideals.above (Becoming.stretchOrder P) e) ⋯
+          r'.stretches) →
+    ∀ (t : Nat), Becoming.Run.AgreeUpTo t r r'
+@Becoming.Stretches.finite_basis : ∀ {S : Type u_1} {A : Type u_2} (P : Generative.Process S A),
+  Becoming.Ideals.CompactBasis (Becoming.stretchOrder P) (Becoming.Ideals.idealComplete (Becoming.stretchOrder P))
+    (Becoming.Ideals.principal (Becoming.stretchOrder P))
+@Becoming.Stretches.histories_representation : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {β : Type u_3} {Q : Becoming.Ideals.Preorder β} {D : Becoming.Ideals.DirectedComplete Q}
+  {e : Becoming.Run P × Nat → β},
+  Becoming.Ideals.CompactBasis (Becoming.stretchOrder P) D e →
+    ∃ F,
+      (∀ (s : Becoming.Run P × Nat),
+          Q.Equiv (F.forward (Becoming.Ideals.principal (Becoming.stretchOrder P) s)) (e s)) ∧
+        ∀ (G : Becoming.Ideals.OrderEquivalence (Becoming.Ideals.idealOrder (Becoming.stretchOrder P)) Q),
+          (∀ (s : Becoming.Run P × Nat),
+              Q.Equiv (G.forward (Becoming.Ideals.principal (Becoming.stretchOrder P) s)) (e s)) →
+            (∀ (I : Becoming.Ideals.Ideal (Becoming.stretchOrder P)), Q.Equiv (G.forward I) (F.forward I)) ∧
+              ∀ (y : β), (G.backward y).Same (F.backward y)
+@Becoming.Stretches.mem_state : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {I : Becoming.Ideals.Ideal (Becoming.stretchOrder P)} {e e' : Becoming.Run P × Nat},
+  I.mem e → I.mem e' → ∀ {s : Nat}, s ≤ e.snd → s ≤ e'.snd → e.fst.state s = e'.fst.state s
+@Becoming.Stretches.mem_act : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {I : Becoming.Ideals.Ideal (Becoming.stretchOrder P)} {e e' : Becoming.Run P × Nat},
+  I.mem e → I.mem e' → ∀ {s : Nat}, s < e.snd → s < e'.snd → e.fst.act s = e'.fst.act s
+@Becoming.Stretches.hasLatest_principal : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {I : Becoming.Ideals.Ideal (Becoming.stretchOrder P)},
+  Becoming.Stretches.HasLatest I → ∃ e, I.Same (Becoming.Ideals.principal (Becoming.stretchOrder P) e)
+@Becoming.Stretches.goesOn_run : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {I : Becoming.Ideals.Ideal (Becoming.stretchOrder P)} (pick : Nat → Becoming.Run P × Nat)
+  (mem : ∀ (h : Nat), I.mem (pick h)) (beyond : ∀ (h : Nat), h < (pick h).snd),
+  I.Same (Becoming.Stretches.pickedRun pick mem beyond).stretches
+@Becoming.Stretches.classification : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {I : Becoming.Ideals.Ideal (Becoming.stretchOrder P)},
+  (Becoming.Stretches.HasLatest I ∨ ∃ pick, (∀ (h : Nat), I.mem (pick h)) ∧ ∀ (h : Nat), h < (pick h).snd) →
+    (∃ e, I.Same (Becoming.Ideals.principal (Becoming.stretchOrder P) e)) ∨ ∃ r, I.Same r.stretches
+@Becoming.Stretches.principal_hasLatest : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  (e : Becoming.Run P × Nat), Becoming.Stretches.HasLatest (Becoming.Ideals.principal (Becoming.stretchOrder P) e)
+@Becoming.Stretches.run_goesOn : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} (r : Becoming.Run P),
+  Becoming.Stretches.GoesOn r.stretches
+Becoming.Stretches.cut_hasLatest_iff : ∀ (s : Nat → Bool),
+  Becoming.Stretches.HasLatest (Becoming.Stretches.cut s) ↔
+    Becoming.HistoryIdeals.HasLongest (Becoming.HistoryIdeals.cut s)
+Becoming.Stretches.cut_goesOn_iff : ∀ (s : Nat → Bool),
+  Becoming.Stretches.GoesOn (Becoming.Stretches.cut s) ↔ Becoming.HistoryIdeals.GoesOn (Becoming.HistoryIdeals.cut s)
+Becoming.Stretches.cut_decided_iff_lpo : (∀ (s : Nat → Bool),
+    Becoming.Stretches.HasLatest (Becoming.Stretches.cut s) ∨ Becoming.Stretches.GoesOn (Becoming.Stretches.cut s)) ↔
+  Becoming.LPO
+@Becoming.Stretches.sequences_le_iff : ∀ {A : Type u_1} {r r' : Becoming.Run (Becoming.Sequences.process A)},
+  r.stretches.LE r'.stretches ↔
+    Becoming.HistoryIdeals.HistoryPrefix (Becoming.HistoryIdeals.History.infinite r.act)
+      (Becoming.HistoryIdeals.History.infinite r'.act)
+@Becoming.Stretches.sequences_same_iff : ∀ {A : Type u_1} {r r' : Becoming.Run (Becoming.Sequences.process A)},
+  r.stretches.Same r'.stretches ↔
+    Becoming.HistoryIdeals.SameHistory (Becoming.HistoryIdeals.History.infinite r.act)
+      (Becoming.HistoryIdeals.History.infinite r'.act)
+@Becoming.Stretches.sequences_within_iff : ∀ {A : Type u_1} {L : List A → Prop},
+  Becoming.HistoryLanguages.PrefixClosed L →
+    ∀ (r : Becoming.Run (Becoming.Sequences.process A)),
+      (∀ (e : Becoming.Run (Becoming.Sequences.process A) × Nat),
+          r.stretches.mem e → L (Becoming.HistoryIdeals.initialWord e.fst.act e.snd)) ↔
+        Becoming.HistoryIdeals.WithinLanguage L (Becoming.HistoryIdeals.History.infinite r.act)

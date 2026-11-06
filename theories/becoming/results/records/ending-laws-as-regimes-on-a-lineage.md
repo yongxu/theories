@@ -111,6 +111,7 @@ The stock as a horizon is the Malthusian bound of a finite closed resource read 
 | proof | [MapInstances.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean) | `Becoming.Web.family_excess_gone`, `Becoming.Web.family_excess_degenerates` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T174854.382527Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json) | — |
 
 Aliases: `Becoming.LineageRegimes.degeneration_of_family_excess`, `Becoming.LineageRegimes.degeneration_of_family_excess_listed`, `Becoming.LineageRegimes.degeneration_at_stock_horizon`, `Becoming.LineageRegimes.dissipation_degenerates_every_member`, `Becoming.LineageRegimes.draw_doubling_needs`, `Becoming.LineageRegimes.multiplying_takers_need`, `Becoming.LineageRegimes.multiplying_takers_stop`, `Becoming.LineageRegimes.multiplying_takers_stop_of_need`, `Becoming.LineageRegimes.stock_forces_neither`, `Becoming.LineageRegimes.Handover.both_fates`, `Becoming.LineageRegimes.FromOutside.from_outside`
 

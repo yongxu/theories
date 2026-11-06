@@ -73,8 +73,8 @@ Ren's proposal: counting the whole space, generative and degenerative, the theor
 <a id="dependencies--依赖"></a>
 ### Dependencies
 
-- **formal-reuse**: [unceasing-generation-needs-renewal](unceasing-generation-needs-renewal.md). Reuses arising, unceasing generation, rising and falling (Arises, Unceasing, Rises, Falls) and total.
-  - Output: Where arising depletes a finite family, unceasing generation needs renewal to recur.
+- **formal-reuse**: [unceasing-generation-needs-renewal](unceasing-generation-needs-renewal.md). Reuses arising, unceasing arising, rising and falling (Arises, Unceasing, Rises, Falls) and total.
+  - Output: Where arising depletes a finite family, unceasing arising needs renewal to recur.
   - Input: With no premise: in a finite family recurring falls need recurring rises, and arising recurs exactly when ceasing does.
   - Preserved conditions: A finite family; decidable activity for counting. [Arising.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Arising.lean)
 - **formal-reuse**: [becoming-renewal-reading](becoming-renewal-reading.md). falls_not_recurring is the floor law for one amount (falls_not_recurring_from_floor).
@@ -139,6 +139,8 @@ Ren's proposal: counting the whole space, generative and degenerative, the theor
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T214533.564191Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json) | — |
 
 Aliases: `Becoming.ComesToBe`, `Becoming.CeasesToBe`, `Becoming.Web.Ceases`, `Becoming.Web.CeasesToStand`, `Becoming.Web.change_readings`, `Becoming.over_stretch`, `Becoming.family_over_stretch`, `Becoming.rising_recurs`, `Becoming.falling_recurs`, `Becoming.held_over_stretch`, `Becoming.keep_pace`, `Becoming.coming_recurs_iff`, `Becoming.Web.arising_recurs_iff`, `Becoming.Web.standing_recurs_iff`, `Becoming.Web.unceasing_iff`, `Becoming.Web.falls_need_rises`, `Becoming.Web.supported_of`
 
@@ -164,6 +166,7 @@ Aliases: `Becoming.ComesToBe`, `Becoming.CeasesToBe`, `Becoming.Web.Ceases`, `Be
 - 25 October 2026, board item DF (study section 418): 'The author' in the correspondence, meaning the AI, now says so, so the reading keeps its AI label.
 - 1 November 2026, U4c (study section 492): declarations moved with their full names: steps_mem, steps_last, steps_mono, pos_of_exceeds, recurring_accumulates, total_pos to Becoming.Prelude, with the list and stretch lemmas the root's census laws use. The cited Lean source and its proof binding follow them; the claim is unchanged.
 - 6 November 2026, board item LM: declarations this record lists moved with the helpers stated once; its references follow them, and no law changed.
+- 7 November 2026, board item LM2: "generation" for arising (Unceasing) and for a flow more without end (More) is replaced, since the glossary's generation never means arising; the Lean's docstrings changed with it. No law, premise or proof changed.
 - 3 rebinding entries (2026-10-09 to 2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](coming-and-ceasing-keep-pace.json).
 
 <a id="earlier-text--早期文本"></a>

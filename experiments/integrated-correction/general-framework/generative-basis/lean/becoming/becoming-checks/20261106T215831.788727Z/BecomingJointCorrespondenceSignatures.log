@@ -1,0 +1,90 @@
+@Becoming.JointBisimulation.reach : ∀ {S : Type u_1} {S' : Type u_2} {A : Type u_3} {C : Type u_4}
+  {F : Becoming.JointFrame S A C} {G : Becoming.JointFrame S' A C} {B : S → S' → Prop},
+  Becoming.JointBisimulation F G B →
+    ∀ {root : S} {root' : S'}, B root root' → ∀ {s : S}, F.Reach root s → ∃ s', G.Reach root' s' ∧ B s s'
+@Becoming.SameJointTests.inverse_functional : ∀ {S : Type u_1} {S' : Type u_2} {A : Type u_3} {C : Type u_4}
+  {F : Becoming.JointFrame S A C} {G : Becoming.JointFrame S' A C},
+  (∀ (s t : S), Becoming.SameJointTests F F s t → s = t) →
+    ∀ {s t : S} {s' : S'}, Becoming.SameJointTests F G s s' → Becoming.SameJointTests F G t s' → s = t
+@Becoming.SameJointTests.joint_iff : ∀ {S : Type u_1} {S' : Type u_2} {A : Type u_3} {C : Type u_4}
+  {F : Becoming.JointFrame S A C} {G : Becoming.JointFrame S' A C},
+  F.JointCompact →
+    G.JointCompact →
+      F.TestsStable →
+        G.TestsStable →
+          (∀ (s t : S), Becoming.SameJointTests F F s t → s = t) →
+            (∀ (s' t' : S'), Becoming.SameJointTests G G s' t' → s' = t') →
+              ∀ {s l r : S} {s' l' r' : S'},
+                Becoming.SameJointTests F G s s' →
+                  Becoming.SameJointTests F G l l' →
+                    Becoming.SameJointTests F G r r' → (F.joint s l r ↔ G.joint s' l' r')
+@Becoming.SameJointTests.step_iff : ∀ {S : Type u_1} {S' : Type u_2} {A : Type u_3} {C : Type u_4}
+  {F : Becoming.JointFrame S A C} {G : Becoming.JointFrame S' A C},
+  F.StepCompact →
+    G.StepCompact →
+      F.TestsStable →
+        G.TestsStable →
+          (∀ (s t : S), Becoming.SameJointTests F F s t → s = t) →
+            (∀ (s' t' : S'), Becoming.SameJointTests G G s' t' → s' = t') →
+              ∀ {s t : S} {s' t' : S'},
+                Becoming.SameJointTests F G s s' →
+                  Becoming.SameJointTests F G t t' → ∀ (a : A), F.P.step s a t ↔ G.P.step s' a t'
+@Becoming.SameJointTests.correspondence : ∀ {S : Type u_1} {S' : Type u_2} {A : Type u_3} {C : Type u_4}
+  {F : Becoming.JointFrame S A C} {G : Becoming.JointFrame S' A C},
+  F.StepCompact →
+    G.StepCompact →
+      F.JointCompact →
+        G.JointCompact →
+          F.TestsStable →
+            G.TestsStable →
+              (∀ (s t : S), Becoming.SameJointTests F F s t → s = t) →
+                (∀ (s' t' : S'), Becoming.SameJointTests G G s' t' → s' = t') →
+                  ∀ {root : S} {root' : S'},
+                    Becoming.SameJointTests F G root root' →
+                      (∀ (s : S), F.Reach root s) →
+                        (∀ (s' : S'), G.Reach root' s') →
+                          (∀ (s : S),
+                              ∃ s',
+                                Becoming.SameJointTests F G s s' ∧
+                                  ∀ (t' : S'), Becoming.SameJointTests F G s t' → t' = s') ∧
+                            ∀ (s' : S'),
+                              ∃ s,
+                                Becoming.SameJointTests F G s s' ∧ ∀ (t : S), Becoming.SameJointTests F G t s' → t = s
+@Becoming.liftsFromEach_of_exact : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {D : Type u_4}
+  {F : Becoming.JointFrame S A C} {p : Becoming.Presentations.Presentation S (Becoming.JointTest A C) D},
+  F.JointCompact →
+    F.TestsStable →
+      Becoming.Presentations.Exact (Becoming.JointTest.Holds F) p →
+        Becoming.Presentations.Reduced (Becoming.JointTest.Holds F) p → Becoming.LiftsFromEach F.joint p.encode
+@Becoming.matchesParts_of_exact : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {D : Type u_4}
+  {F : Becoming.JointFrame S A C} {p : Becoming.Presentations.Presentation S (Becoming.JointTest A C) D},
+  F.JointCompact →
+    F.TestsStable →
+      Becoming.Presentations.Exact (Becoming.JointTest.Holds F) p →
+        Becoming.Presentations.Reduced (Becoming.JointTest.Holds F) p →
+          Becoming.MatchesParts F.joint F.joint fun s t => p.encode s = p.encode t
+@Becoming.JointPlan.realizes_code_iff : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {D : Type u_4} {Q : Type u_5}
+  {F : Becoming.JointFrame S A C} {p : Becoming.Presentations.Presentation S (Becoming.JointTest A C) D},
+  F.JointCompact →
+    F.TestsStable →
+      Becoming.Presentations.Exact (Becoming.JointTest.Holds F) p →
+        Becoming.Presentations.Reduced (Becoming.JointTest.Holds F) p →
+          ∀ {leaf : S → Q → Prop} {read : D → Q → Prop},
+            (∀ (s : S) (q : Q), read (p.encode s) q ↔ leaf s q) →
+              ∀ (plan : Becoming.JointPlan Q) (s : S),
+                Becoming.JointPlan.Realizes (Becoming.jointImage F.joint p.encode) read (p.encode s) plan ↔
+                  Becoming.JointPlan.Realizes F.joint leaf s plan
+@Becoming.JointPlan.supports_of_code : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {D : Type u_4} {R : Type u_5}
+  {F : Becoming.JointFrame S A C} {p : Becoming.Presentations.Presentation S (Becoming.JointTest A C) D},
+  F.JointCompact →
+    F.TestsStable →
+      Becoming.Presentations.Exact (Becoming.JointTest.Holds F) p →
+        Becoming.Presentations.Reduced (Becoming.JointTest.Holds F) p →
+          ∀ {footprint : S → R → Prop},
+            Becoming.PartsWithin footprint F.joint →
+              Becoming.PartsApart footprint F.joint →
+                ∀ {read : D → List R → Prop},
+                  (∀ (s : S) (xs : List R), read (p.encode s) xs ↔ Becoming.Supports footprint s xs) →
+                    ∀ (plan : Becoming.JointPlan (List R)) (s : S),
+                      Becoming.JointPlan.Realizes (Becoming.jointImage F.joint p.encode) read (p.encode s) plan →
+                        Becoming.Supports footprint s plan.draws

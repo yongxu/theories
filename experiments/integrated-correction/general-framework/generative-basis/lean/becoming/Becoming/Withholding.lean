@@ -50,9 +50,10 @@ giving.
   - **On a loop, withholding returns** (headline). A chain of `p` waits from `b` back to `b`, and
     `b` withholding at the start, makes `b` withhold at every step `k * p`
     (`withholding_returns`). No positivity of `p` is needed.
-* **More waiting, less giving.** Adding waits (`up` within `up'`) takes giving away at every step
-  under both laws (`waitsAll_more_waiting`, `answers_more_waiting`): each added wait on another's
-  giving is one more way for withholding to arrive.
+* **More waiting gives no more.** Adding waits (`up` within `up'`) adds no giving at any step
+  under either law: whatever gives with the added waits gives without them (`waitsAll_more_waiting`,
+  `answers_more_waiting`). Each added wait on another's giving is one more way for withholding to
+  arrive; that an added wait takes some giving away is not shown, and need not hold.
 * **Restoring needs another law.** In the witness `Ring`, three formations each waiting on the one
   before, one withholding at the start: with memory all withhold from step 2 on, and at step 1 one
   still gives (`Ring.waitsAll_absorbs_exact`); without memory the withholding circulates, one
@@ -279,13 +280,14 @@ theorem withholding_returns {p : Nat} {b : α} {s : α → Prop} (loop : Chain u
 
 end NoMemory
 
-/-! ## More waiting, less giving -/
+/-! ## More waiting gives no more -/
 
 section MoreWaiting
 
 variable {up up' : α → α → Prop} (s : α → Prop)
 
-/-- **More waiting, less giving, with memory: adding waits takes giving away at every step.** -/
+/-- **More waiting gives no more, with memory**: whatever gives at a step with the added waits gives
+without them. -/
 theorem waitsAll_more_waiting (sub : ∀ b a, up b a → up' b a) :
     ∀ n a, (Law.run (waitsAll up') s).state n a → (Law.run (waitsAll up) s).state n a
   | 0, _, gives => gives
@@ -293,7 +295,8 @@ theorem waitsAll_more_waiting (sub : ∀ b a, up b a → up' b a) :
     ⟨waitsAll_more_waiting sub n a gives.1,
      fun c link => waitsAll_more_waiting sub n c (gives.2 c (sub c a link))⟩
 
-/-- **More waiting, less giving, without memory: adding waits takes giving away at every step.** -/
+/-- **More waiting gives no more, without memory**: whatever gives at a step with the added waits
+gives without them. -/
 theorem answers_more_waiting (sub : ∀ b a, up b a → up' b a) :
     ∀ n a, (Law.run (answers up') s).state n a → (Law.run (answers up) s).state n a
   | 0, _, gives => gives
