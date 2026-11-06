@@ -28,7 +28,7 @@
 - Which sharing actual groups have: a member gaining for every unit its group holds, or a share of what is given divided, is a premise.
 - That the verdict at unequal sizes is beyond any law: it goes through the covariance of a member's group total with its group's mean (selection-with-returns-to-groupmates).
 - That any two listings with the same spreads give one verdict where what is given is divided: proved for the witness's two; for others it is a reading of rises_iff_divided_sized, with the same K, s and Q = n q.
-- That keeping is better where it is selected for: the counts are read, and ranking courses needs C.
+- That keeping is better where it is selected for: the counts are read, and ranking courses needs C or a premise in its place.
 - **Counterexample:** The spread among groups as the lever at unequal sizes, for a member gaining for every unit its group holds: the same spreads, either verdict (Sized.either_verdict). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionLevels.lean)
 
 **Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
@@ -82,6 +82,7 @@ Aliases: `Groups of unequal size not decided by the spread among groups`, `不�
 ### History
 
 - 4 November 2026, board item US (study section 506): added: groups of unequal size with the same spreads and either verdict, where each member gains for every unit its group keeps, and one verdict where what is given is divided; 04 §7's open item closed both ways.
+- 7 November 2026, board item LM1: this said ranking needs C, where a ranking of courses needs C or a premise in its place (07 §4); corrected. No law, premise or proof changed.
 
 </details>
 

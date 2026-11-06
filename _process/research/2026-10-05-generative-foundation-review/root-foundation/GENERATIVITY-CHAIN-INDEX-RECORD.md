@@ -1573,6 +1573,6 @@ This is author reading checked by an independent AI read, not independent accept
 
 ## LM1: one sentence (7 November 2026)
 
-The key and five entries (C03, C17, C24, M15, M20) said C gives order "in general alone". A reader of LM found the like sentence in 08 at odds with 07 §4, where a ranking of courses needs C or a premise in its place, so the words "in general alone" are out of them, and the rest of each sentence stands. The Chinese said no such thing and is unchanged.
+The key and five entries (C03, C17, C24, M15, M20) said C gives order "in general alone". A reader of LM found the like sentence in 08 at odds with 07 §4, where a ranking of courses needs C or a premise in its place, so the words "in general alone" are out of them, and the rest of each sentence stands. The Chinese said the same, 一般而言只有它, and those words are out of it too.
 
-`--render` refuses while linked sources have changed, and 58 had when this was done, almost all from landings since the reading above. Their hashes are not refreshed, since they were not reread: the page was written from the data with the tool's own `render`, and the diff against the page before is these six rows and the date. The next reading of those sources is still owed.
+`--render` refuses while linked sources have changed, and 58 had when this was done, almost all from landings since the reading above. Their hashes are not refreshed, since they were not reread: the page was written from the data with the tool's own `render`, and the diff against the page before is the key, these five rows and the date. The next reading of those sources is still owed.

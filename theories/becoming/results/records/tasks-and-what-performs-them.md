@@ -100,7 +100,7 @@
 - The approximate form: constructor theory's possible as a limit, short of perfection, of constructors whose errors go to zero, which needs amounts of error.
 - That the laws fix the division into performing part and substrate: which tasks are possible depends on it.
 - Keeping the ability under loss: constructors deteriorate without maintenance, a later step on the World, where zero-move delivery does not read whether a state can be kept against change.
-- That widening, or reach, is better: ranking needs C, and the reading here is an AI reading.
+- That widening, or reach, is better: ranking needs C or a premise in its place, and the reading here is an AI reading.
 - A result no neighbouring field states: the composition laws restate Gogioso and others' process-theoretic reading for pairs on processes, and the tower laws are UE11's read at the performer.
 - **Counterexample:** The free enzyme performs the task, yet held free at every move, or held unchanged, it delivers nothing (Catalysis.not_held, Catalysis.not_held_unchanged). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Tasks.lean)
 - **Counterexample:** A possible task whose transpose is performed by no region of any reading of a performing part (Catalysis.transpose_not_possible). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Tasks.lean)
@@ -170,6 +170,7 @@ Aliases: `Tasks and what performs them`, `任务与执行之者`, `constructor t
 
 - 28 October 2026: added (UE12), tasks and what performs them: constructor theory read on processes; what performs a task is a region restored at the end of each delivery, holding throughout sufficient and not needed; composition by one region, by two under holding, and on interleavings, failing within one interleaving and where a delivery changes what its task does not list; a whole of impossible parts, the additive pattern and the division; the regress within a delivery and in making the performer; deliveries carry inclusion of the whole possible, and widening follows them in neither direction; near-definitional; after a review and a re-check; study section 430.
 - 3 November 2026, CD (board item CD): laws 32 and 35 to 37, two counterexamples and a related line say that widening and UE10's lagged order put a delivered output above its input, or its input above it, or hold of no pair, not that they rank them, as the home section in 07 §2 says. Under the glossary's one sense, ranking and order (the ethics' role word) say which course is better, and widening says which admits more, with no premise; an order defined with no premise, the lagged, tail or lexical order among them, puts one course above another, and ranks only where it is read as a ranking, in C's slot or as a premise. The claim is unchanged.
+- 7 November 2026, board item LM1: this said ranking needs C, where a ranking of courses needs C or a premise in its place (07 §4); corrected. No law, premise or proof changed.
 
 </details>
 

@@ -191,8 +191,8 @@
       "kind": "non-implication"
     },
     {
-      "en": "That a reading in time supports 生生, or that a course turned is better than one kept: no evaluation enters, and ranking courses needs C.",
-      "zh": "及时之读支持生生，或所转之进程优于所留者：不入评价，排序进程须 C。",
+      "en": "That a reading in time supports 生生, or that a course turned is better than one kept: no evaluation enters, and ranking courses needs C or a premise in its place.",
+      "zh": "及时之读支持生生，或所转之进程优于所留者：不入评价，排序进程须 C 或代替它的前提。",
       "kind": "non-implication"
     }
   ],
@@ -460,6 +460,10 @@
     {
       "en": "30 October 2026 (MA4c): the scope item on leaving control unselected and leaving a lock in time no longer calls them the joint selection's two conditions, the first having been restated on 29 October as control of the rule not captured (AJ5); the home section's reading says that selected control is not thereby capture. The case not shown, its reason and every law unchanged; 02-MAP.md re-pointed after reading its changes since 27 October: besides the reading's sentence above, none touches this result's home section or its reading. The rewording is the records' owner's and no reader has reviewed it, so the review time stays MA4b's.",
       "zh": "2026年10月30日（MA4c）：言控制未被选与锁定及时得离之范围项，不复称之为共同选择之二条件，因其第一条件已于10月29日重述为规则之控制未被俘获（AJ5）；本节之读法言被选之控制不即为俘获。未示之情形、其理由与诸律皆不改；读过10月27日以来之改动后重指 02-MAP.md：除上述读法之句外，无一触及本结果之本节或其读法。此改写出自记录之主，未经读者复核，故审阅时间仍为 MA4b 之时。"
+    },
+    {
+      "en": "7 November 2026, board item LM1: this said ranking needs C, where a ranking of courses needs C or a premise in its place (07 §4); corrected. No law, premise or proof changed.",
+      "zh": "2026年11月7日，工作板条目 LM1：此处谓排序须 C，而对进程的排序需要 C 或一个代替它的前提（07 §4）；已更正。诸律、前提与证明皆不变。"
     }
   ]
 }

@@ -110,8 +110,8 @@
       "witness": "Becoming.DrawnReplacement.Weak.shared_decides"
     },
     {
-      "en": "That leaving a lock by drift is better or worse than keeping it: ranking courses needs C.",
-      "zh": "以漂变离开锁定优于或劣于守之：排序进程须 C。",
+      "en": "That leaving a lock by drift is better or worse than keeping it: ranking courses needs C or a premise in its place.",
+      "zh": "以漂变离开锁定优于或劣于守之：排序进程须 C 或代替它的前提。",
       "kind": "non-implication"
     }
   ],
@@ -140,6 +140,10 @@
     {
       "en": "3 November 2026, board item AJ8 (study section 503): added: DrawnShaping's stag hunt read as 04's replacement chain with weights read from the count; both exits bounded across the distance from the critical mass; risk dominance in counts and a witness where the Moran criterion parts from it.",
       "zh": "2026年11月3日，工作板条目 AJ8（研究第 503 节）：新增：DrawnShaping 之猎鹿局读作 04 之权读自计数之替换链；二出口皆以距临界量之远为界；计数中之风险占优，及 Moran 准则与之相离之见证。"
+    },
+    {
+      "en": "7 November 2026, board item LM1: this said ranking needs C, where a ranking of courses needs C or a premise in its place (07 §4); corrected. No law, premise or proof changed.",
+      "zh": "2026年11月7日，工作板条目 LM1：此处谓排序须 C，而对进程的排序需要 C 或一个代替它的前提（07 §4）；已更正。诸律、前提与证明皆不变。"
     }
   ],
   "aliases": [

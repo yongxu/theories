@@ -325,8 +325,8 @@
       "kind": "scope"
     },
     {
-      "en": "That growth relative to what is held is better or is the direction of 生生: ranking needs C, and the reading of 生生不息 here is an AI reading.",
-      "zh": "相对于所持守者之增长更好或即生生之方向：排序需要 C，此处对生生不息之读为 AI 之读。",
+      "en": "That growth relative to what is held is better or is the direction of 生生: ranking needs C or a premise in its place, and the reading of 生生不息 here is an AI reading.",
+      "zh": "相对于所持守者之增长更好或即生生之方向：排序需要 C 或一个代替它的前提，此处对生生不息之读为 AI 之读。",
       "kind": "non-implication"
     },
     {
@@ -777,6 +777,10 @@
     {
       "en": "30 October 2026: wording only, for the twenty-first review's item 13 (生生 in one sense): the grammar's «生生» and the theorem «生生不息» marked in the Chinese of laws 13 and 24 and of the dependency detail listing the grammar's names, as the English writes them; nothing the record states changed.",
       "zh": "2026年10月30日：仅措辞，依第二十一次审查第 13 项（生生一义）：律 13、24 与列出文法诸名之依赖说明之中文中，文法之 «生生» 与定理 «生生不息» 加标，如英文；记录所述无改变。"
+    },
+    {
+      "en": "7 November 2026, board item LM1: this said ranking needs C, where a ranking of courses needs C or a premise in its place (07 §4); corrected. No law, premise or proof changed.",
+      "zh": "2026年11月7日，工作板条目 LM1：此处谓排序须 C，而对进程的排序需要 C 或一个代替它的前提（07 §4）；已更正。诸律、前提与证明皆不变。"
     }
   ]
 }

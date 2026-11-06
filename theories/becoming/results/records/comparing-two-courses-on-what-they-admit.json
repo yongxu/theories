@@ -417,8 +417,8 @@
       "kind": "non-implication"
     },
     {
-      "en": "That a comparison here ranks a course better: ranking needs C, and choosing between counting early steps and reading only tails is a further premise.",
-      "zh": "此处之比较把某进程排得更好：排序需要 C，在计早期之步与只读尾之间作选择是又一前提。",
+      "en": "That a comparison here ranks a course better: ranking needs C or a premise in its place, and choosing between counting early steps and reading only tails is a further premise.",
+      "zh": "此处之比较把某进程排得更好：排序需要 C 或一个代替它的前提，在计早期之步与只读尾之间作选择是又一前提。",
       "kind": "non-implication"
     },
     {
@@ -1003,6 +1003,10 @@
     {
       "en": "3 November 2026, CD (board item CD): the last clause of the statement says that widening with a lag and eventual widening relate one pair oppositely, not that they rank it; laws 19 to 21, two items it does not show, a counterexample and a related line say what widening with a lag, the tail order and the order of a lag for each admission put above, as the home section in 07 §2 now says. Under the glossary's one sense, ranking and order (the ethics' role word) say which course is better, and widening says which admits more, with no premise; an order defined with no premise, the lagged, tail or lexical order among them, puts one course above another, and ranks only where it is read as a ranking, in C's slot or as a premise. The claim is unchanged.",
       "zh": "2026年11月3日，工作板条目 CD：陈述末句改说带滞后的扩大与最终扩大于一对进程方向相反，而非对之排序；律 19 至 21、两条未表明者、一个反例与一条相关说明改说带滞后的扩大、尾序与每次所纳各自之滞后的序把何者置于何者之上，与 07 §2 的本节现今所说相同。按词汇表的单一词义，排序与次序（伦理的角色词）说哪个进程更好，扩大说哪个所纳更多，不需前提；无前提而定义之序（滞后之序、尾序或字典序等）把一进程置于另一进程之上，唯作为排序读时（于 C 之位或作为前提）才排序。主张不变。"
+    },
+    {
+      "en": "7 November 2026, board item LM1: this said ranking needs C, where a ranking of courses needs C or a premise in its place (07 §4); corrected. No law, premise or proof changed.",
+      "zh": "2026年11月7日，工作板条目 LM1：此处谓排序须 C，而对进程的排序需要 C 或一个代替它的前提（07 §4）；已更正。诸律、前提与证明皆不变。"
     }
   ]
 }
