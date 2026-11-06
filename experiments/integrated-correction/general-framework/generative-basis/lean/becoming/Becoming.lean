@@ -3564,7 +3564,9 @@ tagged instance or application.
   (`«亡于核下不变»`) and a beginning along the converse net's (`«生于逆核下不变»`); a dependence (`«依»`) is
   one-way, and where nothing is depended on nothing depends (`«所依无则依者无»`, `«依之传»`). Three
   definitional laws state families exactly (`«亡者异当且仅当有后»`, `«无异当且仅当不分续»`,
-  `«皆不生当且仅当皆非无缘»`), and 27 witnesses (`…之例`) give the nets the other modules do not. Which unit
+  `«皆不生当且仅当皆非无缘»`); what ends under a class passes through under another only by altering
+  (`«亡而通则异»`), and alters exactly where it passes through under a class constant both ways
+  (`«亡而两向有常则异当且仅当通»`); and 29 witnesses (`…之例`) give the nets the other modules do not. Which unit
   states which law is an AI reconstruction (the OU7 study's `data/groups.tsv`). A leaf.
 * `Becoming.CommonResponse` (L1): a response common over a reading (共应), on the grammar, for every
   carrier, reading and requirement, with no premise. The occurrences at which a region holds

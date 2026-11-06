@@ -99,6 +99,54 @@ theorem «不有常而通之例» :
       | ⟨c, e⟩ =>
         exact ⟨some (!c), Eq.subst (motive := fun w => «逆» R w (some (!c))) e.symm (bwd c), trivial⟩
 
+/-- **What ends passes through only by altering (亡而通则异).** What ends under `E` and passes through
+under `F` alters: passing through gives a successor under `F`, and for what ends under `E` that successor
+is told apart (`«亡者异当且仅当有后»`). One step from the definition of `«通»`. Read for 孔疏's
+「所以須變者，變則開通得久長」 on 「易窮則變」 (XCX-02-008) [AI reading]. What does not end under `E` can
+pass through without altering (`«通而不异之例»`). -/
+theorem «亡而通则异» {R E F : «际» α} {x : α} (ends : «亡» R E x) (h : «通» R F x) :
+    ∃ y, «异» R F E x y :=
+  («亡者异当且仅当有后» ends).mpr (h.1 x (.inl rfl))
+
+/-- **What alters passes through where its class is constant both ways (异而两向有常则通).** Altering
+gives a successor under `F`, so under `F` constant under 缘's converse a predecessor, and then
+`«两向有常有前则通»` applies. The parting under `E` is not used: what carries it is the continuation under
+`F`, and constancy is a premise the text does not state. Without it, what alters can fail to pass through
+(`«异而不通之例»`). -/
+theorem «异而两向有常则通» {R E F : «际» α} {x y : α} (hF : «类» F) (hc : «有常» R F)
+    (hc' : «有常» («逆» R) F) (h : «异» R F E x y) : «通» R F x :=
+  match «有常则续不尽» hc' ⟨y, h.1.1, hF.symm h.1.2⟩ with
+  | ⟨w, hw, fw⟩ => «两向有常有前则通» hF hc hc' ⟨w, hw, hF.symm fw⟩
+
+/-- **For what ends, altering and passing through are one where the class is constant both ways
+(亡而两向有常则异当且仅当通).** The two laws above joined: what ends under `E`, under `F` constant both
+ways, alters exactly where it passes through. So the order of 「易窮則變，變則通」 stands in the grammar
+under that premise [AI reading], the first step also needing a successor under `F`, since what ends can
+cease (`«亡而息之例»`). -/
+theorem «亡而两向有常则异当且仅当通» {R E F : «际» α} {x : α} (hF : «类» F) (hc : «有常» R F)
+    (hc' : «有常» («逆» R) F) (ends : «亡» R E x) : (∃ y, «异» R F E x y) ↔ «通» R F x :=
+  ⟨fun ⟨_, h⟩ => «异而两向有常则通» hF hc hc' h, «亡而通则异» ends⟩
+
+/-- **Altering and not passing through (异而不通之例).** One step with nothing after it: the first
+occurrence ends under identity and alters under the one into the second, whose line ends, so the first
+does not pass through. The one is not constant here, so `«异而两向有常则通»`'s premise is not idle. -/
+theorem «异而不通之例» :
+    ∃ (R : «际» Bool), «亡» R «静» false ∧ «异» R «一» «静» false true ∧ ¬ «通» R «一» false :=
+  ⟨fun a b => a = false ∧ b = true,
+   fun ⟨_, ⟨_, hy⟩, e⟩ => Bool.noConfusion (Eq.trans e hy),
+   ⟨⟨⟨rfl, rfl⟩, trivial⟩, fun e => Bool.noConfusion e⟩,
+   fun ⟨go, _⟩ => match go true (.inr (.one ⟨⟨rfl, rfl⟩, trivial⟩)) with
+     | ⟨_, ⟨⟨h, _⟩, _⟩⟩ => Bool.noConfusion h⟩
+
+/-- **Passing through without altering (通而不异之例).** One occurrence related to itself, under the one:
+it passes through, and the one parts no step, so it does not alter. Where it has not ended under the class
+that parts, passing through does not need altering, so `«亡而通则异»`'s premise is not idle. -/
+theorem «通而不异之例» :
+    ∃ (R : «际» Unit), «通» R «一» () ∧ ¬ ∃ y, «异» R «一» «一» () y :=
+  ⟨fun _ _ => True,
+   ⟨fun _ _ => ⟨(), trivial, trivial⟩, fun _ _ => ⟨(), trivial, trivial⟩⟩,
+   fun ⟨_, _, n⟩ => n trivial⟩
+
 /-! ## Generation where every step is parted (design G02) -/
 
 /-- **Where everything has a successor and every step is parted, everything is 全生成

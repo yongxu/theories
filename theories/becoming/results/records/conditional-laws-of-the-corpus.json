@@ -68,6 +68,17 @@
       ]
     },
     {
+      "en": "What has ended under one class passes through under another only by altering; where that other is constant both ways, it alters exactly where it passes through. Without that constancy what alters can fail to pass through, and what has not ended under the parting class can pass through unaltered.",
+      "zh": "亡于一类者，于他类通必经异；他类两向有常时，恰于异处通。不有常则异可不通；未亡于所分之类者可不异而通。",
+      "declarations": [
+        "Becoming.«亡而通则异»",
+        "Becoming.«异而两向有常则通»",
+        "Becoming.«亡而两向有常则异当且仅当通»",
+        "Becoming.«异而不通之例»",
+        "Becoming.«通而不异之例»"
+      ]
+    },
+    {
       "en": "Three definitional laws state families exactly: what ends under a class alters, continued under another, exactly where it has a successor there, and with none ceases without altering; nothing alters under E and F (continued under E, told apart by F) exactly where F holds of the ends of every continuation under E; nothing begins under the one exactly where nothing lacks a condition, both up to double negation.",
       "zh": "三条定义之律确切陈述其族：亡于一类者，恰于他类有后处异（他类续之），无后则息而不异；无 E 下之续其两端为 F 所分者（无异），恰当 F 于 E 下每一续之两端成立；无事无缘，恰在“一”之下无事生；后二者皆在双重否定之下。",
       "declarations": [
@@ -123,8 +134,19 @@
       "kind": "non-implication"
     },
     {
-      "en": "An order 穷 → 变 → 通 in the grammar: the received text states one with 則 (one recension, by the 音義 at the sentence's own place, lacks 變則通), but with 變 read as change at the limit the three are a conjunction, constancy and not alteration giving passing through, so the grammar does not give the order the text and its glosses state; with 變 read as alternation at every step passing through follows by definition and 窮則 does no work. The text does not say which: the 疏 on 通其變 above it, the 疏 at its own place and the commentators who borrow it to gloss other lines are near change at the limit; 上十二, where 韩注 quotes it, has words near alternation (孔疏 on 化裁), with an example that still runs from the limit through 變 to 通.",
-      "zh": "文法中穷 → 变 → 通之序：通行本以「則」陈序（此句本处音義记一本无「變則通」），然读變为窮極之异，三者是合取，给通者是有常而非异，文法不给文本与其注疏所陈之序；读變为每步往来交替，通依定义，「窮則」无所为。文本未明言是哪一种：上文「通其變」之疏、此句本处之疏与借此句释他文之注皆近窮而后变；上十二（韩注直引此句）孔疏有近于交替之语（化裁），其例仍自窮至变至通。",
+      "en": "That ending gives altering, or altering passing through, with no premise: what ends can cease, what alters can fail to pass through, and the two classes and their constancy are the reading's, not the text's; the order is not one of time.",
+      "zh": "亡给异、异给通而无前提：亡者可息，异者可不通；二类及其有常是此读之前提，文本不言；此序是蕴含之序，不是时序。",
+      "kind": "non-implication",
+      "witness": "Becoming.«异而不通之例»"
+    },
+    {
+      "en": "Which 變 the text means, which it does not say: the 疏 at its own place and on 通其變 above it and the commentators who borrow it are near change at the limit, 上十二 has words near alternation, and alternation at every step leaves 窮 idle.",
+      "zh": "文本言何變，文本未明言：此句本处与上文之疏、借此句之注近窮而后变，上十二有近于交替之语，每步交替之读则窮无所为。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "That the order is every recension's: the 音義 at the sentence's own place records one without 變則通.",
+      "zh": "此序是各本之序：此句本处音義记一本无「變則通」。",
       "kind": "non-implication"
     },
     {
@@ -200,8 +222,8 @@
     "names-provisional"
   ],
   "validation_scope": {
-    "en": "Pure core, every axiom report empty: GrammarConditionals imports GrammarCandidates and GrammarLaws, a leaf nothing imports. The two general laws two families rest on are stated in the records of the laws they generalize, continuation relative to a class and the classical definitions. Written by an AI from the corpus's classification; one independent AI review, every finding taken; no human audit of the readings. The leaf, 40 theorems in 41 declarations, compiles with the whole package in the core run whose receipt the record binds.",
-    "zh": "纯核，公理报告皆空：GrammarConditionals 引 GrammarCandidates 与 GrammarLaws，无模块引之。二族所依之两条一般之律，陈于其所推广之律之记录：相对于类的续与古文之定义。由 AI 据语料之归类写成；经一次独立之 AI 审查，所见皆取；读法无人审。此叶 41 声明中定理 40，与全包同编译于记录所系收据之核心运行。"
+    "en": "Pure core, every axiom report empty: GrammarConditionals imports GrammarCandidates and GrammarLaws, a leaf nothing imports. The two general laws two families rest on are stated in the records of the laws they generalize, continuation relative to a class and the classical definitions. Written by an AI from the corpus's classification; one independent AI review, every finding taken; no human audit of the readings. The leaf, 45 theorems in 46 declarations, compiles with the whole package in the core run whose receipt the record binds.",
+    "zh": "纯核，公理报告皆空：GrammarConditionals 引 GrammarCandidates 与 GrammarLaws，无模块引之。二族所依之两条一般之律，陈于其所推广之律之记录：相对于类的续与古文之定义。由 AI 据语料之归类写成；经一次独立之 AI 审查，所见皆取；读法无人审。此叶 46 声明中定理 45，与全包同编译于记录所系收据之核心运行。"
   },
   "next_delta": {
     "en": "Review of the readings by a person (classicists, Buddhist scholars, logicians); whether the 起信论 counts 無明 among its 煩惱染法 (JS-318), which its text does not settle and no reading needs; whether G01's 變 is change at the limit or alternation at every step, which the text does not say (the glosses on it or using it are near the former); the 181 candidates of the three added texts.",
@@ -284,6 +306,11 @@
         "Becoming.«亡而息之例»",
         "Becoming.«两向有常而无前不通之例»",
         "Becoming.«不有常而通之例»",
+        "Becoming.«亡而通则异»",
+        "Becoming.«异而两向有常则通»",
+        "Becoming.«亡而两向有常则异当且仅当通»",
+        "Becoming.«异而不通之例»",
+        "Becoming.«通而不异之例»",
         "Becoming.«皆有后而步皆分则全生成»",
         "Becoming.«昼夜全生成»",
         "Becoming.«有亡而不全生成之例»",
@@ -384,8 +411,8 @@
       "zh": "2026年11月5日，看板项 RAE3（AA 第零阶段之 E26）：未决之读依语料而读。G22：依荀子本句（杨倞注在语料之外，读之不同），「衡不正」是所衡之对反转，故「重縣於仰」是文本所陈之所致，非由“不保”推出；是否每对皆反，文本不言。G15：《起信论》相合义之相應（其反在《勝鬘》为離、脫、異）依合读作同在前向之核之一类，文不分核与同体；無明是否在其煩惱染法中，文本不能定，移用于 JS-324 皆不成。G01：系辞以「謂之」界说變者二，以「則」陈序；其變是一次之异还是往来交替，文本不能定：注家借此句释他文者（韩注、孔疏于上五，朱熹于困上六；程颐既济注近之）读作窮極之一变；韩注于上十二直引此句，孔疏彼处以化裁释變，与程颐否注同近于交替。06 中各标 [AI reading, new]；律、地位与计数均未改。"
     },
     {
-      "en": "6 November 2026, board item RAE5 (ED4's classical reader's E4C-01, E4C-02, E4C-20 to E4C-24): G01 read at the sentence's own place, 系辞下, whose 注 and 疏 lie outside the corpus; the passage is kept in the review packet's editions folder from an electronic copy of 《周易注疏》 (四库全书本, Wikisource revision 9685969), not collated with a print. 孔疏 there states the order with a reason and reads change at the limit, as its gloss on 通其變 above it does and as the commentators who borrow the sentence do; 孔疏's example at 上十二 also runs from the limit to 通; alternation at every step leaves 窮 idle. So RAE3's balance, that the text does not settle, became that the text does not say and the glosses lean; 變 is now written change at the limit, not one alteration, the 疏 having 隨時 and 日新. The 音義 there records a recension without 變則通, so the order is the received text's. groups.tsv's rows for XCX-02-008, QXL-JS-326, XZ-ZM-164 and XZ-ZM-165 now give §四's readings. Each [AI reading, new] in 06; no law, standing or count changed.",
-      "zh": "2026年11月6日，看板项 RAE5（ED4 古典读者之 E4C-01、E4C-02、E4C-20 至 E4C-24）：G01 依此句本处（系辞下）而读，其注疏在语料之外；其段存于审查包之 editions，录自《周易注疏》（四库全书本）之电子本（维基文库修订版 9685969），未与刻本对校。孔疏彼处陈其序与其由，读作窮極之变，其释上文「通其變」与注家借此句者亦然；孔疏于上十二之例亦自窮至通；每步交替之读则窮无所为。故 RAE3 之两可，今为文本未明言而注疏有所近；變今写作窮極之变，不写一次之异，疏有「隨時」「日新」。彼处音義记一本无「變則通」，故此序只就通行本而言。groups.tsv 中 XCX-02-008、QXL-JS-326、XZ-ZM-164、XZ-ZM-165 之行今依 §四。皆 06 中之 [AI reading, new]；律、地位与诸计数不变。"
+      "en": "6 November 2026, board item RAE5 (ED4's classical reader's E4C-01, E4C-02, E4C-20 to E4C-38): a correction. OU7 and RAE3 said that in the grammar the three of 穷 → 变 → 通 are only a conjunction and that 變 does nothing for 通. That was false of what has ended: it passes through under another class only by altering, and under that class constant both ways it alters exactly where it passes through. Five short theorems say so in GrammarConditionals, two of them witnesses, and the record's law and non-implications follow; the premises are the reading's, the text not stating them, and the proofs are short derivations, not new mathematics. G01 is also read at the sentence's own place, 系辞下, whose 注 and 疏 lie outside the corpus; the passage is kept in the review packet's editions folder from an electronic copy of 《周易注疏》 (四库全书本, Wikisource revision 9685969), not collated with a print. 孔疏 there states the order with a reason and reads change at the limit, as its gloss on 通其變 above it does and as the commentators who borrow the sentence do; 孔疏's example at 上十二 runs from 亢 to 通; alternation at every step leaves 窮 idle. So RAE3's balance, that the text does not settle, became that the text does not say and the glosses lean; the text's 變 is written change at the limit, not one alteration, the 疏 having 隨時 and 日新. The 音義 there records a recension without 變則通, so the step from 變 to 通 is the received text's. groups.tsv's rows for XCX-02-008, QXL-JS-326, XZ-ZM-164 and XZ-ZM-165 now give §四's readings. Each [AI reading, new] in 06; no count of the corpus or standing changed.",
+      "zh": "2026年11月6日，看板项 RAE5（ED4 古典读者之 E4C-01、E4C-02、E4C-20 至 E4C-38）：更正。OU7 与 RAE3 言文法中穷 → 变 → 通三者只是合取，变于通无所为；于已亡者此言不实：亡于一类者于他类通必经异，他类两向有常时恰于异处通。GrammarConditionals 增五条短定理言之，其二为见证，记录之律与不示随之；前提是此读之前提，文本不言；证皆定义之短推导，不是新数学。G01 亦依此句本处（系辞下）而读，其注疏在语料之外；其段存于审查包之 editions，录自《周易注疏》（四库全书本）之电子本（维基文库修订版 9685969），未与刻本对校。孔疏彼处陈其序与其由，读作窮極之变，其释上文「通其變」与注家借此句者亦然；孔疏于上十二之例自亢至通；每步交替之读则窮无所为。故 RAE3 之两可，今为文本未明言而注疏有所近；文本之變写作窮極之变，不写一次之异，疏有「隨時」「日新」。彼处音義记一本无「變則通」，故自變至通之一步只就通行本而言。groups.tsv 中 XCX-02-008、QXL-JS-326、XZ-ZM-164、XZ-ZM-165 之行今依 §四。皆 06 中之 [AI reading, new]；语料之计数与地位不变。"
     }
   ]
 }
