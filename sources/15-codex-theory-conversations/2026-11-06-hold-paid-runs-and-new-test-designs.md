@@ -22,7 +22,8 @@ Board item RUNHOLD: the hold is stated on the board's Decisions line, at the end
 
 The yes settles that the hold is wanted. The scope below is this session's reading of it, and his word changes it.
 
-- **Held:** every run through OpenRouter (TR-RR, TR1 to TR9, TR1's informing variant, SCL, and CMT's coding by model). Also CMT's search and downloads, which serve only that coding, and TR2's Stage B, which costs no money but is his machine time. New test designs are held too: T2O, T7's smaller test, the hysteresis test, LA4's Stage B, and any redesign of T1N or T1R.
-- **Not held:** RUN7, which he released, with no model call and no money; ED4; a correction to what a reader is told, in a frozen design's text as anywhere else; and argument on the crux.
+- **Held:** every run through OpenRouter (TR-RR, TR1 to TR9, TR1's informing variant, SCL, and CMT's coding by model). Also CMT's search and downloads, which serve only that coding, and TR2's Stage B, which costs no money but is his machine time. New test designs are held too: T2O, T7's smaller test, the hysteresis test, LA4's Stage B, and T1B, the successor to T1N and T1R.
+- **T1B:** earlier that day, in the session running RUN7, he had said "Yes, download the PDFs" to a question that included freezing a successor to T1N and T1R (`2026-11-06-t1n-t1r-download-and-run.md`). The question here did not name T1B. This later, broader word is read as holding it, named and not worked on, with the reports already downloaded kept, until he says otherwise; he was asked.
+- **Not held:** RUN7's first landing, which he released, with no model call and no money; ED4; a correction to what a reader is told, in a frozen design's text as anywhere else; and argument on the crux.
 - **Readers** means people who have read it. AI cold reads check for errors and do not lift the hold.
 - **It lapses** when those readers report, or on his word. A pinned model announced for retirement is put to him first, since a retired pin needs a freeze of its own.
