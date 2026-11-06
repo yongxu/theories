@@ -30,7 +30,7 @@ def sha(path):
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 
 
-def by_reading(grid, listed):
+def by_reading(grid, listed, union):
     """The fit by exact match and the ceiling on V1's lakes, by how GLIFWC's labels are read. R1's NATURAL is as it is in all."""
     out = {}
     for name, what in (("wide", "NR, C-NR and C- natural, a code not read natural (the grid above)"),
@@ -39,7 +39,9 @@ def by_reading(grid, listed):
                        ("strict-unread-not", "NR alone, T1N's own map, a code not read not natural")):
         folder = Path(grid).parent / name
         pairs = t1n.pairs(list(RE.skeletons(folder, listed).values()), labels=True)
+        both = t1n.pairs(list(RE.skeletons(folder, union).values()), labels=True)
         out[what] = {"the fit by exact match: lake-years, lakes": [len(pairs), len({q[0] for q in pairs})],
+                     "the fit with fall-generous.csv added: lake-years, lakes": [len(both), len({q[0] for q in both})],
                      "V1's lakes at most": RE.reach(folder)["T1N's V1"]["lakes that can be read so at most, whatever the values"]}
     return out
 
@@ -74,7 +76,7 @@ def main():
             "fall surveys where fall-with-glifwc.csv lists them": RE.reach(grid, listed)},
         "the fit where fall-with-glifwc.csv or fall-generous.csv lists them": (lambda p: [len(p), len({q[0] for q in p})])(
             t1n.pairs(list(RE.skeletons(grid, union).values()), labels=True)),
-        "by how GLIFWC's labels are read, on fall-with-glifwc.csv": by_reading(grid, listed),
+        "by how GLIFWC's labels are read, on fall-with-glifwc.csv": by_reading(grid, listed, union),
         "T1N's worlds on the grid, fall surveys as fall-with-glifwc.csv lists them": worlds(grid, listed_csv, archives),
         "T1N's worlds on the grid, with fall-with-glifwc-granted.csv": worlds(grid, granted_csv, archives),
     }

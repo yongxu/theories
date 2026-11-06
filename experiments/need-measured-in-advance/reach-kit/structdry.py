@@ -69,7 +69,7 @@ def lake(rng, lid, g, world):
         if rng.random() < KNOCK:
             x *= 0.1
     return rec
-# Every world of dry_run.py whose settings lake() above carries; the others change how labels or estimates are made.
+# Every world of dry_run.py whose settings lake() above carries; the others change how labels or estimates are made, leave stocking unrecorded, make the fall survey reach the floor by chance or run renewal in spells.
 CARRIED = {'family', 'q', 'q_mix', 'k_spread', 'prod_spread', 'none', 'collapse', 'loss', 'k_after', 'decline', 'sigma_r', 'unseen', 'catch', 'gamma', 'c_gamma', 'immigration'}
 worlds = [n for n, w in D.WORLDS.items() if set(w) <= CARRIED]
 skipped = [n for n in D.WORLDS if n not in worlds]

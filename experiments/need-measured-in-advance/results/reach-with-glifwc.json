@@ -203,12 +203,20 @@
     211,
     95
    ],
+   "the fit with fall-generous.csv added: lake-years, lakes": [
+    287,
+    121
+   ],
    "V1's lakes at most": 31
   },
   "NR, C-NR and C- natural, a code not read not natural": {
    "the fit by exact match: lake-years, lakes": [
     202,
     92
+   ],
+   "the fit with fall-generous.csv added: lake-years, lakes": [
+    278,
+    119
    ],
    "V1's lakes at most": 31
   },
@@ -217,12 +225,20 @@
     195,
     90
    ],
+   "the fit with fall-generous.csv added: lake-years, lakes": [
+    271,
+    116
+   ],
    "V1's lakes at most": 30
   },
   "NR alone, T1N's own map, a code not read not natural": {
    "the fit by exact match: lake-years, lakes": [
     186,
     87
+   ],
+   "the fit with fall-generous.csv added: lake-years, lakes": [
+    262,
+    114
    ],
    "V1's lakes at most": 30
   }
