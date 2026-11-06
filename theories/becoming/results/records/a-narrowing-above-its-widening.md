@@ -66,7 +66,7 @@ Invariance of description and dominance (Tversky and Kahneman 1986): dominance i
 - related, not a proved adapter: [weights-within-a-ratio-agree-past-it](weights-within-a-ratio-agree-past-it.md). The other half of the valuer tests as theorems: where the exception bounds a widening, the ratio law bounds a mixed comparison.
 - related, not a proved adapter: [graded-significance-and-priority](graded-significance-and-priority.md). There status zero is a scope denial that ties; here a weight at zero ties and a weight below zero reverses.
 
-**Used by:** [premises-met-and-failed](premises-met-and-failed.md)
+**Used by:** [premises-met-and-failed](premises-met-and-failed.md) · [what-would-give-c](what-would-give-c.md)
 
 <a id="sources--来源"></a>
 ### Sources

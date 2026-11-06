@@ -864,6 +864,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [RouteTraces.lean](lean-declarations/becoming-core.md#module-e0561ebfc179) | Becoming pure core |
 | [Routes.lean](lean-declarations/becoming-core.md#module-440f5dfa5696) | Becoming pure core |
 | [RoutesCorrespondenceSamples.lean](lean-declarations/ethics.md#module-b49c122e730b) | Normative grounding and generative direction |
+| [RoutesToC.lean](lean-declarations/becoming-core.md#module-be8f95d0f034) | Becoming pure core |
 | [RuleCapture.lean](lean-declarations/becoming-core.md#module-46c8e1df91c5) | Becoming pure core |
 | [RuleHandoff.lean](lean-declarations/becoming-core.md#module-d63f7d496a4a) | Becoming pure core |
 | [RuleRebuilding.lean](lean-declarations/becoming-ring.md#module-0375a4d4a6cc) | Becoming instances and applications |

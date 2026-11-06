@@ -67,6 +67,8 @@ Meeting and failing a premise in models is the standard way to show it independe
 - related, not a proved adapter: [one-root-to-its-edge](one-root-to-its-edge.md). The edge of one root lists the ethics' two premises apart, the condition for scope and C for order; this record gives the condition's root form and C their witnesses.
 - related, not a proved adapter: [what-the-dynamics-leave-open](what-the-dynamics-leave-open.md). The pattern of the non-entailment: ReadsOnlyDynamics.not_entails for the condition, here with the order in the place of the significance.
 
+**Used by:** [what-would-give-c](what-would-give-c.md)
+
 <a id="sources--来源"></a>
 ### Sources
 

@@ -69,7 +69,7 @@ Monotonicity in the opportunity-set literature, relocated to one's own continuat
 - related, not a proved adapter: [confined-rise-within-a-whole](confined-rise-within-a-whole.md). After a family of conditions is drawn beyond its renewal only what depended on none of it leaves descendants: an independent copy, which makes the comparison mixed.
 - related, not a proved adapter: [self-concern-through-dependence](self-concern-through-dependence.md). The same route's scope, which this order takes as fixed.
 
-**Used by:** [self-concern-and-c-under-the-condition](self-concern-and-c-under-the-condition.md)
+**Used by:** [self-concern-and-c-under-the-condition](self-concern-and-c-under-the-condition.md) · [what-would-give-c](what-would-give-c.md)
 
 <a id="sources--来源"></a>
 ### Sources

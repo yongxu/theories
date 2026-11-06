@@ -60197,6 +60197,170 @@
     "dependence": "no shared law"
    }
   ],
+  "what-would-give-c": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.ReadsNoOrder.implies_comparison",
+     "Becoming.ReadsNoOrder.not_strictly_weaker",
+     "Becoming.ReadsNoOrder.iff_of_weaker"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.Weighting.listingFrame",
+     "Becoming.Weighting.extension_listingFrame_iff",
+     "Becoming.Weighting.comparison_listingFrame_iff",
+     "Becoming.Weighting.increasingInOwn_iff_comparison"
+    ],
+    "shared_laws": [
+     "order"
+    ],
+    "grammar": false,
+    "dependence": "anchor, not reached"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.Weighting.reach",
+     "Becoming.Weighting.reach_le_of_includes",
+     "Becoming.Weighting.reach_eq_of_refused",
+     "Becoming.Weighting.outside",
+     "Becoming.Weighting.NoneWorseSomeBetter",
+     "Becoming.Weighting.widens_iff_noneWorseSomeBetter",
+     "Becoming.Weighting.increasing_iff_ranks_noneWorseSomeBetter",
+     "Becoming.Weighting.choosers_mixed"
+    ],
+    "shared_laws": [
+     "order"
+    ],
+    "grammar": false,
+    "dependence": "anchor, not reached"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.Weighting.gains_every_widening_iff"
+    ],
+    "shared_laws": [
+     "order"
+    ],
+    "grammar": false,
+    "dependence": "anchor, not reached"
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "Becoming.Weighting.Refusing.widens",
+     "Becoming.Weighting.Refusing.imposed_below",
+     "Becoming.Weighting.Refusing.refused_unchanged",
+     "Becoming.Weighting.AnotherReads.widens",
+     "Becoming.Weighting.AnotherReads.takes_narrow",
+     "Becoming.Weighting.AnotherReads.takes_wide",
+     "Becoming.Weighting.AnotherReads.chooser_gains",
+     "Becoming.Weighting.AnotherReads.reading_falls",
+     "Becoming.Weighting.MutualBest",
+     "Becoming.Weighting.Restraint.widens",
+     "Becoming.Weighting.Restraint.narrow_best",
+     "Becoming.Weighting.Restraint.wide_best_iff",
+     "Becoming.Weighting.Restraint.each_falls",
+     "Becoming.Weighting.not_lowered_of_no_bearing"
+    ],
+    "shared_laws": [
+     "order"
+    ],
+    "grammar": false,
+    "dependence": "anchor, not reached"
+   },
+   {
+    "law": 6,
+    "declarations": [
+     "Becoming.Weighting.Refusing.comparison_ranks_wide",
+     "Becoming.Weighting.AnotherReads.comparison_ranks_wide",
+     "Becoming.Weighting.Restraint.comparison_ranks_wide"
+    ],
+    "shared_laws": [
+     "order"
+    ],
+    "grammar": false,
+    "dependence": "anchor, not reached"
+   },
+   {
+    "law": 7,
+    "declarations": [
+     "Becoming.Weighting.ParetoAmong",
+     "Becoming.Weighting.NotBelow",
+     "Becoming.Weighting.every_pareto_iff",
+     "Becoming.Weighting.pareto_increasing_iff_covers",
+     "Becoming.Weighting.exists_selfConcerned_notBelow_not_increasing",
+     "Becoming.Weighting.EachItsOwn.covers",
+     "Becoming.Weighting.EachItsOwn.not_total",
+     "Becoming.Weighting.EachItsOwn.not_increasing"
+    ],
+    "shared_laws": [
+     "order"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 8,
+    "declarations": [
+     "Becoming.Weighting.RanksNotOwnBelow",
+     "Becoming.Weighting.ranksNotOwnBelow_selfConcerned",
+     "Becoming.Weighting.notOwnBelow_stops",
+     "Becoming.Weighting.widening_is_no_weighting"
+    ],
+    "shared_laws": [
+     "order"
+    ],
+    "grammar": false,
+    "dependence": "anchor, not reached"
+   },
+   {
+    "law": 9,
+    "declarations": [
+     "Becoming.Weighting.StepAlike",
+     "Becoming.Weighting.Increasing.stepAlike",
+     "Becoming.Weighting.increasing_iff_one_step",
+     "Becoming.Weighting.ranksLighter",
+     "Becoming.Weighting.ranksLighter_transitive",
+     "Becoming.Weighting.ranksLighter_alike",
+     "Becoming.Weighting.ranksLighter_reverses",
+     "Becoming.Weighting.ZeroWeight.not_alike",
+     "Becoming.Weighting.ZeroWeight.not_increasing",
+     "Becoming.Weighting.AboveNothing.transitive",
+     "Becoming.Weighting.AboveNothing.not_alike",
+     "Becoming.Weighting.ranksOnlyMany",
+     "Becoming.Weighting.ranksOnlyMany_transitive",
+     "Becoming.Weighting.ranksOnlyMany_alike",
+     "Becoming.Weighting.OnlyMany.ranked",
+     "Becoming.Weighting.OnlyMany.not_increasing",
+     "Becoming.Weighting.byOne_not_increasing"
+    ],
+    "shared_laws": [
+     "order"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 10,
+    "declarations": [
+     "Becoming.Weighting.increasing_on_downstream",
+     "Becoming.Weighting.increasing_on_downstream_of_regularity"
+    ],
+    "shared_laws": [
+     "order"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   }
+  ],
   "when-complying-when-read-is-best": [
    {
     "law": 1,

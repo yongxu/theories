@@ -12,7 +12,7 @@ One graph of the theory: the grammar's concepts, the results, the Lean modules, 
 | Life and evolution | 0 | 46 | 23 | 0 |
 | Collectives and selection | 0 | 74 | 28 | 0 |
 | The classical texts | 5 | 16 | 10 | 1724 |
-| Significance and alignment | 0 | 81 | 61 | 0 |
+| Significance and alignment | 0 | 82 | 62 | 0 |
 | Method and the formal core | 0 | 21 | 25 | 0 |
 | To retire | 0 | 7 | 0 | 0 |
 | Not yet assigned | 0 | 0 | 1 | 0 |
@@ -525,7 +525,7 @@ Modules (10, 4 stated on the grammar): `GrammarCandidates`, `GrammarConditionals
 
 ## Significance and alignment
 
-Results (81):
+Results (82):
 
 - [A correspondence discipline for conditions](records/condition-correspondence-discipline.md) (recorded-checked)
 - [A narrowing above its widening](records/a-narrowing-above-its-widening.md) (recorded-checked)
@@ -600,6 +600,7 @@ Results (81):
 - [What the dynamics leave open of the continuation condition, and what closes it](records/what-the-dynamics-leave-open.md) (recorded-checked)
 - [What the step across standpoints reaches](records/what-the-step-across-standpoints-reaches.md) (recorded-checked)
 - [What training installs](records/what-training-installs.md) (recorded-checked)
+- [What would give C's order on a listing](records/what-would-give-c.md) (recorded-checked)
 - [When holding for a reading stands above a route of keeping](records/when-holding-for-a-reading-stands-above-a-route.md) (recorded-checked)
 - [When no route of keeping a law stands above a revision of it](records/when-no-route-stands-above-a-revision.md) (recorded-checked)
 - [Where the possible grows](records/where-the-possible-grows.md) (recorded-checked)
@@ -609,7 +610,7 @@ Results (81):
 - [Widening as what every positive weighting ranks](records/widening-as-what-every-positive-weighting-ranks.md) (recorded-checked)
 - [Widening on late tails, and what carries a widening](records/eventual-widening.md) (recorded-checked)
 
-Modules (61, 11 stated on the grammar): `Acceptance`, `ActivationCapacity`, `ActiveReading`, `Actuation`, `Alternatives`, `Assurance`, `AssurancePlans`, `Boundaries`, `BoundedSignificance`, `Bundles`, `CausalGrowth`, `ChanceFloors`, `Clearing`, `ComparingCourses`, `Correspondence`, `Direction`, `Dispatch`, `EventualWidening`, `EventualWideningInstances`, `Extension`, `Frontier`, `FrontierFrames`, `FrontierWorlds`, `GrammarPath`, `GrammarScope`, `Growth`, `Handoff`, `HeldPossible`, `Interdependence`, `KeepingWidening`, `Lexical`, `Lifting`, `LossMatching`, `MatchedCourses`, `Metaethics`, `MutualDependence`, `OwnWidening`, `ProfileReach`, `Ranking`, `ReachableRanges`, `Regrouping`, `RegroupingSelection`, `Relevance`, `Retaining`, `RevisionPlans`, `RevisionRoutes`, `ScoreRepresentation`, `SecuredContent`, `Seeking`, `SelectionGap`, `SelectionReach`, `Significance`, `SignificanceStatements`, `Standpoints`, `StrictTransport`, `Tasks`, `Training`, `Transactions`, `ValuationFrames`, `Weightings`, `WideningOnTheMap`
+Modules (62, 12 stated on the grammar): `Acceptance`, `ActivationCapacity`, `ActiveReading`, `Actuation`, `Alternatives`, `Assurance`, `AssurancePlans`, `Boundaries`, `BoundedSignificance`, `Bundles`, `CausalGrowth`, `ChanceFloors`, `Clearing`, `ComparingCourses`, `Correspondence`, `Direction`, `Dispatch`, `EventualWidening`, `EventualWideningInstances`, `Extension`, `Frontier`, `FrontierFrames`, `FrontierWorlds`, `GrammarPath`, `GrammarScope`, `Growth`, `Handoff`, `HeldPossible`, `Interdependence`, `KeepingWidening`, `Lexical`, `Lifting`, `LossMatching`, `MatchedCourses`, `Metaethics`, `MutualDependence`, `OwnWidening`, `ProfileReach`, `Ranking`, `ReachableRanges`, `Regrouping`, `RegroupingSelection`, `Relevance`, `Retaining`, `RevisionPlans`, `RevisionRoutes`, `RoutesToC`, `ScoreRepresentation`, `SecuredContent`, `Seeking`, `SelectionGap`, `SelectionReach`, `Significance`, `SignificanceStatements`, `Standpoints`, `StrictTransport`, `Tasks`, `Training`, `Transactions`, `ValuationFrames`, `Weightings`, `WideningOnTheMap`
 
 
 ## Method and the formal core

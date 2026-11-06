@@ -2675,6 +2675,11 @@
    "region": "collective",
    "base": "general",
    "note": "PairChance EL7: errors only withholding, read by chance from Typicality's courses; a burst ends a pair of laws keeping mutual withholding, and the courses still giving at step 2k weigh at most ((p+q)^4 - p^4)^k of ((p+q)^4)^k (05 §5)"
+  },
+  "what-would-give-c": {
+   "region": "significance",
+   "base": "general",
+   "note": "RoutesToC: the routes to C's order on a listing, each with where it stops; gives no reason for C"
   }
  },
  "modules": {
@@ -4607,6 +4612,11 @@
    "region": "collective",
    "base": "general",
    "note": "EL7: errors by chance in a pair's run; a burst ends laws keeping mutual withholding, the share still giving bounded (05 §5)"
+  },
+  "Becoming.RoutesToC": {
+   "region": "significance",
+   "base": "general",
+   "note": "what would give C's order on a listing: what weaker can mean, choosers, standpoints, one item at a time, what lies downstream"
   }
  }
 }

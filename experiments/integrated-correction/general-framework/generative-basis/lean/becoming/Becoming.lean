@@ -383,6 +383,7 @@ import Becoming.GrammarCrossing
 import Becoming.PremiseWitnesses
 import Becoming.PremisesTogether
 import Becoming.GrammarPath
+import Becoming.RoutesToC
 import Becoming.SignificanceStatements
 
 /-!
@@ -4690,6 +4691,24 @@ tagged instance or application.
   reconfiguration's bound (`Reconfiguration.covered_and_not`); readings of matched courses
   (`MatchedCourses.readings_hold_together`); portions returning less than one for one
   (`Optimum.AtOnce.returnsLess_met`). A leaf.
+* `Becoming.RoutesToC` (L2, through `Becoming.PremiseWitnesses`): what would give C's order on a listing
+  (board item CW). It does not derive C from anything. Let help read no order and hold at a datum: a premise
+  giving C there with it implies C there, and such a premise that C also implies is C there
+  (`ReadsNoOrder.implies_comparison`, `ReadsNoOrder.iff_of_weaker`), so no premise is both strictly weaker
+  than C at a datum and, with such help holding there, enough for C there. On a frame reading a course by what
+  it admits on a listing, every claim counted, an order meets C exactly when it is increasing in admission
+  (`Weighting.comparison_listingFrame_iff`). One course widens another exactly when, over every valuation,
+  no chooser does worse and some does better (`Weighting.widens_iff_noneWorseSomeBetter`), and what a range
+  of choosers must hold is exact (`Weighting.gains_every_widening_iff`); witnesses stop the route at imposed
+  admission, another's order and several choosers (`Weighting.Refusing`, `Weighting.AnotherReads`,
+  `Weighting.Restraint`). Over every profile of self-concerned orders ranking no widening below, the Pareto
+  relation is increasing in admission exactly where every listed item is someone's own
+  (`Weighting.pareto_increasing_iff_covers`), stopped by an order ranking below what adds nothing to its
+  own (`Weighting.notOwnBelow_stops`). Given a widening by one item, a transitive order is increasing in
+  admission exactly when every such widening gets one verdict and the given one is ranked
+  (`Weighting.increasing_iff_one_step`). On a listing of what lies downstream, P2 and P4 of the path in
+  07 §4.6 with self-concern give increasing in admission
+  (`Weighting.increasing_on_downstream_of_regularity`). A leaf; short laws, none new as mathematics.
 * `Becoming.GrammarPath` (L1): what a line under a class must hold, and what a regularity takes in
   (board item PF), for every carrier, relation and class. Where a region is left under a class only
   into a set, a line under the class from inside to outside holds a member of that set alike to its

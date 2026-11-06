@@ -11896,6 +11896,9 @@
     "Becoming.Optimum.Skew.cost": [
       "cost"
     ],
+    "Becoming.Weighting.Restraint.pays": [
+      "pays"
+    ],
     "Becoming.Coverage.charge": [
       "charge"
     ]

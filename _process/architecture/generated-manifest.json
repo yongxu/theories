@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "files": {
-    "README.md": "32197340fc16432de083562c281e1f8b33fedaa75ab189375b0742c2e44b1ae5",
+    "README.md": "fcfb5a8d70759c88442b869a6e42237e72d15b3e9d178a60b8a763a1cdc9f442",
     "RESEARCH.md": "f75adb57c11bab500a8ade7d34827e36b6372438220465e229aff2b89ad56bd6",
-    "RESULTS.md": "39e823d9b25666aaf4081d06ae6acc6d28f9631f4dd7cfaa0c6bbfd792a1647b",
+    "RESULTS.md": "2831d75dc9d2a95c9a79683440ac6542bb66699dd9f88482d71bb641bb9d5c91",
     "GOALS.md": "f66c496674b6570f5f3cca401afba904e2142731d827d64545439bc141bf2c0f",
-    "DEPENDENCIES.md": "ceff11a267bcbc65b91a1e225d41749ae719d1e1bf7f59fad2e8ce9b4df531ee",
+    "DEPENDENCIES.md": "5f403604f90e024df6209b1310343c0dceb45cc2f290fd059ad5c7642fc27931",
     "_process/BRIEF.md": "386505a702fc12b2a938eaee1a39c11392629efe9204d845b50b114e6fbc7efa",
     "theories/becoming/README.md": "e996dd3d2edff265cb294f173690f66c90dd2ab08aef02da0f5dc1e4ee8302e2",
     "theories/becoming/results/ROADMAP.md": "d591080800d8323e40bebcaaf11ac810339c2e24b51f344a2f78200e91bf0268",
@@ -601,6 +601,7 @@
     "theories/becoming/results/records/what-decides-giving-against-keeping-on-a-flow.md": "0d2232e53ea33d30ccfb63a16f4abb64bb0b434e9ff005359cac10805dbd4716",
     "theories/becoming/results/records/errors-by-chance-in-a-pair-keeping-mutual-withholding.md": "f81971da034b1472e6cc82baffc870f739b182d5013ae1d87b6c48597ae31964",
     "theories/becoming/results/atlas/ATLAS.md": "a240137ab9f51bc0ddebc8008bebf11757467adb7da99da44e00362db6462b41",
-    "theories/becoming/results/data/atlas.json": "49ec896011cd7c01f9a2947c42707fc3e4ce6f29964095c10bfad74d5f760f2b"
+    "theories/becoming/results/data/atlas.json": "49ec896011cd7c01f9a2947c42707fc3e4ce6f29964095c10bfad74d5f760f2b",
+    "theories/becoming/results/records/what-would-give-c.md": "fbb52efeaeed2c9a430820d0c949dbe53ea12bb7bb1ab715ab69938e15a6e3b5"
   }
 }

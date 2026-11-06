@@ -80,7 +80,7 @@ Sen's intersection approach (Collective Choice and Social Welfare, 1970; "On Wei
 - related, not a proved adapter: [a-narrowing-above-its-widening](a-narrowing-above-its-widening.md). weighed_lt_of_widens is its case with nothing against.
 - related, not a proved adapter: [weights-within-a-ratio-agree-past-it](weights-within-a-ratio-agree-past-it.md). outweighs and neutral_ranks_by_number are its cases, the ratio past the pair's and the ratio one.
 
-**Used by:** [a-narrowing-above-its-widening](a-narrowing-above-its-widening.md) · [eventual-widening](eventual-widening.md) · [graded-significance-and-priority](graded-significance-and-priority.md) · [shared-laws-on-the-grammar](shared-laws-on-the-grammar.md) · [weights-within-a-ratio-agree-past-it](weights-within-a-ratio-agree-past-it.md) · [what-self-concern-alone-ranks](what-self-concern-alone-ranks.md)
+**Used by:** [a-narrowing-above-its-widening](a-narrowing-above-its-widening.md) · [eventual-widening](eventual-widening.md) · [graded-significance-and-priority](graded-significance-and-priority.md) · [shared-laws-on-the-grammar](shared-laws-on-the-grammar.md) · [weights-within-a-ratio-agree-past-it](weights-within-a-ratio-agree-past-it.md) · [what-self-concern-alone-ranks](what-self-concern-alone-ranks.md) · [what-would-give-c](what-would-give-c.md)
 
 <a id="sources--来源"></a>
 ### Sources
