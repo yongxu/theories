@@ -1,7 +1,5 @@
 import Becoming.Typicality
 import Becoming.Parting
-import Becoming.CrossSituational
-import Becoming.FinerTraces
 
 /-!
 # Typical runs: what counting says of the prefixes of runs of free branching

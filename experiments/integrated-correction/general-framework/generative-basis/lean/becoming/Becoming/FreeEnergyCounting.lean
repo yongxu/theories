@@ -1,4 +1,5 @@
 import Becoming.ConditionalWeights
+import Becoming.Flow
 
 /-!
 # The free-energy bound in counting form

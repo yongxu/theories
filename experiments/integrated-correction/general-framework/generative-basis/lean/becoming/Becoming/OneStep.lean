@@ -1,4 +1,3 @@
-import Becoming.Counting
 import Becoming.Sampling
 
 /-!

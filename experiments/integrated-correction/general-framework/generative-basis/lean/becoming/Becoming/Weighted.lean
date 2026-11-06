@@ -1,5 +1,3 @@
-import Becoming.Capture
-import Becoming.Resolution
 import Becoming.Witnesses
 
 /-!

@@ -1,4 +1,7 @@
 import Becoming.ConditionalWeights
+import Becoming.World
+import Becoming.Admission
+import Becoming.Description
 
 /-!
 # The Markov blanket as a coupling structure, and what the existence claim forbids

@@ -1,5 +1,4 @@
 import Becoming.Learning
-import Becoming.Assurance
 import Becoming.Mechanism
 
 /-!

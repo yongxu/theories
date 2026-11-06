@@ -1,6 +1,5 @@
 import Becoming.Recurrence
 import Becoming.Renewal
-import Becoming.Labelled
 
 /-!
 # Renewal recurs where activity without renewal descends

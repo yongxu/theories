@@ -1,5 +1,4 @@
 import Becoming.GrammarScope
-import Becoming.GrammarTesting
 import Becoming.GrammarPath
 
 /-!

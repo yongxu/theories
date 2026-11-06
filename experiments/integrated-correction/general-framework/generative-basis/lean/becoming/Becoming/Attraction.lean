@@ -1,5 +1,4 @@
 import Becoming.Recurrence
-import Becoming.Labelled
 import Becoming.Witnesses
 
 /-!

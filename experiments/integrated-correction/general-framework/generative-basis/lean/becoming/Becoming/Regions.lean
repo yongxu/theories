@@ -1,5 +1,4 @@
 import Becoming.Admission
-import Becoming.Continuation
 
 /-!
 # Regions: self, system and whole, and represented boundaries

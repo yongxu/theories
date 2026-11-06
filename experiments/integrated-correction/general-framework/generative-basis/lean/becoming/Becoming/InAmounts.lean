@@ -1,5 +1,4 @@
 import Becoming.Amounts
-import Becoming.Recurrence
 import Becoming.Roles
 
 /-!

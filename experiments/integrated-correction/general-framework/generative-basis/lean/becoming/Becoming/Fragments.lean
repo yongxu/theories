@@ -1,5 +1,4 @@
 import Becoming.Presentations
-import Becoming.Joining
 
 /-!
 # Fragments: courses of a process joined where one ends and the next begins
