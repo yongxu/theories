@@ -261,8 +261,8 @@
       "id": "closing-needs-net-draw",
       "relation": "formal-reuse",
       "detail": {
-        "zh": "复用接纳、包含、超出、扣留后的水平与精确相界 Flow.Balances.supported_iff_within_margin（以及 opens_nothing）。",
-        "en": "Reuses admission, inclusion, exceeding, the withheld levels and the exact phase boundary Flow.Balances.supported_iff_within_margin (and opens_nothing)."
+        "zh": "复用接纳、包含、超出、扣留后的水平与精确边界 Flow.Balances.supported_iff_within_margin（以及 opens_nothing）。",
+        "en": "Reuses admission, inclusion, exceeding, the withheld levels and the exact boundary Flow.Balances.supported_iff_within_margin (and opens_nothing)."
       },
       "interface": {
         "output": {
@@ -773,6 +773,10 @@
     {
       "en": "3 November 2026, CD (board item CD): a related line on the-run-classes-and-widening says how a part changes what can form, as that record and its home section in 07 §2 now say, not the order on what can form. Under the glossary's one sense, ranking and order (the ethics' role word) say which course is better, and widening says which admits more, with no premise. The claim is unchanged.",
       "zh": "2026年11月3日，工作板条目 CD：一条关于 the-run-classes-and-widening 的相关说明改说部分如何改变能形成者，与该记录及 07 §2 的本节现今所说相同，而非能形成者之序。按词汇表的单一词义，排序与次序（伦理的角色词）说哪个进程更好，扩大说哪个所纳更多，不需前提。主张不变。"
+    },
+    {
+      "en": "7 November 2026, CX: the correspondence corrected where a reader of the crosswalk found it wider than its source or its home (the crosswalk's live flags, checked at home); no law, premise or scope of this record changed.",
+      "zh": "2026年11月7日，CX：交叉对照之读者发现对应说得比其来源或本处更宽，于本处查实后更正；本记录之律、前提与范围均未变。"
     }
   ],
   "text_versions": [

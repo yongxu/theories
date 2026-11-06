@@ -1,0 +1,184 @@
+{
+  "key": "capture: closed-capture and capture-through-the-rule (02 §9)",
+  "read": [
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/cx-crosswalk/COMPARE.md",
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/cx-crosswalk/BRIEF.md",
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/cx-crosswalk/reads/CRITIC.md (H3 in full; H4, M2 to M5 and L1 to L6 for context)",
+    "theories/becoming/chapters/02-MAP.md lines 385-420 (§9 Capture: r-target-capture, r-capture-through-the-rule, r-two-rules-lock-together, r-a-reading-against-the-share-does-not-ratchet, the 元吸引子 definition, r-closed-capture, r-readers-drawn-from-the-selected, r-shaping-*, r-drawn-shaping-drawn-one-at-a-time) and line 447 (Which locks noise leaves)",
+    "theories/becoming/results/records/closed-capture.json: title, hypotheses, does_not_show, correspondence",
+    "theories/becoming/results/records/capture-through-the-rule.json: title, hypotheses, does_not_show, correspondence",
+    "digest.py --stage 4-repair --target closed-capture,capture-through-the-rule (all 94 entries)",
+    "full target lists, quotes and source fields of cx-ma-absorbed-criticism, cx-zhishan-criticism-absorbed, cx-kpso-correction-keystone, cx-sspiral-dominance-no-persistence, cx-wamo-narrative-reality, cx-modphil-hegel-reversal-not-forced, cx-pal-value-lock-in, cx-kpso-training-inside-the-attractor, cx-asc-loss-function-channel, cx-ctxrt-self-laundering, cx-wamo-selection-filter, cx-asc-token-same-shape, cx-drives-inescapable-basin, cx-syscyb-trap-success-to-the-successful, cx-kpso-compounding-axis, cx-kpso-state-versus-landscape, cx-fork-landscape-deformation, cx-zhishan-totalizing-attractor, cx-ma-complete-object and six others",
+    "source lines, by grep only: theories/meta-attractor/README.md:400 (claim 85); theories/zhishan-intelligence-must-be-good/README.md:53 and :298 (claim 52); theories/wamotopia-and-the-wamo-protocol/README.md:255-261 (claims 89, 90, 95); theories/alignment-selection-on-cognition/README.md:246-248 (claims 10-12); theories/drives-narrative-attractors-and-mind/README.md:138 (claim 43)"
+  ],
+  "clusters": [
+    {
+      "claim": "Winners write the next round's rule (the token of power; rules for their own kind)",
+      "ids": ["cx-asc-selection-on-cognition", "cx-asc-token-same-shape", "cx-wamo-selection-filter", "cx-sspiral-rule-capture", "cx-zhishan-winners-write-the-rules", "cx-fork-dark-path-default", "cx-ma-rule-loop", "cx-sspiral-any-token-any-game", "cx-greek-thrasymachus-stronger", "cx-archearth-winning-and-the-next-rule"],
+      "verdict": "ruled",
+      "why": "All rest on ReadsShare, which the record itself calls the premise where 'the winner shapes the rule' enters; the sources asserting it of actual societies are scope, so wamo-selection-filter (same 2024-07-14 sentence as asc-token-same-shape) goes to scope. archearth stays agreement: its source is a hedged should with no universal to correct. Thrasymachus is fresh-reading as a domain the account was not formed from."
+    },
+    {
+      "claim": "Compounding advantage: success buys the means to win again",
+      "ids": ["cx-kpso-compounding-axis", "cx-syscyb-trap-success-to-the-successful", "cx-wamo-matthew-externality", "cx-econ-matthew-effect", "cx-sspiral-winner-justifies-all"],
+      "verdict": "ruled",
+      "why": "Meadows's 'winners eventually take all' is stated of the structure generally and the targets condition it (premise, no noise, drift leaves), so syscyb goes to scope with wamo-matthew and sspiral-winner. kpso keeps agreement: its own source says it runs away only where returns increase. Merton keeps agreement of reading: only the generalized form has a shape."
+    },
+    {
+      "claim": "Partial reform is re-absorbed; only a change of law, reading or selection leaves",
+      "ids": ["cx-asc-moloch-in-the-mind-reform", "cx-ma-partial-reform", "cx-econ-acemoglu-persistence", "cx-abr-khaldun-reform-needs-group-feeling", "cx-kpso-state-versus-landscape", "cx-fork-landscape-deformation", "cx-drives-hijack-and-escape", "cx-wamo-payoff-landscape", "cx-syscyb-trap-policy-resistance"],
+      "verdict": "same",
+      "why": "All scope, each citing the absorption theorem with the reversal witness as the correction of a universal; fork and kpso already linked by same_as."
+    },
+    {
+      "claim": "Criticism is absorbed only under four conditions, otherwise effective counter-selection",
+      "ids": ["cx-ma-absorbed-criticism", "cx-zhishan-criticism-absorbed"],
+      "verdict": "ruled",
+      "why": "One sentence of one source (CHAIN/v6 main-zh.md) given carried-in-part/scope in ma and fresh-reading/divergence in zhishan. The source is already conditional, so scope has nothing to correct, and ma's own reading says 'None sorts a given criticism by the source's four tests'. zhishan's verdict holds for both."
+    },
+    {
+      "claim": "A reading formed from the share absorbs any change of it (minds, paradigms, adapted preferences, owned discourse)",
+      "ids": ["cx-drives-inescapable-basin", "cx-kpso-paradigm-coherence", "cx-modphil-sen-adaptive-preferences", "cx-wamo-memetic-capture", "cx-pal-confirmation-bias", "cx-ma-conceptual-capture", "cx-drives-minds-first", "cx-drives-worshipper", "cx-sspiral-narrative-capture", "cx-wamo-discourse-loop", "cx-asc-ends-are-output-of-the-game", "cx-asc-corpus-channel-training-ground", "cx-greek-thucydides-stasis"],
+      "verdict": "ruled",
+      "why": "The theorem is near-definitional (a reading that is a function of the share is undone when re-read) and the record says readers being minds is a reading; so a join to minds is agreement of reading, as kpso, Sen and wamo-memetic have it. drives-inescapable-basin goes from law to reading. The universal claims (minds-first, worshipper, narrative, discourse, conceptual) are scope. 08's warning applies: this law read onto a dozen sources explains little by itself."
+    },
+    {
+      "claim": "A lock outlives a loss it does not read",
+      "ids": ["cx-ma-metric-survives-refutation", "cx-rsd-reason-or-win", "cx-sspiral-foundation-erosion", "cx-asc-relative-selection-blind", "cx-greek-plato-regime-decay", "cx-cc-shi-tianming-michang", "cx-pal-value-lock-in", "cx-modphil-hegel-reversal-not-forced", "cx-wamo-narrative-reality", "cx-sspiral-dominance-no-persistence", "cx-ecoevo-fisher-runaway-cost-is-read"],
+      "verdict": "ruled",
+      "why": "Relations hold, with scope where a universal is conditioned and divergence where the source's loss is read (Fisher, Hegel). Three entries cite lock_outlives_loss as carrying where their own reading says the subject or the premises fail (pal, hegel) or that it runs the other way (sspiral-dominance): those roles go to neighbour."
+    },
+    {
+      "claim": "A way out: a reading of what the share does not carry (dissent, prophets, schools, ledgers, correction)",
+      "ids": ["cx-abr-prophets-against-rulers", "cx-cc-huang-xuexiao", "cx-rsd-rebuild-feedbacks", "cx-rsd-meaning-ledger", "cx-zhishan-trust-dissent", "cx-kpso-correction-keystone", "cx-fork-top-of-leverage-hierarchy", "cx-sspiral-leverage-at-attractor", "cx-syscyb-ashby-ultrastability", "cx-ecs-sealed-adjudication", "cx-ctxrt-self-laundering"],
+      "verdict": "ruled",
+      "why": "Prescriptions stated generally are scope against 'a sufficient way out, not shown necessary'; kpso-correction-keystone, which defines catastrophe across any harm and has one condition's margin on a model as its live form, goes to scope with them. Narratives and designs that state no universal (prophets, Ashby, sealed adjudication) keep agreement of reading: a real difference."
+    },
+    {
+      "claim": "The corpus's meta-attractor as a wider object than the account's",
+      "ids": ["cx-zhishan-totalizing-attractor", "cx-ma-complete-object", "cx-sspiral-attractor-no-subject", "cx-asc-four-layer-loop", "cx-ma-scale-isomorphism"],
+      "verdict": "ruled",
+      "why": "Where the account narrows the object by decision (GLOSSARY: never the corpus's working sense) nothing universal is conditioned: ma-complete-object has divergence and zhishan-totalizing goes there too. sspiral-attractor-no-subject, asc-four-layer-loop and ma-scale-isomorphism state a dynamic or its reach universally and stay scope."
+    },
+    {
+      "claim": "Meadows's leverage hierarchy, paradigm at the top",
+      "ids": ["cx-syscyb-meadows-leverage-points", "cx-fork-top-of-leverage-hierarchy", "cx-sspiral-leverage-at-attractor"],
+      "verdict": "differ-real",
+      "why": "syscyb maps the ranking itself (divergence: no law ranks). fork and sspiral map the exit clause, read against the closed-capture way out (scope), and put the missing ranking in source_adds."
+    },
+    {
+      "claim": "Commercial selection reaches the training objective",
+      "ids": ["cx-asc-loss-function-channel", "cx-kpso-training-inside-the-attractor"],
+      "verdict": "differ-real",
+      "why": "Both say the route from revenue to a loss is not stated. kpso's carried-in-part rests on 07's assessment of published pipelines, a live sentence on training signals, which asc does not cite. A thin difference, and not one about the capture targets."
+    },
+    {
+      "claim": "A counter-rule locks as the rule it replaced (D68), and a threshold reading need not lock",
+      "ids": ["cx-ma-anti-attractor", "cx-asc-token-same-shape", "cx-ma-partial-capture", "cx-ma-not-fated"],
+      "verdict": "same",
+      "why": "All scope, read by descent from the meta-attractor line and corrected by the Lean witness Alternating.never_locked."
+    },
+    {
+      "claim": "The lock belongs to how the rule reads, not what it favours",
+      "ids": ["cx-zhishan-recursion-direction-neutral", "cx-zhishan-loops-not-symmetric", "cx-kpso-final-victory-is-closure"],
+      "verdict": "differ-real",
+      "why": "One target sentence; the sources say opposite things (direction-neutral agrees in form, the good/evil asymmetry diverges), and the folder's own tension is kept in both entries."
+    },
+    {
+      "claim": "Fisherian runaway",
+      "ids": ["cx-ecoevo-fisher-runaway-rule-read-from-share", "cx-ecoevo-fisher-runaway-cost-is-read"],
+      "verdict": "same",
+      "why": "Consistent: loop shape as agreement of reading through capture-through-the-rule, and divergence from closed capture because cost enters the counts and Unread fails."
+    },
+    {
+      "claim": "Structure or configuration decides, so a change of law leaves",
+      "ids": ["cx-syscyb-structure-generates-behaviour", "cx-zhishan-configuration-not-law", "cx-syscyb-trap-eroding-goals"],
+      "verdict": "same",
+      "why": "Scope where a universal is conditioned. Eroding goals is agreement of reading on the downward lock witness, its cause put in source_adds."
+    },
+    {
+      "claim": "Capture targets cited as neighbours only",
+      "ids": ["cx-cc-huang-jilei-mofan", "cx-greek-plato-cave", "cx-econ-goodhart-regularity", "cx-econ-stigler-capture", "cx-econ-soros-reflexivity", "cx-sty-emergent-institutions", "cx-sty-host-without-constitution", "cx-syscyb-delay-oscillation", "cx-buddhist-wheel-closed-loop-ming-exit", "cx-buddhist-mmk-samsara-nirvana-no-difference", "cx-sty-rules-governing-themselves"],
+      "verdict": "same",
+      "why": "No connection rests on these targets except the MMK contrary reading and sty's D45 reading, both apt. Stigler's agreement rests on the shaping and drawn-reader records and belongs to that cluster."
+    }
+  ],
+  "rulings": [
+    {
+      "id": "cx-ma-absorbed-criticism",
+      "set": {"carried": "fresh-reading", "relation": "divergence", "agreement_of": null, "same_as": ["cx-zhishan-criticism-absorbed"]},
+      "roles": [{"target": "closed-capture", "role": "neighbour"}],
+      "why": "Same claim 85 and source as zhishan's claim 52. The source is already conditional ('only when'), so scope corrects nothing. Its own reading says no live text sorts a criticism by the four tests, so no sentence states a part. The law's 'absorbed' is a perturbation undone, not criticism taken up as capability, so closed-capture is a neighbour, as in cx-zhishan-criticism-absorbed."
+    },
+    {
+      "id": "cx-zhishan-criticism-absorbed",
+      "set": {"same_as": ["cx-ma-absorbed-criticism"]},
+      "roles": [],
+      "why": "The same sentence of the same corpus file (CHAIN/v6 main-zh.md) is mapped in meta-attractor claim 85, so a total should count it once."
+    },
+    {
+      "id": "cx-wamo-selection-filter",
+      "set": {"relation": "scope", "agreement_of": null, "same_as": ["cx-asc-token-same-shape"]},
+      "roles": [],
+      "why": "Its own reading says 'The source asserts its filter of societies; that ... winners shape the rule, the record does not show'. That is a universal conditioned by ReadsShare as premise. The same 2024-07-14 sentence (out-hb-01 #92) is cx-asc-token-same-shape, which has scope."
+    },
+    {
+      "id": "cx-asc-token-same-shape",
+      "set": {"same_as": ["cx-wamo-selection-filter"]},
+      "roles": [],
+      "why": "Its claim 12 and wamo's claim 89 cite one source note (out-hb-01.md #92, 2024-07-14) for the token-of-power filter."
+    },
+    {
+      "id": "cx-syscyb-trap-success-to-the-successful",
+      "set": {"relation": "scope", "agreement_of": null},
+      "roles": [],
+      "why": "The archetype says winners eventually take all, stated generally of the structure. The targets condition it: ReadsShare is the premise, there is no noise, drift leaves either lock, and full taking excludes only under 05's premises. Its siblings cx-wamo-matthew-externality and cx-sspiral-winner-justifies-all are scope. cx-kpso-compounding-axis keeps agreement only because its source conditions itself on increasing returns."
+    },
+    {
+      "id": "cx-drives-inescapable-basin",
+      "set": {"agreement_of": "reading"},
+      "roles": [],
+      "why": "The law's subject is a rule's reading monotone in a share, while the source's is a mind's method of assessment. The reading itself keeps 'whether minds meet them' apart, and the closed-capture record says readers being minds is a reading. Two carriers are D65 readings. The like joins cx-kpso-paradigm-coherence, cx-modphil-sen-adaptive-preferences and cx-wamo-memetic-capture are agreement of reading."
+    },
+    {
+      "id": "cx-kpso-correction-keystone",
+      "set": {"relation": "scope", "agreement_of": null},
+      "roles": [],
+      "why": "Its source_adds says the source defines catastrophe 'across any harm by time-constants, where the live form is one condition's margin on a model'. The closed-capture exit is 'sufficient and not shown necessary'. Like prescriptions (cx-rsd-rebuild-feedbacks, cx-zhishan-trust-dissent) are scope. This entry mainly belongs to the reader-margin cluster (one-reader-several-conditions)."
+    },
+    {
+      "id": "cx-sspiral-dominance-no-persistence",
+      "set": {},
+      "roles": [{"target": "closed-capture", "role": "neighbour"}],
+      "why": "Its reading cites lock_outlives_loss as what 'runs the other way' from the source's 'loss of contact with reality'. The agreement rests on relative-position-is-zero-sum and where-a-rising-take-ends, not on closed-capture."
+    },
+    {
+      "id": "cx-modphil-hegel-reversal-not-forced",
+      "set": {},
+      "roles": [{"target": "closed-capture", "role": "neighbour"}],
+      "why": "Its reading says 'His bondsman does come to read, so these premises do not catch him'. The divergence rests on the absence of any law of contradiction moving a relation (T7 and the search), not on a law whose premises the source fails."
+    },
+    {
+      "id": "cx-pal-value-lock-in",
+      "set": {},
+      "roles": [{"target": "closed-capture", "role": "neighbour"}],
+      "why": "Its reading says 'the source's object is one goal kept, the law's a rule read from a share'. The condition it gives comes from 02's 'Which locks noise leaves' reading, which carries."
+    },
+    {
+      "id": "cx-zhishan-totalizing-attractor",
+      "set": {"relation": "divergence", "agreement_of": null},
+      "roles": [],
+      "why": "Its reading says the account narrows the word to a model and the word never means the corpus's wider sense. The standing differs as well: the source declines a mathematical object and the account defines one. That is a divergence of object, as cx-ma-complete-object has it, and no universal of the source's is conditioned."
+    }
+  ],
+  "live_flags": [
+    {
+      "where": "theories/becoming/results/records/closed-capture.json correspondence (and its page, theories/becoming/results/records/closed-capture.md:62)",
+      "what": "It says 'Goodhart (1975) says a measure made a target stops measuring'. Goodhart's 1975 statement is that a statistical regularity collapses once pressure is placed on it for control. The 'measure made a target' wording is Strathern's 1997 gloss, as cx-econ-goodhart-regularity flags. A reader is told the later wording is Goodhart's."
+    },
+    {
+      "where": "theories/becoming/chapters/02-MAP.md#r-closed-capture",
+      "what": "The clause 'a change of the reading of any size is absorbed at the next reading step', where the reading is formed monotonically from the share, is cited by about a dozen crosswalk entries about minds and paradigms. It is close to definitional, and the home gives it no standing note. 08 on near-definitional laws would have the home or the record say so, so that fronts do not cite it as a finding about minds."
+    }
+  ]
+}

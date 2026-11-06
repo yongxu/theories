@@ -1,0 +1,68 @@
+{
+  "cluster": "words-of-the-root",
+  "flags": [
+    {
+      "where": "theories/becoming/chapters/03-KNOWING.md:351",
+      "flag": "03 glosses 无明 'Sanskrit avidyā' with no caution, while its sense, locked seeking, is a formal reading nearer 爱 and 取 (B-32); a reader takes it as the classical term.",
+      "verdict": "holds",
+      "why": "D26 adopts these as 'formal readings of these terms in the theory, not interpretations of their classical sources', and 03's reading drops that qualifier while adding the Sanskrit gloss; the repository's own review (BUDDHIST-THOUGHT B-32, 已知之弱) says the gloss invites comparison and that in Buddhism avidyā is the first of the twelve links, the reading being structurally nearer 爱 and 取. The edit restores D26's qualifier and B-32's point without deciding question 66 (drop the gloss or rename), which stays with readers; GLOSSARY:47, 02-MAP:438 and 08 #five-words state the sense with no avidyā gloss and are fine.",
+      "edits": [
+        {
+          "path": "theories/becoming/chapters/03-KNOWING.md",
+          "old": "无明 (*wúmíng*, not-seeing; Sanskrit *avidyā*) is that locked seeking. What grounds it",
+          "new": "无明 (*wúmíng*, not-seeing; Sanskrit *avidyā*) is that locked seeking, a formal reading of the term in the theory, not an interpretation of its classical sources: in Buddhist dependent arising avidyā is the first of the twelve links, and locked seeking is structurally nearer craving and grasping (爱, 取) ([B-32](../review/BUDDHIST-THOUGHT.md#b-32)). What grounds it",
+          "region": "§ learning, the Reading after r-the-boundary-of-enough-under-undetermined-laws"
+        }
+      ],
+      "also_stands": [
+        "GLOSSARY.md:47: the sense only, no avidyā gloss; not edited",
+        "theories/becoming/chapters/02-MAP.md:438: the sense only, no avidyā gloss; not edited",
+        "theories/becoming/chapters/08-METHOD.md:110 (#five-words): the sense only, no avidyā gloss; not edited",
+        "theories/becoming/chapters/03-KNOWING.md:5 (thesis): the sense only; not edited",
+        "theories/becoming/review/BUDDHIST-THOUGHT.md:444-452 (B-32, questions 64-66): the review that raises it; not edited",
+        "theories/becoming/history/THE-THEORY-OF-BECOMING.md:428 and THE-THEORY-OF-BECOMING-2026-10-20.md:605: superseded history, carry the gloss; not edited"
+      ],
+      "in_packet": "yes: git grep 'Sanskrit \\*avidyā\\*' review-packet-4 finds theories/becoming/chapters/03-KNOWING.md:351 unchanged"
+    },
+    {
+      "where": "theories/becoming/results/records/seeking-boundary.json (correspondence, en and zh)",
+      "flag": "The record reads 无明 as 'the not-seeing that keeps seeking locked', while 03 and 08 give the one sense: 无明 is that locked seeking, the position its ground.",
+      "verdict": "holds",
+      "why": "08 #five-words says every chapter uses 无明 in one sense, 'seeking locked onto a target that cannot be met at rest; the position every formation selects from grounds it and is not it', and D45 calls the not-seeing a position and says the position is not 无明; the record's wording makes 无明 the not-seeing, so the position, which contradicts the home. The edit replaces only the AI-readings clause with the glossary's words, leaving Ren's quoted words untouched; the generated seeking-boundary.md follows from this JSON, and a history entry is owed under RESULT-WORKFLOW.",
+      "edits": [
+        {
+          "path": "theories/becoming/results/records/seeking-boundary.json",
+          "old": "AI readings: 无明 is the not-seeing that keeps seeking locked onto a target that cannot be met at rest, and its boundary is B1;",
+          "new": "AI readings: 无明 is seeking locked onto a target that cannot be met at rest, grounded in, and not the same as, the position every formation selects from, and its boundary is B1;",
+          "region": "correspondence.en, after Ren's quoted words"
+        },
+        {
+          "path": "theories/becoming/results/records/seeking-boundary.json",
+          "old": "AI 的读法：无明是使寻求锁定在不能于停息中满足之目标上的不见，其边界是 B1；",
+          "new": "AI 的读法：无明是锁定在不能于停息中满足之目标上的寻求，以每个形成所从而选择之位置为根据，而不是这一位置，其边界是 B1；",
+          "region": "correspondence.zh, after Ren's quoted words"
+        }
+      ],
+      "also_stands": [
+        "theories/becoming/results/records/seeking-boundary.md:67: generated from the JSON; not edited",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/DELEGATED-CHOICES.md:393 and :400, DELEGATED-CHOICES.zh.md:438: the D26/D45 decision text, a record of the decision; not edited",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md:5393: study note, cited section; not edited",
+        "_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/seeking-boundary.md:34: process mapping; not edited",
+        "theories/becoming/history/THE-THEORY-OF-BECOMING*.md: superseded history; not edited"
+      ],
+      "in_packet": "yes: git grep 'not-seeing that keeps seeking locked' review-packet-4 finds theories/becoming/results/records/seeking-boundary.json:159 (and its generated .md:67)"
+    },
+    {
+      "where": "theories/becoming/chapters/01-ROOT.md:31",
+      "flag": "01 reads R x y as 'among what y's coming about comes from', while 06 §四 puts 生产与充足 among what the grammar cannot express; 中论 1's 不從他生 presses here.",
+      "verdict": "no",
+      "why": "06 says production and sufficiency cannot be expressed because they speak of what is not yet, and the grammar's 缘 is a necessary relation between places of the net with no predicate of being; 01 reads R only as x being one condition among y's, says nothing of y not yet being or of sufficiency, and two lines above states that a theorem says nothing of an element beyond how it relates, so the two pages agree. Whether 不從他生 refutes reading 缘 as arising from another is a Madhyamaka judgment no page here argues, which a person would have to take up; it changes no claim of 01.",
+      "edits": [],
+      "also_stands": [
+        "theories/becoming/THE-THEORY-OF-BECOMING.md:61: same gloss; not edited",
+        "theories/becoming/review/recoding/SHEET.tsv:194 (ZL-07-285, 生不自生亦不從他生): the corpus unit; not edited"
+      ],
+      "in_packet": "yes: git grep 'coming about comes from' review-packet-4 finds theories/becoming/chapters/01-ROOT.md:31 and THE-THEORY-OF-BECOMING.md:61"
+    }
+  ]
+}

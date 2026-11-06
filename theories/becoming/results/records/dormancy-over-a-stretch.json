@@ -72,8 +72,8 @@
     "zh": "独立审查。"
   },
   "correspondence": {
-    "en": "Seed viability and dormancy; hysteresis of collapse.",
-    "zh": "种子活力与休眠；崩溃之滞后。"
+    "en": "Seed viability and dormancy; a collapse that support's return does not undo, one-sided only: hysteresis's distinct collapse and recovery thresholds are not stated.",
+    "zh": "种子活力与休眠；支持回来也不撤销的崩溃，只是单向的：滞后所需的不同崩溃与恢复阈值没有陈述。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reserve.lean",
   "aliases": [
@@ -172,6 +172,10 @@
     {
       "en": "22 October 2026: added (ZG), for the gap the ZH reading raised; study section 340.",
       "zh": "2026年10月22日：新增（ZG），补中华思想脉络之读所提出的缺口；研究第 340 节。"
+    },
+    {
+      "en": "7 November 2026, CX: the correspondence corrected where a reader of the crosswalk found it wider than its source or its home (the crosswalk's live flags, checked at home); no law, premise or scope of this record changed.",
+      "zh": "2026年11月7日，CX：交叉对照之读者发现对应说得比其来源或本处更宽，于本处查实后更正；本记录之律、前提与范围均未变。"
     }
   ]
 }

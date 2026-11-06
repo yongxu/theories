@@ -1,0 +1,302 @@
+{
+ "cluster": "records-credits",
+ "flags": [
+  {
+   "where": "theories/becoming/results/records/closed-capture.json:157 (correspondence)",
+   "flag": "\"Goodhart (1975) says a measure made a target stops measuring\" puts Strathern's (1997) wording under Goodhart's date.",
+   "verdict": "holds",
+   "why": "Goodhart's 1975 sentence is that a statistical regularity tends to collapse once pressure is placed on it for control; the measure-and-target wording is Strathern's (1997) restatement, as Manheim and Garrabrant (2018), whom 03 cites, note. The record tells a reader Goodhart wrote what Strathern wrote; the edit gives each his own words and keeps the record's point.",
+   "edits": [
+    {
+     "path": "theories/becoming/results/records/closed-capture.json",
+     "old": "Goodhart (1975) says a measure made a target stops measuring;",
+     "new": "Goodhart (1975) says a statistical regularity tends to collapse once pressure is put on it for control, which Strathern (1997) put as a measure made a target ceasing to be a good measure;",
+     "region": "correspondence, en"
+    },
+    {
+     "path": "theories/becoming/results/records/closed-capture.json",
+     "old": "Goodhart（1975）说成为目标的度量不再度量；",
+     "new": "Goodhart（1975）说统计规律一旦被施压用于控制便趋于崩溃，Strathern（1997）将其说成：成为目标的度量不再是好的度量；",
+     "region": "correspondence, zh"
+    }
+  ],
+   "also_stands": [
+    "theories/becoming/results/records/closed-capture.md:62 is generated from the JSON; not edited",
+    "theories/becoming/history/THE-THEORY-OF-BECOMING.md:529 'Goodhart's law says a measure made a target stops measuring' is superseded history; not edited",
+    "theories/becoming/results/records/valuing-what-is-left-at-any-worth.json:114-115 credits Goodhart 1975 for a measure managed for itself, a reading compatible with his sentence; not edited",
+    "theories/meta-attractor/README.md:88,443 is the corpus (Ren's lineage), not the live account; not edited"
+   ],
+   "in_packet": "yes: git grep -F 'a measure made a target stops measuring' review-packet-4 -- theories/ finds closed-capture.json:157, closed-capture.md:62 and history/THE-THEORY-OF-BECOMING.md:529"
+  },
+  {
+   "where": "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings (line 29)",
+   "flag": "The credit says the law is the proxy problem (Goodhart; Amodei; Manheim and Garrabrant), wider than what is carried: the taxonomy's regressional and causal kinds are not reached.",
+   "verdict": "holds",
+   "why": "The law stated is blindness: a selection through couplings treats alike what lies beyond them, which is the omitted-attribute form; the account is deterministic (08's Blackwell row) and lists Pearl's do-calculus as not stated (08:491), so Manheim and Garrabrant's regressional (noise) and causal (intervention) kinds are not reached. 'It is the proxy problem' tells a reader the law is the whole of it; the edit adds one sentence after the quoted one, so ALIGNMENT.md:74's quote still matches.",
+   "edits": [
+    {
+     "path": "theories/becoming/chapters/03-KNOWING.md",
+     "old": "a proxy on some attributes is a selection through the coupling to them. Zhuang",
+     "new": "a proxy on some attributes is a selection through the coupling to them. What is stated is its blindness to what the proxy does not register; Manheim and Garrabrant's regressional and causal kinds, which turn on noise and on intervention, are not stated. Zhuang",
+     "region": "§1, the paragraph after the Clearing witness, beginning 'The main law holds by construction'"
+    },
+    {
+     "path": "theories/becoming/results/records/selection-through-couplings.json",
+     "old": "Known as the proxy problem (Goodhart 1975, Amodei and others 2016, Manheim and Garrabrant 2018);",
+     "new": "Known as the proxy problem (Goodhart 1975, Amodei and others 2016, Manheim and Garrabrant 2018) in its blindness to what a proxy does not register, not its regressional or causal kinds;",
+     "region": "does_not_show, the correspondence entry, en"
+    },
+    {
+     "path": "theories/becoming/results/records/selection-through-couplings.json",
+     "old": "即代理问题（Goodhart 1975；Amodei 等 2016；Manheim、Garrabrant 2018）；",
+     "new": "即代理问题（Goodhart 1975；Amodei 等 2016；Manheim、Garrabrant 2018）中对代理所不记录者之不见，不及其回归与因果两类；",
+     "region": "does_not_show, the correspondence entry, zh"
+    }
+  ],
+   "also_stands": [
+    "theories/becoming/review/ALIGNMENT.md:74 quotes 03's sentence verbatim; the quote still matches after the edit; not edited",
+    "theories/becoming/results/records/alignment-direction-under-widening.json:27-28 'Its selection part restates the proxy problem' then narrows to Zhuang and Hadfield-Menell's omitted attributes; not edited",
+    "theories/becoming/chapters/08-METHOD.md:491 (known results) names Zhuang and Hadfield-Menell only and could also list the taxonomy's kinds under what is not carried; not edited",
+    "theories/becoming/results/records/selection-through-couplings.md:58 is generated; not edited"
+   ],
+   "in_packet": "yes: git grep -F 'It is the proxy problem (Goodhart 1975' review-packet-4 -- theories/ finds 03-KNOWING.md:29 and review/ALIGNMENT.md:74; 'Known as the proxy problem (Goodhart 1975' finds selection-through-couplings.json:199 and .md:58"
+  },
+  {
+   "where": "theories/becoming/results/records/support-from-the-supported.json:186-187 (correspondence) and :282-283 (related)",
+   "flag": "Reads Ren's \"not harm\" as \"a phase transition with a clear boundary\" and calls excess_bounded and joint_excess_ends \"the two earlier phase results\", against 02's no universal phase threshold and 05's D65 'none a proved phase transition'.",
+   "verdict": "holds",
+   "why": "The 'phase transition with a clear boundary' is Ren's own sentence, quoted (its full form is in closing-needs-net-draw.json:158), and stays; but the AI's naming of two root laws and the absorbing end as 'phase results' tells a reader the account has proved phase transitions, where 02's D65 says a region ceasing, a departure and a bifurcation are not one 'phase transition' and 05:360 says none is a proved phase transition. The edit names them boundary results and says so.",
+   "edits": [
+    {
+     "path": "theories/becoming/results/records/support-from-the-supported.json",
+     "old": "the two earlier phase results (excess_bounded and joint_excess_ends, see own-count-misses-joint-excess) and this absorbing end are its three forms under this reading.",
+     "new": "the two earlier boundary results (excess_bounded and joint_excess_ends, see own-count-misses-joint-excess) and this absorbing end are its three forms under this reading, boundaries and none a proved phase transition.",
+     "region": "correspondence, en"
+    },
+    {
+     "path": "theories/becoming/results/records/support-from-the-supported.json",
+     "old": "已有的两个相界结果（excess_bounded、joint_excess_ends，见 own-count-misses-joint-excess）与这里的吸收态，是这一读法下的三个形式。",
+     "new": "已有的两个边界结果（excess_bounded、joint_excess_ends，见 own-count-misses-joint-excess）与这里的吸收态，是这一读法下的三个形式；它们是边界，都不是已证的相变。",
+     "region": "correspondence, zh"
+    },
+    {
+     "path": "theories/becoming/results/records/support-from-the-supported.json",
+     "old": "The two earlier phase results:",
+     "new": "The two earlier boundary results:",
+     "region": "related, own-count-misses-joint-excess, en"
+    },
+    {
+     "path": "theories/becoming/results/records/support-from-the-supported.json",
+     "old": "已有的两个相界结果：",
+     "new": "已有的两个边界结果：",
+     "region": "related, own-count-misses-joint-excess, zh"
+    },
+    {
+     "path": "theories/becoming/results/records/significance-retained-within-margin.json",
+     "old": "the exact phase boundary Flow.Balances",
+     "new": "the exact boundary Flow.Balances",
+     "region": "dependencies, closing-needs-net-draw, en"
+    },
+    {
+     "path": "theories/becoming/results/records/significance-retained-within-margin.json",
+     "old": "精确相界 Flow.Balances",
+     "new": "精确边界 Flow.Balances",
+     "region": "dependencies, closing-needs-net-draw, zh"
+    }
+  ],
+   "also_stands": [
+    "theories/becoming/results/records/closing-needs-net-draw.json:157-158 and significance-retained-within-margin.json:235-236 quote Ren's 'phase transition with a clear boundary' as his words, and the reading there names no phase result; not edited",
+    "the P37 history notes ('the phase boundary', '相界') in closing-needs-net-draw, four-cases-of-a-part, loss-beyond-a-region, represented-boundary-against-dependence and support-from-the-supported are dated history of the plan's name; not edited",
+    "theories/becoming/results/records/four-cases-of-a-part.json:98 '局部相界' (zh only; en has no phase word) could take '局部边界'; not edited",
+    "support-from-the-supported.md:71,88 and significance-retained-within-margin.md:90 are generated; not edited"
+   ],
+   "in_packet": "yes: git grep -F 'the two earlier phase results' review-packet-4 -- theories/ finds support-from-the-supported.json:187 and .md:71; 'The two earlier phase results' finds .json:283 and .md:88; 'exact phase boundary' finds significance-retained-within-margin.json:265 and .md:90"
+  },
+  {
+   "where": "theories/becoming/results/records/recurrence-without-premise.json:207-208 (correspondence)",
+   "flag": "Says physics' low-entropy beginning 'is derived', while entropy-history-and-record's does-not-show says a coarse-grained entropy rising from an ordered start needs a premise about the start and is not stated.",
+   "verdict": "holds",
+   "why": "The two records contradict each other: 'is derived' tells a reader the account derives physics' premise about the start, while entropy-history-and-record.json:252-253 says it needs a premise and is not stated; the trailing 'not physical derivations' does not undo a plain 'is derived'. The edit keeps the reading (the beginning of the kept history) and copies the companion record's words for what is not stated.",
+   "edits": [
+    {
+     "path": "theories/becoming/results/records/recurrence-without-premise.json",
+     "old": "the low-entropy beginning physics supplies is the beginning of the kept history, and is derived;",
+     "new": "the low-entropy beginning physics supplies reads as the beginning of the kept history, while a coarse-grained entropy rising from an ordered start needs a premise about the start and is not stated (entropy-history-and-record);",
+     "region": "correspondence, en"
+    },
+    {
+     "path": "theories/becoming/results/records/recurrence-without-premise.json",
+     "old": "物理学设为前提的低熵开端是保留的历史的开端，是推出的；",
+     "new": "物理学设为前提的低熵开端读作保留的历史的开端，而粗粒化的熵从有序的开端上升需要关于开端的前提，没有陈述（entropy-history-and-record）；",
+     "region": "correspondence, zh"
+    }
+  ],
+   "also_stands": [
+    "theories/becoming/results/records/recurrence-without-premise.md:76 is generated; not edited",
+    "no other live line says the low-entropy beginning is derived (git grep 'low-entropy', 'low entropy', '低熵', 'past hypothesis' over theories/ and GLOSSARY.md outside history/)"
+   ],
+   "in_packet": "yes: git grep -F 'and is derived; entropy reads' review-packet-4 -- theories/ finds recurrence-without-premise.json:208 and .md:76"
+  },
+  {
+   "where": "theories/becoming/results/records/dormancy-over-a-stretch.json:75-76 and webs-with-a-recent-giving.json:118-119 (correspondence)",
+   "flag": "'hysteresis of collapse' and 'history-dependent response is hysteresis (Mayergoyz 2003)' where no live law states a band, two thresholds or a path.",
+   "verdict": "holds",
+   "why": "dormancy's law is that a final ending stays whatever support returns (one-sided), and webs-with-a-recent-giving's is that what was given can lower a threshold; neither states distinct thresholds on the way down and up, and the atlas plan (aa-attractor-atlas/PLAN.md:242, 296, 608) lists hysteresis as absent as a law until CY. A reader of either record would believe the account has hysteresis; the edits keep the correspondence and say what is not stated.",
+   "edits": [
+    {
+     "path": "theories/becoming/results/records/dormancy-over-a-stretch.json",
+     "old": "Seed viability and dormancy; hysteresis of collapse.",
+     "new": "Seed viability and dormancy; a collapse that support's return does not undo, one-sided only: hysteresis's distinct collapse and recovery thresholds are not stated.",
+     "region": "correspondence, en"
+    },
+    {
+     "path": "theories/becoming/results/records/dormancy-over-a-stretch.json",
+     "old": "种子活力与休眠；崩溃之滞后。",
+     "new": "种子活力与休眠；支持回来也不撤销的崩溃，只是单向的：滞后所需的不同崩溃与恢复阈值没有陈述。",
+     "region": "correspondence, zh"
+    },
+    {
+     "path": "theories/becoming/results/records/webs-with-a-recent-giving.json",
+     "old": "history-dependent response is hysteresis (Mayergoyz 2003).",
+     "new": "history-dependent response is studied as hysteresis (Mayergoyz 2003), whose distinct thresholds on the way up and on the way down are not stated here.",
+     "region": "correspondence, en"
+    },
+    {
+     "path": "theories/becoming/results/records/webs-with-a-recent-giving.json",
+     "old": "依赖历史的响应即滞后（Mayergoyz 2003）。",
+     "new": "依赖历史的响应作为滞后来研究（Mayergoyz 2003），其上行与下行之不同阈值此处没有陈述。",
+     "region": "correspondence, zh"
+    }
+  ],
+   "also_stands": [
+    "dormancy-over-a-stretch.md:49 and webs-with-a-recent-giving.md:55 are generated; not edited",
+    "no other live line in theories/becoming or GLOSSARY.md uses 'hysteresis' outside history/ (git grep -i hysteresis)"
+   ],
+   "in_packet": "yes: git grep -F 'hysteresis of collapse' review-packet-4 -- theories/ finds dormancy-over-a-stretch.json:75 and .md:49; 'history-dependent response is hysteresis' finds webs-with-a-recent-giving.json:118 and .md:55"
+  },
+  {
+   "where": "theories/becoming/results/records/groups-whose-conditions-are-coupled.json:135-136 (correspondence)",
+   "flag": "Glosses Levins 1969 and Hanski 1998 as 'patches linked by recolonization persist or go extinct together', where in metapopulation theory patches end apart and the network persists through that turnover.",
+   "verdict": "holds",
+   "why": "Levins's model and Hanski's review are standard ecology: local populations go extinct asynchronously and are recolonized, and persistence is the network's balance of colonization and extinction, not a shared fate of patches. The gloss credits them with this record's law (coupled groups end together); the edit states their claim and keeps the network-deficit point and the AI's readings.",
+   "edits": [
+    {
+     "path": "theories/becoming/results/records/groups-whose-conditions-are-coupled.json",
+     "old": "patches linked by recolonization persist or go extinct together, and a patch read alone",
+     "new": "patches go extinct apart and are recolonized, so persistence is the network's, and a patch read alone",
+     "region": "correspondence, en"
+    },
+    {
+     "path": "theories/becoming/results/records/groups-whose-conditions-are-coupled.json",
+     "old": "由再定殖相连的斑块一同存续或一同灭绝，单独读出的斑块",
+     "new": "斑块各自灭绝又被再定殖，存续属于网络，单独读出的斑块",
+     "region": "correspondence, zh"
+    }
+  ],
+   "also_stands": [
+    "theories/becoming/results/records/selection-among-groups-by-ending.json:132-133 credits Levins 1970 for metapopulation extinction in group selection, which fits; not edited",
+    "groups-whose-conditions-are-coupled.md:60 is generated; not edited"
+   ],
+   "in_packet": "yes: git grep -F 'persist or go extinct together' review-packet-4 -- theories/ finds groups-whose-conditions-are-coupled.json:135 and .md:60"
+  },
+  {
+   "where": "theories/becoming/results/records/what-self-concern-alone-ranks.json:108-109 (correspondence)",
+   "flag": "Glosses Jonas (1979) as 'the existence of the whole is never to be staked', while review/PHILOSOPHY.md gives his object as the permanence of genuine human life.",
+   "verdict": "holds",
+   "why": "PHILOSOPHY.md:167 gives Jonas's imperative's object as the permanence of genuine human life, and his rule against staking is of humanity's existence as a whole; 'the whole' widens it to the account's whole and contradicts the dossier. The edit restores his object.",
+   "edits": [
+    {
+     "path": "theories/becoming/results/records/what-self-concern-alone-ranks.json",
+     "old": "Jonas (1979): the existence of the whole is never to be staked;",
+     "new": "Jonas (1979): the existence of humanity as a whole is never to be staked;",
+     "region": "correspondence, en"
+    },
+    {
+     "path": "theories/becoming/results/records/what-self-concern-alone-ranks.json",
+     "old": "Jonas（1979）：整体的存在绝不可作赌注；",
+     "new": "Jonas（1979）：人类作为整体的存在绝不可作赌注；",
+     "region": "correspondence, zh"
+    }
+  ],
+   "also_stands": [
+    "theories/becoming/review/PHILOSOPHY.md:167 already states his object correctly; not edited",
+    "theories/becoming/history/THE-STEP-OF-INVARIANCE.md:120 is history; not edited",
+    "what-self-concern-alone-ranks.md:56 is generated; not edited"
+   ],
+   "in_packet": "yes: git grep -F 'the existence of the whole is never to be staked' review-packet-4 -- theories/ finds what-self-concern-alone-ranks.json:108 and .md:56"
+  },
+  {
+   "where": "theories/becoming/results/records/several-optimizers-drain-by-their-joint-capacity.json:122-123 (correspondence)",
+   "flag": "The AI reading says what keeps a commons is a coupling into it or a lowered capacity, 'the means Ostrom (1990) found communities use'; her rules, monitoring and sanctions are wider.",
+   "verdict": "holds",
+   "why": "Ostrom's design principles (1990) are boundaries, congruent rules, collective choice, monitoring, graduated sanctions and conflict resolution, widely established; the model has only a coupling and a capacity, and the sibling record a-rule-rebuilt-from-the-members-it-limits.json:191 says of her 'this reads the entry rule only'. 'The means' equates the two; the edit keeps the reading and says hers can supply these effects and are not modelled.",
+   "edits": [
+    {
+     "path": "theories/becoming/results/records/several-optimizers-drain-by-their-joint-capacity.json",
+     "old": "what keeps it is a coupling into it or a lowered capacity, the means Ostrom (1990) found communities use;",
+     "new": "what keeps it is a coupling into it or a lowered capacity, which the rules, monitoring and graduated sanctions Ostrom (1990) found communities use can supply, those means themselves not modelled here;",
+     "region": "correspondence, the AI's reading, en"
+    },
+    {
+     "path": "theories/becoming/results/records/several-optimizers-drain-by-their-joint-capacity.json",
+     "old": "保住它的是耦合入它或降低容量，即 Ostrom（1990）发现社群所用的手段；",
+     "new": "保住它的是耦合入它或降低容量，Ostrom（1990）发现社群所用的规则、监督与分级制裁可以提供这两者，这些手段本身此处没有建模；",
+     "region": "correspondence, the AI's reading, zh"
+    }
+  ],
+   "also_stands": [
+    "theories/becoming/results/records/a-rule-rebuilt-from-the-members-it-limits.json:191-192 already reads her entry rule only; not edited",
+    "theories/becoming/results/records/significance-through-a-common-condition.json:105-106 reads the common condition as a commons' shared resource (Ostrom 1990), which fits; not edited",
+    "several-optimizers-drain-by-their-joint-capacity.md:56 is generated; not edited"
+   ],
+   "in_packet": "yes: git grep -F 'the means Ostrom (1990) found' review-packet-4 -- theories/ finds several-optimizers-drain-by-their-joint-capacity.json:122 and .md:56"
+  },
+  {
+   "where": "theories/becoming/results/records/loss-read-in-time-by-the-others.json:253-254 (correspondence)",
+   "flag": "Credits 'the threshold the tipping point of Schelling (1978) and Granovetter (1978)' without the sibling record's qualifier that Granovetter's thresholds are distributed where here there is one.",
+   "verdict": "holds",
+   "why": "shaping-read-by-readers-drawn-from-the-selected.json:158-159, the model this record extends (MA4's stag hunt), carries the qualifier, and this record drops it, so a reader would take the one threshold here for Granovetter's model. The edit copies the sibling's words; that thresholds-of-waiting does not cite him changes nothing a reader is told.",
+   "edits": [
+    {
+     "path": "theories/becoming/results/records/loss-read-in-time-by-the-others.json",
+     "old": "and the threshold the tipping point of Schelling (1978) and Granovetter (1978).",
+     "new": "and the threshold the tipping point of Schelling (1978) and Granovetter (1978), whose thresholds are distributed where here there is one.",
+     "region": "correspondence, en"
+    },
+    {
+     "path": "theories/becoming/results/records/loss-read-in-time-by-the-others.json",
+     "old": "门槛即 Schelling（1978）与 Granovetter（1978）之临界点。",
+     "new": "门槛即 Schelling（1978）与 Granovetter（1978）之临界点，Granovetter 之门槛为分布者，此处唯一。",
+     "region": "correspondence, zh"
+    }
+  ],
+   "also_stands": [
+    "theories/becoming/review/ALIGNMENT.md:381 reports the record's credits, 'tipping points (Schelling 1978; Granovetter 1978)', without the qualifier; not edited",
+    "loss-read-in-time-by-the-others.md:86 is generated; not edited"
+   ],
+   "in_packet": "yes: git grep -F 'the tipping point of Schelling (1978) and Granovetter (1978)' review-packet-4 -- theories/ finds loss-read-in-time-by-the-others.json:253 and .md:86"
+  },
+  {
+   "where": "theories/becoming/results/records/entropy-history-and-record.json:311-312 (correspondence)",
+   "flag": "'in Ren's karmic reading' under a heading of the AI's reading, while recurrence-without-premise says the readings as karmic passing are the AI's.",
+   "verdict": "cosmetic",
+   "why": "The karmic frame is Ren's own (sources/15-codex-theory-conversations/2026-10-11-difference-in-becoming.md:13: 'think in karmic way, karma passes', a reverse taking another change), and the record applies it inside the AI's answers, while recurrence-without-premise says its own correspondences to karmic passing are the AI's; both are true. The phrase lends Ren the formal half (the levels show no difference) but changes no belief about what the account shows.",
+   "edits": [],
+   "also_stands": [
+    "theories/becoming/results/records/recurrence-without-premise.json:207-208; not edited"
+   ],
+   "in_packet": "yes: git grep -F \"in Ren's karmic reading\" review-packet-4 -- theories/ finds entropy-history-and-record.json:312 and .md:97"
+  },
+  {
+   "where": "theories/becoming/results/records/runaway-distance-uncoupled.json:147-148 (correspondence)",
+   "flag": "A reading of Ren's words (reason must regulate the heart, with 'a model (理)') stands only in the record, adopted on delegation, with no D number and no line at 02's home r-runaway-distance-uncoupled.",
+   "verdict": "no",
+   "why": "08's rule (08-METHOD.md:66) is for a chapter's **Reading** block, and records carry their labelled AI readings in the correspondence field throughout (e.g. groups-whose-conditions-are-coupled, several-optimizers-drain); this one is labelled the AI's, adopted on Ren's delegation, and is a reading, not a result, so the home-section rule does not reach it. Its content (a model, measurement or another's couplings avoids the blindness) is what 02's 'Coupled by level, every raise passes at once' already tells the home reader.",
+   "edits": [],
+   "also_stands": [
+    "theories/becoming/chapters/02-MAP.md:356-359, the home, unchanged"
+   ],
+   "in_packet": "yes: git grep -F 'reason must regulate the heart' review-packet-4 -- theories/ finds runaway-distance-uncoupled.json:148 and .md:64"
+  }
+ ]
+}

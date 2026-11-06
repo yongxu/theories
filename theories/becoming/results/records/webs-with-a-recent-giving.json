@@ -115,8 +115,8 @@
     "zh": "带近来所给之网在带内的静止；耦合经测量的野外之网；独立审查。"
   },
   "correspondence": {
-    "en": "State augmentation gives a system memory and keeps it monotone where output rises with state and past (Smith 1995, on monotone systems with delay); history-dependent response is hysteresis (Mayergoyz 2003).",
-    "zh": "状态扩充赋予系统记忆，输出随状态与过去上升时保持单调（Smith 1995，关于有延迟的单调系统）；依赖历史的响应即滞后（Mayergoyz 2003）。"
+    "en": "State augmentation gives a system memory and keeps it monotone where output rises with state and past (Smith 1995, on monotone systems with delay); history-dependent response is studied as hysteresis (Mayergoyz 2003), whose distinct thresholds on the way up and on the way down are not stated here.",
+    "zh": "状态扩充赋予系统记忆，输出随状态与过去上升时保持单调（Smith 1995，关于有延迟的单调系统）；依赖历史的响应作为滞后来研究（Mayergoyz 2003），其上行与下行之不同阈值此处没有陈述。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
   "aliases": [
@@ -295,6 +295,10 @@
     {
       "en": "22 October 2026: added (RM10), webs with a recent giving; RM9's bounded laws stated for any law read condition by condition; study section 331.",
       "zh": "2026年10月22日：新增（RM10），带近来所给的网；RM9 的有界之律对任何逐条件读取之律陈述；研究第 331 节。"
+    },
+    {
+      "en": "7 November 2026, CX: the correspondence corrected where a reader of the crosswalk found it wider than its source or its home (the crosswalk's live flags, checked at home); no law, premise or scope of this record changed.",
+      "zh": "2026年11月7日，CX：交叉对照之读者发现对应说得比其来源或本处更宽，于本处查实后更正；本记录之律、前提与范围均未变。"
     }
   ]
 }

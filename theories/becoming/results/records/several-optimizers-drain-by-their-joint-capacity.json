@@ -119,8 +119,8 @@
     "zh": "在某个优化者族内、各承担一份的条件；相互最优回应的存在；带更新的一个过程；独立审查。"
   },
   "correspondence": {
-    "en": "The tragedy of the commons (Hardin 1968), open access (Gordon 1954) and the overappropriation of common-pool resource games (Ostrom, Gardner and Walker 1994), in the limit where the condition couples into no optimizer: the drain is the whole joint capacity. Reading (the AI's): a commons none of its users couples into is drained by the sum of their capacities, whether they act each alone or together; what keeps it is a coupling into it or a lowered capacity, the means Ostrom (1990) found communities use; over a horizon a coupling for each step met keeps it, among drawers in turn, only where it reaches the need, and drawing at once with no pivotal drawer the drain stays perfect at every coupling.",
-    "zh": "公地悲剧（Hardin 1968）、开放进入（Gordon 1954）与公共池塘资源博弈的过度占用（Ostrom、Gardner 与 Walker 1994），在该条件不耦合进任何优化者的极限：抽干是全部合计容量。读法（AI 的）：其使用者都不耦合入的公地，被它们的容量之和抽干，不论各自独行还是一起；保住它的是耦合入它或降低容量，即 Ostrom（1990）发现社群所用的手段；在视野上，对轮流的抽取者，需要每被满足一步的耦合只在不低于需要时保住它，同时抽取而无关键抽取者时抽尽在每个耦合下仍完美。"
+    "en": "The tragedy of the commons (Hardin 1968), open access (Gordon 1954) and the overappropriation of common-pool resource games (Ostrom, Gardner and Walker 1994), in the limit where the condition couples into no optimizer: the drain is the whole joint capacity. Reading (the AI's): a commons none of its users couples into is drained by the sum of their capacities, whether they act each alone or together; what keeps it is a coupling into it or a lowered capacity, which the rules, monitoring and graduated sanctions Ostrom (1990) found communities use can supply, those means themselves not modelled here; over a horizon a coupling for each step met keeps it, among drawers in turn, only where it reaches the need, and drawing at once with no pivotal drawer the drain stays perfect at every coupling.",
+    "zh": "公地悲剧（Hardin 1968）、开放进入（Gordon 1954）与公共池塘资源博弈的过度占用（Ostrom、Gardner 与 Walker 1994），在该条件不耦合进任何优化者的极限：抽干是全部合计容量。读法（AI 的）：其使用者都不耦合入的公地，被它们的容量之和抽干，不论各自独行还是一起；保住它的是耦合入它或降低容量，Ostrom（1990）发现社群所用的规则、监督与分级制裁可以提供这两者，这些手段本身此处没有建模；在视野上，对轮流的抽取者，需要每被满足一步的耦合只在不低于需要时保住它，同时抽取而无关键抽取者时抽尽在每个耦合下仍完美。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
   "aliases": [
@@ -624,6 +624,10 @@
     {
       "en": "3 November 2026, board item CDR: related to coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it; the reading's clause on what keeps a commons qualified by it (over a horizon a coupling for each step met keeps the need, among drawers in turn, only where it reaches the need, and drawing at once with no pivotal drawer the drain stays perfect at every coupling); no law, hypothesis or declaration changed.",
       "zh": "2026年11月3日，工作板条目 CDR：与 coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it 相关联；读法中保住公地者一句据之限定（在视野上，对轮流的抽取者，需要每被满足一步的耦合只在不低于需要时留住它，同时抽取而无关键抽取者时抽尽在每个耦合下仍完美）；无一律、假设或声明改变。"
+    },
+    {
+      "en": "7 November 2026, CX: the correspondence corrected where a reader of the crosswalk found it wider than its source or its home (the crosswalk's live flags, checked at home); no law, premise or scope of this record changed.",
+      "zh": "2026年11月7日，CX：交叉对照之读者发现对应说得比其来源或本处更宽，于本处查实后更正；本记录之律、前提与范围均未变。"
     }
   ]
 }

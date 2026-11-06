@@ -1,0 +1,499 @@
+{
+ "key": "whole-digest",
+ "read": [
+  "COMPARE.md",
+  "BRIEF.md",
+  "reads/CRITIC.md (whole, H3 in full)",
+  "digest.py source",
+  "every entry of stage 4-repair as a one-line listing (id, carried, relation, agreement_of, count of carrying targets, name), 1,183 lines, made by a read-only script; the digest's group summaries and not_mapped lines were not read",
+  "digest.py --ids on about 95 entries (the clusters below and candidates found to differ in claim)",
+  "a read-only script listing shared targets across about 70 candidate groups",
+  "theories/becoming/chapters/06-CLASSICAL-TEXTS.md #four-layers and #closing-and-opening (sections read)",
+  "05-COLLECTIVES.md line 353 (D65), 03-KNOWING.md line 417 (evidence-through-change), 04-LIFE.md line 199 (groups-whose-conditions-are-coupled), 08-METHOD.md lines 38-40 and 634 (lines only)",
+  "records JSON: groups-whose-conditions-are-coupled, reviewers-count-by-independent-causes, a-pool-that-recruits-through-itself, a-prediction-read-by-what-it-predicts"
+ ],
+ "clusters": [
+  {
+   "claim": "Believing the trap (defection, the race, inevitability) manufactures it",
+   "ids": [
+    "cx-asc-belief-conditional-inevitability",
+    "cx-drives-belief-makes-dynamic",
+    "cx-kpso-belief-by-game-type",
+    "cx-ma-selfishness-prophecy",
+    "cx-sspiral-belief-makes-trap",
+    "cx-wamo-self-made-trap",
+    "cx-zhishan-belief-manufactures-trap"
+   ],
+   "verdict": "ruled",
+   "why": "Four labels (law, reading, scope) on one universal claim whose readings all condition it; ruled scope. kpso differs really: its source already conditions belief by game type."
+  },
+  {
+   "claim": "Independence is material, not nominal",
+   "ids": [
+    "cx-ma-material-independence",
+    "cx-zhishan-independence-is-material",
+    "cx-asc-independent-examiner",
+    "cx-ecs-independent-verification"
+   ],
+   "verdict": "ruled",
+   "why": "zhishan to agreement of reading with ma; asc and ecs keep law, their subject being examiners and reviewers, the law's own."
+  },
+  {
+   "claim": "One coupled civilization has no fallback",
+   "ids": [
+    "cx-asc-no-fallback",
+    "cx-sspiral-sample-size-hedge",
+    "cx-ma-sample-size-one",
+    "cx-kpso-correlated-collapse",
+    "cx-zhishan-variety-not-dying-alike"
+   ],
+   "verdict": "ruled",
+   "why": "ma to carried-in-part/law with asc, sspiral and kpso on the same record; zhishan-variety differs really: a join from reviewers to systems and variety as a norm."
+  },
+  {
+   "claim": "逍遥: no independent self when the model fits (one passage)",
+   "ids": [
+    "cx-drives-xiaoyao",
+    "cx-rsd-xiaoyao-fit"
+   ],
+   "verdict": "ruled",
+   "why": "same_as entries with not-carried against changed/divergence; drives ruled to rsd's verdict."
+  },
+  {
+   "claim": "Channel the drives; hierarchy and status are not the enemy",
+   "ids": [
+    "cx-drives-channel-not-deny",
+    "cx-kpso-channel-the-drives"
+   ],
+   "verdict": "ruled",
+   "why": "kpso's not-carried missed 06's 争胜与等级 row; ruled to changed/divergence."
+  },
+  {
+   "claim": "Good is what is good for self and network; better is increasing both",
+   "ids": [
+    "cx-rsd-good-self-and-network",
+    "cx-zhishan-good-for-self-and-network",
+    "cx-wamo-interest-alignment"
+   ],
+   "verdict": "ruled",
+   "why": "Same sentence: changed/divergence and carried-in-part/scope made one, carried-in-part/divergence, linked same_as; wamo's factual claim of aligned interests stays scope."
+  },
+  {
+   "claim": "Asymmetric scrutiny of non-Western vocabulary",
+   "ids": [
+    "cx-memories-asymmetric-scrutiny",
+    "cx-rsd-asymmetric-scrutiny"
+   ],
+   "verdict": "ruled",
+   "why": "Same 08 sentence read as fresh/reading and as carried-in-part/scope; one verdict, carried-in-part, agreement of thesis-or-method."
+  },
+  {
+   "claim": "A guard on a falsified premise keeps passing",
+   "ids": [
+    "cx-memories-stale-guards",
+    "cx-ctxrt-discriminator-oracle"
+   ],
+   "verdict": "ruled",
+   "why": "memories said no live text; ctxrt found 03's 'a change recorded as none can leave false confidence'; ruled to ctxrt's carried-in-part/law."
+  },
+  {
+   "claim": "Lineages optimised for 斗 are selected against when 境 changes",
+   "ids": [
+    "cx-rsd-struggle-selected-against",
+    "cx-jianwen-dou-lineages-extinct",
+    "cx-asc-contention-microfoundation"
+   ],
+   "verdict": "ruled",
+   "why": "fresh-reading against changed on the same record and example; ruled changed, scope, same_as. asc's sense carries the clause only as an aside."
+  },
+  {
+   "claim": "The narrowest single-value optimizer out-competes the balanced",
+   "ids": [
+    "cx-ma-narrow-optimizer",
+    "cx-sspiral-single-value-efficiency",
+    "cx-wamo-selection-filter",
+    "cx-sspiral-cooperation-sign"
+   ],
+   "verdict": "ruled",
+   "why": "ma fresh and wamo law against sspiral carried-in-part/scope; both ruled to carried-in-part/scope (wamo's relation only)."
+  },
+  {
+   "claim": "Cooperation reasons, struggle only has to win (和 against 争)",
+   "ids": [
+    "cx-rsd-reason-or-win",
+    "cx-jianwen-he-not-zheng",
+    "cx-asc-contention-microfoundation"
+   ],
+   "verdict": "same",
+   "why": "All fresh-reading/scope, no live text joining them."
+  },
+  {
+   "claim": "Regimes or dynasties cycle by nature",
+   "ids": [
+    "cx-abr-khaldun-three-generations",
+    "cx-econ-ibn-khaldun-cycle",
+    "cx-greek-polybius-anacyclosis",
+    "cx-cc-mengzi-yizhi-yiluan",
+    "cx-greek-plato-regime-decay"
+   ],
+   "verdict": "same",
+   "why": "All say no live law gives a regime cycle; not-carried against fresh/scope only records whether a reader proposed a reading of parts."
+  },
+  {
+   "claim": "自利 against 自私",
+   "ids": [
+    "cx-asc-self-interest-selfishness",
+    "cx-zhishan-selfish-vs-self-benefiting"
+   ],
+   "verdict": "differ-real",
+   "why": "asc's 自私 devours one's own substrate (scoped by the horizon law), zhishan's forecloses others' option space, which own-widening-within-the-margin has the form of."
+  },
+  {
+   "claim": "Structures are means, judged by what they do",
+   "ids": [
+    "cx-memories-means-not-ends",
+    "cx-kpso-means-not-ends",
+    "cx-fork-common-by-function",
+    "cx-syscyb-beer-posiwid"
+   ],
+   "verdict": "differ-real",
+   "why": "memories holds one unconditional test (scoped under C); kpso and fork hold no test, only judging by function."
+  },
+  {
+   "claim": "Cancer: a part's success killing the whole",
+   "ids": [
+    "cx-kpso-cancer-defection",
+    "cx-ma-cancer-levels",
+    "cx-ecoevo-germ-line-and-cancer",
+    "cx-sspiral-multicellular-question",
+    "cx-hsm-exception-hunting"
+   ],
+   "verdict": "differ-real",
+   "why": "kpso's 'dying with it' and the 'eliminated' entries are universal and the law conditions them; ma and ecoevo state the conflict of levels in the law's form."
+  },
+  {
+   "claim": "Falsifiers published and kept",
+   "ids": [
+    "cx-memories-falsifiers",
+    "cx-ecs-falsifiable-evaluation",
+    "cx-kpso-published-falsifiers"
+   ],
+   "verdict": "differ-real",
+   "why": "kpso's falsifiers are of the derivation from 'that it continue', which the account scopes away from its premises; the others are method."
+  },
+  {
+   "claim": "Delay in a corrective loop makes oscillation",
+   "ids": [
+    "cx-syscyb-delay-oscillation",
+    "cx-dpc-hopf-cycles"
+   ],
+   "verdict": "differ-real",
+   "why": "Overshoot by late reading has the law's form; Hopf's smooth birth of a small cycle does not."
+  },
+  {
+   "claim": "Recovery is harder than collapse",
+   "ids": [
+    "cx-ecoevo-recovery-beyond-removing-the-pressure",
+    "cx-dpc-hysteresis",
+    "cx-cc-congshan-rudeng"
+   ],
+   "verdict": "differ-real",
+   "why": "Non-return without giving from beyond is a law; two thresholds on one path (hysteresis) is not."
+  },
+  {
+   "claim": "Sincere carriers, no villains needed",
+   "ids": [
+    "cx-sspiral-hypocrisy",
+    "cx-ma-minds-constructs"
+   ],
+   "verdict": "same",
+   "why": "Both leave sincerity unstated: not-carried, and source_adds of a scoped entry."
+  },
+  {
+   "claim": "Dominance does not protect; even the winner loses",
+   "ids": [
+    "cx-sspiral-dominance-no-persistence",
+    "cx-asc-positional-residual",
+    "cx-fork-even-the-winner-loses",
+    "cx-wamo-all-but-the-winner"
+   ],
+   "verdict": "differ-real",
+   "why": "fork and wamo rest on AI taking over the game or rational availability, which no law reads; the others are the race and position laws."
+  }
+ ],
+ "rulings": [
+  {
+   "id": "cx-asc-belief-conditional-inevitability",
+   "set": {
+    "relation": "scope",
+    "agreement_of": null
+   },
+   "why": "Like cx-drives-belief-makes-dynamic and cx-wamo-self-made-trap (scope) on the same claim: the source calls inevitability self-fulfilling without condition; a-prediction-read-by-what-it-predicts conditions it (two right predictions under a threshold response, the start deciding), and the entry's own reading says readers are not believers and the race claim is not stated, so not the law's subject."
+  },
+  {
+   "id": "cx-ma-selfishness-prophecy",
+   "set": {
+    "relation": "scope",
+    "agreement_of": null
+   },
+   "why": "Source: mutual suspicion locks cooperation out whatever anyone's disposition; thresholds-of-waiting conditions it (one formation sparing all it waits on restores giving) and the reading says no text joins its two forms. Scope, as cx-drives-belief-makes-dynamic and cx-wamo-self-made-trap have the same claim."
+  },
+  {
+   "id": "cx-zhishan-belief-manufactures-trap",
+   "set": {
+    "relation": "scope",
+    "agreement_of": null
+   },
+   "why": "Its own reading conditions the source (on 05's model a changed belief that changes no law leaves the withholding standing; the prediction law is near-definitional). Scope, as cx-wamo-self-made-trap reads the same D48 sentence and the same prediction law."
+  },
+  {
+   "id": "cx-sspiral-belief-makes-trap",
+   "set": {
+    "relation": "scope",
+    "agreement_of": null
+   },
+   "why": "'Believing others will race creates the race', stated without condition; its reading says no law says belief in a race produces one and restraint by all may also be an equilibrium. Scope, as cx-wamo-self-made-trap and cx-drives-belief-makes-dynamic on the same targets. cx-kpso-belief-by-game-type keeps agreement: its source already conditions belief by game type."
+  },
+  {
+   "id": "cx-zhishan-independence-is-material",
+   "set": {
+    "agreement_of": "reading"
+   },
+   "why": "Same claim and words as cx-ma-material-independence (agreement of reading): the reviewers law's subject is reviewers on supplied fault formulas, and this entry's reading calls compute and funding 'this read's extension'. carried-in-part stands on the pool record's correspondence (evaluators chosen by those evaluated), which ma's claim lacks. cx-asc-independent-examiner keeps law: its subject is an examiner."
+  },
+  {
+   "id": "cx-ma-sample-size-one",
+   "set": {
+    "carried": "carried-in-part",
+    "agreement_of": "law",
+    "reading": {
+     "en": "The form of no backup is stated as a law of coupled conditions: groups depending on one family end together, nothing selected among them, so ending selects only between families; and a self-concerned order can reverse where the other course keeps an independent copy. That is the claim's conditional part, on the World model. Whether actual civilisations are so coupled, or capacities lost in one place survive in another, is supplied, not shown: the historical condition is not claimed. [AI reading]"
+    }
+   },
+   "why": "Same claim and carrying target as cx-asc-no-fallback and cx-sspiral-sample-size-hedge (both carried-in-part, agreement of law). The record's home sentence 'Groups depending on one such family end together, nothing selected among them: ending selects only between families' states the conditional part; the historical condition stays in source_adds."
+  },
+  {
+   "id": "cx-drives-xiaoyao",
+   "set": {
+    "carried": "changed",
+    "relation": "divergence",
+    "agreement_of": null,
+    "absence": null,
+    "targets": [
+     {
+      "anchor": "theories/becoming/chapters/01-ROOT.md#boundaries",
+      "says": {
+       "en": "Reading [AI reading, D45, D61]: a boundary short of the whole is real, since its relation never crosses it, and relative to that relation."
+      },
+      "role": "carries",
+      "part": "D45, D61"
+     },
+     {
+      "anchor": "theories/becoming/chapters/08-METHOD.md#one-relational-unfolding",
+      "says": {
+       "en": "Thesis, argued: forbids an explanation needing a determination no relation carries, such as a self with a nature of its own. Two live arguments would defeat it: that relations need relata with natures of their own, and that what an experience is like is not how it relates."
+      },
+      "role": "carries",
+      "part": "the defeaters"
+     },
+     {
+      "record": "what-a-course-chosen-through-its-model-does-not-test",
+      "anchor": "theories/becoming/chapters/03-KNOWING.md#r-what-a-course-chosen-through-its-model-does-not-test",
+      "role": "neighbour",
+      "says": {
+       "en": "Theorem (any types; a witness): where the world answers the act chosen with the value sensed and stays, the formation rests at once on a model its course never refutes. Reading [AI]: a model right along its course and wrong off it, related to self-confirming equilibrium (Fudenberg and Levine 1993); what tells such worlds apart comes from beyond the formation's own selection."
+      }
+     }
+    ],
+    "reading": {
+     "en": "The account takes up the self and its boundary and says otherwise. 08 forbids an explanation needing a self with a nature of its own, near the source's 'no independent self', yet 01 keeps boundaries: one short of the whole is real, relative to its relation, so a fitted model keeps its boundary. Quiet as evidence of fit meets a law: a formation can rest on a model its course never refutes, wrong off that course, so no error from inside does not tell fit from an untested model; that application is this read's. 逍遥 as a state has no home. [AI reading]"
+    },
+    "source_adds": {
+     "en": "逍遥 as a state; what fit is like from inside; the source's conjecture of a joint quiet of low prediction error and loosened identification, testable by practices doing one without the other."
+    }
+   },
+   "why": "Its same_as cx-rsd-xiaoyao-fit, the same passage, is changed/divergence against 01 #boundaries and 08 #one-relational-unfolding; this entry's own reading already cites 08 on a self with a nature of its own and the course-model law. One passage, one verdict."
+  },
+  {
+   "id": "cx-kpso-channel-the-drives",
+   "set": {
+    "carried": "changed",
+    "relation": "divergence",
+    "agreement_of": null,
+    "absence": null,
+    "targets": [
+     {
+      "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#closing-and-opening",
+      "says": {
+       "en": "The mechanism: earlier texts wrote evaluation into definitions (成闭为恶); here only structure is mapped; whether a closing supports or damages 生生 is said by comparison, the continuation condition for scope and C for order, neither asserted."
+      },
+      "role": "carries"
+     },
+     {
+      "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#four-layers",
+      "says": {
+       "en": "Reading of four non-relational layers: 争胜与等级 (二柄, 民弱国强, 贵贱有等, 亲亲之杀) sets a direction within relations, not a prior entity, so its divergence is in direction. Witnesses: a rise needs a fall; an imposed code makes all agree, each losing what it merges."
+      },
+      "role": "carries"
+     }
+    ],
+    "reading": {
+     "en": "The account takes up rank and contest and withholds the ruling. 06 reads 争胜与等级 as a layer setting a direction within relations, not a prior entity, so its divergence is in direction, and gives it no sign; whether a closing supports or damages 生生 is said by comparison, the continuation condition for scope and C for order, neither asserted, warrant open. So 'not the enemy' meets no contrary verdict, while 'some hierarchies brought peace' ranks where the account ranks nothing without a premise. No law of channelling drives was found. [AI reading]"
+    },
+    "source_adds": {
+     "en": "That drives can be channelled and by what; that suppressed they re-route, and changed payoffs with unshaped drives rebuild the race; that some hierarchies brought peace; drives as tools for building possibility space. Stated as mechanism with no test."
+    }
+   },
+   "why": "Same claim as cx-drives-channel-not-deny (changed/divergence), which this entry names the fuller home. Its absence searched 'hierarch' in English only and missed 06 #four-layers (争胜与等级, 贵贱有等, read as a direction within relations) and 06 #closing-and-opening (a closing judged by comparison under both premises, not by type)."
+  },
+  {
+   "id": "cx-rsd-good-self-and-network",
+   "set": {
+    "carried": "carried-in-part",
+    "same_as": [
+     "cx-zhishan-good-for-self-and-network"
+    ]
+   },
+   "why": "The same sentence of Ren's as cx-zhishan-good-for-self-and-network (carried-in-part). own-widening-within-the-margin states when a part's own widening widens the whole, the 'increasing both' part, so the account states part of the claim; the unconditional good is the divergence. One verdict: carried-in-part / divergence."
+  },
+  {
+   "id": "cx-zhishan-good-for-self-and-network",
+   "set": {
+    "relation": "divergence",
+    "same_as": [
+     "cx-rsd-good-self-and-network"
+    ]
+   },
+   "why": "Calling a direction good without condition, where the account calls it better only under C, unasserted, is BRIEF's divergence, not scope; its reading says 'calling it better is C's'. Same sentence and law as cx-rsd-good-self-and-network (divergence). cx-wamo-interest-alignment stays scope: a factual claim that interests align."
+  },
+  {
+   "id": "cx-memories-asymmetric-scrutiny",
+   "set": {
+    "carried": "carried-in-part",
+    "agreement_of": "thesis-or-method"
+   },
+   "why": "Same claim as cx-rsd-asymmetric-scrutiny, against the same 08 sentence, 'No cultural origin validates or disqualifies a method' (line 40): a sentence stating the symmetry for methods, so part is stated; its targets are method sections, so agreement of thesis-or-method. Its reading already says the vocabulary rule is the reader's join, which source_adds keeps."
+  },
+  {
+   "id": "cx-rsd-asymmetric-scrutiny",
+   "set": {
+    "relation": "agreement",
+    "agreement_of": "thesis-or-method"
+   },
+   "why": "The 08 method sentence states the symmetry for methods and neither conditions nor corrects the source's rule for vocabulary: narrower is carried-in-part, not scope. One verdict with cx-memories-asymmetric-scrutiny: carried-in-part, agreement of thesis-or-method."
+  },
+  {
+   "id": "cx-memories-stale-guards",
+   "set": {
+    "carried": "carried-in-part",
+    "agreement_of": "law",
+    "targets": [
+     {
+      "record": "evidence-through-change",
+      "anchor": "theories/becoming/chapters/03-KNOWING.md#r-evidence-through-change",
+      "says": {
+       "en": "Theorem (periphery; admitted transitions supplied): 'a change recorded as none can leave false confidence'; 'a control change can reopen an excluded arrangement'. What execution needs certified is the acquisition-time candidate set propagated through every admitted change. Its record: the admitted changes are not shown to be the actual ones, and 'a passing certificate warrants only what faithful domains warrant'."
+      },
+      "role": "carries"
+     },
+     {
+      "anchor": "theories/becoming/chapters/08-METHOD.md#completion-criterion",
+      "says": {
+       "en": "The configured checks read statements from Lean source text, not from elaborated terms, so a premise named only through a definition that a statement unfolds is not found. K5 looks only for the parameter patterns the coverage file lists."
+      },
+      "role": "carries"
+     },
+     {
+      "anchor": "theories/becoming/chapters/08-METHOD.md#theses",
+      "says": {
+       "en": "LA2's rule printed 'the counts decide' as supported while consulting neither the one-note measure nor the first late reading, both of which contradict it."
+      },
+      "role": "carries",
+      "part": "LA2's row"
+     },
+     {
+      "anchor": "theories/becoming/chapters/08-METHOD.md#known-results",
+      "says": {
+       "en": "Each item in the last column is a limit that holds so far and lapses when the account states the result."
+      },
+      "role": "carries"
+     },
+     {
+      "anchor": "theories/becoming/chapters/08-METHOD.md#what-would-defeat-the-reading",
+      "says": {
+       "en": "A law with content stands or falls by its check. An observation reaches it only through a stated correspondence, so a conclusion failing in a domain shows that the domain does not meet the hypotheses or that the correspondence misreads them, not that the theorem is false. A thesis claiming that the domain meets them does fail there."
+      },
+      "role": "neighbour"
+     }
+    ],
+    "reading": {
+     "en": "The account states the form on a periphery model: a change recorded as none can leave false confidence, a certificate passing while what it certified has moved, the admitted changes supplied. Its method shows the practice: checks reading Lean source text miss a premise named through a definition; LA2's rule printed a verdict both its measures contradict; a limit holds so far and lapses with its reason. Where the source's guard 'becomes false', a theorem does not: a domain ceasing to meet its hypotheses defeats the correspondence. [AI reading]"
+    }
+   },
+   "why": "Same claim as cx-ctxrt-discriminator-oracle (carried-in-part, agreement of law), whose source_adds names 'a stale corpus keeps answering'; it reads it against evidence-through-change, whose home in 03 states 'A change recorded as none can leave false confidence'. This entry's 'no live text states this' missed that sentence."
+  },
+  {
+   "id": "cx-rsd-struggle-selected-against",
+   "set": {
+    "carried": "changed",
+    "same_as": [
+     "cx-jianwen-dou-lineages-extinct"
+    ],
+    "reading": {
+     "en": "The account takes up whether struggle ends the struggler, by another mechanism: the source has low adaptability when an environment changes, the laws an end through a drawn condition. Position does not protect a part depending on what the race draws down: it ends with the rest; a confined rise has no member after the end, known results restated. But in the clearing witness a greatest part not so depending continues, and in the witness Body an unconfined rise has a member later, so struggle is not selected against in general. That a race produces joint excess is a premise; selection has no tie to 生. [AI reading]"
+    }
+   },
+   "why": "Same claim and example of Ren's (traits over-optimised for 斗 failing when 境 changes) as cx-jianwen-dou-lineages-extinct (changed/scope), against the same relative-position-is-zero-sum, whose record takes up the racer's end and says position does not protect: the account takes up the topic, so changed, scope kept."
+  },
+  {
+   "id": "cx-wamo-selection-filter",
+   "set": {
+    "relation": "scope",
+    "agreement_of": null
+   },
+   "why": "Same claim as cx-ma-narrow-optimizer and cx-sspiral-single-value-efficiency (both scope): iterated competition removing the balanced, asserted of societies; its reading conditions it (offspring carrying the target and winners shaping the rule are premises the records do not show). Its capture-through-the-rule citation may also be ruled by that target's cluster."
+  },
+  {
+   "id": "cx-ma-narrow-optimizer",
+   "set": {
+    "carried": "carried-in-part",
+    "targets": [
+     {
+      "record": "what-an-optimum-does-beyond-what-couples-in",
+      "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-what-an-optimum-does-beyond-what-couples-in",
+      "says": {
+       "en": "Theorem (any outcomes; breaks on the World). With room, every optimum of an order rising with a family stands at the least level beyond among eligible outcomes. It requires room; a known theorem restated."
+      },
+      "role": "carries"
+     },
+     {
+      "record": "relative-position-is-zero-sum",
+      "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-relative-position-is-zero-sum",
+      "says": {
+       "en": "Theorem. Positions' rises total their falls. Position does not protect: with balance across n steps of joint excess, a part requiring the condition at a need above what is left is not active. That a race produces joint excess is a premise of the join."
+      },
+      "role": "neighbour"
+     },
+     {
+      "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#markets",
+      "role": "carries",
+      "part": "Reading D65, a hypothetical case",
+      "says": {
+       "en": "Reading [AI, D65; a hypothetical case]: where buyers cannot tell future reliability and finance rewards present margins, a provider deferring maintenance can outgrow one maintaining and training successors."
+      }
+     }
+    ],
+    "reading": {
+     "en": "The account has weaker forms and one stated case. With room, every optimum of a rising order drains as far as any eligible outcome; and 05 reads a hypothetical case: a provider deferring maintenance can outgrow one maintaining, what the selection does not couple into being drawn from. It does not say the narrow wins over the broad in general: position does not protect, and a race can end its greatest parts. The reconciliation restricts the premise, since relation can make care productive. [AI reading]"
+    }
+   },
+   "why": "Same claim as cx-sspiral-single-value-efficiency (carried-in-part/scope), which carries 05's D65 sentence (05-COLLECTIVES.md line 353) that a provider deferring maintenance can outgrow one maintaining: a live sentence stating the narrow case, as a hypothetical. This entry's 'no live text ties these laws' missed it."
+  }
+ ],
+ "live_flags": [
+  {
+   "where": "theories/becoming/chapters/08-METHOD.md#names",
+   "what": "cx-memories-asymmetric-scrutiny notes the name criterion prefers 'formal, scientific and systems words' while 08 line 40 says no cultural origin validates or disqualifies a method, and 06 declines 仁 as carrying value while 'better' stays as a premise's word. A possible asymmetry a reader could press; not checked term by term."
+  }
+ ]
+}

@@ -1,0 +1,141 @@
+{
+ "cluster": "method-and-logic",
+ "flags": [
+  {
+   "where": "theories/becoming/chapters/08-METHOD.md:588 (flagged at 586; the table 'What the unifications claim')",
+   "flag": "'across domains conjectured (T3), supported in simulation (MQ1)' omits that MQ1's forecast failed for tabular learners, 80 of 151.",
+   "verdict": "holds",
+   "why": "MQ1's ledger (experiments/margin-measured/README.md:145) gives B4 as best response passed 8/8 and learners failed 80/151, as ONE-ARGUMENT:75 and review/ALIGNMENT:563 say; 08 here, 08's T3 row (573) and T3's home in 05 (241) give only the pass, though T3's clause concerns trained systems. A reader of 08 or 05 alone takes MQ1 as plain support.",
+   "edits": [
+    {
+     "path": "theories/becoming/chapters/08-METHOD.md",
+     "old": "across domains conjectured (T3), supported in simulation (MQ1);",
+     "new": "across domains conjectured (T3); in simulation the draw against margin forecast an exact best response's side effects (8 of 8) and failed for tabular learners (80 of 151; MQ1);",
+     "region": "08 §9, What the unifications claim, the Zhuang and Hadfield-Menell row"
+    },
+    {
+     "path": "theories/becoming/chapters/08-METHOD.md",
+     "old": "MQ1: side effects predicted 8 of 8 against 0 of 8;",
+     "new": "MQ1: an exact best response's side effects predicted 8 of 8 against 0 of 8, the tabular learners' failing, 80 of 151;",
+     "region": "08 §9, the theses table, T3's evidence column"
+    },
+    {
+     "path": "theories/becoming/chapters/05-COLLECTIVES.md",
+     "old": "8 of 8 against 0 of 8 for the reference outcome ([study §253]",
+     "new": "8 of 8 against 0 of 8 for the reference outcome, and failed for tabular learners, 80 of 151 ([experiment](../../../experiments/margin-measured/README.md); [study §253]",
+     "region": "05 §7, T3's Evidence so far, the MQ1 bullet"
+    }
+   ],
+   "also_stands": [
+    "theories/becoming/chapters/08-METHOD.md:573 (T3 row; edited above)",
+    "theories/becoming/chapters/05-COLLECTIVES.md:241 (T3's home; edited above)",
+    "theories/becoming/ONE-ARGUMENT.md:75 and theories/becoming/review/ALIGNMENT.md:563 already state the failure (not edited)",
+    "theories/becoming/history/THE-THEORY-OF-BECOMING.md:1275 is history (not edited)"
+   ],
+   "in_packet": "yes: 'supported in simulation (MQ1)' at review-packet-4 08-METHOD.md:585; 'MQ1: side effects predicted 8 of 8' at 08:570; 'Blind draw against margin predicted the best response' at 05:241"
+  },
+  {
+   "where": "theories/becoming/chapters/08-METHOD.md:329 (§5 Calibrations, the double-negation row)",
+   "flag": "The gloss 'reach without a path' misdescribes the law, as LOGIC L-29 says: the conclusion is reach, which carries a path.",
+   "verdict": "holds",
+   "why": "`fromSeed_of_not_separated_iff_dne` states that passing from no invariant separation to FromSeed (a seed and a finite path) is exactly DNE, and 01's home (01-ROOT.md:595) says 'refuting every separation refutes only that the configuration is unreached, and reaching it needs a path'; 08's gloss reads as the opposite, and the live dossier LOGIC.md:832 (after LM) records it as a misdescription.",
+   "edits": [
+    {
+     "path": "theories/becoming/chapters/08-METHOD.md",
+     "old": "a refutable reading holding where it is adhered to; reach without a path |",
+     "new": "a refutable reading holding where it is adhered to; reach, which needs a path, where only every separation from the seeds is refuted |",
+     "region": "08 §5 Calibrations table, Double-negation elimination row"
+    }
+   ],
+   "also_stands": [
+    "theories/becoming/review/LOGIC.md:826 quotes 08's gloss in its column 'What needing it says (08 §5)', and LOGIC.md:832's known weakness would then be met; the dossier's owner should update both (not edited)",
+    "theories/becoming/chapters/01-ROOT.md:595 is the home and already right",
+    "theories/becoming/results/records/reach-from-a-seed.json is right (its .md is generated)"
+   ],
+   "in_packet": "yes: 'reach without a path' at review-packet-4 08-METHOD.md:329 and LOGIC.md:826, 832"
+  },
+  {
+   "where": "theories/becoming/chapters/03-KNOWING.md#r-revision-with-an-undecided-value (line 286)",
+   "flag": "03 labels the revision theorem 'any type'; L-27 notes no type parameter occurs.",
+   "verdict": "holds",
+   "why": "The cited declarations (Undecided.settles, least_fixed, chain_exact, stays_undecided, monotone_not_moves) range over `sys : Nat → Term`, `N : Nat` and `Value`; only the uncited count `settles_within` has `X : Type u`. 08's label table says '(any type)' means proved for every type, so the label claims more generality than the Lean has.",
+   "edits": [
+    {
+     "path": "theories/becoming/chapters/03-KNOWING.md",
+     "old": "**Theorem** (any type; finitely many sentences closed among themselves).",
+     "new": "**Theorem** (the module's sentences: any finitely many closed among themselves).",
+     "region": "03 §6, revision with an undecided value"
+    }
+   ],
+   "also_stands": [
+    "theories/becoming/review/LOGIC.md:785 (L-27) states the point and quotes 03's label; it would need its clause 'though 03 labels it \"any type\"' removed after the edit (not edited)",
+    "theories/becoming/results/records/revision-with-an-undecided-value.json has no basis label (nothing to change)"
+   ],
+   "in_packet": "yes: '(any type; finitely many sentences closed' at review-packet-4 03-KNOWING.md:286"
+  },
+  {
+   "where": "theories/becoming/chapters/08-METHOD.md#known-results",
+   "flag": "The table names what prior frameworks state and the account does not yet, but nothing of chaos, Hopf bifurcation, hysteresis or rate-induced tipping.",
+   "verdict": "no",
+   "why": "The section says its verdicts come from an AI review whose search was not exhaustive, and the column lists, row by row, what the closest framework to each central result states; no row's closest framework is one of these, and silence tells a reader nothing false (the margin and the fold are credited to Clark 1976 and May 1977 under 'beyond the table'). Adding them is a coverage addition for later prior-art work, not a correction.",
+   "edits": [],
+   "also_stands": [
+    "0 lines with chaos, Hopf, hysteresis or rate-induced in chapters, fronts or review, as the flag says; review/ALIGNMENT.md:381 names tipping points (Schelling; Granovetter) in another sense"
+   ],
+   "in_packet": "no: 0 lines with chaos|hysteresis|hopf in review-packet-4 08-METHOD.md"
+  },
+  {
+   "where": "theories/becoming/chapters/08-METHOD.md#what-would-defeat-the-reading (line 622) and #theses (line 567)",
+   "flag": "'deriving many conclusions from few patterns of argument' is Kitcher's unification account and 'judged by what it forbids' Popper's; neither is credited on the live account.",
+   "verdict": "holds",
+   "why": "Explanation as deriving many conclusions from few argument patterns is the explanatory-unification account of Friedman (1974) and Kitcher (1981, 1989), widely established and already cited in the repository's UE plan (ue-unified-explanation/PLAN.md:128); content as what a theory prohibits is Popper's (Logik der Forschung, 1934), widely established. 'On the account taken here' signals an adopted account without naming it, so a reader takes the criteria as the account's own; AGENTS asks a field's frame be labelled as that field's.",
+   "edits": [
+    {
+     "path": "theories/becoming/chapters/08-METHOD.md",
+     "old": "A theory explains, on the account taken here, by deriving",
+     "new": "A theory explains, on the account taken here (explanatory unification: Friedman 1974; Kitcher 1981, 1989), by deriving",
+     "region": "08 §9, What would defeat it, An explanation against its strongest rival"
+    },
+    {
+     "path": "theories/becoming/chapters/08-METHOD.md",
+     "old": "A theory of the world is judged by what it forbids.",
+     "new": "A theory of the world is judged by what it forbids (Popper 1934).",
+     "region": "08 §9, Strength as content"
+    }
+   ],
+   "also_stands": [
+    "no other live restatement found by 'by what it forbids', 'few patterns' or 'patterns of argument' outside history/; history/THE-THEORY-OF-BECOMING.md:1246 is history (not edited)"
+   ],
+   "in_packet": "yes: 'deriving many conclusions from few patterns' at review-packet-4 08-METHOD.md:619; 'judged by what it forbids' at 08:564"
+  },
+  {
+   "where": "theories/becoming/chapters/08-METHOD.md#known-results (line 494, the significance row)",
+   "flag": "'Sen (1977)' has no title, and Sen has two 1977 papers; the widening record's is 'On Weights and Measures'.",
+   "verdict": "holds",
+   "why": "The prior-art review this table cites (BECOMING-SIGNIFICANCE-REVIEW.md:431) and the widening record (widening-as-what-every-positive-weighting-ranks.json:165) both mean Sen's intersection approach, 'On Weights and Measures' (Econometrica 1977), and the row folds in the order; a reader could take 'Rational Fools' (1977) as the closest prior result.",
+   "edits": [
+    {
+     "path": "theories/becoming/chapters/08-METHOD.md",
+     "old": "Parfit (1984); Sen (1977) |",
+     "new": "Parfit (1984); Sen's intersection approach (\"On Weights and Measures\", 1977) |",
+     "region": "08 §8 Known results table, Significance not in the dynamics row"
+    }
+   ],
+   "also_stands": [
+    "theories/becoming/results/records/widening-as-what-every-positive-weighting-ranks.json:165 already names the title (not edited)"
+   ],
+   "in_packet": "yes: 'Parfit (1984); Sen (1977)' at review-packet-4 08-METHOD.md:492"
+  },
+  {
+   "where": "theories/becoming/chapters/05-COLLECTIVES.md:215 (§7, several optimizers)",
+   "flag": "05 §7 uses 'mutual best response' without labelling it game theory's frame, while 08 writes 'that field's frame'.",
+   "verdict": "cosmetic",
+   "why": "The row locates the comparison in the comparer ('each optimizing alone by its own rising order', its existence 'not shown in general'), and §7 defines rising orders and optima before using them, so no reader takes 'best' as a property of what is compared. The missing field label is unevenness and changes no belief.",
+   "edits": [],
+   "also_stands": [
+    "theories/becoming/chapters/05-COLLECTIVES.md:197, 199, 427, 435 use best response the same way"
+   ],
+   "in_packet": "yes: 'At a mutual best response, each optimizing alone' at review-packet-4 05-COLLECTIVES.md:215"
+  }
+ ]
+}

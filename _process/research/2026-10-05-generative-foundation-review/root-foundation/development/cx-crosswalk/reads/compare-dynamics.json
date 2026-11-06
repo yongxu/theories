@@ -1,0 +1,221 @@
+{
+ "key": "dynamics: tipping, hysteresis, cycles and thresholds",
+ "read": [
+  "cx-crosswalk/COMPARE.md, BRIEF.md in full; reads/CRITIC.md H3, H4, H5 and the rest of its body",
+  "theories/becoming/chapters/02-MAP.md section 2 (r-attraction-is-not-returning to r-necessarily-drawn-is-not-returning), r-becoming-return-grades, r-margin-of-a-regime to the regime's table of cases (r-regime-point-under-adjusting-giving, r-where-a-run-of-a-regime-comes-to-rest, r-coupled-regimes, r-thresholds-beyond-a-band), section 8 (r-two-sided-regulation-and-late-reading, r-regulation-from-one-side-and-locally)",
+  "theories/becoming/chapters/03-KNOWING.md r-rooms-tested-by-a-window, r-slowing-down-before-an-own-end and T6",
+  "theories/becoming/chapters/05-COLLECTIVES.md r-giving-that-waits-on-giving, r-restoring-giving-from-the-worst-start, r-thresholds-of-waiting, r-tolerance-monotone-across-laws, the row r-re-optimizing-above-a-renewal-ends-it",
+  "statements and does_not_show of the records regime-point-under-adjusting-giving, rooms-tested-by-a-window, thresholds-of-waiting, two-sided-regulation-and-late-reading, where-a-run-of-a-regime-comes-to-rest, threshold-in-the-state-plane, shaping-read-by-readers-drawn-from-the-selected, slowing-down-before-an-own-end, becoming-return-grades",
+  "grep only, at the line: records two-sided-regulation-and-late-reading (held_oscillates), giving-that-waits-on-giving (withholding_returns), basins-of-a-determined-law, webs-with-a-recent-giving and dormancy-over-a-stretch (hysteresis); aa-attractor-atlas/PLAN.md:222 (family F)",
+  "digest.py --stage 4-repair: every cx-dpc-* entry; cx-ecoevo alternative-stable-states, recovery-beyond-removing-the-pressure, allee-effects, extinction-debt, extinction-debt-against-persistence, coextinction-and-cascades, msy-and-open-access, red-queen-relative-race; cx-syscyb delay-oscillation, holling-resilience-stability, holling-adaptive-cycle, holling-panarchy-cross-scale, senge-limits-to-growth, trap-escalation, senge-growth-underinvestment, senge-fixes-that-fail, trap-policy-resistance, ashby-self-organizing, eigenforms; cx-indaf-relational-tipping, cx-cc-congshan-rudeng, cx-cc-mengzi-yizhi-yiluan, cx-cc-zouyan-wude, cx-ma-not-fated, cx-ma-tempo, cx-ma-endings, cx-kpso-state-versus-landscape, cx-kpso-the-transition, cx-econ-schelling-critical-mass, cx-econ-ibn-khaldun-cycle, cx-abr-khaldun-three-generations, cx-greek-polybius-anacyclosis, cx-drives-attractor-geometry, cx-ctxrt-not-a-fixed-point-bet; group summaries and coverage of dynamics-physics-complexity, systems-cybernetics, ecology-evolution",
+  "a phrase search over all 28 4-repair files for no-law-of-cycles wording, hysteresis, tipping, too fast and critical rate, read at the hit"
+ ],
+ "clusters": [
+  {
+   "claim": "Hysteresis: distinct collapse and recovery thresholds, a band in a parameter run forward and back",
+   "ids": [
+    "cx-dpc-hysteresis",
+    "cx-ecoevo-alternative-stable-states",
+    "cx-cc-congshan-rudeng",
+    "cx-ma-not-fated",
+    "cx-syscyb-holling-resilience-stability"
+   ],
+   "verdict": "same",
+   "why": "All five say no live law states two thresholds of one path, and that 'hysteresis' stands only in two records' correspondence fields; labels differ because the claims differ: alternative stable states carries the two-state part, 从善如登 scopes return failing from within, not the band."
+  },
+  {
+   "claim": "The irreversible branch: below a need with nothing given from within, removing the pressure restores nothing",
+   "ids": [
+    "cx-ecoevo-recovery-beyond-removing-the-pressure",
+    "cx-dpc-hysteresis",
+    "cx-indaf-relational-tipping",
+    "cx-cc-congshan-rudeng"
+   ],
+   "verdict": "ruled",
+   "why": "recovery and relational-tipping cite never_returns_below and gated_stays_below as stated laws; dpc-hysteresis called the second this crosswalk's composition, though 05's re-optimizing row states it."
+  },
+  {
+   "claim": "Tipping by rate, or change too fast for correction",
+   "ids": [
+    "cx-dpc-rate-tipping",
+    "cx-ma-tempo",
+    "cx-kpso-state-versus-landscape",
+    "cx-indaf-relational-tipping"
+   ],
+   "verdict": "differ-real",
+   "why": "One live sentence, 05's D65 reading, names 'change too fast for correction' as a route; rate-tipping claims a critical rate of a regime, which no law gives (not-carried), ma-tempo claims the route and a conditional mismatch, of which D65 states the route; relational tipping's race of slow forming against harm has no law, only its no-return parts."
+  },
+  {
+   "claim": "General laws of return: a determinate system settles, on a cycle or a fixed point",
+   "ids": [
+    "cx-syscyb-ashby-self-organizing",
+    "cx-syscyb-eigenforms",
+    "cx-ctxrt-not-a-fixed-point-bet",
+    "cx-drives-attractor-geometry",
+    "cx-dpc-attractor",
+    "cx-dpc-chaos"
+   ],
+   "verdict": "ruled",
+   "why": "Each reads basins-of-a-determined-law with its list premise; eigenforms and the fixed-point bet call it scope on a universal 'settles', Ashby's 'goes to equilibrium' the same law and the same correction, yet agreement of law under fresh-reading."
+  },
+  {
+   "claim": "When a regime cycles and with what period: absent, while laws of return stand",
+   "ids": [
+    "cx-syscyb-holling-adaptive-cycle",
+    "cx-syscyb-delay-oscillation",
+    "cx-dpc-hopf-cycles",
+    "cx-dpc-circuit-rules",
+    "cx-dpc-monotone-systems",
+    "cx-dpc-continuum",
+    "cx-cc-mengzi-yizhi-yiluan",
+    "cx-abr-khaldun-three-generations",
+    "cx-econ-ibn-khaldun-cycle"
+   ],
+   "verdict": "ruled",
+   "why": "No entry says the account has no law of return; mengzi, hopf and khaldun keep exactly 'no law of when a regime cycles or with what period'; adaptive-cycle repeats plan 4.1's false 'witnesses, with no law of when or with what period', and delay-oscillation's 'the cycles present are witnesses' drops held_oscillates and withholding_returns."
+  },
+  {
+   "claim": "A corrective loop with delay overshoots and oscillates",
+   "ids": [
+    "cx-syscyb-delay-oscillation",
+    "cx-dpc-hopf-cycles",
+    "cx-greek-aristotle-mean",
+    "cx-syscyb-trap-policy-resistance"
+   ],
+   "verdict": "ruled",
+   "why": "Same law (relay_threshold, held_oscillates); a late relay settles from every held start exactly where a + (l + 1)M <= b + 1, so lag alone does not oscillate: delay-oscillation's universal sense is scoped, as aristotle-mean and policy-resistance are; hopf's divergence is on Hopf's smooth birth, a different claim."
+  },
+  {
+   "claim": "Cycles of political regimes",
+   "ids": [
+    "cx-abr-khaldun-three-generations",
+    "cx-econ-ibn-khaldun-cycle",
+    "cx-greek-polybius-anacyclosis",
+    "cx-cc-mengzi-yizhi-yiluan",
+    "cx-cc-zouyan-wude"
+   ],
+   "verdict": "differ-real",
+   "why": "None claims a law of the cycle; Ibn Khaldun's mechanism (decay under ease) has no form, so not-carried in both rows with same_as; Polybius's 'bear it no longer' and Mengzi's bounded return have conditional forms (scope); Zou Yan's fixed ring warranting law is a divergence on what a law is."
+  },
+  {
+   "claim": "A fold or threshold between two fates, bistability, Allee thresholds",
+   "ids": [
+    "cx-dpc-fold",
+    "cx-dpc-bistability",
+    "cx-ecoevo-alternative-stable-states",
+    "cx-ecoevo-allee-effects",
+    "cx-syscyb-holling-resilience-stability"
+   ],
+   "verdict": "same",
+   "why": "agreement of law with margin-of-a-regime and threshold-in-the-state-plane where 08 or the records credit the field (Clark, May, Hirsch and Smith); resilience is a reader's join on the same targets, fresh-reading/scope, consistent."
+  },
+  {
+   "claim": "Threshold contagion and critical mass on a given graph or in shares",
+   "ids": [
+    "cx-dpc-threshold-contagion",
+    "cx-econ-schelling-critical-mass",
+    "cx-kpso-the-transition"
+   ],
+   "verdict": "same",
+   "why": "Both field entries carry critical_mass_iff, whose record credits Schelling and Granovetter; the kpso transition is agreement of reading, its join to leaving a race the reader's, which is the real difference."
+  },
+  {
+   "claim": "Critical slowing down and how far warnings reach",
+   "ids": [
+    "cx-dpc-critical-slowing",
+    "cx-dpc-warning-reach"
+   ],
+   "verdict": "same",
+   "why": "The linear periphery law has the field's form (agreement of law); the general warning claim is scoped by T6, as the later literature scopes it."
+  },
+  {
+   "claim": "Cascades along total dependence",
+   "ids": [
+    "cx-dpc-dependence-cascades",
+    "cx-ecoevo-coextinction-and-cascades",
+    "cx-syscyb-holling-panarchy-cross-scale"
+   ],
+   "verdict": "same",
+   "why": "coupled-webs carries both field entries as agreement of law with the records' food-web credits; panarchy's revolt is scoped by direction of dependence, a reader's join, fresh-reading."
+  },
+  {
+   "claim": "Noise tips a lock",
+   "ids": [
+    "cx-dpc-noise-tipping",
+    "cx-ma-not-fated"
+   ],
+   "verdict": "differ-real",
+   "why": "Same law (drift leaves either lock), different claims: the field's escape law, of which the account states the leaving and a geometric bound, against a universal 'not fated', which the conditional locks scope."
+  },
+  {
+   "claim": "Overshoot and limits to growth",
+   "ids": [
+    "cx-syscyb-senge-limits-to-growth",
+    "cx-syscyb-trap-tragedy-missing-feedback",
+    "cx-ecoevo-msy-and-open-access"
+   ],
+   "verdict": "same",
+   "why": "Joint excess restates overshoot near-definitionally, and the universal claims are scope; MSY and open access are agreement of law because the optimum records credit Schaefer, Gordon and Clark at zero cost, a real difference of source."
+  },
+  {
+   "claim": "Extinction debt",
+   "ids": [
+    "cx-ecoevo-extinction-debt",
+    "cx-ecoevo-extinction-debt-against-persistence"
+   ],
+   "verdict": "same",
+   "why": "Both say no live text names it; one proposes the form, the other the tension with T1's certificate, both fresh-reading."
+  }
+ ],
+ "rulings": [
+  {
+   "id": "cx-syscyb-holling-adaptive-cycle",
+   "set": {
+    "reading": {
+     "en": "No law gives an ordered sequence of phases. Laws of return stand: within finitely many listed configurations every course enters what returns, each basin holding one cycle; a withholding round a loop of p waits returns at every multiple of p; a late relay held below its band crosses it without end past an exact bound. No law gives when a regime cycles or with what period: the regime's cycles are witnesses. 02 lists no universal phase threshold between regions; 05 keeps four routes of transition distinct, none a proved phase transition. Nothing frees stored potential or trades connectedness against resilience. [AI reading]"
+    }
+   },
+   "why": "Its 'cycles are witnesses, with no law of when or with what period' copies plan 4.1's line, which is false: Law.basin_one_cycle, Withholding.withholding_returns and Regulation.held_oscillates stand; only a regime's onset and period are absent (02's where-a-run row, mengzi's entry). Label unchanged."
+  },
+  {
+   "id": "cx-syscyb-delay-oscillation",
+   "set": {
+    "relation": "scope",
+    "agreement_of": null,
+    "reading": {
+     "en": "The regulation laws give where the claim holds, in discrete whole amounts: overshoot exactly past the gap; a band a late-reading rule cannot beat, proportional to its lag; a relay reading l steps late settles in its band from every held start exactly where a + (l + 1)M <= b + 1, and past b + 2 <= a + (l + 1)M the start held below crosses both ends without end. So lag alone does not make a corrective loop oscillate; gain against band does. A rule read a step late against its reading alternates, a witness. 08 marks regulation as restating deadbeat control. [AI reading]"
+    },
+    "source_adds": {
+     "en": "Amplification along a supply chain, the period and amplitude of cycles, and structure as the source of behaviour across social systems. No law gives when a regime cycles or with what period (the plan's CY(a)): its cycles are witnesses (Alternation, Relay.cycles). For the late relay the onset of crossing is exact (held_oscillates); its period and amplitude are not stated."
+    }
+   },
+   "why": "The sense states oscillation as what a lagging corrective loop does; Regulation.relay_threshold conditions it exactly, so scope, as cx-greek-aristotle-mean and cx-syscyb-trap-policy-resistance have the same law; 'the cycles present are witnesses' dropped held_oscillates. The item's summary lists 'delayed correction' as agreement and needs updating."
+  },
+  {
+   "id": "cx-syscyb-ashby-self-organizing",
+   "set": {
+    "relation": "scope",
+    "agreement_of": null,
+    "reading": {
+     "en": "The basin law conditions the first half: within finitely many listed configurations every course enters what returns and each basin holds one cycle, an equilibrium being only its shortest case, with no selector; where no list holds the configurations a course can be drawn and never return (counting on draws 0 and merges nothing). So 'goes to equilibrium' holds within a list, and to a cycle. The second half meets 02's refusal to rank regions and 05's reading that attraction is not continuation. Parts adapted to the rest as organisms go past these laws. [AI reading]"
+    }
+   },
+   "why": "Ashby states it of any determinate system; Law.basin_one_cycle holds within m listed configurations and gives a cycle, and 02 separates an open world. cx-syscyb-eigenforms reads the same law onto 'settles, whatever the start' as scope; fresh-reading with agreement of law was also contradictory by BRIEF. The item's summary lists 'Ashby's recursion into basins' as agreement and needs updating."
+  },
+  {
+   "id": "cx-dpc-hysteresis",
+   "set": {
+    "account_adds": {
+     "en": "Not the loop: the one-sided case, each with a witness. Below a need with no raising exchange a level does not return (Flow.never_returns_below); where nothing is given below the need, a level below it stays below whatever is drawn, so a later re-reading restores nothing (05, Optimum.gated_stays_below). That branch has no recovery threshold at all: the account's irreversible limit, not a band. An end absorbs while requirements do not loosen; a dissolved requirement is transformation, not recovery. Restoration by joint net giving is a law of every balanced flow."
+    }
+   },
+   "why": "It called the gated branch 'this crosswalk's composition', but 05's row r-re-optimizing-above-a-renewal-ends-it states it, as cx-indaf-relational-tipping and cx-ecoevo-recovery-beyond-removing-the-pressure cite it; not-carried and the reading stand."
+  }
+ ],
+ "live_flags": [
+  {
+   "where": "theories/becoming/results/records/dormancy-over-a-stretch.md:49",
+   "what": "The correspondence 'hysteresis of collapse' names an ending made final by premise, with no recovery threshold; no live law states hysteresis's two thresholds of one path, so a reader may take hysteresis as carried. The same caution for webs-with-a-recent-giving.md:55, 'history-dependent response is hysteresis (Mayergoyz 2003)', which names memory in giving."
+  }
+ ]
+}

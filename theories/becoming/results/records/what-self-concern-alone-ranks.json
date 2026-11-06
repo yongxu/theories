@@ -105,8 +105,8 @@
     "zh": "分级的次序（立场自身延续的权重多少），以裁定终结附近的比较；部分成员独立于该族时的合并定理；独立审查。"
   },
   "correspondence": {
-    "en": "Monotonicity in the opportunity-set literature, relocated to one's own continuation. Jonas (1979): the existence of the whole is never to be staked; here a condition everyone needs, with no second copy, has its ending ranked below by every standpoint's self-concern, with no impartial premise. Ergodicity (Peters 2019) and systemic ruin (Taleb and others 2014): with one copy there is no average over copies; not formalized here. Reading (the AI's, D64): an order increasing in its own continuation is the monotonicity of a self-concerned standpoint.",
-    "zh": "机会集文献中的单调性，移到自身的延续上。Jonas（1979）：整体的存在绝不可作赌注；此处一个人人所需、无第二副本的条件，其终结由每个立场的自我关切排在下面，不用任何公正的前提。遍历性（Peters 2019）与系统性毁灭（Taleb 等 2014）：只有一个副本时，没有跨副本的平均；此处未形式化。解读（AI 的，D64）：在自身延续上递增的次序，是有自我关切之立场的单调性。"
+    "en": "Monotonicity in the opportunity-set literature, relocated to one's own continuation. Jonas (1979): the existence of humanity as a whole is never to be staked; here a condition everyone needs, with no second copy, has its ending ranked below by every standpoint's self-concern, with no impartial premise. Ergodicity (Peters 2019) and systemic ruin (Taleb and others 2014): with one copy there is no average over copies; not formalized here. Reading (the AI's, D64): an order increasing in its own continuation is the monotonicity of a self-concerned standpoint.",
+    "zh": "机会集文献中的单调性，移到自身的延续上。Jonas（1979）：人类作为整体的存在绝不可作赌注；此处一个人人所需、无第二副本的条件，其终结由每个立场的自我关切排在下面，不用任何公正的前提。遍历性（Peters 2019）与系统性毁灭（Taleb 等 2014）：只有一个副本时，没有跨副本的平均；此处未形式化。解读（AI 的，D64）：在自身延续上递增的次序，是有自我关切之立场的单调性。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
   "aliases": [
@@ -335,6 +335,10 @@
     {
       "en": "23 October 2026: extended (IV3b): the ranking of the ending joined with coupled ending in one theorem, replacing the joining by argument; groups-whose-conditions-are-coupled moved from related to a formal-reuse dependency; study section 378.",
       "zh": "2026年10月23日：扩展（IV3b）：终结的排序与耦合的终结合为一个定理，取代以论证连接；groups-whose-conditions-are-coupled 由相关移为形式复用的依赖；研究第 378 节。"
+    },
+    {
+      "en": "7 November 2026, CX: the correspondence corrected where a reader of the crosswalk found it wider than its source or its home (the crosswalk's live flags, checked at home); no law, premise or scope of this record changed.",
+      "zh": "2026年11月7日，CX：交叉对照之读者发现对应说得比其来源或本处更宽，于本处查实后更正；本记录之律、前提与范围均未变。"
     }
   ]
 }

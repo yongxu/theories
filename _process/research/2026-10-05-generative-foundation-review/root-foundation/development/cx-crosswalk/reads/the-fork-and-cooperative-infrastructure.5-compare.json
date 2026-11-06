@@ -1,0 +1,2478 @@
+{
+ "group": {
+  "id": "the-fork-and-cooperative-infrastructure",
+  "domain": "earlier-folders",
+  "title": {
+   "en": "Cooperative abundance and freely built worlds (historical home: The Fork)"
+  },
+  "kind": "design",
+  "summary": {
+   "en": "A constructive programme: productive recursion, shared provision, freedom from livelihood coercion, voluntary creation, with the 2026 fork (automated feudalism or commons) kept in its history and rejected by Ren because the futures are far more numerous. The live account never names the fork or its rejection, and links the folder once, as a design programme, correspondence not established. It has no abundance layer or provision and no ownership variable, and many connections here are proposed by this crosswalk, not stated there; what it states in part are general lines, such as a limit going by what it does, not its name. No agreement here is of a law. Divergences kept: two fates, the only stable equilibrium, the winner's loss, captured dependence as the problem, one forced rule, generative as a criterion, a layer held by no one. One hinge, commons or collar and the floor are not taken up."
+  },
+  "read": [
+   "theories/the-fork-and-cooperative-infrastructure/README.md: in full",
+   "theories/becoming/COLLECTIVE-DIRECTION.md: in full",
+   "theories/becoming/chapters/05-COLLECTIVES.md: §3 and §10 to §12, What this chapter does not show, Open, the readings of §5; long laws cut at length",
+   "theories/becoming/chapters/07-SIGNIFICANCE.md: §3.3 from route (b) to its last reading, §5 and §6 (long passages cut at length), T4, T5 and the start of T8, What this chapter does not show",
+   "theories/becoming/chapters/02-MAP.md: §9's readings and T7 (long passages cut), the table of the two grains",
+   "theories/becoming/chapters/06-CLASSICAL-TEXTS.md: §十 in full, and the reading on 德与无为 in §九",
+   "theories/becoming/ONE-PAGE.md: to the evidence paragraph, long lines cut",
+   "For this file's labels: 02 Which locks noise leaves and the D45 reading on counted choices; COLLECTIVE-DIRECTION §3 and §8; 05 r-coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it, opening; 06 §十's opening; 07 D45 on pooling and the opening of r-alignment-direction-under-widening; the hypotheses and does_not_show of five argued or conditional records"
+  ],
+  "skimmed": [
+   "theories/the-fork-and-cooperative-infrastructure/history/2026-09-07-before-productive-foundation.md: headings and opening paragraphs; history/README.md",
+   "theories/becoming/chapters/04-LIFE.md: the coupled groups row and the stock that buys time; 03-KNOWING.md: seeking boundary and the boundary of enough; 01-ROOT.md: Not assumed; 08-METHOD.md: Law and The work read by its own laws; 07 §7's direction and its reading; 07's route table for what would give C",
+   "results/records JSON, hypotheses and does_not_show, first part: formed-software-continuation, becoming-dependence-dynamics, represented-boundary-against-dependence, dependence-formed-from-drawing, exit-from-a-margin, generation-and-degeneration-at-two-grains, what-would-give-c",
+   "reads/keep-the-possibility-space-open.3-check.json: the overlapping entries, as a lead; each was checked against the live text before use. theories/becoming/results/data/theory-map.json and history/THEORY-MAP-2026-10-08.md lines for this folder: a dated lead, not evidence",
+   "reads/keep-the-possibility-space-open.4-repair.json and the rulings' sibling entries, for like verdicts; each verdict here rests on the reading in this file"
+  ],
+  "searched": [
+   "live account for: the-fork, the fork, cooperative infrastructure (one hit, the link in 05 §11; none in the records); two futures, two fates, two outcomes, two-outcome, binary, false binary, possibility space, possible future (no statement on futures); feudal, 封建, 项圈, 二选一, 两种命运 (none); inevitab (01 and 08 list inevitable improvement as not assumed)",
+   "live account by mechanism and in Chinese: 丰裕, 公地, 公器, 天下为公, 大同, 垄断, 依附, 奴役, 结社, 退出, 乐土, 利出一孔 (06 only: 垄断 at the row on limits, 利出一孔 at two lines; the rest give no line on provision or exit)",
+   "live account for: trust as a word (no file); common knowledge (no file); shared understanding, come to share (08 and the shared-code lines of FREE-ENERGY-PRINCIPLE); reinvest, autocatal, self-reproduc, self-maint, doubling source, compound, autopoie; variety, plural, portfolio, bet-hedg, redundan; hirschman, tiebout, assurance contract, conditional commitment, schism, secession; automated and automation as words (no file; automat in 01, 03, 08, LOGIC is automaton or automatic); robot (05 §7, ALIGNMENT); labour, labor, wage, wages, employment as words (no file); Meadows, leverage point, paradigm; good enough, tree",
+   "the reviser's searches, not repeated: self-repl, factory, abundan, necessit, free association, voluntar, opt out, worth joining, network effect, welfare, housing, arms race, AI race, singleton, totaliz, superhuman, enforc, disempower, multipolar, takeover, basic income, surveillance, Ostrom, public good, unilateral",
+   "record-index.tsv: exit, leave, fork, libreoffice, dependen, giver, supplier, provider, single, alternative",
+   "sources/06-zhishan/whitepaper/drafts/v0.2.md for the marks of capture (lines 90, 92, 122 read)",
+   "live account for: hinge, capturable (no file); collar (no file); provision, floor, compet by line"
+  ],
+  "not_mapped": [
+   {
+    "en": "Claims 20, 23, 24, 25, 26, 46: small-team leverage, the no-monetization rule, walled gardens, diffusion through those who can understand, locally run models, the engineering instantiation (plugins, self-hosting, Kinds)",
+    "why": "Design directions and practice at a small size, with no counterpart mechanism in the account."
+   },
+   {
+    "en": "Claim 18, pointing automation at commons (free groceries, robot-maintained housing, regenerative gardens, 'not that far from us'); claim 22's three layers; the 2026 scenario images; Bonfire as a named position; the recruitment letter",
+    "why": "Design and movement provenance. Exit and the floor are mapped through their mechanisms; the layer decomposition and the images are designs."
+   },
+   {
+    "en": "Claim 49, pooling compute by global coordination for everyone on earth, with open question 16",
+    "why": "The account's pool is a group selecting through its members' couplings, not pooled computing. Same word, no shared mechanism, so no entry."
+   },
+   {
+    "en": "The 2021 Metamunity proposal (the city as a production machine, atomisation, the walkable nearby, candidate sites)",
+    "why": "Genealogy of a design. Its structural move, fault in the environment and not in the people, is the move of 'not villains' in the dark-path entry."
+   },
+   {
+    "en": "Cosmic cancer as the image of the danger space, and the two terminal paths of the meta-attractor relation",
+    "why": "An image the folder takes from other folders, which carry it. The account's 'malignant formation' is one focal formation overdrawing in a two-part family; nothing there states the image's reference, and the glossary keeps meta-attractor to closed capture."
+   },
+   {
+    "en": "Open questions 12, 13, 14, 17, 18 (verification of non-capture, the threshold where a parallel layer attacks the old system, the thin distribution theory, what a demonstration must show, Alex's deliverables), and the 2026-06 corrections on hierarchy and status",
+    "why": "Critiques and tasks internal to the programme. They would change if the programme were taken up; the account does not take them up."
+   },
+   {
+    "en": "The whitepaper's coordinated-turn programme item by item (registry, third-party verification, pause protocols, latecomer capability)",
+    "why": "Institutional design, mapped only through the assurance entry's mechanism."
+   },
+   {
+    "en": "The sections In Ren's own words, Relations and Where this material lives",
+    "why": "Provenance and navigation. Quotes from them are used as sources in entries; the relations are the folder's own claims about other folders and, except the line on becoming, were not checked here."
+   }
+  ],
+  "coverage": null
+ },
+ "entries": [
+  {
+   "id": "cx-fork-two-fates",
+   "name": {
+    "en": "The fork: same technology, two fates"
+   },
+   "domain": "earlier-folders",
+   "group": "the-fork-and-cooperative-infrastructure",
+   "source": {
+    "work": "theories/the-fork-and-cooperative-infrastructure/README.md",
+    "locator": "Header; Claim 11; The binary is false; Open question 8; Genealogy, 2026-02-07/09, 2026-03-19, 2026-04-16",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "With self-reproducing automation, one technology leads to one of two fates: Automated Feudalism (abundance gated by ownership and platform power) or Automated Commons (universal floors, broad agency); institutional design decides. A projection organized with AI, which Ren pasted and endorsed on 2026-02-09. The folder's header says he later rejected the two-outcome framing because the possible futures are much more numerous, and it records the name retired twice."
+   },
+   "quote": "same technology, two fates",
+   "carried": "fresh-reading",
+   "relation": "divergence",
+   "reading": {
+    "en": "Proposed here. The account never names the fork or its rejection, and the folder's own reason, a space wider than two, is not restated live. Read against the frame: evaluation enters only through comparison, never a type's definition (said of the early texts' closings, not of the fork); laws count situations without saying which holds; no market law ranks arrangements; a degenerate region can appear without every history entering it. Its two-sided form belongs to a two-kind count model. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#closing-and-opening",
+     "says": {
+      "en": "The early texts wrote evaluation into their definitions; here only structure is mapped, and whether a kind of closing supports, enriches or damages 生生 is said by comparison, not by type [AI reading, D49]. Stability and a frozen source of law are one structure read from two sides: the judgment differs, the structure is the same, which is why evaluation enters only through comparison, never through definition."
+     },
+     "role": "carries",
+     "part": "D49 and the sentence on one structure read from two sides"
+    },
+    {
+     "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#5-what-is-empirical",
+     "says": {
+      "en": "Which situation is actual. The laws count situations; they do not say which holds. Whether a real collective meets a law's hypotheses is observed correspondence. No institution is modelled on the spine; no field test of reform events is frozen; no test has human participants."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#markets",
+     "says": {
+      "en": "No universal phase threshold is claimed, and no market law ranks arrangements. Reading [AI reading, D65; of the periphery market model's boundary and attraction results]: a negative margin says a degenerate region can appear, not that every history enters it."
+     },
+     "role": "carries",
+     "part": "D65, no market law ranks arrangements"
+    },
+    {
+     "record": "shaping-read-by-readers-drawn-from-the-selected",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-shaping-read-by-readers-drawn-from-the-selected",
+     "says": {
+      "en": "Theorem (counts). With lo ≤ hi, under every schedule of reading, from a start under the rule read there, every such course is locked one way at every step. Readers drawn from those the rule selects and offspring carrying the capacity are premises; the readings and cost are constants; the courses are without noise."
+     },
+     "role": "neighbour"
+    },
+    {
+     "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions",
+     "says": {
+      "en": "Every capture law here is a two-kind count model, its locks stated without noise. Drawn one member at a time, the critical mass's locks are left by drift."
+     },
+     "role": "neighbour"
+    },
+    {
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#joint-plans",
+     "says": {
+      "en": "Applications elsewhere (design programmes, not results; correspondence not established): the list names cooperative infrastructure, linking this folder. This is the live account's one mention of it."
+     },
+     "role": "limit"
+    }
+   ],
+   "account_adds": {
+    "en": "Where a two-sided form holds exactly, and that drawn one member at a time either lock is left by drift, at a weight whose bound shrinks across the distance from the critical mass. Neither side is called better: that needs C for order and the continuation condition for scope, neither asserted, warrant open."
+   },
+   "source_adds": {
+    "en": "The two named scenarios, institutional design as the deciding variable, and the reason for retiring them: the space runs far wider than two, and automated feudalism is nearly the optimistic branch. That reason stands in this folder and in sources/13-claude-memories (the 2026-05-28 correction). 'Retaining multiple possible futures' stands only in the dated theory map (results/data/theory-map.json, history/THEORY-MAP-2026-10-08.md)."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": null
+  },
+  {
+   "id": "cx-fork-one-hinge",
+   "name": {
+    "en": "What survives the retirement: one hinge, whether the abundance layer is capturable"
+   },
+   "domain": "earlier-folders",
+   "group": "the-fork-and-cooperative-infrastructure",
+   "source": {
+    "work": "theories/the-fork-and-cooperative-infrastructure/README.md",
+    "locator": "The binary is false, last sentences; Terms, The Fork; In Ren's own words, 2026-04-16",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "After the retirement the folder rereads the Fork as no longer two futures but one hinge: whether the abundance layer ends up capturable, everything downstream being many. The sentence is the folder's reading; Ren's own 2026-04-16 turn says he has moved on from the fork narrative and does not hold doom or feudalism as a terminal outcome."
+   },
+   "quote": "names not two futures but one *hinge*",
+   "carried": "not-carried",
+   "relation": null,
+   "reading": {
+    "en": "Not stated: the account has no abundance layer and no one decisive question. Proposed here as neighbours, none said of this: a model's critical mass where a share decides the direction, left by drift; capture kept apart from real loss, which can come with no capture loop; attraction is not continuation; a kept rule can be the wrong rule; locks left by readings in time, by drift or by changed law; passage between regions in both directions (readings, D65). [AI reading]"
+   },
+   "targets": [],
+   "account_adds": null,
+   "source_adds": {
+    "en": "Capturability as the one question that decides, and the many as what lies downstream of it. It stands in this folder, beside its sentence on commons or collar."
+   },
+   "absence": {
+    "searched": [
+     "hinge, capturable across the fronts, chapters, review and GLOSSARY: no file (this read)",
+     "collar, 项圈, 二选一, 两种命运, two fates, two futures: none on futures or on such a layer (collar this read; the rest the earlier reads', in group.searched)",
+     "abundan, 丰裕, 公地: no provision layer in the hit lines (the earlier reads')"
+    ],
+    "read": [
+     "02 #capture, the D65 reading on three boundaries (the check read's)",
+     "05 #markets, the D65 reading on attraction (the check read's)",
+     "COLLECTIVE-DIRECTION §2 (the check read's)",
+     "05 r-a-rule-rebuilt-from-the-members-it-limits (the check read's)"
+    ]
+   },
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": null
+  },
+  {
+   "id": "cx-fork-many-outcomes",
+   "name": {
+    "en": "Many outcomes: the technology does not select, and the destination is plural"
+   },
+   "domain": "earlier-folders",
+   "group": "the-fork-and-cooperative-infrastructure",
+   "source": {
+    "work": "theories/the-fork-and-cooperative-infrastructure/README.md",
+    "locator": "Claims 3 and 45; The binary is false; Genealogy, 2024-04 and 2026-03-19; In Ren's own words, 2026-06-03",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "In 2024 the same automation could give a UBI world, Hayek's free issuance, an egalitarian society or 1984, and the technology does not select. In 2026 Ren restores this against the binary: the space runs from total annihilation to worlds of wonder, the future is almost unpredictable, nothing happens unless built, and the destination is plural by design, with invariants instead of a blueprint."
+   },
+   "quote": "the actual possibility space that we can pursuit is huge",
+   "carried": "fresh-reading",
+   "relation": "agreement",
+   "reading": {
+    "en": "Proposed here; there is no live statement on futures. 'The technology does not select' has one bare form: where situations differ, a move alone does not fix the outcome; technology is not modelled. Plural ends stand only as a conjecture, five of them, not futures to pursue. 'Invariants rather than a blueprint' is near the reading of conditions on revising rules, not a final state. The wish for plurality has its nearest order in C, admitting all another admits and more ranks higher, with the continuation condition for scope, neither asserted, warrant open, silent where one gain ends another. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "the-move-alone-underdetermines",
+     "anchor": "theories/becoming/chapters/01-ROOT.md#r-the-move-alone-underdetermines",
+     "says": {
+      "en": "Theorem (any type; natural weights of situations). Where a step by a move has situations reaching two configurations, no law giving the next configuration from the configuration and the move alone is right on both. It does not show which situation obtains, or that any actual move has two."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#open",
+     "says": {
+      "en": "[Conjecture, from an earlier account; not formalized.] The ends a selection for position can reach: a frozen mutual destruction, a deadlocked structure of power, the parts coming to read themselves as one whole, collapse, and winner takes all; which of them the laws of position, capture and joint excess admit, and under which hypotheses."
+     },
+     "role": "neighbour"
+    },
+    {
+     "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#7-keeping-the-future-open",
+     "says": {
+      "en": "Reading [AI reading, D45]. A fixed rule, institution, constitution or AI policy whose moves a course makes from some step on does not keep the possible under it widening; its changing without end is not enough either. Openness is a property of how rules keep changing, not of any rule chosen once. Nothing says which changes keep it widening."
+     },
+     "role": "neighbour",
+     "part": "D45"
+    },
+    {
+     "record": "widening-as-what-every-positive-weighting-ranks",
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-widening-as-what-every-positive-weighting-ranks",
+     "says": {
+      "en": "Theorem (any type; finite listing, two-valued admission), as read on the collective page: one course widens another exactly when every weighting positive on the listed items weighs it higher; a mixed comparison is decided both ways. Calling the wider better is C's, whose losses count the continuation condition's, neither asserted, warrant open."
+     },
+     "role": "neighbour"
+    },
+    {
+     "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#3-what-the-theorys-own-laws-rule-out",
+     "says": {
+      "en": "Each law is a theorem on its stated model. Together they rule out a guarantee from the theory, however much is observed: among them, a reading fixed by the first h steps cannot certify renewal, and eventual widening is neither verifiable nor refutable. Whether an actual collective meets their hypotheses is empirical."
+     },
+     "role": "limit"
+    },
+    {
+     "anchor": "theories/becoming/chapters/01-ROOT.md",
+     "says": {
+      "en": "Not assumed: that becoming is good; inevitable improvement or universal growth; a fixed common utility; independent owners of value; that every change is generation."
+     },
+     "role": "limit"
+    }
+   ],
+   "account_adds": {
+    "en": "Which of the conjectured ends the laws admit is asked, under hypotheses, and open. A limit on knowing the future stated law by law, in place of 'almost unpredictable'."
+   },
+   "source_adds": {
+    "en": "That the space of futures is huge and the technology does not select among them: the range from annihilation to worlds of wonder, the plural destination as a design with named images, its reason in accelerating complexity, and plurality wanted without the two premises."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": "reading",
+   "same_as": null
+  },
+  {
+   "id": "cx-fork-dark-path-default",
+   "name": {
+    "en": "The dark branch is the default"
+   },
+   "domain": "earlier-folders",
+   "group": "the-fork-and-cooperative-infrastructure",
+   "source": {
+    "work": "theories/the-fork-and-cooperative-infrastructure/README.md",
+    "locator": "Claims 7 and 12; Keeping shared capacity available, first paragraph",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "On the present trajectory the dark branch is the default, not a risk case and not a story about villains: capital-intensive systems reward scale, scale rewards incumbents, incumbents shape the rules. A prediction about the actual economy, with Ren's own one-line gloss."
+   },
+   "quote": "I think right now we're on the dark path by default",
+   "carried": "carried-in-part",
+   "relation": "scope",
+   "reading": {
+    "en": "'Incumbents shape the rules' has an exact form, selected at a step exactly where what comes back to the shapers alone covers its cost. That is conditional, so no default follows, and the account makes no prediction of the present: whether actual rules read the share is the premise. 'Not villains' fits, since no law here reads intent. 'Dark' is an evaluation, asked only under the continuation condition for scope and C for order, neither asserted. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "shaping-the-rule-selected-by-what-comes-back",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-shaping-the-rule-selected-by-what-comes-back",
+     "says": {
+      "en": "Theorem (counts). At a step the rule favours the shapers (weakly) exactly where c ≤ s, whatever p comes to every member alike; with nothing coming back and a cost, their share falls at every step. Offspring carrying the capacity is a premise."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "capture-through-the-rule",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-capture-through-the-rule",
+     "says": {
+      "en": "Theorem (any type). Selection not lowering a target's share under a favouring rule, the rule read monotone in the share, and the start's rule and every rule read favouring: the course is locked from the step after its first reading step. That actual rules read the share is the premise."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#markets",
+     "says": {
+      "en": "Reading [AI reading, D65; of the periphery market model]. A negative margin says a degenerate region can appear, not that every history enters it. Where winners write the next round's rule the loop is capture through the rule; no universal phase threshold is claimed."
+     },
+     "role": "carries",
+     "part": "D65, winners writing the next round"
+    },
+    {
+     "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#5-what-is-empirical",
+     "says": {
+      "en": "Whether actual rules read the share they select, and whether their readers are drawn from the selected, is empirical; the capture laws rest on it. Its one test, LA2, found one LLM judge not such a pool of readers."
+     },
+     "role": "limit"
+    },
+    {
+     "anchor": "theories/becoming/chapters/02-MAP.md#capture",
+     "says": {
+      "en": "Reading [AI reading, D65], on the corpus's working definition of the meta-attractor: calibration to the present world is not established."
+     },
+     "role": "limit",
+     "part": "D65, calibration"
+    }
+   ],
+   "account_adds": {
+    "en": "The lever's sign, a critical mass, and that a shared part coming to every member alike does not change the direction at a step."
+   },
+   "source_adds": {
+    "en": "The default itself, a prediction about actual capital and robotics companies; that labour's leverage evaporates once labour is optional; that redistribution after the fact cannot repair an asymmetry built into plant; scale rewarding incumbents."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": null
+  },
+  {
+   "id": "cx-fork-even-the-winner-loses",
+   "name": {
+    "en": "Even the winner loses"
+   },
+   "domain": "earlier-folders",
+   "group": "the-fork-and-cooperative-infrastructure",
+   "source": {
+    "work": "theories/the-fork-and-cooperative-infrastructure/README.md",
+    "locator": "Claim 16; Keeping shared capacity available, second paragraph",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "A rivalrous dynamic among agents holding superhuman capability has no stable end state, including for the winner: under arms-race conditions the game becomes AI-driven once AI exceeds human intelligence, so no human holds the final say. Stated conditionally, in speech and in Chinese, in 2026. The folder notes the diagnostic engine is borrowed from the meta-attractor line."
+   },
+   "quote": "Even the winner loses",
+   "carried": "changed",
+   "relation": "divergence",
+   "reading": {
+    "en": "The account takes up the winner's fate by another mechanism. 'Above all others' cannot rest for two seekers, a law of targets that leaves a sole winner open. A race ends those ahead only through what they depend on: with the gate every greatest part depending on the condition ends, and in the clearing witness a greatest part not depending on what it draws down continues. The source's own mechanism, AI taking over the game, is not modelled, so nothing here limits that claim. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "relative-position-is-zero-sum",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-relative-position-is-zero-sum",
+     "says": {
+      "en": "Theorem (World for the race: balance, activity needing support, only active giving, the gate local). Position does not protect; after n steps of joint excess, with the gate, every greatest part depending on the condition at a need of at least m is inactive. In the clearing witness a greatest part not depending on what it draws down continues. That a race produces joint excess is a premise."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "seeking-boundary",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-seeking-boundary",
+     "says": {
+      "en": "Theorem (any type; a determined law for rest). 'Above all others' is met by at most one seeker, so no unchanged state meets it for two. How a target forms, and which targets actual formations hold, is not derived."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "a-race-for-position-draws-everything",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-race-for-position-draws-everything",
+     "says": {
+      "en": "Theorem (any law G, natural amounts). Among two drawers or more in turn with no floor, every profile perfect for position draws everything before the horizon, under its hypothesis on what stands next. It does not show that actual races are so played, or that drawing everything is wrong."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "The witness in which the winner continues, kept as a remark beside the source's mechanism. What that part ends has significance only under a significance; the continuation condition is one counting it, not asserted."
+   },
+   "source_adds": {
+    "en": "That AI comes to dominate any such game once it outruns human intelligence, and that humans then lose the final say. The account states neither."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": [
+    "cx-wamo-no-stable-victory"
+   ]
+  },
+  {
+   "id": "cx-fork-only-stable-equilibrium",
+   "name": {
+    "en": "'AI for all' as the only stable equilibrium; consensus rationally available"
+   },
+   "domain": "earlier-folders",
+   "group": "the-fork-and-cooperative-infrastructure",
+   "source": {
+    "work": "theories/the-fork-and-cooperative-infrastructure/README.md",
+    "locator": "Claims 15 and 35; In Ren's own words, 2026-06-04",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "At sufficient power cooperation stops being optional and becomes civilization's survival condition; 'AI for all' is game-theoretic, not sentimental, and the only stable equilibrium. Everyone except the final winner is better off under a no-AI-versus-humans rule, so consensus is rationally available rather than morally demanded."
+   },
+   "quote": "It is the only stable equilibrium.",
+   "carried": "changed",
+   "relation": "divergence",
+   "reading": {
+    "en": "No uniqueness, and the answer turns on what each counts. Beyond one's family restraint is no mutual best response, its existence not shown; where the rest outruns the renewal no weight selects a member's restraint. Where each counts a step the need stays met, above the need, drawers in turn keep it; at once and unpivotal they drain at every coupling. Read as a stag hunt two locks stand and the start decides. Sharing above winning is ranked under C, not by game theory. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "several-optimizers-drain-by-their-joint-capacity",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-several-optimizers-drain-by-their-joint-capacity",
+     "says": {
+      "en": "Theorem (World; one step; balance; a mutual best response, its existence not shown in general). A condition beyond every one's family stands as under one optimizer of their joint capacity; each takes its whole capacity wherever something stands, so restraint is no mutual best response."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "the-rest-outruns-the-renewal",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-the-rest-outruns-the-renewal",
+     "says": {
+      "en": "Theorem (World). Where the rest alone takes more than a step gives across n steps from a level below n + m, formations depending at a need of at least m end, whatever a member outside the rest takes; with need one, no weight on a reading from the rest's end selects its restraint. Depletion need not be the only equilibrium."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it",
+     "says": {
+      "en": "Theorem (any law G; the gate for keeping). Each drawer counting c for each step the need m is met: in turn, no floor, where c < m every perfect profile leaves nothing before the horizon; under the gate, where m < c it keeps the need from a start meeting it. Drawing at once, where no portion reaches the need and none returns more than one for one, the drain is perfect at every c."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/02-MAP.md#capture",
+     "says": {
+      "en": "Reading [AI reading, D45]. Where lo < c < hi the model is the stag hunt, its critical mass the mixed equilibrium; without noise the start decides. Drawn one member at a time neither lock holds for good, and under rare mutation the long-run state is the one a single member arising fixes with more weight (cited, not proved)."
+     },
+     "role": "carries",
+     "part": "D45, the stag hunt"
+    },
+    {
+     "record": "ranking-under-readings",
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-ranking-under-readings",
+     "says": {
+      "en": "Conditional (C; World). In the support-gated family every comparison satisfying C ranks sharing above winning by consumption, under the whole-run, stepwise and possibility readings. No reading is chosen."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "what-self-concern-alone-ranks",
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-self-concern-alone-ranks",
+     "says": {
+      "en": "Theorem (any type; World). Every order increasing in its own continuation ranks a course ending the coupled cohorts below one continuing them, with no C; where the other course keeps an item beyond, as an independent copy does, some such order ranks it higher. That an order is so increasing is a premise."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "A full ranking of courses needs C for order, and counting losses that return to no one needs the continuation condition for scope; neither is asserted, warrant open. Self-concern's nearest case is the one thing reaching 'not sentimental', and an independent copy reverses it. No change raises every part's position, which the source's exception of the final winner respects."
+   },
+   "source_adds": {
+    "en": "That the equilibrium exists, is unique and binds at sufficient power, and that consensus is thereby available to rational actors. 'Better off' is the source's comparison, reading nothing named."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": [
+    "cx-wamo-all-but-the-winner",
+    "cx-zhishan-only-stable-equilibrium"
+   ]
+  },
+  {
+   "id": "cx-fork-competitive-problems",
+   "name": {
+    "en": "Problems that cannot be solved while the dynamics remain competitive"
+   },
+   "domain": "earlier-folders",
+   "group": "the-fork-and-cooperative-infrastructure",
+   "source": {
+    "work": "theories/the-fork-and-cooperative-infrastructure/README.md",
+    "locator": "Claim 36; In Ren's own words, 2026-06-05",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Some problems that must be solved cannot be solved if the dynamics are competitive. A class statement about problems, not a case, and tagged an observation in the folder."
+   },
+   "quote": "there are problems that has to be solved that can not be solved if the dynamics is competitive",
+   "carried": "fresh-reading",
+   "relation": "scope",
+   "reading": {
+    "en": "Proposed here; no live text says 'competitive' of these laws. Read as what each selection reads, they give exact cases: on a gated renewal one drawer keeps at the first step what several in turn drain, inside one model; drawers in turn keep a need only where a coupling reaches it; drawing at once, unpivotal, the drain is perfect at every coupling. Scope, since it is not competition as such: under the gate a step coupling above the need keeps it. Zero-sum position and conserved rivalry stay real. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it",
+     "says": {
+      "en": "Theorem (any law G; the gate for keeping). In turn, two drawers or more, no floor: where c < m every perfect profile leaves nothing before the horizon; under the gate, where m < c it keeps the need from a start meeting it. On a gated renewal, where c < m and 0 < c + q, one drawer over two steps keeps the need at the first step where two or more in turn drain it. Drawing at once, where no portion reaches the need and none returns more than one for one, the drain is perfect at every c."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#8-zero-sum-competition",
+     "says": {
+      "en": "Starting from relations removes the frame of a fixed sum divided among independent owners. It does not remove rivalry, and both are theorems. Reading [AI reading, D45]: positional goods stay zero-sum, and conserved stocks rivalrous."
+     },
+     "role": "neighbour",
+     "part": "D45"
+    }
+   ],
+   "account_adds": {
+    "en": "What the draining depends on (horizon, floors, order of drawing, pivotality), and that where the rest outruns the renewal only a change of the rest's exchange helps."
+   },
+   "source_adds": {
+    "en": "The class claim as such: that there are problems which must be solved and which competition as a whole cannot solve. Nothing in the account says which problems must be solved."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": null
+  },
+  {
+   "id": "cx-fork-cooperation-not-good",
+   "name": {
+    "en": "Cooperation is not automatically good"
+   },
+   "domain": "earlier-folders",
+   "group": "the-fork-and-cooperative-infrastructure",
+   "source": {
+    "work": "theories/the-fork-and-cooperative-infrastructure/README.md",
+    "locator": "Claim 44, first clause; Cooperation is not automatically good",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Ren raises this on 2026-04-16 as a limit on his own thesis: cooperating on the wrong thing can be worse than competing on it, so cooperating does not by itself express the good."
+   },
+   "quote": "cooperative on the wrong thing could be why worse than just competing on it",
+   "carried": "carried-in-part",
+   "relation": "agreement",
+   "reading": {
+    "en": "05 states that no law says cooperation is good. For the rest the mechanism is a reader's join, reading a pool as cooperating: a pool selects only what some member couples apart, so the community's largest steady catch ends a bed it was told nothing of; at a mutual best response a condition beyond stands as under one optimizer of the joint capacity. A rule kept by those who hold it can, on a reading, be the wrong rule. A verdict is asked under the continuation condition for scope and C for order, neither asserted, warrant open. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#not-shown",
+     "says": {
+      "en": "Any evaluation: no law says a drain is a harm, restraint better, cooperation good or a shared code worth keeping. That is asked under the two premises of 07, the continuation condition for scope and C for order."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "what-pooled-coupling-reaches",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-what-pooled-coupling-reaches",
+     "says": {
+      "en": "Theorem (World; balance for the gap). A group's closure is the union of its members' closures; an act differing only beyond the union, the pool's own joint act included, is selected alike by every group within it at every step. It does not show which formations pool or how a pool forms or lasts."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/ONE-PAGE.md",
+     "says": {
+      "en": "In a frozen test three AI fishers, language models told what to do, not systems trained: the community's largest steady catch ends a bed of mussels they were told nothing of, and they kept it in no season. Reading [AI reading]: a selection can succeed while what it cannot read is lost, and the laws do not say whether that loss counts."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "several-optimizers-drain-by-their-joint-capacity",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-several-optimizers-drain-by-their-joint-capacity",
+     "says": {
+      "en": "Theorem (World; one step; balance; a mutual best response, its existence not shown in general). A condition beyond every one's family stands as under one optimizer of their joint capacity."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "a-rule-rebuilt-from-the-members-it-limits",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-rule-rebuilt-from-the-members-it-limits",
+     "says": {
+      "en": "Theorem (root; a family of models), with a Reading [AI reading, new]: neither the rule's being present nor its being held decides; a rule can be kept and be the wrong rule. The states compared are started separately, and neither word is in the Lean."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "Why a pooled group is blind where its members are, and a minimal model of a kept rule ending what it keeps."
+   },
+   "source_adds": {
+    "en": "'Worse than competing' itself. The account shows a joint drain beyond the family equal to one optimizer's, in one model, and never ranks the two; 'worse' would need the two premises and a reading of what is compared. Also the good as something an action can express."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": "reading",
+   "same_as": [
+    "cx-kpso-cooperation-not-automatic"
+   ]
+  },
+  {
+   "id": "cx-fork-generative-criterion",
+   "name": {
+    "en": "Generative-versus-degenerative as the criterion, with wisdom as the operator"
+   },
+   "domain": "earlier-folders",
+   "group": "the-fork-and-cooperative-infrastructure",
+   "source": {
+    "work": "theories/the-fork-and-cooperative-infrastructure/README.md",
+    "locator": "Claim 44, second clause; Genealogy, 2026-04-16; Relations, becoming",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "On leaving the fork, the operative criterion moves from cooperative-versus-competitive to generative-versus-degenerative, with wisdom about consequences as the operator: knowing whether one's actions are good for the future and what possibilities they create. A value stance. The folder's Relations line says becoming supplies this criterion."
+   },
+   "quote": "what possibilities it creates",
+   "carried": "changed",
+   "relation": "divergence",
+   "reading": {
+    "en": "The words stay and the job changes, so the Relations line overstates. In the map generation and degeneration are patterns at two grains, generation allows loss, and order is not there. Comparison is by widening what can form: scope the continuation condition's, order C's, neither asserted, and T8 argued as life's way, with no verdict binding every possible mind. 'What possibilities it creates' is nearest to widening. Seeing is not valuing. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "generation-and-degeneration-at-two-grains",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-generation-and-degeneration-at-two-grains",
+     "says": {
+      "en": "Theorem (root). Going on along some branch and ending on every branch exclude each other; generation and keeping each exclude degeneration, at a pair of classes. No premise on what the pattern is or whether its going on is good. Not shown: that generation is better than keeping or degeneration; order needs C, whose losses count needs the continuation condition."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "GLOSSARY.md",
+     "says": {
+      "en": "generation, keeping, degeneration: a pattern going on through carrying renewal; going on without it; ending on every branch. 'Generation' never means arising, nor any new organization, and it is not 生生."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "widening-as-what-every-positive-weighting-ranks",
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-widening-as-what-every-positive-weighting-ranks",
+     "says": {
+      "en": "Theorem (any type; finite listing, two-valued admission), as read on the collective page: one course widens another exactly when every weighting positive on the listed items weighs it higher; a mixed comparison is decided both ways. Calling it better is C's."
+     },
+     "role": "neighbour"
+    },
+    {
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#theses",
+     "says": {
+      "en": "Thesis T8, argued. For life the way is 生生, compared by widening what can form, scope the continuation condition and order C. For life says whose way it is, not whose losses count. No verdict binding every possible mind is claimed."
+     },
+     "role": "carries",
+     "part": "T8"
+    },
+    {
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#does-not-show",
+     "says": {
+      "en": "Seeing is not valuing: enlarging what couples in changes what a selection can separate, not which differences matter. Not shown: that the condition, C or the step of invariance is warranted."
+     },
+     "role": "limit"
+    }
+   ],
+   "account_adds": {
+    "en": "That the criterion is silent on mixed comparisons, which include expansion ending forms of life, and that novelty or scale is not generation."
+   },
+   "source_adds": {
+    "en": "A criterion held as the operative one, without the two premises, and wisdom as what applies it. The folder's 'degenerative' is evaluative, where the account's degeneration is ending on every branch."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": null
+  },
+  {
+   "id": "cx-fork-productive-recursion",
+   "name": {
+    "en": "Productive recursion: factories, robots, compounding capacity"
+   },
+   "domain": "earlier-folders",
+   "group": "the-fork-and-cooperative-infrastructure",
+   "source": {
+    "work": "theories/the-fork-and-cooperative-infrastructure/README.md",
+    "locator": "The theory in one paragraph; Claims 9 and 53; From productive capacity, second paragraph; In Ren's own words, 2026-02-17",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Robots and complementary systems build and maintain further productive capacity. Capacity compounds when reinvestment outruns wear and when inputs, commissioning and energy keep pace. A network-level proposition and Ren's thesis; complete industrial self-reproduction remains unverified. Alex calls this the foundation of why abundance would occur; Ren likens it to a living body self-reproducing."
+   },
+   "quote": "exponential growth describes a possible regime, not an unlimited or measured trajectory",
+   "carried": "fresh-reading",
+   "relation": "agreement",
+   "reading": {
+    "en": "Proposed here. No factories or robots stand in the account, but the source's condition has the form of the account's bounds on what reproduces: offspring within what flows into a lineage, a rise past the inflow drawn from beyond, what a level left gives next. A living body has a minimal model, a member rebuilt from the level, whose stock buys time. Machines as lineages or members is this reading's alone. The bounds agree with the conditions; they do not state the engine. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "pace-of-selection-within-what-flows-in",
+     "anchor": "theories/becoming/chapters/04-LIFE.md#r-pace-of-selection-within-what-flows-in",
+     "says": {
+      "en": "Theorem (World; the flow balancing on the family, offspring standing at m or more). Where what flows into each parent's lineage, with m, is at most k · m, each parent leaves at most k offspring and the total multiplies by at most k^T over T steps. With nothing flowing into the carrying lineages, a rise of the mean shrinks the population."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "a-rise-past-the-inflow-is-drawn-from-beyond",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-rise-past-the-inflow-is-drawn-from-beyond",
+     "says": {
+      "en": "Theorem (World: balance). Over a stretch a stock rises by at most the stretch's inflow. Where a family rises by more than the inflow of a family containing it, some formation taking part gives it more than it takes, and takes from the containing family more than from the risen one."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "others-drawing-first-end-the-base",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-others-drawing-first-end-the-base",
+     "says": {
+      "en": "Theorem (any law G of what stands; natural amounts and weights). What a course could draw changes from step to step by what the level it leaves gains. In a witness a doubling source is rebuilt by every optimum alone and ended at once with others first drawing all but a quarter; the others' rule is supplied."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "the-stock-buys-time-where-the-rebuild-draws-on-it",
+     "anchor": "theories/becoming/chapters/04-LIFE.md#r-the-stock-buys-time-where-the-rebuild-draws-on-it",
+     "says": {
+      "en": "Theorem (root; a family of models). Over four members, the stock buys time under a cut, with an end from an empty stock, exactly where the rebuild draws on the level. Reading [AI reading, new]: the family's model of an organism, a minimal one, below closure of constraints, autopoiesis and Rosen's closure."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "renewing-consuming-formation",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-renewing-consuming-formation",
+     "says": {
+      "en": "Theorem (periphery; a supplied wear law, which carries much of the distinction; one shared condition). Consuming formation can form more at first, so a one-step count ranks it first; past a bound every continuation within renewal exceeds every one beyond."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "That expansion is paid from somewhere, that past the slack a dependence breaks unseen by a selection rewarding the rise, that others drawing first can end what one optimizer would rebuild, and that a one-step count misranks a consuming course."
+   },
+   "source_adds": {
+    "en": "The engineering proposition itself: reinvestment, network closure, rate against wear, its direction toward provision, the unaudited energy, material and land needs (open question 11), and the dated evidence notes in worldbuilding/research."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": "reading",
+   "same_as": null
+  },
+  {
+   "id": "cx-fork-present-knowledge-sufficient",
+   "name": {
+    "en": "Coordination, not physics: present knowledge suffices"
+   },
+   "domain": "earlier-folders",
+   "group": "the-fork-and-cooperative-infrastructure",
+   "source": {
+    "work": "theories/the-fork-and-cooperative-infrastructure/README.md",
+    "locator": "Claim 10; From productive capacity, first and last paragraphs",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Ren's programmatic thesis: knowledge available today makes full automation a practical engineering program if people can coordinate on it. The folder keeps it as his and marks sufficiency for every capability and a complete autonomous supply network as unverified."
+   },
+   "quote": "no longer a technological impossibility, but practical engineering projects",
+   "carried": "not-carried",
+   "relation": null,
+   "reading": {
+    "en": "The account says nothing of what present knowledge can build. 'Robot' appears only in an analogy, the joint selector of robot and principal, reading a published remedy for proxies. Not taken up, and nothing requires it to be. [AI reading]"
+   },
+   "targets": [],
+   "account_adds": null,
+   "source_adds": {
+    "en": "The thesis stands in this folder, sources/14-claude-code-prompts and worldbuilding/research/2026-09-07-industrial-automation-evidence.md and 2026-09-07-ai-engineering-evidence.md."
+   },
+   "absence": {
+    "searched": [
+     "automated, automation as words: no file in the live account; automat by file: 01, 03, 08, review/LOGIC.md, which are automaton, automata, automatic",
+     "robot: 05 and review/ALIGNMENT.md",
+     "self-repl, self-reprod, factory, factories, post-scarc: no file"
+    ],
+    "read": [
+     "theories/becoming/chapters/05-COLLECTIVES.md the 'robot' sentence in §7's reading",
+     "theories/becoming/chapters/05-COLLECTIVES.md §11",
+     "theories/becoming/COLLECTIVE-DIRECTION.md"
+    ]
+   },
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": null
+  },
+  {
+   "id": "cx-fork-labour",
+   "name": {
+    "en": "Wage labour's removal and the labour theory of robotics"
+   },
+   "domain": "earlier-folders",
+   "group": "the-fork-and-cooperative-infrastructure",
+   "source": {
+    "work": "theories/the-fork-and-cooperative-infrastructure/README.md",
+    "locator": "Claims 2 and 54; Open questions 3 and 15",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Automation that removes wage labour as the route to survival breaks the alignment that made existence supportable, so a new organizing narrative is not optional. Alex, from outside: without a labour theory of robotics the grand theory is incomplete, and intelligence rented on tap makes the worker a serf. The folder lists labour as an open gap."
+   },
+   "quote": "who owns the robots who owns the intelligence",
+   "carried": "not-carried",
+   "relation": null,
+   "reading": {
+    "en": "Not taken up. The live fronts name a livelihood only in the lake case, as what would make two catches mixed and C silent. 05 §11's reading, that a condition indispensable to one way of organization is not thereby basic, bears on 'not optional' but is no law of labour, and any ranking there is under the continuation condition for scope and C for order, neither asserted. [AI reading]"
+   },
+   "targets": [],
+   "account_adds": null,
+   "source_adds": {
+    "en": "Stands in this folder, drafts/2026-10-02-friend-conversation/transcript.md and sources/06-zhishan/whitepaper/reviews/v0.4-multi-perspective-review.md."
+   },
+   "absence": {
+    "searched": [
+     "labour, labor, wage, wages, employment as whole words: no file in the live account",
+     "livelihood: ONE-PAGE and the overview's lake case",
+     "ownership, owner: 05 §7 (Gordon's sole owner), COLLECTIVE-DIRECTION §8, 07 §4's ownership of effects",
+     "unilateral: no file",
+     "post-scarc, welfare, housing: no file"
+    ],
+    "read": [
+     "the lake lines in theories/becoming/ONE-PAGE.md and THE-THEORY-OF-BECOMING.md",
+     "theories/becoming/chapters/05-COLLECTIVES.md §11 and §12's limits"
+    ]
+   },
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": null
+  },
+  {
+   "id": "cx-fork-exit-free-association",
+   "name": {
+    "en": "Exit and free association as a change in selection pressure"
+   },
+   "domain": "earlier-folders",
+   "group": "the-fork-and-cooperative-infrastructure",
+   "source": {
+    "work": "theories/the-fork-and-cooperative-infrastructure/README.md",
+    "locator": "Claims 21, 27, 28; Keeping shared capacity available, third and fourth paragraphs",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Shared provision and affordable exit weaken the advantage of holding members through livelihood dependence, from competition to dominate toward competition to be worth joining. Coercion works only where people have no exit, so make the old system optional. Abundance without association is a comfortable zoo; association without abundance is freedom to starve. Conditional, and the folder's own chief mechanism."
+   },
+   "quote": "Shared provision makes free association materially possible.",
+   "carried": "not-carried",
+   "relation": null,
+   "reading": {
+    "en": "No law. The account's exits are ways a course leaves a lock or margin. In the folder's sense the trap has live words, not the mechanism: 'blocked exit' among faults in organized relations, and 06's limit ending generation (monopolized entry, removed alternatives), where what is enclosed cannot get out. Its one institution model reads an entry rule; schism and sanctions are not modelled. Leaving by choice as a selection pressure on arrangements is not stated. [AI reading]"
+   },
+   "targets": [],
+   "account_adds": null,
+   "source_adds": {
+    "en": "Stands in this folder, sources/04-speculative-future (thinking_03, principles 6 to 8) and theories/keep-the-possibility-space-open."
+   },
+   "absence": {
+    "searched": [
+     "exit: COLLECTIVE-DIRECTION, 02, 03, 05, 07, 08, review/ALIGNMENT.md, review/SCIENCES.md; 退出: no file",
+     "hirschman, tiebout, schism, secession: 05 §12's 'schism' only",
+     "free association, voluntar, opt out, worth joining, worth belonging, network effect, welfare, housing: no file (the reviser's)",
+     "consent, voice, contest, leaving in 05 and 07: by line, none on leaving an arrangement beyond the rule model's clause that all members leave (the reviser's)",
+     "fork, libreoffice in record-index.tsv: formed-software-continuation, which traces no exit or changed control"
+    ],
+    "read": [
+     "theories/becoming/COLLECTIVE-DIRECTION.md §2",
+     "theories/becoming/chapters/07-SIGNIFICANCE.md §3.3's reading on faults",
+     "theories/becoming/chapters/05-COLLECTIVES.md §12's rule and its Not modelled list",
+     "theories/becoming/chapters/06-CLASSICAL-TEXTS.md §十's row on limits",
+     "the record of formed-software-continuation"
+    ]
+   },
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": [
+    "cx-kpso-exit-inverts-selection"
+   ]
+  },
+  {
+   "id": "cx-fork-plurality-many-societies",
+   "name": {
+    "en": "A shared substrate carrying many societies; plurality as survival architecture"
+   },
+   "domain": "earlier-folders",
+   "group": "the-fork-and-cooperative-infrastructure",
+   "source": {
+    "work": "theories/the-fork-and-cooperative-infrastructure/README.md",
+    "locator": "Claims 4 and 5; Genealogy, 2024-07 to 2024-11 and 2026-06-03/05; In Ren's own words, 2024-07-31",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Incompatible ideologies coexist on a shared substrate carrying many societies, each free to fail its own way; if your society collapses you can start another. In 2026-06 Ren's correction makes plurality survival architecture rather than aesthetics. A design direction, and question 16 asks for plural providers and decorrelated failure."
+   },
+   "quote": "not one, but many, capitalist, libertarian, socialist",
+   "carried": "fresh-reading",
+   "relation": "scope",
+   "reading": {
+    "en": "Proposed here; the account nowhere argues for many societies. The survival half has a form, and it cuts both ways. Groups depending on one coupled family end together, nothing selected among them, so many societies on one layer are many only while that layer holds; what is not coupled can go on, as an independent copy does. Two reviewers moved under one cause fail while every name is kept. A 06 reading has everything hanging on one giver where two suppliers each suffice. Societies and substrates are not modelled. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "groups-whose-conditions-are-coupled",
+     "anchor": "theories/becoming/chapters/04-LIFE.md#r-groups-whose-conditions-are-coupled",
+     "says": {
+      "en": "Theorem (World; balance on the family, the coupled gate, only active giving, activity needing support, the excess from below n + m). Groups depending on one such family end together, nothing selected among them: ending selects only between families. Which conditions are coupled is a hypothesis."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "reviewers-count-by-independent-causes",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-reviewers-count-by-independent-causes",
+     "says": {
+      "en": "Theorem (pure core; fault formulas and bounds supplied). Reviewers count by independent causes, not names; two reviewers moved under one cause make readiness fail while every name is kept. The formulas are supplied bounds, not found causes."
+     },
+     "role": "neighbour"
+    },
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#dao",
+     "says": {
+      "en": "Reading [AI reading, D54]. 利出一孔 makes everything hang on one giver, where two suppliers each suffice; withdrawing a needed support can leave what most depends on it with no response, so what is read is what intervening and not intervening each do to the whole relation."
+     },
+     "role": "neighbour",
+     "part": "D54"
+    },
+    {
+     "record": "what-self-concern-alone-ranks",
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-self-concern-alone-ranks",
+     "says": {
+      "en": "Theorem (any type; World). Where the other course keeps an item beyond, as an independent copy does, some order increasing in its own continuation ranks it higher, against the ranking of a coupled ending below. The premise is weaker than C; any fuller ranking needs C for order and the continuation condition for scope."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "That a single shared layer couples what stands on it, which the folder's own architecture has to answer."
+   },
+   "source_adds": {
+    "en": "The architecture as a whole, each society free to fail, ugly societies permitted, the argument that plurality is for survival, and Ren's correction that variety, not irreversibility, is the real danger; the account keeps points of no return as exact laws."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": null
+  },
+  {
+   "id": "cx-fork-network-effects-defeat-exit",
+   "name": {
+    "en": "Network effects defeat exit"
+   },
+   "domain": "earlier-folders",
+   "group": "the-fork-and-cooperative-infrastructure",
+   "source": {
+    "work": "theories/the-fork-and-cooperative-infrastructure/README.md",
+    "locator": "Keeping shared capacity available, fourth paragraph; Open question 6",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "The exit mechanism fails where network effects make the most-joined option best by being most-joined. There exit is formally available and practically worthless, and only the flat anti-closure constraint remains. The folder states this failure inside the mechanism itself."
+   },
+   "quote": "best *by being most-joined*",
+   "carried": "fresh-reading",
+   "relation": "agreement",
+   "reading": {
+    "en": "Proposed here, not stated of exit. A chooser whose rule is read from the counts of its choices stays on one side of a threshold for good, read as the lock-in of increasing returns (Arthur 1989). It is one chooser over two policies, in counts, not members choosing among communities, and it says nothing of exit; that communities are such policies is this entry's join. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "capture-by-counted-choices",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-capture-by-counted-choices",
+     "says": {
+      "en": "Theorem (counts for the count laws). Under a standing score, with the rule in force read from the counts at the start, along every schedule of reading the threshold divides the counts into two regions the course never leaves, also where the score favours the second policy."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/02-MAP.md#which-locks-noise-leaves",
+     "says": {
+      "en": "Reading [AI reading over the proved cases]. Counts that accumulate, with noisy choices, are an urn with increasing returns, locking with probability one where the returns are strong enough (Arthur, Ermoliev and Kaniovski 1987; Arthur 1989; cited, not stated); a lock kept in counts that only grow can survive noise."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "Its edges, as a reading: a moved count, a stale rule or a change of score read late carries the course across, and counts that only grow can survive noise, as a cited result."
+   },
+   "source_adds": {
+    "en": "The link to exit, the anti-closure constraint as the last protection, and the case of people joining communities."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": "reading",
+   "same_as": [
+    "cx-kpso-exit-network-failure"
+   ]
+  },
+  {
+   "id": "cx-fork-floor-of-necessities",
+   "name": {
+    "en": "A generous floor, decoupled from status"
+   },
+   "domain": "earlier-folders",
+   "group": "the-fork-and-cooperative-infrastructure",
+   "source": {
+    "work": "theories/the-fork-and-cooperative-infrastructure/README.md",
+    "locator": "Claims 6 and 31; From productive capacity, fourth paragraph",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Abundance is specified concretely: a free store, no rent, hygiene, dignity, a modern home, and generous beyond a minimum. Provision must be decoupled from status, obedience, data surrender and single-provider attachment, or the floor re-encodes hierarchy. A design direction and a value stance."
+   },
+   "quote": "dressing free stuff does not make you socially inferior",
+   "carried": "not-carried",
+   "relation": null,
+   "reading": {
+    "en": "Not taken up: the account has no provision layer or floor in this sense; 'floor' there is a drawer's or a market model's bound. Neighbours, proposed here, none of provision: a priority of basic conditions, only under commitments J1/J2, beyond the continuation condition for scope and C for order, neither asserted, its tiers a reading and a rival trading gains not shown inconsistent; keeping a removable dependence for the carer's sake is not repair; 利出一孔 read as everything hanging on one giver. No right or duty is shown. [AI reading]"
+   },
+   "targets": [],
+   "account_adds": null,
+   "source_adds": {
+    "en": "The concrete floor, generosity and beauty above it, decoupling from status, and any account of who provides it. It stands in this folder and in theories/keep-the-possibility-space-open, whose like entry is not-carried."
+   },
+   "absence": {
+    "searched": [
+     "provision as a whole word across the fronts, chapters, review and GLOSSARY: other senses (05 a study's 'actual provision', 03 sustained inquiry, 02 `Provision`, 04 parents and care, ALIGNMENT and SCIENCES citing threshold provision) (this read)",
+     "floor, floors across the same: the first twelve hits by grep, all 05's drawers (this read)",
+     "basic conditions in 07 and COLLECTIVE-DIRECTION: the priority, by line (this read)",
+     "丰裕, 公地, 公器, 天下为公, welfare, housing, post-scarc: no provision line (the earlier reads', in group.searched)"
+    ],
+    "read": [
+     "results/records/basic-priority-step-by-step.json, hypotheses and does_not_show (this read)",
+     "results/records/practical-judgment-under-living-significance.json, hypotheses and does_not_show (this read)",
+     "06 #dao, the D54 reading on one giver (the check read's)"
+    ]
+   },
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": null
+  },
+  {
+   "id": "cx-fork-commons-no-subject",
+   "name": {
+    "en": "The abundance commons has no subject: the design exists, the supply is zero"
+   },
+   "domain": "earlier-folders",
+   "group": "the-fork-and-cooperative-infrastructure",
+   "source": {
+    "work": "theories/the-fork-and-cooperative-infrastructure/README.md",
+    "locator": "Status; Open questions 2, 10 and 15; Genealogy, 2026-07; In Ren's own words, 2026-06-03 (anti-inevitability)",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "The folder's sharpest internal critique: who pays, who builds and how automation held as capital becomes a commons is answered only by 'should be promoted'. Its strongest mechanism works on the far side of a transition it cannot yet cross, the tree image does not say who owns the robots during the build, and Ren says that what is not built will not happen."
+   },
+   "quote": "设计有了，供给为零",
+   "carried": "fresh-reading",
+   "relation": "agreement",
+   "reading": {
+    "en": "Proposed here; no live text says this of a commons. The objection's form is in the account: in the market model selection does not create an absent practice; in a witness ignition needs a reserve already present; support during a transition cannot be paid for with the improvement it brings; selection must fund actual succession. A design without a source is a law with no start. None of these names who pays, or says any actor could. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "market-model-share-margin-and-ends",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-market-model-share-margin-and-ends",
+     "says": {
+      "en": "Theorem (periphery: the market model, axioms reported). In the model's numbers a share of none stays none, a witness: selection does not create an absent practice. Reading [AI reading, D65]: a lost capacity needs actual entry, which the share law lacks."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "joint-plans-from-a-supported-start",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start",
+     "says": {
+      "en": "Theorem (any process; periphery module, axioms as its receipt reports). Reciprocal eventual promises can hold where neither ever happens; in the exchange witness an empty or one-sided start never becomes jointly active, and ignition needs a reserve already present."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "market-supported-finite-transition",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-market-supported-finite-transition",
+     "says": {
+      "en": "Theorem (law pure core; market instance periphery). In the instance each positive state has a horizon at which initial support at least K_N carries it through a finite correction; sufficient hypotheses, not least; support during the transition cannot be paid for with the improvement it brings."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "succession-on-a-funded-carrier",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-succession-on-a-funded-carrier",
+     "says": {
+      "en": "Theorem (periphery, axioms reported). Selection must fund actual succession: in witnesses a missing part stops realization while the aggregate stays safe, and a budget for correction alone fails to pay for migration."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "Exact covers on models: a support ladder for each start, and no single horizon serving every positive share."
+   },
+   "source_adds": {
+    "en": "Who pays, who builds, how capital becomes a commons, and the missing ties to welfare, cooperative and mutual-aid traditions. The account names no actor."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": "reading",
+   "same_as": null
+  },
+  {
+   "id": "cx-fork-commons-or-collar",
+   "name": {
+    "en": "Commons or collar"
+   },
+   "domain": "earlier-folders",
+   "group": "the-fork-and-cooperative-infrastructure",
+   "source": {
+    "work": "theories/the-fork-and-cooperative-infrastructure/README.md",
+    "locator": "Claim 29; Keeping shared capacity available, fifth paragraph; Terms",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "The ownership question stated as an exclusive disjunction: if the race's winner owns the robots that make everything, abundance is the most complete dependence ever engineered. Governance of the layer is the whole game. The folder calls this its sharpest sentence."
+   },
+   "quote": "a self-replicating abundance layer is either a commons or a collar",
+   "carried": "not-carried",
+   "relation": null,
+   "reading": {
+    "en": "The account has no such either/or and no abundance layer, and ownership is no variable in the capture laws. Neighbours, proposed here: what comes back to the shapers alone, against the cost, signs the selection for control; where something comes back, shared rule-making is not shown to remove it (D68). Closest to 'governance is the game' is a reading: controlling a shared interface is a route of capture, and a reform is judged by who decides next round (D65). A sole owner can keep what open access ends. Ranking either side needs C for order and the continuation condition for scope, neither asserted. [AI reading]"
+   },
+   "targets": [],
+   "account_adds": null,
+   "source_adds": {
+    "en": "The abundance layer as an object, dependence engineered through it, the either/or, and ownership as the deciding variable. It stands in this folder and theories/keep-the-possibility-space-open (claim 128), both from thinking_03. The folder's commons is defined against capture, not as open access, so the Gordon witness tests holding only, not its definition."
+   },
+   "absence": {
+    "searched": [
+     "collar, 项圈: no file among the fronts, chapters and review (this read); 二选一, 两种命运, feudal, 封建: none (the earlier reads')",
+     "ownership, owner: 05 §7 (Gordon's sole owner), COLLECTIVE-DIRECTION §8, 07 §4's ownership of effects (the check read's)",
+     "abundan: 04 and review/SCIENCES.md, one line each, seen by grep only; 丰裕, 公地, 公器: no provision line (the earlier reads')"
+    ],
+    "read": [
+     "07 #alignment-without-premise, the D68 readings on rule-making (the check read's)",
+     "05 #markets, the D65 reading on a shared interface (the check read's)",
+     "review/ALIGNMENT.md on selected control (the check read's)",
+     "COLLECTIVE-DIRECTION §8 (this read)"
+    ]
+   },
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": [
+    "cx-kpso-abundance-commons-or-collar"
+   ]
+  },
+  {
+   "id": "cx-fork-common-by-function",
+   "name": {
+    "en": "'Common' defined by what it does in practice, never by its name"
+   },
+   "domain": "earlier-folders",
+   "group": "the-fork-and-cooperative-infrastructure",
+   "source": {
+    "work": "theories/the-fork-and-cooperative-infrastructure/README.md",
+    "locator": "Claim 30; Keeping shared capacity available, fifth paragraph",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "'Common' means non-capturable in practice: access rules, auditability, local accountability, dispute resolution, exit rights, no unchecked power to convert the floor of life into dependence. A layer is common only so, not because it is called public, shared or benevolent. A design direction, with no verification procedure, as question 12 says."
+   },
+   "quote": "not because it is called public, shared, or benevolent",
+   "carried": "carried-in-part",
+   "relation": "agreement",
+   "reading": {
+    "en": "The refusal of the name is stated: which kind a limit is goes by what it does to what can be had again, not its name, and in practical judgment renaming and nominal succession change nothing. Audits, courts, term limits and antitrust are read as pooling, carrying what acts do back into what selects the rule. These are readings or an argument conditional on J1–J4, and 06's row reads the early texts' own 限, so it comes by descent: no independent agreement. Nothing defines a common, and the models do not tell capture from accountable revision by what the shaping changes. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#closing-and-opening",
+     "says": {
+      "en": "A limit ending generation (monopolized entry, removed alternatives, later comers long dependent on one controller) has the structure of closing without return; a limit that promises, trains or stops harm constrains steps while what it constrains can still be had. Which kind a limit is depends on what it does to what can be had again, not its name. [A mapping of early terms, its evaluation by comparison only.]"
+     },
+     "role": "carries",
+     "part": "the row on limits, not its name"
+    },
+    {
+     "record": "practical-judgment-under-living-significance",
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-practical-judgment-under-living-significance",
+     "says": {
+      "en": "Conditional (living significance, J1–J4, correspondence E; an argument). Nominal succession changes a judgment to transfer; renaming, deleted records and hidden undertakings change a judgment to end; preserve, transform, transfer and end are for actual continuation, not an institution's survival."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#kept-together",
+     "says": {
+      "en": "Reading [AI reading, D48]. Term limits, audits, courts and antitrust carry what an actor's acts do back into what selects the rule: pooling, not opposed interests. Corruption taking over these routes is read beside capture."
+     },
+     "role": "neighbour",
+     "part": "D48"
+    },
+    {
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#markets",
+     "says": {
+      "en": "Reading [AI reading, D65; a historical correspondence, no theorem]. A reform is judged by who decides admission, comparison and correction next round, not by removing one named practice."
+     },
+     "role": "neighbour",
+     "part": "D65, who decides next round"
+    }
+   ],
+   "account_adds": {
+    "en": "That a limit which stops harm can have the same outward form as one which encloses, and is told apart by what can still be had."
+   },
+   "source_adds": {
+    "en": "A common as an object, and access rules, local accountability, dispute resolution and exit rights as its definition. Who verifies is open in the folder too."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": "reading",
+   "same_as": null
+  },
+  {
+   "id": "cx-fork-marks-of-capture",
+   "name": {
+    "en": "The marks of capture: dependence as such is not the problem"
+   },
+   "domain": "earlier-folders",
+   "group": "the-fork-and-cooperative-infrastructure",
+   "source": {
+    "work": "theories/the-fork-and-cooperative-infrastructure/README.md",
+    "locator": "Claim 32; Keeping shared capacity available, fifth paragraph; Terms",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Capture has five marks (hidden, one-way, coercive, non-substitutable, irreversible), which makes 'non-capturable' testable rather than rhetorical. Dependence as such is not the problem; captured dependence is."
+   },
+   "quote": "Dependence as such is not the problem; captured dependence is.",
+   "carried": "carried-in-part",
+   "relation": "divergence",
+   "reading": {
+    "en": "The list is not live, and the account's 'capture' is a loop on a rule. But 06 gives the trap a structure: monopolized entry, removed alternatives, later comers long dependent on one controller, read by what it does to what can be had; that row reads the early texts' own 限, so it comes by descent. 'As such not the problem' has forms: closing is by form no loss, mutual dependence is not mutual benefit. 'Captured dependence is' does not carry: no type is a verdict, and no law says a locked loop damages 生生. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#closing-and-opening",
+     "says": {
+      "en": "A limit ending generation (monopolized entry, removed alternatives, later comers long dependent on one controller) is closing without return: what is enclosed cannot get out, what is outside cannot be had again. A closing is by its form no loss; whether a kind supports, enriches or damages 生生 is said by comparison, not type [AI reading, D49]."
+     },
+     "role": "carries",
+     "part": "the row on limits; D49"
+    },
+    {
+     "record": "practical-judgment-under-living-significance",
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-practical-judgment-under-living-significance",
+     "says": {
+      "en": "Conditional (living significance, J1–J4, correspondence E; an argument). Keeping a removable dependence for the carer's sake is not repair; domination changes a judgment to preserve."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "mutual-dependence-and-its-pace",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-mutual-dependence-and-its-pace",
+     "says": {
+      "en": "Mutual dependence is not mutual benefit: every continuation can be affected, at some remove, by every other, and neither that nor its pace says the effect is good."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/02-MAP.md#t7",
+     "says": {
+      "en": "Reading [AI reading, D26 as revised]. The closed loop reads winners writing the next scorecard and forming the minds that read it; none of this says whether a locked loop supports or damages 生生."
+     },
+     "role": "carries",
+     "part": "D26 as revised"
+    }
+   ],
+   "account_adds": {
+    "en": "Stability and a frozen source of law as one structure read from two sides, so that a test by marks cannot by itself give a verdict: that would need the continuation condition for scope and C for order, neither asserted."
+   },
+   "source_adds": {
+    "en": "The five marks as a test of non-capture, and captured dependence called the problem. The whitepaper line that holds them, v0.2 line 122, lists six (隐藏、单向、胁迫、垄断、屈辱、不可逆), not the folder's five; they stand in sources/06-zhishan, sources/04-speculative-future/current/FOUNDATION-PRINCIPLES-DRAFT.md (principle 7) and theories/keep-the-possibility-space-open/."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": [
+    "cx-kpso-dependence-not-capture"
+   ]
+  },
+  {
+   "id": "cx-fork-functional-invariant",
+   "name": {
+    "en": "The anti-capture invariant is functional; arrangements are means"
+   },
+   "domain": "earlier-folders",
+   "group": "the-fork-and-cooperative-infrastructure",
+   "source": {
+    "work": "theories/the-fork-and-cooperative-infrastructure/README.md",
+    "locator": "Claim 43; Defection-suppression; In Ren's own words, 2026-06-04",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "No single point may capture and totalize the whole, and exit and voice must survive; centralized, decentralized and polycentric are means judged by dynamics. Ren: intelligence need not always be distributed."
+   },
+   "quote": "these are means, not ends",
+   "carried": "carried-in-part",
+   "relation": "agreement",
+   "reading": {
+    "en": "'Means judged by dynamics' agrees with what is stated: a limit's kind goes by what it does to what can be had, not its name; under premises shared capacity is warranted without fixing one carrier; whether to expand, maintain, reorganize or contract is asked of the whole continuation; no market law ranks arrangements. Voice has a conditional form, effective opportunities to understand, challenge and revise, under the continuation condition for scope and C for order, neither asserted, warrant open, with J1–J4. 06's row comes by descent. The invariant itself is not stated. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#closing-and-opening",
+     "says": {
+      "en": "Which kind a limit is depends on what it does to what can be had again, not its name. A mapping of early terms; whether a kind supports or damages 生生 is said by comparison, not type [AI reading, D49]."
+     },
+     "role": "carries",
+     "part": "the row on limits, not its name"
+    },
+    {
+     "record": "organizational-formation-from-generative-comparison",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-organizational-formation-from-generative-comparison",
+     "says": {
+      "en": "Conditional (the condition for scope; C for order, with J1–J4; complete relational correspondence). It can warrant building shared capacity without fixing one carrier. It does not establish compliance or derive institutional authority; overbuilding that depletes the living basis is its counterexample where construction reports omit retained amounts."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#joint-plans",
+     "says": {
+      "en": "Reading [AI reading, D65; any ranking is C's, under the two premises of 07]. Capture and drain give institutions no prior duty to contract and no prior licence to grow: whether a development calls for expanding, maintaining, reorganizing or contracting is asked of the whole continuation it forms."
+     },
+     "role": "carries",
+     "part": "D65, the whole continuation"
+    },
+    {
+     "record": "alignment-direction-under-widening",
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-alignment-direction-under-widening",
+     "says": {
+      "en": "Conditional (the continuation condition for scope, C read as widening for order, J1–J4, correspondence E). The direction proposed governs trade-offs through real losses, basic living conditions, bounded responsibility and legitimate participation, with effective opportunities to understand, challenge and revise."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "Pool laws: a pool separates only what some member separates, so a form's merits are read off what couples in."
+   },
+   "source_adds": {
+    "en": "The invariant as a must, that no point may capture and totalize the whole, with exit among its terms. 05's Open keeps how pools form, last and resist capture."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": "reading",
+   "same_as": [
+    "cx-kpso-means-not-ends"
+   ]
+  },
+  {
+   "id": "cx-fork-strong-guardians",
+   "name": {
+    "en": "Strong guardians may be acceptable in some systems"
+   },
+   "domain": "earlier-folders",
+   "group": "the-fork-and-cooperative-infrastructure",
+   "source": {
+    "work": "theories/the-fork-and-cooperative-infrastructure/README.md",
+    "locator": "Defection-suppression is one inch from the benevolent tyrant; In Ren's own words, 2026-06-04; Open question 16",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "A civilizational immune system is a candidate singleton, yet Ren refuses to forbid strong guardians outright: if one works, some systems may have strong guardians while others try other ways. Decentralization is a means. The folder judges this by the functional test."
+   },
+   "quote": "can't some of the systems have guardians that are strong and some try other ways?",
+   "carried": "carried-in-part",
+   "relation": "scope",
+   "reading": {
+    "en": "A test, not a ban. A limit stopping harm has protective closing's structure while what it constrains can still be had; one monopolizing entry closes without return; selected control is not thereby capture. Against the case for a guardian: capability is a reason to pool, not to govern, on the reading that capability is reach, and a counter-rule read from its own share locks as the rule it replaced. The 06 row and D68 come by descent from sibling folders. 'If it works' stays empirical. No guardian, sanction or defector is modelled. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#closing-and-opening",
+     "says": {
+      "en": "A limit that promises, trains or stops harm constrains some steps while what it constrains can still be had, the structure of protective closing; a limit monopolizing entry is closing without return. Which kind depends on what it does to what can be had again, not its name."
+     },
+     "role": "carries",
+     "part": "the row on limits"
+    },
+    {
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#alignment-without-premise",
+     "says": {
+      "en": "Reading [AI reading, D45]. Capability is a reason to pool, not to govern: read as reach, it extends what one's acts do and not thereby what couples into one, and a governing member's selection stays blind beyond its own closure, which the pool's union contains. Reading [AI reading, D68]: a counter-rule read monotonically from the share it selects, every rule it reads favouring its carriers, locks as the rule it replaced did; only a change of law leaves for long."
+     },
+     "role": "carries",
+     "part": "D45: pooling across intelligences; D68: the counter-rule"
+    },
+    {
+     "anchor": "theories/becoming/review/ALIGNMENT.md",
+     "says": {
+      "en": "Selected control is not thereby capture; the models do not tell capture from accountable revision by what the shaping changes."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/02-MAP.md#t7",
+     "says": {
+      "en": "Reading [AI reading, D26 as revised]. A second order, corruption taking over courts, press, statistics and audit, is a loop whose rule-reading reaches the routes of 明 themselves. None of this says whether a locked loop supports or damages 生生."
+     },
+     "role": "neighbour",
+     "part": "D26 as revised"
+    }
+   ],
+   "account_adds": {
+    "en": "Why capability alone does not supply the case for governing, on the reading's premise that capability is reach, and that a counter-rule can lock like what it replaced."
+   },
+   "source_adds": {
+    "en": "Tolerance for strong guardians as one experiment among several, success as its test, and the enforcement antinomy that makes the question live."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": null
+  },
+  {
+   "id": "cx-fork-landscape-deformation",
+   "name": {
+    "en": "Landscape deformation over perturbation; a crisis is no dawn"
+   },
+   "domain": "earlier-folders",
+   "group": "the-fork-and-cooperative-infrastructure",
+   "source": {
+    "work": "theories/the-fork-and-cooperative-infrastructure/README.md",
+    "locator": "Claim 37; Keeping shared capacity available, sixth paragraph",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "A system leaves an attractor by perturbation, a shock landing in a basin you do not choose, or by landscape deformation, changing parameters and feedback until the basin shoals. So do not wait: 'only a crisis produces change' is defeatist and bad systems thinking. Crisis-readiness survives only as a hedge."
+   },
+   "quote": "a crisis is a fork, not a dawn",
+   "carried": "carried-in-part",
+   "relation": "scope",
+   "reading": {
+    "en": "The split has forms, not the preference. Where a reading favours at every share only a change of law, of how the rule reads or of the selection leaves; a perturbation keeping the rule's direction is absorbed, one reversing it held past the threshold is not, so a held shock can leave. A reading lists four routes, none a proved phase transition, each also possible toward recovery. A reading made late leaves the lock in place, near 'a crisis is no dawn'. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#markets",
+     "says": {
+      "en": "Reading [AI reading, D65; of the periphery model's boundary and attraction results]. Four routes of transition are distinct, none a proved phase transition: a parameter change removing a region's retention, a shock into another retained region, a failure stopping correction, and change too fast for correction."
+     },
+     "role": "carries",
+     "part": "D65, four routes"
+    },
+    {
+     "record": "capture-through-the-rule",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-capture-through-the-rule",
+     "says": {
+      "en": "Theorem (any type; witness). Locked, a perturbation keeping the rule's direction is absorbed at the next reading step; where the reading favours at every share only a change of the law, of how the rule reads or of the selection leaves; a perturbation reversing the direction, held past the threshold, is not absorbed. That actual rules read the share is the premise."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "loss-read-in-time-by-the-others",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-loss-read-in-time-by-the-others",
+     "says": {
+      "en": "Theorem (counts; that the others read the loss, and the late reading's form, are premises). A reading turns the course for good only before the first step at which the late reading would favour the shapers, ties aside; from then every later reading keeps the lock."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "That each route also runs toward recovery, per the 02 reading on regions, and exact conditions for a shock to hold."
+   },
+   "source_adds": {
+    "en": "The preference for deformation, and that a shock's landing is uncontrolled; a preference among courses needs C for order, with the continuation condition for scope, neither asserted. Ren's own 2026-06-03 line that tragedy will wake people up sits against the draft's correction."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": [
+    "cx-kpso-state-versus-landscape"
+   ]
+  },
+  {
+   "id": "cx-fork-top-of-leverage-hierarchy",
+   "name": {
+    "en": "Intervene at the top of the leverage hierarchy: paradigm and who can see what"
+   },
+   "domain": "earlier-folders",
+   "group": "the-fork-and-cooperative-infrastructure",
+   "source": {
+    "work": "theories/the-fork-and-cooperative-infrastructure/README.md",
+    "locator": "Claim 38; Keeping shared capacity available, sixth paragraph",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "The project aims at the top of a leverage hierarchy, paradigm and who can see what, because that is available now, before any crisis. So the work is making the alternative visible, building living instances and connecting those who already disbelieve the race. 'I can't find the path' is the signature of working there."
+   },
+   "quote": "parameters < feedback loops < information flows < rules/goals < paradigm",
+   "carried": "fresh-reading",
+   "relation": "scope",
+   "reading": {
+    "en": "Proposed here; no live text has this hierarchy. 'Who can see what' is close to the exit of reading beyond the share, and the account gives where that holds: a reading favouring at no loss above a bound unlocks; where the reading too is formed from the share, a change of it of any size is absorbed, and T7, conjectured for actual metrics, forbids a reform of the reading alone outlasting the next. LA2 stands as a counterexample on one judge to another case. No ladder orders these. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "closed-capture",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-closed-capture",
+     "says": {
+      "en": "Theorem (any type). A reading favouring at no loss above a bound unlocks the course after every reading step past it: a sufficient way out. Where the reading too is formed monotonically from the share, a change of the reading of any size is absorbed at the next reading step."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/02-MAP.md#t7",
+     "says": {
+      "en": "Thesis T7, conjectured for actual metrics. Dropped, drift aside, only through a change in what the loop reads. Forbids a reform of the reading alone outlasting the next reading. In LA2 a loss read only by those the rule disfavours turned one judge, counting against T7's fourth case as first worded. No frozen field test."
+     },
+     "role": "carries",
+     "part": "T7"
+    },
+    {
+     "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions",
+     "says": {
+      "en": "Exits, each under stated hypotheses, none shown to hold of an actual collective: read what lies beyond the share; read the loss in time; shaping that brings nothing back to the shapers alone; pool couplings; restraint within the slack; and others."
+     },
+     "role": "neighbour"
+    },
+    {
+     "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#6-what-enough-situationality-would-have-to-mean",
+     "says": {
+      "en": "Reading [AI reading, D45]. Observation is the first condition, necessary and not sufficient, among coupling, response, time, resolution, pace and structure."
+     },
+     "role": "neighbour",
+     "part": "D45"
+    }
+   ],
+   "account_adds": {
+    "en": "A list of exits with the edge of each, in place of a ladder of leverage, and time: a reading in time differs from the same reading late."
+   },
+   "source_adds": {
+    "en": "The ordered hierarchy, paradigm as its top, availability before a crisis, and the signature of 'I can't find the path'. The account has no such ordering."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": null
+  },
+  {
+   "id": "cx-fork-seeing-insufficient-living-proof",
+   "name": {
+    "en": "Seeing is insufficient; living proofs are structural"
+   },
+   "domain": "earlier-folders",
+   "group": "the-fork-and-cooperative-infrastructure",
+   "source": {
+    "work": "theories/the-fork-and-cooperative-infrastructure/README.md",
+    "locator": "Claims 39 and 52; Keeping shared capacity available, seventh paragraph",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Seeing differently is necessary and insufficient: belief concretizes into institutions, money and infrastructure until the constructed is the territory, so living proofs are a structural requirement. The unit of hope is an address. Later: an essay does less than a world built and shown."
+   },
+   "quote": "希望的单位不是口号，是地址",
+   "carried": "carried-in-part",
+   "relation": "agreement",
+   "reading": {
+    "en": "The form 'necessary, not sufficient' is stated, for other reasons: seeing is not valuing, coupling is not compliance, and where the rest outruns the renewal only a change of the rest's exchange helps, the nearest to concrete. For living proofs the nearest law is about starts, not persuasion: ignition needs a reserve already present, and a public plan is no executable assurance. That belief becomes territory, or that demonstration persuades, is not said. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#6-what-enough-situationality-would-have-to-mean",
+     "says": {
+      "en": "Reading [AI reading, D45]. Observation is the first condition, necessary and not sufficient: seeing is not valuing, and coupling is not compliance. All six together still rank nothing: that needs C, and counting losses that return to no one needs the continuation condition."
+     },
+     "role": "carries",
+     "part": "D45, observation the first condition"
+    },
+    {
+     "record": "joint-plans-from-a-supported-start",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start",
+     "says": {
+      "en": "Theorem (any process; periphery module, with its axioms reported). Reciprocal eventual promises can hold where neither ever happens; in the exchange witness ignition needs a reserve already present."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "formed-software-continuation",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-formed-software-continuation",
+     "says": {
+      "en": "Assessment (selected histories, no theorem, not a universal law). Inherited code, work, coordination and interim support carried activity under partial reorganization before a lasting organization formed. The record: public plans are not automatically executable assurances."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "The other five conditions beside observation: response, time, resolution, pace, structure (coupling being the first's)."
+   },
+   "source_adds": {
+    "en": "Belief concretizing into territory, living proofs as a structural requirement, the address as a unit of hope, and demonstration as the method of persuasion."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": "thesis-or-method",
+   "same_as": null
+  },
+  {
+   "id": "cx-fork-transition-assurance",
+   "name": {
+    "en": "The transition: leaving the race by assurance"
+   },
+   "domain": "earlier-folders",
+   "group": "the-fork-and-cooperative-infrastructure",
+   "source": {
+    "work": "theories/the-fork-and-cooperative-infrastructure/README.md",
+    "locator": "Claims 40 and 41; Unilateral restraint loses; Open question 1",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "The load-bearing unsolved problem: how a critical mass leaves the race without being eaten while leaving. What walks you through is assurance, credible common knowledge that others are moving: conditional commitments, thresholds, vision as a coordination device, a public commitment registry. None is tested here, and the folder says so."
+   },
+   "quote": "Even if each actor understands the danger, each actor still feels forced to race, because unilateral restraint means losing",
+   "carried": "carried-in-part",
+   "relation": "scope",
+   "reading": {
+    "en": "Forms exist, with a correction. A threshold has a count form, the critical mass, read as a stag hunt; it counts shapers of a rule, so reading it as those leaving a race is this reading's. But 'mutual promises alone cannot start a loop with no source': reciprocal promises can be empty and ignition needs an actual reserve, so common knowledge alone does not walk through. Enforced contracts read as laws giving first. Support during the transition cannot be paid for with the improvement it brings. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+     "says": {
+      "en": "Reading [AI reading, D48]. Kept promises and enforced contracts are laws giving first: the law changes, not the state alone. Tolerance lets cooperation survive scattered withholding, not rebuild it where it is lost everywhere; mutual promises alone cannot start a loop with no source."
+     },
+     "role": "carries",
+     "part": "D48"
+    },
+    {
+     "record": "thresholds-of-waiting",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+     "says": {
+      "en": "Theorem (any type). Restoring needs a formation that spares all it waits on, which gives from step 1 whatever the start; without one, total withholding stays."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "shaping-read-by-readers-drawn-from-the-selected",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-shaping-read-by-readers-drawn-from-the-selected",
+     "says": {
+      "en": "Theorem (counts; premises named; without noise). With lo ≤ hi a share decides the direction exactly where lo < c < hi. Reading [AI reading, D45]: the model is the stag hunt, its critical mass the mixed equilibrium."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "market-supported-finite-transition",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-market-supported-finite-transition",
+     "says": {
+      "en": "Theorem (law pure core; market instance periphery). A ladder of support carries a positive state through a finite correction into protection; sufficient hypotheses, not least; support during the transition cannot be paid for with the improvement it brings."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "Who must go first, in law: a formation sparing all it waits on, and that without one total withholding stays. Reading [D45]: members reading one channel add agreement, not reach."
+   },
+   "source_adds": {
+    "en": "How a critical mass leaves the race, in the human case: common knowledge as such, the registry, verification without surveillance, pause protocols, who runs them. COLLECTIVE-DIRECTION states no test has human participants. The folder's strongest open question stays open in both."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": [
+    "cx-kpso-the-transition"
+   ]
+  },
+  {
+   "id": "cx-fork-one-rule",
+   "name": {
+    "en": "The one rule: do not use AI to compete"
+   },
+   "domain": "earlier-folders",
+   "group": "the-fork-and-cooperative-infrastructure",
+   "source": {
+    "work": "theories/the-fork-and-cooperative-infrastructure/README.md",
+    "locator": "Claims 14 and 34; Who enforces the one rule?; Open question 7; In Ren's own words, 2026-02-09 and 2026-07-03",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Minimal viable global coordination is one forcefully executed rule: stop using AI to compete with others, use it only for commons. Offered explicitly as a compromise, since there is no time to pass on the reasoning. AI is to be governed as public-good infrastructure, not a weapon. The folder records a later turn from enforcement to adoption, and in 2026-07 a call to forbid AI entering human games under present conditions."
+   },
+   "quote": "stop using AI compete with others, only use them for commons",
+   "carried": "changed",
+   "relation": "divergence",
+   "reading": {
+    "en": "The source sets one rule, to be forced; the account states none. It takes up the topic and gives only a conditional direction: with the continuation condition for scope and C read as widening for order, neither asserted, warrant open, and J1–J4, align AI with actual living and further generation. It forbids no use, and who restrains stays contested; sanctions are not modelled in 05 §12. Neighbours, none proposing it: capable assistance to whoever shapes the rule does not lower the selection for control (D68); a fixed AI policy does not keep the possible widening (D45). [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "alignment-direction-under-widening",
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-alignment-direction-under-widening",
+     "says": {
+      "en": "Conditional (the continuation condition for scope, C read as widening for order, J1–J4, correspondence E). The direction proposed: align AI formation, learning, action and revision with actual living and further generation within the whole, governing trade-offs through real losses, basic living conditions, bounded responsibility and legitimate participation, with effective opportunities to understand, challenge and revise."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#8-zero-sum-competition",
+     "says": {
+      "en": "Starting from relations removes the frame of a fixed sum divided among independent owners. It does not remove rivalry, and both are theorems. Reading [AI reading, D45]: the theory adds whether the joint draw stays within the renewal and within others' margins; who restrains stays contested. Positional goods stay zero-sum, and conserved stocks rivalrous."
+     },
+     "role": "carries",
+     "part": "D45"
+    },
+    {
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#alignment-without-premise",
+     "says": {
+      "en": "Reading [AI reading, D68]: help that lowers the cost of shaping, with nothing else changed, gives a rule no less favourable to the shapers, so capable assistance to whoever shapes the rule does not lower the selection for control. That assistance lowers an actual cost and changes nothing else is the reading."
+     },
+     "role": "neighbour",
+     "part": "D68: help lowering the cost of shaping"
+    },
+    {
+     "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#7-keeping-the-future-open",
+     "says": {
+      "en": "Reading [AI reading, D45]: a fixed rule, institution, constitution or AI policy whose moves a course makes from some step on does not keep the possible under it widening. Nothing says which changes keep it widening."
+     },
+     "role": "neighbour",
+     "part": "D45"
+    }
+   ],
+   "account_adds": {
+    "en": "What a rule would need: scope, order and practical commitments, all named; that rivalry stays a theorem under any such direction."
+   },
+   "source_adds": {
+    "en": "The rule itself and its compromise; AI governed as public-good infrastructure and not as a weapon; forbidding AI entry to human games. Stands in this folder, sources/12-claude-ai-chats and sources/06-zhishan, with the critique that 'forcefully' has no answer to who enforces."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": [
+    "cx-wamo-ai-out-of-the-game"
+   ]
+  },
+  {
+   "id": "cx-fork-build-alongside-hold-window",
+   "name": {
+    "en": "Build alongside the old; hold the window"
+   },
+   "domain": "earlier-folders",
+   "group": "the-fork-and-cooperative-infrastructure",
+   "source": {
+    "work": "theories/the-fork-and-cooperative-infrastructure/README.md",
+    "locator": "Claims 13, 17, 19; Strategy paragraph; In Ren's own words, 2026-01 and 2026-04-11",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Build the new system alongside the old rather than bring it down; a stable market is worth keeping for as long as it benefits humans. Keeping advanced intelligence out of human competition would hold market and society 'maybe a decade or two, or even longer', long enough to build the automated layer. Elsewhere the budget is years. The image: keep the old ship running while shaping the new one."
+   },
+   "quote": "We can build a new system alongside the old before it collapses",
+   "carried": "fresh-reading",
+   "relation": "agreement",
+   "reading": {
+    "en": "Proposed here; no live text says intelligence, markets or decades, and calibration is not established. The structure is near: a finite correction carried by support already present, a re-reading that keeps a need only where the level starts high enough, a transfer judged by an accepted successor with capacity in time, not by nominal succession or a gap during need, and, as an assessment of selected histories, activity carried under partial reorganization before a lasting organization formed. Windows close. Rankings there are under the continuation condition for scope and C for order, neither asserted, with J1–J4. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "market-supported-finite-transition",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-market-supported-finite-transition",
+     "says": {
+      "en": "Theorem (law pure core; market instance periphery). A start lasts n steps exactly when some ladder holds it at level n; in the instance each positive state has a horizon N at which initial support at least K_N carries it through; no single N serves every positive share."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "practical-judgment-under-living-significance",
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-practical-judgment-under-living-significance",
+     "says": {
+      "en": "Conditional (living significance, J1–J4, correspondence E; an argument). Preserve where relations sustain living; transfer where need stays warranted and an accepted successor has capacity and support in time for demand; nominal succession or a gap during actual need changes that judgment."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "formed-software-continuation",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-formed-software-continuation",
+     "says": {
+      "en": "Assessment (selected histories, no theorem, not a universal law). Inherited code, work, coordination and interim support carried activity under partial reorganization before a lasting organization formed, as specific conditions, not interchangeable amounts."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "re-optimizing-above-a-renewal-ends-it",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-re-optimizing-above-a-renewal-ends-it",
+     "says": {
+      "en": "Theorem (World; balance; level law alone for the re-reading). A re-reading from T keeps the need exactly where it is met at T, so where the level starts at least T(k − r) above the need; where nothing is given below the need, a later re-reading restores nothing."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "loss-read-in-time-by-the-others",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-loss-read-in-time-by-the-others",
+     "says": {
+      "en": "Theorem (counts; premises named). From a start strictly favouring the shapers a deadline quadratic in the start's counts bounds the window; it is a bound, not the step from which the window is closed."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "Exact covers and deadlines on models, and that a cover differs per start."
+   },
+   "source_adds": {
+    "en": "Building alongside as the strategy, the time budgets, keeping AI out of human games as the means, and the tension of open question 13: at scale a parallel floor attacks the old system's core."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": "reading",
+   "same_as": null
+  },
+  {
+   "id": "cx-fork-ai-dual-of-its-threat",
+   "name": {
+    "en": "AI as the dual of its own threat; the coordination layer"
+   },
+   "domain": "earlier-folders",
+   "group": "the-fork-and-cooperative-infrastructure",
+   "source": {
+    "work": "theories/the-fork-and-cooperative-infrastructure/README.md",
+    "locator": "Claim 33; Claim 22, coordination layer; Open question 9",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "The capacity that breaks human-calibrated institutions (modelling minds, generating trust, managing supra-human complexity) could also run the assurance and coordination a transition requires. The letter's coordination layer: machines are good at the complexity humans are bad at. The folder notes that this layer later went missing and is the gap most likely to be productive."
+   },
+   "quote": "AI is the dual of its own threat",
+   "carried": "fresh-reading",
+   "relation": "agreement",
+   "reading": {
+    "en": "Proposed here; that one capacity does both is not stated. Both sides have forms. For: pooling couplings across intelligences, where an AI's coupling into scale and a person's into a lived situation do not replace each other. Against: capability as reach enlarges the gap unless coupling grows; alignment to a principal alone is not alignment of the joint selection. All readings on the laws, each with its premise. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#alignment-without-premise",
+     "says": {
+      "en": "Reading [AI reading, D45]. Pooling couplings across intelligences is a route to alignment for all, not the whole of it. An AI system's coupling into scale and far consequences and a person's into a lived situation do not replace each other. Reading [AI reading, D68]: alignment to a principal alone is not alignment of the joint selection."
+     },
+     "role": "carries",
+     "part": "D45: pooling across intelligences; D68: the law of several optimizers"
+    },
+    {
+     "record": "what-pooled-coupling-reaches",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-what-pooled-coupling-reaches",
+     "says": {
+      "en": "Theorem (World; balance for the gap). A group's closure is the union of its members' closures; differences beyond the union stay unselected. It does not show which formations pool, how a pool forms or lasts, or that a pool responds to what it separates."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "The conditions pooling does not give: that a member acts on the loss unread, that what is read tells the loss apart, that mixed courses are ordered, and that a revision reaches the course and completes."
+   },
+   "source_adds": {
+    "en": "That one capacity does both, AI running assurance infrastructure for a civilizational transition, and any design of the coordination layer. How pools form and resist capture stays open in the account."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": "reading",
+   "same_as": null
+  },
+  {
+   "id": "cx-fork-open-intelligence-leverage",
+   "name": {
+    "en": "Open, locally owned intelligence is not sufficient"
+   },
+   "domain": "earlier-folders",
+   "group": "the-fork-and-cooperative-infrastructure",
+   "source": {
+    "work": "theories/the-fork-and-cooperative-infrastructure/README.md",
+    "locator": "Claim 51; 2026-10-02 update, Alex's challenge",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Against Alex, who holds that open models on local hardware would let a small community run its own robots, Ren accepts the direction and disputes sufficiency: open models do not stop the compounding dynamics, and distributing capability is leverage for good and bad alike."
+   },
+   "quote": "a huge leverage",
+   "carried": "carried-in-part",
+   "relation": "scope",
+   "reading": {
+    "en": "07's D68 states one part: capable assistance to whoever shapes the rule does not lower the selection for control, and lowering the cost of shaping strictly, with nothing else changed, raises it. No live text speaks of open or distributed capability, so reading these as that assistance is this crosswalk's. Capability read as reach, extended without extending the coupling, enlarges the gap (D45). So 'leverage for good and bad alike' is scoped: where those premises hold, the lever has a direction, toward the shapers' control. Neither reading ranks that direction good or bad. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#alignment-without-premise",
+     "says": {
+      "en": "Reading [AI reading, D45]. Capability is reach, and the gap is the reach closure less the coupling closure, so capability extending reach without extending the coupling enlarges the gap."
+     },
+     "role": "carries",
+     "part": "D45: capability is reach"
+    },
+    {
+     "record": "shaping-the-rule-selected-by-what-comes-back",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-shaping-the-rule-selected-by-what-comes-back",
+     "says": {
+      "en": "Theorem (counts; premises named). A smaller cost gives a rule not lower, and a strictly smaller one a strictly higher rule. A 07 reading [D68]: that assistance lowers an actual cost and changes nothing else is the reading."
+     },
+     "role": "carries"
+    }
+   ],
+   "account_adds": {
+    "en": "An exact sign for the lever on control."
+   },
+   "source_adds": {
+    "en": "Open and locally owned models as the assistance meant, and their insufficiency said of them; local ownership, and the rural community's subsistence as the case at stake."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": null
+  },
+  {
+   "id": "cx-fork-defection-correction",
+   "name": {
+    "en": "Defection cannot be eliminated; situational correction and resilience"
+   },
+   "domain": "earlier-folders",
+   "group": "the-fork-and-cooperative-infrastructure",
+   "source": {
+    "work": "theories/the-fork-and-cooperative-infrastructure/README.md",
+    "locator": "Claim 42; Open questions 4 and 5",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Defection cannot be eliminated. The goal is that surrounding intelligence recognizes destabilizing behaviour and coordinates correction, tested by systemic effect. Any power enough to stop a determined superhuman defector is the concentration forbidden, so the answer is resilience, a response that recognizes, dampens and stands down, with no guarantee offered. Someone may understand the whole argument and prefer domination anyway."
+   },
+   "quote": "Defection cannot be eliminated",
+   "carried": "carried-in-part",
+   "relation": "agreement",
+   "reading": {
+    "en": "Forms of withholding, not of adversaries: a thin withholding passes out under tolerance, total withholding stays, and under chance errors a window delays total withholding without preventing it, the probability-one step by hand. Nothing there recognizes or corrects. The determined adversary has a name, informed harm, a harmful arrangement kept knowingly, the hard rival; seeing is not valuing, so no law moves one who prefers otherwise. A difference closes only through a formation coupling the courses apart. Nothing on standing down. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#route-b",
+     "says": {
+      "en": "Reading [AI reading, D65]. Kept apart: an omission of the representation, a fault in organized relations (suppressed feedback, blocked exit) and informed harm (a harmful arrangement kept knowingly, no loss returning), the hard rival, which tests the inference from one unfolding to goodwill without refuting normative grounds."
+     },
+     "role": "carries",
+     "part": "D65, informed harm"
+    },
+    {
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#does-not-show",
+     "says": {
+      "en": "Seeing is not valuing: enlarging what couples in changes what a selection can separate, not which differences matter. Coupling is not compliance: coupling bounds what a member's acts respond to and fixes nothing within the bound."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "thresholds-of-waiting",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+     "says": {
+      "en": "Theorem (any type). A thin withholding, where every formation waits on at most its tolerance inside the withholding set, passes out in one step. Without a formation sparing all it waits on, total withholding stays."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "errors-by-chance-in-a-pair-keeping-mutual-withholding",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-errors-by-chance-in-a-pair-keeping-mutual-withholding",
+     "says": {
+      "en": "Theorem (a pair's run of two laws; near-definitional), with a Reading [AI reading, new]: under errors by chance the window delays total withholding and does not prevent it. Nothing says which law of giving is better."
+     },
+     "role": "neighbour"
+    },
+    {
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#alignment-without-premise",
+     "says": {
+      "en": "Reading [AI reading, D45]. Reaching is not responding: a difference closes only through a formation outside the part that couples it apart, and coupling a difference apart does not make a formation close it."
+     },
+     "role": "neighbour",
+     "part": "D45: pooling across intelligences"
+    }
+   ],
+   "account_adds": {
+    "en": "The price of tolerance in a pair, and that the withholding laws are sign-neutral."
+   },
+   "source_adds": {
+    "en": "Correction by surrounding intelligence tested by systemic effect, the enforcement antinomy, and a response that recognizes, dampens and stands down. Sanctions are not modelled in 05 §12, and the account offers no defence against informed harm either."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": "thesis-or-method",
+   "same_as": null
+  },
+  {
+   "id": "cx-fork-good-enough-tree",
+   "name": {
+    "en": "Good enough: provision like a tree"
+   },
+   "domain": "earlier-folders",
+   "group": "the-fork-and-cooperative-infrastructure",
+   "source": {
+    "work": "theories/the-fork-and-cooperative-infrastructure/README.md",
+    "locator": "Claims 47 and 48; 2026-10-02 update, first paragraph",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "The necessity layer should be 'good enough', not AI retrained each year to be more capable. Its model is the tree: it provides shelter and fruit, does not become the whole ecosystem and asks no return. Enough becomes a design property, since provision does not keep growing. From an automatic transcript, with Ren provisionally Speaker B."
+   },
+   "quote": "They just need to be good enough so we all be like oh it's good.",
+   "carried": "fresh-reading",
+   "relation": "agreement",
+   "reading": {
+    "en": "Proposed here; no live text says this of provision. The account has exact forms of enough: a target can rest where an unchanged state meets it, and at a set point an order is undriven. 'Asks no return' has the form of a source, giving whatever it waits on. But a set point does not protect: formations holding a level end what renews it wherever their losses together exceed what is given. So a tree's not growing is not safe by itself. Provision is not modelled. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "seeking-boundary",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-seeking-boundary",
+     "says": {
+      "en": "Theorem (any type; a determined law for rest). Under a determined law the orbit comes to rest with its target met exactly where it reaches a state the law leaves unchanged that meets the target. 'More than now' is met only by change."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "the-boundary-of-enough-under-undetermined-laws",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-the-boundary-of-enough-under-undetermined-laws",
+     "says": {
+      "en": "Theorem (any process; no axiom). Under an undetermined law enough parts in two: some run rests with its target met, or every run does."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "what-a-set-point-optimum-does-beyond",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-what-a-set-point-optimum-does-beyond",
+     "says": {
+      "en": "Theorem (any set of outcomes; the draw on the World). Where an eligible outcome reaches the set point every optimum stands at it; formations holding the family's stock, their losses together above what the rest gives a gated condition, end it however small each loss. What protects what lies beyond at the set point is the choice among equal optima, which no law here models."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "giving-that-waits-on-giving",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-giving-that-waits-on-giving",
+     "says": {
+      "en": "Theorem (any type). In a ring of three, with a source giving whatever it waits on (giving first), all give from step 3 from every start. It does not show how waiting forms, or that cooperation is good."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "That what protects what lies beyond at a set point is unmodelled, and that holding a level still draws."
+   },
+   "source_adds": {
+    "en": "Good enough as the design of the necessity layer, the tree as its model, and not becoming the whole ecosystem as a design property. Whether the layer's own inputs renew is the source's open question too."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": "reading",
+   "same_as": null
+  },
+  {
+   "id": "cx-fork-autonomous-no-stewards",
+   "name": {
+    "en": "An autonomous, infallible layer held by no one"
+   },
+   "domain": "earlier-folders",
+   "group": "the-fork-and-cooperative-infrastructure",
+   "source": {
+    "work": "theories/the-fork-and-cooperative-infrastructure/README.md",
+    "locator": "Claims 5 and 50; In Ren's own words, 2024-11-03; 2026-10-02 update",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "The infrastructure must be autonomous and survive its tenants ('infallible and autonomous', 2024). A layer depending on virtuous stewards fails the test of the corruption of the constraining mechanism itself, so, like trees, it is held by no one. Claim 50 is tagged the folder's reading of two passages. Question 16 keeps Ren's own 'You need a way for the AI to decay'."
+   },
+   "quote": "the corruption of the constraining mechanism itself",
+   "carried": "changed",
+   "relation": "divergence",
+   "reading": {
+    "en": "The worry is carried, the remedy is not. Corruption taking over routes of correction is read beside capture. But a rule a course keeps moving under does not keep the possible widening, read for institutions and AI policy; in the renewable process no reading fixed by a finite record and including every renewing run excludes consumption, which bears on 'infallible' only by this reading; a carrier needs funded succession. Calling this worse needs C for order, with scope from the continuation condition, neither asserted. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#7-keeping-the-future-open",
+     "says": {
+      "en": "Reading [AI reading, D45]: a fixed rule, institution, constitution or AI policy whose moves a course makes from some step on does not keep the possible under it widening. Openness is a property of how rules keep changing, not of any rule chosen once. Nothing says which changes do it."
+     },
+     "role": "carries",
+     "part": "D45"
+    },
+    {
+     "record": "becoming-finite-horizon",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-becoming-finite-horizon",
+     "says": {
+      "en": "Theorem (the renewable process; the support-gated law with feedback). A reading fixed by the first h steps that includes every renewing run includes a consuming one. The force lies in 'every renewing run', which overdraws before h."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "succession-on-a-funded-carrier",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-succession-on-a-funded-carrier",
+     "says": {
+      "en": "Theorem (periphery, axioms reported). Selection must fund actual succession: in witnesses a missing part stops realization while the aggregate stays safe, and a budget for correction alone fails to pay for migration."
+     },
+     "role": "neighbour"
+    },
+    {
+     "anchor": "theories/becoming/chapters/02-MAP.md#t7",
+     "says": {
+      "en": "Reading [AI reading, D26 as revised]. A second order, corruption taking over courts, press, statistics and audit, is a loop whose rule-reading reaches the routes of 明 themselves. None of this says whether a locked loop supports or damages 生生."
+     },
+     "role": "carries",
+     "part": "D26 as revised"
+    }
+   ],
+   "account_adds": {
+    "en": "That a fixed layer's lack of widening is no verdict by itself: endless change of the rule does not suffice, and nothing says which changes keep it widening."
+   },
+   "source_adds": {
+    "en": "Autonomy as the answer to corrupted stewards, and holding by no one. Who maintains, renews and retires such a layer is left open by the folder too."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": null
+  },
+  {
+   "id": "cx-fork-infrastructure-upstream",
+   "name": {
+    "en": "Infrastructure is upstream of coordination"
+   },
+   "domain": "earlier-folders",
+   "group": "the-fork-and-cooperative-infrastructure",
+   "source": {
+    "work": "theories/the-fork-and-cooperative-infrastructure/README.md",
+    "locator": "Claim 1; Genealogy, 2021-10 and 2024-04",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Better infrastructure is upstream of better coordination: what can be coordinated is bounded by what has been built. Tagged a mechanism, stated in 2024 and, about physical space, in the 2021 Metamunity proposal."
+   },
+   "quote": "what can be coordinated is bounded by what has been built",
+   "carried": "fresh-reading",
+   "relation": "agreement",
+   "reading": {
+    "en": "Proposed here; the general bound is not stated. Its form is near joint plans: two locally successful plans on one reserve fail at a joint step, paired plans hold only with availability and faithful projection, and ignition needs an actual reserve. Selected histories show formed conditions carrying joint work, an assessment and no law. Under the continuation condition for scope and C for order, neither asserted, with J1–J4, shared capacity can be warranted, and its overbuilding is the counterexample. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "joint-plan-composition",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plan-composition",
+     "says": {
+      "en": "Theorem (any process). Compatible plans with faithful projection zip and keep both guards, and every joint plan keeping a guard is compatible. Two locally successful two-step plans on one two-unit reserve fail at the second joint step (periphery); serialization without renewal does not repair it. Applications must establish projection and compatibility."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "joint-plans-from-a-supported-start",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start",
+     "says": {
+      "en": "Theorem (any process; periphery module, axioms as its receipt reports). With faithful projections, valid local plans, availability and kept properties, the paired finite plan is valid; one circular dependence can be maintenance running or a wait no one can begin."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "formed-software-continuation",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-formed-software-continuation",
+     "says": {
+      "en": "Assessment (selected histories, no theorem). Formed conditions carried the next stretch of joint work, as specific conditions, not interchangeable amounts."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "organizational-formation-from-generative-comparison",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-organizational-formation-from-generative-comparison",
+     "says": {
+      "en": "Conditional (the condition for scope; C for order, with J1–J4). It can warrant building shared capacity without fixing one carrier; overbuilding that depletes the living basis is its counterexample where construction reports omit retained amounts."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "That availability and compatibility must be established, since a law with no successors keeps every property vacuously."
+   },
+   "source_adds": {
+    "en": "The general claim that what has been built bounds what can be coordinated, and the city as the case that first prompted it."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": "reading",
+   "same_as": null
+  },
+  {
+   "id": "cx-fork-no-real-externality",
+   "name": {
+    "en": "No real externality, it's interconnected"
+   },
+   "domain": "earlier-folders",
+   "group": "the-fork-and-cooperative-infrastructure",
+   "source": {
+    "work": "theories/the-fork-and-cooperative-infrastructure/README.md",
+    "locator": "Relations, becoming",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "The folder lists what Ren moved to when cooperative-versus-competitive proved insufficient: generative-versus-degenerative, that there is no real externality because all is interconnected, and generativity as stewardship of the environment's generativity. A quoted line in a relations note, not a numbered claim."
+   },
+   "quote": "there is no real externality, it's interconnected",
+   "carried": "carried-in-part",
+   "relation": "scope",
+   "reading": {
+    "en": "The first half is stated as a reading: 'external' is relative to an accounting's scope, and those affected stay in the one unfolding. But interconnection does the ethical work only in part: selection stays blind beyond its closure, a loss returning to no one counts only under the continuation condition, and informed harm tests the step from one unfolding to goodwill. C gives any order; neither is asserted, warrant open. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#markets",
+     "says": {
+      "en": "Reading [AI reading, D65; a hypothetical case]. What the selection does not couple into is drawn from. 'External' is relative to an accounting's scope; those affected remain in the one unfolding."
+     },
+     "role": "carries",
+     "part": "D65, external relative to an accounting"
+    },
+    {
+     "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#4-what-needs-a-premise",
+     "says": {
+      "en": "Scope: the continuation condition. A loss beyond every selector's closure, a loss that returns to no one, counts only under it. Order: C. Neither premise is warranted here."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#route-b",
+     "says": {
+      "en": "Reading [AI reading, D65]. Kept apart: an omission of the representation, a fault in organized relations (suppressed feedback, blocked exit) and informed harm, the hard rival, which tests the inference from one unfolding to goodwill without refuting normative grounds."
+     },
+     "role": "neighbour",
+     "part": "D65, informed harm"
+    }
+   ],
+   "account_adds": {
+    "en": "That a difference beyond every closure is still selected alike: being in one unfolding does not make a selection reach it."
+   },
+   "source_adds": {
+    "en": "The flat form, 'no real externality', and generativity as stewardship of the environment's generativity."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": [
+    "cx-zhishan-no-real-externality"
+   ]
+  },
+  {
+   "id": "cx-fork-trust-from-shared-understanding",
+   "name": {
+    "en": "Trust as an outcome of shared understanding"
+   },
+   "domain": "earlier-folders",
+   "group": "the-fork-and-cooperative-infrastructure",
+   "source": {
+    "work": "theories/the-fork-and-cooperative-infrastructure/README.md",
+    "locator": "Claim 8; In Ren's own words, 2025-03-14; Genealogy, 2025-03",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Trust is an outcome of shared understanding, not a precondition for coordination: it arises when people share an understanding of reality and can reasonably expect others to act accordingly. So the first task is teaching people how to see, not what is good. From the 2025 good_bot teaching prompts."
+   },
+   "quote": "Trust is not a prerequisite",
+   "carried": "carried-in-part",
+   "relation": "scope",
+   "reading": {
+    "en": "Not in its terms: 'trust' has no live hit. What is stated is the aim and a limit: the work is for a truth anyone can check, and through it shared understanding and coordination, and no check inside it can show that it serves this. Observation comes first, necessary and not sufficient; seeing is not valuing keeps 'how to see' and 'what is good' apart. Giving that waits starts from a source giving first, not from understanding. No law has understanding produce expectation or trust. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#the-work-by-its-own-laws",
+     "says": {
+      "en": "The work read by its own laws [AI reading, D66]. Human readers, coordination among people and trained systems couple into none of the work's selectors, so no check run inside the work can show that the work serves what it is for: a truth anyone can check, and through it shared understanding and coordination."
+     },
+     "role": "carries",
+     "part": "D66"
+    },
+    {
+     "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#6-what-enough-situationality-would-have-to-mean",
+     "says": {
+      "en": "Reading [AI reading, D45]. Observation is the first condition, necessary and not sufficient: seeing is not valuing, and coupling is not compliance."
+     },
+     "role": "carries",
+     "part": "D45"
+    },
+    {
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+     "says": {
+      "en": "Reading [AI reading, D48]. Cooperation among strangers is giving that waits on giving across chains longer than any acquaintance. 'Others will deceive me, so I deceive first' is withholding with memory, which absorbs. Mutual promises alone cannot start a loop with no source."
+     },
+     "role": "neighbour",
+     "part": "D48"
+    }
+   ],
+   "account_adds": {
+    "en": "That seeing does not itself give coordination: response, time, resolution, pace and structure are further conditions, and all together rank nothing."
+   },
+   "source_adds": {
+    "en": "Trust as such, that it arises from a shared understanding of reality and reasonable expectation, and teaching how to see as the first move. It stands in this folder and sources/01-writings-2025 (good_bot cluster)."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": null
+  },
+  {
+   "id": "cx-fork-constructive-chain",
+   "name": {
+    "en": "The constructive chain, from tools to freely built worlds"
+   },
+   "domain": "earlier-folders",
+   "group": "the-fork-and-cooperative-infrastructure",
+   "source": {
+    "work": "theories/the-fork-and-cooperative-infrastructure/README.md",
+    "locator": "The theory in one paragraph; From productive capacity, fifth paragraph",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Available knowledge and tools, then further capacity, generously shared provision, freedom from livelihood coercion, voluntary collective creation and renewed conditions for further becoming. Civilization becomes a system consciously cultivated to sustain and create better futures. The folder's main thesis; each link needs work and can fail in identifiable ways."
+   },
+   "quote": "renewed conditions for further becoming",
+   "carried": "not-carried",
+   "relation": null,
+   "reading": {
+    "en": "The account names no such chain. 05 §11 lists the folder among design programmes, correspondence not established. The last link has no warrant here beyond widening under C, with the continuation condition for scope, neither asserted, warrant open. 'Better futures' is a comparison the account would require to say what it reads. A programme need not be absorbed: this is what the folder holds and the account does not. [AI reading]"
+   },
+   "targets": [],
+   "account_adds": null,
+   "source_adds": {
+    "en": "Stands in this folder, worldbuilding/foundations/automation-to-shared-abundance.md and worldbuilding/foundations/generative-worldmaking.md."
+   },
+   "absence": {
+    "searched": [
+     "abundan: 04 and review/SCIENCES.md, one line each, seen by grep only; necessit: other senses, by file (the reviser's)",
+     "丰裕, 公地, 公器, 天下为公: 06 at 天下为主 and no provision line",
+     "infrastructure: the link in 05 §11 (the mapper's search; not repeated)",
+     "commons: the lake and stock tests, read in ONE-PAGE, 05, COLLECTIVE-DIRECTION",
+     "housing, voluntar, free association, post-scarc, welfare: no file"
+    ],
+    "read": [
+     "theories/becoming/chapters/05-COLLECTIVES.md §11",
+     "theories/becoming/COLLECTIVE-DIRECTION.md",
+     "theories/becoming/chapters/07-SIGNIFICANCE.md the start of T8"
+    ]
+   },
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": null
+  }
+ ],
+ "changes": [
+  {
+   "id": "cx-fork-even-the-winner-loses",
+   "what": "changed",
+   "why": "same-claims: New link: one claim of the 2026-01 Chiang Mai talk (fork claim 16, 'same file; 2026-01 talk'; wamo claim 28, TALK 14:52-16:28); both changed/divergence on relative-position-is-zero-sum."
+  },
+  {
+   "id": "cx-fork-only-stable-equilibrium",
+   "what": "changed",
+   "why": "competition: Same out-cb-07 #64 line, which zhishan quotes as Ren's words 30; labels already agree. / same-claims: New link: fork claim 15, wamo claim 97 and zhishan claim 107 state one 2026-02-17 line (除了最后的胜利者…); all three changed/divergence."
+  },
+  {
+   "id": "cx-fork-strong-guardians",
+   "what": "changed",
+   "why": "alignment-section: Part normalized."
+  },
+  {
+   "id": "cx-fork-one-rule",
+   "what": "changed",
+   "why": "alignment-section: Part normalized."
+  },
+  {
+   "id": "cx-fork-ai-dual-of-its-threat",
+   "what": "changed",
+   "why": "alignment-section: Part normalized."
+  },
+  {
+   "id": "cx-fork-open-intelligence-leverage",
+   "what": "changed",
+   "why": "alignment-section: Like claim with cx-kpso-ai-raises-the-gain and cx-wamo-amplifier on the same parts (D45 reach, the cost-of-shaping law), both carried-in-part/scope; D45 and D68 are sentences of the account, and its old reading's 'sign-neutral' contradicted its own account_adds. / codes-and-rules: The live 07 D68 sentence states that distributed capability does not stop the selection for control. cx-wamo-amplifier, cx-kpso-ai-raises-the-gain and cx-asc-ai-amplifies-what-competition-rewards are carried-in-part on that sentence. The relation stays agreement of reading: the source denies sufficiency and states nothing universally."
+  },
+  {
+   "id": "cx-fork-defection-correction",
+   "what": "changed",
+   "why": "alignment-section: Part normalized: 'reaching is not responding' stands in the pooling paragraph."
+  },
+  {
+   "id": "cx-fork-no-real-externality",
+   "what": "changed",
+   "why": "competition: The quoted line is zhishan's Ren's words 14 (2026-04-28); same verdict."
+  }
+ ],
+ "live_flags": []
+}

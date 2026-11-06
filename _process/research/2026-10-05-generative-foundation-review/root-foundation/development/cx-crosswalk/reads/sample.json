@@ -1,0 +1,287 @@
+{
+ "seed": 20261107,
+ "per": 6,
+ "stage": "5-compare",
+ "sizes": {
+  "carried-in-part/agreement/law": 115,
+  "carried-in-part/agreement/reading": 26,
+  "carried-in-part/agreement/thesis-or-method": 59,
+  "carried-in-part/contrary-reading": 4,
+  "carried-in-part/divergence": 47,
+  "carried-in-part/scope": 236,
+  "carried/agreement/law": 3,
+  "changed/divergence": 168,
+  "changed/scope": 22,
+  "fresh-reading/agreement/law": 13,
+  "fresh-reading/agreement/reading": 115,
+  "fresh-reading/agreement/thesis-or-method": 7,
+  "fresh-reading/contrary-reading": 20,
+  "fresh-reading/divergence": 111,
+  "fresh-reading/scope": 110,
+  "history-only": 20,
+  "history-only/agreement/reading": 1,
+  "history-only/contrary-reading": 1,
+  "history-only/scope": 1,
+  "not-carried": 104
+ },
+ "drawn": {
+  "carried-in-part/agreement/law": [
+   "cx-archearth-recursive-capacity",
+   "cx-ecoevo-price-equation",
+   "cx-ecs-boundary-sufficiency-composition",
+   "cx-kpso-correlated-collapse",
+   "cx-ma-diagnosis-limit",
+   "cx-sspiral-sample-size-hedge"
+  ],
+  "carried-in-part/agreement/reading": [
+   "cx-ecoevo-major-transitions",
+   "cx-fork-common-by-function",
+   "cx-fork-cooperation-not-good",
+   "cx-kpso-belief-by-game-type",
+   "cx-modphil-sen-maximal-and-comparative",
+   "cx-zhishan-leviathan-concentration"
+  ],
+  "carried-in-part/agreement/thesis-or-method": [
+   "cx-ecoevo-adaptationist-inference",
+   "cx-fork-defection-correction",
+   "cx-jianwen-zhi-ge-caution",
+   "cx-memories-sort-by-status",
+   "cx-rsd-self-action-centre",
+   "cx-zhishan-selection-gradient-alignment"
+  ],
+  "carried-in-part/contrary-reading": [
+   "cx-drives-framework-as-basin",
+   "cx-econ-schelling-commitment",
+   "cx-modphil-parfit-extreme-claim",
+   "cx-sty-metaphysical-compression"
+  ],
+  "carried-in-part/divergence": [
+   "cx-hsm-anti-laundering",
+   "cx-hsm-research-question",
+   "cx-jianwen-time-inside-the-primitive",
+   "cx-kpso-named-values",
+   "cx-ma-endings",
+   "cx-sspiral-frame-as-unit"
+  ],
+  "carried-in-part/scope": [
+   "cx-drives-value-is-formed",
+   "cx-ma-conceptual-capture",
+   "cx-sspiral-adopt-or-die",
+   "cx-sspiral-point-of-no-return",
+   "cx-wamo-emergence-and-window",
+   "cx-wamo-training-encodes"
+  ],
+  "carried/agreement/law": [
+   "cx-jianwen-v4-orbit-count",
+   "cx-ma-applicable-grounds",
+   "cx-ma-task-revision"
+  ],
+  "changed/divergence": [
+   "cx-jianwen-every-character-definite",
+   "cx-jianwen-few-operators-many-atoms",
+   "cx-sspiral-trust-output",
+   "cx-sty-agents-operators-human-root",
+   "cx-zhishan-loops-not-symmetric",
+   "cx-zhishan-v8-stop-ruling"
+  ],
+  "changed/scope": [
+   "cx-ctxrt-only-generating",
+   "cx-sty-emergent-institutions",
+   "cx-sty-rules-governing-themselves",
+   "cx-wamo-coordination-bottleneck",
+   "cx-wamo-narrative-consensus-action",
+   "cx-zhishan-li-is-increasing"
+  ],
+  "fresh-reading/agreement/law": [
+   "cx-greek-epicurus-limit-of-desire",
+   "cx-greek-heraclitus-river",
+   "cx-modphil-marx-metabolic-rift",
+   "cx-modphil-parfit-fission",
+   "cx-modphil-parfit-self-defeating",
+   "cx-modphil-sen-rational-fools"
+  ],
+  "fresh-reading/agreement/reading": [
+   "cx-ecs-scoped-adoption",
+   "cx-fork-good-enough-tree",
+   "cx-hsm-no-nobler-first",
+   "cx-modphil-hegel-lord-bondsman-certifies-nothing",
+   "cx-modphil-whitehead-objective-immortality",
+   "cx-sty-intersubjective-infrastructure"
+  ],
+  "fresh-reading/agreement/thesis-or-method": [
+   "cx-greek-plato-sophist-power",
+   "cx-modphil-spinoza-good-from-desire",
+   "cx-modphil-whitehead-immanent-law",
+   "cx-modphil-whitehead-misplaced-concreteness",
+   "cx-sty-meaning-declared-not-inferred",
+   "cx-sty-negative-space-norms"
+  ],
+  "fresh-reading/contrary-reading": [
+   "cx-abr-aquinas-mixed-relation",
+   "cx-buddhist-candrakirti-no-own-thesis",
+   "cx-buddhist-mmk-24-18-designation-and-views",
+   "cx-buddhist-mmk-no-arising-from-other",
+   "cx-econ-lucas-against-constants",
+   "cx-modphil-simondon-individual-as-phase"
+  ],
+  "fresh-reading/divergence": [
+   "cx-greek-aristotle-voluntary",
+   "cx-greek-hierocles-circles",
+   "cx-greek-plato-forms",
+   "cx-modphil-sen-capability",
+   "cx-oi-kevala",
+   "cx-oi-moksha"
+  ],
+  "fresh-reading/scope": [
+   "cx-abr-khaldun-ruler-replaces-kin",
+   "cx-fork-top-of-leverage-hierarchy",
+   "cx-greek-aristotle-growth-form",
+   "cx-greek-sextus-induction",
+   "cx-jianwen-frames-cross-applicable",
+   "cx-sty-explainable-authority"
+  ],
+  "history-only": [
+   "cx-abr-ritual-without-justice",
+   "cx-drives-qing-as-weighting",
+   "cx-econ-arrow-sen-impossibility",
+   "cx-ma-caoc",
+   "cx-rsd-golden-rule",
+   "cx-zhishan-self-binding-clauses"
+  ],
+  "history-only/agreement/reading": [
+   "cx-greek-socrates-knowing-scope"
+  ],
+  "history-only/contrary-reading": [
+   "cx-greek-epicurus-death"
+  ],
+  "history-only/scope": [
+   "cx-buddhist-mmk26-chain-and-stopping"
+  ],
+  "not-carried": [
+   "cx-dpc-prigogine-structures",
+   "cx-drives-two-mechanisms",
+   "cx-econ-olson-rise-and-decline",
+   "cx-kpso-human-substrate",
+   "cx-sty-searle-goffman-grounding",
+   "cx-syscyb-holling-adaptive-cycle"
+  ]
+ },
+ "shares": [
+  [
+   "cx-archearth-recursive-capacity",
+   "cx-fork-cooperation-not-good",
+   "cx-rsd-self-action-centre",
+   "cx-jianwen-time-inside-the-primitive",
+   "cx-wamo-emergence-and-window",
+   "cx-sty-agents-operators-human-root",
+   "cx-zhishan-li-is-increasing",
+   "cx-fork-good-enough-tree",
+   "cx-modphil-whitehead-misplaced-concreteness",
+   "cx-modphil-simondon-individual-as-phase",
+   "cx-fork-top-of-leverage-hierarchy",
+   "cx-ma-caoc",
+   "cx-econ-olson-rise-and-decline"
+  ],
+  [
+   "cx-ecoevo-price-equation",
+   "cx-kpso-belief-by-game-type",
+   "cx-zhishan-selection-gradient-alignment",
+   "cx-kpso-named-values",
+   "cx-wamo-training-encodes",
+   "cx-zhishan-loops-not-symmetric",
+   "cx-greek-epicurus-limit-of-desire",
+   "cx-hsm-no-nobler-first",
+   "cx-sty-meaning-declared-not-inferred",
+   "cx-greek-aristotle-voluntary",
+   "cx-greek-aristotle-growth-form",
+   "cx-rsd-golden-rule",
+   "cx-kpso-human-substrate"
+  ],
+  [
+   "cx-ecs-boundary-sufficiency-composition",
+   "cx-modphil-sen-maximal-and-comparative",
+   "cx-drives-framework-as-basin",
+   "cx-ma-endings",
+   "cx-jianwen-v4-orbit-count",
+   "cx-zhishan-v8-stop-ruling",
+   "cx-greek-heraclitus-river",
+   "cx-modphil-hegel-lord-bondsman-certifies-nothing",
+   "cx-sty-negative-space-norms",
+   "cx-greek-hierocles-circles",
+   "cx-greek-sextus-induction",
+   "cx-zhishan-self-binding-clauses",
+   "cx-sty-searle-goffman-grounding"
+  ],
+  [
+   "cx-kpso-correlated-collapse",
+   "cx-zhishan-leviathan-concentration",
+   "cx-econ-schelling-commitment",
+   "cx-sspiral-frame-as-unit",
+   "cx-ma-applicable-grounds",
+   "cx-ctxrt-only-generating",
+   "cx-modphil-marx-metabolic-rift",
+   "cx-modphil-whitehead-objective-immortality",
+   "cx-abr-aquinas-mixed-relation",
+   "cx-greek-plato-forms",
+   "cx-jianwen-frames-cross-applicable",
+   "cx-greek-socrates-knowing-scope",
+   "cx-syscyb-holling-adaptive-cycle"
+  ],
+  [
+   "cx-ma-diagnosis-limit",
+   "cx-ecoevo-adaptationist-inference",
+   "cx-modphil-parfit-extreme-claim",
+   "cx-drives-value-is-formed",
+   "cx-ma-task-revision",
+   "cx-sty-emergent-institutions",
+   "cx-modphil-parfit-fission",
+   "cx-sty-intersubjective-infrastructure",
+   "cx-buddhist-candrakirti-no-own-thesis",
+   "cx-modphil-sen-capability",
+   "cx-sty-explainable-authority",
+   "cx-greek-epicurus-death"
+  ],
+  [
+   "cx-sspiral-sample-size-hedge",
+   "cx-fork-defection-correction",
+   "cx-sty-metaphysical-compression",
+   "cx-ma-conceptual-capture",
+   "cx-jianwen-every-character-definite",
+   "cx-sty-rules-governing-themselves",
+   "cx-modphil-parfit-self-defeating",
+   "cx-greek-plato-sophist-power",
+   "cx-buddhist-mmk-24-18-designation-and-views",
+   "cx-oi-kevala",
+   "cx-abr-ritual-without-justice",
+   "cx-buddhist-mmk26-chain-and-stopping"
+  ],
+  [
+   "cx-ecoevo-major-transitions",
+   "cx-jianwen-zhi-ge-caution",
+   "cx-hsm-anti-laundering",
+   "cx-sspiral-adopt-or-die",
+   "cx-jianwen-few-operators-many-atoms",
+   "cx-wamo-coordination-bottleneck",
+   "cx-modphil-sen-rational-fools",
+   "cx-modphil-spinoza-good-from-desire",
+   "cx-buddhist-mmk-no-arising-from-other",
+   "cx-oi-moksha",
+   "cx-drives-qing-as-weighting",
+   "cx-dpc-prigogine-structures"
+  ],
+  [
+   "cx-fork-common-by-function",
+   "cx-memories-sort-by-status",
+   "cx-hsm-research-question",
+   "cx-sspiral-point-of-no-return",
+   "cx-sspiral-trust-output",
+   "cx-wamo-narrative-consensus-action",
+   "cx-ecs-scoped-adoption",
+   "cx-modphil-whitehead-immanent-law",
+   "cx-econ-lucas-against-constants",
+   "cx-abr-khaldun-ruler-replaces-kin",
+   "cx-econ-arrow-sen-impossibility",
+   "cx-drives-two-mechanisms"
+  ]
+ ]
+}

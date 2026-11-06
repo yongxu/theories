@@ -195,8 +195,8 @@
       "kind": "scope"
     },
     {
-      "zh": "即代理问题（Goodhart 1975；Amodei 等 2016；Manheim、Garrabrant 2018）；Zhuang、Hadfield-Menell（2020）证明了更强的定量形式。",
-      "en": "Known as the proxy problem (Goodhart 1975, Amodei and others 2016, Manheim and Garrabrant 2018); Zhuang and Hadfield-Menell (NeurIPS 2020) prove a stronger, quantitative form.",
+      "zh": "即代理问题（Goodhart 1975；Amodei 等 2016；Manheim、Garrabrant 2018）中对代理所不记录者之不见，不及其回归与因果两类；Zhuang、Hadfield-Menell（2020）证明了更强的定量形式。",
+      "en": "Known as the proxy problem (Goodhart 1975, Amodei and others 2016, Manheim and Garrabrant 2018) in its blindness to what a proxy does not register, not its regressional or causal kinds; Zhuang and Hadfield-Menell (NeurIPS 2020) prove a stronger, quantitative form.",
       "kind": "correspondence"
     }
   ],
@@ -827,6 +827,10 @@
     {
       "en": "29 October 2026, board item UE18 (study section 452): related to the-markov-blanket-as-a-coupling-structure; no statement, next step or declaration changed.",
       "zh": "2026年10月29日，工作板条目 UE18（研究第 452 节）：与 the-markov-blanket-as-a-coupling-structure 相关联；无一陈述、下一步或声明改变。"
+    },
+    {
+      "en": "7 November 2026, CX: the correspondence corrected where a reader of the crosswalk found it wider than its source or its home (the crosswalk's live flags, checked at home); no law, premise or scope of this record changed.",
+      "zh": "2026年11月7日，CX：交叉对照之读者发现对应说得比其来源或本处更宽，于本处查实后更正；本记录之律、前提与范围均未变。"
     }
   ],
   "text_versions": [

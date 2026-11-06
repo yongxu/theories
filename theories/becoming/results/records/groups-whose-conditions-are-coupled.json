@@ -132,8 +132,8 @@
     "zh": "组间混合；组与其耦合如何形成；成员依次被耗尽时更紧的族定律；独立审查。"
   },
   "correspondence": {
-    "en": "Metapopulation dynamics (Levins 1969; Hanski 1998): patches linked by recolonization persist or go extinct together, and a patch read alone can look sustained while the network is in deficit; group selection requires groups that differ in their fate (Wilson and Sober 1994), which coupled groups do not. Readings (the AI's): coupling, not sharing one condition, is what makes groups end together; a commons is a family, not a single pool.",
-    "zh": "集合种群动态（Levins 1969；Hanski 1998）：由再定殖相连的斑块一同存续或一同灭绝，单独读出的斑块可能看似可持续，而网络整体处于亏空；组选择需要命运不同的组（Wilson 与 Sober 1994），耦合的组则不然。读法（AI 的）：使各组一同终结的是耦合，而非共享一个条件；公地是一个族，而非单一池。"
+    "en": "Metapopulation dynamics (Levins 1969; Hanski 1998): patches go extinct apart and are recolonized, so persistence is the network's, and a patch read alone can look sustained while the network is in deficit; group selection requires groups that differ in their fate (Wilson and Sober 1994), which coupled groups do not. Readings (the AI's): coupling, not sharing one condition, is what makes groups end together; a commons is a family, not a single pool.",
+    "zh": "集合种群动态（Levins 1969；Hanski 1998）：斑块各自灭绝又被再定殖，存续属于网络，单独读出的斑块可能看似可持续，而网络整体处于亏空；组选择需要命运不同的组（Wilson 与 Sober 1994），耦合的组则不然。读法（AI 的）：使各组一同终结的是耦合，而非共享一个条件；公地是一个族，而非单一池。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuation.lean",
   "aliases": [
@@ -429,6 +429,10 @@
     {
       "en": "22 October 2026, CA1: related to confined-rise-within-a-whole (study section 366); this record's laws and statements are unchanged.",
       "zh": "2026年10月22日，CA1：与 confined-rise-within-a-whole 相关（研究第 366 节）；本记录的定律与陈述不变。"
+    },
+    {
+      "en": "7 November 2026, CX: the correspondence corrected where a reader of the crosswalk found it wider than its source or its home (the crosswalk's live flags, checked at home); no law, premise or scope of this record changed.",
+      "zh": "2026年11月7日，CX：交叉对照之读者发现对应说得比其来源或本处更宽，于本处查实后更正；本记录之律、前提与范围均未变。"
     }
   ]
 }

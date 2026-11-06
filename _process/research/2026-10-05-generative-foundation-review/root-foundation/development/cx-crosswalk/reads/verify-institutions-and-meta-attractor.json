@@ -1,0 +1,116 @@
+{
+ "cluster": "institutions-and-meta-attractor",
+ "flags": [
+  {
+   "where": "theories/becoming/COLLECTIVE-DIRECTION.md:87",
+   "flag": "\"No institution is modelled on the spine\" against 05 §12's root model of one kind of institution, ONE-PAGE:38 and THE-THEORY-OF-BECOMING:195.",
+   "verdict": "holds",
+   "why": "05 §12 is a root theorem (a family of models) whose reading calls the member taught by members the model of one kind of institution, and ONE-PAGE and the overview say one kind of institution has one minimal model [AI reading]; the page's 'no institution is modelled' tells the reader the opposite. Its true part, that no actual institution is shown to meet the hypotheses, is 05 §12's own correspondence duty and is kept.",
+   "edits": [
+    {
+     "path": "theories/becoming/COLLECTIVE-DIRECTION.md",
+     "old": "No institution is modelled on the spine; no field test",
+     "new": "One kind of institution has one minimal model on the root, an entry rule on a shared stock, read as such [AI reading] ([05 §12](chapters/05-COLLECTIVES.md#r-a-rule-rebuilt-from-the-members-it-limits)), and that any actual institution meets its hypotheses is not shown; no field test",
+     "region": "§5 What is empirical, the bullet 'Institutions and people'"
+    }
+   ],
+   "also_stands": [
+    "theories/becoming/ONE-PAGE.md:38 and theories/becoming/THE-THEORY-OF-BECOMING.md:195 already state the model correctly; not edited",
+    "no other live line in theories/, GLOSSARY or the fronts says no institution is modelled (git grep 'no institution', 'institution is modelled')"
+   ],
+   "in_packet": "yes: git grep -F 'No institution is modelled on the spine' review-packet-4 -- theories/ finds COLLECTIVE-DIRECTION.md:87"
+  },
+  {
+   "where": "theories/becoming/chapters/02-MAP.md:438",
+   "flag": "D26 says the corpus's meta-attractor in its account of power is the closed loop, narrower than D65 (02-MAP:453) and GLOSSARY:39 state the corpus's sense.",
+   "verdict": "holds",
+   "why": "The corpus's power account (meta-attractor/README §'The power formulation', claims 249-259) asks whether a pattern is sustained across changes in its carriers, across domains and by weakened correction, and D65 says whether a capture loop meets the carriers clause is Open; D26's 'is the closed loop' tells a reader the corpus's object is closed capture. The edit keeps the closed loop as a reading of one part and points to the other sense.",
+   "edits": [
+    {
+     "path": "theories/becoming/chapters/02-MAP.md",
+     "old": "The corpus's meta-attractor in its account of power is the closed loop:",
+     "new": "The closed loop is one part of the corpus's meta-attractor in its account of power, which also speaks of carriers, domains and correction (its working definition is another, below):",
+     "region": "§ capture, the Reading [AI reading, D26 as revised in D45, D48, D56, D57, D58] after T7's frozen test"
+    }
+   ],
+   "also_stands": [
+    "theories/becoming/review/ALIGNMENT.md:207 says 'The link to the earlier work's meta-attractor in its account of power is a reading' and quotes only 'winners writing the next scorecard is ReadsShare'; already exact, not edited",
+    "README.md:113 (generated from theories/becoming/OPENING.md:92) says the Meta-Attractor's 'loop is on this theory's spine under named premises', a loop and not the whole; not edited"
+   ],
+   "in_packet": "yes: git grep -F 'account of power is the closed loop' review-packet-4 -- theories/ finds 02-MAP.md:438"
+  },
+  {
+   "where": "GLOSSARY.md:39",
+   "flag": "Calls the corpus's working definition 'wider' while saying the formal 元吸引子 says nothing of carriers; containment is not shown (same at 02-MAP.md:453).",
+   "verdict": "holds",
+   "why": "The corpus definition requires reproduction across changes of carriers and no closed reading; closed capture requires a closed reading and says nothing of carriers, and both pages say whether a capture loop is 生成 at some pair of classes is Open, so neither sense is shown to contain the other. 'Wider' tells a reader every closed capture is a meta-attractor in the corpus's sense, which the same row leaves open.",
+   "edits": [
+    {
+     "path": "GLOSSARY.md",
+     "old": "that sense is wider, and the formal 元吸引子 says nothing of carriers",
+     "new": "that sense is another, neither shown to contain the other: the formal 元吸引子 says nothing of carriers",
+     "region": "Change table, row 'meta-attractor (元吸引子)'"
+    },
+    {
+     "path": "theories/becoming/chapters/02-MAP.md",
+     "old": "The corpus's working definition is wider:",
+     "new": "The corpus's working definition is another, not shown to contain closed capture or to be contained by it:",
+     "region": "§ capture, the Reading [AI reading, D65] on the corpus's working definition"
+    }
+   ],
+   "also_stands": [
+    "no other live line says the working definition is wider (git grep 'working definition is wider', 'that sense is wider' over theories/, GLOSSARY, MAP, OPEN-QUESTIONS); theories/meta-attractor/GENERATIVE-REGIMES.md:107's 'wider life' is another use; not edited"
+   ],
+   "in_packet": "yes: git grep -F 'working definition is wider' finds 02-MAP.md:453 and -F 'that sense is wider' finds GLOSSARY.md:39 in review-packet-4"
+  },
+  {
+   "where": "theories/becoming/chapters/02-MAP.md:438",
+   "flag": "'the metric survives its own refutation' is stated as lock_outlives_loss, while T7 (line 434) says evidence and refutation are unformalized and the unread coordinate is a loss by reading.",
+   "verdict": "holds",
+   "why": "T7's own standing is that only invariance under what the loop does not read and the lock outliving a growing unread coordinate are proved, and that 'Evidence, refutation and institutions are unformalized, and the unread coordinate is a loss by reading'; the identity with 'is' reads refutation as formalized. The edit copies T7's words into the sentence.",
+   "edits": [
+    {
+     "path": "theories/becoming/chapters/02-MAP.md",
+     "old": "and \"the metric survives its own refutation\" is `lock_outlives_loss`.",
+     "new": "and \"the metric survives its own refutation\" is read as `lock_outlives_loss`, the refutation as a loss the loop does not read (evidence and refutation are unformalized, [T7](#t7)).",
+     "region": "§ capture, the Reading [AI reading, D26 as revised ...], its second sentence"
+    }
+   ],
+   "also_stands": [
+    "theories/becoming/OPENING.md:92 (note [^meta]) 'which is how a measure survives its own refutation' needs the same qualifier (for example 'read as a loss it does not read'); not edited here, since OPENING's header lists the passages revised in place and README.md:113 is generated from it",
+    "theories/meta-attractor/README.md:41 states the corpus's own claim, provenance, not edited"
+   ],
+   "in_packet": "yes: git grep -F 'survives its own refutation\" is' finds 02-MAP.md:438, and -F 'how a measure survives its own refutation' finds OPENING.md:92 in review-packet-4"
+  },
+  {
+   "where": "theories/becoming/chapters/07-SIGNIFICANCE.md:702",
+   "flag": "'The imperial examination is this case' states the fit flatly; ALIGNMENT A-13's 'The reading counts it as this case' is more exact.",
+   "verdict": "holds",
+   "why": "The meta-attractor line (README:103, claims 142 and 1027) says only that 科举, designed to dilute hereditary capture, became a proxy trap (八股); it does not read it as a counter-rule read monotonically from its own share, so 'is this case, as read in the meta-attractor line' attributes the model's fit to that line and states it as fact. The edit takes A-13's wording and says the fit is read, not tested.",
+   "edits": [
+    {
+     "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+     "old": "The imperial examination is this case, as read in [the meta-attractor line](../../meta-attractor/README.md): designed to dilute hereditary capture, it later became a proxy trap of its own.",
+     "new": "The reading counts the imperial examination as this case, a counter-rule whose rule came to be read from the share it selected; [the meta-attractor line](../../meta-attractor/README.md) says that, designed to dilute hereditary capture, it later became a proxy trap of its own, and its fit to these premises is read, not tested.",
+     "region": "§6, the Reading [AI reading, D68] on a counter-rule read from its own share"
+    }
+   ],
+   "also_stands": [
+    "theories/becoming/review/ALIGNMENT.md:441 (A-13) already says 'The reading counts it as this case'; not edited",
+    "no record JSON or other front names the imperial examination (git grep over theories/, GLOSSARY, MAP)"
+   ],
+   "in_packet": "yes: git grep -F 'The imperial examination is this case' review-packet-4 -- theories/ finds 07-SIGNIFICANCE.md:675"
+  },
+  {
+   "where": "theories/becoming/chapters/07-SIGNIFICANCE.md:643",
+   "flag": "Heading 'alignment with no premise' while the first sentence opens 'On the thesis of one relational unfolding', argued and not proved.",
+   "verdict": "cosmetic",
+   "why": "In the repository's terms 'premise' names the continuation condition and C (COLLECTIVE-DIRECTION §4, 07 §4), and the thesis is argued warrant, not a premise; the section's first sentence states the thesis at once, so a reader of the section is not misled. 'no ethical premise' would be more exact, but it changes no belief read in full.",
+   "edits": [],
+   "also_stands": [
+    "the heading text occurs only at 07-SIGNIFICANCE.md:643; links use the anchor #alignment-without-premise, which an edit to the heading would not move"
+   ],
+   "in_packet": "yes: git grep -F 'alignment with no premise' review-packet-4 -- theories/ finds 07-SIGNIFICANCE.md:616"
+  }
+ ]
+}

@@ -1,0 +1,670 @@
+{
+ "key": "same-claims",
+ "read": [
+  "COMPARE.md",
+  "BRIEF.md",
+  "reads/CRITIC.md (H3; H4 and M2 seen)",
+  "REPAIR.md (lines 17-18, 51, by grep)",
+  "every same_as in reads/*.4-repair.json, and the entries of each set by digest.py --stage 4-repair --ids",
+  "digest.py --target continuation-relative-to-a-class",
+  "results/records/{continuation-relative-to-a-class,a-rule-rebuilt-from-the-members-it-limits,practical-judgment-under-living-significance,a-prediction-read-by-what-it-predicts,thresholds-of-waiting,when-no-route-stands-above-a-revision}.md, laws and conditions",
+  "chapters/06-CLASSICAL-TEXTS.md:589 (the 成生之限／绝生之限 row)",
+  "chapters/08-METHOD.md:588; ONE-ARGUMENT.md:75; review/ALIGNMENT.md:232; results/records/closed-capture.md:62 (by grep)",
+  "theories/the-fork-and-cooperative-infrastructure/README.md claims 15-17; theories/wamotopia-and-the-wamo-protocol/README.md lines 49, 176, 184, 263-264; theories/zhishan-intelligence-must-be-good/README.md lines 359, 839; theories/drives-narrative-attractors-and-mind/README.md lines 70, 213, 489; theories/relational-self-and-datong/README.md lines 77, 194 (by grep, to check same source)"
+ ],
+ "clusters": [
+  {
+   "claim": "Cooperation is not automatically good",
+   "ids": [
+    "cx-fork-cooperation-not-good",
+    "cx-kpso-cooperation-not-automatic"
+   ],
+   "verdict": "same",
+   "why": "Both carried-in-part, agreement of reading, on 05's not-shown sentence and what-pooled-coupling-reaches."
+  },
+  {
+   "claim": "Exit and free association flip selection",
+   "ids": [
+    "cx-fork-exit-free-association",
+    "cx-kpso-exit-inverts-selection"
+   ],
+   "verdict": "same",
+   "why": "Both not-carried; no live model of members choosing among arrangements."
+  },
+  {
+   "claim": "Network effects defeat exit",
+   "ids": [
+    "cx-fork-network-effects-defeat-exit",
+    "cx-kpso-exit-network-failure"
+   ],
+   "verdict": "same",
+   "why": "Both fresh-reading, agreement of reading on capture-by-counted-choices, the join to exit a reader's."
+  },
+  {
+   "claim": "Commons or collar",
+   "ids": [
+    "cx-fork-commons-or-collar",
+    "cx-kpso-abundance-commons-or-collar"
+   ],
+   "verdict": "same",
+   "why": "Both not-carried after the repair (H3)."
+  },
+  {
+   "claim": "Dependence is not the problem; captured dependence is",
+   "ids": [
+    "cx-fork-marks-of-capture",
+    "cx-kpso-dependence-not-capture"
+   ],
+   "verdict": "ruled",
+   "why": "kpso to divergence: 06's row gives a structure, not a verdict, and the verdict is only conditional in 07's judgment."
+  },
+  {
+   "claim": "The anti-capture invariant is functional; arrangements are means",
+   "ids": [
+    "cx-fork-functional-invariant",
+    "cx-kpso-means-not-ends"
+   ],
+   "verdict": "same",
+   "why": "Both carried-in-part, agreement of reading, 06's row by descent."
+  },
+  {
+   "claim": "Leaving an attractor: perturbation or landscape deformation",
+   "ids": [
+    "cx-fork-landscape-deformation",
+    "cx-kpso-state-versus-landscape"
+   ],
+   "verdict": "same",
+   "why": "Both carried-in-part/scope on capture-through-the-rule and D65's four routes."
+  },
+  {
+   "claim": "The transition: leaving the race by assurance",
+   "ids": [
+    "cx-fork-transition-assurance",
+    "cx-kpso-the-transition"
+   ],
+   "verdict": "ruled",
+   "why": "kpso to scope: both readings condition the source's assurance by thresholds-of-waiting."
+  },
+  {
+   "claim": "The one rule: do not use AI to compete (one 2026-02-09 line)",
+   "ids": [
+    "cx-fork-one-rule",
+    "cx-wamo-ai-out-of-the-game"
+   ],
+   "verdict": "same",
+   "why": "Both changed/divergence on alignment-direction-under-widening and CD §8."
+  },
+  {
+   "claim": "Like claims, each folder's own scope of no AI in human contests",
+   "ids": [
+    "cx-asc-pragmatic-minimum",
+    "cx-kpso-stop-using-ai-to-compete",
+    "cx-rsd-ai-not-for-struggle",
+    "cx-zhishan-do-not-fight-for-us",
+    "cx-fork-one-rule"
+   ],
+   "verdict": "same",
+   "why": "All changed/divergence after H3; left unlinked, since each scopes the rule differently (by game, by stake, as a root position, with four derivations)."
+  },
+  {
+   "claim": "Even the winner loses: the final say passes to AI",
+   "ids": [
+    "cx-fork-even-the-winner-loses",
+    "cx-wamo-no-stable-victory"
+   ],
+   "verdict": "same",
+   "why": "One claim of the 2026-01 talk, now linked; both changed/divergence, the delegation step unmodelled."
+  },
+  {
+   "claim": "Winners die by what they draw down",
+   "ids": [
+    "cx-asc-unsurvivable-no-safe-win",
+    "cx-fork-even-the-winner-loses",
+    "cx-wamo-no-stable-victory"
+   ],
+   "verdict": "differ-real",
+   "why": "asc's mechanism (the winner lives on the stability it sacrifices) is relative-position-is-zero-sum's, so scope; the fork and wamo source's mechanism is delegation to AI, which the account does not take up."
+  },
+  {
+   "claim": "All but the final winner gain from AI not playing; consensus rationally available",
+   "ids": [
+    "cx-fork-only-stable-equilibrium",
+    "cx-wamo-all-but-the-winner",
+    "cx-zhishan-only-stable-equilibrium"
+   ],
+   "verdict": "same",
+   "why": "One 2026-02-17 line in three folders, now linked; all changed/divergence (at a mutual best response restraint is no best response)."
+  },
+  {
+   "claim": "A future kept open is in everyone's interest",
+   "ids": [
+    "cx-kpso-incentive-shared-by-all",
+    "cx-wamo-all-but-the-winner"
+   ],
+   "verdict": "differ-real",
+   "why": "kpso claims a shared ranking over outcomes, which what-self-concern-alone-ranks gives (scope); wamo adds rational availability of consensus, which the equilibrium laws deny (divergence)."
+  },
+  {
+   "claim": "Stories are selected for spread, not truth",
+   "ids": [
+    "cx-drives-narrative-fitness",
+    "cx-sspiral-spread-not-truth"
+   ],
+   "verdict": "same",
+   "why": "Both fresh-reading, agreement of reading on selection-through-couplings."
+  },
+  {
+   "claim": "Believed survival pressure as the attractor of attractors",
+   "ids": [
+    "cx-drives-survival-meta-attractor",
+    "cx-asc-survival-belief",
+    "cx-ma-survival-belief"
+   ],
+   "verdict": "same",
+   "why": "All not-carried after H3."
+  },
+  {
+   "claim": "The belief manufactures the trap",
+   "ids": [
+    "cx-drives-belief-makes-dynamic",
+    "cx-sspiral-belief-makes-trap",
+    "cx-wamo-self-made-trap"
+   ],
+   "verdict": "ruled",
+   "why": "sspiral to scope, with its siblings: a universal statement conditioned by the prediction and withholding laws."
+  },
+  {
+   "claim": "The worshipper: what the dynamic does to a mind",
+   "ids": [
+    "cx-drives-worshipper",
+    "cx-asc-worshipper"
+   ],
+   "verdict": "same",
+   "why": "Both carried-in-part/scope; targets differ (D26 against 03's D65), the verdict does not."
+  },
+  {
+   "claim": "理 regulates 心 against runaway",
+   "ids": [
+    "cx-drives-li-as-regulator",
+    "cx-rsd-xin-li"
+   ],
+   "verdict": "same",
+   "why": "Both carried-in-part/scope on runaway-distance-uncoupled's reading of Ren's 4 October words, by descent, which scope may use."
+  },
+  {
+   "claim": "逍遥 as fit, and no independent self",
+   "ids": [
+    "cx-drives-xiaoyao",
+    "cx-rsd-xiaoyao-fit"
+   ],
+   "verdict": "differ-real",
+   "why": "One passage [05:26], quoted differently: drives' claim 88 stops at 'no independent self' and reads a state of two regulators, which no live text takes up; rsd's claim 53 adds 'self and environment are one', which 01's real boundaries answer. Kept as the readers chose."
+  },
+  {
+   "claim": "The functional Ego: a self as a by-product of keeping a goal",
+   "ids": [
+    "cx-drives-pressure-chain",
+    "cx-zhishan-functional-ego"
+   ],
+   "verdict": "ruled",
+   "why": "drives to carried-in-part, as zhishan: parts stated at narrower scope, nothing withdrawn."
+  },
+  {
+   "claim": "What gets guarded is whatever training gave",
+   "ids": [
+    "cx-drives-value-layer",
+    "cx-zhishan-functional-ego"
+   ],
+   "verdict": "differ-real",
+   "why": "A clause of zhishan's whole with its own form (agreement of law on a-reading-informed-and-revalued); the link is removed, not the label."
+  },
+  {
+   "claim": "The repertoire layer: learned scripts set the strategies",
+   "ids": [
+    "cx-drives-repertoire-curriculum",
+    "cx-zhishan-repertoire-corpus-contrast"
+   ],
+   "verdict": "differ-real",
+   "why": "Both say the account does not state it; drives proposes a scope reading through what-training-installs, zhishan searched and found none. The labels record a proposal, not a disagreement on the account; one verdict would need targets this pass does not set."
+  },
+  {
+   "claim": "心 as a fourth irreducible root",
+   "ids": [
+    "cx-drives-xin-as-root",
+    "cx-jianwen-xin-as-fourth-root"
+   ],
+   "verdict": "same",
+   "why": "Both changed/divergence against 08's thesis and its live defeaters."
+  },
+  {
+   "claim": "Ego and boundaries as territorial drive",
+   "ids": [
+    "cx-drives-ego-territory",
+    "cx-rsd-boundary-as-territory"
+   ],
+   "verdict": "same",
+   "why": "Both not-carried."
+  },
+  {
+   "claim": "大同 as an automatic direction toward 理, 善, 生生不息",
+   "ids": [
+    "cx-rsd-language-monist-attractor",
+    "cx-jianwen-datong-mechanism-dao-outside"
+   ],
+   "verdict": "same",
+   "why": "Both changed/divergence; each adds its own half (a monist attractor of symbols; 道 outside the mind)."
+  },
+  {
+   "claim": "Only cooperation reasons; contention selects winning",
+   "ids": [
+    "cx-jianwen-he-not-zheng",
+    "cx-rsd-reason-or-win"
+   ],
+   "verdict": "same",
+   "why": "Both fresh-reading/scope; different laws read, both say no live text joins them."
+  },
+  {
+   "claim": "How the multicellular organism eliminated the pattern",
+   "ids": [
+    "cx-hsm-exception-hunting",
+    "cx-sspiral-multicellular-question"
+   ],
+   "verdict": "same",
+   "why": "Both carried-in-part/scope on confined-rise-within-a-whole, 'eliminated' narrowed."
+  },
+  {
+   "claim": "Value systems as regulators; equality as stability",
+   "ids": [
+    "cx-hsm-value-systems-regulate",
+    "cx-sspiral-equality-regulator"
+   ],
+   "verdict": "same",
+   "why": "Both changed/divergence; neither law derives equality as needed."
+  },
+  {
+   "claim": "A tradition's high point and degenerate mode coexist",
+   "ids": [
+    "cx-hsm-high-and-degenerate",
+    "cx-rsd-kernel-degenerations"
+   ],
+   "verdict": "same",
+   "why": "Both not-carried, D68 kept as a proposal by descent."
+  },
+  {
+   "claim": "Ibn Khaldun's cycle of dynasties",
+   "ids": [
+    "cx-abr-khaldun-three-generations",
+    "cx-econ-ibn-khaldun-cycle"
+   ],
+   "verdict": "same",
+   "why": "Both not-carried."
+  },
+  {
+   "claim": "Cascades along dependence (Pimm; Dunne and others)",
+   "ids": [
+    "cx-dpc-dependence-cascades",
+    "cx-ecoevo-coextinction-and-cascades"
+   ],
+   "verdict": "same",
+   "why": "Both carried-in-part, agreement of law on coupled-webs, which credits the food-web work; Buldyrev and Dean are each one's own addition."
+  },
+  {
+   "claim": "Goodhart's law",
+   "ids": [
+    "cx-econ-goodhart-regularity",
+    "cx-pal-goodhart-taxonomy"
+   ],
+   "verdict": "same",
+   "why": "Both carried-in-part/scope; the sources differ (Goodhart 1975; Manheim and Garrabrant's taxonomy of it), linked to count once as CRITIC L4 asks."
+  },
+  {
+   "claim": "Ostrom: users govern commons by design principles",
+   "ids": [
+    "cx-econ-ostrom-commons",
+    "cx-syscyb-ostrom-design-principles"
+   ],
+   "verdict": "ruled",
+   "why": "econ's agreement_of to reading, as syscyb's: one principle of eight has a law."
+  },
+  {
+   "claim": "Ostrom against Hardin: neither state nor market only",
+   "ids": [
+    "cx-econ-ostrom-commons",
+    "cx-syscyb-ostrom-against-hardin"
+   ],
+   "verdict": "differ-real",
+   "why": "econ's one entry holds both halves; syscyb splits them, and the against-Hardin half is divergence (no law of self-governed restraint). A count should take the two syscyb entries and econ as covering both. cx-sty-ostrom-token-mapping is a folder's mapping, a different claim."
+  },
+  {
+   "claim": "Sen: intersection, capability, the Paretian liberal",
+   "ids": [
+    "cx-econ-sen-intersection",
+    "cx-modphil-sen-intersection",
+    "cx-econ-sen-capability",
+    "cx-modphil-sen-capability",
+    "cx-econ-arrow-sen-impossibility",
+    "cx-modphil-sen-paretian-liberal"
+   ],
+   "verdict": "same",
+   "why": "Each pair has one verdict: agreement of law; fresh-reading/divergence; history-only."
+  },
+  {
+   "claim": "Open ontology: anyone may define kinds",
+   "ids": [
+    "cx-ctxrt-open-ontology-worlds",
+    "cx-sty-open-ontology-define-kinds"
+   ],
+   "verdict": "same",
+   "why": "Both carried-in-part/scope after H3."
+  },
+  {
+   "claim": "Arising, lasting and ceasing read against the class-relative root law",
+   "ids": [
+    "cx-oi-jain-sat",
+    "cx-oi-satkarya",
+    "cx-oi-anekanta",
+    "cx-greek-heraclitus-river"
+   ],
+   "verdict": "ruled",
+   "why": "jain to scope with satkārya and anekānta: a claim about the real as such, made class-relative. Heraclitus states no universal and stays agreement; its agreement_of law on a fresh-reading belongs to the root-law cluster."
+  }
+ ],
+ "rulings": [
+  {
+   "id": "cx-kpso-dependence-not-capture",
+   "set": {
+    "relation": "divergence",
+    "agreement_of": null,
+    "same_as": [
+     "cx-fork-marks-of-capture"
+    ],
+    "reading": {
+     "en": "Two live forms. 06 reads the limit that ends generation (monopolized entry, removed alternatives, later comers dependent on one controller) as the structure of 成闭, by what it does to what can be had, not as a verdict. 07's practical judgment says keeping a removable dependence for the carer's sake is not repair, conditional on living significance and J1-J4, beyond the continuation condition (scope) and C (order), none asserted. 06's row reads the early texts' own 限, so by descent. That capture is the problem the account gives only under premises: divergence, as in the fork's entry. [AI reading]"
+    }
+   },
+   "why": "Same claim as cx-fork-marks-of-capture (divergence); 06's row (line 589) gives a structure and no verdict, and the verdict half is only conditional in practical-judgment-under-living-significance, which BRIEF calls divergence; the entry's own reading says 'no independent agreement'."
+  },
+  {
+   "id": "cx-kpso-the-transition",
+   "set": {
+    "relation": "scope",
+    "agreement_of": null,
+    "same_as": [
+     "cx-fork-transition-assurance"
+    ]
+   },
+   "why": "Same claim as cx-fork-transition-assurance (scope): the source says assurance carries people through, and thresholds-of-waiting conditions it (without a formation sparing all it waits on, total withholding stays); its reading says 'its verdict on guarantee is no'."
+  },
+  {
+   "id": "cx-sspiral-belief-makes-trap",
+   "set": {
+    "relation": "scope",
+    "agreement_of": null,
+    "same_as": [
+     "cx-drives-belief-makes-dynamic",
+     "cx-wamo-self-made-trap"
+    ]
+   },
+   "why": "Same claim, in the same words, as cx-drives-belief-makes-dynamic and cx-wamo-self-made-trap (both scope); the source states it universally and a-prediction-read-by-what-it-predicts conditions it (two right predictions, the start decides); its reading says 'No law says belief in a race produces a race'."
+  },
+  {
+   "id": "cx-oi-jain-sat",
+   "set": {
+    "relation": "scope",
+    "agreement_of": null,
+    "reading": {
+     "en": "The example has the form of the coarsening law: something can end under a finer class (the pot) and not end under a coarser (gold); the three onlookers read three classes. Stated of the real as such, the three marks hold here only relative to classes: under one class they exclude each other, so 'at once' needs two, and no class is warranted. That conditions a universal claim: scope, as for satkārya and anekānta. The Jain substance is a real kind with a nature; the account's class is supplied. The law forbids no pair of classes, and no live text draws this join. [AI reading]"
+    }
+   },
+   "why": "The source predicates the three marks of the real as such; continuation-relative-to-a-class (laws 2, 3) makes them class-relative and warrants no class, as its siblings cx-oi-satkarya and cx-oi-anekanta read the same law (scope); a root law admitting any two classes gives little agreement."
+  },
+  {
+   "id": "cx-econ-ostrom-commons",
+   "set": {
+    "agreement_of": "reading"
+   },
+   "why": "Same claim as cx-syscyb-ostrom-design-principles (agreement of reading): a-rule-rebuilt-from-the-members-it-limits reads the entry rule only, the other targets are neighbours whose links the entry calls its own, so one of eight principles has a law and the rest is a reader's join."
+  },
+  {
+   "id": "cx-drives-pressure-chain",
+   "set": {
+    "carried": "carried-in-part"
+   },
+   "why": "Same claim as cx-zhishan-functional-ego (carried-in-part/scope): the account states parts at narrower scope (ALIGNMENT A-03's resource-keeping half; when-no-route-stands-above-a-revision on resisting revision), and does not withdraw or contradict the chain, so not changed."
+  },
+  {
+   "id": "cx-drives-value-layer",
+   "set": {
+    "same_as": null
+   },
+   "why": "Not the same claim as cx-zhishan-functional-ego, whose whole is the convergence chain with three layers; this is one clause of it with its own form and verdict (agreement of law), so a count-once link would merge two claims."
+  },
+  {
+   "id": "cx-zhishan-functional-ego",
+   "set": {
+    "same_as": [
+     "cx-drives-pressure-chain"
+    ]
+   },
+   "why": "Symmetric with cx-drives-pressure-chain, the same claim (claims I.59-60 of drives restate zhishan's claims 110-118); the value-layer link is dropped."
+  },
+  {
+   "id": "cx-sspiral-spread-not-truth",
+   "set": {
+    "same_as": [
+     "cx-drives-narrative-fitness"
+    ]
+   },
+   "why": "Symmetric: the same claim of Ren's 2024 text ('good narratives are usually less fit'); both fresh-reading, agreement of reading."
+  },
+  {
+   "id": "cx-asc-survival-belief",
+   "set": {
+    "same_as": [
+     "cx-drives-survival-meta-attractor",
+     "cx-ma-survival-belief"
+    ]
+   },
+   "why": "Symmetric: one claim of Ren's (believed survival pressure as the attractor of attractors); all three not-carried."
+  },
+  {
+   "id": "cx-ma-survival-belief",
+   "set": {
+    "same_as": [
+     "cx-drives-survival-meta-attractor",
+     "cx-asc-survival-belief"
+    ]
+   },
+   "why": "Symmetric: one claim of Ren's; all three not-carried."
+  },
+  {
+   "id": "cx-wamo-self-made-trap",
+   "set": {
+    "same_as": [
+     "cx-drives-belief-makes-dynamic",
+     "cx-sspiral-belief-makes-trap"
+    ]
+   },
+   "why": "Symmetric: the same claim in the same words ('cult dynamic', 'self-fulfilling gods'); all three now scope."
+  },
+  {
+   "id": "cx-asc-worshipper",
+   "set": {
+    "same_as": [
+     "cx-drives-worshipper"
+    ]
+   },
+   "why": "Symmetric: the same AI-drafted essay on the worshipper; both carried-in-part/scope."
+  },
+  {
+   "id": "cx-zhishan-repertoire-corpus-contrast",
+   "set": {
+    "same_as": [
+     "cx-drives-repertoire-curriculum"
+    ]
+   },
+   "why": "Symmetric: the same repertoire claim of the zhishan whitepaper; labels differ only by a reader's proposal (see clusters)."
+  },
+  {
+   "id": "cx-jianwen-xin-as-fourth-root",
+   "set": {
+    "same_as": [
+     "cx-drives-xin-as-root"
+    ]
+   },
+   "why": "Symmetric: the same 間-ontology claim of 心 as a fourth root; both changed/divergence."
+  },
+  {
+   "id": "cx-sspiral-multicellular-question",
+   "set": {
+    "same_as": [
+     "cx-hsm-exception-hunting"
+    ]
+   },
+   "why": "Symmetric: the same 2024 question of Ren's; both carried-in-part/scope on confined-rise-within-a-whole."
+  },
+  {
+   "id": "cx-sspiral-equality-regulator",
+   "set": {
+    "same_as": [
+     "cx-hsm-value-systems-regulate"
+    ]
+   },
+   "why": "Symmetric: the same claim of value systems as regulators and equality as stability; both changed/divergence."
+  },
+  {
+   "id": "cx-jianwen-datong-mechanism-dao-outside",
+   "set": {
+    "same_as": [
+     "cx-rsd-language-monist-attractor"
+    ]
+   },
+   "why": "Symmetric: both state the same sentence (大同 as the direction language and existence automatically manifest toward 理, 善, 生生不息); both changed/divergence."
+  },
+  {
+   "id": "cx-kpso-cooperation-not-automatic",
+   "set": {
+    "same_as": [
+     "cx-fork-cooperation-not-good"
+    ]
+   },
+   "why": "Symmetric: Ren's 2026-04-16 objection in both folders; both carried-in-part, agreement of reading."
+  },
+  {
+   "id": "cx-kpso-exit-inverts-selection",
+   "set": {
+    "same_as": [
+     "cx-fork-exit-free-association"
+    ]
+   },
+   "why": "Symmetric: the same exit mechanism from thinking_03; both not-carried."
+  },
+  {
+   "id": "cx-kpso-exit-network-failure",
+   "set": {
+    "same_as": [
+     "cx-fork-network-effects-defeat-exit"
+    ]
+   },
+   "why": "Symmetric: the same failure mode; both fresh-reading, agreement of reading on capture-by-counted-choices."
+  },
+  {
+   "id": "cx-kpso-abundance-commons-or-collar",
+   "set": {
+    "same_as": [
+     "cx-fork-commons-or-collar"
+    ]
+   },
+   "why": "Symmetric: the same sentence (claim 128, thinking_03); both not-carried after the repair."
+  },
+  {
+   "id": "cx-kpso-means-not-ends",
+   "set": {
+    "same_as": [
+     "cx-fork-functional-invariant"
+    ]
+   },
+   "why": "Symmetric: the same functional invariant; both carried-in-part, agreement of reading."
+  },
+  {
+   "id": "cx-kpso-state-versus-landscape",
+   "set": {
+    "same_as": [
+     "cx-fork-landscape-deformation"
+    ]
+   },
+   "why": "Symmetric: the same perturbation/deformation split; both carried-in-part/scope."
+  },
+  {
+   "id": "cx-wamo-ai-out-of-the-game",
+   "set": {
+    "same_as": [
+     "cx-fork-one-rule"
+    ]
+   },
+   "why": "Symmetric: the same 2026-02-09 line (wamo claim 98, fork claims 14 and 34); both changed/divergence."
+  },
+  {
+   "id": "cx-fork-even-the-winner-loses",
+   "set": {
+    "same_as": [
+     "cx-wamo-no-stable-victory"
+    ]
+   },
+   "why": "New link: one claim of the 2026-01 Chiang Mai talk (fork claim 16, 'same file; 2026-01 talk'; wamo claim 28, TALK 14:52-16:28); both changed/divergence on relative-position-is-zero-sum."
+  },
+  {
+   "id": "cx-wamo-no-stable-victory",
+   "set": {
+    "same_as": [
+     "cx-fork-even-the-winner-loses"
+    ]
+   },
+   "why": "New link, symmetric with cx-fork-even-the-winner-loses; same verdict."
+  },
+  {
+   "id": "cx-fork-only-stable-equilibrium",
+   "set": {
+    "same_as": [
+     "cx-wamo-all-but-the-winner",
+     "cx-zhishan-only-stable-equilibrium"
+    ]
+   },
+   "why": "New link: fork claim 15, wamo claim 97 and zhishan claim 107 state one 2026-02-17 line (除了最后的胜利者…); all three changed/divergence."
+  },
+  {
+   "id": "cx-wamo-all-but-the-winner",
+   "set": {
+    "same_as": [
+     "cx-fork-only-stable-equilibrium",
+     "cx-zhishan-only-stable-equilibrium"
+    ]
+   },
+   "why": "New link, symmetric; same 2026-02-17 line; same verdict."
+  },
+  {
+   "id": "cx-zhishan-only-stable-equilibrium",
+   "set": {
+    "same_as": [
+     "cx-fork-only-stable-equilibrium",
+     "cx-wamo-all-but-the-winner"
+    ]
+   },
+   "why": "New link, symmetric; zhishan's own words 7 quote the same 2026-02-17 line; same verdict."
+  }
+ ],
+ "live_flags": [
+  {
+   "where": "theories/becoming/results/records/closed-capture.md:62",
+   "what": "The correspondence says 'Goodhart (1975) says a measure made a target stops measuring'; two readers (cx-econ-goodhart-regularity, cx-pal-goodhart-taxonomy) recall that wording as Strathern's 1997 gloss, not Goodhart's, from memory, unchecked against the texts."
+  },
+  {
+   "where": "theories/becoming/chapters/08-METHOD.md:588",
+   "what": "The row on Zhuang and Hadfield-Menell says 'supported in simulation (MQ1)' and omits the failure for tabular learners (80 of 151) that ONE-ARGUMENT.md:75 states."
+  },
+  {
+   "where": "theories/becoming/review/ALIGNMENT.md:232",
+   "what": "A-08 glosses Goodhart's and Campbell's laws as describing a measure that keeps its standing after it stops measuring; cx-pal-goodhart-taxonomy recalls the sources as stating collapse and corruption, not persistence (T7's claim). Recalled, not checked."
+  }
+ ]
+}

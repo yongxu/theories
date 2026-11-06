@@ -1,0 +1,1858 @@
+{
+ "group": {
+  "id": "economics-politics-sociology",
+  "domain": "economics-politics-sociology",
+  "title": {
+   "en": "Economics, politics and sociology"
+  },
+  "kind": "domain",
+  "summary": {
+   "en": "Mostly credits, and each narrower than its source. The capture and commons laws name Goodhart, Stigler, Olson, Acemoglu and Robinson, Collingridge, Schelling, Granovetter, Hardin and Ostrom as nearest prior work, on count models without noise, and 07 credits Sen's intersection on finite listings. Agreement with the form of a checked law stands only for Stigler's shaping and staffing, Collingridge's second horn, Schelling's critical mass, Ostrom's entry rule and Sen's intersection; the agreements on Lucas, the Matthew effect and Granovetter are readings proposed here. What the sources care about most is mostly not stated: substitution of power, institutions causing prosperity, a few staying few, coalitions slowing a society, declining returns on organization, the cycle of states, capabilities valued by reasons. Arrow's and Sen's impossibilities stand only in a process study. Lucas against the capture laws' constants and Schelling's commitment against C's form are kept as contrary readings; I looked for divergence in each. Michels, Soros, Lucas, Tainter and Ibn Khaldun are named nowhere live. Every source is from AI knowledge, and no credit was checked here against the work."
+  },
+  "read": [
+   "BRIEF.md, REPAIR.md, reads/CRITIC.md; aa-attractor-atlas/PLAN.md sections 6.3 and 6.4; aa-attractor-atlas/readers-2026-11-04/correspondences.md",
+   "Every entry of this item's earlier reads, against the below; sibling reads abrahamic-islamic and systems-cybernetics for names they share, and for same_as the sibling entries in modern-philosophy and psychology-alignment-logic",
+   "Whole record pages: selection-through-couplings, what-an-optimum-does-beyond-what-couples-in, closed-capture, raising-what-couples-in-draws-from-beyond, capture-through-the-rule, shaping-the-rule-selected-by-what-comes-back, shaping-read-by-readers-drawn-from-the-selected, readers-drawn-from-the-selected, a-pool-that-recruits-through-itself, comparison-where-the-rest-responds, a-prediction-read-by-what-it-predicts, thresholds-of-waiting, coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it, own-count-misses-joint-excess, several-optimizers-drain-by-their-joint-capacity, the-rest-outruns-the-renewal, relative-position-is-zero-sum, a-rule-rebuilt-from-the-members-it-limits, division-by-exclusive-footprints, market-model-share-margin-and-ends, more-needs-renewers, what-keeping-widening-needs, readings-within-what-they-read, a-reading-against-the-share-does-not-ratchet, drawers-in-turn, others-drawing-first-end-the-base, experiment-needs-return, counterfactual-is-the-course, what-training-installs, weights-within-a-ratio-agree-past-it, the-move-alone-underdetermines",
+   "theories/becoming/chapters/02-MAP.md section 9 in full with Open; 05-COLLECTIVES sections 5, 7, 10, 11, 12 and Open, and part of 8; 08-METHOD known-results and beyond-the-table",
+   "Docstrings in the Lean of RuleCapture and ClosedCapture, for the reversed reading and rule",
+   "For the labels of the final read: review/ALIGNMENT.md, A-08's heading and lines 225 to 232, and lines 212 and 303, cut at the line; the correspondence and does-not-show of raising-what-couples-in-draws-from-beyond, a-pool-that-recruits-through-itself, shaping-the-rule-selected-by-what-comes-back, readers-drawn-from-the-selected, thresholds-of-waiting, loss-read-in-time-by-the-others, capture-through-the-rule, two-rules-lock-together, what-keeping-widening-needs and more-needs-renewers, cut at their first lines; 02's T7 and Open and 05's Readings D48 and D65, as hit and cut at the line; status and kind of every cited record"
+  ],
+  "skimmed": [
+   "Parts of records: what-would-give-c and what-a-course-chosen-through-its-model-does-not-test from does-not-show onward; what-a-course-keeps-reachable and loss-read-in-time-by-the-others at hits; a-swap-symmetric-assignment-singles-out-none's correspondence; organizational-formation-from-generative-comparison in part; two-rules-lock-together cut before its end",
+   "Single lines as hit: 07-SIGNIFICANCE lines 345, 670, 706 and section 4.4's r-what-would-give-c; 08-METHOD lines 480, 490, 501, 505, 515 to 517, 548; ONE-ARGUMENT lines 53, 75, 106, 114; COLLECTIVE-DIRECTION section 2's table, cut at 360 characters, and line 87; THE-THEORY-OF-BECOMING line 195; GLOSSARY line 57",
+   "experiments/README and the CMT design, for what was frozen and not run; _process/.../GOVERNANCE-LITERATURE.md section 6, as hit (a study, not live)",
+   "Cited from an earlier read, its lines cut and not re-read beyond a string check of the quotes: when-complying-when-read-is-best, drawn-shaping-drawn-one-at-a-time, shaping-selected-among-groups, capture-by-counted-choices, widening-as-what-every-positive-weighting-ranks, a-cascade-at-the-histories-reached, a-step-coupling-keeps-at-every-horizon"
+  ],
+  "searched": [
+   "Counted over ONE-PAGE, THE-THEORY-OF-BECOMING, COLLECTIVE-DIRECTION, FREE-ENERGY-PRINCIPLE, ONE-ARGUMENT, GLOSSARY, chapters 01 to 08 and review, and over the record JSONs: Goodhart, Campbell, Lucas, Soros, Stigler, Michels, oligarch, Olson, Acemoglu, extractive, Matthew, Collingridge, Schelling, Granovetter, Tainter, Khald, Hardin, Ostrom, Sen, Hirsch, Arthur, Bikhchandani, Merton, Condorcet, Arrow, Tullock, Krueger, Akerlof, Nash, Pareto, best response, equilibri, Foster, Axelrod, Braess, Pigou, Rawls",
+   "By mechanism in the live account: interest group, stable societ, sclerosis, rise and decline, selective incentive, by-product, coalition, free.rid, segregat, sorting, neighbourhood, lattice, regressional, extremal, causal or adversarial Goodhart, Nussbaum, functioning, real freedom, Paretian, social welfare, social choice, impossibilit, inclusive, inclusive institution, creative destruction, social capital, juncture, marginal (return, product, cost, gain), diminish, dynast, empire, cohesion, cumulative advantage, rich get, preferential, weak ties, Why Nations Fail, sanction, monitor",
+   "Taken from an earlier read and not repeated: suicide, own success, performativ, reduced form, percolat, bootstrap, linear threshold, group size, small group, privileged",
+   "theories/ and sources/ for Khald, case-blind: no hit in this worktree. Hits named in entries for Michels, Soros, Matthew effect in earlier folders and sources/ were not opened, except meta-attractor claim 18, selfishness-spiral and wamotopia line 152; for Tainter only the file lists were read",
+   "Over the live files and the records, for Tainter: Tainter, diminish, declining return, marginal (return, product, cost, gain), complexity, collapse; hits read at the line"
+  ],
+  "not_mapped": [
+   {
+    "en": "Everitt 2017, Lewis and Skyrms on conventions, the voter model, Akerlof 1970, Kreps 1979, Arrow and Fisher 1974, Pattanaik and Xu 1990, Weitzman 1992, Frank 1985, Hirsch 1976, Arthur 1989, Tullock 1967, Krueger 1974, Strotz, Foster as entries",
+    "why": "Already credited, each with its verdict, in 08 or a record; reported under coverage.present, not mapped again. Everitt belongs to the alignment domain. The credits were not checked against those works."
+   },
+   {
+    "en": "Meadows's traps and Ostrom's principles read as exits",
+    "why": "PLAN 6.3 row 8 gives these to the systems-thinking domain; only what Ostrom 1990 claims about commons is entered here."
+   },
+   {
+    "en": "Empirical literatures behind these claims (settler mortality, the Ostrom case base, regulation case studies)",
+    "why": "Evidence, not claims of form; named only in source_adds where an entry needs them. No source text was read."
+   }
+  ],
+  "coverage": {
+   "present": [
+    {
+     "what": "Commons and joint excess: Hardin, Gordon, Lloyd, Palfrey and Rosenthal credited on the laws of drawing",
+     "where": "theories/becoming/chapters/05-COLLECTIVES.md#r-own-count-misses-joint-excess",
+     "extent": "Hardin on 7 live lines and in 5 records; Ostrom on 2 live lines and in 3 records; 08's verdict: near-definitional, and of the common pool where each bears a share, 'here only the corner', the corner stated at r-drawers-in-turn"
+    },
+    {
+     "what": "Position and positional goods: the zero-sum count, what position reads, a race for position",
+     "where": "theories/becoming/chapters/05-COLLECTIVES.md#r-relative-position-is-zero-sum",
+     "extent": "05 section 3 and one theorem of section 7; Hirsch 1976 on 2 live lines (08's row 490, and SCIENCES quoting it) and in no record"
+    },
+    {
+     "what": "Capture: rent-seeking, regulatory capture, persistence of elites, lock-in, critical mass, as credits on the capture laws",
+     "where": "theories/becoming/chapters/02-MAP.md#r-capture-through-the-rule",
+     "extent": "Stigler on 2 live lines, both ALIGNMENT, and in 3 records; Tullock on 2 live lines and in 1 record; Olson and Acemoglu on 1 live line each, ALIGNMENT, and in 1 record; Arthur on 7 lines and in 4 records; Collingridge on 2 lines and in 1 record; Schelling on 3 and in 4, one of them commitment; Granovetter on 2 and in 2"
+    },
+    {
+     "what": "The proxy problem: Goodhart, Manheim and Garrabrant, Zhuang and Hadfield-Menell",
+     "where": "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
+     "extent": "Goodhart on 4 live lines and in 4 records; Campbell on 1 live line (ALIGNMENT A-08) and in no record"
+    },
+    {
+     "what": "Self-fulfilling prediction: Merton 1948, Grunberg and Modigliani, Simon, Diamond and Dybvig",
+     "where": "theories/becoming/chapters/03-KNOWING.md#r-a-prediction-read-by-what-it-predicts",
+     "extent": "one theorem and one reading; Merton on 1 live line and in 1 record; TR6 frozen, not run"
+    },
+    {
+     "what": "Information cascades, read as copying; a pool read by its majority; Condorcet's jury as a reading in records",
+     "where": "theories/becoming/chapters/05-COLLECTIVES.md#r-readers-reading-readers",
+     "extent": "Bikhchandani on 2 live lines and in 2 records; Condorcet in 2 records, on no live line; TR3 frozen on the cascade's premise, not run"
+    },
+    {
+     "what": "The market model and its assessment against conventional control",
+     "where": "theories/becoming/chapters/05-COLLECTIVES.md#markets",
+     "extent": "05 section 10; a periphery model; 'No universal phase threshold is claimed, and no market law ranks arrangements'"
+    },
+    {
+     "what": "One minimal institution: an entry rule on a shared stock",
+     "where": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-rule-rebuilt-from-the-members-it-limits",
+     "extent": "one record and 05 section 12; not a definition of an institution; sanctions and who decides a revision not modelled. COLLECTIVE-DIRECTION section 5's 'No institution is modelled on the spine' stands against it"
+    },
+    {
+     "what": "Opportunity sets and partial comparability: Sen, Pattanaik and Xu, Kreps, Jones and Sugden, Weitzman, Arrow and Fisher",
+     "where": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-widening-as-what-every-positive-weighting-ranks",
+     "extent": "Sen on 11 live lines and in 4 records; Pattanaik in 08's rows and record correspondences; 08 line 480 lists his graded comparisons as stated"
+    },
+    {
+     "what": "Focal points and symmetric roles: May 1952, Schelling 1960, Aumann 1974, as an AI reading in the record's correspondence",
+     "where": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-swap-symmetric-assignment-singles-out-none",
+     "extent": "one record"
+    },
+    {
+     "what": "Chinese statecraft: 法家, 兵家 and 轻重 on rule capture",
+     "where": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md",
+     "extent": "13 passages, 8 divergent, by the correspondences reader of 4 November; I did not recount them, and they stay in their own files"
+    },
+    {
+     "what": "What would give C's order on a listing: Strotz and Schelling on fewer options, Foster's effective freedom, the prisoner's dilemma read as a menu",
+     "where": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-would-give-c",
+     "extent": "one record, and 08's beyond-the-table lines; attributions checked by an AI reader, some through abstracts"
+    },
+    {
+     "what": "Giving that waits on giving: cooperation as tolerance on a web of waits; tit-for-tat, grim trigger and win-stay lose-shift as an AI reading",
+     "where": "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+     "extent": "05 section 5; every horizon finite; folk theorems named in 08 as not stated"
+    },
+    {
+     "what": "Pools: a pool's reach, recruitment through its own coupling, and the routes a reading gives term limits, audits, courts and antitrust",
+     "where": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-pool-that-recruits-through-itself",
+     "extent": "laws of pooling; how pools form and resist capture stands Open at 05; the institutional names only in a reading"
+    },
+    {
+     "what": "Drawing at once and in turn: the share-borne form at its corner",
+     "where": "theories/becoming/chapters/05-COLLECTIVES.md#r-drawers-in-turn",
+     "extent": "one record; drain perfect exactly where the return is less than one for one; the interior equilibrium named in 08 as not stated"
+    }
+   ],
+   "absent": [
+    {
+     "en": "Michels and the iron law of oligarchy, by name",
+     "searched": [
+      "Michels",
+      "oligarch"
+     ]
+    },
+    {
+     "en": "Soros's reflexivity and the Lucas critique, by name. 'Reflexive' in the account is logic's relation or the module ReflexivePrediction.",
+     "searched": [
+      "Soros",
+      "Lucas",
+      "performativ",
+      "reduced form"
+     ]
+    },
+    {
+     "en": "Extractive and inclusive institutions, critical junctures",
+     "searched": [
+      "extractive",
+      "inclusive institution",
+      "Why Nations Fail",
+      "creative destruction",
+      "juncture (hits: a step keeping or losing a possibility, and 机; not theirs)"
+     ]
+    },
+    {
+     "en": "The Matthew effect and cumulative advantage, by name",
+     "searched": [
+      "Matthew (only Matthew Hennessy)",
+      "cumulative advantage",
+      "preferential",
+      "rich get"
+     ]
+    },
+    {
+     "en": "Tainter, Ibn Khaldun and any law of the decline or cycle of states; declining returns on added organization",
+     "searched": [
+      "Tainter",
+      "Khald",
+      "dynast",
+      "empire",
+      "marginal",
+      "diminish",
+      "collapse"
+     ]
+    },
+    {
+     "en": "Polanyi, Marx, Veblen, Bourdieu, Hirschman, Coase, Piketty, Peltzman, Coleman, Kuran, Weber, Durkheim, Luhmann, Foucault, Gramsci, Keynes, Minsky, Kindleberger, Tirole, Niskanen, Hayek",
+     "searched": [
+      "each name over the live account and the records: no hit"
+     ]
+    },
+    {
+     "en": "Arrow's impossibility and the Paretian liberal. 'Arrow' in the live text is Arrow and Fisher 1974.",
+     "searched": [
+      "Arrow",
+      "impossibilit (one live line, unrelated)",
+      "Paretian",
+      "social welfare",
+      "social choice (no live line)"
+     ]
+    },
+    {
+     "en": "Capability approach, functionings",
+     "searched": [
+      "capabilit (7 lines and 7 records; 07's 'Capability is reach' is another sense)",
+      "functioning",
+      "Nussbaum",
+      "real freedom"
+     ]
+    },
+    {
+     "en": "Schelling's segregation model; Granovetter's weak ties",
+     "searched": [
+      "segregat (no live line)",
+      "weak ties (no hit)"
+     ]
+    },
+    {
+     "en": "Distributional coalitions and institutional sclerosis",
+     "searched": [
+      "coalition (only a Lean rename)",
+      "interest group",
+      "stable societ",
+      "sclerosis",
+      "rise and decline"
+     ]
+    }
+   ]
+  }
+ },
+ "entries": [
+  {
+   "id": "cx-econ-goodhart-regularity",
+   "name": {
+    "en": "Goodhart: a regularity collapses under control pressure"
+   },
+   "domain": "economics-politics-sociology",
+   "group": "economics-politics-sociology",
+   "source": {
+    "work": "Charles Goodhart, 'Problems of Monetary Management: The U.K. Experience' (1975)",
+    "locator": "the statement of the law; page unverified",
+    "basis": "ai-knowledge"
+   },
+   "sense": {
+    "en": "A statistical regularity seen in monetary aggregates tends to collapse once policy presses on it for control, because those controlled change what they do. The popular wording, a measure made a target stops being a good measure, is as I recall Strathern's 1997 gloss, not Goodhart's."
+   },
+   "quote": null,
+   "carried": "carried-in-part",
+   "relation": "scope",
+   "reading": {
+    "en": "The account states the widened proxy sense, on natural-number amounts: a proxy selects only through what couples in, and with room every optimum of an order rising with it stands least beyond. Without room keeping can be an optimum; a satisficing order neither drives nor keeps. That scopes the popular wording, not his regularity. 08 calls the selection law by construction; across domains T3 is conjectured, with partial support and one failure (MQ1). [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "selection-through-couplings",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
+     "says": {
+      "en": "'It is the proxy problem (Goodhart 1975; Amodei and others 2016; Manheim and Garrabrant 2018) as the account states it'. 'The main law holds by construction; its force lies in the supplied premise'."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "what-an-optimum-does-beyond-what-couples-in",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-what-an-optimum-does-beyond-what-couples-in",
+     "says": {
+      "en": "With room, every optimum of an order rising with the family is at the least level beyond. 'Without room the drive fails: keeping can be an optimum'; 'an order rising only to a target need not drive or keep'. Supplied of no actual optimizer; 'That the beyond's fall is a harm' not shown."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#t3",
+     "says": {
+      "en": "T3: 'Optimization drains what lies beyond its couplings, where that gives room'. 'The law for optima is proved; the clause on trained systems is conjectured, with partial support.' Its frozen test on small policies finds the drain rising with nearness and leaves its locus unresolved."
+     },
+     "role": "limit"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#what-the-unifications-claim",
+     "says": {
+      "en": "'overshoot, externality and Goodhart's law as one law of the optimum under room'; 'the optimum law proved ... across domains conjectured (T3), supported in simulation (MQ1)'."
+     },
+     "role": "carries",
+     "part": "the row on Zhuang and Hadfield-Menell's Theorem 1"
+    },
+    {
+     "anchor": "theories/becoming/ONE-ARGUMENT.md",
+     "says": {
+      "en": "The draw on a condition with no measured coupling 'forecast an exact best response's side effects (8 of 8)' and failed for tabular learners (80 of 151; MQ1). 08's 'supported in simulation (MQ1)' omits the failure, so I add it here."
+     },
+     "role": "limit",
+     "part": "the line on the draw against its margin, MQ1"
+    },
+    {
+     "record": "closed-capture",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-closed-capture",
+     "says": {
+      "en": "Record's correspondence: 'Goodhart (1975) says a measure made a target stops measuring; this states why it is kept: what keeps it reads the share it gives, not what it fails to measure.'"
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "Why a failed measure can be kept: a lock under the premise that rule and reading are read from the share (T7, conjectured of actual metrics, no frozen field test; LA2 kept as a counterexample to one forbidden case in a trained judge)."
+   },
+   "source_adds": {
+    "en": "His cause: an observed monetary correlation breaks because those controlled change their conduct when it is pressed. The optimizer laws have a supplied order and lose no estimated regularity. The nearest loss of a fitted regularity (`Confound.misattributes`, 03's r-experiment-needs-return: while moves go in step with a hidden bit, a model in which the move decides the outcome is admitted at every step) has a hidden bit as cause, not a response, so it is a neighbour at most. A flag: closed-capture's gloss sets the later wording under Goodhart's date."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": [
+    "cx-pal-goodhart-taxonomy"
+   ]
+  },
+  {
+   "id": "cx-econ-campbell-corruption",
+   "name": {
+    "en": "Campbell: an indicator used for decisions corrupts itself and what it monitors"
+   },
+   "domain": "economics-politics-sociology",
+   "group": "economics-politics-sociology",
+   "source": {
+    "work": "Donald T. Campbell, 'Assessing the impact of planned social change' (1979)",
+    "locator": "the statement of the law; page unverified",
+    "basis": "ai-knowledge"
+   },
+   "sense": {
+    "en": "The more a quantitative social indicator is used for social decisions, the more it is subject to corruption pressure, and the more apt it is to distort and corrupt the social processes it was meant to monitor. It concerns the degrading of the indicator and of the practice, such as teaching to a test."
+   },
+   "quote": null,
+   "carried": "fresh-reading",
+   "relation": "scope",
+   "reading": {
+    "en": "His second half has a conditional form: a selection holding only where what couples in rises holds only on flows reaching beyond the coupling, where the containing family gains nothing, and with room optima drain the beyond. Read the score as what couples in and the rest of teaching as the beyond, under a conserved budget of time. Degree of use is not read; T3's clause reads nearness, conjectured. His first half has a form only as a reading. Proposed here. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "raising-what-couples-in-draws-from-beyond",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-raising-what-couples-in-draws-from-beyond",
+     "says": {
+      "en": "Where a family containing what couples in gains nothing across a step, 'every selection holding only where what couples in rises holds only on flows reaching beyond the coupling'. Reading (AI): 'the favour is structural, not intended'. Not shown: 'That drawing from beyond is wrong.'"
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#t3",
+     "says": {
+      "en": "T3 adds that trained systems drain 'in proportion to how near they come to their reward's optimum', conjectured. It reads nearness to an optimum, the nearest graded variable, not degree of use for decisions."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#beyond-the-table",
+     "says": {
+      "en": "08: 'Capture through the rule is observability with the reader inside the plant, the corrupted reward channel and closed-loop identifiability'. 'A reading shaped by what it selects is neither harder than an exogenous attack on it nor bounded by one.' Cited forms, not laws of a reported value departing."
+     },
+     "role": "neighbour",
+     "part": "the line on capture through the rule"
+    },
+    {
+     "anchor": "theories/becoming/review/ALIGNMENT.md#a-08",
+     "says": {
+      "en": "'[this dossier, AI] Goodhart's and Campbell's laws (Manheim and Garrabrant 2018; Campbell 1979) describe informally a measure that keeps its standing after it stops measuring. T7 states that as a conjecture about a lock.'"
+     },
+     "role": "neighbour"
+    },
+    {
+     "anchor": "theories/becoming/chapters/02-MAP.md#t7",
+     "says": {
+      "en": "Reading, AI: 'corruption taking over courts, press, statistics and audit, is a loop whose rule-reading reaches the routes of 明 themselves'. T7: 'That actual metrics are so formed is conjectured'; no frozen field test of reform events; one designed could not be frozen as designed."
+     },
+     "role": "neighbour",
+     "part": "Reading D26 as revised, and T7 standing"
+    }
+   ],
+   "account_adds": {
+    "en": "A condition under which a measure persists after it fails, and what is forbidden if that condition holds."
+   },
+   "source_adds": {
+    "en": "The reported value itself departing from what it stood for, and pressure rising with use; corruption of a reading is cited here, with no law of it. The empirical cases. The one live line naming him, A-08, glosses him with Goodhart as a measure keeping its standing. As I recall him his claim is corruption, not persistence, so that line does not state this claim; a reader should check the gloss against the paper."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": null
+  },
+  {
+   "id": "cx-econ-lucas-critique",
+   "name": {
+    "en": "The Lucas critique: estimated relations are not invariant to policy"
+   },
+   "domain": "economics-politics-sociology",
+   "group": "economics-politics-sociology",
+   "source": {
+    "work": "Robert E. Lucas Jr., 'Econometric Policy Evaluation: A Critique' (1976)",
+    "locator": "locator unverified",
+    "basis": "ai-knowledge"
+   },
+   "sense": {
+    "en": "Because agents' decision rules depend on the policy rule they face, parameters estimated under one policy regime do not carry to another, so reduced-form models cannot evaluate a change of regime. The remedy offered is to model invariant structure: preferences, technology, and expectations formed under the regime."
+   },
+   "quote": null,
+   "carried": "fresh-reading",
+   "relation": "agreement",
+   "reading": {
+    "en": "Nearer forms than a responding rest: the counterfactual of an act is the course a supplied law generates, and the record does not fix it for a move not taken, so only a law says what an untried regime does. That is his remedy in outline. Training installs a law only along its courses, the off-regime failure in learners. A public prediction is one more input with a fixed response. Proposed here. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "counterfactual-is-the-course",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-counterfactual-is-the-course",
+     "says": {
+      "en": "'The record does not fix the counterfactual'; where a move has not been taken 'only the law fixes it' (`ExchangeLaw.act_not_taken`). A balanced flow 'is the course the law generates'. 'The law of exchange is supplied'."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "experiment-needs-return",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-experiment-needs-return",
+     "says": {
+      "en": "'the record fixes a move's outcome exactly where it was taken'. The record reads only what a run's moves exposed; a hidden cause is excluded only by varying them."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "what-training-installs",
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-training-installs",
+     "says": {
+      "en": "Training 'installs a law only along its own courses and as far as the learner's representation lumps them'. 08: the on-policy point of imitation learning (Ross, Gordon and Bagnell 2011) and goal misgeneralization (Langosco and others 2022). A learner's law off its regime, not an economy's."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "comparison-where-the-rest-responds",
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-comparison-where-the-rest-responds",
+     "says": {
+      "en": "Escalation witness: 'with the rest fixed the first's part does not reach the first, while the difference between the flows reaches it before step 2'. Responding through the couplings 'is a supplied premise'; a theorem where the rest follows a law of exchange reading only what couples in."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "a-prediction-read-by-what-it-predicts",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-a-prediction-read-by-what-it-predicts",
+     "says": {
+      "en": "'no predictor is right on every admitted response once one admitted response moves every value'. Does not show 'That actual publics respond by a function of the prediction alone, or keep its order.'"
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "An exact reach within which a comparison holds; an exact condition for no right prediction on any type, with witnesses of none and of several; exactly what a record fixes of a move not taken."
+   },
+   "source_adds": {
+    "en": "The response itself changing with the policy rule, through expectations and optimization, and deep parameters as what stays invariant. Here the invariant law is supplied, not identified from preferences and technology, and no optimizing agent is required. He is named nowhere live; a sources/ note, not live, has a line on it. See the next entry for what this asks of the account."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": "reading",
+   "same_as": null
+  },
+  {
+   "id": "cx-econ-lucas-against-constants",
+   "name": {
+    "en": "The Lucas critique turned on the capture laws' constants"
+   },
+   "domain": "economics-politics-sociology",
+   "group": "economics-politics-sociology",
+   "source": {
+    "work": "Robert E. Lucas Jr., 'Econometric Policy Evaluation: A Critique' (1976)",
+    "locator": "the general argument; locator unverified. He did not address this account or models of this kind",
+    "basis": "ai-knowledge"
+   },
+   "sense": {
+    "en": "The general form of the argument: a relation held fixed while the rule it responds to is changed is no basis for saying what the change does, however well it fits the past."
+   },
+   "quote": null,
+   "carried": "fresh-reading",
+   "relation": "contrary-reading",
+   "reading": {
+    "en": "Kept as a test. The capture laws say what a change of rule or reading does while hi, lo, c and the form of reading stay constant. As laws they stand within those hypotheses. As readings on institutions they are what the critique argues against: reformers' changes may move those constants. The account lists this as unstated and moves the premise onto the law. It does not answer it. Proposed here. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "shaping-read-by-readers-drawn-from-the-selected",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-shaping-read-by-readers-drawn-from-the-selected",
+     "says": {
+      "en": "Conditions: 'hi, lo, p and c constants'. Not shown: 'Readers who learn (hi and lo changing with the share), a cost changing with the share'. Whether actual rules are read so 'is not established'."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "counterfactual-is-the-course",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-counterfactual-is-the-course",
+     "says": {
+      "en": "'The law of exchange is supplied: which law the rest follows (ExchangeLaw, Flow.Follows) is not derived.' 'The premise moves onto the law'. So the account's own counterfactual sits where his critique presses."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "a-prediction-read-by-what-it-predicts",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-a-prediction-read-by-what-it-predicts",
+     "says": {
+      "en": "Conditions: 'the response a function of the prediction alone'. TR6 is frozen and not run; the experiments README, not live text, says each test refutes at most a named correspondence, so a run could not touch the law."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/02-MAP.md#open",
+     "says": {
+      "en": "Open lists 'readers who learn what comes back', the variable his argument would move. Not formalized."
+     },
+     "role": "limit"
+    },
+    {
+     "anchor": "theories/becoming/chapters/02-MAP.md#t7",
+     "says": {
+      "en": "LA2: a judge formed from what it selected, 'a pool of readers read by kind' failed; 'the law ... stands within its hypotheses, which this judge does not meet'. One note of the loss turned its reading, kept as a counterexample to T7's fourth forbidden case."
+     },
+     "role": "limit",
+     "part": "T7's frozen test LA2"
+    }
+   ],
+   "account_adds": {
+    "en": "Its own guards against this: premises named as premises, frozen tests of the bridges (TR6 not run), and LA2 reported as failing the pool reading in one trained judge."
+   },
+   "source_adds": {
+    "en": "The obligation itself: no law here derives how hi, lo or a response change under a changed rule. Until one does, what a reform does stays outside what the capture laws can say of institutions."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": null
+  },
+  {
+   "id": "cx-econ-soros-reflexivity",
+   "name": {
+    "en": "Soros: reflexivity, fallibility and boom and bust"
+   },
+   "domain": "economics-politics-sociology",
+   "group": "economics-politics-sociology",
+   "source": {
+    "work": "George Soros, The Alchemy of Finance (1987); 'Fallibility, reflexivity, and the human uncertainty principle' (2013)",
+    "locator": "locator unverified",
+    "basis": "ai-knowledge"
+   },
+   "sense": {
+    "en": "Participants' views both try to understand a situation and act on it; the two functions interfere, so thinking lacks an independent criterion and views are fallible. Markets therefore do not tend to equilibrium: a self-reinforcing boom widens the gap between view and fundamentals, then turns self-defeating."
+   },
+   "quote": null,
+   "carried": "fresh-reading",
+   "relation": "scope",
+   "reading": {
+    "en": "The best fit is a formation's model revised only by what its own course exposes, that course chosen through the model, so it can stay right along its course and wrong off it: his cognitive function corrupted by the acting one. The prediction law sorts 'no equilibrium' by response: none right, one reached, or two, the start deciding. Boom then turn has only a weak form: the bound on favouring is supplied. Proposed here. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "what-a-course-chosen-through-its-model-does-not-test",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-what-a-course-chosen-through-its-model-does-not-test",
+     "says": {
+      "en": "'A formation's model is revised only by what its own course exposes, and that course is chosen through the model'. Record: right along its course, wrong off it, 'related to self-confirming equilibrium (Fudenberg and Levine 1993) and incomplete learning (Rothschild 1974)'. Not shown: 'An intervention moving the world: in the witness the world stays and the acts change only what is sensed.'"
+     },
+     "role": "carries"
+    },
+    {
+     "record": "a-prediction-read-by-what-it-predicts",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-a-prediction-read-by-what-it-predicts",
+     "says": {
+      "en": "'Where the response moves every value, no published prediction is right'; on 0 to n, under a response keeping them and their order, repeated publication from the bottom 'is right by step n'. One value, not a distribution; retraining with losses not stated."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "readings-within-what-they-read",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-readings-within-what-they-read",
+     "says": {
+      "en": "'A family of readings indexed by what it reads ... is complete exactly where nothing differs'. Record's AI reading: 'a self-prediction announced into its loop has no still right value'. The neighbour of his fallibility, on the logic's side."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "closed-capture",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-closed-capture",
+     "says": {
+      "en": "Weakest. 'where the rule read favours at no configuration whose loss is at least N ... the course is not locked there, whatever the share'. A sufficient way out, without noise, with the bound supplied; the boom does not produce it."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "Where a right prediction exists and is reached, as an exact condition rather than a general claim about markets."
+   },
+   "source_adds": {
+    "en": "A turn that the boom itself produces: in the law the bound is supplied and the loss accrues by premise. His manipulative function moving the world: in the witness 'the world stays'. Also prices, fundamentals, and fallibility as a condition of participants. A position paper in sources/05-alignment-and-moloch cites Soros 2013; nothing live does."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": null
+  },
+  {
+   "id": "cx-econ-stigler-capture",
+   "name": {
+    "en": "Stigler: regulation acquired by the regulated"
+   },
+   "domain": "economics-politics-sociology",
+   "group": "economics-politics-sociology",
+   "source": {
+    "work": "George J. Stigler, 'The Theory of Economic Regulation' (1971)",
+    "locator": "opening thesis; page unverified",
+    "basis": "ai-knowledge"
+   },
+   "sense": {
+    "en": "As a rule, regulation is acquired by the industry and designed and operated mainly for its benefit. The state's coercive power is a good with demand and supply: industries pay in votes and resources, and concentrated interests outbid dispersed ones. An economic theory, with cases such as trucking and occupational licensing."
+   },
+   "quote": null,
+   "carried": "carried-in-part",
+   "relation": "scope",
+   "reading": {
+    "en": "Two forms. Shaping: those who shape a rule pay c and receive s alone, selected at a step exactly where c is at most s. Staffing: a rule's readers drawn from those it selects read the share exactly where each kind reads at least as favourably for its own, which moves the premise and does not remove it. Exchange becomes offspring counts. Credits only, no comparison of models. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "shaping-the-rule-selected-by-what-comes-back",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-shaping-the-rule-selected-by-what-comes-back",
+     "says": {
+      "en": "Theorem (counts). 'At a step the rule favours the shapers (weakly) exactly where c ≤ s, whatever p comes to every member alike'. Offspring carrying capacity, and what comes back read from the share, are premises. Record: 'regulatory capture (Stigler 1971) on spending to shape rules'."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "readers-drawn-from-the-selected",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-readers-drawn-from-the-selected",
+     "says": {
+      "en": "Record's correspondence: 'regulatory capture through who staffs the regulator (Stigler 1971)'. Within the pool ReadsShare is equivalent to that comparison, 'so the premise is moved to who reads, not removed'; 'the mediant property of ratios read as a monotone reading'."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "closed-capture",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-closed-capture",
+     "says": {
+      "en": "Record: 'Lock-in under increasing returns (Arthur 1989) and regulatory capture (Stigler 1971) are the closest prior results; the delta is the reading itself read from the share'."
+     },
+     "role": "neighbour"
+    },
+    {
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-shaping-read-by-readers-drawn-from-the-selected",
+     "says": {
+      "en": "Reading, AI: joins the lock to control's selection, on counts, the start deciding without noise. Whether actual rules are read so 'is not established', and 'nothing here ranks a course: that needs C', with the continuation condition for scope, neither asserted."
+     },
+     "role": "limit"
+    }
+   ],
+   "account_adds": {
+    "en": "Conditions with witnesses: nothing back and a cost, the capacity falls; timing and a shared part can turn a stretch; capture needs a reader's premise."
+   },
+   "source_adds": {
+    "en": "The state as supplier, votes and resources as price, concentrated against dispersed interest, and the empirical cases. As I recall his licensing cases have boards drawn from the trade, so the staffing credit has a basis, with the emphasis the record's. Its one frozen test (LA3) was on a trained model: 'Two of the four contrasts failed'. 02 Open still lists a frozen test of whether what comes back decides the direction."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": null
+  },
+  {
+   "id": "cx-econ-michels-oligarchy",
+   "name": {
+    "en": "Michels: the iron law of oligarchy"
+   },
+   "domain": "economics-politics-sociology",
+   "group": "economics-politics-sociology",
+   "source": {
+    "work": "Robert Michels, Political Parties (Zur Soziologie des Parteiwesens, 1911)",
+    "locator": "Part 6, as recalled; locator unverified",
+    "basis": "ai-knowledge"
+   },
+   "sense": {
+    "en": "Any large organization, even a democratic party, comes to be ruled by a few: size and complexity require specialists, leaders gain skills, information and control of communication, members defer, and leaders come to preserve the organization and their places above its aims. Stated as a law of organization."
+   },
+   "quote": null,
+   "carried": "fresh-reading",
+   "relation": "divergence",
+   "reading": {
+    "en": "Nothing here gives where his law holds. The nearest form makes another claim: a pool admitting its next members through its own coupling comes to couple into a loss only as its course without the loss would; reading that on leaders is mine. The divergence: capture laws raise the favoured kind's share, so a few staying few and ruling many has no form. He asserts it of every large organization; the account asserts nothing of it. Proposed here. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "a-pool-that-recruits-through-itself",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-pool-that-recruits-through-itself",
+     "says": {
+      "en": "'it comes to couple into a loss only as its course without the loss would.' Correspondence: 'Co-optation and self-perpetuating boards'. That any actual pool recruits through its own coupling, and how soon it couples in, are not shown."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "shaping-read-by-readers-drawn-from-the-selected",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-shaping-read-by-readers-drawn-from-the-selected",
+     "says": {
+      "en": "With lo ≤ hi a share decides exactly where lo < c < hi. Above the mass, 'the capacity's share rising at every step and every configuration locked' (`DrawnShaping.drawn_rises`), so the favoured kind does not stay few. Below it the capacity falls. Drawn from the selected and lo ≤ hi are premises."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#open",
+     "says": {
+      "en": "Open: 'How pools form, last and resist capture beyond recruitment through their own coupling'."
+     },
+     "role": "limit"
+    }
+   ],
+   "account_adds": {
+    "en": "A reading names 'who holds the places from which the rule is read' as what could keep the readers' premise (02 section 9). Whether a course of few rulers is better or worse is not said: that needs C for order and the continuation condition for scope, neither asserted."
+   },
+   "source_adds": {
+    "en": "How the few arise from the many: size, specialization, expertise, control of communication, deference, goal displacement. Every model here takes the kinds or pool as given, 'who decides a revision' is not modelled, and 'no field test of reform events is frozen' (COLLECTIVE-DIRECTION section 5). No theory folder names Michels; sources/ hits are a Popper compilation and a biology article, unopened."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": null
+  },
+  {
+   "id": "cx-econ-olson-collective-action",
+   "name": {
+    "en": "Olson: a shared benefit does not select those who pay for it"
+   },
+   "domain": "economics-politics-sociology",
+   "group": "economics-politics-sociology",
+   "source": {
+    "work": "Mancur Olson, The Logic of Collective Action (1965)",
+    "locator": "chapters 1 and 2, as recalled; locator unverified",
+    "basis": "ai-knowledge"
+   },
+   "sense": {
+    "en": "Rational self-interested members of a large group will not act for a benefit all receive unless coerced or given a selective incentive; a small group, where one member's share or contribution is noticeable, may. So small concentrated interests organize better than large dispersed ones."
+   },
+   "quote": null,
+   "carried": "carried-in-part",
+   "relation": "scope",
+   "reading": {
+    "en": "At a step a part reaching every member alike leaves the direction where it is. Across a stretch it can turn the verdict, and shared within groups assortment makes it a return, so the universal form narrows. His small-group point has only a two-point form: one drawer keeps a need where two in turn drain it, and that comparison crosses two models. LA3 tested the selection form on one trained system, in part. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "shaping-the-rule-selected-by-what-comes-back",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-shaping-the-rule-selected-by-what-comes-back",
+     "says": {
+      "en": "Rule favours shapers 'exactly where c ≤ s, whatever p comes to every member alike'; a shared part 'can turn a stretch'. Record: 'Olson (1965) on why a benefit shared by all selects nothing in those who bear its cost'."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "shaping-selected-among-groups",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-shaping-selected-among-groups",
+     "says": {
+      "en": "In groups of m, read over the rationals, the whole selects shaping exactly where c < s + m q ρ, 'Hamilton's rule with what is kept added'. Groups enter as given; how they form is not stated."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it",
+     "says": {
+      "en": "On the gated renewal over two steps, where c < m and 0 < c + q: one drawer's every perfect profile leaves at least the need; two or more in turn leave nothing. Not shown: one drawer in turn as one optimizer: 'the comparison with that law crosses two models, and only the two-step contrast is inside one.'"
+     },
+     "role": "neighbour"
+    },
+    {
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+     "says": {
+      "en": "Reading, AI, D48, neighbour of coercion: 'Kept promises and enforced contracts are laws giving first: the law changes, not the state alone.' 'Tolerance lets cooperation survive scattered withholding, not rebuild it where it is lost everywhere'."
+     },
+     "role": "neighbour",
+     "part": "Reading D48"
+    }
+   ],
+   "account_adds": {
+    "en": "Assortment as a term; a stretch can reverse a step's verdict; no self-interested choice is assumed in the selection laws, and 'best' in the drawing laws is relative to a supplied worth. LA3, one trained model: the Split pair passed, the shaping policy kept where two of five came back to the shapers alone; 'Two of the four contrasts failed'."
+   },
+   "source_adds": {
+    "en": "Size as a graded variable against the amount provided (08 lists 'nearer open access as drawers multiply' as not stated), the by-product theory, and coercion and selective incentives as such. 'Reward each step a need stays met' is the nearest form of an incentive, for one optimizer, conditioned on the need and not on the member's own contribution."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": null
+  },
+  {
+   "id": "cx-econ-olson-rise-and-decline",
+   "name": {
+    "en": "Olson: distributional coalitions accumulate and slow a society"
+   },
+   "domain": "economics-politics-sociology",
+   "group": "economics-politics-sociology",
+   "source": {
+    "work": "Mancur Olson, The Rise and Decline of Nations (1982)",
+    "locator": "the implications listed in chapter 3, as recalled; locator unverified",
+    "basis": "ai-knowledge"
+   },
+   "sense": {
+    "en": "In stable societies narrow interest groups accumulate over time, seeking shares rather than growth, which slows adoption and reallocation. Shocks such as defeat, occupation or upheaval sweep them away, which is offered to explain fast postwar growth in Germany and Japan."
+   },
+   "quote": null,
+   "carried": "not-carried",
+   "relation": null,
+   "reading": {
+    "en": "Capture models have one shaper kind, or two rules read from one share, so many coalitions accumulating has no form there; 'a gain growing with the number of domains captured' is listed Open. For his shocks the neighbour is a reading: a course passing between retained regions by a shock (05 section 10). That says nothing of coalitions or growth, so I make no mapping. [AI reading]"
+   },
+   "targets": [],
+   "account_adds": null,
+   "source_adds": {
+    "en": "The accumulation over a stable period, the drag on growth, and the sweeping-away by shock: a testable historical claim the account does not take up."
+   },
+   "absence": {
+    "searched": [
+     "Olson (one live line, ALIGNMENT, the 1965 credit)",
+     "coalition (only a Lean rename in draws-on-a-shared-stock)",
+     "interest group, stable societ, sclerosis, rise and decline, selective incentive, by-product: no hit"
+    ],
+    "read": [
+     "02-MAP section 9 and Open",
+     "05-COLLECTIVES section 10 and Open"
+    ]
+   },
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": null
+  },
+  {
+   "id": "cx-econ-acemoglu-persistence",
+   "name": {
+    "en": "Acemoglu and Robinson: reform of formal rules absorbed by elites"
+   },
+   "domain": "economics-politics-sociology",
+   "group": "economics-politics-sociology",
+   "source": {
+    "work": "Daron Acemoglu and James A. Robinson, 'Persistence of Power, Elites, and Institutions' (2008)",
+    "locator": "locator unverified",
+    "basis": "ai-knowledge"
+   },
+   "sense": {
+    "en": "A change in de jure political power can be offset by elites investing in de facto power, such as lobbying, control of local institutions and force. So political institutions can change while economic institutions persist: captured democracy, as in the US South after the Civil War."
+   },
+   "quote": null,
+   "carried": "carried-in-part",
+   "relation": "scope",
+   "reading": {
+    "en": "Their outline has a form: a formal change with the share unmoved is undone. A reading reversed to favour the others is absorbed at the next reading step and the course locks again (`Proportional.reform_absorbed`). The mechanism parts: absorption comes from a reading formed from the share, not elites paying more in a second kind of power, and in the law the reading returns too, while their democracy keeps its form. So the law gives where absorption holds, the rule still favouring and no threshold crossed, and does not state their route to it. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "closed-capture",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-closed-capture",
+     "says": {
+      "en": "'a change of the reading, either way, the rule still favouring, is absorbed at the next reading step'. `Proportional.reform_absorbed` has a reading reversed to favour the others back at least at two to one, the course locked again. 'That the readers are minds, institutions or a culture: that is a reading'."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "capture-through-the-rule",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-capture-through-the-rule",
+     "says": {
+      "en": "A perturbation keeping direction 'is absorbed'. Reversing the rule, held one step before the reading, 'the share crosses the threshold, the course is locked the other way' (`Reversed.not_absorbed`); at a reading step it gives `Alternating`, 'locked neither way at any step'. That actual rules read the share is the premise."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-shaping-the-rule-selected-by-what-comes-back",
+     "says": {
+      "en": "Reading, AI: 'A shaping that sets only the rule's value is read again from the share at the next reading step, but the share it moved stays, and carried across a threshold it holds the course there'."
+     },
+     "role": "neighbour",
+     "part": "the Reading after the shaping law"
+    },
+    {
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#markets",
+     "says": {
+      "en": "Reading, AI, D65, 'a historical correspondence, no theorem': 'a reform is judged by who decides admission, comparison and correction next round, not by removing one named practice'."
+     },
+     "role": "neighbour",
+     "part": "Reading D65, a historical correspondence"
+    },
+    {
+     "anchor": "theories/becoming/review/ALIGNMENT.md#a-10",
+     "says": {
+      "en": "Known forms the record credits include 'the persistence of elites (Acemoglu and Robinson 2008)'. Record: 'Positioning list taken from board item AJ's plan.'"
+     },
+     "role": "carries"
+    }
+   ],
+   "account_adds": {
+    "en": "The exact line, in a two-kind count model without noise, between a change absorbed and one carried across a threshold."
+   },
+   "source_adds": {
+    "en": "Two kinds of power and substitution between them, which empties a reform while its form stands: no law here has it, and a reversal crossing no threshold has no stated law. The historical evidence too. The credit holds in outline only, and stands on the shaping record (A-10), not on the reform law. A sibling reading of closed-capture stands in cx-abr-khaldun-reform-needs-group-feeling."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": null
+  },
+  {
+   "id": "cx-econ-acemoglu-extractive",
+   "name": {
+    "en": "Extractive and inclusive institutions, and why nations fail"
+   },
+   "domain": "economics-politics-sociology",
+   "group": "economics-politics-sociology",
+   "source": {
+    "work": "Daron Acemoglu and James A. Robinson, Why Nations Fail (2012)",
+    "locator": "locator unverified",
+    "basis": "ai-knowledge"
+   },
+   "sense": {
+    "en": "Extractive institutions concentrate power and take from the many; inclusive ones share power and secure incentives. Extractive growth is possible but not lasting, since elites block creative destruction. Vicious and virtuous circles persist, and critical junctures, with small institutional differences, turn courses. Inclusive institutions are held to cause prosperity."
+   },
+   "quote": null,
+   "carried": "fresh-reading",
+   "relation": "divergence",
+   "reading": {
+    "en": "Forms exist for parts: two rules read from one share lock together, their circle; a reversal past a threshold, a juncture in their sense. The central divergence: they claim, causally and empirically, that institutions make prosperity and extractive growth does not last. The account has no comparison on growth and asserts neither. Ranking inclusive above extractive reads prosperity, and here needs C for order and the continuation condition for scope, neither asserted, warrant open. Proposed here. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "two-rules-lock-together",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-two-rules-lock-together",
+     "says": {
+      "en": "Two rules read monotonically from one share, both favouring at every share: 'the pair locks from the step after the first reading step'. Record: 'Lock-in of coupled institutions reinforcing one advantage'. 'That any actual rule is read from the share it selects, or that a second rule is' is not shown."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "shaping-the-rule-selected-by-what-comes-back",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-shaping-the-rule-selected-by-what-comes-back",
+     "says": {
+      "en": "Does not show 'That capture damages or supports 生生, or that open rule-making is better than capture: no evaluation enters, and ranking courses needs C.'"
+     },
+     "role": "limit"
+    },
+    {
+     "record": "market-model-share-margin-and-ends",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-market-model-share-margin-and-ends",
+     "says": {
+      "en": "Periphery. 'In the model a renewing practice pays for its maintenance and an extracting one for political organization'. 'No universal phase threshold is claimed, and no market law ranks arrangements.'"
+     },
+     "role": "limit"
+    },
+    {
+     "record": "capture-through-the-rule",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-capture-through-the-rule",
+     "says": {
+      "en": "Witness: a perturbation reversing the rule's direction, held past the threshold, is not absorbed. That actual rules read the share is the premise."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-organizational-formation-from-generative-comparison",
+     "says": {
+      "en": "Reading, AI, D65: 'The laws of capture and drain give institutions no prior duty to contract and no prior licence to grow'; any ranking is C's, under the two premises of 07."
+     },
+     "role": "limit",
+     "part": "Reading D65, of contraction and growth"
+    }
+   ],
+   "account_adds": {
+    "en": "A separation of what a loop does from any verdict on it: 05 section 10 says a real loss need not form a meta-attractor, and 02's boundary that a returning organization can sustain benign creation, a reading."
+   },
+   "source_adds": {
+    "en": "The causal claim from institutions to prosperity, its empirical identification, and that extractive growth cannot last. 'Juncture' in the account is another thing: a step keeping or losing a possibility, a fact of reach. Its market reading says that at a negative margin 'a distinct protected region remains'."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": null
+  },
+  {
+   "id": "cx-econ-matthew-effect",
+   "name": {
+    "en": "The Matthew effect: advantage accumulates"
+   },
+   "domain": "economics-politics-sociology",
+   "group": "economics-politics-sociology",
+   "source": {
+    "work": "Robert K. Merton, 'The Matthew Effect in Science' (1968)",
+    "locator": "locator unverified",
+    "basis": "ai-knowledge"
+   },
+   "sense": {
+    "en": "Eminent scientists receive disproportionate credit for comparable work, and this compounds into resources and recognition. Merton also finds a function: credit to the known aids the communication of findings. Later work generalizes to cumulative advantage across a distribution (Price 1976; DiPrete and Eirich 2006)."
+   },
+   "quote": null,
+   "carried": "fresh-reading",
+   "relation": "agreement",
+   "reading": {
+    "en": "Only the generalized form, cumulative advantage, has a shape: on counts with a margin read from the share, the share rises strictly while the margin is positive and the margin does not fall; counted choices never leave the region their threshold sets. Two kinds or two policies, without noise for the locks. Merton's own claim, misallocated credit for comparable work and its function for science, has no form. Proposed here. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "capture-through-the-rule",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-capture-through-the-rule",
+     "says": {
+      "en": "'On counts with a margin m ... the share falls at no step and, from the step after the first reading step, the margin falls at no step; the share rises strictly at every step whose margin is positive, carriers present'. That actual rules read the share is the premise."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "capture-by-counted-choices",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-capture-by-counted-choices",
+     "says": {
+      "en": "Under a standing score, the threshold 'divides the counts into two regions the course never leaves'. No evaluation enters."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/02-MAP.md#which-locks-noise-leaves",
+     "says": {
+      "en": "Reading: noisy choices as an urn 'locking with probability one where the returns are strong enough'; 'cited, not stated' (Arthur, Ermoliev and Kaniovski 1987)."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "Where drift leaves such a lock and where it does not: a population drawn anew against counts that only grow (02 section 9, which locks noise leaves, a reading over proved cases)."
+   },
+   "source_adds": {
+    "en": "Many ranked individuals and a distribution's shape; credit misallocated for comparable work; the function for science. 'Graded capacities' stand Open at 02. Named in theories/meta-attractor claim 18, selfishness-spiral and wamotopia, which read it as compounding among competitors, not Merton's credit. Beside it: cx-syscyb-trap-success-to-the-successful."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": "reading",
+   "same_as": null
+  },
+  {
+   "id": "cx-econ-collingridge-dilemma",
+   "name": {
+    "en": "Collingridge's dilemma of control"
+   },
+   "domain": "economics-politics-sociology",
+   "group": "economics-politics-sociology",
+   "source": {
+    "work": "David Collingridge, The Social Control of Technology (1980)",
+    "locator": "opening chapters, as recalled; locator unverified",
+    "basis": "ai-knowledge"
+   },
+   "sense": {
+    "en": "While a technology is young, control is easy but its harms cannot be known; when known, it is entrenched and control is hard. His response is not better forecasting but decisions kept corrigible and flexible, with error treated as expected: low cost of reversal, fast feedback, options kept open."
+   },
+   "quote": null,
+   "carried": "carried-in-part",
+   "relation": "agreement",
+   "reading": {
+    "en": "As the account says of itself, one horn is a theorem and the other a premise: in a two-kind count model, once the late reading favours the shapers a reading keeps the lock; that the need is read late is supposed. So the epistemic horn, his starting point, is assumed, and the theorem does not correct him. The window is exact only in this model. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "loss-read-in-time-by-the-others",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-loss-read-in-time-by-the-others",
+     "says": {
+      "en": "Reading, AI, D45: 'gives one horn of Collingridge's dilemma (1980) as a theorem and the other as a premise'. Law on counts, stated premises, without noise. 'That a trained judge reads as such a pool': LA2 'found one note in nine turned it, so the law did not apply there.'"
+     },
+     "role": "carries",
+     "part": "the theorem with Reading D45"
+    },
+    {
+     "anchor": "theories/becoming/review/ALIGNMENT.md#a-10c",
+     "says": {
+      "en": "'the second horn, that once the need for change is known change is hard, is a theorem here, and the first, that while change is easy its need cannot be known, is the premise that the loss is read only from N.'"
+     },
+     "role": "carries"
+    }
+   ],
+   "account_adds": {
+    "en": "The step from which the window closes, at most one step between, and a loose deadline quadratic in the start's counts."
+   },
+   "source_adds": {
+    "en": "The first horn's epistemic claim, and his remedy of corrigibility and flexibility. 'What would widen the window' is listed as not stated; 02 calls a lock left in time the joint selection's second condition, a reading, the nearest taking-up. Neighbours: what a course keeps reachable and what-would-give-c, where quasi-option value 'is not captured'. His design criteria are not taken up."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": "law",
+   "same_as": null
+  },
+  {
+   "id": "cx-econ-schelling-critical-mass",
+   "name": {
+    "en": "Schelling: tipping and critical mass"
+   },
+   "domain": "economics-politics-sociology",
+   "group": "economics-politics-sociology",
+   "source": {
+    "work": "Thomas C. Schelling, 'Hockey Helmets, Concealed Weapons, and Daylight Saving' (1973); Micromotives and Macrobehavior (1978), chapters 3 and 7",
+    "locator": "chapters as the record cites them; not checked against the text",
+    "basis": "ai-knowledge"
+   },
+   "sense": {
+    "en": "Where each person's choice between two options depends on how many others choose each, there can be a critical mass: below it the behaviour dies out, above it the behaviour sustains itself, whether or not the outcome suits anyone. A general analysis of binary choices with externalities."
+   },
+   "quote": null,
+   "carried": "carried-in-part",
+   "relation": "agreement",
+   "reading": {
+    "en": "The critical mass of readers drawn from the selected has this form: with lo < c < hi the start decides which way the course locks, without noise. The account identifies it with a stag hunt's mixed equilibrium, that field's frame, and calls the lock half near-definitional and the computation elementary. The variable is who reads, not who chooses. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "shaping-read-by-readers-drawn-from-the-selected",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-shaping-read-by-readers-drawn-from-the-selected",
+     "says": {
+      "en": "'with lo ≤ hi, it favours the shapers at some share and the others strictly at another exactly where lo < c < hi'. Record: 'The threshold is the critical mass of binary choices with externalities (Schelling 1973; Schelling 1978, chapters 3 and 7; ...)'. Without noise; premises named."
+     },
+     "role": "carries"
+    }
+   ],
+   "account_adds": {
+    "en": "Fixation drawn one member at a time, which can part from risk dominance under strong selection; and a frozen test of the located mass on laboratory stag hunts (CMT, frozen 5 November 2026, not run), which its design says never refutes a theorem."
+   },
+   "source_adds": {
+    "en": "The general diagrams of payoff against number, including curves with several crossings and his treatment of institutions as ways of moving a crossing; the capture model has one threshold."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": "law",
+   "same_as": null
+  },
+  {
+   "id": "cx-econ-granovetter-distribution",
+   "name": {
+    "en": "Granovetter: the distribution of thresholds decides, not their average"
+   },
+   "domain": "economics-politics-sociology",
+   "group": "economics-politics-sociology",
+   "source": {
+    "work": "Mark Granovetter, 'Threshold Models of Collective Behavior' (1978)",
+    "locator": "the riot example; page unverified",
+    "basis": "ai-knowledge"
+   },
+   "sense": {
+    "en": "Each person joins once enough others have. Two crowds nearly the same on average can differ completely in outcome: remove one person from a uniform ladder of thresholds and the riot stops at one. So collective outcomes cannot be read from average preferences."
+   },
+   "quote": null,
+   "carried": "fresh-reading",
+   "relation": "agreement",
+   "reading": {
+    "en": "It has a form under another name. The tolerating law gives each formation its own tolerance of what it waits on: restoring from none needs a formation sparing all it waits on; without one nothing moves (`Tolerance.total_stays`). That is the case of no instigator, not his: his example removes the threshold-1 person and the riot stops at one. That removal and a ladder of tolerances are my derivation, not stated. The account's credit sits elsewhere. Proposed here. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "thresholds-of-waiting",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+     "says": {
+      "en": "'a formation gives where all but its tolerance of what it waits on gave'; a formation sparing all it waits on 'gives from step 1 whatever the start'; 'without one, total withholding stays'. Tolerances are given numbers. Not stated: amounts of giving, thresholds with memory, how tolerances form."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-restoring-giving-from-the-worst-start",
+     "says": {
+      "en": "Theorem: for every law of giving that keeps inclusion, 'a formation gives at step `n` from every start exactly where it gives at `n` from total withholding' (`Tolerance.worst_start`). The worst start bounds a threshold course; no ladder is stated."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "shaping-read-by-readers-drawn-from-the-selected",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-shaping-read-by-readers-drawn-from-the-selected",
+     "says": {
+      "en": "The credit: 'Granovetter 1978, whose thresholds are distributed where here there is one'. Here 'the rule read is the frequency-weighted mean of the two readings up to a common factor', so a mean does decide in this model."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "Thresholds on a given web of what each waits on, not on a head count of the whole, and a kept set and thin withholding that passes out in one step."
+   },
+   "source_adds": {
+    "en": "The claim about averages stated as such, and a ladder witness. A flag: the capture model his paper is credited on is one where a count-weighted mean decides, the case he warns of, and the record for the nearer law does not cite him."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": "reading",
+   "same_as": null
+  },
+  {
+   "id": "cx-econ-schelling-segregation",
+   "name": {
+    "en": "Schelling: mild local preferences give full segregation"
+   },
+   "domain": "economics-politics-sociology",
+   "group": "economics-politics-sociology",
+   "source": {
+    "work": "Thomas C. Schelling, 'Dynamic Models of Segregation' (1971)",
+    "locator": "locator unverified",
+    "basis": "ai-knowledge"
+   },
+   "sense": {
+    "en": "On a lattice or in bounded neighbourhoods, individuals who only mildly prefer not being a small minority nearby move until the whole is strongly sorted. An aggregate pattern no one chose arises from local rules, so the pattern is no evidence of the preferences behind it."
+   },
+   "quote": null,
+   "carried": "not-carried",
+   "relation": null,
+   "reading": {
+    "en": "The account has assortment as a given measure in group selection and says how groups form is not stated; 'groups that form or assort by the share' stands Open. The general point, that a joint outcome is not any member's, has neighbours, but no law of members moving or sorting. [AI reading]"
+   },
+   "targets": [],
+   "account_adds": null,
+   "source_adds": {
+    "en": "Self-sorting from local tolerance, and the warning about inference. The word occurs in no live file; hits are in two history/ files, not opened by me."
+   },
+   "absence": {
+    "searched": [
+     "segregat (no live line)",
+     "sorting (hits in 07 and PHILOSOPHY, read at the line, not people sorting themselves)",
+     "neighbourhood (search neighbourhoods, not places)",
+     "lattice (automata and order, not this)",
+     "assort (a given measure in group selection)"
+    ],
+    "read": [
+     "02-MAP's r-shaping-selected-among-groups record lines",
+     "02-MAP Open's line 476"
+    ]
+   },
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": null
+  },
+  {
+   "id": "cx-econ-schelling-commitment",
+   "name": {
+    "en": "Schelling: a chooser can gain by binding itself"
+   },
+   "domain": "economics-politics-sociology",
+   "group": "economics-politics-sociology",
+   "source": {
+    "work": "Thomas C. Schelling, The Strategy of Conflict (1960)",
+    "locator": "the chapters on bargaining and on commitment, as recalled; locator unverified",
+    "basis": "ai-knowledge"
+   },
+   "sense": {
+    "en": "A bargainer can gain by visibly giving up options: a threat or promise one cannot go back on changes what the other expects and does. So fewer options, if seen, can yield more. It is a claim about strategy between parties with partly shared interests, not a claim about what ought to be kept open."
+   },
+   "quote": null,
+   "carried": "carried-in-part",
+   "relation": "contrary-reading",
+   "reading": {
+    "en": "Kept as a test of C's form: if fewer options can be better for a chooser, is a wider course better? The account credits this and leaves it open: among several choosers a wider menu can lower what each gets at the pure Nash equilibrium of one play, and whether a wider course of what can form can do the same is open. C for order and the continuation condition for scope stay unasserted, warrant open. Proposed here. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#beyond-the-table",
+     "says": {
+      "en": "'That a chooser can gain by having fewer options is older than Schelling: Strotz has it against one's later self, by precluding future options; Schelling (1960) has it toward another, by binding oneself in a threat or a promise.'"
+     },
+     "role": "carries",
+     "part": "the line on fewer options"
+    },
+    {
+     "record": "what-would-give-c",
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-would-give-c",
+     "says": {
+      "en": "Does not show 'That more options are better: among several choosers a wider menu can lower what each gets at the pure Nash equilibrium of one play. Whether a wider course of what can form can do the same is open; if one can, the witness stands against C there too, with the shape of T8's stated refuter.'"
+     },
+     "role": "carries"
+    }
+   ],
+   "account_adds": {
+    "en": "A stated refuter's shape: a wider course of what can form lowering what each gets would stand against C there. Attributions in this record were checked by an AI reader, Schelling through abstracts, excerpts or others' accounts."
+   },
+   "source_adds": {
+    "en": "Unilateral, visible commitment toward another, and threats, are credited and not witnessed: the witnesses are a shared menu (`Weighting.Restraint`), imposed items (`Weighting.Refusing`) and another's order (`Weighting.AnotherReads`). No law has one chooser gaining by removing its own option before another moves."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": null
+  },
+  {
+   "id": "cx-econ-tainter-complexity",
+   "name": {
+    "en": "Tainter: declining marginal returns on complexity, and collapse as simplification"
+   },
+   "domain": "economics-politics-sociology",
+   "group": "economics-politics-sociology",
+   "source": {
+    "work": "Joseph A. Tainter, The Collapse of Complex Societies (1988)",
+    "locator": "chapters on marginal productivity, as recalled; locator unverified",
+    "basis": "ai-knowledge"
+   },
+   "sense": {
+    "en": "Societies solve problems by adding organization, which costs energy to maintain. Returns on added complexity decline until a society is exposed to shocks it once absorbed, and collapse is a rapid loss of complexity, economically sensible for many: the lower level costs less. He declines to read collapse as catastrophe in itself."
+   },
+   "quote": null,
+   "carried": "not-carried",
+   "relation": null,
+   "reading": {
+    "en": "His central claim, that returns on added organization decline, the account neither asserts nor has a form for, so nothing is mapped. Proposal only: neighbours are more takers needing renewers without bound, which 08 calls maintenance scaling, and D48's 'more waiting gives no more', a bound on dependence, not declining returns. D65 leaves contraction unranked, near his refusal of a verdict; any ranking needs C for order and the continuation condition for scope, neither asserted, warrant open. [AI reading]"
+   },
+   "targets": [],
+   "account_adds": {
+    "en": "An exact point of no return under a standing draw, and a reserve that defers an ending, with no claim about societies."
+   },
+   "source_adds": {
+    "en": "Declining marginal returns, shocks once absorbed, and collapse as economizing, read through marginal product; the account would have to say what such a comparison reads. Its 'more' 'reads only the number of takers and does not state diversity, complexity or possibility' (more-needs-renewers). 05 Open lists collapse among conjectured ends of selection for position, a different cause, not formalized. Tainter is named as an anchor in theories/meta-attractor and keep-the-possibility-space-open, and in a sources/ draft, not live."
+   },
+   "absence": {
+    "searched": [
+     "Tainter (no line in the live files or the records)",
+     "diminish (one line of 02, on the whole of every part, unrelated)",
+     "declining return, marginal (return, product, cost, gain): no live line",
+     "complexity (hits read at the line: free energy's term, a history pointer, none of added organization)",
+     "collapse (05 Open's conjecture; 02's T1 line)"
+    ],
+    "read": [
+     "05-COLLECTIVES sections 5, 10 and Open",
+     "the more-needs-renewers and what-keeping-widening-needs records",
+     "08-METHOD line 514"
+    ]
+   },
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": null
+  },
+  {
+   "id": "cx-econ-ibn-khaldun-cycle",
+   "name": {
+    "en": "Ibn Khaldun: cohesion and the cycle of dynasties"
+   },
+   "domain": "economics-politics-sociology",
+   "group": "economics-politics-sociology",
+   "source": {
+    "work": "Ibn Khaldun, Muqaddimah (1377)",
+    "locator": "locator unverified; my knowledge is secondary and thin",
+    "basis": "ai-knowledge"
+   },
+   "sense": {
+    "en": "A group's cohesion ('asabiyya), formed under hard conditions, lets it found a state; over generations rule brings luxury and a turn to hired force, cohesion fades, taxes rise and yield falls, and a more cohesive group replaces it. As I recall, he gives about three or four generations. Named in PLAN 6.3, not checked against the text."
+   },
+   "quote": null,
+   "carried": "not-carried",
+   "relation": null,
+   "reading": {
+    "en": "A word fit removed: a rule read against the share is a supplied premise, its record's correspondence 'Negative feedback from those a selection disfavours', not erosion among winners. The narrow within-group and among-group form stands in cx-abr-khaldun-asabiyya. A success eroding its conditions has forms elsewhere, with no bond and no generational clock; `Alternating` is a one-step lag, not a cycle of states. So the cycle is not carried. [AI reading]"
+   },
+   "targets": [],
+   "account_adds": null,
+   "source_adds": {
+    "en": "The whole cycle: decline from the winner's own success as a course, a generational clock, replacement from outside, and the tax curve. Siblings: cx-abr-khaldun-three-generations (not carried), cx-abr-khaldun-taxation (scope). The name is in no file of theories/ or sources/ in this worktree."
+   },
+   "absence": {
+    "searched": [
+     "Khald (no live line; no hit in theories/ or sources/)",
+     "dynast, empire, cohesion: no live line",
+     "cycl, oscillat, alternat, collapse: hits read at the line, none a cycle of states"
+    ],
+    "read": [
+     "02-MAP section 9 and Open",
+     "05-COLLECTIVES Open",
+     "the a-reading-against-the-share-does-not-ratchet record",
+     "abrahamic-islamic.3-check, its Ibn Khaldun entries"
+    ]
+   },
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": [
+    "cx-abr-khaldun-three-generations"
+   ]
+  },
+  {
+   "id": "cx-econ-hardin-commons",
+   "name": {
+    "en": "Hardin: freedom in a commons brings ruin to all"
+   },
+   "domain": "economics-politics-sociology",
+   "group": "economics-politics-sociology",
+   "source": {
+    "work": "Garrett Hardin, 'The Tragedy of the Commons', Science 162 (1968)",
+    "locator": "the herdsmen passage and the closing sections, as recalled; page unverified",
+    "basis": "ai-knowledge"
+   },
+   "sense": {
+    "en": "Each user of an open pasture gains all of an added animal and bears a fraction of the cost, so each adds without limit and the commons is ruined. The problem, mainly population, has no technical solution, and calls for mutual coercion mutually agreed upon. The claim is general: 'ruin to all'."
+   },
+   "quote": null,
+   "carried": "carried-in-part",
+   "relation": "scope",
+   "reading": {
+    "en": "The account restates the drain, near-definitional by its own verdict, and scopes 'ruin to all': those depending at such a need end, and a greatest part not depending continues. His mechanism, a share of the cost borne, it states at the corner: where what a drawer leaves returns to it less than one for one, every perfect profile draws everything. The interior equilibrium it does not state. No verdict: no law calls a drain a harm. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "own-count-misses-joint-excess",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-own-count-misses-joint-excess",
+     "says": {
+      "en": "'It restates the tragedy of the commons and overshoot (Lloyd 1833; Hardin 1968; Meadows and others 1972) in near-definitional arithmetic'. From a level below n + m ends 'every formation depending on the condition at a need of at least m, a taker among them where it so depends'; other takers can continue."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "drawers-in-turn",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-drawers-in-turn",
+     "says": {
+      "en": "Drawing at once: what a drawer leaves returns to it only through its portion; where that return is less than one for one, every perfect profile draws everything. Under halves, 'drawing everything is perfect for the two and breaks the dweller, leaving all but one unit of each half holds the source at six, keeps the dweller and draws each drawer more'."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "others-drawing-first-end-the-base",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-others-drawing-first-end-the-base",
+     "says": {
+      "en": "Record's reading (AI): 'keeping a shared base is not one optimizer's to give; the destruction comes from the relation, not from any change in the optimizer'. 05: 'the discrete form of open access dissipating what a sole owner would keep (Gordon 1954)'. The others' rule is supplied."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "several-optimizers-drain-by-their-joint-capacity",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-several-optimizers-drain-by-their-joint-capacity",
+     "says": {
+      "en": "A separate law. Record: 'in the limit where the condition couples into no optimizer'. Not stated there: 'A condition within some optimizer's family, where the condition couples into its order and the classical commons with a share borne lies'. Existence of a mutual best response not shown in general."
+     },
+     "role": "limit"
+    },
+    {
+     "record": "relative-position-is-zero-sum",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-relative-position-is-zero-sum",
+     "says": {
+      "en": "'in the clearing witness a greatest part not depending on what it draws down continues.' 'That a race for relative position produces joint excess' is a premise, not derived."
+     },
+     "role": "neighbour"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#known-results",
+     "says": {
+      "en": "Row: joint excess and position, against tragedy of the commons and positional goods (Hirsch 1976): 'near-definitional'. Not stated: 'the interior equilibrium of a common pool where each bears a share, nearer open access as drawers multiply'; 'here only the corner'."
+     },
+     "role": "limit",
+     "part": "the row on joint excess and position"
+    },
+    {
+     "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions",
+     "says": {
+      "en": "Exits each under stated conditions and with an edge, such as restraint within the joint slack, division by exclusive footprints, reward each step a need stays met; 'A sufficient way out, not shown necessary' for reading beyond the share."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "Where a coupling keeps a need among drawers in turn; what the deterministic count requires of a level; 'A floor on the other's draw can keep the stock', as a condition. Under halves, keeping draws each drawer more: a comparison reading what each draws, no verdict."
+   },
+   "source_adds": {
+    "en": "'No technical solution', mutual coercion as the remedy, and population as the subject, with the interior of the share-borne case. Asking the remedy or the population question here would need the continuation condition for scope and C for order, neither asserted, warrant open."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": null
+  },
+  {
+   "id": "cx-econ-ostrom-commons",
+   "name": {
+    "en": "Ostrom: communities govern commons under rules they revise"
+   },
+   "domain": "economics-politics-sociology",
+   "group": "economics-politics-sociology",
+   "source": {
+    "work": "Elinor Ostrom, Governing the Commons (1990)",
+    "locator": "chapter 3, the design principles, as recalled; locator unverified",
+    "basis": "ai-knowledge"
+   },
+   "sense": {
+    "en": "Against the claim that only state or market can save a commons, field cases show users keeping them for centuries. Durable systems share design principles: clear boundaries, rules fitted to place, users' say in changing rules, accountable monitoring, graduated sanctions, cheap conflict resolution, recognized rights to organize, nested layers. Not a blueprint and not sufficient."
+   },
+   "quote": null,
+   "carried": "carried-in-part",
+   "relation": "agreement",
+   "reading": {
+    "en": "Boundaries have two forms: an entry rule held by members who draw on it, kept exactly in a band, and exclusive footprints keeping the joint draw within what is given; the record reads the entry rule only. Contingent commitment has a neighbour, mine, in giving that waits on giving. An AI reading names coupling or lowered capacity as her means, which narrows her eight. She argues from field cases against panaceas; no test here has human participants. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "a-rule-rebuilt-from-the-members-it-limits",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-rule-rebuilt-from-the-members-it-limits",
+     "says": {
+      "en": "Theorem (root; a family of nets). 'Ostrom 1990 treats boundary rules as held by those they govern; this reads the entry rule only'. Not modelled: 'conduct other than entry, sanctions, who decides a revision, mixed tenures, schism and records'. 'That any actual institution meets the hypotheses is a correspondence duty'."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "division-by-exclusive-footprints",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-division-by-exclusive-footprints",
+     "says": {
+      "en": "Under balance, with a division within what is given at every step, 'the level never falls'. Record's correspondence: 'Partitioning a resource: disjoint allocations within capacity.' Not shown: 'That an actual division is by exclusive footprints'. It does not cite her; the link is mine."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "several-optimizers-drain-by-their-joint-capacity",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-several-optimizers-drain-by-their-joint-capacity",
+     "says": {
+      "en": "Record's reading (the AI's): 'what keeps it is a coupling into it or a lowered capacity, the means Ostrom (1990) found communities use'. 'That the drain is a harm, or that coupling or a lower capacity is better' is not shown."
+     },
+     "role": "neighbour"
+    },
+    {
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+     "says": {
+      "en": "Reading, AI, D48: 'Tolerance lets cooperation survive scattered withholding, not rebuild it where it is lost everywhere'. Neighbour of contingent commitment, the link mine. 08 names as not stated 'restraint kept by punishing strategies' (folk theorems); here every horizon is finite."
+     },
+     "role": "neighbour",
+     "part": "Reading D48"
+    }
+   ],
+   "account_adds": {
+    "en": "A rule can be held and still end the level: 'a rule can be kept and be the wrong rule'. An exact band for one rule, as a family of nets."
+   },
+   "source_adds": {
+    "en": "The field evidence against panaceas, and most of her eight principles: revision by users, sanctions and their graduation, unmodelled (a pair's window, `answers` and tit-for-two-tats at r-a-pair-tolerates-only-within-a-window, is at most a relative of graduation, the link this reading's); monitoring, which 05 reads as pooling only by a reading (audits, courts); rules fitted to place; polycentric layers. 05 Open keeps her among accounts a discriminating market study would weigh. Her principles as exits: cx-syscyb-ostrom-design-principles, cx-syscyb-ostrom-against-hardin."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": "reading",
+   "same_as": [
+    "cx-syscyb-ostrom-design-principles"
+   ]
+  },
+  {
+   "id": "cx-econ-sen-intersection",
+   "name": {
+    "en": "Sen: partial comparability, the intersection of admissible weightings"
+   },
+   "domain": "economics-politics-sociology",
+   "group": "economics-politics-sociology",
+   "source": {
+    "work": "Amartya Sen, 'Interpersonal Aggregation and Partial Comparability', Econometrica 38(3) (1970); Collective Choice and Social Welfare (1970); 'On Weights and Measures' (1977)",
+    "locator": "citations as the dossiers and the record give them; the passages unread",
+    "basis": "ai-knowledge"
+   },
+   "sense": {
+    "en": "Between no interpersonal comparison and full comparison lie partial ones: take the set of admissible welfare weightings, and rank one state above another only where all rank it so. This gives a quasi-ordering which leaves some pairs unranked."
+   },
+   "quote": null,
+   "carried": "carried-in-part",
+   "relation": "agreement",
+   "reading": {
+    "en": "Widening is credited as this form: what every positive weighting ranks higher, and a mixed comparison decided both ways. Graded comparisons are stated too: weights within a ratio agree past it. The items are formations admitted at steps, not persons' welfares. Calling the shared order better is C; whose losses count is the continuation condition; both unasserted, warrant open. Monotonicity at the standpoint is weaker than C only in scope. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "widening-as-what-every-positive-weighting-ranks",
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-widening-as-what-every-positive-weighting-ranks",
+     "says": {
+      "en": "'This is Sen's intersection approach, and Pareto dominance as the unanimity of positive weightings'; 'the order shared by standpoints whose orders increase in admission is exactly widening, and calling it better is C.' On a listing's frame, every claim counted, an order is increasing in admission exactly when it meets C, so monotonicity at the standpoint 'is weaker only in scope'."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "weights-within-a-ratio-agree-past-it",
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-weights-within-a-ratio-agree-past-it",
+     "says": {
+      "en": "'Every positive weighting whose weights stand within n/d of each other ranks the course keeping p items the other does not above the one keeping q exactly where n q < d p'. 08: 'Sen's graded comparisons' are already stated. Not shown: 'That the larger side is better: counting is a further premise, and C ranks neither side of a mixed pair.'"
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/review/LOGIC.md",
+     "says": {
+      "en": "'a finite, natural-weight form of the idea of Sen's intersection quasi-ordering (Sen 1970), widening being Pareto dominance, proved directly.' A finite listing, two-valued admission."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "That mixed comparisons stay unranked is kept as a limit of the criterion, with J1 to J4 named as further premises for practical choice. On three items no positive weighting's order is exactly widening (`Weighting.widening_is_no_weighting`)."
+   },
+   "source_adds": {
+    "en": "Real-valued welfare, and the aim of aggregation across persons. Graded comparisons here run on natural-number weights over items admitted, not on units of welfare."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": "law",
+   "same_as": [
+    "cx-modphil-sen-intersection"
+   ]
+  },
+  {
+   "id": "cx-econ-sen-capability",
+   "name": {
+    "en": "Sen: capabilities, and freedom not counted by options"
+   },
+   "domain": "economics-politics-sociology",
+   "group": "economics-politics-sociology",
+   "source": {
+    "work": "Amartya Sen, Commodities and Capabilities (1985); Development as Freedom (1999); 'Welfare, Preference and Freedom' (1991)",
+    "locator": "locator unverified",
+    "basis": "ai-knowledge"
+   },
+   "sense": {
+    "en": "Assess a person's position by the real freedom to achieve functionings they have reason to value, not by goods or utility; adaptive preferences make utility a poor guide. Counting options fails: the freedom an option set gives depends on what is valued (his reply, as I recall, to Pattanaik and Xu). Freedom has a process side as well as an opportunity side."
+   },
+   "quote": null,
+   "carried": "fresh-reading",
+   "relation": "divergence",
+   "reading": {
+    "en": "'What can form' has a likeness to real freedom, and C is called monotonicity of opportunity sets. Yet C reads admission of listed formations, no person's reasoned valuing, and the chooser route to C runs against his: no chooser is assumed to value any item, a range over every possible valuation does that work. Two-tier reach sits near his achievement and freedom. Under the condition (scope) and C (order), both unasserted, warrant open. Proposed here. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "what-would-give-c",
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-would-give-c",
+     "says": {
+      "en": "'No chooser is assumed to value any item. The range over every possible valuation does that work, and what is assumed instead is that a merely possible chooser counts'. The route is Foster's effective freedom with every preference admitted. Not shown: 'That no valuing enters at all'."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "what-a-course-keeps-reachable",
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-a-course-keeps-reachable",
+     "says": {
+      "en": "08: 'The lexical order is the two-tier order read on realized claims, then reachable ranges, near Sen's achievement and freedom (1985)'. Credit and order are the account's; the reach is of a course, not of a person's valued functionings."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "widening-as-what-every-positive-weighting-ranks",
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-widening-as-what-every-positive-weighting-ranks",
+     "says": {
+      "en": "'Under one positive weight for every item, a course weighs more exactly when it admits more items.' Where what a course adds weighs nothing, the two weigh the same. Finite listings. 'That a standpoint's order ranks every widening higher', or which order it has, is not shown."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "weights-within-a-ratio-agree-past-it",
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-weights-within-a-ratio-agree-past-it",
+     "says": {
+      "en": "'That the larger side is better: counting is a further premise, and C ranks neither side of a mixed pair.' So C does not itself count options, the form he objected to."
+     },
+     "role": "neighbour"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#known-results",
+     "says": {
+      "en": "Row: how two courses differ in what can form, against opportunity sets (Pattanaik and Xu 1990), 'near-definitional'; 'rankings of sets by diversity, where a near-duplicate adds less than a distinct option (Weitzman 1992; Nehring and Puppe 2002)'."
+     },
+     "role": "neighbour",
+     "part": "the row on how two courses differ in what can form"
+    }
+   ],
+   "account_adds": {
+    "en": "Comparison of whole courses, including non-human formations, and of what is lost across steps."
+   },
+   "source_adds": {
+    "en": "Reasoned valuing as what a comparison reads; functionings; a person as the unit; adaptive preference; process freedom. J4's 'legitimate feasible choice' is the nearest named; J1 to J4 'follow from neither premise'. 07's 'Capability is reach' is another sense of the word."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": [
+    "cx-modphil-sen-capability"
+   ]
+  },
+  {
+   "id": "cx-econ-arrow-sen-impossibility",
+   "name": {
+    "en": "Arrow's impossibility and the Paretian liberal"
+   },
+   "domain": "economics-politics-sociology",
+   "group": "economics-politics-sociology",
+   "source": {
+    "work": "Kenneth J. Arrow, 'A Difficulty in the Concept of Social Welfare' (1950); Amartya Sen, 'The Impossibility of a Paretian Liberal' (1970)",
+    "locator": "the theorems; locator unverified",
+    "basis": "ai-knowledge"
+   },
+   "sense": {
+    "en": "Arrow: no rule for aggregating individual orderings meets a short list of reasonable requirements. Sen: over an unrestricted domain, a Pareto requirement conflicts with giving each person decisiveness over even one personal pair. Each is an incompatibility among stated requirements, not an impossibility of all collective decision."
+   },
+   "quote": null,
+   "carried": "history-only",
+   "relation": null,
+   "reading": {
+    "en": "It matters because widening is called Pareto unanimity and practical choice is left to J1 to J4. Live text keeps mixed comparisons unranked and never meets these theorems. It has neighbours only: the Pareto relation among standpoints, positional concern (nearest a meddlesome preference, mine), Askell 2018, May 1952. The theorems stand in a process study, which says a common causal foundation 'does not provide one uncontroversial ranking of everyone's futures'. [AI reading]"
+   },
+   "targets": [],
+   "account_adds": null,
+   "source_adds": {
+    "en": "Stands only in _process/research/2026-10-05-generative-foundation-review/foundation-assessment/GOVERNANCE-LITERATURE.md section 6. In the live text 'Arrow' is Arrow and Fisher 1974, and in two records the arrow of a course."
+   },
+   "absence": {
+    "searched": [
+     "Arrow (live: Arrow and Fisher 1974; two records have Web.Arrow)",
+     "Paretian, social welfare: no hit",
+     "impossibilit (one live line, 08's 684, unrelated)",
+     "social choice (no live line, one record)"
+    ],
+    "read": [
+     "GOVERNANCE-LITERATURE.md section 6, as hit",
+     "07-SIGNIFICANCE line 345",
+     "07's what-would-give-c from does-not-show onward",
+     "the widening record's correspondence"
+    ]
+   },
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": [
+    "cx-modphil-sen-paretian-liberal"
+   ]
+  },
+  {
+   "id": "cx-econ-best-response-frame",
+   "name": {
+    "en": "Best response and equilibrium as game theory's frame"
+   },
+   "domain": "economics-politics-sociology",
+   "group": "economics-politics-sociology",
+   "source": {
+    "work": "John Nash, 'Non-Cooperative Games' (1951), with the later reading of equilibrium as rational play",
+    "locator": "locator unverified",
+    "basis": "ai-knowledge"
+   },
+   "sense": {
+    "en": "A player's best response maximizes its own payoff given others' strategies; a Nash equilibrium is a profile of mutual best responses, and in finite games, with mixed strategies, one exists. Economics often reads it as what rational agents do, or what a process settles at, and calls departure from it irrational."
+   },
+   "quote": null,
+   "carried": "changed",
+   "relation": "divergence",
+   "reading": {
+    "en": "The account uses the definition and drops the standing. An optimizer's order is supplied and read through its couplings, so 'best' is a relation formed by that order; existence is not shown; what learners do is a separate question, and the forecast failed for tabular learners (MQ1). The prisoner's dilemma is read as a menu with no claim about choosers. Labelling is uneven: 08 says 'that field's frame', 05 section 7 uses the term under its definitions. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "several-optimizers-drain-by-their-joint-capacity",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-several-optimizers-drain-by-their-joint-capacity",
+     "says": {
+      "en": "'At a mutual best response of several optimizers, each optimizing alone by its own order'; 'Which formations optimize, by which order and with which capacity, is supplied'. 05 Not shown: 'That a mutual best response exists in general (no existence is shown, and none is shown to fail), or which of several self-consistent outcomes learners come to.'"
+     },
+     "role": "carries"
+    },
+    {
+     "record": "what-would-give-c",
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-would-give-c",
+     "says": {
+      "en": "'the prisoner's dilemma read as a menu, at the only mutual best response, the pure Nash equilibrium of one play and no claim about what actual choosers do'. A conflict with widening, with neither reading shown the one that counts. C for order, the continuation condition for scope, neither asserted, warrant open."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/ONE-ARGUMENT.md",
+     "says": {
+      "en": "'forecast an exact best response's side effects (8 of 8)' and failed for tabular learners (80 of 151; MQ1)."
+     },
+     "role": "carries",
+     "part": "the line on the draw against its margin, MQ1"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#known-results",
+     "says": {
+      "en": "Frank's race between positional and other goods (1985), 'over-allocation being that field's frame'."
+     },
+     "role": "neighbour",
+     "part": "the row citing Frank (1985)"
+    },
+    {
+     "record": "the-rest-outruns-the-renewal",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-the-rest-outruns-the-renewal",
+     "says": {
+      "en": "'Depletion need not be the only equilibrium; what learners reach is tested in CG2'. Record: 'where the rest outruns, restraint by all may also be one'; 'That restraint is better' is not shown."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "Several in turn need not draw as one drawer would; a selection beyond the couplings is unreached whatever anyone's rationality. 05 Open: 'Revision that is not a best response'."
+   },
+   "source_adds": {
+    "en": "Mixed strategies and the existence theorem, absent in the pure core's natural-number setting; refinements other than perfection; restraint by repeated play, which 08 names as not stated, every horizon here finite."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": null
+  }
+ ],
+ "changes": [
+  {
+   "id": "cx-econ-stigler-capture",
+   "what": "changed",
+   "why": "codes-and-rules: Stigler states 'as a rule' that regulation is acquired by the industry. The shaping law gives where (c ≤ s, carried capacity and a read share as premises), and the entry's own account_adds says 'Conditions with witnesses'. Siblings: cx-sspiral-rule-capture, cx-zhishan-winners-write-the-rules, cx-fork-dark-path-default, and cx-econ-acemoglu-persistence after H3."
+  },
+  {
+   "id": "cx-econ-ostrom-commons",
+   "what": "changed",
+   "why": "codes-and-rules: The record's correspondence lists Ostrom among 'unproved neighbours, each as far as read' and found no door whose strength is the keepers' own count, so her boundary principle lacks the law's mechanism. Sibling cx-syscyb-ostrom-design-principles has agreement of reading. Its same_as sibling cx-syscyb-ostrom-against-hardin is divergence on the self-governance half. / competition: Its agreement reads boundaries through the entry rule, as design-principles does; cx-syscyb-ostrom-against-hardin reads another claim (communication, chosen sanctions) against several-optimizers as divergence, so one count would carry one relation for both. / same-claims: Same claim as cx-syscyb-ostrom-design-principles (agreement of reading): a-rule-rebuilt-from-the-members-it-limits reads the entry rule only, the other targets are neighbours whose links the entry calls its own, so one of eight principles has a law and the rest is a reader's join."
+  }
+ ],
+ "live_flags": [
+  {
+   "where": "theories/becoming/review/ALIGNMENT.md#a-08",
+   "what": "Line 232 glosses Goodhart's and Campbell's laws as 'a measure that keeps its standing after it stops measuring'. As recalled, unchecked against the papers, Goodhart's is a regularity collapsing under control and Campbell's is corruption of the indicator and the process, not persistence; the gloss is T7's claim. Check against Campbell 1979. cx-pal-goodhart-taxonomy raises the same point."
+  },
+  {
+   "where": "theories/becoming/results/records/closed-capture.json",
+   "what": "The correspondence says 'Goodhart (1975) says a measure made a target stops measuring'. As recalled, that wording is Strathern's 1997 gloss set under Goodhart's date. From AI knowledge, to be checked."
+  },
+  {
+   "where": "theories/becoming/COLLECTIVE-DIRECTION.md:87",
+   "what": "'No institution is modelled on the spine' stands against 05 section 12, 'One kind of institution', a root theorem, and THE-THEORY-OF-BECOMING line 195, 'one kind of institution ... one minimal model'. Looks stale."
+  },
+  {
+   "where": "theories/becoming/chapters/08-METHOD.md:586",
+   "what": "'across domains conjectured (T3), supported in simulation (MQ1)' omits what ONE-ARGUMENT line 75 states: the forecast failed for tabular learners (80 of 151). A reader of 08 alone takes MQ1 as plain support."
+  },
+  {
+   "where": "theories/becoming/chapters/05-COLLECTIVES.md:215",
+   "what": "Section 7 uses 'mutual best response' under its own definitions without labelling it game theory's frame, while 08 writes 'that field's frame'. AGENTS asks for the label; the definition does read a supplied order, so this is unevenness rather than an error."
+  },
+  {
+   "where": "theories/becoming/review/ALIGNMENT.md:303",
+   "what": "A-10 and the shaping record list 'the persistence of elites (Acemoglu and Robinson 2008)' as a known form of shaping selected by what comes back. Their mechanism is de facto power substituting for de jure, which no law states, and the nearest law, a reform absorbed, is closed-capture, which does not cite them. The credit reads wider than it holds."
+  },
+  {
+   "where": "theories/becoming/results/records/loss-read-in-time-by-the-others.json",
+   "what": "Credits 'the threshold the tipping point of Schelling (1978) and Granovetter (1978)' without shaping-read-by-readers-drawn-from-the-selected's qualifier that his thresholds are distributed where here there is one. In this model a count-weighted mean decides, the case his paper warns of, and thresholds-of-waiting, the nearer law, does not cite him. A credit to look at, not a false statement."
+  }
+ ]
+}

@@ -1,0 +1,258 @@
+{
+ "key": "couplings",
+ "read": [
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/cx-crosswalk/COMPARE.md",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/cx-crosswalk/BRIEF.md",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/cx-crosswalk/reads/CRITIC.md (H1, H2, H3, agreement crowding)",
+  "theories/becoming/results/records/selection-through-couplings.json (statement, laws, hypotheses, does_not_show, correspondence)",
+  "theories/becoming/results/records/seeking-boundary.json (statement, laws, hypotheses, does_not_show, correspondence, next_delta)",
+  "theories/becoming/chapters/03-KNOWING.md lines 1-40 (thesis, definition, r-selection-through-couplings, blindness, the proxy paragraph)",
+  "theories/becoming/chapters/03-KNOWING.md lines 340-356 (r-seeking-boundary, the boundary of enough, the readings D26/D41/D45 and D65)",
+  "theories/becoming/chapters/02-MAP.md line 388 (target-capture's paragraph citing 03's seeking laws)",
+  "digest.py --stage 4-repair --target selection-through-couplings,seeking-boundary (67 entries, all read)",
+  "digest.py --stage 4-repair --ids cx-rsd-reason-or-win,cx-wamo-amplifier,cx-ma-epistemic-closure",
+  "targets, sources and same_as of 19 compared entries from reads/*.4-repair.json",
+  "grepped only: the 2026-05-05 saying in the asc, rsd and jian READMEs; the 2024-06 narrative text in the drives and sspiral READMEs; 'above all others', 'kernel' and 'status' in the live account"
+ ],
+ "clusters": [
+  {
+   "claim": "Only what couples into a selector can change its selection (a bound, asserted of an actual selector)",
+   "ids": [
+    "cx-ecoevo-selection-without-foresight",
+    "cx-zhishan-selection-follows-feedback",
+    "cx-ma-first-separation",
+    "cx-archearth-points-game-revised",
+    "cx-greek-plato-cave"
+   ],
+   "verdict": "same",
+   "why": "All agreement of law, rightly: each source asserts of an actual selector what the law supplies as its premise. The law is near-definitional by its record, so these agreements show only that the source states the bound, and explain little."
+  },
+  {
+   "claim": "Optimizing a proxy hollows, crushes or removes what it does not read (an effect beyond the bound)",
+   "ids": [
+    "cx-asc-metric-capture",
+    "cx-econ-goodhart-regularity",
+    "cx-pal-goodhart-taxonomy",
+    "cx-drives-dimensional-collapse",
+    "cx-ma-ontological-capture",
+    "cx-kpso-model-smaller-than-its-system"
+   ],
+   "verdict": "ruled",
+   "why": "Five are scope: the source claims the collapse universally, and the account has it only with room, at optima, on its model. kpso's 'crushed to that dimension' is the same claim against the same optimum law, so it goes to scope."
+  },
+  {
+   "claim": "A bound form read onto a source through a reader's identification (spread for truth, letter for intent, codes for couplings, buyer for market)",
+   "ids": [
+    "cx-abr-hisba-office",
+    "cx-ctxrt-legibility-test",
+    "cx-drives-narrative-fitness",
+    "cx-sspiral-spread-not-truth",
+    "cx-syscyb-trap-rule-beating",
+    "cx-syscyb-luhmann-resonance"
+   ],
+   "verdict": "same",
+   "why": "All agreement of reading. They differ from the cave, which stays law: there the source itself states the premise (honours through shadows only), while here the reader supplies the selector or the premise. narrative-fitness and sspiral-spread state one 2024-06 text, so same_as is made two-way."
+  },
+  {
+   "claim": "和 not 争: in contention assertion is selected over reason-tracking (Ren's 2026-05-05 saying)",
+   "ids": [
+    "cx-asc-contention-microfoundation",
+    "cx-jianwen-he-not-zheng",
+    "cx-rsd-reason-or-win"
+   ],
+   "verdict": "same",
+   "why": "All fresh-reading/scope. The law gives a bound, and the saying claims the win is selected, which the law does not give. All three quote one saying, so asc joins the same_as pair."
+  },
+  {
+   "claim": "Every view or model is partial; no view from outside",
+   "ids": [
+    "cx-jianwen-perspectival-no-god-view",
+    "cx-memories-one-model-smaller",
+    "cx-ctxrt-projection-not-neutral",
+    "cx-ecs-local-reasoning-scaling-unit",
+    "cx-oi-kevala"
+   ],
+   "verdict": "differ-real",
+   "why": "The first four are scope: the bound is exact, not a fixed shortfall, and constitution or sufficiency is not stated. kevala is divergence because its source asserts an omniscient knower that the model gives no form."
+  },
+  {
+   "claim": "What a selector cannot read is unreal to it, or truth is only intersubjective",
+   "ids": [
+    "cx-ma-ontological-capture",
+    "cx-syscyb-second-order-observer",
+    "cx-drives-truth-intersubjective"
+   ],
+   "verdict": "differ-real",
+   "why": "ma speaks of what is real to a system's action model, so scope. The other two assert constructivism or 'never in what is', which the account denies: unread is not unreal. That is divergence. carried differs because inclusion of the observer is stated, while 'only' is the whole intersubjective claim."
+  },
+  {
+   "claim": "A rank, status or ever-more target cannot rest (more than now; above all others)",
+   "ids": [
+    "cx-drives-status-never-rests",
+    "cx-ma-rank-kernel",
+    "cx-sspiral-no-enough",
+    "cx-greek-epicurus-limit-of-desire",
+    "cx-modphil-marx-boundless-drive",
+    "cx-oi-kama-fire",
+    "cx-greek-plato-regime-decay"
+   ],
+   "verdict": "ruled",
+   "why": "carried: the account states the law of targets, with how a target forms unmodelled, and its record's next step names the join to the meta-attractor as still to be made. So rank-kernel and no-enough go to fresh-reading, as status says. Relations differ for a real reason: kama, regime decay and status claim it universally (scope), and the rest do not. These laws are elementary by their record."
+  },
+  {
+   "claim": "Races for position: escalation, the Red Queen, the struggle for recognition, the winner's fate",
+   "ids": [
+    "cx-syscyb-trap-escalation",
+    "cx-ecoevo-red-queen-relative-race",
+    "cx-modphil-hegel-struggle-position",
+    "cx-fork-even-the-winner-loses"
+   ],
+   "verdict": "differ-real",
+   "why": "Escalation's pieces have law forms, though its stock raised by reading the other's is derived nowhere. The others assert what the account does not: a zero-sum world, mutual recognition, AI taking the game. Only 'above all others never rests for two' is shared."
+  },
+  {
+   "claim": "无明 / avidyā read as locked seeking",
+   "ids": [
+    "cx-buddhist-avidya-first-link",
+    "cx-oi-avidya",
+    "cx-buddhist-wheel-closed-loop-ming-exit"
+   ],
+   "verdict": "same",
+   "why": "All divergence. Both first-link and the yoga/Advaita reading are changed, and they carry the Reading. In both, the source's not-knowing or error has content, while the account's 无明 is a lock on seeking. See the live flag."
+  },
+  {
+   "claim": "Locked seeking as a fixed measure excluding before assessment (D65)",
+   "ids": [
+    "cx-drives-defended-story",
+    "cx-pal-confirmation-bias",
+    "cx-pal-value-lock-in",
+    "cx-drives-inescapable-basin",
+    "cx-drives-framework-as-basin",
+    "cx-pal-addiction"
+   ],
+   "verdict": "differ-real",
+   "why": "These are different claims, with relations to match: defended story, confirmation bias and lock-in are universal and scoped; addiction is divergence (harm known); framework-as-basin is contrary-reading. D65 is an AI Reading, so none gets law from it; inescapable-basin's law comes from its capture targets, its main cluster."
+  },
+  {
+   "claim": "Rewards or rules get gamed",
+   "ids": [
+    "cx-sty-gamed-rewards",
+    "cx-econ-goodhart-regularity",
+    "cx-pal-goodhart-taxonomy"
+   ],
+   "verdict": "differ-real",
+   "why": "sty names calibration as the cause, a variable the law does not turn on, so it is changed/divergence. The Goodhart entries claim collapse, which the optimum law scopes."
+  },
+  {
+   "claim": "Knowing suffices to act or to judge well",
+   "ids": [
+    "cx-greek-socrates-no-one-errs",
+    "cx-zhishan-liangzhi",
+    "cx-hsm-value-or-tool-alone"
+   ],
+   "verdict": "same",
+   "why": "All divergence against one statement: a selection may ignore what its couplings carry, and seeing is not valuing."
+  }
+ ],
+ "rulings": [
+  {
+   "id": "cx-kpso-model-smaller-than-its-system",
+   "set": {
+    "relation": "scope",
+    "agreement_of": null
+   },
+   "why": "Like cx-drives-dimensional-collapse and cx-asc-metric-capture: 'crushed to that dimension' is stated universally, and the carrying optimum law holds only with room, at optima, on its model. An optimum-law cluster may also rule on it."
+  },
+  {
+   "id": "cx-ma-rank-kernel",
+   "set": {
+    "carried": "fresh-reading",
+    "reading": {
+     "en": "Proposed here; no live text reads a kernel of rank as these targets, and seeking-boundary's next step names that join as still to make. Forms, elementary by their record: more than now needs an open world and never rests; above all others is met by at most one seeker, so no unchanged state meets it for two; a rising take from a bounded giving ends the seeker. How targets form is not modelled: this is the target's law, not the kernel's origin. [AI reading]"
+    }
+   },
+   "why": "Like cx-drives-status-never-rests ('reading a drive as a target is the join'). 03 states the law of targets only, and seeking-boundary.json next_delta names the join to the meta-attractor as not yet made."
+  },
+  {
+   "id": "cx-sspiral-no-enough",
+   "set": {
+    "carried": "fresh-reading",
+    "reading": {
+     "en": "Proposed here; no live text reads the source's loop so. 'More than now' and 'above all others', elementary laws by their record, have the form of the source's 'keep compete' and 'winning': the first needs an open world, and a take rising at every step ends where it does not resume; the second is met by no unchanged state for two. But enough does not suffice: under an undetermined law meeting does not give settling; holders at their set points can end a renewal. No law is about biology. [AI reading]"
+    }
+   },
+   "why": "Like cx-drives-status-never-rests and cx-greek-epicurus-limit-of-desire: 03 states the target laws and a 知足 Reading. Reading 'keep compete' as such a target is the reader's join, not a sentence of the account."
+  },
+  {
+   "id": "cx-sty-visibility-from-relations",
+   "set": {},
+   "roles": [
+    {
+     "target": "selection-through-couplings",
+     "role": "neighbour"
+    }
+   ],
+   "why": "The entry's own reading says the parting rests on access-yet-to-form, where permission is a parameter. Reach is cited only to keep it apart from a rule of access."
+  },
+  {
+   "id": "cx-syscyb-feedback-as-purpose",
+   "set": {},
+   "roles": [
+    {
+     "target": "seeking-boundary",
+     "role": "limit"
+    }
+   ],
+   "why": "It is cited for 'how a target forms is not modelled', which is why no account of purpose is offered. The loop itself rests on two-sided-regulation and the set-point optimum."
+  },
+  {
+   "id": "cx-asc-contention-microfoundation",
+   "set": {
+    "same_as": [
+     "cx-rsd-reason-or-win",
+     "cx-jianwen-he-not-zheng"
+    ]
+   },
+   "why": "It quotes the same 2026-05-05 saying (一旦争，则「我对」，我大于理) that cx-rsd-reason-or-win and cx-jianwen-he-not-zheng already mark as same_as each other."
+  },
+  {
+   "id": "cx-jianwen-he-not-zheng",
+   "set": {
+    "same_as": [
+     "cx-rsd-reason-or-win",
+     "cx-asc-contention-microfoundation"
+    ]
+   },
+   "why": "It adds the asc entry, which states the same 2026-05-05 saying, with the same relation."
+  },
+  {
+   "id": "cx-rsd-reason-or-win",
+   "set": {
+    "same_as": [
+     "cx-jianwen-he-not-zheng",
+     "cx-asc-contention-microfoundation"
+    ]
+   },
+   "why": "It adds the asc entry, which states the same 2026-05-05 saying. Compared here, though its targets belong to the capture cluster."
+  },
+  {
+   "id": "cx-sspiral-spread-not-truth",
+   "set": {
+    "same_as": [
+     "cx-drives-narrative-fitness"
+    ]
+   },
+   "why": "cx-drives-narrative-fitness already lists this entry: both state the 2024-06 text that narratives fit to spread win and good ones are usually less fit."
+  }
+ ],
+ "live_flags": [
+  {
+   "where": "theories/becoming/chapters/03-KNOWING.md:351",
+   "what": "The Reading glosses 无明 as 'Sanskrit avidyā'. Two items find that it names neither the Buddhist first link (not-knowing with content, ended by knowing) nor the Yoga/Advaita error about the self (cx-buddhist-avidya-first-link, cx-oi-avidya). GLOSSARY, 02 and 08 give no caution, so a reader takes it as the term's lineage. Dossier B's question 66 asks whether to drop the gloss."
+  },
+  {
+   "where": "theories/becoming/chapters/03-KNOWING.md:29",
+   "what": "'It is the proxy problem (Goodhart 1975; ...; Manheim and Garrabrant 2018) as the account states it' credits more than is carried. The account states one form (nearest extremal, at optima with room), not Goodhart's regularity breaking because those controlled respond (cx-econ-goodhart-regularity), and not the regressional, causal or adversarial kinds (cx-pal-goodhart-taxonomy)."
+  }
+ ]
+}

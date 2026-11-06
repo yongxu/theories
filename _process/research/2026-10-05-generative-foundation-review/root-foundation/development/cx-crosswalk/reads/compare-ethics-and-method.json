@@ -1,0 +1,197 @@
+{
+  "key": "ethics-and-method",
+  "read": [
+    "COMPARE.md, BRIEF.md and REPAIR.md in full",
+    "reads/CRITIC.md: H1, H2 and H3 in full",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md: §3 opening and definition (#condition), §3.4 (#does-not-settle), §4 opening, its table and the self-concern theorem (#scope-and-order), §5 opening and the practical-judgment Conditional (#r-practical-judgment-under-living-significance), §8 T4, T5 and T8 (#theses), §9 objections table, 'What this chapter does not show' (#does-not-show), and the open item on a universal practical warrant",
+    "theories/becoming/chapters/08-METHOD.md: §1 'The start', 'Distinctions state their basis', 'An objection is answered on what it says' and the five-step test (#beginning-within-the-one-unfolding); 'Where the ethics sits'; §9's one-relational-unfolding thesis, what it forbids and what would defeat it, and the explanatory-reading thesis after it",
+    "theories/becoming/results/records/practical-judgment-under-living-significance.json: title, status, kind, statement, hypotheses, does_not_show; its .md searched for C and widening",
+    "digest.py --stage 4-repair --target over the seven targets: a one-line listing of all 237 entries the substring match returns, with their labels and target roles; the full sense, reading, source_adds and targets of about 150 of them, chosen by like claim",
+    "theories/keep-the-possibility-space-open/README.md, theories/wamotopia-and-the-wamo-protocol/README.md, theories/zhishan-intelligence-must-be-good/README.md and theories/relational-self-and-datong/README.md: grep only, for the shared quotations behind the same_as rulings"
+  ],
+  "clusters": [
+    {
+      "claim": "Entries citing the ethics name both premises, and none says the ethics derives from the condition",
+      "ids": ["cx-abr-divine-command", "cx-asc-aligned-with-flourishing", "cx-kpso-one-chosen-premise", "cx-memories-one-owned-premise", "cx-zhishan-must-be-good", "cx-greek-aristotle-limit-against-more", "cx-indaf-animate-kin", "cx-zhishan-structural-responsibility", "cx-zhishan-configuration-not-law", "cx-zhishan-evil-as-gate-capture", "cx-fork-common-by-function"],
+      "verdict": "same",
+      "why": "A pattern search of every entry with a target in #theses, #scope-and-order, #condition or the practical-judgment record found both premises named, unasserted, in all but the last five; those cite the narrower conditional (living significance, J1-J4, E), which REPAIR point 6 allows. No entry says the ethics derives from the condition or that a law says a loss is a harm. About thirty name both premises but leave out 'warrant open'. That is a gap in wording, not in verdict, and no ruling is made on it."
+    },
+    {
+      "claim": "Relational ontology stated as true of what is, which the account holds as a thesis argued of what is represented",
+      "ids": ["cx-zhishan-world-happening-as-us", "cx-wamo-radical-interconnection", "cx-drives-mind-world-loop", "cx-jianwen-central-sentence-relations", "cx-modphil-osr-no-things", "cx-modphil-simondon-relation-has-value-of-being", "cx-memories-lens-not-ground", "cx-rsd-no-self-beyond-drive"],
+      "verdict": "ruled",
+      "why": "The siblings use scope: the source says it of reality, and the account conditions it ('as represented', argued, 'neither shows that reality has none', a boundary kept). zhishan alone used agreement, although its own reading says a boundary is kept and the standing differs. It goes to scope."
+    },
+    {
+      "claim": "Relation-first as a thesis or method rule, with no universal for the account to condition",
+      "ids": ["cx-rsd-self-action-centre", "cx-ctxrt-subject-not-first", "cx-sty-token-is-the-relation", "cx-sty-roles-not-root-types", "cx-greek-plato-sophist-power", "cx-modphil-whitehead-immanent-law", "cx-modphil-marx-fetishism", "cx-jianwen-monism-chosen-not-proved", "cx-rsd-ontology-entails-nothing", "cx-rsd-distinct-and-constituted"],
+      "verdict": "same",
+      "why": "All are agreement of thesis-or-method, and none claims law. 08 says the thesis 'excludes no observation', so these agreements show very little. Several readings say so, which is right."
+    },
+    {
+      "claim": "A self or person constituted by others or by recognition",
+      "ids": ["cx-rsd-self-action-centre", "cx-indaf-constituted-person", "cx-modphil-hegel-recognition-constitutive"],
+      "verdict": "differ-real",
+      "why": "rsd reads the general 'knot of relations' against the thesis. indaf and Hegel name the constituting relation (others, recognition), which the account lacks, and 'dependence is not constitution'. So the sources differ in what they claim."
+    },
+    {
+      "claim": "A non-relational ground or a relatum with a nature of its own, asserted",
+      "ids": ["cx-abr-tawhid", "cx-abr-subsistent-relation", "cx-greek-plato-forms", "cx-greek-aristotle-substance", "cx-modphil-spinoza-one-substance", "cx-modphil-whitehead-experience-and-eternal-objects", "cx-oi-atman-non-relational-self", "cx-oi-ramanuja-inseparable", "cx-oi-purusha-witness", "cx-oi-vaisheshika-vishesha", "cx-asc-dualism-root", "cx-rsd-dualism-root"],
+      "verdict": "same",
+      "why": "All are divergence: the source asserts a layer that the thesis forbids as explanation and does not refute. Aristotle, Ramanuja and Vaisheshika hold 08's named live defeater ('relations need relata with natures of their own') as doctrine, not as an argument against the form, so they stay divergence."
+    },
+    {
+      "claim": "An argument against the relational form itself",
+      "ids": ["cx-abr-aquinas-mixed-relation", "cx-abr-ghazali-occasionalism", "cx-buddhist-mmk-no-arising-from-other", "cx-buddhist-mmk-24-18-designation-and-views", "cx-greek-parmenides-no-becoming", "cx-modphil-simondon-individual-as-phase", "cx-modphil-spinoza-necessity", "cx-oi-shankara-relation-regress", "cx-oi-nyaya-self"],
+      "verdict": "same",
+      "why": "All are contrary-reading, each kept as a test with its reply stated and not claimed met. Nyaya argues by inference what Vaisheshika posits. That justifies contrary for one and divergence for the other."
+    },
+    {
+      "claim": "Generation, 生生 or flourishing held as the good or the criterion, unconditionally",
+      "ids": ["cx-asc-generativity-licenses-competition", "cx-asc-aligned-with-flourishing", "cx-archearth-flourishing-as-the-aim", "cx-drives-generative-field", "cx-kpso-preserve-and-expand", "cx-kpso-the-generating-goes-on", "cx-ma-shengsheng-ethics", "cx-fork-generative-criterion", "cx-wamo-more-alive", "cx-zhishan-good-as-continuing-generation", "cx-zhishan-must-be-good", "cx-modphil-bergson-elan-vital", "cx-sspiral-four-conditions"],
+      "verdict": "ruled",
+      "why": "Twelve use divergence, which is BRIEF's case of 'something unconditional the account gives only under a condition'. sspiral used scope while its reading says the account 'keeps the direction and restates it under premises', so it goes to divergence. carried differs for a real reason: cip where a live sentence states the part (C's widening; 生生 not novelty or scale), changed where the account's generation is a map pattern with no order."
+    },
+    {
+      "claim": "As long as we can stabilize and keep going, we have a future (Ren, 2026-02-09)",
+      "ids": ["cx-kpso-stabilize-and-keep-going", "cx-wamo-stabilize-not-utopia"],
+      "verdict": "ruled",
+      "why": "The same sentence of the same source got scope in kpso and agreement in wamo. wamo's own reading scopes it ('stable under one fixed rule does not keep the possible widening'), so it goes to scope, and each is same_as the other."
+    },
+    {
+      "claim": "Interdependence is a lens, not a source of values: a parasite is related to its host",
+      "ids": ["cx-kpso-lens-not-source", "cx-rsd-parasite-lens"],
+      "verdict": "same",
+      "why": "Both are carried-in-part, agreement of law, through the non-entailment laws (no statement reading only the dynamics entails the condition) and derived-extent-limits. Both READMEs report the same 2026-06 FOUNDATION demotion, so same_as is set."
+    },
+    {
+      "claim": "One logic for humans and made minds (Ren, 2026-06-04, #87)",
+      "ids": ["cx-kpso-one-logic-for-all", "cx-zhishan-no-separate-principle"],
+      "verdict": "same",
+      "why": "Both are carried-in-part/scope: 'all beings' is narrowed to those whose line runs through life, and an actual AI's standing is not shown. Both quote the same sentence, so same_as is set."
+    },
+    {
+      "claim": "The ethics' premise is one chosen or avowed premise",
+      "ids": ["cx-kpso-one-chosen-premise", "cx-memories-one-owned-premise", "cx-zhishan-avowed-position", "cx-kpso-open-is-not-c"],
+      "verdict": "same",
+      "why": "All are changed/divergence: one owned premise becomes two unasserted premises with two roles, and keeping open is entailed by neither."
+    },
+    {
+      "claim": "Goodness read off structure, reason, algebra, substrate or ontology",
+      "ids": ["cx-sspiral-goodness-rational", "cx-sty-good-existence-values-coded", "cx-ctxrt-goodness-in-substrate", "cx-wamo-knowing-the-good", "cx-jianwen-alignment-from-algebra", "cx-rsd-datong-ontological-implication", "cx-rsd-we-are-the-collective", "cx-greek-stoic-providence", "cx-greek-aristotle-function"],
+      "verdict": "same",
+      "why": "All are divergence: nothing reading no order entails C, and nonduality proves no ethical necessity."
+    },
+    {
+      "claim": "A warrant, order or value asserted by a tradition in C's place",
+      "ids": ["cx-abr-divine-command", "cx-abr-creation-called-good", "cx-abr-stewardship", "cx-abr-plenitude-of-kinds", "cx-abr-weekly-sabbath", "cx-greek-cicero-natural-law", "cx-greek-stoic-indifferents", "cx-greek-aristotle-limit-against-more", "cx-cc-zihuazi-posheng", "cx-oi-moksha", "cx-oi-ahimsa", "cx-indaf-relational-order", "cx-modphil-parfit-on-what-matters", "cx-modphil-sen-capability", "cx-modphil-spinoza-affected-in-many-ways"],
+      "verdict": "differ-real",
+      "why": "All but Spinoza are divergence. Spinoza is agreement of reading because his ranking is of widenings of one body's own capacities, the form of what-self-concern-alone-ranks. Plenitude, nearest C in shape, ranks the mixed case, so it diverges."
+    },
+    {
+      "claim": "Responsibility scales with causal radius or capacity",
+      "ids": ["cx-rsd-capacity-responsibility", "cx-rsd-largest-owes-most", "cx-zhishan-structural-responsibility"],
+      "verdict": "ruled",
+      "why": "The account says otherwise: 'responsibilities arise from named sources, each limited', not from capacity as such. Two siblings use divergence. rsd-capacity used scope, although nothing in the account says where capacity-scaling holds, so it goes to divergence. It stays carried-in-part, because the bounded half (empty plan set) is stated."
+    },
+    {
+      "claim": "One who understands the argument and prefers domination anyway",
+      "ids": ["cx-kpso-determined-adversary", "cx-fork-defection-correction"],
+      "verdict": "same",
+      "why": "Both are carried-in-part, agreement of thesis-or-method, against informed harm (07 #route-b, D65) and 'seeing is not valuing'. No same_as, since the source sentences differ."
+    },
+    {
+      "claim": "Dependence should circulate and not harden into capture",
+      "ids": ["cx-kpso-dependence-not-capture", "cx-fork-common-by-function", "cx-zhishan-evil-as-gate-capture"],
+      "verdict": "differ-real",
+      "why": "kpso and fork are agreement of reading, by descent from 06's row and from an argument record. zhishan's claim is a definition of evil, which 06 D49 refuses to write into a definition, so it is changed/divergence."
+    },
+    {
+      "claim": "The death or ending of parts as a feature, or as generative",
+      "ids": ["cx-kpso-death-as-feature", "cx-sty-endings-as-transitions"],
+      "verdict": "differ-real",
+      "why": "Both readings give the same mechanism and refusal. kpso's source calls endings good (a feature): divergence. sty's calls them generative, which the account scopes to 'while carriers keep beginning': scope."
+    },
+    {
+      "claim": "Seeing or knowing does not by itself act or value",
+      "ids": ["cx-asc-understanding-does-not-release", "cx-greek-aristotle-cleverness", "cx-archearth-outcomes-built-into-the-system", "cx-wamo-products-of-environment", "cx-rsd-autonomy-through-formation", "cx-greek-socrates-no-one-errs", "cx-hsm-idea-not-change"],
+      "verdict": "same",
+      "why": "Where 07's 'seeing is not valuing' line carries, it is a limit statement, so the agreement is thesis-or-method or the relation is scope. Only hsm and asc rest on a record law (selection-when-the-lumping-changes, the-rest-outruns-the-renewal). Socrates is the converse claim: divergence."
+    },
+    {
+      "claim": "A theory publishes what would defeat it",
+      "ids": ["cx-memories-falsifiers", "cx-kpso-published-falsifiers", "cx-zhishan-failure-conditions-reflexivity", "cx-ecs-falsifiable-evaluation"],
+      "verdict": "differ-real",
+      "why": "Borderline. kpso's source is about falsifiers of a derivation, and the account narrows what they can bear on: scope. memories' is the general method, matched by 08's 'judged by what it forbids': thesis-or-method. The scope point sits in memories' source_adds and could be argued either way."
+    },
+    {
+      "claim": "Standing of made minds and of every center, under uncertainty",
+      "ids": ["cx-kpso-one-logic-for-all", "cx-zhishan-moral-status-of-made-minds", "cx-zhishan-standing-of-generative-centers", "cx-ctxrt-digital-life-standing-test"],
+      "verdict": "differ-real",
+      "why": "kpso's main claim concerns scope (scope). The other three assert a duty or a constraint on acts, which 07 does not show (divergence)."
+    }
+  ],
+  "rulings": [
+    {
+      "id": "cx-zhishan-world-happening-as-us",
+      "set": {
+        "relation": "scope",
+        "agreement_of": null,
+        "reading": {"en": "The form is one relational unfolding's and the reading loop's: a formation is one law within the unfolding, not a subject facing a world. Scope: the source says it of what is; the account holds it as a thesis, argued, forbidding explanations and not observations, and keeps a boundary, given by a region with no status outside the unfolding. 06 declines the last step: agreement with 道 is not confirmation, and the theory is not the complete 道. [AI reading]"}
+      },
+      "why": "A strong universal ('the boundary does not actually exist'), conditioned by the account. The siblings cx-wamo-radical-interconnection, cx-jianwen-central-sentence-relations, cx-modphil-osr-no-things and cx-drives-mind-world-loop all use scope for this. The reading is reworded only to drop 'Agreement' and to add the missing [AI reading] mark."
+    },
+    {
+      "id": "cx-wamo-stabilize-not-utopia",
+      "set": {"relation": "scope", "agreement_of": null, "same_as": ["cx-kpso-stabilize-and-keep-going"]},
+      "why": "This is the same Ren sentence (2026-02-09) that cx-kpso-stabilize-and-keep-going reads as scope. wamo's own reading scopes it: 'stable under one fixed rule does not keep the possible widening'."
+    },
+    {
+      "id": "cx-kpso-stabilize-and-keep-going",
+      "set": {"same_as": ["cx-wamo-stabilize-not-utopia"]},
+      "why": "Both READMEs quote the same 2026-02-09 sentence; one claim of one source."
+    },
+    {
+      "id": "cx-sspiral-four-conditions",
+      "set": {"relation": "divergence"},
+      "why": "Its reading says the account 'keeps the direction and restates it under premises'. That is a difference of standing, which cx-fork-generative-criterion, cx-asc-generativity-licenses-competition, cx-kpso-the-generating-goes-on and cx-zhishan-good-as-continuing-generation all read as divergence."
+    },
+    {
+      "id": "cx-rsd-capacity-responsibility",
+      "set": {"relation": "divergence"},
+      "why": "07 §5's 'responsibilities arise from named sources, each limited' replaces responsibility by capacity rather than scoping it. The reading says 'not from capacity as such', and the siblings cx-rsd-largest-owes-most and cx-zhishan-structural-responsibility use divergence for causal-radius scaling."
+    },
+    {
+      "id": "cx-kpso-lens-not-source",
+      "set": {"same_as": ["cx-rsd-parasite-lens"]},
+      "why": "Both READMEs report the 2026-06 FOUNDATION demotion of interdependence to a lens, with the parasite as its reason; same claim, same source, same verdict."
+    },
+    {
+      "id": "cx-rsd-parasite-lens",
+      "set": {"same_as": ["cx-kpso-lens-not-source"]},
+      "why": "As cx-kpso-lens-not-source: the same 2026-06 FOUNDATION demotion."
+    },
+    {
+      "id": "cx-kpso-one-logic-for-all",
+      "set": {"same_as": ["cx-zhishan-no-separate-principle"]},
+      "why": "Both quote Ren's 2026-06-04 sentence (#87): 'there are logic and common sense that should be followed by all beings'."
+    },
+    {
+      "id": "cx-zhishan-no-separate-principle",
+      "set": {"same_as": ["cx-kpso-one-logic-for-all"]},
+      "why": "As cx-kpso-one-logic-for-all: the same 2026-06-04 sentence."
+    },
+    {
+      "id": "cx-ecs-synthetic-members",
+      "set": {},
+      "roles": [{"target": "theories/becoming/chapters/07-SIGNIFICANCE.md#theses", "role": "neighbour"}],
+      "why": "Its own reading says 'T5 is cited only for that label'. The connection rests on 08's #the-work-by-its-own-laws and #reviews."
+    }
+  ],
+  "live_flags": [
+    {
+      "where": "theories/becoming/results/records/practical-judgment-under-living-significance.json (hypotheses)",
+      "what": "The record ranks responses ('a better alternative' changes a judgment), yet its hypotheses name living significance, J1-J4 and E and never say where the order comes from: C, or J1 in its place. Its home, 07 §5, opens with 'the condition for scope and C for order'. Several ecs-* entries put 'a ranking needs C or a premise in its place' into this target's `says`, words the record does not contain. The coordinator might check whether the record should state its order premise."
+    }
+  ]
+}

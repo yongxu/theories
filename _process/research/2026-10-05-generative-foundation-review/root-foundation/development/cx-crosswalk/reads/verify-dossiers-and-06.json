@@ -1,0 +1,130 @@
+{
+ "cluster": "dossiers-and-06",
+ "flags": [
+  {
+   "where": "theories/becoming/review/BUDDHIST-THOUGHT.md:527",
+   "flag": "The list of missing works says 天台, 一念三千 included, is in neither corpus nor repository; 摩訶止觀 and 修習止觀坐禪法要 are stored and six 脉络 entries read them. Also what the dossier says of 中论 26.",
+   "verdict": "holds",
+   "why": "sources/civilization-thought-v1.0/evidence/additions/fo2/FO2-MH.txt (T1911, 摩訶止觀, with 「此三千在一念心……介爾有心，即具三千」) and FO2-XZG.txt (T1915) are stored, and zhonghua/passages.json reads them in six entries (tiantai-fei-zong-fei-heng, tiantai-san-di, mohe-zhiguan-yin-yuan, tiantai-bu-gai-ming-xing from MH; zhiyi-zhiguan-jian-jue, tiantai-shi-xiu-zhi from XZG), so a reviewer asked at line 585 to judge the gap is told no Tiantai text was at hand. On 中论 26 the dossier says only (line 601) that it is not in the corpus, which is true; the whole of T1564, 觀十二因緣品第二十六 included, is stored in fo1/FO1-S-MMK.txt, and the dossier claims nothing wider, so that line is left.",
+   "edits": [
+    {
+     "path": "theories/becoming/review/BUDDHIST-THOUGHT.md",
+     "old": "吉藏《中观论疏》与窥基《成唯识论述记》，即二论最主要之汉地注疏；天台，包括一念三千（二百四十八段之对应自己列为值得再读之段）。",
+     "new": "吉藏《中观论疏》与窥基《成唯识论述记》，即二论最主要之汉地注疏。天台不在语料中，其文则在仓库中：《摩訶止觀》（[FO2-MH](../../../sources/civilization-thought-v1.0/evidence/additions/fo2/FO2-MH.txt)）与《修習止觀坐禪法要》（[FO2-XZG](../../../sources/civilization-thought-v1.0/evidence/additions/fo2/FO2-XZG.txt)）；《中华思想脉络》之对应有六个条目读之，四出《摩訶止觀》（其一含「介爾有心，即具三千」），二出《坐禪法要》（[古文 §七](../chapters/06-CLASSICAL-TEXTS.md#civilization-thought)）；本材料未列为条目，一念三千亦是二百四十八段之对应自己列为值得再读之段。",
+     "region": "未列为条目之处, the bullet 本领域要籍之缺"
+    },
+    {
+     "path": "theories/becoming/review/BUDDHIST-THOUGHT.md",
+     "old": "吉藏与窥基之疏、天台、《观业品》之业与作者",
+     "new": "吉藏与窥基之疏、天台（其文在仓库，未入语料）、《观业品》之业与作者",
+     "region": "回复表, the last row (未列为条目之处)"
+    }
+   ],
+   "also_stands": [
+    "theories/becoming/review/BUDDHIST-THOUGHT.md:601: 《中论》第二十六品不在语料中: true of the corpus; the text is in sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt; not edited",
+    "theories/becoming/review/BUDDHIST-THOUGHT.md:599: 仓库中没有《起信论》之疏、《俱舍论》、清凉之疏: checked against fo1/fo2 (no such text stored); true, not edited",
+    "theories/becoming/history/CHINESE-SOURCES-AND-BECOMING.md:247: lists 天台「一念三千」 as worth rereading; a history page, not edited (06:645's edit below now says it is read in the 脉络 mapping)",
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aa-attractor-atlas/PLAN.md:353: 'the gaps B lists itself (... Tiantai, 中论 26)'; process file, not edited",
+    "no other live line in theories/ or GLOSSARY.md says Tiantai is not stored (git grep 天台, Tiantai, 一念三千, 摩訶止觀)"
+   ],
+   "in_packet": "yes: git grep -n '本领域要籍之缺' review-packet-4 -- theories/ finds BUDDHIST-THOUGHT.md:527 with the same sentence"
+  },
+  {
+   "where": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md:645",
+   "flag": "未决's 文本 bullet says 老子第三十四、五十七章与中庸第一、十三章未入映射 and that §11's passages worth rereading are unread, while both mappings now hold some of them.",
+   "verdict": "holds",
+   "why": "zhonghua/passages.json holds lao-34-shi-zhi-er-sheng, lao-57-wu-shi-zi-fu, lao-57-fa-ling-zi-zhang, zhongyong-tian-ming-zhi-wei-xing, zhongyong-zhi-zhong-he (with zhongyong-zhong-da-ben, zhongyong-zhi-zhong-he-wan-wu-yu) and zhongyong-shi-zhu-ji-er-bu-yuan (中庸十三 忠恕違道不遠, 所求乎子), and ro-relational-sources/passages.json holds ru-zhongyong-zhi-zhong-he; no fragment has 道不遠人, 伐柯 or 改而止. Of §11's eleven passages, 孟子之权 (mencius-sao-ni-quan), 王守仁明镜 (wangyangming-ming-jing), 天台三千 (tiantai-fei-zong-fei-heng) and 庄子物化 (zhuangzi-wu-hua) are entries in the 脉络 mapping, the rest in none.",
+   "edits": [
+    {
+     "path": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md",
+     "old": "老子第三十四、五十七章与中庸第一、十三章未入映射；对应之章所列值得再读之段（[§11](../history/CHINESE-SOURCES-AND-BECOMING.md#11-未做之事)）未读；",
+     "new": "老子第三十四、五十七章与中庸第一、十三章，九家二百四十八段之对应只收中庸首章「致中和」一段，脉络之对应各有条目而皆只及数句，中庸第十三章之「道不遠人」「伐柯」「改而止」未读；对应之章所列值得再读之段（[§11](../history/CHINESE-SOURCES-AND-BECOMING.md#11-未做之事)），孟子之权、王守仁明镜、天台「介爾有心，即具三千」与庄子物化已入脉络之对应，余者未读；",
+     "region": "未决, the bullet 文本"
+    }
+   ],
+   "also_stands": [
+    "theories/becoming/history/CHINESE-SOURCES-AND-BECOMING.md:227 (映射未收的段落（老子第三十四、五十七章，中庸第一、十三章）) and :247 (§11's list): history pages, true of the 248-passage mapping when written; not edited",
+    "no other live restatement in theories/, GLOSSARY.md or results/records/*.json (git grep 三十四、五十七, 中庸第一、十三, 'chapters 34 and 57')"
+   ],
+   "in_packet": "yes: git grep -n '三十四、五十七章与中庸第一、十三章未入映射' review-packet-4 -- theories/ finds 06-CLASSICAL-TEXTS.md:645"
+  },
+  {
+   "where": "theories/becoming/review/PHILOSOPHY.md#p-10",
+   "flag": "Says the Extreme Claim objection is credited in the study of the step but not in chapter 7, while 07 §4.7 names Parfit's Extreme Claim, against the path rather than the step.",
+   "verdict": "holds",
+   "why": "07 §4.7 (#crux), under Against, says stretched to everything downstream 'my continuation' keeps the word and can lose the concern (Parfit's Extreme Claim); §4.2's step names neither Wolf nor the Extreme Claim. 'Not in chapter 7' tells a philosopher the chapter never meets the objection, so the line needs the distinction said, not removed.",
+   "edits": [
+    {
+     "path": "theories/becoming/review/PHILOSOPHY.md",
+     "old": "credited in the study of the step but not in chapter 7:",
+     "new": "credited in the study of the step; chapter 7 names Parfit's Extreme Claim only against [§4.7](../chapters/07-SIGNIFICANCE.md#crux)'s path, the future without the step (stretched to everything downstream, \"my continuation\" keeps the word and can lose the concern), not against the step. The study:",
+     "region": "P-10 The strongest argument for the step, Known weaknesses, second bullet"
+    }
+   ],
+   "also_stands": [
+    "theories/becoming/review/PHILOSOPHY.md:260 (question 2, 'does P1 answer the Extreme Claim?'): consistent once the bullet is edited; not edited",
+    "theories/becoming/history/THE-STEP-OF-INVARIANCE.md:62: history page, not edited",
+    "no record JSON names the Extreme Claim (git grep 'Extreme Claim' -- '*.json' finds only a process dossier)"
+   ],
+   "in_packet": "yes: git grep -n 'credited in the study of the step but not in chapter 7' review-packet-4 -- theories/ finds PHILOSOPHY.md:255"
+  },
+  {
+   "where": "theories/becoming/review/PHILOSOPHY.md#p-07",
+   "flag": "P-07 on C has no link to 07 §4.4's what would give C's order (record what-would-give-c, landed 6 November) and no chooser or effective freedom.",
+   "verdict": "holds",
+   "why": "P-07 quotes 'Monotonicity at the standpoint is C's premise relocated: weaker, still a premise' without the chapter's next sentence, that on a listing's frame monotonicity is weaker only in scope, and nowhere meets #r-what-would-give-c (commit d4ea470f0, 2026-11-06): its result that no premise strictly weaker than C at a datum gives C there with help reading no order, the chooser route credited to Foster's effective freedom and Nehring and Puppe, and the menu witness standing against reading C as 'more options are better'. A philosopher answering P-07's question 1 (is dominance a plausible core of betterness, are the credits right) is told the premise is weaker than the home says and misses the witness against it.",
+   "edits": [
+    {
+     "path": "theories/becoming/review/PHILOSOPHY.md",
+     "old": "Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: \"Monotonicity at the standpoint is C's premise relocated: weaker, still a premise.\" The chapter credits",
+     "new": "Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: \"Monotonicity at the standpoint is C's premise relocated: weaker, still a premise.\" Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: \"On a listing's frame, every claim counted, an order is increasing in admission exactly when it meets C, so monotonicity at the standpoint is weaker only in scope, a listing and not all of what can form\". Since 6 November 2026 the chapter says [what would give C's order](../chapters/07-SIGNIFICANCE.md#r-what-would-give-c), deriving C from nothing: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: \"no premise is both strictly weaker than C at a datum and, with such help holding there, enough for C at that datum\" (`ReadsNoOrder.not_strictly_weaker`). One route is Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: \"calling better what no chooser does worse from and some does better from\", and Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: \"the chooser route is Foster's effective freedom with every preference admitted, on a list with refusal an item in every menu, and the range's law Nehring and Puppe's condition at every listed item\". Its menu witness, the prisoner's dilemma read as a menu (`Weighting.Restraint`), is a theorem on the listing's frame and stands there against that route and against reading C as \"more options are better\"; its bearing on courses of what can form, and so on C, stands until the full account is shown to remove it. The chapter credits",
+     "region": "P-07 C: widening is better, Standing and use"
+    },
+    {
+     "path": "theories/becoming/review/LOGIC.md",
+     "old": "Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: \"Monotonicity at the standpoint is C's premise relocated: weaker, still a premise.\" Weights are natural numbers",
+     "new": "Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: \"Monotonicity at the standpoint is C's premise relocated: weaker, still a premise.\" Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: \"On a listing's frame, every claim counted, an order is increasing in admission exactly when it meets C, so monotonicity at the standpoint is weaker only in scope, a listing and not all of what can form\" ([07 §4.4, what would give C's order](../chapters/07-SIGNIFICANCE.md#r-what-would-give-c)). Weights are natural numbers",
+     "region": "L-24 Widening as what every positive weighting ranks, Known weaknesses"
+    }
+   ],
+   "also_stands": [
+    "theories/becoming/review/LOGIC.md:717 quotes the same sentence without its qualifier; edited above",
+    "theories/becoming/review/PHILOSOPHY.md:140 (P-04) points to P-07 for C and states C's role correctly; not edited",
+    "theories/becoming/results/records/what-would-give-c.json is the record; the generated .md is not edited; no dossier in theories/becoming/review/ names a chooser, Foster or the menu witness (grep chooser, Foster, menu, what-would-give)"
+   ],
+   "in_packet": "yes for the unqualified sentence: git grep -F \"Monotonicity at the standpoint is C's premise relocated\" review-packet-4 -- theories/becoming/review/ finds PHILOSOPHY.md:194 and LOGIC.md:717; the packet has no what-would-give-c (git grep -F 'r-what-would-give-c' and 'Foster' find nothing)"
+  },
+  {
+   "where": "theories/becoming/review/ALIGNMENT.md:232 (A-08)",
+   "flag": "Glosses Goodhart's and Campbell's laws as 'a measure that keeps its standing after it stops measuring', reading T7's claim into them.",
+   "verdict": "holds",
+   "why": "Goodhart's law (Goodhart 1975: a regularity collapses once pressure is placed on it for control; Strathern's 'when a measure becomes a target') and Campbell's (1979: an indicator used for decisions is corrupted and corrupts the process it monitors) are widely stated as a measure ceasing to measure under use, and the dossier's own source, closed-capture's record, says so and claims the keeping as its addition: 'Goodhart (1975) says a measure made a target stops measuring; this states why it is kept'. The gloss credits them with T7's claim and so contradicts the record it restates.",
+   "edits": [
+    {
+     "path": "theories/becoming/review/ALIGNMENT.md",
+     "old": "Goodhart's and Campbell's laws (Manheim and Garrabrant 2018; Campbell 1979) describe informally a measure that keeps its standing after it stops measuring. T7 states that as a conjecture about a lock.",
+     "new": "Goodhart's and Campbell's laws (Goodhart 1975; Campbell 1979; Manheim and Garrabrant 2018) describe informally a measure that stops measuring once it is used as a target or for decisions: a regularity that collapses under pressure for control, an indicator that corrupts the process it is meant to monitor. That the measure is then kept is the record's addition: Quote [theories/becoming/results/records/closed-capture.md]: \"Goodhart (1975) says a measure made a target stops measuring; this states why it is kept: what keeps it reads the share it gives, not what it fails to measure.\" T7 states that it outlives its refutation as a conjecture about a lock.",
+     "region": "A-08 The lock outlives a loss it does not read, Known weaknesses, last bullet"
+    }
+   ],
+   "also_stands": [
+    "theories/becoming/results/records/closed-capture.json:157 (correspondence) states Goodhart correctly; not edited",
+    "theories/becoming/chapters/03-KNOWING.md:29, theories/becoming/review/ALIGNMENT.md:74, selection-through-couplings.json:199, alignment-direction-under-widening.json:28 credit Goodhart for the proxy problem, correctly; not edited",
+    "theories/meta-attractor/README.md:41, :88, :443 (the earlier work: 'Goodhart is a symptom; the meta-attractor explains the persistence') keep the distinction; not edited"
+   ],
+   "in_packet": "yes: git grep -n 'keeps its standing after it stops measuring' review-packet-4 -- theories/ finds ALIGNMENT.md:232"
+  },
+  {
+   "where": "theories/becoming/review/ALIGNMENT.md:303 (A-10); theories/becoming/results/records/shaping-the-rule-selected-by-what-comes-back.json (correspondence)",
+   "flag": "Lists the persistence of elites (Acemoglu and Robinson 2008) as a known form of shaping selected by what comes back, though their mechanism, de facto power substituting for de jure, is stated by no law and nearest closed-capture's absorbed reform.",
+   "verdict": "person",
+   "why": "The record names Acemoglu and Robinson 2008 in a positioning list taken from board item AJ's plan, beside rent-seeking and regulatory capture, claiming only 'what this adds is the conditions', and A-10 restates it as 'known forms, which its record credits', accurately; the paper is not stored, and whether elites investing in de facto power for the institutions that pay them is a form of shaping selected by what comes back, or belongs instead (or also) under closed-capture's reading_absorbed, is a judgment on a source no one here can check. Listed for a person reading A-10's credits; nothing changed.",
+   "edits": [],
+   "also_stands": [
+    "theories/becoming/results/records/shaping-the-rule-selected-by-what-comes-back.json:199-200 (en and zh correspondence, 精英之持续); not edited",
+    "theories/becoming/results/records/closed-capture.json does not cite Acemoglu and Robinson; not edited"
+   ],
+   "in_packet": "yes: git grep -n -F 'persistence of elites' review-packet-4 -- theories/becoming/review/ finds ALIGNMENT.md:303"
+  }
+ ]
+}

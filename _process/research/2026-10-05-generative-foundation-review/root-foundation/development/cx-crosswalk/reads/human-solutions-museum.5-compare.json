@@ -1,0 +1,2196 @@
+{
+ "group": {
+  "id": "human-solutions-museum",
+  "domain": "earlier-folders",
+  "title": {
+   "en": "The Human Solutions Museum (人类解决问题的方法博物馆)"
+  },
+  "kind": "design",
+  "summary": {
+   "en": "A research question (which systems resisted a runaway dynamic, and what do they share?) and a product specification: inventions re-archived as dossiers from problem to borrowable method, indexed by problem structure; the only live mention lists it as a design programme, correspondence not established. The account itself states only parts, in models and readings (separating seeing from enacting, the confined-rise case, exits, bounded conflict); most other links are this crosswalk's proposals, and only the separation of idea from change is read as agreeing with a checked law's form. Its collection, stage shape, 奏折 reading and a tradition's high and degenerate modes are not carried. Divergence kept: forward, 'solved', a human list against every continuation, equality as regulator, tradition's efficacy, human write-back of AI links, publishing below a floor."
+  },
+  "read": [
+   "theories/human-solutions-museum/README.md (all 509 lines)",
+   "theories/becoming/ONE-PAGE.md (whole)"
+  ],
+  "skimmed": [
+   "theories/human-solutions-museum/synthesis-all.md (headings, §2 and §8's new critiques; it is the README's earlier form)",
+   "Home statement of each record target, read to its first 800 to 1,800 characters, so long statements not always to their end; tasks-and-what-performs-them, what-would-give-c and a-revision-that-opens-a-correction further. Every quoted string in a target was also compared by script against its home",
+   "05-COLLECTIVES §4's table with limits and readings, §5's reading D48, §10's reading D65, §11's opening, §12's reading; 07 §3.3's reading D65, §3.4, §4.4's what would give C, T4, T5's first sentence; COLLECTIVE-DIRECTION the answer in brief, §1, the institutions line; 02 T7's readings in part; 04 the reading D65 after r-equal-totals and the confined-rise law; 06 §六 verdict, four layers' opening, gaps table, zhi-ge; 08 law, known-results' opening, the work by its own laws; ALIGNMENT A-13 and its line on deception; GLOSSARY rows for standard, 理, meta-attractor, degeneration, testing and stages",
+   "theories/becoming/results/data/theory-map.json was not used",
+   "Reopened at the repair read, where a verdict turned on them: the statements or readings of selection-right-exactly-where-read, what-a-summary-keeps, tasks-and-what-performs-them, raising-what-couples-in-draws-from-beyond, readings-a-response-needs, generalization-through-lumping, what-readings-fix-of-the-unread, joint-practice-forms-continuation, copying-b-fold, selection-when-the-lumping-changes, a-revision-that-opens-a-correction, a-reading-informed-and-revalued; ALIGNMENT A-13; 05's reading D48; 07's table of what is shown and supplied and T4; 02 T7's readings D26 and D67; COLLECTIVE-DIRECTION §2 and §7. Not reread whole"
+  ],
+  "searched": [
+   "Over the overview, chapters, reviews, COLLECTIVE-DIRECTION, the free-energy page, ONE-ARGUMENT and glossary, each with no live hit unless noted: Talmud, Halakha, 塔木德, Mishnah, rabbin; 奏折, 奏摺, 言路, 御史, 监察, zero-trust, untrusted, byzantine, auditab, metadata; canonical shape, civilizational, moraliz, privatiz, naturaliz; portable, low-cost, self-use, shame, 羞耻, stigma, taboo; individualis, collectivis, cross-cultural, non-Western, Indigenous, hunter, forager, small-scale, Dunbar; reinvent, retriev, 重复造; Moloch, social technolog; nobler, human nature, 高尚, ideal self; violen, 暴力. Hits read or set aside: wheel (Pinwheel), upward, members report, autonom, stages of, 人性, goodwill; dossier (the reviews' own label).",
+   "Also over the main texts, with hits read: museum, 博物馆; technolog; cumulative, accumulat, ratchet, culture, cultural; cancer, tumour, apoptos, polic, germ line, multicell; survivorship, whig, selection bias; terminal, no final, never finished; solv, solution, real problem; misread, reframe, redefin, misunderstood, suppress; tool, invention, artefact; equalit, inequal, 平等, 损有余; testimon, hearsay, intermediar, mediated.",
+   "Searched at an earlier stage of this file and not all repeated: Ostrom, Buss, Michod, Goodhart, Argyris, Olson, Acemoglu, major transition, Hayek, Tainter, Turchin, Boehm, egalitarian, Kuhn, paradigm; adversar, deceiv, decepti, conceal, faithful, honest; dissent, 分歧, pluralis.",
+   "record-index.tsv for transmi, inherit, teach, learn, imitat, copy, tool, institution, practice, method, retain, problem, solve, task, deliver, and by the reviser's terms."
+  ],
+  "not_mapped": [
+   {
+    "en": "The engineering and product specification: stack, layer boundaries, routing, content contract, schema fields, CSS tokens, accessibility list, seven phases, nine red lines, aesthetic thesis, naming, seed exhibits and fourteen methods as a list, the twelve halls and eight galleries as a list.",
+    "why": "A design, not a claim about how things are. The README says the artifacts are specified and not present in the corpus. The account has no reason to absorb it. The one dropped hall that bears on a claim (violence) has its own entry."
+   },
+   {
+    "en": "The claim that the engineering is epistemic: claims in one contract so they can be reviewed, sourced, corrected and de-accessioned.",
+    "why": "The repository's own rules of one live text and records are process, not live. The live account states standings, not an institution's data discipline. A design rule; nothing to compare."
+   },
+   {
+    "en": "Claim 1, the failure dynamic (power-capture compounds, single-value optimizers win, the system erodes its foundations).",
+    "why": "The README states it only as the problem asked against and says the mechanism belongs to selfishness-spiral-and-narrative-value-frames, whose read maps it. Capture laws appear here only where a claim of this folder uses them."
+   },
+   {
+    "en": "Claim 16: until the window opens, the deliverable is alternative ways of seeing.",
+    "why": "A stance about one's own work, not a claim about becoming. Note only that 07's 'Seeing is not valuing' would bound what such a deliverable changes."
+   },
+   {
+    "en": "Claim 5: a value system instantiated as a carrier and pointed at the present (the Jesus persona prompt).",
+    "why": "One prompt with no stated mechanism; naming a correspondence would be a word match."
+   },
+   {
+    "en": "Claims 62, 65 and 82-84 as felt results and audiences (de-isolation, the person arriving with a problem, the public and the actor).",
+    "why": "Aims of a product. The actor's questions on failure and avoidance are used in the failure entry."
+   },
+   {
+    "en": "agent.md's confirmation boundary and git rules; the software predictions 121 and 122.",
+    "why": "Working rules and engineering predictions, with no claim the account would state. The README files the boundary under memories-and-working-style."
+   },
+   {
+    "en": "The README's list of cross-folder relations and its critiques on language scope, content licence, sensitivity levels, preset prompts and engineering weight.",
+    "why": "Leads for other folders' reads, or product gaps. Those bearing on a claim are used in the entries."
+   },
+   {
+    "en": "The six specification files in sources/11-human-solutions-museum/ and the chats behind the research question.",
+    "why": "Not read: the item is the folder, and quotes are checked against its README. Every claim about them here is the README's, itself an AI-written synthesis, so what the concept document itself says is not checked."
+   }
+  ],
+  "coverage": null
+ },
+ "entries": [
+  {
+   "id": "cx-hsm-stock-of-methods",
+   "name": {
+    "en": "Civilization as an accumulated stock of methods"
+   },
+   "domain": "earlier-folders",
+   "group": "human-solutions-museum",
+   "source": {
+    "work": "theories/human-solutions-museum/README.md",
+    "locator": "The theory in one paragraph; Claims 19, 26-28, 83",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Civilization is not a sequence of clever objects but an accumulated stock of methods by which people turned real problems into working mechanisms, tangible and intangible on equal terms (law, money, schools, human rights). Ordinary readers should learn that civilization did not happen naturally: it is generation after generation solving problems."
+   },
+   "quote": "文明不是自然发生的，而是一代代人解决问题的结果",
+   "carried": "fresh-reading",
+   "relation": "agreement",
+   "agreement_of": "reading",
+   "reading": {
+    "en": "Proposed here; no live text reads civilization or its methods so. Passing has forms: a pattern outlasting brief carriers lasts through passing, under a supplied premise; a rule's change enters at a gated step; a method handed on has one periphery composition, expressly no population model. What accumulates has one AI reading: what can be done with the performer held grows only across changes of the performer. None says a civilization is a stock. 自然发生 here means happening of itself: a claim of cause, not a nature-culture split, and the account states no such cause. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "a-pattern-lasts-through-passing",
+     "anchor": "theories/becoming/chapters/04-LIFE.md#r-a-pattern-lasts-through-passing",
+     "says": {
+      "en": "World, any web: “A pattern outlasting its carriers lasts through passing.” Under the passing premise, supplied, “every beginning is a passing”; without it, a double-negation form that names no carrier."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "learned-procedure-transmission",
+     "anchor": "theories/becoming/chapters/04-LIFE.md#r-learned-procedure-transmission",
+     "says": {
+      "en": "Periphery: “every exposure followed by a faithful reconstruction passes on the network the exposure left and the procedure bit the exposed formation had”; “one finite composition, not a population model or an origin of learning rules.”"
+     },
+     "role": "carries"
+    },
+    {
+     "record": "tasks-and-what-performs-them",
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-tasks-and-what-performs-them",
+     "says": {
+      "en": "Reading [AI reading, D45] of laws near-definitional or by witness: “What grows is what can be done with the performer held, and only across changes of the performer.” The possible tasks carry reach, “along which the whole possible never grows”."
+     },
+     "role": "carries",
+     "part": "Reading D45"
+    },
+    {
+     "record": "organizational-rule-inheritance",
+     "anchor": "theories/becoming/chapters/04-LIFE.md#r-organizational-rule-inheritance",
+     "says": {
+      "en": "Any process: a quantity is kept along every ungated course exactly when every ungated step keeps it; a course that changes it splits at a gated step that changes it, values decided. “A copied rule with no one continuing to take part cannot operate”."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "a-rule-rebuilt-from-the-members-it-limits",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-rule-rebuilt-from-the-members-it-limits",
+     "says": {
+      "en": "Root, a family of models: an entry rule on a shared stock passed through members who also keep it. That any actual institution meets the hypotheses, “or that this is what an institution is”, is not shown (record)."
+     },
+     "role": "neighbour"
+    },
+    {
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#joint-plans",
+     "says": {
+      "en": "“(design programmes, not results; correspondence not established)”: names the human solutions museum among others."
+     },
+     "role": "limit"
+    }
+   ],
+   "account_adds": {
+    "en": "No law says cooperation good or a shared code worth keeping. Where a rule is kept, it can be kept and be the wrong rule [AI reading]."
+   },
+   "source_adds": {
+    "en": "Civilization as the unit; methods as what accumulates; that what exists results from problem-solving, where 04's reading would tell apart other origins; tangible and intangible creations on equal terms."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-hsm-seven-stages",
+   "name": {
+    "en": "A civilizational advance has a canonical seven-stage shape"
+   },
+   "domain": "earlier-folders",
+   "group": "human-solutions-museum",
+   "source": {
+    "work": "theories/human-solutions-museum/README.md",
+    "locator": "The argument: The shape of a civilizational advance",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "A civilizational advance has a canonical shape with separable stages: a real problem, a misreading of it, an insight redefining it, a mechanism on a named substrate, diffusion by a named force, what it solved, the new problems it made. Each stage does work no other does. The README calls this the claim that makes the museum a theory and not a format."
+   },
+   "quote": "a civilizational advance has a canonical shape with seven stages",
+   "carried": "not-carried",
+   "relation": null,
+   "agreement_of": null,
+   "reading": {
+    "en": "The account has no sequence of stages for an advance: its laws read courses under hypotheses, and the root lists 'inevitable improvement or universal growth' among what is not assumed. The README's counterexamples are to the product; it names no case the shape would exclude, while here content comes through hypotheses that forbid. Live 'stages' are of testing and of inquiry, and 03 says what each needs, 'not a method'. Single stages have neighbours in other entries. [AI reading]"
+   },
+   "targets": [],
+   "account_adds": null,
+   "source_adds": {
+    "en": "The seven-stage shape itself, and that each stage can be interrogated separately across cases."
+   },
+   "absence": {
+    "searched": [
+     "dossier, canonical shape, stages of, civilizational, progress, inevitable improvement, framed, moraliz, privatiz, naturaliz across the overview, chapters, reviews and glossary"
+    ],
+    "read": [
+     "01-ROOT 'Not assumed'",
+     "04-LIFE, the paragraph 'What happens' before organizational-rule-inheritance",
+     "07-SIGNIFICANCE T5's first sentence",
+     "08-METHOD an-investigation ('No cultural origin validates or disqualifies a method') and law",
+     "03-KNOWING §9 ('The results say what each stage needs, not a method')",
+     "05-COLLECTIVES the reading after r-market-model-share-margin-and-ends, whose four routes of transition are routes, not stages",
+     "GLOSSARY testing (验) and stages (层)"
+    ]
+   },
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-hsm-real-problem-solved",
+   "name": {
+    "en": "Real problems, solved by mechanisms"
+   },
+   "domain": "earlier-folders",
+   "group": "human-solutions-museum",
+   "source": {
+    "work": "theories/human-solutions-museum/README.md",
+    "locator": "Claims 28, 75; The shape of a civilizational advance",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Problems are real and exist in a setting. A mechanism solves something, changing behaviours, relations, institutions, risks or capabilities. Inventions are not novelties from nowhere but mechanisms humans developed when facing real problems. The axis is problem to method."
+   },
+   "quote": "发明不是凭空出现的新奇物，而是人类面对真实问题时发展出的机制",
+   "carried": "changed",
+   "relation": "divergence",
+   "agreement_of": null,
+   "reading": {
+    "en": "The account begins from relations with no solver presupposed. 'Solved' has the form of a standard met or a task delivered, read against something supplied: meeting it says nothing of significance, and widening follows deliveries in neither direction. 'Developed when facing' claims an origin, and 04 reads of dispositions that a present benefit does not establish one. Under the continuation condition, for scope, what a solution ends counts too; ranking it needs C, for order; neither asserted, warrant open. The claim concerns humans and is not refuted here. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#an-investigation",
+     "says": {
+      "en": "“Activity includes change and interaction without presupposing an agent, an intention or a purpose.”"
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "GLOSSARY.md#collectives-and-significance",
+     "says": {
+      "en": "Standard: “what something is read against, so that it can be met or missed: a requirement on a level, an acceptable set of acts, a task.” “That a standard is met says nothing of whether meeting it has significance.”"
+     },
+     "role": "carries",
+     "part": "Standard"
+    },
+    {
+     "record": "tasks-and-what-performs-them",
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-tasks-and-what-performs-them",
+     "says": {
+      "en": "Any process, witnesses. Reading [AI reading, D45]: “widening follows deliveries in neither direction, so they do not carry it”."
+     },
+     "role": "carries",
+     "part": "Reading D45"
+    },
+    {
+     "anchor": "theories/becoming/chapters/04-LIFE.md#r-equal-totals-can-hide-what-a-capacity-carries",
+     "says": {
+      "en": "Reading after it [AI reading, D65], of a disposition: “A present benefit does not establish origin; selection, drift, constraint, byproduct and cultural transmission must be told apart where they are live alternatives.”"
+     },
+     "role": "carries",
+     "part": "Reading D65 after the theorem"
+    },
+    {
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#does-not-settle",
+     "says": {
+      "en": "“Under the condition every narrowing loses something with significance.” “Predation, apoptosis and ending a cancer, read as losing and opening something, are mixed [AI reading, D65]”; “telling harm from non-harm among them needs a measure.” The condition fixes scope and ranks nothing; order needs C; neither is asserted."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#what-forms-and-what-is-supplied",
+     "says": {
+      "en": "In the table of what is shown and supplied, under Supplied: “the reading and the requirement a response answers to, the task, the set level”."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "What a response takes in is mapped, and the requirement it answers to enters as a hypothesis, not as something found in the situation."
+   },
+   "source_adds": {
+    "en": "A claim about what humans in fact faced and did, and why inventions arose, which the account does not catalogue; a problem as real apart from a reader of it."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-hsm-forward-criterion",
+   "name": {
+    "en": "Moving civilization forward as the selection question"
+   },
+   "domain": "earlier-folders",
+   "group": "human-solutions-museum",
+   "source": {
+    "work": "theories/human-solutions-museum/README.md",
+    "locator": "Claims 18, 29-31; Relations (zhishan)",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "An exhibit is selected not for novelty, being first or fame, but for moving humanistic civilization one step forward. Five criteria include expanding expression, choice, dignity, freedom, safety, cooperation or understanding. Ambivalent inventions may enter if both what they solved and what they made are shown. The README calls this a usable test of whether a technology is good."
+   },
+   "quote": "是否扩大了人的表达、选择、尊严、自由、安全、协作或理解能力",
+   "carried": "changed",
+   "relation": "divergence",
+   "agreement_of": null,
+   "reading": {
+    "en": "Near C in form only, and apart in three ways. The source says forward with no premise; here widening is better only under C for order, with the continuation condition for scope, neither asserted, warrant open. The source lists human capabilities; C reads what can form, and a part's widening widens the whole only within every outside margin, mixed beyond. An ambivalent invention is a mixed comparison, unranked by C. That more choice is better is itself a premise, and it stops at named edges. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/ONE-PAGE.md",
+     "says": {
+      "en": "“The ethics adds two premises, neither asserted, warrant open”. The continuation condition “fixes scope, whose losses count: from every standpoint, for anything, its continuation into the future has significance.” “*C*: widening what can form is better.”"
+     },
+     "role": "carries",
+     "part": "The ethics adds two premises"
+    },
+    {
+     "record": "widening-as-what-every-positive-weighting-ranks",
+     "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#1-a-direction-as-a-criterion",
+     "says": {
+      "en": "Any type, finite listing, two-valued admission, natural weights (home, 07): one course widens another exactly when every weighting positive on the listed items weighs it higher; “a mixed comparison, a gain here and a loss there, is decided both ways by positive weightings”."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "own-widening-within-the-margin",
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-own-widening-within-the-margin",
+     "says": {
+      "en": "World, balance, part and region decided: where a part's activity widens what can form within its own region, the whole widens “exactly when its net draw stays within the margin for every formation outside the region”, and is mixed where it goes beyond for one. “Mixed is not ordered.”"
+     },
+     "role": "carries"
+    },
+    {
+     "record": "what-would-give-c",
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-would-give-c",
+     "says": {
+      "en": "“This does not derive C from anything and gives no reason for it.” On a finite listing, “calling better what no chooser does worse from and some does better from” is a premise reading an order; that route stops at “imposed admission, another's order, several choosers”. In a witness, widening a menu two choose from lowers what each gets by the payoffs."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#objections",
+     "says": {
+      "en": "Generation is a pattern going on through carrying renewal, and 生生 life in the whole, “not novelty or scale”; an expansion that ends forms of life another course keeps is mixed with it and C does not rank them."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "Widening says which admits more, not which is better; it decides no mixed comparison, and weights that do are a further premise. A local test of when a part's gain widens the whole, which is no test of good."
+   },
+   "source_adds": {
+    "en": "A named list of human goods and durable influence as admission criteria. The account names no such list; the word technology is absent from its overview, chapters and glossary, and it offers no test of whether one is good."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-hsm-new-problems",
+   "name": {
+    "en": "Every dossier shows the new problems: no sanctifying, no terminal mechanism"
+   },
+   "domain": "earlier-folders",
+   "group": "human-solutions-museum",
+   "source": {
+    "work": "theories/human-solutions-museum/README.md",
+    "locator": "Claims 30, 38; Four refusals: Anti-sanctification; Relations (meta-attractor)",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Any advance may have side effects: misuse, controversy, new inequalities. The new-problems module is mandatory, because a borrower must know the cost. The museum must not sanctify inventions but show their complexity. The README adds that every solution makes a new problem landscape, so no mechanism is terminal."
+   },
+   "quote": "本馆不应把发明神圣化，而要展示它们的复杂性",
+   "carried": "fresh-reading",
+   "relation": "scope",
+   "agreement_of": null,
+   "reading": {
+    "en": "Proposed here, in three parts; no live text speaks of inventions. The refusal has a form in the account: no law evaluates, and no closure is good or bad by its type. Cost has forms only under clauses: a rise paid from beyond where a containing family gains nothing; a delivery changing what its task does not list can make a regular pair impossible, excluded by listing unavoidable outputs (the likeness to the module is this read's); in a named band, success changes what the next success needs. 'No terminal mechanism' has a form for a fixed rule's possible, not for problems. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "raising-what-couples-in-draws-from-beyond",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-raising-what-couples-in-draws-from-beyond",
+     "says": {
+      "en": "World, balance, the risen family within a containing family gaining nothing: “the rise is paid from beyond in full”. The record does not show “That drawing from beyond is wrong.”"
+     },
+     "role": "carries"
+    },
+    {
+     "record": "tasks-and-what-performs-them",
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-tasks-and-what-performs-them",
+     "says": {
+      "en": "Reading [AI reading, D45]: “where a delivery changes what its task does not list, a regular pair of possible tasks can be impossible by any means, and constructor theory's demand that a task list its unavoidable outputs is what excludes it”."
+     },
+     "role": "carries",
+     "part": "Reading D45"
+    },
+    {
+     "record": "readings-a-response-needs",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-readings-a-response-needs",
+     "says": {
+      "en": "A named regulation band, a witness: “success changes what the next success needs, with no outside disturbance”. “Not evidence that judgment is scalar regulation.”"
+     },
+     "role": "carries",
+     "part": "success changes the next response"
+    },
+    {
+     "record": "where-the-possible-grows",
+     "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#7-keeping-the-future-open",
+     "says": {
+      "en": "Any process: where every step from some step on is a move of Q, the possible under Q does not keep widening. Reading [AI reading, D45]: “Openness is then a property of how rules keep changing, not of any rule chosen once.”"
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/ONE-PAGE.md",
+     "says": {
+      "en": "“No law evaluates: none says a loss is a harm or restraint better.”"
+     },
+     "role": "carries",
+     "part": "No law evaluates"
+    },
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#closing-and-opening",
+     "says": {
+      "en": "「一种闭是否支持、丰富或损害生生，由比较来说，不由类型来说」: scope by the continuation condition, order by C, both unasserted [AI reading, D49]."
+     },
+     "role": "neighbour",
+     "part": "Reading D49"
+    }
+   ],
+   "account_adds": {
+    "en": "Past the slack, a dependence breaks unseen by every selection rewarding the rise (05 §6). No loss is called a harm."
+   },
+   "source_adds": {
+    "en": "That every advance has costs and every solution makes a new problem landscape, as a claim about actual inventions; misuse and controversy as kinds of cost. The folder also reads this module as the meta-attractor's insight; the glossary's meta-attractor means closed capture and “never” the wider working sense."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-hsm-reframing-insight",
+   "name": {
+    "en": "The reframing thesis: insight over technology"
+   },
+   "domain": "earlier-folders",
+   "group": "human-solutions-museum",
+   "source": {
+    "work": "theories/human-solutions-museum/README.md",
+    "locator": "Claims 33-34, 44; The shape of a civilizational advance",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "What pushes civilization forward is usually not the technology but a new insight, of the kind that redefines the problem rather than answering the old version. Dossiers must show how a problem was misunderstood, moralized, suppressed or ignored, and why the old frame bounded the available solutions."
+   },
+   "quote": "真正推动文明前进的，往往不是技术本身，而是一个新的洞察",
+   "carried": "fresh-reading",
+   "relation": "scope",
+   "agreement_of": null,
+   "reading": {
+    "en": "Proposed here; no live text reads redefining a problem or an insight so. Redefining a problem changes what would count as meeting it. The nearest law holds acceptability fixed, and its reading says the relation to double-loop learning depends on changing a governing norm. Nearer the source: an AI reading tells informing from revaluing, and, in a shared model for one decision, a formation evaluating by its current valuation finds no reason to revise it. An old frame bounding solutions has a form: a merged pair is a lost choice, and a coined form returns it. 'Usually' stays unread. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "a-revision-that-opens-a-correction",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-a-revision-that-opens-a-correction",
+     "says": {
+      "en": "Near-definitional, witnesses on Revising's process: a course opens a correction where no fitting uniform policy exists at x and one at x', “with one acceptability throughout, the gain coming from the reading, from executability or both”. Reading: “here the acceptability is fixed”."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "a-reading-informed-and-revalued",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-a-reading-informed-and-revalued",
+     "says": {
+      "en": "Reading [AI reading, new]: “Informing and revaluing are two ways one part of a loop can move what another part's reading answers”; for a holding formation evaluating by the current valuation: “by that worth, no reason to revise the valuation”."
+     },
+     "role": "carries",
+     "part": "Reading after the theorem"
+    },
+    {
+     "record": "formed-goal-revision-continuation",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-formed-goal-revision-continuation",
+     "says": {
+      "en": "Periphery, on revising a formed goal: “Not open discovery of ends.”"
+     },
+     "role": "limit"
+    },
+    {
+     "record": "selection-when-the-lumping-changes",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-selection-when-the-lumping-changes",
+     "says": {
+      "en": "Any process: every selection through an old lumping stays expressible through a new one exactly where new indistinguishability implies old, “and a merged old pair supplies a lost choice”."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "synonyms-and-coined-forms",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-synonyms-and-coined-forms",
+     "says": {
+      "en": "Any type: where all hold a code merging two senses, “a form coined at one that the code does not give the other, heard by all, makes every formation tell them apart again”."
+     },
+     "role": "carries"
+    }
+   ],
+   "account_adds": {
+    "en": "With every act counted acceptable, any configuration with an executable act is correctable already, so an opening counts only with acceptability held fixed. On Revising, replenishing alone can open it with the reading unchanged, so insight is neither necessary nor sufficient there."
+   },
+   "source_adds": {
+    "en": "The historical thesis that insight usually leads; redefinition of the problem itself, including the discovery of a new end; the typology of misreading (moralize, privatize, suppress, ignore, take as fate)."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-hsm-idea-not-change",
+   "name": {
+    "en": "A good idea is not an effective change: diffusion asked apart"
+   },
+   "domain": "earlier-folders",
+   "group": "human-solutions-museum",
+   "source": {
+    "work": "theories/human-solutions-museum/README.md",
+    "locator": "Claim 37; The shape of a civilizational advance",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "A good idea is not an effective change. Diffusion must be asked separately: against what resistance, and through what force, whether the state, the market, grassroots transmission or a crisis."
+   },
+   "quote": "一个好想法不等于一个有效改变",
+   "carried": "carried-in-part",
+   "relation": "agreement",
+   "agreement_of": "law",
+   "reading": {
+    "en": "The same separation in other terms: discrimination, support and enactment come apart in Revising; seeing, valuing and complying are told apart. Spread has minimal models: hearings with an adoption rule, an imposed code, and in the periphery a market share, where selection creates no absent practice and a transition's support cannot be paid from its improvement. These are codes and shares in models, not a force of diffusion of a mechanism, and resistance is not measured. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "selection-when-the-lumping-changes",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-selection-when-the-lumping-changes",
+     "says": {
+      "en": "“in Revising, discrimination, support and enactment come apart (a correction the stock covers can be blocked by the link, one the link admits can lack stock)”."
+     },
+     "role": "carries",
+     "part": "in Revising, discrimination, support and enactment come apart"
+    },
+    {
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#does-not-show",
+     "says": {
+      "en": "“**Seeing is not valuing**: enlarging what couples in changes what a selection can separate, not which differences matter.” “**Coupling is not compliance**: coupling bounds what a member's acts respond to and fixes nothing within the bound.”"
+     },
+     "role": "carries",
+     "part": "Seeing is not valuing; Coupling is not compliance"
+    },
+    {
+     "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#6-what-enough-situationality-would-have-to-mean",
+     "says": {
+      "en": "Reading [AI reading, D45]: six conditions at once. “Observation is the first condition, necessary and not sufficient”; all six together still rank nothing."
+     },
+     "role": "neighbour",
+     "part": "Reading D45"
+    },
+    {
+     "record": "a-code-formed-between-formations",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-code-formed-between-formations",
+     "says": {
+      "en": "Any type, runs of hearings: under hearings that take the form heard, the forms that can become shared are exactly the forms in use; “An imposed code makes all agree”, each formation losing the distinctions its code drew that the imposed code merges."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "market-model-share-margin-and-ends",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-market-model-share-margin-and-ends",
+     "says": {
+      "en": "Periphery: “a share of none stays none”: “selection does not create an absent practice”. Reading [AI reading, D65]: “a lost capacity needs actual entry, which the share law lacks.”"
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "market-supported-finite-transition",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-market-supported-finite-transition",
+     "says": {
+      "en": "Periphery, a finite transition: “support during the transition cannot be paid for with the improvement it brings.”"
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "These models have no merit in them. From a symmetric start, agreement needs something breaking the symmetry (in a witness, a formation both hear, a preferred form or an order of hearing), and under hearings that take the form heard only forms in use can spread. T7 forbids “a reform of the reading alone outlasting the next reading”, conjectured of actual metrics."
+   },
+   "source_adds": {
+    "en": "Diffusion as its own question, asked of each mechanism: the named forces of spread, resistance as an object of study, and the list of mechanism substrates (materials, institutions, law, movements, commerce)."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-hsm-value-or-tool-alone",
+   "name": {
+    "en": "Value without mechanism; tool without the problem"
+   },
+   "domain": "earlier-folders",
+   "group": "human-solutions-museum",
+   "source": {
+    "work": "theories/human-solutions-museum/README.md",
+    "locator": "Claims 21-22, 49; What is actually broken",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Two field failures. People put forward good value claims and design no mechanism that can land. People build tools without understanding the social problem they face. Movements offering only value and products optimizing only the product both fail."
+   },
+   "quote": "有些人提出了很好的价值主张，但没有设计出可以落地的机制",
+   "carried": "fresh-reading",
+   "relation": "divergence",
+   "agreement_of": null,
+   "reading": {
+    "en": "Proposed here; no live text draws either link. Value alone has neighbours, none about value claims: in a task protocol, relabelling without rewriting the encoding fails; promises alone start nothing where neither side moves; in language models an instruction kept no dependent untold. Tool alone has a form: a distinction matters where histories the evidence leaves open need incompatible responses. Apart: the source says such tools fail; the account's centre says a selection can succeed while what it cannot read is lost, so success shows no understanding. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "acquired-revision-of-pending-task",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-acquired-revision-of-pending-task",
+     "says": {
+      "en": "Conditional, on a versioned task protocol with the practical commitments supplied: “relabelling without rewriting the encoding fails (`CommonTaskRevision.declaration_only_fails`)”."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "joint-plans-from-a-supported-start",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start",
+     "says": {
+      "en": "Any process, periphery module: “Promises do not: “if the other eventually does, I eventually do” holds on both sides where neither ever happens”; “ignition needs a reserve already present”."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "when-to-inquire-and-when-to-respond",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-when-to-inquire-and-when-to-respond",
+     "says": {
+      "en": "Core, given a choice over readings: “A distinction matters for a task where histories compatible with the evidence need incompatible responses”; a policy meets the conditions exactly where every observation class admits a common action. “Tolerances, horizon and repertoire are supplied”."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/ONE-PAGE.md",
+     "says": {
+      "en": "“The account's centre [AI reading]: a selection can succeed while what it cannot read is lost, and the laws do not say whether that loss counts.”"
+     },
+     "role": "carries",
+     "part": "The account's centre"
+    },
+    {
+     "record": "selection-through-couplings",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
+     "says": {
+      "en": "“Every selection through a selector's couplings selects histories alike exactly when they are alike through them” (record); near-definitional, its force the supplied premise that a selection goes through the couplings."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#theses",
+     "says": {
+      "en": "T4, IN1 partly passed (with talk, one model of two): “no condition kept an untold dependent”; one model kept the seen dependent in 8 of 10 seasons with the scope, the other “failed even with talk”."
+     },
+     "role": "neighbour",
+     "part": "T4"
+    },
+    {
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#does-not-show",
+     "says": {
+      "en": "Not shown: “Any duty, right, recognition, motivation or compliance, or an unconditional or complete ranking of mixed comparisons”."
+     },
+     "role": "limit"
+    }
+   ],
+   "account_adds": {
+    "en": "An exact reason a tool's success is silent on the setting: differences beyond a selector's couplings stay unselected, however hard it selects. An AI reading adds “Kept promises and enforced contracts are laws giving first: the law changes, not the state alone.”"
+   },
+   "source_adds": {
+    "en": "The empirical diagnosis that movements and inventions fail this way, stated without data, and a mechanism that lands as the designer's task. The source's charge can be put to the account itself: its ethics is two premises, the continuation condition for scope and C for order, neither asserted, warrant open, with no motivation or compliance shown."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-hsm-structure-index",
+   "name": {
+    "en": "Problems of similar structure, linked and indexed"
+   },
+   "domain": "earlier-folders",
+   "group": "human-solutions-museum",
+   "source": {
+    "work": "theories/human-solutions-museum/README.md",
+    "locator": "Claims 23, 51, 56, 58-59; Why the index is the theory; Found by reading item 11",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "People who think their problem new often face one of similar structure, met before at several levels. So organize by human problem and link exhibits by problem structure, with seven method relations as the vocabulary and typed, confidence-rated links, so a person can travel to structural ancestors. The README finds 'structure' never defined and the promise unfalsifiable as written."
+   },
+   "quote": "这些推荐不是因为它们属于同一学科，而是因为它们处理了相似的问题结构",
+   "carried": "carried-in-part",
+   "relation": "scope",
+   "agreement_of": null,
+   "reading": {
+    "en": "Both refuse discipline or shared words as the link. In the account sameness of structure is stated: a map under which steps project and lift; a lumping the step goes alike across; a law whose hypotheses a case is shown to meet. That says what the README finds undefined, for processes and not for problems. For a link it gives a condition, not a check: a fitted rule is right at another case exactly where the world agrees at both, which no data supply. Nothing says a present problem has an ancestor. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "what-a-summary-keeps",
+     "anchor": "theories/becoming/chapters/08-METHOD.md#r-what-a-summary-keeps",
+     "says": {
+      "en": "Any process: “The map gives an exact correspondence of finite histories exactly where two things hold: every detailed step projects, and every summary step lifts from each detailed configuration it describes”."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "generalization-through-lumping",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-generalization-through-lumping",
+     "says": {
+      "en": "Any type: “a member fitting the world is right at x exactly where the world agrees at x and the lumped observation; the class of all functions is free at every unobserved input”. Lead-in: “what the lumping misses, no data supply.”"
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#three-relations",
+     "says": {
+      "en": "相合: 「原文所说的结构，脊柱上有已检查之律与之结构相同。相合不是印证」; 定域 and 相分 defined beside it."
+     },
+     "role": "carries",
+     "part": "相合"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#law",
+     "says": {
+      "en": "A law with content “can become a science's law for a domain only once the domain is shown to meet its hypotheses”, through a stated correspondence."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#what-the-unifications-claim",
+     "says": {
+      "en": "“Read as a correspondence, a unification adds no theorem and changes no verdict”; reward, training, natural selection, prices and votes as one selection through couplings: “the laws proved; one law across domains conjectured (T3)”."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "GLOSSARY.md#knowing",
+     "says": {
+      "en": "理: “a lumping that models structure and change at once: one the step goes alike across”."
+     },
+     "role": "neighbour",
+     "part": "理"
+    }
+   ],
+   "account_adds": {
+    "en": "Structural readings fail often: of 88 entries a reviser kept, a second checker corrected 84, and two reads are held unreliable (06 §7.1; the ratio not extended beyond them)."
+   },
+   "source_adds": {
+    "en": "The promise that a person's present problem has a structural ancestor; an index of human problems; seven method relations; confidence on links."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-hsm-wheel-reinvention",
+   "name": {
+    "en": "Reinvention as a retrieval failure of how history is stored"
+   },
+   "domain": "earlier-folders",
+   "group": "human-solutions-museum",
+   "source": {
+    "work": "theories/human-solutions-museum/README.md",
+    "locator": "What is actually broken; Claims 20, 24-25; Found by reading item 24",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Movements, products and inventions keep reinventing the wheel, not from laziness but because encyclopedias and museums store inventions as results, not as problem-solving. The corrective is an index change, intervening before action. The README adds that the mis-shaping may be incentivized."
+   },
+   "quote": "it is a retrieval failure caused by an indexing decision",
+   "carried": "fresh-reading",
+   "relation": "agreement",
+   "agreement_of": "reading",
+   "reading": {
+    "en": "Proposed here: the retrieval half is read as having a law's form under another name. An index is a map; what matters goes alike across what a map lumps exactly where it is read off it, and a selection through the map selects what matters only there. If what matters is the problem and the store lumps by result, retrieval cannot reach it: this reading's application, near-definitional. No live text speaks of reinvention or its cause; nearest is the account's verdict that its own central results restate known ones. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "selection-right-exactly-where-read",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-selection-right-exactly-where-read",
+     "says": {
+      "en": "Any type; alternatives' equality decided: “What matters goes alike across what a map lumps exactly where it is read off the map, and a selection through the map selecting exactly what matters exists exactly there.” Which map is right, and what matters, are supplied."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "what-a-summary-keeps",
+     "anchor": "theories/becoming/chapters/08-METHOD.md#r-what-a-summary-keeps",
+     "says": {
+      "en": "Any process: “An exact summary of feasibility cannot identify two configurations that differ on some finite word”; “the access relations that can still form limit what a current abstraction may forget.”"
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-merge-of-a-part-kept-by-the-rest",
+     "says": {
+      "en": "Following theorem, any type: “a recorder of bounded size does not keep its whole history and go on.” Reading [AI reading, D65]: “Learners, archives and genomes are such recorders.”"
+     },
+     "role": "neighbour",
+     "part": "Reading D65"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#known-results",
+     "says": {
+      "en": "“None of the central results is new mathematics: each is near-definitional or a known result restated.” An AI review, “the search was not exhaustive”; a column lists “what the closest prior frameworks state that the account does not yet”."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "An exact condition, not a preference for one index: a store serves a selection exactly where what it must find is read off how it lumps. So the corrective holds only for what the new index separates, and a store of bounded size still merges something. The charge also falls on the account, which lists what prior frameworks state that it does not yet."
+   },
+   "source_adds": {
+    "en": "That people do reinvent, and this as the cause; how encyclopedias and museums store inventions; re-indexing as the corrective; the incentive to mis-shape; that a problem, and not a result, is what a seeker needs. None is stated live; the repository's search-before-claiming duty is process."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-hsm-borrowable-method",
+   "name": {
+    "en": "The eighth module: a method to borrow, adapt or avoid"
+   },
+   "domain": "earlier-folders",
+   "group": "human-solutions-museum",
+   "source": {
+    "work": "theories/human-solutions-museum/README.md",
+    "locator": "The eighth module is not history; Claims 39, 67, 69, 84",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "The most important part of each exhibit is not history but a method a present actor can borrow, adapt or avoid, written as an action rule and not a slogan. What a user saves is the method, not the exhibit."
+   },
+   "quote": "用户可以收藏的不是展品，而是方法",
+   "carried": "fresh-reading",
+   "relation": "scope",
+   "agreement_of": null,
+   "reading": {
+    "en": "Proposed here: borrowing from a case is read as generalizing through a lumping: right where the world agrees at both cases, free where nothing fixes it, and two readers agreeing on every read occasion can part at an untied one. The exits match in format: conditional moves, each with its edge, from models and not from history. One periphery construction installs a method by a tested round and fails with a changed context. No live text addresses an actor's use of a historical case. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "generalization-through-lumping",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-generalization-through-lumping",
+     "says": {
+      "en": "Any type: “a member fitting the world is right at x exactly where the world agrees at x and the lumped observation; the class of all functions is free at every unobserved input”."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "what-readings-fix-of-the-unread",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-what-readings-fix-of-the-unread",
+     "says": {
+      "en": "Any type, near-definitional: where no read occasion is tied by the lumping, every value there is taken by a selected law agreeing on every reading. Reading [AI reading, new]: “two reporters agreeing on every supervised occasion are selected alike”."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions",
+     "says": {
+      "en": "A table of exits, each law with model, hypotheses and edge. “Every capture law here is a two-kind count model, its locks stated without noise.” What it does not show: “That any exit's hypotheses hold of an actual collective, institution or trained system.”"
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "joint-practice-forms-continuation",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-practice-forms-continuation",
+     "says": {
+      "en": "Periphery, everything from task to compliance supplied: a practice round of attempt, response, revision and tested retry installs the context's method in the worker; “missing response or revision, early departure, changed context and untested admission fail.”"
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "Each exit states where it stops working, including when its window closes."
+   },
+   "source_adds": {
+    "en": "That a method a present actor can use is the most important part of an exhibit: methods extracted from historical cases, written for an actor, and the toolbox that carries them."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-hsm-conversion-to-tool",
+   "name": {
+    "en": "The conversion move: a problem turned into a usable tool"
+   },
+   "domain": "earlier-folders",
+   "group": "human-solutions-museum",
+   "source": {
+    "work": "theories/human-solutions-museum/README.md",
+    "locator": "Claims 28, 35, 46, 56; The eighth module is not history; The gap between the two collections",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Tangible objects count because they converted a class of human problem into a more tractable, transmissible, usable form. The condom's significance is one move: a problem spanning body, desire, disease, shame and public health became a low-cost, portable, replicable, self-usable tool. One archetype says grand, unregulatable problems must become tools ordinary people can use. The README names these conversion moves, as against regulation moves."
+   },
+   "quote": "它们把某类人类问题转化成了更可处理、更可传播、更可使用的形式",
+   "carried": "fresh-reading",
+   "relation": "scope",
+   "agreement_of": null,
+   "reading": {
+    "en": "Proposed here: read as a performer (this read's), a tool has one exact form: what each delivery restores. Then what grows is what can be done with the performer held, only across changes of the performer, while the whole possible never grows; so a tool moves what can be done with it, and that it advances anything is not carried. Low-cost replication has a count: copying runs exactly where the stock covers each round's draw. Neither reads tractable, usable or a problem. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "tasks-and-what-performs-them",
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-tasks-and-what-performs-them",
+     "says": {
+      "en": "Any process, each law near-definitional or a witness: a region of the performing part's states performs a task where, from each input, the process “reaches an output with the part in the region again”. “A delivery adds nothing to the whole possible”. Reading [AI reading, D45]: “What grows is what can be done with the performer held, and only across changes of the performer.”"
+     },
+     "role": "carries",
+     "part": "Theorem and Reading D45"
+    },
+    {
+     "record": "copying-b-fold",
+     "anchor": "theories/becoming/chapters/04-LIFE.md#r-copying-b-fold",
+     "says": {
+      "en": "Counts: “Where every unit draws *d* from one stock and becomes *b*, *n* rounds from *k* units run exactly where the stock covers” the rounds' total draw. “that teaching or reproduction copies at a fixed factor is not shown”."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "What a tool delivers and what it widens come apart: on the catalytic cycle a delivery narrows the whole possible, and widening follows deliveries in neither direction."
+   },
+   "source_adds": {
+    "en": "The move as what gives an invention its significance; tractability, portability and self-use; a bundle of problems converted at once; the archetype's 'must'; the other relations of that kind (risk transfer, rights redefinition)."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-hsm-private-scene-rule",
+   "name": {
+    "en": "The condom rule: tools for what regulation cannot enter"
+   },
+   "domain": "earlier-folders",
+   "group": "human-solutions-museum",
+   "source": {
+    "work": "theories/human-solutions-museum/README.md",
+    "locator": "Claims 45-47; The eighth module is not history",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "If a problem occurs in highly private, shameful, dispersed, hard-to-regulate settings, the solution must be low-cost, private, autonomously usable, and must not require people first to change into their ideal selves. It comes from reading the condom as converting a bundle of problems into a portable tool."
+   },
+   "quote": "如果一个问题发生在高度私人、羞耻、分散、难以监管的场景里",
+   "carried": "not-carried",
+   "relation": null,
+   "agreement_of": null,
+   "reading": {
+    "en": "The account does not state it. A form could be proposed and is not stated: a hard-to-regulate setting as lying beyond what couples into a regulating selector, though within a member's closure, so a tool moves selection to one that does couple in. Only that premise has a law, near-definitional. 'Must', cost, privacy, autonomy and shame have no counterpart, whether a case meets the premise is empirical, and the rule rests on one case. [AI reading]"
+   },
+   "targets": [],
+   "account_adds": null,
+   "source_adds": {
+    "en": "The design rule itself, drawn from one case, as the README's own critique of over-abstraction says; the bundle reading of the condom; shame and dispersal as conditions."
+   },
+   "absence": {
+    "searched": [
+     "private, privacy, portable, low-cost, autonom, self-use, regulat across the overview, chapters, reviews and glossary (hits are unrelated, such as a private signal, or regulation of a level)",
+     "shame, 羞耻, stigma, taboo (no hits in the overview, chapters, COLLECTIVE-DIRECTION, ALIGNMENT, SCIENCES or glossary)"
+    ],
+    "read": [
+     "03-KNOWING r-selection-through-couplings",
+     "03-KNOWING r-what-readings-fix-of-the-unread",
+     "05-COLLECTIVES r-what-pooled-coupling-reaches"
+    ]
+   },
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-hsm-no-nobler-first",
+   "name": {
+    "en": "Good tools do not ask people to become nobler first"
+   },
+   "domain": "earlier-folders",
+   "group": "human-solutions-museum",
+   "source": {
+    "work": "theories/human-solutions-museum/README.md",
+    "locator": "Claim 48; The eighth module is not history; Found by reading item 15",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Good civilizational tools usually do not demand that people first become nobler; they offer a better option within real human nature, situations and limits. Design for the humans that exist. The README warns that, unamended, this licenses products that meet people where they are and keep them there."
+   },
+   "quote": "好的文明工具，往往不是要求人先变得更高尚",
+   "carried": "fresh-reading",
+   "relation": "agreement",
+   "agreement_of": "reading",
+   "reading": {
+    "en": "Proposed here; no live text states it. The nearest form is an AI reading, not about human nature: kept promises and enforced contracts change the law, 'not the state alone'. A law sits near: where the rest outruns the renewal, one member's restraint decides nothing and only changing the rest's exchange helps. But that speaks of one member against the rest, not of people at large changing, so it does not reach the source's case. 'Good' and 'better' stay apart: they need C, with the continuation condition for scope, neither asserted. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+     "says": {
+      "en": "Reading [AI reading, D48]: “Kept promises and enforced contracts are laws giving first: the law changes, not the state alone.”"
+     },
+     "role": "carries",
+     "part": "Reading D48"
+    },
+    {
+     "record": "the-rest-outruns-the-renewal",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-the-rest-outruns-the-renewal",
+     "says": {
+      "en": "World, gate local: “every formation depending on the condition at a need of at least `m` ends, whatever a member outside the rest takes”; “no weight on such a reading selects the member's restraint”."
+     },
+     "role": "neighbour"
+    },
+    {
+     "anchor": "theories/becoming/ONE-PAGE.md",
+     "says": {
+      "en": "“C gives order; a ranking needs it or a premise in its place”. The continuation condition fixes scope; “neither asserted, warrant open”."
+     },
+     "role": "limit",
+     "part": "C gives order"
+    },
+    {
+     "record": "selection-through-couplings",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
+     "says": {
+      "en": "With a selection through the couplings as a supplied condition, “a flow raising what couples in from beyond is selected” (record), the form the README's worry would have if a tool's success is such a selection. Not derived of an actual selection."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "What a tool's success reads and what it cannot, as a question of couplings and not of its designer's aim: the form the README's worry about products that keep people where they are would have, if such success is a selection through what couples in."
+   },
+   "source_adds": {
+    "en": "An anti-perfectionist stance about human nature and how to design for it; a better option offered within limits. A search for human nature, 人性, virtue, nobler and ideal self found no live statement of it."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-hsm-private-to-public",
+   "name": {
+    "en": "Personal failure that a public institution must carry"
+   },
+   "domain": "earlier-folders",
+   "group": "human-solutions-museum",
+   "source": {
+    "work": "theories/human-solutions-museum/README.md",
+    "locator": "Claim 35; Claim 71 (accessible design); The shape of a civilizational advance; Relations (relational-self-and-datong)",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "One insight archetype: some problems treated as personal failure actually require a public institution to carry them (public health, libraries, accessible design). The 'individual defect' is rewritten as a problem of design or of the public system."
+   },
+   "quote": "某些被认为是个人失败的问题，其实需要公共制度来承接",
+   "carried": "carried-in-part",
+   "relation": "scope",
+   "agreement_of": null,
+   "reading": {
+    "en": "Part has a form: admission is read on conditions and requirements together, not on the formation alone; a loss can be made only jointly, the but-for holding for no single part; where the rest outruns the renewal, formations end whatever a member outside it takes; an AI reading tells a fault in organized relations from informed harm. So a loss need not be any one part's. 'Must carry' comes only under C and J1-J4 with the continuation condition for scope, both unasserted, warrant open, and fixes no carrier. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/ONE-PAGE.md",
+     "says": {
+      "en": "“What can form is what a course *admits*: formations (what takes and gives) whose conditions meet their requirements.” At the root, responsibility is “not shown to differentiate”."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "joint-difference-making",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-difference-making",
+     "says": {
+      "en": "Any process, withholding a supplied map: “a law states exactly when parts make a difference only together” (record), which “Yields no responsibility, duty or ranking.”"
+     },
+     "role": "carries"
+    },
+    {
+     "record": "the-rest-outruns-the-renewal",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-the-rest-outruns-the-renewal",
+     "says": {
+      "en": "World, gate local: “every formation depending on the condition at a need of at least `m` ends, whatever a member outside the rest takes”."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-whole-first-and-bounded-centers",
+     "says": {
+      "en": "Reading after it [AI reading, D65]: “Kept apart: an omission of the representation, a fault in organized relations (suppressed feedback, blocked exit) and informed harm”."
+     },
+     "role": "carries",
+     "part": "Reading D65 after the theorem"
+    },
+    {
+     "record": "organizational-formation-from-generative-comparison",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-organizational-formation-from-generative-comparison",
+     "says": {
+      "en": "Conditional (the condition for scope, C for order, J1-J4): “it can warrant building shared capacity without fixing one carrier”; “It does not establish compliance or derive institutional authority”."
+     },
+     "role": "carries"
+    }
+   ],
+   "account_adds": {
+    "en": "A statement of which part made a difference, by a supplied withholding map, with no blame in it; and overbuilding that depletes the living basis as the conditional result's counterexample."
+   },
+   "source_adds": {
+    "en": "A public institution as the carrier, and the institutional cases; shame and moralization as what hides the structure. The account's institution model has no such role."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-hsm-exception-hunting",
+   "name": {
+    "en": "The multicellular organism as a system that eliminated the pattern"
+   },
+   "domain": "earlier-folders",
+   "group": "human-solutions-museum",
+   "source": {
+    "work": "theories/human-solutions-museum/README.md",
+    "locator": "Claim 2; The older question underneath; In Ren's own words 1",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "The first named exception to the runaway dynamic: the multicellular organism, treated as a system, 'successfully eliminated this pattern', and one should ask why and how. Asked in a chat turn, as a question with a premise."
+   },
+   "quote": "multicellular organism, if treated as a system, successfully eliminated this pattern, can you explain why and how",
+   "carried": "carried-in-part",
+   "relation": "scope",
+   "agreement_of": null,
+   "reading": {
+    "en": "The case has a checked form: a rise confined to a whole ends with it, whatever selection within raised, and where next founders carry their founder's value, selection among wholes decides. So 'eliminated' narrows: the rise within is bounded by named clauses, not removed. Sequestering is a hypothesis 'stating an outcome, not a mechanism', so the source's 'how' stays open. 'Successfully' reads from the whole's side: under the condition, ending a cancer is read as mixed. Known results restated. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "confined-rise-within-a-whole",
+     "anchor": "theories/becoming/chapters/04-LIFE.md#r-confined-rise-within-a-whole",
+     "says": {
+      "en": "“A lineage confined to a whole's conditions in excess has no member once they end, whatever selection within raised” (record); sequestering is “a hypothesis stating an outcome, not a mechanism”; “that a given tumour meets the clauses, or a germ line is sequestered, is empirical”. Not shown: “How parts first come to live as one” (record)."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#does-not-settle",
+     "says": {
+      "en": "“Predation, apoptosis and ending a cancer, read as losing and opening something, are mixed [AI reading, D65]”; “No ending is licensed”. Under the continuation condition for scope, which ranks nothing; order needs C; neither asserted."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "In a witness a lineage depending on a condition outside the body still has a member a cohort after the end; without sequestering, a variant selected within lowers the founding value. Neither is called better: a ranking needs C, with the continuation condition for scope, both unasserted."
+   },
+   "source_adds": {
+    "en": "That the organism eliminated the pattern, as a success, and the explanation why and how, including the policing the account leaves unstated: apoptosis appears only as a mixed case."
+   },
+   "absence": null,
+   "same_as": [
+    "cx-sspiral-multicellular-question"
+   ],
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-hsm-research-question",
+   "name": {
+    "en": "The research question: which systems resisted, and what the museum dropped of it"
+   },
+   "domain": "earlier-folders",
+   "group": "human-solutions-museum",
+   "source": {
+    "work": "theories/human-solutions-museum/README.md",
+    "locator": "Claims 2-3; The older question underneath; The gap between the two collections; What was lost item 1",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "The method: generalize the failure dynamic, enumerate the exceptions, extract what they share; hunter-gatherer bands and others are later candidates. The README's AI reading: the museum kept this format and dropped its subject. Conversion and regulation are different shapes, and no module asks what kept a mechanism from capture or what happened when it was captured."
+   },
+   "quote": "these are conversion moves, not regulation moves",
+   "carried": "carried-in-part",
+   "relation": "divergence",
+   "agreement_of": null,
+   "reading": {
+    "en": "The account takes up the regulation side the museum dropped: loops that lock, named exits, routes of correction taken over. Its nearest answer to 'what they share' is an AI reading of nine constraints of social viability as laws, 'not survival axioms', with regulation supplied, so what keeps a mechanism from capture is assumed there and not explained. It gets them from models, not exceptions, says 'No guarantee', and shows none of an actual collective. 'Worked' and 'resisted' read nothing until a comparison is named. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#the-answer-in-brief",
+     "says": {
+      "en": "“**No guarantee.**” “**exits** from the loops that lock a collective, each holding under stated hypotheses”; achievable “Yes, for named exits”, “none shown to hold of an actual collective”."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#kept-together",
+     "says": {
+      "en": "Reading [AI reading, D48]: “The constraints an account of social viability lists are read as laws of what a course does under stated hypotheses”; nine rows. Limits: “regulation and passing are supplied”. “The constraints are not survival axioms.” “Term limits, audits, courts and antitrust carry what an actor's acts do back into what selects the rule”."
+     },
+     "role": "carries",
+     "part": "Reading D48"
+    },
+    {
+     "anchor": "theories/becoming/chapters/02-MAP.md#t7",
+     "says": {
+      "en": "Reading [AI reading, D26 as revised]: “A second order, corruption taking over courts, press, statistics and audit, is a loop whose rule-reading reaches the routes of 明 themselves”. “That readers are minds is a reading; none of this says whether a locked loop supports or damages 生生.”"
+     },
+     "role": "carries",
+     "part": "Reading D26"
+    },
+    {
+     "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#5-what-is-empirical",
+     "says": {
+      "en": "“**Institutions and people.** No institution is modelled on the spine”; “no test has human participants.” ONE-PAGE and 05 §12 do give “one kind of institution” a minimal model, so the live texts differ here."
+     },
+     "role": "limit",
+     "part": "Institutions and people"
+    }
+   ],
+   "account_adds": {
+    "en": "Windows: a reading of what lies beyond the share counts only while its readers are not yet the fewer [AI reading, D67]. What comes back to shapers alone decides, at a step, whether control over the rule is selected (counts models)."
+   },
+   "source_adds": {
+    "en": "A comparative collection of exceptions and what they share, the question itself; hunter-gatherer bands, which a search does not find; conversion moves; a state for what worked and was destroyed."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-hsm-value-systems-regulate",
+   "name": {
+    "en": "Value systems as regulators; equality as stability"
+   },
+   "domain": "earlier-folders",
+   "group": "human-solutions-museum",
+   "source": {
+    "work": "theories/human-solutions-museum/README.md",
+    "locator": "Claim 4; The older question underneath; In Ren's own words 3",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Historical societies held value systems that kept selfishness from compounding beyond regulatory control, which is why they lasted or held equilibrium. This, and not morality, is the root reason equality is needed."
+   },
+   "quote": "This is the root cause we need equality",
+   "carried": "changed",
+   "relation": "divergence",
+   "agreement_of": null,
+   "reading": {
+    "en": "Nearest forms, none about value systems: a reading against the share stops the rise a lock rests on; two-sided regulation settles a level within a bound; a rule held by members can be the wrong rule. 06 reads 荀子's limit on wants by the joint-excess law. Why societies lasted is not addressed. Equality is not derived as stability: in counts, what comes to every member alike pulls the rule toward even and does not decide whether it favours the shapers. The account nowhere says equality is needed; a ranking needs C or a premise in its place, scope the continuation condition, neither asserted. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "a-reading-against-the-share-does-not-ratchet",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-a-reading-against-the-share-does-not-ratchet",
+     "says": {
+      "en": "Any type: with the reading against the share, “the rise the lock rests on does not form”."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "two-sided-regulation-and-late-reading",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-two-sided-regulation-and-late-reading",
+     "says": {
+      "en": "World: “within it, opposing, the level settles at `m`; beyond it an opposing exchange crosses and can oscillate for ever”."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "shaping-the-rule-selected-by-what-comes-back",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-shaping-the-rule-selected-by-what-comes-back",
+     "says": {
+      "en": "Counts: “At a step the rule favours the shapers (weakly) exactly where `c ≤ s`, whatever `p` comes to every member alike”; “a larger `p` pulls the rule toward even”; “With nothing coming back and a cost, the shapers' share falls strictly at every step”. Reading: “nothing here ranks open rule-making above capture: that needs C.”"
+     },
+     "role": "carries"
+    },
+    {
+     "record": "graded-significance-and-priority",
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-graded-significance-and-priority",
+     "role": "neighbour",
+     "says": {
+      "en": "Any type, on a formation’s level: “a transform strictly concave up to a bound ranks higher moving one step of continuation”, of continuation and not holdings, under a graded significance. Not a reason of stability; the ranking is the graded premise’s."
+     }
+    },
+    {
+     "record": "a-rule-rebuilt-from-the-members-it-limits",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-rule-rebuilt-from-the-members-it-limits",
+     "says": {
+      "en": "Reading [AI reading, new]: “neither the rule's being present nor its being held decides: a rule can be kept and be the wrong rule”. “**Not modelled:** why a teacher turns anyone away, conduct other than entry, sanctions, who decides a revision, mixed tenures, schism, records and purposes.”"
+     },
+     "role": "neighbour",
+     "part": "Reading after the theorem"
+    },
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#three-layer-verdict",
+     "says": {
+      "en": "Reading [AI reading, D54]: 荀子「求而无度量分界，则不能不争」与「两者相持而长」，是合取超取之律及其逆，界放在欲与物的关系上."
+     },
+     "role": "neighbour",
+     "part": "Reading D54"
+    },
+    {
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#not-shown",
+     "says": {
+      "en": "“no law says a drain is a harm, restraint better, cooperation good or a shared code worth keeping.” That is asked under 07's two premises, “the continuation condition for scope and C for order”, neither asserted."
+     },
+     "role": "limit"
+    }
+   ],
+   "account_adds": {
+    "en": "Positions sum to zero, so a rise needs a fall (05 §3): conflict stays real and no rule removes it. A regulator lags wherever the world changes faster than it reads [AI reading]."
+   },
+   "source_adds": {
+    "en": "The historical explanation of longevity; value systems rather than entry rules or count models as the regulator; equality as a stability reason. The one law on equal shares (least-parts-and-equal-shares) concerns meeting needs, not stability."
+   },
+   "absence": null,
+   "same_as": [
+    "cx-sspiral-equality-regulator"
+   ],
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-hsm-social-technology",
+   "name": {
+    "en": "Traditions as social technology, with structural advantage"
+   },
+   "domain": "earlier-folders",
+   "group": "human-solutions-museum",
+   "source": {
+    "work": "theories/human-solutions-museum/README.md",
+    "locator": "Claims 6, 8; Terms: social technology; In Ren's own words 6, 8-9",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Confucianism is an excellent cognitive framework, a social technology, judged from cognitive and neural science, and classical Chinese narratives have clear structural, not merely moral, advantages against being consumed by Moloch. Are there others of that calibre? The README says the museum's own collection dropped this category."
+   },
+   "quote": "还有其他同样优秀的social technology吗",
+   "carried": "changed",
+   "relation": "divergence",
+   "agreement_of": null,
+   "reading": {
+    "en": "06 reads such texts passage by passage against the spine, 50 of them Confucian, as agreement, scope or divergence, and credits no tradition with an advantage or a calibre; the first page says they name the grammar's terms, not its operations. 'Excellent' and 'advantage' would have to say what compares, among what. Its gaps table draws forms from both sides: 二柄 and 壹 for capture through the rule; 天之道, 宽猛相济 and 中和 for two-sided regulation. Forms read, not credit of efficacy. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/ONE-PAGE.md",
+     "says": {
+      "en": "“**The classical texts** name the grammar's terms, not its operations; the readings are AI's”."
+     },
+     "role": "carries",
+     "part": "The classical texts"
+    },
+    {
+     "record": "chinese-sources-on-the-spine",
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-chinese-sources-on-the-spine",
+     "says": {
+      "en": "Assessment [AI reading, D54]: 248 passages each classed; 儒家 50, of them 17 相合, 21 定域, 12 相分. Limit: selection favours passages with structure to read, so 礼的细节 and others 「最可能进一步相分，表中段数低估了它们」."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#ro-gaps",
+     "says": {
+      "en": "Gaps named by passages and since proved: 经由规则的捕获, from 韩非“二柄”, 管子“据有余而制不足”, 商君书“壹”; 一个水平的双向调节，及迟到读法下的调节, from 老子“天之道”, 左传“宽猛相济”, 中庸“中和”."
+     },
+     "role": "carries"
+    }
+   ],
+   "account_adds": {
+    "en": "Four non-relational layers recur in the texts, each answered inside the same tradition (06 §六); a Confucian critic's 以理杀人 is read as a model applied where others' differences do not couple in."
+   },
+   "source_adds": {
+    "en": "Tradition as engineered technology; a comparative judgement of calibre; a cognitive-science warrant; resistance to Moloch, a word the live account does not use."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-hsm-high-and-degenerate",
+   "name": {
+    "en": "A tradition's high point and degenerate mode coexist"
+   },
+   "domain": "earlier-folders",
+   "group": "human-solutions-museum",
+   "source": {
+    "work": "theories/human-solutions-museum/README.md",
+    "locator": "Claim 7; In Ren's own words 5; Genealogy 2026-03",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "A high point and a degenerate mode of one tradition coexist: Confucian logic also became the value and pursuit of those who held or sought power, especially in prosperous periods. The README reads this as the anti-sanctification rule applied to a social technology."
+   },
+   "quote": "中国你说的高光时刻和退化模式是同时存在的",
+   "carried": "not-carried",
+   "relation": null,
+   "agreement_of": null,
+   "reading": {
+    "en": "The account does not state it: nothing on a tradition's high point and degenerate mode, or on Confucian logic becoming power's value. A proposal, kept: a counter-rule read from the share it selects locks as the rule it replaced did, and 07 reads the imperial examination so (D68, the earlier work's example, so by descent). A tradition turning so would have that form only if its reading comes from its carriers' share. The law gives a lock, not a coexistence. The source's 退化 is a valuation, not the glossary's degeneration; 'high' and 'degenerate' would have to say what compares. [AI reading]"
+   },
+   "targets": [],
+   "account_adds": null,
+   "source_adds": {
+    "en": "The historical claim about Confucian logic and prosperity, and the coexistence of the high and the degenerate in one tradition."
+   },
+   "absence": {
+    "searched": [
+     "高光, 退化模式, Confucian logic, 外儒内法, Confucian, Confucius, imperial examination, 科举, degenerat across the overview, chapters, COLLECTIVE-DIRECTION, the reviews and glossary (the only hits on the examination are 07's D68 and A-13; degenerat hits are the glossary's sense and a degenerate region); 儒, 权力 in 06"
+    ],
+    "read": [
+     "07-SIGNIFICANCE the reading D68 of the counter-rule",
+     "review/ALIGNMENT A-13",
+     "02-MAP r-capture-through-the-rule and T7's readings D26 and D67",
+     "06-CLASSICAL-TEXTS r-chinese-sources-on-the-spine's limit and the reading of 戴震's 以理杀人",
+     "GLOSSARY degeneration (退化)"
+    ]
+   },
+   "same_as": [
+    "cx-rsd-kernel-degenerations"
+   ],
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-hsm-coordination-protocols",
+   "name": {
+    "en": "Halakha read as decentralized coordination engineering"
+   },
+   "domain": "earlier-folders",
+   "group": "human-solutions-museum",
+   "source": {
+    "work": "theories/human-solutions-museum/README.md",
+    "locator": "Claim 9; In Ren's own words 10 (brought forward and endorsed, the README notes)",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Talmud/Halakha is, from an engineering perspective, possibly the most successful decentralized coordination system in history: dissent preserved, micro-behaviour normed, no territory and no army. A passage brought forward and endorsed in a chat, not authored there; a claim about what it achieved, not a study."
+   },
+   "quote": "从工程角度看这可能是人类历史上最成功的去中心化协调系统",
+   "carried": "fresh-reading",
+   "relation": "agreement",
+   "agreement_of": "reading",
+   "reading": {
+    "en": "Proposed here: three features have forms, none about this tradition, of which the account says nothing and this reader knows little. No centre: valid local plans under faithful projections pair into a valid joint plan, from a supported start. Kept dissent: a pool adds exactly the differences members hold, an imposed code loses them; a resolution rests later cohorts only where records offer what was resolved (dissent kept falls outside: this reading's). No army: consent and penalty are one witness until removal is in the net. 'Most successful' names nothing it reads. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "joint-plans-from-a-supported-start",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start",
+     "says": {
+      "en": "Any process, periphery module: “With faithful joint-to-local projections and valid local plans”, two properties holding on the covered start, and every pair of locally authorized moves jointly allowed and keeping both, “the paired finite plan is valid”; “ignition needs a reserve already present”."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#three-layer-verdict",
+     "says": {
+      "en": "Reading [AI reading, D54] of 和而不同: 「成员有清单、各自之耦合可判定时，池所增加的恰是差别，相同者合用什么也不增加」."
+     },
+     "role": "carries",
+     "part": "Reading D54 of 和而不同"
+    },
+    {
+     "record": "a-code-formed-between-formations",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-code-formed-between-formations",
+     "says": {
+      "en": "Any type: “An imposed code makes all agree; each formation loses exactly the distinctions its code drew that the imposed code merges”. “A resolution written back into the records that later cohorts read rests from the next cohort on”, records written to offer exactly what was resolved."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "a-rule-rebuilt-from-the-members-it-limits",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-rule-rebuilt-from-the-members-it-limits",
+     "says": {
+      "en": "Root, a family of models: a rule of entry passed through members, “with no compliance and no records”. “**Not modelled:** why a teacher turns anyone away, conduct other than entry, sanctions, who decides a revision, mixed tenures, schism, records and purposes.”"
+     },
+     "role": "limit"
+    },
+    {
+     "anchor": "theories/becoming/chapters/01-ROOT.md#r-the-source-texts-test-systems",
+     "says": {
+      "en": "Reading [AI reading, D69]: “An institution kept by its members' consent and one held by penalties” are one witness read socially, “told apart once their removal is in the net”. “not a new law”."
+     },
+     "role": "carries",
+     "part": "Reading D69"
+    }
+   ],
+   "account_adds": {
+    "en": "A test of what no army would mean: keep and penalty are told apart only when removal enters the net. Being joined through couplings does not suffice for agreement."
+   },
+   "source_adds": {
+    "en": "The reading of Talmud/Halakha itself; norming of micro-behaviour; the comparative superlative. The one institution model leaves out the compliance, sanctions and records the source's case turns on. The words Talmud, Halakha and 塔木德 do not appear in the live account."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-hsm-memorial-protocol",
+   "name": {
+    "en": "The 奏折 as a zero-trust protocol"
+   },
+   "domain": "earlier-folders",
+   "group": "human-solutions-museum",
+   "source": {
+    "work": "theories/human-solutions-museum/README.md",
+    "locator": "Claims 12-13; In Ren's own words 13-14, 16 (endorsed)",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "The 奏折 is a formatted protocol and the object of study is the whole bureaucratic system: in a low-bandwidth, high-latency, zero-trust setting, minimal metadata plus structured language gave accurate, private, auditable two-way communication."
+   },
+   "quote": "在一个低带宽、高延迟、零信任的环境里",
+   "carried": "not-carried",
+   "relation": null,
+   "agreement_of": null,
+   "reading": {
+    "en": "Neither the object nor a format's engineering appears: no metadata or structured language as what makes a report accurate, private or auditable, and no such historical institution. The question beneath it, information upward, has partial forms, and so does a limit on audit, both in cx-hsm-information-upward. 05 §12 models no records. [AI reading]"
+   },
+   "targets": [],
+   "account_adds": null,
+   "source_adds": {
+    "en": "The reading of a historical institution as protocol engineering, the claim about what that protocol achieved, and the bureaucratic system as the object."
+   },
+   "absence": {
+    "searched": [
+     "奏折, 奏摺, 奏, 言路, 御史, 谏, 监察, memorial, zero-trust, untrusted, byzantine, upward, audit, auditab, metadata, members report, institution (no relevant hits for the historical terms), and record-index for report, signal, honest, audit, channel, protocol, bandwidth, deliver, verif"
+    ],
+    "read": [
+     "03-KNOWING the reading after r-a-revision-that-opens-a-correction ('the link is its rule of reading what its members report')",
+     "03-KNOWING r-one-reader-several-conditions, r-fallible-witness-diagnosability",
+     "05-COLLECTIVES §4's reading D48, §12, r-copied-witnesses-change-nothing",
+     "02-MAP T7's reading D26"
+    ]
+   },
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-hsm-information-upward",
+   "name": {
+    "en": "How a large polity gets accurate information upward under adverse incentives"
+   },
+   "domain": "earlier-folders",
+   "group": "human-solutions-museum",
+   "source": {
+    "work": "theories/human-solutions-museum/README.md",
+    "locator": "The older question underneath; Claims 12-14",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "The README's AI gloss of what the 奏折 inquiry was after: a governance question, how a large polity gets accurate information upward under adversarial incentives, asked of real institutions and across civilizations. It is the older question beneath the protocol reading."
+   },
+   "quote": "how does a large polity get accurate information upward under adversarial incentives?",
+   "carried": "carried-in-part",
+   "relation": "scope",
+   "agreement_of": null,
+   "reading": {
+    "en": "Forms in part. An AI reading lists information true to the world among laws of viability; another reads an institution's link as its rule of reading what members report. Bandwidth and latency: one schedule's windows, knowledge growing a link a step. Witnesses: a model admitting every witness's failure blocks every certificate, so literal zero trust gets none. Audit: logs cannot establish mediation, an extra write path leaving the public view identical. Adverse incentive has one narrow form, in weights: complying when read and acting by its own law when not stands first where keeping outweighs the loss. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#kept-together",
+     "says": {
+      "en": "Reading [AI reading, D48], a row: “Information true to the world | a selection separates exactly what its selector couples apart”. “The constraints are not survival axioms.”"
+     },
+     "role": "carries",
+     "part": "Reading D48, a row"
+    },
+    {
+     "record": "one-reader-several-conditions",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-one-reader-several-conditions",
+     "says": {
+      "en": "World, balance: “For conditions distinct by name, one schedule's windows have reciprocals summing to at most one”."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "what-a-center-can-know-by-a-step",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-what-a-center-can-know-by-a-step",
+     "says": {
+      "en": "World: “what it can know grows by at most one link a step”."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "fallible-witness-diagnosability",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-fallible-witness-diagnosability",
+     "says": {
+      "en": "Any type of witnesses compared decidedly; roster, envelopes and complete reports supplied: “Two different answers cannot both fit a complete report exactly where their envelopes are cross-separated”; “a model admitting every witness's failure blocks every certificate.”"
+     },
+     "role": "carries"
+    },
+    {
+     "record": "mediated-evidence-transport",
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-mediated-evidence-transport",
+     "says": {
+      "en": "Periphery instance of a law on any process: “an extra write path can leave the public view identical, so logs cannot establish mediation”. That the runtime is completely mediated is supplied; “the writes act on represented control and fault configurations, not on a device” (record)."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "when-complying-when-read-is-best",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-when-complying-when-read-is-best",
+     "says": {
+      "en": "Natural weights, two stages, four plans; near-definitional, with witnesses: it stands above every other plan “exactly where `k_O V + c T < k_C V`”. Whose the weights are is a reading. ALIGNMENT: “Deception itself is not represented”; concealment only where a selection shown the law would keep it less."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-a-revision-that-opens-a-correction",
+     "says": {
+      "en": "Reading after it: “For an institution, the link is its rule of reading what its members report, by which line rather than how many”. 03's Open lists “an institution revising its rule of reading”."
+     },
+     "role": "carries",
+     "part": "Reading after the theorem"
+    }
+   ],
+   "account_adds": {
+    "en": "A bound on what any reader can reach, whatever its honesty; a condition under which witnesses can be told apart at all; and a second order, corruption of audit read as a loop reaching the routes of 明 [AI reading, 02 T7]."
+   },
+   "source_adds": {
+    "en": "The question as asked of actual polities; a recipient's false belief and the intention to cause one, which the account does not represent; what makes reports accurate under those incentives; how an institution revises its reading, which 03 lists as open."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-hsm-comparative-sweep",
+   "name": {
+    "en": "Comparison across civilizations and scales; the narrow axis corrected"
+   },
+   "domain": "earlier-folders",
+   "group": "human-solutions-museum",
+   "source": {
+    "work": "theories/human-solutions-museum/README.md",
+    "locator": "Claims 14-15; In Ren's own words 7, 15",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Governance protocols are compared across civilizations and down the scale ladder to groups. The Chinese and American axis is itself too narrow: other cultures must be read on the self-others and individualism-collectivism spectrum. The README says the museum specification dropped that correction."
+   },
+   "quote": "just realized i might be to bounded by chinese and american perspective",
+   "carried": "not-carried",
+   "relation": null,
+   "agreement_of": null,
+   "reading": {
+    "en": "The live account holds no such comparison: its classical chapter reads Chinese texts, its reviews Buddhist thought, philosophy, logic, alignment and the sciences. So the source's self-correction bears on the account's own reading base: 06's 248 passages are Chinese. 'No cultural origin validates or disqualifies a method' is another point. Its 'cell, organ, body, ecosystem' is one biological case, not a ladder of polities. This crosswalk's domain list aims at the breadth, but stands in process. [AI reading]"
+   },
+   "targets": [],
+   "account_adds": null,
+   "source_adds": {
+    "en": "The comparative programme across civilizations and scales, and the self-correction on bias."
+   },
+   "absence": {
+    "searched": [
+     "individualis, collectivis, cross-cultural, non-Western, Indigenous, hunter, forager, small-scale, Dunbar across the overview, chapters, reviews and glossary (no hits); culture, cultural (hits are flour beetle cultures and D58's reading)"
+    ],
+    "read": [
+     "08-METHOD 'No cultural origin validates or disqualifies a method'",
+     "04-LIFE line on 'not a fixed ladder'",
+     "06-CLASSICAL-TEXTS r-chinese-sources-on-the-spine",
+     "cx-crosswalk BRIEF.md (process, not live)"
+    ]
+   },
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-hsm-cultures-read-by-dynamics",
+   "name": {
+    "en": "Cultures read at collective cognitive dynamics, living cases included"
+   },
+   "domain": "earlier-folders",
+   "group": "human-solutions-museum",
+   "source": {
+    "work": "theories/human-solutions-museum/README.md",
+    "locator": "Claims 10-11; In Ren's own words 11-12",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Cultures must be read at the level of collective cognitive dynamics, not customs; the surface is the wrong resolution. The search includes living cases: a culture still of high harmony, cooperation and openness, one not organized by collective trauma."
+   },
+   "quote": "Too surface, I want to know what cognitive dynamics, thought dynamics are at play collectively",
+   "carried": "changed",
+   "relation": "divergence",
+   "agreement_of": null,
+   "reading": {
+    "en": "The account's collective reading is thinner and exact: codes formed by hearing, and readers counted by kind inside a selection. That those readers are minds, institutions or a culture is itself marked a reading, its collectives are said to be pools, consciousness open, and the one test of a judge as a pool of readers read by kind failed. So a culture's 'cognitive dynamics' is reachable only as who reads what, and no culture is read. Harmony and trauma have no counterpart. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/02-MAP.md#t7",
+     "says": {
+      "en": "Reading [AI reading, D67]: the scorecard is read from the share because those it selects are, in growing number, its readers. “That readers are minds, institutions or a culture is a reading, kept from D58.”"
+     },
+     "role": "carries",
+     "part": "Reading D67"
+    },
+    {
+     "anchor": "theories/becoming/ONE-PAGE.md",
+     "says": {
+      "en": "T7, on actual metrics, conjectured: “in one trained system the lock formed, and the bridge, that its judge is a pool of readers read by kind, failed”."
+     },
+     "role": "carries",
+     "part": "T7"
+    },
+    {
+     "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#what-this-page-does-not-show",
+     "says": {
+      "en": "Not shown: anything of a collective of consciousness: “the theory's collectives are pools of couplings and readers counted by kind, and consciousness is open”."
+     },
+     "role": "carries",
+     "part": "a collective of consciousness"
+    },
+    {
+     "record": "a-code-formed-between-formations",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-code-formed-between-formations",
+     "says": {
+      "en": "Any type: a code is a formation's map from senses to forms; a group agreeing at a sense keeps agreeing through every hearing closed for it. How long agreement takes is not stated."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "A conditional: where a culture's readers are drawn from what its rule selects, what it reads can lock. A reading, shown of no culture; the mechanism would be selection forming its own readers, not a mentality."
+   },
+   "source_adds": {
+    "en": "Collective cognition as a level of study, the demand for a living culture as evidence, and harmony and collective trauma as what is read."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-hsm-anti-laundering",
+   "name": {
+    "en": "No unreviewed content in the voice of a factual archive"
+   },
+   "domain": "earlier-folders",
+   "group": "human-solutions-museum",
+   "source": {
+    "work": "theories/human-solutions-museum/README.md",
+    "locator": "Four refusals: Anti-authority-laundering, Anti-fake-governance; Claims 86-91",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Content without sources, review and licensing is prototype copy and must not be published in the voice of a formal archive. The guard is machine-enforced: public mode against unready content fails the build, and public release needs two reliable sources and approved fact and sensitivity review. A form must not imply a review pipeline that does not exist."
+   },
+   "quote": "没有来源和审核的内容只能作为原型文案，不应以正式事实档案口吻公开",
+   "carried": "carried-in-part",
+   "relation": "divergence",
+   "agreement_of": null,
+   "reading": {
+    "en": "Same concern, another mechanism, and they part at publishing. The account labels what each statement is and says on its first page who checked what, so it implies no review that has not happened. It does not withhold text no person has reviewed; it says so. The museum's rule would hold such text back. Its own reading adds that no check inside the work can show it serves its purpose. Practice on both sides, not a law. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/ONE-PAGE.md",
+     "says": {
+      "en": "“the proofs are checked by machine, everything else only by AI review, and no person has yet reviewed it”."
+     },
+     "role": "carries",
+     "part": "no person has yet reviewed it"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#standings-and-bases",
+     "says": {
+      "en": "“Every result statement in the chapters opens with one bold label, and a proved result names its base.” Theorem, conditional, assessment, reading and open are told apart."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#the-work-by-its-own-laws",
+     "says": {
+      "en": "Reading [AI reading, D66]: “no check run inside the work can show that the work serves what it is for”; “Only coupling those in widens what the work's selection reaches”."
+     },
+     "role": "neighbour",
+     "part": "Reading D66"
+    }
+   ],
+   "account_adds": {
+    "en": "Standings beyond true or false, and the rule that a frozen rule fixes the scoring, not that it measures what the thesis names."
+   },
+   "source_adds": {
+    "en": "Refusal to publish below a floor: a build that fails rather than a label that warns. Also a publication state machine, a source table, sensitivity review and image licensing."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-hsm-ai-candidate-links",
+   "name": {
+    "en": "AI may only propose structural links; a person writes them back"
+   },
+   "domain": "earlier-folders",
+   "group": "human-solutions-museum",
+   "source": {
+    "work": "theories/human-solutions-museum/README.md",
+    "locator": "Claim 115; The counterexamples: 'Structural similarity is a soft claim'",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Future AI recommendation is admitted only under constraint: AI may generate candidate relations only, each with type, dimension, confidence and reason; low-confidence ones are not shown publicly; a human review writes them back into the data."
+   },
+   "quote": "future AI-generated relations may only be candidates",
+   "carried": "changed",
+   "relation": "divergence",
+   "agreement_of": null,
+   "reading": {
+    "en": "The account meets the same risk differently. Its structural readings are made, revised and checked by AI and stand published with an AI label, no person having reviewed them; it answers unreliability with more AI reads and stated counts, not a person's gate. Under the museum's rule 06's correspondences would stay candidates, and so would this file. The source's rule is a design, and the account does not say it is wrong: review by people is what it says is missing. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/THE-THEORY-OF-BECOMING.md",
+     "says": {
+      "en": "“The corpus was classified sentence by sentence in two frozen rounds by AI, and no person has yet reviewed the classification; which sentence reads as which theorem is AI reconstruction”."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "civilization-thought-on-the-spine",
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-civilization-thought-on-the-spine",
+     "says": {
+      "en": "「修订者原样保留的 88 条，第二位检查者读后 84 条要改正」; 「只经两读的条目不可靠；三读之后仍可能有错」. Classes, readings and names are AI's [AI reading, D62]."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#the-work-by-its-own-laws",
+     "says": {
+      "en": "Reading [AI reading, D66]: “Only coupling those in widens what the work's selection reaches: review by people”, tests on trained systems, models of the test systems."
+     },
+     "role": "carries",
+     "part": "Reading D66"
+    }
+   ],
+   "account_adds": {
+    "en": "A measured rate of error in structural reading, and that three reads are not enough to be sure."
+   },
+   "source_adds": {
+    "en": "A human write-back gate and a confidence floor for what may be shown."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-hsm-failure-fields",
+   "name": {
+    "en": "Against slogans and survivorship: conditions and failures on each method"
+   },
+   "domain": "earlier-folders",
+   "group": "human-solutions-museum",
+   "source": {
+    "work": "theories/human-solutions-museum/README.md",
+    "locator": "Claims 84, 98-100; What was lost item 7; Found by reading items 13-14",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Methods must not become slogans: each reserves steps, antiPatterns, notApplicableWhen and failureSignals, and a core method should rest on exhibits from several domains. The concept wants failed mechanisms marked; the README warns that a method library with no failure record is a survivorship machine, and that ten seeds are pretty examples."
+   },
+   "quote": "它们是避免方法库口号化的长期接口",
+   "carried": "carried-in-part",
+   "relation": "agreement",
+   "agreement_of": "thesis-or-method",
+   "reading": {
+    "en": "The account's statements carry the same slots, and fills them: hypotheses, what is not shown, what would show it wrong, failed tests reported. 08 gives the anti-slogan point a form: a law with content forbids through its hypotheses. The museum's fields are all empty, by its README. Survivorship itself has no law: a finite record not certifying renewal is a neighbour, and a repertoire omitting the actual rule can answer falsely. 06 names the same bias in its mapping. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/ONE-PAGE.md",
+     "says": {
+      "en": "A column on what would show each wrong; T1 “passed in two simulations and on held-out yeast regimes the analyst had seen, failed in four settings”."
+     },
+     "role": "carries",
+     "part": "the column on what would show each wrong"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#law",
+     "says": {
+      "en": "“a law of the root holds of every carrier, relation and class, so it forbids no relation, and a law with content is conditional and forbids through its hypotheses”."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "becoming-finite-horizon",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-becoming-finite-horizon",
+     "says": {
+      "en": "The renewable process: for every horizon, two runs agree before it and then one renews and one consumes, so a reading fixed by h steps that includes every renewing run includes a consuming one. The home says the force lies in the words every renewing run, “which overdraws before `h`”."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "learning-a-rule-by-narrowing",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-learning-a-rule-by-narrowing",
+     "says": {
+      "en": "Any type of questions, candidate rules listed, observations supplied: “a repertoire omitting the actual rule can answer confidently and falsely.”"
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "chinese-sources-on-the-spine",
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-chinese-sources-on-the-spine",
+     "says": {
+      "en": "Limit [AI reading, D54]: 「映射偏向有结构可读的段落」; those left out 「最可能进一步相分，表中段数低估了它们」."
+     },
+     "role": "limit"
+    }
+   ],
+   "account_adds": {
+    "en": "A failure reported where a thesis's frozen test failed, and the wording changed to say so: failure entered into the text, not left in a separate wing."
+   },
+   "source_adds": {
+    "en": "A place for failed historical mechanisms and 'do not reuse', a wing for the unsolved, a rule of support across domains, and survivorship as a bias of a collection of methods."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-hsm-threshold-review",
+   "name": {
+    "en": "Open with a threshold: nomination, curators, two sources"
+   },
+   "domain": "earlier-folders",
+   "group": "human-solutions-museum",
+   "source": {
+    "work": "theories/human-solutions-museum/README.md",
+    "locator": "Claims 79-81, 89; Found by reading item 16",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "The museum is never finished and open to nomination, but openness is not no threshold: candidates answer the dossier's questions, curators review, discussion and revision go on; public release needs two reliable sources. It would be neither rigid authority nor arbitrary platform. The README finds who curates, appeal and withdrawal undefined."
+   },
+   "quote": "但开放不等于无门槛",
+   "carried": "fresh-reading",
+   "relation": "scope",
+   "agreement_of": null,
+   "reading": {
+    "en": "Proposed here: two sources counted by type can share a cause. In the account reviewers count by independent causes: two moved under one cause fail while every name is kept, with faithful reviewers assumed; a copied witness adds nothing, and whether mere agreement does is not shown. Readers drawn from the selected can lock a rule, and a pool recruiting only through itself reads a loss only if a reader comes from outside. These laws locate the README's gap on curators; they do not speak of museums. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "reviewers-count-by-independent-causes",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-reviewers-count-by-independent-causes",
+     "says": {
+      "en": "Pure core, fault formulas and bounds supplied, faithful reviewers: “Reviewers count by independent causes, not names.” Not shown: “That the formulas are the actual causes of failure: they are supplied bounds” (record)."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "copied-witnesses-change-nothing",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-copied-witnesses-change-nothing",
+     "says": {
+      "en": "Any type, finite roster: a witness copying one already on it changes no certificate. “That a witness merely agreeing with another, without copying it, adds nothing is not shown”."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#knowledge-and-standing",
+     "says": {
+      "en": "Assessment: “shared inquiry adds checks only where they are differently vulnerable”."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "readers-drawn-from-the-selected",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-readers-drawn-from-the-selected",
+     "says": {
+      "en": "Any type: read the rule as the pool of its readers' readings; the rule read is then a monotone function of the share exactly where the others' reading is not above the carriers'."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions",
+     "says": {
+      "en": "“a pool recruiting only through itself couples into a loss only as its course without the loss would”, “unless a reader is admitted from outside” (witness)."
+     },
+     "role": "carries",
+     "part": "Pool couplings"
+    }
+   ],
+   "account_adds": {
+    "en": "Independence of causes as the count, where the source counts sources by type; and differently vulnerable as what a further check must be."
+   },
+   "source_adds": {
+    "en": "The governance loop of open nomination, public discussion, curatorial review and revision, and the honest refusal to simulate it in v0.1."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-hsm-living-museum-shengsheng",
+   "name": {
+    "en": "活博物馆 as 生生 applied to knowledge"
+   },
+   "domain": "earlier-folders",
+   "group": "human-solutions-museum",
+   "source": {
+    "work": "theories/human-solutions-museum/README.md",
+    "locator": "Relations (becoming); Terms: living museum",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "The folder relates itself to the account this way: the living museum is 生生 applied to knowledge, a system that goes on generating and is never finished, rather than a finished archive."
+   },
+   "quote": "活博物馆 is 生生 applied to knowledge",
+   "carried": "changed",
+   "relation": "divergence",
+   "agreement_of": null,
+   "reading": {
+    "en": "The account's 生生 is life in the whole and its continuing generation, and 'nor any new organization': a growing knowledge system is not a case of it by name. What the source means is nearer another law: under a fixed rule the possible does not keep widening, so openness is in how rules keep changing, which is enough for neither. The sentence that an account of an unfolding is not finished by sealing it uses a law by analogy, and says so. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "GLOSSARY.md#collectives-and-significance",
+     "says": {
+      "en": "生生: “life in the whole and its continuing generation (生发) [AI reading, D1].” “Neither the grammar's `«生生»` (renewal without end), nor 02's generation (生成) as such, which allows loss, nor any new organization.” T8 argues it under the continuation condition for scope and C for order."
+     },
+     "role": "carries",
+     "part": "生生"
+    },
+    {
+     "record": "where-the-possible-grows",
+     "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#7-keeping-the-future-open",
+     "says": {
+      "en": "Reading [AI reading, D45]: “Keeping it widening needs the rule held to change without end, and its changing without end is not enough.” “Nothing here says which changes keep it widening, or that any actual collective can make them.”"
+     },
+     "role": "carries",
+     "part": "Reading D45"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#the-work-by-its-own-laws",
+     "says": {
+      "en": "“The work is not a flow, and the law is used here only by analogy: an account of an unfolding that keeps generating is not finished by sealing it.”"
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "Completion read three ways, one an exact statement of what cannot be shown."
+   },
+   "source_adds": {
+    "en": "A knowledge institution's revisability as a way of being alive, where how an institution revises its rule of reading is on 03's Open list; a museum built against the museum as dead holding."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-hsm-violence-hall",
+   "name": {
+    "en": "The dropped hall: how humans reduced violence"
+   },
+   "domain": "earlier-folders",
+   "group": "human-solutions-museum",
+   "source": {
+    "work": "theories/human-solutions-museum/README.md",
+    "locator": "The gap between the two collections; What was lost item 2; Claim 52; Found by reading item 12",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "One of twelve proposed halls, how humans reduced violence, which the README calls the one closest to the original research question. It survives nowhere in the specification, as gallery, method or seed exhibit, and the README takes the silent drop as evidence of drift from regulation to conversion."
+   },
+   "quote": "人类如何降低暴力",
+   "carried": "carried-in-part",
+   "relation": "scope",
+   "agreement_of": null,
+   "reading": {
+    "en": "The hall's question has a form only for a loop. An AI reading takes an exchange of harms as a loop: answering in kind keeps the difference, answering more runs away; a loop closes a difference only through a link giving back less. 06 reads 止戈 by that law and marks its frame of power as divergence. That humans reduced violence is not stated, no law calls it worse, and the word is absent from the live account. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "whether-a-loop-closes-a-difference",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-whether-a-loop-closes-a-difference",
+     "says": {
+      "en": "Any type; World for the ring read on flows: “a loop closes a difference only through a link giving back less”; with whole-number factors a loop closes at once, keeps, or exceeds every bound, “never closing gradually”."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+     "says": {
+      "en": "Reading [AI reading, D48]: “An exchange of harms is a loop: answering in kind keeps the difference, answering more runs away, so conflict institutions are links of another kind”."
+     },
+     "role": "carries",
+     "part": "Reading D48"
+    },
+    {
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#kept-together",
+     "says": {
+      "en": "Reading [AI reading, D48], a row on bounded conflict: a loop closes a difference “only through a link giving back less than it received (compensation, arbitration, absorption)”."
+     },
+     "role": "carries",
+     "part": "Reading D48, Bounded conflict"
+    },
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#zhi-ge",
+     "says": {
+      "en": "Reading [AI reading, D54]: 「力之环只经一个回给少于所受的环节才闭合，一次战胜是截断而不是止息」; 「但其框架是权力之框架（保大、定功、示子孙），记为相分。理论不说武的本义是止戈，也不说止戈否定一切武力。」"
+     },
+     "role": "carries",
+     "part": "Reading D54"
+    }
+   ],
+   "account_adds": {
+    "en": "A structural limit on what ending a conflict can mean: where every link gives on at least what it receives, the difference never falls. Whether a closing supports or damages what continues is asked under the continuation condition and C, neither asserted."
+   },
+   "source_adds": {
+    "en": "The historical claim that humans reduced violence, and how; the hall as a subject of study; the drop read as a drift."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  }
+ ],
+ "changes": [],
+ "live_flags": [
+  {
+   "where": "theories/becoming/COLLECTIVE-DIRECTION.md#5-what-is-empirical",
+   "what": "\"No institution is modelled on the spine\" stands against ONE-PAGE.md and THE-THEORY-OF-BECOMING.md, which say one kind of institution has one minimal model (05 §12, r-a-rule-rebuilt-from-the-members-it-limits, root). One of them seems stale, or 'on the spine' means something the page does not say."
+  }
+ ]
+}

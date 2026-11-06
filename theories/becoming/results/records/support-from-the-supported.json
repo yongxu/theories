@@ -183,8 +183,8 @@
     "en": "Give reachability and recovery over several steps (the conditions of transformation by a dissolved requirement and of giving from beyond); an instance theorem to the support-gated law of RelationalRenewal, whose premises, balance and supported givers, RenewalBridge already gives; comparisons of renewal capacity and richness of relations."
   },
   "correspondence": {
-    "zh": "Ren 写道，生成的是“its existence creates more possibilities of becoming - more future, not less”，并且“it is about if the continuation of becoming continues itself”。读法（AI 的论证）：支持只从被支持者获得，读作生成的延续延续自身——没有来自外部的给予时，能形成什么只由已被支持者的给予打开。终结是吸收态，读作退化的不可逆一侧：一个家族一旦没有被支持者，只有消解要求（转化，不是恢复）或来自外部的给予能使它再被支持。对整体没有外部，所以整体一旦什么都不被支持，就不再有什么被支持或活跃；这里的整体是一个网中全部形成，即所表示的整体，按 Ren 确认的第二项读法，实际的整体从不是任何中心对它的模型。Ren 说“not harm”是“a phase transition with a clear boundary”；已有的两个相界结果（excess_bounded、joint_excess_ends，见 own-count-misses-joint-excess）与这里的吸收态，是这一读法下的三个形式。读法与名称都是 AI 的。",
-    "en": "Ren wrote that being generative is that “its existence creates more possibilities of becoming - more future, not less”, and that “it is about if the continuation of becoming continues itself”. A reading (the AI's argument): support gained only from the supported reads as the continuation of becoming continuing itself, since with nothing given from beyond what can form is opened only by what the supported give. The absorbing end reads as the irreversible side of degeneration: once a family has no supported member, only a dissolved requirement (a transformation, not a recovery) or a give from beyond supports it again. Of the whole nothing is beyond, so once nothing in the whole is supported nothing is supported or active again; the whole here is all the formations of a web, the represented whole, and by Ren's second confirmed reading the actual whole is never any center's model of it. Ren said that “not harm” is “a phase transition with a clear boundary”; the two earlier phase results (excess_bounded and joint_excess_ends, see own-count-misses-joint-excess) and this absorbing end are its three forms under this reading. The reading and the names are the AI's."
+    "zh": "Ren 写道，生成的是“its existence creates more possibilities of becoming - more future, not less”，并且“it is about if the continuation of becoming continues itself”。读法（AI 的论证）：支持只从被支持者获得，读作生成的延续延续自身——没有来自外部的给予时，能形成什么只由已被支持者的给予打开。终结是吸收态，读作退化的不可逆一侧：一个家族一旦没有被支持者，只有消解要求（转化，不是恢复）或来自外部的给予能使它再被支持。对整体没有外部，所以整体一旦什么都不被支持，就不再有什么被支持或活跃；这里的整体是一个网中全部形成，即所表示的整体，按 Ren 确认的第二项读法，实际的整体从不是任何中心对它的模型。Ren 说“not harm”是“a phase transition with a clear boundary”；已有的两个边界结果（excess_bounded、joint_excess_ends，见 own-count-misses-joint-excess）与这里的吸收态，是这一读法下的三个形式；它们是边界，都不是已证的相变。读法与名称都是 AI 的。",
+    "en": "Ren wrote that being generative is that “its existence creates more possibilities of becoming - more future, not less”, and that “it is about if the continuation of becoming continues itself”. A reading (the AI's argument): support gained only from the supported reads as the continuation of becoming continuing itself, since with nothing given from beyond what can form is opened only by what the supported give. The absorbing end reads as the irreversible side of degeneration: once a family has no supported member, only a dissolved requirement (a transformation, not a recovery) or a give from beyond supports it again. Of the whole nothing is beyond, so once nothing in the whole is supported nothing is supported or active again; the whole here is all the formations of a web, the represented whole, and by Ren's second confirmed reading the actual whole is never any center's model of it. Ren said that “not harm” is “a phase transition with a clear boundary”; the two earlier boundary results (excess_bounded and joint_excess_ends, see own-count-misses-joint-excess) and this absorbing end are its three forms under this reading, boundaries and none a proved phase transition. The reading and the names are the AI's."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean",
   "aliases": [
@@ -279,8 +279,8 @@
     {
       "id": "own-count-misses-joint-excess",
       "detail": {
-        "zh": "已有的两个相界结果：没有条件能被无限耗下去（Flow.excess_bounded），使水平低于所需的联合超出终结以其所需依存者（Flow.joint_excess_ends）；这里的吸收态是第三个。",
-        "en": "The two earlier phase results: no condition is drawn down without end (Flow.excess_bounded), and joint excess bringing a level below a need ends what depends at that need (Flow.joint_excess_ends); the absorbing end here is the third."
+        "zh": "已有的两个边界结果：没有条件能被无限耗下去（Flow.excess_bounded），使水平低于所需的联合超出终结以其所需依存者（Flow.joint_excess_ends）；这里的吸收态是第三个。",
+        "en": "The two earlier boundary results: no condition is drawn down without end (Flow.excess_bounded), and joint excess bringing a level below a need ends what depends at that need (Flow.joint_excess_ends); the absorbing end here is the third."
       }
     },
     {
@@ -711,6 +711,10 @@
     {
       "en": "1 November 2026, U4c (study section 492): declarations moved with their full names: total_pos to Becoming.Prelude, with the list and stretch lemmas the root's census laws use. The cited Lean source and its proof binding follow them; the claim is unchanged.",
       "zh": "2026年11月1日，U4c（研究第 492 节）：声明以完整名称移动：total_pos 移至 Becoming.Prelude，与根上之清点诸律所用之列表与跨段引理同处。所引 Lean 源及其证明绑定随之；论断不变。"
+    },
+    {
+      "en": "7 November 2026, CX: the correspondence corrected where a reader of the crosswalk found it wider than its source or its home (the crosswalk's live flags, checked at home); no law, premise or scope of this record changed.",
+      "zh": "2026年11月7日，CX：交叉对照之读者发现对应说得比其来源或本处更宽，于本处查实后更正；本记录之律、前提与范围均未变。"
     }
   ],
   "text_versions": [

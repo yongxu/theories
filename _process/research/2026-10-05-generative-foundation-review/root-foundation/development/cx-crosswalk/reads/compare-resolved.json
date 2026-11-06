@@ -1,0 +1,36 @@
+[
+ {
+  "id": "cx-fork-open-intelligence-leverage",
+  "field": "reading",
+  "value": {
+   "en": "07's D68 states one part: capable assistance to whoever shapes the rule does not lower the selection for control, and lowering the cost of shaping strictly, with nothing else changed, raises it. No live text speaks of open or distributed capability, so reading these as that assistance is this crosswalk's. Capability read as reach, extended without extending the coupling, enlarges the gap (D45). So 'leverage for good and bad alike' is scoped: where those premises hold, the lever has a direction, toward the shapers' control. Neither reading ranks that direction good or bad. [AI reading]"
+  },
+  "why": "Coordinator, having read both rulings and 07 D68 at home: the alignment-section ruling's scope, as cx-kpso-ai-raises-the-gain and cx-wamo-amplifier are, with codes-and-rules' care that a direction under premises is not a valence"
+ },
+ {
+  "id": "cx-fork-open-intelligence-leverage",
+  "field": "source_adds",
+  "value": {
+   "en": "Open and locally owned models as the assistance meant, and their insufficiency said of them; local ownership, and the rural community's subsistence as the case at stake."
+  },
+  "why": "Coordinator, having read both rulings and 07 D68 at home: codes-and-rules' wording"
+ },
+ {
+  "id": "cx-fork-only-stable-equilibrium",
+  "field": "same_as",
+  "value": [
+   "cx-wamo-all-but-the-winner",
+   "cx-zhishan-only-stable-equilibrium"
+  ],
+  "why": "Coordinator, having read both rulings and 07 D68 at home: the three state one line of Ren's with one verdict; the larger set"
+ },
+ {
+  "id": "cx-zhishan-only-stable-equilibrium",
+  "field": "same_as",
+  "value": [
+   "cx-fork-only-stable-equilibrium",
+   "cx-wamo-all-but-the-winner"
+  ],
+  "why": "Coordinator, having read both rulings and 07 D68 at home: the larger set"
+ }
+]

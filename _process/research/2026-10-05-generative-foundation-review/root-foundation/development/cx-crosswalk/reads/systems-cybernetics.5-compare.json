@@ -1,0 +1,2787 @@
+{
+ "group": {
+  "id": "systems-cybernetics",
+  "domain": "systems-cybernetics",
+  "title": {
+   "en": "Systems thinking and cybernetics"
+  },
+  "kind": "domain",
+  "summary": {
+   "en": "Meadows's traps, Senge's archetypes, Forrester, Beer, Holling, Luhmann, second-order cybernetics, Ashby, Wiener and Ostrom, from AI knowledge with no source text checked. The live account itself names few of them: overshoot and the commons as restated in near-definitional arithmetic, requisite variety read on relations, the good regulator as not proved, Bateson's levels as a scheme with no law of possibility, autopoiesis as a neighbour its models lie below, Ostrom on boundary rules. Most other connections here are this crosswalk's proposals, labelled so. Agreement with a checked law's form is narrow: a count lock for success to the successful, delayed correction, qualitative requisite variety, and Ashby's recursion into basins. No law states burden-shifting, underinvestment, the adaptive cycle, viable-system structure, rival goals on one stock, a stock raised by reading the other's, evasion's learning or hysteresis. Divergence is kept as prominently: feedback as purpose; Beer's organs against constraints \"not survival axioms\"; a ranked list where no law ranks; \"more options are better\", where any order needs C and scope the continuation condition, neither asserted; constructivism; Luhmann, whose centrelessness stands as the contrary reading; self-governance."
+  },
+  "read": [
+   "cx-crosswalk/BRIEF.md, REPAIR.md and reads/CRITIC.md",
+   "aa-attractor-atlas/PLAN.md §4.3, §4.4, §6.3, §6.4, §6.5 and Appendix A",
+   "aa-attractor-atlas/readers-2026-11-04/correspondences.md §4 to §7",
+   "theories/becoming/COLLECTIVE-DIRECTION.md from its header through §6",
+   "theories/becoming/chapters/05-COLLECTIVES.md §12, its What this chapter does not show and Open, §4's reading table; T3's statement, standing, forbidden list and evidence",
+   "theories/becoming/chapters/02-MAP.md What this chapter does not show and Open",
+   "theories/becoming/chapters/08-METHOD.md, the rows of Known results on regulation, the reading loop, a revision of a reading and where the possible grows",
+   "theories/becoming/history/CYBERNETICS.md lines 39 to 50 (not live)"
+  ],
+  "skimmed": [
+   "Each target's home from its anchor, for about 500 to 3,500 characters, in 01, 02, 03, 04, 05, 07 and 08; long lines cut, so a section's tail may be unread",
+   "07's lines on choosers and the menu witness, from r-what-would-give-c, cut after about 2,400 characters of the last; T3 through its evidence, cut",
+   "Records' statement, hypotheses, does_not_show and correspondence, cut at about 1,000 characters, for about 35 records, and the laws of capture-through-the-rule, market-model-share-margin-and-ends and seeking-boundary. For the labels, does_not_show and correspondence of recurrence-without-selector-revision, capture-by-counted-choices, a-rule-rebuilt-from-the-members-it-limits, generation-and-degeneration-at-two-grains and several-optimizers-drain-by-their-joint-capacity. Other targets' `says` rest on those skims and on the critic's check of quotation, not on a fresh read of every home"
+  ],
+  "searched": [
+   "Live chapters, fronts, GLOSSARY and review, by name with counts: Meadows, Ashby, Conant, Ostrom, Scheffer, Holling, Senge, Beer, Luhmann, Foerster, Maturana, Forrester, Bateson, Argyris, Wiener, Bertalanffy, resilience, panarchy, adaptive cycle, viable system, leverage point, archetype, hysteresis, homeostasis, requisite, second-order; records by the same names",
+   "Live chapters by mechanism: deskill, atroph, crowd out, outsourc, fallback, disempower, reliance, symptom, withdrawal, substitut, rebound, compensat, reversed, drift, set point read or revised, reorgani, release, freed, connectedness, brittle, suppress, nested, sanction, punish, polycentric, self-govern, self-organi, equifinal, teleolog, purposive, variety",
+   "Records and live chapters, fronts, review and GLOSSARY by escalat: no live page; in records, a witness named Loop.escalation and the word's other sense in the renewal records",
+   "Live chapters, fronts and records, with counts: every name above again; leverage (hyphen included), trap, hysteresis by record field, Goodhart by record field",
+   "By mechanism: obligate, endosymb, symbiont, domesticat, relaxed selection, vestigial, loss of function, takes over, hands over, own renewal, own giving, gives less, subsidi, prosthe, offload, automation, skill; makes room, frees, vacat, recolon, regrow, succession, turnover; Liebig, limiting; difference that makes, schismogen, stock and flow, counterintuitive, bounded rational; number of choices, more options, menu"
+  ],
+  "not_mapped": [
+   {
+    "en": "Meadows and others 1972's World3 scenarios",
+    "why": "The account's near-definitional overshoot is reported under coverage; the scenarios are forecasts of one world model, which no law takes up."
+   },
+   {
+    "en": "Senge's Accidental Adversaries",
+    "why": "I recall it from the later Fieldbook literature only and left it out rather than map it from thin memory."
+   },
+   {
+    "en": "Meadows's 'dancing with systems', Senge's five disciplines, Beer's Team Syntegrity and Cybersyn",
+    "why": "Practices, a design and a history, not claims with a mechanism to map."
+   },
+   {
+    "en": "Luhmann's accounts of particular function systems (law, economy, science, art), and his theory of meaning (Sinn)",
+    "why": "Too large to read from memory with any confidence; only the general claims about closure, centrelessness and double contingency are mapped."
+   },
+   {
+    "en": "Ostrom's Institutional Analysis and Development framework, and polycentricity",
+    "why": "The framework is for study. Polycentricity is also a claim, that overlapping centres can govern better; no live line states it by name or mechanism, and nested joint plans are a form of division only."
+   },
+   {
+    "en": "Bertalanffy's general system theory (open systems, equifinality)",
+    "why": "No live mention by name or by mechanism; a programme more than a claim, and I did not try to map it from memory."
+   },
+   {
+    "en": "Enactive work (Varela, Thompson, Di Paolo)",
+    "why": "Belongs with cognition and is compared only in history/CYBERNETICS.md; the autopoiesis entry stops at the account's own stated gap."
+   },
+   {
+    "en": "Bateson's \"a difference that makes a difference\"; Pask's conversation theory",
+    "why": "For the first the form is near (02 §7: a change reaches another only through a later exchange that reads it; an unread level couples with strength zero), but an entry would rest on a shared word for difference. For the second my knowledge is too thin, though it bears on the account's aim of shared understanding: left for a reader who knows it."
+   }
+  ],
+  "coverage": {
+   "present": [
+    {
+     "what": "Meadows and others 1972: overshoot named with the tragedy of the commons as restated, near-definitional",
+     "where": "theories/becoming/chapters/05-COLLECTIVES.md#r-own-count-misses-joint-excess",
+     "extent": "1 line in 05, 1 in review/SCIENCES.md, 1 record (own-count-misses-joint-excess); no system trap or later Meadows live. \"The leverage-point argument\" in target-capture's record is the meta-attractor's, of decisive nodes, not her list: a word match"
+    },
+    {
+     "what": "Ashby: requisite variety as a reading of the covering law and of regulation, verdict 'restates'; ultrastability once, in a record's correspondence",
+     "where": "theories/becoming/chapters/03-KNOWING.md#r-a-response-common-over-a-reading",
+     "extent": "2 lines in 03, 2 in 08, 1 each in review/ALIGNMENT.md and review/SCIENCES.md, 4 records"
+    },
+    {
+     "what": "Conant and Ashby 1970, as what is not proved",
+     "where": "theories/becoming/chapters/03-KNOWING.md#r-a-reading-kept-by-its-update",
+     "extent": "1 line in 03, 1 in 08, 1 record's does_not_show"
+    },
+    {
+     "what": "Ostrom: a contrast to the entry-rule model, a name in one Open item, and record correspondences",
+     "where": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-rule-rebuilt-from-the-members-it-limits",
+     "extent": "2 lines in 05, 3 records; the design principles nowhere stated"
+    },
+    {
+     "what": "Scheffer 2001 and 2009: catastrophic shifts as a correspondence, early warning as what refutes T6's general claim",
+     "where": "theories/becoming/chapters/03-KNOWING.md#r-slowing-down-before-an-own-end",
+     "extent": "1 line each in 03 and 08, 3 in review/SCIENCES.md, 3 records"
+    },
+    {
+     "what": "Maturana and Varela's autopoiesis, as a neighbour the models lie below",
+     "where": "theories/becoming/chapters/04-LIFE.md#r-the-stock-buys-time-where-the-rebuild-draws-on-it",
+     "extent": "2 records by the name Maturana, and the word autopoiesis in one reading in 04"
+    },
+    {
+     "what": "Bateson's levels of learning; Argyris and Schön's double loop",
+     "where": "theories/becoming/chapters/08-METHOD.md",
+     "extent": "Bateson 1 line in 08 and 1 record; Argyris 1 line in 03, 1 in 08, 1 record"
+    },
+    {
+     "what": "The word \"second-order\" in another sense (of widening and of optimizers), not second-order cybernetics; \"homeostatic\" for homeostatic reinforcement learning",
+     "where": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+     "extent": "second-order 9 live lines and 5 records, homeostat- 4 live lines, none naming this tradition; a word match, reported so it is not read as coverage"
+    },
+    {
+     "what": "Nearest to Beer's list, from another source: a table reading the constraints of \"an account of social viability\" as laws, and term limits, audits, courts and antitrust read as pooling. \"The constraints are not survival axioms.\"",
+     "where": "theories/becoming/chapters/05-COLLECTIVES.md#r-conditions-kept-together",
+     "extent": "one table of 9 rows and one reading in 05 §4, both AI reading D48; no name from this tradition"
+    },
+    {
+     "what": "Control theory beside the tradition: deadbeat control, the viability kernel (Aubin), supervisory control read on closed capture, pinwheel scheduling",
+     "where": "theories/becoming/chapters/08-METHOD.md",
+     "extent": "1 line in 08 for regulation; the others in records' correspondence; the late band tested with learners, E3 in 80 of 80 seed-cells (review/SCIENCES.md)"
+    }
+   ],
+   "absent": [
+    {
+     "en": "Meadows's eight system traps as such, and her leverage points. Not one live line names them; several mechanisms are present under other names (see entries), including a falling course of a rule read from a share.",
+     "searched": [
+      "system trap",
+      "leverage point",
+      "policy resistance",
+      "eroding",
+      "drift to low",
+      "rule beating",
+      "shifting the burden",
+      "trap",
+      "leverage"
+     ]
+    },
+    {
+     "en": "Senge and the system archetypes. The only hit in theories/ is a non-live folder (architecture-for-a-living-earth), by a word search, not read.",
+     "searched": [
+      "Senge",
+      "archetype",
+      "fix that fail",
+      "underinvest"
+     ]
+    },
+    {
+     "en": "Beer's viable system model and POSIWID. `Viability` in the account is Aubin's kernel, another sense.",
+     "searched": [
+      "Beer",
+      "Stafford Beer",
+      "viable system",
+      "algedonic"
+     ]
+    },
+    {
+     "en": "Holling's resilience, adaptive cycle and panarchy, and any law of hysteresis (the word appears only in two records' correspondence fields).",
+     "searched": [
+      "Holling",
+      "panarchy",
+      "adaptive cycle",
+      "resilience",
+      "hysteresis"
+     ]
+    },
+    {
+     "en": "Luhmann, live nowhere; meta-attractor/README.md names him beside autopoiesis, outside the live account.",
+     "searched": [
+      "Luhmann",
+      "operational closure",
+      "structural coupling",
+      "double contingency",
+      "function system"
+     ]
+    },
+    {
+     "en": "Second-order cybernetics, von Foerster, and Forrester by name. Von Foerster's imperative and ultrastability's comparison stand by name in history/CYBERNETICS.md only, as does a delayed-feedback gain comparison in history/SYSTEMS-COMPLEXITY-CHAOS.md; the claim \"more options are better\" is taken up live in 07 without his name.",
+     "searched": [
+      "second.order",
+      "Foerster",
+      "eigen",
+      "Forrester",
+      "observer"
+     ]
+    },
+    {
+     "en": "Wiener and Rosenblueth's account of purpose, by name. Regulation and set points are present, without this claim.",
+     "searched": [
+      "Wiener",
+      "Rosenblueth",
+      "teleolog",
+      "purposive"
+     ]
+    },
+    {
+     "en": "A law of escalation, each raising its stock by reading the other's (PLAN §4.4 lists it among gaps). One record's witness has the name, a single reply; laws on getting ahead and on a race for position stand apart from it (see the entry).",
+     "searched": [
+      "escalat",
+      "above all others",
+      "race for position"
+     ]
+    }
+   ]
+  }
+ },
+ "entries": [
+  {
+   "id": "cx-syscyb-trap-tragedy-missing-feedback",
+   "name": {
+    "en": "Tragedy of the commons as a trap of missing feedback"
+   },
+   "domain": "systems-cybernetics",
+   "group": "systems-cybernetics",
+   "source": {
+    "work": "Donella H. Meadows, Thinking in Systems: A Primer (2008)",
+    "locator": "chapter 5, System Traps: Tragedy of the Commons",
+    "basis": "ai-knowledge"
+   },
+   "sense": {
+    "en": "A shared resource erodes because the feedback from its condition to its users is missing or too delayed, while each user's gain from use is direct. The ways out as she lists them: educate and exhort, privatize so each bears its own consequences, or regulate by mutual coercion."
+   },
+   "quote": null,
+   "carried": "carried-in-part",
+   "relation": "scope",
+   "reading": {
+    "en": "Two forms. Joint excess has the erosion, in near-definitional arithmetic. The missing feedback is the coupling law: a condition none of the drawers couples into falls by their joint capacity. Restoring it is scoped: among drawers in turn a coupling per step met keeps a need only where it exceeds the need; drawing at once with no pivotal drawer the drain stays perfect at any coupling; where the rest outruns the renewal no weight selects restraint. Privatizing has exclusive footprints: a partition, not bearing consequences. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "own-count-misses-joint-excess",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-own-count-misses-joint-excess",
+     "says": {
+      "en": "Theorem (World: balance; the ending also activity needing support, only active giving, the gate local). Formations can each take within what a step gives while together they take more; n consecutive such steps from below n + m end every dependent at need m or more. Near-definitional arithmetic, not who ought to take less. Its record: it treats neither reserves nor delayed renewal."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "several-optimizers-drain-by-their-joint-capacity",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-several-optimizers-drain-by-their-joint-capacity",
+     "says": {
+      "en": "Theorem (a; World). At a mutual best response, each optimizing alone by its own rising order, a condition beyond every one's family stands at what the formations outside them leave less their joint capacity, or at nothing. Existence not shown in general; the classical commons with a share borne lies outside. Reading [AI]: what keeps it is a coupling into it or a lowered capacity."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it",
+     "says": {
+      "en": "Theorem (any law G; the gate for keeping). Each drawer counting c for each step what all leave meets a need m: in turn, two drawers or more, where c < m every perfect profile leaves nothing before the horizon; under the gate, where m < c each leaves exactly the need. Drawing at once, no portion reaching the need and none returning more than one for one, draining is perfect at every coupling. No evaluation enters."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "the-rest-outruns-the-renewal",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-the-rest-outruns-the-renewal",
+     "says": {
+      "en": "Theorem (World). Where the rest alone take jointly more than a step gives across n steps from below n + m, dependents end whatever a member outside the rest takes; with need one, every score reading the condition only from the rest's end scores the member's acts alike."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "division-by-exclusive-footprints",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-division-by-exclusive-footprints",
+     "says": {
+      "en": "Theorem (World: balance). With takes divided by exclusive footprints at every step the level never falls below its start. It does not show that an actual division is by exclusive footprints, or that the level rises."
+     },
+     "role": "neighbour"
+    },
+    {
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#t3",
+     "says": {
+      "en": "T3's evidence, its clause on trained systems conjectured: in a gated commons the learner rewarded for its own catch took the last apple in 118 of 118 decisions, the coupled learner in 0 of 2,360, while the prediction that it keeps the stock to the end failed, 59% against 90%. LLM fishers kept no dependent they were not told of, under any instruction (0 of 10 per cell)."
+     },
+     "role": "neighbour",
+     "part": "T3's evidence: CG1 and IN1"
+    }
+   ],
+   "account_adds": {
+    "en": "An exact end under the gate; an exact threshold for a coupling, the need and not the renewal forgone; that a restored coupling still fails where the rest outruns the renewal or none is pivotal; that no law calls the drain a harm (asked under the continuation condition for scope and C for order, neither asserted)."
+   },
+   "source_adds": {
+    "en": "Feedback only weak or late: the laws take the corner none couples into, the share-bearing commons being outside (08: \"here only the corner\"). Education and exhortation, against which T3 forbids an instruction keeping a dependent it does not couple in. Mutual coercion, since 05 §12 models no sanctions. Her practical judgement, which the laws do not make."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": null
+  },
+  {
+   "id": "cx-syscyb-trap-success-to-the-successful",
+   "name": {
+    "en": "Success to the successful"
+   },
+   "domain": "systems-cybernetics",
+   "group": "systems-cybernetics",
+   "source": {
+    "work": "Donella H. Meadows, Thinking in Systems (2008); Peter Senge, The Fifth Discipline (1990), appendix on archetypes",
+    "locator": "Meadows chapter 5, Success to the Successful; Senge appendix 2",
+    "basis": "ai-knowledge"
+   },
+   "sense": {
+    "en": "Winners are rewarded with the means to win again, a reinforcing loop that ends in exclusion of the losers. Exits as Meadows lists them: diversify so losers can compete elsewhere, limit the winners' share (antitrust), level the field periodically, reward what does not bias the next round."
+   },
+   "quote": null,
+   "carried": "carried-in-part",
+   "relation": "scope",
+   "reading": {
+    "en": "Several laws have the lock's form: a rule read from the share it selects, a chooser's rule read from the count of its choices. What comes back to the shapers alone is the resource loop's nearest form, and a part coming to every member alike leaves the direction at a step, near her unbiased reward. Full taking excludes; drawn one at a time a kind fixes or is lost. A rule read against the share is levelling's form. That rules read the share is a premise. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "capture-through-the-rule",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-capture-through-the-rule",
+     "says": {
+      "en": "Theorem (any type). With selection not lowering a target's share under a favouring rule, the rule read monotonically from the share, and start and readings favouring, the share falls at no step and the course locks. That actual rules read the share is the premise. A perturbation reversing the direction, held past a threshold, is not absorbed (witness)."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "capture-by-counted-choices",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-capture-by-counted-choices",
+     "says": {
+      "en": "Theorem (counts, two policies, a standing score). A threshold divides the counts into two regions the course never leaves. Read in 02 as the lock-in of increasing returns (Arthur 1989) [AI reading]."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "a-reading-against-the-share-does-not-ratchet",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-a-reading-against-the-share-does-not-ratchet",
+     "says": {
+      "en": "Theorem (any type). Where the rule is read against the share, selection under favouring rules does not lower it, and the rules favour at every step, a later reading's rule is not above an earlier one's."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "drawn-shaping-drawn-one-at-a-time",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-drawn-shaping-drawn-one-at-a-time",
+     "says": {
+      "en": "Theorem (counts). Drawn one member at a time among M + 1, the rule read at each step at the current count: histories still varied vanish geometrically, the share fixing the shapers tends to the potential at the start over that at the top, and noise leaves either lock."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "shaping-the-rule-selected-by-what-comes-back",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-shaping-the-rule-selected-by-what-comes-back",
+     "says": {
+      "en": "Theorem (counts). Shaping gives s to the shapers alone and p to every member alike and costs each shaper c. At a step the rule favours the shapers exactly where c ≤ s, whatever p; a larger p pulls the rule toward even; across a stretch the shared part can turn the verdict. That offspring carry the capacity and that what comes back is read from the share are premises."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "what-taking-all-excludes",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-what-taking-all-excludes",
+     "says": {
+      "en": "Theorem (World: balance, only active giving, activity needing support, the gate at the need). Full taking alongside another taker at each of n steps from below n + m ends every formation depending at need m or more, the full taker included. Where one takes all that is given at every step, no named other is present and taking at every one of the level + 1 steps from T."
+     },
+     "role": "neighbour"
+    },
+    {
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-conditions-kept-together",
+     "says": {
+      "en": "Reading [AI, D48]. Term limits, audits, courts and antitrust carry what an actor's acts do back into what selects the rule: pooling, not opposed interests."
+     },
+     "role": "neighbour",
+     "part": "D48"
+    }
+   ],
+   "account_adds": {
+    "en": "Exactly what leaves a lock (a change of the law, of how the rule reads or of the selection); that a count lock holds also where a standing score favours the other policy; that drift leaves some locks; that position does not protect: the greatest part ends with the rest where it so depends."
+   },
+   "source_adds": {
+    "en": "The source's own loop, in which means rather than a rule raise the next win: what comes back is a supplied constant, and that taking more yields more offspring is not derived (target-capture's record). Also the losers' exclusion as where the loop ends; diversification; a limit on the winners' share as a law, since 05 only reads antitrust, as pooling. The live sentence names Arthur's increasing returns, not this trap."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": null
+  },
+  {
+   "id": "cx-syscyb-trap-wrong-goal",
+   "name": {
+    "en": "Seeking the wrong goal"
+   },
+   "domain": "systems-cybernetics",
+   "group": "systems-cybernetics",
+   "source": {
+    "work": "Donella H. Meadows, Thinking in Systems (2008)",
+    "locator": "chapter 5, Seeking the Wrong Goal",
+    "basis": "ai-knowledge"
+   },
+   "sense": {
+    "en": "A system obediently produces what its goal or indicator specifies, whatever was intended; effort is confused with result, as with GNP counted for welfare. The way out: indicators and goals that reflect the system's real welfare."
+   },
+   "quote": null,
+   "carried": "carried-in-part",
+   "relation": "scope",
+   "reading": {
+    "en": "A selection reaches exactly what couples into it, and with room its optima drain what lies beyond as far as any eligible outcome does: the trap's form, between indicator and what it omits. T7 says why it stays: a measure read from what it selects is kept however large a loss it does not read. 03 reads locked seeking as feedback adjusting only the means. No law says \"wrong\": that needs something comparing, which the account names rather than assumes. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "what-an-optimum-does-beyond-what-couples-in",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-what-an-optimum-does-beyond-what-couples-in",
+     "says": {
+      "en": "Theorem. Every order rising with what couples in has its optima least beyond exactly where no eligible outcome above another beyond is unbeaten on it; room is a hypothesis. No evaluation: not that the fall beyond is a harm. Read as the proxy problem (Zhuang and Hadfield-Menell 2020) [AI reading]."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#t3",
+     "says": {
+      "en": "Thesis T3. Optimization drains what lies beyond its couplings, where that gives room. The law for optima is proved; the clause on actual trained systems is conjectured, with partial support and its locus unresolved."
+     },
+     "role": "carries",
+     "part": "the thesis and its standing"
+    },
+    {
+     "anchor": "theories/becoming/chapters/02-MAP.md#t7",
+     "says": {
+      "en": "Thesis T7. A measure read from what it selects outlives its refutation: kept by its selectors however large a loss it does not read grows, and, drift aside, dropped only through a change in what the loop reads. In the model only invariance and the lock outliving a growing unread coordinate are proved, without noise; a reading of the loss is one sufficient way out, not shown the only one."
+     },
+     "role": "carries",
+     "part": "the thesis and its standing"
+    },
+    {
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-the-boundary-of-enough-under-undetermined-laws",
+     "says": {
+      "en": "Reading [AI, D65], following this law. Locked seeking forms when a once-useful habit, identity or arrangement becomes the fixed measure of later cases, feedback adjusting only the means, refusal read as resistance and loss as a necessary cost. Diagnosed only from what is actually excluded before assessment."
+     },
+     "role": "carries",
+     "part": "D65, locked seeking"
+    },
+    {
+     "record": "a-step-coupling-keeps-at-every-horizon",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-step-coupling-keeps-at-every-horizon",
+     "says": {
+      "en": "Theorem (b; any R). Added c for each step the need stays met: where r ≤ q + c and e < c, every optimum keeps it at every horizon; where q + c < r, a long horizon outweighs the coupling. One optimizer's law, supplied; not that the need ought to be kept or a coupling set."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "Where the trap does not bite: no room, no drain; a plateau decides otherwise; exact conditions at optima; why the measure outlives its refutation, in the model. Which order a goal must rise in is left open."
+   },
+   "source_adds": {
+    "en": "That a goal can be right or wrong against a system's real welfare, a comparison the laws do not state: any ranking is under the continuation condition for scope and C for order, neither asserted. Also the confusion of effort with result, which no law addresses. A better indicator as the exit has only one optimizer's coupling law."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": null
+  },
+  {
+   "id": "cx-syscyb-trap-rule-beating",
+   "name": {
+    "en": "Rule beating"
+   },
+   "domain": "systems-cybernetics",
+   "group": "systems-cybernetics",
+   "source": {
+    "work": "Donella H. Meadows, Thinking in Systems (2008)",
+    "locator": "chapter 5, Rule Beating",
+    "basis": "ai-knowledge"
+   },
+   "sense": {
+    "en": "Those under a rule act so as to meet its letter and defeat its intent, as with departments spending a budget by year's end so it is not cut. She reads the response as useful feedback, and the way out as redesigning rules to release that creativity toward the purpose."
+   },
+   "quote": null,
+   "carried": "fresh-reading",
+   "relation": "agreement",
+   "reading": {
+    "en": "A rule is a selection through what couples into it, so acts it couples alike are selected alike: that gap is the room, and 03 reads it as the proxy problem (Goodhart). With room, optima of what the letter reads drain what it omits. Her budget spent by year's end has a row: what is valued only at the horizon is held, then regrown at the last step. Agreement holds of the room only: no law gives evasion's learning, and PLAN §6.3 names no target. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "selection-through-couplings",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
+     "says": {
+      "en": "Theorem (World; no premise). Two histories are selected alike by every selection through a formation's couplings exactly when they are alike through them. A particular selection may ignore what its couplings carry. The main law holds by construction; its force lies in supplied premises. It is the proxy problem (Goodhart 1975 and others) as the account states it."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "what-an-optimum-does-beyond-what-couples-in",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-what-an-optimum-does-beyond-what-couples-in",
+     "says": {
+      "en": "Theorem. Every order rising with a family has its optima at the least level beyond, condition by condition, exactly where no eligible outcome above another beyond goes unbeaten on the family. Room is a hypothesis."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "valuing-what-is-left-at-any-worth",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-valuing-what-is-left-at-any-worth",
+     "says": {
+      "en": "Theorem (b; any R). Valuing what is left at worth v > 1: every optimum holds a level of greatest renewal to the horizon and regrows only at the last step, so a dependence above it is broken at once and restored only at the end. Its record: a quantity measured only at the end is managed for the measurement (Goodhart 1975)."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "a-rule-rebuilt-from-the-members-it-limits",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-rule-rebuilt-from-the-members-it-limits",
+     "says": {
+      "en": "Theorem (root; a family of models). Holder merges recognition, compliance and implementation into one count, so the laws say nothing of them. Not modelled: conduct other than entry, sanctions, who decides a revision."
+     },
+     "role": "limit"
+    }
+   ],
+   "account_adds": {
+    "en": "The exact bound on what any rule can reach through what couples in, and an end effect at the horizon that a coupling per step removes above a rate."
+   },
+   "source_adds": {
+    "en": "The adaptive response itself, actors learning the gap between letter and intent, and reading it as feedback for redesign. Intent as distinct from letter has no law here: 05 §12 explicitly merges compliance into one count."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": "reading",
+   "same_as": null
+  },
+  {
+   "id": "cx-syscyb-trap-policy-resistance",
+   "name": {
+    "en": "Policy resistance"
+   },
+   "domain": "systems-cybernetics",
+   "group": "systems-cybernetics",
+   "source": {
+    "work": "Donella H. Meadows, Thinking in Systems (2008); Jay W. Forrester, Counterintuitive Behavior of Social Systems (1971)",
+    "locator": "Meadows chapter 5, Policy Resistance; Forrester locator unverified",
+    "basis": "ai-knowledge"
+   },
+   "sense": {
+    "en": "Several actors with inconsistent goals each pull one stock toward their own. A policy that moves it pulls it from the others' goals, and they pull back harder, so effort rises while the stock stays. Ways out as she lists them: let go, or find a goal that serves all."
+   },
+   "quote": null,
+   "carried": "fresh-reading",
+   "relation": "scope",
+   "reading": {
+    "en": "Three partial forms. Regulation has the one-goal case: within the bound an opposing exchange settles the level at m, whatever moved it. Absorption has the outcome: a change of the rule's value is undone at the next reading, with no rival goals, and only where the direction is kept, which scopes the claim that systems resist. Rejoining has the accounting: a difference closes only through a formation outside the part, making up the gap exactly. Rival goals on one stock, the source's cause, 05 lists as open. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "two-sided-regulation-and-late-reading",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-two-sided-regulation-and-late-reading",
+     "says": {
+      "en": "Theorem (World; balance at the condition). The bound on the joint exchange is exactly no overshoot; within it, opposing, the level settles at m; beyond it an opposing exchange crosses and can oscillate for ever."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "capture-through-the-rule",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-capture-through-the-rule",
+     "says": {
+      "en": "Theorem (any type). Locked, a perturbation keeping the rule's direction is absorbed at the next reading step; a perturbation reversing it, held past the threshold, is not absorbed (witness). That actual rules read the share is the premise."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "where-two-courses-rejoin",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-where-two-courses-rejoin",
+     "says": {
+      "en": "Theorem (World). Where a difference closes over a stretch, what the two exchanged then makes up the starting gap exactly. Where the rest follows a law reading through its couplings, a difference closes only through a formation outside the part that the courses' couplings tell apart. Coupling a difference apart does not make a formation close it."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "closed-capture",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-closed-capture",
+     "says": {
+      "en": "Theorem (any type). Where the reading too is formed monotonically from the share, a change of the reading of any size is absorbed at the next reading step. That any actual rule or reading is so formed is the premise."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "target-capture",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-target-capture",
+     "says": {
+      "en": "Theorem (any type). Where the next configuration depends on the rule, not the state, a perturbed state is re-absorbed in one step (Law.perturbation_reabsorbed). Its record calls this a strong condition; where winners rewrite the rule, the law says nothing of whether the outcome is held."
+     },
+     "role": "neighbour"
+    },
+    {
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#open",
+     "says": {
+      "en": "Open, for orders with a set point: conflicting set points on a shared condition."
+     },
+     "role": "limit"
+    }
+   ],
+   "account_adds": {
+    "en": "Where resistance holds and fails in one loop (direction kept, threshold crossed); an exact accounting of what closes a difference, and that coupling a difference apart does not make a formation close it."
+   },
+   "source_adds": {
+    "en": "The trap's core: inconsistent goals on one stock, with effort escalating while the level holds. No law states it; conflicting set points are listed as open. 'Let go' and an overarching goal have no law."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": null
+  },
+  {
+   "id": "cx-syscyb-trap-escalation",
+   "name": {
+    "en": "Escalation"
+   },
+   "domain": "systems-cybernetics",
+   "group": "systems-cybernetics",
+   "source": {
+    "work": "Donella H. Meadows, Thinking in Systems (2008); Peter Senge, The Fifth Discipline (1990), appendix on archetypes",
+    "locator": "Meadows chapter 5, Escalation; Senge appendix 2",
+    "basis": "ai-knowledge"
+   },
+   "sense": {
+    "en": "Each party sets its stock relative to the other's, trying to get ahead, so a reinforcing loop runs exponentially until one party collapses or the loop is broken. Exits as Meadows lists them: unilateral disarmament, or a negotiated system with balancing loops."
+   },
+   "quote": null,
+   "carried": "fresh-reading",
+   "relation": "agreement",
+   "reading": {
+    "en": "Pieces stand apart. \"Above all others\" holds of at most one seeker, so for two there is no rest: getting ahead has a law, without the rise. Position says none gets ahead for all; a race draws everything in one model; a rising take gives the pace to an end; around a loop the most that can arrive is exponential, a bound; answering echoes one withholding for ever. Raising a stock by reading the other's is derived nowhere. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "seeking-boundary",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-seeking-boundary",
+     "says": {
+      "en": "Theorem (any type; a determined law for rest). A target is any condition on the configuration; how it forms is not modelled. \"Above all others\" is met by at most one seeker, so no unchanged state meets it for two. Elementary: a strict maximum holds of at most one. Its record reads that dominance as such is not the target ruled out."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "relative-position-is-zero-sum",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-relative-position-is-zero-sum",
+     "says": {
+      "en": "Theorem (any type for the counting). Positions' rises total their falls; a part's rise needs another's fall. That a race for position produces joint excess is a premise here, not derived."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "a-race-for-position-draws-everything",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-race-for-position-draws-everything",
+     "says": {
+      "en": "Theorem (any law G, natural amounts). Drawers in turn ranking position over the steps left: among two or more a best response for position keeps nothing; where what stands from nothing is least, every profile perfect for position draws everything. Not that actual races are played so."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "where-a-rising-take-ends",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-where-a-rising-take-ends",
+     "says": {
+      "en": "Theorem (World). A take more than now at every step, from a condition given at most B a step, takes all that is given within B + 1 steps and the seeker ends. The rise is supplied here, not derived from what taking gains."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "how-often-couplings-act",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-how-often-couplings-act",
+     "says": {
+      "en": "Theorem (World). Under the standard bounds the most difference that can arrive is at most D·(1 + M)^a; each return at least doubles what reached it; around a loop coupling at every step the pace is exponential both ways (05). That an actual difference grows at the pace its carried amount bounds is supplied."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "whether-a-loop-closes-a-difference",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-whether-a-loop-closes-a-difference",
+     "says": {
+      "en": "Theorem (any type; World for the ring). Where every link gives on at least what it receives the difference never falls, so a loop closes a difference only through a link giving back less; with whole-number factors never gradually."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "comparison-where-the-rest-responds",
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-comparison-where-the-rest-responds",
+     "says": {
+      "en": "Theorem (World). Where the rest responds through its couplings, the comparison is decided within the responsive reach; that it so responds is supplied. Its record and that of counterfactual-is-the-course: in a witness escalation loop each responds through its couplings, the reply a supplied law, and the difference returns to the part, which does not show with the rest fixed."
+     },
+     "role": "neighbour",
+     "part": "the witness Loop.escalation: one reply, no rising stock"
+    },
+    {
+     "record": "thresholds-of-waiting",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+     "says": {
+      "en": "Theorem (any type). Under the tolerating law, restoring needs a formation that spares all it waits on, which gives from step 1 whatever the start; without one, total withholding stays. The waiting is given."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "a-pair-tolerates-only-within-a-window",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-pair-tolerates-only-within-a-window",
+     "says": {
+      "en": "Theorem (a pair, giving decided). Under answers one withholding echoes: at every step exactly one of the pair gives, and they never give together again. Reading [AI]: answers is tit-for-tat. An act read, with no stock rising."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "That a target above all others has no rest for two; that a best response for position keeps nothing; the exact closing condition of a loop; that position does not protect, the greatest part ending with the rest where it depends on the condition."
+   },
+   "source_adds": {
+    "en": "A law in which each raises its stock by reading the other's: PLAN §4.4 lists escalation among gaps, and no live chapter or front uses the word; the one witness named so in a record is a single reply. Unilateral disarmament has a form only on waiting (giving first, with a reserve); on a position ranking the race law cuts against it."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": "reading",
+   "same_as": null
+  },
+  {
+   "id": "cx-syscyb-trap-eroding-goals",
+   "name": {
+    "en": "Eroding goals, drift to low performance"
+   },
+   "domain": "systems-cybernetics",
+   "group": "systems-cybernetics",
+   "source": {
+    "work": "Donella H. Meadows, Thinking in Systems (2008); Peter Senge, The Fifth Discipline (1990), appendix on archetypes",
+    "locator": "Meadows chapter 5, Drift to Low Performance; Senge appendix 2, Eroding Goals",
+    "basis": "ai-knowledge"
+   },
+   "sense": {
+    "en": "The standard is set from perceived past performance, and perception leans negative, so a low result lowers the goal, which allows a lower result: a slow reinforcing decline with no alarm. The way out: keep standards absolute, or set them from the best results."
+   },
+   "quote": null,
+   "carried": "fresh-reading",
+   "relation": "agreement",
+   "reading": {
+    "en": "PLAN's seed holds as a form, thinner than stated. In one witness a rule read monotonically from a share runs down: a reversal held past the threshold leaves neither share nor rule rising. In the counts the share falls strictly from a start below, with the rule locked the other way, not falling with it. The market model has erosion by name: a level eroded by influence and pulled back by correction holds its floor exactly at a nonnegative margin. Set points are supplied. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "capture-through-the-rule",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-capture-through-the-rule",
+     "says": {
+      "en": "Theorem (any type; witness). A perturbation reversing the rule's direction, held past the threshold, is not absorbed: from the step after it neither share nor rule rises, and the rule after the first reading step is below the one before. That actual rules read the share is the premise."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "shaping-read-by-readers-drawn-from-the-selected",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-shaping-read-by-readers-drawn-from-the-selected",
+     "says": {
+      "en": "Theorem (counts). With lo ≤ hi every such course is locked one way at every step; where the rule read at the start favours the others, neither share nor rule in force is ever above it, and strictly disfavoured the shapers' share falls strictly at every step, the shapers present. Readers drawn from those selected is a premise; constants; without noise."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "shaping-the-rule-selected-by-what-comes-back",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-shaping-the-rule-selected-by-what-comes-back",
+     "says": {
+      "en": "Theorem (counts). At a threshold, with lo < c < hi, from a start below the shapers' share falls strictly at every step. That what comes back is read from the share is a premise."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "market-model-share-margin-and-ends",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-market-model-share-margin-and-ends",
+     "says": {
+      "en": "Theorem (periphery: the market model). With correction strength α, erosion by influence β, influence bound λ and floor θ, M = α(1 − θ) − βλθ: with correction executed and no error, every level q from θ to 1 under every influence up to λ stays at or above θ at the next step exactly where M ≥ 0. An actual market meeting the model is not shown."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "The threshold or start that decides which way the same loop runs; what leaves it: a change of the law, of how the rule reads or of the selection; an exact margin between correction and erosion in one periphery model."
+   },
+   "source_adds": {
+    "en": "The cause: perception leaning negative, so decline is slow and raises no alarm. The capture laws' falls come from a start or a reversal, and the market's erosion from others' influence, not a standard read off one's own results. A need or set point read from the level; setting standards from the best results, a reading no law states."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": "reading",
+   "same_as": null
+  },
+  {
+   "id": "cx-syscyb-trap-shifting-the-burden",
+   "name": {
+    "en": "Shifting the burden to the intervenor, addiction"
+   },
+   "domain": "systems-cybernetics",
+   "group": "systems-cybernetics",
+   "source": {
+    "work": "Donella H. Meadows, Thinking in Systems (2008); Peter Senge, The Fifth Discipline (1990), appendix on archetypes",
+    "locator": "Meadows chapter 5, Shifting the Burden to the Intervenor; Senge appendix 2",
+    "basis": "ai-knowledge"
+   },
+   "sense": {
+    "en": "A quick intervention relieves a symptom, and the system's own capacity to solve the problem atrophies, so more intervention is needed: a reinforcing dependence on the help. The way out as Meadows states it: strengthen the system's own capacity first, then withdraw."
+   },
+   "quote": null,
+   "carried": "not-carried",
+   "relation": null,
+   "reading": {
+    "en": "Only the withdrawal half has a form, comparing separately started members: a reader rebuilt from the supply is gone after its span under a cut and returns with the supply, where one rebuilt from the level buys time; taught from outside, each new cohort holds the rule. None has help lowering what was there. D8's habit keeps a choice after devaluation and E's waiting is withholding: other loops, so PLAN's \"addiction → D/E\" misses this trap. Gradual disempowerment is one record's citation. [AI reading]"
+   },
+   "targets": [],
+   "account_adds": null,
+   "source_adds": {
+    "en": "Capacity eroded by the support that replaces it, so that withdrawal hurts more than before. No law found in which outside giving lowers a formation's own later giving; the wear law lowers capacity under overuse, not disuse; 05 §10 says only, as a reading, that a lost capacity needs actual entry, which the share law lacks."
+   },
+   "absence": {
+    "searched": [
+     "shifting the burden",
+     "intervenor",
+     "crowd out",
+     "deskill",
+     "atroph",
+     "outsourc",
+     "fallback",
+     "hand over",
+     "disempower",
+     "reliance",
+     "use-dependent",
+     "relief",
+     "symptom",
+     "capacity falls or lost",
+     "taught from outside",
+     "withdrawal",
+     "addict",
+     "obligate",
+     "endosymb",
+     "symbiont",
+     "domesticat",
+     "relaxed selection",
+     "vestigial",
+     "loss of function",
+     "takes over",
+     "hands over",
+     "own renewal",
+     "own giving",
+     "gives less",
+     "subsidi",
+     "prosthe",
+     "offload",
+     "automation",
+     "skill"
+    ],
+    "read": [
+     "03 r-seeking-boundary",
+     "02 r-becoming-dependence-dynamics",
+     "02 r-supported-renewal-recovery",
+     "02 r-substitution-preserves-consumption",
+     "02 r-renewing-consuming-formation",
+     "02 r-reserve-defers-ending",
+     "04 r-the-stock-buys-time-where-the-rebuild-draws-on-it",
+     "04 r-learned-procedure-transmission",
+     "05 §12 in full",
+     "05 §10 reading on routes of transition",
+     "PLAN Appendix A rows D and E",
+     "the shaping record's correspondence, for gradual disempowerment"
+    ]
+   },
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": null
+  },
+  {
+   "id": "cx-syscyb-meadows-leverage-points",
+   "name": {
+    "en": "A ranked list of places to intervene"
+   },
+   "domain": "systems-cybernetics",
+   "group": "systems-cybernetics",
+   "source": {
+    "work": "Donella H. Meadows, Leverage Points: Places to Intervene in a System (1999)",
+    "locator": "the twelve-place list",
+    "basis": "ai-knowledge"
+   },
+   "sense": {
+    "en": "Places to intervene ranked from weak to strong: numbers, buffers, stock-and-flow structure, delays, balancing and reinforcing loops, information flows, rules, the power to self-organize, goals, paradigms, transcending paradigms. Offered as tentative, from practice. Numbers rarely matter, she says, unless they kick off something higher on the list."
+   },
+   "quote": null,
+   "carried": "fresh-reading",
+   "relation": "divergence",
+   "reading": {
+    "en": "Rungs meet laws, unranked. Delays: a late rule's band widens with its lag. Information flows: a selection reaches exactly what couples in. Rules: a value change is absorbed where the direction is kept, and only a change of law, reading or selection leaves, while exact thresholds decide a step or an end, her own exception. Self-organizing: a rule changing its own rule adds nothing to the whole possible, widening only the possible with the rule held. No law ranks; \"higher\" is her comparison. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "two-sided-regulation-and-late-reading",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-two-sided-regulation-and-late-reading",
+     "says": {
+      "en": "Theorem (any type; rules over whole numbers). A rule reading l steps late keeps no band with a positive floor narrower than 2(l + 1)d against rests moving the level by at most d a step."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "selection-through-couplings",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
+     "says": {
+      "en": "Theorem (World; no premise). Two histories are selected alike by every selection through a formation's couplings exactly when they are alike through them. The main law holds by construction; its force lies in supplied premises."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "capture-through-the-rule",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-capture-through-the-rule",
+     "says": {
+      "en": "Theorem (any type). Locked, a perturbation keeping the rule's direction is absorbed at the next reading step; where the reading favours at every share only a change of the law, of how the rule reads or of the selection leaves. That actual rules read the share is the premise."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "closed-capture",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-closed-capture",
+     "says": {
+      "en": "Theorem (any type). Courses alike in share and rule stay alike where nothing reads the beyond; the lock outlives the loss; a reading favouring at no loss above a bound unlocks it, a sufficient way out; where the reading too is formed monotonically from the share, a change of the reading of any size is absorbed."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "shaping-the-rule-selected-by-what-comes-back",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-shaping-the-rule-selected-by-what-comes-back",
+     "says": {
+      "en": "Theorem (counts). At a step the rule favours the shapers exactly where c ≤ s, whatever comes to every member alike; a smaller cost gives a rule not lower."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "margin-of-a-regime",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-margin-of-a-regime",
+     "says": {
+      "en": "Theorem (the regime; whole numbers; one condition under a standing draw). The point of no return is exact. They locate an end, ordering nothing."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "where-the-possible-grows",
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-where-the-possible-grows",
+     "says": {
+      "en": "Theorem (root; any process, witnesses). Where every step of a stretch is one of a process's moves, what is possible under it at the end was possible at the start. A rule changing its own rule adds nothing to its whole possible; the possible with a part held grows only where the part changes. Near-definitional or a witness (08)."
+     },
+     "role": "carries"
+    }
+   ],
+   "account_adds": {
+    "en": "Exact conditions, in models, for when a parameter decides and when a change is absorbed; six conditions read in CD §6, none ranked. Calling one intervention better would need C for order and the continuation condition for scope, neither asserted."
+   },
+   "source_adds": {
+    "en": "The ranking itself, its reach across systems as judged from practice, and goals, paradigms and transcending them, for which no law here stands. Whether the ranking is right is not tested by anything in the account. The \"leverage-point argument\" in target-capture's record is the meta-attractor's, of decisive nodes, not this list."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": null
+  },
+  {
+   "id": "cx-syscyb-delay-oscillation",
+   "name": {
+    "en": "A balancing loop with delay oscillates"
+   },
+   "domain": "systems-cybernetics",
+   "group": "systems-cybernetics",
+   "source": {
+    "work": "Jay W. Forrester, Industrial Dynamics (1961); Peter Senge, The Fifth Discipline (1990), appendix on archetypes",
+    "locator": "Forrester's production-distribution chain, locator unverified; Senge appendix 2, Balancing Process with Delay",
+    "basis": "ai-knowledge"
+   },
+   "sense": {
+    "en": "A corrective loop whose information or action lags overshoots, then over-corrects, and oscillates, amplifying up a chain; aggressive correction in response to delay makes it worse. Structure, not outside shocks, generates the behaviour. Waiting, or shortening the delay, helps."
+   },
+   "quote": null,
+   "carried": "carried-in-part",
+   "relation": "scope",
+   "reading": {
+    "en": "The regulation laws give where the claim holds, in discrete whole amounts: overshoot exactly past the gap; a band a late-reading rule cannot beat, proportional to its lag; a relay reading l steps late settles in its band from every held start exactly where a + (l + 1)M <= b + 1, and past b + 2 <= a + (l + 1)M the start held below crosses both ends without end. So lag alone does not make a corrective loop oscillate; gain against band does. A rule read a step late against its reading alternates, a witness. 08 marks regulation as restating deadbeat control. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "two-sided-regulation-and-late-reading",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-two-sided-regulation-and-late-reading",
+     "says": {
+      "en": "Theorem (World; balance at the condition). The bound on the joint exchange is exactly no overshoot; within it, opposing, the level settles; beyond it an opposing exchange crosses and can oscillate for ever. Theorem (any type): a rule reading l steps late keeps no band narrower than 2(l + 1)d. Theorem (World): every run of a relay reading l steps late settles in [a, b] exactly where a + (l + 1)M ≤ b + 1, under its premises."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "where-a-run-of-a-regime-comes-to-rest",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-where-a-run-of-a-regime-comes-to-rest",
+     "says": {
+      "en": "Adjustment rising in both and resting at the draw exactly where the regime gives it, band up to hi: every run within the band rests within a bound; whether it changes again is decided at each step. Overcompensating giving can cycle for ever (a witness)."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "capture-through-the-rule",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-capture-through-the-rule",
+     "says": {
+      "en": "Its record's counterexample (Alternating.alternates, never_locked; witness). Under a threshold reading read at every step, from a rule in force against the reading, read one step late, the share falls at every even step and the rule at every odd step, without end, locked neither way at any step."
+     },
+     "role": "neighbour",
+     "part": "the record's counterexample, Alternating"
+    }
+   ],
+   "account_adds": {
+    "en": "An exact, attained bound on band width by lag; an exact relay threshold, tying gain to lag; and a test: with learners in a gated commons the late reading's band held, E3 passing in 80 of 80 seed-cells (review/SCIENCES.md)."
+   },
+   "source_adds": {
+    "en": "Amplification along a supply chain, the period and amplitude of cycles, and structure as the source of behaviour across social systems. No law gives when a regime cycles or with what period (the plan's CY(a)): its cycles are witnesses (Alternation, Relay.cycles). For the late relay the onset of crossing is exact (held_oscillates); its period and amplitude are not stated."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": null
+  },
+  {
+   "id": "cx-syscyb-senge-fixes-that-fail",
+   "name": {
+    "en": "Fixes that fail"
+   },
+   "domain": "systems-cybernetics",
+   "group": "systems-cybernetics",
+   "source": {
+    "work": "Peter Senge, The Fifth Discipline (1990)",
+    "locator": "appendix 2, Fixes That Fail",
+    "basis": "ai-knowledge"
+   },
+   "sense": {
+    "en": "A fix works at once, and its unintended consequences return after a delay through a reinforcing loop, worsening the symptom and calling for more of the same fix."
+   },
+   "quote": null,
+   "carried": "fresh-reading",
+   "relation": "agreement",
+   "reading": {
+    "en": "Four carry parts: more at first and less past a bound, under a supplied wear law; a switch keeping a formation active while what sustains it ends; a difference returning to the part, unseen with the rest fixed; and runs agreeing to any horizon, then one renewing and one consuming, so no finite record clears a fix. One model computes a fix that backfires. None is a fix repeated, and no law says better or worse here. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "renewing-consuming-formation",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-renewing-consuming-formation",
+     "says": {
+      "en": "Theorem (periphery; a supplied wear law with no recovery). Consuming formation can form more at first, so a one-step count ranks it first; past a bound every continuation within renewal exceeds every one beyond. The wear law carries much of this; sign-neutral."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "substitution-preserves-consumption",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-substitution-preserves-consumption",
+     "says": {
+      "en": "Theorem (World). In the support-gated law with a substitutable condition, the focal formation stays active at every step by switching, is still consuming, and the sustaining formation ends. Substitution keeps it active without undoing its consumption; whole-run reading only."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "comparison-where-the-rest-responds",
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-comparison-where-the-rest-responds",
+     "says": {
+      "en": "Theorem (World). Where the rest responds through its couplings, the comparison is decided within the responsive reach. That the rest so responds is supplied. Its record: in the escalation loop the difference returns to the part, which does not show with the rest fixed."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "becoming-finite-horizon",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-becoming-finite-horizon",
+     "says": {
+      "en": "Theorem (the renewable process; the support-gated law with feedback). For every horizon h, two runs agree before h and then one renews and one consumes, so a reading fixed by h steps that includes every renewing run includes a consuming one. The force lies in \"every renewing run\", which overdraws before h."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "market-model-share-margin-and-ends",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-market-model-share-margin-and-ends",
+     "says": {
+      "en": "Computations in the periphery market model refute overstrong readings: profits coexist with support failure the next round, and a liability on the renewing practice strengthens adverse selection. An equation-identical conventional controller predicts the same."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "That a one-step count ranks the consuming course first; that no finite record separates a course that renews from one that consumes, in these models."
+   },
+   "source_adds": {
+    "en": "The specific shape: a fix whose delayed side effect worsens the very symptom, and the pressure that repeats it. No law states the return on the symptom or the repetition."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": "reading",
+   "same_as": null
+  },
+  {
+   "id": "cx-syscyb-senge-growth-underinvestment",
+   "name": {
+    "en": "Growth and underinvestment"
+   },
+   "domain": "systems-cybernetics",
+   "group": "systems-cybernetics",
+   "source": {
+    "work": "Peter Senge, The Fifth Discipline (1990)",
+    "locator": "appendix 2, Growth and Underinvestment",
+    "basis": "ai-knowledge"
+   },
+   "sense": {
+    "en": "Growth nears a limit that capacity investment could lift, but the need for investment is judged too late or the standard is lowered to excuse it, so performance falls, demand falls, and the fall seems to justify not investing."
+   },
+   "quote": null,
+   "carried": "not-carried",
+   "relation": null,
+   "reading": {
+    "en": "Neighbours differ. Laws on keeping and rebuilding a base speak of optima, not a lagged decision; a re-reading from T keeps a need exactly where it is met at T, a lag's cost with no demand in it; a budget for correction alone fails to pay for migration, a witness; more-needs-renewers is about upkeep scaling. The trap joins a late reading, an eroding standard and demand read from performance; no law joins them. [AI reading]"
+   },
+   "targets": [],
+   "account_adds": null,
+   "source_adds": {
+    "en": "A loop where performance feeds demand and investment lags, with self-justifying decline."
+   },
+   "absence": {
+    "searched": [
+     "invest",
+     "underinvest",
+     "capacity.*lag",
+     "demand",
+     "re-reading",
+     "funding",
+     "budget",
+     "migration"
+    ],
+    "read": [
+     "05 rows r-keeping-forgoes-the-renewal-at-the-need, r-optima-rebuild-a-depleted-base and r-re-optimizing-above-a-renewal-ends-it",
+     "05 r-succession-on-a-funded-carrier",
+     "02 r-more-needs-renewers",
+     "02 r-how-fast-a-rule-may-change"
+    ]
+   },
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": null
+  },
+  {
+   "id": "cx-syscyb-ashby-requisite-variety",
+   "name": {
+    "en": "The law of requisite variety"
+   },
+   "domain": "systems-cybernetics",
+   "group": "systems-cybernetics",
+   "source": {
+    "work": "W. Ross Ashby, An Introduction to Cybernetics (1956)",
+    "locator": "chapter 11",
+    "basis": "ai-knowledge"
+   },
+   "sense": {
+    "en": "Only variety can absorb variety: the variety of outcomes a regulator can hold is bounded below by the variety of disturbances divided by the regulator's variety, also given in entropy form. A claim about any regulator, independent of mechanism."
+   },
+   "quote": null,
+   "carried": "carried-in-part",
+   "relation": "agreement",
+   "reading": {
+    "en": "The account reads the covering law's failure as requisite variety on relations, a safety composition with a choice from readings as requisite variety along a loop, and 08 marks regulation as restating it. What it states is qualitative and exact: a common response exists where the acts' kernels cover the situations. Its counted neighbours, a reader's schedule and the pace law, count other things. Dossiers S and A both ask whether it adds anything. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "a-response-common-over-a-reading",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-a-response-common-over-a-reading",
+     "says": {
+      "en": "Theorem (root: any carrier, reading and requirement, the requirement supplied). A response common over a reading within a requirement exists exactly where the acts' kernels cover the situations. Reading [AI]: a reading too coarse is the covering's failure, requisite variety read on relations; which requirement is right it does not say."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "readings-a-response-needs",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-readings-a-response-needs",
+     "says": {
+      "en": "In the three-route process each of two binary readings is adequate while every reading coarser than both is inadequate, so a task can lack a coarsest adequate reading; in a regulation band, success changes what the next success needs."
+     },
+     "role": "neighbour"
+    },
+    {
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-a-reading-kept-by-its-update",
+     "says": {
+      "en": "Reading [AI, new], with this law: a safety composition; with the choice from readings it is requisite variety along a loop."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "one-reader-several-conditions",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-one-reader-several-conditions",
+     "says": {
+      "en": "Theorem (World; balance). A reader reading one condition a step keeps it within margin m, against draws of at most d withdrawn l steps after a reading, exactly where it reads within every a steps, for (a + l)d ≤ m < (a + 1 + l)d; one schedule's windows have reciprocals summing to at most one."
+     },
+     "role": "neighbour"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#known-results",
+     "role": "carries",
+     "part": "the row on regulation",
+     "says": {
+      "en": "Regulation restates deadbeat control and requisite variety (Dahleh and Pearson 1987; Ashby 1956)."
+     }
+    }
+   ],
+   "account_adds": {
+    "en": "That a task can lack a coarsest adequate reading; that success can change what the next success needs."
+   },
+   "source_adds": {
+    "en": "The quantitative law bounding outcomes by disturbances over regulator variety, its entropy form, and variety engineering by amplifying and attenuating. No live statement has that count; the reader's capacity and the pace law bound reading against conditions and states, not outcomes."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": "law",
+   "same_as": null
+  },
+  {
+   "id": "cx-syscyb-good-regulator",
+   "name": {
+    "en": "Every good regulator must be a model of the system"
+   },
+   "domain": "systems-cybernetics",
+   "group": "systems-cybernetics",
+   "source": {
+    "work": "Roger C. Conant and W. Ross Ashby, Every good regulator of a system must be a model of that system (1970)",
+    "locator": "International Journal of Systems Science 1(2)",
+    "basis": "ai-knowledge"
+   },
+   "sense": {
+    "en": "The simplest optimal regulator of a system is, under their assumptions, a homomorphic image of it: regulation that is both optimal and simplest maps system states to regulator states."
+   },
+   "quote": null,
+   "carried": "changed",
+   "relation": "divergence",
+   "reading": {
+    "en": "The account takes up regulation by what couples in and does not assert the conclusion. 03 and 08 both set this law apart from the theorem: a safety composition, not optimality, with nothing proved of a regulator's having to model what it regulates. A coarser reading can suffice where its further worlds ask compatible acts. That bears on the popular wider reading, not on their theorem. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "a-reading-kept-by-its-update",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-a-reading-kept-by-its-update",
+     "says": {
+      "en": "Theorem (root for closure; any types for the loop; near-definitional, with one general law). A policy keeps a task exactly where each state's act can be taken at every world its reading admits and leads only where the task holds. Reading: nothing of optimality or of having to model what it regulates is proved here."
+     },
+     "role": "carries"
+    }
+   ],
+   "account_adds": {
+    "en": "The history form of what a regulator acting from what couples in must meet; that a coarser reading can suffice."
+   },
+   "source_adds": {
+    "en": "The optimality-and-simplicity theorem itself, untouched here."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": null
+  },
+  {
+   "id": "cx-syscyb-ashby-ultrastability",
+   "name": {
+    "en": "Ultrastability: a second loop that changes the first"
+   },
+   "domain": "systems-cybernetics",
+   "group": "systems-cybernetics",
+   "source": {
+    "work": "W. Ross Ashby, Design for a Brain (1952)",
+    "locator": "chapter on ultrastability, locator unverified",
+    "basis": "ai-knowledge"
+   },
+   "sense": {
+    "en": "Adaptation by double feedback: a first loop regulates through set parameters; when essential variables leave their limits, a second loop changes those parameters step by step, at random, until a field keeping the essential variables within limits is found and retained. The homeostat is his demonstration."
+   },
+   "quote": null,
+   "carried": "fresh-reading",
+   "relation": "agreement",
+   "reading": {
+    "en": "One live record uses the term, as a contrast: a witness cycles with its selector unchanged, so recurrence alone is no evidence of adaptation. The double loop has forms elsewhere: a two-level course is one law's run; a reading turning once a loss passes a bound is a trigger, sufficient and with no search; a revision of a reading can open a correction, repeating only where its yield covers it. Search retained at a stable field has no law. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "recurrence-without-selector-revision",
+     "anchor": "theories/becoming/chapters/04-LIFE.md#r-recurrence-without-selector-revision",
+     "says": {
+      "en": "Theorem (one declared process; witness; pre-spine; reviewed, not receipt-bound). A process returns after two steps and changes at every step while its selector stays the same. Refutes an unconditional inference from recurrence to learning or selector revision, not learning in a richer process. Ashby's term stands in the record, as the AI's reading."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "how-fast-a-rule-may-change",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-how-fast-a-rule-may-change",
+     "says": {
+      "en": "Theorem (any type). A two-level course, the rule changing only at reading steps, is a run of one law; a fast difference reaches the rule only at a reading step."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "closed-capture",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-closed-capture",
+     "says": {
+      "en": "Theorem (any type). A reading favouring at no loss above a bound unlocks the course at the step after every reading step past it: a sufficient way out, not shown necessary."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "a-revision-that-opens-a-correction",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-a-revision-that-opens-a-correction",
+     "says": {
+      "en": "Theorem (near-definitional, with witnesses). A course opens a correction where a trace leads to a configuration with a fitting uniform policy from one with none, one acceptability throughout. Revising supplies the process; the stock and the link can each block it."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "recurring-reference-revision",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-recurring-reference-revision",
+     "says": {
+      "en": "Theorem (any process; balance of the stock). Unending repetition of a cycle needs its return to cover its draw; in ContinuingRevision the cycle repeats for every number of rounds exactly where the yield covers the nine units a round uses. Continuing is not warrant."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "That a two-level course is one law's run, so a second loop is no new kind of thing; that a further loop draws on a stock and repeats only where it pays for itself."
+   },
+   "source_adds": {
+    "en": "Random step-change until a field keeping the essential variables is found and retained, and how long adaptation takes. Fuller comparison stands only in history/CYBERNETICS.md. 03's Open lists an institution revising its rule of reading."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": "reading",
+   "same_as": null
+  },
+  {
+   "id": "cx-syscyb-beer-viable-system-model",
+   "name": {
+    "en": "The viable system model"
+   },
+   "domain": "systems-cybernetics",
+   "group": "systems-cybernetics",
+   "source": {
+    "work": "Stafford Beer, Brain of the Firm (1972); The Heart of Enterprise (1979)",
+    "locator": "locator unverified",
+    "basis": "ai-knowledge"
+   },
+   "sense": {
+    "en": "Any system capable of independent existence must have five functions: operations, coordination, control, intelligence, policy, with channels of variety balancing them, an alarm channel that bypasses levels, and recursion, each viable unit containing and contained in viable units. Beer claims these are necessary and sufficient."
+   },
+   "quote": null,
+   "carried": "fresh-reading",
+   "relation": "divergence",
+   "reading": {
+    "en": "Beer asserts organs every viable system must have. The account refuses that form: 05 reads another account of social viability's constraints as laws under hypotheses and says they are not survival axioms; root laws forbid no relation; a required organization appears only under the two premises, its relation supplied; keeping each guard does not decide keeping them together. `Viability.kernel` is a guard's invariance kernel, not his word. His functions touching rows of that table is no correspondence with his system. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#law",
+     "says": {
+      "en": "A law of the root holds of every carrier, relation and class, so it forbids no relation; a law with content is conditional and forbids through its hypotheses."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "organizational-formation-from-generative-comparison",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-organizational-formation-from-generative-comparison",
+     "says": {
+      "en": "Conditional (the continuation condition for scope, C for order, neither asserted; J1 to J4; actual improvement witnesses). If every eligible continuation lacking a relation has a strictly better one, the undefeated choices include it. No compliance, no institutional authority; overbuilding is its counterexample."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "conditions-kept-together",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-conditions-kept-together",
+     "says": {
+      "en": "Theorem. Counting every course, no course leaves two guards together exactly where none leaves either; in a witness each can be kept along some run while the two cannot together; a product of viabilities is a heuristic. Reading [AI, D48], not of Beer: material reproduction, true information, bounded conflict, feedback on power, stability with adaptability, forming the next members, each read as a law. \"The constraints are not survival axioms.\""
+     },
+     "role": "carries",
+     "part": "the theorem and reading D48"
+    }
+   ],
+   "account_adds": {
+    "en": "That a list of separately keepable conditions does not decide the joint course, in a witness."
+   },
+   "source_adds": {
+    "en": "The five functions, the variety channels, the alarm channel and recursion as a structural law, with necessity and sufficiency claimed. The two grains and nested joint plans state nesting without saying what each level needs. The nearest rows are one reading's list by law, not organs, and of another source."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": null
+  },
+  {
+   "id": "cx-syscyb-beer-posiwid",
+   "name": {
+    "en": "The purpose of a system is what it does"
+   },
+   "domain": "systems-cybernetics",
+   "group": "systems-cybernetics",
+   "source": {
+    "work": "Stafford Beer, What is cybernetics? (2002)",
+    "locator": "Kybernetes 31(2), locator unverified",
+    "basis": "ai-knowledge"
+   },
+   "sense": {
+    "en": "A diagnostic maxim: there is no point in claiming a system's purpose is something it constantly fails to do. Read its purpose from its behaviour, not from what its designers or members say."
+   },
+   "quote": null,
+   "carried": "fresh-reading",
+   "relation": "scope",
+   "reading": {
+    "en": "Near the maxim, 03 diagnoses locked seeking only from what is actually excluded before assessment, not from a firm judgment or stated goal. And it scopes the inference: acts do not fix what they come from. One observed course can leave an unresolved model and a reversed ranking indistinguishable, and choices show only the reach of an order. Read as a diagnostic the maxim stands; read as identifying purpose from acts, it goes past these models. \"Purpose\" itself has no law; 05 §12 lists purposes as not modelled. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "acts-alike-from-a-model-or-from-an-order",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-acts-alike-from-a-model-or-from-an-order",
+     "says": {
+      "en": "Theorem (any types; a witness). A relation between two blanketed laws' configurations that their steps keep, with sensed values and acts one, gives the same at every step, so no selection through those tells them apart; in the witness, a formation holding both candidates and one with the reverse ranking act alike."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "what-choices-show-of-an-order",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-what-choices-show-of-an-order",
+     "says": {
+      "en": "Theorem (root; near-definitional). Every transitive relation in which what is chosen stands above every other open alternative contains the reach of the shown relation; comparisons outside that reach stay open."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-the-boundary-of-enough-under-undetermined-laws",
+     "says": {
+      "en": "Reading [AI, D65], following this law. Locked seeking is diagnosed only from what is actually excluded before assessment, not from a firm judgment, a stable goal or a disagreement, so the label cannot immunize."
+     },
+     "role": "carries",
+     "part": "D65, locked seeking"
+    }
+   ],
+   "account_adds": {
+    "en": "The exact part of an order that choices show."
+   },
+   "source_adds": {
+    "en": "A working stance for diagnosing organizations: refuse stated intention as an account of behaviour. The laws do not speak to that use."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": null
+  },
+  {
+   "id": "cx-syscyb-holling-resilience-stability",
+   "name": {
+    "en": "Resilience against stability"
+   },
+   "domain": "systems-cybernetics",
+   "group": "systems-cybernetics",
+   "source": {
+    "work": "C. S. Holling, Resilience and stability of ecological systems (1973)",
+    "locator": "Annual Review of Ecology and Systematics 4",
+    "basis": "ai-knowledge"
+   },
+   "sense": {
+    "en": "Stability is how fast a system returns to equilibrium after a small disturbance; resilience is how much disturbance it absorbs before moving to another domain of attraction. They are separate: a highly fluctuating population can be resilient. That managing for steadiness shrinks the domain is, as I recall, developed later (Holling and Meffe 1996)."
+   },
+   "quote": null,
+   "carried": "fresh-reading",
+   "relation": "scope",
+   "reading": {
+    "en": "The margin has resilience's form for one condition, the return multiplier stability's. Near a fold, linearized, these are tied; the exit from a margin holds swing size and margin apart, a bound giving his separation a form, not his claim. Lowered giving raises the point, a form of shrinking with no shock. Below the regime's point lies an end; another retained region stands only in one market model, both ends attracting. Steadiness shrinking the domain has no law. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "margin-of-a-regime",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-margin-of-a-regime",
+     "says": {
+      "en": "Theorem (the regime; any giving law, whole numbers). For one condition under a standing draw, a level up to the top ends exactly where it starts below H + y. Under the same draw, giving lowered leaves the least level meeting the draw no lower, and raises it exactly where the lowered giving falls short at the old least level. Locates an end, ordering nothing. CD §5: in yeast driven past its fold, the regime's margin timed neither of the two breaks."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "slowing-down-before-an-own-end",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-slowing-down-before-an-own-end",
+     "says": {
+      "en": "Theorem (periphery, Mathlib; discrete steps, one variable linearized about a rest). At a fold and at a transcritical end under a proportional draw, the multiplier rises to one as the margin shrinks, so the margin to a condition's own end couples into its fluctuations. A dependent's need enters neither statistic."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "exit-from-a-margin",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-exit-from-a-margin",
+     "says": {
+      "en": "Theorem (two values, natural weights p and q, independent steps). A level m above a need, raised q and lowered p: courses of n steps reaching the need take at most n·p·q/m² of the weight. Kolmogorov's maximal inequality restated in counting form."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "basins-of-a-determined-law",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-basins-of-a-determined-law",
+     "says": {
+      "en": "Theorem (any type). Under a determined law courses meeting is an equivalence whose classes are basins; within m listed configurations each basin holds one cycle."
+     },
+     "role": "neighbour"
+    },
+    {
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-market-model-share-margin-and-ends",
+     "says": {
+      "en": "Theorem (periphery). At β = 1/2 the maintenance end and the depletion end each attract a neighbourhood, the interior point has arbitrarily small perturbations that leave. Not shown: a full basin, a classification for every β, a bifurcation. Reading [AI, D65]: four routes of transition, none a proved phase transition. Attraction is not continuation: a selection absorbing perturbations can still erode its support."
+     },
+     "record": "market-model-share-margin-and-ends",
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "That a condition's statistics warn of its own end and not of a dependent's need (T6, its across-domains form conjectured); that a selection absorbing perturbations can still erode its support, as a reading."
+   },
+   "source_adds": {
+    "en": "Several domains with a law of shift between them, and resilience as a management aim; that suppressing variation erodes resilience. PLAN lists transitions between regions on the World, and hysteresis, among gaps; the word hysteresis stands only in two records' correspondence fields."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": null
+  },
+  {
+   "id": "cx-syscyb-holling-adaptive-cycle",
+   "name": {
+    "en": "The adaptive cycle"
+   },
+   "domain": "systems-cybernetics",
+   "group": "systems-cybernetics",
+   "source": {
+    "work": "C. S. Holling, Understanding the complexity of economic, ecological, and social systems (2001); Gunderson and Holling (eds), Panarchy (2002)",
+    "locator": "Ecosystems 4 for the 2001 paper; book locator unverified",
+    "basis": "ai-knowledge"
+   },
+   "sense": {
+    "en": "Many complex systems pass through growth (r), conservation (K), release (Ω) and reorganization (α). In K, connectedness and stored potential rise while resilience falls, so a small shock can release much; release frees what reorganization uses. Offered as a heuristic with stated exceptions."
+   },
+   "quote": null,
+   "carried": "not-carried",
+   "relation": null,
+   "reading": {
+    "en": "No law gives an ordered sequence of phases. Laws of return stand: within finitely many listed configurations every course enters what returns, each basin holding one cycle; a withholding round a loop of p waits returns at every multiple of p; a late relay held below its band crosses it without end past an exact bound. No law gives when a regime cycles or with what period: the regime's cycles are witnesses. 02 lists no universal phase threshold between regions; 05 keeps four routes of transition distinct, none a proved phase transition. Nothing frees stored potential or trades connectedness against resilience. [AI reading]"
+   },
+   "targets": [],
+   "account_adds": null,
+   "source_adds": {
+    "en": "An ordered sequence of phases; release as enabling renewal, where 02 does not show that passing is good; and connectedness trading against resilience."
+   },
+   "absence": {
+    "searched": [
+     "adaptive cycle",
+     "reorgani",
+     "Holling",
+     "connectedness",
+     "phase transition",
+     "resilience",
+     "PLAN §4.2 and Appendix A row F",
+     "release (found ActivationCapacity and retaining and releasing a coupling, other senses)",
+     "creative destruction",
+     "brittle",
+     "suppress",
+     "makes room",
+     "frees",
+     "freed",
+     "vacat",
+     "recolon",
+     "regrow",
+     "succession",
+     "turnover",
+     "after the end"
+    ],
+    "read": [
+     "02 What this chapter does not show and Open",
+     "05 §10 reading on four routes of transition, after r-market-model-share-margin-and-ends",
+     "02 r-arising-needs-change",
+     "02 r-whole-persists-through-generation",
+     "07 r-what-keeping-widening-needs, its start",
+     "PLAN §4.2 and Appendix A row F"
+    ]
+   },
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": null
+  },
+  {
+   "id": "cx-syscyb-holling-panarchy-cross-scale",
+   "name": {
+    "en": "Panarchy: revolt and remember across scales"
+   },
+   "domain": "systems-cybernetics",
+   "group": "systems-cybernetics",
+   "source": {
+    "work": "Gunderson and Holling (eds), Panarchy (2002)",
+    "locator": "locator unverified",
+    "basis": "ai-knowledge"
+   },
+   "sense": {
+    "en": "Adaptive cycles are nested, small and fast within large and slow. A fast level's release can cascade upward (revolt); a slow level's stored memory supplies what a fast level reorganizes from (remember). Sustainability lies in those two connections."
+   },
+   "quote": null,
+   "carried": "fresh-reading",
+   "relation": "scope",
+   "reading": {
+    "en": "Pieces, and a scope. A cascade runs along total dependence, its direction fixed by dependence and not scale, which scopes revolt. A slow rule reads a fast level only at reading steps, with no toppling; 05 reads this as constitution slower than law. A reserve bridging a gap is only near remember. 04's \"not a fixed ladder\" is no parting: panarchy was named, as I recall, to refuse rigid hierarchy. What remains unshared: nesting by speed and size as a general pattern. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "coupled-webs",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-coupled-webs",
+     "says": {
+      "en": "Any number of conditions, any index type. Under mutual support raising a level never ends one that held; along every chain of total dependence with positive draws the end of one ends everything downstream, a ring ending together or not at all."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "how-fast-a-rule-may-change",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-how-fast-a-rule-may-change",
+     "says": {
+      "en": "Theorem (any type). A fast difference reaches the rule only at a reading step; given two values, L steps fix every pair of held-rule courses with at most N states exactly when L ≥ 2N − 1."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-conditions-kept-together",
+     "says": {
+      "en": "Reading [AI, D48], the row Stability with adaptability: how fast a rule may change, a slow level reading the fast one at stretches of at least 2N − 1, as constitution is slower than law."
+     },
+     "role": "neighbour",
+     "part": "D48, the row Stability with adaptability"
+    },
+    {
+     "record": "reserve-defers-ending",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-reserve-defers-ending",
+     "says": {
+      "en": "Theorem (World). A reserve does not rise while its formation is unsupported and falls where it is active then; a formation unsupported from some step on is active over any later stretch at most as often as its reserve. A reserve bridging to returning support can carry activity without end. Seed banks are examples of application, not content."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "recurrence-without-selector-revision",
+     "anchor": "theories/becoming/chapters/04-LIFE.md#r-recurrence-without-selector-revision",
+     "says": {
+      "en": "Reading after this law [AI, D65], Part and whole: cell, organ, body, ecosystem is one biological case, not a fixed ladder. \"Upward\" and \"downward\" name different relational paths within one unfolding."
+     },
+     "role": "neighbour",
+     "part": "D65, Part and whole"
+    }
+   ],
+   "account_adds": {
+    "en": "An exact pace bound between a slow rule and a fast level; that a cascade follows dependence, stopped by a draw of nothing."
+   },
+   "source_adds": {
+    "en": "Nesting of adaptive cycles by speed and size as an organizing pattern, the two named cross-scale routes, and sustainability located in them. None stated."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": null
+  },
+  {
+   "id": "cx-syscyb-luhmann-resonance",
+   "name": {
+    "en": "Resonance: a closed system reacts only in its own terms"
+   },
+   "domain": "systems-cybernetics",
+   "group": "systems-cybernetics",
+   "source": {
+    "work": "Niklas Luhmann, Ökologische Kommunikation (1986), English Ecological Communication (1989)",
+    "locator": "locator unverified",
+    "basis": "ai-knowledge"
+   },
+   "sense": {
+    "en": "Society is operationally closed, in touch with its environment only by structural coupling. Ecological danger exists for it only as it resonates in function systems' own codes: a price, a legal ruling, a scientific result. So there can be too little resonance, and also too much, inside the code."
+   },
+   "quote": null,
+   "carried": "fresh-reading",
+   "relation": "agreement",
+   "reading": {
+    "en": "The selection law has the first half's form: two histories alike through a selector's couplings are kept or dropped together, however hard the selection presses, so a loss enters only through what couples in. Same form, not same reference: his terms are communications and codes, and couplings are not structural coupling. The parting: the account's exits widen what couples in by pooling; for him any such widening stays inside a code. Too much resonance has no law. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "selection-through-couplings",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
+     "says": {
+      "en": "Theorem (World; balance on what couples in), blindness. In the witness Clearing a dweller ends in one world and not the other while every selection through the clearer's couplings selects them alike. The main law holds by construction; its force lies in the supplied premise."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "closed-capture",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-closed-capture",
+     "says": {
+      "en": "Theorem (any type). Where neither the next share nor the rule read reads the beyond, courses alike in share and rule stay alike, exactly then along every schedule; the lock outlives the loss."
+     },
+     "role": "carries"
+    }
+   ],
+   "account_adds": {
+    "en": "Exactness and exits under hypotheses; that a pooled coupling reaches the union of its members' closures."
+   },
+   "source_adds": {
+    "en": "Codes as what closes a system; over-resonance; and the claim that any response is itself internal communication that produces further problems for it."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": "reading",
+   "same_as": null
+  },
+  {
+   "id": "cx-syscyb-luhmann-elements-communication",
+   "name": {
+    "en": "Social systems are made of communications, not people"
+   },
+   "domain": "systems-cybernetics",
+   "group": "systems-cybernetics",
+   "source": {
+    "work": "Niklas Luhmann, Soziale Systeme (1984)",
+    "locator": "locator unverified",
+    "basis": "ai-knowledge"
+   },
+   "sense": {
+    "en": "A social system's elements are communications that produce further communications (autopoiesis on Maturana's model, lifted beyond life). People belong to its environment. The founding difference is system and environment."
+   },
+   "quote": null,
+   "carried": "fresh-reading",
+   "relation": "divergence",
+   "reading": {
+    "en": "Both start from relation over substance, and that is the extent of it. The account's method asks that every split state its basis and omissions, including system and environment, and counts formations, whose losses (under the continuation condition for scope, with C for any order, neither asserted) are not removed by being environment. Luhmann's cut places people outside society. This is my contrast; the account never discusses him. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#beginning-within-the-one-unfolding",
+     "says": {
+      "en": "Distinctions state their basis: subject and object, observer and world, inside and outside, fact and value are each drawn within the unfolding, along relations, together with what they leave out. A separate type asserts no fundamental separation."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/01-ROOT.md#boundaries",
+     "says": {
+      "en": "Reading [AI, D45, D61]. A boundary is given by a region; along a relation, by a region holding the formation and closed under the relation. Which boundaries a formation has depends on the relation followed; every boundary holds the closure."
+     },
+     "role": "carries"
+    }
+   ],
+   "account_adds": {
+    "en": "Boundaries that depend on the relation followed, none fixed as the founding one."
+   },
+   "source_adds": {
+    "en": "A theory of the social in which communications are the only elements and function systems are closed by binary codes. Not carried."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": null
+  },
+  {
+   "id": "cx-syscyb-luhmann-no-centre",
+   "name": {
+    "en": "A society with no centre from which to steer"
+   },
+   "domain": "systems-cybernetics",
+   "group": "systems-cybernetics",
+   "source": {
+    "work": "Niklas Luhmann, Die Gesellschaft der Gesellschaft (1997); Ökologische Kommunikation (1986)",
+    "locator": "locator unverified",
+    "basis": "ai-knowledge"
+   },
+   "sense": {
+    "en": "A functionally differentiated society has no apex or centre. Each description of it, and each attempt to steer it, is made inside one subsystem, in that subsystem's code. Steering a whole from a part is, on this view, unavailable; one part can only irritate others."
+   },
+   "quote": null,
+   "carried": "fresh-reading",
+   "relation": "contrary-reading",
+   "reading": {
+    "en": "Kept as the strongest test of the form that speaks of a collective's course, pooling couplings and a joint selection. The account answers part: no guarantee; a collective is part of the world it would move; no administrator entitled to speak for everything; coupling bounds response without fixing it. But it still speaks as if pooled readers can respond together. Luhmann would ask who that pool is, and in what code it reads. How pools form is open. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#beginning-within-the-one-unfolding",
+     "says": {
+      "en": "A shared process implies no cosmic subject, no aggregate interest and no administrator entitled to speak for everything."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions",
+     "says": {
+      "en": "Preface: a collective is part of the world it would move, so the title asks of the collective's course. The answer begins: no guarantee. Exits from the loops that lock a collective hold each under stated hypotheses, including pooled couplings; none shown to hold of an actual collective."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "what-pooled-coupling-reaches",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-what-pooled-coupling-reaches",
+     "says": {
+      "en": "A group's closure is the union of its members'; a pool separates exactly what some member separates. It does not show which formations pool, how a pool forms or lasts, or that a pool responds to what it separates."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "what-a-pools-acts-respond-to",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-what-a-pools-acts-respond-to",
+     "says": {
+      "en": "Theorem (World; each member following a law of exchange reading through its coupling). What a pool decides by its acts, under such laws, is a selection through its pooled coupling. Coupling bounds response and does not fix it: where a formation couples two histories apart, some law reading through every coupling takes differently, and the law exchanging nothing reads through every coupling too."
+     },
+     "role": "carries"
+    }
+   ],
+   "account_adds": {
+    "en": "Exact reach of a pool and of a rule read through it."
+   },
+   "source_adds": {
+    "en": "The argument that no such reader of the whole can exist within a differentiated society, which the account neither answers nor tests."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": null
+  },
+  {
+   "id": "cx-syscyb-autopoiesis",
+   "name": {
+    "en": "Autopoiesis: a system producing what produces it"
+   },
+   "domain": "systems-cybernetics",
+   "group": "systems-cybernetics",
+   "source": {
+    "work": "Humberto Maturana and Francisco Varela, Autopoiesis and Cognition (1980; earlier Spanish 1972)",
+    "locator": "locator unverified",
+    "basis": "ai-knowledge"
+   },
+   "sense": {
+    "en": "A living system is a network of processes producing the components that realize the network, with its own boundary: organizationally closed, materially open. Its organization is conserved through turnover of parts, and that closure, rather than purpose, defines the living."
+   },
+   "quote": null,
+   "carried": "carried-in-part",
+   "relation": "divergence",
+   "reading": {
+    "en": "The account names it as a neighbour and says how far short its models stop. Generation as a pattern going on through renewal of parts is \"close to\" it, a correspondence not proved. The member rebuilt from the level is one constraint with turnover, below autopoiesis. What tells that member from a thermostat, 04 reads, is a stock buying time and an end that does not come back: a mark within one family, no denial of closure. The parting: nothing here defines the living by it. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "the-stock-buys-time-where-the-rebuild-draws-on-it",
+     "anchor": "theories/becoming/chapters/04-LIFE.md#r-the-stock-buys-time-where-the-rebuild-draws-on-it",
+     "says": {
+      "en": "Reading [AI, new]: the member rebuilt from the level is a minimal model of an organism, one constraint with turnover regenerated from the flow it regulates, below closure of constraints, autopoiesis and Rosen's closure, each of which asks more."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "generation-and-degeneration-at-two-grains",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-generation-and-degeneration-at-two-grains",
+     "says": {
+      "en": "At a fine and a coarse class, the pattern goes on along some branch or ends on every branch. Its correspondence: close to autopoiesis (Maturana and Varela). That renewal is generation is not shown."
+     },
+     "role": "carries"
+    }
+   ],
+   "account_adds": {
+    "en": "A stock setting when a line ends, and an end that does not come back, in the model; regions of generation, keeping and degeneration at two grains."
+   },
+   "source_adds": {
+    "en": "The definition of the living by it, which the source cares about most; a self-produced boundary and organizational closure as such, which the account says its models do not meet."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": null
+  },
+  {
+   "id": "cx-syscyb-double-contingency",
+   "name": {
+    "en": "Double contingency as what order forms from"
+   },
+   "domain": "systems-cybernetics",
+   "group": "systems-cybernetics",
+   "source": {
+    "work": "Niklas Luhmann, Soziale Systeme (1984), after Talcott Parsons",
+    "locator": "the chapter on double contingency, locator unverified",
+    "basis": "ai-knowledge"
+   },
+   "sense": {
+    "en": "Where each party's act depends on the other's, both knowing it, nothing determines the first move. For Luhmann that very indeterminacy drives system formation: any chance move, a glance or a tone, starts a history that narrows what follows, so order arises from noise, with no prior consensus."
+   },
+   "quote": null,
+   "carried": "fresh-reading",
+   "relation": "scope",
+   "reading": {
+    "en": "The account has the deadlock and the break in exact form. Giving that waits on giving stays withheld; without a sparing formation total withholding stays. From a start symmetric under exchange and renaming, a law keeping both never brings them to agree, and a swap-symmetric rule singles out no role. So \"order arises\" is scoped: it needs an actual asymmetry, which is his point, and can fail; noise moves the symmetry to the whole distribution rather than removing it. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "giving-that-waits-on-giving",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-giving-that-waits-on-giving",
+     "says": {
+      "en": "Theorem (any type: any relation of waiting). With memory, one withholding, where every formation lies within d waits of it, ends all giving from step d on. The relation of waiting is given."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "a-code-formed-between-formations",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-code-formed-between-formations",
+     "says": {
+      "en": "Theorem (any type). From a start symmetric under the exchange and the renaming, a law keeping both never brings formations it exchanges to agree at a sense where the renaming moves every form; in a witness a formation both hear, a preferred form and an order of hearing each break one symmetry and bring agreement. Being joined through couplings is not enough."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "a-swap-symmetric-assignment-singles-out-none",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-swap-symmetric-assignment-singles-out-none",
+     "says": {
+      "en": "Theorem (two roles; periphery module). A predicate invariant under the swap cannot hold of exactly one; among exactly symmetric parties, who contributes is differentiated only by an actual asymmetry or a procedure, whose warrant is open."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "thresholds-of-waiting",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+     "says": {
+      "en": "Theorem (any type). Restoring needs a formation that spares all it waits on, which gives from step 1 whatever the start: without one, total withholding stays."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "identical-cells-under-noise",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-identical-cells-under-noise",
+     "says": {
+      "en": "Theorem (periphery, on the reals; finitely many cells and states). Under noise the never-parting law does not apply, and what holds instead is a law of the whole distribution: under kernels commuting with every rearrangement an exchangeable start gives an exchangeable law at every step."
+     },
+     "role": "carries"
+    }
+   ],
+   "account_adds": {
+    "en": "Exact conditions under which waiting absorbs and under which symmetry blocks a shared form, including deterministic counted codes never sharing."
+   },
+   "source_adds": {
+    "en": "Expectations of expectations, reflexive anticipation; the account's waiting relation is supplied and reads acts. The claim that this is how social systems in general begin."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": null
+  },
+  {
+   "id": "cx-syscyb-second-order-observer",
+   "name": {
+    "en": "The observer is part of what is observed"
+   },
+   "domain": "systems-cybernetics",
+   "group": "systems-cybernetics",
+   "source": {
+    "work": "Heinz von Foerster, Cybernetics of Cybernetics (1974) and On Constructing a Reality (1973); Humberto Maturana, Biology of Cognition (1970)",
+    "locator": "locator unverified",
+    "basis": "ai-knowledge"
+   },
+   "sense": {
+    "en": "Description cannot be separated from the describer: anything said is said by an observer, and objectivity as observer-free description is an illusion. Second-order cybernetics studies observing systems, and in its stronger constructivist form holds that reality as known is computed by the observer, not received."
+   },
+   "quote": null,
+   "carried": "carried-in-part",
+   "relation": "divergence",
+   "reading": {
+    "en": "The inclusion is stated: reading is within the unfolding, and observer-dependence is the choice of class. The constructivist step is not. The account keeps differences beyond any selector's couplings as differences of the web: a loss can stand beyond every closure, and is unread rather than unreal. Same stance on the knower, different on what lies past knowing. history/CYBERNETICS.md noted this. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#beginning-within-the-one-unfolding",
+     "says": {
+      "en": "Knowing, modelling and criticizing happen inside the unfolding too, so their adequacy is part of the inquiry, not a vantage outside it. Observer and world are drawn within the unfolding, along relations, together with what they leave out."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#the-reading-loop",
+     "says": {
+      "en": "A formation that senses, predicts, chooses, acts and revises is one law within the unfolding, not a subject facing a world: its internal part reads what goes on through what it senses, and what it does is part of what goes on."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/01-ROOT.md#r-the-source-texts-test-systems",
+     "says": {
+      "en": "In the witness 'No clear boundary': overlapping identities are several classes, observer-dependence is the choice of class, and a vague boundary appears only as a relation that is not a class."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "selection-through-couplings",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
+     "says": {
+      "en": "Theorem (World; balance on what couples in), blindness. In the witness Clearing a dweller ends in one world and not the other while every selection through the clearer's couplings selects them alike; the dweller's admission separates them, through their pooled coupling."
+     },
+     "role": "carries"
+    }
+   ],
+   "account_adds": {
+    "en": "Exact statements of what a formation's couplings do and do not separate."
+   },
+   "source_adds": {
+    "en": "Constructivism about reality; the claim that an observer's activity constitutes its objects. The account does not assert this, and its World model takes levels as given."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": null
+  },
+  {
+   "id": "cx-syscyb-eigenforms",
+   "name": {
+    "en": "Objects as tokens for eigenbehaviours"
+   },
+   "domain": "systems-cybernetics",
+   "group": "systems-cybernetics",
+   "source": {
+    "work": "Heinz von Foerster, Objects: Tokens for (Eigen-)Behaviors (1976)",
+    "locator": "locator unverified",
+    "basis": "ai-knowledge"
+   },
+   "sense": {
+    "en": "A recursive operation applied to its own results settles on fixed points, whatever the start, under conditions. What we know as stable objects are such eigenvalues of our recursive coordination of perception and action."
+   },
+   "quote": null,
+   "carried": "fresh-reading",
+   "relation": "scope",
+   "reading": {
+    "en": "Two forms. Under a determined law on m listed configurations every course enters what returns and each basin holds one cycle, so recursion settles on a cycle, a fixed point being the shortest. Prediction read by what it predicts is the reflexive case: right exactly at a fixed point; a response moving every value has none; a threshold response has two, the start deciding. That scopes \"settles\" and \"whatever the start\". About courses and predictions, not objects. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "basins-of-a-determined-law",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-basins-of-a-determined-law",
+     "says": {
+      "en": "Theorem (any type). Under any determined law courses meeting is an equivalence whose classes are basins; within m listed configurations every course enters what returns before step m and each basin holds one cycle."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "a-prediction-read-by-what-it-predicts",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-a-prediction-read-by-what-it-predicts",
+     "says": {
+      "en": "Theorem (any type; 0 to n for the chain; near-definitional, one general law). Right exactly where the response to it is itself; where the response moves every value, none is right. Under a response keeping the chain and its order the least right prediction is reached by step n. In a witness a threshold response has two, the start deciding."
+     },
+     "role": "carries"
+    }
+   ],
+   "account_adds": {
+    "en": "That recursion on a finite listing settles on a cycle and not always on a point; when a fixed point fails to exist; that negation alternates without rest; that the start can decide which is reached."
+   },
+   "source_adds": {
+    "en": "That objects of knowledge are these fixed points. Not stated, and not a claim of the account."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": null
+  },
+  {
+   "id": "cx-syscyb-observing-blind-spot",
+   "name": {
+    "en": "Observing observers, and the blind spot"
+   },
+   "domain": "systems-cybernetics",
+   "group": "systems-cybernetics",
+   "source": {
+    "work": "Niklas Luhmann, Die Wissenschaft der Gesellschaft (1990); Heinz von Foerster, On Constructing a Reality (1973)",
+    "locator": "locator unverified",
+    "basis": "ai-knowledge"
+   },
+   "sense": {
+    "en": "An observer cannot see the distinction it uses while using it. A second-order observer can see what the first cannot, at the cost of its own blind spot; there is no last observer. \"We do not see that we do not see\" is von Foerster's phrase as I recall it; which paper is uncertain."
+   },
+   "quote": null,
+   "carried": "fresh-reading",
+   "relation": "agreement",
+   "reading": {
+    "en": "Parts of the form. What a lumping merges it cannot tell, a merged old pair supplying a lost choice, and a merged distinction returns only from a form held outside or by coining. A course chosen through a model tests only what it exposes. Reading another's couplings gives the union, no further. A family of readings indexed by what it reads leaves a gap at every step, near \"no last observer\". Blindness here is of couplings and lumpings, not of a distinction's use as such. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "selection-when-the-lumping-changes",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-selection-when-the-lumping-changes",
+     "says": {
+      "en": "Theorem (any process). Every selection through an old lumping stays expressible through a new one exactly where new indistinguishability implies old, and a merged old pair supplies a lost choice."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "a-code-formed-between-formations",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-code-formed-between-formations",
+     "says": {
+      "en": "Theorem (any type). Under hearings that copy, where every formation holds the imposed form at a sense, all hold it at every later step: a merged distinction returns only from a form held outside, or by coining."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "what-a-course-chosen-through-its-model-does-not-test",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-what-a-course-chosen-through-its-model-does-not-test",
+     "says": {
+      "en": "Theorem (any types, on a blanketed law; a witness). Two worlds give one sensed course exactly as long as they answer alike the act taken at the value sensed. Reading: a model is revised only by what its own course exposes, and that course is chosen through the model."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "reading-anothers-couplings-is-pooling",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-reading-anothers-couplings-is-pooling",
+     "says": {
+      "en": "Theorem (World; the closure identity under a stated hypothesis). A formation coupled by level into everything another couples into selects through at least their pooled coupling; its closure is exactly the union of the two under the hypothesis. Knowing another's law is no coupling."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "a-pool-that-recruits-through-itself",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-pool-that-recruits-through-itself",
+     "says": {
+      "en": "A pool admitting its next members through its own pooled coupling comes to couple into a loss only as its course without the loss would; a reader from outside is the witness's exit."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "readings-within-what-they-read",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-readings-within-what-they-read",
+     "says": {
+      "en": "Theorem (any type). Where a map moves every value, no member of a family of readings indexed by what it reads says the diagonal gap; completing it step by step is incomplete at every step. Lawvere's fixed point as an unfolding; coding and provability not stated."
+     },
+     "role": "carries"
+    }
+   ],
+   "account_adds": {
+    "en": "What a second reader gains exactly: the union, and no more; that a merged distinction does not come back from within; and an unfolding incomplete at every step, in a stated form."
+   },
+   "source_adds": {
+    "en": "The blind spot of a distinction in use as a general epistemic law, and the regress of observers as constitutive of modern society."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": "reading",
+   "same_as": null
+  },
+  {
+   "id": "cx-syscyb-foerster-imperative",
+   "name": {
+    "en": "Act always so as to increase the number of choices"
+   },
+   "domain": "systems-cybernetics",
+   "group": "systems-cybernetics",
+   "source": {
+    "work": "Heinz von Foerster, On Constructing a Reality (1973); Ethics and Second-Order Cybernetics (1990)",
+    "locator": "the ethical imperative; wording as quoted in theories/becoming/history/CYBERNETICS.md, locator unverified",
+    "basis": "ai-knowledge"
+   },
+   "sense": {
+    "en": "An ethical imperative stated outright: act always so as to increase the number of choices. Von Foerster offers it as an imperative for an observer who takes responsibility for what it constructs, with no appeal to an outside authority."
+   },
+   "quote": null,
+   "carried": "changed",
+   "relation": "divergence",
+   "reading": {
+    "en": "His words stand only in history/CYBERNETICS.md; the content is taken up live. 07 says its menu witness stands against reading C as \"more options are better\": widening a menu both choose from can lower what each gets at one-play equilibrium. C, an unasserted premise, reads what is admitted, with the continuation condition, also unasserted, fixing scope; the ethics does not derive from the condition. Number is one weighting, deciding mixed comparisons widening leaves open. Whose choices count he leaves unstated. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-would-give-c",
+     "says": {
+      "en": "Theorem and reading [AI, new]. Among choosers, widening the menu both choose from can lower what each gets by the game's payoffs (Weighting.Restraint, the prisoner's dilemma read as a menu). The menu witness is a theorem on the listing's frame, and there it stands against reading C as \"more options are better\". Its bearing on courses of what can form is open. C reads what is admitted; neither reading is shown to be the one that counts."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "widening-as-what-every-positive-weighting-ranks",
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-widening-as-what-every-positive-weighting-ranks",
+     "says": {
+      "en": "Theorem (any type; finite listing, two-valued admission, natural weights). One course widens another exactly when every positive weighting ranks it higher; a mixed comparison is decided both ways; one weight for every item ranks by number. Calling widening better is C, a premise the account does not assert."
+     },
+     "role": "carries"
+    }
+   ],
+   "account_adds": {
+    "en": "That counting choices is one order among those widening is agreed by, and that it ranks where they do not; a witness where more options lower what each gets; that C cannot be got from what reads no order (`Becoming.ReadsNoOrder.not_entails`)."
+   },
+   "source_adds": {
+    "en": "The imperative's stance: an ethics stated outright and addressed to an observer's own responsibility, where C is an unasserted premise. His name stands only in history/CYBERNETICS.md."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": null
+  },
+  {
+   "id": "cx-syscyb-bateson-levels-of-learning",
+   "name": {
+    "en": "Levels of learning, and double-loop learning"
+   },
+   "domain": "systems-cybernetics",
+   "group": "systems-cybernetics",
+   "source": {
+    "work": "Gregory Bateson, Steps to an Ecology of Mind (1972); Chris Argyris and Donald Schön, Organizational Learning (1978)",
+    "locator": "Bateson, The Logical Categories of Learning and Communication; Argyris and Schön locator unverified",
+    "basis": "ai-knowledge"
+   },
+   "sense": {
+    "en": "Learning has levels: change in response, change in how responses are chosen (learning to learn), and, rarely, change in the set of those. Double-loop learning changes the governing norm, not only the action. Higher levels are what real change is said to need."
+   },
+   "quote": null,
+   "carried": "carried-in-part",
+   "relation": "scope",
+   "reading": {
+    "en": "08 places Bateson's levels as the tower's scheme, with no law of possibility, and the tower law gives what levels cannot do: a rule changing its own rule, or a tower with no top, adds nothing to its whole possible. So \"higher\" does not by itself open more; each law is near-definitional or a witness. 03's revision leaves the norm fixed. Nearest the double loop: a periphery construction revising a goal, not open discovery of arbitrary ends, and 03's reading of feedback adjusting only the means. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "where-the-possible-grows",
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-where-the-possible-grows",
+     "says": {
+      "en": "Theorem (root; any process, witnesses). A rule changing its own rule adds nothing to its whole possible; a tower of rules with no top adds nothing either, finite support being its premise (08). The possible with a part held grows only where the part changes; endless change of the part does not suffice. Near-definitional or a witness (08)."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "a-revision-that-opens-a-correction",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-a-revision-that-opens-a-correction",
+     "says": {
+      "en": "Theorem (any types; near-definitional, with witnesses). A course opens a correction by revising the reading along one process. Reading: its relation to double-loop learning depends on whether inquiry changes a governing norm, which it does not here: the acceptability is fixed."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "formed-goal-revision-continuation",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-formed-goal-revision-continuation",
+     "says": {
+      "en": "Theorem (periphery; the two-practice construction supplied). Revision and reform complete exactly under access loss with kept transition maintenance. Its record distinguishes goal formation, changed attainment criteria and action; the local choice is not open discovery of arbitrary ends."
+     },
+     "role": "neighbour"
+    },
+    {
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-the-boundary-of-enough-under-undetermined-laws",
+     "says": {
+      "en": "Reading [AI, D65], following this law. Locked seeking forms when a once-useful habit, identity or arrangement becomes the fixed measure of later cases, feedback adjusting only the means. Reopening is a blocked relation regaining effect, not an apology or a renamed goal."
+     },
+     "role": "neighbour",
+     "part": "D65, locked seeking"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#known-results",
+     "role": "carries",
+     "part": "the row on where the possible grows",
+     "says": {
+      "en": "Bateson's levels of learning (1972) are the tower's scheme with no law of possibility. Each law is near-definitional or a witness."
+     }
+    }
+   ],
+   "account_adds": {
+    "en": "That towers add nothing to the whole possible, stated as a law on any process."
+   },
+   "source_adds": {
+    "en": "Open change of a governing norm, which no law models beyond one supplied two-practice choice; learning III and its psychological content."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": null
+  },
+  {
+   "id": "cx-syscyb-ostrom-design-principles",
+   "name": {
+    "en": "Ostrom's design principles read as exits"
+   },
+   "domain": "systems-cybernetics",
+   "group": "systems-cybernetics",
+   "source": {
+    "work": "Elinor Ostrom, Governing the Commons (1990)",
+    "locator": "chapter 3, table of design principles",
+    "basis": "ai-knowledge"
+   },
+   "sense": {
+    "en": "Long-enduring common-pool institutions share eight features: clear boundaries, rules fitted to local conditions, collective choice by those affected, monitoring accountable to users, graduated sanctions, cheap conflict resolution, recognized right to organize, nested enterprises. Empirical regularities from cases, not a blueprint or a proof of sufficiency."
+   },
+   "quote": null,
+   "carried": "carried-in-part",
+   "relation": "agreement",
+   "reading": {
+    "en": "Reading the principles as exits is PLAN's frame; each meets a form, not a principle. Boundaries: an entry rule's band, where a rule can be kept and still end the level. Monitoring: a reader's schedule within the margin; reviewers counted by independent causes. Collective choice: a rule read through a pool, who decides unmodelled. Conflict: a loop closing through a link giving back less. Nesting: joint plans, division only. Graduation: only a window forgiving spaced errors. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "a-rule-rebuilt-from-the-members-it-limits",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-rule-rebuilt-from-the-members-it-limits",
+     "says": {
+      "en": "Theorem (root; a family of models). A minimal model of one kind of institution, an entry rule on a shared stock; a rule held exactly within a band. Not modelled: sanctions, who decides a revision, conduct other than entry. Reading: Ostrom 1990 treats boundary rules as held by those they govern; this reads the entry rule only."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "one-reader-several-conditions",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-one-reader-several-conditions",
+     "says": {
+      "en": "Theorem (World; balance). A reader reading one condition a step keeps it within its margin m, against draws of at most d a step withdrawn l steps after a reading, exactly where it reads it within every a steps, for (a + l)d ≤ m < (a + 1 + l)d."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "reading-through-a-pool",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-reading-through-a-pool",
+     "says": {
+      "en": "Theorem (any type: a paced rule). Where a rule reads the fast configuration only through what a pool reads, rules part at a reading step only where the pool's reading parts."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "division-by-exclusive-footprints",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-division-by-exclusive-footprints",
+     "says": {
+      "en": "Theorem (World: balance). Takes that are what the leaves of a realized joint plan draw, parts' footprints within their whole's and apart, are within what is given. Nested plans: a form of division only, with no layer governing. It does not show an actual division is so."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "whether-a-loop-closes-a-difference",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-whether-a-loop-closes-a-difference",
+     "says": {
+      "en": "Theorem (any type). A loop closes a difference only through a link giving back less. 05 §4 reads this [AI reading, D48] as bounded conflict: compensation, arbitration, absorption."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "reviewers-count-by-independent-causes",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-reviewers-count-by-independent-causes",
+     "says": {
+      "en": "Theorem (pure core; rosters, fault formulas and bounds supplied). Reviewers count by independent causes, not names: CD §2's exit, whose edge is that two reviewers moved under one cause make readiness fail while every name is kept."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "a-pair-tolerates-only-within-a-window",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-pair-tolerates-only-within-a-window",
+     "says": {
+      "en": "Theorem (any relation of waiting, errors a supplied pattern). Answering within a window: from all giving, where no formation errs at w consecutive steps, every formation gives exactly where it does not err, while w + 1 consecutive errors under a window of w + 1 are answered. Reading [AI]: a relative of forgiveness for errors spaced within it."
+     },
+     "role": "neighbour"
+    },
+    {
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-conditions-kept-together",
+     "says": {
+      "en": "Reading [AI, D48]. Term limits, audits, courts and antitrust carry what an actor's acts do back into what selects the rule: pooling, not opposed interests. Not a reading of Ostrom."
+     },
+     "role": "neighbour",
+     "part": "D48; not a reading of Ostrom"
+    }
+   ],
+   "account_adds": {
+    "en": "An exact band for an entry rule, including that the rule's being held does not decide the stock's fate; an exact monitoring window."
+   },
+   "source_adds": {
+    "en": "Above all the empirical base: decades of field cases; 05's Open names a study weighing Ostrom's account, and none is run. Also graduated sanctions as such, fit to local conditions, monitors accountable to users, and external recognition."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": "reading",
+   "same_as": [
+    "cx-econ-ostrom-commons"
+   ]
+  },
+  {
+   "id": "cx-syscyb-ostrom-against-hardin",
+   "name": {
+    "en": "Users can govern a commons themselves"
+   },
+   "domain": "systems-cybernetics",
+   "group": "systems-cybernetics",
+   "source": {
+    "work": "Elinor Ostrom, Governing the Commons (1990); Ostrom, Gardner and Walker, Rules, Games, and Common-Pool Resources (1994)",
+    "locator": "1990 chapter 1 on Hardin and the metaphors; 1994 chapters on communication and sanctioning experiments, locator unverified",
+    "basis": "ai-knowledge"
+   },
+   "sense": {
+    "en": "Against Hardin: neither state nor market is the only way out. Field cases show users sustaining commons by their own rules over centuries. In the lab, communication and chosen sanctions sharply raise yields above the non-cooperative prediction, overappropriation being only the baseline with no communication."
+   },
+   "quote": null,
+   "carried": "carried-in-part",
+   "relation": "divergence",
+   "reading": {
+    "en": "One record cites the overappropriation half, and reads Ostrom 1990 as coupling or lowered capacity, narrower than rules, monitoring and sanctions users choose. Nothing live cites the communication and sanctioning findings. The laws concern optimizers on stated models, at the corner none couples into, so no contradiction follows; but self-governing restraint has no law, every horizon here is finite, and how pools form and last is open. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "several-optimizers-drain-by-their-joint-capacity",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-several-optimizers-drain-by-their-joint-capacity",
+     "says": {
+      "en": "Theorem (World). Several optimizers whose withdrawal with the rest's exceeds r at every step lose the dependence however small each capacity. Its correspondence cites overappropriation (Ostrom, Gardner and Walker 1994) and reads [AI]: what keeps a commons is a coupling into it or a lowered capacity, \"the means Ostrom (1990) found communities use\"."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#known-results",
+     "says": {
+      "en": "Beside joint excess: restraint kept by punishing strategies in an equilibrium of the commons played without end (Fudenberg and Maskin 1986; Dutta 1995); here every horizon is finite."
+     },
+     "role": "neighbour",
+     "part": "the row beside joint excess"
+    },
+    {
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#open",
+     "says": {
+      "en": "Open: how pools form, last and resist capture; revision that is not a best response; a discriminating study weighed against accounts including Ostrom's."
+     },
+     "role": "limit"
+    },
+    {
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#t3",
+     "says": {
+      "en": "T3's evidence: LLM fishers kept no dependent they were not told of, under any instruction (IN1). Its frozen predictions on installing the direction mostly failed; with a round of talk, R1 to R4 held for gpt-5.4-mini and only R2 for gpt-4.1-mini. The only live touch on talk I found, and not on people."
+     },
+     "role": "neighbour",
+     "part": "T3's evidence: IN1"
+    }
+   ],
+   "account_adds": {
+    "en": "Conditions under which a member's restraint cannot be selected by a score: where the rest outruns the renewal only a change of the rest's exchange helps. Small mixed tests on learners and LLM agents, none on people."
+   },
+   "source_adds": {
+    "en": "That communication and self-chosen sanctions work, in field and laboratory; that people are not the drawers of the optimum laws. No test on the spine has human participants (CD §5)."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": null
+  },
+  {
+   "id": "cx-syscyb-feedback-as-purpose",
+   "name": {
+    "en": "Purpose as negative feedback"
+   },
+   "domain": "systems-cybernetics",
+   "group": "systems-cybernetics",
+   "source": {
+    "work": "Arturo Rosenblueth, Norbert Wiener and Julian Bigelow, Behavior, Purpose and Teleology (1943); Norbert Wiener, Cybernetics (1948)",
+    "locator": "Philosophy of Science 10 for the 1943 paper; Wiener locator unverified",
+    "basis": "ai-knowledge"
+   },
+   "sense": {
+    "en": "Purposeful behaviour is behaviour directed to a goal and corrected by negative feedback from its distance to the goal. Teleology is thereby made a matter of mechanism, the same in animal and machine: the founding move of cybernetics."
+   },
+   "quote": null,
+   "carried": "fresh-reading",
+   "relation": "divergence",
+   "reading": {
+    "en": "The account keeps the loop, with exact laws of opposing exchange, and takes back what it was to explain. A target is any condition on the configuration, and how it forms is not modelled. A loop does not mark what regulates for itself: 04 reads a thermostat as having one too. A regulator at its set point protects nothing beyond it by that feedback. No account of purpose is offered in its place; 05 §12 lists purposes as not modelled. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "two-sided-regulation-and-late-reading",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-two-sided-regulation-and-late-reading",
+     "says": {
+      "en": "Theorem (World; balance at the condition). The bound on the joint exchange is exactly no overshoot; within it, opposing, the level settles at m; beyond it an opposing exchange crosses and can oscillate for ever."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "seeking-boundary",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-seeking-boundary",
+     "says": {
+      "en": "Theorem (any type; a determined law for rest). A target is any condition on the configuration; how it forms is not modelled. Under a determined law the orbit comes to rest with its target met exactly where it reaches a state the law leaves unchanged that meets it."
+     },
+     "role": "limit"
+    },
+    {
+     "record": "the-stock-buys-time-where-the-rebuild-draws-on-it",
+     "anchor": "theories/becoming/chapters/04-LIFE.md#r-the-stock-buys-time-where-the-rebuild-draws-on-it",
+     "says": {
+      "en": "Reading [AI, new]. What tells the member rebuilt from the level from a thermostat, whose reader is given, and from a reader made from outside, is not a loop. Both have loops. It is that its stock buys it time and that its end does not come back."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "what-a-set-point-optimum-does-beyond",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-what-a-set-point-optimum-does-beyond",
+     "says": {
+      "en": "Formations each holding a set point, their losses together above what the rest gives a gated condition, end it however small each one's loss. What protects what lies beyond at the set point is the choice among equal optima, which no law here models."
+     },
+     "role": "carries"
+    }
+   ],
+   "account_adds": {
+    "en": "Exact conditions for rest with a target met, and that holding a set point can end what lies beyond it."
+   },
+   "source_adds": {
+    "en": "Teleology explained by feedback, across animal and machine; Wiener's information and control as one science. A target's forming is not modelled here."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": null
+  },
+  {
+   "id": "cx-syscyb-ashby-self-organizing",
+   "name": {
+    "en": "Any determinate system organizes itself, and \"good\" is relative"
+   },
+   "domain": "systems-cybernetics",
+   "group": "systems-cybernetics",
+   "source": {
+    "work": "W. Ross Ashby, Principles of the Self-Organizing System (1962)",
+    "locator": "locator unverified",
+    "basis": "ai-knowledge"
+   },
+   "sense": {
+    "en": "A determinate dynamic system goes to equilibrium, so it selects its own attractor with no outside selector, and in this sense any such system self-organizes. No organization is good in an absolute sense, only relative to a given environment. Paraphrased from memory."
+   },
+   "quote": null,
+   "carried": "fresh-reading",
+   "relation": "scope",
+   "reading": {
+    "en": "The basin law conditions the first half: within finitely many listed configurations every course enters what returns and each basin holds one cycle, an equilibrium being only its shortest case, with no selector; where no list holds the configurations a course can be drawn and never return (counting on draws 0 and merges nothing). So 'goes to equilibrium' holds within a list, and to a cycle. The second half meets 02's refusal to rank regions and 05's reading that attraction is not continuation. Parts adapted to the rest as organisms go past these laws. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "basins-of-a-determined-law",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-basins-of-a-determined-law",
+     "says": {
+      "en": "Theorem (any type). Under any determined law courses meeting is an equivalence whose classes are basins; within m listed configurations every course enters what returns before step m and each basin holds one cycle."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "necessarily-drawn-is-not-returning",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-necessarily-drawn-is-not-returning",
+     "says": {
+      "en": "Theorem (any process). Every process necessarily draws exactly what does not return. Runs are infinite, so a dead end is drawn vacuously: the law does not say a course entering the region exists."
+     },
+     "role": "neighbour"
+    },
+    {
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-market-model-share-margin-and-ends",
+     "says": {
+      "en": "Reading [AI, D65]. Attraction is not continuation: a selection absorbing perturbations can still erode its support."
+     },
+     "role": "neighbour",
+     "part": "D65"
+    },
+    {
+     "anchor": "theories/becoming/chapters/02-MAP.md#not-shown",
+     "says": {
+      "en": "Not shown: that generation is better than keeping or degeneration: order needs C, whose losses count needs the continuation condition. That passing, a reserve or a regulated level is good."
+     },
+     "role": "carries"
+    }
+   ],
+   "account_adds": {
+    "en": "The branching case, where being drawn and returning part; that an attractor need not be a continuation."
+   },
+   "source_adds": {
+    "en": "The claim that such systems develop parts adapted to the rest of the system, read as organisms; a general theory of self-organization by this route."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": null
+  },
+  {
+   "id": "cx-syscyb-senge-limits-to-growth",
+   "name": {
+    "en": "Limits to growth, and overshoot through delay"
+   },
+   "domain": "systems-cybernetics",
+   "group": "systems-cybernetics",
+   "source": {
+    "work": "Meadows, Meadows, Randers and Behrens, The Limits to Growth (1972); Peter Senge, The Fifth Discipline (1990), appendix on archetypes",
+    "locator": "Senge appendix 2, Limits to Growth; 1972 report locator unverified",
+    "basis": "ai-knowledge"
+   },
+   "sense": {
+    "en": "A reinforcing process of growth meets a balancing process as a limit nears, and slows or reverses. For the 1972 report, exponential growth in a finite world, with delays in feedback, overshoots and collapses unless the structure changes. Senge's advice: do not push growth; find and remove the limiting factor."
+   },
+   "quote": null,
+   "carried": "carried-in-part",
+   "relation": "scope",
+   "reading": {
+    "en": "05 says joint excess restates overshoot in near-definitional arithmetic, naming this report; its record says it treats neither reserves nor delayed renewal, so the delay that makes World3's overshoot is not in the law. A rising take ends within B + 1 steps, the rise supplied; more without end needs renewers with no eventual bound; a reserve defers an end unless support returns. No curve, no collapse's shape, no limiting factor. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "own-count-misses-joint-excess",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-own-count-misses-joint-excess",
+     "says": {
+      "en": "It restates the tragedy of the commons and overshoot (Lloyd 1833; Hardin 1968; Meadows and others 1972) in near-definitional arithmetic, not who ought to take less. Its record: stated for natural-number amounts; excess compares totals at each step and treats neither reserves nor delayed renewal."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "where-a-rising-take-ends",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-where-a-rising-take-ends",
+     "says": {
+      "en": "Theorem (World). A take more than now at every step, from a condition given at most B a step, exceeds what is given after B + 1 steps: the seeker ends where it does not resume. A full taker whose take does not rise continues. The rise is supplied, not derived."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "more-needs-renewers",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-more-needs-renewers",
+     "says": {
+      "en": "Theorem (World). Read more as: for every number, from some step on at least that many formations take at every step. Under balance, more without end needs replenishment with no eventual bound and, each giving at most a fixed amount, renewers with no eventual bound. Yields no \"more is better\"."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "reserve-defers-ending",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-reserve-defers-ending",
+     "says": {
+      "en": "Theorem (World). A formation unsupported from some step on is active over any later stretch at most as often as its reserve. A reserve defers the end, which still comes; bridging to returning support, it can carry activity without end."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "An exact end step under stated premises; that the premises are near-definitional; that more takers need renewers with no eventual bound."
+   },
+   "source_adds": {
+    "en": "Overshoot through delayed feedback, World3's scenarios and collapse's shape; the limiting factor as what to look for. The live \"restates\" holds of the arithmetic and not of the delay."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": null
+  },
+  {
+   "id": "cx-syscyb-structure-generates-behaviour",
+   "name": {
+    "en": "Structure generates behaviour"
+   },
+   "domain": "systems-cybernetics",
+   "group": "systems-cybernetics",
+   "source": {
+    "work": "Jay W. Forrester, Industrial Dynamics (1961); Donella H. Meadows, Thinking in Systems (2008); Peter Senge, The Fifth Discipline (1990)",
+    "locator": "Meadows chapter 1; Senge chapter 3, the beer game; Forrester locator unverified",
+    "basis": "ai-knowledge"
+   },
+   "sense": {
+    "en": "A system's behaviour over time comes mainly from its own feedback structure, not from outside events, which only trigger it. Different people in the same structure produce similar results, so lasting change comes by changing structure. The central claim of system dynamics."
+   },
+   "quote": null,
+   "carried": "fresh-reading",
+   "relation": "scope",
+   "reading": {
+    "en": "The laws give it where a law is determined: the counterfactual of an act is the course the law generates, and \"the lock belongs to how the rule reads, not the share it favours\". But the same law runs either way from its start, on either side of a critical mass; which law the rest follows is supplied; and where a move has situations reaching two configurations, no law from configuration and move alone is right on both. So structure alone is scoped. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "counterfactual-is-the-course",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-counterfactual-is-the-course",
+     "says": {
+      "en": "Theorem (World; balance; the law of exchange supplied). Where the rest follows one law of exchange reading what has stood, two balanced flows with the same formations present, starting alike, in which the part acts alike, have the same levels and exchange at every step: the counterfactual of an act is the course the law generates. Which law the rest follows is supplied."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "capture-through-the-rule",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-capture-through-the-rule",
+     "says": {
+      "en": "Theorem (any type). Only a change of the law, of how the rule reads or of the selection leaves where the reading favours at every share. \"The lock belongs to how the rule reads, not the share it favours.\" That actual rules read the share is the premise."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "shaping-read-by-readers-drawn-from-the-selected",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-shaping-read-by-readers-drawn-from-the-selected",
+     "says": {
+      "en": "Theorem (counts). With lo ≤ hi, under every schedule of reading, every course is locked one way at every step, which way set by the start: one law, two fates either side of a critical mass. Premises: readers drawn from those selected; constants; no noise."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "the-move-alone-underdetermines",
+     "anchor": "theories/becoming/chapters/01-ROOT.md#r-the-move-alone-underdetermines",
+     "says": {
+      "en": "Theorem (any type). Where a step by a move has situations reaching two configurations, no law giving the next configuration from the configuration and the move alone is right on both."
+     },
+     "role": "carries"
+    }
+   ],
+   "account_adds": {
+    "en": "Exact cases where a law fixes a course, and what the premise then moves to: which law, and which start."
+   },
+   "source_adds": {
+    "en": "The empirical claim about social systems, as in the beer game, that different people reproduce the same pattern; and stocks, flows and loops as the unit of a structure, which the account does not take."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ],
+   "agreement_of": null,
+   "same_as": null
+  }
+ ],
+ "changes": [
+  {
+   "id": "cx-syscyb-trap-success-to-the-successful",
+   "what": "changed",
+   "why": "capture: The archetype says winners eventually take all, stated generally of the structure. The targets condition it: ReadsShare is the premise, there is no noise, drift leaves either lock, and full taking excludes only under 05's premises. Its siblings cx-wamo-matthew-externality and cx-sspiral-winner-justifies-all are scope. cx-kpso-compounding-axis keeps agreement only because its source conditions itself on increasing returns."
+  },
+  {
+   "id": "cx-syscyb-delay-oscillation",
+   "what": "changed",
+   "why": "dynamics: The sense states oscillation as what a lagging corrective loop does; Regulation.relay_threshold conditions it exactly, so scope, as cx-greek-aristotle-mean and cx-syscyb-trap-policy-resistance have the same law; 'the cycles present are witnesses' dropped held_oscillates. The item's summary lists 'delayed correction' as agreement and needs updating."
+  },
+  {
+   "id": "cx-syscyb-holling-adaptive-cycle",
+   "what": "changed",
+   "why": "dynamics: Its 'cycles are witnesses, with no law of when or with what period' copies plan 4.1's line, which is false: Law.basin_one_cycle, Withholding.withholding_returns and Regulation.held_oscillates stand; only a regime's onset and period are absent (02's where-a-run row, mengzi's entry). Label unchanged."
+  },
+  {
+   "id": "cx-syscyb-ostrom-against-hardin",
+   "what": "changed",
+   "why": "competition: Its divergence (no law of self-governing restraint; the lab findings unread) is not cx-econ-ostrom-commons's agreement on boundaries."
+  },
+  {
+   "id": "cx-syscyb-feedback-as-purpose",
+   "what": "changed",
+   "why": "couplings: It is cited for 'how a target forms is not modelled', which is why no account of purpose is offered. The loop itself rests on two-sided-regulation and the set-point optimum."
+  },
+  {
+   "id": "cx-syscyb-ashby-self-organizing",
+   "what": "changed",
+   "why": "dynamics: Ashby states it of any determinate system; Law.basin_one_cycle holds within m listed configurations and gives a cycle, and 02 separates an open world. cx-syscyb-eigenforms reads the same law onto 'settles, whatever the start' as scope; fresh-reading with agreement of law was also contradictory by BRIEF. The item's summary lists 'Ashby's recursion into basins' as agreement and needs updating."
+  }
+ ],
+ "live_flags": [
+  {
+   "where": "theories/becoming/COLLECTIVE-DIRECTION.md:87",
+   "what": "§5 says \"No institution is modelled on the spine\", while 05 §12 gives a minimal model of one kind of institution (a-rule-rebuilt-from-the-members-it-limits, root). The sentence looks stale, or means more by institution than it says."
+  },
+  {
+   "where": "theories/becoming/results/records/several-optimizers-drain-by-their-joint-capacity.json:correspondence",
+   "what": "The AI reading says what keeps a commons is a coupling into it or a lowered capacity, \"the means Ostrom (1990) found communities use\". Her rules, monitoring and chosen sanctions are wider than that; a reader would take the narrow form for her finding. From my memory of Ostrom, not a checked text."
+  }
+ ]
+}

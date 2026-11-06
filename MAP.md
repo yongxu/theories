@@ -29,7 +29,7 @@ The [README](README.md) opens with a statement of the whole in the first person.
 
 ## How it got here
 
-The ideas began in writing from 2021 on: the fifteen earlier theory folders below, with their originals in `sources/`. The repository's first commit is from 6 September 2026; the formal theory was built in October 2026, in more than 1,550 commits (1,568 in all by 19 October 2026). The history is part of the work, and nothing is deleted:
+The ideas began in writing from 2021 on: the sixteen earlier theory folders below, with their originals in `sources/`. The repository's first commit is from 6 September 2026; the formal theory was built in October 2026, in more than 1,550 commits (1,568 in all by 19 October 2026). The history is part of the work, and nothing is deleted:
 
 - **Commits.** `git log` shows each step. Where an instruction governed a step, the commit message quotes it.
 - **`history/` folders.** Only the latest version of a document stays live. What it replaces moves byte for byte to a sibling `history/` folder, recorded in a manifest under [`_process/architecture/`](_process/architecture/), so earlier versions stay readable and linked.
@@ -58,7 +58,7 @@ A fresh run compiles more than a thousand Lean steps and takes a while; `BECOMIN
 | Path | What it holds |
 |---|---|
 | `theories/becoming/` | The current theory: the one page, the overview, the eight chapters (`chapters/`), records (`results/records/`), the theory graph and generated results pages, `history/` |
-| `theories/<folder>/` | The earlier theory folders (below); each now reads as a stratum the Theory of Becoming gathers |
+| `theories/<folder>/` | The earlier theory folders (below), not live; what each claimed and what became of it is in [the crosswalk](theories/becoming/results/atlas/CROSSWALK.md) |
 | `experiments/` | Executable research; the Lean package Becoming is under `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/` |
 | `_process/` | Studies (`research/`), the work board, directives, workflow, architecture receipts, `history/` |
 | `sources/` | Imported originals and directive records, byte-preserved |
@@ -71,6 +71,8 @@ A fresh run compiles more than a thousand Lean steps and takes a while; `BECOMIN
 [REPOSITORY-LAYOUT](_process/REPOSITORY-LAYOUT.md) gives the rules for where new material goes.
 
 ## The earlier theory folders
+
+The live account does not gather them whole. What each claimed in its own terms, and whether the account states it, takes it up and says otherwise, or does not state it, is in [the crosswalk](theories/becoming/results/atlas/CROSSWALK.md), claim by claim, with the twelve domains of thought read the same way; [the connection map](theories/becoming/results/atlas/map.html) draws it. Every entry is an AI reading, and no person has read them.
 
 | Folder | In one line |
 |---|---|
