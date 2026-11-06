@@ -2,16 +2,16 @@
   "schema_version": 2,
   "id": "loops-within-what-a-law-reads",
   "title": {
-    "zh": "回路在律所读之内，经储量起作用的回路在断裂处形成",
-    "en": "Loops lie within what a law reads, and the loop that acts through a stock forms at its break"
+    "zh": "回路在律所读之内，经储量起作用的回路不早于断裂处形成",
+    "en": "Loops lie within what a law reads, and a loop acting through a stock forms no earlier than its break"
   },
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
   "reviewed_at_utc": "2026-10-16T18:25:05+00:00",
   "statement": {
-    "zh": "未读的水平耦合强度为零，所以回路在律所读之内；对每个只在储量低于阈值时才读它的律，储量的抬高到断裂为止不被带到任何处，断裂之前律的动作如其立律，没有经过储量的回路：起作用的回路在断裂处形成。",
-    "en": "Unread levels couple with strength zero, so loops lie within what a law reads; for every law reading a stock only below a threshold, a raise is carried nowhere up to the break, before which the law acts as its standing law, with no loop through the stock: the loop that acts forms at the break."
+    "zh": "未读的水平耦合强度为零，所以回路在律所读之内；对每个只在储量低于阈值时才读它的律，储量的抬高到断裂为止不被带到任何处，断裂之前律的动作如其立律，没有经过储量的回路；汲取的见证中，回路在断裂处形成。",
+    "en": "Unread levels couple with strength zero, so loops lie within what a law reads; for every law reading a stock only below a threshold, a raise is carried nowhere up to the break, before which the law acts as its standing law, no loop through the stock; in the draw witness the loop forms at the break."
   },
   "laws": [
     {
@@ -63,8 +63,8 @@
       ]
     },
     {
-      "zh": "断裂之前律的动作如其立律（储量低于阈值之处读作立于阈值）；立律不读储量，对储量的耦合强度为零，没有经过储量的回路，储量下游只有它自己：经储量起作用的回路在断裂处形成。储量在条件中由给出的标记标出，不判定条件。",
-      "en": "Before the break the law acts as its standing law, reading the stock as standing at its threshold wherever it stands below it; the standing law does not read the stock, is coupled to it with strength zero and has no loop through it, only the stock lying downstream of it: the loop that acts through the stock forms at the break. The stock is marked among the conditions by a marking given with it, so no decision on conditions is used.",
+      "zh": "断裂之前律的动作如其立律（储量低于阈值之处读作立于阈值）；立律不读储量，对储量的耦合强度为零，没有经过储量的回路，储量下游只有它自己：断裂之前没有经储量起作用的回路形成，汲取的见证中回路在断裂处形成。储量在条件中由给出的标记标出，不判定条件。",
+      "en": "Before the break the law acts as its standing law, reading the stock as standing at its threshold wherever it stands below it; the standing law does not read the stock, is coupled to it with strength zero and has no loop through it, only the stock lying downstream of it: no loop acting through the stock forms before the break, and in the draw witness one forms at it. The stock is marked among the conditions by a marking given with it, so no decision on conditions is used.",
       "declarations": [
         "Becoming.standAt",
         "Becoming.offStock",
@@ -862,6 +862,10 @@
     {
       "en": "6 November 2026, board item LM: declarations this record lists moved with the helpers stated once; its references follow them, and no law changed.",
       "zh": "2026年11月6日，工作板条目 LM：此记录所列之声明随只陈述一次之辅助引理而移；其引用从之，诸律不变。"
+    },
+    {
+      "en": "7 November 2026, board item AA: the atlas's readers found a witness's loop stated of every law, in the statement, the title and law 4; corrected against the Lean and the later records.",
+      "zh": "2026年11月7日，工作板条目 AA：图谱读者发现一个见证的回路被陈述为每条律的，见于陈述、标题与第 4 条；已对照 Lean 与后来的记录改正。"
     }
   ],
   "text_versions": [

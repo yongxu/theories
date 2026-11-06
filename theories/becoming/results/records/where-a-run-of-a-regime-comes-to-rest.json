@@ -90,13 +90,13 @@
       "kind": "scope"
     },
     {
-      "en": "That measured giving rises over its band: MQ5's law rises in both arguments exactly where its regime's giving rises with what is left, which is not checked on the data.",
-      "zh": "所测的所给在其带上上升：MQ5 之律恰在其体制所给随所剩而升时于两个变元上皆升，这未在数据上检查。",
+      "en": "That measured giving rises over its band: MQ5's law rises in both arguments exactly where its regime's giving rises with what is left. Read through the balance as an adjustment, post hoc on MQ5's stocks (experiments/margin-measured, results/mq5/rises.json), it rises in the recent giving in 65 of 69 stocks; in what is left its one-step fit has no slope (median −0.01), and each stock's fitted level law is humped, rising over a median 41% of its observed escapements and over the whole band in only 4 of 69: the order laws reach the field's state on the low side of its level law, below the peak.",
+      "zh": "所测的所给在其带上上升：MQ5 之律恰在其体制所给随所剩而升时于两个变元上皆升。经平衡读作调整，在 MQ5 的存量上事后检视（experiments/margin-measured，results/mq5/rises.json）：它在 69 个存量中的 65 个上随近来所给而升；随所剩，其一步拟合没有斜率（中位数 −0.01），各存量拟合的水平律呈驼峰形，只在所观测逃逸量的中位数 41% 上上升，在整个带上上升的只有 69 个中的 4 个：次序之律在水平律的低侧、峰值之下触及野外的状态。",
       "kind": "non-implication"
     },
     {
-      "en": "That 3 hi + 3 is the least bound; a state with a further lag; coupled conditions with a recent giving (record coupled-regimes states two under the regime's step).",
-      "zh": "3 hi + 3 是最小的界；带再一个滞后的状态；带近来所给的相互耦合条件（记录 coupled-regimes 陈述体制之步下的两个）。",
+      "en": "That 3 hi + 3 is the least bound; a state with a further lag; rest within a band on a web with a recent giving (record webs-with-a-recent-giving states such webs, this rest excepted).",
+      "zh": "3 hi + 3 是最小的界；带再一个滞后的状态；带近来所给之网在带内的静止（记录 webs-with-a-recent-giving 陈述这样的网，此静止除外）。",
       "kind": "scope"
     }
   ],
@@ -122,8 +122,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261021T093053.215253Z）：Becoming.LastChange 与 Becoming.RegimeMargin 新增的 32 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 300 节；未经人的独立审查。"
   },
   "next_delta": {
-    "en": "Whether measured giving laws rise over their bands; the least bound; a state with a further lag; coupled conditions with a recent giving; an independent review.",
-    "zh": "所测的所给之律在其带上是否上升；最小的界；带再一个滞后的状态；带近来所给的相互耦合条件；独立审查。"
+    "en": "The order of fates above the level law's peak, where measured giving falls as the level rises; the least bound; a state with a further lag; rest within a band on a web with a recent giving; an independent review.",
+    "zh": "水平律峰值之上的命运之序，那里所测的所给随水平上升而下降；最小的界；带再一个滞后的状态；带近来所给之网在带内的静止；独立审查。"
   },
   "correspondence": {
     "en": "Compensatory renewal settles and overcompensating renewal cycles (Beverton and Holt 1957; May 1976); orbits of planar cooperative maps are eventually componentwise monotone under regularity conditions (Smith 1998; Hirsch and Smith 2005); deciding where a bounded monotone sequence stops is an omniscience principle (Bridges and Richman 1987). On the spine, constructive and exact in its premises: a law's run still for one step is still for ever, so a bounded mark decides its rest; the adjusted step need not be one to one, and its own structure, moving the level by the new giving less the draw, bounds the steps before its run moves one way only. Rising giving and the band are each shown needed by a witness.",
@@ -565,6 +565,10 @@
     {
       "en": "23 October 2026, EC6 (study section 375): LastChange.still_within is now proved as a case of rest by balance (record rest-by-balance) instead of by its own induction; its statement and this record's laws are unchanged.",
       "zh": "2026年10月23日，EC6（研究第 375 节）：LastChange.still_within 现作为由平衡而停息的情形证明（记录 rest-by-balance），不再以其自身的归纳证明；其陈述与本记录的定律不变。"
+    },
+    {
+      "en": "7 November 2026, board item AA: the atlas's readers found a line gone stale against the experiment's own report; corrected against the Lean and the later records.",
+      "zh": "2026年11月7日，工作板条目 AA：图谱读者发现一行已落后于该实验自己的报告；已对照 Lean 与后来的记录改正。"
     }
   ]
 }

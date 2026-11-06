@@ -87,8 +87,8 @@
       "en": "Listing: the members holding at each step are listed, each once, so finitely many hold at each step; there may be infinitely many members in all. The census and the census of what stands are this read of activity and of standing."
     },
     {
-      "zh": "可判定：在纯核心中找出开始成立者要判定该规定；读于活动是活动可判定，读于水平自动成立（自然数的比较可判定）。这是表示的逻辑承诺，经典地总是成立。",
-      "en": "Decidability: finding what comes to be in the pure core needs the determination decided; read of activity this is decided activity, read of standing it holds automatically (comparison of natural numbers is decidable). It is a logical commitment of the representation and classically always holds."
+      "zh": "可判定：在纯核心中找出开始成立者要判定该规定；读于活动是活动可判定，读于水平自动成立（自然数的比较可判定）。这是此律自身的条件，不是表示的承诺，经典地总是成立。",
+      "en": "Decidability: finding what comes to be in the pure core needs the determination decided; read of activity this is decided activity, read of standing it holds automatically (comparison of natural numbers is decidable). It is the law's own condition, not a commitment of the representation, and classically always holds."
     },
     {
       "zh": "census_one_way 是关于两个具体世界的陈述，不加前提。",
@@ -811,6 +811,10 @@
     {
       "en": "1 November 2026, U4d (study section 498): law 2 restated for the routes: the root's census of a run no longer asks the occurrences listed once, and the covering law (law 6), through which the world and standing readings go, now reaches the root through the root's covering law at a member's occurrences (Covers.coming_from_of_ceasing re-proved, statement unchanged); the census of a run is itself a case of the root's count of ends on lines. Law 2's declarations gain the two root laws and lose gaining_of_losing_from, which the proof no longer uses. What the record states is unchanged.",
       "zh": "2026年11月1日，U4d（研究第 498 节）：第 2 条按路径重述：根上一程之清点不再要求出现各列一次；世界与立的读法所经之覆盖之律（第 6 条）今经根上覆盖之律取一成员之出现而达于根（Covers.coming_from_of_ceasing 重证，陈述不变）；一程之清点本身是根上线上之终之计的情形。第 2 条之声明增二根律，去证明已不用之 gaining_of_losing_from。记录所述不变。"
+    },
+    {
+      "en": "7 November 2026, board item AA: the atlas's readers found a contradiction on decidedness; corrected against the Lean and the later records.",
+      "zh": "2026年11月7日，工作板条目 AA：图谱读者发现关于可判定的一处矛盾；已对照 Lean 与后来的记录改正。"
     }
   ],
   "text_versions": [

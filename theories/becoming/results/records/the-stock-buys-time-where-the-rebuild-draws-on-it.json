@@ -41,7 +41,7 @@
       ]
     },
     {
-      "en": "Over the four members, at one unit wanted and a span of at least one, the stock buys time under a cut, with an end from an empty stock, exactly where the rebuild draws on the level.",
+      "en": "Over the four members, at least one unit wanted and a span of at least one, the stock buys time under a cut, with an end from an empty stock, exactly where the rebuild draws on the level.",
       "zh": "于四成员之上，所需单元至少一、寿至少一时，供应断后储买时且空储则尽，恰当重建取于储。",
       "declarations": [
         "Becoming.ReaderRebuilding.«以储买时当且仅当取于储»"
@@ -106,6 +106,10 @@
     {
       "en": "1 November 2026, board item OG (an organism on the root, plan §十三 item 9): added, study §497. A family of four readers by the rebuild's source; the stock buys time under a cut exactly where the rebuild draws on the level.",
       "zh": "2026年11月1日，工作板条目 OG（根上之生物体，计划 §十三 第 9 项）：新增，研究 §497。按重建之源分四种读者；恰当重建取于储，供断时储为读者买时。"
+    },
+    {
+      "en": "7 November 2026, board item AA: the atlas's readers found a clause saying one unit where its law takes at least one; corrected against the Lean and the later records.",
+      "zh": "2026年11月7日，工作板条目 AA：图谱读者发现一个子句说一单位而其律取至少一单位；已对照 Lean 与后来的记录改正。"
     }
   ],
   "aliases": [

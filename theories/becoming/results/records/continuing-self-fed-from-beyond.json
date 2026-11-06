@@ -84,8 +84,8 @@
       "en": "The family is without repetition (Distinct) and enclosed around from some step on (Around); recurring taking, recurring rising and recurring embodied arising are each the hypothesis of one theorem."
     },
     {
-      "zh": "相等可判定：inward_of_not_fed 及由它推出的定理需要它，是表示的逻辑承诺，同 Flow.Enclosed.around。",
-      "en": "Decided equality: inward_of_not_fed and the theorems drawn from it need it, a logical commitment of the representation, as in Flow.Enclosed.around."
+      "zh": "相等可判定：inward_of_not_fed 及由它推出的定理需要它，是此律自身的条件，不是表示的承诺，同 Flow.Enclosed.around。",
+      "en": "Decided equality: inward_of_not_fed and the theorems drawn from it need it, the law's own condition, not a commitment of the representation, as in Flow.Enclosed.around."
     },
     {
       "zh": "构造性的形式：结论是“不能从某步起都没有东西从其外输送入”，不给出输送入发生的某一步；由它得出“在任意晚的步得到供给”需要全知。",
@@ -622,6 +622,10 @@
     {
       "en": "3 November 2026, board item IGF2 (IGF's leftovers, the coordinator's word): DF's wording stands, the argument not applying where losses can shrink geometrically, and the hypothesis now reads balance at a fixed unit and names a case in which the conclusion itself fails, at a unit that splits without end (its clause that the premises are met by some worlds and not by others is left to no-finite-part-bears-taking, which it cites): Asymptote of Becoming.Resolution, where a closed pool, dissipated on and balanced at that resolution, is taken from at arbitrarily late steps (Becoming.rest_needs_quantum, bound to receipt 20261019T231053.882924Z, its axiom report empty), added as a counterexample with the refinement that feeds it. No theorem states this law over real amounts; the home in 02 no longer says the law fails with them, and says this, naming the premise that the witness lacks as balance at a fixed unit, not natural-number amounts, which its counts also are. Three independent readers checked the change against the Lean, two the revision and one its last wordings. No law changed.",
       "zh": "2026年11月3日，工作板条目 IGF2（IGF 的遗留项，按协调者所说）：DF 的措辞不变，损失可以几何地缩小时论证不适用；假设现在写作固定单位上的平衡，并举出结论本身不成立的一个情形，在单位无尽地细分时（“各有满足与不满足它的世界”一句留给它所引的 no-finite-part-bears-taking）：Becoming.Resolution 的 Asymptote 中，封闭的池被耗散、在那一分辨率上平衡，在任意晚的步被取用（Becoming.rest_needs_quantum，绑定回执 20261019T231053.882924Z，其公理报告为空），作为反例加入，并写明供给它的细分。没有定理在实数之量上陈述这一规律；02 中的归宿不再说该律在实数之量下不成立，而说明这一点，并把见证所缺的前提写作固定单位上的平衡，而非自然数之量（见证的计数也是自然数）。三位独立读者对照 Lean 核对了这一改动，两位核对了修订，一位核对了最后的措辞。规律未变。"
+    },
+    {
+      "en": "7 November 2026, board item AA: the atlas's readers found a hypothesis calling decidedness a commitment of the representation, where since Becoming.Decidedness each law states it as its own condition (08, the logical commitment); corrected against the Lean and the later records.",
+      "zh": "2026年11月7日，工作板条目 AA：图谱读者发现一条假设称可判定为表示的承诺，而自 Becoming.Decidedness 起每条律把它作为自身的条件陈述（08，逻辑承诺一节）；已对照 Lean 与后来的记录改正。"
     }
   ],
   "text_versions": [

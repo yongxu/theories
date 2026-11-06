@@ -40,7 +40,7 @@
 
 - A listing bounded from some step on: the members holding at each step are listed, each once, with every list from some step T on no longer than one bound B; there may be infinitely many members in all.
 - The world premise CountedWithin asks the bound at every step, the case T = 0. The more general form asks only that the list return within some number K at arbitrarily late steps (ceasing_of_returning, CountedBy.arising_iff_ceasing).
-- Decidability: read of activity this is decided activity, read of standing it holds automatically; it is a logical commitment of the representation and classically always holds.
+- Decidability: read of activity this is decided activity, read of standing it holds automatically; it is the law's own condition, not a commitment of the representation, and classically always holds.
 - procession_world, accretion_unbounded and Finite.countedWithin are statements about particular worlds or about finite worlds; Finite.countedWithin needs decided activity to build a census; Finite.census_bounded does not.
 - slow_world asks the bound to be non-decreasing and unbounded and is a statement about one particular world; ceasing_of_outpacing asks every list to be no longer than the bound and, from each step, the comings over some stretch to outnumber the bound at its end.
 
@@ -180,6 +180,7 @@ Aliases: `Becoming.Listed.ceasing_of_coming`, `Becoming.Listed.coming_iff_ceasin
 - 21 October 2026, EC3 (study section 319): declarations moved with their full names: World.Finite to Becoming.InAmounts; World.Counted to Becoming.InAmounts. The cited Lean sources and their proof bindings follow them; the claim is unchanged.
 - 25 October 2026, board item DF (study section 418): in the correspondence 'the author's reading (an AI argument)' reads 'a reading (the AI's)'; the claim is unchanged.
 - 1 November 2026, U4c (study section 492): declarations moved with their full names: recurring_accumulates to Becoming.Prelude, with the list and stretch lemmas the root's census laws use. The cited Lean source and its proof binding follow them; the claim is unchanged.
+- 7 November 2026, board item AA: the atlas's readers found a contradiction on decidedness; corrected against the Lean and the later records.
 - 7 rebinding entries (2026-10-13 to 2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](bounded-census-keeps-pace.json).
 
 <a id="earlier-text--早期文本"></a>

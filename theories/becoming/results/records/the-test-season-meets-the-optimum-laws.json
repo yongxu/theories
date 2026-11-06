@@ -10,8 +10,8 @@
   "family": "F04",
   "reviewed_at_utc": "2026-10-30T20:28:07+00:00",
   "statement": {
-    "en": "In the season LA4 trains on, the catch shares units with the bay, so every optimum of every order rising with the catch empties the bay. The landing site, and the bay when only the ground's catch counts, give no room; ranked by the catch or the ground's alone, the optima include keeping and ending.",
-    "zh": "LA4 所训练之季中，获与湾共享单位，故每一随获而升之序之每一最优皆空其湾。登陆之地，及只计地之获时之湾，无余地；只以获或只以地之获排序者，其最优兼有留与尽。"
+    "en": "In LA4's season the catch shares units with the bay, so every optimum of every order rising with the catch empties the bay. The site, and the bay when only the ground's catch counts, give no room: by the catch alone optima spare the site or not, by the ground's alone they keep the bay or empty it.",
+    "zh": "LA4 之季中，获与湾共享单位，故每一随获而升之序之每一最优皆空其湾。登陆之地，及只计地之获时之湾，无余地：只以获排序，最优或留其地或否；只以地之获排序，最优或留其湾或空之。"
   },
   "laws": [
     {
@@ -327,7 +327,7 @@
     {
       "path": "theories/becoming/chapters/05-COLLECTIVES.md",
       "role": "statement",
-      "sha256": "cd378089030fd50971e459ccca8c7aa92dd1c07214efb13441ad58c0860d29d5"
+      "sha256": "58cfdb3f5362a8d379cd7a516db44e86bf2286a846cafa29994ede280eadd901"
     }
   ],
   "proof_bindings": [
@@ -343,6 +343,10 @@
     {
       "en": "31 October 2026: added (LA4, its formal part), the design's checks by enumeration restated as theorems; study section 470.",
       "zh": "2026年10月31日：新增（LA4 之形式部分），设计中以穷举所作之查验重述为定理；研究第 470 节。"
+    },
+    {
+      "en": "7 November 2026, board item AA: the atlas's readers found a sentence reading against the one before it; corrected against the Lean and the later records.",
+      "zh": "2026年11月7日，工作板条目 AA：图谱读者发现一句读来与前一句相背；已对照 Lean 与后来的记录改正。"
     }
   ]
 }

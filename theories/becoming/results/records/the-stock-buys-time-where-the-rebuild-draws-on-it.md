@@ -16,7 +16,7 @@
    - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar.
 3. Where the reader rebuilt from the level ends, the level is empty, and that state is closed under the net, the supply on or off; a reader rebuilt from the supply is present again after one supplied step. (`Becoming.ReaderRebuilding.«读者绝则无储»`, `Becoming.ReaderRebuilding.«取于储者绝而不复»`, `Becoming.ReaderRebuilding.«取于供者复»`)
    - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar.
-4. Over the four members, at one unit wanted and a span of at least one, the stock buys time under a cut, with an end from an empty stock, exactly where the rebuild draws on the level. (`Becoming.ReaderRebuilding.«以储买时当且仅当取于储»`)
+4. Over the four members, at least one unit wanted and a span of at least one, the stock buys time under a cut, with an end from an empty stock, exactly where the rebuild draws on the level. (`Becoming.ReaderRebuilding.«以储买时当且仅当取于储»`)
    - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar.
 
 <a id="conditions--条件"></a>
@@ -76,6 +76,7 @@ Aliases: `Becoming.ReaderRebuilding.«以储买时当且仅当取于储»`, `a r
 ### History
 
 - 1 November 2026, board item OG (an organism on the root, plan §十三 item 9): added, study §497. A family of four readers by the rebuild's source; the stock buys time under a cut exactly where the rebuild draws on the level.
+- 7 November 2026, board item AA: the atlas's readers found a clause saying one unit where its law takes at least one; corrected against the Lean and the later records.
 
 </details>
 

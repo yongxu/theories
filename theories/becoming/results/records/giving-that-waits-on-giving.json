@@ -10,8 +10,8 @@
   "family": "F01",
   "reviewed_at_utc": "2026-10-19T07:15:58+00:00",
   "statement": {
-    "en": "Where giving waits on giving: with memory one withholding ends all giving in a family it reaches, from then on; without memory withholding passes out where no chain of waits is long enough and returns around every loop. More waiting is less giving.",
-    "zh": "给出等待给出之处：有记忆时，一处扣留永久结束它所及之族的一切给出；无记忆时，扣留在没有足够长的等待链处消散，并沿每个回路复返。等待越多，给出越少。"
+    "en": "Where giving waits on giving: with memory one withholding ends all giving in a family it reaches, from then on; without memory withholding passes out where no chain of waits is long enough and returns around every loop. More waiting gives no more.",
+    "zh": "给出等待给出之处：有记忆时，一处扣留永久结束它所及之族的一切给出；无记忆时，扣留在没有足够长的等待链处消散，并沿每个回路复返。等待越多，给出不增。"
   },
   "laws": [
     {
@@ -49,16 +49,16 @@
       ]
     },
     {
-      "en": "More waiting, less giving: adding waits takes giving away at every step under both laws.",
-      "zh": "等待越多，给出越少：增加等待在两条律下都在每一步减少给出。",
+      "en": "More waiting gives no more: whatever gives under added waits gives without them, at every step under both laws.",
+      "zh": "等待越多，给出不增：加了等待仍给出者，不加亦给出，在两条律下的每一步皆然。",
       "declarations": [
         "Becoming.Withholding.waitsAll_more_waiting",
         "Becoming.Withholding.answers_more_waiting"
       ]
     },
     {
-      "en": "Restoring needs another law: in Ring, three formations each waiting on the one before, with memory all withhold from step 2, exactly; without memory the withholding circulates; under the law in which one formation gives whatever it waits on, every formation gives from step 3 on from every start, exactly.",
-      "zh": "恢复需要另一条律：在 Ring 中，三个形成各等待前一个，有记忆时从第 2 步起全部扣留，且恰好如此；无记忆时扣留循环；在一个形成不论所等待者如何都给出的律下，从每个开始，每个形成从第 3 步起给出，且恰好如此。",
+      "en": "Restoring needs another law: in Ring, three formations each waiting on the one before, from one withholding, with memory all withhold from step 2, exactly; without memory the withholding circulates; under the law in which one formation gives whatever it waits on, every formation gives from step 3 on from every start, exactly.",
+      "zh": "恢复需要另一条律：在 Ring 中，三个形成各等待前一个，自一处扣留，有记忆时从第 2 步起全部扣留，且恰好如此；无记忆时扣留循环；在一个形成不论所等待者如何都给出的律下，从每个开始，每个形成从第 3 步起给出，且恰好如此。",
       "declarations": [
         "Becoming.Withholding.givesFirst",
         "Becoming.Withholding.Ring.waitsAll_absorbs_exact",
@@ -77,13 +77,13 @@
   ],
   "does_not_show": [
     {
-      "en": "How the relation of waiting forms, or amounts of giving and thresholds of waiting (giving where at least k of what one waits on gave).",
-      "zh": "等待关系如何形成，或给出的数量与等待的阈值（所等待者中至少 k 个给出时才给出）。",
+      "en": "How the relation of waiting forms, or amounts of giving. Thresholds of waiting without memory (giving where all but a tolerance of what one waits on gave) are in record thresholds-of-waiting; thresholds with memory are open there.",
+      "zh": "等待关系如何形成，或给出的数量。无记忆的等待阈值（所等待者中除容忍数之外都给出时才给出）见记录 thresholds-of-waiting；有记忆的阈值在那里仍开放。",
       "kind": "scope"
     },
     {
-      "en": "Which laws that give first restore giving in a general family; that cooperation is good, or which giving supports 生生.",
-      "zh": "在一般的族中哪些先给出的律能恢复给出；合作是好的，或哪种给出支持生生。",
+      "en": "Which laws beyond those stated restore giving in a general family (the condition is exact under giving first and without memory, and with memory none restores: record restoring-giving-from-the-worst-start; under a tolerance restoring needs a formation sparing all it waits on: record thresholds-of-waiting); that cooperation is good, or which giving supports 生生.",
+      "zh": "在一般的族中，已陈述者之外哪些律能恢复给出（先给出之下与无记忆之下条件是确切的，有记忆时无一恢复：记录 restoring-giving-from-the-worst-start；有容忍时恢复需要一个容忍其全部等待者的形成：记录 thresholds-of-waiting）；合作是好的，或哪种给出支持生生。",
       "kind": "non-implication"
     }
   ],
@@ -101,8 +101,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261019T064004.300228Z）：Becoming.Withholding 的 50 项声明（38 项定理）公理报告为空；检查器并核对核心纯净。由一个 Opus 证明者在草稿中构建，由另一个 Opus 审查者依简报审查并修正；作者审查见研究第 193 节；未经人的独立审查。"
   },
   "next_delta": {
-    "en": "Thresholds and amounts; restoring laws in general families; deriving the waiting relation from a flow; an independent review.",
-    "zh": "阈值与数量；一般族中的恢复律；由流导出等待关系；独立审查。"
+    "en": "Amounts of giving; laws beyond those stated restoring a general family; deriving the waiting relation from a flow; an independent review.",
+    "zh": "给出的数量；已陈述者之外恢复一般之族的律；由流导出等待关系；独立审查。"
   },
   "correspondence": {
     "en": "An account of social viability Ren brought on 19 October 2026 lists eight constraints and a unifying ninth; the AI's mapping found this one partly carried, through the selfishness spiral, and with no law. Ren's words are provenance, not warrant; the reading onto collectives is the AI's (D48).",
@@ -311,6 +311,10 @@
     {
       "en": "2026-10-20: 23 bookkeeping notes condensed from 19 October 2026 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/6f0de681b54ba6fb/giving-that-waits-on-giving.json and in git.",
       "zh": "2026-10-20：23 条记账性说明合并（19 October 2026 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/6f0de681b54ba6fb/giving-that-waits-on-giving.json 和 git 中。"
+    },
+    {
+      "en": "7 November 2026, board item AA: the atlas's readers found a weak inclusion read as a loss at every step, a start dropped, and lines gone stale against records thresholds-of-waiting and restoring-giving-from-the-worst-start; corrected against the Lean and the later records.",
+      "zh": "2026年11月7日，工作板条目 AA：图谱读者发现一个弱包含被读作每步的减少，一个起点被略去，数行已落后于记录 thresholds-of-waiting 与 restoring-giving-from-the-worst-start；已对照 Lean 与后来的记录改正。"
     }
   ],
   "text_versions": [

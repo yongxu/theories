@@ -10,8 +10,8 @@
   "family": "F01",
   "reviewed_at_utc": "2026-10-16T18:25:05+00:00",
   "statement": {
-    "zh": "只用水平：存量在界内的部分从每一步起都重访某个构型；每步都新的部分超出每个界；在界内而交换不止的部分与有限的整体不承载其历史；每次变化都下降时，变化不无尽复现。",
-    "en": "On the levels alone, a part with bounded stock revisits a configuration from every step on; a part new at every step exceeds every bound; a bounded part exchanged with without end, and a finite whole, do not carry their history; with loss at each change, change does not recur without end."
+    "zh": "只用水平：存量在界内的部分从每一步起都重访某个构型；每步都新的部分超出每个界；在界内而交换不止的部分或有限整体不承载其历史；每次变化都下降时，变化不无尽复现。",
+    "en": "On the levels alone, a part with bounded stock revisits a configuration from every step on; a part new at every step exceeds every bound; a bounded part or finite whole exchanged with without end does not carry its history; with loss at each change, change does not recur without end."
   },
   "laws": [
     {
@@ -37,8 +37,8 @@
       ]
     },
     {
-      "zh": "在界内的家族，其构型的任何读数都给不出从不重复的记录或无界的计数；所以在界内、在任意晚处被交换的家族，其构型不承载其交换的计数，不论流如何；对整体，在有限多关系项就是全部时亦然。",
-      "en": "No reading of a bounded family's configuration gives a record that never repeats or a count without bound; so a bounded family exchanged with at arbitrarily late steps does not carry the count of its exchanges, whatever the flow, and nor does the whole where finitely many relata are all there is.",
+      "zh": "在界内的家族，其构型的任何读数都给不出从不重复的记录或无界的计数；所以在界内、在任意晚处被交换的家族，其构型不承载其交换的计数，不论流如何；对整体，在有限多关系项就是全部且其存量在界内时亦然。",
+      "en": "No reading of a bounded family's configuration gives a record that never repeats or a count without bound; so a bounded family exchanged with at arbitrarily late steps does not carry the count of its exchanges, whatever the flow, and nor does the whole where finitely many relata are all there is and its stock stays within a bound.",
       "declarations": [
         "Becoming.Web.unread_of_new_record",
         "Becoming.Web.unread_of_unbounded",
@@ -523,6 +523,10 @@
     {
       "en": "6 November 2026, board item LM: declarations this record lists moved with the helpers stated once; its references follow them, and no law changed.",
       "zh": "2026年11月6日，工作板条目 LM：此记录所列之声明随只陈述一次之辅助引理而移；其引用从之，诸律不变。"
+    },
+    {
+      "en": "7 November 2026, board item AA: the atlas's readers found a finite whole stated without the bound its law takes, in the statement and law 2; corrected against the Lean and the later records.",
+      "zh": "2026年11月7日，工作板条目 AA：图谱读者发现一个有限整体被陈述而缺其律所需的界，见于陈述与第 2 条；已对照 Lean 与后来的记录改正。"
     }
   ],
   "text_versions": [

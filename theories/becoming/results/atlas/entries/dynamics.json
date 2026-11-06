@@ -1760,8 +1760,6 @@
    "what-bounds-offspring-numbers"
   ],
   "declarations": [
-   "Becoming.LineageDrawdown.degeneration_of_excess",
-   "Becoming.LineageDrawdown.landed_of_excess",
    "Becoming.LineageRegimes.degeneration_of_family_excess",
    "Becoming.LineageRegimes.degeneration_at_stock_horizon",
    "Becoming.LineageDrawdown.below_iff",
@@ -1861,7 +1859,7 @@
      "en": "n steps of a family's uptake above its replenishment from a stock below n + m; at need one the horizon is the stock."
     },
     "declarations": [
-     "Becoming.LineageDrawdown.degeneration_of_excess",
+     "Becoming.LineageRegimes.degeneration_of_family_excess",
      "Becoming.LineageRegimes.degeneration_at_stock_horizon"
     ],
     "records": [
@@ -3719,7 +3717,7 @@
     "source": "theories/becoming/results/records/what-a-set-point-optimum-does-beyond.md#does-not-show--未表明"
    },
    {
-    "en": "That a set point protects what lies beyond: where a step can lose what it takes, the order by distance has the draining step among its optima beside the keeping one; what protects is the choice among equal optima.",
+    "en": "That a set point protects what lies beyond: in a witness where a step can lose what it takes, the order by distance has the draining step among its optima beside the keeping one; what protects is the choice among equal optima.",
     "source": "theories/becoming/results/records/what-a-set-point-optimum-does-beyond.md#does-not-show--未表明"
    },
    {
@@ -7408,7 +7406,7 @@
   ],
   "valence": "none asserted",
   "beyond": {
-   "en": "Where a seeking locked onto a target that cannot be met at rest draws on what stands, its losses beyond its coupling closure do not return through its own feedback."
+   "en": "Where a seeking locked onto a target that cannot be met at rest draws on what stands, with the rest of the exchange fixed and balance on what couples in, its losses beyond its coupling closure do not return through its own feedback."
   },
   "sources": [
    "theories/becoming/chapters/03-KNOWING.md#r-seeking-boundary",
@@ -7452,7 +7450,7 @@
   ],
   "valence": "none asserted",
   "beyond": {
-   "en": "Where a seeking locked onto a target that cannot be met at rest draws on what stands, its losses beyond its coupling closure do not return through its own feedback."
+   "en": "Where a seeking locked onto a target that cannot be met at rest draws on what stands, with the rest of the exchange fixed and balance on what couples in, its losses beyond its coupling closure do not return through its own feedback."
   },
   "sources": [
    "theories/becoming/chapters/03-KNOWING.md#r-the-boundary-of-enough-under-undetermined-laws",
@@ -9456,7 +9454,7 @@
   "tests": [],
   "open": [
    {
-    "en": "How the relation of waiting forms, or amounts of giving. Thresholds of waiting, which this record leaves out, are stated in thresholds-of-waiting.",
+    "en": "How the relation of waiting forms, or amounts of giving. Thresholds of waiting without memory, which this record leaves out, are stated in thresholds-of-waiting; thresholds with memory are open there.",
     "source": "theories/becoming/results/records/giving-that-waits-on-giving.md#does-not-show--未表明"
    },
    {
@@ -9468,7 +9466,7 @@
     "source": "theories/becoming/chapters/05-COLLECTIVES.md#open"
    },
    {
-    "en": "Which laws giving first restore a general family, past the law of sources, for which the exact condition is stated (Tolerance.restores_iff).",
+    "en": "Which laws beyond those stated restore a general family: the condition is exact under giving first (Tolerance.restores_iff) and without memory (Tolerance.answers_restores_iff), and with memory none restores (Tolerance.waitsAll_never_restores).",
     "source": "theories/becoming/chapters/05-COLLECTIVES.md#open"
    }
   ],
@@ -9569,7 +9567,7 @@
     "source": "theories/becoming/chapters/05-COLLECTIVES.md#open"
    },
    {
-    "en": "Which laws giving first restore a general family, past the law of sources, for which the exact condition is stated (Tolerance.restores_iff).",
+    "en": "Which laws beyond those stated restore a general family: the condition is exact under giving first (Tolerance.restores_iff) and without memory (Tolerance.answers_restores_iff), and with memory none restores (Tolerance.waitsAll_never_restores).",
     "source": "theories/becoming/chapters/05-COLLECTIVES.md#open"
    }
   ],
@@ -10970,7 +10968,7 @@
   "tests": [],
   "open": [
    {
-    "en": "How the relation of waiting forms, or amounts of giving. Thresholds of waiting, which this record leaves out, are stated in thresholds-of-waiting.",
+    "en": "How the relation of waiting forms, or amounts of giving. Thresholds of waiting without memory, which this record leaves out, are stated in thresholds-of-waiting; thresholds with memory are open there.",
     "source": "theories/becoming/results/records/giving-that-waits-on-giving.md#does-not-show--未表明"
    },
    {
@@ -10978,7 +10976,7 @@
     "source": "theories/becoming/results/records/giving-that-waits-on-giving.md#does-not-show--未表明"
    },
    {
-    "en": "Which laws giving first restore a general family, past the law of sources, for which the exact condition is stated (Tolerance.restores_iff).",
+    "en": "Which laws beyond those stated restore a general family: the condition is exact under giving first (Tolerance.restores_iff) and without memory (Tolerance.answers_restores_iff), and with memory none restores (Tolerance.waitsAll_never_restores).",
     "source": "theories/becoming/chapters/05-COLLECTIVES.md#open"
    }
   ],
@@ -13856,7 +13854,7 @@
   },
   "family": "G",
   "mechanism": {
-   "en": "Where each arising lowers some condition of a finite family wherever none rises (a supplied premise, not a conclusion; it asks only that some condition of the family change and does not involve the arising formation), unceasing arising leaves the family still from no step on, and where every rise is an active renewer's, renewing stops from no step on. Under balance, uptake at arbitrarily late steps needs replenishment at arbitrarily late steps. Where a quantity never rises and every arising lowers it, arising is not unceasing; a closed cycle sustains it, and a tide renews with nothing arising: unceasing arising is strictly stronger than recurring renewal. Formations can arise one after another while drawing an unrenewed condition, and arising does not recur (a witness). A formation active exactly where supported, at a step and the next, does not arise across the step where every condition it required before is still required, its needs stay and every level stays: arising needs a change in what is read. Unceasing reads only that arising recurs at arbitrarily late steps, not more, diversity or complexity, and it depends on identity across steps."
+   "en": "Where, at a step at which no condition of a finite family rises, each arising goes with a fall in one of them (a supplied premise, not a conclusion; it asks only that some condition of the family change and does not involve the arising formation), unceasing arising leaves the family still from no step on, and where every rise is an active renewer's, renewing stops from no step on. Under balance, uptake at arbitrarily late steps needs replenishment at arbitrarily late steps. Where a quantity never rises and every arising lowers it, arising is not unceasing; a closed cycle sustains it, and a tide renews with nothing arising: unceasing arising is strictly stronger than recurring renewal. Formations can arise one after another while drawing an unrenewed condition, and arising does not recur (a witness). A formation active exactly where supported, at a step and the next, does not arise across the step where every condition it required before is still required, its needs stay and every level stays: arising needs a change in what is read. Unceasing reads only that arising recurs at arbitrarily late steps, not more, diversity or complexity, and it depends on identity across steps."
   },
   "records": [
    "unceasing-generation-needs-renewal",
@@ -13915,7 +13913,7 @@
     "to": null,
     "law": "Becoming.Web.Unceasing.activeRenewer_recurs",
     "edge": {
-     "en": "Where each arising lowers some condition of the family wherever none rises and every rise is an active renewer's, unceasing arising leaves renewing stopping from no step on."
+     "en": "Where, at a step at which no condition of the family rises, each arising goes with a fall in one of them, and every rise is an active renewer's, unceasing arising leaves renewing stopping from no step on."
     },
     "strength": "necessary",
     "records": [
@@ -16859,7 +16857,7 @@
     "source": "theories/becoming/results/records/regime-in-any-amounts.md#does-not-show--未表明"
    },
    {
-    "en": "Continuous time; a state with a further lag; coupled conditions with a recent giving (record coupled-regimes states two under the regime's step); that measured adjustments rise in both over their band.",
+    "en": "Continuous time; a state with a further lag; rest within a band on a web with a recent giving (record webs-with-a-recent-giving states such webs, this rest excepted); that measured adjustments rise in both over their band.",
     "source": "theories/becoming/results/records/regime-in-any-amounts.md#does-not-show--未表明"
    }
   ],

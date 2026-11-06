@@ -44,7 +44,7 @@
 <a id="conditions--条件"></a>
 ## Conditions
 
-- Listing and decidability: as in whole-law-of-counting; read of standing, a positive level is decided (a comparison of natural numbers), read of dependence, requiring is decided. It is a logical commitment of the representation. A census lists finitely many standing and finitely many dependences at each step.
+- Listing and decidability: as in whole-law-of-counting; read of standing, a positive level is decided (a comparison of natural numbers), read of dependence, requiring is decided. It is the law's own condition, not a commitment of the representation. A census lists finitely many standing and finitely many dependences at each step.
 - Pointwise: as in whole-law-of-counting, in place of function extensionality, a hypothesis of the theorems.
 - Enclosure and finiteness: as in counting-under-enclosure, conditions on worlds stated as hypotheses of the theorems, not axioms.
 
@@ -165,6 +165,7 @@ Aliases: `Becoming.World.standing_counting_under`, `Becoming.World.standing_iff_
 - 25 October 2026, board item DF (study section 418): a subset of the eight premises is now called a choice of premises, not a selection ('chooses', 'chosen'), in every live field: selection is the word for what goes through couplings. The laws and their scope are unchanged. Also, 'the author's reading (AI argument)' reads 'a reading (an AI argument)', and the retired label Part I in the correspondence and a related detail reads the theory without the condition.
 - 1 November 2026, board item ND (study section 492): declarations renamed so that each name states what it means, not a command, a value or an ownership: CountsObey → CensusMarksHold, DependsObey → DependenceMarksHold, StandsObey → StandingMarksHold, standsObey_iff → standingMarksHold_iff. The statements are kept but for the names; the claim is unchanged.
 - 1 November 2026, board item ND (study section 492): a case of a law is said to satisfy it, not to obey it, as the home section now reads: a law states what holds of its cases and commands nothing (08 §10). What the record states is unchanged.
+- 7 November 2026, board item AA: the atlas's readers found a hypothesis calling decidedness a commitment of the representation, where since Becoming.Decidedness each law states it as its own condition (08, the logical commitment); corrected against the Lean and the later records.
 - 8 rebinding entries (2026-10-13 to 2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](counting-standing-and-dependence.json).
 
 <a id="earlier-text--早期文本"></a>

@@ -33,7 +33,7 @@
 ## Does not show
 
 - Rest and thresholds of webs of infinitely many conditions: for finitely many, listed, they are stated (record rest-on-coupled-webs).
-- Partial dependence, where giving falls without stopping; the time of a cascade along a chain beyond each link's; webs with a recent giving; the reals and continuous time.
+- Partial dependence, where giving falls without stopping; the time of a cascade along a chain beyond each link's; rest within a band on webs with a recent giving (record webs-with-a-recent-giving states such webs, this rest excepted); the reals and continuous time.
 - That measured webs have total dependence or positive draws on their chains: the cascade is proved under these premises; how far it reaches in a field web is untested.
 - **Counterexample:** Coupled.Indexed.Chain.stopped: with no draw on the middle of a chain the first still ends, yet the third, downstream of it, holds at two for ever: positive draws on dependents cannot be dropped. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean)
 
@@ -49,7 +49,7 @@ Canonical source: [RegimeMargin.lean](../../../../experiments/integrated-correct
 <a id="next--下一步"></a>
 ## Next
 
-partial dependence with a rate; the time of a cascade along a chain; webs with a recent giving; a field web whose dependences are measured; an independent review.
+partial dependence with a rate; the time of a cascade along a chain; rest within a band on webs with a recent giving; a field web whose dependences are measured; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -108,6 +108,7 @@ Aliases: `coupled webs`, `the cascade of ends`, `coextinction along a chain of d
 
 - 21 October 2026: added (RM7), coupled webs: any number of conditions each giving from what is left of all; under mutual support the order of states is kept and ending is down-closed; along every chain of total dependence, with positive draws, the end of one ends everything downstream, a dependence cycle ending together; the pair is the web's case and RM6's laws are read off the web's; study section 311.
 - 22 October 2026, RM8: the rest and thresholds of webs are stated for finitely many conditions (record rest-on-coupled-webs, study section 325); its open item says so. Its laws are unchanged.
+- 7 November 2026, board item AA: the atlas's readers found a line gone stale against record webs-with-a-recent-giving; corrected against the Lean and the later records.
 
 </details>
 

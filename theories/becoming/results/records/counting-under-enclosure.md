@@ -88,7 +88,7 @@
 <a id="conditions--条件"></a>
 ## Conditions
 
-- Listing and decidability: as in whole-law-of-counting; read of worlds, decided activity. It is a logical commitment of the representation.
+- Listing and decidability: as in whole-law-of-counting; read of worlds, decided activity. It is the law's own condition, not a commitment of the representation.
 - Pointwise: as in whole-law-of-counting, in place of function extensionality, a hypothesis of the theorems.
 - Enclosure and finiteness: every step from some step on enclosed, or the world finite, are conditions on worlds, stated as hypotheses of the theorems, not axioms.
 
@@ -245,6 +245,7 @@ Aliases: `Becoming.occurrences`, `Becoming.ChangeBound`, `Becoming.ChangeBound.n
 - 1 November 2026, U4c (study section 492): declarations moved with their full names: steps_last, steps_mem, total_pos to Becoming.Prelude, with the list and stretch lemmas the root's census laws use. The cited Lean source and its proof binding follow them; the claim is unchanged.
 - 1 November 2026, board item ND (study section 492): declarations renamed so that each name states what it means, not a command, a value or an ownership: CountsObey → CensusMarksHold. The statements are kept but for the names; the claim is unchanged.
 - 6 November 2026, board item LM: declarations this record lists moved with the helpers stated once; its references follow them, and no law changed.
+- 7 November 2026, board item AA: the atlas's readers found a hypothesis calling decidedness a commitment of the representation, where since Becoming.Decidedness each law states it as its own condition (08, the logical commitment); corrected against the Lean and the later records.
 - 10 rebinding entries (2026-10-10 to 2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](counting-under-enclosure.json).
 
 <a id="earlier-text--早期文本"></a>

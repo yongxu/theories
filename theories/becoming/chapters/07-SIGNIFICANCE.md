@@ -66,7 +66,7 @@ With significance brought in, for any significance:
 **Theorem** (World). There is *loss beyond* a region of formations when some formation outside it is admitted without the part and not with it. The smaller the region, the more lies beyond it, and nothing lies beyond the whole; inclusion is admission within every region at once (`Web.includes_iff_within_every`), so a region's comparison takes the region as input, the whole's none. Witness: in `Clearing` the clearer, active and supported throughout, closes nothing within itself and its source and, from step 2 on (counting from 0), the dweller beyond them (`Clearing.loses_beyond`): going on is no sign that nothing is lost. ([record](../results/records/loss-beyond-a-region.md))
 
 <a id="r-the-run-classes-and-widening"></a>
-**Theorem** (World; balance, only active formations taking, and only from what they draw on; the last row also with only active formations giving). Run classes, read over a whole run ([02](02-MAP.md)), do not alone decide how a part changes what can form:
+**Theorem** (World; balance, only active formations taking, and only from what they draw on; the last row also with only active formations giving). A run class, read over a whole run ([02](02-MAP.md)), decides of how a part changes what can form only what its row says:
 
 | Class of a part | What it decides | Where it fails alone |
 |---|---|---|

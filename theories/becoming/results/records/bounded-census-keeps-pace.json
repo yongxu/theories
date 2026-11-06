@@ -126,8 +126,8 @@
       "en": "The world premise CountedWithin asks the bound at every step, the case T = 0. The more general form asks only that the list return within some number K at arbitrarily late steps (ceasing_of_returning, CountedBy.arising_iff_ceasing)."
     },
     {
-      "zh": "可判定：读于活动是活动可判定，读于水平自动成立；这是表示的逻辑承诺，经典地总是成立。",
-      "en": "Decidability: read of activity this is decided activity, read of standing it holds automatically; it is a logical commitment of the representation and classically always holds."
+      "zh": "可判定：读于活动是活动可判定，读于水平自动成立；这是此律自身的条件，不是表示的承诺，经典地总是成立。",
+      "en": "Decidability: read of activity this is decided activity, read of standing it holds automatically; it is the law's own condition, not a commitment of the representation, and classically always holds."
     },
     {
       "zh": "procession_world、accretion_unbounded 与 Finite.countedWithin 分别是关于具体世界或有限世界的陈述；Finite.countedWithin 要求活动可判定，以构造普查；Finite.census_bounded 不需要。",
@@ -869,6 +869,10 @@
     {
       "en": "1 November 2026, U4c (study section 492): declarations moved with their full names: recurring_accumulates to Becoming.Prelude, with the list and stretch lemmas the root's census laws use. The cited Lean source and its proof binding follow them; the claim is unchanged.",
       "zh": "2026年11月1日，U4c（研究第 492 节）：声明以完整名称移动：recurring_accumulates 移至 Becoming.Prelude，与根上之清点诸律所用之列表与跨段引理同处。所引 Lean 源及其证明绑定随之；论断不变。"
+    },
+    {
+      "en": "7 November 2026, board item AA: the atlas's readers found a contradiction on decidedness; corrected against the Lean and the later records.",
+      "zh": "2026年11月7日，工作板条目 AA：图谱读者发现关于可判定的一处矛盾；已对照 Lean 与后来的记录改正。"
     }
   ],
   "text_versions": [

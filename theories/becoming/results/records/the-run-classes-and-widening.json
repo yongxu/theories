@@ -10,8 +10,8 @@
   "family": "F01",
   "reviewed_at_utc": "2026-10-25T14:52:56+00:00",
   "statement": {
-    "en": "Where only active formations take, a part drawing only on conditions the run renews does not narrow, and a consumed dependence met without a part makes a part opening nothing narrow; if only active ones give too, a part inactive at the start that never arises changes nothing. No class decides alone.",
-    "zh": "只有活跃的形成取用时，只汲取整段上被更新之条件的部分不缩小；无此部分时被满足的被消耗依存，使不打开什么的部分缩小；只有活跃的形成也给予时，起点不活跃且从不生起的部分什么也不改变。没有一个类单独决定。"
+    "en": "Where only active formations take, a part drawing only on conditions the run renews does not narrow, and a consumed dependence met without a part makes a part opening nothing narrow; if only active ones give too, a part inactive at the start that never arises changes nothing. Each decides only that.",
+    "zh": "只有活跃的形成取用时，只汲取整段上被更新之条件的部分不缩小；无此部分时被满足的被消耗依存，使不打开什么的部分缩小；只有活跃的形成也给予时，起点不活跃且从不生起的部分什么也不改变。各类只决定这些。"
   },
   "laws": [
     {
@@ -332,6 +332,10 @@
     {
       "en": "3 November 2026, CD (board item CD): laws 5 and 6, the dependency's output, a related line and the correspondence speak of how a part changes what can form, not of its place in an order, as the home section in 07 §2 now says. Under the glossary's one sense, ranking and order (the ethics' role word) say which course is better, and widening says which admits more, with no premise. The claim is unchanged.",
       "zh": "2026年11月3日，工作板条目 CD：律 5 与 6、依赖之输出、一条相关说明与对应改说部分如何改变能形成者，而非其在次序中之位置，与 07 §2 的本节现今所说相同。按词汇表的单一词义，排序与次序（伦理的角色词）说哪个进程更好，扩大说哪个所纳更多，不需前提。主张不变。"
+    },
+    {
+      "en": "7 November 2026, board item AA: the atlas's readers found a closing sentence reading loosely on its own table; corrected against the Lean and the later records.",
+      "zh": "2026年11月7日，工作板条目 AA：图谱读者发现末句与其自身的表不甚相合；已对照 Lean 与后来的记录改正。"
     }
   ],
   "text_versions": [

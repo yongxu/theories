@@ -14,7 +14,7 @@
    - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 2. Two eventual conditional promises, each "if the other eventually does, I eventually do", hold where neither ever happens; and, in a witness, preservation holds where the law has no successor, so no step is available. (`SeededContinuation.reciprocal_eventual_promises_can_be_empty`, `SeededContinuation.preservation_without_availability`)
    - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
-3. In a shared renewal whose two sides each pass their activity to the other at every step, joint activity at any step is exactly joint activity at the start: an empty start stays empty, one side alone never becomes jointly active, a stored reserve ignites a start active at every step, and ignition needs the reserve and uses it up. (`SeededContinuation.Config`, `SeededContinuation.tick`, `SeededContinuation.run`, `SeededContinuation.active`, `SeededContinuation.ignite`, `SeededContinuation.tick_supports_mutually`, `SeededContinuation.tick_active_iff`, `SeededContinuation.active_run_iff`, `SeededContinuation.empty_never_starts`, `SeededContinuation.partial_seed_not_joint`, `SeededContinuation.stored_seed_starts_and_maintains`, `SeededContinuation.ignition_requires_actual_reserve`, `SeededContinuation.absent_reserve_blocks_ignition`)
+3. In a shared renewal whose two sides each pass their activity to the other at every step, joint activity at any step is exactly joint activity at the start: an empty start stays empty, one side alone never becomes jointly active, a stored reserve ignites a start active at every step, and ignition, defined as spending a reserve, needs the reserve and uses it up (near-definitional). (`SeededContinuation.Config`, `SeededContinuation.tick`, `SeededContinuation.run`, `SeededContinuation.active`, `SeededContinuation.ignite`, `SeededContinuation.tick_supports_mutually`, `SeededContinuation.tick_active_iff`, `SeededContinuation.active_run_iff`, `SeededContinuation.empty_never_starts`, `SeededContinuation.partial_seed_not_joint`, `SeededContinuation.stored_seed_starts_and_maintains`, `SeededContinuation.ignition_requires_actual_reserve`, `SeededContinuation.absent_reserve_blocks_ignition`)
    - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 
 <a id="conditions--条件"></a>
@@ -50,7 +50,7 @@ How a supported start forms in a run, and the paired plan from a seed on the spi
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-Concurrency: the one-step obligations are an inductive invariant for two properties, in the style of rely-guarantee reasoning (Jones 1983), each property being kept by every step taken where both hold. Read by the AI: cooperation among strangers needs a source, and mutual promises alone cannot start a loop.
+Concurrency: the one-step obligations are an inductive invariant for two properties, in the style of rely-guarantee reasoning (Jones 1983), each property being kept by every step taken where both hold. Read by the AI: cooperation among strangers needs a source, and mutual promises alone force no start of a loop.
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
@@ -74,6 +74,7 @@ Aliases: `Joint plans from a supported start`, `自受支持之起点的共同�
 ### History
 
 - 27 October 2026: added (DF2), paired local plans are jointly valid from a supported start under one-step joint availability and mutual preservation, mutual eventual promises force nothing, and in a witness ignition needs a stored reserve; from DEFECTS-FOUND (triage row 195); study section 426.
+- 7 November 2026, board item AA: the atlas's readers found a clause true by the move's definition and not labelled so, and a reading saying promises cannot start a loop where the law says they force nothing; corrected against the Lean and the later records.
 
 </details>
 

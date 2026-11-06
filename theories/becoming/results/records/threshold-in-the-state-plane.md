@@ -36,7 +36,7 @@
 
 - The threshold over the reals as a computed level: there a run converges, and record regime-in-any-amounts states the fates as down-closed and falling with the recent giving, not the level.
 - That measured adjustments rise in both arguments over their band, or how often below-point episodes with recent giving short of the catch fall in the field: the curve's direction is proved under the premises. Its field frequency was tested once, on the 21 stocks with a level in tonnes that no analysis had read (MQ7): the episodes short of the catch fell 0.39 more often than those meeting it, in the same stock at the same deficit, but from 5 stocks, and the frozen bound was not met (failed), so the frequency is not established.
-- The threshold beyond the band, where the search stops at hi + 1; a state with a further lag; coupled conditions with a recent giving (record coupled-regimes states two under the regime's step).
+- The threshold beyond the band with no bound on the run (with one, record webs-with-a-recent-giving states it), where the search here stops at hi + 1; a state with a further lag; rest within a band on a web with a recent giving (record webs-with-a-recent-giving states such webs, this rest excepted).
 - **Counterexample:** Notch.no_threshold: giving that does not rise with what is left keeps a band, yet the run from four rests below the draw and the run from three, below it, does not, so no least level separates them. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean)
 
 **Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
@@ -51,7 +51,7 @@ Canonical source: [RegimeMargin.lean](../../../../experiments/integrated-correct
 <a id="next--下一步"></a>
 ## Next
 
-A computed threshold over the reals; that frozen test on more stocks no analysis has read, which MQ7's 21 (5 of them compared) did not settle; the order of fates above the level law's peak, where measured giving falls as the level rises; a state with a further lag; coupled conditions with a recent giving; an independent review.
+A computed threshold over the reals; that frozen test on more stocks no analysis has read, which MQ7's 21 (5 of them compared) did not settle; the order of fates above the level law's peak, where measured giving falls as the level rises; a state with a further lag; rest within a band on a web with a recent giving; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -127,6 +127,7 @@ Aliases: `the threshold in the plane of level and recent giving`, `the point of 
 - 21 October 2026, MQ7: the field frequency of fates on either side of the curve was put to a frozen test on the 21 primary stocks in NOAA Stock SMART and ICES Stock Assessment Graphs that no analysis had read (study section 316): below the regime's point, on the low side, episodes short of the catch fell 0.39 more often than those meeting it, in the same stock at the same deficit, from 5 stocks, with a lower bound of 0.00 (C1 failed; C2 not testable). What this record does not show and its next delta now say so. Its laws are unchanged.
 - 22 October 2026, UM: one law of exact thresholds added, from which this record's exactness and falling are now derived; Adjusted.threshold_le removed, no law reading it (study section 335).
 - 3 November 2026, T1P (a correction from TS2's reader, recorded in the review packet's T1-STANDING.md, "After TS2's reader"): law 5's premise, and the hypotheses with it, say exactly what Meets requires, giving meeting the draw at every z from y with z + H at most the band's top, where it had read as every level from y up to the top, more than the Lean asks; the law now states what the Lean proves, under the weaker premise, and the Lean is unchanged.
+- 7 November 2026, board item AA: the atlas's readers found lines gone stale against record webs-with-a-recent-giving; corrected against the Lean and the later records.
 
 </details>
 

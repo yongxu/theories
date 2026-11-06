@@ -157,8 +157,8 @@
       ]
     },
     {
-      "zh": "守住历史：构型承载历史时其读数是箭头，第一律之下交换在构型的个数之内停止，有限世界不停交换就遗忘。",
-      "en": "Holding the history: where the configuration carries the history, its reading is an arrow, exchange stops within the configurations under the first law, and a finite world that keeps exchanging forgets.",
+      "zh": "守住历史：构型承载历史时其读数是箭头，第一律之下交换在构型的个数之内停止；第一律之下、平衡且列举不重复的有限世界不停交换就遗忘。",
+      "en": "Holding the history: where the configuration carries the history, its reading is an arrow, exchange stops within the configurations under the first law, and a finite world under the first law, balanced and listed without repetition, that keeps exchanging forgets.",
       "declarations": [
         "Becoming.Flow.CarriesHistory",
         "Becoming.Flow.Balances.arrow_of_carries",
@@ -1153,6 +1153,10 @@
     {
       "en": "6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.",
       "zh": "2026年11月6日，工作板条目 LM：此记录所列辅助引理现只陈述一次，在 Prelude、Flow、Change 或 Laws，或即 Lean 自有者而从列表除去；改其名，诸律不变。"
+    },
+    {
+      "en": "7 November 2026, board item AA: the atlas's readers found a clause dropping what its law takes; corrected against the Lean and the later records.",
+      "zh": "2026年11月7日，工作板条目 AA：图谱读者发现一个子句略去其律所需；已对照 Lean 与后来的记录改正。"
     }
   ],
   "text_versions": [

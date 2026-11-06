@@ -5,7 +5,7 @@
 
 `steps-met-again-after-a-fall` · **recorded-checked** · theorem · F01 · [record](steps-met-again-after-a-fall.json) · [register](../../../../RESULTS.md)
 
-> Counted at every step met, wherever, a coupling a step keeps a need under every optimum exactly where r + e < q + c + m and e < c, strictly above the count from the start: a fall met again loses the coupling only at the steps below.
+> Counted at every step met, wherever, a coupling a step keeps a need under every optimum where r + e < q + c + m and e < c, strictly above the count from the start: a fall met again loses the coupling only at the steps below.
 
 <a id="laws--规律"></a>
 ## Laws
@@ -99,6 +99,7 @@ Aliases: `steps met again after a fall`, `a coupling for every step met`, `跌�
 ### History
 
 - 22 October 2026: added (SG13), steps met again after a fall: counted at every step met, a coupling a step keeps the need under every optimum where r + e < q + c + m and e < c, strictly above the count from the start; study section 323.
+- 7 November 2026, board item AA: the atlas's readers found a statement saying exactly where its law gives one direction; corrected against the Lean and the later records.
 
 </details>
 

@@ -36,7 +36,7 @@
 ## Does not show
 
 - The optimum where no course whose level gains the most at each step is open; whether an optimum ends the base after the first step where some level renews faster at the first steps.
-- An order valuing what is left at the horizon at a worth whose most left is not regrown in one step; rebuilding from below; several optimizers ranking courses; SG5's laws re-derived as the case of every weight one.
+- An order valuing what is left at the horizon at a worth whose most left is not regrown in one step; several optimizers ranking courses; SG5's laws re-derived as the case of every weight one. Rebuilding from below is in record optima-rebuild-a-depleted-base.
 - That a weighting ought to be flatter or a base kept: no evaluation enters; the laws say which optima a weighting leaves.
 
 **Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
@@ -51,7 +51,7 @@ Canonical source: [Optimum.lean](../../../../experiments/integrated-correction/g
 <a id="next--下一步"></a>
 ## Next
 
-The optimum where no reference course is open; ending after the first step; an order valuing what is left at the horizon at a worth whose most left is not regrown in one step; rebuilding from below; several optimizers ranking courses; an independent review.
+The optimum where no reference course is open; ending after the first step; an order valuing what is left at the horizon at a worth whose most left is not regrown in one step; several optimizers ranking courses; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -140,6 +140,7 @@ Aliases: `a weighting falling faster than renewal ends the base`, `an order weig
 - 22 October 2026, SG13: steps met again after a fall are answered (record steps-met-again-after-a-fall, study section 323); its open item says so. Its laws are unchanged.
 - 23 October 2026, EC6 (study section 375): Optimum.Next.drawable_le_of_gains is now proved as a case of rest by balance (record rest-by-balance) instead of by its own induction; its statement and this record's laws are unchanged.
 - 6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.
+- 7 November 2026, board item AA: the atlas's readers found a line gone stale against record optima-rebuild-a-depleted-base; corrected against the Lean and the later records.
 
 </details>
 

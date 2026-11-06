@@ -75,7 +75,7 @@
 
 - That an agent's preferences form a nearing order: they do where strictly single-peaked at each observed condition, each peak independent; a tolerance band around the set point is not one, nor is a best level depending on other conditions.
 - Any probability, surprisal, expected free energy or precision: active inference's preferences, prior beliefs over outcomes, are read as a nearing order at the high-precision limit.
-- That a set point protects what lies beyond: where a step can lose what it takes, the order by distance has the draining step among its optima beside the keeping one; what protects is the choice among equal optima. Witness: `Becoming.Optimum.Topped.nearing_either`.
+- That a set point protects what lies beyond: in a witness where a step can lose what it takes, the order by distance has the draining step among its optima beside the keeping one; what protects is the choice among equal optima. Witness: `Becoming.Optimum.Topped.nearing_either`.
 - The quantilizer bound: a choice drawn from a base distribution over the ways of reaching the set point would inherit it (Taylor 2016); that is a reading, not proved here.
 - Anything over a horizon or under noise: every law is of one step or of supplied courses, and deterministic; under noise a set point on later states makes reserves worth holding, so a rising drive on stores can return.
 - Which optimum is taken where several stand at the set point; the optima where none reaches it and some stand above, or in an exchange at or above it beyond the witnesses.
@@ -148,6 +148,7 @@ Aliases: `What a set-point optimum does beyond what couples in`, `设定点最�
 
 - 25 October 2026: added (UE1b), what an order with a set point does beyond what couples in: the drain below the set point, the draw at it, and joint excess for holders with no choice in that law; the three general laws of the exchange moved into Becoming.Optimum (board rule 9); reviewed independently and re-checked; study section 415.
 - 29 October 2026, board item UE16 (study section 449): related to risk-minimization-on-a-shared-renewal; no statement, next step or declaration changed.
+- 7 November 2026, board item AA: the atlas's readers found a witness stated generally; corrected against the Lean and the later records.
 
 </details>
 

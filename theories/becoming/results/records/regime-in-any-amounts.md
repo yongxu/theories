@@ -17,7 +17,7 @@
 3. From the first step on, a step that neither raises nor lowers both climbs (the level up strictly, the recent giving down strictly toward the draw from above) or sinks (the mirror, from below), whatever the adjustment, and the next such step is of the same kind. (`Becoming.RegimeMargin.Drawn.Climbs`, `Becoming.RegimeMargin.Drawn.Sinks`, `Becoming.RegimeMargin.Drawn.given_le_level`, `Becoming.RegimeMargin.Drawn.level_up_iff`, `Becoming.RegimeMargin.Drawn.level_down_iff`, `Becoming.RegimeMargin.Drawn.level_of_low`, `Becoming.RegimeMargin.Drawn.climbs_or_sinks`, `Becoming.RegimeMargin.Drawn.climbs_next`, `Becoming.RegimeMargin.Drawn.sinks_next`, `Becoming.RegimeMargin.Drawn.run_shape`)
    - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar; the measure counts central declaration `Becoming.RegimeMargin.Drawn.run_shape` as following from a shared law (by reaching the grammar).
    - *Standing of `Becoming.RegimeMargin.Drawn.run_shape`, by the rule:* connected (it reaches `Becoming.«所闭之传递»`, `Becoming.«所闭之自反»` and `Becoming.«缘在所闭»` among its reasons; not declared a case of one).
-4. A run from a state within a band the step keeps stays within it, and a run is still from a step exactly where its state there is the regime's point or a state within the draw with level and recent giving equal. (`Becoming.RegimeMargin.Drawn.Band`, `Becoming.RegimeMargin.Drawn.run_within`, `Becoming.RegimeMargin.Drawn.rest_iff`, `Becoming.RegimeMargin.Drawn.still_iff`)
+4. A run from a state within a band the step keeps stays within it, and a run is still from a step exactly where its state there is the regime's point, with the adjustment giving the draw again, or a state within the draw with level and recent giving equal that the adjustment from nothing left gives again. (`Becoming.RegimeMargin.Drawn.Band`, `Becoming.RegimeMargin.Drawn.run_within`, `Becoming.RegimeMargin.Drawn.rest_iff`, `Becoming.RegimeMargin.Drawn.still_iff`)
    - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar.
 5. Over the non-negative reals, amounts with a draw, every run of a rising adjustment from a state within a band converges: its level and recent giving are each monotone from some step on and bounded. (`Becoming.RegimeMargin.Drawn.reals`, `Becoming.RegimeMargin.Drawn.reals_step`, `Becoming.RegimeMargin.Drawn.tendsto_of_rising`, `Becoming.RegimeMargin.Drawn.tendsto_of_falling`, `Becoming.RegimeMargin.Drawn.converges`)
    - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
@@ -38,7 +38,7 @@
 
 - That a run converges, in the core: convergence of a bounded monotone sequence is an omniscience principle, so the core states the shape of a run and the periphery the convergence over the reals.
 - The threshold over the reals as a computed level, or the regime's case H + y there: the fates are stated as down-closed and falling with the recent giving.
-- Continuous time; a state with a further lag; coupled conditions with a recent giving (record coupled-regimes states two under the regime's step); that measured adjustments rise in both over their band.
+- Continuous time; a state with a further lag; rest within a band on a web with a recent giving (record webs-with-a-recent-giving states such webs, this rest excepted); that measured adjustments rise in both over their band.
 - **Counterexample:** Drawn.Relaxation.never_rests: giving moving halfway toward a draw of one rises in both and keeps a band, and its run from nothing converges and is still from no step, so over the reals a run need not come to rest. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/regime/RegimeReals.lean)
 
 **Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
@@ -53,7 +53,7 @@ Canonical source: [RegimeMargin.lean](../../../../experiments/integrated-correct
 <a id="next--下一步"></a>
 ## Next
 
-A computed threshold and the regime's case H + y over the reals; continuous time; a state with a further lag; coupled conditions with a recent giving; the order of fates above the level law's peak, where measured giving falls as the level rises; an independent review.
+A computed threshold and the regime's case H + y over the reals; continuous time; a state with a further lag; rest within a band on a web with a recent giving; the order of fates above the level law's peak, where measured giving falls as the level rises; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -121,6 +121,7 @@ Aliases: `the regime in any amounts`, `the shape of a run of the adjusted step`,
 - 21 October 2026: whether measured adjustments rise in both over their bands is answered post hoc on MQ5's stocks (study section 280): the field's giving rises in the recent giving in 65 of 69 stocks, and in what is left only below each stock's level-law peak (a median 41% of its observed escapements); the next step now names the order above the peak. Its laws are unchanged.
 - 21 October 2026, RM6: coupled conditions, left open here, are stated for two conditions under the regime's step (record coupled-regimes, study section 306); what this record does not show and its next delta now say what stays open. Its laws are unchanged.
 - 21 October 2026, RM7: more than two coupled conditions are stated as a web under the regime's step (record coupled-webs, study section 311); its next delta no longer lists them. Its laws are unchanged.
+- 7 November 2026, board item AA: the atlas's readers found a clause dropping what its law needs and a line gone stale against record webs-with-a-recent-giving; corrected against the Lean and the later records.
 
 </details>
 

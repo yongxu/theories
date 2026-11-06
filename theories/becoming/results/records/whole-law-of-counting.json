@@ -277,8 +277,8 @@
   ],
   "hypotheses": [
     {
-      "zh": "列出与可判定：同 census-balance；读于世界时是活动可判定。这是表示的逻辑承诺。",
-      "en": "Listing and decidability: as in census-balance; read of worlds, decided activity. It is a logical commitment of the representation."
+      "zh": "列出与可判定：同 census-balance；读于世界时是活动可判定。这是此律自身的条件，不是表示的承诺。",
+      "en": "Listing and decidability: as in census-balance; read of worlds, decided activity. It is the law's own condition, not a commitment of the representation."
     },
     {
       "zh": "逐点（Pointwise）：性质尊重计数每步的值。有函数外延性时每个性质都如此；纯净核心不假设它，所以作为定理的假设陈述；不用它的刻画是 tally_iff_counted。",
@@ -1383,6 +1383,10 @@
     {
       "en": "1 November 2026, board item ND (study section 492): declarations renamed so that each name states what it means, not a command, a value or an ownership: CountsObey → CensusMarksHold. The statements are kept but for the names; the claim is unchanged.",
       "zh": "2026年11月1日，工作板条目 ND（研究第 492 节）：声明更名，使名言其所指，不言命令、价值或所有：CountsObey → CensusMarksHold。陈述除名外不变；论断不变。"
+    },
+    {
+      "en": "7 November 2026, board item AA: the atlas's readers found a hypothesis calling decidedness a commitment of the representation, where since Becoming.Decidedness each law states it as its own condition (08, the logical commitment); corrected against the Lean and the later records.",
+      "zh": "2026年11月7日，工作板条目 AA：图谱读者发现一条假设称可判定为表示的承诺，而自 Becoming.Decidedness 起每条律把它作为自身的条件陈述（08，逻辑承诺一节）；已对照 Lean 与后来的记录改正。"
     }
   ],
   "text_versions": [

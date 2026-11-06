@@ -5,7 +5,7 @@
 
 `giving-that-waits-on-giving` · **recorded-checked** · theorem · F01 · [record](giving-that-waits-on-giving.json) · [register](../../../../RESULTS.md)
 
-> Where giving waits on giving: with memory one withholding ends all giving in a family it reaches, from then on; without memory withholding passes out where no chain of waits is long enough and returns around every loop. More waiting is less giving.
+> Where giving waits on giving: with memory one withholding ends all giving in a family it reaches, from then on; without memory withholding passes out where no chain of waits is long enough and returns around every loop. More waiting gives no more.
 
 <a id="laws--规律"></a>
 ## Laws
@@ -17,9 +17,9 @@
    - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar.
 3. Without memory, a formation gives at step n exactly where every formation with a chain of exactly n waits to it gave at the start; where no chain of L waits exists, every formation gives from step L on, whatever the start (exact in Line); on a loop of p waits, withholding returns at every multiple of p. (`Becoming.Withholding.answers`, `Becoming.Withholding.answers_closed`, `Becoming.Withholding.no_longer_chain`, `Becoming.Withholding.gives_without_chain`, `Becoming.Withholding.Line.passes_out_exact`, `Becoming.Withholding.withholding_returns`)
    - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar.
-4. More waiting, less giving: adding waits takes giving away at every step under both laws. (`Becoming.Withholding.waitsAll_more_waiting`, `Becoming.Withholding.answers_more_waiting`)
+4. More waiting gives no more: whatever gives under added waits gives without them, at every step under both laws. (`Becoming.Withholding.waitsAll_more_waiting`, `Becoming.Withholding.answers_more_waiting`)
    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
-5. Restoring needs another law: in Ring, three formations each waiting on the one before, with memory all withhold from step 2, exactly; without memory the withholding circulates; under the law in which one formation gives whatever it waits on, every formation gives from step 3 on from every start, exactly. (`Becoming.Withholding.givesFirst`, `Becoming.Withholding.Ring.waitsAll_absorbs_exact`, `Becoming.Withholding.Ring.answers_circulates`, `Becoming.Withholding.Ring.answers_returns`, `Becoming.Withholding.Ring.givesFirst_restores`, `Becoming.Withholding.Ring.givesFirst_restores_exact`)
+5. Restoring needs another law: in Ring, three formations each waiting on the one before, from one withholding, with memory all withhold from step 2, exactly; without memory the withholding circulates; under the law in which one formation gives whatever it waits on, every formation gives from step 3 on from every start, exactly. (`Becoming.Withholding.givesFirst`, `Becoming.Withholding.Ring.waitsAll_absorbs_exact`, `Becoming.Withholding.Ring.answers_circulates`, `Becoming.Withholding.Ring.answers_returns`, `Becoming.Withholding.Ring.givesFirst_restores`, `Becoming.Withholding.Ring.givesFirst_restores_exact`)
    - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar.
 
 <a id="conditions--条件"></a>
@@ -30,8 +30,8 @@
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
-- How the relation of waiting forms, or amounts of giving and thresholds of waiting (giving where at least k of what one waits on gave).
-- Which laws that give first restore giving in a general family; that cooperation is good, or which giving supports 生生.
+- How the relation of waiting forms, or amounts of giving. Thresholds of waiting without memory (giving where all but a tolerance of what one waits on gave) are in record thresholds-of-waiting; thresholds with memory are open there.
+- Which laws beyond those stated restore giving in a general family (the condition is exact under giving first and without memory, and with memory none restores: record restoring-giving-from-the-worst-start; under a tolerance restoring needs a formation sparing all it waits on: record thresholds-of-waiting); that cooperation is good, or which giving supports 生生.
 
 **Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
 
@@ -45,7 +45,7 @@ Canonical source: [Withholding.lean](../../../../experiments/integrated-correcti
 <a id="next--下一步"></a>
 ## Next
 
-Thresholds and amounts; restoring laws in general families; deriving the waiting relation from a flow; an independent review.
+Amounts of giving; laws beyond those stated restoring a general family; deriving the waiting relation from a flow; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -94,6 +94,7 @@ Aliases: `giving that waits on giving`, `等待给出的给出`, `withholding ab
 - 20 October 2026, R29 (compression under board rule 9: generalize below, not beside; one name per statement): Proof bindings (Withholding.lean) rebound to core receipt 20261019T185632.962707Z. Re-pointed after reading the change: Recurrence.lean, the laws of every process (Branching's Merges.not_lossless, Reachable.earlier, lost_stays, Returns.reachable, Lossless.returns and others), Law.run, Law.run_state and Run.onward moved in; Law.lost_stays, Law.Lossless.returns, Law.Lossless.unlisted and Law.rise_not_lossless are their one-line cases at the law's run; Law.Merges.not_lossless, Law.Reachable.earlier and Law.Returns.reachable removed; statements kept unchanged; Withholding.lean, a restatement of a statement proved under another name removed (one name per statement), or a use or docstring re-pointed to the kept name; kept statements unchanged; THE-THEORY-OF-BECOMING.md, the sentences citing the removed names cite the kept ones; §9 (layers, import tree, receipt, counts) follows R29. The claim is unchanged.
 - 20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Re-pointed after reading the change: Recurrence.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; THE-THEORY-OF-BECOMING.md, names follow the R30 rename table; the retired Lean names of 20 October are in the glossary; §9 (receipt) follows R30. Also re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.
 - 20 October 2026, R32 (forwarders, copies and reading modules: pure forwarders removed, statements stated once, reading modules folded into the module they read): Proof bindings (Withholding.lean) rebound to core receipt 20261019T231053.882924Z. Re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 223 added; Recurrence.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; Withholding.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; THE-THEORY-OF-BECOMING.md, §9 (receipt, counts, connectivity under the measure that no longer counts restatement) follows R32. The claim is unchanged.
+- 7 November 2026, board item AA: the atlas's readers found a weak inclusion read as a loss at every step, a start dropped, and lines gone stale against records thresholds-of-waiting and restoring-giving-from-the-worst-start; corrected against the Lean and the later records.
 - 1 rebinding entry (2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](giving-that-waits-on-giving.json).
 
 <a id="earlier-text--早期文本"></a>

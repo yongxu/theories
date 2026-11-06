@@ -90,8 +90,8 @@
       "kind": "scope"
     },
     {
-      "en": "Partial dependence, where giving falls without stopping; the time of a cascade along a chain beyond each link's; webs with a recent giving; the reals and continuous time.",
-      "zh": "部分依赖（所给下降而不停止）；链上级联的时间（逐环之外）；带近来所给的网；实数与连续时间。",
+      "en": "Partial dependence, where giving falls without stopping; the time of a cascade along a chain beyond each link's; rest within a band on webs with a recent giving (record webs-with-a-recent-giving states such webs, this rest excepted); the reals and continuous time.",
+      "zh": "部分依赖（所给下降而不停止）；链上级联的时间（逐环之外）；带近来所给之网在带内的静止（记录 webs-with-a-recent-giving 陈述这样的网，此静止除外）；实数与连续时间。",
       "kind": "scope"
     },
     {
@@ -122,8 +122,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261021T132557.057625Z）：Becoming.RegimeMargin 新增的 26 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 311 节；未经人的独立审查。"
   },
   "next_delta": {
-    "en": "partial dependence with a rate; the time of a cascade along a chain; webs with a recent giving; a field web whose dependences are measured; an independent review.",
-    "zh": "带比率的部分依赖；链上级联的时间；带近来所给的网；依赖经测量的野外之网；独立审查。"
+    "en": "partial dependence with a rate; the time of a cascade along a chain; rest within a band on webs with a recent giving; a field web whose dependences are measured; an independent review.",
+    "zh": "带比率的部分依赖；链上级联的时间；带近来所给之网在带内的静止；依赖经测量的野外之网；独立审查。"
   },
   "correspondence": {
     "en": "Cooperative (monotone) systems keep the order of states in any dimension, and their extinction sets are down-closed (Smith 1995; Hirsch and Smith 2005); secondary extinctions cascade through food webs, their reach set by the web's structure (Pimm 1980; Dunne, Williams and Martinez 2002); coextinction of dependents (Koh et al. 2004). On the spine, constructive and exact in its premises: the cascade along any chain of total dependence follows from one link's law, each link's steps counted, a dependence cycle ends together, and positive draws on dependents are shown needed by a witness; the pair is the web's case.",
@@ -422,6 +422,10 @@
     {
       "en": "22 October 2026, RM8: the rest and thresholds of webs are stated for finitely many conditions (record rest-on-coupled-webs, study section 325); its open item says so. Its laws are unchanged.",
       "zh": "2026年10月22日，RM8：有限多个条件之网的静止与阈值已陈述（记录 rest-on-coupled-webs，研究第 325 节）；其开放项如此说明。其规律不变。"
+    },
+    {
+      "en": "7 November 2026, board item AA: the atlas's readers found a line gone stale against record webs-with-a-recent-giving; corrected against the Lean and the later records.",
+      "zh": "2026年11月7日，工作板条目 AA：图谱读者发现一行已落后于记录 webs-with-a-recent-giving；已对照 Lean 与后来的记录改正。"
     }
   ]
 }

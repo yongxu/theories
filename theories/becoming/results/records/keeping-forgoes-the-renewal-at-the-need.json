@@ -130,8 +130,8 @@
   ],
   "does_not_show": [
     {
-      "en": "A coupling added step by step, which gives a course breaking late part of the coupling.",
-      "zh": "按步加入的耦合（它给迟些打破的过程部分的值）。",
+      "en": "A course breaking late part of the coupling: a coupling added step by step gives one, and is in record a-step-coupling-keeps-at-every-horizon.",
+      "zh": "迟些打破的过程部分的耦合之值：按步加入的耦合给出它，见记录 a-step-coupling-keeps-at-every-horizon。",
       "kind": "scope"
     },
     {
@@ -140,8 +140,8 @@
       "kind": "scope"
     },
     {
-      "en": "An order with a terminal value whose most left is not regrown in one step, or a discount; the optimum rebuilding from below; several optimizers ranking courses.",
-      "zh": "带最多所留不能一步再生的终值或折现的序；自下重建的最优；多个对过程排序的优化者。",
+      "en": "An order with a terminal value whose most left is not regrown in one step; several optimizers ranking courses; this coupling under a discount. A discount without the coupling, and rebuilding from below, are in records a-weighting-faster-than-renewal-ends-the-base and optima-rebuild-a-depleted-base.",
+      "zh": "带最多所留不能一步再生的终值的序；多个对过程排序的优化者；折现之下的此耦合。无此耦合的折现与自下重建见记录 a-weighting-faster-than-renewal-ends-the-base、optima-rebuild-a-depleted-base。",
       "kind": "scope"
     },
     {
@@ -164,8 +164,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261021T052543.695066Z）：Becoming.Optimum 新增的 49 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 293 节；未经人的独立审查。"
   },
   "next_delta": {
-    "en": "A coupling added step by step; an order with a terminal value whose most left is not regrown in one step, or a discount; the optimum rebuilding from below; several optimizers ranking courses; an independent review.",
-    "zh": "按步加入的耦合；带最多所留不能一步再生的终值或折现的序；自下重建的最优；多个对过程排序的优化者；独立审查。"
+    "en": "An order with a terminal value whose most left is not regrown in one step; several optimizers ranking courses; this coupling under a discount; an independent review.",
+    "zh": "带最多所留不能一步再生的终值的序；多个对过程排序的优化者；折现之下的此耦合；独立审查。"
   },
   "correspondence": {
     "en": "The exact penalty: a penalty beyond the value of a constraint makes the constrained optimum an unconstrained one (Zangwill 1967), here a lump-sum coupling whose threshold is the value gap itself; the yield given up by managing a prey for its predators' needs (May and others 1979; Pikitch and others 2012); impact penalties, whose coefficient trades task reward against side effects (Krakovna and others 2019; Turner, Hadfield-Menell and Tadepalli 2020). On the spine the gap is exact for every renewal law bounded by r and by q at or above the need, the thresholds cover every order rising with the worth and are attained on both sides, and the break is a law of the dependence web. Reading (the AI's): what keeping forgoes is no fixed sum; where the need lies above every level of greatest renewal it grows with the horizon, so far-sight outweighs every coupling fixed in total.",
@@ -668,6 +668,10 @@
     {
       "en": "6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.",
       "zh": "2026年11月6日，工作板条目 LM：此记录所列辅助引理现只陈述一次，在 Prelude、Flow、Change 或 Laws，或即 Lean 自有者而从列表除去；改其名，诸律不变。"
+    },
+    {
+      "en": "7 November 2026, board item AA: the atlas's readers found lines gone stale against records a-step-coupling-keeps-at-every-horizon, a-weighting-faster-than-renewal-ends-the-base and optima-rebuild-a-depleted-base, the coupling under a discount kept open; corrected against the Lean and the later records.",
+      "zh": "2026年11月7日，工作板条目 AA：图谱读者发现数行已落后于记录 a-step-coupling-keeps-at-every-horizon、a-weighting-faster-than-renewal-ends-the-base 与 optima-rebuild-a-depleted-base，折现之下的此耦合仍开放；已对照 Lean 与后来的记录改正。"
     }
   ]
 }

@@ -31,8 +31,8 @@
 ## Does not show
 
 - Rest in finitely many steps over the reals: in whole numbers each change moves an amount by at least one; over the reals a run converges and need not rest (record regime-in-any-amounts).
-- That measured giving rises over its band: MQ5's law rises in both arguments exactly where its regime's giving rises with what is left, which is not checked on the data.
-- That 3 hi + 3 is the least bound; a state with a further lag; coupled conditions with a recent giving (record coupled-regimes states two under the regime's step).
+- That measured giving rises over its band: MQ5's law rises in both arguments exactly where its regime's giving rises with what is left. Read through the balance as an adjustment, post hoc on MQ5's stocks (experiments/margin-measured, results/mq5/rises.json), it rises in the recent giving in 65 of 69 stocks; in what is left its one-step fit has no slope (median −0.01), and each stock's fitted level law is humped, rising over a median 41% of its observed escapements and over the whole band in only 4 of 69: the order laws reach the field's state on the low side of its level law, below the peak.
+- That 3 hi + 3 is the least bound; a state with a further lag; rest within a band on a web with a recent giving (record webs-with-a-recent-giving states such webs, this rest excepted).
 - **Counterexample:** Alternation.alternates: giving that falls as what is left rises keeps a band, yet its run alternates for ever; Crossing.rises_without_rest: with no band a rising run climbs at every step; Adjusted.rests_short: a rest below the draw where something is given from nothing. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean)
 
 **Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
@@ -47,7 +47,7 @@ Canonical source: [RegimeMargin.lean](../../../../experiments/integrated-correct
 <a id="next--下一步"></a>
 ## Next
 
-Whether measured giving laws rise over their bands; the least bound; a state with a further lag; coupled conditions with a recent giving; an independent review.
+The order of fates above the level law's peak, where measured giving falls as the level rises; the least bound; a state with a further lag; rest within a band on a web with a recent giving; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -129,6 +129,7 @@ Aliases: `where a run of a regime comes to rest`, `every run of a rising adjustm
 - 21 October 2026, RM6: coupled conditions, left open here, are stated for two conditions under the regime's step (record coupled-regimes, study section 306); what this record does not show and its next delta now say what stays open. Its laws are unchanged.
 - 21 October 2026, RM7: more than two coupled conditions are stated as a web under the regime's step (record coupled-webs, study section 311); its next delta no longer lists them. Its laws are unchanged.
 - 23 October 2026, EC6 (study section 375): LastChange.still_within is now proved as a case of rest by balance (record rest-by-balance) instead of by its own induction; its statement and this record's laws are unchanged.
+- 7 November 2026, board item AA: the atlas's readers found a line gone stale against the experiment's own report; corrected against the Lean and the later records.
 
 </details>
 

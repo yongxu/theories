@@ -2,16 +2,16 @@
   "schema_version": 2,
   "id": "unceasing-generation-needs-renewal",
   "title": {
-    "zh": "不息的生成需要更新",
-    "en": "Unceasing generation needs renewal"
+    "zh": "不息的生起需要更新",
+    "en": "Unceasing arising needs renewal"
   },
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
   "reviewed_at_utc": "2026-10-16T18:25:05+00:00",
   "statement": {
-    "zh": "生起消耗有限条件时，不息的生成需要更新复现；更新却不蕴含生成。",
-    "en": "Where arising depletes finitely many conditions, unceasing generation needs renewal to recur; renewal does not imply generation."
+    "zh": "生起消耗有限条件时，不息的生起需要更新复现；更新却不蕴含生起。",
+    "en": "Where arising depletes finitely many conditions, unceasing arising needs renewal to recur; renewal does not imply arising."
   },
   "laws": [
     {
@@ -865,6 +865,10 @@
     {
       "en": "25 October 2026, board item DF (study section 418): 'the author's reading' and 'the author further interprets' in a law, a counterexample and the correspondence read as the AI's, and the reading of the second 生 in the correspondence is the AI's instead of 'on Ren's delegation', so each reading keeps its AI label. No law changed.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：一条律、一条反例与对应中的“作者的读法”“作者进一步诠释”改为 AI 的，对应中第二个“生”的读法由“依 Ren 的交托”改为 AI 的读法，使每个读法保留其 AI 标签。规律未变。"
+    },
+    {
+      "en": "7 November 2026, board item AA: the atlas's readers found a title and statement saying generation for arising, against the glossary; the file keeps its id; corrected against the Lean and the later records.",
+      "zh": "2026年11月7日，工作板条目 AA：图谱读者发现标题与陈述把 generation 用作生起，违背术语表；文件保留其 id；已对照 Lean 与后来的记录改正。"
     }
   ],
   "text_versions": [

@@ -72,7 +72,7 @@ Canonical source: [Selection.lean](../../../../experiments/integrated-correction
 <a id="next--下一步"></a>
 ## Next
 
-With transmission, descent and openness (Capture's descent_needs_unrun), the rising share of what reaches beyond.
+Deriving from the flow, with transmission, descent and openness (Capture's descent_needs_unrun), what record what-a-rise-draws-from-beyond takes as a premise: that more offspring go to raisers.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -171,6 +171,7 @@ Aliases: `Becoming.Web.SelectsThrough`, `Becoming.Web.ScoresThrough`, `Becoming.
 - 21 October 2026, EC1 (study section 307): declarations moved with their full names: WithinClosure, ClosedUnder to Becoming.Frame. The cited Lean source and its proof binding follow them; the claim is unchanged.
 - 25 October 2026, board item DF (study section 418): the third boundary cited testing-within-registration, a former id; it now cites testing-within-couplings.
 - 29 October 2026, board item UE18 (study section 452): related to the-markov-blanket-as-a-coupling-structure; no statement, next step or declaration changed.
+- 7 November 2026, board item AA: the atlas's readers found a next step gone stale against record what-a-rise-draws-from-beyond; corrected against the Lean and the later records.
 - 7 rebinding entries (2026-10-13 to 2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](selection-through-couplings.json).
 
 <a id="earlier-text--早期文本"></a>

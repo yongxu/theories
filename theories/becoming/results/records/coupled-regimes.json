@@ -132,13 +132,13 @@
   ],
   "does_not_show": [
     {
-      "en": "Thresholds beyond a band: within one, mutual support gives within each draw; beyond it only the cycle is stated, and no bound on a run decides ending.",
-      "zh": "带外的阈值：带内相互支持下各所给不超过汲取；带外只陈述了循环，没有运行之界来判定终结。",
+      "en": "Beyond a band this record states only the cycle; thresholds there, with a bound on the run in the band's place, are in record thresholds-beyond-a-band.",
+      "zh": "带外此记录只陈述循环；带外的阈值（以运行之界代替带）见记录 thresholds-beyond-a-band。",
       "kind": "scope"
     },
     {
-      "en": "Coupled conditions with a recent giving (the adjusted step); the reals and continuous time; record coupled-webs states webs of any number.",
-      "zh": "带近来所给的耦合条件（调整之步）；实数与连续时间；记录 coupled-webs 陈述任意多个之网。",
+      "en": "The reals and continuous time. Stated elsewhere: webs of any number (record coupled-webs) and webs with a recent giving (record webs-with-a-recent-giving), rest within a band excepted.",
+      "zh": "实数与连续时间。他处已陈述：任意多个之网（记录 coupled-webs）与带近来所给的网（记录 webs-with-a-recent-giving），带内的静止除外。",
       "kind": "scope"
     },
     {
@@ -158,15 +158,15 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
       "detail": {
-        "en": "Coupled.alternation_never_rests: a band without mutual support gives no rest.",
-        "zh": "Coupled.alternation_never_rests：无相互支持的带不给出静止。"
+        "en": "Coupled.alternation_never_rests: a band without mutual support need not give rest: this run never rests.",
+        "zh": "Coupled.alternation_never_rests：无相互支持的带不必给出静止：此运行从不静止。"
       }
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
       "detail": {
-        "en": "Relay.cycles: mutual support without a band gives no rest; a pair each of which ends alone cycles for ever between two unordered states.",
-        "zh": "Relay.cycles：无带的相互支持不给出静止；各自单独皆终结的一对永远在两个无序状态之间循环。"
+        "en": "Relay.cycles: mutual support without a band need not give rest; a pair each of which ends alone cycles for ever between two unordered states.",
+        "zh": "Relay.cycles：无带的相互支持不必给出静止；各自单独皆终结的一对永远在两个无序状态之间循环。"
       }
     }
   ],
@@ -183,8 +183,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261021T105805.152152Z）：Becoming.RegimeMargin 新增的 55 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 306 节；未经人的独立审查。"
   },
   "next_delta": {
-    "en": "Thresholds beyond a band, with a bound on the run in its place; coupled conditions with a recent giving; over the reals; a frozen field test of whether a partner's level adds to T2's state for coupled conditions; an independent review.",
-    "zh": "带外的阈值，以运行之界代替带；带近来所给的耦合条件；实数上；冻结的野外检验：对耦合条件，伙伴的水平是否加入 T2 的状态；独立审查。"
+    "en": "Over the reals; rest within a band on a web with a recent giving; a frozen field test of whether a partner's level adds to T2's state for coupled conditions; an independent review.",
+    "zh": "实数上；带近来所给之网在带内的静止；冻结的野外检验：对耦合条件，伙伴的水平是否加入 T2 的状态；独立审查。"
   },
   "correspondence": {
     "en": "Cooperative (monotone) dynamical systems keep the order of states and their extinction sets are down-closed (Smith 1995; Hirsch and Smith 2005); in obligate mutualism a threshold curve separates extinction from persistence, each partner needing less as the other has more (Dean 1983), and dependents are lost with their partner (coextinction, Koh et al. 2004); competitive maps keep the order with one coordinate reversed, and planar cooperative maps are eventually monotone only under regularity conditions (Smith 1998). On the spine, constructive and exact in its premises: the threshold for each partner's level is the least level a finite search finds within a band, the dependent's drain is counted, and the uncoupled case is the regime itself; mutual support and the band are each shown needed by a witness.",
@@ -275,8 +275,8 @@
       "id": "where-a-run-of-a-regime-comes-to-rest",
       "relation": "formal-reuse",
       "detail": {
-        "en": "The strict fall of a sum of two whole numbers below an ordered pair, and Alternation's giving as a witness that a band without support gives no rest.",
-        "zh": "沿用有序对下两个整数之和的严格下降，以及 Alternation 的所给作为无支持之带不给出静止的见证。"
+        "en": "The strict fall of a sum of two whole numbers below an ordered pair, and Alternation's giving as a witness that a band without support need not give rest.",
+        "zh": "沿用有序对下两个整数之和的严格下降，以及 Alternation 的所给作为无支持之带不必给出静止的见证。"
       },
       "interface": {
         "output": {
@@ -630,6 +630,10 @@
     {
       "en": "22 October 2026, RM8: the pair's rest and thresholds derived from the web's (record rest-on-coupled-webs, study section 325); within_draw, run_within, left_falls and still_of_left now cited in their web form, step_of_left as Coupled.Indexed.step_alike under mutual support; the statements of its laws are unchanged.",
       "zh": "2026年10月22日，RM8：一对的静止与阈值由网的导出（记录 rest-on-coupled-webs，研究第 325 节）；within_draw、run_within、left_falls 与 still_of_left 今以其网的形式引用，step_of_left 以相互支持下的 Coupled.Indexed.step_alike 引用；其律的陈述不变。"
+    },
+    {
+      "en": "7 November 2026, board item AA: the atlas's readers found lines gone stale against later records, and a witness read as never; corrected against the Lean and the later records.",
+      "zh": "2026年11月7日，工作板条目 AA：图谱读者发现数行已落后于后来的记录，且一个见证被读作从不；已对照 Lean 与后来的记录改正。"
     }
   ]
 }

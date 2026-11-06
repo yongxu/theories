@@ -5,7 +5,7 @@
 
 `returning-novelty-forgetting-on-levels` · **recorded-checked** · theorem · F01 · [record](returning-novelty-forgetting-on-levels.json) · [register](../../../../RESULTS.md)
 
-> On the levels alone, a part with bounded stock revisits a configuration from every step on; a part new at every step exceeds every bound; a bounded part exchanged with without end, and a finite whole, do not carry their history; with loss at each change, change does not recur without end.
+> On the levels alone, a part with bounded stock revisits a configuration from every step on; a part new at every step exceeds every bound; a bounded part or finite whole exchanged with without end does not carry its history; with loss at each change, change does not recur without end.
 
 <a id="laws--规律"></a>
 ## Laws
@@ -14,7 +14,7 @@
    - *Shared laws, by Lean dependency:* finite runs; its declarations do not reach the grammar.
 2. A family whose configurations at the steps T, …, T + N all differ, N the number of configurations within the bound, has its stock above the bound at one of those steps, found by checking finitely many inequalities, deciding nothing infinite. So what is new at every step exceeds every bound arbitrarily late, and what changes without end and never revisits stays within no bound; in Web.counting the level is the step. (`Becoming.upto_or_fails`, `Becoming.Web.exceeds_of_new`, `Becoming.Web.unbounded_of_new`, `Becoming.Web.unbounded_of_never_revisits`, `Becoming.Web.counting`, `Becoming.Web.counting_new`, `Becoming.Web.counting_gains`)
    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
-3. No reading of a bounded family's configuration gives a record that never repeats or a count without bound; so a bounded family exchanged with at arbitrarily late steps does not carry the count of its exchanges, whatever the flow, and nor does the whole where finitely many relata are all there is. (`Becoming.Web.unread_of_new_record`, `Becoming.Web.unread_of_unbounded`, `Becoming.Flow.uncarried_of_bounded`, `Becoming.World.forgets_of_bounded`)
+3. No reading of a bounded family's configuration gives a record that never repeats or a count without bound; so a bounded family exchanged with at arbitrarily late steps does not carry the count of its exchanges, whatever the flow, and nor does the whole where finitely many relata are all there is and its stock stays within a bound. (`Becoming.Web.unread_of_new_record`, `Becoming.Web.unread_of_unbounded`, `Becoming.Flow.uncarried_of_bounded`, `Becoming.World.forgets_of_bounded`)
    - *Shared laws, by Lean dependency:* finite runs; its declarations do not reach the grammar.
 4. With the stock never rising and falling across each change of configuration, the family never revisits, the changes over a stretch with the stock at its end are at most the stock at its start, and change does not recur without end. (`Becoming.Web.never_revisits_of_loses`, `Becoming.Web.changes_le_stock`, `Becoming.Web.rests_of_loses`)
    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
@@ -126,6 +126,7 @@ Aliases: `laws of returning on the levels alone`, `只用水平的回返`, `nove
 - 20 October 2026, R32 (forwarders, copies and reading modules: pure forwarders removed, statements stated once, reading modules folded into the module they read): Proof bindings (Entropy.lean, Recurrence.lean) rebound to core receipt 20261019T231053.882924Z. Re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 223 added; Entropy.lean, takes as its final section LevelWebs, the module reading it, folded in with declarations, names and statements unchanged; pure forwarders and copies removed where it had them; Recurrence.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; THE-THEORY-OF-BECOMING.md, §9 (receipt, counts, connectivity under the measure that no longer counts restatement) follows R32. The claim is unchanged.
 - 26 October 2026, board item UE7 (study section 419): a law added, the list form (Web.exceeds_of_distinct_configs, Web.unbounded_of_distinct_configs, Web.distinct_configs_of_apart), from which exceeds_of_new and unbounded_of_new are re-proved, their statements unchanged (board rule 9).
 - 6 November 2026, board item LM: declarations this record lists moved with the helpers stated once; its references follow them, and no law changed.
+- 7 November 2026, board item AA: the atlas's readers found a finite whole stated without the bound its law takes, in the statement and law 2; corrected against the Lean and the later records.
 - 3 rebinding entries (2026-10-14 to 2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](returning-novelty-forgetting-on-levels.json).
 
 <a id="earlier-text--早期文本"></a>

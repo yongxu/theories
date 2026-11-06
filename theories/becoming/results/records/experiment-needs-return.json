@@ -187,8 +187,8 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Experiment.lean",
       "detail": {
-        "zh": "错误的投影误归因而永不被排除：Confound 中动作不造成差别，只读结果时记录固定左得假、右得真；动作与隐藏位同步时，“动作决定结果”的确定模型在每一步都被容许（Confound.misattributes、Confound.confounded）。只有与隐藏位错开的动作排除它（Confound.varied_refutes）。",
-        "en": "A wrong projection misattributes and is never excluded: in Confound the move makes no difference, yet read through the outcome the record fixes left to false and right to true, and with the moves in step with the hidden bit the determined model in which the move decides the outcome is admitted at every step (Confound.misattributes, Confound.confounded). Only moves varied against the hidden bit exclude it (Confound.varied_refutes)."
+        "zh": "错误的投影误归因而永不被排除：Confound 中动作不造成差别，只读结果时记录固定左得假、右得真；动作与隐藏位同步时，“动作决定结果”的确定模型在每一步都被容许（Confound.misattributes、Confound.confounded）。此见证中，一次与隐藏位错开的动作运行排除它（Confound.varied_refutes）。",
+        "en": "A wrong projection misattributes and is never excluded: in Confound the move makes no difference, yet read through the outcome the record fixes left to false and right to true, and with the moves in step with the hidden bit the determined model in which the move decides the outcome is admitted at every step (Confound.misattributes, Confound.confounded). In this witness one run of moves varied against the hidden bit excludes it (Confound.varied_refutes)."
       }
     }
   ],
@@ -750,6 +750,10 @@
     {
       "en": "30 October 2026 (U2, study section 461): a law at the model added, stating `Becoming.Run.not_fixes_of_untaken` where its terms are the grammar's, through the row (F5's statements_at_model, reviewed in RECHECK-U2); the row's statement, proof and every other law unchanged.",
       "zh": "2026年10月30日（U2，研究第 461 节）：增模型上之律，于其项为文法之处陈述 `Becoming.Run.not_fixes_of_untaken`，经其本行（F5 之 statements_at_model，经 RECHECK-U2 复核）；本行之陈述、证明与他律皆不改。"
+    },
+    {
+      "en": "7 November 2026, board item AA: the atlas's readers found a witness read as a necessary condition; corrected against the Lean and the later records.",
+      "zh": "2026年11月7日，工作板条目 AA：图谱读者发现一个见证被读作必要条件；已对照 Lean 与后来的记录改正。"
     }
   ],
   "text_versions": [

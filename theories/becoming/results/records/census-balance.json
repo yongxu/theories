@@ -102,8 +102,8 @@
       "en": "Listing: the members holding at each step are listed, each once; there may be infinitely many members in all."
     },
     {
-      "zh": "可判定：计数要判定每个成员在相邻两步是否成立；读于水平自动成立，读于活动是活动可判定，读于依存是依存可判定。这是表示的逻辑承诺。",
-      "en": "Decidability: counting needs it decided whether each member holds at adjacent steps; read of standing this holds automatically, read of activity it is decided activity, read of dependence decided dependence. It is a logical commitment of the representation."
+      "zh": "可判定：计数要判定每个成员在相邻两步是否成立；读于水平自动成立，读于活动是活动可判定，读于依存是依存可判定。这是此律自身的条件，不是表示的承诺。",
+      "en": "Decidability: counting needs it decided whether each member holds at adjacent steps; read of standing this holds automatically, read of activity it is decided activity, read of dependence decided dependence. It is the law's own condition, not a commitment of the representation."
     }
   ],
   "does_not_show": [
@@ -757,6 +757,10 @@
     {
       "en": "1 November 2026, U4c (study section 492): Listed.across_at is re-proved as a case of the root's census of a step, its statement unchanged, and the root's census joins related. Law 1 says Listed.across is that case and declares Listed.keeps, whose counting of the members kept the text names, in place of marks_le_of_sub, which Listed.across no longer goes through; law 5 and the related note on ceasing-needs-arising say the census law was proved from the balance until U4c and still follows from it; law 8 declares total_mark_eq_count, by which Listed.across_at reads marks as the root's count. Declarations moved with their full names: steps_last, steps_mem, pos_of_exceeds, total_pos to Becoming.Prelude, with the list and stretch lemmas the root's census laws use. The cited Lean source and its proof binding follow them; the claim is unchanged.",
       "zh": "2026年11月1日，U4c（研究第 492 节）：Listed.across_at 改证为根上一步之清点之例，其陈述不变；根上之清点入相关。第 1 条言 Listed.across 为其例，并声明 Listed.keeps（其文所言保持成员之计数）以代 marks_le_of_sub，Listed.across 已不经后者；第 5 条与关于 ceasing-needs-arising 之相关说明言普查定律至 U4c 由平衡证明，今仍由之推出；第 8 条声明 total_mark_eq_count，Listed.across_at 以之将标记读作根上之计。声明以完整名称移动：steps_last, steps_mem, pos_of_exceeds, total_pos 移至 Becoming.Prelude，与根上之清点诸律所用之列表与跨段引理同处。所引 Lean 源及其证明绑定随之；论断不变。"
+    },
+    {
+      "en": "7 November 2026, board item AA: the atlas's readers found a hypothesis calling decidedness a commitment of the representation, where since Becoming.Decidedness each law states it as its own condition (08, the logical commitment); corrected against the Lean and the later records.",
+      "zh": "2026年11月7日，工作板条目 AA：图谱读者发现一条假设称可判定为表示的承诺，而自 Becoming.Decidedness 起每条律把它作为自身的条件陈述（08，逻辑承诺一节）；已对照 Lean 与后来的记录改正。"
     }
   ],
   "text_versions": [
