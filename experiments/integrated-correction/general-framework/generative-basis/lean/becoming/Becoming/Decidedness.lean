@@ -1054,7 +1054,7 @@ theorem Decided.exists_listed {β : Type u} {P : β → Prop} :
     | .inl holds => .inl ⟨b, .head l, holds⟩
     | .inr fails => match Decided.exists_listed (l := l) fun c mem => decided c (.tail b mem) with
       | .inl ⟨c, mem, holds⟩ => .inl ⟨c, .tail b mem, holds⟩
-      | .inr absent => .inr fun ⟨c, mem, holds⟩ => match mem_cons_split mem with
+      | .inr absent => .inr fun ⟨c, mem, holds⟩ => match mem_cons_cases mem with
         | .inl same => fails (Eq.subst (motive := P) same holds)
         | .inr mem => absent ⟨c, mem, holds⟩
 

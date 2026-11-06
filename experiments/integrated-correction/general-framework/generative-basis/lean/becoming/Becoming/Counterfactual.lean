@@ -463,7 +463,7 @@ theorem mixIn_listed (l l' : Nat → C → Nat) :
     | isFalse differ =>
       (if_neg differ : (if e = c then l' s e else mixIn l l' ds s e) = mixIn l l' ds s e).trans
         (mixIn_listed l l'
-          (match mem_cons_split mem with
+          (match mem_cons_cases mem with
             | .inl same => absurd same differ
             | .inr rest => rest) s)
 

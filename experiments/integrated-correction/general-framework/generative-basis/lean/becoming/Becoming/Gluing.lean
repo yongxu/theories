@@ -718,11 +718,6 @@ theorem cross : ∀ a b : Bool, addParity (addParity b a) (addParity a b) = fals
 theorem returns : ∀ a p : Bool, addParity a (addParity p a) = p := by decide
 theorem eq_of_even : ∀ c p : Bool, addParity c p = false → p = c := by decide
 
-theorem beq_of_ne {a b : Nat} (ne : a ≠ b) : Nat.beq a b = false :=
-  match same : Nat.beq a b with
-  | true => absurd (Nat.eq_of_beq_eq_true same) ne
-  | false => rfl
-
 /-- Along the relations `k — k + 1` for `k < n`, every claim is counted as often as `0` and `n`
 together: the claims between them twice. -/
 theorem telescope (c : Nat) : ∀ n,
@@ -763,7 +758,7 @@ theorem miss (x : Nat → Bool) {j : Nat} :
   | 0, _ => rfl
   | m + 1, le =>
     show addParity (Nat.beq m j && x m) (oddOver (down m) fun c => Nat.beq c j && x c) = false from
-      congr (congrArg addParity (congrArg (· && x m) (beq_of_ne (Nat.ne_of_lt le))))
+      congr (congrArg addParity (congrArg (· && x m) (ListTests.beq_false_of_ne (Nat.ne_of_lt le))))
         (miss x (Nat.le_of_succ_le le))
 
 /-- A claim listed once is read once: its value is the parity of the values of the claims below
@@ -783,7 +778,7 @@ theorem pick (x : Nat → Bool) {j : Nat} :
         (congrArg (addParity (Nat.beq m j && x m))
           (pick x (Nat.lt_of_le_of_ne (Nat.le_of_lt_succ lt) diff))).trans
           (congrArg (addParity · (x j))
-            (congrArg (· && x m) (beq_of_ne fun same => diff same.symm)))
+            (congrArg (· && x m) (ListTests.beq_false_of_ne fun same => diff same.symm)))
 
 /-- The parity, over the listed claims, of an assignment's values on two of them. -/
 theorem value_pair (n : Nat) (v : Nat → Bool) {a b : Nat} (alt : a < n + 1) (blt : b < n + 1) :

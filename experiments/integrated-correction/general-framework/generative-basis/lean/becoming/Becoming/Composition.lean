@@ -250,7 +250,7 @@ theorem JointTest.holds_all {F : JointFrame S A C} {s : S} :
       JointTest.Holds F s (JointTest.all φs) ↔ ∀ φ, φ ∈ φs → JointTest.Holds F s φ
   | [] => ⟨fun _ _ mem => (nomatch mem), fun _ => True.intro⟩
   | φ :: φs =>
-    ⟨fun ⟨first, rest⟩ ψ mem => match mem_cons_split mem with
+    ⟨fun ⟨first, rest⟩ ψ mem => match mem_cons_cases mem with
       | .inl same => Eq.subst (motive := fun χ => JointTest.Holds F s χ) same.symm first
       | .inr mem => (JointTest.holds_all φs).mp rest ψ mem,
      fun all => ⟨all φ (.head φs), (JointTest.holds_all φs).mpr fun ψ mem => all ψ (.tail φ mem)⟩⟩
@@ -271,7 +271,7 @@ theorem JointTest.holds_firsts {F : JointFrame S A C} {s : S} :
       JointTest.Holds F s (JointTest.firsts qs) ↔ ∀ q, q ∈ qs → JointTest.Holds F s q.1
   | [] => ⟨fun _ _ mem => (nomatch mem), fun _ => True.intro⟩
   | q :: qs =>
-    ⟨fun ⟨first, rest⟩ q' mem => match mem_cons_split mem with
+    ⟨fun ⟨first, rest⟩ q' mem => match mem_cons_cases mem with
       | .inl same => Eq.subst (motive := fun χ => JointTest.Holds F s χ.1) same.symm first
       | .inr mem => (JointTest.holds_firsts qs).mp rest q' mem,
      fun all => ⟨all q (.head qs), (JointTest.holds_firsts qs).mpr fun q' mem => all q' (.tail q mem)⟩⟩
@@ -282,7 +282,7 @@ theorem JointTest.holds_seconds {F : JointFrame S A C} {s : S} :
       JointTest.Holds F s (JointTest.seconds qs) ↔ ∀ q, q ∈ qs → JointTest.Holds F s q.2
   | [] => ⟨fun _ _ mem => (nomatch mem), fun _ => True.intro⟩
   | q :: qs =>
-    ⟨fun ⟨first, rest⟩ q' mem => match mem_cons_split mem with
+    ⟨fun ⟨first, rest⟩ q' mem => match mem_cons_cases mem with
       | .inl same => Eq.subst (motive := fun χ => JointTest.Holds F s χ.2) same.symm first
       | .inr mem => (JointTest.holds_seconds qs).mp rest q' mem,
      fun all => ⟨all q (.head qs), (JointTest.holds_seconds qs).mpr fun q' mem => all q' (.tail q mem)⟩⟩
@@ -386,10 +386,10 @@ theorem Compact.exclusions {X : Type u} {Q : Type v} {truth : X → Q → Prop} 
   | [], _ => ⟨[], fun _ mem => (nomatch mem), fun _ mem => (nomatch mem)⟩
   | x :: xs, fail => match fail x (.head xs), Compact.exclusions xs fun y mem => fail y (.tail x mem) with
     | ⟨q, member, fails⟩, ⟨qs, members, exclude⟩ =>
-      ⟨q :: qs, fun q' mem => match mem_cons_split mem with
+      ⟨q :: qs, fun q' mem => match mem_cons_cases mem with
         | .inl same => Eq.subst (motive := Γ) same.symm member
         | .inr mem => members q' mem,
-       fun y mem => match mem_cons_split mem with
+       fun y mem => match mem_cons_cases mem with
         | .inl same => ⟨q, .head qs, Eq.subst (motive := fun z => ¬ truth z q) same.symm fails⟩
         | .inr mem => match exclude y mem with
           | ⟨q', inside, fails'⟩ => ⟨q', .tail q inside, fails'⟩⟩
@@ -440,7 +440,7 @@ theorem Compact.of_greatest {X : Type u} {Q : Type v} {domain : X → Prop} {tru
     {d : X} (member : domain d) (greatest : ∀ x, domain x → ∀ q, truth x q → truth d q) :
     Compact domain truth :=
   fun Γ finite => ⟨d, member, fun q inside =>
-    match finite [q] (fun _ mem => match mem_cons_split mem with
+    match finite [q] (fun _ mem => match mem_cons_cases mem with
         | .inl same => Eq.subst (motive := Γ) same.symm inside
         | .inr mem => (nomatch mem)) with
     | ⟨x, inside', meets⟩ => greatest x inside' q (meets q (.head []))⟩

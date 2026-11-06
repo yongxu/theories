@@ -104,7 +104,7 @@ theorem le_iff_of_balance {G E H F L M : Nat} (bal : G + E = H + F) :
   have right : G + M + (E + F) = G + E + (M + F) :=
     (Nat.add_assoc G M (E + F)).trans
       ((congrArg (G + ·) (Nat.add_left_comm M E F)).trans (Nat.add_assoc G E (M + F)).symm)
-  ⟨fun le => le_of_add_le_add_left_core (calc G + E + (L + E) = H + L + (E + F) := left.symm
+  ⟨fun le => Naturals.le_of_add_le_add_left (calc G + E + (L + E) = H + L + (E + F) := left.symm
       _ ≤ G + M + (E + F) := Nat.add_le_add_right le _
       _ = G + E + (M + F) := right),
    fun le => le_of_add_le_add_right (E + F) (calc H + L + (E + F) = G + E + (L + E) := left
@@ -128,26 +128,25 @@ structure KeepStop (C : Type) where
 
 section Plans
 
-variable {C : Type} (listed : List C) (weight : C → Nat) (gain loss : C → Nat)
+variable {C : Type} (listed : List C) (weight : C → Nat) (gain offGain : C → Nat)
 
-/-! Here `gain c` is what keeping the law gains at `c` and `loss c` what switching it off gains
-there, despite its name, which its callers (`Becoming.HeldForReading`) share. Neither is a plan's
-own loss, `KeepStop.loss`. -/
+/-! Here `gain c` is what keeping the law gains at `c` and `offGain c` what switching it off gains
+there. Neither is a plan's own loss, `KeepStop.loss`. -/
 
 /-- **What a plan gains**: at each listed candidate, what keeping gains there at the weight it keeps
 the law and what switching off gains there at the weight it switches it off, summed. -/
 def gainOf (p : KeepStop C) : Nat :=
-  total listed fun c => p.kept c * gain c + p.stopped c * loss c
+  total listed fun c => p.kept c * gain c + p.stopped c * offGain c
 
 /-- **The order of plans**: the order of a gain and a loss (`RevisionRoutes.GainLoss`), with what a
 plan gains and its own loss. -/
-def order : RevisionRoutes.GainLoss (KeepStop C) := ⟨gainOf listed gain loss, KeepStop.loss⟩
+def order : RevisionRoutes.GainLoss (KeepStop C) := ⟨gainOf listed gain offGain, KeepStop.loss⟩
 
 /-- **A plan's excess**: at each listed candidate, what switching off gains beyond keeping at the
 weight it keeps the law, and what keeping gains beyond switching off at the weight it switches it
 off, summed. -/
 def excess (p : KeepStop C) : Nat :=
-  total listed fun c => p.kept c * (loss c - gain c) + p.stopped c * (gain c - loss c)
+  total listed fun c => p.kept c * (offGain c - gain c) + p.stopped c * (gain c - offGain c)
 
 /-- **A plan splits the weights**: at every listed candidate, what it keeps and what it switches off
 make the candidate's weight. -/
@@ -166,7 +165,7 @@ def held (r : C → Bool) (a : Nat) : KeepStop C :=
 
 /-- **The reading that tells the candidate**: it stops exactly where switching off gains more than
 keeping. -/
-def reading : C → Bool := fun c => decide (gain c < loss c)
+def reading : C → Bool := fun c => decide (gain c < offGain c)
 
 theorem splits_goOn (a : Nat) : Splits listed weight (goOn weight a) :=
   fun c _ => Nat.add_zero (weight c)
@@ -212,66 +211,66 @@ theorem reading_term (k s g l : Nat) :
 /-- **Holding for the reading gains what any plan splitting the weights gains, with that plan's
 excess.** -/
 theorem gainOf_reading {p : KeepStop C} (splits : Splits listed weight p) (a : Nat) :
-    gainOf listed gain loss (held weight (reading gain loss) a) =
-      gainOf listed gain loss p + excess listed gain loss p :=
+    gainOf listed gain offGain (held weight (reading gain offGain) a) =
+      gainOf listed gain offGain p + excess listed gain offGain p :=
   (total_congr_on fun c mem => show
-      cond (decide (gain c < loss c)) 0 (weight c) * gain c +
-        cond (decide (gain c < loss c)) (weight c) 0 * loss c = _ by
+      cond (decide (gain c < offGain c)) 0 (weight c) * gain c +
+        cond (decide (gain c < offGain c)) (weight c) 0 * offGain c = _ by
       rw [← splits c mem]; exact reading_term _ _ _ _).trans
     (total_add _ _ listed)
 
 /-- **Holding for the reading has no excess.** -/
-theorem excess_reading (a : Nat) : excess listed gain loss (held weight (reading gain loss) a) = 0 :=
+theorem excess_reading (a : Nat) : excess listed gain offGain (held weight (reading gain offGain) a) = 0 :=
   (Naturals.add_left_cancel ((Nat.add_zero _).trans
-    (gainOf_reading listed weight gain loss (splits_held listed weight _ a) a))).symm
+    (gainOf_reading listed weight gain offGain (splits_held listed weight _ a) a))).symm
 
 /-- **The balance**: any two plans splitting the weights gain the same with their excesses. -/
 theorem balance {p q : KeepStop C} (sp : Splits listed weight p) (sq : Splits listed weight q) :
-    gainOf listed gain loss p + excess listed gain loss p =
-      gainOf listed gain loss q + excess listed gain loss q :=
-  (gainOf_reading listed weight gain loss sp 0).symm.trans (gainOf_reading listed weight gain loss sq 0)
+    gainOf listed gain offGain p + excess listed gain offGain p =
+      gainOf listed gain offGain q + excess listed gain offGain q :=
+  (gainOf_reading listed weight gain offGain sp 0).symm.trans (gainOf_reading listed weight gain offGain sq 0)
 
 /-- **Between plans splitting the weights, one stands no higher than another exactly where the
 other's loss with its excess is at most its own.** -/
 theorem not_above_iff {p q : KeepStop C} (sp : Splits listed weight p) (sq : Splits listed weight q) :
-    ¬ (order listed gain loss).Above q p ↔
-      p.loss + excess listed gain loss p ≤ q.loss + excess listed gain loss q :=
-  have iff := le_iff_of_balance (L := p.loss) (M := q.loss) (balance listed weight gain loss sp sq)
+    ¬ (order listed gain offGain).Above q p ↔
+      p.loss + excess listed gain offGain p ≤ q.loss + excess listed gain offGain q :=
+  have iff := le_iff_of_balance (L := p.loss) (M := q.loss) (balance listed weight gain offGain sp sq)
   ⟨fun notAbove => iff.mp (Nat.ge_of_not_lt notAbove),
    fun le above => Nat.not_lt_of_le (iff.mpr le) above⟩
 
 /-- **Between plans splitting the weights, one stands above another exactly where its loss with its
 excess is below the other's.** -/
 theorem above_iff {p q : KeepStop C} (sp : Splits listed weight p) (sq : Splits listed weight q) :
-    (order listed gain loss).Above q p ↔
-      q.loss + excess listed gain loss q < p.loss + excess listed gain loss p :=
-  have iff := le_iff_of_balance (L := p.loss) (M := q.loss) (balance listed weight gain loss sp sq)
+    (order listed gain offGain).Above q p ↔
+      q.loss + excess listed gain offGain q < p.loss + excess listed gain offGain p :=
+  have iff := le_iff_of_balance (L := p.loss) (M := q.loss) (balance listed weight gain offGain sp sq)
   ⟨fun above => Nat.lt_of_not_le fun le => Nat.not_lt_of_le (iff.mpr le) above,
    fun lt => Nat.lt_of_not_le fun le => Nat.not_le_of_gt lt (iff.mp le)⟩
 
 /-- **Holding for the reading, forgoing an amount, stands at least as high as a plan splitting the
 weights exactly where the amount is at most the plan's own loss with its excess.** -/
 theorem reading_not_below_iff {p : KeepStop C} (sp : Splits listed weight p) (a : Nat) :
-    ¬ (order listed gain loss).Above p (held weight (reading gain loss) a) ↔
-      a ≤ p.loss + excess listed gain loss p :=
-  (not_above_iff listed weight gain loss (splits_held listed weight _ a) sp).trans (by
-    show a + excess listed gain loss (held weight (reading gain loss) a) ≤ _ ↔ _
+    ¬ (order listed gain offGain).Above p (held weight (reading gain offGain) a) ↔
+      a ≤ p.loss + excess listed gain offGain p :=
+  (not_above_iff listed weight gain offGain (splits_held listed weight _ a) sp).trans (by
+    show a + excess listed gain offGain (held weight (reading gain offGain) a) ≤ _ ↔ _
     rw [excess_reading, Nat.add_zero])
 
 /-- **Strictly: holding for the reading, forgoing an amount, stands above a plan splitting the
 weights exactly where the amount is below the plan's own loss with its excess.** -/
 theorem reading_above_iff {p : KeepStop C} (sp : Splits listed weight p) (a : Nat) :
-    (order listed gain loss).Above (held weight (reading gain loss) a) p ↔
-      a < p.loss + excess listed gain loss p :=
-  (above_iff listed weight gain loss sp (splits_held listed weight _ a)).trans (by
-    show a + excess listed gain loss (held weight (reading gain loss) a) < _ ↔ _
+    (order listed gain offGain).Above (held weight (reading gain offGain) a) p ↔
+      a < p.loss + excess listed gain offGain p :=
+  (above_iff listed weight gain offGain sp (splits_held listed weight _ a)).trans (by
+    show a + excess listed gain offGain (held weight (reading gain offGain) a) < _ ↔ _
     rw [excess_reading, Nat.add_zero])
 
 /-- **A plan has no excess exactly where, at every listed candidate, it keeps the law only where
 keeping does not lose and switches it off only where keeping does not gain.** -/
 theorem excess_zero_iff (p : KeepStop C) :
-    excess listed gain loss p = 0 ↔
-      ∀ c, c ∈ listed → p.kept c * (loss c - gain c) = 0 ∧ p.stopped c * (gain c - loss c) = 0 :=
+    excess listed gain offGain p = 0 ↔
+      ∀ c, c ∈ listed → p.kept c * (offGain c - gain c) = 0 ∧ p.stopped c * (gain c - offGain c) = 0 :=
   total_eq_zero_iff.trans
     ⟨fun every c mem => ⟨eq_zero_of_add_eq_zero_left (every c mem),
         eq_zero_of_add_eq_zero_right (every c mem)⟩,
@@ -294,12 +293,12 @@ switching off. -/
 theorem gainOf_move {p q : KeepStop C} (r : C → Nat)
     (kept : ∀ c, c ∈ listed → q.kept c = p.kept c + r c)
     (stopped : ∀ c, c ∈ listed → p.stopped c = q.stopped c + r c) :
-    gainOf listed gain loss q + total listed (fun c => r c * (loss c - gain c)) =
-      gainOf listed gain loss p + total listed (fun c => r c * (gain c - loss c)) :=
+    gainOf listed gain offGain q + total listed (fun c => r c * (offGain c - gain c)) =
+      gainOf listed gain offGain p + total listed (fun c => r c * (gain c - offGain c)) :=
   (total_add _ _ listed).symm.trans
     ((total_congr_on fun c mem => show
-        (q.kept c * gain c + q.stopped c * loss c) + r c * (loss c - gain c) =
-          (p.kept c * gain c + p.stopped c * loss c) + r c * (gain c - loss c) by
+        (q.kept c * gain c + q.stopped c * offGain c) + r c * (offGain c - gain c) =
+          (p.kept c * gain c + p.stopped c * offGain c) + r c * (gain c - offGain c) by
         rw [kept c mem, stopped c mem]; exact move_term _ _ _ _ _).trans
       (total_add _ _ listed))
 
@@ -307,36 +306,36 @@ theorem gainOf_move {p q : KeepStop C} (r : C → Nat)
 theorem move_le_of {p q : KeepStop C} (r : C → Nat)
     (kept : ∀ c, c ∈ listed → q.kept c = p.kept c + r c)
     (stopped : ∀ c, c ∈ listed → p.stopped c = q.stopped c + r c)
-    (noLoss : ∀ c, c ∈ listed → loss c ≤ gain c) :
-    gainOf listed gain loss p ≤ gainOf listed gain loss q :=
-  have zero : total listed (fun c => r c * (loss c - gain c)) = 0 :=
+    (noLoss : ∀ c, c ∈ listed → offGain c ≤ gain c) :
+    gainOf listed gain offGain p ≤ gainOf listed gain offGain q :=
+  have zero : total listed (fun c => r c * (offGain c - gain c)) = 0 :=
     total_eq_zero fun c mem =>
       (congrArg (r c * ·) (sub_eq_zero_of_le (noLoss c mem))).trans (Nat.mul_zero _)
   Nat.le_trans (Nat.le_add_right _ _)
-    (Nat.le_of_eq ((gainOf_move listed gain loss r kept stopped).symm.trans
-      ((congrArg (gainOf listed gain loss q + ·) zero).trans (Nat.add_zero _))))
+    (Nat.le_of_eq ((gainOf_move listed gain offGain r kept stopped).symm.trans
+      ((congrArg (gainOf listed gain offGain q + ·) zero).trans (Nat.add_zero _))))
 
 /-- **Moving weight to keeping never raises the gain where keeping gains at no listed candidate.** -/
 theorem move_ge_of {p q : KeepStop C} (r : C → Nat)
     (kept : ∀ c, c ∈ listed → q.kept c = p.kept c + r c)
     (stopped : ∀ c, c ∈ listed → p.stopped c = q.stopped c + r c)
-    (noGain : ∀ c, c ∈ listed → gain c ≤ loss c) :
-    gainOf listed gain loss q ≤ gainOf listed gain loss p :=
-  have zero : total listed (fun c => r c * (gain c - loss c)) = 0 :=
+    (noGain : ∀ c, c ∈ listed → gain c ≤ offGain c) :
+    gainOf listed gain offGain q ≤ gainOf listed gain offGain p :=
+  have zero : total listed (fun c => r c * (gain c - offGain c)) = 0 :=
     total_eq_zero fun c mem =>
       (congrArg (r c * ·) (sub_eq_zero_of_le (noGain c mem))).trans (Nat.mul_zero _)
   Nat.le_trans (Nat.le_add_right _ _)
-    (Nat.le_of_eq ((gainOf_move listed gain loss r kept stopped).trans
-      ((congrArg (gainOf listed gain loss p + ·) zero).trans (Nat.add_zero _))))
+    (Nat.le_of_eq ((gainOf_move listed gain offGain r kept stopped).trans
+      ((congrArg (gainOf listed gain offGain p + ·) zero).trans (Nat.add_zero _))))
 
 /-- **Holding for the reading gains what a plan splitting the weights gains exactly where that plan
 has no excess.** -/
 theorem gainOf_reading_eq_iff {p : KeepStop C} (sp : Splits listed weight p) (a : Nat) :
-    gainOf listed gain loss (held weight (reading gain loss) a) = gainOf listed gain loss p ↔
-      excess listed gain loss p = 0 :=
-  have eq := gainOf_reading listed weight gain loss sp a
+    gainOf listed gain offGain (held weight (reading gain offGain) a) = gainOf listed gain offGain p ↔
+      excess listed gain offGain p = 0 :=
+  have eq := gainOf_reading listed weight gain offGain sp a
   ⟨fun same => Naturals.add_left_cancel (eq.symm.trans (same.trans (Nat.add_zero _).symm)),
-   fun none => eq.trans ((congrArg (gainOf listed gain loss p + ·) none).trans (Nat.add_zero _))⟩
+   fun none => eq.trans ((congrArg (gainOf listed gain offGain p + ·) none).trans (Nat.add_zero _))⟩
 
 end Plans
 

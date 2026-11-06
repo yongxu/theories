@@ -334,7 +334,7 @@ theorem mem_joinMap {α : Type u} {β : Type v} (g : α → List β) {a : α} {b
 
 theorem mem_openSteps {S : Type u} {A : Type v} {moves : List A} {all : List S} {a : A} {m : S}
     (move : a ∈ moves) (reached : m ∈ all) : (a, m) ∈ openSteps moves all :=
-  mem_joinMap (fun a => all.map fun m => (a, m)) (mem_mapped (fun m => (a, m)) reached) move
+  mem_joinMap (fun a => all.map fun m => (a, m)) (ListTests.mem_map_of (f := fun m => (a, m)) reached) move
 
 /-- **Counting read as possibility loses nothing of what is possible:** a count is not zero
 exactly where possibility holds, since counts of alternatives cannot cancel. -/

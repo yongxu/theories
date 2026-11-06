@@ -1777,22 +1777,19 @@ theorem none_not_mem : ∀ l : List Nat, ¬ (none : Option Nat) ∈ l.map some
   | _ :: l, mem => match mem with
     | .tail _ rest => none_not_mem l rest
 
-theorem some_inj : ∀ a b : Nat, (some a : Option Nat) = some b → a = b :=
-  fun _ _ same => congrArg (fun o => Option.getD o 0) same
-
 /-- The pool and the relata emitted so far, each once. -/
 def alive (t : Nat) : List (Option Nat) :=
   none :: (steps 0 t).map some
 
 /-- A census: what is active at each step is listed, each once. -/
 theorem census : web.Census alive :=
-  fun t => ⟨⟨none_not_mem _, distinct_map some_inj (steps_distinct 0 t)⟩, fun x => match x with
+  fun t => ⟨⟨none_not_mem _, distinct_map (fun _ _ h => ListTests.some_inj h) (steps_distinct 0 t)⟩, fun x => match x with
     | none => ⟨fun _ => .head _, fun _ => Nat.succ_pos _⟩
     | some s => ⟨fun active => .tail _ (mem_map_of (steps_of_within (Nat.zero_le s)
           (Nat.lt_of_lt_of_le (active_bud.mp active) (Nat.le_of_eq (Nat.zero_add t).symm)))),
         fun mem => match mem with
           | .tail _ rest => active_bud.mpr (Nat.lt_of_lt_of_le
-              (steps_within (mem_of_map some_inj rest)) (Nat.le_of_eq (Nat.zero_add t)))⟩⟩
+              (steps_within (mem_of_map (fun _ _ h => ListTests.some_inj h) rest)) (Nat.le_of_eq (Nat.zero_add t)))⟩⟩
 
 theorem counted : world.Counted :=
   ⟨alive, census⟩

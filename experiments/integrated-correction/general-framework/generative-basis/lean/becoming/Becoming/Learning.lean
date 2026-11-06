@@ -850,7 +850,7 @@ def decideSeen [DecidableEq K] (π : I → K) (x : I) :
       | isTrue found => isTrue (match found with
         | ⟨d, mem, same⟩ => ⟨d, List.Mem.tail a mem, same⟩)
       | isFalse unseen => isFalse fun ⟨d, mem, same⟩ =>
-        match mem_cons_split mem with
+        match mem_cons_cases mem with
         | .inl at_a => differs (Eq.subst (motive := fun e => π e = π x) at_a same)
         | .inr mem' => unseen ⟨d, mem', same⟩
 

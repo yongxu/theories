@@ -52,7 +52,7 @@ theorem DistinctUnder.unique {R : X → X → Prop} (symm : ∀ {x y}, R x y →
     ∀ {s : List X} {x y : X}, DistinctUnder R s → x ∈ s → y ∈ s → R x y → x = y
   | [], _, _, _, mem, _, _ => nomatch mem
   | _ :: _, x, y, ⟨head, tail⟩, mem, mem', related =>
-    match mem_cons_split mem, mem_cons_split mem' with
+    match mem_cons_cases mem, mem_cons_cases mem' with
     | .inl here, .inl here' => here.trans here'.symm
     | .inl here, .inr later' =>
       absurd (Eq.subst (motive := fun w => R w y) here related) (head y later')
@@ -64,13 +64,13 @@ theorem DistinctUnder.unique {R : X → X → Prop} (symm : ∀ {x y}, R x y →
 theorem remove_mem : ∀ {l : List X} {x : X}, x ∈ l →
     ∃ l' : List X, l'.length + 1 = l.length ∧ ∀ y, y ∈ l → y = x ∨ y ∈ l'
   | [], _, mem => nomatch mem
-  | a :: t, _, mem => match mem_cons_split mem with
-    | .inl same => ⟨t, rfl, fun _ mem' => match mem_cons_split mem' with
+  | a :: t, _, mem => match mem_cons_cases mem with
+    | .inl same => ⟨t, rfl, fun _ mem' => match mem_cons_cases mem' with
       | .inl here => .inl (here.trans same.symm)
       | .inr later => .inr later⟩
     | .inr later => match remove_mem later with
       | ⟨t', shorter, rest⟩ => ⟨a :: t', congrArg (· + 1) shorter, fun y mem' =>
-        match mem_cons_split mem' with
+        match mem_cons_cases mem' with
         | .inl here => .inr (Eq.subst (motive := fun w => w ∈ a :: t') here.symm (.head t'))
         | .inr later' => match rest y later' with
           | .inl same => .inl same
@@ -94,7 +94,7 @@ theorem not_not_within {P : X → Prop} (each : ∀ x, ¬ ¬ P x) :
     ∀ l : List X, ¬ ¬ ∀ x, x ∈ l → P x
   | [] => fun refuted => refuted fun _ mem => nomatch mem
   | a :: l => fun refuted => each a fun holds => not_not_within each l fun rest =>
-    refuted fun x mem => match mem_cons_split mem with
+    refuted fun x mem => match mem_cons_cases mem with
       | .inl same => Eq.subst (motive := P) same.symm holds
       | .inr later => rest x later
 
@@ -158,7 +158,7 @@ theorem Refining.steady_or_grown (refining : Refining R)
       | .inl ⟨_, mem, _, mem', joined, parted⟩ =>
         match refining.grow decided apart' within' mem mem' joined parted with
         | ⟨z, inside, apart''⟩ => .inr ⟨z :: r, apart'', fun w mem'' =>
-          match mem_cons_split mem'' with
+          match mem_cons_cases mem'' with
           | .inl same => Eq.subst (motive := fun v => v ∈ l) same.symm inside
           | .inr later => within' w later, Nat.succ_le_succ long⟩
 

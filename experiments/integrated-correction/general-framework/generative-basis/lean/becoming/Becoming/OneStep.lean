@@ -126,10 +126,6 @@ theorem steps_succ_map (g : Nat → α) :
   | _, 0 => rfl
   | T, n + 1 => congrArg (g (T + 1) :: ·) (steps_succ_map g (T + 1) n)
 
-theorem sign_eq_one : ∀ {n : Nat}, 0 < n → sign n = 1
-  | 0, pos => absurd pos (Nat.lt_irrefl 0)
-  | _ + 1, _ => rfl
-
 /-- A total is positive at most where its members are, counted. -/
 theorem sign_total_le (q : α → Nat) :
     ∀ as : List α, sign (total as q) ≤ total as fun a => sign (q a)
@@ -644,13 +640,6 @@ theorem least_excess_other : ∀ a b, least a b + excess b a = b
   | a + 1, b + 1 => (Nat.add_right_comm (least a b) 1 (excess b a)).trans
       (congrArg (· + 1) (least_excess_other a b))
 
-/-- What a number within `x + y` exceeds `x` by is within `y`. -/
-theorem excess_le_of : ∀ {u x y : Nat}, u ≤ x + y → excess u x ≤ y
-  | 0, _, _, _ => Nat.zero_le _
-  | _ + 1, 0, y, le => Nat.le_trans le (Nat.le_of_eq (Nat.zero_add y))
-  | u + 1, x + 1, y, le => excess_le_of (u := u) (x := x) (y := y) (Nat.le_of_succ_le_succ
-      (show u + 1 ≤ (x + y) + 1 from Nat.le_trans le (Nat.le_of_eq (Nat.succ_add x y))))
-
 theorem rest_units : ∀ (P : List Passage) (u i : Nat), rest P u i + units P u i = (pick P i).taken
   | [], _, _ => rfl
   | p :: _, u, 0 => (Nat.add_comm _ _).trans (least_excess p.taken u)
@@ -668,7 +657,7 @@ theorem total_units : ∀ (P : List Passage) (u : Nat), u ≤ total P Passage.ta
   | p :: P, u, le =>
     (congrArg (least p.taken u + ·) ((total_steps_succ (units (p :: P) u) 0 P.length).trans
       (total_units P (excess u p.taken)
-        (excess_le_of (x := p.taken) (y := total P Passage.taken) le)))).trans
+        (excess_le_of_le_add (x := p.taken) (y := total P Passage.taken) le)))).trans
       (least_excess_other p.taken u)
 
 theorem unitList_length : ∀ (P : List Passage) (u : Nat), u ≤ total P Passage.taken →
@@ -678,7 +667,7 @@ theorem unitList_length : ∀ (P : List Passage) (u : Nat), u ≤ total P Passag
     (ListTests.length_append _ _).trans ((congr (congrArg (· + ·)
       ((length_map _ _).trans (steps_length 0 _)))
       ((length_map _ _).trans (unitList_length P _
-        (excess_le_of (x := p.taken) (y := total P Passage.taken) le)))).trans
+        (excess_le_of_le_add (x := p.taken) (y := total P Passage.taken) le)))).trans
       (least_excess_other p.taken u))
 
 theorem unitList_units : ∀ (P : List Passage) (u : Nat) (f : Part), f ∈ unitList P u →
@@ -1501,9 +1490,6 @@ open Witness (hit hit_self hit_pos pick pick_steps pick_lt pick_beyond least)
 theorem none_ne_some {i : Nat} (same : (none : Option Nat) = some i) : False :=
   nomatch same
 
-theorem some_inj {a b : Nat} (same : (some a : Option Nat) = some b) : a = b :=
-  congrArg (fun o => Option.getD o a) same
-
 theorem hit_cases : ∀ a b, hit a b = 0 ∨ hit a b = 1
   | 0, 0 => .inr rfl
   | 0, _ + 1 => .inl rfl
@@ -1549,12 +1535,6 @@ theorem least_cases : ∀ a b, (least a b = a ∧ a ≤ b) ∨ (least a b = b �
 /-- What `a` exceeds `b` by, with `b`, is `a`, where `b ≤ a`. -/
 theorem add_excess {a b : Nat} (le : b ≤ a) : b + excess a b = a :=
   (excess_balance b a).trans ((congrArg (a + ·) (Flow.excess_zero_of_le le)).trans (Nat.add_zero a))
-
-theorem sign_le_sign {a b : Nat} (pos : 0 < a → 0 < b) : sign a ≤ sign b :=
-  match a, b, pos with
-  | 0, _, _ => Nat.zero_le _
-  | _ + 1, 0, pos => absurd (pos (Nat.succ_pos _)) (Nat.lt_irrefl 0)
-  | _ + 1, _ + 1, _ => Nat.le_refl 1
 
 /-! ## Lists of numbers -/
 
@@ -1824,7 +1804,7 @@ takers. -/
 theorem DissipatesOn.renewers_le_takers {cs : List C} {t : Nat}
     (dissipates : L.DissipatesOn cs t) : L.renewers cs t ≤ L.takers cs t :=
   total_le (L.present t) fun _ present =>
-    OneStep.Chain.sign_le_sign (dissipates.takes_of_gives present)
+    sign_le_of_pos (dissipates.takes_of_gives present)
 
 variable (L)
 
@@ -2055,12 +2035,12 @@ theorem track_origin (forth : ∀ t i j, ρ t j = some i → σ t i = some j) :
 theorem origin_born {b i0 j : Nat} :
     ∀ o, ρ b i0 = o → born i0 o = some j → origin ρ (b + 1) j = (b + 1, i0)
   | none, unlinked, started =>
-    Eq.subst (motive := fun j => origin ρ (b + 1) j = (b + 1, i0)) (some_inj started)
+    Eq.subst (motive := fun j => origin ρ (b + 1) j = (b + 1, i0)) (ListTests.some_inj started)
       (congrArg (originStep (origin ρ b) (b + 1) i0) unlinked)
   | some _, _, started => (none_ne_some started).elim
 
 theorem origin_start : ∀ (b : Nat) {i0 j : Nat}, start ρ b i0 = some j → origin ρ b j = (b, i0)
-  | 0, _, _, started => congrArg (Prod.mk 0) (some_inj started).symm
+  | 0, _, _, started => congrArg (Prod.mk 0) (ListTests.some_inj started).symm
   | b + 1, i0, _, started => origin_born ρ (ρ b i0) rfl started
 
 theorem origin_step (back : ∀ t i j, σ t i = some j → ρ t j = some i) {b i0 n j : Nat}
@@ -2313,7 +2293,7 @@ theorem passages {t : Nat} (sumd : total (d t) (fun y => y) = total (P t) Passag
     ((map_eq_of (passage_member links sumd sumg) _).trans (pick_steps (P t)))
 
 theorem distinct_family (t : Nat) : Distinct (family ρ P o t) :=
-  distinct_map_on (fun j j' _ _ same => some_inj ((track_origin σ ρ links.forth t j).symm.trans
+  distinct_map_on (fun j j' _ _ same => ListTests.some_inj ((track_origin σ ρ links.forth t j).symm.trans
       ((congrArg (fun x => track σ ρ x t) (Site.node.inj same)).trans
         (track_origin σ ρ links.forth t j'))))
     (steps_distinct 0 _)
@@ -2565,7 +2545,7 @@ def identical : Nat → Nat → Option Nat := fun _ i => some i
 theorem identical_links (chain : Chained P) : Links identical identical P :=
   ⟨fun _ _ _ h => h.symm, fun _ _ _ h => h.symm,
    fun t i _ h => Eq.subst (motive := fun j => (pick (P t) i).after = (pick (P (t + 1)) j).before)
-     (some_inj h) (Witness.pick_map (f := Passage.after) (g := Passage.before) rfl (P t) (P (t + 1))
+     (ListTests.some_inj h) (Witness.pick_map (f := Passage.after) (g := Passage.before) rfl (P t) (P (t + 1))
        (chain t) i)⟩
 
 theorem origin_identical : ∀ t j, origin identical t j = (0, j)
@@ -2623,7 +2603,7 @@ def rankPrev (P : Nat → List Passage) (t j : Nat) : Option Nat :=
 
 theorem guard_some : ∀ {a j j' : Nat}, guard a j = some j' → 0 < a ∧ j = j'
   | 0, _, _, nothing => (none_ne_some nothing).elim
-  | _ + 1, _, _, same => ⟨Nat.succ_pos _, some_inj same⟩
+  | _ + 1, _, _, same => ⟨Nat.succ_pos _, ListTests.some_inj same⟩
 
 theorem guard_pos : ∀ {a : Nat} (j : Nat), 0 < a → guard a j = some j
   | 0, _, pos => absurd pos (Nat.lt_irrefl 0)
@@ -3465,7 +3445,7 @@ theorem givers_sign (Q : List Passage) : Givers Q (sign (total Q Passage.given))
 anything is given are at most the takers. -/
 theorem RunsDown.sign_given_le {Q : List Passage} {k' : Nat} {e' : Prop} (runs : RunsDown Q k' e') :
     sign (total Q Passage.given) ≤ k' :=
-  Nat.le_trans (Chain.sign_le_sign fun pos => Nat.lt_of_lt_of_le pos (Nat.le_trans
+  Nat.le_trans (sign_le_of_pos fun pos => Nat.lt_of_lt_of_le pos (Nat.le_trans
       (Nat.le_add_right _ k') ((fall_iff_given runs.1.2).mp runs.2))) runs.1.1.1
 
 /-- **Running down on families chosen step by step, without the givers.** A run is shown on

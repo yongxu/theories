@@ -1655,13 +1655,13 @@ theorem sameFuture_iff_classes {l : List S} (closed : ∀ s, s ∈ l → next s 
         absent ⟨_, orbit_held closed mem n, _, orbit_held closed mem' n, differ⟩
     | .inl ⟨x, inx, y, iny, differ⟩ =>
       have apart : DistinctUnder (AgreeTo next o 0) [x, y] :=
-        ⟨fun _ inz same => match mem_cons_split inz with
+        ⟨fun _ inz same => match mem_cons_cases inz with
           | .inl here => differ (Eq.subst (motive := fun w => o x = o w) here same)
           | .inr later => (nomatch later),
          DistinctUnder.single y⟩
-      have within : ∀ z, z ∈ [x, y] → z ∈ l := fun _ inz => match mem_cons_split inz with
+      have within : ∀ z, z ∈ [x, y] → z ∈ l := fun _ inz => match mem_cons_cases inz with
         | .inl here => Eq.subst (motive := fun w => w ∈ l) here.symm inx
-        | .inr later => match mem_cons_split later with
+        | .inr later => match mem_cons_cases later with
           | .inl here => Eq.subst (motive := fun w => w ∈ l) here.symm iny
           | .inr none' => nomatch none'
       match (agreeTo_refining next o).steady_within (AgreeTo.decided closed values) apart within with
@@ -1741,7 +1741,7 @@ theorem memberAt_mem (d : S) : ∀ {l : List S} {i : Nat}, i < l.length → memb
 theorem position_of_mem (d : S) : ∀ {l : List S} {x : S}, x ∈ l →
     ∃ i, i < l.length ∧ memberAt d l i = x
   | [], _, mem => nomatch mem
-  | _ :: _, _, mem => match mem_cons_split mem with
+  | _ :: _, _, mem => match mem_cons_cases mem with
     | .inl here => ⟨0, Nat.zero_lt_succ _, Eq.symm here⟩
     | .inr later => match position_of_mem d later with
       | ⟨i, lt, at_i⟩ => ⟨i + 1, Nat.succ_lt_succ lt, at_i⟩

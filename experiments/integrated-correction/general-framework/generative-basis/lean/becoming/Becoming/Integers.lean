@@ -48,13 +48,9 @@ theorem nat_eq_add_of_sub_succ : ∀ (m n k : Nat), n - m = k + 1 → n = m + (k
       nat_eq_add_of_sub_succ m n k ((Nat.succ_sub_succ n m).symm.trans more)
     (congrArg Nat.succ rest).trans (Nat.succ_add m (k + 1)).symm
 
-/-- `a + b + (c + d) = a + c + (b + d)`. -/
-theorem nat_add_add_add_comm (a b c d : Nat) : a + b + (c + d) = a + c + (b + d) :=
-  Nat.add_add_add_comm a b c d
-
 /-- `a + b + (c + d) = a + d + (c + b)`. -/
 theorem nat_rearrange (a b c d : Nat) : a + b + (c + d) = a + d + (c + b) := by
-  rw [nat_add_add_add_comm a b c d, nat_add_add_add_comm a d c b, Nat.add_comm b d]
+  rw [Nat.add_add_add_comm a b c d, Nat.add_add_add_comm a d c b, Nat.add_comm b d]
 
 /-! ## Difference pairs -/
 
@@ -81,14 +77,14 @@ theorem Same.trans {x y z : Nat × Nat} (xy : Same x y) (yz : Same y z) : Same x
     calc x.1 + z.2 + (y.1 + y.2) = x.1 + y.2 + (y.1 + z.2) := nat_rearrange _ _ _ _
       _ = y.1 + x.2 + (z.1 + y.2) := by rw [xy, yz]
       _ = z.1 + x.2 + (y.1 + y.2) := by
-          rw [nat_add_add_add_comm y.1 x.2 z.1 y.2, nat_add_add_add_comm z.1 x.2 y.1 y.2,
+          rw [Nat.add_add_add_comm y.1 x.2 z.1 y.2, Nat.add_add_add_comm z.1 x.2 y.1 y.2,
             Nat.add_comm y.1 z.1]
-  Naturals.add_right_cancel both
+  add_right_cancel _ both
 
 theorem Same.add {x x' y y' : Nat × Nat} (xs : Same x x') (ys : Same y y') :
     Same (plus x y) (plus x' y') :=
   show x.1 + y.1 + (x'.2 + y'.2) = x'.1 + y'.1 + (x.2 + y.2) by
-    rw [nat_add_add_add_comm, xs, ys, nat_add_add_add_comm]
+    rw [Nat.add_add_add_comm, xs, ys, Nat.add_add_add_comm]
 
 theorem Same.swap {x y : Nat × Nat} (same : Same x y) : Same (swap x) (swap y) :=
   show x.2 + y.1 = y.2 + x.1 by rw [Nat.add_comm x.2, Nat.add_comm y.2]; exact Eq.symm same

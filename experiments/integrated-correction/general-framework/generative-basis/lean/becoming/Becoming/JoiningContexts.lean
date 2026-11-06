@@ -39,14 +39,6 @@ namespace Joining
 
 variable {F : Type u}
 
-/-- Under a determined law a course from a configuration reaches at most one configuration. -/
-theorem trace_end_unique {S : Type u'} {A : Type v} {P : Process S A} (determined : Determined P) :
-    ∀ {s t t' : S} {as : List A}, Trace P s as t → Trace P s as t' → t = t'
-  | _, _, _, _, .nil _, path' => trace_nil_iff.mp path'
-  | _, _, _, _, .cons step path, path' => match trace_cons_iff.mp path' with
-    | ⟨_, step', rest⟩ => trace_end_unique determined path
-        (Eq.subst (motive := fun m => Trace P m _ _) (determined _ _ _ _ step' step) rest)
-
 /-- A context: a hole, or a context with a partner joined on its left or on its right. -/
 inductive Context (F : Type u) where
   | hole
@@ -119,7 +111,7 @@ theorem Context.possible_splice (J : Joining F) (outer inner : Context F) (x : F
 /-- **Where joining is functional, a context realizes at most one fragment.** -/
 theorem Context.realizes_functional {J : Joining F} (fn : J.Functional) (c : Context F) {x y z : F}
     (first : c.Realizes J x y) (second : c.Realizes J x z) : y = z :=
-  trace_end_unique fn.determined first second
+  Trace.determined_end fn.determined first second
 
 /-- **Where joining is functional, after a context the possible contexts are those possible for
 what it realized.** -/

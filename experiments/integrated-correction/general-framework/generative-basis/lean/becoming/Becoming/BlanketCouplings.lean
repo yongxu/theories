@@ -463,9 +463,6 @@ def update : Bool → Bool → Unit → Bool := fun m o _ => m && o
 /-- The trivial policy. -/
 def policy : Bool → Bool → Unit → Unit := fun _ _ a => a
 
-theorem band_congr : ∀ {a a' b b' : Bool}, a = a' → b = b' → (a && b) = (a' && b')
-  | _, _, _, _, rfl, rfl => rfl
-
 theorem admits_iff (x : Unit → Nat) (t : Nat) :
     ThresholdDrain.web.Admits x t () ↔ Nat.blt 0 (x ()) = true :=
   ⟨fun admits => Nat.ble_eq_true_of_le (admits () trivial),
@@ -480,7 +477,7 @@ theorem values : ThresholdDrain.web.ValuesThrough (fun _ _ => False) () value :=
             Nat.blt 0 (x ()) = true ↔ Nat.blt 0 (y ()) = true).trans (admits_iff y t).symm),
        fun _ never => never.elim⟩,
      fun ⟨admitted, _⟩ =>
-      ThresholdDrain.bool_eq_of_iff (((admits_iff x t).symm.trans admitted).trans (admits_iff y t))⟩
+      bool_eq_of_iff (((admits_iff x t).symm.trans admitted).trans (admits_iff y t))⟩
 
 /-- The coupling law's course from supply `e` matches `ThresholdDrain.law`'s part by part, with the
 step beside the supply in the external part. -/
@@ -497,7 +494,7 @@ theorem corr (e : Nat) : ∀ n,
   | n + 1 =>
     match corr e n with
     | ⟨i, s, a, x⟩ =>
-      ⟨band_congr i s,
+      ⟨Limit.and_congr2 i s,
        congrArg (fun p : Nat × Nat => Nat.blt 0 p.2) x,
        a,
        congrArg (fun p : Nat × Nat => (p.1 + 1, p.2 - 1)) x⟩
@@ -877,7 +874,7 @@ theorem next_level_alike_iff {L : Flow F C} {l : Nat → C → Nat} (history : L
             ((congrArg (· + L.taken j g) (history k g)).trans
               ((congrArg (fun v => v + L.given k g + L.taken j g) same.symm).trans
                 (Nat.add_assoc (l j g) (L.given k g) (L.taken j g)))))))),
-   fun net => Naturals.add_right_cancel (k := L.taken j g + L.taken k g)
+   fun net => add_right_cancel (L.taken j g + L.taken k g)
     ((Nat.add_assoc (l (j + 1) g) (L.taken j g) (L.taken k g)).symm.trans
       ((congrArg (· + L.taken k g) (history j g)).trans
         ((Nat.add_assoc (l j g) (L.given j g) (L.taken k g)).trans

@@ -201,12 +201,8 @@ theorem gap_le {N p q h g n a b : Nat} (len : a + b = n) (gap : (p + q) * h + g 
         ((mul_turn N (p + q) a).trans ((congrArg ((p + q) * ·) (Nat.mul_comm N a)))))))
       (Nat.le_trans (Nat.mul_le_mul_left (p + q) back) (Nat.le_of_eq
         ((congrArg ((p + q) * ·) (Nat.mul_comm h n)).trans (mul_turn (p + q) n h))))
-  Naturals.le_of_add_le_add_right (Nat.le_trans (Nat.le_of_eq (Nat.add_right_comm _ _ _))
+  le_of_add_le_add_right _ (Nat.le_trans (Nat.le_of_eq (Nat.add_right_comm _ _ _))
     (Nat.le_trans (Nat.add_le_add_right taken _) (Nat.le_of_eq whole.symm)))
-
-theorem square_mul (N e : Nat) : N * e * (N * e) = N * N * (e * e) :=
-  (mul_assoc_nat N e (N * e)).trans ((congrArg (N * ·) (mul_turn e N e)).trans
-    (mul_assoc_nat N N (e * e)).symm)
 
 /-- Behind by the gap, the squared deviation exceeds the cross term by the gap squared:
 `N² · 2xy` with `n² · g²` is at most `N² · (x² + y²)`. -/
@@ -221,15 +217,15 @@ theorem far_back {N x y n g : Nat} (back : N * x + n * g ≤ N * y) :
           ← Nat.add_assoc (x * x) (x * e) (e * e), ← Nat.mul_add x x e, ← Nat.add_assoc, Nat.two_mul]
       have ge : n * g ≤ N * e :=
         Naturals.le_of_add_le_add_left (Nat.le_trans back (Nat.le_of_eq (Nat.left_distrib N x e)))
-      rw [same, Nat.left_distrib (N * N), ← square_mul N e, ← square_mul n g]
+      rw [same, Nat.left_distrib (N * N), ← Reproduction.square_mul N e, ← Reproduction.square_mul n g]
       exact Nat.add_le_add_left (Nat.mul_le_mul ge ge) _
   | .inr le =>
     have zero : n * g = 0 := Nat.eq_zero_of_le_zero (Naturals.le_of_add_le_add_left
       (Nat.le_trans back (Nat.le_trans (Nat.mul_le_mul_left N le)
         (Nat.le_of_eq (Nat.add_zero _).symm))))
     by
-      rw [← square_mul n g, zero, Nat.zero_mul, Nat.add_zero]
-      exact Nat.mul_le_mul_left _ (two_mul_le x y)
+      rw [← Reproduction.square_mul n g, zero, Nat.zero_mul, Nat.add_zero]
+      exact Nat.mul_le_mul_left _ (Naturals.twice_le x y)
 
 /-- Each sampling: its weight if it falls back, times `n² · g²`, with its weight times `N²` times
 the cross term, is at most its weight times `N²` times its squared deviation. -/
@@ -245,7 +241,7 @@ theorem falls_back_le {p q n h N g : Nat} (gap : (p + q) * h + g = N * p) {w : L
   else by
     show (if ones w * N ≤ h * n then weight p q w else 0) * _ + _ ≤ _
     rw [if_neg back, Nat.zero_mul, Nat.zero_add]
-    exact Nat.mul_le_mul_left _ (Nat.mul_le_mul_left _ (two_mul_le _ _))
+    exact Nat.mul_le_mul_left _ (Nat.mul_le_mul_left _ (Naturals.twice_le _ _))
 
 /-- **Drift can undo selection, with a weight falling as `1/n`.** Where `(p + q) · h + g = N · p`
 (a listed step raising the share of the first kind from `h / N` to `p / (p + q)` by the gap `g`),
@@ -262,7 +258,7 @@ theorem falls_back (p q n h N g : Nat) (gap : (p + q) * h + g = N * p) :
     rw [total_congr (fun w => mul_turn (weight p q w) (N * N) (square p q w)),
       total_congr (fun w => mul_turn (weight p q w) (N * N) (cross p q w)), total_mul,
       total_mul, spread, Nat.left_distrib]
-  Naturals.le_of_add_le_add_right (by
+  le_of_add_le_add_right _ (by
     rw [total_add, total_mul_right, spreadN] at bound
     rw [Nat.add_comm (N * N * _)]
     exact bound)
@@ -605,7 +601,7 @@ theorem varied_vanishes {N r : Nat} (two : r + 2 = N ^ N) :
           (Nat.le_trans (Nat.le_of_eq (Nat.one_mul _).symm) (Nat.mul_le_mul_right _ (one_le_pow qpos N)))
           (Nat.le_trans (Nat.le_of_eq (Nat.one_mul _).symm) (Nat.mul_le_mul_right _ (one_le_pow hpos N))))
       rw [sampled_succ, Nat.pow_succ, Nat.mul_comm (r ^ k) r]
-      exact Naturals.le_of_add_le_add_right (k := 2 * r ^ k) (Nat.le_trans (Nat.add_le_add_left twice _)
+      exact le_of_add_le_add_right (2 * r ^ k) (Nat.le_trans (Nat.add_le_add_left twice _)
         (Nat.le_trans step (Nat.le_of_eq (add_mul_split r 2 (r ^ k)))))
 
 theorem count_le (N c : Nat) (le : c ≤ N) : c ≤ N * fixed N c + N * varied N c :=
@@ -1082,7 +1078,7 @@ theorem varied_vanishesBy {c r : Nat} (steps : Steps M T u d e) (low : ∀ j, Mi
       else by rw [if_neg mixed]; exact Nat.zero_le 1
   | m + 1, i => by
     have each : ∀ j, valueBy M T u d e (varied M) (M + 1) j ≤ r * varied M j := fun j =>
-      Naturals.le_of_add_le_add_right (k := c ^ (M + 1) * varied M j)
+      le_of_add_le_add_right (c ^ (M + 1) * varied M j)
         (Nat.le_trans (varied_stepBy steps low stay j)
           (Nat.le_of_eq ((congrArg (· * varied M j) split.symm).trans (add_mul_split _ _ _))))
     rw [Nat.mul_succ, Nat.add_comm, valueBy_comp]
@@ -1131,23 +1127,20 @@ theorem le_of_eq_le {a b c : Nat} (same : a = b) (le : b ≤ c) : a ≤ c := sam
 theorem turn_out (a b c P : Nat) : c * (a * (b * P)) = P * (a * b * c) := by
   rw [← mul_assoc_nat a b P, ← mul_assoc_nat c, Nat.mul_comm _ P, Nat.mul_comm c]
 
-theorem add_one_add (j n : Nat) : j + (n + 1) = j + 1 + n := by
-  rw [Nat.add_comm n 1, ← Nat.add_assoc]
-
 /-- Weights at least others across a stretch give a product at least theirs. -/
 theorem ups_le {f g : Nat → Nat} : ∀ {n j : Nat}, (∀ k, j < k → k ≤ j + n → f k ≤ g k) →
     ups f j n ≤ ups g j n
   | 0, _, _ => Nat.le_refl 1
   | n + 1, j, le => Nat.mul_le_mul (le (j + 1) (Nat.lt_succ_self j)
       (Nat.succ_le_succ (Nat.le_add_right j n)))
-    (ups_le fun k lt kle => le k (Nat.lt_of_succ_lt lt) (le_of_le_eq kle (add_one_add j n).symm))
+    (ups_le fun k lt kle => le k (Nat.lt_of_succ_lt lt) (le_of_le_eq kle (shift_succ j n).symm))
 
 /-- Positive weights across a stretch give a positive product. -/
 theorem ups_pos {f : Nat → Nat} : ∀ {n j : Nat}, (∀ k, j < k → k ≤ j + n → 0 < f k) → 0 < ups f j n
   | 0, _, _ => Nat.zero_lt_one
   | n + 1, j, pos => Nat.mul_pos (pos (j + 1) (Nat.lt_succ_self j)
       (Nat.succ_le_succ (Nat.le_add_right j n)))
-    (ups_pos fun k lt kle => pos k (Nat.lt_of_succ_lt lt) (le_of_le_eq kle (add_one_add j n).symm))
+    (ups_pos fun k lt kle => pos k (Nat.lt_of_succ_lt lt) (le_of_le_eq kle (shift_succ j n).symm))
 
 /-- **The potential's steps across a stretch.** From `j`, `n` counts on and within the top, the
 upward weights at `j + 1 … j + n` times the step at `j + n` are the downward weights there times
@@ -1156,7 +1149,7 @@ theorem riseBy_shift : ∀ (n j : Nat), j + n ≤ M →
     ups u j n * riseBy M u d (j + n) = ups d j n * riseBy M u d j
   | 0, _, _ => rfl
   | n + 1, j, le => by
-    have e := add_one_add j n
+    have e := shift_succ j n
     have below : j < M := Nat.lt_of_lt_of_le (Nat.lt_succ_of_le (Nat.le_add_right j n)) le
     have ih := riseBy_shift n (j + 1) (le_of_eq_le e.symm le)
     show u (j + 1) * ups u (j + 1) n * riseBy M u d (j + (n + 1)) =
@@ -1280,7 +1273,7 @@ theorem lostBy_favoured (steps : Steps M T u d e) (pos : ∀ k, Mixed M k → 0 
     -- the top times the losing weight is at most `T ^ k` times `t + 1` steps at `s + n`
     have bound : potentialBy M u d (M + 1) * valueBy M T u d e lost k (s + n) ≤
         T ^ k * ((t + 1) * riseBy M u d (s + n)) :=
-      Naturals.le_of_add_le_add_right (k := T ^ k * potentialBy M u d (s + n))
+      le_of_add_le_add_right (T ^ k * potentialBy M u d (s + n))
         (Nat.le_trans losing (Nat.le_trans (Nat.mul_le_mul_left _ tail)
           (Nat.le_of_eq (by rw [Nat.left_distrib, Nat.add_comm]))))
     apply SelectionTerm.le_of_mul_le_mul P
@@ -1491,7 +1484,7 @@ theorem favoured_share_above (favoured : b < a) {i t : Nat} (start : 0 < i) (res
     rw [if_pos (Nat.zero_le M), Nat.pow_zero, Nat.one_mul, Nat.sub_zero]
   have r0pos : 0 < rise M a b 0 := r0 ▸ one_le_pow pos M
   have r1 : rise M a b 1 < rise M a b 0 :=
-    SelectionTerm.lt_of_mul_lt_mul (Nat.lt_of_le_of_lt (Nat.le_of_eq (rise_step (Nat.lt_of_lt_of_le Nat.zero_lt_one one_le)))
+    Naturals.lt_of_mul_lt_mul_left (Nat.lt_of_le_of_lt (Nat.le_of_eq (rise_step (Nat.lt_of_lt_of_le Nat.zero_lt_one one_le)))
       (Nat.mul_lt_mul_of_pos_right favoured r0pos))
   have strict : (j + 1) * rise M a b (j + 1) < potential M a b (j + 1) := by
     have from1 := potential_from (M := M) pos le 1 j

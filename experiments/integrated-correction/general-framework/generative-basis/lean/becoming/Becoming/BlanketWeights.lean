@@ -262,12 +262,6 @@ theorem crossForm_of_crossFormOn (all_i : ∀ i, i ∈ li) (all_e : ∀ e, e ∈
     (cross : CrossFormOn li le w) : CrossForm w :=
   fun i i' b e e' => cross i i' b e e' (all_i i) (all_i i') (all_e e) (all_e e')
 
-theorem total_congr_mem {α : Type} {p q : α → Nat} : ∀ {as : List α},
-    (∀ a, a ∈ as → p a = q a) → total as p = total as q
-  | [], _ => rfl
-  | a :: _, same => (congrArg (· + _) (same a (.head _))).trans
-      (congrArg (q a + ·) (total_congr_mem fun b mem => same b (.tail a mem)))
-
 theorem total_mul_total {α β : Type} (f : α → Nat) (g : β → Nat) (as : List α) (bs : List β) :
     total as (fun a => total bs fun b => f a * g b) = total as f * total bs g :=
   (total_congr (fun a => total_mul (f a) g bs) as).trans
@@ -283,7 +277,7 @@ theorem factorsGiven_of_crossFormOn (cross : CrossFormOn li le w) : FactorsGiven
       (total_congr (fun i' => (total_mul (w i b e) (fun e' => w i' b e') le).symm) li)
   have swap : total li (fun i' => total le fun e' => w i b e * w i' b e') =
       total li (fun i' => total le fun e' => w i b e' * w i' b e) :=
-    total_congr_mem fun i' hi' => total_congr_mem fun e' he' => cross i i' b e e' hi hi' he he'
+    total_congr_on fun i' hi' => total_congr_on fun e' he' => cross i i' b e e' hi hi' he he'
   have split : total li (fun i' => total le fun e' => w i b e' * w i' b e) =
       externalWeight li w b e * internalWeight le w i b :=
     (total_congr (fun i' => total_congr (fun e' => Nat.mul_comm _ _) le) li).trans

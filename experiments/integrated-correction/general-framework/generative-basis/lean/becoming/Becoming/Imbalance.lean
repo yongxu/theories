@@ -42,13 +42,6 @@ namespace Becoming
 
 variable {F C : Type}
 
-/-- As `Nat.le_of_sub_eq_zero`, with an empty axiom report. -/
-theorem le_of_sub_eq_zero : ∀ {n m : Nat}, n - m = 0 → n ≤ m
-  | 0, m, _ => Nat.zero_le m
-  | _ + 1, 0, zero => Nat.noConfusion zero
-  | n + 1, m + 1, zero =>
-    Nat.succ_le_succ (le_of_sub_eq_zero ((Nat.succ_sub_succ n m).symm.trans zero))
-
 /-- A member of a list mapped into options came from the list. -/
 theorem mem_of_some_mem {α : Type} {a : α} : ∀ {l : List α}, some a ∈ l.map some → a ∈ l
   | _ :: _, .head _ => .head _

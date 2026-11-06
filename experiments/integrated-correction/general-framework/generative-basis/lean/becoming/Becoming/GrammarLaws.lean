@@ -390,94 +390,6 @@ theorem length_replicate (x : α) : ∀ n, (List.replicate n x).length = n
   | 0 => rfl
   | n + 1 => congrArg Nat.succ (length_replicate x n)
 
-theorem le_succ_cases {n K : Nat} (le : n ≤ K + 1) : n ≤ K ∨ n = K + 1 :=
-  match Nat.lt_or_ge n (K + 1) with
-  | .inl lt => Or.inl (Nat.le_of_lt_succ lt)
-  | .inr ge => Or.inr (Nat.le_antisymm le ge)
-
-theorem gap_of_lt {i j : Nat} (lt : i < j) : ∃ d, j = i + (d + 1) :=
-  let ⟨d, same⟩ := le_dest lt
-  ⟨d, same.trans (Nat.succ_add i d)⟩
-
-theorem mem_cons_split {x a : α} {l : List α} (mem : x ∈ a :: l) : x = a ∨ x ∈ l := by
-  cases mem with
-  | head => exact Or.inl rfl
-  | tail _ mem => exact Or.inr mem
-
-/-- The `n`-th number other than `m`, counting from zero. -/
-def skipAt : Nat → Nat → Nat
-  | 0, n => n + 1
-  | _ + 1, 0 => 0
-  | m + 1, n + 1 => skipAt m n + 1
-
-theorem skipAt_ne : ∀ m n, skipAt m n ≠ m
-  | 0, _ => fun same => Nat.noConfusion same
-  | _ + 1, 0 => fun same => Nat.noConfusion same
-  | m + 1, n + 1 => fun same => skipAt_ne m n (Nat.succ.inj same)
-
-theorem skipAt_le : ∀ m n, skipAt m n ≤ n + 1
-  | 0, _ => Nat.le_refl _
-  | _ + 1, 0 => Nat.zero_le _
-  | m + 1, n + 1 => Nat.succ_le_succ (skipAt_le m n)
-
-theorem skipAt_lt : ∀ m {i j : Nat}, i < j → skipAt m i < skipAt m j
-  | 0, _, _, lt => Nat.succ_lt_succ lt
-  | _ + 1, 0, _ + 1, _ => Nat.succ_pos _
-  | m + 1, _ + 1, _ + 1, lt => Nat.succ_lt_succ (skipAt_lt m (Nat.lt_of_succ_lt_succ lt))
-  | _ + 1, _, 0, lt => absurd lt (Nat.not_lt_zero _)
-
-theorem split_at_head {g : Nat → α} {a : α} {l : List α} :
-    ∀ K, (∀ n, n ≤ K → g n = a ∨ g n ∈ l) →
-      (∃ i j, i < j ∧ j ≤ K ∧ g i = g j) ∨ (∀ n, n ≤ K → g n ∈ l) ∨
-        (∃ m, m ≤ K ∧ g m = a ∧ ∀ n, n ≤ K → n ≠ m → g n ∈ l)
-  | 0, held =>
-    match held 0 (Nat.le_refl 0) with
-    | .inl at_a => Or.inr (Or.inr ⟨0, Nat.le_refl 0, at_a,
-        fun n le other => absurd (Nat.le_antisymm le (Nat.zero_le n)) other⟩)
-    | .inr mem => Or.inr (Or.inl fun n le => by
-        have same : n = 0 := Nat.le_antisymm le (Nat.zero_le n)
-        subst same
-        exact mem)
-  | K + 1, held =>
-    match split_at_head K (fun n le => held n (Nat.le_succ_of_le le)) with
-    | .inl ⟨i, j, lt, le, same⟩ => Or.inl ⟨i, j, lt, Nat.le_succ_of_le le, same⟩
-    | .inr (.inl all) =>
-      match held (K + 1) (Nat.le_refl _) with
-      | .inl at_a => Or.inr (Or.inr ⟨K + 1, Nat.le_refl _, at_a, fun n le other =>
-          match le_succ_cases le with
-          | .inl le => all n le
-          | .inr same => absurd same other⟩)
-      | .inr mem => Or.inr (Or.inl fun n le =>
-          match le_succ_cases le with
-          | .inl le => all n le
-          | .inr same => by subst same; exact mem)
-    | .inr (.inr ⟨m, le_m, at_m, rest⟩) =>
-      match held (K + 1) (Nat.le_refl _) with
-      | .inl at_a =>
-        Or.inl ⟨m, K + 1, Nat.lt_succ_of_le le_m, Nat.le_refl _, at_m.trans at_a.symm⟩
-      | .inr mem => Or.inr (Or.inr ⟨m, Nat.le_succ_of_le le_m, at_m, fun n le other =>
-          match le_succ_cases le with
-          | .inl le => rest n le other
-          | .inr same => by subst same; exact mem⟩)
-
-/-- Pigeonhole with no decidability: a list holding the first `l.length + 1` values of a sequence
-holds two of them at one place. -/
-theorem revisits_within : ∀ (l : List α) (g : Nat → α), (∀ n, n ≤ l.length → g n ∈ l) →
-    ∃ i j, i < j ∧ j ≤ l.length ∧ g i = g j
-  | [], _, held => nomatch held 0 (Nat.le_refl 0)
-  | _ :: l, g, held =>
-    match split_at_head (l.length + 1) (fun n le => mem_cons_split (held n le)) with
-    | .inl found => found
-    | .inr (.inl all) =>
-      let ⟨i, j, lt, le, same⟩ :=
-        revisits_within l g (fun n le => all n (Nat.le_succ_of_le le))
-      ⟨i, j, lt, Nat.le_succ_of_le le, same⟩
-    | .inr (.inr ⟨m, _, _, rest⟩) =>
-      let ⟨i, j, lt, le, same⟩ := revisits_within l (fun n => g (skipAt m n)) (fun n le =>
-        rest (skipAt m n) (Nat.le_trans (skipAt_le m n) (Nat.succ_le_succ le)) (skipAt_ne m n))
-      ⟨skipAt m i, skipAt m j, skipAt_lt m lt, Nat.le_trans (skipAt_le m j) (Nat.succ_le_succ le),
-        same⟩
-
 /-- Where two joined lists are one list with `z` at some place, `z` lies in the first or the second. -/
 theorem split_append : ∀ (d₁ : List α) {d₂ e₁ e₂ : List α} {z : α},
     d₁ ++ d₂ = e₁ ++ z :: e₂ →
@@ -651,11 +563,6 @@ theorem distinct_removed {y : α} {a₂ : List α} : ∀ {a₁ : List α},
       | head => exact d.1 (mem_middle _ a₂ a₁)
       | tail _ m => exact rest.2 m⟩
 
-theorem not_eq_true_iff {b : Bool} : (!b) = true ↔ b = false := by
-  cases b
-  · exact ⟨fun _ => rfl, fun _ => rfl⟩
-  · exact ⟨fun h => (nomatch h), fun h => (nomatch h)⟩
-
 end GrammarLaws
 
 /-! ## Balance (对): a one-to-one pairing conserves count -/
@@ -677,6 +584,20 @@ theorem «对之长» {R : «际» α} {a b : List α} (h : «对» R a b) : a.l
   induction h with
   | nil => rfl
   | @cons _ y _ b₁ b₂ _ _ ih => exact (congrArg Nat.succ ih).trans (GrammarLaws.length_insert b₁ y b₂).symm
+
+/-- A list paired one to one with a single entry is a single entry related to it. -/
+theorem GrammarLaws.paired_single {S : «际» α} {x : α} {a b : List α} (paired : «对» S a b)
+    (single : a = [x]) : ∃ y, S x y ∧ b = [y] := by
+  cases paired with
+  | nil => exact nomatch single
+  | @cons _ y _ b₁ b₂ related rest =>
+    cases single
+    cases b₁ with
+    | nil =>
+      cases b₂ with
+      | nil => exact ⟨y, related, rfl⟩
+      | cons _ _ => exact Nat.noConfusion («对之长» rest)
+    | cons _ _ => exact Nat.noConfusion («对之长» rest)
 
 /-- Lists of equal length are paired one to one under the one. -/
 theorem «等长则一对» : ∀ (a b : List α), a.length = b.length → «对» «一» a b
@@ -835,6 +756,11 @@ def «聚» {ι : Type v} (f : ι → List α) : List ι → List α
   | [] => []
   | i :: is => f i ++ «聚» f is
 
+/-- The units of a quantity on a list, gathered by `«聚»`: each listed item repeated as often as the
+quantity there, in order. -/
+def unitsOn (q : α → Nat) : List α → List α :=
+  «聚» fun x => List.replicate (q x) x
+
 /-- **Balance over a family**: pairings at every listed index give one of the gathered lists. -/
 theorem «对之族» {ι : Type v} {R : «际» α} {a b : ι → List α} :
     ∀ (is : List ι), (∀ i, i ∈ is → «对» R (a i) (b i)) → «对» R («聚» a is) («聚» b is)
@@ -886,13 +812,6 @@ theorem «聚之长» {ι : Type} (f : ι → List α) : ∀ is : List ι,
   | [] => rfl
   | i :: is => (ListTests.length_append _ _).trans (congrArg ((f i).length + ·) («聚之长» f is))
 
-/-- Quantities that agree everywhere have the same total: proved here, below the frame, for the
-pairing laws; `Becoming.total_congr` (in `Becoming.Flow`) is this. -/
-theorem GrammarLaws.total_congr {ι : Type} {p q : ι → Nat} (same : ∀ i, p i = q i) :
-    ∀ is : List ι, total is p = total is q
-  | [] => rfl
-  | i :: is => Naturals.add_congr (same i) (GrammarLaws.total_congr same is)
-
 /-- **The count law over a stretch is pairing over the stretch**, both ways: a count that, at the
 end of a stretch with everything lost along it, is the count at its start with everything gained
 (`balance_over_stretch_on`'s conclusion) is exactly one whose units, before with those gained,
@@ -910,9 +829,9 @@ theorem «程守数当且仅当可对» {q x y : Nat → Nat} {S n : Nat} :
           (level (S + n) ++ «聚» lost (steps S n)).length = q (S + n) + total (steps S n) x :=
     fun _ lost gained hl hx hy =>
       ⟨(ListTests.length_append _ _).trans (Naturals.add_congr (hl S)
-          ((«聚之长» gained _).trans (GrammarLaws.total_congr hy _))),
+          ((«聚之长» gained _).trans (total_congr hy _))),
        (ListTests.length_append _ _).trans (Naturals.add_congr (hl (S + n))
-          ((«聚之长» lost _).trans (GrammarLaws.total_congr hx _)))⟩
+          ((«聚之长» lost _).trans (total_congr hx _)))⟩
   ⟨fun e => ⟨fun t => List.replicate (q t) (), fun t => List.replicate (x t) (),
       fun t => List.replicate (y t) (), fun _ => GrammarLaws.length_replicate () _,
       fun _ => GrammarLaws.length_replicate () _, fun _ => GrammarLaws.length_replicate () _,
@@ -934,6 +853,27 @@ modelling choice; a region given as a proposition enters by `decide`. -/
 def «计» (p : α → Bool) : List α → Nat
   | [] => 0
   | x :: a => cond (p x) 1 0 + «计» p a
+
+/-- A test counts two lists joined as the sum of its counts of each. -/
+theorem GrammarLaws.count_append (p : α → Bool) (l₂ : List α) :
+    ∀ l₁ : List α, «计» p (l₁ ++ l₂) = «计» p l₁ + «计» p l₂
+  | [] => (Nat.zero_add _).symm
+  | x :: l₁ => (congrArg (cond (p x) 1 0 + ·) (GrammarLaws.count_append p l₂ l₁)).trans
+      (Nat.add_assoc _ _ _).symm
+
+/-- A test holding at a unit counts each entry of it repeated. -/
+theorem GrammarLaws.count_replicate_true {p : α → Bool} {x : α} (holds : p x = true) :
+    ∀ n, «计» p (List.replicate n x) = n
+  | 0 => rfl
+  | n + 1 => (congrArg (cond (p x) 1 0 + ·) (GrammarLaws.count_replicate_true holds n)).trans
+      ((congrArg (fun b => cond b 1 0 + n) holds).trans (Nat.add_comm 1 n))
+
+/-- A test failing at a unit counts no entry of it repeated. -/
+theorem GrammarLaws.count_replicate_false {p : α → Bool} {x : α} (fails : p x = false) :
+    ∀ n, «计» p (List.replicate n x) = 0
+  | 0 => rfl
+  | n + 1 => (congrArg (cond (p x) 1 0 + ·) (GrammarLaws.count_replicate_false fails n)).trans
+      ((congrArg (fun b => cond b 1 0 + 0) fails).trans (Nat.add_zero 0))
 
 theorem GrammarLaws.count_insert (p : α → Bool) (y : α) : ∀ b₁ b₂ : List α,
     «计» p (b₁ ++ y :: b₂) = cond (p y) 1 0 + «计» p (b₁ ++ b₂)
@@ -2021,12 +1961,12 @@ theorem «前者在前则所列生者生» (dec : ∀ x y, «续» R E x y ↔ k
   · intro m
     have h := GrammarLaws.mem_keep.mp m
     refine ⟨h.1, fun ⟨x, c⟩ => ?_⟩
-    have off := GrammarLaws.not_eq_true_iff.mp h.2
+    have off := ListTests.not_true_iff.mp h.2
     have on : before.any (fun g => k g f) = true :=
       GrammarLaws.any_true_of_mem (p := fun g => k g f) (predecessorsBefore x f h.1 c) ((dec x f).mp c)
     exact nomatch off.symm.trans on
   · intro ⟨mf, begins⟩
-    refine GrammarLaws.mem_keep.mpr ⟨mf, GrammarLaws.not_eq_true_iff.mpr
+    refine GrammarLaws.mem_keep.mpr ⟨mf, ListTests.not_true_iff.mpr
       (GrammarLaws.any_false_of (p := fun g => k g f) before fun g _ => ?_)⟩
     cases h : k g f with
     | false => exact h
@@ -2042,12 +1982,12 @@ theorem «后者在后则所列亡者亡» (dec : ∀ x y, «续» R E x y ↔ k
   · intro m
     have h := GrammarLaws.mem_keep.mp m
     refine ⟨h.1, fun ⟨y, c⟩ => ?_⟩
-    have off := GrammarLaws.not_eq_true_iff.mp h.2
+    have off := ListTests.not_true_iff.mp h.2
     have on : after.any (k g) = true :=
       GrammarLaws.any_true_of_mem (p := k g) (successorsAfter g y h.1 c) ((dec g y).mp c)
     exact nomatch off.symm.trans on
   · intro ⟨mg, ends⟩
-    refine GrammarLaws.mem_keep.mpr ⟨mg, GrammarLaws.not_eq_true_iff.mpr
+    refine GrammarLaws.mem_keep.mpr ⟨mg, ListTests.not_true_iff.mpr
       (GrammarLaws.any_false_of (p := k g) after fun f _ => ?_)⟩
     cases h : k g f with
     | false => rfl
@@ -2119,8 +2059,8 @@ theorem GrammarLaws.census_le {b e : α → Bool} {before after : List α} (dA :
       not_not_all (P := fun y => ∃ x, x ∈ GrammarLaws.keep (fun x => !e x) before ∧ «续» R E x y)
         (fun y my none =>
           have h := GrammarLaws.mem_keep.mp my
-          arising y h.1 (GrammarLaws.not_eq_true_iff.mp h.2) fun ⟨x, mx, c⟩ =>
-            none ⟨x, GrammarLaws.mem_keep.mpr ⟨mx, GrammarLaws.not_eq_true_iff.mpr
+          arising y h.1 (ListTests.not_true_iff.mp h.2) fun ⟨x, mx, c⟩ =>
+            none ⟨x, GrammarLaws.mem_keep.mpr ⟨mx, ListTests.not_true_iff.mpr
               (match he : e x with
                | false => rfl
                | true => absurd c (ceasing x mx he y h.1))⟩, c⟩)
@@ -2193,14 +2133,14 @@ theorem GrammarLaws.census_count (dec : ∀ x y, «续» R E x y ↔ k x y = tru
       | ⟨a₁, x, a₂, split, kx⟩ =>
         none ⟨x, split ▸ GrammarLaws.mem_middle x a₂ a₁, (dec x y).mpr kx⟩)
     (fun x _ on y my c => Bool.noConfusion ((GrammarLaws.any_false_mem
-        (GrammarLaws.not_eq_true_iff.mp on) my).symm.trans ((dec x y).mp c)))
+        (ListTests.not_true_iff.mp on) my).symm.trans ((dec x y).mp c)))
   have other := GrammarLaws.census_le_converse (b := fun y => !(before.any fun g => k g y))
     (e := fun x => !(after.any (k x))) dB noMerge
     (fun x _ off none => match GrammarLaws.any_split (GrammarLaws.eq_true_of_not_false off) with
       | ⟨a₁, y, a₂, split, ky⟩ =>
         none ⟨y, split ▸ GrammarLaws.mem_middle y a₂ a₁, (dec x y).mpr ky⟩)
     (fun y _ on x mx c => Bool.noConfusion ((GrammarLaws.any_false_mem (p := fun g => k g y)
-        (GrammarLaws.not_eq_true_iff.mp on) mx).symm.trans ((dec x y).mp c)))
+        (ListTests.not_true_iff.mp on) mx).symm.trans ((dec x y).mp c)))
   by
     show after.length + (GrammarLaws.keep _ before).length =
       before.length + (GrammarLaws.keep _ after).length

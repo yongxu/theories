@@ -2454,15 +2454,6 @@ theorem line_lineage {x y : Nat × F}
     | .inr reach => match «及即迭».mp reach with
       | ⟨k, steps⟩ => ⟨k, (steps_iff_lineage (Nat.le_refl x.1) (k + 1)).mp steps⟩
 
-/-- Steps added to one start are equal where they reach the same step. -/
-theorem steps_cancel : ∀ {n m k : Nat}, n + m = n + k → m = k
-  | _, 0, 0, _ => rfl
-  | _, _ + 1, _ + 1, same => congrArg Nat.succ (steps_cancel (Nat.succ.inj same))
-  | n, 0, k + 1, same => absurd (Eq.subst (motive := fun s => n < s) same.symm
-      (Nat.lt_succ_of_le (Nat.le_add_right n k))) (Nat.lt_irrefl n)
-  | n, m + 1, 0, same => absurd (Eq.subst (motive := fun s => n < s) same
-      (Nat.lt_succ_of_le (Nat.le_add_right n m))) (Nat.lt_irrefl n)
-
 /-- **A lineage is a line (相续).** A lineage of `k + 1` steps from `g` at `M` is exactly a line
 under activity from `(M, g)`, `g` active at `M`, to the occurrence `k + 1` steps on. -/
 theorem lineage_iff_line {M k : Nat} {g h : F} :
@@ -2470,7 +2461,7 @@ theorem lineage_iff_line {M k : Nat} {g h : F} :
       W.active M g ∧ «相续» (continuationStep R) W.activityClass (M, g) (M + (k + 1), h) :=
   ⟨Lineage.line k, fun ⟨before, line⟩ => match line_lineage line before with
     | ⟨_, reach, lineage⟩ =>
-      Eq.subst (motive := fun i => W.Lineage R M g i h) (steps_cancel reach).symm lineage⟩
+      Eq.subst (motive := fun i => W.Lineage R M g i h) (Naturals.add_left_cancel reach).symm lineage⟩
 
 end Web
 

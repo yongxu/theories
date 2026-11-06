@@ -295,6 +295,17 @@ theorem family_excess_bounded (balances : L.Balances W) {ds : List C} {T : Nat} 
       W.stock ds (T + n) + n ≤ W.stock ds T :=
   fun n => family_excess_bounded_at n fun k _ => balances.on ds (T + k)
 
+/-- `n` steps of excess of the family's uptake over its replenishment from a stock below `n + m`
+leave the stock below `m` (`Flow.family_excess_bounded`, read at the need). -/
+theorem below_of_excess (balances : L.Balances W) {ds : List C} {m T n : Nat}
+    (excess : ∀ k, k < n → L.replenishment ds (T + k) < L.uptake ds (T + k))
+    (start : W.stock ds T < n + m) : W.stock ds (T + n) < m :=
+  Nat.lt_of_add_lt_add_left (n := n)
+    (Nat.lt_of_le_of_lt
+      (Nat.le_trans (Nat.le_of_eq (Nat.add_comm n _))
+        (family_excess_bounded balances n excess))
+      start)
+
 /-- With balance at the condition across each of the `n` steps, `n` consecutive steps of
 joint excess lower the level by at least `n`: the family of one condition. -/
 theorem excess_bounded_at {c : C} {T : Nat} (n : Nat)

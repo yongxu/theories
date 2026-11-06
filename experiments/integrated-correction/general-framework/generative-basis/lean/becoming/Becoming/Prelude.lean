@@ -152,19 +152,11 @@ theorem le_of_add_le_left {a b c : Nat} (h : a + b ≤ c) : b ≤ c :=
 theorem le_of_add_le_right {a b c : Nat} (h : a + b ≤ c) : a ≤ c :=
   Nat.le_trans (Nat.le_add_right a b) h
 
-theorem add_right_cancel {a b : Nat} : ∀ {k : Nat}, a + k = b + k → a = b
-  | 0, same => same
-  | k + 1, same => add_right_cancel (k := k) (Nat.succ.inj same)
-
 theorem add_left_cancel {a b k : Nat} (same : k + a = k + b) : a = b :=
-  add_right_cancel ((Nat.add_comm a k).trans (same.trans (Nat.add_comm k b)))
-
-theorem le_of_add_le_add_right {a b : Nat} : ∀ {k : Nat}, a + k ≤ b + k → a ≤ b
-  | 0, h => h
-  | k + 1, h => le_of_add_le_add_right (k := k) (Nat.le_of_succ_le_succ h)
+  add_right_cancel _ ((Nat.add_comm a k).trans (same.trans (Nat.add_comm k b)))
 
 theorem le_of_add_le_add_left {a b k : Nat} (h : k + a ≤ k + b) : a ≤ b :=
-  le_of_add_le_add_right ((Nat.add_comm a k) ▸ (Nat.add_comm b k) ▸ h)
+  le_of_add_le_add_right _ ((Nat.add_comm a k) ▸ (Nat.add_comm b k) ▸ h)
 
 theorem le_sub_of_add_le {a b n : Nat} (h : a + b ≤ n) : b ≤ n - a :=
   le_of_add_le_add_left (k := a)
@@ -510,7 +502,7 @@ theorem bool_and_true {b c : Bool} (hb : b = true) (hc : c = true) : (b && c) = 
 theorem bool_of_and_true {b c : Bool} (both : (b && c) = true) : b = true ∧ c = true := by
   cases b <;> cases c <;> cases both <;> exact ⟨rfl, rfl⟩
 
-theorem mem_cons_cases {a b : α} {q : List α} : b ∈ a :: q → b = a ∨ b ∈ q
+theorem mem_cons_cases {α : Type u} {a b : α} {q : List α} : b ∈ a :: q → b = a ∨ b ∈ q
   | .head _ => .inl rfl
   | .tail _ mem => .inr mem
 
@@ -598,11 +590,6 @@ theorem or_true (b : Bool) : (b || true) = true := match b with | true => rfl | 
 
 end ChanceFloors
 
-/-- Cancelling the same number added first. -/
-theorem le_of_add_le_add_left_core {S a b : Nat} (le : S + a ≤ S + b) : a ≤ b :=
-  le_of_add_le_add_right S (Nat.le_trans (Nat.le_of_eq (Nat.add_comm a S))
-    (Nat.le_trans le (Nat.le_of_eq (Nat.add_comm S b))))
-
 namespace CrossSituational
 
 theorem mem_singleton {m e : M} (mem : m ∈ [e]) : m = e := by
@@ -639,11 +626,6 @@ theorem zero_mul : ∀ a : Int, 0 * a = 0
   | .negSucc n => congrArg Int.negOfNat (Nat.zero_mul (n + 1))
 
 end Integers
-
-theorem mem_mapped {α : Type u} {β : Type v} (g : α → β) {a : α} :
-    ∀ {l : List α}, a ∈ l → g a ∈ l.map g
-  | _ :: _, .head _ => .head _
-  | _ :: _, .tail _ mem => .tail _ (mem_mapped g mem)
 
 namespace SupportGated
 
@@ -872,6 +854,271 @@ theorem between_of_mem_steps : ∀ {T N j : Nat}, j ∈ steps T N → T ≤ j �
     | .inr mem => match between_of_mem_steps mem with
       | ⟨le, lt⟩ => ⟨Nat.le_of_succ_le le,
           Nat.lt_of_lt_of_le lt (Nat.le_of_eq (Nat.add_right_comm T 1 N))⟩
+
+/-! ## Stated once (LM)
+
+Lemmas several modules proved for themselves, moved here in the rebuild of 6 November 2026 so that
+each is stated once. -/
+
+namespace Naturals
+
+/-- A power of a product is the product of the powers. -/
+theorem mul_pow_eq (x y : Nat) : ∀ n : Nat, (x * y) ^ n = x ^ n * y ^ n
+  | 0 => rfl
+  | n + 1 => (congrArg (· * (x * y)) (mul_pow_eq x y n)).trans (mul_mul_mul_comm _ _ _ _)
+
+/-- A product below another at one factor has the lower other factor (proved here with no axiom, as
+`Nat.lt_of_mul_lt_mul_right` is not). -/
+theorem lt_of_mul_lt_mul_right {a b v : Nat} (lt : a * v < b * v) : a < b :=
+  match Nat.decLt a b with
+  | isTrue below => below
+  | isFalse notBelow =>
+    absurd lt (Nat.not_lt_of_le (Nat.mul_le_mul_right _ (Nat.ge_of_not_lt notBelow)))
+
+/-- A product below another with the same factor first has the smaller other factor. -/
+theorem lt_of_mul_lt_mul_left {m a b : Nat} (below : m * a < m * b) : a < b :=
+  match Nat.lt_or_ge a b with
+  | .inl lt => lt
+  | .inr ge => absurd (Nat.lt_of_lt_of_le below (Nat.mul_le_mul_left m ge)) (Nat.lt_irrefl _)
+
+/-- A positive multiple keeps order strictly. -/
+theorem mul_lt_mul_of_pos {m a b : Nat} (pos : 0 < m) (lt : a < b) : m * a < m * b :=
+  Nat.lt_of_lt_of_le (Nat.lt_add_of_pos_right pos) (Nat.mul_le_mul_left m lt)
+
+/-- A power of two is positive. -/
+theorem two_pow_pos : ∀ a, 0 < 2 ^ a
+  | 0 => Nat.succ_pos 0
+  | a + 1 => Nat.mul_pos (two_pow_pos a) (Nat.succ_pos 1)
+
+/-- A number is below its power of two. -/
+theorem lt_two_pow : ∀ n, n < 2 ^ n
+  | 0 => Nat.succ_pos 0
+  | n + 1 => Nat.lt_of_le_of_lt (Nat.succ_le_of_lt (lt_two_pow n))
+      (Nat.lt_of_lt_of_le (Nat.lt_add_of_pos_right (two_pow_pos n))
+        (Nat.le_of_eq ((Nat.mul_succ (2 ^ n) 1).trans (congrArg (· + 2 ^ n) (Nat.mul_one _))).symm))
+
+/-- Subtracting more leaves no more. -/
+theorem sub_antitone (k : Nat) {v w : Nat} (le : v ≤ w) : k - w ≤ k - v := by
+  induction le with
+  | refl => exact Nat.le_refl _
+  | step _ ih => exact Nat.le_trans (Nat.pred_le _) ih
+
+/-- Twice a product of two ordered numbers is at most the sum of their squares. -/
+theorem twice_le_of_le {x y : Nat} (le : x ≤ y) : 2 * (x * y) ≤ x * x + y * y :=
+  match le_dest le with
+  | ⟨e, at_y⟩ => by
+    rw [at_y]
+    have same : x * x + (x + e) * (x + e) = 2 * (x * (x + e)) + e * e := by
+      rw [add_mul_split x e (x + e), Nat.mul_add e x e, Nat.mul_comm e x, Nat.add_left_comm,
+        ← Nat.add_assoc (x * x) (x * e) (e * e), ← Nat.mul_add x x e, ← Nat.add_assoc, Nat.two_mul]
+    rw [same]
+    exact Nat.le_add_right _ _
+
+/-- Twice a product is at most the sum of the squares. -/
+theorem twice_le (x y : Nat) : 2 * (x * y) ≤ x * x + y * y :=
+  match Nat.le_total x y with
+  | .inl le => twice_le_of_le le
+  | .inr le => by
+    rw [Nat.mul_comm x y, Nat.add_comm (x * x)]
+    exact twice_le_of_le le
+
+/-- Adding one amount to both sides keeps a strict order, and only it. -/
+theorem add_lt_add_left_iff {k m n : Nat} : k + m < k + n ↔ m < n :=
+  ⟨fun lt => le_of_add_le_add_left (k := k) lt, fun lt => Nat.add_lt_add_left lt k⟩
+
+/-- Cancelling the same number added first, strictly. -/
+theorem lt_of_add_lt_add_left {k a b : Nat} (lt : k + a < k + b) : a < b :=
+  le_of_add_le_add_left (k := k) lt
+
+/-- What is at most `y` with `c` less `y` is at most `c`. -/
+theorem sub_le_of_le_add : ∀ {x y c : Nat}, x ≤ y + c → x - y ≤ c
+  | _, 0, _, le => Nat.le_trans le (Nat.le_of_eq (Nat.zero_add _))
+  | 0, _ + 1, _, _ => Nat.le_trans (Nat.le_of_eq (Nat.zero_sub _)) (Nat.zero_le _)
+  | x + 1, y + 1, _, le => (Nat.succ_sub_succ x y).symm ▸
+      sub_le_of_le_add (Nat.le_of_succ_le_succ (Nat.le_trans le (Nat.le_of_eq (Nat.succ_add y _))))
+
+/-- A positive sum has a positive part. -/
+theorem pos_or_of_add_pos : ∀ {a b : Nat}, 0 < a + b → 0 < a ∨ 0 < b
+  | 0, _, pos => .inr (Eq.subst (motive := fun k => 0 < k) (Nat.zero_add _) pos)
+  | _ + 1, _, _ => .inl (Nat.succ_pos _)
+
+/-- Four terms regrouped. -/
+theorem add_regroup (x y u v : Nat) : (x + y) + (u + v) = (x + v) + (y + u) :=
+  (congrArg ((x + y) + ·) (Nat.add_comm u v)).trans (Nat.add_add_add_comm x y v u)
+
+/-- Taking `d` away, adding `r` and giving `d` back is adding `r`. -/
+theorem sub_add_refill {n d : Nat} (r : Nat) (le : d ≤ n) : n - d + r + d = n + r :=
+  (Nat.add_right_comm (n - d) r d).trans
+    (congrArg (· + r) ((Nat.add_comm (n - d) d).trans (add_sub_of_le le)))
+
+end Naturals
+
+namespace ListTests
+
+/-- `all` holding gives the test at each member, the test named. -/
+theorem all_sound {α : Type} (p : α → Bool) {l : List α} (h : l.all p = true) :
+    ∀ x, x ∈ l → p x = true :=
+  all_true_iff.mp h
+
+/-- The test holding at each member gives `all`, the test named. -/
+theorem all_complete {α : Type} (p : α → Bool) {l : List α} (h : ∀ x, x ∈ l → p x = true) :
+    l.all p = true :=
+  all_true_iff.mpr h
+
+/-- What is true has a false negation. -/
+theorem not_false_of_true : ∀ {b : Bool}, b = true → (!b) = false
+  | true, _ => rfl
+  | false, h => Bool.noConfusion h
+
+/-- What a test keeps positive, the test holds at. -/
+theorem true_of_cond_pos {b : Bool} {x : Nat} : 0 < (bif b then x else 0) → b = true :=
+  match b with
+  | true => fun _ => rfl
+  | false => fun h => absurd h (Nat.lt_irrefl 0)
+
+/-- An amount kept where a test holds is at most another so kept, where it is at most it there. -/
+theorem cond_zero_le {x y : Nat} : ∀ {b : Bool}, (b = true → x ≤ y) → cond b x 0 ≤ cond b y 0
+  | true, le => le rfl
+  | false, _ => Nat.le_refl 0
+
+/-- An amount kept where a test holds is at most the amount. -/
+theorem bif_le (M : Nat) : ∀ b : Bool, (bif b then M else 0) ≤ M
+  | true => Nat.le_refl M
+  | false => Nat.zero_le M
+
+/-- Two numbers with one `some` are one. -/
+theorem some_inj {a b : Nat} (same : (some a : Option Nat) = some b) : a = b :=
+  congrArg (fun o => Option.getD o 0) same
+
+/-- `none` is no member of a list mapped by `some`. -/
+theorem none_not_mem_map_some {α : Type} : ∀ {l : List α}, ¬ (none : Option α) ∈ l.map some
+  | [], no => nomatch no
+  | _ :: _, .tail _ mem => none_not_mem_map_some mem
+
+/-- Numbers that differ test false. -/
+theorem beq_false_of_ne {a b : Nat} (ne : a ≠ b) : Nat.beq a b = false :=
+  match h : Nat.beq a b with
+  | true => absurd (Nat.eq_of_beq_eq_true h) ne
+  | false => rfl
+
+/-- A truth value is not both. -/
+theorem bool_absurd {b : Bool} (h : b = true) (h' : b = false) : False :=
+  absurd (h.symm.trans h') (by decide)
+
+end ListTests
+
+/-- As `Nat.le_of_sub_eq_zero`, with an empty axiom report. -/
+theorem le_of_sub_eq_zero : ∀ {n m : Nat}, n - m = 0 → n ≤ m
+  | 0, m, _ => Nat.zero_le m
+  | _ + 1, 0, zero => Nat.noConfusion zero
+  | n + 1, m + 1, zero =>
+    Nat.succ_le_succ (le_of_sub_eq_zero ((Nat.succ_sub_succ n m).symm.trans zero))
+
+/-- A list with a member has a positive length. -/
+theorem length_pos_of_mem {α : Type u} {a : α} : ∀ {l : List α}, a ∈ l → 0 < l.length
+  | _ :: _, _ => Nat.succ_pos _
+
+/-- A list of length zero is empty. -/
+theorem nil_of_length_zero {α : Type u} : ∀ {g : List α}, g.length = 0 → g = []
+  | [], _ => rfl
+  | _ :: _, len => Nat.noConfusion len
+
+/-- Quantities that agree everywhere have the same total. -/
+theorem total_congr {α : Type} {p q : α → Nat} (same : ∀ a, p a = q a) :
+    ∀ as : List α, total as p = total as q
+  | [] => rfl
+  | a :: as => Naturals.add_congr (same a) (total_congr same as)
+
+/-- A quantity zero at every member has total zero. -/
+theorem total_eq_zero {α : Type} {q : α → Nat} : ∀ {as : List α}, (∀ a, a ∈ as → q a = 0) → total as q = 0
+  | [], _ => rfl
+  | a :: _, zero => (congrArg (· + _) (zero a (.head _))).trans
+      ((Nat.zero_add _).trans (total_eq_zero fun b mem => zero b (.tail a mem)))
+
+/-- A step that comes no later than `K + 1` is no later than `K` or is `K + 1`. -/
+theorem le_succ_cases {n K : Nat} (le : n ≤ K + 1) : n ≤ K ∨ n = K + 1 :=
+  match Nat.lt_or_ge n (K + 1) with
+  | .inl lt => Or.inl (Nat.le_of_lt_succ lt)
+  | .inr ge => Or.inr (Nat.le_antisymm le ge)
+
+/-- How far `j` lies beyond `i`, at least one step. -/
+theorem gap_of_lt {i j : Nat} (lt : i < j) : ∃ d, j = i + (d + 1) :=
+  let ⟨d, same⟩ := le_dest lt
+  ⟨d, same.trans (Nat.succ_add i d)⟩
+
+/-- The `n`-th number other than `m`, counting from zero. -/
+def skipAt : Nat → Nat → Nat
+  | 0, n => n + 1
+  | _ + 1, 0 => 0
+  | m + 1, n + 1 => skipAt m n + 1
+
+theorem skipAt_ne : ∀ m n, skipAt m n ≠ m
+  | 0, _ => fun same => Nat.noConfusion same
+  | _ + 1, 0 => fun same => Nat.noConfusion same
+  | m + 1, n + 1 => fun same => skipAt_ne m n (Nat.succ.inj same)
+
+theorem skipAt_le : ∀ m n, skipAt m n ≤ n + 1
+  | 0, _ => Nat.le_refl _
+  | _ + 1, 0 => Nat.zero_le _
+  | m + 1, n + 1 => Nat.succ_le_succ (skipAt_le m n)
+
+theorem skipAt_lt : ∀ m {i j : Nat}, i < j → skipAt m i < skipAt m j
+  | 0, _, _, lt => Nat.succ_lt_succ lt
+  | _ + 1, 0, _ + 1, _ => Nat.succ_pos _
+  | m + 1, _ + 1, _ + 1, lt => Nat.succ_lt_succ (skipAt_lt m (Nat.lt_of_succ_lt_succ lt))
+  | _ + 1, _, 0, lt => absurd lt (Nat.not_lt_zero _)
+
+theorem split_at_head {α : Type u} {g : Nat → α} {a : α} {l : List α} :
+    ∀ K, (∀ n, n ≤ K → g n = a ∨ g n ∈ l) →
+      (∃ i j, i < j ∧ j ≤ K ∧ g i = g j) ∨ (∀ n, n ≤ K → g n ∈ l) ∨
+        (∃ m, m ≤ K ∧ g m = a ∧ ∀ n, n ≤ K → n ≠ m → g n ∈ l)
+  | 0, held =>
+    match held 0 (Nat.le_refl 0) with
+    | .inl at_a => Or.inr (Or.inr ⟨0, Nat.le_refl 0, at_a,
+        fun n le other => absurd (Nat.le_antisymm le (Nat.zero_le n)) other⟩)
+    | .inr mem => Or.inr (Or.inl fun n le => by
+        have same : n = 0 := Nat.le_antisymm le (Nat.zero_le n)
+        subst same
+        exact mem)
+  | K + 1, held =>
+    match split_at_head K (fun n le => held n (Nat.le_succ_of_le le)) with
+    | .inl ⟨i, j, lt, le, same⟩ => Or.inl ⟨i, j, lt, Nat.le_succ_of_le le, same⟩
+    | .inr (.inl all) =>
+      match held (K + 1) (Nat.le_refl _) with
+      | .inl at_a => Or.inr (Or.inr ⟨K + 1, Nat.le_refl _, at_a, fun n le other =>
+          match le_succ_cases le with
+          | .inl le => all n le
+          | .inr same => absurd same other⟩)
+      | .inr mem => Or.inr (Or.inl fun n le =>
+          match le_succ_cases le with
+          | .inl le => all n le
+          | .inr same => by subst same; exact mem)
+    | .inr (.inr ⟨m, le_m, at_m, rest⟩) =>
+      match held (K + 1) (Nat.le_refl _) with
+      | .inl at_a =>
+        Or.inl ⟨m, K + 1, Nat.lt_succ_of_le le_m, Nat.le_refl _, at_m.trans at_a.symm⟩
+      | .inr mem => Or.inr (Or.inr ⟨m, Nat.le_succ_of_le le_m, at_m, fun n le other =>
+          match le_succ_cases le with
+          | .inl le => rest n le other
+          | .inr same => by subst same; exact mem⟩)
+
+/-- Pigeonhole with no decidability: a list holding the first `l.length + 1` values of a sequence
+holds two of them at one place. -/
+theorem revisits_within {α : Type u} : ∀ (l : List α) (g : Nat → α), (∀ n, n ≤ l.length → g n ∈ l) →
+    ∃ i j, i < j ∧ j ≤ l.length ∧ g i = g j
+  | [], _, held => nomatch held 0 (Nat.le_refl 0)
+  | _ :: l, g, held =>
+    match split_at_head (l.length + 1) (fun n le => mem_cons_cases (held n le)) with
+    | .inl found => found
+    | .inr (.inl all) =>
+      let ⟨i, j, lt, le, same⟩ :=
+        revisits_within l g (fun n le => all n (Nat.le_succ_of_le le))
+      ⟨i, j, lt, Nat.le_succ_of_le le, same⟩
+    | .inr (.inr ⟨m, _, _, rest⟩) =>
+      let ⟨i, j, lt, le, same⟩ := revisits_within l (fun n => g (skipAt m n)) (fun n le =>
+        rest (skipAt m n) (Nat.le_trans (skipAt_le m n) (Nat.succ_le_succ le)) (skipAt_ne m n))
+      ⟨skipAt m i, skipAt m j, skipAt_lt m lt, Nat.le_trans (skipAt_le m j) (Nat.succ_le_succ le),
+        same⟩
 
 /-! ## Stretches of steps -/
 

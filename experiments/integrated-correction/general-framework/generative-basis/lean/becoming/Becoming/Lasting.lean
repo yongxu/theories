@@ -973,7 +973,7 @@ theorem list_throughout_not_not {β : Type w} {Q : Nat → β → Prop} (decided
       refuted ⟨b, .head l, fun k => (decided k b).of_not_not fun fails => never ⟨k, fails⟩⟩
     | .inl ⟨k₀, fails⟩ => list_throughout_not_not decided down l
         (fun k => match each (k + k₀) with
-          | ⟨c, mem, holds⟩ => match mem_cons_split mem with
+          | ⟨c, mem, holds⟩ => match mem_cons_cases mem with
             | .inl same => absurd (holds_below (P := Q) down (Nat.le_add_left k₀ k)
                 (Eq.subst (motive := Q (k + k₀)) same holds)) fails
             | .inr mem => ⟨c, mem, holds_below (P := Q) down (Nat.le_add_right k k₀) holds⟩)

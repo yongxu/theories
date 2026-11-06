@@ -242,7 +242,7 @@ theorem restraint_extends_iff_stepwise (balances : L.Balances (U w)) (balances' 
     ExtendsUnder (stepwise U) w w' ↔ ∃ e, stepwise U w' e ∧ ¬ stepwise U w e :=
   stepwise_extends_iff_of_rising dependent gated
     (balances.eases_of_restrained balances' start restrained renewing asks needs drawsLess)
-    fun t c => Naturals.le_of_add_le_add_right (Nat.le_trans (Nat.add_le_add_left (within t c) _)
+    fun t c => le_of_add_le_add_right _ (Nat.le_trans (Nat.add_le_add_left (within t c) _)
       (Nat.le_of_eq (balances' t c).symm))
 
 /-- Every comparison satisfying C under the stepwise reading then ranks the restrained course higher,
@@ -278,7 +278,7 @@ theorem restraint_extends_iff_relational (balances : L.Balances (U w)) (balances
     ExtendsUnder (relational U) w w' ↔ ∃ e, relational U w' e ∧ ¬ relational U w e :=
   relational_extends_iff_of_rising dependent gated
     (balances.eases_of_restrained balances' start restrained renewing asks needs drawsLess)
-    (fun t c => Naturals.le_of_add_le_add_right (Nat.le_trans (Nat.add_le_add_left (within t c) _)
+    (fun t c => le_of_add_le_add_right _ (Nat.le_trans (Nat.add_le_add_left (within t c) _)
       (Nat.le_of_eq (balances' t c).symm))) joins
 
 end Ranking

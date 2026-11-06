@@ -105,16 +105,6 @@ def gap (a b : Nat) : Nat := (a - b) + (b - a)
 
 namespace Propagation
 
-/-- What is at most `a + m` leaves at most `m` once `a` is taken away. -/
-theorem sub_le_of_le_add : ∀ {b : Nat} (a : Nat) {m : Nat}, b ≤ a + m → b - a ≤ m
-  | b, 0, m, le =>
-    Nat.le_trans (Nat.le_of_eq (Nat.sub_zero b)) (Nat.le_trans le (Nat.le_of_eq (Nat.zero_add m)))
-  | 0, a + 1, m, _ => Nat.le_trans (Nat.le_of_eq (Nat.zero_sub (a + 1))) (Nat.zero_le m)
-  | b + 1, a + 1, m, le =>
-    Nat.le_trans (Nat.le_of_eq (Nat.succ_sub_succ b a))
-      (sub_le_of_le_add a
-        (Nat.le_of_succ_le_succ (Nat.le_trans le (Nat.le_of_eq (Nat.add_right_comm a 1 m)))))
-
 /-- A rearrangement of five amounts, with an empty axiom report. -/
 theorem rearrange (b x u v w : Nat) : b + (x + u) + (v + w) = b + (v + (u + w)) + x :=
   (Nat.add_assoc b (x + u) (v + w)).trans
@@ -154,11 +144,11 @@ theorem gap_le_of {a b m : Nat} (ab : a ≤ b + m) (ba : b ≤ a + m) : gap a b 
   | .inl le =>
     Nat.le_trans
       (Nat.le_of_eq ((congrArg (· + (b - a)) (sub_eq_zero_of_le le)).trans (Nat.zero_add _)))
-      (sub_le_of_le_add a ba)
+      (Naturals.sub_le_of_le_add ba)
   | .inr le =>
     Nat.le_trans
       (Nat.le_of_eq ((congrArg ((a - b) + ·) (sub_eq_zero_of_le le)).trans (Nat.add_zero _)))
-      (sub_le_of_le_add b ab)
+      (Naturals.sub_le_of_le_add ab)
 
 /-- **The gap, by bounds.** The gap of two amounts is at most `m` exactly where each is at most
 the other with `m` added. -/
@@ -386,11 +376,6 @@ theorem le_of_mem_steps_upto {s t : Nat} (mem : s ∈ steps 0 (t + 1)) : s ≤ t
   Nat.le_of_lt_succ (Nat.lt_of_lt_of_le (between_of_mem_steps mem).2
     (Nat.le_of_eq (Nat.zero_add (t + 1))))
 
-/-- A condition listed gives its level at `s`. -/
-theorem mem_map_pair {s : Nat} {d : C} : ∀ {ds : List C}, d ∈ ds → (s, d) ∈ ds.map fun e => (s, e)
-  | _ :: _, .head _ => .head _
-  | _ :: _, .tail _ mem => .tail _ (mem_map_pair mem)
-
 /-- A level at `s` of listed conditions is at `s`, of a listed condition. -/
 theorem of_mem_map_pair {s : Nat} {x : Nat × C} :
     ∀ {ds : List C}, x ∈ (ds.map fun e => (s, e)) → x.1 = s ∧ x.2 ∈ ds
@@ -412,7 +397,7 @@ def cellsOf (ds : List C) : List Nat → List (Nat × C)
 /-- A listed step with a listed condition is a listed level. -/
 theorem mem_cellsOf {ds : List C} {s : Nat} {d : C} (inDs : d ∈ ds) :
     ∀ {ss : List Nat}, s ∈ ss → (s, d) ∈ cellsOf ds ss
-  | _ :: _, .head _ => List.mem_append_left _ (Propagation.mem_map_pair inDs)
+  | _ :: _, .head _ => List.mem_append_left _ (prodMk_mem_map inDs)
   | _ :: _, .tail _ mem => List.mem_append_right _ (mem_cellsOf inDs mem)
 
 /-- A listed level is at a listed step, of a listed condition. -/
@@ -467,7 +452,7 @@ theorem mixCells_listed (l l' : Nat → C → Nat) :
     | isTrue here => if_pos here
     | isFalse off =>
       (if_neg off).trans (mixCells_listed l l'
-        (match mem_cons_split mem with
+        (match mem_cons_cases mem with
           | .inl same => absurd ⟨congrArg Prod.fst same, congrArg Prod.snd same⟩ off
           | .inr later => later))
 
@@ -577,7 +562,7 @@ theorem ExchangeLaw.insensitiveAt_iff_strength_zero (na : law.Nonanticipating) {
         (Nat.le_trans
           (ExchangeLaw.exchangeGap_le_strengths na (ds := [d]) (fun _ _ => 0)
             (fun s _ le mem =>
-              match mem_cons_split mem with
+              match mem_cons_cases mem with
               | .inl same => same ▸ zero c s le
               | .inr nothing => nomatch nothing)
             fun s le e differ =>

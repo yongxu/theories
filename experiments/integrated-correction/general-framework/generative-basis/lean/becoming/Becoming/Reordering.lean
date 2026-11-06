@@ -113,10 +113,6 @@ variable {F C : Type}
 
 section Moving
 
-/-- With the same added before, the rest is the same. -/
-theorem add_left_cancel_of_eq {a x y : Nat} (same : a + x = a + y) : x = y :=
-  add_right_cancel a ((Nat.add_comm x a).trans (same.trans (Nat.add_comm a y)))
-
 theorem ne_succ_of_ne {n t : Nat} (other : n ≠ t) : n + 1 ≠ t + 1 :=
   fun same => other (Nat.succ.inj same)
 
@@ -274,7 +270,7 @@ fall with what is given. -/
 theorem balance_iff_change {q : Nat → Nat} {n T G : Nat} :
     q (n + 1) + T = q n + G ↔ rise q n + T = fall q n + G :=
   have turn := across q n
-  ⟨fun balance => add_left_cancel_of_eq (a := q n) (calc
+  ⟨fun balance => Naturals.add_left_cancel (k := q n) (calc
       q n + (rise q n + T) = (q (n + 1) + fall q n) + T := (Nat.add_assoc _ _ _).symm.trans
           (congrArg (· + T) turn.symm)
       _ = (q (n + 1) + T) + fall q n := Nat.add_right_comm _ _ _
@@ -2147,7 +2143,7 @@ theorem sorts_step {m S d : Nat} {r : Footprinted X} {π σ : Nat → Nat} (cont
   have hS := (reindex S (Nat.le_refl S) (Nat.lt_add_of_pos_right (Nat.succ_pos m))).2
   have top : S + d < S + (m + 1) := Eq.subst (motive := (· < S + (m + 1))) hk hS.2.1
   have dm : d ≤ m :=
-    Nat.le_of_lt_succ (le_of_add_le_add_left_core (S := S) (a := d + 1) (b := m + 1) top)
+    Nat.le_of_lt_succ (Naturals.le_of_add_le_add_left (k := S) (a := d + 1) (b := m + 1) top)
   have free : ∀ p, S ≤ p → p < S + d → ¬ r.Joined p (S + d) := fun p from_ below =>
     Eq.subst (motive := fun k => ¬ r.Joined p k) hk
       (first_free reindex keeps from_ (Eq.subst (motive := (p < ·)) hk.symm below))
@@ -2283,7 +2279,7 @@ theorem converse {S m : Nat} {r r₂ : Footprinted X} {π σ : Nat → Nat} (con
      fun _ x from_ upto => match le_dest from_ with
        | ⟨e, same⟩ => Eq.subst (motive := fun j => (r.reorder ts).web.SameAt j r₂.web j x)
            same.symm (converse_webs contains contains₂ independent within reindex came footprints
-             changes start e (le_of_add_le_add_left_core
+             changes start e (Naturals.le_of_add_le_add_left
                (Eq.subst (motive := (· ≤ S + m)) same upto)) x)⟩
 
 /-! ### The order is relative to the footprint -/

@@ -124,11 +124,6 @@ theorem sign_pos : ∀ {n : Nat}, 0 < n → 0 < sign n
   | 0, positive => positive
   | _ + 1, _ => Nat.succ_pos 0
 
-theorem total_eq_zero {q : α → Nat} : ∀ {as : List α}, (∀ a, a ∈ as → q a = 0) → total as q = 0
-  | [], _ => rfl
-  | a :: _, zero => (congrArg (· + _) (zero a (.head _))).trans
-      ((Nat.zero_add _).trans (total_eq_zero fun b mem => zero b (.tail a mem)))
-
 /-- A quantity positive only at `a` totals at most its value at `a` over a list without
 repetition. -/
 theorem total_le_at {q : α → Nat} {a : α} (only : ∀ b, 0 < q b → b = a) :

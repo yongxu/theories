@@ -462,14 +462,6 @@ theorem mem_insert_cases {y x : X} : ∀ {p q : List X}, x ∈ p ++ y :: q → x
     | .inl same => .inl same
     | .inr rest => .inr (.tail b rest)
 
-/-- In a list without repetition, an inserted member is not among the rest. -/
-theorem fresh_insert {y : X} : ∀ {p q : List X}, Distinct (p ++ y :: q) → ¬ y ∈ p ++ q
-  | [], _, ⟨fresh, _⟩ => fresh
-  | _ :: p, q, ⟨fresh, distinct⟩ => fun mem => match mem_cons_cases mem with
-    | .inl same => fresh (Eq.subst (motive := fun x => x ∈ p ++ y :: q) same
-        (mem_append_of_right p (.head q)))
-    | .inr rest => fresh_insert distinct rest
-
 /-- **Totals over a family and the part of it that counts.** Over two lists without repetition,
 the first holding the second, where every member of the first outside the second is not refuted to
 be within nothing, the two totals are, as far as can be refuted, each within the other. Whether
@@ -490,7 +482,7 @@ theorem totalOf_support {a : X → A} : ∀ {U D : List X}, Distinct U → Disti
             (fun x mem => match mem_cons_cases (sub x (Eq.subst (motive := fun l => x ∈ l) split.symm
                 (mem_insert mem))) with
               | .inl same => absurd (Eq.subst (motive := fun z => z ∈ p ++ q) same mem)
-                  (fresh_insert distinctD')
+                  (not_mem_of_middle distinctD')
               | .inr rest => rest)
             (fun x mem out => outside x (.tail y mem) fun inD =>
               match mem_insert_cases (Eq.subst (motive := fun l => x ∈ l) split inD) with
@@ -1104,11 +1096,6 @@ theorem decide_mem (h : Bool) : ∀ ds : List Bool, h ∈ ds ∨ ¬ h ∈ ds
         | .inl same => other same.symm
         | .inr inside => out inside
 
-/-- Every relatum is in the pair. -/
-theorem member : ∀ x : Bool, x ∈ [true, false]
-  | true => .head _
-  | false => .tail _ (.head _)
-
 /-- The pair is listed without repetition. -/
 theorem pair_distinct : Distinct [true, false] :=
   ⟨fun mem => match mem_cons_cases mem with
@@ -1195,7 +1182,7 @@ theorem dissipative (still : ∀ t, M.le (d (t + 1)) (d t)) (falls : ∀ t, ¬ M
 
 /-- The pair is closed across every step. -/
 theorem closed (t : Nat) : (amounts M d).ClosedAt M [true, false] t :=
-  fun _ _ c out => absurd (member c) out
+  fun _ _ c out => absurd (ListTests.mem_bools c) out
 
 /-- Every step is enclosed by the pair. -/
 theorem enclosed (t : Nat) : (amounts M d).Enclosed M t :=
@@ -1234,7 +1221,7 @@ theorem levels_unlisted (still : ∀ t, M.le (d (t + 1)) (d t))
   fun ⟨_, held⟩ =>
     World.InAmounts.rests_unrefuted_reading (M := M) (v := amounts M d) (T := 0)
       (ds := [true, false]) (g := (amounts M d).level) (read := fun lv => lv)
-      (fun _ _ x _ => member x) (fun t _ c _ => balanced t c)
+      (fun _ _ x _ => ListTests.mem_bools x) (fun t _ c _ => balanced t c)
       (fun t _ => dissipative still falls _ t pair_distinct (closed t))
       (fun _ x _ s => (embodied falls) s x) (fun t _ => held t) (fun _ _ _ _ => rfl)
       fun ⟨N, quiet⟩ => never_rests N quiet

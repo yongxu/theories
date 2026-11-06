@@ -438,8 +438,6 @@ namespace Witness
 
 open Pace RuleCapture CarrierCounts
 
-theorem two_pos : 0 < 2 := Nat.zero_lt_succ 1
-
 theorem four_pos : 0 < 4 := Nat.zero_lt_succ 3
 
 /-- Counts three to one for the first policy: above the threshold of the score one to two,
@@ -451,12 +449,12 @@ first policy against one of the second, the rule in force read from them, the ch
 first policy at every step, along every schedule, although the score weighs the second twice as
 much. -/
 theorem counted_beats_score (reads : Nat → Bool) (t : Nat) :
-    (paced choose (weighted 1 2 two_pos) reads (counts, weighted 1 2 two_pos counts counts)
+    (paced choose (weighted 1 2 Nat.two_pos) reads (counts, weighted 1 2 Nat.two_pos counts counts)
         (t + 1)).1.carrier =
-      (paced choose (weighted 1 2 two_pos) reads (counts, weighted 1 2 two_pos counts counts)
+      (paced choose (weighted 1 2 Nat.two_pos) reads (counts, weighted 1 2 Nat.two_pos counts counts)
         t).1.carrier + 1 :=
   congrArg CarrierCounts.carrier
-    (counted_chooses (κc := 1) (κo := 2) (pos := two_pos) (x := counts)
+    (counted_chooses (κc := 1) (κo := 2) (pos := Nat.two_pos) (x := counts)
       (show 2 * 1 ≤ 1 * 3 by decide) reads t)
 
 /-- Counts one to one: below the threshold, `1 · 1 < 2 · 1`. -/
@@ -465,41 +463,41 @@ def even : CarrierCounts := ⟨1, 1, Nat.zero_lt_one⟩
 /-- **Without the count's lead, the score decides for good.** From one choice of each, the rule
 favours the second policy strictly at every step. -/
 theorem score_decides (reads : Nat → Bool) (t : Nat) :
-    (paced choose (weighted 1 2 two_pos) reads (even, weighted 1 2 two_pos even even) t).2.carrier <
-      (paced choose (weighted 1 2 two_pos) reads (even, weighted 1 2 two_pos even even) t).2.other :=
-  (counted_locks_down (κc := 1) (κo := 2) (pos := two_pos) (x := even)
+    (paced choose (weighted 1 2 Nat.two_pos) reads (even, weighted 1 2 Nat.two_pos even even) t).2.carrier <
+      (paced choose (weighted 1 2 Nat.two_pos) reads (even, weighted 1 2 Nat.two_pos even even) t).2.other :=
+  (counted_locks_down (κc := 1) (κo := 2) (pos := Nat.two_pos) (x := even)
     (show 1 * 1 < 2 * 1 by decide) reads t).1
 
 /-- Counts three to two: one count of the three to one moved to the second policy. -/
-def moved : CarrierCounts := ⟨3, 2, two_pos⟩
+def moved : CarrierCounts := ⟨3, 2, Nat.two_pos⟩
 
 /-- **A change of the counts across the threshold leaves the lock.** Three to two under the score
 one to two lies below the threshold, `1 · 3 < 2 · 2`: the course is locked the other way. -/
 theorem moved_locks_down (reads : Nat → Bool) (t : Nat) :
-    (paced choose (weighted 1 2 two_pos) reads (moved, weighted 1 2 two_pos moved moved) t).2.carrier <
-      (paced choose (weighted 1 2 two_pos) reads (moved, weighted 1 2 two_pos moved moved) t).2.other :=
-  (counted_locks_down (κc := 1) (κo := 2) (pos := two_pos) (x := moved)
+    (paced choose (weighted 1 2 Nat.two_pos) reads (moved, weighted 1 2 Nat.two_pos moved moved) t).2.carrier <
+      (paced choose (weighted 1 2 Nat.two_pos) reads (moved, weighted 1 2 Nat.two_pos moved moved) t).2.other :=
+  (counted_locks_down (κc := 1) (κo := 2) (pos := Nat.two_pos) (x := moved)
     (show 1 * 3 < 2 * 2 by decide) reads t).1
 
 /-- **Counted from the posterior at the time of choosing, the share falls at the first step.**
 From the same three to one at scale one, the first policy's share falls at the first step. -/
 theorem posterior_share_falls :
-    (CarrierCounts.select counts (byScore 1 2 1 two_pos)).carrier * counts.other <
-      counts.carrier * (CarrierCounts.select counts (byScore 1 2 1 two_pos)).other :=
-  posterior_count_falls (κc := 1) (κo := 2) (s := 1) (pos := two_pos) counts (Nat.zero_lt_succ 2)
+    (CarrierCounts.select counts (byScore 1 2 1 Nat.two_pos)).carrier * counts.other <
+      counts.carrier * (CarrierCounts.select counts (byScore 1 2 1 Nat.two_pos)).other :=
+  posterior_count_falls (κc := 1) (κo := 2) (s := 1) (pos := Nat.two_pos) counts (Nat.zero_lt_succ 2)
     (Nat.lt_succ_self 1)
 
 /-- **A falling share need not cross at once**: after one step the counts are six to three, and
 the weighted rule still favours the first policy, by a tie, `2 · 3 ≤ 1 · 6`. -/
 theorem after_one_still_first :
-    favours (weighted 1 2 two_pos (CarrierCounts.select counts (byScore 1 2 1 two_pos)) counts) :=
+    favours (weighted 1 2 Nat.two_pos (CarrierCounts.select counts (byScore 1 2 1 Nat.two_pos)) counts) :=
   show 2 * 3 ≤ 1 * 6 by decide
 
 /-- **It favours the second policy from the second step**: twelve to nine, `2 · 9 > 1 · 12`. -/
 theorem after_two_turns :
-    ¬ favours (weighted 1 2 two_pos
-      (CarrierCounts.select (CarrierCounts.select counts (byScore 1 2 1 two_pos))
-        (byScore 1 2 1 two_pos)) counts) :=
+    ¬ favours (weighted 1 2 Nat.two_pos
+      (CarrierCounts.select (CarrierCounts.select counts (byScore 1 2 1 Nat.two_pos))
+        (byScore 1 2 1 Nat.two_pos)) counts) :=
   show ¬ 2 * 9 ≤ 1 * 12 by decide
 
 /-! ### A rule in force not read from the counts -/
@@ -513,14 +511,14 @@ def stale : CarrierCounts := ⟨1, 4, four_pos⟩
 above the threshold of the score one to two, with the stale rule in force and read at every step:
 the course is locked for the second policy from step 5. -/
 theorem above_but_stale_locks_down :
-    Locked (reverse order) (fun g => g.carrier < g.other) (weighted 1 2 two_pos)
-      (paced choose (weighted 1 2 two_pos) (fun _ => true) (counts, stale) 5) :=
+    Locked (reverse order) (fun g => g.carrier < g.other) (weighted 1 2 Nat.two_pos)
+      (paced choose (weighted 1 2 Nat.two_pos) (fun _ => true) (counts, stale) 5) :=
   ⟨show 5 < 6 by decide, show 5 * 6 ≤ 5 * 8 by decide⟩
 
 /-- And the rule favours the second policy at every later step. -/
 theorem above_but_stale_never_first (k : Nat) :
-    (paced choose (weighted 1 2 two_pos) (fun _ => true) (counts, stale) (5 + k)).2.carrier <
-      (paced choose (weighted 1 2 two_pos) (fun _ => true) (counts, stale) (5 + k)).2.other :=
+    (paced choose (weighted 1 2 Nat.two_pos) (fun _ => true) (counts, stale) (5 + k)).2.carrier <
+      (paced choose (weighted 1 2 Nat.two_pos) (fun _ => true) (counts, stale) (5 + k)).2.other :=
   (locked_stays (reads := fun _ => true) (c := (counts, stale)) (t := 5) choose_lowers
     weighted_reads.reverse lower_strict above_but_stale_locks_down k).1
 

@@ -303,12 +303,6 @@ theorem sensory_succ (x : Parts Bool Bool Unit Nat) (s : Nat) :
     (law.course x (s + 1)).sensory = Nat.blt 0 (x.external - s) :=
   congrArg (Nat.blt 0) (external_course x s)
 
-theorem bool_eq_of_iff : ∀ {b b' : Bool}, (b = true ↔ b' = true) → b = b'
-  | true, true, _ => rfl
-  | false, false, _ => rfl
-  | true, false, h => Bool.noConfusion (h.1 rfl)
-  | false, true, h => Bool.noConfusion (h.2 rfl)
-
 /-- **The witness's blanket is the World's coupling by threshold.** From one internal and sensory
 start, the courses from two supplies are alike on the blanket before step `n + 2` exactly where the
 two supply histories are alike through the formation's couplings, by threshold only, up to `n`. -/

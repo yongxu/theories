@@ -307,18 +307,11 @@ theorem «至终常闭则后皆续» {R E : «际» α} (hE : «类» E) (consta
     E t m ∧ «相续» R E c t :=
   «本类常闭则后皆续» hE («至终有常则本类至终有常» hE constant m) goes held alike down
 
-/-- Under a constant class, what is alike to an occurrence that conditions something conditions
-something itself. -/
-theorem «有常则同类者有所缘» {R E : «际» α} (constant : «有常» R E) {c m v : α} (alike : E c m)
-    (step : R c v) : ∃ w, R m w :=
-  match («有常之逐点» R E).mp constant c m alike v step with
-  | ⟨w, hw, _⟩ => ⟨w, hw⟩
-
 /-- **Under a constant class, whatever is alike to a member whose effects the class holds conditions
 only what is alike to it.** -/
 theorem «常闭则所缘同类» {R E : «际» α} (hE : «类» E) (constant : «有常» R E) {m : α}
     (held : «所缘同于» R E m) {u v : α} (alike : E u m) (step : R u v) : E v m :=
-  «至终常闭则所缘同类» hE («有常则至终有常» constant) («有常则同类者有所缘» constant alike step) held
+  «至终常闭则所缘同类» hE («有常则至终有常» constant) («有常则可续» constant _ _ _ alike step) held
     alike step
 
 /-- **A regularity that holds a member's effects takes in all that follows (常闭则后皆续).** Under a
@@ -329,9 +322,9 @@ theorem «常闭则后皆续» {R E : «际» α} (hE : «类» E) (constant : �
     E t m ∧ «相续» R E c t :=
   match down with
   | .one step => «至终常闭则后皆续» hE («有常则至终有常» constant)
-      («有常则同类者有所缘» constant alike step) held alike (.one step)
+      («有常则可续» constant _ _ _ alike step) held alike (.one step)
   | .more step rest => «至终常闭则后皆续» hE («有常则至终有常» constant)
-      («有常则同类者有所缘» constant alike step) held alike (.more step rest)
+      («有常则可续» constant _ _ _ alike step) held alike (.more step rest)
 
 /-- **What a line reaches alike to a member that conditions something, and whose effects the class holds,
 it carries on to all that follows**, at the member's class. -/

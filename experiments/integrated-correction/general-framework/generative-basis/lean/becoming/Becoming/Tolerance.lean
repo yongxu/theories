@@ -626,7 +626,7 @@ theorem allBut_iff_count (p : α → Bool) : ∀ (f : Nat) (l : List α),
 theorem allBut_sub_iff (p : α → Bool) {k : Nat} {l : List α} (within : k ≤ l.length) :
     AllBut (fun b => p b = true) (l.length - k) l ↔ k ≤ countTrue p l :=
   (allBut_iff_count p _ l).trans
-    ⟨fun le => Naturals.le_of_add_le_add_right (k := countTrue (fun b => !p b) l)
+    ⟨fun le => le_of_add_le_add_right (countTrue (fun b => !p b) l)
         (Nat.le_trans (Naturals.add_le_of_le_sub within le)
           (Nat.le_of_eq (countTrue_add_not p l).symm)),
      fun le => Naturals.le_sub_of_add_le

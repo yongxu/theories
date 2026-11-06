@@ -433,14 +433,6 @@ theorem crosses_of_below {m t : Nat} {c : C} (balances : L.BalancesOn W [c] t)
 
 /-! ### One side, and local regulation -/
 
-/-- One member strictly below and none above make the total strictly below. -/
-theorem total_lt_of_le_of_mem {α : Type} {f g : α → Nat} {a : α} :
-    ∀ {as : List α}, a ∈ as → f a < g a → (∀ b, b ∈ as → f b ≤ g b) → total as f < total as g
-  | _ :: bs, .head _, lt, le => Nat.lt_of_lt_of_le (Nat.add_lt_add_right lt _)
-      (Nat.add_le_add_left (total_le bs fun b mem => le b (.tail _ mem)) _)
-  | b :: _, .tail _ mem, lt, le => Nat.lt_of_le_of_lt (Nat.add_le_add_right (le b (.head _)) _)
-      (Nat.add_lt_add_left (total_lt_of_le_of_mem mem lt fun c mem' => le c (.tail b mem')) _)
-
 /-- **Each formation opposing makes the joint exchange oppose.** Where every formation taking part
 gives no more than it takes from the condition above `m` and takes no more than it gives below,
 and on each side some formation does so strictly, the joint exchange opposes the level's departure
@@ -452,9 +444,9 @@ theorem opposes_of_each {m t : Nat} {c : C}
       (W.level t c < m → ∃ f, f ∈ L.present t ∧ L.take t f c < L.give t f c)) :
     L.Opposes W m t c :=
   ⟨fun above => match strictly.1 above with
-    | ⟨_, mem, lt⟩ => total_lt_of_le_of_mem mem lt fun f inside => (each f inside).1 above,
+    | ⟨_, mem, lt⟩ => total_lt_of_mem mem lt fun f inside => (each f inside).1 above,
    fun below => match strictly.2 below with
-    | ⟨_, mem, lt⟩ => total_lt_of_le_of_mem mem lt fun f inside => (each f inside).2 below⟩
+    | ⟨_, mem, lt⟩ => total_lt_of_mem mem lt fun f inside => (each f inside).2 below⟩
 
 /-- **Shares of the gap make the joint exchange within it.** Where each formation taking part
 departs from evenness by at most its shares of the gap above and below `m`, and the shares total

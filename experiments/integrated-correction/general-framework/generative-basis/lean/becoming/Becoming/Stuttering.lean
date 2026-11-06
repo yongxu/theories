@@ -57,16 +57,6 @@ namespace Becoming
 
 /-! ## Arithmetic -/
 
-/-- A number exceeds itself by nothing. -/
-theorem excess_self : ∀ a : Nat, excess a a = 0
-  | 0 => rfl
-  | a + 1 => excess_self a
-
-/-- Adding the same to both sides leaves the excess. -/
-theorem excess_add_right (x a : Nat) : ∀ k : Nat, excess (x + k) (a + k) = excess x a
-  | 0 => rfl
-  | k + 1 => excess_add_right x a k
-
 /-- Where two sums agree, the excess of a part of one over a part of the other is the excess
 of the other's remaining part over the first's: `x + y = a + b` gives `x - a = b - y`. -/
 theorem excess_of_sum {x y a b : Nat} (sum : x + y = a + b) : excess x a = excess b y :=

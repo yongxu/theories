@@ -94,6 +94,17 @@ namespace Becoming
 /-- One for a positive number, zero for zero. -/
 def sign : Nat → Nat := Witnesses.profile [0] 1
 
+/-- A positive reading has sign one. -/
+theorem sign_eq_one : ∀ {n : Nat}, 0 < n → sign n = 1
+  | 0, pos => absurd pos (Nat.lt_irrefl 0)
+  | _ + 1, _ => rfl
+
+/-- A reading at least where another is positive, as signs. -/
+theorem sign_le_of_pos : ∀ {x y : Nat}, (0 < x → 0 < y) → sign x ≤ sign y
+  | 0, _, _ => Nat.zero_le _
+  | n + 1, 0, keeps => absurd (keeps (Nat.succ_pos n)) (Nat.lt_irrefl 0)
+  | _ + 1, _ + 1, _ => Nat.le_refl 1
+
 /-- How many members of a finite list a quantity is positive at. -/
 def count {α : Type} (as : List α) (q : α → Nat) : Nat :=
   total as fun a => sign (q a)
@@ -122,6 +133,14 @@ theorem total_le {p q : α → Nat} :
     ∀ as : List α, (∀ a, a ∈ as → p a ≤ q a) → total as p ≤ total as q
   | [], _ => Nat.le_refl 0
   | a :: as, le => Nat.add_le_add (le a (.head as)) (total_le as fun b mem => le b (.tail a mem))
+
+/-- One member strictly below and none above make the total strictly below. -/
+theorem total_lt_of_mem {f g : α → Nat} {a : α} :
+    ∀ {as : List α}, a ∈ as → f a < g a → (∀ b, b ∈ as → f b ≤ g b) → total as f < total as g
+  | _ :: bs, .head _, lt, le => Nat.lt_of_lt_of_le (Nat.add_lt_add_right lt _)
+      (Nat.add_le_add_left (total_le bs fun b mem => le b (.tail _ mem)) _)
+  | b :: _, .tail _ mem, lt, le => Nat.lt_of_le_of_lt (Nat.add_le_add_right (le b (.head _)) _)
+      (Nat.add_lt_add_left (total_lt_of_mem mem lt fun c mem' => le c (.tail b mem')) _)
 
 theorem total_add (p q : α → Nat) :
     ∀ as : List α, total as (fun a => p a + q a) = total as p + total as q
@@ -152,11 +171,6 @@ theorem total_map (g : α → β) (q : β → Nat) :
   | [] => rfl
   | a :: as => congrArg (q (g a) + ·) (total_map g q as)
 
-/-- Quantities that agree everywhere have the same total. -/
-theorem total_congr {p q : α → Nat} (same : ∀ a, p a = q a) :
-    ∀ as : List α, total as p = total as q :=
-  GrammarLaws.total_congr same
-
 /-- Each member counted once totals the number of members. -/
 theorem total_ones : ∀ as : List α, total as (fun _ => 1) = as.length
   | [] => rfl
@@ -166,6 +180,12 @@ theorem total_append (q : α → Nat) (bs : List α) :
     ∀ as : List α, total (as ++ bs) q = total as q + total bs q
   | [] => (Nat.zero_add _).symm
   | a :: as => (congrArg (q a + ·) (total_append q bs as)).trans (Nat.add_assoc _ _ _).symm
+
+/-- A total over a member repeated is as many times its value. -/
+theorem total_replicate (q : α → Nat) (c : α) : ∀ k, total (List.replicate k c) q = k * q c
+  | 0 => (Nat.zero_mul _).symm
+  | k + 1 => (congrArg (q c + ·) (total_replicate q c k)).trans
+      ((Nat.add_comm _ _).trans (Nat.succ_mul k (q c)).symm)
 
 /-- A member at which a quantity is positive makes the total positive. -/
 theorem total_pos_of_mem {q : α → Nat} {a : α} :

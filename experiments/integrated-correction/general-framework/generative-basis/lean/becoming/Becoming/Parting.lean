@@ -360,18 +360,18 @@ theorem mem_keepIf {α : Type _} {p : α → Bool} {x : α} : ∀ {l : List α},
     | true =>
       show x ∈ cond (p y) (y :: keepIf p l) (keepIf p l) ↔ _
       rw [here]
-      exact ⟨fun mem => match mem_cons_split mem with
+      exact ⟨fun mem => match mem_cons_cases mem with
           | .inl same => ⟨.head _ |> Eq.subst (motive := fun z => z ∈ y :: l) same.symm,
               same ▸ here⟩
           | .inr inside => ⟨.tail _ (mem_keepIf.mp inside).1, (mem_keepIf.mp inside).2⟩,
-        fun ⟨mem, passes⟩ => match mem_cons_split mem with
+        fun ⟨mem, passes⟩ => match mem_cons_cases mem with
           | .inl same => same ▸ .head _
           | .inr inside => .tail _ (mem_keepIf.mpr ⟨inside, passes⟩)⟩
     | false =>
       show x ∈ cond (p y) (y :: keepIf p l) (keepIf p l) ↔ _
       rw [here]
       exact ⟨fun mem => ⟨.tail _ (mem_keepIf.mp mem).1, (mem_keepIf.mp mem).2⟩,
-        fun ⟨mem, passes⟩ => match mem_cons_split mem with
+        fun ⟨mem, passes⟩ => match mem_cons_cases mem with
           | .inl same => absurd (here ▸ same ▸ passes : false = true) Bool.false_ne_true
           | .inr inside => mem_keepIf.mpr ⟨inside, passes⟩⟩
 
@@ -382,7 +382,7 @@ def choose {α : Type _} (p : α → Bool) : (l : List α) → (∃ x, x ∈ l �
   | x :: l, found =>
     if passes : p x = true then ⟨x, passes⟩
     else choose p l (match found with
-      | ⟨y, mem, passes'⟩ => match mem_cons_split mem with
+      | ⟨y, mem, passes'⟩ => match mem_cons_cases mem with
         | .inl same => absurd (same ▸ passes') passes
         | .inr inside => ⟨y, inside, passes'⟩)
 
@@ -555,7 +555,7 @@ theorem firstLive_found : ∀ {l : List S} {y : S}, y ∈ l → live P moves all
     | true => exact ⟨x, show cond _ _ _ = _ by rw [here]; rfl⟩
     | false =>
       have rest : ∃ z, firstLive P moves all l = some z :=
-        match mem_cons_split mem with
+        match mem_cons_cases mem with
         | .inl same => absurd
             ((Eq.subst (motive := fun w => live P moves all all.length w = true) same open_).symm.trans
               here) Bool.noConfusion
@@ -582,7 +582,7 @@ theorem candidates_run : ∀ (record : List R) (y : S),
       ∃ r' : Run P, r'.state 0 = s ∧ Learning.prefixOf (course reg r') record.length = record ∧
         ∀ n, r'.state (record.length + n) = q.state n
   | [], y, mem, q, start =>
-    have at_s : y = s := match mem_cons_split mem with
+    have at_s : y = s := match mem_cons_cases mem with
       | .inl same => same
       | .inr inside => nomatch inside
     ⟨q, start.trans at_s, rfl, fun n => congrArg q.state (Nat.zero_add n)⟩

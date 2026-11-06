@@ -120,6 +120,27 @@ theorem excess_balance : ∀ a b, a + excess b a = b + excess a b
   | a + 1, b + 1 => (Nat.succ_add a _).trans
       ((congrArg Nat.succ (excess_balance a b)).trans (Nat.succ_add b _).symm)
 
+/-- A number exceeds itself by nothing. -/
+theorem excess_self : ∀ a : Nat, excess a a = 0
+  | 0 => rfl
+  | a + 1 => excess_self a
+
+/-- Adding the same to both sides leaves the excess. -/
+theorem excess_add_right (x a : Nat) : ∀ k : Nat, excess (x + k) (a + k) = excess x a
+  | 0 => rfl
+  | k + 1 => excess_add_right x a k
+
+/-- An amount is at most another with its excess over it. -/
+theorem le_add_excess (a b : Nat) : a ≤ b + excess a b :=
+  Nat.le_trans (Nat.le_add_right a (excess b a)) (Nat.le_of_eq (excess_balance a b))
+
+/-- What exceeds `x` by at most `y` has excess over `x` at most `y`. -/
+theorem excess_le_of_le_add : ∀ {u x y : Nat}, u ≤ x + y → excess u x ≤ y
+  | 0, _, _, _ => Nat.zero_le _
+  | _ + 1, 0, y, le => Nat.le_trans le (Nat.le_of_eq (Nat.zero_add y))
+  | u + 1, x + 1, y, le => excess_le_of_le_add (u := u) (x := x) (y := y)
+      (Nat.le_of_succ_le_succ (Nat.le_trans le (Nat.le_of_eq (Nat.add_right_comm x 1 y))))
+
 theorem excess_pos : ∀ {a b : Nat}, 0 < excess a b ↔ b < a
   | 0, _ => ⟨fun pos => absurd pos (Nat.lt_irrefl 0), fun lt => absurd lt (Nat.not_lt_zero _)⟩
   | a + 1, 0 => ⟨fun _ => Nat.succ_pos a, fun _ => Nat.succ_pos a⟩
@@ -358,11 +379,6 @@ theorem false_of_not : ∀ b : Bool, (b = true → False) → b = false
 theorem not_both {b : Bool} (no : b = false) (yes : b = true) : False :=
   nomatch no.symm.trans yes
 
-theorem and_both : ∀ (b c : Bool), b = true → c = true → (b && c) = true
-  | true, true, _, _ => rfl
-  | false, _, no, _ => nomatch no
-  | true, false, _, no => nomatch no
-
 /-- With no `true` before `t`, none before an earlier step. -/
 theorem mono (s : Nat → Bool) {i : Nat} : ∀ {t}, i ≤ t → clear s t = true → clear s i = true
   | _, .refl, c => c
@@ -379,7 +395,7 @@ theorem or_first (s : Nat → Bool) :
   | n + 1 => match or_first s n with
     | .inr ⟨m, lt, c, yes⟩ => .inr ⟨m, Nat.lt_succ_of_lt lt, c, yes⟩
     | .inl c => match cases (s n) with
-      | .inl no => .inl (and_both _ _ c (Eq.subst (motive := fun b => (!b) = true) no.symm rfl))
+      | .inl no => .inl (bool_and_true c (Eq.subst (motive := fun b => (!b) = true) no.symm rfl))
       | .inr yes => .inr ⟨n, Nat.lt_succ_self n, c, yes⟩
 
 /-- A `true` has a first one. -/

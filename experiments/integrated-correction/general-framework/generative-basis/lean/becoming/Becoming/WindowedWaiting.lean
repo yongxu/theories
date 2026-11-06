@@ -167,7 +167,7 @@ bridge `Pair.pairKeepsInclusion_iff_induced`, calibrations of the logic; `Pair.a
 `Pair.alternator_gives_odd` and the first conjunct of `Pair.window_absorbs` are the `_within`
 forms at two, and `Pair.not_absorbs_and_answers` is `Pair.not_absorbs_and_answers_spaced` at the
 alternator; `Pair.withholder_answered_holds` is a witness lemma; and
-`boolOr_true_iff`, `boolNot_true_iff`, `or_congr_both`, `lag_below_one`, `lag_below_two`,
+`ListTests.or_true_iff`, `ListTests.not_true_iff`, `or_congr_both`, `lag_below_one`, `lag_below_two`,
 `spaced_mono`, the congruence lemmas, the `within_*` and `firstAlwaysErrs_second` unfoldings,
 `even` and `even_two_mul` are local lemmas (`even` repeats a parity of modules outside this one's
 imports). `decide` is used only on closed decidable goals: the Bool-triple disequalities in
@@ -215,18 +215,6 @@ theorem course_rel {S : Type u} {S' : Type v} {next : S → S} {next' : S' → S
     ∀ n, R ((Law.run next s).state n) ((Law.run next' s').state n)
   | 0 => start
   | n + 1 => step _ _ (course_rel R start step n)
-
-/-- Disjunction of two truth values. A lemma. -/
-theorem boolOr_true_iff : ∀ a b : Bool, (a || b) = true ↔ (a = true ∨ b = true)
-  | true, _ => ⟨fun _ => .inl rfl, fun _ => rfl⟩
-  | false, true => ⟨fun _ => .inr rfl, fun _ => rfl⟩
-  | false, false => ⟨fun h => Bool.noConfusion h,
-      fun h => h.elim (fun h => Bool.noConfusion h) (fun h => Bool.noConfusion h)⟩
-
-/-- Negation of a truth value. A lemma. -/
-theorem boolNot_true_iff : ∀ b : Bool, (!b) = true ↔ b = false
-  | true => ⟨fun h => Bool.noConfusion h, fun h => Bool.noConfusion h⟩
-  | false => ⟨fun _ => rfl, fun _ => rfl⟩
 
 /-- Disjunction of equivalents. A lemma. -/
 theorem or_congr_both {A A' B B' : Prop} (left : A ↔ A') (right : B ↔ B') : A ∨ B ↔ A' ∨ B' :=
@@ -1092,9 +1080,9 @@ theorem windowStep_course : ∀ n,
   course_rel WindowMatches
     ⟨⟨fun h => Bool.noConfusion h, fun h => h.elim⟩, ⟨fun _ => trivial, fun _ => rfl⟩,
      ⟨fun _ => trivial, fun _ => rfl⟩, ⟨fun _ => trivial, fun _ => rfl⟩⟩
-    fun x _ m =>
-      ⟨(boolOr_true_iff x.1.2 x.2.2).trans ((or_congr_both m.2.1 m.2.2.2).trans within_first.symm),
-       (boolOr_true_iff x.1.1 x.2.1).trans ((or_congr_both m.1 m.2.2.1).trans within_second.symm),
+    fun _ _ m =>
+      ⟨(ListTests.or_true_iff).trans ((or_congr_both m.2.1 m.2.2.2).trans within_first.symm),
+       (ListTests.or_true_iff).trans ((or_congr_both m.1 m.2.2.1).trans within_second.symm),
        m.1, m.2.1⟩
 
 /-- **The pair under a window of two, from one withholding, gives together at every step from
@@ -1459,7 +1447,7 @@ theorem alternator_bridge : ∀ n,
   fun n =>
     ⟨⟨fun _ => alternator_received n, fun _ => alternator_never_answered n⟩,
      (Iff.of_eq (congrArg (· = true) (alternator_second n))).trans
-       ((boolNot_true_iff (even n)).trans (alternator_gives_odd n).symm)⟩
+       ((ListTests.not_true_iff (a := even n)).trans (alternator_gives_odd n).symm)⟩
 
 /-- A constant withholder on the clocked carrier: the first errs at every step. -/
 def firstAlwaysErrs (_ : Nat) (a : Pair) : Prop := a = first
@@ -1502,8 +1490,8 @@ theorem windowAgainst_course : ∀ n,
     ⟨⟨fun _ errs => Pair.noConfusion errs, fun _ => rfl⟩,
      ⟨fun h => Bool.noConfusion h, fun h => (h rfl).elim⟩,
      ⟨fun _ => trivial, fun _ => rfl⟩, ⟨fun _ => trivial, fun _ => rfl⟩⟩
-    fun x y m =>
-      ⟨(boolOr_true_iff x.1.2 x.2.2).trans ((or_congr_both m.2.1 m.2.2.2).trans
+    fun _ y m =>
+      ⟨(ListTests.or_true_iff).trans ((or_congr_both m.2.1 m.2.2.2).trans
           (firstAlwaysErrs_second (t := y.1 + 1) (h := y.2)).symm),
        ⟨fun h => Bool.noConfusion h, fun g => (g.1 rfl).elim⟩,
        m.1, m.2.1⟩

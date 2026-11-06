@@ -162,10 +162,6 @@ theorem total_mul_const {α : Type} (q : α → Nat) (g : Nat) (as : List α) :
   (total_congr (fun a => Nat.mul_comm (q a) g) as).trans
     ((total_mul g q as).trans (Nat.mul_comm g (total as q)))
 
-/-- A positive multiple keeps order strictly. -/
-theorem mul_lt_mul_of_pos {m a b : Nat} (pos : 0 < m) (lt : a < b) : m * a < m * b :=
-  Nat.lt_of_lt_of_le (Nat.lt_add_of_pos_right pos) (Nat.mul_le_mul_left m lt)
-
 /-- One at least times the multiplier. -/
 theorem le_mul_of_pos {m : Nat} (pos : 0 < m) (n : Nat) : n ≤ m * n :=
   Nat.le_trans (Nat.le_of_eq (Nat.one_mul n).symm) (Nat.mul_le_mul_right n pos)
@@ -516,7 +512,7 @@ theorem carriedFrom_lt {l : Nat → C → Nat} {s : Nat} {d c : C}
         (fun s' _ => total_le _ fun d' dMem' => Nat.mul_le_mul_left _ (le s' d' dMem'))
         (Propagation.mem_steps_upto (Nat.le_refl s))
         (Loops.total_lt (fun d' dMem' => Nat.mul_le_mul_left _ (le s d' dMem')) dMem
-          (Loops.mul_lt_mul_of_pos pos lt))
+          (Naturals.mul_lt_mul_of_pos pos lt))
     calc carriedFrom cs part σ k present δ l (s + 1) c
         = carriedFrom cs part σ k present δ l s c +
             total (present s) (fun h => carriedGive cs part σ k s h c l) :=
@@ -1278,10 +1274,6 @@ theorem pow_mul_nat (b a : Nat) : ∀ n, (b ^ a) ^ n = b ^ (a * n)
   | 0 => rfl
   | n + 1 => (congrArg (· * b ^ a) (pow_mul_nat b a n)).trans (Naturals.pow_add b (a * n) a).symm
 
-theorem mul_pow_nat (x y : Nat) : ∀ n, (x * y) ^ n = x ^ n * y ^ n
-  | 0 => rfl
-  | n + 1 => (congrArg (· * (x * y)) (mul_pow_nat x y n)).trans (Naturals.mul_mul_mul_comm _ _ _ _)
-
 theorem pow_le_pow_base {a b : Nat} (le : a ≤ b) : ∀ n, a ^ n ≤ b ^ n
   | 0 => Nat.le_refl 1
   | n + 1 => Nat.mul_le_mul (pow_le_pow_base le n) le
@@ -1292,20 +1284,9 @@ theorem pow_le_pow_exp {b : Nat} (pos : 0 < b) {x y : Nat} (le : x ≤ y) : b ^ 
   | step _ ih => exact Nat.le_trans ih (Nat.le_trans (Nat.le_of_eq (Nat.mul_one _).symm)
       (Nat.mul_le_mul_left _ pos))
 
-theorem two_pow_pos : ∀ a, 0 < 2 ^ a
-  | 0 => Nat.succ_pos 0
-  | a + 1 => Nat.mul_pos (two_pow_pos a) (Nat.succ_pos 1)
-
 /-- Twice a power of two is the next power. -/
 theorem two_pow_succ (a : Nat) : 2 ^ (a + 1) = 2 ^ a + 2 ^ a :=
   (Nat.mul_succ (2 ^ a) 1).trans (congrArg (· + 2 ^ a) (Nat.mul_one _))
-
-/-- A number is below its power of two. -/
-theorem lt_two_pow : ∀ n, n < 2 ^ n
-  | 0 => Nat.succ_pos 0
-  | n + 1 => Nat.lt_of_le_of_lt (Nat.succ_le_of_lt (lt_two_pow n))
-      (Nat.lt_of_lt_of_le (Nat.lt_add_of_pos_right (two_pow_pos n))
-        (Nat.le_of_eq (two_pow_succ n).symm))
 
 theorem odd_lt_two_pow : ∀ a, 2 * (a + 3) + 1 < 2 ^ (a + 3)
   | 0 => by decide
@@ -1342,12 +1323,12 @@ theorem linear_lt_two_pow (c d : Nat) : ∃ a, c * a + d < 2 ^ a :=
 theorem poly_lt_two_pow (K n : Nat) : ∃ R, K * (R + 1) ^ n < 2 ^ R :=
   match linear_lt_two_pow n K with
   | ⟨a, below⟩ =>
-    match le_dest (Nat.succ_le_of_lt (two_pow_pos a)) with
+    match le_dest (Nat.succ_le_of_lt (Naturals.two_pow_pos a)) with
     | ⟨R, split⟩ =>
       have top : R + 1 = 2 ^ a := (Nat.add_comm R 1).trans split.symm
       ⟨R, calc K * (R + 1) ^ n
           = K * 2 ^ (a * n) := congrArg (K * ·) ((congrArg (· ^ n) top).trans (pow_mul_nat 2 a n))
-        _ < 2 ^ K * 2 ^ (a * n) := Nat.mul_lt_mul_of_pos_right (lt_two_pow K) (two_pow_pos _)
+        _ < 2 ^ K * 2 ^ (a * n) := Nat.mul_lt_mul_of_pos_right (Naturals.lt_two_pow K) (Naturals.two_pow_pos _)
         _ = 2 ^ (K + a * n) := (Naturals.pow_add 2 K (a * n)).symm
         _ ≤ 2 ^ R := pow_le_pow_exp (Nat.succ_pos 1) (Nat.le_of_lt_succ (Nat.lt_of_lt_of_le
             (Nat.lt_of_le_of_lt (Nat.le_of_eq ((Nat.add_comm K _).trans
@@ -1370,7 +1351,7 @@ theorem not_poly_of_doubling {f : Nat → Nat} {t₀ m : Nat}
           (Nat.le_of_eq (Nat.mul_succ _ _).symm))
     Nat.lt_irrefl _ (Nat.lt_of_lt_of_le below (Nat.le_trans (doubling R)
       (Nat.le_trans (bound _) (Nat.le_trans (Nat.mul_le_mul_left A (pow_le_pow_base stretch n))
-        (Nat.le_of_eq ((congrArg (A * ·) (mul_pow_nat _ _ n)).trans
+        (Nat.le_of_eq ((congrArg (A * ·) (Naturals.mul_pow_eq _ _ n)).trans
           (mul_assoc_nat _ _ _).symm))))))
 
 /-- A binomial count is at most a power. -/

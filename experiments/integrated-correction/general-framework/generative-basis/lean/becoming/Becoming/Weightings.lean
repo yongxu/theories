@@ -183,7 +183,7 @@ order every standpoint shares when each weighs what can form in its own way.
 * **Need with capacities, exactly.** Where the members other than a feeder `g` that are active at
   a step can together give its demand (`Web.capacityWithout`), the shares pair the units each
   condition of the family is to be given (`Web.demandAt`) with the units those members can give
-  (`Web.otherCapacity`), in order (`Web.shares`, by `unitsOf` and `pairUp`). The flow in which each
+  (`Web.otherCapacity`), in order (`Web.shares`, by `unitsOn` and `pairUp`). The flow in which each
   member gives as many units as the shares pair it with (`Flow.sharedDrawn`) balances on the
   family, gives each member at most its capacity, and has the consumer drawing past the stock with
   `g` never giving (`Flow.sharedDrawn_fedOnlyWithin`, `Flow.sharedDrawn_drawsPast`,
@@ -495,10 +495,6 @@ theorem term_lt {w : Nat} (positive : 0 < w) :
     ∀ {a b : Bool}, a = true → b = false → cond b w 0 < cond a w 0
   | _, _, rfl, rfl => positive
 
-theorem term_le_of {m n : Nat} : ∀ {v : Bool}, (v = true → m ≤ n) → cond v m 0 ≤ cond v n 0
-  | true, le => le rfl
-  | false, _ => Nat.le_refl 0
-
 theorem term_lt_of {m n : Nat} : ∀ {v : Bool}, v = true → m < n → cond v m 0 < cond v n 0
   | _, rfl, lt => lt
 
@@ -521,13 +517,6 @@ theorem total_lt {p q : X → Nat} :
       Nat.add_lt_add_of_le_of_lt (le a (.head as))
         (total_lt (fun c listed => le c (.tail a listed)) ⟨b, rest, lt⟩)
 
-theorem total_congr_on {p q : X → Nat} :
-    ∀ {as : List X}, (∀ a, a ∈ as → p a = q a) → total as p = total as q
-  | [], _ => rfl
-  | a :: as, same =>
-    (congrArg (· + total as p) (same a (.head as))).trans
-      (congrArg (q a + ·) (total_congr_on fun c listed => same c (.tail a listed)))
-
 /-- **Inclusion never lowers a weighted count**, whatever the weights. -/
 theorem weighed_le_of_includes {items : List X} {a b : X → Bool} (w : X → Nat)
     (includes : IncludesOn items a b) : weighed items w b ≤ weighed items w a :=
@@ -547,14 +536,6 @@ theorem term_split (v : Nat) : ∀ p q : Bool, cond p v 0 = cond (p && q) v 0 + 
   | true, true => rfl
   | true, false => (Nat.zero_add v).symm
   | false, _ => rfl
-
-theorem and_parts : ∀ {p q : Bool}, (p && q) = true → p = true ∧ q = true
-  | true, true, _ => ⟨rfl, rfl⟩
-  | true, false, no => Bool.noConfusion no
-  | false, _, no => Bool.noConfusion no
-
-theorem and_of_parts : ∀ {p q : Bool}, p = true → q = true → (p && q) = true
-  | _, _, rfl, rfl => rfl
 
 theorem and_swap : ∀ p q : Bool, (p && q) = (q && p)
   | true, true => rfl
@@ -576,9 +557,6 @@ theorem weighed_split_right (items : List X) (w : X → Nat) (a b : X → Bool) 
   (weighed_split items w b a).trans
     (congrArg (· + weighed items w (beyond b a)) (weighed_shared items w b a))
 
-theorem add_lt_add_iff {k m n : Nat} : k + m < k + n ↔ m < n :=
-  ⟨Nat.lt_of_add_lt_add_left, fun lt => Nat.add_lt_add_left lt k⟩
-
 theorem add_le_add_iff {k m n : Nat} : k + m ≤ k + n ↔ m ≤ n :=
   ⟨fun le => Nat.le_of_lt_succ (Nat.lt_of_add_lt_add_left (Nat.lt_succ_of_le le)),
    fun le => Nat.add_le_add_left le k⟩
@@ -589,7 +567,7 @@ theorem weighed_lt_iff_beyond (items : List X) (w : X → Nat) (a b : X → Bool
     weighed items w b < weighed items w a ↔
       weighed items w (beyond b a) < weighed items w (beyond a b) := by
   rw [weighed_split_right items w a b, weighed_split items w a b]
-  exact add_lt_add_iff
+  exact Naturals.add_lt_add_left_iff
 
 theorem weighed_le_iff_beyond (items : List X) (w : X → Nat) (a b : X → Bool) :
     weighed items w b ≤ weighed items w a ↔
@@ -618,24 +596,12 @@ theorem weighed_const (k : Nat) (items : List X) (a : X → Bool) :
   (total_congr (fun x => cond_mul k (a x)) items).trans
     (total_mul k (fun x => cond (a x) 1 0) items)
 
-theorem mul_lt_mul_pos {k m n : Nat} (positive : 0 < k) (lt : m < n) : k * m < k * n :=
-  match k, positive with
-  | j + 1, _ =>
-    Eq.subst (motive := fun x => x < (j + 1) * n) (Nat.succ_mul j m).symm
-      (Eq.subst (motive := fun y => j * m + m < y) (Nat.succ_mul j n).symm
-        (Nat.add_lt_add_of_le_of_lt (Nat.mul_le_mul_left j (Nat.le_of_lt lt)) lt))
-
-theorem lt_of_mul_lt {k m n : Nat} (lt : k * m < k * n) : m < n :=
-  match Nat.lt_or_ge m n with
-  | .inl less => less
-  | .inr ge => absurd lt (Nat.not_lt_of_le (Nat.mul_le_mul_left k ge))
-
 theorem mul_lt_mul_iff {k m n : Nat} (positive : 0 < k) : m * k < n * k ↔ m < n :=
-  ⟨fun lt => lt_of_mul_lt (k := k)
+  ⟨fun lt => Naturals.lt_of_mul_lt_mul_left (m := k)
       (Eq.subst (motive := fun x => x < k * n) (Nat.mul_comm m k)
         (Eq.subst (motive := fun y => m * k < y) (Nat.mul_comm n k) lt)),
    fun lt => Eq.subst (motive := fun x => x < n * k) (Nat.mul_comm k m)
-      (Eq.subst (motive := fun y => k * m < y) (Nat.mul_comm k n) (mul_lt_mul_pos positive lt))⟩
+      (Eq.subst (motive := fun y => k * m < y) (Nat.mul_comm k n) (Naturals.mul_lt_mul_of_pos positive lt))⟩
 
 /-! ### Net weightings: items that weigh below zero -/
 
@@ -658,11 +624,7 @@ theorem ranksNet_iff_beyond (items : List X) (pos neg : X → Nat) (a b : X → 
     weighed_split_right items neg a b,
     Nat.add_add_add_comm (weighed items pos fun x => a x && b x) (weighed items pos (beyond b a)),
     Nat.add_add_add_comm (weighed items pos fun x => a x && b x) (weighed items pos (beyond a b))]
-  exact add_lt_add_iff
-
-theorem not_of_neg : ∀ {v : Bool}, (!v) = true → v = false
-  | false, _ => rfl
-  | true, no => Bool.noConfusion no
+  exact Naturals.add_lt_add_left_iff
 
 theorem beyond_lt {items : List X} {pos neg : X → Nat} {a b : X → Bool}
     (above : ∀ x, x ∈ items → a x = true → b x = false → neg x < pos x)
@@ -670,9 +632,9 @@ theorem beyond_lt {items : List X} {pos neg : X → Nat} {a b : X → Bool}
     weighed items neg (beyond a b) < weighed items pos (beyond a b) :=
   match exceeds with
   | ⟨x, listed, admits, not⟩ =>
-    total_lt (fun y member => term_le_of fun held => match and_parts held with
-        | ⟨admits', not'⟩ => Nat.le_of_lt (above y member admits' (not_of_neg not')))
-      ⟨x, listed, term_lt_of (and_of_parts admits (congrArg (!·) not)) (above x listed admits not)⟩
+    total_lt (fun y member => ListTests.cond_zero_le fun held => match bool_of_and_true held with
+        | ⟨admits', not'⟩ => Nat.le_of_lt (above y member admits' (ListTests.false_of_not not')))
+      ⟨x, listed, term_lt_of (bool_and_true admits (congrArg (!·) not)) (above x listed admits not)⟩
 
 /-- **Every net weighting under which each item a widening adds weighs above zero ranks the
 widening higher.** -/
@@ -728,13 +690,13 @@ each time it is listed. -/
 theorem weighed_widensBy {items : List X} {x : X} {a b : X → Bool} (w : X → Nat)
     (by_ : WidensBy items x a b) :
     weighed items w (beyond a b) = w x * size items (beyond a b) :=
-  (total_congr_on fun y listed => term_eq_at fun held => match and_parts held with
-    | ⟨admits, not⟩ => congrArg w (by_.2.2.2.2 y listed admits (not_of_neg not))).trans
+  (total_congr_on fun y listed => term_eq_at fun held => match bool_of_and_true held with
+    | ⟨admits, not⟩ => congrArg w (by_.2.2.2.2 y listed admits (ListTests.false_of_not not))).trans
     (weighed_const (w x) items (beyond a b))
 
 theorem size_widensBy_pos {items : List X} {x : X} {a b : X → Bool}
     (by_ : WidensBy items x a b) : 0 < size items (beyond a b) :=
-  total_pos_of_mem by_.2.1 (cond_one_pos (and_of_parts by_.2.2.1 (congrArg (!·) by_.2.2.2.1)))
+  total_pos_of_mem by_.2.1 (cond_one_pos (bool_and_true by_.2.2.1 (congrArg (!·) by_.2.2.2.1)))
 
 /-- **A net weighting ranks a widening by one item as that item weighs**, whatever else either
 course keeps: the widening above exactly where the item weighs above zero, below exactly where it
@@ -913,9 +875,6 @@ theorem weighed_scale (k : Nat) (items : List X) (w : X → Nat) (a : X → Bool
     weighed items (fun x => k * w x) a = k * weighed items w a :=
   (total_congr (fun x => cond_scale k (a x) (w x)) items).trans (total_mul k _ items)
 
-theorem mul_swap_right (n u q : Nat) : n * u * q = n * q * u :=
-  (mul_assoc_nat n u q).trans ((congrArg (n * ·) (Nat.mul_comm u q)).trans (mul_assoc_nat n q u).symm)
-
 /-- **Weights within a ratio bound what each side weighs beyond the other.** Where every two
 listed weights stand within `n / d`, `d` times what `b` alone admits weighs, taken once for each
 item `a` alone admits, is at most `n` times the number of items `b` alone admits, times what `a`
@@ -927,12 +886,12 @@ theorem beyond_within {items : List X} {n d : Nat} {w : X → Nat} {a b : X → 
   have each : ∀ x, x ∈ items →
       d * weighed items w (beyond b a) ≤ n * w x * size items (beyond b a) := fun x listed =>
     Nat.le_trans (Nat.le_of_eq (weighed_scale d items w (beyond b a)).symm)
-      (Nat.le_trans (total_le items fun y member => term_le_of fun _ => within y x member listed)
+      (Nat.le_trans (total_le items fun y member => ListTests.cond_zero_le fun _ => within y x member listed)
         (Nat.le_of_eq (weighed_const (n * w x) items (beyond b a))))
   Nat.le_trans (Nat.le_of_eq (weighed_const _ items (beyond a b)).symm)
-    (Nat.le_trans (total_le items fun x listed => term_le_of fun _ => each x listed)
+    (Nat.le_trans (total_le items fun x listed => ListTests.cond_zero_le fun _ => each x listed)
       (Nat.le_of_eq ((total_congr (fun x => congrArg (fun m => cond (beyond a b x) m 0)
-          (mul_swap_right n (w x) (size items (beyond b a)))) items).trans
+          (Naturals.mul_right_comm n (w x) (size items (beyond b a)))) items).trans
         (weighed_scale _ items w (beyond a b)))))
 
 theorem pos_of_lt_mul {m d p : Nat} (lt : m < d * p) : 0 < p :=
@@ -976,7 +935,7 @@ theorem ranks_past_ratio {items : List X} {n d : Nat} {w : X → Nat} {a b : X �
       have weighs := weighed_pos_of_size positive (pos_of_lt_mul gap)
       absurd (Nat.lt_of_le_of_lt
         (Nat.le_trans (Nat.mul_le_mul_left (d * size items (beyond a b)) ge)
-          (Nat.le_trans (Nat.le_of_eq (mul_swap_right d _ _)) (beyond_within within)))
+          (Nat.le_trans (Nat.le_of_eq (Naturals.mul_right_comm d _ _)) (beyond_within within)))
         (mul_lt_mul_iff weighs |>.mpr gap)) (Nat.lt_irrefl _))
 
 /-- Where `n` times the number of items `b` alone admits is at most `d` times the number `a` alone
@@ -995,8 +954,8 @@ theorem ranks_le_past_ratio {items : List X} {n d : Nat} {w : X → Nat} {a b : 
         have dp : 0 < d * size items (beyond a b) :=
           Nat.lt_of_lt_of_le (Nat.mul_pos positive_n (Nat.succ_pos q))
             (Eq.subst (motive := fun v => n * v ≤ d * size items (beyond a b)) h gap)
-        absurd (Nat.lt_of_lt_of_le (mul_lt_mul_pos dp lt)
-          (Nat.le_trans (Nat.le_of_eq (mul_swap_right d _ _))
+        absurd (Nat.lt_of_lt_of_le (Naturals.mul_lt_mul_of_pos dp lt)
+          (Nat.le_trans (Nat.le_of_eq (Naturals.mul_right_comm d _ _))
             (Nat.le_trans (beyond_within within) (Nat.mul_le_mul_right _ gap))))
           (Nat.lt_irrefl _))
 
@@ -1138,7 +1097,7 @@ theorem size_le_length (items : List X) (a : X → Bool) : size items a ≤ item
 theorem size_pos_of_exceeds {items : List X} {a b : X → Bool} (exceeds : ExceedsOn items a b) :
     0 < size items (beyond a b) :=
   match exceeds with
-  | ⟨_, listed, admits, not⟩ => total_pos_of_mem listed (cond_one_pos (and_of_parts admits (congrArg (!·) not)))
+  | ⟨_, listed, admits, not⟩ => total_pos_of_mem listed (cond_one_pos (bool_and_true admits (congrArg (!·) not)))
 
 /-- **A course admitting an item the other does not is ranked higher by some positive
 weighting**: the weighting tilted toward it, with weight one more than the number of listed items
@@ -1260,8 +1219,8 @@ def restrict (p a : X → Bool) : X → Bool :=
 /-- Inclusion passes to the items `p` marks. -/
 theorem includes_restrict (p : X → Bool) {items : List X} {a b : X → Bool}
     (includes : IncludesOn items a b) : IncludesOn items (restrict p a) (restrict p b) :=
-  fun x listed held => match and_parts held with
-    | ⟨marked, admits⟩ => and_of_parts marked (includes x listed admits)
+  fun x listed held => match bool_of_and_true held with
+    | ⟨marked, admits⟩ => bool_and_true marked (includes x listed admits)
 
 /-- Lexical priority on the listed items, the basic ones (`basic`) first: `a` is ranked above `b`
 when it widens `b` on the basic items, or admits exactly `b`'s basic items and widens `b` on the
@@ -1992,15 +1951,6 @@ end Web
 theorem total_two {α : Type} (q : α → Nat) (a b : α) : total [a, b] q = q a + q b :=
   congrArg (q a + ·) (Nat.add_zero (q b))
 
-/-- A step between the ends of a stretch is a member of it. -/
-theorem mem_steps_of_between : ∀ {T n t : Nat}, T ≤ t → t < T + n → t ∈ steps T n
-  | T, 0, _, from_, to => absurd (Nat.lt_of_le_of_lt from_ to) (Nat.lt_irrefl T)
-  | T, n + 1, t, from_, to => match Nat.lt_or_ge T t with
-    | .inl later => .tail T (mem_steps_of_between later
-        (Nat.lt_of_lt_of_le to (Nat.le_of_eq (Nat.succ_add T n).symm)))
-    | .inr earlier => Eq.subst (motive := fun s => s ∈ steps T (n + 1))
-        (Nat.le_antisymm from_ earlier) (.head (steps (T + 1) n))
-
 namespace Flow
 
 variable {C : Type}
@@ -2238,7 +2188,7 @@ theorem needs_giver_iff_alone [DecidableEq F] {W : Web F C} [∀ t x, Decidable 
         fun t from_ to calls => firstActiveOther_active ks
           (match decideSome (p := fun h => W.active t h ∧ h ≠ g) ks with
            | isTrue found => found
-           | isFalse lone => absurd ⟨t, mem_steps_of_between from_ to, calls, lone⟩ absent)
+           | isFalse lone => absurd ⟨t, steps_of_within from_ to, calls, lone⟩ absent)
       have members : ∀ t, firstActiveOther W g t ks ∈ ks := fun t =>
         match firstActiveOther_mem (W := W) (g := g) (t := t) ks with
         | .inl mem => mem
@@ -2375,7 +2325,7 @@ theorem demand_le_replenishment {L : Flow F C} {W : Web F C} {cs : List C} {t : 
     exact total_le cs fun c inside => rise_le_given balances inside
   | isFalse steady =>
     have parts : L.replenishment cs t = risen cs (fun c s => W.level s c) t + L.uptake cs t :=
-      (Weighting.total_congr_on fun c inside =>
+      (total_congr_on fun c inside =>
         given_of_steady balances inside fun falls => steady ⟨c, inside, falls⟩).trans
         (total_add _ _ cs)
     rw [if_pos steady, parts]
@@ -2480,7 +2430,7 @@ theorem leastDrawn_acting
 repetition holding `c₀`. -/
 theorem leastDrawn_given_total (distinct : Distinct cs) (inside : c₀ ∈ cs) (t : Nat) :
     total cs ((leastDrawn W cs c₀ T n f pick).give t (pick t)) = W.demand cs t :=
-  (Weighting.total_congr_on (q := fun c => rise (fun s => W.level s c) t + W.drawnUnit cs c₀ t c)
+  (total_congr_on (g := fun c => rise (fun s => W.level s c) t + W.drawnUnit cs c₀ t c)
     fun c member => if_pos ⟨rfl, ⟨c, member, rfl⟩⟩).trans
     ((total_add _ _ cs).trans (congrArg (risen cs (fun c s => W.level s c) t + ·)
       (Web.total_drawnUnit distinct inside t)))
@@ -2663,16 +2613,6 @@ section Sharing
 
 variable {α β : Type}
 
-/-- `a` repeated `k` times in front of `rest`. -/
-def repeatOnto (a : α) : Nat → List α → List α
-  | 0, rest => rest
-  | k + 1, rest => a :: repeatOnto a k rest
-
-/-- The units of `r` over a list: each listed item repeated as often as `r` gives it, in order. -/
-def unitsOf : List α → (α → Nat) → List α
-  | [], _ => []
-  | a :: as, r => repeatOnto a (r a) (unitsOf as r)
-
 /-- Two lists paired in order, as far as the shorter goes. -/
 def pairUp : List α → List β → List (α × β)
   | [], [] => []
@@ -2680,40 +2620,29 @@ def pairUp : List α → List β → List (α × β)
   | _ :: _, [] => []
   | a :: as, b :: bs => (a, b) :: pairUp as bs
 
-/-- Repeating `a` in front adds its value as many times. -/
-theorem total_repeatOnto (q : α → Nat) (a : α) (rest : List α) :
-    ∀ k : Nat, total (repeatOnto a k rest) q = k * q a + total rest q
-  | 0 => (Nat.zero_add _).symm.trans (congrArg (· + total rest q) (Nat.zero_mul (q a)).symm)
-  | k + 1 => (congrArg (q a + ·) (total_repeatOnto q a rest k)).trans
-      ((Nat.add_assoc _ _ _).symm.trans (congrArg (· + total rest q)
-        ((Nat.add_comm (q a) (k * q a)).trans (Nat.succ_mul k (q a)).symm)))
-
-/-- A member of `a` repeated in front of `rest` is `a`, repeated at least once, or a member of
-`rest`. -/
-theorem mem_repeatOnto {a x : α} {rest : List α} :
-    ∀ {k : Nat}, x ∈ repeatOnto a k rest → (x = a ∧ 0 < k) ∨ x ∈ rest
-  | 0, mem => .inr mem
-  | k + 1, mem => match mem_cons_cases mem with
-    | .inl same => .inl ⟨same, Nat.succ_pos k⟩
-    | .inr later => match mem_repeatOnto later with
-      | .inl ⟨same, _⟩ => .inl ⟨same, Nat.succ_pos k⟩
-      | .inr inRest => .inr inRest
-
 /-- Over the units of `r`, a total weighs each listed item by its count. -/
-theorem total_unitsOf (q r : α → Nat) :
-    ∀ as : List α, total (unitsOf as r) q = total as fun a => r a * q a
+theorem total_unitsOn (q r : α → Nat) :
+    ∀ as : List α, total (unitsOn r as) q = total as fun a => r a * q a
   | [] => rfl
-  | a :: as => (total_repeatOnto q a (unitsOf as r) (r a)).trans
-      (congrArg (r a * q a + ·) (total_unitsOf q r as))
+  | a :: as => (total_append q (unitsOn r as) (List.replicate (r a) a)).trans
+      (Naturals.add_congr (total_replicate q a (r a)) (total_unitsOn q r as))
+
+/-- A member of an item repeated is the item, repeated at least once. -/
+theorem mem_replicate_pos {a x : α} : ∀ {k : Nat}, x ∈ List.replicate k a → x = a ∧ 0 < k
+  | 0, mem => nomatch mem
+  | k + 1, mem => match mem_cons_cases mem with
+    | .inl same => ⟨same, Nat.succ_pos k⟩
+    | .inr later => ⟨(mem_replicate_pos later).1, Nat.succ_pos k⟩
 
 /-- A unit of `r` over a list is a listed item with a positive count. -/
-theorem mem_unitsOf {r : α → Nat} {x : α} :
-    ∀ {as : List α}, x ∈ unitsOf as r → x ∈ as ∧ 0 < r x
+theorem mem_unitsOn {r : α → Nat} {x : α} :
+    ∀ {as : List α}, x ∈ unitsOn r as → x ∈ as ∧ 0 < r x
   | [], mem => nomatch mem
-  | a :: as, mem => match mem_repeatOnto mem with
-    | .inl ⟨same, pos⟩ => ⟨Eq.subst (motive := fun y => y ∈ a :: as) same.symm (.head as),
-        Eq.subst (motive := fun y => 0 < r y) same.symm pos⟩
-    | .inr later => match mem_unitsOf later with
+  | a :: as, mem => match mem_append_cases (l := List.replicate (r a) a) (m := unitsOn r as) mem with
+    | .inl here => match mem_replicate_pos here with
+      | ⟨same, pos⟩ => ⟨Eq.subst (motive := fun y => y ∈ a :: as) same.symm (.head as),
+          Eq.subst (motive := fun y => 0 < r y) same.symm pos⟩
+    | .inr later => match mem_unitsOn later with
       | ⟨inside, pos⟩ => ⟨.tail a inside, pos⟩
 
 /-- Paired with a list at least as long, every item of a list is paired: a total over the first
@@ -2726,7 +2655,7 @@ theorem total_pairUp_fst (q : α → Nat) :
   | _ :: rest, [], long =>
     absurd (Nat.le_trans (Nat.le_add_right 1 (total rest fun _ => 1)) long) (Nat.not_succ_le_zero 0)
   | a :: as, _ :: bs, long =>
-    congrArg (q a + ·) (total_pairUp_fst q as bs (le_of_add_le_add_left_core long))
+    congrArg (q a + ·) (total_pairUp_fst q as bs (Naturals.le_of_add_le_add_left long))
 
 /-- A total over the second members of the pairs is at most the second list's total. -/
 theorem total_pairUp_snd_le (q : β → Nat) :
@@ -2782,7 +2711,7 @@ def capacityWithout [∀ t x, Decidable (W.active t x)] [DecidableEq F] (cap : N
 order, paired with the units the members other than `g` can give, in order. -/
 def shares [DecidableEq C] [∀ t x, Decidable (W.active t x)] [DecidableEq F]
     (cap : Nat → F → Nat) (cs : List C) (c₀ : C) (ks : List F) (g : F) (t : Nat) : List (C × F) :=
-  pairUp (unitsOf cs (W.demandAt cs c₀ t)) (unitsOf ks (W.otherCapacity cap g t))
+  pairUp (unitsOn (W.demandAt cs c₀ t) cs) (unitsOn (W.otherCapacity cap g t) ks)
 
 variable {W}
 
@@ -2807,7 +2736,7 @@ theorem mem_shares [DecidableEq C] [∀ t x, Decidable (W.active t x)] [Decidabl
     (mem : z ∈ W.shares cap cs c₀ ks g t) :
     z.1 ∈ cs ∧ 0 < W.demandAt cs c₀ t z.1 ∧ z.2 ∈ ks ∧ W.active t z.2 ∧ z.2 ≠ g :=
   match mem_pairUp mem with
-  | ⟨first, second⟩ => match mem_unitsOf first, mem_unitsOf second with
+  | ⟨first, second⟩ => match mem_unitsOn first, mem_unitsOn second with
     | ⟨inside, owed⟩, ⟨member, spare⟩ =>
       ⟨inside, owed, member, match (instDecidableAnd : Decidable (W.active t z.2 ∧ z.2 ≠ g)) with
         | isTrue both => both
@@ -2859,17 +2788,17 @@ capacity covers the step's demand. -/
 theorem sharedDrawn_given_members (distinct : Distinct cs) (inside : c₀ ∈ cs) (apart : Distinct ks)
     {t : Nat} (covers : W.demand cs t ≤ W.capacityWithout cap ks g t) {c : C} (member : c ∈ cs) :
     total ks (fun x => (sharedDrawn W cap cs c₀ ks T n f g).give t x c) = W.demandAt cs c₀ t c :=
-  have long : total (unitsOf cs (W.demandAt cs c₀ t)) (fun _ => 1) ≤
-      total (unitsOf ks (W.otherCapacity cap g t)) (fun _ => 1) :=
-    Nat.le_trans (Nat.le_of_eq ((total_unitsOf (fun _ => 1) _ cs).trans
-      ((Weighting.total_congr_on fun _ _ => Nat.mul_one _).trans (Web.total_demandAt distinct inside t))))
-      (Nat.le_trans covers (Nat.le_of_eq ((total_unitsOf (fun _ => 1) _ ks).trans
-        (Weighting.total_congr_on fun _ _ => Nat.mul_one _)).symm))
+  have long : total (unitsOn (W.demandAt cs c₀ t) cs) (fun _ => 1) ≤
+      total (unitsOn (W.otherCapacity cap g t) ks) (fun _ => 1) :=
+    Nat.le_trans (Nat.le_of_eq ((total_unitsOn (fun _ => 1) _ cs).trans
+      ((total_congr_on fun _ _ => Nat.mul_one _).trans (Web.total_demandAt distinct inside t))))
+      (Nat.le_trans covers (Nat.le_of_eq ((total_unitsOn (fun _ => 1) _ ks).trans
+        (total_congr_on fun _ _ => Nat.mul_one _)).symm))
   show total ks (fun x => total (W.shares cap cs c₀ ks g t) fun z => if z.1 = c ∧ z.2 = x then 1 else 0)
       = W.demandAt cs c₀ t c from
   (total_swap (fun (x : F) (z : C × F) => if z.1 = c ∧ z.2 = x then 1 else 0)
     (W.shares cap cs c₀ ks g t) ks).trans
-    ((Weighting.total_congr_on (q := fun (z : C × F) => if z.1 = c then 1 else 0) fun z mem =>
+    ((total_congr_on (g := fun (z : C × F) => if z.1 = c then 1 else 0) fun z mem =>
       match Web.mem_shares mem with
       | ⟨_, _, inks, _, _⟩ => match decEq z.1 c with
         | isTrue same => (total_eq_at (a := z.2) (fun (x : F) pos =>
@@ -2881,7 +2810,7 @@ theorem sharedDrawn_given_members (distinct : Distinct cs) (inside : c₀ ∈ cs
         | isFalse other =>
           (total_eq_zero fun _ _ => if_neg fun both => other both.1).trans (if_neg other).symm).trans
       ((total_pairUp_fst (fun d => if d = c then 1 else 0) _ _ long).trans
-        ((total_unitsOf (fun d => if d = c then 1 else 0) _ cs).trans
+        ((total_unitsOn (fun d => if d = c then 1 else 0) _ cs).trans
           ((total_eq_at (a := c) (fun (d : C) pos => match decEq d c with
               | isTrue same => same
               | isFalse other => absurd (Nat.lt_of_lt_of_le pos (Nat.le_of_eq
@@ -2945,7 +2874,7 @@ theorem sharedDrawn_given_le (distinct : Distinct cs) (apart : Distinct ks) (t :
           | isFalse other =>
             Nat.le_trans (Nat.le_of_eq (if_neg fun both => other both.2)) (Nat.zero_le _)))
       (Nat.le_trans (total_pairUp_snd_le (fun h => if h = x then 1 else 0) _ _)
-        (Nat.le_trans (Nat.le_of_eq (total_unitsOf (fun h => if h = x then 1 else 0) _ ks))
+        (Nat.le_trans (Nat.le_of_eq (total_unitsOn (fun h => if h = x then 1 else 0) _ ks))
           (Nat.le_trans (total_le_at (a := x) (fun (h : F) pos => match decEq h x with
               | isTrue same => same
               | isFalse other => absurd (Nat.lt_of_lt_of_le pos (Nat.le_of_eq
@@ -3023,7 +2952,7 @@ theorem needs_giver_iff_short [DecidableEq F] [DecidableEq C] {W : Web F C}
     | isFalse covered =>
       absurd (needs _ (sharedDrawn_fedOnlyWithin (c₀ := c₀) distinct inside apart outside
           fun t from_ to => Nat.ge_of_not_lt fun short =>
-            covered ⟨t, mem_steps_of_between from_ to, short⟩)
+            covered ⟨t, steps_of_within from_ to, short⟩)
         (sharedDrawn_drawsPast inside alive below))
         (sharedDrawn_not_gives distinct apart),
    fun short => needs_giver_of_short short⟩
@@ -3195,7 +3124,7 @@ theorem take_le_storeFall {L : Flow F C} {W : Web F C} {store : F → C} {t : Na
     (balances (store h) (.head [])).trans
       ((congrArg (W.level t (store h) + ·) unfed).trans (Nat.add_zero _))
   Nat.le_trans (le_total_of_mem (q := fun x => L.take t x (store h)) present)
-    (le_of_add_le_add_left_core (S := W.level (t + 1) (store h))
+    (Naturals.le_of_add_le_add_left (k := W.level (t + 1) (store h))
       (Nat.le_trans (Nat.le_of_eq taken) (Nat.le_trans (Nat.le_add_right _ _)
         (Nat.le_of_eq (across (fun s => W.level s (store h)) t).symm))))
 
@@ -3404,7 +3333,7 @@ theorem needs_giver_iff_store_short [DecidableEq F] [DecidableEq C] {W : Web F C
     | isFalse covered =>
       absurd (needs _ (storeDrawn_fedFromStores (c₀ := c₀) distinct inside apart outside own separate
           steady fun t from_ to => Nat.ge_of_not_lt fun short =>
-            covered ⟨t, mem_steps_of_between from_ to, short⟩)
+            covered ⟨t, steps_of_within from_ to, short⟩)
         (storeDrawn_drawsPast inside alive below))
         (storeDrawn_not_gives distinct apart),
    fun short L fed draws =>
@@ -3413,17 +3342,6 @@ theorem needs_giver_iff_store_short [DecidableEq F] [DecidableEq C] {W : Web F C
 end Flow
 
 /-! ## Need in degree -/
-
-/-- An amount is at most another with what it exceeds the other by. -/
-theorem covered_by_excess (a b : Nat) : a ≤ b + excess a b :=
-  Nat.le_trans (Nat.le_add_right a (excess b a)) (Nat.le_of_eq (excess_balance a b))
-
-/-- What exceeds `b` by at most `c` has excess over `b` at most `c`. -/
-theorem excess_le_of_covered : ∀ {a b c : Nat}, a ≤ b + c → excess a b ≤ c
-  | 0, _, _, _ => Nat.zero_le _
-  | _ + 1, 0, c, le => Nat.le_trans le (Nat.le_of_eq (Nat.zero_add c))
-  | a + 1, b + 1, c, le => excess_le_of_covered (a := a) (b := b) (c := c)
-      (Nat.le_of_succ_le_succ (Nat.le_trans le (Nat.le_of_eq (Nat.succ_add b c))))
 
 /-- An amount is the part a test removes and the part it keeps. -/
 theorem split_by {p : Prop} [d : Decidable p] (v : Nat) :
@@ -3476,7 +3394,7 @@ theorem replenishment_split (L : Flow F C) (t : Nat) :
       total (L.present t) (fun x => if x = g then 0 else total cs (L.give t x)) +
         L.givenFrom cs t g :=
   (total_swap (fun x c => L.give t x c) cs (L.present t)).symm.trans
-    ((Weighting.total_congr_on fun x _ => split_by (p := x = g) (total cs (L.give t x))).trans
+    ((total_congr_on fun x _ => split_by (p := x = g) (total cs (L.give t x))).trans
       (total_add _ _ (L.present t)))
 
 /-- **What the others give is at most what they can give together.** In a flow read off a web
@@ -3515,7 +3433,7 @@ there at least the step's shortfall without it. -/
 theorem shortfall_le_givenFrom {L : Flow F C} (fed : FedOnlyWithin W cap cs (· ∈ ks) T n L)
     {t : Nat} (from_ : T ≤ t) (to : t < T + n) (present : f ∈ L.present t)
     (takes : 0 < total cs (L.take t f)) : W.shortfall cap cs ks g t ≤ L.givenFrom cs t g :=
-  excess_le_of_covered (Nat.le_trans (demand_le_replenishment (fed.1.1 t from_ to) present takes)
+  excess_le_of_le_add (Nat.le_trans (demand_le_replenishment (fed.1.1 t from_ to) present takes)
     (Nat.le_trans (Nat.le_of_eq (replenishment_split (g := g) L t))
       (Nat.add_le_add_right (others_le_capacityWithout fed from_ to) _)))
 
@@ -3563,7 +3481,7 @@ theorem capacityWithout_short (apart : Distinct ks) (outside : ¬ f ∈ ks) (mem
     {t : Nat} (able : W.shortfall cap cs ks g t ≤ W.otherCapacity cap f t g) :
     W.capacityWithout (W.shortCapacity cap cs ks g) ks f t =
       W.capacityWithout cap ks g t + W.shortfall cap cs ks g t :=
-  (Weighting.total_congr_on fun _ inks => otherCapacity_short outside able inks).trans
+  (total_congr_on fun _ inks => otherCapacity_short outside able inks).trans
     ((total_add _ _ ks).trans (congrArg (W.capacityWithout cap ks g t + ·)
       ((total_eq_at (a := g) (fun h pos => match decEq h g with
           | isTrue same => same
@@ -3592,7 +3510,7 @@ theorem gradedDrawn_fedOnlyWithin (distinct : Distinct cs) (inside : c₀ ∈ cs
   have fed : FedOnlyWithin W (W.shortCapacity cap cs ks g) cs (· ∈ ks) T n
       (sharedDrawn W (W.shortCapacity cap cs ks g) cs c₀ ks T n f f) :=
     sharedDrawn_fedOnlyWithin distinct inside apart outside fun t from_ to =>
-      Nat.le_trans (covered_by_excess (W.demand cs t) (W.capacityWithout cap ks g t))
+      Nat.le_trans (le_add_excess (W.demand cs t) (W.capacityWithout cap ks g t))
         (Nat.le_of_eq (capacityWithout_short apart outside member (able t from_ to)).symm)
   ⟨fed.1, fun t from_ to => ⟨(fed.2 t from_ to).1, fun x present =>
     Nat.le_trans ((fed.2 t from_ to).2 x present) (shortCapacity_le (able t from_ to) x)⟩⟩
@@ -3657,7 +3575,7 @@ theorem needs_giver_iff_shortfalls_pos [DecidableEq F] [DecidableEq C] {W : Web 
       0 < total (steps T n) (W.shortfall cap cs ks g) :=
   (needs_giver_iff_short distinct inside apart outside alive below).trans
     ⟨fun ⟨_, from_, to, short⟩ =>
-      total_pos_of_mem (mem_steps_of_between from_ to) (excess_pos.mpr short),
+      total_pos_of_mem (steps_of_within from_ to) (excess_pos.mpr short),
      fun pos => match total_pos (steps T n) pos with
       | ⟨t, mem, positive⟩ => match between_of_mem_steps mem with
         | ⟨from_, to⟩ => ⟨t, from_, to, excess_pos.mp positive⟩⟩
@@ -3714,7 +3632,7 @@ member `g` can give and what `g` can give. -/
 theorem capacityWithout_split (apart : Distinct ks) (outside : ¬ f ∈ ks) (member : g ∈ ks)
     (t : Nat) :
     W.capacityWithout cap ks f t = W.capacityWithout cap ks g t + W.otherCapacity cap f t g :=
-  (Weighting.total_congr_on fun _ inks => otherCapacity_split (g := g) outside t inks).trans
+  (total_congr_on fun _ inks => otherCapacity_split (g := g) outside t inks).trans
     ((total_add _ _ ks).trans (congrArg (W.capacityWithout cap ks g t + ·)
       ((total_eq_at (a := g) (fun h pos => match decEq h g with
           | isTrue same => same
@@ -3726,7 +3644,7 @@ theorem capacityWithout_split (apart : Distinct ks) (outside : ¬ f ∈ ks) (mem
 theorem able_of_covers (apart : Distinct ks) (outside : ¬ f ∈ ks) (member : g ∈ ks) {t : Nat}
     (covers : W.demand cs t ≤ W.capacityWithout cap ks f t) :
     W.shortfall cap cs ks g t ≤ W.otherCapacity cap f t g :=
-  excess_le_of_covered (Nat.le_trans covers (Nat.le_of_eq (capacityWithout_split apart outside member t)))
+  excess_le_of_le_add (Nat.le_trans covers (Nat.le_of_eq (capacityWithout_split apart outside member t)))
 
 /-- In a flow read off a web with capacities in which `f`, not a member, takes part and takes from
 the family at a step of the stretch, the class can give that step's demand. -/
@@ -3854,7 +3772,7 @@ theorem gradedStoreDrawn_balancesOn (distinct : Distinct cs) (inside : c₀ ∈ 
         rise (fun s => W.level s c) t + W.drawnUnit cs c₀ t c :=
     sharedDrawn_given_members (W := W) (cap := W.shortCapacity (W.storeFall store) cs ks g)
       (T := T) (n := n) (f := f) (g := f) distinct inside apart
-      (Nat.le_trans (covered_by_excess (W.demand cs t) (W.capacityWithout (W.storeFall store) ks g t))
+      (Nat.le_trans (le_add_excess (W.demand cs t) (W.capacityWithout (W.storeFall store) ks g t))
         (Nat.le_of_eq (capacityWithout_short apart outside member (able t from_ to)).symm)) inFamily
   show W.level (t + 1) c + total ((gradedStoreDrawn W store cs c₀ ks T n f g).present t)
       (fun x => (gradedStoreDrawn W store cs c₀ ks T n f g).take t x c) =
@@ -4031,7 +3949,7 @@ end Restricted
 
 /-- What `a` with `b` stays within exceeds `b` by at least `a`. -/
 theorem le_excess_of_add_le {a b c : Nat} (le : a + b ≤ c) : a ≤ excess c b :=
-  le_of_add_le_add_left_core (Nat.le_trans (Nat.le_of_eq (Nat.add_comm b a))
+  Naturals.le_of_add_le_add_left (Nat.le_trans (Nat.le_of_eq (Nat.add_comm b a))
     (Nat.le_trans le (Nat.le_trans (Nat.le_add_right c (excess b c))
       (Nat.le_of_eq (excess_balance c b)))))
 
@@ -4225,7 +4143,7 @@ theorem replenishment_le_othersThrough {L : Flow F C}
       W.capacityWithout (W.storeFall store) ks e t +
         total ks (fun h => if W.active t h ∧ h ≠ e then
           excess (L.given t (store h)) (W.storeRise store t h) else 0) :=
-    (Weighting.total_congr_on fun h inks =>
+    (total_congr_on fun h inks =>
       match (instDecidableAnd : Decidable (W.active t h ∧ h ≠ e)) with
       | isTrue both => (if_pos both).trans ((taken_store (((fed.2 t from_ to).2.1 h inks).1)).trans
           ((congrArg (· + excess (L.given t (store h)) (W.storeRise store t h))
@@ -4243,7 +4161,7 @@ theorem replenishment_le_othersThrough {L : Flow F C}
       W.storesRisen store ks t = total ks (fun h => L.given t (store h)) :=
     (total_add (fun h => excess (L.given t (store h)) (W.storeRise store t h))
       (W.storeRise store t) ks).symm.trans
-      (Weighting.total_congr_on fun h inks => excess_add_of_le
+      (total_congr_on fun h inks => excess_add_of_le
         (rise_le_given (((fed.2 t from_ to).2.1 h inks).1) (.head [])))
   have beyond : total ks (fun h => excess (L.given t (store h)) (W.storeRise store t h)) ≤
       excess (W.capacityWithout cap₂ js e t) (W.storesRisen store ks t) :=
@@ -4290,7 +4208,7 @@ def storeNeed [∀ t x, Decidable (W.active t x)] [DecidableEq F] (store : F →
 given, in order, paired with the units the upper members other than `e` can give, in order. -/
 def routedShares [∀ t x, Decidable (W.active t x)] [DecidableEq F] (store : F → C)
     (cap₂ : Nat → F → Nat) (cs : List C) (ks js : List F) (e : F) (t : Nat) : List (F × F) :=
-  pairUp (unitsOf ks (W.storeNeed store cs ks e t)) (unitsOf js (W.otherCapacity cap₂ e t))
+  pairUp (unitsOn (W.storeNeed store cs ks e t) ks) (unitsOn (W.otherCapacity cap₂ e t) js)
 
 /-- What an upper member gives a condition at the step from `t` as the upper tier's shares pair
 them. -/
@@ -4342,7 +4260,7 @@ theorem routed_le {t : Nat} (covers : W.demand cs t ≤ W.othersThrough store ca
     (routes : W.RoutesAt ks e t) :
     W.routed store cs ks e t ≤
       excess (W.capacityWithout cap₂ js e t) (W.storesRisen store ks t) :=
-  excess_le_of_covered (Nat.le_trans covers (Nat.le_of_eq
+  excess_le_of_le_add (Nat.le_trans covers (Nat.le_of_eq
     (congrArg (W.capacityWithout (W.storeFall store) ks e t + ·) (if_pos routes))))
 
 omit [DecidableEq C] in
@@ -4398,7 +4316,7 @@ theorem routedGive_pos {t : Nat} {x : F} {c : C}
     | isFalse no =>
       absurd (Nat.lt_of_lt_of_le positive (Nat.le_of_eq (if_neg no))) (Nat.lt_irrefl 0)
     | isTrue ⟨first, second⟩ => match mem_pairUp mem with
-      | ⟨units, givers⟩ => match mem_unitsOf units, mem_unitsOf givers with
+      | ⟨units, givers⟩ => match mem_unitsOn units, mem_unitsOn givers with
         | ⟨lower, _⟩, ⟨upper, spare⟩ =>
           have able : W.active t z.2 ∧ z.2 ≠ e :=
             match (instDecidableAnd : Decidable (W.active t z.2 ∧ z.2 ≠ e)) with
@@ -4426,20 +4344,20 @@ theorem routedGive_store (apartK : Distinct ks) (apartJ : Distinct js)
     (covers : W.demand cs t ≤ W.othersThrough store cap₂ ks js e t) {h : F} (member : h ∈ ks) :
     total js (fun x => W.routedGive store cap₂ cs ks js e t x (store h)) =
       W.storeNeed store cs ks e t h :=
-  have long : total (unitsOf ks (W.storeNeed store cs ks e t)) (fun _ => 1) ≤
-      total (unitsOf js (W.otherCapacity cap₂ e t)) (fun _ => 1) :=
-    Nat.le_trans (Nat.le_of_eq ((total_unitsOf (fun _ => 1) (W.storeNeed store cs ks e t) ks).trans
-        (Weighting.total_congr_on fun _ _ => Nat.mul_one _)))
+  have long : total (unitsOn (W.storeNeed store cs ks e t) ks) (fun _ => 1) ≤
+      total (unitsOn (W.otherCapacity cap₂ e t) js) (fun _ => 1) :=
+    Nat.le_trans (Nat.le_of_eq ((total_unitsOn (fun _ => 1) (W.storeNeed store cs ks e t) ks).trans
+        (total_congr_on fun _ _ => Nat.mul_one _)))
       (Nat.le_trans (storeNeed_total_le apartK fills covers)
-        (Nat.le_of_eq ((total_unitsOf (fun _ => 1) (W.otherCapacity cap₂ e t) js).trans
-          (Weighting.total_congr_on fun _ _ => Nat.mul_one _)).symm))
+        (Nat.le_of_eq ((total_unitsOn (fun _ => 1) (W.otherCapacity cap₂ e t) js).trans
+          (total_congr_on fun _ _ => Nat.mul_one _)).symm))
   show total js (fun x => total (W.routedShares store cap₂ cs ks js e t)
       fun z => if store z.1 = store h ∧ z.2 = x then 1 else 0) = _ from
   (total_swap (fun (x : F) (z : F × F) => if store z.1 = store h ∧ z.2 = x then 1 else 0)
     (W.routedShares store cap₂ cs ks js e t) js).trans
-    ((Weighting.total_congr_on (q := fun (z : F × F) => if z.1 = h then 1 else 0) fun z mem =>
+    ((total_congr_on (g := fun (z : F × F) => if z.1 = h then 1 else 0) fun z mem =>
       match mem_pairUp mem with
-      | ⟨units, givers⟩ => match mem_unitsOf units, mem_unitsOf givers with
+      | ⟨units, givers⟩ => match mem_unitsOn units, mem_unitsOn givers with
         | ⟨lower, _⟩, ⟨upper, _⟩ => match decEq z.1 h with
           | isTrue same => (total_eq_at (a := z.2) (fun (x : F) pos =>
                 match (instDecidableAnd : Decidable (store z.1 = store h ∧ z.2 = x)) with
@@ -4451,7 +4369,7 @@ theorem routedGive_store (apartK : Distinct ks) (apartJ : Distinct js)
             (total_eq_zero fun _ _ => if_neg fun both => other (own _ h lower member both.1)).trans
               (if_neg other).symm).trans
       ((total_pairUp_fst (fun a => if a = h then 1 else 0) _ _ long).trans
-        ((total_unitsOf (fun a => if a = h then 1 else 0) _ ks).trans
+        ((total_unitsOn (fun a => if a = h then 1 else 0) _ ks).trans
           ((total_eq_at (a := h) (fun b pos => match decEq b h with
               | isTrue same => same
               | isFalse other => absurd (Nat.lt_of_lt_of_le pos (Nat.le_of_eq
@@ -4470,7 +4388,7 @@ theorem routedGive_le (apartK : Distinct ks) (apartJ : Distinct js)
       if store z.1 = store h ∧ z.2 = x then 1 else 0) (W.routedShares store cap₂ cs ks js e t) ks))
     (Nat.le_trans (total_le (q := fun (z : F × F) => if z.2 = x then 1 else 0) _ fun z mem =>
         match mem_pairUp mem with
-        | ⟨units, _⟩ => match mem_unitsOf units with
+        | ⟨units, _⟩ => match mem_unitsOn units with
           | ⟨lower, _⟩ => Nat.le_trans (total_le_at_on (a := z.1) (fun b bin pos =>
                 match (instDecidableAnd : Decidable (store z.1 = store b ∧ z.2 = x)) with
                 | isTrue both => own b z.1 bin lower both.1.symm
@@ -4481,7 +4399,7 @@ theorem routedGive_le (apartK : Distinct ks) (apartJ : Distinct js)
                 | isFalse other => Nat.le_trans (Nat.le_of_eq (if_neg fun both => other both.2))
                     (Nat.zero_le _)))
       (Nat.le_trans (total_pairUp_snd_le (fun j => if j = x then 1 else 0) _ _)
-        (Nat.le_trans (Nat.le_of_eq (total_unitsOf (fun j => if j = x then 1 else 0) _ js))
+        (Nat.le_trans (Nat.le_of_eq (total_unitsOn (fun j => if j = x then 1 else 0) _ js))
           (Nat.le_trans (total_le_at (a := x) (fun (j : F) pos => match decEq j x with
               | isTrue same => same
               | isFalse other => absurd (Nat.lt_of_lt_of_le pos (Nat.le_of_eq
@@ -4514,7 +4432,7 @@ theorem routedCapacity_covers {t : Nat}
       W.capacityWithout (W.storeFall store) ks e t +
         total ks (fun h => if W.active t h ∧ h ≠ e then
           (if h = firstActiveOther W e t ks then W.routed store cs ks e t else 0) else 0) :=
-    (Weighting.total_congr_on fun h _ =>
+    (total_congr_on fun h _ =>
       match (instDecidableAnd : Decidable (W.active t h ∧ h ≠ e)) with
       | isTrue both => (if_pos both).trans
           ((congrArg (· + (if h = firstActiveOther W e t ks then W.routed store cs ks e t else 0))
@@ -4534,7 +4452,7 @@ theorem routedCapacity_covers {t : Nat}
       match firstActiveOther_mem (W := W) (g := e) (t := t) ks with
       | .inl mem => mem
       | .inr same => absurd same router.2
-    Nat.le_trans (covered_by_excess (W.demand cs t) (W.capacityWithout (W.storeFall store) ks e t))
+    Nat.le_trans (le_add_excess (W.demand cs t) (W.capacityWithout (W.storeFall store) ks e t))
       (Nat.le_trans (Nat.add_le_add_left (Nat.le_trans
           (Nat.le_of_eq ((if_pos (rfl : firstActiveOther W e t ks = firstActiveOther W e t ks)).symm.trans
             (if_pos router).symm))
@@ -4594,7 +4512,7 @@ theorem routedDrawn_balancesOn (distinct : Distinct cs) (inside : c₀ ∈ cs) (
         (f := f) (g := e) pos).2.1)
   have giveLower : total ks (fun x => (routedDrawn W store cap₂ cs c₀ ks js T n f e).give t x c) =
       rise (fun s => W.level s c) t + W.drawnUnit cs c₀ t c :=
-    (Weighting.total_congr_on fun _ _ => routedDrawn_give_family separate member).trans
+    (total_congr_on fun _ _ => routedDrawn_give_family separate member).trans
       (sharedDrawn_given_members (W := W) (cap := W.routedCapacity store cs ks e) (T := T) (n := n)
         (f := f) (g := e) distinct inside apartK (routedCapacity_covers (covers t from_ to)) member)
   have giveUpper : total js (fun x => (routedDrawn W store cap₂ cs c₀ ks js T n f e).give t x c) = 0 :=
@@ -4622,11 +4540,6 @@ theorem routedDrawn_balancesOn (distinct : Distinct cs) (inside : c₀ ∈ cs) (
 end RoutedFlow
 
 end Flow
-
-/-- A positive sum has a positive part. -/
-theorem pos_or_of_add_pos : ∀ {a b : Nat}, 0 < a + b → 0 < a ∨ 0 < b
-  | 0, _, pos => .inr (Eq.subst (motive := fun k => 0 < k) (Nat.zero_add _) pos)
-  | _ + 1, _, _ => .inl (Nat.succ_pos _)
 
 namespace Flow
 
@@ -4706,7 +4619,7 @@ theorem routedDrawn_given_store (apartK : Distinct ks) (apartJ : Distinct js)
   have giveUpper :
       total js (fun x => (routedDrawn W store cap₂ cs c₀ ks js T n f e).give t x (store h)) =
         W.storeNeed store cs ks e t h :=
-    (Weighting.total_congr_on fun _ _ => routedDrawn_give_store separate member).trans
+    (total_congr_on fun _ _ => routedDrawn_give_store separate member).trans
       (routedGive_store apartK apartJ own fills covers member)
   show total ((routedDrawn W store cap₂ cs c₀ ks js T n f e).present t)
       (fun x => (routedDrawn W store cap₂ cs c₀ ks js T n f e).give t x (store h)) = _
@@ -4753,7 +4666,7 @@ theorem routedDrawn_fedThroughStores (distinct : Distinct cs) (inside : c₀ ∈
     (covers : ∀ t, T ≤ t → t < T + n → W.demand cs t ≤ W.othersThrough store cap₂ ks js e t) :
     FedThroughStores W store cs ks js cap₂ T n (routedDrawn W store cap₂ cs c₀ ks js T n f e) :=
   ⟨⟨routedDrawn_balancesOn distinct inside apartK outsideK outsideJ tiers separate covers,
-    fun _ _ _ _ gives => match pos_or_of_add_pos gives with
+    fun _ _ _ _ gives => match Naturals.pos_or_of_add_pos gives with
       | .inl shared => (sharedDrawn_gives (W := W) (cap := W.routedCapacity store cs ks e) (cs := cs)
           (c₀ := c₀) (ks := ks) (T := T) (n := n) (f := f) (g := e) shared).2.2.1
       | .inr upper => (routedGive_pos upper).2.2.1,
@@ -4772,7 +4685,7 @@ theorem routedDrawn_fedThroughStores (distinct : Distinct cs) (inside : c₀ ∈
      fun h member =>
       ⟨routedDrawn_balances_store apartK apartJ outsideK outsideJ tiers own separate from_ to
           (fills t from_ to) (covers t from_ to) member,
-       fun _ => Nat.le_trans (Nat.le_of_eq (Weighting.total_congr_on fun _ inFamily =>
+       fun _ => Nat.le_trans (Nat.le_of_eq (total_congr_on fun _ inFamily =>
            routedDrawn_give_family separate inFamily))
          (Nat.le_trans (sharedDrawn_given_le (W := W) (cap := W.routedCapacity store cs ks e)
              (c₀ := c₀) (T := T) (n := n) (f := f) (g := e) distinct apartK t h)
@@ -4782,7 +4695,7 @@ theorem routedDrawn_fedThroughStores (distinct : Distinct cs) (inside : c₀ ∈
                  (Eq.subst (motive := fun y => y ∈ ks) both.1 member)).symm)))),
        fun _ _ gives => (routedGive_pos (Nat.lt_of_lt_of_le gives
          (Nat.le_of_eq (routedDrawn_give_store separate member)))).2.1⟩,
-     fun x _ _ => Nat.le_trans (Nat.le_of_eq (Weighting.total_congr_on fun _ inks =>
+     fun x _ _ => Nat.le_trans (Nat.le_of_eq (total_congr_on fun _ inks =>
          routedDrawn_give_store separate inks)) (routedGive_le apartK apartJ own t x)⟩⟩
 
 /-- In the routed flow `f` draws past the family's stock, where it is active across a stretch
@@ -4812,7 +4725,7 @@ theorem routedDrawn_not_gives (distinct : Distinct cs) (apartK : Distinct ks)
     ¬ GivesInto cs ks store T n (routedDrawn W store cap₂ cs c₀ ks js T n f e, W) e :=
   fun ⟨t, _, _, _, gives⟩ =>
     have family : total cs ((routedDrawn W store cap₂ cs c₀ ks js T n f e).give t e) = 0 :=
-      (Weighting.total_congr_on fun _ inFamily => routedDrawn_give_family separate inFamily).trans
+      (total_congr_on fun _ inFamily => routedDrawn_give_family separate inFamily).trans
         (sharedDrawn_quiet (W := W) (cap := W.routedCapacity store cs ks e) (c₀ := c₀) (T := T)
           (n := n) (f := f) (g := e) distinct apartK t)
     have stores :
@@ -4854,9 +4767,9 @@ theorem needs_iff_through_short [DecidableEq F] [DecidableEq C] {W : Web F C}
       absurd (needs _ (routedDrawn_fedThroughStores (c₀ := c₀) (f := f) distinct inside apartK
           apartJ outsideK outsideJ tiers own separate
           (fun t from_ to => Nat.ge_of_not_lt fun short =>
-            covered ⟨t, mem_steps_of_between from_ to, .inl short⟩)
+            covered ⟨t, steps_of_within from_ to, .inl short⟩)
           (fun t from_ to => Nat.ge_of_not_lt fun short =>
-            covered ⟨t, mem_steps_of_between from_ to, .inr short⟩))
+            covered ⟨t, steps_of_within from_ to, .inr short⟩))
         (routedDrawn_drawsPast inside alive below))
         (routedDrawn_not_gives distinct apartK separate),
    fun ⟨t, from_, to, short⟩ L fed ⟨_, draws⟩ =>
@@ -4899,7 +4812,7 @@ theorem active_of_givesInto {L : Flow F C} {W : Web F C} (acting : L.Acting W) {
     {ks : List F} {store : F → C} {T n : Nat} {e : F} (gives : GivesInto cs ks store T n (L, W) e) :
     ∃ t, T ≤ t ∧ t < T + n ∧ W.active t e :=
   match gives with
-  | ⟨t, from_, to, present, pos⟩ => match pos_or_of_add_pos pos with
+  | ⟨t, from_, to, present, pos⟩ => match Naturals.pos_or_of_add_pos pos with
     | .inl family => match total_pos cs family with
       | ⟨c, _, positive⟩ => ⟨t, from_, to, acting t e c present positive⟩
     | .inr stores => match total_pos ks stores with
@@ -6287,9 +6200,6 @@ increments would fall without end; levels are bounded by the listed steps.) -/
 def ConcaveTo (n : Nat) (f : Nat → Nat) : Prop :=
   ∀ k, k + 2 ≤ n → f k + f (k + 2) < f (k + 1) + f (k + 1)
 
-theorem perm4 (A B C D : Nat) : (A + B) + (C + D) = (A + D) + (C + B) := by
-  rw [Nat.add_comm C D, Nat.add_add_add_comm A B D C, Nat.add_comm B C]
-
 theorem concave_gap {n : Nat} {f : Nat → Nat} (concave : ConcaveTo n f) (a : Nat) :
     ∀ d, a + d + 2 ≤ n → f a + f (a + d + 2) < f (a + 1) + f (a + d + 1)
   | 0, bound => concave a bound
@@ -6298,7 +6208,7 @@ theorem concave_gap {n : Nat} {f : Nat → Nat} (concave : ConcaveTo n f) (a : N
     have step : f (a + d + 1) + f (a + d + 3) < f (a + d + 2) + f (a + d + 2) :=
       concave (a + d + 1) bound
     have sum := Nat.add_lt_add (concave_gap concave a d (Nat.le_of_succ_le bound)) step
-    rw [perm4 (f a) (f (a + d + 2)) (f (a + d + 1)) (f (a + d + 3)),
+    rw [Integers.nat_rearrange (f a) (f (a + d + 2)) (f (a + d + 1)) (f (a + d + 3)),
       Nat.add_add_add_comm (f (a + 1)) (f (a + d + 1)) (f (a + d + 2)) (f (a + d + 2))] at sum
     exact Nat.lt_of_add_lt_add_right sum
 

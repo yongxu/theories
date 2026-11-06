@@ -101,7 +101,7 @@ theorem levels_agree_until {L₁ L₂ : Flow F C} {W₁ W₂ : Web F C}
   | t + 1, le => fun c =>
     have lt : t < T := le
     have ih := levels_agree_until b₁ b₂ start net t (Nat.le_of_lt lt)
-    Naturals.add_right_cancel (k := L₂.taken t c + L₁.given t c) (calc
+    add_right_cancel (L₂.taken t c + L₁.given t c) (calc
       W₁.level (t + 1) c + (L₂.taken t c + L₁.given t c)
           = W₁.level (t + 1) c + (L₁.taken t c + L₂.given t c) :=
             congrArg (W₁.level (t + 1) c + ·) (net t lt ih c).symm
@@ -213,22 +213,10 @@ theorem mul_cond (x : Nat) : ∀ b : Bool, x * cond b 1 0 = cond b x 0
   | true => Nat.mul_one x
   | false => Nat.mul_zero x
 
-theorem cond_pos {b : Bool} {x : Nat} (pos : 0 < cond b x 0) : b = true := by
-  cases b with
-  | true => rfl
-  | false => exact absurd pos (Nat.lt_irrefl 0)
-
-theorem cond_le (x : Nat) : ∀ b : Bool, cond b x 0 ≤ x
-  | true => Nat.le_refl x
-  | false => Nat.zero_le x
-
 theorem regroup (s x y z x' y' z' : Nat) :
     s + x + y + z + (x' + y' + z') = s + (x + x') + (y + y') + (z + z') := by
   rw [Nat.add_add_add_comm (s + x + y) z (x' + y') z', Nat.add_add_add_comm (s + x) y x' y',
     Nat.add_assoc s x x']
-
-theorem lt_of_add_lt_add_left' {k a b : Nat} (lt : k + a < k + b) : a < b :=
-  Naturals.le_of_add_le_add_left (k := k) lt
 
 /-! ## The run as a flow, with routes -/
 
@@ -416,13 +404,13 @@ theorem factor_gap (routes : P.kept + P.spoiled = P.reach + P.spill) :
 /-- **`γ < β` exactly where giving loses less than keeping spoils with what the matching brings.** -/
 theorem gap_iff (routes : P.kept + P.spoiled = P.reach + P.spill) :
     P.kept < P.reach + P.matched ↔ P.spill < P.spoiled + P.matched :=
-  ⟨fun lt => lt_of_add_lt_add_left' (k := P.kept) (calc
+  ⟨fun lt => Naturals.lt_of_add_lt_add_left (k := P.kept) (calc
       P.kept + P.spill = P.spill + P.kept := Nat.add_comm _ _
       _ < P.spill + (P.reach + P.matched) := Nat.add_lt_add_left lt _
       _ = P.reach + P.matched + P.spill := Nat.add_comm _ _
       _ = P.kept + P.spoiled + P.matched := factor_gap P routes
       _ = P.kept + (P.spoiled + P.matched) := Nat.add_assoc _ _ _),
-   fun lt => lt_of_add_lt_add_left' (k := P.spill) (calc
+   fun lt => Naturals.lt_of_add_lt_add_left (k := P.spill) (calc
       P.spill + P.kept = P.kept + P.spill := Nat.add_comm _ _
       _ < P.kept + (P.spoiled + P.matched) := Nat.add_lt_add_left lt _
       _ = P.kept + P.spoiled + P.matched := (Nat.add_assoc _ _ _).symm
@@ -636,7 +624,7 @@ theorem ownTake_le (t : Nat) (x : Nat × Nat) (p : Pair) : ownTake G S t x p ≤
   cases h : isActive G x p with
   | false => exact Nat.zero_le _
   | true =>
-    exact Nat.le_trans (Nat.add_le_add_left (cond_le G.gift _) _)
+    exact Nat.le_trans (Nat.add_le_add_left (ListTests.bif_le G.gift _) _)
       (Nat.le_trans (G.fits p) (Nat.le_of_ble_eq_true h))
 
 theorem settle {l o r d : Nat} (paid : o ≤ l) (within : d ≤ l - o + r) :
@@ -666,8 +654,8 @@ theorem active_of_give {t : Nat} {p : Pair} {c : Member} (pos : 0 < give G S t (
   cases p <;> cases c <;> (try cases ‹Pair›) <;>
     first
     | exact absurd pos (Nat.lt_irrefl 0)
-    | exact cond_pos pos
-    | exact ListTests.and_right (cond_pos pos)
+    | exact ListTests.true_of_cond_pos pos
+    | exact ListTests.and_right (ListTests.true_of_cond_pos pos)
 
 /-- **Only active formations give.** -/
 theorem acting : (flow G S).Acting (web G S)
