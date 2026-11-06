@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [One page](theories/becoming/ONE-PAGE.md) · [The theory](theories/becoming/THE-THEORY-OF-BECOMING.md) · [Chapters](theories/becoming/chapters/README.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-535 registered results: 504 with a recorded Lean receipt (`recorded-checked`), 20 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 1265 curated edges join 461 results to the results they draw on.
+536 registered results: 505 with a recorded Lean receipt (`recorded-checked`), 20 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 1271 curated edges join 462 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -452,6 +452,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [what-the-existence-claim-forbids][] ← <a id="what-the-existence-claim-forbids--conditioning-by-restriction"></a>[conditioning-by-restriction][]
 - [what-the-step-across-standpoints-reaches][] ← <a id="what-the-step-across-standpoints-reaches--continuation-condition-decomposition"></a>[continuation-condition-decomposition][] · <a id="what-the-step-across-standpoints-reaches--presupposition-scopes"></a>[presupposition-scopes][]
 - [what-training-installs][] ← <a id="what-training-installs--counterfactual-is-the-course"></a>[counterfactual-is-the-course][] · <a id="what-training-installs--selection-through-couplings"></a>[selection-through-couplings][] · <a id="what-training-installs--the-gap-for-ones-own-act"></a>[the-gap-for-ones-own-act][] · <a id="what-training-installs--the-rest-outruns-the-renewal"></a>[the-rest-outruns-the-renewal][]
+- [what-would-give-c][] ← <a id="what-would-give-c--widening-as-what-every-positive-weighting-ranks"></a>[widening-as-what-every-positive-weighting-ranks][] · <a id="what-would-give-c--a-narrowing-above-its-widening"></a>[a-narrowing-above-its-widening][] · <a id="what-would-give-c--what-self-concern-alone-ranks"></a>[what-self-concern-alone-ranks][] · <a id="what-would-give-c--premises-met-and-failed"></a>[premises-met-and-failed][] · <a id="what-would-give-c--shared-laws-on-the-grammar"></a>[shared-laws-on-the-grammar][] · <a id="what-would-give-c--constancy-read-at-a-members-class"></a>[constancy-read-at-a-members-class][]
 - [when-complying-when-read-is-best][] ← <a id="when-complying-when-read-is-best--generalization-through-lumping"></a>[generalization-through-lumping][] · <a id="when-complying-when-read-is-best--what-readings-fix-of-the-unread"></a>[what-readings-fix-of-the-unread][]
 - [where-a-formations-acts-return][] ← <a id="where-a-formations-acts-return--what-a-center-can-know-by-a-step"></a>[what-a-center-can-know-by-a-step][]
 - [where-a-level-couples][] ← <a id="where-a-level-couples--how-much-difference-arrives"></a>[how-much-difference-arrives][] · <a id="where-a-level-couples--how-a-carried-difference-grows"></a>[how-a-carried-difference-grows][] · <a id="where-a-level-couples--observation-is-a-route"></a>[observation-is-a-route][] · <a id="where-a-level-couples--loops-within-what-a-law-reads"></a>[loops-within-what-a-law-reads][] · <a id="where-a-level-couples--testing-within-couplings"></a>[testing-within-couplings][] · <a id="where-a-level-couples--counterfactual-is-the-course"></a>[counterfactual-is-the-course][]
@@ -952,6 +953,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [what-the-existence-claim-forbids]: theories/becoming/results/records/what-the-existence-claim-forbids.md
 [what-the-step-across-standpoints-reaches]: theories/becoming/results/records/what-the-step-across-standpoints-reaches.md
 [what-training-installs]: theories/becoming/results/records/what-training-installs.md
+[what-would-give-c]: theories/becoming/results/records/what-would-give-c.md
 [when-complying-when-read-is-best]: theories/becoming/results/records/when-complying-when-read-is-best.md
 [when-the-runs-of-a-process-settle]: theories/becoming/results/records/when-the-runs-of-a-process-settle.md
 [when-to-inquire-and-when-to-respond]: theories/becoming/results/records/when-to-inquire-and-when-to-respond.md
