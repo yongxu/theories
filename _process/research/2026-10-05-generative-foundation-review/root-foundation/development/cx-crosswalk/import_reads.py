@@ -3,7 +3,7 @@
 
 usage: python3 -B import_reads.py [--dry-run]
 
-Reads reads/<item>.3-check.json, the third of each item's three reads, and writes
+Reads reads/<item>.5-compare.json, each item's final file (map, revise, check, repair, compare), and writes
 theories/becoming/results/atlas/entries/correspondences.json and correspondence_groups.json, in the order of ORDER below:
 the earlier folders as MAP.md lists them, then the domains. A group id takes the prefix cxg-, since ids are unique across
 the atlas and a folder or domain may share a name with a dynamic. Stops on a missing item or a repeated id, and writes
@@ -18,7 +18,8 @@ HERE = Path(__file__).resolve().parent
 ROOT = next(p for p in HERE.parents if (p / 'AGENTS.md').is_file())
 READS = HERE / 'reads'
 ENTRIES = ROOT / 'theories/becoming/results/atlas/entries'
-THREE = ['map', 'revise', 'check']
+READ_BY = ['map', 'revise', 'check', 'repair', 'compare']
+STAGE = '5-compare'
 FOLDERS = ('alignment-selection-on-cognition', 'architecture-for-a-living-earth', 'context-as-existence-runtimes',
            'drives-narrative-attractors-and-mind', 'evolving-community-swarms', 'human-solutions-museum',
            'jian-and-wenyan-as-formal-language', 'keep-the-possibility-space-open', 'memories-and-working-style',
@@ -37,17 +38,17 @@ def main(argv=None):
     args = parser.parse_args(argv)
     groups, entries, problems = [], [], []
     for item in ORDER:
-        path = READS / f'{item}.3-check.json'
+        path = READS / f'{item}.{STAGE}.json'
         if not path.is_file():
             problems.append(f'no {path.name}')
             continue
         data = json.loads(path.read_text(encoding='utf-8'))
         group = dict(data['group'])
         group_id = 'cxg-' + group['id']
-        group.update(id=group_id, reads=THREE, source=str(path.relative_to(ROOT)))
+        group.update(id=group_id, reads=READ_BY, source=str(path.relative_to(ROOT)))
         groups.append(group)
-        entries += [{**e, 'group': group_id, 'reads': THREE} for e in data['entries']]
-    stray = sorted(p.name for p in READS.glob('*.3-check.json') if p.name.removesuffix('.3-check.json') not in ORDER)
+        entries += [{**e, 'group': group_id, 'reads': READ_BY} for e in data['entries']]
+    stray = sorted(p.name for p in READS.glob(f'*.{STAGE}.json') if p.name.removesuffix(f'.{STAGE}.json') not in ORDER)
     problems += [f'{name} is not in ORDER' for name in stray]
     seen = set()
     for e in entries:
