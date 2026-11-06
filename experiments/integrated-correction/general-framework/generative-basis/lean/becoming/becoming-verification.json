@@ -1,8 +1,8 @@
 {
   "status": "passed",
-  "utc": "20261106T025121.503688Z",
+  "utc": "20261106T032257.782389Z",
   "toolchain": "leanprover/lean4:v4.29.1",
-  "retained_run": "becoming-checks/20261106T025121.503688Z",
+  "retained_run": "becoming-checks/20261106T032257.782389Z",
   "spine_modules": [
     "Becoming.Grammar",
     "Becoming.GrammarReadings",
@@ -2008,7 +2008,7 @@
     "Becoming.PatternPassing": "0905ca6aa5e3faf2672042fdb7a593b6c9b9f07c10f89feab3a262a9d73799e7",
     "Becoming.MapInstances": "32f9effbcd2cf460b10b5a3a343597f840dcf1166237c2abd14e4f14f15cdd6b",
     "Becoming.MapRegions": "38fbdabaed8ca6396b323d6c23b3f7578e57af33c262e5f81d8421e75b28e0db",
-    "Becoming.GrammarConditionals": "6f3fb7d89978019c8e9a346fc10006f98999673b7298de63f80557ea58ac0860",
+    "Becoming.GrammarConditionals": "d4b3389f371c671e56022f696fcc3d893a82c67e7c3acba4ea53d89029c8e893",
     "Becoming.CommonResponse": "92dd467fb16349ef9497be18c292cefc13b8bc40c7981476c6939fd0ebffe1d3",
     "Becoming.GrammarTransport": "1175e7f2283ce4d6a41ded9031081f98874a9fc234349b86c974f2050c746892",
     "Becoming.ShownOrder": "ca92c7871146fdde11aec4b001c2117a188a58f59eeeabab9f8b6b0764652b43",
@@ -2352,7 +2352,7 @@
     "Becoming.ReaderRebuilding": "25f0d49255972cec8024970a4249dd9228baed14308c90c83dec223bf4378713",
     "Becoming.RuleRebuilding": "10c77b181034e344d1b3cfd1aa2f343335a3b1ca4713df5d17b37838d0449108",
     "Becoming.ResponseLearning": "3f570198fcae3a551c9ca5807d58353cec3d393a00d37a21d89a98c789a725d2",
-    "Becoming": "f2e4a90da1f4ca8b75bc331f035dc777fd8b360bd8a0d8b7d01682d7fbb01f85"
+    "Becoming": "31fbf5db6da278652662cd2cc92ab582f0b162a2d64d45800d39c489cc351915"
   },
   "checker_sha256": {
     "check_becoming.py": "610b2e6612e9c1348fcd50a823aa5948ad886e18440087e26647163ff77e80d3",
@@ -2372,9 +2372,6 @@
     "fresh": false,
     "ran": [
       "version.log",
-      "Becoming.GrammarConditionals.log",
-      "BecomingGrammarConditionalsAxiomAudit.log",
-      "BecomingGrammarConditionalsSignatures.log",
       "Becoming.log",
       "BecomingAxiomAudit.log",
       "BecomingSignatures.log",
@@ -2902,6 +2899,18 @@
       "BecomingMapRegionsSignatures.log": {
         "utc": "20261104T201844.426739Z",
         "retained": "/Users/ren/theories/.claude/worktrees/gt2/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261104T201844.426739Z"
+      },
+      "Becoming.GrammarConditionals.log": {
+        "utc": "20261106T032246.427534Z",
+        "retained": "scratch build, not retained: /private/tmp/claude-501/-Users-ren-theories/d9ccfc76-7843-4b3c-ba5b-c950965917c6/scratchpad/lean-rae5"
+      },
+      "BecomingGrammarConditionalsAxiomAudit.log": {
+        "utc": "20261106T032246.427534Z",
+        "retained": "scratch build, not retained: /private/tmp/claude-501/-Users-ren-theories/d9ccfc76-7843-4b3c-ba5b-c950965917c6/scratchpad/lean-rae5"
+      },
+      "BecomingGrammarConditionalsSignatures.log": {
+        "utc": "20261106T032246.427534Z",
+        "retained": "scratch build, not retained: /private/tmp/claude-501/-Users-ren-theories/d9ccfc76-7843-4b3c-ba5b-c950965917c6/scratchpad/lean-rae5"
       },
       "Becoming.CommonResponse.log": {
         "utc": "20261104T201844.426739Z",
@@ -7192,8 +7201,8 @@
         "retained": "/Users/ren/theories/.claude/worktrees/gt2/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261104T201844.426739Z"
       },
       "Becoming.GrammarConditionals.PreludeOnly.log": {
-        "utc": "20261106T025121.503688Z",
-        "retained": "/Users/ren/tmp/tr71/head/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T025121.503688Z"
+        "utc": "20261106T032246.427534Z",
+        "retained": "scratch build, not retained: /private/tmp/claude-501/-Users-ren-theories/d9ccfc76-7843-4b3c-ba5b-c950965917c6/scratchpad/lean-rae5"
       },
       "Becoming.CommonResponse.PreludeOnly.log": {
         "utc": "20261104T201844.426739Z",
@@ -8699,9 +8708,9 @@
       "Becoming.MapRegions.log": "f0ef181d4d8e33cb2fa72ef9af8dcce89af6878156a1ff7e867e9b3aa68f74a5",
       "BecomingMapRegionsAxiomAudit.log": "7dd1a45ddcafd8eb7b7a293e961bdd32ca327474e405fc84cb96d9439a1df6c5",
       "BecomingMapRegionsSignatures.log": "10670e5060a3fad09ac676f8a746b8cac3db88adc009927306e563d4e02cd663",
-      "Becoming.GrammarConditionals.log": "5c77b47bddce6777f626f75eb8bafd49e5d9a3a0e1dd39204731613830e12b4f",
-      "BecomingGrammarConditionalsAxiomAudit.log": "9cea8c045799a4985270064fbcd359753a1d66bba32f7d09dd343de90dbaaf9d",
-      "BecomingGrammarConditionalsSignatures.log": "438e821e9382deefd51749dc47e9d456b152cf7ae17c29bd84974d7a6fe1ff1e",
+      "Becoming.GrammarConditionals.log": "2452c078dd0cabce8630241bb5b01564693b0e5ed2bd24ce31717034a379521e",
+      "BecomingGrammarConditionalsAxiomAudit.log": "a86a8976a0190a0ec8658f68ed6c567796f219332722ae611605f1c9fe629df3",
+      "BecomingGrammarConditionalsSignatures.log": "5e0a0e6cc29955720bb6b8685e39e7a1c4c513acd944fc4f31ace306f4a10117",
       "Becoming.CommonResponse.log": "411bbb69296d64900021317b499f4be770e79f366d3a2437d38cb22d4aad82bf",
       "BecomingCommonResponseAxiomAudit.log": "4ec811eb20e93f5f457bd0e345d90f187e4d0c2892cf76adc6a93c7f3cd71fcb",
       "BecomingCommonResponseSignatures.log": "180aeb47c350fb3aa807ca9af4340acc9670ff33c0cd6dabccd8b22708d37528",
@@ -9730,11 +9739,11 @@
       "Becoming.ResponseLearning.log": "c928ea9b0f88bb6047ffb3337159917bf760ab34daa8bc7eddf7753d9cd2fd5d",
       "BecomingResponseLearningAxiomAudit.log": "8e219997537a42811587da55aae6b31824e23654c866643ac61d9ff64b6ab265",
       "BecomingResponseLearningSignatures.log": "f47fe77e0f263969a3873acf5a8926898d1b08868df82115b0cc8f0cf86d3d4c",
-      "Becoming.log": "01cce321cea8370628a7f8227e28c08c971ec884797928db5189af2694ecbd5a",
-      "BecomingAxiomAudit.log": "cba83d447c89ed95cdf7e3f30d1a22d7825149f9e63033773a7417e0d0001467",
-      "BecomingSignatures.log": "076e893c412be67421ba00004551b639ae93700db42718e9fd4544552f3f06f1",
-      "EnvironmentAudit.log": "362cb83156d3cda110fa51abd01f01a0053d9943cead2b79ab4c24c34064fa4e",
-      "Controls.log": "d241a0c8d06131441ad652b4e45ce03c1fb8f710104f59be4bcb27e3b40e4ae8",
+      "Becoming.log": "5c4f5ad04c0536de85e53a421376f95b005c618c78dd3e5b741dc859c408507f",
+      "BecomingAxiomAudit.log": "45cc43857c192bcb5b4e6f9588b414af51cc3c97e2e7a72df5ff12bdd4f03844",
+      "BecomingSignatures.log": "10ca4caf080359b97561abf2431f84d2d24a87d08fb684ee24c551b6f54d340e",
+      "EnvironmentAudit.log": "75f4f529cb2494e513bf2b80d10b6ae25b2ec9005267babc51a271816a13fa29",
+      "Controls.log": "d8b153b786a83848c339c5d8754c1f9e6c328b019a75a8ed6a77538f388817d0",
       "Becoming.Grammar.PreludeOnly.log": "a739929b470ced7f4c75bedc67214b532d96f76894bd8e3c329f2456ced4fe9e",
       "Becoming.GrammarReadings.PreludeOnly.log": "19b2ec0a796be08cdb72442909a2341e46734c611d986f39fa08dd6966b6a304",
       "Becoming.GrammarMap.PreludeOnly.log": "9789a049943d122f837dd1236a2f21241710e101d67f07bd363aa91efa4bdd88",
@@ -9779,7 +9788,7 @@
       "Becoming.PatternPassing.PreludeOnly.log": "91b9031d1c609e0935d2832604f9474297c263ffaa3c9e2cf3501574036e8b16",
       "Becoming.MapInstances.PreludeOnly.log": "3954e03a996b842698fac3d5e4c34193f9189abe198dd39a431fbe34ce489e73",
       "Becoming.MapRegions.PreludeOnly.log": "f0ef181d4d8e33cb2fa72ef9af8dcce89af6878156a1ff7e867e9b3aa68f74a5",
-      "Becoming.GrammarConditionals.PreludeOnly.log": "5c77b47bddce6777f626f75eb8bafd49e5d9a3a0e1dd39204731613830e12b4f",
+      "Becoming.GrammarConditionals.PreludeOnly.log": "2452c078dd0cabce8630241bb5b01564693b0e5ed2bd24ce31717034a379521e",
       "Becoming.CommonResponse.PreludeOnly.log": "411bbb69296d64900021317b499f4be770e79f366d3a2437d38cb22d4aad82bf",
       "Becoming.GrammarTransport.PreludeOnly.log": "8a8f524cc40695697adced474891feafad5e08b87fd03dec3d5524c32d0fbcd4",
       "Becoming.ShownOrder.PreludeOnly.log": "8856d253ded6ff8183eec714ee03aa3c9ba6599cc0fac31cb236c0de4e8c8e04",
@@ -10123,21 +10132,18 @@
       "Becoming.ReaderRebuilding.PreludeOnly.log": "9edf9ef1147e5f31a38ef22ec8951a47eebfbab0d3c979162d67b499f3510c23",
       "Becoming.RuleRebuilding.PreludeOnly.log": "e1aaea6d3d3092fa993a21bac95c922d9ac7092c4bbf7f3a9063d631832cc7cc",
       "Becoming.ResponseLearning.PreludeOnly.log": "51648e2dadc8aeff339302371399ce7892a487b9b09005e9c9f70c8d18143fc6",
-      "Becoming.PreludeOnly.log": "e7ba233c30f25a9652582147a9791088005a2a5086b6d4b11a9b3f03e6aae668"
+      "Becoming.PreludeOnly.log": "3c9c05aae9a726bcb4a62030aeb42a9e9dd924ee75ef5affc04f817b8f604ae9"
     },
     "seconds": {
-      "version.log": 0.304,
-      "Becoming.GrammarConditionals.log": 1.688,
-      "BecomingGrammarConditionalsAxiomAudit.log": 0.266,
-      "BecomingGrammarConditionalsSignatures.log": 0.286,
-      "Becoming.log": 1.34,
-      "BecomingAxiomAudit.log": 0.56,
-      "BecomingSignatures.log": 0.556,
-      "EnvironmentAudit.log": 31.614,
-      "Controls.log": 0.58,
-      "Becoming.PreludeOnly.log": 0.315
+      "version.log": 0.316,
+      "Becoming.log": 2.282,
+      "BecomingAxiomAudit.log": 0.589,
+      "BecomingSignatures.log": 0.584,
+      "EnvironmentAudit.log": 31.414,
+      "Controls.log": 0.647,
+      "Becoming.PreludeOnly.log": 1.316
     },
-    "wall_seconds": 36.175
+    "wall_seconds": 35.328
   },
   "superseded_modules": {
     "AcquiredCorrection": {
@@ -11805,7 +11811,7 @@
     "Becoming.PatternPassing": 96,
     "Becoming.MapInstances": 104,
     "Becoming.MapRegions": 116,
-    "Becoming.GrammarConditionals": 133,
+    "Becoming.GrammarConditionals": 146,
     "Becoming.CommonResponse": 135,
     "Becoming.GrammarTransport": 119,
     "Becoming.ShownOrder": 99,
@@ -32138,7 +32144,7 @@
       "module": "Becoming.GrammarConditionals",
       "spine": true,
       "layer": "core",
-      "theorems": 45,
+      "theorems": 48,
       "declarations": [
         {
           "kind": "theorem",
@@ -32162,6 +32168,10 @@
         },
         {
           "kind": "theorem",
+          "name": "Becoming.«有后而两向有常则通»"
+        },
+        {
+          "kind": "theorem",
           "name": "Becoming.«异而两向有常则通»"
         },
         {
@@ -32175,6 +32185,14 @@
         {
           "kind": "theorem",
           "name": "Becoming.«通而不异之例»"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.«步皆分则皆亡»"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.«不有常而异且通之例»"
         },
         {
           "kind": "theorem",
@@ -32331,10 +32349,13 @@
         "Becoming.«两向有常而无前不通之例»": [],
         "Becoming.«不有常而通之例»": [],
         "Becoming.«亡而通则异»": [],
+        "Becoming.«有后而两向有常则通»": [],
         "Becoming.«异而两向有常则通»": [],
         "Becoming.«亡而两向有常则异当且仅当通»": [],
         "Becoming.«异而不通之例»": [],
         "Becoming.«通而不异之例»": [],
+        "Becoming.«步皆分则皆亡»": [],
+        "Becoming.«不有常而异且通之例»": [],
         "Becoming.«皆有后而步皆分则全生成»": [],
         "Becoming.«昼夜全生成»": [],
         "Becoming.«有亡而不全生成之例»": [],
@@ -150349,23 +150370,18 @@
     }
   ],
   "artifact_sha256": {
-    "Becoming.GrammarConditionals.lean": "6f3fb7d89978019c8e9a346fc10006f98999673b7298de63f80557ea58ac0860",
-    "Becoming.GrammarConditionals.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Becoming.GrammarConditionals.lean": "d4b3389f371c671e56022f696fcc3d893a82c67e7c3acba4ea53d89029c8e893",
     "Becoming.PreludeOnly.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "Becoming.lean": "f2e4a90da1f4ca8b75bc331f035dc777fd8b360bd8a0d8b7d01682d7fbb01f85",
+    "Becoming.lean": "31fbf5db6da278652662cd2cc92ab582f0b162a2d64d45800d39c489cc351915",
     "Becoming.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "BecomingAxiomAudit.lean": "2a7bf199bf7a79a47a4f3057083c0b43f6c30c82bbab52299d38d436c6077bcb",
     "BecomingAxiomAudit.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "BecomingGrammarConditionalsAxiomAudit.lean": "d752e9b56452f75d1044244fdb712be7dc629880d587f149b80c8e5d4ced3810",
-    "BecomingGrammarConditionalsAxiomAudit.log": "0b60e5e0686197059c0ca1d2aa27f0ee33e91feb4d0e67fa4f528243ac657a20",
-    "BecomingGrammarConditionalsSignatures.lean": "decf9daae03c7d9e73aaf6c7bc12882aa488193848513d1eb76c2bf38653b7e1",
-    "BecomingGrammarConditionalsSignatures.log": "14b5c89157c0bbf84122805f13c83e16d1cedbb44ed6227cf9f0ce6d256840dd",
     "BecomingSignatures.lean": "2a7bf199bf7a79a47a4f3057083c0b43f6c30c82bbab52299d38d436c6077bcb",
     "BecomingSignatures.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "Controls.lean": "b6d4d1772f4c923833bc713f3b9f170a10ef362d699f4b854401adb21fe22f57",
     "Controls.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "EnvironmentAudit.lean": "b757ef20e45e3a7f938d60048814df744da94fd21eb167856918a77589fc9100",
-    "EnvironmentAudit.log": "3aa7949980624f013f514041eecad9c5ff9105c6b6c9cce7b9b859b571089cd8",
+    "EnvironmentAudit.log": "a393f65219b08c4b2424f3643631b8f93855f061a508e1875cc47e868dd71aec",
     "version.log": "3185b32e24f5aea32feec5ebb137ef7b0b6d7b33707fb4f254924fe41b5ded8b"
   }
 }

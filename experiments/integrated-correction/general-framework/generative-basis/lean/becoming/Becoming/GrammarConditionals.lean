@@ -11,7 +11,8 @@ the rest:
 - the new laws: 相推 gives 全生成 (`«皆有后而步皆分则全生成»`); bounded room on a line
   (`«线不返则短于所列»`, `«不返而有限则非不穷»`); what the core puts together never ends alike
   (`«核同则同不穷»`); and dependence (`«依»`, `«所依无则依者无»`, `«依之传»`);
-- the definitional lemmas a family needs in order to be stated exactly;
+- the definitional lemmas a family needs in order to be stated exactly, with what ending and altering give
+  passing through (`«亡而通则异»`, `«有后而两向有常则通»`, `«亡而两向有常则异当且仅当通»`);
 - a witness (`…之例`) for every family whose net where Z fails the other modules do not give.
 
 The general laws below it are cited, not restated: `«生于逆核下不变»` (Grammar), with `«生于位核下不变»` as
@@ -101,28 +102,38 @@ theorem «不有常而通之例» :
 
 /-- **What ends passes through only by altering (亡而通则异).** What ends under `E` and passes through
 under `F` alters: passing through gives a successor under `F`, and for what ends under `E` that successor
-is told apart (`«亡者异当且仅当有后»`). One step from the definition of `«通»`. Read for 孔疏's
-「所以須變者，變則開通得久長」 on 「易窮則變」 (XCX-02-008) [AI reading]. What does not end under `E` can
-pass through without altering (`«通而不异之例»`). -/
+is told apart (`«亡者异当且仅当有后»`). One step from the definition of `«通»`. Read for the 須 of 孔疏's
+「則須隨時改變」 on 「易窮則變」 (XCX-02-008) [AI reading]. What does not end under `E` can pass through
+without altering (`«通而不异之例»`). -/
 theorem «亡而通则异» {R E F : «际» α} {x : α} (ends : «亡» R E x) (h : «通» R F x) :
     ∃ y, «异» R F E x y :=
   («亡者异当且仅当有后» ends).mpr (h.1 x (.inl rfl))
 
-/-- **What alters passes through where its class is constant both ways (异而两向有常则通).** Altering
-gives a successor under `F`, so under `F` constant under 缘's converse a predecessor, and then
-`«两向有常有前则通»` applies. The parting under `E` is not used: what carries it is the continuation under
-`F`, and constancy is a premise the text does not state. Without it, what alters can fail to pass through
-(`«异而不通之例»`). -/
+/-- **What has a successor passes through where its class is constant both ways (有后而两向有常则通).** A
+successor under `F`, with `F` constant under 缘's converse, gives a predecessor under `F`, and then
+`«两向有常有前则通»` applies. -/
+theorem «有后而两向有常则通» {R F : «际» α} {x : α} (hF : «类» F) (hc : «有常» R F)
+    (hc' : «有常» («逆» R) F) (h : «有后» R F x) : «通» R F x :=
+  match h with
+  | ⟨y, hr, fy⟩ =>
+    match «有常则续不尽» hc' ⟨y, hr, hF.symm fy⟩ with
+    | ⟨w, hw, fw⟩ => «两向有常有前则通» hF hc hc' ⟨w, hw, hF.symm fw⟩
+
+/-- **What alters passes through where its class is constant both ways (异而两向有常则通).** The case of
+`«有后而两向有常则通»` for a successor that alters: the parting under `E` is not used, and what carries it
+is the continuation under `F` and that class's constancy. The constancy is sufficient
+(`«不有常而异且通之例»`), a premise the text does not state, and without it what alters can fail to pass
+through (`«异而不通之例»`). -/
 theorem «异而两向有常则通» {R E F : «际» α} {x y : α} (hF : «类» F) (hc : «有常» R F)
     (hc' : «有常» («逆» R) F) (h : «异» R F E x y) : «通» R F x :=
-  match «有常则续不尽» hc' ⟨y, h.1.1, hF.symm h.1.2⟩ with
-  | ⟨w, hw, fw⟩ => «两向有常有前则通» hF hc hc' ⟨w, hw, hF.symm fw⟩
+  «有后而两向有常则通» hF hc hc' ⟨y, h.1⟩
 
 /-- **For what ends, altering and passing through are one where the class is constant both ways
 (亡而两向有常则异当且仅当通).** The two laws above joined: what ends under `E`, under `F` constant both
-ways, alters exactly where it passes through. So the order of 「易窮則變，變則通」 stands in the grammar
-under that premise [AI reading], the first step also needing a successor under `F`, since what ends can
-cease (`«亡而息之例»`). -/
+ways, alters exactly where it passes through. So the two steps of 「易窮則變，變則通」 hold in the grammar as
+implications under that premise [AI reading], the first also needing a successor under `F`, since what ends
+can cease (`«亡而息之例»`). The grammar gives them no direction and no order in time: under these premises
+having a successor, altering, passing through and never ending going are one. -/
 theorem «亡而两向有常则异当且仅当通» {R E F : «际» α} {x : α} (hF : «类» F) (hc : «有常» R F)
     (hc' : «有常» («逆» R) F) (ends : «亡» R E x) : (∃ y, «异» R F E x y) ↔ «通» R F x :=
   ⟨fun ⟨_, h⟩ => «异而两向有常则通» hF hc hc' h, «亡而通则异» ends⟩
@@ -146,6 +157,52 @@ theorem «通而不异之例» :
   ⟨fun _ _ => True,
    ⟨fun _ _ => ⟨(), trivial, trivial⟩, fun _ _ => ⟨(), trivial, trivial⟩⟩,
    fun ⟨_, _, n⟩ => n trivial⟩
+
+/-- **Where every step is parted, everything has ended (步皆分则皆亡).** Where `E` parts every step of 缘,
+nothing is continued under `E`, so every occurrence ends under it. On 變 read as an alternation at every step
+(「一闔一闢」, XCS-11-009) the laws above hold at every place, and 窮 selects no place [AI reading]. -/
+theorem «步皆分则皆亡» {R E : «际» α} (leaves : ∀ a b, R a b → ¬ E a b) (x : α) : «亡» R E x :=
+  fun ⟨y, hr, he⟩ => leaves x y hr he
+
+/-- **Ending, altering and passing through at one occurrence, with no constancy (不有常而异且通之例).** The
+net of `«不有常而通之例»`, at one occurrence: `some false` ends under identity, alters into `some true` and
+passes through, under a class that is not constant. So `«异而两向有常则通»`'s constancy is sufficient, not
+necessary. -/
+theorem «不有常而异且通之例» :
+    ∃ (R : «际» (Option Bool)), ¬ «有常» R «一» ∧ «亡» R «静» (some false) ∧
+      «异» R «一» «静» (some false) (some true) ∧ «通» R «一» (some false) := by
+  let R : «际» (Option Bool) := fun a b => ∃ x, a = some x ∧ b = some (!x)
+  have fwd : ∀ c : Bool, R (some c) (some (!c)) := fun c => ⟨c, rfl, rfl⟩
+  have bwd : ∀ c : Bool, «逆» R (some c) (some (!c)) := fun c =>
+    ⟨!c, rfl, Eq.subst (motive := fun b => some c = some b) (Bool.not_not c).symm rfl⟩
+  have onPair : ∀ {S : «际» (Option Bool)}, (∀ a b, S a b → ∃ c, b = some c) →
+      ∀ {a b : Option Bool}, «相续» S «一» a b → ∃ c, b = some c := by
+    intro S hS a b l
+    induction l with
+    | one c' => exact hS _ _ c'.1
+    | more _ _ ih => exact ih
+  have rTo : ∀ a b, R a b → ∃ c, b = some c := fun _ _ ⟨x, _, hb⟩ => ⟨!x, hb⟩
+  have rFrom : ∀ a b, «逆» R a b → ∃ c, b = some c := fun _ _ ⟨x, ha, _⟩ => ⟨x, ha⟩
+  refine ⟨R, fun hc => ?_, fun ⟨y, ⟨x, hx, hy⟩, e⟩ => ?_, ⟨⟨fwd false, trivial⟩, fun e => ?_⟩, ?_, ?_⟩
+  · match («有常之逐点» R «一»).mp hc (some false) none trivial (some true) (fwd false) with
+    | ⟨_, ⟨_, h, _⟩, _⟩ => exact nomatch h
+  · have hx' : x = false := (Option.some.inj hx).symm
+    have e' : some false = some (!x) := e.trans hy
+    exact Bool.noConfusion ((Option.some.inj e').trans (congrArg (fun b => !b) hx'))
+  · exact Bool.noConfusion (Option.some.inj e)
+  · intro y reach
+    match reach with
+    | .inl e => exact ⟨some true, Eq.subst (motive := fun w => R w (some true)) e (fwd false), trivial⟩
+    | .inr l => match onPair rTo l with
+      | ⟨c, e⟩ =>
+        exact ⟨some (!c), Eq.subst (motive := fun w => R w (some (!c))) e.symm (fwd c), trivial⟩
+  · intro y reach
+    match reach with
+    | .inl e =>
+      exact ⟨some true, Eq.subst (motive := fun w => «逆» R w (some true)) e (bwd false), trivial⟩
+    | .inr l => match onPair rFrom l with
+      | ⟨c, e⟩ =>
+        exact ⟨some (!c), Eq.subst (motive := fun w => «逆» R w (some (!c))) e.symm (bwd c), trivial⟩
 
 /-! ## Generation where every step is parted (design G02) -/
 
