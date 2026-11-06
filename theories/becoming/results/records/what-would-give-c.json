@@ -1,0 +1,574 @@
+{
+  "schema_version": 2,
+  "id": "what-would-give-c",
+  "title": {
+    "en": "What would give C's order on a listing",
+    "zh": "什么会给出列举上 C 的次序"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F07",
+  "reviewed_at_utc": "2026-11-06T13:40:22+00:00",
+  "statement": {
+    "en": "Beside what reads no order and holds, a premise giving C implies it. On a listing, widening is what no chooser, over every valuation, does worse from and some better from; where every item is someone's own, what every self-concerned profile not ranking it below ranks by Pareto. Each reads an order.",
+    "zh": "在不读次序且成立者旁，给出 C 的前提蕴含 C。在列举上，扩大是遍及每个赋值时无选择者更差且有选择者更好之处；每项都为某立场所有时，也是每个不把扩大排在下面的自我关切剖面以帕累托关系所排者。每条路仍读次序。"
+  },
+  "laws": [
+    {
+      "en": "Call a premise on orders strictly weaker than C at a datum where C implies it and some order meets it and fails C. Let help read no order and hold at a datum. A premise that gives C there with that help implies C there, so no order meets it and fails C, and such a premise that C also implies is C there. So no premise is both strictly weaker than C at a datum and, with such help holding there, enough for C there. It can, where it reads the datum, give C at one datum and be strictly weaker at another; it can be weaker in scope; or it can fail to give C with that help.",
+      "zh": "称一前提于某数据严格弱于 C，若 C 蕴含它且有次序满足它而不满足 C。设助力不读次序且于某数据成立。凭此助力于彼给出 C 的前提于彼蕴含 C，故无次序满足它而不满足 C；C 亦蕴含的这样的前提于彼即 C。所以没有前提既于某数据严格弱于 C，又在这样的助力于彼成立时足以于彼给出 C。它若读数据，可在一数据给出 C 而在另一数据严格更弱；也可在范围上更弱；或不凭此助力给出 C。",
+      "declarations": [
+        "Becoming.ReadsNoOrder.implies_comparison",
+        "Becoming.ReadsNoOrder.not_strictly_weaker",
+        "Becoming.ReadsNoOrder.iff_of_weaker"
+      ]
+    },
+    {
+      "en": "On a frame reading a course by what it admits on a listing, with the process free and every claim counted as living, so that scope is already total, an extension is a widening and an order meets C exactly when it is increasing in admission. There, with every listed item marked, an order is self-concerned exactly when it meets C, through the law above: one premise in two forms.",
+      "zh": "在按列举上之接纳读进程、过程自由、每项皆算作有生（故范围已是全部）的框上，扩展即扩大，次序满足 C 恰当它随接纳递增。在那里，每个所列项都被标记时，次序自我关切恰当它满足 C，经由上一律：一个前提的两种形式。",
+      "declarations": [
+        "Becoming.Weighting.listingFrame",
+        "Becoming.Weighting.extension_listingFrame_iff",
+        "Becoming.Weighting.comparison_listingFrame_iff",
+        "Becoming.Weighting.increasingInOwn_iff_comparison"
+      ]
+    },
+    {
+      "en": "A chooser is a pair of values, none asserted to exist: a valuation of the listed items and a value of refusing, both fixed across courses; it takes one item, so it reaches the highest of refusal and what a course admits. A course including another is never lower for it, near-definitionally; added items it would each leave change nothing. One course widens another exactly when no chooser does worse by its own valuation and some does better by its own, a merely possible chooser counting, and an order is increasing in admission exactly when it ranks above whatever that holds of. On a mixed pair each course is better for some chooser.",
+      "zh": "选择者是一对值，不断言其存在：对所列项的赋值与拒绝之值，都不随进程而变；它取一项，所及为拒绝之值与进程所接纳者之最高。包含另一条的进程对它不更低（近乎定义）；它都不取的新增项不改变什么。一条进程扩大另一条，恰当无选择者按其赋值更差且有选择者更好（仅可能的选择者亦算）；次序随接纳递增，恰当它把此所成者排高。混合的一对中，每条都对某选择者更好。",
+      "declarations": [
+        "Becoming.Weighting.reach",
+        "Becoming.Weighting.reach_le_of_includes",
+        "Becoming.Weighting.reach_eq_of_refused",
+        "Becoming.Weighting.outside",
+        "Becoming.Weighting.NoneWorseSomeBetter",
+        "Becoming.Weighting.widens_iff_noneWorseSomeBetter",
+        "Becoming.Weighting.increasing_iff_ranks_noneWorseSomeBetter",
+        "Becoming.Weighting.choosers_mixed"
+      ]
+    },
+    {
+      "en": "What a range of choosers has to hold is exact: for every widening some chooser in it does better, exactly when, for each listed item, some chooser in it puts that item above every other listed item and above refusal.",
+      "zh": "选择者的范围须含什么是确切的：对每个扩大，其中都有选择者得益，恰当对每个所列项，其中有选择者把该项置于其他每个所列项与拒绝之上。",
+      "declarations": [
+        "Becoming.Weighting.gains_every_widening_iff"
+      ]
+    },
+    {
+      "en": "The route stops at witnesses. Imposed, an item a net weighting counts below zero can put a widening below what it widens, while a chooser who leaves it is unchanged. Where the chooser's order is not the order reading the result, the chooser can gain and what it takes stand lower in that order. Where a choice bears on what the other gets, widening the one menu both choose from can lower what each gets by the game's payoffs at the only mutual best response, the pure Nash equilibrium of one play; where no choice bears, it cannot.",
+      "zh": "此路止于若干见证。若为强加，净加权计为负的项可把扩大排在所扩大者之下，能舍之的选择者不变。选择者的次序不是读结果的次序时，选择者可得，而其所取在该次序中更低。选择影响对方所得时，扩大二者共选的菜单，可使各自按博弈的收益，在唯一相互最优反应（一次博弈的纯策略纳什均衡）处所得下降；选择互不影响时则不会。",
+      "declarations": [
+        "Becoming.Weighting.Refusing.widens",
+        "Becoming.Weighting.Refusing.imposed_below",
+        "Becoming.Weighting.Refusing.refused_unchanged",
+        "Becoming.Weighting.AnotherReads.widens",
+        "Becoming.Weighting.AnotherReads.takes_narrow",
+        "Becoming.Weighting.AnotherReads.takes_wide",
+        "Becoming.Weighting.AnotherReads.chooser_gains",
+        "Becoming.Weighting.AnotherReads.reading_falls",
+        "Becoming.Weighting.MutualBest",
+        "Becoming.Weighting.Restraint.widens",
+        "Becoming.Weighting.Restraint.narrow_best",
+        "Becoming.Weighting.Restraint.wide_best_iff",
+        "Becoming.Weighting.Restraint.each_falls",
+        "Becoming.Weighting.not_lowered_of_no_bearing"
+      ]
+    },
+    {
+      "en": "All three relate their courses by the same widening, so on the frame above, every claim counted, every order meeting C ranks the wider above the narrower while the net weighting falls, what the chooser takes stands lower in the reading order, or what each gets falls. Whether a menu of acts is a course of what can form is not shown. The last witness is a theorem on that frame; its bearing on courses of what can form, and so on C, stands until the full account is shown to remove it, by showing that no wider course has its shape: one course widening another while, at the pure Nash equilibrium of one play among those choosing within it, what each gets falls. If one has it, it stands against C there too.",
+      "zh": "三者都以同一扩大关联其进程，所以在上述框上（每项皆计），满足 C 的每个次序都把更宽者排在更窄者之上，而净加权下降、选择者所取在读结果的次序中更低，或各自所得下降。动作的菜单是否是可成者的进程，未表明。最后一个见证在该框上是定理；它对可成者之进程、从而对 C 的关涉，成立到表明全部理论能消除它为止，即表明无更宽的进程有此形：一条进程扩大另一条，而在其中选择者一次博弈的纯策略纳什均衡处，各自所得下降。若有，它在那里也反对 C。",
+      "declarations": [
+        "Becoming.Weighting.Refusing.comparison_ranks_wide",
+        "Becoming.Weighting.AnotherReads.comparison_ranks_wide",
+        "Becoming.Weighting.Restraint.comparison_ranks_wide"
+      ]
+    },
+    {
+      "en": "Over profiles in which each standpoint's order is increasing in its own continuation and ranks no widening below what it widens, one course is ranked above another by every profile's Pareto relation exactly when it widens the other and adds to some standpoint's own; so every such relation is increasing in admission exactly when every listed item is someone's own, and a standpoint whose marking leaves a listed item need not have an order that is.",
+      "zh": "在每个立场的次序都在其自身延续上递增、且不把扩大排在所扩大者之下的剖面上，一条进程被每个剖面的帕累托关系排在另一条之上，恰当它扩大另一条且增加某立场之所有；所以每个这样的关系随接纳递增，恰当每个所列项都为某立场所有，而标记漏掉某所列项的立场，其次序不必如此。",
+      "declarations": [
+        "Becoming.Weighting.ParetoAmong",
+        "Becoming.Weighting.NotBelow",
+        "Becoming.Weighting.every_pareto_iff",
+        "Becoming.Weighting.pareto_increasing_iff_covers",
+        "Becoming.Weighting.exists_selfConcerned_notBelow_not_increasing",
+        "Becoming.Weighting.EachItsOwn.covers",
+        "Becoming.Weighting.EachItsOwn.not_total",
+        "Becoming.Weighting.EachItsOwn.not_increasing"
+      ]
+    },
+    {
+      "en": "An order ranking below every widening that adds nothing to its own is self-concerned, and the Pareto relation then does not rank such a widening, whatever the others' orders. On three listed items no positive weighting's order is exactly widening: it would tie two mixed pairs and weigh the third item nothing.",
+      "zh": "把不增其所有的每个扩大都排在下面的次序也是自我关切的；于是无论他者次序如何，帕累托关系都不排这样的扩大。在三个所列项上，没有哪个正加权的次序恰是扩大：它会使两个混合对相等，第三项权重为零。",
+      "declarations": [
+        "Becoming.Weighting.RanksNotOwnBelow",
+        "Becoming.Weighting.ranksNotOwnBelow_selfConcerned",
+        "Becoming.Weighting.notOwnBelow_stops",
+        "Becoming.Weighting.widening_is_no_weighting"
+      ]
+    },
+    {
+      "en": "Given a widening by one item, a transitive order is increasing in admission exactly when every such widening gets one verdict and the given one is ranked. An order ranking the course of lower total weight above, on positive weights, meets all of it but the given comparison; an order counting one item and not another, one ranking only something above nothing, one ranking only widenings by more than one item, and one not transitive each show a part doing its own work.",
+      "zh": "给定一项之扩大，传递的次序随接纳递增，恰当每个这样的扩大都得同一判定且所给者被排高。正权下把总权更低者排上的次序满足除所给比较外的一切；只计一项不计另一项的次序、只把有排在无之上的次序、只排多于一项之扩大的次序、不传递的次序，各示一部分自有其作用。",
+      "declarations": [
+        "Becoming.Weighting.StepAlike",
+        "Becoming.Weighting.Increasing.stepAlike",
+        "Becoming.Weighting.increasing_iff_one_step",
+        "Becoming.Weighting.ranksLighter",
+        "Becoming.Weighting.ranksLighter_transitive",
+        "Becoming.Weighting.ranksLighter_alike",
+        "Becoming.Weighting.ranksLighter_reverses",
+        "Becoming.Weighting.ZeroWeight.not_alike",
+        "Becoming.Weighting.ZeroWeight.not_increasing",
+        "Becoming.Weighting.AboveNothing.transitive",
+        "Becoming.Weighting.AboveNothing.not_alike",
+        "Becoming.Weighting.ranksOnlyMany",
+        "Becoming.Weighting.ranksOnlyMany_transitive",
+        "Becoming.Weighting.ranksOnlyMany_alike",
+        "Becoming.Weighting.OnlyMany.ranked",
+        "Becoming.Weighting.OnlyMany.not_increasing",
+        "Becoming.Weighting.byOne_not_increasing"
+      ]
+    },
+    {
+      "en": "Where everything downstream of a center is alike to it under a class and a marking holds what its line reaches, on a listing of what lies downstream an order increasing in its own continuation is increasing in admission. Constancy of the class up to the net's end at the center, with the class holding its effects, gives that the class holds it, and so the same law.",
+      "zh": "某中心下游一切在某类下都与之同类、标记含其线所及时，在下游的列举上，于自身延续递增的次序随接纳递增。其类至网之终有常且类含其所缘，给出类含下游，从而同一规律。",
+      "declarations": [
+        "Becoming.Weighting.increasing_on_downstream",
+        "Becoming.Weighting.increasing_on_downstream_of_regularity"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. A finite listing of items; two-valued admission; natural-number values and weights; one refusal value for all items; an order a relation on courses. Equality of items decided for the range's law, the Pareto relation's covering law and the one-item law.",
+      "zh": "不加公理。项的有限列举；二值接纳；自然数之值与权；所有项共一拒绝之值；次序是进程上的关系。范围之律、帕累托关系的覆盖之律与一项之律中，项之相等可判定。"
+    },
+    {
+      "en": "Choosers: what is left costing nothing, which the maximum builds in; a chooser who takes one item; its values, its refusal and its being there at all fixed across courses; \"later\" a reading, with no time in what it reaches and no chooser asserted to exist; each choosing alone, by its own order; the range over every valuation and every value of refusing, or the range stated in the range's law.",
+      "zh": "选择者：所舍者无代价（由取最大所内含）；选择者取一项；其赋值、拒绝之值与其存在都不随进程而变；“后来”是解读，所及中无时间，亦不断言有选择者；各自独选，依其自身次序；范围遍及每个赋值与拒绝之值，或范围之律所述的范围。"
+    },
+    {
+      "en": "Standpoints: each order increasing in its own continuation and ranking no widening below; the Pareto relation counting a silent standpoint as no objection. A pure Nash equilibrium read as a mutual best response from one menu, in one play with no binding agreement, not as what actual choosers do. The listing's frame reads a course by what it admits, every claim counted, the process free.",
+      "zh": "立场：每个次序在其自身延续上递增且不把扩大排在下面；帕累托关系把沉默的立场算作无异议。纯策略纳什均衡读作同一菜单上的相互最优反应，限一次博弈、无约束性协议，而非实际选择者所为。列举之框按接纳读进程，每项皆计，过程自由。"
+    },
+    {
+      "en": "What lies downstream: a class on the root; everything downstream of the center alike to it, or constancy up to the net's end at its class with the class holding its effects; a marking holding what its line reaches; a listing of what lies downstream.",
+      "zh": "下游：根上的一个类；中心下游一切与之同类，或其类至网之终有常且类含其所缘；标记含其线所及；下游的列举。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "A reason for C: calling better what no chooser does worse from and some does better from, self-concern at each standpoint, and one verdict on every one-item widening are each a premise reading an order.",
+      "zh": "C 的理由：称无选择者更差且有选择者更好者为更好、各立场的自我关切、每个一项之扩大同一判定，都是读次序的前提。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "That C derives from the continuation condition: nothing here does. What reads no order and holds gives C only if every order meets C (the first law, at a premise every order meets), which an extension rules out.",
+      "zh": "C 出于延续条件：此处没有。不读次序且成立者给出 C，仅当每个次序都满足 C（第一条规律，取每个次序都满足的前提），而扩展排除此点。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "That no valuing enters at all: some chooser doing better comes from the range, and a chooser who would leave everything added gains nothing.",
+      "zh": "全无看重：有选择者更好出于范围，而都不取新增者的选择者无所得。",
+      "kind": "scope",
+      "witness": "Becoming.Weighting.reach_eq_of_refused"
+    },
+    {
+      "en": "That more options are better: among several choosers a wider menu can lower what each gets at the pure Nash equilibrium of one play. Whether a wider course of what can form can do the same is open; if one can, the witness stands against C there too, with the shape of T8's stated refuter.",
+      "zh": "选项越多越好：在多个选择者之间，更宽的菜单可使各自在一次博弈的纯策略纳什均衡处所得下降。可成者的更宽进程能否如此尚开放；若能，此见证在那里也反对 C，并有 T8 所述反驳之形。",
+      "kind": "non-implication",
+      "witness": "Becoming.Weighting.Restraint.each_falls"
+    },
+    {
+      "en": "What is no one's own: not every such profile ranks a widening adding only that. With standpoints read as present ones a future beyond every present line is such an item, and so read the route does not do the step of invariance's work; which formations hold standpoints is open.",
+      "zh": "不属任何立场者：并非每个这样的剖面都排只增此者的扩大。立场读作现存者时，一切现存之线以外的未来即如此，这样读此路不代替不变性之一步；哪些形成持立场尚开放。",
+      "kind": "scope"
+    },
+    {
+      "en": "C on a frame of what can form, past the listing's frame: the routes end in an order on a listing, which gives C between level paths only with admission decided and both paths' admissions listed, one way, and no route here gives C on all of a web's level paths.",
+      "zh": "可成者之框上的 C（列举之框以外）：诸路止于列举上的次序，它只在接纳已判定、两层路径之接纳皆已列时单向给出层路径间的 C，且此处没有哪条路给出一张网所有层路径上的 C。",
+      "kind": "scope"
+    },
+    {
+      "en": "A chooser who learns across a deferred irreversible step: values are fixed and there is no time in what it reaches, so quasi-option value is not captured; nor refusal at a price.",
+      "zh": "跨越被推迟之不可逆一步而学习的选择者：此处赋值固定、所及中无时间，所以未捕捉准选择价值；也未涉有代价的拒绝。",
+      "kind": "scope"
+    },
+    {
+      "en": "That a premise weaker at other data is any easier to warrant: not a question the Lean can answer.",
+      "zh": "在别的数据上更弱的前提更易获得根据：这不是 Lean 能回答的问题。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoutesToC.lean",
+      "detail": {
+        "en": "Against reading C as more options are better, and as what C does on the listing's frame: on two listed acts the wider menu widens the narrower, every order meeting C on that frame ranks it above, and at the only mutual best response of each what each gets falls from 2 to 1 (Weighting.Restraint.widens, Weighting.Restraint.comparison_ranks_wide, Weighting.Restraint.narrow_best, Weighting.Restraint.wide_best_iff, Weighting.Restraint.each_falls). On that frame it is a theorem; its bearing on courses of what can form stands until the full account is shown to remove it.",
+        "zh": "反对把 C 读作选项越多越好，也是 C 在列举之框上之所为：两个所列动作上，更宽的菜单扩大更窄的，该框上满足 C 的每个次序都把它排高，而各自唯一相互最优反应处各自所得由 2 降到 1（Weighting.Restraint.widens、Weighting.Restraint.comparison_ranks_wide、Weighting.Restraint.narrow_best、Weighting.Restraint.wide_best_iff、Weighting.Restraint.each_falls）。在该框上它是定理；它对可成者之进程的关涉成立到表明全部理论能消除它为止。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoutesToC.lean",
+      "detail": {
+        "en": "Against the chooser route where admission is imposed: one item a net weighting counts below zero puts the widening below what it widens, while every order meeting C on the listing's frame ranks it above (Weighting.Refusing.imposed_below, Weighting.Refusing.comparison_ranks_wide). Nothing in a course's admitting a formation makes the formation chosen.",
+        "zh": "强加时反对选择者之路：净加权计为负的一项把扩大排在所扩大者之下，而列举之框上满足 C 的每个次序都把它排高（Weighting.Refusing.imposed_below、Weighting.Refusing.comparison_ranks_wide）。进程接纳某形成，并不使该形成成为所选。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoutesToC.lean",
+      "detail": {
+        "en": "Against the chooser route where another's order reads the result: the wider course lets the chooser do better by its order and what it takes stands lower in the other, while every order meeting C on the listing's frame ranks it above (Weighting.AnotherReads.chooser_gains, Weighting.AnotherReads.reading_falls, Weighting.AnotherReads.comparison_ranks_wide).",
+        "zh": "他者次序读结果时反对选择者之路：更宽的进程使选择者按其次序更好，其所取在另一次序中更低，而列举之框上满足 C 的每个次序都把它排高（Weighting.AnotherReads.chooser_gains、Weighting.AnotherReads.reading_falls、Weighting.AnotherReads.comparison_ranks_wide）。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoutesToC.lean",
+      "detail": {
+        "en": "Against one verdict on every one-item widening, with transitivity, giving an order increasing in admission: the order ranking the course of lower total weight above has both and reverses every widening (Weighting.ranksLighter_transitive, Weighting.ranksLighter_alike, Weighting.ranksLighter_reverses).",
+        "zh": "反对每个一项之扩大同一判定加传递给出随接纳递增：把总权更低者排上的次序两者皆有，却逆转每个扩大（Weighting.ranksLighter_transitive、Weighting.ranksLighter_alike、Weighting.ranksLighter_reverses）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "conditional-not-universal",
+    "decidability",
+    "no-definition-by-verdict",
+    "names-provisional",
+    "formal-not-empirical"
+  ],
+  "validation_scope": {
+    "en": "Pure core, axiom reports empty; a leaf. Written by an AI; AI readers, in rounds, against the Lean, findings taken or answered (READER in the study folder); no human audit. Attributions checked by an AI reader: Strotz read in the source; Foster in his working papers (OPHI WP35, WP34's abstract); Nehring and Puppe in selected pages of working paper 97-7; Kreps, Luce, Gul and Pesendorfer 2001, Schelling, Arrow and Fisher, Braess through abstracts, excerpts or others' accounts; G. Dworkin 1982 by its listing only. Every law is short; none is new as mathematics.",
+    "zh": "纯核心，公理报告为空；叶模块。AI 所写；AI 读者分轮对照 Lean，发现已处理或作答（见目录 READER）；无人类审计。文献由 AI 读者核对：Strotz 读原文；Foster 读其工作论文（OPHI WP35、WP34 摘要）；Nehring 与 Puppe 读工作论文 97-7 的选页；Kreps、Luce、Gul 与 Pesendorfer 2001、Schelling、Arrow 与 Fisher、Braess 经摘要、摘录或他人转述；G. Dworkin 1982 仅据书目。各律皆短，无新数学。"
+  },
+  "next_delta": {
+    "en": "Several choosers compared by C on courses, joining Optimum.MutualBest, which has them on a flow, to the menu witness, to say whether it bears on C and on the drains; a chooser who learns, joined to holding for a reading; refusal at a price; people who have read it saying whether any of these premises is easier to hold than C.",
+    "zh": "以 C 在进程上比较多个选择者，把流上已有的 Optimum.MutualBest 与菜单之见证相连，以判后者是否关乎 C 与汲取；会学习的选择者，与为一读而持相连；有代价的拒绝；读过的人说这些前提是否比 C 更易持守。"
+  },
+  "correspondence": {
+    "en": "Choosers: Foster's effective freedom (1993; 2011) with every preference admitted, set inclusion, on a list, with refusal an item in every menu; what a chooser reaches is one state's term in Kreps's (1979) representation of a preference for flexibility, which aggregates what this intersects; the range's law is Nehring and Puppe's (1999) condition for an element to add strictly, at every listed item. Another's order: the shape of Strotz's inconsistency (1955-56), a discount shifting with the date rather than tastes changing unexpectedly, and of temptation without self-control (Gul and Pesendorfer 2001); the witness has no time and does not say the two orders are one person's. Several choosers: the prisoner's dilemma read as a menu, the shape also of Braess's paradox (1968), and against the thesis G. Dworkin (1982) examines; that a chooser can gain by having fewer options is older than Schelling: Strotz has it against one's later self, by precluding future options; Schelling (1960) has it toward another, by binding oneself in a threat or a promise. Standpoints: the Pareto relation over self-concerned orders. One item at a time: an order's verdict made uniform; that an order need not tell small steps apart is the idea of Luce's semiorders (1956); the order here is one on at most three listed items and not from four (by enumeration, not in Lean), a mixed pair staying unranked however large its difference. Reading (the AI's): beside help that reads no order, \"weaker\" has other data or scope open; the range of valuations does the work positivity does.",
+    "zh": "选择者：Foster 的有效自由（1993；2011）在容纳一切偏好时的情形，即集合包含，在列表上，以拒绝为每个菜单中的一项；所及是 Kreps（1979）灵活性偏好表示中一个状态的项，Kreps 聚合这些项，此处取其交；范围之律是 Nehring 与 Puppe（1999）所述元素严格增值的条件，用于每个所列项。他者的次序：Strotz（1955-56）之不一致的形状（贴现随日期移动，非品味意外改变），亦是诱惑（Gul 与 Pesendorfer 2001）无自制情形之形；见证本身无时间，也不说两序属同一人。多个选择者：作菜单读的囚徒困境，亦是 Braess 悖论（1968）之形，并反对 G. Dworkin（1982）所考察的论点；选项更少可使一方得益早于 Schelling：Strotz（1955-56）用于对后来之己的预先承诺；Schelling（1960）用于对他方的约束，或威胁或承诺。立场：自我关切次序上的帕累托关系。一项一项：次序判定之一律；次序不必分清小步是 Luce 半序（1956）的想法；此处的次序在至多三个所列项上是半序，自四项起不是（枚举所得，未入 Lean）：混合的一对无论差多大都不排。解读（AI 的）：在不读次序的助力旁，“更弱”尚可在别的数据或范围上；赋值的范围做了正性所做的事。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoutesToC.lean",
+  "aliases": [
+    "what would give C",
+    "what would give C's order on a listing",
+    "什么会给出 C",
+    "什么会给出列举上 C 的次序",
+    "Becoming.Weighting.widens_iff_noneWorseSomeBetter",
+    "Becoming.Weighting.pareto_increasing_iff_covers",
+    "Becoming.Weighting.increasing_iff_one_step",
+    "Becoming.Weighting.comparison_listingFrame_iff",
+    "Becoming.ReadsNoOrder.not_strictly_weaker"
+  ],
+  "dependencies": [
+    {
+      "id": "widening-as-what-every-positive-weighting-ranks",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses widening on listed items, orders increasing in admission and weighings (WidensOn, IncludesOn, ExceedsOn, MixedOn, Increasing, weighed, Positive, ranks).",
+        "zh": "复用所列项上的扩大、随接纳递增的次序与加权（WidensOn、IncludesOn、ExceedsOn、MixedOn、Increasing、weighed、Positive、ranks）。"
+      },
+      "interface": {
+        "output": {
+          "en": "Widening, orders increasing in admission, and positive weightings.",
+          "zh": "扩大、随接纳递增的次序与正加权。"
+        },
+        "input": {
+          "en": "Choosers, standpoints and one-item widenings stated on the same listing.",
+          "zh": "同一列举上的选择者、立场与一项之扩大。"
+        },
+        "conditions": {
+          "en": "Finite listing, two-valued admission.",
+          "zh": "有限列举，二值接纳。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoutesToC.lean"
+      }
+    },
+    {
+      "id": "a-narrowing-above-its-widening",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses widening by one item and net weighings (WidensBy, widensOn_of_widensBy, ranksNet).",
+        "zh": "复用一项之扩大与净加权（WidensBy、widensOn_of_widensBy、ranksNet）。"
+      },
+      "interface": {
+        "output": {
+          "en": "A widening by one item is a widening; a net weighting may rank a widening below.",
+          "zh": "一项之扩大是扩大；净加权可把扩大排在下面。"
+        },
+        "input": {
+          "en": "The one-item route, and the witness where admission is imposed.",
+          "zh": "一项之路，及强加处的见证。"
+        },
+        "conditions": {
+          "en": "Finite listing, two-valued admission.",
+          "zh": "有限列举，二值接纳。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoutesToC.lean"
+      }
+    },
+    {
+      "id": "what-self-concern-alone-ranks",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses orders increasing in their own continuation and that they coincide with being increasing in admission where the marking holds everything listed (IncreasingInOwn, AddsOwn, increasingInOwn_iff_increasing, increasingInOwn_of_increasing).",
+        "zh": "复用在自身延续上递增的次序，以及标记含一切所列项时它与随接纳递增重合（IncreasingInOwn、AddsOwn、increasingInOwn_iff_increasing、increasingInOwn_of_increasing）。"
+      },
+      "interface": {
+        "output": {
+          "en": "Self-concern, and where it is being increasing in admission.",
+          "zh": "自我关切，及其何处即随接纳递增。"
+        },
+        "input": {
+          "en": "Self-concern as C on the listing's frame; profiles of such orders; the listing of what lies downstream.",
+          "zh": "列举之框上作为 C 的自我关切；这样的次序的剖面；下游的列举。"
+        },
+        "conditions": {
+          "en": "A supplied marking of items.",
+          "zh": "对项的给定标记。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoutesToC.lean"
+      }
+    },
+    {
+      "id": "premises-met-and-failed",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses the predicate reading no order and that transitive orders ranking each one-item widening rank every widening (ReadsNoOrder, WidensByOne, increasing_iff_by_one).",
+        "zh": "复用不读次序的谓词，以及传递且排每个一项之扩大的次序排每个扩大（ReadsNoOrder、WidensByOne、increasing_iff_by_one）。"
+      },
+      "interface": {
+        "output": {
+          "en": "What reads no order; widening generated by one-item widenings.",
+          "zh": "不读次序者；由一项之扩大生成的扩大。"
+        },
+        "input": {
+          "en": "What a premise beside such help can be; the one-item route.",
+          "zh": "这样的助力旁前提可以是什么；一项之路。"
+        },
+        "conditions": {
+          "en": "Transitivity for the one-item law; the help holding at the datum.",
+          "zh": "一项之律需传递；助力在该数据上成立。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoutesToC.lean"
+      }
+    },
+    {
+      "id": "shared-laws-on-the-grammar",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses that widening on listed items goes one way (WidensOn.not_reverse, the grammar's «广不可逆»).",
+        "zh": "复用所列项上的扩大只向一方（WidensOn.not_reverse，文法的 «广不可逆»）。"
+      },
+      "interface": {
+        "output": {
+          "en": "Widening on a listing is not reversed.",
+          "zh": "列举上的扩大不可逆。"
+        },
+        "input": {
+          "en": "That self-concerned orders built from widening rank no widening below.",
+          "zh": "由扩大构成的自我关切次序不把扩大排在下面。"
+        },
+        "conditions": {
+          "en": "Finite listing, two-valued admission.",
+          "zh": "有限列举，二值接纳。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoutesToC.lean"
+      }
+    },
+    {
+      "id": "constancy-read-at-a-members-class",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses that everything downstream lies on the line exactly where it is alike, and that constancy up to the net's end at one's class with the class holding one's effects gives it («后皆续当且仅当后皆同类», «本类常闭则后皆续»).",
+        "zh": "复用下游皆在线上恰当其皆同类，以及其类至网之终有常且类含所缘时给出此（«后皆续当且仅当后皆同类»、«本类常闭则后皆续»）。"
+      },
+      "interface": {
+        "output": {
+          "en": "What lies downstream lies on one's line.",
+          "zh": "下游者皆在其线上。"
+        },
+        "input": {
+          "en": "A listing of what lies downstream, every item marked.",
+          "zh": "下游的列举，每项都被标记。"
+        },
+        "conditions": {
+          "en": "A class on the root; the path's P2 and P4 for the second form.",
+          "zh": "根上的一个类；第二种形式需路径的 P2 与 P4。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoutesToC.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "self-concern-and-c-under-the-condition",
+      "detail": {
+        "en": "That self-concern and being increasing in admission part at an unmarked item, join the condition, and give C one way between listed level paths.",
+        "zh": "自我关切与随接纳递增在未标记项处分开，与条件相连，并在所列层路径之间单向给出 C。"
+      }
+    },
+    {
+      "id": "what-a-course-keeps-reachable",
+      "detail": {
+        "en": "Covering is already read as the unanimous form of a preference for flexibility; here the relation on a listing, with refusal, which is Foster's effective freedom with every preference admitted.",
+        "zh": "覆盖已读作灵活性偏好的一致形式；此处是列举上的关系，有拒绝，即 Foster 的有效自由在容纳一切偏好时的情形。"
+      }
+    },
+    {
+      "id": "own-widening-within-the-margin",
+      "detail": {
+        "en": "A part widening what can form within its own region, the whole mixed beyond the others' margins, where C does not rank it; whether the menu witness's shape, two choosers on one menu at the pure Nash equilibrium of one play, falls under it is not shown.",
+        "zh": "部分扩大其区域内可成者，超出他者余量时整体为混合，C 不排它；菜单之见证之形（两个选择者在同一菜单上、一次博弈的纯策略纳什均衡处）是否落入其中，未表明。"
+      }
+    },
+    {
+      "id": "what-a-line-holds-and-a-regularity-takes-in",
+      "detail": {
+        "en": "States what it is for a class to hold one's effects, the premise P4 reads.",
+        "zh": "说明类含其所缘是什么，P4 所读的前提。"
+      }
+    },
+    {
+      "id": "ranking-under-readings",
+      "detail": {
+        "en": "A case the account compares as courses runs the other way from the menu witness: under the whole-run reading, with the hypotheses there, the restrained course extends overdraw exactly when it includes an event overdraw withholds; what is compared is the events a reading includes, not what is open to act, which does not show that no wider course has the witness's shape.",
+        "zh": "理论以进程比较的一例与菜单之见证方向相反：整段读法下（依其假设），节制的进程扩展过度汲取，恰当它包含后者所扣下的事件；所比较者是读法所记入的事件，不是可行之举；这并不表明无更宽的进程有见证之形。"
+      }
+    },
+    {
+      "id": "several-optimizers-drain-by-their-joint-capacity",
+      "detail": {
+        "en": "Several choosers at a mutual best response on a flow: restraint is no mutual best response, with no comparison of courses by C and no fall in what each gets shown; whether the menu witness's shape is a case of it is not shown.",
+        "zh": "流上多个选择者的相互最优反应：克制不是相互最优反应；未以 C 比较进程，也未表明各自所得下降；菜单之见证之形是否其一例，未表明。"
+      }
+    },
+    {
+      "id": "what-the-dynamics-leave-open",
+      "detail": {
+        "en": "The same pattern for the condition: what reads only the dynamics entails nothing about significance.",
+        "zh": "条件的同一模式：只读动力学者不蕴含显著性。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoutesToC.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.ReadsNoOrder.iff_of_weaker",
+        "Becoming.ReadsNoOrder.implies_comparison",
+        "Becoming.ReadsNoOrder.not_strictly_weaker",
+        "Becoming.Weighting.AboveNothing.not_alike",
+        "Becoming.Weighting.AboveNothing.transitive",
+        "Becoming.Weighting.AnotherReads.chooser_gains",
+        "Becoming.Weighting.AnotherReads.comparison_ranks_wide",
+        "Becoming.Weighting.AnotherReads.reading_falls",
+        "Becoming.Weighting.AnotherReads.takes_narrow",
+        "Becoming.Weighting.AnotherReads.takes_wide",
+        "Becoming.Weighting.AnotherReads.widens",
+        "Becoming.Weighting.EachItsOwn.covers",
+        "Becoming.Weighting.EachItsOwn.not_increasing",
+        "Becoming.Weighting.EachItsOwn.not_total",
+        "Becoming.Weighting.Increasing.stepAlike",
+        "Becoming.Weighting.MutualBest",
+        "Becoming.Weighting.NoneWorseSomeBetter",
+        "Becoming.Weighting.NotBelow",
+        "Becoming.Weighting.OnlyMany.not_increasing",
+        "Becoming.Weighting.OnlyMany.ranked",
+        "Becoming.Weighting.ParetoAmong",
+        "Becoming.Weighting.RanksNotOwnBelow",
+        "Becoming.Weighting.Refusing.comparison_ranks_wide",
+        "Becoming.Weighting.Refusing.imposed_below",
+        "Becoming.Weighting.Refusing.refused_unchanged",
+        "Becoming.Weighting.Refusing.widens",
+        "Becoming.Weighting.Restraint.comparison_ranks_wide",
+        "Becoming.Weighting.Restraint.each_falls",
+        "Becoming.Weighting.Restraint.narrow_best",
+        "Becoming.Weighting.Restraint.wide_best_iff",
+        "Becoming.Weighting.Restraint.widens",
+        "Becoming.Weighting.StepAlike",
+        "Becoming.Weighting.ZeroWeight.not_alike",
+        "Becoming.Weighting.ZeroWeight.not_increasing",
+        "Becoming.Weighting.byOne_not_increasing",
+        "Becoming.Weighting.choosers_mixed",
+        "Becoming.Weighting.comparison_listingFrame_iff",
+        "Becoming.Weighting.every_pareto_iff",
+        "Becoming.Weighting.exists_selfConcerned_notBelow_not_increasing",
+        "Becoming.Weighting.extension_listingFrame_iff",
+        "Becoming.Weighting.gains_every_widening_iff",
+        "Becoming.Weighting.increasingInOwn_iff_comparison",
+        "Becoming.Weighting.increasing_iff_one_step",
+        "Becoming.Weighting.increasing_iff_ranks_noneWorseSomeBetter",
+        "Becoming.Weighting.increasing_on_downstream",
+        "Becoming.Weighting.increasing_on_downstream_of_regularity",
+        "Becoming.Weighting.listingFrame",
+        "Becoming.Weighting.notOwnBelow_stops",
+        "Becoming.Weighting.not_lowered_of_no_bearing",
+        "Becoming.Weighting.outside",
+        "Becoming.Weighting.pareto_increasing_iff_covers",
+        "Becoming.Weighting.ranksLighter",
+        "Becoming.Weighting.ranksLighter_alike",
+        "Becoming.Weighting.ranksLighter_reverses",
+        "Becoming.Weighting.ranksLighter_transitive",
+        "Becoming.Weighting.ranksNotOwnBelow_selfConcerned",
+        "Becoming.Weighting.ranksOnlyMany",
+        "Becoming.Weighting.ranksOnlyMany_alike",
+        "Becoming.Weighting.ranksOnlyMany_transitive",
+        "Becoming.Weighting.reach",
+        "Becoming.Weighting.reach_eq_of_refused",
+        "Becoming.Weighting.reach_le_of_includes",
+        "Becoming.Weighting.widening_is_no_weighting",
+        "Becoming.Weighting.widens_iff_noneWorseSomeBetter"
+      ],
+      "sha256": "e36fdd8c0cf655b1755fbad6f63d4d1eed3fece67a36a31a0d681f6b885e0b7b"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T133849.128013Z/verification.json",
+      "role": "receipt",
+      "sha256": "203db133120a220bbea7aadb2a4105dc8365581528e0a66c1cd0a55e5bc84523"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/cw-what-would-give-c/NOTE.md",
+      "role": "integration",
+      "sha256": "e68505d012eccf22a066be1fcf84e7448529789c6e963eac87cc0bef62741e9f"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/cw-what-would-give-c/READER.md",
+      "role": "review",
+      "sha256": "13f33eeec74b39dcc20ac5b6e14f5ebb12e65aa7f1016a355d9a5125682e530d"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aa-attractor-atlas/PLAN.md",
+      "role": "integration",
+      "sha256": "c646cec4c6ac8ca231f484f5515e00080c74270d6c558b61131eea517d12509f"
+    },
+    {
+      "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+      "role": "statement",
+      "sha256": "8ed4a28fc489308a4539ef6b9eda4e5806656111ca2cd7b30c061c6c86e77142"
+    },
+    {
+      "path": "theories/becoming/chapters/08-METHOD.md",
+      "role": "statement",
+      "sha256": "c3fea4d1f82ea8cf62456443415c85b1407d7b12710997966d49d072f78c3b0b"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoutesToC.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T133849.128013Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.RoutesToC",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "6 November 2026, board item CW: added, the atlas plan's first Lean item. What \"weaker\" can mean, the frame on a listing, choosers and what their range must hold, standpoints, one item at a time and what lies downstream, each with where it stops. It does not derive C, the menu witness stands, and 08 §8's verdict does not move.",
+      "zh": "2026年11月6日，看板项 CW：新增，图谱计划的第一项 Lean。“更弱”可作何解，列举之框，选择者及其范围须含什么，立场，一项一项与下游，各附止于何处。不推出 C，菜单之见证成立，08 §8 的判定不变。"
+    }
+  ]
+}

@@ -6464,6 +6464,18 @@
    "page": "theories/becoming/results/records/what-training-installs.md"
   },
   {
+   "id": "record:what-would-give-c",
+   "type": "result",
+   "record": "what-would-give-c",
+   "title": "What would give C's order on a listing",
+   "title_zh": "什么会给出列举上 C 的次序",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "unassigned",
+   "base": "",
+   "page": "theories/becoming/results/records/what-would-give-c.md"
+  },
+  {
    "id": "record:when-complying-when-read-is-best",
    "type": "result",
    "record": "when-complying-when-read-is-best",
@@ -10984,6 +10996,17 @@
    "theorems": 102,
    "region": "significance",
    "base": "grammar",
+   "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.RoutesToC",
+   "type": "module",
+   "name": "Becoming.RoutesToC",
+   "level": "L2",
+   "theorems": 74,
+   "region": "unassigned",
+   "base": "",
    "on_grammar": true,
    "reaches_grammar": true
   },
@@ -31089,6 +31112,12 @@
    "anchor": "r-what-self-concern-alone-ranks"
   },
   {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-would-give-c",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-what-would-give-c"
+  },
+  {
    "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-graded-significance-and-priority",
    "type": "section",
    "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
@@ -34856,6 +34885,16 @@
   {
    "from": "module:Becoming.Routes",
    "to": "module:Becoming.Weighted",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.RoutesToC",
+   "to": "module:Becoming.GrammarPath",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.RoutesToC",
+   "to": "module:Becoming.PremiseWitnesses",
    "type": "imports"
   },
   {
@@ -57979,6 +58018,76 @@
    "type": "related"
   },
   {
+   "from": "record:what-would-give-c",
+   "to": "module:Becoming.RoutesToC",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-would-give-c",
+   "to": "record:a-narrowing-above-its-widening",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-would-give-c",
+   "to": "record:constancy-read-at-a-members-class",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-would-give-c",
+   "to": "record:own-widening-within-the-margin",
+   "type": "related"
+  },
+  {
+   "from": "record:what-would-give-c",
+   "to": "record:premises-met-and-failed",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-would-give-c",
+   "to": "record:ranking-under-readings",
+   "type": "related"
+  },
+  {
+   "from": "record:what-would-give-c",
+   "to": "record:self-concern-and-c-under-the-condition",
+   "type": "related"
+  },
+  {
+   "from": "record:what-would-give-c",
+   "to": "record:several-optimizers-drain-by-their-joint-capacity",
+   "type": "related"
+  },
+  {
+   "from": "record:what-would-give-c",
+   "to": "record:shared-laws-on-the-grammar",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-would-give-c",
+   "to": "record:what-a-course-keeps-reachable",
+   "type": "related"
+  },
+  {
+   "from": "record:what-would-give-c",
+   "to": "record:what-a-line-holds-and-a-regularity-takes-in",
+   "type": "related"
+  },
+  {
+   "from": "record:what-would-give-c",
+   "to": "record:what-self-concern-alone-ranks",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-would-give-c",
+   "to": "record:what-the-dynamics-leave-open",
+   "type": "related"
+  },
+  {
+   "from": "record:what-would-give-c",
+   "to": "record:widening-as-what-every-positive-weighting-ranks",
+   "type": "formal-reuse"
+  },
+  {
    "from": "record:when-complying-when-read-is-best",
    "to": "module:Becoming.Learning",
    "type": "proved-in"
@@ -62261,6 +62370,11 @@
   {
    "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-training-installs",
    "to": "record:what-training-installs",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-would-give-c",
+   "to": "record:what-would-give-c",
    "type": "states"
   },
   {

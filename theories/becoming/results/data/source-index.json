@@ -241,6 +241,7 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RootForms.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RouteFormation.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Routes.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoutesToC.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleCapture.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleHandoff.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean",
@@ -1822,6 +1823,13 @@
         "theories/becoming/history/ZERO-AXIOM-PRACTICAL-JUDGMENT.md"
       ]
     },
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/cw-what-would-give-c/READER.md": {
+      "title": "CW: what its readers reported",
+      "local_links": [
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/cw-what-would-give-c/NOTE.md",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoutesToC.lean"
+      ]
+    },
     "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/du-deep-unification-review/REVIEW.md": {
       "title": "A deeper review of the unification and the premises",
       "local_links": [
@@ -3052,6 +3060,7 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RouteFormation.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RouteTraces.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Routes.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoutesToC.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleCapture.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleHandoff.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean",
@@ -3322,6 +3331,7 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomRuns.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RootForms.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Routes.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoutesToC.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Runaway.lean",

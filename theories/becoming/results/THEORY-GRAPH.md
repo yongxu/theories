@@ -2,7 +2,7 @@
 
 # The theory graph
 
-One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3218 nodes, 6215 edges.
+One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3221 nodes, 6232 edges.
 
 | Region | Concepts | Results | Modules | Texts |
 |---|---:|---:|---:|---:|
@@ -15,6 +15,7 @@ One graph of the theory: the grammar's concepts, the results, the Lean modules, 
 | Significance and alignment | 0 | 81 | 61 | 0 |
 | Method and the formal core | 0 | 21 | 25 | 0 |
 | To retire | 0 | 7 | 0 | 0 |
+| Not yet assigned | 0 | 1 | 1 | 0 |
 
 ## The grammar's concepts
 
@@ -653,6 +654,15 @@ Results (7):
 - [Revision comes to drawing everything](records/revision-comes-to-drawing-everything.md) (superseded) ·
 
 
+## Not yet assigned
+
+Results (1):
+
+- [What would give C's order on a listing](records/what-would-give-c.md) (recorded-checked)
+
+Modules (1, 1 stated on the grammar): `RoutesToC`
+
+
 ## Not yet on the root
 
-305 of 385 core modules do not yet state their laws on the grammar (they neither are a grammar module nor import one); lifting them, as the continuation family was lifted, is the restructure's remaining formal work. A result marked · is not yet stated by a section of a live chapter.
+305 of 386 core modules do not yet state their laws on the grammar (they neither are a grammar module nor import one); lifting them, as the continuation family was lifted, is the restructure's remaining formal work. A result marked · is not yet stated by a section of a live chapter.
