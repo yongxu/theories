@@ -76,8 +76,8 @@
       "kind": "scope"
     },
     {
-      "en": "The warrant of the condition, or anything about C, which gives order, in general alone.",
-      "zh": "条件之根据，或关于唯一排序之 C 之任何事。",
+      "en": "The warrant of the condition, or anything about C, which gives order.",
+      "zh": "条件之根据，或关于给出次序之 C 之任何事。",
       "kind": "non-implication"
     }
   ],
@@ -238,6 +238,10 @@
     {
       "en": "2 November 2026, board item PF3: corrected to say C gives order in general alone, since 07 §4.4's theorem has an order rising with one's own continuation rank one case with no C; no law, premise or proof changes.",
       "zh": "2026年11月2日，看板条目 PF3：更正为 C 给出次序，一般而言唯有 C，因为 07 §4.4 的定理表明，一个随自身延续上升的次序不靠 C 也排出一种情形；没有定律、前提或证明改变。"
+    },
+    {
+      "en": "7 November 2026, board item LM1: a reader of LM found this said C orders alone, where a ranking of courses needs C or a premise in its place (07 §4.4); corrected. No law, premise or proof changed.",
+      "zh": "2026年11月7日，工作板条目 LM1：LM 之读者指出此处谓唯 C 定序，而对进程的排序需要 C 或一个代替它的前提（07 §4.4）；已更正。诸律、前提与证明皆不变。"
     }
   ]
 }

@@ -1570,3 +1570,9 @@ Board item GC4, AI-authored. This section reads most of what the two sections ab
 **Left.** First, each entry's route to the live statement: 82 entries link no record or chapter, their links being retired texts, studies, sources, receipts and Lean (E06 the register), and a link from each needs each one read first. GC2 declined chapter links because they would make the chain pending at every chapter edit, so the route's form is itself open. Second, the steps neither argued nor marked stay unread for this, as the key says. Both stay for the next reading.
 
 This is author reading checked by an independent AI read, not independent acceptance, and proves no new claim.
+
+## LM1: one sentence (7 November 2026)
+
+The key and five entries (C03, C17, C24, M15, M20) said C gives order "in general alone". A reader of LM found the like sentence in 08 at odds with 07 §4, where a ranking of courses needs C or a premise in its place, so the words "in general alone" are out of them, and the rest of each sentence stands. The Chinese said no such thing and is unchanged.
+
+`--render` refuses while linked sources have changed, and 58 had when this was done, almost all from landings since the reading above. Their hashes are not refreshed, since they were not reread: the page was written from the data with the tool's own `render`, and the diff against the page before is these six rows and the date. The next reading of those sources is still owed.
